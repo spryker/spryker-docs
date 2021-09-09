@@ -33,7 +33,7 @@ Default subtitle of the content. |
 ## Dependencies
 
 This file has the following dependencies:
-*    [glossary.csv](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-import-categories/commerce-setup/file-details-glossary.csv.html) 
+*    [glossary.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-glossary.csv.html) 
 
 ## Template File & Content Example
 A template and an example of the *content_banner.csv*  file can be downloaded here:

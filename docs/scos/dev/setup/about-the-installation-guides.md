@@ -24,8 +24,8 @@ redirect_from:
 In the Installation Guides, you will find all the information you need to install the Spryker Commerce OS according to your needs.
 
 {% info_block infoBox %}
-Before proceeding with the installation, make sure you fulfill all the [System Requirements](/docs/scos/dev/setup/system-requirements.html
-{% endinfo_block %}.)
+Before proceeding with the installation, make sure you fulfill all the [System Requirements](/docs/scos/dev/setup/system-requirements.html).
+{% endinfo_block %}
 Using various installation types and environments, you can install:
 
 * [Spryker B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html),

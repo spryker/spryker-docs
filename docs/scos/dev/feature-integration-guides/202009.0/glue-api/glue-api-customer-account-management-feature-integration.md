@@ -212,7 +212,7 @@ $jobs[] = [
 
 {% info_block infoBox "Note" %}
 
-For information on how to protect resources, refer to [Security and Authentication](/docs/scos/dev/concepts/glue-api/security-and-authentication.html).
+For information on how to protect resources, refer to [Security and Authentication](/docs/scos/dev/glue-api-guides/security-and-authentication.html).
 
 {% endinfo_block %}
 

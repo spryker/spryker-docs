@@ -26,7 +26,7 @@ Unique identifier of the content. |
 ## Dependencies
 
 This file has the following dependency:
-*    [product_abstract.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html) 
+*    [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html) 
 
 ## Template File & Content Example
 A template and an example of the *content_product_abstract_list.csv*  file can be downloaded here:

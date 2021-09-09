@@ -16,13 +16,13 @@ These are the header fields to be included in the .csv file:
 
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |
 | --- | --- | --- | --- | --- |
-| **shipment_method_key** | Yes | String | Can be imported from the content that was loaded using the [shipment.csv](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-import-categories/commerce-setup/file-details-shipment.csv.html) file.| Identifier of the shipment method. |
+| **shipment_method_key** | Yes | String | Can be imported from the content that was loaded using the [shipment.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-shipment.csv.html) file.| Identifier of the shipment method. |
 | **store** | Yes | String |Must be one of the existing store names. The store names are initially already defined in* stores.php* configuration file. | Name of the store. |
 
 ## Dependencies
 This file has the following dependencies:
 
-*     [shipment.csv](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-import-categories/commerce-setup/file-details-shipment.csv.html)
+*     [shipment.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-shipment.csv.html)
 *     *stores.php* configuration file of demo shop PHP project
 
 ## Template File & Content Example

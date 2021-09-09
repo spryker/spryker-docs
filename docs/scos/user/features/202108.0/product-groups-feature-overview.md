@@ -49,7 +49,7 @@ Also, they can insert product groups into CMS pages via content widgets in the [
 
 ## Creating product groups
 
-Currently, only a developer can create product groups by [importing them](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-group.csv.html) or modifying the database. Only abstract products can be added to product groups.
+Currently, only a developer can create product groups by [importing them](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-group.csv.html) or modifying the database. Only abstract products can be added to product groups.
 
 
 ## Current constraints

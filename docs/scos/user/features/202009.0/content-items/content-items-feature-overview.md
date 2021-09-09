@@ -28,7 +28,7 @@ For use cases and exmaple of each of the content item, see [Content Item Widgets
 
 A content manager can [create content items](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/content-items/creating-content-items.html) in the Back Office > **Content Management** > **Content Items** section. 
 A developer can do the following:
-* [Import content items](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-importers-overview-and-implementation.html)
+* [Import content items](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html)
 * [Get content items data via API](https://documentation.spryker.com/v6/docs/retrieving-content-item-data-201907)
 
 See [Content Items Types: Module Relations](/docs/scos/dev/features/202009.0/content-items/content-item-types-module-relations.html) for more information on each content item type and module relations.

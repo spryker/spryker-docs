@@ -8,7 +8,7 @@ redirect_from:
   - /v6/docs/en/product-quantity-restrictions-overview
 ---
 
-Product quantity restriction values define the number of items that customers can put into the cart. You can specify the product quantity restrictions by importing them for your project with the `data:import:product-quantity` command. See [File details: product_quantity.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-quantity.csv.html) for details on the import file. 
+Product quantity restriction values define the number of items that customers can put into the cart. You can specify the product quantity restrictions by importing them for your project with the `data:import:product-quantity` command. See [File details: product_quantity.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-quantity.csv.html) for details on the import file. 
 
 In the import file, you can set three values for quantity restrictions: minimum, maximum, interval. 
 The *minimum* value defines the smallest allowable quantity of a specific item in the cart. The *maximum* quantity restricts the allowable quantity of items in the cart to a specific value. The *interval* value determines an increment value by which the quantity can be changed. For example, if you specify minimum quantity as 5, interval as 3, and maximum quantity as 14, it means that a user can put 5, 8, 11, and 14 items to the cart. If a user puts an unacceptable quantity of items to cart, they will be suggested to buy another, allowable, quantity of items.

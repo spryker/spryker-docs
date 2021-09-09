@@ -78,7 +78,7 @@ If the same OS is defined for multiple mount modes, the first mount mode matchin
 
 ## Configuring a mount mode
 
-To configure a mount mode, see [Configuring a mount mode](/docs/scos/dev/developer-guides/202009.0/docker-sdk/configuring-a-mount-mode.html).
+To configure a mount mode, see [Configuring a mount mode](/docs/scos/dev/docker-sdk/configuring-a-mount-mode.html).
 
 ## Synchronization mount modes
 

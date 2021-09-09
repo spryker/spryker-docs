@@ -38,7 +38,7 @@ Below you can see dummy payment state machine, which is a sample implementation 
 
 ### Availability Storage
 
-AvailabilityStorage <!--(https://documentation.spryker.com/v4/docs/availability-storage) -->publishes all availability information for abstract and concrete products. Items are grouped by abstract product. This process is handled by [Publish and Synchronize](/docs/scos/dev/developer-guides/201907.0/development-guide/back-end/data-manipulation/data-publishing/publish-and-synchronization.html).
+AvailabilityStorage <!--(https://documentation.spryker.com/v4/docs/availability-storage) -->publishes all availability information for abstract and concrete products. Items are grouped by abstract product. This process is handled by [Publish and Synchronize](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html).
 
 Events are generated in these two cases:
 

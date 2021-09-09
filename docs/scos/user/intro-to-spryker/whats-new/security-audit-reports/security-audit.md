@@ -50,4 +50,4 @@ The safe use of functions and the lack of critical vulnerabilities such as SQL i
 
 For each of the security vulnerabilities, a detailed risk analysis has been performed that is documented throughout the report. For more information, please reach out for a more extended version of this report to [Spryker Systems](mailto:academy@spryker.com).
 
-See [Secure Coding Practices](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/coding-guidelines/secure-coding-practices.html) for a list of secure coding recommendations.
+See [Secure Coding Practices](/docs/scos/dev/guidelines/coding-guidelines/secure-coding-practices.html) for a list of secure coding recommendations.

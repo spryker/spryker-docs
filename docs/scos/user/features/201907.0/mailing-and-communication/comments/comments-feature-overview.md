@@ -54,8 +54,8 @@ Every comment may be tagged.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/filter-tags.png) 
 
 {% info_block warningBox "Note" %}
-To create a new tag, see [HowTo - Add a New Tag for Comment](/docs/scos/dev/tutorials/201907.0/howtos/howto-adding-a-new-tag-for-comment.html
-{% endinfo_block %}.)
+To create a new tag, see [HowTo - Add a New Tag for Comment](/docs/scos/dev/tutorials/201907.0/howtos/howto-adding-a-new-tag-for-comment.html).
+{% endinfo_block %}
 
 ### Module Relations in the Comments Feature
 Module Relations in the Comments feature are represented in the following schema:

@@ -16,8 +16,8 @@ To edit a discount, do the following:
 1. On the **Overview of Discounts** page, click **Edit** in the _Actions_ column.
 2. Update the attributes and click **Save**.
 {% info_block infoBox %}
-To find out more information about the attributes that you see on the **Edit Discount** page, see [Discount: Reference Information](/docs/scos/user/user-guides/201811.0/back-office-user-guide/discount/references/discount-reference-information.html
-{% endinfo_block %}.)
+To find out more information about the attributes that you see on the **Edit Discount** page, see [Discount: Reference Information](/docs/scos/user/user-guides/201811.0/back-office-user-guide/discount/references/discount-reference-information.html).
+{% endinfo_block %}
 ***
 ## Viewing a Discount
 To view a discount, do the following:

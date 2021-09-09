@@ -23,11 +23,11 @@ Run the following command(s) to install the required modules:
 `composer require spryker-feature/product-lists:"^201903.0" --update-with-dependencies`
 
 <section contenteditable="false" class="warningBox"><div class="content">
-    
+
 **Verification**
-    
+
 Make sure that the following modules have been installed:
-    
+
 | Module | Expected Directory |
 | --- | --- |
 | `ProductList` | `vendor/spryker/product-list` |
@@ -52,16 +52,16 @@ Define the following transfer objects:
 <transfers xmlns="spryker:transfer-01"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
- 
+
 	<transfer name="ProductListCollection">
 		<property name="productLists" type="ProductList[]" singular="productList"/>
 	</transfer>
- 
+
 	<transfer name="Customer">
 		<property name="customerProductListCollection" type="CustomerProductListCollection"/>
 		<property name="companyUserTransfer" type="CompanyUser"/>
 	</transfer>
- 
+
 	<transfer name="CustomerProductListCollection">
 		<property name="blacklistIds" type="int[]" singular="blacklistId"/>
 		<property name="whitelistIds" type="int[]" singular="whitelistId"/>
@@ -142,11 +142,11 @@ console propel:install
 console transfer:generate
 ```
 <section contenteditable="false" class="warningBox"><div class="content">
-    
+
 **Verification**
-    
+
 Make sure that the following changes have been applied in the transfer objects:
-    
+
 | Transfer | Type | Event | Path |
 | --- | --- | --- | --- |
 | `ProductList` | class | created | `src/Generated/Shared/Transfer/ProductListTransfer` |
@@ -171,11 +171,11 @@ Make sure that the following changes have been applied in the transfer objects:
 </div></section>
 
 <section contenteditable="false" class="warningBox"><div class="content">
-    
+
 **Verification**
-    
+
 Make sure that the following changes have been applied by checking your database:
-    
+
 | Database Entity | Type | Event |
 | --- | --- | --- |
 | `spy_product_list` | table | created |
@@ -183,15 +183,15 @@ Make sure that the following changes have been applied by checking your database
 | `spy_product_list_product_concrete` | table | created |
 | `spy_product_abstract_product_list_storage` | table |  created |
 | `spy_product_concrete_product_list_storage` | table | created |
-    
+
 </div></section>
 
 <section contenteditable="false" class="warningBox"><div class="content">
-    
+
 **Verification**
-    
+
 Make sure that propel entities were generated successfully by checking their existence. Also, change the generated entity classes to extend from Spryker core classes:
-    
+
 | Class Path | Extends |
 | --- | --- |
 | `src/Orm/Zed/ProductList/Persistence/Base/SpyProductList.php` | `Spryker\Zed\ProductList\Persistence\Propel\AbstractSpyProductLis` |
@@ -202,17 +202,17 @@ Make sure that propel entities were generated successfully by checking their exi
 | `src/Orm/Zed/ProductList/Persistence/Base/SpyProductListCategoryQuery.php` | `Spryker\Zed\ProductList\Persistence\Propel\AbstractSpyProductListCategoryQuery` |    
 | `src/Orm/Zed/ProductListStorage/Persistence/Base/SpyProductAbstractProductListStorage` | `Spryker\Zed\ProductListStorage\Persistence\Propel\AbstractSpyProductAbstractProductListStorage` |
 | `src/Orm/Zed/ProductListStorage/Persistence/Base/SpyProductAbstractProductListStorageQuery` | `Spryker\Zed\ProductListStorage\Persistence\Propel\AbstractSpyProductAbstractProductListStorageQuery` |    
-| `src/Orm/Zed/ProductListStorage/Persistence/Base/SpyProductConcreteProductListStorage` | `Spryker\Zed\ProductListStorage\Persistence\Propel\AbstractSpyProductConcreteProductListStorage` | 
-| `src/Orm/Zed/ProductListStorage/Persistence/Base/SpyProductConcreteProductListStorageQuery` | `Spryker\Zed\ProductListStorage\Persistence\Propel\AbstractSpyProductConcreteProductListStorageQuery` | 
+| `src/Orm/Zed/ProductListStorage/Persistence/Base/SpyProductConcreteProductListStorage` | `Spryker\Zed\ProductListStorage\Persistence\Propel\AbstractSpyProductConcreteProductListStorage` |
+| `src/Orm/Zed/ProductListStorage/Persistence/Base/SpyProductConcreteProductListStorageQuery` | `Spryker\Zed\ProductListStorage\Persistence\Propel\AbstractSpyProductConcreteProductListStorageQuery` |
 
 </div></section>
 
 <section contenteditable="false" class="warningBox"><div class="content">
-    
+
 **Verification**
-    
+
 Make sure that the changes were implemented successfully. For this purpose, trigger the following methods and make sure that the above events have been triggered:
-    
+
 | Path | Method Name |
 | --- | --- |
 | `src/Orm/Zed/ProductList/Persistence/Base/SpyProductList.php` | `prepareSaveEventName()`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()` |
@@ -220,7 +220,7 @@ Make sure that the changes were implemented successfully. For this purpose, trig
 | `src/Orm/Zed/ProductList/Persistence/Base/SpyProductListCategory.php` | `prepareSaveEventName()`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()` |
 | `src/Orm/Zed/ProductListStorage/Persistence/Base/SpyProductAbstractProductListStorage.php` | `sendToQueue()` |
 | `src/Orm/Zed/ProductListStorage/Persistence/Base/SpyProductConcreteProductListStorage.php` | `sendToQueue()` |
-    
+
 </div></section>   
 
 ### 3) Add Translations
@@ -288,7 +288,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 
 Make sure when a product list is created, updated or deleted, they are exported (or removed) to Redis and Elasticsearch accordingly.
 
-| Storage type | Target entity | Example expected data identifier | 
+| Storage type | Target entity | Example expected data identifier |
 | --- | --- | --- |
 | Redis | Product Abstract Product List | `kv:product_abstract_product_lists:1` |
 | Redis | Product Concrete Product List | `kv:product_concrete_product_list:1` |
@@ -740,12 +740,12 @@ Register the following plugin to enable the data import:
 <?php
 
 src/Pyz/Zed/DataImport/DataImportDependencyProvider.php<?php
- 
+
 namespace Pyz\Zed\DataImport;
- 
+
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use Spryker\Zed\ProductListDataImport\Communication\Plugin\ProductListCategoryDataImportPlugin;
- 
+
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
 	/**

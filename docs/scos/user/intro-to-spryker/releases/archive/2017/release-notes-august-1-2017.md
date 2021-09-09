@@ -128,7 +128,7 @@ Please note that the sniff commands now are as follows:
 
 **Tip**: You can use `console c:s:s` and `console c:s:a` as shortcuts.
 
-For guidelines and documentation, see [Code Architecture Guide](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/coding-guidelines/code-architecture-guide.html).
+For guidelines and documentation, see [Code Architecture Guide](/docs/scos/dev/guidelines/coding-guidelines/code-architecture-guide.html).
 
 **Affected Modules**
 

@@ -25,7 +25,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependencies:
-*    [product_set.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-set.csv.html)
+*    [product_set.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-set.csv.html)
 
 ## Template File & Content Example
 A template and an example of the *content_product_set.csv*  file can be downloaded here:

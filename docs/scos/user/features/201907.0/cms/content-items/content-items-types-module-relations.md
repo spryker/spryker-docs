@@ -33,7 +33,7 @@ The scheme below illustrates Banner Content Item Data Importers module relations
 
 
 {% info_block infoBox %}
-See [Data Importers Overview and Implementation](/docs/scos/dev/developer-guides/201907.0/development-guide/back-end/data-manipulation/data-ingestion/data-importers/data-importers-overview-and-implementation.html
+See [Data Importers Overview and Implementation](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/data-importers/data-importers-overview-and-implementation.html
 {% endinfo_block %} for more details.)
 ***
 ### Abstract Product List 
@@ -43,7 +43,7 @@ The feature allows Back Office users or content managers to create, manage, and 
 With the feature, developers can create and update Abstract Product List content items by importing their data using a CSV file.
 
 {% info_block infoBox %}
-See [Data Importers Overview and Implementation](/docs/scos/dev/developer-guides/201907.0/development-guide/back-end/data-manipulation/data-ingestion/data-importers/data-importers-overview-and-implementation.html
+See [Data Importers Overview and Implementation](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/data-importers/data-importers-overview-and-implementation.html
 {% endinfo_block %} for more details.)
 
 #### Abstract Product List API

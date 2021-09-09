@@ -24,8 +24,8 @@ To help developers understand and use the public API of your project, you need t
 The resulting document is a full description of your REST API following the [OpenAPI Specification](https://github.com/OAI/OpenAPI-Specification) (formerly known as Swagger Document Format). It can be viewed, edited and consumed with the help of such tools as [Swagger Tools](https://swagger.io/), [Postman](https://www.getpostman.com/) etc.
 
 {% info_block warningBox %}
-REST API endpoints shipped by Spryker will be covered by documentation by default. A snapshot of the latest state of Spryker REST API can be found in Spryker Documentation. For more information, see [Rest API Reference](/docs/scos/dev/glue-api-guides/{{site.version}}/rest-api-reference.html
-{% endinfo_block %}.)
+REST API endpoints shipped by Spryker will be covered by documentation by default. A snapshot of the latest state of Spryker REST API can be found in Spryker Documentation. For more information, see [Rest API Reference](/docs/scos/dev/glue-api-guides/{{site.version}}/rest-api-reference.html).
+{% endinfo_block %}
 
 ## Prerequisites
 Before you begin, make sure that you have Spryker Glue installed and enabled<!--add a link to https://documentation.spryker.com/feature_integration_guides/glue_api/glue-api-installation-and-configuration.htm -->. Also, consider studying the following documents:

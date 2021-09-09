@@ -76,7 +76,7 @@ Follow the steps to create a banner:
 {% info_block infoBox "Multi-language setup" %}
 
 The following logic applies in a multi-language setup:
-* Locale-specific values overwrite the default values when the banner is rendered on a Storefront page with the [locale](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
+* Locale-specific values overwrite the default values when the banner is rendered on a Storefront page with the [locale](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
 * If the fields are not filled out for a locale, the default values are displayed on a Storefront page with the locale selected.
 
 
@@ -142,7 +142,7 @@ Follow the steps to create an abstract product list:
 {% info_block infoBox "Multi-language setup" %}
 
 The following logic applies in a multi-language setup:
-* Locale-specific products overwrite the default products when the Abstract Product List is rendered on a Storefront page with the [locale](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
+* Locale-specific products overwrite the default products when the Abstract Product List is rendered on a Storefront page with the [locale](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
 * If no products are selected for a locale, the default products are displayed on a Storefront page with the locale selected.
 
 
@@ -210,7 +210,7 @@ Follow the steps to create a product set:
 {% info_block infoBox "Multi-language setup" %}
 
 The following logic applies in a multi-language setup:
-* A locale-specific product set overwrites the default product set when the product set content item is rendered on a Storefront page with the [locale](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
+* A locale-specific product set overwrites the default product set when the product set content item is rendered on a Storefront page with the [locale](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
 * If no product set is selected for a locale, the default product set is displayed on a Storefront page with the locale selected.
 
 
@@ -277,7 +277,7 @@ See [Content items: reference information](/docs/scos/user/user-guides/202009.0/
 {% info_block infoBox "Multi-language setup" %}
 
 The following logic applies in a multi-language setup:
-* Locale-specific files overwrite the default files when the file list is rendered on a Storefront page with the [locale](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
+* Locale-specific files overwrite the default files when the file list is rendered on a Storefront page with the [locale](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
 * If no files are selected for a locale, the default files are displayed on a Storefront page with the locale selected.
 
 {% endinfo_block %}
@@ -330,7 +330,7 @@ To create a navigation content item:
 {% info_block infoBox "Multi-language setup" %}
 
 The following logic applies in a multi-language setup:
-* Locale-specific navigation element overwrites the default navigation element when rendered on a Storefront page with the [locale](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
+* Locale-specific navigation element overwrites the default navigation element when rendered on a Storefront page with the [locale](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
 * If no navigation element is selected for a locale, the default navigation element is displayed on a Storefront page with the locale selected.
 
 {% endinfo_block %}

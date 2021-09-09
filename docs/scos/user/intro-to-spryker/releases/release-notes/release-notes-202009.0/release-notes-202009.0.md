@@ -12,7 +12,7 @@ redirect_from:
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of new features and enhancements we are announcing in September 2020.
-For information about installing the Spryker Commerce OS see [Getting Started Guide](/docs/scos/dev/developer-guides/{{page.version}}/developer-getting-started-guide.html).
+For information about installing the Spryker Commerce OS see [Getting Started Guide](/docs/scos/dev/developer-getting-started-guide.html).
 
 Check out our release notes video for the quick illustration of the new features and improvements:
 
@@ -155,7 +155,7 @@ We have improved data importers’ documentation, making it easier to understand
 You will have access to detailed information about CSV files format, dependencies, and mandatory information needed to run the data import operation.
 
 #### Documentation
-[About Demo Shop Data Import](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/demo-shop-data-import/importing-demo-shop-data.html)
+[About Demo Shop Data Import](/docs/scos/dev/data-import/{{page.version}}/demo-shop-data-import/importing-demo-shop-data.html)
 
 ### Data Import: Configuration (YAML) File for Batch Data Import
 We have improved the data importers’ usability. 
@@ -164,7 +164,7 @@ You may now change names and locations of the CSV files to be imported, define a
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image2.png) 
 
 #### Documentation
-[Importing Data with a Configuration File](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/importing-data-with-a-configuration-file.html)
+[Importing Data with a Configuration File](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html)
 
 ### Data Import: Import Product Data with a Single File
 Generating and using different .csv files (*productabstract.csv, productconcrete.csv, productprice.csv, productstock.csv*, etc.) to import product data can be, for some users, time-consuming and difficult to manage. In this release, we have added an ability of **bulk product data import** **with a single .csv file**, which might be especially useful to:
@@ -181,7 +181,7 @@ To execute it, a single .csv file with the combined product data-sets to import 
 The combined product data-sets follow an identical format as the individual .csv files used by the modular data importers. The existing modular data importers managing individual product .csv files are not impacted (that is, *productabstract.csv, productconcrete.csv, product_price.csv*, etc. will continue to work as before).
 
 #### Documentation
-[Importing Product Data With a Single File](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/importing-product-data-with-a-single-file.html)
+[Importing Product Data With a Single File](/docs/scos/dev/data-import/{{page.version}}/importing-product-data-with-a-single-file.html)
 
 ### Data Export (Orders)
 The new **Data Export Sales Orders** feature allows you to export orders, order items, and order expenses data for one or multiple stores, giving the flexibility to define filter criteria to export only what is necessary. 

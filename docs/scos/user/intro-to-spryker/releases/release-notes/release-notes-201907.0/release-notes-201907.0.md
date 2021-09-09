@@ -24,7 +24,7 @@ redirect_from:
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of major new features and enhancements released in August of 2019.
 
-For information about installing the Spryker Commerce OS see [Getting Started Guide](/docs/scos/dev/developer-guides/{{page.version}}/developer-getting-started-guide.html).
+For information about installing the Spryker Commerce OS see [Getting Started Guide](/docs/scos/dev/developer-getting-started-guide.html).
 
 Check out our release notes video for the quick illustration of the new features and improvements:
 <iframe src="https://spryker.wistia.com/embed/iframe/l3hx8apvdq" title="Spryker Release Notes 201903.0" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="640" height="480"></iframe>
@@ -124,7 +124,7 @@ Provides a way to authorize access to resources related to the level of permissi
 
 **Documentation**: 
 
-* [Security and Authentication](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/glue-api/security-and-authentication.html)
+* [Security and Authentication](/docs/scos/dev/glue-api-guides/security-and-authentication.html)
 * [B2B Logging in as Company User](https://documentation.spryker.com/2021080/docs/logging-in-as-company-user-201907)
 * [Retrieving Company Role Information](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-company-roles.html)
 

@@ -113,7 +113,7 @@ Please visit our [Partners Registry](https://spryker.com/find-a-partner/) for a 
 * [Heidelpay](https://documentation.spryker.com/v3/docs/heidelpay)
 <!--* [Informa Solutions](https://documentation.spryker.com/v3/docs/informa-solutions)-->
 * [Klarna](https://documentation.spryker.com/v3/docs/klarna)
-* [Payolution](https://documentation.spryker.com/v3/docs/payolution)
+* [Payone](https://documentation.spryker.com/v3/docs/payolution)
 * [Powerpay](https://documentation.spryker.com/v3/docs/powerpay)
 * [Ratenkauf by Easycredit](https://documentation.spryker.com/v3/docs/ratenkauf-by-easycredit)
 * [RatePAY](https://documentation.spryker.com/v3/docs/ratepay)

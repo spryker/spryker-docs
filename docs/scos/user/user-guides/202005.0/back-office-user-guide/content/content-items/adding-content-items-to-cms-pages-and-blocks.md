@@ -76,8 +76,8 @@ Keep in mind that you can select only **one** item and **one** template at a tim
 6. Click **Save**. The new content item widget will be added to the block. 
 
 {% info_block infoBox %}
-You can preview how the content item widget will be displayed on the website by following the steps described in  [Managing CMS Blocks](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/blocks/managing-cms-blocks.html
-{% endinfo_block %}.)
+You can preview how the content item widget will be displayed on the website by following the steps described in  [Managing CMS Blocks](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/blocks/managing-cms-blocks.html).
+{% endinfo_block %}
 ***
 **What's next?**
 To know more about how to edit a content item widget, see  [Editing Content Item Widgets](https://documentation.spryker.com/v5/docs/en/editing-content-item-widgets).

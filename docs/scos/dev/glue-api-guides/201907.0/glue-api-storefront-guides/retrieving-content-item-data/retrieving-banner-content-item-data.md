@@ -12,8 +12,8 @@ The **Banner API** implements REST API endpoint that provides the possibility to
 In your development, these resources can help you get relevant information for your Banner content item for all or a specific locale. For example, you can view what page address your banner is linked to or what details are displayed for a specific locale.
 
 {% info_block infoBox %}
-For more information on creating and managing content items in CMS, see [Content Items](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/content-items/content-items.html
-{% endinfo_block %}.)
+For more information on creating and managing content items in CMS, see [Content Items](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/content-items/content-items.html).
+{% endinfo_block %}
 
 ## Installation
 For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/migration-and-integration/201907.0/feature-integration-guides/glue-api/content-items-apifeature-integration.html).

@@ -14,8 +14,8 @@ With the Spryker Shopping Lists feature, you can create and manage one or multip
 
 Shopping lists offer the following advantages:
 
-* Help you retain existing customers and gain new ones by allowing the customers to order frequently purchased items faster. 
-* Simplify purchasing process, as not only the shopping list owner can use the shopping lists to place orders, but also the team members with whom they have been shared. 
+* Help you retain existing customers and gain new ones by allowing the customers to order frequently purchased items faster.
+* Simplify purchasing process, as not only the shopping list owner can use the shopping lists to place orders, but also the team members with whom they have been shared.
 * Give your customers more flexibility for order placements and enhances their data security due to the ability to assign various levels of access rights to shopping lists.
 
 Check out this video tutorial on how to use Shopping Lists.
@@ -29,7 +29,7 @@ Check out this video tutorial on how to use Shopping Lists.
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                 <li><a href="https://documentation.spryker.com/docs/shopping-lists-feature-integration" class="mr-link">Enable multiple and shared shopping lists:
+                 <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\shopping-lists-feature-integration.md" class="mr-link">Enable multiple and shared shopping lists:
                  <ul>by integrating the Shopping Lists feature into your project</a></li>
                  <li><a href="docs\scos\user\features\202009.0\prices\prices-feature-overview\price.mds-feature-integration" class="mr-link">Integrate the Prices feature into your project</a></li>
             </ul>

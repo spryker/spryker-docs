@@ -42,7 +42,7 @@ Every comment may be tagged.
 
 
 <!---{% info_block warningBox "Note" %}
-To create a new tag, see [HowTo - Add a New Tag for Comment](https://documentation.spryker.com/v6/docs/ht-adding-new-tag-for-comment
+To create a new tag, see [HowTo - Add a New Tag for Comment](https://documentation.spryker.com/docs/ht-adding-new-tag-for-comment
 {% endinfo_block %}.)-->
 
 ## Comments on the Storefront

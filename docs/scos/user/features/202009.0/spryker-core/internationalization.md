@@ -19,7 +19,7 @@ redirect_from:
 **Business Value**
 * Increase your revenue by expanding your business globally
 ***
-        
+
 The Spryker Commerce OS enables you to seize opportunities across the globe and seamlessly expand across international markets. Create multiple stores to target different markets or launch one adaptive store that services several different regions. Choose to share your catalog and stocks between stores or offer separate product ranges in different regions. Easily localize the pricing, project domains and all your content.
 </div>
 </div>
@@ -27,8 +27,8 @@ The Spryker Commerce OS enables you to seize opportunities across the globe and 
 **Features:**
 
 <div>
-<a class="feature-link" href="https://documentation.spryker.com/docs/multiple-stores">Multiple Stores</a>
-<a class="feature-link" href="https://documentation.spryker.com/docs/multiple-currencies-per-store">Multiple Currencies per Store</a>
-<a class="feature-link" href="https://documentation.spryker.com/docs/international-tax-rates-sets">International Tax Rates and Sets</a>
-<a class="feature-link" href="https://documentation.spryker.com/docs/glossary">Glossary Creation</a>
+<a class="feature-link" href="docs\scos\dev\tutorials-and-howtos\howtos\howto-set-up-multiple-stores.md">Multiple Stores</a>
+<a class="feature-link" href="docs\scos\dev\back-end-development\data-manipulation\datapayload-conversion\multiple-currencies-per-store-configuration.md">Multiple Currencies per Store</a>
+<a class="feature-link" href="docs\scos\user\features\202009.0\tax\international-tax-rates-and-sets.md">International Tax Rates and Sets</a>
+<a class="feature-link" href="docs\scos\user\user-guides\202009.0\back-office-user-guide\administration\glossary\managing-glossary.md">Glossary Creation</a>
 </div>   

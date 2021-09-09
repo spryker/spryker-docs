@@ -30,26 +30,24 @@ Check out this video tutorial on how to set up Product Groups:
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/product-group-feature-overview" class="mr-link">Get a general idea of the Product Group feature</a></li>
-   <li><a href="https://documentation.spryker.com/docs/product-group-feature-integration" class="mr-link">Integrate the Product Group feature into your project</a></li> 
-   <li><a href="https://documentation.spryker.com/docs/howto-display-product-groups-by-color-on-the-storefront" class="mr-link">Display product groups by color on Storefront</a></li> 
+                <li><a href="docs\scos\user\features\202009.0\product-groups\product-groups-feature-overview.md" class="mr-link">Get a general idea of the Product Group feature</a></li>
+   <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\product-group-feature-integration.md" class="mr-link">Integrate the Product Group feature into your project</a></li>
+   <li><a href="docs\scos\dev\tutorials-and-howtos\howtos\feature-howtos\howto-display-product-groups-by-color-on-the-storefront.md" class="mr-link">Display product groups by color on Storefront</a></li> 
             </ul>
         </div>
  <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                                <li><a href="https://documentation.spryker.com/docs/product-group-feature-overview" class="mr-link">Get a general idea of the Product Group feature</a></li>
+                                <li><a href="docs\scos\user\features\202009.0\product-groups\product-groups-feature-overview.md" class="mr-link">Get a general idea of the Product Group feature</a></li>
             </ul>
         </div>
         <!-- col3 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Storefront User</li>
-                <li><a href="https://documentation.spryker.com/docs/product-group-feature-overview" class="mr-link">Get a general idea of the Product Group feature</a></li>              
+                <li><a href="docs\scos\user\features\202009.0\product-groups\product-groups-feature-overview.md" class="mr-link">Get a general idea of the Product Group feature</a></li>              
             </ul>
         </div>
            </div>  
      </div>
-     
-

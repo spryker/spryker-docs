@@ -22,7 +22,7 @@ The business unit of the upper level is referred to as **parent business unit**,
 
 Upon company registration, a default business unit named "Headquarters" is automatically created under Business Units section.
 
-![default-business-unit_1_.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/default-business-unit_1_.png){height="" width=""}
+![default-business-unit_1_.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/default-business-unit_1_.png)
 
 The company administrator can create, edit, delete as well as arrange business units in hierarchical order in the Business Units section.
 
@@ -31,7 +31,7 @@ To create a business unit, its name and email address must be specified.
 {% info_block infoBox %}
 The user can also select a parent business unit of the newly created unit. If it is not selected, the new business unit will be created with "0" level in hierarchy, i.e. as a parent.
 {% endinfo_block %}
-![new-bu.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/new-bu.png){height="" width=""}
+![new-bu.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/new-bu.png)
 
 The parent and child business units are visually differentiated by means of indents. This differentiation is described in the following table:
 
@@ -43,7 +43,7 @@ The parent and child business units are visually differentiated by means of inde
 | And so on |
 
 Example:
-![business-units-hierarchy.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/business-units-hierarchy.png){height="" width=""}
+![business-units-hierarchy.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/business-units-hierarchy.png)
 
 The following are special characteristics of business units:
 
@@ -57,15 +57,15 @@ A business unit's children that are one level below it, become 0 level parent bu
 * A business unit can be assigned with one or multiple addresses.
 * The existing addresses can be assigned to business units right at the stage of their creation, and the new addresses can be added on the _Edit Business Unit_ page.
 
-![business-units-address.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/business-units-address.png){height="" width=""}
+![business-units-address.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/business-units-address.png)
 
 *  The addresses can also be unassigned by clearing the respective address's check box under the Assign Addresses section and clicking Submit.
 
-![unassign-address.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/unassign-address.png){height="" width=""}
+![unassign-address.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/unassign-address.png)
 
 This will move the address to Unassigned addresses section.
 
-![unassigned-addresses.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/unassigned-addresses.png){height="" width=""}
+![unassigned-addresses.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/unassigned-addresses.png)
 
 ## If you are:
 
@@ -87,4 +87,3 @@ This will move the address to Unassigned addresses section.
         </div>
          </div>
 </div>
-

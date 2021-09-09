@@ -38,7 +38,7 @@ The table below shows possible usage scenarios with the TTL feature and resultin
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/creating-a-product-variant" class="mr-link">Manage concrete product validity dates</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\catalog\products\concrete-products\creating-a-product-variant.md" class="mr-link">Manage concrete product validity dates</a></li>
             </ul>
         </div>
     </div>

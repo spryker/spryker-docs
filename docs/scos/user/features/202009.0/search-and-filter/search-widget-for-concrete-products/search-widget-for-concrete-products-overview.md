@@ -15,14 +15,14 @@ Using the search widget, online shoppers are able to find products assigned spec
 Here's an example of what the search widget looks like on:
 
 ## Shopping Cart Page
-![Shopping cart page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Search+Widget+for+Concrete+Products+Overview/shopping-cart-page.png){height="" width=""}
+![Shopping cart page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Search+Widget+for+Concrete+Products+Overview/shopping-cart-page.png)
 
 When the customer selects the product they can set the necessary item quantity in the **Quantity** field. If the customer adds a product that has quantity restrictions, these restrictions are automatically adjusted and the item obtains the closest valid quantity.
 
 All the products that are being added to cart are added as separate items to support the **Splittable Order Items** feature. For example, a customer has already 005 SKU product in the quantity of 3 in the cart. When adding another product of the same SKU to cart, the product is not merged but added as a separate item. This way a splittable product can be added to the order as a non-splittable one.
 
 A picture with 2 products of the same SKU added
-![Guest shopping cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Search+Widget+for+Concrete+Products+Overview/guest-shopping-cart.png){height="" width=""}
+![Guest shopping cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Search+Widget+for+Concrete+Products+Overview/guest-shopping-cart.png)
 
 With the search widget, a customer can always find the items that are available specifically to them as [Product Restriction](/docs/scos/dev/features/202009.0/merchant-product-restrictions/merchant-product-restrictions.html) are considered while searching. This means, that if a blacklist rule exists for a customer, the products that are added to that rule will not be displayed in the search results.
 
@@ -33,22 +33,22 @@ You can find more examples of product restriction use cases on the [Restricted P
 ## Shopping List Page
 
 The search widget is available on the shopping list edit page:
-![Shopping list page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Search+Widget+for+Concrete+Products+Overview/shopping-list-page.png){height="" width=""}
+![Shopping list page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Search+Widget+for+Concrete+Products+Overview/shopping-list-page.png)
 
 {% info_block infoBox %}
 In the empty shopping list, the customer can still add products with the help of the search widget.
 {% endinfo_block %}
-![Search widget demo](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Search+Widget+for+Concrete+Products+Overview/search-widget-demo.png){height="" width=""}
+![Search widget demo](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Search+Widget+for+Concrete+Products+Overview/search-widget-demo.png)
 
-In comparison with Shopping Cart, for Shopping lists, the quantity that is being added via a search widget is not verified. That means that the customer can add products to a shopping list with any quantity, irrespective of the [quantity restrictions](https://documentation.spryker.com/v6/docs/product-quantity-restrictions) the products may have.
+In comparison with Shopping Cart, for Shopping lists, the quantity that is being added via a search widget is not verified. That means that the customer can add products to a shopping list with any quantity, irrespective of the [quantity restrictions](docs\scos\user\features\202009.0\non-splittable-products\non-splittable-products-feature-overview.md) the products may have.
 
 The same works for the [product restriction](/docs/scos/dev/features/202009.0/merchant-product-restrictions/merchant-product-restrictions.html) rules: it is impossible to add blacklisted products to a shopping list, the shopper will get "No search results" message in the widget field, and only whitelisted products will be suggested in the search results in case of a whitelist.
 
 ## Quick Order Page
 The widget allows searching the products on the quick order page too:
-![Quick order page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Search+Widget+for+Concrete+Products+Overview/quick-order-page.png){height="" width=""}
+![Quick order page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Search+Widget+for+Concrete+Products+Overview/quick-order-page.png)
 
 The module relations can be schematically represented in the following way:
-![Module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Search+Widget+for+Concrete+Products+Overview/module-relations.png){height="" width=""}
+![Module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Search+Widget+for+Concrete+Products+Overview/module-relations.png)
 
 

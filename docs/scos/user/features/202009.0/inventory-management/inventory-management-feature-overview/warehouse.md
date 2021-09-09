@@ -18,7 +18,7 @@ You can easily manage stocks across all stores and warehouses as well as share w
 Stock defines the physical amount of products you have in your warehouse. Spryker Commerce OS allows you to define stocks for your products in different warehouses.
 
 A product is associated with at least one stock product. It should be noted that only concrete products can have stocks. Additionally, in the Back Office, you can define a product to be never out of stock to make it available at any time.
-![Database scheme](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/Warehouse+Management/database-scheme-inventory.png){height="" width=""}
+![Database scheme](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/Warehouse+Management/database-scheme-inventory.png)
 
 ## How Spryker Stores Your Product Stock
 Spryker holds your product stock in a type called DECIMAL(20,10), which means that your product stock can be 20 digits long and have a maximum of 10 digits after the comma. For example:

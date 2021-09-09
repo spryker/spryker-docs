@@ -8,14 +8,14 @@ redirect_from:
   - /v6/docs/en/spryker-core-back-office
 ---
 
-From the Back Office, you can manage all the back-office activities. For example, the Back Office users can manage user and administrator accounts, create product pages, check orders, and do many more tasks. 
+From the Back Office, you can manage all the back-office activities. For example, the Back Office users can manage user and administrator accounts, create product pages, check orders, and do many more tasks.
 
 The Spryker Back Office supports two types of authentication:
 
 * Regular authentication with the Back Office user email and password
 * Third-party sign-on
 
-You can define access permissions and roles for all Back Office users where needed and set initial passwords. 
+You can define access permissions and roles for all Back Office users where needed and set initial passwords.
 
 ## If you are:
 
@@ -25,30 +25,30 @@ You can define access permissions and roles for all Back Office users where need
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/the-back-office-overview" class="mr-link">Get a general idea of the Back Office</a></li>
-                <li><a href="https://documentation.spryker.com/docs/back-office-translations-overview" class="mr-link">Get a general idea of the Back Office translations</a></li>
-                <li><a href="https://documentation.spryker.com/docs/users-and-rights-overview" class="mr-link">Get a general idea of users and rights</a></li>
-                <li><a href="https://documentation.spryker.com/docs/spryker-core-back-office-feature-integration" class="mr-link">Integrate the Spryker Core Back Office feature into your project</a></li>
+                <li><a href="docs\scos\user\features\202009.0\spryker-core-back-office\spryker-core-back-office-feature-overview\the-back-office-overview.md" class="mr-link">Get a general idea of the Back Office</a></li>
+                <li><a href="docs\scos\user\features\202009.0\spryker-core-back-office\spryker-core-back-office-feature-overview\back-office-translations-overview.md" class="mr-link">Get a general idea of the Back Office translations</a></li>
+                <li><a href="docs\scos\user\features\202009.0\spryker-core-back-office\spryker-core-back-office-feature-overview\users-and-rights-overview.md" class="mr-link">Get a general idea of users and rights</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\spryker-core-back-office-feature-integration.md" class="mr-link">Integrate the Spryker Core Back Office feature into your project</a></li>
             </ul>
         </div>
         <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/the-back-office-overview" class="mr-link">Get a general idea of the Back Office</a></li>
-                <li><a href="https://documentation.spryker.com/docs/back-office-translations-overview" class="mr-link">Get a general idea of the Back Office translations</a></li>
+                <li><a href="docs\scos\user\features\202009.0\spryker-core-back-office\spryker-core-back-office-feature-overview\the-back-office-overview.md" class="mr-link">Get a general idea of the Back Office</a></li>
+                <li><a href="docs\scos\user\features\202009.0\spryker-core-back-office\spryker-core-back-office-feature-overview\back-office-translations-overview.md" class="mr-link">Get a general idea of the Back Office translations</a></li>
                 <li>Work with the Back Office:</li>
-                <li><a href="https://documentation.spryker.com/docs/reference-information-dashboard" class="mr-link">Dashboard</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-punchout-connections" class="mr-link">Punch Out</a></li>
-                <li><a href="https://documentation.spryker.com/docs/order-matrix-reference-information" class="mr-link">Sales</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-customers" class="mr-link">Customers</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\dashboard\reference-information-dashboard.md" class="mr-link">Dashboard</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\punch-out\managing-punch-out-connections.md" class="mr-link">Punch Out</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\sales\order-matrix\reference-information-order-matrix.md" class="mr-link">Sales</a></li>
+                <li><a href="docs\scos\dev\glue-api-guides\202009.0\managing-customers\managing-customers.md" class="mr-link">Customers</a></li>
                 <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\catalog\products\abstract-products\creating-abstract-products-and-product-bundles.md" class="mr-link">Catalog</a></li>
-                <li><a href="https://documentation.spryker.com/docs/creating-content-items" class="mr-link">Content</a></li>
-                <li><a href="https://documentation.spryker.com/docs/creating-a-voucher" class="mr-link">Merchandising</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-roles" class="mr-link">Users</a></li>
-                <li><a href="https://documentation.spryker.com/docs/maintenance" class="mr-link">Maintenance</a></li>
-                <li><a href="https://documentation.spryker.com/docs/marketplace" class="mr-link">Marketplace</a></li>
-                <li><a href="https://documentation.spryker.com/v6/docs/creating-a-warehouse" class="mr-link">Administration</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\content\content-items\creating-content-items.md" class="mr-link">Content</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\merchandising\discount\creating-a-voucher.md" class="mr-link">Merchandising</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\users\roles-groups-and-users\managing-roles.md" class="mr-link">Users</a></li>
+                <!--<li><a href="https://documentation.spryker.com/docs/maintenance" class="mr-link">Maintenance</a></li> -->
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\marketplace\merchants-and-merchant-relations\managing-merchant-relations.md" class="mr-link">Marketplace</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\administration\warehouses\creating-a-warehouse.md" class="mr-link">Administration</a></li>
             </ul>
         </div>
         </div>

@@ -29,5 +29,5 @@ Improve the search engine ranking of your store and let potential customers find
 
 **Feature:**
 <div>
-<a class="feature-link" href="https://documentation.spryker.com/docs/en/url-redirects">URL Redirects</a>  
+<a class="feature-link" href="docs\scos\user\features\202009.0\spryker-core\spryker-core-feature-overview\url-redirects.md">URL Redirects</a>  
  </div>

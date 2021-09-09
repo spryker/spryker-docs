@@ -21,7 +21,7 @@ redirect_from:
 * Protect your data
 * Administer all accounts
 ***
-        
+
 The Spryker Commerce OS includes a powerful and user-friendly Back Office that allows you to manage all Back Office tasks with ease. Easily manage and create customer accounts, and keep track of all your internal processes including the management of your products, orders, customers and many more.
 
 The Back Office also enables you to:
@@ -37,11 +37,10 @@ The main benefits you get when working with the Back Office are  saving time and
 
 **Features:**
 <div>
-<a class="feature-link" href="https://documentation.spryker.com/docs/administration-interface">Back Office Management</a>    
-<a class="feature-link" href="https://documentation.spryker.com/docs/back-office-translations-201903">Back Office Translations</a>    
-<a class="feature-link" href="https://documentation.spryker.com/docs/data-protection">Data Protection</a>    
-<a class="feature-link" href="https://documentation.spryker.com/docs/permission-acl-management">Permission & ACL Management</a>  
-<a class="feature-link" href="https://documentation.spryker.com/docs/customer-management">Manage Customer Accounts</a>
-<a class="feature-link" href="https://documentation.spryker.com/docs/company-account">Manage Company Accounts</a>
+<a class="feature-link" href="docs\scos\user\features\202009.0\spryker-core-back-office\spryker-core-back-office.md">Back Office Management</a>    
+<a class="feature-link" href="docs\scos\user\features\202009.0\spryker-core-back-office\spryker-core-back-office-feature-overview\back-office-translations-overview.md">Back Office Translations</a>    
+<!--<a class="feature-link" href="https://documentation.spryker.com/docs/data-protection">Data Protection</a>    
+<a class="feature-link" href="https://documentation.spryker.com/docs/permission-acl-management">Permission & ACL Management</a>-->
+<a class="feature-link" href="docs\scos\user\features\202009.0\customer-account-management\customer-account-management.md">Manage Customer Accounts</a>
+<a class="feature-link" href="docs\scos\user\features\202009.0\company-account\company-account.md">Manage Company Accounts</a>
 </div>
-

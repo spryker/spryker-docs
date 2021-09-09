@@ -22,8 +22,8 @@ The Search Widget for Concrete Products simplifies the search for concrete produ
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/search-widget-for-concrete-producs-overview-201903" class="mr-link">Familiarize yourself with Search Widget for Concrete Products</a></li>
-                <li><a href="https://documentation.spryker.com/docs/product-feature-integration-201903" class="mr-link">Integrate the Search Widget for Concrete Products into your project</a></li>
+                <li><a href="docs\scos\user\features\202009.0\search-and-filter\search-widget-for-concrete-products\search-widget-for-concrete-products-overview.md" class="mr-link">Familiarize yourself with Search Widget for Concrete Products</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\product-feature-integration.md" class="mr-link">Integrate the Search Widget for Concrete Products into your project</a></li>
             </ul>
         </div>
     </div>

@@ -16,11 +16,7 @@ You can create customer accounts by [importing](/docs/scos/dev/developer-guides/
 
 With the help of [Glue API](/docs/scos/dev/glue-api-guides/202009.0/glue-rest-api.html), you can change and reset customer account passwords. This can be useful when you want to use a single authentication in all the apps connected to your shop. See [Changing Customer’s Password](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/customer-password.html#change-a-customer-s-password) and [Resetting Customer’s Password](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/customer-password.html#reset-a-customers-password) to learn how a developer can do it.
 
-On the Storefront, it is mandatory to enter a password when creating a customer account. After the account is created, you can update the password in the customer account or request a password reset via email. See [Changing Account Password](https://documentation.spryker.com/v6/docs/customer-accounts-overview#changing-customer-account-password) to learn how B2B and B2C Shoppers can change account passwords.
-
-
-
-
+On the Storefront, it is mandatory to enter a password when creating a customer account. After the account is created, you can update the password in the customer account or request a password reset via email. See [Changing Account Password](docs\scos\user\features\202009.0\customer-account-management\customer-account-management-feature-overview\customer-account-overview.mdw) to learn how B2B and B2C Shoppers can change account passwords.
 
 ## If you are:
 

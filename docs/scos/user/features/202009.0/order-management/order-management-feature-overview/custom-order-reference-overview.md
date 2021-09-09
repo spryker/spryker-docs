@@ -21,14 +21,14 @@ In the Storefront, you, as a buyer, can add a custom order reference to the orde
 <details open>
 <summary>Cart page</summary>
 
-![add-custom-order-reference](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Custom+Order+Reference/add-custom-order-reference.gif){height="" width=""}
+![add-custom-order-reference](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Custom+Order+Reference/add-custom-order-reference.gif)
 
 </details>
 
 <details open>
 <summary>Summary page</summary>
 
-![custom-order-reference-summary-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Custom+Order+Reference/custom-order-reference-summary-page.png){height="" width=""}
+![custom-order-reference-summary-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Custom+Order+Reference/custom-order-reference-summary-page.png)
 
 </details>
 
@@ -36,13 +36,13 @@ In the Storefront, you, as a buyer, can add a custom order reference to the orde
 
 <summary>Order Details page </summary>
 
-![custom-order-reference-order-details-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Custom+Order+Reference/custom-order-reference-order-details-page.gif){height="" width=""}
+![custom-order-reference-order-details-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Custom+Order+Reference/custom-order-reference-order-details-page.gif)
 
 </details>
 
 When working with the order in the Back Office, you, as a Back Office user, can view, edit, or remove the custom order reference on the order details page.
 
-![zed-custom-order-ref-new](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Custom+Order+Reference/zed-change-custom-order-reference.gif){height="" width=""}
+![zed-custom-order-ref-new](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Custom+Order+Reference/zed-change-custom-order-reference.gif)
 
 ## Custom Order Reference with the RFQ, approval process, and share cart via a link
 If you submit a [quote request](/docs/scos/dev/features/202009.0/quotation-process/quotation-process-feature-overview.html) and then convert it to the shopping cart, the cart gets locked. However, adding and updating the customer order reference for the locked cart is still possible.

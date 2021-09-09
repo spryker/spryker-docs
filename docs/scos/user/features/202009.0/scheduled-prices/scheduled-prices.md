@@ -30,21 +30,21 @@ With all the functionality the feature provides, you can successfully and effort
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/scheduled-prices-feature-overview-201907" class="mr-link">Get a general idea of the Scheduled Prices feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/scheduled-prices-feature-integration-202001" class="mr-link">Integrate the Scheduled Prices feature into your project</li>
-                <li><a href="https://documentation.spryker.com/docs/ht-import-scheduled-prices-201907" class="mr-link">Import Scheduled Prices into your project</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/mg-price-product-schedule" class="mr-link">Migrate the PriceProductSchedule module from version 1.* to version 2.0</a></li>
-                <li><a href="https://documentation.spryker.com/docs/mg-price-product-schedule-gui" class="mr-link">Migrate the PriceProductScheduleGui module from version 1.* to version 2.0</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/ht-schedule-cron-job-for-scheduled-prices-201907" class="mr-link">Schedule cron job for Scheduled Prices</a></li>
+                <li><a href="docs\scos\user\features\202009.0\scheduled-prices\scheduled-prices-feature-overview.md" class="mr-link">Get a general idea of the Scheduled Prices feature</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\scheduled-prices-feature-integration.md" class="mr-link">Integrate the Scheduled Prices feature into your project</li>
+                <li><a href="docs\scos\dev\data-import\202009.0\data-import-categories\catalog-setup\pricing\file-details-product-price-schedule.csv.md" class="mr-link">Import Scheduled Prices into your project</a></li>
+                 <li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-priceproductschedule.md" class="mr-link">Migrate the PriceProductSchedule module from version 1.* to version 2.0</a></li>
+                <li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-priceproductschedulegui.md" class="mr-link">Migrate the PriceProductScheduleGui module from version 1.* to version 2.0</a></li>
+                 <li><a href="docs\scos\dev\tutorials-and-howtos\howtos\feature-howtos\howto-schedule-cron-job-for-scheduled-prices.md" class="mr-link">Schedule cron job for Scheduled Prices</a></li>
             </ul>
         </div>
         <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/scheduled-prices-feature-overview-201907" class="mr-link">Get a general idea of the Scheduled Prices feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/en/creating-scheduled-prices" class="mr-link">Create a Scheduled price</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/managing-scheduled-prices" class="mr-link">Manage Scheduled Prices</a></li>
+                <li><a href="docs\scos\user\features\202009.0\scheduled-prices\scheduled-prices-feature-overview.md" class="mr-link">Get a general idea of the Scheduled Prices feature</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\catalog\scheduled-prices\creating-scheduled-prices.md" class="mr-link">Create a Scheduled price</a></li>
+                 <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\catalog\scheduled-prices\managing-scheduled-prices.md" class="mr-link">Manage Scheduled Prices</a></li>
             </ul>
         </div>
     </div>

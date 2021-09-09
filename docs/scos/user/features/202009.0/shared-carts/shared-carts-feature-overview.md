@@ -118,7 +118,7 @@ If the shared cart has been dismissed individually by the user, this user will n
 {% endinfo_block %}
 
 ## Current constraints
-With the current functionality, the shopping cart cannot be shared outside of a [business unit](https://documentation.spryker.com/v6/docs/business-units-overview) where the owner belongs.
+With the current functionality, the shopping cart cannot be shared outside of a [business unit](docs\scos\user\features\202009.0\company-account\company-account-feature-overview\business-units.md) where the owner belongs.
 
 ## Shared Cart on the Storefront
 <a id=shared-cart-on-the-storefront></a>

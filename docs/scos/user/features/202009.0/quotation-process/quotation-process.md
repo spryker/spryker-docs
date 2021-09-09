@@ -24,16 +24,16 @@ RFQ is a simple, great way for B2B buyers to choose the best supplier and get th
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/quotation-process-rfq-feature-overview" class="mr-link">Get a general idea of the Quotation Process feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/quotation-process-feature-integration" class="mr-link">Integrate Quotation Process feature into your project</a></li>
-                <li><a href="https://documentation.spryker.com/docs/quotation-process-multiple-carts-feature-integration" class="mr-link">Integrate Quotation Process + Multiple Carts feature into your project</a></li>
-                <li><a href="https://documentation.spryker.com/docs/quotation-process-approval-process-feature-integration" class="mr-link">Integrate Quotation Process + Approval Process feature into your project</a></li>
-             <li><a href="https://documentation.spryker.com/docs/approval-process-feature-integration" class="mr-link">Integrate Approval Process feature into your project</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/shipment-cart-feature-integration" class="mr-link">Integrate Shipment + Cart feature into your project</a></li>
-                  <li><a href="https://documentation.spryker.com/docs/shipment-feature-integration" class="mr-link">Integrate Shipment feature into your project</a></li>
-                <li><a href="https://documentation.spryker.com/docs/checkout-quotation-process-feature-integration" class="mr-link">Integrate Checkout + Quotation Process feature into your project</a></li>
-                <li><a href="https://documentation.spryker.com/docs/mg-quoterequestpage#upgrading-from-version-2-x-x-to-version-3-x-x" class="mr-link">Migrate the QuoteRequestPage module from version 2.* to version 3.*</a></li>
-                <li><a href="https://documentation.spryker.com/docs/mg-quoterequestagent#upgrading-from-version-2-x-x-to-version-3-x-x" class="mr-link">Migrate the QuoteRequestAgentPage module from version 2.* to version 3.*</a></li>
+                <li><a href="docs\scos\user\features\202009.0\quotation-process\quotation-process-feature-overview.md" class="mr-link">Get a general idea of the Quotation Process feature</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\quotation-process-feature-integration.md" class="mr-link">Integrate Quotation Process feature into your project</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\quotation-process-multiple-carts-feature-integration.md" class="mr-link">Integrate Quotation Process + Multiple Carts feature into your project</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\quotation-process-approval-process-feature-integration.md" class="mr-link">Integrate Quotation Process + Approval Process feature into your project</a></li>
+             <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\approval-process-feature-integration.md" class="mr-link">Integrate Approval Process feature into your project</a></li>
+                 <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\shipment-cart-feature-integration.md" class="mr-link">Integrate Shipment + Cart feature into your project</a></li>
+                  <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\shipment-feature-integration.md" class="mr-link">Integrate Shipment feature into your project</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\checkout-quotation-process-feature-integration.md" class="mr-link">Integrate Checkout + Quotation Process feature into your project</a></li>
+                <li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-quoterequestpage.md#upgrading-from-version-2-x-x-to-version-3-x-x" class="mr-link">Migrate the QuoteRequestPage module from version 2.* to version 3.*</a></li>
+                <li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-quoterequestagent.md#upgrading-from-version-2-x-x-to-version-3-x-x" class="mr-link">Migrate the QuoteRequestAgentPage module from version 2.* to version 3.*</a></li>
                 </ul>
         </div>
     </div>

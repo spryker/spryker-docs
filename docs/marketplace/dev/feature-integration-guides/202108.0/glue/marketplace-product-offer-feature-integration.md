@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Marketplace Product Offer feature integration"
-last_updated: Dec 17, 2020
+last_updated: Sep 9, 2021
 description: This document describes the process how to integrate the Marketplace Product Offer Glue API feature into a Spryker project.
 template: feature-integration-guide-template
 ---
@@ -39,6 +39,7 @@ Make sure that the following modules have been installed:
 ### 2) Set up transfer objects
 
 Generate transfer changes:
+
 ```bash
 console transfer:generate
 ```

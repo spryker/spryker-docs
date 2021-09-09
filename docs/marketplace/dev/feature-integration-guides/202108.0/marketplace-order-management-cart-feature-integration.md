@@ -17,15 +17,15 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | ----------- | ------- | ------------------|
-| Order Threshold | {{page.version}}  | [Order Threshold feature integration](https://documentation.spryker.com/docs/order-threshold-feature-integration) |
-| Cart            | 202001.0    | [Cart feature integration](https://github.com/spryker-feature/cart) |
+| Cart                         | {{page.version}}  | [Cart feature integration](https://github.com/spryker-feature/cart) |
+| Marketplace Order Management | {{page.version}}  | [Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker/cart-note-merchant-sales-order-gui:"^0.1.0" --update-with-dependencies
+composer require spryker-feature/marketplace-cart:"dev-master" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -34,31 +34,17 @@ Make sure that the following modules have been installed:
 
 | MODULE                  | EXPECTED DIRECTORY                   |
 | ----------------------------- | ------------------------------------------ |
-| CartNoteMerchantSalesOrderGui | spryker/cart-note-merchant-sales-order-gui |
+| CartNoteMerchantSalesOrderGui | vendor/spryker/cart-note-merchant-sales-order-gui |
 
 {% endinfo_block %}
 
-### 2) Set up transfer objects
+### 2) Set up configuration
 
-Generate transfer changes:
+Add the following configuration:
 
-```bash
-console transfer:generate
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that the following changes were applied in transfer objects.
-
-| TRANSFER      | TYPE  | EVENT | PATH                                            |
-| - | - | - | - |
-| MerchantOrder.order | attribute | created   | src/Generated/Shared/Transfer/MerchantOrderTransfer |
-
-{% endinfo_block %}
-
-### 3) Set up behavior
-
-Add the following configuration to the project:
+| CONFIGURATION | SPECIFICATION | NAMESPACE |
+| ------------- | ------------- | --------- |
+| MerchantSalesOrderMerchantUserGuiConfig  | Introduces list of urls of order detail page configuration. | src/Pyz/Zed/MerchantSalesOrderMerchantUserGui/MerchantSalesOrderMerchantUserGuiConfig.php |
 
 ```php
 <?php
@@ -79,12 +65,11 @@ class MerchantSalesOrderMerchantUserGuiConfig extends SprykerMerchantSalesOrderM
         ];
     }
 }
-
 ```
 
 {% info_block warningBox "Verification" %}
 
-Ensure that cart notes are shown on the order view page when looking at merchant orders in Zed GUI.
+Ensure that cart notes are shown on the order view page when looking at merchant orders in Backoffice.
 
 {% endinfo_block %}
 
@@ -151,6 +136,7 @@ class SalesMerchantPortalGuiDependencyProvider extends SprykerSalesMerchantPorta
     }
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the `ProductOfferMerchantOrderItemTableExpanderPlugin` plugin is set up by opening `http://zed.mysprykershop.com/sales-merchant-portal-gui/orders`. Click on any order and check that the *Cart Note* column  is present.

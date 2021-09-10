@@ -31,13 +31,13 @@ The main benefits of working with the cart are to create a convenient and predic
 
 **Features:**
 <div>
-<a class="feature-link" href="https://documentation.spryker.com/docs/cart-functionality-calculations">Cart Functionality and Calculations</a>   
-<a class="feature-link" href="https://documentation.spryker.com/docs/minimum-order-value-201903">Minimum Order Value</a>   
-<a class="feature-link" href="https://documentation.spryker.com/docs/shared-cart">Shared Cart</a>   
-<a class="feature-link" href="https://documentation.spryker.com/docs/multiple-cart-per-user">Multiple Carts Per User</a>   
-    <a class="feature-link" href="https://documentation.spryker.com/docs/cart-widget">Shopping Cart Widget</a>  
-    <a class="feature-link" href="https://documentation.spryker.com/docs/cart-notes">Cart Notes</a>  
-    <a class="feature-link" href="https://documentation.spryker.com/docs/quick-order-201903">Quick Order</a>
-<a class="feature-link" href="https://documentation.spryker.com/docs/unique-url-per-cart-for-easy-sharing-201907">Unique URL per Cart for Easy Sharing</a>  
-    <a class="feature-link" href="https://documentation.spryker.com/docs/order-thresholds">Order Thresholds</a>  
-    </div>
+    <a class="feature-link" href="docs\scos\user\features\202009.0\cart\cart-feature-overview\cart-module-reference-information.md">Cart Functionality and Calculations</a>   
+    <a class="feature-link" href="docs\scos\user\features\202009.0\checkout\checkout-feature-overview\order-thresholds.md">Minimum Order Value</a>   
+    <a class="feature-link" href="docs\scos\user\features\202009.0\shared-carts\shared-carts.md">Shared Cart</a>   
+    <a class="feature-link" href="docs\scos\user\features\202009.0\multiple-carts\multiple-carts.md">Multiple Carts Per User</a>   
+    <a class="feature-link" href="docs\scos\user\features\202009.0\cart\cart-feature-overview\cart-widget-overview.md">Shopping Cart Widget</a>  
+    <a class="feature-link" href="docs\scos\user\features\202009.0\cart\cart-feature-overview\cart-notes-overview.md">Cart Notes</a>  
+    <a class="feature-link" href="docs\scos\user\features\202009.0\quick-add-to-cart\quick-add-to-cart.md">Quick Order</a>
+    <a class="feature-link" href="docs\scos\user\features\202009.0\resource-sharing\unique-url-per-cart-for-easy-sharing\unique-url-per-cart-for-easy-sharing.md">Unique URL per Cart for Easy Sharing</a>  
+    <a class="feature-link" href="docs\scos\user\features\202009.0\checkout\checkout-feature-overview\order-thresholds.md">Order Thresholds</a>  
+</div>

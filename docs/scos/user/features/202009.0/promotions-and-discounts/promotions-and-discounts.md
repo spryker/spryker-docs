@@ -20,21 +20,22 @@ You can choose between two discount types - Voucher and Cart rule. Depending on 
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/discount-feature-overview">Get a general idea of the Promotions & Discounts feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/mg-discount#upgrading-from-version-6---to-version-7--" class="mr-link">Migrate Discount module from version 6.* to version 7.*</a></li>
-                <li><a href="https://documentation.spryker.com/docs/promotions-discounts-feature-integration" class="mr-link">Discount Promotion Feature Integration</a></li>
-                        <li><a href="https://documentation.spryker.com/docs/retrieving-promotional-items" class="mr-link">Retrieve promotional items via Glue API</a></li>
-                <li><a href="https://documentation.spryker.com/docs/en/retrieving-discounts" class="mr-link">Retrieve discounts via Glue API</a></li>
+                <li><a href="docs\scos\user\features\202009.0\promotions-and-discounts\promotions-and-discounts-feature-overview.md">Get a general idea of the Promotions & Discounts feature</a></li>
+                <li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-discount.md#upgrading-from-version-6---to-version-7--" class="mr-link">Migrate Discount module from version 6.* to version 7.*</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\promotions-and-discounts-feature-integration.md" class="mr-link">Discount Promotion Feature Integration</a></li>
+                <li><a href="docs\scos\dev\glue-api-guides\202009.0\retrieving-promotional-items.md" class="mr-link">Retrieve promotional items via Glue API</a></li>
+                <li><a href="docs\scos\dev\glue-api-guides\202009.0\managing-carts\guest-carts\managing-discount-vouchers-in-guest-carts.md" class="mr-link">Manage discount vouchers in guest carts discounts via Glue API</a></li>
+                <li><a href="docs\scos\dev\glue-api-guides\202009.0\managing-carts\carts-of-registered-users\managing-discount-vouchers-in-carts-of-registered-users.md" class="mr-link">Manage discount vouchers in carts of registered users</a></li>
                 </ul>
         </div>
         <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/promotions-discounts-feature-overview">Get a general idea of the Promotions & Discounts feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/creating-a-voucher" class="mr-link">Create a voucher</a></li>
-                <li><a href="https://documentation.spryker.com/docs/creating-a-cart-rule" class="mr-link">Create a cart rule</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/managing-discounts" class="mr-link">Manage discounts</a></li>
+                <li><a href="docs\scos\user\features\202009.0\promotions-and-discounts\promotions-and-discounts-feature-overview.md">Get a general idea of the Promotions & Discounts feature</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\merchandising\discount\creating-a-voucher.md" class="mr-link">Create a voucher</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\merchandising\discount\creating-a-cart-rule.md" class="mr-link">Create a cart rule</a></li>
+                 <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\merchandising\discount\managing-discounts.md" class="mr-link">Manage discounts</a></li>
             </ul>
         </div>
     </div>

@@ -22,20 +22,20 @@ The purpose of suggesting the alternative products is to help the user find the 
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/alternative-products-overview" class="mr-link">Familiarize yourself with Alternative Products</a></li>
-                <li><a href="https://documentation.spryker.com/docs/alternative-products-feature-integration-201903" class="mr-link">Integrate Alternative Products into your project into your project</a></li>
-                <li><a href="https://documentation.spryker.com/docs/alternative-products-discontinued-products-feature-integration-201903" class="mr-link">Integrate Alternative Products + Discontinued Products into your project</a></li>
-                <li><a href="https://documentation.spryker.com/docs/alternative-products-product-labels-feature-integration-201903" class="mr-link">Integrate Alternative Products + Product Labels into your project</a></li>
-                <li><a href="https://documentation.spryker.com/docs/alternative-products-inventory-management-feature-integration-201903" class="mr-link">Integrate Alternative Products + Inventory Management into your project</a></li>
-                <li><a href="https://documentation.spryker.com/docs/alternative-products-wishlist-feature-integration-201903" class="mr-link">Integrate Alternative Products + Wishlist into your project</a></li>
+                <li><a href="/docs\scos\user\features\202009.0\alternative-products\alternative-products-feature-overview.html" class="mr-link">Familiarize yourself with Alternative Products</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\alternative-products-feature-integration.md" class="mr-link">Integrate Alternative Products into your project into your project</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\alternative-products-discontinued-products-feature-integration.md" class="mr-link">Integrate Alternative Products + Discontinued Products into your project</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202108.0\feature-integration-guides\alternative-products-product-label-feature-integration.md" class="mr-link">Integrate Alternative Products + Product Labels into your project</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\alternative-products-inventory-management-feature-integration.md" class="mr-link">Integrate Alternative Products + Inventory Management into your project</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\alternative-products-wishlist-feature-integration.md" class="mr-link">Integrate Alternative Products + Wishlist into your project</a></li>
             </ul>
         </div>
         <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-               <li><a href="https://documentation.spryker.com/docs/alternative-products-overview" class="mr-link">Familiarize yourself with Alternative Products</a></li>
-                <li><a href="https://documentation.spryker.com/docs/adding-product-alternatives" class="mr-link">Adding Product Alternatives</a></li>
+               <li><a href="docs\scos\user\features\202009.0\alternative-products\alternative-products-feature-overview.md" class="mr-link">Familiarize yourself with Alternative Products</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\catalog\products\managing-products\adding-product-alternatives.md" class="mr-link">Adding Product Alternatives</a></li>
             </ul>
         </div>
     </div>

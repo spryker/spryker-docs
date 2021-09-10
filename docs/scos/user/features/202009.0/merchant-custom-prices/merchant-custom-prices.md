@@ -18,20 +18,20 @@ In B2B commerce transactions, prices are typically negotiated in contracts, ther
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/merchant-custom-prices-feature-overview" class="mr-link">Get a general idea of the Merchant Custom Prices feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/merchant-custom-prices-feature-overview" class="mr-link">Import prices for merchant relations</a></li>
-                <li><a href="https://documentation.spryker.com/docs/merchant-custom-prices-feature-overview" class="mr-link">Delete imported prices for merchant relations</a></li>
-                <li><a href="https://documentation.spryker.com/docs/en/merchant-custom-prices-feature-integration" class="mr-link">Integrate the Merchant Custom Prices into your project</a></li>
-               <li><a href="https://documentation.spryker.com/docs/mg-priceproduct" class="mr-link">Migrate to a newer version of the PriceProduct module</a></li>
+                <li><a href="docs\scos\user\features\202009.0\merchant-custom-prices\merchant-custom-prices-feature-overview.md" class="mr-link">Get a general idea of the Merchant Custom Prices feature</a></li>
+                <li><a href="docs\scos\user\features\202009.0\merchant-custom-prices\merchant-custom-prices-feature-overview.md" class="mr-link">Import prices for merchant relations</a></li>
+                <li><a href="docs\scos\user\features\202009.0\merchant-custom-prices\merchant-custom-prices-feature-overview.md" class="mr-link">Delete imported prices for merchant relations</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\merchant-custom-prices-feature-integration.md" class="mr-link">Integrate the Merchant Custom Prices into your project</a></li>
+               <li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-priceproduct.md" class="mr-link">Migrate to a newer version of the PriceProduct module</a></li>
             </ul>
         </div>
         <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/merchant-custom-prices-feature-overview" class="mr-link">Get a general idea of the Merchant Custom Prices feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/merchant-custom-prices-feature-overview" class="mr-link">Import prices for merchant relations</a></li>
-                <li><a href="https://documentation.spryker.com/docs/merchant-custom-prices-feature-overview" class="mr-link">Delete imported prices for merchant relations</a></li>
+                <li><a href="docs\scos\user\features\202009.0\merchant-custom-prices\merchant-custom-prices-feature-overview.md" class="mr-link">Get a general idea of the Merchant Custom Prices feature</a></li>
+                <li><a href="docs\scos\user\features\202009.0\merchant-custom-prices\merchant-custom-prices-feature-overview.md" class="mr-link">Import prices for merchant relations</a></li>
+                <li><a href="docs\scos\user\features\202009.0\merchant-custom-prices\merchant-custom-prices-feature-overview.md" class="mr-link">Delete imported prices for merchant relations</a></li>
                 <li><a href="#" class="mr-link">Set specific prices per merchant relation</a></li>
             </ul>
         </div>

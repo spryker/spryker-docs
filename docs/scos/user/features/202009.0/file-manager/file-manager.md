@@ -32,16 +32,16 @@ This enables content managers to create rich, compelling and attractive content 
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/asset-management" class="mr-link">Get a general idea of asset measurement</a></li>
-                <li><a href="https://documentation.spryker.com/docs/file-uploader" class="mr-link">Get a general idea of the file uploader</a></li>
+                <li><a href="docs\scos\user\features\202009.0\file-manager\file-manager-feature-overview\asset-management.md" class="mr-link">Get a general idea of asset measurement</a></li>
+                <li><a href="docs\scos\user\features\202009.0\file-manager\file-manager-feature-overview\file-uploader.md" class="mr-link">Get a general idea of the file uploader</a></li>
             </ul>
         </div>
         <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-            <li><a href="https://documentation.spryker.com/docs/asset-management" class="mr-link">Get a general idea of asset measurement</a></li>
-                <li><a href="https://documentation.spryker.com/docs/file-uploader" class="mr-link">Get a general idea of the file uploader</a></li>
+            <li><a href="docs\scos\user\features\202009.0\file-manager\file-manager-feature-overview\asset-management.md" class="mr-link">Get a general idea of asset measurement</a></li>
+                <li><a href="docs\scos\user\features\202009.0\file-manager\file-manager-feature-overview\file-uploader.md" class="mr-link">Get a general idea of the file uploader</a></li>
             </ul>
         </div>
     </div>

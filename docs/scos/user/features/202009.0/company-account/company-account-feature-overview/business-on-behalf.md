@@ -8,14 +8,16 @@ redirect_from:
   - /v6/docs/en/business-on-behalf
 ---
 
-Every [business unit](https://documentation.spryker.com/v6/docs/business-unit-management) includes some company users that have specific permissions within this business unit. The *Business on Behalf* feature allows having multiple company users per customer account with a possibility to select one company user to be a default user. This default user can switch between the assigned business units.
+Every [business unit](docs\scos\user\features\202009.0\company-account\company-account-feature-overview\business-units.md) includes some company users that have specific permissions within this business unit. The *Business on Behalf* feature allows having multiple company users per customer account with a possibility to select one company user to be a default user. This default user can switch between the assigned business units.
 
 For example, as a shop owner, you might have a financial manager in your company, who, for audit purposes, should be able to access company business units' accounts to check their order histories, shopping lists, etc.
 
 You can assign a user to multiple business units in the Back Office. After that, a single user will be able to log in to several company accounts and manage all of them via a browser window.
 
 {% info_block warningBox %}
+
 Only customers having more than one Company user can make use of the feature.
+
 {% endinfo_block %}
 When you have access to multiple business units, you can:
 
@@ -32,18 +34,18 @@ The following table describes some workflows where assigning a company user to m
 
 Database relations without the Business on Behalf feature are as follows:
 
-![scheme1.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+on+Behalf/Business+on+Behalf+Feature+Overview/scheme1.png) 
+![scheme1.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+on+Behalf/Business+on+Behalf+Feature+Overview/scheme1.png)
 
 That is, the customer data used is connected to the company user in a one-to-one relationship.
 
 The aim of the Business on Behalf feature is having one-to-many relationships:
 
-![scheme2.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+on+Behalf/Business+on+Behalf+Feature+Overview/scheme2.png) 
+![scheme2.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+on+Behalf/Business+on+Behalf+Feature+Overview/scheme2.png)
 
 ## Business on Behalf on the Storefront
 
 Company users can assign and unassign a company business unit to their accounts on the storefront:
-![business-on-behalf-select-company-business-unit.gif](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+on+Behalf/Business+on+Behalf+Feature+Overview/business-on-behalf-select-company-business-unit.gif) 
+![business-on-behalf-select-company-business-unit.gif](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+on+Behalf/Business+on+Behalf+Feature+Overview/business-on-behalf-select-company-business-unit.gif)
 
 
 
@@ -69,7 +71,3 @@ Company users can assign and unassign a company business unit to their accounts 
         </div>
         </div>
 </div>
-
-
-
-

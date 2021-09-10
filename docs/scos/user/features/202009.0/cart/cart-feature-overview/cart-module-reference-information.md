@@ -18,7 +18,7 @@ When an operation is invoked, `CartClient` makes an HTTP request to Zed Cart mod
 
 ## Cart Data Flow
 
-![Cart Data Flow](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Cart+Functionality/cart_data_flow.png) 
+![Cart Data Flow](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Cart+Functionality/cart_data_flow.png)
 
 ## Cart Operations
 The Cart module in Zed has a cart operation class that handles cart operation requests. Each operation does the following:

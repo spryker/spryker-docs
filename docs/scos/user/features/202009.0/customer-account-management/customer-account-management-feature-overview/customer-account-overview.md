@@ -93,11 +93,16 @@ Customer can perform the following actions the Storefront:
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                 <li><a href="https://documentation.spryker.com/docs/reference-information-customer-module-overview" class="mr-link">Referene information: Customer module overview 7.0</a></li>
-                <li><a href="https://documentation.spryker.com/docs/customer-account-management-feature-integration" class="mr-link">Create a customer account via Glue API</a></li>
+                 <li><a href="docs\scos\user\features\202009.0\customer-account-management\customer-account-management-feature-overview\reference-information-customer-module-overview.md" class="mr-link">Reference information: Customer module overview 7.0</a></li>
+                <li><a href="docs\scos\dev\glue-api-guides\202009.0\managing-customers\authenticating-as-a-customer.md" class="mr-link">Authenticate as a customer via Glue API</a></li>
+                <li><a href="docs\scos\dev\glue-api-guides\202009.0\managing-customers\managing-customers.md" class="mr-link">Manage customer accounts via Glue API</a></li>
+                <li><a href="docs\scos\dev\glue-api-guides\202009.0\managing-customers\manage-customer-password.md" class="mr-link">Manage customer passwords via Glue API</a></li>
+                <li><a href="docs\scos\dev\glue-api-guides\202009.0\managing-customers\managing-customer-addresses.md" class="mr-link">Manage customer addresses via Glue API</a></li>
+                <li><a href="docs\scos\dev\glue-api-guides\202009.0\managing-customers\managing-customer-authentication-tokens.md" class="mr-link">Manage customer authentication tokens via Glue API</a></li>
                 <li>Enable Customer Account in your project:</li>
-                <li><a href="https://documentation.spryker.com/docs/customer-account-management-feature-integration" class="mr-link">Integrate the Customer Account Management feature into your project</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/mg-customer#upgrading-from-version-6---to-version-7-0" class="mr-link">Migrate the Customer module from version 6.* to version 7.0</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\customer-account-management-feature-integration.md" class="mr-link">Integrate the Customer Account Management feature into your project</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\glue-api\glue-api-customer-account-management-feature-integration.md" class="mr-link">Integrate the Customer Account Management Glue API into your project</a></li>
+                 <li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-customer.md" class="mr-link">Migrate the Customer module from version 6.* to version 7.0</a></li>
             </ul>
         </div>
         <!-- col2 -->
@@ -105,12 +110,11 @@ Customer can perform the following actions the Storefront:
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
                 <li><a href="https://documentation.spryker.com/docs/customer-account-management-feature-overview" class="mr-link">Get a general idea of customer account</a></li>
-                <li><a href="https://documentation.spryker.com/docs/customer-account-management-feature-overview" class="mr-link">Get a general idea of customer registration</a></li>
-                <li><a href="https://documentation.spryker.com/docs/customer-account-management-feature-overview" class="mr-link">Get a general idea of customer groups</a></li>
-                <li><a href="https://documentation.spryker.com/docs/customer-account-management-feature-overview" class="mr-link">Get a general idea of password management</a></li>
-                <li><a href="https://documentation.spryker.com/docs/en/managing-customers" class="mr-link">Create and manage customers in the Back Office</a></li>
+                <li><a href="docs\scos\user\features\202009.0\customer-account-management\customer-account-management-feature-overview\customer-registration-overview.md" class="mr-link">Get a general idea of customer registration</a></li>
+                <li><a href="docs\scos\user\features\202009.0\customer-account-management\customer-account-management-feature-overview\customer-groups-overview.md" class="mr-link">Get a general idea of customer groups</a></li>
+                <li><a href="docs\scos\user\features\202009.0\customer-account-management\customer-account-management-feature-overview\password-management-overview.md" class="mr-link">Get a general idea of password management</a></li>
+                <li><a href="docs\scos\dev\glue-api-guides\202009.0\managing-customers\managing-customers.md" class="mr-link">Create and manage customers in the Back Office</a></li>
             </ul>
         </div>
         </div>
 </div>
-

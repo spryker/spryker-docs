@@ -8,7 +8,7 @@ redirect_from:
   - /v6/docs/en/company-accounts
 ---
 
-Company accoounts allow to build an organizational structure of your B2B business.
+Company accoounts allow you to build an organizational structure of your B2B business.
 
 ## Company
 

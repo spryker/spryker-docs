@@ -14,7 +14,7 @@ An *Agent* is a person with unrivaled product knowledge who can help customers t
 
 You can create an Agent user in the Back Office under _Users Control → User_.
 
-In fact, any Back Office user can be an Agent. All you need to do for that is select the **This user is an Agent** checkbox on the *User create/edit* page, and the user gets the Agent mark. See [Adding New Users](/docs/scos/user/user-guides/202009.0/back-office-user-guide/users/roles-groups-and-users/managing-users.html) to learn more about how to create a new Agent user in the Back Office.
+In fact, any Back Office user can be an Agent. All you need to do for that is select the **This user is an Agent** checkbox on the *User create/edit* page, and the user gets the Agent mark. See [Adding New Users](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users/roles-groups-and-users/managing-users.html) to learn more about how to create a new Agent user in the Back Office.
 
 ![zed-agent-assist.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Agent+Assist/Agent+Assist+Feature+Overview/zed-agent-assist.png)
 
@@ -33,4 +33,3 @@ Having performed the necessary actions requested by the customer, the Agent ends
 
 This is how the Agent Assist feature works on the Spryker Demo Shop Storefront:
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Agent+Assist/Agent+Assist+Feature+Overview/shop-guide-managing-agent-account.gif)
-

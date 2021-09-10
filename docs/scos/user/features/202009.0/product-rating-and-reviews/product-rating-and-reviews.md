@@ -21,18 +21,17 @@ For more details on managing ratings and reviews, check the video:
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/product-reviews-feature-overview" class="mr-link">Get a general idea of the Product Reviews feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/product-review-feature-integration" class="mr-link">Integrate the Product Reviews feature into your project</a></li>
+                <li><a href="docs\scos\user\features\202009.0\product-rating-and-reviews\product-rating-and-reviews-feature-overview.md" class="mr-link">Get a general idea of the Product Reviews feature</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\product-reviews-feature-integration.md" class="mr-link">Integrate the Product Reviews feature into your project</a></li>
             </ul>
         </div>
       <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                 <li><a href="https://documentation.spryker.com/docs/product-reviews-feature-overview" class="mr-link">Get a general idea of the Product Reviews feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-product-reviews">Manage product reviews</a></li>
+                 <li><a href="docs\scos\user\features\202009.0\product-rating-and-reviews\product-rating-and-reviews-feature-overview.md" class="mr-link">Get a general idea of the Product Reviews feature</a></li>
+                <li><a href="E:\Jekyll\spryker.github.io\docs\scos\user\user-guides\202009.0\back-office-user-guide\catalog\product-reviews\managing-product-reviews.md">Manage product reviews</a></li>
             </ul>
         </div>  
 </div>
 </div>
-

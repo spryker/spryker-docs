@@ -26,18 +26,18 @@ Thus, the **Product Options** feature can:
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/product-options-overview" class="mr-link">Familiarize yourself with terminology and general concept of the Product Options feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/mg-product-option" class="mr-link">Migrate to a newer version of Product Option module</a></li> 
+                <li><a href="docs\scos\user\features\202009.0\product-options\product-options-feature-overview.md" class="mr-link">Familiarize yourself with terminology and general concept of the Product Options feature</a></li>
+                <li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-productoption.md" class="mr-link">Migrate to a newer version of Product Option module</a></li>
             </ul>
         </div>
         <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-               <li><a href="https://documentation.spryker.com/docs/product-options-overview" class="mr-link">Familiarize yourself with terminology and general concept of the Product Options feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/creating-a-product-option" class="mr-link">Create a new product option</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-product-options" class="mr-link">Manage Product Options</a></li>
-                <li><a href="https://documentation.spryker.com/docs/creating-a-product-option" class="mr-link">Activate or Deactivate Product Options</a></li>
+               <li><a href="docs\scos\user\features\202009.0\product-options\product-options-feature-overview.md" class="mr-link">Familiarize yourself with terminology and general concept of the Product Options feature</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\catalog\product-options\creating-a-product-option.md" class="mr-link">Create a new product option</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\catalog\product-options\managing-product-options.md" class="mr-link">Manage Product Options</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\catalog\product-options\creating-a-product-option.md" class="mr-link">Activate or Deactivate Product Options</a></li>
             </ul>
         </div>
     </div>

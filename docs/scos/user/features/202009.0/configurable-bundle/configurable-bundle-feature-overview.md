@@ -8,7 +8,7 @@ redirect_from:
   - /v6/docs/en/configurable-bundle-feature-overview
 ---
 
-A *configurable bundle*  is a [product bundle](/docs/scos/dev/features/202009.0/product-bundles/product-bundles.html) for which a Storefront User selectes products on the Storefront. 
+A *configurable bundle*  is a [product bundle](/docs/scos/dev/features/202009.0/product-bundles/product-bundles.html) for which a Storefront User selectes products on the Storefront.
 For example, when buying a kitchen set, a customer selects pieces of furniture, like drawers, cupboards, or cabinets, from suggested options.
 
 ## Configurable bundle template
@@ -75,10 +75,10 @@ When a Back Office user creates a configurable bundle template, they create the 
 To learn how a Back Office User edits product lists, see [Managing product lists](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/product-lists/managing-product-lists.html).
 To learn how a Back Office User creates slots, see [Creating slots in configurable bundle templates](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html#creating-slots-in-configurable-bundle-templates).
 
-When a Storefront user configures a bundle, for each slot, they select a product from the provided product list. 
+When a Storefront user configures a bundle, for each slot, they select a product from the provided product list.
 ![Slot Base Cabinet](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/Slot+Base+Cabinet.png)
 
-By default, it is not obligatory to select products for all the slots to order a configurable bundle. 
+By default, it is not obligatory to select products for all the slots to order a configurable bundle.
 
 Schematically, a configurable bundle looks as follows:
 ![Config Bundle Schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/slots+scheme.png)
@@ -234,8 +234,7 @@ Currently, the feature has the following functional constraints which are going 
     - [Gift cards](/docs/scos/dev/features/202009.0/gift-cards/gift-cards-feature-overview.html)
 * The following functionalities are not displayed and cannot be applied to concrete products in configurable bundles:
     * [Product options](/docs/scos/dev/features/202009.0/product-options/product-options-feature-overview.html)
-    * [Product labels](https://documentation.spryker.com/v6/docs/product-label-feature-overview) 
+    * [Product labels](docs\scos\user\features\202009.0\product-labels\product-labels-feature-overview.md) 
     * [Product quantity restrictions](/docs/scos/dev/features/202009.0/non-splittable-products/non-splittable-products-feature-overview.html)
 * The *Slot* page doesn't have any sorting, pagination, or search.
 * Product bundles cannot be added to configurable bundles.
-

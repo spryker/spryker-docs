@@ -455,8 +455,38 @@ entries:
         - title: "Angular Components"
           url: /docs/marketplace/dev/front-end/angular-components.html
 
+      - title: Back-end
+        nested:
+          - title: "Marketplace MerchantPortal Core"
+            url: /docs/marketplace/dev/back-end/marketplace-merchant-portal-core-feature.html
+            nested:
+              - title: "Login and Logout"
+                url: /docs/marketplace/dev/back-end/marketplace-merchant-portal-core-feature/login-and-logout.html
+              - title: "GUI modules concept"
+                url: /docs/marketplace/dev/back-end/marketplace-merchant-portal-core-feature/gui-modules-concept.html
+              - title: "GUI tables concept"
+                url: /docs/marketplace/dev/back-end/marketplace-merchant-portal-core-feature/gui-table.html
+
       - title: HowTos
         nested:
 
           - title: "How-To: Create a new module with application"
             url: /docs/marketplace/dev/howtos/how-to-create-a-new-module-with-application.html
+
+          - title: "How-To: Extend Merchant portal dashboard"
+            url: /docs/marketplace/dev/howtos/how-to-extend-merchant-portal-dashboard.html
+
+          - title: "How-To: Create a new Gui module"
+            url: /docs/marketplace/dev/howtos/how-to-create-gui-module.html
+
+          - title: "How-To: Create a new Gui table"
+            url: /docs/marketplace/dev/howtos/how-to-create-gui-table.html
+
+          - title: "How-To: Extend an existing Gui table"
+            url: /docs/marketplace/dev/howtos/how-to-extend-gui-table.html
+
+          - title: "How-To: Create a new Gui table column type"
+            url: /docs/marketplace/dev/howtos/how-to-add-new-column-type.html
+
+          - title: "How-To: Create a new Gui table filter type"
+            url: /docs/marketplace/dev/howtos/how-to-add-new-filter-type.html

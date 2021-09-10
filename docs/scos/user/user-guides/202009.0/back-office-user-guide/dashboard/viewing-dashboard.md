@@ -1,24 +1,19 @@
 ---
 title: Viewing Dashboard
 description: The guide provides an overview of the Count Orders, Orders by Status, and Top Orders charts you can see when working from the Dashboard.
-originalLink: https://documentation.spryker.com/2021080/docs/viewing-dashboard
-originalArticleId: a8e88fca-d49f-462e-94bc-acb65899d0e9
+originalLink: https://documentation.spryker.com/v6/docs/reference-information-dashboard
+originalArticleId: 7b0afed4-9a81-4290-8585-480a5f91bc6b
 redirect_from:
-  - /2021080/docs/viewing-dashboard
-  - /2021080/docs/en/viewing-dashboard
-  - /docs/viewing-dashboard
-  - /docs/en/viewing-dashboard
+  - /v6/docs/reference-information-dashboard
+  - /v6/docs/en/reference-information-dashboard
 ---
 
 This topic provides an overview of the dashboard charts presented in the Dashboard section in Spryker Back Office.
 
-### Viewing dashboard
-
-To view the dashboard charts, click **Dashboard**. The *Dashboard* page  is displayed.
-
-## Count orders
-
-The *Count orders* chart provides a summary of orders made for the last 7 days.
+To view the dashboard charts, go to the **Dashboard** section.
+***
+## Count Orders
+The very first chart you see on the **Dashboard** page is **Count Orders**. This chart provides a summary of orders made for the last 7 days.
 
 {% info_block infoBox %}
 
@@ -28,22 +23,20 @@ The x-axis shows days, and the y-axis shows the number of orders.
 
 ![Count orders](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Dashboard/count-orders.png)
 
-## Orders by status
-
-The *Orders by status* chart shows the statuses of all the orders that currently exist in the system.
+## Orders by Status
+The Orders by status chart shows you the statuses of all the orders that currently exist in the system.
 
 {% info_block infoBox %}
 
 You can hover your mouse over the chart to see the details.
 
 {% endinfo_block %}
+Once the status of an order is updated in the **Sales > Orders** section, the change is reflected on this chart.
 
-Once the status of an order is updated in the **Sales** > **Orders** section, the change is reflected on this chart.
 ![Order status](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Dashboard/orders-status.png)
 
 ## Top Orders
-
-The *Top Orders* chart visualizes 10 most sold products.
+The Top Products chart visualizes 10 most sold products.
 
 {% info_block infoBox %}
 

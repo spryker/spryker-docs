@@ -621,16 +621,12 @@ Make sure when you add to cart merchant product, it has `merchantReference` set.
 
 ### 3) Configure export to Redis
 
-This step publishes tables on change (create, edit) to `spy_merchant_profile_storage` and synchronizes the data to Storage.
-
-Configure export to Redis:
-
 1. Set up event listeners and publishers:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
-| MerchantProductWritePublisherPlugin |  |   | Spryker\Zed\MerchantStorage\Communication\Plugin\Publisher\MerchantPublisherTriggerPlugin |
-| MerchantUpdatePublisherPlugin |  |   | Spryker\Zed\MerchantStorage\Communication\Plugin\Publisher\Merchant\MerchantStoragePublisherPlugin |
+| MerchantProductWritePublisherPlugin | Finds product abstract ids for merchant products and runs product storage publisher for found product abstract ids. |   | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\MerchantProductWritePublisherPlugin |
+| MerchantUpdatePublisherPlugin | Finds product abstract ids by merchant ids and runs product storage publisher with found product abstract ids |   | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\Merchant\MerchantUpdatePublisherPlugin |
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 

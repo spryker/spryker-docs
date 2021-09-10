@@ -47,7 +47,7 @@ To redeem the gift card code, send the request:
 
 | Path parameter | DESCRIPTION |
 | --- | --- |
-| cart_uuid | Unique identifier of a cart to remove products from. You can get this in the response when [creating carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#creating-carts) or [retrieving all carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieving-all-carts). |
+| cart_uuid | Unique identifier of a cart to remove products from. You can get this in the response when [creating carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/carts-of-registered-users/managing-carts-of-registered-users.html#creating-carts) or [retrieving all carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/carts-of-registered-users/managing-carts-of-registered-users.html#retrieving-all-carts). |
 
 {% info_block infoBox "Authentication" %}
 
@@ -136,7 +136,7 @@ Response sample:
     ]
 }
 ```
-For the attributes of the registered user's carts, see [Creating carts of registered users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#creating-carts).
+For the attributes of the registered user's carts, see [Creating carts of registered users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/carts-of-registered-users/managing-carts-of-registered-users.html#creating-carts).
 
 | Included resource | Attribute | Type | Description |
 | --- | --- | --- | --- |
@@ -155,7 +155,7 @@ To remove the gift card code from the cart, send the request:
 
 | Path parameter | DESCRIPTION |
 | --- | --- |
-| cart_uuid | Unique identifier of a cart to remove products from. You can get this in the response when [creating carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#creating-carts) or [retrieving all carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieving-all-carts). |
+| cart_uuid | Unique identifier of a cart to remove products from. You can get this in the response when [creating carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/carts-of-registered-users/managing-carts-of-registered-users.html#creating-carts) or [retrieving all carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/carts-of-registered-users/managing-carts-of-registered-users.html#retrieving-all-carts). |
 | gift_card_code | Code that you have received after purchasing the gift card. | 
 
 {% info_block infoBox "Authentication" %}

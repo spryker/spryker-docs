@@ -122,12 +122,12 @@ The tokens are marked as expired on the date and time of the request. You can co
 | Code  | Reason |
 | --- | --- |
 | 004 | Failed to refresh the token. |
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 
 ## Next steps
 
-* [Authenticate as a customer](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/customer-password.html)
-* [Manage customer passwords](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/customer-password.html)
+* [Authenticate as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/customer-password.html)
+* [Manage customer passwords](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/customer-password.html)
 
 
 

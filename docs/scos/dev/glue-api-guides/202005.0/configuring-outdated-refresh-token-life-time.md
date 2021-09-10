@@ -7,7 +7,7 @@ redirect_from:
   - /v5/docs/en/configuring-outdated-refresh-token-life-time
 ---
 
-Refresh tokens generated when accessing Glue REST API expire after a certain period of time. In addition to that, they can be [forcibly revoked](/docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html#token-revocation) at any time. No matter how a token becomes invalidated, it is set to expire but remains in the Storage.
+Refresh tokens generated when accessing Glue REST API expire after a certain period of time. In addition to that, they can be [forcibly revoked](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html#token-revocation) at any time. No matter how a token becomes invalidated, it is set to expire but remains in the Storage.
 
 For security reasons and to reduce the database storage space, it is recommended to delete outdated refresh tokens once they are expired. There are **two** ways how tokens can be removed from the Storage:
 

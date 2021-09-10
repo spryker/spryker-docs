@@ -11,7 +11,7 @@ For the new customers registration in a Spryker shop, double opt-in is used. The
 
 {% info_block infoBox "Info" %}
 
-Customers must always verify their email addresses, irrespective of the fact how they got registered: [by themselves on the Storefront](/docs/scos/dev/features/202009.0/customer-account-management/customer-account-management-feature-overview/customer-registration-overview.html), [by a Back Office user in the Back Office](/docs/scos/user/user-guides/202009.0/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html#creating-a-customer), or [via the Glue API](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/managing-customers.html#create-a-customer).
+Customers must always verify their email addresses, irrespective of the fact how they got registered: [by themselves on the Storefront](/docs/scos/dev/features/202009.0/customer-account-management/customer-account-management-feature-overview/customer-registration-overview.html), [by a Back Office user in the Back Office](/docs/scos/user/user-guides/202009.0/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html#creating-a-customer), or [via the Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer).
 
 {% endinfo_block %}
 
@@ -41,9 +41,9 @@ A customer can also be *registered by a Back Office User*. In this case, the cus
 
 See [Creating a Customer](/docs/scos/user/user-guides/202009.0/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html#creating-a-customer) for details on how a Back Office user can create a customer.
 
-Likewise, if a customer gets *registered via an API*, they also receive the double opt-in email with the verification link. They must verify their account by clicking the link in the email, before you can [authenticate them via API](/docs/scos/dev/glue-api-guides/202009.0/authentication-and-authorization.html#user-authentication).
+Likewise, if a customer gets *registered via an API*, they also receive the double opt-in email with the verification link. They must verify their account by clicking the link in the email, before you can [authenticate them via API](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html#user-authentication).
 
-See [Authentication and Authorization](/docs/scos/dev/glue-api-guides/202009.0/authentication-and-authorization.html#authentication-and-authorization) for details on registration via API.
+See [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html#authentication-and-authorization) for details on registration via API.
 
 
 ## If you are:

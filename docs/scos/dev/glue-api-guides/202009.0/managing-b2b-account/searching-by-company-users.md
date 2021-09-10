@@ -8,7 +8,7 @@ redirect_from:
   - /v6/docs/en/searching-by-company-users
 ---
 
-This endpoint allows [authenticated customers](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/authenticating-as-a-customer.html#authenticate-as-a-customer) to search by the company users available to them. Usually, authenticated customers search for a company user which they want to authenticate as. 
+This endpoint allows [authenticated customers](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html#authenticate-as-a-customer) to search by the company users available to them. Usually, authenticated customers search for a company user which they want to authenticate as. 
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-company-account-feature-integration.html).
@@ -295,8 +295,8 @@ To retrieve company users of the current authenticated customer, send the reques
 | 001 | The access token is invalid. |
 | 002 | The access token is missing. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 
 ## Next steps
 
-* [Authenticate as a company user](/docs/scos/dev/glue-api-guides/202009.0/managing-b2b-account/authenticating-as-a-company-user.html)
+* [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html)

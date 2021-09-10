@@ -139,6 +139,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 **See also:**
 
-* [Managing Wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-api-storefront-guides/managing-wishlists.html)
+* [Managing Wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists.html)
 
 *Last review date: Aug 02, 2019* <!-- by  Tihran Voitov, Yuliia Boiko-->

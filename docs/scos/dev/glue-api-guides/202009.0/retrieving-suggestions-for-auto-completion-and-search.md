@@ -8,7 +8,7 @@ redirect_from:
   - /v6/docs/en/retrieving-suggestions-for-auto-completion-and-search
 ---
 
-In addition to [catalog search](/docs/scos/dev/glue-api-guides/202009.0/catalog-search.html), Spryker search engine also provides auto-completion terms and suggestions for products, categories, and CMS pages. The feature allows developers to predict search strings and provide customers with available options.
+In addition to [catalog search](/docs/scos/dev/glue-api-guides/{{page.version}}/catalog-search.html), Spryker search engine also provides auto-completion terms and suggestions for products, categories, and CMS pages. The feature allows developers to predict search strings and provide customers with available options.
 
 In your development, this resource can help you to enhance the customer experience by providing the relevant information for search, product filters, shopping cart, checkout, order history, wishlist, and many more.
 
@@ -246,7 +246,7 @@ To retrieve a search suggestion, send the request:
 | **price** | Integer | Specifies the product price. |
 | **images** | Object | Provides URLs of the product images. </br>The object consists of **2** items:<ul><li>**externalUrlSmall**—specifies the URL of the product preview image;</li><li> **externalUrlLarge**—specifies the URL of the large product image.</li></ul> |
 
-The `url` attribute of categories and abstract products exposes a Search Engine Friendly URL of the resource that represents the respective category or product. For information on how to resolve such a URL and retrieve the corresponding resource, see [Using Search Engine Friendly URLs](/docs/scos/dev/glue-api-guides/202009.0/resolving-search-engine-friendly-urls.html).
+The `url` attribute of categories and abstract products exposes a Search Engine Friendly URL of the resource that represents the respective category or product. For information on how to resolve such a URL and retrieve the corresponding resource, see [Using Search Engine Friendly URLs](/docs/scos/dev/glue-api-guides/{{page.version}}/resolving-search-engine-friendly-urls.html).
 
 {% info_block warningBox %}
 
@@ -254,6 +254,6 @@ Although CMS pages also expose the `url` parameter, resolving of CMS page SEF UR
 
 {% endinfo_block %}
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 
 

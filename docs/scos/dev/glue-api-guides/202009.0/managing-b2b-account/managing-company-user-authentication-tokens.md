@@ -46,7 +46,7 @@ Request sample: `POST https://glue.mysprykershop.com/refresh-tokens`
 
 | Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
-| refreshToken | String | &check; | Authentication token used to refresh `accessToken`. You can get it by [authenticating as a company user](/docs/scos/dev/glue-api-guides/202009.0/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user). |
+| refreshToken | String | &check; | Authentication token used to refresh `accessToken`. You can get it by [authenticating as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user). |
 
 
 
@@ -104,7 +104,7 @@ To revoke a company user refresh token, send the request:
 
 | Header key | Type | Required | Description |
 | --- | --- | --- | --- |
-| Authorization | string | Only required when revoking all the refresh token of a company user.  | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/202009.0/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | Only required when revoking all the refresh token of a company user.  | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 
 
@@ -128,5 +128,5 @@ The tokens are marked as expired on the date and time of the request. You can co
 |004 |Failed to refresh the token.  | 
 |901 |Refresh token is missing.  | 
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 

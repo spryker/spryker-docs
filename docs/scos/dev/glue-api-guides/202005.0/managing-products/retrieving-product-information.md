@@ -1169,7 +1169,7 @@ Response sample:
 | measurementUnitCode | string | Code of the measurement unit. | 
 
 
-See [Retrieving Measurement Units](/docs/scos/dev/glue-api-guides/202005.0/retrieving-measurement-units.html) for more information on managing the sales units.
+See [Retrieving Measurement Units](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html) for more information on managing the sales units.
 
 
 ## Possible errors

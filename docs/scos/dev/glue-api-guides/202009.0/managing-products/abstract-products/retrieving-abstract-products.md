@@ -1207,16 +1207,16 @@ To retrieve general information about an abstract product, send the request:
 
 For the attributes of other included resources, see:
 
-* [Retrieve image sets of an abstract product](/docs/scos/dev/glue-api-guides/202009.0/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html#abstract-product-sets-response-attributes)
-* [Retrieve availability of an abstract product](/docs/scos/dev/glue-api-guides/202009.0/managing-products/abstract-products/retrieving-abstract-product-availability.html#abstract-product-availability-response-attributes)
+* [Retrieve image sets of an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html#abstract-product-sets-response-attributes)
+* [Retrieve availability of an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-availability.html#abstract-product-availability-response-attributes)
 
-* [Retrieve prices of an abstract product](/docs/scos/dev/glue-api-guides/202009.0/managing-products/abstract-products/retrieving-abstract-product-prices.html#prices-response-attributes)
-* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/202009.0/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
-* [Retrieve a category node](/docs/scos/dev/glue-api-guides/202009.0/retrieving-categories/retrieving-category-nodes.html#category-nodes-response-attributes)
-* [Retrieve tax sets](/docs/scos/dev/glue-api-guides/202009.0/managing-products/abstract-products/retrieving-tax-sets.html#tax-sets-response-attributes)
-* [Retrieve a product label](/docs/scos/dev/glue-api-guides/202009.0/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
-* [Retrieve product reviews](/docs/scos/dev/glue-api-guides/202009.0/managing-products/managing-product-ratings-and-reviews.html#product-ratings-and-reviews-response-attributes)
-*  [Retrieve a measurement unit](/docs/scos/dev/glue-api-guides/202009.0/retrieving-measurement-units.html)
+* [Retrieve prices of an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html#prices-response-attributes)
+* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
+* [Retrieve a category node](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-nodes.html#category-nodes-response-attributes)
+* [Retrieve tax sets](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-tax-sets.html#tax-sets-response-attributes)
+* [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
+* [Retrieve product reviews](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/managing-product-ratings-and-reviews.html#product-ratings-and-reviews-response-attributes)
+*  [Retrieve a measurement unit](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html)
 
 
 ## Possible errors
@@ -1226,4 +1226,4 @@ For the attributes of other included resources, see:
 | 301 |  Abstract product is not found. |
 | 311 | Abstract product SKU is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

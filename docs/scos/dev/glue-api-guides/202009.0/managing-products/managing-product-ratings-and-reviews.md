@@ -119,7 +119,7 @@ To provide a rating and a review of a products, send the request:
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/authenticating-as-a-customer.html#authenticate-as-a-customer) or [authenticating as a company user](/docs/scos/dev/glue-api-guides/202009.0/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html#authenticate-as-a-customer) or [authenticating as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user).  |
 
 Sample request: `POST http://glue.mysprykershop.com/abstract-products/139/product-reviews`
 
@@ -183,8 +183,8 @@ Response sample:
 ## Other management options
 
 You can retrieve the average rating of a product by:
-* [Retrieving an abstract product](/docs/scos/dev/glue-api-guides/202009.0/managing-products/abstract-products/retrieving-abstract-products.html#retrieve-an-abstract-product)
-* [Retrieving a concrete product](/docs/scos/dev/glue-api-guides/202009.0/managing-products/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
+* [Retrieving an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html#retrieve-an-abstract-product)
+* [Retrieving a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
 
 Also, all the endpoints that accept `abstract-products` and `concrete-products` resources as included resources in requests, return the average product rating. 
 
@@ -198,4 +198,4 @@ Also, all the endpoints that accept `abstract-products` and `concrete-products` 
 | 311 | Abstract product ID is not specified. |
 | 901 | One or more of the following reasons:<ul><li>The `nickname` attribute is empty or not specified.</li><li>The `rating` attribute is empty or not specified.</li><li>The `summary` attribute is empty or not specified.</li></ul> |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

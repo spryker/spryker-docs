@@ -14,7 +14,7 @@ Once an order has been shipped, a Buyer or a Back Office User can initiate a ret
 
 {% info_block warningBox "Note" %}
 
-You can also create and manage returns via Glue API. For details, see [Retrieving Return Management Information](/docs/scos/dev/glue-api-guides/202005.0/retrieving-return-management-information/retrieving-return-management-information.html).
+You can also create and manage returns via Glue API. For details, see [Retrieving Return Management Information](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-return-management-information/retrieving-return-management-information.html).
 
 {% endinfo_block %}
 

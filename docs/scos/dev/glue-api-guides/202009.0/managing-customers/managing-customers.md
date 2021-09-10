@@ -106,7 +106,7 @@ Request sample: `POST http://glue.mysprykershop.com/customers`
 
 
 
-After creating a customer, they receive a verfication email. They click the verification link to confirm registration. After that, you can [authenticate as a customer](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/authenticating-as-a-customer.html) to perform requests to the protected resources available to them.
+After creating a customer, they receive a verfication email. They click the verification link to confirm registration. After that, you can [authenticate as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html) to perform requests to the protected resources available to them.
 
 ## Retrieve customers
 
@@ -333,12 +333,12 @@ If the customer is anonymized successfully, the endpoint returns the `204 No Con
 | 414 | Provided gender is invalid. |
 | 422 | Terms of service were not accepted. Note that if you have the [REST Request Format](/docs/scos/dev/tutorials-and-howtos/202009.0/introduction-tutorials/glue-api/validating-rest-request-format.html) validation enabled, then you will recieve 901 instead of 422. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 
 ## Next steps
 
-* [Authenticate as a customer](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/customer-password.html)
-* [Manage customer passwords](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/customer-password.html)
+* [Authenticate as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/customer-password.html)
+* [Manage customer passwords](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/customer-password.html)
 
 
 

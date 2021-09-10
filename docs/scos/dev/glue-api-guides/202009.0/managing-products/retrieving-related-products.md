@@ -630,7 +630,7 @@ To get upselling items for all products in a cart of a registered customer, send
 
 | Path parameter | Description |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}}*** | ID of a cart to get upselling items of. [Retrieve all carts](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-all-carts) to get it. | 
+| ***{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}}*** | ID of a cart to get upselling items of. [Retrieve all carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-all-carts) to get it. | 
 
 ### Request
 | Query parameter | Description | Exemplary values |
@@ -994,7 +994,7 @@ To get upselling items for all products in a cart of a registered customer, send
 
 
 For response attributes, see [Retrieving related items of an abstract product](#related-product-attributes) for the list of response attributes.
-For the attributes of the included resources, see [Retrieving product labels](/docs/scos/dev/glue-api-guides/202009.0/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
+For the attributes of the included resources, see [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
 
 
 
@@ -1353,5 +1353,5 @@ See [Retrieving Related Items of an Abstract Product](#related-product-attribute
 | 311 | Abstract product ID not specified. |
 
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 

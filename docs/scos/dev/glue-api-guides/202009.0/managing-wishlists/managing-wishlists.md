@@ -447,9 +447,9 @@ To retrieve all wishlists of a customer, send the request:
 | updatedAt | String | Date of the last update. |
 
 For attributes of the included resources, see:
-* [Add an item to a wishlist](/docs/scos/dev/glue-api-guides/202009.0/managing-wishlists/managing-wishlist-items.html#wishlishlist-items-response-attributes)
-* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/202009.0/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
-* [Retrieve a product label](/docs/scos/dev/glue-api-guides/202009.0/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
+* [Add an item to a wishlist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlist-items.html#wishlishlist-items-response-attributes)
+* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
+* [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
 
 ## Retrieve a wishlist
 
@@ -771,9 +771,9 @@ To retrieve wishlist items, send the request:
 | updatedAt | String | Date of the last update. |
 
 For attributes of the included resources, see:
-* [Add an item to a wishlist](/docs/scos/dev/glue-api-guides/202009.0/managing-wishlists/managing-wishlist-items.html#wishlishlist-items-response-attributes)
-* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/202009.0/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
-* [Retrieve a product label](/docs/scos/dev/glue-api-guides/202009.0/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
+* [Add an item to a wishlist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlist-items.html#wishlishlist-items-response-attributes)
+* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
+* [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
 
 
 
@@ -869,7 +869,7 @@ If the wishlist is deleted successfully, the endpoint returns the `204 No Conten
 | 204 | Cannot update the wishlist. |
 | 205 | Cannot remove the wishlist. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 
 
 

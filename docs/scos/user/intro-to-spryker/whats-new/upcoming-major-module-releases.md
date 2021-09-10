@@ -16,7 +16,7 @@ redirect_from:
 
 | MODULE | DATE | REASON FOR THE MAJOR VERSION |
 | --- | --- | --- |
-| [Search](https://github.com/spryker/search) | Q3 2021 | Getting rid of the ElasticSearch 5.6 support, which is end-of-life with no security fixes. It’s a consequence of the ElasticSearch 7 support. |
+| [Search](https://github.com/spryker/search) | Q4 2021 | Getting rid of the ElasticSearch 5.6 support, which is end-of-life with no security fixes. It’s a consequence of the ElasticSearch 7 support. |
 
 
 

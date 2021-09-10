@@ -46,7 +46,7 @@ Request sample:
 
 | Attribute | Type | Description |
 | --- | --- | --- |
-| idCompanyUser | String | Unique identifier of a company user to authenticate as. To get it, [Retrieve available company users](/docs/scos/dev/glue-api-guides/202009.0/managing-b2b-account/searching-by-company-users.html#retrieve-available-company-users).  |
+| idCompanyUser | String | Unique identifier of a company user to authenticate as. To get it, [Retrieve available company users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/searching-by-company-users.html#retrieve-available-company-users).  |
     
 
 
@@ -81,7 +81,7 @@ Request sample:
 | tokenType | String | Token type. The default value is `Bearer`. |
 | accessToken | String | Authentication token used to send requests to the protected resources available for the company user. |
 | expiresIn | Integer | Time in seconds in which the token expires. The default value is `28800`. |
-| refreshToken | String | Token used to [refresh](/docs/scos/dev/glue-api-guides/202009.0/managing-b2b-account/managing-company-user-authentication-tokens.html#refresh-a-company-user-authentication-token) the `accessToken`. |
+| refreshToken | String | Token used to [refresh](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/managing-company-user-authentication-tokens.html#refresh-a-company-user-authentication-token) the `accessToken`. |
 
 
 
@@ -94,14 +94,14 @@ Request sample:
 | 002 | Authentication token is missing in the request. |
 | 901 | Company user Id format is incorrect. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 
  
 ##  Next steps
 
-* [Retrieve company users](/docs/scos/dev/glue-api-guides/202009.0/managing-b2b-account/retrieving-company-users.html)
-* [Retrieve companies](/docs/scos/dev/glue-api-guides/202009.0/managing-b2b-account/retrieving-companies.html)
-* [Retrieve business units](/docs/scos/dev/glue-api-guides/202009.0/managing-b2b-account/retrieving-business-units.html)
-* [Retrieve company company roles](/docs/scos/dev/glue-api-guides/202009.0/managing-b2b-account/retrieving-company-roles.html)
-* [Retrieve business unit addresses](/docs/scos/dev/glue-api-guides/202009.0/managing-b2b-account/retrieving-business-unit-addresses.html)
-* [Manage company user authentication tokens](/docs/scos/dev/glue-api-guides/202009.0/managing-b2b-account/managing-company-user-authentication-tokens.html)
+* [Retrieve company users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-company-users.html)
+* [Retrieve companies](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-companies.html)
+* [Retrieve business units](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-business-units.html)
+* [Retrieve company company roles](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-company-roles.html)
+* [Retrieve business unit addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-business-unit-addresses.html)
+* [Manage company user authentication tokens](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/managing-company-user-authentication-tokens.html)

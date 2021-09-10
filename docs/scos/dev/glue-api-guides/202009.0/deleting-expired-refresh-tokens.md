@@ -8,7 +8,7 @@ redirect_from:
   - /v6/docs/en/deleting-expired-refresh-tokens
 ---
 
-After an authentication refresh token is [revoked](/docs/scos/dev/glue-api-guides/202009.0/authentication-and-authorization.html) or expires, it remains in the database.
+After an authentication refresh token is [revoked](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html) or expires, it remains in the database.
 
 For security reasons and to reduce the database storage space, we recommend deleting the tokens by setting their liftime. Once they have a lifetime, you can configure a cron job to delete them automatically or do it manually.
 

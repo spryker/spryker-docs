@@ -80,7 +80,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 </div></section>
 
 **See also:**
-[Retrieving Alternative Products](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-api-storefront-guides/managing-products/retrieving-alternative-products.html)
+[Retrieving Alternative Products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-alternative-products.html)
  
 *Last review date: Apr 10, 2019*
 

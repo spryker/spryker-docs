@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 
-Search by customers to find out information about them. This endpoint is mostly used by [agent assists](/docs/scos/dev/features/202009.0/agent-assist/agent-assist-feature-overview.html) to find out the customer reference needed to [impersonate a customer](/docs/scos/dev/glue-api-guides/202009.0/managing-agent-assists/impersonating-customers-as-an-agent-assist.html#impersonate-a-customer).
+Search by customers to find out information about them. This endpoint is mostly used by [agent assists](/docs/scos/dev/features/202009.0/agent-assist/agent-assist-feature-overview.html) to find out the customer reference needed to [impersonate a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/impersonating-customers-as-an-agent-assist.html#impersonate-a-customer).
 
 ## Installation
 
@@ -36,7 +36,7 @@ To search by customers, send the request:
 
 | Header key | Type | Required | Description |
 | --- | --- | --- | --- |
-| X-Agent-Authorization | string | ✓ |  String containing digits, letters, and symbols that authorize the agent assist. [Authenticate as an agent assist](/docs/scos/dev/glue-api-guides/202009.0/managing-agent-assists/authenticating-as-an-agent-assist.html#authenticate-as-an-agent-assist) to get the value.  |
+| X-Agent-Authorization | string | ✓ |  String containing digits, letters, and symbols that authorize the agent assist. [Authenticate as an agent assist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/authenticating-as-an-agent-assist.html#authenticate-as-an-agent-assist) to get the value.  |
 
 
 
@@ -341,10 +341,10 @@ To search by customers, send the request:
 | 001| Access token is invalid.|
 | 4103| Agent access token is missing.|
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 
 ## Next steps
 
 
-After you’ve found the reference of the customer you want to assist, impersonate the customer to perform any actions available to them. See [ Impersonating customers as an agent assist](/docs/scos/dev/glue-api-guides/202009.0/managing-agent-assists/impersonating-customers-as-an-agent-assist.html) for details.
+After you’ve found the reference of the customer you want to assist, impersonate the customer to perform any actions available to them. See [ Impersonating customers as an agent assist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/impersonating-customers-as-an-agent-assist.html) for details.
 

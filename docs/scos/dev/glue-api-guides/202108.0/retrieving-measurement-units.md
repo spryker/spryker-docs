@@ -70,9 +70,9 @@ You can use the measurement units resource as follows:
 
 *  Retrieve information about a concrete product, including all the measurement units defined for it—[Retrieve Concrete Products](https://documentation.spryker.com/2021080/docs/retrieving-product-information#retrieve-concrete-products).
 * Retrieve sales unit of a product—[Retrieve Sales Units](https://documentation.spryker.com/2021080/docs/retrieving-product-information#retrieve-sales-units).
-*  Add items to carts and retrieve information about them with the amount of cart items defined in product measurement units—[Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html).
-* Add items to guest carts and retrieve information about them with the amount of cart items defined in product measurement units—[Managing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html).
-* Retrieve information about items in an order with the amount of order items defined in product measurement units—[Retrieving an Order](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-orders.html#retrieving-an-order).
+*  Add items to carts and retrieve information about them with the amount of cart items defined in product measurement units—[Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/carts-of-registered-users/managing-carts-of-registered-users.html).
+* Add items to guest carts and retrieve information about them with the amount of cart items defined in product measurement units—[Managing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/guest-carts/managing-guest-carts.html).
+* Retrieve information about items in an order with the amount of order items defined in product measurement units—[Retrieving an Order](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/retrieving-customer-orders.html#retrieving-an-order).
 
 
 

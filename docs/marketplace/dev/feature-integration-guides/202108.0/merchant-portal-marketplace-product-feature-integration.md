@@ -39,7 +39,6 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-
 ### 2) Set up transfer objects
 
 Generate transfer changes:
@@ -56,6 +55,7 @@ Make sure that the following changes have been applied in transfer objects:
 |-|-|-|-|
 | MerchantProductTableCriteria | class | Created | src/Generated/Shared/Transfer/MerchantProductTableCriteriaTransfer |
 | ProductAbstractCollection | class | Created | src/Generated/Shared/Transfer/ProductAbstractCollectionTransfer |
+| ProductTableCriteria | class | Created | src/Generated/Shared/Transfer/ProductTableCriteriaTransfer |
 | PriceProductTableCriteria | class | Created | src/Generated/Shared/Transfer/PriceProductAbstractTableCriteriaTransfer |
 | PriceProductTableViewCollection | class | Created | src/Generated/Shared/Transfer/PriceProductAbstractTableViewCollectionTransfer |
 | PriceProductTableView | class | Created | src/Generated/Shared/Transfer/PriceProductAbstractTableViewTransfer |

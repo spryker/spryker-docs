@@ -17,7 +17,7 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Merchant Portal Marketplace Product | dev-master | [Merchant Portal Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-feature-integration.html) |
+| Merchant Portal Marketplace Product | master | [Merchant Portal Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-feature-integration.html) |
 | Marketplace Inventory Management | master | [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-inventory-management-feature-integration.html)  |
 
 ### 1) Install the required modules using Composer
@@ -25,7 +25,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker/availability-merchant-portal-gui: "dev-master" --update-with-dependencies
+composer require spryker/availability-merchant-portal-gui:"^1.0.0" --update-with-dependencies
 ```
 {% info_block warningBox "Verification" %}
 

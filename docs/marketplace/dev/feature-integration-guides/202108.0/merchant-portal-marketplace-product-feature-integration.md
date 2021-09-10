@@ -26,7 +26,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker/product-merchant-portal-gui:"{{page.version}}" --update-with-dependencies
+composer require spryker/product-merchant-portal-gui:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -67,6 +67,7 @@ Make sure that the following changes have been applied in transfer objects:
 | StockProduct | class | Created | src/Generated/Shared/Transfer/StockProductTransfer |
 | ReservationRequest | class | Created | src/Generated/Shared/Transfer/ReservationRequestTransfer |
 | ReservationResponse | class | Created | src/Generated/Shared/Transfer/ReservationResponseTransfer |
+| ProductAttributeTableCriteria | class | Created | src/Generated/Shared/Transfer/ProductAttributeTableCriteria |
 
 {% endinfo_block %}
 

@@ -29,7 +29,7 @@ Content items can also be fetched and displayed on multiple touch points via API
          <li><a href="https://documentation.spryker.com/v4/docs/mg-contentstorage-201907" class="mr-link">Migrate the ContentStorage module from version 1.* to version 2.*</a></li>  
 <li><a href="https://documentation.spryker.com/v4/docs/content-items-feature-integration-201907" class="mr-link">Integrate the Content Items feature v. 201907.0 into your project</a></li> 
   <li><a href="https://documentation.spryker.com/v4/docs/getting-abstract-product-list-content-item-data-201907" class="mr-link">Get Abstract Product List Content Item data via API</a></li> 
-                 <li><a href="https://documentation.spryker.com/v4/docs/retrieving-banner-content-item-data-201907" class="mr-link">Retrieve Banner Content Item data</a></li>
+                 <li><a href="/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-content-item-data/retrieving-banner-content-items.html" class="mr-link">Retrieve Banner Content Item data</a></li>
                     </ul>
         </div>
         <!-- col2 -->

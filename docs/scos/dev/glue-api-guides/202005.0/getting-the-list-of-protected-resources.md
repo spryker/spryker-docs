@@ -24,7 +24,7 @@ For detailed information on how to enable the functionality and related instruct
 ## Usage
 To retrieve a list of protected resources, send a GET request to the following endpoint:
 
-**[/customer-access](/docs/scos/dev/glue-api-guides/202005.0/rest-api-reference.html#/customer-access/get_customer_access)**
+**[/customer-access](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/customer-access/get_customer_access)**
 
 ### Request
 Sample request: `GET http://glue.mysprykershop.com/customer-access`

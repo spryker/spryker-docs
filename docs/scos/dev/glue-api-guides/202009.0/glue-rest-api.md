@@ -20,7 +20,7 @@ For more details, see [Glue Infrastructure](/docs/scos/dev/glue-api-guides/glue-
 ## REST API
 The Glue REST API comes with a set of predefined APIs, which you can extend or add your own APIs. The predefined APIs support Storefront functionality and can be used for integrations with third-party systems. The Storefront functionality enables you to build a custom experience for your customers in any touchpoint leveraging data and functionality at the core of your Commerce OS. For example, it allows you to fetch product data to be displayed on a custom product details page in your mobile app.
 
-For more details, see [REST API Reference](/docs/scos/dev/glue-api-guides/202009.0/rest-api-reference.html).
+For more details, see [REST API Reference](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html).
 
 ## B2C API React example
 To help you understand possible use cases, we provide a sample app as an examplary implementation (which is not a starting point for customer projects, though). It can coexist with a shop as a second touchpoint in the project. From a technology perspective, it is based on our customers' interests. The app is single-page application based on a React JS library.

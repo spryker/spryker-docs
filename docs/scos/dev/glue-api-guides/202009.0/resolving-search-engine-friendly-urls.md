@@ -11,9 +11,9 @@ redirect_from:
 This endpoints allows resolving Search Engine Friendly (SEF) URLs into a resource URL in Glue API.
 
 For SEO purposes, Spryker automatically generates SEF URLs for products and categories. The URLs are returned as a `url` attribute in responses related to abstract products and product categories. For examples of such responses, see: 
-* [Retrieve an abstract product](/docs/scos/dev/glue-api-guides/202009.0/managing-products/abstract-products/retrieving-abstract-products.html#retrieve-an-abstract-product)
-* [Retrieve a category tree](/docs/scos/dev/glue-api-guides/202009.0/retrieving-categories/retrieving-category-trees.html#retrieve-a-category-tree)
-* [Retrieve a category node](/docs/scos/dev/glue-api-guides/202009.0/retrieving-categories/retrieving-category-nodes.html#retrieve-a-category-node)
+* [Retrieve an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html#retrieve-an-abstract-product)
+* [Retrieve a category tree](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-trees.html#retrieve-a-category-tree)
+* [Retrieve a category node](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-nodes.html#retrieve-a-category-node)
 
 
 ## Installation

@@ -744,6 +744,6 @@ You can use the configurable bundle resource in the following way:
 * [Change the quantity of the configurable bundles in a registered user’s cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#change-quantity-of-configurable-bundles-in-a-registered-user%E2%80%99s-cart)
 * [Remove a configurable bundle from a registered user’s cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#remove-a-configurable-bundle-from-a-registered-user%E2%80%99s-cart)
 * [Checking our purchases with configurable bundles](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html)
-* [Retrieving orders with configurable bundles](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-orders.html)
+* [Retrieving orders with configurable bundles](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/retrieving-customer-orders.html)
 
 

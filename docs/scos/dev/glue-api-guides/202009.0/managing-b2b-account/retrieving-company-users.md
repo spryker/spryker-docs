@@ -362,12 +362,12 @@ To retrieve information about a company user, send the request:
 | 1403| Current company account is not set. |
 | 1404 | Specified company user was not found or the user does not have permissions to view the account. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 
 ##  Next steps
 
-* [Retrieve companies](/docs/scos/dev/glue-api-guides/202009.0/managing-b2b-account/retrieving-companies.html)
-* [Retrieve business units](/docs/scos/dev/glue-api-guides/202009.0/managing-b2b-account/retrieving-business-units.html)
-* [Retrieve company company roles](/docs/scos/dev/glue-api-guides/202009.0/managing-b2b-account/retrieving-company-roles.html)
-* [Retrieve business unit addresses](/docs/scos/dev/glue-api-guides/202009.0/managing-b2b-account/retrieving-business-unit-addresses.html)
-* [Manage company user authentication tokens](/docs/scos/dev/glue-api-guides/202009.0/managing-b2b-account/managing-company-user-authentication-tokens.html)
+* [Retrieve companies](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-companies.html)
+* [Retrieve business units](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-business-units.html)
+* [Retrieve company company roles](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-company-roles.html)
+* [Retrieve business unit addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-business-unit-addresses.html)
+* [Manage company user authentication tokens](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/managing-company-user-authentication-tokens.html)

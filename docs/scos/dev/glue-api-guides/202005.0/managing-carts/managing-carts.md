@@ -13,6 +13,6 @@ The **Carts API** provides access to management of customers' shopping carts. Th
 In your development, the resources provided by the API can support you in the development of shopping cart functionality for registered and guest customers.
 For your convenience, we have created two separate guides based on cart type:
 
-* [Managing Guest Carts](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-guest-carts.html){target="_blank"}
+* [Managing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html){target="_blank"}
 * [Managing Carts of Registered Users](https://documentation.spryker.com/v5/docs/en/managing-carts-of-registered-users-201907){target="_blank"}
-* [Sharing Company User Carts](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/sharing-company-user-carts.html){target="_blank"}
+* [Sharing Company User Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html){target="_blank"}

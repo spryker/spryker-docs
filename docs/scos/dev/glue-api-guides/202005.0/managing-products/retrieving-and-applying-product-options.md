@@ -11,7 +11,7 @@ The [Product Options](/docs/scos/dev/features/202005.0/product-information-manag
 
 Options come with their own prices and tax sets. Also, different options can apply to different products. All product options available in a shop are organized in groups.
 
-Although options are applied to abstract products only, the *Product Options* API enables retrieving available options for both [abstract and concrete](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/products/abstract-and-concrete-products.html) products. Also, it enables selecting the necessary options when ordering products and viewing the selected options when an order is complete. For this purpose, product options are retrievable in endpoints related to [products](/docs/scos/dev/glue-api-guides/202005.0/managing-products/retrieving-product-information.html) (e.g. `/abstract-products` or `/concrete-products`), [guest carts](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-carts.html) and [carts of registered users](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-guest-carts.html) (e.g. `/guest-cart-items` or `/carts/{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}/items`, etc.), as well as [in order history](https://documentation.spryker.com/v5/docs/en/retrieving-order-history).
+Although options are applied to abstract products only, the *Product Options* API enables retrieving available options for both [abstract and concrete](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/products/abstract-and-concrete-products.html) products. Also, it enables selecting the necessary options when ordering products and viewing the selected options when an order is complete. For this purpose, product options are retrievable in endpoints related to [products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-information.html) (e.g. `/abstract-products` or `/concrete-products`), [guest carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/managing-carts.html) and [carts of registered users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html) (e.g. `/guest-cart-items` or `/carts/{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}/items`, etc.), as well as [in order history](https://documentation.spryker.com/v5/docs/en/retrieving-order-history).
 
 With the help of the data provided by the API resources, you will be able to perform the following tasks:
 
@@ -185,7 +185,7 @@ Endpoints for **carts of registered users**:
 
 {% info_block warningBox "Authentication" %}
 
-Carts of registered users cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html).
+Carts of registered users cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
 
 {% endinfo_block %}
 
@@ -199,7 +199,7 @@ Endpoints for **guest carts:**
 
 {% info_block warningBox "Anonymous User ID" %}
 
-When accessing guest carts, you need to specify the guest user ID. This is done via the `X-Anonymous-Customer-Unique-Id` header. Guest user IDs are managed by the API Client. For details, see [Managing Guest Carts](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-guest-carts.html).
+When accessing guest carts, you need to specify the guest user ID. This is done via the `X-Anonymous-Customer-Unique-Id` header. Guest user IDs are managed by the API Client. For details, see [Managing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html).
 
 {% endinfo_block %}
 
@@ -536,7 +536,7 @@ Sample Request:
 
 {% info_block infoBox "Info" %}
 
-For more details on managing carts of registered users, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-carts.html-of-registered-users).
+For more details on managing carts of registered users, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/managing-carts.html-of-registered-users).
 
 {% endinfo_block %}
 
@@ -564,7 +564,7 @@ For more details on managing carts of registered users, see [Managing Carts of R
 
 {% info_block warningBox "Authentication" %}
 
-Carts of registered users cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html).
+Carts of registered users cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
 
 {% endinfo_block %}
 
@@ -581,7 +581,7 @@ Sample Requests:
 
 {% info_block infoBox "Info" %}
 
-For more details on managing carts of registered users, see [Managing Guest Carts](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-guest-carts.html).
+For more details on managing carts of registered users, see [Managing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html).
 
 {% endinfo_block %}
 
@@ -609,7 +609,7 @@ For more details on managing carts of registered users, see [Managing Guest Cart
 
 {% info_block warningBox "Anonymous User ID" %}
 
-When accessing guest carts, you need to specify the guest user ID. This is done via the `X-Anonymous-Customer-Unique-Id` header. Guest user IDs are managed by the API Client. For details, see [Managing Guest Carts](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-guest-carts.html).
+When accessing guest carts, you need to specify the guest user ID. This is done via the `X-Anonymous-Customer-Unique-Id` header. Guest user IDs are managed by the API Client. For details, see [Managing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html).
 
 {% endinfo_block %}
 
@@ -625,7 +625,7 @@ No matter which type of cart is created or modified, the following attributes sh
 You can specify a certain product several times with different options. In this case, the product will be added as multiple cart items.
 
 ### Response
-The endpoints respond with information on the cart or item that is being created or modified. For detailed information and the possible error codes, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-carts.html-of-registered-users) and [Managing Guest Carts](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-guest-carts.html).
+The endpoints respond with information on the cart or item that is being created or modified. For detailed information and the possible error codes, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/managing-carts.html-of-registered-users) and [Managing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html).
 
 ## Retrieving Product Options for Orders
 To retrieve the product options applied to order items, send a *GET* request to retrieve the order information.
@@ -635,7 +635,7 @@ Endpoint: `/orders/{% raw %}{{{% endraw %}order_id{% raw %}}}{% endraw %}` - ret
 
 {% info_block warningBox "Authentication" %}
 
-Orders cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html).
+Orders cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
 
 {% endinfo_block %}
 

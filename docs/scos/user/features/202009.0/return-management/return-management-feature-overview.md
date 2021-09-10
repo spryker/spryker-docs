@@ -14,7 +14,7 @@ Once an order has been shipped, the registered buyer or a Back Office user can i
 
 {% info_block warningBox "Note" %}
 
-You can also create and manage returns via Glue API. For details, see [Manging the returns](/docs/scos/dev/glue-api-guides/202009.0/managing-returns/managing-the-returns.html).
+You can also create and manage returns via Glue API. For details, see [Manging the returns](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-returns/managing-the-returns.html).
 
 {% endinfo_block %}
 

@@ -15,4 +15,4 @@ A typical API Client workflow is as follows:
 
 ## Next steps
 
-* [Submitting checkout data](/docs/scos/dev/glue-api-guides/202009.0/checking-out/submitting-checkout-data.html)
+* [Submitting checkout data](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/submitting-checkout-data.html)

@@ -193,6 +193,6 @@ Make a request to http://glue.mysprykershop.com/customers/{% raw %}{{{% endraw %
 
 **See also:**
 
-* [Managing Wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-api-storefront-guides/managing-wishlists.html)
+* [Managing Wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists.html)
 
 *Last review date: Apr 11, 2019* <!-- by  Karoly Gerner and Volodymyr Volkov-->

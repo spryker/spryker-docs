@@ -89,7 +89,7 @@ Request sample: `POST https://glue.mysprykershop.com/agent-access-tokens`
 | accessToken | String | Authentication token used to send requests to the protected resources available for this agent assist. |
 | refreshToken | String | Authentication token used to refresh the `accessToken`. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 
 ## Possible errors
 
@@ -97,14 +97,14 @@ To view generic errors that originate from the Glue Application, see [Reference 
 | --- | --- |
 |4101 | Failed to authenticate an agent. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 
 ## Next steps
 
 
 After you’ve authenticated in as an agent assist, you can:
 
-*   [Search by customers](/docs/scos/dev/glue-api-guides/202009.0/managing-agent-assists/searching-by-customers-as-an-agent-assist.html#search-by-customers)
+*   [Search by customers](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/searching-by-customers-as-an-agent-assist.html#search-by-customers)
     
-*   [Impersonate a customer](/docs/scos/dev/glue-api-guides/202009.0/managing-agent-assists/impersonating-customers-as-an-agent-assist.html#impersonate-a-customer)
+*   [Impersonate a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/impersonating-customers-as-an-agent-assist.html#impersonate-a-customer)
 

@@ -1,17 +1,9 @@
 ---
 title: Glue Spryks
 description: This article demonstrates how to manage the Glue REST API layer of Spryker with the help of code automation tools (Spryks).
-originalLink: https://documentation.spryker.com/2021080/docs/glue-spryks
-originalArticleId: 7cc8495c-c842-412c-8878-7448157ddac4
+originalLink: https://documentation.spryker.com/v4/docs/glue-spryks
+originalArticleId: 489f6f64-ef34-4358-9349-df488692185b
 redirect_from:
-  - /2021080/docs/glue-spryks
-  - /2021080/docs/en/glue-spryks
-  - /docs/glue-spryks
-  - /docs/en/glue-spryks
-  - /v6/docs/glue-spryks
-  - /v6/docs/en/glue-spryks
-  - /v5/docs/glue-spryks
-  - /v5/docs/en/glue-spryks
   - /v4/docs/glue-spryks
   - /v4/docs/en/glue-spryks
 ---
@@ -20,7 +12,7 @@ Spryker SDK facilitates Glue API Resource development by providing a set of code
 
 {% info_block infoBox %}
 
-For more information on _Spryks_, see [Spryk](/docs/scos/dev/sdk/development-tools/spryk-code-generator.html).
+For more information on _Spryks_, see [Spryk](https://documentation.spryker.com/capabilities/development/development_tools/spryk-201903.htm).
 
 {% endinfo_block %}
 
@@ -35,14 +27,14 @@ To perform the requested operations, besides the _Spryks_ called by the user, o
 To call a Spryk, you can use the following console commands:
 
 *   `vendor/bin/console spryk:run {SPRYK NAME}` - to call a _Spryk_ and input the arguments interactively, one-by-one;
-
+    
 *   `vendor/bin/console spryk:run {SPRYK NAME} --{argument name}={argument value}` - to call a _Spryk_ and pass the named arguments in one pass.
 
 ## Glue Module Management
 
 | Spryk | Description |
 | --- | --- |
-| `AddGlueBasicStructure` | Adds a new Glue layer with basic structure to the given module with the minimum required folders and files. </br>**Arguments**<p>**General Arguments:**</p><ul><li>**mode** - *project* or *core*.<br />The default is **project**. For details, see [Difference between Core and Project modes](https://documentation.spryker.com/capabilities/development/development_tools/spryk-201903.htm#difference-between-core-and-project-modes).</li><li>**organization** - specifies the name of the organization for which to perform the operation.<br />The default is **Pyz**.</li><li>**module** - specifies the module name.</li></ul><p>**Spryk-Specific Arguments:**</p><ul><li>**resourceType** - specifies the resource type.<br />By default, the resource type is the same as the module name without the `RestApi` suffix (if present), lower case. For example, if the module name is *MyResource**RestApi***, the default resource type is *myresource*.<br />For more details, see section **Resource Routing** in [Glue Infrastructure](/docs/scos/dev/concepts/glue-api/glue-spryks.html#resource-routing).</li></ul> |
+| `AddGlueBasicStructure` | Adds a new Glue layer with basic structure to the given module with the minimum required folders and files. </br>**Arguments**<p>**General Arguments:**</p><ul><li>**mode** - *project* or *core*.<br />The default is **project**. For details, see [Difference between Core and Project modes](https://documentation.spryker.com/capabilities/development/development_tools/spryk-201903.htm#difference-between-core-and-project-modes).</li><li>**organization** - specifies the name of the organization for which to perform the operation.<br />The default is **Pyz**.</li><li>**module** - specifies the module name.</li></ul><p>**Spryk-Specific Arguments:**</p><ul><li>**resourceType** - specifies the resource type.<br />By default, the resource type is the same as the module name without the `RestApi` suffix (if present), lower case. For example, if the module name is *MyResource**RestApi***, the default resource type is *myresource*.<br />For more details, see section **Resource Routing** in [Glue Infrastructure](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-infrastructure.html#resource-routing).</li></ul> |
 | `AddGlueConfig` | Adds a Glue configuration file for the given module.<br/>The file will be created as `src/Pyz/Glue/[ModuleName]/[ModuleName]Config.php`.</br>**Arguments**<p>**General Arguments:**</p><ul><li>**mode** - *project* or *core*.<br />The default is **project**. For details, see [Difference between Core and Project modes](https://documentation.spryker.com/capabilities/development/development_tools/spryk-201903.htm#difference-between-core-and-project-modes).</li><li>**organization** - specifies the name of the organization for which to perform the operation.<br />The default is **Pyz**.</li><li>**module** - specifies the module name.</li></ul> |
 | `AddGlueConfigConstant` | Adds a new constant to the Glue configuration file of the given module.</br>**Arguments**<p>**General Arguments:**</p><ul><li>**mode** - *project* or *core*.<br />The default is **project**. For details, see [Difference between Core and Project modes](https://documentation.spryker.com/capabilities/development/development_tools/spryk-201903.htm#difference-between-core-and-project-modes).</li><li>**organization** - specifies the name of the organization for which to perform the operation.<br />The default is **Pyz**.</li><li>**module** - specifies the module name.</li></ul><p>**Spryk-Specific Arguments:**</p><ul><li>**name** - name of the constant;</li><li>**value** - value of the constant.</li></ul> |
 
@@ -65,7 +57,7 @@ To call a Spryk, you can use the following console commands:
 | `AddGlueResourceRoutePlugin` | Adds a new resource route plugin for the given resource type of the given module.</br>**Arguments**<p>**General Arguments:**</p><ul><li>**mode** - *project* or *core*.<br />The default is **project**. For details, see [Difference between Core and Project modes](https://documentation.spryker.com/capabilities/development/development_tools/spryk-201903.htm#difference-between-core-and-project-modes).</li><li>**organization** - specifies the name of the organization for which to perform the operation.<br />The default is **Pyz**.</li><li>**module** - specifies the module name.</li></ul><p>**Spryk-Specific Arguments:**</p><ul><li>**resourceType** - specifies the resource type.</li></ul> |
 {% info_block infoBox %}
 
-For more details, see section **Resource Routing** in [Glue Infrastructure](/docs/scos/dev/concepts/glue-api/glue-spryks.html#resource-routing).
+For more details, see section **Resource Routing** in [Glue Infrastructure](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-infrastructure.html#resource-routing).
 
 {% endinfo_block %}
 
@@ -76,7 +68,7 @@ For more details, see section **Resource Routing** in [Glue Infrastructure](/do
 | `AddGlueResourceRelationshipPlugin` | Adds a **resource-type-by-relationship-parameter** relationship between 2 resources. Adds the corresponding relationship plugin to the given module.</br>**Arguments**<p>**General Arguments:**</p><ul><li>**mode** - *project* or *core*.<br />The default is **project**. For details, see [Difference between Core and Project modes](https://documentation.spryker.com/capabilities/development/development_tools/spryk-201903.htm#difference-between-core-and-project-modes).</li><li>**organization** - specifies the name of the organization for which to perform the operation.<br />The default is **Pyz**.</li><li>**module** - specifies the module name.</li></ul><p>**Spryk-Specific Arguments:**</p><ul><li>**resourceType** - specifies the resource type to add the relationship for.</li><li>**relationshipParameter** - specifies the parameter through which the two resources are related to each other</li></ul> |
 {% info_block infoBox %}
 
-For more details, see section **Resource Relationships** in [Glue Infrastructure](/docs/scos/dev/concepts/glue-api/glue-spryks.html#resource-relationships).
+For more details, see section **Resource Relationships** in [Glue Infrastructure](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-infrastructure.html#resource-relationships).
 
 {% endinfo_block %}
 
@@ -92,7 +84,7 @@ For more details, see section **Resource Relationships** in [Glue Infrastructu
 
 {% info_block infoBox %}
 
-For more details, see section **Resource Controller** in [Glue Infrastructure](/docs/scos/dev/concepts/glue-api/glue-spryks.html#resource-controller).
+For more details, see section **Resource Controller** in [Glue Infrastructure](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-infrastructure.html#resource-controller).
 
 {% endinfo_block %}
 
@@ -154,7 +146,7 @@ For more details, see section **Resource Controller** in [Glue Infrastructure]
 
 {% info_block infoBox %}
 
-For more details, see section **Generic Rest Response** in [Glue Infrastructure](/docs/scos/dev/concepts/glue-api/glue-spryks.html#resource-routing).
+For more details, see section **Generic Rest Response** in [Glue Infrastructure](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-infrastructure.html#resource-routing).
 
 {% endinfo_block %}
 
@@ -175,6 +167,6 @@ For more details, see section **Generic Rest Response** in [Glue Infrastructure
 
 {% info_block infoBox %}
 
-For more details, see [Validating REST Request Format](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/validating-rest-request-format.html).
+For more details, see [Validating REST Request Format](/docs/scos/dev/tutorials/202001.0/introduction/glue-api/validating-rest-request-format.html).
 
 {% endinfo_block %}

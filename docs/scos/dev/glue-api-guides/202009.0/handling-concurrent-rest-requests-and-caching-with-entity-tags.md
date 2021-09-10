@@ -69,7 +69,7 @@ The following resource support concurrent requests with ETag headers by default
 
 | Endpoint | Methods | Resource |
 | --- | --- | --- |
-| [/carts](/docs/scos/dev/glue-api-guides/202009.0/rest-api-reference.html#/carts) | PATCH, DELETE | Registered users' cart. |
+| [/carts](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/carts) | PATCH, DELETE | Registered users' cart. |
 
 ## Possible errors
 The following error responses can be returned by the server when a resource supporting ETags is updated:
@@ -79,5 +79,5 @@ The following error responses can be returned by the server when a resource supp
 | 412 | Pre-condition failed.</br>The `If-Match` header value is invalid or outdated. </br>Request the current state of the resource using a `GET` request to obtain a valid tag value. |
 | 428 | Pre-condition required.</br>The `If-Match` header is missing. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 

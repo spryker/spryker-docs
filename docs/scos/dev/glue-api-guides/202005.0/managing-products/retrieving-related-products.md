@@ -638,7 +638,7 @@ To get upselling items for all products in a cart of a registered customer, send
 
 | Path parameter | Description |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}}*** | ID of a cart to get upselling items of. [Retrieve all carts](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-carts-of-registered-users.html#retrieve-all-carts) to get it. | 
+| ***{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}}*** | ID of a cart to get upselling items of. [Retrieve all carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-all-carts) to get it. | 
 
 ### Request
 Request sample : `GET http://mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/up-selling-products`
@@ -917,7 +917,7 @@ To get up-selling items for products in a guest cart, send the request:
 ### Request
 | Header key | Header value example | Required | Description | 
 |---|---|---|---|
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | ✓ | A hyphenated alphanumeric value that is the user's unique identifier. This value is passed as a header when [creating a guest cart](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-guest-carts.html#creating-a-guest-cart). | 
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | ✓ | A hyphenated alphanumeric value that is the user's unique identifier. This value is passed as a header when [creating a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#creating-a-guest-cart). | 
 
 Request sample : `GET http://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/up-selling-products`.
 

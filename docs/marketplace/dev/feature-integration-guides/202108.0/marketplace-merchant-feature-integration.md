@@ -486,7 +486,7 @@ Configure export to Elastica:
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
 ```php
-   <?php
+<?php
 
 namespace Pyz\Zed\Publisher;
 

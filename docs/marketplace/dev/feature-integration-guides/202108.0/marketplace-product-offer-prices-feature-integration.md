@@ -768,6 +768,7 @@ Enable the following behaviors by registering the plugins:
 | PriceProductOfferPriceProductFilterPlugin | Filters out inapplicable product offer prices and product concrete prices when a product offer is selected |   | Spryker\Service\PriceProductOfferStorage\Plugin\PriceProduct |
 | PriceProductOfferVolumeExtractorPlugin | Maps out JSON entries from price_data of PriceProductTransfer to new PriceProductTransfers with volume prices |   | Spryker\Client\PriceProductOfferVolume\Plugin\PriceProductOfferStorage |
 | PriceProductOfferVolumeFilterPlugin | Applies correct volume pricing when applicable and quantity is selected |   | Spryker\Service\PriceProductOfferVolume\Plugin\PriceProductOffer |
+| LowestPriceProductOfferStorageCollectionSorterPlugin | Sorts ProductOfferStorageCollection by price from low to high. |  | Spryker\Client\PriceProductOfferStorage\Plugin\MerchantProductOfferStorage\LowestPriceProductOfferStorageCollectionSorterPlugin |
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>

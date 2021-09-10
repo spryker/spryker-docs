@@ -144,31 +144,3 @@ Make sure that when you do a `GET` request for the carts with merchant products,
 Make sure that when you do a `GET` request to retrieve abstract products that belong to a specific merchant, it returns products' data together with their merchants `http://glue.de.demo-spryker.com/abstract-products/{% raw %}{{abstractProductSku}}{% endraw %}?include=merchants`.
 
 {% endinfo_block %}
-
-
-### 4) Add translations
-
-Append glossary according to your configuration:
-
-**src/data/import/common/common/glossary.csv**
-
-```
-merchant_product.message.invalid,Product "%sku%" with Merchant "%merchant_reference%" not found.,en_US
-merchant_product.message.invalid,Der Produkt "%sku%" mit dem Händler "%merchant_reference%" ist nicht gefunden.,de_DE
-merchant.message.removed,Merchant "%merchant_reference%" not found.,en_US
-merchant.message.removed,Händler "%merchant_reference%" ist nicht gefunden.,de_DE
-merchant.message.inactive,Merchant "%merchant_reference%" is not active.,en_US
-merchant.message.inactive,Der Händler "%merchant_reference%" ist nicht aktiv.,de_DE
-```
-
-Import data:
-
-```bash
-console data:import glossary
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that the configured data is added to the `spy_glossary` table in the database.
-
-{% endinfo_block %}

@@ -515,7 +515,30 @@ Make sure that when you add merchant product to cart, on a cart page is has the 
 
 {% endinfo_block %}
 
-### 2) Set up behavior
+### 2) Add Yves translations
+
+Append glossary according to your configuration:
+
+**src/data/import/common/common/glossary.csv**
+
+```
+merchant_product.message.invalid,Product "%sku%" with Merchant "%merchant_reference%" not found.,en_US
+merchant_product.message.invalid,Der Produkt "%sku%" mit dem Händler "%merchant_reference%" ist nicht gefunden.,de_DE
+```
+
+Import data:
+
+```bash
+console data:import glossary
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the configured data is added to the `spy_glossary` table in the database.
+
+{% endinfo_block %}
+
+### 3) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
@@ -618,8 +641,6 @@ class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
 Make sure when you add to cart merchant product, it has `merchantReference` set. (Can be checked in the `spy_quote` table).
 
 {% endinfo_block %}
-
-<!--### 3) Configure export to Redis and Elasticsearch-->
 
 
 ## Related features

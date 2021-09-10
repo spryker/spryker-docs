@@ -51,11 +51,12 @@ Make sure that the following changes have been applied in transfer objects:
 | TRANSFER | TYPE | EVENT | PATH |
 |-|-|-|-|
 | RestProductOffersAttributes | class | Created | src/Generated/Shared/Transfer/RestProductOffersAttributesTransfer |
+| PersistentCartChange | class | Created | src/Generated/Shared/Transfer/PersistentCartChangeTransfer |
 | RestItemsAttributes.productOfferReference | property | Created | src/Generated/Shared/Transfer/RestItemsAttributesTransfer |
 | RestItemsAttributes.merchantReference | property | Created | src/Generated/Shared/Transfer/RestItemsAttributesTransfer |
 | CartItemRequest.productOfferReference | property | Created | src/Generated/Shared/Transfer/CartItemRequestTransfer |
+| CartItemRequest.merchantReference | property | Created | src/Generated/Shared/Transfer/CartItemRequestTransfer |
 | RestCartItemsAttributes.productOfferReference | property | Created | src/Generated/Shared/Transfer/RestCartItemsAttributesTransfer |
-| PersistentCartChange | class | Created | src/Generated/Shared/Transfer/PersistentCartChangeTransfer |
 
 {% endinfo_block %}
 

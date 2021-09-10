@@ -17,8 +17,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Spryker Core | master | [Glue API: Spryker Core feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration)  |
-| Marketplace Product | master | [Marketplace Product Feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-feature-integration.html)|
+| Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration)  |
+| Marketplace Product | {{page.version}} | [Marketplace Product Feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-feature-integration.html)|
 
 ### 1) Install the required modules using Composer
 
@@ -148,6 +148,10 @@ Make sure that when you do a `GET` request to retrieve abstract products that be
 
 ### 4) Add translations
 
+Append glossary according to your configuration:
+
+**src/data/import/common/common/glossary.csv**
+
 ```
 merchant_product.message.invalid,Product "%sku%" with Merchant "%merchant_reference%" not found.,en_US
 merchant_product.message.invalid,Der Produkt "%sku%" mit dem Händler "%merchant_reference%" ist nicht gefunden.,de_DE
@@ -156,3 +160,15 @@ merchant.message.removed,Händler "%merchant_reference%" ist nicht gefunden.,de_
 merchant.message.inactive,Merchant "%merchant_reference%" is not active.,en_US
 merchant.message.inactive,Der Händler "%merchant_reference%" ist nicht aktiv.,de_DE
 ```
+
+Import data:
+
+```bash
+console data:import glossary
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the configured data is added to the `spy_glossary` table in the database.
+
+{% endinfo_block %}

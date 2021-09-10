@@ -86,12 +86,10 @@ Generate transfer changes:
 console transfer:generate
 ```
 
-{% info_block warningBox "Verification" %}
+### 4) Add translations
 
-Make sure that the following changes have been applied in transfer objects:
+Generate a new translation cache for Zed:
 
-| TRANSFER  | TYPE  | EVENT | PATH  |
-|-|-|-|-|
-| ProductConcreteAvailabilityCollection | class | Created | src/Generated/Shared/Transfer/ProductConcreteAvailabilityCollectionTransfer |
-
-{% endinfo_block %}
+```bash
+console translator:generate-cache
+```

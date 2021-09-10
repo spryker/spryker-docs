@@ -54,7 +54,7 @@ entries:
 
           - title: Marketplace Inventory Management feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-inventory-management-feature-walkthrough.html
-          
+
           - title: Marketplace Order Management feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough.html
 
@@ -170,6 +170,9 @@ entries:
 
           - title: Merchant Portal - Marketplace Product + Tax feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-tax-feature-integration.html
+
+          - title: Merchant Portal - Marketplace Product + Inventory Management feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-inventory-management-feature-integration.html
 
           - title: Merchant Switcher feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-feature-integration.html

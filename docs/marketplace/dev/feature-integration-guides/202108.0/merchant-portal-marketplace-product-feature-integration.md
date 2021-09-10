@@ -55,10 +55,7 @@ Make sure that the following changes have been applied in transfer objects:
 | TRANSFER  | TYPE  | EVENT | PATH  |
 |-|-|-|-|
 | MerchantProductTableCriteria | class | Created | src/Generated/Shared/Transfer/MerchantProductTableCriteriaTransfer |
-| MerchantProductCriteria.idMerchant | property | Created | src/Generated/Shared/Transfer/MerchantProductCriteriaTransfer |
 | ProductAbstractCollection | class | Created | src/Generated/Shared/Transfer/ProductAbstractCollectionTransfer |
-| ProductTableCriteria | class | Created | src/Generated/Shared/Transfer/ProductTableCriteriaTransfer |
-| CriteriaRangeFilter | class | Created | src/Generated/Shared/Transfer/CriteriaRangeFilterTransfer |
 | PriceProductTableCriteria | class | Created | src/Generated/Shared/Transfer/PriceProductAbstractTableCriteriaTransfer |
 | PriceProductTableViewCollection | class | Created | src/Generated/Shared/Transfer/PriceProductAbstractTableViewCollectionTransfer |
 | PriceProductTableView | class | Created | src/Generated/Shared/Transfer/PriceProductAbstractTableViewTransfer |

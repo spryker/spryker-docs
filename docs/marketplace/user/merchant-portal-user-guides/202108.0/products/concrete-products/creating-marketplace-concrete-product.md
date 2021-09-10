@@ -35,7 +35,7 @@ You can create a marketplace concrete product following two scenarios:
 
   You can remove a concrete product from the preview list by clicking the **Remove** icon.
 
-Once the product is created, it needs to be [activated](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/products/concrete-products/managing-marketplace-concrete-product.html#deactivating-a-concrete-product). Only the active marketplace products are displayed on the Marketplace Storefront.
+Once the product is created, it needs to be [activated](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/concrete-products/managing-marketplace-concrete-product.html#deactivating-a-concrete-product). Only the active marketplace products are displayed on the Marketplace Storefront.
 
 ### Reference information: Create Concrete Products for [Abstract product name SKU]
 

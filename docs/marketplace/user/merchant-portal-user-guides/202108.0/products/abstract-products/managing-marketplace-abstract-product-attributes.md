@@ -1,7 +1,7 @@
 ---
 title: Managing marketplace abstract product attributes
 last_updated: Aug 11, 2021
-description: This document describes how to manage marketplace abstract product attributes in the Merchant Portal. 
+description: This document describes how to manage marketplace abstract product attributes in the Merchant Portal.
 template: back-office-user-guide-template
 ---
 
@@ -58,6 +58,6 @@ To remove the attribute from the abstract product:
 ## Next steps
 
 - [Edit abstract product](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product.html)
-- [Manage abstract product attributes](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-abstract-product-attributes.html)
+- [Manage abstract product prices](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product-prices.html)
 - [Manage abstract product image sets](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product-image-sets.html)
 - [Manage abstract product meta information](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product-meta-information.html)

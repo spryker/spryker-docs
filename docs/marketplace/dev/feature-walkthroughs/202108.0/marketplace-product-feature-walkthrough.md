@@ -7,7 +7,11 @@ template: concept-topic-template
 
 A Marketplace Product feature adds merchant information to the product that a merchant sells.
 
+{% info_block warningBox "User documentation" %}
+
 To learn more about the feature and to find out how end users use it, see [Marketplace Product feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-product-feature-overview.html) feature overview for business users.
+
+{% endinfo_block %}
 
 ## Related Developer articles
 

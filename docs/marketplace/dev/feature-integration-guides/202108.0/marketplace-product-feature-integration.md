@@ -107,7 +107,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 3) Add Zed translations
+### 4) Add Zed translations
 
 Generate a new translation cache for Zed:
 
@@ -115,7 +115,7 @@ Generate a new translation cache for Zed:
 console translator:generate-cache
 ```
 
-### 4) Set up behavior
+### 5) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
@@ -300,7 +300,7 @@ Make sure that data in  `spy_product_abstract_storage` contains `merchant_refere
 
 {% endinfo_block %}
 
-### 5) Import merchant product data
+### 6) Import merchant product data
 
 Prepare your data according to your requirements using the demo data:
 

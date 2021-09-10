@@ -296,7 +296,7 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 
 {% info_block warningBox "Verification" %}
 
-Make sure that data in  `spy_product_abstract_storage` contains `merchant_references`'s for merchant products.
+Make sure that data contains `merchant_references`'s for merchant products in the `spy_product_abstract_storage`.
 
 {% endinfo_block %}
 
@@ -446,7 +446,6 @@ sku,merchant_reference,is_shared
 208,MER000002,1
 209,MER000002,1
 ```
-
 </details>
 
 | COLUMN  | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION  |

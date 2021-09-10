@@ -1,7 +1,7 @@
 ---
 title: Managing marketplace concrete product image sets
 last_updated: Aug 11, 2021
-description: This document describes how to manage marketplace concrete product image sets in the Merchant Portal. 
+description: This document describes how to manage marketplace concrete product image sets in the Merchant Portal.
 template: back-office-user-guide-template
 ---
 
@@ -20,7 +20,7 @@ To add an image for a marketplace concrete product:
 1. On the *Concrete Products* page, next to the concrete product you want to edit, hover over the three dots and click **Manage Product** or just click the line. This takes you to the *Concrete Product SKU, Name* page. Scroll down to the *Images* pane.
 2. Click **+Add Image Set***. The empty cells appear.
 3. In the *SET NAME*, enter the name of the set.
-4. In the *IMAGE ORDERED*,enter the number which defines the order of the images displayed. 
+4. In the *IMAGE ORDERED*,enter the number which defines the order of the images displayed.
 5. In the *SMALL IMAGE URL*, enter the URL.
 6. In the *LARGE IMAGE URL*, enter the URL.
 7. Click **Save**.
@@ -40,13 +40,13 @@ To edit an image of the marketplace concrete product:
 
 ## Deleting images for marketplace concrete products
 
-To delete an image in the image set for the marketplace abstract product:
+To delete an image in the image set for the marketplace concrete product:
 
 1. On the *Concrete Products* page, next to the concrete product you want to edit, hover over the three dots and click **Manage Product** or just click the line. This takes you to the *Concrete Product SKU, Name* page. Scroll down to the *Images* pane.
 2. Select a default or a specific locale you want to delete an image for.
 3. Click the **Delete** icon.
 
-To delete an image set with its images for the abstract product, click **Delete Image Set**.
+To delete an image set with its images for the concrete product, click **Delete Image Set**.
 
 ### Reference information: Images pane
 

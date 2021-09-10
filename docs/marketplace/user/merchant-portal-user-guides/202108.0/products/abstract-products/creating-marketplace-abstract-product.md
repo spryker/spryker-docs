@@ -5,11 +5,11 @@ description: This document describes how to create marketplace abstract products
 template: back-office-user-guide-template
 ---
 
-This document describes how to create a merchant abstract product.
+This document describes how to create a marketplace abstract product.
 
 ## Prerequisites
 
-To start working with merchant abstract products, go to **Merchant Portal > Products**.
+To start working with marketplace abstract products, go to **Merchant Portal > Products**.
 
 Review the reference information before you start, or just look up the necessary information as you go through the process.
 
@@ -33,7 +33,7 @@ To create a new abstract product:
 
    {% endinfo_block %}
 
-   
+
    Select **Abstract product has multiple concrete products** if the abstract product you are creating will require variants.
 
    1. Click **Next**. </br>
@@ -59,17 +59,17 @@ To create a new abstract product:
 
       1. Select a super attribute that defines the variation of your concrete products.
       2. In the field next to the super attribute you've selected, select one or more values for each super attribute. Upon adding the super attribute values, the preview of the concrete products will be displayed.
-    
+
       {% info_block infoBox "Info" %}
-    
+
       Removing a super attribute or its value will remove the appropriate concrete product(s) or concrete product values from the preview.
-    
+
       {% endinfo_block %}
-    
-      1. (Optional) Add more super attributes by clicking the **Add** button. Repeat this step until you select at least one value for each selected super attribute. 
-    
+
+      1. (Optional) Add more super attributes by clicking the **Add** button. Repeat this step until you select at least one value for each selected super attribute.
+
       ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/merchant+portal+user+guides/Products/create-abstract-product-with-multiple-variants-mp.gif)
-    
+
       **Tips and Tricks** </br>
 
       You can remove a concrete product from the preview list by clicking the **Remove** icon.
@@ -80,7 +80,7 @@ To create a new abstract product:
 
 To return to the previous step, click **Back**.
 
-Once the product is created, it needs to be [activated](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/products/concrete-products/managing-marketplace-concrete-product.html#deactivating-a-concrete-product). Only the active marketplace products are displayed in the Merchant Portal and Marketplace Storefront.
+Once the product is created, it needs to be [activated](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/products/concrete-products/managing-marketplace-concrete-product.html#deactivating-a-concrete-product). Only the active marketplace products are displayed on the Marketplace Storefront.
 
 ### Reference information: Create abstract product
 

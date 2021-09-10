@@ -46,7 +46,7 @@ entries:
           url: /docs/marketplace/user/features/merchant-opening-hours-feature-overview.html
 
         - title: Marketplace Product feature overview
-          url: /docs/marketplace/user/features/marketplace-product-feature-overview.html          
+          url: /docs/marketplace/user/features/marketplace-product-feature-overview.html
 
         - title: Marketplace Product Offer feature overview
           url: /docs/marketplace/user/features/marketplace-product-offer-feature-overview.html
@@ -253,9 +253,3 @@ entries:
 
             - title: Managing marketplace concrete product attributes
               url: /docs/marketplace/user/merchant-portal-user-guides/products/concrete-products/managing-marketplace-concrete-product-attributes.html
-
-      - title: Release notes
-        nested:
-
-          - title: Release notes 202108.0
-            url: /docs/marketplace/user/release-notes/release-notes-2021080.html

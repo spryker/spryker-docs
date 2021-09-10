@@ -1,7 +1,7 @@
 ---
 title: Managing marketplace abstract product image sets
 last_updated: Aug 11, 2021
-description: This document describes how to manage marketplace abstract product image sets in the Merchant Portal. 
+description: This document describes how to manage marketplace abstract product image sets in the Merchant Portal.
 template: back-office-user-guide-template
 ---
 
@@ -9,7 +9,7 @@ This topic describes how to manage image sets of the marketplace abstract produc
 
 ## Prerequisites
 
-To start working with merchant abstract products, go to **Merchant Portal** > **Products**.
+To start working with marketplace abstract products, go to **Merchant Portal** > **Products**.
 
 Review the reference information before you start, or just look up the necessary information as you go through the process.
 
@@ -20,7 +20,7 @@ To add an image set for a marketplace abstract product:
 1. Next to the abstract product, you want to create an image set for, hover over the three dots, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the *Images* pane.
 2. Click **+Add Image Set***. The empty cells appear.
 3. In the *SET NAME*, enter the name of the set.
-4. In the *IMAGE ORDERED*, enter the number which defines the order of the images to be displayed. 
+4. In the *IMAGE ORDERED*, enter the number which defines the order of the images to be displayed.
 5. In the *SMALL IMAGE URL*, copy-paste or type the URL.
 6. In the *LARGE IMAGE URL*, copy-paste or type the URL.
 7. Click **Save**.

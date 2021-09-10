@@ -9,7 +9,7 @@ This topic describes how to manage marketplace concrete product prices in the Me
 
 ## Prerequisites
 
-To start working with marketplace concrete products, go to the **Merchant Portal** > **Products**.  Hover over the three dots next to the abstract product for which you manage a concrete product and click **Manage Product** or just click the line. This takes you to the *[Product name]* drawer. Navigate to the *Concrete Products* tab. 
+To start working with marketplace concrete products, go to the **Merchant Portal** > **Products**.  Hover over the three dots next to the abstract product for which you manage a concrete product and click **Manage Product** or just click the line. This takes you to the *[Product name]* drawer. Navigate to the *Concrete Products* tab.
 
 Review the reference information before you start, or just look up the necessary information as you go through the process.
 
@@ -36,7 +36,7 @@ Check *Use Abstract Product price for all locales* to keep the prices of the abs
 
 ## Editing marketplace concrete product prices
 
-To edit prices of a marketplace abstract product:
+To edit prices of a marketplace concrete product:
 
 1. On the *Concrete Products* page, next to the concrete product you want to edit, hover over the three dots and click **Manage Product** or just click the line. This takes you to the *Concrete Product SKU, Name* page. Scroll down to the *Price* pane.
 2.  Hover over the table and update the necessary cells.
@@ -69,8 +69,6 @@ To remove the price of the marketplace concrete product:
 Let's say you have a product that you want to sell with a special price if a user wants to buy a specific number of the same product. For example, a laptop costs €354.35, but you have defined that if a user buys three items, the cost will be €340 instead of €354.35.
 
 ![Volume prices - marketplace product](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Merchant+Portal+user+guides/Products/volume-prices-merchant-products.gif)
-
-## 
 
 ## Next steps
 

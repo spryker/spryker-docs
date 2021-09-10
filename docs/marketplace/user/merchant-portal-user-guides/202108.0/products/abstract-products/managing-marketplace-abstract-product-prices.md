@@ -10,7 +10,7 @@ This topic describes how to manage marketplace abstract product prices in the Me
 
 ## Prerequisites
 
-To start working with merchant abstract products, go to **Merchant Portal** > **Products**.
+To start working with marketplace abstract products, go to **Merchant Portal** > **Products**.
 
 Review the reference information before you start, or just look up the necessary information as you go through the process.
 

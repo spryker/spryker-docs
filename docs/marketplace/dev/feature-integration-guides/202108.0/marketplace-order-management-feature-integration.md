@@ -17,11 +17,11 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ------ | ---------------|
-| Spryker Core | 202001.0 | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Order Management | 202001.0 | [Order Management feature integration](https://documentation.spryker.com/docs/order-management-feature-integration) |
-| Shipment | 202001.0 | [Shipment feature integration](https://documentation.spryker.com/docs/shipment-feature-integration) |
-| State Machine | 202001.0 | [State Machine feature integration](https://github.com/spryker-feature/state-machine) |
-| Marketplace Merchant | dev-master | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Order Management | {{page.version}} | [Order Management feature integration](https://documentation.spryker.com/docs/order-management-feature-integration) |
+| Shipment | {{page.version}} | [Shipment feature integration](https://documentation.spryker.com/docs/shipment-feature-integration) |
+| State Machine | {{page.version}} | [State Machine feature integration](https://github.com/spryker-feature/state-machine) |
+| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
 
 ### 1) Install required modules using Сomposer
 
@@ -780,7 +780,7 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ------ | --------------|
-| Spryker Core | 202001.0 | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
 
 ### 1) Install the required modules using Сomposer
 

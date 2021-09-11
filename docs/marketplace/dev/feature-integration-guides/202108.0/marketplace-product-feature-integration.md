@@ -1,6 +1,6 @@
 ---
 title: Marketplace Product feature integration
-last_updated: Jun 25, 2021
+last_updated: Sep 10, 2021
 description: This document describes the process how to integrate the Marketplace Product feature into a Spryker project.
 template: feature-integration-guide-template
 ---
@@ -26,8 +26,9 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-product: "{{page.version}}" --update-with-dependencies
+composer require spryker-feature/marketplace-product:"dev-master" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
@@ -115,7 +116,43 @@ Generate a new translation cache for Zed:
 console translator:generate-cache
 ```
 
-### 5) Set up behavior
+### 5) Configure export to Elasticsearch
+
+This step publishes tables on change (create, edit) to `spy_product_search`, `spy_product_abstract_page_search`, `spy_product_concrete_page_search` and synchronizes the data to Search.
+
+**src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Publisher;
+
+use Spryker\Zed\MerchantProductOptionStorage\Communication\Plugin\Publisher\MerchantProductOption\MerchantProductOptionGroupWritePublisherPlugin;
+use Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher\Merchant\MerchantProductSearchWritePublisherPlugin as MerchantMerchantProductSearchWritePublisherPlugin;
+use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
+
+class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
+{
+    /**
+     * @return array
+     */
+    protected function getPublisherPlugins(): array
+    {
+        return [
+            new MerchantMerchantProductSearchWritePublisherPlugin(),
+            new MerchantProductSearchWritePublisherPlugin(),
+        ]
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that when merchant product entities are created or updated through ORM, they are exported to Elastica accordingly.
+
+{% endinfo_block %}
+
+### 6) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
@@ -217,34 +254,9 @@ Make sure that at `http://zed.de.demo-spryker.com/product-management/view?id-pro
 
 namespace Pyz\Zed\ProductPageSearch;
 
-use Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch\MerchantProductAbstractMapExpanderPlugin;
-use Spryker\Zed\ProductPageSearch\ProductPageSearchDependencyProvider as SprykerProductPageSearchDependencyProvider;
-
-class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDependencyProvider
-{
-    /**
-     * @return \Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductAbstractMapExpanderPluginInterface[]
-     */
-    protected function getProductAbstractMapExpanderPlugins(): array
-    {
-        return [
-            new MerchantProductAbstractMapExpanderPlugin(),
-        ];
-    }
-}
-```
-
-**src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\ProductPageSearch;
-
-
-use Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch\MerchantProductPageDataExpanderPlugin as MerchantMerchantProductPageDataExpanderPlugin;
 use Spryker\Shared\MerchantProductSearch\MerchantProductSearchConfig;
-
+use Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch\MerchantProductAbstractMapExpanderPlugin;
+use Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch\MerchantProductPageDataExpanderPlugin as MerchantMerchantProductPageDataExpanderPlugin;
 use Spryker\Zed\ProductPageSearch\ProductPageSearchDependencyProvider as SprykerProductPageSearchDependencyProvider;
 
 class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDependencyProvider
@@ -258,6 +270,16 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
         $dataExpanderPlugins[MerchantProductSearchConfig::PLUGIN_MERCHANT_PRODUCT_DATA] = new MerchantMerchantProductPageDataExpanderPlugin();
 
         return $dataExpanderPlugins;
+    }
+    
+    /**
+     * @return \Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductAbstractMapExpanderPluginInterface[]
+     */
+    protected function getProductAbstractMapExpanderPlugins(): array
+    {
+        return [
+            new MerchantProductAbstractMapExpanderPlugin(),
+        ];
     }
 }
 ```
@@ -300,7 +322,7 @@ Make sure that data contains `merchant_references`'s for merchant products in th
 
 {% endinfo_block %}
 
-### 6) Import merchant product data
+### 7) Import merchant product data
 
 Prepare your data according to your requirements using the demo data:
 
@@ -553,6 +575,35 @@ Enable the following behaviors by registering the plugins:
 | MerchantProductMerchantNameSearchConfigExpanderPlugin | Expands facet configuration with merchant name filter.       |           | Spryker\Client\MerchantProductSearch\Plugin\Search          |
 | ProductViewMerchantProductExpanderPlugin              | Expands ProductView transfer object with merchant reference. |           | Spryker\Client\MerchantProductStorage\Plugin\ProductStorage |
 | MerchantProductPreAddToCartPlugin                     | Sets merchant reference to item transfer on add to cart.     |           | SprykerShop\Yves\MerchantProductWidget\Plugin\CartPage      |
+
+**src/Pyz/Client/Search/SearchDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Client\Search;
+
+use Spryker\Client\Kernel\Container;
+use Spryker\Client\MerchantProductSearch\Plugin\Search\MerchantProductMerchantNameSearchConfigExpanderPlugin;
+use Spryker\Client\Search\SearchDependencyProvider as SprykerSearchDependencyProvider;
+
+class SearchDependencyProvider extends SprykerSearchDependencyProvider
+{
+    /**
+     * @param \Spryker\Client\Kernel\Container $container
+     *
+     * @return \Spryker\Client\SearchExtension\Dependency\Plugin\SearchConfigExpanderPluginInterface[]
+     */
+    protected function createSearchConfigExpanderPlugins(Container $container): array
+    {
+        $searchConfigExpanderPlugins = parent::createSearchConfigExpanderPlugins($container);
+
+        $searchConfigExpanderPlugins[] = new MerchantProductMerchantNameSearchConfigExpanderPlugin();
+
+        return $searchConfigExpanderPlugins;
+    }
+}
+```
 
 **src/Pyz/Client/SearchElasticsearch/SearchElasticsearchDependencyProvider.php**
 

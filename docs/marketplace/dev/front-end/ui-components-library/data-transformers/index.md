@@ -158,5 +158,5 @@ There are a few common Data Transformers that are available in the UI library as
     - [`equals`](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/equals.html)—filters values that are strictly equal.
     - [`range`](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/range.html)—filters values that are within a number range.
     - [`text`](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/text.html)—filters values that match a string.
-  - Data Configurators - are services that allow configuring re-population data (sorting, pagination, filtering). These services are registered via `CollateDataTransformer.withConfigurators()`. There are a few common Collate Data Configurators that are available:
-    - `table`—integrates Table into Collate to re-populate the data.
+  - [Data Configurators](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/data-configurators/) - are services that allow configuring re-population data (sorting, pagination, filtering). These services are registered via `CollateDataTransformer.withConfigurators()`. There are a few common Collate Data Configurators that are available:
+    - [`table`](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/data-configurators/table.html)—integrates Table into Collate to re-populate the data.

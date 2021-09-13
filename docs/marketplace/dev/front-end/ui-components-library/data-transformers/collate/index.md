@@ -61,7 +61,7 @@ Data Configurators are Angular Services that enable re-population of data (sorti
 These services are registered via `CollateDataTransformer.withConfigurators()`.
 There are a few common Data Transformers Collate Data Configurators that are available:
 
-  - `table` - integrates Table into Collate to re-populate data when the table updates.
+  - [`table`](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/data-configurators/table.html) - integrates Table into Collate to re-populate data when the table updates.
 
 ## Interfaces
 

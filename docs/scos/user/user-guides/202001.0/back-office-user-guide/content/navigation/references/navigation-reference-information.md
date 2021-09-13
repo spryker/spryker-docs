@@ -1,52 +1,16 @@
 ---
 title: Navigation - Reference Information
-description: Reference information for managing navigation elements in the Back Office.
-originalLink: https://documentation.spryker.com/v5/docs/navigation-reference-information
-originalArticleId: 6f2ccc34-b591-4a73-a081-110fd5530ad6
+description: The guide provides the navigation node types and additional node-related information.
+originalLink: https://documentation.spryker.com/v4/docs/navigation-node-types
+originalArticleId: 418e6032-4b02-4b6c-83b7-d32e122dd447
 redirect_from:
-  - /v5/docs/navigation-reference-information
-  - /v5/docs/en/navigation-reference-information
+  - /v4/docs/navigation-node-types
+  - /v4/docs/en/navigation-node-types
 ---
 
-This topic contains the reference information for working with [navigation elements](/docs/scos/user/features/{{page.version}}/navigation/navigation/navigation-feature-overview.html#navigation-element) in **Content** > **Navigation**.
-
-## Overview of Navigation Elements Page
-
-On the *Overview of Navigation Elements* page, you see the following:
-
-*     Navigation element number, name, key, and status
-*     Actions that you can do to a navigation element
-*     Navigation tree displaying all the navigation nodes of a selected navigation element
-
-
-| Attribute | Description |
-| --- | --- |
-| **Type** | Type of the navigation node. See [Navigation Node Types](#navigation-node-types) for all the types. |
-| **Title** | Name of the navigation node. It is displayed on the Storefront. |
-| **Custom CSS class** | CSS class defining the design of the navigation node. Usually, a front-end developer creates them. |
-| **Valid from** and **Valid to** | The navigation node is displayed on the Storefront between the dates defined in these fields, inclusively. |
-| **Active** | Checkbox to define if the navigation node is active. Inactive navigation nodes and its sub-nodes are not displayed on the Storefront.  |
-
-
-### Create, Edit, and Duplicate Navigation Element Pages
-
-The following table describes the attributes on the following pages:
-
-*     *Activate Navigation Element*
-*     *Edit Navigation Element*
-*     *Duplicate Navigation Element*
-
-
-| Attribute | Description |
-| --- | --- |
-| Name | Name of the navigation element. It is displayed on the Storefront. |
-| Key | Unique identifier of the navigation element used to reference it on the Storefront. |
-| Active | Check box to define if the navigation element is active. Inactive navigation elements and its child nodes are not displayed on Storefront.  |
-
-
-## Navigation Node Types
-
-You can create the following node types:
+This article describes the navigation node types.
+***
+Navigation nodes can be of different types:
 
 | Node Type | Node Description |
 | --- | --- |

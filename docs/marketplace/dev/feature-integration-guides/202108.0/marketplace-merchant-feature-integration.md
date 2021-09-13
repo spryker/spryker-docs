@@ -45,7 +45,7 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up database schema
+### 2) Set up database schema and transfer objects
 
 Set up database schema:
 1. Adjust the schema definition so entity changes trigger events:
@@ -77,7 +77,6 @@ console propel:install
 console transfer:generate
 ```
 
-
 {% info_block warningBox "Verification" %}
 
 Make sure that the following changes have occurred in the database:
@@ -91,8 +90,6 @@ Make sure that the following changes have occurred in the database:
 
 {% endinfo_block %}
 
-### 3) Set up transfer objects
-
 Generate transfer changes:
 
 ```bash
@@ -105,25 +102,26 @@ Make sure that the following changes have occurred in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 |---|---|---|---|
-| MerchantProfileAddress | object | Created | src/Generated/Shared/Transfer/MerchantProfileAddressTransfer |
-| MerchantProfileCollection | object | Created | src/Generated/Shared/Transfer/MerchantProfileCollectionTransfer|
-| MerchantProfileCriteriaFilter | object | Created | src/Generated/Shared/Transfer/MerchantProfileCriteriaFilterTransfer |
-| MerchantProfileGlossaryAttributeValues | object | Created | src/Generated/Shared/Transfer/MerchantProfileGlossaryAttributeValuesTransfer |
-| MerchantProfileLocalizedGlossaryAttributes | object | Created | src/Generated/Shared/Transfer/MerchantProfileLocalizedGlossaryAttributesTransfer |
-| MerchantSearch | object | Created | src/Generated/Shared/Transfer/MerchantSearchTransfer |
-| MerchantSearchCollection | object | Created | src/Generated/Shared/Transfer/MerchantSearchCollectionTransfer |
-| MerchantUser | object | Created | src/Generated/Shared/Transfer/MerchantUserTransfer |
-| MerchantUserCriteria | object | Created | src/Generated/Shared/Transfer/MerchantUserCriteriaTransfer |
-| MerchantUserResponse | object | Created | src/Generated/Shared/Transfer/MerchantUserResponseTransfer |
-| SpyMerchantProfileEntity | object | Created | src/Generated/Shared/Transfer/SpyMerchantProfileEntityTransfer |
-| SpyMerchantSearchEntity | object | Created | src/Generated/Shared/Transfer/SpyMerchantSearchEntityTransfer |
-| SpyMerchantStorageEntity |  object | Created | src/Generated/Shared/Transfer/SpyMerchantStorageEntityTransfer |
-| SpyMerchantUserEntity | object | Created |src/Generated/Shared/Transfer/SpyMerchantUserEntityTransfer |
+| MerchantProfileAddress | class | Created | src/Generated/Shared/Transfer/MerchantProfileAddressTransfer |
+| MerchantProfileCollection | class | Created | src/Generated/Shared/Transfer/MerchantProfileCollectionTransfer|
+| MerchantProfileCriteriaFilter | class | Created | src/Generated/Shared/Transfer/MerchantProfileCriteriaFilterTransfer |
+| MerchantProfileGlossaryAttributeValues | class | Created | src/Generated/Shared/Transfer/MerchantProfileGlossaryAttributeValuesTransfer |
+| MerchantProfileLocalizedGlossaryAttributes | class | Created | src/Generated/Shared/Transfer/MerchantProfileLocalizedGlossaryAttributesTransfer |
+| MerchantSearch | class | Created | src/Generated/Shared/Transfer/MerchantSearchTransfer |
+| MerchantSearchCollection | class | Created | src/Generated/Shared/Transfer/MerchantSearchCollectionTransfer |
+| MerchantUser | class | Created | src/Generated/Shared/Transfer/MerchantUserTransfer |
+| MerchantUserCriteria | class | Created | src/Generated/Shared/Transfer/MerchantUserCriteriaTransfer |
+| MerchantUserResponse | class | Created | src/Generated/Shared/Transfer/MerchantUserResponseTransfer |
+| SpyMerchantProfileEntity | class | Created | src/Generated/Shared/Transfer/SpyMerchantProfileEntityTransfer |
+| SpyMerchantSearchEntity | class | Created | src/Generated/Shared/Transfer/SpyMerchantSearchEntityTransfer |
+| SpyMerchantStorageEntity |  class | Created | src/Generated/Shared/Transfer/SpyMerchantStorageEntityTransfer |
+| SpyMerchantUserEntity | class | Created |src/Generated/Shared/Transfer/SpyMerchantUserEntityTransfer |
+| UrlStorage.fkResourceMerchant | property | Created |src/Generated/Shared/Transfer/UrlStorageTransfer |
 
 {% endinfo_block %}
 
 
-### 4) Add Zed translations
+### 3) Add Zed translations
 
 Generate a new translation cache for Zed:
 
@@ -131,7 +129,7 @@ Generate a new translation cache for Zed:
 console translator:generate-cache
 ```
 
-### 5) Set up behavior
+### 4) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
@@ -270,7 +268,7 @@ Make sure that when you edit a merchant in the Merchants section of the Back Off
 
 {% endinfo_block %}
 
-### 6) Configure navigation
+### 5) Configure navigation
 
 Add marketplace section to `navigation.xml`:
 
@@ -307,7 +305,7 @@ Make sure that, in the navigation menu of the Back Office, you can see the **Mar
 
 {% endinfo_block %}
 
-### 7) Configure export to Redis
+### 6) Configure export to Redis and Elasticsearch
 
 This step publishes tables on change (create, edit) to `spy_merchant_profile_storage` and synchronizes the data to Storage.
 
@@ -476,7 +474,6 @@ Make sure that when merchant profile entities are created or updated through ORM
 
 {% endinfo_block %}
 
-### 8) Configure export to Elastica
 
 This step publishes tables on change (create, edit) to `spy_merchant_search` and synchronizes the data to Search.
 
@@ -896,7 +893,7 @@ class SearchElasticsearchConfig extends SprykerSearchElasticsearchConfig
 }
 ```
 
-### 9) Import data
+### 7) Import data
 
 To import data:
 1. Prepare merchant profile data according to your requirements using the demo data:

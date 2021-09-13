@@ -7,7 +7,7 @@ redirect_from:
   - /v6/docs/en/file-details-commentcsv
 ---
 
-This article contains content of the **comment.csv** file to configure [Comment](/docs/scos/dev/features/202009.0/comments/comments.html)  information on your Spryker Demo Shop.
+This article contains content of the **comment.csv** file to configure [Comment](/docs/scos/user/features/{{page.version}}/comments/comments.html)  information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:

@@ -14,7 +14,7 @@ This topic describes how to manage CMS blocks.
 
 {% info_block infoBox "Info" %}
 
-If you want to manage a CMS block for [email](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/email-as-a-cms-block-overview.html), see [Managing content of emails via CMS blocks](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/managing-content-of-emails-via-cms-blocks.html).
+If you want to manage a CMS block for [email](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/email-as-a-cms-block-overview.html), see [Managing content of emails via CMS blocks](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/managing-content-of-emails-via-cms-blocks.html).
 
 {% endinfo_block %}
 

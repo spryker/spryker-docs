@@ -61,8 +61,8 @@ The **guest users** can not initiate returns of their orders, as the return mana
 
 {% info_block warningBox "Note" %}
 
-For a [Configurable Bundle](/docs/scos/dev/features/202009.0/configurable-bundle/configurable-bundle.html), you can’t select to return an entire Configurable Bundle, but you can select to return separate items from it.
-The [Product Bundles](/docs/scos/dev/features/202009.0/product-bundles/product-bundles.html), on the contrary, are handled as one product, so only the whole bundle can be returned. You can not return individual items of a Product Bundle.
+For a [Configurable Bundle](/docs/scos/user/features/{{page.version}}/configurable-bundle/configurable-bundle.html), you can’t select to return an entire Configurable Bundle, but you can select to return separate items from it.
+The [Product Bundles](/docs/scos/user/features/{{page.version}}/product-bundles/product-bundles.html), on the contrary, are handled as one product, so only the whole bundle can be returned. You can not return individual items of a Product Bundle.
 
 {% endinfo_block %}
 
@@ -83,7 +83,7 @@ A Back Office user can create returns for the [returnable items](#returnable-ite
 
 {% info_block infoBox "Return management process" %}
 
-To define the most suitable return management process for your project, to learn how you can use the default Spryker Return Management feature, and what custom development you might need to implement it, check out [Building a return management process: Best practices](/docs/scos/dev/features/202009.0/return-management/building-a-return-management-process-best-practices.html). 
+To define the most suitable return management process for your project, to learn how you can use the default Spryker Return Management feature, and what custom development you might need to implement it, check out [Building a return management process: Best practices](/docs/scos/user/features/{{page.version}}/return-management/building-a-return-management-process-best-practices.html). 
 
 {% endinfo_block %}
 

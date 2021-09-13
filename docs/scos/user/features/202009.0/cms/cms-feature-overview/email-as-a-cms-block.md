@@ -7,7 +7,7 @@ redirect_from:
   - /v6/docs/en/email-as-a-cms-block
 ---
 
-Back Office Users can manage the content of emails sent to customers through [CMS Blocks](/docs/scos/dev/features/202009.0/cms/cms-feature-overview/cms-block.html) in the Back Office. To use a CMS Block as an email, the Back Office user applies an email template.
+Back Office Users can manage the content of emails sent to customers through [CMS Blocks](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/cms-block.html) in the Back Office. To use a CMS Block as an email, the Back Office user applies an email template.
 
 
 ## Types of Email Templates
@@ -99,7 +99,7 @@ After creating email templates, a developer can [import](/docs/scos/dev/data-imp
 
 ## Email Content
 
-When [editing an email template via Email CMS Block](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/blocks/managing-content-of-emails-via-cms-blocks.html#editing-email-cms-blocks), you work in the [WYSIWYG editor](/docs/scos/dev/features/202009.0/cms/cms-feature-overview/wysiwyg-editor.html). Apart from the regular WYSIWYG editor tools, you can add glossary keys and variables.
+When [editing an email template via Email CMS Block](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/blocks/managing-content-of-emails-via-cms-blocks.html#editing-email-cms-blocks), you work in the [WYSIWYG editor](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/wysiwyg-editor.html). Apart from the regular WYSIWYG editor tools, you can add glossary keys and variables.
 
 You can use the functionalities described in this section, regardless of the email format.
 
@@ -117,7 +117,7 @@ A developer can provide a full list of variables and create new ones.
 
 ### Content Items in Email Templates
 
-The CMS capability in Spryker allows you to add [content items](/docs/scos/dev/features/202009.0/content-items/content-items-feature-overview.html) into CMS Blocks. Unlike the regular CMS Blocks, the Email CMS Blocks do not support content items. If you insert one, its content is not rendered when the email is sent.
+The CMS capability in Spryker allows you to add [content items](/docs/scos/user/features/{{page.version}}/content-items/content-items-feature-overview.html) into CMS Blocks. Unlike the regular CMS Blocks, the Email CMS Blocks do not support content items. If you insert one, its content is not rendered when the email is sent.
 
 
 ## If you are:

@@ -8,7 +8,7 @@ redirect_from:
   - /v5/docs/en/managing-navigation-elements
 ---
 
-This topic describes how to manage [navigation elements](/docs/scos/dev/features/202005.0/navigation/navigation/navigation-feature-overview.html#navigation-element).
+This topic describes how to manage [navigation elements](/docs/scos/user/features/{{page.version}}/navigation/navigation/navigation-feature-overview.html#navigation-element).
 
 To start working with navigation elements, go to **Content** > **Navigation**.
 ***

@@ -23,7 +23,7 @@ Access to carts for registered users is provided by the **/carts** resource. Bef
 Unlike guest carts, carts of registered users have an unlimited lifetime. Also, if the multiple carts feature is [integrated into your project](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/multiple-carts-feature-integration.html){target="_blank"} and Glue is [enabled for multi-cart operations](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/multiple-carts-feature-integration.html){target="_blank"}, registered users can have as many carts as they want. In the B2B scenario, this allows for creating different carts for different purposes. For instance, registered users can have a cart for daily purchases and one more for purchases made once a month.
 
 ## Owned and Shared Carts
-Registered users can [share carts](/docs/scos/dev/features/202001.0/shopping-cart/shared-cart/shared-cart.html) they own. Thus, a registered user can access both their personal carts and carts shared with them by other users. This feature allows company users to collaborate on company purchases as a team.
+Registered users can [share carts](/docs/scos/user/features/{{page.version}}/shared-carts-feature-overview.html) they own. Thus, a registered user can access both their personal carts and carts shared with them by other users. This feature allows company users to collaborate on company purchases as a team.
 To be able to share carts, as well as access carts shared with them, customers need to authenticate as **Company User Accounts**. Each such account is a member of a certain Business Unit, and carts can be shared only among members of the same Unit. On the other hand, customers have the ability to impersonate as different Company Accounts depending on the job tasks they want to perform. Such accounts can belong to different Business Units, which means that any specific customer can have access to a different set of shared carts depending on the Company Account they impersonate as.
 
 To use a Company Account, a customer needs to retrieve a bearer token for the account. The token is valid for a specific combination of an authenticated user and Company Account. It provides access to:
@@ -119,7 +119,7 @@ Carts created via Glue API are always set as the default carts for the user.
 | Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
 | name | String | v | Sets the cart name.</br>This field can be set only if you are using the multiple carts feature. If you are operating in a single-cart environment, an attempt to set the value will result in an error with the **422 Unprocessable Entry** status code. |
-| priceMode | Enum | v | Sets the price mode to be used for the cart. Possible values:<ul><li>GROSS_MODE - prices after tax;</li><li>NET_MODE - prices before tax.</li></ul>For details, see [Net &amp; Gross Prices](/docs/scos/dev/features/202001.0/price/net-and-gross-prices.html){target="_blank"}. |
+| priceMode | Enum | v | Sets the price mode to be used for the cart. Possible values:<ul><li>GROSS_MODE - prices after tax;</li><li>NET_MODE - prices before tax.</li></ul>For details, see [Net &amp; Gross Prices](/docs/scos/user/features/{{page.version}}/price/net-and-gross-prices.html){target="_blank"}. |
 | currency | String | v | Sets the cart currency. |
 | store | String | v | Sets the name of the store where to create the cart. |
 

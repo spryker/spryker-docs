@@ -8,7 +8,7 @@ redirect_from:
   - /v3/docs/en/content-items-overview
 ---
 
-The **Content Items** feature allows a Back Office user to work on the content and the content placement separately, meaning, you can easily create, handle, and later decide where to insert content in multiple pages or blocks in **Back Office**. Content items can be rendered on the webpage as a widget coupled with a template. See [Content Item Widgets](/docs/scos/dev/features/201907.0/cms/content-item-widgets/content-items-widgets-overview.html) for more details.
+The **Content Items** feature allows a Back Office user to work on the content and the content placement separately, meaning, you can easily create, handle, and later decide where to insert content in multiple pages or blocks in **Back Office**. Content items can be rendered on the webpage as a widget coupled with a template. See [Content Item Widgets](/docs/scos/user/features/{{page.version}}/cms/content-item-widgets/content-items-widgets-overview.html) for more details.
 
 {% info_block infoBox %}
 Keep in mind that a **developer** works on .twig templates, content types, and the relationship between templates and content types, while a **Back Office user** creates and manages content in the Back Office, and then adds it to placeholders of pages and blocks.
@@ -22,7 +22,7 @@ A Back Office user or a content manager can create a new content item, for examp
 * File List 
 
 {% info_block infoBox %}
-See [Content Items Types: Module Relations](/docs/scos/dev/features/201907.0/cms/content-items/content-items-types-module-relations.html
+See [Content Items Types: Module Relations](/docs/scos/user/features/{{page.version}}/cms/content-items/content-items-types-module-relations.html
 {% endinfo_block %} for more information on each type and the module relations.)
 
 Depending on your needs, the **Banner** content item, for example, can be used for displaying a new banner to promote a specific brand or collection on the website. The **Product Set** content item can be added to a landing page and display a product set as a slider or carousel from which your customers can select a product or all products to add them to the cart with one click. Inserting a **File List** content item in any placeholder of a page or block will add a link or icon to download that file.

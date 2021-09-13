@@ -8,7 +8,7 @@ redirect_from:
   - /v6/docs/en/file-details-content-navigationcsv
 ---
 
-This article contains content of the content_navigation.csv file to configure [Content Navigation](/docs/scos/dev/features/202009.0/content-items/content-items-feature-overview.html#content-item) information on your Spryker Demo Shop.
+This article contains content of the content_navigation.csv file to configure [Content Navigation](/docs/scos/user/features/{{page.version}}/content-items/content-items-feature-overview.html#content-item) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields
 These are the header fields to be included in the .csv file:

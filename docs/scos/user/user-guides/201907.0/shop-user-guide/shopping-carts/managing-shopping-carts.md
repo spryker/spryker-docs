@@ -47,7 +47,7 @@ You can share a shopping cart with the company users within your business unit, 
 
 1. Navigate to the **Shopping Carts** page.
 2. Click **Share** in the **Shopping Carts List > Action** column.
-3. On the **Share my cart** page from the drop-down list next to the users you would like to share the cart with, select the sharing access rights: **No access, Read-only, Full Access**. See [Shared Cart Feature Overview](/docs/scos/dev/features/201907.0/shopping-cart/shared-cart/shared-cart-feature-overview.html) for more details on the access rights. 
+3. On the **Share my cart** page from the drop-down list next to the users you would like to share the cart with, select the sharing access rights: **No access, Read-only, Full Access**. See [Shared Cart Feature Overview](/docs/scos/user/features/{{page.version}}/shared-carts-feature-overview.html) for more details on the access rights. 
 ![Share a cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shop+Guide+-+Managing+Shopping+Carts/share-cart-users.png) 
 4. Click **Save**.
 ***
@@ -100,4 +100,4 @@ Internal users are the users that belong to your company account. You can share 
 3. Depending on the level of access you would like to share the cart with, click **Copy** to copy the link. 
 ![Internal users](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shop+Guide+-+Managing+Shopping+Carts/internal-uers-share-link.png) 
 
-To learn more about the differences in the access levels, check [Shared Carts Feature Overview](/docs/scos/dev/features/201907.0/shopping-cart/shared-cart/shared-cart-feature-overview.html).
+To learn more about the differences in the access levels, check [Shared Carts Feature Overview](/docs/scos/user/features/{{page.version}}/shared-carts-feature-overview.html).

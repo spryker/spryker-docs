@@ -8,7 +8,7 @@ redirect_from:
   - /v5/docs/en/shop-guide-creating-a-return
 ---
 
-If you are not satisfied with the order items received from the seller or don’t need the items anymore, and the items are [returnable](/docs/scos/dev/features/202005.0/order-management/return-management/return-management-feature-overview.html) according to the Return Policy, you can return them. 
+If you are not satisfied with the order items received from the seller or don’t need the items anymore, and the items are [returnable](/docs/scos/user/features/{{page.version}}/order-management/return-management/return-management-feature-overview.html) according to the Return Policy, you can return them. 
 
 To return items from your order:
 
@@ -24,8 +24,8 @@ You can also access the *Create Return* page from the *Order Details* page. To a
 3. Select the item(s) you want to return and, optionally, a reason for the return.
 {% info_block warningBox "Note" %}
 
-For a [Configurable Bundle](/docs/scos/dev/features/202005.0/product-information-management/configurable-bundle/configurable-bundle-feature-overview.html), you can’t select to return an entire Configurable Bundle, but you can select to return separate items from it.
-The [Product Bundles](/docs/scos/dev/features/202005.0/product-information-management/product-bundles.html), on the contrary, are handled as one product, so only the whole bundle can be returned. You can not return individual items of a Product Bundle.
+For a [Configurable Bundle](/docs/scos/user/features/{{page.version}}/product-information-management/configurable-bundle/configurable-bundle-feature-overview.html), you can’t select to return an entire Configurable Bundle, but you can select to return separate items from it.
+The [Product Bundles](/docs/scos/user/features/{{page.version}}/product-information-management/product-bundles.html), on the contrary, are handled as one product, so only the whole bundle can be returned. You can not return individual items of a Product Bundle.
 
 {% endinfo_block %}
 

@@ -7,7 +7,7 @@ redirect_from:
   - /v5/docs/en/file-details-product-price-schedulecsv
 ---
 
-This article contains content of the **product_price_schedule.csv** file to configure[ Product Price Schedule](/docs/scos/dev/features/202005.0/price/scheduled-prices/scheduled-prices.html) information on your Spryker Demo Shop.
+This article contains content of the **product_price_schedule.csv** file to configure[ Product Price Schedule](/docs/scos/user/features/{{page.version}}/price/scheduled-prices/scheduled-prices.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:

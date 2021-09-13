@@ -15,6 +15,6 @@ When the customer selects **Add to Wishlist** for the first time and there are n
 The wishlist name can be later changed in the **Wishlist** section. As well as new wishlists can be added in the **Wishlist** section of the customer account.
 ![Named wishlists](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Wishlist/Named+Wishlist/named_wishlist.gif)
 
-For more information about multiple wishlists, see [Multiple Wishlists](/docs/scos/dev/features/201903.0/wishlist/multiple-wishlists.html).
+For more information about multiple wishlists, see [Multiple Wishlists](/docs/scos/user/features/{{page.version}}/wishlist/multiple-wishlists.html).
 
 Only logged in customers can use the Wishlist functionality.

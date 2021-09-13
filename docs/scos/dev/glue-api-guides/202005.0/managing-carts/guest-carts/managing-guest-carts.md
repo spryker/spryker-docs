@@ -115,7 +115,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 
 {% info_block infoBox "Conversion" %}
 
-When defining product amount in sales units, make sure that the correlation between `amount` and `quantity` corresponds to the conversion of the defined sales unit. See [Measurement Units Feature Overview](/docs/scos/dev/features/202005.0/packaging-and-measurement-units/measurement-units/measurement-units-feature-overview.html) to learn more.
+When defining product amount in sales units, make sure that the correlation between `amount` and `quantity` corresponds to the conversion of the defined sales unit. See [Measurement Units Feature Overview](/docs/scos/user/features/{{page.version}}/packaging-and-measurement-units/measurement-units/measurement-units-feature-overview.html) to learn more.
 
 {% endinfo_block %}
 
@@ -1776,7 +1776,7 @@ Guest carts are anonymous as they are not related to any user. If a user registe
 
 To assign a guest cart to a customer, i.e. merge the carts, include the unique identifier associated with the customer in the *X-Anonymous-Customer-Unique-Id* header of the authentication request if it is an existing customer, or request to create a customer account if it is a new one.
 
-Upon login, the behavior depends on whether your project is a single cart or [multiple cart](/docs/scos/dev/features/202005.0/shopping-cart/multiple-carts-per-user/multiple-carts-per-user.html) environment:
+Upon login, the behavior depends on whether your project is a single cart or [multiple cart](/docs/scos/user/features/{{page.version}}multiple-carts-feature-overview.html) environment:
 
 * In a **single cart** environment, the products in the guest cart are added to the customers' own cart;
 * In a **multiple cart** environment, the guest cart is converted to a regular user cart and added to the list of the customers' own carts.

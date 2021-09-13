@@ -8,7 +8,7 @@ redirect_from:
   - /v6/docs/en/building-a-return-management-process-best-practices
 ---
 
-Before you can start accepting returns from Buyers, you need to build the returns management strategy that suits your business the best. This article contains scenarios that can help you choose the most suitable returns workflow and implement it using the Spryker [Return Management](/docs/scos/dev/features/202009.0/return-management/return-management.html) functionality.
+Before you can start accepting returns from Buyers, you need to build the returns management strategy that suits your business the best. This article contains scenarios that can help you choose the most suitable returns workflow and implement it using the Spryker [Return Management](/docs/scos/user/features/{{page.version}}/return-management/return-management.html) functionality.
 
 <a name="scenario1"></a>
 
@@ -37,7 +37,7 @@ This scenario is typical for most B2C models, and its main advantages are:
 
 * Suits perfectly for the 14-days returns.
 * Requires minimum human intervention.
-* Can be implemented with the default Spryker [Return Management](/docs/scos/dev/features/202009.0/return-management/return-management.html) functionality, without extra development effort.
+* Can be implemented with the default Spryker [Return Management](/docs/scos/user/features/{{page.version}}/return-management/return-management.html) functionality, without extra development effort.
 
 <a name="scenario2"></a>
 

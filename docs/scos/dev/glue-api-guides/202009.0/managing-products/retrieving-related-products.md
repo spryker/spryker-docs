@@ -8,9 +8,9 @@ redirect_from:
   - /v6/docs/en/retrieving-related-products
 ---
 
-Using the [Product Relations](/docs/scos/dev/features/202009.0/product-relations/product-relations-feature-overview.html) feature, sellers can define a list of comparable or additional items for each product. You can display such items, also called related products, in search and in the cart together with the products selected by customers.
+Using the [Product Relations](/docs/scos/user/features/{{page.version}}/product-relations/product-relations-feature-overview.html) feature, sellers can define a list of comparable or additional items for each product. You can display such items, also called related products, in search and in the cart together with the products selected by customers.
 
-Only [abstract](https://documentation.spryker.com/v6/docs/products-overview) products support product relations. For more details, see [Product Relations feature overview](/docs/scos/dev/features/202009.0/product-relations/product-relations-feature-overview.html).)
+Only [abstract](https://documentation.spryker.com/v6/docs/products-overview) products support product relations. For more details, see [Product Relations feature overview](/docs/scos/user/features/{{page.version}}/product-relations/product-relations-feature-overview.html).)
 
 The Product Relations API provides REST endpoints to retrieve the related products. Using it, you can:
 

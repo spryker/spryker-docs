@@ -18,7 +18,7 @@ The resources exposed by the API provide access to complete navigation trees onl
 In your development, these resources can help you to retrieve all kinds of navigations available in Spryker and build navigation menus to guide customers through.
 
 {% info_block infoBox "Info" %}
-For more details on managing navigation trees, see [Navigation](/docs/scos/dev/features/201907.0/navigation/navigation.html).
+For more details on managing navigation trees, see [Navigation](/docs/scos/user/features/{{page.version}}/navigation/navigation.html).
 {% endinfo_block %}
 
 ## Installation

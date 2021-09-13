@@ -69,7 +69,7 @@ In the Back Office, you can now define the order in which your images appear. Fo
 
 ![Reorder images](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image10.png) 
 
-**Documentation**: [Product Image Management](/docs/scos/dev/features/{{page.version}}/product/product-feature-overview/product-images-overview.html)
+**Documentation**: [Product Image Management](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/product-images-overview.html)
 ***
 ## CMS
 ### CMS Content Items
@@ -199,7 +199,7 @@ The feature also supports an alternative flow when a customer and salesperson ha
 #### Compatibility Issues:
 Request for Quote v. 2.0.0  does not support bundles
 
-**Documentation**: [Request for Quote](/docs/scos/dev/features/{{page.version}}/quotation-process/quotation-process.html) 
+**Documentation**: [Request for Quote](/docs/scos/user/features/{{page.version}}/quotation-process/quotation-process.html) 
 
 ### Punchout
 This new functionality allows the B2B buyers to access Spryker’s online shop from within their ERP or procurement system.
@@ -235,15 +235,15 @@ Cart in the Preview mode can also be shared with users in your company because i
 
 ![Unique URL for Easy Cart Sharing](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image4.png) 
 
-**Documentation**: [Unique URL per Cart for Easy Sharing](/docs/scos/dev/features/{{page.version}}/resource-sharing-feature-overview.html)
+**Documentation**: [Unique URL per Cart for Easy Sharing](/docs/scos/user/features/{{page.version}}/resource-sharing-feature-overview.html)
 
 ### Other Improvements
 
 * Vault - We introduce the Vault place where you can store valuable information and get it from there by ID in an encrypted form and vice versa
-    **Documentation**: [Vault for Tokens](/docs/scos/dev/features/{{page.version}}/spryker-core/spryker-core-feature-overview/vault-for-tokens-overview.html)
+    **Documentation**: [Vault for Tokens](/docs/scos/user/features/{{page.version}}/spryker-core/spryker-core-feature-overview/vault-for-tokens-overview.html)
 
 * Customer Login by Token - Ability to log in to the Spryker Commerce OS by token
-    **Documentation**: [Customer Login by Token](/docs/scos/dev/features/{{page.version}}/company-account/company-account-feature-overview/customer-login-by-token-overview.html)
+    **Documentation**: [Customer Login by Token](/docs/scos/user/features/{{page.version}}/company-account/company-account-feature-overview/customer-login-by-token-overview.html)
     
 ***
 ## Partner Integrations

@@ -23,7 +23,7 @@ Gift card is a prepaid certificate entitling its owner to use it for the purchas
 
 | Developer | Back Office User |
 | --- | --- |
-| [Gift Cards Purchase and Redeeming](/docs/scos/dev/features/201903.0/gift-cards/gift-card-purchase-and-management/gift-cards-purchase-and-redeeming.html) | Create a Gift Card |
+| [Gift Cards Purchase and Redeeming](/docs/scos/user/features/{{page.version}}/gift-cards/gift-card-purchase-and-management/gift-cards-purchase-and-redeeming.html) | Create a Gift Card |
 | [Enable Gift Cards](/docs/scos/dev/migration-and-integration/201903.0/feature-integration-guides/enabling-gift-cards.html) | Find orders which are paid by Gift Cards |
 |  |Find Gift Cards calculations for an order (full payment, partial payment)|
 ||Track orders which are paid by Gift Cards|

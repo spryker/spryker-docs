@@ -10,7 +10,7 @@ redirect_from:
 
 This article describes how you, as a Buyer, can create and manage wishlists in the Storefront.
 ***
-You can create [multiple wishlists](/docs/scos/dev/features/202001.0/wishlist/multiple-wishlists.html) and save products to them for future purchases. This may be useful when, for example, you do not intend to purchase products at the moment but want to do this later once you return to the online store. Also, you can add to these lists the products you are interested in.
+You can create [multiple wishlists](/docs/scos/user/features/{{page.version}}/wishlist/multiple-wishlists.html) and save products to them for future purchases. This may be useful when, for example, you do not intend to purchase products at the moment but want to do this later once you return to the online store. Also, you can add to these lists the products you are interested in.
 
 In the **Wishlists** section of your customer account, you can perform the following actions:
 

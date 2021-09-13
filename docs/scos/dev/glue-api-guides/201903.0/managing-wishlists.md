@@ -7,7 +7,7 @@ redirect_from:
   - /v2/docs/en/managing-wishlists
 ---
 
-The Wishlists API provides REST access to managing [wishlists](/docs/scos/dev/features/201903.0/wishlist/wishlist.html) of a customer. With the help of the endpoints provided by the API, you can create, list and delete wishlists, as well as manage the items inside them.
+The Wishlists API provides REST access to managing [wishlists](/docs/scos/user/features/{{page.version}}/wishlist/wishlist.html) of a customer. With the help of the endpoints provided by the API, you can create, list and delete wishlists, as well as manage the items inside them.
 
 In your development, these resources can help you to enable complete wishlist functionality for your customers.
 
@@ -16,7 +16,7 @@ Since wishlists are available for registered users only, the endpoints provided 
 {% endinfo_block %}
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Wishlist API Feature Integration](/docs/scos/dev/features/201903.0/wishlist/wishlist.html-api-feature-integration-201903).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Wishlist API Feature Integration](/docs/scos/user/features/{{page.version}}/wishlist/wishlist.html-api-feature-integration-201903).
 
 ## Creating a Wishlist
 To create a wishlist for a registered user, you need to send a POST request to the following endpoint:

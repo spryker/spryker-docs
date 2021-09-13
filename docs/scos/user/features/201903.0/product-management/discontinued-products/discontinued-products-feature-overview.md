@@ -19,7 +19,7 @@ Products are **discontinued** when the manufacturer or a current distributor has
 Discontinued products have a certain period of time when they will still be shown on the website (active_until). After this period ends - the products will become deactivated.
 
 {% info_block warningBox %}
-Only [concrete products](/docs/scos/dev/features/201903.0/product-management/product-abstraction.html#abstract-and-concrete-products--variants-
+Only [concrete products](/docs/scos/user/features/{{page.version}}/product-management/product-abstraction.html#abstract-and-concrete-products--variants-
 {% endinfo_block %} can become discontinued.)
 
 The schema below illustrates the relations between discontinued products, abstract and concrete products:

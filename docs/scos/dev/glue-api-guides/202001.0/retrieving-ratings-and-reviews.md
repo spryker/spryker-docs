@@ -7,7 +7,7 @@ redirect_from:
   - /v4/docs/en/retrieving-ratings-and-reviews
 ---
 
-[Ratings and reviews](/docs/scos/dev/features/202001.0/rating-and-reviews/rating-and-reviews.html) allow customers to share their opinions and experiences about purchases. This enables customers to take meaningful decisions about purchases and increases their trust with the shop.
+[Ratings and reviews](/docs/scos/user/features/{{page.version}}/rating-and-reviews/rating-and-reviews.html) allow customers to share their opinions and experiences about purchases. This enables customers to take meaningful decisions about purchases and increases their trust with the shop.
 
 Glue REST API allows retrieving a list of ratings and reviews for each product, as well as its average rating. This can help frontend developers in building the product page, extending it with the ratings and reviews relevant to each product. Also, the average rating of each product, as well as the number of times it has been reviewed, will be available in all endpoints where abstract and concrete products can be included as a relationship, such as, for example, [/catalog-search](/docs/scos/dev/glue-api-guides/{{page.version}}/catalog-search.html), [/related-products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-related-products.html#getting-related-items-for-an-abstract-product), [/up-selling-products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-related-products.html#getting-up-selling-products-for-a-registered-user-s-cart), [/abstract-alternative-products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-alternative-products.html), etc.
 

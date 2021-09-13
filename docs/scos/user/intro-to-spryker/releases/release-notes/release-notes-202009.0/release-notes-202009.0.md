@@ -57,7 +57,7 @@ When creating a return, a Customer can see all the relevant return information s
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image6.png) 
 
 #### Documentation
-[Quotation Process & RFQ](/docs/scos/dev/features/{{page.version}}/quotation-process/quotation-process.html)
+[Quotation Process & RFQ](/docs/scos/user/features/{{page.version}}/quotation-process/quotation-process.html)
 
 ### Product Relations per Store
 We have enhanced our multi-store feature with a new product management functionality.
@@ -65,7 +65,7 @@ Starting from this release, **Product Relations can be assigned to stores**. You
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image12.gif) 
 
 #### Documentation
-[Product Relations](/docs/scos/dev/features/{{page.version}}/product-relations/product-relations.html)
+[Product Relations](/docs/scos/user/features/{{page.version}}/product-relations/product-relations.html)
 
 ### Product Labels per Store
 We have enhanced the Product Labels feature so that now you can define the stores a product label is displayed in.
@@ -95,7 +95,7 @@ For each email template, there are HTML and text versions available by default. 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image1.png) 
 
 #### Documentation
-[Email as CMS Block](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/email-as-a-cms-block-overview.html)
+[Email as CMS Block](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/email-as-a-cms-block-overview.html)
 
 ### New Navigation for the Back Office
 We have reorganized our Back Office navigation to make it more clear and easier to use.
@@ -107,7 +107,7 @@ Products that have more than one variant do not have the Add to cart button on t
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image4.png) 
 
 #### Documentation
-[Quick Order from the Catalog Page](/docs/scos/dev/features/{{page.version}}/cart/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)
+[Quick Order from the Catalog Page](/docs/scos/user/features/{{page.version}}/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)
 
 ### Double opt-in for Customer Registration
 Spryker now supports a **double opt-in for Customer sign-ups**, that can happen either from the sign-up page or during the checkout process.
@@ -115,13 +115,13 @@ When a Customer signs up, an email with a confirmation link is sent to the provi
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image10.png) 
 
 #### Documentation
-[Customer Registration](/docs/scos/dev/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-registration-overview.html)
+[Customer Registration](/docs/scos/user/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-registration-overview.html)
 
 ### Trigger Forgot Password Emails When Importing Customers 
 Spryker provides you with two new console commands to help migrate existing customers to a Spryker project. When importing new customers into your Spryker project, you can send the *forgot password* email to them so that they can set up the passwords for their accounts.
 
 #### Documentation
-[Password Management](/docs/scos/dev/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/password-management-overview.html)
+[Password Management](/docs/scos/user/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/password-management-overview.html)
 
 ## Order Management Enhancements 
 ### Display State of Order Item
@@ -147,7 +147,7 @@ Spryker now supports **invoice generation** inside the OMS processes. Starting f
 The Order Thresholds feature, in addition to the minimum order threshold, now supports the maximum one. The **maximum order threshold** allows to define an order value that shouldn't be reached for the order to be placed.
 
 #### Documentation
-[Order Thresholds](/docs/scos/dev/features/{{page.version}}/checkout/checkout-feature-overview/order-thresholds.html)
+[Order Thresholds](/docs/scos/user/features/{{page.version}}/checkout/checkout-feature-overview/order-thresholds.html)
 
 ## Data Exchange
 ### Data Import Documentation

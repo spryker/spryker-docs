@@ -7,7 +7,7 @@ redirect_from:
   - /v5/docs/en/file-details-product-quantitycsv
 ---
 
-This article contains content of the **product_quantity.csv** file to configure [Product Quantity](/docs/scos/dev/features/202005.0/product-information-management/product-quantity-restrictions/product-quantity-restrictions.html) Store information on your Spryker Demo Shop.
+This article contains content of the **product_quantity.csv** file to configure [Product Quantity](/docs/scos/user/features/{{page.version}}/product-information-management/product-quantity-restrictions/product-quantity-restrictions.html) Store information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:

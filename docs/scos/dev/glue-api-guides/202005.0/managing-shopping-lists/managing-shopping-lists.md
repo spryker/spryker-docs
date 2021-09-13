@@ -7,7 +7,7 @@ redirect_from:
   - /v5/docs/en/managing-shopping-lists
 ---
 
-With the help of the [Shopping Lists](/docs/scos/dev/features/202005.0/shopping-list/shopping-list.html) feature, company users can manage shopping lists for their company to plan purchasing activities beforehand. Unlike [Wishlists](/docs/scos/dev/features/202005.0/wishlist/wishlist.html), Shopping Lists contain not only a list of items to be purchased but also the quantity of each item.
+With the help of the [Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-list/shopping-list.html) feature, company users can manage shopping lists for their company to plan purchasing activities beforehand. Unlike [Wishlists](/docs/scos/user/features/{{page.version}}/wishlist/wishlist.html), Shopping Lists contain not only a list of items to be purchased but also the quantity of each item.
 
 The endpoints provided by the **Shopping List API** provide full *Shopping List management* functionality via REST requests.
 {% info_block infoBox %}
@@ -112,7 +112,7 @@ Request sample:
 | Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
 | quantity | Ingeger | yes | Quantity of the product to add. |
-| sku | String | yes | SKU of the product to add. Only [concrete products](/docs/scos/dev/features/202005.0/product-information-management/product-abstraction.html) are allowed. |
+| sku | String | yes | SKU of the product to add. Only [concrete products](/docs/scos/user/features/{{page.version}}/product-information-management/product-abstraction.html) are allowed. |
 
 | String parameter | Description | Exemplary values |
 | --- | --- | --- |
@@ -996,7 +996,7 @@ The `concrete-products` resource can be included only together with the `shoppin
 ```
 | Attribute | Type | Required | Description|
 | --- | --- | --- |--- |
-| sku | String | yes |SKU of the product the quantity of which you want to change. Only [concrete products](/docs/scos/dev/features/202005.0/product-information-management/product-abstraction.html) are allowed. |
+| sku | String | yes |SKU of the product the quantity of which you want to change. Only [concrete products](/docs/scos/user/features/{{page.version}}/product-information-management/product-abstraction.html) are allowed. |
 | quantity | Integer | yes |New quantity of the product. |
 
 ### Response

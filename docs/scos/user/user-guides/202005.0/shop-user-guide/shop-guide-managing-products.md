@@ -47,7 +47,7 @@ On the product detail page, you can view some general product information that i
 | 4 | **Product price (default and original)** | *Default* price is the actual current price in the currency you’ve selected, while an *original* price (strikeout) is the price that has been applied before the default price is used due to some product promotion. |
 | 5 | **Ratings** | Product star rating. |
 | 6 | **Product group** | Set of products grouped by color. |
-| 7 | **Product options** | Additional items you can purchase along with the product. The examples can be gift wrapping, warranty, and insurance. See [Product Options Overview](/docs/scos/dev/features/202005.0/product-information-management/product-options/product-options-overview.html#product-options-overview) for more information. |
+| 7 | **Product options** | Additional items you can purchase along with the product. The examples can be gift wrapping, warranty, and insurance. See [Product Options Overview](/docs/scos/user/features/{{page.version}}/product-information-management/product-options/product-options-overview.html#product-options-overview) for more information. |
 | 8 | **Add to Cart section** | Section you can use to add a product to a cart. See the Adding a Product to Cart section for more details. |
 | 9 | **Add to Shopping list section** | Section you can use to add a product to a shopping list. See the Adding a Product to Shopping List section for more details. |
 | 10 | **Add to Wishlist section** | Section you can use to add a product to a wishlist. See the Adding a Product to Wishlist section for more details. |
@@ -104,7 +104,7 @@ The shopping lists are available only for **B2B** shop users.
 
 {% endinfo_block %}
 
-You can order frequently bought products faster by adding the products to a [shopping list](/docs/scos/dev/features/202005.0/shopping-list/multiple-and-shared-shopping-lists/multiple-and-shared-shopping-lists-overview.html).
+You can order frequently bought products faster by adding the products to a [shopping list](/docs/scos/user/features/{{page.version}}/shopping-list/multiple-and-shared-shopping-lists/multiple-and-shared-shopping-lists-overview.html).
 
 **To add a product to the shopping list:**
 
@@ -118,7 +118,7 @@ You can order frequently bought products faster by adding the products to a [sho
 If you have no shopping lists created in your account, a drop-down list with shopping lists will be unavailable. Clicking **Add to Shopping list** will create a new shopping list with the default name ‘Shopping List’ and add the product to it.
 ***
 ## Adding a Product Review
-With the [Product Reviews](/docs/scos/dev/features/202005.0/product-information-management/product-reviews.html) feature, you can share your experience or feedback about using the product.
+With the [Product Reviews](/docs/scos/user/features/{{page.version}}/product-information-management/product-reviews.html) feature, you can share your experience or feedback about using the product.
 
 **To add a review:**
 
@@ -153,7 +153,7 @@ The wishlists are available only for logged in **B2C** shop users.
 
 {% endinfo_block %}
 
-If you want to purchase later the items you are interested in, you can add them to a [wishlist](/docs/scos/dev/features/202005.0/wishlist/multiple-wishlists.html).
+If you want to purchase later the items you are interested in, you can add them to a [wishlist](/docs/scos/user/features/{{page.version}}/wishlist/multiple-wishlists.html).
 
 To add a product to the wishlist, click **Add to Wishlist**. This will add the product to a newly created wishlist with the default name ‘My wishlist’ in your account and redirect you to the **Customer Account > Wishlist** section.
 

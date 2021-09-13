@@ -62,7 +62,7 @@ In addition, we are introducing a set of new features for CMS blocks:
 | <ul><li>[Cms 6.0.0](https://github.com/spryker/Cms/releases/tag/6.0.0)</li><li>[CmsBlock 1.0.0](https://github.com/spryker/cms-block/releases/tag/1.0.0)</li><li>[CmsBlockCategoryConnector 1.0.0](https://github.com/spryker/cms-block-category-connector/releases/tag/1.0.0)</li><li>[CmsBlockCollector 1.0.0](https://github.com/spryker/cms-block-collector/releases/tag/1.0.0)</li><li>[CmsBlockGui 1.0.0](https://github.com/spryker/CmsBlockGui/releases/tag/1.0.0)</li><li>[CmsBlockProductConnector 1.0.0](https://github.com/spryker/cms-block-product-connector/releases/tag/1.0.0)</li><li>[CmsGui 4.0.0](https://github.com/spryker/cms-gui/releases/tag/4.0.0)</li></ul> | <ul><li>[Product 5.2.0](https://github.com/spryker/Product/releases/tag/5.2.0)</li><li>[ProductManagement 0.7.0](https://github.com/spryker/product-management/releases/tag/0.7.0)</li><li>[Twig 3.2.0](https://github.com/spryker/Twig/releases/tag/3.2.0)</li></ul> | <ul><li>[CmsCollector 1.0.1](https://github.com/spryker/cms-collector/releases/tag/1.0.1)</li><li>[CmsUserConnector 1.0.1](https://github.com/spryker/cms-user-connector/releases/tag/1.0.1)</li><li>[Glossary 3.1.4](https://github.com/spryker/Glossary/releases/tag/3.1.4)</li><li>[NavigationGui 1.0.3](https://github.com/spryker/navigation-gui/releases/tag/1.0.3)</li><li>[ProductRelationCollector 1.1.1](https://github.com/spryker/product-relation-collector/releases/tag/1.1.1)</li></ul> |
 
 **Documentation**
-For relevant documentation, see [CMS Block](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/cms-blocks-overview.html).
+For relevant documentation, see [CMS Block](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/cms-blocks-overview.html).
 
 For detailed migration guides, see [CMS Migration Guide](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-cms.html), [CMS Block Migration Console](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-cms.html-block-category-connector-console)
 
@@ -131,7 +131,7 @@ With this release, we are now introducing a new connector module to handle disco
 | [ProductLabelDiscountConnector 1.0.0](https://github.com/spryker/product-label-discount-connector/releases/tag/1.0.0) | <ul><li>[Discount 4.2.0](https://github.com/spryker/Discount/releases/tag/4.2.0)</li><li>[ProductLabel 1.1.0](https://github.com/spryker/product-label/releases/tag/1.1.0)</li></ul> | [Discount 4.2.1](https://github.com/spryker/Discount/releases/tag/4.2.1) |
 
 **Documentation**
-For relevant documentation, see [Product Label Module Guide](https://documentation.spryker.com/2021080/docs/product-label), [Discount Module Guide](/docs/scos/dev/features/{{page.version}}/promotions-and-discounts/promotions-and-discounts.html)
+For relevant documentation, see [Product Label Module Guide](https://documentation.spryker.com/2021080/docs/product-label), [Discount Module Guide](/docs/scos/user/features/{{page.version}}/promotions-and-discounts/promotions-and-discounts.html)
 
 **Migration Guides**
 To upgrade, follow the steps described below:

@@ -93,7 +93,7 @@ On the page, you can do the following:
 
 {% info_block warningBox "Dynamic product labels" %}
 
-Products for the [dynamic product labels](/docs/scos/dev/features/{{page.version}}/product-labels-feature-overview.html#dynamic-product-label) (like *New*, or *Sale*) are applied dynamically based on the defined rules. There is no way to apply products manually.
+Products for the [dynamic product labels](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html#dynamic-product-label) (like *New*, or *Sale*) are applied dynamically based on the defined rules. There is no way to apply products manually.
 
 {% endinfo_block %}
 

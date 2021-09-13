@@ -8,7 +8,7 @@ redirect_from:
   - /v4/docs/en/retrieving-product-labels
 ---
 
-[Product labels](/docs/scos/dev/features/202001.0/product-information-management/dynamic-product-labels.html) are used to draw your customers' attention to some specific products. Each of them has a name, a priority, and a validity period. The Product Labels API provides endpoints for getting labels via the REST HTTP requests.
+[Product labels](/docs/scos/user/features/{{page.version}}/product-information-management/dynamic-product-labels.html) are used to draw your customers' attention to some specific products. Each of them has a name, a priority, and a validity period. The Product Labels API provides endpoints for getting labels via the REST HTTP requests.
 
 {% info_block warningBox "Note" %}
 Product labels are available only for abstract products.

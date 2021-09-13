@@ -7,7 +7,7 @@ redirect_from:
   - /v5/docs/en/file-details-navigationcsv
 ---
 
-This article contains content of the **navigation.csv** file to configure [Navigation](/docs/scos/dev/features/202005.0/navigation/navigation/navigation-feature-overview.html) information on your Spryker Demo Shop.
+This article contains content of the **navigation.csv** file to configure [Navigation](/docs/scos/user/features/{{page.version}}/navigation/navigation/navigation-feature-overview.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:

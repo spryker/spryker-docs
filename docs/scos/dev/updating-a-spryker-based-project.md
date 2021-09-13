@@ -258,7 +258,7 @@ At some point, you will need to add new or update the existing features for your
 {% info_block infoBox "Info" %}
 
 You can learn about a new Spryker feature from the [Release Notes](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html). We recommend [subscribing to our release mail](/docs/scos/user/intro-to-spryker/releases/releases.html) in order not to miss a new release announcement.
-A complete list of all Spryker features can be found in the [Features](/docs/scos/dev/features/{{site.version}}/overview-of-the-feature-guides.html) section. This section contains general descriptions of the features and links to their [Integration Guides](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/about-integration-guides.html) that you will use to install or update the features.  
+A complete list of all Spryker features can be found in the [Features](/docs/scos/user/features/{{site.version}}/overview-of-the-feature-guides.html) section. This section contains general descriptions of the features and links to their [Integration Guides](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/about-integration-guides.html) that you will use to install or update the features.  
 
 {% endinfo_block %}
 

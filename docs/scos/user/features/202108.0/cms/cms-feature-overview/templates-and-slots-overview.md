@@ -137,7 +137,7 @@ CMS Block is a separate entity with a dedicated section in the Back Office. See 
 </details>
 
 From the perspective of templates and slots, a content item always comes as a part of CMS block. That's why there is no place to manage it in the **Slots** section.
-See [Content Items](/docs/scos/dev/features/{{page.version}}/content-items/content-items-feature-overview.html) to learn what a content manager can do with content items in the Back Office > **Content Management** > **Content Items** section.
+See [Content Items](/docs/scos/user/features/{{page.version}}/content-items/content-items-feature-overview.html) to learn what a content manager can do with content items in the Back Office > **Content Management** > **Content Items** section.
 
 ### <a id="applying-templates-with-slots"></a>Applying Templates with slots
 

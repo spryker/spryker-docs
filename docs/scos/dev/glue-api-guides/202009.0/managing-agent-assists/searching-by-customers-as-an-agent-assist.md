@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 
-Search by customers to find out information about them. This endpoint is mostly used by [agent assists](/docs/scos/dev/features/202009.0/agent-assist/agent-assist-feature-overview.html) to find out the customer reference needed to [impersonate a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/impersonating-customers-as-an-agent-assist.html#impersonate-a-customer).
+Search by customers to find out information about them. This endpoint is mostly used by [agent assists](/docs/scos/user/features/{{page.version}}/agent-assist/agent-assist-feature-overview.html) to find out the customer reference needed to [impersonate a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/impersonating-customers-as-an-agent-assist.html#impersonate-a-customer).
 
 ## Installation
 

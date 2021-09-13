@@ -24,7 +24,7 @@ To create a content item:
     * File List
 
 {% info_block infoBox %}
-See [Content Items Types: Module Relations](/docs/scos/dev/features/201907.0/cms/content-items/content-items-types-module-relations.html
+See [Content Items Types: Module Relations](/docs/scos/user/features/{{page.version}}/cms/content-items/content-items-types-module-relations.html
 {% endinfo_block %} to learn more about types of content items.)
 
 2. Follow the steps described below to create a specific content item type.

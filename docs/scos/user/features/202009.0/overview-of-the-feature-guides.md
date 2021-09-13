@@ -21,7 +21,7 @@ In the feature documentation, you will find the following information:
 
 {% info_block infoBox "Reference documenatation" %}
 
-The documentation in the *Features* section provides reference information that should not be used as guidelines. If you want to learn how to use or install a feature, you can find all the guides related to a feature on its summary page, like [Content items](/docs/scos/dev/features/202009.0/content-items/content-items.html).
+The documentation in the *Features* section provides reference information that should not be used as guidelines. If you want to learn how to use or install a feature, you can find all the guides related to a feature on its summary page, like [Content items](/docs/scos/user/features/{{page.version}}/content-items/content-items.html).
 
 Or, you can go directly to the following guides:
 

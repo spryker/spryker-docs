@@ -124,7 +124,7 @@ A developer can do the following:
 
 ## Store Relation
 
-A product catalog manager can define the [stores](/docs/scos/dev/features/202005.0/internationalization/multiple-stores.html) each product relation is displayed in. 
+A product catalog manager can define the [stores](/docs/scos/user/features/{{page.version}}/internationalization/multiple-stores.html) each product relation is displayed in. 
 
 If no store relation is defined for a product relation, it is not displayed on Storefront.
 

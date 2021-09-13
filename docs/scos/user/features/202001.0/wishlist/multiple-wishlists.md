@@ -10,7 +10,7 @@ redirect_from:
 
 Help your customers track and save items for later purchase through multiple Wishlists, which are connected to the users' accounts.
 
-Customers can create one or multiple wishlists with [different names](/docs/scos/dev/features/202001.0/wishlist/named-wishlists.html), add products to them and [transfer wishlists to carts](/docs/scos/dev/features/202001.0/wishlist/convert-wishlist-to-cart.html) (either the entire list, or a specific item from the list)
+Customers can create one or multiple wishlists with [different names](/docs/scos/user/features/{{page.version}}/wishlist/named-wishlists.html), add products to them and [transfer wishlists to carts](/docs/scos/user/features/{{page.version}}/wishlist/convert-wishlist-to-cart.html) (either the entire list, or a specific item from the list)
 
 Customers can manage their wishlists in the **Wishlist** section of the customer account.
 

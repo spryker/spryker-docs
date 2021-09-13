@@ -6,6 +6,8 @@ originalArticleId: 4789c952-b8e3-4081-8580-8a6586a7048c
 redirect_from:
   - /v1/docs/promotions-discount
   - /v1/docs/en/promotions-discount
+  - /v1/docs/cart-rules-discounts
+  - /v1/docs/en/cart-rules-discounts
 ---
 
 <div class='feature-text'>

@@ -22,7 +22,7 @@ A delivery method is described by :
 * availability (when is the shipment method available?)
 
 {% info_block errorBox "Important" %}
-Each shipment method has its own specificity, so these three aspects must be configured (this is done through [plugins](/docs/scos/dev/features/201903.0/shipment/shipment-method-plugins.html).
+Each shipment method has its own specificity, so these three aspects must be configured (this is done through [plugins](/docs/scos/user/features/{{page.version}}/shipment/shipment-method-plugins.html).
 {% endinfo_block %})
 
 **To create a new shipment method:**

@@ -11,7 +11,7 @@ For the new customers registration in a Spryker shop, double opt-in is used. The
 
 {% info_block infoBox "Info" %}
 
-Customers must always verify their email addresses, irrespective of the fact how they got registered: [by themselves on the Storefront](/docs/scos/dev/features/202009.0/customer-account-management/customer-account-management-feature-overview/customer-registration-overview.html), [by a Back Office user in the Back Office](/docs/scos/user/user-guides/202009.0/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html#creating-a-customer), or [via the Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer).
+Customers must always verify their email addresses, irrespective of the fact how they got registered: [by themselves on the Storefront](/docs/scos/user/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-registration-overview.html), [by a Back Office user in the Back Office](/docs/scos/user/user-guides/202009.0/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html#creating-a-customer), or [via the Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer).
 
 {% endinfo_block %}
 
@@ -29,7 +29,7 @@ The *regular customer registration* implies registration triggered from the regi
 
 2. The customer clicks on the verification link in the email and turns out on a login page with the message saying that the account is verified.
 
-*Checkout customer registration* implies that customer registers during the checkout. This means that the customer puts products to cart as a guest user, and at the [Login step of the checkout](/docs/scos/dev/features/202009.0/checkout/checkout-feature-overview/multi-step-checkout.html), chooses to sign up. The registration flow is then the same as for the regular registration.
+*Checkout customer registration* implies that customer registers during the checkout. This means that the customer puts products to cart as a guest user, and at the [Login step of the checkout](/docs/scos/user/features/{{page.version}}/checkout/checkout-feature-overview/multi-step-checkout.html), chooses to sign up. The registration flow is then the same as for the regular registration.
 
 {% info_block infoBox "Info" %}
 

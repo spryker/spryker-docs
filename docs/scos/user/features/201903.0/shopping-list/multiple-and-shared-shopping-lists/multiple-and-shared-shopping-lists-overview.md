@@ -14,7 +14,7 @@ Shopping list is a list of the items that shoppers buy or plan to buy frequently
 
 There are two ways to create a shopping list:
 
-* through a [shopping list widget](/docs/scos/dev/features/201903.0/shopping-list/shopping-list-widget/shopping-list-widget.html) in the header of site
+* through a [shopping list widget](/docs/scos/user/features/{{page.version}}/shopping-list/shopping-list-widget/shopping-list-widget.html) in the header of site
 * from *Shopping Lists* page in *My Account* menu
 
 New items are added to shopping lists by clicking **Add to Shopping List** on the product details page.
@@ -31,7 +31,7 @@ The table with shopping lists shows details for each of the lists, including:
 
 * Name of shopping list owner, i.e. person who created the shopping list
 * Creation date
-* Possible actions to manage shopping lists: [edit](#edit), [print](/docs/scos/dev/features/201903.0/shopping-list/printing-a-shopping-list/printing-a-shopping-list.html), [delete](#deleted), [share](#share), [dismiss](#dismiss) (for shared shopping lists)
+* Possible actions to manage shopping lists: [edit](#edit), [print](/docs/scos/user/features/{{page.version}}/shopping-list/printing-a-shopping-list/printing-a-shopping-list.html), [delete](#deleted), [share](#share), [dismiss](#dismiss) (for shared shopping lists)
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/lists-table.png) 
 
@@ -42,7 +42,7 @@ When clicking **Edit**<a name="edit"></a> for a shopping list, the customer is t
 * Remove shopping list items
 * View shopping list access rights granted to them
 * Change quantity of items in the shopping list
-* Add comments to items (check [Shopping list notes](/docs/scos/dev/features/201903.0/shopping-list/shopping-list-notes/shopping-list-notes.html) for more details)
+* Add comments to items (check [Shopping list notes](/docs/scos/user/features/{{page.version}}/shopping-list/shopping-list-notes/shopping-list-notes.html) for more details)
 * [Delete](#deleted) the shopping list
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/edit-shopping-list.png) 
@@ -76,7 +76,7 @@ There are three types of shopping list access rights that can be granted
 * SKU
 * Product attribute
 * Product options 
-* Product comments (see [Shopping List Notes](/docs/scos/dev/features/201903.0/shopping-list/shopping-list-notes/shopping-list-notes.html) for more details)
+* Product comments (see [Shopping List Notes](/docs/scos/user/features/{{page.version}}/shopping-list/shopping-list-notes/shopping-list-notes.html) for more details)
 * Quantity
 * Item price
 * Availability
@@ -88,7 +88,7 @@ Alternative products are not shown for discontinued products, since they can not
 
 2. **Changing quantity of items for adding to cart**: On the *Shopping List View* page, the user can change the item quantity to be added to cart
 
-3. **Printing shopping list**: Check [Printing Shopping list](/docs/scos/dev/features/201903.0/shopping-list/printing-a-shopping-list/printing-a-shopping-list.html) to learn how it works
+3. **Printing shopping list**: Check [Printing Shopping list](/docs/scos/user/features/{{page.version}}/shopping-list/printing-a-shopping-list/printing-a-shopping-list.html) to learn how it works
 
 4. **Adding shopping list items to cart**: The user can select the necessary which are available and add them to cart
 
@@ -105,7 +105,7 @@ Alternative products are not shown for discontinued products, since they can not
   - SKU
   - Product attribute
   - Product options 
-  - Product notes (see [Shopping List Notes](/docs/scos/dev/features/201903.0/shopping-list/shopping-list-notes/shopping-list-notes.html) for more details)
+  - Product notes (see [Shopping List Notes](/docs/scos/user/features/{{page.version}}/shopping-list/shopping-list-notes/shopping-list-notes.html) for more details)
   - Quantity
   - Item price
   - Availability
@@ -115,7 +115,7 @@ Alternative products are not shown for discontinued products, since they can not
 Besides other products, user with *Full access* rights is allowed to see  alternatives for discontinued items, which can be added to the shopping list.
 {% endinfo_block %}
 2. **Changing quantity of items for adding to cart**: On the *Shopping List View* page, user can change the item quantity to be added to cart
-3. **Printing shopping list**: See [Printing a Shopping List](/docs/scos/dev/features/201903.0/shopping-list/printing-a-shopping-list/printing-a-shopping-list.html) to learn how it works
+3. **Printing shopping list**: See [Printing a Shopping List](/docs/scos/user/features/{{page.version}}/shopping-list/printing-a-shopping-list/printing-a-shopping-list.html) to learn how it works
 4. **Editing shopping list**: Having clicked **Edit**, the user is taken to *Edit Shopping list* page
 5. **Changing quantity for changing it for shopping list**: The amount of items in the shopping list can be changed on *Edit Shopping list* page
 6. **Sharing shopping list**: The shopping list can be shared by clicking *Share* button or *Shared with* link

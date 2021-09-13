@@ -25,7 +25,7 @@ Only [active](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guid
 <a name="prerequisites"></a>
 {% info_block warningBox "Prerequisites" %}
 
-To log in with a Back Office user account, you should have the account preliminary created either [by the existing Back Office user](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users/roles-groups-and-users/managing-users.html#creating-users) or [programmatically by a developer](/docs/scos/dev/features/{{page.version}}/spryker-core-back-office/spryker-core-back-office-feature-overview/users-and-rights-overview.html#add-acl).
+To log in with a Back Office user account, you should have the account preliminary created either [by the existing Back Office user](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users/roles-groups-and-users/managing-users.html#creating-users) or [programmatically by a developer](/docs/scos/user/features/{{page.version}}/spryker-core-back-office/spryker-core-back-office-feature-overview/users-and-rights-overview.html#add-acl).
 
 {% endinfo_block %}
 

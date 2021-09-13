@@ -27,9 +27,9 @@ A couple of examples which shows how a payment is integrated into the system. Th
 
 * how to integrate forms into Yves checkout
 * how to add PaymentMethodHandler
-* how to add a state machine, commands and conditions to the [Oms module](/docs/scos/dev/features/201903.0/order-management/oms-order-management-system-matrix.html)
+* how to add a state machine, commands and conditions to the [Oms module](/docs/scos/user/features/{{page.version}}/order-management/oms-order-management-system-matrix.html)
 * how to add CheckoutPlugins to the Payment module
-* how to handle refunds with the [Refund module](/docs/scos/dev/features/201903.0/payment/refund.html)
+* how to handle refunds with the [Refund module](/docs/scos/user/features/{{page.version}}/payment/refund.html)
 
 ## Refunds
 Refunds mostly triggered by a state machine command, this module shows how that could look like. Look into the RefundPlugin. This command can be triggered from Zed’s order detail page when a order item has the state returned.

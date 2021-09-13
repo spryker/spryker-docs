@@ -54,7 +54,7 @@ entries:
 
           - title: Marketplace Inventory Management feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-inventory-management-feature-walkthrough.html
-          
+
           - title: Marketplace Order Management feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough.html
 
@@ -75,6 +75,16 @@ entries:
 
           - title: Marketplace Wishlist feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-wishlist-feature-walkthrough.html
+
+          - title: Persistence ACL feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html
+            nested:
+              - title: Configuration
+                url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/configuration.html
+              - title: Rules and scopes
+                url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/rules-and-scopes.html
+              - title: Execution flow
+                url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/execution-flow.html
 
       - title: Feature integration guides
         nested:

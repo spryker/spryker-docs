@@ -73,7 +73,7 @@ The _Edit shopping list_ page opens where you can:
 ![Quick add to a shopping list](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Lists/quick-add-to-shopping-list-window.png) 
 
 {% info_block warningBox %}
-To be able to search for products, make sure that [Search Widget for Concrete Products](/docs/scos/dev/features/201907.0/search-and-filter/search-widget-for-concrete-products/search-widget-for-concrete-products-overview.html
+To be able to search for products, make sure that [Search Widget for Concrete Products](/docs/scos/user/features/{{page.version}}/search-and-filter/search-widget-for-concrete-products/search-widget-for-concrete-products-overview.html
 {% endinfo_block %} feature is [integrated](/docs/scos/user/user-guides/201907.0/shop-user-guide/shop-guide-shopping-lists.html) into your project.)
 
 * View the shopping list owner and access rights.
@@ -83,7 +83,7 @@ To be able to search for products, make sure that [Search Widget for Concrete Pr
 * Change the product item quantity using minus and plus buttons.
 ![View details](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Lists/view-details.png) 
 
-* Add a note to the item. To save the note, click **Save**. See [Shopping List Notes Feature Overview](/docs/scos/dev/features/201907.0/shopping-list/shopping-list-notes/shopping-list-notes-feature-overview.html) for more details.
+* Add a note to the item. To save the note, click **Save**. See [Shopping List Notes Feature Overview](/docs/scos/user/features/{{page.version}}/shopping-list/shopping-list-notes/shopping-list-notes-feature-overview.html) for more details.
 
 * Select the warranty option from the drop-down list. 
 ![Warranty options](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Lists/warranty-options.png) 
@@ -111,7 +111,7 @@ To share a shopping list:
 2. From the **drop-down list** next to the business unit or customer you want to share a shopping list with, select the appropriate access rights level.
 
 {% info_block infoBox %}
-See [Permissions Management for Shared Shopping Lists](/docs/scos/dev/features/201907.0/shopping-list/printing-a-shopping-list/printing-a-shopping-list.html
+See [Permissions Management for Shared Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-list/printing-a-shopping-list/printing-a-shopping-list.html
 {% endinfo_block %} to learn more about types of shopping list access rights.)
 ![Share page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Lists/share-page.png) 
 

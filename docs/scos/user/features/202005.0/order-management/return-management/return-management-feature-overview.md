@@ -60,8 +60,8 @@ Buyers can return entire orders or individual sales order items as soon as they 
 
 {% info_block warningBox "Note" %}
 
-For a [Configurable Bundle](/docs/scos/dev/features/202005.0/product-information-management/configurable-bundle/configurable-bundle.html), you can’t select to return an entire Configurable Bundle, but you can select to return separate items from it.
-The [Product Bundles](/docs/scos/dev/features/202005.0/product-information-management/product-bundles.html), on the contrary, are handled as one product, so only the whole bundle can be returned. You can not return individual items of a Product Bundle.
+For a [Configurable Bundle](/docs/scos/user/features/{{page.version}}/product-information-management/configurable-bundle/configurable-bundle.html), you can’t select to return an entire Configurable Bundle, but you can select to return separate items from it.
+The [Product Bundles](/docs/scos/user/features/{{page.version}}/product-information-management/product-bundles.html), on the contrary, are handled as one product, so only the whole bundle can be returned. You can not return individual items of a Product Bundle.
 
 {% endinfo_block %}
 

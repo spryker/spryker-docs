@@ -10,11 +10,11 @@ redirect_from:
 
 The *Seach and filter* functionality allows you to control search and filtering preferences. In includes the following features: 
 
-* The default [Search](/docs/scos/dev/features/202009.0/search-and-filter/search.html) feature that you can customize as you need.
-* [Search and widget for concrete products](/docs/scos/dev/features/202009.0/search-and-filter/search.html-widget-for-concrete-products) allowing the buyers to quickly find the concrete products.
-* [CMS pages in search results](/docs/scos/dev/features/202009.0/cms/cms-feature-overview/cms-pages-in-search-results.html) allowing the buyers to search CMS pages content.
-* [Filter preferences](/docs/scos/dev/features/202009.0/category-management/category-management-feature-overview.html) to set up filters for the Storefront.
-* [Category filtrers](/docs/scos/dev/features/202009.0/search-and-filter/category-filters.html) allowing you to add filters to individual categories.
+* The default [Search](/docs/scos/user/features/{{page.version}}/search-and-filter/search.html) feature that you can customize as you need.
+* [Search and widget for concrete products](/docs/scos/user/features/{{page.version}}/search-and-filter/search.html-widget-for-concrete-products) allowing the buyers to quickly find the concrete products.
+* [CMS pages in search results](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/cms-pages-in-search-results.html) allowing the buyers to search CMS pages content.
+* [Filter preferences](/docs/scos/user/features/{{page.version}}/category-management/category-management-feature-overview.html) to set up filters for the Storefront.
+* [Category filtrers](/docs/scos/user/features/{{page.version}}/search-and-filter/category-filters.html) allowing you to add filters to individual categories.
 
 
 Check out the [Search features in Spryker video](https://training.spryker.com/pages/spryker-tv?wchannelid=papy2tx2f6&wmediaid=u30c0bmd1m) for a quick overview of the ths Spryker search capability.

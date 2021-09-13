@@ -8,7 +8,7 @@ redirect_from:
   - /v5/docs/en/retrieving-measurement-units
 ---
 
-The Measurement Units API together with the [Measurement Units](/docs/scos/dev/features/202005.0/packaging-and-measurement-units/measurement-units/measurement-units-feature-overview.html) feature allows selling products in any measurement units configured in your shop. 
+The Measurement Units API together with the [Measurement Units](/docs/scos/user/features/{{page.version}}/packaging-and-measurement-units/measurement-units/measurement-units-feature-overview.html) feature allows selling products in any measurement units configured in your shop. 
 
 ## Installation 
 

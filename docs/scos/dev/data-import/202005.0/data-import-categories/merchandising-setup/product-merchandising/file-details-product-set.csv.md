@@ -7,7 +7,7 @@ redirect_from:
   - /v5/docs/en/file-details-product-setcsv
 ---
 
-This article contains content of the **product_set.csv** file to configure [Product Set](/docs/scos/dev/features/202005.0/product-information-management/product-set.html) information on your Spryker Demo Shop.
+This article contains content of the **product_set.csv** file to configure [Product Set](/docs/scos/user/features/{{page.version}}/product-information-management/product-set.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:

@@ -7,7 +7,7 @@ redirect_from:
   - /v5/docs/en/file-details-categorycsv
 ---
 
-This article contains content of the **category.csv** file to configure [Category](/docs/scos/dev/features/202005.0/catalog-management/category-management/category-management.html) information on your Spryker Demo Shop.
+This article contains content of the **category.csv** file to configure [Category](/docs/scos/user/features/{{page.version}}/catalog-management/category-management/category-management.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 

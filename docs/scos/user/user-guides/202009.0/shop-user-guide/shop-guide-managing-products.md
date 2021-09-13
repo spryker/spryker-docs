@@ -47,7 +47,7 @@ On the product detail page, you can view some general product information that i
 | 4 | **Product price (default and original)** | *Default* price is the actual current price in the currency you’ve selected, while an *original* price (strikeout) is the price that has been applied before the default price is used due to some product promotion. |
 | 5 | **Ratings** | Product star rating. |
 | 6 | **Product group** | Set of products grouped by color. |
-| 7 | **Product options** | Additional items you can purchase along with the product. The examples can be gift wrapping, warranty, and insurance. See [Product Options Overview](/docs/scos/dev/features/202009.0/product-options/product-options-feature-overview.html#product-options-overview) for more information. |
+| 7 | **Product options** | Additional items you can purchase along with the product. The examples can be gift wrapping, warranty, and insurance. See [Product Options Overview](/docs/scos/user/features/{{page.version}}/product-options/product-options-feature-overview.html#product-options-overview) for more information. |
 | 8 | **Add to Cart section** | Section you can use to add a product to a cart. See the Adding a Product to Cart section for more details. |
 | 9 | **Add to Shopping list section** | Section you can use to add a product to a shopping list. See the Adding a Product to Shopping List section for more details. |
 | 10 | **Add to Wishlist section** | Section you can use to add a product to a wishlist. See the Adding a Product to Wishlist section for more details. |
@@ -92,7 +92,7 @@ You have the following options to select the shopping cart:
 1. (Optional) Select the product options from the drop-down list.
 2. Specify the quantity of the product you want to purchase. By default, the quantity equals **1**.
 3. (Optional) Clear the **Add as separate item** checkbox if you do not want to add this product as a separate item to the order. By default, this checkbox is selected.
-4. To complete the operation, click **Add to Cart**. The items will be added to the selected (active) shopping cart. See [Shop Guide - Checkout](/docs/scos/dev/features/202009.0/checkout/checkout-feature-overview/multi-step-checkout.html) to learn more about how to proceed with the order.
+4. To complete the operation, click **Add to Cart**. The items will be added to the selected (active) shopping cart. See [Shop Guide - Checkout](/docs/scos/user/features/{{page.version}}/checkout/checkout-feature-overview/multi-step-checkout.html) to learn more about how to proceed with the order.
 
 ![Add to cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Managing+Products/add-to-cart-howto.png) 
 ***
@@ -109,7 +109,7 @@ You can order frequently bought products faster by adding the products to a [sho
 **To add a product to the shopping list:**
 
 1. From the drop-down list, select the shopping list to which you want to add the product.
-2. Specify the quantity of the product and click **Add to Shopping list**. The item will be added to the shopping list you’ve selected. For more information on managing shopping lists, see [Shop Guide - Shopping Lists](/docs/scos/dev/features/202009.0/shopping-list/multiple-and-shared-shopping-lists/multiple-and-shared-shopping-lists-overview.html#multiple-and-shared-shopping-lists-on-the-storefront).
+2. Specify the quantity of the product and click **Add to Shopping list**. The item will be added to the shopping list you’ve selected. For more information on managing shopping lists, see [Shop Guide - Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-list/multiple-and-shared-shopping-lists/multiple-and-shared-shopping-lists-overview.html#multiple-and-shared-shopping-lists-on-the-storefront).
 
 ![Add to shopping list](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Managing+Products/add-to-shopping-list-howto.png) 
 
@@ -153,7 +153,7 @@ The wishlists are available only for logged in **B2C** shop users.
 
 {% endinfo_block %}
 
-If you want to purchase later the items you are interested in, you can add them to a [wishlist](/docs/scos/dev/features/202009.0/wishlist/wishlist-feature-overview.html).
+If you want to purchase later the items you are interested in, you can add them to a [wishlist](/docs/scos/user/features/{{page.version}}/wishlist/wishlist-feature-overview.html).
 
 To add a product to the wishlist, click **Add to Wishlist**. This will add the product to a newly created wishlist with the default name ‘My wishlist’ in your account and redirect you to the **Customer Account > Wishlist** section.
 
@@ -164,8 +164,8 @@ If you have several wishlists in your account, then first, select the wishlist t
 
 **What’s next?**
 
-After you added the product to the cart, you can proceed with the checkout. For more information, see [Shop Guide - Checkout](/docs/scos/dev/features/202009.0/checkout/checkout-feature-overview/multi-step-checkout.html#shop-guide---checkout).
+After you added the product to the cart, you can proceed with the checkout. For more information, see [Shop Guide - Checkout](/docs/scos/user/features/{{page.version}}/checkout/checkout-feature-overview/multi-step-checkout.html#shop-guide---checkout).
 
-To learn how to create and manage shopping lists, see [Shop Guide - Shopping Lists](/docs/scos/dev/features/202009.0/shopping-list/multiple-and-shared-shopping-lists/multiple-and-shared-shopping-lists-overview.html#multiple-and-shared-shopping-lists-on-the-storefront#shop-guide---shopping-lists).
+To learn how to create and manage shopping lists, see [Shop Guide - Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-list/multiple-and-shared-shopping-lists/multiple-and-shared-shopping-lists-overview.html#multiple-and-shared-shopping-lists-on-the-storefront#shop-guide---shopping-lists).
 
-To learn how to create and manage wishlists, see [Shop Guide - Managing Wishlists](/docs/scos/dev/features/202009.0/wishlist/wishlist-feature-overview.html#the-wishlist-feature-on-the-storefront). 
+To learn how to create and manage wishlists, see [Shop Guide - Managing Wishlists](/docs/scos/user/features/{{page.version}}/wishlist/wishlist-feature-overview.html#the-wishlist-feature-on-the-storefront). 

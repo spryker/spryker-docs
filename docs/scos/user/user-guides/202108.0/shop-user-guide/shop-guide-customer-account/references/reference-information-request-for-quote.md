@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/rfq-reference-information-shop-guide
 ---
 
-This page contains the information on the UI elements and pages that refer to the [Quotation Process & RFQ](/docs/scos/dev/features/{{page.version}}/quotation-process/quotation-process.html).
+This page contains the information on the UI elements and pages that refer to the [Quotation Process & RFQ](/docs/scos/user/features/{{page.version}}/quotation-process/quotation-process.html).
 ***
 ## Quote requests
 *Quote Requests* is the page where you can access all your RFQs. Don't have an RFQ? Start [creating](https://documentation.spryker.com/2021080/docs/quotation-process-rfq-feature-overview#quotation-process---rfq-on-the-storefront) it.

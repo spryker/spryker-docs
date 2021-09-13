@@ -19,7 +19,7 @@ WYSIWYG is an acronym for **what you see is what you get**.
 
 It is a very user-friendly tool that allows you to modify text, as well as insert videos, images, or links.
 
-You can select one of the following for the [content widget](/docs/scos/dev/features/202001.0/cms/content-items/content-items-feature-overview.html#content-item-widget):
+You can select one of the following for the [content widget](/docs/scos/user/features/{{page.version}}/cms/content-items/content-items-feature-overview.html#content-item-widget):
 
 * chart
 * product

@@ -7,7 +7,7 @@ redirect_from:
   - /v5/docs/en/file-details-cms-slot-blockcsv
 ---
 
-This article contains content of the **cms_slot_block.csv** file to configure [CMS Slot Block](/docs/scos/dev/features/202005.0/cms/templates-and-slots/templates-and-slots.html) information on your Spryker Demo Shop.
+This article contains content of the **cms_slot_block.csv** file to configure [CMS Slot Block](/docs/scos/user/features/{{page.version}}/cms/templates-and-slots/templates-and-slots.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:

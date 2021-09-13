@@ -54,7 +54,7 @@ If the buyer isn't satisfied and would like to negotiate the price further, they
 
 ### Sales Representative Workflow
 A Sales Representative can create an RFQ using two working procedures:
-* via an [Agent](/docs/scos/dev/features/202001.0/company-account-management/agent-assist/agent-assist.html) Account
+* via an [Agent](/docs/scos/user/features/{{page.version}}/company-account-management/agent-assist/agent-assist.html) Account
 * on behalf of a company user
 
 #### Via an Agent Account

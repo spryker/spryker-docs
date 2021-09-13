@@ -270,13 +270,13 @@ The following content has been added to the Academy:
 * [Risk Solution Services Integration - Arvato 2.0](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/arvato/arvato.html-2-0)
 * [Performance Guidelines](/docs/scos/dev/guidelines/performance-guidelines.html)
 * [Performing Core Updates Smoothly](/docs/scos/dev/setup/composer.html#core-updates)
-* [CMS Blocks](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/cms-blocks-overview.html)
-* [CMS Pages](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/cms-pages-overview.html)
+* [CMS Blocks](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/cms-blocks-overview.html)
+* [CMS Pages](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/cms-pages-overview.html)
 * [Demo Shop](https://documentation.spryker.com/2021080/docs/legacy-demoshop)
 * [Navigation](https://documentation.spryker.com/2021080/docs/navigation)
 * [Product Groups](https://documentation.spryker.com/2021080/docs/product-groups)
 * [Product Management](https://documentation.spryker.com/2021080/docs/product-information-management)
 * [Product Sets](https://documentation.spryker.com/2021080/docs/product-sets)
-* [Wishlists](/docs/scos/dev/features/{{page.version}}/wishlist-feature-overview.html)
+* [Wishlists](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html)
  
 Your feedback would be highly appreciated. Please help us understand what you need from the Spryker Academy by filling out a very short survey [here](https://docs.google.com/forms/d/1_vZg0lfqq24Qf9-fQhU50NgsEBy4eDqnDyx7gKz9Faw/edit).

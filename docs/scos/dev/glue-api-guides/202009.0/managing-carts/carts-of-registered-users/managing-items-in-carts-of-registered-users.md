@@ -193,7 +193,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 
 {% info_block infoBox "Conversion" %}
 
-When defining product amount in sales units, make sure that the correlation between amount and quantity corresponds to the conversion of the defined sales unit. See [Measurement Units feature overview](/docs/scos/dev/features/202009.0/measurement-units/measurement-units-feature-overview.html) to learn more.
+When defining product amount in sales units, make sure that the correlation between amount and quantity corresponds to the conversion of the defined sales unit. See [Measurement Units feature overview](/docs/scos/user/features/{{page.version}}/measurement-units/measurement-units-feature-overview.html) to learn more.
 
 {% endinfo_block %}
 

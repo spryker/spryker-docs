@@ -18,7 +18,7 @@ With the Spryker Shopping Lists feature, you can manage multiple shopping lists 
 
 In a Spryker shop, a shopping list widget is located in the header. With the shopping list widget, customers can easily create new shopping lists as well as view details about the existing ones.
 
-Shopping list notes enable customers to attach notes to shopping list items. For example, they might add a note saying that prior to purchase it is necessary to make sure a product is not available in their stock, or check if even more of it should be bought. When a customer transfers shopping list items to cart, the notes are taken over, appearing as [cart notes](/docs/scos/user/features/{{page.version}}/cart/cart-feature-overview/cart-notes-overview.html) there.
+Shopping list notes enable customers to attach notes to shopping list items. For example, they might add a note saying that prior to purchase it is necessary to make sure a product is not available in their stock, or check if even more of it should be bought. When a customer transfers shopping list items to cart, the notes are taken over, appearing as [cart notes](/docs/scos/user/features/{{page.version}}/cart-feature-overview/cart-notes-overview.html) there.
 
 Check out this video tutorial on how to use shopping lists.
 <iframe src="https://fast.wistia.net/embed/iframe/zk32pr3lgt" title="How to use Shopping Lists in Spryker" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>
@@ -27,9 +27,9 @@ Check out this video tutorial on how to use shopping lists.
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of Multiple and Shared Shopping Lists](/docs/scos/dev/features/{{page.version}}/shopping-lists/shopping-lists-feature-overview/multiple-and-shared-shopping-lists-overview.html) |
-| [Get a general idea of the shopping list widget](/docs/scos/dev/features/{{page.version}}/shopping-lists/shopping-lists-feature-overview/shopping-list-widget-overview.html)  |
-| [Get a general idea of Shopping List Notes](/docs/scos/dev/features/{{page.version}}/shopping-lists/shopping-lists-feature-overview/shopping-list-notes-overview.html)  |
+| [Get a general idea of Multiple and Shared Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-lists/shopping-lists-feature-overview/multiple-and-shared-shopping-lists-overview.html) |
+| [Get a general idea of the shopping list widget](/docs/scos/user/features/{{page.version}}/shopping-lists/shopping-lists-feature-overview/shopping-list-widget-overview.html)  |
+| [Get a general idea of Shopping List Notes](/docs/scos/user/features/{{page.version}}/shopping-lists/shopping-lists-feature-overview/shopping-list-notes-overview.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

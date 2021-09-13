@@ -143,8 +143,8 @@ To submit checkout data without order confirmation, send the request:
 | phone | String |  | Customer's phone number. |
 | isDefaultShipping | Boolean |  | Specifies if it is the default shipping address of the customer. If the parameter is not set, the default value is `true`. |
 | isDefaultBilling | Boolean |  | Specifies if it is the default billing address of the customer. If the parameter is not set, the default value is `true`.|
-| payments | Array |  | Payment options, such as the payment system, method of payment, etc.</br>For details, see [Payment Step](/docs/scos/dev/features/202009.0/checkout/checkout-feature-overview/multi-step-checkout.html). |
-| shipment | Object |  | Shipment details.</br>For details, see [Shipment Step](/docs/scos/dev/features/202009.0/checkout/checkout-feature-overview/multi-step-checkout.html). |
+| payments | Array |  | Payment options, such as the payment system, method of payment, etc.</br>For details, see [Payment Step](/docs/scos/user/features/{{page.version}}/checkout/checkout-feature-overview/multi-step-checkout.html). |
+| shipment | Object |  | Shipment details.</br>For details, see [Shipment Step](/docs/scos/user/features/{{page.version}}/checkout/checkout-feature-overview/multi-step-checkout.html). |
 
 
 

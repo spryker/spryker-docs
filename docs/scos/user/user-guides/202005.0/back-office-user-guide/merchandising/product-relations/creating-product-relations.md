@@ -24,7 +24,7 @@ To start working with product relations, go to **Merchandising** > **Product Rel
 
 5. Switch to the **Products** tab or click **Next**.
 
-6. Click **Add rule** or **Add group**, depending on the conditions you want to specify. See  [Product Relations: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/product-relations/references/product-relations-reference-information.html) and [Related Product Rules](/docs/scos/dev/features/202005.0/product-information-management/product-relations/product-relations-feature-overview.html#related-product-rules)  to learn more about rules and groups.
+6. Click **Add rule** or **Add group**, depending on the conditions you want to specify. See  [Product Relations: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/product-relations/references/product-relations-reference-information.html) and [Related Product Rules](/docs/scos/user/features/{{page.version}}/product-information-management/product-relations/product-relations-feature-overview.html#related-product-rules)  to learn more about rules and groups.
 
 7. For the rule/group, select the operator:
     * **AND** - the selected products are displayed if all the specified conditions are fulfilled

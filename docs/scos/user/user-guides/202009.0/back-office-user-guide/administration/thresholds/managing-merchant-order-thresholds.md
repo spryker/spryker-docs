@@ -8,7 +8,7 @@ redirect_from:
   - /v6/docs/en/managing-merchant-order-thresholds
 ---
 
-This topic describes how to manage [merchant order thresholds](/docs/scos/dev/features/202009.0/checkout/checkout-feature-overview/order-thresholds.html#merchant-order-thresholds).
+This topic describes how to manage [merchant order thresholds](/docs/scos/user/features/{{page.version}}/checkout/checkout-feature-overview/order-thresholds.html#merchant-order-thresholds).
 
 To start working with merchant order thresholds, go to **Administration** > **Merchant Relationships Threshold**.
 ***
@@ -19,7 +19,7 @@ The list of the merchant relations for which you can define thresholds is based 
 
 ## Setting up a Hard Minimum Threshold
 
-To set up a [hard minimum threshold](/docs/scos/dev/features/202009.0/checkout/checkout-feature-overview/order-thresholds.html#hard-minimum-threshold) for a merchant relation:
+To set up a [hard minimum threshold](/docs/scos/user/features/{{page.version}}/checkout/checkout-feature-overview/order-thresholds.html#hard-minimum-threshold) for a merchant relation:
 1. On the *Merchant relationships* page, select **Edit** next to the merchant relationship you want to set up the threshold for.
 2. On the *Edit Merchant Relationship Threshold:{merchant relationship name}* page, select the **Store and Currency** you want to configure the threshold for.
 3. In the *Hard Threshold* section, populate the **Enter threshold value** field.
@@ -33,7 +33,7 @@ See [Threshold: Reference Information](/docs/scos/user/user-guides/202009.0/back
 
 ## Setting up a Hard Maximum Threshold
 
-To set up a [hard maximum threshold](/docs/scos/dev/features/202009.0/checkout/checkout-feature-overview/order-thresholds.html#hard-maximum-threshold) for a merchant relation:
+To set up a [hard maximum threshold](/docs/scos/user/features/{{page.version}}/checkout/checkout-feature-overview/order-thresholds.html#hard-maximum-threshold) for a merchant relation:
 
 1. On the *Merchant relationships* page, select **Edit** next to the merchant relationship you want to set up the threshold for.
 2. On the *Edit Merchant Relationship Threshold:{merchant relationship name}* page, select the **Store and Currency** you want to configure the threshold for.
@@ -47,7 +47,7 @@ The page refreshes, and the message about successful threshold update is display
 
 ## Setting up a Soft Minimum Threshold
 
-To set up a [soft minimum threshold](/docs/scos/dev/features/202009.0/checkout/checkout-feature-overview/order-thresholds.html#soft-minimum-threshold) for a merchant relation:
+To set up a [soft minimum threshold](/docs/scos/user/features/{{page.version}}/checkout/checkout-feature-overview/order-thresholds.html#soft-minimum-threshold) for a merchant relation:
 1. On the *Merchant relationships* page, select **Edit** next to the merchant relationship you want to set up the threshold for.
 2.  On the *Edit Merchant Relationship Threshold:{merchant relationship name}* page, select the **Store and Currency** you want to configure the threshold for.
 3. In the *Soft Threshold* section, select a soft threshold type.

@@ -23,7 +23,7 @@ For marketing reasons you, a shop owner, might sometimes give away free or disco
 | [DiscountPromotion 1.0.0](https://github.com/spryker/discount-promotion/releases/tag/1.0.0) | [Discount 4.5.0](https://github.com/spryker/Discount/releases/tag/4.5.0) | <ul><li>[Availability 5.0.3](https://github.com/spryker/Availability/releases/tag/5.0.3)</li><li>[DiscountPromotion 1.0.1](https://github.com/spryker/discount-promotion/releases/tag/1.0.1)</li></ul> |
     
 **Documentation**
-For module documentation, see [Discount Module Guide](/docs/scos/dev/features/{{page.version}}/promotions-and-discounts/promotions-and-discounts.html), Extending the Discount Module, [Discount Promotions](/docs/scos/dev/features/{{page.version}}/promotions-and-discounts/promotions-and-discounts.html).
+For module documentation, see [Discount Module Guide](/docs/scos/user/features/{{page.version}}/promotions-and-discounts/promotions-and-discounts.html), Extending the Discount Module, [Discount Promotions](/docs/scos/user/features/{{page.version}}/promotions-and-discounts/promotions-and-discounts.html).
 
 **Migration Guides**
 To upgrade, follow the steps described below:

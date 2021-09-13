@@ -22,11 +22,11 @@ In particular, you can:
 In your development, these resources can help you get relevant information for your product list and the product detail pages for all or a specific locale.
 
 {% info_block infoBox %}
-See [Content Items](/docs/scos/dev/features/202005.0/cms/content-items/content-items.html
+See [Content Items](/docs/scos/user/features/{{page.version}}/cms/content-items/content-items.html
 {% endinfo_block %} to learn how to create and manage content items in the Back Office.)
 
 ## Installation
-For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/features/202005.0/cms/content-items/content-items.html-api-feature-integration).
+For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/user/features/{{page.version}}/cms/content-items/content-items.html-api-feature-integration).
 
 ## Retrieving Abstract Product List Content Item Data
 To retrieve the full information on the abstract product list by the content item key, send a GET request to the following endpoint:

@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Marketplace Product Offer + Wishlist feature integration"
-last_updated: May 7, 2021
+last_updated: Sep 13, 2021
 description: This document describes how to integrate the Marketplace Product Offer + Wishlist Glue API feature into a Spryker project.
 template: feature-integration-guide-template
 ---
@@ -18,13 +18,14 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
 | Marketplace Wishlist | {{page.version}} |[Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-wishlist-feature-integration.html) |
+| Marketplace Wishlist | {{page.version}} |[Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-wishlist-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker/merchant-product-offer-wishlist-rest-api:"^0.1.0" --update-with-dependencies
+composer require spryker/merchant-product-offer-wishlist-rest-api:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -51,25 +52,13 @@ Make sure that the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 |-|-|-|-|
-| MerchantProductCriteria.productConcreteSkus  | attribute | Created | src/Generated/Shared/Transfer/MerchantProductCriteriaTransfer |
-| WishlistItem.prices  | attribute | Created | src/Generated/Shared/Transfer/WishlistItemTransfer |
-| WishlistItem.productConcreteAvailability  | attribute | Created | src/Generated/Shared/Transfer/WishlistItemTransfer |
-| WishlistItem.isSellable  | attribute | Created | src/Generated/Shared/Transfer/WishlistItemTransfer |
-| WishlistItemRequest.productOfferReference  | attribute | Created | src/Generated/Shared/Transfer/WishlistItemRequestTransfer |
-| WishlistItemRequest.uuid  | attribute | Created | src/Generated/Shared/Transfer/WishlistItemRequestTransfer |
-| WishlistItemCriteria.idWishlistItem  | attribute | Created | src/Generated/Shared/Transfer/WishlistItemCriteriaTransfer |
-| RestWishlistItemsAttributes.prices  | attribute | Created | src/Generated/Shared/Transfer/RestWishlistItemsAttributesTransfer |
-| RestWishlistItemsAttributes.productOfferReference  | attribute | Created | src/Generated/Shared/Transfer/RestWishlistItemsAttributesTransfer |
-| RestWishlistItemsAttributes.merchantReference  | attribute | Created | src/Generated/Shared/Transfer/RestWishlistItemsAttributesTransfer |
-| RestWishlistItemsAttributes.availability  | attribute | Created | src/Generated/Shared/Transfer/RestWishlistItemsAttributesTransfer |
-| RestWishlistItemsAttributes.id  | attribute | Created | src/Generated/Shared/Transfer/RestWishlistItemsAttributesTransfer |
-| RestProductConcreteAvailability.isNeverOutOfStock  | attribute | Created | src/Generated/Shared/Transfer/RestProductConcreteAvailabilityTransfer |
-| RestProductConcreteAvailability.availability  | attribute | Created | src/Generated/Shared/Transfer/RestProductConcreteAvailabilityTransfer |
-| RestProductConcreteAvailability.quantity  | attribute | Created | src/Generated/Shared/Transfer/RestProductConcreteAvailabilityTransfer |
+| WishlistItemRequest.productOfferReference  | property | Created | src/Generated/Shared/Transfer/WishlistItemRequestTransfer |
+| RestWishlistItemsAttributes.productOfferReference  | property | Created | src/Generated/Shared/Transfer/RestWishlistItemsAttributesTransfer |
+| RestWishlistItemsAttributes.merchantReference  | property | Created | src/Generated/Shared/Transfer/RestWishlistItemsAttributesTransfer |
 
 {% endinfo_block %}
 
-#### Enable resources and relationships
+### 3) Set up behavior
 
 Activate the following plugins:
 
@@ -86,6 +75,40 @@ Activate the following plugins:
 | PriceProductOfferVolumeExtractorPlugin | Extracts volume prices from the price product offer collection. |  | Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer |
 | ProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin | Checks if requested the wishlist item exists in the wishlist item collection. |  | Spryker\Zed\MerchantProductOfferWishlistRestApi\Communication\Plugin |
 | EmptyProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin | Checks if the requested wishlist item exists in the wishlist item collection. |  | Spryker\Zed\MerchantProductOfferWishlistRestApi\Communication\Plugin |
+
+<details><summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Glue\GlueApplication;
+
+use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
+use Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication\MerchantByMerchantReferenceResourceRelationshipPlugin;
+use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
+use Spryker\Glue\WishlistsRestApi\WishlistsRestApiConfig;
+
+class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
+{
+    /**
+     * @param \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
+     *
+     * @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface
+     */
+    protected function getResourceRelationshipPlugins(
+        ResourceRelationshipCollectionInterface $resourceRelationshipCollection
+    ): ResourceRelationshipCollectionInterface {
+        $resourceRelationshipCollection->addRelationship(
+            WishlistsRestApiConfig::RESOURCE_WISHLIST_ITEMS,
+            new MerchantByMerchantReferenceResourceRelationshipPlugin()
+        );
+
+        return $resourceRelationshipCollection;
+    }
+}
+```
+
+</details>
 
 <details><summary markdown='span'>src/Pyz/Zed/Wishlist/WishlistDependencyProvider.php</summary>
 

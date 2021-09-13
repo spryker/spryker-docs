@@ -54,7 +54,7 @@ entries:
 
           - title: Marketplace Inventory Management feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-inventory-management-feature-walkthrough.html
-          
+
           - title: Marketplace Order Management feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough.html
 
@@ -171,8 +171,14 @@ entries:
           - title: Merchant Portal - Marketplace Product + Tax feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-tax-feature-integration.html
 
+          - title: Merchant Portal - Marketplace Product + Inventory Management feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-inventory-management-feature-integration.html
+
           - title: Merchant Switcher feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-feature-integration.html
+
+          - title: ACL feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/acl-feature-integration.html
 
           - title: Glue API
             nested:
@@ -314,53 +320,56 @@ entries:
         - title: "File details: merchant.csv"
           url: /docs/marketplace/dev/data-import/file-details-merchant-csv.html
 
-        - title: "File details: merchant_profile.csv"
+        - title: "File details: merchant-profile.csv"
           url: /docs/marketplace/dev/data-import/file-details-merchant-profile-csv.html
 
-        - title: "File details: merchant_profile_address.csv"
+        - title: "File details: merchant-profile-address.csv"
           url: /docs/marketplace/dev/data-import/file-details-merchant-profile-address-csv.html
 
-        - title: "File details: merchant_open_hours_week_day_schedule.csv"
+        - title: "File details: merchant-open-hours-week-day-schedule.csv"
           url: /docs/marketplace/dev/data-import/file-details-merchant-open-hours-week-day-schedule-csv.html
 
         - title: "File details: merchant_open_hours_date_schedule.csv"
           url: /docs/marketplace/dev/data-import/file-details-merchant-open-hours-date-schedule-csv.html
 
-        - title: "File details: merchant_category.csv"
+        - title: "File details: merchant-category.csv"
           url: /docs/marketplace/dev/data-import/file-details-merchant-category-csv.html
 
-        - title: "File details: merchant_stock.csv"
+        - title: "File details: merchant-stock.csv"
           url: /docs/marketplace/dev/data-import/file-details-merchant-stock-csv.html
 
-        - title: "File details: merchant_store.csv"
+        - title: "File details: merchant-store.csv"
           url: /docs/marketplace/dev/data-import/file-details-merchant-store-csv.html
 
-        - title: "File details: merchant_oms_process.csv"
+        - title: "File details: merchant-oms-process.csv"
           url: /docs/marketplace/dev/data-import/file-details-merchant-oms-process-csv.html
 
         - title: "File details: merchant-order-status.csv"
           url: /docs/marketplace/dev/data-import/file-details-merchant-order-status-csv.html
 
-        - title: "File details: merchant_product_offer.csv"
+        - title: "File details: merchant-product-offer.csv"
           url: /docs/marketplace/dev/data-import/file-details-merchant-product-offer-csv.html
 
         - title: "File details: price-product-offer.csv"
           url: /docs/marketplace/dev/data-import/file-details-price-product-offer-csv.html
 
-        - title: "File details: product_offer_stock.csv"
+        - title: "File details: product-offer-stock.csv"
           url: /docs/marketplace/dev/data-import/file-details-product-offer-stock-csv.html
 
-        - title: "File details: merchant_product_offer_store.csv"
+        - title: "File details: merchant-product-offer-store.csv"
           url: /docs/marketplace/dev/data-import/file-details-merchant-product-offer-store-csv.html
 
-        - title: "File details: product_offer_validity.csv"
+        - title: "File details: product-offer-validity.csv"
           url: /docs/marketplace/dev/data-import/file-details-product-offer-validity-csv.html
 
-        - title: "File details: combined_merchant_product_offer.csv"
+        - title: "File details: combined-merchant-product-offer.csv"
           url: /docs/marketplace/dev/data-import/file-details-combined-merchant-product-offer-csv.html
 
-        - title: "File details: merchant_product.csv"
+        - title: "File details: merchant-product.csv"
           url: /docs/marketplace/dev/data-import/file-details-merchant-product-csv.html
+
+        - title: "File details: product-price.csv"
+          url: /docs/marketplace/dev/data-import/file-details-product-price-csv.html
 
 
       - title: Front-end

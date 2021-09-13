@@ -7,10 +7,14 @@ template: concept-topic-template
 
 The *Marketplace Merchant* feature allows you to create, read, and update a merchant in the Marketplace.
 
+{% info_block warningBox "User documentation" %}
+
 To learn more about the feature and to find out how end users use it, see [Marketplace Merchant feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) for business users.
 
-## Related Developer articles
+{% endinfo_block %}
 
+
+## Related Developer articles
 
 |INTEGRATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  |
 |---------|---------|---------|

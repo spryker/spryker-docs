@@ -555,9 +555,9 @@ Make sure the following pages do not open `https://your-merchant-portal.domain/s
 
 {% endinfo_block %}
 
-### 4) Register UserMerchantPortalGui in ACL
+### 4) Register modules in ACL
 
-Add bundle `'user-merchant-portal-gui'` to installer rules:
+Add new modules to installer rules:
 
 
 **src/Pyz/Zed/Acl/AclConfig.php**
@@ -581,6 +581,8 @@ class AclConfig extends SprykerAclConfig
     {
         $bundleNames = [
             'user-merchant-portal-gui',
+            'dashboard-merchant-portal-gui',
+            'security-merchant-portal-gui',
         ];
 
         foreach ($bundleNames as $bundleName) {
@@ -596,42 +598,7 @@ class AclConfig extends SprykerAclConfig
         return $installerRules;
     }
 }
-```
 
-**src/Pyz/Zed/MerchantUser/MerchantUserConfig.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\MerchantUser;
-
-use Generated\Shared\Transfer\RuleTransfer;
-use Spryker\Zed\MerchantUser\MerchantUserConfig as SprykerMerchantUserConfig;
-
-class MerchantUserConfig extends SprykerMerchantUserConfig
-{
-    /**
-     * @return \Generated\Shared\Transfer\RuleTransfer[]
-     */
-    protected function getAllowedBundlesAclRules(): array
-    {
-        $bundleNames = [
-            'user-merchant-portal-gui',
-        ];
-
-        $ruleTransfers = [];
-        
-        foreach ($bundleNames as $bundleName) {
-            $ruleTransfers[] = (new RuleTransfer())
-                ->setBundle($bundleName)
-                ->setController(static::RULE_VALIDATOR_WILDCARD)
-                ->setAction(static::RULE_VALIDATOR_WILDCARD)
-                ->setType(static::RULE_TYPE_ALLOW);
-        }
-
-        return $ruleTransfers;
-    }
-}
 ```
 
 {% info_block warningBox "Verification" %}
@@ -641,25 +608,6 @@ Make sure that after executing `console setup:init-db`, the `'user-merchant-port
 {% endinfo_block %}
 
 ### 5) Update navigation
-
-Remove the Logout button from the `navigation.xml`
-
-**config/Zed/navigation.xml**
-
-```xml
-<?xml version="1.0"?>
-<config>
-<!-- To be removed: -->
-    <security-merchant-portal-gui>
-        <label>Logout</label>
-        <title>Logout</title>
-        <icon>logout</icon>
-        <bundle>security-merchant-portal-gui</bundle>
-        <controller>logout</controller>
-        <action>index</action>
-    </security-merchant-portal-gui>
-</config>
-```
 
 Add MyAccount and Logout section to `navigation-secondary.xml`:
 

@@ -94,4 +94,5 @@ There is an example for SELECT query:
 ```
 
 In the case of query, the query will be modified in such a way as to affect only allowed records.
-If the user tries to perform a restricted action on an Active Record model (such an update, delete or create), an exception will be thrown.
+If the user tries to perform a restricted action on an Active Record model (such an update, delete or create),
+an `\Spryker\Zed\AclEntity\Persistence\Exception\OperationNotAuthorizedException will be thrown.`

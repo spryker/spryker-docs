@@ -14,8 +14,8 @@ One of the fundamental concepts of the Persistence ACL module is a rule.
 It is the rule that determines the capabilities and permissions of the current user.
 The rule is an entry in the `spy_acl_entity_rule` table.
 
-| Column                | Description                          | Data example                         |
-|----------------|-------------------------------|-----------------------------|
+| Column | Description | Data example |
+|-----|-----|-----|
 | id_acl_entity_rule | auto incremental primary key | 1, 5, 115 |
 | fk_acl_entity_segment | A reference to the data segment to which the rule applies. The segment concept is described below. | 1, 15, 124 |
 | fk_acl_role | The reference to the role to which the rule is applied. The rules are applied not to specific users, but to roles, which makes their use extremely flexible. | 12, 56, 221 |
@@ -45,9 +45,9 @@ If the current user has a global scope rule with the appropriate permission, the
 
 `spy_acl_entity_rule`
 
-| fk_acl_entity_segment | fk_acl_role | entity                                    | permission_mask | scope |
-|-----------------------|-------------|-------------------------------------------|-----------------|-------|
-| null                  | 15          | `Orm\Zed\Sales\Persistence\SpySalesOrder` | 1               | 0     |
+| fk_acl_entity_segment | fk_acl_role | entity | permission_mask | scope |
+|-----|-----|-----|-----|-----|
+| null | 15  | `Orm\Zed\Sales\Persistence\SpySalesOrder` | 1 | 0 |
 
 Query before Persistence ACL
 ```sql
@@ -73,23 +73,23 @@ There are few examples of data segments:
 
 `spy_acl_entity_rule`
 
-| fk_acl_entity_segment | fk_acl_role | entity                                    | permission_mask | scope |
-|-----------------------|-------------|-------------------------------------------|-----------------|-------|
-| 3                     | 15          | `Orm\Zed\Sales\Persistence\SpySalesOrder` | 1               | 0     |
+| fk_acl_entity_segment | fk_acl_role | entity | permission_mask | scope |
+|-----|-----|-----|-----|-----|
+| 3 | 15 | `Orm\Zed\Sales\Persistence\SpySalesOrder` | 1 | 0 |
 
 `spy_acl_entity_segment`
 
-| id_acl_entity_segment | name               | reference |
-|-----------------------|--------------------|-----------|
-| 3                     | Orders of DE store | orders-de |
+| id_acl_entity_segment | name | reference |
+|-----|-----|-----|
+| 3 | Orders of DE store | orders-de |
 
 `spy_acl_entity_segment_sales_order`
 
 | fk_sales_order | fk_acl_entity_segment |
-|----------------|-----------------------|
-| 35             | 3                     |
-| 36             | 3                     |
-| 1115           | 3                     |
+|-----|-----|
+| 35 | 3 |
+| 36 | 3 |
+| 1115 | 3 |
 
 Query before Persistence ACL
 ```sql
@@ -122,22 +122,22 @@ Let's look at an example where a user has a configuration where SpyMerchantProdu
 
 `spy_acl_entity_rule`
 
-| fk_acl_entity_segment | fk_acl_role | entity                                                           | permission_mask | scope |
-|-----------------------|-------------|------------------------------------------------------------------|-----------------|-------|
-| null                  | 15          | `Orm\Zed\MerchantProduct\Persistence\SpyMerchantProductAbstract` | 1               | 2     |
-| 5                     | 15          | `Orm\Zed\Merchant\Persistence\SpyMerchant`                       | 1               | 1     |
+| fk_acl_entity_segment | fk_acl_role | entity | permission_mask | scope |
+|-----|-----|-----|-----|-----|
+| null | 15 | `Orm\Zed\MerchantProduct\Persistence\SpyMerchantProductAbstract` | 1 | 2 |
+| 5 | 15 | `Orm\Zed\Merchant\Persistence\SpyMerchant` | 1 | 1 |
 
 `spy_acl_entity_segment`
 
-| id_acl_entity_segment | name                | reference           |
-|-----------------------|---------------------|---------------------|
-| 5                     | Merchant Video King | merchant-video-king |
+| id_acl_entity_segment | name | reference |
+|-----|-----|-----|
+| 5 | Merchant Video King | merchant-video-king |
 
 `spy_acl_entity_segment_merchant`
 
 | fk_merchant | fk_acl_entity_segment |
-|-------------|-----------------------|
-| 112         | 5                     |
+|-----|-----|
+| 112 | 5 |
 
 Query before Persistence ACL
 ```sql
@@ -162,23 +162,23 @@ Below is an example with two roles:
 
 `spy_acl_role`
 
-| id_acl_role | name               | reference          |
-|-------------|--------------------|--------------------|
-| 1           | DE product manager | de_product_manager |
-| 2           | US product viewer  | us_product_viewer  |
+| id_acl_role | name | reference |
+|-----|-----|-----|
+| 1 | DE product manager | de_product_manager |
+| 2 | US product viewer | us_product_viewer  |
 
 `spy_acl_entity_rule`
 
-| id_acl_entity_rule | fk_acl_entity_segment | fk_acl_role | entity                                                | permission_mask | scope |
-|--------------------|-----------------------|-------------|-------------------------------------------------------|-----------------|-------|
-| 1                  | null                  | 1           | `Orm\Zed\Product\Persistence\SpyProduct`              | 15              | 2     |
-| 2                  | null                  | 1           | `Orm\Zed\Product\Persistence\SpyProductAbstract`      | 15              | 2     |
-| 3                  | null                  | 1           | `Orm\Zed\Product\Persistence\SpyProductAbstractStore` | 15              | 2     |
-| 4                  | 1                     | 1           | `Orm\Zed\Store\Persistence\SpyStore`                  | 1               | 1     |
-| 5                  | null                  | 2           | `Orm\Zed\Product\Persistence\SpyProduct`              | 1               | 2     |
-| 6                  | null                  | 2           | `Orm\Zed\Product\Persistence\SpyProductAbstract`      | 1               | 2     |
-| 7                  | null                  | 2           | `Orm\Zed\Product\Persistence\SpyProductAbstractStore` | 1               | 2     |
-| 8                  | 2                     | 2           | `Orm\Zed\Store\Persistence\SpyStore`                  | 1               | 1     |
+| id_acl_entity_rule | fk_acl_entity_segment | fk_acl_role | entity | permission_mask | scope |
+|-----|-----|-----|-----|-----|-----|
+| 1 | null | 1 | `Orm\Zed\Product\Persistence\SpyProduct` | 15 | 2 |
+| 2 | null | 1 | `Orm\Zed\Product\Persistence\SpyProductAbstract` | 15 | 2 |
+| 3 | null | 1 | `Orm\Zed\Product\Persistence\SpyProductAbstractStore` | 15 | 2 |
+| 4 | 1 | 1 | `Orm\Zed\Store\Persistence\SpyStore` | 1  | 1 |
+| 5 | null | 2 | `Orm\Zed\Product\Persistence\SpyProduct` | 1  | 2 |
+| 6 | null | 2 | `Orm\Zed\Product\Persistence\SpyProductAbstract` | 1  | 2 |
+| 7 | null | 2 | `Orm\Zed\Product\Persistence\SpyProductAbstractStore` | 1  | 2 |
+| 8 | 2 | 2 | `Orm\Zed\Store\Persistence\SpyStore` | 1  | 1 |
 
 Note that rules with IDs 1, 2, 3 and 4 refer to one role (`fk_acl_role`: 1), and 5, 6, 7 and 8 to another (` fk_acl_role`: 2).
 The context of a rule is limited by the role to which it is bound.
@@ -217,15 +217,15 @@ If the user makes a request for a sub entity, the main entity will be joined, an
 
 `spy_acl_entity_rule`
 
-| fk_acl_entity_segment | fk_acl_role | entity                                      | permission_mask | scope |
-|-----------------------|-------------|---------------------------------------------|-----------------|-------|
-| 18                    | 15          | `\Orm\Zed\Merchant\Persistence\SpyMerchant` | 1               | 1     |
+| fk_acl_entity_segment | fk_acl_role | entity | permission_mask | scope |
+|-----|-----|-----|-----|-----|
+| 18 | 15 | `\Orm\Zed\Merchant\Persistence\SpyMerchant` | 1 | 1 |
 
 `spy_acl_entity_segment_merchant`
 
-| id_acl_entity_segment | name                | reference           |
-|-----------------------|---------------------|---------------------|
-| 18                    | Merchant Video King | merchant-video-king |
+| id_acl_entity_segment | name | reference |
+|-----|-----|-----|
+| 18 | Merchant Video King | merchant-video-king |
 
 Query before Persistence ACL
 ```sql
@@ -247,8 +247,8 @@ Permission mask (`spy_acl_entity_rule.permission_mask)` is a binary representati
 Each CRUD operation has its own binary mask.
 
 | Operation | Binary mask | Integer representation |
-|-----------|-------------|------------------------|
-| Read      |`0b1`        | 1                      |
-| Create    |`0b10`       | 2                      |
-| Update    |`0b100`      | 4                      |
-| Delete    |`0b1000`     | 8                      |
+|-----|-----|-----|
+| Read |`0b1` | 1 |
+| Create |`0b10` | 2  |
+| Update |`0b100` | 4 |
+| Delete |`0b1000` | 8 |

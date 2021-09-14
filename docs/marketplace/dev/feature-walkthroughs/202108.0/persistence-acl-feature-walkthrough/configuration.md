@@ -11,22 +11,22 @@ All you need is create a plugin and implement `\Spryker\Zed\AclEntityExtension\D
 
 `\Generated\Shared\Transfer\AclEntityMetadataConfigTransfer`
 
-| property                    | type                                                           | description                                                                                                                 |
-|-----------------------------|----------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
-| aclEntityMetadataCollection | \Generated\Shared\Transfer\AclEntityMetadataCollectionTransfer |                                                                                                                             | 
-| aclEntityAllowList          | string[]                                                       | The set of classes that this module does not apply to (even if the user has rules for an entity that is in the allow list). |
+| property | type | description |
+|-----|-----|-----|
+| aclEntityMetadataCollection | `\Generated\Shared\Transfer\AclEntityMetadataCollectionTransfer` |                                                                                                                             | 
+| aclEntityAllowList | string[] | The set of classes that this module does not apply to (even if the user has rules for an entity that is in the allow list). |
 
 `\Generated\Shared\Transfer\AclEntityMetadataCollectionTransfer`
 
-| property | type                                                     | description                               |
-|------------|--------------------------------------------------------|-------------------------------------------|
-| collection | \Generated\Shared\Transfer\AclEntityMetadataTransfer[] | The set of configurations for the models. |
+| property | type | description |
+|-----|-----|-----|
+| collection | `\Generated\Shared\Transfer\AclEntityMetadataTransfer[]` | The set of configurations for the models. |
 
 `\Generated\Shared\Transfer\AclEntityMetadataTransfer`
 
 | property | type | description |
-|----------|------|-------------|
-| parent | \Generated\Shared\Transfer\AclEntityParentMetadataTransfer | This property is used to configure inheritance. Required for entity which has rules with inherited scope, or for composite entity. |
+|-----|-----|-----|
+| parent | `\Generated\Shared\Transfer\AclEntityParentMetadataTransfer` | This property is used to configure inheritance. Required for entity which has rules with inherited scope, or for composite entity. |
 | entityName | string | |
 | hasSegmentTable | bool | Sets if configured entity supports segmentation (data slicing). |
 | defaultGlobalOperationMask | int | Sets the default binary access mask. |
@@ -34,9 +34,9 @@ All you need is create a plugin and implement `\Spryker\Zed\AclEntityExtension\D
 
 `\Generated\Shared\Transfer\AclEntityParentMetadataTransfer`
 
-| property   | type                                                         | description                                                                                |
-|------------|--------------------------------------------------------------|--------------------------------------------------------------------------------------------|
-| connection | \Generated\Shared\Transfer\AclEntityParentConnectionMetadata | This property is used to set up the relationship between the current class and the parent. |
+| property | type | description |
+|-----|-----|-----|
+| connection | `\Generated\Shared\Transfer\AclEntityParentConnectionMetadata` | This property is used to set up the relationship between the current class and the parent. |
 | entityName | string | |
 
 Sometimes the links between the child and parent tables established not through foreign keys, but using so-called "reference columns".
@@ -44,9 +44,9 @@ There is a `\Generated\Shared\Transfer\AclEntityParentConnectionMetadataTransfer
 
 `\Generated\Shared\Transfer\AclEntityParentConnectionMetadataTransfer`
 
-| property         | type   | description                |
-|------------------|--------|----------------------------|
-| reference        | string | Current class field.       |
+| property | type | description |
+|-----|-----|-----|
+| reference | string | Current class field. |
 | referencedColumn | string | Parent class field.        |
 
 ## Example of configuration

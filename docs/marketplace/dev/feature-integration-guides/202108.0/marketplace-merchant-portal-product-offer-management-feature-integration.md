@@ -62,7 +62,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 3) Add Zed translations
+### 3) Add translations
 
 Generate a new translation cache for Zed:
 
@@ -74,7 +74,7 @@ console translator:generate-cache
 
 To set up behavior, take the following steps.
 
-#### Extend OrderItemsTable in SalesMerchantPortalGui
+1. Extend OrderItemsTable in SalesMerchantPortalGui
 
 Activate the following plugins:
 
@@ -112,7 +112,7 @@ Make sure that the `ProductOfferMerchantOrderItemTableExpanderPlugin` is set up 
 
 {% endinfo_block %}
 
-#### Add the Offer widget to MerchantDashobard
+2. Add the Offer widget to MerchantDashobard
 
 Activate the following plugins:
 

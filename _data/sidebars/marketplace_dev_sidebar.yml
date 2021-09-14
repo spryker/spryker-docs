@@ -4,6 +4,14 @@ title: Marketplace Developer Guides
 entries:
   - product: Marketplace
     nested:
+      - title: Marketplace Architecture Overivew
+        nested:
+          - title: Application Composition
+            url: /docs/marketplace/dev/architecture-overview/202108.0/marketplace-architecture-overview-application-composition.html
+          - title: Domain Model
+            url: /docs/marketplace/dev/architecture-overview/202108.0/marketplace-architecture-overview-domain-model.html
+          - title: Merchant Portal
+            url: /docs/marketplace/dev/architecture-overview/202108.0/marketplace-merchant-portal-architecture-overview.html
 
       - title: Setup
         nested:

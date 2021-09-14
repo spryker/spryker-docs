@@ -6,6 +6,8 @@ originalArticleId: a4624ab9-9e66-4bb7-a1ac-49b84ef2ec24
 redirect_from:
   - /v2/docs/checkout-steps-201903
   - /v2/docs/en/checkout-steps-201903
+  - /v2/docs/define-payment-shipment-methods
+  - /v2/docs/en/define-payment-shipment-methods
 ---
 
 The checkout process consists of the following steps:

@@ -41,8 +41,8 @@ All the CMS elements are based on templates. They simplify the creation of simil
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of Templates and Slots](/docs/scos/user/features/{{page.version}}/checkout/checkout-feature-overview/multi-step-checkout.html)  |
-| [Get a general idea of CMS Pages](/docs/scos/user/features/{{page.version}}/checkout/checkout-feature-overview/order-thresholds.html)  |
+| [Get a general idea of Templates and Slots](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html)  |
+| [Get a general idea of CMS Pages](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html)  |
 | [Get a general idea of CMS Blocks](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/cms-blocks-overview.html)  |
 | [Get a general idea of CMS pages in search results](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/cms-pages-in-search-results-overview.html)  |
 | [Get a general idea of email as a CMS block](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/email-as-a-cms-block-overview.html)  |

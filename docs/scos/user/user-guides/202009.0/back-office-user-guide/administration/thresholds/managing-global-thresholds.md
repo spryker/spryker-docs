@@ -13,7 +13,7 @@ This topic describes how to manage global thresholds.
 To start working with global thresholds, go to **Administration** > **Global threshold**.
 ***
 ## Setting up a Hard Minimum Threshold
-To set up a [hard minimum threshold](/docs/scos/user/features/{{page.version}}/checkout/checkout-feature-overview/order-thresholds.html#hard-minimum-threshold):
+To set up a [hard minimum threshold](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html#hard-minimum-threshold):
 1. On the *Edit Global threshold* page, select the **Store and Currency** you want to configure the threshold for.
 2. In the *Minimum Hard Threshold* section, populate the **Enter threshold value** field.
 3. Enter a **Message** for all the locales.
@@ -25,7 +25,7 @@ See [Threshold: Reference Information](/docs/scos/user/user-guides/202009.0/back
 
 ## Setting up a Hard Maximum Threshold
 
-To set up a [hard maximum threshold](/docs/scos/user/features/{{page.version}}/checkout/checkout-feature-overview/order-thresholds.html#hard-maximum-threshold):
+To set up a [hard maximum threshold](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html#hard-maximum-threshold):
 
 1. On the *Edit Global threshold* page, select the **Store and Currency** you want to configure the threshold for.
 2. In the *Maximum Hard Threshold* section, populate the **Enter threshold value** field.
@@ -39,7 +39,7 @@ The page refreshes, and the message about successful threshold update is display
 
 
 ## Setting up a Soft Minimum Threshold
-To set up a [soft minimum threshold](/docs/scos/user/features/{{page.version}}/checkout/checkout-feature-overview/order-thresholds.html#soft-minimum-threshold):
+To set up a [soft minimum threshold](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html#soft-minimum-threshold):
 1. On the *Edit Global threshold* page, select the **Store and Currency** you want to configure the threshold for.
 2. In the *Soft Threshold* section, select a soft threshold type.
 3. Populate the **Enter threshold value** field.

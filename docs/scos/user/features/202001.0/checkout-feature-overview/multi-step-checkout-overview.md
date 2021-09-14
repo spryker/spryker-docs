@@ -6,6 +6,8 @@ originalArticleId: 2317299d-3cf9-4832-93d4-f1278ca68553
 redirect_from:
   - /v4/docs/multi-step-checkout
   - /v4/docs/en/multi-step-checkout
+  - /v4/docs/define-payment-shipment-methods
+  - /v4/docs/en/define-payment-shipment-methods
 ---
 
 The Checkout workflow is a multi-step process that can be fully customized to fit your needs. The standard steps include customer registration and login, shipping and billing address, shipment method and costs, payment method, checkout overview and checkout success. You can easily design the process to accommodate different checkout types and to adapt to different preferences, such as one-page checkout or an invoice page replacing the payment page, by means of our step-engine.

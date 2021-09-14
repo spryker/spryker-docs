@@ -17,16 +17,16 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE        |
 | --------------- | -------- | ------------------ |
-| Spryker Core         | master      | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Marketplace Merchant | master      | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
-| Product   | master      | [Product feature integration](https://documentation.spryker.com/docs/product-feature-integration) |
+| Spryker Core         | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
+| Product   | {{page.version}} | [Product feature integration](https://documentation.spryker.com/docs/product-feature-integration) |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-product: "dev-master" --update-with-dependencies
+composer require spryker-feature/marketplace-product:"dev-master" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -43,7 +43,7 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up the database schema
+### 2) Set up the database schema and transfer objects
 
 Adjust the schema definition so entity changes trigger events:
 
@@ -84,8 +84,6 @@ Verify the following changes by checking your database
 
 {% endinfo_block %}
 
-### 3) Set up transfer objects
-
 Generate transfer changes:
 
 ```bash
@@ -107,7 +105,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 3) Add Zed translations
+### 3) Add translations
 
 Generate a new translation cache for Zed:
 
@@ -127,11 +125,11 @@ Enable the following behaviors by registering the plugins:
 | MerchantProductAbstractMapExpanderPlugin                     | Adds merchant names to product abstract search data.         |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
 | MerchantProductPageDataExpanderPlugin                        | Expands the provided ProductAbstractPageSearch transfer object's data by merchant names. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
 | MerchantProductPageDataLoaderPlugin                          | Expands ProductPageLoadTransfer object with merchant data.   |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
-| Merchant\MerchantProductSearchWritePublisherPlugin           | Publish the product by merchant ids in ES. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher |
-| MerchantProduct\MerchantProductSearchWritePublisherPlugin    | Publish the product by merchant product abstract ids in ES. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher |
+| Merchant\MerchantProductSearchWritePublisherPlugin           | Publish the product by merchant ids to ES. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher |
+| MerchantProduct\MerchantProductSearchWritePublisherPlugin    | Publish the product by merchant product abstract ids to ES. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher |
 | MerchantProductAbstractStorageExpanderPlugin                 | Expands product abstract storage data with merchant references. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\ProductStorage |
-| MerchantUpdatePublisherPlugin                                | Publish the product by merchant ids in Redis |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\Merchant |
-| MerchantProductWritePublisherPlugin                          | Publish the product by merchant product abstract ids in Redis |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\MerchantProduct |
+| MerchantUpdatePublisherPlugin                                | Publish the product by merchant ids to Redis. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\Merchant |
+| MerchantProductWritePublisherPlugin                          | Publish the product by merchant product abstract ids to Redis. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\MerchantProduct |
 
 **src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php**
 

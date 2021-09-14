@@ -7,7 +7,7 @@ redirect_from:
   - /v5/docs/en/file-details-product-pricecsv
 ---
 
-This article contains content of the **product_price.csv** file to configure [prices](/docs/scos/dev/features/202005.0/price/price.html) of the products/services in your Spryker Demo Dhop.
+This article contains content of the **product_price.csv** file to configure [prices](/docs/scos/user/features/{{page.version}}/price/price.html) of the products/services in your Spryker Demo Dhop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:

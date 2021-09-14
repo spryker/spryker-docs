@@ -244,7 +244,7 @@ All slots are optional, so you can fill, for example, only two slots from the ex
 * The shopper cannot return to the Configurator page from the cart, reorder, or shopping list pages.
 * The following products cannot be displayed in the Configurator:
     - products with the Measurement or Packaging Units
-    - default [product bundles](/docs/scos/dev/features/202005.0/product-information-management/product-bundles.html)
+    - default [product bundles](/docs/scos/user/features/{{page.version}}/product-information-management/product-bundles.html)
     - gift cards
 * Product options are not displayed for concrete products.
 * Product labels are not displayed for concrete products.

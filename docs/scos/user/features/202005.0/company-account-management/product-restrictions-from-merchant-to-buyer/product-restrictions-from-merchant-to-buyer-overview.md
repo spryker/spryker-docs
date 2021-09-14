@@ -10,13 +10,13 @@ redirect_from:
 
 At its core, Product Restrictions allow merchants to define the products that are available to each of their B2B customers.
 
-In terms of [Merchant concept](/docs/scos/dev/features/202005.0/company-account-management/merchants-and-merchant-relations/merchants-and-merchant-relations-feature-overview.html), the **merchant** is the one who sells products on a marketplace and can set prices.
+In terms of [Merchant concept](/docs/scos/user/features/{{page.version}}/company-account-management/merchants-and-merchant-relations/merchants-and-merchant-relations-feature-overview.html), the **merchant** is the one who sells products on a marketplace and can set prices.
 
 The diagram below shows product restrictions relations within the Merchant concept:
 
 ![product-restrictions-model.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Product+Restrictions+from+Merchant+to+Buyer/Product+Restrictions+from+Merchant+to+Buyer+Overview/product-restrictions-model.png) 
 
-Product Restrictions from Merchant to Buyer give merchants [another layer](/docs/scos/dev/features/202005.0/company-account-management/hide-content-from-logged-out-users/hide-content-from-logged-out-users.html) of control over the information, a customer can see in the shop application. Based on product restrictions, you can:
+Product Restrictions from Merchant to Buyer give merchants [another layer](/docs/scos/user/features/{{page.version}}/company-account-management/hide-content-from-logged-out-users/hide-content-from-logged-out-users.html) of control over the information, a customer can see in the shop application. Based on product restrictions, you can:
 
 * create a list of products;
 * hide the product information for the products (pricing, appearance in the search/filters), and limit access to a product details page.
@@ -27,7 +27,7 @@ To restrict the products, a Shop Administrator needs to create a product list, i
 
 To create product lists, follow the [guideline for the Back Office](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/product-lists/creating-a-product-list.html).
 
-You can check more cases of product restrictions workflow on the [Restricted Products Behavior](/docs/scos/dev/features/202005.0/company-account-management/product-restrictions-from-merchant-to-buyer/restricted-products-behavior.html) page.
+You can check more cases of product restrictions workflow on the [Restricted Products Behavior](/docs/scos/user/features/{{page.version}}/company-account-management/product-restrictions-from-merchant-to-buyer/restricted-products-behavior.html) page.
 
 ## Current Constraints
 - Currently, in the situation, when a single product from the product set is blacklisted, the other items are displayed in the shop. We are going to update the logic in a way, that in case any of the items in the product set gets blacklisted, all relevant product sets containing this item will get blacklisted too.

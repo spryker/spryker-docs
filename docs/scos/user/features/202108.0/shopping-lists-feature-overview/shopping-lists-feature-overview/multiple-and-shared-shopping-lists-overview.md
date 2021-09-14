@@ -15,7 +15,7 @@ A shopping list is a list of the items that shoppers buy or plan to buy frequent
 A shopping list is always saved, disregarding if a company user logs out and logs in again—the list is still available. The shopping list does not reserve products on stock, so adding an item to the shopping list does not affect item availability. However, a company user can easily convert any shopping list into a shopping cart to proceed with the Checkout.
 There are two ways to create a shopping list:
 
-* Through a [shopping list widget](/docs/scos/user/features/202108.0/shopping-lists/shopping-lists-feature-overview/shopping-list-widget-overview.html) in the header of the shop.
+* Through a [shopping list widget](/docs/scos/user/features/{{page.version}}/shopping-lists/shopping-lists-feature-overview/shopping-list-widget-overview.html) in the header of the shop.
 * From the *Shopping Lists* page in the *My Account* menu. See [Multiple and Shared Shopping Lists on the Storefront](#multiple-and-shared-shopping-lists-on-the-storefront) for more detailed instruction.
 
 New items are added to shopping lists by clicking **Add to Shopping List** on the product details page.

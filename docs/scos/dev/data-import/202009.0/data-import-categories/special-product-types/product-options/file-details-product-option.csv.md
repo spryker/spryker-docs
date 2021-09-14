@@ -7,7 +7,7 @@ redirect_from:
   - /v6/docs/en/file-details-product-optioncsv
 ---
 
-This article contains content of the **product_option.csv** file to configure [Product Option](/docs/scos/dev/features/202009.0/product-options/product-options.html) information on your Spryker Demo Shop.
+This article contains content of the **product_option.csv** file to configure [Product Option](/docs/scos/user/features/{{page.version}}/product-options/product-options.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:

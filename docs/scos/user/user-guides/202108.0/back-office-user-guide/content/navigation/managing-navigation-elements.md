@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/managing-navigation-elements
 ---
 
-This topic describes how to manage [navigation elements](/docs/scos/dev/features/{{page.version}}/navigation/navigation-feature-overview.html#navigation-element).
+This topic describes how to manage [navigation elements](/docs/scos/user/features/{{page.version}}/navigation/navigation-feature-overview.html#navigation-element).
 
 ## Prerequisites
 

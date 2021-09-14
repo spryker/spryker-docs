@@ -14,7 +14,12 @@ All offer-related data is stored in a separate entity and linked to a concrete p
 
 The Marketplace Product Offer feature contains both merchant product offer and product offer concepts. Merchant product offer extends product offer by adding a pointer to a merchant.
 
+{% info_block warningBox "User documentation" %}
+
 To learn more about the feature and to find out how end users use it, see [Marketplace Product Offer feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html) for business users.
+
+{% endinfo_block %}
+
 
 ## Main Marketplace Product Offer feature modules
 

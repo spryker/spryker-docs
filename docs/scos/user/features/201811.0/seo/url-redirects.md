@@ -14,7 +14,7 @@ With URL Redirects, you can create content redirects and increase your store's s
 * Multiple HTTP status codes can be selected
 * Redirects for changed product URLs are auto-generated
 
-A URL redirect is a special entity that consists of a source URL (which is provided by the spy_url database table), a target URL and an HTTP status code (stored in spy_url_redirect database table). Redirects are exported to the key-value storage with collectors and are matched with StorageRouter exactly the same way as described in the [URL](/docs/scos/dev/features/201811.0/order-management/url.html) article. The `\Pyz\Yves\Redirect\Controller\RedirectController` in the Demoshop, sends a redirect response to the target URL with the given status code.
+A URL redirect is a special entity that consists of a source URL (which is provided by the spy_url database table), a target URL and an HTTP status code (stored in spy_url_redirect database table). Redirects are exported to the key-value storage with collectors and are matched with StorageRouter exactly the same way as described in the [URL](/docs/scos/user/features/{{page.version}}/order-management/url.html) article. The `\Pyz\Yves\Redirect\Controller\RedirectController` in the Demoshop, sends a redirect response to the target URL with the given status code.
 
 ## Manual Redirects
 In Zed on the Redirects (link to http://zed.de.demoshop.local/cms/redirect) page it is possible to create custom URL redirects from not yet existing URLs to other internal or external URLs with different status codes.

@@ -10,7 +10,7 @@ redirect_from:
 
 The *Product* feature allows creating products, manage their characteristics and settings.
 
-In Spryker Commerce OS, you create and manage products in the [Back Office](/docs/scos/dev/features/202009.0/spryker-core-back-office/spryker-core-back-office-feature-overview/the-back-office-overview.html). The product information you specify serves multiple purposes:
+In Spryker Commerce OS, you create and manage products in the [Back Office](/docs/scos/user/features/{{page.version}}/spryker-core-back-office/spryker-core-back-office-feature-overview/the-back-office-overview.html). The product information you specify serves multiple purposes:
 
 * Defines product characteristics.
 * Affects shop behavior. For example, filtering and search on the Storefront is based on product attributes.
@@ -78,7 +78,7 @@ The product information is structured as follows:
 
 #### Case 3: Selling a product in five colors, four sizes, and three materials
 
-To a product in five colors, four sizes, and three materials, you can structure product information in one of the following ways. You can create an abstract product and up to 60 variants to support all the combinations. Or, you can use the [Product Groups](/docs/scos/dev/features/202009.0/product-groups/product-groups-feature-overview.html) feature.
+To a product in five colors, four sizes, and three materials, you can structure product information in one of the following ways. You can create an abstract product and up to 60 variants to support all the combinations. Or, you can use the [Product Groups](/docs/scos/user/features/{{page.version}}/product-groups/product-groups-feature-overview.html) feature.
 
 Using the Product Group feature, you create a group of five abstract products, one for each color. Each abstract product  contains up to 12 concrete products of different combinations of the sizes and the materials.
 

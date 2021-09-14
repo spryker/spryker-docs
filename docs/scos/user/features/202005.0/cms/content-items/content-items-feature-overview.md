@@ -8,7 +8,7 @@ redirect_from:
   - /v5/docs/en/content-items-feature-overview
 ---
 
-The Content Items feature creates an abstraction layer for content management in the Back Office. It allows content managers to create and preserve small content pieces. Later, they are inserted into [CMS blocks](/docs/scos/dev/features/202005.0/cms/cms-block/cms-block.html) and, subsequently, into Storefront pages. Content items are rendered on Storefront using [Content Item Widget](#content-item-widget). 
+The Content Items feature creates an abstraction layer for content management in the Back Office. It allows content managers to create and preserve small content pieces. Later, they are inserted into [CMS blocks](/docs/scos/user/features/{{page.version}}/cms/cms-block/cms-block.html) and, subsequently, into Storefront pages. Content items are rendered on Storefront using [Content Item Widget](#content-item-widget). 
 
 ## Content Item
 Content item is the smallest content unit in Spryker. There are four content item types shipped by default:
@@ -36,7 +36,7 @@ See [Content Items Types: Module Relations](https://documentation.spryker.com/v5
 ## Content Item Widget
 Content Item Widget is a Twig code piece that is used to render a content item on Storefront.
 
-You can insert a content item widget into a CMS block or a CMS page by selecting a respective content item in the [WYSIWYG editor](/docs/scos/dev/features/202005.0/cms/wysiwyg-editor.html) drop-down menu: 
+You can insert a content item widget into a CMS block or a CMS page by selecting a respective content item in the [WYSIWYG editor](/docs/scos/user/features/{{page.version}}/cms/wysiwyg-editor.html) drop-down menu: 
   
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/insert-content-item-widget.png) 
   

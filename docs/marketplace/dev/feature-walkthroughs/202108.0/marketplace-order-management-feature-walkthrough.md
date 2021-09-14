@@ -7,7 +7,11 @@ template: concept-topic-template
 
 With the *Marketplace Order Management* feature, default orders that contain additional information about the merchants are called Marketplace orders. In turn, every merchant can view and manage only the orders that are related to their items. Such orders are called merchant orders.
 
+{% info_block warningBox "User documentation" %}
+
 To learn more about the feature and to find out how end users use it, see [Marketplace Order Management](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html) feature overview for business users.
+
+{% endinfo_block %}
 
 ## Module relations
 
@@ -32,7 +36,7 @@ The following schema illustrates the connections between the Marketplace and mer
 ## Related Developer articles
 
 
-|INTEGRATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  | 
+|INTEGRATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  |
 |---------|---------|---------|
 | [Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-feature-integration.html)    | [Retrieving Marketplace orders](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-marketplace-orders.html)        | [File details: merchant_oms_process.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-oms-process-csv.html)        |
 | [Marketplace Order Management + Order Threshold feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-order-threshold-feature-integration.html)    |         | [File details: merchant-order-status.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-order-status-csv.html)        |

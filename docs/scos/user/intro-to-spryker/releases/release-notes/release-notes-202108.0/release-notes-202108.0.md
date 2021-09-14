@@ -25,15 +25,15 @@ Password configuration comes with a brute force attack protection: after a certa
 
 #### Documentation
 
-* [Customer Registration overview](/docs/scos/dev/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-registration-overview.html#customer-registration-overview)
-* [Customer Login overview](/docs/scos/dev/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-login-overview.html)
+* [Customer Registration overview](/docs/scos/user/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-registration-overview.html#customer-registration-overview)
+* [Customer Login overview](/docs/scos/user/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-login-overview.html)
 
 
 ### Identity Access Manager: Back Office Login
 With the support of the OpenID Connect protocol, you can now use Identity Access Managers to log in to the Spryker Back Office. To illustrate this capability, we offer the integration of the Microsoft Azure Active Directory service that allows your users to log in to the Back Office with their Microsoft Azure Active Directory credentials.
 
 #### Documentation
-[Back Office Login overview](/docs/scos/dev/features/{{page.version}}/spryker-core-back-office/spryker-core-back-office-feature-overview/back-office-login-overview.html)
+[Back Office Login overview](/docs/scos/user/features/{{page.version}}/spryker-core-back-office/spryker-core-back-office-feature-overview/back-office-login-overview.html)
 
 ### Category per store
 Spryker now supports store relations at the category level. You can hide and show categories per store depending on your business requirements. Child categories inherit the store relations of the parent category.
@@ -41,7 +41,7 @@ Spryker now supports store relations at the category level. You can hide and sho
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+notes+202108.0/category-per-store.png) 
 
 #### Documentation
-[Category management](/docs/scos/dev/features/{{page.version}}/category-management-feature-overview.html)
+[Category management](/docs/scos/user/features/{{page.version}}/category-management-feature-overview.html)
 
 ### Avalara integration
 Calculating sales tax for an order is never a trivial matter. Different products and services can have different tax rates or fixed tax amounts. In Europe, tax rates are the same for the whole country, but in the USA, tax rates are different per state, per city, and per zip code. Moreover, depending on your warehouses’ locations and your customers' locations, the taxes they pay for the same product are different. Each jurisdiction can always change the tax rate at its discretion.
@@ -49,7 +49,7 @@ Since tax calculation is not an area where mistakes are allowed, we decided to p
 The Avalara integration enables you to validate your customers’ and your warehouses’ addresses to improve the rate accuracy when calculating sales tax in the checkout process.
 
 #### Documentation
-[Tax](/docs/scos/dev/features/{{page.version}}/tax/tax.html)
+[Tax](/docs/scos/user/features/{{page.version}}/tax/tax.html)
 
 ### Data exchange
 While expanding the Spryker's out-of-the-box data exchange capabilities, we’ve implemented additional data importers and made small improvements, such as exception handling, dependencies, upgrading to PHP 7.3+, and minor bug fixes, that allow you to keep your software up to date.

@@ -8,7 +8,7 @@ redirect_from:
   - /v4/docs/en/templates-slots
 ---
 
-Incorporate a coherent and flexible way of managing content with the help of templates with slots. Create templates with slots and apply them to any page to break it down into slots. Slots are used to embed content from different sources with the help of [Slot Widget](/docs/scos/dev/features/202001.0/cms/templates-and-slots/templates-and-slots-feature-overview.html#slot-widget). Embed [CMS blocks](/docs/scos/dev/features/202001.0/cms/cms-block/cms-block.html) by creating content in the native [WYSIWYG Editor](/docs/scos/dev/features/202001.0/cms/wysiwyg-editor.html) or select a third-party solution from a number of available content management platforms.
+Incorporate a coherent and flexible way of managing content with the help of templates with slots. Create templates with slots and apply them to any page to break it down into slots. Slots are used to embed content from different sources with the help of [Slot Widget](/docs/scos/user/features/{{page.version}}/cms/templates-and-slots/templates-and-slots-feature-overview.html#slot-widget). Embed [CMS blocks](/docs/scos/user/features/{{page.version}}/cms/cms-block/cms-block.html) by creating content in the native [WYSIWYG Editor](/docs/scos/user/features/{{page.version}}/cms/wysiwyg-editor.html) or select a third-party solution from a number of available content management platforms.
 
 With the functionality the feature provides, you can benefit from using a third-party CMS editor that suits your needs best and make the process of creation and implementation of content easier.
 

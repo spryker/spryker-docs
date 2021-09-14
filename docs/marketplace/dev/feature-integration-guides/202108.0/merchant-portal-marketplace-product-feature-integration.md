@@ -26,7 +26,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker/product-merchant-portal-gui:"{{page.version}}" --update-with-dependencies
+composer require spryker/product-merchant-portal-gui:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -56,6 +56,7 @@ Make sure that the following changes have been applied in transfer objects:
 |-|-|-|-|
 | MerchantProductTableCriteria | class | Created | src/Generated/Shared/Transfer/MerchantProductTableCriteriaTransfer |
 | ProductAbstractCollection | class | Created | src/Generated/Shared/Transfer/ProductAbstractCollectionTransfer |
+| ProductTableCriteria | class | Created | src/Generated/Shared/Transfer/ProductTableCriteriaTransfer |
 | PriceProductTableCriteria | class | Created | src/Generated/Shared/Transfer/PriceProductAbstractTableCriteriaTransfer |
 | PriceProductTableViewCollection | class | Created | src/Generated/Shared/Transfer/PriceProductAbstractTableViewCollectionTransfer |
 | PriceProductTableView | class | Created | src/Generated/Shared/Transfer/PriceProductAbstractTableViewTransfer |
@@ -67,6 +68,7 @@ Make sure that the following changes have been applied in transfer objects:
 | StockProduct | class | Created | src/Generated/Shared/Transfer/StockProductTransfer |
 | ReservationRequest | class | Created | src/Generated/Shared/Transfer/ReservationRequestTransfer |
 | ReservationResponse | class | Created | src/Generated/Shared/Transfer/ReservationResponseTransfer |
+| ProductAttributeTableCriteria | class | Created | src/Generated/Shared/Transfer/ProductAttributeTableCriteria |
 
 {% endinfo_block %}
 

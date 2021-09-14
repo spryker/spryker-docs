@@ -1,11 +1,11 @@
 ---
-title: Fact Finder Web Components
+title: Installing and configuring FACT-Finder web components
 description: Integrate Fact Finder Web Components into Spryker Commerce OS.
-originalLink: https://documentation.spryker.com/v5/docs/fact-finder-web-components
-originalArticleId: 0cef5093-e515-471f-9ec8-c8fdeffbf300
+originalLink: https://documentation.spryker.com/v6/docs/fact-finder-web-components
+originalArticleId: fe5ac7bd-0e65-44c3-8872-e6e0e35f86b6
 redirect_from:
-  - /v5/docs/fact-finder-web-components
-  - /v5/docs/en/fact-finder-web-components
+  - /v6/docs/fact-finder-web-components
+  - /v6/docs/en/fact-finder-web-components
 ---
 
 ## Installation
@@ -53,14 +53,14 @@ $config[FactFinderWebComponentsConstants::BREADCRUMB_COMPONENT_CONFIG] = [
 		'advisor',
 	],
 ];
- 
+
 $config[FactFinderWebComponentsConstants::SEARCH_BOX_COMPONENT_CONFIG] = [
 	'properties' => [
 		'suggest-onfocus' => 'true',
 		'use-suggest' => 'true',
 	],
 ];
- 
+
 $config[FactFinderWebComponentsConstants::SEARCH_BUTTON_COMPONENT_CONFIG] = [
 	'suggest-onfocus' => false,
 	'hidesuggest-onblur' => true,
@@ -68,7 +68,7 @@ $config[FactFinderWebComponentsConstants::SEARCH_BUTTON_COMPONENT_CONFIG] = [
 	'use-suggest' => false,
 	'suggest-delay' => 0,
 ];
- 
+
 $config[FactFinderWebComponentsConstants::HEADER_NAVIGATION_COMPONENT_CONFIG] = [
 	'properties' => [
 		'group-count' => 4,
@@ -77,7 +77,7 @@ $config[FactFinderWebComponentsConstants::HEADER_NAVIGATION_COMPONENT_CONFIG] = 
 		'fetch-initial' => '1',
 	],
 ];
- 
+
 $config[FactFinderWebComponentsConstants::SUGGEST_CONFIG] = [
 	'properties' => [],
 	'productItemType' => 'productName',
@@ -96,12 +96,12 @@ $config[FactFinderWebComponentsConstants::SUGGEST_CONFIG] = [
 		],
 	],
 ];
- 
+
 $config[FactFinderWebComponentsConstants::RECORD_LIST_COMPONENT_CONFIG] = [
 	'properties' => [],
 	'record' => '',
 ];
- 
+
 $config[FactFinderWebComponentsConstants::CHECKOUT_TRACKING_CONFIG] = [
 	'properties' => [
 		'disable-auto-tracking' => true,
@@ -117,7 +117,7 @@ $config[FactFinderWebComponentsConstants::CHECKOUT_TRACKING_CONFIG] = [
 		],
 	],
 ];
- 
+
 $config[FactFinderWebComponentsConstants::RECORD_COMPONENT_CONFIG] = [
 	'subscribe' => 'true',
 	'is-recommendation' => false,
@@ -125,38 +125,38 @@ $config[FactFinderWebComponentsConstants::RECORD_COMPONENT_CONFIG] = [
 	'infinite-debounce-delay' => 32,
 	'infinite-scroll-margin' => 0,
 ];
- 
+
 $config[FactFinderWebComponentsConstants::ASN_GROUP_COMPONENT_CONFIG] = [
 	'opened' => false,
 	'collapsible' => true,
 	'lazy-load' => true,
 ];
- 
+
 $config[FactFinderWebComponentsConstants::ASN_GROUP_ELEMENT_CONFIG] = [
 	'selected' => true,
 ];
- 
+
 $config[FactFinderWebComponentsConstants::ASN_REMOVE_ALL_FILTER_CONFIG] = [
 	'align' => 'vertical',
 	'show-always' => true,
 	'remove-params' => false,
 ];
- 
+
 $config[FactFinderWebComponentsConstants::ASN_SLIDER_CONFIG] = [
 	'properties' => [
 		'align' => 'vertical',
 	],
 ];
- 
+
 $config[FactFinderWebComponentsConstants::ASN_SLIDER_CONTROL_CONFIG] = [
 	'submit-on-input' => true,
 ];
- 
+
 $config[FactFinderWebComponentsConstants::PAGING_COMPONENT_CONFIG] = [
 	'properties' => [
 	],
 ];
- 
+
 $config[FactFinderWebComponentsConstants::PRODUCTS_PER_PAGE_COMPONENT_CONFIG] = [
 	'properties' => [
 	],
@@ -164,7 +164,7 @@ $config[FactFinderWebComponentsConstants::PRODUCTS_PER_PAGE_COMPONENT_CONFIG] = 
 	'list' => '',
 	'item' => '',
 ];
- 
+
 $config[FactFinderWebComponentsConstants::SORT_BOX_COMPONENT_CONFIG] = [
 	'properties' => [
 	],
@@ -183,7 +183,7 @@ $config[FactFinderWebComponentsConstants::SORT_BOX_COMPONENT_CONFIG] = [
 		],
 	],
 ];
- 
+
 $config[FactFinderWebComponentsConstants::SIMILAR_PRODUCTS_COMPONENT_CONFIG] = [
 	'properties' => [
 		'max-results' => 4,
@@ -191,11 +191,11 @@ $config[FactFinderWebComponentsConstants::SIMILAR_PRODUCTS_COMPONENT_CONFIG] = [
 	'list' => '',
 	'record' => '',
 ];
- 
+
 $config[FactFinderWebComponentsConstants::SIMILAR_PRODUCT_ID_CONFIG] = [
 	'recordId' => 'd44c3c7b5e52f7a6b27041c1e789e954',
 ];
- 
+
 $config[FactFinderWebComponentsConstants::RECOMMENDATION_CONFIG] = [
 	'properties' => [
 		'max-results' => 4,
@@ -203,23 +203,23 @@ $config[FactFinderWebComponentsConstants::RECOMMENDATION_CONFIG] = [
 	'list' => '',
 	'record' => '',
 ];
- 
+
 $config[FactFinderWebComponentsConstants::RECOMMENDATION_RECORD_ID_CONFIG] = [
 	'recordId' => '19532fa96a8e60a27328f01520cc4',
 ];
- 
+
 $config[FactFinderWebComponentsConstants::TAG_CLOUD_COMPONENT_CONFIG] = [
 	'properties' => [
 	],
 ];
- 
+
 $config[FactFinderWebComponentsConstants::PUSHED_PRODUCTS_COMPONENT_CONFIG] = [
 	'properties' => [
 	],
 	'list' => '',
 	'record' => '',
 ];
- 
+
 $config[FactFinderWebComponentsConstants::CAMPAIGN_COMPONENT_CONFIG] = [
 	'properties' => [
 	],

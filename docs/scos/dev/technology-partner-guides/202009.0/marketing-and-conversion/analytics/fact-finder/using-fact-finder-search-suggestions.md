@@ -1,5 +1,5 @@
 ---
-title: FACT-Finder - Suggest
+title: Using FACT-Finder search suggestions
 description: The FACT-Finder Suggest module enables you to provide customers with suggested search terms while they are entering a search term.
 originalLink: https://documentation.spryker.com/v6/docs/search-factfinder-suggest
 originalArticleId: 05640775-8f5c-410f-bec0-eec1328beafb

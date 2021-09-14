@@ -1,5 +1,5 @@
 ---
-title: Episerver - Integration into a project
+title: Integrating Episerver
 description: Integrate Episerver in the Spryker Commerce OS
 originalLink: https://documentation.spryker.com/2021080/docs/episerver-integration-into-project
 originalArticleId: 8852bd2c-599e-4f4b-9342-2cac18579da0
@@ -260,7 +260,7 @@ class NewsletterPageRoueProviderPlugin extends SprykerShopNewsletterPageRoutePro
 {
     public const ROUTE_NAME_CUSTOMER_SUBSCRIBE = 'newsletter-success';
     public const ROUTE_NAME_CUSTOMER_UNSUBSCRIBE = 'newsletter-unsubscribe';
-    
+
     /**
      * Specification:
      * - Adds Routes to the RouteCollection.
@@ -275,7 +275,7 @@ class NewsletterPageRoueProviderPlugin extends SprykerShopNewsletterPageRoutePro
     {
         $route = $this->buildRoute('/newsletter/success', 'NewsletterPage', 'Newsletter', 'successAction');
         $routeCollection->add(static::ROUTE_NAME_CUSTOMER_SUBSCRIBE, $route);
-        
+
         $route = $this->buildRoute('/newsletter/unsubscribe', 'NewsletterPage', 'Newsletter', 'unsubscribeAction');
         $routeCollection->add(static::ROUTE_NAME_CUSTOMER_SUBSCRIBE, $route);
 
@@ -290,13 +290,13 @@ A small template for a subscription:
 
 ```html
 {% raw %}{%{% endraw %} extends template('page-layout-main') {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} define data = {
     title: 'newsletter.subscription.success' | trans
 } {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} block pageInfo {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} block content {% raw %}%}{% endraw %}
     <div class="box">
         <h4>{% raw %}{{{% endraw %}data.title{% raw %}}}{% endraw %}</h4>
@@ -310,13 +310,13 @@ And the second one is almost the same:
 
 ```html
 {% raw %}{%{% endraw %} extends template('page-layout-main') {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} define data = {
     title: 'newsletter.unsubscription.success' | trans
 } {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} block pageInfo {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} block content {% raw %}%}{% endraw %}
     <div class="box">
         <h4>{% raw %}{{{% endraw %}data.title{% raw %}}}{% endraw %}</h4>
@@ -495,5 +495,3 @@ $container->extend(self::MAIL_PROVIDER_COLLECTION, function (MailProviderCollect
 
 
 ## API Requests
-
-

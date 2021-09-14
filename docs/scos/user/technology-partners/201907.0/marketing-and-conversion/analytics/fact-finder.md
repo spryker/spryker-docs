@@ -21,6 +21,19 @@ FACT-Finder is a software for online shops. We provide on-site search, navigatio
 FACT-Finder has its own User Management (permissions management) functions that allow you to set the authorizations for various modules at a fine, granular level. In this way, for example, individual users can only manage specific channels or check and maintain the associated configurations.
 This system of permissions is based on roles that provide access to the specific modules. These roles can be allocated to the user directly or indirectly via groups. Groups allow complex roles to be allocated in bulk, without having to assign them individually to each user.
 
+## Related Developer articles
+
+* [Integrating FACT-Finder](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/integrating-fact-finder.html)
+* [Installing and configuring FACT-Finder](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder.html)
+* [Installing and configuring FACT-Finder NG API](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder-ng-api.html)
+* [Installing and configuring FACT-Finder web components](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder-web-components.html)
+* [Using FACT-Finder campaigns](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/using-fact-finder-campaigns.html)
+* [Using FACT-Finder recommendation engine](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/using-fact-finder-recommendation-engine.html)
+* [Using FACT-Finder search](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search.html)
+* [Using FACT-Finder search suggestions](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search-suggestions.html)
+* [Using FACT-Finder tracking](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/using-fact-finder-tracking.html)
+* [Exporting product data for FACT-Finder](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/exporting-product-data-for-fact-finder.html)
+
 ---
 
 ## Copyright and Disclaimer

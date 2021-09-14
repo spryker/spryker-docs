@@ -1,5 +1,5 @@
 ---
-title: FACT-Finder - Integration into project
+title: Integrating FACT-Finder
 description: This article provides details on how to integrate Fact Finder modules into the Spryker project.
 originalLink: https://documentation.spryker.com/2021080/docs/fact-finder-integration-into-project
 originalArticleId: 1bd158d4-9fd7-4a62-9665-577d5347a754
@@ -19,7 +19,7 @@ Make sure, that FactFinder modules were [installed and configured](/docs/scos/de
 
 To use Spryker's FactFinder module in your project:
 
-1. Add a new module to `Pyz\Yves\ namespace` and create a route provider: 
+1. Add a new module to `Pyz\Yves\ namespace` and create a route provider:
 
 ```php
 <?php
@@ -51,13 +51,13 @@ class FactFinderGuiRouteProviderPlugin extends AbstractRouteProviderPlugin
     {
         $route = $this->buildRoute('/factfinder', 'FactFinder', 'Search', 'index');
         $routeCollection->add(static::ROUTE_NAME_FACT_FINDER_SEARCH, $route);
-        
+
         $route = $this->buildRoute('/factfinder/suggestions', 'FactFinder', 'Suggestions', 'index');
-        $routeCollection->add(static::ROUTE_NAME_FACT_FINDER_SEARCH, $route); 
-       
+        $routeCollection->add(static::ROUTE_NAME_FACT_FINDER_SEARCH, $route);
+
         $route = $this->buildRoute('/factfinder/track', 'FactFinder', 'Track', 'index');
         $routeCollection->add(static::ROUTE_NAME_FACT_FINDER_TRACK, $route);
-        
+
         $route = $this->buildRoute('/factfinder/recommendations', 'FactFinder', 'Recommendations', 'index');
         $routeCollection->add(static::ROUTE_FACT_FINDER_RECOMMENDATIONS, $route);
 
@@ -173,4 +173,3 @@ class YourBundleFactory extends AbstractFactory
 
 }
 ```
-

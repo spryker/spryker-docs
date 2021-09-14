@@ -1,5 +1,5 @@
 ---
-title: FACT-Finder integration guide
+title: Integrating FACT-Finder
 description: This article provides details on how to integrate Fact Finder modules into the Spryker project.
 ---
 

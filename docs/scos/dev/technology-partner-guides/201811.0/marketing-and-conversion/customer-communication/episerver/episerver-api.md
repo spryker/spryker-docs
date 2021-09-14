@@ -1,5 +1,5 @@
 ---
-title: Episerver - API Requests
+title: Episerver API
 description: Learn about the API requests for Episerver in Spryker.
 originalLink: https://documentation.spryker.com/2021080/docs/episerver-api-requests
 originalArticleId: 4f75a136-495f-40a9-a75e-156f6adade30
@@ -21,18 +21,18 @@ It sends the request via `\Generated\Shared\Transfer\EpiserverRequestTransfer`
 <transfers xmlns="spryker:transfer-01"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd" >
- 
+
     <transfer name="EpiserverResponse">
         <property name="isSuccessful" type="bool" />
         <property name="status" type="int" />
     </transfer>
- 
+
     <transfer name="EpiserverRequest">
         <property name="authorizationCode" type="string" />
         <property name="operationType" type="string" />
         <property name="payload" type="array" />
     </transfer>
- 
+
 </transfers>
 ```
 

@@ -39,6 +39,7 @@ Make sure that the following modules have been installed:
 | MerchantProductGui        | vendor/spryker/merchant-product-gui         |
 | MerchantProductSearch     | vendor/spryker/merchant-product-search      |
 | MerchantProductStorage    | vendor/spryker/merchant-product-storage     |
+| MerchantProductWidget     | vendor/spryker-shop/merchant-product-widget |
 
 {% endinfo_block %}
 
@@ -103,6 +104,7 @@ Make sure that the following changes have been applied in transfer objects:
 | ProductAbstractMerchant   | object | Created | src/Generated/Shared/Transfer/ProductAbstractMerchantTransfer |
 | MerchantSearchCollection  | object | Created | src/Generated/Shared/Transfer/MerchantSearchCollectionTransfer |
 | MerchantProductStorage    | object | Created | src/Generated/Shared/Transfer/MerchantProductStorageTransfer |
+| MerchantProductView       | object | Created | src/Generated/Shared/Transfer/MerchantProductViewTransfer |
 
 {% endinfo_block %}
 

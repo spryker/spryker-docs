@@ -152,7 +152,6 @@ Add the following configuration:
 </statemachine>
 
 ```
-
 </details>
 
 <details>
@@ -334,7 +333,6 @@ Add the following configuration:
 
 </statemachine>
 ```
-
 </details>
 
 <details>
@@ -368,6 +366,7 @@ Add the following configuration:
     </marketplace>
 </config>
 ```
+</details>
 
 Execute the following command:
 
@@ -381,7 +380,6 @@ Make sure that, in the navigation menu of the Back Office, you can see the **Mar
 
 {% endinfo_block %}
 
-</details>
 
 ### 3) Set up database schema and transfer objects
 
@@ -485,7 +483,6 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
         ];
     }
 }
-
 ```
 
 3. Import data:
@@ -560,7 +557,6 @@ actions:
       filter_criteria:
           <<: *default_filter_criteria
           store_name: [US]
-
 ```
 </details>
 
@@ -884,9 +880,7 @@ class ShipByMerchantMarketplaceOrderItemCommandPlugin extends AbstractTriggerOms
         return static::EVENT_SHIP_BY_MERCHANT;
     }
 }
-
 ```
-
 </details>
 
 <details>
@@ -912,9 +906,7 @@ class CancelMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsEventCom
         return static::EVENT_CANCEL;
     }
 }
-
 ```
-
 </details>
 
 <details>
@@ -943,6 +935,7 @@ class MerchantOmsDependencyProvider extends SprykerMerchantOmsDependencyProvider
     }
 }
 ```
+</details>
 
 {% info_block warningBox "Verification" %}
 
@@ -1037,10 +1030,11 @@ Make sure that the following widgets have been registered by adding the respecti
 {% endinfo_block %}
 
 ## Related features
+
 Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE |INTEGRATION GUIDE |
 | --- | --- | --- |
 | Marketplace Order Management + Order Threshold |  |[Marketplace Order Management + Order Threshold feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-order-threshold-feature-integration.html) |
 | Marketplace Order Management + Cart |  | [Marketplace Order Management + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-cart-feature-integration.html)|
-| Marketplace Inventory Management + Marketplace Order Management |  |  [Marketplace Inventory Management + Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-marketplace-order-management-feature-integration.html)  |
+| Marketplace Inventory Management + Marketplace Order Management |  |  [Marketplace Inventory Management + Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-order-management-feature-integration.html)  |

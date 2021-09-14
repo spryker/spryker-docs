@@ -17,6 +17,7 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ------ | ---------------|
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
 | Order Management | {{page.version}} | [Order Management feature integration](https://documentation.spryker.com/docs/order-management-feature-integration) |
 | State Machine | {{page.version}} | [State Machine feature integration](https://github.com/spryker-feature/state-machine) |
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
@@ -342,6 +343,18 @@ Add the following configuration:
 ```xml
 <?xml version="1.0"?>
 <config>
+    <sales>
+        <pages>
+            <merchant-sales-order>
+                <label>My orders</label>
+                <title>My orders</title>
+                <bundle>merchant-sales-order-merchant-user-gui</bundle>
+                <controller>index</controller>
+                <action>index</action>
+                <visible>1</visible>
+            </merchant-sales-order>
+        </pages>
+    </sales>
     <marketplace>
         <pages>
             <order-list>
@@ -364,7 +377,7 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, in the navigation menu of the Back Office, you can see the **Marketplace->Returns** as well as **Sales->My Returns** menu items.
+Make sure that, in the navigation menu of the Back Office, you can see the **Marketplace->Orders** as well as **Sales->My Orders** menu items.
 
 {% endinfo_block %}
 

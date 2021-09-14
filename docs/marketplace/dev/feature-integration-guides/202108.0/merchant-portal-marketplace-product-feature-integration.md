@@ -59,12 +59,6 @@ Make sure that the following changes have been applied in transfer objects:
 | PriceProductTableCriteria | class | Created | src/Generated/Shared/Transfer/PriceProductTableCriteriaTransfer |
 | PriceProductTableViewCollection | class | Created | src/Generated/Shared/Transfer/PriceProductTableViewCollectionTransfer |
 | PriceProductTableView | class | Created | src/Generated/Shared/Transfer/PriceProductTableViewTransfer |
-| PriceProduct.stocks | property | Created | src/Generated/Shared/Transfer/PriceProductTransfer |
-| ProductManagementAttributeCollection | class | Created | src/Generated/Shared/Transfer/ProductManagementAttributeCollectionTransfer |
-| ProductManagementAttribute | class | Created | src/Generated/Shared/Transfer/ProductManagementAttributeTransfer |
-| Merchant | class | Created | src/Generated/Shared/Transfer/MerchantTransfer |
 | MerchantUser.merchant | property | Created | src/Generated/Shared/Transfer/MerchantUserTransfer |
-| StockProduct | class | Created | src/Generated/Shared/Transfer/StockProductTransfer |
-| ReservationRequest | class | Created | src/Generated/Shared/Transfer/ReservationRequestTransfer |
 
 {% endinfo_block %}

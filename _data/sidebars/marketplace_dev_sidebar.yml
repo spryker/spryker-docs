@@ -188,6 +188,9 @@ entries:
               - title: "Glue API: Marketplace Product feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-feature-integration.html
 
+              - title: "Glue API: Marketplace Product + Cart feature integration"
+                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-cart-feature-integration.html
+
               - title: "Glue API: Marketplace Product Offer feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-feature-integration.html
 

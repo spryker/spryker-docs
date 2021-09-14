@@ -37,3 +37,12 @@ Make sure that the following modules have been installed:
 | MerchantProfileMerchantPortalGui | vendor/spryker/merchant-profile-merchant-portal-gui |
 
 {% endinfo_block %}
+
+
+### 2) Add translations
+
+Generate a new translation cache for Zed:
+
+```bash
+console translator:generate-cache
+```

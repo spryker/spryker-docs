@@ -1,6 +1,6 @@
 ---
 title: Marketplace Merchant Portal Product Offer Management feature integration
-last_updated: Jan 05, 2021
+last_updated: Sep 14, 2021
 description: This integration guide provides steps on how to integrate the Marketplace Merchant Portal Product Offer Management feature into a Spryker project.
 template: feature-integration-guide-template
 ---
@@ -13,10 +13,11 @@ To start feature integration, integrate the required features:
 
 | NAME  | VERSION | INTEGRATION GUIDE |
 | --------------- | --------- | ------------|
-| Marketplace Product Offer        | dev-master  | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html)
-| Marketplace Merchant Portal Core | dev-master  | [Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-core-feature-integration.html)
+| Marketplace Product Offer        | {{page.version}}  | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html)
+| Marketplace Merchant Portal Core | {{page.version}}  | [Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-core-feature-integration.html)
 
-## 1) Install the required modules using Composer
+
+### 1) Install the required modules using Composer
 
 Install the required modules:
 
@@ -34,7 +35,8 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-## 2) Set up transfer objects
+
+### 2) Set up transfer objects
 
 Generate transfer changes:
 
@@ -48,71 +50,43 @@ Make sure that the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE  | EVENT   | PATH |
 | ------------- | ---- | ------ |---------------- |
-| ProductOfferTableCriteria  | class | Created | src/Generated/Shared/Transfer/ProductOfferTableCriteriaTransfer |
-| ProductOfferCollection.pagination  | property | Created | src/Generated/Shared/Transfer/ProductOfferCollectionTransfer |
-| ProductConcrete.numberOfOffers  | property | Created | src/Generated/Shared/Transfer/ProductConcreteTransfer |
-| ProductConcrete.productOfferStock  | property | Created | src/Generated/Shared/Transfer/ProductConcreteTransfer |
-| ProductOffer.productImages  | property | Created | src/Generated/Shared/Transfer/ProductOfferTransfer |
-| ProductOffer.productLocalizedAttributes  | property | Created | src/Generated/Shared/Transfer/ProductOfferTransfer |
-| ProductOffer.productAttributes  | property | Created | src/Generated/Shared/Transfer/ProductOfferTransfer |
-| ProductOffer.createdAt  | property | Created | src/Generated/Shared/Transfer/ProductOfferTransfer |
-| ProductOffer.updatedAt  | property | Created | src/Generated/Shared/Transfer/ProductOfferTransfer |
-| ProductOfferCriteria.merchantIds  | property | Created | src/Generated/Shared/Transfer/ProductOfferTransfer |
-| MerchantStockCriteria.merchantReference  | property | Created | src/Generated/Shared/Transfer/MerchantStockCriteriaTransfer |
-| MerchantProductOfferCounts  | class | Created | src/Generated/Shared/Transfer/MerchantProductOfferCountsTransfer |
-| Item.merchantSku  | property | Created | src/Generated/Shared/Transfer/ItemTransfer |
-| PriceProductOfferTableCriteria  | class | Created | src/Generated/Shared/Transfer/PriceProductOfferTableCriteriaTransfer |
-| PriceProductOfferTableViewCollection  | class | Created | src/Generated/Shared/Transfer/PriceProductOfferTableViewCollectionTransfer |
-| PriceProductOfferTableView  | class | Created | src/Generated/Shared/Transfer/PriceProductOfferTableViewTransfer |
-| PriceProductOfferCriteria.volumeQuantities  | property | Created | src/Generated/Shared/Transfer/PriceProductOfferCriteriaTransfer |
+| Item.merchantSku | property | Created | src/Generated/Shared/Transfer/ItemTransfer |
+| MerchantProductOfferCounts | class | Created | src/Generated/Shared/Transfer/MerchantProductOfferCountsTransfer |
+| MerchantStockCriteria.merchantReference | property | Created | src/Generated/Shared/Transfer/MerchantStockCriteriaTransfer |
+| PriceProductOfferCriteria.volumeQuantities | property | Created | src/Generated/Shared/Transfer/PriceProductOfferCriteriaTransfer |
+| PriceProductOfferTableCriteria | class | Created | src/Generated/Shared/Transfer/PriceProductOfferTableCriteriaTransfer |
+| PriceProductOfferTableView | class | Created | src/Generated/Shared/Transfer/PriceProductOfferTableViewTransfer |
+| PriceProductOfferTableViewCollection | class | Created | src/Generated/Shared/Transfer/PriceProductOfferTableViewCollectionTransfer |
+| ProductConcrete.numberOfOffers | property | Created | src/Generated/Shared/Transfer/ProductConcreteTransfer |
+| ProductConcrete.productOfferStock | property | Created | src/Generated/Shared/Transfer/ProductConcreteTransfer |
+| ProductOffer.createdAt | property | Created | src/Generated/Shared/Transfer/ProductOfferTransfer |
+| ProductOffer.productAttributes | property | Created | src/Generated/Shared/Transfer/ProductOfferTransfer |
+| ProductOffer.productImages | property | Created | src/Generated/Shared/Transfer/ProductOfferTransfer |
+| ProductOffer.productLocalizedAttributes | property | Created | src/Generated/Shared/Transfer/ProductOfferTransfer |
+| ProductOffer.updatedAt | property | Created | src/Generated/Shared/Transfer/ProductOfferTransfer |
+| ProductOfferCollection.pagination | property | Created | src/Generated/Shared/Transfer/ProductOfferCollectionTransfer |
+| ProductOfferCriteria.merchantIds | property | Created | src/Generated/Shared/Transfer/ProductOfferTransfer |
+| ProductOfferTableCriteria | class | Created | src/Generated/Shared/Transfer/ProductOfferTableCriteriaTransfer |
+| ProductTableCriteria.filterHasOffers | property | Created | src/Generated/Shared/Transfer/ProductTableCriteriaTransfer |
+| ProductTableCriteria.merchantReference | property | Created | src/Generated/Shared/Transfer/ProductTableCriteriaTransfer |
 
 {% endinfo_block %}
 
-## 3) Set up behavior
 
-To set up behavior, take the following steps.
+### 3) Add translations
 
-### Extend OrderItemsTable in SalesMerchantPortalGui
+Generate a new translation cache for Zed:
 
-Activate the following plugins:
-
-| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE |
-| --------------- | ------------ | ----------- | ------------ |
-| ProductOfferMerchantOrderItemTableExpanderPlugin | Adds `merchantReference` and `ProductOfferSku` to Sales tables in the `MerchantPortal`. | Marketplace Sales Merchant Portal integrated | Spryker\Zed\ProductOfferMerchantPortalGui\Communication\Plugin\SalesMerchantPortalGui |
-
-**src/Pyz/Zed/SalesMerchantPortalGui/SalesMerchantPortalGuiDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\SalesMerchantPortalGui;
-
-use Spryker\Zed\ProductOfferMerchantPortalGui\Communication\Plugin\SalesMerchantPortalGui\ProductOfferMerchantOrderItemTableExpanderPlugin;
-use Spryker\Zed\SalesMerchantPortalGui\SalesMerchantPortalGuiDependencyProvider as SprykerSalesMerchantPortalGuiDependencyProvider;
-
-class SalesMerchantPortalGuiDependencyProvider extends SprykerSalesMerchantPortalGuiDependencyProvider
-{
-    /**
-     * @return \Spryker\Zed\SalesMerchantPortalGuiExtension\Dependency\Plugin\MerchantOrderItemTableExpanderPluginInterface[]
-     */
-    protected function getMerchantOrderItemTableExpanderPlugins(): array
-    {
-        return [
-            new ProductOfferMerchantOrderItemTableExpanderPlugin(),
-        ];
-    }
-}
+```bash
+console translator:generate-cache
 ```
 
-{% info_block warningBox "Verification" %}
 
-Make sure that the `ProductOfferMerchantOrderItemTableExpanderPlugin` is set up by opening `http://zed.mysprykershop.com/sales-merchant-portal-gui/orders`. Click on any of the orders and check that the *Merchant Reference* and *Product Offer SKU* are present.
+### 4) Set up behavior
 
-{% endinfo_block %}
+To set up behavior:
 
-### Add the Offer widget to MerchantDashobard
-
-Activate the following plugins:
+1. Enable the following behaviors by registering the plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE  |
 | ---------------- | ------------- | --------- | ---------------- |
@@ -146,3 +120,12 @@ class DashboardMerchantPortalGuiDependencyProvider extends SprykerDashboardMerch
 Make sure that the `OffersMerchantDashboardCardPlugin` plugin is set up by opening `http://zed.mysprykershop.com/dashboard-portal-gui`. The Offers widget should show up on the page.
 
 {% endinfo_block %}
+
+
+## Related features
+
+Integrate the following related features:
+
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE |INTEGRATION GUIDE |
+| --- | --- | --- |
+| Marketplace Merchant Portal Product Offer Management + Merchant Portal Sales Management |  |[Marketplace Merchant Portal Product Offer Management + Merchant Portal Sales Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-product-offer-management-merchant-portal-sales-management-feature-integration.html) |

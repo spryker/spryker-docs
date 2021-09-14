@@ -223,10 +223,10 @@ Add the following configuration:
 
         <events>
             <event name="initiate" onEnter="true"/>
-            <event name="ship" manual="true" command="DummyMarketplacePayment/ShipOrderItem"/>
-            <event name="deliver" manual="true" command="DummyMarketplacePayment/DeliverOrderItem"/>
+            <event name="ship" manual="true" command="MarketplaceOrder/ShipOrderItem"/>
+            <event name="deliver" manual="true" command="MarketplaceOrder/DeliverOrderItem"/>
             <event name="close"/>
-            <event name="cancel by merchant" manual="true"/>
+            <event name="cancel by merchant" manual="true" command="MarketplaceOrder/CancelOrderItem"/>
         </events>
 
     </process>
@@ -631,6 +631,9 @@ Enable the following behaviors by registering the plugins:
 | MerchantReferencesOrderExpanderPlugin  |Expands order with merchant references from order items  | |	Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Sales  |
 | MerchantReferenceShipmentExpenseExpanderPlugin | Expands expense transfer with merchant reference from items | | Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Shipment |
 | ProductOfferReferenceOrderItemExpanderPreSavePlugin |Expands order item with product offer reference before saving the order item to the database  | | Spryker\Zed\ProductOfferSales\Communication\Plugin\Sales |
+| DeliverMarketplaceOrderItemCommandPlugin | Triggers 'deliver' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
+| ShipByMerchantMarketplaceOrderItemCommandPlugin | Triggers 'ship by merchant' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
+| CancelMarketplaceOrderItemCommandPlugin | Triggers 'ship by merchant' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/MerchantOmsCommunicationFactory.php</summary>
@@ -835,6 +838,111 @@ class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
 
 ```
 </details>
+
+<details>
+<summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/DeliverMarketplaceOrderItemCommandPlugin.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantOms\Communication\Plugin\Oms;
+
+class DeliverMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsEventCommandPlugin
+{
+    protected const EVENT_DELIVER = 'deliver';
+
+    /**
+     * @return string
+     */
+    public function getEventName(): string
+    {
+        return static::EVENT_DELIVER;
+    }
+}
+
+```
+
+</details>
+
+<details>
+<summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/ShipByMerchantMarketplaceOrderItemCommandPlugin.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantOms\Communication\Plugin\Oms;
+
+class ShipByMerchantMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsEventCommandPlugin
+{
+    protected const EVENT_SHIP_BY_MERCHANT = 'ship by merchant';
+
+    /**
+     * @return string
+     */
+    public function getEventName(): string
+    {
+        return static::EVENT_SHIP_BY_MERCHANT;
+    }
+}
+
+```
+
+</details>
+
+<details>
+<summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/CancelMarketplaceOrderItemCommandPlugin.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantOms\Communication\Plugin\Oms;
+
+class CancelMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsEventCommandPlugin
+{
+    /**
+     * @var string
+     */
+    protected const EVENT_CANCEL = 'cancel';
+
+    /**
+     * @return string
+     */
+    public function getEventName(): string
+    {
+        return static::EVENT_CANCEL;
+    }
+}
+
+```
+
+</details>
+
+<details>
+<summary markdown='span'>src/Pyz/Zed/MerchantOms/MerchantOmsDependencyProvider.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantOms;
+
+use Pyz\Zed\MerchantOms\Communication\Plugin\Oms\CancelMarketplaceOrderItemCommandPlugin;
+use Pyz\Zed\MerchantOms\Communication\Plugin\Oms\DeliverMarketplaceOrderItemCommandPlugin;
+use Pyz\Zed\MerchantOms\Communication\Plugin\Oms\ShipByMerchantMarketplaceOrderItemCommandPlugin;
+use Spryker\Zed\Kernel\Container;
+use Spryker\Zed\MerchantOms\MerchantOmsDependencyProvider as SprykerMerchantOmsDependencyProvider;
+
+class MerchantOmsDependencyProvider extends SprykerMerchantOmsDependencyProvider
+{
+    protected function getStateMachineCommandPlugins(): array
+    {
+        return [
+            'MarketplaceOrder/ShipOrderItem' => new ShipByMerchantMarketplaceOrderItemCommandPlugin(),
+            'MarketplaceOrder/DeliverOrderItem' => new DeliverMarketplaceOrderItemCommandPlugin(),
+            'MarketplaceOrder/CancelOrderItem' => new CancelMarketplaceOrderItemCommandPlugin(),
+        ];
+    }
+}
+```
 
 {% info_block warningBox "Verification" %}
 

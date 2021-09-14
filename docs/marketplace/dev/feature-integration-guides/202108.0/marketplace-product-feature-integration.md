@@ -126,11 +126,11 @@ Enable the following behaviors by registering the plugins:
 | MerchantProductAbstractMapExpanderPlugin                     | Adds merchant names to product abstract search data.         |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
 | MerchantProductPageDataExpanderPlugin                        | Expands the provided ProductAbstractPageSearch transfer object's data by merchant names. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
 | MerchantProductPageDataLoaderPlugin                          | Expands ProductPageLoadTransfer object with merchant data.   |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
-| Merchant\MerchantProductSearchWritePublisherPlugin           | Publish the product by merchant ids to ES. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher |
-| MerchantProduct\MerchantProductSearchWritePublisherPlugin    | Publish the product by merchant product abstract ids to ES. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher |
+| Merchant\MerchantProductSearchWritePublisherPlugin           | Publishes the product by merchant ids to ES. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher |
+| MerchantProduct\MerchantProductSearchWritePublisherPlugin    | Publishes the product by merchant product abstract ids to ES. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher |
 | MerchantProductAbstractStorageExpanderPlugin                 | Expands product abstract storage data with merchant references. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\ProductStorage |
-| MerchantUpdatePublisherPlugin                                | Publish the product by merchant ids to Redis. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\Merchant |
-| MerchantProductWritePublisherPlugin                          | Publish the product by merchant product abstract ids to Redis. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\MerchantProduct |
+| MerchantUpdatePublisherPlugin                                | Publishes the product by merchant ids to Redis. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\Merchant |
+| MerchantProductWritePublisherPlugin                          | Publishes the product by merchant product abstract ids to Redis. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\MerchantProduct |
 | MerchantProductProductAbstractPostCreatePlugin | Creates a new merchant product abstract entity if `ProductAbstractTransfer.idMerchant` is set. | None | Spryker\Zed\MerchantProduct\Communication\Plugin\Product |
 
 **src/Pyz/Zed/Product/ProductDependencyProvider.php**
@@ -267,7 +267,7 @@ Make sure the `de_page` Elasticsearch index for any product that belongs (see `s
 
 {% endinfo_block %}
 
-**src/Pyz/Zed/Publisher/PublisherDependencyProvider**
+**src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
 ```php
 <?php

@@ -1,12 +1,11 @@
 ---
 title: Rules and scopes
-last_updated: Sep 13, 2021
+last_updated: Sep 14, 2021
 template: concept-topic-template
 ---
 
-# Technical description
 The functionality of this module based on such fundamental concepts as Rule and Configuration.
-It is very important to understand that the rule tied to the user (more precisely to the user roles) and determines his rights regarding the entity.
+It is very important to understand that the rule tied to the user (more precisely to the user roles) and determines user rights regarding the entity.
 The configuration is common for the entire system and determines such things as the rules for inheriting one entity from another, default entity permissions, segmentation settings, etc.
 
 ## Rule
@@ -23,7 +22,7 @@ The rule is an entry in the `spy_acl_entity_rule` table.
 | permission_mask | An integer representation of the binary permission mask. The permission mask concept  is described below. | 1, 4, 5, 15 |
 | scope | There are 3 types of rules: Global, Segment and Inherited. Their features and differences are described below | 0, 1, 2 |
 
-### Scope
+## Scope
 The concept of scopes is very flexible. It allows you to create any rules to suit the needs of your system. For example:
 - Grant read-only access to "All Products"
 - Grant read-write access to "All Products"
@@ -34,9 +33,16 @@ The concept of scopes is very flexible. It allows you to create any rules to sui
 - Grant read access to "All Shipments that are connected to Orders of Merchant VideoKing"
 - Grant read-write for "Products that have  prices >= 1000$" and read-only for "All Products"
 
-As mentioned above, there are 3 types of scopes: `global`, `segment` and `inherited`. Let's overview them one by one
+As mentioned above, there are 3 types of scopes: `global`, `segment` and `inherited`.
+In the database layer scope represented as enum
 
-#### Global
+| Scope | Database value |
+|-----|-----|
+| global | 0 |
+| segment | 1 |
+| inherited | 2 |
+
+### Global
 ![Global scope](https://confluence-connect.gliffy.net/embed/image/61268adb-9b3c-46f4-a83c-ed5862420298.png?utm_medium=live&utm_source=custom)
 
 The global scope rules applied globally to the entire collection of specified entities.
@@ -59,7 +65,7 @@ Query after Persistence ACL
 SELECT * FROM `spy_sales_order` ORDER BY `updated_at` DESC;
 ```
 
-#### Segment
+### Segment
 ![Segment scope](https://confluence-connect.gliffy.net/embed/image/bf400b2a-6872-479c-a3df-e4686894eace.png?utm_medium=live&utm_source=custom)
 
 The segment rules allow you to grant permissions to subset records of the same type.
@@ -106,7 +112,7 @@ FROM `spy_sales_order`
 ORDER BY `spy_sales_order`.`updated_at` DESC;
 ```
 
-#### Inherited
+### Inherited
 ![Inherited scope](https://confluence-connect.gliffy.net/embed/image/e473a9ca-2eb7-481d-b0c4-72d2563ec466.png?utm_medium=live&utm_source=custom)
 Inherited scope rules used when you need to grant access to an entity (child) that inherits from another entity (parent).
 Here are some examples of inheritance:
@@ -186,7 +192,7 @@ That is why a user with such set of roles and rules will be able to
 - Perform CRUD actions for products in the DE store
 - Read only for products in the US store
 
-#### Default rule
+### Default rule
 
 When a user performs any operations with an entity for which he has no rules, the default rule triggered.
 The default rule can be configured both in the context of a specific class and in a general context.
@@ -195,7 +201,7 @@ This feature is especially in demand when the Persistence ACL module connected t
 Thus, you can define such publicly available entities as `Country`, `Currency`, `Region`, etc.
 The configuration of the default rule described in the configuration section.
 
-### Composite entity
+## Composite entity
 
 ![Composite entity](https://confluence-connect.gliffy.net/embed/image/e57de4b7-b231-4e9b-8e5f-7cf64ed78874.png?utm_medium=live&utm_source=custom)
 
@@ -242,7 +248,7 @@ FROM `spy_merchant_profile`
       AND `spy_acl_entity_segment_merchant`.`fk_acl_entity_segment` IN (18)); 
 ```
 
-### Permission mask
+## Permission mask
 Permission mask (`spy_acl_entity_rule.permission_mask)` is a binary representation of the operations that this rule allows.
 Each CRUD operation has its own binary mask.
 

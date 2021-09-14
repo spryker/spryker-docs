@@ -1,6 +1,6 @@
 ---
 title: Configuration
-last_updated: Sep 13, 2021
+last_updated: Sep 14, 2021
 template: concept-topic-template
 ---
 
@@ -13,8 +13,8 @@ All you need is create a plugin and implement `\Spryker\Zed\AclEntityExtension\D
 
 | property | type | description |
 |-----|-----|-----|
-| aclEntityMetadataCollection | `\Generated\Shared\Transfer\AclEntityMetadataCollectionTransfer` |                                                                                                                             | 
-| aclEntityAllowList | string[] | The set of classes that this module does not apply to (even if the user has rules for an entity that is in the allow list). |
+| aclEntityMetadataCollection | `\Generated\Shared\Transfer\AclEntityMetadataCollectionTransfer` | The collection of configurations for different entities. |                                                                                                                           | 
+| aclEntityAllowList | string[] | The set of fully qualified classes that this module does not apply to (even if the user has rules for an entity that is in the allow list). |
 
 `\Generated\Shared\Transfer\AclEntityMetadataCollectionTransfer`
 
@@ -27,7 +27,7 @@ All you need is create a plugin and implement `\Spryker\Zed\AclEntityExtension\D
 | property | type | description |
 |-----|-----|-----|
 | parent | `\Generated\Shared\Transfer\AclEntityParentMetadataTransfer` | This property is used to configure inheritance. Required for entity which has rules with inherited scope, or for composite entity. |
-| entityName | string | |
+| entityName | string | Fully qualified class name of configured entity |
 | hasSegmentTable | bool | Sets if configured entity supports segmentation (data slicing). |
 | defaultGlobalOperationMask | int | Sets the default binary access mask. |
 | isSubentity | bool | Indicates whether the configured entity is part of a composite object. |
@@ -37,7 +37,7 @@ All you need is create a plugin and implement `\Spryker\Zed\AclEntityExtension\D
 | property | type | description |
 |-----|-----|-----|
 | connection | `\Generated\Shared\Transfer\AclEntityParentConnectionMetadata` | This property is used to set up the relationship between the current class and the parent. |
-| entityName | string | |
+| entityName | string | Fully qualified class name of parent entity |
 
 Sometimes the links between the child and parent tables established not through foreign keys, but using so-called "reference columns".
 There is a `\Generated\Shared\Transfer\AclEntityParentConnectionMetadataTransfer` to cover such a case.
@@ -90,34 +90,6 @@ There is a `\Generated\Shared\Transfer\AclEntityParentConnectionMetadataTransfer
             SpyStore::class,
             (new AclEntityMetadataTransfer())
                 ->setEntityName(SpyStore::class)
-        );
-        
-        return $aclEntityMetadataConfigTransfer;
-    }
-```
-
-### Default operation mask
-```php
-    /**
-     * @param \Generated\Shared\Transfer\AclEntityMetadataConfigTransfer $aclEntityMetadataConfigTransfer
-     *
-     * @return \Generated\Shared\Transfer\AclEntityMetadataConfigTransfer
-     */
-    public function expand(AclEntityMetadataConfigTransfer $aclEntityMetadataConfigTransfer): AclEntityMetadataConfigTransfer 
-    {
-        $aclEntityMetadataConfigTransfer->getAclEntityMetadataCollectionOrFail()->addAclEntityMetadata(
-            SpyCountry::class,
-            (new AclEntityMetadataTransfer())
-                ->setEntityName(SpyProduct::class)
-                ->setDefaultGlobalOperationMask(AclEntityConstants::OPERATION_MASK_READ)
-        );
-         $aclEntityMetadataConfigTransfer->getAclEntityMetadataCollectionOrFail()->addAclEntityMetadata(
-            SpyResetPassword::class,
-            (new AclEntityMetadataTransfer())
-                ->setEntityName(SpyResetPassword::class)
-                ->setDefaultGlobalOperationMask(
-                    AclEntityConstants::OPERATION_MASK_CREATE | AclEntityConstants::OPERATION_MASK_READ
-                )
         );
         
         return $aclEntityMetadataConfigTransfer;
@@ -218,6 +190,34 @@ There is a `\Generated\Shared\Transfer\AclEntityParentConnectionMetadataTransfer
             (new AclEntityMetadataTransfer())
                 ->setEntityName(SpyMerchant::class)
                 ->setHasSegmentTable(true)
+        );
+        
+        return $aclEntityMetadataConfigTransfer;
+    }
+```
+
+### Default operation mask
+```php
+    /**
+     * @param \Generated\Shared\Transfer\AclEntityMetadataConfigTransfer $aclEntityMetadataConfigTransfer
+     *
+     * @return \Generated\Shared\Transfer\AclEntityMetadataConfigTransfer
+     */
+    public function expand(AclEntityMetadataConfigTransfer $aclEntityMetadataConfigTransfer): AclEntityMetadataConfigTransfer 
+    {
+        $aclEntityMetadataConfigTransfer->getAclEntityMetadataCollectionOrFail()->addAclEntityMetadata(
+            SpyCountry::class,
+            (new AclEntityMetadataTransfer())
+                ->setEntityName(SpyProduct::class)
+                ->setDefaultGlobalOperationMask(AclEntityConstants::OPERATION_MASK_READ)
+        );
+         $aclEntityMetadataConfigTransfer->getAclEntityMetadataCollectionOrFail()->addAclEntityMetadata(
+            SpyResetPassword::class,
+            (new AclEntityMetadataTransfer())
+                ->setEntityName(SpyResetPassword::class)
+                ->setDefaultGlobalOperationMask(
+                    AclEntityConstants::OPERATION_MASK_CREATE | AclEntityConstants::OPERATION_MASK_READ
+                )
         );
         
         return $aclEntityMetadataConfigTransfer;

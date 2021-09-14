@@ -1,6 +1,6 @@
 ---
 title: Execution flow
-last_updated: Sep 13, 2021
+last_updated: Sep 14, 2021
 template: concept-topic-template
 ---
 ## Query processing flow
@@ -27,7 +27,6 @@ Scope priority
 You can see that rules with a global scoped have the highest priority, and rules with a segment scoped have the lowest priority.
 
 ### Example of select query
-
 ```php
 use Orm\Zed\Merchant\Persistence\Map\SpyMerchantTableMap;
 use Orm\Zed\Merchant\Persistence\SpyMerchantQuery;
@@ -48,7 +47,7 @@ id_acl_entity_rule | fk_acl_entity_segment | fk_acl_role | entity | permission_m
 | 6 | 138 | 15 | `Orm\Zed\Merchant\Persistence\SpyMerchant` | 1 | 1 |
 
 The rules with id `1`, `3`, `4` filtered out because they belong not to `Orm\Zed\Merchant\Persistence\SpyMerchant`.
-The rules with id `5` filtered out because it doesn't relate to query operation (query has read operation, but rule configured for `create` and `update` actions).
+The rules with id `5` filtered out because it doesn't relate to query operation (query has `read` operation, but rule configured for `create` and `update` actions).
 Only the rules with id `2` and `6` will be considered for the given query. Both of them have `segment` scope.
 Persistence ACL modifies the query in such a way that only those records to which the user has rights will be returned:
 

@@ -20,4 +20,4 @@ To learn more about the feature and to find out how end users use it, see [Marke
 
 |INTEGRATION GUIDES  |DATA IMPORT  |
 |---------|---------|
-|<!---LINK TO IG-->     |[File details: merchant product option group](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-option-group.html)       |
+|<!---LINK TO IG-->     |[File details: merchant product option group](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-option-group.csv.html)       |

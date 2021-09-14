@@ -41,6 +41,7 @@ Make sure that the following modules have been installed:
 | ZedUi  | vendor/spryker/zed-ui |
 | GuiTable | vendor/spryker/gui-table |
 | UserMerchantPortalGui | vendor/spryker/user-merchant-portal-gui |
+| UserMerchantPortalGuiExtension | spryker/user-merchant-portal-gui-extension |
 
 {% endinfo_block %}
 
@@ -551,5 +552,147 @@ The following page should now show the login page for MerchantPortal: `https://y
 {% info_block warningBox "Verification" %}
 
 Make sure the following pages do not open `https://your-merchant-portal.domain/security-gui/login`, `https://your-merchant-portal.domain/`
+
+{% endinfo_block %}
+
+### 4) Register UserMerchantPortalGui in ACL
+
+Add bundle `'user-merchant-portal-gui'` to installer rules:
+
+
+**src/Pyz/Zed/Acl/AclConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Acl;
+
+use Spryker\Shared\Acl\AclConstants;
+use Spryker\Zed\Acl\AclConfig as SprykerAclConfig;
+
+class AclConfig extends SprykerAclConfig
+{
+    /**
+     * @param string[][] $installerRules
+     *
+     * @return string[][]
+     */
+    protected function addMerchantPortalInstallerRules(array $installerRules): array
+    {
+        $bundleNames = [
+            'user-merchant-portal-gui',
+        ];
+
+        foreach ($bundleNames as $bundleName) {
+            $installerRules[] = [
+                'bundle' => $bundleName,
+                'controller' => AclConstants::VALIDATOR_WILDCARD,
+                'action' => AclConstants::VALIDATOR_WILDCARD,
+                'type' => static::RULE_TYPE_DENY,
+                'role' => AclConstants::ROOT_ROLE,
+            ];
+        }
+
+        return $installerRules;
+    }
+}
+```
+
+**src/Pyz/Zed/MerchantUser/MerchantUserConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantUser;
+
+use Generated\Shared\Transfer\RuleTransfer;
+use Spryker\Zed\MerchantUser\MerchantUserConfig as SprykerMerchantUserConfig;
+
+class MerchantUserConfig extends SprykerMerchantUserConfig
+{
+    /**
+     * @return \Generated\Shared\Transfer\RuleTransfer[]
+     */
+    protected function getAllowedBundlesAclRules(): array
+    {
+        $bundleNames = [
+            'user-merchant-portal-gui',
+        ];
+
+        $ruleTransfers = [];
+        
+        foreach ($bundleNames as $bundleName) {
+            $ruleTransfers[] = (new RuleTransfer())
+                ->setBundle($bundleName)
+                ->setController(static::RULE_VALIDATOR_WILDCARD)
+                ->setAction(static::RULE_VALIDATOR_WILDCARD)
+                ->setType(static::RULE_TYPE_ALLOW);
+        }
+
+        return $ruleTransfers;
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that after executing `console setup:init-db`, the `'user-merchant-portal-gui'` rule is present in the `spy_acl_rule` table.
+
+{% endinfo_block %}
+
+### 5) Update navigation
+
+Remove the Logout button from the `navigation.xml`
+
+**config/Zed/navigation.xml**
+
+```xml
+<?xml version="1.0"?>
+<config>
+<!-- To be removed: -->
+    <security-merchant-portal-gui>
+        <label>Logout</label>
+        <title>Logout</title>
+        <icon>logout</icon>
+        <bundle>security-merchant-portal-gui</bundle>
+        <controller>logout</controller>
+        <action>index</action>
+    </security-merchant-portal-gui>
+</config>
+```
+
+Add MyAccount and Logout section to `navigation-secondary.xml`:
+
+**config/Zed/navigation-secondary.xml**
+
+```xml
+<?xml version="1.0"?>
+<config>
+    <my-account>
+        <label>My Account</label>
+        <title>My Account</title>
+        <bundle>user-merchant-portal-gui</bundle>
+        <controller>my-account</controller>
+        <action>index</action>
+    </my-account>
+    <logout>
+        <label>Logout</label>
+        <title>Logout</title>
+        <bundle>security-merchant-portal-gui</bundle>
+        <controller>logout</controller>
+        <action>index</action>
+        <type>danger</type>
+    </logout>
+</config>
+```
+
+Execute the following command:
+```bash
+console navigation:build-cache
+```
+
+{% info_block warningBox "Verification" %}
+
+Log in to the **Merchant Portal** and make sure that the MyAccount and Logout button are visible in the overlay of the secondary navigation, when clicking on the profile picture.
 
 {% endinfo_block %}

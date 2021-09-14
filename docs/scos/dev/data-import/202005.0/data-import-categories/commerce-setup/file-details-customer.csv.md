@@ -7,7 +7,7 @@ redirect_from:
   - /v5/docs/en/file-details-customercsv
 ---
 
-This article contains content of the **customer.csv** file to configure [Customer](/docs/scos/dev/features/202005.0/customer-relationship-management-crm/customer-relationship-management-crm.html) information on your Spryker Demo Shop.
+This article contains content of the **customer.csv** file to configure [Customer](/docs/scos/user/features/{{page.version}}/customer-relationship-management-crm/customer-relationship-management-crm.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:

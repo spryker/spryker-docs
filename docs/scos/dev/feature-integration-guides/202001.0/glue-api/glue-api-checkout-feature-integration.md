@@ -157,7 +157,7 @@ Make sure that the following endpoint is available: `http://glue.mysprykershop.c
 }
 ```
 
-For more details, see [Updating Payment Data](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-api-storefront-guides/checking-out-purchases-and-getting-checkout-data.html#updating-payment-data).
+For more details, see [Updating Payment Data](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out-purchases-and-getting-checkout-data.html#updating-payment-data).
 
 #### Configure mapping
 Mappers should be configured on the project level in order to map the data from the request to `QuoteTransfer`:

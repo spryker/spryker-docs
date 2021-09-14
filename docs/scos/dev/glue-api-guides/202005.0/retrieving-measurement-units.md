@@ -8,7 +8,7 @@ redirect_from:
   - /v5/docs/en/retrieving-measurement-units
 ---
 
-The Measurement Units API together with the [Measurement Units](/docs/scos/dev/features/202005.0/packaging-and-measurement-units/measurement-units/measurement-units-feature-overview.html) feature allows selling products in any measurement units configured in your shop. 
+The Measurement Units API together with the [Measurement Units](/docs/scos/user/features/{{page.version}}/packaging-and-measurement-units/measurement-units/measurement-units-feature-overview.html) feature allows selling products in any measurement units configured in your shop. 
 
 ## Installation 
 
@@ -65,11 +65,11 @@ Response sample:
 
 You can use the measurement units resource as follows:
 
-*  Retrieve information about a concrete product, including all the measurement units defined for it - [Retrieve Concrete Products](/docs/scos/dev/glue-api-guides/202005.0/managing-products/retrieving-product-information.html#retrieve-concrete-products).
-* Retrieve sales unit of a product - [Retrieve Sales Units](/docs/scos/dev/glue-api-guides/202005.0/managing-products/retrieving-product-information.html#retrieve-sales-units)
-*  Add items to carts and retrieve information about them with the amount of cart items defined in product measurement units - [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-carts-of-registered-users.html).
-* Add items to guest carts and retrieve information about them with the amount of cart items defined in product measurement units - [Managing Guest Carts](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-guest-carts.html).
-* Retrieve information about items in an order with the amount of order items defined in product measurement units - [Retrieving an Order](/docs/scos/dev/glue-api-guides/202005.0/retrieving-customers-order-history.html#retrieving-an-order).
+*  Retrieve information about a concrete product, including all the measurement units defined for it - [Retrieve Concrete Products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-information.html#retrieve-concrete-products).
+* Retrieve sales unit of a product - [Retrieve Sales Units](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-information.html#retrieve-sales-units)
+*  Add items to carts and retrieve information about them with the amount of cart items defined in product measurement units - [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html).
+* Add items to guest carts and retrieve information about them with the amount of cart items defined in product measurement units - [Managing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html).
+* Retrieve information about items in an order with the amount of order items defined in product measurement units - [Retrieving an Order](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/retrieving-customer-orders.html#retrieving-an-order).
 
 
 

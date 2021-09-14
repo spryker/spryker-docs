@@ -10,7 +10,7 @@ redirect_from:
 ## Upgrading from Version 7.* to Version 8.*
 With this version of the Search module we have migrated to Elasticsearch 5.6. Please read the [Elasticsearch Breaking Changes in 5.0](https://www.elastic.co/guide/en/elasticsearch/reference/5.5/breaking-changes-5.0.html) official documentation to adjust your custom implementation accordingly.
                 
-Your development environment needs to be updated with Elasticsearch 5.6.x. In case you are using the Spryker DevVM, you can download the latest release that provides the necessary services. Follow our [Installation Guide](/docs/scos/dev/developer-guides/201907.0/developer-getting-started-guide.html) for detailed instructions about installing the Spryker DevVM.
+Your development environment needs to be updated with Elasticsearch 5.6.x. In case you are using the Spryker DevVM, you can download the latest release that provides the necessary services. Follow our [Installation Guide](/docs/scos/dev/developer-getting-started-guide.html) for detailed instructions about installing the Spryker DevVM.
 
 **Elasticsearch 5 Related BC Breaking Change Highlights**
 
@@ -127,8 +127,8 @@ We moved the possible facet type option constants from `Spryker\Client\Search\Pl
 
 We have added a type field to the default “page” index type defined by `Search/src/Spryker/Shared/Search/IndexMap/search.json`. With this field it’s possible to differentiate multiple item types (e.g. products, cms pages, categories, etc.). Additionally, we also fixed the indexing strategy of store and `locale` field, they are set to “not_analyzed”. These changes require a repeated indexation of your existing data. In a non-production environment this means that you need to delete your index and then install the new one by running `vendor/bin/console setup:search`.
 {% info_block errorBox "Important" %}
-In production environments, follow the official Elasticsearch guide about [Index Aliases and Zero Downtime](https://www.elastic.co/guide/en/elasticsearch/guide/current/index-aliases.html
-{% endinfo_block %}.)
+In production environments, follow the official Elasticsearch guide about [Index Aliases and Zero Downtime](https://www.elastic.co/guide/en/elasticsearch/guide/current/index-aliases.html).
+{% endinfo_block %}
 
 ## Upgrading from Version 3.* to Version 4.*
 

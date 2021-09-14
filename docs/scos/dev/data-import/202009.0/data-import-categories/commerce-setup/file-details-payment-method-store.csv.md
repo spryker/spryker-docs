@@ -14,14 +14,14 @@ These are the header fields to be included in the .csv file:
 
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |
 | --- | --- | --- | --- | --- |
-| **payment_method_key** | Yes | String |Value should be imported from the [payment_method.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/commerce-setup/file-details-payment-method.csv.html) file. | Identifier of the payment method. |
+| **payment_method_key** | Yes | String |Value should be imported from the [payment_method.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-payment-method.csv.html) file. | Identifier of the payment method. |
 | **store** | Yes | String | Value must be within an existing store name, set in the *store.php* configuration file of the demo shop PHP project. | Name of the store. |
 *N/A: Not applicable.
 
 ## Dependencies
 
 This file has the following dependencies:
-*     [payment_method.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/commerce-setup/file-details-payment-method.csv.html) 
+*     [payment_method.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-payment-method.csv.html) 
 *     *stores.php* configuration file of the demo shop PHP project
 
 ## Template File & Content Example

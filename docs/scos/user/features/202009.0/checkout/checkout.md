@@ -9,18 +9,18 @@ redirect_from:
 ---
 
 
-        
+
 Offer customers a smooth shopping experience by customizing the checkout workflow. Add, delete, and configure any checkout step, like customer account login, shipment and payment methods, or checkout overview.
-        
+
 With the *Checkout* feature, you can enable customers to select single or multiple products and add wishlist items to their cart, as well as integrate different carriers and delivery methods.
 
-Control the values of the orders your customers place by defining order thresholds. 
+Control the values of the orders your customers place by defining order thresholds.
 
 Fulfilling small orders is not always worthwhile for the business, as operating costs, time, and effort spent on processing them often overweight the profit gained. In such cases, implementing a minimum threshold might be the solution. The *Order Thresholds* feature provides you with multiple options of defining thresholds. You can define a minimum threshold and disallow placing orders with smaller values or request customers to pay a fee.
 
 Per your business requirements, you can also set up a maximum threshold to disallow placing orders above a defined threshold.
 
-In a B2B scenario, you can define any type of threshold for each [merchant relation](/docs/scos/dev/features/202009.0/merchant-b2b-contracts/merchant-b2b-contracts-feature-overview.html) separately.
+In a B2B scenario, you can define any type of threshold for each [merchant relation](/docs/scos/user/features/{{page.version}}/merchant-b2b-contracts/merchant-b2b-contracts-feature-overview.html) separately.
 
 With order thresholds, you can:
 
@@ -38,19 +38,18 @@ With order thresholds, you can:
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/multi-step-checkout" class="mr-link">Get a general idea of the multi-step checkout</a></li>
-                <li><a href="https://documentation.spryker.com/docs/order-thresholds" class="mr-link">Get a general idea of order thresholds</a></li>
-                <li><a href="https://documentation.spryker.com/docs/checkout-feature-integration">Integrate the Checkout feature into your project</a></li>
+                <li><a href="docs\scos\user\features\202009.0\checkout\checkout-feature-overview\multi-step-checkout.md" class="mr-link">Get a general idea of the multi-step checkout</a></li>
+                <li><a href="docs\scos\user\features\202009.0\checkout\checkout-feature-overview\order-thresholds.md" class="mr-link">Get a general idea of order thresholds</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\glue-api\glue-api-checkout-feature-integration.md">Integrate the Checkout feature into your project</a></li>
             </ul>
         </div>
         <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/multi-step-checkout" class="mr-link">Get a general idea of the multi-step checkout</a></li>
-                <li><a href="https://documentation.spryker.com/docs/order-thresholds" class="mr-link">Get a general idea of order thresholds</a></li>
+                <li><a href="docs\scos\user\features\202009.0\checkout\checkout-feature-overview\multi-step-checkout.md" class="mr-link">Get a general idea of the multi-step checkout</a></li>
+                <li><a href="docs\scos\user\features\202009.0\checkout\checkout-feature-overview\order-thresholds.md" class="mr-link">Get a general idea of order thresholds</a></li>
             </ul>
         </div>
     </div>
 </div>
-    

@@ -44,8 +44,8 @@ By default, if checkout is successful, the order is placed, and the cart is dele
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | String | Required when checking out a [guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html). | A guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
-| Authorization | String | Required when checking out a [cart of registered user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html). | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| X-Anonymous-Customer-Unique-Id | String | Required when checking out a [guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/guest-carts/managing-guest-carts.html). | A guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
+| Authorization | String | Required when checking out a [cart of registered user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/carts-of-registered-users/managing-carts-of-registered-users.html). | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
 
 
 
@@ -335,12 +335,12 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 
 | Attribute                                                    | Type   | Required | Description                                                  |
 | :----------------------------------------------------------- | :----- | :------- | :----------------------------------------------------------- |
-| customer                                                     | Object | ✓        | A list of attributes describing the [customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html) to submit checkout data of. |
+| customer                                                     | Object | ✓        | A list of attributes describing the [customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/manging-customers/managing-customers.html) to submit checkout data of. |
 | customer.salutation                                          | String | ✓        | Salutation to use when addressing the customer.              |
 | customer.email                                               | String | ✓        | Customer's email address.                                    |
 | customer.firstName                                           | String | ✓        | Customer's first name.                                       |
 | customer.lastName                                            | String | ✓        | Customer's last name.                                        |
-| idCart                                                       | String | ✓        | Unique identifier of the customer's [cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html) to check out. |
+| idCart                                                       | String | ✓        | Unique identifier of the customer's [cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/carts-of-registered-users/managing-carts-of-registered-users.html) to check out. |
 | billingAddress                                               | Object | ✓        | Customer's billing [address](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-addresses.html). |
 | billingAddress.id                                            | String |          | A hyphenated alphanumeric value of an existing customer address. To get it, include the `addresses` resource in your request or [retrieve a customer's addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-addresses.html#retrieve-a-customer-s-addresses). If you pass this value for a billing or shipping address, do not pass the other address attributes. |
 | billingAddress.salutation                                    | String | ✓        | Salutation to use when addressing the customer.              |
@@ -1278,7 +1278,7 @@ To prevent fraud, the *invoice* payment method is not accepted if a cart contain
 | order-shipments       | country               | String   | Specifies the country.                          |
 | order-shipments       | iso2Code              | String   | ISO 2-Letter Country Code to use.               |
 
-For the attributes of other included resources, see [Retrieve an order](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-orders.html#retrieve-an-order)
+For the attributes of other included resources, see [Retrieve an order](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/retrieving-customer-orders.html#retrieve-an-order)
 
 
 

@@ -8,13 +8,13 @@ redirect_from:
   - /v6/docs/en/cms-block
 ---
 
-A *CMS block* is a piece of reusable content which you can add to multipe CMS pages and templates. For example, with the help of a block, you can add banners to the top of a page or add SEO text to the bottom of a page. 
+A *CMS block* is a piece of reusable content which you can add to multipe CMS pages and templates. For example, with the help of a block, you can add banners to the top of a page or add SEO text to the bottom of a page.
 
 ## CMS block template
 
 A *CMS block template* is a Twig file that, when applied to a block, defines its design, layout, and functionality.
 
-You can create templates to effectively create similar content. However, as CMS block, is a multi-purpose  entity, you can create templates that allow you to manage the content of different functionalities in your shop. For example, you can [manage emails via CMS blocks](/docs/scos/dev/features/202009.0/cms/cms-feature-overview/email-as-a-cms-block.html).
+You can create templates to effectively create similar content. However, as CMS block, is a multi-purpose  entity, you can create templates that allow you to manage the content of different functionalities in your shop. For example, you can [manage emails via CMS blocks](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/email-as-a-cms-block.html).
 
 The CMS feature is shipped with several block templates by default. A developer can create more templates.
 
@@ -33,7 +33,7 @@ Each placeholder in a block has locale-specific content (for as many locales as 
 ## Reusing CMS blocks
 
 If you add a CMS block to multiple pages and edit it, the content is updated on all the pages you've added it to.
-This applies to the content and the configuration of blocks. For example, if you update a picture in a block, the new picture will be displayed on all the pages the block is added to. Or, if you update the store relation, the block will stop being displayed on the pages of the store the block is not configured to be displayed on. 
+This applies to the content and the configuration of blocks. For example, if you update a picture in a block, the new picture will be displayed on all the pages the block is added to. Or, if you update the store relation, the block will stop being displayed on the pages of the store the block is not configured to be displayed on.
 
 
 <!---
@@ -44,8 +44,8 @@ You can create connections to other objects like Customer Groups (show a block o
 
 ### Category Blocks
 Category blocks are blocks that can be embedded into the category template, for which we can specify on which specific categories we want them to be rendered.
-		
-For example, we have a Christmas sale that affects the categories  related to toys and sweets. We want to apply the following discount rule for these categories: "When you buy 3 products from this category, the product with a lower price is  free". 
+
+For example, we have a Christmas sale that affects the categories  related to toys and sweets. We want to apply the following discount rule for these categories: "When you buy 3 products from this category, the product with a lower price is  free".
 
 We would like to promote this sale by placing a block that displays the discount rule on the affected categories only.
 
@@ -62,31 +62,31 @@ Product blocks are blocks that can be embedded in the product template, for whic
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/cms-feature-integration-guide" class="mr-link">Enable CMS blocks in your project by integrating the CMS feature</a></li>
-<li><a href="https://documentation.spryker.com/docs/enabling-category-cms-block" class="mr-link">Install and configure a Category Block</a></li>
-                <li><a href="https://documentation.spryker.com/docs/enabling-cms-block-widget" class="mr-link">Enable CMS block widget</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\cms-feature-integration.md" class="mr-link">Enable CMS blocks in your project by integrating the CMS feature</a></li>
+<li><a href="docs\scos\dev\technical-enhancements\enabling-the-category-cms-blocks.md" class="mr-link">Install and configure a Category Block</a></li>
+                <li><a href="docs\scos\dev\technical-enhancements\enabling-cms-block-widget.md" class="mr-link">Enable CMS block widget</a></li>
 <!-- <li><a href="https://documentation.spryker.com/docs/cms-block-multistore" class="mr-link">Enable multi-store management for CMS blocks</a></li>-->
                 <li>
-<li><a href="https://documentation.spryker.com/docs/mg-cms-collector#upgrading-from-version-1---to-version-2--" class="mr-link">Migrate the CMS Collector module from version 1.* to version 2.*</a></li>
-<li><a href="https://documentation.spryker.com/docs/mg-cms-block#upgrading-from-version-1---to-version-2--" class="mr-link">Migrate the CMS Block module from version 1.* to version 2.*</a></li>
-<li><a href="https://documentation.spryker.com/docs/mg-cms-block-category-connector#migration-guide---cms-block-category-connector" class="mr-link">Migrate the CMS Block Category Connector module from version 1.* to version 2.*</a></li>
-<li><a href="https://documentation.spryker.com/docs/mg-cms-block-category-connector-console" class="mr-link">Migrate the CMS Block Category Connector Console module from version 1.* to version 2.*</a></li>
-<li><a href="https://documentation.spryker.com/docs/mg-cms-block-collector#upgrading-from-version-1---to-version-2--" class="mr-link">Migrate the CMS Block Collector  module from version 1.* to version 2.*</a></li>
-<li><a href="https://documentation.spryker.com/docs/mg-cms-block-gui#upgrading-from-version-1---to-version-2--" class="mr-link">Migrate the CMS Block GUI  module from version 1.* to version 2.*</a></li>
-                <li><a href="https://documentation.spryker.com/docs/product-block" class="mr-link">Install and configure a Product Block</a></li>
+<li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-cmscollector.md" class="mr-link">Migrate the CMS Collector module from version 1.* to version 2.*</a></li>
+<li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-cmsblock.md#upgrading-from-version-1---to-version-2--" class="mr-link">Migrate the CMS Block module from version 1.* to version 2.*</a></li>
+<li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-cms-block-category-connector.md class="mr-link">Migrate the CMS Block Category Connector module from version 1.* to version 2.*</a></li>
+<li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-cms-block-category-connector-migration-console.md" class="mr-link">Migrate the CMS Block Category Connector Console module from version 1.* to version 2.*</a></li>
+<li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-cms-block-collector.html#upgrading-from-version-1---to-version-2--" class="mr-link">Migrate the CMS Block Collector  module from version 1.* to version 2.*</a></li>
+<li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-cmsblockgui.md#upgrading-from-version-1---to-version-2--" class="mr-link">Migrate the CMS Block GUI  module from version 1.* to version 2.*</a></li>
+                <li><a href="docs\scos\dev\technical-enhancements\enabling-the-product-cms-block.md" class="mr-link">Install and configure a Product Block</a></li>
     </ul>
         </div>
         <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/creating-a-cms-block" class="mr-link">Create a CMS Block</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-cms-blocks" class="mr-link">Manage CMS Blocks</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\content\blocks\creating-a-cms-block.md" class="mr-link">Create a CMS Block</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\content\blocks\managing-cms-blocks.md" class="mr-link">Manage CMS Blocks</a></li>
             </ul>
         </div>  
 </div>
 </div>
-                
+
 ## See next
 
-* [Templates and slots](/docs/scos/dev/features/202009.0/cms/cms-feature-overview/templates-and-slots.html)
+* [Templates and slots](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/templates-and-slots.html)

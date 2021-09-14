@@ -30,7 +30,7 @@ Once the customer clicks **Redeem code**, the page refreshes to show the discoun
 
 The **Clear all** action disables all the applied discounts while the **Remove** action disables a single discount.
 
-Voucher codes are generated in the Back Office > *Discount* section > *Edit discount* page > [Voucher codes](/docs/scos/dev/features/202001.0/promotions-and-discounts/discount/discount.html#voucher-codes-tab) tab. See [Creating a Discount Voucher](/docs/scos/user/user-guides/202001.0/back-office-user-guide/discount/creating-a-discount/creating-a-discount-voucher.html) for more information.
+Voucher codes are generated in the Back Office > *Discount* section > *Edit discount* page > [Voucher codes](/docs/scos/user/features/{{page.version}}/promotions-and-discounts/discount/discount.html#voucher-codes-tab) tab. See [Creating a Discount Voucher](/docs/scos/user/user-guides/202001.0/back-office-user-guide/discount/creating-a-discount/creating-a-discount-voucher.html) for more information.
 
 {% info_block warningBox %}
 This tab is available when the **Voucher** discount type is selected in the [General information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/discount/creating-a-discount/creating-a-cart-rule-discount.html
@@ -45,7 +45,7 @@ There is no need to create codes manually as there is an in-built code generator
 A **Cart rule** is a discount which applies to cart automatically once all discount decision rules linked to discount are fulfilled. It does not require any additional actions from customers. When there is a discount which can be applied to a customer's order, upon entering cart, they will see the name of the discount in the overview section. The **Clear all** and **Remove** actions won't be available though.
 ![Cart rule](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/cart-cart-rule.png) 
 
-See [Creating a cart rule](/docs/scos/dev/features/202001.0/promotions-and-discounts/discount/discount.html#creating-a-cart-rule-discount) for information on how to create a cart rule discount in the Back Office.
+See [Creating a cart rule](/docs/scos/user/features/{{page.version}}/promotions-and-discounts/discount/discount.html#creating-a-cart-rule-discount) for information on how to create a cart rule discount in the Back Office.
 
 ## Decision Rules
 A discount **decision rule** is a condition which needs to be fulfilled for the discount to which it is assigned to be applied. A discount can have one or more decision rules assigned to it.
@@ -59,7 +59,7 @@ A discount can have the following decision rules.
 
 The discount can be redeemed only if both rules are satisfied: The cart contains at least 3 items and the purchase is made on Wednesday.
 
-Decision rules are specified using queries which can be built by using an in-built **Query Builder** or by entering **Plain queries** in the **Back Office > Discount section > Edit discount page** > [Conditions](/docs/scos/dev/features/202001.0/promotions-and-discounts/discount/discount.html#conditions-tab) tab.
+Decision rules are specified using queries which can be built by using an in-built **Query Builder** or by entering **Plain queries** in the **Back Office > Discount section > Edit discount page** > [Conditions](/docs/scos/user/features/{{page.version}}/promotions-and-discounts/discount/discount.html#conditions-tab) tab.
 
 Following the example above, you can specify that:
 {% info_block infoBox %}
@@ -133,7 +133,7 @@ See examples in the table below.
 | €50 | Percentage | 10|€5|€45|
 |€50|Fixed amount|10|€10|€40 |
 
-Calculation is specified in the Back Office > *Discount* section > *Edit discount* page > [Discount calculation](/docs/scos/dev/features/202001.0/promotions-and-discounts/discount/discount.html#discount-calculation-tab) tab.
+Calculation is specified in the Back Office > *Discount* section > *Edit discount* page > [Discount calculation](/docs/scos/user/features/{{page.version}}/promotions-and-discounts/discount/discount.html#discount-calculation-tab) tab.
 ![Discount calculation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/discount_calculation.png) 
 
 ## Exclusiveness

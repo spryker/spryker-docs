@@ -235,7 +235,7 @@ Make sure that the following changes have been applied in the database:
 | --- | --- | --- |
 | `spy_sales_return` | table | created |
 | `spy_sales_return_item` | table | created |
-| `spy_sales_return_item` | table | created |
+| `spy_sales_return_reason` | table | created |
 | `spy_sales_return_reason_search` | table | created |
 | `spy_sales_order_item.remuneration_amount` | column | created |
 | `spy_sales_order_item.uuid` | column | created |

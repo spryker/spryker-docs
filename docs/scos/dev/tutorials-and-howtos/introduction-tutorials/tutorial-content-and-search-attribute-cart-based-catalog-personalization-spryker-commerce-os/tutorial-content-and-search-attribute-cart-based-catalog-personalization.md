@@ -1,8 +1,8 @@
 ---
-title: Tutorial - Content and Search - Attribute-Cart-Based Catalog Personalization - Spryker Commerce OS
-description: The tutorial describes how you can personalize your catalog by creating an attribute-based catalog in Yves.
-originalLink: https://documentation.spryker.com/2021080/docs/t-content-search-attribute-cart-based-catalog-personalization
-originalArticleId: 5361d3d7-b09b-4c62-97e8-5b33bcf29546
+title: "Tutorial - Content and Search - Attribute-Cart-Based Catalog Personalization - Spryker Commerce OS"
+description: The tutorial provides a step-by-step solution on how you can arrange your products in the cart by a color attribute
+originalLink: https://documentation.spryker.com/docs/t-content-search-attribute-cart-based-catalog-personalization
+originalArticleId: 7f335803-4f1b-4711-97b7-d32c7bcd57bb
 redirect_from:
   - /2021080/docs/t-content-search-attribute-cart-based-catalog-personalization
   - /2021080/docs/en/t-content-search-attribute-cart-based-catalog-personalization
@@ -18,12 +18,17 @@ redirect_from:
   - /v2/docs/en/t-content-search-attribute-cart-based-catalog-personalization
   - /v1/docs/t-content-search-attribute-cart-based-catalog-personalization
   - /v1/docs/en/t-content-search-attribute-cart-based-catalog-personalization
+
 ---
 
 In this tutorial, we will boost and personalize the catalog using the color attribute of a product when it is added to cart.
-{% info_block infoBox %}
-This tutorial is also available on the Spryker Training web-site. For more information and hands-on exercises, visit [Spryker Training](https://training.spryker.com/
-{% endinfo_block %}.)
+
+{% info_block infoBox "Info" %}
+
+
+This tutorial is also available on the Spryker Training web-site. For more information and hands-on exercises, visit [Spryker Training](https://training.spryker.com/).)
+
+{% endinfo_block %}
 
 ## Challenge Description
 When you add a red camera to cart, all red cameras are going to be boosted in the catalog and pushed to the top of the products.

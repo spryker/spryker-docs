@@ -28,7 +28,7 @@ This article will teach you how to install and use the Spryker Jarvis tool for a
 ## Prerequisites
 Before you can install Spryker Jarvis, make sure that you have:
 
-* [Spryker project installed locally.](/docs/scos/dev/developer-guides/{{page.version}}/developer-getting-started-guide.html#step-1--install-spryker)
+* [Spryker project installed locally.](/docs/scos/dev/developer-getting-started-guide.html#step-1--install-spryker)
 * [NodeJS installed.](https://nodejs.org/en/download)  
 
 ## Installation

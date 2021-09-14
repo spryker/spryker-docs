@@ -91,7 +91,7 @@ Request sample: `GET http://glue.mysprykershop.com/concrete-products/cable-vga-1
 | measurementUnitCode | string | Code of the measurement unit. | 
 
 
-See [Retrieving Measurement Units](/docs/scos/dev/glue-api-guides/202009.0/retrieving-measurement-units.html) for more information on managing the sales units.
+See [Retrieving Measurement Units](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html) for more information on managing the sales units.
 
 ## Possible errors
 
@@ -99,5 +99,5 @@ See [Retrieving Measurement Units](/docs/scos/dev/glue-api-guides/202009.0/retri
 | --- | --- |
 |302| Concrete product is not found. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 

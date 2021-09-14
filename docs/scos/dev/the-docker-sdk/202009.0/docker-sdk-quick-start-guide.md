@@ -17,9 +17,9 @@ To run the Docker SDK in a local environment, follow the instructions below.
 ### Installing Docker
 
 For Docker installation instructions, see one of the following:
-* [Installing Docker prerequisites on MacOS](/docs/scos/dev/developer-guides/202009.0/installation/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-macos.html)
-* [Installing Docker prerequisites on Linux](/docs/scos/dev/developer-guides/202009.0/installation/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-linux.html)
-* [Installing Docker prerequisites on Windows](/docs/scos/dev/developer-guides/202009.0/installation/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows.html)
+* [Installing Docker prerequisites on MacOS](/docs/scos/dev/installation/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-macos.html)
+* [Installing Docker prerequisites on Linux](/docs/scos/dev/installation/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-linux.html)
+* [Installing Docker prerequisites on Windows](/docs/scos/dev/installation/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows.html)
 
 ### Setting up a project with the Docker SDK
 
@@ -90,12 +90,12 @@ Depending on your requirements, you can select any combination of the following 
 
 ## Troubleshooting
 
-For solutions to common issues, see [Spryker in Docker troubleshooting](/docs/scos/dev/developer-guides/202009.0/troubleshooting/spryker-in-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html).
+For solutions to common issues, see [Spryker in Docker troubleshooting](/docs/scos/dev/troubleshooting/spryker-in-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html).
 
 
 ## What documents should I use to start developing and configuring my project?
 
-* [Deploy file reference - 1.0](/docs/scos/dev/developer-guides/202009.0/docker-sdk/deploy-file-reference-1.0.html)
-* [Docker SDK configuration reference](/docs/scos/dev/developer-guides/202009.0/docker-sdk/docker-sdk-configuration-reference.html)
-* [Configuring services](/docs/scos/dev/developer-guides/202009.0/docker-sdk/configuring-services.html)
+* [Deploy file reference - 1.0](/docs/scos/dev/docker-sdk/deploy-file-reference-1.0.html)
+* [Docker SDK configuration reference](/docs/scos/dev/docker-sdk/docker-sdk-configuration-reference.html)
+* [Configuring services](/docs/scos/dev/docker-sdk/configuring-services.html)
 

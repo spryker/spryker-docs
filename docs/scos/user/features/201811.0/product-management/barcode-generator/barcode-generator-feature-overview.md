@@ -18,8 +18,8 @@ A barcode is a square or rectangular image consisting of a series of parallel bl
 In the default configuration, barcodes are generated based on the SKU of a concrete product using [Code128](https://en.wikipedia.org/wiki/Code_128) format. Though, Spryker provides highly customizable solutions through plugins with the help of which the setup can be changed.
 
 {% info_block infoBox %}
-You can read more about the product types we differentiate in [Product Abstraction](/docs/scos/dev/features/201811.0/product-management/product-abstraction.html
-{% endinfo_block %}.)
+You can read more about the product types we differentiate in [Product Abstraction](/docs/scos/user/features/{{page.version}}/product-management/product-abstraction.html).
+{% endinfo_block %}
 
 {% info_block errorBox %}
 In your project, you can also implement QR codes functionality by creating similar plugins.

@@ -8,7 +8,7 @@ redirect_from:
   - /v6/docs/en/product-barcode-feature-overview
 ---
 
-The *Product Barcode*  feature allows creating barcodes for any kind of enity. By default, barcodes are only generated for [products](https://documentation.spryker.com/v6/docs/products-overview).
+The *Product Barcode*  feature allows creating barcodes for any kind of enity. By default, barcodes are only generated for [products](docs\scos\user\features\202009.0\product\product-feature-overview\product-overview.md).
 
 
 ## What is a barcode?
@@ -19,7 +19,7 @@ A barcode is a square or rectangular image consisting of a series of parallel bl
 By default, barcodes are generated based on product SKUs using the [Code128](https://en.wikipedia.org/wiki/Code_128) format. 
 
 {% info_block infoBox %}
-You can read more about the product types we differentiate in [Product Abstraction](https://documentation.spryker.com/v6/docs/products-overview
+You can read more about the product types we differentiate in [Product Abstraction](docs\scos\user\features\202009.0\product\product-feature-overview\product-overview.md
 {% endinfo_block %}.)
 
 {% info_block errorBox %}

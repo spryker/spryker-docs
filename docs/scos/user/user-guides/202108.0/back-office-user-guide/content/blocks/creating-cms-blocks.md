@@ -13,7 +13,7 @@ redirect_from:
 This topic describes how to create a CMS block.
 {% info_block infoBox "Info" %}
 
-If you want to create a CMS block for [email](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/email-as-a-cms-block-overview.html), see [Creating an email CMS block](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/managing-content-of-emails-via-cms-blocks.html#creating-an-email-cms-block).
+If you want to create a CMS block for [email](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/email-as-a-cms-block-overview.html), see [Creating an email CMS block](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/managing-content-of-emails-via-cms-blocks.html#creating-an-email-cms-block).
 
 {% endinfo_block %}
 
@@ -55,7 +55,7 @@ The following table describes the attributes on the *Overview of CMS Blocks* pag
 | ATTRIBUTE | DESCRIPTION: REGULAR CMS BLOCK | DESCRIPTION:  EMAIL CMS BLOCK |
 | --- | --- | --- |
 | Block Id | Sequence number. | Sequence number. |
-| Name | Name of a CMS block. | Name of a CMS block. <br> This name is used by developers to assign the block to its [.twig email template](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/email-as-a-cms-block-overview.html#email-template).
+| Name | Name of a CMS block. | Name of a CMS block. <br> This name is used by developers to assign the block to its [.twig email template](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/email-as-a-cms-block-overview.html#email-template).
 | Template | Defines a placeholder structure of the CMS block. | Defines the placeholder structure of the Email CMS block. |
 | Status | Block status that can be active (visible on the Storefront) or inactive (invisible on the Storefront). | Irrelevant. |
 | Stores | Locale(s) for which the block will be visible on the store website. | Irrelevant. |

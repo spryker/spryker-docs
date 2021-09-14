@@ -28,7 +28,7 @@ If a Back Office user creates or edits a shipment of an order created by a custo
 
 {% endinfo_block %}
 
-Additional behaviors can be attached to a delivery method from the Back Office by selecting specific plugins. For more information on method plugins types, see [Reference information: Shipment method plugins](/docs/scos/dev/features/202009.0/shipment/shipment/references/reference-information-shipment-method-plugins.html).
+Additional behaviors can be attached to a delivery method from the Back Office by selecting specific plugins. For more information on method plugins types, see [Reference information: Shipment method plugins](/docs/scos/user/features/{{page.version}}/shipment/shipment/references/reference-information-shipment-method-plugins.html).
 
 Each shipment method has a dedicated price and tax set in the various currencies you define. The price displayed to the customer is calculated based on the store they visit or their preferred currency selection.
 

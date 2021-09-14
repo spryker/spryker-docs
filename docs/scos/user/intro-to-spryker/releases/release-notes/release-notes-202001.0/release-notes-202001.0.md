@@ -17,7 +17,7 @@ redirect_from:
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of major new features and enhancements released in January of 2020.
 
-For information about installing the Spryker Commerce OS see [Getting Started Guide](/docs/scos/dev/developer-guides/{{page.version}}/developer-getting-started-guide.html).
+For information about installing the Spryker Commerce OS see [Getting Started Guide](/docs/scos/dev/developer-getting-started-guide.html).
 
 ## Spryker Commerce OS
 
@@ -105,7 +105,7 @@ Moreover, a project can mix both e-commerce content created in Spryker, and rich
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image11.png) 
 
 #### Documentation
-[Templates and Slots](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/templates-and-slots-overview.html)
+[Templates and Slots](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/templates-and-slots-overview.html)
 ***
 ## B2B
 ### Adding Shipment Cost for the Approval Process

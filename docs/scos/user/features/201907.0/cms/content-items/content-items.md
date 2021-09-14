@@ -33,7 +33,7 @@ The **Content Items** feature is a perfect solution for creating and managing cu
          <li><a href="https://documentation.spryker.com/v3/docs/mg-contentstorage-201907" class="mr-link">Migrate ContentStorage module from version 1.* to version 2.*</a></li>  
 <li><a href="https://documentation.spryker.com/v3/docs/content-items-feature-integration-201907" class="mr-link">Integrate Content Items feature v. 201907.0 into your project</a></li> 
   <li><a href="https://documentation.spryker.com/v3/docs/getting-abstract-product-list-content-item-data-201907" class="mr-link">Get Abstract Product List Content Item data via API</a></li> 
-                 <li><a href="https://documentation.spryker.com/v3/docs/retrieving-banner-content-item-data-201907" class="mr-link">Retrieve Banner Content Item data</a></li>
+                 <li><a href="https://documentation.spryker.com/v3/docs/retrieving-banner-content-items-201907" class="mr-link">Retrieve Banner Content Item data</a></li>
                     </ul>
         </div>
         <!-- col2 -->

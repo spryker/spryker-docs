@@ -8,7 +8,7 @@ redirect_from:
   - /v6/docs/en/managing-gift-cards-of-registered-users
 ---
 
-[Gift Card](/docs/scos/dev/features/202009.0/gift-cards/gift-cards-feature-overview.html) is an alternative payment method. It is purchased as a default product in the Spryker Commerce OS and is redeemed as a voucher code during the checkout. When you have a gift card code, this code can be applied to a shopping cart, and the money value of the applied gift card is deducted from the total sum of the cart items.
+[Gift Card](/docs/scos/user/features/{{page.version}}/gift-cards/gift-cards-feature-overview.html) is an alternative payment method. It is purchased as a default product in the Spryker Commerce OS and is redeemed as a voucher code during the checkout. When you have a gift card code, this code can be applied to a shopping cart, and the money value of the applied gift card is deducted from the total sum of the cart items.
 
 In your development, Gift Cards API provides resources for purchasing and redeeming gift cards in Spryker Commerce OS via Glue API.
 
@@ -16,7 +16,7 @@ This article includes a list of endpoints to manage Gift Cards for registered us
 
 {% info_block infoBox "Info" %}
 
-To manage the gift cards of the unregistered users, see [Managing Gift Cards of Guest Users](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html).
+To manage the gift cards of the unregistered users, see [Managing Gift Cards of Guest Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html).
 
 {% endinfo_block %}
 
@@ -26,9 +26,9 @@ For detailed information on the modules that provide the API functionality and r
 ## Purchasing a gift card
 Gift Card is available in the Spryker shop as an abstract product with its variants (concrete products). To purchase the gift card:
 
-1. Add a Gift Card to a guest shopping cart. See [Adding Items to Carts of Registered Users](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#adding-items-to-a-registered-cart) for more details.
-2. [Submit the checkout data](/docs/scos/dev/glue-api-guides/202009.0/checking-out/checking-out-purchases.html#submitting-checkout-data).
-3. [Complete the checkout](/docs/scos/dev/glue-api-guides/202009.0/checking-out/checking-out-purchases.html#placing-orders).
+1. Add a Gift Card to a guest shopping cart. See [Adding Items to Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#adding-items-to-a-registered-cart) for more details.
+2. [Submit the checkout data](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html#submitting-checkout-data).
+3. [Complete the checkout](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html#placing-orders).
 
 {% info_block warningBox "Note" %}
 
@@ -45,11 +45,11 @@ To redeem the gift card code, send the request:
 
 | Path parameter | DESCRIPTION |
 | --- | --- |
-| cart_uuid | Unique identifier of a cart to remove products from. You can get this in the response when [creating carts](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#creating-carts) or [retrieving all carts](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieving-all-carts). |
+| cart_uuid | Unique identifier of a cart to remove products from. You can get this in the response when [creating carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/carts-of-registered-users/managing-carts-of-registered-users.html#creating-carts) or [retrieving all carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/carts-of-registered-users/managing-carts-of-registered-users.html#retrieving-all-carts). |
 
 {% info_block infoBox "Authentication" %}
 
-To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/202009.0/authentication-and-authorization.html).
+To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
 
 {% endinfo_block %}
 
@@ -134,7 +134,7 @@ Response sample:
     ]
 }
 ```
-For the attributes of the registered user's carts, see [Creating carts of registered users](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#creating-carts).
+For the attributes of the registered user's carts, see [Creating carts of registered users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/carts-of-registered-users/managing-carts-of-registered-users.html#creating-carts).
 
 | Included resource | Attribute | Type | Description |
 | --- | --- | --- | --- |
@@ -153,12 +153,12 @@ To remove the gift card code from the cart, send the request:
 
 | Path parameter | DESCRIPTION |
 | --- | --- |
-| cart_uuid | Unique identifier of a cart to remove products from. You can get this in the response when [creating carts](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#creating-carts) or [retrieving all carts](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieving-all-carts). |
+| cart_uuid | Unique identifier of a cart to remove products from. You can get this in the response when [creating carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/carts-of-registered-users/managing-carts-of-registered-users.html#creating-carts) or [retrieving all carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/carts-of-registered-users/managing-carts-of-registered-users.html#retrieving-all-carts). |
 | gift_card_code | Code that you have received after purchasing the gift card. | 
 
 {% info_block infoBox "Authentication" %}
 
-To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/202009.0/authentication-and-authorization.html).
+To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
 
 {% endinfo_block %}
 
@@ -180,6 +180,6 @@ If the item is deleted successfully, the endpoint will respond with a `204 No Co
 | 3302| Cart code can't be added. |
 | 3303| Cart code can't be removed. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 
 

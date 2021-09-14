@@ -24,7 +24,7 @@ redirect_from:
 
  The Spryker Commerce OS is an end-to-end solution for e-commerce. This document contains business level description of major new features and enhancements released in November of 2018.
  
-For information about installing the Spryker Commerce OS, see [Getting Started Guide](/docs/scos/dev/developer-guides/{{page.version}}/developer-getting-started-guide.html).
+For information about installing the Spryker Commerce OS, see [Getting Started Guide](/docs/scos/dev/developer-getting-started-guide.html).
 
 ## Spryker Glue REST API
 In response to multiple customer requests, we are happy to introduce Glue as a new application layer to the Spryker Commerce OS architecture. Glue provides API infrastructure, own application, feature resources, and documentation generators.

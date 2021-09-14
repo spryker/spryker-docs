@@ -17,20 +17,19 @@ The *Prices* feature enables Back Office users to effectively manage the prices 
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/price" class="mr-link">Get a general idea of a price</a></li>
-                   <li><a href="https://documentation.spryker.com/docs/volume prices" class="mr-link">Get a general idea of volume prices</a></li>
-                <li><a href="https://documentation.spryker.com/docs/priceproduct-module-details-reference-information" class="mr-link">Get a general idea of the PriceProduct module</a></li>
-                <li><a href="https://documentation.spryker.com/docs/money-module-reference-information" class="mr-link">Get a general idea of the Money module</a></li>
+                <li><a href="docs\scos\user\features\202009.0\prices\prices-feature-overview\price.md" class="mr-link">Get a general idea of a price</a></li>
+                   <li><a href="docs\scos\user\features\202009.0\prices\prices-feature-overview\volume-prices.md" class="mr-link">Get a general idea of volume prices</a></li>
+                <li><a href="docs\scos\user\features\202009.0\prices\prices-feature-overview\price.mdproduct-module-details-reference-information" class="mr-link">Get a general idea of the PriceProduct module</a></li>
+                <li><a href="docs\scos\user\features\202009.0\prices\prices-feature-overview\priceproduct-module-details-reference-information.md" class="mr-link">Get a general idea of the Money module</a></li>
                             </ul>
         </div>
         <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/price" class="mr-link">Get a general idea of a price</a></li>
-                   <li><a href="https://documentation.spryker.com/docs/volume prices" class="mr-link">Get a general idea of volume prices</a></li>
+                <li><a href="docs\scos\user\features\202009.0\prices\prices-feature-overview\price.md" class="mr-link">Get a general idea of a price</a></li>
+                   <li><a href="docs\scos\user\features\202009.0\prices\prices-feature-overview\volume-prices.md" class="mr-link">Get a general idea of volume prices</a></li>
             </ul>
         </div>
     </div>
 </div>
-

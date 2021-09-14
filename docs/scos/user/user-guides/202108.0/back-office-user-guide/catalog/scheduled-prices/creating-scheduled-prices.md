@@ -36,10 +36,13 @@ To create a price schedule:
 4.     Click **Import your CSV file**.
 5. Once redirected to the _Import dry run_ page, check whether there are incorrect entries in your file in the *Errors found inside your file* section.
 
-     {% info_block infoBox %}
-If needed, you can [edit the imported scheduled prices](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/scheduled-prices/managing-scheduled-prices.html
-{% endinfo_block %}.)
-    
+{% info_block infoBox "Info" %}
+
+If needed, you can [edit the imported scheduled prices](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/scheduled-prices/managing-scheduled-prices.html)
+
+{% endinfo_block %}
+
+
 6. Check if the successfully imported price schedules are correct in the *Row processed with success* section.
 
 7. If you are satisfied with the results, in the *Publish the scheduled prices* section, click **Publish** to apply the price schedules.
@@ -69,3 +72,42 @@ In the *Scheduled prices imported* section, you see the following:
 | Number of prices | Number of scheduled prices in an imported list. |
 | Number of products | Number of products which have scheduled prices assigned to them in an imported list. |
 | Actions | Set of actions that you can do with an import. |
+
+#### Scheduled Prices: Import dry run page
+
+The *Scheduled Prices: Import dry run* page is divided into four sections.
+
+* **Dry run of your import**. In this section, you see the following:
+    * Link to the page where the format of the file with price schedules is described.
+    * Schedule name
+    * File selection button
+    * The button for importing price schedules from the selected file
+*  **Publish the scheduled price**. In this section you see the following:
+    * The button for publishing the price schedules that have been imported successfully.
+* **Errors found inside your file**. In this section you see the following:
+    * Row number and the error related to that row.
+* **Row processed with success**. In this section you see the following:
+    * Price schedule ID, SKU's of the abstract and concrete products to which the price schedule belongs.
+    * Store to which the product with the price schedule belongs.
+    * Currency in which the price schedule is specified.
+    * Price type of the price schedule and values for gross and net mode.
+    * Starting and ending dates of the price schedule.
+
+#### Scheduled Prices: Import dry run page attributes
+
+| ATTRIBUTE | DESCRIPTION |
+| --- | --- |
+| Schedule name |Name of the list of price product schedules which you have just imported.  |
+| Select your CSV file |Here, you can select the file with price product schedules which you want to re-import. It is used in case you want to correct or change some of the schedules you have imported. Learn about file format in [File details: product_price_schedule.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/pricing/file-details-product-price-schedule.csv.html).  |
+| Row n° | Numeric identifier of a price schedule entry in the list of price schedules. |
+| Error |  Describes why a particular price schedule has not been imported.|
+| ID | Numeric identifier of price schedule. |
+|abstract_sku  | Identifier of the abstract product to which price schedule is assigned. |
+| concrete_sku | Identifier of the concrete product to which price schedule is assigned. |
+| store |Store relation of the product to which price schedule is assigned.  |
+| currency |Currency in which price schedule is defined.  |
+| price_type |  Price type in which price schedule is defined: DEFAULT or ORIGINAL.|
+| value_net | Net value of product defined by the price schedule |
+| value_gross |Gross value of product defined by the price schedule.  |
+|from_included  | Date on which the price specified by the price schedule gets applied. |
+| to_included | Date on which the price specified by the price schedule gets reverted back. |

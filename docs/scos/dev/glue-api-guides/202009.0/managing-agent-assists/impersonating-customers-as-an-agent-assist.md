@@ -8,7 +8,7 @@ redirect_from:
   - /v6/docs/en/impersonating-customers-as-an-agent-assist
 ---
 
-Impersonating a customer allows an [agent assist](/docs/scos/dev/features/202009.0/agent-assist/agent-assist-feature-overview.html) to perform actions on their behalf. To impersonate a customer, they receive their Glue API authentication token. Using the token, agent assists perform any action available to the customer.
+Impersonating a customer allows an [agent assist](/docs/scos/user/features/{{page.version}}/agent-assist/agent-assist-feature-overview.html) to perform actions on their behalf. To impersonate a customer, they receive their Glue API authentication token. Using the token, agent assists perform any action available to the customer.
 
 
 ## Installation
@@ -34,7 +34,7 @@ To impersonate a customer, authenticate as a customer by sending the request:
 
 | Header key | Header value | Required | Description |
 | --- | --- | --- | --- |
-| X-Agent-Authorization | string | &check; | String containing digits, letters, symbols that authorized the agent assist. [Authenticate as an agent assist](/docs/scos/dev/glue-api-guides/202009.0/managing-agent-assists/authenticating-as-an-agent-assist.html#authenticate-as-an-agent-assist) to get the value.  |
+| X-Agent-Authorization | string | &check; | String containing digits, letters, symbols that authorized the agent assist. [Authenticate as an agent assist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/authenticating-as-an-agent-assist.html#authenticate-as-an-agent-assist) to get the value.  |
 
 
 Request sample: `POST http://glue.mysprykershop.com/agent-customer-impersonation-access-tokens`
@@ -53,7 +53,7 @@ Request sample: `POST http://glue.mysprykershop.com/agent-customer-impersonation
 
 | Attribute | Type | 
 | --- | --- |
-| customerReference | String | v | Defines the customer to impersonate. [Search by customers](/docs/scos/dev/glue-api-guides/202009.0/managing-agent-assists/searching-by-customers-as-an-agent-assist.html#search-by-customers) to get it. |
+| customerReference | String | v | Defines the customer to impersonate. [Search by customers](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/searching-by-customers-as-an-agent-assist.html#search-by-customers) to get it. |
 
 
 ### Response
@@ -85,10 +85,10 @@ Request sample: `POST http://glue.mysprykershop.com/agent-customer-impersonation
 
 | Attribute | Type | Description |
 | --- | --- | --- |
-| tokenType | String | Type of the [authentication token](/docs/scos/dev/glue-api-guides/202009.0/authentication-and-authorization.html). Set this type when sending a request with the token. |
+| tokenType | String | Type of the [authentication token](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html). Set this type when sending a request with the token. |
 | expiresIn | Integer | The time in seconds in which the token expires. |
 | accessToken | String | Authentication token used to send requests to the protected resources available for the impersonated customer. |
-| refreshToken | String | Token used to [refresh](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/managing-customer-authentication-tokens.html#refresh-an-authentication-token) the `accessToken`. |
+| refreshToken | String | Token used to [refresh](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-authentication-tokens.html#refresh-an-authentication-token) the `accessToken`. |
 
 ## Possible errors
 
@@ -97,22 +97,22 @@ Request sample: `POST http://glue.mysprykershop.com/agent-customer-impersonation
 | 001 | Access token is invalid. |
 | 4103 | Action is available to an agent user only. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 
 ## Next steps
 
 After you’ve authenticated as a customer, you can impersonate them:
 
-*   [Manage carts](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html)
+*   [Manage carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/carts-of-registered-users/managing-carts-of-registered-users.html)
     
-*   [Manage cart items](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html)
+*   [Manage cart items](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html)
     
-*   [Manage gift cards](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html)
+*   [Manage gift cards](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html)
     
-*   [Manage wishlists](/docs/scos/dev/glue-api-guides/202009.0/managing-wishlists/managing-wishlists.html)
+*   [Manage wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists//managing-wishlists/managing-wishlists.html)
     
-*   [Manage orders](/docs/scos/dev/glue-api-guides/202009.0/retrieving-orders.html)  
+*   [Manage orders](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/retrieving-customer-orders.html)  
     
 
-Also, you can [refresh the agent assist authentication token](/docs/scos/dev/glue-api-guides/202009.0/managing-agent-assists/managing-agent-assist-authentication-tokens.html#refresh-an-agent-assist-access-token) or [revoke the agent assist refresh token](/docs/scos/dev/glue-api-guides/202009.0/managing-agent-assists/managing-agent-assist-authentication-tokens.html#revoke-an-agent-assist-refresh-token).
+Also, you can [refresh the agent assist authentication token](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/managing-agent-assist-authentication-tokens.html#refresh-an-agent-assist-access-token) or [revoke the agent assist refresh token](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/managing-agent-assist-authentication-tokens.html#revoke-an-agent-assist-refresh-token).
 

@@ -7,7 +7,7 @@ redirect_from:
   - /v5/docs/en/file-details-product-stockcsv
 ---
 
-This article contains content of the **product_stock.csv** file to configure [Product Stock](/docs/scos/dev/features/202005.0/inventory-management/warehouse-management.html) information on your Spryker Demo Shop.
+This article contains content of the **product_stock.csv** file to configure [Product Stock](/docs/scos/user/features/{{page.version}}/inventory-management/warehouse-management.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:
@@ -25,8 +25,8 @@ These are the header fields to be included in the .csv file:
 
 This file has the following dependencies:
 
-* [product_concrete.csv](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
-* [warehouse.csv](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-import-categories/commerce-setup/file-details-warehouse.csv.html)
+* [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
+* [warehouse.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse.csv.html)
 
 ## Recommendation & Other Information
 The *product_stock.csv* file contains information about the amount of product articles stored on the warehouses. 

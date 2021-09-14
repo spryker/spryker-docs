@@ -35,7 +35,7 @@ Then, in the *Shipment* checkout step, you can see the products grouped by the s
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Checkout/Shop+Guide+-+Summary+Step/summary-step-new.png)
 
-See [Shop Guide - Address](/docs/scos/dev/features/202009.0/checkout/checkout-feature-overview/multi-step-checkout.html) for more details on how to add multiple delivery addresses to order items in the Storefront.
+See [Shop Guide - Address](/docs/scos/user/features/{{page.version}}/checkout/checkout-feature-overview/multi-step-checkout.html) for more details on how to add multiple delivery addresses to order items in the Storefront.
 
 ## Split Delivery in the Back Office
 In the Back Office, the shipments are displayed in the *Order Items* section on the **View Order: [Order ID]** page.
@@ -73,15 +73,15 @@ With Split Delivery, Product Bundles items can be shipped to different delivery 
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
  <li><a href="/docs/scos/dev/tutorials-and-howtos/202009.0/howtos/feature-howtos/howto-disable-split-delivery-in-yves-interface.html" class="mr-link">Disable Split Delivery on the Storefront</a></li>                
-                <li><a href="https://documentation.spryker.com/docs/split-delivery-concept" class="mr-link">Enable Split Delivery in your project</a></li>
+                <li><a href="docs\scos\dev\migration-concepts\split-delivery-migration-concept.md" class="mr-link">Enable Split Delivery in your project</a></li>
             </ul>
         </div>
         <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/managing-order-shipments#creating-a-new-shipment-for-order" class="mr-link">Create a shipment</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-order-shipments#editing-shipment-details" class="mr-link">Edit a shipment</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\sales\orders\managing-order-shipments.md#creating-a-new-shipment-for-order" class="mr-link">Create a shipment</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\sales\orders\managing-order-shipments.md#editing-shipment-details" class="mr-link">Edit a shipment</a></li>
             </ul>
         </div>
     </div>

@@ -172,7 +172,8 @@ class CompanyUserDependencyProvider extends SprykerCompanyUserDependencyProvider
 | `DataImport` | `PriceProductMerchantRelationshipDataImportPlugin` | Imports prices for merchant relations. | `getDataImporterPlugins` |
 
 {% info_block warningBox %}
-If you have not installed plugins needed for Merchant and Merchant Relations, add them here as well. See _Merchant and Merchant Relations feature integration guide_ for more details.)
+If you have not installed plugins needed for Merchant and Merchant Relations, add them here as well. See _Merchant and Merchant Relations feature integration guide_ for more details.
+{% endinfo_block %}
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 

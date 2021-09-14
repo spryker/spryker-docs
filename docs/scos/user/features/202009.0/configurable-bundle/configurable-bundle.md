@@ -26,41 +26,41 @@ Configurable Bundles feature is useful when you want to:
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/configurable-bundle-feature-overview" class="mr-link">Get a general idea of the Configurable Bundle feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/configurable-bundle-module-relations" class="mr-link">Familiarize yourself with the module schema for the Configurable Bundle feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/howto-rendering-configurable-bundles-in-the-storefront" class="mr-link">Render Configurable Bundle Templates in the Storefront</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/migration-guide-configurablebundle" class="mr-link">Migrate ConfigurableBundle module from version 1.* to  version 2.*</a></li>
-                  <li><a href="https://documentation.spryker.com/docs/migration-guide-configurablebundlestorage" class="mr-link">Migrate ConfigurableBundleStorage module from version 1.* to  version 2.*</a></li>
-                <li><a href="https://documentation.spryker.com/docs/migration-guide-product-list-gui" class="mr-link">Migrate ProductListGui module from version 1.* to  version 2.*</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/migration-guide-merchantrelationshipproductlistgui" class="mr-link">Migrate MerchantRelationshipProductListGui module from version 1.* to  version 2.*</a></li>
-                <li><a href="https://documentation.spryker.com/docs/configurable-bundle-feature-integration" class="mr-link">Integrate the Configurable Bundle feature into your project</a></li>
-                <li><a href="https://documentation.spryker.com/docs/merchant-product-restrictions-feature-integration" class="mr-link">Integrate the Merchant Product Restrictions feature into your project</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/product-lists-catalog-feature-integration" class="mr-link">Integrate the Product Lists + Catalog feature into your project</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/prices-feature-integration-201907" class="mr-link">Integrate the Prices feature into your project</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/product-feature-integration-201903" class="mr-link">Integrate the Product feature into your project</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/product-images-configurable-bundle-feature-integration" class="mr-link">Integrate the Product Images + Configurable Bundle into your project</a></li>
+                <li><a href="docs\scos\user\features\202009.0\configurable-bundle\configurable-bundle-feature-overview.md" class="mr-link">Get a general idea of the Configurable Bundle feature</a></li>
+                <li><a href="docs\scos\user\features\202009.0\configurable-bundle\configurable-bundle-module-relations.md" class="mr-link">Familiarize yourself with the module schema for the Configurable Bundle feature</a></li>
+                <li><a href="docs\scos\dev\tutorials-and-howtos\howtos\feature-howtos\howto-render-configurable-bundle-templates-in-the-storefront.md" class="mr-link">Render Configurable Bundle Templates in the Storefront</a></li>
+                 <li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-configurablebundle.md" class="mr-link">Migrate ConfigurableBundle module from version 1.* to  version 2.*</a></li>
+                  <li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-configurablebundlestorage.md" class="mr-link">Migrate ConfigurableBundleStorage module from version 1.* to  version 2.*</a></li>
+                <li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-productlistgui.md" class="mr-link">Migrate ProductListGui module from version 1.* to  version 2.*</a></li>
+                 <li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-merchantrelationshipproductlistgui.md" class="mr-link">Migrate MerchantRelationshipProductListGui module from version 1.* to  version 2.*</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\configurable-bundle-feature-integration.md" class="mr-link">Integrate the Configurable Bundle feature into your project</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\merchant-product-restrictions-feature-integration.md" class="mr-link">Integrate the Merchant Product Restrictions feature into your project</a></li>
+                 <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\cms-product-lists-catalog-feature-integration.md" class="mr-link">Integrate the Product Lists + Catalog feature into your project</a></li>
+                 <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\prices-feature-integration.md" class="mr-link">Integrate the Prices feature into your project</a></li>
+                 <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\product-feature-integration.md" class="mr-link">Integrate the Product feature into your project</a></li>
+                 <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\product-images-configurable-bundle-feature-integration.md" class="mr-link">Integrate the Product Images + Configurable Bundle into your project</a></li>
               </ul>
         </div>
         <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/configurable-bundle-templates" class="mr-link">Get a general idea of the Configurable Bundle Templates</a></li>
-                <li><a href="https://documentation.spryker.com/docs/creating-configurable-bundle-templates" class="mr-link">Create a Configurable Bundle Template</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-configurable-bundle-templates#editing-configurable-bundle-template" class="mr-link">Edit a Configurable Bundle Template</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-configurable-bundle-templates#creating-a-slot-for-a-configurable-bundle-template" class="mr-link">Create a Slot for a Configurable Bundle Template</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-configurable-bundle-templates#editing-the-slot-for-a-configurable-bundle-template" class="mr-link">Edit the Slot for a Configurable Bundle Template</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-configurable-bundle-templates#-de-activating-configurable-bundle-template" class="mr-link">(De)Activate a Configurable Bundle Template</a></li>
-                  <li><a href="https://documentation.spryker.com/docs/managing-configurable-bundle-templates#deleting-configurable-bundle-template" class="mr-link">Delete a Configurable Bundle Template</a></li>
+                <li><a href="docs\scos\user\features\202009.0\configurable-bundle\configurable-bundle-feature-overview.md" class="mr-link">Get a general idea of the Configurable Bundle Templates</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\merchandising\configurable-bundle-templates\creating-configurable-bundle-templates.md" class="mr-link">Create a Configurable Bundle Template</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\merchandising\configurable-bundle-templates\managing-configurable-bundle-templates.md#editing-configurable-bundle-template" class="mr-link">Edit a Configurable Bundle Template</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\merchandising\configurable-bundle-templates\managing-configurable-bundle-templates.md#creating-a-slot-for-a-configurable-bundle-template" class="mr-link">Create a Slot for a Configurable Bundle Template</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\merchandising\configurable-bundle-templates\managing-configurable-bundle-templates.md#editing-the-slot-for-a-configurable-bundle-template" class="mr-link">Edit the Slot for a Configurable Bundle Template</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\merchandising\configurable-bundle-templates\managing-configurable-bundle-templates.md#-de-activating-configurable-bundle-template" class="mr-link">(De)Activate a Configurable Bundle Template</a></li>
+                  <li><a href="https://documentation.spryker.com/docs/docs\scos\user\user-guides\202009.0\back-office-user-guide\merchandising\configurable-bundle-templates\managing-configurable-bundle-templates.md#deleting-configurable-bundle-templates" class="mr-link">Delete Configurable Bundle Templates</a></li>
             </ul>
         </div>
         <!-- col3 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-red">
                 <li class="mr-title">Storefront User</li>
-                <li><a href="https://documentation.spryker.com/docs/shop-guide-configurator" class="mr-link">Familiarize yourself with the Configurator page in the Storefront</a></li>
-                <li><a href="https://documentation.spryker.com/docs/shop-guide-managing-configurable-bundles#accessing-the-configurator-page" class="mr-link">Access the Configurator Page</a></li>
-                <li><a href="https://documentation.spryker.com/docs/shop-guide-managing-configurable-bundles#setting-up-the-configurable-bundle-in-the-storefront" class="mr-link">Set up the Configurable Bundle in the Storefront</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\shop-user-guide\shop-guide-configurator\shop-guide-configurator.md" class="mr-link">Familiarize yourself with the Configurator page in the Storefront</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\shop-user-guide\shop-guide-configurator\shop-guide-managing-configurable-bundles.md#accessing-the-configurator-page" class="mr-link">Access the Configurator Page</a></li>
+                <li><a href="https://documentation.spryker.com/docs/docs\scos\user\user-guides\202009.0\shop-user-guide\shop-guide-configurator\shop-guide-managing-configurable-bundles.md#setting-up-the-configurable-bundle-in-the-storefront" class="mr-link">Set up the Configurable Bundle in the Storefront</a></li>
             </ul>
         </div>
     </div>

@@ -21,8 +21,8 @@ To edit a product set:
 ![Editing a product set](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Sets/Managing+Product+Sets/editing-product-set.png) 
 
     {% info_block infoBox "Info" %}
-The attributes you see are described in [Product Sets: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/product-sets/references/product-sets-reference-information.html
-{% endinfo_block %}.)
+The attributes you see are described in [Product Sets: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/product-sets/references/product-sets-reference-information.html).
+{% endinfo_block %}
 3. Once done, click **Submit**.
 
 **Tips & Tricks**

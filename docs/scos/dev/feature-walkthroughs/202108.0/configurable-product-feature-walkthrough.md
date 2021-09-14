@@ -15,5 +15,5 @@ To learn more about the feature and to find out how end users use it, see [Confi
 
 |INTEGRATION GUIDES | DATA IMPORT |
 |---------|---------|
-| [Product Configuration feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/product-configuration-feature-integration.html) | [File details: product_concrete_pre_configuration.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html)  |
+| [Product Configuration feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/product-configuration-feature-integration.html) | [File details: product_concrete_pre_configuration.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html)  |
 | [Glue API: Product Configuration feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-product-configuration-feature-integration.html) |   |

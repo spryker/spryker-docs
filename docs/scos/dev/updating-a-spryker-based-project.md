@@ -190,7 +190,7 @@ For the **minor** module updates, where you have lots of customizations, it woul
 ```Bash
 php -d memory_limit=-1 composer.phar require "spryker/sales:^8.0.0"
 ```
-If no extra dependencies are found, *composer.json* will be updated, respectively. Otherwise, see the [Troubleshooting](/docs/scos/dev/developer-guides/{{page.version}}/updating-a-spryker-based-project.html#troubleshooting) section at the end of the article, *In case when update is not possible* part.
+If no extra dependencies are found, *composer.json* will be updated, respectively. Otherwise, see the [Troubleshooting](/docs/scos/dev/updating-a-spryker-based-project.html#troubleshooting) section at the end of the article, *In case when update is not possible* part.
 
 2. [Check the migration guide](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/about-migration-guides.html) for the respective major module version. See the [Sales](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-sales.html) migration guide for example. Find the section for your module version and complete all the steps it contains.
 3.  Check for project changes, just like for the *minor* updates in the section above. Go to  `https://github.com/[module-name-here]/compare/[your-version]…[available-version]` and check if there are any changes that might conflict with your business logic.
@@ -209,7 +209,7 @@ Automoted tests are must-have for every project in general and are very helpful 
 *     Functional tests - cover your Facade methods in Zed
 *     Unit tests - cover classes with complex business logic and tricky algorithms
 
-See the [Testing](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/testing/test-framework.html) section for information on what Spryker has to offer in terms of testing your project's code.
+See the [Testing](/docs/scos/dev/guidelines/testing/test-framework.html) section for information on what Spryker has to offer in terms of testing your project's code.
 
 {% info_block infoBox "Note" %}
 
@@ -251,14 +251,14 @@ Sometimes inheritance is exactly what you need, and none of the above strategies
 ### 3. Lock your module version after inheritance
 If you inherit a class from Spryker, there is one more way to "protect" yourself during the update by locking your module version to the current minor. You can do this by, for example, replacing the *carret* module version (“^1.3.2”) with the *tilde* version (“~1.3.2”) in your *composer.json*. Next time when the class you've updated gets minor changes on the Spryker side, composer will warn you about the locked version, and you will have to investigate why this module was locked. Make sure to leave a meaningful comment in your VCS when locking the module for the person who will investigate that.
 
-In Spryker we have the [Composer Constrainer](/docs/scos/dev/developer-guides/architecture-guide/module-api/using-composer-constraint-for-customized-modules.html) tool that will try to lock modules for you automatically by searching for inherited classes in your project namsepace.
+In Spryker we have the [Composer Constrainer](/docs/scos/dev/architecture/module-api/using-composer-constraint-for-customized-modules.html) tool that will try to lock modules for you automatically by searching for inherited classes in your project namsepace.
 
 ## Updating and installing features
 At some point, you will need to add new or update the existing features for your project. This section will help you do that.
 {% info_block infoBox "Info" %}
 
 You can learn about a new Spryker feature from the [Release Notes](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html). We recommend [subscribing to our release mail](/docs/scos/user/intro-to-spryker/releases/releases.html) in order not to miss a new release announcement.
-A complete list of all Spryker features can be found in the [Features](/docs/scos/dev/features/{{site.version}}/overview-of-the-feature-guides.html) section. This section contains general descriptions of the features and links to their [Integration Guides](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/about-integration-guides.html) that you will use to install or update the features.  
+A complete list of all Spryker features can be found in the [Features](/docs/scos/user/features/{{site.version}}/overview-of-the-feature-guides.html) section. This section contains general descriptions of the features and links to their [Integration Guides](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/about-integration-guides.html) that you will use to install or update the features.  
 
 {% endinfo_block %}
 
@@ -284,7 +284,7 @@ A new feature might require a higher major version for a specific module. In thi
 {% endinfo_block %}
 
 ## Troubleshooting
-This section contains common issues with the updates and provides solutions on how to fix them. If your issue is not on the list, and you need help, please [contact us](/docs/scos/dev/developer-guides/updating-a-spryker-based-project.html#let-us-know).
+This section contains common issues with the updates and provides solutions on how to fix them. If your issue is not on the list, and you need help, please [contact us](/docs/scos/dev/updating-a-spryker-based-project.html#let-us-know).
 
 ### I see Spryker Code Sniffer updates
 In case you see Code Sniffer updates from Spryker, first check if the new code sniffer rules have been added. Investigate what they are doing and decide with the team if you need them.

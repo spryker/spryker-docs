@@ -8,9 +8,9 @@ redirect_from:
   - /v6/docs/en/product-bundles
 ---
 
-Sell multiple products as a single bundle. With the *Product Bundles* feature, you can create unique offertings for your customers. 
+Sell multiple products as a single bundle. With the *Product Bundles* feature, you can create unique offertings for your customers.
 
-In Spryker, product bundles are created by grouping existing concrete products. So, you don't have to create each bundle from scratch, but build on your existing product catalog. 
+In Spryker, product bundles are created by grouping existing concrete products. So, you don't have to create each bundle from scratch, but build on your existing product catalog.
 
 ## If you are:
 
@@ -20,15 +20,15 @@ In Spryker, product bundles are created by grouping existing concrete products. 
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/product-bundles-feature-overview" class="mr-link">Get a general idea of the Product Bundles feature</a></li>
+                <li><a href="docs\scos\user\features\202009.0\product-bundles\product-bundles-feature-overview.md" class="mr-link">Get a general idea of the Product Bundles feature</a></li>
             </ul>
         </div>
         <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/product-bundles-feature-overview" class="mr-link">Get a general idea of the Product Bundles feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/creating-product-bundles" class="mr-link">Create product bundles</a></li>
+                <li><a href="docs\scos\user\features\202009.0\product-bundles\product-bundles-feature-overview.md" class="mr-link">Get a general idea of the Product Bundles feature</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\catalog\products\abstract-products\creating-product-bundles.md" class="mr-link">Create product bundles</a></li>
             </ul>
         </div>
     </div>

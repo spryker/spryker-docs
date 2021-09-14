@@ -19,7 +19,7 @@ redirect_from:
 **Business Value**
 * Acquire new customers through gift card payment options
 ***
-        
+
 Effectively up your sales by allowing your customers to purchase and redeem gift cards. Gift card purchases can boost your brand awareness and help you reach new customers. Additionally you also benefit from shoppers who redeem gift cards, as they usually spend 20%+ on top of the card's value. Gift cards are treated as a separate payment method. In case of any remaining balance, customers can choose to keep it on their gift card or receive a replacement code with the new balance.
     </div>
 </div>
@@ -28,4 +28,4 @@ Effectively up your sales by allowing your customers to purchase and redeem gift
 
 <div>
 
-* <a class="feature-link" href="https://documentation.spryker.com/docs/gift-card-purchase-management-201907">Gift Card Purchase and Management</a>
+* <a class="feature-link" href="docs\scos\user\features\202009.0\gift-cards\gift-cards-feature-overview.md">Gift Card Purchase and Management</a>

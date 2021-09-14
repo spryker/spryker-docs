@@ -10,7 +10,7 @@ redirect_from:
 
 A CMS page is an HTML page you can create and edit in the Back Office using the WYSIWYG editor. The *About Us*, *Impressum*, *Terms*, *Contacts*, and *Conditions* pages are the examples of CMS pages that you can create.
 
-Each CMS page has a unique URLs. 
+Each CMS page has a unique URLs.
 
 ## CMS page template
 
@@ -55,31 +55,30 @@ With the CMS Pages feature, you can:
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                 <li><a href="https://documentation.spryker.com/docs/ht-create-cms-templates#adding-a-template-for-a-cms-page" class="mr-link"> Create a template for a CMS page</a></li>
-  <li><a href="https://documentation.spryker.com/docs/content-fields-max-size" class="mr-link">Define maximum length of content fields</a></li>
-<li><a href="https://documentation.spryker.com/docs/reference-information-cms-extension-points" class="mr-link">Enable an extension point for post activation and deactivation of CMS pages</a></li> 
-<li><a href="https://documentation.spryker.com/docs/mg-cms#upgrading-from-version-6---to-version-7--" class="mr-link">Migrate the CMS module from version 6.* to version 7.*</a></li>
- <li><a href="https://documentation.spryker.com/docs/mg-cmsstorage#upgrading-from-version-1---to-version-2--" class="mr-link">Migrate the CmsStorage module from version 1.* to version 2.*</a></li>
-                <li><a href="https://documentation.spryker.com/docs/migration-guide-cmsgui#upgrading-from-version-4---to-version-5--" class="mr-link">Migrate the CmsGui module from version 4.* to version 5.*</a></li>
- </li><li><a href="https://documentation.spryker.com/docs/mg-cmspagesearch#upgrading-from-version-1---to-version-2--" class="mr-link">Migrate the CmsPageSearch module from version 1.* to version 2.*</a></li> 
- </li><li><a href="https://documentation.spryker.com/docs/cms-feature-integration-guide" class="mr-link">Enable CMS pages in your project by integrating the CMS feature</a></li>
-  </li><li><a href="https://documentation.spryker.com/docs/cms-page-search-product-lists-catalog-feature-integration-201903" class="mr-link">Integrate the CMS Page Search + Product Lists + Catalog Feature into your project </a></li> 
+                 <li><a href="docs\scos\dev\tutorials-and-howtos\howtos\feature-howtos\cms\howto-create-cms-templates.md#cms-page-template" class="mr-link"> Create a template for a CMS page</a></li>
+  <li><a href="docs\scos\dev\tutorials-and-howtos\howtos\howto-define-the-maximum-size-of-content-fields.md" class="mr-link">Define maximum length of content fields</a></li>
+<li><a href="https://documentation.spryker.com/docs/reference-information-cms-extension-points" class="mr-link">Enable an extension point for post activation and deactivation of CMS pages</a></li>
+<li><a href="docs\scos\dev\module-migration-guides\202108.0\migration-guide-cms.html#upgrading-from-version-6---to-version-7--" class="mr-link">Migrate the CMS module from version 6.* to version 7.*</a></li>
+ <li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-cmsstorage.html#upgrading-from-version-1---to-version-2--" class="mr-link">Migrate the CmsStorage module from version 1.* to version 2.*</a></li>
+                <li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-cmsgui.md#upgrading-from-version-4---to-version-5--" class="mr-link">Migrate the CmsGui module from version 4.* to version 5.*</a></li>
+ </li><li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-cmspagesearch.html#upgrading-from-version-1---to-version-2--" class="mr-link">Migrate the CmsPageSearch module from version 1.* to version 2.*</a></li>
+ </li><li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\cms-feature-integration.md" class="mr-link">Enable CMS pages in your project by integrating the CMS feature</a></li>
+  </li><li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\cms-product-lists-catalog-feature-integration.md" class="mr-link">Integrate the CMS Page Search + Product Lists + Catalog Feature into your project </a></li>
   </ul>
         </div>
         <!-- col3 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-red">
                 <li class="mr-title">Back Office User</li>
-                  <li><a href="https://documentation.spryker.com/docs/creating-a-cms-page" class="mr-link">Create a CMS page</a></li> 
-     </li><li><a href="https://documentation.spryker.com/docs/managing-cms-pages" class="mr-link">Manage a CMS page</a></li> 
-  </li><li><a href="https://documentation.spryker.com/docs/editing-cms-pages" class="mr-link">Edit a CMS page</a></li> 
-    </li><li><a href="https://documentation.spryker.com/docs/managing-cms-page-versions" class="mr-link">Manage versions of a CMS page</a></li>
+                  <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\content\pages\creating-a-cms-page.md" class="mr-link">Create a CMS page</a></li>
+     </li><li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\content\pages\managing-cms-pages.md" class="mr-link">Manage a CMS page</a></li>
+  </li><li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\content\pages\editing-cms-pages.md" class="mr-link">Edit a CMS page</a></li>
+    </li><li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\content\pages\managing-cms-page-versions.md" class="mr-link">Manage versions of a CMS page</a></li>
             </ul>
         </div>  
 </div>
 </div>
-    
+
 ## See next
 
-* [CMS block](/docs/scos/dev/features/202009.0/cms/cms-feature-overview/cms-block.html)
-
+* [CMS block](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/cms-block.html)

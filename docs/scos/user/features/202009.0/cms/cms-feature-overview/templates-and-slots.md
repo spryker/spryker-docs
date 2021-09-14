@@ -8,15 +8,15 @@ redirect_from:
   - /v6/docs/en/templates-and-slots
 ---
 
-Templates slots enables content managers to effectively and coherently interact with content using a dedicated template in Spryker - a template with slots. In the Back Office, a content manager has access to all the Storefront pages and can easily embed content into them. The embedded content is rendered by the [Slot Widget](#slot-widget). 
+Templates slots enables content managers to effectively and coherently interact with content using a dedicated template in Spryker - a template with slots. In the Back Office, a content manager has access to all the Storefront pages and can easily embed content into them. The embedded content is rendered by the [Slot Widget](#slot-widget).
 
 {% info_block infoBox %}
 
 Templates and slots is a complex funcitonality which works in conjunction with other functionalities. To use it effectively, make sure you get familiar with the functionalities in the order they are presented:
-* [CMS Page](/docs/scos/dev/features/202009.0/cms/cms-feature-overview/cms-page.html)
-* [CMS Block](/docs/scos/dev/features/202009.0/cms/cms-feature-overview/cms-block.html)
-* [Content Items](/docs/scos/dev/features/202009.0/content-items/content-items.html) 
-* [WYSIWYG Editor](/docs/scos/dev/features/202009.0/cms/cms-feature-overview/wysiwyg-editor.html)
+* [CMS Page](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/cms-page.html)
+* [CMS Block](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/cms-block.html)
+* [Content Items](/docs/scos/user/features/{{page.version}}/content-items/content-items.html)
+* [WYSIWYG Editor](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/wysiwyg-editor.html)
 
 {% endinfo_block %}
 
@@ -32,7 +32,7 @@ Managing content with the help of templates with slots involves four separate en
 
 The following Storefront page breakdown shows the arrangement of the entities.
 
-![image](https://confluence-connect.gliffy.net/embed/image/a7cad21d-e586-4c8f-92d5-9095071e3e8d.png?utm_medium=live&utm_source=custom) 
+![image](https://confluence-connect.gliffy.net/embed/image/a7cad21d-e586-4c8f-92d5-9095071e3e8d.png?utm_medium=live&utm_source=custom)
 
 ## Template
 Template is a [Twig](https://twig.symfony.com/) file that, when applied to a page, defines its design and layout. Template with slots is a template that defines the layout of slots across a page and has at least one slot assigned.
@@ -40,10 +40,10 @@ Template is a [Twig](https://twig.symfony.com/) file that, when applied to a pag
 <details open>
     <summary>Template representation - Storefront</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/storefront-+template.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/storefront-+template.png)
 
 </details>
-    
+
 
 
 The following templates with slots are shipped with the CMS feature:
@@ -57,7 +57,7 @@ A content manager can [manage templates with slots](/docs/scos/user/user-guides/
 <details open>
     <summary>Template representation - the Back Office</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/back-office-template.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/back-office-template.png)
 
 
 </details>
@@ -72,7 +72,7 @@ Slot is a configurable space for content in a template. Unlike template that is 
 <details open>
     <summary>Slot representation - Storefront</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/storefront-slot.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/storefront-slot.png)
 
 
 </details>
@@ -90,31 +90,31 @@ A content manager can [manage slots](/docs/scos/user/user-guides/202009.0/back-o
 <details open>
     <summary>Slot representation - the Back Office</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/back-office-slot.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/back-office-slot.png)
 
 
 </details>
 
 ## CMS Block
 
-[CMS block](/docs/scos/dev/features/202009.0/cms/cms-feature-overview/cms-block.html), from the perspective of the tempates and slots, is a piece of content that is inserted into a slot. When a CMS block is inserted into a slot, it's content is displayed on the Storefront page space belonging to the slot.  The position of CMS blocks on a page can be defined by a content manager in the Back Office. 
+[CMS block](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/cms-block.html), from the perspective of the tempates and slots, is a piece of content that is inserted into a slot. When a CMS block is inserted into a slot, it's content is displayed on the Storefront page space belonging to the slot.  The position of CMS blocks on a page can be defined by a content manager in the Back Office.
 
 <details open>
     <summary> CMS block representation - Storefront</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/storefront-cms-block.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/storefront-cms-block.png)
 
 
 </details>
 
 A content manager can [manage CMS blocks](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/slots/managing-slots.html) in the Back Office > **Content Management** > **Slots** section.
- 
+
 
 
 <details open>
     <summary> CMS block representation - the Back Office</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/back-office-cms-block.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/back-office-cms-block.png)
 
 
 </details>
@@ -125,18 +125,18 @@ CMS Block is a separate entity with a dedicated section in the Back Office. See 
 
 ## Content Item
 
-[Content Item](/docs/scos/dev/features/202009.0/content-items/content-items.html-feature-overview) is the smallest content unit in Spryker that is used in the WISIWYG editor when creating content for CMS blocks. When a CMS block is inserted into a slot, all the content items of the CMS block are displayed on the Storefront page space of the slot.
+[Content Item](/docs/scos/user/features/{{page.version}}/content-items/content-items.html-feature-overview) is the smallest content unit in Spryker that is used in the WISIWYG editor when creating content for CMS blocks. When a CMS block is inserted into a slot, all the content items of the CMS block are displayed on the Storefront page space of the slot.
 
 <details open>
     <summary> Content item representation - Storefront</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/storefront-content-item.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/storefront-content-item.png)
 
 
 </details>
 
-From the perspective of templates and slots, a content item always comes as a part of CMS block. That's why there is no place to manage it in the **Slots** section. 
-See [Content Items](/docs/scos/dev/features/202009.0/content-items/content-items.html) to learn what a content manager can do with content items in the Back Office > **Content Management** > **Content Items** section.
+From the perspective of templates and slots, a content item always comes as a part of CMS block. That's why there is no place to manage it in the **Slots** section.
+See [Content Items](/docs/scos/user/features/{{page.version}}/content-items/content-items.html) to learn what a content manager can do with content items in the Back Office > **Content Management** > **Content Items** section.
 
 ### Applying Templates with Slots
 The template with slots can be applied to any page. Even though a content manager can manage all page types in the Back Office, they can only apply templates with slots to the following:
@@ -147,7 +147,7 @@ The template with slots can be applied to any page. Even though a content manage
 A developer can apply templates with slots to all the other page types.
 
 ## Correlation
-The correlation between templates and slots is defined by importing template and slot lists into database. Learn how to [import these lists](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-importers-overview-and-implementation.html).
+The correlation between templates and slots is defined by importing template and slot lists into database. Learn how to [import these lists](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html).
 
 Using the information from the imported lists, the Slot Widget can understand which slots are assigned to a template, and from where to fetch content for each slot.
 
@@ -193,13 +193,13 @@ A content provider is a source from where Slot Widget fetches content to embed i
 With templates and slots, the following applies:
 
 * Spryker CMS Blocks is the content provider for all the slots.
-* Slots embed content from [CMS Blocks](/docs/scos/dev/features/202009.0/cms/cms-feature-overview/cms-block.html).
-* Content for CMS blocks is created in the [WYSIWYG Editor](/docs/scos/dev/features/202009.0/cms/cms-feature-overview/wysiwyg-editor.html#wysiwyg-editor).
+* Slots embed content from [CMS Blocks](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/cms-block.html).
+* Content for CMS blocks is created in the [WYSIWYG Editor](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/wysiwyg-editor.html#wysiwyg-editor).
 * Templates with slots are managed in the Back Office > **Slots** section.
 
 The schema below shows how content is managed with the help of templates with slots:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/templates-and-slots.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/templates-and-slots.png)
 
 ## Visibility Conditions
 When the content manager assigns a CMS block to a slot, it is displayed in all the pages to which the template with the slot is applied.  To narrow down the number of pages to a desired selection, the content manager can define visibility conditions for each CMS block assigned to a slot. Visibility conditions are defined by selecting particular pages in which the content of a CMS block will be displayed. When visibility conditions are defined, the slot widget checks if the CMS block should be rendered in an opened page and either renders or skips it.
@@ -216,15 +216,15 @@ Page identifiers used to define visibility conditions depend on the page type to
 
 
 {% info_block infoBox "Product details page" %}
-For product details page type, you can use the Product ID or Category ID identifiers. Category ID is a collective identifier. By selecting a category, the content manager selects all the products that are [assigned to the category](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/category/assigning-products-to-categories.html
-{% endinfo_block %}.)
+For product details page type, you can use the Product ID or Category ID identifiers. Category ID is a collective identifier. By selecting a category, the content manager selects all the products that are [assigned to the category](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/category/assigning-products-to-categories.html).
+{% endinfo_block %}
 
 To meet your project requirements, you can extend the visibility conditions functionality by adding more conditions, like Customer ID, Customer Group ID or Navigation Nodes. See [HowTo - Create Visibility Conditions for CMS Blocks](/docs/scos/dev/tutorials-and-howtos/202009.0/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html) to learn more.
 
 
 A content manager can define visibility conditions by [selecting pages](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/slots/managing-slots.html#selecting-pages) in the Back Office > **Content Management > Slots** section.
 
-A developer can [import visibility conditions](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-importers-overview-and-implementation.html). 
+A developer can [import visibility conditions](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-importers-overview-and-implementation.html).
 
 ## Slot Widget
 Slot widget is used to fetch content from a content provider and render it in specified pages. Content is fetched in the form of HTML code ready to be rendered in the Storefront. With the help of slot widgets, you can fetch and render content from the following content providers:
@@ -350,7 +350,7 @@ Unlike category, product details and CMS pages, the home page does not require a
 ## Database Schema - Templates with Slots and CMS Blocks Content Provider
 You can find the database schema for templates, slots and the SprykerCMS content provider below:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/template-slot-cms-blocks-content-provider.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/template-slot-cms-blocks-content-provider.png)
 
 **Structure:**
 
@@ -374,7 +374,7 @@ You can find the database schema for templates, slots and the SprykerCMS content
 Currently, the functionality has the following functional constraints which are going to be resolved in the future.
 {% endinfo_block %}
 
-* The Back Office sections related to the CMS pages do not provide any relevant information about templates and slots. 
+* The Back Office sections related to the CMS pages do not provide any relevant information about templates and slots.
 
 
 ## If you are:
@@ -386,11 +386,11 @@ Currently, the functionality has the following functional constraints which are 
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
                                                 <li><a href="/docs/scos/dev/technology-partners/202009.0/content-management/coremedia/coremedia.html-with-templates-slots" class="mr-link">Learn about the CoreMedia technology partner integration</a></li>
-                                <li><a href="https://documentation.spryker.com/docs/cms-feature-integration-guide " class="mr-link">Enable templates and slots in your project by integrating the CMS feature</a></li>
+                                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\cms-feature-integration.md" class="mr-link">Enable templates and slots in your project by integrating the CMS feature</a></li>
                                 <li><a href="/docs/scos/dev/tutorials-and-howtos/202009.0/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html" class="mr-link">Learn how to create a visibility condition</a></li>                
                 <li><a href="/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-cmsblock.html#upgrading-from-version-2---to-version-3--" class="mr-link">Migrate the CmsBlock module from version 2.* to version 3.*</a></li>
-                                <li><a href="https://documentation.spryker.com/docs/migration-guide-cmsblockstorage#upgrading-from-version-1---to-version-2--" class="mr-link">Migrate the CmsBlockStorage module from version 1.* to version 2.*</a></li>
-                                                <li><a href="https://documentation.spryker.com/docs/migration-guide-cmsblockwidget#upgrading-from-version-1---to-version-2--">Migrate the CmsBlockWidget module from version 1.* to version 2.*</a></li>
+                                <li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-cmsblockstorage.md#upgrading-from-version-1---to-version-2--" class="mr-link">Migrate the CmsBlockStorage module from version 1.* to version 2.*</a></li>
+                                                <li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-cmsblockwidget.md">Migrate the CmsBlockWidget module from version 1.* to version 2.*</a></li>
             </ul>
         </div>
       <!-- col2 -->
@@ -398,7 +398,7 @@ Currently, the functionality has the following functional constraints which are 
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title">Back Office User</li>
                                 <li><a href="/docs/scos/dev/technology-partners/202009.0/content-management/coremedia/coremedia.html-with-templates-slots" class="mr-link">Learn about the CoreMedia technology partner integration</a></li>
-                                <li><a href="https://documentation.spryker.com/docs/adding-content-to-storefront-pages-using-templates-slots" class="mr-link">Add content to Storefront using templates and slots</a></li>
+                                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\content\adding-content-to-storefront-pages-using-templates-and-slots-best-practices.md" class="mr-link">Add content to Storefront using templates and slots</a></li>
                                 <li><a href="/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/slots/managing-slots.html" class="mr-link">Manage slots</a></li>
             </ul>
         </div>  
@@ -411,4 +411,4 @@ Currently, the functionality has the following functional constraints which are 
 
 ## See next
 
-* [Email as a CMS block](/docs/scos/dev/features/202009.0/cms/cms-feature-overview/email-as-a-cms-block.html)
+* [Email as a CMS block](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/email-as-a-cms-block.html)

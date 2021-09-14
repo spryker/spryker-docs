@@ -18,20 +18,24 @@ To view the dashboard charts, click **Dashboard**. The *Dashboard* page  is disp
 
 ## Count orders
 
-The *Count orders* chart provides a summary of orders made for the last 7 days. 
+The *Count orders* chart provides a summary of orders made for the last 7 days.
 
 {% info_block infoBox %}
+
 The x-axis shows days, and the y-axis shows the number of orders.
+
 {% endinfo_block %}
 
 ![Count orders](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Dashboard/count-orders.png)
 
 ## Orders by status
 
-The *Orders by status* chart shows the statuses of all the orders that currently exist in the system. 
+The *Orders by status* chart shows the statuses of all the orders that currently exist in the system.
 
 {% info_block infoBox %}
-You can hover your mouse over the chart to see the details. 
+
+You can hover your mouse over the chart to see the details.
+
 {% endinfo_block %}
 
 Once the status of an order is updated in the **Sales** > **Orders** section, the change is reflected on this chart.
@@ -39,10 +43,12 @@ Once the status of an order is updated in the **Sales** > **Orders** section, th
 
 ## Top Orders
 
-The *Top Orders* chart visualizes 10 most sold products. 
+The *Top Orders* chart visualizes 10 most sold products.
 
 {% info_block infoBox %}
+
 The x-axis shows placed orders, and the y-axis shows product names. You can hover your mouse over each line and see the number of ordered items.
+
 {% endinfo_block %}
 
 ![Top orders](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Dashboard/top-orders.png)

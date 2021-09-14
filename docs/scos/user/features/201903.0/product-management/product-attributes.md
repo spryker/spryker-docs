@@ -62,7 +62,7 @@ Key = attribute.protection_feature
 Value (en_EN) = Protection Feature 
 Value (de_DE) = Schutzfunktion 
 
-The attribute value “waterproof” is now translated, a non-localized value (as in [Example 1](/docs/scos/dev/features/201903.0/product-management/product-attributes.html#example-1-for-localized-attributes-and-non-localized-values)) is not sufficient: 
+The attribute value “waterproof” is now translated, a non-localized value (as in [Example 1](/docs/scos/user/features/{{page.version}}/product-management/product-attributes.html#example-1-for-localized-attributes-and-non-localized-values)) is not sufficient: 
 
 Value (en_EN) = Waterproof 
 Value (de_DE) = Wasserdicht 
@@ -76,7 +76,7 @@ Schutzfunktion = Wasserdicht
 ### Example 3 for different localized attributes and values for different languages
 
   Product Z has the attribute “length” and is sold in 3 countries, Germany, Ireland, and the United States. Due to the fact that the United States does not use the metric system, the attribute values should be displayed in feet in the US and in meters in Germany and Ireland. 
-For this scenario there are two ways of doing it. One way **1** is to work with a non-localized attribute key for Germany and Ireland, and a localized key for the US, because (like in [Example 1](/docs/scos/dev/features/201903.0/product-management/product-attributes.html#example-1-for-localized-attributes-and-non-localized-values)) two languages could share the same translation for the attribute. The other way **2** is to add localized attribute keys and values for each language. 
+For this scenario there are two ways of doing it. One way **1** is to work with a non-localized attribute key for Germany and Ireland, and a localized key for the US, because (like in [Example 1](/docs/scos/user/features/{{page.version}}/product-management/product-attributes.html#example-1-for-localized-attributes-and-non-localized-values)) two languages could share the same translation for the attribute. The other way **2** is to add localized attribute keys and values for each language. 
 
 **(1)Non-Localized key and localized key for the US** 
 In the DB a key “attribute.length” is saved for non-localized values and a localized key “attribute.length.us” for the translations in the metric system. 

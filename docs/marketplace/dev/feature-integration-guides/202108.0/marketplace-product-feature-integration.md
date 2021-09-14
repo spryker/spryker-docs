@@ -103,10 +103,11 @@ Make sure that the following changes have been applied in transfer objects:
 | ProductAbstractMerchant   | object | Created | src/Generated/Shared/Transfer/ProductAbstractMerchantTransfer |
 | MerchantSearchCollection  | object | Created | src/Generated/Shared/Transfer/MerchantSearchCollectionTransfer |
 | MerchantProductStorage    | object | Created | src/Generated/Shared/Transfer/MerchantProductStorageTransfer |
+| ProductAbstract.idMerchant | attribute | Created | src/Generated/Shared/Transfer/ProductAbstractTransfer |
 
 {% endinfo_block %}
 
-### 3) Add Zed translations
+### 4) Add Zed translations
 
 Generate a new translation cache for Zed:
 
@@ -114,7 +115,7 @@ Generate a new translation cache for Zed:
 console translator:generate-cache
 ```
 
-### 4) Set up behavior
+### 5) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
@@ -127,6 +128,35 @@ Enable the following behaviors by registering the plugins:
 | MerchantProductPageDataExpanderPlugin                        | Expands the provided ProductAbstractPageSearch transfer object's data by merchant names. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
 | MerchantProductPageDataLoaderPlugin                          | Expands ProductPageLoadTransfer object with merchant data.   |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
 | MerchantProductAbstractStorageExpanderPlugin                 | Expands product abstract storage data with merchant references. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\ProductStorage |
+| MerchantProductProductAbstractPostCreatePlugin | Creates a new merchant product abstract entity if `ProductAbstractTransfer.idMerchant` is set. | None | Spryker\Zed\MerchantProduct\Communication\Plugin\Product |
+
+**src/Pyz/Zed/Product/ProductDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Product;
+
+use Spryker\Zed\MerchantProduct\Communication\Plugin\Product\MerchantProductProductAbstractPostCreatePlugin;
+
+class ProductDependencyProvider extends SprykerProductDependencyProvider
+{
+    /**
+     * @return \Spryker\Zed\ProductExtension\Dependency\Plugin\ProductAbstractPostCreatePluginInterface[]
+     */
+    protected function getProductAbstractPostCreatePlugins(): array
+    {
+        return [
+            new MerchantProductProductAbstractPostCreatePlugin(),
+        ];
+    }
+}
+```
+{% info_block warningBox "Verification" %}
+
+Make sure that you can create a new product in the merchant portal and see it after creation in the product data table.
+
+{% endinfo_block %}
 
 **src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php**
 
@@ -266,11 +296,11 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 
 {% info_block warningBox "Verification" %}
 
-Make sure that data in  `spy_product_abstract_storage` contains `merchant_references`'s for merchant products.
+Make sure that data contains `merchant_references`'s for merchant products in the `spy_product_abstract_storage`.
 
 {% endinfo_block %}
 
-### 5) Import merchant product data
+### 6) Import merchant product data
 
 Prepare your data according to your requirements using the demo data:
 
@@ -416,7 +446,6 @@ sku,merchant_reference,is_shared
 208,MER000002,1
 209,MER000002,1
 ```
-
 </details>
 
 | COLUMN  | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION  |

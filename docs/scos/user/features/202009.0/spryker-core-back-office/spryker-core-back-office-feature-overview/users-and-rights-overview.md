@@ -29,7 +29,7 @@ The Auth, ACL and User bundles are configured and managed through the Zed user i
 
 Also, you can find bundle names as well as controllers and actions in the file `communication/navigation.xml`. For example:
 
-![bundles_navigation.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/bundles_navigation.png) 
+![bundles_navigation.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/bundles_navigation.png)
 
 See [Managing users](/docs/scos/user/user-guides/202009.0/back-office-user-guide/users/roles-groups-and-users/managing-users.html) to learn how to create and manage users, groups, and roles .
 
@@ -110,14 +110,14 @@ In the example, we grant the user **winner@spryker.com** access to all Zed resou
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/spryker-core-back-office-feature-integration" class="mr-link">Enable Users and Rights by integrating the Spryker Core Back Office feature into your project</a></li></ul>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\spryker-core-back-office-feature-integration.md" class="mr-link">Enable Users and Rights by integrating the Spryker Core Back Office feature into your project</a></li></ul>
         </div>
   <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/managing-roles" class="mr-link">Create and manage roles</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-groups" class="mr-link">Create and manage groups</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\users\roles-groups-and-users\managing-roles.md" class="mr-link">Create and manage roles</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\users\roles-groups-and-users\managing-groups.md" class="mr-link">Create and manage groups</a></li>
                 <li><a href="/docs/scos/user/user-guides/202009.0/back-office-user-guide/users/roles-groups-and-users/managing-users.html" class="mr-link">Create and manage users</a></li>
             </ul>
         </div>

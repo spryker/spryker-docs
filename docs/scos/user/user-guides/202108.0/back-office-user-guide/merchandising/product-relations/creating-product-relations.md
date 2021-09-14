@@ -31,7 +31,7 @@ To create a product relation:
 
 5. Switch to the *Products* tab or click **Next**.
 
-6. Click **Add rule** or **Add group**, depending on the conditions you want to specify. To learn more about rules, see [Related product rules](/docs/scos/dev/features/{{page.version}}/product-relations/product-relations-feature-overview.html#related-product-rules).  
+6. Click **Add rule** or **Add group**, depending on the conditions you want to specify. To learn more about rules, see [Related product rules](/docs/scos/user/features/{{page.version}}/product-relations/product-relations-feature-overview.html#related-product-rules).  
 
 7. For the rule/group, select the operator:
     * **AND**: the selected products are displayed if all the specified conditions are fulfilled

@@ -24,18 +24,18 @@ Multiple products can be offered as a set so that the customer can add them to c
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/product-sets-feature-overview" class="mr-link">Get a general idea of the Product Sets feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/product-sets-feature-integration" class="mr-link">Integrate the Product Sets feature into your project</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/file-details-product-setcsv" class="mr-link">Import product sets</a></li>
+                <li><a href="docs\scos\user\features\202009.0\product-sets\product-sets-feature-overview.md" class="mr-link">Get a general idea of the Product Sets feature</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\product-sets-feature-integration.md" class="mr-link">Integrate the Product Sets feature into your project</a></li>
+                 <li><a href="docs\scos\dev\data-import\202009.0\data-import-categories\merchandising-setup\product-merchandising\file-details-product-set.csv.md" class="mr-link">Import product sets</a></li>
             </ul>
         </div>
         <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-               <li><a href="https://documentation.spryker.com/docs/product-sets-feature-overview" class="mr-link">Get a general idea of the Product Sets feature</a></li>
-               <li><a href="https://documentation.spryker.com/docs/creating-product-sets" class="mr-link">Create product sets</a></li>
-               <li><a href="https://documentation.spryker.com/docs/managing-product-sets" class="mr-link">Manage product sets</a></li>
+               <li><a href="docs\scos\user\features\202009.0\product-sets\product-sets-feature-overview.md" class="mr-link">Get a general idea of the Product Sets feature</a></li>
+               <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\merchandising\product-sets\creating-product-sets.md" class="mr-link">Create product sets</a></li>
+               <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\merchandising\product-sets\managing-product-sets.md" class="mr-link">Manage product sets</a></li>
             </ul>
         </div>
     </div>

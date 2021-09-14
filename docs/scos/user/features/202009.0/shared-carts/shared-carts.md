@@ -20,9 +20,9 @@ In the B2B business model, shopping carts are often created and used not by one 
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/shared-carts-feature-overview" class="mr-link">Familiarize yourself with the Shared Carts feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/en/sharing-company-user-carts" class="mr-link">Share company user carts via Glue API</a></li>
-                <li><a href="https://documentation.spryker.com/docs/shared-carts-feature-integration" class="mr-link">Integrate the Shared Carts feature into your project</a></li>
+                <li><a href="docs\scos\user\features\202009.0\shared-carts\shared-carts-feature-overview.md" class="mr-link">Familiarize yourself with the Shared Carts feature</a></li>
+                <li><a href="docs\scos\dev\glue-api-guides\202009.0\managing-carts\sharing-company-user-carts\sharing-company-user-carts.md" class="mr-link">Share company user carts via Glue API</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\shared-carts-feature-integration.md" class="mr-link">Integrate the Shared Carts feature into your project</a></li>
             </ul>
         </div>
  <!-- col3 -->

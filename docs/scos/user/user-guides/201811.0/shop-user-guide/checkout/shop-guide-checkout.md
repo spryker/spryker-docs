@@ -11,7 +11,7 @@ redirect_from:
 Checkout allows purchasing the items added to the cart.
 
 {% info_block infoBox %}
-If you have several shopping carts in your account, choose the right one and proceed with the checkout. See [Shop Guide - Shopping Carts](/docs/scos/dev/features/201811.0/shopping-cart/multiple-carts-per-user/multiple-carts-per-user-feature-overview.html#multiple-carts-per-user-on-the-storefront
+If you have several shopping carts in your account, choose the right one and proceed with the checkout. See [Shop Guide - Shopping Carts](/docs/scos/user/features/{{page.version}}multiple-carts-feature-overview.html#multiple-carts-per-user-on-the-storefront
 {% endinfo_block %} for more information.)
 
 A typical checkout process includes the following steps:

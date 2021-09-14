@@ -19,8 +19,6 @@ redirect_from:
   - /v1/docs/en/cronjob-scheduling-guide
 ---
 
-<!--Used to be: http://spryker.github.io/development-guide/reference/cronjob-scheduling/-->
-
 We use [Jenkins](https://jenkins-ci.org/) for cronjob scheduling. Compared to Crontab, there are several benefits:
 
 * Jobs are queued and can be manually executed

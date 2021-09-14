@@ -30,7 +30,7 @@ The scheme below shows the module relations of the content item data importers:
 ![Banner Content Item Data Importers module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Types%3A+Module+Relations/banner-data-importers-module-relations.png)
 
 
-See [Data Importers Overview and Implementation](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-importers-overview-and-implementation.html) for more details.
+See [Data Importers Overview and Implementation](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html) for more details.
 ***
 ## Abstract Product List
 Abstract product list content item is a content piece that consists of text and [abstract products](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/products-overview.html). A content manager selects existing abstract products when [creating the content item](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/creating-content-items.html#content-item--abstract-product-list) in the Back Office > **Content Management** > **Content Items**.
@@ -43,7 +43,7 @@ The scheme below shows the module relations of the Abstract product list content
 ### Abstract Product List Data Importer
 A developer can create and update the content items by importing them.
 
-See [Data Importers Overview and Implementation](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-importers-overview-and-implementation.html) for more details.
+See [Data Importers Overview and Implementation](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html) for more details.
 
 ### Abstract Product List API
 A developer can fetch the information on each abstract product included into a contnet item via API based on the content item key. Also, they can view details of content items for all or a specific locale.
@@ -57,7 +57,7 @@ The scheme below shows the module relations of the Product set content item and 
 ### Product Set Data Importer
 Developers can create and update the content items by importing them.
 
-See [Data Importers Overview and Implementation](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-importers-overview-and-implementation.html) for more details.
+See [Data Importers Overview and Implementation](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html) for more details.
 
 ***
 ## File List
@@ -77,6 +77,6 @@ The scheme shows the module relations of the Navigation content item:
 
 ### Navigation Data Importer
 
-A developer can create and edit navigation content items by [importing](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/importing-data-with-a-configuration-file.html#console-commands-to-run-import) them.
+A developer can create and edit navigation content items by [importing](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html#console-commands-to-run-import) them.
 
-See [File details: content_navigation.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/content-management/file-details-content-navigation.csv.html) for more details.
+See [File details: content_navigation.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-content-navigation.csv.html) for more details.

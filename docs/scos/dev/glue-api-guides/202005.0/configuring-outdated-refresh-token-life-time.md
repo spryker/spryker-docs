@@ -7,7 +7,7 @@ redirect_from:
   - /v5/docs/en/configuring-outdated-refresh-token-life-time
 ---
 
-Refresh tokens generated when accessing Glue REST API expire after a certain period of time. In addition to that, they can be [forcibly revoked](/docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html#token-revocation) at any time. No matter how a token becomes invalidated, it is set to expire but remains in the Storage.
+Refresh tokens generated when accessing Glue REST API expire after a certain period of time. In addition to that, they can be [forcibly revoked](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html#token-revocation) at any time. No matter how a token becomes invalidated, it is set to expire but remains in the Storage.
 
 For security reasons and to reduce the database storage space, it is recommended to delete outdated refresh tokens once they are expired. There are **two** ways how tokens can be removed from the Storage:
 
@@ -16,10 +16,10 @@ For security reasons and to reduce the database storage space, it is recommended
 
 To configure the time during which an outdated refresh token is stored:
 
-1. [Extend](/docs/scos/dev/developer-guides/202005.0/back-end-development/extending-spryker/extending-the-spryker-core-functionality.html) the `Spryker\Shared\Oauth\OauthConfig` class on your project level.
+1. [Extend](/docs/scos/dev/back-end-development/extending-spryker/extending-the-spryker-core-functionality.html) the `Spryker\Shared\Oauth\OauthConfig` class on your project level.
 2. Configure the time interval for the job via the `Spryker\Shared\Oauth\OauthConfig::getRefreshTokenRetentionInterval()` method.
 
-After configuring the token lifetime, invalidated tokens will be deleted automatically by a [Cron job](/docs/scos/dev/features/202005.0/sdk/cronjob-scheduling.html) once their storage time expires.
+After configuring the token lifetime, invalidated tokens will be deleted automatically by a [Cron job](/docs/scos/user/features/{{page.version}}/sdk/cronjob-scheduling.html) once their storage time expires.
 
 {% info_block infoBox "Note" %}
 

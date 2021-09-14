@@ -49,7 +49,7 @@ With this release, we are introducing a new `DataImport` module. This module is 
 | [DataImport 1.0.0](https://github.com/spryker/data-import/releases/tag/1.0.0) | [ErrorHandler 2.1.0](https://github.com/spryker/error-handler/releases/tag/2.1.0) | <ul><li>[Category 3.2.1](https://github.com/spryker/Category/releases/tag/3.2.1)</li><li>[CategoryExporter 3.0.1](https://github.com/spryker/category-exporter/releases/tag/3.0.1)</li><li>[Glossary 3.1.3](https://github.com/spryker/Glossary/releases/tag/3.1.3)</li><li>[Stock 4.0.2](https://github.com/spryker/Stock/releases/tag/4.0.2)</li><li>[Testify 3.2.6](https://github.com/spryker/Testify/releases/tag/3.2.6)</li></ul> |
 
 **Documentation**
-For module documentation, see [HowTo - Import Data](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/creating-a-data-importer.html).
+For module documentation, see [HowTo - Import Data](/docs/scos/dev/data-import/{{page.version}}/creating-a-data-importer.html).
 
 **Migration Guides**
 To upgrade, follow the steps described below:

@@ -20,14 +20,14 @@ The schema below illustrates relations between the alternative products:
 All the available alternative products will be shown on the abstract product details page, if one of the following occurs:
 
 * All concrete products of an abstract one are in status "out of stock"
-* [Discontinued Products](https://documentation.spryker.com/v6/docs/discontinued-products) feature is enabled
+* [Discontinued Products](docs\scos\user\features\202009.0\product\product-feature-overview\discontinued-product-overview.md) feature is enabled
 
 {% info_block infoBox %}
+
 Alternative products can be attached to any product, but will be displayed only if the product becomes "out of stock" or "Discontinued".
+
 {% endinfo_block %}
 
 ## Replacement for
 Upon entering the product details page for the suggested alternative product, a shop user will see that the current product is listed in **Replacement for** section:
 ![Replacement for](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Alternative+Products/Alternative+Products+Feature+Overview/replacement-for.png)
-
-

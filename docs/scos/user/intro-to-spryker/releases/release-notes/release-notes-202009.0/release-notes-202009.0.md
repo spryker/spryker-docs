@@ -12,7 +12,7 @@ redirect_from:
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of new features and enhancements we are announcing in September 2020.
-For information about installing the Spryker Commerce OS see [Getting Started Guide](/docs/scos/dev/developer-guides/{{page.version}}/developer-getting-started-guide.html).
+For information about installing the Spryker Commerce OS see [Getting Started Guide](/docs/scos/dev/developer-getting-started-guide.html).
 
 Check out our release notes video for the quick illustration of the new features and improvements:
 
@@ -57,7 +57,7 @@ When creating a return, a Customer can see all the relevant return information s
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image6.png) 
 
 #### Documentation
-[Quotation Process & RFQ](/docs/scos/dev/features/{{page.version}}/quotation-process/quotation-process.html)
+[Quotation Process & RFQ](/docs/scos/user/features/{{page.version}}/quotation-process/quotation-process.html)
 
 ### Product Relations per Store
 We have enhanced our multi-store feature with a new product management functionality.
@@ -65,7 +65,7 @@ Starting from this release, **Product Relations can be assigned to stores**. You
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image12.gif) 
 
 #### Documentation
-[Product Relations](/docs/scos/dev/features/{{page.version}}/product-relations/product-relations.html)
+[Product Relations](/docs/scos/user/features/{{page.version}}/product-relations/product-relations.html)
 
 ### Product Labels per Store
 We have enhanced the Product Labels feature so that now you can define the stores a product label is displayed in.
@@ -95,7 +95,7 @@ For each email template, there are HTML and text versions available by default. 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image1.png) 
 
 #### Documentation
-[Email as CMS Block](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/email-as-a-cms-block-overview.html)
+[Email as CMS Block](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/email-as-a-cms-block-overview.html)
 
 ### New Navigation for the Back Office
 We have reorganized our Back Office navigation to make it more clear and easier to use.
@@ -107,7 +107,7 @@ Products that have more than one variant do not have the Add to cart button on t
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image4.png) 
 
 #### Documentation
-[Quick Order from the Catalog Page](/docs/scos/dev/features/{{page.version}}/cart/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)
+[Quick Order from the Catalog Page](/docs/scos/user/features/{{page.version}}/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)
 
 ### Double opt-in for Customer Registration
 Spryker now supports a **double opt-in for Customer sign-ups**, that can happen either from the sign-up page or during the checkout process.
@@ -115,13 +115,13 @@ When a Customer signs up, an email with a confirmation link is sent to the provi
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image10.png) 
 
 #### Documentation
-[Customer Registration](/docs/scos/dev/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-registration-overview.html)
+[Customer Registration](/docs/scos/user/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-registration-overview.html)
 
 ### Trigger Forgot Password Emails When Importing Customers 
 Spryker provides you with two new console commands to help migrate existing customers to a Spryker project. When importing new customers into your Spryker project, you can send the *forgot password* email to them so that they can set up the passwords for their accounts.
 
 #### Documentation
-[Password Management](/docs/scos/dev/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/password-management-overview.html)
+[Password Management](/docs/scos/user/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/password-management-overview.html)
 
 ## Order Management Enhancements 
 ### Display State of Order Item
@@ -147,7 +147,7 @@ Spryker now supports **invoice generation** inside the OMS processes. Starting f
 The Order Thresholds feature, in addition to the minimum order threshold, now supports the maximum one. The **maximum order threshold** allows to define an order value that shouldn't be reached for the order to be placed.
 
 #### Documentation
-[Order Thresholds](/docs/scos/dev/features/{{page.version}}/checkout/checkout-feature-overview/order-thresholds.html)
+[Order Thresholds](/docs/scos/user/features/{{page.version}}/checkout/checkout-feature-overview/order-thresholds.html)
 
 ## Data Exchange
 ### Data Import Documentation
@@ -155,7 +155,7 @@ We have improved data importers’ documentation, making it easier to understand
 You will have access to detailed information about CSV files format, dependencies, and mandatory information needed to run the data import operation.
 
 #### Documentation
-[About Demo Shop Data Import](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/demo-shop-data-import/importing-demo-shop-data.html)
+[About Demo Shop Data Import](/docs/scos/dev/data-import/{{page.version}}/demo-shop-data-import/importing-demo-shop-data.html)
 
 ### Data Import: Configuration (YAML) File for Batch Data Import
 We have improved the data importers’ usability. 
@@ -164,7 +164,7 @@ You may now change names and locations of the CSV files to be imported, define a
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image2.png) 
 
 #### Documentation
-[Importing Data with a Configuration File](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/importing-data-with-a-configuration-file.html)
+[Importing Data with a Configuration File](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html)
 
 ### Data Import: Import Product Data with a Single File
 Generating and using different .csv files (*productabstract.csv, productconcrete.csv, productprice.csv, productstock.csv*, etc.) to import product data can be, for some users, time-consuming and difficult to manage. In this release, we have added an ability of **bulk product data import** **with a single .csv file**, which might be especially useful to:
@@ -181,7 +181,7 @@ To execute it, a single .csv file with the combined product data-sets to import 
 The combined product data-sets follow an identical format as the individual .csv files used by the modular data importers. The existing modular data importers managing individual product .csv files are not impacted (that is, *productabstract.csv, productconcrete.csv, product_price.csv*, etc. will continue to work as before).
 
 #### Documentation
-[Importing Product Data With a Single File](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/importing-product-data-with-a-single-file.html)
+[Importing Product Data With a Single File](/docs/scos/dev/data-import/{{page.version}}/importing-product-data-with-a-single-file.html)
 
 ### Data Export (Orders)
 The new **Data Export Sales Orders** feature allows you to export orders, order items, and order expenses data for one or multiple stores, giving the flexibility to define filter criteria to export only what is necessary. 

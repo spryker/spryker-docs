@@ -75,7 +75,7 @@ Below you will find the list of the new/updated documentation released as part o
 <details open>
 <summary>Feature overview</summary>
     
-[Packaging Units Feature Overview](/docs/scos/dev/features/{{page.version}}/packaging-units-feature-overview.html) 
+[Packaging Units Feature Overview](/docs/scos/user/features/{{page.version}}/packaging-units-feature-overview.html) 
     
 </details>
 
@@ -105,7 +105,7 @@ Below you will find the list of the new/updated documentation released as part o
 <details open>
 <summary>Feature overview</summary>
     
-[Scheduled Prices Feature Overview](/docs/scos/dev/features/{{page.version}}/scheduled-prices-feature-overview.html) 
+[Scheduled Prices Feature Overview](/docs/scos/user/features/{{page.version}}/scheduled-prices-feature-overview.html) 
     
 </details>
 <details open>
@@ -137,12 +137,12 @@ Below you will find the list of the new/updated documentation released as part o
     
 </details>
 
-* [CMS Templates & Slots](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/templates-and-slots-overview.html)
+* [CMS Templates & Slots](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/templates-and-slots-overview.html)
 
 <details open>
 <summary>Feature overview</summary>
     
-[CMS Templates & Slots Feature Overview](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/templates-and-slots-overview.html-feature-overview )
+[CMS Templates & Slots Feature Overview](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/templates-and-slots-overview.html-feature-overview )
     
 </details>
 
@@ -300,11 +300,11 @@ Below you will find the list of the new/updated documentation released as part o
 * [Queue Worker](/docs/scos/dev/back-end-development/zed/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html#7--queue)
 * [Deploy File Reference](https://documentation.spryker.com/2021080/docs/deploy-file-reference-version-1-201907#deploy-file-reference---1-0)
 * [Health checks](/docs/scos/dev/migration-and-integration/{{page.version}}/technical-enhancements/health-checks.html)
-* [Asset Management](/docs/scos/dev/features/{{page.version}}/file-manager/file-manager-feature-overview/asset-management.html)
+* [Asset Management](/docs/scos/user/features/{{page.version}}/file-manager/file-manager-feature-overview/asset-management.html)
 <details open>
 <summary>Feature overview</summary>
     
-[Asset Management Feature Overview](/docs/scos/dev/features/{{page.version}}/file-manager/file-manager-feature-overview/asset-management.html)
+[Asset Management Feature Overview](/docs/scos/user/features/{{page.version}}/file-manager/file-manager-feature-overview/asset-management.html)
 
 </details>
 
@@ -343,7 +343,7 @@ Below you will find the list of the new/updated documentation released as part o
 #### Other documentation:
 * [Multiple Stores](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/howto-set-up-multiple-stores.html)
 * [Inventory](https://documentation.spryker.com/2021080/docs/inventory-management)
-* [Custom Twig Functions for Yves](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/yves/custom-twig-functions-for-yves.html)
-* [Custom Twig Functions for Zed](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/zed/custom-twig-functions-for-zed.html)
+* [Custom Twig Functions for Yves](/docs/scos/dev/front-end-development/yves/custom-twig-functions-for-yves.html)
+* [Custom Twig Functions for Zed](/docs/scos/dev/front-end-development/zed/custom-twig-functions-for-zed.html)
 
 

@@ -13,8 +13,8 @@ A shopping list is a list of the items that shoppers buy or plan to buy frequent
 A shopping list is always saved, disregarding if a company user logs out and logs in again—the list is still available. The shopping list does not reserve products on stock, so adding an item to the shopping list does not affect item availability. However, a company user can easily convert any shopping list into a shopping cart to proceed with the Checkout.
 There are two ways to create a shopping list:
 
-* Through a [shopping list widget](/docs/scos/dev/features/202009.0/shopping-list/shopping-list-widget/shopping-list-widget.html) in the header of the shop.
-* From the *Shopping Lists* page in the *My Account* menu. See [Creating a shopping list](/docs/scos/dev/features/202009.0/shopping-list/multiple-and-shared-shopping-lists/multiple-and-shared-shopping-lists-overview.html#multiple-and-shared-shopping-lists-on-the-storefront) for more detailed instruction.
+* Through a [shopping list widget](/docs/scos/user/features/{{page.version}}/shopping-list/shopping-list-widget/shopping-list-widget.html) in the header of the shop.
+* From the *Shopping Lists* page in the *My Account* menu. See [Creating a shopping list](/docs/scos/user/features/{{page.version}}/shopping-list/multiple-and-shared-shopping-lists/multiple-and-shared-shopping-lists-overview.html#multiple-and-shared-shopping-lists-on-the-storefront) for more detailed instruction.
 
 New items are added to shopping lists by clicking **Add to Shopping List** on the product details page.
 
@@ -24,7 +24,7 @@ Company users can create not just one but multiple shopping lists to be used for
 For instance, these could be separate shopping lists for daily, weekly, and monthly purchases.
 {% endinfo_block %}
 
-The detailed information on managing shopping lists is covered in the [Shop User Guide](/docs/scos/dev/features/202009.0/shopping-list/multiple-and-shared-shopping-lists/multiple-and-shared-shopping-lists-overview.html#multiple-and-shared-shopping-lists-on-the-storefront).
+The detailed information on managing shopping lists is covered in the [Shop User Guide](/docs/scos/user/features/{{page.version}}/shopping-list/multiple-and-shared-shopping-lists/multiple-and-shared-shopping-lists-overview.html#multiple-and-shared-shopping-lists-on-the-storefront).
 
 ## Permissions management for shared shopping lists
 Users of companies with business units can **share** their shopping lists within the company business units. The shopping lists can either be shared with the entire business unit or its members. Company users can view shopping lists shared with them on the *My Account* -> *Shopping lists* page. The shopping lists can be shared by clicking **Share** on this page as well. The *Share [SHOPPING LIST NAME]* page consists of two sections: *Business Units* and *Users*. Here, the shopping list owner can select either the entire business unit or individual users to share the shopping list with.
@@ -49,7 +49,7 @@ Three types of shopping list access rights can be granted:
 * SKU
 * Product attribute
 * Product options
-* Product comments (see [Shopping List Notes](/docs/scos/dev/features/202009.0/shopping-list/shopping-list-notes/shopping-list-notes.html) for more details)
+* Product comments (see [Shopping List Notes](/docs/scos/user/features/{{page.version}}/shopping-list/shopping-list-notes/shopping-list-notes.html) for more details)
 * Quantity
 * Item price
 * Availability
@@ -74,8 +74,8 @@ Alternative products are not shown for discontinued products since they can not 
    * Product name
    * SKU
    * Product attribute
-   * Product options 
-   * Product notes (see [Shopping List Notes](/docs/scos/dev/features/202009.0/shopping-list/shopping-list-notes/shopping-list-notes.html) for more details)
+   * Product options
+   * Product notes (see [Shopping List Notes](/docs/scos/user/features/{{page.version}}/shopping-list/shopping-list-notes/shopping-list-notes.html) for more details)
    * Quantity
    * Item price
    * Availability
@@ -98,29 +98,29 @@ Besides other products, a user with *Full access* rights is allowed to see alter
 7. **Deleting a shopping list**
 
 8. **Deleting items in a shopping list**: The shopping list items can be deleted on the **Edit Shopping list** page.
-![Shared full access](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/shared-full-access.png) 
+![Shared full access](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/shared-full-access.png)
 
 It is possible to grant different access rights on a shopping list to a business unit and users belonging to it. For example, a shopping list can be shared with *Read only* permissions to a business unit, but some of its users might be granted *Full access* permissions. In this case, these users will have *Full access* to the shopping list, whereas the rest of the business unit members will be entitled to *Read only* access.
 
 ## Search widget for shopping lists
-Starting from v. 2019.03.0, it is possible to integrate the [Search Widget for Concrete Products](/docs/scos/dev/features/202009.0/search-and-filter/search-widget-for-concrete-products/search-widget-for-concrete-products-overview.html) feature. The search widget allows adding the products to the shopping list directly from the shopping list page. The shoppers do not need to go to product detail pages to add products to a list anymore.
+Starting from v. 2019.03.0, it is possible to integrate the [Search Widget for Concrete Products](/docs/scos/user/features/{{page.version}}/search-and-filter/search-widget-for-concrete-products/search-widget-for-concrete-products-overview.html) feature. The search widget allows adding the products to the shopping list directly from the shopping list page. The shoppers do not need to go to product detail pages to add products to a list anymore.
 :::(Warning)
 Without the Search widget, you will not be able to search for products. Therefore, make sure that the Search Widget for Concrete Products feature is integrated into your project.
 :::
-![Search widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/shopping-list-search-widget.png) 
+![Search widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/shopping-list-search-widget.png)
 
 ## Subtotal for a shopping list
 Starting from v.201907.0, every shopping list has Subtotal for all the items added to the shopping list according to the selected Price Mode and Currency.
-![Subtotal for shopping list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/subtotal-for-shopping-list.png) 
+![Subtotal for shopping list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/subtotal-for-shopping-list.png)
 
 
-## Multiple and Shared Shopping Lists on the Storefront 
+## Multiple and Shared Shopping Lists on the Storefront
 <a name="multiple-and-shared-shopping-lists-on-the-storefront"></a> Company users can perform the following actions using the Multiple and Shared Shopping Lists feature on the Storefront:
 
 <details>
 <summary>Create, delete, and add a shopping list to cart</summary>
 
-![create-delete-and-add-shopping-lists-to-cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/create-delete-add-to-cart-shopping-lists.gif) 
+![create-delete-and-add-shopping-lists-to-cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/create-delete-add-to-cart-shopping-lists.gif)
 
 </details>
 
@@ -128,7 +128,7 @@ Starting from v.201907.0, every shopping list has Subtotal for all the items add
 
 <summary>Edit shopping lists</summary>
 
-![edit-shopping-lists](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/manage-shopping-lists.gif) 
+![edit-shopping-lists](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/manage-shopping-lists.gif)
 
 </details>
 
@@ -136,7 +136,7 @@ Starting from v.201907.0, every shopping list has Subtotal for all the items add
 
 <summary>Add products from the product details page to a shopping list</summary>
 
-![add-products-from-the-product-detail-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/add-products-from-the-product-detail-page.gif) 
+![add-products-from-the-product-detail-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/add-products-from-the-product-detail-page.gif)
 
 </details>
 
@@ -145,10 +145,9 @@ Starting from v.201907.0, every shopping list has Subtotal for all the items add
 
 <summary>Dissmiss a shared shopping list, share and print a shopping list</summary>
 
-![dismiss-share-and-print-a-shopping-list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/dismiss-share-and-print-a-shopping-list.gif) 
+![dismiss-share-and-print-a-shopping-list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/dismiss-share-and-print-a-shopping-list.gif)
 
 </details>
 
 ## Current constraints
 We do not support product options in Subtotal of the Shopping Lists. For example, a shopping list includes 3 office chairs, each of them cost €15. The subtotal will show €45 for 3 items. But if we add a product option, e.g., gift wrapping for €5 each to these three office chairs, the subtotal should display €60 (€15/chair + €5/gift wrapping * 3). However, the shopping list will display just the product price - €45.
-

@@ -11,7 +11,7 @@ For the new customers registration in a Spryker shop, double opt-in is used. The
 
 {% info_block infoBox "Info" %}
 
-Customers must always verify their email addresses, irrespective of the fact how they got registered: [by themselves on the Storefront](/docs/scos/dev/features/202009.0/customer-account-management/customer-account-management-feature-overview/customer-registration-overview.html), [by a Back Office user in the Back Office](/docs/scos/user/user-guides/202009.0/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html#creating-a-customer), or [via the Glue API](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/managing-customers.html#create-a-customer).
+Customers must always verify their email addresses, irrespective of the fact how they got registered: [by themselves on the Storefront](/docs/scos/user/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-registration-overview.html), [by a Back Office user in the Back Office](/docs/scos/user/user-guides/202009.0/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html#creating-a-customer), or [via the Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer).
 
 {% endinfo_block %}
 
@@ -25,11 +25,11 @@ There are four customer registration options:
 
 The *regular customer registration* implies registration triggered from the registration page of *My Account* on the Storefront. In this case, the registration flow is as follows:
 
-1. Having populated all the necessary fields and clicked **Sign Up**, a customer sees the message saying that they must verify their account via the email sent. 
+1. Having populated all the necessary fields and clicked **Sign Up**, a customer sees the message saying that they must verify their account via the email sent.
 
 2. The customer clicks on the verification link in the email and turns out on a login page with the message saying that the account is verified.
 
-*Checkout customer registration* implies that customer registers during the checkout. This means that the customer puts products to cart as a guest user, and at the [Login step of the checkout](/docs/scos/dev/features/202009.0/checkout/checkout-feature-overview/multi-step-checkout.html), chooses to sign up. The registration flow is then the same as for the regular registration. 
+*Checkout customer registration* implies that customer registers during the checkout. This means that the customer puts products to cart as a guest user, and at the [Login step of the checkout](/docs/scos/user/features/{{page.version}}/checkout/checkout-feature-overview/multi-step-checkout.html), chooses to sign up. The registration flow is then the same as for the regular registration.
 
 {% info_block infoBox "Info" %}
 
@@ -41,12 +41,12 @@ A customer can also be *registered by a Back Office User*. In this case, the cus
 
 See [Creating a Customer](/docs/scos/user/user-guides/202009.0/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html#creating-a-customer) for details on how a Back Office user can create a customer.
 
-Likewise, if a customer gets *registered via an API*, they also receive the double opt-in email with the verification link. They must verify their account by clicking the link in the email, before you can [authenticate them via API](/docs/scos/dev/glue-api-guides/202009.0/authentication-and-authorization.html#user-authentication).
+Likewise, if a customer gets *registered via an API*, they also receive the double opt-in email with the verification link. They must verify their account by clicking the link in the email, before you can [authenticate them via API](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html#user-authentication).
 
-See [Authentication and Authorization](/docs/scos/dev/glue-api-guides/202009.0/authentication-and-authorization.html#authentication-and-authorization) for details on registration via API.
+See [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html#authentication-and-authorization) for details on registration via API.
 
 
-## If you are: 
+## If you are:
 
 <div class="mr-container">
     <div class="mr-list-container">
@@ -54,15 +54,15 @@ See [Authentication and Authorization](/docs/scos/dev/glue-api-guides/202009.0/a
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/customers#create-a-customer" class="mr-link">Create a customer via API</a></li>
-                <li><a href="https://documentation.spryker.com/docs/customer-account-management-feature-integration" class="mr-link">Enable customer registration by integrating the Customer Registration feature into your project</a></li> 
+                <li><a href="docs\scos\dev\glue-api-guides\202009.0\managing-customers\managing-customers.md#create-a-customer" class="mr-link">Create a customer via API</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\customer-account-management-feature-integration.md" class="mr-link">Enable customer registration by integrating the Customer Registration feature into your project</a></li>
             </ul>
         </div>
         <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/managing-customers#creating-a-customer">Create a customer in the Back Office </a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\customer\customer-customer-access-customer-groups\managing-customers.md#creating-a-customer">Create a customer in the Back Office </a></li>
             </ul>
         </div>
     </div>

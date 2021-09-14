@@ -10,7 +10,7 @@ redirect_from:
 
 The _Alternative Products_ feature allows customers to quickly find a substitute product in case if their preferred item runs out of stock or is no longer available for other reasons. The feature is particularly useful when a certain product becomes discontinued. In this case, customers usually look for a more up-to-date generation of the same product, and suggesting possible alternatives is especially crucial.
 
-For more details, see [Alternative Products](/docs/scos/dev/features/202005.0/product-information-management/alternative-products/alternative-products.html) and [Discontinued Products](/docs/scos/dev/features/202005.0/product-information-management/discontinued-products/discontinued-products.html).
+For more details, see [Alternative Products](/docs/scos/user/features/{{page.version}}/product-information-management/alternative-products/alternative-products.html) and [Discontinued Products](/docs/scos/user/features/{{page.version}}/product-information-management/discontinued-products/discontinued-products.html).
 
 The Product Alternatives API provides access to alternative products via REST API requests. In particular, you can:
 
@@ -63,7 +63,7 @@ To be able to use Product Alternatives API, first, you need to have the Alternat
 {% endinfo_block %}
 
 ## Checking Whether Product is Discontinued
-Before suggesting an alternative product, first, check if a product is still available, i.e. not discontinued. To check if a product is discountinued, see [Retrieve Concrete Products](/docs/scos/dev/glue-api-guides/202005.0/managing-products/retrieving-product-information.html#retrieve-concrete-products).
+Before suggesting an alternative product, first, check if a product is still available, i.e. not discontinued. To check if a product is discountinued, see [Retrieve Concrete Products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-information.html#retrieve-concrete-products).
 
 
 

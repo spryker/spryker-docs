@@ -62,11 +62,9 @@ Make sure that the following changes have been applied in transfer objects:
 | PriceProduct.stocks | property | Created | src/Generated/Shared/Transfer/PriceProductTransfer |
 | ProductManagementAttributeCollection | class | Created | src/Generated/Shared/Transfer/ProductManagementAttributeCollectionTransfer |
 | ProductManagementAttribute | class | Created | src/Generated/Shared/Transfer/ProductManagementAttributeTransfer |
-| ProductManagementAttributeFilter | class | Created | src/Generated/Shared/Transfer/ProductManagementAttributeFilterTransfer |
 | Merchant | class | Created | src/Generated/Shared/Transfer/MerchantTransfer |
 | MerchantUser.merchant | property | Created | src/Generated/Shared/Transfer/MerchantUserTransfer |
 | StockProduct | class | Created | src/Generated/Shared/Transfer/StockProductTransfer |
 | ReservationRequest | class | Created | src/Generated/Shared/Transfer/ReservationRequestTransfer |
-| ReservationResponse | class | Created | src/Generated/Shared/Transfer/ReservationResponseTransfer |
 
 {% endinfo_block %}

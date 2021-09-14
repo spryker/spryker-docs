@@ -7,7 +7,7 @@ redirect_from:
   - /v6/docs/en/file-details-sales-order-thresholdcsv
 ---
 
-This article contains content of the **sales_order_threshold.csv** file to configure [Sales Order Threshold](/docs/scos/user/features/{{page.version}}/checkout/checkout-feature-overview/order-thresholds.html) information on your Spryker Demo Shop.
+This article contains content of the **sales_order_threshold.csv** file to configure [Sales Order Threshold](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:

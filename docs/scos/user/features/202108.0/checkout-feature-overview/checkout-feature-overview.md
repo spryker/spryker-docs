@@ -35,8 +35,8 @@ With order thresholds, you can:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of Multi-step Checkout](/docs/scos/user/features/{{page.version}}/checkout/checkout-feature-overview/multi-step-checkout.html)  |
-| [Get a general idea of Order Thresholds](/docs/scos/user/features/{{page.version}}/checkout/checkout-feature-overview/order-thresholds.html)  |
+| [Get a general idea of Multi-step Checkout](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html)  |
+| [Get a general idea of Order Thresholds](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

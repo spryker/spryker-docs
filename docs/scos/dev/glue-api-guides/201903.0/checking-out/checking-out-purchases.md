@@ -36,7 +36,7 @@ A request should contain:
 | idCart | RestAddressesRequestData | ✓ | ID of the customer's cart<br>For details, see [Managing Carts of Registered Users](https://documentation.spryker.com/v2/docs/managing-carts-of-registered-users-201907). |
 | billingAddress | RestAddressesRequestData |  ✓| Customer's billing address<br>For details, see [Managing Customers](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html). |
 | shippingAddress | RestAddressesRequestData |  ✓| Customer's shipping address<br>For details, see [Managing Customers](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html). |
-| payments | RestPayment | ✓| Payment options, such as the payment system, method of payment, etc<br>For details, see [Payment Step](/docs/scos/user/features/{{page.version}}/checkout/multi-step-checkout/checkout-steps.html#payment-step). |
+| payments | RestPayment | ✓| Payment options, such as the payment system, method of payment, etc<br>For details, see [Payment Step](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html#payment-step). |
 
 **Sample Request Body**
 ```js

@@ -147,7 +147,7 @@ Spryker now supports **invoice generation** inside the OMS processes. Starting f
 The Order Thresholds feature, in addition to the minimum order threshold, now supports the maximum one. The **maximum order threshold** allows to define an order value that shouldn't be reached for the order to be placed.
 
 #### Documentation
-[Order Thresholds](/docs/scos/user/features/{{page.version}}/checkout/checkout-feature-overview/order-thresholds.html)
+[Order Thresholds](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html)
 
 ## Data Exchange
 ### Data Import Documentation

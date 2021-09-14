@@ -38,8 +38,15 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
+### 2) Set up transfer objects
 
-### 2) Add translations
+Generate transfer changes:
+
+```bash
+console transfer:generate
+```
+
+### 3) Add translations
 
 Generate a new translation cache for Zed:
 

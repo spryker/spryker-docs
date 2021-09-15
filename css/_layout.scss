@@ -16,6 +16,10 @@ body {
 .page-content {
     flex: 1 1 auto;
 
+    &--center {
+        align-items: center;
+    }
+
     &--post {
         display: flex;
         position: relative;

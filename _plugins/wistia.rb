@@ -14,7 +14,7 @@ class Wistia < Liquid::Tag
           @height = $3.to_i
       end
     else
-      raise "No YouTube ID provided in the \"wistia\" tag"
+      raise "No Wistia ID provided in the \"wistia\" tag"
     end
   end
 
@@ -25,7 +25,7 @@ class Wistia < Liquid::Tag
     padding_top = ("%.2f" % intrinsic).to_s  + "%"
     "<div class='post-content__video'>
       <div class='post-content__video-wrapper' style='padding-top: #{padding_top}'>
-        <iframe  class='post-content__video-iframe' width='#{@width}' height='#{@height}' src='https://fast.wistia.net/embed/iframe/#{@videoId}' allowfullscreen></iframe>
+        <iframe  class='post-content__video-iframe' width='#{@width}' height='#{@height}' src='https://fast.wistia.net/embed/iframe/#{@videoId}' allowfullscreen title='video iframe'></iframe>
       </div>
     </div>"
   end

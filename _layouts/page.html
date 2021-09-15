@@ -28,12 +28,12 @@ layout: default
 
     <aside class="main-sidebar">
         <h3 class="main-sidebar__title tablet-show" data-toc-skip>{{ site.data.sidebars[page.sidebar].title }}</h3>
-        <a href="#" class="main-sidebar__opener tablet-hidden js-main-sidebar-switcher">
+        <a href="#" class="main-sidebar__opener tablet-hidden js-main-sidebar-switcher" aria-label="sidebar desktop opener">
             <span class="main-sidebar__opener-decorator"></span>
             <span class="main-sidebar__opener-decorator"></span>
             <span class="main-sidebar__opener-decorator"></span>
         </a>
-        <a href="#" class="main-sidebar__opener tablet-show js-main-sidebar-opener">
+        <a href="#" class="main-sidebar__opener tablet-show js-main-sidebar-opener" aria-label="sidebar mobile opener">
             <span class="main-sidebar__opener-decorator"></span>
             <span class="main-sidebar__opener-decorator"></span>
             <span class="main-sidebar__opener-decorator"></span>
@@ -156,7 +156,7 @@ layout: default
     </aside>
 
     <div class="post-anchor">
-        <a href="#" class="post-anchor__button">
+        <a href="#" class="post-anchor__button" aria-label="scroll top">
             <i class="icon-arrow-up"></i>
         </a>
     </div>

@@ -1376,14 +1376,14 @@ class ShopCmsSlotDependencyProvider extends SprykerShopShopCmsSlotDependencyProv
 
 {% info_block warningBox "Verification" %}
 
-Verify the changes by adding a slot widget to a page. See [Templates & Slots Feature Overview](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/templates-and-slots-overview.html) for references.
+Verify the changes by adding a slot widget to a page. See [Templates & Slots Feature Overview](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html) for references.
 
 {% endinfo_block %}
 
 ### Set up SprykerCmsBlocks Content Provider Behavior
 
 :::(Info)
-Follow the further steps only if you are going to use the [visibility conidtions](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/templates-and-slots-overview.html#visibility-conditions) functionality with `SprykerCmsBlocks` content provider for slots.
+Follow the further steps only if you are going to use the [visibility conidtions](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html#visibility-conditions) functionality with `SprykerCmsBlocks` content provider for slots.
 :::
 
 #### 1) Install the required modules using Composer

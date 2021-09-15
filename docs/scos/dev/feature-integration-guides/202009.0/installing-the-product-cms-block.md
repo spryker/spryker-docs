@@ -131,7 +131,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 <!--
 ### Usage for Demoshop
 
-Adding a template for a new block is done in the same way as for static blocks, see [CMS Block](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/cms-block.html).
+Adding a template for a new block is done in the same way as for static blocks, see [CMS Block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html).
 
 Create a new Twig template under the `src/Pyz/Yves/CmsBlock/Theme/default/template/` folder. Call it `productSale.twig` and it will contain the following structure:
 

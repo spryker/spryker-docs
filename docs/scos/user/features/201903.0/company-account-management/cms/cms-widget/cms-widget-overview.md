@@ -20,7 +20,7 @@ With the feature integrated, the content widget menu with available widgets will
 * cms_block.
 
 {% info_block warningBox %}
-Keep in mind that some widgets require additional features to be enabled for the project. See the [CMS Widget](/docs/scos/user/features/{{page.version}}/cms/cms-widget/cms-widget.html
+Keep in mind that some widgets require additional features to be enabled for the project. See the [CMS Widget](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-widget/cms-widget.html
 {% endinfo_block %} for more details.)
 
 Say a shop administrator wants to customize a list of products on a CMS page. To do this, the CMS product widget should be used. With the **chart widget**, it is possible to show data charts built on the defined sections of the CMS page or block. The **product set** widget will add a collection of multiple products from which your customers can select an individual product or add all products in bulk to the cart with a single click. The **product group** widget will display products as a list or grid that will be connected by a specific attribute, for example, size or color. Using the **cms_file** widget will add a download link containing a file, tutorial, guide or video.

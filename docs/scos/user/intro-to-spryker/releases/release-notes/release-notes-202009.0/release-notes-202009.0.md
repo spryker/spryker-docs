@@ -95,7 +95,7 @@ For each email template, there are HTML and text versions available by default. 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image1.png) 
 
 #### Documentation
-[Email as CMS Block](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/email-as-a-cms-block-overview.html)
+[Email as CMS Block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html)
 
 ### New Navigation for the Back Office
 We have reorganized our Back Office navigation to make it more clear and easier to use.

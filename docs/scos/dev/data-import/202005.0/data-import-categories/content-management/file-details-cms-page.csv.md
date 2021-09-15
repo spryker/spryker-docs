@@ -7,7 +7,7 @@ redirect_from:
   - /v5/docs/en/file-details-cms-pagecsv
 ---
 
-This article contains content of the **cms_page.csv** file to configure [CMS Page](/docs/scos/user/features/{{page.version}}/cms/cms-page/cms-page.html) information on your Spryker Demo Shop.
+This article contains content of the **cms_page.csv** file to configure [CMS Page](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:

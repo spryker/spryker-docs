@@ -6,6 +6,10 @@ originalArticleId: a162a32a-87f1-4eac-b899-b7d64804b411
 redirect_from:
   - /v1/docs/cms-block
   - /v1/docs/en/cms-block
+  - /v1/docs/multi-store-cms-block
+  - /v1/docs/en/multi-store-cms-block
+  - /v1/docs/category-block
+  - /v1/docs/en/category-block
 ---
 
 Embed custom blocks of content into your shop. Blocks come with full management and control capabilities. You can easily add promotional banners and define validity date ranges to emphasize specific, time limited content. You can create connections to other objects (e.g. Customer Groups (show a block only for a specific group), Countries (show a block for products from a specific country), etc.

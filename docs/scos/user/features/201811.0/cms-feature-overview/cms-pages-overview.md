@@ -6,6 +6,16 @@ originalArticleId: 019050cc-2d71-407d-ba0c-045bf109ecc1
 redirect_from:
   - /v1/docs/cms-page
   - /v1/docs/en/cms-page
+  - /v1/docs/content-search-widget
+  - /v1/docs/en/content-search-widget
+  - /v1/docs/customizable-templates
+  - /v1/docs/en/customizable-templates
+  - /v1/docs/multi-store-content-translation
+  - /v1/docs/en/multi-store-content-translation
+  - /v1/docs/page-versions
+  - /v1/docs/en/page-versions
+  - /v1/docs/wysiwyg-editor
+  - /v1/docs/en/wysiwyg-editor
 ---
 
 When you decide to create customized content for your online shop, one of the best options is the CMS page feature. CMS page is an extra HTML page of your Spryker shop that you, as a shop administrator, can create and edit in the Back Office using the WYSIWYG editor. The About Us, Impressum, Terms, Contacts, and Conditions pages are the examples of CMS pages that you can easily add to your online shop. The CMS pages have unique URLs and layout. Moreover, you can add to a CMS page any of the available CMS content widgets that will enrich the page with the dynamic content and help fulfill its purpose.

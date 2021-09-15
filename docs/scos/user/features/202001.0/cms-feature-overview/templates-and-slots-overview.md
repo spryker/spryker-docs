@@ -6,6 +6,8 @@ originalArticleId: 9695e3a5-ee25-405d-9dc9-1d5229332af4
 redirect_from:
   - /v4/docs/templates-slots-feature-overview
   - /v4/docs/en/templates-slots-feature-overview
+  - /v4/docs/templates-slots
+  - /v4/docs/en/templates-slots
 ---
 
 The Templates & Slots Feature enables content managers to effectively and coherently interact with content using a dedicated template in Spryker - a template with slots. In the Back Office, a content manager has access to all the Storefront pages and can easily embed content into them. The embedded content is rendered by the [Slot Widget](#slot-widget). 

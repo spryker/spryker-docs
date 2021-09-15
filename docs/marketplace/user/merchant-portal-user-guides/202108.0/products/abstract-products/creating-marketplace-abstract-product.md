@@ -70,15 +70,14 @@ To create a new abstract product:
 
       ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/merchant+portal+user+guides/Products/create-abstract-product-with-multiple-variants-mp.gif)
 
-      **Tips and Tricks** </br>
+      {% info_block infoBox "Info" %}
 
       You can remove a concrete product from the preview list by clicking the **Remove** icon.
 
+      {% endinfo_block %}
+
 3. Once done, click **Create**.
 
-**Tips and Tricks** </br>
-
-To return to the previous step, click **Back**.
 
 Once the product is created, it needs to be [activated](/docs/marketplace/user/back-office-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product.html#deactivating-a-concrete-product). Only active marketplace products are displayed on the Marketplace Storefront.
 

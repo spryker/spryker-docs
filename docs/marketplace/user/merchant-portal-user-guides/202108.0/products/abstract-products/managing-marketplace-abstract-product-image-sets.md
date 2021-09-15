@@ -17,34 +17,37 @@ This article contains reference information. Make sure to review it before you s
 
 To add an image set for a marketplace abstract product:
 
-1. Next to the abstract product, you want to create an image set for, hover over the three dots, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the *Images* pane.
-2. Click **+Add Image Set***. The empty cells appear.
-3. In *SET NAME*, enter the name of the set.
-4. In *IMAGE ORDERED*, enter the number which defines the order of the images to be displayed.
-5. In *SMALL IMAGE URL*, enter the image URL.
-6. In *LARGE IMAGE URL*, enter the image URL.
-7. Click **Save**.
+1. Next to the abstract product, you want to create an image set for, hover over the three dots, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab.
+2. Scroll down to the *Images* pane.
+3. Click **+Add Image Set***. The empty cells appear.
+4. In *SET NAME*, enter the name of the set.
+5. In *IMAGE ORDERED*, enter the number which defines the order of the images to be displayed.
+6. In *SMALL IMAGE URL*, enter the image URL.
+7. In *LARGE IMAGE URL*, enter the image URL.
+8. Click **Save**.
 
 ## Editing images for marketplace abstract products
 
 To edit an image of a marketplace abstract product:
 
-1. Next to the abstract product, which image you want to edit, hover over the three dots, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the *Images* pane.
-2. Select a default or specific  locale you want to update images for.
-3. Update the following:
+1. Next to the abstract product, which image you want to edit, hover over the three dots, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab.
+2. Scroll down to the *Images* pane.
+3. Select a default or specific  locale you want to update images for.
+4. Update the following:
     - SET NAME
     - IMAGE ORDERED
     - SMALL IMAGE URL
     - LARGE IMAGE URL
-4. Click **Save**.
+5. Click **Save**.
 
 ## Deleting images for marketplace abstract products
 
 To delete an image in an image set for a marketplace abstract product:
 
-1. Next to the abstract product, which image you want to delete, hover over the three dots, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the *Images* pane.
-2. Select a default or specific locale you want to delete the image for.
-3. Click the **Delete** icon.
+1. Next to the abstract product, which image you want to delete, hover over the three dots, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab.
+2. Scroll down to the *Images* pane.
+3. Select a default or specific locale you want to delete the image for.
+4. Click the **Delete** icon.
 
 To delete an image set with its images for the abstract product, click **Delete Image Set**.
 
@@ -53,7 +56,7 @@ To delete an image set with its images for the abstract product, click **Delete 
 | ATTRIBUTE       | DESCRIPTION                                                  |
 | --------------- | ------------------------------------------------------------ |
 | Set name        | Name of your image set.                                      |
-| Image ordered   | If you add several images to an image set, specify the order in which they are to be shown in the front end and back end using *Image ordered* field. The order of images is defined by the order of entered numbers where the image set with "0" is the first to be shown. |
+| Image ordered   | If you add several images to an image set, specify the order in which they are to be shown on the Storefront and in the Back Office using *Image ordered* field. The order of images is defined by the order of entered numbers where the image set with "0" is the first to be shown. |
 | Small image URL | Link of the image that is going to be used in the product catalogs. |
 | Large image URL | Link to the image that is going to be used on the product details page. |
 

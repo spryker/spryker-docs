@@ -17,11 +17,12 @@ This article contains reference information. Make sure to review it before you s
 
 To add an attribute for a marketplace abstract product:
 
-1. Next to the abstract product you want to create an attribute for, hover over the three dots and click **Manage Product**, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the *Attributes* pane.
-2. In the *Attributes* pane, click **+Add**. The empty cells appear in the table below.
-3. From the drop-down menu *Attribute*, select a predefined value or enter your own when allowed by the Marketplace operator.
-4. Depending on the attribute selected in the step below, for the *Default* cell, select or enter the predefined value. Use the *Default* cell if no translations are needed.
-5. Add/select translations for the attribute values for the desired locales.
+1. Next to the abstract product you want to create an attribute for, hover over the three dots and click **Manage Product**, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab.
+2. Scroll down to the *Attributes* pane.
+3. In the *Attributes* pane, click **+Add**. The empty cells appear in the table below.
+4. From the drop-down menu *Attribute*, select a predefined value or enter your own when allowed by the Marketplace operator.
+5. Depending on the attribute selected in the step 3, for the *Default* cell, select or enter the predefined value. Use the *Default* cell if no translations are needed.
+6. Add/select translations for the attribute values for the desired locales.
 
 **Tips and tricks**
 
@@ -32,8 +33,9 @@ Click **Cancel** if a new attribute should not be added to an abstract product.
 
 To edit attributes for a marketplace abstract product:
 
-1. Next to the abstract product, you want to edit an attribute for, hover over the three dots, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the *Attributes* pane.
-2. In the *Attributes* pane, hover over the table and update the necessary cells.
+1. Next to the abstract product, you want to edit an attribute for, hover over the three dots, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab.
+2. Scroll down to the *Attributes* pane.
+3. In the *Attributes* pane, hover over the table and update the necessary cells.
 
 **Tips and tricks**
 
@@ -44,15 +46,16 @@ You can rearrange the columns' order, hide and show the columns by clicking the 
 
 To remove an attribute from an abstract product:
 
-1. Next to the abstract product, you want to delete an attribute for, hover over the three dots, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the *Attributes* pane.
-2. In the *Attributes* pane, next to the attribute you want to delete, hover over the three dots and click **Delete**.
+1. Next to the abstract product, you want to delete an attribute for, hover over the three dots, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab.
+2. Scroll down to the *Attributes* pane.
+3. In the *Attributes* pane, next to the attribute you want to delete, hover over the three dots and click **Delete**.
 
 ## Reference information: Attributes pane
 
-| ATTRIBUTE                 | DESCRIPTION                                                  |
-| ------------------------- | ------------------------------------------------------------ |
-| Attribute                 | Name of the attribute, for example, *color*.                 |
-| Default                   | Values of you attribute, for example, if the attribute is *color*, its values can be *red*, *green*, *black*, etc. This value is used for all locales without a specific value. |
+| ATTRIBUTE | DESCRIPTION |
+| ---------------- | --------------------------- |
+| Attribute     | Name of the attribute, for example, *color*.                 |
+| Default       | Values of you attribute, for example, if the attribute is *color*, its values can be *red*, *green*, *black*, etc. This value is used for all locales without a specific value. |
 | Locale value (e.g. DE_DE) | Translation of the attribute values for other locales. |
 
 ## Next steps

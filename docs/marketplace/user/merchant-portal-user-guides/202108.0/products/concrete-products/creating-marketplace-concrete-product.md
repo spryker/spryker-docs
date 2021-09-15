@@ -18,12 +18,12 @@ This article contains reference information. Make sure to review it before you s
 You can create a marketplace concrete product in two ways:
 
 - While [creating an abstract marketplace product](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/creating-marketplace-abstract-product.html).
-- By adding a concrete product to the existing abstract product. 
+- By adding a concrete product to the existing abstract product.
 
 To add a concrete product to the existing abstract product:
   1. Hover over the three dots next to the abstract product for which you will create a concrete product and click **Manage Product** or just click the line. This takes you to the *[Product name]* drawer. Navigate to the *Concrete Products* tab.
   2. On the *Concrete Products* page, click **Add Concrete Products**. *Create Concrete Products for [Abstract product name SKU]* drawer opens.
-  3. Based on the super attribute(s) selected while [creating an abstract product](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/creating-marketplace-abstract-product.html), add or select values to the existing super attribute(s). Upon adding the super attribute values, the preview of the concrete products is displayed.
+  3. Based on the super attribute(s) selected while [creating an abstract product](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/creating-marketplace-abstract-product.html), add or select values to the existing super attributes. Upon adding the super attribute values, the preview of the concrete products is displayed.
 
   {% info_block infoBox "Info" %}
 
@@ -33,9 +33,11 @@ To add a concrete product to the existing abstract product:
 
   4. Click **Save**.
 
-  **Tips and Tricks** </br>
+  {% info_block infoBox "Info" %}
 
   You can remove a concrete product from the preview list by clicking the **Remove** icon.
+
+  {% endinfo_block %}
 
 Once the product is created, it needs to be [activated](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/concrete-products/managing-marketplace-concrete-product.html#deactivating-a-concrete-product). Only the active marketplace products are displayed on the Marketplace Storefront.
 

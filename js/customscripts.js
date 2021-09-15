@@ -69,6 +69,8 @@ function initPageScrolling() {
             body.addClass('page-scrolled');
         }
 
+        if (currentScrollPosition < 2) return;
+
         if (currentScrollPosition > lastScrollPosition && !body.hasClass('scroll-down')) {
             // down
             body.removeClass('scroll-up').addClass('scroll-down');

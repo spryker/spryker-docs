@@ -1,17 +1,17 @@
 ---
-title: Managing marketplace abstract product
+title: Managing marketplace abstract products
 last_updated: Aug 11, 2021
 description: This document describes how to modify marketplace abstract products in the Merchant Portal.
 template: back-office-user-guide-template
 ---
 
-This document describes how to manage a marketplace abstract product in the Merchant Portal.
+This document describes how to manage marketplace abstract products in the Merchant Portal.
 
 ## Prerequisites
 
 To start working with marketplace abstract products, go to the **Merchant Portal** > **Products**.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+This article contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
 
 
 ## Filtering and sorting marketplace abstract products
@@ -24,7 +24,7 @@ The following drop-down menus can be used to filter the marketplace abstract pro
 
 The page refreshes and displays the available options as soon as the filter parameters are selected.
 
-Select one or more sorting parameters from the drop-down menu on the *Products* page to sort the existing abstract products. Choose among the following sort criteria:
+To sort the existing abstract products, select one or more sorting parameters from the drop-down menu on the *Products* page. Choose among the following sort criteria:
 
 - SKU
 - Name
@@ -48,8 +48,8 @@ To edit the existing marketplace abstract product:
 
 | ATTRIBUTE   | DESCRIPTION  | REQUIRED? |
 | ----------- | -------------- | --------- |
-| Name        | The name of your product that will be displayed in the online store for your customers. It is set per locale. | ✓         |
-| Description | The description of the product that your customer sees in the online store. It is set per locale. |           |
+| Name        | Name of your product displayed on the Storefront. It is set per locale. | ✓         |
+| Description | Description of the product displayed on the Storefront. It is set per locale. |           |
 | Stores      | Defines the [stores](https://documentation.spryker.com/docs/multiple-stores) the product is available in.<br/>You can select multiple values. |           |
 | Price       | In this pane, you can manage prices for your abstract product. See [Managing abstract product prices](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product-prices.html) for more details. |           |
 | Tax Set     | The conditions under which a product is going to be taxed.<br/>The values available for selection derive from Taxes > Tax Sets<br/>Only one value can be selected. | ✓         |

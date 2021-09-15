@@ -1,17 +1,17 @@
 ---
-title: Creating a marketplace abstract product
+title: Creating marketplace abstract products
 last_updated: Aug 11, 2021
 description: This document describes how to create marketplace abstract products in the Merchant Portal.
 template: back-office-user-guide-template
 ---
 
-This document describes how to create a marketplace abstract product.
+This document describes how to create marketplace abstract products.
 
 ## Prerequisites
 
 To start working with marketplace abstract products, go to **Merchant Portal > Products**.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+This article contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
 
 ## Creating a marketplace abstract product
 
@@ -36,16 +36,16 @@ To create a new abstract product:
 
    Select **Abstract product has multiple concrete products** if the abstract product you are creating will require variants.
 
-   1. Click **Next**. </br>
+   4. Click **Next**. </br>
 
    </br>
 
-      If the **Abstract product has 1 concrete product** was chosen:</br>
+      If you chose **Abstract product has 1 concrete product**:</br>
 
 
       1. On the *Create an Abstract Product with 1 Concrete Product* drawer, enter a **Concrete Product SKU**.
       2. Enter a **Concrete Product Name**.
-      3. Click **Create** to finish the product creation.
+      3. To finish the product creation, click **Create**.
 
 
 
@@ -53,20 +53,20 @@ To create a new abstract product:
 
 
 
-      If the **Abstract product has multiple concrete products** was chosen:</br>
+      If you chose **Abstract product has multiple concrete products**:</br>
 
    </br>
 
       1. Select a super attribute that defines the variation of your concrete products.
-      2. In the field next to the super attribute you've selected, select one or more values for each super attribute. Upon adding the super attribute values, the preview of the concrete products will be displayed.
+      2. In the field next to the super attribute you've selected, select one or more values for each super attribute. Upon adding the super attribute values, the preview of the concrete products is displayed.
 
       {% info_block infoBox "Info" %}
 
-      Removing a super attribute or its value will remove the appropriate concrete product(s) or concrete product values from the preview.
+      Removing a super attribute or its value removes the related concrete products or concrete product values from the preview.
 
       {% endinfo_block %}
 
-      1. (Optional) Add more super attributes by clicking the **Add** button. Repeat this step until you select at least one value for each selected super attribute.
+      1. Optional: Add more super attributes by clicking the **Add** button. Repeat this step until you select at least one value for each selected super attribute.
 
       ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/merchant+portal+user+guides/Products/create-abstract-product-with-multiple-variants-mp.gif)
 
@@ -80,7 +80,7 @@ To create a new abstract product:
 
 To return to the previous step, click **Back**.
 
-Once the product is created, it needs to be [activated](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/products/concrete-products/managing-marketplace-concrete-product.html#deactivating-a-concrete-product). Only the active marketplace products are displayed on the Marketplace Storefront.
+Once the product is created, it needs to be [activated](/docs/marketplace/user/back-office-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product.html#deactivating-a-concrete-product). Only active marketplace products are displayed on the Marketplace Storefront.
 
 ### Reference information: Create abstract product
 
@@ -96,9 +96,9 @@ Once the product is created, it needs to be [activated](/docs/marketplace/user/b
 | ATTRIBUTE            | DESCRIPTION             |
 | --------------------- | ------------------------------------ |
 | Concrete Product SKU     | Unique product identifier that is used to track unique information related to the product. |
-| Autogenerate SKU         | Select this checkmark if you want the SKU to be generated automatically. By default, -1 is added to the abstract product SKU prefix. For example, `product-1` |
+| Autogenerate SKU         | Check the box if you want the SKU to be generated automatically. By default, -1 is added to the abstract product SKU prefix. For example, `product-1` |
 | Concrete Product Name    | The name of the concrete product that is displayed for the product on the Storefront. |
-| Same as Abstract Product | Select this checkmark when you want the name of the abstract product to be used for the concrete product as well. |
+| Same as Abstract Product | Check the box if you want the name of the abstract product to be used for the concrete product as well. |
 
 ### Reference information: Create an Abstract Product with multiple Concrete Products
 

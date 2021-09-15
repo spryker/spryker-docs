@@ -11,7 +11,7 @@ This topic describes how to manage attributes of the marketplace abstract produc
 
 To start working with marketplace abstract products, go to **Merchant Portal** > **Products**.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+This article contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
 
 ## Adding marketplace abstract product attributes
 
@@ -23,26 +23,26 @@ To add an attribute for a marketplace abstract product:
 4. Depending on the attribute selected in the step below, for the *Default* cell, select or enter the predefined value. Use the *Default* cell if no translations are needed.
 5. Add/select translations for the attribute values for the desired locales.
 
-**Tips & Tricks**
+**Tips and tricks**
 
 Click **Cancel** if a new attribute should not be added to an abstract product.
 
 
 ## Editing marketplace abstract product attributes
 
-To edit the attributes for a marketplace abstract product:
+To edit attributes for a marketplace abstract product:
 
 1. Next to the abstract product, you want to edit an attribute for, hover over the three dots, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the *Attributes* pane.
 2. In the *Attributes* pane, hover over the table and update the necessary cells.
 
-**Tips & Tricks**
+**Tips and tricks**
 
 You can rearrange the columns' order, hide and show the columns by clicking the settings cogwheel next to the table.
 
 
 ## Deleting marketplace abstract product attributes
 
-To remove the attribute from the abstract product:
+To remove an attribute from an abstract product:
 
 1. Next to the abstract product, you want to delete an attribute for, hover over the three dots, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the *Attributes* pane.
 2. In the *Attributes* pane, next to the attribute you want to delete, hover over the three dots and click **Delete**.
@@ -52,8 +52,8 @@ To remove the attribute from the abstract product:
 | ATTRIBUTE                 | DESCRIPTION                                                  |
 | ------------------------- | ------------------------------------------------------------ |
 | Attribute                 | Name of the attribute, for example, *color*.                 |
-| Default                   | Values for you attribute, e.g., if the attribute is a *color*, the values for it can be *red*, *green*, *black*, etc. This value is used for all locales without the specific value. |
-| Locale value (e.g. DE_DE) | Translation for the attribute values to the other locales. |
+| Default                   | Values of you attribute, for example, if the attribute is *color*, its values can be *red*, *green*, *black*, etc. This value is used for all locales without a specific value. |
+| Locale value (e.g. DE_DE) | Translation of the attribute values for other locales. |
 
 ## Next steps
 

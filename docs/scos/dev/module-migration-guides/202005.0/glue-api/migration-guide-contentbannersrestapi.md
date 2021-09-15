@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 ## Upgrading from Version 1.* to Version 2.*
-ContentBannersRestApi, version 2.0.0 introduces the [Banner content item](/docs/scos/user/features/{{page.version}}/cms/content-items/content-items-types-module-relations.html) functionality that allows retrieving its data by the content item key via REST API endpoint for all or a specific locale.
+ContentBannersRestApi, version 2.0.0 introduces the [Banner content item](/docs/scos/user/features/{{page.version}}/content-items-types-module-relations.html) functionality that allows retrieving its data by the content item key via REST API endpoint for all or a specific locale.
 
 In `ContentBannersRestApi` version 2.0.0, we have:
 

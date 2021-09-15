@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/retrieving-cms-pages
 ---
 
-[CMS pages](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/cms-pages-overview.html) are meant for creating customized content for your online shop. The CMS Pages API allows you to retrieve details on CMS pages, including information on Abstract Product List and Banner content items available for each of them.
+[CMS pages](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html) are meant for creating customized content for your online shop. The CMS Pages API allows you to retrieve details on CMS pages, including information on Abstract Product List and Banner content items available for each of them.
 
 ## Installation
 

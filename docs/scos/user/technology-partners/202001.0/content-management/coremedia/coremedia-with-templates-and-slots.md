@@ -9,12 +9,12 @@ redirect_from:
 
 ## General Information
 {% info_block infoBox %}
-This document describes how the Templates & Slots feature works with the CoreMedia technology partner. Make sure to check out the [Templates & Slots Feature Overview](/docs/scos/user/features/{{page.version}}/cms/templates-and-slots/templates-and-slots-feature-overview.html
+This document describes how the Templates & Slots feature works with the CoreMedia technology partner. Make sure to check out the [Templates & Slots Feature Overview](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html
 {% endinfo_block %} that provides basic information about the feature before you proceed.)
 
-The Templates & Slots feature enables content managers to embed the content created in the CoreMedia CMS editor into any Storefront page.  In the Back Office, a content manager can embed the content into any Storefront page. The embedded content is rendered by the [Slot Widget](/docs/scos/user/features/{{page.version}}/cms/templates-and-slots/templates-and-slots-feature-overview.html#slot-widget). 
+The Templates & Slots feature enables content managers to embed the content created in the CoreMedia CMS editor into any Storefront page.  In the Back Office, a content manager can embed the content into any Storefront page. The embedded content is rendered by the [Slot Widget](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html#slot-widget). 
 
-Slot is the space in a page into which the content created in the CoreMedia CMS editor will be placed. There is a number of slots shipped by default with the Templates & Slots feature. All of them are configured to fetch content from [CMS blocks](/docs/scos/user/features/{{page.version}}/cms/cms-block/cms-block.html). If you want to use them, re-import the slot list <!-- link to https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1010237647/WIP+Data+Importers+CMS-2467 --> specifying CoreMedia as their content provider. All the new slots that you import should have CoreMedia as it's content provider too.
+Slot is the space in a page into which the content created in the CoreMedia CMS editor will be placed. There is a number of slots shipped by default with the Templates & Slots feature. All of them are configured to fetch content from [CMS blocks](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-block.html). If you want to use them, re-import the slot list <!-- link to https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1010237647/WIP+Data+Importers+CMS-2467 --> specifying CoreMedia as their content provider. All the new slots that you import should have CoreMedia as it's content provider too.
 
 When CoreMedia is set as the slot content provider:
 

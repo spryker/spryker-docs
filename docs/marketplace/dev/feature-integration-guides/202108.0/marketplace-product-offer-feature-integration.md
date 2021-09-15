@@ -1403,7 +1403,6 @@ Register the following plugins to enable widgets:
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 | -------------- | --------------- | ------ | ---------------- |
 | MerchantProductOfferWidget       | Shows the list of the offers with their prices for a concrete product. |           | SprykerShop\Yves\MerchantProductOfferWidget\Widget |
-| ProductOfferSoldByMerchantWidget | Shows merchant data for an offer given a cart item.          |           | SprykerShop\Yves\MerchantProductOfferWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -1413,7 +1412,6 @@ Register the following plugins to enable widgets:
 namespace Pyz\Yves\ShopApplication;
 
 use SprykerShop\Yves\MerchantProductOfferWidget\Widget\MerchantProductOfferWidget;
-use SprykerShop\Yves\MerchantWidget\Widget\SoldByMerchantWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
@@ -1425,7 +1423,6 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     {
         return [
             MerchantProductOfferWidget::class,
-            SoldByMerchantWidget::class,
         ];
     }
 }
@@ -1444,7 +1441,6 @@ Make sure that the following widgets were registered:
 | MODULE | TEST |
 | ----------------- | ----------------- |
 | MerchantProductOfferWidget       | Go to a product concrete detail page that has offers, and you will see the default offer is selected, and the widget is displayed. |
-| SoldByMerchantWidget | Go through the checkout process with an offer, and you will see the sold by text and merchant data throughout the checkout process. |
 
 {% endinfo_block %}
 

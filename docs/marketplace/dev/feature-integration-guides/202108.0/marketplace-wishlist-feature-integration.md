@@ -66,26 +66,13 @@ Make sure  the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 |-|-|-|-|
-| WishlistMoveToCartRequestCollection | object | Created | src/Generated/Shared/Transfer/WishlistMoveToCartRequestCollectionTransfer |
-| WishlistItemCollection | object | Created | src/Generated/Shared/Transfer/WishlistItemCollectionTransfer |
-| Quote | object | Created | src/Generated/Shared/Transfer/QuoteTransfer |
 | WishlistItem.merchantReference | attribute | Created | src/Generated/Shared/Transfer/WishlistItemTransfer |
 | WishlistItem.productOfferReference | attribute | Created | src/Generated/Shared/Transfer/WishlistItemTransfer |
 | WishlistItemMeta.merchantReference | attribute | Created | src/Generated/Shared/Transfer/WishlistItemMetaTransfer |
 | WishlistItemMeta.productOfferReference | attribute | Created | src/Generated/Shared/Transfer/WishlistItemMetaTransfer |
-| Item | object | Created | src/Generated/Shared/Transfer/ItemTransfer |
-| MerchantCriteria | object | Created | src/Generated/Shared/Transfer/MerchantCriteriaTransfer |
-| Merchant | object | Created | src/Generated/Shared/Transfer/MerchantTransfer |
 | WishlistMoveToCartRequest.merchantReference | attribute | Created | src/Generated/Shared/Transfer/WishlistMoveToCartRequestTransfer |
 | WishlistMoveToCartRequest.productOfferReference | attribute | Created | src/Generated/Shared/Transfer/WishlistMoveToCartRequestTransfer |
-| ProductOffer | object | Created | src/Generated/Shared/Transfer/ProductOfferTransfer |
-| WishlistItemCriteria | object | Created | src/Generated/Shared/Transfer/WishlistItemCriteriaTransfer |
-| WishlistPreAddItemCheckResponse | object | Created | src/Generated/Shared/Transfer/WishlistPreAddItemCheckResponseTransfer |
 | ProductOfferCriteriaFilter | object | Created | src/Generated/Shared/Transfer/ProductOfferCriteriaFilterTransfer |
-| MerchantProductCriteria | object | Created | src/Generated/Shared/Transfer/MerchantProductCriteriaTransfer |
-| Merchant | object | Created | src/Generated/Shared/Transfer/MerchantTransfer |
-| MerchantSwitchRequest.wishlist | attribute | Created | src/Generated/Shared/Transfer/MerchantSwitchRequestTransfer |
-| MerchantSwitchResponse.wishlist | attribute | Created | src/Generated/Shared/Transfer/MerchantSwitchResponseTransfer |
 
 {% endinfo_block %}
 
@@ -234,30 +221,6 @@ class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
 }
 ```
 
-
-#### Register `SoldByMerchant` to global widgets
-
-```php
-<?php
-
-namespace Pyz\Yves\ShopApplication;
-
-use SprykerShop\Yves\MerchantWidget\Widget\SoldByMerchantWidget;
-use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
-
-class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
-{
-    /**
-     * @return string[]
-     */
-    protected function getGlobalWidgets(): array
-    {
-        return [
-            SoldByMerchantWidget::class,
-        ];
-    }
-}
-```
 
 {% info_block warningBox "Verification" %}
 

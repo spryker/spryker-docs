@@ -70,7 +70,6 @@ Adjust the schema definition so that entity changes will trigger events:
             <parameter name="spy_product_offer_product_offer_reference" column="product_offer_reference" keep-additional="true"/>
             <parameter name="spy_product_offer_concrete_sku" column="concrete_sku" keep-additional="true"/>
         </behavior>
-        <behavior name="\Spryker\Zed\AclEntity\Persistence\Propel\Behavior\AclEntityBehavior"/>
     </table>
 
     <table name="spy_product_offer_store" phpName="SpyProductOfferStore">
@@ -130,29 +129,6 @@ Make sure that the following changes were applied in transfer objects:
 {% endinfo_block %}
 
 ### 3) Add translations
-
-Append glossary according to your configuration:
-
-**src/data/import/glossary.csv**
-
-```csv
-product-offer.info.reference.invalid,"Product offer reference not found for product with SKU '%sku%'.",en_US
-product-offer.info.reference.invalid,"Produktangebotsreferenz für Produkt mit SKU '%sku%' nicht gefunden.",de_DE
-product-offer.message.not-active-or-approved,"Product offer not active for product with SKU '%sku%'.",en_US
-product-offer.message.not-active-or-approved,"Produktangebot ist inaktiv für Produkt mit SKU '%sku%'.",de_DE
-```
-
-Import data:
-
-```bash
-console data:import glossary
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that the configured data is added to the `spy_glossary` table in the database.
-
-{% endinfo_block %}
 
 Generate a new translation cache for Zed:
 
@@ -1432,7 +1408,7 @@ Verify that the following modules were installed:
 
 {% endinfo_block %}
 
-### 2) Add Yves Translations
+### 2) Add Translations
 
 Append glossary according to your configuration:
 
@@ -1447,6 +1423,8 @@ product-offer.info.product-offer-inactive.removed,Inactive item %sku% was remove
 product-offer.info.product-offer-inactive.removed,Der inaktive Artikel %sku% wurde aus Ihrem Warenkorb entfernt.,de_DE
 product-offer.info.reference.invalid,Product offer reference not found for product with SKU '%sku%'.,en_US
 product-offer.info.reference.invalid,Produktangebotsreferenz für Produkt mit SKU '% sku%' nicht gefunden.,de_DE
+product-offer.message.not-active-or-approved,"Product offer not active for product with SKU '%sku%'.",en_US
+product-offer.message.not-active-or-approved,"Produktangebot ist inaktiv für Produkt mit SKU '%sku%'.",de_DE
 ```
 
 Import data:

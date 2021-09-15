@@ -85,7 +85,7 @@ The following table describes the attributes you enter and select when defining 
 **Default and original prices on the Storefront**
 If you want to display the difference in price in order to show what the price was before and how it changed, you add both Default and Original prices.
 The default prices are displayed in the online store as a current price, while the original one is displayed strikethrough.
-![Default and Original prices](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Managing+products/Products:+Reference+Information/default-and-original-prices.gif){height="320" width="640"}
+![Default and Original prices](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Managing+products/Products:+Reference+Information/default-and-original-prices.gif)
 
 ## Defining product variants
 

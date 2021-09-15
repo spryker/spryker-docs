@@ -1,6 +1,6 @@
 ---
 title: Marketplace Promotions and Discounts feature walkthrough
-last_updated: Jul 28, 2021
+last_updated: Sep 15, 2021
 description: This article provides technical details on the Marketplace Promotions and Discounts feature.
 template: concept-topic-template
 ---
@@ -13,8 +13,19 @@ To learn more about the feature and to find out how end users use it, see [Marke
 
 {% endinfo_block %}
 
+## Modules relation
+
+![Modules relation](https://confluence-connect.gliffy.net/embed/image/75358e26-725d-4f7d-8686-c72be236b88e.png?utm_medium=live&utm_source=custom)
+
+### Main Marketplace MerchantPortal Core feature modules
+
+| NAME | DESCRIPTION | 
+| --- | --- |
+| [DiscountMerchantSalesOrder](https://github.com/spryker/discount-merchant-sales-order) | Provides plugin for filtering out discounts in `MerchantOrderTransfer.order` that does not belongs to the current merchant order. |
+| [DiscountMerchantSalesOrderGui](https://github.com/spryker/discount-merchant-sales-order) | Provide the the endpoint `/discount-merchant-sales-order-gui/merchant-sales-order/list` to view of merchant order discounts list in Back office. |
+
 ## Related Developer articles
 
-| INTEGRATION GUIDES  |
-| --------------- |
-| [Marketplace Promotions & Discounts feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-promotions-discounts-feature-integration.html) |
+| INTEGRATION GUIDES| GLUE API GUIDES  | DATA IMPORT   |
+| -------------- | ----------------- | ------------------ |
+| [Marketplace Promotions & Discounts feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-promotions-discounts-feature-integration.html) | | |

@@ -8,7 +8,7 @@ redirect_from:
   - /v6/docs/en/managing-wishlists
 ---
 
-The Wishlists API allows creating list and deleting [wishlists](/docs/scos/user/features/{{page.version}}/wishlist/wishlist.html), as well as managing the items inside them. 
+The Wishlists API allows creating list and deleting [wishlists](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html), as well as managing the items inside them. 
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see 

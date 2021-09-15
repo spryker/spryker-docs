@@ -153,7 +153,7 @@ The wishlists are available only for logged in **B2C** shop users.
 
 {% endinfo_block %}
 
-If you want to purchase later the items you are interested in, you can add them to a [wishlist](/docs/scos/user/features/{{page.version}}/wishlist/wishlist-feature-overview.html).
+If you want to purchase later the items you are interested in, you can add them to a [wishlist](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html).
 
 To add a product to the wishlist, click **Add to Wishlist**. This will add the product to a newly created wishlist with the default name ‘My wishlist’ in your account and redirect you to the **Customer Account > Wishlist** section.
 
@@ -168,4 +168,4 @@ After you added the product to the cart, you can proceed with the checkout. For 
 
 To learn how to create and manage shopping lists, see [Shop Guide - Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-list/multiple-and-shared-shopping-lists/multiple-and-shared-shopping-lists-overview.html#multiple-and-shared-shopping-lists-on-the-storefront#shop-guide---shopping-lists).
 
-To learn how to create and manage wishlists, see [Shop Guide - Managing Wishlists](/docs/scos/user/features/{{page.version}}/wishlist/wishlist-feature-overview.html#the-wishlist-feature-on-the-storefront). 
+To learn how to create and manage wishlists, see [Shop Guide - Managing Wishlists](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html#the-wishlist-feature-on-the-storefront). 

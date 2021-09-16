@@ -22,11 +22,11 @@ You can use each content item for different purposes. For example, the Banner co
 
 {% info_block infoBox %}
 
-For use cases and exmaple of each of the content item, see [Content Item Widgets types: Reference Information](/docs/scos/user/user-guides/page.version/back-office-user-guide/content/content-items/references/content-item-widgets-types-reference-information.html) and [Content Item Widgets templates: Reference Information.](/docs/scos/user/user-guides/page.version/back-office-user-guide/content/content-items/references/content-item-widgets-templates-reference-information.html)
+For use cases and exmaple of each of the content item, see [Content Item Widgets types: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/references/content-item-widgets-types-reference-information.html) and [Content Item Widgets templates: Reference Information.](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/references/content-item-widgets-templates-reference-information.html)
 
 {% endinfo_block %}
 
-A content manager can [create content items](/docs/scos/user/user-guides/page.version/back-office-user-guide/content/content-items/creating-content-items.html) in the Back Office > **Content Management** > **Content Items** section. 
+A content manager can [create content items](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/creating-content-items.html) in the Back Office > **Content Management** > **Content Items** section. 
 A developer can do the following:
 * [Import content items](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html)
 * [Get content items data via API](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-content-item-data/retrieving-content-item-data.html)
@@ -63,7 +63,7 @@ The schema shows how the Content items feature affects content management in Spr
 
 ![image](https://confluence-connect.gliffy.net/embed/image/b2c37d9d-5350-4535-b437-677bffeb18da.png?utm_medium=live&utm_source=custom) 
 
-See [Adding Content Item Widgets to Pages and Blocks](/docs/scos/user/user-guides/page.version/back-office-user-guide/content/content-items/adding-content-items-to-cms-pages-and-blocks.html) to learn more about working with content item widgets in the WYSIWYG editor.
+See [Adding Content Item Widgets to Pages and Blocks](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/adding-content-items-to-cms-pages-and-blocks.html) to learn more about working with content item widgets in the WYSIWYG editor.
 
 ### Content Item Widget Template
 
@@ -101,7 +101,7 @@ You can select a template when inserting a content item widget into a CMS block.
 
 </details>
 
-A developer can create and customize templates. See [Adding a Template for a Content Item Widget](/docs/scos/dev/tutorials/page.version/howtos/feature-howtos/cms/howto-create-cms-templates.html#adding-a-template-for-a-content-item-widget) for more details.
+A developer can create and customize templates. See [Adding a Template for a Content Item Widget](/docs/scos/dev/tutorials/{{page.version}}/howtos/feature-howtos/cms/howto-create-cms-templates.html#adding-a-template-for-a-content-item-widget) for more details.
 
 
 

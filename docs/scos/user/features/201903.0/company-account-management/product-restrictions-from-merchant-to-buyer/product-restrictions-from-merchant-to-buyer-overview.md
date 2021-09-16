@@ -14,7 +14,7 @@ In terms of [Merchant concept](/docs/scos/user/features/{{page.version}}/company
 
 The diagram below shows product restrictions relations within the Merchant concept:
 
-![product-restrictions-model.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Product+Restrictions+from+Merchant+to+Buyer/Product+Restrictions+from+Merchant+to+Buyer+Overview/product-restrictions-model.png) 
+![product-restrictions-model.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Product+Restrictions+from+Merchant+to+Buyer/Product+Restrictions+from+Merchant+to+Buyer+Overview/product-restrictions-model.png)
 
 Product Restrictions from Merchant to Buyer give merchants [another layer](/docs/scos/user/features/{{page.version}}/company-account-management/hide-content-from-logged-out-users/hide-content-from-logged-out-users.html) of control over the information, a customer can see in the shop application. Based on product restrictions, you can:
 
@@ -25,7 +25,7 @@ Product Restriction feature works on the basis of whitelist/blacklist lists. Tha
 
 To restrict the products, a Shop Administrator needs to create a product list, include the necessary products to the list and blacklist them for a specific merchant relationship. All other products will be available for that merchant relationship.
 
-To create product lists, follow the [guideline for the Back Office](/docs/scos/user/user-guides/page.version/back-office-user-guide/products/product-lists/creating-a-product-list.html).
+To create product lists, follow the [guideline for the Back Office](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-lists/creating-product-lists.html).
 
 You can check more cases of product restrictions workflow on the [Restricted Products Behavior](/docs/scos/user/features/{{page.version}}/company-account-management/product-restrictions-from-merchant-to-buyer/restricted-products-behavior.html) page.
 

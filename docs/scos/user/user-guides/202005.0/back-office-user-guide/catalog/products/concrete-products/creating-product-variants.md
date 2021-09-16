@@ -39,7 +39,7 @@ The merchant relation prices are inherited by Product Variants as well.
 7. **Optionally**: Click **Next** of select the **Assign bundled products** tab. This tab is used only if you need to create a bundles product. See [Creating and Managing Product Bundles](https://documentation.spryker.com/v5/docs/en/creating-and-managing-product-bundles) to know more.
 8. Click **Save**.
 
-Once you click **Save**, the page is refreshed and you will see two additional tabs: Discontinue and Product Alternatives. See  [Discontinuing Products](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/managing-products/discontinuing-a-product.html) and [Adding Product Alternatives](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/managing-products/adding-product-alternatives.html) to know more.
+Once you click **Save**, the page is refreshed and you will see two additional tabs: Discontinue and Product Alternatives. See  [Discontinuing Products](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/managing-products/discontinuing-products.html) and [Adding Product Alternatives](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/managing-products/adding-product-alternatives.html) to know more.
 
 {% info_block errorBox "Important" %}
 

@@ -24,11 +24,11 @@ In the **Content** section, you can see the following:
 * File List
 * File Tree
 
-**Content Item** is the smallest preserved piece of content that you can insert into CMS blocks and CMS pages. 
+**Content Item** is the smallest preserved piece of content that you can insert into CMS blocks and CMS pages.
 
 **CMS blocks** are parts of the page content that you can can insert into CMS pages.
 
-**CMS pages** are additional pages you can create and manage to provide additional information about the shop like About Us, Terms and Conditions pages, or landing pages for promotions. 
+**CMS pages** are additional pages you can create and manage to provide additional information about the shop like About Us, Terms and Conditions pages, or landing pages for promotions.
 
 **Redirect** is a technique to forward website visitors from one page to another. You can redirect visitors to internal and external pages.
 
@@ -47,14 +47,14 @@ To start working with content, learn how to [add content to the Storefront pages
 
 To start working with CMS pages, see:
 
-* [Creating a new page](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/creating-a-cms-page.html) 
-* [Managing CMS page versioning](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/cms-pages-versioning.html) 
+* [Creating a new page](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/creating-cms-pages.html)
+* [Managing CMS page versioning](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/managing-cms-page-versions.html)
 * [Managing CMS pages](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/managing-cms-pages.html)
 * [Assigning Blocks to CMS, Category and Product pages](https://documentation.spryker.com/v5/docs/en/assigning-blocks-to-category-or-product-pages)
 
-To start working with CMS blocks, see: 
+To start working with CMS blocks, see:
 
-* [Creating a new CMS block](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/creating-a-cms-block.html)
+* [Creating a new CMS block](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/creating-cms-blocks.html)
 * [Managing CMS block details](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/managing-cms-blocks.html)
 * [Assigning blocks to product and category pages](https://documentation.spryker.com/v5/docs/en/assigning-blocks-to-category-or-product-pages)
 
@@ -70,6 +70,5 @@ To start working with redirects , see:
 * [Managing CMS Redirects](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/redirects/managing-cms-redirects.html)
 
 To start working with files, see:
-* [Managing File List](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/file-manager/managing-file-list.html) 
-* [Managing File Tree](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/file-manager/managing-file-tree.html) 
-
+* [Managing File List](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/file-manager/managing-file-list.html)
+* [Managing File Tree](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/file-manager/managing-file-tree.html)

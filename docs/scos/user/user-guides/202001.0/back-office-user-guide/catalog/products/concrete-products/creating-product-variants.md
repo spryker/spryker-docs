@@ -40,13 +40,13 @@ The merchant relation prices are inherited by Product Variants as well.
 7. **Optionally**: Click **Next** of select the **Assign bundled products** tab. This tab is used only if you need to create a bundles product. See [Creating and Managing Product Bundles](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/products/managing-products/creating-and-managing-product-bundles.html) to know more.
 8. Click **Save**.
 ***
-Once you click **Save**, the page is refreshed and you will see two additional tabs: Discontinue and Product Alternatives. See  [Discontinuing Products](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/products/managing-products/discontinuing-a-product.html) and [Adding Product Alternatives](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/products/managing-products/adding-product-alternatives.html) to know more.
+Once you click **Save**, the page is refreshed and you will see two additional tabs: Discontinue and Product Alternatives. See  [Discontinuing Products](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/managing-products/discontinuing-products.html) and [Adding Product Alternatives](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/products/managing-products/adding-product-alternatives.html) to know more.
 ***
 {% info_block errorBox "Important" %}
 
-To make sure your product wil be shown and searchable in your online store, we highly recommend you to go through the checklist in [HowTo - Make a Product Searchable and Shown on the Storefront](/docs/scos/dev/tutorials/202001.0/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html).
+To make sure your product wil be shown and searchable in your online store, we highly recommend you to go through the checklist in [HowTo - Make a Product Searchable and Shown on the Storefront](/docs/scos/dev/tutorials/{{page.version}}/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html).
 
 {% endinfo_block %}
 ***
 **What's next?**
-Once you have set things up, you will most likely need to know what managing actions you can do with your products. See articles in the [Managing Products](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/products/managing-products/managing-products.html) section.
+Once you have set things up, you will most likely need to know what managing actions you can do with your products. See articles in the [Managing Products](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/managing-products/managing-products.html) section.

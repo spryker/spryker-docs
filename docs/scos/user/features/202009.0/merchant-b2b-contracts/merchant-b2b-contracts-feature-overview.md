@@ -20,4 +20,4 @@ The diagram below shows relations within the merchant domain:
 
 ![merchants-diagram.png](https://confluence-connect.gliffy.net/embed/image/9c3eb6cd-8492-4550-a280-e218bd3b974a.png?utm_medium=live&utm_source=custom)
 
-Merchants and merchant relations can be [managed in the Back Office](/docs/scos/user/user-guides/page.version/back-office-user-guide/marketplace/merchants-and-merchant-relations/managing-merchants.html). You can also import merchants and merchant relations in bulk from a .csv file.
+Merchants and merchant relations can be [managed in the Back Office](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/marketplace/merchants-and-merchant-relations/managing-merchants.html). You can also import merchants and merchant relations in bulk from a .csv file.

@@ -45,6 +45,6 @@ See [CMS Blocks: Reference Information](/docs/scos/user/user-guides/{{page.versi
 
 A new block has been created. Now, you can add the content if needed.
 
-* To learn more about how to edit a CMS block, see the [Editing CMS Blocks](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/blocks/managing-cms-blocks.html#editing-blocks) section in the _Managing CMS Blocks_ article.
+* To learn more about how to edit a CMS block, see the [Editing CMS Blocks](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/managing-cms-blocks.html#editing-blocks) section in the _Managing CMS Blocks_ article.
 
 * To know how you to add blocks to pages, see [Assigning Blocks to Category and Product details Pages](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/blocks/assigning-blocks-to-category-or-product-pages.html).

@@ -48,7 +48,7 @@ The following table describes the attributes you see and enter when creating, vi
 
 ## What's next?
 
-The warehouse has been created. You can start working with it when creating or editing a concrete product. For more details, see [Creating a product variant](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/concrete-products/creating-a-product-variant.html).
+The warehouse has been created. You can start working with it when creating or editing a concrete product. For more details, see [Creating a product variant](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/concrete-products/creating-product-variants.html).
 
 Additionally, you can edit any warehouse. For more details, see the [Editing warehouse details](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/warehouses/managing-warehouses.html#editing-warehouse-details) section in *Managing Warehouses*.
 

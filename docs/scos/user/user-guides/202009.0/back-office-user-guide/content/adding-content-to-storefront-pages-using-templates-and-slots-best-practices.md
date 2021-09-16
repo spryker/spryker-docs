@@ -53,7 +53,7 @@ Follow the steps to create the CMS blocks with the needed content:
     *     Writing materials reference - *Category Banner-2*
     *     Sticky notes reference - *Category Banner-3*
 
-See [Creating a CMS Block](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/creating-a-cms-block.html) for more details.
+See [Creating a CMS Block](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/creating-cms-blocks.html) for more details.
 
 {% info_block warningBox "Activation" %}
 

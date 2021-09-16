@@ -81,7 +81,7 @@ You have the following options to select the shopping cart:
 
 * select the cart from the five carts displayed by default in the widget
 * select the cart from all available carts by clicking **All Carts** in the widget
-* create a new cart by clicking **Create New Cart**. Then, enter the name of the cart in the **Cart Name** field, and click **Submit**. For more information on how to create carts, see [Shop Guide - Creating a Shopping Cart](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-shopping-carts/shop-guide-creating-a-shopping-cart.html).
+* create a new cart by clicking **Create New Cart**. Then, enter the name of the cart in the **Cart Name** field, and click **Submit**. For more information on how to create carts, see [Shop Guide - Creating a Shopping Cart](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/shop-guide-shopping-carts/shop-guide-creating-a-shopping-cart.html).
 
 ![Shopping cart widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Managing+Products/shopping-cart-widget.png) 
 
@@ -92,7 +92,7 @@ You have the following options to select the shopping cart:
 1. (Optional) Select the product options from the drop-down list.
 2. Specify the quantity of the product you want to purchase. By default, the quantity equals **1**.
 3. (Optional) Clear the **Add as separate item** checkbox if you do not want to add this product as a separate item to the order. By default, this checkbox is selected.
-4. To complete the operation, click **Add to Cart**. The items will be added to the selected (active) shopping cart. See [Shop Guide - Checkout](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-checkout/shop-guide-checkout.html) to learn more about how to proceed with the order.
+4. To complete the operation, click **Add to Cart**. The items will be added to the selected (active) shopping cart. See [Shop Guide - Checkout](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/shop-guide-checkout/shop-guide-checkout.html) to learn more about how to proceed with the order.
 
 ![Add to cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Managing+Products/add-to-cart-howto.png) 
 ***
@@ -109,7 +109,7 @@ You can order frequently bought products faster by adding the products to a [sho
 **To add a product to the shopping list:**
 
 1. From the drop-down list, select the shopping list to which you want to add the product.
-2. Specify the quantity of the product and click **Add to Shopping list**. The item will be added to the shopping list you’ve selected. For more information on managing shopping lists, see [Shop Guide - Shopping Lists](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-shopping-lists.html).
+2. Specify the quantity of the product and click **Add to Shopping list**. The item will be added to the shopping list you’ve selected. For more information on managing shopping lists, see [Shop Guide - Shopping Lists](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/shop-guide-shopping-lists.html).
 
 ![Add to shopping list](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Managing+Products/add-to-shopping-list-howto.png) 
 
@@ -164,8 +164,8 @@ If you have several wishlists in your account, then first, select the wishlist t
 
 **What’s next?**
 
-After you added the product to the cart, you can proceed with the checkout. For more information, see [Shop Guide - Checkout](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-checkout/shop-guide-checkout.html#shop-guide---checkout).
+After you added the product to the cart, you can proceed with the checkout. For more information, see [Shop Guide - Checkout](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/shop-guide-checkout/shop-guide-checkout.html#shop-guide---checkout).
 
-To learn how to create and manage shopping lists, see [Shop Guide - Shopping Lists](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-shopping-lists.html#shop-guide---shopping-lists).
+To learn how to create and manage shopping lists, see [Shop Guide - Shopping Lists](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/shop-guide-shopping-lists.html#shop-guide---shopping-lists).
 
-To learn how to create and manage wishlists, see [Shop Guide - Managing Wishlists](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-wishlists.html). 
+To learn how to create and manage wishlists, see [Shop Guide - Managing Wishlists](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/shop-guide-wishlists.html). 

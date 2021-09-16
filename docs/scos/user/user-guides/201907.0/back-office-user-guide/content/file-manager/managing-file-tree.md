@@ -59,7 +59,7 @@ The file is uploaded to the selected folder.
 ***
 ## Managing Files
 Once the file is uploaded, you can manage it from two locations: 
-* File List (see [Managing File List](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/file-manager/managing-file-list.html) for more details)
+* File List (see [Managing File List](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/file-manager/managing-file-list.html) for more details)
 * File Tree
 
 **To manage a file:**

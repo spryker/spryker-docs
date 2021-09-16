@@ -22,13 +22,13 @@ The first thing you need to do to start selling a product with either free or ch
 To create the product, do the following:
 
 1. Go to **Products > Products** section and click Create Product on the top-right corner of the page.
-2. Populate the necessary fields in the **General, Price & Tax, Variants, SEO, Image** tabs. See [Creating an Abstract Product](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/products/abstract-products/creating-an-abstract-product.html) for details on the tabs and their values.
+2. Populate the necessary fields in the **General, Price & Tax, Variants, SEO, Image** tabs. See [Creating an Abstract Product](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html) for details on the tabs and their values.
 3. Click **Save**. Your product is now created and will appear in the list of products in the **Products > Products** section.
 4. Activate the product:
     1. In the list of products in the **Products > Products** section, find your product and click **Edit** in the *Actions* column for it.
     2. In the **Variants** tab, click **Edit** for the product(s) you want to make active.
     3. On the **Edit Concrete Product** page, click **Activate**. The abstract product will now also become active.
-5. Make sure your product is visible searchable in the Storefront by going through the checklist in the HowTo - [Make a Product Searchable and Shown on the Storefront](/docs/scos/dev/tutorials/202001.0/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html#howto---make-a-product-searchable-and-shown-on-the-storefront) article.
+5. Make sure your product is visible searchable in the Storefront by going through the checklist in the HowTo - [Make a Product Searchable and Shown on the Storefront](/docs/scos/dev/tutorials/{{page.version}}/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html#howto---make-a-product-searchable-and-shown-on-the-storefront) article.
 
 Now that you have the product, you can proceed with offering services to it.
 
@@ -55,7 +55,7 @@ To implement this approach, you need to create the Service product option and ti
 To create the product option, do the following:
 
 1. Go to the **Products > Product Options** section and click **Create product option** in the top right corner.
-2. Populate all necessary fields in **General** tab. See [Creating a Product Option](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/product-options/creating-a-product-option.html#creating-a-product-option) for details on the fields and their values.
+2. Populate all necessary fields in **General** tab. See [Creating a Product Option](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-options/creating-product-options.html#creating-a-product-option) for details on the fields and their values.
 3. In the **Products** tab, find the product you want to tie the option to, and check the checkbox in the very right column of the table with the product.
 4. Click **Save**. The product option is now created and appears in the **Product option list** on the **Products > Product Options** page.
 5. Activate the option by clicking **Activate** in the *Actions* column of the **Product option list**.
@@ -75,7 +75,7 @@ This approach is suitable only for Scenario 1 - that is, when the service is opt
 {% endinfo_block %}
 One more way to have a product with an optional service offering would be to make the product a [configurable bundle](/docs/scos/user/features/{{page.version}}/product-information-management/configurable-bundle/configurable-bundle.html). It means that you create a product (for example, equipment) and suggest another product (Installation service) as a bundle. To create such a configurable bundle product, follow the steps below.
 
-1. Create the *Installation Service* product as a usual abstract product, like you did in the [Prerequisites](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/creating-service-offerings.html#prerequisites) section. Make sure you set the **Availability** as *Never out of stock*. See [Managing Products Availability](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/availability/managing-products-availability.html#managing-products-availability) for details on how to do that.
+1. Create the *Installation Service* product as a usual abstract product, like you did in the [Prerequisites](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/creating-service-offerings.html#prerequisites) section. Make sure you set the **Availability** as *Never out of stock*. See [Managing Products Availability](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/availability/managing-products-availability.html#managing-products-availability) for details on how to do that.
 {% info_block infoBox "Note" %}
 
 If you don’t want to display the Service products in the Storefront so buyers can not find them in the products catalog, don’t check the Searchable checkbox for it in the **General** tab of the **Create/Edit Concrete Product** page.

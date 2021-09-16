@@ -37,7 +37,7 @@ To create a Company in the web-shop, go to `/company/register` and register a co
 
 Fill in the required (*) fields to complete the registration.
 
-After the company has been registered, it should be approved in the [Back Office](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/managing-a-company-account/managing-companies.html#approving-and-activating-a-company) to continue building the hierarchy.
+After the company has been registered, it should be approved in the [Back Office](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/managing-companies.html#approving-and-activating-a-company) to continue building the hierarchy.
 
 Once the company is approved, a Company Administrator can go to `/company/overview` page and create (and then also edit and delete) users, addresses, roles and business roles.
 

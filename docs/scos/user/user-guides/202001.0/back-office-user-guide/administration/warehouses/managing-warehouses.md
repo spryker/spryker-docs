@@ -33,6 +33,6 @@ To edit the warehouse details:
 ***
 **What's next?**
 
-To learn how to manage stock per specific warehouse, see [Managing Product Availability](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/availability/managing-products-availability.html).
+To learn how to manage stock per specific warehouse, see [Managing Product Availability](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/availability/managing-products-availability.html).
 
 To learn more about the attributes you view or edit on the **View or Edit Warehouse: [Warehouse name]** pages, see [Warehouses: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/warehouses/references/warehouses-reference-information.html).

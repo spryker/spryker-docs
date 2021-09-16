@@ -8,6 +8,10 @@ redirect_from:
   - /2021080/docs/en/creating-abstract-products-and-product-bundles
   - /docs/creating-abstract-products-and-product-bundles
   - /docs/en/creating-abstract-products-and-product-bundles
+  - /2021080/docs/creating-product-bundles
+  - /2021080/docs/en/creating-product-bundles
+  - /docs/creating-product-bundles
+  - /docs/en/creating-product-bundles
 ---
 
 This topic describes how to create [abstract products](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/products-overview.html#abstract-products-and-product-variants) and [product bundles](/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.html).

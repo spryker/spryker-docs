@@ -21,4 +21,4 @@ Let's start learning how the products are created by reviewing a real-life examp
 
 You have a new product in your store. The new product is a Smartphone that goes in three colors: red, green, and orange. Those colors are product variants.
 
-So first you create an abstract product. See [Creating an Abstract Product](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/products/abstract-products/creating-an-abstract-product.html).
+So first you create an abstract product. See [Creating an Abstract Product](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html).

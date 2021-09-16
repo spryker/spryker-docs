@@ -14,7 +14,7 @@ The Product Group feature allows product catalog managers to group products by a
 
 {% info_block warningBox "Examplary content" %}
 
-By default, there is no way to display product groups on Storefront. This section describes an examplary implementation which you can add to your project. See [HowTo - Display Product Groups by Color on Storefront](/docs/scos/dev/tutorials/page.version/howtos/feature-howtos/howto-display-product-groups-by-color-on-the-storefront.html) for more details.
+By default, there is no way to display product groups on Storefront. This section describes an examplary implementation which you can add to your project. See [HowTo - Display Product Groups by Color on Storefront](/docs/scos/dev/tutorials/{{page.version}}/howtos/feature-howtos/howto-display-product-groups-by-color-on-the-storefront.html) for more details.
 
 {% endinfo_block %}
 
@@ -41,7 +41,7 @@ Product abstract card:
  
 ## Product Group in the Back Office
 
-In the Back Office, a product catalog manager can view what product group an abstract product belongs to. See [Viewing a Product](/docs/scos/user/user-guides/page.version/back-office-user-guide/catalog/products/managing-products/managing-products.html#viewing-a-product) to learn more.   
+In the Back Office, a product catalog manager can view what product group an abstract product belongs to. See [Viewing a Product](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/managing-products/managing-products.html#viewing-a-product) to learn more.   
 
 Also, they can insert product groups into CMS pages via content widgets in the [WYSIWYG editor](/docs/scos/user/features/{{page.version}}/cms/wysiwyg-editor.html).
 

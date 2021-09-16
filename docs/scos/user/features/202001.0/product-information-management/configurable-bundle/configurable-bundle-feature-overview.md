@@ -28,7 +28,7 @@ A Configurable Bundle contains:
 Read on to learn more about these elements.
 
 ## Configurable Bundle Template
-Every configurable bundle is created per a template. The **template** is a model that contains the configuration details for the bundle, i.e., the number of slots it may provide, product lists assigned to a slot, etc. A Back Office User creates the template in the Back Office, and the Shop User then uses the template to configure the bundle. See [Configurable Bundle Templates](/docs/scos/user/user-guides/page.version/back-office-user-guide/products/configurable-bundle-templates/configurable-bundle-templates.html) on working with templates in the Back Office.
+Every configurable bundle is created per a template. The **template** is a model that contains the configuration details for the bundle, i.e., the number of slots it may provide, product lists assigned to a slot, etc. A Back Office User creates the template in the Back Office, and the Shop User then uses the template to configure the bundle. See [Configurable Bundle Templates](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/configurable-bundle-templates/configurable-bundle-templates.html) on working with templates in the Back Office.
 {% info_block infoBox "Example" %}
 
 A shop owner can have various templates: a sport suit, a car, a kitchen set.
@@ -71,7 +71,7 @@ A slot is an entity with a list of assigned products for the configurable bundle
 * Configurable Bundle Slot ID
 * Product List ID
 
-A Back Office User can [create an unlimited number of slots](/docs/scos/user/user-guides/page.version/back-office-user-guide/products/configurable-bundle-templates/managing-configurable-bundle-templates.html#creating-a-slot-for-a-configurable-bundle-template) for a template.
+A Back Office User can [create an unlimited number of slots](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/configurable-bundle-templates/managing-configurable-bundle-templates.html#creating-a-slot-for-a-configurable-bundle-template) for a template.
 {% info_block infoBox "Example" %}
 
 `Kitchen furniture set` configurable bundle contains eight slots:
@@ -229,7 +229,7 @@ Pay attention, that product splitting logic does not support Packaging Units for
 Configurator is a page where a shopper assembles a Configurable Bundle. It allows customers to choose compound and technically feasible product combinations online, making the shopping experience interactive for companies and their customers.
 
 ### Configurable Bundle List
-This page contains a list of all Configurable Bundle Templates that are active. All the templates are taken from the **Back Office > Configurable Bundle Templates** section. To configure the template, use our [Configurable Bundle Template Back Office guide](/docs/scos/user/user-guides/page.version/back-office-user-guide/products/configurable-bundle-templates/configurable-bundle-templates.html).
+This page contains a list of all Configurable Bundle Templates that are active. All the templates are taken from the **Back Office > Configurable Bundle Templates** section. To configure the template, use our [Configurable Bundle Template Back Office guide](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/configurable-bundle-templates/configurable-bundle-templates.html).
 ![Configurator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/Configurable+Bundle+Template+-+storefront.png) 
 
 ### Configurator Page

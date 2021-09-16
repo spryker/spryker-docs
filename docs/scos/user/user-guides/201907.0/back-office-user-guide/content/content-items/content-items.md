@@ -20,11 +20,11 @@ In the Back Office, you can create the following content items:
 
 * Banner
 * Abstract Product List that by default includes its Product Groups
-* Product Set 
+* Product Set
 * File List
 
 **What's next?**
-To know more about how to create a content item, see the [Creating Content Items](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/content-items/creating-content-items.html) article.
+To know more about how to create a content item, see the [Creating Content Items](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/creating-content-items.html) article.
 
 To know more about how to edit a content item, see the [Editing Content Items](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/content-items/editing-content-items.html) article.
 

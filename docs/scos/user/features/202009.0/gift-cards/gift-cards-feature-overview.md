@@ -31,7 +31,7 @@ The diagram below shows the gift card product-voucher transition workflow:
 When buying a gift card, the shipment method selection step is skipped on Yves. In the background, there is a “noshipment” constant in the app configuration, which can be selected to configure shipment for a specific type of products, in our case, for gift cards.
 
 
-When customer buys a gift card, you can use the default OMS states for the GiftCardSubprocess to be displayed on the Storefront, or set custom state names so they would make more sense for the Storefront users. For details on how toset the custom state names on the Storefront for refunded orders, see [HowTo - Display custom names for order item states on the Storefront](/docs/scos/dev/tutorials-and-howtos/page.version/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html).
+When customer buys a gift card, you can use the default OMS states for the GiftCardSubprocess to be displayed on the Storefront, or set custom state names so they would make more sense for the Storefront users. For details on how toset the custom state names on the Storefront for refunded orders, see [HowTo - Display custom names for order item states on the Storefront](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html).
 
 ## Buying with gift cards
 With a gift card code in place, users get an alternative payment method to pay for their orders. The payment workflow with the gift card would be as follows:

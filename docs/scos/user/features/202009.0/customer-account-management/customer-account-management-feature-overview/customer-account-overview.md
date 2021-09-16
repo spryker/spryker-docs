@@ -51,7 +51,7 @@ A Back Office user can do the following:
 * Send a password token via email.
 * Check last orders of a customer in the shop.
 
-See [Managing customers](/docs/scos/user/user-guides/page.version/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html) for details.
+See [Managing customers](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html) for details.
 
 ## Customer account on the Storefront
 Customer can perform the following actions the Storefront:

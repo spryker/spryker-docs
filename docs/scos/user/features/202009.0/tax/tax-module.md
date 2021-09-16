@@ -140,4 +140,4 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
 ```
 
 ## Migration Guide
-If you’re migrating the Tax module from version 2 to version 3, you need to follow the steps described in the [Migration Guide - Tax](/docs/scos/dev/migration-and-integration/page.version/module-migration-guides/migration-guide-tax.html).
+If you’re migrating the Tax module from version 2 to version 3, you need to follow the steps described in the [Migration Guide - Tax](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-tax.html).

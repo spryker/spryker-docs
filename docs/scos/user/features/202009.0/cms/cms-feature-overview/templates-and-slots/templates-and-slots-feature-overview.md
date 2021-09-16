@@ -53,7 +53,7 @@ When the feature is integrated into your project, the following templates with s
 * Product details page template
 * CMS page template
 
-A content manager can [manage templates with slots](/docs/scos/user/user-guides/page.version/back-office-user-guide/content/slots/managing-slots.html) in the Back Office > **Content Management** > **Slots** section.
+A content manager can [manage templates with slots](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/slots/managing-slots.html) in the Back Office > **Content Management** > **Slots** section.
 <details open>
     <summary>Template representation - the Back Office</summary>
 
@@ -62,7 +62,7 @@ A content manager can [manage templates with slots](/docs/scos/user/user-guides/
 
 </details>
 
-See [HowTo - Create CMS Templates](/docs/scos/dev/tutorials-and-howtos/page.version/howtos/feature-howtos/cms/howto-create-cms-templates.html) to learn about creation of CMS templates.
+See [HowTo - Create CMS Templates](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/cms/howto-create-cms-templates.html) to learn about creation of CMS templates.
 
 
 
@@ -85,7 +85,7 @@ By importing a [slot list](#slot-list), a developer can do the following:
 *     Delete slots.
 *     Define slot configurations.
 
-A content manager can [manage slots](/docs/scos/user/user-guides/page.version/back-office-user-guide/content/slots/managing-slots.html) in the Back Office > **Content Management** > **Slots** section.
+A content manager can [manage slots](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/slots/managing-slots.html) in the Back Office > **Content Management** > **Slots** section.
 
 <details open>
     <summary>Slot representation - the Back Office</summary>
@@ -107,7 +107,7 @@ A content manager can [manage slots](/docs/scos/user/user-guides/page.version/ba
 
 </details>
 
-A content manager can [manage CMS blocks](/docs/scos/user/user-guides/page.version/back-office-user-guide/content/slots/managing-slots.html) in the Back Office > **Content Management** > **Slots** section.
+A content manager can [manage CMS blocks](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/slots/managing-slots.html) in the Back Office > **Content Management** > **Slots** section.
 
 
 
@@ -141,8 +141,8 @@ See [Content Items](/docs/scos/user/features/{{page.version}}/content-items/cont
 ### Applying Templates with Slots
 The template with slots can be applied to any page. Even though a content manager can manage all page types in the Back Office, they can only apply templates with slots to the following:
 
-* Category pages in the Back Office > **Category > Create category** section. See [Creating Categories](/docs/scos/user/user-guides/page.version/back-office-user-guide/catalog/category/creating-categories.html) for more information.
-* CMS pages in the Back Office > **Pages > Create new CMS page** section. See [Creating a CMS Page](/docs/scos/user/user-guides/page.version/back-office-user-guide/catalog/category/creating-categories.html) for more information.
+* Category pages in the Back Office > **Category > Create category** section. See [Creating Categories](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/creating-categories.html) for more information.
+* CMS pages in the Back Office > **Pages > Create new CMS page** section. See [Creating a CMS Page](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/creating-categories.html) for more information.
 
 A developer can apply templates with slots to all the other page types.
 
@@ -188,7 +188,7 @@ The slot list contains the following information:
 | status | Defines whether the slot is active or not where "0" stands for "inactive" and "1" stands for "active". If a slot is inactive, it is not rendered in the Storefront by the slot widget. | 1 |
 
 ## Content Providers
-A content provider is a source from where Slot Widget fetches content to embed into slots and, subsequently, render it in the Storefront.  With the Templates & Slots feature, you can use slots to embed the content created in your Spryker project or CMS editors of technology partners (e.g. [CoreMedia](/docs/scos/dev/technology-partners/page.version/content-management/coremedia/coremedia.html), [E-spirit](/docs/scos/dev/technology-partners/page.version/content-management/e-spirit.html), [Styla](/docs/scos/dev/technology-partners/page.version/content-management/styla.html), [Magnolia](/docs/scos/dev/technology-partners/page.version/content-management/magnolia.html)).
+A content provider is a source from where Slot Widget fetches content to embed into slots and, subsequently, render it in the Storefront.  With the Templates & Slots feature, you can use slots to embed the content created in your Spryker project or CMS editors of technology partners (e.g. [CoreMedia](/docs/scos/dev/technology-partners/{{page.version}}/content-management/coremedia/coremedia.html), [E-spirit](/docs/scos/dev/technology-partners/{{page.version}}/content-management/e-spirit.html), [Styla](/docs/scos/dev/technology-partners/{{page.version}}/content-management/styla.html), [Magnolia](/docs/scos/dev/technology-partners/{{page.version}}/content-management/magnolia.html)).
 
 When the feature is integrated into your project, the following applies:
 
@@ -216,20 +216,20 @@ Page identifiers used to define visibility conditions depend on the page type to
 
 
 {% info_block infoBox "Product details page" %}
-For product details page type, you can use the Product ID or Category ID identifiers. Category ID is a collective identifier. By selecting a category, the content manager selects all the products that are [assigned to the category](/docs/scos/user/user-guides/page.version/back-office-user-guide/catalog/category/assigning-products-to-categories.html).
+For product details page type, you can use the Product ID or Category ID identifiers. Category ID is a collective identifier. By selecting a category, the content manager selects all the products that are [assigned to the category](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/assigning-products-to-categories.html).
 {% endinfo_block %}
 
-To meet your project requirements, you can extend the visibility conditions functionality by adding more conditions, like Customer ID, Customer Group ID or Navigation Nodes. See [HowTo - Create Visibility Conditions for CMS Blocks](/docs/scos/dev/tutorials-and-howtos/page.version/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html) to learn more.
+To meet your project requirements, you can extend the visibility conditions functionality by adding more conditions, like Customer ID, Customer Group ID or Navigation Nodes. See [HowTo - Create Visibility Conditions for CMS Blocks](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html) to learn more.
 
 
-A content manager can define visibility conditions by [selecting pages](/docs/scos/user/user-guides/page.version/back-office-user-guide/content/slots/managing-slots.html#selecting-pages) in the Back Office > **Content Management > Slots** section.
+A content manager can define visibility conditions by [selecting pages](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/slots/managing-slots.html#selecting-pages) in the Back Office > **Content Management > Slots** section.
 
 A developer can [import visibility conditions](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html).
 
 ## Slot Widget
 Slot widget is used to fetch content from a content provider and render it in specified pages. Content is fetched in the form of HTML code ready to be rendered in the Storefront. With the help of slot widgets, you can fetch and render content from the following content providers:
 
-* [CoreMedia](/docs/scos/dev/technology-partners/page.version/content-management/coremedia/coremedia.html)
+* [CoreMedia](/docs/scos/dev/technology-partners/{{page.version}}/content-management/coremedia/coremedia.html)
 * [Spryker CMS Blocks](#spryker-cms-blocks)
 
 
@@ -300,7 +300,7 @@ This section describes how Slot Widget works with the Spryker CMS Blocks content
 {% info_block infoBox %}
 
 
-* By default, names are used as unique identifiers of CMS blocks while Slot Widget requires keys. To enable Slot Widget to work with CMS blocks, [upgrade](/docs/scos/dev/migration-and-integration/page.version/module-migration-guides/migration-guide-cmsblock.html#upgrading-from-version-2---to-version-3--) the `CMSBlock` module in your project for CMS Blocks to have keys.
+* By default, names are used as unique identifiers of CMS blocks while Slot Widget requires keys. To enable Slot Widget to work with CMS blocks, [upgrade](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-cmsblock.html#upgrading-from-version-2---to-version-3--) the `CMSBlock` module in your project for CMS Blocks to have keys.
 
 
 {% endinfo_block %}

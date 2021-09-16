@@ -25,7 +25,7 @@ The Company Account section consists of the sections that are logically connecte
 
 ***
 **What's next?**
-Let's say that you have received contract details according to which you need to set up the company infrastructure. 
+Let's say that you have received contract details according to which you need to set up the company infrastructure.
 
 {% info_block infoBox %}
 Some setup that you do now (creating a company record
@@ -33,10 +33,10 @@ Some setup that you do now (creating a company record
 
 So you need to know how the company infrastructure is being set up.
 See the following articles and follow the procedures described there to set up a company account:
-* [Managing Companies](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/managing-a-company-account/managing-companies.html)
-* [Managing Company Units](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/managing-a-company-account/managing-company-units.html)
-* [Managing Company Unit Addresses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/managing-a-company-account/managing-company-unit-addresses.html)
-* [Managing Company Roles](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/managing-a-company-account/managing-company-roles.html)
-* [Managing Company Users](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/managing-a-company-account/managing-company-users.html)
+* [Managing Companies](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/managing-companies.html)
+* [Managing Company Units](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/managing-company-units.html)
+* [Managing Company Unit Addresses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/managing-company-unit-addresses.html)
+* [Managing Company Roles](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/managing-company-roles.html)
+* [Managing Company Users](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/managing-company-users.html)
 
 To know more about the attributes that you see, enter, and select while managing company accounts, see [Company Account: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/references/company-account-reference-information.html).

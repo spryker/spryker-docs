@@ -27,7 +27,7 @@ To activate a slot, click **Activate** in the *Actions* column in the **List of 
 To deactivate a slot, click **Deactivate** in the *Actions* column in the **List of Slots for [name] Template** section. This will change the status to **Inactive**. The content of this slot will be removed from the corresponding Storefront page(s).
 
 ## Assigning CMS Blocks to Slots
-You can assign CMS blocks to a slot selected in the **List of Slots for [name] Template**. The content of assigned CMS blocks is displayed in the the corresponding Storefront page(s). If there are no CMS blocks with content that you can assign, see [Creating a CMS Block](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/creating-a-cms-block.html).
+You can assign CMS blocks to a slot selected in the **List of Slots for [name] Template**. The content of assigned CMS blocks is displayed in the the corresponding Storefront page(s). If there are no CMS blocks with content that you can assign, see [Creating a CMS Block](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/creating-cms-blocks.html).
 
 To assign a CMS block to a slot:
 

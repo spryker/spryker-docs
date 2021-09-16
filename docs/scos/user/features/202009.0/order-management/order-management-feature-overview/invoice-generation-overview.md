@@ -16,14 +16,14 @@ You can send a hidden copy of the invoice to yourself or your employees. Keep in
 
 {% endinfo_block %}
 
-It is possible to generate an invoice only once the order has acquired the `confirmed` state. The invoice generation and sending are triggered in the Back Office by initiating the `invoice-generate` event on the *View Order* page. See [Changing order statuses](/docs/scos/user/user-guides/page.version/back-office-user-guide/sales/orders/managing-orders.html#changing-order-statuses) for details on how a Back Office User initiates events for orders. After generating the invoice, the OMS state of the order changes to `exported`.
+It is possible to generate an invoice only once the order has acquired the `confirmed` state. The invoice generation and sending are triggered in the Back Office by initiating the `invoice-generate` event on the *View Order* page. See [Changing order statuses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/orders/managing-orders.html#changing-order-statuses) for details on how a Back Office User initiates events for orders. After generating the invoice, the OMS state of the order changes to `exported`.
 
 {% info_block infoBox "Info" %}
 
-You can use the default OMS states to be displayed on the *Order Details* pages on the Storefront or set custom states so they would make more sense for the Storefront users. For details on how to set the custom states for orders on the Storefront, see [HowTo - Display Custom Names for Order Item States on the Storefront](/docs/scos/dev/tutorials-and-howtos/page.version/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html).
+You can use the default OMS states to be displayed on the *Order Details* pages on the Storefront or set custom states so they would make more sense for the Storefront users. For details on how to set the custom states for orders on the Storefront, see [HowTo - Display Custom Names for Order Item States on the Storefront](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html).
 
 {% endinfo_block %}
-By default, the invoice can be generated only for the whole order (not for individual order items) and only once. However, on the project level, you can set up a configuration that forces the repeated invoice generation by running a console command. See [HowTo - Emailing Invoices Using BCC](/docs/scos/dev/tutorials-and-howtos/page.version/howtos/feature-howtos/howto-emailing-invoices-using-bcc.html)  for details.
+By default, the invoice can be generated only for the whole order (not for individual order items) and only once. However, on the project level, you can set up a configuration that forces the repeated invoice generation by running a console command. See [HowTo - Emailing Invoices Using BCC](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/howto-emailing-invoices-using-bcc.html)  for details.
 
 
 ## Invoice template
@@ -62,7 +62,7 @@ Keep in mind that bundled product itself always has a 0 tax rate. However, all o
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
                 <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\order-management-feature-integration.md" class="mr-link">Enable invoice generation by integrating the Order Management feature into your project </a></li>
-                <li><a href="/docs/scos/dev/tutorials-and-howtos/page.version/howtos/feature-howtos/howto-emailing-invoices-using-bcc.html" class="mr-link">Configure emailing of invoices using BCC</a></li>
+                <li><a href="/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/howto-emailing-invoices-using-bcc.html" class="mr-link">Configure emailing of invoices using BCC</a></li>
             </ul>
         </div>
         <!-- col2 -->

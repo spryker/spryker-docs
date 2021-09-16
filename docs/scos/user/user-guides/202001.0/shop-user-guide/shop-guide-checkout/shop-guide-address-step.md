@@ -88,6 +88,6 @@ If there are no saved addresses, the **Define new address** option will be displ
 
 The delivery addresses are added to your items. Now, you need to select shipment methods for each delivery address.
 
-To learn more on how to select a shipment method, see [Shop Guide - Shipment Step](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-checkout/shop-guide-shipment-step.html).
+To learn more on how to select a shipment method, see [Shop Guide - Shipment Step](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/shop-guide-checkout/shop-guide-shipment-step.html).
 
 <!-- Last review date: Sep 24, 2019 -->

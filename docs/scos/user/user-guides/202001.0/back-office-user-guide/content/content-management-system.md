@@ -43,20 +43,20 @@ In the **Content Management** section, you can see the following:
 
 To learn more about how to create, manage, view, and publish CMS pages, see the following articles:
 
-* [Creating a new page](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/pages/creating-a-cms-page.html) 
-* [Managing CMS page versioning](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/pages/cms-pages-versioning.html) 
-* [Managing CMS pages](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/pages/managing-cms-pages.html)
+* [Creating a new page](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/creating-cms-pages.html) 
+* [Managing CMS page versioning](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/managing-cms-page-versions.html) 
+* [Managing CMS pages](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/managing-cms-pages.html)
 * [Assigning Blocks to CMS, Category and Product pages](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/blocks/assigning-blocks-to-category-or-product-pages.html)
 
 To know about how to create and manage CMS blocks, see the following articles:
 
-* [Creating a new CMS block](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/blocks/creating-a-cms-block.html)
-* [Managing CMS block details](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/blocks/managing-cms-blocks.html)
+* [Creating a new CMS block](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/creating-cms-blocks.html)
+* [Managing CMS block details](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/managing-cms-blocks.html)
 * [Assigning blocks to product and category pages](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/blocks/assigning-blocks-to-category-or-product-pages.html)
 
 To learn more about how to create and edit Content Items, see the following articles:
 
-* [Creating content items](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/content-items/creating-content-items.html)
+* [Creating content items](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/creating-content-items.html)
 * [Editing content items details](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/content-items/editing-content-items.html)
 
 To learn more about how to add content items widgets to a block or a page and how to manage them, see the following articles:
@@ -66,5 +66,5 @@ To learn more about how to add content items widgets to a block or a page and ho
 
 To learn more about how to configure URL redirects, see the following article:
 
-* [Creating a URL redirect](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/redirects/creating-cms-redirects.html)
-* [Managing CMS Redirects](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/redirects/managing-cms-redirects.html)
+* [Creating a URL redirect](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/redirects/creating-cms-redirects.html)
+* [Managing CMS Redirects](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/redirects/creating-cms-redirects.html)

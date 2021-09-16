@@ -23,7 +23,7 @@ A Back Office user can define the following:
 * Unique product set URL.
 
  
-A Back Office user can add a product sets to any page by [creating a product set content item](/docs/scos/user/user-guides/page.version/back-office-user-guide/content/content-items/creating-content-items.html) and [adding it to CMS pages and blocks](/docs/scos/user/user-guides/page.version/back-office-user-guide/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).
+A Back Office user can add a product sets to any page by [creating a product set content item](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/creating-content-items.html) and [adding it to CMS pages and blocks](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).
 
 
 For more details on product sets, check the video:

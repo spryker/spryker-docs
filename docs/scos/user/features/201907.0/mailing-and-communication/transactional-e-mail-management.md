@@ -14,6 +14,6 @@ Automated Emails regarding order status, shipping or transactions are just a few
 
 The following links provides additional information about the Mail module, plugins and procedures: 
 
-*  `MailTypePlugin` creation and  registration -  [HowTo - Create and Register a MailTypePlugin](/docs/scos/dev/tutorials/page.version/howtos/howto-create-and-register-a-mailtypeplugin.html)
-*  `MailProviderPlugin` general overview and the registration procedure - [HowTo - Create and Register a Mail Provider](/docs/scos/dev/tutorials/page.version/howtos/howto-create-and-register-a-mail-provider.html)
-*  Tutorial that helps to understand the procedure that needs to be performed in order to send an email - [Tutorial - Sending a Mail](/docs/scos/dev/tutorials/page.version/introduction/tutorial-sending-a-mail.html).
+*  `MailTypePlugin` creation and  registration -  [HowTo - Create and Register a MailTypePlugin](/docs/scos/dev/tutorials/{{page.version}}/howtos/howto-create-and-register-a-mailtypeplugin.html)
+*  `MailProviderPlugin` general overview and the registration procedure - [HowTo - Create and Register a Mail Provider](/docs/scos/dev/tutorials/{{page.version}}/howtos/howto-create-and-register-a-mail-provider.html)
+*  Tutorial that helps to understand the procedure that needs to be performed in order to send an email - [Tutorial - Sending a Mail](/docs/scos/dev/tutorials/{{page.version}}/introduction/tutorial-sending-a-mail.html).

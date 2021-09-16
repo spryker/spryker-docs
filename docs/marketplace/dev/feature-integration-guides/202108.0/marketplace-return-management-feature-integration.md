@@ -380,6 +380,12 @@ Make sure that the following changes have been triggered in transfer objects:
 
 | TRANSFER | TYPE | EVENT  | PATH  |
 | --------- | ------- | ----- | ------------- |
+| MerchantOrderCriteria.orderItemUuids | attribute | created | src/Generated/Shared/Transfer/MerchantOrderCriteria |
+| MerchantOrder.merchant | attribute | created | src/Generated/Shared/Transfer/MerchantOrderRequest |
+| MerchantOrder | class | created | src/Generated/Shared/Transfer/MerchantOrder |
+| MerchantOrderCriteria | class | created | src/Generated/Shared/Transfer/MerchantOrderCriteria |
+| ReturnCreateRequest | class | created | src/Generated/Shared/Transfer/ReturnCreateRequest |
+| Return.merchantOrders | attribute | created | src/Generated/Shared/Transfer/ReturnRequest |
 | Return.merchantSalesOrderReference| attribute | created | src/Generated/Shared/Transfer/ReturnTransfer|
 | Return.returnItems| attribute | created | src/Generated/Shared/Transfer/ReturnTransfer|
 | Return.merchantOrders| attribute | created | src/Generated/Shared/Transfer/ReturnTransfer|

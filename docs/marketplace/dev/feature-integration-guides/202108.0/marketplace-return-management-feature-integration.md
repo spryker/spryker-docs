@@ -42,7 +42,6 @@ Make sure that the following modules have been installed:
 | MerchantSalesReturn | spryker/merchant-sales-return |
 | MerchantSalesReturnGui | spryker/merchant-sales-return-gui |
 | MerchantSalesReturnMerchantUserGui | spryker/merchant-sales-return-merchant-user-gui |
-| MerchantSalesReturnWidget | spryker-shop/merchant-sales-return-widget |
 
 {% endinfo_block %}
 
@@ -956,65 +955,6 @@ class MerchantOmsCommunicationFactory extends SprykerMerchantOmsCommunicationFac
 
 </details>
 
-
-### 4) Set up widgets
-
-Register the following plugins to enable widgets:
-
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| ------------ | ----------- | ----- | ------------ |
-| MerchantSalesReturnCreateFormWidgetCacheKeyGeneratorStrategyPlugin  | Disables widget cache for for the `MerchantSalesReturnCreateFormWidget`. |  |  SprykerShop\Yves\MerchantSalesReturnWidget\Plugin |
-| MerchantSalesReturnCreateFormWidget |  Provides 'Create Return' only with the items of one merchant order at a time and only for the returnable items. |  |  SprykerShop\Yves\MerchantSalesReturnWidget\Widget |
-
-<details>
-<summary markdown='span'>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
-
-```php
-<?php
-
-namespace Pyz\Yves\ShopApplication;
-
-use SprykerShop\Yves\MerchantSalesReturnWidget\Plugin\MerchantSalesReturnCreateFormWidgetCacheKeyGeneratorStrategyPlugin;
-use SprykerShop\Yves\MerchantSalesReturnWidget\Widget\MerchantSalesReturnCreateFormWidget;
-
-class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
-{
-    /**
-     * @return string[]
-     */
-    protected function getGlobalWidgets(): array
-    {
-        return [
-              MerchantSalesReturnCreateFormWidget::class,
-        ];
-    }
-
-    /**
-     * @return \SprykerShop\Yves\ShopApplicationExtension\Dependency\Plugin\WidgetCacheKeyGeneratorStrategyPluginInterface[]
-     */
-    protected function getWidgetCacheKeyGeneratorStrategyPlugins(): array
-    {
-        return [
-            new MerchantSalesReturnCreateFormWidgetCacheKeyGeneratorStrategyPlugin(),
-        ];
-    }
-}
-```
-
-</details>
-
-{% info_block warningBox "Verification" %}
-
-<!--Describe how a developer can check they have completed the step correctly.-->
-
-Make sure that the following widgets have been registered by adding the respective code snippets to a Twig template:
-
-| WIDGET | VERIFICATION |
-| ---------------- | ----------------- |
-| MerchantSalesReturnCreateFormWidget | Go through the Return flow in the same way as now by clicking the **Create Return** button on the top of the *Order Details* page. Go to the *Create Return* page and create a return only with the items of one merchant order at a time and only for returnable items. |
-
-{% endinfo_block %}
-
 {% info_block warningBox "Verification" %}
 
 <!--Describe how a developer can check they have completed the step correctly.-->
@@ -1140,7 +1080,85 @@ Make sure that, in the navigation menu of the Back Office, you can see the menu 
 
 ## Install feature front end
 
-1. Enable Javascript and CSS changes:
+Follow the steps below to install the Marketplace return management feature front end.
+
+### 1) Install required modules using Сomposer
+
+<!--Provide the console command\(s\) with the exact latest version numbers of all required modules. If the composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
+
+Install the required modules:
+
+```bash
+composer require spryker-feature/marketplace-return-management --update-with-dependencies
+```
+
+{% info_block warningBox "Verification" %}
+
+<!--Describe how a developer can check they have completed the step correctly.-->
+
+Make sure that the following modules have been installed:
+
+| MODULE  | EXPECTED DIRECTORY <!--for public Demo Shops--> |
+| -------- | ------------------- |
+| MerchantSalesReturnWidget | spryker-shop/merchant-sales-return-widget |
+
+{% endinfo_block %}
+
+### 2) Set up widgets
+
+<!--Provide a list of plugins and global widgets to enable widgets. Add descriptions for complex javascript code snippets. Provide a console command for generating front-end code.-->
+
+Set up widgets as follows:
+
+1. Register the following plugins to enable widgets:
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE   |
+| --------------- | -------------- | ------ | -------------- |
+| MerchantSalesReturnCreateFormWidgetCacheKeyGeneratorStrategyPlugin  | Disables widget cache for for the `MerchantSalesReturnCreateFormWidget`. |  |  SprykerShop\Yves\MerchantSalesReturnWidget\Plugin |
+| MerchantSalesReturnCreateFormWidget |  Provides "Create Return" only with the items of one merchant order at a time and only for the returnable items. |  |  SprykerShop\Yves\MerchantSalesReturnWidget\Widget |
+
+
+```php
+<?php
+namespace Pyz\Yves\ShopApplication;
+use SprykerShop\Yves\MerchantSalesReturnWidget\Plugin\MerchantSalesReturnCreateFormWidgetCacheKeyGeneratorStrategyPlugin;
+use SprykerShop\Yves\MerchantSalesReturnWidget\Widget\MerchantSalesReturnCreateFormWidget;
+class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
+{
+    /**
+     * @return string[]
+     */
+    protected function getGlobalWidgets(): array
+    {
+        return [
+              MerchantSalesReturnCreateFormWidget::class,
+        ];
+    }
+    /**
+     * @return \SprykerShop\Yves\ShopApplicationExtension\Dependency\Plugin\WidgetCacheKeyGeneratorStrategyPluginInterface[]
+     */
+    protected function getWidgetCacheKeyGeneratorStrategyPlugins(): array
+    {
+        return [
+            new MerchantSalesReturnCreateFormWidgetCacheKeyGeneratorStrategyPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+<!--Describe how a developer can check they have completed the step correctly.-->
+
+Make sure that the following widgets have been registered by adding the respective code snippets to a Twig template:
+
+| WIDGET | VERIFICATION |
+| ---------------- | ----------------- |
+| MerchantSalesReturnCreateFormWidget | Go through the Return flow in the same way as now by clicking the **Create Return** button on the top of the *Order Details* page. Go to the *Create Return* page and create a return only with the items of one merchant order at a time and only for returnable items. |
+
+{% endinfo_block %}
+
+2. Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build

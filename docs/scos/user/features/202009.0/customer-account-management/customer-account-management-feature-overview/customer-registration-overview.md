@@ -29,7 +29,7 @@ The *regular customer registration* implies registration triggered from the regi
 
 2. The customer clicks on the verification link in the email and turns out on a login page with the message saying that the account is verified.
 
-*Checkout customer registration* implies that customer registers during the checkout. This means that the customer puts products to cart as a guest user, and at the [Login step of the checkout](/docs/scos/user/features/{{page.version}}/checkout/checkout-feature-overview/multi-step-checkout.html), chooses to sign up. The registration flow is then the same as for the regular registration.
+*Checkout customer registration* implies that customer registers during the checkout. This means that the customer puts products to cart as a guest user, and at the [Login step of the checkout](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html), chooses to sign up. The registration flow is then the same as for the regular registration.
 
 {% info_block infoBox "Info" %}
 

@@ -8,6 +8,10 @@ redirect_from:
   - /2021080/docs/en/product-options-feature-overview
   - /docs/product-options-feature-overview
   - /docs/en/product-options-feature-overview
+  - /2021080/docs/product-options
+  - /2021080/docs/en/product-options
+  - /docs/product-options
+  - /docs/en/product-options
 ---
 
 The **Product Options** feature allows a Back Office user to create and assign product options to abstract products. Product options are product additions that a customer can select on the product detail page before adding the product to the cart. For example, the product options can be gift wrappings for products, insurance, warranty, etc. Product options do not have stock, but a SKU linked to product abstracts. Thus, you cannot purchase them without buying a corresponding product.

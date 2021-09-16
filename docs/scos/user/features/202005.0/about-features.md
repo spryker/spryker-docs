@@ -25,7 +25,7 @@ The documentation in this section provides detailed descriptions of features, hi
 
 {% info_block infoBox "Note" %}
 
-This documentation is meant for reference purposes only and does not contain step-by-step guides. If you need specific guides on how to use or install a feature, go to its summary page (for example, the [Content Items](/docs/scos/user/features/{{page.version}}/cms/content-items/content-items.html){target="_blank"} feature summary), and depending on your role, find the guide in the **If you are** table.
+This documentation is meant for reference purposes only and does not contain step-by-step guides. If you need specific guides on how to use or install a feature, go to its summary page (for example, the [Content Items](/docs/scos/user/features/{{page.version}}/content-items.html){target="_blank"} feature summary), and depending on your role, find the guide in the **If you are** table.
 
 Or, you can go directly to the following guides to search for the necessary information:
 

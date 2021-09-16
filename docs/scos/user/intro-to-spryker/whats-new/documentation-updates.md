@@ -137,12 +137,12 @@ Below you will find the list of the new/updated documentation released as part o
     
 </details>
 
-* [CMS Templates & Slots](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/templates-and-slots-overview.html)
+* [CMS Templates & Slots](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html)
 
 <details open>
 <summary>Feature overview</summary>
     
-[CMS Templates & Slots Feature Overview](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/templates-and-slots-overview.html-feature-overview )
+[CMS Templates & Slots Feature Overview](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html-feature-overview )
     
 </details>
 

@@ -24,7 +24,7 @@ Follow the steps below to select a content item you want to create:
     * [Create a File List](#create-a-file-list-content-item)
     * [Create a Navigation](#create-a-navigation-content-item)
 
-See [Content Item Types: Module Relations](/docs/scos/user/features/{{page.version}}/cms/content-items/content-item-types-module-relations.html) to learn about the content item types.
+See [Content Item Types: Module Relations](/docs/scos/user/features/{{page.version}}/content-item-types-module-relations.html) to learn about the content item types.
 
 See [Content Items: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/references/content-items-reference-information.html) to learn about the attributes on this page.
 

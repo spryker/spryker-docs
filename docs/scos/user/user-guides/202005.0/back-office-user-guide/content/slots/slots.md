@@ -8,7 +8,7 @@ redirect_from:
   - /v5/docs/en/slots
 ---
 
-Slots are used to embed content into pages to which [templates with slots](/docs/scos/user/features/{{page.version}}/cms/templates-and-slots/templates-and-slots-feature-overview.html) are applied.
+Slots are used to embed content into pages to which [templates with slots](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html) are applied.
 
 In the Slots page, you can:
 

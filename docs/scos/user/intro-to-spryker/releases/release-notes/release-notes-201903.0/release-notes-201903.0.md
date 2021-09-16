@@ -71,13 +71,13 @@ Previously, the Back Office “Category” page could not display a large number
 If you have multiple stores configured, you can define in which store a CMS page will be visible. A Back Office user can configure that in the back office.
 ![Multi-store support for CMS pages](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201903.0/image9.png) 
 
-**Documentation**: [Multi-store CMS Pages](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/cms-pages-overview.html).
+**Documentation**: [Multi-store CMS Pages](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html).
 
 ### CMS Pages in Search Results
 Spryker improved search capabilities by including CMS pages in search results. Now, customers are redirected to the search result page containing two tabs: one for product pages and the other for CMS pages. The new tab lists CMS pages either as a list or as a grid.
 ![CMS pages in search results](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201903.0/image7.png) 
 
-**Documentation**: [CMS Pages in Search Results](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/cms-pages-in-search-results-overview.html).
+**Documentation**: [CMS Pages in Search Results](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-in-search-results-overview.html).
 
 ### New Template for Category Page
 The new template for the category page provides another navigation option for shops with a complex category structure. Having clicked a top-level category, a webshop visitor will be redirected to a subcategory page that shows a grid consisting of subcategory images. The shop owner can assign an image to each category in Back Office that will be shown on the page.
@@ -151,7 +151,7 @@ We are introducing one of the core B2B features which enables managers to contro
 * Business on Behalf: Back Office interface for creating Business on Behalf users has been implemented. Now, the feature supports both ways to create Business on Behalf users – via Import and through the Admin UI.
 * Reclamation: Allows creating a reclamation from an order on the item level.
 
-**Documentation**: [Checkout](/docs/scos/user/features/{{page.version}}/checkout/checkout-feature-overview/multi-step-checkout.html), [Business on Behalf](/docs/scos/user/features/{{page.version}}/company-account/company-account-feature-overview/business-on-behalf-overview.html), [Reclamations](https://documentation.spryker.com/2021080/docs/reclamations).
+**Documentation**: [Checkout](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html), [Business on Behalf](/docs/scos/user/features/{{page.version}}/company-account/company-account-feature-overview/business-on-behalf-overview.html), [Reclamations](https://documentation.spryker.com/2021080/docs/reclamations).
 
 ## Partner Integrations
 ### Heidelpay Marketplace Payments

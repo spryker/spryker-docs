@@ -9,7 +9,7 @@ redirect_from:
   - /docs/en/file-details-cms-blockcsv
 ---
 
-This article contains content of the **cms_block.csv** file to configure [CMS Block](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/cms-blocks-overview.html) information on your Spryker Demo Shop.
+This article contains content of the **cms_block.csv** file to configure [CMS Block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:

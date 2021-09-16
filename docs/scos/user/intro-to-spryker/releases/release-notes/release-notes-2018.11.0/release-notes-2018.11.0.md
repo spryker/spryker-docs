@@ -127,7 +127,7 @@ We have introduced the concept of Merchant to allow our customers to implement t
 Easily set a minimum order value for any of your products where either the customer cannot proceed to checkout unless the value is reached, or the difference is added as a special fee to the total sum.
 ![Minimum order value](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.11.0/image11.png) 
 
-**Documentation**: [Minimum Order Value](/docs/scos/user/features/{{page.version}}/checkout/checkout-feature-overview/order-thresholds.html)
+**Documentation**: [Minimum Order Value](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html)
 
 ## Price Management Enhancements
 ### Net/Gross Price

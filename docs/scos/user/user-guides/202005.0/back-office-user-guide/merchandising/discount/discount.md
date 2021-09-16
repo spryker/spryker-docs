@@ -17,11 +17,11 @@ This section allows creating discounts for products.
 To know how the discounts are created and managed, see the following articles:
 * [Creating a Discount Voucher](https://documentation.spryker.com/v5/docs/en/creating-a-discount-voucher)
 * [Creating a Cart Rule Discount](https://documentation.spryker.com/v5/docs/en/creating-a-cart-rule-discount)
-* [Managing Discounts](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/discount/managing-discounts.html)
+* [Managing Discounts](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/discount/managing-discounts.html)
 
 To know more about the attributes you use to create and manage the discounts, see the following articles:
-* [Discount: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/discount/references/discount-reference-information.html)
-* [Discount Calculation: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/discount/references/discount-calculation-reference-information.html)
-* [Discount Conditions: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/discount/references/discount-conditions-reference-information.html)
-* [Voucher Codes: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/discount/references/voucher-codes-reference-information.html)
-* [Token Description Tables](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/discount/references/token-description-tables.html)
+* [Discount: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/discount/references/discount-reference-information.html)
+* [Discount Calculation: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/discount/references/discount-calculation-reference-information.html)
+* [Discount Conditions: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/discount/references/discount-conditions-reference-information.html)
+* [Voucher Codes: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/discount/references/voucher-codes-reference-information.html)
+* [Token Description Tables](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/discount/references/token-description-tables.html)

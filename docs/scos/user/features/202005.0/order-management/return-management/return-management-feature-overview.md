@@ -10,7 +10,7 @@ redirect_from:
 
 The *Return Management* feature allows you to create and manage returns for a sales order. 
 
-Once an order has been shipped, a Buyer or a Back Office User can initiate a return of the whole order or its individual items. See [Shop Guide - Creating a Return](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/shop-guide-returns-management/shop-guide-creating-a-return.html) and [Managing Orders](/docs/scos/user/user-guides/202005.0/back-office-user-guide/sales/orders/managing-orders.html) for details on how they can do that.
+Once an order has been shipped, a Buyer or a Back Office User can initiate a return of the whole order or its individual items. See [Shop Guide - Creating a Return](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/shop-guide-customer-account/shop-guide-returns-management/shop-guide-creating-a-return.html) and [Managing Orders](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/orders/managing-orders.html) for details on how they can do that.
 
 {% info_block warningBox "Note" %}
 
@@ -28,7 +28,7 @@ The *Return Policy* is a set of rules that defines what items can be returned: i
 
 {% info_block infoBox "Info" %}
 
-For now, you can set the Return Policy period in code only, there is no UI for that. See [HowTo - Set Number of Days for a Return Policy](/docs/scos/dev/tutorials/202005.0/howtos/feature-howtos/howto-set-number-of-days-for-a-return-policy.html) for details.
+For now, you can set the Return Policy period in code only, there is no UI for that. See [HowTo - Set Number of Days for a Return Policy](/docs/scos/dev/tutorials/{{page.version}}/howtos/feature-howtos/howto-set-number-of-days-for-a-return-policy.html) for details.
 
 {% endinfo_block %}
 
@@ -56,7 +56,7 @@ Buyers and Back Office users can have a paper version of the return by printing 
 ![Return slip](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Return+Management/Return+Management+Feature+Overview/return-slip.png) 
 
 ## Return Management on the Storefront
-Buyers can return entire orders or individual sales order items as soon as they have been delivered to them. When returning, the Buyers can select select or enter a return reason. See [Shop Guide - Creating a Return](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/shop-guide-returns-management/shop-guide-creating-a-return.html)  for details on how the Buyers create the returns.
+Buyers can return entire orders or individual sales order items as soon as they have been delivered to them. When returning, the Buyers can select select or enter a return reason. See [Shop Guide - Creating a Return](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/shop-guide-customer-account/shop-guide-returns-management/shop-guide-creating-a-return.html)  for details on how the Buyers create the returns.
 
 {% info_block warningBox "Note" %}
 
@@ -65,7 +65,7 @@ The [Product Bundles](/docs/scos/user/features/{{page.version}}/product-informat
 
 {% endinfo_block %}
 
-Once a return request has been submitted, it acquires the *Waiting for return* state. The return states change as the Back Office User [processes the return](/docs/scos/user/user-guides/202005.0/back-office-user-guide/sales/orders/managing-orders.html#creating-a-return). See [Return Items States](/docs/scos/user/user-guides/202005.0/back-office-user-guide/sales/returns/references/return-item-states-reference-information.html) for details on the return states.
+Once a return request has been submitted, it acquires the *Waiting for return* state. The return states change as the Back Office User [processes the return](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/orders/managing-orders.html#creating-a-return). See [Return Items States](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/returns/references/return-item-states-reference-information.html) for details on the return states.
 ![Create return](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Return+Management/Return+Management+Feature+Overview/create-return.png) 
 
 {% info_block infoBox "Info" %}
@@ -74,11 +74,11 @@ Next to each sales order item, there is the date till which the item can be retu
 
 {% endinfo_block %}
 
-All the returns created by the Buyer or by the Back Office User for the Buyer, are listed on the *Returns* page in the Customer Account. From here, the Buyer can [view the return details](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/references/return-details-reference-information.html) and [print the return slip](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/shop-guide-returns-management/shop-guide-printing-a-return-slip.html).
+All the returns created by the Buyer or by the Back Office User for the Buyer, are listed on the *Returns* page in the Customer Account. From here, the Buyer can [view the return details](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/shop-guide-customer-account/references/return-details-reference-information.html) and [print the return slip](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/shop-guide-customer-account/shop-guide-returns-management/shop-guide-printing-a-return-slip.html).
 ![Returns details](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Return+Management/Return+Management+Feature+Overview/return-details.png) 
 
 ## Return Management in the Back Office
-A Back Office User can create returns for the [returnable items](#returnable-items-and-a-return-policy) in the *Ordres* section of the Back Office. See [Back Office User Guide - Managing Orders](/docs/scos/user/user-guides/202005.0/back-office-user-guide/sales/orders/managing-orders.html) for details. Also, a Back Office user can view returns, change their states, print a return slip, and cancel the returns.  See [Back Office User Guide - Return Management](/docs/scos/user/user-guides/202005.0/back-office-user-guide/sales/returns/managing-returns.html)  for instructions on how to manage the returns in the Back Office.
+A Back Office User can create returns for the [returnable items](#returnable-items-and-a-return-policy) in the *Ordres* section of the Back Office. See [Back Office User Guide - Managing Orders](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/orders/managing-orders.html) for details. Also, a Back Office user can view returns, change their states, print a return slip, and cancel the returns.  See [Back Office User Guide - Return Management](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/returns/managing-returns.html)  for instructions on how to manage the returns in the Back Office.
 
 ## Current Constraints
 Currently, the feature has the following functional constraints which are going to be resolved in the future:

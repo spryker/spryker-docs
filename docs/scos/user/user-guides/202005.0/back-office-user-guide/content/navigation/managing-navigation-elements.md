@@ -27,7 +27,7 @@ To create a child node for a navigation element:
 
 1.     In the *List of navigation elements*, select the navigation element you want to create a child node for.
 2.     In the *Create child node* section:
-    1. Select the node **Type**. See [Navigation Node Types](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/navigation/references/navigation-reference-information.html#navigation-node-types) to learn about the node types.
+    1. Select the node **Type**. See [Navigation Node Types](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/navigation/references/navigation-reference-information.html#navigation-node-types) to learn about the node types.
     2. Enter the required fields per each locale.
     3. Select **Valid from** and **Valid to** dates.
     4. Select the **Active** checkbox if you want to activate the child node.
@@ -41,7 +41,7 @@ To create a child node for another navigation node:
 2.     In the *Navigation tree* section, select the navigation node you want to create a child node for.
 3.     In the *Edit node* section, click **Create child node**.
 4.     In the *Create child node* section:
-    1. Select the node **Type**. See [Navigation Node Types](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/navigation/references/navigation-reference-information.html#navigation-node-types) to learn about the node types.
+    1. Select the node **Type**. See [Navigation Node Types](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/navigation/references/navigation-reference-information.html#navigation-node-types) to learn about the node types.
     2. Enter the required fields per each locale.
     3. Select **Valid from** and **Valid to** dates.
     4. Select the **Active** checkbox if you want to activate the child node.
@@ -59,7 +59,7 @@ To edit a navigation node:
 1.     In the *List of navigation elements*, select the navigation element owning the navigation node you want to edit.
 2.     In the *Navigation tree* section, select the navigation node you want to edit.
 3.     In the *Edit node* section: 
-    1. Select the node **Type**. See [Navigation Node Types](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/navigation/references/navigation-reference-information.html#navigation-node-types) to learn about the node types.
+    1. Select the node **Type**. See [Navigation Node Types](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/navigation/references/navigation-reference-information.html#navigation-node-types) to learn about the node types.
     2. Enter the required fields per each locale.
     3. Select **Valid from** and **Valid to** dates.
     4. Select or clear the **Active** checkbox if you want to activate or deactivate the navigation node.
@@ -123,6 +123,6 @@ This takes you to the *Overview of Navigation Elements* page. You can see the me
 * In the *Navigation tree* section, filter the navigation nodes by entering a navigation node name in the search.
 
 **What's next?** 
-* To know more about the attributes used to manage navigation elements, see [Navigation: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/navigation/references/navigation-reference-information.html).
+* To know more about the attributes used to manage navigation elements, see [Navigation: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/navigation/references/navigation-reference-information.html).
 * For visual instructions on Navigation configuration, check the video:
 <iframe src="https://spryker.wistia.com/medias/2iepfhl6fu" title="How to configure Navigation" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>

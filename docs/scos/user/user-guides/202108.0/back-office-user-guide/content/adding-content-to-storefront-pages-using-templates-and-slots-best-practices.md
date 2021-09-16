@@ -43,7 +43,7 @@ If the content item types shipped by default are not sufficient for your project
 
 ## Create CMS blocks
 
-[CMS block](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/cms-blocks-overview.html) serves as the actual content that you insert into Storefront pages. 
+[CMS block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html) serves as the actual content that you insert into Storefront pages. 
 
 Follow the steps to create the CMS blocks with the needed content:
 
@@ -54,7 +54,7 @@ Follow the steps to create the CMS blocks with the needed content:
     *     Writing materials reference - *Category Banner-2*
     *     Sticky notes reference - *Category Banner-3*
 
-See [Creating a CMS Block](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/creating-a-cms-block.html) for more details.
+See [Creating a CMS Block](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/creating-cms-blocks.html) for more details.
 
 {% info_block warningBox "Activation" %}
 
@@ -85,7 +85,7 @@ See [Editing placeholders](/docs/scos/user/user-guides/{{page.version}}/back-off
  
 ## Select a template with slots
 
-[Template with slots](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/templates-and-slots-overview.html) defines the layout of slots on the Storefront pages you add the CMS blocks to.
+[Template with slots](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html) defines the layout of slots on the Storefront pages you add the CMS blocks to.
 
 Follow the steps to select a template with slots:
 
@@ -97,12 +97,12 @@ If the templates with slots shipped by default are not sufficient for your proje
 
 ## Select a slot
 
-[Slot](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/templates-and-slots-overview.html#slot) defines the Storefront page space you add the CMS blocks to.
+[Slot](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html#slot) defines the Storefront page space you add the CMS blocks to.
 
 In the **List of Slots for "Product" Template**, select the *Bottom* slot. This slot is located at the bottom of product pages. By selecting it, you select to work with this Storefront page space in all the product pages.
 
 
-If the slots shipped by default are not sufficient for your project needs, new ones can be created by a developer. See [Correlation](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/templates-and-slots-overview.html#correlation) for more details.
+If the slots shipped by default are not sufficient for your project needs, new ones can be created by a developer. See [Correlation](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html#correlation) for more details.
 
 ## Assign CMS blocks
 

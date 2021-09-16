@@ -20,10 +20,10 @@ Thresholds can be hard and soft, based on merchant relationships, applied global
 ***
 **What's next?**
 To know what thresholds you can set up and how you do that, see the following articles:
-* [Merchant Relationships](/docs/scos/user/user-guides/202009.0/back-office-user-guide/administration/thresholds/managing-merchant-order-thresholds.html)
-* [Global Threshold](/docs/scos/user/user-guides/202009.0/back-office-user-guide/administration/thresholds/managing-global-thresholds.html)
-* [Threshold Settings](/docs/scos/user/user-guides/202009.0/back-office-user-guide/administration/thresholds/managing-threshold-settings.html)
+* [Merchant Relationships](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/thresholds/managing-merchant-order-thresholds.html)
+* [Global Threshold](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/thresholds/managing-global-thresholds.html)
+* [Threshold Settings](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/thresholds/managing-threshold-settings.html)
 
 To know more about the attributes you use to manage the thresholds, see the following article:
-* [Threshold: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/administration/thresholds/references/reference-information-threshold.html)
+* [Threshold: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/thresholds/references/reference-information-threshold.html)
 

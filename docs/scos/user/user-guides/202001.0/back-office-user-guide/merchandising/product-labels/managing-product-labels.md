@@ -35,7 +35,7 @@ Products for the dynamic labels (like **New**, or **Discontinued**
 
 To edit a product label:
 1. Click **Edit** in the _Actions_ column of the **Overview of Product Labels** page. 
-2. On the **Edit Product Label** page, edit the values. See [Product Labels: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/product-labels/references/product-labels-reference-information.html).
+2. On the **Edit Product Label** page, edit the values. See [Product Labels: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/product-labels/references/product-labels-reference-information.html).
 3. Once done, click **Save**.
 ***
 ## Activating/Deactivating a Product Label
@@ -50,5 +50,5 @@ There are several ways to activate/deactivate a product label:
 * Activate/deactivate a label by selecting **Activate/Deactivate** in the _Actions_ column of the **Overview of Product Labels** page.
 ***
 **What's next?** 
-* Learn how to prioritize a label in the [Prioritizing Labels](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/product-labels/prioritizing-labels.html) topic.
-* To learn what attributes you enter and select while editing the product label, see the [Product Labels: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/product-labels/references/product-labels-reference-information.html) article.
+* Learn how to prioritize a label in the [Prioritizing Labels](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/product-labels/prioritizing-labels.html) topic.
+* To learn what attributes you enter and select while editing the product label, see the [Product Labels: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/product-labels/references/product-labels-reference-information.html) article.

@@ -119,7 +119,7 @@ If the shared cart has been dismissed individually by the user, this user will n
 {% endinfo_block %}
 
 ## Current Constraints
-With the current functionality, the shopping cart cannot be shared outside of a [Business Unit](/docs/scos/user/features/{{page.version}}/company-account-management/business-unit-management/business-units-management-feature-overview.html) where the owner belongs.
+With the current functionality, the shopping cart cannot be shared outside of a [Business Unit](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/business-units-overview.html) where the owner belongs.
 
 
 <!-- **See also:**

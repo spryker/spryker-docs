@@ -114,4 +114,4 @@ To add a quick order to a shopping cart, do the following:
 2. Click **Add to Shopping Cart**.
 ***
 **What's next?**
-* [Go to Checkout](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-checkout/shop-guide-checkout.html)
+* [Go to Checkout](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/shop-guide-checkout/shop-guide-checkout.html)

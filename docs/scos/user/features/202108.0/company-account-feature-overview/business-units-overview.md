@@ -87,4 +87,4 @@ Are you a developer? See [Company Account feature walkthrough](/docs/scos/dev/fe
 
 ## See next
 
-[Company user rules and permissions overview](/docs/scos/user/features/{{page.version}}/company-account/company-account-feature-overview/company-user-roles-and-permissions-overview.html)
+[Company user rules and permissions overview](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-user-roles-and-permissions-overview.html)

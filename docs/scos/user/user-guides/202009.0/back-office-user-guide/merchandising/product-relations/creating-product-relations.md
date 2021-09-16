@@ -15,7 +15,7 @@ To start working with product relations, go to **Merchandising** > **Product Rel
 1. On the *Product Relations* page, click **Create Product Relation** in the top right corner. The *Create Product Relation* page opens.
 2. In  the **General** section of the **Settings** tab, do the following:
     * Enter a **Product Relation Key**.
-    * Select a **Relation type**. See [Product Relations: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/product-relations/references/reference-information-product-relations.html) to learn about the relation types and see usage examples.
+    * Select a **Relation type**. See [Product Relations: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-relations/references/reference-information-product-relations.html) to learn about the relation types and see usage examples.
     * Select **Update regularly** for the related products to be updated automatically on a regular basis according to the product relation's rules.
     * Select the **Is active** checkbox to activate the product relation (to make it visible on the Storefront).
 3. In the **Product owning the relation** section, click **Select** next to the products you want to create a product relation with.
@@ -24,7 +24,7 @@ To start working with product relations, go to **Merchandising** > **Product Rel
 
 5. Switch to the **Products** tab or click **Next**.
 
-6. Click **Add rule** or **Add group**, depending on the conditions you want to specify. See  [Product Relations: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/product-relations/references/reference-information-product-relations.html) and [Related Product Rules](/docs/scos/user/features/{{page.version}}/product-relations/product-relations-feature-overview.html#related-product-rules)  to learn more about rules and groups.
+6. Click **Add rule** or **Add group**, depending on the conditions you want to specify. See  [Product Relations: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-relations/references/reference-information-product-relations.html) and [Related Product Rules](/docs/scos/user/features/{{page.version}}/product-relations/product-relations-feature-overview.html#related-product-rules)  to learn more about rules and groups.
 
 7. For the rule/group, select the operator:
     * **AND**—the selected products are displayed if all the specified conditions are fulfilled
@@ -51,6 +51,6 @@ Make sure to click **Save** before clicking **List of product relations** or goi
 ***
 **What's next?**
 
-* To learn more about how to edit, view, or delete a product relation, see [Managing Product Relations](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/product-relations/managing-product-relations.html).
+* To learn more about how to edit, view, or delete a product relation, see [Managing Product Relations](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-relations/managing-product-relations.html).
 
-* To know more about the attributes you select and enter while creating a product relation, see [Product Relations: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/product-relations/references/reference-information-product-relations.html).
+* To know more about the attributes you select and enter while creating a product relation, see [Product Relations: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-relations/references/reference-information-product-relations.html).

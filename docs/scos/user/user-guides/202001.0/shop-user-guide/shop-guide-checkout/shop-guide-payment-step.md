@@ -25,6 +25,6 @@ To select a payment method:
 **What's next?**
 
 The delivery addresses, shipment and payment methods are selected. To check the order details and complete the order, go to the **Summary** page. 
-For more information, see [Shop Guide - Summary Step](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-checkout/shop-guide-summary-step.html).
+For more information, see [Shop Guide - Summary Step](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/shop-guide-checkout/shop-guide-summary-step.html).
 
 <!-- Last review date: Sep 24, 2019 -->

@@ -33,6 +33,6 @@ To select a shipment method:
 
 The delivery addresses are added and shipment methods along with the delivery dates are selected. Now, you can go to the next step to select a payment method.
 
-To learn more on how to proceed with the payment, see [Shop Guide - Payment Step](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-checkout/shop-guide-payment-step.html)
+To learn more on how to proceed with the payment, see [Shop Guide - Payment Step](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/shop-guide-checkout/shop-guide-payment-step.html)
 
 <!-- Last review date: Sep 24, 2019 -->

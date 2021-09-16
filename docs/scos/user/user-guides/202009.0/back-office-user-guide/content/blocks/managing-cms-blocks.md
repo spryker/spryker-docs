@@ -12,7 +12,7 @@ This topic describes how to manage CMS blocks.
 
 {% info_block infoBox "Info" %}
 
-If you want to manage a CMS block for [email](https://documentation.spryker.com/v6/docs/email-as-a-cms-block-overview), see [Managing content of emails via CMS blocks](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/blocks/managing-content-of-emails-via-cms-blocks.html).
+If you want to manage a CMS block for [email](https://documentation.spryker.com/v6/docs/email-as-a-cms-block-overview), see [Managing content of emails via CMS blocks](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/managing-content-of-emails-via-cms-blocks.html).
 
 {% endinfo_block %}
 
@@ -59,7 +59,7 @@ The following table describes the attributes you see when viewing a CMS block.
 To edit a placeholder:
 
 1. On the *Overview of CMS Blocks* page in the _Actions_ column, click *Edit Placeholder* next to the block you want to update.
-2. On the *Edit Block Glossary: Block ID* page, you can update a title or content of the CMS block, as well as insert a content item widget. See [Adding content item widgets to a block](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/content-items/adding-content-items-to-cms-pages-and-blocks.html#adding-content-item-widgets-to-blocks) for more details.
+2. On the *Edit Block Glossary: Block ID* page, you can update a title or content of the CMS block, as well as insert a content item widget. See [Adding content item widgets to a block](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/adding-content-items-to-cms-pages-and-blocks.html#adding-content-item-widgets-to-blocks) for more details.
 3. To save the updates, click **Save**. The updated block will be displayed on the grid of List of CMS Blocks.
 
 **Tips & tricks**
@@ -95,7 +95,7 @@ To edit a CMS block:
 
 {% info_block infoBox %}
 
-See [CMS Blocks: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/blocks/references/reference-information-cms-block.html)  for more details.
+See [CMS Blocks: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/references/reference-information-cms-block.html)  for more details.
 
 {% endinfo_block %}
 

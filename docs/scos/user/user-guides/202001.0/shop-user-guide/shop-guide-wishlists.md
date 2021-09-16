@@ -64,4 +64,4 @@ You can also create a wishlist from the product detail page when adding a produc
 ***
 **What’s next?**
 
-If you have added the products to the cart, you can proceed to the checkout. For more information on how to place the order, see [Shop Guide - Checkout](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-checkout/shop-guide-checkout.html#shop-guide---checkout).
+If you have added the products to the cart, you can proceed to the checkout. For more information on how to place the order, see [Shop Guide - Checkout](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/shop-guide-checkout/shop-guide-checkout.html#shop-guide---checkout).

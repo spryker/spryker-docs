@@ -23,10 +23,10 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 <details open>
 <summary>B2B feature list</summary>
 
-[**Company Account Management**](/docs/scos/user/features/{{page.version}}/company-account/company-account.html):
+[**Company Account Management**](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-account-feature-overview.html):
 
-* [Company Account Overview](/docs/scos/user/features/{{page.version}}/company-account/company-account.html-overview)
-* [Company User Roles and Permissions](/docs/scos/user/features/{{page.version}}/company-account/company-account-feature-overview/company-user-roles-and-permissions-overview.html)
+* [Company Account Overview](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-account-feature-overview.html-overview)
+* [Company User Roles and Permissions](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-user-roles-and-permissions-overview.html)
 * [Business Units Management](https://documentation.spryker.com/2021080/docs/business-unit-management)
 * [Agent Assist](https://documentation.spryker.com/2021080/docs/agent-assist)
 * [Content Restrictions](https://documentation.spryker.com/2021080/docs/customer-access)
@@ -61,7 +61,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 * [Approval Process](https://documentation.spryker.com/2021080/docs/approval-process)
 * [Quotation & Offer Management](/docs/scos/user/features/{{page.version}}/quotation-process/quotation-process.html)
 * [Punch Out](https://documentation.spryker.com/2021080/docs/punchout-201907)
-* [Customer Login by Token](/docs/scos/user/features/{{page.version}}/company-account/company-account-feature-overview/customer-login-by-token-overview.html)
+* [Customer Login by Token](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/customer-login-by-token-overview.html)
 <br>
 </details>
 

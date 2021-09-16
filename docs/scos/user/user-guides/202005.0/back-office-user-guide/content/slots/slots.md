@@ -8,7 +8,7 @@ redirect_from:
   - /v5/docs/en/slots
 ---
 
-Slots are used to embed content into pages to which [templates with slots](/docs/scos/user/features/{{page.version}}/cms/templates-and-slots/templates-and-slots-feature-overview.html) are applied.
+Slots are used to embed content into pages to which [templates with slots](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html) are applied.
 
 In the Slots page, you can:
 
@@ -33,6 +33,6 @@ You can work with slots after the [Templates & Slots feature has been integrated
 ***
 **What's next?**
 
-* To learn how to add content to Storefront pages using Templates & Slots, see [Adding Content to Storefront Pages Using Templates & Slots](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/adding-content-to-storefront-pages-using-templates-and-slots.html).
-* To learn how to activate or deactivate slots, assign CMS blocks to a slot, change the order of CMS blocks assigned to a slot, delete an assignment or select the pages in which a CMS block is displayed, see [Managing Slots](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/slots/managing-slots.html). 
-* To learn about the attributes you can see in the **Slots** section, see the [Slots: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/slots/references/slots-reference-information.html) section. 
+* To learn how to add content to Storefront pages using Templates & Slots, see [Adding Content to Storefront Pages Using Templates & Slots](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/adding-content-to-storefront-pages-using-templates-and-slots.html).
+* To learn how to activate or deactivate slots, assign CMS blocks to a slot, change the order of CMS blocks assigned to a slot, delete an assignment or select the pages in which a CMS block is displayed, see [Managing Slots](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/slots/managing-slots.html). 
+* To learn about the attributes you can see in the **Slots** section, see the [Slots: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/slots/references/slots-reference-information.html) section. 

@@ -52,4 +52,4 @@ When you select the **View in Shop** option, keep the following in mind:
 * The relation you want to view in the online store must be active. If inactive, you will be redirected to the PDP, but there will be no **Similar products** section for the abstract product. The same applies to upselling.
 ***
 **What's next?**
-To learn about the attributes that you select and enter while managing product relations, see [Product Relations: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/product-relations/references/product-relations-reference-information.html).
+To learn about the attributes that you select and enter while managing product relations, see [Product Relations: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/product-relations/references/product-relations-reference-information.html).

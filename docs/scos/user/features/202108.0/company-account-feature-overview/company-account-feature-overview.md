@@ -38,10 +38,10 @@ Setting up company users and roles:
 
 |BACK OFFICE USER GUIDES|
 |---|
-|  [Get a general idea of Company Accounts](/docs/scos/user/features/{{page.version}}/company-account/company-account-feature-overview/company-accounts-overview.html)  |
-|  [Get a general idea of Business Units](/docs/scos/user/features/{{page.version}}/company-account/company-account-feature-overview/business-units-overview.html)  |
-|  [Get a general idea of Business on Behalf](/docs/scos/user/features/{{page.version}}/company-account/company-account-feature-overview/business-on-behalf-overview.html)  |
-|  [Get a general idea of company user roles and permissions](/docs/scos/user/features/{{page.version}}/company-account/company-account-feature-overview/company-user-roles-and-permissions-overview.html)  |
+|  [Get a general idea of Company Accounts](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html)  |
+|  [Get a general idea of Business Units](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/business-units-overview.html)  |
+|  [Get a general idea of Business on Behalf](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/business-on-behalf-overview.html)  |
+|  [Get a general idea of company user roles and permissions](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-user-roles-and-permissions-overview.html)  |
 
 
 {% info_block warningBox "Developer guides" %}

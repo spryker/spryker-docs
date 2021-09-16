@@ -16,9 +16,9 @@ The primary uses of categories are to develop dynamic category pages and enhance
  ***
  **What's Next?**
  To know how the categories are created and managed, see the following articles:
-* [Creating Categories](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/category/creating-categories.html)
-*  [Assigning Products to Categories](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/category/assigning-products-to-categories.html)
-*  [Managing Categories](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/category/managing-categories.html)
+* [Creating Categories](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/creating-categories.html)
+*  [Assigning Products to Categories](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/assigning-products-to-categories.html)
+*  [Managing Categories](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/managing-categories.html)
  
 To know more about the attributes you use to create and manage the categories, see the following article:
-* [Category: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/category/references/category-reference-information.html)
+* [Category: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/references/category-reference-information.html)

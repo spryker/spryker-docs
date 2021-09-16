@@ -19,16 +19,16 @@ To create a merchant relation:
 1. On the **Overview of Merchant relation** page, click **Add Merchant relation** in the top right corner.
 2. On the **Create Merchant Relation** page, select the merchant in the **Merchant** drop-down list.
 3. In the **Company** drop-down list, select the company with which you build the merchant relation, and click **Confirm**.
-4. Select the business unit owner based on the company you selected and assigned business unit(s) based on the business unit owner. 
+4. Select the business unit owner based on the company you selected and assigned business unit(s) based on the business unit owner.
 5. Once done, click **Save**.
 
-The merchant is created and can be used to create merchant specific prices (see [Creating an Abstract Product](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/products/abstract-products/creating-an-abstract-product.html) and [Creating a Product Variant](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/products/concrete-products/creating-a-product-variant.html) to know more). As well as they can be used to create merchant relationship thresholds (see [Managing Merchant Relationships Thresholds](/docs/scos/user/user-guides/202005.0/back-office-user-guide/administration/thresholds/merchant-relationships/managing-merchant-relationships-thresholds.html) for more details).
+The merchant is created and can be used to create merchant specific prices (see [Creating an Abstract Product](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html) and [Creating a Product Variant](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/concrete-products/creating-product-variants.html) to know more). As well as they can be used to create merchant relationship thresholds (see [Managing Merchant Relationships Thresholds](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/thresholds/managing-merchant-order-thresholds.html) for more details).
 
 ## Sorting the Merchant Relation Table
 You can sort the table of merchant relations based on the company for which the merchant relation has been created.
 
 To sort the **List of Merchant relations** table, select a specific company in the **Company** drop-down list that is above the table.
-![Sorting merchant relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Merchants/Merchant+and+Merchant+Relations/Managing+Merchant+Relations/sorting-merchant-relations.png) 
+![Sorting merchant relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Merchants/Merchant+and+Merchant+Relations/Managing+Merchant+Relations/sorting-merchant-relations.png)
 
 Once the company is selected, the table is sorted to display only the merchant relations that are created with this specific company assigned.
 
@@ -40,4 +40,3 @@ To edit a merchant relation:
 
 ## Deleting a Merchant Relation
 To delete a merchant relation, click **Delete** in the _Actions_ column for a specific merchant relation on the **Overview of Merchant Relation** page.
-

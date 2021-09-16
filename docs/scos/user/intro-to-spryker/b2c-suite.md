@@ -64,11 +64,11 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 * [Landing Pages](https://documentation.spryker.com/2021080/docs/seo)
 * [URL Redirects](/docs/scos/user/features/{{page.version}}/spryker-core/spryker-core-feature-overview/url-redirects-overview.html)
 
-[**CMS (Content Management System)**](/docs/scos/user/features/{{page.version}}/cms/cms.html):
+[**CMS (Content Management System)**](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-feature-overview.html):
 
-* [CMS Templates & Slots](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/templates-and-slots-overview.html)
-* [CMS Blocks](/docs/scos/user/features/{{page.version}}/cms/cms.html-block)
-* [CMS Pages](/docs/scos/user/features/{{page.version}}/cms/cms.html-page)
+* [CMS Templates & Slots](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html)
+* [CMS Blocks](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-feature-overview.html-block)
+* [CMS Pages](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-feature-overview.html-page)
 * [Content Items](https://documentation.spryker.com/2021080/docs/content-items)
 
 [**Media Management**](/docs/scos/user/features/{{page.version}}/file-manager/file-manager.html):
@@ -108,7 +108,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 
 * [Cart Functionality & Calculations](/docs/scos/user/features/{{site.ersion}}/cart-feature-overview/cart-feature-overview.html)
 * [Discounts](/docs/scos/user/features/{{page.version}}/promotions-and-discounts/promotions-and-discounts-feature-overview.html)
-* [Order Thresholds](/docs/scos/user/features/{{page.version}}/checkout/checkout-feature-overview/order-thresholds.html)
+* [Order Thresholds](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html)
 
 [**Shipment**](https://documentation.spryker.com/2021080/docs/shipment):
 
@@ -126,9 +126,9 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 [**Gift Cards**](https://documentation.spryker.com/2021080/docs/gift-card):
 [Gift Cards Purchase & Management](https://documentation.spryker.com/2021080/docs/gift-card-purchase-management-201907)
 
-[**Checkout**](/docs/scos/user/features/{{page.version}}/checkout/checkout.html):
+[**Checkout**](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/checkout-feature-overview.html):
 
-* [Multi-Step Checkout](/docs/scos/user/features/{{page.version}}/checkout/checkout-feature-overview/multi-step-checkout.html)
+* [Multi-Step Checkout](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html)
 * [Define Shipment Methods](/docs/scos/user/features/{{page.version}}/shipment/shipment.html)
 
 [**Ratings & Review**](https://documentation.spryker.com/2021080/docs/rating-reviews):

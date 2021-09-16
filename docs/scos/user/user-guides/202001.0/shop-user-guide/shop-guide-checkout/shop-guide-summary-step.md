@@ -45,7 +45,7 @@ In this section, you can do the following:
 * Add a tag to the comment so that in future you can filter comments by tags
 
 {% info_block infoBox %}
-See [Shop Guide - Managing Comments](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-comments/shop-guide-managing-comments.html
+See [Shop Guide - Managing Comments](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/shop-guide-comments/shop-guide-managing-comments.html
 {% endinfo_block %} for more information on how to work with comments in cart.)
 ***
 ## Placing Order

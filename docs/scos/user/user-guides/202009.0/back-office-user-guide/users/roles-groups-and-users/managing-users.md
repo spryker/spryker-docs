@@ -21,7 +21,7 @@ You can do the following:
 
 ## Creating users
 
-You have already done the primary setup (you have created a [role](/docs/scos/user/user-guides/202009.0/back-office-user-guide/users/roles-groups-and-users/managing-roles.html) and [group](/docs/scos/user/user-guides/202009.0/back-office-user-guide/users/roles-groups-and-users/managing-groups.html)), so now it is time to add an actual user record to the system.
+You have already done the primary setup (you have created a [role](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users/roles-groups-and-users/managing-roles.html) and [group](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users/roles-groups-and-users/managing-groups.html)), so now it is time to add an actual user record to the system.
 
 **To create a user record**:
 1. Click **Add New User** in the top right corner of the **User** page.
@@ -47,7 +47,7 @@ There is a way to initiate a create-new-user flow while editing a user record. T
 
 
 ## Assigning customers to users
-The *Assign Customers* option is used to assign store customers' records to the Back office user records. This is done to enable the Back Office user to preview the CMS Pages in the online store (see [CMS Pages](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/pages/managing-cms-pages.html#previewing-cms-pages) set of topics).
+The *Assign Customers* option is used to assign store customers' records to the Back office user records. This is done to enable the Back Office user to preview the CMS Pages in the online store (see [CMS Pages](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/managing-cms-pages.html#previewing-cms-pages) set of topics).
 
 **To assign a customer**:
 1. Navigate to the **Users** page.
@@ -68,7 +68,7 @@ To de-assign a customer:
 
 ## Editing a user
 **To edit a user:**
-1. In **Users List > Action** column, click **Edit**  if you want to change user's details. See [User: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/users/roles-groups-and-users/references/reference-information-user.html) for  more details.
+1. In **Users List > Action** column, click **Edit**  if you want to change user's details. See [User: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users/roles-groups-and-users/references/reference-information-user.html) for  more details.
 2. When the updates are done, click **Update**.
 
 ## Activating and deactivating a user

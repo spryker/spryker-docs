@@ -48,7 +48,7 @@ In the *List of Slots for [name] Template* section, you see the following:
 
 ## Assigning CMS blocks to slots
 
-You can assign CMS blocks to a slot selected in *List of Slots for [Name] Template*. The content of assigned CMS blocks is displayed on the corresponding Storefront page(s). If there are no CMS blocks with content that you can assign, see [Creating a CMS block](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/creating-a-cms-block.html).
+You can assign CMS blocks to a slot selected in *List of Slots for [Name] Template*. The content of assigned CMS blocks is displayed on the corresponding Storefront page(s). If there are no CMS blocks with content that you can assign, see [Creating a CMS block](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/creating-cms-blocks.html).
 
 To assign a CMS block to a slot:
 
@@ -122,7 +122,7 @@ In the *List of Blocks for [Name] Slot* section, you see the following:
 
 {% info_block infoBox "Info" %}
 
-Apart from the **ID** and **Actions**, the attributes described below depend on the CMS block settings defined in **Content** > **Blocks**. To learn about them, see reference information on the [Creating a CMS block](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/creating-a-cms-block.html) page.
+Apart from the **ID** and **Actions**, the attributes described below depend on the CMS block settings defined in **Content** > **Blocks**. To learn about them, see reference information on the [Creating a CMS block](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/creating-cms-blocks.html) page.
 
 {% endinfo_block %}
 
@@ -161,7 +161,7 @@ If there is only one CMS block assigned to a slot, Move Up and Move Down actions
 ## Viewing CMS blocks
 To view a CMS block, click **View Block** in the *Actions* column in the *List of Blocks for [Name] Slot* section.
 
-To learn about attributes on this page, see [Creating a CMS block](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/creating-a-cms-block.html).
+To learn about attributes on this page, see [Creating a CMS block](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/creating-cms-blocks.html).
 
 ## Deleting CMS block assignments
 You can delete the assignment of a CMS block to a slot removing its content from the corresponding Storefront page.

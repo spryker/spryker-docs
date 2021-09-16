@@ -20,8 +20,8 @@ The primary uses of scheduled prices are to automate price changes and enable Ba
 
 To learn how to create and manage scheduled prices, see the following articles:
 
-*     [Creating Scheduled Prices](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/scheduled-prices/creating-scheduled-prices.html)
-*     [Managing Scheduled Prices](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/scheduled-prices/managing-scheduled-prices.html)
+*     [Creating Scheduled Prices](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/scheduled-prices/creating-scheduled-prices.html)
+*     [Managing Scheduled Prices](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/scheduled-prices/managing-scheduled-prices.html)
 
-To learn about the attributes you use to manage scheduled prices, see [Scheduled Prices: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/scheduled-prices/references/scheduled-prices-reference-information.html)
+To learn about the attributes you use to manage scheduled prices, see [Scheduled Prices: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/scheduled-prices/references/scheduled-prices-reference-information.html)
 

@@ -65,7 +65,7 @@ This will take you to the Cart page where you can proceed to the checkout. For i
 ## Sorting and Filtering Orders (B2B Shop)
 When there is a long list of orders in the Customer account, it is always a good idea to filter the orders using various parameters. To **filter the orders**:
 
-1. In the **Search** drop-down menu select one of the provided filter parameters. See [Orders: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/sales/orders/references/orders-reference-information.html) to learn more about the filter parameters.
+1. In the **Search** drop-down menu select one of the provided filter parameters. See [Orders: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/orders/references/orders-reference-information.html) to learn more about the filter parameters.
 
 2. Depending on the selection from step #1, enter the search query in the next to the **Search** drop-down field.
 

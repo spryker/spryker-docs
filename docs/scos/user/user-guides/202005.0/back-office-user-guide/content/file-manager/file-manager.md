@@ -17,5 +17,5 @@ In the File Manager section, a Marketing Content Manager can do the following:
 * review the files available in the system
 ***
 To know more about the procedures that you need to follow to work in a File Manager section, see the following articles:
-* [Managing File Tree](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/file-manager/managing-file-tree.html)
-* [Managing File List](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/file-manager/managing-file-list.html)
+* [Managing File Tree](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/file-manager/managing-file-tree.html)
+* [Managing File List](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/file-manager/managing-file-list.html)

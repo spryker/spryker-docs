@@ -64,5 +64,5 @@ While editing the existing product list, click **Remove List** in the top right 
 **What's next?**
 Now you know how to manage the products lists that already exist in the shop.
 
-Review [Product Lists: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/product-lists/references/product-lists-reference-information.html) to learn about the attributes you see, select, and enter while managing a product list.
+Review [Product Lists: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-lists/references/product-lists-reference-information.html) to learn about the attributes you see, select, and enter while managing a product list.
 

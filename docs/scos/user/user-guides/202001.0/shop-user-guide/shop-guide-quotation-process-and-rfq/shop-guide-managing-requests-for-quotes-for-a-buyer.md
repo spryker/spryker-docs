@@ -16,10 +16,10 @@ This topic describes the procedure for managing the Request for Quotes (RFQs) fr
 
 You can do this all from the Quote Request page. You will be taken to this page when you:
 
-* Initially create an RFQ from the Cart page. See [Creating an RFQ (Buyer)](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-quotation-process-and-rfq/shop-guide-creating-a-request-for-quote.html) for more information.
+* Initially create an RFQ from the Cart page. See [Creating an RFQ (Buyer)](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/shop-guide-quotation-process-and-rfq/shop-guide-creating-a-request-for-quote.html) for more information.
 * Open a Quote Request which is in the *Draft* status in the **Customer Account → Quote Request**.
 
-See [Reference Information](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-quotation-process-and-rfq/shop-guide-request-for-quote-reference-information.html) for details on components the Quote Request page consists of.
+See [Reference Information](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/shop-guide-quotation-process-and-rfq/shop-guide-request-for-quote-reference-information.html) for details on components the Quote Request page consists of.
 ***
 ## Sending an RFQ to a Sales Representative
 
@@ -38,7 +38,7 @@ Once a Sales Representative has prepared a price suggestion and sent it to you, 
 
 To convert an RFQ to cart, on the **Quote Request** page for the RFQ that is in the status Ready, click **Convert to Cart**.
 
-From now on, you can continue to [Checkout](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-checkout/shop-guide-checkout.html).
+From now on, you can continue to [Checkout](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/shop-guide-checkout/shop-guide-checkout.html).
 
 To request an even better price, you need to revise the RFQ.
 ***

@@ -14,4 +14,4 @@ This section is used to provide analytical data to management so that they can b
 This section was designed as a reference location. Thus, no actual actions can be performed there. This is utilized as a quick overview of basic order-related statistics.
 ***
 **What's next?**
-To know more about the charts that are presented in the Dashboard section, see [Dashboard: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/dashboard/references/dashboard-reference-information.html).
+To know more about the charts that are presented in the Dashboard section, see [Dashboard: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/dashboard/references/dashboard-reference-information.html).

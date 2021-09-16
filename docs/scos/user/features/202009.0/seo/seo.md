@@ -22,8 +22,8 @@ redirect_from:
 
 Improve the search engine ranking of your store and let potential customers find your store quickly. The powerful SEO features enable you to add customized meta information to all your content and create search engine friendly URLs:
 
-* *Meta tags*: [Add textual meta information to CMS content](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/pages/creating-a-cms-page.html#creating-a-cms-page) such as titles, keywords and descriptions to boost SEO ranking. All meta information can be translated into your specified languages.
-* *Landing pages*: [Create landing pages](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/pages/creating-a-cms-page.html#creating-a-cms-page) for marketing campaigns, product promotions, categories or other purposes and add SEO relevant information to boost search ranking. Create individual and SEO friendly URLs per landing page to increase your online shop’s credibility and search engine ranking.
+* *Meta tags*: [Add textual meta information to CMS content](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/creating-cms-pages.html#creating-a-cms-page) such as titles, keywords and descriptions to boost SEO ranking. All meta information can be translated into your specified languages.
+* *Landing pages*: [Create landing pages](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/creating-cms-pages.html#creating-a-cms-page) for marketing campaigns, product promotions, categories or other purposes and add SEO relevant information to boost search ranking. Create individual and SEO friendly URLs per landing page to increase your online shop’s credibility and search engine ranking.
 * *Friendly URLs*: Create SEO friendly URLs per page to increase your online shop's credibility and search engine ranking.
 * *Basic SEO techniques*: [Use the basic SEO techniques](/docs/scos/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html), such as headings and microdata.
 

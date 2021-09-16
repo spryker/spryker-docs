@@ -15,7 +15,7 @@ To start working with the Warehouses, navigate to the **Administration > Warehou
 To create a warehouse:
 
 1. On the **Warehouses** page, click **Create Warehouse** in the top right corner.
-The **Create warehouse** page with two tabs opens - **Configuration** and **Store relation**. See [Warehouses: Reference information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/administration/warehouses/references/warehouses-reference-information.html) for more details.
+The **Create warehouse** page with two tabs opens - **Configuration** and **Store relation**. See [Warehouses: Reference information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/warehouses/references/warehouses-reference-information.html) for more details.
 2. In the **Configuration** tab, do the following:
     * **Name**: Enter the name of the warehouse you want to create.
     * **Is this warehouse available?**: Select *Yes* if you want to make your warehouse available (active) or *No* if you want to make your warehouse unavailable (inactive).
@@ -31,10 +31,10 @@ Keep in mind that if you clear all checkboxes for stores assigned to a specific 
 ***
 **What's next?**
 
-The warehouse has been created. You can start working with it when creating or editing a concrete product. For more details, see [Creating a Product Variant](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/products/concrete-products/creating-a-product-variant.html).
+The warehouse has been created. You can start working with it when creating or editing a concrete product. For more details, see [Creating a Product Variant](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/concrete-products/creating-product-variants.html).
 
-Additionally, you can edit any warehouse if needed. For more details, see the [Editing Warehouse Details](/docs/scos/user/user-guides/202001.0/back-office-user-guide/administration/warehouses/managing-warehouses.html#editing-warehouse-details) section in *Managing Warehouses*.
+Additionally, you can edit any warehouse if needed. For more details, see the [Editing Warehouse Details](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/warehouses/managing-warehouses.html#editing-warehouse-details) section in *Managing Warehouses*.
 
-To learn more about the attributes you view or edit while creating or managing the warehouses, see [Warehouses: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/administration/warehouses/references/warehouses-reference-information.html).
+To learn more about the attributes you view or edit while creating or managing the warehouses, see [Warehouses: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/warehouses/references/warehouses-reference-information.html).
 
-To learn how to manage stock per specific warehouse, see [Managing Product Availability](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/availability/managing-products-availability.html).
+To learn how to manage stock per specific warehouse, see [Managing Product Availability](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/availability/managing-products-availability.html).

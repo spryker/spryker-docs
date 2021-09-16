@@ -52,5 +52,5 @@ To add a scheduled price to an abstract product:
 
 You can add multiple scheduled prices for the same abstract product. Repeat the steps in [Add a scheduled price for an abstract product](#add-a-scheduled-price-for-an-abstract-product) until you add the desired number of scheduled prices. 
 
-If you want to add more than five scheduled prices, it might be quicker to [import the scheduled prices](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/scheduled-prices/creating-scheduled-prices.html).
+If you want to add more than five scheduled prices, it might be quicker to [import the scheduled prices](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/scheduled-prices/creating-scheduled-prices.html).
 

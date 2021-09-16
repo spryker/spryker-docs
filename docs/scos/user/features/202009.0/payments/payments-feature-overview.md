@@ -23,22 +23,22 @@ The Spryker Commerce OS offers integrations with several payment providers that 
 
 The Spryker Commerce OS supports integration of the following payment providers, which are our official partners:
 
-* [Adyen](/docs/scos/dev/technology-partners/202009.0/payment-partners/adyen/adyen.html)
-* [AfterPay](/docs/scos/dev/technology-partners/202009.0/payment-partners/afterpay/afterpay.html)
-* [Amazon Pay](/docs/scos/dev/technology-partners/202009.0/payment-partners/amazon-pay/amazon-pay.html)
-* [Arvato](/docs/scos/dev/technology-partners/202009.0/payment-partners/arvato/arvato.html)
-* [Billie](/docs/scos/dev/technology-partners/202009.0/payment-partners/billie.html)
-* [Billpay](/docs/scos/dev/technology-partners/202009.0/payment-partners/billpay/billpay.html)
-* [Braintree](/docs/scos/dev/technology-partners/202009.0/payment-partners/braintree/braintree.html)
-* [BS Payone](/docs/scos/dev/technology-partners/202009.0/payment-partners/bs-payone/bs-payone.html)
-* [Computop](/docs/scos/dev/technology-partners/202009.0/payment-partners/computop/computop.html)
-* [CrefoPay](/docs/scos/dev/technology-partners/202009.0/payment-partners/crefopay/crefopay.html)
-* [Heidelpay](/docs/scos/dev/technology-partners/202009.0/payment-partners/heidelpay/heidelpay.html)
-* [Klarna](/docs/scos/dev/technology-partners/202009.0/payment-partners/klarna/klarna.html)
-* [Payolution](/docs/scos/dev/technology-partners/202009.0/payment-partners/payolution/payolution.html)
-* [Powerpay](/docs/scos/dev/technology-partners/202009.0/payment-partners/powerpay.html)
-* [Ratenkauf by Easycredit](/docs/scos/dev/technology-partners/202009.0/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html)
-* [RatePay](/docs/scos/dev/technology-partners/202009.0/payment-partners/ratepay/ratepay.html)
+* [Adyen](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/adyen/adyen.html)
+* [AfterPay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/afterpay/afterpay.html)
+* [Amazon Pay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/amazon-pay/amazon-pay.html)
+* [Arvato](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/arvato/arvato.html)
+* [Billie](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/billie.html)
+* [Billpay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/billpay/billpay.html)
+* [Braintree](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/braintree/braintree.html)
+* [BS Payone](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/bs-payone/bs-payone.html)
+* [Computop](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop.html)
+* [CrefoPay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/crefopay/crefopay.html)
+* [Heidelpay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/heidelpay/heidelpay.html)
+* [Klarna](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/klarna/klarna.html)
+* [Payolution](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/payolution/payolution.html)
+* [Powerpay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/powerpay.html)
+* [Ratenkauf by Easycredit](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html)
+* [RatePay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/ratepay/ratepay.html)
 
 ## Dummy payment
 By default, Spryker provides the [DummyPayment](https://github.com/spryker/dummy-payment) module, which has Credit Card and Invoice payments implemented. You can use these implemented payment methods, or refer to the DummyPayment modulewhen implementing additional payment methods in your project.
@@ -53,7 +53,7 @@ Keep in mind that prior to managing payment methods in the Back Office, first, y
 
 ![List of payment methods](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Payment/Payment+Methods+Overview/payment-methods-list.png)
 
-See [Managing Payment Methods](/docs/scos/user/user-guides/202009.0/back-office-user-guide/administration/payment-methods/managing-payment-methods.html) to learn more on how to make a payment method available during the checkout and assign it to different stores.
+See [Managing Payment Methods](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/payment-methods/managing-payment-methods.html) to learn more on how to make a payment method available during the checkout and assign it to different stores.
 
 
 

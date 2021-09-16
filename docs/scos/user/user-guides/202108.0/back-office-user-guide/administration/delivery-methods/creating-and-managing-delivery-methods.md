@@ -10,14 +10,14 @@ redirect_from:
   - /docs/en/creating-and-managing-shipment-methods
 ---
 
-This topic describes how to create and manage shipment methods. 
+This topic describes how to create and manage shipment methods.
 
 
 ## Prerequisites
 
 To start working with the delivery methods, go to **Administration** > **Delivery Methods**.
 
-Once you decide to add a new shipment method, make sure that you have a carrier company to assign a shipment method on the list of delivery methods. If you don't have an appropriate carrier, see [Creating a carrier company](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/delivery-methods/creating-a-carrier-company.html). You also need to make sure that you have an appropriate tax set in the **Taxes** > **Tax Sets** section, see [Taxes](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html).
+Once you decide to add a new shipment method, make sure that you have a carrier company to assign a shipment method on the list of delivery methods. If you don't have an appropriate carrier, see [Creating a carrier company](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/delivery-methods/creating-carrier-companies.html). You also need to make sure that you have an appropriate tax set in the **Taxes** > **Tax Sets** section, see [Taxes](/docs/scos/user/features/{{page.version}}/tax/tax.html).
 
 Review the reference information before you start, or just look up the necessary information as you go through the process.
 
@@ -33,7 +33,7 @@ To create a new delivery method:
 2. In the *Configuration* tab, enter and select the following attributes:
     * Delivery Method Key
     * Name
-    
+
     {% info_block warningBox "Note" %}
 Keep in mind that it will be visible on the Storefront.
 {% endinfo_block %}
@@ -44,7 +44,7 @@ Keep in mind that it will be visible on the Storefront.
 Regardless if you have multi-currency prices with multiple price modes or just one simple static price (older versions
 {% endinfo_block %}, the price plugin has priority over those prices and allows you to customize and apply logic over delivery price calculation.)
     * Delivery Time Plugin
-    
+
     {% info_block warningBox "Note" %}
 The fields marked with * are required.
 {% endinfo_block %}
@@ -61,7 +61,7 @@ The fields marked with * are required.
 
 6. To keep the changes, click **Save**. This redirects you to the *Delivery Methods* page, where you can see the new delivery method on the list and the following message: '*Shipment method has been successfully saved*'.
 
-### Reference information: Creating delivery methods 
+### Reference information: Creating delivery methods
 
 The following table describes the attributes you see, select, or enter while viewing or editing delivery methods.
 
@@ -83,7 +83,7 @@ To update the values, you have entered during the delivery method creation:
     {% info_block warningBox "Note" %}
 Keep in mind that **Delivery Method Key** cannot be edited.
 {% endinfo_block %}
-4. To keep the changes, click **Save**. For more details on the attributes, see the [Reference information: Creating delivery methods](#reference-information--creating-delivery-methods) section. 
+4. To keep the changes, click **Save**. For more details on the attributes, see the [Reference information: Creating delivery methods](#reference-information--creating-delivery-methods) section.
 **Tips & tricks**
 This is how the Back Office setup looks in the online store:
 **Back Office**
@@ -106,6 +106,6 @@ To delete a delivery method:
 2. Under **Are you sure about deleting this delivery method?**, select one of the two options:
     * **No, I want to keep this delivery method** if you want to cancel the deletion of the delivery method. This redirects you to the list of delivery methods.
     * **Yes, delete this delivery method** if you want to delete the delivery method. This deletes the delivery method and redirects you to the list of delivery methods.
-    
+
 **Online Store**
 ![Online store](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Shipment/Creating+and+Managing+Shipment+Methods/online-store.png){height="400" width="300"}

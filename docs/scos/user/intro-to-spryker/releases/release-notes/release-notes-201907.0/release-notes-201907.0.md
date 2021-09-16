@@ -243,7 +243,7 @@ Cart in the Preview mode can also be shared with users in your company because i
     **Documentation**: [Vault for Tokens](/docs/scos/user/features/{{page.version}}/spryker-core/spryker-core-feature-overview/vault-for-tokens-overview.html)
 
 * Customer Login by Token - Ability to log in to the Spryker Commerce OS by token
-    **Documentation**: [Customer Login by Token](/docs/scos/user/features/{{page.version}}/company-account/company-account-feature-overview/customer-login-by-token-overview.html)
+    **Documentation**: [Customer Login by Token](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/customer-login-by-token-overview.html)
     
 ***
 ## Partner Integrations

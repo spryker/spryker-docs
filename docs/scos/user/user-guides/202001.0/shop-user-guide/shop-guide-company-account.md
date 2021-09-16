@@ -14,12 +14,12 @@ Company Account Overview page allows your shop owner to manage the company in th
 
 To open the Company Account page, go to the header of the shop application → Name of your company → Overview.
 
-![Company account header](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Account/company-account-header.png) 
+![Company account header](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Account/company-account-header.png)
 
 
 ## Graphic User Interface
 
-![Company Account GUI](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Account/company-account-gui.png) 
+![Company Account GUI](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Account/company-account-gui.png)
 
 The *Company Overview* page consists of the following elements:
 
@@ -33,18 +33,18 @@ The *Company Overview* page consists of the following elements:
 
 To create a Company in the web-shop, go to `/company/register` and register a company.
 
-![Register a company](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Account/register-company.png) 
+![Register a company](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Account/register-company.png)
 
 Fill in the required (*) fields to complete the registration.
 
-After the company has been registered, it should be approved in the [Back Office](/docs/scos/user/user-guides/202001.0/back-office-user-guide/company-account/managing-a-company-account/managing-companies.html#approving-and-activating-a-company) to continue building the hierarchy.
+After the company has been registered, it should be approved in the [Back Office](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/managing-companies.html#approving-and-activating-a-company) to continue building the hierarchy.
 
 Once the company is approved, a Company Administrator can go to `/company/overview` page and create (and then also edit and delete) users, addresses, roles and business roles.
 
 {% info_block infoBox %}
 A Company Administrator needs to log out and then log in to refresh the changes.
 {% endinfo_block %}
-Don't forget to check out the video tutorial on setting up [Company](/docs/scos/user/features/{{page.version}}/company-account-management/company-account-overview/company-account-overview.html) Structure in Spryker [B2B Demo Shop](/docs/scos/user/about-spryker/202001.0/about-spryker.html#spryker-b2b-b2c-demo-shops):
+Don't forget to check out the video tutorial on setting up [Company](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html) Structure in Spryker [B2B Demo Shop](/docs/scos/user/about-spryker/202001.0/about-spryker.html#spryker-b2b-b2c-demo-shops):
 
 <iframe src="https://fast.wistia.net/embed/iframe/qkdgkeannb" title="How to set up Company Structure in Spryker" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="589" height="315"></iframe>
 <!-- Last review date: Mar 18, 2019 -->

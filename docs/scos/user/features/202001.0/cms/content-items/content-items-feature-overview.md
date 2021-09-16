@@ -20,10 +20,10 @@ Content item is the smallest content unit in Spryker. There are four content ite
 You can use each content item for different purposes. For example, the Banner content item can be used to promote a specific brand or collection. The Product Set content item can be added to the landing page to display a product set as a slider or carousel. The File List adds a link or icon to download a selected file.
 
 
-A content manager can [create content items](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/content-items/creating-content-items.html) in the Back Office > **Content Management** > **Content Items** section. 
+A content manager can [create content items](/docs/scos/user/user-guides/page.version/back-office-user-guide/content-management/content-items/creating-content-items.html) in the Back Office > **Content Management** > **Content Items** section. 
 A developer can do the following:
 * [Import content items](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/data-importers/data-importers-overview-and-implementation.html)
-* [Get content items data via API](/docs/scos/dev/glue-api/202001.0/retrieving-content-item-data/retrieving-content-item-data.html)
+* [Get content items data via API](/docs/scos/dev/glue-api/page.version/retrieving-content-item-data/retrieving-content-item-data.html)
 
 See [Content Items Types: Module Relations](https://documentation.spryker.com/v4/docs/content-items-types-module-relations-201907) for more information on each content item type and module relations.
 
@@ -57,7 +57,7 @@ The schema shows how the Content items feature affects content management in Spr
 
 ![image](https://confluence-connect.gliffy.net/embed/image/b2c37d9d-5350-4535-b437-677bffeb18da.png?utm_medium=live&utm_source=custom) 
 
-See [Adding Content Item Widgets to Pages and Blocks](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/content-items/content-item-widgets/adding-content-item-widgets-to-pages-and-blocks.html) to learn more about working with content item widgets in the WYSIWYG editor.
+See [Adding Content Item Widgets to Pages and Blocks](/docs/scos/user/user-guides/page.version/back-office-user-guide/content-management/content-items/content-item-widgets/adding-content-item-widgets-to-pages-and-blocks.html) to learn more about working with content item widgets in the WYSIWYG editor.
 
 ### Content Item Widget Template
 
@@ -95,7 +95,7 @@ You can select a template when inserting a content item widget into a CMS block.
 
 </details>
 
-A developer can create and customize templates. See [Adding a Template for a Content Item Widget](/docs/scos/dev/tutorials/202001.0/howtos/feature-howtos/cms/howto-create-cms-templates.html#adding-a-template-for-a-content-item-widget) for more details.
+A developer can create and customize templates. See [Adding a Template for a Content Item Widget](/docs/scos/dev/tutorials/page.version/howtos/feature-howtos/cms/howto-create-cms-templates.html#adding-a-template-for-a-content-item-widget) for more details.
 
 
 

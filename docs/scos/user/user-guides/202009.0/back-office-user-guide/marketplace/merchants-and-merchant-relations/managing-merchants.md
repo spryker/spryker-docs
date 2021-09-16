@@ -39,5 +39,5 @@ This refreshes the page with the success message displayed. The status of the me
 ## Next steps**
 Once you have the merchant record available in the system, you can proceed with creating a merchant relation.
 
-See [Managing Merchant Relations](/docs/scos/user/user-guides/202009.0/back-office-user-guide/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html) to know how you create those.
+See [Managing Merchant Relations](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html) to know how you create those.
 

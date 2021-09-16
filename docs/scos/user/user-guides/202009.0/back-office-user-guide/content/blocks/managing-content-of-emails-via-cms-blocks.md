@@ -58,7 +58,7 @@ You don’t need to activate the email CMS Block, as the deactivated status of t
 {% endinfo_block %}
 
 ## Viewing Email CMS Blocks
-You can view an Email CMS block like a regular CMS block. See [Viewing CMS Blocks](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/blocks/managing-cms-blocks.html#viewing-cms-blocks) for details.
+You can view an Email CMS block like a regular CMS block. See [Viewing CMS Blocks](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/managing-cms-blocks.html#viewing-cms-blocks) for details.
 
 
 ## Editing Email CMS Blocks
@@ -97,10 +97,10 @@ The page refreshed displaying the message about the successful update.
 
 #### Tips & Tricks
 
-* Add a [glossary key](/docs/scos/user/user-guides/202009.0/back-office-user-guide/administration/glossary/managing-glossary.html) to the Email CMS Block. When the email is sent, the key is replaced with the translation you defined for the locale selected by the customer. See [Managing Glossary](/docs/scos/user/user-guides/202009.0/back-office-user-guide/administration/glossary/managing-glossary.html#managing-glossary) to learn how to add translations.
+* Add a [glossary key](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/glossary/managing-glossary.html) to the Email CMS Block. When the email is sent, the key is replaced with the translation you defined for the locale selected by the customer. See [Managing Glossary](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/glossary/managing-glossary.html#managing-glossary) to learn how to add translations.
 
 * Add variables to the Email CMS Block to replace them with customer and order specific details. When the email is sent, the variables are replaced with the actual details. For example, add *firstName*, and it is replaced with the name of the customer the email is sent to. A Developer can provide a full list of variables and create new ones.
 
 **What's next?**
 
-* To learn about the attributes on this page, see [CMS Block: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/blocks/references/reference-information-cms-block.html).
+* To learn about the attributes on this page, see [CMS Block: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/references/reference-information-cms-block.html).

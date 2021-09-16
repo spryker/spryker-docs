@@ -10,7 +10,7 @@ redirect_from:
 
 The **Taxes** section in the Back Office is mostly used by Spryker Admins.
 
-This section is designed to build tax policies based on country-specific regulations. 
+This section is designed to build tax policies based on country-specific regulations.
 
 Each specific product, as well as the shipment method, or threshold falls under specific taxations. Thus it is crucial for an e-commerce manager to work with the legacy department to define the tax rates (e.g. for VAT) and set up those appropriately.
 
@@ -20,11 +20,11 @@ In a tax system, a **tax rate** is the ratio (usually expressed as a percentage)
 
 A **Tax set** is a set of tax rates that can be applied to a specific product.
 
-In the Back Office, a Spryker Admin creates the tax rates first and then, sets up the tax sets by assigning tax rates to those. 
+In the Back Office, a Spryker Admin creates the tax rates first and then, sets up the tax sets by assigning tax rates to those.
 
-The tax sets are later applied to Products, Thresholds, or Shipment Methods. 
+The tax sets are later applied to Products, Thresholds, or Shipment Methods.
 ***
 **What's next?**
-To know how to manage tax sets and rates, see [Managing Tax Rates and Sets](/docs/scos/user/user-guides/202005.0/back-office-user-guide/administration/taxes/tax-rates-and-tax-sets/managing-tax-rates-and-sets.html).
+To know how to manage tax sets and rates, see [Managing Tax Rates and Sets](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/tax-rates/managing-tax-rates.html).
 
-To know more about the attributes you use to manage tax rates and sets, see [Taxes: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/administration/taxes/tax-rates-and-tax-sets/references/taxes-reference-information.html).
+To know more about the attributes you use to manage tax rates and sets, see [Taxes: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/taxes/tax-rates-and-tax-sets/references/taxes-reference-information.html).

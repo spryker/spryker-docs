@@ -21,6 +21,6 @@ To summarize, you can:
 ***
 **What's next?**
 
-* To know how you create the product relation, see [Creating a Product Relation](/docs/scos/user/user-guides/201811.0/back-office-user-guide/products/product-relations/creating-a-product-relation.html).
-* To know the product relations are managed, see [Managing Product Relations](/docs/scos/user/user-guides/201811.0/back-office-user-guide/products/product-relations/managing-product-relations.html).
-* To know more about the attributes that you select and enter while creating or managing a product relation and see some examples of how the product relations look in the online store, see [Product Relations: Reference Information](/docs/scos/user/user-guides/201811.0/back-office-user-guide/products/product-relations/references/product-relations-reference-information.html).
+* To know how you create the product relation, see [Creating a Product Relation](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/product-relations/creating-a-product-relation.html).
+* To know the product relations are managed, see [Managing Product Relations](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/product-relations/managing-product-relations.html).
+* To know more about the attributes that you select and enter while creating or managing a product relation and see some examples of how the product relations look in the online store, see [Product Relations: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/product-relations/references/product-relations-reference-information.html).

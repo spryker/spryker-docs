@@ -8,7 +8,7 @@ redirect_from:
   - /v3/docs/en/reclamations-feature-overview
 ---
 
-Once a Back Office user has received a claim regarding an order from the customer, they can go to [Overview of Orders](/docs/scos/user/user-guides/201907.0/back-office-user-guide/sales/orders/managing-orders.html#claiming-orders) in the Back Office and click **Claim** to register the claim for the order (for all items or separate items of the order).
+Once a Back Office user has received a claim regarding an order from the customer, they can go to [Overview of Orders](/docs/scos/user/user-guides/page.version/back-office-user-guide/sales/orders/managing-orders.html#claiming-orders) in the Back Office and click **Claim** to register the claim for the order (for all items or separate items of the order).
 
 After the reclamation has been created, it appears on the **Reclamations** page under the **Sales** menu in the Back Office. Each reclamation is linked to a specific order by order ID, however, one and the same order can have more than one reclamation.
 

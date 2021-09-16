@@ -15,6 +15,6 @@ Since not all products are compatible with each other, a Spryker Administrator c
 
 **What's next?**
 
-* To learn how to create configurable bundle templates, see [Creating Configurable Bundle Templates](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/configurable-bundle-templates/creating-configurable-bundle-templates.html).
-* To learn how to manage configurable bundle templates, see [Managing Configurable Bundle Templates](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html).
-* To learn about the attributes you use to manage configurable bundle templates, see [Configurable Bundle Templates: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/configurable-bundle-templates/references/configurable-bundle-templates-reference-information.html).
+* To learn how to create configurable bundle templates, see [Creating Configurable Bundle Templates](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/configurable-bundle-templates/creating-configurable-bundle-templates.html).
+* To learn how to manage configurable bundle templates, see [Managing Configurable Bundle Templates](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html).
+* To learn about the attributes you use to manage configurable bundle templates, see [Configurable Bundle Templates: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/configurable-bundle-templates/references/configurable-bundle-templates-reference-information.html).

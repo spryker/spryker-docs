@@ -14,7 +14,7 @@ Any visioning tool is designed in order to provide you with a full control of th
 
 With Spryker Commerce OS, while editing pages, you have several options to manage versions, drafts and live versions.
 
-In the [Version History in the Back Office](/docs/scos/user/user-guides/201811.0/back-office-user-guide/content-management/pages/cms-pages-versioning.html), you can see and compare all published versions of a CMS Page and quickly **roll back** to an earlier version with a simple click **Rollback to Selected Version** option.
+In the [Version History in the Back Office](/docs/scos/user/user-guides/page.version/back-office-user-guide/content-management/pages/cms-pages-versioning.html), you can see and compare all published versions of a CMS Page and quickly **roll back** to an earlier version with a simple click **Rollback to Selected Version** option.
 
 <!-- src="../../resources/images/cms/version-history-gif.gif" -->
 

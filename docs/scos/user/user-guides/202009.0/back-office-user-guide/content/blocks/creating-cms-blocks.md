@@ -12,7 +12,7 @@ This topic describes how to create a CMS block.
 
 {% info_block infoBox "Info" %}
 
-If you want to create a CMS block for [email](https://documentation.spryker.com/v6/docs/email-as-a-cms-block-overview), see [Creating an email CMS block](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/blocks/managing-content-of-emails-via-cms-blocks.html#creating-an-email-cms-block).
+If you want to create a CMS block for [email](https://documentation.spryker.com/v6/docs/email-as-a-cms-block-overview), see [Creating an email CMS block](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/managing-content-of-emails-via-cms-blocks.html#creating-an-email-cms-block).
 
 {% endinfo_block %}
 
@@ -85,4 +85,4 @@ The following table describes the attributes on the *Create CMS Block* page.
 
 After a new block has been created, you can add the content if needed.
 
-* To learn more about editing a CMS block, see the [Editing CMS blocks](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/blocks/managing-cms-blocks.html#editing-blocks).
+* To learn more about editing a CMS block, see the [Editing CMS blocks](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/managing-cms-blocks.html#editing-blocks).

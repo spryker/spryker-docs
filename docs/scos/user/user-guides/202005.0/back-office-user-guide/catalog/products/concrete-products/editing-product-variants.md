@@ -14,7 +14,7 @@ The described procedure is also valid for an existing product variant.
 To start working with product variants, go to **Catalog** > **Products**.
 
 **Pre-conditions**
-The procedure you are going to perform is very similar to the procedure described in the Creating a Product Variant article. See  [Creating a Product Variant](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/products/concrete-products/creating-a-product-variant.html) to know more. Also, see [Concrete Product: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/products/references/concrete-product-reference-information.html) to know more about the attributes that you see, select, and enter while updating the product variant.
+The procedure you are going to perform is very similar to the procedure described in the Creating a Product Variant article. See  [Creating a Product Variant](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/concrete-products/creating-a-product-variant.html) to know more. Also, see [Concrete Product: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/references/concrete-product-reference-information.html) to know more about the attributes that you see, select, and enter while updating the product variant.
 ***
 **To update** a product variant:
 1. Navigate to the **Edit Concrete Product** page using one of the following paths:
@@ -28,11 +28,11 @@ The prices for the variant are inherited from the abstract product so you will s
 {% endinfo_block %}
     3. **Image tab**: define the image(s), image set(s), and the image order for you product variant.
     4. **Assign bundled products** tab: this tab is used in case you need to create a product bundle. See [Creating and Managing Product Bundles](https://documentation.spryker.com/v5/docs/en/creating-and-managing-product-bundles) to know more.
-    5. **Discontinue** tab: This tab is used in case you want to discontinue the product. See [Discontinuing a Product](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/products/managing-products/discontinuing-a-product.html) to know more.
-    6. **Product Alternatives** tab: This tab is used to define the product alternatives for the product. See [Adding Product Alternatives](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/products/managing-products/adding-product-alternatives.html) to know more.
+    5. **Discontinue** tab: This tab is used in case you want to discontinue the product. See [Discontinuing a Product](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/managing-products/discontinuing-a-product.html) to know more.
+    6. **Product Alternatives** tab: This tab is used to define the product alternatives for the product. See [Adding Product Alternatives](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/managing-products/adding-product-alternatives.html) to know more.
     7. **Scheduled Prices** tab: here you can only review scheduled prices imported via a CSV file if any. The actual import is done in the **Prices > Scheduled Prices** section.
 3. Once done, click **Save**.
 ***
 **What's next?**
 Following the same steps, you will update all variants that you have added to your abstract product.
-You may also want to add more product variants. Learn how you do that by navigating to [Creating a Product Variant](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/products/concrete-products/creating-a-product-variant.html).
+You may also want to add more product variants. Learn how you do that by navigating to [Creating a Product Variant](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/concrete-products/creating-a-product-variant.html).

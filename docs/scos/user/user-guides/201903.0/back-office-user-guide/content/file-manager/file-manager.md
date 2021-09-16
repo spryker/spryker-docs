@@ -24,6 +24,6 @@ In the File Manager section, a Marketing Content Manager can do the following:
 * define the MIME types
 ***
 To know more about the procedures that you need to follow to work in a file manager section, see the following articles:
-* [Managing File Tree](/docs/scos/user/user-guides/201903.0/back-office-user-guide/file-manager/managing-file-tree.html)
-* [Managing MIME Type Settings](/docs/scos/user/user-guides/201903.0/back-office-user-guide/file-manager/managing-mime-type-settings.html)
-* [Managing File List](/docs/scos/user/user-guides/201903.0/back-office-user-guide/file-manager/managing-file-list.html)
+* [Managing File Tree](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/file-manager/managing-file-tree.html)
+* [Managing MIME Type Settings](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/mime-type-settings/managing-mime-type-settings.html)
+* [Managing File List](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/file-manager/managing-file-list.html)

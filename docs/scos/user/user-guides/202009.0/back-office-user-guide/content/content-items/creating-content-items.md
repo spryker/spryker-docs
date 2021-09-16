@@ -59,7 +59,7 @@ On the *Overview of Content Items* page, you can:
 ## Create a banner content item
 {% info_block infoBox %}
 
-For the use cases and examples of the banner content item, see [Banner Content Item Widget](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-types.html#banner-content-item-widget) and [Banner Content Item Widget Templates](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-templates.html#banner-content-item-widget-templates).
+For the use cases and examples of the banner content item, see [Banner Content Item Widget](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-types.html#banner-content-item-widget) and [Banner Content Item Widget Templates](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-templates.html#banner-content-item-widget-templates).
 
 {% endinfo_block %}
 Follow the steps to create a banner:
@@ -122,7 +122,7 @@ The following table describes the attributes on the *Create Content Item: Banner
 
 {% info_block infoBox %}
 
-For the use cases and examples of the abstract product list content item, see [Abstract Product List Content Item Widget](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-types.html#abstract-product-list-content-item-widget) and [Abstract Product List Content Item Widget Templates](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-templates.html#abstract-product-list-content-item-widget-templates).
+For the use cases and examples of the abstract product list content item, see [Abstract Product List Content Item Widget](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-types.html#abstract-product-list-content-item-widget) and [Abstract Product List Content Item Widget Templates](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-templates.html#abstract-product-list-content-item-widget-templates).
 
 {% endinfo_block %}
 
@@ -192,7 +192,7 @@ The following table describes the attributes on the *Create Content Item: Abstra
 
 {% info_block infoBox %}
 
-For the use cases and examples of the product set content item, see [Product Set Content Item Widget](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-types.html#product-set-content-item-widget) and [Product Set Content Item Widget Templates](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-templates.html#product-set-content-item-widget-templates).
+For the use cases and examples of the product set content item, see [Product Set Content Item Widget](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-types.html#product-set-content-item-widget) and [Product Set Content Item Widget Templates](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-templates.html#product-set-content-item-widget-templates).
 
 {% endinfo_block %}
 
@@ -256,7 +256,7 @@ The following table describes the attributes on the *CreateContent Item: Product
 ## Create a file list content item
 {% info_block infoBox %}
 
-For the use cases and examples of the file list content item, see [File List Content Item Widget](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-types.html#product-set-content-item-widget) and [File List](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-templates.html#file-list).
+For the use cases and examples of the file list content item, see [File List Content Item Widget](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-types.html#product-set-content-item-widget) and [File List](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-templates.html#file-list).
 
 {% endinfo_block %}
 Follow the steps to create a file list:
@@ -271,7 +271,7 @@ Follow the steps to create a file list:
 {% endinfo_block %}
     2.  In the *Selected Files* table, sort the added files by clicking **Move Down** or **Move Up**. 
 
-See [Content items: reference information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/content-items/references/reference-information-content-items.html#create-and-edit-abstract-product-list-content-item-page) to learn about the attributes on this page. 
+See [Content items: reference information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/references/reference-information-content-items.html#create-and-edit-abstract-product-list-content-item-page) to learn about the attributes on this page. 
 
 3. If needed, repeat the previous step in one or more locale-specific tabs.
 {% info_block infoBox "Multi-language setup" %}
@@ -323,7 +323,7 @@ The following table describes the attributes on the *Create Content Item: File L
 To create a navigation content item:
 
 1. On the *Create Content Item: Navigation* page, enter **Name** and **Description**.
-2. In the *Default* tab, select a navigation from the *Navigation* drop-down list. See [Creating navigation elements](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/navigation/managing-navigation-elements.html#creating-a-navigation-element) to learn about creating navigation elements.
+2. In the *Default* tab, select a navigation from the *Navigation* drop-down list. See [Creating navigation elements](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/navigation/managing-navigation-elements.html#creating-a-navigation-element) to learn about creating navigation elements.
 
 3. If needed, repeat the previous step in one or more locale-specific tabs.
 
@@ -353,5 +353,5 @@ The following table describes the attributes on the *Create Content Item: Naviga
 **What's next?**
 The content item is created. Now, you can add it to a CMS block. 
 
-* To learn about adding content item to CMS blocks or a pages, see [Adding content items to CMS pages and blocks](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).
-* To learn about editing content items, see [Editing content items](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/content-items/editing-content-items.html).
+* To learn about adding content item to CMS blocks or a pages, see [Adding content items to CMS pages and blocks](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).
+* To learn about editing content items, see [Editing content items](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/editing-content-items.html).

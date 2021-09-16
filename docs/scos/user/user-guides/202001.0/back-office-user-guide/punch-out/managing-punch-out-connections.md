@@ -16,14 +16,14 @@ To start managing connections, navigate to the **Punch Out** section.
 To connect your ERP with the Spryker Commerce OS via the Punch Out protocol, you need to create a Punch Out connection.
 To create the connection:
 1. On the **Punch Out Connections** page, click **+New Connection** in the top right corner.
-2. On the **Create Transferred Cart Connection** page, enter and select the attributes. See the [Punch Out: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/punch-out/references/punch-out-reference-information.html) article.
+2. On the **Create Transferred Cart Connection** page, enter and select the attributes. See the [Punch Out: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/punch-out/references/punch-out-reference-information.html) article.
 3. Click **Create**.
 
 ## Editing a Punch Out Connection
 If the connection details change, edit them.
 To edit the connection:
 1. In the **List of Punch Out Connections > Actions** column, click **Edit** for a specific connection.
-2. On the **Edit Transferred Cart Connection** page, change the attributes. See the [Punch Out: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/punch-out/references/punch-out-reference-information.html) article.
+2. On the **Edit Transferred Cart Connection** page, change the attributes. See the [Punch Out: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/punch-out/references/punch-out-reference-information.html) article.
 3. Click **Save**.
 
 ## Viewing the Entry Points

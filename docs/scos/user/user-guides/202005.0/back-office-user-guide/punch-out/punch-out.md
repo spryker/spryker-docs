@@ -18,5 +18,5 @@ You can find the following information in these sections:
 ***
 **What's next?**
 
-To learn how to create and manage the Punch Out connections, see [Managing Punch Out connections](/docs/scos/user/user-guides/202005.0/back-office-user-guide/punch-out/managing-punch-out-connections.html).
-To learn how to manage the Punch Out translation logs, see  [Managing transaction logs](/docs/scos/user/user-guides/202005.0/back-office-user-guide/punch-out/managing-transactions-log.html).
+To learn how to create and manage the Punch Out connections, see [Managing Punch Out connections](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/punch-out/managing-punch-out-connections.html).
+To learn how to manage the Punch Out translation logs, see  [Managing transaction logs](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/punch-out/managing-transactions-log.html).

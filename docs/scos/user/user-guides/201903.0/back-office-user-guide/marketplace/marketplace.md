@@ -32,5 +32,5 @@ In order to have a correct set, you should:
 ***
 **What's next?**
 
-* To know more about how the merchant record is managed, see [Managing Merchants](/docs/scos/user/user-guides/201903.0/back-office-user-guide/merchants/merchants-and-merchant-relations/managing-merchants.html).
-* To know more about merchant relations and their setup, see [Managing Merchant Relations](/docs/scos/user/user-guides/201903.0/back-office-user-guide/merchants/merchants-and-merchant-relations/managing-merchant-relations.html).
+* To know more about how the merchant record is managed, see [Managing Merchants](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchants/merchants-and-merchant-relations/managing-merchants.html).
+* To know more about merchant relations and their setup, see [Managing Merchant Relations](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchants/merchants-and-merchant-relations/managing-merchant-relations.html).

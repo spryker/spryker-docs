@@ -31,13 +31,13 @@ Even though it is possible to use any time zone for defining a price schedule, i
 
 ## Data import
 
-Currently, price schedules are defined by importing csv files with the list of prices. You can import the file via [Back Office](/docs/scos/user/user-guides/201907.0/back-office-user-guide/price/scheduled-prices/creating-scheduled-prices.html) or [manually](/docs/scos/dev/tutorials/201907.0/howtos/feature-howtos/howto-import-scheduled-prices.html).
+Currently, price schedules are defined by importing csv files with the list of prices. You can import the file via [Back Office](/docs/scos/user/user-guides/page.version/back-office-user-guide/price/scheduled-prices/creating-scheduled-prices.html) or [manually](/docs/scos/dev/tutorials/page.version/howtos/feature-howtos/howto-import-scheduled-prices.html).
 
 ## Cron Job
 
-Once [imported](/docs/scos/user/user-guides/201907.0/back-office-user-guide/price/scheduled-prices/creating-scheduled-prices.html), prices do not get updated right away. In order to automate price application, there is a cron job shipped with the feature. The cron job checks if there are any imported scheduled prices that need to be applied or reverted. If there is a price schedule that passed its starting or ending date, the cron job applies the changes.
+Once [imported](/docs/scos/user/user-guides/page.version/back-office-user-guide/price/scheduled-prices/creating-scheduled-prices.html), prices do not get updated right away. In order to automate price application, there is a cron job shipped with the feature. The cron job checks if there are any imported scheduled prices that need to be applied or reverted. If there is a price schedule that passed its starting or ending date, the cron job applies the changes.
 
-By default, the cron job runs every day at 00:06:00-00:00. In some cases, it might be necessary to change this behavior. For example, if you schedule a price to be updated at 00:01:00-00:00, the price will be updated at 00:06:00-00:00 since that's when the cron job runs. 00:01:00-00:00. In this case, you can [schedule the cron job](/docs/scos/dev/tutorials/201907.0/howtos/feature-howtos/how-to-schedule-cron-job-for-scheduled-prices.html) to be run at 00:01:00-00:00.
+By default, the cron job runs every day at 00:06:00-00:00. In some cases, it might be necessary to change this behavior. For example, if you schedule a price to be updated at 00:01:00-00:00, the price will be updated at 00:06:00-00:00 since that's when the cron job runs. 00:01:00-00:00. In this case, you can [schedule the cron job](/docs/scos/dev/tutorials/page.version/howtos/feature-howtos/how-to-schedule-cron-job-for-scheduled-prices.html) to be run at 00:01:00-00:00.
 
 If you import prices that need to be applied right away, you can run <var>price-product-schedule:apply</var> console command. This command applies the imported prices in current store. If needed, you can specify the store by adding a store relation parameter. For example, you would use the following command to apply imported prices in US store: <var>APPLICATION_STORE=US console price-product-schedule:apply</var>.
 

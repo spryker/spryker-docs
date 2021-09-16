@@ -19,7 +19,7 @@ To create a new company record, do the following:
 3. Click **Save**. 
     The new created company will appear in the _List of the Companies_ table on the **Companies** page.
 {% info_block errorBox "Important" %}
-Once the company is created, one business unit for it is created by default. This is considered to be headquarters and can be managed in the same ways as the other business units. See [Managing Company Units](/docs/scos/user/user-guides/201907.0/back-office-user-guide/company-account/managing-a-company-account/managing-company-units.html
+Once the company is created, one business unit for it is created by default. This is considered to be headquarters and can be managed in the same ways as the other business units. See [Managing Company Units](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/company-account/managing-a-company-account/managing-company-units.html
 {% endinfo_block %} for more details.)
 ***
 The companies can be managed by triggering certain actions in the _Actions_ column in the _List of Companies_ table on the **Companies** page. 
@@ -52,4 +52,4 @@ You can approve and activate the record in a later event. The record itself will
 If you want to change the name of the existing company, click **Edit** in the _Actions_ column.
 ***
 **What's next?**
-The company record is added and now you can proceed with creating a company unit. See [Managing Company Units](/docs/scos/user/user-guides/201907.0/back-office-user-guide/company-account/managing-a-company-account/managing-company-units.html) for more details.
+The company record is added and now you can proceed with creating a company unit. See [Managing Company Units](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/company-account/managing-a-company-account/managing-company-units.html) for more details.

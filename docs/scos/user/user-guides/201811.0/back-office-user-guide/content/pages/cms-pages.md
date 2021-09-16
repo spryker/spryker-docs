@@ -14,10 +14,10 @@ You can create, view, publish and edit CMS pages in the **Pages** section. It is
 ***
 **What's next?**
 
-* To know more about how to create a CMS page, see [Creating a CMS Page](/docs/scos/user/user-guides/201811.0/back-office-user-guide/content-management/pages/creating-a-cms-page.html).
+* To know more about how to create a CMS page, see [Creating a CMS Page](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/pages/creating-a-cms-page.html).
 
-* To know more about how to publish, view, edit and activate or deactivate CMS pages, see [Managing CMS Pages](/docs/scos/user/user-guides/201811.0/back-office-user-guide/content-management/pages/managing-cms-pages.html).
+* To know more about how to publish, view, edit and activate or deactivate CMS pages, see [Managing CMS Pages](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/pages/managing-cms-pages.html).
 
-* To know more about how to view the version history of CMS pages and compare versions, see [CMS Versioning](/docs/scos/user/user-guides/201811.0/back-office-user-guide/content-management/pages/cms-pages-versioning.html).
+* To know more about how to view the version history of CMS pages and compare versions, see [CMS Versioning](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/pages/cms-pages-versioning.html).
 
-* To learn more about attributes you use to create and edit CMS pages, see articles in the [CMS Pages: Reference Information](/docs/scos/user/user-guides/201811.0/back-office-user-guide/content-management/pages/references/cms-pages-reference-information.html) section.
+* To learn more about attributes you use to create and edit CMS pages, see articles in the [CMS Pages: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/pages/references/cms-pages-reference-information.html) section.

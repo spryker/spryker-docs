@@ -47,7 +47,7 @@ Events are generated in these two cases:
 | Case 1 | If availability amount was equal to 0 and now it’s more than 0, the event is triggered. |
 | Case 2 | If availability amount was more than 0 and now it’s equal to 0, the event is triggered. |
 
-The default behavior is having **available** or not available **status** set for product while the amount of product does not matter. Even though events are triggered when amount is changed from 0 to N or from N to 0, it's not the amount change that triggers events, but the change of product status. You can change the default behavior for the events to be triggered whenever the amount is changed. For more information, see [HowTo - Change the Default Behavior of Event Triggering in the AvailabilityStorage Module](/docs/scos/dev/tutorials/201811.0/howtos/feature-howtos/howto-change-the-default-behavior-of-event-triggering-in-the-availabilitystorage-module.html).
+The default behavior is having **available** or not available **status** set for product while the amount of product does not matter. Even though events are triggered when amount is changed from 0 to N or from N to 0, it's not the amount change that triggers events, but the change of product status. You can change the default behavior for the events to be triggered whenever the amount is changed. For more information, see [HowTo - Change the Default Behavior of Event Triggering in the AvailabilityStorage Module](/docs/scos/dev/tutorials/page.version/howtos/feature-howtos/howto-change-the-default-behavior-of-event-triggering-in-the-availabilitystorage-module.html).
 
 Published data example in JSON.
 
@@ -91,7 +91,7 @@ Stock update triggers the event `stock update`. For example, in our dummy paymen
 
 It’s possible to use `vendor/bin/console data:import:product-stock` command to import stocks into database. The default stock importer uses `csv` file from `src/Pyz/Zed/Updater/Business/Internal/data/import/product_stock.csv` which imports stocks.
 
-The Back Office is provided to allow assigning stocks to products. See [Availability](/docs/scos/user/user-guides/201811.0/back-office-user-guide/products/availability/managing-products-availability.html) for details on how to manage product stocks in the Back Office.
+The Back Office is provided to allow assigning stocks to products. See [Availability](/docs/scos/user/user-guides/page.version/back-office-user-guide/products/availability/managing-products-availability.html) for details on how to manage product stocks in the Back Office.
 
 Stock update considers the stock from the stock file to be the absolute value. On stock update, the stock is overwritten with the values from the file. If a certain product does not have a record in the stock file, then it is considered that the stock of this product does not have to be updated.
 

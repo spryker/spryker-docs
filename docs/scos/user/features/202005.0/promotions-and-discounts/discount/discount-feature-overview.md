@@ -17,7 +17,7 @@ There are two discount types:
 * Voucher
 * Cart rule
 
-A product catalog manager selects a discount type when [creating a voucher](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/discount/creating-a-discount/creating-a-voucher.html) or [creating a cart rule](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/discount/creating-a-discount/creating-a-cart-rule.html).
+A product catalog manager selects a discount type when [creating a voucher](/docs/scos/user/user-guides/page.version/back-office-user-guide/merchandising/discount/creating-a-discount/creating-a-voucher.html) or [creating a cart rule](/docs/scos/user/user-guides/page.version/back-office-user-guide/merchandising/discount/creating-a-discount/creating-a-cart-rule.html).
 
 ## Voucher
 
@@ -32,7 +32,7 @@ Multiple voucher codes can be generated for a single voucher. The code has a **M
 You can eneter codes manually or use the code generator in the Back Office.
 ![Generate codes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/generate_codes.png)
 
-See [Creating a Voucher](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/discount/creating-a-discount/creating-a-voucher.html) to learn how a product catalog manager can create a voucher in the Back Office.
+See [Creating a Voucher](/docs/scos/user/user-guides/page.version/back-office-user-guide/merchandising/discount/creating-a-discount/creating-a-voucher.html) to learn how a product catalog manager can create a voucher in the Back Office.
 
 ## Cart Rule
 
@@ -42,7 +42,7 @@ A Cart rule is a discount that applies to cart once all the [decision rules](#de
 The cart rule is applied automatically. If the decision rules of a discount are fulfilled, the customer can see the discount upon entering cart. Unlike with [voucher](#voucher), the **Clear all** and **Remove** actions are not displayed.
 ![Cart rule](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/cart-cart-rule.png) 
 
-See [Creating a Cart Rule](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/discount/creating-a-discount/creating-a-cart-rule.html) to learn how a product catalog manager can create a cart rule in the Back Office.
+See [Creating a Cart Rule](/docs/scos/user/user-guides/page.version/back-office-user-guide/merchandising/discount/creating-a-discount/creating-a-cart-rule.html) to learn how a product catalog manager can create a cart rule in the Back Office.
 
 ### Decision Rule
 A decision rule is a condition assigned to a discount that should be fulfilled for the discount to be applied. 
@@ -162,13 +162,13 @@ See examples in the table below.
 | €50 |  Calculator percentage | 10 | €5 | €45 |
 | €50 | Calculator fixed | 10 | €10 | €40 |
 
-A product catalog manager defines calculation when [creating a voucher](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/discount/creating-a-discount/creating-a-voucher.html) or [creating a cart rule](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/discount/creating-a-discount/creating-a-cart-rule.html).
+A product catalog manager defines calculation when [creating a voucher](/docs/scos/user/user-guides/page.version/back-office-user-guide/merchandising/discount/creating-a-discount/creating-a-voucher.html) or [creating a cart rule](/docs/scos/user/user-guides/page.version/back-office-user-guide/merchandising/discount/creating-a-discount/creating-a-cart-rule.html).
 ![Discount calculation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/discount_calculation.png) 
 
 ## Discount Exclusiveness
 Discount exclusiveness defines if a discount value of a discount can be combined with the discount value of other discounts in a single order.
 
-A product catalog manager defines calculation when [creating a voucher](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/discount/creating-a-discount/creating-a-voucher.html) or [creating a cart rule](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/discount/creating-a-discount/creating-a-cart-rule.html).
+A product catalog manager defines calculation when [creating a voucher](/docs/scos/user/user-guides/page.version/back-office-user-guide/merchandising/discount/creating-a-discount/creating-a-voucher.html) or [creating a cart rule](/docs/scos/user/user-guides/page.version/back-office-user-guide/merchandising/discount/creating-a-discount/creating-a-cart-rule.html).
 ![Exclusive discount](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/exclusivity.png) 
 
 ### Exclusive Discount
@@ -207,7 +207,7 @@ Validity interval is a time period during which a discount is active and can be 
 If a cart is eligible for a discount outside of its validity interval, the cart rule is not applied. If a customer enters a voucher code outside of its validity interval, they get a "Your voucher code is invalid." message.
 
 
-A product catalog manager defines calculation when [creating a voucher](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/discount/creating-a-discount/creating-a-voucher.html) or [creating a cart rule](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/discount/creating-a-discount/creating-a-cart-rule.html).
+A product catalog manager defines calculation when [creating a voucher](/docs/scos/user/user-guides/page.version/back-office-user-guide/merchandising/discount/creating-a-discount/creating-a-voucher.html) or [creating a cart rule](/docs/scos/user/user-guides/page.version/back-office-user-guide/merchandising/discount/creating-a-discount/creating-a-cart-rule.html).
 ![Validity interval](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/validity-interval.png) 
 
 

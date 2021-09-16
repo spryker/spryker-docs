@@ -46,4 +46,4 @@ Templates are project-specific and are usually created by a developer and a busi
 **What's next?**
 Until now, you have created a page draft. The page itself will be available in the online store after you publish it.
 
-To learn how to view or publish the page, see [Managing CMS Pages](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/pages/managing-cms-pages.html).
+To learn how to view or publish the page, see [Managing CMS Pages](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/pages/managing-cms-pages.html).

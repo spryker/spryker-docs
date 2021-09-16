@@ -12,7 +12,7 @@ This article describes how you can create and manage customer groups.
 ***
 To start working with customer groups, navigate to the **Customers > Customer Groups** section.
 ***
-Out-of-the-box, there are no connections between customer groups and any other Back Office feature, except for the Discounts. You can set up the discount conditions to be applied to a specific customer group. See [Discount Conditions: Reference Information](/docs/scos/user/user-guides/201811.0/back-office-user-guide/discount/references/discount-conditions-reference-information.html) for more information on what the discount conditions are.
+Out-of-the-box, there are no connections between customer groups and any other Back Office feature, except for the Discounts. You can set up the discount conditions to be applied to a specific customer group. See [Discount Conditions: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/discount/references/discount-conditions-reference-information.html) for more information on what the discount conditions are.
 ***
 ## Adding a Customer Group
 To add a customer group:

@@ -90,5 +90,5 @@ To remove the Configurable Bundle Template:
 **What's next?**
 Now you know how to manage the Configurable Bundle Templates that already exist in the shop.
 
-Review [Configurable Bundle Templates: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/configurable-bundle-templates/references/configurable-bundle-templates-reference-information.html) to learn about the attributes you see, select, and enter while managing a template.
+Review [Configurable Bundle Templates: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/configurable-bundle-templates/references/configurable-bundle-templates-reference-information.html) to learn about the attributes you see, select, and enter while managing a template.
 

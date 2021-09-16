@@ -40,4 +40,4 @@ _You cannot delete a default role; please set another default role before the de
 ***
 **What's next?**
 Once the role is created, you can proceed with creating a company user and assign the created role to it.
-See [Managing Company Users](/docs/scos/user/user-guides/201907.0/back-office-user-guide/company-account/managing-a-company-account/managing-company-users.html) to know how the company users are created and managed.
+See [Managing Company Users](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/company-account/managing-a-company-account/managing-company-users.html) to know how the company users are created and managed.

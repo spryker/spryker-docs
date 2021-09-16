@@ -32,7 +32,7 @@ All the order management options that you can invoke from the *Actions* column o
 | Action | Description |
 | --- | --- |
 | View | Takes you to the *View Order: [Return ID]* page. Here, you can find all the information about the chosen order. |
-| Claim | Takes you to the Create reclamation page, where you can [create a reclamation](/docs/scos/user/user-guides/202009.0/back-office-user-guide/sales/reclamations/managing-reclamations.html) for the order. |
+| Claim | Takes you to the Create reclamation page, where you can [create a reclamation](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/reclamations/managing-reclamations.html) for the order. |
 
 ## View Order [Order ID] page
 

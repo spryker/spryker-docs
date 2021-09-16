@@ -42,7 +42,7 @@ Products for the [dynamic product labels](/docs/scos/user/features/{{page.versio
 
 To edit a product label:
 1. In the _Actions_ column of the *Overview of Product Labels* page, select **Edit**. 
-2. On the *Edit Product Label: “{product label name}* page, edit the values. To learn about the attributes you see on the page, see [Product Labels: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/product-labels/references/reference-information-product-labels.html).
+2. On the *Edit Product Label: “{product label name}* page, edit the values. To learn about the attributes you see on the page, see [Product Labels: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-labels/references/reference-information-product-labels.html).
 3. Select **Save**.
 The page is refreshed to show the message about successful product label update.
 
@@ -54,4 +54,4 @@ In the *Assigned Products* subtab of the *Products* tab, clear the check box nex
 
 ## Next steps
 
-To learn about the attributes you enter and select while managing product label, see [Product Labels: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/product-labels/references/reference-information-product-labels.html).
+To learn about the attributes you enter and select while managing product label, see [Product Labels: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-labels/references/reference-information-product-labels.html).

@@ -8,7 +8,7 @@ redirect_from:
   - /v6/docs/en/managing-returns
 ---
 
-After a [return](/docs/scos/user/features/{{page.version}}/return-management/return-management-feature-overview.html) has been [created by a Back Office User](/docs/scos/user/user-guides/202009.0/back-office-user-guide/sales/orders/managing-orders.html#creating-a-return) or by a [Shop User](/docs/scos/user/features/{{page.version}}/return-management/return-management-feature-overview.html#return-management-on-the-storefront), it appears on the *Orders > Returns* page. On this page, you can manage the returns as follows:
+After a [return](/docs/scos/user/features/{{page.version}}/return-management/return-management-feature-overview.html) has been [created by a Back Office User](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/orders/managing-orders.html#creating-a-return) or by a [Shop User](/docs/scos/user/features/{{page.version}}/return-management/return-management-feature-overview.html#return-management-on-the-storefront), it appears on the *Orders > Returns* page. On this page, you can manage the returns as follows:
 
 * View the return details
 * Set the return statuses
@@ -20,7 +20,7 @@ To start managing returns, navigate to the *Sales >Returns* section.
 
 {% info_block infoBox "Info" %}
 
-Returns of the registered and guest users have different return references. See [Returns Section](/docs/scos/user/user-guides/202009.0/back-office-user-guide/sales/orders/references/reference-information-orders.html#returns-section) for details on the return references.
+Returns of the registered and guest users have different return references. See [Returns Section](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/orders/references/reference-information-orders.html#returns-section) for details on the return references.
 
 {% endinfo_block %}
 To view details on a return, in the *Actions* column of the return, click **View**. 
@@ -36,7 +36,7 @@ To trigger the return states:
 
 1. On the *Returns* page, click **View** in the *Actions* column. This takes you to the *Return Overview [Return reference]*.
 
-2. *Trigger all matching state* section of the *Return Overview [Return reference]* page, click the necessary state. The return state changes and the new states that you can trigger, appear. See [Return Item States: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/sales/returns/references/reference-information-return-item-states.html) for information on the return items states and the flow.
+2. *Trigger all matching state* section of the *Return Overview [Return reference]* page, click the necessary state. The return state changes and the new states that you can trigger, appear. See [Return Item States: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/returns/references/reference-information-return-item-states.html) for information on the return items states and the flow.
 ![Trigger states](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Sales/Returns/trigger-status.png) 
  
 {% info_block infoBox "Info" %}
@@ -62,5 +62,5 @@ This takes you to the page with the print version of the return slip.
 
 **What's next?**
 
-* To learn about the attributes you enter and select while managing returns, see [Returns: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/sales/returns/references/reference-information-returns.html).
-* To learn about the return item states, see [Return Item States: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/sales/returns/references/reference-information-return-item-states.html). 
+* To learn about the attributes you enter and select while managing returns, see [Returns: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/returns/references/reference-information-returns.html).
+* To learn about the return item states, see [Return Item States: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/returns/references/reference-information-return-item-states.html). 

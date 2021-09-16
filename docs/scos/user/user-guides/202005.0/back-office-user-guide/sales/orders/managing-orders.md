@@ -51,7 +51,7 @@ The page refreshes to show the message about successful status change. In the _T
 **Tips & Tricks**
 To change the status of all the items inside a shipment at once, click **pay** in the **Trigger all matching states of order inside this shipment** section of the corresponding shipment. 
 
-To learn more about order statuses, see [Orders: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/sales/orders/references/orders-reference-information.html).
+To learn more about order statuses, see [Orders: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/orders/references/orders-reference-information.html).
 
 ## Creating a Return
 If a sales order item is[ returnable](/docs/scos/user/features/{{page.version}}/order-management/return-management/return-management-feature-overview.html), you can create a return for it.
@@ -67,7 +67,7 @@ The [Product Bundles](/docs/scos/user/features/{{page.version}}/product-informat
 
 {% endinfo_block %}
 
-3. Click **Create return**. This creates the return and takes you to the *Overview of Return* *[Return reference]* page, where you can change the return states. See [Return Item States: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/sales/returns/references/return-item-states-reference-information.html) for details on the return states you can trigger.
+3. Click **Create return**. This creates the return and takes you to the *Overview of Return* *[Return reference]* page, where you can change the return states. See [Return Item States: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/returns/references/return-item-states-reference-information.html) for details on the return states you can trigger.
 
 {% info_block infoBox "Info" %}
 
@@ -78,7 +78,7 @@ You can create returns for the items that are in *Exported* or *Delivered* state
 ## Viewing the Returns for Orders
 If returns have been created for an order, they are displayed on the *View Order: [Order ID]* page in the Returns section. 
 
-To view details on a return, click **View** in the Actions column of the *Returns* table. This takes you to the *Overview of Return: [Return ID]* page. See [Managing Returns](/docs/scos/user/user-guides/202005.0/back-office-user-guide/sales/returns/managing-returns.html) for information on how you can manage the returns on this page.
+To view details on a return, click **View** in the Actions column of the *Returns* table. This takes you to the *Overview of Return: [Return ID]* page. See [Managing Returns](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/returns/managing-returns.html) for information on how you can manage the returns on this page.
 
 
 ## Editing a Custom Order Reference
@@ -133,6 +133,6 @@ To edit a billing address:
 ***
 **Next Steps**
 
-* To learn how you can manage the created returns, see [Managing Returns](/docs/scos/user/user-guides/202005.0/back-office-user-guide/sales/returns/managing-returns.html). 
-* See [Orders: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/sales/orders/references/orders-reference-information.html) to learn about the attributes used to manage orders.
+* To learn how you can manage the created returns, see [Managing Returns](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/returns/managing-returns.html). 
+* See [Orders: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/orders/references/orders-reference-information.html) to learn about the attributes used to manage orders.
 

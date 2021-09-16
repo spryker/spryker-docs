@@ -14,7 +14,7 @@ A shopping list is always saved disregarding if a company user logs out and logs
 There are two ways to create a shopping list:
 
 * through a [shopping list widget](/docs/scos/user/features/{{page.version}}/shopping-list/shopping-list-widget/shopping-list-widget.html) in the header of the shop
-* from Shopping Lists page in My Account menu. See [Creating a shopping list](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-shopping-lists.html#create-shopping-list) for more detailed instruction.
+* from Shopping Lists page in My Account menu. See [Creating a shopping list](/docs/scos/user/user-guides/page.version/shop-user-guide/shop-guide-shopping-lists.html#create-shopping-list) for more detailed instruction.
 
 New items are added to shopping lists by clicking Add to Shopping List on the product details page.
 
@@ -24,7 +24,7 @@ Company users can create not just one, but multiple shopping lists to be used fo
 These could be, for instance, separate shopping lists for daily, weekly and monthly purchases.
 {% endinfo_block %}
 
-The detailed information on managing shopping lists is covered in the [Shop User Guide](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-shopping-lists.html).
+The detailed information on managing shopping lists is covered in the [Shop User Guide](/docs/scos/user/user-guides/page.version/shop-user-guide/shop-guide-shopping-lists.html).
 
 ## Permissions Management for Shared Shopping Lists
 

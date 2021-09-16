@@ -32,7 +32,7 @@ You manage the orders by:
 </br>**To set statuses for a specific item in the order:**
 In the **Order Items** section, click the status icon in the _Trigger event_ column for a specific shipment item.
 ***
-To learn more about the order statuses, see [Orders: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/sales/orders/references/orders-reference-information.html).
+To learn more about the order statuses, see [Orders: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/orders/references/orders-reference-information.html).
 ***
 ## Claiming Orders
 You can create a reclamation for individual orders on the Overview of Orders page. Creating a reclamation means that the order is flagged as "Reclamation," and the reclamations will not be linked to neither an order status nor to a state machine. There are two reasons for this: first is that this would be different in every project and second is that claims have to be checked on an individual basis and may not influence order item status at all.

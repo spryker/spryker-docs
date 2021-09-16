@@ -21,6 +21,6 @@ If a specific product (or a list of products) is whitelisted, the merchant relat
 ***
 **What's next?**
 
-* To learn how product lists are created, see [Creating a Product List](/docs/scos/user/user-guides/201811.0/back-office-user-guide/products/product-lists/creating-a-product-list.html).
-* To learn how the product lists are managed, see [Managing Product Lists](/docs/scos/user/user-guides/201811.0/back-office-user-guide/products/product-lists/managing-product-lists.html).
-* To learn more about the attributes you select and enter when creating or managing product lists, see [Product Lists: Reference Information](/docs/scos/user/user-guides/201811.0/back-office-user-guide/products/product-lists/references/product-lists-reference-information.html).
+* To learn how product lists are created, see [Creating a Product List](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/product-lists/creating-a-product-list.html).
+* To learn how the product lists are managed, see [Managing Product Lists](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/product-lists/managing-product-lists.html).
+* To learn more about the attributes you select and enter when creating or managing product lists, see [Product Lists: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/product-lists/references/product-lists-reference-information.html).

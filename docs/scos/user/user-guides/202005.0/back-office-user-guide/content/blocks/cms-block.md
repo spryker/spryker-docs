@@ -19,6 +19,6 @@ You can work with CMS blocks after they have been installed for your project.
 ***
 **What's next?**
 
-* To know more about how to add a CMS block to a page, see [Creating a CMS Block](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/blocks/creating-a-cms-block.html).
-* To know more about how to update and view CMS blocks, see [Managing CMS Blocks](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/blocks/managing-cms-blocks.html).
-* To learn more about the attributes used to create and edit CMS blocks, see [CMS Blocks: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/blocks/references/cms-block-reference-information.html) section.
+* To know more about how to add a CMS block to a page, see [Creating a CMS Block](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/creating-a-cms-block.html).
+* To know more about how to update and view CMS blocks, see [Managing CMS Blocks](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/managing-cms-blocks.html).
+* To learn more about the attributes used to create and edit CMS blocks, see [CMS Blocks: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/references/cms-block-reference-information.html) section.

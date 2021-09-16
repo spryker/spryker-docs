@@ -64,7 +64,7 @@ When creating a custom implementation, check and follow the applicable legislati
 
 ## Customer Experience
 
-Spryker consistently delivers the scalable operating system without coupling it to a project infrastructure. As a consequence, the project should take care of impact of the **Customer Delete** functionality on customer experience. Read more about session sensitive actions in [Migration Guide - Customer](/docs/scos/dev/migration-and-integration/201903.0/module-migration-guides/migration-guide-customer.html).
+Spryker consistently delivers the scalable operating system without coupling it to a project infrastructure. As a consequence, the project should take care of impact of the **Customer Delete** functionality on customer experience. Read more about session sensitive actions in [Migration Guide - Customer](/docs/scos/dev/migration-and-integration/page.version/module-migration-guides/migration-guide-customer.html).
 
 ### Case insensitive queries for email
 

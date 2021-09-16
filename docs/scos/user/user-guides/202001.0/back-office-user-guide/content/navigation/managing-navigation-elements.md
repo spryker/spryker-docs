@@ -58,4 +58,4 @@ To **edit, delete, deactivate or activate** a navigation element, in the **List 
 ![Reordering nodes](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Navigation/Managing+Navigation/reordering-nodes.gif){height="200" width="450"}
 ***
 **Tips & Tricks**
-To know more about the node types that you select, see [Navigation Node Types](/docs/scos/user/user-guides/202001.0/back-office-user-guide/navigation/references/navigation-node-types.html) in the References section.
+To know more about the node types that you select, see [Navigation Node Types](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/navigation/references/navigation-node-types.html) in the References section.

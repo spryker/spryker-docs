@@ -70,4 +70,4 @@ On the **Edit Placeholders: [Page Name]** editor, you can do the following:
 * Switch to the list of pages by clicking **Back to CMS** on the top of the page.
 ***
 **What's next?**
-To know more about the attributes you see, select and enter while managing CMS pages, see the [CMS Pages: Reference Information](/docs/scos/user/user-guides/201811.0/back-office-user-guide/content-management/pages/references/cms-pages-reference-information.html) article.
+To know more about the attributes you see, select and enter while managing CMS pages, see the [CMS Pages: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/pages/references/cms-pages-reference-information.html) article.

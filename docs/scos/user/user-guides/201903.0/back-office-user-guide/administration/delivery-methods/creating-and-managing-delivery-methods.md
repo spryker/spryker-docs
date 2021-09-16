@@ -11,7 +11,7 @@ redirect_from:
 This topic describes the procedures for creating and managing shipment methods.
 ***
 **Prerequisites**
-Once you decide to add a new shipment method, make sure that you have a carrier company to assign a shipment method on the list of delivery methods. If you don't have an appropriate carrier, see [Creating a Carrier Company](/docs/scos/user/user-guides/201903.0/back-office-user-guide/administration/shipment/creating-a-carrier-company.html). You also need to make sure that you have an appropriate tax set in the **Taxes > Tax Sets** section, see [Taxes](/docs/scos/user/user-guides/201903.0/back-office-user-guide/taxes/taxes.html).
+Once you decide to add a new shipment method, make sure that you have a carrier company to assign a shipment method on the list of delivery methods. If you don't have an appropriate carrier, see [Creating Carrier Companies](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/delivery-methods/creating-carrier-companies.html). You also need to make sure that you have an appropriate tax set in the **Taxes > Tax Sets** section, see [Taxes](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/taxes/taxes.html).
 ***
 To start working with the delivery methods, navigate to the **Administration > Shipment > Delivery Methods** section.
 ***

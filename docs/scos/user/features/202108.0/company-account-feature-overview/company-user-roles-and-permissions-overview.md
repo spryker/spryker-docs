@@ -149,4 +149,4 @@ Are you a developer? See [Company Account feature walkthrough](/docs/scos/dev/fe
 
 ## See next
 
-[Business on Behalf overview](/docs/scos/user/features/{{page.version}}/company-account/company-account-feature-overview/business-on-behalf-overview.html)
+[Business on Behalf overview](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/business-on-behalf-overview.html)

@@ -55,37 +55,6 @@ Product blocks are blocks that can be embedded in the product template, for whic
 
 --->
 
-## If you are:
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\cms-feature-integration.md" class="mr-link">Enable CMS blocks in your project by integrating the CMS feature</a></li>
-<li><a href="docs\scos\dev\technical-enhancements\enabling-the-category-cms-blocks.md" class="mr-link">Install and configure a Category Block</a></li>
-                <li><a href="docs\scos\dev\technical-enhancements\enabling-cms-block-widget.md" class="mr-link">Enable CMS block widget</a></li>
-<!-- <li><a href="https://documentation.spryker.com/docs/cms-block-multistore" class="mr-link">Enable multi-store management for CMS blocks</a></li>-->
-                <li>
-<li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-cmscollector.md" class="mr-link">Migrate the CMS Collector module from version 1.* to version 2.*</a></li>
-<li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-cmsblock.md#upgrading-from-version-1---to-version-2--" class="mr-link">Migrate the CMS Block module from version 1.* to version 2.*</a></li>
-<li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-cms-block-category-connector.md class="mr-link">Migrate the CMS Block Category Connector module from version 1.* to version 2.*</a></li>
-<li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-cms-block-category-connector-migration-console.md" class="mr-link">Migrate the CMS Block Category Connector Console module from version 1.* to version 2.*</a></li>
-<li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-cms-block-collector.html#upgrading-from-version-1---to-version-2--" class="mr-link">Migrate the CMS Block Collector  module from version 1.* to version 2.*</a></li>
-<li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-cmsblockgui.md#upgrading-from-version-1---to-version-2--" class="mr-link">Migrate the CMS Block GUI  module from version 1.* to version 2.*</a></li>
-                <li><a href="docs\scos\dev\technical-enhancements\enabling-the-product-cms-block.md" class="mr-link">Install and configure a Product Block</a></li>
-    </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\content\blocks\creating-a-cms-block.md" class="mr-link">Create a CMS Block</a></li>
-                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\content\blocks\managing-cms-blocks.md" class="mr-link">Manage CMS Blocks</a></li>
-            </ul>
-        </div>  
-</div>
-</div>
 
 ## See next
 

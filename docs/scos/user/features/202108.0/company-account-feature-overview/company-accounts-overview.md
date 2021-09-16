@@ -113,4 +113,4 @@ Are you a developer? See [Company Account feature walkthrough](/docs/scos/dev/fe
 {% endinfo_block %}
 
 ## See next
-[Business Units overview](/docs/scos/user/features/{{page.version}}/company-account/company-account-feature-overview/business-units-overview.html)
+[Business Units overview](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/business-units-overview.html)

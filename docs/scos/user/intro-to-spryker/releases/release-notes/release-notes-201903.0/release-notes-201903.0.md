@@ -151,7 +151,7 @@ We are introducing one of the core B2B features which enables managers to contro
 * Business on Behalf: Back Office interface for creating Business on Behalf users has been implemented. Now, the feature supports both ways to create Business on Behalf users – via Import and through the Admin UI.
 * Reclamation: Allows creating a reclamation from an order on the item level.
 
-**Documentation**: [Checkout](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html), [Business on Behalf](/docs/scos/user/features/{{page.version}}/company-account/company-account-feature-overview/business-on-behalf-overview.html), [Reclamations](https://documentation.spryker.com/2021080/docs/reclamations).
+**Documentation**: [Checkout](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html), [Business on Behalf](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/business-on-behalf-overview.html), [Reclamations](https://documentation.spryker.com/2021080/docs/reclamations).
 
 ## Partner Integrations
 ### Heidelpay Marketplace Payments

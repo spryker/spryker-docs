@@ -8,7 +8,7 @@ redirect_from:
   - /v5/docs/en/retrieving-company-user-information-201907
 ---
 
-The [Company Account](/docs/scos/user/features/{{page.version}}/company-account-management/company-account-overview/company-account-overview.html) feature provided by Spryker Commerce OS allows corporate customers to create [Company User Accounts](/docs/scos/user/features/{{page.version}}/company-account-management/company-account-overview/company-account-and-general-organizational-structure.html) for their employees. This capability enables customers to organize purchasing activities in their companies. Company Accounts are typically organized in Business Units depending on the job roles they perform. Any user can impersonate as multiple Company Accounts they have access to, which provides them the freedom to organize their work when performing different roles in a company.
+The [Company Account](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html) feature provided by Spryker Commerce OS allows corporate customers to create [Company User Accounts](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html) for their employees. This capability enables customers to organize purchasing activities in their companies. Company Accounts are typically organized in Business Units depending on the job roles they perform. Any user can impersonate as multiple Company Accounts they have access to, which provides them the freedom to organize their work when performing different roles in a company.
 
 The **Company Accounts API** provides REST access to retrieving Company User information.
 

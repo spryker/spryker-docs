@@ -25,7 +25,7 @@ To restrict the products, a Shop Administrator needs to create a product list, i
 
 To create product lists, follow the [guideline for the Back Office](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-lists/creating-a-product-list.html).
 
-You can check more cases of product restrictions workflow on the [Restricted Products Behavior](/docs/scos/user/features/{{page.version}}/merchant-product-restrictions/restricted-products-behavior.html) page.
+You can check more cases of product restrictions workflow on the [Restricted Products Behavior](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-product-restrictions-feature-walkthrough/restricted-products-behavior.html) page.
 
 ## Current constraints
 

@@ -90,7 +90,7 @@ All the thresholds have a store relation. If you have a multi-store and multi-cu
 
 
 ## Merchant order thresholds
-A *merchant order threshold* is a threshold that is applied to the customers belonging to the [merchant relation](/docs/scos/user/features/{{page.version}}/merchant-b2b-contracts/merchant-b2b-contracts-feature-overview.html) for which it is defined.   
+A *merchant order threshold* is a threshold that is applied to the customers belonging to the [merchant relation](/docs/scos/user/features/{{page.version}}/merchant-b2b-contracts-feature-overview.html) for which it is defined.   
 
 If a global and a merchant order thresholds are defined, both of them are applied to the orders of the customers belonging to the merchant relation.
 

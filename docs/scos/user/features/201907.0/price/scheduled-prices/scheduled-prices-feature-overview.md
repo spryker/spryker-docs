@@ -64,6 +64,6 @@ In this case:
 
 Currently, the feature has the following functional constraints which are going to be resolved in the future.
 
-The feature does not work with merchant prices ([relations](/docs/scos/user/features/{{page.version}}/company-account-management/merchants-and-merchant-relations/merchants-and-merchant-relations.html)) and [volume prices](/docs/scos/user/features/{{page.version}}/price/volume-prices/volume-prices.html).
+The feature does not work with merchant prices ([relations](/docs/scos/user/features/{{page.version}}/merchant-b2b-contracts-feature-overview.html)) and [volume prices](/docs/scos/user/features/{{page.version}}/price/volume-prices/volume-prices.html).
 
 <!-- Last review date: Jun 13, 2019by Jeremy Foruna, Andrii Tserkovnyi -->

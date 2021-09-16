@@ -30,10 +30,10 @@ Once the customer clicks **Redeem code**, the page refreshes to show the discoun
 
 The **Clear all** action disables all the applied discounts while the **Remove** action disables a single discount.
 
-Voucher codes are generated in the Back Office > *Discount* section > *Edit discount* page > [Voucher codes](/docs/scos/user/features/{{page.version}}/promotions-and-discounts/discount/discount.html#voucher-codes-tab) tab. See [Creating a Discount Voucher](/docs/scos/user/user-guides/202001.0/back-office-user-guide/discount/creating-a-discount/creating-a-discount-voucher.html) for more information.
+Voucher codes are generated in the Back Office > *Discount* section > *Edit discount* page > [Voucher codes](/docs/scos/user/features/{{page.version}}/promotions-and-discounts/discount/discount.html#voucher-codes-tab) tab. See [Creating a Discount Voucher](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/discount/creating-a-discount/creating-a-discount-voucher.html) for more information.
 
 {% info_block warningBox %}
-This tab is available when the **Voucher** discount type is selected in the [General information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/discount/creating-a-discount/creating-a-cart-rule-discount.html
+This tab is available when the **Voucher** discount type is selected in the [General information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/discount/creating-a-discount/creating-a-cart-rule-discount.html
 {% endinfo_block %} tab.)
 
 

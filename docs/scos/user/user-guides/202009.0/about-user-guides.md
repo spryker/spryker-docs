@@ -10,5 +10,5 @@ redirect_from:
 
 This section contains information on UI interface and guidelines what a shop user can do in:
 
-[Back Office guide](/docs/scos/user/user-guides/202009.0/back-office-user-guide/overview-of-the-back-office-user-guide.html): These instructions can be extremely helpful to the Shop Administrators and shop owners who are responsible for configuring the administration area of the shop.
+[Back Office guide](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/overview-of-the-back-office-user-guide.html): These instructions can be extremely helpful to the Shop Administrators and shop owners who are responsible for configuring the administration area of the shop.
 ![The Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/the-back-office.png)

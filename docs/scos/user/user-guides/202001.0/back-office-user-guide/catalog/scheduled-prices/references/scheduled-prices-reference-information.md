@@ -35,7 +35,7 @@ In the **Scheduled prices imported** section you see the following:
 | Attribute | Description |
 | --- | --- |
 | **Schedule name** | The name of the list of price product schedules which will be saved in the database. |
-| **Select your CSV file** | Here, you can select the file with price product schedules which you want to import. See [HowTo - Import Scheduled Prices]( /docs/scos/dev/tutorials/202001.0/howtos/feature-howtos/data-imports/howto-import-scheduled-prices.html) to learn more about the file format. |
+| **Select your CSV file** | Here, you can select the file with price product schedules which you want to import. See [HowTo - Import Scheduled Prices]( /docs/scos/dev/tutorials/{{page.version}}/howtos/feature-howtos/data-imports/howto-import-scheduled-prices.html) to learn more about the file format. |
 
 ## Scheduled Prices: Import Dry Run Page
 
@@ -62,7 +62,7 @@ The **Scheduled Prices: Import dry run** page is divided into four sections.
 | Attribute | Description |
 | --- | --- |
 | **Schedule name** |The name of the list of price product schedules which you have just imported.  |
-| **Select your CSV file** |Here, you can select the file with price product schedules which you want to re-import. It is used in case you want to correct or change some of the schedules you have imported. Learn about file format in [HowTo - Import Scheduled Prices](/docs/scos/dev/tutorials/202001.0/howtos/feature-howtos/data-imports/howto-import-scheduled-prices.html).  |
+| **Select your CSV file** |Here, you can select the file with price product schedules which you want to re-import. It is used in case you want to correct or change some of the schedules you have imported. Learn about file format in [HowTo - Import Scheduled Prices](/docs/scos/dev/tutorials/{{page.version}}/howtos/feature-howtos/data-imports/howto-import-scheduled-prices.html).  |
 | **Row n°** | A numeric identifier of a price schedule entry in the list of price schedules. |
 | **Error** |  Describes why a particular price schedule has not been imported.|
 | **ID** | A numeric identifier of price schedule. |

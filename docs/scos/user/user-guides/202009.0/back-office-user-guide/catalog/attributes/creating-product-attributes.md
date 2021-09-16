@@ -41,6 +41,6 @@ To apply a translation to all the other locales, select ![copy to other language
 ***
 
 ## Next steps
-* Learn how to [manage the product attributes](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/attributes/managing-product-attributes.html). 
-* Learn about the attributes used to created product attributes in [Reference information: product attributes](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/attributes/references/reference-information-product-attributes.html).
+* Learn how to [manage the product attributes](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/attributes/managing-product-attributes.html). 
+* Learn about the attributes used to created product attributes in [Reference information: product attributes](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/attributes/references/reference-information-product-attributes.html).
 

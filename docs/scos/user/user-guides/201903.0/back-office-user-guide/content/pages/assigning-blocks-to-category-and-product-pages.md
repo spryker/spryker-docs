@@ -38,6 +38,6 @@ If you want to create different versions of the page per locale, add the general
 **What's next?**
 The block has been added to the page. So, you can preview the page draft to see how it will look like on the store website or publish the page.
 
-* To learn how to preview the page draft, see the [Previewing a Page](/docs/scos/user/user-guides/201903.0/back-office-user-guide/content-management/pages/managing-cms-pages.html#previewing-cms-pages) section in [Managing CMS Pages](/docs/scos/user/user-guides/201903.0/back-office-user-guide/content-management/pages/managing-cms-pages.html).
+* To learn how to preview the page draft, see the [Previewing a Page](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/managing-cms-pages.html#previewing-cms-pages) section in [Managing CMS Pages](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/managing-cms-pages.html).
 
-* To learn how to publish the page, see the [Publishing a Page](/docs/scos/user/user-guides/201903.0/back-office-user-guide/content-management/pages/managing-cms-pages.html#publishing-a-page) section in [Managing CMS Pages](/docs/scos/user/user-guides/201903.0/back-office-user-guide/content-management/pages/managing-cms-pages.html).
+* To learn how to publish the page, see the [Publishing a Page](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/managing-cms-pages.html#publishing-a-page) section in [Managing CMS Pages](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/managing-cms-pages.html).

@@ -15,7 +15,7 @@ Conditions are also called decision rules.
 * A cart rule can have one or more conditions linked to it. The cart rule is redeemed only if every condition linked to it is satisfied. 
 * Vouchers can be linked to one or more conditions. Vouchers are only redeemed if all linked conditions are satisfied.
 
-The conditions are created in the form of a query and may be entered as a plain query or via the query builder. (See [Discount Calculation: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/discount/references/reference-information-discount-calculation.html) for more details.)
+The conditions are created in the form of a query and may be entered as a plain query or via the query builder. (See [Discount Calculation: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/discount/references/reference-information-discount-calculation.html) for more details.)
 
 {% info_block infoBox "Info" %}
 If you do not need to add a condition, you can leave the query builder empty.

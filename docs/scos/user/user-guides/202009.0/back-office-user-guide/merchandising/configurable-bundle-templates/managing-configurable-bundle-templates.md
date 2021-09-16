@@ -126,5 +126,5 @@ This opens the *Configurable Bundle Templates* page with the success message dis
 **What's next?**
 Now you know how to manage the configurable bundle templates that already exist in the shop.
 
-See [configurable bundle templates: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/configurable-bundle-templates/references/reference-information-configurable-bundle-templates.html) to learn about the attributes used to manage configurable bundle templates.
+See [configurable bundle templates: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/configurable-bundle-templates/references/reference-information-configurable-bundle-templates.html) to learn about the attributes used to manage configurable bundle templates.
 

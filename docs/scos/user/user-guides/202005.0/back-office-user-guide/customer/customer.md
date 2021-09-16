@@ -19,5 +19,5 @@ The customer registration can be completed only by the customer by setting up th
 
 ***
 **What's next?**
-* To start managing customers, see [Managing Customers](/docs/scos/user/user-guides/202005.0/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html).
-* To start working with companies, see [Company Account](/docs/scos/user/user-guides/202005.0/back-office-user-guide/customer/company-account/company-account-feature-overview.html).
+* To start managing customers, see [Managing Customers](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html).
+* To start working with companies, see [Company Account](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/company-account.html).

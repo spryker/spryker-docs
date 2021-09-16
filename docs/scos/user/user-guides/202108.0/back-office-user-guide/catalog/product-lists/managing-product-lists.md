@@ -102,4 +102,4 @@ To remove a product list:
     The *Overview of Product lists* page opens with the success message displayed.
 
 **What's next?**
-See the reference information of the [Creating a product list](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-lists/creating-a-product-list.html) guide to learn about the attributes you see, select, and enter while managing a product list.
+See the reference information of the [Creating a product list](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-lists/creating-product-lists.html) guide to learn about the attributes you see, select, and enter while managing a product list.

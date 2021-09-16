@@ -8,6 +8,10 @@ redirect_from:
   - /2021080/docs/en/creating-abstract-products-and-product-bundles
   - /docs/creating-abstract-products-and-product-bundles
   - /docs/en/creating-abstract-products-and-product-bundles
+  - /2021080/docs/creating-product-bundles
+  - /2021080/docs/en/creating-product-bundles
+  - /docs/creating-product-bundles
+  - /docs/en/creating-product-bundles
 ---
 
 This topic describes how to create [abstract products](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/products-overview.html#abstract-products-and-product-variants) and [product bundles](/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.html).
@@ -85,7 +89,7 @@ The following table describes the attributes you enter and select when defining 
 **Default and original prices on the Storefront**
 If you want to display the difference in price in order to show what the price was before and how it changed, you add both Default and Original prices.
 The default prices are displayed in the online store as a current price, while the original one is displayed strikethrough.
-![Default and Original prices](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Managing+products/Products:+Reference+Information/default-and-original-prices.gif){height="320" width="640"}
+![Default and Original prices](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Managing+products/Products:+Reference+Information/default-and-original-prices.gif)
 
 ## Defining product variants
 

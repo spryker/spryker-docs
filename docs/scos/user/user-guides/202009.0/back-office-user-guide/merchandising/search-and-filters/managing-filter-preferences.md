@@ -49,5 +49,5 @@ To edit a filter preference:
 **What's next?**
 Once the filter preference is created, you can use it in the **Category Filters** section. That is done to enable specific category(s) to which the product with this attribute is assigned, to be filtered based on this specific filter.
 
-See [Managing Category Filters](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/search-and-filters/managing-category-filters.html) to know how to set up the category filters.
+See [Managing Category Filters](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/search-and-filters/managing-category-filters.html) to know how to set up the category filters.
 

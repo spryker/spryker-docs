@@ -21,7 +21,7 @@ To set up a [hard minimum threshold](/docs/scos/user/features/{{page.version}}/c
 
 The page refreshes, and the message about successful threshold update is displayed.
 
-See [Threshold: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/administration/thresholds/references/reference-information-threshold.html) to know more about the hard threshold.
+See [Threshold: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/thresholds/references/reference-information-threshold.html) to know more about the hard threshold.
 
 ## Setting up a Hard Maximum Threshold
 
@@ -52,7 +52,7 @@ To set up a [soft minimum threshold](/docs/scos/user/features/{{page.version}}/c
 
 The page refreshes, and the message about successful threshold update is displayed.
 
-See [Threshold: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/administration/thresholds/references/reference-information-threshold.html) to know more about the soft threshold and its types.
+See [Threshold: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/thresholds/references/reference-information-threshold.html) to know more about the soft threshold and its types.
 
 ## Setting up Several Thresholds
 To set up several threshold types:

@@ -49,14 +49,14 @@ Here you can perform the following actions on shipments:
 * Move items between shipments
 * Change the state of each item or all items per shipment
 
-See [Orders](/docs/scos/user/user-guides/202009.0/back-office-user-guide/sales/orders/managing-orders.html) for more details on how to create and manage shipments in the Back Office.
+See [Orders](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/orders/managing-orders.html) for more details on how to create and manage shipments in the Back Office.
 
 ## Constraints
 ### Gift Card compatibility
 Currently, the Split Delivery is not compatible with the Gift Cards feature. If you want to buy a Gift card, only *one* delivery address can be selected for the whole order. 
 
 ### Limitation for payment service providers
-Most of payment service providers (PSP) support a single delivery address for a given order, while Split Delivery enables your customers to add multiple shipments to the same order. In this case, you need to modify the configuration of the online store to allow your customers to deliver order items to different addresses. See [HowTo - Disable Split Delivery in Yves Interface](/docs/scos/dev/tutorials-and-howtos/202009.0/howtos/feature-howtos/howto-disable-split-delivery-in-yves-interface.html) for information on how to do that.
+Most of payment service providers (PSP) support a single delivery address for a given order, while Split Delivery enables your customers to add multiple shipments to the same order. In this case, you need to modify the configuration of the online store to allow your customers to deliver order items to different addresses. See [HowTo - Disable Split Delivery in Yves Interface](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/howto-disable-split-delivery-in-yves-interface.html) for information on how to do that.
 
 <!--
 ### Product Bundles
@@ -72,7 +72,7 @@ With Split Delivery, Product Bundles items can be shipped to different delivery 
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
- <li><a href="/docs/scos/dev/tutorials-and-howtos/202009.0/howtos/feature-howtos/howto-disable-split-delivery-in-yves-interface.html" class="mr-link">Disable Split Delivery on the Storefront</a></li>                
+ <li><a href="/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/howto-disable-split-delivery-in-yves-interface.html" class="mr-link">Disable Split Delivery on the Storefront</a></li>                
                 <li><a href="docs\scos\dev\migration-concepts\split-delivery-migration-concept.md" class="mr-link">Enable Split Delivery in your project</a></li>
             </ul>
         </div>

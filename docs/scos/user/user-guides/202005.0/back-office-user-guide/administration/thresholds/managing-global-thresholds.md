@@ -19,7 +19,7 @@ To set up a hard threshold:
 3. Enter **Message** for all the locales.
 4. Scroll down the page and click **Save**.
 
-See [Threshold: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/administration/thresholds/references/threshold-reference-information.html) to know more about the hard threshold.
+See [Threshold: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/thresholds/references/threshold-reference-information.html) to know more about the hard threshold.
 
 ## Setting up a Soft Threshold
 To set up a soft threshold:
@@ -33,7 +33,7 @@ To set up a soft threshold:
 5. Populate the **Message** field for all the locales.
 6. Click **Save**.
 
-See [Threshold: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/administration/thresholds/references/threshold-reference-information.html) to know more about the soft threshold and its types.
+See [Threshold: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/thresholds/references/threshold-reference-information.html) to know more about the soft threshold and its types.
 
 ## Setting up Both Hard and Soft Threshold
 To set up both threshold types:

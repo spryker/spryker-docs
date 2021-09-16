@@ -35,14 +35,14 @@ To create a product variant, navigate to **Catalog** > **Products** section.
 The merchant relation prices are inherited by Product Variants as well.
 {% endinfo_block %}
     3. Otherwise, enter Original and eventually Default prices for the product for Gross and Net price modes.
-    4. **B2B only:** In the **Merchant Price Dimension**, select the merchant relationship to define a special price per merchant relation. See [Merchants](https://documentation.spryker.com/v6/docs/merchants) and [Products: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/products/references/reference-information-products.html) to know more.
+    4. **B2B only:** In the **Merchant Price Dimension**, select the merchant relationship to define a special price per merchant relation. See [Merchants](https://documentation.spryker.com/v6/docs/merchants) and [Products: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/references/reference-information-products.html) to know more.
     5. Select **Quantity** for the product and then select **Never out of stock** if you want the product to never go out of stock.
 6. **Optionally**: Click **Next** to go to the next tab (Image) or select a necessary tab.
     1. In the Image tab, add images for the product and define the image order.
 7. **Optionally**: Click **Next** of select the **Assign bundled products** tab. This tab is used only if you need to create a bundles product. See [Creating and Managing Product Bundles](https://documentation.spryker.com/v6/docs/creating-and-managing-product-bundles) to know more.
 8. Click **Save**.
 
-Once you click **Save**, the page is refreshed and you will see two additional tabs: Discontinue and Product Alternatives. See  [Discontinuing Products](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/products/managing-products/discontinuing-a-product.html) and [Adding Product Alternatives](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/products/managing-products/adding-product-alternatives.html) to know more.
+Once you click **Save**, the page is refreshed and you will see two additional tabs: Discontinue and Product Alternatives. See  [Discontinuing Products](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/managing-products/discontinuing-products.html) and [Adding Product Alternatives](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/managing-products/adding-product-alternatives.html) to know more.
 
 {% info_block errorBox "Important" %}
 
@@ -51,5 +51,5 @@ To make sure your product wil be shown and searchable in your online store, we h
 {% endinfo_block %}
 ***
 **What's next?**
-Once you have set things up, you will most likely need to know what managing actions you can do with your products. See articles in the [Managing Products](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/products/managing-products/managing-products.html) section.
+Once you have set things up, you will most likely need to know what managing actions you can do with your products. See articles in the [Managing Products](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/managing-products/managing-products.html) section.
 

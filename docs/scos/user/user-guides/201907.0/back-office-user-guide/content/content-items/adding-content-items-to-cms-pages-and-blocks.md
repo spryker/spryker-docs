@@ -49,7 +49,7 @@ Templates are project-specific and are usually created by a developer and a busi
 6. Click **Save**. A new content item widget will be added to the page.
 
 {% info_block infoBox %}
-You can preview the page to see how the content item widget will be displayed on the website or publish it. See  [Managing CMS Pages](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/pages/managing-cms-pages.html
+You can preview the page to see how the content item widget will be displayed on the website or publish it. See  [Managing CMS Pages](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/managing-cms-pages.html
 {% endinfo_block %} to learn how to preview and publish the page.)
 ***
 ## Adding Content Item Widgets to Blocks
@@ -77,10 +77,10 @@ Keep in mind that you can select only **one** item and **one** template at a tim
 6. Click **Save**. The new content item widget will be added to the block.
 
 {% info_block infoBox %}
-You can preview how the content item widget will be displayed on the website by following the steps described in  [Managing CMS Blocks](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/blocks/managing-cms-blocks.html).
+You can preview how the content item widget will be displayed on the website by following the steps described in  [Managing CMS Blocks](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/managing-cms-blocks.html).
 {% endinfo_block %}
 ***
 **What's next?**
-To know more about how to edit a content item widget, see the [Editing Content Item Widgets](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/content-item-widgets/editing-content-item-widgets.html) article.
+To know more about how to edit a content item widget, see the [Editing Content Item Widgets](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/content-item-widgets/editing-content-item-widgets.html) article.
 
-To learn more about types of content item widgets and their templates, see articles in the [References](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/content-item-widgets/references/content-item-widgets-templates-reference-information.html) section.
+To learn more about types of content item widgets and their templates, see articles in the [References](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/content-item-widgets/references/content-item-widgets-templates-reference-information.html) section.

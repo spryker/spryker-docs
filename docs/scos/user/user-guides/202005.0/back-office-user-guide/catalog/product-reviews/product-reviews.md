@@ -19,4 +19,4 @@ This section allows approving, rejecting, and deleting the reviews sent by shop 
 
 To get information on how to manage the reviews, read the following article:
 
-* [Managing Reviews](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/product-reviews/managing-product-reviews.html)
+* [Managing Reviews](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-reviews/managing-product-reviews.html)

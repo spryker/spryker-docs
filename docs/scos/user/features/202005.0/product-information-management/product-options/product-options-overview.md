@@ -31,7 +31,7 @@ In the Back Office, you can perform the following actions on product options:
 * assign product option groups to products
 * activate product options to make them visible in the Storefront
 
-See [Creating a Product Option](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/product-options/creating-a-product-option.html#creating-a-product-option) and [Managing Product Options](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/product-options/managing-product-options.html#managing-product-options) to learn more about how to work with product options in the Back Office.
+See [Creating a Product Option](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-options/creating-product-options.html#creating-a-product-option) and [Managing Product Options](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-options/managing-product-options.html#managing-product-options) to learn more about how to work with product options in the Back Office.
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/product-option-back-office.png) 
 
@@ -49,7 +49,7 @@ On the product detail page, the new product option group (1) will be displayed a
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/product-option-yves.png) 
 
-For more information about what other actions customers can perform on the product detail page, see [Shop Guide - Managing Products](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-managing-products.html). 
+For more information about what other actions customers can perform on the product detail page, see [Shop Guide - Managing Products](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/shop-guide-managing-products.html). 
 
 ## Current Constraints
 {% info_block infoBox %}

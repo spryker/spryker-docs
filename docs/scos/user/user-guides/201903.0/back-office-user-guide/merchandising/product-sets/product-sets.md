@@ -18,6 +18,6 @@ Multiple products can be offered as a set so that the customer can add them to c
 ***
 **What's next?**
 
-* To know why and how the product sets are created, see [Creating a Product Set](/docs/scos/user/user-guides/201903.0/back-office-user-guide/products/product-sets/creating-a-product-set.html).
-* To know how the product sets are managed, see [Managing Product Sets](/docs/scos/user/user-guides/201903.0/back-office-user-guide/products/product-sets/managing-product-sets.html).
-* To learn the attributes that you see, enter, and select while creating or managing product sets, see [Product Sets: Reference Information](/docs/scos/user/user-guides/201903.0/back-office-user-guide/products/product-sets/references/product-sets-reference-information.html).
+* To know why and how the product sets are created, see [Creating a Product Set](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/product-sets/creating-a-product-set.html).
+* To know how the product sets are managed, see [Managing Product Sets](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/product-sets/managing-product-sets.html).
+* To learn the attributes that you see, enter, and select while creating or managing product sets, see [Product Sets: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/product-sets/references/product-sets-reference-information.html).

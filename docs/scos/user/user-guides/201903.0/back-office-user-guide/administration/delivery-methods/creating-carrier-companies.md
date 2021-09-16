@@ -22,4 +22,4 @@ To start working with the carrier companies, navigate to the **Shipment** sectio
 ***
 **What's next?**
 You have now added a new carrier company for your store.
-The next step is to add a new shipment method to it. See the [Creating and Managing Shipment Methods](/docs/scos/user/user-guides/201903.0/back-office-user-guide/administration/shipment/creating-and-managing-shipment-methods.html) article.
+The next step is to add a new shipment method to it. See the [Creating and Managing Shipment Methods](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/delivery-methods/creating-and-managing-delivery-methods.html) article.

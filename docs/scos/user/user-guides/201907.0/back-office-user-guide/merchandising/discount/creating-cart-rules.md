@@ -21,22 +21,22 @@ A cart rule is a discount that is applied automatically when all attached discou
     2. In **Discount Type** drop-down, select **Cart Rule**.
     3. In the **Name** field, specify the name for the discount.
     4. _Optional_: Enter the description of the discount in the **Description** field.
-    5. Specify if the discount is exclusive. See [Discount: Reference Information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/discount/references/discount-reference-information.html) for more details.
+    5. Specify if the discount is exclusive. See [Discount: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/discount/references/discount-reference-information.html) for more details.
     6. Specify the validity interval (lifetime) of the discount.
 3. Click **Next** or select the **Discount calculation** tab to proceed.
 4. On the **Create Discount page >Discount calculation** tab, do the following:
-    1.  Select either Calculator percentage, or Calculator fixed in the **Calculator type** drop-down. See [Discount Calculation: Reference Information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/discount/references/discount-calculation-reference-information.html) for more details.
+    1.  Select either Calculator percentage, or Calculator fixed in the **Calculator type** drop-down. See [Discount Calculation: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/discount/references/discount-calculation-reference-information.html) for more details.
     {% info_block warningBox "Note" %}
 The next step varies based on the selected calculator type.
 {% endinfo_block %}
     a. **Calculator fixed**: Enter the prices to be discounted
     b.  **Calculator percentage**: Enter the values (percentage) to be discounted
-    2. Select the **Discount application type** and define what products the discount will be applied to. See [Discount Calculation: Reference Information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/discount/references/discount-calculation-reference-information.html) for more information.
+    2. Select the **Discount application type** and define what products the discount will be applied to. See [Discount Calculation: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/discount/references/discount-calculation-reference-information.html) for more information.
  5. Click **Next**, or select the **Conditions** tab to proceed.
  6. On the **Create Discount page >Conditions** tab, do the following:
-    1. Select the **Apply when** conditions or click **Plain query** and enter the  query manually. See [Discount Conditions: Reference Information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/discount/references/discount-conditions-reference-information.html).
+    1. Select the **Apply when** conditions or click **Plain query** and enter the  query manually. See [Discount Conditions: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/discount/references/discount-conditions-reference-information.html).
     2. Enter the value for **The discount can be applied if the query applies for at least X item(s).** field.
 7. Click **Save** to create the new discount. 
 ***
 **What's next?**
-See [Managing Discount](/docs/scos/user/user-guides/201907.0/back-office-user-guide/discount/managing-discounts.html) to know more about the actions you can do once the discount is created.
+See [Managing Discount](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/discount/managing-discounts.html) to know more about the actions you can do once the discount is created.

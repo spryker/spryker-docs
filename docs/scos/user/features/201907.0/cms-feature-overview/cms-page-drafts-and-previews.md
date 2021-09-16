@@ -11,8 +11,8 @@ redirect_from:
 With the CMS draft feature the Back Office user can create drafts of CMS pages without affecting the current live version of the page. It is possible to preview draft version of content before publishing it to see how the page will look like when it is live. This article will tell you how to enable the preview draft page feature.
 
 ## Prerequisites
-* Upgrade the `spryker/cms` module to at least 6.2 version. Additional information on how to migrate the `spryker/cms` module can be found in [Migration Guide - CMS](/docs/scos/dev/migration-and-integration/201907.0/module-migration-guides/migration-guide-cms.html).
-* If you have the `spryker/cms-collector` module installed, upgrade it to at least 2.0 version. Additional information on how to migrate the `spryker/cms-collector` module can be found in [Migration Guide - CMS Collector](/docs/scos/dev/migration-and-integration/201907.0/module-migration-guides/migration-guide-cms.html-collector).
+* Upgrade the `spryker/cms` module to at least 6.2 version. Additional information on how to migrate the `spryker/cms` module can be found in [Migration Guide - CMS](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-cms.html).
+* If you have the `spryker/cms-collector` module installed, upgrade it to at least 2.0 version. Additional information on how to migrate the `spryker/cms-collector` module can be found in [Migration Guide - CMS Collector](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-cms.html-collector).
 * If you do not have the `spryker/cms-collector` module installed, register your CMS page data expander plugins to the `spryker/cms` module in the `CmsDependencyProvider` dependency provider.
 
 <details open>
@@ -42,7 +42,7 @@ class CmsDependencyProvider extends SprykerCmsDependencyProvider
 </br>
 </details>
 
-* Optionally, upgrade the `spryker/cms-gui` module to at least 4.3 version if you want to have access to the Yves [preview pages from the Back Office](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/pages/managing-cms-pages.html#previewing-cms-pages).
+* Optionally, upgrade the `spryker/cms-gui` module to at least 4.3 version if you want to have access to the Yves [preview pages from the Back Office](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/managing-cms-pages.html#previewing-cms-pages).
 
 ## Usage in Yves
 1. Create a controller action for preview pages in Yves.

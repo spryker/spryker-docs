@@ -25,7 +25,7 @@ This creates the new customer with the *Unverified* status in the *Customers* ta
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Customers/Customer%2C+Customer+Access%2C+Customer+Groups/Managing+Customers/BO-unverfied-customer.png) 
 
 
-To know more about the attributes you see, select, and enter while creating a customer, see [Customers: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/customer/customer-customer-access-customer-groups/references/reference-information-customers.html). 
+To know more about the attributes you see, select, and enter while creating a customer, see [Customers: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customer-customer-access-customer-groups/references/reference-information-customers.html). 
 
 ## Editing Customers 
 **To edit a customer:**
@@ -45,7 +45,7 @@ The **View customer details** page is designed to serve more purposes than just 
 
 On this page, you can view the orders placed by the customer, edit the addresses, or add another address, leave descriptive messages in the **Notes** section. 
 
-To know how the customer addresses are managed, see  [Managing Customer Addresses](/docs/scos/user/user-guides/202009.0/back-office-user-guide/customer/customer-customer-access-customer-groups/references/reference-information-customers.html).
+To know how the customer addresses are managed, see  [Managing Customer Addresses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customer-customer-access-customer-groups/references/reference-information-customers.html).
 
 ### Viewing customer details
 **To view customer details:**

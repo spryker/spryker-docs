@@ -22,4 +22,4 @@ The diagram below shows relations within the merchant domain:
 
 ![merchants-diagram.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Merchants+and+Merchant+Relations/Merchants+and+Merchant+Relations+Feature+Overview/merchants-diagram.png) 
 
-Merchants and merchant relations can be [managed in the Back Office](/docs/scos/user/user-guides/202001.0/back-office-user-guide/merchants/merchants.html). You can also import merchants and merchant relations in bulk from a .csv file. See [HowTo - Import Merchants and Merchant Relations](https://documentation.spryker.com/v4/docs/howto-import-merchants-and-merchant-relations) for details.
+Merchants and merchant relations can be [managed in the Back Office](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchants/merchants.html). You can also import merchants and merchant relations in bulk from a .csv file. See [HowTo - Import Merchants and Merchant Relations](https://documentation.spryker.com/v4/docs/howto-import-merchants-and-merchant-relations) for details.

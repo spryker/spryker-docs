@@ -79,7 +79,7 @@ An Approver can check all the Approval requests either on the **Shopping Carts**
 
 To approve or decline a cart, follow the steps below:
 
-1. Click the cart you would like to review to open the [Shopping Cart page](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-shopping-carts/shopping-carts-reference-information.html#shopping-cart).
+1. Click the cart you would like to review to open the [Shopping Cart page](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/shop-guide-shopping-carts/shopping-carts-reference-information.html#shopping-cart).
 2. Click **Checkout** to proceed to the Checkout Summary page where the widget is located.
 3. In the **Approval Request Widget** click **Approve** or **Decline**.
 ![Approve / Deny Widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Approval+Process/approve-deny-widget.png) 

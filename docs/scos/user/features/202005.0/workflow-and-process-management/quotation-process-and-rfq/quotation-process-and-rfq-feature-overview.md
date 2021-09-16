@@ -87,7 +87,7 @@ A Sales Representative can quickly access the RFQs via a Quote Request Widget th
 #### On Behalf of a Company User
 A Sales Representative can create an RFQ on behalf of any company user, then process it and even complete the checkout. This option is especially convenient when, for example, a company user is busy or doesn't have access to an account.
 
-To create an RFQ on behalf of a user, see [Creating an RFQ for a Customer](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-managing-requests-for-quotes-for-a-sales-representative.html#creating-an-rfq-for-a-customer)
+To create an RFQ on behalf of a user, see [Creating an RFQ for a Customer](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-managing-requests-for-quotes-for-a-sales-representative.html#creating-an-rfq-for-a-customer)
 
 The workflow with statuses for a Sales representative is presented in the schema below:
 ![Sales Rep Workflow](https://confluence-connect.gliffy.net/embed/image/0dedd086-45ab-494d-a2f8-04c92501a229.png?utm_medium=live&utm_source=custom) 

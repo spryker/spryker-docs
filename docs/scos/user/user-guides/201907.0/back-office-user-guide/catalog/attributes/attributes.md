@@ -19,7 +19,7 @@ Super Attributes in the Spryker Commerce OS are used to distinguish between the 
 ***
 **What's next?**
 To know how that attributes are created and managed, see the following articles:
-* [Creating Product Attributes](/docs/scos/user/user-guides/201907.0/back-office-user-guide/products/attributes/creating-a-product-attribute.html)
-* [Managing Product Attributes](/docs/scos/user/user-guides/201907.0/back-office-user-guide/products/attributes/managing-attributes.html)
+* [Creating Product Attributes](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/attributes/creating-product-attributes.html)
+* [Managing Product Attributes](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/attributes/managing-product-attributes.html)
 
 To know more about the fields you enter and select when working with attributes, see the _References_ section.

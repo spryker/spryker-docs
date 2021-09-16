@@ -17,5 +17,5 @@ It is used by:
 
 ***
 **What's next?**
-* To start working with your catalog, see [Abstract and Concrete Products](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/products/abstract-and-concrete-products.html).
+* To start working with your catalog, see [Abstract and Concrete Products](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/abstract-and-concrete-products.html).
 

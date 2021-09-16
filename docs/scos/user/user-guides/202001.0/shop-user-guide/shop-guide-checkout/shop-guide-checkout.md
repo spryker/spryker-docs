@@ -11,15 +11,15 @@ redirect_from:
 Checkout allows purchasing the items added to the cart.
 
 {% info_block infoBox %}
-If you have several shopping carts in your account, choose the right one and proceed with the checkout. See [Shop Guide - Shopping Carts](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-shopping-carts/shopping-carts.html
+If you have several shopping carts in your account, choose the right one and proceed with the checkout. See [Shop Guide - Shopping Carts](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/shop-guide-shopping-carts/shopping-carts.html
 {% endinfo_block %} for more information.)
 
 A typical checkout process includes the following steps:
 
-* [Address](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-checkout/shop-guide-address-step.html): Define one or several delivery addresses and add a billing address.
-* [Shipment](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-checkout/shop-guide-shipment-step.html): Select a shipment method and/or a delivery date.
-* [Payment](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-checkout/shop-guide-payment-step.html): Select the payment method.
-* [Summary](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-checkout/shop-guide-summary-step.html): View the details, update the information, if needed, and place the order.
+* [Address](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/shop-guide-checkout/shop-guide-address-step.html): Define one or several delivery addresses and add a billing address.
+* [Shipment](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/shop-guide-checkout/shop-guide-shipment-step.html): Select a shipment method and/or a delivery date.
+* [Payment](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/shop-guide-checkout/shop-guide-payment-step.html): Select the payment method.
+* [Summary](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/shop-guide-checkout/shop-guide-summary-step.html): View the details, update the information, if needed, and place the order.
 
 ![Checkout process](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Checkout/split-delivery-checkout.gif) 
 ***
@@ -27,4 +27,4 @@ A typical checkout process includes the following steps:
 
 After you added items to cart, it is time to proceed to the *Address* step and enter the delivery information.
 
-To learn more on how to set a delivery address, see [Shop Guide - Address step](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-checkout/shop-guide-address-step.html).
+To learn more on how to set a delivery address, see [Shop Guide - Address step](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/shop-guide-checkout/shop-guide-address-step.html).

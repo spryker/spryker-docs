@@ -101,4 +101,4 @@ To remove a product list:
 
 ***
 **What's next?**
-See [Product Lists: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/product-lists/references/reference-information-product-lists.html) to learn about the attributes you see, select, and enter while managing a product list.
+See [Product Lists: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-lists/references/reference-information-product-lists.html) to learn about the attributes you see, select, and enter while managing a product list.

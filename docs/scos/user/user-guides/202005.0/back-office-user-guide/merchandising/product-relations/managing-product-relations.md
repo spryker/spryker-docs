@@ -38,7 +38,7 @@ In the upper right corner of the page, click:
 
 3. To keep the changes, click **Save**.
 
-See [Product Relations: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/product-relations/references/product-relations-reference-information.html) to learn about the attributes used while editing a product relation.
+See [Product Relations: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-relations/references/product-relations-reference-information.html) to learn about the attributes used while editing a product relation.
 
 **Tips & Tricks**
 In the upper right corner of the page, click **List of product relations** to return to the list of product relations.
@@ -62,5 +62,5 @@ Make sure to click **Save** before clicking **List of product relations** or goi
 ***
 
 **What's next?**
-To learn about the attributes that you select and enter while managing product relations, see [Product Relations: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/product-relations/references/product-relations-reference-information.html).
+To learn about the attributes that you select and enter while managing product relations, see [Product Relations: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-relations/references/product-relations-reference-information.html).
 

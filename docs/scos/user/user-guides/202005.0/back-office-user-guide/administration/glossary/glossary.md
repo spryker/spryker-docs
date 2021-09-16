@@ -13,4 +13,4 @@ The Glossary section in the Back Office is mostly used by administrators when a 
 
 ***
 **What's next?**
-To know how the translations are managed, see [Managing Glossary](/docs/scos/user/user-guides/202005.0/back-office-user-guide/administration/glossary/managing-glossary.html).
+To know how the translations are managed, see [Managing Glossary](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/glossary/managing-glossary.html).

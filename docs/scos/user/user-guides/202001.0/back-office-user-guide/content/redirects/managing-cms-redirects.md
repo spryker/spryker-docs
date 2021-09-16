@@ -23,7 +23,7 @@ To start managing CMS redirects, navigate to the **Content Management > Redirect
 3. To keep the changes, click **Save**.
 
 {% info_block infoBox %}
-See [CMS Redirects: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/redirects/references/cms-redirects-references.html
+See [CMS Redirects: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/redirects/references/cms-redirects-references.html
 {% endinfo_block %} to learn more information about the attributes you need to enter.)
 
 {% info_block warningBox %}
@@ -43,4 +43,4 @@ On the **Edit a CMS redirect** page, you can do the following:
 3. This will successfully delete the redirect and remove it from the list of redirects.
 ***
 **What's next?**
-To learn more about attributes you enter on the page, see [CMS Redirects: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/redirects/references/cms-redirects-references.html).
+To learn more about attributes you enter on the page, see [CMS Redirects: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/redirects/references/cms-redirects-references.html).

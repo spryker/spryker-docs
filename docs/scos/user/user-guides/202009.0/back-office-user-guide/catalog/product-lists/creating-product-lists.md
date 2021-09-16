@@ -51,6 +51,6 @@ If an abstract product is selected, all its concrete products are selected too.
 ***
 **What's next?**
 
-* To learn how to manage existing product lists, see the [Managing product lists](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/product-lists/managing-product-lists.html).
-* To learn more about the attributes you select and enter while creating a product list, see the [Product lists: reference information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/product-lists/references/reference-information-product-lists.html).
+* To learn how to manage existing product lists, see the [Managing product lists](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-lists/managing-product-lists.html).
+* To learn more about the attributes you select and enter while creating a product list, see the [Product lists: reference information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-lists/references/reference-information-product-lists.html).
 

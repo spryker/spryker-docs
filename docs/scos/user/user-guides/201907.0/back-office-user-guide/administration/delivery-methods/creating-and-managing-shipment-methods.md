@@ -7,10 +7,10 @@ redirect_from:
   - /v3/docs/en/creating-and-managing-shipment-methods
 ---
 
-This topic describes the procedures for creating and managing shipment methods. 
+This topic describes the procedures for creating and managing shipment methods.
 ***
 **Prerequisites**
-Once you decide to add a new shipment method, please make sure that you have a carrier company to assign a shipment method. If you don't have an appropriate carrier, see  [Creating a Carrier Company](/docs/scos/user/user-guides/201907.0/back-office-user-guide/shipment/creating-a-carrier-company.html). You also need to make sure that you have an appropriate tax set in the **Taxes > Tax Sets** section, see [Taxes](/docs/scos/user/user-guides/201907.0/back-office-user-guide/taxes/taxes.html).
+Once you decide to add a new shipment method, please make sure that you have a carrier company to assign a shipment method. If you don't have an appropriate carrier, see  [Creating a Carrier Company](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/delivery-methods/creating-carrier-companies.html). You also need to make sure that you have an appropriate tax set in the **Taxes > Tax Sets** section, see [Taxes](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/taxes/taxes.html).
 ***
 To start working with the shipment methods, navigate to the **Shipment** section.
 ***
@@ -24,7 +24,7 @@ Each shipment method has its own specificity, so these three aspects must be con
 {% endinfo_block %})
 To create a new shipment method:
 1. In the top-right corner of the **Shipment** page, click **Add new Shipment Method**.
-2. On the Create new Shipment Method page, do the following: 
+2. On the Create new Shipment Method page, do the following:
     1. Select the carrier company for which you want to add the shipment method to in the Carrier drop-down list. Only one value can be selected.
     2. Enter a name for the shipment method: the name that you enter will be visible in the Online Stor.
     3. Define the prices.
@@ -36,7 +36,7 @@ To create a new shipment method:
     8. Select the tax set from the drop-down list. The values are taken from the **Taxes > Tax Sets** section.
 3. Once done, click **Add**.  	
 
-This is everything you need to do for creating a shipment method. 
+This is everything you need to do for creating a shipment method.
 
 ## Editing a Shipment Method
 In case you need to update any values that you have entered during the shipment method creation, do the following:
@@ -47,7 +47,7 @@ In case you need to update any values that you have entered during the shipment 
 **Tips & Tricks**
 This is how the Back Office setup looks in the online store:
 **Back Office**
-![image.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Shipment/Creating+and+Managing+Shipment+Methods/editing-shipment-method.png) 
+![image.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Shipment/Creating+and+Managing+Shipment+Methods/editing-shipment-method.png)
 
 **Online Store**
 ![image.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Shipment/Creating+and+Managing+Shipment+Methods/online-store.png){height="400" width="300"}

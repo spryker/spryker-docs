@@ -65,7 +65,7 @@ In the **List of assigned Blocks for [name] Slot** section of the **Overview of 
 
 {% info_block infoBox "Info" %}
 
-Apart from the **ID** and **Actions**, the attributes described below depend on the CMS block settings defined in **Content Management > Blocks**. See [CMS Block: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/blocks/references/reference-information-cms-block.html#create-and-edit-cms-block-page) to learn about them.
+Apart from the **ID** and **Actions**, the attributes described below depend on the CMS block settings defined in **Content Management > Blocks**. See [CMS Block: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/references/reference-information-cms-block.html#create-and-edit-cms-block-page) to learn about them.
 
 {% endinfo_block %}
 

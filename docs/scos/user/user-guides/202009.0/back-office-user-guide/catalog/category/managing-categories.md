@@ -54,7 +54,7 @@ There is no difference between how you will initiate the flow. In any event, you
 
 **To edit a category:**
 1. Click **Edit**.
-2. Update the needed values. See [Category: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/category/references/reference-information-category.html).
+2. Update the needed values. See [Category: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/references/reference-information-category.html).
 3. Click **Save**.
 
 ## Deleting Categories

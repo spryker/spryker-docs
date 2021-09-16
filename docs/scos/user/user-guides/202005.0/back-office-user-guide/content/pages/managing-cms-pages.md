@@ -38,7 +38,7 @@ You can use the Preview mode from either the **Overview of CMS Pages** page or t
 1.On the **Overview of CMS Pages** page, click **View** and select **Preview** from the drop-down list next to the page whose draft you want to view.
 2. The page in the Preview mode will be opened in a new tab of your browser.
 
-**To preview a draft of your CMS page from the Edit Placeholders editor**, see the [Editing Placeholders](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/pages/editing-cms-pages.html#selecting-the-edit---placeholders-option) section.
+**To preview a draft of your CMS page from the Edit Placeholders editor**, see the [Editing Placeholders](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/editing-cms-pages.html#selecting-the-edit---placeholders-option) section.
 
 
 ## Publishing a Page
@@ -50,7 +50,7 @@ You can publish your page either from the **Overview of CMS Pages** page or from
 1. On the **Overview of CMS Pages** page, click **Publish** in the _Actions_ column.
 2. The page will be successfully published.
 
-**To publish a page from the Edit Placeholders editor**, see the [Editing Placeholders](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/pages/editing-cms-pages.html#selecting-the-edit---placeholders-option) section.
+**To publish a page from the Edit Placeholders editor**, see the [Editing Placeholders](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/editing-cms-pages.html#selecting-the-edit---placeholders-option) section.
 
 ## Viewing a Page
 To view a page:
@@ -68,7 +68,7 @@ To view a page:
     * Placeholders
 
 {% info_block infoBox %}
-See [CMS Page: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/pages/references/cms-pages-reference-information.html
+See [CMS Page: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/references/cms-pages-reference-information.html
 {% endinfo_block %} to learn more about attributes on this page.)
 
 **Tips & Tricks**
@@ -95,4 +95,4 @@ To activate a page, click **Activate** in the _Actions_ column on the _Overview 
 To deactivate a page, click **Deactivate** in the _Actions_ column on the _Overview of CMS Pages_ page. This will change the status to Inactive and remove the page from the store website.
 ***
 **What's next?**
-To know more about the attributes you see, select and enter while managing CMS pages, see [CMS Pages: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/pages/references/cms-pages-reference-information.html). 
+To know more about the attributes you see, select and enter while managing CMS pages, see [CMS Pages: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/references/cms-pages-reference-information.html). 

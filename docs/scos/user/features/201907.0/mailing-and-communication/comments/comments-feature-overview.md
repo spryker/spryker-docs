@@ -24,11 +24,11 @@ Within the Comments feature, we have created the Comments Widget. The widget can
 
 Company users can perform the following actions using the Comment Widget:
 
-* [Add a comment](/docs/scos/user/user-guides/201907.0/shop-user-guide/comments/shop-guide-managing-comments.html#adding-a-comment-to-the-cart)
-* [Edit a comment](/docs/scos/user/user-guides/201907.0/shop-user-guide/comments/shop-guide-managing-comments.html#editing-a-comment-in-the-cart)
-* [\(Un\)Tag a comment](/docs/scos/user/user-guides/201907.0/shop-user-guide/comments/shop-guide-managing-comments.html#-un-tagging-a-comment-in-the-cart)
-* [\(Un\)Filter comments per tag](/docs/scos/user/user-guides/201907.0/shop-user-guide/comments/shop-guide-managing-comments.html#-un-filtering-a-comment-in-the-cart)
-* [Remove the comment](/docs/scos/user/user-guides/201907.0/shop-user-guide/comments/shop-guide-managing-comments.html#removing-a-comment)
+* [Add a comment](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/comments/shop-guide-managing-comments.html#adding-a-comment-to-the-cart)
+* [Edit a comment](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/comments/shop-guide-managing-comments.html#editing-a-comment-in-the-cart)
+* [\(Un\)Tag a comment](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/comments/shop-guide-managing-comments.html#-un-tagging-a-comment-in-the-cart)
+* [\(Un\)Filter comments per tag](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/comments/shop-guide-managing-comments.html#-un-filtering-a-comment-in-the-cart)
+* [Remove the comment](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/comments/shop-guide-managing-comments.html#removing-a-comment)
 
 The comment contains the following information:
 
@@ -54,7 +54,7 @@ Every comment may be tagged.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/filter-tags.png) 
 
 {% info_block warningBox "Note" %}
-To create a new tag, see [HowTo - Add a New Tag for Comment](/docs/scos/dev/tutorials/201907.0/howtos/howto-adding-a-new-tag-for-comment.html).
+To create a new tag, see [HowTo - Add a New Tag for Comment](/docs/scos/dev/tutorials/{{page.version}}/howtos/howto-adding-a-new-tag-for-comment.html).
 {% endinfo_block %}
 
 ### Module Relations in the Comments Feature

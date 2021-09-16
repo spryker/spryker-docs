@@ -36,6 +36,6 @@ Once the slot is filled, it is indicated in the UI:
 
  {% info_block warningBox "Note" %}
 
-You must be logged in to a company account to be able to add the configured bundle to cart. The corresponding [company role permissions](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-company-roles.html) (Add item to cart) should also be applied to your user.
+You must be logged in to a company account to be able to add the configured bundle to cart. The corresponding [company role permissions](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/shop-guide-company-roles.html) (Add item to cart) should also be applied to your user.
 
 {% endinfo_block %}

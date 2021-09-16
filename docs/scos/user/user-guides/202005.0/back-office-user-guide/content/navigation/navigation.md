@@ -15,6 +15,6 @@ You can use navigation elements to build your store's main navigation, footer li
 ***
 **What's next?**
 
-* To know how the navigation elements are managed, see [Managing Navigation Elements](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/navigation/managing-navigation-elements.html).
-* To learn about the attributes used to manage navigation elements, see [Navigation: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/navigation/references/navigation-reference-information.html).
+* To know how the navigation elements are managed, see [Managing Navigation Elements](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/navigation/managing-navigation-elements.html).
+* To learn about the attributes used to manage navigation elements, see [Navigation: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/navigation/references/navigation-reference-information.html).
 

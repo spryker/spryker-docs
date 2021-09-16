@@ -53,7 +53,7 @@ To change the title and content of the page:
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Pages/Editing+CMS+Pages/placeholders.png) 
 
 {% info_block infoBox %}
-In the placeholders editor, you can insert a banner, abstract product list, product set, and downloadable files using content item widgets. See [Adding Content Item Widgets to a Page](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/content-items/adding-content-items-to-cms-pages-and-blocks.html#adding-content-item-widgets-to-pages
+In the placeholders editor, you can insert a banner, abstract product list, product set, and downloadable files using content item widgets. See [Adding Content Item Widgets to a Page](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/adding-content-items-to-cms-pages-and-blocks.html#adding-content-item-widgets-to-pages
 {% endinfo_block %} for more details. )
 
 **Tips & Tricks**
@@ -69,4 +69,4 @@ On the **Edit Placeholders: [Page Name]** editor, you can do the following:
 * Switch to the list of pages by clicking **Back to CMS** on the top of the page.
 ***
 **What's next?**
-To know more about the attributes you see, select and enter while managing CMS pages, see [CMS Pages: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/pages/references/reference-information-cms-pages.html).
+To know more about the attributes you see, select and enter while managing CMS pages, see [CMS Pages: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/references/reference-information-cms-pages.html).

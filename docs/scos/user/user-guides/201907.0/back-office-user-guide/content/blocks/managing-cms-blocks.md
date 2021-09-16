@@ -25,7 +25,7 @@ To view a block:
 * Placeholders
 * Category and Product lists 
 
-See [CMS Block: Reference Information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/blocks/references/cms-block-reference-information.html) to learn more about attributes on this page.
+See [CMS Block: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/blocks/references/cms-block-reference-information.html) to learn more about attributes on this page.
 
 {% info_block warningBox "Note" %}
 When the lists are empty, this block is not assigned to any category or product page.
@@ -43,7 +43,7 @@ On the **View CMS Block: Block ID** page, you can do the following:
 ## Editing Placeholders
 To edit a placeholder:
 1. On the **Overview of CMS Blocks** page in the _Actions_ column, click **Edit Placeholder** next to the block you want to update. 
-2. On the **Edit Block Glossary: Block ID** page that opens, you can update a title or content of the CMS block, as well as insert a content item widget. See [Adding Content Item Widgets to a Block](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/content-item-widgets/adding-content-item-widgets-to-pages-and-blocks.html#adding-content-item-widgets-to-blocks) for more details.
+2. On the **Edit Block Glossary: Block ID** page that opens, you can update a title or content of the CMS block, as well as insert a content item widget. See [Adding Content Item Widgets to a Block](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/content-item-widgets/adding-content-item-widgets-to-pages-and-blocks.html#adding-content-item-widgets-to-blocks) for more details.
 3. To save the updates, click **Save**. The updated block will be displayed on the grid of List of CMS Blocks.
 ***
 **Tips & Tricks**
@@ -67,7 +67,7 @@ To edit a CMS block:
 * Assign a block to a category or a product detail page.
 
 {% info_block infoBox %}
-See [CMS Blocks: Reference Information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/blocks/references/cms-block-reference-information.html
+See [CMS Blocks: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/blocks/references/cms-block-reference-information.html
 {% endinfo_block %} for more details.)
 ***
 **Tips & Tricks**
@@ -93,6 +93,6 @@ You can make a CMS block either active (visible on the store website) or inactiv
 ***
 **What's next?**
 
-* To learn how to set the time period during which CMS blocks will be visible on the store website, see [Defining Validity Period for CMS Blocks](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/blocks/defining-validity-period-for-cms-blocks.html).
+* To learn how to set the time period during which CMS blocks will be visible on the store website, see [Defining Validity Period for CMS Blocks](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/blocks/defining-validity-period-for-cms-blocks.html).
 
-* To know what attributes you enter and select while editing the CMS block, see [CMS Block: Reference Information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/blocks/references/cms-block-reference-information.html).
+* To know what attributes you enter and select while editing the CMS block, see [CMS Block: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/blocks/references/cms-block-reference-information.html).

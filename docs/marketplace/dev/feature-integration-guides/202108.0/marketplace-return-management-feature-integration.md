@@ -11,6 +11,16 @@ This document describes how to integrate the Marketplace Return Management featu
 
 Follow the steps below to install the Marketplace Return Management feature core.
 
+### Prerequisites
+
+To start feature integration, integrate the required features:
+
+| NAME | VERSION | LINK |
+| --------------- | ------- | ---------- |
+| Spryker Core                 | master | [Spryker Core Feature Integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Return Management            | master | [Return Management Feature Integration](https://documentation.spryker.com/docs/return-management-feature-integration) |
+| Marketplace Order Management | master | [Marketplace Order Management Feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-feature-integration.html) |
+
 ### 1) Install required modules using Composer
 <!--Provide one or more console commands with the exact latest version numbers of all required modules. If the Composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
 
@@ -33,10 +43,6 @@ Make sure that the following modules have been installed:
 | MerchantSalesReturnGui | spryker/merchant-sales-return-gui |
 | MerchantSalesReturnMerchantUserGui | spryker/merchant-sales-return-merchant-user-gui |
 | MerchantSalesReturnWidget | spryker-shop/merchant-sales-return-widget |
-| SalesReturn | spryker/sales-return |
-| SalesReturnDataImport | spryker/sales-return-data-import |
-| SalesReturnPage | spryker-shop/sales-return-page |
-| SalesReturnSearch | spryker/sales-return-search |
 
 {% endinfo_block %}
 
@@ -514,8 +520,6 @@ Enable the following behaviors by adding and registering the plugins:
 | ShipByMerchantMarketplaceOrderItemCommandPlugin | Triggers 'ship by merchant' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
 | ShipReturnMarketplaceOrderItemCommandPlugin | Triggers 'ship-return' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
 | MerchantReturnCreateTemplatePlugin |  Replace the template, that renders item table on return create page in Zed. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
-| MerchantSalesReturnCreateFormWidgetCacheKeyGeneratorStrategyPlugin  | Disables widget cache for for the `MerchantSalesReturnCreateFormWidget`. |  |  SprykerShop\Yves\MerchantSalesReturnWidget\Plugin |
-| MerchantSalesReturnCreateFormWidget |  Provides "Create Return" only with the items of one merchant order at a time and only for the returnable items. |  |  SprykerShop\Yves\MerchantSalesReturnWidget\Widget |
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/SalesReturn/SalesReturnDependencyProvider.php</summary>
@@ -1029,6 +1033,15 @@ class MerchantOmsCommunicationFactory extends SprykerMerchantOmsCommunicationFac
 </details>
 
 
+### 4) Set up widgets
+
+Register the following plugins to enable widgets:
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| ------------ | ----------- | ----- | ------------ |
+| MerchantSalesReturnCreateFormWidgetCacheKeyGeneratorStrategyPlugin  | Disables widget cache for for the `MerchantSalesReturnCreateFormWidget`. |  |  SprykerShop\Yves\MerchantSalesReturnWidget\Plugin |
+| MerchantSalesReturnCreateFormWidget |  Provides 'Create Return' only with the items of one merchant order at a time and only for the returnable items. |  |  SprykerShop\Yves\MerchantSalesReturnWidget\Widget |
+
 <details>
 <summary markdown='span'>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
 
@@ -1163,10 +1176,6 @@ Add marketplace section to `navigation.xml`:
 <?xml version="1.0"?>
 <config>
     <sales>
-        <label>Sales</label>
-        <uri>/sales</uri>
-        <title>Sales</title>
-        <icon>fa-shopping-cart</icon>
         <pages>
             <merchant-sales-return>
                 <label>My Returns</label>
@@ -1179,9 +1188,6 @@ Add marketplace section to `navigation.xml`:
         </pages>
     </sales>
     <marketplace>
-        <label>Marketplace</label>
-        <title>Marketplace</title>
-        <icon>fa-shopping-basket</icon>
         <pages>
             <returns>
                 <label>Returns</label>
@@ -1203,7 +1209,7 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, in the navigation menu of the Back Office, you can see the **Returns** button in **Marketplace** section and **My Returns** button in **Sales** section.
+Make sure that, in the navigation menu of the Back Office, you can see the menu item **Returns** in the **Marketplace** section and **My Returns** in the **Sales** section.
 
 {% endinfo_block %}
 

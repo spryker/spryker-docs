@@ -8,7 +8,7 @@ redirect_from:
   - /v4/docs/en/retrieving-business-unit-information-201907
 ---
 
-In the B2B world, users represent their companies rather than act on their own behalf. Such users, called [Company Accounts](/docs/scos/user/features/{{page.version}}/company-account-management/company-account-overview/company-account-overview.html), are organized in Business Units depending on their job role and the scope of their activity. The endpoints provided by the **Business Unit** and **Business Unit Address** APIs allow retrieving Business Unit information.
+In the B2B world, users represent their companies rather than act on their own behalf. Such users, called [Company Accounts](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html), are organized in Business Units depending on their job role and the scope of their activity. The endpoints provided by the **Business Unit** and **Business Unit Address** APIs allow retrieving Business Unit information.
 
 {% info_block warningBox "Authentication" %}
 The endpoints provided by this API cannot be accessed anonymously. To access them, you need to impersonate users as Company Accounts and pass the authentication tokens received. For details on how to authenticate and retrieve such a token, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html).

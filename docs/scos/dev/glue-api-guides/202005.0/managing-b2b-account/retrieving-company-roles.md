@@ -8,7 +8,7 @@ redirect_from:
   - /v5/docs/en/retrieving-company-role-information-201907
 ---
 
-In corporate environments, where users act as company representatives rather than private buyers, companies can leverage [Company Roles](https://documentation.spryker.com/v5/docs/en/company-roles-permissions-overview) in order to distribute scopes and permissions among [Company Users](/docs/scos/user/features/{{page.version}}/company-account-management/company-account-overview/company-account-overview.html). To identify which roles company users are assigned to, you can use the endpoints provided by the **Company Role API**.
+In corporate environments, where users act as company representatives rather than private buyers, companies can leverage [Company Roles](https://documentation.spryker.com/v5/docs/en/company-roles-permissions-overview) in order to distribute scopes and permissions among [Company Users](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html). To identify which roles company users are assigned to, you can use the endpoints provided by the **Company Role API**.
 
 {% info_block warningBox "Authentication" %}
 The endpoints provided by this API cannot be accessed anonymously. To access them, you need to impersonate users as **Company Accounts** and pass the authentication tokens received. For details on how to authenticate and retrieve such a token, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html).

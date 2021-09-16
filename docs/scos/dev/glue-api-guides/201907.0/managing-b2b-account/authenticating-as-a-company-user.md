@@ -8,7 +8,7 @@ redirect_from:
   - /v3/docs/en/logging-in-as-a-company-user
 ---
 
-In the B2B context, buyers typically represent a company and act on its behalf. For this reason, Spryker Commerce OS provides the [Company Account](/docs/scos/user/features/{{page.version}}/company-account-management/company-account-overview/company-account-overview.html) capability which allows companies to create multiple [Company Users](/docs/scos/user/features/{{page.version}}/company-account-management/company-account-overview/company-account-and-general-organizational-structure.html), as well as organize them in Business Units depending on the user role and scope. Customers can impersonate as various *Company Accounts* depending on the task they need to perform.
+In the B2B context, buyers typically represent a company and act on its behalf. For this reason, Spryker Commerce OS provides the [Company Account](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html) capability which allows companies to create multiple [Company Users](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html), as well as organize them in Business Units depending on the user role and scope. Customers can impersonate as various *Company Accounts* depending on the task they need to perform.
 
 To impersonate a customer as a Company User, API clients can use the **Business on Behalf API**. It provides REST access to retrieve a list of the Company Users available to the currently logged in user and impersonate as any user available to them.
 

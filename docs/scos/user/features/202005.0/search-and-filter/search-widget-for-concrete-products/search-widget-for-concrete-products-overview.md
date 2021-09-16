@@ -27,7 +27,7 @@ A picture with 2 products of the same SKU added
 With the search widget, a customer can always find the items that are available specifically to them as [Product Restriction](https://documentation.spryker.com/v5/docs/en/merchant-product-restrictions) are considered while searching. This means, that if a blacklist rule exists for a customer, the products that are added to that rule will not be displayed in the search results.
 
 {% info_block infoBox %}
-You can find more examples of product restriction use cases on the [Restricted Products Behavior](/docs/scos/user/features/{{page.version}}/company-account-management/product-restrictions-from-merchant-to-buyer/restricted-products-behavior.html
+You can find more examples of product restriction use cases on the [Restricted Products Behavior](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-product-restrictions-feature-walkthrough/restricted-products-behavior.html
 {% endinfo_block %} page.)
 
 ## Shopping List Page

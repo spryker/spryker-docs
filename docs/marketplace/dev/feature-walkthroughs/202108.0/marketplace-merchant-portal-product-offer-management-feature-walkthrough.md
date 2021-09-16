@@ -12,11 +12,18 @@ To learn more about the feature and to find out how end users use it, see [Marke
 
 {% endinfo_block %}
 
+## Modules relation
 
+![Modules relation](https://confluence-connect.gliffy.net/embed/image/c7d38902-eec0-417d-94ce-31d1baf9599d.png?utm_medium=live&utm_source=custom)
+
+### Main Marketplace MerchantPortal Core feature modules
+
+| NAME | DESCRIPTION | 
+| --- | --- |
+| [ProductOfferMerchantPortalGui](https://github.com/spryker/product-offer-merchant-portal-gui) | Provides UI for merchant product offers management. |
 
 ## Related Developer articles
 
-
-|INTEGRATION GUIDES  |
-|---------|
-|[Marketplace Merchant Portal Product Offer Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-product-offer-management-feature-integration.html) |
+| INTEGRATION GUIDES| GLUE API GUIDES  | DATA IMPORT   |
+| -------------- | ----------------- | ------------------ |
+| [Marketplace Merchant Portal Product Offer Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-product-offer-management-feature-integration.html) | | |

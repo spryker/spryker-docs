@@ -380,92 +380,10 @@ Make sure that the following changes have been triggered in transfer objects:
 
 | TRANSFER | TYPE | EVENT  | PATH  |
 | --------- | ------- | ----- | ------------- |
-| Customer| class | created | src/Generated/Shared/Transfer/CustomerTransfer|
-| Customer.email| class | created | src/Generated/Shared/Transfer/CustomerTransfer|
-| Customer.firstName| class | created | src/Generated/Shared/Transfer/CustomerTransfer|
-| Customer.lastName| class | created | src/Generated/Shared/Transfer/CustomerTransfer|
-| Item| class | created | src/Generated/Shared/Transfer/ItemTransfer|
-| Item.uuid| attribute | created | src/Generated/Shared/Transfer/ItemTransfer|
-| Item.merchantReference| attribute | created | src/Generated/Shared/Transfer/ItemTransfer|
-| Item.merchantOrderReference| attribute | created | src/Generated/Shared/Transfer/ItemTransfer|
-| Item.fkSalesOrder| attribute | created | src/Generated/Shared/Transfer/ItemTransfer|
-| Item.isReturnable| attribute | created | src/Generated/Shared/Transfer/ItemTransfer|
-| Item.returnPolicyMessages| attribute | created | src/Generated/Shared/Transfer/ItemTransfer|
-| Item.orderReference| attribute | created | src/Generated/Shared/Transfer/ItemTransfer|
-| Item.idSalesOrderItem| attribute | created | src/Generated/Shared/Transfer/ItemTransfer|
-| Locale | class | created | src/Generated/Shared/Transfer/LocaleTransfer|
-| Merchant | class | created | src/Generated/Shared/Transfer/MerchantTransfer|
-| Merchant.merchantReference | class | created | src/Generated/Shared/Transfer/MerchantTransfer|
-| MerchantOmsTriggerRequest | class | created | src/Generated/Shared/Transfer/MerchantOmsTriggerRequestTransfer |
-| MerchantOmsTriggerRequest.merchantOmsEventName | attribute | created | src/Generated/Shared/Transfer/MerchantOmsTriggerRequestTransfer |
-| MerchantOmsTriggerRequest.merchantOrderItemReference | attribute | created | src/Generated/Shared/Transfer/MerchantOmsTriggerRequestTransfer |
-| MerchantOmsTriggerRequest.merchantOrderItems | attribute | created | src/Generated/Shared/Transfer/MerchantOmsTriggerRequestTransfer |
-| MerchantOmsTriggerResponse | class | created | src/Generated/Shared/Transfer/MerchantOmsTriggerResponseTransfer |
-| MerchantOmsTriggerResponse.isSuccessful | attribute | created | src/Generated/Shared/Transfer/MerchantOmsTriggerResponseTransfer |
-| MerchantOmsTriggerResponse.message | attribute | created | src/Generated/Shared/Transfer/MerchantOmsTriggerResponseTransfer |
-| MerchantOrder | class | created | src/Generated/Shared/Transfer/MerchantOrderTransfer |
-| MerchantOrder.merchantOrderReference | attribute | created | src/Generated/Shared/Transfer/MerchantOrderTransfer |
-| MerchantOrder.merchantOrderItems | attribute | created | src/Generated/Shared/Transfer/MerchantOrderTransfer |
-| MerchantOrder.order | attribute | created | src/Generated/Shared/Transfer/MerchantOrderTransfer |
-| MerchantOrder.return | attribute | created | src/Generated/Shared/Transfer/MerchantOrderTransfer |
-| MerchantOrderCriteria | class | created | src/Generated/Shared/Transfer/MerchantOrderCriteriaTransfer |
-| MerchantOrderCriteria.idOrder | attribute | created | src/Generated/Shared/Transfer/MerchantOrderCriteriaTransfer |
-| MerchantOrderCriteria.idMerchantOrder | attribute | created | src/Generated/Shared/Transfer/MerchantOrderCriteriaTransfer |
-| MerchantOrderCriteria.idMerchant | attribute | created | src/Generated/Shared/Transfer/MerchantOrderCriteriaTransfer |
-| MerchantOrderCriteria.merchantOrderReference | attribute | created | src/Generated/Shared/Transfer/MerchantOrderCriteriaTransfer |
-| MerchantOrderCriteria.orderItemUuids | attribute | created | src/Generated/Shared/Transfer/MerchantOrderCriteriaTransfer |
-| MerchantOrderCriteria.withMerchant | attribute | created | src/Generated/Shared/Transfer/MerchantOrderCriteriaTransfer |
-| MerchantOrderCriteria.withItems | attribute | created | src/Generated/Shared/Transfer/MerchantOrderCriteriaTransfer |
-| MerchantOrderCriteria.withOrder | attribute | created | src/Generated/Shared/Transfer/MerchantOrderCriteriaTransfer |
-| MerchantOrderCollection.merchantOrders | attribute | created | src/Generated/Shared/Transfer/MerchantOrderCollectionTransfer |
-| MerchantOrderItem | class | created | src/Generated/Shared/Transfer/MerchantOrderItemTransfer |
-| MerchantOrderItem.state | attribute | created | src/Generated/Shared/Transfer/MerchantOrderItemTransfer |
-| MerchantOrderItem.manualEvents | attribute | created | src/Generated/Shared/Transfer/MerchantOrderItemTransfer |
-| MerchantOrderItem.idMerchantOrderItem | attribute | created | src/Generated/Shared/Transfer/MerchantOrderItemTransfer |
-| MerchantOrderItem.stateHistory | attribute | created | src/Generated/Shared/Transfer/MerchantOrderItemTransfer |
-| MerchantOrderItem.idOrderItem | attribute | created | src/Generated/Shared/Transfer/MerchantOrderItemTransfer |
-| MerchantOrderItemCollection | class | created | src/Generated/Shared/Transfer/MerchantOrderItemCollectionTransfer |
-| MerchantOrderItemCollection.merchantOrderItems | class | created | src/Generated/Shared/Transfer/MerchantOrderItemCollectionTransfer |
-| MerchantOrderItemCriteria | class | created | src/Generated/Shared/Transfer/MerchantOrderItemCriteriaTransfer |
-| MerchantOrderItemCriteria.merchantOrderItemIds | attribute | created | src/Generated/Shared/Transfer/MerchantOrderItemCriteriaTransfer |
-| MerchantOrderItemCriteria.orderItemIds | attribute | created | src/Generated/Shared/Transfer/MerchantOrderItemCriteriaTransfer |
-| MerchantUser | class | created | src/Generated/Shared/Transfer/MerchantUserTransfer |
-| MerchantUser.idMerchant | attribute | created | src/Generated/Shared/Transfer/MerchantUserTransfer |
-| MerchantUser.merchant | attribute | created | src/Generated/Shared/Transfer/MerchantUserTransfer |
-| Message| class | created | src/Generated/Shared/Transfer/MessageTransfer|
-| Message.value| attribute | created | src/Generated/Shared/Transfer/MessageTransfer|
-| Order| class | created | src/Generated/Shared/Transfer/OrderTransfer|
-| Order.idSalesOrder | attribute | created | src/Generated/Shared/Transfer/OrderTransfer|
-| Order.items | attribute | created | src/Generated/Shared/Transfer/OrderTransfer|
-| Return| class | created | src/Generated/Shared/Transfer/ReturnTransfer|
 | Return.merchantSalesOrderReference| attribute | created | src/Generated/Shared/Transfer/ReturnTransfer|
 | Return.returnItems| attribute | created | src/Generated/Shared/Transfer/ReturnTransfer|
 | Return.merchantOrders| attribute | created | src/Generated/Shared/Transfer/ReturnTransfer|
-| Return.idSalesReturn| attribute | created | src/Generated/Shared/Transfer/ReturnTransfer|
-| Return.returnItems| attribute | created | src/Generated/Shared/Transfer/ReturnTransfer|
-| Return.customerReference| attribute | created | src/Generated/Shared/Transfer/ReturnTransfer|
-| ReturnCreateRequest | class | created | src/Generated/Shared/Transfer/ReturnCreateRequestTransfer |
-| ReturnCreateRequest.returnItems | attribute | created | src/Generated/Shared/Transfer/ReturnCreateRequestTransfer |
-| ReturnCreateRequest.customer | attribute | created | src/Generated/Shared/Transfer/ReturnCreateRequestTransfer |
-| ReturnCreateRequest.store | attribute | created | src/Generated/Shared/Transfer/ReturnCreateRequestTransfer |
-| ReturnCollection| class | created | src/Generated/Shared/Transfer/ReturnCollectionTransfer|
-| ReturnCollection.returns| attribute | created | src/Generated/Shared/Transfer/ReturnCollectionTransfer|
-| ReturnFilter| class | created | src/Generated/Shared/Transfer/ReturnFilterTransfer|
-| ReturnFilter.returnIds| attribute | created | src/Generated/Shared/Transfer/ReturnFilterTransfer|
-| ReturnItem| class | created | src/Generated/Shared/Transfer/ReturnItemTransfer|
-| ReturnItem.orderItem| attribute | created | src/Generated/Shared/Transfer/ReturnItemTransfer|
-| ReturnItem.reason| attribute | created | src/Generated/Shared/Transfer/ReturnItemTransfer|
-| ReturnReason| class | created | src/Generated/Shared/Transfer/ReturnReasonTransfer|
-| ReturnReason.glossaryKeyReason| class | created | src/Generated/Shared/Transfer/ReturnReasonTransfer|
-| ReturnReasonCollection | class | created | src/Generated/Shared/Transfer/ReturnReasonCollectionTransfer|
-| ReturnReasonCollection.returnReasons | attribute | created | src/Generated/Shared/Transfer/ReturnReasonCollectionTransfer|
-| ReturnReasonFilter | class | created | src/Generated/Shared/Transfer/ReturnReasonFilterTransfer|
-| ReturnResponse| class | created | src/Generated/Shared/Transfer/ReturnResponseTransfer|
-| ReturnResponse.return| attribute | created | src/Generated/Shared/Transfer/ReturnResponseTransfer|
-| ReturnResponse.isSuccessful| attribute | created | src/Generated/Shared/Transfer/ReturnResponseTransfer|
-| ReturnResponse.messages| attribute | created | src/Generated/Shared/Transfer/ReturnResponseTransfer|
-| StateMachineItem| class | created | src/Generated/Shared/Transfer/StateMachineItemTransfer|
-| StateMachineItem.stateName| class | created | src/Generated/Shared/Transfer/StateMachineItemTransfer|
+
 
 {% endinfo_block %}
 

@@ -38,7 +38,7 @@ With the support of the OpenID Connect protocol, you can now use Identity Access
 ### Category per store
 Spryker now supports store relations at the category level. You can hide and show categories per store depending on your business requirements. Child categories inherit the store relations of the parent category.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+notes+202108.0/category-per-store.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+notes+202108.0/category-per-store.png)
 
 #### Documentation
 [Category management](/docs/scos/user/features/{{page.version}}/category-management-feature-overview.html)
@@ -49,7 +49,7 @@ Since tax calculation is not an area where mistakes are allowed, we decided to p
 The Avalara integration enables you to validate your customers’ and your warehouses’ addresses to improve the rate accuracy when calculating sales tax in the checkout process.
 
 #### Documentation
-[Tax](/docs/scos/user/features/{{page.version}}/tax/tax.html)
+[Tax](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html)
 
 ### Data exchange
 While expanding the Spryker's out-of-the-box data exchange capabilities, we’ve implemented additional data importers and made small improvements, such as exception handling, dependencies, upgrading to PHP 7.3+, and minor bug fixes, that allow you to keep your software up to date.
@@ -66,7 +66,7 @@ Within the Spryker’s default data export framework, we have made small improve
 ### Middleware
 We have completed maintenance activities and done minor fixes helping you to keep your project up to date.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+notes+202108.0/middleware.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+notes+202108.0/middleware.png)
 
 ## The Docker SDK
 

@@ -7,7 +7,7 @@ redirect_from:
   - /v6/docs/en/managing-tax-sets
 ---
 
-This document describes how to create, edit, and delete [tax sets](/docs/scos/user/features/{{page.version}}/tax/tax.html).
+This document describes how to create, edit, and delete [tax sets](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html).
 
 ## Prerequisites
 Before you can create tax sets, make sure you have [tax rates](/docs/scos/user/user-guides/202009.0/back-office-user-guide/administration/tax-rates/managing-tax-rates.html).  

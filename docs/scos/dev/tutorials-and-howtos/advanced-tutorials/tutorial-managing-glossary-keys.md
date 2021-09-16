@@ -10,6 +10,16 @@ redirect_from:
   - /docs/en/tutorial-managing-glossary-keys
   - /v6/docs/tutorial-managing-glossary-keys
   - /v6/docs/en/tutorial-managing-glossary-keys
+  - /v5/docs/glossary-keys
+  - /v5/docs/en/glossary-keys
+  - /v4/docs/glossary-keys
+  - /v4/docs/en/glossary-keys
+  - /v3/docs/glossary-keys
+  - /v3/docs/en/glossary-keys
+  - /v2/docs/glossary-keys
+  - /v2/docs/en/glossary-keys
+  - /v1/docs/glossary-keys
+  - /v1/docs/en/glossary-keys
 ---
 
 Glossary keys present two layers of persistence:

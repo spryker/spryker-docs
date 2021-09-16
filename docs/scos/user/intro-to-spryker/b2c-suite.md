@@ -92,8 +92,8 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 * [Net & Gross Price Mode](/docs/scos/dev/back-end-development/zed/data-manipulation/datapayload-conversion/net-and-gross-prices-management.html)
 * [Scheduled Prices](https://documentation.spryker.com/2021080/docs/scheduled-prices)
 
-[**Tax**](/docs/scos/user/features/{{page.version}}/tax/tax.html):
-[Manage Tax Rates & Sets](/docs/scos/user/features/{{page.version}}/tax/tax.html)
+[**Tax**](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html):
+[Manage Tax Rates & Sets](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html)
 
 [**Promotions & Discounts**](/docs/scos/user/features/{{page.version}}/promotions-and-discounts/promotions-and-discounts.html):
 [Discounts](/docs/scos/user/features/{{page.version}}/promotions-and-discounts/promotions-and-discounts.html)

@@ -7,7 +7,7 @@ redirect_from:
   - /v6/docs/en/file-details-taxcsv
 ---
 
-This article contains content of the **tax.csv** file to configure [Tax](/docs/scos/user/features/{{page.version}}/tax/tax.html) information on your Spryker Demo Shop.
+This article contains content of the **tax.csv** file to configure [Tax](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields
 These are the header fields to be included in the .csv file:

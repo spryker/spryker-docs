@@ -9,7 +9,7 @@ redirect_from:
   - /docs/en/managing-tax-sets
 ---
 
-This document describes how to create, edit, and delete [tax sets](/docs/scos/user/features/{{page.version}}/tax/tax.html).
+This document describes how to create, edit, and delete [tax sets](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html).
 
 ## Prerequisites
 

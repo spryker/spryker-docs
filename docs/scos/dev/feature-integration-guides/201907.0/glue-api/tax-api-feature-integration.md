@@ -137,7 +137,7 @@ Make sure that the following endpoint is available:</br>`http://mysprykershop.co
 
 **See also:**
 
-* [Tax Management](/docs/scos/user/features/{{page.version}}/tax/tax.html)
+* [Tax Management](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html)
 
  
 *Last review date: Mar 21, 2019*

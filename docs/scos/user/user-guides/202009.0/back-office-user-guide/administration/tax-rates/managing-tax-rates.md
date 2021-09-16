@@ -8,7 +8,7 @@ redirect_from:
   - /v6/docs/en/managing-tax-rates
 ---
 
-This document describes how to create, edit, and delete [tax rates](/docs/scos/user/features/{{page.version}}/tax/tax.html).
+This document describes how to create, edit, and delete [tax rates](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html).
 
 ## Prerequisites
 To start working with tax rates, go to **Administration > Tax Rates**.

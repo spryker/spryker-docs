@@ -6,8 +6,8 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/tax-module
 originalArticleId: 5cedaed8-f1c1-43ce-b279-54014a354d26
 redirect_from:
-  - /v6/docs/tax-module
-  - /v6/docs/en/tax-module
+  - /v4/docs/tax-module
+  - /v4/docs/en/tax-module
 ---
 
 

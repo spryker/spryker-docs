@@ -587,7 +587,7 @@ where `001` is the SKU of the abstract product; `CHF` is the currency to display
 To retrieve information on tax-related information for a product, you can use the endpoint described below.
 
 {% info_block infoBox %}
-For more information on how to manage product taxes, see [Tax](/docs/scos/user/features/{{page.version}}/tax/tax.html).
+For more information on how to manage product taxes, see [Tax](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html).
 {% endinfo_block %}
 
 `/abstract-products/{% raw %}{{{% endraw %}SKU{% raw %}}}{% endraw %}/tax-sets`

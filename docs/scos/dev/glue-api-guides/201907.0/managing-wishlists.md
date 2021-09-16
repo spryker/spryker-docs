@@ -7,7 +7,7 @@ redirect_from:
   - /v3/docs/en/managing-wishlists
 ---
 
-The Wishlists API provides REST access to managing [wishlists](/docs/scos/user/features/{{page.version}}/wishlist/wishlist.html) of a customer. With the help of the endpoints provided by the API, you can create, list and delete wishlists, as well as manage the items inside them.
+The Wishlists API provides REST access to managing [wishlists](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html) of a customer. With the help of the endpoints provided by the API, you can create, list and delete wishlists, as well as manage the items inside them.
 
 In your development, these resources can help you to enable complete wishlist functionality for your customers.
 

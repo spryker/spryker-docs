@@ -72,6 +72,6 @@ To edit an existing marketplace concrete product:
 
 ## Next steps
 
-- [Manage concrete product prices](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/concrete-products/managing marketplace-concrete-product-prices.html)
+- [Manage concrete product prices](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/concrete-products/managing-marketplace-concrete-product-prices.html)
 - [Manage concrete product image sets](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/concrete-products/managing-marketplace-concrete-products-image-sets.html)
 - [Manage concrete product attributes](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/concrete-products/managing-marketplace-concrete-product-attributes.html)

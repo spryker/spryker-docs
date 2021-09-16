@@ -39,7 +39,7 @@ To add a concrete product to the existing abstract product:
 
   {% endinfo_block %}
 
-Once the product is created, it needs to be [activated](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/concrete-products/managing-marketplace-concrete-product.html#deactivating-a-concrete-product). Only the active marketplace products are displayed on the Marketplace Storefront.
+Once the product is created, it needs to be [activated](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product.html#activating-and-deactivating-a-concrete-product). Only the active marketplace products are displayed on the Marketplace Storefront.
 
 ### Reference information: Create Concrete Products for [Abstract product name SKU]
 

@@ -18,7 +18,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
 | Marketplace Shipment | {{page.version}} | [Marketplace Shipment feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-feature-integration.html) |
-| Cart | 202001.0 | [Cart feature integration](https://github.com/spryker-feature/cart) |
+| Cart | {{page.version}} | [Cart feature integration](https://github.com/spryker-feature/cart) |
 
 ### Set up behavior
 

@@ -19,7 +19,7 @@ Please make sure that the attribute you are going to create a filter preference 
 **To create a filter preference:**
 1. In the top right corner of the **Filter preferences** page, click **Create filter**.
 2. On the **Create filter** page, do the following:
-    1. Enter the attribute key to the respective field. The attribute key can be found in **Product Attributes > Attributes Key** of a specific attribute. 
+    1. Enter the attribute key to the respective field. The attribute key can be found in **Product Attributes > Attributes Key** of a specific attribute.
     2. In the **Filter Type** drop-down, select either multi-select or range.
     3. Enter the translations for all locations set up in your store.
 3. Click **Save**.
@@ -49,4 +49,4 @@ To edit a filter preference:
 **What's next?**
 Once the filter preference is created, you can use it in the **Category Filters** section. That is done to enable specific category(s) to which the product with this attribute is assigned, to be filtered based on this specific filter.
 
-See [Managing Category Filters](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/search-and-filters/managing-category-filters.html) to know how to set up the category filters.
+See [Managing Category Filters](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/search-and-filters/managing-category-filters.html) to know how to set up the category filters.

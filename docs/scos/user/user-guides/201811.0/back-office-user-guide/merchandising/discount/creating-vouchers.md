@@ -59,4 +59,4 @@ Once you generated voucher codes, you can export them as a **.csv** file.
 To do that, click **Export** below **Generate**.
 ***
 **What's next?**
-See [Managing Discounts](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/discount/managing-discounts.html) to know more about the actions you can do once the discount is created.
+See [Managing Discounts](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/discount/managing-discounts.html) to know more about the actions you can do once the discount is created.

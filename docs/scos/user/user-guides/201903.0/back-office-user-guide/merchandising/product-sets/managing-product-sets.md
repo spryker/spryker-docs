@@ -15,7 +15,7 @@ To start managing product sets, navigate to the **Products > Product Sets** sect
 ## Editing a Product Set
 To edit a product set:
 1. In the _Actions_ column of the **Product Sets** table, click **Edit** for the product set you want to update.
-2. On the **Edit Product Set** page, update the needed attributes. The procedure is very similar to the procedure of creating a product set (see [Creating a Product Set](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/product-sets/creating-a-product-set.html) for more details). The only difference is that in the **Products** tab, in addition to the **Select Products to assign** table, you will see the **Products in this Set** table at the bottom of the page. In this table you can:
+2. On the **Edit Product Set** page, update the needed attributes. The procedure is very similar to the procedure of creating a product set (see [Creating a Product Set](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-sets/creating-product-sets.html) for more details). The only difference is that in the **Products** tab, in addition to the **Select Products to assign** table, you will see the **Products in this Set** table at the bottom of the page. In this table you can:
     1. Clear the checkbox in the _Selected_ column to remove a specific product from the set.
     2. Define the position of the products in the set by putting the appropriate numbers to the _Position_ column. The product that has 0 in the _Position_ column goes first.
 ![Editing a product set](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Sets/Managing+Product+Sets/editing-product-set.png) 

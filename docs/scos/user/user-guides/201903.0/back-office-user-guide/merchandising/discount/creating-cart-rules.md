@@ -39,4 +39,4 @@ The next step varies based on the selected calculator type.
 7. Click **Save** to create the new discount.
 ***
 **What's next?**
-See [Managing Discount](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/discount/managing-discounts.html) to know more about the actions you can do once the discount is created.
+See [Managing Discount](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/discount/managing-discounts.html) to know more about the actions you can do once the discount is created.

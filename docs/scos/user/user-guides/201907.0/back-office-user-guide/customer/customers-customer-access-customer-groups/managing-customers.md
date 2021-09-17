@@ -42,7 +42,7 @@ The **View customer details** page is designed to serve more purposes than just 
 
 On this page, you can view the orders placed by the customer, edit the addresses, or add another address, leave descriptive messages in the **Notes** section. 
 
-To know how the customer addresses are managed, see [Managing Customer Addresses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customers/customers-customer-access-customer-groups/managing-customer-addresses.html).
+To know how the customer addresses are managed, see [Managing Customer Addresses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customer-addresses.html).
 
 ### Viewing customer details
 **To view customer details:**

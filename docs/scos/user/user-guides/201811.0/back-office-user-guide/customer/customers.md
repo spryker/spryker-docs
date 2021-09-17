@@ -17,18 +17,18 @@ The customer registration can be completed only by the customer by setting up th
 {% endinfo_block %}.)
 
 **Standardized flow of actions for a Spryker Admin**
-![Flow of actions](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Customers/customers-section.png) 
+![Flow of actions](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Customers/customers-section.png)
 
 {% info_block infoBox %}
-This is how a Spryker Admin interacts with other departments to build customers' accounts with a specific set of access rules. 
+This is how a Spryker Admin interacts with other departments to build customers' accounts with a specific set of access rules.
 {% endinfo_block %}
 ***
 **What's next?**
 To know how to manage customers, customer groups and customer access, see the following articles:
 
-* [Managing Customers](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customers/customers-customer-access-customer-groups/managing-customers.html), [Managing Customer Addresses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customers/customers-customer-access-customer-groups/managing-customer-addresses.html)
-* [Managing Customer Groups](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customers/customers-customer-access-customer-groups/managing-customer-groups.html)
-* [Managing Customer Access](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customers/customers-customer-access-customer-groups/managing-customer-access.html)
+* [Managing Customers](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customers/customers-customer-access-customer-groups/managing-customers.html), [Managing Customer Addresses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customer-addresses.html)
+* [Managing Customer Groups](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customer-groups.html)
+* [Managing Customer Access](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customer-access.html)
 
 To know more about the attributes you use to manage customers, customer groups, and customer access, see the following article:
 

@@ -51,5 +51,5 @@ On this page, you also can:
 ***
 **What's next?**
 
-* To know how the product relations can be managed, see the [Managing Product Relations](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/product-relations/managing-product-relations.html) article.
+* To know how the product relations can be managed, see the [Managing Product Relations](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-relations/managing-product-relations.html) article.
 * To know more about the attributes you select and enter while creating a product relation, see [Product Relations: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/product-relations/references/product-relations-reference-information.html).

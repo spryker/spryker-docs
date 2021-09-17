@@ -20,17 +20,17 @@ There are two discount types:
 * Cart rule
 
 Discount type is specified in the Back Office > *Discount* section > *Edit discount* page > **General information** tab.
-![Discount type](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/discount-type.png) 
+![Discount type](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/discount-type.png)
 
 A **Voucher** is a discount which applies when a customer enters an active **voucher code** on the *Cart* page.
-![Cart voucher](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/cart_voucher.png) 
+![Cart voucher](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/cart_voucher.png)
 
 Once the customer clicks **Redeem code**, the page refreshes to show the discount name, discount value and available actions - **Remove** and **Clear all**.
-![Cart voucher applied](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/cart_voucher_applied.png) 
+![Cart voucher applied](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/cart_voucher_applied.png)
 
 The **Clear all** action disables all the applied discounts while the **Remove** action disables a single discount.
 
-Voucher codes are generated in the Back Office > *Discount* section > *Edit discount* page > [Voucher codes](/docs/scos/user/features/{{page.version}}/promotions-and-discounts/discount/discount.html#voucher-codes-tab) tab. See [Creating a Discount Voucher](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/discount/creating-a-discount/creating-a-cart-rule-discount.html) for more information.
+Voucher codes are generated in the Back Office > *Discount* section > *Edit discount* page > [Voucher codes](/docs/scos/user/features/{{page.version}}/promotions-and-discounts/discount/discount.html#voucher-codes-tab) tab. See [Creating a Discount Voucher](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/discount/creating-cart-rules.html) for more information.
 
 {% info_block warningBox %}
 This tab is available when the **Voucher** discount type is selected in the [General information](/docs/scos/user/features/{{page.version}}/promotions-and-discounts/discount/discount.html#creating-a-discount-voucher
@@ -40,12 +40,12 @@ This tab is available when the **Voucher** discount type is selected in the [Gen
 Multiple voucher codes can be generated for a single voucher. Each code has a **Max number of uses** value which defines how many times the code can be used by different customers.
 
 There is no need to create codes manually as there is an in-built code generator which does the job.
-![Generate codes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/generate_codes.png) 
+![Generate codes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/generate_codes.png)
 
 A **Cart rule** is a discount which applies to cart automatically once all discount decision rules linked to discount are fulfilled. It does not require any additional actions from customers. When there is a discount which can be applied to a customer's order, upon entering cart, they will see the name of the discount in the overview section. The **Clear all** and **Remove** actions won't be available though.
-![Cart rule](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/cart-cart-rule.png) 
+![Cart rule](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/cart-cart-rule.png)
 
-See [Creating a cart rule](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/discount/creating-a-discount/creating-a-cart-rule-discount.html) for information on how to create a cart rule discount in the Back Office.
+See [Creating a cart rule](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/discount/creating-cart-rules.html) for information on how to create a cart rule discount in the Back Office.
 
 ## Decision Rules
 A discount **decision rule** is a condition which needs to be fulfilled for the discount to which it is assigned to be applied. A discount can have one or more decision rules assigned to it.
@@ -65,24 +65,24 @@ Following the example above, you can specify that:
 {% info_block infoBox %}
 cart is to contain at least 3 items via plain query:
 {% endinfo_block %}
-![Plain query](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/plain-query.png) 
+![Plain query](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/plain-query.png)
 
 {% info_block infoBox %}
 the purchase is to be made on Wednesday via Query builder:
 {% endinfo_block %}
-![Query builder](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/query-builder.png) 
+![Query builder](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/query-builder.png)
 
 You can combine decision rules using **AND** and **OR** operators. When several decision rules are combined with the AND operator, all the rules have to be fulfilled for the discount to be applied. When several decision rules are combined using the OR operator, only one of them has to be fulfilled for the discount to be applied.
 
 {% info_block infoBox %}
 The previously used decision rules are combined with the **AND** operator which means that for the discount to be applied, cart has to contain at least 3 items and the purchase has to be made on Wednesday.
 {% endinfo_block %}
-![AND operator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/and-operator.png) 
+![AND operator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/and-operator.png)
 
 {% info_block infoBox %}
 The same decision rules are combined with the **OR** operator which means that the discount is applied if either cart contains 3 items or the purchase is made on Wednesday.
 {% endinfo_block %}
-![OR operator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/or-operator.png) 
+![OR operator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/or-operator.png)
 
 ## Threshold
 Threshold is a functionality that compliments decision rules by allowing you to assign a **minimum order amount** value to all the decision rules of a discount. It specifies how many items in cart should fulfill the assigned decision rules for the discount to be applied. By default, the value is equal to 1 which means that only one fulfilled decision rule is sufficient for the discount to be applied. Threshold is specified in the Back Office > *Discount* section > *Edit discount* page > **Conditions** tab.
@@ -90,7 +90,7 @@ Threshold is a functionality that compliments decision rules by allowing you to 
 {% info_block infoBox %}
 The discount is applied if there are 4 items with the Intel Core processor in cart.
 {% endinfo_block %}
-![Threshold](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/threshold.png) 
+![Threshold](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/threshold.png)
 
 ## Discount collection
 
@@ -105,17 +105,17 @@ Similarly to the decision rules, the products to which the discount is applied c
 {% info_block infoBox %}
 The discount is applied to the products with lithium batteries.
 {% endinfo_block %}
-![Query collection](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/collection-query.png) 
+![Query collection](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/collection-query.png)
 
 ### Discount promotion to product
 
 The **Discount promotion to product** discount collection type enables you to provide a discount for a particular product, regardless of whether the product is already added to cart or not. The product for which the discount is provided is specified by entering its abstract product sku. Also, you can specify how many products with the discount is to be available for adding to cart by entering a quantity.
 
 The discount is provided for the product with the **Product abstract sku** 214 while the available **Quantity** of the product for adding to cart is 3.
-![Collection - promotional product](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/collection-promotional-product.png) 
+![Collection - promotional product](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/collection-promotional-product.png)
 
 When redeemed by a customer on the front end, instead of displaying the discount name in the overview section, the **Promotional products**section is displayed allowing to add the available quantity of the product to cart.
-![Promotional product](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/promotional-product-frontend.png) 
+![Promotional product](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/promotional-product-frontend.png)
 
 ## Calculation
 There are two types of discount calculation:
@@ -134,7 +134,7 @@ See examples in the table below.
 |€50|Fixed amount|10|€10|€40 |
 
 Calculation is specified in the Back Office > *Discount* section > *Edit discount* page > [Discount calculation](/docs/scos/user/features/{{page.version}}/promotions-and-discounts/discount/discount.html#discount-calculation-tab) tab.
-![Discount calculation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/discount_calculation.png) 
+![Discount calculation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/discount_calculation.png)
 
 ## Exclusiveness
 Discounts can be:
@@ -143,7 +143,7 @@ Discounts can be:
 * Non-exclusive
 
 Discount exclusiveness is specified in the Back Office > *Discount* section > *Edit discount* page > **General information** tab.
-![Exclusive discount](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/exclusivity.png) 
+![Exclusive discount](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/exclusivity.png)
 
 ### Exclusive Discount
 An **exclusive discount** can only be applied on its own where the highest-value discount is applied if several discounts are provided.
@@ -181,4 +181,4 @@ Validity interval is specified in the Back Office > *Discount* section > *Edit d
 {% info_block infoBox %}
 The discount is valid between 1/1/2016 and 12/31/2020 dates, inclusive.
 {% endinfo_block %}
-![Validity interval](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/validity-interval.png) 
+![Validity interval](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/validity-interval.png)

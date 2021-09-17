@@ -70,7 +70,7 @@ After you save the changes, a new product option group will appear on the produc
 
 For customers, the options are displayed on the product detail page of the abstract product.
 
-You can [assign product labels](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/product-labels/creating-a-product-label.html) to highlight specific products in your shop. Customize the look and text of the labels as they appear in the shop. Any association can be a Label, such as "Sale" or "Christmas". Products that are new in your shop, can be automatically be marked with the Dynamic Product Label "New" for a pre-defined time range.
+You can [assign product labels](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-labels/creating-product-labels.html) to highlight specific products in your shop. Customize the look and text of the labels as they appear in the shop. Any association can be a Label, such as "Sale" or "Christmas". Products that are new in your shop, can be automatically be marked with the Dynamic Product Label "New" for a pre-defined time range.
 
 You can easily offer services on top of a customer's choice of products, such as gift wrapping, insurance, warranty or anything else that you may want to add that is not physically part of the product. The options can have their own price value and will be added to the total cart value.
 

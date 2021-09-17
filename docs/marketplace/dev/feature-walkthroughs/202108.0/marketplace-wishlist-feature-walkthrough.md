@@ -14,7 +14,7 @@ With the *Marketplace Wishlist* feature, the customers can track and save mercha
 | [Marketplace Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-wishlist-feature-integration.html) | [Managing wishlists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html)
 | [Glue API: Marketplace Product Offer + Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-wishlist-feature-integration.html) | [Managing wishlist items](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlist-items.html) |
 
-## Marketplace Wishlist - Modules diagram
+## Module dependency graph
 
 ![Entity diagram](https://confluence-connect.gliffy.net/embed/image/e7a2ef43-7eb8-435a-870b-d8012fe8bd07.png?utm_medium=live&utm_source=confluence)
 
@@ -24,12 +24,12 @@ With the *Marketplace Wishlist* feature, the customers can track and save mercha
 
 **Wishlist** - Provides infrastructure and functionality to handle multiple wishlists for a customer account.
 
-**WishlistPage** - Provides wishlist management functionality.
+**WishlistPage** - Provides enduser wishlist management functionality.
 
 **WishlistWidget** - Provides wishlist rendering functionality integration to other modules.
 
-## Marketplace Wishlist - Domain model
+## Domain model
 
-The following schema illustrates relations in the Marketplace Wishlist entity:
+The following diagram illustrates domain model of Marketplace Wishlist feature:
 
 ![Entity diagram](https://confluence-connect.gliffy.net/embed/image/6d5e9f9f-f841-4877-bf65-7fdd38d6d49b.png?utm_medium=live&utm_source=confluence)

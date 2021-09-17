@@ -44,7 +44,7 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| TotalProductAvailabilityProductConcreteTableExpanderPlugin | Expands ProductConcreteTable with Available stock column data. | None | Spryker\Zed\MerchantProduct\Communication\Plugin\Product |
+| TotalProductAvailabilityProductConcreteTableExpanderPlugin | Expands `ProductConcreteTable` with `Available stock` column data. | None | Spryker\Zed\MerchantProduct\Communication\Plugin\Product |
 
 **src/Pyz/Zed/ProductMerchantPortalGui/ProductMerchantPortalGuiDependencyProvider.php**
 

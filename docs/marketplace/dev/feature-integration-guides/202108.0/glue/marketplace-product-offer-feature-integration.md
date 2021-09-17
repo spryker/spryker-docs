@@ -23,7 +23,7 @@ To start feature integration, integrate the required features:
 
 Install the required modules:
 ```bash
-composer require spryker/merchant-product-offers-rest-api:"^1.0.0" --update-with-dependencies
+composer require spryker/merchant-product-offers-rest-api:"^1.1.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -51,10 +51,16 @@ Make sure that the following changes have been applied in transfer objects:
 | TRANSFER | TYPE | EVENT | PATH |
 |-|-|-|-|
 | RestProductOffersAttributes | class | Created | src/Generated/Shared/Transfer/RestProductOffersAttributesTransfer |
+| PersistentCartChange | class | Created | src/Generated/Shared/Transfer/PersistentCartChangeTransfer |
+| RestItemsAttributes.productOfferReference | property | Created | src/Generated/Shared/Transfer/RestItemsAttributesTransfer |
+| RestItemsAttributes.merchantReference | property | Created | src/Generated/Shared/Transfer/RestItemsAttributesTransfer |
+| CartItemRequest.productOfferReference | property | Created | src/Generated/Shared/Transfer/CartItemRequestTransfer |
+| CartItemRequest.merchantReference | property | Created | src/Generated/Shared/Transfer/CartItemRequestTransfer |
+| RestCartItemsAttributes.productOfferReference | property | Created | src/Generated/Shared/Transfer/RestCartItemsAttributesTransfer |
 
 {% endinfo_block %}
 
-### 3) Enable resources and relationships
+### 3) Set up behavior
 
 Activate the following plugins:
 
@@ -64,8 +70,7 @@ Activate the following plugins:
 | ConcreteProductsProductOffersResourceRoutePlugin | Registers the `product-offers` resource with `concrete-products`. |  | Spryker\Glue\MerchantProductOffersRestApi\Plugin\GlueApplication |
 | ProductOffersByProductConcreteSkuResourceRelationshipPlugin | Registers the `product-offers` resource as a relationship to `concrete-products`. |  | Spryker\Glue\MerchantProductOffersRestApi\Plugin\GlueApplication |
 
-
-<details><summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
 ```php
 <?php
@@ -115,8 +120,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
-
-</details>
 
 {% info_block warningBox "Verification" %}
 

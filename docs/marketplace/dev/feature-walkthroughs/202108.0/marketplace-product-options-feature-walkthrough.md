@@ -21,10 +21,10 @@ To learn more about the feature and to find out how end users use it, see [Marke
 
 | NAME | DESCRIPTION | 
 | --- | --- |
-| [MerchantProductOption](https://github.com/spryker/merchant-product-option) | Provides UI for merchant product management. |
+| [MerchantProductOption](https://github.com/spryker/merchant-product-option) | Provides merchant product option main business logic and persistence. |
 | [MerchantProductOptionDataImport](https://github.com/spryker/merchant-product-option-data-import) | Provides data import functionality for merchant product options. |
-| [MerchantProductOptionStorage](https://github.com/spryker/merchant-product-option-storage) | Provides publish and sync of merchant product options. |
-| [MerchantProductOptionGui](https://github.com/spryker/merchant-product-option-gui) | Provides UI for merchant product options management. |
+| [MerchantProductOptionStorage](https://github.com/spryker/merchant-product-option-storage) | Provides publish and sync functionality for merchant product options. |
+| [MerchantProductOptionGui](https://github.com/spryker/merchant-product-option-gui) | Provides backoffice UI for merchant product options management. |
 
 ## Domain model
 

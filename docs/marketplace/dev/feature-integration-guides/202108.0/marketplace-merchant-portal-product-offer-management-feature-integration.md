@@ -22,7 +22,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-merchant-portal-product-offer-management:"dev-master" --update-with-dependencies
+composer require spryker-feature/marketplace-merchant-portal-product-offer-management:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

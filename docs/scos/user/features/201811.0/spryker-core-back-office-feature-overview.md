@@ -1,23 +1,23 @@
 ---
 title: Spryker Core Back Office feature overview
 description: The article provides general information about the actions you can perform in Spryker Back Office.
-originalLink: https://documentation.spryker.com/v5/docs/the-back-office-overview
-originalArticleId: d368af56-12f3-4ddb-aada-d556ac49f49e
+originalLink: https://documentation.spryker.com/v1/docs/back-office
+originalArticleId: 43d61897-09b0-46d4-9368-d5e871dd5627
 redirect_from:
-  - /v5/docs/the-back-office-overview
-  - /v5/docs/en/the-back-office-overview
-  - /v5/docs/back-office-login-overview
-  - /v5/docs/en/back-office-login-overview
-  - /v5/docs/back-office
-  - /v5/docs/en/back-office
-  - /v5/docs/spryker-core-back-office
-  - /v5/docs/en/spryker-core-back-office
-  - /v5/docs/back-office-management
-  - /v5/docs/en/back-office-management
-  - /v5/docs/customer-management
-  - /v5/docs/en/customer-management
-  - /v5/docs/data-protection
-  - /v5/docs/en/data-protection
+  - /v1/docs/the-back-office-overview
+  - /v1/docs/en/the-back-office-overview
+  - /v1/docs/back-office-login-overview
+  - /v1/docs/en/back-office-login-overview
+  - /v1/docs/back-office
+  - /v1/docs/en/back-office
+  - /v1/docs/spryker-core-back-office
+  - /v1/docs/en/spryker-core-back-office
+  - /v1/docs/back-office-management
+  - /v1/docs/en/back-office-management
+  - /v1/docs/customer-management
+  - /v1/docs/en/customer-management
+  - /v1/docs/data-protection
+  - /v1/docs/en/data-protection
 ---
 
 A Spryker-based shop ships with a comprehensive, intuitive administration area comprised of numerous features that give you a strong hold over the customization of your store. Here you can tailor features to your specific needs, manage orders, products, customers, modify look & feel of your store by, for example, designing the eye-catching marketing campaigns and promotions, and much more.

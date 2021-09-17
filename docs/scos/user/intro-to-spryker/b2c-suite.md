@@ -162,11 +162,8 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 
 [**Back Office**](https://documentation.spryker.com/2021080/docs/back-office):
 
-* [Back Office Management](/docs/scos/user/features/{{page.version}}/spryker-core-back-office/spryker-core-back-office.html)
-* [Data Protection](https://documentation.spryker.com/2021080/docs/data-protection)
-* [Permission & ACL Management](https://documentation.spryker.com/2021080/docs/permission-acl-management)
-* [Customer Management](/docs/scos/user/features/{{page.version}}/customer-account-management/customer-account-management.html)
-
+* [Back Office Management](/docs/scos/user/features/{{page.version}}/spryker-core-back-office-feature-overview.html)
+* [Permission & ACL Management](/docs/scos/dev/feature-walkthroughs/{{page.version}}/user-and-rights-overview.html)
 [**Multi-Channel**](/docs/scos/user/features/{{page.version}}/multi-channel/multi-channel.html):
 
 * [Multiple Touchpoint Integrations](/docs/scos/user/features/{{page.version}}/multi-channel/multi-channel.html)

@@ -3,6 +3,11 @@ title: Users and rights overview
 last_updated: Aug 20, 2021
 description: User and rights management is a general term that describes the security functionality for controlling user access to perform various roles throughout the system
 template: concept-topic-template
+originalLink: https://documentation.spryker.com/v2/docs/permission-acl-management
+originalArticleId: b24343bc-ba1b-4dad-aa74-162a43bf923a
+redirect_from:
+  - /v2/docs/permission-acl-management
+  - /v2/docs/en/permission-acl-management
 ---
 
 User and rights management is a general term that describes the security functionality for controlling user access to perform various roles throughout the system.

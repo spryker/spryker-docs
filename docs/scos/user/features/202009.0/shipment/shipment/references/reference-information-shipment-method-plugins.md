@@ -1,11 +1,13 @@
 ---
 title: Reference information- Shipment method plugins
 description: An optional plugin is linked to each shipping method. This topic provides an overview of the Availability, Price Calculation, and Delivery Time plugins.
-originalLink: https://documentation.spryker.com/v6/docs/reference-information-shipment-method-plugins
-originalArticleId: 4dd51fef-f19c-46bd-9b8f-b669bfb83be0
+originalLink: https://documentation.spryker.com/docs/reference-information-shipment-method-plugins
+originalArticleId: c164d2cc-dc77-415c-a1a7-8a2071f19492
 redirect_from:
-  - /v6/docs/reference-information-shipment-method-plugins
-  - /v6/docs/en/reference-information-shipment-method-plugins
+  - 2021080/docs/reference-information-shipment-method-plugins
+  - 2021080/docs/en/reference-information-shipment-method-plugins
+  - /docs/reference-information-shipment-method-plugins
+  - /docs/en/reference-information-shipment-method-plugins
 ---
 
 The main concerns regarding shipping services are :
@@ -132,7 +134,7 @@ protected function getAvailabilityPlugins(Container $container)
         'Plugin name visible in form' => new YourAvailabilityPlugin(),
     ];
 }
- 
+
 /**
  * @param Container $container
  *
@@ -144,7 +146,7 @@ protected function getPricePlugins(Container $container)
         'Plugin name visible in form' => new YourPricePlugin(),
     ];
 }
- 
+
 /**
  * @param Container $container
  *

@@ -25,11 +25,7 @@ To learn more about the feature and to find out how end users use it, see [Merch
 | [MerchantCategorySearch](https://github.com/spryker/merchant-category-search) | Provides plugins to extend MerchantSearch with categories. |
 
 ## Domain model
-<!--
-- Domain model SHOULD contain all the entities that were adjusted or introduced by the feature.
-- All the new connections SHOULD also be shown and highlighted properly 
-- Make sure to follow the same style as in the example
--->
+
 ![Domain Model](https://confluence-connect.gliffy.net/embed/image/2f9ddeb3-aefe-4511-b1d0-7936a7935c6a.png?utm_medium=live&utm_source=custom)
 
 

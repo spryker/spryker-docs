@@ -16,17 +16,7 @@ To learn more about the feature and to find out how end users use it, see [Merch
 ## Module dependency graph
 
 ![Module Dependency Graph](https://confluence-connect.gliffy.net/embed/image/19aac040-a607-4a20-8edf-a81473e293e9.png?utm_medium=live&utm_source=custom)
-<!--
-Diagram content:
-    -The module dependency graph SHOULD contain all the modules that are specified in the feature  (don't confuse with the module in the epic)
-    - The module dependency graph MAY contain other module that might be useful or required to show
-Diagram styles:
-    - The diagram SHOULD be drown with the same style as the example in this doc
-    - Use the same distance between boxes, the same colors, the same size of the boxes
-Table content:
-    - The table that goes after diagram SHOULD contain all the modules that are present on the diagram
-    - The table should provide the role each module plays in this feature
--->
+
 | MODULE     | DESCRIPTION                |
 |------------|----------------------------|
 | [Category](https://github.com/spryker/category) | The Category module helps you to build a product organisation structure. Categories are modelled in an hierarchical structure, a tree.  |

@@ -13,6 +13,23 @@ To learn more about the feature and to find out how end users use it, see [Merch
 
 {% endinfo_block %}
 
+## Module dependency graph
+
+![Module Dependency Graph](https://confluence-connect.gliffy.net/embed/image/0b05a957-57a4-4422-9595-5bbe63a6a18b.png?utm_medium=live&utm_source=custom)
+
+| MODULE     | DESCRIPTION                |
+|------------|----------------------------|
+| [MerchantOpeningHours](https://github.com/spryker/merchant-opening-hours) | MerchantOpeningHours module provides ability to configure a scheduling of opening hours for Merchant. |
+| [MerchantOpeningHoursDataImport](https://github.com/spryker/merchant-opening-hours-data-import) | Data importer for MerchantOpeningHours. |
+| [MerchantOpeningHoursStorage](https://github.com/spryker/merchant-opening-hours-storage) | Manages storage for merchant opening hours entities. |
+| [WeekdaySchedule](https://github.com/spryker/weekday-schedule) | WeekdaySchedule module provides ability to configure a scheduling of weekdays and dates. |
+| [MerchantOpeningHoursWidget](https://github.com/spryker-shop/merchant-opening-hours-widget) | This module provides a widget to show merchant opening hours. |
+
+## Domain model
+
+![Domain Model](https://confluence-connect.gliffy.net/embed/image/ad57523c-52cd-4733-bfb5-9c43666ae54c.png?utm_medium=live&utm_source=custom)
+
+
 ## Related Developer articles
 
 

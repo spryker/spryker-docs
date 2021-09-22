@@ -12,7 +12,7 @@ Column Type is an Angular Component that describes how a specific type of the co
 
 You can configure columns in the table config:
 
-```ts
+```html
 <spy-table [config]="{
     ...,
     columns: [
@@ -147,8 +147,8 @@ export enum ColumnTypeOptionsType {
 
 UI library comes with a number of standard column types that can be used on any project:
 
-- list—renders a list of column types.
-- autocomplete—renders `@spryker/input` and `@spryker/autocomplete` components.
+- [list](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-list.html)—renders a list of column types.
+- [autocomplete](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-autocomplete.html)—renders `@spryker/input` and `@spryker/autocomplete` components.
 - chip—renders `@spryker/chip` component.
 - date—renders a formatted date by `config`.
 - dynamic—is a higher-order column that gets `ColumnConfig` from the configured `Datasource` and renders a column with the retrieved `ColumnConfig`.

@@ -1,6 +1,6 @@
 ---
 title: Marketplace Product Offer feature integration
-last_updated: Mar 29, 2021
+last_updated: Sep 9, 2021
 description: This document describes the process how to integrate the Marketplace Product Offer feature into a Spryker project.
 template: feature-integration-guide-template
 ---
@@ -17,9 +17,9 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------------- | ------- | -------|
-| Spryker Core         | 202001.0   | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Marketplace Merchant | dev-master | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
-| Product              | 202001.0   | [Product feature integration](https://github.com/spryker-feature/product) |
+| Spryker Core         | {{page.version}}   | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
+| Product              | {{page.version}}   | [Product feature integration](https://github.com/spryker-feature/product) |
 
 ###  1) Install the required modules using Composer
 
@@ -306,7 +306,7 @@ Make sure that when the following entities get updated via the ORM, the correspo
 
 Prepare your data according to your requirements using the demo data:
 
-<details><summary>data/import/common/common/marketplace/merchant_product_offer.csv</summary>
+<details><summary markdown='span'>data/import/common/common/marketplace/merchant_product_offer.csv</summary>
 
 ```csv
 product_offer_reference,concrete_sku,merchant_reference,merchant_sku,is_active,approval_status
@@ -457,7 +457,7 @@ offer418,112_312526172,MER000002,,1,approved
 | is_active               |        | boolean   | 1             | Product offer status, defaults to 1.                          |
 | approval_status         |        | string    | approved      | Approval status (Waiting for Approval – Approved – Denied). Denied and Waiting for Approval statuses mean that the offer is not visible on PDP regardless of Product Offer → Active = true.This can be configured (along with the transition between statuses in ProductOfferConfig). If not supplied, ProductOfferConfig → getDefaultStatus is applied. |
 
-<details><summary>data/import/common/common/marketplace/merchant_product_offer_store.csv</summary>
+<details><summary markdown='span'>data/import/common/common/marketplace/merchant_product_offer_store.csv</summary>
 
 ```csv
 product_offer_reference,store_name
@@ -1332,6 +1332,7 @@ Add product offers section to marketplace section of `navigation.xml`:
 ```
 
 Execute the following command:
+
 ```bash
 console navigation:build-cache
 ```
@@ -1353,7 +1354,7 @@ To start feature integration, integrate the following features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | ---------- | ----- | --------------|
-| Spryker Core | 202001.0 | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration)  |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration)  |
 
 ### 1) Install the required modules using Composer
 
@@ -1382,6 +1383,10 @@ merchant_product_offer.sold_by,Sold by,en_US
 merchant_product_offer.sold_by,Verkauft durch,de_DE
 merchant.sold_by,Sold by,en_US
 merchant.sold_by,Verkauft durch,de_DE
+product-offer.info.product-offer-inactive.removed,Inactive item %sku% was removed from your shopping cart.,en_US
+product-offer.info.product-offer-inactive.removed,Der inaktive Artikel %sku% wurde aus Ihrem Warenkorb entfernt.,de_DE
+product-offer.info.reference.invalid,Product offer reference not found for product with SKU '%sku%'.,en_US
+product-offer.info.reference.invalid,Produktangebotsreferenz für Produkt mit SKU '% sku%' nicht gefunden.,de_DE
 ```
 
 Import data:

@@ -55,7 +55,7 @@ highlighter: rouge
 markdown: CommonMarkGhPages
 commonmark:
   options: ["SMART", "FOOTNOTES"]
-  extensions: ["strikethrough", "autolink", "table", "tagfilter"]
+  extensions: ["strikethrough", "autolink", "table"]
 
 plugins:
   - jekyll-last-modified-at
@@ -116,6 +116,18 @@ defaults:
       sidebar: "scos_user_sidebar"
       product-type: 'scos/user'
       role: "user"
+  -
+    scope:
+      path: "docs/cloud"
+    values:
+      product: "cloud"
+  -
+    scope:
+      path: "docs/cloud/dev"
+    values:
+      sidebar: "cloud_dev_sidebar"
+      product-type: 'cloud/dev'
+      role: "dev"
 
 versions:
   '201811.0': '201811.0'
@@ -145,6 +157,7 @@ versioned_categories:
 sidebars:
   - marketplace_dev_sidebar
   - marketplace_user_sidebar
+  - cloud_dev_sidebar
 
 description: "Spryker documentation center."
 # the description is used in the feed.xml file
@@ -166,6 +179,8 @@ algolia:
       title: 'Marketplace User'
     - name: 'marketplace_dev'
       title: 'Marketplace Developer'
+    - name: 'cloud_dev'
+      title: 'Cloud Developer'
 
 sass:
     sass_dir: css

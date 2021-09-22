@@ -418,6 +418,13 @@ entries:
         - title: UI components library
           nested:
 
+            - title: "Actions"
+              url: /docs/marketplace/dev/front-end/ui-components-library/actions/
+              nested:
+
+                - title: "Actions HTTP"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-http.html
+
             - title: "Datasources"
               url: /docs/marketplace/dev/front-end/ui-components-library/datasources.html
 

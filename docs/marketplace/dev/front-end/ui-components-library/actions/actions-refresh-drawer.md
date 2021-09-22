@@ -30,7 +30,7 @@ Below you can find interfaces for Actions Refresh Drawer.
 ```ts
 export interface RefreshDrawerActionConfig extends ActionConfig {}
 
-// Component registration
+// Service registration
 @NgModule({
   imports: [
     ActionsModule.withActions({

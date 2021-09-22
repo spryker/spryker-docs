@@ -35,6 +35,14 @@ See an example below, how to use the Actions Drawer service.
 Below you can find interfaces for Actions Drawer.
 
 ```ts
+export interface DrawerActionComponentsRegistry {
+  // type: Type<unknown>
+}
+
+export type DrawerActionComponentType = RegistryType<
+  DrawerActionComponentsRegistry
+>;
+
 export interface DrawerActionConfigComponent extends ActionConfig {
   component: DrawerActionComponentType | Type<unknown>;
   options?: Partial<DrawerOptionsComponent>;
@@ -48,18 +56,58 @@ export interface DrawerActionConfigTemplate extends ActionConfig {
 export type DrawerActionConfig =
   | DrawerActionConfigComponent
   | DrawerActionConfigTemplate;
+```
 
-// Component registration
+## Component registration
+
+There are already a two existing components in Components Library that may be used within the drawer.
+
+`ajax-form` - renders the html form via ajax request.  
+`url-html-renderer` - renders html content via `html-renderer` component and `urlHtml` directive `<spy-html-renderer urlHtml="/html-request"></spy-html-renderer>`.  
+
+```ts
 @NgModule({
   imports: [
     ActionsModule.withActions({
       drawer: DrawerActionHandlerService,
     }),
     DrawerActionModule.withComponents({
-      component_name: Component,
+      'ajax-form': AjaxFormComponent,
+      'url-html-renderer': UrlHtmlRendererComponent,
     }),
-    ComponentModule,
+    AjaxFormModule,
+    UrlHtmlRendererModule,
   ],
 })
 export class RootModule {}
+```
+
+Also, it's possible to create and register a custom component that will be rendered inside the drawer.
+
+```ts
+// Registration
+@NgModule({
+  imports: [
+    ActionsModule.withActions({
+      drawer: DrawerActionHandlerService,
+    }),
+    DrawerActionModule.withComponents({
+      'custom': CustomComponent,
+    }),
+    CustomModule,
+  ],
+})
+export class RootModule {}
+```
+
+```html
+// Usage
+<spy-button-action
+  [action]="{
+    type: 'drawer',
+    component: 'custom',
+  }"
+>
+  ...
+</spy-button-action>
 ```

@@ -12,7 +12,7 @@ Actions Refresh Table is an Angular Service that refreshes data of the Table in 
 See an example below, how to use the Actions Refresh Table service.
 
 `type` - an action type.  
-`tableId` - an `id` of the table that will be refreshed via `Table Locator Service`.  
+`tableId` - an `id` of the table that will be refreshed.  
 
 ```html
 <spy-button-action

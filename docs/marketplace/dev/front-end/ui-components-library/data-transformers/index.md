@@ -15,7 +15,7 @@ As a result, backend systems can manipulate data without changing the frontend a
 
 Anyone may use the Data Transformer Service to modify data by configuring a specific `DataTransformer`.
 
-```ts
+```html
 <spy-select
   [datasource]="{
     type: 'http',

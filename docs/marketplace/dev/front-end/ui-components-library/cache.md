@@ -13,7 +13,7 @@ This allows backend systems to use caching without changing the front-end at all
 
 Cache Service uses Cache Strategy to define caching algorithm (static, cache first, freshness first, etc)
 
-```ts
+```html
 <spy-select
   [datasource]="{
     type: 'http',

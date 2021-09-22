@@ -44,7 +44,7 @@ Below you can find interfaces for Actions Refresh Parent Table.
 ```ts
 export interface RefreshParentTableActionConfig extends ActionConfig {}
 
-// Component registration
+// Service registration
 @NgModule({
   imports: [
     ActionsModule.withActions({

@@ -1,0 +1,37 @@
+.error-section {
+    background: $darkest url('../images/404-bg.png') no-repeat #{100% 50%/cover};
+    color: $white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 0;
+
+    @include media("<desktop") {
+       background-image: url('../images/404-bg-md.png');
+    }
+
+    @include media("<tablet") {
+       background-image: url('../images/404-bg-sm.png');
+       min-height: calc(100vh - 64px);
+    }
+
+    &__title {
+        color: inherit;
+        font-size: 38px;
+        margin: 0 0 .3em;
+
+        @include media("<tablet") {
+            font-size: 28px;
+        }
+    }
+
+    &__text {
+        margin: 0 0 1.2em;
+    }
+
+    &__button {
+        font-size: 12px;
+        min-width: 190px;
+    }
+}

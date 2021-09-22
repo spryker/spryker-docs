@@ -34,7 +34,7 @@ export interface RefreshTableActionConfig extends ActionConfig {
   tableId?: string;
 }
 
-// Component registration
+// Service registration
 @NgModule({
   imports: [
     ActionsModule.withActions({

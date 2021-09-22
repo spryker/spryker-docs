@@ -58,7 +58,7 @@ export type DrawerActionConfig =
   | DrawerActionConfigTemplate;
 ```
 
-## Component registration
+## Service registration
 
 There are already a two existing components in Components Library that may be used within the drawer.
 

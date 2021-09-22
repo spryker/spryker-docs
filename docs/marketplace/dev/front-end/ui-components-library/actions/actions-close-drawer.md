@@ -30,7 +30,7 @@ Below you can find interfaces for Actions Close Drawer.
 ```ts
 export interface CloseDrawerActionConfig extends ActionConfig {}
 
-// Component registration
+// Service registration
 @NgModule({
   imports: [
     ActionsModule.withActions({

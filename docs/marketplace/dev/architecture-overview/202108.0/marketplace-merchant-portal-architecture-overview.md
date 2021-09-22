@@ -16,7 +16,8 @@ This layer serves as a base for quite some of backend-oriented applications such
 
 ### Security
 While addressing different concerns, both MerchantPortal and Backoffice has direct access the main database where all the application transactions are stored.
-While Backoffice application is hidden behind VPN secure connection, MerchantPortal needs to be exposed to WAN directly. That raises security risks (such as Unauthorized Data Access) and imposes higher requirements on both Application and Infrastructure layers.
+Markteplace Operator Backoffice application is hidden behind VPN secure connection, but MerchantPortal needs to be exposed to WAN directly.
+That raises security risks (such as Unauthorized Data Access) and imposes higher requirements on both Application and Infrastructure layers.
 
 #### Security of Spryker Marketplace System Infrastructure
 
@@ -25,7 +26,7 @@ Make sure to fulfill [Spryker Marketplace System Infrastrcture requirements](/do
 
 #### Security of Spryker Marketplace MerchantPortal Application
 
-The main database contains all the data of your system, and it also contains Merchant specific data (MerchantOrders, MerchantOffers, and MerchantProducts) that should never be available for other Merchants on the system.
+The main database contains all the data of your system, and it contains Merchant specific data (MerchantOrders, MerchantOffers, and MerchantProducts) that should never be available for other Merchants on the system.
 Keep this in mind while developing custom functionality for MerchantPortal (learn more on [How to add a custom page on MerchantPortal here](/docs/marketplace/dev/feature-walkthroughs/202108.0/marketplace-merchant-portal-core-feature-walkthrough/marketplace-merchant-portal-how-to-add-a-page.html)).
 
 In order to provide additional layer of protection for the sensitive data, we have developed Persistence ACL for MerchantPortal. It filters all the data coming from database on query level. 

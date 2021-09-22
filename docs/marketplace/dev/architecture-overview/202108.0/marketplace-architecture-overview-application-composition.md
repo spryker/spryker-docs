@@ -14,20 +14,20 @@ The following diagram explains the application composition, it is internationall
 
 ![Applications composition](https://confluence-connect.gliffy.net/embed/image/3a83f861-b25e-4ef5-aee7-e7da0b182cfa.png?utm_medium=live&utm_source=custom)
 
-### Glue
+### Storefront API
 Is a customer-facing REST API-based store-front application. This is the place where customer browses catalog and make orders.
 
 ### Yves 
 Is a customer-facing HTML-based store-front application. This is the place where customer browses catalog and make orders.
 
-### Gateway
+### Backend Gateway
 Storefront application-oriented application. This is the place how a storefront (Yves/Glue) changes the state of the system (Stock reservation, order placement, payments, etc).
 
-### MerchantPortal
-Is a merchant-centric application. This is the place where merchant manages their catalog and fulfill customer orders. Learn more about MerchantPortal here (todo: link to MerchantPortal architecture overview).
+### Merchant Portal
+Is a merchant-centric application. This is the place where merchant manages their catalog and fulfill customer orders. Learn more about Merchant Portal here (todo: link to Merchant Portal architecture overview).
 
-### Backoffice 
-Is a marketplace owner-oriented application or admin-centric application. Here the operator of the Marketplace manages the whole Marketplace, including global Product list, Merchant management, Category management, and others.
+### Markteplace Operator Backoffice 
+Is a marketplace owner-oriented application or admin-centric application. Here the Marketplace Operator manages the whole Marketplace, including global Product list, Merchant management, Category management, and others.
 
 Backoffice also has some facilities oriented to Operator-As-A-Merchant case such as Offers and Orders management. Read more about Marketplace in Backoffice  (todo: link to Marketplace in Backoffice  overview).
 

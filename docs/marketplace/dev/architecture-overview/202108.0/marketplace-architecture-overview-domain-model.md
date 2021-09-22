@@ -15,7 +15,8 @@ Please note that this model is intentionally simplified, learn more about core d
 ![Domain Model](https://confluence-connect.gliffy.net/embed/image/02c4183f-2823-4371-ba91-aa5f9585998b.png?utm_medium=live&utm_source=custom)
 
 #### Merchant
-Is a core domain object in Marketplace. Merchant represents an entity of a third-party seller on a shop. Merchants use MerchantPortal to manage their profile, catalog, and sales. 
+Is a core domain object in Marketplace. Merchant represents an entity of a third-party seller on a shop. In other setups (such as "big box retail"), Merchant can represent a branch of a chain of stores.
+Merchants use MerchantPortal to manage their profile, catalog, and sales. 
 
 Learn more about [Marketplace Merchant here](/docs/marketplace/dev/feature-walkthroughs/202108.0/marketplace-merchant-feature-walkthrough.html).
 

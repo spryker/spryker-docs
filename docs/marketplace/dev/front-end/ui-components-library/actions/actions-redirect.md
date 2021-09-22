@@ -34,7 +34,7 @@ export interface RedirectActionConfig extends ActionConfig {
   url: string;
 }
 
-// Component registration
+// Service registration
 @NgModule({
   imports: [
     ActionsModule.withActions({

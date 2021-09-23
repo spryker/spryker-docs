@@ -12,11 +12,9 @@ To learn more about the feature and to find out how end users use it, see [Marke
 
 {% endinfo_block %}
 
-## Modules relation
+## Module dependency graph
 
-![Modules relation](https://confluence-connect.gliffy.net/embed/image/c7d38902-eec0-417d-94ce-31d1baf9599d.png?utm_medium=live&utm_source=custom)
-
-### Main Marketplace MerchantPortal Core feature modules
+![Module Dependency Graph](https://confluence-connect.gliffy.net/embed/image/c7d38902-eec0-417d-94ce-31d1baf9599d.png?utm_medium=live&utm_source=custom)
 
 | NAME | DESCRIPTION | 
 | --- | --- |

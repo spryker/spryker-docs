@@ -418,6 +418,12 @@ entries:
         - title: UI components library
           nested:
 
+            - title: "Actions"
+              nested:
+
+                - title: "Actions Close Drawer"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-close-drawer.html
+
             - title: "Datasources"
               url: /docs/marketplace/dev/front-end/ui-components-library/datasources.html
 

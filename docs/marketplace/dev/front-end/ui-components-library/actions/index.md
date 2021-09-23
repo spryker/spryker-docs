@@ -53,12 +53,12 @@ export interface CustomActionConfig extends ActionConfig {
 @Injectable({
   providedIn: 'root',
 })
-export class CustomActionHandlerService implements ActionHandler {
+export class CustomActionHandlerService implements ActionHandler<unknown, void> {
   handleAction(
     injector: Injector,
     config: CustomActionConfig,
     context: unknown,
-  ): Observable< ... > {
+  ): Observable<void> {
     ...
   }
 }

@@ -19,7 +19,7 @@ template: howto-guide-template
 |**Node.js**| Version >= 12.0.0 |
 |**Yarn**| Version >= 2.0.0 && <= 2.3.x |
 |**Intranet**| Back Office application (Zed) must be secured in an Intranet (using VPN, Basic Auth, IP Allowlist, DMZ, etc.) |
-| **Spryker Commerce OS**| Version >= 202001.0 |
+| **Spryker Commerce OS**| Version >= {{page.version}} |
 
 
 

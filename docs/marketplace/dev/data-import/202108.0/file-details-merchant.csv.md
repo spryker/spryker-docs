@@ -30,7 +30,7 @@ The file should have the following parameters:
 ## Import file dependencies
 The file has the following dependencies:
 
-- [merchant_profile.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant-profile-csv.html).
+- [merchant_profile.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant-profile.csv.html).
 
 ## Import template file and content example
 

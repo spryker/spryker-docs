@@ -18,7 +18,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ------ | -----------|
 | Marketplace Shipment | {{page.version}} | [Marketplace Shipment feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-feature-integration.html) |
-| Checkout | 202001.0 | [Checkout feature integration](https://github.com/spryker-feature/checkout) |
+| Checkout | {{page.version}} | [Checkout feature integration](https://github.com/spryker-feature/checkout) |
 
 ### 1) Set up behavior
 

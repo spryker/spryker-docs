@@ -422,7 +422,7 @@ entries:
               url: /docs/marketplace/dev/front-end/ui-components-library/actions/
               nested:
 
-                - title: "Actions Refresh Parent Table"
+                - title: "Refresh Parent Table"
                   url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-parent-table.html
 
             - title: "Datasources"

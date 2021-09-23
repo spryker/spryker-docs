@@ -1,6 +1,5 @@
 ---
 title: Marketplace Promotions and Discounts feature walkthrough
-last_updated: Sep 15, 2021
 description: This article provides technical details on the Marketplace Promotions and Discounts feature.
 template: concept-topic-template
 ---
@@ -13,16 +12,16 @@ To learn more about the feature and to find out how end users use it, see [Marke
 
 {% endinfo_block %}
 
-## Modules relation
+## Module dependency graph
 
-![Modules relation](https://confluence-connect.gliffy.net/embed/image/75358e26-725d-4f7d-8686-c72be236b88e.png?utm_medium=live&utm_source=custom)
-
-### Main Marketplace MerchantPortal Core feature modules
+![Module Dependency Graph](https://confluence-connect.gliffy.net/embed/image/75358e26-725d-4f7d-8686-c72be236b88e.png?utm_medium=live&utm_source=custom)
 
 | NAME | DESCRIPTION | 
 | --- | --- |
 | [DiscountMerchantSalesOrder](https://github.com/spryker/discount-merchant-sales-order) | Provides plugin for filtering out discounts in `MerchantOrderTransfer.order` that does not belongs to the current merchant order. |
-| [DiscountMerchantSalesOrderGui](https://github.com/spryker/discount-merchant-sales-order) | Provide the the endpoint `/discount-merchant-sales-order-gui/merchant-sales-order/list` to view of merchant order discounts list in Back office. |
+| [DiscountMerchantSalesOrderGui](https://github.com/spryker/discount-merchant-sales-order) | Provides the the endpoint `/discount-merchant-sales-order-gui/merchant-sales-order/list` to view of merchant order discounts list in Backoffice. |
+| [MerchantSalesOrderExtension](https://github.com/spryker/merchant-sales-order-extension) | Provides plugin interfaces for `MerchantSalesOrder` module. |
+| [MerchantSalesOrder](https://github.com/spryker/merchant-sales-order) | Provides functionality to link merchant to sales orders. |
 
 ## Related Developer articles
 

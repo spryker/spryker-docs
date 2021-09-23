@@ -22,6 +22,12 @@ To learn more about the feature and to find out how end users use it, see [Marke
 | [DiscountMerchantSalesOrderGui](https://github.com/spryker/discount-merchant-sales-order) | Provides the the endpoint `/discount-merchant-sales-order-gui/merchant-sales-order/list` to view of merchant order discounts list in Backoffice. |
 | [MerchantSalesOrderExtension](https://github.com/spryker/merchant-sales-order-extension) | Provides plugin interfaces for `MerchantSalesOrder` module. |
 | [MerchantSalesOrder](https://github.com/spryker/merchant-sales-order) | Provides functionality to link merchant to sales orders. |
+| [Discount](https://github.com/spryker/discount) | Provides basic functionality to create dynamic rules with which discounts can be applied to cart items. |
+| [Shop.DiscountWidget](https://github.com/spryker-shop/discount-widget) | Provides discount information: discounts summary and voucher or discount form on the cart page. |
+| [DiscountPromotion](https://github.com/spryker/merchant-sales-order) | Provides basic functionality to give away discounted or even free products to create promotions like "buy one, get one for free", "buy product X, get product Y for free", "buy 10 of product X and get 1 of product X for discounted price". |
+| [Shop.DiscountPromotionWidget](https://github.com/spryker-shop/discount-promotion-widget) | Provides widget for discount promotions. |
+| [CartCode](https://github.com/spryker/merchant-sales-order) | Provides basic functionality to apply/remove any kind of "codes" (i.e. voucher code, gift card code, etc.) on a cart. |
+| [Shop.CartCodeWidget](https://github.com/spryker-shop/cart-code-widget) | Provides functionality to apply/remove codes for carts. |
 
 ## Related Developer articles
 

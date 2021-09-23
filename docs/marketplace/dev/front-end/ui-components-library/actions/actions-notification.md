@@ -5,10 +5,10 @@ template: concept-topic-template
 ---
 
 Actions Notification is an Angular Service that renders notification box.
-See an example below, how to use the Actions Notification service.
+Check out this example below to see how to use Actions Notification service.
 
-`type` - an action type.  
-`notifications` - an array with notifications configuration based on the Notification component.  
+- `type` - is an action type.  
+- `notifications` - is an array with notifications configuration based on the Notification component.  
 
 ```html
 <spy-button-action
@@ -30,7 +30,7 @@ See an example below, how to use the Actions Notification service.
 
 ## Interfaces
 
-Below you can find interfaces for Actions Notification.
+Below you can find interfaces for the Actions Notification.
 
 ```ts
 export interface NotificationActionConfig extends ActionConfig {

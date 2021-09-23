@@ -30,6 +30,88 @@ See an example below, how to use the Actions Drawer service.
 </spy-button-action>
 ```
 
+## Main Service
+
+The main module provides an opportunity to register a component by key via static method `withComponents`. 
+It assigns the object of components to the `DrawerActionComponentTypesToken` under the hood.
+
+The main service injects all registered types from the `DrawerActionComponentTypesToken`.
+
+`handleAction` method checks if `config` (from the argument) contains `component` or `template` keys and returns observable 
+with data by `DrawerRef.openComponent` or `DrawerRef.openTemplate` accordingly.
+
+```ts
+handleAction<C>(
+  injector: Injector,
+  config: DrawerActionConfig,
+  context: C,
+): Observable<DrawerRef<C>> {
+  ...
+});
+```
+
+Below you can find an explanation on how both of them works:
+
+### Via Component
+
+If a component type is a string
+
+```ts
+handleAction(injector, config: { component: 'simple_component' }, context);
+```
+
+`DrawerActionComponentTypesToken` will return component by key from registered components collection 
+and then `DrawerRef.openComponent` method will be called.
+
+If a component type is an Angular component
+
+```ts
+handleAction(injector, config: { component: SimpleComponent }, context);
+```
+
+Then `DrawerRef.openComponent` method will be called without any manipulations with `DrawerActionComponentTypesToken`.
+
+### Via Template
+
+There is an easy way to open drawer with `ng-template`. All you need it's just create a template and call 
+`handleAction` method with a reference to this template inside the config.
+
+```html
+  <ng-template #contentTpl>
+     ...
+  </ng-template>
+```
+
+```ts
+// Find the template
+@ViewChild(‘contentTpl’) contentTpl?: TemplateRef<any>;
+
+// Call the method 
+handleAction(injector, config: { template: contentTpl }, context);
+```
+
+`DrawerRef.openTemplate` will be called and drawer will be open with `contentTpl` template.
+
+## Service registration
+
+Any existing Angular component can be registered and used within the drawer.
+Also, it's possible to create and register a custom component that will be rendered inside the drawer.
+
+```ts
+@NgModule({
+  imports: [
+    ActionsModule.withActions({
+      drawer: DrawerActionHandlerService,
+    }),
+    DrawerActionModule.withComponents({
+      'custom': CustomComponent,
+    }),
+    CustomModule,
+  ],
+})
+export class RootModule {}
+```
+
 ## Interfaces
 
 Below you can find interfaces for Actions Drawer.
@@ -56,58 +138,4 @@ export interface DrawerActionConfigTemplate extends ActionConfig {
 export type DrawerActionConfig =
   | DrawerActionConfigComponent
   | DrawerActionConfigTemplate;
-```
-
-## Service registration
-
-There are already a two existing components in Components Library that may be used within the drawer.
-
-`ajax-form` - renders the html form via ajax request.  
-`url-html-renderer` - renders html content via `html-renderer` component and `urlHtml` directive `<spy-html-renderer urlHtml="/html-request"></spy-html-renderer>`.  
-
-```ts
-@NgModule({
-  imports: [
-    ActionsModule.withActions({
-      drawer: DrawerActionHandlerService,
-    }),
-    DrawerActionModule.withComponents({
-      'ajax-form': AjaxFormComponent,
-      'url-html-renderer': UrlHtmlRendererComponent,
-    }),
-    AjaxFormModule,
-    UrlHtmlRendererModule,
-  ],
-})
-export class RootModule {}
-```
-
-Also, it's possible to create and register a custom component that will be rendered inside the drawer.
-
-```ts
-// Registration
-@NgModule({
-  imports: [
-    ActionsModule.withActions({
-      drawer: DrawerActionHandlerService,
-    }),
-    DrawerActionModule.withComponents({
-      'custom': CustomComponent,
-    }),
-    CustomModule,
-  ],
-})
-export class RootModule {}
-```
-
-```html
-// Usage
-<spy-button-action
-  [action]="{
-    type: 'drawer',
-    component: 'custom',
-  }"
->
-  ...
-</spy-button-action>
 ```

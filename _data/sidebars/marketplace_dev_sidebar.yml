@@ -422,8 +422,29 @@ entries:
               url: /docs/marketplace/dev/front-end/ui-components-library/actions/
               nested:
 
+                - title: "HTTP"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-http.html
+
+                - title: "Refresh Parent Table"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-parent-table.html
+
+                - title: "Refresh Table"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-table.html
+
+                - title: "Redirect"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-redirect.html
+
                 - title: "Drawer"
-                  url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-drawer.html
+                    url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-drawer.html
+
+                - title: "Refresh Drawer"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-drawer.html
+
+                - title: "Close Drawer"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-close-drawer.html
+
+                - title: "Notification"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-notification.html
 
             - title: "Datasources"
               url: /docs/marketplace/dev/front-end/ui-components-library/datasources.html

@@ -422,7 +422,7 @@ entries:
               url: /docs/marketplace/dev/front-end/ui-components-library/actions/
               nested:
 
-                - title: "Actions HTTP"
+                - title: "HTTP"
                   url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-http.html
 
             - title: "Datasources"

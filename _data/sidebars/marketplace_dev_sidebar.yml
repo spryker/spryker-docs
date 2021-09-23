@@ -421,6 +421,9 @@ entries:
             - title: "Actions"
               nested:
 
+                - title: "Actions HTTP"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-http.html
+
                 - title: "Actions Refresh Parent Table"
                   url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-parent-table.html
 

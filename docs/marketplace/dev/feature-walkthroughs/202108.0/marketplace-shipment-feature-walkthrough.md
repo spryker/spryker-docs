@@ -7,7 +7,11 @@ template: concept-topic-template
 
 With the *Marketplace Shipment* feature, the [marketplace orders](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-order-management-feature-walkthrough.html) are split into several shipments based on the merchants from which the items were bought. Merchants can see only shipments with products and offers that belong to them.
 
+{% info_block warningBox "User documentation" %}
+
 To learn more about the feature and to find out how end users use it, see [Marketplace Shipment feature overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-shipment-feature-overview.html) for business users.
+
+{% endinfo_block %}
 
 ![Entity diagram](https://confluence-connect.gliffy.net/embed/image/448f4d60-ebdb-4380-bfc9-21b6c49ddf3f.png?utm_medium=live&utm_source=confluence)
 

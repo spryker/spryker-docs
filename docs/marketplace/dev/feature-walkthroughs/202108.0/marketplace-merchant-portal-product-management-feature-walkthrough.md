@@ -6,11 +6,9 @@ template: concept-topic-template
 
 The *Marketplace Merchant Portal Product Management* feature allows merchants to manage product in the Merchant portal.
 
-## Modules relation
+## Module dependency graph
 
-![Modules relation](https://confluence-connect.gliffy.net/embed/image/a38bb45f-0f1c-4153-8f3d-7873b3aa13af.png?utm_medium=live&utm_source=custom)
-
-### Main Marketplace MerchantPortal Core feature modules
+![Module Dependency Graph](https://confluence-connect.gliffy.net/embed/image/a38bb45f-0f1c-4153-8f3d-7873b3aa13af.png?utm_medium=live&utm_source=custom)
 
 | NAME | DESCRIPTION | 
 | --- | --- |

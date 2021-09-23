@@ -409,12 +409,12 @@ entries:
                 - title: "Autocomplete"
                   url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-autocomplete.html
 
-            - title: "Table Feature extension"
+            - title: "Table Features"
               url: /docs/marketplace/dev/front-end/table-design/table-feature-extension/
               nested:
 
-                - title: "Table Feature Pagination"
-                  url: /docs/marketplace/dev/front-end/table-design/table-feature-extension/table-feature-pagination.html
+                - title: "Pagination"
+                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-pagination.html
 
             - title: "Table Filter extension"
               url: /docs/marketplace/dev/front-end/table-design/table-filter-extension.html

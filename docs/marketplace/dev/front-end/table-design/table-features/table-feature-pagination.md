@@ -12,8 +12,10 @@ Table Feature Pagination is a feature of the Table Component that renders pagina
 This feature based on the [Pagination component](/docs/marketplace/dev/front-end/ui-components-library/pagination.html).
 See an example below, how to use the Pagination feature.
 
+Feature Configuration:
+
 `enabled` - will enable feature via config.  
-`sizes` - an array of numbers of table rows that needs to be displayed per page.
+`sizes` - is an array of numbers of table rows that needs to be displayed per page.  
 
 ```html
 <spy-table [config]="{
@@ -27,6 +29,22 @@ See an example below, how to use the Pagination feature.
 </spy-table>
 ```
 
+## Feature registration
+   
+```ts
+@NgModule({
+  imports: [
+    TableModule.withFeatures({
+      pagination: () =>
+        import('table.feature.pagination').then(
+          (m) => m.TablePaginationFeatureModule,
+        ),    
+    }),
+  ],
+})
+export class RootModule {}
+```
+
 ## Interfaces
 
 Below you can find interfaces for Table Feature Pagination.
@@ -35,18 +53,4 @@ Below you can find interfaces for Table Feature Pagination.
 export interface TablePaginationConfig extends TableFeatureConfig {
   sizes: number[];
 }
-
-// Component registration
-@NgModule({
-  imports: [
-    TableModule.forRoot(),
-    TableModule.withFeatures({
-      pagination: () =>
-        import('./table-pagination-feature.module').then(
-          (m) => m.TablePaginationFeatureModule,
-        ),    
-    }),
-  ],
-})
-export class RootModule {}
 ```

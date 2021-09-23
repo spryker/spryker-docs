@@ -54,11 +54,11 @@ export interface CustomActionConfig extends ActionConfig {
   providedIn: 'root',
 })
 export class CustomActionHandlerService implements ActionHandler {
-  trigger<C extends ActionConfig>(
-      injector: Injector,
-      config: C,
-      context: InferActionContext<C['type']>,
-    ): Observable<InferActionReturn<C['type']>> {
+  handleAction(
+    injector: Injector,
+    config: CustomActionConfig,
+    context: unknown,
+  ): Observable< ... > {
     ...
   }
 }

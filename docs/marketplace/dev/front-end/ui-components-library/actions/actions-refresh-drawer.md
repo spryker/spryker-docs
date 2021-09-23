@@ -8,10 +8,10 @@ This article provides details about the Actions Refresh Drawer service in the Co
 
 ## Overview
 
-Actions Refresh Drawer is an Angular Service that refreshes/rerenders opened Drawer in current context.
-See an example below, how to use the Actions Refresh Drawer service.
+Actions Refresh Drawer is an Angular Service that refreshes/re-renders the currently opened drawer.
+Check out this example below to see how to use Actions Refresh Drawer service.
 
-`type` - an action type.
+`type` - is an action type.
 
 ```html
 <spy-button-action
@@ -25,7 +25,7 @@ See an example below, how to use the Actions Refresh Drawer service.
 
 ## Interfaces
 
-Below you can find interfaces for Actions Refresh Drawer.
+Below you can find interfaces for the Actions Refresh Drawer.
 
 ```ts
 export interface RefreshDrawerActionConfig extends ActionConfig {}

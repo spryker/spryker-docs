@@ -422,7 +422,7 @@ entries:
               url: /docs/marketplace/dev/front-end/ui-components-library/actions/
               nested:
 
-                - title: "Actions Redirect"
+                - title: "Redirect"
                   url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-redirect.html
 
             - title: "Datasources"

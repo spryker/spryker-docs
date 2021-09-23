@@ -1,5 +1,5 @@
 ---
-title: Table design
+title: Table Design
 description: This article describes the Table Design in the Components Library.
 template: concept-topic-template
 ---
@@ -11,10 +11,10 @@ This article describes the Table Design in the Components Library.
 A Table Component is an arrangement of data in rows and columns, or possibly in a more complex structure 
 (with sorting, filtering, pagination, row selections, infinite scrolling, etc.). 
 It is an essential building block of a user interface.
-A basic able Component is `<spy-table [config]="config"></spy-table>` where `config` is:
+A basic Table Component is `<spy-table [config]="config"></spy-table>` where `config` is:
 
-- `dataSource` - an array of rows to be displayed on the table.
-- `columns` - an array of columns.
+- `dataSource` - Datasource configuration from which the data is taken.  
+- `columns` - an array of columns configuration.  
 
 ```ts
 const config: TableConfig = {
@@ -35,47 +35,6 @@ const config: TableConfig = {
 
 ![Table Architecture](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/dev+guides/Front-end/table-architecture.svg)
 
-### Components
-
-Table Component does not contain all of the features normally a table will have (filtering, pagination, searching, etc.).
-Core Table Component has just a view of the columns and data and also has built-in sorting.
-
-To use Filter components, Table Module must implement a specific interface (TableConfig) and then be registered to the Root Module via TableModule.withFilterComponents():
-
-```ts
-class TableDefaultConfigData implements Partial<TableConfig> {
-    total = {
-        enabled: true,
-    };
-    columnConfigurator = {
-        enabled: true,
-    };
-}
-
-@NgModule({
-    imports: [
-        TableModule.forRoot(),
-        TableFiltersFeatureModule.withFilterComponents({
-            select: TableFilterSelectComponent,
-            'date-range': TableFilterDateRangeComponent,
-            'tree-select': TableFilterTreeSelectComponent,
-        } as any),
-
-        // Table Filter Modules
-        TableFilterSelectModule,
-        TableFilterDateRangeModule,
-        TableFilterTreeSelectModule,
-    ],
-    providers: [
-        {
-            provide: TableDefaultConfig,
-            useClass: TableDefaultConfigData,
-        },
-    ],
-})
-export class DefaultTableConfigModule {}
-```
-
 ### Configuration
 
 The Table Component is configured via so called [Table Configuration](/docs/marketplace/dev/front-end/table-design/table-configuration.html) 
@@ -83,112 +42,80 @@ that sets up how table will behave and look like.
 
 ### Datasources
 
-To render data Table must receive it via so called [Datasources](/docs/marketplace/dev/front-end/ui-components-library/datasources.html) that is registered by the user and then configured via Table Configuration.
+To render data Table must receive it via so called [Datasources](/docs/marketplace/dev/front-end/ui-components-library/datasources/) that is registered by the user and then configured via Table Configuration.
 
 ### Features
 
-Every other piece of functionality was extracted into so called `Table Feature`:
+Every other piece of functionality was extracted into so called [Table Feature](/docs/marketplace/dev/front-end/table-design/table-features/):
 
 - Table Feature is simply an Angular Component that encapsulates specific extension of the Core Table.
 - Core Table contains specific placeholders in it’s view that Table Feature may target to render it’s own piece of UI.
 - Most of the common table functionality already exists as a Table Feature and may be used in project.
 
-To use Features, Table Module must implement a specific interface (TableConfig) and then be registered to the Root Module via TableModule.withFeatures():
+To use a Feature component - register an Angular Module that implements `ModuleWithFeature` interface in the Root Module via `TableModule.withFeatures()` under the key that will become it's configuration key:
 
 ```ts
-class TableDefaultConfigData implements Partial<TableConfig> {
-    total = {
-        enabled: true,
-    };
-    columnConfigurator = {
-        enabled: true,
-    };
-}
-
 @NgModule({
     imports: [
-        TableModule.forRoot(),
         TableModule.withFeatures({
-            filters: () => import('@spryker/table.feature.filters').then((m) => m.TableFiltersFeatureModule),
             pagination: () => import('@spryker/table.feature.pagination').then((m) => m.TablePaginationFeatureModule),
-            rowActions: () => import('@spryker/table.feature.row-actions').then((m) => m.TableRowActionsFeatureModule),
-            search: () => import('@spryker/table.feature.search').then((m) => m.TableSearchFeatureModule),
-            syncStateUrl: () => import('@spryker/table.feature.sync-state').then((m) => m.TableSyncStateFeatureModule),
-            total: () => import('@spryker/table.feature.total').then((m) => m.TableTotalFeatureModule),
-            itemSelection: () =>
-                import('@spryker/table.feature.selectable').then((m) => m.TableSelectableFeatureModule),
-            batchActions: () =>
-                import('@spryker/table.feature.batch-actions').then((m) => m.TableBatchActionsFeatureModule),
-            columnConfigurator: () =>
-                import('@spryker/table.feature.settings').then((m) => m.TableSettingsFeatureModule),
-            title: () => import('@spryker/table.feature.title').then((m) => m.TableTitleFeatureModule),
-            editable: () => import('@spryker/table.feature.editable').then((m) => m.TableEditableFeatureModule),
         }),
     ],
-    providers: [
-        {
-            provide: TableDefaultConfig,
-            useClass: TableDefaultConfigData,
-        },
-    ],
 })
-export class DefaultTableConfigModule {}
+export class AppModule {}
 ```
 
 ### Columns
 
-Columns in a Table are defined by the `Column Type` and are rendered withing the columns (text, image, link, etc.).
+Columns in a Table are defined by the [Column Type](/docs/marketplace/dev/front-end/table-design/table-column-types/) and are rendered withing the columns (text, image, link, etc.).
 New Column Type may be created and registered to the Table.
 
-To use Column components, Table Module must implement a specific interface (TableConfig) and then be registered to the Root Module via TableModule.withColumnComponents():
+To use Column component it must implement `TableColumn` interface with defined config and then be registered to the Root Module via `TableModule.withColumnComponents()`:
 
 ```ts
-class TableDefaultConfigData implements Partial<TableConfig> {
-    total = {
-        enabled: true,
-    };
-    columnConfigurator = {
-        enabled: true,
-    };
-}
-
 @NgModule({
     imports: [
-        TableModule.forRoot(),
         TableModule.withColumnComponents({
             text: TableColumnTextComponent,
-            image: TableColumnImageComponent,
-            date: TableColumnDateComponent,
-            chip: TableColumnChipComponent,
-            input: TableColumnInputComponent,
-            select: TableColumnSelectComponent,
-            dynamic: TableColumnDynamicComponent,
-            autocomplete: TableColumnAutocompleteComponent,
         } as any),
 
         // Table Column Type Modules
-        TableColumnChipModule,
         TableColumnTextModule,
-        TableColumnImageModule,
-        TableColumnDateModule,
-        TableColumnInputModule,
-        TableColumnSelectModule,
-        TableColumnDynamicModule,
-        TableColumnAutocompleteModule,
-    ],
-    providers: [
-        {
-            provide: TableDefaultConfig,
-            useClass: TableDefaultConfigData,
-        },
     ],
 })
-export class DefaultTableConfigModule {}
+export class AppModule {}
+```
+
+### Filters
+
+Table Component does not contain filters normally a table will have (filtering, searching, etc.).
+Core Table Component has just a view of the columns and data and also has built-in sorting.
+
+To use [Filter components](/docs/marketplace/dev/front-end/table-design/table-filters/), Table Module must implement a specific interface (TableConfig) and then be registered to the Root Module via `TableModule.withFilterComponents()`:
+
+```ts
+@NgModule({
+    imports: [
+        TableFiltersFeatureModule.withFilterComponents({
+            select: TableFilterSelectComponent,
+        } as any),
+
+        // Table Filter Modules
+        TableFilterSelectModule,
+    ],
+})
+export class AppModule {}
 ```
 
 ### Actions 
 
-There is a way to trigger some [Actions](/docs/marketplace/dev/front-end/ui-components-library/actions.html) by the user interaction with the Table.
+There is a way to trigger some [Actions](/docs/marketplace/dev/front-end/ui-components-library/actions/) by the user interaction with the Table.
+
+A few common Table Features that can trigger actions are available in UI library:
+
+- [Row actions](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-row-actions.html) - renders dropdown menu that contains 
+actions applicable to the table row and on click triggers an Action which must be registered.  
+- [Batch actions](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-batch-actions.html) - allows triggering batch/multiple actions from rows.  
 
 ## Interfaces
    
@@ -351,11 +278,3 @@ export interface TableRowClickEvent {
   event: Event;
 }
 ```
-
-## Extensions
-
-There are a few common Table extensions that are available in UI library:
-
-- [Column Type](/docs/marketplace/dev/front-end/table-design/table-column-types/) - describes how a specific type of the column is rendered within a table column.
-- [Feature](/docs/marketplace/dev/front-end/table-design/table-features/) - encapsulating a piece of UI that is targeted to a specific location within a Table Component or that may provide additional functionality.
-- [Filter](/docs/marketplace/dev/front-end/table-design/table-filters/) - provides filtering functionality to the Core Table Component.

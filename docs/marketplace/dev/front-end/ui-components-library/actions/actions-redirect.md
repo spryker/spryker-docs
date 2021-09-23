@@ -9,10 +9,10 @@ This article provides details about the Actions Redirect service in the Componen
 ## Overview
 
 Actions Redirect is an Angular Service that performs the hard redirect to the URL.
-See an example below, how to use the Actions Redirect service.
+Check out this example below to see how to use Actions Redirect service.
 
-`type` - an action type.  
-`url` - a URL to redirect.  
+`type` - is an action type.  
+`url` - is a URL to redirect.  
 
 ```html
 <spy-button-action
@@ -27,7 +27,7 @@ See an example below, how to use the Actions Redirect service.
 
 ## Interfaces
 
-Below you can find interfaces for Actions Redirect.
+Below you can find interfaces for the Actions Redirect.
 
 ```ts
 export interface RedirectActionConfig extends ActionConfig {

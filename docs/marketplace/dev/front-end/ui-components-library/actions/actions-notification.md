@@ -44,6 +44,13 @@ export interface NotificationData extends NotificationConfig {
   closeable?: boolean;
 }
 
+export enum NotificationType {
+  Info = 'info',
+  Error = 'error',
+  Warning = 'warning',
+  Success = 'success',
+}
+
 // Service registration
 @NgModule({
   imports: [

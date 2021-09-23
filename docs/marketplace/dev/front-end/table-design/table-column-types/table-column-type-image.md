@@ -8,7 +8,7 @@ This document explains the Table Column Type Image in the Components library.
 
 ## Overview
 
-Table Column Image is an Angular Component that provides an image.
+Table Column Image is an Angular Component that renders an image.
 
 Example usage of the Table Column Image in the `@spryker/table` config:
 

@@ -8,7 +8,7 @@ This document explains the Table Column Type Date in the Components library.
 
 ## Overview
 
-Table Column Date is an Angular Component that provides formatted date.
+Table Column Date is an Angular Component that renders formatted date using Angular built-in Date Pipe.
 
 Example usage of the Table Column Date in the `@spryker/table` config:
 

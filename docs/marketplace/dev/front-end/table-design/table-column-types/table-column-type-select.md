@@ -8,7 +8,7 @@ This document explains the Table Column Type Select in the Components library.
 
 ## Overview
 
-Table Column Select is an Angular Component that provides a drop-down list by rendering the `@spryker/select` component.
+Table Column Select is an Angular Component that renders a drop-down list using the `@spryker/select` component.
 
 Example usage of the Table Column Select in the `@spryker/table` config:
 

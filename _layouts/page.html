@@ -59,7 +59,7 @@ layout: default
         <div class="post-header">
             <h1 class="post-header__title">{{ page.title }}</h1>
 
-            <div class="post-meta">Last updated: <time datetime="">{% if page.last_updated %} {{ page.last_updated | date: "%d.%m.%Y" }} {% else %} {{ page.last_modified_at | date: "%d.%m.%Y" }} {% endif %}</time></div>
+            <div class="post-meta">Last updated: <time datetime="">{% if page.last_updated %} {{ page.last_updated | date: "%B %-d, %Y" }} {% else %} {{ page.last_modified_at | date: "%B %-d, %Y" }} {% endif %}</time></div>
 
             {% if site.github_editme_path %}
                 <a target="_blank" rel="noopener" href="https://github.com/{{site.github_editme_path}}{{page.path}}" class="button post-header__button button--small" role="button"><i class="icon-github"></i> Edit on GitHub</a>
@@ -83,7 +83,7 @@ layout: default
             </div>
         {% endif %}
 
-        <aside class="form-collapse">
+        <aside class="form-collapse" style="display: none;">
             <div class="confirm-block">
                 <strong class="confirm-block__title">
                     Was this article helpful?
@@ -118,23 +118,20 @@ layout: default
             </div>
         </aside>
 
-        <aside class="related">
+        {% if page.related != null %}
+            <aside class="related">
             <h3 class="related__title" data-toc-skip>Related articles</h3>
-            <a href="#" class="related__link">
-                <i class="icon-article related__link-icon"></i>
-                <span class="related__link-text">Building a return management process: Best practices</span>
-            </a>
-            <a href="#" class="related__link">
-                <i class="icon-article related__link-icon"></i>
-                <span class="related__link-text">Building a return management process: Best practices</span>
-            </a>
-            <a href="#" class="related__link">
-                <i class="icon-article related__link-icon"></i>
-                <span class="related__link-text">Shop Guide - Creating a Return very very long title text Shop Guide - Creating a Return very very long title text</span>
-            </a>
-        </aside>
+            {% for relatedPage in page.related %}
+                {% assign link = relatedPage.link | prepend: '/' %}
+                {% assign version = page.version | default: site.version %}
 
-        {% include commento.html %}
+                <a href="{{link | replace_first: "page.version", version }}" class="related__link">
+                    <i class="icon-article related__link-icon"></i>
+                    <span class="related__link-text">{{relatedPage.title}}</span>
+                </a>
+            {% endfor %}
+            </aside>
+        {% endif %}
     </div>
 
     <aside class="alt-sidebar">

@@ -18,9 +18,9 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | LINK |
 | --------------- | ------- | ---------- |
-| Spryker Core         | master      | [Spryker Core Feature Integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Marketplace Merchant | master      | [Marketplace Merchant Feature Integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-merchant-feature-integration.html) |
-| Marketplace Product + Marketplace Product Offer | master | [Marketplace Product + Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-product-marketplace-product-offer-feature-integration.html) |
+| Spryker Core         | {{page.version}}      | [Spryker Core Feature Integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Marketplace Merchant | {{page.version}}      | [Marketplace Merchant Feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
+| Marketplace Product + Marketplace Product Offer | {{page.version}} | [Marketplace Product + Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-marketplace-product-offer-feature-integration.html) |
 
 
 ### 1) Install the required modules using Composer
@@ -28,7 +28,7 @@ To start feature integration, integrate the required features:
 1) Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-wishlist:"dev-master" --update-with-dependencies
+composer require spryker-feature/marketplace-wishlist:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

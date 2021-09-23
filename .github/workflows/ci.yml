@@ -6,6 +6,8 @@ on:
       - 'master'
   pull_request:
   workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
 
 jobs:
   link_validation:
@@ -19,7 +21,8 @@ jobs:
         uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
         with:
           ruby-version: 2.6
-      - run: bundle install
+          bundler-cache: true
+
       - run: bundle exec jekyll build --config=_config.yml,_config_production.yml
 
       - run: bundle exec htmlproofer ./_site --allow-hash-href --url-ignore="/glue.mysprykershop.com\/[\.\w\-\/\?]+/,/github.com\/[\.\w\-\/]+\.md/"
@@ -35,7 +38,8 @@ jobs:
         uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
         with:
           ruby-version: 2.6
-      - run: bundle install
+          bundler-cache: true
+
       - run: bundle exec jekyll build --config=_config.yml,_config_production.yml
       - run: bundle exec jekyll validate
 
@@ -51,7 +55,8 @@ jobs:
         uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
         with:
           ruby-version: 2.6
-      - run: bundle install
+          bundler-cache: true
+
       - run: bundle exec jekyll build --config=_config.yml,_config_production.yml
       - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_marketplace_dev.yml
         env: # Or as an environment variable

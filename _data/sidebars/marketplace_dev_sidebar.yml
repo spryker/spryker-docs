@@ -419,11 +419,16 @@ entries:
           nested:
 
             - title: "Actions"
-              url: /docs/marketplace/dev/front-end/ui-components-library/actions/
               nested:
 
-                - title: "Redirect"
+                - title: "Actions Redirect"
                   url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-redirect.html
+
+                - title: "Actions Refresh Drawer"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-drawer.html
+
+                - title: "Actions Close Drawer"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-close-drawer.html
 
             - title: "Datasources"
               url: /docs/marketplace/dev/front-end/ui-components-library/datasources.html

@@ -12,6 +12,11 @@ entries:
 
       - title: Feature walkthroughs
         nested:
+          - title: Marketplace Core
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-core-feature-walkthrough/marketplace-core-feature-walkthrough.html
+            nested:
+              - title: Persistence ACL integration
+                url:  /docs/marketplace/dev/feature-walkthroughs/marketplace-core-feature-walkthrough/persistence-acl-integration.html
           - title: Merchant
             url: /docs/marketplace/dev/feature-walkthroughs/merchant.html
 

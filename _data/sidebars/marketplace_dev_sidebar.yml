@@ -421,13 +421,13 @@ entries:
             - title: "Actions"
               nested:
 
-                - title: "Actions Refresh Drawer"
+                - title: "Refresh Drawer"
                   url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-drawer.html
 
-                - title: "Actions Close Drawer"
+                - title: "Close Drawer"
                   url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-close-drawer.html
 
-                - title: "Actions Notification"
+                - title: "Notification"
                   url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-notification.html
 
             - title: "Datasources"

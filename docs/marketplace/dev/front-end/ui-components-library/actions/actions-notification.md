@@ -37,6 +37,13 @@ export interface NotificationActionConfig extends ActionConfig {
   notifications: NotificationData[];
 }
 
+export interface NotificationData extends NotificationConfig {
+  type?: NotificationType;
+  title: string | TemplateRef<NotificationContext>;
+  description?: string | TemplateRef<NotificationContext>;
+  closeable?: boolean;
+}
+
 // Service registration
 @NgModule({
   imports: [

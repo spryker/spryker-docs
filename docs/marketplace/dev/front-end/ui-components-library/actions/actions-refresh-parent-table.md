@@ -8,13 +8,18 @@ This article provides details about the Actions Refresh Parent Table service in 
 
 ## Overview
 
-Actions Refresh Parent Table is an Angular Service that refreshes data of the parent Table of a Table in current context.
-See an example below, how to use the Actions Refresh Parent Table service.
-Note: Make sure that the table opened from another table, for ex. in the Drawer.
+Actions Refresh Parent Table is an Angular Service that refreshes the data of the parent table of a Table in the current context.
+Check out this example below to see how to use Actions Refresh Parent Table service.
 
-`rowActions` - a table row actions, see more in the [Table Feature Row Actions](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-row-actions.html).  
-`actions` - an array with actions configuration.  
-  - `type` - an action type.  
+{% info_block warningBox "Note" %}
+
+Make sure that the table opened from another table, for ex. in the Drawer.
+
+{% endinfo_block %}
+
+- `rowActions` - is the table row actions, check Table Feature Row Actions<!---LINK--> for more details.  
+- `actions` - is an array with actions configuration.  
+- `type` - is an action type.  
 
 ```html
 <spy-table
@@ -37,7 +42,7 @@ Note: Make sure that the table opened from another table, for ex. in the Drawer.
 
 ## Interfaces
 
-Below you can find interfaces for Actions Refresh Parent Table.
+Below you can find interfaces for the Actions Refresh Parent Table.
 
 ```ts
 export interface RefreshParentTableActionConfig extends ActionConfig {}

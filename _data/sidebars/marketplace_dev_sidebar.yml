@@ -398,10 +398,8 @@ entries:
           url: /docs/marketplace/dev/front-end/table-design/
           nested:
 
-            - title: "Table Column Type extension"
-              url: /docs/marketplace/dev/front-end/table-design/table-column-type-extension/
-
-            - title: Table Column Types
+            - title: "Table Column Types"
+              url: /docs/marketplace/dev/front-end/table-design/table-column-types/
               nested:
 
                 - title: "List"
@@ -410,11 +408,11 @@ entries:
                 - title: "Autocomplete"
                   url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-autocomplete.html
 
-            - title: "Table Feature extension"
-              url: /docs/marketplace/dev/front-end/table-design/table-feature-extension/
+            - title: "Table Features"
+              url: /docs/marketplace/dev/front-end/table-design/table-features/
 
-            - title: "Table Filter extension"
-              url: /docs/marketplace/dev/front-end/table-design/table-filter-extension/
+            - title: "Table Filters"
+              url: /docs/marketplace/dev/front-end/table-design/table-filters/
 
         - title: "UI components library"
           nested:

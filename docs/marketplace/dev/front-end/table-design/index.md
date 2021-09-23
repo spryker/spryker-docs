@@ -356,6 +356,6 @@ export interface TableRowClickEvent {
 
 There are a few common Table extensions that are available in UI library:
 
-- [Column Type](/docs/marketplace/dev/front-end/table-design/table-column-type-extension/) - describes how a specific type of the column is rendered within a table column.
-- [Feature](/docs/marketplace/dev/front-end/table-design/table-feature-extension/) - encapsulating a piece of UI that is targeted to a specific location within a Table Component or that may provide additional functionality.
-- [Filter](/docs/marketplace/dev/front-end/table-design/table-filter-extension/) - provides filtering functionality to the Core Table Component.
+- [Column Type](/docs/marketplace/dev/front-end/table-design/table-column-types/) - describes how a specific type of the column is rendered within a table column.
+- [Feature](/docs/marketplace/dev/front-end/table-design/table-features/) - encapsulating a piece of UI that is targeted to a specific location within a Table Component or that may provide additional functionality.
+- [Filter](/docs/marketplace/dev/front-end/table-design/table-filters/) - provides filtering functionality to the Core Table Component.

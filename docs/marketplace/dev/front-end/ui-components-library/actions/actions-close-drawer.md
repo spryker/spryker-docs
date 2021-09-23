@@ -9,9 +9,9 @@ This article provides details about the Actions Close Drawer service in the Comp
 ## Overview
 
 Actions Close Drawer is an Angular Service that closes the first Drawer in the current context.
-See an example below, how to use the Actions Close Drawer service.
+Check out this example below to see how to use Actions Close Drawer:
 
-`type` - an action type.
+`type` - is an action type.
 
 ```html
 <spy-button-action
@@ -25,7 +25,7 @@ See an example below, how to use the Actions Close Drawer service.
 
 ## Interfaces
 
-Below you can find interfaces for Actions Close Drawer.
+Below you can find interfaces for the Actions Close Drawer.
 
 ```ts
 export interface CloseDrawerActionConfig extends ActionConfig {}

@@ -419,7 +419,6 @@ entries:
           nested:
 
             - title: "Actions"
-              url: /docs/marketplace/dev/front-end/ui-components-library/actions/
               nested:
 
                 - title: "Actions Close Drawer"

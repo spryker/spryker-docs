@@ -440,7 +440,9 @@ export default async (
 
 If you want to configure deployment configuration to automatically install and build Merchant Portal, you need to change frontend dependencies and install commands in the deployment Yaml:
 
-- Remove existing Yves and Zed dependencies install commands from deployment Yaml: yves-isntall-dependenciesand yves-isntall-dependencies
+- Remove existing Yves and Zed dependencies install commands from deployment Yaml:
+
+ yves-isntall-dependencies and yves-isntall-dependencies
 
 - Update project install dependencies command dependencies-install command to: 
 

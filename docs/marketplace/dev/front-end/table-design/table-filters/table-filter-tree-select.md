@@ -11,7 +11,9 @@ This article provides details about the Table Filter Tree Select component in th
 Table Filter Tree Select is a feature of the Table Component that allows filtering data via `Tree Select` component.
 See an example below, how to use the Filter Tree Select feature.
 
-`enabled` - will enable feature via config.  
+Feature Configuration:
+
+`enabled` - will enable filter via config.  
 `items` - an array with config for each filter tree-select.  
 
 ```html
@@ -49,6 +51,27 @@ See an example below, how to use the Filter Tree Select feature.
 </spy-table>
 ```
 
+## Feature Registration
+
+```ts
+@NgModule({
+  imports: [
+    TableModule.forRoot(),
+    TableModule.withFeatures({
+      filters: () =>
+        import('@spryker/table.feature.filters').then(
+          (m) => m.TableFiltersFeatureModule,
+        ),    
+    }),
+    TableFiltersFeatureModule.withFilterComponents({
+      'tree-select': TableFilterTreeSelectComponent,
+    }),
+    TableFilterTreeSelectModule,
+  ],
+})
+export class RootModule {}
+```
+
 ## Interfaces
 
 Below you can find interfaces for Table Filter Tree Select.
@@ -72,22 +95,4 @@ export interface TableFilterTreeSelectOptionsValue {
 }
 
 export type TableFilterTreeSelectValue = unknown | unknown[];
-
-// Component registration
-@NgModule({
-  imports: [
-    TableModule.forRoot(),
-    TableModule.withFeatures({
-      filters: () =>
-        import('@spryker/table.feature.filters').then(
-          (m) => m.TableFiltersFeatureModule,
-        ),    
-    }),
-    TableFiltersFeatureModule.withFilterComponents({
-      'tree-select': TableFilterTreeSelectComponent,
-    }),
-    TableFilterTreeSelectModule,
-  ],
-})
-export class RootModule {}
 ```

@@ -6,6 +6,8 @@ originalArticleId: 21653fb1-7ad6-4167-ad28-fdbc69434252
 redirect_from:
   - /v6/docs/return-management-feature-overview
   - /v6/docs/en/return-management-feature-overview
+  - /v6/docs/return-management
+  - /v6/docs/en/return-management
 ---
 
 The *Return Management* feature allows you to create and manage returns for a sales order. 
@@ -83,7 +85,7 @@ A Back Office user can create returns for the [returnable items](#returnable-ite
 
 {% info_block infoBox "Return management process" %}
 
-To define the most suitable return management process for your project, to learn how you can use the default Spryker Return Management feature, and what custom development you might need to implement it, check out [Building a return management process: Best practices](/docs/scos/user/features/{{page.version}}/return-management/building-a-return-management-process-best-practices.html). 
+To define the most suitable return management process for your project, to learn how you can use the default Spryker Return Management feature, and what custom development you might need to implement it, check out [Building a return management process: Best practices](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/building-a-return-management-process-best-practices.html). 
 
 {% endinfo_block %}
 

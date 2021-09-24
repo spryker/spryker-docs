@@ -6,6 +6,8 @@ originalArticleId: 78f2daf7-913e-4b36-9a2a-9f2f1070b825
 redirect_from:
   - /v4/docs/split-delivery-overview
   - /v4/docs/en/split-delivery-overview
+  - /v4/docs/split-delivery
+  - /v4/docs/en/split-delivery
 ---
 
 The **Split Delivery** feature is designed to ship the same order as *shipments* to multiple delivery addresses and/or on different dates, and/or with different shipment methods. A **shipment** is a set of two or more products combined by the same delivery address.

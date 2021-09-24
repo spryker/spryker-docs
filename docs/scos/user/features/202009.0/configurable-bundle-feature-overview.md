@@ -154,7 +154,7 @@ Product availability is taken into account when calculating the total.
 A Storefront User can reorder items from a configurable bundle as separate order items.
 
 ## Configurable bundle and quotation process
-A Storefront User can include a configurable bundle into the [quotation process](/docs/scos/user/features/{{page.version}}/quotation-process/quotation-process-feature-overview.html) and change the price of one or more items in a bundle. The price of the configurable bundle is re-calculated based on the new prices.
+A Storefront User can include a configurable bundle into the [quotation process](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html) and change the price of one or more items in a bundle. The price of the configurable bundle is re-calculated based on the new prices.
 
 ## Configurable bundle and splittable order items
 A Storefront User can add splittable and non-splittable products to a configurable bundle.
@@ -226,15 +226,15 @@ The Configurable Bundle feature looks as follows on the Storefront:
 Currently, the feature has the following functional constraints which are going to be resolved in the future.
 
 
-* On the Configurator page, you cannot add the configured bundle to a [shopping list](/docs/scos/user/features/{{page.version}}/shopping-list/multiple-and-shared-shopping-lists/multiple-and-shared-shopping-lists-overview.html) or [wishlist](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html).
+* On the Configurator page, you cannot add the configured bundle to a [shopping list](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/multiple-and-shared-shopping-lists/multiple-and-shared-shopping-lists-overview.html) or [wishlist](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html).
 * A Storefront User cannot return to the *Configurator* page from the *Cart*, *Reorder*, or *Shopping list* pages.
 * The following products cannot be displayed in the configurator:
     - Products with [measurement](/docs/scos/user/features/{{page.version}}/measurement-units/measurement-units-feature-overview.html) or [packaging units](/docs/scos/user/features/{{page.version}}/packaging-units/packaging-units-feature-overview.html)
     - [Product bundles](/docs/scos/user/features/{{page.version}}/product-bundles/product-bundles.htmls)
-    - [Gift cards](/docs/scos/user/features/{{page.version}}/gift-cards/gift-cards-feature-overview.html)
+    - [Gift cards](/docs/scos/user/features/{{page.version}}/gift-cards-feature-overview.html)
 * The following functionalities are not displayed and cannot be applied to concrete products in configurable bundles:
     * [Product options](/docs/scos/user/features/{{page.version}}/product-options/product-options-feature-overview.html)
     * [Product labels](docs\scos\user\features\202009.0\product-labels\product-labels-feature-overview.md)
-    * [Product quantity restrictions](/docs/scos/user/features/{{page.version}}/non-splittable-products/non-splittable-products-feature-overview.html)
+    * [Product quantity restrictions](/docs/scos/user/features/{{page.version}}/non-splittable-products-feature-overview.html)
 * The *Slot* page doesn't have any sorting, pagination, or search.
 * Product bundles cannot be added to configurable bundles.

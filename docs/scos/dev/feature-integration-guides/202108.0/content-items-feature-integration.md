@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/content-items-feature-integration
 ---
 
-This document describes how. to integrate the [Content Items](/docs/scos/user/features/{{page.version}}/content-items/content-items-feature-overview.html) feature into a Spryker project.
+This document describes how. to integrate the [Content Items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 

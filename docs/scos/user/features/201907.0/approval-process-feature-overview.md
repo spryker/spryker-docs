@@ -6,6 +6,8 @@ originalArticleId: 969eb058-d95d-4de7-87ed-07072c25cce1
 redirect_from:
   - /v3/docs/approval-process-feature-overview
   - /v3/docs/en/approval-process-feature-overview
+  - /v3/docs/approval-process
+  - /v3/docs/en/approval-process
 ---
 
 ## Approval Process Concept

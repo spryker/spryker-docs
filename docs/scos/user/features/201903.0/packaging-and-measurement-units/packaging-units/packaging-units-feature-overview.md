@@ -22,7 +22,7 @@ Each packaging unit has a certain amount of products inside it by default ([defa
 
 The **leading product** represents relation between abstract and concrete product and holds the availability. A group of products in a packaging unit, that has a leading product holding the availability, is called a **product packaging unit group**.
 
-However leading products are not always relevant. Packaging units that represent a package of items which quantity can not be changed, do not need a leading product. In this case, availability of the packaged items themselves, not individual items in the package, matters. Such packaged products actually behave like normal abstract products for which customers might have a possibility to select applicable sales units (see [Measurement Units per Product](/docs/scos/user/features/{{page.version}}/packaging-and-measurement-units/measurement-units/measurement-units-feature-overview.html) to learn about product sales units).
+However leading products are not always relevant. Packaging units that represent a package of items which quantity can not be changed, do not need a leading product. In this case, availability of the packaged items themselves, not individual items in the package, matters. Such packaged products actually behave like normal abstract products for which customers might have a possibility to select applicable sales units (see [Measurement Units per Product](/docs/scos/user/features/{{page.version}}/measurement-units-feature-overview.html) to learn about product sales units).
 
 Basically, when a packaging unit does not use the leading product, it means that the stock is disjoined.
 
@@ -175,7 +175,7 @@ In the current implementation each packaging unit and lead product has to define
 - We strive to shift all business logic to our backend, however, with Packaging Units, calculations are performed on Yves.
 - On the shopping cart as well as the shopping list page, products do not have a dropdown to change the packaging units. You can select a packaging unit on the product details page only.
 - A shopper cannot reorder the items with the selected packaging units as they are not added automatically. They should be added manually on the product details page. 
-- In the [Quick Order](https://documentation.spryker.com/v2/docs/quick-add-to-cart) form and [search widget](/docs/scos/user/features/{{page.version}}/search-and-filter/search-widget-for-concrete-products/search-widget-for-concrete-products.html), the products use the default packaging units that cannot be changed. Flexible packaging units are not supported on the Quick Order page. 
+- In the [Quick Order](https://documentation.spryker.com/v2/docs/quick-add-to-cart) form and [search widget](/docs/scos/user/features/{{page.version}}/product-feature-overview/search-widget-for-concrete-products-overview.html), the products use the default packaging units that cannot be changed. Flexible packaging units are not supported on the Quick Order page. 
 
 {% info_block infoBox "Example" %}
 You have a product in your shop - a pen. And there exists a packaging unit for a pen - a box with a minimum amount of 5 items in it up to the maximum amount of 50 pens available. Every shopper can define the necessary amount of pens that will be included in the box and order several such boxes. But on the Quick Order page, if the customer adds a pen with the packaging unit 'box', the box consisting of minimum 5 items will be added by default.

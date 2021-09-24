@@ -12,7 +12,7 @@ Using the **Product Relations** feature, sellers can define a list of comparable
 
 {% info_block infoBox %}
 Only [abstract](/docs/scos/user/features/{{page.version}}/product-information-management/product-abstraction.html
-{% endinfo_block %} products support Product Relations. For more details, see [Product Relations](/docs/scos/user/features/{{page.version}}/product-information-management/product-relations/product-relations.html).)
+{% endinfo_block %} products support Product Relations. For more details, see [Product Relations](/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html).)
 
 The Product Relations API provides REST endpoints to retrieve the related products. Using it, you can:
 

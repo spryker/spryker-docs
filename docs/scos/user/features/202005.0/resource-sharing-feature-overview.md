@@ -31,8 +31,8 @@ The user can view and print the information from the Preview link.
 {% info_block warningBox "Note" %}
 Preview link is the only available option for the B2C environment. B2C users will not be able to share the cart with Read-only and Full access permissions.
 {% endinfo_block %}
-* **Read-Only**. For details on the Read only permissions, refer to the [Permissions Management for Shared Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-list/multiple-and-shared-shopping-lists/multiple-and-shared-shopping-lists-overview.html#read-only) section in *Multiple and Shared Shopping Lists Overview*.
-* **Full Access**. For details on the Full Access permission, check [Permissions Management for Shared Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-list/multiple-and-shared-shopping-lists/multiple-and-shared-shopping-lists-overview.html#full-access) section in *Multiple and Shared Shopping Lists Overview*.
+* **Read-Only**. For details on the Read only permissions, refer to the [Permissions Management for Shared Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/multiple-and-shared-shopping-lists/multiple-and-shared-shopping-lists-overview.html#read-only) section in *Multiple and Shared Shopping Lists Overview*.
+* **Full Access**. For details on the Full Access permission, check [Permissions Management for Shared Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/multiple-and-shared-shopping-lists/multiple-and-shared-shopping-lists-overview.html#full-access) section in *Multiple and Shared Shopping Lists Overview*.
 
 {% info_block warningBox "Note" %}
 Sharing cart with Read-Only or Full Access permissions is available only for internal users (the users within the same business unit

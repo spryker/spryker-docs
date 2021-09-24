@@ -6,6 +6,8 @@ originalArticleId: 3725cdc6-4deb-454f-92f4-78a767fc8646
 redirect_from:
   - /v5/docs/configurable-bundle-feature-overview
   - /v5/docs/en/configurable-bundle-feature-overview
+  - /v5/docs/configurable-bundle
+  - /v5/docs/en/configurable-bundle
 ---
 
 A **configurable bundle** is a product bundle, that a customer can configure in the Storefront on the go by choosing the suggested concrete products.

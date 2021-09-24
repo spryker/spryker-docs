@@ -73,7 +73,7 @@ The _Edit shopping list_ page opens where you can:
 ![Quick add to a shopping list](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Lists/quick-add-to-shopping-list-window.png) 
 
 {% info_block warningBox %}
-To be able to search for products, make sure that [Search Widget for Concrete Products](/docs/scos/user/features/{{page.version}}/search-and-filter/search-widget-for-concrete-products/search-widget-for-concrete-products-overview.html
+To be able to search for products, make sure that [Search Widget for Concrete Products](/docs/scos/user/features/{{page.version}}/product-feature-overview/search-widget-for-concrete-products-overview.html
 {% endinfo_block %} feature is [integrated](/docs/scos/dev/migration-and-integration/201903.0/feature-integration-guides/search-widget-for-concrete-products-feature-integration.html) into your Project.)
 
 * View the shopping list owner and access rights.
@@ -111,7 +111,7 @@ To share a shopping list:
 2. From the **drop-down list** next to the business unit or customer you want to share a shopping list with, select the appropriate access rights level.
 
 {% info_block infoBox %}
-See [Permissions Management for Shared Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-list/printing-a-shopping-list/printing-a-shopping-list.html
+See [Permissions Management for Shared Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/printing-a-shopping-list/printing-a-shopping-list.html
 {% endinfo_block %} to learn more about types of shopping list access rights.)
 ![Share page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Lists/share-page.png) 
 

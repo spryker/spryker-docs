@@ -309,6 +309,6 @@ Make sure that the following widgets were registered:
 | Module | Test |
 | --- | --- |
 | `ProductPriceVolumeWidget` | Go to the product detail page for a product with Volume Prices set, and observe the table in the detail area that contains the Volume Prices data. |
-| `PriceProductWidget` | Could be checked on a slot configurator page of a [Configurable Bundle](/docs/scos/user/features/{{page.version}}/product-information-management/configurable-bundle/configurable-bundle.html) feature. |
+| `PriceProductWidget` | Could be checked on a slot configurator page of a [Configurable Bundle](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html) feature. |
 
 {% endinfo_block %}

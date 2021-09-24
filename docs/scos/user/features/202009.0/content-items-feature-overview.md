@@ -6,6 +6,8 @@ originalArticleId: 530f9cd1-1fd1-4b32-80eb-9ee5acb247ac
 redirect_from:
   - /v6/docs/content-items-feature-overview
   - /v6/docs/en/content-items-feature-overview
+  - /v6/docs/content-items
+  - /v6/docs/en/content-items
 ---
 
 The Content Items feature creates an abstraction layer for content management in the Back Office. It allows content managers to create and preserve small content pieces. Later, they are inserted into [CMS blocks](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html) and, subsequently, into Storefront pages. Content items are rendered on Storefront using [Content Item Widget](#content-item-widget).

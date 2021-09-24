@@ -6,6 +6,8 @@ originalArticleId: a094828b-2cff-40e6-8734-965feb87e8c8
 redirect_from:
   - /v3/docs/product-relations-feature-overview
   - /v3/docs/en/product-relations-feature-overview
+  - /v3/docs/product-relations
+  - /v3/docs/en/product-relations
 ---
 
 Product relations help shop owners to promote the related goods as well as to point the customers' attention to the goods that they may also want to see.

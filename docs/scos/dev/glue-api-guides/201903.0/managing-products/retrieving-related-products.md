@@ -11,7 +11,7 @@ Using the **Product Relations** feature, sellers can define a list of comparable
 
 {% info_block infoBox %}
 Only [abstract](/docs/scos/user/features/{{page.version}}/product-management/product-abstraction.html#differentiate-between-abstract-and-concrete-products
-{% endinfo_block %} products support Product Relations. For more details, see [Product Relations](/docs/scos/user/features/{{page.version}}/product-management/product-relations/product-relations.html).)
+{% endinfo_block %} products support Product Relations. For more details, see [Product Relations](/docs/scos/user/features/{{page.version}}/product-relations.html).)
 
 The Product Relations API provides REST endpoints to retrieve the related products. Using it, you can:
 
@@ -32,7 +32,7 @@ Different types of relations, as well as their logic, are defined on the project
 {% endinfo_block %}
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Product Relations API Feature Integration](/docs/scos/user/features/{{page.version}}/product-management/product-relations/product-relations.html-api-feature-integration-201903).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Product Relations API Feature Integration](/docs/scos/user/features/{{page.version}}/product-relations.html-api-feature-integration-201903).
 
 ## Getting Related Items for an Abstract Product
 To get related items for an abstract product, send a GET request to the following endpoint:

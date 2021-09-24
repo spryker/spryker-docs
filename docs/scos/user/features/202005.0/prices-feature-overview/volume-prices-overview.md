@@ -6,6 +6,8 @@ originalArticleId: 09ac8bf9-fca0-4d82-97a2-ccd7c0949255
 redirect_from:
   - /v5/docs/volume-prices-overview
   - /v5/docs/en/volume-prices-overview
+  - /v5/docs/volume-prices
+  - /v5/docs/en/volume-prices
 ---
 
 In highly competitive markets, the business tactic is made compelling by issuing drastic discounts when buying products in large quantities or volumes.

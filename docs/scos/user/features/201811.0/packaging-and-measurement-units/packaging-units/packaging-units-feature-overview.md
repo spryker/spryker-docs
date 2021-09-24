@@ -22,7 +22,7 @@ Each packaging unit has a certain amount of products inside it by default ([defa
 
 The **leading product** represents relation between abstract and concrete product and holds the availability. A group of products in a packaging unit, that has a leading product holding the availability, is called a **product packaging unit group**.
 
-However leading products are not always relevant. Packaging units that represent a package of items which quantity can not be changed, do not need a leading product. In this case, availability of the packaged items themselves, not individual items in the package, matters. Such packaged products actually behave like normal abstract products for which customers might have a possibility to select applicable sales units (see [Measurement Units per Product](/docs/scos/user/features/{{page.version}}/packaging-and-measurement-units/measurement-units/measurement-units-feature-overview.html) to learn about product sales units).
+However leading products are not always relevant. Packaging units that represent a package of items which quantity can not be changed, do not need a leading product. In this case, availability of the packaged items themselves, not individual items in the package, matters. Such packaged products actually behave like normal abstract products for which customers might have a possibility to select applicable sales units (see [Measurement Units per Product](/docs/scos/user/features/{{page.version}}/measurement-units-feature-overview.html) to learn about product sales units).
 
 Basically, when a packaging unit does not use the leading product, it means that the stock is disjoined.
 

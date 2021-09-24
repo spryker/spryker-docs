@@ -38,7 +38,7 @@ To update the cart name:
 If you want to discard the changes, click **Back**.
 ***
 ## Managing Order Items Details
-In the *Items* section, you can change items quantity, remove the items or [add a comment](/docs/scos/user/features/{{page.version}}/mailing-and-communication/comments/comments-feature-overview.html) per item.
+In the *Items* section, you can change items quantity, remove the items or [add a comment](/docs/scos/user/features/{{page.version}}/comments-feature-overview.html) per item.
 
 **To change the items quantity**, use the plus or minus icons.
 
@@ -53,7 +53,7 @@ To add a note to the cart, in the **Add a note for the cart** widget, enter your
 ***
 
 ## Adding a Cart to the Shopping List
-You can add the products from the cart to the [shopping list](/docs/scos/user/features/{{page.version}}/shopping-list/multiple-and-shared-shopping-lists/multiple-and-shared-shopping-lists-overview.html) to purchase them later.
+You can add the products from the cart to the [shopping list](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/multiple-and-shared-shopping-lists/multiple-and-shared-shopping-lists-overview.html) to purchase them later.
 
 To add a cart to the shopping list:
 
@@ -111,7 +111,7 @@ T**o add a custom order reference**, in the **Custom Order Reference** field, en
 ***
 
 ## Adding Comments to the Cart
-If you want to add some information to the order, you can [leave a comment](/docs/scos/user/features/{{page.version}}/mailing-and-communication/comments/comments-feature-overview.html) to your cart.
+If you want to add some information to the order, you can [leave a comment](/docs/scos/user/features/{{page.version}}/comments-feature-overview.html) to your cart.
 
 **To add a comment to the cart**, in the **Comments to Cart** widget, write a message and click **Send**.
 ***

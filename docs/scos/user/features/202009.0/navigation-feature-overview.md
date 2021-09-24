@@ -6,6 +6,8 @@ originalArticleId: a0fa206a-2502-4f19-b32a-f5ecd197a7f4
 redirect_from:
   - /v6/docs/navigation-feature-overview
   - /v6/docs/en/navigation-feature-overview
+  - /v6/docs/navigation
+  - /v6/docs/en/navigation
 ---
 
 The *Navigation* feature enables product catalog managers to create intuitive navigation elements and display them on the Storefront.
@@ -84,7 +86,7 @@ You can define the time period a navigation node is valid for:
 See [Creating a Navigation Node](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/navigation/managing-navigation-elements.html#creating-a-navigation-node) to learn how a product catalog manager can define a navigation node validity period. 
 
 ## Navigation as Content Item
-To publish a navigation element on the Storefront, you can add it to [CMS Blocks](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html) and [CMS Pages](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html) as a [content item](/docs/scos/user/features/{{page.version}}/content-items/content-items-feature-overview.html). 
+To publish a navigation element on the Storefront, you can add it to [CMS Blocks](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html) and [CMS Pages](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html) as a [content item](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html). 
 The schema shows how the Navigation feature affects content management in a Spryker shop:
 
 ![navigation-as-content-item-schema](https://confluence-connect.gliffy.net/embed/image/a086fe4e-1d09-49ae-a181-ebd8b0f8c051.png?utm_medium=live&utm_source=custom)

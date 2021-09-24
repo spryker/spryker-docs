@@ -141,7 +141,7 @@ Stores are defined when creating or editing a product relation in the Back Offic
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of the Product Relations feature](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews/product-rating-and-reviews-feature-overview.html)  |   |
+| [Get a general idea of the Product Relations feature](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews-feature-overview.html)  |   |
 | [Create product relations](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-relations/creating-product-relations.html)  |   |
 | [Manage product relations](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-relations/managing-product-relations.html)  |   |
 

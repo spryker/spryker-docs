@@ -115,7 +115,7 @@ Currently, the feature has the following functional constraints which are going 
 
 * as volume price does not support ORIGINAL price type, you cannot define a promotion for a volume price
 
-* volume prices cannot be applied to the [prices per merchant relation](/docs/scos/user/features/{{page.version}}/merchant-custom-prices/merchant-custom-prices.html).
+* volume prices cannot be applied to the [prices per merchant relation](/docs/scos/user/features/{{page.version}}/merchant-custom-prices.html).
 
 ## If you are:
 

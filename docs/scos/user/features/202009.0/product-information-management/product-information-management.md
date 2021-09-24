@@ -20,7 +20,7 @@ The *Product Information Management* functionality allows you to build a product
 * [Discontinued Products](docs\scos\user\features\202009.0\product\product-feature-overview\discontinued-product-overview.md) to indicate that a product will not be produced or available anymore.
 * [Product Bundles](/docs/scos/user/features/{{page.version}}/product-bundles/product-bundles.html) to tie individual items together and sell them as a package.
 * [Configurable Bundle](/docs/scos/user/features/{{page.version}}/configurable-bundle/configurable-bundle.html) to allow your customers to select components of a compound product from a provided list.
-* [Product Barcode](/docs/scos/user/features/{{page.version}}/product-barcode/product-barcode.html).
+* [Product Barcode](/docs/scos/user/features/{{page.version}}/product-barcode-feature-overview.html).
 * [Product Labels](/docs/scos/user/features/{{page.version}}/product-labels/product-labels.html) to make specific products stand out from the others.
 * [Product Quantity Restrictions](docs\scos\user\features\202009.0\non-splittable-products\non-splittable-products-feature-overview.md) to define minimum or maximum number of products customers can put to cart.
 * [Product Sets](/docs/scos/user/features/{{page.version}}/product-sets/product-sets.html) to build a collection of items so customers can buy individual products or all products from a set with one click.

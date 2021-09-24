@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/product-barcode-feature-overview
 ---
 
-The *Product Barcode*  feature allows creating barcodes for any kind of enity. By default, barcodes are only generated for [products](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/products-overview.html).
+The *Product Barcode*  feature allows creating barcodes for any kind of entity. By default, barcodes are only generated for [products](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/products-overview.html).
 
 
 ## What is a barcode?

@@ -164,7 +164,7 @@ versioned_categories:
       - module-migration-guides
       - data-import
       - data-export
-      - glue-api-guide
+      - glue-api-guides
       - technology-partner-integration-guides
       - the-docker-sdk
 

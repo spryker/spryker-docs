@@ -36,7 +36,7 @@ Feature Configuration:
     TableModule.forRoot(),
     TableModule.withFeatures({
       title: () =>
-        import('table.feature.title').then(
+        import('@spryker/table.feature.title').then(
           (m) => m.TableTitleFeatureModule,
         ),    
     }),

@@ -63,4 +63,4 @@ Each product abstract can have multiple product option groups assigned.
 **What's next?**
 Once the option is created, you may want to know how those options are managed. See [Managing Product Options](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-options/managing-product-options.html) for more details.
 
-To learn more about the attributes that you see, enter and select while creating a product option, as well as if you are interested to see some examples of how the product options are used, see [Product Options: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/product-options/references/product-options-reference-information.html).
+To learn more about the attributes that you see, enter and select while creating a product option, as well as if you are interested to see some examples of how the product options are used, see [Product Options: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-options/references/product-options-reference-information.html).

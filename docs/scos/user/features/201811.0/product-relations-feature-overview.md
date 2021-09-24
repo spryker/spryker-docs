@@ -10,9 +10,9 @@ redirect_from:
 
 Product relations help shop owners to promote the related goods as well as to point the customers' attention to the goods that they may also want to see.
 
-Product relations are built on the abstract product and not the concrete products. One abstract product can have from one to many product relations. Once you define a product to which a relation is added, you need to also set a specific set of rules, or even a group, under which the relation is going to be built. Keep in mind that this is a one-way relation, meaning that only the product that you have defined will have the Similar Products section on its PDP (product details page) or in the cart, depending on the relation type. But the related product(s) that you assign to it will not get the same view, unless you perform the same procedure for each individual item [to tie it to any other in the Back Office](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/product-relations/creating-a-product-relation.html).
+Product relations are built on the abstract product and not the concrete products. One abstract product can have from one to many product relations. Once you define a product to which a relation is added, you need to also set a specific set of rules, or even a group, under which the relation is going to be built. Keep in mind that this is a one-way relation, meaning that only the product that you have defined will have the Similar Products section on its PDP (product details page) or in the cart, depending on the relation type. But the related product(s) that you assign to it will not get the same view, unless you perform the same procedure for each individual item [to tie it to any other in the Back Office](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-relations/creating-product-relations.html).
 
-![One-way connection](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Product+Relations+Feature+Overview/One-Way+Connection.gif) 
+![One-way connection](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Product+Relations+Feature+Overview/One-Way+Connection.gif)
 
 ## Product Relation Types
 In Spryker, currently Back Office users can define two types of relations: related products and upselling.
@@ -22,7 +22,7 @@ In Spryker, currently Back Office users can define two types of relations: relat
 | With this type of relation, similar products are displayed on the product detail page for the currently selected abstract product. | With this type of relation, similar products are displayed in the cart overview page when a specific abstract product is added to the cart. |
 
 ## Database Entity Relation Schema - Product
-![Database entityt relation schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Product+Relations+Feature+Overview/db_relation_schema.png) 
+![Database entityt relation schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Product+Relations+Feature+Overview/db_relation_schema.png)
 
 | Database Entity | Description |
 | --- | --- |

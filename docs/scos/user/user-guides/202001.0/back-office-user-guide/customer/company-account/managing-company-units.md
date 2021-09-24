@@ -22,7 +22,7 @@ To create a new company business unit:
 3. Click **Save**. 
     The new created business unit will appear in the _Company Business Units_ table on the **Company Units** page.
 
-The fields that you enter and select are described in [Company Account: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/company-account/references/company-account-reference-information.html).
+The fields that you enter and select are described in [Company Account: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/references/company-account-reference-information.html).
 ***
 The business units can be managed by triggering certain actions in the _Actions_ column in the **Company Business Units** table. Specifically, business units can be **Edited** and **Deleted**.
 ***
@@ -40,4 +40,4 @@ If you want to delete an existing business unit, click **Delete** in the _Action
 **What's next?**
 You need to create a company unit address so that you can attach it to your business unit. See [Managing Company Unit Addresses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/managing-company-unit-addresses.html) for more details.
 
-See [Company Account: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/company-account/references/company-account-reference-information.html) to know about the attributes you see, select and enter while working with company units.
+See [Company Account: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/references/company-account-reference-information.html) to know about the attributes you see, select and enter while working with company units.

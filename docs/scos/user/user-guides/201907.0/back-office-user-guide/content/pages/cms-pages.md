@@ -20,4 +20,4 @@ You can create, view, publish and edit CMS pages in the **Pages** section. It is
 
 * To know more about how to view the version history of CMS pages and compare versions, see [CMS Versioning](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/managing-cms-page-versions.html).
 
-* To learn more about attributes you use to create and edit CMS pages, see articles in the [CMS Pages: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/pages/references/cms-pages-reference-information.html) section.
+* To learn more about attributes you use to create and edit CMS pages, see articles in the [CMS Pages: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/references/cms-pages-reference-information.html) section.

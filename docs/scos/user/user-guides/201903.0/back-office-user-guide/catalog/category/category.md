@@ -26,4 +26,4 @@ This is how a Product Catalog Manager can create a structure to display products
 *  [Managing Categories](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/managing-categories.html)
  
 To know more about the attributes you use to create and manage the categories, see the following article:
-* [Category: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/category/references/category-reference-information.html)
+* [Category: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/references/category-reference-information.html)

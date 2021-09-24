@@ -22,4 +22,4 @@ You can use navigation elements to build your store's main navigation, footer li
 **What's next?**
 
 * To know how the navigation elements are managed, see [Managing Navigation](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/navigation/managing-navigation-elements.html).
-* To know more about the Navigation node types, see [Navigation Node Types](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/navigation/references/navigation-node-types.html) in the References section.
+* To know more about the Navigation node types, see [Navigation Node Types](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/navigation/references/navigation-reference-information.html) in the References section.

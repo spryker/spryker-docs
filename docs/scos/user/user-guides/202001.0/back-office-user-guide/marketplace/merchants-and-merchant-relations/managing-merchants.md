@@ -12,17 +12,17 @@ This topic describes the procedures of creating and managing a merchant record.
 ***
 To start managing merchants, navigate to the **Merchants > Merchants** section.
 ***
-## Creating a Merchant 
+## Creating a Merchant
 To create a merchant:
 1. On the **Overview of Merchants** page, click **Add Merchant** in the top right corner of the page.
 2. On the **Create Merchant** page, enter a name of the merchant and click **Save**.
 
 That's it. Now you have the merchant created.
 
-In a non-marketplace environment, the Merchant record is the record of the company which sells goods and is the only one in the system. 
+In a non-marketplace environment, the Merchant record is the record of the company which sells goods and is the only one in the system.
 ***
 ## Editing a Merchant
-To edit a merchant: 
+To edit a merchant:
 1. On the **Overview of Merchants** page, you click **Edit** in the _Actions_ column for a specific merchant.
 2. On the **Edit Merchant** page, change the merchant name and click **Save**.
 ***
@@ -34,4 +34,4 @@ This action cannot be undone and will erase all the merchant relations and other
 **What's next?**
 Once you have the merchant record available in the system, you can proceed with creating a merchant relation.
 
-See [Managing Merchant Relations](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchants/merchants-and-merchant-relations/managing-merchant-relations.html) to know how you create those.
+See [Managing Merchant Relations](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html) to know how you create those.

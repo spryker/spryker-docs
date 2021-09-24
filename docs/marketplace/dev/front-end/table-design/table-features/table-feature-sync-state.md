@@ -37,7 +37,7 @@ Feature Configuration:
     TableModule.forRoot(),
     TableModule.withFeatures({
       syncStateUrl: () =>
-        import('table.feature.sync-state').then(
+        import('@spryker/table.feature.sync-state').then(
           (m) => m.TableSyncStateFeatureModule,
         ),
     }),

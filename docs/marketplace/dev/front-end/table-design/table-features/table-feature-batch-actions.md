@@ -9,7 +9,7 @@ This article provides details about the Table Feature Batch Actions component in
 ## Overview
 
 Table Feature Batch Actions is a feature of the Table Component that allows triggering batch/multiple actions from rows.
-As Table Feature Batch Actions based on the [Table Feature Selectable](/docs/marketplace/dev/front-end/table-design/table-feature-extension/table-feature-selectable.html), 
+As Table Feature Batch Actions based on the [Table Feature Selectable](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-selectable.html), 
 make sure to register and to enable this feature via table config.
 Batch actions are functions that may be performed on multiple items within a table. 
 Once the user selects at least one row from the table, the batch action bar appears at the top of the table, 
@@ -17,11 +17,15 @@ presenting the user with actions they can take.
 To exit or escape `batch action mode`, the user can deselect the items.
 See an example below, how to use the Batch Actions feature.
 
+Feature Configuration:
+
 `enabled` - will enable feature via config.  
 `noActionsMessage` - error message text.  
-`actions` - an array with actions that will be used as batch actions (see more about [Actions](/docs/marketplace/dev/front-end/ui-components-library/actions.html)).   
+`actions` - an array with actions that will be displayed in the top bar and their type of 
+registered Action (see more about [Actions](/docs/marketplace/dev/front-end/ui-components-library/actions/)).   
 `rowIdPath` - gets row `id` via column `id` (in the example below `Sku` column).  
-`availableActionsPath` - an array with available batch actions in the top bar (by action `id`).  
+`availableActionsPath` - path to an array with available action IDs in the top bar (supports nested 
+objects using dot notation for ex. `prop.nestedProp`).   
 
 ```html
 <spy-table [config]="{
@@ -33,23 +37,32 @@ See an example below, how to use the Batch Actions feature.
   batchActions: {
     enabled: true,
     actions: [
-      {
-        id: 'edit'
-        type: 'drawer',
-        ...
-      },
-      {
-        id: 'update'
-        type: 'drawer',
-        ...
-      },
+      { id: 'edit', title: 'Edit', type: 'edit-action' },
+      { id: 'update', title: 'Update', type: 'update-action' },
     ],
     noActionsMessage: 'No available actions for selected rows',
     rowIdPath: 'sku',
-    availableActionsPath: ['edit'],
+    availableActionsPath: ['path.to.actions'],
   },                                                                                           
 }">
 </spy-table>
+```
+
+## Feature Registration
+
+```ts
+@NgModule({
+  imports: [
+    TableModule.forRoot(),
+    TableModule.withFeatures({
+      batchActions: () =>
+        import('table.feature.batch-actions').then(
+          (m) => m.TableBatchActionsFeatureModule,
+        ),    
+    }),
+  ],
+})
+export class RootModule {}
 ```
 
 ## Interfaces
@@ -81,18 +94,4 @@ export interface TableItemActions {
   rowIdPath: string;
   selectedRows: SelectedRows[];
 }
-
-// Component registration
-@NgModule({
-  imports: [
-    TableModule.forRoot(),
-    TableModule.withFeatures({
-      batchActions: () =>
-        import('./table-batch-actions-feature.module').then(
-          (m) => m.TableBatchActionsFeatureModule,
-        ),    
-    }),
-  ],
-})
-export class RootModule {}
 ```

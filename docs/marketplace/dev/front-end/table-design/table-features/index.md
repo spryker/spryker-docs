@@ -160,7 +160,7 @@ There are multiple standard Table Features that are shipped with the UI library:
 - `Title`—renders the title of the table.
 - `Selectable`—allows selecting multiple rows.
 - `Row Actions`—allows triggering actions from rows.
-- [Batch Actions](/docs/marketplace/dev/front-end/table-design/table-feature-extension/table-feature-batch-actions.html) — allows triggering batch/multiple actions from rows.
+- [Batch Actions](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-batch-actions.html) — allows triggering batch/multiple actions from rows.
 - `Filters`—allows filtering the data set.
 - `Search`—allows searching within the data set.
 - `Sync State`—allows syncing the state of the table with browser URL (like pagination, filters, sorting, etc.).

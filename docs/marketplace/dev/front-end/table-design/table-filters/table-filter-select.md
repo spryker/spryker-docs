@@ -13,7 +13,7 @@ See an example below, how to use the Filter Select feature.
 
 Feature Configuration:
 
-`enabled` - will enable feature via config.  
+`enabled` - will enable filter via config.  
 `items` - an array with config for each filter select.  
 
 ```html

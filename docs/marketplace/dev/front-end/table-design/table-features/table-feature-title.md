@@ -11,6 +11,8 @@ This article provides details about the Table Feature Title component in the Com
 Table Feature Title is a feature of the Table Component that renders the title of the table.
 See an example below, how to use the Title feature.
 
+Feature Configuration:
+
 `enabled` - will enable feature via config.  
 `title` - a table title text.
 
@@ -26,6 +28,23 @@ See an example below, how to use the Title feature.
 </spy-table>
 ```
 
+## Feature Registration
+
+```ts
+@NgModule({
+  imports: [
+    TableModule.forRoot(),
+    TableModule.withFeatures({
+      title: () =>
+        import('table.feature.title').then(
+          (m) => m.TableTitleFeatureModule,
+        ),    
+    }),
+  ],
+})
+export class RootModule {}
+```
+
 ## Interfaces
 
 Below you can find interfaces for Table Feature Title.
@@ -34,18 +53,4 @@ Below you can find interfaces for Table Feature Title.
 export interface TableTitleConfig extends TableFeatureConfig {
   title?: string;
 }
-
-// Component registration
-@NgModule({
-  imports: [
-    TableModule.forRoot(),
-    TableModule.withFeatures({
-      title: () =>
-        import('./table-title-feature.module').then(
-          (m) => m.TableTitleFeatureModule,
-        ),    
-    }),
-  ],
-})
-export class RootModule {}
 ```

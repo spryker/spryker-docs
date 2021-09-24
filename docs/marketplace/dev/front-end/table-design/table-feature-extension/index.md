@@ -27,7 +27,7 @@ declare module '@spryker/table' {
 }
 
 export interface TableCustomFeatureConfig extends TableFeatureConfig {
-  ....
+  ...
 }
 
 //// Component implementation
@@ -47,7 +47,7 @@ export class TableCustomFeatureModule implements ModuleWithFeature {
 //Component
 @Component({
   selector: 'spy-table-custom-feature',
-  ...
+  ...,
   providers: [
     {
       provide: TableFeatureComponent,
@@ -58,10 +58,10 @@ export class TableCustomFeatureModule implements ModuleWithFeature {
 export class TableCustomFeatureComponent extends TableFeatureComponent<
   TableCustomFeatureConfig
 > {
- ....
+ ...
 }
-
-//HTML
+```
+```html
 <ng-container
   *spyTableFeatureTpl="
     tableFeatureLocation.beforeTable; // any location from TableFeatureLocation
@@ -78,9 +78,9 @@ There are two ways to use the Table Feature:
 
 - Via HTML tag (as a component) being projected into the Table Component—this allows users to control how the Table Feature is loaded on the page, but it does not control its loading from the Table Configuration.
 
-  ```ts
+  ```html
   <spy-table>
-  <spy-table-title-feature spy-table-feature></spy-table-title-feature>
+    <spy-table-title-feature spy-table-feature></spy-table-title-feature>
   </spy-table>
   ```
 
@@ -106,7 +106,7 @@ To add a feature via the registry, register the feature in the Table Module usin
 
 In the table configuration, you can enable or disable, and configure any feature.
 
-```ts
+```html
 <spy-table [config]="{
     ...,
     title: {

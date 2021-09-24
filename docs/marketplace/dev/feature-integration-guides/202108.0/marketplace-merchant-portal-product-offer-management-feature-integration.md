@@ -13,15 +13,15 @@ To start feature integration, integrate the required features:
 
 | NAME  | VERSION | INTEGRATION GUIDE |
 | --------------- | --------- | ------------|
-| Marketplace Product Offer        | dev-master  | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html)
-| Marketplace Merchant Portal Core | dev-master  | [Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-core-feature-integration.html)
+| Marketplace Product Offer        | {{page.version}}  | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html)
+| Marketplace Merchant Portal Core | {{page.version}}  | [Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-core-feature-integration.html)
 
 ## 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker/product-offer-merchant-portal-gui:"dev-master" --update-with-dependencies
+composer require spryker/product-offer-merchant-portal-gui:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

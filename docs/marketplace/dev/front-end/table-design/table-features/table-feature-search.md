@@ -36,7 +36,7 @@ Feature Configuration:
     TableModule.forRoot(),
     TableModule.withFeatures({
       search: () =>
-        import('table.feature.search').then(
+        import('@spryker/table.feature.search').then(
           (m) => m.TableSearchFeatureModule,
         ),   
     }),

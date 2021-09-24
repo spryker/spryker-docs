@@ -6,6 +6,10 @@ originalArticleId: a23f790f-3a33-48b4-acd3-3f13e8440cea
 redirect_from:
   - /v6/docs/shipment-feature-overview
   - /v6/docs/en/shipment-feature-overview
+  - /v6/docs/shipment-summary
+  - /v6/docs/en/shipment-summary
+  - /v6/docs/shipment
+  - /v6/docs/en/shipment
 ---
 
 The *Shipment* feature allows you to create and manage carrier companies and assign multiple delivery methods associated with specific stores, which your customers can select during the checkout. With the feature in place, you can define delivery price and expected delivery time, tax sets, and availability of the delivery method per store.
@@ -28,12 +32,26 @@ If a Back Office user creates or edits a shipment of an order created by a custo
 
 {% endinfo_block %}
 
-Additional behaviors can be attached to a delivery method from the Back Office by selecting specific plugins. For more information on method plugins types, see [Reference information: Shipment method plugins](/docs/scos/user/features/{{page.version}}/shipment/shipment/references/reference-information-shipment-method-plugins.html).
+Additional behaviors can be attached to a delivery method from the Back Office by selecting specific plugins. For more information on method plugins types, see [Reference information: Shipment method plugins](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html).
 
 Each shipment method has a dedicated price and tax set in the various currencies you define. The price displayed to the customer is calculated based on the store they visit or their preferred currency selection.
 
 {% info_block infoBox "Shipment calculation rules" %}
 
 You can give shipment discounts based on the carrier, shipment method, or cart value. Intricate calculations enable you to freely define a set of rules to be applied to the various discount options.
+
+{% endinfo_block %}
+
+## Related Business User articles
+
+|BACK OFFICE USER GUIDES|
+|---|
+| [Get a general idea of the Shipment feature](/docs/scos/user/features/{{page.version}}/shipment/shipment-feature-overview.html)  |
+| [Create a carrier company](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/delivery-methods/creating-a-carrier-company.html)  |
+| [Create and manage delivery methods](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/delivery-methods/creating-and-managing-delivery-methods.html)  |
+
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Shipment feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shipment-feature-walkthrough/shipment-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

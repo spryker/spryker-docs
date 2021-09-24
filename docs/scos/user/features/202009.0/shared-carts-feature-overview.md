@@ -6,6 +6,8 @@ originalArticleId: 475f5642-be42-4343-b907-9dfb0525867b
 redirect_from:
   - /v6/docs/shared-carts-feature-overview
   - /v6/docs/en/shared-carts-feature-overview
+  - /v6/docs/shared-carts
+  - /v6/docs/en/shared-carts
 ---
 
 *Shopping Cart* is a part of the online shop where the record of the items a buyer has ‘picked up’ from the online store is kept. The shopping cart enables consumers to select products, review what they selected, make modifications or add extra items if needed, and purchase the products.

@@ -113,8 +113,8 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 [**Shipment**](https://documentation.spryker.com/2021080/docs/shipment):
 
 * [Shipment Carriers & Methods](https://documentation.spryker.com/2021080/docs/shipment-carriers-methods)
-* [Multiple Currencies for Shipments](/docs/scos/user/features/{{page.version}}/shipment-feature-overview.html)
-* [Shipment Calculation Rules](https://documentation.spryker.com/2021080/docs/shipment-calculation-rules)
+* [Multiple Currencies for Shipments](/docs/scos/user/features/{{page.version}}/shipment/shipment-feature-overview.html)
+* [Shipment Calculation Rules](/docs/scos/user/features/{{site.version}}/shipment-feature-overview.html)
 * [Split Delivery](https://documentation.spryker.com/2021080/docs/split-delivery)
 
 [**Payment**](https://documentation.spryker.com/2021080/docs/payments):
@@ -129,7 +129,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 [**Checkout**](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/checkout-feature-overview.html):
 
 * [Multi-Step Checkout](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html)
-* [Define Shipment Methods](/docs/scos/user/features/{{page.version}}/shipment/shipment.html)
+* [Define Shipment Methods](/docs/scos/user/features/{{page.version}}/shipment-feature-overview.html)
 
 [**Ratings & Review**](https://documentation.spryker.com/2021080/docs/rating-reviews):
 [Rating & Review Management](https://documentation.spryker.com/2021080/docs/rating-revew-management)
@@ -162,11 +162,8 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 
 [**Back Office**](https://documentation.spryker.com/2021080/docs/back-office):
 
-* [Back Office Management](/docs/scos/user/features/{{page.version}}/spryker-core-back-office/spryker-core-back-office.html)
-* [Data Protection](https://documentation.spryker.com/2021080/docs/data-protection)
-* [Permission & ACL Management](https://documentation.spryker.com/2021080/docs/permission-acl-management)
-* [Customer Management](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html)
-
+* [Back Office Management](/docs/scos/user/features/{{page.version}}/spryker-core-back-office-feature-overview.html)
+* [Permission & ACL Management](/docs/scos/dev/feature-walkthroughs/{{page.version}}/user-and-rights-overview.html)
 [**Multi-Channel**](/docs/scos/user/features/{{page.version}}/multi-channel/multi-channel.html):
 
 * [Multiple Touchpoint Integrations](/docs/scos/user/features/{{page.version}}/multi-channel/multi-channel.html)

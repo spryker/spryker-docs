@@ -8,6 +8,8 @@ originalArticleId: a37baa69-a9c3-48fc-a358-4ddc155e9138
 redirect_from:
 - /v5/docs/back-office-translations-overview
 - /v5/docs/en/back-office-translations-overview
+- /v5/docs/back-office-translations
+- /v5/docs/en/back-office-translations
 
 ---
 

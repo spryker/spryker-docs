@@ -7,7 +7,7 @@ redirect_from:
   - /v5/docs/en/file-details-shipmentcsv
 ---
 
-This article contains content of the **shipment.csv** file to configure [Shipment](/docs/scos/user/features/{{page.version}}/shipment/shipment.html) information on your Spryker Demo Shop.
+This article contains content of the **shipment.csv** file to configure [Shipment](/docs/scos/user/features/{{page.version}}/shipment-feature-overview.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:

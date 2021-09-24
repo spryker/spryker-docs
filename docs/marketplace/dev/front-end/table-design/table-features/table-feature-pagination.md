@@ -36,7 +36,7 @@ Feature Configuration:
   imports: [
     TableModule.withFeatures({
       pagination: () =>
-        import('table.feature.pagination').then(
+        import('@spryker/table.feature.pagination').then(
           (m) => m.TablePaginationFeatureModule,
         ),    
     }),

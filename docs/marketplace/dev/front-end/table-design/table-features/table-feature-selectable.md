@@ -14,7 +14,11 @@ Typically, an empty box indicates a row is not selected and a checkmark indicate
 The table commonly has an indication at the header to show whether all rows are selected. 
 If they are, the header displays a checkmark. If all rows are unselected, the header displays an empty checkbox. 
 If some rows are selected, the header displays a dash for an indeterminate state.
+When rows selection changes feature emits an event with all selected rows and other features can use that to do something with them 
+(for ex. [Batch Actions Feature](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-batch-actions.html) will display applicable actions for selected rows).
 See an example below, how to use the Selectable feature.
+
+Feature Configuration:
 
 `enabled` - will enable feature via config.
 
@@ -27,6 +31,23 @@ See an example below, how to use the Selectable feature.
   },                                                                                           
 }">
 </spy-table>
+```
+
+## Feature Registration
+
+```ts
+@NgModule({
+  imports: [
+    TableModule.forRoot(),
+    TableModule.withFeatures({
+      itemSelection: () =>
+        import('table.feature.selectable').then(
+          (m) => m.TableSelectableFeatureModule,
+        ),    
+    }),
+  ],
+})
+export class RootModule {}
 ```
 
 ## Interfaces
@@ -42,18 +63,4 @@ export interface TableSelectionRow {
 }
 
 export type TableSelectionChangeEvent = TableSelectionRow[];
-
-// Component registration
-@NgModule({
-  imports: [
-    TableModule.forRoot(),
-    TableModule.withFeatures({
-      itemSelection: () =>
-        import('./table-selectable-feature.module').then(
-          (m) => m.TableSelectableFeatureModule,
-        ),    
-    }),
-  ],
-})
-export class RootModule {}
 ```

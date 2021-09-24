@@ -73,8 +73,7 @@ Then `DrawerRef.openComponent` method will be called without any manipulations w
 
 ### Via Template
 
-Another way to open drawer with `ng-template`. You need to create a template, get reference 
-of it and throw it as `template` config prop to the `handleAction` method.
+Another way to open the Drawer with `ng-template`. You need to create a template, get the reference of it and throw it as `template` config prop to the `handleAction` method.
 
 ```html
   <ng-template #contentTpl>

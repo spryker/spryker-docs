@@ -56,7 +56,7 @@ objects using dot notation for ex. `prop.nestedProp`).
     TableModule.forRoot(),
     TableModule.withFeatures({
       batchActions: () =>
-        import('table.feature.batch-actions').then(
+        import('@spryker/table.feature.batch-actions').then(
           (m) => m.TableBatchActionsFeatureModule,
         ),    
     }),

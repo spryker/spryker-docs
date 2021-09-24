@@ -91,7 +91,7 @@ import { DrawerTemplateContext } from '@spryker/drawer';
 handleAction(injector, config: { template: contentTpl }, context);
 ```
 
-`DrawerRef.openTemplate` will be called and drawer will be open with `contentTpl` template.
+`DrawerRef.openTemplate` will be called and the Drawer will be open with `contentTpl` template.
 
 ## Service registration
 

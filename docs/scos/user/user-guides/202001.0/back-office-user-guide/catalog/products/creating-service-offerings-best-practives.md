@@ -48,7 +48,7 @@ See below for information and step-by-step guides on each of the approaches.
 This approach is suitable only for Scenario 1 - that is, when the service is optional.
 
 {% endinfo_block %}
-You can make the service, in our example, the installation service, a [product option](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/product-options/product-options.html) of the product you sell. In this case, the installation service will not be a separate product, but an optional part of the product. This means that buyers can decide on their own if they need the service.
+You can make the service, in our example, the installation service, a [product option](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-options/product-options.html) of the product you sell. In this case, the installation service will not be a separate product, but an optional part of the product. This means that buyers can decide on their own if they need the service.
 
 To implement this approach, you need to create the Service product option and tie it to the respective product.
 

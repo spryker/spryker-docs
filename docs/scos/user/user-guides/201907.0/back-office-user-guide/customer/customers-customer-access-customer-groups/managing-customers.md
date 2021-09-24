@@ -22,7 +22,7 @@ If you don’t select this option, the customer is still able to set a password 
 {% endinfo_block %}
 4. To complete the customer creation, click **Save**.
 
-To know more about the attributes you see, select, and enter while creating a customer, see [Customers: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customers/references/customers-reference-information.html). 
+To know more about the attributes you see, select, and enter while creating a customer, see [Customers: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customers-customer-access-customer-groups/references/customers-reference-information.html). 
 
 ## Editing Customers 
 **To edit a customer:**

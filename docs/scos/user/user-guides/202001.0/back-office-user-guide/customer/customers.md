@@ -32,4 +32,4 @@ To know how to manage customers, customer groups and customer access, see the fo
 
 To know more about the attributes you use to manage customers, customer groups, and customer access, see the following article:
 
-* [Customers: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customers/references/customers-reference-information.html)
+* [Customers: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customers-customer-access-customer-groups/references/customers-reference-information.html)

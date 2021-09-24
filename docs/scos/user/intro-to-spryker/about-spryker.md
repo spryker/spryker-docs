@@ -56,8 +56,8 @@ The Spryker OS code is stored in GitHub under the [Spryker repository](https://g
 
 ### Layered architecture
 Layered Architecture is used to separate your commercial offering and sales channels.
-When your commercial offering is hooked directly to an online web store, expanding to different channels and methods of selling poses a huge challenge in most cases. If you create a clear separation between what you are selling and how you are selling it, you gain the freedom and flexibility in choosing sales methods and channels. 
-Separation is established by using layers. 
+When your commercial offering is hooked directly to an online web store, expanding to different channels and methods of selling poses a huge challenge in most cases. If you create a clear separation between what you are selling and how you are selling it, you gain the freedom and flexibility in choosing sales methods and channels.
+Separation is established by using layers.
 
 SCOS is split into four different layers:
 
@@ -93,9 +93,8 @@ This documentation site contains lots of information on Spryker Commerce OS. Sel
 * [Spryker Installation Guides](/docs/scos/dev/setup/about-the-installation-guides.html): installation of Spryker.
 * [Features](/docs/scos/user/features/{{page.version}}/overview-of-the-feature-guides.html): the Spryker features.
 * [Glue REST API](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-rest-api.html): Spryker Glue REST API overview, reference, and features.
-* [User Guides](/docs/scos/user/user-guides/{{site.version}}/back-office-user-guide/overview-of-the-back-office-user-guide.html): step-by-step Backoffice and Storefront user guides.
-* [Developer Guides](/docs/scos/dev/overview-of-the-developer-guides.html): technical information and guides for developers. 
+* [User Guides](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/overview-of-the-back-office-user-guide.html): step-by-step Backoffice and Storefront user guides.
+* [Developer Guides](/docs/scos/dev/overview-of-the-developer-guides.html): technical information and guides for developers.
 * [Technology Partners](/docs/scos/dev/technology-partners/{{page.version}}/technology-partner-integration.html): Spryker technology partners information and integration guides.
 * [Migration and Integration Guides](/docs/scos/dev/migration-and-integration/{{page.version}}/about-migration-and-integration-guides.html): instructions on how to migrate to newer versions of modules or features.
 * [Tutorials](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/about-tutorials.html): tutorials and HowTos.
-

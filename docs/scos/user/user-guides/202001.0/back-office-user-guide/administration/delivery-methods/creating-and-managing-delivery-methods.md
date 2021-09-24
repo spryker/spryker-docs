@@ -11,7 +11,7 @@ redirect_from:
 This topic describes the procedures for creating and managing shipment methods.
 ***
 **Prerequisites**
-Once you decide to add a new shipment method, make sure that you have a carrier company to assign a shipment method on the list of delivery methods. If you don't have an appropriate carrier, see [Creating Carrier Companies](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/delivery-methods/creating-carrier-companies.html). You also need to make sure that you have an appropriate tax set in the **Taxes > Tax Sets** section, see [Taxes](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/taxes/taxes.html).
+Once you decide to add a new shipment method, make sure that you have a carrier company to assign a shipment method on the list of delivery methods. If you don't have an appropriate carrier, see [Creating Carrier Companies](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/delivery-methods/creating-carrier-companies.html). You also need to make sure that you have an appropriate tax set in the **Taxes > Tax Sets** section, see [Taxes](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/tax-rates/taxes.html).
 ***
 To start working with the delivery methods, navigate to the **Administration > Shipment > Delivery Methods** section.
 ***
@@ -69,7 +69,7 @@ This is how the Back Office setup looks in the online store:
 ![Editing a shipment method](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Shipment/Creating+and+Managing+Shipment+Methods/editing-shipment-method.png)
 ***
 ## Viewing Delivery Methods
-To view the delivery method details, click **View**  in the *Actions* column for the delivery method you want to view. On the **View Delivery Method: [Delivery Method name]** page, you'll see three sections containing delivery method details: **Configuration**, **Store relation**, and **Price & Tax**. See [Delivery Methods: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/shipment/references/delivery-methods-reference-information.html) for more details on the attributes you see on the page.
+To view the delivery method details, click **View**  in the *Actions* column for the delivery method you want to view. On the **View Delivery Method: [Delivery Method name]** page, you'll see three sections containing delivery method details: **Configuration**, **Store relation**, and **Price & Tax**. See [Delivery Methods: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/delivery-methods/references/delivery-methods-reference-information.html) for more details on the attributes you see on the page.
 ***
 ## Deleting a Delivery Method
 {% info_block warningBox "Note" %}

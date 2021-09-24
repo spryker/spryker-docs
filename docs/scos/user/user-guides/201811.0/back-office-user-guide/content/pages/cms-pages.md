@@ -8,7 +8,7 @@ redirect_from:
   - /v1/docs/en/cms-pages
 ---
 
-CMS page is an extra HTML page of your Spryker shop that you, as a Back Office user, can create and edit using the WYSIWYG editor. The examples of CMS pages are About Us, Impressum, Terms and Conditions pages. 
+CMS page is an extra HTML page of your Spryker shop that you, as a Back Office user, can create and edit using the WYSIWYG editor. The examples of CMS pages are About Us, Impressum, Terms and Conditions pages.
 
 You can create, view, publish and edit CMS pages in the **Pages** section. It is possible to create several versions of the same page: keep new changes or discard them and, thus, return to any previous version using the Versioning History functionality. Additionally, you can define how long the page will be visible on the store website.
 ***
@@ -20,4 +20,4 @@ You can create, view, publish and edit CMS pages in the **Pages** section. It is
 
 * To know more about how to view the version history of CMS pages and compare versions, see [CMS Versioning](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/managing-cms-page-versions.html).
 
-* To learn more about attributes you use to create and edit CMS pages, see articles in the [CMS Pages: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/pages/references/cms-pages-reference-information.html) section.
+* To learn more about attributes you use to create and edit CMS pages, see articles in the [CMS Pages: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/references/cms-pages-reference-information.html) section.

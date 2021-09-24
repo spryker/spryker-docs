@@ -18,6 +18,6 @@ Labels are mapped to products to highlight them in the shop. Customers can also 
 Learn how the product labels are created and managed in the following articles:
 * [Creating a Product Label](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-labels/creating-product-labels.html)
 * [Managing Product Labels](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-labels/managing-product-labels.html)
-* [Prioritizing Labels](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/product-labels/prioritizing-labels.html)
+* [Prioritizing Labels](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-labels/prioritizing-labels.html)
 
-To learn more about the attributes you select and enter while creating or managing product labels, see [Product Labels: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/product-labels/references/product-labels-reference-information.html).
+To learn more about the attributes you select and enter while creating or managing product labels, see [Product Labels: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-labels/references/product-labels-reference-information.html).

@@ -37,4 +37,4 @@ If you want to apply this translation to other languages, click **Copy to other 
 **What's next?**
 Learn how the product attributes are managed in the [Managing Product Attributes](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/attributes/managing-product-attributes.html) article.
 
-Review the [References](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/attributes/references/attributes-reference-information.html) section to learn more about the attributes you populate for the Attribute entity and the examples of how the attributes are used.
+Review the [References](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/attributes/references/attributes-reference-information.html) section to learn more about the attributes you populate for the Attribute entity and the examples of how the attributes are used.

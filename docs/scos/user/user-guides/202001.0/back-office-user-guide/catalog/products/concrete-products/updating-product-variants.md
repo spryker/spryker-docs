@@ -14,7 +14,7 @@ The described procedure is also valid for an already existing product variant.
 To start working with product variants, navigate to the **Products > Products** section.
 ***
 **Pre-conditions**
-The procedure you are going to perform is very similar to the procedure described in the Creating a Product Variant article. See  [Creating a Product Variant](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/concrete-products/creating-product-variants.html) to know more. Also, see [Concrete Product: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/products/references/concrete-product-reference-information.html) to know more about the attributes that you see, select, and enter while updating the product variant.
+The procedure you are going to perform is very similar to the procedure described in the Creating a Product Variant article. See  [Creating a Product Variant](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/concrete-products/creating-product-variants.html) to know more. Also, see [Concrete Product: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/references/concrete-product-reference-information.html) to know more about the attributes that you see, select, and enter while updating the product variant.
 ***
 **To update** a product variant:
 1. Navigate to the **Edit Concrete Product** page using one of the following paths:

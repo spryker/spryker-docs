@@ -18,7 +18,7 @@ To define a rate under which the product, shipment, or a threshold are going to 
 
 **To create a tax rate:**
 1. On the **Overview of Tax Rates** page, click **Create Tax Rate** in the top right corner.
-2. On the **Create Tax Rate** page, enter and select the attributes. See [Taxes: Reference information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/taxes/tax-rates-and-tax-sets/references/taxes-reference-information.html) for more details.
+2. On the **Create Tax Rate** page, enter and select the attributes. See [Taxes: Reference information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/tax-rates/references/tax-rates-reference-information.html) for more details.
 3. Click **Save**.
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Taxes/Managing+Tax+Rates/create-tax-rate.png)
@@ -28,7 +28,7 @@ In the ever-changing business world, there is a chance that the taxation policie
 
 **To update the tax rate**:
 1. In the **List of tax rates > Actions** column, click **Edit** for a specific tax rate.
-2. On the **Edit Tax Rate** page, change the attributes. See [Taxes: Reference information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/taxes/tax-rates-and-tax-sets/references/taxes-reference-information.html) for more details.
+2. On the **Edit Tax Rate** page, change the attributes. See [Taxes: Reference information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/tax-rates/references/tax-rates-reference-information.html) for more details.
 3. Click **Save**.
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Taxes/Managing+Tax+Rates/editing-tax-rate.png)

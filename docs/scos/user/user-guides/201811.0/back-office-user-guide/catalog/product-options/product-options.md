@@ -18,4 +18,4 @@ Product options are connected to abstract products. They appear in groups that c
 
 * To learn how the product options can be created, see [Creating a Product Option](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-options/creating-product-options.html).
 * To learn what managing actions you can do with a product option, see  [Managing Product Options](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-options/managing-product-options.html).
-* To learn more about the attributes you see, enter and select while creating or managing product options, see [Product Options: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/product-options/references/product-options-reference-information.html).
+* To learn more about the attributes you see, enter and select while creating or managing product options, see [Product Options: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-options/references/product-options-reference-information.html).

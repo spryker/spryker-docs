@@ -56,7 +56,7 @@ You can find plain query examples in the following table.
 |shipment-carrier != '1' AND price-mode = 'GROSS_MODE'|Discount applies if the shipment carrier with the attribute "1" is not chosen and gross pricing is selected.|
 |currency != 'EUR' OR price-mode = 'GROSS_MODE'|Discount applies if the selected currency is not Euro or the pricing mode is gross.|
 {% info_block infoBox "Info" %}
-See [Token Description Tables](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/discount/references/token-description-tables.html
+See [Token Description Tables](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/discount/references/token-description-tables.html
 {% endinfo_block %} for more information.)
 
 ### Discount promotion to product

@@ -10,8 +10,6 @@ redirect_from:
   - /v2/docs/en/multi-store-cms-block
   - /v2/docs/category-block
   - /v2/docs/en/category-block
-	
-
   - /v3/docs/en/multi-store-cms-block
   - /v3/docs/category-block
   - /v3/docs/en/category-block

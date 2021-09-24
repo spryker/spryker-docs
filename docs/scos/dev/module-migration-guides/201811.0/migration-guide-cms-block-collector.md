@@ -13,7 +13,7 @@ This version provides support for multi-store CMS Block handling.
 
 1. Update spryker/cms-block-collector module to at least Version 2.0.0.
 2. Update spryker/collector module to at least Version 6.0.0. See [Migration Guide - Collector](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-collector.html).
-3. Install/upgrade spryker/cms-block to at least Version 2.0.0. You can find additional guide to migration [Migration Guide - CMS Block](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-cms-block.html).
+3. Install/upgrade spryker/cms-block to at least Version 2.0.0. You can find additional guide to migration [Migration Guide - CMS Block](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-cmsblock.html).
 4. Additionally these internal classes have changed. Take a look if you have customized them:
 * `CmsBlockCollector`
 * `CmsBlockCollectorQuery`

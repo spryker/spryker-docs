@@ -119,7 +119,7 @@ A developer can provide a full list of variables and create new ones.
 
 ### Content Items in Email Templates
 
-The CMS capability in Spryker allows you to add [content items](/docs/scos/user/features/{{page.version}}/content-items/content-items-feature-overview.html) into CMS Blocks. Unlike the regular CMS Blocks, the Email CMS Blocks do not support content items. If you insert one, its content is not rendered when the email is sent.
+The CMS capability in Spryker allows you to add [content items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html) into CMS Blocks. Unlike the regular CMS Blocks, the Email CMS Blocks do not support content items. If you insert one, its content is not rendered when the email is sent.
 
 
 ## If you are:

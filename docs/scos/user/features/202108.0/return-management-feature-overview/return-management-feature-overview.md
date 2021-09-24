@@ -90,7 +90,7 @@ A Back Office user can create returns for the [returnable items](#returnable-ite
 
 {% info_block infoBox "Return management process" %}
 
-To define the most suitable return management process for your project, to learn how you can use the default Spryker Return Management feature, and what custom development you might need to implement it, check out [Building a return management process: Best practices](/docs/scos/user/features/{{page.version}}/return-management/building-a-return-management-process-best-practices.html).
+To define the most suitable return management process for your project, to learn how you can use the default Spryker Return Management feature, and what custom development you might need to implement it, check out [Building a return management process: Best practices](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/building-a-return-management-process-best-practices.html).
 
 {% endinfo_block %}
 
@@ -113,7 +113,7 @@ Currently, the feature has the following functional constraints which are going 
 |---|
 | [Create returns in the Back Office](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/orders/managing-orders.html#creating-a-return)  |
 | [View return details, set return statuses and print return slips in the Back Office](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/returns/managing-returns.html)  |
-| [Choose a suitable return management process for your project](/docs/scos/user/features/{{page.version}}/return-management/building-a-return-management-process-best-practices.html)  |
+| [Choose a suitable return management process for your project](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/building-a-return-management-process-best-practices.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

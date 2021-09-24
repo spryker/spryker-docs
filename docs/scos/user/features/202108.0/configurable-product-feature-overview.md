@@ -122,7 +122,7 @@ Even if all the parameter values are [pre-configured](#pre-configured-parameter-
 
 #### Request for quote with a configurable product
 
-The information in [Complete and incomplete configuration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2117927245/WIP+Configurable+Product+feature+overview#Complete-and-incomplete-configuration) applies to [Quotation Process & RFQ](/docs/scos/user/features/{{page.version}}/quotation-process/quotation-process-feature-overview.html#quotation-process---rfq-feature-overview) functionalities. A Storefront user can only request a quote for a product with a complete configuration.
+The information in [Complete and incomplete configuration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2117927245/WIP+Configurable+Product+feature+overview#Complete-and-incomplete-configuration) applies to [Quotation Process & RFQ](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html#quotation-process---rfq-feature-overview) functionalities. A Storefront user can only request a quote for a product with a complete configuration.
 
 ### Pre-configured parameter values
 

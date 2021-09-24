@@ -8,7 +8,7 @@ redirect_from:
   - /v6/docs/en/navigation-reference-information
 ---
 
-This topic contains the reference information for working with [navigation elements](/docs/scos/user/features/{{page.version}}/navigation/navigation-feature-overview.html#navigation-element) in **Content** > **Navigation**.
+This topic contains the reference information for working with [navigation elements](/docs/scos/user/features/{{page.version}}/navigation-feature-overview.html#navigation-element) in **Content** > **Navigation**.
 
 ## Overview of Navigation Elements Page
 

@@ -56,7 +56,7 @@ To learn more about order statuses, see [Orders: Reference Information](/docs/sc
 The order statuses you set here do not always have the same wording on the Storefront. For details on how you can display custom names for statuses on the Storefront, see [HowTo - Display Custom Names for Order Item States on the Storefront](/docs/scos/dev/tutorials-and-howtos/202009.0/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html).
 
 ## Creating a Return
-If a sales order item is[ returnable](/docs/scos/user/features/{{page.version}}/return-management/return-management-feature-overview.html), you can create a return for it. Keep in mind, that you can create returns as for the registered, so also for the guest users. Creating a return from the Back Office is the only way for the *guest users* to return an order.
+If a sales order item is[ returnable](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html), you can create a return for it. Keep in mind, that you can create returns as for the registered, so also for the guest users. Creating a return from the Back Office is the only way for the *guest users* to return an order.
 
 To create a return:
 
@@ -103,7 +103,7 @@ To remove the custom order reference, clear the **Custom Order Reference** field
 
 ## Claiming Orders
 
-To [claim an order](/docs/scos/user/features/{{page.version}}/reclamations/reclamations-feature-overview.html):
+To [claim an order](/docs/scos/user/features/{{page.version}}/reclamations-feature-overview.html):
 1. On the *Overview of Orders* page, click **Claim** next to the order you want to create a reclamation for.
 2. On the *Create reclamation* page, select one or more products you want to create the reclamation for.
 3. Click **Create Reclamation**.

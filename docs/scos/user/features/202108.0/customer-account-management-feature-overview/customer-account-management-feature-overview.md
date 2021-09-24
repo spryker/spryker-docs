@@ -32,10 +32,10 @@ Also, it allows you to manage customer access, request a password change or chan
 |BACK OFFICE USER GUIDES|
 |---|
 | [Get a general idea of Customer Account](/docs/scos/user/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-accounts-overview.html)  |
-| [Get a general idea of Customer Registration](/docs/scos/user/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-registration-overview.html)   |
+| [Get a general idea of Customer Registration](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-registration-overview.html)   |
 | [Get a general idea of Customer Login](/docs/scos/user/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-login-overview.html)  |
-| [Get a general idea of Customer Groups](/docs/scos/user/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-groups-overview.html)   |
-| [Get a general idea of Password Management](/docs/scos/user/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/password-management-overview.html)  |
+| [Get a general idea of Customer Groups](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-groups-overview.html)   |
+| [Get a general idea of Password Management](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/password-management-overview.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

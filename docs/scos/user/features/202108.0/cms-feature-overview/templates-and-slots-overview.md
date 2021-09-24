@@ -17,7 +17,7 @@ Templates slots enables content managers to effectively and coherently interact 
 Templates and slots is a complex funcitonality which works in conjunction with other functionalities. To use it effectively, make sure you get familiar with the functionalities in the order they are presented:
 * [CMS Page](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html)
 * [CMS Block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html)
-* [Content Items](/docs/scos/user/features/{{page.version}}/content-items/content-items-feature-overview.html)
+* [Content Items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html)
 
 {% endinfo_block %}
 
@@ -126,7 +126,7 @@ CMS Block is a separate entity with a dedicated section in the Back Office. See 
 
 ## Content item
 
-[Content Item](/docs/scos/user/features/{{page.version}}/content-items/content-items-feature-overview.html) is the smallest content unit in Spryker that is used in the WISIWYG editor when creating content for CMS blocks. When a CMS block is inserted into a slot, all the content items of the CMS block are displayed on the Storefront page space of the slot.
+[Content Item](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html) is the smallest content unit in Spryker that is used in the WISIWYG editor when creating content for CMS blocks. When a CMS block is inserted into a slot, all the content items of the CMS block are displayed on the Storefront page space of the slot.
 
 <details open>
     <summary> Content item representation—Storefront</summary>
@@ -137,7 +137,7 @@ CMS Block is a separate entity with a dedicated section in the Back Office. See 
 </details>
 
 From the perspective of templates and slots, a content item always comes as a part of CMS block. That's why there is no place to manage it in the **Slots** section.
-See [Content Items](/docs/scos/user/features/{{page.version}}/content-items/content-items-feature-overview.html) to learn what a content manager can do with content items in the Back Office > **Content Management** > **Content Items** section.
+See [Content Items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html) to learn what a content manager can do with content items in the Back Office > **Content Management** > **Content Items** section.
 
 ### <a id="applying-templates-with-slots"></a>Applying Templates with slots
 
@@ -196,7 +196,7 @@ With templates and slots, the following applies:
 
 * Spryker CMS Blocks is the content provider for all the slots.
 * Slots embed content from [CMS Blocks](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html).
-* Content for CMS blocks is created in the [WYSIWYG Editor](/docs/scos/user/features/{{page.version}}/content-items/content-items-feature-overview.html#content-item-widget).
+* Content for CMS blocks is created in the [WYSIWYG Editor](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html#content-item-widget).
 * Templates with slots are managed in the Back Office > **Slots** section.
 
 The schema below shows how content is managed with the help of templates with slots:

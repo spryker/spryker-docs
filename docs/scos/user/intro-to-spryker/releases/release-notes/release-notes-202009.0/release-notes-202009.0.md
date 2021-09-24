@@ -115,13 +115,13 @@ When a Customer signs up, an email with a confirmation link is sent to the provi
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image10.png) 
 
 #### Documentation
-[Customer Registration](/docs/scos/user/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-registration-overview.html)
+[Customer Registration](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-registration-overview.html)
 
 ### Trigger Forgot Password Emails When Importing Customers 
 Spryker provides you with two new console commands to help migrate existing customers to a Spryker project. When importing new customers into your Spryker project, you can send the *forgot password* email to them so that they can set up the passwords for their accounts.
 
 #### Documentation
-[Password Management](/docs/scos/user/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/password-management-overview.html)
+[Password Management](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/password-management-overview.html)
 
 ## Order Management Enhancements 
 ### Display State of Order Item

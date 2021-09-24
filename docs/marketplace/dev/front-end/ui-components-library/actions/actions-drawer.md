@@ -73,8 +73,8 @@ Then `DrawerRef.openComponent` method will be called without any manipulations w
 
 ### Via Template
 
-There is an easy way to open drawer with `ng-template`. All you need it's just create a template and call 
-`handleAction` method with a reference to this template inside the config.
+Another way to open drawer with `ng-template`. You need to create a template, get reference 
+of it and throw it as `template` config prop to the `handleAction` method.
 
 ```html
   <ng-template #contentTpl>
@@ -84,7 +84,9 @@ There is an easy way to open drawer with `ng-template`. All you need it's just c
 
 ```ts
 // Find the template
-@ViewChild(‘contentTpl’) contentTpl?: TemplateRef<any>;
+import { DrawerTemplateContext } from '@spryker/drawer';
+
+@ViewChild(‘contentTpl’) contentTpl?: TemplateRef<DrawerTemplateContext>;
 
 // Call the method 
 handleAction(injector, config: { template: contentTpl }, context);

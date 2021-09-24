@@ -41,7 +41,7 @@ Feature Configuration:
     TableModule.forRoot(),
     TableModule.withFeatures({
       itemSelection: () =>
-        import('table.feature.selectable').then(
+        import('@spryker/table.feature.selectable').then(
           (m) => m.TableSelectableFeatureModule,
         ),    
     }),

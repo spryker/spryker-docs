@@ -11,6 +11,8 @@ This article provides details about the Table Feature Settings component in the 
 Table Feature Settings is a feature of the Table Component that allows customizing columns of the table (show/hide and reorder).
 See an example below, how to use the Settings feature.
 
+Feature Configuration:
+
 `enabled` - will enable feature via config.  
 `tableId` - `id` of the table that will syncs with the table toolbar settings.
 
@@ -24,6 +26,23 @@ See an example below, how to use the Settings feature.
   },                                                                                         
 }">
 </spy-table>
+```
+
+## Feature Registration
+
+```ts
+@NgModule({
+  imports: [
+    TableModule.forRoot(),
+    TableModule.withFeatures({
+      columnConfigurator: () =>
+        import('@spryker/table.feature.settings').then(
+          (m) => m.TableSettingsFeatureModule,
+        ),
+    }),
+  ],
+})
+export class RootModule {}
 ```
 
 ## Interfaces
@@ -47,18 +66,4 @@ export interface TableSettingsChangeEvent {
 }
 
 export type TableSettingsColumns = TableSettingsColumn[];
-
-// Component registration
-@NgModule({
-  imports: [
-    TableModule.forRoot(),
-    TableModule.withFeatures({
-      columnConfigurator: () =>
-        import('./table-settings-feature.module').then(
-          (m) => m.TableSettingsFeatureModule,
-        ),
-    }),
-  ],
-})
-export class RootModule {}
 ```

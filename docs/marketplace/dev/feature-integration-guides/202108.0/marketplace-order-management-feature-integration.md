@@ -1,6 +1,6 @@
 ---
 title: Marketplace Order Management feature integration
-last_updated: Jun 25, 2021
+last_updated: Sep 08, 2021
 description: This document describes how to integrate the Marketplace Order Management feature into a Spryker project.
 template: feature-integration-guide-template
 ---
@@ -17,18 +17,18 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ------ | ---------------|
-| Spryker Core | 202001.0 | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Order Management | 202001.0 | [Order Management feature integration](https://documentation.spryker.com/docs/order-management-feature-integration) |
-| Shipment | 202001.0 | [Shipment feature integration](https://documentation.spryker.com/docs/shipment-feature-integration) |
-| State Machine | 202001.0 | [State Machine feature integration](https://github.com/spryker-feature/state-machine) |
-| Marketplace Merchant | dev-master | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Order Management | {{page.version}} | [Order Management feature integration](https://documentation.spryker.com/docs/order-management-feature-integration) |
+| State Machine | {{page.version}} | [State Machine feature integration](https://github.com/spryker-feature/state-machine) |
+| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
+| Marketplace Shipment | {{page.version}} | [Marketplace Shipment feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-feature-integration.html) |
 
 ### 1) Install required modules using Сomposer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-order-management --update-with-dependencies
+composer require spryker-feature/marketplace-order-management:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -37,19 +37,17 @@ Make sure that the following modules have been installed:
 
 | MODULE  | EXPECTED DIRECTORY |
 | -------- | ------------------- |
-| MerchantOms | spryker/merchant-oms |
-| MerchantOmsDataImport | spryker/merchant-oms-data-import |
-| MerchantOmsGui | spryker/merchant-oms-gui |
-| MerchantSalesOrder | spryker/merchant-sales-order |
-| MerchantSalesOrderMerchantUserGui | spryker/merchant-sales-order-merchant-user-gui |
-| MerchantSalesOrderDataExport | spryker/merchant-sales-order-data-export |
-| ProductOfferSales | spryker/product-offer-sales |
+| MerchantOms | vendor/spryker/merchant-oms |
+| MerchantOmsDataImport | vendor/spryker/merchant-oms-data-import |
+| MerchantOmsGui | vendor/spryker/merchant-oms-gui |
+| MerchantSalesOrder | vendor/spryker/merchant-sales-order |
+| MerchantSalesOrderMerchantUserGui | vendor/spryker/merchant-sales-order-merchant-user-gui |
+| MerchantSalesOrderDataExport | vendor/spryker/merchant-sales-order-data-export |
+| ProductOfferSales | vendor/spryker/product-offer-sales |
 
 {% endinfo_block %}
 
 ### 2) Set up configuration
-
-<!--Describe system and module configuration changes. If the default configuration is enough for a primary behavior, skip this step.-->
 
 Add the following configuration:
 
@@ -58,7 +56,7 @@ Add the following configuration:
 | MainMerchantStateMachine | Introduce `MainMerchantStateMachine` configuration. | config/Zed/StateMachine/Merchant/MainMerchantStateMachine.xml |
 | MerchantDefaultStateMachine | Introduce `MerchantDefaultStateMachine` configuration. | config/Zed/StateMachine/Merchant/MerchantDefaultStateMachine.xml |
 | MarketplacePayment  | Introduce `MarketplacePayment` order management system. | config/Zed/oms/MarketplacePayment01.xml |
-| MarketplacePayment  | Introduce `MarketplacePayment` order management system. | config/Zed/oms/MarketplacePayment01.xml |
+| Navigation  | Introduce navigation configuration. | config/Zed/navigation.xml |
 
 <details>
 <summary markdown='span'>config/Zed/StateMachine/Merchant/MainMerchantStateMachine.xml</summary>
@@ -143,10 +141,10 @@ Add the following configuration:
             <event name="initiate" onEnter="true"/>
             <event name="send to distribution" manual="true"/>
             <event name="confirm at center" manual="true"/>
-            <event name="ship" manual="true" command="DummyMarketplacePayment/ShipOrderItem"/>
-            <event name="deliver" manual="true" command="DummyMarketplacePayment/DeliverOrderItem"/>
+            <event name="ship" manual="true" command="MarketplaceOrder/ShipOrderItem"/>
+            <event name="deliver" manual="true" command="MarketplaceOrder/DeliverOrderItem"/>
             <event name="close"/>
-            <event name="cancel" manual="true"/>
+            <event name="cancel" manual="true" command="MarketplaceOrder/CancelOrderItem"/>
         </events>
 
     </process>
@@ -154,7 +152,6 @@ Add the following configuration:
 </statemachine>
 
 ```
-
 </details>
 
 <details>
@@ -225,10 +222,10 @@ Add the following configuration:
 
         <events>
             <event name="initiate" onEnter="true"/>
-            <event name="ship" manual="true" command="DummyMarketplacePayment/ShipOrderItem"/>
-            <event name="deliver" manual="true" command="DummyMarketplacePayment/DeliverOrderItem"/>
+            <event name="ship" manual="true" command="MarketplaceOrder/ShipOrderItem"/>
+            <event name="deliver" manual="true" command="MarketplaceOrder/DeliverOrderItem"/>
             <event name="close"/>
-            <event name="cancel by merchant" manual="true"/>
+            <event name="cancel by merchant" manual="true" command="MarketplaceOrder/CancelOrderItem"/>
         </events>
 
     </process>
@@ -336,11 +333,56 @@ Add the following configuration:
 
 </statemachine>
 ```
-
 </details>
+
+<details>
+<summary markdown='span'>config/Zed/navigation.xml</summary>
+
+```xml
+<?xml version="1.0"?>
+<config>
+    <sales>
+        <pages>
+            <merchant-sales-order>
+                <label>My orders</label>
+                <title>My orders</title>
+                <bundle>merchant-sales-order-merchant-user-gui</bundle>
+                <controller>index</controller>
+                <action>index</action>
+                <visible>1</visible>
+            </merchant-sales-order>
+        </pages>
+    </sales>
+    <marketplace>
+        <pages>
+            <order-list>
+                <label>Orders</label>
+                <title>Orders</title>
+                <bundle>sales</bundle>
+                <controller>index</controller>
+                <action>index</action>
+            </order-list>
+        </pages>
+    </marketplace>
+</config>
+```
+</details>
+
+Execute the following command:
+
+```bash
+console navigation:build-cache
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that, in the navigation menu of the Back Office, you can see the **Marketplace->Orders** as well as **Sales->My Orders** menu items.
+
+{% endinfo_block %}
 
 
 ### 3) Set up database schema and transfer objects
+
 Apply database changes and generate entity and transfer changes:
 
 ```bash
@@ -371,12 +413,16 @@ Make sure that the following changes have been triggered in transfer objects:
 
 | TRANSFER | TYPE | EVENT  | PATH  |
 | --------- | ------- | ----- | ------------- |
-| MerchantOrderCriteria.idMerchant | attribute | created | src/Generated/Shared/Transfer/MerchantOrderCriteriaTransfer |
-| DataImporterConfiguration | class | created | src/Generated/Shared/Transfer/DataImporterConfigurationTransfer |
-| StateMachineItem.stateName | attribute | created | src/Generated/Shared/Transfer/StateMachineItemTransfer |
-| Merchant.merchantReference | attribute | created | src/Generated/Shared/Transfer/MerchantTransfer |
-| MerchantOrderItem.idMerchantOrderItem | attribute | created | src/Generated/Shared/Transfer/MerchantOrderItemTransfer |
-| Item.productOfferReference | attribute | created| src/Generated/Shared/Transfer/ItemTransfer |
+| Merchant.fkStateMachineProcess | property | created | src/Generated/Shared/Transfer/MerchantTransfer |
+| MerchantOrder | class | created | src/Generated/Shared/Transfer/MerchantOrderTransfer |
+| MerchantOrderCriteria | class | created | src/Generated/Shared/Transfer/MerchantOrderCriteriaTransfer |
+| MerchantOrderCollection | class | created | src/Generated/Shared/Transfer/MerchantOrderCollectionTransfer |
+| MerchantOrderItem | class | created | src/Generated/Shared/Transfer/MerchantOrderItemTransfer |
+| MerchantOrderItemCriteria | class | created | src/Generated/Shared/Transfer/MerchantOrderItemCriteriaTransfer |
+| MerchantOrderItemCollection | class | created | src/Generated/Shared/Transfer/MerchantOrderItemCollectionTransfer |
+| MerchantOrderItemResponse | class | created | src/Generated/Shared/Transfer/MerchantOrderItemResponseTransfer |
+| MerchantOmsTriggerRequest | class | created | src/Generated/Shared/Transfer/MerchantOmsTriggerRequestTransfer |
+| MerchantOmsTriggerResponse | class | created | src/Generated/Shared/Transfer/MerchantOmsTriggerResponseTransfer |
 
 {% endinfo_block %}
 
@@ -395,6 +441,7 @@ Import data as follows:
 1. Prepare your data according to your requirements using the demo data:
 
 **data/import/common/common/marketplace/merchant_oms_process.csv**
+
 ```csv
 merchant_reference,merchant_oms_process_name
 MER000001,MainMerchantStateMachine
@@ -405,7 +452,6 @@ MER000003,MerchantDefaultStateMachine
 MER000007,MerchantDefaultStateMachine
 MER000005,MerchantDefaultStateMachine
 ```
-
 
 |PAREMETER |REQUIRED?  |TYPE  |DATA EXAMPLE | DESCRIPTION |
 |---------|---------|---------|---------| ---------|
@@ -437,9 +483,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
         ];
     }
 }
-
 ```
-
 
 3. Import data:
 
@@ -513,13 +557,11 @@ actions:
       filter_criteria:
           <<: *default_filter_criteria
           store_name: [US]
-
 ```
 </details>
 
-
 | PARAMETER |  |  | REQUIRED | POSSIBLE VALUES | DESCRIPTION |
-|-|-|-|-|-|-|
+|---|---|---|---|---|---|
 | data_entity |  |  | &check; | merchant-order merchant-order-item merchant-order-expense | String identifier for data entity that is expected to be  exported. |
 | filter_criteria | store_name |  | &check; | All existing store names. | An existing store name for the data to filter on. |
 |  | merchant_order_created_at | from |  | Date in format 'YYYY-MM-DD HH:mm:ss HH24:MI' | Date of merchant order creation from which the data needs to be filtered. |
@@ -533,7 +575,7 @@ actions:
 | --------------- | -------------- | ------ | -------------- |
 | MerchantOrderDataEntityExporterPlugin | Exports merchant order data |   | Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport|
 | MerchantOrderItemDataEntityExporterPlugin | Exports merchant order Items data |     | Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport |
-|MerchantOrderExpenseDataEntityExporterPlugin  | Exports merchant order Expense data |     |Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport |
+| MerchantOrderExpenseDataEntityExporterPlugin  | Exports merchant order Expense data |     |Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport |
 
 **src/Pyz/Zed/DataExport/DataExportDependencyProvider.php**
 
@@ -563,7 +605,6 @@ class DataExportDependencyProvider extends SprykerDataExportDependencyProvider
 }
 ```
 
-
 3. Export data:
 
 ```bash
@@ -577,15 +618,47 @@ Enable the following behaviors by registering the plugins:
 | PLUGIN  | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ------------ | ----------- | ----- | ------------ |
 | TriggerEventFromCsvFileConsole |Allows for updating merchant order status via CSV input.  |  |Spryker\Zed\MerchantOms\Communication\Console |
-|EventTriggerMerchantOrderPostCreatePlugin  | Triggers new events for the newly created merchant orders | |Spryker\Zed\MerchantOms\Communication\Plugin\MerchantSalesOrder  |
+| EventTriggerMerchantOrderPostCreatePlugin  | Triggers new events for the newly created merchant orders | |Spryker\Zed\MerchantOms\Communication\Plugin\MerchantSalesOrder  |
 | MerchantOmsMerchantOrderExpanderPlugin |Expands merchant order with merchant Oms data (item state and manual events)  | | Spryker\Zed\MerchantOms\Communication\Plugin\MerchantSalesOrder |
 | MerchantStateMachineHandlerPlugin | Wires merchant order updates in the State Machine module | |Spryker\Zed\MerchantOms\Communication\Plugin\StateMachine |
-|MerchantOmsStateOrderItemsTableExpanderPlugin  |Expands the order item table with merchant order item state  | | Spryker\Zed\MerchantOmsGui\Communication\Plugin\Sales |
-|MerchantOrderDataOrderExpanderPlugin  | Expands order data with merchant order details | | Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Sales |
-|MerchantReferenceOrderItemExpanderPreSavePlugin  | Expands order item with merchant reference before saving an order item to the database | | Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Sales |
-|MerchantReferencesOrderExpanderPlugin  |Expands order with merchant references from order items  | |	Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Sales  |
+| MerchantOmsStateOrderItemsTableExpanderPlugin  |Expands the order item table with merchant order item state  | | Spryker\Zed\MerchantOmsGui\Communication\Plugin\Sales |
+| MerchantOrderDataOrderExpanderPlugin  | Expands order data with merchant order details | | Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Sales |
+| MerchantReferenceOrderItemExpanderPreSavePlugin  | Expands order item with merchant reference before saving an order item to the database | | Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Sales |
+| MerchantReferencesOrderExpanderPlugin  |Expands order with merchant references from order items  | |	Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Sales  |
 | MerchantReferenceShipmentExpenseExpanderPlugin | Expands expense transfer with merchant reference from items | | Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Shipment |
 | ProductOfferReferenceOrderItemExpanderPreSavePlugin |Expands order item with product offer reference before saving the order item to the database  | | Spryker\Zed\ProductOfferSales\Communication\Plugin\Sales |
+| DeliverMarketplaceOrderItemCommandPlugin | Triggers 'deliver' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
+| ShipByMerchantMarketplaceOrderItemCommandPlugin | Triggers 'ship by merchant' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
+| CancelMarketplaceOrderItemCommandPlugin | Triggers 'ship by merchant' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
+
+<details>
+<summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/MerchantOmsCommunicationFactory.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantOms\Communication;
+
+use Pyz\Zed\MerchantOms\MerchantOmsDependencyProvider;
+use Spryker\Zed\MerchantOms\Communication\MerchantOmsCommunicationFactory as SprykerMerchantOmsCommunicationFactory;
+
+/**
+ * @method \Spryker\Zed\MerchantOms\MerchantOmsConfig getConfig()
+ * @method \Spryker\Zed\MerchantOms\Business\MerchantOmsFacadeInterface getFacade()
+ * @method \Spryker\Zed\MerchantOms\Persistence\MerchantOmsRepositoryInterface getRepository()
+ */
+class MerchantOmsCommunicationFactory extends SprykerMerchantOmsCommunicationFactory
+{
+    /**
+     * @return \Pyz\Zed\Oms\Business\OmsFacadeInterface
+     */
+    public function getOmsFacade(): OmsFacadeInterface
+    {
+        return $this->getProvidedDependency(MerchantOmsDependencyProvider::FACADE_OMS);
+    }
+}
+```
+</details>
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/Sales/SalesDependencyProvider.php</summary>
@@ -762,6 +835,108 @@ class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
 ```
 </details>
 
+<details>
+<summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/DeliverMarketplaceOrderItemCommandPlugin.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantOms\Communication\Plugin\Oms;
+
+class DeliverMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsEventCommandPlugin
+{
+    protected const EVENT_DELIVER = 'deliver';
+
+    /**
+     * @return string
+     */
+    public function getEventName(): string
+    {
+        return static::EVENT_DELIVER;
+    }
+}
+
+```
+
+</details>
+
+<details>
+<summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/ShipByMerchantMarketplaceOrderItemCommandPlugin.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantOms\Communication\Plugin\Oms;
+
+class ShipByMerchantMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsEventCommandPlugin
+{
+    protected const EVENT_SHIP_BY_MERCHANT = 'ship by merchant';
+
+    /**
+     * @return string
+     */
+    public function getEventName(): string
+    {
+        return static::EVENT_SHIP_BY_MERCHANT;
+    }
+}
+```
+</details>
+
+<details>
+<summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/CancelMarketplaceOrderItemCommandPlugin.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantOms\Communication\Plugin\Oms;
+
+class CancelMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsEventCommandPlugin
+{
+    /**
+     * @var string
+     */
+    protected const EVENT_CANCEL = 'cancel';
+
+    /**
+     * @return string
+     */
+    public function getEventName(): string
+    {
+        return static::EVENT_CANCEL;
+    }
+}
+```
+</details>
+
+<details>
+<summary markdown='span'>src/Pyz/Zed/MerchantOms/MerchantOmsDependencyProvider.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantOms;
+
+use Pyz\Zed\MerchantOms\Communication\Plugin\Oms\CancelMarketplaceOrderItemCommandPlugin;
+use Pyz\Zed\MerchantOms\Communication\Plugin\Oms\DeliverMarketplaceOrderItemCommandPlugin;
+use Pyz\Zed\MerchantOms\Communication\Plugin\Oms\ShipByMerchantMarketplaceOrderItemCommandPlugin;
+use Spryker\Zed\Kernel\Container;
+use Spryker\Zed\MerchantOms\MerchantOmsDependencyProvider as SprykerMerchantOmsDependencyProvider;
+
+class MerchantOmsDependencyProvider extends SprykerMerchantOmsDependencyProvider
+{
+    protected function getStateMachineCommandPlugins(): array
+    {
+        return [
+            'MarketplaceOrder/ShipOrderItem' => new ShipByMerchantMarketplaceOrderItemCommandPlugin(),
+            'MarketplaceOrder/DeliverOrderItem' => new DeliverMarketplaceOrderItemCommandPlugin(),
+            'MarketplaceOrder/CancelOrderItem' => new CancelMarketplaceOrderItemCommandPlugin(),
+        ];
+    }
+}
+```
+</details>
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the Merchant State Machine is executed on merchant orders after the order has been split.
@@ -780,7 +955,7 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ------ | --------------|
-| Spryker Core | 202001.0 | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
 
 ### 1) Install the required modules using Сomposer
 
@@ -855,9 +1030,11 @@ Make sure that the following widgets have been registered by adding the respecti
 {% endinfo_block %}
 
 ## Related features
+
 Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE |INTEGRATION GUIDE |
 | --- | --- | --- |
 | Marketplace Order Management + Order Threshold |  |[Marketplace Order Management + Order Threshold feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-order-threshold-feature-integration.html) |
 | Marketplace Order Management + Cart |  | [Marketplace Order Management + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-cart-feature-integration.html)|
+| Marketplace Inventory Management + Marketplace Order Management |  |  [Marketplace Inventory Management + Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-order-management-feature-integration.html)  |

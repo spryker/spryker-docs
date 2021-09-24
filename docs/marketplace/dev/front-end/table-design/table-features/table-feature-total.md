@@ -36,7 +36,7 @@ Feature Configuration:
     TableModule.forRoot(),
     TableModule.withFeatures({
       total: () =>
-        import('table.feature.total').then(
+        import('@spryker/table.feature.total').then(
           (m) => m.TableTotalFeatureModule,
         ),
     }),

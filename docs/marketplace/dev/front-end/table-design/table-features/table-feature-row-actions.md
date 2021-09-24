@@ -18,8 +18,8 @@ See an example below, how to use the Row Actions feature.
 Feature Configuration:
 
 `enabled` - will enable feature via config.  
-[actions](/docs/marketplace/dev/front-end/ui-components-library/actions/) - an array with actions that will be 
-displayed in the dropdown menu and their type of registered Action.  
+`actions` - an array with actions that will be displayed in the dropdown menu and their type of 
+registered Action (see more about [Actions](/docs/marketplace/dev/front-end/ui-components-library/actions/).  
 `click` - indicates by `id` which action will be used for the table row clicking.  
 `rowIdPath` - uses for the `rowId` action context.  
 `availableActionsPath` - path to an array with available action IDs in the table data row (supports nested objects 

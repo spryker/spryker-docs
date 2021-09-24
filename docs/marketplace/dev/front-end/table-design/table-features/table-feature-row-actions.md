@@ -9,15 +9,21 @@ This article provides details about the Table Feature Row Actions component in t
 ## Overview
 
 Table Feature Row Actions is a feature of the Table Component that renders dropdown 
-menu that contains actions related specifically to the table row. 
+menu that contains actions applicable to the table row and on click triggers an Action which must be registered. 
 Also this feature allows triggering actions via row click.
+By default all actions will be available on every row but if needed they can be filtered using array of 
+action IDs specified on each row in the data using path configured by `availableActionsPath`.
 See an example below, how to use the Row Actions feature.
 
+Feature Configuration:
+
 `enabled` - will enable feature via config.  
-`actions` - an array with actions that will be displayed in the dropdown menu.  
+[actions](/docs/marketplace/dev/front-end/ui-components-library/actions/) - an array with actions that will be 
+displayed in the dropdown menu and their type of registered Action.  
 `click` - indicates by `id` which action will be used for the table row clicking.  
 `rowIdPath` - uses for the `rowId` action context.  
-`availableActionsPath` - an array with available actions in the dropdown menu (by `id`).  
+`availableActionsPath` - path to an array with available action IDs in the table data row (supports nested objects 
+using dot notation for ex. `prop.nestedProp`).  
 
 ```html
 <spy-table [config]="{
@@ -26,15 +32,32 @@ See an example below, how to use the Row Actions feature.
   rowActions: {
     enabled: true,
     actions: [
-      { id: 'edit', title: 'Edit' },
-      { id: 'delete', title: 'Delete' },
+      { id: 'edit', title: 'Edit', type: 'edit-action' },
+      { id: 'delete', title: 'Delete', type: 'delete-action' },
     ],
     click: 'edit',
     rowIdPath: 'sku',
-    availableActionsPath: ['edit'],
+    availableActionsPath: ['path.to.actions'],
   },                                                                                        
 }">
 </spy-table>
+```
+
+## Feature Registration
+
+```ts
+@NgModule({
+  imports: [
+    TableModule.forRoot(),
+    TableModule.withFeatures({
+      rowActions: () =>
+        import('table.feature.row-actions').then(
+          (m) => m.TableRowActionsFeatureModule,
+        ),    
+    }),
+  ],
+})
+export class RootModule {}
 ```
 
 ## Interfaces
@@ -58,18 +81,4 @@ export interface TableRowActionContext {
   row: TableDataRow;
   rowId?: string;
 }
-
-// Component registration
-@NgModule({
-  imports: [
-    TableModule.forRoot(),
-    TableModule.withFeatures({
-      rowActions: () =>
-        import('./table-row-actions-feature.module').then(
-          (m) => m.TableRowActionsFeatureModule,
-        ),    
-    }),
-  ],
-})
-export class RootModule {}
 ```

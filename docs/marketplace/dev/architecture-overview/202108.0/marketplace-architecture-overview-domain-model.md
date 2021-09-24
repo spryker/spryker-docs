@@ -1,43 +1,42 @@
 ---
-title: Marketplace Domain Model
-description:
+title: Marketplace domain model
+description: The following document shows how Spryker Marketplace looks in general. As a result of reading this document, you will have a better understanding of the key Domain Objects that make a Spryker Shop a Marketplace.
 template: concept-topic-template
 ---
-This document depicts how a Spryker Marketplace looks like in general. After reading this odc you will now: 
-
-- what are the key Domain Object that makes a Spryker shop to be a Marketplace
-
+The following document shows how Spryker Marketplace looks in general. As a result of reading this document, you will have a better understanding of the key Domain Objects that make a Spryker Shop a Marketplace.
+ 
 ## Domain Model
-The following diagram demonstrates the core aggregates of the domain model of the Spyker Marketplace.
-Marketplace is an add-on to your Spryker b2c or b2b project.
+The following diagram demonstrates the core aggregates of the domain model of the Spryker Marketplace.
+The Marketplace is an add-on to your Spryker B2C or B2B project.
 It extends the existing Domain with Merchant and ProductOffer to enable sophisticated business models for your Marketplace application. 
-Please note that this model is intentionally simplified, learn more about core domain objects in Feature Walkthourghs section.
+Please note that this model is intentionally simplified. Learn more about core domain objects in the Marketplace Merchant feature walkthrough and Product offer feature walkthrough.
 
 ![Domain Model](https://confluence-connect.gliffy.net/embed/image/02c4183f-2823-4371-ba91-aa5f9585998b.png?utm_medium=live&utm_source=custom)
 
 #### Merchant
-Is a core Marketplace domain object. Merchant represents an entity of a third-party seller on a shop. In other setups (such as "big box retail"), Merchant can represent a branch of a chain of stores.
+It is a core Marketplace domain object. Merchant represents an entity of a third-party seller on a shop. In other setups (such as "big-box retail"), the Merchant can represent a branch of a chain of stores.
 Merchants use MerchantPortal to manage their profile, catalog, and sales. 
 
-Learn more about [Marketplace Merchant here](/docs/marketplace/dev/feature-walkthroughs/202108.0/marketplace-merchant-feature-walkthrough.html).
+To learn more about the merchant entity, see [Marketplace Merchant feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-merchant-feature-walkthrough.html).
 
 #### Product
-Is a b2c/b2b e-commerce domain object. Some goods that are offered in a shop and can be bought by a customer. Notice that in Marketplace a Product can be owned by a Marketplace Operator or can be created by a Merchant.
+It is a B2C/B2B e-commerce domain object. The product represents some goods or services offered in a shop, and a customer can buy that. Notice that in the Marketplace, a Product can be owned by a Marketplace Operator or can be created by a Merchant.
 
-Learn more about [Marketplace Product here](/docs/marketplace/dev/feature-walkthroughs/202108.0/marketplace-product-feature-walkthrough.html).
+To learn more about the product, see [Marketplace Product feature walkthrought](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-feature-walkthrough.html).
 
 #### ProductOffer
-Marketplace Domain object. ProductOffer allows assigning a special price and stock to a Product. In Marketplace, a ProductOffer can be owned by a Merchant, this way Merchants can define their own prices and stock to Products on a system.
+ProductOffer is a Marketplace Domain object. ProductOffer allows assigning a special price and stock to a Product. In the Marketplace, a Merchant can own a ProductOffer, and they define their prices and stock to Products in the system.
 
-Please notice that relation from ProductOffer to Merchant is optional. While ProductOffer is a core domain object for Marketplace, it can also be used for other cases that are not Marketplace related or even are not  Merchant related.
+Relation from ProductOffer to Merchant is optional. While ProductOffer is a core domain object for Marketplace, it can also be used for other not Marketplace-related cases or even are not Merchant-related.
 
-Learn more about [Marketplace Product Offer here](/docs/marketplace/dev/feature-walkthroughs/202108.0/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html)
+To learn more about the Product Offer, see [Marketplace Product Offer feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html).
 
 #### Order 
-Is a b2c/b2b e-commerce domain object. Another standard e-commerce domain object that represents a transaction of buying some goods on a shop by a Customer. In Marketplace an Order may contain items that are owned by multiple Merchants. For this reason, Merchants never have access to it, only Customer and Marketplace Operator can access Orders.
+Order is a B2C/B2B e-commerce domain object. It is another standard e-commerce domain object representing a transaction of buying some goods on a shop by a Customer. In the Marketplace, an Order may contain items that multiple Merchants own. For this reason, Merchants never have access to it. Only the Customer and Marketplace Operator can access to Orders.
 
 #### MerchantOrder 
-Marketplace domain object. MerchantOrder is a composition of OrderItems, OrderTotals, OrderShipment, OrderCustomer, and other objects that are related to a particular Merchant within one Order. This is the key entity that helps Merchants to fulfill Orders. It is even possible to have different OMS flows for different Merchants, so each Merchant can process its MechantOrders with the flow that suits best. Merchants use MerchantPortal application to fulfill MerchantOrders. (todo: link to this page to MerchnatPortal)
+MerchantOrder is a Marketplace domain object. MerchantOrder is a composition of OrderItems, OrderTotals, OrderShipment, OrderCustomer, and other objects related to a particular Merchant within the one Order. MerchantOrder is the key entity that helps Merchants to fulfill Orders. It is possible to have different OMS flows for different Merchants so that each Merchant can process their MechantOrders with the best flow. Merchants use the MerchantPortal application to fulfill MerchantOrders. (todo: link to this page to MerchnatPortal)
 
  
-Learn more about [Marketplace Order Management here](/docs/marketplace/dev/feature-walkthroughs/202108.0/marketplace-order-management-feature-walkthrough.html#module-relations)
+To learn more about the orders in the Marketplace, see [Marketplace Order Management here](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-order-management-feature-walkthrough.html#module-relations).
+

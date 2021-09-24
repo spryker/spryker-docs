@@ -1,34 +1,37 @@
 ---
-title: Marketplace Application Composition
-description:
+title: Marketplace Application composition
+description: The following document shows how Spryker Marketplace looks in general. As a result of reading this document, you will have a better understanding of what the Spryker Marketplace looks like on an application level.
 template: concept-topic-template
 ---
-This document depicts how a Spryker Marketplace looks like in general. After reading this odc you will now: 
 
-- how the Spryker Marketplace is composed on application level
+The following document shows how Spryker Marketplace looks in general. As a result of reading this document, you will have a better understanding of what the Spryker Marketplace looks like on an application level.
 
 
-## Composition of Applications
+## Composition of the Applications
 
-The following diagram explains the application composition, it is internationally simplified, learn more details on the [Marketplace infrastructure system requirements here](/docs/marketplace/dev/setup/system-infrastructure-requirements.html).
+The following diagram illustrates how the application is composed. It is intentionally simplified, see [Marketplace infrastructure system requirements](/docs/marketplace/dev/setup/system-infrastructure-requirements.html) for more details.
 
 ![Applications composition](https://confluence-connect.gliffy.net/embed/image/3a83f861-b25e-4ef5-aee7-e7da0b182cfa.png?utm_medium=live&utm_source=custom)
 
 ### Storefront API
-Is a customer-facing REST API-based store-front application. This is the place where customer browses catalog and make orders.
+Storefront API is a REST API-based storefront application for customers. This is where customers browse the catalog and place orders.
 
 ### Yves 
-Is a customer-facing HTML-based store-front application. This is the place where customer browses catalog and make orders.
+Yves is a customer-facing HTML-based storefront application where customers browse the catalog and place orders.
 
 ### Backend Gateway
-Storefront application-oriented application. This is the place how a storefront (Yves/Glue) changes the state of the system (Stock reservation, order placement, payments, etc).
+Backend Gateway is a Storefront-oriented application. This is where a storefront (Yves/Glue) changes the state of the system (stock reservations, order placement, payments, etc.).
 
 ### Merchant Portal
-Is a merchant-centric application. This is the place where merchant manages their catalog and fulfill customer orders. Learn more about Merchant Portal here (todo: link to Merchant Portal architecture overview).
+Merchant Portal is a merchant-focused application. Merchants use this system to manage their catalog and fulfill customer orders. Check out [Merchant Portal's architecture](/docs/marketplace/dev/architecture-overview/{{page.version}}/marketplace-merchant-portal-architecture-overview.html) for more details.
 
-### Markteplace Operator Backoffice 
-Is a marketplace owner-oriented application or admin-centric application. Here the Marketplace Operator manages the whole Marketplace, including global Product list, Merchant management, Category management, and others.
+### Marketplace Operator Back Office 
+Back Office for the Marketplace Operator is a marketplace owner-centric or admin-centric application. Marketplace Operator here takes care of the whole Marketplace, including listing global products, managing merchants, and managing categories.
 
-Backoffice also has some facilities oriented to Operator-As-A-Merchant case such as Offers and Orders management. Read more about Marketplace in Backoffice  (todo: link to Marketplace in Backoffice  overview).
+The Back Office also includes facilities oriented to the Operator-As-A-Merchant case, such as offers and orders management. Check out Marketplace in Backoffice<!---LINK--> for more details.
 
-_Important Note: Make sure to protect Backoffice be a secure VPN connection._ 
+{% info_block warningBox "Important Note" %}
+
+Ensure that Back Office is protected by a secure VPN connection.
+
+{% endinfo_block %}

@@ -51,7 +51,7 @@ using dot notation for ex. `prop.nestedProp`).
     TableModule.forRoot(),
     TableModule.withFeatures({
       rowActions: () =>
-        import('table.feature.row-actions').then(
+        import('@spryker/table.feature.row-actions').then(
           (m) => m.TableRowActionsFeatureModule,
         ),    
     }),

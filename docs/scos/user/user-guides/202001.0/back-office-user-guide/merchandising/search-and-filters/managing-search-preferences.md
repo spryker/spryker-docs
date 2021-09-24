@@ -20,7 +20,7 @@ When adding a search preference, the **Attribute Key** value is taken from the *
 To create a new attribute to search, do the following:
 1. Click **Add attribute to search** in the top right corner of the **Search Preferences** page.
 2. On the **Add attribute to search** page, enter the attribute key and (optionally) specify "Yes" or "No" for search preference types.
-    See [Search Preferences Types](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/search-and-filters/references/search-preferences-types.html) in the **References** section to know more about the search types.
+    See [Search Preferences Types](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/search-and-filters/references/search-preferences-types.html) in the **References** section to know more about the search types.
 3. Click **Save**.
 4. On the **Search Preferences** page, click **Synchronize search preferences** for your changes to take effect.
 
@@ -30,7 +30,7 @@ This will create a new non-super attribute and register it in the system, so you
 To edit a search preference:
 1. Find an attribute you want to change the search preferences for in the **Search Preferences** table.
 2. Click **Edit** in the _Actions_ column of the attribute.
-3. On the **Edit search preferences** page, you can define how the attribute will behave for search by specifying _Yes_ or _No_ for the **Full text**, **Full text boosted**, **Suggestion terms**, or **Completion terms** fields. See [Search Preferences Types](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/search-and-filters/references/search-preferences-types.html) in the **References** section to know more about the search types.
+3. On the **Edit search preferences** page, you can define how the attribute will behave for search by specifying _Yes_ or _No_ for the **Full text**, **Full text boosted**, **Suggestion terms**, or **Completion terms** fields. See [Search Preferences Types](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/search-and-filters/references/search-preferences-types.html) in the **References** section to know more about the search types.
 4. Once done, click **Save**.
 5. On the **Search Preferences** page, click **Synchronize search preferences** for your changes to take effect.
 ***

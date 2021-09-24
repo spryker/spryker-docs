@@ -160,7 +160,7 @@ Shop users can view product cards with labels on any Storefront page. Also, they
 |BACK OFFICE USER GUIDES|
 |---|
 | [Create product labels](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-labels/creating-product-labels.html)  |
-| [Manage product labels](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/product-labels/managing-product-labels.html)  |
+| [Manage product labels](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-labels/managing-product-labels.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

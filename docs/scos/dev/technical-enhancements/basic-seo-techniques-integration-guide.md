@@ -747,7 +747,7 @@ introduce the `itemscope` and `itemtype`  microdata directives to the `div` tag:
 ```
 #### ShoppingListPage
 
-In `src/Pyz/Yves/ShoppingListPage/Theme/default/views/shopping-list/shopping-list.twig:30`:
+In `src/Pyz/Yves/ShoppingListPage/Theme/default/views/shopping-lists-feature-overview/shopping-list.twig:30`:
 ```
 <h2>{% raw %}{{{% endraw %} data.shoppingList.name {% raw %}}}{% endraw %}</h2>
 ```

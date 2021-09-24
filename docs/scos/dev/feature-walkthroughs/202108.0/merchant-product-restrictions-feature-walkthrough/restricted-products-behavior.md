@@ -66,7 +66,7 @@ On this page, you can find commonly encountered cases of product restrictions be
             <p>Blacklist</p>
          </td>
          <td>
-            <p>During the <a href="https://documentation.spryker.com/docs/reorder">reorder</a> process, products that are restricted but exist in a previous order are automatically removed from the cart.</p>
+            <p>During the <a href="/docs/scos/dev/feature-walkthroughs/{{page.version}}/reorder-feature-walkthrough.html">reorder</a> process, products that are restricted but exist in a previous order are automatically removed from the cart.</p>
          </td>
          <td>
             <p><img title="Click Me!" src="https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/reorder-blacklist.png" alt="" /></p>

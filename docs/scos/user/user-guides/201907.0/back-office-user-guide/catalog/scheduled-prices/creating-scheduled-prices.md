@@ -22,8 +22,8 @@ Instead of changing prices manually on the starting day of the promotion, you ca
 
 **To create a price schedule:**
 
-1.     Create a file with predefined product price schedules. See [Scheduled Prices: Reference information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/price/scheduled-prices/references/scheduled-prices-reference-information.html).
-2.     Enter and select the attributes for your price schedule. See [Scheduled Prices: Reference information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/price/scheduled-prices/references/scheduled-prices-reference-information.html).
+1.     Create a file with predefined product price schedules. See [Scheduled Prices: Reference information](docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/scheduled-prices/references/scheduled-prices-reference-information.html).
+2.     Enter and select the attributes for your price schedule. See [Scheduled Prices: Reference information](docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/scheduled-prices/references/scheduled-prices-reference-information.html).
 3.     Click **Browse** and select the file you've prepared in step 1.
 4.     Click **Import your CSV file**.
 5. After being redirected to the _Import dry run_ page, check whether there are incorrect entries in your file in the **Errors found inside your file** section.
@@ -31,7 +31,7 @@ Instead of changing prices manually on the starting day of the promotion, you ca
      {% info_block infoBox %}
 You can correct the errors in your file and re-import it on the same page.
 {% endinfo_block %}
-    
+
 6. Check if the successfully imported price schedules are correct in the Row processed with success section.
 
 7. If you are satisfied with the results, in the Publish the scheduled prices section, click Publish to apply the price schedules.

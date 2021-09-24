@@ -25,7 +25,7 @@ Password configuration comes with a brute force attack protection: after a certa
 
 #### Documentation
 
-* [Customer Registration overview](/docs/scos/user/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-registration-overview.html#customer-registration-overview)
+* [Customer Registration overview](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-registration-overview.html#customer-registration-overview)
 * [Customer Login overview](/docs/scos/user/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-login-overview.html)
 
 
@@ -33,7 +33,7 @@ Password configuration comes with a brute force attack protection: after a certa
 With the support of the OpenID Connect protocol, you can now use Identity Access Managers to log in to the Spryker Back Office. To illustrate this capability, we offer the integration of the Microsoft Azure Active Directory service that allows your users to log in to the Back Office with their Microsoft Azure Active Directory credentials.
 
 #### Documentation
-[Back Office Login overview](/docs/scos/user/features/{{page.version}}/spryker-core-back-office/spryker-core-back-office-feature-overview/back-office-login-overview.html)
+[Back Office Login overview](/docs/scos/user/features/{{page.version}}/spryker-core-back-office-feature-overview.html)
 
 ### Category per store
 Spryker now supports store relations at the category level. You can hide and show categories per store depending on your business requirements. Child categories inherit the store relations of the parent category.
@@ -133,7 +133,7 @@ The Docker SDK configures prefixes for Elasticsearch index names based on the `n
 We released the documentation covering the following Docker SDK topics: installing on Windows with WSL2, introduction and quick start guides, development: debugging, testing, configuring synchronization modes.
 
 #### Documentation
-[Docker SDK](/docs/scos/dev/the-docker-sdk/docker-sdk.html#docker-sdk)
+[Docker SDK](/docs/scos/dev/the-docker-sdk/the-docker-sdk.html#docker-sdk)
 
 ## Spryker Glue API
 We continue to add support for new storefront APIs.

@@ -8,7 +8,7 @@ template: concept-topic-template
 The _Product Rating & Reviews_ feature allows customers to add reviews and ratings to abstract products.
 
 
-To learn more about the feature and to find out how end users use it, see [Product Rating & Reviews feature overview](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews/product-rating-and-reviews-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Product Rating & Reviews feature overview](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews-feature-overview.html) for business users.
 
 
 ## Related Developer articles

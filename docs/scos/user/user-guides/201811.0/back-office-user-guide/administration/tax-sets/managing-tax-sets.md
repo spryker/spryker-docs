@@ -16,13 +16,13 @@ Remember how you created the tax rate? To be able to use this taxation rule for 
 ***
 **To create a tax set:**
 1. On the **Overview of Tax Sets** page, click **Create Tax Set** in the top right corner of the page.
-2. On the **Create Tax Set** page, enter the tax set name and select one or several tax rates to assign. See [Taxes: Reference information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/taxes/tax-rates-and-tax-sets/references/taxes-reference-information.html) for more details.
+2. On the **Create Tax Set** page, enter the tax set name and select one or several tax rates to assign. See [Taxes: Reference information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/tax-rates/references/tax-rates-reference-information.html) for more details.
 3. Click **Save**.
 ***
 ### Editing a Tax Set
 In case you need to change the tax set:
 1. In the **List of tax sets > Actions** column, click **Edit** for a specific tax set.
-2. On the **Edit Tax Set** page, change the attributes. See [Taxes: Reference information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/taxes/tax-rates-and-tax-sets/references/taxes-reference-information.html) for more details.
+2. On the **Edit Tax Set** page, change the attributes. See [Taxes: Reference information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/tax-rates/references/tax-rates-reference-information.html) for more details.
 3. Click **Save**.
 
 ***

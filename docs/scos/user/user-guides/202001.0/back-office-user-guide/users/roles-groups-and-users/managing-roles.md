@@ -13,9 +13,9 @@ This topic describes the procedures that you need to perform to create, edit, an
 To start working with roles, navigate to the **Users Control -> Roles** section.
 ***
 ## Creating a Role
-To create a role: 
-1. On the **Role list** table view page, click **Add new Role** in the top right corner. 
-2. On the **Create new Role** page, enter the name of the role and click **Create**. 
+To create a role:
+1. On the **Role list** table view page, click **Add new Role** in the top right corner.
+2. On the **Create new Role** page, enter the name of the role and click **Create**.
 This will redirect you to the **Edit Role** page where you define the permissions that this role will possess.
 3. In the **Rule** section, enter and select the following and click **Add Rule**:
     * Bundle
@@ -23,12 +23,12 @@ This will redirect you to the **Edit Role** page where you define the permission
     * Action
     * Permission
 
-See [Adding Rules for Roles](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users-control/roles-groups-and-users/managing-roles.html#adding-rules-for-roles) for information on how to create rules.
+See [Adding Rules for Roles](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users/roles-groups-and-users/managing-roles.html#adding-rules-for-roles) for information on how to create rules.
 {% info_block warningBox "Note" %}
 You can add from one to many rules to a specific role. Each time you click **Add rule**, the created rule appears in the **Assigned Rules** section.
 {% endinfo_block %}
 
-You have set up a role to be assigned to a group. 
+You have set up a role to be assigned to a group.
 ***
 **Tips & Tricks**
 In case you need a specific role to have access to all sections, you can put an asterisk (*) value for a bundle, controller, and action. Add _allow for permission_. This will grant access to everything you see in Back Office and allow to perform any action.
@@ -45,26 +45,26 @@ To edit a role:
 ### Adding Rules for Roles
 In the **Roles** section of the **Edit Role** page, you can define what a user can or cannot do in the Admin UI. To restrict a user from accessing a specific action, you need to specify what bundle (module) and controller this action refers to.
 
-#### Extracting the Bundle, Controller, and Action Values 
+#### Extracting the Bundle, Controller, and Action Values
 
-Information about bundles, controllers, and actions is contained in tabs in the Back Office, and can be retrieved from links. 
+Information about bundles, controllers, and actions is contained in tabs in the Back Office, and can be retrieved from links.
 
 **Example**:
-1. Go to **Products > Availability** section and click **View** in **Actions**. 
+1. Go to **Products > Availability** section and click **View** in **Actions**.
 2. Check the link in your browser. It will look somewhat like this: `zed.de.b2b-demo-shop.local/availability-gui/index/view?id-product=152&id-store=1`
-where: 
+where:
 
-    * *availability-gui* is **bundle**, 
+    * *availability-gui* is **bundle**,
     * i*ndex* is **controller**,
     * *view* is **action**.
 
-The bundle, controller and action values can also be found in the `navigation.xml` file either at 
-at `/project/config/Zed/navigation.xml` or at ```https://github.com/spryker/[bundle_name]/src/Zed/[bundle_name]/communication/navigation.xml```. 
+The bundle, controller and action values can also be found in the `navigation.xml` file either at
+at `/project/config/Zed/navigation.xml` or at ```https://github.com/spryker/[bundle_name]/src/Zed/[bundle_name]/communication/navigation.xml```.
 See example of the `navigation.xml` file of the AvailabilityGui module:
 
 <details open>
 <summary>navigation.xml</summary>
-   
+
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
@@ -109,8 +109,8 @@ Information about modules is available in their readme files. Check the [readme 
 
 #### Restricting User Access to Modules and Actions
 
-You can restrict user access to all or specific modules and their actions. 
-Keep in mind that user will not be able to perform actions on modules unless you explicitly allow them to. Therefore, if you want to restrict users from accessing particular modules/actions, first give them access to all modules, and then restrict access to specific ones. 
+You can restrict user access to all or specific modules and their actions.
+Keep in mind that user will not be able to perform actions on modules unless you explicitly allow them to. Therefore, if you want to restrict users from accessing particular modules/actions, first give them access to all modules, and then restrict access to specific ones.
 
 {% info_block warningBox %}
 To allow access to all modules, type * in **Bundle**, **Controller** and **Action** fields, and select _allow_ in the **Permission** field.
@@ -140,18 +140,18 @@ You can verify the bundle, controller and action values in the [navigation.xml f
 That's it! When the user with this role clicks **Create a Product Attribute**, they will get the **Access denied** view.
 ***
 ## Deleting a Role
-To delete a role: 
+To delete a role:
 
 1. In the **Role list > Actions** column, click **Delete** for the role that needs to be deleted.
-2. This action will permanently delete the record. 
+2. This action will permanently delete the record.
 ***
 **Tips & Tricks**
 While updating the role, you can initiate a new role creation flow.
 
 To do that:
-1. Click **Create role** in the top right corner of the **Edit Role** page. 
-    The **Create new Role** page opens. 
-2. Repeat the steps described in the [Creating a Role](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users-control/roles-groups-and-users/managing-roles.html#creating-a-role) procedure.
+1. Click **Create role** in the top right corner of the **Edit Role** page.
+    The **Create new Role** page opens.
+2. Repeat the steps described in the [Creating a Role](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users/roles-groups-and-users/managing-roles.html#creating-a-role) procedure.
 ***
 **What's next?**
-You need to create a group to assign this role to it. See the [Creating a Group](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users-control/roles-groups-and-users/managing-groups.html#creating-a-group) section in _Managing Groups_.
+You need to create a group to assign this role to it. See the [Creating a Group](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users/roles-groups-and-users/managing-groups.html#creating-a-group) section in _Managing Groups_.

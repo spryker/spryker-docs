@@ -8,6 +8,23 @@ originalArticleId: a37baa69-a9c3-48fc-a358-4ddc155e9138
 redirect_from:
 - /v5/docs/back-office-translations-overview
 - /v5/docs/en/back-office-translations-overview
+- /v5/docs/back-office-translations
+- /v5/docs/en/back-office-translations
+
+---
+
+---
+title: Back Office Translations overview
+last_updated: Aug 20, 2021
+description: The Back Office Translations feature introduces a way to translate the Administration interface (Zed) into different languages in a per-user manner.
+template: concept-topic-template
+originalLink: https://documentation.spryker.com/docs/back-office-translations-overview
+originalArticleId: 3ed42aac-923f-4d04-9141-8ab480c45a18
+redirect_from:
+- /2021080/docs/back-office-translations-overview
+- /2021080/docs/en/back-office-translations-overview
+- /docs/back-office-translations-overview
+- /docs/en/back-office-translations-overview
 
 ---
 
@@ -48,7 +65,7 @@ If a translation is missing, the corresponding key is displayed instead.
 
 Unlike _Glossary_ section of Zed which is used for managing Front-end(Yves) translations, there is no interface for managing Zed translations currently. All the translations are managed by updating corresponding .csv files directly. Similarly to uploading translation files, you need to regenerate translation cache to reflect the changes after updating them. Use the commands to do that.
 
-Newly created and all the existing modules are shipped with German translation by default. If you want to add a different language, you can follow the instructions from the [Back Office translations feature integration guide](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/back-office-feature-integration.html).
+Newly created and all the existing modules are shipped with German translation by default. If you want to add a different language, you can follow the instructions from the [Back Office translations feature integration guide](https://documentation.spryker.com/docs/back-office-feature-integration).
 
 The scheme below illustrates relations between Translator, UserExtension, User, UserLocale, and UserLocaleGui modules:
 

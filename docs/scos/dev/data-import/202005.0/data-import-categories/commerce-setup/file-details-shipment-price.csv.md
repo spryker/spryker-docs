@@ -7,9 +7,9 @@ redirect_from:
   - /v5/docs/en/file-details-shipment-pricecsv
 ---
 
-This article contains content of the **shipment_price.csv** file to configure [Shipment Price](/docs/scos/user/features/{{page.version}}/shipment/shipment.html) information on your Spryker Demo Dhop.
+This article contains content of the **shipment_price.csv** file to configure [Shipment Price](/docs/scos/user/features/{{page.version}}/shipment-feature-overview.html) information on your Spryker Demo Dhop.
 
-## Headers & Mandatory Fields 
+## Headers & Mandatory Fields
 These are the header fields to be included in the .csv file:
 
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |
@@ -30,7 +30,7 @@ This file has the following dependencies:
 
 ## Recommendations & Other Information
 
-Field *value* must be *integer* as it is the internal format to store money (currency) in Spryker demo shop. Float values get converted into integer by multiplying by 100 (i.e. if the shipment cost is 5.50 EUR, the value in CSV file should be 550). 
+Field *value* must be *integer* as it is the internal format to store money (currency) in Spryker demo shop. Float values get converted into integer by multiplying by 100 (i.e. if the shipment cost is 5.50 EUR, the value in CSV file should be 550).
 
 Fields *shipment_method_key*, *store* and *currency* are mandatory, and must be valid (imported already from existing database values, or created manually using precedent CSV files: *shipment_method.csv* and *currency.csv* and *stores.php* configuration project file). Empty value fields will be imported as zeros.
 

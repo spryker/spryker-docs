@@ -7,7 +7,7 @@ redirect_from:
   - /v5/docs/en/managing-shopping-lists
 ---
 
-With the help of the [Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-list/shopping-list.html) feature, company users can manage shopping lists for their company to plan purchasing activities beforehand. Unlike [Wishlists](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html), Shopping Lists contain not only a list of items to be purchased but also the quantity of each item.
+With the help of the [Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-list.html) feature, company users can manage shopping lists for their company to plan purchasing activities beforehand. Unlike [Wishlists](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html), Shopping Lists contain not only a list of items to be purchased but also the quantity of each item.
 
 The endpoints provided by the **Shopping List API** provide full *Shopping List management* functionality via REST requests.
 {% info_block infoBox %}

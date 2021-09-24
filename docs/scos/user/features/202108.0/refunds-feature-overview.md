@@ -17,30 +17,6 @@ All refunds can be listed per order or as a full overview. All sales order items
 For the refunded items, you can use the default OMS states to be displayed on the* Return Details* pages on the Storefront, or set custom state names so they would make more sense for the Storefront users. For details on how to set the custom state names on the Storefront for refunded orders, see [HowTo - display custom names for order item states on the Storefront](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html).
 
 
-## If you are:
-
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/mg-refund" class="mr-link">Migrate the Refund module to a newer version</a></li>
-                <li><a href="https://documentation.spryker.com/docs/refund-process-management" class="mr-link">Learn about the refund process management</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-               <li><a href="https://documentation.spryker.com/docs/refunds-reference-information" class="mr-link">See the reference information for refunds</a></li>
-            </ul>
-                </div>
-    </div>
-</div>
-
 ## Related Business User articles
 
 |BACK OFFICE USER GUIDES|

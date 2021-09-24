@@ -2,7 +2,7 @@
 title: Spryker Core Back Office feature overview
 description: The article provides general information about the actions you can perform in Spryker Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/the-back-office-overview
-originalArticleId: 33ffb1b7-d9b5-457a-90a1-170e36479d5b
+originalArticleId: d368af56-12f3-4ddb-aada-d556ac49f49e
 redirect_from:
   - /v5/docs/the-back-office-overview
   - /v5/docs/en/the-back-office-overview

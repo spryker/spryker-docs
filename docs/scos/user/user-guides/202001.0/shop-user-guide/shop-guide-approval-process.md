@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 
-On this page you can find the instructions on managing the [Approval Process](/docs/scos/user/features/{{page.version}}/workflow-and-process-management/approval-process/approval-process-feature-overview.html).
+On this page you can find the instructions on managing the [Approval Process](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html).
 {% info_block infoBox "Note" %}
 
 To configure the permissions, you should have admin access to the company account.

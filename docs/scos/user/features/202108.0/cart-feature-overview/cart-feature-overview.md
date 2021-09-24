@@ -7,6 +7,7 @@ redirect_from:
   - /2021080/docs/en/cart
   - /docs/cart
   - /docs/en/cart
+
 ---
 
 The *Cart* feature allows your customers to add products to their cart by selecting the desired quantity of a product. Inside the cart, customers can change the quantity of items, switch between different variants of the product, add notes, apply vouchers and remove items.

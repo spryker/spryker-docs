@@ -17,4 +17,4 @@ To know more about how to create a content item, see [Creating a CMS Redirect](/
 
 To learn how to update and delete CMS redirects, see [Managing CMS Redirects](https://documentation.spryker.com/v2/docs/managing-cms-redirects).
 
-To learn more about attributes you use to create and edit redirects, see [CMS Redirects: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/redirects/references/cms-redirects-references.html).
+To learn more about attributes you use to create and edit redirects, see [CMS Redirects: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/redirects/references/cms-redirects-references.html).

@@ -48,7 +48,7 @@ See below for information and step-by-step guides on each of the approaches.
 This approach is suitable only for Scenario 1 - that is, when the service is optional.
 
 {% endinfo_block %}
-You can make the service, in our example, the installation service, a [product option](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/product-options/product-options.html) of the product you sell. In this case, the installation service will not be a separate product, but an optional part of the product. This means that buyers can decide on their own if they need the service.
+You can make the service, in our example, the installation service, a [product option](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-options/product-options.html) of the product you sell. In this case, the installation service will not be a separate product, but an optional part of the product. This means that buyers can decide on their own if they need the service.
 
 To implement this approach, you need to create the Service product option and tie it to the respective product.
 
@@ -73,7 +73,7 @@ Keep in mind that depending on the use case you want to implement for your shop,
 This approach is suitable only for Scenario 1 - that is, when the service is optional.
 
 {% endinfo_block %}
-One more way to have a product with an optional service offering would be to make the product a [configurable bundle](/docs/scos/user/features/{{page.version}}/product-information-management/configurable-bundle/configurable-bundle.html). It means that you create a product (for example, equipment) and suggest another product (Installation service) as a bundle. To create such a configurable bundle product, follow the steps below.
+One more way to have a product with an optional service offering would be to make the product a [configurable bundle](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html). It means that you create a product (for example, equipment) and suggest another product (Installation service) as a bundle. To create such a configurable bundle product, follow the steps below.
 
 1. Create the *Installation Service* product as a usual abstract product, like you did in the [Prerequisites](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/creating-service-offerings.html#prerequisites) section. Make sure you set the **Availability** as *Never out of stock*. See [Managing Products Availability](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/availability/managing-products-availability.html#managing-products-availability) for details on how to do that.
 {% info_block infoBox "Note" %}
@@ -81,14 +81,14 @@ One more way to have a product with an optional service offering would be to mak
 If you don’t want to display the Service products in the Storefront so buyers can not find them in the products catalog, don’t check the Searchable checkbox for it in the **General** tab of the **Create/Edit Concrete Product** page.
 
 {% endinfo_block %}
-2. Create a [Configurable Bundle Template](/docs/scos/user/features/{{page.version}}/product-information-management/configurable-bundle/configurable-bundle.html-feature-overview#configurable-bundle-template) with two [slots](/docs/scos/user/features/{{page.version}}/product-information-management/configurable-bundle/configurable-bundle.html-feature-overview#configurable-bundle-slots) - one for the physical products, and one for the service:
+2. Create a [Configurable Bundle Template](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html-feature-overview#configurable-bundle-template) with two [slots](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html-feature-overview#configurable-bundle-slots) - one for the physical products, and one for the service:
     1. Go to **Products > Configurable Bundle Templates** section and click Create New Template in the top right corner.
     2. On the **Template details** page, enter the name of your bundle template in the **Name** field for the corresponding locale.
     3. Click **Save**. A new tab Slots will appear on the same page.
     4. Click **Add Slot** in the top right corner on the **Template details** page.
     5. Enter the name of your slot in the **Name** field for the corresponding locale.
     6. Click **Save**. Two tabs will be added to the Slot details page: **Assign Categories** and **Assign Products**.
-    7. Assign the entire categories or individual physical products to the slot. Make sure to assign all products for which you want to offer the specific service. See [Adding Products to a Slot](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/configurable-bundle-templates/managing-configurable-bundle-templates.html#editing-the-slot-for-a-configurable-bundle-template) for details on how to assign categories and products.
+    7. Assign the entire categories or individual physical products to the slot. Make sure to assign all products for which you want to offer the specific service. See [Adding Products to a Slot](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html#editing-the-slot-for-a-configurable-bundle-template) for details on how to assign categories and products.
     8. Go back to the **Products > Configurable Bundle Templates** section and click **Edit** for the just created Configurable bundle template.
     9. Click **Add slot** and add the Service product to it.
     10. Click **Save**. The Configurable bundle template with two slots, one for physical products and one for service, is now created.
@@ -111,7 +111,7 @@ This approach can be applied to both Scenario 1 and Scenario 2 - that is when th
 If you need an approach that would best suit your specific business needs, we recommend your development team to implement a custom solution for your project. The custom solution can be handled as follows:
 
 #### 1. Identify the respective products with labels
-First of all, you need to somehow identify the products for which the custom solution will be applied. We recommend doing this via product labels. For this, create specific labels for the products that require service from your side. The labels can be, for example, *free service, installation service, 1-day service*, etc. See [Creating a Product Label](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/product-labels/creating-a-product-label.html#creating-a-product-label) for details on how to create labels and assign products to them.
+First of all, you need to somehow identify the products for which the custom solution will be applied. We recommend doing this via product labels. For this, create specific labels for the products that require service from your side. The labels can be, for example, *free service, installation service, 1-day service*, etc. See [Creating a Product Label](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-labels/creating-product-labels.html#creating-a-product-label) for details on how to create labels and assign products to them.
 
 #### 2.  Override the Add to Cart functionality
 At this step, you need the development team to change the default *Add to Cart* functionality to meet your project’s needs.

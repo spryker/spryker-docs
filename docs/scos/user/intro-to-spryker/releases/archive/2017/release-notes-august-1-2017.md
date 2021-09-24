@@ -17,7 +17,7 @@ With the **end of October**, we stop supporting PHP 5.6 and PHP 7.0. Please make
 
 ## Features
 ### Shipment Discount
-Current Spryker discounts (vouchers and cart rules) are calculated with fixed value or percentage reduction and those are applied to value of product(s). One of yet another very common discount concepts is free shipping or discounts that are applied to shipping costs. You might want to offer free shipment for various reasons. One of the most common ones is to motivate customers to increase the basket volume by offering free shipping for example for orders over 50€. 
+Current Spryker discounts (vouchers and cart rules) are calculated with fixed value or percentage reduction and those are applied to value of product(s). One of yet another very common discount concepts is free shipping or discounts that are applied to shipping costs. You might want to offer free shipment for various reasons. One of the most common ones is to motivate customers to increase the basket volume by offering free shipping for example for orders over 50€.
 
 With this feature, our current discount engine now makes it possible to define discounts that are applied not only to products, but also to shipping expenses.
 
@@ -27,8 +27,8 @@ For this reason, three shipment discount types have been implemented:
 * Method – a discount by a shipment method (To pick-up point, Door to Door etc)
 * Price – a discount to a delivery price
 
-You can now create discount calculation rules like the one in the example below. The example below will ensure that if the selected shipment carrier is the Spryker Dummy Shipment, selected shipment method is the Express and the price of this Express shipment method is greater than or equal to 5, then the discount is applied. If, for example, you remove the middle rule ("shipment-method equal Express (Spryker Dummy Shipment)", then the discount will be applied for all shipment methods from Spryker Dummy Shipment shipment carrier if the price of the shipment method is greater than or equal to 5. 
-![Shipment discount](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Archive/RN_shipment_discount.png) 
+You can now create discount calculation rules like the one in the example below. The example below will ensure that if the selected shipment carrier is the Spryker Dummy Shipment, selected shipment method is the Express and the price of this Express shipment method is greater than or equal to 5, then the discount is applied. If, for example, you remove the middle rule ("shipment-method equal Express (Spryker Dummy Shipment)", then the discount will be applied for all shipment methods from Spryker Dummy Shipment shipment carrier if the price of the shipment method is greater than or equal to 5.
+![Shipment discount](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Archive/RN_shipment_discount.png)
 
 **Affected Modules**
 
@@ -37,7 +37,7 @@ You can now create discount calculation rules like the one in the example below.
 | [ShipmentDiscountConnector 1.0.0](https://github.com/spryker/shipment-discount-connector/releases/tag/1.0.0) | [Shipment 5.1.0](https://github.com/spryker/Shipment/releases/tag/5.1.0) | n/a |
 
 **Documentation**
-For module documentation, see [Shipment Module Guide](https://documentation.spryker.com/2021080/docs/shipment-module-overview).
+For module documentation, see [Shipment Module Guide](/docs/scos/dev/feature-walkthroughs/{{site.version}}/shipment-module-overview.html).
 
 **Migration Guides**
 To upgrade, follow the steps described below:
@@ -83,7 +83,7 @@ One of the `Shipment` models, `ShipmentMethodTransfer` had the wrong PHPDoc info
 |n/a  | n/a | [Shipment 5.0.2](https://github.com/spryker/Shipment/releases/tag/5.0.2) |
 
 ### Reset Password
-We had templates for changing a customer password, but this did not support passing a recovery token. With this release, we deliver the complete functionality of password reset, including the request for it and update. 
+We had templates for changing a customer password, but this did not support passing a recovery token. With this release, we deliver the complete functionality of password reset, including the request for it and update.
 
 **Affected Modules**
 

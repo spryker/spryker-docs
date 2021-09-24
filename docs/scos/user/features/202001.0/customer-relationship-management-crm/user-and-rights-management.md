@@ -31,7 +31,7 @@ Also, you can find bundle names as well as controllers and actions in the file `
 
 ![bundles_navigation.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/bundles_navigation.png)
 
-Learn to create and manage Users, Groups and Roles in the [Users Control](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users-control/users-control.html) Manual.
+Learn to create and manage Users, Groups and Roles in the [Users Control](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users/users.html) Manual.
 
 ## ACL Configuration
 Apart from being able to configure user access to Zed resources via Zed UI, you can grant access to additional resources by specifying them in `config_*.php`. The following options are used to do that:

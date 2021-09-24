@@ -49,6 +49,6 @@ If a customer selects a link of the cart that's not available, the _This cart is
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Persistent Cart Sharing feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/persistent-cart-sharing-feature-walkthrough.html) for developers.
+Are you a developer? See [Persistent Cart Sharing feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/persistent-cart-sharing-feature-walkthrough/persistent-cart-sharing-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

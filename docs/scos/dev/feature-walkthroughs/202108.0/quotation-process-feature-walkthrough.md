@@ -8,7 +8,7 @@ template: concept-topic-template
 The _Quotation Process_ feature adds functionality that allows customers to request special product prices and lets agents manage those quote requests.
 
 
-To learn more about the feature and to find out how end users use it, see [Quotation Process feature overview](/docs/scos/user/features/{{page.version}}/quotation-process/quotation-process-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Quotation Process feature overview](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html) for business users.
 
 
 ## Entity diagram

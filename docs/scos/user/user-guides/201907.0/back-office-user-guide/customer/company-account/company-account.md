@@ -46,4 +46,4 @@ See the following articles and follow the procedures described there to set up a
 * [Managing Company Roles](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/managing-company-roles.html)
 * [Managing Company Users](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/managing-company-users.html)
 
-To know more about the attributes that you see, enter, and select while managing company accounts, see [Company Account: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/company-account/references/company-account-reference-information.html).
+To know more about the attributes that you see, enter, and select while managing company accounts, see [Company Account: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/references/company-account-reference-information.html).

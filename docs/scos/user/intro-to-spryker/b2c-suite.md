@@ -71,12 +71,12 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 * [CMS Pages](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-feature-overview.html-page)
 * [Content Items](https://documentation.spryker.com/2021080/docs/content-items)
 
-[**Media Management**](/docs/scos/user/features/{{page.version}}/file-manager/file-manager.html):
+[**Media Management**](/docs/scos/user/features/{{page.version}}/file-manager-feature-overview/file-manager-feature-overview.md):
 
 * [Product Image Management](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/product-images-overview.html)
 * [Image Hosting](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/product-images-overview.html)
 * [Asset Management](/docs/scos/user/features/{{page.version}}/file-manager/file-manager-feature-overview/asset-management.html)
-* [Video Embedding](/docs/scos/user/features/{{page.version}}/file-manager/file-manager.html)
+* [Video Embedding](/docs/scos/user/features/{{page.version}}/file-manager-feature-overview/file-manager-feature-overview.md)
 
 [**Internationalization**](https://documentation.spryker.com/2021080/docs/internationalization):
 
@@ -107,14 +107,14 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 [**Shopping Cart**](/docs/scos/user/features/{{site.ersion}}/cart-feature-overview/cart-feature-overview.html):
 
 * [Cart Functionality & Calculations](/docs/scos/user/features/{{site.ersion}}/cart-feature-overview/cart-feature-overview.html)
-* [Discounts](/docs/scos/user/features/{{page.version}}/promotions-and-discounts/promotions-and-discounts-feature-overview.html)
+* [Discounts](/docs/scos/user/features/{{page.version}}/promotions-and-discounts-feature-overview.html)
 * [Order Thresholds](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html)
 
 [**Shipment**](https://documentation.spryker.com/2021080/docs/shipment):
 
 * [Shipment Carriers & Methods](https://documentation.spryker.com/2021080/docs/shipment-carriers-methods)
 * [Multiple Currencies for Shipments](/docs/scos/user/features/{{page.version}}/shipment/shipment-feature-overview.html)
-* [Shipment Calculation Rules](https://documentation.spryker.com/2021080/docs/shipment-calculation-rules)
+* [Shipment Calculation Rules](/docs/scos/user/features/{{site.version}}/shipment-feature-overview.html)
 * [Split Delivery](https://documentation.spryker.com/2021080/docs/split-delivery)
 
 [**Payment**](https://documentation.spryker.com/2021080/docs/payments):
@@ -129,7 +129,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 [**Checkout**](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/checkout-feature-overview.html):
 
 * [Multi-Step Checkout](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html)
-* [Define Shipment Methods](/docs/scos/user/features/{{page.version}}/shipment/shipment.html)
+* [Define Shipment Methods](/docs/scos/user/features/{{page.version}}/shipment-feature-overview.html)
 
 [**Ratings & Review**](https://documentation.spryker.com/2021080/docs/rating-reviews):
 [Rating & Review Management](https://documentation.spryker.com/2021080/docs/rating-revew-management)
@@ -141,16 +141,16 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 * [Back in Stock Notification](https://documentation.spryker.com/2021080/docs/availability-notification)
 * [Comment Widget](https://documentation.spryker.com/2021080/docs/comments)
 
-[**CRM (Customer Relationship Management)**](/docs/scos/user/features/{{page.version}}/customer-account-management/customer-account-management.html):
+[**CRM (Customer Relationship Management)**](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html):
 
-* [Customer Accounts](/docs/scos/user/features/{{page.version}}/customer-account-management/customer-account-management.html)
-* [Login & Registration Forms](/docs/scos/user/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-registration-overview.html)
-* [Password Management](/docs/scos/user/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/password-management-overview.html)
-* [Customer Groups](/docs/scos/user/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-groups-overview.html)
+* [Customer Accounts](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html)
+* [Login & Registration Forms](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-registration-overview.html)
+* [Password Management](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/password-management-overview.html)
+* [Customer Groups](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-groups-overview.html)
 
-[**Order Management**](/docs/scos/user/features/{{page.version}}/order-management/order-management.html):
+[**Order Management**](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/order-management-feature-overview.html):
 
-* [Order Management System (OMS) Matrix](/docs/scos/user/features/{{page.version}}/order-management/oms-order-management-system-matrix.html)
+* [Order Management System (OMS) Matrix](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/oms-order-management-system-matrix.html)
 * [Reorder](/docs/scos/user/features/{{page.version}}/reorder-feature-overview.html)
 <!---* [Order Processing](https://documentation.spryker.com/2021080/docs/order-processing)-->
 * [Reclamations](https://documentation.spryker.com/2021080/docs/reclamations)
@@ -162,11 +162,8 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 
 [**Back Office**](https://documentation.spryker.com/2021080/docs/back-office):
 
-* [Back Office Management](/docs/scos/user/features/{{page.version}}/spryker-core-back-office/spryker-core-back-office.html)
-* [Data Protection](https://documentation.spryker.com/2021080/docs/data-protection)
-* [Permission & ACL Management](https://documentation.spryker.com/2021080/docs/permission-acl-management)
-* [Customer Management](/docs/scos/user/features/{{page.version}}/customer-account-management/customer-account-management.html)
-
+* [Back Office Management](/docs/scos/user/features/{{page.version}}/spryker-core-back-office-feature-overview.html)
+* [Permission & ACL Management](/docs/scos/dev/feature-walkthroughs/{{page.version}}/user-and-rights-overview.html)
 [**Multi-Channel**](/docs/scos/user/features/{{page.version}}/multi-channel/multi-channel.html):
 
 * [Multiple Touchpoint Integrations](/docs/scos/user/features/{{page.version}}/multi-channel/multi-channel.html)

@@ -15,7 +15,7 @@ Templates slots enables content managers to effectively and coherently interact 
 Templates and slots is a complex funcitonality which works in conjunction with other functionalities. To use it effectively, make sure you get familiar with the functionalities in the order they are presented:
 * [CMS Page](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html)
 * [CMS Block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html)
-* [Content Items](/docs/scos/user/features/{{page.version}}/content-items/content-items.html)
+* [Content Items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html)
 * [WYSIWYG Editor](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html)
 
 {% endinfo_block %}
@@ -125,7 +125,7 @@ CMS Block is a separate entity with a dedicated section in the Back Office. See 
 
 ## Content Item
 
-[Content Item](/docs/scos/user/features/{{page.version}}/content-items/content-items.html-feature-overview) is the smallest content unit in Spryker that is used in the WISIWYG editor when creating content for CMS blocks. When a CMS block is inserted into a slot, all the content items of the CMS block are displayed on the Storefront page space of the slot.
+[Content Item](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html-feature-overview) is the smallest content unit in Spryker that is used in the WISIWYG editor when creating content for CMS blocks. When a CMS block is inserted into a slot, all the content items of the CMS block are displayed on the Storefront page space of the slot.
 
 <details open>
     <summary> Content item representation - Storefront</summary>
@@ -136,7 +136,7 @@ CMS Block is a separate entity with a dedicated section in the Back Office. See 
 </details>
 
 From the perspective of templates and slots, a content item always comes as a part of CMS block. That's why there is no place to manage it in the **Slots** section.
-See [Content Items](/docs/scos/user/features/{{page.version}}/content-items/content-items.html) to learn what a content manager can do with content items in the Back Office > **Content Management** > **Content Items** section.
+See [Content Items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html) to learn what a content manager can do with content items in the Back Office > **Content Management** > **Content Items** section.
 
 ### Applying Templates with Slots
 The template with slots can be applied to any page. Even though a content manager can manage all page types in the Back Office, they can only apply templates with slots to the following:

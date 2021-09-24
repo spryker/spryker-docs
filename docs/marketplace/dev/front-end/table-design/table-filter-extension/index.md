@@ -63,7 +63,7 @@ export class RootModule
 
 You can configure any filter in the table config.
 
-```ts
+```html
 <spy-table [config]="{
     ...,
     filters: {

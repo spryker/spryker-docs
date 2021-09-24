@@ -3,7 +3,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% endif %}">
 <meta name="keywords" content="{{page.tags}}{% if page.tags %}, {% endif %} {{page.keywords}}">
-<meta name="robots" content="noindex">
 <title>{{ page.title }} | {{ site.site_title }}</title>
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -25,6 +24,9 @@
 <!-- Anchor.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
 <script src="{{ "/js/customscripts.js" }}"></script>
+<!-- wistia -->
+<script src="https://fast.wistia.com/embed/medias/eiw5ev4gv2.jsonp" async></script>
+<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
 

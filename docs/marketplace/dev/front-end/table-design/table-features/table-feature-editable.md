@@ -11,6 +11,8 @@ This article provides details about the Table Feature Editable component in the 
 Table Feature Editable is a feature of the Table Component that allows editing/adding rows of the table.
 Below you can see base config of the Editable feature, that contains next options: 
 
+Feature Configuration:
+
 `columns` - an array with config for each editable column.  
 `create` - an object with config for a new rows.  
 `update` - an object with config for an existing rows.  
@@ -102,6 +104,23 @@ Let's take a closer look at all the possible options.
   },                                                                                           
 }">
 </spy-table>
+```
+
+## Feature Registration
+
+```ts
+@NgModule({
+  imports: [
+    TableModule.forRoot(),
+    TableModule.withFeatures({
+      editable: () => 
+        import('@spryker/table.feature.editable').then(
+          (m) => m.TableEditableFeatureModule,
+        ),   
+    }),
+  ],
+})
+export class RootModule {}
 ```
 
 ## Interfaces
@@ -198,18 +217,4 @@ export interface TableDatasourceDependableConfig extends DatasourceConfig {
   contextKey?: string;
   datasource: DatasourceConfig;
 }
-
-// Component registration
-@NgModule({
-  imports: [
-    TableModule.forRoot(),
-    TableModule.withFeatures({
-      editable: () => 
-        import('@spryker/table.feature.editable').then(
-          (m) => m.TableEditableFeatureModule,
-        ),   
-    }),
-  ],
-})
-export class RootModule {}
 ```

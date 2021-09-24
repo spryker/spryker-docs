@@ -9,9 +9,11 @@ This article provides details about the Table Feature Total component in the Com
 ## Overview
 
 Table Feature Total is a feature of the Table Component that renders the total number of the data 
-set via [Chips component](/docs/marketplace/dev/front-end/ui-components-library/chips.html).
+set via Chips component.
 In case table rows are selectable, Table Feature Total will also render number of selected rows.
 See an example below, how to use the Total feature.
+
+Feature Configuration:
 
 `enabled` - will enable feature via config.
 
@@ -26,24 +28,27 @@ See an example below, how to use the Total feature.
 </spy-table>
 ```
 
-## Interfaces
-
-Below you can find interfaces for Table Feature Total.
+## Feature Registration
 
 ```ts
-export interface TableTotalConfig extends TableFeatureConfig {}
-
-// Component registration
 @NgModule({
   imports: [
     TableModule.forRoot(),
     TableModule.withFeatures({
       total: () =>
-        import('./table-total-feature.module').then(
+        import('table.feature.total').then(
           (m) => m.TableTotalFeatureModule,
         ),
     }),
   ],
 })
 export class RootModule {}
+```
+
+## Interfaces
+
+Below you can find interfaces for Table Feature Total.
+
+```ts
+export interface TableTotalConfig extends TableFeatureConfig {}
 ```

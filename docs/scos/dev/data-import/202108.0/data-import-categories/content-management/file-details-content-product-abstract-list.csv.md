@@ -9,7 +9,7 @@ redirect_from:
   - /docs/en/file-details-content-product-abstract-listcsv
 ---
 
-This article contains content of the **content_product_abstract_list.csv** file to configure [Content Product Abstract List](/docs/scos/user/features/{{page.version}}/content-items/content-items-feature-overview.html#content-item) information on your Spryker Demo Shop.
+This article contains content of the **content_product_abstract_list.csv** file to configure [Content Product Abstract List](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html#content-item) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:

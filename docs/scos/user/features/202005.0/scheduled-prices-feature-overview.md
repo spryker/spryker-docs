@@ -6,6 +6,8 @@ originalArticleId: 7ede61fb-6e0f-4ef8-8211-6d1f80bdc421
 redirect_from:
   - /v5/docs/scheduled-prices-feature-overview
   - /v5/docs/en/scheduled-prices-feature-overview
+  - /v5/docs/scheduled-prices
+  - /v5/docs/en/scheduled-prices
 ---
 
 ## Introduction
@@ -77,4 +79,4 @@ In this case:
 Currently, the feature has the following functional constraints which are going to be resolved in the future.
 
 * The default number of prices which the cron job can process at a time is 1000.
-* The feature does not work with merchant prices ([relations](/docs/scos/user/features/{{page.version}}/merchant-b2b-contracts-feature-overview.html)) and [volume prices](/docs/scos/user/features/{{page.version}}/price/volume-prices/volume-prices.html).
+* The feature does not work with merchant prices ([relations](/docs/scos/user/features/{{page.version}}/merchant-b2b-contracts-feature-overview.html)) and [volume prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.md).

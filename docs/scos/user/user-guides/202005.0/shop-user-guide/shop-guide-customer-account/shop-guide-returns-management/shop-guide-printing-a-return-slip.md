@@ -8,7 +8,7 @@ redirect_from:
   - /v5/docs/en/shop-guide-printing-a-return-slip
 ---
 
-After you have [created a return](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/shop-guide-returns-management/shop-guide-creating-a-return.html) for order or a Shop Owner has done it for you, you can [print the return slip](/docs/scos/user/features/{{page.version}}/order-management/return-management/return-management-feature-overview.html).
+After you have [created a return](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/shop-guide-returns-management/shop-guide-creating-a-return.html) for order or a Shop Owner has done it for you, you can [print the return slip](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html).
 
 To print the return slip:
 

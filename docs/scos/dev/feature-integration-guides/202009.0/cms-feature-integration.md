@@ -1142,7 +1142,7 @@ Enable Twig plugins:
 | --- | --- | --- |
 | `CmsBlockTwigPlugin` | Provides the list of plugins for CMS block widget. See the [table](#plugin-table). | `SprykerShop\Yves\CmsBlockWidget\Plugin` |
 | `CmsTwigPlugin` | Provides the spyCms function. | `SprykerShop\Yves\CmsPage\Plugin\Twig` |
-| `CmsContentWidgetTwigPlugin` | Provides the list of plugins for enabling content widgets. You can use them inside CMS blocks and page content. However, we recommend using the [Content Items Widgets feature](/docs/scos/user/features/{{page.version}}/content-items/content-items-feature-overview.html) instead. | `Spryker\Yves\CmsContentWidget\Plugin\Twig` |
+| `CmsContentWidgetTwigPlugin` | Provides the list of plugins for enabling content widgets. You can use them inside CMS blocks and page content. However, we recommend using the [Content Items Widgets feature](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html) instead. | `Spryker\Yves\CmsContentWidget\Plugin\Twig` |
 | `ShopCmsSlotTwigPlugin` | Provides the `cms_slot` Twig tag. | `SprykerShop\Yves\ShopCmsSlot\Plugin\Twig` |
 
 **Pyz\Yves\Twig\TwigDependencyProvider**

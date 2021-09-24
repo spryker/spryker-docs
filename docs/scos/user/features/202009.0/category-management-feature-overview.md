@@ -6,6 +6,8 @@ originalArticleId: 565a631a-4b0e-4b0e-9d59-ec3ff15b7284
 redirect_from:
   - /v6/docs/category-management-feature-overview
   - /v6/docs/en/category-management-feature-overview
+  - /v6/docs/category-management
+  - /v6/docs/en/category-management
 ---
 
 The Category Management feature serves a double purpose. On the one hand, it allows shop administrators to structure their products into a logical system where each product belongs to a category or a set of interrelated categories. On the other hand, this enables customers to easily navigate the front end and locate desired products quickly.

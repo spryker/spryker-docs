@@ -6,6 +6,8 @@ originalArticleId: c4abd216-add2-4cc6-9612-bb45c5e7f7cf
 redirect_from:
   - /v4/docs/reclamations-feature-overview
   - /v4/docs/en/reclamations-feature-overview
+  - /v4/docs/reclamations
+  - /v4/docs/en/reclamations
 ---
 
 Once a Back Office user has received a claim regarding an order from the customer, they can go to [Overview of Orders](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/orders/managing-orders.html#claiming-orders) in the Back Office and click **Claim** to register the claim for the order (for all items or separate items of the order).

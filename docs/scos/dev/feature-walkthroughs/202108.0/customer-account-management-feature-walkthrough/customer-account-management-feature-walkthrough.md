@@ -8,7 +8,7 @@ template: concept-topic-template
 The _Customer Account Management_ feature enables a wide range of management options for customer accounts and additional functionalities.
 
 
-To learn more about the feature and to find out how end users use it, see [Customer Account Management](/docs/scos/user/features/{{page.version}}/customer-account-management/customer-account-management.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Customer Account Management](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html) for business users.
 
 
 ## Related Developer articles

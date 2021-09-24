@@ -27,7 +27,7 @@ A couple of examples which shows how a payment is integrated into the system. Th
 
 * how to integrate forms into Yves checkout
 * how to add PaymentMethodHandler
-* how to add a state machine, commands and conditions to the [Oms module](/docs/scos/user/features/{{page.version}}/order-management/oms-order-management-system-matrix.html)
+* how to add a state machine, commands and conditions to the [Oms module](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/oms-order-management-system-matrix.html)
 * how to add CheckoutPlugins to the Payment module
 * how to handle refunds with the [Refund module](https://documentation.spryker.com/v4/docs/refund)
 

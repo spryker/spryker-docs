@@ -11,7 +11,7 @@ redirect_from:
 
 This version adds support to manage CMS Block-store relation through the dedicated CMS Block Administration Intrerface.
 
-1. Installl/update `spryker/cms-block` to at least Version 2.0.0. For more information, see [Migration Guide - CMS Block](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-cms-block.html).
+1. Installl/update `spryker/cms-block` to at least Version 2.0.0. For more information, see [Migration Guide - CMS Block](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-cmsblock.html).
 
 2. Upgrade `spryker/cms-block-gui` to at least Version 2.0.0.
 

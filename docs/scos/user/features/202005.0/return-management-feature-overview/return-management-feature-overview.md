@@ -6,6 +6,8 @@ originalArticleId: fa2a64bc-089e-4a58-85e4-995c59415a64
 redirect_from:
   - /v5/docs/return-management-feature-overview
   - /v5/docs/en/return-management-feature-overview
+  - /v5/docs/return-management
+  - /v5/docs/en/return-management
 ---
 
 The *Return Management* feature allows you to create and manage returns for a sales order. 
@@ -60,7 +62,7 @@ Buyers can return entire orders or individual sales order items as soon as they 
 
 {% info_block warningBox "Note" %}
 
-For a [Configurable Bundle](/docs/scos/user/features/{{page.version}}/product-information-management/configurable-bundle/configurable-bundle.html), you can’t select to return an entire Configurable Bundle, but you can select to return separate items from it.
+For a [Configurable Bundle](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html), you can’t select to return an entire Configurable Bundle, but you can select to return separate items from it.
 The [Product Bundles](/docs/scos/user/features/{{page.version}}/product-information-management/product-bundles.html), on the contrary, are handled as one product, so only the whole bundle can be returned. You can not return individual items of a Product Bundle.
 
 {% endinfo_block %}

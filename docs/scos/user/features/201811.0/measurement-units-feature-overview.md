@@ -6,6 +6,8 @@ originalArticleId: 4d6b1a7d-d8f3-45ee-8a77-f14bec3e3189
 redirect_from:
   - /v1/docs/measurement-units-feature-overview
   - /v1/docs/en/measurement-units-feature-overview
+  - /v1/docs/measurement-units
+  - /v1/docs/en/measurement-units
 ---
 
 The Measurement Units per Products feature allows selling products by any unit of measure defined by the shop administrator. For example, apples can be offered in "Item" or "Kilogram", cables can be offered in "Centimeter", "Meter" or "Feet" etc. To support alternate units of measure, there must be a base unit value, relative to which all the internal conversions and calculations will be made. Such value is referred to as base unit. The base unit is assigned to abstract products and by default it is "item", however it can be changed to any other unit.

@@ -33,8 +33,8 @@ The RFQ can have the following statuses:
 ## RFQ workflows
 The process of requesting the quote includes two workflows depending on the role the user has. A workflow is defined as the sequence of steps the user can go through to complete the process successfully. These are:
 
-* [Buyer workflow](/docs/scos/user/features/{{page.version}}/quotation-process/quotation-process-feature-overview.html#buyer-workflow)
-* [Sales representative workflow](/docs/scos/user/features/{{page.version}}/quotation-process/quotation-process-feature-overview.html#sales-representative-workflow)
+* [Buyer workflow](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html#buyer-workflow)
+* [Sales representative workflow](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html#sales-representative-workflow)
 
 ### Buyer workflow
 A buyer can create a quote request the product prices from a shopping cart.

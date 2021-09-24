@@ -6,6 +6,10 @@ originalArticleId: dabe92b6-d8dc-42b0-8e3c-146d26c851bc
 redirect_from:
   - /v5/docs/navigation-feature-overview
   - /v5/docs/en/navigation-feature-overview
+  - /v5/docs/navigation-feature-summary
+  - /v5/docs/en/navigation-feature-summary
+  - /v5/docs/navigation
+  - /v5/docs/en/navigation
 ---
 
 The *Navigation* feature enables product catalog managers to create intuitive navigation elements and display them on the Storefront.

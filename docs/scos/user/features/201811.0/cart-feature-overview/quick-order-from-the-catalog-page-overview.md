@@ -22,7 +22,7 @@ By default, we use SKU as a product identifier for filtering the results. The id
 
 ![Quick Order page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Quick+Order/Quick+Order+Feature+Overview/quick-order-page.png) 
 
-As a shop owner, you can also integrate the Quick Order with [Measurement Units](/docs/scos/user/features/{{page.version}}/packaging-and-measurement-units/measurement-units/measurement-units-feature-overview.html). Thus, when the product is selected, the base measurement unit for that product appears in the "Measuring Unit" column.
+As a shop owner, you can also integrate the Quick Order with [Measurement Units](/docs/scos/user/features/{{page.version}}/measurement-units-feature-overview.html). Thus, when the product is selected, the base measurement unit for that product appears in the "Measuring Unit" column.
 
 {% info_block errorBox %}
 The integration is possible only if the Measurement Units feature is enabled in your project.
@@ -67,7 +67,7 @@ The Quantity field in the Quick Order adheres to these quantities. Therefore, if
 ## Product Prices for Quick Order
 To be able to see the price, a shop visitor has to select the concrete product and set the item quantity.
 
-The price is displayed dynamically taking into account the quantity, currency, store and [merchant relation](https://documentation.spryker.com/v1/docs/merchants-and-merchant-relations) dimensions respectively. If the item has any [volume prices](/docs/scos/user/features/{{page.version}}/price/volume-prices/volume-prices.html), the price is adjusted to the correct price set for the quantity the user has selected.
+The price is displayed dynamically taking into account the quantity, currency, store and [merchant relation](https://documentation.spryker.com/v1/docs/merchants-and-merchant-relations) dimensions respectively. If the item has any [volume prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.md), the price is adjusted to the correct price set for the quantity the user has selected.
 
 ## File Upload Form for Concrete Products
 To save your buyers' time and help them order the products in bulk quickly, enable your customers to use the File Upload form. The File Upload form allows users to add multiple products to the Quick Order page by uploading data using CSV formatted file.

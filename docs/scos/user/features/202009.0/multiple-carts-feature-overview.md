@@ -33,7 +33,7 @@ The table with shopping carts shows details for each of the carts, including:
 * Number of products added to cart
 * Price mode (Net or Gross)
 * Cart Total
-* Possible actions to manage shopping carts: edit name, duplicate, [share](/docs/scos/user/features/{{page.version}}/shared-carts/shared-carts-feature-overview.html), dismiss, delete, switch cart to shopping list (see the *Actions* table for details)
+* Possible actions to manage shopping carts: edit name, duplicate, [share](/docs/scos/user/features/{{page.version}}/shared-carts-feature-overview.html), dismiss, delete, switch cart to shopping list (see the *Actions* table for details)
 
 ![Multiple carts list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/multiple-cart-list.png)
 
@@ -50,7 +50,7 @@ The table bellow provides detailed information on the possible actions to manage
 To view how to create, edit, duplicate, and delete a cart and how to dissmiss shared carts, see the [Multiple Carts on the storefront](#multiple-carts-per-user-on-the-storefront) section.
 :::
 
-To learn more about sharing the shopping cart, check out [Shared Cart documentation](/docs/scos/user/features/{{page.version}}/shared-carts/shared-carts-feature-overview.html).
+To learn more about sharing the shopping cart, check out [Shared Cart documentation](/docs/scos/user/features/{{page.version}}/shared-carts-feature-overview.html).
 
 Active shopping cart is highlighted in bold.
 
@@ -104,7 +104,7 @@ On the storefront, company users can perform the following actions using the Mul
 </details>
 
 * To share a cart with external and internal users via a link, see [Unique URL per Cart for Easy Sharing feature overview](/docs/scos/user/features/{{page.version}}/resource-sharing/unique-url-per-cart-for-easy-sharing/unique-url-per-cart-for-easy-sharing-feature-overview.html).
-* To share a cart with users within one business unit, see [Shared Cart feature overview](/docs/scos/user/features/{{page.version}}/shared-carts/shared-carts-feature-overview.html#shared-cart-on-the-storefront).
-* To add a custom order reference to a cart, see [Custom Order Reference feature overview](/docs/scos/user/features/{{page.version}}/order-management/order-management-feature-overview/custom-order-reference-overview.html).
+* To share a cart with users within one business unit, see [Shared Cart feature overview](/docs/scos/user/features/{{page.version}}/shared-carts-feature-overview.html#shared-cart-on-the-storefront).
+* To add a custom order reference to a cart, see [Custom Order Reference feature overview](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/custom-order-reference-overview.html).
 * To add comments to a cart, see [Comments feature overview](/docs/scos/user/features/{{page.version}}/comments/comments-feature-overview.html#comments-on-the-storefront).
-* To add a customer order reference to an order, see [Custom Order Reference feature overview](/docs/scos/user/features/{{page.version}}/order-management/order-management-feature-overview/custom-order-reference-overview.html).
+* To add a customer order reference to an order, see [Custom Order Reference feature overview](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/custom-order-reference-overview.html).

@@ -45,7 +45,7 @@ When working with the order in the Back Office, you, as a Back Office user, can 
 ![zed-custom-order-ref-new](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Custom+Order+Reference/zed-change-custom-order-reference.gif)
 
 ## Custom Order Reference with the RFQ, approval process, and share cart via a link
-If you submit a [quote request](/docs/scos/user/features/{{page.version}}/quotation-process/quotation-process-feature-overview.html) and then convert it to the shopping cart, the cart gets locked. However, adding and updating the customer order reference for the locked cart is still possible.
+If you submit a [quote request](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html) and then convert it to the shopping cart, the cart gets locked. However, adding and updating the customer order reference for the locked cart is still possible.
 
 In the [Approval Process](/docs/scos/user/features/{{page.version}}/approval-process/approval-process.html) scenarios, both an approver and buyer can add or edit the custom order reference during the checkout.
 

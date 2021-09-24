@@ -92,6 +92,6 @@ You can make a CMS block either active (visible on the store website) or inactiv
 ***
 **What's next?**
 
-* To learn how to set the time period during which CMS blocks will be visible on the store website, see [Defining Validity Period for CMS Blocks](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/blocks/defining-validity-period-for-cms-blocks.html).
+* To learn how to set the time period during which CMS blocks will be visible on the store website, see [Defining Validity Period for CMS Blocks](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/defining-validity-period-for-cms-blocks.html).
 
 * To know what attributes you enter and select while editing the CMS block, see [CMS Block: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/blocks/references/cms-block-reference-information.html).

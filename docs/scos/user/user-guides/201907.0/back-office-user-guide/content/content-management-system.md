@@ -48,7 +48,7 @@ To know about how to create and manage CMS blocks, see the following articles:
 
 * [Creating a new CMS block](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/creating-cms-blocks.html)
 * [Managing CMS block details](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/managing-cms-blocks.html)
-* [Assigning blocks to product and category pages](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/blocks/assigning-blocks-to-category-or-product-pages.html)
+* [Assigning blocks to product and category pages](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/assigning-blocks-to-category-or-product-pages.html)
 
 To learn more about how to create and edit Content Items, see the following articles:
 

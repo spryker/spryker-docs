@@ -55,4 +55,4 @@ When you assign categories, in the **Categories** field, start typing the name o
 **What's next?**
 
 * To learn what managing actions you can do with the product lists, see the [Managing Product Lists](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-lists/managing-product-lists.html) article.
-* To learn more about the attributes you select and enter while creating a product list, see the [Product Lists: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/product-lists/references/product-lists-reference-information.html) article.
+* To learn more about the attributes you select and enter while creating a product list, see the [Product Lists: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-lists/references/product-lists-reference-information.html) article.

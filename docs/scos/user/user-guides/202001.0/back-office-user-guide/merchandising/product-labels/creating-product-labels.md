@@ -45,6 +45,6 @@ The same applies if you want to deactivate the label. Clear the checkbox on the 
 ***
 **What's next?**
 
-* To learn how the product labels are managed, see [Managing Product Labels](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/product-labels/managing-product-labels.html).
-* To learn how you can prioritize the labels, see [Prioritizing Labels](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/product-labels/prioritizing-labels.html).
-* To learn more about the attributes you select and enter while creating or managing the labels or see some examples of product labels, see the [References](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/product-labels/references/product-labels-reference-information.html) section.
+* To learn how the product labels are managed, see [Managing Product Labels](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-labels/managing-product-labels.html).
+* To learn how you can prioritize the labels, see [Prioritizing Labels](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-labels/prioritizing-labels.html).
+* To learn more about the attributes you select and enter while creating or managing the labels or see some examples of product labels, see the [References](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-labels/references/product-labels-reference-information.html) section.

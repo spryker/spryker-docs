@@ -34,7 +34,7 @@ There is no defined flow for working with search and filters. The most important
 4. Set up the search preference.
 
 See the following articles to know more about the search and filter preferences:
-* [Managing Filter Preferences](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/search-and-filters/managing-filter-preferences.html)
-* [Managing Category Filters](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/search-and-filters/managing-category-filters.html)
-* [Managing Search Preferences](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/search-and-filters/managing-search-preferences.html)
-* [Search Preferences Types](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/search-and-filters/references/search-preferences-types.html)
+* [Managing Filter Preferences](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/search-and-filters/managing-filter-preferences.html)
+* [Managing Category Filters](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/search-and-filters/managing-category-filters.html)
+* [Managing Search Preferences](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/search-and-filters/managing-search-preferences.html)
+* [Search Preferences Types](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/search-and-filters/references/search-preferences-types.html)

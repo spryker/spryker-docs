@@ -10,12 +10,12 @@ redirect_from:
 
 The Merchants section in Back Office is mostly used by Spryker Admins. In a B2B environment, the business partnership between a buyer (company/business unit) and a seller (merchant) is often based on a range of agreements. So you should consider the Merchant and Merchant Relation sections as a contract between the seller and buyer.
 **Standardized flow of actions for a Spryker Admin**
-![Merchants - Spryker Admin](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Merchants/merchants-section.png) 
+![Merchants - Spryker Admin](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Merchants/merchants-section.png)
 
-![Merchant Relations - Spryker Admin](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Merchants/merchant-relations-section.png) 
+![Merchant Relations - Spryker Admin](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Merchants/merchant-relations-section.png)
 
 {% info_block infoBox %}
-This is how the Spryker Admin sets up the merchant and merchant relations according to the contract conditions. 
+This is how the Spryker Admin sets up the merchant and merchant relations according to the contract conditions.
 {% endinfo_block %}
 {% info_block warningBox "Note" %}
 For a common B2B solution it should be only one merchant in the system, as two and more merchants are required only for B2B Marketplaces.
@@ -32,5 +32,5 @@ In order to have a correct set, you should:
 ***
 **What's next?**
 
-* To know more about how the merchant record is managed, see [Managing Merchants](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchants/merchants-and-merchant-relations/managing-merchants.html).
-* To know more about merchant relations and their setup, see [Managing Merchant Relations](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchants/merchants-and-merchant-relations/managing-merchant-relations.html).
+* To know more about how the merchant record is managed, see [Managing Merchants](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/marketplace/merchants-and-merchant-relations/managing-merchants.html).
+* To know more about merchant relations and their setup, see [Managing Merchant Relations](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html).

@@ -31,7 +31,7 @@ Check out this video tutorial on how to set up merchants and merchant relations:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html)  |
+| [Manage merchants](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/marketplace/merchants-and-merchant-relations/managing-merchants.html)  |
 | [Manage merchant relations](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html)  |
 
 {% info_block warningBox "Developer guides" %}

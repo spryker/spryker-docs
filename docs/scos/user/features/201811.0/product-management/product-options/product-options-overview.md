@@ -41,7 +41,7 @@ Prices are **integer** values and stored in their normalized form. For example, 
 Different SKU and glossary key are stored for each product option value.
 
 The scheme below displays how the product options are stored in the database:
-![Database scheme](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/product_options_database_schema1.png) 
+![Database scheme](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/product_options_database_schema1.png)
 
 ## Product Option Collector
 
@@ -52,7 +52,7 @@ Product options are exported to Yves by a separate collector. Each abstract prod
 Each option is persisted into `sales_order_item_option` table when the order is placed.
 
 In the diagram below you can see how the product options are stored when the order is placed:
-![Product options storage](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/product_options_storage.png) 
+![Product options storage](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/product_options_storage.png)
 
 ## Product Options Management in the Back Office
 Say you want to sell a product that will have several options attached, for example, warranty period for 1, 2, and 3 years.
@@ -64,13 +64,13 @@ See [Creating a New Product Option](/docs/scos/user/user-guides/{{page.version}}
 {% endinfo_block %} to learn more how to create a product option group and assign products in Admin UI.)
 
 After you save the changes, a new product option group will appear on the product detail page. The option values will be displayed as a drop-down list. The product option price is added to the product price in the cart.
-![Product option warranty](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/yves-product-option-warranty.png) 
+![Product option warranty](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/yves-product-option-warranty.png)
 
 ##  Product Options Management in the Legacy Demoshop
 
 For customers, the options are displayed on the product detail page of the abstract product.
 
-You can [assign product labels](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/products/product-labels/creating-a-product-label.html) to highlight specific products in your shop. Customize the look and text of the labels as they appear in the shop. Any association can be a Label, such as "Sale" or "Christmas". Products that are new in your shop, can be automatically be marked with the Dynamic Product Label "New" for a pre-defined time range.
+You can [assign product labels](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-labels/creating-product-labels.html) to highlight specific products in your shop. Customize the look and text of the labels as they appear in the shop. Any association can be a Label, such as "Sale" or "Christmas". Products that are new in your shop, can be automatically be marked with the Dynamic Product Label "New" for a pre-defined time range.
 
 You can easily offer services on top of a customer's choice of products, such as gift wrapping, insurance, warranty or anything else that you may want to add that is not physically part of the product. The options can have their own price value and will be added to the total cart value.
 
@@ -92,7 +92,7 @@ A product configuration is the set of option value selections for each option ty
 In general an option does not have a stock.
 
 Example:
-![Product options example](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/product_options.png) 
+![Product options example](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/product_options.png)
 
 ## Current Constraints
 {% info_block infoBox %}
@@ -106,4 +106,4 @@ Currently, the feature has the following functional constraints which are going 
 * if you create a product option, the price will be the same for all merchants
 * unlike other prices in Spryker, product option price is not bound to any of the available price types (DEFAULT or ORIGINAL)
 
-<!-- Last review date: Mar 20, 2019 --> 
+<!-- Last review date: Mar 20, 2019 -->

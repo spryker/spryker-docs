@@ -25,7 +25,7 @@ Password configuration comes with a brute force attack protection: after a certa
 
 #### Documentation
 
-* [Customer Registration overview](/docs/scos/user/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-registration-overview.html#customer-registration-overview)
+* [Customer Registration overview](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-registration-overview.html#customer-registration-overview)
 * [Customer Login overview](/docs/scos/user/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-login-overview.html)
 
 
@@ -133,7 +133,7 @@ The Docker SDK configures prefixes for Elasticsearch index names based on the `n
 We released the documentation covering the following Docker SDK topics: installing on Windows with WSL2, introduction and quick start guides, development: debugging, testing, configuring synchronization modes.
 
 #### Documentation
-[Docker SDK](/docs/scos/dev/the-docker-sdk/docker-sdk.html#docker-sdk)
+[Docker SDK](/docs/scos/dev/the-docker-sdk/the-docker-sdk.html#docker-sdk)
 
 ## Spryker Glue API
 We continue to add support for new storefront APIs.

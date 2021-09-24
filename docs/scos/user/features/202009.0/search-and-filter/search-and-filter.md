@@ -13,7 +13,7 @@ The *Seach and filter* functionality allows you to control search and filtering 
 * The default [Search](/docs/scos/user/features/{{page.version}}/search-and-filter/search.html) feature that you can customize as you need.
 * [Search and widget for concrete products](/docs/scos/user/features/{{page.version}}/search-and-filter/search.html-widget-for-concrete-products) allowing the buyers to quickly find the concrete products.
 * [CMS pages in search results](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-in-search-results-overview.html) allowing the buyers to search CMS pages content.
-* [Filter preferences](/docs/scos/user/features/{{page.version}}/category-management/category-management-feature-overview.html) to set up filters for the Storefront.
+* [Filter preferences](/docs/scos/user/features/{{page.version}}category-management-feature-overview.html) to set up filters for the Storefront.
 * [Category filtrers](/docs/scos/user/features/{{page.version}}/search-and-filter/category-filters.html) allowing you to add filters to individual categories.
 
 

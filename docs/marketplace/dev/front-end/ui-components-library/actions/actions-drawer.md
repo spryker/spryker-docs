@@ -95,8 +95,8 @@ handleAction(injector, config: { template: contentTpl }, context);
 
 ## Service registration
 
-Any existing Angular component can be registered and used within the drawer.
-Also, it's possible to create and register a custom component that will be rendered inside the drawer.
+Any existing Angular component can be registered and used within the Drawer.
+Also, it's possible to create and register a custom component that will be rendered inside the Drawer.
 
 ```ts
 @NgModule({

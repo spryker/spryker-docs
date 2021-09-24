@@ -103,7 +103,7 @@ A Storefront User can add a note to a configurable bundle. The note is displayed
 
 Currently, the feature supports 1:1 product-slot relation in the configurator. You can select only one concrete product with quantity 1 for a slot. However, using the data import, you may import a bigger quantity for the products in the slots.
 
-On the *Cart* page, a Storefront User can change the qunatity of a configured bundle. After the quantity is increased, the quantity of all the items in the configured bundle is multiplied by this number.
+On the *Cart* page, a Storefront User can change the quantity of a configured bundle. After the quantity is increased, the quantity of all the items in the configured bundle is multiplied by this number.
 
 For example, a Storefront User adds a configurable bundle with the following products:
 * Item A:
@@ -231,7 +231,7 @@ Currently, the feature has the following functional constraints which are going 
 * The following products cannot be displayed in the configurator:
     - Products with [measurement](/docs/scos/user/features/{{page.version}}/measurement-units/measurement-units-feature-overview.html) or [packaging units](/docs/scos/user/features/{{page.version}}/packaging-units/packaging-units-feature-overview.html)
     - [Product bundles](/docs/scos/user/features/{{page.version}}/product-bundles/product-bundles.htmls)
-    - [Gift cards](/docs/scos/user/features/{{page.version}}/gift-cards/gift-cards-feature-overview.html)
+    - [Gift cards](/docs/scos/user/features/{{page.version}}/gift-cards-feature-overview.html)
 * The following functionalities are not displayed and cannot be applied to concrete products in configurable bundles:
     * [Product options](/docs/scos/user/features/{{page.version}}/product-options/product-options-feature-overview.html)
     * [Product labels](docs\scos\user\features\202009.0\product-labels\product-labels-feature-overview.md)

@@ -8,7 +8,7 @@ redirect_from:
   - /v6/docs/en/managing-gift-cards-of-registered-users
 ---
 
-[Gift Card](/docs/scos/user/features/{{page.version}}/gift-cards/gift-cards-feature-overview.html) is an alternative payment method. It is purchased as a default product in the Spryker Commerce OS and is redeemed as a voucher code during the checkout. When you have a gift card code, this code can be applied to a shopping cart, and the money value of the applied gift card is deducted from the total sum of the cart items.
+[Gift Card](docs/scos/user/features/{{page.version}}/gift-cards-feature-overview.html) is an alternative payment method. It is purchased as a default product in the Spryker Commerce OS and is redeemed as a voucher code during the checkout. When you have a gift card code, this code can be applied to a shopping cart, and the money value of the applied gift card is deducted from the total sum of the cart items.
 
 In your development, Gift Cards API provides resources for purchasing and redeeming gift cards in Spryker Commerce OS via Glue API.
 

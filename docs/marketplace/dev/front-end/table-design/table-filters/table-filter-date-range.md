@@ -11,6 +11,8 @@ This article provides details about the Table Filter Date Range component in the
 Table Filter Date Range is a feature of the Table Component that allows filtering data via `Date Range Picker` component.
 See an example below, how to use the Filter Date Range feature.
 
+Feature Configuration:
+
 `enabled` - will enable feature via config.  
 `items` - an array with config for each filter date-range.  
 
@@ -36,6 +38,27 @@ See an example below, how to use the Filter Date Range feature.
 </spy-table>
 ```
 
+## Feature Registration
+
+```ts
+@NgModule({
+  imports: [
+    TableModule.forRoot(),
+    TableModule.withFeatures({
+      filters: () =>
+        import('@spryker/table.feature.filters').then(
+          (m) => m.TableFiltersFeatureModule,
+        ),    
+    }),
+    TableFiltersFeatureModule.withFilterComponents({
+      'date-range': TableFilterDateRangeComponent,
+    }),
+    TableFilterDateRangeModule,
+  ],
+})
+export class RootModule {}
+```
+
 ## Interfaces
 
 Below you can find interfaces for Table Filter Select.
@@ -53,22 +76,4 @@ export interface TableFilterDateRangeOptions {
   format?: string;
   time?: string | boolean;
 }
-
-// Component registration
-@NgModule({
-  imports: [
-    TableModule.forRoot(),
-    TableModule.withFeatures({
-      filters: () =>
-        import('@spryker/table.feature.filters').then(
-          (m) => m.TableFiltersFeatureModule,
-        ),    
-    }),
-    TableFiltersFeatureModule.withFilterComponents({
-      'date-range': TableFilterDateRangeComponent,
-    }),
-    TableFilterDateRangeModule,
-  ],
-})
-export class RootModule {}
 ```

@@ -412,12 +412,12 @@ entries:
             - title: "Table Feature extension"
               url: /docs/marketplace/dev/front-end/table-design/table-feature-extension.html
 
-            - title: "Table Filter extension"
-              url: /docs/marketplace/dev/front-end/table-design/table-filter-extension/
+            - title: "Table Filters"
+              url: /docs/marketplace/dev/front-end/table-design/table-filters/
               nested:
 
-                - title: "Table Filter Date Range"
-                  url: /docs/marketplace/dev/front-end/table-design/table-feature-extension/table-filter-date-range.html
+                - title: "Date Range"
+                  url: /docs/marketplace/dev/front-end/table-design/table-filters/table-filter-date-range.html
 
         - title: UI components library
           nested:

@@ -64,3 +64,15 @@ Barcodes are dynamically generated for concrete products. This ensures that barc
 You can see the barcodes in the **Catalog > Product Barcodes** section. The section is designed as a review; thus no actual actions are performed here. The barcode is generated automatically once a new concrete product is added.
 
 You can see Product ID, product name, SKU, and the barcode itself.
+
+## Related Business User articles
+
+|BACK OFFICE USER GUIDES|
+|---|
+| [Viewing product barcodes](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-barcodes/viewing-product-barcodes.html)  |
+
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Product Barcodes feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-barcode-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}

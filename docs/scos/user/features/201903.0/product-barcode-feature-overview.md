@@ -1,13 +1,13 @@
 ---
 title: Barcode Generator Feature Overview
 description: The Barcode Generator can be used for any kind of entity, and by default, we provide a solution for products.
-originalLink: https://documentation.spryker.com/v5/docs/barcode-generator-feature-overview
-originalArticleId: 2b9d9d5f-d48a-49ab-970e-34c32793b334
+originalLink: https://documentation.spryker.com/v2/docs/barcode-generator-feature-overview
+originalArticleId: 01f3c091-a462-42b4-ae14-4741d7f4b964
 redirect_from:
-  - /v5/docs/barcode-generator-feature-overview
-  - /v5/docs/en/barcode-generator-feature-overview
-  - /v5/docs/barcode-generator
-  - /v5/docs/en/barcode-generator
+  - /v2/docs/barcode-generator-feature-overview
+  - /v2/docs/en/barcode-generator-feature-overview
+  - /v2/docs/barcode-generator
+  - /v2/docs/en/barcode-generator
 ---
 
 The Barcode Generator can be used for any kind of entity, and by default, we provide a solution for products.
@@ -21,7 +21,7 @@ In the default configuration, barcodes are generated based on the SKU of a concr
 
 {% info_block infoBox %}
 
-You can read more about the product types we differentiate in [Product Abstraction](/docs/scos/user/features/{{page.version}}/product-information-management/product-abstraction.html)
+You can read more about the product types we differentiate in [Product Abstraction](/docs/scos/user/features/{{page.version}}/product-management/product-abstraction.html).
 
 {% endinfo_block %}
 
@@ -37,6 +37,8 @@ The feature also has plugins support to change the way the barcodes are generate
 
 The barcodes will help the store administrator to update the product stock numbers according to the actual information provided by the warehouse.
 
+<!-- Last review date: Oct, 26-- by Vitaliy Kirichenko, Oksana Karasyova -->
+
 Creating barcodes requires 2 main prerequisites:
 
 1. **Unique product codes for each product you offer –** These can be UPC codes that identify manufactured goods, unique SKU numbers that you use to track inventory your way, or other identifying numbers.
@@ -45,10 +47,6 @@ Creating barcodes requires 2 main prerequisites:
 Nowadays, B2B businesses are faced with extraordinary challenges as more and more consumers are making comparisons of various e-commerce applications. To stay on top of the industry trends, improve customer experience and increase sales, every business must innovate with a deep understanding of their customer’s physical, emotional and financial needs and triggers.
 
 Barcodes are often overlooked as a way to cut costs and save time. A valuable and viable choice for businesses looking to improve efficiency and reduce overhead, barcodes are both cost-effective and reliable. Both inexpensive and user-friendly, barcodes provide an indispensable tool for tracking a variety of data, from pricing to inventory. The ultimate result of a comprehensive barcoding system is a reduction in overhead.
-
-<!-- Last review date: Oct, 26-- by Vitaliy Kirichenko, Oksana Karasyova -->
-
-## Related Business User articles
 
 |BACK OFFICE USER GUIDES|
 |---|

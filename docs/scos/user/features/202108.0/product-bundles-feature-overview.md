@@ -43,7 +43,6 @@ Product bundles are two or more existing products combined into a new type of pr
 * A product bundle can have localized SEO information
 * A product bundle can have multiple localized image sets
 
-
 ## Product bundle entity relationship diagram
 
 ![Product bundle entity diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Bundles/product_bundles_entity_diagram.png)

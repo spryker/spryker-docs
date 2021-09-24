@@ -8,7 +8,7 @@ redirect_from:
   - /v6/docs/en/configurable-bundle-feature-overview
 ---
 
-A *configurable bundle*  is a [product bundle](/docs/scos/user/features/{{page.version}}/product-bundles/product-bundles.html) for which a Storefront User selectes products on the Storefront.
+A *configurable bundle*  is a [product bundle](/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.html) for which a Storefront User selectes products on the Storefront.
 For example, when buying a kitchen set, a customer selects pieces of furniture, like drawers, cupboards, or cabinets, from suggested options.
 
 ## Configurable bundle template
@@ -230,7 +230,7 @@ Currently, the feature has the following functional constraints which are going 
 * A Storefront User cannot return to the *Configurator* page from the *Cart*, *Reorder*, or *Shopping list* pages.
 * The following products cannot be displayed in the configurator:
     - Products with [measurement](/docs/scos/user/features/{{page.version}}/measurement-units/measurement-units-feature-overview.html) or [packaging units](/docs/scos/user/features/{{page.version}}/packaging-units/packaging-units-feature-overview.html)
-    - [Product bundles](/docs/scos/user/features/{{page.version}}/product-bundles/product-bundles.htmls)
+    - [Product bundles](/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.htmls)
     - [Gift cards](/docs/scos/user/features/{{page.version}}/gift-cards-feature-overview.html)
 * The following functionalities are not displayed and cannot be applied to concrete products in configurable bundles:
     * [Product options](/docs/scos/user/features/{{page.version}}/product-options/product-options-feature-overview.html)

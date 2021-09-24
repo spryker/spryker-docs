@@ -1,13 +1,13 @@
 ---
 title: Barcode Generator Feature Overview
 description: The Barcode Generator can be used for any kind of entity, and by default, we provide a solution for products.
-originalLink: https://documentation.spryker.com/v5/docs/barcode-generator-feature-overview
-originalArticleId: 2b9d9d5f-d48a-49ab-970e-34c32793b334
+originalLink: https://documentation.spryker.com/v1/docs/barcode-generator-feature-overview
+originalArticleId: 07d9b906-d116-4cd2-91b2-e12eee90beda
 redirect_from:
-  - /v5/docs/barcode-generator-feature-overview
-  - /v5/docs/en/barcode-generator-feature-overview
-  - /v5/docs/barcode-generator
-  - /v5/docs/en/barcode-generator
+  - /v1/docs/barcode-generator-feature-overview
+  - /v1/docs/en/barcode-generator-feature-overview
+  - /v1/docs/barcode-generator
+  - /v1/docs/en/barcode-generator
 ---
 
 The Barcode Generator can be used for any kind of entity, and by default, we provide a solution for products.
@@ -21,7 +21,7 @@ In the default configuration, barcodes are generated based on the SKU of a concr
 
 {% info_block infoBox %}
 
-You can read more about the product types we differentiate in [Product Abstraction](/docs/scos/user/features/{{page.version}}/product-information-management/product-abstraction.html)
+You can read more about the product types we differentiate in [Product Abstraction](/docs/scos/user/features/{{page.version}}/product-management/product-abstraction.html).
 
 {% endinfo_block %}
 
@@ -47,8 +47,6 @@ Nowadays, B2B businesses are faced with extraordinary challenges as more and mor
 Barcodes are often overlooked as a way to cut costs and save time. A valuable and viable choice for businesses looking to improve efficiency and reduce overhead, barcodes are both cost-effective and reliable. Both inexpensive and user-friendly, barcodes provide an indispensable tool for tracking a variety of data, from pricing to inventory. The ultimate result of a comprehensive barcoding system is a reduction in overhead.
 
 <!-- Last review date: Oct, 26-- by Vitaliy Kirichenko, Oksana Karasyova -->
-
-## Related Business User articles
 
 |BACK OFFICE USER GUIDES|
 |---|

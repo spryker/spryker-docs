@@ -9,7 +9,7 @@ redirect_from:
   - /docs/en/file-details-shipment-method-storecsv
 ---
 
-This article contains information about the [Shipment Method](/docs/scos/user/features/{{page.version}}/shipment/shipment.html) and Store relation to be added to your Spryker Demo Shop.
+This article contains information about the [Shipment Method](/docs/scos/user/features/{{page.version}}/shipment-feature-overview.html) and Store relation to be added to your Spryker Demo Shop.
 
 The *shipment_method_store.csv* file contains the links between each shipment method used by each existing store.
 

@@ -114,7 +114,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 
 * [Shipment Carriers & Methods](https://documentation.spryker.com/2021080/docs/shipment-carriers-methods)
 * [Multiple Currencies for Shipments](/docs/scos/user/features/{{page.version}}/shipment/shipment-feature-overview.html)
-* [Shipment Calculation Rules](https://documentation.spryker.com/2021080/docs/shipment-calculation-rules)
+* [Shipment Calculation Rules](/docs/scos/user/features/{{site.version}}/shipment-feature-overview.html)
 * [Split Delivery](https://documentation.spryker.com/2021080/docs/split-delivery)
 
 [**Payment**](https://documentation.spryker.com/2021080/docs/payments):
@@ -129,7 +129,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 [**Checkout**](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/checkout-feature-overview.html):
 
 * [Multi-Step Checkout](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html)
-* [Define Shipment Methods](/docs/scos/user/features/{{page.version}}/shipment/shipment.html)
+* [Define Shipment Methods](/docs/scos/user/features/{{page.version}}/shipment-feature-overview.html)
 
 [**Ratings & Review**](https://documentation.spryker.com/2021080/docs/rating-reviews):
 [Rating & Review Management](https://documentation.spryker.com/2021080/docs/rating-revew-management)

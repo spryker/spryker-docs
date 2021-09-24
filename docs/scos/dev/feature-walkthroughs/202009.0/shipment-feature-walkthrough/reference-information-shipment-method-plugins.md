@@ -1,16 +1,20 @@
 ---
-title: Reference information: Shipment method plugins feature walkthrough
-last_updated: Aug 20, 2021
-description: This topic provides an overview of the Availability, Price Calculation, and Delivery Time plugins.
-template: concept-topic-template
+title: Reference information: Shipment method plugins
+description: An optional plugin is linked to each shipping method. This topic provides an overview of the Availability, Price Calculation, and Delivery Time plugins.
+originalLink: https://documentation.spryker.com/v6/docs/reference-information-shipment-method-plugins
+originalArticleId: 4dd51fef-f19c-46bd-9b8f-b669bfb83be0
+redirect_from:
+  - /v6/docs/reference-information-shipment-method-plugins
+  - /v6/docs/en/reference-information-shipment-method-plugins
+---
 
-The main concerns regarding shipping services are:
+The main concerns regarding shipping services are :
 
 * **Availability**: Is the shipping method available to deliver the order?
 * **Price**: How is the delivery price calculated ?
 * **Delivery time**: When will the order be delivered ?
 
-For each of these concerns, an optional plugin is linked to each shipping method:
+For each of these concerns, an optional plugin is linked to each shipping method :
 
 * **Availability Plugin**: Returns a boolean value which implies if the active shipping method is available and should be visible to the customers in the list of available shipping services.
 * **Price Calculation Plugin**: Shipping services can consider different criteria in calculating the price for delivery (such as size of the package, weight, etc.). When a price plugin is paired to a shipping method, the related Zed Admin UI preconfigured prices are omitted.
@@ -20,15 +24,15 @@ For each of these concerns, an optional plugin is linked to each shipping method
 
 For each availability plugin linked to a shipment method, a class with the same name must exist on the project side in the Shipment module (`Pyz/Zed/Shipment/Communication/Plugin/Availability`).
 
-The class must implement `ShipmentMethodAvailabilityPluginInterface` and must extend the `AbstractPlugin` class, as in the example below:
+The class must implement `ShipmentMethodAvailabilityPluginInterface` and must extend the `AbstractPlugin` class, as in the example below :
 
 ```php
 <?php
-namespace Pyz/Zed/Shipment/Communication/Plugin/Availability;
-use Generated/Shared/Transfer/QuoteTransfer;
-use Generated/Shared/Transfer/ShipmentGroupTransfer;
-use Spryker/Zed/Kernel/Communication/AbstractPlugin;
-use Spryker/Zed/ShipmentExtension/Dependency/Plugin/ShipmentMethodAvailabilityPluginInterface;
+namespace Pyz\Zed\Shipment\Communication\Plugin\Availability;
+use Generated\Shared\Transfer\QuoteTransfer;
+use Generated\Shared\Transfer\ShipmentGroupTransfer;
+use Spryker\Zed\Kernel\Communication\AbstractPlugin;
+use Spryker\Zed\ShipmentExtension\Dependency\Plugin\ShipmentMethodAvailabilityPluginInterface;
 class DHLExpressPlugin extends AbstractPlugin implements ShipmentMethodAvailabilityPluginInterface
 {
     /**
@@ -37,8 +41,8 @@ class DHLExpressPlugin extends AbstractPlugin implements ShipmentMethodAvailabil
      *
      * @api
      *
-     * @param /Generated/Shared/Transfer/ShipmentGroupTransfer $shipmentGroupTransfer
-     * @param /Generated/Shared/Transfer/QuoteTransfer $quoteTransfer
+     * @param \Generated\Shared\Transfer\ShipmentGroupTransfer $shipmentGroupTransfer
+     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
      *
      * @return bool
      */
@@ -49,17 +53,17 @@ class DHLExpressPlugin extends AbstractPlugin implements ShipmentMethodAvailabil
 }
 ```
 
-## Price Calculation plugin
+## Price Calculation Plugin
 
-For each price calculation plugin linked to a shipment method, a class with the same name must exist on the project side in the Shipment module  (`Pyz/Zed/Shipment/Communication/Plugin/PriceCalculation`). The class must implement `ShipmentMethodPricePluginInterface` and must extend the `AbstractPlugin` class, as in the example below:
+For each price calculation plugin linked to a shipment method, a class with the same name must exist on the project side in the Shipment module  (`Pyz/Zed/Shipment/Communication/Plugin/PriceCalculation`). The class must implement `ShipmentMethodPricePluginInterface` and must extend the `AbstractPlugin` class, as in the example below :
 
 ```php
 <?php
-namespace Pyz/Zed/Shipment/Communication/Plugin/PriceCalculation;
-use Generated/Shared/Transfer/QuoteTransfer;
-use Generated/Shared/Transfer/ShipmentGroupTransfer;
-use Spryker/Zed/Kernel/Communication/AbstractPlugin;
-use Spryker/Zed/ShipmentExtension/Dependency/Plugin/ShipmentMethodPricePluginInterface;
+namespace Pyz\Zed\Shipment\Communication\Plugin\PriceCalculation;
+use Generated\Shared\Transfer\QuoteTransfer;
+use Generated\Shared\Transfer\ShipmentGroupTransfer;
+use Spryker\Zed\Kernel\Communication\AbstractPlugin;
+use Spryker\Zed\ShipmentExtension\Dependency\Plugin\ShipmentMethodPricePluginInterface;
 class DHLExpressPlugin extends AbstractPlugin implements ShipmentMethodPricePluginInterface
 {
     /**
@@ -68,8 +72,8 @@ class DHLExpressPlugin extends AbstractPlugin implements ShipmentMethodPricePlug
      *
      * @api
      *
-     * @param /Generated/Shared/Transfer/ShipmentGroupTransfer $shipmentGroupTransfer
-     * @param /Generated/Shared/Transfer/QuoteTransfer $quoteTransfer
+     * @param \Generated\Shared\Transfer\ShipmentGroupTransfer $shipmentGroupTransfer
+     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
      *
      * @return int
      */
@@ -80,25 +84,25 @@ class DHLExpressPlugin extends AbstractPlugin implements ShipmentMethodPricePlug
 }
 ```
 
-## Delivery Time plugin
+## Delivery Time Plugin
 
-For each availability plugin linked to a shipment method, a class with the same name must exist on the project side in the Shipment module (`Pyz/Zed/Shipment/Communication/Plugin/DeliveryTime`). The class must implement `ShipmentMethodDeliveryTimePluginInterface` and must extend the `AbstractPlugin` class, as in the example below:
+For each availability plugin linked to a shipment method, a class with the same name must exist on the project side in the Shipment module (`Pyz/Zed/Shipment/Communication/Plugin/DeliveryTime`). The class must implement `ShipmentMethodDeliveryTimePluginInterface` and must extend the `AbstractPlugin` class, as in the example below :
 
 ```php
 <?php
-namespace Pyz/Zed/Shipment/Communication/Plugin/DeliveryTime;
-use Generated/Shared/Transfer/QuoteTransfer;
-use Generated/Shared/Transfer/ShipmentGroupTransfer;
-use Spryker/Zed/Kernel/Communication/AbstractPlugin;
-use Spryker/Zed/ShipmentExtension/Dependency/Plugin/ShipmentMethodDeliveryTimePluginInterface;
+namespace Pyz\Zed\Shipment\Communication\Plugin\DeliveryTime;
+use Generated\Shared\Transfer\QuoteTransfer;
+use Generated\Shared\Transfer\ShipmentGroupTransfer;
+use Spryker\Zed\Kernel\Communication\AbstractPlugin;
+use Spryker\Zed\ShipmentExtension\Dependency\Plugin\ShipmentMethodDeliveryTimePluginInterface;
 class DHLExpressPlugin extends AbstractPlugin implements ShipmentMethodDeliveryTimePluginInterface
 {
     /**
      * Specification:
      *  - Returns delivery time for shipment group.
      *
-     * @param /Generated/Shared/Transfer/ShipmentGroupTransfer $shipmentGroupTransfer
-     * @param /Generated/Shared/Transfer/QuoteTransfer $quoteTransfer
+     * @param \Generated\Shared\Transfer\ShipmentGroupTransfer $shipmentGroupTransfer
+     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
      *
      * @return int
      * @api
@@ -111,9 +115,9 @@ class DHLExpressPlugin extends AbstractPlugin implements ShipmentMethodDeliveryT
 }
 ```
 
-## Plugin registration
+## Plugin Registration
 
-The plugins must be registered in the `ShipmentDependencyProvider`, by overriding the following 3 operations:
+The plugins must be registered in the `ShipmentDependencyProvider`, by overriding the following 3 operations :
 
 ```php
 <?php
@@ -153,3 +157,11 @@ protected function getDeliveryTimePlugins(Container $container)
     ];
 }
 ```
+
+We value people who contribute to improvement of our documentation:
+
+* Thank you to: [Eugen Mielke](https://github.com/eug3n) for taking the time to provide us with your feedback (August 2018).
+
+{% info_block warningBox %}
+You too can be credited in our documentation by stating that you wish to be mentioned when you send us feedback. Click "Edit on Github" (top right
+{% endinfo_block %} to send feedback for this page.)

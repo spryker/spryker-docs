@@ -7,11 +7,11 @@ redirect_from:
   - /v5/docs/en/file-details-shipment-method-storecsv
 ---
 
-This article contains information about the [Shipment Method](/docs/scos/user/features/{{page.version}}/shipment/shipment/shipment.html) and Store relation to be added to your Spryker Demo Shop.
+This article contains information about the [Shipment Method](/docs/scos/user/features/{{page.version}}/shipment-feature-overview.html) and Store relation to be added to your Spryker Demo Shop.
 
 The *shipment_method_store.csv* file contains the links between each shipment method used by each existing store.
 
-## Headers & Mandatory Fields 
+## Headers & Mandatory Fields
 These are the header fields to be included in the .csv file:
 
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |

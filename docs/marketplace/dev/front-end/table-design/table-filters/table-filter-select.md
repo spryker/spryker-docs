@@ -11,6 +11,8 @@ This article provides details about the Table Filter Select component in the Com
 Table Filter Select is a feature of the Table Component that allows filtering data via `Select` component.
 See an example below, how to use the Filter Select feature.
 
+Feature Configuration:
+
 `enabled` - will enable feature via config.  
 `items` - an array with config for each filter select.  
 
@@ -40,6 +42,27 @@ See an example below, how to use the Filter Select feature.
 </spy-table>
 ```
 
+## Feature Registration
+
+```ts
+@NgModule({
+  imports: [
+    TableModule.forRoot(),
+    TableModule.withFeatures({
+      filters: () =>
+        import('@spryker/table.feature.filters').then(
+          (m) => m.TableFiltersFeatureModule,
+        ),    
+    }),
+    TableFiltersFeatureModule.withFilterComponents({
+      select: TableFilterSelectComponent,
+    }),
+    TableFilterSelectModule,
+  ],
+})
+export class RootModule {}
+```
+
 ## Interfaces
 
 Below you can find interfaces for Table Filter Select.
@@ -62,22 +85,4 @@ export interface TableFilterSelectOptionsValue {
 }
 
 export type TableFilterSelectValue = unknown | unknown[];
-
-// Component registration
-@NgModule({
-  imports: [
-    TableModule.forRoot(),
-    TableModule.withFeatures({
-      filters: () =>
-        import('@spryker/table.feature.filters').then(
-          (m) => m.TableFiltersFeatureModule,
-        ),    
-    }),
-    TableFiltersFeatureModule.withFilterComponents({
-      select: TableFilterSelectComponent,
-    }),
-    TableFilterSelectModule,
-  ],
-})
-export class RootModule {}
 ```

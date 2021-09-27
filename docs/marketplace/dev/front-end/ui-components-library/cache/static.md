@@ -53,6 +53,7 @@ export type TimeDurationString = string;
     CacheModule.withStrategies({
       static: StaticCacheStrategy,
     }),
+    StaticCacheStrategyModule,
   ],
 })
 export class RootModule {}

@@ -7,11 +7,11 @@ template: concept-topic-template
 This article provides details about the Datasource Inline Table service in the Components Library.
 
 Datasource Inline Table is an Angular Service that allows passing transformed for the table format data along with the configuration of the Datasource.
-See an example below, how to use the Datasource Inline Table service.
+Check out this example below to see how to use the Datasource Inline Table service.
 
-`type` - a datasource type.  
-`data` - a datasource table data (usually coming from back-end).  
-`filter` - an array of filters that passes transformed for the table format data.
+- `type` - is a datasource type.  
+- `data` - is a datasource table data (usually coming from back-end).  
+- `filter` - is an array of filters that passes transformed for the table format data.
 
 ```html
 <spy-table [config]="{
@@ -58,7 +58,7 @@ See an example below, how to use the Datasource Inline Table service.
 
 ## Interfaces
 
-Below you can find interfaces for Datasource Inline Table.
+Below you can find interfaces for Datasource Inline Table service.
 
 ```ts
 export interface TableDatasourceInlineConfig extends DatasourceConfig {

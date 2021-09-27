@@ -8,10 +8,10 @@ This article provides details about the Actions service in the Components Librar
 
 ## Overview
 
-Actions responsible to handle specific actions that conform to special format within specific context (from Table, Overlay, Http Response, etc.) via Action Handlers.
-This allows backend systems to control some aspects of UI without the need to change frontend at all (ex. update table, close drawer, etc.).
+Using Action Handlers, the Actions service handles specific actions based on a specific format within a specific context (such as a Table, Overlay, HTTP Response, etc.).
+As a result, the backend can control what the UI looks like without changing anything on the frontend (for example, updating tables, closing drawers, etc.).
 
-The context within which Actions are handled is defined by the invoker of the Action (Table, Button, Http, etc).
+The context within which Actions are handled is defined by the invoker of the Action (Table, Button, Http, etc.).
 
 ```html
 <spy-button-action
@@ -25,9 +25,9 @@ The context within which Actions are handled is defined by the invoker of the Ac
 
 ## Main Service
 
-Actions is an Angular Service that implements a specific interface (`ActionHandler`) and is registered to the Action Module via `ActionModule.withActions()`. 
+Actions is an Angular Service that implements a specific interface (`ActionHandler`) and is registered in the Action Module via `ActionModule.withActions()`. 
 The main service injects all registered types from the `ActionTypesToken`.
-Trigger method finds specific service from the `ActionTypesToken` by `config.type` (from the argument) and returns observable with data by `ActionHandler.handleAction`.
+Trigger method finds specific service from the `ActionTypesToken` by the `config.type` (from the argument) and returns observable with data by `ActionHandler.handleAction`.
 
 ## Action Handler
 
@@ -100,7 +100,7 @@ export interface ActionHandler<C = unknown, R = unknown>
 
 There are a few common Actions that are available in UI library as separate packages:
 
-- [drawer](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-drawer.html) - opens component in the Drawer.  
+- <!---[drawer](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-drawer.html) - opens component in the Drawer.  -->
 - [close-drawer](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-close-drawer.html) - closes the first Drawer in the current context.  
 - [redirect](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-redirect.html) - performs the hard redirect to the URL.  
 - [refresh-drawer](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-drawer.html) - refreshes/rerenders opened Drawer in current context.  

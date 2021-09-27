@@ -419,16 +419,45 @@ entries:
           nested:
 
             - title: "Actions"
+              url: /docs/marketplace/dev/front-end/ui-components-library/actions/
               nested:
 
-                - title: "Actions Refresh Drawer"
+                - title: "HTTP"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-http.html
+
+                - title: "Refresh Parent Table"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-parent-table.html
+
+                - title: "Refresh Table"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-table.html
+
+                - title: "Redirect"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-redirect.html
+
+                - title: "Drawer"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-drawer.html
+
+                - title: "Refresh Drawer"
                   url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-drawer.html
 
-                - title: "Actions Close Drawer"
+                - title: "Close Drawer"
                   url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-close-drawer.html
 
+                - title: "Notification"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-notification.html
+
             - title: "Datasources"
-              url: /docs/marketplace/dev/front-end/ui-components-library/datasources.html
+              url: /docs/marketplace/dev/front-end/ui-components-library/datasources/
+              nested:
+
+                - title: "Inline Table"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-inline-table.html
+                
+                - title: "Http"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-http.html
+                
+                - title: "Inline"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-inline.html
 
             - title: "Data Transformers"
               url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/

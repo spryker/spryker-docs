@@ -79,6 +79,7 @@
     &--red {
         background: $red;
         border-color: $red;
+        border-width: 1px;
         color: $white;
 
         &:hover {
@@ -90,7 +91,7 @@
         &:focus {
             text-decoration: none;
             background: $red;
-            border: 1px solid $red-dark;
+            border-color: $red-dark;
             color: $white;
         }
 

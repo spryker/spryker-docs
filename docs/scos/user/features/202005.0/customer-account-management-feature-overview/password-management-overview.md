@@ -6,6 +6,8 @@ originalArticleId: 7e757e97-b24a-419b-925c-2d7ca25f4a46
 redirect_from:
   - /v5/docs/password-management-feature-overview
   - /v5/docs/en/password-management-feature-overview
+  - /v5/docs/password-management
+  - /v5/docs/en/password-management
 ---
 
 The *Password Management* feature enables Spryker admins to manage customer account passwords. It also allows B2B and B2C Shoppers to manage their own account passwords. 

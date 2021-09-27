@@ -18,15 +18,15 @@ You can create customer accounts by [importing](/docs/scos/dev/data-import/{{pag
 
 With the help of [Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-rest-api.html), you can change and reset customer account passwords. This can be useful when you want to use a single authentication in all the apps connected to your shop. See [Changing Customer’s Password](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-passwords.html#change-a-customer-s-password) and [Resetting Customer’s Password](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-passwords.html#reset-a-customers-password) to learn how a developer can do it.
 
-On the Storefront, it is mandatory to enter a password when creating a customer account. After the account is created, you can update the password in the customer account or request a password reset via email. See [Changing Account Password](/docs/scos/user/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-accounts-overview.html#changing-customer-account-password) to learn how B2B and B2C Shoppers can change account passwords.
+On the Storefront, it is mandatory to enter a password when creating a customer account. After the account is created, you can update the password in the customer account or request a password reset via email. See [Changing Account Password](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-accounts-overview.html#changing-customer-account-password) to learn how B2B and B2C Shoppers can change account passwords.
 
 ## Related Business User articles
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of Customer Account](/docs/scos/user/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-accounts-overview.html)  |
+| [Get a general idea of Customer Account](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-accounts-overview.html)  |
 | [Get a general idea of Customer Registration](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-registration-overview.html)   |
-| [Get a general idea of Customer Login](/docs/scos/user/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-login-overview.html)  |
+| [Get a general idea of Customer Login](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-login-overview.html)  |
 | [Get a general idea of Customer Groups](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-groups-overview.html)   |
 | [Get a general idea of Password Management](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/password-management-overview.html)  |
 

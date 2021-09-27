@@ -478,7 +478,11 @@ entries:
               url: /docs/marketplace/dev/front-end/ui-components-library/cache.html
 
             - title: "Persistence"
-              url: /docs/marketplace/dev/front-end/ui-components-library/persistence.html
+              url: /docs/marketplace/dev/front-end/ui-components-library/persistence/
+              nested:
+
+                - title: "Local Storage Persistence Strategy"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/persistence/local-storage-persistence-strategy.html
 
         - title: "Angular Services"
           url: /docs/marketplace/dev/front-end/angular-services.html

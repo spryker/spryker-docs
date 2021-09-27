@@ -10,7 +10,7 @@ entries:
           - title: Marketplace Application composition
             url: /docs/marketplace/dev/architecture-overview/marketplace-application-composition.html
           
-          - title: Domain model
+          - title: Marketplace domain model
             url: /docs/marketplace/dev/architecture-overview/marketplace-domain-model.html
           
           - title: Merchant Portal architecture overview

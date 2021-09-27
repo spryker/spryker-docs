@@ -15,7 +15,7 @@ This allows backend systems to control where the data is coming from without cha
 
 Datasources are used in other components like Table, Select, Autocomplete, etc.
 
-```ts
+```html
 <spy-select
   [datasource]="{
     type: 'inline',

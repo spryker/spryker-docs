@@ -1,7 +1,7 @@
 .search-popup {
-    @include media("<laptop") {
-        flex: 1 1 auto;
-    }
+    flex: 1 1 auto;
+    max-width: 612px;
+    margin: 0 auto;
 
     @include media("<desktop") {
         background: $white;
@@ -12,6 +12,7 @@
         height: 100%;
         z-index: 2002;
         display: none;
+        max-width: 100%;
     }
 
     @include media(">=desktop") {

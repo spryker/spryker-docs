@@ -12,7 +12,7 @@ This document provides details about the Data Transformer Pluck service in the C
 Data Transformer Pluck is an Angular Service that selects and returns a nested object by path via configuration.
 The `datasource` example below will return the value of the `three` key ('123') of the `data` input after receiving the response.
 
-```ts
+```html
 <spy-select
   [datasource]="{
     type: 'inline',

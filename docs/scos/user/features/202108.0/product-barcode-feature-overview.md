@@ -10,8 +10,7 @@ redirect_from:
   - /docs/en/product-barcode-feature-overview
 ---
 
-The *Product Barcode*  feature allows creating barcodes for any kind of enity. By default, barcodes are only generated for [products](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/products-overview.html).
-
+The *Product Barcode*  feature allows creating barcodes for any kind of entity. By default, barcodes are only generated for [products](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/products-overview.html).
 
 ## What is a barcode?
 
@@ -38,13 +37,10 @@ The feature also has plugins support to change the way the barcodes are generate
 
 The barcodes will help the store administrator to update the product stock numbers according to the actual information provided by the warehouse.
 
-
 Creating barcodes requires 2 main prerequisites:
 
 1. **Unique product codes for each product you offer**—These can be UPC codes that identify manufactured goods, unique SKU numbers that you use to track inventory your way, or other identifying numbers.
 2. **A system that lets you input codes to create barcodes**—Your codes need to be entered into a device or software system that can translate the numeric or alphanumeric code into a scannable barcode.
-
-
 
 Nowadays, B2B businesses face extraordinary challenges as more and more consumers are making comparisons of various e-commerce applications. To stay on top of the industry trends, improve customer experience and increase sales, every business must innovate with a deep understanding of their customer’s physical, emotional, and financial needs and triggers.
 
@@ -62,3 +58,15 @@ Barcodes are dynamically generated for concrete products. This ensures that barc
 You can see the barcodes in the **Catalog > Product Barcodes** section. The section is designed as a review; thus no actual actions are performed here. The barcode is generated automatically once a new concrete product is added.
 
 You can see Product ID, product name, SKU, and the barcode itself.
+
+## Related Business User articles
+
+|BACK OFFICE USER GUIDES|
+|---|
+| [Viewing product barcodes](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-barcodes/viewing-product-barcodes.html)  |
+
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Product Barcodes feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-barcode-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}

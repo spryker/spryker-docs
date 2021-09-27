@@ -6,6 +6,8 @@ originalArticleId: df7ddd47-0b19-449f-a624-a4c1219fbcf1
 redirect_from:
   - /v6/docs/product-bundles-feature-overview
   - /v6/docs/en/product-bundles-feature-overview
+  - /v6/docs/product-bundles
+  - /v6/docs/en/product-bundles
 ---
 
 With the Product Bundles feature you can freely tie individual items together and sell them as a package. As opposed to a set, in which products are loosely grouped, the items in a bundle are always sold together. You can choose to create a special bundle price to make the purchase more attractive. Since each bundle's product is still handled like an individual item in the Order Management Process, bundle availability is always calculated and displayed based on the item with the smallest available stock to avoid overselling.
@@ -16,7 +18,9 @@ Example:
 ![Product bundle](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Bundles/product_bundles.png)
 
 {% info_block infoBox %}
+
 Bundles are handled in different ways:<br>For example, a marketing bundle of two items that gives a 20% discount is purchased as a single item and then split for processing into its two constituent items. Another scenario is when products are put together from separate purchase items, for example when tires and rims are sold as separate items and then delivered assembled as wheels.
+
 {% endinfo_block %}
 
 
@@ -24,6 +28,7 @@ Bundles are handled in different ways:<br>For example, a marketing bundle of two
 * The availability of a bundle product is equal to the item with the lowest availability
 
 ## Product-Bundle Module
+
 Product bundles are two or more existing products combined into a new type of product for the sole purpose to be displayed as one product in the shop frontend and to be sold together. Typically the products are concrete products, because both need to be potential order items. The new (bundled) product does not physically exist in the bundled state. The Product-Bundle can be bought by customers, but in the order management system the items are handled separately, this way the shop owner can manage the products separately.
 
 ### Characteristics of Product Bundles
@@ -40,9 +45,11 @@ Product bundles are two or more existing products combined into a new type of pr
 
 
 ## Product Bundle Entity Relationship Diagram
+
 ![Product bundle entity diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Bundles/product_bundles_entity_diagram.png)
 
 ## Availability Calculation
+
 Bundle availability is calculated from bundled product availability. When bundled product availability is changed, for example state machine move through reserved flags then all bundles is updated accordingly.
 
 Bundle is updated when:
@@ -55,6 +62,7 @@ Bundle is updated when:
 
 
 ## Stock Calculation
+
 Bundle have "dynamic stock", the stock is defined by bundled products. It cannot be imported as regular products. That means a bundle will get maximum possible stock quantity based on bundled product quantity. Stock is calculated for each warehouse separately.
 
 For example.
@@ -88,7 +96,18 @@ If bundled items have quantity > 1 then it will be split as separate items in ca
 BundleProduct have price this price, it is distributed to whole bundled items. Overwriting original product price. If bundle have price 100, and there is 3 bundled products, each will get price 33,34,33 distributed, 34 is to cover rounding error.
 
 ## Persisting When Placing Order, End of Checkout
-Bundle product information is stored to `spy_sales_order_item_bundle`. When order is placed in order detail page you will see all bundled items stored as separate row. This allows process state machine separately for each item, for example (ship, refund, return, etc..).
+Bundle product information is stored to `spy_sales_order_item_bundle`. When order is placed in order detail page you will see all bundled items stored as separate row. This allows process state machine separately for each item, for example (ship, refund, return, etc.).
 
 If bundled item moves to reserved state machine state then corresponding bundle availability will be updated also.
 
+## Related Business User articles
+
+|BACK OFFICE USER GUIDES|
+|---|
+| [Create product bundles](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html)  |
+
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Product Bundles feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-bundles-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}

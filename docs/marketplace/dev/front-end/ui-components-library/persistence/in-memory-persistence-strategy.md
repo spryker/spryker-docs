@@ -1,10 +1,10 @@
 ---
 title: In Memory Persistence Strategy
-description: This article provides details about the Cache In Memory Persistence Strategy service in the Components Library.
+description: This article provides details about the In Memory Persistence Strategy service in the Components Library.
 template: concept-topic-template
 ---
 
-This article provides details about the Cache In Memory Persistence Strategy service in the Components Library.
+This article provides details about the In Memory Persistence Strategy service in the Components Library.
 
 ## Overview
 

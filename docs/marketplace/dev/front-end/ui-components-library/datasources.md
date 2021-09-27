@@ -106,4 +106,5 @@ There are a few common Datasources that are available in UI library as separate 
 
 - `inline`—Allows passing data along with the configuration of the Datasource
 - `inline.table`—Allows passing transformed for the table format data along with the configuration of the Datasource
-- `http`—Allows fetching data from URL via HTTP configured in the configuration of the Datasource. HTTP Datasource supports caching strategy (see [Cache](/docs/marketplace/dev/front-end/ui-components-library/cache.html)) that may be configured via config and used before the request is made when applicable.
+- `http`—Allows fetching data from URL via HTTP configured in the configuration of the Datasource. 
+HTTP Datasource supports caching strategy (see [Cache](/docs/marketplace/dev/front-end/ui-components-library/cache/)) that may be configured via config and used before the request is made when applicable.

@@ -10,6 +10,16 @@ redirect_from:
   - /docs/en/url
   - /v6/docs/url
   - /v6/docs/en/url
+  - /v5/docs/url
+  - /v5/docs/en/url
+  - /v4/docs/url
+  - /v4/docs/en/ur
+  - /v3/docs/url
+  - /v3/docs/en/url
+  - /v2/docs/url
+  - /v2/docs/en/ur
+  - /v1/docs/url
+  - /v1/docs/en/url
 ---
 
 The URL module handles dynamic URLs for entities that appear on the front-end (Yves). At the moment, Spryker core provides URL handling for products, CMS pages, categories and URL redirects.

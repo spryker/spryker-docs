@@ -435,7 +435,7 @@ entries:
                   url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-redirect.html
 
                 - title: "Drawer"
-                    url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-drawer.html
+                  url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-drawer.html
 
                 - title: "Refresh Drawer"
                   url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-drawer.html

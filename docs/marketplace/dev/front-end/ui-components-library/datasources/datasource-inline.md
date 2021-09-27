@@ -11,8 +11,8 @@ This article provides details about the Datasource Inline service in the Compone
 Datasource Inline is an Angular Service that allows passing data along with the configuration of the Datasource.
 Check out this example below to see how to use the Datasource Inline service.
 
-- `type` - a datasource type.  
-- `data` - a datasource data.  
+- `type` - is a datasource type.  
+- `data` - is a datasource data.  
 
 ```html
 <spy-select

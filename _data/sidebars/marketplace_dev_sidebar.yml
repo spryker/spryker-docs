@@ -450,6 +450,9 @@ entries:
               url: /docs/marketplace/dev/front-end/ui-components-library/datasources/
               nested:
 
+                - title: "Http"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-http.html
+
                 - title: "Inline"
                   url: /docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-inline.html
 

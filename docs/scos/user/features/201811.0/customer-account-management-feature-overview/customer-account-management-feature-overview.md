@@ -6,6 +6,8 @@ originalArticleId: aa31b439-134a-4f99-87c7-3b225249aac0
 redirect_from:
   - /v1/docs/customer-accounts
   - /v1/docs/en/customer-accounts
+  - /v1/docs/crm
+  - /v1/docs/en/crm
 ---
 
 Let your customers create an Account to save their personal details.

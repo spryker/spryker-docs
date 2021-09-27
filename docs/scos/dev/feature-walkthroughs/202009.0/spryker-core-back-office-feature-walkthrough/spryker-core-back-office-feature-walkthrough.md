@@ -17,4 +17,4 @@ To learn more about the feature and to find out how end users use it, see [Spryk
 |INTEGRATION GUIDES  | REFERENCES|
 |---------|---------|
 | [Spryker Core Back Office feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/spryker-core-back-office-feature-integration.html)  | [Back Office Translations overview](/docs/scos/dev/feature-walkthroughs/{{page.version}}/spryker-core-back-office-feature-walkthrough/back-office-translations-overview.html) |
-| [Microsoft Azure Active Directory](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/microsoft-azure-active-directory.html)   | [Users and rights overview](/docs/scos/dev/feature-walkthroughs/{{page.version}}/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html)  |
+| [Microsoft Azure Active Directory](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/microsoft-azure-active-directory.html)   | |

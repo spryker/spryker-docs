@@ -26,7 +26,7 @@ Password configuration comes with a brute force attack protection: after a certa
 #### Documentation
 
 * [Customer Registration overview](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-registration-overview.html#customer-registration-overview)
-* [Customer Login overview](/docs/scos/user/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-login-overview.html)
+* [Customer Login overview](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-login-overview.html)
 
 
 ### Identity Access Manager: Back Office Login

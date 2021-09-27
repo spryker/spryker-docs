@@ -1,11 +1,13 @@
 ---
-title: Customer Accounts
+title: Customer Account Management feature overview
 description: Let your customers create an Account to save their contact details, addresses, order history and preferences, such as language and shipping options.
-originalLink: https://documentation.spryker.com/v2/docs/customer-accounts
-originalArticleId: 9f79edff-00cb-4f19-8866-3af7ab7c9d82
+originalLink: https://documentation.spryker.com/v5/docs/customer-accounts
+originalArticleId: 88823f33-da87-45c0-b6c0-b780bafabeb4
 redirect_from:
-  - /v2/docs/customer-accounts
-  - /v2/docs/en/customer-accounts
+  - /v5/docs/customer-accounts
+  - /v5/docs/en/customer-accounts
+  - /v5/docs/crm
+  - /v5/docs/en/crm
 ---
 
 Let your customers create an Account to save their personal details.
@@ -30,7 +32,8 @@ There are slight differences in customer accounts' information for the B2B and B
 | Shopping Carts | v |  |
 | Wishlist |  | v |
 
-As a Back Office user, you can view and edit your customer's account details and check their orders and order history.
+As a Back Office user, you can view and edit your customer's account details and check their orders and order history. For internal references, each customer account can be enhanced with notes. This will allow an easier customer management
+in your organization.
 
 {% info_block infoBox %}
 The customer accounts can be managed by customers directly on the Yves side. If updates are done by a customer, the data is synchronized and shop administrator will see the relevant information in the **Back Office > Customers > Customers** section. The exceptions are newsletter subscription and password change, as this information is not stored in Zed.

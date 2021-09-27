@@ -28,7 +28,7 @@ See an example below, how to use the Local Storage Persistence Strategy service.
 
 ## Interfaces
 
-Below you can find interfaces for the In Memory Persistence Strategy.
+Below you can find interfaces for the Local Storage Persistence Strategy.
 
 ```ts
 interface LocalStoragePersistenceStrategy extends PersistenceStrategy {

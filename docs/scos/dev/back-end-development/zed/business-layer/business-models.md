@@ -59,7 +59,7 @@ class KeyManager implements KeyManagerInterface
 ...
 ```
 
-As you can see, the `KeyManagerdepends` class on two other classes which are specified by their related interfaces. The constructor gets them injected and provides them as properties for the model’s methods. Please obey that the `KeyManager` implements a `KeyManagerInterface` that is used by other models who depend on the `KeyManager`.
+As you can see, the `KeyManager` class depends on two other classes which are specified by their related interfaces. The constructor gets them injected and provides them as properties for the model’s methods. Please obey that the `KeyManager` implements a `KeyManagerInterface` that is used by other models who depend on the `KeyManager`.
 
 Every business model ships with an interface which exposes all public methods.
 

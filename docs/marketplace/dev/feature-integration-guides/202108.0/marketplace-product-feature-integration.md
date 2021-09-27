@@ -17,9 +17,9 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE        |
 | --------------- | -------- | ------------------ |
-| Spryker Core         | {{page.version}}      | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Marketplace Merchant | {{page.version}}      | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
-| Product   | {{page.version}}      | [Product feature integration](https://documentation.spryker.com/docs/product-feature-integration) |
+| Spryker Core         | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
+| Product   | {{page.version}} | [Product feature integration](https://documentation.spryker.com/docs/product-feature-integration) |
 
 ### 1) Install the required modules using Composer
 
@@ -43,7 +43,7 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up the database schema
+### 2) Set up the database schema and transfer objects
 
 Adjust the schema definition so entity changes trigger events:
 
@@ -84,8 +84,6 @@ Verify the following changes by checking your database
 
 {% endinfo_block %}
 
-### 3) Set up transfer objects
-
 Generate transfer changes:
 
 ```bash
@@ -108,7 +106,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 4) Add Zed translations
+### 3) Add translations
 
 Generate a new translation cache for Zed:
 
@@ -116,7 +114,7 @@ Generate a new translation cache for Zed:
 console translator:generate-cache
 ```
 
-### 5) Configure export to Elasticsearch
+### 4) Configure export to Elasticsearch
 
 This step publishes tables on change (create, edit) to `spy_product_search`, `spy_product_abstract_page_search`, `spy_product_concrete_page_search` and synchronizes the data to Search.
 
@@ -152,7 +150,7 @@ Make sure that when merchant product entities are created or updated through ORM
 
 {% endinfo_block %}
 
-### 6) Set up behavior
+### 5) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
@@ -164,7 +162,11 @@ Enable the following behaviors by registering the plugins:
 | MerchantProductAbstractMapExpanderPlugin                     | Adds merchant names to product abstract search data.         |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
 | MerchantProductPageDataExpanderPlugin                        | Expands the provided ProductAbstractPageSearch transfer object's data by merchant names. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
 | MerchantProductPageDataLoaderPlugin                          | Expands ProductPageLoadTransfer object with merchant data.   |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
+| Merchant\MerchantProductSearchWritePublisherPlugin           | Publishes the product by merchant ids to ES. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher |
+| MerchantProduct\MerchantProductSearchWritePublisherPlugin    | Publishes the product by merchant product abstract ids to ES. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher |
 | MerchantProductAbstractStorageExpanderPlugin                 | Expands product abstract storage data with merchant references. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\ProductStorage |
+| MerchantUpdatePublisherPlugin                                | Publishes the product by merchant ids to Redis. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\Merchant |
+| MerchantProductWritePublisherPlugin                          | Publishes the product by merchant product abstract ids to Redis. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\MerchantProduct |
 | MerchantProductProductAbstractPostCreatePlugin | Creates a new merchant product abstract entity if `ProductAbstractTransfer.idMerchant` is set. | None | Spryker\Zed\MerchantProduct\Communication\Plugin\Product |
 
 **src/Pyz/Zed/Product/ProductDependencyProvider.php**
@@ -257,6 +259,7 @@ namespace Pyz\Zed\ProductPageSearch;
 use Spryker\Shared\MerchantProductSearch\MerchantProductSearchConfig;
 use Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch\MerchantProductAbstractMapExpanderPlugin;
 use Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch\MerchantProductPageDataExpanderPlugin as MerchantMerchantProductPageDataExpanderPlugin;
+use Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch\MerchantProductPageDataLoaderPlugin as MerchantMerchantProductPageDataLoaderPlugin;
 use Spryker\Zed\ProductPageSearch\ProductPageSearchDependencyProvider as SprykerProductPageSearchDependencyProvider;
 
 class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDependencyProvider
@@ -281,12 +284,67 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
             new MerchantProductAbstractMapExpanderPlugin(),
         ];
     }
+
+    /**
+     * @return \Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductPageDataLoaderPluginInterface[]
+     */
+    protected function getDataLoaderPlugins()
+    {
+        return [
+            new MerchantMerchantProductPageDataLoaderPlugin(),
+        ];
+    }
 }
 ```
 
 {% info_block warningBox "Verification" %}
 
 Make sure the `de_page` Elasticsearch index for any product that belongs (see `spy_merchant_product_abstract`) to active and approved merchant, contains merchant names. (indexes can be accessed by any Elasticsearch client, e.g., Kibana. For Docker configuration details, see [Configuring services](https://documentation.spryker.com/docs/services).
+
+{% endinfo_block %}
+
+**src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Publisher;
+
+use Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher\Merchant\MerchantProductSearchWritePublisherPlugin as MerchantMerchantProductSearchWritePublisherPlugin;
+use Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher\MerchantProduct\MerchantProductSearchWritePublisherPlugin;
+use Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\Merchant\MerchantUpdatePublisherPlugin;
+use Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\MerchantProduct\MerchantProductWritePublisherPlugin;
+use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
+
+class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
+{
+    /**
+     * @return \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface[]
+     */
+    protected function getMerchantProductPlugins(): array
+    {
+        return [
+            new MerchantProductWritePublisherPlugin(),
+            new MerchantUpdatePublisherPlugin(),
+        ];
+    }
+
+    /**
+     * @return \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface[]
+     */
+    protected function getMerchantProductSearchPlugins()
+    {
+        return [
+            new MerchantMerchantProductSearchWritePublisherPlugin(),
+            new MerchantProductSearchWritePublisherPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that merchant product data appears in search engine and in storage.
 
 {% endinfo_block %}
 
@@ -314,15 +372,13 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 }
 ```
 
----
-
 {% info_block warningBox "Verification" %}
 
 Make sure that data contains `merchant_references`'s for merchant products in the `spy_product_abstract_storage`.
 
 {% endinfo_block %}
 
-### 7) Import merchant product data
+### 6) Import merchant product data
 
 Prepare your data according to your requirements using the demo data:
 

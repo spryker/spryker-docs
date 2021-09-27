@@ -41,7 +41,7 @@ The file should have the following parameters:
 
 ## Import file dependencies
 The file has the following dependencies:
-- [merchant.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant-csv.html)
+- [merchant.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant.csv.html)
 - [glossary.csv](https://documentation.spryker.com/docs/file-details-glossarycsv)
 
 ## Import template file and content example

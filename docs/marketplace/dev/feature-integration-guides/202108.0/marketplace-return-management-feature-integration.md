@@ -1,6 +1,6 @@
 ---
 title: Marketplace Return Management feature integration
-last_updated: Apr 7, 2021
+last_updated: Sep 14, 2021
 description: This document describes the process how to integrate the Marketplace Return Management feature into a Spryker project.
 template: feature-integration-guide-template
 ---
@@ -130,7 +130,7 @@ Add the following configuration:
     </transitions>
 
     <events>
-      <event name="refund" manual="true" command="DummyMarketplacePayment/Refund"/>
+      <event name="refund" manual="true" command="MarketplaceOrder/Refund"/>
     </events>
   </process>
 
@@ -421,14 +421,12 @@ Enable the following behaviors by adding and registering the plugins:
 | MerchantReturnCreateRequestValidatorPlugin | Checks if each item in the `itemTransfers` has the same merchant reference. |  |   Spryker\Zed\MerchantSalesReturn\Communication\Plugin |
 | MerchantReturnExpanderPlugin | Expands `Return` transfer object with merchant orders. |  |   Spryker\Zed\MerchantSalesReturn\Communication\Plugin\SalesReturn |
 | CancelReturnMarketplaceOrderItemCommandPlugin | Triggers 'cancel-return' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
-| DeliverMarketplaceOrderItemCommandPlugin | Triggers 'deliver' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
 | DeliverReturnMarketplaceOrderItemCommandPlugin | Triggers 'deliver-return' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
 | ExecuteReturnMarketplaceOrderItemCommandPlugin | Triggers 'execute-return' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
 | RefundMarketplaceOrderItemCommandPlugin | Triggers 'refund' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
 | ReturnMerchantOrderItemCommandPlugin | Triggers 'start-return' event on a marketplace order item, initiate return. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
-| ShipByMerchantMarketplaceOrderItemCommandPlugin | Triggers 'ship by merchant' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
 | ShipReturnMarketplaceOrderItemCommandPlugin | Triggers 'ship-return' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
-| MerchantReturnCreateTemplatePlugin |  Replace the template, that renders item table on return create page in Zed. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
+| MerchantReturnCreateTemplatePlugin |  Replace the template, that renders item table on return create page in Zed. |  |   Spryker\Zed\MerchantSalesReturnGui\Communication\Plugin\SalesReturnGui |
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/SalesReturn/SalesReturnDependencyProvider.php</summary>
@@ -565,31 +563,6 @@ class CancelReturnMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsEv
     public function getEventName(): string
     {
         return static::EVENT_CANCEL_RETURN;
-    }
-}
-
-```
-
-</details>
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/DeliverMarketplaceOrderItemCommandPlugin.php</summary>
-
-```php
-<?php
-
-namespace Pyz\Zed\MerchantOms\Communication\Plugin\Oms;
-
-class DeliverMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsEventCommandPlugin
-{
-    protected const EVENT_DELIVER = 'deliver';
-
-    /**
-     * @return string
-     */
-    public function getEventName(): string
-    {
-        return static::EVENT_DELIVER;
     }
 }
 
@@ -748,31 +721,6 @@ class ReturnMerchantOrderItemCommandPlugin extends AbstractPlugin implements Com
 </details>
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/ShipByMerchantMarketplaceOrderItemCommandPlugin.php</summary>
-
-```php
-<?php
-
-namespace Pyz\Zed\MerchantOms\Communication\Plugin\Oms;
-
-class ShipByMerchantMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsEventCommandPlugin
-{
-    protected const EVENT_SHIP_BY_MERCHANT = 'ship by merchant';
-
-    /**
-     * @return string
-     */
-    public function getEventName(): string
-    {
-        return static::EVENT_SHIP_BY_MERCHANT;
-    }
-}
-
-```
-
-</details>
-
-<details>
 <summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/ShipReturnMarketplaceOrderItemCommandPlugin.php</summary>
 
 ```php
@@ -820,11 +768,10 @@ class MerchantOmsDependencyProvider extends SprykerMerchantOmsDependencyProvider
     protected function getStateMachineCommandPlugins(): array
     {
         return [
-            'DummyMarketplacePayment/Refund' => new RefundMarketplaceOrderItemCommandPlugin(),
+            'MarketplaceOrder/Refund' => new RefundMarketplaceOrderItemCommandPlugin(),
             'MarketplaceReturn/CancelReturnForOrderItem' => new CancelReturnMarketplaceOrderItemCommandPlugin(),
             'MarketplaceReturn/DeliverReturnForOrderItem' => new DeliverReturnMarketplaceOrderItemCommandPlugin(),
             'MarketplaceReturn/ExecuteReturnForOrderItem' => new ExecuteReturnMarketplaceOrderItemCommandPlugin(),
-            'MarketplaceReturn/RefundForOrderItem' => new RefundMarketplaceOrderItemCommandPlugin(),
             'MarketplaceReturn/ShipReturnForOrderItem' => new ShipReturnMarketplaceOrderItemCommandPlugin(),
         ];
     }

@@ -105,6 +105,6 @@ export interface Datasource<D = unknown, C = unknown> {
 There are a few common Datasources that are available in UI library as separate packages
 
 - [inline](/docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-inline.html) — Allows passing data along with the configuration of the Datasource.
-- `inline.table`—Allows passing transformed for the table format data along with the configuration of the Datasource
+- [inline.table](/docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-inline-table.html) — Allows passing transformed for the table format data along with the configuration of the Datasource
 - [http](/docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-http.html) — Allows fetching data from URL via HTTP configured in the configuration of the Datasource. 
 HTTP Datasource supports caching strategy (see [Cache](/docs/marketplace/dev/front-end/ui-components-library/cache.html)) that may be configured via config and used before the request is made when applicable.

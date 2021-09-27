@@ -70,6 +70,11 @@ export interface TableDatasourceInlineConfig extends DatasourceConfig {
   transformerByPropName?: Record<string, string>;
 }
 
+export interface DataTransformerFilterConfig {
+  type: string;
+  propNames: string | string[];
+}
+
 // Component registration
 @NgModule({
   imports: [

@@ -6,6 +6,10 @@
     margin: 0;
     list-style: none;
 
+    @include media("<desktop") {
+        font-size: 16px;
+    }
+
     $sel: 'ul';
     @for $i from 0 through 5 {
         $sel: if($i == 0, "ul", selector-nest($sel, "ul"));
@@ -15,23 +19,42 @@
                 &__opener {
                     padding-left: 68px + 16px * $i;
 
+                    @include media("<desktop") {
+                        padding-left: 18px + 24px * $i;
+                    }
+
                     &--small {
                         left: 32px + 16px * $i;
+
+                        @include media("<desktop") {
+                            left: auto;
+                        }
                     }
                 }
 
                 &__link {
-                    padding-left: 52px + 16px * $i;
+                    padding-left: 68px + 16px * $i;
+
+                    @include media("<desktop") {
+                        padding-left: 18px + 24px * $i;
+                    }
 
                     &--shifted {
                         padding-left: 68px + 16px * $i;
-                        font-weight: bold;
+
+                        @include media("<desktop") {
+                            padding-left: 18px + 24px * $i;
+                        }
                     }
                 }
             }
 
             [class*=icon-] {
                 left: 28px + 16px * $i;
+
+                @include media("<desktop") {
+                    left: auto;
+                }
             }
         }
     }
@@ -42,6 +65,10 @@
         list-style: none;
         display: none;
 
+        @include media("<desktop") {
+            background: $grey-lightest;
+        }
+
         .sidebar-nav__title {
             font-weight: normal;
         }
@@ -49,6 +76,23 @@
 
     li {
         position: relative;
+    }
+
+    & > li {
+        @include media("<desktop") {
+            border-bottom: 1px solid $grey-lighten;
+        }
+
+        & > .sidebar-nav__link,
+        & > a > .sidebar-nav__title {
+            font-weight: bold;
+        }
+
+        & > ul {
+            @include media("<desktop") {
+                border-top: 1px solid $grey-lighten;
+            }
+        }
     }
 
     &__link {
@@ -59,18 +103,36 @@
         position: relative;
         word-break: break-word;
 
+        @include media("<desktop") {
+            border-left-width: 6px;
+            padding: 14px 50px 14px 18px;
+        }
+
         &:hover {
-            background: $grey-lighten;
+            text-decoration: none;
+
+            @include hover {
+                background: $grey-lighten;
+            }
+        }
+
+        &:focus {
             text-decoration: none;
         }
     }
 
-    .active {
+    .active-page-item {
         & > .sidebar-nav__link {
             border-left-color: $red;
             background: $grey-lighten;
-        }
 
+            @include media("<desktop") {
+                background: none;
+            }
+        }
+    }
+
+    .active {
         & > .sidebar-nav__opener {
             [class*="icon-"] {
                 transform: rotate(90deg);
@@ -86,13 +148,25 @@
         display: flex;
         position: relative;
         border-left: 4px solid transparent;
+        align-items: center;
+
+        @include media("<desktop") {
+            padding: 14px 50px 14px 18px;
+        }
 
         &:hover {
             text-decoration: none;
-            background: $grey-lighten;
-            [class*="icon-"] {
+
+            @include hover {
                 background: $grey-lighten;
+                [class*="icon-"] {
+                    background: $grey-lighten;
+                }
             }
+        }
+
+        &:focus {
+            text-decoration: none;
         }
 
         [class*="icon-"] {
@@ -112,6 +186,16 @@
             z-index: 2;
             top: 8px;
             left: 12px;
+
+            @include media("<desktop") {
+                width: 32px;
+                height: 32px;
+                background: $grey-lighten;
+                margin: 0;
+                right: 10px;
+                left: auto;
+                top: 9px;
+            }
         }
 
         &--small {
@@ -124,8 +208,18 @@
             margin: 0;
             border-radius: 2px;
 
+            @include media("<desktop") {
+                background: $grey-lighten;
+                margin: 0;
+                right: 10px;
+                left: auto;
+                top: 9px;
+            }
+
             &:hover {
-                background: rgba(0,0,0,.15);
+                @include hover {
+                    background: rgba(0,0,0,.15);
+                }
             }
 
             .sidebar-nav__title {
@@ -144,5 +238,6 @@
         flex: 1 1 auto;
         display: block;
         word-break: break-word;
+        font-weight: normal;
     }
 }

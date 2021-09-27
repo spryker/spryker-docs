@@ -1,0 +1,24 @@
+.badge {
+    display: inline-block;
+    vertical-align: baseline;
+    color: $white;
+    background: $darkest;
+    font-size: .8em;
+    line-height: 1;
+    font-weight: 800;
+    padding: .5em .7em;
+    border-radius: 1.5em;
+    margin: 0 0 0 1em;
+
+    &:empty {
+        display: none;
+    }
+
+    &--grey {
+        background: $grey;
+    }
+
+    &--red {
+        background: $red;
+    }
+}

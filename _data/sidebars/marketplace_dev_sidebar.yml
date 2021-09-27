@@ -446,7 +446,7 @@ entries:
               url: /docs/marketplace/dev/front-end/ui-components-library/datasources/
               nested:
 
-                - title: "Datasource Inline"
+                - title: "Inline"
                   url: /docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-inline.html
 
             - title: "Data Transformers"

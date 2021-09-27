@@ -12,7 +12,7 @@ Datasource Inline is an Angular Service that allows passing data along with the 
 See an example below, how to use the Datasource Inline service.
 
 `type` - a datasource type.  
-`data` - a datasource data (usually coming from back-end).  
+`data` - a datasource data.  
 
 ```html
 <spy-select

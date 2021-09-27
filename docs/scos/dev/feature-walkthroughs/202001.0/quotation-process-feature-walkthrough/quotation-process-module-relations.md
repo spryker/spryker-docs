@@ -1,11 +1,11 @@
 ---
 title: Quotation Process module relations
 description: The article describes the Quotation Process feature, its statuses, and workflow (by a customer, sales representative, agent account and interaction with approval process.
-originalLink: https://documentation.spryker.com/v6/docs/quotation-process-module-relations
-originalArticleId: ac631ac7-189d-46e7-beb7-f4d0ff03de12
-redirect_from:
-  - /v6/docs/quotation-process-module-relations
-  - /v6/docs/en/quotation-process-module-relations
+  originalLink: https://documentation.spryker.com/v5/docs/quotation-process-rfq-module-relations
+  originalArticleId: 9fc2a532-83e7-4266-8814-74b861ab716e
+  redirect_from:
+    - /v5/docs/quotation-process-rfq-module-relations
+    - /v5/docs/en/quotation-process-rfq-module-relations
 ---
 
 On this page, you can find the module relations for the [Quotation Process](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html){target="_blank"} feature.

@@ -95,8 +95,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 [**Tax**](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html):
 [Manage Tax Rates & Sets](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html)
 
-[**Promotions & Discounts**](/docs/scos/user/features/{{page.version}}/promotions-and-discounts/promotions-and-discounts.html):
-[Discounts](/docs/scos/user/features/{{page.version}}/promotions-and-discounts/promotions-and-discounts.html)
+[**Promotions & Discounts**](/docs/scos/user/features/{{page.version}}/promotions-and-discounts-feature-overview.html)
 
 [**Wishlist**](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html):
 

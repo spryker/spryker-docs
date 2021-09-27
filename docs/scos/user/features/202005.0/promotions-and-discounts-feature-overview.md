@@ -1,13 +1,15 @@
 ---
 title: Promotions & Discounts feature overview
 description: The feature allows creating different types of discounts and applying multiple in-built discount settings suitable for any business requirements.
-originalLink: https://documentation.spryker.com/v6/docs/promotions-discounts-feature-overview
-originalArticleId: 39abbc97-14d8-46ef-b7a1-b43859527e02
+originalLink: https://documentation.spryker.com/v5/docs/discount-feature-overview
+originalArticleId: b06f46bd-0db1-4987-9704-a787351316cb
 redirect_from:
-  - /v6/docs/promotions-discounts-feature-overview
-  - /v6/docs/en/promotions-discounts-feature-overview
-  - /v6/docs/promotions-discounts
-  - /v6/docs/en/promotions-discounts
+  - /v5/docs/discount-feature-overview
+  - /v5/docs/en/discount-feature-overview
+  - /v5/docs/discount
+  - /v5/docs/en/discount
+  - /v5/docs/promotions-discount
+  - /v5/docs/en/promotions-discount
 ---
 
 The Promotions & Discounts feature enables product catalog managers to provide free value to their customers by discounting a percentage or a fixed sum of an order's subtotal or an item's price on predefined conditions.

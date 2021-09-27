@@ -170,4 +170,4 @@ There are a few common Cache Strategies that are available in UI library as sepa
 
 ## Related articles
 
-[Persistence](/docs/marketplace/dev/front-end/ui-components-library/persistence.html)
+[Persistence](/docs/marketplace/dev/front-end/ui-components-library/persistence/)

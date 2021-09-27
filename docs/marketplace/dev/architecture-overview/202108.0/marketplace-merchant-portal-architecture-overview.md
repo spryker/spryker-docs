@@ -30,4 +30,4 @@ The main database contains all the data of your system. It consists of the Merch
 Keep this in mind while developing custom functionality for the MerchantPortal. See [How to add a custom page on MerchantPortal here](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-merchant-portal-core-feature-walkthrough/marketplace-merchant-portal-how-to-add-a-page.html) for more details.
 
 To provide an additional layer of protection for sensitive data, we have developed Persistence ACL for MerchantPortal. It filters all the data coming from the database on query level. 
-Check [MerchantPortal ACL](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-merchant-portal-core-feature-walkthrough/marketplace-merchant-portal-acl.html) to learn more details about Persistence ACL for the MerchantPortal.
+Check [MerchantPortal ACL](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-merchant-portal-core-feature-walkthrough/marketplace-merchant-portal-acl.html) to learn more about Persistence ACL for the MerchantPortal.

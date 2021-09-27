@@ -1,13 +1,11 @@
 ---
 title: Product Sets feature overview
 description: Learn about the modules that build up the Product Set feature
-originalLink: https://documentation.spryker.com/v6/docs/product-sets-feature-overview
-originalArticleId: 253bf091-8863-46b5-a580-d9520e2c5a70
+originalLink: https://documentation.spryker.com/v3/docs/product-set
+originalArticleId: ca66d085-e4b8-4179-9406-68427edfb27b
 redirect_from:
-  - /v6/docs/product-sets-feature-overview
-  - /v6/docs/en/product-sets-feature-overview
-  - /v6/docs/product-set
-  - /v6/docs/en/product-set
+  - /v3/docs/product-set
+  - /v3/docs/en/product-set
 ---
 
 The *Product Sets* feature allows you to create and sell collections of products. For example, you can create a stationary workspace set, a set of clothing or accessories, or furniture for a specific room.

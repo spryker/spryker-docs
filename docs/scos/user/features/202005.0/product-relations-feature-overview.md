@@ -6,6 +6,8 @@ originalArticleId: 2cdc7608-e904-4733-97a8-74e37edb333a
 redirect_from:
   - /v5/docs/product-relations-feature-overview
   - /v5/docs/en/product-relations-feature-overview
+  - /v5/docs/cross-sell-upsell
+  - /v5/docs/en/cross-sell-upsell
 ---
 
 The Product Relations feature enables product catalog managers to create logical relations between products based on their actual properties. Product relations are displayed on the Storefront to achieve multiple purposes.

@@ -6,14 +6,19 @@ originalArticleId: ac631ac7-189d-46e7-beb7-f4d0ff03de12
 redirect_from:
   - /v6/docs/quotation-process-feature-overview
   - /v6/docs/en/quotation-process-feature-overview
+  - /v6/docs/quotation-process
+  - /v6/docs/en/quotation-process
 ---
 
-| Definition | Description |
+| DEFINITION | DESCRIPTION |
 | --- | --- |
-|Buyer  |A company user who can create a Request for quote (RFQ)  |
+|Buyer  | Company user who can create a Request for quote (RFQ)  |
 |Sales representative (sales rep)  | A person who is eligible for reviewing the submitted RFQs |
-|Shipment cost | A price calculated for the shipment services. |
-**Request for Quote (RFQ)** is a request that a B2B buyer sends to their suppliers stating that they would like to get a quoted price on particular products with the details about the packaging and volumes they need. 
+|Shipment cost | Price calculated for the shipment services. |
+
+With the *Quotation Process* feature the B2B customers ask for special prices, and suppliers can get back to them with a compromise pricing suggestion.
+
+**Request for Quote (RFQ)** is a request that a B2B buyer sends to their suppliers stating that they would like to get a quoted price on particular products with the details about the packaging and volumes they need.
 Within the Spryker Commerce OS, RFQ is represented by the ability of a sales representative to see the list of quotes, check and edit them, thereby change and overwrite the prices for the products, view and edit shipment cost in the RFQ for a certain buyer. In turn, a buyer is able to create an RFQ from a shopping cart, add a note to it and bid for lower prices, as well as define a delivery address and select a shipment method. An RFQ can also specify the timeline for delivery, a date by which the proposal should be submitted, and the history of the negotiations.
 One of the RFQ features is a tool for creating special offers for buyers with limited validity. For example, a sales representative can update the prices for products in the RFQ and set the exact time until which this offer is valid, e.g., the 29th of December, 2019, 11:58 PM. If the buyer tries to proceed with this RFQ to checkout on the 29th of December, 2019, at 11:59 PM, then this RFQ will not be available.
 ![RFQ Validity](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Quotation+process+and+RFQ/Quotation+Process+&+RFQ+Feature+Overview/valid-till.png)
@@ -21,6 +26,7 @@ One of the RFQ features is a tool for creating special offers for buyers with li
 To view how to create and mange RFQs, see [Quotation process & RFQ on the Storefront](#quotation-process-rfq-on-the-storefront).
 
 ## RFQ statuses
+
 The RFQ can have the following statuses:
 
 * _Draft_—the RFQ is successfully created but not sent to a sales representative or customer (see RFQ Workflows to understand the RFQ process).
@@ -41,11 +47,11 @@ A buyer can create a quote request the product prices from a shopping cart.
 
 To view how to create and mange RFQs, see [Quotation process & RFQ on the Storefront](#quotation-process-rfq-on-the-storefront).
 
-After submitting the request, RFQ gets to the status **Draft**. 
+After submitting the request, RFQ gets to the status **Draft**.
 
 For the Draft RFQ, a buyer can:
 
-* Add one or multiple delivery addresses. 
+* Add one or multiple delivery addresses.
 * Select shipment methods to quote request items.
 * Check the version information.
 * Edit and add/remove products.
@@ -55,12 +61,13 @@ Once the buyers are done editing the Draft RFQ, they can send it to a sales repr
 
 After the sales representative has processed the request, the buyer gets it back with the status **Ready**. At this point, if buyers are satisfied with such a request, they can convert the RFQ to the cart, and after that, proceed to checkout. When the order is placed, the RFQ receives the **Closed** status.
 
-If they aren't satisfied and would like to negotiate the price further, they can **Revise** the RFQ and move it back to the **Draft** status. The RFQ obtains a new RFQ version. 
+If they aren't satisfied and would like to negotiate the price further, they can **Revise** the RFQ and move it back to the **Draft** status. The RFQ obtains a new RFQ version.
 
 Schematically, the workflow is shown below:
 ![Buyer's Workflow](https://confluence-connect.gliffy.net/embed/image/0dedd086-45ab-494d-a2f8-04c92501a229.png?utm_medium=live&utm_source=custom)
 
 ### Sales representative workflow
+
 A sales representative can create an RFQ using two working procedures:
 * Via an [agent](/docs/scos/user/features/{{page.version}}/agent-assist-feature-overview.html) account.
 * On behalf of a company user.
@@ -94,7 +101,7 @@ The workflow with statuses for a sales representative is presented in the schema
 When a sales representative creates an RFQ, it has the **Show the latest version to customer** checkbox empty by default. It means that the buyer cannot see the latest updated version of the RFQ (for example, with the changed prices) until the **Show the latest version to customer** checkbox is selected.  The buyer can see the **In Progress** status for the RFQ.
 
 ## RFQ versioning
-Versioning implies management of multiple variants of the same RFQ, all of which have same general details but include the customized data (for example, prices for the same products in the different versions of the RFQ can vary). Every RFQ receives specific identifiers, such as DE--1-Y-X, where: 
+Versioning implies management of multiple variants of the same RFQ, all of which have same general details but include the customized data (for example, prices for the same products in the different versions of the RFQ can vary). Every RFQ receives specific identifiers, such as DE--1-Y-X, where:
 
 * DE--1—customer reference
 * Y—number of the request of the customer
@@ -173,4 +180,11 @@ Agents can perform the same actions (on company users' behalf) as company users.
 ## Current constraints
 
 * According to the current setup, shipping cost is not included in the RFQ process and is added afterward, during checkout.
-* Request for Quote does not work with the product bundles. 
+* Request for Quote does not work with the product bundles.
+
+
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Quotation Process feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/quotation-process-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}

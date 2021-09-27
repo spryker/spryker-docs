@@ -1,8 +1,8 @@
 ---
-title: Quotation Process- module relations
-description: On this page, you can find module relations for the RFQ feature provided by Spryker.
+title: Quotation Process module relations
+description: The article describes the Quotation Process feature, its statuses, and workflow (by a customer, sales representative, agent account and interaction with approval process.
 originalLink: https://documentation.spryker.com/v6/docs/quotation-process-module-relations
-originalArticleId: 5b061adf-a8a8-4d77-88ff-84859e02effc
+originalArticleId: ac631ac7-189d-46e7-beb7-f4d0ff03de12
 redirect_from:
   - /v6/docs/quotation-process-module-relations
   - /v6/docs/en/quotation-process-module-relations

@@ -11,9 +11,9 @@ This article provides details about the Actions Drawer service in the Components
 Actions Drawer is an Angular Service that opens the Drawer with a component/template.
 See an example below, how to use the Actions Drawer service.
 
-`type` - an action type. 
-`component` - a component name. 
-`options` - an object with a component options. 
+- `type` - an action type. 
+- `component` - a component name. 
+- `options` - an object with a component options. 
  - `inputs` - inputs of the component. 
 
 ```html

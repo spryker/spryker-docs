@@ -8,14 +8,13 @@ This article provides details about the Datasource Http service in the Component
 
 ## Overview
 
-Datasource Http is an Angular Service that allows fetching data from URL via HTTP configured in the configuration of the Datasource. 
-Datasource Http supports caching strategy (see [Cache](/docs/marketplace/dev/front-end/ui-components-library/cache.html)) 
-that may be configured via config and used before the request is made when applicable.
+Datasource Http is an Angular Service that fetches data from URLs via HTTP as configured in the Datasource configuration.
+Datasource Http supports caching strategy (see [Cache](/docs/marketplace/dev/front-end/ui-components-library/cache.html)) that can be configured via config and used before the request is made, when applicable.
 See an example below, how to use the Datasource Http service.
 
-`type` - a datasource type.  
-`url` - a datasource request URL.  
-`method` - a datasource request method (`GET` by default).  
+- `type` - is a datasource type.  
+- `url` - is a datasource request URL.  
+- `method` - is a datasource request method (`GET` by default).  
 
 ```html
 <spy-select
@@ -29,7 +28,7 @@ See an example below, how to use the Datasource Http service.
 
 ## Interfaces
 
-Below you can find interfaces for Datasource Http.
+Below you can find interfaces for Datasource Http service.
 
 ```ts
 export interface DatasourceHttpConfig extends DatasourceConfig {

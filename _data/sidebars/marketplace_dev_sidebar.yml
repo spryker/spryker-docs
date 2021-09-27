@@ -459,7 +459,11 @@ entries:
                   url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate.html
 
             - title: "Cache"
-              url: /docs/marketplace/dev/front-end/ui-components-library/cache.html
+              url: /docs/marketplace/dev/front-end/ui-components-library/cache/
+              nested:
+
+                - title: "Static"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/cache/static.html
 
             - title: "Persistence"
               url: /docs/marketplace/dev/front-end/ui-components-library/persistence.html

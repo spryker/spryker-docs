@@ -447,7 +447,11 @@ entries:
                   url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-notification.html
 
             - title: "Datasources"
-              url: /docs/marketplace/dev/front-end/ui-components-library/datasources.html
+              url: /docs/marketplace/dev/front-end/ui-components-library/datasources/
+              nested:
+
+                - title: "Inline"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-inline.html
 
             - title: "Data Transformers"
               url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/

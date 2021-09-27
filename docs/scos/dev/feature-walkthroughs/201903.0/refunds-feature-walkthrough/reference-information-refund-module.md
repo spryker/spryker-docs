@@ -1,5 +1,5 @@
 ---
-title: Reference information: Refund module
+title: "Reference information: Refund module"
 description: The article describes the methods used to calculate the refund, as well as ways of using and extending the Refund module.
 originalLink: https://documentation.spryker.com/v2/docs/refund
 originalArticleId: 3b962b58-8f05-4cb2-b618-20c8a74c8596

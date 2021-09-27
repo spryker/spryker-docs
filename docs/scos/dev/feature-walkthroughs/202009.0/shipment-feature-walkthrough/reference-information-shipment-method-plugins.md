@@ -1,5 +1,5 @@
 ---
-title: Reference information: Shipment method plugins
+title: "Reference information: Shipment method plugins"
 description: An optional plugin is linked to each shipping method. This topic provides an overview of the Availability, Price Calculation, and Delivery Time plugins.
 originalLink: https://documentation.spryker.com/v6/docs/reference-information-shipment-method-plugins
 originalArticleId: 4dd51fef-f19c-46bd-9b8f-b669bfb83be0

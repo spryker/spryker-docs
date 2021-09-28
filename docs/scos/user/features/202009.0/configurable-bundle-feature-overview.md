@@ -233,7 +233,7 @@ Currently, the feature has the following functional constraints which are going 
     - [Product bundles](/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.htmls)
     - [Gift cards](/docs/scos/user/features/{{page.version}}/gift-cards-feature-overview.html)
 * The following functionalities are not displayed and cannot be applied to concrete products in configurable bundles:
-    * [Product options](/docs/scos/user/features/{{page.version}}/product-options/product-options-feature-overview.html)
+    * [Product options](/docs/scos/user/features/{{page.version}}/product-options-feature-overview.html)
     * [Product labels](docs\scos\user\features\202009.0\product-labels\product-labels-feature-overview.md)
     * [Product quantity restrictions](/docs/scos/user/features/{{page.version}}/non-splittable-products-feature-overview.html)
 * The *Slot* page doesn't have any sorting, pagination, or search.

@@ -9,7 +9,7 @@ redirect_from:
   - /docs/en/file-details-product-optioncsv
 ---
 
-This article contains content of the **product_option.csv** file to configure [product option](/docs/scos/user/features/{{page.version}}/product-options/product-options.html) information on your Spryker Demo Shop.
+This article contains content of the **product_option.csv** file to configure [product option](/docs/scos/user/features/{{page.version}}/product-options-feature-overview.html) information on your Spryker Demo Shop.
 
 To import the file, run
 

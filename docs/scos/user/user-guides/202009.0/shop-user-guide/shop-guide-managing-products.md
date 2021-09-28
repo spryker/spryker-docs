@@ -47,7 +47,7 @@ On the product detail page, you can view some general product information that i
 | 4 | **Product price (default and original)** | *Default* price is the actual current price in the currency you’ve selected, while an *original* price (strikeout) is the price that has been applied before the default price is used due to some product promotion. |
 | 5 | **Ratings** | Product star rating. |
 | 6 | **Product group** | Set of products grouped by color. |
-| 7 | **Product options** | Additional items you can purchase along with the product. The examples can be gift wrapping, warranty, and insurance. See [Product Options Overview](/docs/scos/user/features/{{page.version}}/product-options/product-options-feature-overview.html#product-options-overview) for more information. |
+| 7 | **Product options** | Additional items you can purchase along with the product. The examples can be gift wrapping, warranty, and insurance. See [Product Options Overview](/docs/scos/user/features/{{page.version}}/product-options-feature-overview.html#product-options-overview) for more information. |
 | 8 | **Add to Cart section** | Section you can use to add a product to a cart. See the Adding a Product to Cart section for more details. |
 | 9 | **Add to Shopping list section** | Section you can use to add a product to a shopping list. See the Adding a Product to Shopping List section for more details. |
 | 10 | **Add to Wishlist section** | Section you can use to add a product to a wishlist. See the Adding a Product to Wishlist section for more details. |

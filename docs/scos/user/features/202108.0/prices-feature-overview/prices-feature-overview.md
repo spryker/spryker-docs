@@ -44,7 +44,7 @@ For more information, see [Checkout Calculation](/docs/scos/user/features/{{page
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of Volume Prices](/docs/scos/user/features/{{page.version}}/prices/prices-feature-overview/volume-prices-overview.html)   |
+| [Get a general idea of Volume Prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview/volume-prices-overview.html)   |
 | [Define prices when creating abstract products and product bundles](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html)   |
 | [Edit prices of an abstract product](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/abstract-products/editing-abstract-products.html#editing-prices-of-an-abstract-product)   |
 | [Define prices when creating a concrete product](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/concrete-products/creating-product-variants.html)  |

@@ -16,7 +16,7 @@ To impersonate a customer as a Company User, API clients can use the **Business
 Before impersonating as Company Users, customers need to authenticate first. For details on how to do so, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
 {% endinfo_block %}
 
-During the impersonation process, customers receive an Access Token. The token can be used to access any B2B REST API resources, such as Companies, Business Units, Carts etc. Also, authenticated company users will benefit from the [merchant-specific prices](/docs/scos/user/features/{{page.version}}/price/prices-per-merchant-relation/prices-per-merchant-relation-feature-overview.html) available to them (applied to certain business units as a rule) instead of the default ones. Also, you can customize the behavior of your API client to match the user's company, job role, business unit, and scope.
+During the impersonation process, customers receive an Access Token. The token can be used to access any B2B REST API resources, such as Companies, Business Units, Carts etc. Also, authenticated company users will benefit from the [merchant-specific prices](/docs/scos/user/features/{{page.version}}/merchant-custom-prices-feature-overview.html) available to them (applied to certain business units as a rule) instead of the default ones. Also, you can customize the behavior of your API client to match the user's company, job role, business unit, and scope.
 
 {% info_block infoBox "Info" %}
 If the [Prices per Merchant Relation \(Customer specific prices\

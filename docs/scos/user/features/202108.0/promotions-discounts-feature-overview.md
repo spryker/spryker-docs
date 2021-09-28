@@ -234,6 +234,6 @@ A product catalog manager defines calculation when [creating a voucher](/docs/sc
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Promotions & Discounts feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/promotions-and-discounts-feature-walkthrough.html) for developers.
+Are you a developer? See [Promotions & Discounts feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/promotions-discounts-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

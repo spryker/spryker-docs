@@ -118,7 +118,7 @@ You can order frequently bought products faster by adding the products to a [sho
 If you have no shopping lists created in your account, a drop-down list with shopping lists will be unavailable. Clicking **Add to Shopping list** will create a new shopping list with the default name ‘Shopping List’ and add the product to it.
 ***
 ## Adding a Product Review
-With the [Product Reviews](/docs/scos/user/features/{{page.version}}/product-information-management/product-reviews.html) feature, you can share your experience or feedback about using the product.
+With the [Product Reviews](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews-feature-overview.html) feature, you can share your experience or feedback about using the product.
 
 **To add a review:**
 

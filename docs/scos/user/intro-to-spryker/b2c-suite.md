@@ -95,7 +95,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 [**Tax**](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html):
 [Manage Tax Rates & Sets](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html)
 
-[**Promotions & Discounts**](/docs/scos/user/features/{{page.version}}/promotions-and-discounts-feature-overview.html)
+[**Promotions & Discounts**](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html)
 
 [**Wishlist**](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html):
 
@@ -106,7 +106,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 [**Shopping Cart**](/docs/scos/user/features/{{site.ersion}}/cart-feature-overview/cart-feature-overview.html):
 
 * [Cart Functionality & Calculations](/docs/scos/user/features/{{site.ersion}}/cart-feature-overview/cart-feature-overview.html)
-* [Discounts](/docs/scos/user/features/{{page.version}}/promotions-and-discounts-feature-overview.html)
+* [Discounts](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html)
 * [Order Thresholds](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html)
 
 [**Shipment**](https://documentation.spryker.com/2021080/docs/shipment):

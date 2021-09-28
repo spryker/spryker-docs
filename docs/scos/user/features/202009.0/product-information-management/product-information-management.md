@@ -12,7 +12,7 @@ The *Product Information Management* functionality allows you to build a product
 
 * [Product Abstraction](docs\scos\user\features\202009.0\product\product-feature-overview\product-overview.md) to distinguish between different product versions, to keep track of their stock, and to provide a better shopping experience to customers.
 * [Product Groups](/docs/scos/user/features/{{page.version}}/product-groups/product-groups.html) to group products by attributes.
-* [Product Relations](/docs/scos/user/features/{{page.version}}/product-relations/product-relations.html) to recommend related products to customers.
+* [Product Relations](/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html) to recommend related products to customers.
 * [Product Attributes](docs\scos\user\features\202009.0\product\product-feature-overview\product-overview.md) to manage products, improve search and filtering on the Storefront.
 * [Product Lists](/docs/scos/user/features/{{page.version}}/product-lists/product-lists.html) to blacklist or whitelist products for specific companies.
 * [Product Options](/docs/scos/user/features/{{page.version}}/product-options/product-options.html) to diversify products.

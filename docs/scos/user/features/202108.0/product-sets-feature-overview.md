@@ -54,6 +54,6 @@ Currently, the feature has the following functional constraints which are going 
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Product Relations feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-relations-feature-walkthrough.html) for developers.
+Are you a developer? See [Product Sets feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-sets-feature-walkthrough/product-sets-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

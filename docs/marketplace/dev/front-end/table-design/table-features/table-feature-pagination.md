@@ -12,7 +12,7 @@ Table Feature Pagination is a feature of the Table Component that renders pagina
 This feature is based on the Pagination component.
 Check out this example below to see how to use the Pagination feature.
 
-Feature Configuration:
+Feature configuration:
 
 - `enabled` - enables feature via config.  
 - `sizes` - is an array of numbers of table rows that needs to be displayed per page.  

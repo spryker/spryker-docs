@@ -1,10 +1,10 @@
 ---
 title: Product Labels feature overview
-originalLink: https://documentation.spryker.com/v6/docs/product-labels-feature-overview
-originalArticleId: c1a49155-d94a-4fd4-8678-51faf9929cfe
+originalLink: https://documentation.spryker.com/v3/docs/product-label
+originalArticleId: c912a0b2-4a6a-4ae9-9004-5a678198231c
 redirect_from:
-- /v6/docs/product-labels-feature-overview
-- /v6/docs/en/product-labels-feature-overview
+  - /v3/docs/product-label
+  - /v3/docs/en/product-label
 ---
 
 The Product Label feature enables product catalog managers to highlight the desired products by adding a special type of information - product labels.

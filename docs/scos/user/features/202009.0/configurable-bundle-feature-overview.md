@@ -62,7 +62,7 @@ For example, a *Kitchen furniture set* configurable bundle template can have the
 
 ![Kitchen Configurable Bundle](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/kitchen+slots.png)
 
-When a Back Office user creates a configurable bundle template, they create the slots, and a [product list](/docs/scos/user/features/{{page.version}}/product-lists/product-lists.html) is automatically assigned to each of them. They can edit the product list in **Catalog Management** > **Product Lists** section or by editing the slot in the configurable bundle template.
+When a Back Office user creates a configurable bundle template, they create the slots, and a [product list](/docs/scos/user/features/{{page.version}}/product-lists-feature-overview.html) is automatically assigned to each of them. They can edit the product list in **Catalog Management** > **Product Lists** section or by editing the slot in the configurable bundle template.
 
 {% info_block warningBox "Slots" %}
 

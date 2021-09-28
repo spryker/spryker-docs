@@ -14,7 +14,7 @@ The *Product Information Management* functionality allows you to build a product
 * [Product Groups](/docs/scos/user/features/{{page.version}}/product-groups/product-groups.html) to group products by attributes.
 * [Product Relations](/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html) to recommend related products to customers.
 * [Product Attributes](docs\scos\user\features\202009.0\product\product-feature-overview\product-overview.md) to manage products, improve search and filtering on the Storefront.
-* [Product Lists](/docs/scos/user/features/{{page.version}}/product-lists/product-lists.html) to blacklist or whitelist products for specific companies.
+* [Product Lists](/docs/scos/user/features/{{page.version}}/product-lists-feature-overview.html) to blacklist or whitelist products for specific companies.
 * [Product Options](/docs/scos/user/features/{{page.version}}/product-options-feature-overview.html) to diversify products.
 * [Alternative Products](/docs/scos/user/features/{{page.version}}/alternative-products-feature-overview.html) to suggest to customer a product that can replace the unavailable one.
 * [Discontinued Products](docs\scos\user\features\202009.0\product\product-feature-overview\discontinued-product-overview.md) to indicate that a product will not be produced or available anymore.

@@ -11,19 +11,19 @@ redirect_from:
 
 ## Features
 ### Discount Promotion Products
-For marketing reasons you, a shop owner, might sometimes give away free or discounted products. This can happen depending on the cart content or via a redeemed voucher code. With this release, we are introducing discount promotions fully integrated with our discount engine. Now, you can easily give away free perks, for example, when the cart value reaches a certain threshold. Or, for example, when a customer buys a certain product you can give away a complimentary product for free or with a reduced price. Some of the most common use cases for this feature are "buy one, get one for free", "buy product X, get product Y for free", "buy 10 of product X and get 1 of product X for free". All this is now possible with our discount promotions. 
-![Discount promotion products](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+September+-+2+2017/RN_discount_promotion_products.gif) 
+For marketing reasons you, a shop owner, might sometimes give away free or discounted products. This can happen depending on the cart content or via a redeemed voucher code. With this release, we are introducing discount promotions fully integrated with our discount engine. Now, you can easily give away free perks, for example, when the cart value reaches a certain threshold. Or, for example, when a customer buys a certain product you can give away a complimentary product for free or with a reduced price. Some of the most common use cases for this feature are "buy one, get one for free", "buy product X, get product Y for free", "buy 10 of product X and get 1 of product X for free". All this is now possible with our discount promotions.
+![Discount promotion products](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+September+-+2+2017/RN_discount_promotion_products.gif)
 
-![Discount promotion products in Zed](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+September+-+2+2017/RN_discount_promotion_products_zed.gif) 
+![Discount promotion products in Zed](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+September+-+2+2017/RN_discount_promotion_products_zed.gif)
 
 **Affected Modules**
 
 | Major | Minor | Patch |
 | --- | --- | --- |
 | [DiscountPromotion 1.0.0](https://github.com/spryker/discount-promotion/releases/tag/1.0.0) | [Discount 4.5.0](https://github.com/spryker/Discount/releases/tag/4.5.0) | <ul><li>[Availability 5.0.3](https://github.com/spryker/Availability/releases/tag/5.0.3)</li><li>[DiscountPromotion 1.0.1](https://github.com/spryker/discount-promotion/releases/tag/1.0.1)</li></ul> |
-    
+
 **Documentation**
-For module documentation, see [Discount Module Guide](/docs/scos/user/features/{{page.version}}/promotions-and-discounts/promotions-and-discounts.html), Extending the Discount Module, [Discount Promotions](/docs/scos/user/features/{{page.version}}/promotions-and-discounts/promotions-and-discounts.html).
+For module documentation, see [Promotions & Discounts](/docs/scos/user/features/{{page.version}}/promotions-and-discounts-feature-overview.html).
 
 **Migration Guides**
 To upgrade, follow the steps described below:
@@ -42,9 +42,9 @@ composer require spryker/discount-promotion:"^1.0.0"
 
 ### Product Reviews and Ratings
 With this release, we are introducing product reviews and ratings. Reviews are a powerful marketing tool for your online store. There are various reasons why you might want to have this feature. Customer created content generates considerable amount of sales uplift by influencing your buyers decision making. A positive feedback from another buyer builds trust and increases the chances for the sale. In addition, product reviews can also positively affect your site’s organic search ranking in search engines, as this content increases the amount of overall unique content. The product review feature allows you to submit product reviews and ratings in the shop application. We also ship this feature with a dedicated Zed Admin UI which allows a store manager to review submitted content, approve, reject, or delete reviews. The approved reviews, ratings, and assembled data can be displayed on demand in your shop for the products as well as those can be used for catalog filtering and/or sorting. With this feature, we have also introduced an improvement to the search engine. Now, the search is capable of storing and reading data divided into different types and indexes. In addition, data tables are now capable of using additional data in presentation than defined in their headers.
-![Discount ratings](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+September+-+2+2017/RN_product_reviews_and_ratings.gif) 
+![Discount ratings](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+September+-+2+2017/RN_product_reviews_and_ratings.gif)
 
-![Discount ratings in Zed](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+September+-+2+2017/RN_product_reviews_and_ratings_zed.gif) 
+![Discount ratings in Zed](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+September+-+2+2017/RN_product_reviews_and_ratings_zed.gif)
 
 **Affected Modules**
 
@@ -73,7 +73,7 @@ composer require spryker/product-review:"^1.0.0" spryker/product-review-collecto
 ```
 
 ### Multi Currency Infrastructure
-We are currently working on full enablement of multi-store and multi-currency concepts. With this release, we introduce infrastructure to support those feature. In consequent releases, we will be step-by-step enabling every relevant functionality with multi-store and -currency. 
+We are currently working on full enablement of multi-store and multi-currency concepts. With this release, we introduce infrastructure to support those feature. In consequent releases, we will be step-by-step enabling every relevant functionality with multi-store and -currency.
 
 **Affected Modules**
 
@@ -100,7 +100,7 @@ composer require spryker/currency:"^3.0.0" spryker/store:"^1.0.0"
 ```
 
 ### Propel Migration Check Console Command
-We have added a new `console propel:migration:check` 
+We have added a new `console propel:migration:check`
 
 The `MigrationCheckConsole` command to get a unified output for Propel's status command. This check can be used, for example, to find out if a maintenance page needs to be shown during deployment or not. Scripts can check for the return code 0 (all good) vs. 2 (migration needed).
 

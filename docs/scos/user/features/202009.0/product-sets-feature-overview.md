@@ -6,9 +6,11 @@ originalArticleId: 253bf091-8863-46b5-a580-d9520e2c5a70
 redirect_from:
   - /v6/docs/product-sets-feature-overview
   - /v6/docs/en/product-sets-feature-overview
+  - /v6/docs/product-set
+  - /v6/docs/en/product-set
 ---
 
-The *Product Sets* feature allows you to create and sell collections of products. For example, you can create a stationary workspace set, a set of clothing or accessories, or furniture for a specific room. 
+The *Product Sets* feature allows you to create and sell collections of products. For example, you can create a stationary workspace set, a set of clothing or accessories, or furniture for a specific room.
 
 ![product-set-on-the-storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Sets/product-set-on-the-storefront.png)
 
@@ -19,10 +21,10 @@ When browsing a product set, a Storefront user can select variants per product i
 
 A Back Office user can define the following:
 * The order of products in a set dispalyed on the Storefront.
-* The order of products sets displayed on the Storefront. It's relevant if you have multiple product sets on the same page. 
+* The order of products sets displayed on the Storefront. It's relevant if you have multiple product sets on the same page.
 * Unique product set URL.
 
- 
+
 A Back Office user can add a product sets to any page by [creating a product set content item](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/creating-content-items.html) and [adding it to CMS pages and blocks](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).
 
 

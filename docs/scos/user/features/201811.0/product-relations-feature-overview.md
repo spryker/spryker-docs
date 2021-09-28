@@ -6,6 +6,14 @@ originalArticleId: 7a9a8ce2-5848-4c90-81e9-661af9f7827f
 redirect_from:
   - /v1/docs/product-relations-feature-overview
   - /v1/docs/en/product-relations-feature-overview
+  - /v1/docs/cross-sell-upsell
+  - /v1/docs/en/cross-sell-upsell
+  - /v1/docs/cross-sell
+  - /v1/docs/en/cross-sell
+  - /v1/docs/product-relations-sales
+  - /v1/docs/en/product-relations-sales
+  - /v1/docs/upsell
+  - /v1/docs/en/upsell
 ---
 
 Product relations help shop owners to promote the related goods as well as to point the customers' attention to the goods that they may also want to see.

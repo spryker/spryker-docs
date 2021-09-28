@@ -13,7 +13,7 @@ redirect_from:
 ### Selecting Product Variant in the Cart
 With this release we are bringing the variant selection functionality to the cart. Your shop user can now modify the selected variant right in the cart which will then, if available, replace the current item in the cart with the newly selected one (e.g. changing the size of a t-shirt or storage capacity of a smartphone).
 
-![Selecting Product Variant in the cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+July+-+1+2017/RN_selecting_product_variant_in_the_cart.gif) 
+![Selecting Product Variant in the cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+July+-+1+2017/RN_selecting_product_variant_in_the_cart.gif)
 
 **Affected Modules**
 
@@ -22,7 +22,7 @@ With this release we are bringing the variant selection functionality to the car
 | <ul><li>[CartVariant 1.0.0](https://github.com/spryker/cart-variant/releases/tag/1.0.0)</li><li>[ProductImageCartConnector 1.0.0](https://github.com/spryker/product-image-cart-connector/releases/tag/1.0.0)</li></ul> | n/a | n/a |
 
 **Documentation**
-For integration guides, see [Cart Integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/cart-integration.html). 
+For integration guides, see [Cart Integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/cart-integration.html).
 
 **Migration Guides**
 To upgrade, follow the steps described below:
@@ -43,9 +43,9 @@ composer require spryker/cart-variant:"^1.0.0" spryker/product-image-cart-connec
 With this release, we are introducing a CMS block as a completely decoupled module from CMS pages. Before the CMS blocks were stored with pages with the difference that a block did not have page-related properties (e.g. URL, page meta information).  With this decoupling we bring more flexibility to block and page maintenance, we also bring architecture flexibility which will allow you to create connections to other objects (e.g. Customer Group (show a block only for a specific group), Country (show a block for products from a specific country), etc.).
 In addition, we are introducing a set of new features for CMS blocks:
 
-* **Valid from-to dates**: Now, you can easily define for how long a block should be in the shop frontend. 
+* **Valid from-to dates**: Now, you can easily define for how long a block should be in the shop frontend.
 
-* **Own templating**: A block template can now be different from page templates. In addition, the template is not any more on a locale level. 
+* **Own templating**: A block template can now be different from page templates. In addition, the template is not any more on a locale level.
 
 * **Status**: You can now globally activate or deactivate a given block. Before this was on locale level, with this update the activation/deactivation is on a  block level. If the block is not active, than it’s not active for all locales
 
@@ -53,7 +53,7 @@ In addition, we are introducing a set of new features for CMS blocks:
 
 * **Category and product blocks**: In Admin UI, you can now also assign categories and product to a given block, which will imply that the block shows up for these categories and products in the shop frontend. Yet you can still also continue using blocks as static ones by simply placing them in your page  template.
 
-![Category and Product blocks](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+July+-+1+2017/RN_improvement_and_new_features_for_cms_blocks.gif) 
+![Category and Product blocks](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+July+-+1+2017/RN_improvement_and_new_features_for_cms_blocks.gif)
 
 **Affected Modules**
 
@@ -109,9 +109,9 @@ composer require spryker/file-system:"^1.0.0" spryker/flysystem:"^1.0.0" spryker
 ```
 
 ### On Sale Products
-We've enhanced the management of products with multiple price types. You can now import and manage from PIM multiple prices of a product. Those prices are also exported to Elasticsearch. For inspiration, you can check our demoshop use case implementation for products on sale: if a product has both original and default price, then the original price is strikethrough and the default price is the current sales price for the product. In Yves we have also introduced a filtered catalog for `/outlet` where a user can browse through all products that are currently on sale. 
+We've enhanced the management of products with multiple price types. You can now import and manage from PIM multiple prices of a product. Those prices are also exported to Elasticsearch. For inspiration, you can check our demoshop use case implementation for products on sale: if a product has both original and default price, then the original price is strikethrough and the default price is the current sales price for the product. In Yves we have also introduced a filtered catalog for `/outlet` where a user can browse through all products that are currently on sale.
 
-![On sale products](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+July+-+1+2017/RN_on_sale_products.gif) 
+![On sale products](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+July+-+1+2017/RN_on_sale_products.gif)
 
 **Affected Modules**
 
@@ -122,7 +122,7 @@ We've enhanced the management of products with multiple price types. You can now
 ### Discount Rules Based On Product Labels
 With this release, we are now introducing a new connector module to handle discount rules based on product labels. This feature will allow you to define discount calculation and condition rules based on existing product labels.
 
-![Discount rules](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+July+-+1+2017/RN_discount_rules_based_on_product_labels.gif) 
+![Discount rules](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+July+-+1+2017/RN_discount_rules_based_on_product_labels.gif)
 
 **Affected Module**
 
@@ -131,7 +131,7 @@ With this release, we are now introducing a new connector module to handle disco
 | [ProductLabelDiscountConnector 1.0.0](https://github.com/spryker/product-label-discount-connector/releases/tag/1.0.0) | <ul><li>[Discount 4.2.0](https://github.com/spryker/Discount/releases/tag/4.2.0)</li><li>[ProductLabel 1.1.0](https://github.com/spryker/product-label/releases/tag/1.1.0)</li></ul> | [Discount 4.2.1](https://github.com/spryker/Discount/releases/tag/4.2.1) |
 
 **Documentation**
-For relevant documentation, see [Product Label Module Guide](https://documentation.spryker.com/2021080/docs/product-label), [Discount Module Guide](/docs/scos/user/features/{{page.version}}/promotions-and-discounts/promotions-and-discounts.html)
+For relevant documentation, see [Product Label Module Guide](https://documentation.spryker.com/2021080/docs/product-label), [Discount Module Guide](/docs/scos/user/features/{{page.version}}promotions-and-discounts-feature-overview.html)
 
 **Migration Guides**
 To upgrade, follow the steps described below:

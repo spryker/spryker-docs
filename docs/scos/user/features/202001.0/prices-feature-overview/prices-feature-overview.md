@@ -1,11 +1,17 @@
 ---
 title: Price Functionality
 description: In the article, you can find the price definition, its types, how the price is inherited and calculated.
-originalLink: https://documentation.spryker.com/v2/docs/price-functionality
-originalArticleId: 59cd7eff-de3b-418c-b20d-2cb297bc7ae3
+originalLink: https://documentation.spryker.com/v4/docs/price-functionality
+originalArticleId: 12aa4530-561c-4502-91ed-0bf9605809f9
 redirect_from:
-  - /v2/docs/price-functionality
-  - /v2/docs/en/price-functionality
+  - /v4/docs/price-functionality
+  - /v4/docs/en/price-functionality
+  - /v4/docs/price
+  - /v4/docs/en/price
+  - /v4/docs/net-gross-price
+  - /v4/docs/en/net-gross-price
+  - /v4/docs/auto-detect-currency
+  - /v4/docs/en/auto-detect-currency
 ---
 
 A price can be attached to an abstract product as well as to a concrete product. The price is stored as an integer, in the smallest unit of the currency (e.g. for Euro that would be cents).

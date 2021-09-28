@@ -1,11 +1,13 @@
----
+----
 title: Prices per Merchant Relation Feature Overview
 description: This feature relates to prices set for individual merchant relations. Customers see only prices applying to them, based on their merchant relation.
-originalLink: https://documentation.spryker.com/v2/docs/price-per-merchant-relation-feature-overview
-originalArticleId: a2ecc968-e954-4993-9fb8-04e8de8eb3c9
+originalLink: https://documentation.spryker.com/v4/docs/price-per-merchant-relation-feature-overview
+originalArticleId: b0a42b3e-6552-45e0-bfde-c0772cf90e35
 redirect_from:
-  - /v2/docs/price-per-merchant-relation-feature-overview
-  - /v2/docs/en/price-per-merchant-relation-feature-overview
+  - /v4/docs/price-per-merchant-relation-feature-overview
+  - /v4/docs/en/price-per-merchant-relation-feature-overview
+  - /v4/docs/price-per-merchant-relation
+  - /v4/docs/en/price-per-merchant-relation
 ---
 
 When talking about product prices that depend on customers they refer to, we differentiate between two types: default prices and specific prices.

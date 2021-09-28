@@ -1,11 +1,13 @@
 ---
-title: Price Functionality
+title: Price
 description: In the article, you can find the price definition, its types, how the price is inherited and calculated.
-originalLink: https://documentation.spryker.com/v1/docs/price-functionality
-originalArticleId: 99858c26-17a4-4ba5-85af-901cf5441c8c
+originalLink: https://documentation.spryker.com/v6/docs/price
+originalArticleId: 10ce44da-34bb-4770-98ad-f0cf357a6ccd
 redirect_from:
-  - /v1/docs/price-functionality
-  - /v1/docs/en/price-functionality
+  - /v6/docs/price
+  - /v6/docs/en/price
+  - /v6/docs/prices
+  - /v6/docs/en/prices
 ---
 
 A price can be attached to an abstract product as well as to a concrete product. The price is stored as an integer, in the smallest unit of the currency (e.g. for Euro that would be cents).
@@ -32,4 +34,4 @@ The concerns for the product price calculation are the following :
 * calculate amount of tax
 
 price for the options that were selected for the product (e.g.: frame, fabric, etc.)
-For more information, see [Checkout Calculation](/docs/scos/user/features/{{page.version}}/cart-feature-overview/calculation/calculation-3.0.html).
+For more information, see [Checkout Calculation](/docs/scos/user/features/{{page.version}}/cart-feature-overview/calculation-3.0.html).

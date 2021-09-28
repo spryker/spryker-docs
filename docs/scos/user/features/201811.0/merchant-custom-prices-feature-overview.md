@@ -6,6 +6,8 @@ originalArticleId: 717776ce-6677-4ef9-8c2a-1218a3120c73
 redirect_from:
   - /v1/docs/price-per-merchant-relation-feature-overview
   - /v1/docs/en/price-per-merchant-relation-feature-overview
+  - /v1/docs/price-per-merchant-relation
+  - /v1/docs/en/price-per-merchant-relation
 ---
 
 When talking about product prices that depend on customers they refer to, we differentiate between two types: default prices and specific prices.

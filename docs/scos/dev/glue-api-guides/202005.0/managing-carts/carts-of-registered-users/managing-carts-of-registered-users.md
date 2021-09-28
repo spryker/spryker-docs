@@ -92,7 +92,7 @@ Sample request: `POST http://glue.mysprykershop.com/carts`
 | Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
 | name | String | v | Sets the cart name.</br>This field can be set only if you are using the multiple carts feature. If you are operating in a single-cart environment, an attempt to set the value will result in an error with the **422 Unprocessable Entry** status code. |
-| priceMode | Enum | v | Sets the price mode to be used for the cart. Possible values:<ul><li>GROSS_MODE - prices after tax;</li><li>NET_MODE - prices before tax.</li></ul>For details, see [Net &amp; Gross Prices](/docs/scos/user/features/{{page.version}}/price/net-and-gross-prices.html){target="_blank"}. |
+| priceMode | Enum | v | Sets the price mode to be used for the cart. Possible values:<ul><li>GROSS_MODE - prices after tax;</li><li>NET_MODE - prices before tax.</li></ul>For details, see [Net &amp; Gross Prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html){target="_blank"}. |
 | currency | String | v | Sets the cart currency. |
 | store | String | v | Sets the name of the store where to create the cart. |
 

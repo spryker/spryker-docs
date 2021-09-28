@@ -393,7 +393,7 @@ If the request was successful, the resource responds with a **RestConcreteProduc
 ## Prices
 The below endpoints return prices for a concrete or an abstract product.
 {% info_block infoBox %}
-For information on the different price types available in Spryker, see [Price](/docs/scos/user/features/{{page.version}}/price/price.html).
+For information on the different price types available in Spryker, see [Price](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html).
 {% endinfo_block %}
 
 `/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/abstract-product-prices`

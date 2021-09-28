@@ -85,10 +85,10 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 * [International Tax Rates & Sets](https://documentation.spryker.com/2021080/docs/international-tax-rates-sets)
 * [Glossary Creation](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/glossary/managing-glossary.html)
 
-[**Price**](/docs/scos/user/features/{{page.version}}/prices/prices-feature-overview/prices-overview.html):
+[**Price**](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview/prices-feature-overview.html):
 
-* [Autodetect of Currency](/docs/scos/user/features/{{page.version}}/prices/prices-feature-overview/prices-overview.html)
-* [Volume Prices](/docs/scos/user/features/{{page.version}}/prices/prices-feature-overview/volume-prices-overview.html)
+* [Autodetect of Currency](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview/prices-feature-overview.html)
+* [Volume Prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview/volume-prices-overview.html)
 * [Net & Gross Price Mode](/docs/scos/dev/back-end-development/zed/data-manipulation/datapayload-conversion/net-and-gross-prices-management.html)
 * [Scheduled Prices](https://documentation.spryker.com/2021080/docs/scheduled-prices)
 

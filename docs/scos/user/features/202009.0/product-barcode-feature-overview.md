@@ -6,9 +6,13 @@ originalArticleId: b7a493c2-cce0-42c0-9e1a-2f28f252b48b
 redirect_from:
   - /v6/docs/product-barcode-feature-overview
   - /v6/docs/en/product-barcode-feature-overview
+  - /v6/docs/product-barcode
+  - /v6/docs/en/product-barcode
 ---
 
-The *Product Barcode*  feature allows creating barcodes for any kind of enity. By default, barcodes are only generated for [products](docs\scos\user\features\202009.0\product\product-feature-overview\product-overview.md).
+
+
+The *Product Barcode*  feature allows creating barcodes for any kind of entity. By default, barcodes are only generated for [products](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/product-overview.html).
 
 
 ## What is a barcode?
@@ -16,14 +20,18 @@ The *Product Barcode*  feature allows creating barcodes for any kind of enity. B
 A barcode is a square or rectangular image consisting of a series of parallel black lines (bars) and white spaces of varying widths that can be read by a scanner and printed. Barcodes are applied to entities as a means of quick identification.
 ![Barcode example](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Barcode+Generator/Barcode+Generator+Feature+Overview/barcode.png)
 
-By default, barcodes are generated based on product SKUs using the [Code128](https://en.wikipedia.org/wiki/Code_128) format. 
+By default, barcodes are generated based on product SKUs using the [Code128](https://en.wikipedia.org/wiki/Code_128) format.
 
 {% info_block infoBox %}
-You can read more about the product types we differentiate in [Product Abstraction](docs\scos\user\features\202009.0\product\product-feature-overview\product-overview.md
-{% endinfo_block %}.)
+
+You can read more about the product types we differentiate in [Product Abstraction](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/product-overview.html).
+
+{% endinfo_block %}
 
 {% info_block errorBox %}
+
 In your project, you can also implement QR codes functionality by creating similar plugins.
+
 {% endinfo_block %}
 
 Barcodes are dynamically generated for concrete products. This ensures that barcodes are immediately valid.
@@ -53,6 +61,18 @@ In the default configuration, barcodes are generated based on the SKU of a concr
 
 Barcodes are dynamically generated for concrete products. This ensures that barcodes are immediately valid.
 
-You can see the barcodes in the **Catalog > Product Barcodes** section. The section is designed as a review; thus no actual actions are performed here. The barcode is generated automatically once a new concrete product is added. 
+You can see the barcodes in the **Catalog > Product Barcodes** section. The section is designed as a review; thus no actual actions are performed here. The barcode is generated automatically once a new concrete product is added.
 
 You can see Product ID, product name, SKU, and the barcode itself.
+
+## Related Business User articles
+
+|BACK OFFICE USER GUIDES|
+|---|
+| [Viewing product barcodes](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-barcodes/viewing-product-barcodes.html)  |
+
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Product Barcodes feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-barcode-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}

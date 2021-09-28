@@ -100,7 +100,7 @@ For more information about the actions internal users can perform on the cart, s
 ***
 
 ## Adding a Custom Order Reference to the Cart
-If you want to link your order to the invoice in your external system, you can use a [custom order reference](/docs/scos/user/features/{{page.version}}/order-management/custom-order-reference/custom-order-reference-feature-overview.html).
+If you want to link your order to the invoice in your external system, you can use a [custom order reference](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/custom-order-reference-overview.html).
 
 {% info_block infoBox "Info" %}
 

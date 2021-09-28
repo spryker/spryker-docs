@@ -35,12 +35,12 @@ When customers visit an online store and see that the product they want is not i
 
 From this release on, customers would be able to subscribe to "back in stock" notifications.
 Shops can define a specific template for the notification email.
-![Product is available again notification](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201903.0/image6.png) 
+![Product is available again notification](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201903.0/image6.png)
 
 **Documentation**: [Product is Available Again](https://documentation.spryker.com/2021080/docs/availability-notification).
 
 ## Back office
-### Apply Discount on Group of Products 
+### Apply Discount on Group of Products
 Previously, a discount could be applied only to an entire cart or a specific product.
 
 Starting from this release, you can also apply a discount to a group of products if the quantity of those products in the customer’s cart fulfills predefined rules.
@@ -50,48 +50,48 @@ Starting from this release, you can also apply a discount to a group of products
 * 20% off on juice products if the customer puts at least 6 bottles to the cart
 * 20€ off if the customer puts at least 3 products of brand XYZ to the cart
 
-![Discount on group of products](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201903.0/image1.png) 
+![Discount on group of products](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201903.0/image1.png)
 
-**Documentation**: [Discount](/docs/scos/user/features/{{page.version}}/promotions-and-discounts/promotions-and-discounts.html). 
+**Documentation**: [Discount](/docs/scos/user/features/{{page.version}}/promotions-and-discounts-feature-overview.html). 
 
-### Back Office Translated to Multiple Language 
+### Back Office Translated to Multiple Language
 With this release, we have added a new opportunity for you to go global and build a multi-cultural team within your organization. Now, Spryker Back Office supports multiple languages and is shipped with UI in both English (en_US) and German (de_DE) languages.
-![Back Office translated to multiple languages](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201903.0/image8.png) 
+![Back Office translated to multiple languages](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201903.0/image8.png)
 
 **Documentation**: [Back Office Translations](https://documentation.spryker.com/2021080/docs/back-office-translations-old).
 
-### Supporting Unlimited Number of Categories 
+### Supporting Unlimited Number of Categories
 Previously, the Back Office “Category” page could not display a large number of categories (more than 10 000 for example). With this release, we have refactored the page so that it can handle as many categories as your shop has.
-![Supporting unlimited number of categories](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201903.0/image3.png) 
+![Supporting unlimited number of categories](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201903.0/image3.png)
 
 **Documentation**: [Category](https://documentation.spryker.com/2021080/docs/category-management).
 
 ## CMS
 ### Multi-store Support for CMS Pages
 If you have multiple stores configured, you can define in which store a CMS page will be visible. A Back Office user can configure that in the back office.
-![Multi-store support for CMS pages](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201903.0/image9.png) 
+![Multi-store support for CMS pages](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201903.0/image9.png)
 
 **Documentation**: [Multi-store CMS Pages](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html).
 
 ### CMS Pages in Search Results
 Spryker improved search capabilities by including CMS pages in search results. Now, customers are redirected to the search result page containing two tabs: one for product pages and the other for CMS pages. The new tab lists CMS pages either as a list or as a grid.
-![CMS pages in search results](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201903.0/image7.png) 
+![CMS pages in search results](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201903.0/image7.png)
 
 **Documentation**: [CMS Pages in Search Results](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-in-search-results-overview.html).
 
 ### New Template for Category Page
 The new template for the category page provides another navigation option for shops with a complex category structure. Having clicked a top-level category, a webshop visitor will be redirected to a subcategory page that shows a grid consisting of subcategory images. The shop owner can assign an image to each category in Back Office that will be shown on the page.
-![New template for category page](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201903.0/image2.png) 
+![New template for category page](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201903.0/image2.png)
 
 **Documentation**: [Assigning a Template for a Category Page](https://documentation.spryker.com/2021080/docs/category)
 
 ### CMS Block Widget
 With the CMS Block widget, a content manager can create and manage content displayed on one or several CMS pages. This allows reusing existing content or adding promotional elements such as banners that will be shown on the website during the defined time configured per CMS Block.
-![CMS block widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201903.0/image5.png) 
+![CMS block widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201903.0/image5.png)
 
 **Documentation**: [CMS Block widget](https://documentation.spryker.com/2021080/docs/content-widgets)
 
-## Session Management Improvement 
+## Session Management Improvement
 In this release, we have improved the way the session works in Spryker. Out of the box, your customers and users will be able to interact with the web sites for as long as they are active.
 
 If a user does not interact with the site for a specific period of time, the session will expire, and the user will be redirected to the login page for their next action.
@@ -106,12 +106,12 @@ PHPStan has been updated with config file inheritance. From now on, only new or 
 
 **Documentation**: [Code Sniffer](/docs/scos/dev/sdk/{{page.version}}/development-tools/code-sniffer.html), [Architecture Sniffer](/docs/scos/dev/sdk/{{page.version}}/development-tools/architecture-sniffer.html), [PHPStan](/docs/scos/dev/sdk/{{page.version}}/development-tools/phpstan.html).
 
-### Spryk: Code Generation Tool 
+### Spryk: Code Generation Tool
 With this release, Spryker introduces a new code generator called Spryk. It helps with the generation of required boilerplate code. Spryk works for new and existing code and supports multiple scenarios or definitions. Some scenarios are complex and implemented as independent Spryk definitions linked together, allowing a developer to run code generation for the whole scenario or only for a part of it.
 
 **Documentation**: [Spryk](/docs/scos/dev/sdk/{{page.version}}/development-tools/spryk-code-generator.html).
 
-## Spryker Glue REST API 
+## Spryker Glue REST API
 ### Product Relations
 The Spryker Glue REST API now includes endpoints for retrieving lists of related products. Endpoints are available for every type of relation working with the corresponding business logic.
 
@@ -134,14 +134,14 @@ From now on, resource relationships are not included in the response by default.
 
 ## B2B
 ### Quick Order Improvements
-With this release, we have implemented significant improvements to the Quick Order feature. First, Quick Order now supports uploading of big packs of data with the help of CSV files, which allows the shop customers to order multiple products at once. Also, we have integrated a Search Widget for concrete products into Quick Order to enable full-text search for concrete products with the support of Measuring Units, Packaging Units and all kinds of Product restrictions (minimum and maximum quantity, Customer specific products, etc). Out of the box, the Spryker Search Widget can be used not only in Quick Order but as a separate widget for the Cart page and Shopping list. 
-![Quick order improvements](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201903.0/image10.png) 
+With this release, we have implemented significant improvements to the Quick Order feature. First, Quick Order now supports uploading of big packs of data with the help of CSV files, which allows the shop customers to order multiple products at once. Also, we have integrated a Search Widget for concrete products into Quick Order to enable full-text search for concrete products with the support of Measuring Units, Packaging Units and all kinds of Product restrictions (minimum and maximum quantity, Customer specific products, etc). Out of the box, the Spryker Search Widget can be used not only in Quick Order but as a separate widget for the Cart page and Shopping list.
+![Quick order improvements](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201903.0/image10.png)
 
 **Documentation**: [Quick Order](https://documentation.spryker.com/2021080/docs/quick-add-to-cart).
 
 ### Approval Process
-We are introducing one of the core B2B features which enables managers to control purchases requested by their employees. A customer can choose to have an order approved by a responsible person before allowing the checkout. The company administrator can limit some roles with flexible permissions and define a threshold on the Cart Total value so a buyer would need to ask for approval when the Cat Total limit is exceeded. 
-![Approval process](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201903.0/image4.png) 
+We are introducing one of the core B2B features which enables managers to control purchases requested by their employees. A customer can choose to have an order approved by a responsible person before allowing the checkout. The company administrator can limit some roles with flexible permissions and define a threshold on the Cart Total value so a buyer would need to ask for approval when the Cat Total limit is exceeded.
+![Approval process](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201903.0/image4.png)
 
 **Documentation**: [Approval Process](https://documentation.spryker.com/2021080/docs/approval-process-201903).
 
@@ -182,4 +182,4 @@ In addition to the existing Arvato RSS integration, Spryker has added the AfterP
 
 **Documentation**: [AfterPay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/afterpay/afterpay.html).
 
-Check out [Documentation Updates](/docs/scos/user/intro-to-spryker/whats-new/documentation-updates.html) for all the updates to documentation made with this release. 
+Check out [Documentation Updates](/docs/scos/user/intro-to-spryker/whats-new/documentation-updates.html) for all the updates to documentation made with this release.

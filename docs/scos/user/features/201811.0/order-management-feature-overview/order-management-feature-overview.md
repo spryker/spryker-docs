@@ -6,6 +6,10 @@ originalArticleId: e3a5a9ad-1a94-41c9-ae61-130ce211295c
 redirect_from:
   - /v1/docs/order-management
   - /v1/docs/en/order-management
+  - /v1/docs/offer-management
+  - /v1/docs/en/offer-management
+  - /v1/docs/order-processing
+  - /v1/docs/en/order-processing
 ---
 
 <div class='feature-text'>

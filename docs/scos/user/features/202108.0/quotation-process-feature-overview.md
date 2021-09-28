@@ -19,6 +19,9 @@ redirect_from:
 |Buyer  | Company user who can create a Request for quote (RFQ)  |
 |Sales representative (sales rep)  | A person who is eligible for reviewing the submitted RFQs |
 |Shipment cost | Price calculated for the shipment services. |
+
+With the *Quotation Process* feature the B2B customers ask for special prices, and suppliers can get back to them with a compromise pricing suggestion.
+
 **Request for Quote (RFQ)** is a request that a B2B buyer sends to their suppliers stating that they would like to get a quoted price on particular products with the details about the packaging and volumes they need.
 Within the Spryker Commerce OS, RFQ is represented by the ability of a sales representative to see the list of quotes, check and edit them, thereby change and overwrite the prices for the products, view and edit shipment cost in the RFQ for a certain buyer. In turn, a buyer is able to create an RFQ from a shopping cart, add a note to it and bid for lower prices, as well as define a delivery address and select a shipment method. An RFQ can also specify the timeline for delivery, a date by which the proposal should be submitted, and the history of the negotiations.
 One of the RFQ features is a tool for creating special offers for buyers with limited validity. For example, a sales representative can update the prices for products in the RFQ and set the exact time until which this offer is valid, e.g., the 29th of December, 2019, 11:58 PM. If the buyer tries to proceed with this RFQ to checkout on the 29th of December, 2019, at 11:59 PM, then this RFQ will not be available.
@@ -186,6 +189,6 @@ Agents can perform the same actions (on company users' behalf) as company users.
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Quotation Process feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/quotation-process-feature-walkthrough.html) for developers.
+Are you a developer? See [Quotation Process feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/quotation-process-feature-walkthrough/quotation-process-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

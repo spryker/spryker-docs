@@ -24,6 +24,6 @@ For the refunded items, you can use the default OMS states to be displayed on th
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Refunds feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/refunds-feature-walkthrough.html) for developers.
+Are you a developer? See [Refunds feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/refunds-feature-walkthrough/refunds-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

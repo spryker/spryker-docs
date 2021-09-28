@@ -75,7 +75,7 @@ ItemTransfer::sumGrossPriceWithProductOptions = sum(ProductOptionTransfer::sumGr
 * **DiscountCalculatorPlugin** - Applies discounts to current `QuoteTransfer` each discountable item with property `calculatedDiscounts`, gets discounts filled. Also, `voucherDiscounts` and `cartRuleDiscounts` are populated with additional used discount data for order level.
 
 {% info_block infoBox "Discount Calculation" %}
-Discount calculation is a separate topic and is explained in the [Discount](/docs/scos/user/features/{{page.version}}/promotions-and-discounts/discount/discount.html
+Discount calculation is a separate topic and is explained in the [Discount](/docs/scos/user/features/{{page.version}}/promotions-and-discounts-feature-overview.html
 {% endinfo_block %} article.)
 
 

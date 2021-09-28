@@ -6,9 +6,11 @@ originalArticleId: 39abbc97-14d8-46ef-b7a1-b43859527e02
 redirect_from:
   - /v6/docs/promotions-discounts-feature-overview
   - /v6/docs/en/promotions-discounts-feature-overview
+  - /v6/docs/promotions-discounts
+  - /v6/docs/en/promotions-discounts
 ---
 
-The Promotions & Discounts feature enables product catalog managers to provide free value to their customers by discounting a percentage or a fixed sum of an order's subtotal or an item's price on predefined conditions. 
+The Promotions & Discounts feature enables product catalog managers to provide free value to their customers by discounting a percentage or a fixed sum of an order's subtotal or an item's price on predefined conditions.
 
 ## Discount Types
 
@@ -36,7 +38,7 @@ See [Creating a Voucher](/docs/scos/user/user-guides/{{page.version}}/back-offic
 
 ## Cart Rule
 
-A Cart rule is a discount that applies to cart once all the [decision rules](#decision-rule) linked to the cart rule are fulfilled. 
+A Cart rule is a discount that applies to cart once all the [decision rules](#decision-rule) linked to the cart rule are fulfilled.
 
 
 The cart rule is applied automatically. If the decision rules of a discount are fulfilled, the customer can see the discount upon entering cart. Unlike with [voucher](#voucher), the **Clear all** and **Remove** actions are not displayed.
@@ -45,7 +47,7 @@ The cart rule is applied automatically. If the decision rules of a discount are 
 See [Creating a Cart Rule](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/discount/creating-a-cart-rule.html) to learn how a product catalog manager can create a cart rule in the Back Office.
 
 ### Decision Rule
-A decision rule is a condition assigned to a discount that should be fulfilled for the discount to be applied. 
+A decision rule is a condition assigned to a discount that should be fulfilled for the discount to be applied.
 
 A discount can have one or more decision rules. Find an examplary combination below:
 | Parameter | RELATION OPERATOR | Value |
@@ -100,14 +102,14 @@ When a cart is evaluated on a level that has a rule and a rule group, the rule g
 
 <details open>
     <summary>Cart evaluation diagram</summary>
-    
+
 ![cart evaluation diagram](https://confluence-connect.gliffy.net/embed/image/fd6a6ce1-2c3f-438a-8377-ca337c3703c3.png?utm_medium=live&utm_source=custom)
 
 
 </details>
 
 ### Discount Threshold
-Threshold is a minimum number of items in cart that should fulfill all the specified decision rules for the discount to be applied. 
+Threshold is a minimum number of items in cart that should fulfill all the specified decision rules for the discount to be applied.
 The default value is *1* . It means that a discount is applied if at least one item fulfills the discount's decision rules.
 
 In the following example, the discount is applied if there are four items with the Intel Core processor in cart.
@@ -124,23 +126,23 @@ There are two types of discount application:
 
 
 ### Query String
-Query String is a discount application type that uses [decision rules](#decision-rule) to dynamically define what products a discount applies to. 
+Query String is a discount application type that uses [decision rules](#decision-rule) to dynamically define what products a discount applies to.
 
 The discount in the example below, applies to white products.
 ![Query collection](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/collection-query.png)
 
 The product selection based on the query string is dynamic:
-* If, at some point, the color attribute of a product changes from white to anything else, the product is no longer eligible to be discounted. 
+* If, at some point, the color attribute of a product changes from white to anything else, the product is no longer eligible to be discounted.
 * If, at some point, a product receives the white color attribute, it becomes eligible for the discount.
 
 ### Promotional Product
 
-Promotional product is a discount application type that discounts a particular product, regardless of whether the product is added to cart or not. 
+Promotional product is a discount application type that discounts a particular product, regardless of whether the product is added to cart or not.
 
 When a promotional product is available to a customer, the discount name is not displayed in the overview section. Instead, the **Promotional products** section is displayed in the cart, allowing to add the available quantity of the product to cart.
 ![Promotional product](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/promotional-product-frontend.png)
 
-A product catalog manager selects the promotional product by entering an abstract product SKU in the Back Office. Also, they define the quantity of the product to be sold with a discount. 
+A product catalog manager selects the promotional product by entering an abstract product SKU in the Back Office. Also, they define the quantity of the product to be sold with a discount.
 
 ![Collection - promotional product](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/collection-promotional-product.png)
 
@@ -209,5 +211,3 @@ If a cart is eligible for a discount outside of its validity interval, the cart 
 
 A product catalog manager defines calculation when [creating a voucher](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/discount/creating-a-voucher.html) or [creating a cart rule](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/discount/creating-a-cart-rule.html).
 ![Validity interval](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/validity-interval.png)
-
-

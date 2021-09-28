@@ -417,6 +417,9 @@ entries:
 
                 - title: "Pagination"
                   url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-pagination.html
+                
+                - title: "Total"
+                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-total.html
 
             - title: "Table Filter extension"
               url: /docs/marketplace/dev/front-end/table-design/table-filter-extension.html

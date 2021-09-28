@@ -25,34 +25,3 @@ Password management enables the basic password security for customer accounts. I
 
 Also, it allows you to manage customer access, request a password change or change it on your side.
 
-## If you are:
-
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="docs\scos\user\features\202009.0\customer-account-management\customer-account-management-feature-overview\customer-account-overview.md" class="mr-link">Get a general idea of Customer Account</a></li>
-                <li><a href="docs\scos\user\features\202009.0\customer-account-management\customer-account-management-feature-overview\customer-registration-overview.md" class="mr-link">Get a general idea of Customer Registration</a></li>
-                <li><a href="docs\scos\user\features\202009.0\customer-account-management\customer-account-management-feature-overview\customer-groups-overview.md" class="mr-link">Get a general idea of Customer Groups</a></li>
-                <li><a href="docs\scos\user\features\202009.0\customer-account-management\customer-account-management-feature-overview\password-management-overview.md" class="mr-link">Get a general idea of Password Management</a></li>
-                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\customer-account-management-feature-integration.md" class="mr-link">Integrate the Customer Account Management feature into your project</a></li>
-                 <li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-customer.md#upgrading-from-version-6---to-version-7-0" class="mr-link">Migrate the Customer module from version 6.* to version 7.0</a></li>
-                 <li><a href="docs\scos\user\features\202009.0\customer-account-management\customer-account-management-feature-overview\reference-information-customer-module-overview.md" class="mr-link">Referene information: Customer module overview 7.0</a></li>
-            </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="docs\scos\user\features\202009.0\customer-account-management\customer-account-management-feature-overview\customer-account-overview.md" class="mr-link">Get a general idea of Customer Account</a></li>
-                <li><a href="docs\scos\user\features\202009.0\customer-account-management\customer-account-management-feature-overview\customer-registration-overview.md" class="mr-link">Get a general idea of Customer Registration</a></li>
-                <li><a href="docs\scos\user\features\202009.0\customer-account-management\customer-account-management-feature-overview\customer-groups-overview.md" class="mr-link">Get a general idea of Customer Groups</a></li>
-                <li><a href="docs\scos\user\features\202009.0\customer-account-management\customer-account-management-feature-overview\password-management-overview.md" class="mr-link">Get a general idea of Password Management</a></li>
-                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\customer-account-management-feature-integration.md" class="mr-link">Integrate the Customer Account Management feature into your project</a></li>
-                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\customer\customer-customer-access-customer-groups\managing-customers.md" class="mr-link">Create and manage customers in the Back Office</a></li>
-            </ul>
-        </div>
-        </div>
-</div>

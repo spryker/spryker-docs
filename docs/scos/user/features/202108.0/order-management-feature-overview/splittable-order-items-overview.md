@@ -47,7 +47,7 @@ Both non-splittable and splittable order items can be refunded in the Back Offic
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of the Splittable Order Items feature](/docs/scos/user/features/{{page.version}}/order-management/order-management-feature-overview/splittable-order-items-overview.html)  |
+| [Get a general idea of the Splittable Order Items feature](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/splittable-order-items-overview.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

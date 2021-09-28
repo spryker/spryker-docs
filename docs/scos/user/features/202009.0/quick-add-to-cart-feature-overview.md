@@ -33,7 +33,7 @@ The integration is possible only if the Measurement Units feature is enabled in 
 Moreover, after adding a quick order to cart, a shop owner can observe the default amount and default sales units for the product packaging unit in the cart overview.
 ![Quick Order packaging units](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Quick+Order/Quick+Order+Feature+Overview/quick-order-packaging-units.png)
 
-When the customer has found the products they need, they can set the quantity of each product using a scroll-down box. By default, "1" is set in the *Quantity* field. If there are any quantity restrictions applied to the product, they are taken into account: the customer can choose only the value which meets the quantity restrictions. See [Quantity Restrictions for Quick Order](/docs/scos/dev/quick-add-to-cart/{{page.version}}/quick-add-to-cart-feature-overview.html#quantity-restrictions-for-quick-order) to learn more about how the quantity limitations are applied to the *Quick Order* form.
+When the customer has found the products they need, they can set the quantity of each product using a scroll-down box. By default, "1" is set in the *Quantity* field. If there are any quantity restrictions applied to the product, they are taken into account: the customer can choose only the value which meets the quantity restrictions. See [Quantity Restrictions for Quick Order](/docs/scos/user/features/{{page.version}}/quick-add-to-cart-feature-overview.html#quantity-restrictions-for-quick-order) to learn more about how the quantity limitations are applied to the *Quick Order* form.
 
 Once the products and their quantities have been selected, the order can be:
 

@@ -30,7 +30,7 @@ By default, a warehouse is not linked to a sales order item. The logic described
 
 {% endinfo_block %}
 
-During the checkout, once a buyer entered delivery addresses for all order items, be it a [single delivery](/docs/scos/user/features/{{page.version}}/order-management/order-management-feature-overview/split-delivery-overview.html) or a split delivery, the order items are assigned to warehouses to fulfil them.
+During the checkout, once a buyer entered delivery addresses for all order items, be it a [single delivery](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/split-delivery-overview.html) or a split delivery, the order items are assigned to warehouses to fulfil them.
 
 By default, if a buyer orders several items of the same SKU, the requested item’s stock is checked in all the warehouses of the store. Based on the item stock, the warehouses are sorted in descending order, for example:
 

@@ -17,7 +17,9 @@ redirect_from:
 | MODULE | DATE | REASON FOR THE MAJOR VERSION |
 | --- | --- | --- |
 | [Search](https://github.com/spryker/search) | Q4 2021 | Getting rid of the ElasticSearch 5.6 support, which is end-of-life with no security fixes. It’s a consequence of the ElasticSearch 7 support. |
-
+| [Locale](https://github.com/spryker/locale) | Q4 2021 | Adding relation between the Locale and Store objects. |
+| [Currency](https://github.com/spryker/currency) | Q4 2021 | Adding relation between the Currency and Store objects. |
+| [Country](https://github.com/spryker/country) | Q4 2021 | Adding relation between the Country and Store objects. |
 
 
 

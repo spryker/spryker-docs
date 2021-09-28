@@ -31,7 +31,7 @@ For information about installing the Spryker Commerce OS see [Getting Started Gu
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes%3A+Code+Releases+May%2C+2020/image7.png)
 
 #### Documentation
-[Filter and Search in Order Archive](/docs/scos/user/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-accounts-overview.html#customer-account-on-the-storefront)
+[Filter and Search in Order Archive](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-accounts-overview.html#customer-account-on-the-storefront)
 
 ### Adding Shipment Cost to RFQ
 **Adding shipment cost for RFQ** is a new step in the Quotation Process at Spryker. Previously, it was not possible to create a quote with a shipment cost, which created limitations in digital negotiations about a purchase. Now, the negotiations can go further: the B2B Customers can negotiate with Supplier not only the item price and volume of order but the shipment cost of the purchase as well.

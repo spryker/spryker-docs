@@ -160,4 +160,4 @@ With the Agent Assist feature, you may enable your employees to help your custom
 ### Add Concrete Product to Existing Abstract Product
 With this improvement, you will be able to attach new product concretes to existing abstract products directly in the backend interface.
 
-**Documentation**: [Products](/docs/scos/user/features/{{page.version}}/product/product.html)
+**Documentation**: [Products](/docs/scos/user/features/{{page.version}}product-feature-overview/product-feature-overview.html)

@@ -23,8 +23,8 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 
 [**Product Information Management**](https://documentation.spryker.com/2021080/docs/product-information-management):
 
-* [Product Abstraction](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/products-overview.html)
-* [Product Attributes](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/products-overview.html)
+* [Product Abstraction](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html)
+* [Product Attributes](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html)
 * [Super Attributes](https://documentation.spryker.com/2021080/docs/super-attributes)
 * [Product Groups](https://documentation.spryker.com/2021080/docs/product-groups)
 * [Product Bundles](https://documentation.spryker.com/2021080/docs/product-bundles)
@@ -73,8 +73,8 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 
 [**Media Management**](/docs/scos/user/features/{{page.version}}/file-manager-feature-overview/file-manager-feature-overview.md):
 
-* [Product Image Management](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/product-images-overview.html)
-* [Image Hosting](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/product-images-overview.html)
+* [Product Image Management](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-images-overview.html)
+* [Image Hosting](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-images-overview.html)
 * [Asset Management](/docs/scos/user/features/{{page.version}}/file-manager/file-manager-feature-overview/asset-management.html)
 * [Video Embedding](/docs/scos/user/features/{{page.version}}/file-manager-feature-overview/file-manager-feature-overview.md)
 

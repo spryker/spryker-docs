@@ -103,9 +103,9 @@ The Spryker Commerce OS supports integration of the following PIM systems:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of Product Attributes](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/product-attributes-overview.html)  |
-| [Get a general idea of Discontinued Products](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/discontinued-products-overview.html)  |
-| [Get a general idea Product Images](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/product-images-overview.html)  |
+| [Get a general idea of Product Attributes](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html)  |
+| [Get a general idea of Discontinued Products](/docs/scos/user/features/{{page.version}}/product-feature-overview/discontinued-products-overview.html)  |
+| [Get a general idea Product Images](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-images-overview.html)  |
 | [Get a general idea of Timed Product Availability](/docs/scos/user/features/{{page.version}}/product-feature-overview/timed-product-availability-overview.html)  |
 | [Create an abstract product](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html) |
 | [Edit an abstract product](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/abstract-products/editing-abstract-products.html) |

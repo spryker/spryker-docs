@@ -8,8 +8,8 @@ redirect_from:
   - /v5/docs/en/super-attributes
 ---
 
-The **super attribute** is the only way to tell a Spryker-based shop that a product contains multiple variants (or [concrete products](/docs/scos/user/features/{{page.version}}/product-information-management/product-abstraction.html)) to allow your customer to select the right product.
-Spryker supports an unlimited amount of super attributes for a given [abstract product](/docs/scos/user/features/{{page.version}}/product-information-management/product-abstraction.html). See below to understand how abstract and concrete products work with super attributes.
+The **super attribute** is the only way to tell a Spryker-based shop that a product contains multiple variants (or [concrete products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html)) to allow your customer to select the right product.
+Spryker supports an unlimited amount of super attributes for a given [abstract product](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html). See below to understand how abstract and concrete products work with super attributes.
 
 ## Hierarchy of Products
 

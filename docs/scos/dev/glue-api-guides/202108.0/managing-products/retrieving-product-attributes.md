@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/retrieving-product-attributes
 ---
 
-The Product Management Attributes API allows you to retrieve all predefined [product attributes](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/products-overview.html) available in your shop system.
+The Product Management Attributes API allows you to retrieve all predefined [product attributes](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) available in your shop system.
 
 {% info_block infoBox %}
 

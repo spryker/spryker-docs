@@ -1317,7 +1317,7 @@ To retrieve detailed information on an order, send the request:
 | items.salesOrderConfiguredBundleItem |Object |Contains information about the items of the configured bundle. |
 | items.salesOrderConfiguredBundleItem.configurableBundleTemplateSlotUuid| String| Unique identifier of the configurable bundle slot in the system. |
 | items.metadata                          | object  | Metadata of the concrete product.                            |
-| items.metadata.superAttributes          | String  | [Attributes](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/product-attributes-overview.html) of the order item. |
+| items.metadata.superAttributes          | String  | [Attributes](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html) of the order item. |
 | items.metadata.image                    | String  | Product image URL.                                           |
 
 **Measurement unit calculations**

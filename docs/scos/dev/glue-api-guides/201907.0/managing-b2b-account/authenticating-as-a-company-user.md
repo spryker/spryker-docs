@@ -20,7 +20,7 @@ During the impersonation process, customers receive an Access Token. The token 
 
 {% info_block infoBox "Info" %}
 If the [Prices per Merchant Relation \(Customer specific prices\
-{% endinfo_block %}](/docs/scos/user/features/{{page.version}}/price/prices-per-merchant-relation/prices-per-merchant-relation-customer-specific-prices.html) feature is enabled in your project, all prices returned by Spryker REST API are the prices specific to the Company of the current Company User (if any).)
+{% endinfo_block %}](/docs/scos/user/features/{{page.version}}/merchant-custom-prices-feature-overview.html) feature is enabled in your project, all prices returned by Spryker REST API are the prices specific to the Company of the current Company User (if any).)
 
 The same as with B2C resource access tokens, the tokens provided by the API have limited timeframe. When receiving an access token, the response body contains not only the access token itself, but also its lifetime, in seconds, and a **Refresh Token**. When the lifetime expires, the Refresh Token can be exchanged for a new Access Token. The new token will also have a limited lifetime and have a corresponding Refresh Token for future authentication. The default lifetime of the tokens is 8 hours (28800 seconds) for an access token and 1 month (2628000 seconds) for a refresh token. The settings can be changed in the module configuration.
 

@@ -10,7 +10,7 @@ This articles provides details about ui components library.
 
 There is a set of UI Angular Components that is built separately from the Spryker Core and distributed via NPM Registry independently.
 Each package can be installed via npm command `npm install @spryker/package_name` or yarn `yarn add @spryker/package_name`.
-UI Angular Components lib has `Angular 9`, `rxjs`, `ng-zorro-antd 9` under the hood.
+UI Angular Components is built using Angular 9, rxjs and Ant Design under the hood.
 These components are used withing Spryker Core modules of Merchant Portal. They can be used inside angular ecosystem as default angular components or can be transformed as web components and reuse inside spryker `twig` modules (see [web components](TBD)).
 A lot of UI Components have extension points that may and some of them must be configured on the project level (e.g `Table`, `Datasource`)
 

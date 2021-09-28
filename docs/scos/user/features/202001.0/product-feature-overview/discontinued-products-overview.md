@@ -6,6 +6,8 @@ originalArticleId: af292911-5ff6-4eff-8914-fe14ff521a72
 redirect_from:
   - /v4/docs/discontinued-products-overview
   - /v4/docs/en/discontinued-products-overview
+  - /v4/docs/discontinued-products
+  - /v4/docs/en/discontinued-products
 ---
 
 ## Out of Stock vs. Discontinued Products

@@ -78,7 +78,7 @@ The product information is structured as follows:
 
 #### Case 3: Selling a product in five colors, four sizes, and three materials
 
-To a product in five colors, four sizes, and three materials, you can structure product information in one of the following ways. You can create an abstract product and up to 60 variants to support all the combinations. Or, you can use the [Product Groups](/docs/scos/user/features/{{page.version}}/product-groups/product-groups-feature-overview.html) feature.
+To a product in five colors, four sizes, and three materials, you can structure product information in one of the following ways. You can create an abstract product and up to 60 variants to support all the combinations. Or, you can use the [Product Groups](/docs/scos/user/features/{{page.version}}/product-groups-feature-overview.html) feature.
 
 Using the Product Group feature, you create a group of five abstract products, one for each color. Each abstract product  contains up to 12 concrete products of different combinations of the sizes and the materials.
 

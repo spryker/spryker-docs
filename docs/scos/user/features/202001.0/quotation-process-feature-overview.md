@@ -187,6 +187,6 @@ Agents can perform the same actions (on company users' behalf) as company users.
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Quotation Process feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/quotation-process-feature-walkthrough.html) for developers.
+Are you a developer? See [Quotation Process feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/quotation-process-feature-walkthrough/quotation-process-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

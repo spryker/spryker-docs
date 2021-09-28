@@ -9,13 +9,13 @@ This article provides details about the Table Feature Pagination component in th
 ## Overview
 
 Table Feature Pagination is a feature of the Table Component that renders pagination of the table.
-This feature based on the Pagination component.
-See an example below, how to use the Pagination feature.
+This feature is based on the Pagination component.
+Check out this example below to see how to use the Pagination feature.
 
 Feature Configuration:
 
-`enabled` - will enable feature via config.  
-`sizes` - is an array of numbers of table rows that needs to be displayed per page.  
+- `enabled` - enables feature via config.  
+- `sizes` - is an array of numbers of table rows that needs to be displayed per page.  
 
 ```html
 <spy-table [config]="{
@@ -30,6 +30,8 @@ Feature Configuration:
 ```
 
 ## Feature registration
+
+Register the feature:
    
 ```ts
 @NgModule({
@@ -47,7 +49,7 @@ export class RootModule {}
 
 ## Interfaces
 
-Below you can find interfaces for Table Feature Pagination.
+Below you can find interfaces for the Table Feature Pagination component.
 
 ```ts
 export interface TablePaginationConfig extends TableFeatureConfig {

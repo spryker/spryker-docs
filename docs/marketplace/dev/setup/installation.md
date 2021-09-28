@@ -4,14 +4,13 @@ description: This article describes how to get started with the B2C Demo Marketp
 template: concept-topic-template
 ---
 
-
 This article describes how to get started with the B2C Demo Marketplace.
 
-For detailed installation instructions, see [Installing Spryker with Docker](https://documentation.spryker.com/docs/installing-spryker-with-docker) or [Installing with Development Virtual Machine](https://documentation.spryker.com/docs/dev-getting-started#installing-spryker-with-development-virtual-machine).
+For the detailed installation instructions, see [Installing Spryker with Docker](https://documentation.spryker.com/docs/installing-spryker-with-docker) or [Installing Spryker with the Development Virtual Machine](https://documentation.spryker.com/docs/dev-getting-started#installing-spryker-with-development-virtual-machine).
 
 ## Prerequisites
 
-For full installation prerequisites, see one of the following:
+For the entire installation prerequisites, see one of the following:
 
 - [Installing Docker prerequisites on MacOS](https://documentation.spryker.com/docs/installing-docker-prerequisites-on-macos)
 - [Installing Docker prerequisites on Linux](https://documentation.spryker.com/docs/installing-docker-prerequisites-on-linux)
@@ -19,15 +18,14 @@ For full installation prerequisites, see one of the following:
 
 ## Requirements
 
-For recommended system requirements, see the following:
-
-- [System requirements](/docs/marketplace/dev/setup/system-requirements.html)
+For the recommended system requirements, see [System requirements](/docs/marketplace/dev/setup/system-requirements.html).
 
 ## Installing the B2C Demo Marketplace
 
 To install the B2C Demo Marketplace:
 
 1. Create a project folder and clone the B2C Demo Marketplace and the Docker SDK:
+   
 ```bash
 mkdir spryker-b2c-marketplace && cd spryker-b2c-marketplace
 
@@ -38,8 +36,8 @@ git clone git@github.com:spryker/docker-sdk.git docker
 
 2. Set up a desired environment:
 
-- [Setting up a development environment](#setting-up-a-development-environment)
-- [Setting up a production-like environment](#setting-up-a-production-like-environment)
+- [Development environment](#setting-up-a-development-environment)
+- [Production-like environment](#setting-up-a-production-like-environment)
 
 ### Setting up a development environment<a name="setting-up-a-development-environment"></a>
 
@@ -53,7 +51,7 @@ docker/sdk boot deploy.dev.yml
 
 2. If the command you've run in the previous step returned instructions, follow them.
 
-3. Build and start the instance:
+3. Build and start an instance:
 
 ```bash
 docker/sdk up
@@ -83,6 +81,6 @@ You've set up your Spryker B2C Demo Marketplace and can access your applications
 
 ## Next steps
 
-- For a troubleshooting, see [Troubleshooting Spryker in Docker issues](https://documentation.spryker.com/docs/troubleshooting-spryker-in-docker-issues) or [Troubleshooting Spryker in Vagrant installation issues](https://documentation.spryker.com/docs/troubleshooting-spryker-in-vagrant-installation-issues).
+- For troubleshooting, see [Troubleshooting Spryker in Docker issues](https://documentation.spryker.com/docs/troubleshooting-spryker-in-docker-issues) or [Troubleshooting Spryker in Vagrant installation issues](https://documentation.spryker.com/docs/troubleshooting-spryker-in-vagrant-installation-issues).
 - Configuring debugging in [Docker](https://documentation.spryker.com/docs/configuring-debugging-in-docker) and in [Vagrant](https://documentation.spryker.com/docs/configuring-debugging-in-vagrant).
 - See Glue API reference at [REST API reference](https://documentation.spryker.com/docs/rest-api-reference).

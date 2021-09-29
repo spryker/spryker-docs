@@ -43,3 +43,5 @@ interface TableColumnDateConfig {
     format?: string; // 'shortDate' - by default
 }
 ```
+
+Pre-defined `format` [options](https://angular.io/api/common/DatePipe#pre-defined-format-options).

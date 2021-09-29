@@ -7,7 +7,7 @@ template: concept-topic-template
 The *Merchant* feature provides the core functionality for the SCOS B2B and Marketplace with the basic create-read-update operations over the Merchant entity.
 You cannot delete a merchant, but only deactivate.
 
-## Main Merchant feature modules 
+## Main Merchant feature modules
 
 | NAME | Description |
 | -------------------- | ---------- |

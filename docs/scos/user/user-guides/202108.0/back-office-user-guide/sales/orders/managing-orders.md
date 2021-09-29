@@ -220,7 +220,7 @@ Claiming an order does not change the status of the order or the items inside th
 
 ## Commenting orders
 
-To add a [comment](/docs/scos/user/features/{{page.version}}/comments/comments-feature-overview.html) to an order:
+To add a [comment](/docs/scos/user/features/{{page.version}}/comments-feature-overview.html) to an order:
 1. Click **View** next to the order you want to comment.
 2. On the *View Order: [Order ID]* page, scroll down to the *Comments* section.
 3. Enter the comment in the *Message* field.

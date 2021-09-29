@@ -15,4 +15,4 @@ Some of the internal component will always remain as Angular Component unless th
 
 Web Components is a suite of different technologies allowing you to create reusable custom elements — with their functionality encapsulated away from the rest of your code — and utilize them in your web apps.
 
-The full cycle of the new module creation and registration it as a web component you can see in the [following document](/docs/marketplace/dev/front-end/how-to-create-a-new-module-with-application.html).
+The full cycle of the new module creation and registration it as a web component you can see in the [following document](/docs/marketplace/dev/howtos/how-to-create-a-new-module-with-application.html#register-a-new-module).

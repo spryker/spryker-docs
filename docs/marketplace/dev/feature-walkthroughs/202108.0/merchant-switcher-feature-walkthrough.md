@@ -2,7 +2,7 @@
 title: Merchant Switcher feature walkthrough
 last_updated: Sep 29, 2021
 description: This article provides technical details on the Merchant Switcher feature.
-template: feature-walkthroughs-merchant-switcher
+template: merchant-switcher-feature-walkthrough
 ---
 
 With the *Merchant Switcher* feature, the customers can select an active merchant so that he can only see products and offers which belong to this merchant.

@@ -26,7 +26,7 @@ Currently, there are the following importers in Spryker Commerce OS:
 * Shopping List Importer **(Beta)** - **B2B/B2C**
 * Shopping List Company Business Unit Importer **(Beta)** - **B2B/B2C**
 * Shopping List Company User Importer **(Beta)** - **B2B/B2C**
-* Shopping List Item Importer **(Beta)** - - **B2B/B2C**
+* Shopping List Item Importer **(Beta)** -**B2B/B2C**
 * Product Abstract Importer - **B2B/B2C**
 * Product Abstract Store Importer - **B2B/B2C**
 * Product Concrete Importer - **B2B/B2C**

@@ -16,7 +16,7 @@ Any changes the customer makes within the cart trigger an automatic sum-recalcul
 
 The persistent cart functionality lets authenticated customers store their cart throughout multiple sessions. The Cart feature also ensures that your business rules, such as discounts, taxes, or shipping, are applied, based on the customers' final choice of items.
 
-Your customers can place orders faster by adding simple products to cart from the *Category* page. They can add products with one [product variant](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/products-overview.html) to cart with one click.
+Your customers can place orders faster by adding simple products to cart from the *Category* page. They can add products with one [product variant](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) to cart with one click.
 
 The feature supports [product groups](/docs/scos/user/features/{{page.version}}/product-groups-feature-overview.html). If simple products are grouped, you can browse and add these products to cart from the *Category* page.
 

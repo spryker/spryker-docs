@@ -6,6 +6,8 @@ originalArticleId: 22bdc25e-e2f4-4477-b53d-72f31810947f
 redirect_from:
   - /v2/docs/product-quantity-restrictions-overview
   - /v2/docs/en/product-quantity-restrictions-overview
+  - /v2/docs/product-quantity-restrictions
+  - /v2/docs/en/product-quantity-restrictions
 ---
 
 On the *Edit product* page of the Administration interface, the administrator can set **quantity restrictions** for product concretes. Quantity restriction values define the amount of items that customer can put into the cart. You can set three values for quantity restrictions: minimum, maximum, interval. Minimum value defines the smallest allowable quantity of a specific item in cart. Maximum quantity restricts the allowable quantity of items in cart to a specific value. Interval value determines an increment value by which the quantity can be changed. For example, if you specify minimum quantity as 5, interval as 3, and maximum quantity as 14, it means that user can put 5, 8, 11 and 14 items to cart. If user puts an unacceptable quantity of items to cart, they will be suggested to buy another, allowable, quantity of items.

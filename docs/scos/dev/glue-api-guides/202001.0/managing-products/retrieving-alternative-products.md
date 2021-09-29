@@ -12,7 +12,7 @@ The _Alternative Products_ feature allows customers to quickly find a substitute
 
 {% info_block infoBox %}
 For more details, see [Alternative Products](/docs/scos/user/features/{{page.version}}/alternative-products-feature-overview.html
-{% endinfo_block %} and [Discontinued Products](/docs/scos/user/features/{{page.version}}/product-information-management/discontinued-products/discontinued-products.html).)
+{% endinfo_block %} and [Discontinued Products](/docs/scos/user/features/{{page.version}}/product-feature-overview/discontinued-products-overview.html).)
 
 The Product Alternatives API provides access to alternative products via REST API requests. In particular, you can:
 

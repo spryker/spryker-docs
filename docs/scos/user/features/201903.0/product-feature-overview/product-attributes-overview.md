@@ -1,11 +1,11 @@
 ---
 title: Product Attributes
 description: Creating and managing product attributes is the first step in enriching the product data. It is a part of maintaining and improving the online shop.
-originalLink: https://documentation.spryker.com/v3/docs/product-attributes
-originalArticleId: c0f5628f-4c4b-4d6b-8030-6f2b6387e157
+originalLink: https://documentation.spryker.com/v2/docs/product-attributes
+originalArticleId: ed57981d-78d7-4c0e-902a-6ce7853c7aa6
 redirect_from:
-  - /v3/docs/product-attributes
-  - /v3/docs/en/product-attributes
+  - /v2/docs/product-attributes
+  - /v2/docs/en/product-attributes
 ---
 
 Creating and managing product attributes is the first step in enriching your product data. It is an essential part of maintaining and improving the online shop for your customers. Attributes can serve different purposes and are therefore stored in different ways. They may be used not only for product management, but also to improve search and filter functionality in the shop.
@@ -62,7 +62,7 @@ Key = attribute.protection_feature
 Value (en_EN) = Protection Feature 
 Value (de_DE) = Schutzfunktion 
 
-The attribute value “waterproof” is now translated, a non-localized value (as in [Example 1](/docs/scos/user/features/{{page.version}}/product-management/product-attributes.html#example-1-for-localized-attributes-and-non-localized-values)) is not sufficient: 
+The attribute value “waterproof” is now translated, a non-localized value (as in [Example 1](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html#example-1-for-localized-attributes-and-non-localized-values)) is not sufficient: 
 
 Value (en_EN) = Waterproof 
 Value (de_DE) = Wasserdicht 
@@ -76,7 +76,7 @@ Schutzfunktion = Wasserdicht
 ### Example 3 for different localized attributes and values for different languages
 
   Product Z has the attribute “length” and is sold in 3 countries, Germany, Ireland, and the United States. Due to the fact that the United States does not use the metric system, the attribute values should be displayed in feet in the US and in meters in Germany and Ireland. 
-For this scenario there are two ways of doing it. One way **1** is to work with a non-localized attribute key for Germany and Ireland, and a localized key for the US, because (like in [Example 1](/docs/scos/user/features/{{page.version}}/product-management/product-attributes.html#example-1-for-localized-attributes-and-non-localized-values)) two languages could share the same translation for the attribute. The other way **2** is to add localized attribute keys and values for each language. 
+For this scenario there are two ways of doing it. One way **1** is to work with a non-localized attribute key for Germany and Ireland, and a localized key for the US, because (like in [Example 1](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html#example-1-for-localized-attributes-and-non-localized-values)) two languages could share the same translation for the attribute. The other way **2** is to add localized attribute keys and values for each language. 
 
 **(1)Non-Localized key and localized key for the US** 
 In the DB a key “attribute.length” is saved for non-localized values and a localized key “attribute.length.us” for the translations in the metric system. 

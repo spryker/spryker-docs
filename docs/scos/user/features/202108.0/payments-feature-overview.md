@@ -75,7 +75,7 @@ Hydrating payment methods for an order
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Mange payment methods](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/payment-methods/managing-payment-methods.html)   |
+| [Manage payment methods](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/payment-methods/managing-payment-methods.html)   |
 
 {% info_block warningBox "Developer guides" %}
 

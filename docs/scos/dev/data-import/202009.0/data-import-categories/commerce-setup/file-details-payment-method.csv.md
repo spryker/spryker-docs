@@ -7,9 +7,9 @@ redirect_from:
   - /v6/docs/en/file-details-payment-methodcsv
 ---
 
-This article contains content of the **payment_method.csv** file to configure [Payment Method](/docs/scos/user/features/{{page.version}}/payments/payments.html) information on your Spryker Demo Shop.
+This article contains content of the **payment_method.csv** file to configure [Payment Method](/docs/scos/user/features/{{page.version}}/payments-feature-overview.html) information on your Spryker Demo Shop.
 
-## Headers & Mandatory Fields 
+## Headers & Mandatory Fields
 These are the header fields to be included in the .csv file:
 
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |

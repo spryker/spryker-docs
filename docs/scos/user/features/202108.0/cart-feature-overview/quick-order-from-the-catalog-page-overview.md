@@ -22,7 +22,7 @@ For the **Add to cart** icon to be active for the product on the Catalog page, t
 
 Product belonging to a [product group](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) can also be added to cart from the Category page. However, like with regular products, a product from the product group should have no more than one variant, and be available.
 
-If a product has [options](/docs/scos/user/features/{{page.version}}/product-options/product-options.html), it can be added to cart from the Category page, but it will be added without any options.
+If a product has [options](/docs/scos/user/features/{{page.version}}/product-options-feature-overview.html), it can be added to cart from the Category page, but it will be added without any options.
 
 {% info_block warningBox "Developer guides" %}
 

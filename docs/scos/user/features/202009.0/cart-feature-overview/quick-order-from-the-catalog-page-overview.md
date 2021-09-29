@@ -16,11 +16,11 @@ For the **Add to cart** icon to be active for the product on the Catalog page, t
 * The product should be abstract with only one variant.
 * The product should be available.
 * The product should not have [attributes](docs\scos\user\features\202009.0\product\product-feature-overview\product-attribute-overview.md).
-* The product should not have [measurement](/docs/scos/user/features/{{page.version}}/measurement-units/measurement-units.html) or [packaging units](/docs/scos/user/features/{{page.version}}/packaging-units/packaging-units.html).
+* The product should not have [measurement](/docs/scos/user/features/{{page.version}}/measurement-units/measurement-units.html) or [packaging units](/docs/scos/user/features/{{page.version}}/packaging-units-feature-overview.html).
 
 Product belonging to a [product group](docs\scos\user\features\202009.0\product\product-feature-overview\product-overview.md) can also be added to cart from the Category page. However, like with regular products, a product from the product group should have no more than one variant, and be available.
 
-If a product has [options](/docs/scos/user/features/{{page.version}}/product-options/product-options.html), it can be added to cart from the Category page, but it will be added without any options.
+If a product has [options](/docs/scos/user/features/{{page.version}}/product-options-feature-overview.html), it can be added to cart from the Category page, but it will be added without any options.
 
 
 

@@ -9,7 +9,7 @@ redirect_from:
 
 **Special Product Types** contains data related the special product types information in the online store.
 
-Within the [Product Options](/docs/scos/user/features/{{page.version}}/product-options/product-options.html) section, you will find all information about the data imports required to to manage product options in your online store.
+Within the [Product Options](/docs/scos/user/features/{{page.version}}/product-options-feature-overview.html) section, you will find all information about the data imports required to to manage product options in your online store.
 
 In the [Gift Cards](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/gift-cards/gift-cards-feature-overview.html) section, you will be able to import the data necessary to manage gift cards information in your online store.
 

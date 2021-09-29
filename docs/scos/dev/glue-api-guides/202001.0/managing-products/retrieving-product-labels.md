@@ -8,7 +8,7 @@ redirect_from:
   - /v4/docs/en/retrieving-product-labels
 ---
 
-[Product labels](/docs/scos/user/features/{{page.version}}/product-information-management/dynamic-product-labels.html) are used to draw your customers' attention to some specific products. Each of them has a name, a priority, and a validity period. The Product Labels API provides endpoints for getting labels via the REST HTTP requests.
+[Product labels](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) are used to draw your customers' attention to some specific products. Each of them has a name, a priority, and a validity period. The Product Labels API provides endpoints for getting labels via the REST HTTP requests.
 
 {% info_block warningBox "Note" %}
 Product labels are available only for abstract products.
@@ -30,7 +30,7 @@ where **3** is the ID of the label you want to retrieve.
 Label IDs can be found in the **Products / Product Labels** section of the Back Office.
 {% endinfo_block %}
 
-![Product Labels](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Storefront+Guides/Managing+Products/Accessing+Product+Labels/product_labels_2.png) 
+![Product Labels](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Storefront+Guides/Managing+Products/Accessing+Product+Labels/product_labels_2.png)
 
 ### Response
 The endpoint responds with information on the requested product label, including the CSS class that can be used to display the label on a storefront.
@@ -166,7 +166,7 @@ The above requests fetch not only label information, but also information on the
 The endpoint responds with information on the requested cart, including the products in it and the labels assigned to them. For each assigned label, the attributes are the same as when requesting a specific label.
 
 **Sample:**
-    
+
 ```json
 {
     "data": [
@@ -284,7 +284,7 @@ The above requests fetch not only label information, but also information on the
 The endpoint responds with information on the requested wishlist, including the products in it and the labels assigned to them. For each assigned label, the attributes are the same as when requesting that specific label.
 
 **Sample:**
-    
+
 ```json
 {
     "data": {

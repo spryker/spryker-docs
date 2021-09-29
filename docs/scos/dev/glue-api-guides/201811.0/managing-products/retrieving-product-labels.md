@@ -7,7 +7,7 @@ redirect_from:
   - /v1/docs/en/retrieving-product-labels
 ---
 
-[Product labels](/docs/scos/user/features/{{page.version}}/product-management/dynamic-product-labels.html) are used to draw your customers' attention to some specific products. Each of them has a name, a priority, and a validity period. The Product Labels API provides endpoints for getting labels via the REST HTTP requests.
+[Product labels](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) are used to draw your customers' attention to some specific products. Each of them has a name, a priority, and a validity period. The Product Labels API provides endpoints for getting labels via the REST HTTP requests.
 
 {% info_block infoBox "Note" %}
 Product labels are available only for abstract products.
@@ -24,7 +24,7 @@ Sample request: `GET http://mysprykershop.com/product-labels/3`
 where `3` is the ID of the label you want to retrieve.
 Label IDs can be found in the `Products / Product Labels` section of the administration interface.
 
-![Product Labels 2.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/Product%20Labels%202.png) 
+![Product Labels 2.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/Product%20Labels%202.png)
 
 **Sample Response**
 ```json
@@ -122,5 +122,3 @@ where `001` is the SKU of the product.
 | --- | --- |
 | 301 | Abstract product is missing |
 | 311 | Abstract product SKU not specified |
-
-

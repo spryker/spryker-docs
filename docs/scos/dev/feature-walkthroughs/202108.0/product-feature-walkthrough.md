@@ -9,7 +9,7 @@ The _Product_ feature allows creating products, manage their characteristics and
 
 
 
-To learn more about the feature and to find out how end users use it, see [Product](/docs/scos/user/features/{{page.version}}/product/product.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Product](/docs/scos/user/features/{{page.version}}product-feature-overview/product-feature-overview.html) for business users.
 
 
 ## Entity diagram

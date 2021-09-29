@@ -9,7 +9,7 @@ redirect_from:
   - /docs/en/file-details-product-abstractcsv
 ---
 
-This article contains content of the **product_abstract.csv** file to configure [Abstract Product](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/products-overview.html) information on your Spryker Demo Shop.
+This article contains content of the **product_abstract.csv** file to configure [Abstract Product](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) information on your Spryker Demo Shop.
 
 To import the file, run
 

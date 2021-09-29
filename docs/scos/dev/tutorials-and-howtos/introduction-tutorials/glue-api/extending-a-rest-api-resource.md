@@ -39,7 +39,7 @@ If you have a development virtual machine with the [B2C Demo Shop](/docs/scos/us
 Also, let us assume that you modified the product storage data to match your product requirements. For example, let's assume that you added the `manufacturerCountry` field to the product data not as an attribute, but as another field in the database.
 
 {% info_block warningBox %}
-For more details, see [Database schema for product attributes](/docs/scos/user/features/product/product-feature-overview/product-attributes-overview.html#database-schema-for-product-attributes)
+For more details, see [Database schema for product attributes](/docs/scos/user/features/product-feature-overview/product-attributes-overview.html#database-schema-for-product-attributes)
 {% endinfo_block %} and [Extending the Database Schema](/docs/scos/dev/back-end-development/zed/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html).)
 
 Now, let us add this field to responses of the _Products API_ endpoints:

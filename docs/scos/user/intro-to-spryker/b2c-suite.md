@@ -23,8 +23,8 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 
 [**Product Information Management**](https://documentation.spryker.com/2021080/docs/product-information-management):
 
-* [Product Abstraction](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/products-overview.html)
-* [Product Attributes](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/products-overview.html)
+* [Product Abstraction](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html)
+* [Product Attributes](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html)
 * [Super Attributes](https://documentation.spryker.com/2021080/docs/super-attributes)
 * [Product Groups](https://documentation.spryker.com/2021080/docs/product-groups)
 * [Product Bundles](https://documentation.spryker.com/2021080/docs/product-bundles)
@@ -73,8 +73,8 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 
 [**Media Management**](/docs/scos/user/features/{{page.version}}/file-manager-feature-overview/file-manager-feature-overview.md):
 
-* [Product Image Management](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/product-images-overview.html)
-* [Image Hosting](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/product-images-overview.html)
+* [Product Image Management](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-images-overview.html)
+* [Image Hosting](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-images-overview.html)
 * [Asset Management](/docs/scos/user/features/{{page.version}}/file-manager/file-manager-feature-overview/asset-management.html)
 * [Video Embedding](/docs/scos/user/features/{{page.version}}/file-manager-feature-overview/file-manager-feature-overview.md)
 
@@ -85,10 +85,10 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 * [International Tax Rates & Sets](https://documentation.spryker.com/2021080/docs/international-tax-rates-sets)
 * [Glossary Creation](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/glossary/managing-glossary.html)
 
-[**Price**](/docs/scos/user/features/{{page.version}}/prices/prices-feature-overview/prices-overview.html):
+[**Price**](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview/prices-feature-overview.html):
 
-* [Autodetect of Currency](/docs/scos/user/features/{{page.version}}/prices/prices-feature-overview/prices-overview.html)
-* [Volume Prices](/docs/scos/user/features/{{page.version}}/prices/prices-feature-overview/volume-prices-overview.html)
+* [Autodetect of Currency](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview/prices-feature-overview.html)
+* [Volume Prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview/volume-prices-overview.html)
 * [Net & Gross Price Mode](/docs/scos/dev/back-end-development/zed/data-manipulation/datapayload-conversion/net-and-gross-prices-management.html)
 * [Scheduled Prices](https://documentation.spryker.com/2021080/docs/scheduled-prices)
 

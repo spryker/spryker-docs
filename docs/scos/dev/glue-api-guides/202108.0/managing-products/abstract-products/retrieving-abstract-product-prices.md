@@ -201,7 +201,7 @@ Response sample with default prices and volume prices for an abstract product
 | currency.code | String | Currency code. |
 | currency.name | String | Currency name. |
 | currency.symbol | String | Currency symbol. |
-| volumePrices | Array | An array of objects defining the [volume prices](/docs/scos/user/features/{{page.version}}/prices/prices-feature-overview/volume-prices-overview.html) for the abstract product. |
+| volumePrices | Array | An array of objects defining the [volume prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview/volume-prices-overview.html) for the abstract product. |
 | netAmount | Integer | Net price in cents. |
 | grossAmount | Integer | Gross price in cents. |
 | quantity | Integer | Number of items. |

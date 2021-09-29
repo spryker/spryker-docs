@@ -7,7 +7,7 @@ redirect_from:
   - /v3/docs/en/retrieving-product-information
 ---
 
-Different Product resources allow you to retrieve all the product information available in your storage. These resources follow the same hierarchical structure that [exists as a basis in the Spryker Commerce OS](/docs/scos/user/features/{{page.version}}/product-management/product-abstraction.html). Products can come with multiple Variants (Concrete products) and have Availability, Prices, Tax Sets, as well as Image Sets. Furthermore, you can see what category your product belongs to or what product label is available.
+Different Product resources allow you to retrieve all the product information available in your storage. These resources follow the same hierarchical structure that [exists as a basis in the Spryker Commerce OS](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html). Products can come with multiple Variants (Concrete products) and have Availability, Prices, Tax Sets, as well as Image Sets. Furthermore, you can see what category your product belongs to or what product label is available.
 
 In your development, these resources can help you to retrieve relevant information for your product listing and detail pages, for search, shopping cart, checkout, order history, wishlist and many more.
 
@@ -393,7 +393,7 @@ If the request was successful, the resource responds with a **RestConcreteProduc
 ## Prices
 The below endpoints return prices for a concrete or an abstract product.
 {% info_block infoBox %}
-For information on the different price types available in Spryker, see [Price](/docs/scos/user/features/{{page.version}}/price/price.html).
+For information on the different price types available in Spryker, see [Price](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html).
 {% endinfo_block %}
 
 `/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/abstract-product-prices`

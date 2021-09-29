@@ -21,7 +21,7 @@ In the default configuration, barcodes are generated based on the SKU of a concr
 
 {% info_block infoBox %}
 
-You can read more about the product types we differentiate in [Product Abstraction](/docs/scos/user/features/{{page.version}}/product-information-management/product-abstraction.html)
+You can read more about the product types we differentiate in [Product Abstraction](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html)
 
 {% endinfo_block %}
 

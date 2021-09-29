@@ -4,6 +4,40 @@ last_updated: Sep 14, 2021
 template: concept-topic-template
 ---
 
+Persistence ACL feature based functionality on Propel behavior. It's possible to enable the feature in 2 ways:
+- Connect the feature to one or several tables in the database
+- Connect the feature to all tables in the database
+
+## Connect Persistence ACL feature to one or several tables
+```xml
+<?xml version="1.0"?>
+<database xmlns="spryker:schema-01" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          name="zed" 
+          xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" 
+          namespace="Orm\Zed\Merchant\Persistence"
+          package="src.Orm.Zed.Merchant.Persistence">
+    <table name="spy_merchant">
+      <behavior name="\Spryker\Zed\AclEntity\Persistence\Propel\Behavior\AclEntityBehavior"/>
+    </table>
+</database>
+```
+
+## Connect Persistence ACL feature to all tables
+```xml
+<?xml version="1.0"?>
+<database xmlns="spryker:schema-01"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          name="zed"
+          xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
+          namespace="Orm\Zed\AclEntity\Persistence"
+          package="src.Orm.Zed.AclEntity.Persistence">
+    <behavior name="\Spryker\Zed\AclEntity\Persistence\Propel\Behavior\AclEntityBehavior"/>
+</database>
+
+```
+## Feature configuration
+![Configuration entity relation diagram](https://confluence-connect.gliffy.net/embed/image/f2309504-8638-419d-abf9-783bc45c8792.png?utm_medium=live&utm_source=custom)
 The configuration, unlike the rule, is common to the system.
 The main configuration object of the module is `\Generated\Shared\Transfer\AclEntityMetadataConfigTransfer`.
 It's available for extension through the plugin system.
@@ -26,11 +60,11 @@ All you need is create a plugin and implement `\Spryker\Zed\AclEntityExtension\D
 
 | property | type | description |
 |-----|-----|-----|
-| parent | `\Generated\Shared\Transfer\AclEntityParentMetadataTransfer` | This property is used to configure inheritance. Required for entity which has rules with inherited scope, or for composite entity. |
-| entityName | string | Fully qualified class name of configured entity |
-| hasSegmentTable | bool | Sets if configured entity supports segmentation (data slicing). |
-| defaultGlobalOperationMask | int | Sets the default binary access mask. |
-| isSubentity | bool | Indicates whether the configured entity is part of a composite object. |
+| parent | `\Generated\Shared\Transfer\AclEntityParentMetadataTransfer` | This property is used to configure inheritance. Required for entity which has rules with [Inherited scope](rules-and-scopes/inherited-scope.html), or for [Composite entity](rules-and-scopes/rules-and-scopes.html#composite-entity) (See [Inherited scope vs Composite entity](rules-and-scopes/composite-entity.html#inherited-scope-vs-composite-entity)). |
+| entityName | string | Fully qualified class name of configured entity (Propel Entity). |
+| hasSegmentTable | bool | Sets if configured entity supports segmentation (see [Segment scope documentation](rules-and-scopes/segment-scope.htmlSets the default binary access mask)). |
+| defaultGlobalOperationMask | int | Sets the default binary access mask (see [Execution flow](execution-flow.html) documentation). |
+| isSubentity | bool | Indicates whether the configured entity is part of a composite object (see [Composite entity](rules-and-scopes/rules-and-scopes.html#composite-entity) documentation). |
 
 `\Generated\Shared\Transfer\AclEntityParentMetadataTransfer`
 
@@ -208,7 +242,7 @@ There is a `\Generated\Shared\Transfer\AclEntityParentConnectionMetadataTransfer
         $aclEntityMetadataConfigTransfer->getAclEntityMetadataCollectionOrFail()->addAclEntityMetadata(
             SpyCountry::class,
             (new AclEntityMetadataTransfer())
-                ->setEntityName(SpyProduct::class)
+                ->setEntityName(SpyCountry::class)
                 ->setDefaultGlobalOperationMask(AclEntityConstants::OPERATION_MASK_READ)
         );
          $aclEntityMetadataConfigTransfer->getAclEntityMetadataCollectionOrFail()->addAclEntityMetadata(
@@ -234,9 +268,8 @@ There is a `\Generated\Shared\Transfer\AclEntityParentConnectionMetadataTransfer
     public function expand(AclEntityMetadataConfigTransfer $aclEntityMetadataConfigTransfer): AclEntityMetadataConfigTransfer 
     {
         $aclEntityMetadataConfigTransfer
-            ->addAclEntityAllowListItem(SpyCountry::class)
-            ->addAclEntityAllowListItem(SpyCurrency::class)
-            ->addAclEntityAllowListItem(SpyLocale::class);
+            ->addAclEntityAllowListItem(SpyAclEntityRule::class)
+            ->addAclEntityAllowListItem(SpyRole::class);
 
         return $aclEntityMetadataConfigTransfer;
     }

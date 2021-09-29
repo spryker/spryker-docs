@@ -82,7 +82,16 @@ entries:
               - title: Configuration
                 url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/configuration.html
               - title: Rules and scopes
-                url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/rules-and-scopes.html
+                url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/rules-and-scopes/rules-and-scopes.html
+                nested:
+                  - title: Global scope
+                    url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/rules-and-scopes/global-scope.html
+                  - title: Segment scope
+                    url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/rules-and-scopes/segment-scope.html
+                  - title: Inherited scope
+                    url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/rules-and-scopes/inherited-scope.html
+                  - title: Composite entity
+                    url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/rules-and-scopes/composite-entity.html
               - title: Execution flow
                 url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/execution-flow.html
 

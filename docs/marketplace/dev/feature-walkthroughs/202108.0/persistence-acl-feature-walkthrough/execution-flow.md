@@ -10,13 +10,15 @@ The process of selecting and applying a rule for a query and when performing a m
 If the user does not have enough permissions during query execution, the system will change the query so that the result of executing will be an empty collection.
 ![Query execution flow](https://confluence-connect.gliffy.net/embed/image/c84bb011-1c7c-45e7-84b3-f98b2fee8e08.png?utm_medium=live&utm_source=custom)
 
-When processing a query, Persistence ACL will consider the rules according to the following criteria:
-- The entity to which the rule applied  match the entity of the query.
-- The operation to which the rule grants permissions correspond to the operation of the query.
+When processing a query, Persistence ACL will do the following:
+- Find User Roles that have Rules for the Entity from the query and the Operation from the Query.
+- Take all the Rule from the Role found and filter the Query performed.
 
 If the remaining rules have different scopes, only those rules that apply to the highest priority scopes will be applied.
 
-Scope priority
+Scope priority is configurable. To configure it you should override `\Spryker\Zed\AclEntity\AclEntityConfig::getScopePriority()`.
+
+The default priority
 
 | Scope | Priority |
 |-----|-----|
@@ -24,7 +26,7 @@ Scope priority
 | inherited | 1 |
 | segment | 0 |
 
-You can see that rules with a global scoped have the highest priority, and rules with a segment scoped have the lowest priority.
+You can see that rules with a global scoped have the highest priority, and rules with a segment scoped have the lowest priority by default.
 
 ### Example of select query
 ```php

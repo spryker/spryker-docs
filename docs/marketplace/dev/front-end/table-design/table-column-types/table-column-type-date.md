@@ -44,4 +44,4 @@ interface TableColumnDateConfig {
 }
 ```
 
-Pre-defined `format` [options](https://angular.io/api/common/DatePipe#pre-defined-format-options).
+Pre-defined `format` <a href="https://angular.io/api/common/DatePipe#pre-defined-format-options" target="_blank">options</a>.

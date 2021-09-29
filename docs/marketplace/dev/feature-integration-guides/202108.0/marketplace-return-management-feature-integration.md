@@ -27,7 +27,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-return-management --update-with-dependencies
+composer require spryker-feature/marketplace-return-management:"{{page.version}}" --update-with-dependencies
 ```
 
 <!-- Have to be deleted after Return Management feature will be released with a new version-->
@@ -379,15 +379,9 @@ Make sure that the following changes have been triggered in transfer objects:
 
 | TRANSFER | TYPE | EVENT  | PATH  |
 | --------- | ------- | ----- | ------------- |
-| MerchantOrderCriteria.orderItemUuids | attribute | created | src/Generated/Shared/Transfer/MerchantOrderCriteria |
-| MerchantOrder.merchant | attribute | created | src/Generated/Shared/Transfer/MerchantOrderRequest |
-| MerchantOrder | class | created | src/Generated/Shared/Transfer/MerchantOrder |
-| MerchantOrderCriteria | class | created | src/Generated/Shared/Transfer/MerchantOrderCriteria |
-| ReturnCreateRequest | class | created | src/Generated/Shared/Transfer/ReturnCreateRequest |
-| Return.merchantOrders | attribute | created | src/Generated/Shared/Transfer/ReturnRequest |
-| Return.merchantSalesOrderReference| attribute | created | src/Generated/Shared/Transfer/ReturnTransfer|
-| Return.returnItems| attribute | created | src/Generated/Shared/Transfer/ReturnTransfer|
-| Return.merchantOrders| attribute | created | src/Generated/Shared/Transfer/ReturnTransfer|
+| MerchantOrderCriteria.orderItemUuids | attribute | created | src/Generated/Shared/Transfer/MerchantOrderCriteriaTransfer |
+| MerchantOrder.return | attribute | created | src/Generated/Shared/Transfer/MerchantOrderTransfer |
+| Return.merchantOrders | attribute | created | src/Generated/Shared/Transfer/ReturnTransfer |
 
 
 {% endinfo_block %}
@@ -1003,7 +997,7 @@ class SalesReturnGuiDependencyProvider extends SprykerSalesReturnGuiDependencyPr
 
 {% info_block warningBox "Verification" %}
 
-Make sure when you open any order on `http://zed.de.spryker.local/sales-return-gui` containing products from different merchants, you see the message: "You can only return products from one merchant at a time".
+Make sure when you open any order on `http://backoffice.de.spryker.local/sales-return-gui` containing products from different merchants, you see the message: "You can only return products from one merchant at a time".
 
 {% endinfo_block %}
 
@@ -1089,7 +1083,7 @@ Follow the steps below to install the Marketplace return management feature fron
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-return-management --update-with-dependencies
+composer require spryker-feature/marketplace-return-management:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

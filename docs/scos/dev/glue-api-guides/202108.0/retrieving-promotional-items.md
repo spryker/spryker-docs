@@ -9,7 +9,7 @@ redirect_from:
   - /docs/en/retrieving-promotional-items
 ---
 
-The [Promotions](/docs/scos/user/features/{{page.version}}/promotions-and-discounts-feature-overview.html#promotional-product) functionality enables sellers to provide a promotional item that the customers can add to their carts at a discounted price or even for free. To be eligible for promotions, the purchase needs to fulfill certain discount conditions, for example, the purchase amount should exceed a certain threshold.
+The [Promotions](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html#promotional-product) functionality enables sellers to provide a promotional item that the customers can add to their carts at a discounted price or even for free. To be eligible for promotions, the purchase needs to fulfill certain discount conditions, for example, the purchase amount should exceed a certain threshold.
 
 {% info_block infoBox "Info" %}
 

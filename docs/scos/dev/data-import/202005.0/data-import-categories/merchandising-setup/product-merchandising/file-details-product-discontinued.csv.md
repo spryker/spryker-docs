@@ -7,7 +7,7 @@ redirect_from:
   - /v5/docs/en/file-details-product-discontinuedcsv
 ---
 
-This article contains content of the **product_discontinued.csv** file to configure [Discontinued Product](/docs/scos/user/features/{{page.version}}/product-information-management/discontinued-products/discontinued-products.html) information on your Spryker Demo Shop.
+This article contains content of the **product_discontinued.csv** file to configure [Discontinued Product](/docs/scos/user/features/{{page.version}}/product-feature-overview/discontinued-products-overview.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:

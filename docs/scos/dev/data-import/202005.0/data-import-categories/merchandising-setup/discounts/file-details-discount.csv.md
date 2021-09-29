@@ -7,7 +7,7 @@ redirect_from:
   - /v5/docs/en/file-details-discountcsv
 ---
 
-This article contains content of the **discount.csv** file to configure [Discount](/docs/scos/user/features/{{page.version}}/promotions-and-discounts-feature-overview.html) information on your Spryker Demo Shop.
+This article contains content of the **discount.csv** file to configure [Discount](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields
 These are the header fields to be included in the .csv file:

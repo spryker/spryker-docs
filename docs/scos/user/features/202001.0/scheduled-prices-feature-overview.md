@@ -91,7 +91,7 @@ In this case:
 Currently, the feature has the following functional constraints which are going to be resolved in the future.
 
 * The default number of prices which the cron job can process at a time is 1000.
-* The feature does not work with merchant prices ([relations](/docs/scos/user/features/{{page.version}}/merchant-b2b-contracts-feature-overview.html)) and [volume prices](/docs/scos/user/features/{{page.version}}/prices/prices-feature-overview/volume-prices-overview.html).
+* The feature does not work with merchant prices ([relations](/docs/scos/user/features/{{page.version}}/merchant-b2b-contracts-feature-overview.html)) and [volume prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview/volume-prices-overview.html).
 
 ## Related Business User articles
 

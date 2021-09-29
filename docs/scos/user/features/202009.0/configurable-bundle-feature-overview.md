@@ -62,7 +62,7 @@ For example, a *Kitchen furniture set* configurable bundle template can have the
 
 ![Kitchen Configurable Bundle](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/kitchen+slots.png)
 
-When a Back Office user creates a configurable bundle template, they create the slots, and a [product list](/docs/scos/user/features/{{page.version}}/product-lists/product-lists.html) is automatically assigned to each of them. They can edit the product list in **Catalog Management** > **Product Lists** section or by editing the slot in the configurable bundle template.
+When a Back Office user creates a configurable bundle template, they create the slots, and a [product list](/docs/scos/user/features/{{page.version}}/product-lists-feature-overview.html) is automatically assigned to each of them. They can edit the product list in **Catalog Management** > **Product Lists** section or by editing the slot in the configurable bundle template.
 
 {% info_block warningBox "Slots" %}
 
@@ -211,7 +211,7 @@ The order looks as follows:
 
 {% info_block errorBox "packaging units are not supported" %}
 
-The product splitting logic does not support [packaging units](/docs/scos/user/features/{{page.version}}/packaging-units/packaging-units-feature-overview.html) with configurable bundle products.
+The product splitting logic does not support [packaging units](/docs/scos/user/features/{{page.version}}/packaging-units-feature-overview.html) with configurable bundle products.
 
 {% endinfo_block %}
 
@@ -233,7 +233,7 @@ Currently, the feature has the following functional constraints which are going 
     - [Product bundles](/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.htmls)
     - [Gift cards](/docs/scos/user/features/{{page.version}}/gift-cards-feature-overview.html)
 * The following functionalities are not displayed and cannot be applied to concrete products in configurable bundles:
-    * [Product options](/docs/scos/user/features/{{page.version}}/product-options/product-options-feature-overview.html)
+    * [Product options](/docs/scos/user/features/{{page.version}}/product-options-feature-overview.html)
     * [Product labels](docs\scos\user\features\202009.0\product-labels\product-labels-feature-overview.md)
     * [Product quantity restrictions](/docs/scos/user/features/{{page.version}}/non-splittable-products-feature-overview.html)
 * The *Slot* page doesn't have any sorting, pagination, or search.

@@ -13,7 +13,7 @@ To verify an email address:
 3. In the left navigation pane, select **Email Addresses**.
 4. Select **Verify a New Email Address**.
 5. In the *Verify a New Email Address* window, enter the **Email Address** you want to verify and select **Verify This Email Address**.
-  This reloads the page with the *Verification Email Sent* window displayed. A verification email has been to sent to the email address.
+  This reloads the page with the *Verification Email Sent* window displayed. A verification email has been sent to the email address.
 
   {% info_block warningBox "Verification link expiration" %}
   For security reasons, the verification link expires 24 hours after the message was sent. If 24 hours have passed since you received the verification email, repeat steps 1–5 to receive a new verification email.

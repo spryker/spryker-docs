@@ -2,7 +2,7 @@
 title: Marketplace Wishlist feature walkthrough
 last_updated: Sep 29, 2021
 description: This article provides technical details on the Marketplace Wishlist feature.
-template: concept-topic-template
+template: marketplace-wishlist-feature-walkthrough
 ---
 
 With the *Marketplace Wishlist* feature, the customers can track and save merchant offers and products they wish to purchase through the wishlist. The customers can create multiple wishlists and customize their names.

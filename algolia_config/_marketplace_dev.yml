@@ -5,4 +5,4 @@ algolia:
     - 404.md
     - search.md
     - docs/marketplace/user/**/*.md
-    - docs/cloud/user/**/*.md
+    - docs/cloud/dev/**/*.md

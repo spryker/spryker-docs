@@ -12,7 +12,7 @@ This document provides details about the Data Transformer Date-parse service in 
 Data Transformer Date-parse is an Angular Service that parses the string value as a Date ISO into the JS Date Object.
 In the example below, the `datasource` transforms the `date` string into the parsed `date` object.
 
-```ts
+```html
 <spy-select
   [datasource]="{
     type: 'inline',

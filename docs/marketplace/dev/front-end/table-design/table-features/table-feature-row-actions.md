@@ -37,7 +37,7 @@ using dot notation for ex. `prop.nestedProp`).
     ],
     click: 'edit',
     rowIdPath: 'sku',
-    availableActionsPath: ['path.to.actions'],
+    availableActionsPath: 'path.to.actions',
   },                                                                                        
 }">
 </spy-table>

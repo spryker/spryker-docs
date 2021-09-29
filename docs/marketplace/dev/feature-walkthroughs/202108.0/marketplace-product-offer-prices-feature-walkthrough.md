@@ -1,8 +1,8 @@
 ---
 title: Marketplace Product Offer Prices feature walkthrough
-last_updated: Apr 23, 2021
+last_updated: Sep 29, 2021
 description: The Marketplace Product Offer Prices feature allows Marketplace merchants to set prices for product offers.
-template: concept-topic-template
+template: marketplace-product-offer-prices-feature-walkthrough
 ---
 
 With the *Marketplace Product Offer Prices* feature, the Marketplace merchants can define custom prices for [product offers](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html).
@@ -32,36 +32,26 @@ Volume prices for product offers work the same as for products.
 
 To learn more about prices and volume prices, see: [Prices](https://documentation.spryker.com/docs/prices-overview), [Volume Prices](https://documentation.spryker.com/docs/volume-prices-overview)
 
-## Marketplace Product Offer Prices - Module dependency graph
+## Module dependency graph
 ![Entity diagram](https://confluence-connect.gliffy.net/embed/image/f128877d-eb61-4d87-b1af-5f166eb45c45.png?utm_medium=live&utm_source=confluence)
 
-**Price** - Handles product pricing and provides plugins for products to populate prices.
+| MODULE     | DESCRIPTION                |
+|------------|----------------------------|
+| Price | Handles product pricing and provides plugins for products to populate prices   |
+| PriceProduct | Provides product price related functionality, price persistence, current price resolvers per currency/price mode    |
+| PriceProductDataImport | Imports demo data for product prices    |
+| PriceProductOffer | Provides product offer price related functionality, price persistence, current price resolvers per currency/price mode    |
+| PriceProductOfferDataImport | Imports demo data for product offer prices    |
+| PriceProductOfferGui | Backoffice UI Interface for managing prices for product offers    |
+| PriceProductOfferStorage | Provides functionality to store data about product offer prices in the storage   |
+| PriceProductOfferVolume | Provides functionality to handle volume prices for product offers    |
+| PriceProductOfferVolumeGui | Backoffice UI Interface for managing volume prices for product offers    |
+| PriceProductStorage | Provides functionality to store data about product prices in the storage    |
+| PriceProductVolume | Provides functionality to handle volume prices for products   |
+| PriceProductVolumeWidget | Provides widget to show information about volume price for product   |
+| PriceWidget | Provides functionality for price mode switcher    |
 
-**PriceProduct** - Provides product price related functionality, price persistence, current price resolvers per currency/price mode.
-
-**PriceProductDataImport** - Importing demo data for product prices.
-
-**PriceProductOffer** - Provides product offer price related functionality, price persistence, current price resolvers per currency/price mode.
-
-**PriceProductOfferDataImport** - Importing demo data for product offer prices.
-
-**PriceProductOfferGui** - Zed UI Interface for managing prices for product offers.
-
-**PriceProductOfferStorage** - Provides functionality to store data about product offer prices in the storage.
-
-**PriceProductOfferVolume** - Provides functionality to handle volume prices for product offers.
-
-**PriceProductOfferVolumeGui** - Zed UI Interface for managing volume prices for product offers.
-
-**PriceProductStorage** - Provides functionality to store data about product prices in the storage.
-
-**PriceProductVolume** - Provides functionality to handle volume prices for products.
-
-**PriceProductVolumeWidget** - Provides widget to show information about volume price for product.
-
-**PriceWidget** - Provides functionality for price mode switcher.
-
-## Marketplace Product Offer Prices - Domain model
+## Domain model
 ![Entity diagram](https://confluence-connect.gliffy.net/embed/image/0ad490bb-f21f-4e4a-b6eb-e0102a8c7b42.png?utm_medium=live&utm_source=confluence)
 
 ## Related Developer articles

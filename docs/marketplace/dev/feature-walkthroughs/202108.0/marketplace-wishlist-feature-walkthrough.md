@@ -9,14 +9,16 @@ With the *Marketplace Wishlist* feature, the customers can track and save mercha
 
 {% info_block warningBox "User documentation" %}
 
-To learn more about the feature and to find out how end users use it, see [Marketplace Wishlist feature overview](docs/marketplace/user/features/202108.0/marketplace-wishlist-feature-overview.html) for business users. {% endinfo_block %}
+To learn more about the feature and to find out how end users use it, see [Marketplace Wishlist feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-wishlist-feature-overview.html) for business users.
+
+{% endinfo_block %}
 
 ## Module dependency graph
 
 ![Entity diagram](https://confluence-connect.gliffy.net/embed/image/e7a2ef43-7eb8-435a-870b-d8012fe8bd07.png?utm_medium=live&utm_source=confluence)
 
-| MODULE | DESCRIPTION  |
-| ------------- | -------------- |
+| MODULE     | DESCRIPTION                |
+|------------|----------------------------|
 | MerchantProductWishlist | Provides ability to work with merchant product in wishlist |
 | MerchantProductOfferWishlist | Provides ability to work with product offers in wishlist |
 | Wishlist | Provides infrastructure and functionality to handle multiple wishlists for a customer account |

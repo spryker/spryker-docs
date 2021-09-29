@@ -3,9 +3,11 @@ $( document ).ready(function() {
 
     initCopyText();
 
+    initSetPageOffset();
+
     initResponsiveTable();
 
-    anchors.add('.post-content h2:not([data-toc-skip]),.post-content h3:not([data-toc-skip]),.post-content h4:not([data-toc-skip]),.post-content h5:not([data-toc-skip])');
+    initAnchors();
 
     initSidebarToggle();
 
@@ -21,8 +23,6 @@ $( document ).ready(function() {
 
     initPopup();
 
-    initSetPageOffset();
-
     initToc();
 
     initVertionDropdown();
@@ -30,7 +30,30 @@ $( document ).ready(function() {
     initLightbox();
 
     initPageScrolling();
+
+    initPostAnchor();
 });
+
+function initAnchors() {
+    anchors.add('.post-content h2:not([data-toc-skip]),.post-content h3:not([data-toc-skip]),.post-content h4:not([data-toc-skip]),.post-content h5:not([data-toc-skip])');
+
+    let anchorLinks = $('.anchorjs-link'),
+        $window = $(window);
+
+    anchorLinks.on('click', function(e){
+        e.preventDefault();
+        $window.scrollTop($(e.target).offset().top - pageOffset + 1);
+    });
+}
+
+function initPostAnchor() {
+    let anchor = $('.post-anchor__button');
+
+    anchor.on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, 300);
+    });
+}
 
 function initPageScrolling() {
     let page = $(window),
@@ -45,6 +68,8 @@ function initPageScrolling() {
         } else {
             body.addClass('page-scrolled');
         }
+
+        if (currentScrollPosition < 2) return;
 
         if (currentScrollPosition > lastScrollPosition && !body.hasClass('scroll-down')) {
             // down
@@ -73,6 +98,12 @@ function initLightbox() {
       'resizeDuration': 300,
       'wrapAround': false
     });
+
+    let closeButton = $('.lightbox .lb-close');
+
+    if (closeButton) {
+        $('.lightbox .lb-container').append(closeButton);
+    }
 }
 
 function initVertionDropdown() {
@@ -145,6 +176,14 @@ function initPopup() {
         close: '.toc__popup-close, .toc__popup-overlay',
         overlay: '.toc__popup-overlay',
         anchorLinks: 'nav-link',
+        showPopup: function() {
+            $('body').addClass('toc-active');
+        },
+        hidePopup: function() {
+            setTimeout(function(){
+                $('body').removeClass('toc-active scroll-down');
+            }, 100);
+        }, 
     });
 
     $('.main-sidebar').popup({
@@ -207,6 +246,10 @@ $.fn.popup = function (options) {
                 if (options.overlay) {
                     overlay.fadeOut(300);
                 }
+
+                if (typeof options.hidePopup === 'function') {
+                    options.hidePopup();
+                }
             } else {
                 opener.addClass('expanded');
 
@@ -220,6 +263,10 @@ $.fn.popup = function (options) {
 
                 if (options.overlay) {
                     overlay.fadeIn(300);
+                }
+
+                if (typeof options.showPopup === 'function') {
+                    options.showPopup();
                 }
             }
         }
@@ -391,12 +438,17 @@ function initResponsiveTable() {
     $('.post-content table').each(function () {
         let table = jQuery(this),
             th = table.find('th'),
-            tr = table.find('tr');
+            tr = table.find('tr'),
+            switcher = $('<div class="table__toggle"><span class="table__toggle-default-text">Show all</span><span class="table__toggle-active-text">Hide</span></div>'),
+            isExpanded = false,
+            wrapper;
 
-        table.wrap('<div class="table-wrapper"></div>');
+        table.wrap($('<div class="table"></div>'));
+        switcher.insertAfter(table);
+        wrapper = table.closest('.table');
 
         if (th.length < 3) {
-            table.closest('.table-wrapper').addClass('width-50');
+            wrapper.addClass('width-50');
         }
 
         tr.each(function () {
@@ -404,6 +456,30 @@ function initResponsiveTable() {
                 item.setAttribute('data-th-text', th.eq(i).text());
             });
         });
+
+        switcher.on('click', function(e) {
+            wrapper.toggleClass('expanded');
+
+            if (isExpanded) {
+                table.get(0).scrollIntoView();
+            }
+
+            isExpanded = !isExpanded;
+        });
+
+        function checkTableHeight() {
+            if (window.innerWidth >= 768) return;
+
+            if (table.outerHeight() > (window.innerHeight - pageOffset)) {
+                wrapper.addClass('has-collapse');
+            } else {
+                wrapper.removeClass('has-collapse');
+            }
+        }
+
+        checkTableHeight();
+
+        $(window).on('resize orientationchange', checkTableHeight);
     });
 }
 
@@ -578,6 +654,8 @@ function initToc() {
                     $('html, body').animate({
                         scrollTop: $($.attr(this, 'href')).offset().top - pageOffset + 1
                     }, 500);
+
+                    window.history.replaceState('', '', '#' + anchor);
                 });
 
                 return $li;
@@ -676,15 +754,12 @@ function initToc() {
     });
 
     let $body = $('body'),
-        $window = $(window);
+        $window = $(window),
+        $toc = $('#toc');
 
     $body.scrollspy({
-        target: '#toc',
+        target: $toc,
         offset: pageOffset,
-    });
-
-    $window.on('load', function () {
-        $body.trigger('scroll');
     });
 
     function updateOffset() {
@@ -696,5 +771,29 @@ function initToc() {
         }
     }
 
+    function checkHash() {
+        if (location.hash) {
+            let target = $(location.hash);
+
+            $window.scrollTop(target.offset().top - pageOffset + 1);
+        }
+    }
+
+    checkHash();
+
+    $window.on('load', function () {
+        $body.trigger('scroll');
+    });
+
     $window.on('resize orientationchange', updateOffset);
+
+    $window.on('activate.bs.scrollspy', function (e) {
+        let activeLink = $toc.find('.active'),
+            activeLinkHref;
+
+        if (activeLink.length) {
+            activeLinkHref = activeLink.attr('href');
+            window.history.replaceState('', '', activeLinkHref);
+        }
+    });
 }

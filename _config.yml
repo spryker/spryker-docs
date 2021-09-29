@@ -1,6 +1,6 @@
 version: "202108.0"
 
-repository: spryker/spryker.github.io
+repository: spryker/spryker-docs
 
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
@@ -14,10 +14,10 @@ site_title: Spryker Documentation
 company_name: Spryker
 # this appears in the footer
 
-github_editme_path: spryker/spryker.github.io/blob/master/
+github_editme_path: spryker/spryker-docs/blob/master/
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 
-google_analytics: ""
+google_analytics: "G-CPJX4XMTD1"
 # if you have google-analytics ID, put it in. if not, edit this value to blank.
 
 feedback_disable: true
@@ -46,6 +46,7 @@ exclude:
   - package.json
   - package-lock.json
   - gulpfile.js
+  - redirect.html
 # these are the files and directories that jekyll will exclude from the build
 
 highlighter: rouge
@@ -54,10 +55,9 @@ highlighter: rouge
 markdown: CommonMarkGhPages
 commonmark:
   options: ["SMART", "FOOTNOTES"]
-  extensions: ["strikethrough", "autolink", "table", "tagfilter"]
+  extensions: ["strikethrough", "autolink", "table"]
 
 plugins:
-  - jekyll-feed
   - jekyll-last-modified-at
   - jekyll-include-cache
 
@@ -116,6 +116,18 @@ defaults:
       sidebar: "scos_user_sidebar"
       product-type: 'scos/user'
       role: "user"
+  -
+    scope:
+      path: "docs/cloud"
+    values:
+      product: "cloud"
+  -
+    scope:
+      path: "docs/cloud/dev"
+    values:
+      sidebar: "cloud_dev_sidebar"
+      product-type: 'cloud/dev'
+      role: "dev"
 
 versions:
   '201811.0': '201811.0'
@@ -145,6 +157,7 @@ versioned_categories:
 sidebars:
   - marketplace_dev_sidebar
   - marketplace_user_sidebar
+  - cloud_dev_sidebar
 
 description: "Spryker documentation center."
 # the description is used in the feed.xml file
@@ -166,6 +179,8 @@ algolia:
       title: 'Marketplace User'
     - name: 'marketplace_dev'
       title: 'Marketplace Developer'
+    - name: 'cloud_dev'
+      title: 'Cloud Developer'
 
 sass:
     sass_dir: css

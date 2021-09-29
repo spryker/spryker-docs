@@ -21,8 +21,8 @@ To {task}, send the request:
 
 ---
 
-`{method}` **{endpoint}{% raw %}*{{path_parameter}}*{% endraw %}**
-<!--i.e., `GET` **/carts/{% raw %}*{{cart_uuid}}*{% endraw %}**-->
+`{method}` {% raw %}**{endpoint}*{{path_parameter}}***{% endraw %}
+<!--i.e., `GET` {% raw %}**/carts/*{{cart_uuid}}***{% endraw %}-->
 ---
 
 | PATH PARAMETER | DESCRIPTION |

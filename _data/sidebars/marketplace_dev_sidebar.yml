@@ -78,8 +78,8 @@ entries:
           - title: Marketplace Wishlist feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-wishlist-feature-walkthrough.html
 
-          - title: Merchant Switcher
-              url: /docs/marketplace/dev/feature-walkthroughs/merchant-switcher.html
+          - title: Merchant Switcher feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/merchant-switcher-feature-walkthrough.html
 
       - title: Feature integration guides
         nested:

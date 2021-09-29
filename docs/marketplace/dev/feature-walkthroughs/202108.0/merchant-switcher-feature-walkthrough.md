@@ -6,12 +6,9 @@ template: feature-walkthroughs-merchant-switcher
 ---
 
 With the *Merchant Switcher* feature, the customers can select an active merchant so that he can only see products and offers which belong to this merchant.
-
-{% info_block warningBox "User documentation" %}
-
-To learn more about the feature and to find out how end users use it, see [enter the feature name here](enter the link to the user guide of this feature here) for business users.
-{% endinfo_block %}
-
+Has been created plugins to check that chosen merchant is equal in all items in Cart, Quote, Checkout modules.
+So if merchant is not equal the item replaces with offer or merchant product from owned to chosen merchant.
+If  the system doesn't have suitable items, a customer will see the error or warning about these items.
 
 ## Module dependency graph
 ![Entity Diagram](https://confluence-connect.gliffy.net/embed/image/8db03d24-88d4-4715-a5e1-afae4f2ff8ca.png?utm_medium=live&utm_source=confluence)

@@ -20,7 +20,7 @@ To verify an email address:
   {% endinfo_block %}
 
 7. In the verification email, select the verification link.
-  This opens the page with the verification success message displayed.
+  This opens the page with the verification success message.
 8. Optional: Repeat steps 1-7 to until you verify the email address in all the desired regions.
 
 You can see the verified email address in [Amazon Simple Email Service](https://console.aws.amazon.com/ses/) > **Email Addresses**. Your applications can use it to send emails.

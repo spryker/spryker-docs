@@ -60,11 +60,11 @@ All you need is create a plugin and implement `\Spryker\Zed\AclEntityExtension\D
 
 | property | type | description |
 |-----|-----|-----|
-| parent | `\Generated\Shared\Transfer\AclEntityParentMetadataTransfer` | This property is used to configure inheritance. Required for entity which has rules with [Inherited scope](rules-and-scopes/inherited-scope.html), or for [Composite entity](rules-and-scopes/rules-and-scopes.html#composite-entity) (See [Inherited scope vs Composite entity](rules-and-scopes/composite-entity.html#inherited-scope-vs-composite-entity)). |
+| parent | `\Generated\Shared\Transfer\AclEntityParentMetadataTransfer` | This property is used to configure inheritance. Required for entity which has rules with [Inherited scope](rules-and-scopes/inherited-scope.html), or for [Composite entity](rules-and-scopes/composite-entity.html) (See [Inherited scope vs Composite entity](rules-and-scopes/composite-entity.html#inherited-scope-vs-composite-entity)). |
 | entityName | string | Fully qualified class name of configured entity (Propel Entity). |
 | hasSegmentTable | bool | Sets if configured entity supports segmentation (see [Segment scope documentation](rules-and-scopes/segment-scope.htmlSets the default binary access mask)). |
 | defaultGlobalOperationMask | int | Sets the default binary access mask (see [Execution flow](execution-flow.html) documentation). |
-| isSubentity | bool | Indicates whether the configured entity is part of a composite object (see [Composite entity](rules-and-scopes/rules-and-scopes.html#composite-entity) documentation). |
+| isSubentity | bool | Indicates whether the configured entity is part of a composite object (see [Composite entity](rules-and-scopes/composite-entity.html) documentation). |
 
 `\Generated\Shared\Transfer\AclEntityParentMetadataTransfer`
 

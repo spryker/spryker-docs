@@ -78,3 +78,12 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 Make sure that you can’t add an item with `merchantReference` and `sku` that do not belong to the same `MerchantProduct`(see `spy_merchant_product_abstract`).
 
 {% endinfo_block %}
+
+
+## Related features
+
+Integrate the following related features:
+
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE |INTEGRATION GUIDE |
+| --- | --- | --- |
+| Marketplace Product + Cart API |  |[Glue API: Marketplace Product + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-cart-feature-integration.html) |

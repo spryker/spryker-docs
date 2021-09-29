@@ -115,12 +115,3 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 Make sure that when you do a `GET` request to retrieve abstract products that belong to a specific merchant, it returns products' data together with their merchants `http://glue.de.demo-spryker.com/abstract-products/{% raw %}{{abstractProductSku}}{% endraw %}?include=merchants`.
 
 {% endinfo_block %}
-
-
-## Related features
-
-Integrate the following related features:
-
-| FEATURE | REQUIRED FOR THE CURRENT FEATURE |INTEGRATION GUIDE |
-| --- | --- | --- |
-| Glue API: Marketplace Product + Cart |  |[Glue API: Marketplace Product + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-cart-feature-integration.html) |

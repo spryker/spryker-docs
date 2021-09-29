@@ -12,8 +12,7 @@ Table Feature Batch Actions is a feature of the Table Component that allows trig
 As Table Feature Batch Actions based on the [Table Feature Selectable](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-selectable.html), 
 this feature must be registered and enabled via table config.
 Batch actions are functions that can be performed on multiple items within a table. 
-Once the user selects at least one row from the table, the batch action bar appears at the top of the table, 
-presenting the user with actions they can take. 
+As soon as at least one row is selected in the table, the batch action bar with allowed actions will appear at the top of the table.
 To exit or escape `batch action mode`, the user can deselect the items.
 See an example below, how to use the Batch Actions feature.
 

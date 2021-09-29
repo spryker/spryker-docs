@@ -15,26 +15,4 @@ The CMS pages in search results functionality allows searching not only for prod
 
 Page sorting and pagination on the search results page helps shop visitors to find content easier. Breadcrumbs allow a shop administrator to structure the content to reduce the number of steps a customer takes to return to a previous page.
 
-
-## If you are:
-
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html" class="mr-link">Get a general idea of a CMS page</a></li>
-                <li><a href="/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html-search-product-lists-catalog-feature-integration" class="mr-link">Integrate the CMS + Product Lists + Catalog feature into your project</a></li>
-                <li><a href="/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.htmls-in-search-results-integration" class="mr-link">Integrate CMS + Catalog feature into your project</a></li>
-            </ul>
-        </div>
-         <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                  <li><a href="/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html" class="mr-link">Get a general idea of a CMS page</a></li>
-            </ul>
-        </div>
-    </div>
-</div>      
+  

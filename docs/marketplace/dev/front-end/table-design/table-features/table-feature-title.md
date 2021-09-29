@@ -9,12 +9,12 @@ This article provides details about the Table Feature Title component in the Com
 ## Overview
 
 Table Feature Title is a feature of the Table Component that renders the title of the table.
-See an example below, how to use the Title feature.
+Check out this example below to see how to use the Title feature.
 
-Feature Configuration:
+Feature configuration:
 
-`enabled` - will enable feature via config.  
-`title` - a table title text.
+- `enabled` - enables the feature via config.  
+- `title` - is a table title text.
 
 ```html
 <spy-table [config]="{
@@ -28,7 +28,9 @@ Feature Configuration:
 </spy-table>
 ```
 
-## Feature Registration
+## Feature registration
+
+Register the feature:
 
 ```ts
 @NgModule({
@@ -47,7 +49,7 @@ export class RootModule {}
 
 ## Interfaces
 
-Below you can find interfaces for Table Feature Title.
+Below you can find interfaces for the Table Feature Title.
 
 ```ts
 export interface TableTitleConfig extends TableFeatureConfig {

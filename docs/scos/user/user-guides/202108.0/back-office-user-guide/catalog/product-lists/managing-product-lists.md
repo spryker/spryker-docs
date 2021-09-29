@@ -32,7 +32,7 @@ The page refreshes with the success message displayed.
 
 {% info_block warningBox "Blacklist" %}
 
-If a product list is used by a [configurable bundle](/docs/scos/user/features/{{page.version}}/configurable-bundle/configurable-bundle-feature-overview.html) and its type is changed to **Blacklist**, it stops being displayed for the [configurable bundle slot](/docs/scos/user/features/{{page.version}}/configurable-bundle/configurable-bundle-feature-overview.html#configurable-bundle-slots) on the Storefront. To check if a product list is used by a configurable bundle, on the *Edit Product List: {product list ID}*  page, switch to the *Used by* tab.
+If a product list is used by a [configurable bundle](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html) and its type is changed to **Blacklist**, it stops being displayed for the [configurable bundle slot](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html#configurable-bundle-slots) on the Storefront. To check if a product list is used by a configurable bundle, on the *Edit Product List: {product list ID}*  page, switch to the *Used by* tab.
 
 {% endinfo_block %}
 

@@ -1,5 +1,5 @@
 ---
-title: Marketplace Merchant Portal Product Offer Management feature integration
+title: Merchant Portal - Marketplace Merchant Portal Product Offer Management feature integration
 last_updated: Sep 14, 2021
 description: This integration guide provides steps on how to integrate the Marketplace Merchant Portal Product Offer Management feature into a Spryker project.
 template: feature-integration-guide-template
@@ -50,7 +50,6 @@ Make sure that the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE  | EVENT   | PATH |
 | ------------- | ---- | ------ |---------------- |
-| Item.merchantSku | property | Created | src/Generated/Shared/Transfer/ItemTransfer |
 | MerchantProductOfferCounts | class | Created | src/Generated/Shared/Transfer/MerchantProductOfferCountsTransfer |
 | MerchantStockCriteria.merchantReference | property | Created | src/Generated/Shared/Transfer/MerchantStockCriteriaTransfer |
 | PriceProductOfferCriteria.volumeQuantities | property | Created | src/Generated/Shared/Transfer/PriceProductOfferCriteriaTransfer |
@@ -69,6 +68,7 @@ Make sure that the following changes have been applied in transfer objects:
 | ProductOfferTableCriteria | class | Created | src/Generated/Shared/Transfer/ProductOfferTableCriteriaTransfer |
 | ProductTableCriteria.filterHasOffers | property | Created | src/Generated/Shared/Transfer/ProductTableCriteriaTransfer |
 | ProductTableCriteria.merchantReference | property | Created | src/Generated/Shared/Transfer/ProductTableCriteriaTransfer |
+| Item.merchantSku | property | Created | src/Generated/Shared/Transfer/ItemTransfer |
 
 {% endinfo_block %}
 
@@ -81,7 +81,6 @@ Generate a new translation cache for Zed:
 console translator:generate-cache
 ```
 
-
 ### 4) Set up behavior
 
 To set up behavior:
@@ -90,7 +89,7 @@ To set up behavior:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE  |
 | ---------------- | ------------- | --------- | ---------------- |
-| OffersMerchantDashboardCardPlugin | Adds Offers widget to `MerchantDashobard`. | | Spryker\Zed\ProductOfferMerchantPortalGui\Communication\Plugin\DashboardMerchantPortalGui |
+| OffersMerchantDashboardCardPlugin | Adds Product Offers card to `MerchantDashobard`. | | Spryker\Zed\ProductOfferMerchantPortalGui\Communication\Plugin\DashboardMerchantPortalGui |
 
 **src/Pyz/Zed/DashboardMerchantPortalGui/DashboardMerchantPortalGuiDependencyProvider.php**
 
@@ -117,7 +116,7 @@ class DashboardMerchantPortalGuiDependencyProvider extends SprykerDashboardMerch
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the `OffersMerchantDashboardCardPlugin` plugin is set up by opening `http://zed.mysprykershop.com/dashboard-portal-gui`. The Offers widget should show up on the page.
+Make sure that the `OffersMerchantDashboardCardPlugin` plugin is set up by opening `http://mp.mysprykershop.com/dashboard-portal-gui`. The Product Offers card should be presented on the page.
 
 {% endinfo_block %}
 
@@ -128,4 +127,4 @@ Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE |INTEGRATION GUIDE |
 | --- | --- | --- |
-| Marketplace Merchant Portal Product Offer Management + Merchant Portal Sales Management |  |[Marketplace Merchant Portal Product Offer Management + Merchant Portal Sales Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-product-offer-management-merchant-portal-sales-management-feature-integration.html) |
+| Marketplace Merchant Portal Product Offer Management + Merchant Portal Sales Management |  |[Merchant Portal - Marketplace Merchant Portal Product Offer Management + Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature-integration.html) |

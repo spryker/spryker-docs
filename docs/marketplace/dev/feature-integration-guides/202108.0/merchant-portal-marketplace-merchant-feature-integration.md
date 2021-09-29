@@ -25,7 +25,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker/merchant-profile-merchant-portal-gui:"^1.0.1" --update-with-dependencies
+composer require spryker/merchant-profile-merchant-portal-gui:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

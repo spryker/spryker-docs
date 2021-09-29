@@ -1,11 +1,11 @@
 ---
-title: Marketplace Merchant Portal Product Offer Management + Merchant Portal Sales Management feature integration
+title: Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management feature integration
 last_updated: Sep 13, 2021
-description: This integration guide provides steps on how to integrate the Marketplace Merchant Portal Product Offer Management + Merchant Portal Sales Management feature into a Spryker project.
+description: This integration guide provides steps on how to integrate the Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management feature into a Spryker project.
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the Marketplace Merchant Portal Product Offer Management + Merchant Portal Sales Management feature into a Spryker project.
+This document describes how to integrate the Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management feature into a Spryker project.
 
 ## Prerequisites
 
@@ -14,7 +14,7 @@ To start feature integration, integrate the required features:
 | NAME  | VERSION | INTEGRATION GUIDE |
 | --------------- | --------- | ------------|
 | Marketplace Merchant Portal Product Offer Management | {{page.version}} | [Marketplace Merchant Portal Product Offer Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-product-offer-management-feature-integration.html)
-| Marketplace Merchant Portal Sales Management | {{page.version}} | [Marketplace Merchant Portal Sales Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-sales-management-feature-integration.html)
+| Marketplace Merchant Portal Order Management | {{page.version}} | [Marketplace Merchant Portal Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-order-management-feature-integration.html)
 
 
 ### 1) Set up behavior
@@ -25,7 +25,7 @@ To set up behavior:
 
 | PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE |
 | --------------- | ------------ | ----------- | ------------ |
-| ProductOfferMerchantOrderItemTableExpanderPlugin | Adds `merchantReference` and `ProductOfferSku` to Sales tables in the `MerchantPortal`. | Marketplace Sales Merchant Portal integrated | Spryker\Zed\ProductOfferMerchantPortalGui\Communication\Plugin\SalesMerchantPortalGui |
+| ProductOfferMerchantOrderItemTableExpanderPlugin | Expands MerchantOrderItemTable with Merchant SKU and Product offer reference columns configuration. |  | Spryker\Zed\ProductOfferMerchantPortalGui\Communication\Plugin\SalesMerchantPortalGui |
 
 **src/Pyz/Zed/SalesMerchantPortalGui/SalesMerchantPortalGuiDependencyProvider.php**
 
@@ -56,5 +56,3 @@ class SalesMerchantPortalGuiDependencyProvider extends SprykerSalesMerchantPorta
 Make sure that the `ProductOfferMerchantOrderItemTableExpanderPlugin` is set up by opening `http://mp.mysprykershop.com/sales-merchant-portal-gui/orders`. Click on any of the orders and check that the *Merchant Reference* and *Product Offer SKU* are present.
 
 {% endinfo_block %}
-
-dd

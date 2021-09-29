@@ -15,4 +15,47 @@ Some of the internal component will always remain as Angular Component unless th
 
 Web Components is a suite of different technologies allowing you to create reusable custom elements — with their functionality encapsulated away from the rest of your code — and utilize them in your web apps.
 
-The full cycle of the new module creation and registration it as a web component you can see in the [following document](/docs/marketplace/dev/howtos/how-to-create-a-new-module-with-application.html#register-a-new-module).
+You can see the example of registration angular components as web components below:
+
+```ts
+import { NgModule } from '@angular/core';
+import { WebComponentsModule } from '@spryker/web-components';
+
+import { SomeComponentComponent } from './some-component/some-component.component';
+import { SomeComponentModule } from './some-component/some-component.module';
+
+@NgModule({
+  imports: [
+    WebComponentsModule.withComponents([SomeComponentComponent]),
+    SomeComponentModule,
+  ],
+  providers: [],
+})
+export class ComponentsModule {}
+```
+
+While registration web components will get a `web` prefix to their selectors by default. There is also a possibility to customize web component selector.
+
+```ts
+import { NgModule } from '@angular/core';
+import { WebComponentsModule } from '@spryker/web-components';
+
+import { SomeComponentComponent } from './some-component/some-component.component';
+import { SomeComponentModule } from './some-component/some-component.module';
+
+@NgModule({
+  imports: [
+    WebComponentsModule.withComponents([
+      {
+        selector: 'new-web-component-selector',
+        component: SomeComponentComponent,
+      },
+    ]),
+    SomeComponentModule,
+  ],
+  providers: [],
+})
+export class ComponentsModule {}
+```
+
+The full cycle of the new module creation and registration it as a web component you can see in the [following document](/docs/marketplace/dev/howtos/how-to-create-a-new-module-with-application.html).

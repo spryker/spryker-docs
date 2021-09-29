@@ -4,7 +4,7 @@ description: Learn how to verify email addresses, so that your applications can 
 template: howto-guide-template
 ---
 
-For your applications to be able to send emails from an email address, you need to verify it. The verification is required to prevent spam from being sent from staging enivronments. 
+For your applications to be able to send emails from an email address, you need to verify it. The verification is required to prevent spam from being sent from staging environments. 
 
 To verify an email address:
 

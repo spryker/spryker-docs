@@ -155,8 +155,8 @@ export enum TableFeatureLocation {
 
 There are multiple standard Table Features that are shipped with the UI library:
 
-- `Pagination`—renders pagination of the table.
-- `Total`—renders the total number of the data set.
+- [Pagination](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-pagination.html) — renders pagination of the table.
+- [Total](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-total.html) — renders the total number of the data set.
 - [Title](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-title.html) — renders the title of the table.
 - `Selectable`—allows selecting multiple rows.
 - `Row Actions`—allows triggering actions from rows.

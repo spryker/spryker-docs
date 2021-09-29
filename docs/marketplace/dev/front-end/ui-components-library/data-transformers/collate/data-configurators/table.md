@@ -4,7 +4,6 @@ description: This document provides details about the Data Transformer Collate C
 template: concept-topic-template
 ---
 
-
 This document provides details about the Data Transformer Collate Configurator Table service in the Components Library.
 
 ## Overview

@@ -4,7 +4,6 @@ description: This document provides details about the Data Transformer Data Conf
 template: concept-topic-template
 ---
 
-
 This document provides details about the Data Transformer Data Configurators service in the Components Library.
 
 ## Overview
@@ -54,6 +53,8 @@ declare module '@spryker/data-transformer.collate' {
 }
 
 //// Services implementation
+import { DataTransformerConfiguratorConfigT } from '@spryker/data-transformer.collate';
+
 @Injectable({ providedIn: 'root' })
 export class CustomDataTransformerConfiguratorService implements DataTransformerConfigurator {
     resolve(

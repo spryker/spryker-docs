@@ -415,6 +415,9 @@ entries:
               url: /docs/marketplace/dev/front-end/table-design/table-features/
               nested:
 
+                - title: "Title"
+                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-title.html
+
                 - title: "Pagination"
                   url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-pagination.html
                 

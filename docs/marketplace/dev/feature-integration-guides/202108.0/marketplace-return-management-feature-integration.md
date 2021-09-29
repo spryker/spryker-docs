@@ -1154,3 +1154,9 @@ Make sure that the following widgets have been registered by adding the respecti
 ```bash
 console frontend:yves:build
 ```
+
+## Related features
+
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| - | - | - |
+| Marketplace Return Management API | | [Glue API: Marketplace Return Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-return-management-feature-integration.html) |

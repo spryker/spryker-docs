@@ -59,7 +59,6 @@ Ensure the following transfers have been created:
 
 | TRANSFER | TYPE | EVENT  | PATH  |
 | --------- | ------- | ----- | ------------- |
-| RestReturnsAttributes | class | created | src/Generated/Shared/Transfer/RestReturnsAttributesTransfer |
 | RestReturnsAttributes.merchantReference | attribute | created |src/Generated/Shared/Transfer/RestReturnsAttributesTransfer |
 
 {% endinfo_block %}

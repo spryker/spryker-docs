@@ -42,7 +42,7 @@ objects using dot notation for ex. `prop.nestedProp`).
     ],
     noActionsMessage: 'No available actions for selected rows',
     rowIdPath: 'sku',
-    availableActionsPath: ['path.to.actions'],
+    availableActionsPath: 'path.to.actions',
   },                                                                                           
 }">
 </spy-table>

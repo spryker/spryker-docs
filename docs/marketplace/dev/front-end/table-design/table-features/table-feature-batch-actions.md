@@ -13,7 +13,8 @@ As Table Feature Batch Actions based on the [Table Feature Selectable](/docs/mar
 this feature must be registered and enabled via table config.
 Batch actions are functions that can be performed on multiple items within a table. 
 As soon as at least one row is selected in the table, the batch action bar with allowed actions will appear at the top of the table.
-To exit or escape `batch action mode`, the user can deselect the items.
+To escape the `batch action mode`, it is necessary to unselect the table rows.
+
 See an example below, how to use the Batch Actions feature.
 
 Feature Configuration:

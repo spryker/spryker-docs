@@ -211,7 +211,7 @@ The order looks as follows:
 
 {% info_block errorBox "packaging units are not supported" %}
 
-The product splitting logic does not support [packaging units](/docs/scos/user/features/{{page.version}}/packaging-units/packaging-units-feature-overview.html) with configurable bundle products.
+The product splitting logic does not support [packaging units](/docs/scos/user/features/{{page.version}}/packaging-units-feature-overview.html) with configurable bundle products.
 
 {% endinfo_block %}
 

@@ -95,18 +95,19 @@ Given Spryker limits access to an SQL database only for Zed, and Yves does not h
 Clickjacking is a possibility to tweak the UI or craft a malicious webpage, embedding the attacked one to force the user to click on specific buttons or links. Clickjacking is prevented by setting correct headers in “X-Frame-Options” and “Content-Security-Policy” already provided by `HeadersSecurityServiceProvider`. However, make sure that the headers are not deleted by webserver configuration. For more information about clickjacking, see the [OWASP](https://www.owasp.org/index.php/Clickjacking) article.
 
 ### Obsolete or outdated dependencies
-Keep your dependencies up-to-date.
+To make sure that all the security updates are installed, keep Spryker and third-party modules up to date.
 
 ### Exceptions/Debug
-Make sure that:
-*   Exceptions are not shown on production.
-*   Debug is disabled on production.
+Make sure that, in your production environment, the debugging mode is disabled, and exceptions are not shown.
 
 
 Debug mode is configured with:
 * `ApplicationConstants::ENABLE_APPLICATION_DEBUG`
 * `ShopApplicationConstants::ENABLE_APPLICATION_DEBUG`
 * `GlueApplicationConstants::GLUE_APPLICATION_REST_DEBUG`
+
+### Demo data
+Remove demo admin users and set strong passwords when creating new admin users.
 
 ### Summary
 To sum up, the main points recommended to keep the data secure are:

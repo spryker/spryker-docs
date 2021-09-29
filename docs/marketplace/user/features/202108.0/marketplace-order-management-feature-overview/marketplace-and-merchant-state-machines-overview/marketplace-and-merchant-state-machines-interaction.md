@@ -12,7 +12,7 @@ Marketplace State Machine workflow:
 Merchant State Machine workflow:
 ![Merchant state machine workflow](https://confluence-connect.gliffy.net/embed/image/b938441d-1a4a-4fe3-903d-580965b1bfea.png?utm_medium=live&utm_source=custom)
 
-In this article, we'll look into the process of how Marketplace and merchant state machines work together and check what statuses are displayed in the Back Office to a Marketplace administrator, in the Merchant Portal to a merchant, and on the Storefront to a buyer.
+In this article, we'll look into the process of how Marketplace and merchant state machines interfere and check what statuses are displayed in the Back Office to a Marketplace Administrator, in the Merchant Portal to a merchant, and on the Storefront to a buyer.
 
 ## Order item’s status progress: New
 The process starts when a customer places an order. The Marketplace order obtains state *New*.
@@ -22,7 +22,7 @@ The table below provides an overview of the statuses that are displayed at this 
 
 | ROLE | APPLICATION | STATUS |
 | ------------------------ | -------------- | ------------------- |
-| Marketplace Administrator | Back Office     | New                  |
+| Marketplace administrator | Back Office     | New                  |
 | Merchant                  | Merchant Portal | N/A                  |
 | Customer                  | Storefront      | Confirmed / Accepted |
 
@@ -35,7 +35,7 @@ The table below provides an overview of the statuses that are displayed at this 
 
 | ROLE   | APPLICATION | STATUS  |
 | ------------------------ | -------------- | ---------- |
-| Marketplace Administrator | Back Office     | Paid   |
+| Marketplace administrator | Back Office     | Paid   |
 | Merchant                  | Merchant Portal | N/A         |
 | Customer                  | Storefront      | In Progress |
 
@@ -44,7 +44,7 @@ After the payment has been made, the customer can still cancel the order during 
 
 {% info_block infoBox "Note" %}
 
-The Marketplace Administrator can also cancel the order under exceptional circumstances.
+The Marketplace administrator can also cancel the order under exceptional circumstances.
 
 {% endinfo_block %}
 
@@ -57,7 +57,7 @@ The table below provides an overview of the statuses that are displayed at this 
 
 | ROLE                  | APPLICATION | STATUS |
 | ------------------------ | -------------- | --------- |
-| Marketplace Administrator | Back Office     | Canceled   |
+| Marketplace administrator | Back Office     | Canceled   |
 | Merchant                  | Merchant Portal | N/A        |
 | Customer                  | Storefront      | Canceled   |
 
@@ -70,20 +70,20 @@ The table below provides an overview of the statuses that are displayed at this 
 
 | ROLE                  | APPLICATION | STATUS |
 | ------------------------ | -------------- | --------- |
-| Marketplace Administrator | Back Office     | Refunded   |
+| Marketplace administrator | Back Office     | Refunded   |
 | Merchant                  | Merchant Portal | N/A        |
 | Customer                  | Storefront      | Refunded   |
 
 ## Order item’s status progress: Sent to Merchant
 When the system has payment confirmation, it performs the operations to split the marketplace order into one or several merchant orders. The state of the marketplace order item becomes*Sent to Merchant*. The merchant orders are created, and each of the items that they contain shows a state according to each Merchant’s state machine. The first state is *New*.
 
-![Order item’s status progress: Sent to Merchant](https://confluence-connect.gliffy.net/embed/image/00ac2bfc-1d84-4035-8ac5-93352d8305be.png?utm_medium=live&utm_source=custom)
+![Order item’s status progress: Sent to Merchant](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Order+Management/sent-to-merchant.png)
 
 The table below provides an overview of the statuses that are displayed at this step:
 
 | ROLE   | APPLICATION | STATUS |
 | ----------------- | -------------- | --------- |
-| Marketplace Administrator | Back Office   | Sent to Merchant |
+| Marketplace administrator | Back Office   | Sent to Merchant |
 | Merchant      | Merchant Portal | New |
 | Customer   | Storefront      | In Progress      |
 
@@ -96,7 +96,7 @@ The table below provides an overview of the statuses that are displayed at this 
 
 | ROLE       | APPLICATION | STATUS |
 | ----------- | -------------- | --------- |
-| Marketplace Administrator | Back Office    | Canceled   |
+| Marketplace administrator | Back Office    | Canceled   |
 | Merchant       | Merchant Portal | Canceled by Merchant|
 | Customer    | Storefront      | Canceled    |
 
@@ -109,7 +109,7 @@ The table below provides an overview of the statuses that are displayed at this 
 
 | ROLE   | APPLICATION | STATUS |
 | ------------- | -------------- | --------- |
-| Marketplace Administrator | Back Office     | Shipped by Merchant  |
+| Marketplace administrator | Back Office     | Shipped by Merchant  |
 | Merchant       | Merchant Portal | Shipped  |
 | Customer  | Storefront   | Shipped Expected by \<date\> |
 
@@ -122,7 +122,7 @@ The table below provides an overview of the statuses that are displayed at this 
 
 | ROLE   | APPLICATION | STATUS |
 | ------------- | -------------- | --------- |
-| Marketplace Administrator | Back Office     | Delivered           |
+| Marketplace administrator | Back Office     | Delivered           |
 | Merchant                  | Merchant Portal | Delivered           |
 | Customer                  | Storefront      | Delivered on \<date\> |
 
@@ -135,6 +135,6 @@ The table below provides an overview of the statuses that are displayed at this 
 
 | ROLE     | APPLICATION| STATUS      |
 | --------- | ------------- | --------------- |
-| Marketplace Administrator | Back Office     | Delivered           |
+| Marketplace administrator | Back Office     | Delivered           |
 | Merchant   | Merchant Portal | Delivered   |
 | Customer    | Storefront      | Delivered on \<date\> |

@@ -17,7 +17,7 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Spryker Core | 202001.0 | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
 
 
 ### 1) Install the required modules using Composer
@@ -142,6 +142,6 @@ class ShipmentGuiDependencyProvider extends SprykerShipmentGuiDependencyProvider
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE| INTEGRATION GUIDE |
 |-|-|-|
-| Marketplace Shipment + Cart | | [Marketplace Shipment + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-shipment-cart-feature-integration.html) |
-| Marketplace Shipment + Checkout | | [Marketplace Shipment + Checkout feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-shipment-checkout-feature-integration.html) |
-| Marketplace Shipment + Customer | | [Marketplace Shipment + Customer feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-shipment-customer-feature-integration.html) |
+| Marketplace Shipment + Cart | | [Marketplace Shipment + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-cart-feature-integration.html) |
+| Marketplace Shipment + Checkout | | [Marketplace Shipment + Checkout feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-checkout-feature-integration.html) |
+| Marketplace Shipment + Customer | | [Marketplace Shipment + Customer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-customer-feature-integration.html) |

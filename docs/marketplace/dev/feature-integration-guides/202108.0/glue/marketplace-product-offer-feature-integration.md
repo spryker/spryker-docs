@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Marketplace Product Offer feature integration"
-last_updated: Dec 17, 2020
+last_updated: Sep 9, 2021
 description: This document describes the process how to integrate the Marketplace Product Offer Glue API feature into a Spryker project.
 template: feature-integration-guide-template
 ---
@@ -17,13 +17,13 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Marketplace Product Offer | dev-master |[Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-product-offer-feature-integration.html) |
+| Marketplace Product Offer | {{page.version}} |[Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 ```bash
-composer require spryker/merchant-product-offers-rest-api:"^0.4.0" --update-with-dependencies
+composer require spryker/merchant-product-offers-rest-api:"^1.1.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -39,6 +39,7 @@ Make sure that the following modules have been installed:
 ### 2) Set up transfer objects
 
 Generate transfer changes:
+
 ```bash
 console transfer:generate
 ```
@@ -50,10 +51,16 @@ Make sure that the following changes have been applied in transfer objects:
 | TRANSFER | TYPE | EVENT | PATH |
 |-|-|-|-|
 | RestProductOffersAttributes | class | Created | src/Generated/Shared/Transfer/RestProductOffersAttributesTransfer |
+| PersistentCartChange | class | Created | src/Generated/Shared/Transfer/PersistentCartChangeTransfer |
+| RestItemsAttributes.productOfferReference | property | Created | src/Generated/Shared/Transfer/RestItemsAttributesTransfer |
+| RestItemsAttributes.merchantReference | property | Created | src/Generated/Shared/Transfer/RestItemsAttributesTransfer |
+| CartItemRequest.productOfferReference | property | Created | src/Generated/Shared/Transfer/CartItemRequestTransfer |
+| CartItemRequest.merchantReference | property | Created | src/Generated/Shared/Transfer/CartItemRequestTransfer |
+| RestCartItemsAttributes.productOfferReference | property | Created | src/Generated/Shared/Transfer/RestCartItemsAttributesTransfer |
 
 {% endinfo_block %}
 
-### 3) nable resources and relationships
+### 3) Set up behavior
 
 Activate the following plugins:
 
@@ -63,8 +70,7 @@ Activate the following plugins:
 | ConcreteProductsProductOffersResourceRoutePlugin | Registers the `product-offers` resource with `concrete-products`. |  | Spryker\Glue\MerchantProductOffersRestApi\Plugin\GlueApplication |
 | ProductOffersByProductConcreteSkuResourceRelationshipPlugin | Registers the `product-offers` resource as a relationship to `concrete-products`. |  | Spryker\Glue\MerchantProductOffersRestApi\Plugin\GlueApplication |
 
-
-<details><summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
 ```php
 <?php
@@ -114,8 +120,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
-
-</details>
 
 {% info_block warningBox "Verification" %}
 

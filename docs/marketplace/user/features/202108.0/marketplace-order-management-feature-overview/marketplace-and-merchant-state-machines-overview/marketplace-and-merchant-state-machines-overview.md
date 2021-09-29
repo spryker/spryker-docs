@@ -51,7 +51,7 @@ The status of the Marketplace order is an aggregated state of the Marketplace or
 
 ### Marketplace state machine in the Back Office
 
-Marketplace administrators manage the orders in the Back Office. See Managing marketplace orders for details <!---LINK TO BO GUIDES FOR ORDERS-->. In the Back Office, the marketplace administrators can change the state of the marketplace order by triggering the states. However, they can do that only if there are manually executable events related to the marketplace order items. Triggering the states executes the corresponding event and moves the marketplace order item to the next state. There can be multiple triggering buttons corresponding to several items in the marketplace order. When you click one of those buttons, only the items with such a manually executable event execute it. The rest stay in the same state and need their trigger to be performed to move to the next state.
+Marketplace administrators manage the orders in the Back Office. See [Managing marketplace orders](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/orders/managing-marketplace-orders.html) for details. In the Back Office, the Marketplace administrators can change the state of the marketplace order by triggering the states. However, they can do that only if there are manually executable events related to the marketplace order items. Triggering the states executes the corresponding event and moves the marketplace order item to the next state. There can be multiple triggering buttons corresponding to several items in the marketplace order. When you click one of those buttons, only the items with such a manually executable event execute it. The rest stay in the same state and need their trigger to be performed to move to the next state.
 
 If there are no manually executable events applicable to any of the items, there is no button to click in the Back Office interface. In this case, the action is performed automatically.
 
@@ -80,4 +80,4 @@ Our exemplary merchant state machine provides the following states:
 </details>
 
 ## Next steps
-[Learn how the marketplace and merchant state machines interact with each other](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html)
+[Learn how the marketplace and merchant state machines interact with each other](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html)

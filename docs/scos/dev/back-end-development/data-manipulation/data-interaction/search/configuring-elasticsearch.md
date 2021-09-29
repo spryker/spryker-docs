@@ -20,6 +20,36 @@ redirect_from:
   - /v2/docs/en/search-configure-elasticsearch
   - /v1/docs/search-configure-elasticsearch
   - /v1/docs/en/search-configure-elasticsearch
+  - /v5/docs/configure-elasticsearch
+  - /v5/docs/en/configure-elasticsearch
+  - /v4/docs/configure-elasticsearch
+  - /v4/docs/en/configure-elasticsearch
+  - /v6/docs/configure-elasticsearch
+  - /v6/docs/en/configure-elasticsearch
+  - /v3/docs/configure-elasticsearch
+  - /v3/docs/en/configure-elasticsearch
+  - /v2/docs/configure-elasticsearch
+  - /v2/docs/en/configure-elasticsearch
+  - /v6/docs/search-30
+  - /v6/docs/en/search-30
+  - /v6/docs/search-40
+  - /v6/docs/en/search-40
+  - /v5/docs/search-30
+  - /v5/docs/en/search-30
+  - /v5/docs/search-40
+  - /v5/docs/en/search-40
+  - /v4/docs/search-30
+  - /v4/docs/en/search-30
+  - /v4/docs/search-40
+  - /v4/docs/en/search-40
+  - /v3/docs/search-30
+  - /v3/docs/en/search-30
+  - /v3/docs/search-40
+  - /v3/docs/en/search-40
+  - /v2/docs/search-30
+  - /v2/docs/en/search-30
+  - /v2/docs/search-40
+  - /v2/docs/en/search-40
 ---
 
 Elasticsearch is a NoSQL data store that allows us to predefine the structure of the data we get to store in it.

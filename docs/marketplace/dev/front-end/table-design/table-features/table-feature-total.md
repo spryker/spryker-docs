@@ -15,7 +15,7 @@ Check out this example below to see how to use the Total feature.
 
 Feature configuration:
 
-`enabled` - will enable feature via config.
+`enabled` - enables the feature via config.
 
 ```html
 <spy-table [config]="{

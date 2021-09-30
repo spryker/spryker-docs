@@ -422,13 +422,6 @@ entries:
                 - title: "Autocomplete"
                   url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-autocomplete.html
 
-            - title: "Table Features"
-              url: /docs/marketplace/dev/front-end/table-design/table-features/
-              nested:
-
-                - title: "Selectable"
-                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-selectable.html
-
                 - title: "Chip"
                   url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-chip.html
 
@@ -448,7 +441,7 @@ entries:
                   url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-select.html
 
                 - title: "Text"
-                  url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-text.html
+                  url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-text.html   
 
             - title: "Table Features"
               url: /docs/marketplace/dev/front-end/table-design/table-features/
@@ -462,6 +455,9 @@ entries:
 
                 - title: "Total"
                   url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-total.html
+
+                - title: "Selectable"
+                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-selectable.html
 
             - title: "Table Filters"
               url: /docs/marketplace/dev/front-end/table-design/table-filters/

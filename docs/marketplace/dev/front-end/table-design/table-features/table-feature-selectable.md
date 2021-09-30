@@ -9,18 +9,14 @@ This article provides details about the Table Feature Selectable component in th
 ## Overview
 
 Table Feature Selectable is a feature of the Table Component that allows selecting multiple rows.
-Row selection toggles whether a row is selected. 
-Typically, an empty box indicates a row is not selected and a checkmark indicates a row is selected. 
-The table commonly has an indication at the header to show whether all rows are selected. 
-If they are, the header displays a checkmark. If all rows are unselected, the header displays an empty checkbox. 
-If some rows are selected, the header displays a dash for an indeterminate state.
-When rows selection changes feature emits an event with all selected rows and other features can use that to do something with them 
-(for ex. [Batch Actions Feature](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-batch-actions.html) will display applicable actions for selected rows).
-See an example below, how to use the Selectable feature.
+The row selection toggles whether a row is selected. A checkmark indicates that a row is selected, while an empty box indicates that a row is not selected.
+Commonly, the table header indicates whether all rows are selected. If they are, the header displays a checkmark. If all rows are unselected, the header displays an empty checkbox. For rows with indeterminate states, a dash appears in the header.
+When the rows selection feature changes, it emits an event with all selected rows, which can be used by other features (for example, the Batch Actions Feature<!---(/docs/marketplace/dev/front-end/table-design/table-features/table-feature-batch-actions.html)--> will display the applicable actions for selected rows).
+Check out this example below to see how to use the Selectable feature.
 
-Feature Configuration:
+Feature configuration:
 
-`enabled` - will enable feature via config.
+`enabled` - enables the feature via config.
 
 ```html
 <spy-table [config]="{
@@ -33,7 +29,9 @@ Feature Configuration:
 </spy-table>
 ```
 
-## Feature Registration
+## Feature registration
+
+Register the feature:
 
 ```ts
 @NgModule({
@@ -52,7 +50,7 @@ export class RootModule {}
 
 ## Interfaces
 
-Below you can find interfaces for Table Feature Selectable.
+Below you can find interfaces for the Table Feature Selectable.
 
 ```ts
 export interface TableSelectableConfig extends TableFeatureConfig {}

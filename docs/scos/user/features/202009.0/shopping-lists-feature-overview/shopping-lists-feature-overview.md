@@ -1,17 +1,16 @@
 ---
 title: Multiple and Shared Shopping Lists overview
 description: A general overview of the Multiple and shared shopping lists feature.
-originalLink: https://documentation.spryker.com/2021080/docs/multiple-and-shared-shopping-lists-overview
-originalArticleId: 6683a968-b4de-4e2b-aefc-2ab70fabe3b4
+originalLink: https://documentation.spryker.com/v6/docs/multiple-shared-shopping-lists-overview
+originalArticleId: efe99d46-f738-4cc1-a764-23c2579daf84
 redirect_from:
-  - /2021080/docs/multiple-and-shared-shopping-lists-overview
-  - /2021080/docs/en/multiple-and-shared-shopping-lists-overview
-  - /docs/multiple-and-shared-shopping-lists-overview
-  - /docs/en/multiple-and-shared-shopping-lists-overview
-  - /2021080/docs/shopping-lists
-  - /2021080/docs/en/shopping-lists
-  - /docs/shopping-lists
-  - /docs/en/shopping-lists
+  - /v6/docs/multiple-shared-shopping-lists-overview
+  - /v6/docs/en/multiple-shared-shopping-lists-overview
+  - /v6/docs/multiple-shared-shopping-lists
+  - /v6/docs/en/multiple-shared-shopping-lists
+  - /v6/docs/shopping-list
+  - /v6/docs/en/shopping-list
+
 ---
 
 A shopping list is a list of the items that shoppers buy or plan to buy frequently or regularly. For example, a consumer can compile a shopping list of the products they purchase every week. Shopping lists allow a buyer to have a quick overview of the products they are planning to buy and the sum of money they are going to spend.
@@ -19,7 +18,7 @@ A shopping list is a list of the items that shoppers buy or plan to buy frequent
 A shopping list is always saved, disregarding if a company user logs out and logs in again—the list is still available. The shopping list does not reserve products on stock, so adding an item to the shopping list does not affect item availability. However, a company user can easily convert any shopping list into a shopping cart to proceed with the Checkout.
 There are two ways to create a shopping list:
 
-* Through a [shopping list widget](/docs/scos/user/features/{{page.version}}/shopping-lists/shopping-lists-feature-overview/shopping-list-widget-overview.html) in the header of the shop.
+* Through a [shopping list widget](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-list-widget-overview.html) in the header of the shop.
 * From the *Shopping Lists* page in the *My Account* menu. See [Multiple and Shared Shopping Lists on the Storefront](#multiple-and-shared-shopping-lists-on-the-storefront) for more detailed instruction.
 
 New items are added to shopping lists by clicking **Add to Shopping List** on the product details page.
@@ -60,7 +59,7 @@ Three types of shopping list access rights can be granted:
 * SKU
 * Product attribute
 * Product options
-* Product comments (see [Shopping List Notes overview](/docs/scos/user/features/{{page.version}}/shopping-lists/shopping-lists-feature-overview/shopping-list-notes-overview.html) for more details)
+* Product comments (see [Shopping List Notes overview](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-list-notes-overview.html) for more details)
 * Quantity
 * Item price
 * Availability
@@ -89,7 +88,7 @@ Alternative products are not shown for discontinued products since they can not 
    * SKU
    * Product attribute
    * Product options
-   * Product notes (see [Shopping List Notes overview](/docs/scos/user/features/{{page.version}}/shopping-lists/shopping-lists-feature-overview/shopping-list-notes-overview.html) for more details)
+   * Product notes (see [Shopping List Notes overview](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-list-notes-overview.html) for more details)
    * Quantity
    * Item price
    * Availability
@@ -182,8 +181,8 @@ We do not support product options in Subtotal of the Shopping Lists. For example
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of the shopping list widget](/docs/scos/user/features/{{page.version}}/shopping-lists/shopping-lists-feature-overview/shopping-list-widget-overview.html)  |
-| [Get a general idea of Shopping List Notes](/docs/scos/user/features/{{page.version}}/shopping-lists/shopping-lists-feature-overview/shopping-list-notes-overview.html)  |
+| [Get a general idea of the shopping list widget](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-list-widget-overview.html)  |
+| [Get a general idea of Shopping List Notes](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-list-notes-overview.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

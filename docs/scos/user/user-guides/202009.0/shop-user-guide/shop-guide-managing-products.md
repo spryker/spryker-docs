@@ -109,7 +109,7 @@ You can order frequently bought products faster by adding the products to a [sho
 **To add a product to the shopping list:**
 
 1. From the drop-down list, select the shopping list to which you want to add the product.
-2. Specify the quantity of the product and click **Add to Shopping list**. The item will be added to the shopping list you’ve selected. For more information on managing shopping lists, see [Shop Guide - Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/multiple-and-shared-shopping-lists/multiple-and-shared-shopping-lists-overview.html#multiple-and-shared-shopping-lists-on-the-storefront).
+2. Specify the quantity of the product and click **Add to Shopping list**. The item will be added to the shopping list you’ve selected. For more information on managing shopping lists, see [Shop Guide - Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html#multiple-and-shared-shopping-lists-on-the-storefront).
 
 ![Add to shopping list](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Managing+Products/add-to-shopping-list-howto.png) 
 
@@ -166,6 +166,6 @@ If you have several wishlists in your account, then first, select the wishlist t
 
 After you added the product to the cart, you can proceed with the checkout. For more information, see [Shop Guide - Checkout](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html#shop-guide---checkout).
 
-To learn how to create and manage shopping lists, see [Shop Guide - Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/multiple-and-shared-shopping-lists/multiple-and-shared-shopping-lists-overview.html#multiple-and-shared-shopping-lists-on-the-storefront#shop-guide---shopping-lists).
+To learn how to create and manage shopping lists, see [Shop Guide - Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html#multiple-and-shared-shopping-lists-on-the-storefront#shop-guide---shopping-lists).
 
 To learn how to create and manage wishlists, see [Shop Guide - Managing Wishlists](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html#the-wishlist-feature-on-the-storefront). 

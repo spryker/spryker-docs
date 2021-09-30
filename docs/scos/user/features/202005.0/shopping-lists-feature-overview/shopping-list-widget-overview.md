@@ -1,11 +1,11 @@
 ---
 title: Shopping list widget overview
 description: For convenience and ease of use, when customer puts a cursor on the shopping list icon, a drop-down list with all their shopping lists is displayed.
-originalLink: https://documentation.spryker.com/v6/docs/shopping-list-widget
-originalArticleId: bd5527a9-0f31-4512-83a2-966794fcf8de
+originalLink: https://documentation.spryker.com/v5/docs/shopping-list-widget
+originalArticleId: 0c03f12d-a90d-4d29-9e59-e588510928f3
 redirect_from:
-  - /v6/docs/shopping-list-widget
-  - /v6/docs/en/shopping-list-widget
+  - /v5/docs/shopping-list-widget
+  - /v5/docs/en/shopping-list-widget
 ---
 
 Shopping list is a list of items that a customer plans to buy. Many of the B2B customers compile shopping lists of items they buy on a regular basis. Also, such customers often use multiple shopping lists to cover their specific purchasing needs. For example, cafes prefer using Shopping list feature to create several shopping lists where they save items they keep ordering every day, week etc.

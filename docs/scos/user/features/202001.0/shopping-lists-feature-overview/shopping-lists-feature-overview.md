@@ -1,17 +1,15 @@
 ---
 title: Multiple and Shared Shopping Lists overview
 description: A general overview of the Multiple and shared shopping lists feature.
-originalLink: https://documentation.spryker.com/2021080/docs/multiple-and-shared-shopping-lists-overview
-originalArticleId: 6683a968-b4de-4e2b-aefc-2ab70fabe3b4
+originalLink: https://documentation.spryker.com/v4/docs/multiple-shared-shopping-lists-overview
+originalArticleId: 6f285ce8-0da1-43d1-91a1-886d2e364d06
 redirect_from:
-  - /2021080/docs/multiple-and-shared-shopping-lists-overview
-  - /2021080/docs/en/multiple-and-shared-shopping-lists-overview
-  - /docs/multiple-and-shared-shopping-lists-overview
-  - /docs/en/multiple-and-shared-shopping-lists-overview
-  - /2021080/docs/shopping-lists
-  - /2021080/docs/en/shopping-lists
-  - /docs/shopping-lists
-  - /docs/en/shopping-lists
+  - /v4/docs/multiple-shared-shopping-lists-overview
+  - /v4/docs/en/multiple-shared-shopping-lists-overview
+  - /v4/docs/multiple-shared-shopping-lists
+  - /v4/docs/en/multiple-shared-shopping-lists
+  - /v4/docs/shopping-list
+  - /v4/docs/en/shopping-list
 ---
 
 A shopping list is a list of the items that shoppers buy or plan to buy frequently or regularly. For example, a consumer can compile a shopping list of the products they purchase every week. Shopping lists allow a buyer to have a quick overview of the products they are planning to buy and the sum of money they are going to spend.

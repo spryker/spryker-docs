@@ -53,7 +53,7 @@ To add a note to the cart, in the **Add a note for the cart** widget, enter your
 ***
 
 ## Adding a Cart to the Shopping List
-You can add the products from the cart to the [shopping list](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/multiple-and-shared-shopping-lists/multiple-and-shared-shopping-lists-overview.html) to purchase them later.
+You can add the products from the cart to the [shopping list](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html) to purchase them later.
 
 To add a cart to the shopping list:
 

@@ -1,11 +1,11 @@
 ---
 title: Shopping List Notes overview
 description: With the feature, you can leave and manage notes for each item in the order.
-originalLink: https://documentation.spryker.com/v6/docs/shopping-list-notes
-originalArticleId: 82495e18-ecda-41c8-b718-0110f6bff533
+originalLink: https://documentation.spryker.com/v5/docs/shopping-list-notes
+originalArticleId: aa37317d-0611-4e69-aa88-57cef390dbef
 redirect_from:
-  - /v6/docs/shopping-list-notes
-  - /v6/docs/en/shopping-list-notes
+  - /v5/docs/shopping-list-notes
+  - /v5/docs/en/shopping-list-notes
 ---
 
 The Shopping List Notes feature allows buyers to manage notes for individual items they have on their shopping lists. For example, a bakery might have created a shopping list with products they buy on a regular basis. Suppose, they have 10 kg flour bag on the shopping list, but they want to make sure that they always have enough amount of flour in their stock and therefore need to buy more sometimes. They can leave a note at the "flour bag" product saying "check if more than one bag should be purchased". Notes to shopping list items are added on *Edit shopping list* page. Customers can edit and delete the created shopping list notes there as well.

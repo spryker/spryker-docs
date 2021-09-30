@@ -7,7 +7,7 @@ redirect_from:
   - /v5/docs/en/managing-shopping-lists
 ---
 
-With the help of the [Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-list.html) feature, company users can manage shopping lists for their company to plan purchasing activities beforehand. Unlike [Wishlists](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html), Shopping Lists contain not only a list of items to be purchased but also the quantity of each item.
+With the help of the [Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html) feature, company users can manage shopping lists for their company to plan purchasing activities beforehand. Unlike [Wishlists](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html), Shopping Lists contain not only a list of items to be purchased but also the quantity of each item.
 
 The endpoints provided by the **Shopping List API** provide full *Shopping List management* functionality via REST requests.
 {% info_block infoBox %}
@@ -29,7 +29,7 @@ To create a shopping list for a registered user, send the request:
 
 ---
 ### Request
-Request sample: 
+Request sample:
 `POST http://glue.mysprykershop.com/shopping-lists`
 
 ```
@@ -50,7 +50,7 @@ Request sample:
 ### Response
 <details open>
 <summary>Response sample</summary>
-   
+
 ```
 {
     "data": {
@@ -127,7 +127,7 @@ The `concrete-products` resource can be included only together with the `shoppin
 ### Response
 <details open>
 <summary>Response sample</summary>
-   
+
 ```
   {
     "data": {
@@ -232,7 +232,7 @@ The endpoint returns not only the shopping lists created by users but also the l
 
 {% endinfo_block %}
 ### Request
-Request sample: 
+Request sample:
 `GET http://glue.mysprykershop.com/shopping-lists`
 
 `GET http://glue.mysprykershop.com/shopping-lists?include=shopping-list-items,concrete-products`
@@ -250,7 +250,7 @@ The `concrete-products` resource can be included only together with the `shoppin
 ### Response
 <details open>
 <summary>Response sample with no shopping lists</summary>
-   
+
 ```
   {
     "data": [],
@@ -264,7 +264,7 @@ The `concrete-products` resource can be included only together with the `shoppin
 
 <details open>
 <summary>Response sample with own and shared shopping lists</summary>
-   
+
 ```
 {
     "data": [
@@ -321,7 +321,7 @@ The `concrete-products` resource can be included only together with the `shoppin
 
 <details open>
 <summary>Response sample with shopping list items and information on concrete products</summary>
-   
+
 ```
 {
     "data": {
@@ -504,7 +504,7 @@ The requested list must be either owned by or shared with the currently logged i
 
 
 ### Request
-Request sample: 
+Request sample:
 `GET http://glue.mysprykershop.com/shopping-lists/sdb17f85-953f-565a-a4ce-e5cb02405f83`
 
 `GET http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a?include=shopping-list-items`
@@ -524,7 +524,7 @@ The `concrete-products` resource can be included only together with the `shoppin
 ### Response
 <details open>
 <summary>Response sample</summary>
-   
+
 ```
 {
     "data": {
@@ -549,7 +549,7 @@ The `concrete-products` resource can be included only together with the `shoppin
 
 <details open>
 <summary>Response sample with shopping list items</summary>
-   
+
 ```
 {
     "data": {
@@ -603,7 +603,7 @@ The `concrete-products` resource can be included only together with the `shoppin
 
 <details open>
 <summary>Response sample with shopping list items and information on concrete products</summary>
-   
+
 ```
 {
     "data": {
@@ -755,7 +755,7 @@ To modify a shopping list, send the request:
 ---
 
 ### Request
-Request samples: 
+Request samples:
 `PATCH http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a`
 
 `PATCH http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a?include=shopping-list-items,concrete-products`
@@ -792,7 +792,7 @@ The `concrete-products` resource can be included only together with the `shoppin
 ### Response
 <details open>
 <summary>Response sample</summary>
-   
+
 ```
 {
     "data": {
@@ -812,11 +812,11 @@ The `concrete-products` resource can be included only together with the `shoppin
 }
 ```
  <br>
-</details> 
+</details>
 
 <details open>
 <summary>Response sample with shopping list items and information on concrete products</summary>
-   
+
 ```
 "data": {
         "type": "shopping-lists",
@@ -949,7 +949,7 @@ The `concrete-products` resource can be included only together with the `shoppin
 }
 ```
  <br>
-</details> 
+</details>
 
 Find all the related attribute descriptions in [Accessing All Shopping Lists of a Company User](#accessing-all-shopping-lists-of-a-company-user).
 
@@ -963,7 +963,7 @@ To update the quantity of products in a shopping list item, send the request:
 ---
 
 ### Request
-Request samples: 
+Request samples:
 `PATCH http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08`
 
 `PATCH http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08?include=concrete-products`
@@ -1087,14 +1087,14 @@ The `concrete-products` resource can be included only together with the `shoppin
 </details>   
 
 ## Deleting Items from a Shopping List
-To delete an item from a shopping list, send the request: 
+To delete an item from a shopping list, send the request:
 
 ---
 `DELETE` **/shopping-lists/{% raw %}{{{% endraw %}shopping_list_id{% raw %}}}{% endraw %}/shopping-list-items/{% raw %}{{{% endraw %}shopping_list_item_id{% raw %}}}{% endraw %}**
 
 ---
 ### Request
-Request sample: 
+Request sample:
 `DELETE http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08`
 
 ### Response
@@ -1109,7 +1109,7 @@ If the item was removed successfully, the endpoint responds with a **204 No Cont
 ---
 
 ### Request
-Request sample: 
+Request sample:
 `DELETE http://glue.mysprykershop.com/shopping-lists/sdb17f85-953f-565a-a4ce-e5cb02405f83`
 
 ### Response

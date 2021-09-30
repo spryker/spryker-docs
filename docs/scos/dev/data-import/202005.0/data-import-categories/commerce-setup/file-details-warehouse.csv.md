@@ -7,7 +7,7 @@ redirect_from:
   - /v5/docs/en/file-details-warehousecsv
 ---
 
-This article contains content of the **warehouse.csv** file to configure [Warehouse](/docs/scos/user/features/{{page.version}}/inventory-management/inventory-management.html) information on your Spryker Demo Shop.
+This article contains content of the **warehouse.csv** file to configure [Warehouse](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:

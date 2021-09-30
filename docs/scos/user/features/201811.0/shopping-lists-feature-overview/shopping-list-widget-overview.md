@@ -6,6 +6,8 @@ originalArticleId: ff3f791d-c5e6-4526-a7cb-0b152425a1fa
 redirect_from:
   - /v1/docs/shopping-list-widget
   - /v1/docs/en/shopping-list-widget
+  - /v1/docs/shopping-list-widget-overview
+  - /v1/docs/en/shopping-list-widget-overview
 ---
 
 Shopping list is a list of items that a customer plans to buy. Many of the B2B customers compile shopping lists of items they buy on a regular basis. Also, such customers often use multiple shopping lists to cover their specific purchasing needs. For example, cafes prefer using Shopping list feature to create several shopping lists where they save items they keep ordering every day, week etc.

@@ -7,7 +7,7 @@ redirect_from:
   - /v5/docs/en/file-details-currencycsv
 ---
 
-This article contains content of the **currency.csv** file to configure [Currency](/docs/scos/user/features/{{page.version}}/internationalization/multiple-currencies-per-store.html) information on your Spryker Demo Shop.
+This article contains content of the **currency.csv** file to configure [Currency](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields
 These are the header fields to be included in the .csv file:

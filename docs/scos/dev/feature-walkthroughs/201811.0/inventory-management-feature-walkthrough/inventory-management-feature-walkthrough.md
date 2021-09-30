@@ -1,21 +1,15 @@
 ---
-title: Stock and availability
-description: The fully automated Stock calculation takes into consideration products that are reserved in open orders when defining availability.
-originalLink: https://documentation.spryker.com/v6/docs/stock-and-availability
-originalArticleId: cc23f702-f7c5-47c0-b8ec-041d6435c349
-redirect_from:
-  - /v6/docs/stock-and-availability
-  - /v6/docs/en/stock-and-availability
+title: Inventory Management feature walkthrough
+last_updated: Aug 13, 2021
+description: The Inventory Management feature adds stock and availability management as well as multiple warehouse stock management for products
+template: concept-topic-template
 ---
 
-The fully automated Stock calculation takes into consideration products that are reserved in open orders when defining availability. Also, you can define never-out-of-stock products, such as digital downloads. In contrast to Stock, Availability considers not only the number of products in the warehouse, but currently open orders, too. Product Availability defines if a product can or cannot be sold in the shop.
+The _Inventory Management_ feature adds stock and availability management as well as multiple warehouse stock management for products.
 
 ## Availability
-For most of the e-commerce platforms stock does not reflect real availability of products, since stock is just the physical number of products in your warehouse which does not take reserved products into account. In contrast to stock, availability considers not just number of products in the warehouse, but current open orders as well.
 
-In general, product availability defines if the product can or cannot be sold in the shop.
-
-From this article, you will get to know how product availability is checked and calculated, how products are reserved, how availability can be imported to the database as well as how availability per store works.
+From this section, you will get to know how product availability is checked and calculated, how products are reserved, how availability can be imported to the database as well as how availability per store works.
 
 ### Availability Check
 The process of checking product's availability implies several operations described in the list below.
@@ -144,3 +138,14 @@ That means that DE and AT both share database. This information will be used whe
 
 When placing an order in Store A, the reservation is stored with the store identifier `fk_store`. An event is created and published in the queue, and synchronization with Store B happens. See scenario 3 above for information about how reservations are handled as well learn about the new configuration option for shared database in the `store.php` file.
 
+To learn more about the feature and to find out how end users use it, see [Inventory Management feature overview](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html) for business users.
+
+
+
+## Related Developer articles
+
+| INTEGRATION GUIDES | GLUE API GUIDES | DATA IMPORT |
+|---|---|---|
+| [Inventory Management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/inventory-management-feature-integration.html) | [Retrieving abstract product availability](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-availability.html) | [File details: product_stock.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/stocks/file-details-product-stock.csv.html) |
+| [Glue API: Inventory Management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-inventory-management-feature-integration.html) | [Retrieving concrete product availability](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-product-availability.html) | [File details: warehouse_address.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html) |
+|  |  | [File details: warehouse_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html) |

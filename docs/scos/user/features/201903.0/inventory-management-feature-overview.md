@@ -21,7 +21,7 @@ Stock does not always reflect the real availability of products, as not all the 
 
 You can [create warehouses in the Back Office](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/warehouses/creating-warehouses.html) or [import them](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse.csv.html).
 
-A warehouse can be assigned to a single store or shared between several stores. See [Managing stocks in a multi-store environment: Best practices](/docs/scos/user/features/{{page.version}}/inventory-management/managing-stocks-in-a-multi-store-environment-best-practices.html) for the warehouse and stock management scenarios you can set up for your project. You can manage relations between stores and warehouses in the Back Office or by importing the warehouse and store data. See [Managing warehouses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/warehouses/managing-warehouses.html#managing-warehouses) for details on how you can manage warehouses and stores in the back office and [File details: warehouse_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html) on how you can import the warehouse and store data.
+A warehouse can be assigned to a single store or shared between several stores. You can manage relations between stores and warehouses in the Back Office or by importing the warehouse and store data. See [Managing warehouses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/warehouses/managing-warehouses.html#managing-warehouses) for details on how you can manage warehouses and stores in the back office and [File details: warehouse_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html) on how you can import the warehouse and store data.
 
 ### Defining a warehouse address
 You can define the warehouse address that will be used as the shipping origin address by importing the warehouse address data. See [File details: warehouse_address.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html) for details about the import file.
@@ -97,6 +97,6 @@ For SEO purposes, products that are not available can still be displayed on the 
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Inventory Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/inventory-management-feature-walkthrough.html) for developers.
+Are you a developer? See [Inventory Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/nventory-management-feature-walkthrough/inventory-management-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/inventory-management-feature-integration
 ---
 
-This document describes how to ingrate the [Inventory Management](/docs/scos/user/features/{{page.version}}/inventory-management/inventory-management-feature-overview.html) feature into a Spryker project.
+This document describes how to ingrate the [Inventory Management](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html) feature into a Spryker project.
 
 {% info_block errorBox %}
 
@@ -18,9 +18,9 @@ The following feature integration guide expects the basic feature to be in place
 
 The current feature integration guide adds the following functionality:
 
-* [Warehouse Management](/docs/scos/user/features/{{page.version}}/inventory-management/inventory-management-feature-overview.html)
+* [Warehouse Management](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html)
 * [Add to cart from catalog page](/docs/scos/user/features/{{page.version}}/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)
-* [Warehouse address](/docs/scos/user/features/{{page.version}}/inventory-management/inventory-management-feature-overview.html#defining-a-warehouse-address)
+* [Warehouse address](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html#defining-a-warehouse-address)
 
 {% endinfo_block %}
 

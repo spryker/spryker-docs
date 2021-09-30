@@ -1,13 +1,17 @@
 ---
 title: Inventory Management feature overview
 description: Learn how you can manage warehouse, stock, and availability with the Inventory Management feature
-originalLink: https://documentation.spryker.com/2021080/docs/inventory-management-feature-overview
-originalArticleId: 6aaacd72-1ca1-4406-8614-0cacf94459d4
+originalLink: https://documentation.spryker.com/v6/docs/inventory-management
+originalArticleId: 57cede78-c062-4182-9ebc-bfe9f352d281
 redirect_from:
-  - /2021080/docs/inventory-management-feature-overview
-  - /2021080/docs/en/inventory-management-feature-overview
-  - /docs/inventory-management-feature-overview
-  - /docs/en/inventory-management-feature-overview
+  - /v6/docs/inventory-management
+  - /v6/docs/en/inventory-management
+  - /v6/docs/warehouse
+  - /v6/docs/en/warehouse
+  - /v6/docs/stock-and-availability
+  - /v6/docs/en/stock-and-availability
+  - /v6/docs/reference-informaton-availabilitystorage-module-overview
+  - /v6/docs/en/reference-informaton-availabilitystorage-module-overview
 ---
 
 Thr *Inventory Management* feature refers to warehousing and managing your store’s stock. In this context, a *warehouse* is the physical place where your products are stored, and *stock* is the number of products available in the warehouse. See [Warehouse management](#warehouse-management) and [Stock management](#stock-management) for details on how to manage them.
@@ -17,49 +21,34 @@ Stock does not always reflect the real availability of products, as not all the 
 
 You can [create warehouses in the Back Office](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/warehouses/creating-warehouses.html) or [import them](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse.csv.html).
 
-A warehouse can be assigned to a single store or shared between several stores. See [Managing stocks in a multi-store environment: Best practices](docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/managing-stocks-in-a-multi-store-environment-best-practices.html) for the warehouse and stock management scenarios you can set up for your project. You can manage relations between stores and warehouses in the Back Office or by importing the warehouse and store data. See [Managing warehouses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/warehouses/managing-warehouses.html#managing-warehouses) for details on how you can manage warehouses and stores in the back office and [File details: warehouse_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html) on how you can import the warehouse and store data.
+A warehouse can be assigned to a single store or shared between several stores. You can manage relations between stores and warehouses in the Back Office or by importing the warehouse and store data. See [Managing warehouses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/warehouses/managing-warehouses.html#managing-warehouses) for details on how you can manage warehouses and stores in the back office and [File details: warehouse_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html) on how you can import the warehouse and store data.
 
 ### Defining a warehouse address
 You can define the warehouse address that will be used as the shipping origin address by importing the warehouse address data. See [File details: warehouse_address.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html) for details about the import file.
 
-### Warehouse assignment to order items (with Avalara integration only)
-
-{% info_block warningBox %}
-
-By default, a warehouse is not linked to a sales order item. The logic described below applies only when [Avalara](/docs/scos/user/features/{{page.version}}/tax/tax-feature-overview.html) is integrated into your project. That is, it is used to get warehouse addresses to calculate taxes in the USA.
-
-{% endinfo_block %}
-
-During the checkout, once a buyer entered delivery addresses for all order items, be it a [single delivery](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/split-delivery-overview.html) or a split delivery, the order items are assigned to warehouses to fulfil them.
-
-By default, if a buyer orders several items of the same SKU, the requested item’s stock is checked in all the warehouses of the store. Based on the item stock, the warehouses are sorted in descending order, for example:
-
-1. Never out of stock
-2. 1000 items
-3. 999 items
-4. 2 items
-5. 0 items
-
-If the requested quantity of the item is available in the first warehouse, that is, the one holding the biggest stock of the item, this warehouse is assigned to fulfill the order item.
-
-{% info_block infoBox %}
-
-The warehouse with the *never out of stock* item quantity is always assigned to the item.
-
-{% endinfo_block %}
-
-If the first warehouse's stock is insufficient to fulfil the order item, this warehouse and the next one is assigned to the order item to fulfill the remaining quantity.
-
-Schematically, the process looks like this:
-
-![image](https://confluence-connect.gliffy.net/embed/image/74e2001e-4443-4e6c-b3d6-fafb14548702.png?utm_medium=live&utm_source=custom)
-
 ## Stock management
+
+Stock defines the physical amount of products you have in your warehouse. Spryker Commerce OS allows you to define stocks for your products in different warehouses.
+
+A product is associated with at least one stock product. It should be noted that only concrete products can have stocks. Additionally, in the Back Office, you can define a product to be never out of stock to make it available at any time.
 
 When order is made, stock is not updated automatically in the system, you have to set it manually. You can define stock only for concrete products. You can set stock by:
 
 * Editing product stock in the Back Office. See [Editing stock](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/availability/managing-products-availability.html#editing-stock) for details.
 * Importing the quantities of items stored in each of the warehouses. See [Stocks](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/stocks/stocks.html) for details.
+
+### How Spryker stores your product stock
+Spryker holds your product stock in a type called DECIMAL(20,10), which means that your product stock can be 20 digits long and have a maximum of 10 digits after the comma. For example:
+
+* 1234567890.0987654321
+* 0.0987654321
+* 1234567890098765432.1
+* 12345.6789009876
+* 1.0000000000
+
+### Calculating the current stock for products
+A product quantity from stock is being reserved when an order containing it is being processed. The state machine is reserving stocks by setting the *reserved* flag. To calculate the available stock per store, not only the maintained stock (the sum of *active* stocks related to the current store from each storage location) is taken into account, but also the currently processed orders.
+
 
 ## Availability management
 

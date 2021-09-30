@@ -43,7 +43,7 @@ Let's take a closer look at all the possible options.
 `create`:  
   - `addButon` - an object with `title` and `icon` for the `Add button`.  
   - `cancelButon` - an object with `title` and `icon` for the `Cancel button`.  
-  - `disableForCols` - an array with cell `id's` to be disabled.  
+  - `disableForCols` - an array with cell `ids` to be disabled.  
   - `formInputName` - will create `input[type=hidden]` element with the specific name.  
   - `initialData` - initials data for cells and object with errors for rows and cells.  
   

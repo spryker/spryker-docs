@@ -61,7 +61,7 @@ A lot of UI Components have extension points that may and some of them must be c
 - @spryker/grid ([npm](https://www.npmjs.com/package/@spryker/grid), [story](https://spy-storybook.web.app/?path=/story/gridcomponent--primary))
 - @spryker/header ([npm](https://www.npmjs.com/package/@spryker/header), [story](https://spy-storybook.web.app/?path=/story/headercomponent--primary))
 - @spryker/headline ([npm](https://www.npmjs.com/package/@spryker/headline), [story](https://spy-storybook.web.app/?path=/story/headlinecomponent--primary))
-- @spryker/headline ([npm](https://www.npmjs.com/package/@spryker/headline), [story](https://spy-storybook.web.app/?path=/story/htmlrenderercomponent--with-static-html))
+- @spryker/html-renderer ([npm](https://www.npmjs.com/package/@spryker/html-renderer), [story](https://spy-storybook.web.app/?path=/story/htmlrenderercomponent--with-static-html))
 - @spryker/icon ([npm](https://www.npmjs.com/package/@spryker/icon), [story](https://spy-storybook.web.app/?path=/story/iconcomponent--all-icons))
 - @spryker/input ([npm](https://www.npmjs.com/package/@spryker/input), [story](https://spy-storybook.web.app/?path=/story/inputcomponent--primary))
 - @spryker/input.password ([npm](https://www.npmjs.com/package/@spryker/input.password), [story](https://spy-storybook.web.app/?path=/story/inputpasswordcomponent--primary))

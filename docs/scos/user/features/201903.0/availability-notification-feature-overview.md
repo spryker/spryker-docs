@@ -1,13 +1,13 @@
 ---
 title: Availability  Notification feature overview
 description: The feature allows both registered and guest users to subscribe to the newsletter by specifying the email address they wish to receive the notifications to
-originalLink: https://documentation.spryker.com/v6/docs/availability-notification-feature-overview
-originalArticleId: 431d46cc-b57f-410a-a2f0-9bf0c6fa12a3
+originalLink: https://documentation.spryker.com/v2/docs/back-in-stock-notification-feature-overview
+originalArticleId: 0a487199-c3aa-4c53-9855-5a65b6c1524d
 redirect_from:
-  - /v6/docs/availability-notification-feature-overview
-  - /v6/docs/en/availability-notification-feature-overview
-  - /v6/docs/availability-notification
-  - /v6/docs/en/availability-notification
+  - /v2/docs/back-in-stock-notification-feature-overview
+  - /v2/docs/en/back-in-stock-notification-feature-overview
+  - /v2/docs/back-in-stock-notification
+  - /v2/docs/en/back-in-stock-notification
 ---
 
 When customers visit an out-of-stock product’s page, they usually search for the shop which has the product in stock. The Back Office user of the original store can replenish the stock; however, it does not mean that the customer is still be there to buy it. The *Availability Notification* feature provides a way to notify you about the demand for the product, so you can prioritize the product replenishment and notify the customer once it is available again.

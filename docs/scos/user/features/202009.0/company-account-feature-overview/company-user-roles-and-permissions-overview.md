@@ -6,6 +6,8 @@ originalArticleId: 8ba37966-c76f-47fd-918e-25924626fa41
 redirect_from:
   - /v6/docs/company-user-roles-and-permissions
   - /v6/docs/en/company-user-roles-and-permissions
+  - /v6/docs/company-roles-reference-information
+  - /v6/docs/en/company-roles-reference-information
 ---
 
 

@@ -14,7 +14,7 @@ With the URL redirects, you can create content redirects and increase your store
 A URL redirect is a special entity that consists of a source URL (which is provided by the `spy_url database` table), a target URL, and an HTTP status code stored in the `spy_url_redirect` database table. Redirects are exported to the key-value storage with collectors and are matched with StorageRouter the same way as described in the [URL](/docs/scos/dev/back-end-development/yves/url.html) article. `\Pyz\Yves\Redirect\Controller\RedirectController` in the Demo Shop, sends a redirect response to the target URL with the given status code.
 
 ## Manual redirects
-In the Back Office, you can create custom URL redirects from not yet existing URLs to other internal or external URLs with different status codes. See [Creating CMS redirects](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/redirects/creating-cms-redirects.html) for details.
+In the Back Office, you can create custom URL redirects from not yet existing URLs to other internal or external URLs with different status codes. See [Creating CMS redirects](/docs/scos/user/back-office-user-guides/{{page.version}}/content/redirects/creating-cms-redirects.html) for details.
 
 ## Automatic redirects
 

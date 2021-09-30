@@ -73,8 +73,8 @@ This will move the address to Unassigned addresses section.
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage company units](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/managing-company-units.html) |
-| [Manage company unit addresses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/managing-company-unit-addresses.html) |
+| [Manage company units](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-units.html) |
+| [Manage company unit addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-unit-addresses.html) |
 
 
 {% info_block warningBox "Developer guides" %}

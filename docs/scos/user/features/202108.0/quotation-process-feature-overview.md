@@ -12,6 +12,10 @@ redirect_from:
   - /2021080/docs/en/quotation-process
   - /docs/quotation-process
   - /docs/en/quotation-process
+  - /2021080/docs/rfq-reference-information-shop-guide
+  - /2021080/docs/en/rfq-reference-information-shop-guide
+  - /docs/rfq-reference-information-shop-guide
+  - /docs/en/rfq-reference-information-shop-guide
 ---
 
 | DEFINITION | DESCRIPTION |

@@ -7,7 +7,7 @@ redirect_from:
   - /v5/docs/en/file-details-glossarycsv
 ---
 
-This article contains content of the **glossary.csv** file to configure [Customer](/docs/scos/user/user-guides/202005.0/back-office-user-guide/administration/glossary/glossary.html) information on your Spryker Demo Shop.
+This article contains content of the **glossary.csv** file to configure [Customer](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/glossary.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields
 These are the header fields to be included in the .csv file:

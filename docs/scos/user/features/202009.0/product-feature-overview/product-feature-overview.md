@@ -8,6 +8,8 @@ redirect_from:
   - /v6/docs/en/product-overview
   - /v6/docs/product-information-management
   - /v6/docs/en/product-information-management
+  - /v6/docs/shop-guide-managing-products
+  - /v6/docs/en/shop-guide-managing-products
 ---
 
 The *Product* feature allows creating products, manage their characteristics and settings.

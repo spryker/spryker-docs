@@ -10,7 +10,7 @@ redirect_from:
   - /v4/docs/en/product-abstraction
 ---
 
-Product is the central entity of a shop. Establishing the product data allows you to build and maintain a catalog representing your commercial offerings. The products are created and managed in the [ Back Office](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/general-back-office-overview.html). 
+Product is the central entity of a shop. Establishing the product data allows you to build and maintain a catalog representing your commercial offerings. The products are created and managed in the [ Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/general-back-office-overview.html). 
 The product information you specify in the Back office, serves various purposes:
 
 * Contains characteristics that describe the product.

@@ -154,7 +154,7 @@ To check the full list of MIME types, refer to the article.
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Upload files to the Back Office](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/file-manager/managing-file-tree.html#uploading-files) |
+| [Upload files to the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/content/file-manager/managing-file-tree.html#uploading-files) |
 
 {% info_block warningBox "Developer guides" %}
 

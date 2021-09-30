@@ -8,6 +8,10 @@ redirect_from:
   - /2021080/docs/en/company-user-roles-and-permissions-overview
   - /docs/company-user-roles-and-permissions-overview
   - /docs/en/company-user-roles-and-permissions-overview
+  - /2021080/docs/company-roles-reference-information
+  - /2021080/docs/en/company-roles-reference-information
+  - /docs/company-roles-reference-information
+  - /docs/en/company-roles-reference-information
 ---
 
 Usually employees within a company have different roles (e.g., purchasing, administration, supervision, etc.). These roles are related to Company Users and are referred to as **Company Roles**. A role can be default (“is_default” flag), which means that it is used for all new users automatically.
@@ -137,8 +141,8 @@ Every company role includes a set of permissions that can be enabled/disabled ac
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage company users](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/managing-company-users.html) |
-| [Manage company roles](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/managing-company-roles.html) |
+| [Manage company users](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-users.html) |
+| [Manage company roles](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-roles.html) |
 
 
 {% info_block warningBox "Developer guides" %}

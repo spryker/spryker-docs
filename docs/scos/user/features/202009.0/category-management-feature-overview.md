@@ -73,6 +73,23 @@ Currently, the Category Management feature has the following functional constrai
 | [Assign products to categories](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/assigning-products-to-categories.html) |
 | [Manage categories](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/managing-categories.html) |
 
+
+- Every product attribute can be used as a filter
+- Different filter types: single- and multi-select, and range filter
+
+See [Managing filter preferences](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/search-and-filters/managing-filter-preferences.html) for details on how to configure the filter preferences in the Back Office.
+
+
+## Current Constraints
+Currently, the Category Management feature has the following functional constraints which are going to be resolved in the future:
+
+* Categories are shared across all the stores of a project
+*  You cannot restrict availability of a category to a store
+* A category page is accessible via the same URL across all the stores
+* Category URLs are locale dependent
+* Category URLs are available in all the stores that share the same locales
+* Price Range Filter is not supported with the Merchant Relations, that is why this filter is not included in the B2B demo shop. However, in [the B2C demo shop](/docs/scos/user/intro-to-spryker/{{site.version}}/b2c-suite.html), you can still filter the products using the price range filter.
+
 {% info_block warningBox "Developer guides" %}
 
 Are you a developer? See [Category management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/category-management-feature-walkthrough.html) for developers.

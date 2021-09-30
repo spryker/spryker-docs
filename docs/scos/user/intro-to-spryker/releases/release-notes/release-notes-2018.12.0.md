@@ -42,7 +42,7 @@ The catalog browsing endpoints allow you to request search results and also use 
 ### Login/Registration
 Endpoints ensure access-token login and retrieval. Customers can also register and request new passwords in case they forgot or want to change their current password.
 
-**Documentation**: [Managing Customers](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html).
+**Documentation**: [Managing Customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customers.html).
 
 ### Cart
 Customers and guests can add products to their cart. Guest carts are now also persisted and retrievable via anonymous IDs, handled by your client application.
@@ -57,7 +57,7 @@ Retrieve all the necessary information to build your checkout for guest customer
 ### Customer Account
 Your customers can benefit from the same shop experience with the customer account endpoints. Not only can basic customer information be administered, but also wishlist and order history functionality is offered.
 
-**Documentation**: [Managing Customers](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html), [Managing Wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html), [Retrieving Customer's Order History](https://documentation.spryker.com/2021080/docs/retrieving-order-history).
+**Documentation**: [Managing Customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customers.html), [Managing Wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html), [Retrieving Customer's Order History](https://documentation.spryker.com/2021080/docs/retrieving-order-history).
 
 ## Documentation Swagger Generator
 ![Documentation Swagger generator](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.12.0/image3.png) 

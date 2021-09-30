@@ -12,6 +12,10 @@ redirect_from:
   - /2021080/docs/en/product
   - /docs/product
   - /docs/en/product
+  - /2021080/docs/shop-guide-managing-products
+  - /2021080/docs/en/shop-guide-managing-products
+  - /docs/shop-guide-managing-products
+  - /docs/en/shop-guide-managing-products
 ---
 
 The *Product* feature allows creating products, manage their characteristics and settings.
@@ -107,11 +111,11 @@ The Spryker Commerce OS supports integration of the following PIM systems:
 | [Get a general idea of Discontinued Products](/docs/scos/user/features/{{page.version}}/product-feature-overview/discontinued-products-overview.html)  |
 | [Get a general idea Product Images](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-images-overview.html)  |
 | [Get a general idea of Timed Product Availability](/docs/scos/user/features/{{page.version}}/product-feature-overview/timed-product-availability-overview.html)  |
-| [Create an abstract product](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html) |
-| [Edit an abstract product](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/abstract-products/editing-abstract-products.html) |
-| [Create a product variant](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/concrete-products/creating-product-variants.html) |
-| [Edit a product variant](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/concrete-products/editing-product-variants.html) |
-| [Manage products](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/managing-products/managing-products.html) |
+| [Create an abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html) |
+| [Edit an abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/editing-abstract-products.html) |
+| [Create a product variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/concrete-products/creating-product-variants.html) |
+| [Edit a product variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/concrete-products/editing-product-variants.html) |
+| [Manage products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/managing-products.html) |
 
 {% info_block warningBox "Developer guides" %}
 

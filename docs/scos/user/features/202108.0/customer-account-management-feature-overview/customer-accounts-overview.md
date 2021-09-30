@@ -7,6 +7,14 @@ redirect_from:
   - /2021080/docs/en/customer-accounts-overview
   - /docs/customer-accounts-overview
   - /docs/en/customer-accounts-overview
+  - /2021080/docs/addresses-reference-information
+  - /2021080/docs/en/addresses-reference-information
+  - /docs/addresses-reference-information
+  - /docs/en/addresses-reference-information
+  - /2021080/docs/order-history-reference-information
+  - /2021080/docs/en/order-history-reference-information
+  - /docs/order-history-reference-information
+  - /docs/en/order-history-reference-information
 ---
 
 A *customer account* contains the following customer information on the Storefront:
@@ -53,7 +61,7 @@ A Back Office user can do the following:
 * Send a password token via email.
 * Check last orders of a customer in the shop.
 
-See [Managing customers](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html) for details.
+See [Managing customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customers.html) for details.
 
 ## Customer account on the Storefront
 Customer can perform the following actions the Storefront:
@@ -89,8 +97,8 @@ Customer can perform the following actions the Storefront:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage customer accounts](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html)  |
-| [Manage customer addresses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customer-addresses.html)  |
+| [Manage customer accounts](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customers.html)  |
+| [Manage customer addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customer-addresses.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

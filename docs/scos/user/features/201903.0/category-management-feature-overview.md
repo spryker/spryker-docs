@@ -49,7 +49,7 @@ Through category filters, you can locale items better and add customizable categ
 
 ### Filter preferences
 
-The default filter functionality includes s*tandard filters* and *dynamic filters and facers*.
+The default filter functionality includes *standard filters* and *dynamic filters and facers*.
 
 #### Standard filters
 

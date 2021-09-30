@@ -8,11 +8,13 @@ redirect_from:
   - /v6/docs/en/return-management-feature-overview
   - /v6/docs/return-management
   - /v6/docs/en/return-management
+  - /v6/docs/return-details-reference-information
+  - /v6/docs/en/return-details-reference-information
 ---
 
 The *Return Management* feature allows you to create and manage returns for a sales order. 
 
-Once an order has been shipped, the registered buyer or a Back Office user can initiate a return of the whole order or its individual items. See [Managing orders](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/orders/managing-orders.html) for details on how they can do that.
+Once an order has been shipped, the registered buyer or a Back Office user can initiate a return of the whole order or its individual items. See [Managing orders](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html) for details on how they can do that.
 
 {% info_block warningBox "Note" %}
 
@@ -68,7 +70,7 @@ The [Product Bundles](/docs/scos/user/features/{{page.version}}/product-bundles-
 
 {% endinfo_block %}
 
-Once a return request has been submitted, it acquires the *Waiting for return* state. The return states change as the Back Office user [processes the return](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/orders/managing-orders.html#creating-a-return). See [Return items states](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/returns/references/reference-information-return-item-states.html) for details on the return states.
+Once a return request has been submitted, it acquires the *Waiting for return* state. The return states change as the Back Office user [processes the return](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html#creating-a-return). See [Return items states](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/returns/references/reference-information-return-item-states.html) for details on the return states.
 
 {% info_block infoBox "Info" %}
 
@@ -76,12 +78,12 @@ Next to each sales order item, there is the date till which the item can be retu
 
 {% endinfo_block %}
 
-All the returns created by the buyer or by the Back Office user for the buyer are listed on the *Returns* page in the *Customer Account*. From here, the Buyer can [view the return details](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/shop-guide-customer-account/references/reference-information-return-details.html) and print the return slip.
+All the returns created by the buyer or by the Back Office user for the buyer are listed on the *Returns* page in the *Customer Account*. From here, the Buyer can [view the return details](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/references/reference-information-return-details.html) and print the return slip.
 The following figure shows how to create a return, view its details and print a slip:
 ![create and print a return](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Return+Management/Return+Management+Feature+Overview/create-and-print-a-return.gif)
 
 ## Return Management in the Back Office
-A Back Office user can create returns for the [returnable items](#returnable-items-and-a-return-policy) from the order details page of the Back Office. See [Back Office user guide - Managing orders](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/orders/managing-orders.html) for details. Also, a Back Office user can view returns, change their states, print a return slip, and cancel the returns.  See [Back Office user guide - Manging returns](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/returns/managing-returns.html)  for instructions on how to manage the returns in the Back Office.
+A Back Office user can create returns for the [returnable items](#returnable-items-and-a-return-policy) from the order details page of the Back Office. See [Back Office user guide - Managing orders](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html) for details. Also, a Back Office user can view returns, change their states, print a return slip, and cancel the returns.  See [Back Office user guide - Manging returns](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/returns/managing-returns.html)  for instructions on how to manage the returns in the Back Office.
 
 {% info_block infoBox "Return management process" %}
 

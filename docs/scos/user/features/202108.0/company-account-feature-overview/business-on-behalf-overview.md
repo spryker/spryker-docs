@@ -51,8 +51,8 @@ Company users can assign and unassign a company business unit to their accounts 
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Attach a company user to a business unit](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/managing-company-users.html#attaching-a-company-user-to-a-business-unit)  |
-| [Attach a customer to a company](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html)  |
+| [Attach a company user to a business unit](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-users.html#attaching-a-company-user-to-a-business-unit)  |
+| [Attach a customer to a company](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customers.html)  |
 
 
 {% info_block warningBox "Developer guides" %}

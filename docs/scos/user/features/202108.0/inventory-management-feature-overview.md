@@ -15,9 +15,9 @@ Stock does not always reflect the real availability of products, as not all the 
 
 ## Warehouse management
 
-You can [create warehouses in the Back Office](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/warehouses/creating-warehouses.html) or [import them](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse.csv.html).
+You can [create warehouses in the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/creating-warehouses.html) or [import them](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse.csv.html).
 
-A warehouse can be assigned to a single store or shared between several stores. See [Managing stocks in a multi-store environment: Best practices](docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/managing-stocks-in-a-multi-store-environment-best-practices.html) for the warehouse and stock management scenarios you can set up for your project. You can manage relations between stores and warehouses in the Back Office or by importing the warehouse and store data. See [Managing warehouses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/warehouses/managing-warehouses.html#managing-warehouses) for details on how you can manage warehouses and stores in the back office and [File details: warehouse_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html) on how you can import the warehouse and store data.
+A warehouse can be assigned to a single store or shared between several stores. See [Managing stocks in a multi-store environment: Best practices](docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/managing-stocks-in-a-multi-store-environment-best-practices.html) for the warehouse and stock management scenarios you can set up for your project. You can manage relations between stores and warehouses in the Back Office or by importing the warehouse and store data. See [Managing warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/managing-warehouses.html#managing-warehouses) for details on how you can manage warehouses and stores in the back office and [File details: warehouse_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html) on how you can import the warehouse and store data.
 
 ### Defining a warehouse address
 You can define the warehouse address that will be used as the shipping origin address by importing the warehouse address data. See [File details: warehouse_address.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html) for details about the import file.
@@ -58,7 +58,7 @@ Schematically, the process looks like this:
 
 When order is made, stock is not updated automatically in the system, you have to set it manually. You can define stock only for concrete products. You can set stock by:
 
-* Editing product stock in the Back Office. See [Editing stock](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/availability/managing-products-availability.html#editing-stock) for details.
+* Editing product stock in the Back Office. See [Editing stock](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/managing-products-availability.html#editing-stock) for details.
 * Importing the quantities of items stored in each of the warehouses. See [Stocks](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/stocks/stocks.html) for details.
 
 ## Availability management
@@ -75,7 +75,7 @@ Product availability after the order:
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/after-order-placement.png)
 
-See [Checking availability](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/availability/managing-products-availability.html#checking-availability) for details on how you can check product availability in the Back Office.
+See [Checking availability](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/managing-products-availability.html#checking-availability) for details on how you can check product availability in the Back Office.
 
 {% info_block infoBox %}
 
@@ -102,9 +102,9 @@ For SEO purposes, products that are not available can still be displayed on the 
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create a warehouses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/warehouses/creating-warehouses.html)  |
-| [Manage warehouses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/warehouses/managing-warehouses.html) |
-| [Manage product availabilities](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/availability/managing-products-availability.html)  |
+| [Create a warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/creating-warehouses.html)  |
+| [Manage warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/managing-warehouses.html) |
+| [Manage product availabilities](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/managing-products-availability.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

@@ -36,7 +36,7 @@ On the product details page of a product that's a product alternaive for another
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Add product alternatives](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/managing-products/adding-product-alternatives.html) |
+| [Add product alternatives](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/adding-product-alternatives.html) |
 
 {% info_block warningBox "Developer guides" %}
 

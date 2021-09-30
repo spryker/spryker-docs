@@ -54,7 +54,7 @@ The following templates with slots are shipped with the CMS feature:
 * Product details page template
 * CMS page template
 
-A content manager can [manage templates with slots](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/slots/managing-slots.html) in the Back Office > **Content Management** > **Slots** section.
+A content manager can [manage templates with slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html) in the Back Office > **Content Management** > **Slots** section.
 <details open>
     <summary>Template representation—the Back Office</summary>
 
@@ -86,7 +86,7 @@ By importing a [slot list](#slot-list), a developer can do the following:
 *     Delete slots.
 *     Define slot configurations.
 
-A content manager can [manage slots](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/slots/managing-slots.html) in the Back Office > **Content Management** > **Slots** section.
+A content manager can [manage slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html) in the Back Office > **Content Management** > **Slots** section.
 
 <details open>
     <summary>Slot representation—the Back Office</summary>
@@ -108,7 +108,7 @@ A content manager can [manage slots](/docs/scos/user/user-guides/{{page.version}
 
 </details>
 
-A content manager can [manage CMS blocks](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/slots/managing-slots.html) in the Back Office > **Content Management** > **Slots** section.
+A content manager can [manage CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html) in the Back Office > **Content Management** > **Slots** section.
 
 
 
@@ -121,7 +121,7 @@ A content manager can [manage CMS blocks](/docs/scos/user/user-guides/{{page.ver
 </details>
 
 
-CMS Block is a separate entity with a dedicated section in the Back Office. See [Managing CMS Blocks](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/managing-cms-blocks.html) to learn what a content manager can do with CMS blocks in the Back Office > **Content Management** > **Blocks** section.
+CMS Block is a separate entity with a dedicated section in the Back Office. See [Managing CMS Blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-cms-blocks.html) to learn what a content manager can do with CMS blocks in the Back Office > **Content Management** > **Blocks** section.
 
 
 ## Content item
@@ -143,8 +143,8 @@ See [Content Items](/docs/scos/user/features/{{page.version}}/content-items-feat
 
 A template with slots can be applied to any page. Even though a content manager can manage all page types in the Back Office, they can only apply templates with slots to the following:
 
-* Category pages in the Back Office > **Category > Create category** section. See [Creating Categories](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/creating-categories.html) for more information.
-* CMS pages in the Back Office > **Pages > Create new CMS page** section. See [Creating a CMS Page](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/creating-categories.html) for more information.
+* Category pages in the Back Office > **Category > Create category** section. See [Creating Categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html) for more information.
+* CMS pages in the Back Office > **Pages > Create new CMS page** section. See [Creating a CMS Page](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html) for more information.
 
 A developer can apply templates with slots to all the other page types.
 
@@ -218,13 +218,13 @@ Page identifiers used to define visibility conditions depend on the page type to
 
 
 {% info_block infoBox "Product details page" %}
-For product details page type, you can use the Product ID or Category ID identifiers. Category ID is a collective identifier. By selecting a category, the content manager selects all the products that are [assigned to the category](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/assigning-products-to-categories.html).
+For product details page type, you can use the Product ID or Category ID identifiers. Category ID is a collective identifier. By selecting a category, the content manager selects all the products that are [assigned to the category](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html).
 {% endinfo_block %}
 
 To meet your project requirements, you can extend the visibility conditions functionality by adding more conditions, like Customer ID, Customer Group ID or Navigation Nodes. See [HowTo - Create Visibility Conditions for CMS Blocks](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html) to learn more.
 
 
-A content manager can define visibility conditions by [selecting pages](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/slots/managing-slots.html#selecting-pages) in the Back Office > **Content Management > Slots** section.
+A content manager can define visibility conditions by [selecting pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html#selecting-pages) in the Back Office > **Content Management > Slots** section.
 
 A developer can [import visibility conditions](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html).
 
@@ -383,8 +383,8 @@ Currently, the functionality has the following functional constraints which are 
 |BACK OFFICE USER GUIDES|
 |---|
 | [Learn about the CoreMedia technology partner integration](/docs/scos/dev/technology-partners/{{page.version}}/content-management/coremedia/coremedia.html)  |
-| [Add content to the Storefront using templates and slots](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/adding-content-to-storefront-pages-using-templates-and-slots-best-practices.html) |
-| [Manage slots](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/slots/managing-slots.html)   |
+| [Add content to the Storefront using templates and slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/adding-content-to-storefront-pages-using-templates-and-slots-best-practices.html) |
+| [Manage slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html)   |
 
 
 {% info_block warningBox "Developer guides" %}

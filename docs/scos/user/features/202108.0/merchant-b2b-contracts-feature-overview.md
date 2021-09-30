@@ -20,7 +20,7 @@ There are three key figures: marketplace owner, merchant, and buyer.
 
 The business relationships between merchants and buyers are usually based on contracts.
 
-A Back Office user can manage merchants and merchant relations. See [Managing merchants](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/marketplace/merchants-and-merchant-relations/managing-merchants.html) and [Managing merchant relations](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html) to learn how to do that.
+A Back Office user can manage merchants and merchant relations. See [Managing merchants](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchants.html) and [Managing merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html) to learn how to do that.
 
 A developer can also import merchants and merchant relations.
 
@@ -31,8 +31,8 @@ Check out this video tutorial on how to set up merchants and merchant relations:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage merchants](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/marketplace/merchants-and-merchant-relations/managing-merchants.html)  |
-| [Manage merchant relations](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html)  |
+| [Manage merchants](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchants.html)  |
+| [Manage merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

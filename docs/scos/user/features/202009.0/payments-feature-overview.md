@@ -59,7 +59,7 @@ Keep in mind that prior to managing payment methods in the Back Office, first, y
 
 ![List of payment methods](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Payment/Payment+Methods+Overview/payment-methods-list.png)
 
-See [Managing Payment Methods](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/payment-methods/managing-payment-methods.html) to learn more on how to make a payment method available during the checkout and assign it to different stores.
+See [Managing Payment Methods](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/payment-methods/managing-payment-methods.html) to learn more on how to make a payment method available during the checkout and assign it to different stores.
 
 <!-- Managing Payment Methods in the Back Office
 
@@ -75,7 +75,7 @@ Hydrating payment methods for an order
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage payment methods](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/payment-methods/managing-payment-methods.html)   |
+| [Manage payment methods](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/payment-methods/managing-payment-methods.html)   |
 
 {% info_block warningBox "Developer guides" %}
 

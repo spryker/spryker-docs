@@ -123,7 +123,7 @@ Currently, the feature has the following functional constraints which are going 
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Add volume prices to abstract products](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html)  |
+| [Add volume prices to abstract products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

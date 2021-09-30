@@ -16,7 +16,7 @@ redirect_from:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage customer groups](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customer-groups.html)   |
+| [Manage customer groups](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customer-groups.html)   |
 
 {% info_block warningBox "Developer guides" %}
 

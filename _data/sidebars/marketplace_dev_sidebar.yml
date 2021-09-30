@@ -20,6 +20,7 @@ entries:
         nested:
           - title: System requirements
             url: /docs/marketplace/dev/setup/system-requirements.html
+
           - title: Installation
             url: /docs/marketplace/dev/setup/installation.html
 
@@ -421,6 +422,27 @@ entries:
                 - title: "Autocomplete"
                   url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-autocomplete.html
 
+                - title: "Chip"
+                  url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-chip.html
+
+                - title: "Date"
+                  url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-date.html
+
+                - title: "Dynamic"
+                  url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-dynamic.html
+
+                - title: "Image"
+                  url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-image.html
+
+                - title: "Input"
+                  url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-input.html
+
+                - title: "Select"
+                  url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-select.html
+
+                - title: "Text"
+                  url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-text.html
+
             - title: "Table Features"
               url: /docs/marketplace/dev/front-end/table-design/table-features/
               nested:
@@ -430,7 +452,7 @@ entries:
 
                 - title: "Pagination"
                   url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-pagination.html
-                
+
                 - title: "Total"
                   url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-total.html
 
@@ -474,10 +496,10 @@ entries:
 
                 - title: "Inline Table"
                   url: /docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-inline-table.html
-                
+
                 - title: "Http"
                   url: /docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-http.html
-                
+
                 - title: "Inline"
                   url: /docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-inline.html
 

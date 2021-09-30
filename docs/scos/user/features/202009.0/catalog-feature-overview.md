@@ -1,5 +1,5 @@
 ---
-title: Catalog
+title: Catalog feature overview
 description: Catalogs are used to clearly build and organize your products to meet you and your customer's demands.
 originalLink: https://documentation.spryker.com/v6/docs/catalog
 originalArticleId: 17090b0a-6b11-47ce-a16d-9619a8af859b
@@ -27,3 +27,8 @@ To keep your catalog dynamic, you can include auto-generated pages based on cate
 
 The main benefits of working with the catalog are to pave the way for a smooth shopping journey with well-organized categories that organize and extend your catalog to match your business needs.
 
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Catalog feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/catalog-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}

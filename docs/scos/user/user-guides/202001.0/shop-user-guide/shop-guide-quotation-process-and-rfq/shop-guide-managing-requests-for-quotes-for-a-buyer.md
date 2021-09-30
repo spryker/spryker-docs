@@ -59,7 +59,7 @@ You can edit the RFQs that are in a *Draft* status. To edit the RFQ:
 
 1. Open the **Quote Request** page.
 2. Click **Edit**.
-3. Change **Purchase order number, Do not ship later than, Notes** fields, and/or [Edit the Items](/docs/scos/user/features/{{page.version}}/workflow-and-process-management/quotation-process-and-rfq/quotation-process-and-rfq-feature-overview.html#quotation-process---rfq-on-the-storefront) that are in the RFQ.
+3. Change **Purchase order number, Do not ship later than, Notes** fields, and/or [Edit the Items](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html) that are in the RFQ.
 4. Click **Save**.
 
 {% info_block warningBox %}

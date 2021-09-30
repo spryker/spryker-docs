@@ -4,10 +4,8 @@ last_updated: Aug 12, 2021
 description: The Approval Process feature allows managers to control purchases requested by their employees
 template: concept-topic-template
 redirect_from:
-  - /2021080/docs/approval-process-module-relations
-  - /2021080/docs/en/approval-process-module-relations
-  - /docs/approval-process-module-relations
-  - /docs/en/approval-process-module-relations
+  - /v3/docs/approval-process-module-relations
+  - /v3/docs/en/approval-process-module-relations
 ---
 
 The _Approval Process_ feature enables managers to control purchases requested by their employees.

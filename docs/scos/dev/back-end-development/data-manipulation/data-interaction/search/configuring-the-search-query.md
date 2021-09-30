@@ -20,6 +20,16 @@ redirect_from:
   - /v2/docs/en/configuring-search-query
   - /v1/docs/configuring-search-query
   - /v1/docs/en/configuring-search-query
+  - /v6/docs/search-query
+  - /v6/docs/en/search-query
+  - /v4/docs/search-query
+  - /v4/docs/en/search-query
+  - /v5/docs/search-query
+  - /v5/docs/en/search-query
+  - /v3/docs/search-query
+  - /v3/docs/en/search-query
+  - /v2/docs/search-query
+  - /v2/docs/en/search-query
 ---
 
 Once you have all the necessary data in Elasticsearch, it’s time to display it on Yves.

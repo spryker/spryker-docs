@@ -12,7 +12,7 @@ redirect_from:
 
 
 
-The *Product Barcode*  feature allows creating barcodes for any kind of entity. By default, barcodes are only generated for [products](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/product-overview.html).
+The *Product Barcode*  feature allows creating barcodes for any kind of entity. By default, barcodes are only generated for [products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html).
 
 
 ## What is a barcode?
@@ -24,7 +24,7 @@ By default, barcodes are generated based on product SKUs using the [Code128](htt
 
 {% info_block infoBox %}
 
-You can read more about the product types we differentiate in [Product Abstraction](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/product-overview.html).
+You can read more about the product types we differentiate in [Product Abstraction](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html).
 
 {% endinfo_block %}
 

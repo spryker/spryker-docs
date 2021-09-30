@@ -69,7 +69,7 @@ In the Back Office, you can now define the order in which your images appear. Fo
 
 ![Reorder images](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image10.png) 
 
-**Documentation**: [Product Image Management](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/product-images-overview.html)
+**Documentation**: [Product Image Management](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-images-overview.html)
 ***
 ## CMS
 ### CMS Content Items

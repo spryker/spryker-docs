@@ -37,8 +37,8 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 * [Barcode Generator](https://documentation.spryker.com/2021080/docs/product-barcode)
 * [Product Restrictions for B2B Customers](https://documentation.spryker.com/2021080/docs/merchant-product-restrictions)
 
-[**Price**](/docs/scos/user/features/{{page.version}}/prices/prices-feature-overview/prices-overview.html):
-[Customer Specific Prices](/docs/scos/user/features/{{page.version}}/prices/prices-feature-overview/prices-overview.html-per-merchant-relation)
+[**Price**](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview/prices-feature-overview.html):
+[Customer Specific Prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview/prices-feature-overview.html-per-merchant-relation)
 
 [**Cart**](/docs/scos/user/features/{{site.ersion}}/cart-feature-overview/cart-feature-overview.html):
 
@@ -46,10 +46,10 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 * [Multiple Carts Per User](https://documentation.spryker.com/2021080/docs/multiple-carts)
 * [Quick Order](https://documentation.spryker.com/2021080/docs/quick-add-to-cart)
 
-[**Shopping List**](/docs/scos/user/features/{{page.version}}/shopping-lists/shopping-lists.html):
+[**Shopping List**](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html):
 
 * [Multiple and Shared Shopping Lists](https://documentation.spryker.com/2021080/docs/multiple-shared-shopping-lists)
-* [Shopping List Notes](/docs/scos/user/features/{{page.version}}/shopping-lists/shopping-lists.html-notes)
+* [Shopping List Notes](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html)
 
 [**Packaging & Measurement Units**](https://documentation.spryker.com/2021080/docs/packaging-units):
 

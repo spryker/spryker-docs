@@ -7,7 +7,7 @@ redirect_from:
   - /v3/docs/hierarchical-navigation
   - /v3/docs/en/hierarchical-navigation
   - /v3/docs/content-based-shop-navigation
-  - - /v3/docs/en/content-based-shop-navigation
+  - /v3/docs/en/content-based-shop-navigation
   - /v3/docs/navigation
   - /v3/docs/en/navigation
   - /v3/docs/product-based-shop-navigation

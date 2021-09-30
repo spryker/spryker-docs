@@ -20,6 +20,16 @@ redirect_from:
   - /v2/docs/en/search-multi-currency
   - /v1/docs/search-multi-currency
   - /v1/docs/en/search-multi-currency
+  - /v6/docs/multicurrency-search
+  - /v6/docs/en/multicurrency-search
+  - /v5/docs/multicurrency-search
+  - /v5/docs/en/multicurrency-search
+  - /v4/docs/multicurrency-search
+  - /v4/docs/en/multicurrency-search
+  - /v3/docs/multicurrency-search
+  - /v3/docs/en/multicurrency-search
+  - /v2/docs/multicurrency-search
+  - /v2/docs/en/multicurrency-search
 ---
 
 If you don't have the multi-currency feature in you current project yet and want to migrate, you have to follow certain steps to migrate your system. First [migrate Price](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-price.html) and [modules related to multi-currency](/docs/scos/dev/back-end-development/zed/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html) before proceeding with the search for multi-currency.

@@ -112,7 +112,7 @@ Request sample:
 | Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
 | quantity | Ingeger | yes | Quantity of the product to add. |
-| sku | String | yes | SKU of the product to add. Only [concrete products](/docs/scos/user/features/{{page.version}}/product-information-management/product-abstraction.html) are allowed. |
+| sku | String | yes | SKU of the product to add. Only [concrete products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) are allowed. |
 
 | String parameter | Description | Exemplary values |
 | --- | --- | --- |
@@ -996,7 +996,7 @@ The `concrete-products` resource can be included only together with the `shoppin
 ```
 | Attribute | Type | Required | Description|
 | --- | --- | --- |--- |
-| sku | String | yes |SKU of the product the quantity of which you want to change. Only [concrete products](/docs/scos/user/features/{{page.version}}/product-information-management/product-abstraction.html) are allowed. |
+| sku | String | yes |SKU of the product the quantity of which you want to change. Only [concrete products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) are allowed. |
 | quantity | Integer | yes |New quantity of the product. |
 
 ### Response

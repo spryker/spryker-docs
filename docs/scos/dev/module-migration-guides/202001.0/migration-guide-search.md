@@ -133,4 +133,4 @@ With the version 4 of the Search module, the logic and configuration of how the 
 
 The new version now works with one parameter only (e.g. `/?sort=price_asc`). To migrate to the new version, you’ll need to change your configurations in your classes that implement `\Spryker\Client\Search\Dependency\Plugin\SearchConfigBuilderInterface`. Instead of providing one `SortConfigTransfer` per sorted attribute, now you need to provide two if you wish to sort by both ascending and descending order. To do this, use the `SortConfigTransfer::setIsDescending()` method, and make sure that the values in `SortConfigTransfer::setParameterName()` are unique.
 
-<!-- See the Search documentation for a detailed [example](/docs/scos/user/features/{{page.version}}/search-and-filter/search-widget-for-concrete-products/configure-search-features.html).-->
+<!-- See the Search documentation for a detailed [example](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-features.html).-->

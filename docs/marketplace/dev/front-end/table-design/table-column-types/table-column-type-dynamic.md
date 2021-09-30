@@ -8,9 +8,9 @@ This document explains the Table Column Type Dynamic in the Components library.
 
 ## Overview
 
-Table Column Dynamic is an Angular Component that allows to render a dynamic Table Column Type from a config retrieved via `@spryker/datasource`.
+Table Column Dynamic is an Angular Component that renders a dynamic Table Column Type from a config retrieved via `@spryker/datasource`.
 
-Example usage of the Table Column Dynamic in the `@spryker/table` config:
+Check out an example usage of the Table Column Dynamic in the `@spryker/table` config:
 
 ```html
 <spy-table [config]="{

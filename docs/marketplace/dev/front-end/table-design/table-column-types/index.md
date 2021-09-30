@@ -112,7 +112,7 @@ export class RootModule
 
 ## Interfaces
 
-Below you can find interfaces for the TableColumnComponent configuration.
+Below you can find interfaces for the `TableColumnComponent` configuration.
 
 ```ts
 export interface TableColumnComponent<C = any> {

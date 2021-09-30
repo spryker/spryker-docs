@@ -10,7 +10,7 @@ This document explains the Table Column Type Date in the Components library.
 
 Table Column Date is an Angular Component that renders formatted date using Angular built-in Date Pipe.
 
-Example usage of the Table Column Date in the `@spryker/table` config:
+Check out an example usage of the Table Column Date in the `@spryker/table` config:
 
 ```html
 <spy-table [config]="{
@@ -35,7 +35,7 @@ Example usage of the Table Column Date in the `@spryker/table` config:
 
 ## Interfaces
 
-Below you can find interface for the Table Column Date type:
+Below you can find an interface for the Table Column Date type:
 
 ```ts
 interface TableColumnDateConfig {
@@ -44,4 +44,4 @@ interface TableColumnDateConfig {
 }
 ```
 
-Pre-defined `format` <a href="https://angular.io/api/common/DatePipe#pre-defined-format-options" target="_blank">options</a>.
+To learn more about the pre-defined `format` options, see <a href="https://angular.io/api/common/DatePipe#pre-defined-format-options" target="_blank">official Angular documentation</a>.

@@ -10,7 +10,7 @@ This document explains the Table Column Type Autocomplete in the Components libr
 
 Table Column Autocomplete is an Angular Component that renders an autocomplete field using the `@spryker/input` and `@spryker/autocomplete` components.
 
-Example usage of the Table Column Autocomplete in the `@spryker/table` config:
+Check out an example usage of the Table Column Autocomplete in the `@spryker/table` config:
 
 ```html
 <spy-table [config]="{

@@ -10,7 +10,7 @@ This document explains the Table Column Type Input in the Components library.
 
 Table Column Input is an Angular Component that renders a field using the `@spryker/input` component.
 
-Example usage of the Table Column Input in the `@spryker/table` config:
+Check out an example usage of the Table Column Input in the `@spryker/table` config:
 
 ```html
 <spy-table [config]="{
@@ -37,7 +37,7 @@ Example usage of the Table Column Input in the `@spryker/table` config:
 
 ## Interfaces
 
-Below you can find interface for the Table Column Input type:
+Below you can find an interface for the Table Column Input type:
 
 ```ts
 interface TableColumnInputConfig {

@@ -8,9 +8,9 @@ This document explains the Table Column Type Text in the Components library.
 
 ## Overview
 
-Table Column Text is an Angular Component that renders a text.
+Table Column Text is an Angular Component that renders text.
 
-Example usage of the Table Column Text in the `@spryker/table` config:
+Check out an example usage of the Table Column Text in the `@spryker/table` config:
 
 ```html
 <spy-table [config]="{

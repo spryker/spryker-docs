@@ -10,7 +10,7 @@ This document explains the Table Column Type Chip in the Components library.
 
 Table Column Chip is an Angular Component that renders a chip using the `@spryker/chips` component.
 
-Example usage of the Table Column Chip in the `@spryker/table` config:
+Check out an example usage of the Table Column Chip in the `@spryker/table` config:
 
 ```html
 <spy-table [config]="{
@@ -46,7 +46,7 @@ Example usage of the Table Column Chip in the `@spryker/table` config:
 
 ## Interfaces
 
-Below you can find interface for the Table Column Chip type:
+Below you can find an interface for the Table Column Chip type:
 
 ```ts
 interface TableColumnChipConfig {

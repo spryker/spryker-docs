@@ -6,6 +6,8 @@ originalArticleId: 9fb5b0d3-f6e7-4ab7-b1d3-f92f9f66c6dd
 redirect_from:
   - /v3/docs/media-management
   - /v3/docs/en/media-management
+  - /v3/docs/video-embedding
+  - /v3/docs/en/video-embedding
 ---
 
 <div class='feature-text'>

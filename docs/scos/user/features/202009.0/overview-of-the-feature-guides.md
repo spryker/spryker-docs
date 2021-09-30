@@ -5,9 +5,11 @@ originalArticleId: f0d37f5a-b235-4b31-8f5f-47b4e8845559
 redirect_from:
   - /v6/docs/overview-of-the-feature-guides
   - /v6/docs/en/overview-of-the-feature-guides
+  - /v6/docs/seo
+  - /v6/docs/en/seo
 ---
 
-The feature guides describe features in details, highlight their functional abilities, business values, and use-case examples. This information might be useful for: 
+The feature guides describe features in details, highlight their functional abilities, business values, and use-case examples. This information might be useful for:
 * Business owners
 * Product owners
 * Anyone looking to learn more about the Spryker features or add new functionality to a Spryker-based project
@@ -29,4 +31,3 @@ Or, you can go directly to the following guides:
 * [Feature integration guides](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/about-integration-guides.html){target="_blank"}: for developer guides on how to integrate a feature into a Spryker project.
 
 {% endinfo_block %}
-

@@ -6,6 +6,8 @@ originalArticleId: c4ede237-1c83-48d1-90b9-435a42e3dcd0
 redirect_from:
   - /v6/docs/reclamations-feature-overview
   - /v6/docs/en/reclamations-feature-overview
+  - /v6/docs/reclamations
+  - /v6/docs/en/reclamations
 ---
 
 Handling order claims are the reality of doing business for most e-commerce sites. A customer might have bought an item and then discovered, that it does not fit, or they might have stumbled upon another item and want to order it instead of the order already placed, or an item is faulty, or additional parts are needed etc.

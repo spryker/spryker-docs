@@ -6,6 +6,8 @@ originalArticleId: d680275e-6c80-4870-9df1-22359a40f91f
 redirect_from:
   - /v6/docs/quick-add-to-cart-feature-overview
   - /v6/docs/en/quick-add-to-cart-feature-overview
+  - /v6/docs/quick-add-to-cart
+  - /v6/docs/en/quick-add-to-cart
 ---
 
 The *Quick Order* feature allows placing bulk orders for wholesale and returning customers.

@@ -1,34 +1,28 @@
 ---
-title: Comments Feature Overview
+title: Comments feature overview
 description: Comments feature provides the ability for online owners to add Comments Widget that  allows the customers to leave comments or special requests.
 originalLink: https://documentation.spryker.com/v4/docs/comments-feature-overview
 originalArticleId: 7e3739e1-19e1-4790-9c47-a015c857ad42
 redirect_from:
   - /v4/docs/comments-feature-overview
   - /v4/docs/en/comments-feature-overview
+  - /v4/docs/comments
+  - /v4/docs/en/comments
 ---
 
-The **Comments** feature provides the ability for online owners to add Comments Widget. The widget allows the customers to leave comments, special requests or instructions to any entity in the Spryker shop and tag these comments depending on your project specification. 
+The *Comments* feature provides the ability for online owners to add the сomments widget. The widget allows the customers to leave comments, special requests or instructions to any entity in the Spryker shop and tag these comments depending on your project specification.
 
-An **Entity** is a unit or a component that has some properties and may have relationships with other entities within a system. So, in terms of Spryker Commerce OS, an entity is represented by a Shopping Cart, a Shopping List, a CMS page, etc. It is where the Comments Widget can be located.
+An *entity* is a unit or a component that has some properties and may have relationships with other entities within a system. So, in terms of Spryker Commerce OS, an entity is represented by a Shopping Cart, a Shopping List, a CMS page, etc. It is where the Comments Widget can be located.
 
-As an example of this generic solution, we have implemented Comments on the **Shopping Cart** page.
+As an example of this generic solution, we have implemented Comments on the *Shopping Cart* page.
 
-Comments help multiple customers to have a dialog on the cart contents. How does it work? Let's imagine a situation where you have a company account and three HR members (HR assistant, HR manager and the head of HR department) who are responsible for purchasing the products for the whole office. They share the same shopping cart. The HR assistant adds the products to the shopping cart and includes a comment requesting to review the shopping cart by an HR manager. With the help of comments, they decide on the final quantity of the products and finalize the shopping cart contents. After the shopping cart is ready, HR manager adds a comment for the head of HR department to approve the total price. By means of the conversation in the cart comments, the head of the department makes the latest corrections to the cart's contents and attaches the important comments concerning the shipping of some products to the shopping cart. From now on, HR assistant can proceed to Checkout. The attached comments will be available on the Checkout page and if the order is successfully placed - in the order history.
+Comments help multiple customers to have a dialog on the cart contents. How does it work? Let's imagine a situation where you have a company account and three HR members (HR assistant, HR manager, and the head of HR department) who are responsible for purchasing the products for the whole office. They share the same shopping cart. The HR assistant adds the products to the shopping cart and includes a comment requesting to review the shopping cart by an HR manager. With the help of comments, they decide on the final quantity of the products and finalize the shopping cart contents. After the shopping cart is ready, the HR manager adds a comment for the head of the HR department to approve the total price. By means of the conversation in the cart comments, the head of the department makes the latest corrections to the cart's contents and attaches the important comments concerning the shipping of some products to the shopping cart. From now on, the HR assistant can proceed to Checkout. The attached comments will be available on the *Checkout* page and if the order is successfully placed - in the order history.
 
-Thus, the **Comments** feature enables your B2B customers to effectively communicate and discuss the purchases with colleagues, thereby improve customer satisfaction and speed up the process by avoiding additional communication outside of the context.
+Thus, the Comments feature enables your B2B customers to effectively communicate and discuss the purchases with colleagues, thereby improve customer satisfaction and speed up the process by avoiding additional communication outside of the context.
 
-## Comments Widget
-Within the Comments feature, we have created the Comments Widget. The widget can be placed on any entity page, in our case - it is a **Shopping Cart** page. 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/comments-shopping-cart.png) 
 
-Company users can perform the following actions using the Comment Widget:
-
-* [Add a comment](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-comments/shop-guide-managing-comments.html#adding-a-comment-to-the-cart)
-* [Edit a comment](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-comments/shop-guide-managing-comments.html#editing-a-comment-in-the-cart)
-* [\(Un\)Tag a comment](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-comments/shop-guide-managing-comments.html#-un-tagging-a-comment-in-the-cart)
-* [\(Un\)Filter comments per tag](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-comments/shop-guide-managing-comments.html#-un-filtering-a-comment-in-the-cart)
-* [Remove the comment](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-comments/shop-guide-managing-comments.html#removing-a-comment)
+## Comments widget
+Within the Comments feature, we have created the Comments widget. The widget can be placed on any entity page. In our case, it is the *Shopping Cart* page.
 
 The comment contains the following information:
 
@@ -37,26 +31,49 @@ The comment contains the following information:
 * Contents of the comment
 * Comment Tag
 
-Company users can add comments to a shared cart in both Read-only and Full Access permissions. A user can also add a comment before submitting the order, on the Checkout Summary page:
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/checkout-summary-page-comment.png) 
-
-as well as post factum, after the order has been placed, on the Order History page:
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/order-history-comments.png) 
+Company users can add comments to a shared cart in both Read-only and Full Access permissions. A user can also add a comment before submitting the order, on the *Checkout Summary* page as well as post factum, after the order has been placed, on the *Order History* page:
 
 {% info_block warningBox "Note" %}
 When reordering the existing order, the comments attached to the order are not duplicated.
 {% endinfo_block %}
-When the order with the attached comments is placed, the Back Office user can view it with the comments in the **Back Office > Orders** section. 
+When the order with the attached comments is placed, the Back Office user can view it with the comments in the  **Orders** section of the Back Office.
 
-### Comment Tags
-Every comment may be tagged.
-**Tags** are keywords associated with the comments. The tags are added to group the comments sharing a similar idea or topic. For example, you may have several comments where colleagues have covered the details on how the order should be delivered, so you may tag these comments with "Delivery" tag for convenience. Also, in the drop-down menu, you can filter the comments according to tags added.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/filter-tags.png) 
+### Comment tags
 
-{% info_block warningBox "Note" %}
-To create a new tag, see [HowTo - Add a New Tag for Comment](https://documentation.spryker.com/v4/docs/ht-adding-new-tag-for-comment
-{% endinfo_block %}.)
+Every comment may be tagged. *Tags* are keywords associated with the comments. The tags are added to group the comments sharing a similar idea or topic. For example, you may have several comments where colleagues have covered the details on how the order should be delivered, so you may tag these comments with the *Delivery* tag for convenience. Also, in the drop-down menu, you can filter the comments according to tags added.
 
-### Module Relations in the Comments Feature
-Module Relations in the Comments feature are represented in the following schema:
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/techspec-comments-module-diagram.png) 
+
+
+## Comments on the Storefront
+Company users can perform the following actions using the Comments widget on the Storefront:
+<details>
+<summary>Create and edit comments</summary>
+
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/creating-and-editing-comments.gif)
+
+</details>
+
+<details>
+<summary>Remove comments</summary>
+
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/removing-comments.gif)
+</details>
+
+<details>
+<summary>Tag comments</summary>
+
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/adding-tags.gif)
+
+</details>
+
+<details>
+<summary>Filter comments by tags</summary>
+
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/filtering-tags.gif)
+</details>
+
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Comments feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/comments-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}

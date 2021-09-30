@@ -33,8 +33,8 @@ Preview link is the only available option for the B2C environment. B2C users can
 
 {% endinfo_block %}
 
-* Read-only: for details see [Read only](/docs/scos/user/features/{{page.version}}/shopping-lists/shopping-lists-feature-overview/multiple-and-shared-shopping-lists-overview.html#read-only).
-* Full access: for details see [Full access](/docs/scos/user/features/{{page.version}}/shopping-lists/shopping-lists-feature-overview/multiple-and-shared-shopping-lists-overview.html#full-access).
+* Read-only: for details see [Read only](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html#read-only).
+* Full access: for details see [Full access](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html#full-access).
 
 {% info_block warningBox %}
 

@@ -65,7 +65,7 @@ The **Scheduled Price** feature allows you to define a price for your products t
 
 * [Scheduled Prices](https://documentation.spryker.com/2021080/docs/scheduled-prices)
 * [Creating Scheduled Prices in the Back Office](https://documentation.spryker.com/2021080/docs/creating-scheduled-prices-201907)
-* [Managing Scheduled Prices in the Back Office](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/scheduled-prices/managing-scheduled-prices.html)
+* [Managing Scheduled Prices in the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/scheduled-prices/managing-scheduled-prices.html)
 
 ### Multi-store Improvements
 Spryker increases the number of features that you can manage per store.
@@ -89,8 +89,8 @@ Spryker increases the number of features that you can manage per store.
 * [Multiple Stores](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/howto-set-up-multiple-stores.html)
 * [Inventory](https://documentation.spryker.com/2021080/docs/inventory-management)
 * [Warehouse Management](https://documentation.spryker.com/2021080/docs/multiple-warehouse-stock)
-* [Managing Payment Methods in the Back Office](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/payment-methods/managing-payment-methods.html)
-* [Managing Delivery Methods in the Back Office](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/delivery-methods/creating-and-managing-delivery-methods.html)
+* [Managing Payment Methods in the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/payment-methods/managing-payment-methods.html)
+* [Managing Delivery Methods in the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html)
 
 ***
 ## CMS

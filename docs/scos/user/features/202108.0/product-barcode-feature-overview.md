@@ -63,7 +63,7 @@ You can see Product ID, product name, SKU, and the barcode itself.
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Viewing product barcodes](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-barcodes/viewing-product-barcodes.html)  |
+| [Viewing product barcodes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-barcodes/viewing-product-barcodes.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

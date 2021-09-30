@@ -10,7 +10,7 @@ redirect_from:
 
 Your product's availability is calculated on a per-store basis, meaning you can manage stocks from a single interface and make warehouse management more efficient.
 
-If you have multiple warehouses, your products can have multiple stock quantities to reflect availability accurately. This all can be done in the Back office. See [Managing Warehouses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/warehouses/managing-warehouses.html) for more details. Also, you can import warehouse information via a .csv file.
+If you have multiple warehouses, your products can have multiple stock quantities to reflect availability accurately. This all can be done in the Back office. See [Managing Warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/managing-warehouses.html) for more details. Also, you can import warehouse information via a .csv file.
 
 You can easily manage stocks across all stores and warehouses as well as share warehouses between different stores from a single interface and make warehouse management more efficient and flexible.
 

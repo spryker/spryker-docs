@@ -52,10 +52,10 @@ With the CMS Pages feature, you can:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create a CMS page](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/creating-cms-pages.html)  |
-| [Manage CMS pages](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/creating-cms-pages.html)  |
-| [Edit CMS pages](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/editing-cms-pages.html)  |
-| [Manage versions of a CMS page](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/managing-cms-cms-pages-overview.html)  |
+| [Create a CMS page](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/creating-cms-pages.html)  |
+| [Manage CMS pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/creating-cms-pages.html)  |
+| [Edit CMS pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/editing-cms-pages.html)  |
+| [Manage versions of a CMS page](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/managing-cms-cms-pages-overview.html)  |
 
 
 {% info_block warningBox "Developer guides" %}

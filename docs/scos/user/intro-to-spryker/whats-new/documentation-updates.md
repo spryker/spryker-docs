@@ -57,15 +57,15 @@ Below you will find the list of the new/updated documentation released as part o
 <summary>Back Office user guides</summary>
     
 
-* [Creating a New Shipment for Order](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/orders/managing-order-shipments.html#creating-a-new-shipment-for-order) 
-* [Editing Shipment Details](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/orders/managing-order-shipments.html#editing-shipment-details) 
+* [Creating a New Shipment for Order](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-order-shipments.html#creating-a-new-shipment-for-order) 
+* [Editing Shipment Details](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-order-shipments.html#editing-shipment-details) 
       
 </details>
 <details open>
 <summary>Shop user guide</summary>
   
 
-[Assigning Multiple Delivery Addresses to Order](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/orders/managing-order-shipments.html#creating-a-new-shipment-for-order) 
+[Assigning Multiple Delivery Addresses to Order](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-order-shipments.html#creating-a-new-shipment-for-order) 
 
     
 </details>
@@ -131,9 +131,9 @@ Below you will find the list of the new/updated documentation released as part o
 <details open>
 <summary>Back Office user guides</summary>
     
-* [Creating Scheduled Prices](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/scheduled-prices/creating-scheduled-prices.html)
-* [Managing Scheduled Prices](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/scheduled-prices/managing-scheduled-prices.html)
-* [Scheduled Prices: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/scheduled-prices/references/reference-information-scheduled-prices.html)   
+* [Creating Scheduled Prices](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/scheduled-prices/creating-scheduled-prices.html)
+* [Managing Scheduled Prices](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/scheduled-prices/managing-scheduled-prices.html)
+* [Scheduled Prices: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/scheduled-prices/references/reference-information-scheduled-prices.html)   
     
 </details>
 
@@ -167,9 +167,9 @@ Below you will find the list of the new/updated documentation released as part o
 <details open>
 <summary>Back Office user guides</summary>
     
-* [Slots](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/slots/managing-slots.html) 
-* [Managing Slots](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/slots/managing-slots.html)
-* [Slots: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/slots/managing-slots.html-reference-information)
+* [Slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html) 
+* [Managing Slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html)
+* [Slots: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html-reference-information)
          
 </details>
 
@@ -321,16 +321,16 @@ Below you will find the list of the new/updated documentation released as part o
 #### Back Office user guides:
 
 * Payment Management
-    * [Managing Payment Methods](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/payment-methods/managing-payment-methods.html)
-    * [Payment Methods: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/payment-methods/managing-payment-methods.html#reference-information--editing-payment-method-pages)
-* [Shipment](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/orders/managing-order-shipments.html)
+    * [Managing Payment Methods](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/payment-methods/managing-payment-methods.html)
+    * [Payment Methods: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/payment-methods/managing-payment-methods.html#reference-information--editing-payment-method-pages)
+* [Shipment](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-order-shipments.html)
 
-    * [Creating a Carrier Company](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/delivery-methods/creating-carrier-companies.html)
-    * [Creating and Managing Delivery Methods](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/delivery-methods/creating-and-managing-delivery-methods.html)
-    * [Delivery Methods: Reference Information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/delivery-methods/creating-and-managing-delivery-methods.html#reference-information--creating-delivery-methods)
+    * [Creating a Carrier Company](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-carrier-companies.html)
+    * [Creating and Managing Delivery Methods](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html)
+    * [Delivery Methods: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html#reference-information--creating-delivery-methods)
  * Warehouses
-    * [Creating a Warehouse](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/warehouses/creating-a-warehouse.html)
-    * [Managing Warehouses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/warehouses/managing-warehouses.html)
+    * [Creating a Warehouse](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/creating-a-warehouse.html)
+    * [Managing Warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/managing-warehouses.html)
     * [Warehouses: Reference Information](https://documentation.spryker.com/2021080/docs/warehouses-reference-information)
  * [Stores](https://documentation.spryker.com/2021080/docs/stores-reference-information-201911)
 

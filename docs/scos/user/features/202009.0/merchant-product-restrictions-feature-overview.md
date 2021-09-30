@@ -23,7 +23,7 @@ Product Restriction feature works on the basis of whitelist/blacklist lists. Tha
 
 To restrict the products, a Shop Administrator needs to create a product list, include the necessary products to the list and blacklist them for a specific merchant relationship. All other products will be available for that merchant relationship.
 
-To create product lists, follow the [guideline for the Back Office](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-lists/creating-product-lists.html).
+To create product lists, follow the [guideline for the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/creating-product-lists.html).
 
 You can check more cases of product restrictions workflow on the [Restricted Products Behavior](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-product-restrictions-feature-walkthrough/restricted-products-behavior.html) page.
 
@@ -36,12 +36,12 @@ You can check more cases of product restrictions workflow on the [Restricted Pro
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create product lists to set product restrictions](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-lists/creating-product-lists.html)  |
-| [Edit a product list](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-lists/managing-product-lists.html#editing-a-product-list) |
-| [Export a product list](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-lists/managing-product-lists.html#exporting-a-product-list) |
-| [Remove a product list from the system](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-lists/managing-product-lists.html#removing-a-product-list)  |
-| [Assign products to a product list](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-lists/managing-product-lists.html#assigning-products-to-a-product-list) |
-| [Remove products from a product list](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-lists/managing-product-lists.html#deassigning-products-form-a-product-list) |
+| [Create product lists to set product restrictions](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/creating-product-lists.html)  |
+| [Edit a product list](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/managing-product-lists.html#editing-a-product-list) |
+| [Export a product list](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/managing-product-lists.html#exporting-a-product-list) |
+| [Remove a product list from the system](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/managing-product-lists.html#removing-a-product-list)  |
+| [Assign products to a product list](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/managing-product-lists.html#assigning-products-to-a-product-list) |
+| [Remove products from a product list](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/managing-product-lists.html#deassigning-products-form-a-product-list) |
 
 {% info_block warningBox "Developer guides" %}
 

@@ -5,6 +5,10 @@ originalArticleId: 6e3b40dd-e760-4e88-9db8-d5ced7f74753
 redirect_from:
   - /v6/docs/customer-account-overview
   - /v6/docs/en/customer-account-overview
+  - /v6/docs/addresses-reference-information
+  - /v6/docs/en/addresses-reference-information
+  - /v6/docs/order-history-reference-information
+  - /v6/docs/en/order-history-reference-information
 ---
 
 A *customer account* contains the following customer information on the Storefront:
@@ -51,7 +55,7 @@ A Back Office user can do the following:
 * Send a password token via email.
 * Check last orders of a customer in the shop.
 
-See [Managing customers](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html) for details.
+See [Managing customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customers.html) for details.
 
 ## Customer account on the Storefront
 Customer can perform the following actions the Storefront:

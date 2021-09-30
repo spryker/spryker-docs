@@ -8,6 +8,8 @@ redirect_from:
   - /v6/docs/en/quotation-process-feature-overview
   - /v6/docs/quotation-process
   - /v6/docs/en/quotation-process
+  - /v6/docs/rfq-reference-information-shop-guide
+  - /v6/docs/en/rfq-reference-information-shop-guide
 ---
 
 | DEFINITION | DESCRIPTION |

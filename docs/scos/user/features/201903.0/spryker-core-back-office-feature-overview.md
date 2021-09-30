@@ -71,17 +71,17 @@ Each of the Identity Managers is an ECO module that should be developed separate
 |---|
 | [Get a general idea of the Back Office Translations](/docs/scos/user/features/{{page.version}}/spryker-core-back-office/spryker-core-back-office-feature-overview/back-office-translations-overview.html) |
 | **Work with the Back Office**: |
-| [Log in to the Back Office](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/logging-in-to-the-back-office.html) |
-| [View Dashboard](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/dashboard/viewing-dashboard.html) |
-| [Mange Punch Out](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/punch-out/managing-punch-out-connections.html) |
-| [View Order Matrix](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/order-matrix/viewing-the-order-matrix.html) |
-| [Manage customers](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html) |
-| [Create an abstract product and product bundles](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html) |
-| [Create content items](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/creating-content-items.html) |
-| [Create a voucher](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/discount/creating-a-voucher.html) |
-| [Manage users](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users/roles-groups-and-users/managing-users.html) |
-| [Manage merchants](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/marketplace/merchants-and-merchant-relations/managing-merchants.html) |
-| [Create a warehouse](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/warehouses/creating-warehouses.html) |
+| [Log in to the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/logging-in-to-the-back-office.html) |
+| [View Dashboard](/docs/scos/user/back-office-user-guides/{{page.version}}/dashboard/viewing-dashboard.html) |
+| [Mange Punch Out](/docs/scos/user/back-office-user-guides/{{page.version}}/punch-out/managing-punch-out-connections.html) |
+| [View Order Matrix](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/order-matrix/viewing-the-order-matrix.html) |
+| [Manage customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customers.html) |
+| [Create an abstract product and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html) |
+| [Create content items](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html) |
+| [Create a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-a-voucher.html) |
+| [Manage users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-users.html) |
+| [Manage merchants](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchants.html) |
+| [Create a warehouse](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/creating-warehouses.html) |
 
 {% info_block warningBox "Developer guides" %}
 

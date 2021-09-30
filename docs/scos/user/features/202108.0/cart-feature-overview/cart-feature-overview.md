@@ -7,6 +7,10 @@ redirect_from:
   - /2021080/docs/en/cart
   - /docs/cart
   - /docs/en/cart
+  - /2021080/docs/shop-guide-shopping-carts-reference-information
+  - /2021080/docs/en/shop-guide-shopping-carts-reference-information
+  - /docs/shop-guide-shopping-carts-reference-information
+  - /docs/en/shop-guide-shopping-carts-reference-information
 
 ---
 

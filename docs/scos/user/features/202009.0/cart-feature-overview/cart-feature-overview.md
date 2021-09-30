@@ -7,6 +7,8 @@ redirect_from:
   - /v6/docs/en/cart
   - /v6/docs/shopping-carts
   - /v6/docs/en/shopping-carts
+  - /v6/docs/shop-guide-shopping-carts-reference-information
+  - /v6/docs/en/shop-guide-shopping-carts-reference-information
 ---
 
 The *Cart* feature allows your customers to add products to their cart by selecting the desired quantity of a product. Inside the cart, customers can change the quantity of items, switch between different variants of the product, add notes, apply vouchers and remove items. Any changes the customer makes within the cart trigger an automatic sum-recalculation that is immediately applied to the total in the sum. Pre-defined taxes are applied and shown automatically. Additionally, logged-in customers can see and edit their cart from any device.

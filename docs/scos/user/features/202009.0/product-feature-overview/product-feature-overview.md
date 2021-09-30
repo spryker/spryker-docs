@@ -6,6 +6,8 @@ originalArticleId: 4ce5b2fb-8116-476b-bc33-bc2bce818a70
 redirect_from:
   - /v6/docs/product-overview
   - /v6/docs/en/product-overview
+  - /v6/docs/shop-guide-managing-products
+  - /v6/docs/en/shop-guide-managing-products
 ---
 
 The *Product* feature allows creating products, manage their characteristics and settings.

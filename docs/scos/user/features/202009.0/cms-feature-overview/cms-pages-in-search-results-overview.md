@@ -6,6 +6,8 @@ originalArticleId: af43aa57-61f6-4f57-b32a-1efebfe44902
 redirect_from:
   - /v6/docs/cms-pages-in-search-results
   - /v6/docs/en/cms-pages-in-search-results
+  - /v6/docs/searching-within-cms-pages
+  - /v6/docs/en/searching-within-cms-pages
 ---
 
 Most often shop visitors search for products, however, they also might need other information, like terms and conditions, legal information, or contacts, which is contained on [CMS pages](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html).

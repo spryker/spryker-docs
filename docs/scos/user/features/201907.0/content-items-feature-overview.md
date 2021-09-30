@@ -34,7 +34,7 @@ See [Content Items Types: Module Relations](/docs/scos/user/features/{{page.vers
 
 Depending on your needs, the **Banner** content item, for example, can be used for displaying a new banner to promote a specific brand or collection on the website. The **Product Set** content item can be added to a landing page and display a product set as a slider or carousel from which your customers can select a product or all products to add them to the cart with one click. Inserting a **File List** content item in any placeholder of a page or block will add a link or icon to download that file.
 
-After the content item is created and saved, it appears on the _List of Content Items_ page. Later on, you can add it to blocks or pages via content item widgets. See [Adding Content Item Widgets to Pages and Blocks](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content-management/content-item-widgets/adding-content-item-widgets-to-pages-and-blocks.html) for more details.
+After the content item is created and saved, it appears on the _List of Content Items_ page. Later on, you can add it to blocks or pages via content item widgets. See [Adding Content Item Widgets to Pages and Blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/content-item-widgets/adding-content-item-widgets-to-pages-and-blocks.html) for more details.
 
 {% info_block infoBox %}
 Spryker provides several basic types of templates for content items. However, developers can create and customize specific types of templates for their particular project. See [HowTo - Create CMS Templates](/docs/scos/dev/tutorials/{{page.version}}/howtos/feature-howtos/cms/howto-create-cms-templates.html#adding-a-template-for-a-content-item-widget
@@ -44,10 +44,10 @@ In addition to creating and managing content items in the Back Office, developer
 
 ## Content Item widgets
 
-The **Content Items Widgets** allow Back Office users to display content on the store website by inserting content items in any placeholders of blocks and pages in the WYSIWYG editor. The widgets include the following content item types: [Banner, Product Set, File, and Abstract Product List that can also contain its Product Groups](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/content-items/content-items.html).
+The **Content Items Widgets** allow Back Office users to display content on the store website by inserting content items in any placeholders of blocks and pages in the WYSIWYG editor. The widgets include the following content item types: [Banner, Product Set, File, and Abstract Product List that can also contain its Product Groups](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/content-items/content-items.html).
 
 {% info_block infoBox %}
-See [Content Item Widgets types: Reference Information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/content-item-widgets/references/content-item-widgets-types-reference-information.html
+See [Content Item Widgets types: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/content-item-widgets/references/content-item-widgets-types-reference-information.html
 {% endinfo_block %} to learn more about the types of content item widgets and examples of their usage.)
 
 A Back Office user can add content to the storefront and enrich the page using the content items widget with its templates.
@@ -56,7 +56,7 @@ A Back Office user can add content to the storefront and enrich the page using t
 Prior to proceeding with content items widgets, make sure that they have been enabled for your project <!-- link to IG-->.
 {% endinfo_block %}
 
-You can work with widgets on the **Edit Placeholders** page of the **Pages** or **Blocks** menu. See [Adding Content Items Widgets to Pages and Blocks](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/content-item-widgets/adding-content-item-widgets-to-pages-and-blocks.html) for more details.
+You can work with widgets on the **Edit Placeholders** page of the **Pages** or **Blocks** menu. See [Adding Content Items Widgets to Pages and Blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/content-item-widgets/adding-content-item-widgets-to-pages-and-blocks.html) for more details.
 
 ![Content items widgets](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items+Widgets+Overview/content-item-menu-page.png)
 

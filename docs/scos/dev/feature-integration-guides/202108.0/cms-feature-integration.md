@@ -1478,7 +1478,7 @@ class CmsSlotBlockGuiDependencyProvider extends SprykerCmsSlotBlockGuiDependency
 1. Go to the Back Office > **Content Management** > **Slots** section.
 1. In the **List of Templates**, choose the template for which you've created the visibility condition.
 1. Choose a slot in the **List of Slots for {name} Template**.
-1. Select or [assign](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/slots/managing-slots.html#assigning-cms-blocks-to-slots) a CMS block to a slot in the **List of Blocks for {name} Slot**.
+1. Select or [assign](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html#assigning-cms-blocks-to-slots) a CMS block to a slot in the **List of Blocks for {name} Slot**.
 1. Make sure that for each CMS block, there is an additional form allowing you to define the visibility condition you have created.
 
 

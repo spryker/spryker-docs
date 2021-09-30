@@ -29,7 +29,7 @@ A Back Office user can define the following:
 * The unique product set URL.
 
 
-A Back Office user can add a product sets to any page by [creating a product set content item](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/creating-content-items.html) and [adding it to CMS pages and blocks](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).
+A Back Office user can add a product sets to any page by [creating a product set content item](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html) and [adding it to CMS pages and blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).
 
 
 For more details on product sets, check the video:
@@ -49,8 +49,8 @@ Currently, the feature has the following functional constraints which are going 
 |BACK OFFICE USER GUIDES|
 |---|
 | [Get a general idea of the Product Sets feature](/docs/scos/user/features/{{page.version}}/product-sets/product-sets-feature-overview.html) |
-| [Create product sets](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-sets/creating-product-sets.html) |
-| [Manage product sets](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-sets/managing-product-sets.html) |
+| [Create product sets](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-sets/creating-product-sets.html) |
+| [Manage product sets](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-sets/managing-product-sets.html) |
 
 {% info_block warningBox "Developer guides" %}
 

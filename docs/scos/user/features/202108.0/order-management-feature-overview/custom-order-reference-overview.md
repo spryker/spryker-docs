@@ -62,7 +62,7 @@ If you added a custom order reference to the cart, submitted a request for quote
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage orders](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/orders/managing-orders.html) |
+| [Manage orders](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html) |
 
 {% info_block warningBox "Developer guides" %}
 

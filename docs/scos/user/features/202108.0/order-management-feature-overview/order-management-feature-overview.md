@@ -31,7 +31,7 @@ B2B customers usually purchase large volumes of products selecting specific meas
 | [Get a general idea of Order Cancellation](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/order-cancellation-overview.html)   |
 | [Get a general idea of Split Delivery](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/split-delivery-overview.html)   |
 | [Get a general idea of Splittable Order Items](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/splittable-order-items-overview.html)   |
-| [Manage orders](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/orders/managing-orders.html)   |
+| [Manage orders](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html)   |
 
 {% info_block warningBox "Developer guides" %}
 

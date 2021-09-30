@@ -91,7 +91,7 @@ Stock update triggers the event `stock update`. For example, in our dummy paymen
 
 It’s possible to use `vendor/bin/console data:import:product-stock` command to import stocks into database. The default stock importer uses `csv` file from `src/Pyz/Zed/Updater/Business/Internal/data/import/product_stock.csv` which imports stocks.
 
-The Back Office is provided to allow assigning stocks to products. See [Availability](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/availability/managing-products-availability.html) for details on how to manage product stocks in the Back Office.
+The Back Office is provided to allow assigning stocks to products. See [Availability](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/managing-products-availability.html) for details on how to manage product stocks in the Back Office.
 
 Stock update considers the stock from the stock file to be the absolute value. On stock update, the stock is overwritten with the values from the file. If a certain product does not have a record in the stock file, then it is considered that the stock of this product does not have to be updated.
 

@@ -16,7 +16,7 @@ You can send a hidden copy of the invoice to yourself or your employees. Keep in
 
 {% endinfo_block %}
 
-It is possible to generate an invoice only once the order has acquired the `confirmed` state. The invoice generation and sending are triggered in the Back Office by initiating the `invoice-generate` event on the *View Order* page. See [Changing order statuses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/orders/managing-orders.html#changing-order-statuses) for details on how a Back Office User initiates events for orders. After generating the invoice, the OMS state of the order changes to `exported`.
+It is possible to generate an invoice only once the order has acquired the `confirmed` state. The invoice generation and sending are triggered in the Back Office by initiating the `invoice-generate` event on the *View Order* page. See [Changing order statuses](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html#changing-order-statuses) for details on how a Back Office User initiates events for orders. After generating the invoice, the OMS state of the order changes to `exported`.
 
 {% info_block infoBox "Info" %}
 

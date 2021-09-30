@@ -22,7 +22,7 @@ The following CMS Block email templates are available by default:
 * *Text email template with header and footer*
 * *Empty email template*
 
-See [Creating an Email CMS Block](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/managing-content-of-emails-via-cms-blocks.html#creating-an-email-cms-block) to learn how a Back Office User applies a CMS Block email template.
+See [Creating an Email CMS Block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-content-of-emails-via-cms-blocks.html#creating-an-email-cms-block) to learn how a Back Office User applies a CMS Block email template.
 
 A Developer can create more CMS Block email templates.
 
@@ -93,23 +93,23 @@ The table below contains the list of the default email templates, their Email CM
 
 </details>
 
-See [Managing Content of Emails via CMS Blocks](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/managing-content-of-emails-via-cms-blocks.html) to learn how a Back Office User manages the content of email templates by editing Email CMS Blocks.
+See [Managing Content of Emails via CMS Blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-content-of-emails-via-cms-blocks.html) to learn how a Back Office User manages the content of email templates by editing Email CMS Blocks.
 
 After creating email templates, a developer can [import](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-cms-block.csv.html#file-details--cms_block-csv) their assigned Email CMS Blocks. See [example of the import file](https://github.com/spryker-shop/suite/blob/master/data/import/common/common/cms_block.csv) with the Email CMS Blocks in Spryker Master Suite.
 
 ## Email Content
 
 
-When [editing an email template via Email CMS Block](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/managing-content-of-emails-via-cms-blocks.html#editing-email-cms-blocks), you work in the [WYSIWYG editor](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/wysiwyg-editor.html). Apart from the regular WYSIWYG editor tools, you can add glossary keys and variables.
+When [editing an email template via Email CMS Block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-content-of-emails-via-cms-blocks.html#editing-email-cms-blocks), you work in the [WYSIWYG editor](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/wysiwyg-editor.html). Apart from the regular WYSIWYG editor tools, you can add glossary keys and variables.
 
 
 You can use the functionalities described in this section, regardless of the email format.
 
 ### Glossary Keys in Email Templates
 
-You can add [glossary keys](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/glossary/managing-glossary.html) directly to email templates, and the respective translations are fetched automatically. When an email with a glossary key is sent, the key is replaced with the translation you defined for the locale selected by the customer. For example, you add the *cart.price.grand.total* glossary key to an email template. When the email is sent to the customer with de_DE locale, the key is replaced with Summe.
+You can add [glossary keys](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/managing-glossary.html) directly to email templates, and the respective translations are fetched automatically. When an email with a glossary key is sent, the key is replaced with the translation you defined for the locale selected by the customer. For example, you add the *cart.price.grand.total* glossary key to an email template. When the email is sent to the customer with de_DE locale, the key is replaced with Summe.
 
-See [Managing Glossary](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/glossary/managing-glossary.html#managing-glossary) to learn how a Back Office User creates translations.
+See [Managing Glossary](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/managing-glossary.html#managing-glossary) to learn how a Back Office User creates translations.
 
 ### Variables in Email Templates
 

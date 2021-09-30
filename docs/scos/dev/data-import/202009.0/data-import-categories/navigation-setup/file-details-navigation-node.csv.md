@@ -7,7 +7,7 @@ redirect_from:
   - /v6/docs/en/file-details-navigation-nodecsv
 ---
 
-This article contains content of the **navigation_node.csv** file to configure [Navigation Node](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/navigation/references/reference-information-navigation.html#navigation-node-types) information on your Spryker Demo Shop.
+This article contains content of the **navigation_node.csv** file to configure [Navigation Node](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/references/reference-information-navigation.html#navigation-node-types) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:

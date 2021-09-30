@@ -21,7 +21,7 @@ In particular, you can:
 In your development, these resources can help you get relevant information for your product list and the product detail pages for all or a specific locale.
 
 {% info_block infoBox %}
-See [Content Items](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/content-items/content-items.html
+See [Content Items](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/content-items/content-items.html
 {% endinfo_block %} to learn how to create and manage content items in CMS.)
 
 ## Installation

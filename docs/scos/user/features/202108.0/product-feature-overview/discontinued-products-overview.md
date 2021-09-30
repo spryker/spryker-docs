@@ -30,7 +30,7 @@ can become discontinued.
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Discontinue a product](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/managing-products/discontinuing-products.html)  |
+| [Discontinue a product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/discontinuing-products.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

@@ -20,6 +20,8 @@ entries:
         nested:
           - title: System requirements
             url: /docs/marketplace/dev/setup/system-requirements.html
+          - title: Installation
+            url: /docs/marketplace/dev/setup/installation.html
 
       - title: Feature walkthroughs
         nested:
@@ -420,8 +422,18 @@ entries:
                 - title: "Autocomplete"
                   url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-autocomplete.html
 
-            - title: "Table Feature extension"
-              url: /docs/marketplace/dev/front-end/table-design/table-feature-extension.html
+            - title: "Table Features"
+              url: /docs/marketplace/dev/front-end/table-design/table-features/
+              nested:
+
+                - title: "Title"
+                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-title.html
+
+                - title: "Pagination"
+                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-pagination.html
+                
+                - title: "Total"
+                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-total.html
 
             - title: "Table Filter extension"
               url: /docs/marketplace/dev/front-end/table-design/table-filter-extension.html

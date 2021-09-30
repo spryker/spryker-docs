@@ -51,7 +51,7 @@ Let's take a closer look at all the possible options.
   - `url` - request url.  
   - `saveButon` - an object with `title` and `icon` for the `Save button` (displays in the `update` popup).  
   - `cancelButon` - an object with `title` and `icon` for the `Cancel button` (displays in the `update` popup).  
-  - `disableForCols` - an array with cell `id's` to be disabled.  `
+  - `disableForCols` - an array with cell `ids` to be disabled.  `
 
 ```html
 <spy-table [config]="{

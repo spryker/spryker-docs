@@ -6,6 +6,8 @@ originalArticleId: d2edc0ff-0191-4f61-b8ac-c12bc43f13a3
 redirect_from:
   - /v6/docs/merchant-custom-prices-feature-overview
   - /v6/docs/en/merchant-custom-prices-feature-overview
+  - /v6/docs/merchant-custom-prices
+  - /v6/docs/en/merchant-custom-prices
 ---
 
 When talking about product prices that depend on customers they refer to, we differentiate between two types: default prices and specific prices.
@@ -67,4 +69,3 @@ Or, you can remove merchant relation prices referring to specific merchant relat
 ```bash
 console price-product-merchant-relationship:delete [-m X] . X = MR ID
 ```
-

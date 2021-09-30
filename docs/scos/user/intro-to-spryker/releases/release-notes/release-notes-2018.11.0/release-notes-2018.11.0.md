@@ -58,7 +58,7 @@ Shopping list is the feature that allows customers to create and share multiple 
 The shopping list widget provides quick access to the available shopping lists from the top menu.
 ![B2B shopping list](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.11.0/image16.png) 
 
-**Documentation**: [Shopping List](/docs/scos/user/features/{{page.version}}/shopping-lists/shopping-lists.html)
+**Documentation**: [Shopping List](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html)
 
 ### B2B Cart
 Shopping cart experience has been improved and enhanced to meet B2B customers needs. Cart information is persistent throughout multiple sessions. Users can create multiple carts in their accounts and enable/disable sharing of the cart with particular users or whole business units. It is also possible to clone an existing cart with all products inside. Notes can also be added to the cart or cart item level. A user can access the list of available carts and switch between them from a shopping cart widget in the top menu.

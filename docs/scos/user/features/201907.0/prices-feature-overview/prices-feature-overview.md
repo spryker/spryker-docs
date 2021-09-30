@@ -12,6 +12,8 @@ redirect_from:
   - /v3/docs/en/net-gross-price
   - /v3/docs/auto-detect-currency
   - /v3/docs/en/auto-detect-currency
+  - /v3/docs/multiple-currencies-per-store
+  - /v3/docs/en/multiple-currencies-per-store
 ---
 
 A price can be attached to an abstract product as well as to a concrete product. The price is stored as an integer, in the smallest unit of the currency (e.g. for Euro that would be cents).

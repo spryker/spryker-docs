@@ -8,9 +8,13 @@ redirect_from:
   - /v5/docs/en/asset-management
   - /v5/docs/asset-management-feature-overview
   - /v5/docs/en/asset-management-feature-overview
+  - /v5/docs/image-hosting
+  - /v5/docs/en/image-hosting
+  - /v5/docs/video-embedding
+  - /v5/docs/en/video-embedding
 ---
 
-There are 2 types of assets in the Spryker Commerce OS: dynamic and static. 
+There are 2 types of assets in the Spryker Commerce OS: dynamic and static.
 
 ## Dynamic Assets
 
@@ -21,7 +25,7 @@ Dynamic assets are files, added during content and product creation: adding or c
 Static assets are images, fonts, CSS, JS, HTML and PHP files that are available and used by default. All the files are split into folders according to the application they are used for: Zed, Yves or Glue. The PHP and HTML files stored in static asset directories are used for handling errors and showing the platform maintenance messages.
 
 {% info_block infoBox %}
-Currently, except for the error handling files, there are no Glue related assets. 
+Currently, except for the error handling files, there are no Glue related assets.
 {% endinfo_block %}
 
 ### Location

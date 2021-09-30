@@ -10,6 +10,16 @@ redirect_from:
   - /docs/en/howto-set-up-multiple-stores
   - /v6/docs/howto-set-up-multiple-stores
   - /v6/docs/en/howto-set-up-multiple-stores
+  - /v5/docs/multiple-stores
+  - /v5/docs/en/multiple-stores
+  - /v4/docs/multiple-stores
+  - /v4/docs/en/multiple-stores
+  - /v3/docs/multiple-stores
+  - /v3/docs/en/multiple-stores
+  - /v2/docs/multiple-stores
+  - /v2/docs/en/multiple-stores
+  - /v1/docs/multiple-stores
+  - /v1/docs/en/multiple-stores
 ---
 
 With the Spryker Commerce OS, you can create multiple stores for different scenarios that suit your business needs. The multi-store setup is very versatile and can be customized to your needs. For example, you can:

@@ -10,6 +10,10 @@ redirect_from:
   - /v3/docs/en/manage-tax-rates-sets
   - /v3/docs/international-tax-rates-sets-1
   - /v3/docs/en/international-tax-rates-sets-1
+  - /v3/docs/international-tax-rates-sets
+  - /v3/docs/en/international-tax-rates-sets
+  - /v3/docs/internationalization
+  - /v3/docs/en/internationalization
 ---
 
 The *Tax* feature allows you to define taxes for the items you sell. The feature is represented by two entities: tax rates and tax sets.

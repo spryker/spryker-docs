@@ -6,7 +6,15 @@ originalArticleId: e57fffc2-d137-4f13-b28b-2f796aaa8af2
 redirect_from:
   - /v6/docs/gift-cards-feature-overview
   - /v6/docs/en/gift-cards-feature-overview
+  - /v6/docs/gift-cards
+  - /v6/docs/en/gift-cards
 ---
+
+The _Gift Card_ feature allows you to create a a special product type with a chosen value amount. The purchase of a gift card generates an individual code that can then be used as a payment method during checkout.
+
+A Gift Card is a prepaid certificate entitling its owner to purchase products for the gift card’s value.
+
+When paying for orders with a gift card, the gift cards are considered as an additional payment method. You can use the full balance  or part of the total gift card's value. In the latter case, the remaining value is stored as leftover balance on the original code. You can also use additional gift cards to pay for products. However, gift cards can only be applied for products in the same currency they have been bought.
 
 {% info_block warningBox %}
 Gift cards are sensitive data and can be used to pay orders, therefore please keep in mind that they should be protected just like real money.
@@ -64,3 +72,9 @@ In the case of the Balance strategy, gift card purchase history and gift card ba
 With this strategy, a Back Office user will see gift card balance information: a date when the gift card was used, a customer who used it, a gift card code and spent value.
 
 Even though the Balance strategy is a bit more complicated than Replacement, it provides the shop owner with detailed information about the gift card as well as the purchase history. From the customer’s perspective, this strategy might be a better option if a gift card is used by one person and it does not make sense to send emails with new codes every time a gift card was used.
+
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Gift Cards feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/gift-cards-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}

@@ -103,7 +103,7 @@ A Storefront User can add a note to a configurable bundle. The note is displayed
 
 Currently, the feature supports 1:1 product-slot relation in the configurator. You can select only one concrete product with quantity 1 for a slot. However, using the data import, you may import a bigger quantity for the products in the slots.
 
-On the *Cart* page, a Storefront User can change the qunatity of a configured bundle. After the quantity is increased, the quantity of all the items in the configured bundle is multiplied by this number.
+On the *Cart* page, a Storefront User can change the quantity of a configured bundle. After the quantity is increased, the quantity of all the items in the configured bundle is multiplied by this number.
 
 For example, a Storefront User adds a configurable bundle with the following products:
 * Item A:

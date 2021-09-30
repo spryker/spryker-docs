@@ -1,26 +1,35 @@
 ---
-title: Gift Cards Purchase and Redeeming
-originalLink: https://documentation.spryker.com/v1/docs/gift-cards-purchase-redeeming
-originalArticleId: d95b8918-3ef7-40cc-8620-99637467b617
+title: Gift Cards feature overview
+description: This article describes general concepts of gift cards, gift card’s purchase and redeeming process, as well as the various use case scenarios.
+originalLink: https://documentation.spryker.com/v1/docs/gift-cards
+originalArticleId: 4fbb59e9-a575-4fbb-867f-a3379210fc68
 redirect_from:
+  - /v1/docs/gift-cards
+  - /v1/docs/en/gift-cards
+  - /v1/docs/gift-card-purchase-management
+  - /v1/docs/en/gift-card-purchase-management
   - /v1/docs/gift-cards-purchase-redeeming
   - /v1/docs/en/gift-cards-purchase-redeeming
 ---
 
-{% info_block warningBox %}
+{% info_block warningBox "Warning" %}
+
 Gift Cards are sensible data and can be used to pay orders, therefore please keep in mind that they should be protected just like real money.
+
 {% endinfo_block %}
 
 This article describes general concepts of gift cards, their purchase and redeeming process as well as various use case scenarios.
 
 ## Introduction
 
+Gift card is a prepaid certificate entitling its owner to use it for the purchase of products for the gift card’s value. Gift cards are usually purchased as a present, whereas the recipients have the full freedom of choice to buy from your shop. Gift cards are easy to buy and can be accessed immediately, and therefore they are an ideal option for last minute holiday shoppers. This all makes the gift cards a great way to increase sales, engage with new customers and promote your shop.
+
 In the Spryker shop, the gift cards follow the same rules and bought as products, they can even be bundles, however they are purely virtual and do not require shipping. Gift card can be applied as a voucher and redeemed to pay an order. Therefore, the gift cards have two characteristics - a product characteristic and a voucher (+payment method) characteristic. When gift card is bought, it is treated like a product, and when it is applied - it’s a voucher that can be used as a payment method.
 
 Gift cards have variants just like abstract products, i.e. for example, a New Year Gift Card can have all the different values - 50 Euro, 100 Euro, etc. - in this case, the New Year Gift Card would be handled like an abstract product, and 50 Euro, 100 Euro etc. gift cards would be its variants.
 
 When customer puts a gift card to cart, it is possible to change variant, quantity and remove it from cart, just like any abstract product. It should be noted however, that no discounts are applied on gift card products, since the price paid for the gift card must equal the value of the gift card. Even though technically it is possible to have different amounts for gift card’s price and value (say, the gift card price is 100 Euro however the gift card value is 150 Euro), but you need to consult your local legislation to make sure it would be legal in your country.
-![Gift cards](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Gift+Cards/Gift+Cards+Purchase+and+Redeeming/gift_card.png) 
+![Gift cards](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Gift+Cards/Gift+Cards+Purchase+and+Redeeming/gift_card.png)
 
 It is not possible to pay a gift card by using another gift card, even if order contains other products besides the gift card. Also, the range of payment methods that can be used to pay for gift cards can be limited. That is, it is possible to filter out the payment methods for gift cards. By default, invoice payment method is not available for gift cards to avoid fraud. Payment methods available for gift cards can be specified in the configuration file.
 
@@ -29,7 +38,7 @@ After customer buys a gift card, he/she gets a code sent to the provided e-mail 
 Once the gift card code has been generated, it becomes a voucher that can be used as a payment method.
 
 The gift card product-voucher transition workflow can be schematically represented as follows:
-![Git card product-voucher transition workflow schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Gift+Cards/Gift+Cards+Purchase+and+Redeeming/GC+product-voucher+transition.png) 
+![Git card product-voucher transition workflow schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Gift+Cards/Gift+Cards+Purchase+and+Redeeming/GC+product-voucher+transition.png)
 
 When buying a gift card, the shipment method selection step is skipped on Yves. In the background, there is “noshipment” constant in the app configuration, which can be selected to configure shipment for specific type of products, in our case, to gift cards.
 
@@ -45,10 +54,10 @@ With a gift card code in place, users get an alternative payment method to pay f
 6. Payment method selection and payment.
 
 Schematically, the order placement process with gift card looks as follows:
-![Order placement process](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Gift+Cards/Gift+Cards+Purchase+and+Redeeming/gc_payment_process.png) 
+![Order placement process](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Gift+Cards/Gift+Cards+Purchase+and+Redeeming/gc_payment_process.png)
 
 In the Back Office, the Back Office user can see if an order was paid with a gift card and/or a regular payment method. The amount paid with the gift card as well as the amount paid with a regular payment method (if applicable) are shown as well.
-![Gift card payment method](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Gift+Cards/Gift+Cards+Purchase+and+Redeeming/gift_card_payment_method.png) 
+![Gift card payment method](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Gift+Cards/Gift+Cards+Purchase+and+Redeeming/gift_card_payment_method.png)
 
 ## Gift Card Value Checking Strategies
 
@@ -68,3 +77,9 @@ In case of the Balance strategy, gift card purchase history and gift card balanc
 With this strategy, the shop administrator will see gift card balance information: date when the gift card was used, customer who used the gift card, gift card code and spent value.
 
 Even though the Balance strategy is a bit more complicated than Replacement, it provides the shop owner with detailed information about the gift card as well as the purchase history with it. From the customer’s perspective, this strategy might be a better option if a gift card is used by one person and it does not make sense to send emails with new codes every time a gift card was used.
+
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Gift Cards feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/gift-cards-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}

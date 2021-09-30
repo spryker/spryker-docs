@@ -1,11 +1,9 @@
 ---
-title: Shopping list notes feature overview
+title: Shopping List Notes overview
 description: With the feature, you can leave and manage notes for each item in the order.
-originalLink: https://documentation.spryker.com/v6/docs/shopping-list-notes-overview
-originalArticleId: b3d1fed4-1090-402f-a915-f263937c71ad
+originalLink: https://documentation.spryker.com/v6/docs/shopping-list-notes
+originalArticleId: 82495e18-ecda-41c8-b718-0110f6bff533
 redirect_from:
-  - /v6/docs/shopping-list-notes-overview
-  - /v6/docs/en/shopping-list-notes-overview
   - /v6/docs/shopping-list-notes
   - /v6/docs/en/shopping-list-notes
 ---
@@ -18,5 +16,3 @@ When customer transfers shopping list items to cart, their notes are taken over 
 * If an item **with notes exists in a shopping list, and is transferred to cart**, **where the same item already exists** (with or without notes), the item is added as a **separate item** with notes.
 * If an item **without notes** exists in a shopping list, and is transferred to cart, where the same item already exists **without notes**, the items are **merged**.
 * If an item **without notes exists in a shopping list, and is transferred to cart, where the same item already exists with a note**, the item is added as a **separate item**.
-
-

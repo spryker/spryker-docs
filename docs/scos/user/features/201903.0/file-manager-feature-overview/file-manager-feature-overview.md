@@ -6,6 +6,10 @@ originalArticleId: ed0a9b5c-cafe-4841-9823-e5a5713ac2b3
 redirect_from:
   - /v2/docs/media-management
   - /v2/docs/en/media-management
+  - /v2/docs/image-hosting
+  - /v2/docs/en/image-hosting
+  - /v2/docs/video-embedding
+  - /v2/docs/en/video-embedding
 ---
 
 <div class='feature-text'>

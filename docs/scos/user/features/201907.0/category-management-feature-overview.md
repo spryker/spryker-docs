@@ -1,110 +1,90 @@
 ---
-title: Category Management Feature Overview
+title: Category Management feature overview
 description: The feature allows keeping your product catalog organized and comprehensible for the customers who can easily navigate the storefront and search products quicker
 originalLink: https://documentation.spryker.com/v3/docs/category-management-feature-overview
 originalArticleId: d806fe41-f285-4ef3-affa-572839cae66b
 redirect_from:
   - /v3/docs/category-management-feature-overview
   - /v3/docs/en/category-management-feature-overview
+  - /v3/docs/category-management
+  - /v3/docs/en/category-management
+  - /v3/docs/catalog-management
+  - /v3/docs/en/catalog-management
+  - /v3/docs/category-pages
+  - /v3/docs/en/category-pages
+  - /v3/docs/define-category-hierarchy
+  - /v3/docs/en/define-category-hierarchy
+  - /v3/docs/product-catalog-management
+  - /v3/docs/en/product-catalog-management
+  - /v3/docs/product-to-category-association
+  - /v3/docs/en/product-to-category-association
 ---
 
-The Category management feature serves a double purpose. On one hand, it allows shop administrators to structure their products into a logical system where each product belongs to a category or a set of interrelated categories. On the other hand, this enables customers to easily navigate the front end and locate desired products quickly.
+A category is a set of products that share a common attribute and, therefore, can be united logically. The *Category Management* feature allows Back Office users to structure products into a logical system where each product belongs to a category or set of interrelated categories. You can [assign categories to all or individual stores](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/assigning-products-to-categories.html) from the Back Office or [import stores for categories](). For details on how a Back Office user can group products under categories, see [Assigning products to categories](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/assigning-products-to-categories.html).
 
-A category is a set of products which share a common attribute and, therefore, can be united logically. Categories are managed in the **Back Office > Category** section. 
-![gui-category.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Catalog+Management/Category+Management/Category+Management+Feature+Overview/gui-category.png) 
+## Root, parent, and child categories
 
-## Parent and Child Categories
-When there is a big number of products in a shop, it's essential to build a category tree to structure product catalog and enable customers to easily locate exactly what they want. This can be done with the help of **parent** and **child** categories.
+The product catalog is structured in a category tree, which consists of root, parent, and child categories.
 
-In hierarchical terms, a **parent category** is the one, that apart from having products assigned to it, has other categories assigned to it too.
+A *root category* is a base category that stands on top of the category hierarchy. Product and child categories are assigned to root categories, but root categories can not be assigned to anything. Also, a store can only be linked to one root category tree, while a root category tree can be linked to multiple stores. Root categories are added through [data import](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category.csv.html) and cannot be created in the Back Office, unlike other categories, which can be added in both ways.
 
-A **child category**, is the one that is assigned to another category. The latter is considered a parent category for the earlier child one.
+A parent category is a category that has products and other categories assigned to it. Categories, assigned to parent categories are referred to as child categories. Products belonging to a child category that is assigned to a parent one belong to the parent category too. You can assign child categories to parent ones via the Back Office or by importing the categories. For information on how to create child categories for the parent categories, see [Creating categories](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/assigning-products-to-categories.html) and [Managing categories](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/creating-categories.html). For information on how to import the child categories, see [File details: category.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category.csv.html).
 
-{% info_block infoBox %}
-Products, belonging to a child category which is assigned to a parent one, belong to the parent category too.
-{% endinfo_block %}
+On the Storefront, in comparison to parent category names, child category names are indented so that they can be identified.
 
-In the front end, in comparison to parent category names, child category names are protruded so that they can be identified.
-
-{% info_block infoBox %}
-Parent category "Cameras & camholders" has "Digital Cameras", "Camcorders", "Actioncams" and "Dashcams" child categories assigned to it. The "Cameras & camholders" category does not have a parent category.
-{% endinfo_block %})
+In the image below, the Cameras & Camcorders parent category has the Digital Cameras, Camcorders, Actioncams, and Dashcams child categories. Cameras & Camcorders is a root category, so it cannot have a parent one.
 
 ![parent-category.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Catalog+Management/Category+Management/Category+Management+Feature+Overview/parent-category.png)
 
-{% info_block infoBox %}
-"Tablets" child category is assigned to "Computers" parent category. The "Tablets" category does not have any child categories assigned to it.
+
+## Category templates
+
+A Back Office user defines the visual representation of a category on the Storefront by assigning a template to the category. For information on how to do that, see [Creating categories](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/creating-categories.html).
+
+For more information about types of category templates, see [Category page template types](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/creating-categories.html#category-page-template-types).
+
+## Category filters
+
+Through category filters, you can locale items better and add customizable category filters to the catalog pages on the Storefront. They also allow you to add, rearrange, and define filters for any given parameter in the category tree, such as price or brand. For details on how a Back Office user can add and manage category filters, see Managing category filters.
+
+### Filter preferences
+
+The default filter functionality includes s*tandard filters* and *dynamic filters and facers*.
+
+#### Standard filters
+
+On the Storefront, the standard filters allow buyers to narrow down the search results by filtering products according to the specified price range, product ratings, product labels, color, material, brand, etc. For more details about standard filters, see [Standard filters](/docs/scos/user/features/{{page.version}}/search/search-feature-overview/standard-filters-overview.html).
+
+#### Dynamic filters and facets
+
+Compared to standard filters, dynamic filters and facets allow creating more advanced filter options. For example, you can customize facet filters for any product attribute: the design, quantity of filters, or order criteria by which filters are displayed on the Storefront. For more details on how to configure the filter preferences in the Back Office, see [Managing filter preferences](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/search-and-filters/managing-filter-preferences.html).
+
+## Video tutorial
+Check out this video on managing categories:
+<iframe src="https://fast.wistia.net/embed/iframe/g3l3c7xt93" title="Category Management" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>
+
+## Current constraints
+
+Currently, the Category Management feature has the following functional constraints, which are going to be resolved in the future:
+
+* A category page is accessible via the same URL across all the stores. If the category is not available in the given store, the URL will lead to a 404.
+* Root categories cannot be created in the Back Office. They are imported through CSV files.
+
+* A store can only be linked to one root category tree, but in the future, a store will be able to have multiple root category trees.
+* Category URLs are locale-dependent.
+* Category URLs are available in all the stores that share the same locales.
+* Price Range Filter is not supported with merchant relations. That is why this filter is not included in the [B2B demo shop](/docs/scos/user/intro-to-spryker/{{site.version}}/b2b-suite.html). However, in the [B2C demo shop](/docs/scos/user/intro-to-spryker/{{site.version}}/b2c-suite.html), you can still filter the products using the price range filter.
+
+## Related Business User articles
+
+|BACK OFFICE USER GUIDES|
+|---|
+| [Create a category](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/creating-categories.html) |
+| [Assign products to categories](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/assigning-products-to-categories.html) |
+| [Manage categories](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/managing-categories.html) |
+
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Category management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/category-management-feature-walkthrough.html) for developers.
+
 {% endinfo_block %}
-
-![child-category.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Catalog+Management/Category+Management/Category+Management+Feature+Overview/child-category.png) 
-
-You can assign new child categories to a parent one in the **Back Office > Category** section using the **Add category to this node** action. For more details, see [Creating Categories](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/category/creating-categories.html).
-
-![add-new-category.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Catalog+Management/Category+Management/Category+Management+Feature+Overview/add-new-category.png) 
-
-Existing child categories are assigned to a parent one in a different way from the **Back Office > Category section > Edit Category** page.
-
-![add-existing-category.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Catalog+Management/Category+Management/Category+Management+Feature+Overview/add-existing-category.png) 
-
-You can assign a category to several parent ones using the **Additional Parents** form.
-
-{% info_block infoBox %}
-"Smart watches" category is assigned to "Product Bundles" and "Smart Wearables" categories.
-{% endinfo_block %}
-
-![multiple-parents.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Catalog+Management/Category+Management/Category+Management+Feature+Overview/multiple-parents.png) 
-
-The order of child categories shown in the category tree in the front end can be manually resorted in the **Back Office > Category** section using the **Re-sort child categories** action. For more information, see [Managing Categories](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/managing-categories.html).
-
-## Category Templates
-In the front end, a category can be represented by different templates which are used in different scenarios. In the back end, category template is specified in the **Back Office > Category section > Edit Category page > General information** tab. For more details on category template assignment, see [Creating Categories](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/category/creating-categories.html).
-
-### Catalog
-{% info_block infoBox %}
-If not specified otherwise, upon category creation, catalog category template is selected by default.
-{% endinfo_block %}
-
-{% info_block infoBox %}
-"Fujitsu ESPRIMO E420", "Lenovo ThinkStation P900" and "Fujitsu CELSIUS M740" products are assigned to "PCs & Workstations" category with the Catalog template.
-{% endinfo_block %}
-
-![catalog.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Catalog+Management/Category+Management/Category+Management+Feature+Overview/catalog.png) 
-
-### Catalog + CMS Block
-This category template allows you to show the products that are assigned to this category and one or more CMS blocks.
-
-{% info_block infoBox %}
-The same category displays assigned products and a CMS block with the Catalog + CMS block template.
-{% endinfo_block %}
-
-![catalog-cms-block.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/catalog-cms-block.png) 
-
-### CMS Block
-There might be situations where you wouldn't need to show any products, but one or more CMS blocks instead. This template does just that.
-{% info_block infoBox %}
-The same category displays a CMS block.
-{% endinfo_block %}
-
-![cms-block.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Catalog+Management/Category+Management/Category+Management+Feature+Overview/catalog-cms-block.png) 
-
-### Sub Categories Grid
-This category template shows the child categories assigned to this category apart from showing them in the category tree. It makes it easier to navigate product catalog when there are more than two hierarchy levels.
-
-{% info_block infoBox %}
-"Computers" category displays "Notebooks", "PCs & Workstations" and "Tablets" child categories assigned to it using the Sub Categories grid template.
-{% endinfo_block %}
-
-![sub-categories-grid.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Catalog+Management/Category+Management/Category+Management+Feature+Overview/sub-categories-grid.png) 
-
-The images, which are shown in the front end when the sub categories grid category template is chosen, are added in the **Back Office > Category section> Edit Category page > Image** tab. For more details, see [Creating Categories](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/category/creating-categories.html).
-
-## Current Constraints
-{% info_block infoBox %}
-Currently, the feature has the following functional constraints which are going to be resolved in the future.
-{% endinfo_block %}
-
-* categories are shared across all the stores of a project
-*  you can not restrict availability of a category to a store
-* a category page is accessible via the same URL across all the stores
-* category URLs are locale dependent
-* category URLs are available in all the stores that share the same locales

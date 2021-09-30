@@ -18,9 +18,3 @@ When customer transfers shopping list items to cart, their notes are taken over 
 * If an item **with notes exists in a shopping list, and is transferred to cart**, **where the same item already exists** (with or without notes), the item is added as a **separate item** with notes.
 * If an item **without notes** exists in a shopping list, and is transferred to cart, where the same item already exists **without notes**, the items are **merged**.
 * If an item **without notes exists in a shopping list, and is transferred to cart, where the same item already exists with a note**, the item is added as a **separate item**.
-
-{% info_block warningBox "Developer guides" %}
-
-Are you a developer? See [Shopping Lists feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shopping-lists-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}

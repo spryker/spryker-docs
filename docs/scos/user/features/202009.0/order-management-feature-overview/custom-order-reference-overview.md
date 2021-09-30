@@ -47,7 +47,7 @@ When working with the order in the Back Office, you, as a Back Office user, can 
 ## Custom Order Reference with the RFQ, approval process, and share cart via a link
 If you submit a [quote request](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html) and then convert it to the shopping cart, the cart gets locked. However, adding and updating the customer order reference for the locked cart is still possible.
 
-In the [Approval Process](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) scenarios, both an approver and buyer can add or edit the custom order reference during the checkout.
+In the [Approval Process](/docs/scos/user/features/{{page.version}}/approval-process/approval-process.html) scenarios, both an approver and buyer can add or edit the custom order reference during the checkout.
 
 When [sharing a cart via a link with external users](docs\scos\user\features\202108.0\persistent-cart-sharing-feature-overview.md), they can only view the custom order reference. However, when [sharing a cart via a link with internal users](docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\order-management-feature-integration.md), they can update the custom order reference for the shopping cart with the read-only and full-access permissions.
 

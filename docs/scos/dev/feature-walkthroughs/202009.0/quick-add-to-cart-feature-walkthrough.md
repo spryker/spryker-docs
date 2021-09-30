@@ -3,6 +3,11 @@ title: Quick Add to Cart feature walkthrough
 last_updated: Aug 19, 2021
 description: The Quick Add to Cart feature allows adding multiple products to cart at once
 template: concept-topic-template
+originalLink: https://documentation.spryker.com/v6/docs/quick-add-to-cart-module-relations
+originalArticleId: fba8beb6-674f-44e5-a9e9-43685fc1691e
+redirect_from:
+  - /v6/docs/quick-add-to-cart-module-relations
+  - /v6/docs/en/quick-add-to-cart-module-relations
 ---
 
 The _Quick Add to Cart_ feature allows adding multiple products to cart at once.

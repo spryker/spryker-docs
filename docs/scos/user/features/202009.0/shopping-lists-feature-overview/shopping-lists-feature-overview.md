@@ -8,6 +8,10 @@ redirect_from:
   - /2021080/docs/en/multiple-and-shared-shopping-lists-overview
   - /docs/multiple-and-shared-shopping-lists-overview
   - /docs/en/multiple-and-shared-shopping-lists-overview
+  - /2021080/docs/shopping-lists
+  - /2021080/docs/en/shopping-lists
+  - /docs/shopping-lists
+  - /docs/en/shopping-lists
 ---
 
 A shopping list is a list of the items that shoppers buy or plan to buy frequently or regularly. For example, a consumer can compile a shopping list of the products they purchase every week. Shopping lists allow a buyer to have a quick overview of the products they are planning to buy and the sum of money they are going to spend.
@@ -164,9 +168,22 @@ Starting from v.201907.0, every shopping list has Subtotal for all the items add
 
 </details>
 
+
+## Video tutorial
+
+Check out this video tutorial on how to use shopping lists.
+<iframe src="https://fast.wistia.net/embed/iframe/zk32pr3lgt" title="How to use Shopping Lists in Spryker" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>
+
 ## Current constraints
 
 We do not support product options in Subtotal of the Shopping Lists. For example, a shopping list includes 3 office chairs, each of them cost €15. The subtotal will show €45 for 3 items. But if we add a product option, e.g., gift wrapping for €5 each to these three office chairs, the subtotal should display €60 (€15/chair + €5/gift wrapping * 3). However, the shopping list will display just the product price - €45.
+
+## Related Business User articles
+
+|BACK OFFICE USER GUIDES|
+|---|
+| [Get a general idea of the shopping list widget](/docs/scos/user/features/{{page.version}}/shopping-lists/shopping-lists-feature-overview/shopping-list-widget-overview.html)  |
+| [Get a general idea of Shopping List Notes](/docs/scos/user/features/{{page.version}}/shopping-lists/shopping-lists-feature-overview/shopping-list-notes-overview.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

@@ -21,9 +21,3 @@ For customers' convenience and ease of use, the shopping list widget is placed i
 * *Create New List* button which adds a new list in *Shopping list* section.
 * *All Shopping Lists* button which leads to *Shopping Lists* page with all the shopping lists available for the customer.
 ![Shopping List widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Shopping+List+Widget/Shopping+List+Widget+Feature+Overview/Shopping-list-widget.png)
-
-{% info_block warningBox "Developer guides" %}
-
-Are you a developer? See [Shopping Lists feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shopping-lists-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}

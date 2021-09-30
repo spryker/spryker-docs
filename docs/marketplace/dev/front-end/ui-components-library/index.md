@@ -52,6 +52,7 @@ A lot of UI Components have extension points that may and some of them must be c
   - @spryker/data-transformer.object-map ([npm](https://www.npmjs.com/package/@spryker/data-transformer.object-map))
   - @spryker/data-transformer.pluck ([npm](https://www.npmjs.com/package/@spryker/data-transformer.pluck))
 - @spryker/datasource ([npm](https://www.npmjs.com/package/@spryker/datasource))
+- @spryker/datasource.http ([npm](https://www.npmjs.com/package/@spryker/datasource.http))
 - @spryker/datasource.inline ([npm](https://www.npmjs.com/package/@spryker/datasource.inline), [story](https://spy-storybook.web.app/?path=/story/datasourceinline--primary))
 - @spryker/datasource.inline.table ([npm](https://www.npmjs.com/package/@spryker/datasource.inline.table), [story](https://spy-storybook.web.app/?path=/story/tabledatasourceinlineservice--with-table))
 - @spryker/date-picker ([npm](https://www.npmjs.com/package/@spryker/date-picker), [story](https://spy-storybook.web.app/?path=/story/datepickercomponent--primary))

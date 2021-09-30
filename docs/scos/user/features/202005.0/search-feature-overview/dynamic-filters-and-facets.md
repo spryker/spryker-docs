@@ -1,13 +1,13 @@
 ---
 title: Dynamic Filters and Facets
 description: Freely define facet filters for any Product Attribute. The design, placement on page, quantity of filters, content and order are completely customizable.
-originalLink: https://documentation.spryker.com/v4/docs/dynamic-filter-facets
-originalArticleId: 2534868d-3989-424a-815a-e2815b5fda37
+originalLink: https://documentation.spryker.com/v5/docs/dynamic-filter-facets
+originalArticleId: dd6d65d1-1acf-4739-9041-3c3115ac3151
 redirect_from:
-  - /v4/docs/dynamic-filter-facets
-  - /v4/docs/en/dynamic-filter-facets
-  - /v4/docs/dynamic-filters-functionality
-  - /v4/docs/en/dynamic-filters-functionality
+  - /v5/docs/dynamic-filter-facets
+  - /v5/docs/en/dynamic-filter-facets
+  - /v5/docs/dynamic-filters-functionality
+  - /v5/docs/en/dynamic-filters-functionality
 ---
 
 You can freely define facet filters for any Product Attribute. The design, placement on page, quantity of filters, content and order by which they are listed in your shop are completely customizable. Apart from the Standard Filters there are others that make use of a product's metadata to create additional and more advanced filter options. An example hereof is the "New" Product Indication that allows you to display items that were added to your catalog recently.

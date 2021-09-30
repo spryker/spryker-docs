@@ -1,23 +1,21 @@
 ---
 title: Category Management feature overview
 description: The feature allows keeping your product catalog organized and comprehensible for the customers who can easily navigate the storefront and search products quicker
-originalLink: https://documentation.spryker.com/v3/docs/category-management-feature-overview
-originalArticleId: d806fe41-f285-4ef3-affa-572839cae66b
+originalLink: https://documentation.spryker.com/v1/docs/catalog-management
+originalArticleId: 5e9364e6-5a35-4fba-9b4c-bdc0f76bfdd5
 redirect_from:
-  - /v3/docs/category-management-feature-overview
-  - /v3/docs/en/category-management-feature-overview
-  - /v3/docs/category-management
-  - /v3/docs/en/category-management
-  - /v3/docs/catalog-management
-  - /v3/docs/en/catalog-management
-  - /v3/docs/category-pages
-  - /v3/docs/en/category-pages
-  - /v3/docs/define-category-hierarchy
-  - /v3/docs/en/define-category-hierarchy
-  - /v3/docs/product-catalog-management
-  - /v3/docs/en/product-catalog-management
-  - /v3/docs/product-to-category-association
-  - /v3/docs/en/product-to-category-association
+  - /v1/docs/catalog-management
+  - /v1/docs/en/catalog-management
+  - /v1/docs/category-management
+  - /v1/docs/en/category-management
+  - /v1/docs/category-pages
+  - /v1/docs/en/category-pages
+  - /v1/docs/define-category-hierarchy
+  - /v1/docs/en/define-category-hierarchy
+  - /v1/docs/product-catalog-management
+  - /v1/docs/en/product-catalog-management
+  - /v1/docs/product-to-category-association
+  - /v1/docs/en/product-to-category-association
 ---
 
 A category is a set of products that share a common attribute and, therefore, can be united logically. The *Category Management* feature allows Back Office users to structure products into a logical system where each product belongs to a category or set of interrelated categories. You can [assign categories to all or individual stores](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/assigning-products-to-categories.html) from the Back Office or [import stores for categories](). For details on how a Back Office user can group products under categories, see [Assigning products to categories](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/assigning-products-to-categories.html).

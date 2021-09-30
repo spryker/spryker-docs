@@ -9,7 +9,7 @@ This article provides details about the Table Feature Sync State component in th
 ## Overview
 
 Table Feature Sync State is a feature of the Table Component that allows 
-syncing the state of the table with browser URL (like pagination, filters, sorting, etc.).
+synchronizing the table state with the browser URL (like pagination, filters, sorting, etc.).
 See an example below, how to use the Sync State feature.
 
 Feature Configuration:

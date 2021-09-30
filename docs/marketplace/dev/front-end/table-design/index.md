@@ -38,7 +38,7 @@ Check out the table architecture diagram for better understanding:
 
 ### Configuration
 
-The Table Component is configured via [Table Configuration](/docs/marketplace/dev/front-end/table-design/table-configuration.html) 
+The Table Component is configured via Table Configuration<!--(/docs/marketplace/dev/front-end/table-design/table-configuration.html) -->
 that sets up how the table will behave and look like.
 
 ### Datasources
@@ -114,8 +114,8 @@ There is a way to trigger some [Actions](/docs/marketplace/dev/front-end/ui-comp
 
 A few common Table Features that can trigger actions are available in the UI library:
 
-- [Row actions](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-row-actions.html) - renders dropdown menu that contains actions applicable to the table row and on click triggers an Action which must be registered. 
-- [Batch actions](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-batch-actions.html) - allows triggering batch/multiple actions from rows. 
+- Row actions<!---(/docs/marketplace/dev/front-end/table-design/table-features/table-feature-row-actions.html)-->- renders dropdown menu that contains actions applicable to the table row and on click triggers an Action which must be registered. 
+- Batch actions <!---(/docs/marketplace/dev/front-end/table-design/table-features/table-feature-batch-actions.html)-->- allows triggering batch/multiple actions from rows. 
 
 ## Interfaces
  

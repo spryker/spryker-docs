@@ -5,6 +5,17 @@ entries:
   - product: Marketplace
     nested:
 
+      - title: Marketplace architecture overview
+        nested:
+          - title: Marketplace Application composition
+            url: /docs/marketplace/dev/architecture-overview/marketplace-application-composition.html
+          
+          - title: Marketplace domain model
+            url: /docs/marketplace/dev/architecture-overview/marketplace-domain-model.html
+          
+          - title: Merchant Portal architecture overview
+            url: /docs/marketplace/dev/architecture-overview/marketplace-merchant-portal-architecture-overview.html
+
       - title: Setup
         nested:
           - title: System requirements
@@ -391,16 +402,17 @@ entries:
           url: /docs/marketplace/dev/front-end/project-structure.html
 
         - title: "Extending the project"
-          url: /docs/marketplace/dev/front-end/extending-the-project
+          url: /docs/marketplace/dev/front-end/extending-the-project/
           nested:
 
           - title: "Migration guide - Extending the project"
             url: /docs/marketplace/dev/front-end/extending-the-project/migration-guide-extending-the-project.html
 
-        - title: Table design
+        - title: "Table design"
+          url: /docs/marketplace/dev/front-end/table-design/
           nested:
 
-            - title: Table Column Types
+            - title: "Table Column Types"
               url: /docs/marketplace/dev/front-end/table-design/table-column-types/
               nested:
 
@@ -435,16 +447,19 @@ entries:
               url: /docs/marketplace/dev/front-end/table-design/table-features/
               nested:
 
+                - title: "Title"
+                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-title.html
+
                 - title: "Pagination"
                   url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-pagination.html
 
                 - title: "Total"
                   url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-total.html
 
-            - title: "Table Filter extension"
-              url: /docs/marketplace/dev/front-end/table-design/table-filter-extension.html
+            - title: "Table Filters"
+              url: /docs/marketplace/dev/front-end/table-design/table-filters/
 
-        - title: UI components library
+        - title: "UI components library"
           nested:
 
             - title: "Actions"

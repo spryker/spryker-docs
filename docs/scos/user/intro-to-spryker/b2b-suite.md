@@ -46,10 +46,10 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 * [Multiple Carts Per User](https://documentation.spryker.com/2021080/docs/multiple-carts)
 * [Quick Order](https://documentation.spryker.com/2021080/docs/quick-add-to-cart)
 
-[**Shopping List**](/docs/scos/user/features/{{page.version}}/shopping-lists/shopping-lists.html):
+[**Shopping List**](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html):
 
 * [Multiple and Shared Shopping Lists](https://documentation.spryker.com/2021080/docs/multiple-shared-shopping-lists)
-* [Shopping List Notes](/docs/scos/user/features/{{page.version}}/shopping-lists/shopping-lists.html-notes)
+* [Shopping List Notes](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html)
 
 [**Packaging & Measurement Units**](https://documentation.spryker.com/2021080/docs/packaging-units):
 

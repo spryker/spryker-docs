@@ -111,7 +111,7 @@ To share a shopping list:
 2. From the **drop-down list** next to the business unit or customer you want to share a shopping list with, select the appropriate access rights level.
 
 {% info_block infoBox %}
-See [Permissions Management for Shared Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/printing-a-shopping-list/printing-a-shopping-list.html
+See [Permissions Management for Shared Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/multiple-and-shared-shopping-lists-overview.html
 {% endinfo_block %} to learn more about types of shopping list access rights.)
 ![Share page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Lists/share-page.png) 
 

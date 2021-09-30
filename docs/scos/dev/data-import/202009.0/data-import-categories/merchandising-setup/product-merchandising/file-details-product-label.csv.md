@@ -7,7 +7,7 @@ redirect_from:
   - /v6/docs/en/file-details-product-labelcsv
 ---
 
-This article contains content of the **product_label.csv** file to configure [Product Label](/docs/scos/user/features/{{page.version}}/product-labels/product-labels.html) information on your Spryker Demo Shop.
+This article contains content of the **product_label.csv** file to configure [Product Label](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:

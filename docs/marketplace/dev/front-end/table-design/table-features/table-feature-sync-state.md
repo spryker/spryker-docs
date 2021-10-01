@@ -8,14 +8,13 @@ This article provides details about the Table Feature Sync State component in th
 
 ## Overview
 
-Table Feature Sync State is a feature of the Table Component that provides 
-synchronizing the table state with the browser URL (like pagination, filters, sorting, etc.).
-See an example below, how to use the Sync State feature.
+Table Feature Sync State is a feature of the Table Component that synchronizes the table state with the browser URL (like pagination, filters, sorting, etc.).
+Check out this example below to see how to use the Sync State feature.
 
-Feature Configuration:
+Feature configuration:
 
-`enabled` - will enable feature via config.   
-`tableId` - `id` of the table that will sync the state of the table with browser URL.  
+- `enabled` - enables feature via config.   
+- `tableId` - is an`id` of the table that syncs the state of the table with the browser URL.  
 
 ```html
 <spy-table [config]="{
@@ -29,7 +28,9 @@ Feature Configuration:
 </spy-table>
 ```
 
-## Feature Registration
+## Feature registration
+
+Register the feature:
 
 ```ts
 @NgModule({
@@ -48,7 +49,7 @@ export class RootModule {}
 
 ## Interfaces
 
-Below you can find interfaces for Table Feature Sync State.
+Below you can find an interface for the Table Feature Sync State.
 
 ```ts
 export interface TableSyncStateConfig extends TableFeatureConfig {

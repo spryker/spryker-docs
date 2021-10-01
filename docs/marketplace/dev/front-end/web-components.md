@@ -15,7 +15,7 @@ Some of the internal component will always remain as Angular Component unless th
 
 Web Components is a suite of different technologies allowing you to create reusable custom elements — with their functionality encapsulated away from the rest of your code — and utilize them in your web apps.
 
-You can see the example of registration angular components as web components below:
+You can see the example of registration Angular components as web components below:
 
 ```ts
 import { NgModule } from '@angular/core';

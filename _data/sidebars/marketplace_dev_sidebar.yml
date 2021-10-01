@@ -235,52 +235,52 @@ entries:
           - title: Abstract products
             nested:
 
-              - title:  Retrieving abstract products
+              - title: Retrieving abstract products
                 url: /docs/marketplace/dev/glue-api-guides/abstract-products/retrieving-abstract-products.html
 
           - title: Concrete products
             nested:
 
-              - title:  Retrieving concrete products
+              - title: Retrieving concrete products
                 url: /docs/marketplace/dev/glue-api-guides/concrete-products/retrieving-concrete-products.html
 
-              - title:  Retrieving product offers of concrete products
+              - title: Retrieving product offers of concrete products
                 url: /docs/marketplace/dev/glue-api-guides/concrete-products/retrieving-product-offers-of-concrete-products.html
 
           - title: Сarts of registered users
             nested:
 
-              - title:  Managing carts of registered users
+              - title: Managing carts of registered users
                 url: /docs/marketplace/dev/glue-api-guides/carts-of-registered-users/managing-carts-of-registered-users.html
 
-              - title:  Managing items in carts of registered users
+              - title: Managing items in carts of registered users
                 url: /docs/marketplace/dev/glue-api-guides/carts-of-registered-users/managing-items-in-carts-of-registered-users.html
 
           - title: Content items
             nested:
 
-              - title:  Retrieving abstract products in abstract product lists
+              - title: Retrieving abstract products in abstract product lists
                 url: /docs/marketplace/dev/glue-api-guides/content-items/retrieving-abstract-products-in-abstract-product-lists.html
 
           - title: Guest carts
             nested:
 
-              - title:  Managing guest carts
+              - title: Managing guest carts
                 url: /docs/marketplace/dev/glue-api-guides/guest-carts/managing-guest-carts.html
 
-              - title:  Managing items in carts of registered users
+              - title: Managing items in carts of registered users
                 url: /docs/marketplace/dev/glue-api-guides/guest-carts/managing-guest-cart-items.html
 
           - title: Merchants
             nested:
 
-              - title:  Retrieving merchants
+              - title: Retrieving merchants
                 url: /docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchants.html
 
-              - title:  Retrieving merchant addresses
+              - title: Retrieving merchant addresses
                 url: /docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchant-addresses.html
 
-              - title:  Retrieving merchant opening hours
+              - title: Retrieving merchant opening hours
                 url: /docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchant-opening-hours.html
 
           - title: Product offers

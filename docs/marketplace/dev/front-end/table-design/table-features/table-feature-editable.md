@@ -42,15 +42,15 @@ Let's take a closer look at all the possible options.
 
 `create`:  
   - `addButon` - an object with the `Add button` configuration like `title`, `icon`, `size`, etc..  
-  - `cancelButon` - an object with the `Cancel button` configuration like `title`, `icon`, `size`, etc.
+  - `cancelButon` - an object with the `Cancel button` configuration like `title` and `icon`.
   - `disableForCols` - an array with cell `ids` to be disabled.  
   - `formInputName` - will create `input[type=hidden]` element with the specific name.  
   - `initialData` - initials data for cells and object with errors for rows and cells.  
   
 `update`:
   - `url` - request url.  
-  - `saveButon` - an object with the `Save button` configuration like `title`, `icon`, `size`, etc (displays in the `update` popup).  
-  - `cancelButon` - an object with the `Cancel button` configuration like `title`, `icon`, `size`, etc (displays in the `update` popup).  
+  - `saveButon` - an object with the `Save button` configuration like `title` and `icon` (displays in the `update` popup).  
+  - `cancelButon` - an object with the `Cancel button` configuration like `title` and `icon` (displays in the `update` popup).  
   - `disableForCols` - an array with cell `ids` to be disabled.  
 
 ```html

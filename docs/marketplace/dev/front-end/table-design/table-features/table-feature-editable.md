@@ -37,11 +37,11 @@ Let's take a closer look at all the possible options.
 `columns`:  
   - `id` - a cell `id`.  
   - `type` - a cell `type`.  
-  - `typeOptions`:  
+  - `typeOptions` (see more about [Column Type](/docs/marketplace/dev/front-end/table-design/table-column-types/) options):  
     - `value` - will set default value to the cell of the newly added row.  
 
 `create`:  
-  - `addButon` - an object with `title` and `icon` for the `Add button`.  
+  - `addButon` - an object with the `Add button` configuration like `title`, `icon`, `size`, etc..  
   - `cancelButon` - an object with `title` and `icon` for the `Cancel button`.  
   - `disableForCols` - an array with cell `ids` to be disabled.  
   - `formInputName` - will create `input[type=hidden]` element with the specific name.  
@@ -51,7 +51,7 @@ Let's take a closer look at all the possible options.
   - `url` - request url.  
   - `saveButon` - an object with `title` and `icon` for the `Save button` (displays in the `update` popup).  
   - `cancelButon` - an object with `title` and `icon` for the `Cancel button` (displays in the `update` popup).  
-  - `disableForCols` - an array with cell `ids` to be disabled.  `
+  - `disableForCols` - an array with cell `ids` to be disabled.  
 
 ```html
 <spy-table [config]="{
@@ -109,6 +109,15 @@ Let's take a closer look at all the possible options.
 ## Feature Registration
 
 ```ts
+declare module '@spryker/table' {
+  interface TableConfig {
+    editable?: TableEditableConfig;
+  }
+}
+```
+
+```ts
+// Dynamic
 @NgModule({
   imports: [
     TableModule.forRoot(),
@@ -121,6 +130,13 @@ Let's take a closer look at all the possible options.
   ],
 })
 export class RootModule {}
+```
+
+```html
+// Via HTML
+<spy-table [config]="config">
+    <spy-table-editable-feature spy-table-feature></spy-table-editable-feature>
+</spy-table>
 ```
 
 ## Interfaces

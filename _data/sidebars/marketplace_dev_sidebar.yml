@@ -463,6 +463,7 @@ entries:
               url: /docs/marketplace/dev/front-end/table-design/table-filters/
 
         - title: "UI components library"
+          url: /docs/marketplace/dev/front-end/ui-components-library/
           nested:
 
             - title: "Actions"

@@ -1,20 +1,28 @@
 ---
 title: UI Components Library
-description: This articles provides details about ui components library.
+description: This articles provides details about UI components library.
 template: concept-topic-template
 ---
 
-This articles provides details about ui components library.
+This article provides details about the UI components library.
 
 ## Introduction
 
-There is a set of UI Angular Components that is built separately from the Spryker Core and distributed via NPM Registry independently.
-Each package can be installed via npm command `npm install @spryker/package_name` or yarn `yarn add @spryker/package_name`.
-UI Angular Components is built using Angular 9, rxjs and Ant Design under the hood.
-These components are used withing Spryker Core modules of Merchant Portal. They can be used inside angular ecosystem as default angular components or can be transformed as web components and reuse inside spryker `twig` modules (see [web components](TBD)).
-A lot of UI Components have extension points that may and some of them must be configured on the project level (e.g `Table`, `Datasource`)
+Separate from Spryker Core, there is a set of UI Angular Components that are distributed independently via NPM Registry. Each package can be installed via npm or yarn commands:
+
+```bash
+npm install @spryker/package_name
+```
+```bash
+yarn add @spryker/package_name
+```
+
+Under the hood, the UI Angular Components are built using Angular 9, rxjs and Ant Design. These components are used within the Spryker Core modules of the Merchant Portal. You can use them inside the angular ecosystem as default angular components, or you can transform them into web components and reuse them inside the Spryker `twig` modules (see web components<!---LINK-->).
+Many UI Components have extension points, and some of them must be configured on a project-level (e.g `Table`, `Datasource`).
 
 ## UI Components List
+
+The following is a list of available UI components:
 
 - @spryker/actions ([npm](https://www.npmjs.com/package/@spryker/actions))
   - @spryker/actions.close-drawer ([npm](https://www.npmjs.com/package/@spryker/actions.close-drawer), [story](https://spy-storybook.web.app/?path=/story/closedraweractionhandlerservice--primary))

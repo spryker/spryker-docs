@@ -57,7 +57,6 @@ Make sure that the following changes have been applied in transfer objects:
 | RestOrdersAttributesTransfer.merchantReferences | property | Created | src/Generated/Shared/Transfer/RestOrdersAttributesTransfer |
 | RestOrderDetailsAttributesTransfer.merchantReferences | property | Created | src/Generated/Shared/Transfer/RestOrderDetailsAttributesTransfer |
 | RestOrderItemsAttributesTransfer.merchantReference | property | Created | src/Generated/Shared/Transfer/RestOrderItemsAttributesTransfer |
-| MerchantStorage.merchantProfile | property | Created | src/Generated/Shared/Transfer/MerchantStorageTransfer |
 | MerchantStorageProfileTransfer.description | property | Created | src/Generated/Shared/Transfer/MerchantStorageProfileTransfer |
 | MerchantStorageProfileTransfer.bannerUrl | property | Created | src/Generated/Shared/Transfer/MerchantStorageProfileTransfer |
 | MerchantStorageProfileTransfer.deliveryTime | property | Created | src/Generated/Shared/Transfer/MerchantStorageProfileTransfer |

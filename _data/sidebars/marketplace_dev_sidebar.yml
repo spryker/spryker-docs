@@ -462,6 +462,9 @@ entries:
                 - title: "Row Actions"
                   url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-row-actions.html
 
+                - title: "Batch Actions"
+                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-batch-actions.html
+
             - title: "Table Filters"
               url: /docs/marketplace/dev/front-end/table-design/table-filters/
 

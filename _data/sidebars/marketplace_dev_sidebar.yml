@@ -468,6 +468,9 @@ entries:
                 - title: "Search"
                   url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-search.html
 
+                - title: "Sync State"
+                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-sync-state.html
+
             - title: "Table Filters"
               url: /docs/marketplace/dev/front-end/table-design/table-filters/
 

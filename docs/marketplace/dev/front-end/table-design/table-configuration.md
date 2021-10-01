@@ -12,8 +12,8 @@ Table Configuration is basically a data structure that allows to customize behav
 
 Table config has 2 required sections:
 
-- [Column](#columns-configuration) definition that describes what columns user will see and what data to expect
-- [Datasource](/docs/marketplace/dev/front-end/ui-components-library/datasources/index.html) type that describes how the data should be provided to the table.
+- [Columns](#columns-configuration) definition that describes what columns user will see and what data to expect
+- [Datasource](/docs/marketplace/dev/front-end/ui-components-library/datasources/l) type that describes how the data should be provided to the table.
 
 The rest of the sections are reserved for features (for example Pagination Feature defines pagination section and it’s own properties to configure it).
 
@@ -39,8 +39,10 @@ The rest of the sections are reserved for features (for example Pagination Featu
 
 ### Columns Configuration
 
-Columns might be configured with two props. There is possible to use `url` to get columns list dynamic, in this case you should assign `columnsUrl` property in the `table` config.
+Columns might be configured with two props. There is possible to use `url` to get columns list dynamically, in this case, the `columnsUrl` property should be assigned in the `table` config.
 Also exists another way to define columns data - static array of columns objects which should be assigned to the `columns` property.
+
+#### Column Config Example
 
 ```ts
 [
@@ -96,7 +98,9 @@ Also exists another way to define columns data - static array of columns objects
 
 ## Type Options Interpolation and Mapping
 
-Table Column config support interpolation. The variable inside curly brackets (e.g `${value}, ${row.title}...`) in the `typeOptions` object will be replaced to the appropriate value from the table context. Full table context is shown below:
+Table Column config supports interpolation. The variable inside curly brackets (e.g `${value}, ${row.title}...`) in the `typeOptions` object will be replaced to the appropriate value from the table context.
+
+The full table context is shown below:
 
 ```ts
 interface TableColumnTplContext extends TableColumnContext {
@@ -127,7 +131,7 @@ type TableDataRow = Record<TableColumn['id'], TableDataValue>;
 type TableDataValue = unknown | unknown[];
 ```
 
-Also Table Column support override defined `typeOptions` properties depending on the table column value. To allow this opportunity we should add `typeOptionsMappings` object where we define `typeOption` key and all available variants.
+Also, Table Column supports overriding defined `typeOptions` properties depending on the table column value. To allow this opportunity the `typeOptionsMappings` object should be added where the `typeOption` key and all available variants are defined.
 
 Example
 
@@ -155,7 +159,7 @@ Example
 // default text(table column value) and default color('red') - in other cases
 ```
 
-To get more info about table columns see [Column Types](/docs/marketplace/dev/front-end/table-design/table-column-types/index.html).
+To get more info about table columns see [Column Types](/docs/marketplace/dev/front-end/table-design/table-column-types/).
 
 ## Interfaces
 

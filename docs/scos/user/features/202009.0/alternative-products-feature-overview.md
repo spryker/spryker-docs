@@ -6,6 +6,8 @@ originalArticleId: 15c35c98-1143-498e-b120-0933cfca03ce
 redirect_from:
   - /v6/docs/alternative-products-overview
   - /v6/docs/en/alternative-products-overview
+  - /v6/docs/alternative-products
+  - /v6/docs/en/alternative-products
 ---
 
 Suggesting product alternatives and substitutes is a great way to ease the user’s product finding process. Instead of forcing the user to hunt around product lists until they find just the right product, product alternatives let the user to jump from one product page to the next until they find a relevant item. It is an effective way to keep users on product pages.

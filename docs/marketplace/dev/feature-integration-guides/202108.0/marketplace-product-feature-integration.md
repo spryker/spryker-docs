@@ -114,9 +114,16 @@ Generate a new translation cache for Zed:
 console translator:generate-cache
 ```
 
-### 4) Configure export to Elasticsearch
+### 4) Configure export to Redis and Elasticsearch
 
-This step publishes tables on change (create, edit) to `spy_product_search`, `spy_product_abstract_page_search`, `spy_product_concrete_page_search` and synchronizes the data to Search.
+Install the following plugins:
+
+| PLUGIN | DESCRIPTION  | PREREQUISITES | NAMESPACE |
+| --------------------- | ------------------- | --------- | -------------------- |
+| Merchant\MerchantProductSearchWritePublisherPlugin           | Publishes the product by merchant ids to ES. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher |
+| MerchantProduct\MerchantProductSearchWritePublisherPlugin    | Publishes the product by merchant product abstract ids to ES. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher |
+| MerchantUpdatePublisherPlugin                                | Publishes the product by merchant ids to Redis. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\Merchant |
+| MerchantProductWritePublisherPlugin                          | Publishes the product by merchant product abstract ids to Redis. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\MerchantProduct |
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -125,8 +132,10 @@ This step publishes tables on change (create, edit) to `spy_product_search`, `sp
 
 namespace Pyz\Zed\Publisher;
 
-use Spryker\Zed\MerchantProductOptionStorage\Communication\Plugin\Publisher\MerchantProductOption\MerchantProductOptionGroupWritePublisherPlugin;
 use Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher\Merchant\MerchantProductSearchWritePublisherPlugin as MerchantMerchantProductSearchWritePublisherPlugin;
+use Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher\MerchantProduct\MerchantProductSearchWritePublisherPlugin;
+use Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\Merchant\MerchantUpdatePublisherPlugin;
+use Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\MerchantProduct\MerchantProductWritePublisherPlugin;
 use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
 
 class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
@@ -137,6 +146,8 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     protected function getPublisherPlugins(): array
     {
         return [
+            new MerchantProductWritePublisherPlugin(),
+            new MerchantUpdatePublisherPlugin(),
             new MerchantMerchantProductSearchWritePublisherPlugin(),
             new MerchantProductSearchWritePublisherPlugin(),
         ]
@@ -146,7 +157,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when merchant product entities are created or updated through ORM, they are exported to Elastica accordingly.
+Make sure that merchant product data appears in search engine and in storage.
 
 {% endinfo_block %}
 
@@ -162,11 +173,7 @@ Enable the following behaviors by registering the plugins:
 | MerchantProductAbstractMapExpanderPlugin                     | Adds merchant names to product abstract search data.         |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
 | MerchantProductPageDataExpanderPlugin                        | Expands the provided ProductAbstractPageSearch transfer object's data by merchant names. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
 | MerchantProductPageDataLoaderPlugin                          | Expands ProductPageLoadTransfer object with merchant data.   |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
-| Merchant\MerchantProductSearchWritePublisherPlugin           | Publishes the product by merchant ids to ES. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher |
-| MerchantProduct\MerchantProductSearchWritePublisherPlugin    | Publishes the product by merchant product abstract ids to ES. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher |
 | MerchantProductAbstractStorageExpanderPlugin                 | Expands product abstract storage data with merchant references. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\ProductStorage |
-| MerchantUpdatePublisherPlugin                                | Publishes the product by merchant ids to Redis. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\Merchant |
-| MerchantProductWritePublisherPlugin                          | Publishes the product by merchant product abstract ids to Redis. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\MerchantProduct |
 | MerchantProductProductAbstractPostCreatePlugin | Creates a new merchant product abstract entity if `ProductAbstractTransfer.idMerchant` is set. | None | Spryker\Zed\MerchantProduct\Communication\Plugin\Product |
 
 **src/Pyz/Zed/Product/ProductDependencyProvider.php**
@@ -300,51 +307,6 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 {% info_block warningBox "Verification" %}
 
 Make sure the `de_page` Elasticsearch index for any product that belongs (see `spy_merchant_product_abstract`) to active and approved merchant, contains merchant names. (indexes can be accessed by any Elasticsearch client, e.g., Kibana. For Docker configuration details, see [Configuring services](https://documentation.spryker.com/docs/services).
-
-{% endinfo_block %}
-
-**src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\Publisher;
-
-use Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher\Merchant\MerchantProductSearchWritePublisherPlugin as MerchantMerchantProductSearchWritePublisherPlugin;
-use Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher\MerchantProduct\MerchantProductSearchWritePublisherPlugin;
-use Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\Merchant\MerchantUpdatePublisherPlugin;
-use Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\MerchantProduct\MerchantProductWritePublisherPlugin;
-use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
-
-class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
-{
-    /**
-     * @return \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface[]
-     */
-    protected function getMerchantProductPlugins(): array
-    {
-        return [
-            new MerchantProductWritePublisherPlugin(),
-            new MerchantUpdatePublisherPlugin(),
-        ];
-    }
-
-    /**
-     * @return \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface[]
-     */
-    protected function getMerchantProductSearchPlugins()
-    {
-        return [
-            new MerchantMerchantProductSearchWritePublisherPlugin(),
-            new MerchantProductSearchWritePublisherPlugin(),
-        ];
-    }
-}
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that merchant product data appears in search engine and in storage.
 
 {% endinfo_block %}
 

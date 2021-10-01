@@ -48,6 +48,14 @@ export class RootModule {}
 
 ```html
 // Via HTML
+@NgModule({
+  imports: [
+    TableModule.forRoot(),
+    TableSettingsFeatureModule,
+  ],
+})
+export class RootModule {}
+
 <spy-table [config]="config" [tableId]="tableId">
   <spy-table-settings-feature spy-table-feature></spy-table-settings-feature>
 </spy-table>

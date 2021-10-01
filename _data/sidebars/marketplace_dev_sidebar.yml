@@ -5,10 +5,24 @@ entries:
   - product: Marketplace
     nested:
 
+      - title: Marketplace architecture overview
+        nested:
+          - title: Marketplace Application composition
+            url: /docs/marketplace/dev/architecture-overview/marketplace-application-composition.html
+          
+          - title: Marketplace domain model
+            url: /docs/marketplace/dev/architecture-overview/marketplace-domain-model.html
+          
+          - title: Merchant Portal architecture overview
+            url: /docs/marketplace/dev/architecture-overview/marketplace-merchant-portal-architecture-overview.html
+
       - title: Setup
         nested:
           - title: System requirements
             url: /docs/marketplace/dev/setup/system-requirements.html
+
+          - title: Installation
+            url: /docs/marketplace/dev/setup/installation.html
 
       - title: Feature walkthroughs
         nested:
@@ -388,19 +402,18 @@ entries:
           url: /docs/marketplace/dev/front-end/project-structure.html
 
         - title: "Extending the project"
-          url: /docs/marketplace/dev/front-end/extending-the-project
+          url: /docs/marketplace/dev/front-end/extending-the-project/
           nested:
 
           - title: "Migration guide - Extending the project"
             url: /docs/marketplace/dev/front-end/extending-the-project/migration-guide-extending-the-project.html
 
-        - title: Table design
+        - title: "Table design"
+          url: /docs/marketplace/dev/front-end/table-design/
           nested:
 
-            - title: "Table Column Type extension"
-              url: /docs/marketplace/dev/front-end/table-design/table-column-type-extension.html
-
-            - title: Table Column Types
+            - title: "Table Column Types"
+              url: /docs/marketplace/dev/front-end/table-design/table-column-types/
               nested:
 
                 - title: "List"
@@ -409,45 +422,93 @@ entries:
                 - title: "Autocomplete"
                   url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-autocomplete.html
 
+                - title: "Chip"
+                  url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-chip.html
+
+                - title: "Date"
+                  url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-date.html
+
+                - title: "Dynamic"
+                  url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-dynamic.html
+
+                - title: "Image"
+                  url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-image.html
+
+                - title: "Input"
+                  url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-input.html
+
+                - title: "Select"
+                  url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-select.html
+
+                - title: "Text"
+                  url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-text.html   
+
             - title: "Table Features"
               url: /docs/marketplace/dev/front-end/table-design/table-features/
               nested:
 
+                - title: "Title"
+                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-title.html
+
+                - title: "Pagination"
+                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-pagination.html
+
+                - title: "Total"
+                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-total.html
+
+                - title: "Selectable"
+                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-selectable.html
+
                 - title: "Row Actions"
                   url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-row-actions.html
 
-            - title: "Table Filter extension"
-              url: /docs/marketplace/dev/front-end/table-design/table-filter-extension.html
+            - title: "Table Filters"
+              url: /docs/marketplace/dev/front-end/table-design/table-filters/
 
-        - title: UI components library
+        - title: "UI components library"
+          url: /docs/marketplace/dev/front-end/ui-components-library/
           nested:
 
             - title: "Actions"
+              url: /docs/marketplace/dev/front-end/ui-components-library/actions/
               nested:
 
-                - title: "Actions HTTP"
+                - title: "HTTP"
                   url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-http.html
 
-                - title: "Actions Refresh Parent Table"
+                - title: "Refresh Parent Table"
                   url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-parent-table.html
 
-                - title: "Actions Refresh Table"
+                - title: "Refresh Table"
                   url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-table.html
 
-                - title: "Actions Redirect"
+                - title: "Redirect"
                   url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-redirect.html
 
-                - title: "Actions Refresh Drawer"
+                - title: "Drawer"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-drawer.html
+
+                - title: "Refresh Drawer"
                   url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-drawer.html
 
-                - title: "Actions Close Drawer"
+                - title: "Close Drawer"
                   url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-close-drawer.html
 
-                - title: "Actions Notification"
+                - title: "Notification"
                   url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-notification.html
 
             - title: "Datasources"
-              url: /docs/marketplace/dev/front-end/ui-components-library/datasources.html
+              url: /docs/marketplace/dev/front-end/ui-components-library/datasources/
+              nested:
+
+                - title: "Inline Table"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-inline-table.html
+
+                - title: "Http"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-http.html
+
+                - title: "Inline"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-inline.html
 
             - title: "Data Transformers"
               url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/

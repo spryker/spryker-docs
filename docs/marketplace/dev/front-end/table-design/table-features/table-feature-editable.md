@@ -34,7 +34,7 @@ Feature Configuration:
 
 Let's take a closer look at all the possible options.
 
-`columns`:  
+`columns` (Only required properties are listed here. The entire interface can be found [here](https://docs.spryker.com/docs/marketplace/dev/front-end/table-design/#interfaces).):  
   - `id` - a cell `id`.  
   - `type` - a cell `type`.  
   - `typeOptions` (see more about [Column Type](/docs/marketplace/dev/front-end/table-design/table-column-types/) options):  

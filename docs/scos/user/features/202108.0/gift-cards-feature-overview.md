@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/gift-cards-feature-overview
 ---
 
-The _Gift Card_ feature allows you to create a virtual product with a chosen value amount. The purchase of a gift card generates an individual code that can then be used as a payment method during checkout.
+The _Gift Card_ feature allows you to create a special product type with a chosen value amount. The purchase of a gift card generates an individual code that can then be used as a payment method during checkout.
 
 A Gift Card is a prepaid certificate entitling its owner to purchase products for the gift card’s value.
 

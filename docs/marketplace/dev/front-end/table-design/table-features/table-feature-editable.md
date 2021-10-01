@@ -49,8 +49,8 @@ Let's take a closer look at all the possible options.
   
 `update`:
   - `url` - request url.  
-  - `saveButon` - an object with `title` and `icon` for the `Save button` (displays in the `update` popup).  
-  - `cancelButon` - an object with `title` and `icon` for the `Cancel button` (displays in the `update` popup).  
+  - `saveButon` - an object with the `Save button` configuration like `title`, `icon`, `size`, etc (displays in the `update` popup).  
+  - `cancelButon` - an object with the `Cancel button` configuration like `title`, `icon`, `size`, etc (displays in the `update` popup).  
   - `disableForCols` - an array with cell `ids` to be disabled.  
 
 ```html

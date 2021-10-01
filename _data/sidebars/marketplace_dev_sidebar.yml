@@ -421,7 +421,7 @@ entries:
 
                 - title: "Autocomplete"
                   url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-autocomplete.html
-
+         
                 - title: "Chip"
                   url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-chip.html
 
@@ -464,6 +464,9 @@ entries:
 
                 - title: "Batch Actions"
                   url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-batch-actions.html
+
+                - title: "Search"
+                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-search.html
 
             - title: "Table Filters"
               url: /docs/marketplace/dev/front-end/table-design/table-filters/

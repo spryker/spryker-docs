@@ -56,8 +56,6 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 * [Packaging Units](https://documentation.spryker.com/2021080/docs/packaging-units)
 * [Measurement Units](https://documentation.spryker.com/2021080/docs/measurement-units)
 
-[**Workflow & Process Management**](https://documentation.spryker.com/2021080/docs/workflow-process-management):
-
 * [Approval Process](https://documentation.spryker.com/2021080/docs/approval-process)
 * [Quotation & Offer Management](/docs/scos/user/features/{{page.version}}/quotation-process/quotation-process.html)
 * [Punch Out](https://documentation.spryker.com/2021080/docs/punchout-201907)

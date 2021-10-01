@@ -6,6 +6,8 @@ originalArticleId: 9830dad0-f2fa-47f3-84ce-09d8bd77ef26
 redirect_from:
   - /v2/docs/product-reviews
   - /v2/docs/en/product-reviews
+  - /v2/docs/product-review-feature-configuration
+  - /v2/docs/en/product-review-feature-configuration
 ---
 
 The Product Reviews feature allows customers to add reviews and ratings to abstract products. In a dedicated Back Office section, you can manage customers' ratings and reviews to moderate content and collect information before publishing them live. Rating information can be used for sorting and filtering products. Product ratings and reviews can be displayed for customers on demand.

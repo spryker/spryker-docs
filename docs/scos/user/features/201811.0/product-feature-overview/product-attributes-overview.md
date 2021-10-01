@@ -6,6 +6,8 @@ originalArticleId: 15b27022-e72e-4a3a-b70d-b56c42e34d30
 redirect_from:
   - /v1/docs/product-attributes
   - /v1/docs/en/product-attributes
+  - /v1/docs/super-attributes
+  - /v1/docs/en/super-attributes
 ---
 
 Creating and managing product attributes is the first step in enriching your product data. It is an essential part of maintaining and improving the online shop for your customers. Attributes can serve different purposes and are therefore stored in different ways. They may be used not only for product management, but also to improve search and filter functionality in the shop.

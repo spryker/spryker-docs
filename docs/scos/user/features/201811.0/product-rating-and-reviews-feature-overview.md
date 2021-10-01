@@ -6,6 +6,11 @@ originalArticleId: 2b5b1a00-8f1b-4889-8f0a-d0b99923b4e9
 redirect_from:
   - /v1/docs/product-reviews
   - /v1/docs/en/product-reviews
+  - /v1/docs/product-review-feature-configuration
+  - /v1/docs/en/product-review-feature-configuration
+  - /v1/docs/rating-revew-management
+  - /v1/docs/en/rating-revew-management
+---
 ---
 
 The Product Reviews feature allows customers to add reviews and ratings to abstract products. In a dedicated Back Office section, you can manage customers' ratings and reviews to moderate content and collect information before publishing them live. Rating information can be used for sorting and filtering products. Product ratings and reviews can be displayed for customers on demand.

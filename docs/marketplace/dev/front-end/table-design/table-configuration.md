@@ -13,7 +13,7 @@ Table Configuration is basically a data structure that allows to customize behav
 Table config has 2 required sections:
 
 - [Columns](#columns-configuration) definition that describes what columns user will see and what data to expect
-- [Datasource](/docs/marketplace/dev/front-end/ui-components-library/datasources/l) type that describes how the data should be provided to the table.
+- [Datasource](/docs/marketplace/dev/front-end/ui-components-library/datasources/) type that describes how the data should be provided to the table.
 
 The rest of the sections are reserved for features (for example Pagination Feature defines pagination section and it’s own properties to configure it).
 

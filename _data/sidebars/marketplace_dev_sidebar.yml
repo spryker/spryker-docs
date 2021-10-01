@@ -5,10 +5,24 @@ entries:
   - product: Marketplace
     nested:
 
+      - title: Marketplace architecture overview
+        nested:
+          - title: Marketplace Application composition
+            url: /docs/marketplace/dev/architecture-overview/marketplace-application-composition.html
+
+          - title: Marketplace domain model
+            url: /docs/marketplace/dev/architecture-overview/marketplace-domain-model.html
+
+          - title: Merchant Portal architecture overview
+            url: /docs/marketplace/dev/architecture-overview/marketplace-merchant-portal-architecture-overview.html
+
       - title: Setup
         nested:
           - title: System requirements
             url: /docs/marketplace/dev/setup/system-requirements.html
+
+          - title: Installation
+            url: /docs/marketplace/dev/setup/installation.html
 
       - title: Feature walkthroughs
         nested:
@@ -221,74 +235,74 @@ entries:
           - title: Abstract products
             nested:
 
-            - title:  Retrieving abstract products
-              url: /docs/marketplace/dev/glue-api-guides/abstract-products/retrieving-abstract-products.html
+              - title:  Retrieving abstract products
+                url: /docs/marketplace/dev/glue-api-guides/abstract-products/retrieving-abstract-products.html
 
           - title: Concrete products
             nested:
 
-            - title:  Retrieving concrete products
-              url: /docs/marketplace/dev/glue-api-guides/concrete-products/retrieving-concrete-products.html
+              - title:  Retrieving concrete products
+                url: /docs/marketplace/dev/glue-api-guides/concrete-products/retrieving-concrete-products.html
 
-            - title:  Retrieving product offers of concrete products
-              url: /docs/marketplace/dev/glue-api-guides/concrete-products/retrieving-product-offers-of-concrete-products.html
+              - title:  Retrieving product offers of concrete products
+                url: /docs/marketplace/dev/glue-api-guides/concrete-products/retrieving-product-offers-of-concrete-products.html
 
           - title: Сarts of registered users
             nested:
 
-            - title:  Managing carts of registered users
-              url: /docs/marketplace/dev/glue-api-guides/carts-of-registered-users/managing-carts-of-registered-users.html
+              - title:  Managing carts of registered users
+                url: /docs/marketplace/dev/glue-api-guides/carts-of-registered-users/managing-carts-of-registered-users.html
 
-            - title:  Managing items in carts of registered users
-              url: /docs/marketplace/dev/glue-api-guides/carts-of-registered-users/managing-items-in-carts-of-registered-users.html
+              - title:  Managing items in carts of registered users
+                url: /docs/marketplace/dev/glue-api-guides/carts-of-registered-users/managing-items-in-carts-of-registered-users.html
 
           - title: Content items
             nested:
 
-            - title:  Retrieving abstract products in abstract product lists
-              url: /docs/marketplace/dev/glue-api-guides/content-items/retrieving-abstract-products-in-abstract-product-lists.html
+              - title:  Retrieving abstract products in abstract product lists
+                url: /docs/marketplace/dev/glue-api-guides/content-items/retrieving-abstract-products-in-abstract-product-lists.html
 
           - title: Guest carts
             nested:
 
-            - title:  Managing guest carts
-              url: /docs/marketplace/dev/glue-api-guides/guest-carts/managing-guest-carts.html
+              - title:  Managing guest carts
+                url: /docs/marketplace/dev/glue-api-guides/guest-carts/managing-guest-carts.html
 
-            - title:  Managing items in carts of registered users
-              url: /docs/marketplace/dev/glue-api-guides/guest-carts/managing-guest-cart-items.html
+              - title:  Managing items in carts of registered users
+                url: /docs/marketplace/dev/glue-api-guides/guest-carts/managing-guest-cart-items.html
 
           - title: Merchants
             nested:
 
-            - title:  Retrieving merchants
-              url: /docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchants.html
+              - title:  Retrieving merchants
+                url: /docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchants.html
 
-            - title:  Retrieving merchant addresses
-              url: /docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchant-addresses.html
+              - title:  Retrieving merchant addresses
+                url: /docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchant-addresses.html
 
-            - title:  Retrieving merchant opening hours
-              url: /docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchant-opening-hours.html
+              - title:  Retrieving merchant opening hours
+                url: /docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchant-opening-hours.html
 
           - title: Product offers
             nested:
 
-            - title: Retrieving product offers
-              url: /docs/marketplace/dev/glue-api-guides/product-offers/retrieving-product-offers.html
+              - title: Retrieving product offers
+                url: /docs/marketplace/dev/glue-api-guides/product-offers/retrieving-product-offers.html
 
-            - title: Retrieving product offer availability
-              url: /docs/marketplace/dev/glue-api-guides/product-offers/retrieving-product-offer-availability.html
+              - title: Retrieving product offer availability
+                url: /docs/marketplace/dev/glue-api-guides/product-offers/retrieving-product-offer-availability.html
 
-            - title: Retrieving product offer prices
-              url: /docs/marketplace/dev/glue-api-guides/product-offers/retrieving-product-offer-prices.html
+              - title: Retrieving product offer prices
+                url: /docs/marketplace/dev/glue-api-guides/product-offers/retrieving-product-offer-prices.html
 
           - title: Wishlists
             nested:
 
-            - title: Managing wishlists
-              url: /docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlists.html
+              - title: Managing wishlists
+                url: /docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlists.html
 
-            - title: Managing wishlist items
-              url: /docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlist-items.html
+              - title: Managing wishlist items
+                url: /docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlist-items.html
 
           - title: Searching the product catalog
             url: /docs/marketplace/dev/glue-api-guides/searching-the-product-catalog.html
@@ -308,186 +322,232 @@ entries:
       - title: Data export
         nested:
 
-        - title: Data export Merchant Orders .csv files format
-          url: /docs/marketplace/dev/data-export/data-export-merchant-orders-csv-files-format.html
+          - title: Data export Merchant Orders .csv files format
+            url: /docs/marketplace/dev/data-export/data-export-merchant-orders-csv-files-format.html
 
       - title: Data import
         nested:
 
-        - title: Marketplace setup
-          url: /docs/marketplace/dev/data-import/marketplace-setup.html
+          - title: Marketplace setup
+            url: /docs/marketplace/dev/data-import/marketplace-setup.html
 
-        - title: "File details: merchant.csv"
-          url: /docs/marketplace/dev/data-import/file-details-merchant.csv.html
+          - title: "File details: merchant.csv"
+            url: /docs/marketplace/dev/data-import/file-details-merchant.csv.html
 
-        - title: "File details: merchant-profile.csv"
-          url: /docs/marketplace/dev/data-import/file-details-merchant-profile.csv.html
+          - title: "File details: merchant-profile.csv"
+            url: /docs/marketplace/dev/data-import/file-details-merchant-profile.csv.html
 
-        - title: "File details: merchant-profile-address.csv"
-          url: /docs/marketplace/dev/data-import/file-details-merchant-profile-address.csv.html
+          - title: "File details: merchant-profile-address.csv"
+            url: /docs/marketplace/dev/data-import/file-details-merchant-profile-address.csv.html
 
-        - title: "File details: merchant-open-hours-week-day-schedule.csv"
-          url: /docs/marketplace/dev/data-import/file-details-merchant-open-hours-week-day-schedule.csv.html
+          - title: "File details: merchant-open-hours-week-day-schedule.csv"
+            url: /docs/marketplace/dev/data-import/file-details-merchant-open-hours-week-day-schedule.csv.html
 
-        - title: "File details: merchant_open_hours_date_schedule.csv"
-          url: /docs/marketplace/dev/data-import/file-details-merchant-open-hours-date-schedule.csv.html
+          - title: "File details: merchant_open_hours_date_schedule.csv"
+            url: /docs/marketplace/dev/data-import/file-details-merchant-open-hours-date-schedule.csv.html
 
-        - title: "File details: merchant-category.csv"
-          url: /docs/marketplace/dev/data-import/file-details-merchant-category.csv.html
+          - title: "File details: merchant-category.csv"
+            url: /docs/marketplace/dev/data-import/file-details-merchant-category.csv.html
 
-        - title: "File details: merchant-stock.csv"
-          url: /docs/marketplace/dev/data-import/file-details-merchant-stock.csv.html
+          - title: "File details: merchant-stock.csv"
+            url: /docs/marketplace/dev/data-import/file-details-merchant-stock.csv.html
 
-        - title: "File details: merchant-store.csv"
-          url: /docs/marketplace/dev/data-import/file-details-merchant-store.csv.html
+          - title: "File details: merchant-store.csv"
+            url: /docs/marketplace/dev/data-import/file-details-merchant-store.csv.html
 
-        - title: "File details: merchant-oms-process.csv"
-          url: /docs/marketplace/dev/data-import/file-details-merchant-oms-process.csv.html
+          - title: "File details: merchant-oms-process.csv"
+            url: /docs/marketplace/dev/data-import/file-details-merchant-oms-process.csv.html
 
-        - title: "File details: merchant-order-status.csv"
-          url: /docs/marketplace/dev/data-import/file-details-merchant-order-status.csv.html
+          - title: "File details: merchant-order-status.csv"
+            url: /docs/marketplace/dev/data-import/file-details-merchant-order-status.csv.html
 
-        - title: "File details: merchant-product-offer.csv"
-          url: /docs/marketplace/dev/data-import/file-details-merchant-product-offer.csv.html
+          - title: "File details: merchant-product-offer.csv"
+            url: /docs/marketplace/dev/data-import/file-details-merchant-product-offer.csv.html
 
-        - title: "File details: price-product-offer.csv"
-          url: /docs/marketplace/dev/data-import/file-details-price-product-offer.csv.html
+          - title: "File details: price-product-offer.csv"
+            url: /docs/marketplace/dev/data-import/file-details-price-product-offer.csv.html
 
-        - title: "File details: product-offer-stock.csv"
-          url: /docs/marketplace/dev/data-import/file-details-product-offer-stock.csv.html
+          - title: "File details: product-offer-stock.csv"
+            url: /docs/marketplace/dev/data-import/file-details-product-offer-stock.csv.html
 
-        - title: "File details: merchant-product-offer-store.csv"
-          url: /docs/marketplace/dev/data-import/file-details-merchant-product-offer-store.csv.html
+          - title: "File details: merchant-product-offer-store.csv"
+            url: /docs/marketplace/dev/data-import/file-details-merchant-product-offer-store.csv.html
 
-        - title: "File details: product-offer-validity.csv"
-          url: /docs/marketplace/dev/data-import/file-details-product-offer-validity.csv.html
+          - title: "File details: product-offer-validity.csv"
+            url: /docs/marketplace/dev/data-import/file-details-product-offer-validity.csv.html
 
-        - title: "File details: combined-merchant-product-offer.csv"
-          url: /docs/marketplace/dev/data-import/file-details-combined-merchant-product-offer.csv.html
+          - title: "File details: combined-merchant-product-offer.csv"
+            url: /docs/marketplace/dev/data-import/file-details-combined-merchant-product-offer.csv.html
 
-        - title: "File details: merchant-product.csv"
-          url: /docs/marketplace/dev/data-import/file-details-merchant-product.csv.html
+          - title: "File details: merchant-product.csv"
+            url: /docs/marketplace/dev/data-import/file-details-merchant-product.csv.html
 
-        - title: "File details: product-price.csv"
-          url: /docs/marketplace/dev/data-import/file-details-product-price.csv.html
+          - title: "File details: product-price.csv"
+            url: /docs/marketplace/dev/data-import/file-details-product-price.csv.html
 
-        - title: "File details: product-option-group.csv"
-          url: /docs/marketplace/dev/data-import/file-details-merchant-product-option-group.csv.html
+          - title: "File details: product-option-group.csv"
+            url: /docs/marketplace/dev/data-import/file-details-merchant-product-option-group.csv.html
 
 
       - title: Front-end
         nested:
 
-        - title: "Setting up the Merchant portal"
-          url: /docs/marketplace/dev/front-end/setting-up-the-merchant-portal.html
+          - title: "Setting up the Merchant portal"
+            url: /docs/marketplace/dev/front-end/setting-up-the-merchant-portal.html
 
-        - title: "Building the project"
-          url: /docs/marketplace/dev/front-end/building-the-project.html
+          - title: "Building the project"
+            url: /docs/marketplace/dev/front-end/building-the-project.html
 
-        - title: "Project structure"
-          url: /docs/marketplace/dev/front-end/project-structure.html
+          - title: "Project structure"
+            url: /docs/marketplace/dev/front-end/project-structure.html
 
-        - title: "Extending the project"
-          url: /docs/marketplace/dev/front-end/extending-the-project
-          nested:
+          - title: "Extending the project"
+            url: /docs/marketplace/dev/front-end/extending-the-project/
+            nested:
 
-          - title: "Migration guide - Extending the project"
-            url: /docs/marketplace/dev/front-end/extending-the-project/migration-guide-extending-the-project.html
+              - title: "Migration guide - Extending the project"
+                url: /docs/marketplace/dev/front-end/extending-the-project/migration-guide-extending-the-project.html
 
-        - title: Table design
-          nested:
+          - title: "Table design"
+            url: /docs/marketplace/dev/front-end/table-design/
+            nested:
 
-            - title: "Table Column Type extension"
-              url: /docs/marketplace/dev/front-end/table-design/table-column-type-extension.html
+              - title: "Table Column Types"
+                url: /docs/marketplace/dev/front-end/table-design/table-column-types/
+                nested:
 
-            - title: Table Column Types
-              nested:
+                  - title: "List"
+                    url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-list.html
 
-                - title: "List"
-                  url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-list.html
+                  - title: "Autocomplete"
+                    url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-autocomplete.html
 
-                - title: "Autocomplete"
-                  url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-autocomplete.html
+                  - title: "Chip"
+                    url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-chip.html
 
-            - title: "Table Features"
-              url: /docs/marketplace/dev/front-end/table-design/table-features/
-              nested:
+                  - title: "Date"
+                    url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-date.html
 
-                - title: "Editable"
-                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-editable.html
+                  - title: "Dynamic"
+                    url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-dynamic.html
 
-            - title: "Table Filter extension"
-              url: /docs/marketplace/dev/front-end/table-design/table-filter-extension.html
+                  - title: "Image"
+                    url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-image.html
 
-        - title: UI components library
-          nested:
+                  - title: "Input"
+                    url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-input.html
 
-            - title: "Actions"
-              nested:
+                  - title: "Select"
+                    url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-select.html
 
-                - title: "Actions HTTP"
-                  url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-http.html
+                  - title: "Text"
+                    url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-text.html
 
-                - title: "Actions Refresh Parent Table"
-                  url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-parent-table.html
+              - title: "Table Features"
+                url: /docs/marketplace/dev/front-end/table-design/table-features/
+                nested:
 
-                - title: "Actions Refresh Table"
-                  url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-table.html
+                  - title: "Editable"
+                    url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-editable.html
 
-                - title: "Actions Redirect"
-                  url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-redirect.html
+                  - title: "Title"
+                    url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-title.html
 
-                - title: "Actions Refresh Drawer"
-                  url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-drawer.html
+                  - title: "Pagination"
+                    url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-pagination.html
 
-                - title: "Actions Close Drawer"
-                  url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-close-drawer.html
+                  - title: "Total"
+                    url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-total.html
 
-                - title: "Actions Notification"
-                  url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-notification.html
+                  - title: "Selectable"
+                    url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-selectable.html
 
-            - title: "Datasources"
-              url: /docs/marketplace/dev/front-end/ui-components-library/datasources.html
+              - title: "Table Filters"
+                url: /docs/marketplace/dev/front-end/table-design/table-filters/
 
-            - title: "Data Transformers"
-              url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/
-              nested:
+          - title: "UI components library"
+            nested:
 
-                - title: "Pluck"
-                  url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/pluck.html
+              - title: "Actions"
+                url: /docs/marketplace/dev/front-end/ui-components-library/actions/
+                nested:
 
-                - title: "Lens"
-                  url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/lens.html
+                  - title: "HTTP"
+                    url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-http.html
 
-                - title: "Array-map"
-                  url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/array-map.html
+                  - title: "Refresh Parent Table"
+                    url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-parent-table.html
 
-                - title: "Object-map"
-                  url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/object-map.html
+                  - title: "Refresh Table"
+                    url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-table.html
 
-                - title: "Date-parse"
-                  url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-parse.html
+                  - title: "Redirect"
+                    url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-redirect.html
 
-                - title: "Date-serialize"
-                  url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-serialize.html
+                  - title: "Drawer"
+                    url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-drawer.html
 
-                - title: "Chain"
-                  url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/chain.html
+                  - title: "Refresh Drawer"
+                    url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-drawer.html
 
-                - title: "Collate"
-                  url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate.html
+                  - title: "Close Drawer"
+                    url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-close-drawer.html
 
-            - title: "Cache"
-              url: /docs/marketplace/dev/front-end/ui-components-library/cache.html
+                  - title: "Notification"
+                    url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-notification.html
 
-            - title: "Persistence"
-              url: /docs/marketplace/dev/front-end/ui-components-library/persistence.html
+              - title: "Datasources"
+                url: /docs/marketplace/dev/front-end/ui-components-library/datasources/
+                nested:
 
-        - title: "Angular Services"
-          url: /docs/marketplace/dev/front-end/angular-services.html
+                  - title: "Inline Table"
+                    url: /docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-inline-table.html
 
-        - title: "Angular Components"
-          url: /docs/marketplace/dev/front-end/angular-components.html
+                  - title: "Http"
+                    url: /docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-http.html
+
+                  - title: "Inline"
+                    url: /docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-inline.html
+
+              - title: "Data Transformers"
+                url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/
+                nested:
+
+                  - title: "Pluck"
+                    url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/pluck.html
+
+                  - title: "Lens"
+                    url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/lens.html
+
+                  - title: "Array-map"
+                    url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/array-map.html
+
+                  - title: "Object-map"
+                    url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/object-map.html
+
+                  - title: "Date-parse"
+                    url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-parse.html
+
+                  - title: "Date-serialize"
+                    url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-serialize.html
+
+                  - title: "Chain"
+                    url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/chain.html
+
+                  - title: "Collate"
+                    url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate.html
+
+              - title: "Cache"
+                url: /docs/marketplace/dev/front-end/ui-components-library/cache.html
+
+              - title: "Persistence"
+                url: /docs/marketplace/dev/front-end/ui-components-library/persistence.html
+
+          - title: "Angular Services"
+            url: /docs/marketplace/dev/front-end/angular-services.html
+
+          - title: "Angular Components"
+            url: /docs/marketplace/dev/front-end/angular-components.html
 
       - title: HowTos
         nested:

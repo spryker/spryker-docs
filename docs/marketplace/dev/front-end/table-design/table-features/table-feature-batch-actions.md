@@ -9,23 +9,18 @@ This article provides details about the Table Feature Batch Actions component in
 ## Overview
 
 Table Feature Batch Actions is a feature of the Table Component that allows triggering batch/multiple actions from rows.
-As Table Feature Batch Actions based on the [Table Feature Selectable](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-selectable.html), 
-this feature must be registered and enabled via table config.
-Batch actions are functions that can be performed on multiple items within a table. 
-As soon as at least one row is selected in the table, the batch action bar with allowed actions will appear at the top of the table.
+As Table Feature Batch Actions is based on the [Table Feature Selectable](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-selectable.html), batch actions must be registered and enabled via the table config. Batch actions are functions that can be performed on multiple items within a table. As soon as at least one row is selected in the table, the batch action bar with allowed actions appears at the top of the table.
 To escape the `batch action mode`, it is necessary to unselect the table rows.
 
-See an example below, how to use the Batch Actions feature.
+Check out this example below to see how to use the Batch Actions feature.
 
-Feature Configuration:
+Feature configuration:
 
-`enabled` - will enable feature via config.  
-`noActionsMessage` - error message text.  
-`actions` - an array with actions that will be displayed in the top bar and their type of 
-registered Action (see more about [Actions](/docs/marketplace/dev/front-end/ui-components-library/actions/)).   
-`rowIdPath` - gets row `id` via column `id` (in the example below `Sku` column).  
-`availableActionsPath` - path to an array with available action IDs in the top bar (supports nested 
-objects using dot notation for ex. `prop.nestedProp`).   
+`enabled` - enables feature via the config.  
+`noActionsMessage` - is error message text.  
+`actions` - is an array with actions that are displayed in the top bar, and their type of the registered [action](/docs/marketplace/dev/front-end/ui-components-library/actions/).   
+`rowIdPath` - gets a row `id` via the column `id` (in the example below `Sku` column).  
+`availableActionsPath` - is path to an array with available action IDs in the top bar (supports nested objects using dot notation for ex. `prop.nestedProp`).   
 
 ```html
 <spy-table [config]="{
@@ -48,7 +43,9 @@ objects using dot notation for ex. `prop.nestedProp`).
 </spy-table>
 ```
 
-## Feature Registration
+## Feature registration
+
+Register the feature:
 
 ```ts
 @NgModule({
@@ -67,7 +64,7 @@ export class RootModule {}
 
 ## Interfaces
 
-Below you can find interfaces for Table Feature Batch Actions.
+Below you can find interfaces for the Table Feature Batch Actions.
 
 ```ts
 export interface TableBatchActionsConfig extends TableFeatureConfig {

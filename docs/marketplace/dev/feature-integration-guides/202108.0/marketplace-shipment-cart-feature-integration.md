@@ -20,7 +20,7 @@ To start feature integration, integrate the required features:
 | Marketplace Shipment | {{page.version}} | [Marketplace Shipment feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-feature-integration.html) |
 | Cart | {{page.version}} | [Cart feature integration](https://documentation.spryker.com/docs/cart-feature-integration) |
 
-### Set up behavior
+### 1) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 

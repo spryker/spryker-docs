@@ -98,7 +98,8 @@ Make sure that the following changes were applied in transfer objects:
 
 | TRANSFER  | TYPE  | EVENT | PATH  |
 |-|-|-|-|
-| Shipment.merchantReference | class | created | src/Generated/Shared/Transfer/ShipmentTransfer |
+| MerchantShipmentCriteria | class | created | src/Generated/Shared/Transfer/MerchantShipmentCriteria |
+| Shipment.merchantReference | property | created | src/Generated/Shared/Transfer/ShipmentTransfer |
 
 {% endinfo_block %}
 

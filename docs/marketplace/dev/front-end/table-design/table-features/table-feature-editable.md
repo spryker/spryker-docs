@@ -126,8 +126,16 @@ export class RootModule {}
 
 ```html
 // Via HTML
+@NgModule({
+  imports: [
+    TableModule.forRoot(),
+    TableEditableFeatureModule,
+  ],
+})
+export class RootModule {}
+
 <spy-table [config]="config">
-    <spy-table-editable-feature spy-table-feature></spy-table-editable-feature>
+  <spy-table-editable-feature spy-table-feature></spy-table-editable-feature>
 </spy-table>
 ```
 

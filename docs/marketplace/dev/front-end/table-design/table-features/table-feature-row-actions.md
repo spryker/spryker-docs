@@ -8,21 +8,18 @@ This article provides details about the Table Feature Row Actions component in t
 
 ## Overview
 
-Table Feature Row Actions is a feature of the Table Component that renders dropdown 
-menu that contains actions applicable to the table row and on click triggers an Action which must be registered. 
-Also this feature allows triggering actions via row click.
-By default all actions will be available on every row but if needed they can be filtered using array of 
-action IDs specified on each row in the data using path configured by `availableActionsPath`.
-See an example below, how to use the Row Actions feature.
+Table Feature Row Actions is a feature of the Table Component that renders a drop down menu with actions applicable to the table row and when clicked triggers an Action which must be registered. Also this feature allows triggering actions via row click.
+Each row has all actions by default, but they can be filtered using an array of action Ids in each row using the path configured by `availableActionsPath`.
 
-Feature Configuration:
+Check out this example below to see how to use the Row Actions feature.
 
-`enabled` - will enable feature via config.  
-`actions` - an array with actions that will be displayed in the dropdown menu and their type of 
-registered Action (see more about [Actions](/docs/marketplace/dev/front-end/ui-components-library/actions/)).  
-`click` - indicates by `id` which action will be used for the table row clicking.  
-`rowIdPath` - uses for the `rowId` action context.  
-`availableActionsPath` - path to an array with available action IDs in the table data row (supports nested objects 
+Feature configuration:
+
+- `enabled` - enables the feature via config.  
+- `actions` - is an array with actions that are displayed in the drop down menu and their type of registered [action](/docs/marketplace/dev/front-end/ui-components-library/actions/).  
+- `click` - indicates which action is used for clicking the table row by its `id`.
+- `rowIdPath` - is used for the `rowId` action context.  
+- `availableActionsPath` - is path to an array with the available action IDs in the table data row (supports nested objects 
 using dot notation for ex. `prop.nestedProp`).  
 
 ```html
@@ -43,7 +40,9 @@ using dot notation for ex. `prop.nestedProp`).
 </spy-table>
 ```
 
-## Feature Registration
+## Feature registration
+
+Register the feature:
 
 ```ts
 @NgModule({
@@ -62,7 +61,7 @@ export class RootModule {}
 
 ## Interfaces
 
-Below you can find interfaces for Table Feature Pagination.
+Below you can find interfaces for the Table Feature Pagination.
 
 ```ts
 export interface TableRowActionsConfig extends TableFeatureConfig {

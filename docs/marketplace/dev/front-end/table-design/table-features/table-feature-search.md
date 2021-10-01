@@ -9,12 +9,12 @@ This article provides details about the Table Feature Search component in the Co
 ## Overview
 
 Table Feature Search is a feature of the Table Component that allows searching within the data set.
-See an example below, how to use the Search feature.
+Check out this example below to see how to use the Search feature.
 
-Feature Configuration:
+Feature configuration:
 
-`enabled` - will enable feature via config.  
-`placeholder` - the search placeholder text.
+- `enabled` - enables the feature via config.  
+- `placeholder` - is the search placeholder text.
 
 ```html
 <spy-table [config]="{
@@ -28,7 +28,9 @@ Feature Configuration:
 </spy-table>
 ```
 
-## Feature Registration
+## Feature registration
+
+Register the feature:
 
 ```ts
 @NgModule({
@@ -47,7 +49,7 @@ export class RootModule {}
 
 ## Interfaces
 
-Below you can find interfaces for Table Feature Search.
+Below you can find an interface for the Table Feature Search.
 
 ```ts
 export interface TableSearchConfig extends TableFeatureConfig {

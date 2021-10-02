@@ -441,7 +441,7 @@ entries:
                   url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-select.html
 
                 - title: "Text"
-                  url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-text.html   
+                  url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-text.html
 
             - title: "Table Features"
               url: /docs/marketplace/dev/front-end/table-design/table-features/
@@ -456,26 +456,10 @@ entries:
                 - title: "Total"
                   url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-total.html
 
-                - title: "Selectable"
-                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-selectable.html
-
-                - title: "Row Actions"
-                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-row-actions.html
-
-                - title: "Batch Actions"
-                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-batch-actions.html
-
-                - title: "Search"
-                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-search.html
-
-                - title: "Sync State"
-                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-sync-state.html
-
             - title: "Table Filters"
               url: /docs/marketplace/dev/front-end/table-design/table-filters/
 
         - title: "UI components library"
-          url: /docs/marketplace/dev/front-end/ui-components-library/
           nested:
 
             - title: "Actions"
@@ -564,3 +548,6 @@ entries:
 
           - title: "How-To: Create a new module with application"
             url: /docs/marketplace/dev/howtos/how-to-create-a-new-module-with-application.html
+
+          - title: "How-To: Create a new MerchantOms flow"
+            url: /docs/marketplace/dev/howtos/how-to-create-a-new-merchant-oms-flow.html

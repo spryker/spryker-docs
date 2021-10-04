@@ -34,7 +34,7 @@ Below you can find interfaces for the Cache Strategy Static.
 
 ```ts
 /**
- * Represents a duration as string where components are separated by a space
+ * Represents a duration as a string where components are separated by a space
  *
  * Components:
  *  - 1-999y - Years

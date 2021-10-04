@@ -15,5 +15,5 @@ The table below provides details on Configurable Product data importers, their p
 
 | Data importer | Purpose | Console command| Files | Dependencies |
 | --- | --- | --- | --- |--- |
-| Configurable Product   | Imports the configuration of configurable products |`data:import product-configuration` | [product_concrete_pre_configuration.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html) |  |
+| Configurable Product   | Imports the configuration of configurable products |`data:import product-configuration` | [product_concrete_pre_configuration.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html) |  |
 

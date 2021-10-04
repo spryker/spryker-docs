@@ -24,7 +24,7 @@ redirect_from:
 
 This article provides information on [Pages](/docs/scos/dev/back-end-development/yves/modular-frontend.html#pages) and [Widgets](/docs/scos/dev/back-end-development/yves/modular-frontend.html#widgets), the Pages module and how the Pages module can be extended. Real-life examples included into the article will help you to understand the concept better.
 
-## General Information 
+## General Information
 ### Pages
 Pages are the main concept of modular front-end (Yves) which splits a code into modules. A *Page* module represents a set of pages displayed under some or similar URLs that logically belong together.
 
@@ -32,7 +32,7 @@ Pages are the main concept of modular front-end (Yves) which splits a code into 
 As an example, we consider Product Detail Page as one Page module which is responsible for displaying products and their basic information.
 {% endinfo_block %}
 
-![PDP page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Front+End/Yves/Modular+Frontend/pdp-page.png) 
+![PDP page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Front+End/Yves/Modular+Frontend/pdp-page.png)
 
 {% info_block infoBox %}
 Another *Page* module example would be any customer related pages, like Login, Register, Profile, Addresses. These are several different pages. Each page is responsible for something specific from the customer domain, so it's natural to group them under the same module.
@@ -47,13 +47,13 @@ Meanwhile, Page modules implement only feature basics, while Widgets provide opt
 **Product Detail Page** shows basic product information, like the name, description and attributes of the product. But there are lots of optional features that can appear on the same page. The most commonly used examples are product image, price, availability, options, groups, rating, relations, an much more.
 {% endinfo_block %}
 
-![PDP ratings](https://spryker.s3.eu-central-1.amazonaws.com/docs/Front+End/Yves/Modular+Frontend/pdp-ratings.png) 
+![PDP ratings](https://spryker.s3.eu-central-1.amazonaws.com/docs/Front+End/Yves/Modular+Frontend/pdp-ratings.png)
 
 The *Pages* and *Widgets* concept offers a solution to tailor projects to their custom needs.
 When you get the general understanding of the Pages/Widgets concept, its time to investigate how the *Pages* module looks like, why and how the module can be extended.
 
 ### Page Module Appearance and Pages Extension
-A Page module typically contains a `RouteProviderPlugin` plugin for routing (see [URL Routing](/docs/scos/dev/back-end-development/yves/implementing-url-routing-in-yves.html)) and some Controllers with their twig templates (see [Controllers and Actions](/docs/scos/dev/back-end-development/yves/controllers-and-actions.html)). The implementation scope of a *Page* module should be decided individually, depending on its need of re-usability. 
+A Page module typically contains a `RouteProviderPlugin` plugin for routing (see [URL Routing](/docs/scos/dev/back-end-development/yves/implementing-url-routing-in-yves.html)) and some Controllers with their twig templates (see [Controllers and Actions](/docs/scos/dev/back-end-development/yves/controllers-and-actions.html)). The implementation scope of a *Page* module should be decided individually, depending on its need of re-usability.
 
 {% info_block infoBox %}
 The more generic a Page module is the more it can be reused, but also it needs more extension points this way.
@@ -63,14 +63,14 @@ As more features you need to have on in your *Page* module, as much you need to 
 
 To extend a Page with an additional functionality you use **Widgets**. When you extend the front-end by rendering a template fragment in a template of a controller action, you need to specify the exact place of each extension point on a template level.
 
-![PDP schema template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Front+End/Yves/Modular+Frontend/product-details-page-schema-temlate.png) 
+![PDP schema template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Front+End/Yves/Modular+Frontend/product-details-page-schema-temlate.png)
 
 {% info_block warningBox %}
 Before you start using the widget system, make sure to register the following plugins:
 {% endinfo_block %}
 
 **src/Pyz/Yves/EventDispatcher/EventDispatcherDependencyProvider.php**
-    
+
 ```php
 <?php
 
@@ -122,7 +122,7 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 }
 ```
 
-For more informaiton on how to implement a Widget, see the [How to Implement a Widget Plugin](/docs/scos/dev/tutorials-and-howtos/{{site.version}}/advanced-tutorials/tutorial-implementing-widgets-and-widget-plugins.html#how-to-implement-a-widget-) section in *Tutorial - Widgets and Widget Plugins*.  
+For more informaiton on how to implement a Widget, see the [How to Implement a Widget Plugin](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-implementing-widgets-and-widget-plugins.html#how-to-implement-a-widget-) section in *Tutorial - Widgets and Widget Plugins*.  
 
 ### Widget Twig Tag Reference
 
@@ -148,13 +148,13 @@ For more informaiton on how to implement a Widget, see the [How to Implement a W
 | `{% raw %}{%{% endraw %} block WIDGET_BLOCK_N {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}` | Twig blocks to overwrite/customize blocks of the twig template to be rendered. `{% raw %}{{{% endraw %} parent() {% raw %}}}{% endraw %}` can be used to render the original content of a block.  | This tag is optional. |
 | `only` | Optional argument to reduce the context of the template to be rendered to only the provided `TWIG_PARAMETERS`.  | By convention, in Spryker core we always provide this argument to prevent mixing template scopes. |
 | `{% raw %}{%{% endraw %} elsewidget ... {% raw %}%}{% endraw %}` | Optional twig tag to render a widget when the previous widget(s) were not found. Has the same parameters as the base widget tag including `WIDGET_BLOCK_N`.  | Listing multiple `elsewidget` tags will render the first widget that is found. |
-| `{% raw %}{%{% endraw %} nowidget {% raw %}%}{% endraw %} WIDGET_FALLBACK` | Optional twig tag to render any content `(WIDGET_FALLBACK)`, when no widget is found by the widget tag. | N/A | 
+| `{% raw %}{%{% endraw %} nowidget {% raw %}%}{% endraw %} WIDGET_FALLBACK` | Optional twig tag to render any content `(WIDGET_FALLBACK)`, when no widget is found by the widget tag. | N/A |
 
 ### findWidget() Twig Function Reference
 
 ```xml
 {% raw %}{%{% endraw %} set widget = findWidget(WIDGET_NAME, WIDGET_ARGUMENTS) {% raw %}%}{% endraw %}
- 
+
 {% raw %}{{{% endraw %} widget.WIDGET_PARAMETER_N ?? null {% raw %}}}{% endraw %}
 ```
 
@@ -168,22 +168,22 @@ For more informaiton on how to implement a Widget, see the [How to Implement a W
 The Page and Widget concepts were introduced in `spryker/kernel: 3.16.0` module version and originally Widgets were implemented as Yves plugins. Later, in **3.24.0** version of the *Kernel* module the widget plugins were deprecated. They started to be used  in their own domain called **Widget**. Use the following documentation in case you are on a lower Kernel version.
 
 ### Widget Plugins
-**Widget Plugins** are scoped to a single use case. It's the main difference from Widgets which could be called from different Pages. 
+**Widget Plugins** are scoped to a single use case. It's the main difference from Widgets which could be called from different Pages.
 
-Widgets are implemented on demand of an extension of a template. 
+Widgets are implemented on demand of an extension of a template.
 
-![MyPage module](https://spryker.s3.eu-central-1.amazonaws.com/docs/Front+End/Yves/Modular+Frontend/MyPage_module.png) 
+![MyPage module](https://spryker.s3.eu-central-1.amazonaws.com/docs/Front+End/Yves/Modular+Frontend/MyPage_module.png)
 
 Before you start using the widget plugin system, make sure to register the `\SprykerShop\Yves\ShopApplication\Plugin\Provider\WidgetServiceProvider` in your YvesBoostrap.
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\ShopApplication;
- 
+
 use SprykerShop\Yves\ShopApplication\Plugin\Provider\WidgetServiceProvider;
 use SprykerShop\Yves\ShopApplication\YvesBootstrap as SprykerYvesBootstrap;
- 
+
 class YvesBootstrap extends SprykerYvesBootstrap
 {
 	/**
@@ -196,5 +196,4 @@ class YvesBootstrap extends SprykerYvesBootstrap
 }
 ```
 
-For more information on how to create a Widget Plugin, see the *How to Implement a Widget Plugin* section in [Tutorial - Widgets and Widget Plugins](/docs/scos/dev/tutorials-and-howtos/{{site.version}}/advanced-tutorials/tutorial-implementing-widgets-and-widget-plugins.html#how-to-implement-a-widget-plugin-).  
-
+For more information on how to create a Widget Plugin, see the *How to Implement a Widget Plugin* section in [Tutorial - Widgets and Widget Plugins](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-implementing-widgets-and-widget-plugins.html#how-to-implement-a-widget-plugin-).  

@@ -94,7 +94,7 @@ action:
 * `data_entity` represents the name of your data importer.
 * `source` describes the path to your .csv file with data to import. If the source is not specified, then .csv file defined in the module’s `Config` will be used.
 
-Then you can run the `./vendor/bin/console data:import --config=path/to/config.yml` command to import all the data from the config.yml file. See[ Importing Data](/docs/scos/dev/data-import/{{page.version}}importing-data-with-a-configuration-file.html) for more details about this and other import commands you can use.
+Then you can run the `./vendor/bin/console data:import --config=path/to/config.yml` command to import all the data from the config.yml file. See[ Importing Data](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html) for more details about this and other import commands you can use.
 
 On the project level, you can set a default configuration file path in `DataImportConfig::getDefaultYamlConfigPath()` so this file will be used when `--config` option is not specified, i.e. when you run the `./vendor/bin/console data:import` command.
 

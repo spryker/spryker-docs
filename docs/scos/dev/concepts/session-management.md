@@ -31,7 +31,7 @@ In Zed (back-end), sessions are managed by the following javascript:
 `vendor/spryker/spryker/Bundles/Gui/assets/Zed/js/modules/update-session.js`
 The script handles sessions as follows:
 
-1. Gets Session lifetime (`SessionConstants::ZED_SESSION_TIME_TO_LIVE`) from the [configuration file](https://documentation.spryker.com/resources_and_developer_tools/session_management/session-management-201903.htm#All).
+1. Gets Session lifetime (`SessionConstants::ZED_SESSION_TIME_TO_LIVE`) from the [configuration file](#configuration-file).
 2. Stores this value in browser local storage or a specific cookie with the current timestamp.
 3. When a page is loaded, java-script timeout function is used for refreshing the session. Timeout is calculated by the following formula:
 
@@ -54,18 +54,19 @@ In Yves (front-end), sessions are managed by the following widget:
 
 The widget handles sessions as follows:
 
-1. Gets Session lifetime (`SessionConstants::YVES_SESSION_TIME_TO_LIVE`) from configuration the [configuration file](https://documentation.spryker.com/resources_and_developer_tools/session_management/session-management-201903.htm#All).
+1. Gets Session lifetime (`SessionConstants::YVES_SESSION_TIME_TO_LIVE`) from configuration the [configuration file](#configuration-file).
 
 2. When a page is loaded, checks whether session update is necessary. Check calculation is based on:
 
 {% info_block warningBox %}
-timeout = ((current_timestamp - session_started_at
-{% endinfo_block %} - (session_lifetime - refresh_before_session_end)) * -1.)
+timeout = ((current_timestamp - session_started_at) - (session_lifetime - refresh_before_session_end)) * -1.
+{% endinfo_block %}
 
 3. If time is out, refreshes the session.
 
 
-All the constants for session behavior are taken from the following configuration file:
+
+<a name="configuration-file"></a> All the constants for session behavior are taken from the following configuration file:
 
 `config/Shared/config_default.php`
 

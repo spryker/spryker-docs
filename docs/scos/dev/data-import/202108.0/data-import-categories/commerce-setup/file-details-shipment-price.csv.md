@@ -16,9 +16,9 @@ These are the header fields to be included in the .csv file:
 
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |
 | --- | --- | --- | --- | --- |
-| **shipment_method_key** | Yes | String  | Value previously imported already by its data importer using the [shipment.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/commerce-setup/file-details-shipment.csv.html) file.| Identifier of the shipment method. |
+| **shipment_method_key** | Yes | String  | Value previously imported already by its data importer using the [shipment.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-shipment.csv.html) file.| Identifier of the shipment method. |
 | **store** | Yes | String | Value previously defined in the *stores.php* project configuration. | Name of the store. |
-| **currency** | Yes | String | Value previously imported already by its data importer using the [currency.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/commerce-setup/file-details-currency.csv.html) file. | Currency ISO code. |
+| **currency** | Yes | String | Value previously imported already by its data importer using the [currency.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-currency.csv.html) file. | Currency ISO code. |
 | **value_net** | No |Integer | Empty price values will be imported as zeros. | Net value of the shipment cost. |
 | **value_gross** | No | String |Empty price values will be imported as zeros. | Gross value of the shipment cost.  |
 *N/A: Not applicable.
@@ -26,8 +26,8 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 This file has the following dependencies:
 
-*     [shipment.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/commerce-setup/file-details-shipment.csv.html)
-*     [currency.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/commerce-setup/file-details-currency.csv.html)
+*     [shipment.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-shipment.csv.html)
+*     [currency.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-currency.csv.html)
 *     s*tores.ph*p configuration file of the demo shop PHP project
 
 ## Recommendations & Other Information

@@ -29,7 +29,7 @@ To contribute to a Spryker repository:
 
 If we cannot merge a PR due to our release process, we manually introduce the change. Once the change is released, we inform you by closing the Pull Request. We also provide the link to the relevant release or releases so you can check your changes. Issue integration process is shown in the following diagram.
 
-<div style="text-align:center;"><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Code+Contribution+Guide/code-contirubtion.png"></div>
+<div style="text-align:center;"><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Code+Contribution+Guide/code-contirubtion.png" alt="code-contirubtion.png"></div>
 
 
 

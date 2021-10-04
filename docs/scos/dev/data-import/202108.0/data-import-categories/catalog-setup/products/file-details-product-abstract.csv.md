@@ -49,9 +49,9 @@ The file should have the following parameters:
 
 This file has the following dependencies:
 
-* [ category.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/catalog-setup/categories/file-details-category.csv.html)
-* [glossary.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/commerce-setup/file-details-glossary.csv.html)
-* [tax.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/commerce-setup/file-details-tax.csv.html)
+* [ category.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category.csv.html)
+* [glossary.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-glossary.csv.html)
+* [tax.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-tax.csv.html)
 
 ## Recommendations and other information
 For each attribute, where N is a number starting in 1, it is mandatory to have both fields:

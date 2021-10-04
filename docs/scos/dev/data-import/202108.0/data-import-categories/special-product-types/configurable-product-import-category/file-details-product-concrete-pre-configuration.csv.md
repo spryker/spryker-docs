@@ -35,7 +35,7 @@ The file should have the following parameters:
 
 The file has the following dependencies:
 
-*   [File details: product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html#headers---mandatory-fields)
+*   [File details: product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html#headers---mandatory-fields)
     
 
 ## Import template file and content example

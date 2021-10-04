@@ -36,7 +36,7 @@ The file should have the following parameters:
 ## Dependencies
 
 This file has the following dependencies:
-*     [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
+*     [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
 
 ## Import template file and content example
 Find the template and an example of the file below:

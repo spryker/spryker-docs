@@ -37,8 +37,8 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 * [Barcode Generator](https://documentation.spryker.com/2021080/docs/product-barcode)
 * [Product Restrictions for B2B Customers](https://documentation.spryker.com/2021080/docs/merchant-product-restrictions)
 
-[**Price**](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview/prices-feature-overview.html):
-[Customer Specific Prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview/prices-feature-overview.html-per-merchant-relation)
+[**Price**](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html):
+[Customer Specific Prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html-per-merchant-relation)
 
 [**Cart**](/docs/scos/user/features/{{site.ersion}}/cart-feature-overview/cart-feature-overview.html):
 

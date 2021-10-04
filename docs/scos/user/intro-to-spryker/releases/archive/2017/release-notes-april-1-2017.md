@@ -75,7 +75,7 @@ With this release, we enabled 3rd party integrations for the core. It’s now po
 
 | Major | Minor | Patch |
 | --- | --- | --- |
-| n/a |[Twig 3.1.0](https://github.com/spryker/Twig/releases/tag/3.1.0)  | <ul><li>[Application 3.1.1](https://github.com/spryker/Application/releases/tag/3.1.1)</li><li>[Development 3.1.1](https://github.com/spryker/Development/releases/tag/3.1.1)</li><li>[Glossary 3.0.1](https://github.com/spryker/Glossary/releases/tag/3.0.1)</li><li>[Propel 3.0.1](https://github.com/spryker/Propel/releases/tag/3.0.1)</li><li>[Testify 3.0.2](https://github.com/spryker/Testify/releases/tag/3.0.2)</li><li>[Transfer 3.1.1](https://github.com/spryker/Transfer/releases/tag/3.1.1)</li><li>[ZedNavigation 1.0.1](https://github.com/spryker/zed-navigation/releases/tag/1.0.1)</li></ul> |
+| n/a |[Twig 3.1.0](https://github.com/spryker/Twig/releases/tag/3.1.0)  | <ul><li>[Application 3.1.1](https://github.com/spryker/Application/releases/tag/3.1.1)</li><li>[Development 3.1.1](https://github.com/spryker/Development/releases/tag/3.1.1)</li><li>[Glossary 3.0.1](https://github.com/spryker/Glossary/releases/tag/3.0.1)</li><li>[Propel 3.0.1](https://github.com/spryker/Propel/releases/tag/3.0.1)</li><li>[Testify 3.0.2](https://github.com/spryker/Testify/releases/tag/3.0.2)</li><li>[Transfer 3.1.1](https://github.com/spryker/transfer/releases/tag/3.1.1)</li><li>[ZedNavigation 1.0.1](https://github.com/spryker/zed-navigation/releases/tag/1.0.1)</li></ul> |
 
 ## Bugfixes
 ### Customer Salutation in Order

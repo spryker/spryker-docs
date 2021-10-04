@@ -26,7 +26,7 @@ A query container holds all the database queries of the current module.
 
 Each module has exactly one query container, which also acts as an entry point to the persistence layer. Internally, it uses [query objects](/docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html) and returns unterminated queries.
 
-As you can see in the example below, the query container consists of `query-methods` which gets [query objects](/docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html) from the [factory](/docs/scos/dev/back-end-development/zed/data-manipulation/data-enrichment/factory/factory.html), adds some filters or joins and returns the unterminated query object.
+As you can see in the example below, the query container consists of `query-methods` which gets [query objects](/docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html) from the [factory](/docs/scos/dev/back-end-development/factory.html), adds some filters or joins and returns the unterminated query object.
 
 Unterminated queries should be avoided in the Application Layers above Persistence. Consider using the [Repository](/docs/scos/dev/back-end-development/zed/persistence-layer/repository.html) and [Entity Manager](/docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html) patterns to decouple persistence and ORM implementation details.
 

@@ -208,7 +208,7 @@ Tax sets are strongly related to tax rates and the related field was marked as r
 
 | Major | Minor | Patch |
 | --- | --- | --- |
-| n/a | n/a | [Tax 5.1.2](https://github.com/spryker/Tax/releases/tag/5.1.2) |
+| n/a | n/a | [Tax 5.1.2](https://github.com/spryker/tax/releases/tag/5.1.2) |
 
 ### Wrong Time Zone in Twig Views
 Previously, there was a bug when displaying a date in different time zone, it was showing original time zone (GMT). We have fixed date time zone assignment to properly work with different time zones.

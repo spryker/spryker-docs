@@ -122,5 +122,5 @@ export interface TableFilterComponent<C extends TableFilterBase> {
 The Table Filters feature ships with a few common Table Filter types:
 
 - [Select](/docs/marketplace/dev/front-end/table-design/table-filters/table-filter-select.html) — allows filtering data via `SelectComponent`.
-- `Tree Select`—allows filtering data via `TreeSelectComponent`.
+- [Tree Select](/docs/marketplace/dev/front-end/table-design/table-filters/table-filter-tree-select.html) — allows filtering data via `TreeSelectComponent`.
 - `Date Range`—allows filtering data via `DateRangePickerComponent`.

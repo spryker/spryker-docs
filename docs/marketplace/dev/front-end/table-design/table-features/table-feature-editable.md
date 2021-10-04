@@ -8,15 +8,13 @@ This article provides details about the Table Feature Editable component in the 
 
 ## Overview
 
-Table Feature Editable is a feature of the Table Component that allows editing/adding rows of the table.
-Below you can see base config of the Editable feature, that contains next options: 
+Table Feature Editable is a feature of the Table Component that allows editing/adding rows to the table.
+You can see below the base configuration for the Editable feature, which includes the following options:
 
-Feature Configuration:
-
-`columns` - an array with config for each editable column.  
-`create` - an object with config for a new rows.  
-`update` - an object with config for an existing rows.  
-`disableRowKey` - will disable row that contains mentioned column `id` (see example).  
+- `columns` - is an array with the config for every editable column.  
+- `create` - is an object with the config for the added rows.  
+- `update` - is an object with the config for the existing rows.  
+- `disableRowKey` - disables the row that contains the mentioned column `id` (see the example below).   
 
 ```html
 <spy-table [config]="{
@@ -32,26 +30,26 @@ Feature Configuration:
 </spy-table>
 ```
 
-Let's take a closer look at all the possible options.
+Take a closer look at all the options available.
 
-`columns` (only required properties are listed here, the entire interface can be found in the [Table Design](https://docs.spryker.com/docs/marketplace/dev/front-end/table-design/#interfaces) article.):  
+- `columns` (only required properties are listed, the entire interface can be found in [Table Design](https://docs.spryker.com/docs/marketplace/dev/front-end/table-design/#interfaces) article.):  
   - `id` - a cell `id`.  
   - `type` - a cell `type`.  
-  - `typeOptions` (see more about [Column Type](/docs/marketplace/dev/front-end/table-design/table-column-types/) options):  
-    - `value` - will set default value to the cell of the newly added row.  
+  - `typeOptions`. Check [Column Type](/docs/marketplace/dev/front-end/table-design/table-column-types/)) to learn more about the column types available.):  
+    - `value` - sets the default value to the newly added row's cell.  
 
-`create`:  
-  - `addButon` - an object with the `Add button` configuration like `title`, `icon`, `size`, etc..  
+- `create`:  
+  - `addButon` - this object holds the `Add button` configuration such as `title`, `icon`, `size`, etc.
   - `cancelButon` - an object with the `Cancel button` configuration like `title` and `icon`.
-  - `disableForCols` - an array with cell `ids` to be disabled.  
-  - `formInputName` - will create `input[type=hidden]` element with the specific name.  
-  - `initialData` - initials data for cells and object with errors for rows and cells.  
+  - `disableForCols` - an array with the cell `ids` to be disabled.  
+  - `formInputName` - creates an `input[type=hidden]` element with the specific name.  
+  - `initialData` - initials data for cells and objects with errors for rows and cells.  
   
-`update`:
-  - `url` - request url.  
-  - `saveButon` - an object with the `Save button` configuration like `title` and `icon` (displays in the `update` popup).  
-  - `cancelButon` - an object with the `Cancel button` configuration like `title` and `icon` (displays in the `update` popup).  
-  - `disableForCols` - an array with cell `ids` to be disabled.  
+- `update`:
+  - `url` - a request url.  
+  - `saveButon` - an object with the `Save button` configuration such as `title` and `icon` (displayed in the `update` popup).  
+  - `cancelButon` - an object with the `Cancel button` configuration such as `title` and `icon` (displayed in the `update` popup).  
+  - `disableForCols` - an array with the cell `ids` to be disabled.  
 
 ```html
 <spy-table [config]="{
@@ -106,7 +104,9 @@ Let's take a closer look at all the possible options.
 </spy-table>
 ```
 
-## Feature Registration
+## Feature registration
+
+Register the feature:
 
 ```ts
 // Dynamic
@@ -141,7 +141,7 @@ export class RootModule {}
 
 ## Interfaces
 
-Below you can find interfaces for Table Feature Editable.
+Below you can find interfaces for the Table Feature Editable.
 
 ```ts
 declare module '@spryker/table' {

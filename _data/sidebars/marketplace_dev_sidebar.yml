@@ -463,23 +463,23 @@ entries:
                     url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-selectable.html
 
                   - title: "Row Actions"
-                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-row-actions.html
+                    url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-row-actions.html
 
                   - title: "Batch Actions"
-                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-batch-actions.html
+                    url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-batch-actions.html
 
                   - title: "Search"
-                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-search.html
+                    url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-search.html
 
                   - title: "Sync State"
-                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-sync-state.html
+                    url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-sync-state.html
 
               - title: "Table Filters"
-              url: /docs/marketplace/dev/front-end/table-design/table-filters/
+                url: /docs/marketplace/dev/front-end/table-design/table-filters/
 
-        - title: "UI components library"
-          url: /docs/marketplace/dev/front-end/ui-components-library/
-          nested:
+          - title: "UI components library"
+            url: /docs/marketplace/dev/front-end/ui-components-library/
+            nested:
 
               - title: "Actions"
                 url: /docs/marketplace/dev/front-end/ui-components-library/actions/

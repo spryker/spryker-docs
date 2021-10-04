@@ -32,8 +32,8 @@ These are the header fields to be included in the .csv file:
 
 This file has the following dependencies:
 
-* [ product_attribute_key.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/catalog-setup/products/file-details-product-attribute-key.csv.html)
-* [glossary.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/commerce-setup/file-details-glossary.csv.html)
+* [ product_attribute_key.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-attribute-key.csv.html)
+* [glossary.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-glossary.csv.html)
 
 ## Template File & Content Example
 A template and an example of the *product_management_attribute.csv*  file can be downloaded here:

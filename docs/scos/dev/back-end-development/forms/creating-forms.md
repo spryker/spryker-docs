@@ -29,9 +29,9 @@ You will build a simple newsletter subscription form that contains a field for e
 
 Follow the steps described below to create the newsletter subscription form:
 
-* [Create the FormType](/docs/scos/dev/back-end-development/zed/data-manipulation/data-enrichment/forms/creating-forms.html#create-the-formtype)
-* [Render the Form](/docs/scos/dev/back-end-development/zed/data-manipulation/data-enrichment/forms/creating-forms.html#render-the-form)
-* [Post the Data](/docs/scos/dev/back-end-development/zed/data-manipulation/data-enrichment/forms/creating-forms.html#post-the-data)
+* [Create the FormType](/docs/scos/dev/back-end-development/forms/creating-forms.html#create-the-formtype)
+* [Render the Form](/docs/scos/dev/back-end-development/forms/creating-forms.html#render-the-form)
+* [Post the Data](/docs/scos/dev/back-end-development/forms/creating-forms.html#post-the-data)
 
 ## Create the FormType
 The best practice is to create a `FormType` class for each form you need to handle. Here you will define the fields contained in the form and the rules of validation.
@@ -42,7 +42,7 @@ In our case, we need to define the email field that has two constraints attached
 * it must be a valid email address
 
 **Code sample:**
-    
+
 ```php
 <?php
 namespace Pyz\Yves\Newsletter\Form;
@@ -185,4 +185,3 @@ class SubscriptionController extends AbstractController
 
 }
 ```
-

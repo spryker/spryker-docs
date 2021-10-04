@@ -23,7 +23,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependencies:
-*     [discount.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/merchandising-setup/discounts/file-details-discount.csv.html)
+*     [discount.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/discounts/file-details-discount.csv.html)
 *     *stores.php* configuration file of the demo shop PHP project
 
 ## Template File & Content Example

@@ -44,7 +44,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependency:
-*    [category_template.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/catalog-setup/categories/file-details-category-template.csv.html)
+*    [category_template.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category-template.csv.html)
 
 ## Template File & Content Example
 A template and an example of the *category.csv*  file can be downloaded here:

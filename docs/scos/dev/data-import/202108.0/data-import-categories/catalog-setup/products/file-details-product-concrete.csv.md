@@ -38,7 +38,7 @@ These are the header fields to be included in the .csv file:
 
 This file has the following dependencies:
 
-*[ product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
+*[ product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
 
 ## Recommendations & Other Information
 Every concrete product is linked to an abstract one via the `abstract_sku` field.

@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/importing-product-data-with-a-single-file
 ---
 
-Besides importing product-related data with multiple .csv files, like [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html#file-details--product_abstract-csv), [product_abstract_store.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/catalog-setup/products/file-details-product-abstract-store.csv.html#file-details--product_abstract_store-csv), [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html#file-details--product_concrete-csv), [product_price.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/catalog-setup/pricing/file-details-product-price.csv.html#file-details--product_price-csv), etc., you can use a single product data import file, which allows you to import all main product information that needs to be added or updated, at once. This bulk product data import ability might be especially useful if you:
+Besides importing product-related data with multiple .csv files, like [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html#file-details--product_abstract-csv), [product_abstract_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract-store.csv.html#file-details--product_abstract_store-csv), [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html#file-details--product_concrete-csv), [product_price.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/pricing/file-details-product-price.csv.html#file-details--product_price-csv), etc., you can use a single product data import file, which allows you to import all main product information that needs to be added or updated, at once. This bulk product data import ability might be especially useful if you:
 
 * Have different environments (production, staging, etc.), and you need to populate them all with the product data. 
 * Frequently import product data.
@@ -40,7 +40,7 @@ The headers in this file are prefixed with the names of the individual product-r
 
 The only exceptions are `abstract_sku` and `concrete_sku` headers that are not prefixed.
 
-Thus, the .csv file for the main product data import is a combination of data from separate product-related .csv files (except for a [few fields specific for just this file](#specific-fields)). Due to this, when importing corresponding data, the same [dependencies and mandatory fields](#mandatory-fields) as for the separate files, apply to the combined product data import file. For example, if you want to import product image data via the combined product data file (headers *productimage.imageset_name*, *productimage.externalurl_large*, etc.), you should mind the dependencies and mandatory fields as for [product_image.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/catalog-setup/products/file-details-product-image.csv.html#file-details--product_image-csv). 
+Thus, the .csv file for the main product data import is a combination of data from separate product-related .csv files (except for a [few fields specific for just this file](#specific-fields)). Due to this, when importing corresponding data, the same [dependencies and mandatory fields](#mandatory-fields) as for the separate files, apply to the combined product data import file. For example, if you want to import product image data via the combined product data file (headers *productimage.imageset_name*, *productimage.externalurl_large*, etc.), you should mind the dependencies and mandatory fields as for [product_image.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-image.csv.html#file-details--product_image-csv). 
 
 By default, the import .csv file resides in data/import/common/{STORE}/. As, for example, the [combined_product_DE.csv](https://github.com/spryker-shop/suite/blob/master/data/import/common/DE/combined_product.csv) file in Spryker Master Suite.
 
@@ -53,7 +53,7 @@ If you import only abstract products, the following fields must be populated in 
 * product_abstract.category_key
 * product_abstract.url.{LOCALE}
 
-For details on these and other product abstract-related fields, see [File details: product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html#file-details--product_abstract-csv).
+For details on these and other product abstract-related fields, see [File details: product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html#file-details--product_abstract-csv).
 
 If you import concrete products as well, the following fields are also mandatory:
 
@@ -62,7 +62,7 @@ If you import concrete products as well, the following fields are also mandatory
 * product.attribute_key_{NUMBER}
 * product.value_{NUMBER}
 
-For details on these and other concrete product-related fields, see [File details: product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html#file-details--product_concrete-csv).
+For details on these and other concrete product-related fields, see [File details: product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html#file-details--product_concrete-csv).
 
 All other fields with prefixes `product_abstract` and `product.` are optional.
 
@@ -71,10 +71,10 @@ If you need to import other product data as well, for example, prices, images, e
 
 | Fields in the  the combined product data file | .csv file with dependencies and details about the field |
 | --- | --- |
-| <ul><li>product_group.group_key</li><li>product_group.position</li></ul> | [File details: product_group.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/merchandising-setup/product-merchandising/file-details-product-group.csv.html#file-details--product_group-csv) |
-|<ul><li>product_image.image_set_name</li><li>product_image.external_url_large</li><li>product_image.external_url_small</li><li>product_image.locale</li><li>product_image.sort_order</li><li>product_image.product_image_key</li><li>product_image.product_image_set_key</li></ul> | [File details: product_image.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/catalog-setup/products/file-details-product-image.csv.html#file-details--product_image-csv) |
-| <ul><li>product_price.price_type</li><li>product_price.store</li><li>product_price.currency</li><li>product_price.value_net</li><li>product_price.value_gross</li><li>product_price.price_data.volume_prices</li></ul> | [File details: product_price.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/catalog-setup/pricing/file-details-product-price.csv.html#file-details--product_price-csv) |
-| <ul><li>product_stock.name</li><li>product_stock.quantity</li><li>product_stock.is_never_out_of_stock</li><li>product_stock.is_bundle</li></ul> | [File details: product_stock.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/catalog-setup/stocks/file-details-product-stock.csv.html#file-details--product_stock-csv) |
+| <ul><li>product_group.group_key</li><li>product_group.position</li></ul> | [File details: product_group.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-group.csv.html#file-details--product_group-csv) |
+|<ul><li>product_image.image_set_name</li><li>product_image.external_url_large</li><li>product_image.external_url_small</li><li>product_image.locale</li><li>product_image.sort_order</li><li>product_image.product_image_key</li><li>product_image.product_image_set_key</li></ul> | [File details: product_image.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-image.csv.html#file-details--product_image-csv) |
+| <ul><li>product_price.price_type</li><li>product_price.store</li><li>product_price.currency</li><li>product_price.value_net</li><li>product_price.value_gross</li><li>product_price.price_data.volume_prices</li></ul> | [File details: product_price.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/pricing/file-details-product-price.csv.html#file-details--product_price-csv) |
+| <ul><li>product_stock.name</li><li>product_stock.quantity</li><li>product_stock.is_never_out_of_stock</li><li>product_stock.is_bundle</li></ul> | [File details: product_stock.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/stocks/file-details-product-stock.csv.html#file-details--product_stock-csv) |
 
 <a name="specific-fields"></a>
 

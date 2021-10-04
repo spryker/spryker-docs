@@ -4,126 +4,129 @@ description: This articles provides details about the table configuration.
 template: concept-topic-template
 ---
 
-This articles provides details about the table configuration.
+This article provides details on how to configure the table.
 
-## Configuration
+## Overview
 
-Table Configuration is basically a data structure that allows to customize behavior of the table for specific use-case.
+Using Table Configuration you can customize the behavior of the table based on your specific use case.
 
-Table config has 2 required sections:
+Table config has two required sections:
 
-- [Columns](#columns-configuration) definition that describes what columns user will see and what data to expect
-- [Datasource](/docs/marketplace/dev/front-end/ui-components-library/datasources/) type that describes how the data should be provided to the table.
+- [Columns](#columns-configuration) definition that describes what columns user will see and what data to expect.
+- [Datasource](/docs/marketplace/dev/front-end/ui-components-library/datasources/) type that describes how the data should be provided to a table.
 
-The rest of the sections are reserved for features (for example Pagination Feature defines pagination section and it’s own properties to configure it).
+The rest of the sections are reserved for features (like Pagination, which describes pagination section and its properties).
 
 ```html
 <spy-table
-  config="{
-    columns?: '### Section Columns Configuration ###',
-    columnsUrl?: '### Section Columns Configuration ###',
-    dataSource: '### See DataSource Doc ###',,
-    rowActions: '### See Table Row Actions Feature Doc ###',
-    pagination: '### See Table Pagination Feature Doc ###',
-    search: '### See Table Search Feature Doc ###',
-    title:: '### See Table Title Feature Doc ###',
-    columnConfigurator: '### See Table Settings Feature Doc ###',
-    filters: '### See Table Filters Feature Doc ###',
-    itemSelection: '### See Table Selectable Feature Doc ###',
-    syncStateUrl: '### See Table Sync State Feature Doc ###',
-    editable: '### See Table Editable Feature Doc ###',
-  }"
+ config="{
+ columns?: '### Section Columns Configuration ###',
+ columnsUrl?: '### Section Columns Configuration ###',
+ dataSource: '### See DataSource Doc ###',,
+ rowActions: '### See Table Row Actions Feature Doc ###',
+ pagination: '### See Table Pagination Feature Doc ###',
+ search: '### See Table Search Feature Doc ###',
+ title:: '### See Table Title Feature Doc ###',
+ columnConfigurator: '### See Table Settings Feature Doc ###',
+ filters: '### See Table Filters Feature Doc ###',
+ itemSelection: '### See Table Selectable Feature Doc ###',
+ syncStateUrl: '### See Table Sync State Feature Doc ###',
+ editable: '### See Table Editable Feature Doc ###',
+ }"
 >
 </spy-table>
 ```
 
-### Columns Configuration
+### Columns configuration
 
-Columns might be configured with two props. There is possible to use `url` to get columns list dynamically, in this case, the `columnsUrl` property should be assigned in the `table` config.
-Also exists another way to define columns data - static array of columns objects which should be assigned to the `columns` property.
+You can configure columns with two properties. By using `url`, you can get a dynamic list of columns. In this case, the `columnsUrl` property should be assigned to the `table` configuration.
 
-#### Column Config Example
+The columns data can also be defined as a static array of columns objects assigned to the `columns` property.
+
+#### Column config example
+
+Check out the example of the column configuration:
 
 ```ts
 [
-  // chip
-  {
-    "id":"stock",
-    "title":"Stock",
-    "type":"chip",
-    "typeOptions": {
-      "color": "green"
-    },
-    "typeOptionsMappings: {
-      "color": {"0": "red"}
-    },
-  },
-  // chips
-  {
-    id: 'status',
-    type: 'chips',
-    typeOptions: {
-      text: '${value}',
-      color: 'red',
-    },
-    typeOptionsMappings: {
-      text: {'true': 'Active', 'false': 'Inactive'},
-      color: {'true': 'green'}
-    },
-  },
-  // select
-  {
-    id:"store",
-    type:"select",
-    typeOptions: {
-        multiselect: bool,
-        values: [
-            {value: 1, title:"DE"},
-            {value: 2, title:"AT"}
-        ]
-    }
-  },
-  // input
-  {
-    id:"gross_price",
-    type:"input",
-    typeOptions: {
-        type: '|text|number|tel',
-        placeholder: '0.00',
-        readOnly: bool,
-    }
-  },
+ // chip
+ {
+ "id":"stock",
+ "title":"Stock",
+ "type":"chip",
+ "typeOptions": {
+ "color": "green"
+ },
+ "typeOptionsMappings: {
+ "color": {"0": "red"}
+ },
+ },
+ // chips
+ {
+ id: 'status',
+ type: 'chips',
+ typeOptions: {
+ text: '${value}',
+ color: 'red',
+ },
+ typeOptionsMappings: {
+ text: {'true': 'Active', 'false': 'Inactive'},
+ color: {'true': 'green'}
+ },
+ },
+ // select
+ {
+ id:"store",
+ type:"select",
+ typeOptions: {
+ multiselect: bool,
+ values: [
+ {value: 1, title:"DE"},
+ {value: 2, title:"AT"}
+ ]
+ }
+ },
+ // input
+ {
+ id:"gross_price",
+ type:"input",
+ typeOptions: {
+ type: '|text|number|tel',
+ placeholder: '0.00',
+ readOnly: bool,
+ }
+ },
 ]
 ```
 
-## Type Options Interpolation and Mapping
+## Type options interpolation and mapping
 
-Table Column config supports interpolation. The variable inside curly brackets (e.g `${value}, ${row.title}...`) in the `typeOptions` object will be replaced to the appropriate value from the table context.
+Table Column config supports interpolation. Variables inside curly brackets (e.g `${value}, ${row.title}...`) in the `typeOptions` object are replaced with the appropriate table context value.
 
-The full table context is shown below:
+Below is the complete table context:
 
 ```ts
 interface TableColumnTplContext extends TableColumnContext {
-  $implicit: TableColumnContext['value'];
+ $implicit: TableColumnContext['value'];
 }
 
 interface TableColumnContext {
-  value: TableDataValue;
-  row: TableDataRow;
-  config: TableColumn;
-  i: number;
-  j: number;
+ value: TableDataValue;
+ row: TableDataRow;
+ config: TableColumn;
+ i: number;
+ j: number;
 }
 
 interface TableColumn extends Partial<TableColumnTypeDef> {
-  id: string;
-  title: string;
-  width?: string;
-  multiRenderMode?: boolean;
-  multiRenderModeLimit?: number;
-  emptyValue?: string;
-  sortable?: boolean;
-  searchable?: boolean;
+ id: string;
+ title: string;
+ width?: string;
+ multiRenderMode?: boolean;
+ multiRenderModeLimit?: number;
+ emptyValue?: string;
+ sortable?: boolean;
+ searchable?: boolean;
 }
 
 type TableDataRow = Record<TableColumn['id'], TableDataValue>;
@@ -131,26 +134,24 @@ type TableDataRow = Record<TableColumn['id'], TableDataValue>;
 type TableDataValue = unknown | unknown[];
 ```
 
-Also, Table Column supports overriding defined `typeOptions` properties depending on the table column value. To allow this opportunity the `typeOptionsMappings` object should be added where the `typeOption` key and all available variants are defined.
-
-Example
+In addition, Table Column supports overriding defined *typeOptions* properties based on the value of the table column. As a result, the `typeOptionsMappings` object should be added where the `typeOption` key and all variants are defined.
 
 ```ts
-  typeOptionsMappings: {
-    TYPE_OPTION_KEY: { TABLE_COLUMN_VALUE: DESIRED_VALUE_1, TABLE_COLUMN_VALUE: DESIRED_VALUE_2 },
-  },
+ typeOptionsMappings: {
+ TYPE_OPTION_KEY: { TABLE_COLUMN_VALUE: DESIRED_VALUE_1, TABLE_COLUMN_VALUE: DESIRED_VALUE_2 },
+ },
 ```
 
 ```ts
 ...
-  typeOptions: {
-    text: '${value}',
-    color: 'red',
-  },
-  typeOptionsMappings: {
-    text: { col3: 'Active', false: 'Inactive' },
-    color: { col3: 'green'}
-  },
+ typeOptions: {
+ text: '${value}',
+ color: 'red',
+ },
+ typeOptionsMappings: {
+ text: { col3: 'Active', false: 'Inactive' },
+ color: { col3: 'green'}
+ },
 ...
 
 // Possible showed table `text` and `color` variants:
@@ -159,7 +160,7 @@ Example
 // default text(table column value) and default color('red') - in other cases
 ```
 
-To get more info about table columns see [Column Types](/docs/marketplace/dev/front-end/table-design/table-column-types/).
+To get more details about the table columns, see [Column Types](/docs/marketplace/dev/front-end/table-design/table-column-types/).
 
 ## Interfaces
 
@@ -167,10 +168,10 @@ Below you can find interfaces for the Table:
 
 ```ts
 export interface TableConfig {
-  dataSource: DatasourceConfig;
-  columnsUrl?: string;
-  columns?: TableColumns;
-  // Features may expect it's config under it's namespace
-  [featureName: string]: TableFeatureConfig | unknown;
+ dataSource: DatasourceConfig;
+ columnsUrl?: string;
+ columns?: TableColumns;
+ // Features may expect it's config under it's namespace
+ [featureName: string]: TableFeatureConfig | unknown;
 }
 ```

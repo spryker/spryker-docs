@@ -81,7 +81,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 [**Internationalization**](https://documentation.spryker.com/2021080/docs/internationalization):
 
 * [Multiple Stores](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/howto-set-up-multiple-stores.html)
-* [Multiple Currencies per Store](/docs/scos/dev/back-end-development/zed/data-manipulation/datapayload-conversion/multiple-currencies-per-store-configuration.html)
+* [Multiple Currencies per Store](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multiple-currencies-per-store-configuration.html)
 * [International Tax Rates & Sets](https://documentation.spryker.com/2021080/docs/international-tax-rates-sets)
 * [Glossary Creation](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/managing-glossary.html)
 
@@ -89,7 +89,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 
 * [Autodetect of Currency](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html)
 * [Volume Prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview/volume-prices-overview.html)
-* [Net & Gross Price Mode](/docs/scos/dev/back-end-development/zed/data-manipulation/datapayload-conversion/net-and-gross-prices-management.html)
+* [Net & Gross Price Mode](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/net-and-gross-prices-management.html)
 * [Scheduled Prices](https://documentation.spryker.com/2021080/docs/scheduled-prices)
 
 [**Tax**](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html):
@@ -178,7 +178,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 * [Cronjob Scheduling](/docs/scos/dev/sdk/{{page.version}}/cronjob-scheduling.html)
 
 [**Technology Partner Integrations**](https://documentation.spryker.com/2021080/docs/integrating-technology-partners):
-[External Integrations](/docs/scos/dev/technology-partners/{{page.version}}/technology-partner-integration.html)
+[External Integrations](/docs/scos/user/technology-partners/{{page.version}}/technology-partner-integration.html)
 <br>
 </details>
 

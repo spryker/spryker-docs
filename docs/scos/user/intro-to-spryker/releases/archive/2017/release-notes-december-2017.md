@@ -20,7 +20,7 @@ From now on, we support integration with Heidelpay payment service provider. Hei
 | [heidelpay 1.0.0](https://github.com/spryker-eco/heidelpay/releases/tag/1.0.0) | n/a | n/a |
 
 **Documentation**
-For more information on Heidelpay integration, see [Payment Integration - Heidelpay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/heidelpay/heidelpay.html).
+For more information on Heidelpay integration, see [Payment Integration - Heidelpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/heidelpay/heidelpay.html).
 
 **Migration Guides**
 To upgrade, follow the steps described below:
@@ -49,7 +49,7 @@ As a part of this release, we have also made some improvements. Earlier only bil
 | [ArvatoRss 2.0.0](https://github.com/spryker-eco/arvato-rss/releases/tag/2.0.0) | n/a | n/a |
 
 **Documentation**
-For more information,  see the [Risk Solution Services Integration - Arvato](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/arvato/arvato.html) documentation.
+For more information,  see the [Risk Solution Services Integration - Arvato](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/arvato/arvato.html) documentation.
 
 **Migration Guides**
 To upgrade, follow the steps described below:
@@ -266,8 +266,8 @@ To use a new infrastructure, please make sure you moved your `Pyz` test into `Py
 ## Documentation Updates
 The following content has been added to the Academy:
 
-* [Payment Integration - Heidelpay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/heidelpay/heidelpay.html)
-* [Risk Solution Services Integration - Arvato 2.0](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/arvato/arvato.html-2-0)
+* [Payment Integration - Heidelpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/heidelpay/heidelpay.html)
+* [Risk Solution Services Integration - Arvato 2.0](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/arvato/arvato.html-2-0)
 * [Performance Guidelines](/docs/scos/dev/guidelines/performance-guidelines.html)
 * [Performing Core Updates Smoothly](/docs/scos/dev/setup/composer.html#core-updates)
 * [CMS Blocks](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html)

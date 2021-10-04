@@ -250,12 +250,12 @@ Cart in the Preview mode can also be shared with users in your company because i
 ### Payone Cash on Delivery
 We have extended our Payone module with the cash-on-delivery payment method. This can now be used by merchants to address some of the most skeptical customers who wish to pay for the order only once they have the product in their hands.
 
-**Documentation**: [Payone - Cash on Delivery](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/bs-payone/scos-integration/payone-cash-on-delivery.html)
+**Documentation**: [Payone - Cash on Delivery](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/scos-integration/payone-cash-on-delivery.html)
 
 ### Heidelpay Easycredit
 We have extended our existing Heidelpay module with the payment method Easycredit, which allows customers to pay via an installment plan. This can help to increase your conversion rates of more expensive products and services.
 
-**Documentation**: [Heidelpay - Easy Credit](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-easy-credit.html)
+**Documentation**: [Heidelpay - Easy Credit](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-easy-credit.html)
 
 ### RatePay
 We have extended our partner portfolio with a RatePay integration that offers 4 payment methods out-of-the-box:
@@ -267,20 +267,20 @@ We have extended our partner portfolio with a RatePay integration that offers 4 
 
 **Documentation**: 
 
-* [RatePay - Prepayment](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/ratepay/ratepay-payment-methods/ratepay-prepayment.html)
-* [RatePay - Invoice](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/ratepay/ratepay-payment-methods/ratepay-invoice.html)
-* [RatePay - Direct Debit](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/ratepay/ratepay-payment-methods/ratepay-direct-debit.html)
-* [RatePay - Installment](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/ratepay/ratepay-payment-methods/ratepay-installment.html)
+* [RatePay - Prepayment](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay/ratepay-payment-methods/ratepay-prepayment.html)
+* [RatePay - Invoice](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay/ratepay-payment-methods/ratepay-invoice.html)
+* [RatePay - Direct Debit](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay/ratepay-payment-methods/ratepay-direct-debit.html)
+* [RatePay - Installment](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay/ratepay-payment-methods/ratepay-installment.html)
 
 ### Episerver
 We now have a new integration of our new partner Episerver and their online platform to support newsletters as well as the transactional notifications required in the usual e-commerce transactions.
 
-**Documentation**: [Episerver](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/episerver/episerver.html) 
+**Documentation**: [Episerver](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/episerver/episerver.html) 
 
 ### Easycredit Direct Integration
 We have now a new integration of our new partner TeamBank AG and their payment method Ratenkauf by Easycredit, which allows customers to pay via an installment plan. This can help to increase your conversion rates of the more expensive products and services.
 
-**Documentation**: [Ratenkauf by Easycredit - Installation and Configuration](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit-installation-and-configuration.html)
+**Documentation**: [Ratenkauf by Easycredit - Installation and Configuration](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit-installation-and-configuration.html)
 
 ### CrefoPay
 We now have an integration with our new payment partner CrefoPay, which will provide the following payment methods out-of-the-box including partial operations and B2B:
@@ -292,7 +292,7 @@ We now have an integration with our new payment partner CrefoPay, which will pro
 * Sofort
 * Cash on Delivery
 
-**Documentation**: [CrefoPay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/crefopay/crefopay-installation-and-configuration.html) 
+**Documentation**: [CrefoPay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/crefopay/crefopay-installation-and-configuration.html) 
 
 ***
 ## Technical Enhancements

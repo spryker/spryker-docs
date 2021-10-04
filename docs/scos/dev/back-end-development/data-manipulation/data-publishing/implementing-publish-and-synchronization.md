@@ -197,7 +197,7 @@ For performance considerations, events are passed to the listener in bulk. Even 
 {% endinfo_block %}
 
 
-Implementing a listener is detailed in [Listening to Events](/docs/scos/dev/back-end-development/zed/data-manipulation/event/listening-to-events.html). Follow the guide to create your listener classes.
+Implementing a listener is detailed in [Listening to Events](/docs/scos/dev/back-end-development/data-manipulation/event/listening-to-events.html). Follow the guide to create your listener classes.
 
 Also, you need to map listeners to the events. For this purpose, you need to add a plugin class that extends the **AbstractPlugin** and implements the **EventSubscriberInterface** interfaces. For example, this is how the *ProductStorage* module maps changes in abstract products to the respective listeners (see full code in data/shop/development/current/vendor/spryker/product-storage/src/Spryker/Zed/ProductStorage/Communication/Plugin/Event/Subscriber/ProductStorageEventSubscriber.php):
 

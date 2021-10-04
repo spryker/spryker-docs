@@ -146,8 +146,8 @@ Previously, breadcrumbs were missing for the product attribute translation manag
 ## Documentation Updates
 The following content has been added to the Academy:
 
-* [Payment Integration - BS Payone - 1.1](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/bs-payone/bs-payone.html) 
+* [Payment Integration - BS Payone - 1.1](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/bs-payone.html) 
 * Integration With Project - Payone
-* [PayPal Express Checkout Payment - Payone - 1.1](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-paypal-express-checkout-payment.html)
+* [PayPal Express Checkout Payment - Payone - 1.1](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-paypal-express-checkout-payment.html)
  
 Your feedback would be highly appreciated. Please help us understand what you need from the Spryker Academy by filling out a very short [survey] [here](https://docs.google.com/forms/d/1_vZg0lfqq24Qf9-fQhU50NgsEBy4eDqnDyx7gKz9Faw/edit).

@@ -190,7 +190,7 @@ The slot list contains the following information:
 | status | Defines whether the slot is active or not where "0" stands for "inactive" and "1" stands for "active". If a slot is inactive, it is not rendered in the Storefront by the slot widget. | 1 |
 
 ## Content Providers
-A content provider is a source from where Slot Widget fetches content to embed into slots and, subsequently, render it in the Storefront.  With the Templates & Slots feature, you can use slots to embed the content created in your Spryker project or CMS editors of technology partners (e.g. [CoreMedia](/docs/scos/dev/technology-partners/{{page.version}}/content-management/coremedia/coremedia.html), [E-spirit](/docs/scos/dev/technology-partners/{{page.version}}/content-management/e-spirit.html), [Styla](/docs/scos/dev/technology-partners/{{page.version}}/content-management/styla.html), [Magnolia](/docs/scos/dev/technology-partners/{{page.version}}/content-management/magnolia.html)).
+A content provider is a source from where Slot Widget fetches content to embed into slots and, subsequently, render it in the Storefront.  With the Templates & Slots feature, you can use slots to embed the content created in your Spryker project or CMS editors of technology partners (e.g. [CoreMedia](/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia/coremedia.html), [E-spirit](/docs/scos/user/technology-partners/{{page.version}}/content-management/e-spirit.html), [Styla](/docs/scos/user/technology-partners/{{page.version}}/content-management/styla.html), [Magnolia](/docs/scos/user/technology-partners/{{page.version}}/content-management/magnolia.html)).
 
 When the feature is integrated into your project, the following applies:
 
@@ -232,7 +232,7 @@ A developer can [import visibility conditions](/docs/scos/dev/back-end-developme
 ## Slot Widget
 Slot widget is used to fetch content from a content provider and render it in specified pages. Content is fetched in the form of HTML code ready to be rendered in the Storefront. With the help of slot widgets, you can fetch and render content from the following content providers:
 
-* [CoreMedia](/docs/scos/dev/technology-partners/{{page.version}}/content-management/coremedia/coremedia.html)
+* [CoreMedia](/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia/coremedia.html)
 * [Spryker CMS Blocks](#spryker-cms-blocks)
 
 

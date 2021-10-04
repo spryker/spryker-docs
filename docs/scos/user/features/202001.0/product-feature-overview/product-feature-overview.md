@@ -59,6 +59,6 @@ Besides the Spryker Back Office, product information can be maintained in an ext
 The Spryker Commerce OS supports integration of the following PIM systems:
 
 * [Akeneo](/docs/scos/dev/back-end-development/extending-spryker/extending-the-core.html)
-* [Censhare PIM](/docs/scos/dev/technology-partners/{{page.version}}/product-information-pimerp/censhare-pim.html)
+* [Censhare PIM](/docs/scos/user/technology-partners/{{page.version}}/product-information-pimerp/censhare-pim.html)
 
 

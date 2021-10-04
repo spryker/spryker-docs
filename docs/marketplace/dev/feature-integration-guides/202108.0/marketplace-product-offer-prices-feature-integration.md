@@ -92,6 +92,7 @@ Make sure that the following changes were applied in transfer objects:
 | PriceProductOfferCriteria | class | created | src/Generated/Shared/Transfer/PriceProductOfferCriteriaTransfer |
 | DataImporterReaderConfiguration | class | created | src/Generated/Shared/Transfer/DataImporterReaderConfigurationTransfer |
 | Currency.Code | attribute | created | src/Generated/Shared/Transfer/CurrencyTransfer |
+| PriceProductFilter.productOfferReference | attribute | created | src/Generated/Shared/Transfer/PriceProductFilterTransfer |
 
 {% endinfo_block %}
 

@@ -90,7 +90,7 @@ See [Semantic Versioning: Major vs. Minor vs. Patch Release](/docs/scos/dev/arch
 
 To configure and customize your Spryker Commerce OS, do the following:
 
-1. To define how to manage and configure the settings in configuration files, see [Configuration management](/docs/scos/dev/back-end-development/zed/data-manipulation/configuration-management.html).
+1. To define how to manage and configure the settings in configuration files, see [Configuration management](/docs/scos/dev/back-end-development/data-manipulation/configuration-management.html).
 2. Configure your environment:
     *   [Database](/docs/scos/dev/setup/configuring-the-database-server.html)
     *   [Redis](/docs/scos/dev/setup/redis-configuration.html)

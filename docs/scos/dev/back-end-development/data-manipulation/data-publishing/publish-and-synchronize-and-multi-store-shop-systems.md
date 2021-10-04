@@ -24,7 +24,7 @@ redirect_from:
 
 ## Introduction
 
-As Spryker supports multi-store shop systems, there should be a way to synchronize data between all stores. P&S ([Publish and Synchronization](/docs/scos/dev/back-end-development/zed/data-manipulation/data-publishing/publish-and-synchronization.html)) is a process of handling data transfer from back-end to front-end stores. This process can be configured to support multi-store shop systems.
+As Spryker supports multi-store shop systems, there should be a way to synchronize data between all stores. P&S ([Publish and Synchronization](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html)) is a process of handling data transfer from back-end to front-end stores. This process can be configured to support multi-store shop systems.
 
 ## Configuration
 

@@ -43,7 +43,7 @@ The Spryker OS provides the following Application Layers:
 
 * [Yves](/docs/scos/dev/back-end-development/yves/yves.html) - provides frontend functionality with the light-weight data access.
 * [Zed](/docs/scos/dev/back-end-development/zed/zed.html) - provides backoffice/backend functionality with heavy calculations.
-* [Glue](/docs/scos/dev/glue-api-guides/glue-infrastructure.html) - provides infrastructure for API with the mixed data access.
+* [Glue](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-infrastructure.html) - provides infrastructure for API with the mixed data access.
 * [Client](/docs/scos/dev/back-end-development/client/client.html) - provides data access infrastructure.
 * Shared - provides shared code abstractions to be used in other Application Layers of the same module.
 * Service - provides infrastructure for the stateless operations, usually utils.
@@ -94,7 +94,7 @@ With data separation comes the question: how to sync data between both applicati
 
 The idea behind this concept is that the necessary data (stored in the relational database) is being watched for changes (create, update, delete). When a change occurs, the relevant data gets published to the relevant place (Search and/or Storage). It is an eventually consistent method of providing data for the front-end.
 
-For more details on how Publish & Sync works, see [Publish and Synchronization ](/docs/scos/dev/back-end-development/zed/data-manipulation/data-publishing/publish-and-synchronization.html).
+For more details on how Publish & Sync works, see [Publish and Synchronization ](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html).
 
 ## Where to go from here?
 

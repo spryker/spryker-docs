@@ -15,7 +15,7 @@ The Spryker Glue REST API is a fully functional JSON REST API that comes in the 
 The Spryker API infrastructure, which is implemented as a separate layer of the Spryker Commerce OS, is called Glue. Glue is responsible for providing API endpoints, processing requests, as well as for communication with other layers of the OS in order to retrieve the necessary information. As a result, the Glue is responsible for communicating with any clients on the touchpoint side.
 
 {% info_block infoBox %}
-For more details, see [Glue Infrastructure](/docs/scos/dev/glue-api-guides/glue-infrastructure.html).
+For more details, see [Glue Infrastructure](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-infrastructure.html).
 {% endinfo_block %}
 
 ## REST API

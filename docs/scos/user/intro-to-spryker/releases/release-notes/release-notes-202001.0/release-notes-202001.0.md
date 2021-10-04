@@ -231,7 +231,7 @@ The Heartbeat functionality is replaced with health checks. There is a new set o
 The **Queue manager** functionality is extended with the command that makes queue worker exit right after processing a queue. If the queue is empty, the queue worker exits instead of waiting for the configured execution time to pass.
 
 #### Documentation:
-[Tutorial - Handling Data - Publish and Synchronization - Spryker Commerce OS](/docs/scos/dev/back-end-development/zed/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html#7--queue)
+[Tutorial - Handling Data - Publish and Synchronization - Spryker Commerce OS](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html#7--queue)
 
 
 ### Search Initialization Improvement

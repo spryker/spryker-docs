@@ -23,7 +23,7 @@ The application must have proper access(es) depending on what you expect to achi
 
 ## Console
 
-To export the products and categories, we must register the Collectors that were created in the [Console](/docs/scos/dev/back-end-development/console-commands/console-commands-in-spryker.html). Econda module has already everything in place and the only thing you need to do is to add `CollectorFileExportConsole` to `Pyz\Zed\Console\ConsoleDependencyProvider` like in the snippet bellow:
+To export the products and categories, we must register the Collectors that were created in the [Console](/docs/scos/dev/back-end-development/console-commands/console-commands.html). Econda module has already everything in place and the only thing you need to do is to add `CollectorFileExportConsole` to `Pyz\Zed\Console\ConsoleDependencyProvider` like in the snippet bellow:
 
 ```php
 <?php

@@ -147,7 +147,7 @@ We have adjusted `TransferValidator` to take new simple array definitions into a
 
 | Major | Minor | Patch |
 | --- | --- | --- |
-| n/a | n/a | <ul><li>[CmsBlockCategoryConnector 2.0.4](https://github.com/spryker/cms-block-category-connector/releases/tag/2.0.4)</li><li>[CmsBlockProductConnector 1.0.3](https://github.com/spryker/CmsBlockProductConnector/releases/tag/1.0.3)</li><li>[ProductOptionCartConnector 4.1.2](https://github.com/spryker/product-option-cart-connector/releases/tag/4.1.2)</li><li>[Ratepay 0.6.3](https://github.com/spryker/Ratepay/releases/tag/0.6.3)</li><li>[Transfer 3.3.5](https://github.com/spryker/Transfer/releases/tag/3.3.5)</li></ul> |
+| n/a | n/a | <ul><li>[CmsBlockCategoryConnector 2.0.4](https://github.com/spryker/cms-block-category-connector/releases/tag/2.0.4)</li><li>[CmsBlockProductConnector 1.0.3](https://github.com/spryker/CmsBlockProductConnector/releases/tag/1.0.3)</li><li>[ProductOptionCartConnector 4.1.2](https://github.com/spryker/product-option-cart-connector/releases/tag/4.1.2)</li><li>[Ratepay 0.6.3](https://github.com/spryker/Ratepay/releases/tag/0.6.3)</li><li>[Transfer 3.3.5](https://github.com/spryker/transfer/releases/tag/3.3.5)</li></ul> |
 
 ### Navigation Redis Entry Optimization
 The Redis entry for Main Navigation contained unneeded data for all navigation nodes, causing a big Redis entry. In a production environment, this Redis entry would take more time to fetch especially in a distributed setup as the latency would be even higher. This improvement cleans up the Navigation entry in Redis from all the unneeded data and improves the performance for loading the navigation.
@@ -211,7 +211,7 @@ Previously, for a property with type `array`, it was not possible to reset it wi
 
 | Major | Minor | Patch |
 | --- | --- | --- |
-| n/a | n/a | [Transfer 3.3.6](https://github.com/spryker/Transfer/releases/tag/3.3.6) |
+| n/a | n/a | [Transfer 3.3.6](https://github.com/spryker/transfer/releases/tag/3.3.6) |
 
 ### Work with Missing Translations
 Previously, the "translation key exists" check considered all translation keys regardless of the selected locale, but "translation retrieval" retrieved translations from the current locale only. This was causing an error in case if the translation existed in the non-current locale. We have fixed this issue now. The translate methods now work on the selected locale's translation key set.

@@ -51,7 +51,7 @@ The ClientClient’s purpose is to encapsulate the logic that runs the shop inde
 Spryker provides several clients. For instance there is a cart client which contains methods like `addItem()` or `removeItem()`. And there is a catalog client that handles query strings. In each module, you can access the related Client with the `getClient()` method, which is available in controllers and plugins.
 ![Yves Get Client](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Yves/Client/yves-getclient.png) 
 
-The following example shows how the cart Client is used inside the `CartController.` As you can see, the Client uses [transfer objects](/docs/scos/dev/back-end-development/zed/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html) as an input parameter.
+The following example shows how the cart Client is used inside the `CartController.` As you can see, the Client uses [transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html) as an input parameter.
 
 ```php
 <?php

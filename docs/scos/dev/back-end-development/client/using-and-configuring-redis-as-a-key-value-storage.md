@@ -58,7 +58,7 @@ Data is loaded in Redis through a dedicated console command. This console comman
 console sync:data
 ```
 
-See [Publish and Synchronization](/docs/scos/dev/back-end-development/zed/data-manipulation/data-publishing/publish-and-synchronization.html) to find out more about how the Publish and Synchronization works and how to extend it.
+See [Publish and Synchronization](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html) to find out more about how the Publish and Synchronization works and how to extend it.
 
 ## How data is kept in sync
 

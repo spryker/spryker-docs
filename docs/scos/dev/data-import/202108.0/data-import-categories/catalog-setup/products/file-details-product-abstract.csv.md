@@ -42,14 +42,14 @@ The file should have the following parameters:
 | icecat_license |  | String | | Icecat product catalogue licence code. |
 | new_from |  | Date | | To be considered a new product from this presented date. |
 | new_to |  | String | | To be considered a new product until this presented date. |
-| avalara_tax_code |  | String | | [Avalara tax code](/docs/scos/user/features/{{page.version}}/tax/tax-feature-overview.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. |
+| avalara_tax_code |  | String | | [Avalara tax code](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. |
 
 
 ## Dependencies
 
 This file has the following dependencies:
 
-* [ category.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category.csv.html)
+* [category.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category.csv.html)
 * [glossary.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-glossary.csv.html)
 * [tax.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-tax.csv.html)
 
@@ -59,12 +59,12 @@ For each attribute, where N is a number starting in 1, it is mandatory to have b
 * `attribute_key_N`
 * `value_N`
 
-The amount of attributes is not limited. 
+The amount of attributes is not limited.
 
 ## Import template file and content example
 Find the template and an example of the file below:
 
 | FILE | DESCRIPTION |
 | --- | --- |
-| [template_product_abstract.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/202109.0/Template+product_abstract.csv) | Import file template with headers only. |
+| [template_product_abstract.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/202109.0/Template%2Bproduct_abstract.csv) | Import file template with headers only. |
 | [product_abstract.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/202109.0/product_abstract.csv) | Exemplary import file with the Demo Shop data. |

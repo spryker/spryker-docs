@@ -30,7 +30,7 @@ The file should have the following parameters:
 | option_name_translation_key |  | String | | Translation key of the name of the option in different locales. |
 | option_name.{ANY_LOCALE_NAME}<br>Example value: *option_name.en_US |  | String || Name of the option in the specified locale (US for our example).  |
 | sku | | String | | SKU identifier of the product ption. |
-| avalara_tax_code |  | String | | [Avalara tax code](/docs/scos/user/features/{{page.version}}/tax/tax-feature-overview.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. |
+| avalara_tax_code |  | String | | [Avalara tax code](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. |
 
 
 ## Dependencies

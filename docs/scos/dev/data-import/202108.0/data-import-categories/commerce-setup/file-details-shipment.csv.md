@@ -17,7 +17,7 @@ To import the file, run
 data:import:shipment
 ```
 
-## Import file parameters 
+## Import file parameters
 The file should have the following parameters:
 
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |
@@ -26,7 +26,7 @@ The file should have the following parameters:
 | name|  &check; | String | | Name of the shipment method. |
 | carrier |  &check; | String |  | Name of the shipment carrier. |
 | taxSetName |  &check; | String | | 	Name of the tax set. |
-| avalara_tax_code |  | String | | [Avalara tax code](/docs/scos/user/features/{{page.version}}/tax/tax-feature-overview.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. |
+| avalara_tax_code |  | String | | [Avalara tax code](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. |
 
 ## Dependencies
 This file has no dependencies.
@@ -37,5 +37,5 @@ Find the template and an example of the file below:
 
 | FILE | DESCRIPTION |
 | --- | --- |
-| [template_shipment.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/202109.0/Template+shipment.csv) | Import file template with headers only. |
+| [template_shipment.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/202109.0/Template%2Bshipment.csv) | Import file template with headers only. |
 | [shipment.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/202109.0/shipment.csv) | Exemplary import file with the Demo Shop data. |

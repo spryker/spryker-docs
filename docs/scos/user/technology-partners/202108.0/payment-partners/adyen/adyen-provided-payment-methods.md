@@ -67,13 +67,9 @@ class AdyenExecute3DStep extends AbstractBaseStep
      */
     public function requireInput(AbstractTransfer $quoteTransfer)
     {
-        if ($quoteTransfer->getPayment()->getPaymentSelection() === AdyenConfig::ADYEN_CREDIT_CARD &&
-            $this->config->isAdyenCreditCard3dSecureEnabled()
-        ) {
-            return true;
-        }
- 
-        return false;
+        return $this->isAdyenCreditCardPayment($quoteTransfer) &&
+            $this->config->isAdyenCreditCard3dSecureEnabled() &&
+            $quoteTransfer->getPayment()->getAdyenRedirect();
     }
  
     /**
@@ -99,6 +95,15 @@ class AdyenExecute3DStep extends AbstractBaseStep
         ];
     }
 }
+    /**
+     * @param \Spryker\Shared\Kernel\Transfer\AbstractTransfer $quoteTransfer
+     *
+     * @return bool
+     */
+    protected function isAdyenCreditCardPayment(AbstractTransfer $quoteTransfer): bool
+    {
+        return $quoteTransfer->getPayment() && $quoteTransfer->getPayment()->getPaymentSelection() === AdyenConfig::ADYEN_CREDIT_CARD;
+    }
 ```
 
 2. Add template for this step:
@@ -469,4 +474,3 @@ State machine example can be found in: `vendor/spryker-eco/adyen/config/Zed/Oms/
 WeChat Pay is rapidly becoming a keystone payment method for businesses wanting to reach Chinese shoppers, both home and abroad. Originally a messaging app (like WhatsApp) WeChat has evolved into an ecosystem that allows Chinese shoppers to chat, browse, and make payments, all in one place - making shopping as easy as chatting to your friends.
 
 State machine example can be found in: `vendor/spryker-eco/adyen/config/Zed/Oms/AdyenWeChatPay01.xml`
-

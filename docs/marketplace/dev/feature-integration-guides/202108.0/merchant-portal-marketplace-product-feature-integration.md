@@ -62,7 +62,6 @@ Make sure that the following changes have been applied in transfer objects:
 | PriceProductTableViewCollection | class | Created | src/Generated/Shared/Transfer/PriceProductTableViewCollectionTransfer |
 | PriceProductTableView | class | Created | src/Generated/Shared/Transfer/PriceProductTableViewTransfer |
 | MerchantUser.merchant | property | Created | src/Generated/Shared/Transfer/MerchantUserTransfer |
-| PriceProductCriteria.onlyConcretePrices | property | Created | src/Generated/Shared/Transfer/PriceProductCriteria |
 
 {% endinfo_block %}
 
@@ -73,47 +72,3 @@ Generate a new translation cache for Zed:
 ```bash
 console translator:generate-cache
 ```
-
-### 4) Set up behavior
-
-To set up behavior, take the following steps.
-
-#### Extend price validation in PriceProduct module
-
-Activate the following plugins:
-
-| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE |
-| --------------- | ------------ | ----------- | ------------ |
-| PriceProductVolumeValidatorPlugin | Validates volume prices. | | Spryker\Zed\PriceProductVolume\Communication\Plugin\PriceProduct |
-
-**src/Pyz/Zed/PriceProduct/PriceProductDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\PriceProduct;
-
-use Spryker\Zed\PriceProductVolume\Communication\Plugin\PriceProduct\PriceProductVolumeValidatorPlugin;
-use Spryker\Zed\PriceProduct\PriceProductDependencyProvider as SprykerSalesPriceProductDependencyProvider;
-
-class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvider
-{
-    /**
-     * @return \Spryker\Zed\PriceProductExtension\Dependency\Plugin\PriceProductValidatorPluginInterface[]
-     */
-    protected function getPriceProductValidatorPlugins(): array
-    {
-        return [
-            new PriceProductVolumeValidatorPlugin(),
-        ];
-    }
-}
-```
-
-{% info_block warningBox "Verification" %}
-
-
-1. Log in to the Merchant Portal, go to the product list and edit a product by clicking on a row.
-2. Make sure the `PriceProductVolumeValidatorPlugin` plugin is set up by submitting a price with a higher quantity than 1, on the edit product page in the Merchant Portal.
-
-{% endinfo_block %}

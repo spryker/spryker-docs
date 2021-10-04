@@ -42,6 +42,7 @@ Make sure that the following modules were installed:
 | PriceProductOfferStorageExtension | spryker/price-product-offer-storage-extension |
 | PriceProductOfferVolume | spryker/price-product-offer-volume |
 | PriceProductOfferVolumeGui | spryker/price-product-offer-volume-gui |
+| PriceProductVolume | spryker/price-product-volume |
 
 {% endinfo_block %}
 
@@ -92,8 +93,16 @@ Make sure that the following changes were applied in transfer objects:
 | PriceProductOfferCriteria | class | created | src/Generated/Shared/Transfer/PriceProductOfferCriteriaTransfer |
 | DataImporterReaderConfiguration | class | created | src/Generated/Shared/Transfer/DataImporterReaderConfigurationTransfer |
 | Currency.Code | attribute | created | src/Generated/Shared/Transfer/CurrencyTransfer |
-| PriceProductFilter.Filter | attribute | created | src/Generated/Shared/Transfer/PriceProductFilterTransfer |
+| MoneyValue | class | created |src/Generated/Shared/Transfer/MoneyValueTransfer |
+| PriceProduct | attribute | created | src/Generated/Shared/Transfer/PriceProductTransfer |
+| PriceType | class | created |src/Generated/Shared/Transfer/PriceTypeTransfer |
+| PriceProductFilter | class | created |src/Generated/Shared/Transfer/PriceProductFilterTransfer |
+| PriceProductFilter.quantity | class | created |src/Generated/Shared/Transfer/PriceProductFilterTransfer |
+| PriceProductFilter.filter | class | created | src/Generated/Shared/Transfer/PriceProductFilterTransfer |
 | PriceProductFilter.value | attribute | created | src/Generated/Shared/Transfer/PriceProductFilterTransfer |
+| PriceProductVolume | class | created |  src/Generated/Shared/Transfer/PriceProductVolumeTransfer |
+| PriceProductVolumeCollection | class | created |  src/Generated/Shared/Transfer/PriceProductVolumeCollectionTransfer |
+| PriceProductCriteria | class | created | src/Generated/Shared/Transfer/PriceProductCriteriaTransfer |
 
 {% endinfo_block %}
 
@@ -768,6 +777,7 @@ Enable the following behaviors by registering the plugins:
 | PriceProductOfferPriceProductFilterPlugin | Filters out inapplicable product offer prices and product concrete prices when a product offer is selected |   | Spryker\Service\PriceProductOfferStorage\Plugin\PriceProduct |
 | PriceProductOfferVolumeExtractorPlugin | Maps out JSON entries from price_data of PriceProductTransfer to new PriceProductTransfers with volume prices |   | Spryker\Client\PriceProductOfferVolume\Plugin\PriceProductOfferStorage |
 | PriceProductOfferVolumeFilterPlugin | Applies correct volume pricing when applicable and quantity is selected |   | Spryker\Service\PriceProductOfferVolume\Plugin\PriceProductOffer |
+| PriceProductVolumeValidatorPlugin | Validates product volume prices. |  | Spryker\Zed\PriceProductVolume\Communication\Plugin\PriceProduct |
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>
@@ -826,6 +836,7 @@ class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvid
 namespace Pyz\Zed\PriceProduct;
 
 use Spryker\Zed\PriceProduct\PriceProductDependencyProvider as SprykerPriceProductDependencyProvider;
+use Spryker\Zed\PriceProductVolume\Communication\Plugin\PriceProduct\PriceProductVolumeValidatorPlugin;
 use Spryker\Zed\PriceProductOffer\Communication\Plugin\PriceProduct\PriceProductOfferPriceDimensionConcreteSaverPlugin;
 use Spryker\Zed\PriceProductOffer\Communication\Plugin\PriceProduct\PriceProductOfferPriceDimensionQueryCriteriaPlugin;
 use Spryker\Zed\PriceProductOffer\Communication\Plugin\PriceProduct\PriceProductOfferPriceProductDimensionExpanderStrategyPlugin;
@@ -861,6 +872,16 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
     {
         return [
             new PriceProductOfferPriceProductDimensionExpanderStrategyPlugin(),
+        ];
+    }
+    
+    /**
+     * @return \Spryker\Zed\PriceProductExtension\Dependency\Plugin\PriceProductValidatorPluginInterface[]
+     */
+    protected function getPriceProductValidatorPlugins(): array
+    {
+        return [
+            new PriceProductVolumeValidatorPlugin(),
         ];
     }
 }

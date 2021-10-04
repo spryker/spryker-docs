@@ -9,12 +9,12 @@ This article provides details about the Table Filter Select component in the Com
 ## Overview
 
 Table Filter Select is a feature of the Table Component that allows filtering data via `Select` component.
-See an example below, how to use the Filter Select feature.
+Check out this example below to see how to use the Filter Select feature.
 
-Feature Configuration:
+Feature configuration:
 
-`enabled` - will enable filter via config.  
-`items` - an array with config for each filter select.  
+- `enabled` - enables the filter via config.  
+- `items` - an array with the configuration for each filter select.  
 
 ```html
 <spy-table [config]="{
@@ -42,7 +42,9 @@ Feature Configuration:
 </spy-table>
 ```
 
-## Feature Registration
+## Feature registration
+
+Register the feature:
 
 ```ts
 @NgModule({
@@ -65,7 +67,7 @@ export class RootModule {}
 
 ## Interfaces
 
-Below you can find interfaces for Table Filter Select.
+Below you can find interfaces for the Table Filter Select.
 
 ```ts
 export interface TableFilterSelect

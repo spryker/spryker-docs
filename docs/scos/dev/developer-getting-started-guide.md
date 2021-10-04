@@ -94,7 +94,7 @@ To configure and customize your Spryker Commerce OS, do the following:
 2. Configure your environment:
     *   [Database](/docs/scos/dev/setup/configuring-the-database-server.html)
     *   [Redis](/docs/scos/dev/setup/redis-configuration.html)
-    <!---*   [ElasticSearch](/docs/scos/dev/back-end-development/zed/data-manipulation/data-interaction/search/configuring-elasticsearch.html)-->
+    <!---*   [ElasticSearch](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-elasticsearch.html)-->
     *   [Queue](/docs/scos/dev/back-end-development/data-manipulation/queue/queue.html)
 3. [Congiure stores](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/howto-set-up-multiple-stores.html#configure-stores) to have one or multiple stores in your online shop.
 4. [Schedule tasks](/docs/scos/dev/back-end-development/cronjobs/cronjob-scheduling.html) (Cron jobs).
@@ -142,6 +142,6 @@ Select one of the topics below depending on what you want to do next:
 * [Glue REST API](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-rest-api.html): Spryker Glue REST API overview, reference, and guides.
 * [User guides](/docs/scos/user/back-office-user-guides/{{page.version}}/about-back-office-user-guides.html): step-by-step Backoffice and Storefront user guides.
 * [Developer guides](/docs/scos/dev/overview-of-the-developer-guides.html): technical information and guides for developers.
-* [Technology partners](/docs/scos/dev/technology-partners/{{page.version}}/technology-partner-integration.html): Spryker technology partners information and integration guides.
+* [Technology partners](/docs/scos/user/technology-partners/{{page.version}}/technology-partner-integration.html): Spryker technology partners information and integration guides.
 * [Migration and integration](/docs/scos/dev/migration-and-integration/{{page.version}}/about-migration-and-integration-guides.html): instructions on how to migrate to newer versions of modules and features.
 * [Tutorials](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/about-tutorials.html): tutorials and HowTos.

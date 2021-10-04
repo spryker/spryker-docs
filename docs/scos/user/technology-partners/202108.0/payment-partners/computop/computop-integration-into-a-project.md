@@ -18,7 +18,7 @@ There is currently an issue when using giftcards with Computop. Our team is deve
 This article provides step-by-step instructions on integrating the Computop module into your project.
 
 ## Prerequisites
-Prior to integrating Computop into your project, make sure you [installed and configured the Computop module](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop-installation-and-configuration.html).
+Prior to integrating Computop into your project, make sure you [installed and configured the Computop module](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop-installation-and-configuration.html).
 
 ## Integrating Computop into your project
 To integrate Computop, do the following:
@@ -901,7 +901,7 @@ class SummaryStep extends SprykerShopSummaryStep
 
 ### CRIF configuration  
 
-To configure [CRIF](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-crif.html):
+To configure [CRIF](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-crif.html):
 
 1\. Adjust `PaymentDependencyProvider` to use `ComputopPaymentMethodFilterPlugin`:  
 

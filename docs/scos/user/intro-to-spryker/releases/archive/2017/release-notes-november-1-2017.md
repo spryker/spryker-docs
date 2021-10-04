@@ -75,7 +75,7 @@ composer require spryker/rabbit-mq:"^1.0.0" spryker/event:"^2.0.0" spryker/event
 
 ## Improvements
 ### State Machine Sub-process Reuse
-A sub-processes in Spryker state machine allows you to simplify workflows. Each sub-process can represent a part of your business logic. Sometimes within the business logic you might need to have same or similar sub-processes multiple times (e.g. transactional email, refund). With this release, we allow you to copy state machine sub-processes as many times as you need in a project workflow. This will allow you to reuse existing parts of a state machine schema. For more details, see [Modelling - State Machine](/docs/scos/dev/back-end-development/zed/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html).
+A sub-processes in Spryker state machine allows you to simplify workflows. Each sub-process can represent a part of your business logic. Sometimes within the business logic you might need to have same or similar sub-processes multiple times (e.g. transactional email, refund). With this release, we allow you to copy state machine sub-processes as many times as you need in a project workflow. This will allow you to reuse existing parts of a state machine schema. For more details, see [Modelling - State Machine](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html).
 
 **Affected Modules**
 
@@ -161,8 +161,8 @@ Our recent Calculation 4.2.0 release introduced a BC breaking issue in Calculati
 ## Documentation Updates
 The following content has been added to the Academy:
 
-* [Queue Integration - Loggly](/docs/scos/dev/technology-partners/{{page.version}}/operational-tools-monitoring-legal-etc/loggly.html)
-* [Payolution — Configuration](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/payolution/payolution-installation-and-configuration.html)
-* [Payolution — Workflow](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/payolution/technical-details-and-howtos/payolution-workflow.html)
+* [Queue Integration - Loggly](/docs/scos/user/technology-partners/{{page.version}}/operational-tools-monitoring-legal-etc/loggly.html)
+* [Payolution — Configuration](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/payolution/payolution-installation-and-configuration.html)
+* [Payolution — Workflow](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/payolution/technical-details-and-howtos/payolution-workflow.html)
 
 Your feedback would be highly appreciated. Please help us understand what you need from the Spryker Academy by filling out a very short [survey](https://docs.google.com/forms/d/1_vZg0lfqq24Qf9-fQhU50NgsEBy4eDqnDyx7gKz9Faw/edit).

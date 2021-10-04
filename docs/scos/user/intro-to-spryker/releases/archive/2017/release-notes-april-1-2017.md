@@ -42,7 +42,7 @@ This release introduces the `Event` module. It implements the Observer pattern w
 | [Event 1.0.0](https://github.com/spryker/Event/releases/tag/1.0.0) | <ul><li>[Category 3.1.0](https://github.com/spryker/Category/releases/tag/3.1.0)</li><li>[Product 5.1.0](https://github.com/spryker/Product/releases/tag/5.1.0)</li><li> [ProductCategory 4.1.0](https://github.com/spryker/product-category/releases/tag/4.1.0)</li></ul> | [Event 1.0.1](https://github.com/spryker/Event/releases/tag/1.0.1) |
 
 **Documentation**
-For module documentation, see [Event](/docs/scos/dev/back-end-development/zed/data-manipulation/event/event.html).
+For module documentation, see [Event](/docs/scos/dev/back-end-development/data-manipulation/event/event.html).
 
 **Migration Guides**
 To upgrade, follow the steps described below:

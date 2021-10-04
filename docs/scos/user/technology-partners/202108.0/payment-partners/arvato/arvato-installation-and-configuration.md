@@ -52,7 +52,7 @@ API URLs:
 
 Services:
 * [Risk Check](https://documentation.spryker.com/2021080/docs/arvato-risk-check-2-0)
-* [Store Order](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/arvato/arvato-store-order.html)
+* [Store Order](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/arvato/arvato-store-order.html)
 
 To implement Arvato RSS you should be familiar with concept of extending the
 

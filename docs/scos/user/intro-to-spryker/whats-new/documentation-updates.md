@@ -176,7 +176,7 @@ Below you will find the list of the new/updated documentation released as part o
 <details open>
 <summary>Technology Partners guides</summary>
 
-[Coremedia with Templates & Slots](/docs/scos/dev/technology-partners/{{page.version}}/content-management/coremedia/coremedia.html)
+[Coremedia with Templates & Slots](/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia/coremedia.html)
 
 
 </details>

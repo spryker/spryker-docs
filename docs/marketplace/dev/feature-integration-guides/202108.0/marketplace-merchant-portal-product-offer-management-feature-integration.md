@@ -31,7 +31,6 @@ Make sure that the following modules have been installed:
 | MODULE  | EXPECTED DIRECTORY  |
 | ------------- | --------------- |
 | ProductOfferMerchantPortalGui | spryker/product-offer-merchant-portal-gui |
-| PriceProductOfferVolume | spryker/price-product-offer-volume |
 
 {% endinfo_block %}
 

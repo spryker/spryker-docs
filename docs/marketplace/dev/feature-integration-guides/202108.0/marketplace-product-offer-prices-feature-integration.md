@@ -106,7 +106,7 @@ console translator:generate-cache
 
 ### 4) Configure export to Redis and Elasticsearch
 
-Set up event listeners 
+Set up event listeners
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
@@ -255,6 +255,9 @@ To configure the export of product offer prices to Redis, take the following ste
 | PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE |
 | --------------- | ------------ | ----------- | ------------ |
 | PriceProductStoreWritePublisherPlugin | Publishes product offer prices data by update events from spy_price_product_store table. | | Spryker\Zed\PriceProductOfferStorage\Communication\Plugin\Publisher\PriceProductOffer |
+
+
+**src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
 ```php
 <?php

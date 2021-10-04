@@ -479,6 +479,10 @@ entries:
 
               - title: "Table Filters"
                 url: /docs/marketplace/dev/front-end/table-design/table-filters/
+                nested:
+
+                  - title: "Select"
+                    url: /docs/marketplace/dev/front-end/table-design/table-filters/table-filter-select.html
 
           - title: "UI components library"
             url: /docs/marketplace/dev/front-end/ui-components-library/

@@ -49,7 +49,7 @@ The command list for building fronted is extended with the new attributes module
 
 {% info_block infoBox %}
 
-To create a frontend build in different ES5 and ES6 modes, use the list of commands from [Frontend-related commands](/docs/scos/dev/back-end-development/console-commands/console-commands-in-spryker.html#frontend-related-commands). See the YVES section.
+To create a frontend build in different ES5 and ES6 modes, use the list of commands from [Frontend-related commands](/docs/scos/dev/back-end-development/console-commands/console-commands.html#frontend-related-commands). See the YVES section.
 
 {% endinfo_block %}
 

@@ -204,7 +204,7 @@ There was a bug when using typed arrays as a type in the transfer schema files. 
 
 | Major | Minor | Patch |
 | --- | --- | --- |
-| n/a | n/a | [Transfer 3.3.4](https://github.com/spryker/Transfer/releases/tag/3.3.4) |
+| n/a | n/a | [Transfer 3.3.4](https://github.com/spryker/transfer/releases/tag/3.3.4) |
 
 ### Availability of Bundle Items After De-assignment
 There was an issue with availability/stock calculation. When all items were removed from a bundle, the availability/stock was not updated. This issue was fixed. Now, when all items are removed from a bundle, stock and availability are set to 0.

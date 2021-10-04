@@ -75,7 +75,7 @@ Table content:
 
 ## Learn more
 
-[Marketplace Shipment](/docs/marketplace/dev/feature-walkthroughs/marketplace-shipment-feature-walkthrough.html)
+[Marketplace Shipment](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-shipment-feature-walkthrough.html)
 
 [Marketplace & Merchant State Machines](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1296599943/Reviewed+Marketplace+Merchant+State+Machines)
 

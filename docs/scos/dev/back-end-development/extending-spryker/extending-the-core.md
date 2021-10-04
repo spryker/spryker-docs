@@ -67,35 +67,35 @@ use Spryker\Zed\MyBundle\Business\Model\AnyModelInterface
 
 class AnyModel implements AnyModelInterface
 {
-    
+
     /**
       * @var AnyModelInterface
       */
     private $anyModelFromCore;
-    
+
     public function __construct(AnyModelInterface $anyModelFromCore)
     {
         $this->anyModelFromCore = $anyModelFromCore;
     }
-    
-    // The interfaces forces you to add all public methods. 
+
+    // The interfaces forces you to add all public methods.
     // This gives you nice hooks into the code.
 
     public function a()
     {
         return $this->anyModelFromCore->a();
     }
-    
+
     public function b()
     {
         return $this->anyModelFromCore->b();
     }
-    
-    public function c() 
+
+    public function c()
     {
         return $this->anyModelFromCore->c();
     }
-    
+
 }
 ```
 
@@ -125,14 +125,14 @@ use Spryker\Zed\MyBundle\Business\MyBundleBusinessFactory as SprykerMyBundleBusi
  */
 class MyBundleBusinessFactory extends SprykerMyBundleBusinessFactory
 {
-    
+
     public function createAnyModel()
     {
-        // Returns your sub-class which inherits from the core. 
+        // Returns your sub-class which inherits from the core.
         // If needed you can inject any dependencies here as well.
         return new AnyModel();
     }
-    
+
 }
 ```
 
@@ -154,7 +154,7 @@ use Spryker\Zed\MyBundle\Business\MyBundleBusinessFactory as SprykerMyBundleBusi
  */
 class MyBundleBusinessFactory extends SprykerMyBundleBusinessFactory
 {
-    
+
     public function createAnyModel()
     {
         // First you need to instantiate the original class from core.
@@ -163,11 +163,10 @@ class MyBundleBusinessFactory extends SprykerMyBundleBusinessFactory
             $this->getAnyDependency(),
             $this->getAnyOtherDependency()
         )
-        
+
         // Now you create the composed object which gets the original class injected
         return new AnyModel($anyModelFromCore); // TODO OWN CREATE METHOD
     }
-    
+
 }
 ```
-

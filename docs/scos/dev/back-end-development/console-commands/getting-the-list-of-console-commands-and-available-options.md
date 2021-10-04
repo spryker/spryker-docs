@@ -56,5 +56,5 @@ Options:
 In the above example output, you can see that Spryker prints some meta-information `Store: DE | Environment: development`. You can disable this output with the option `--quiet-meta`. This is very useful when you want to output, for example, JSON.
 
 ##  Next steps
-See [Console commands in spryker](/docs/scos/dev/back-end-development/console-commands/console-commands-in-spryker.html) for details on all the commands you can use.
+See [Console commands in spryker](/docs/scos/dev/back-end-development/console-commands/console-commands.html) for details on all the commands you can use.
 

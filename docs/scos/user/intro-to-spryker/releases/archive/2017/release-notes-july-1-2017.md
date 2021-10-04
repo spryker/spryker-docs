@@ -154,7 +154,7 @@ Previously, our schema allowed only one payment per sales-order. However, there 
 
 | Major | Minor | Patch |
 | --- | --- | --- |
-| [Payment 4.0.0](https://github.com/spryker/Payment/releases/tag/4.0.0) | n/a | <ul><li>[Braintree 0.5.3](https://github.com/spryker/Braintree/releases/tag/0.5.3)</li><li>[DummyPayment 2.0.3](https://github.com/spryker/dummy-payment/releases/tag/2.0.3)</li><li>[Payolution 4.0.3](https://github.com/spryker/Payolution/releases/tag/4.0.3)</li><li>[Ratepay 0.6.1](https://github.com/spryker/Ratepay/releases/tag/0.6.1)</li><li>[Transfer 3.3.2](https://github.com/spryker/Transfer/releases/tag/3.3.2)</li></ul> |
+| [Payment 4.0.0](https://github.com/spryker/Payment/releases/tag/4.0.0) | n/a | <ul><li>[Braintree 0.5.3](https://github.com/spryker/Braintree/releases/tag/0.5.3)</li><li>[DummyPayment 2.0.3](https://github.com/spryker/dummy-payment/releases/tag/2.0.3)</li><li>[Payolution 4.0.3](https://github.com/spryker/Payolution/releases/tag/4.0.3)</li><li>[Ratepay 0.6.1](https://github.com/spryker/Ratepay/releases/tag/0.6.1)</li><li>[Transfer 3.3.2](https://github.com/spryker/transfer/releases/tag/3.3.2)</li></ul> |
 
 **Documentation**
 For module documentation, see [Payment Module Guide](https://documentation.spryker.com/2021080/docs/payments)

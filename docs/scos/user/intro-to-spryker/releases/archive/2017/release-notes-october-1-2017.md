@@ -162,7 +162,7 @@ To optimize performance, we updated the `fromArray()` method in `AbstractTransfe
 
 | Major | Minor | Patch |
 | --- | --- | --- |
-| n/a | <ul><li>[Kernel 3.10.0](https://github.com/spryker/Kernel/releases/tag/3.10.0)</li><li>[Transfer 3.4.0](https://github.com/spryker/Transfer/releases/tag/3.4.0)</li></ul> | n/a |
+| n/a | <ul><li>[Kernel 3.10.0](https://github.com/spryker/Kernel/releases/tag/3.10.0)</li><li>[Transfer 3.4.0](https://github.com/spryker/transfer/releases/tag/3.4.0)</li></ul> | n/a |
 
 ### StorageClient Optimization
 With this release, we introduced a few optimisations to `StorageClient`. `StorageClient` had an issue with cache for storage multi keys getter. These keys were not marked as used and were lost from the cache in the next request. This issue is now fixed .

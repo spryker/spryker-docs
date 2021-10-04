@@ -74,7 +74,7 @@ Each module contains one folder for every layer of the application :
 ## Extending SprykerCore Functionality
 To extend the functionality of a class from SprykerCore, a new class with the same name must be added to the corresponding location on the project side.
 
-Replacement rules, described in the [Extending the Core](/docs/scos/dev/back-end-development/zed/data-manipulation/data-enrichment/extending-spryker/extending-the-core.html) article work for the next classes in Spryker module:
+Replacement rules, described in the [Extending the Core](/docs/scos/dev/back-end-development/extending-spryker/extending-the-core.html) article work for the next classes in Spryker module:
 
 * `Facade`
 * `BusinessFactory`

@@ -61,7 +61,7 @@ Usually, you need to run `composer update` to get Spryker Core updates, as by de
 {% info_block infoBox %}
 
 Some minor updates require specific development effort for the project, which is caused by deprecation of some old approach or 3rd party modules. It's adviced to check out the [release notes](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html) published after the project's start.
-Also, check out [General Troubleshooting](/docs/scos/dev/troubleshooting/general-technical-issues/class-silex-controllerproviderinterface-not-found.html) for solutions of general technical issues you might have.
+Also, check out [General Troubleshooting](/docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/class-silex-controllerproviderinterface-not-found.html) for solutions of general technical issues you might have.
 
 {% endinfo_block %}
 

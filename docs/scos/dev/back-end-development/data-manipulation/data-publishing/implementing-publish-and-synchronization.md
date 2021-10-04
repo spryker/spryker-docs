@@ -86,7 +86,7 @@ protected function getQueueOptions()
 ```
 
 ## 3. Create Publication Table
-The next step is to create a database table that will be used as a mirror for the corresponding *Redis* or *Elasticsearch* store. For details, see [Extending the Database Schema](/docs/scos/dev/back-end-development/zed/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html).
+The next step is to create a database table that will be used as a mirror for the corresponding *Redis* or *Elasticsearch* store. For details, see [Extending the Database Schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html).
 
 {% info_block infoBox %}
 As a naming convention, it is recommended to append `_storage` to the end of the table name, if it is synchronized with Redis, and `_search`, if it is synchronized with Elasticsearch.

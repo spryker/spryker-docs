@@ -16,11 +16,10 @@ Check out this example below to see how to use the Row Actions feature.
 Feature configuration:
 
 - `enabled` - enables the feature via config.  
-- `actions` - is an array with actions that are displayed in the drop down menu and their type of registered [action](/docs/marketplace/dev/front-end/ui-components-library/actions/).  
+- `actions` - an array with actions that are displayed in the drop down menu and their type of registered [action](/docs/marketplace/dev/front-end/ui-components-library/actions/).  
 - `click` - indicates which action is used for clicking the table row by its `id`.
 - `rowIdPath` - is used for the `rowId` action context.  
-- `availableActionsPath` - is path to an array with the available action IDs in the table data row (supports nested objects 
-using dot notation for ex. `prop.nestedProp`).  
+- `availableActionsPath` - path to an array with the available action IDs in the table data row (supports nested objects using dot notation for ex. `prop.nestedProp`).  
 
 ```html
 <spy-table [config]="{

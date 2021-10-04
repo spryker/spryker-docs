@@ -13,7 +13,7 @@ Check out this example below to see how to use the Sync State feature.
 
 Feature configuration:
 
-- `enabled` - enables feature via config.   
+- `enabled` - enables the feature via config.   
 - `tableId` - is an`id` of the table that syncs the state of the table with the browser URL.  
 
 ```html

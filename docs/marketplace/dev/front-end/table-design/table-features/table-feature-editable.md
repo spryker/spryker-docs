@@ -11,9 +11,9 @@ This article provides details about the Table Feature Editable component in the 
 Table Feature Editable is a feature of the Table Component that allows editing/adding rows to the table.
 You can see below the base configuration for the Editable feature, which includes the following options:
 
-- `columns` - is an array with the config for every editable column.  
-- `create` - is an object with the config for the added rows.  
-- `update` - is an object with the config for the existing rows.  
+- `columns` - an array with the config for every editable column.  
+- `create` - an object with the config for the added rows.  
+- `update` - an object with the config for the existing rows.  
 - `disableRowKey` - disables the row that contains the mentioned column `id` (see the example below).   
 
 ```html

@@ -28,7 +28,7 @@ In this article, we’ll exemplify how you can set up communication between Yves
 
 {% info_block warningBox "Prerequisites" %}
 
-You should have a module for which you set up communication between Yves and Zed. To add the module, see [Adding a new module](/docs/scos/dev/back-end-development/zed/data-manipulation/data-enrichment/extending-spryker/adding-a-new-module.html).
+You should have a module for which you set up communication between Yves and Zed. To add the module, see [Adding a new module](/docs/scos/dev/back-end-development/extending-spryker/adding-a-new-module.html).
 
 {% endinfo_block %}
 

@@ -22,7 +22,7 @@ redirect_from:
   - /v1/docs/en/ht-invoice-payment-test
 ---
 
-When you have completed the instructions on [front end](/docs/scos/dev/back-end-development/zed/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-front-end.html), [back end](/docs/scos/dev/back-end-development/zed/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-back-end.html) and [shared](/docs/scos/dev/back-end-development/zed/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-front-end.html-be-shared) implementation, you are able to test the payment method you just implemented.
+When you have completed the instructions on [front end](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-front-end.html), [back end](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-back-end.html) and [shared](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-front-end.html) implementation, you are able to test the payment method you just implemented.
 
  This is the last step for this tutorial.
 

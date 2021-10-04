@@ -12,7 +12,7 @@ redirect_from:
   - /v6/docs/en/adding-publish-events
 ---
 
-[Publish and Synchronize](/docs/scos/dev/back-end-development/zed/data-manipulation/data-publishing/publish-and-synchronization.html) are event-driven. Data is published only after a registered event is triggered. Follow the steps below to register the events for them:
+[Publish and Synchronize](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html) are event-driven. Data is published only after a registered event is triggered. Follow the steps below to register the events for them:
 1. Prepare data structure and activate `Propel Event Behavior` for the `spy_glossary` database table:
 
 ```xml

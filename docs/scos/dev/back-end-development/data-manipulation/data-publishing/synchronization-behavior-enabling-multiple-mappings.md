@@ -12,7 +12,7 @@ redirect_from:
   - /v6/docs/en/synchronization-behavior-enabling-multiple-mappings
 ---
 
-During the [Publish and Synchronization](/docs/scos/dev/back-end-development/zed/data-manipulation/data-publishing/publish-and-synchronization.html) process, a unique key is generated for each resource published. Resource’s denormalized data is then saved with this key to storage for later use. To enforce keys' uniqueness for each resource entity, by default, Spryker uses database IDs of the corresponding records during the key generation.
+During the [Publish and Synchronization](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html) process, a unique key is generated for each resource published. Resource’s denormalized data is then saved with this key to storage for later use. To enforce keys' uniqueness for each resource entity, by default, Spryker uses database IDs of the corresponding records during the key generation.
 
  Let’s take abstract products as an example. A typical key, with which abstract product data is saved to the storage, would look something like this:
 

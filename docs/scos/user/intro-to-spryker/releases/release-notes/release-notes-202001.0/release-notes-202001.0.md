@@ -23,9 +23,9 @@ For information about installing the Spryker Commerce OS see [Getting Started Gu
 
 ### Split Delivery
 Spryker now supports **splitting of orders** across multiple delivery addresses during the checkout process.
-Starting from this release, besides delivering an order to one address, a customer can choose delivery to multiple addresses as well. 
+Starting from this release, besides delivering an order to one address, a customer can choose delivery to multiple addresses as well.
 A back-office user can also **split an order** into multiple shipments or modify shipment data on the order details page.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image12.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image12.png)
 
 #### Compatibility Issues
 **Split delivery** is not compatible with the following features:
@@ -42,24 +42,24 @@ Spryker now supports product stock definition as **decimal** instead of integer.
 * 0.0123456789
 * 415.51
 * 1000
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image3.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image3.png)
 
 #### Documentation
-[Packaging Units](https://documentation.spryker.com/2021080/docs/packaging-units) 
+[Packaging Units](https://documentation.spryker.com/2021080/docs/packaging-units)
 
 ### Improved Packaging Unit
 You can set a **decimal amount** for your packages, which allows you to sell products in flexible quantities.
 The requirement is to share your package stock with another concrete product. In the previous implementation of **Packaging Units**, it was required to add the *Lead Concrete Product* that was holding the stock for all other concrete products. With the new release creating the *Lead Concrete Product* is optional.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image5.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image5.png)
 
 #### Documentation
-[Packaging Units](https://documentation.spryker.com/2021080/docs/packaging-units-202001) 
+[Packaging Units](https://documentation.spryker.com/2021080/docs/packaging-units-202001)
 
 ### Improved Scheduled Prices
 The **Scheduled Price** feature allows you to define a price for your products that will take effect in the future. Create a scheduled price manually in the Back Office or import them in bulk via CSV files. Starting from this release, you can manage your previously imported **Scheduled Prices** directly in the Back Office.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image1.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image1.png)
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image8.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image8.png)
 
 #### Documentation
 
@@ -76,13 +76,13 @@ Spryker increases the number of features that you can manage per store.
 * Fourth, you can now set which Delivery Methods are available to your customers in the checkout process for a given store.
 * Fifth, you can perform all those actions in the Back Office.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image7.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image7.png)
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image9.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image9.png)
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image2.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image2.png)
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image6.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image6.png)
 
 #### Documentation
 
@@ -96,13 +96,13 @@ Spryker increases the number of features that you can manage per store.
 ## CMS
 ### CMS Templates with Content Slots
 Spryker’s Content Management System had a significant upgrade in this release. Our new feature, **Templates with Slots**, incorporates a coherent and flexible way of managing content across the entire Storefront.  
-A **Template with Slots** defines the layout and placement of content with a predefined arrangement of Slots. A Slot is a dedicated area for content in a Template, and the Content Manager can easily embed content - CMS Blocks into Slots of different Templates by using the Back Office. 
+A **Template with Slots** defines the layout and placement of content with a predefined arrangement of Slots. A Slot is a dedicated area for content in a Template, and the Content Manager can easily embed content - CMS Blocks into Slots of different Templates by using the Back Office.
 When a **Template with Slots** defines multiple storefront pages, the Block assignment to a Slot could be narrowed down using Visibility Conditions (e.g., Product SKU, Category ID, CMS Page Name).
-Out-of-the-box, the B2C and the B2B Demos Shops now come with the following Templates: Home Page, Category pages, Product Detail pages, CMS Pages, and Footer. 
-Another significant advantage of the **Templates with Slots** feature is that it offers a better integration pattern of a Technology Partner CMS within Spryker. A partner-specific Slot Widget fetches and renders content created in the Technology Partner CMS editor. 
+Out-of-the-box, the B2C and the B2B Demos Shops now come with the following Templates: Home Page, Category pages, Product Detail pages, CMS Pages, and Footer.
+Another significant advantage of the **Templates with Slots** feature is that it offers a better integration pattern of a Technology Partner CMS within Spryker. A partner-specific Slot Widget fetches and renders content created in the Technology Partner CMS editor.
 Moreover, a project can mix both e-commerce content created in Spryker, and rich media content created in a 3rd party CMS.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image11.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image11.png)
 
 #### Documentation
 [Templates and Slots](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html)
@@ -110,19 +110,19 @@ Moreover, a project can mix both e-commerce content created in Spryker, and rich
 ## B2B
 ### Adding Shipment Cost for the Approval Process
 In the **Approval Process**, previously, it was not possible to add shipment cost before submitting an order for approval. This has been solved by moving the Approval action to the Summary page of the checkout and adding shipment cost for it.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image4.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image4.png)
 
 
-#### Documentation 
+#### Documentation
 [Approval Process](https://documentation.spryker.com/2021080/docs/approval-process)
 
 ### Configurable Bundle
 Configurable Bundle provides a guiding tool to simplify the purchasing of complex product combinations and brings a smooth shopping experience. It allows companies to sell online complex combinations of products that would otherwise require a physical presence in the store.
 Configurable bundles are compatible with both B2B & B2C stores but at this point have been only integrated into the B2B Demo Shop.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image10.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image10.png)
 
 #### Documentation
-[Configurable Bundle](https://documentation.spryker.com/2021080/docs/configurable-bundle) 
+[Configurable Bundle](https://documentation.spryker.com/2021080/docs/configurable-bundle)
 ***
 ## Spryker Glue REST API
 In this release, we continue exposing the Storefront functionality for both B2C and B2B.
@@ -132,13 +132,13 @@ New endpoints and relevant improvements to the existing ones are now available.
 There are many scenarios where shop owners want to display labels on product items to increase customers’ engagement and conversion. Product labels were already exposed through the Abstract Product API, and now you can make use of them also with concrete products, cart items, both on guest and regular carts, wishlist items, related products, up-selling products, and alternative products.
 
 #### Documentation
-[Product Labels API](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html) 
+[Product Labels API](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html)
 
 ### Product Discounts API
-Shop owners need to be able to offer their customers discounts according to different conditions related to their shopping cart and also to provide them with vouchers to save money on the purchase of specific products or related to their shopping volume. With this API, we enable you to let your customers redeem vouchers and manage them in their carts and checkout and to apply discount rules to their carts according to the predefined conditions. 
+Shop owners need to be able to offer their customers discounts according to different conditions related to their shopping cart and also to provide them with vouchers to save money on the purchase of specific products or related to their shopping volume. With this API, we enable you to let your customers redeem vouchers and manage them in their carts and checkout and to apply discount rules to their carts according to the predefined conditions.
 
 #### Documentation
-[Discounts API](https://documentation.spryker.com/2021080/docs/retrieving-discounts) 
+[Discounts API](https://documentation.spryker.com/2021080/docs/retrieving-discounts)
 
 #### Ratings and Reviews API
 Ratings and reviews are critical for the customer’s purchase decision. Shop owners want to display ratings and reviews related to products on the product page and rating averages on product previews.  With this API, you will be able to display the average rating of a product on the product page, to retrieve the existing ratings and reviews with their abstract and concrete products, to let your customers add a review to a product, to display the average rating and the number of reviews with related products, alternative products, up-selling products, wishlist items and on your catalog’s product reviews.
@@ -154,7 +154,7 @@ With this API, you will be able to display a product with its different options 
 
 ### Improved Navigation URLs
 
-Navigation vanity URLs are paramount for marketing purposes. To extend your navigation capabilities and make consistent use of them through all channels and touchpoints, resources such as abstract products and category-nodes now include their vanity URLs in their attributes. The vanity URLs are also included when they appear on search suggestions results. 
+Navigation vanity URLs are paramount for marketing purposes. To extend your navigation capabilities and make consistent use of them through all channels and touchpoints, resources such as abstract products and category-nodes now include their vanity URLs in their attributes. The vanity URLs are also included when they appear on search suggestions results.
 
 #### Documentation
 [Search Engine Friendly URLs](/docs/scos/dev/glue-api-guides/{{page.version}}/resolving-search-engine-friendly-urls.html)
@@ -174,7 +174,7 @@ Navigation vanity URLs are paramount for marketing purposes. To extend your navi
 ***
 ## Docker-SDK
 
-There is a new supported service -  **Swagger UI**. The Swagger UI service together with the following existing services now support configuration: 
+There is a new supported service -  **Swagger UI**. The Swagger UI service together with the following existing services now support configuration:
 * Redis
 * Swagger UI
 * ElasticSearch
@@ -183,7 +183,7 @@ There is a new supported service -  **Swagger UI**. The Swagger UI service toget
 
 It is also possible to choose a specific version of a service to be used.
 
-For production setups, now you can generate optimized docker images. 
+For production setups, now you can generate optimized docker images.
 
 #### Documentation
 
@@ -200,7 +200,7 @@ With this release, Spryker enabled support for **Elasticsearch 6**, while leavin
 
 Even though Elasticsearch is one of the most powerful search engines available, sometimes its functionalities can not satisfy the most extreme requirements. That’s why from now on Search module supports pluggable search engines. This way, project integrations with Fact Finder, Sphinx, or any other search engine is available and supported by the Spryker infrastructure.
 
-#### Documentation: 
+#### Documentation:
 [Search Migration Guides](/docs/scos/dev/migration-and-integration/{{page.version}}/migration-concepts/search-migration-concept/search-migration-concept.html)
 
 ### By-pass KV-storage
@@ -231,7 +231,7 @@ The Heartbeat functionality is replaced with health checks. There is a new set o
 The **Queue manager** functionality is extended with the command that makes queue worker exit right after processing a queue. If the queue is empty, the queue worker exits instead of waiting for the configured execution time to pass.
 
 #### Documentation:
-[Tutorial - Handling Data - Publish and Synchronization - Spryker Commerce OS](/docs/scos/dev/back-end-development/zed/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html#7--queue)
+[Tutorial - Handling Data - Publish and Synchronization - Spryker Commerce OS](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html#8--queue)
 
 
 ### Search Initialization Improvement
@@ -244,8 +244,6 @@ To improve usability, the `vendor/bin/console setup:search` command which has be
 
 ### PHP Update
 PHP continuously develops and gets more exciting features. Also, old versions get deprecated, such as PHP7.1, which lost support by the end of 2019. From now on, Spryker modules will require **>=PHP7.2**. Please make sure your project doesn’t rely on deprecated technology and applies required infrastructural upgrades.
-While PHP7.2 is a minimum required version, we recommend looking at 7.3 and 7.4 as 7.2 is close to EOL. Such technology upgrades could require additional project refactoring, so please include them in your planning. For more information on the PHP versions see [here](https://www.php.net/supported-versions.php). 
+While PHP7.2 is a minimum required version, we recommend looking at 7.3 and 7.4 as 7.2 is close to EOL. Such technology upgrades could require additional project refactoring, so please include them in your planning. For more information on the PHP versions see [here](https://www.php.net/supported-versions.php).
 
 Check out [Documentation Updates](/docs/scos/user/intro-to-spryker/whats-new/documentation-updates.html) for all the updates to documentation made with this release.
-
-

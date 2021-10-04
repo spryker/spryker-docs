@@ -94,7 +94,7 @@ With data separation comes the question: how to sync data between both applicati
 
 The idea behind this concept is that the necessary data (stored in the relational database) is being watched for changes (create, update, delete). When a change occurs, the relevant data gets published to the relevant place (Search and/or Storage). It is an eventually consistent method of providing data for the front-end.
 
-For more details on how Publish & Sync works, see [Publish and Synchronization ](/docs/scos/dev/back-end-development/zed/data-manipulation/data-publishing/publish-and-synchronization.html).
+For more details on how Publish & Sync works, see [Publish and Synchronization ](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html).
 
 ## Where to go from here?
 

@@ -30,6 +30,6 @@ The implementation process includes the following steps:
 * [Integration of Direct Debit into the checkout](/docs/scos/dev/back-end-development/zed/data-manipulation/payment-methods/direct-debit-example-implementation/integrate-direct-debit-into-checkout.html)
 * [Implementation of Direct Debit in Zed](/docs/scos/dev/back-end-development/zed/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-zed.html)
 * [Implementation of Direct Debit in the Shared layer](/docs/scos/dev/back-end-development/zed/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-the-shared-layer.html)
-* [Testing your Direct Debit Implementation](/docs/scos/dev/back-end-development/zed/data-manipulation/payment-methods/direct-debit-example-implementation/testing-your-direct-debit-implementation.html)
+* [Testing your Direct Debit Implementation](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/testing-your-direct-debit-implementation.html)
 
 The order of the implementation steps does not really matter, however make sure you execute them all.

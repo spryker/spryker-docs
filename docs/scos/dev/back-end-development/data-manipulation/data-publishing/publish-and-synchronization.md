@@ -62,7 +62,7 @@ The process relies heavily on Propel Behaviors. Propel Behaviors are used to tri
 
 There are 2 ways to start the Publish process:
 
-1.  Trigger the publish event manually using the [Event Facade](/docs/scos/dev/back-end-development/zed/data-manipulation/event/adding-events.html):
+1.  Trigger the publish event manually using the [Event Facade](/docs/scos/dev/back-end-development/data-manipulation/event/adding-events.html):
 
 ```php
 $this->eventFacade->trigger(CmsStorageConfig::CMS_KEY_PUBLISH_WRITE, (new EventEntityTransfer())->setId($id));

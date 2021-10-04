@@ -14,7 +14,7 @@ Check out this example below to see how to use the Search feature.
 Feature configuration:
 
 - `enabled` - enables the feature via config.  
-- `placeholder` - is the search placeholder text.
+- `placeholder` - the search placeholder text.
 
 ```html
 <spy-table [config]="{

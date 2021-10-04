@@ -459,6 +459,9 @@ entries:
                   - title: "Total"
                     url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-total.html
 
+                  - title: "Settings"
+                    url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-settings.html
+
                   - title: "Selectable"
                     url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-selectable.html
 

@@ -16,11 +16,11 @@ Check out this example below to see how to use the Batch Actions feature.
 
 Feature configuration:
 
-`enabled` - enables feature via the config.  
-`noActionsMessage` - is error message text.  
-`actions` - is an array with actions that are displayed in the top bar, and their type of the registered [action](/docs/marketplace/dev/front-end/ui-components-library/actions/).   
+`enabled` - enables the feature via the config.  
+`noActionsMessage` - error message text.  
+`actions` - an array with actions that are displayed in the top bar, and their type of the registered [action](/docs/marketplace/dev/front-end/ui-components-library/actions/).   
 `rowIdPath` - gets a row `id` via the column `id` (in the example below `Sku` column).  
-`availableActionsPath` - is path to an array with available action IDs in the top bar (supports nested objects using dot notation for ex. `prop.nestedProp`).   
+`availableActionsPath` - path to an array with available action IDs in the top bar (supports nested objects using dot notation for ex. `prop.nestedProp`).   
 
 ```html
 <spy-table [config]="{

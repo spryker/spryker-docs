@@ -14,8 +14,8 @@ Check out this example below to see how to use the Pagination feature.
 
 Feature configuration:
 
-- `enabled` - enables feature via config.  
-- `sizes` - is an array of numbers of table rows that needs to be displayed per page.  
+- `enabled` - enables the feature via config.  
+- `sizes` - an array of numbers of table rows that needs to be displayed per page.  
 
 ```html
 <spy-table [config]="{

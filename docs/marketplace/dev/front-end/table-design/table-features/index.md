@@ -165,4 +165,4 @@ There are multiple standard Table Features that are shipped with the UI library:
 - [Search](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-search.html) — allows searching within the data set.
 - [Sync State](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-sync-state.html) — allows syncing the state of the table with browser URL (like pagination, filters, sorting, etc.).
 - [Editable](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-editable.html) — allows editing/adding rows of the table
-- `Settings`—allows customizing columns of the table (show/hide and reorder).
+- [Settings](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-settings.html) — allows customizing columns of the table (show/hide and reorder).

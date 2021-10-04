@@ -566,6 +566,9 @@ entries:
               - title: "Persistence"
                 url: /docs/marketplace/dev/front-end/ui-components-library/persistence.html
 
+          - title: "Web components"
+            url: /docs/marketplace/dev/front-end/web-components.html
+          
           - title: "Angular Services"
             url: /docs/marketplace/dev/front-end/angular-services.html
 

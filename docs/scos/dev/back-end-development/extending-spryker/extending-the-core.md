@@ -67,40 +67,40 @@ use Spryker\Zed\MyBundle\Business\Model\AnyModelInterface
 
 class AnyModel implements AnyModelInterface
 {
-    
+
     /**
       * @var AnyModelInterface
       */
     private $anyModelFromCore;
-    
+
     public function __construct(AnyModelInterface $anyModelFromCore)
     {
         $this->anyModelFromCore = $anyModelFromCore;
     }
-    
-    // The interfaces forces you to add all public methods. 
+
+    // The interfaces forces you to add all public methods.
     // This gives you nice hooks into the code.
 
     public function a()
     {
         return $this->anyModelFromCore->a();
     }
-    
+
     public function b()
     {
         return $this->anyModelFromCore->b();
     }
-    
-    public function c() 
+
+    public function c()
     {
         return $this->anyModelFromCore->c();
     }
-    
+
 }
 ```
 
 ## Add your Class to the Factory
-When you extend a class from the core, you want the core code to go use that one instead of the original class. To do so, add a [factory](/docs/scos/dev/back-end-development/factory.html) to the same module and same layer. This factory must extend its equivalent from the core. Core will automatically detect the overwritten factory and use it. Now, you can easily exchange the classes and your extension.
+When you extend a class from the core, you want the core code to go use that one instead of the original class. To do so, add a [factory](/docs/scos/dev/back-end-development/factory/factory.html) to the same module and same layer. This factory must extend its equivalent from the core. Core will automatically detect the overwritten factory and use it. Now, you can easily exchange the classes and your extension.
 
 **Example:**
 | Path | Description |
@@ -125,14 +125,14 @@ use Spryker\Zed\MyBundle\Business\MyBundleBusinessFactory as SprykerMyBundleBusi
  */
 class MyBundleBusinessFactory extends SprykerMyBundleBusinessFactory
 {
-    
+
     public function createAnyModel()
     {
-        // Returns your sub-class which inherits from the core. 
+        // Returns your sub-class which inherits from the core.
         // If needed you can inject any dependencies here as well.
         return new AnyModel();
     }
-    
+
 }
 ```
 
@@ -154,7 +154,7 @@ use Spryker\Zed\MyBundle\Business\MyBundleBusinessFactory as SprykerMyBundleBusi
  */
 class MyBundleBusinessFactory extends SprykerMyBundleBusinessFactory
 {
-    
+
     public function createAnyModel()
     {
         // First you need to instantiate the original class from core.
@@ -163,11 +163,10 @@ class MyBundleBusinessFactory extends SprykerMyBundleBusinessFactory
             $this->getAnyDependency(),
             $this->getAnyOtherDependency()
         )
-        
+
         // Now you create the composed object which gets the original class injected
         return new AnyModel($anyModelFromCore); // TODO OWN CREATE METHOD
     }
-    
+
 }
 ```
-

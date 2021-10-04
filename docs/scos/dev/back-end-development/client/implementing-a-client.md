@@ -47,4 +47,3 @@ The client class uses the factory to create the other objects. These objects req
 * createZedRequestClient()
 * createStorageClient()
 * createSearchClient()
-

@@ -9,12 +9,12 @@ This article provides details about the Table Filter Tree Select component in th
 ## Overview
 
 Table Filter Tree Select is a feature of the Table Component that allows filtering data via `Tree Select` component.
-See an example below, how to use the Filter Tree Select feature.
+Check out this example below to see how to use the Filter Tree Select feature.
 
-Feature Configuration:
+Feature configuration:
 
-`enabled` - will enable filter via config.  
-`items` - an array with config for each filter tree-select.  
+- `enabled` - enables filter via config.  
+- `items` - an array with config for each filter tree-select.  
 
 ```html
 <spy-table [config]="{
@@ -51,7 +51,9 @@ Feature Configuration:
 </spy-table>
 ```
 
-## Feature Registration
+## Feature registration
+
+Register the feature
 
 ```ts
 @NgModule({
@@ -74,7 +76,7 @@ export class RootModule {}
 
 ## Interfaces
 
-Below you can find interfaces for Table Filter Tree Select.
+Below you can find interfaces for the Table Filter Tree Select.
 
 ```ts
 export interface TableFilterTreeSelect

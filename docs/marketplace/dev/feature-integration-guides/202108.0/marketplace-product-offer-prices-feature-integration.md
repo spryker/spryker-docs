@@ -106,7 +106,7 @@ console translator:generate-cache
 
 ### 4) Configure export to Redis and Elasticsearch
 
-Set up event listeners
+Set up event listeners 
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
@@ -244,6 +244,45 @@ class PriceProductOfferStorageConfig extends SprykerPriceProductOfferStorageConf
     public function getPriceProductOfferSynchronizationPoolName(): ?string
     {
         return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;
+    }
+}
+```
+
+To configure the export of product offer prices to Redis, take the following steps:
+
+#### Set up publishers
+
+| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE |
+| --------------- | ------------ | ----------- | ------------ |
+| PriceProductStoreWritePublisherPlugin | Publishes product offer prices data by update events from spy_price_product_store table. | | Spryker\Zed\PriceProductOfferStorage\Communication\Plugin\Publisher\PriceProductOffer |
+
+```php
+<?php
+
+namespace Pyz\Zed\Publisher;
+
+use Spryker\Zed\PriceProductOfferStorage\Communication\Plugin\Publisher\PriceProductOffer\PriceProductStoreWritePublisherPlugin;
+
+class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
+{
+    /**
+     * @return array
+     */
+    protected function getPublisherPlugins(): array
+    {
+        return array_merge(
+            $this->getPriceProductOfferStoragePlugins()
+        );
+    }
+    
+    /**
+     * @return \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface[]
+     */
+    protected function getPriceProductOfferStoragePlugins(): array
+    {
+        return [
+            new PriceProductStoreWritePublisherPlugin(),
+        ];
     }
 }
 ```
@@ -766,8 +805,10 @@ Enable the following behaviors by registering the plugins:
 | PriceProductOfferStorageExpanderPlugin | Expands ProductOfferStorageTransfer with Product Offer Price |   | Spryker\Client\PriceProductOfferStorage\Plugin\MerchantProductOfferStorage |
 | PriceProductOfferStorageFilterExpanderPlugin | Expands PriceProductFilterTransfer with ProductOfferReference when a ProductViewTransfer has a ProductOfferReference |   | Spryker\Client\PriceProductOfferStorage\Plugin\PriceProductStorage |
 | PriceProductOfferPriceProductFilterPlugin | Filters out inapplicable product offer prices and product concrete prices when a product offer is selected |   | Spryker\Service\PriceProductOfferStorage\Plugin\PriceProduct |
+| PriceProductOfferVolumeExpanderPlugin | Expands `PriceProductTransfer` with `volumeQuantity`. | | Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer |
 | PriceProductOfferVolumeExtractorPlugin | Maps out JSON entries from price_data of PriceProductTransfer to new PriceProductTransfers with volume prices |   | Spryker\Client\PriceProductOfferVolume\Plugin\PriceProductOfferStorage |
 | PriceProductOfferVolumeFilterPlugin | Applies correct volume pricing when applicable and quantity is selected |   | Spryker\Service\PriceProductOfferVolume\Plugin\PriceProductOffer |
+| PriceProductOfferVolumeValidatorPlugin | Validates volume prices. | | Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer |
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>
@@ -987,6 +1028,36 @@ class PriceProductOfferStorageDependencyProvider extends SprykerPriceProductOffe
 }
 ```
 
+**src/Pyz/Zed/PriceProductOffer/PriceProductOfferDependencyProvider.php**
+
+```php
+<?php
+namespace Pyz\Zed\PriceProductOffer;
+use Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer\PriceProductOfferVolumeExpanderPlugin;
+use Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer\PriceProductOfferVolumeValidatorPlugin;
+class PriceProductOfferDependencyProvider extends SprykerPriceProductOfferDependencyProvider
+{
+    /**
+     * @return \Spryker\Zed\PriceProductOfferExtension\Dependency\Plugin\PriceProductOfferExpanderPluginInterface[]
+     */
+    protected function getPriceProductOfferExpanderPlugins(): array
+    {
+        return [
+            new PriceProductOfferVolumeExpanderPlugin(),
+        ];
+    }
+    /**
+     * @return \Spryker\Zed\PriceProductOfferExtension\Dependency\Plugin\PriceProductOfferValidatorPluginInterface[]
+     */
+    protected function getPriceProductOfferValidatorPlugins(): array
+    {
+        return [
+            new PriceProductOfferVolumeValidatorPlugin(),
+        ];
+    }
+}
+```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that when a product offer is selected, its price is shown as the current price.
@@ -996,5 +1067,11 @@ Make sure that product offer prices are saved when Product Concrete and product 
 Make sure that product offers are sorted by the lowest price first when fetched as a collection with product concrete.
 
 Make sure that when a product offer with a volume price is selected and the selected quantity is over a certain threshold, its volume price is shown instead of the normal price.
+
+Make sure that Product offer volume prices are working properly:
+
+1. Log in to the Merchant Portal, go to the offer list and edit an offer by clicking on a row.
+2. Make sure that the `PriceProductOfferVolumeExpanderPlugin` plugin is set up by checking if the volume quantity field is filled in the PriceProductTable.
+3. Make sure that the `PriceProductOfferVolumeValidatorPlugin` plugin is set up by submitting a price with a higher quantity than 1.
 
 {% endinfo_block %}

@@ -95,57 +95,6 @@ class SalesMerchantPortalGuiDependencyProvider extends SprykerSalesMerchantPorta
 Make sure that the `ProductOfferMerchantOrderItemTableExpanderPlugin` is set up by opening `http://zed.mysprykershop.com/sales-merchant-portal-gui/orders`. Click on any of the orders and check that the *Merchant Reference* and *Product Offer SKU* are present.
 
 {% endinfo_block %}
-    
-#### Extend and validate PriceProducts with volume quantity for Offers
-
-Activate the following plugins:
-
-| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE |
-| --------------- | ------------ | ----------- | ------------ |
-| PriceProductOfferVolumeExpanderPlugin | Expands `PriceProductTransfer` with `volumeQuantity`. | | Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer |
-| PriceProductOfferVolumeValidatorPlugin | Validates volume prices. | | Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer |
-
-**src/Pyz/Zed/PriceProductOffer/PriceProductOfferDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\PriceProductOffer;
-
-use Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer\PriceProductOfferVolumeExpanderPlugin;
-use Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer\PriceProductOfferVolumeValidatorPlugin;
-
-class PriceProductOfferDependencyProvider extends SprykerPriceProductOfferDependencyProvider
-{
-    /**
-     * @return \Spryker\Zed\PriceProductOfferExtension\Dependency\Plugin\PriceProductOfferExpanderPluginInterface[]
-     */
-    protected function getPriceProductOfferExpanderPlugins(): array
-    {
-        return [
-            new PriceProductOfferVolumeExpanderPlugin(),
-        ];
-    }
-
-    /**
-     * @return \Spryker\Zed\PriceProductOfferExtension\Dependency\Plugin\PriceProductOfferValidatorPluginInterface[]
-     */
-    protected function getPriceProductOfferValidatorPlugins(): array
-    {
-        return [
-            new PriceProductOfferVolumeValidatorPlugin(),
-        ];
-    }
-}
-```
-
-{% info_block warningBox "Verification" %}
-
-1. Log in to the Merchant Portal, go to the offer list and edit an offer by clicking on a row.
-2. Now make sure the `PriceProductOfferVolumeExpanderPlugin` plugin is set up by checking if the volume quantity field is filled in the PriceProductTable.
-3. Make sure the `PriceProductOfferVolumeValidatorPlugin` plugin is set up by submitting a price with a higher quantity than 1.
-
-{% endinfo_block %}
 
 
 #### Add the Offer widget to MerchantDashboard
@@ -184,44 +133,3 @@ class DashboardMerchantPortalGuiDependencyProvider extends SprykerDashboardMerch
 Make sure that the `OffersMerchantDashboardCardPlugin` plugin is set up by opening `http://zed.mysprykershop.com/dashboard-portal-gui`. The Offers widget should show up on the page.
 
 {% endinfo_block %}
-
-### 4) Configure export to Redis
-
-To configure the export of product offer prices to Redis, take the following steps:
-
-#### Set up publishers
-
-| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE |
-| --------------- | ------------ | ----------- | ------------ |
-| PriceProductStoreWritePublisherPlugin | Publishes product offer prices data by update events from spy_price_product_store table. | | Spryker\Zed\PriceProductOfferStorage\Communication\Plugin\Publisher\PriceProductOffer |
-
-```php
-<?php
-
-namespace Pyz\Zed\Publisher;
-
-use Spryker\Zed\PriceProductOfferStorage\Communication\Plugin\Publisher\PriceProductOffer\PriceProductStoreWritePublisherPlugin;
-
-class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
-{
-    /**
-     * @return array
-     */
-    protected function getPublisherPlugins(): array
-    {
-        return array_merge(
-            $this->getPriceProductOfferStoragePlugins()
-        );
-    }
-    
-    /**
-     * @return \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface[]
-     */
-    protected function getPriceProductOfferStoragePlugins(): array
-    {
-        return [
-            new PriceProductStoreWritePublisherPlugin(),
-        ];
-    }
-}
-```

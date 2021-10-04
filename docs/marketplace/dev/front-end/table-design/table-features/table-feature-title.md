@@ -14,7 +14,7 @@ Check out this example below to see how to use the Title feature.
 Feature configuration:
 
 - `enabled` - enables the feature via config.  
-- `title` - is a table title text.
+- `title` - a table title text.
 
 ```html
 <spy-table [config]="{

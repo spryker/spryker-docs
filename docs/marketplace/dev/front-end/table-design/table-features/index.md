@@ -158,11 +158,11 @@ There are multiple standard Table Features that are shipped with the UI library:
 - [Pagination](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-pagination.html) — renders pagination of the table.
 - [Total](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-total.html) — renders the total number of the data set.
 - [Title](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-title.html) — renders the title of the table.
-- [Selectable](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-selectable.html) — al>>>>>>> master:docs/marketplace/dev/front-end/table-design/table-feature-extension.md
-- `Row Actions`—allows triggering actions from rows.
-- `Batch Actions`—allows triggering batch/multiple actions from rows.
-- `Filters`—allows filtering the data set.
-- `Search`—allows searching within the data set.
-- `Sync State`—allows syncing the state of the table with browser URL (like pagination, filters, sorting, etc.).
-- `Editable`—allows editing/adding rows of the table.
-- `Settings`—allows customizing columns of the table (show/hide and reorder).
+- [Selectable](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-selectable.html) — allows selecting multiple rows.
+- [Row Actions](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-row-actions.html) — allows triggering actions from rows.
+- [Batch Actions](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-batch-actions.html) — allows triggering batch/multiple actions from rows.
+- [Filters](/docs/marketplace/dev/front-end/table-design/table-filters/) — allows filtering the data set.
+- [Search](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-search.html) — allows searching within the data set.
+- [Sync State](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-sync-state.html) — allows syncing the state of the table with browser URL (like pagination, filters, sorting, etc.).
+- [Editable](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-editable.html) — allows editing/adding rows of the table
+- [Settings](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-settings.html) — allows customizing columns of the table (show/hide and reorder).

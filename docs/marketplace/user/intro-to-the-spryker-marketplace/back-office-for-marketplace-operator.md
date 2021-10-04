@@ -8,7 +8,7 @@ A *Marketplace Operator* is a company that owns the marketplace. In a marketplac
 
 ## Merchant management
 
-Merchant accounts are created in the Back Office, and a Marketplace administrator](/docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-personas.html#marketplace-administrator) is required to facilitate their creation. In the **Marketplace** > **Merchants** section of the Back Office, a marketplace operator manages merchants, that is:
+Merchant accounts are created in the Back Office, and a [Marketplace administrator](/docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-personas.html#marketplace-administrator) is required to facilitate their creation. In the **Marketplace** > **Merchants** section of the Back Office, a marketplace operator manages merchants, that is:
 
 * Creates merchants
 * Edits merchants

@@ -92,8 +92,6 @@ Make sure that the following changes were applied in transfer objects:
 | PriceProductOfferCriteria | class | created | src/Generated/Shared/Transfer/PriceProductOfferCriteriaTransfer |
 | DataImporterReaderConfiguration | class | created | src/Generated/Shared/Transfer/DataImporterReaderConfigurationTransfer |
 | Currency.Code | attribute | created | src/Generated/Shared/Transfer/CurrencyTransfer |
-| PriceProductFilter.Filter | attribute | created | src/Generated/Shared/Transfer/PriceProductFilterTransfer |
-| PriceProductFilter.value | attribute | created | src/Generated/Shared/Transfer/PriceProductFilterTransfer |
 
 {% endinfo_block %}
 
@@ -1070,11 +1068,5 @@ Make sure that product offer prices are saved when Product Concrete and product 
 Make sure that product offers are sorted by the lowest price first when fetched as a collection with product concrete.
 
 Make sure that when a product offer with a volume price is selected and the selected quantity is over a certain threshold, its volume price is shown instead of the normal price.
-
-Make sure that Product offer volume prices are working properly:
-
-1. Log in to the Merchant Portal, go to the offer list and edit an offer by clicking on a row.
-2. Make sure that the `PriceProductOfferVolumeExpanderPlugin` plugin is set up by checking if the volume quantity field is filled in the PriceProductTable.
-3. Make sure that the `PriceProductOfferVolumeValidatorPlugin` plugin is set up by submitting a price with a higher quantity than 1.
 
 {% endinfo_block %}

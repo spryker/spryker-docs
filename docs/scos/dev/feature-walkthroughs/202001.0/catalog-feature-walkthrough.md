@@ -14,5 +14,5 @@ To learn more about the feature and to find out how end users use it, see [Catal
 
 |INTEGRATION GUIDES  | GLUE API GUIDES  |
 |---------|---------|
-| [Glue API: Catalog feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-catalog-feature-integration.html)  | [Searching the product catalog](/docs/scos/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html) |
+| [Glue API: Catalog feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-catalog-feature-integration.html)  | [Searching the product catalog](/docs/scos/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html) |
 |  | [Retrieving autocomplete and search suggestions](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-autocomplete-and-search-suggestions.html)  |

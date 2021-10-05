@@ -25,7 +25,7 @@ In your development, the endpoints can help you to:
 
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Product Relations feature integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-product-relations-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Product Relations feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-relations-feature-integration.html).
 
 ## Retrieve related items of an abstract product
 To get related items of an abstract product, send the request:

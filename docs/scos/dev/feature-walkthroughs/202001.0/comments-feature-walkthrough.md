@@ -26,6 +26,6 @@ The following schema illustrates module relations in the Comments feature:
 
 |INTEGRATION GUIDES  | DATA IMPORT |
 |---------|---------|
-| [Comments feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/comments-feature-integration.html)  | [File details: comment.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/miscellaneous/file-details-comment.csv.html)  |
-| [Comments + persistent cart feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/comments-persistent-cart-feature-integration.html) |
-| [Comments + order management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/comments-order-management-feature-integration.html) |
+| [Comments feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/comments-feature-integration.html)  | [File details: comment.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/miscellaneous/file-details-comment.csv.html)  |
+| [Comments + persistent cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/comments-persistent-cart-feature-integration.html) |
+| [Comments + order management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/comments-order-management-feature-integration.html) |

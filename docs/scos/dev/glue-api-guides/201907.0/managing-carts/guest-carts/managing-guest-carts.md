@@ -19,7 +19,7 @@ If you want to know how to process carts of registered users, see [Managing Cart
 
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Carts API](/docs/scos/dev/migration-and-integration/201907.0/feature-integration-guides/glue-api/glue-cart-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Carts API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-cart-feature-integration.html).
 
 ## Resources for Accessing Guest Carts
 The `/guest-carts` and `/guest-cart-items` resources provide endpoints to manage carts of users who haven't yet registered in the system or authenticated with the Glue REST API. Such carts provide the possibility for users to place items on a cart without the necessity to provide any registration information.

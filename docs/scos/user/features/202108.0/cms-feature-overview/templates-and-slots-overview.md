@@ -190,7 +190,7 @@ The slot list contains the following information:
 | status | Defines whether the slot is active or not where "0" stands for "inactive" and "1" stands for "active". If a slot is inactive, it is not rendered in the Storefront by the slot widget. | 1 |
 
 ## Content providers
-A content provider is a source from where Slot Widget fetches content to embed into slots and, subsequently, render it in the Storefront.  With templates and slots, you can use slots to embed the content created in your Spryker project or CMS editors of technology partners (e.g. [CoreMedia](/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia/coremedia.html), [E-spirit](/docs/scos/user/technology-partners/{{page.version}}/content-management/e-spirit.html), [Styla](/docs/scos/user/technology-partners/{{page.version}}/content-management/styla.html), [Magnolia](/docs/scos/user/technology-partners/{{page.version}}/content-management/magnolia.html)).
+A content provider is a source from where Slot Widget fetches content to embed into slots and, subsequently, render it in the Storefront.  With templates and slots, you can use slots to embed the content created in your Spryker project or CMS editors of technology partners (e.g. [CoreMedia](/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia.html), [E-spirit](/docs/scos/user/technology-partners/{{page.version}}/content-management/e-spirit.html), [Styla](/docs/scos/user/technology-partners/{{page.version}}/content-management/styla.html), [Magnolia](/docs/scos/user/technology-partners/{{page.version}}/content-management/magnolia.html)).
 
 With templates and slots, the following applies:
 
@@ -231,7 +231,7 @@ A developer can [import visibility conditions](/docs/scos/dev/data-import/{{page
 ## Slot Widget
 Slot widget is used to fetch content from a content provider and render it in specified pages. Content is fetched in the form of HTML code ready to be rendered in the Storefront. With the help of slot widgets, you can fetch and render content from the following content providers:
 
-* [CoreMedia](/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia/coremedia.html)
+* [CoreMedia](/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia.html)
 * [Spryker CMS Blocks](#spryker-cms-blocks)
 
 
@@ -382,7 +382,7 @@ Currently, the functionality has the following functional constraints which are 
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Learn about the CoreMedia technology partner integration](/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia/coremedia.html)  |
+| [Learn about the CoreMedia technology partner integration](/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia.html)  |
 | [Add content to the Storefront using templates and slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/adding-content-to-storefront-pages-using-templates-and-slots-best-practices.html) |
 | [Manage slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html)   |
 

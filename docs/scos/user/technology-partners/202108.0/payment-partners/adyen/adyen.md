@@ -27,9 +27,9 @@ The `SprykerEco.Adyen` module includes integration with:
 The `SprykerEco.Adyen` module provides the following payment methods:
 
 * [Credit Card](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#credit-card)
-* [Direct Debit](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#direct-debit--sepa-direct-debit-)
+* [Direct Debit](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.htmll#direct-debit-sepa-direct-debit)
 * [Klarna Invoice](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#klarna-invoice)
-* [Prepayment](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#prepayment--bank-transfer-iban-)
+* [Prepayment](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#prepayment-bank-transfer-iban)
 * [Sofort](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#sofort)
 * [PayPal](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#paypal)
 * [iDeal](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#ideal)

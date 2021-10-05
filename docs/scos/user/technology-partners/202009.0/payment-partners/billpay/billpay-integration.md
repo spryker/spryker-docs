@@ -7,9 +7,9 @@ redirect_from:
   - /v6/docs/en/billpay-integration
 ---
 
-Billpay offers multiple payment methods (Invoice, Direct Debit, PayLater, Instalment). Availability of payment methods differs from country to country. Please contact Billpay directly or visit the [Billpay website](https://www.billpay.de/en/business-clients/merchant-request)e  for details.
+Billpay offers multiple payment methods (Invoice, Direct Debit, PayLater, Instalment). Availability of payment methods differs from country to country. Please contact Billpay directly or visit the [Billpay website](https://www.billpay.de/en/)e  for details.
 
-The Billpay module provides integration with the [Invoice with prescoring](http://documentation.spryker.com/v4/docs/billpay-payment-methods) payment method.
+The Billpay module provides integration with the [Invoice with prescoring](https://www.billpay.de/en/business-clients/payment-information/index.html) payment method.
 
 ## Configuration
 
@@ -84,8 +84,3 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
  BillpayConstants::PAYMENT_METHOD_INVOICE => 'BillpayInvoice01',
 ];
 ```
-
-<b>See also:</b>
-
-* [Integrate Billpay Payment](#)
-* [Billpay Invoice Payment in Preauthorize Mode](billpay_payment_methods.htm)

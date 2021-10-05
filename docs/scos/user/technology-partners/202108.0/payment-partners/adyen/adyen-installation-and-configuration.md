@@ -94,7 +94,7 @@ Also, you have to add payment methods to State Machine (OMS) configuration:
 
 ## Notifications
 
-To complete the payment modification requests (cancel, capture, refund), it's necessary to [configure notification on Adyen](https://docs.adyen.com/developers/notifications/set-up-notifications) merchant backend side.
+To complete the payment modification requests (cancel, capture, refund), it's necessary to [configure notification on Adyen](https://docs.adyen.com/platforms/configure-notifications) merchant backend side.
 
 You can get more information form [Adyen documentation](https://docs.adyen.com/developers).
 
@@ -102,7 +102,7 @@ The link to accept notifications from Adyen looks like http://www.de.your-projec
 
 ## Adyen Configuration
 
-You can get your credentials by following the [instruction](https://docs.adyen.com/developers/checkout/api-integration#beforeyoubegin).
+You can get your credentials by following the [instruction](https://docs.adyen.com/online-payments/classic-integrations/api-integration-ecommerce).
 
-You can get JS SDK url and generate your origin key by following this [instruction](https://docs.adyen.com/developers/checkout/api-integration#encryptcreditcarddetails) from.
+You can get JS SDK url and generate your origin key by following this [instruction](https://docs.adyen.com/online-payments/classic-integrations/api-integration-ecommerce) from.
 

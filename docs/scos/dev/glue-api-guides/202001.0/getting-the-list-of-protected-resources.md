@@ -19,7 +19,7 @@ An attempt to retrieve any of the resources protected by the API without authent
 In your development, the API will help you to protect certain resources from guest access, as well as perform pre-flight checks to avoid accessing endpoints that a guest user doesn't have sufficient permissions to view.
 
 ## Installation
-For detailed information on how to enable the functionality and related instructions, see [Glue API: Customer Access Feature Integration](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/glue-api/glue-api-customer-access-feature-integration.html).
+For detailed information on how to enable the functionality and related instructions, see [Glue API: Customer Access Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-access-feature-integration.html).
 
 ## Usage
 To retrieve a list of protected resources, send a GET request to the following endpoint:

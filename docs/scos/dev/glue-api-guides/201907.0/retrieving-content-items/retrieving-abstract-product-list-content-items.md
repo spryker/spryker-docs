@@ -25,7 +25,7 @@ See [Content Items](/docs/scos/user/back-office-user-guides/{{page.version}}/con
 {% endinfo_block %} to learn how to create and manage content items in CMS.)
 
 ## Installation
-For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/migration-and-integration/201907.0/feature-integration-guides/glue-api/content-items-apifeature-integration.html).
+For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/content-items-apifeature-integration.html).
 
 ## Retrieving Abstract Product List Content Item Data
 To retrieve the full information on the abstract product list by the content item key, send a GET request to the following endpoint:

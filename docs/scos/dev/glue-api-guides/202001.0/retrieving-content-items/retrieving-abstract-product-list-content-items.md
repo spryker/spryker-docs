@@ -26,7 +26,7 @@ See [Content Items](https://documentation.spryker.com/v4/docs/content-items-guid
 {% endinfo_block %} to learn how to create and manage content items in CMS.)
 
 ## Installation
-For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/glue-api/glue-api-content-items-api-feature-integration.html).
+For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-content-items-api-feature-integration.html).
 
 ## Retrieving Abstract Product List Content Item Data
 To retrieve the full information on the abstract product list by the content item key, send a GET request to the following endpoint:

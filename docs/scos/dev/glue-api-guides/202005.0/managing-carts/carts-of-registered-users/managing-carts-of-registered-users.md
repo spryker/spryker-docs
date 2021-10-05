@@ -16,7 +16,7 @@ The following document covers the APIs for carts for **registered customers** on
 
 ## Multiple Carts
 
-Unlike guest carts, carts of registered users have unlimited lifetime. Also, if the Multiple Carts feature is [integrated into your project](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/multiple-carts-feature-integration.html){target="_blank"} and Glue is [enabled for multi-cart operations](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/multiple-carts-feature-integration.html){target="_blank"}, registered users can have unlimited number of carts.
+Unlike guest carts, carts of registered users have unlimited lifetime. Also, if the Multiple Carts feature is [integrated into your project](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-feature-integration.html){target="_blank"} and Glue is [enabled for multi-cart operations](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-feature-integration.html){target="_blank"}, registered users can have unlimited number of carts.
 
 ## Owned and Shared Carts
 Registered users can [share carts](/docs/scos/user/features/{{page.version}}/shared-carts-feature-overview.html) they own. Thus, a registered user can access both their personal carts and carts shared with them by other users. This feature allows company users to collaborate on company purchases as a team.
@@ -51,8 +51,8 @@ For more details, see section *Retrieving Cart Permission Groups* in [Sharing Co
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Carts API](https://documentation.spryker.com/v5/docs/en/cart-feature-integration)
-* [Glue API: Measurement Units Feature Integration](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-measurement-units-feature-integration.html)
-* [Promotions & Discounts API](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
+* [Glue API: Measurement Units Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-measurement-units-feature-integration.html)
+* [Promotions & Discounts API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
 
 
 ## Creating Carts

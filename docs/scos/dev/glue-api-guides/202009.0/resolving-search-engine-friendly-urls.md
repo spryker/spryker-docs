@@ -17,7 +17,7 @@ For SEO purposes, Spryker automatically generates SEF URLs for products and cate
 
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Spryker Сore feature integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-spryker-core-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html).
 
 ## Resolve a SEF URL into a Glue API URL
 

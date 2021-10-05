@@ -15,6 +15,6 @@ To learn more about the feature and to find out how end users use it, see [Shopp
 
 |INTEGRATION GUIDES  | GLUE API GUIDES  |
 |---------|---------|
-| [Shopping Lists feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/shopping-lists-feature-integration.html)  | [Managing shopping lists](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shopping-lists-feature-walkthrough.html)  |
-| [Glue API: Shopping Lists feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-shopping-lists-feature-integration.html)  | [Managing shopping list items](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-shopping-lists/managing-shopping-list-items.html)   |
-| [Prices feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/prices-feature-integration.html)  |  |
+| [Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shopping-lists-feature-integration.html)  | [Managing shopping lists](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shopping-lists-feature-walkthrough.html)  |
+| [Glue API: Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shopping-lists-feature-integration.html)  | [Managing shopping list items](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-shopping-lists/managing-shopping-list-items.html)   |
+| [Prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/prices-feature-integration.html)  |  |

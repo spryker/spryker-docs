@@ -55,7 +55,7 @@ With this release, we are introducing product reviews and ratings. Reviews are a
 **Documentation**
 For documentation, see Under the Hood - Product Reviews <!-- link -->, Product Reviews Feature Configuration, Filter and Sort by Average Rating<!-- link -->
 
-For feature integration, see [Feature Integration - Product Reviews](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/product-rating-and-reviews-feature-integration.html).
+For feature integration, see [Feature Integration - Product Reviews](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-rating-and-reviews-feature-integration.html).
 
 **Migration Guides**
 To upgrade, follow the steps described below:

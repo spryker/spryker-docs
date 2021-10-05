@@ -201,7 +201,7 @@ With this release, Spryker enabled support for **Elasticsearch 6**, while leavin
 Even though Elasticsearch is one of the most powerful search engines available, sometimes its functionalities can not satisfy the most extreme requirements. That’s why from now on Search module supports pluggable search engines. This way, project integrations with Fact Finder, Sphinx, or any other search engine is available and supported by the Spryker infrastructure.
 
 #### Documentation:
-[Search Migration Guides](/docs/scos/dev/migration-and-integration/{{page.version}}/migration-concepts/search-migration-concept/search-migration-concept.html)
+[Search Migration Guides](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html)
 
 ### By-pass KV-storage
 Separated Backend and Frontend in Spryker communicate over denormalized distributed datasets with underlying Publish & Synchronize mechanism. This powerful data distribution infrastructure emits data to Storage and Search and enables Frontends’ consumers to reach data without hitting relational DB with the increased performance. Though in some cases (typically B2B), amounts of data are large, and Storage (Redis by default) growth is not justified, especially when a number of customers and RPM is not high.
@@ -219,7 +219,7 @@ In the previous release, our infrastructure provided **Spryker Application** Ins
 From now on, Silex components become optional, with a clear migration path. A project needs to remove deprecated Service Providers with relevant Application Plugins. Silex Service Providers are still supported until Q3 2020, just make sure your projects depend on a Spryker fork: `spryker/silexphp`, instead of archived `silex/silexphp`.
 
 #### Documentation:
-[Silex Migration Guides](/docs/scos/dev/migration-and-integration/{{page.version}}/migration-concepts/silex-replacement/silex-replacement.html)
+[Silex Migration Guides](/docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html)
 
 ### Health Checks
 The Heartbeat functionality is replaced with health checks. There is a new set of endpoints you can use to run health checks for your application services. The endpoints are closed by default for security purposes.

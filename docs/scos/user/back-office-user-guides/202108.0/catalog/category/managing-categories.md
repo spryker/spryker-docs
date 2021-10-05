@@ -137,7 +137,7 @@ Select the *Sub Category grid* template to create a multilevel category structur
 
 **A template with slots**
 :::(Info)
-To use a template with slots, make sure the [Templates and slots](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/cms-feature-integration.html) feature is integrated into your project.
+To use a template with slots, make sure the [Templates and slots](/docs/scos/dev/feature-integration-guides/{{page.version}}/cms-feature-integration.html) feature is integrated into your project.
 :::
 
 Select such a template to have slots for this category page. Slots can embed content from CMS Blocks and technology partner integrations. See [Templates and slots](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html) for more details.

@@ -90,7 +90,7 @@ After the shopping cart is set to active, the user is redirected to a respective
 
 ## Multiple Carts on the Storefront
 On the storefront, company users can perform the following actions using the Multiple Carts feature:
-<a id="multiple-carts-per-user-on-the-storefront"></a>
+<a name="multiple-carts-per-user-on-the-storefront"></a>
 
 <details>
 <summary>Create a cart</summary>

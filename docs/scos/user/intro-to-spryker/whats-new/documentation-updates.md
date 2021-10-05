@@ -337,7 +337,7 @@ Below you will find the list of the new/updated documentation released as part o
 
 #### HowTos:
 
-* [HowTo - Import Warehouse Data](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html)
+* [HowTo - Import Warehouse Data](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html)
 * [HowTo - Import Delivery Methods Linked to Store](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/data-imports/howto-import-delivery-methods-linked-to-store.html)
 * [HowTo - Notify About Unsupported Browsers](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/howto-notify-about-unsupported-browsers.html)
 

@@ -22,7 +22,7 @@ redirect_from:
   - /v6/docs/en/about-documentation
 ---
 
-Spryker Documentation is a central hub for knowledge and information about the [Spryker Commerce OS](/docs/scos/user/intro-to-spryker/about-spryker.html#what-is-the-spryker-commerce-os--scos--). It details the aspects involved with setting up and using Spryker for your project. 
+Spryker Documentation is a central hub for knowledge and information about the [Spryker Commerce OS](/docs/scos/user/intro-to-spryker/about-spryker.html#what-is-the-spryker-commerce-os--scos--). It details the aspects involved with setting up and using Spryker for your project.
 
 We try to organize our documentation in such a way that it would be easy to find and utilize for various target users. To achieve this, we do the following:
 
@@ -44,11 +44,11 @@ The Spryker documentation is broken into the following sections:
 **[Tutorials and HowTos](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/about-tutorials.html)**: Contains step-by-step instructions on how to perform all types of technical tasks with the Spryker Commerce OS. This section is meant for developers.
 
 ## Personas
-In our documentation, we refer to the following personas: 
+In our documentation, we refer to the following personas:
 
 * Developer
 * Back Office User
-* Shop User 
+* Shop User
 
 We also use these personas to categorize articles related to individual features. See [Business on Behalf feature summary page](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/business-on-behalf-overview.html) for example.
 The table below shows what specific roles each persona includes and what each role is up to:
@@ -155,11 +155,11 @@ We use the following tags:
 * **B2B Shop**: Feature/topic in question is applied to [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html).
 * **B2C Shop**: Stands for [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html) features / topics.
 * **Glue API**: Signifies that feature is also available in the [Spryker Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-rest-api.html).
-* **Versions** (201811.0, 201903.0, 201907.0 etc.):  Indicate what [product version\(s\)](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html) the feature described in the document relates to. 
+* **Versions** (201811.0, 201903.0, 201907.0 etc.):  Indicate what [product version\(s\)](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html) the feature described in the document relates to.
 {% info_block infoBox %}
 You can filter out the documents by specific product versions. For this, select the version in the top right green dropdown.
 {% endinfo_block %}
-<a name="inapp"></a> 
+<a name="inapp"></a>
 <!--* **In-App Assistant**: Widget on the main page of the Spryker documentation website that allows you to find top search articles quickly. To open the In-App Assistant, click on a blue book icon in the bottom left corner:  
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker+Documentation/InApp+Assistant.png)-->
@@ -173,11 +173,15 @@ We are striving to improve our documentation, make it easier for you to find the
 Your feedback is very important and much valued! Let us know what you think by clicking **Yes** or **No** for **Was this article helpful?** at the end of every article.
 
 ## Contributing to the Documentation
+<a href="contributing-to-the-documentation"></a>
+
 We at Spryker aim to constantly improve the content we provide our customers and partners with. You can get involved in improving the Spryker documentation by reporting issues and editing documentation via pull requests on GitHub.
 {% info_block infoBox %}
-To report issues and fix documentation, you need a [GitHub account](https://github.com/join
-{% endinfo_block %}. Make sure you are logged in to proceed with issue reports and pull requests.)
+To report issues and fix documentation, you need a [GitHub account](https://github.com/join). Make sure you are logged in to proceed with issue reports and pull requests.
+{% endinfo_block %}
+
 ### Reporting Issues
+
 To report a documentation issue, do the following:
 1.	On an article page, click **Edit or Report** under the title of the article.
 2.	In the Spryker documentation GitHub repository, click **Issues** tab.
@@ -189,7 +193,7 @@ To edit a page directly on GitHub:
 1.	In the right upper corner, select the latest version of documentation. In the drop-down menu, it is always the last one.
 2.	Open the article you want to edit.
 3.	On the article page, click **Edit or Report** under the title of the article.
-4.	Fork the repository to suggest changes. 
+4.	Fork the repository to suggest changes.
 {% info_block infoBox %}
 
 You need to fork the repository only the first time you edit the Spryker documentation.
@@ -198,8 +202,10 @@ You need to fork the repository only the first time you edit the Spryker documen
 3.	Click **Edit this file** in the top right menu and make the changes.  
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker+Documentation/edit+button.png)
 {% info_block infoBox %}
-Spryker documentation is written using Markdown. If you don’t know Markdown yet, check the [GitHub Markdown Guide](https://guides.github.com/features/mastering-markdown/
-{% endinfo_block %}. )
+
+Spryker documentation is written using Markdown. If you don’t know Markdown yet, check the [GitHub Markdown Guide](https://guides.github.com/features/mastering-markdown/)
+
+{% endinfo_block %}.
 4.	Once done, write a message explaining what you changed and click  **Propose file change**. You will see a a diff of your changes compared to the current version of the master branch.
 5.	Click **Create pull request**.
 6.	Click **Create pull request** again to confirm the creation.
@@ -207,6 +213,4 @@ Spryker documentation is written using Markdown. If you don’t know Markdown ye
 That’s it! Your pull request has been created. Our Documentation team will review it, and once approved, your changes will be merged and available on the documentation website.
 
 
-<font size="2"> *All terms and regulations are provided in the [Disclaimer](https://github.com/spryker/spryker-documentation).*</font> 
-
-
+<font size="2"> *All terms and regulations are provided in the [Disclaimer](https://github.com/spryker/spryker-documentation).*</font>

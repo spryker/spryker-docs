@@ -25,6 +25,8 @@ redirect_from:
 This tutorial provides instructions on how to implement widgets and widget plugins into [Modular Frontend](/docs/scos/dev/back-end-development/yves/modular-frontend.html).
 
 ## How to Implement a Widget?
+<a href="#how-to-implement-a-widget"></a>
+
 Each widget implementation is supposed to be designed as components: considering reusability and being able to render them on different Pages.
 
 ### Step 1 - Implement the Widget Class
@@ -204,6 +206,7 @@ Widgets are placed and rendered in twig templates. The following examples show s
 
 ## Deprecations
 ### How to Implement a Widget Plugin?
+<a href="#how-to-implement-a-widget-plugin"></a>
 
 {% info_block infoBox %}
 This section is valid only for projects which are running module `spryker/kernel` up to version **3.24.0**, exclusively. In version 3.24.0 of the `Kernel` module, the widget plugins were deprecated. In case you are running version 3.24.0 or later, refer to the previous section.
@@ -213,7 +216,7 @@ This section is valid only for projects which are running module `spryker/kernel
 
 ### Step 1 - Place Widget extensions
 
-In the module you are planning to extend, find the extension point in the twig templates and place the necessary twig widget function(s). See the [How to implement a Widget](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-implementing-widgets-and-widget-plugins.html#how-to-implement-a-widget-) section.
+In the module you are planning to extend, find the extension point in the twig templates and place the necessary twig widget function(s). See the [How to implement a Widget](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-implementing-widgets-and-widget-plugins.html#how-to-implement-a-widget) section.
 
 @MyPage/views/foo/foo-bar.twig
 
@@ -396,8 +399,9 @@ class FooController extends AbstractController
 ```
 
 {% info_block infoBox "Info" %}
-When a controller action returns a View object, in the rendered twig template by default the data passed from the controller (view data
-{% endinfo_block %} is accessible through the `_view` twig variable. This way in twig template it's easy to determine where a parameter is coming from. When you see `_view.foo`, it means that the `foo` parameter is coming from the controller directly.</br>If you would like to access the parameters directly without the _view variable in twig, set the `ShopApplicationConfig::useViewParametersToRenderTwig()` module configuration method to return `true` instead of the default `false`.)
+When a controller action returns a View object, in the rendered twig template by default the data passed from the controller (view data) is accessible through the `_view` twig variable. This way in twig template it's easy to determine where a parameter is coming from. When you see `_view.foo`, it means that the `foo` parameter is coming from the controller directly.
+If you would like to access the parameters directly without the _view variable in twig, set the `ShopApplicationConfig::useViewParametersToRenderTwig()` module configuration method to return `true` instead of the default `false`.
+{% endinfo_block %}
 
 ```php
 <?php

@@ -25,7 +25,7 @@ To create a configurable bundle:
 2. In the *General* tab of the *Create Configurable Bundle Template* page, enter the name of your bundle template in the **Name** field for the corresponding locale.
 3. Click **Save**. A new tab *Slots* appears next to the *General* tab.
 
-<a id="reference-information-creating-configurable-bundles"></a>
+<a name="reference-information-creating-configurable-bundles"></a>
 
 ### Reference information: Creating configurable bundles
 

@@ -57,7 +57,7 @@ To activate it, click **Activate** on the *View Product Set* page, or select **A
 
 {% endinfo_block %}
 
-<a id="reference-information-creating-product-sets"></a>
+<a name="reference-information-creating-product-sets"></a>
 
 ### Reference information: Creating product sets
 

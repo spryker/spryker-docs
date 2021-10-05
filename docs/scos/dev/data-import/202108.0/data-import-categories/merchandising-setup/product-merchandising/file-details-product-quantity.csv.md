@@ -9,9 +9,9 @@ redirect_from:
   - /docs/en/file-details-product-quantitycsv
 ---
 
-This article contains content of the *product_quantity.csv* file to configure [Product Quantity](https://documentation.spryker.com/2021080/docs/product-quantity-restrictions) Store information on your Spryker Demo Shop.
+This article contains content of the *product_quantity.csv* file to configure [Product Quantity](/docs/scos/user/features/{{page.version}}/non-splittable-products-feature-overview.html) Store information on your Spryker Demo Shop.
 
-## Headers & mandatory fields 
+## Headers & mandatory fields
 These are the header fields to be included in the .csv file:
 
 | FIELD NAME | MANDATORY | TYPE | OTHER REQUIREMENTS/COMMENTS | DESCRIPTION |
@@ -34,4 +34,3 @@ A template and an example of the *product_quantity.csv*  file can be downloaded 
 | --- | --- |
 | [product_quantity.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Merchandising+Setup/Product+Merchandising/Template+product_quantity.csv) | Product Quantity .csv template file (empty content, contains headers only). |
 | [product_quantity.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Merchandising+Setup/Product+Merchandising/product_quantity.csv) | Product Quantity .csv file containing a Demo Shop data sample. |
-

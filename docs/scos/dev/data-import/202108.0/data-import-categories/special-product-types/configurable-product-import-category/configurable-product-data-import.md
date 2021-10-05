@@ -9,7 +9,7 @@ redirect_from:
   - /docs/en/configurable-product-data-import
 ---
 
-The *Configurable Product* data import describes how you can import the configuration of [configurable products](https://documentation.spryker.com/2021080/docs/configurable-product). 
+The *Configurable Product* data import describes how you can import the configuration of [configurable products](/docs/scos/user/features/{{page.version}}/configurable-product-feature-overview.html). 
 
 The table below provides details on Configurable Product data importers, their purpose, .csv files, dependencies, and other details. Each data importer contains links to .csv files used to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.
 

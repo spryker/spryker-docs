@@ -110,7 +110,7 @@ The following table describes the attributes you see and enter when editing stoc
 | Never out of stock | Checkbox to set the product to be always available in a specific store and warehouse. Meaning even if the quantity is set to 0, the product will still be available. This option is usually used for digital items, like Gift Cards, for example.|
 | Available in stores | This value is auto-populated according to your store setup and is not modifiable in UI. This just identifies for which store you define the product availability value. |
 
-#### <a id="availability-calculation-example"></a>Availability calculation example
+#### <a name="availability-calculation-example"></a>Availability calculation example
 
 A good example of availability calculation is a product bundle. 
 Let's say you have two products: a Smartphone and three Glass Screen Protectors for it. They are presented in the store as separate items but also included in a bundle.

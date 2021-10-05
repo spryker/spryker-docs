@@ -15,7 +15,7 @@ In the [Product Options](/docs/scos/user/features/{{page.version}}/product-optio
 
 In the [Gift Cards](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/gift-cards/gift-cards.html) section, you will be able to import the data necessary to manage gift cards information in your online store.
 
-In the [Configurable Product data import](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/configurable-product-import-category/configurable-product-data-import.html) section, you will find the details of the file for importing the configuration of [configurable products](https://documentation.spryker.com/2021080/docs/configurable-product).
+In the [Configurable Product data import](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/configurable-product-import-category/configurable-product-data-import.html) section, you will find the details of the file for importing the configuration of [configurable products](/docs/scos/user/features/{{page.version}}/configurable-product-feature-overview.html).
 
 {% info_block warningBox "Import order" %}
 

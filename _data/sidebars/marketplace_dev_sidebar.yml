@@ -4,7 +4,6 @@ title: Marketplace Developer Guides
 entries:
   - product: Marketplace
     nested:
-
       - title: Marketplace architecture overview
         nested:
           - title: Marketplace Application composition
@@ -44,7 +43,6 @@ entries:
           - title: Marketplace Product Offer feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
             nested:
-
               - title: Product Offer in the Back Office
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/product-offer-in-the-back-office.html
 
@@ -231,16 +229,13 @@ entries:
 
       - title: Glue API guides
         nested:
-
           - title: Abstract products
             nested:
-
               - title: Retrieving abstract products
                 url: /docs/marketplace/dev/glue-api-guides/abstract-products/retrieving-abstract-products.html
 
           - title: Concrete products
             nested:
-
               - title: Retrieving concrete products
                 url: /docs/marketplace/dev/glue-api-guides/concrete-products/retrieving-concrete-products.html
 
@@ -249,7 +244,6 @@ entries:
 
           - title: Сarts of registered users
             nested:
-
               - title: Managing carts of registered users
                 url: /docs/marketplace/dev/glue-api-guides/carts-of-registered-users/managing-carts-of-registered-users.html
 
@@ -258,13 +252,11 @@ entries:
 
           - title: Content items
             nested:
-
               - title: Retrieving abstract products in abstract product lists
                 url: /docs/marketplace/dev/glue-api-guides/content-items/retrieving-abstract-products-in-abstract-product-lists.html
 
           - title: Guest carts
             nested:
-
               - title: Managing guest carts
                 url: /docs/marketplace/dev/glue-api-guides/guest-carts/managing-guest-carts.html
 
@@ -273,7 +265,6 @@ entries:
 
           - title: Merchants
             nested:
-
               - title: Retrieving merchants
                 url: /docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchants.html
 
@@ -285,7 +276,6 @@ entries:
 
           - title: Product offers
             nested:
-
               - title: Retrieving product offers
                 url: /docs/marketplace/dev/glue-api-guides/product-offers/retrieving-product-offers.html
 
@@ -297,7 +287,6 @@ entries:
 
           - title: Wishlists
             nested:
-
               - title: Managing wishlists
                 url: /docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlists.html
 
@@ -321,13 +310,11 @@ entries:
 
       - title: Data export
         nested:
-
           - title: Data export Merchant Orders .csv files format
             url: /docs/marketplace/dev/data-export/data-export-merchant-orders-csv-files-format.html
 
       - title: Data import
         nested:
-
           - title: Marketplace setup
             url: /docs/marketplace/dev/data-import/marketplace-setup.html
 
@@ -388,10 +375,8 @@ entries:
           - title: "File details: product-option-group.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-product-option-group.csv.html
 
-
       - title: Front-end
         nested:
-
           - title: "Setting up the Merchant portal"
             url: /docs/marketplace/dev/front-end/setting-up-the-merchant-portal.html
 
@@ -404,18 +389,15 @@ entries:
           - title: "Extending the project"
             url: /docs/marketplace/dev/front-end/extending-the-project/
             nested:
-
               - title: "Migration guide - Extending the project"
                 url: /docs/marketplace/dev/front-end/extending-the-project/migration-guide-extending-the-project.html
 
           - title: "Table design"
             url: /docs/marketplace/dev/front-end/table-design/
             nested:
-
               - title: "Table Column Types"
                 url: /docs/marketplace/dev/front-end/table-design/table-column-types/
                 nested:
-
                   - title: "List"
                     url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-list.html
 
@@ -446,7 +428,6 @@ entries:
               - title: "Table Features"
                 url: /docs/marketplace/dev/front-end/table-design/table-features/
                 nested:
-
                   - title: "Editable"
                     url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-editable.html
 
@@ -480,10 +461,9 @@ entries:
               - title: "Table Filters"
                 url: /docs/marketplace/dev/front-end/table-design/table-filters/
                 nested:
-
                   - title: "Select"
                     url: /docs/marketplace/dev/front-end/table-design/table-filters/table-filter-select.html
-                  
+
                   - title: "Tree Select"
                     url: /docs/marketplace/dev/front-end/table-design/table-filters/table-filter-tree-select.html
 
@@ -493,11 +473,9 @@ entries:
           - title: "UI components library"
             url: /docs/marketplace/dev/front-end/ui-components-library/
             nested:
-
               - title: "Actions"
                 url: /docs/marketplace/dev/front-end/ui-components-library/actions/
                 nested:
-
                   - title: "HTTP"
                     url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-http.html
 
@@ -525,7 +503,6 @@ entries:
               - title: "Datasources"
                 url: /docs/marketplace/dev/front-end/ui-components-library/datasources/
                 nested:
-
                   - title: "Inline Table"
                     url: /docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-inline-table.html
 
@@ -538,7 +515,6 @@ entries:
               - title: "Data Transformers"
                 url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/
                 nested:
-
                   - title: "Pluck"
                     url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/pluck.html
 
@@ -563,19 +539,18 @@ entries:
                   - title: "Collate"
                     url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate.html
 
-            - title: "Cache"
-              url: /docs/marketplace/dev/front-end/ui-components-library/cache/
-              nested:
-
-                - title: "Static"
-                  url: /docs/marketplace/dev/front-end/ui-components-library/cache/static.html
+              - title: "Cache"
+                url: /docs/marketplace/dev/front-end/ui-components-library/cache/
+                nested:
+                  - title: "Static"
+                    url: /docs/marketplace/dev/front-end/ui-components-library/cache/static.html
 
               - title: "Persistence"
                 url: /docs/marketplace/dev/front-end/ui-components-library/persistence.html
 
           - title: "Web components"
             url: /docs/marketplace/dev/front-end/web-components.html
-          
+
           - title: "Angular Services"
             url: /docs/marketplace/dev/front-end/angular-services.html
 
@@ -584,6 +559,5 @@ entries:
 
       - title: HowTos
         nested:
-
           - title: "How-To: Create a new module with application"
             url: /docs/marketplace/dev/howtos/how-to-create-a-new-module-with-application.html

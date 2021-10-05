@@ -8,12 +8,11 @@ This article provides details about the Cache Strategy Static service in the Com
 
 ## Overview
 
-Cache Strategy Static is an Angular Service that adds values immediately to the 
-cache until the expiration date and always retrieves them from cache if requested.
-See an example below, how to use the Cache Strategy Static service.
+Cache Strategy is an Angular Service that adds values to the cache immediately until the expiration date and retrieves them if requested from the cache.
+Check out this example below to see how to use the Cache Strategy Static service.
 
-`type` - a cache type.  
-`expiresIn` - represents a duration as string where components are separated by a space.  
+- `type` - a cache type.  
+- `expiresIn` - represents a duration as a string. Each component is separated by a space.  
 
 ```html
 <spy-select

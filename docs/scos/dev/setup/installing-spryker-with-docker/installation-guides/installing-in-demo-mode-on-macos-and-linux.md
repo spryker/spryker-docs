@@ -135,7 +135,7 @@ To get the full and up-to-date list of commands, run `docker/sdk help`.
 ## Next steps
 
 * [Spryker in Docker troubleshooting](/docs/scos/dev/troubleshooting/spryker-in-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html)
-* [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/configuring-debugging-in-docker.html)
+* [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/{{page.version}}/configuring-debugging-in-docker.html)
 * [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/deploy-file-reference-1.0.html)
 * [Configuring services](/docs/scos/dev/the-docker-sdk/configuring-services.html)
 * [Setting up a self-signed SSL certificate](/docs/scos/dev/setup/installing-spryker-with-docker/configuration/setting-up-a-self-signed-ssl-certificate.html)

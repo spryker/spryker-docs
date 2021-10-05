@@ -89,7 +89,7 @@ If the CMS-related template is selected, the following additional attributes app
 | Large Image URL | URL of the large version of the image. |
 | Sort Order | Numeric identifier of the image in the order of other images of an image set. This defines the order in which the images are shown in the back end and front end. The order starts from "0". |
 
-#### <a id="category-page-template-types"></a>Category page template types
+#### <a name="category-page-template-types"></a>Category page template types
 When you create or update categories, you select a template according to which your category (and products assigned to it ) is going to be displayed in your online store.
 
 The following templates are used to set up your category look:

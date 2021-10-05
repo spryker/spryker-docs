@@ -32,7 +32,7 @@ Currently, we only support .csv as a format for file exports out of the box.
 To export the order data, you need to:
 
 1. Make sure you have the[ Sales Data Export feature installed](/docs/scos/dev/feature-integration-guides/{{page.version}}/sales-data-export-feature-integration.html) for your project..
-2. Specify necessary configurations in the .yml export configuration file residing in `./data/export/config/`. See [.yml Export Configuration File](#-yml-export-configuration-file) for details on the .yml export config file structure and configuration options.
+2. Specify necessary configurations in the .yml export configuration file residing in `./data/export/config/`. See [.yml Export Configuration File](#yml-export-configuration-file) for details on the .yml export config file structure and configuration options.
 3. Run `console data:export --config file-name.yml`, where `file-name.yml` is the name of the .yml export configuration file. The command creates export .csv files in `./data/export/`folder for each *data_entity* of the .yml file. For each store specified in the .yml file, a separate file is created. See [Structure of the .yml Export Configuration File](/docs/scos/dev/data-export/{{page.version}}/exporting-data.html#structure) for an example of how the export works.
 
 {% info_block infoBox "Multi-store support" %}
@@ -42,6 +42,7 @@ Spryker Data Export supports the multi-store functionality, which means that you
 {% endinfo_block %}
 
 ## .yml Export Configuration File
+<a href="yml-export-configuration-file"></a>
 
 The .yml export configuration file allows you to define what orders you want to export. The following content is exported:
 

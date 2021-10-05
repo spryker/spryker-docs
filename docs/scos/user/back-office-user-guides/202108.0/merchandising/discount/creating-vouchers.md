@@ -70,7 +70,7 @@ To do that, click **Export** below *Generate*.
 
 This section describes attributes you enter and select when creating or editing a voucher.
 
-### <a id="discount-overview-page"></a>Discount Overview page
+### <a name="discount-overview-page"></a>Discount Overview page
 
 In the *Discount* section, you see the following:
 
@@ -116,7 +116,7 @@ The following table describes the attributes you enter and select in the *Genera
 The name and the description should be meaningful to help other Back Office users understand what the discount does. Besides, the given name is displayed in the customer's cart when redeeming the voucher. Therefore, it must be unique.
 {% endinfo_block %}
 
-#### <a id="discount-calculation-tab"></a>Discount calculation tab
+#### <a name="discount-calculation-tab"></a>Discount calculation tab
 
 This section contains information you need to know when working with discount calculations in the *Discount calculation* tab.
 
@@ -174,7 +174,7 @@ Sometimes, it is more profitable to give away free products or provide a discoun
 
 You can either give away the promotional product completely for free or provide a discount for this product by specifying the percentage value or a fixed amount to be discounted from the promotional product's price (when giving the product for free, the percentage value should be 100%, while the fixed-price value should be equal to the product's price).
 
-#### <a id="conditions"></a>Conditions
+#### <a name="conditions"></a>Conditions
 
 This section provides information that you need to know when working with discount conditions in the *Conditions* tab.
 
@@ -233,7 +233,7 @@ The setup will look like the following:
 
 
 
-#### <a id="voucher-code"></a>Voucher code tab
+#### <a name="voucher-code"></a>Voucher code tab
 
 This section describes the information that you need to know when working with voucher codes in the *Voucher code* tab.
 
@@ -264,7 +264,7 @@ Use the placeholder **[code]** to indicate the position you want random characte
 **Voucher Code Pool**
 The voucher codes of a discount are all contained in the same voucher code pool. One customer may only redeem one voucher code per pool per cart.
 
-#### <a id="token-descroption-tables"></a>Token description tables
+#### <a name="token-descroption-tables"></a>Token description tables
 
 This section contains a set of tables that describe fields, value types, and operators you use when building a plain query.
 

@@ -55,7 +55,7 @@ Make sure to click **Save** before clicking **List of product relations** or goi
 
 {% endinfo_block %}
 
-<a id="reference-information-creating-editing-and-viewing-product-relations"></a>
+<a name="reference-information-creating-editing-and-viewing-product-relations"></a>
 
 ### Reference information: Creating, editing, and viewing product relations
 

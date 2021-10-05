@@ -9,7 +9,7 @@ redirect_from:
 
 This article contains content of the **product_concrete.csv** file to configure [Concrete Product](https://documentation.spryker.com/v6/docs/products-overview) information on your Spryker Demo Shop.
 
-## Headers & Mandatory Fields 
+## Headers and Mandatory Fields 
 These are the header fields to be included in the .csv file:
 
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |

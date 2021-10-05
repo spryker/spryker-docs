@@ -22,8 +22,8 @@ These are the header fields to be included in the .csv file:
 | 2 | name | v | *string* | Human-readable name. | Name of the content. |
 | 3 | description |   | *string* | N/A  | Description of the content. |
 | 4 | navigation_key.default | v | *string* | Key of an existing navigation element. | Default unique identifier of a [navigation element](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/navigation-setup/file-details-navigation.csv.html).  |
-| 5 | navigation_key.en_US |  | *string* | Key of an existing navigation element. | Unique identifier of a [navigation element](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/navigation-setup/file-details-navigation.csv.html) for the `en_US` [locale](/docs/scos/dev/back-end-development/{{site.version}}/zed/data-manipulation/datapayload-conversion/multi-language-setup.html). |
-| 6 | title.de_DE |  | *string* | Key of an existing navigation element. | Unique identifier of a [navigation element](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/navigation-setup/file-details-navigation.csv.html) for the `de_DE` [locale](/docs/scos/dev/back-end-development/{{site.version}}/zed/data-manipulation/datapayload-conversion/multi-language-setup.html). |
+| 5 | navigation_key.en_US |  | *string* | Key of an existing navigation element. | Unique identifier of a [navigation element](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/navigation-setup/file-details-navigation.csv.html) for the `en_US` [locale](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html). |
+| 6 | title.de_DE |  | *string* | Key of an existing navigation element. | Unique identifier of a [navigation element](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/navigation-setup/file-details-navigation.csv.html) for the `de_DE` [locale](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html). |
 
 
 N/A: Not applicable.

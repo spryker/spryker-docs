@@ -28,7 +28,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 * [Super Attributes](https://documentation.spryker.com/2021080/docs/super-attributes)
 * [Product Groups](https://documentation.spryker.com/2021080/docs/product-groups)
 * [Product Bundles](https://documentation.spryker.com/2021080/docs/product-bundles)
-* [Product Sets](/docs/scos/user/features/{{page.version}}/product-sets/product-sets.html)
+* [Product Sets](/docs/scos/user/features/{{page.version}}/product-sets-feature-overview.html)
 * [Product Relations](/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html)
 * [Product Options](/docs/scos/user/features/{{site.version}}/product-options-feature-overview.html)
 * [Product Labels](https://documentation.spryker.com/2021080/docs/product-label)

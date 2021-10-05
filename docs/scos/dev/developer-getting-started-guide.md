@@ -97,14 +97,14 @@ To configure and customize your Spryker Commerce OS, do the following:
     <!---*   [ElasticSearch](/docs/scos/dev/back-end-development/zed/data-manipulation/data-interaction/search/configuring-elasticsearch.html)-->
     *   [Queue](/docs/scos/dev/back-end-development/data-manipulation/queue/queue.html)
 3. [Congiure stores](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/howto-set-up-multiple-stores.html#configure-stores) to have one or multiple stores in your online shop.
-4. [Schedule tasks](/docs/scos/dev/back-end-development/cronjobs/cronjob-scheduling.html) (Cron jobs).
+4. [Schedule tasks](/docs/scos/dev/back-end-development/cronjobs/cronjobs.html) (Cron jobs).
 <!---4. Move to the maintenance mode-->
 
 ## 4. Debugging
 
 Before you start developing, set up and get to know your debugging environment. To learn how to configure debugging, see one of the following:
-* [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/configuring-debugging-in-docker.html)
-* [Configuring debugging in Vagrant](/docs/scos/dev/setup/installing-spryker-with-vagrant/debugger/configuring-debugging-in-vagrant.html)
+* [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/{{page.version}}/configuring-debugging-in-docker.html)
+* [Configuring debugging in Vagrant](/docs/scos/dev/setup/installing-spryker-with-vagrant/debugger-configuration/configuring-debugging-in-vagrant.html)
 
 {% info_block infoBox %}
 In a production setup, Zed must be covered with a VPN, Basic Auth or IP whitelisting.

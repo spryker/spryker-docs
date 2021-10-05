@@ -4,6 +4,8 @@ entries:
     nested:
       - title: Getting started with the Spryker Cloud Commerce OS
         url: /docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html
+      - title: Environments overview
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/environments-overview.html
       - title: Connecting Docker SDK
         url: /docs/cloud/dev/spryker-cloud-commerce-os/connecting-docker-sdk.html
       - title: Access

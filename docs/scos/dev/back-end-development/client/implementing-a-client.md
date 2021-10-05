@@ -33,7 +33,7 @@ All Clients have the same structure. There is always one class that represents t
 | ---------------------------------------------- | ------------------------------------------------------------ |
 | Pyz\Client\MyBundle\MyBundleClient             | The client’s entry point                                     |
 | Pyz\Client\MyBundle\MyBundleDependencyProvider | A [dependency provider](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/defining-the-module-dependencies-dependency-provider.html) to interact with other bundles |
-| Pyz\Client\MyBundle\MyBundleFactory            | The client’s [factory](/docs/scos/dev/back-end-development/factory.html) |
+| Pyz\Client\MyBundle\MyBundleFactory            | The client’s [factory](/docs/scos/dev/back-end-development/factory/factory.html) |
 | Pyz\Client\MyBundle\Session\MyBundleSession    | A wrapper for the session                                    |
 | Pyz\Client\MyBundle\Search\MyBundleSearch      | Contains search queries (e.g. Elasticsearch )                |
 | Pyz\Client\MyBundle\Storage\MyBundleStorage    | Gets data from the storage (e.g. Redis)                      |

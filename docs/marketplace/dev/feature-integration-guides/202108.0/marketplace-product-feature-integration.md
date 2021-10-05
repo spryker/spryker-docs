@@ -335,12 +335,40 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
     }
 }
 ```
-
 {% info_block warningBox "Verification" %}
 
 Make sure that data contains `merchant_references`'s for merchant products in the `spy_product_abstract_storage`.
 
 {% endinfo_block %}
+
+
+If you have integrated the [Marketplace Product Offer feature](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html)
+please enable the `MerchantProductProductOfferReferenceStrategyPlugin` in order to recognize that if the merchantReference is set - we are dealing with MerchantProduct not the ProductOffer.
+Note : the order is important. Plugin have to be registered after `ProductOfferReferenceStrategyPlugin`.
+
+**src/Pyz/Client/MerchantProductOfferStorage/MerchantProductOfferStorageDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Client\MerchantProductOfferStorage;
+
+use Spryker\Client\MerchantProductOfferStorage\MerchantProductOfferStorageDependencyProvider as SprykerMerchantProductOfferStorageDependencyProvider;
+use Spryker\Client\MerchantProductStorage\Plugin\MerchantProductOfferStorage\MerchantProductProductOfferReferenceStrategyPlugin;
+
+class MerchantProductOfferStorageDependencyProvider extends SprykerMerchantProductOfferStorageDependencyProvider
+{
+    /**
+     * @return \Spryker\Client\MerchantProductOfferStorageExtension\Dependency\Plugin\ProductOfferReferenceStrategyPluginInterface[]
+     */
+    protected function getProductOfferReferenceStrategyPlugins(): array
+    {
+        return [
+             new MerchantProductProductOfferReferenceStrategyPlugin(),
+        ];
+    }
+}
+```
 
 ### 5) Import merchant product data
 
@@ -689,41 +717,6 @@ class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
 Make sure when you add to cart merchant product, it has `merchantReference` set. (Can be checked in the `spy_quote` table).
 
 {% endinfo_block %}
-
-### 3) Configure export to Redis
-
-1. Set up event listeners and publishers:
-
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-|---|---|---|---|
-| MerchantProductWritePublisherPlugin | Finds product abstract ids for merchant products and runs product storage publisher for found product abstract ids. |   | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\MerchantProductWritePublisherPlugin |
-| MerchantUpdatePublisherPlugin | Finds product abstract ids by merchant ids and runs product storage publisher with found product abstract ids |   | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\Merchant\MerchantUpdatePublisherPlugin |
-
-**src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\Publisher;
-
-use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
-use Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\Merchant\MerchantUpdatePublisherPlugin;
-use Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\MerchantProduct\MerchantProductWritePublisherPlugin;
-
-class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
-{
-   /**
-     * @return \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface[]
-     */
-    protected function getPublisherPlugins(): array
-    {
-        return [
-            new MerchantProductWritePublisherPlugin(),
-            new MerchantUpdatePublisherPlugin(),
-        ];
-    }
-}
-```
 
 
 ## Related features

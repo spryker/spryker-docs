@@ -962,7 +962,6 @@ Enable the following behaviors by registering the plugins:
 | MerchantNamesProductAbstractMapExpanderPlugin        | Adds merchant names to product abstract search data.         |                            | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\ProductPageSearch |
 | MerchantReferencesProductAbstractsMapExpanderPlugin  | Adds merchant references to product abstract search data.    |                            | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\ProductPageSearch |
 | DefaultProductOfferReferenceStrategyPlugin           | Sets the default selected product offer in PDP for a concrete product. It selects the first product offer in the list. | ProductViewProductOfferExpanderPlugin | Spryker\Client\MerchantProductOfferStorage\Plugin\MerchantProductOfferStorage |
-| MerchantProductProductOfferReferenceStrategyPlugin   | Returns null if ProductOfferStorageCriteria.merchantReference is set. |  | Spryker\Client\MerchantProductStorage\Plugin\MerchantProductOfferStorage\MerchantProductProductOfferReferenceStrategyPlugin |
 | ProductOfferReferenceStrategyPlugin                  | Sets selected oroduct offer in `ProductConcreteTransfer` if one is already selected on PDP. | ProductViewProductOfferExpanderPlugin | Spryker\Client\MerchantProductOfferStorage\Plugin\MerchantProductOfferStorage |
 | ProductViewProductOfferExpanderPlugin | Adds product offer data to `ProductViewTransfer` when a retrieving product. |                            | Spryker\Client\MerchantProductOfferStorage\Plugin\ProductStorage |
 | ProductOfferValidityProductOfferPostCreatePlugin     | Creates product offer validity dates after the product offer is created. |                            | Spryker\Zed\ProductOfferValidity\Communication\Plugin\ProductOffer |
@@ -1175,9 +1174,6 @@ namespace Pyz\Client\MerchantProductOfferStorage;
 use Spryker\Client\MerchantProductOfferStorage\MerchantProductOfferStorageDependencyProvider as SprykerMerchantProductOfferStorageDependencyProvider;
 use Spryker\Client\MerchantProductOfferStorage\Plugin\MerchantProductOfferStorage\DefaultProductOfferReferenceStrategyPlugin;
 use Spryker\Client\MerchantProductOfferStorage\Plugin\MerchantProductOfferStorage\ProductOfferReferenceStrategyPlugin;
-use Spryker\Client\MerchantProductStorage\Plugin\MerchantProductOfferStorage\MerchantProductProductOfferReferenceStrategyPlugin;
-use Spryker\Client\PriceProductOfferStorage\Plugin\PriceProductStorage\LowestPriceProductOfferStorageCollectionSorterPlugin;
-use Spryker\Client\PriceProductOfferStorage\Plugin\PriceProductStorage\PriceProductOfferStorageExpanderPlugin;
 
 class MerchantProductOfferStorageDependencyProvider extends SprykerMerchantProductOfferStorageDependencyProvider
 {
@@ -1188,7 +1184,6 @@ class MerchantProductOfferStorageDependencyProvider extends SprykerMerchantProdu
     {
         return [
             new ProductOfferReferenceStrategyPlugin(),
-            new MerchantProductProductOfferReferenceStrategyPlugin(),
             new DefaultProductOfferReferenceStrategyPlugin(),
         ];
     }
@@ -1297,6 +1292,9 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     }
 }
 ```
+If you have already integrated  [Marketplace Product feature](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-feature-integration.html)
+please check the `MerchantProductProductOfferReferenceStrategyPlugin` to be registered as described in [Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-feature-integration.html)
+Note : the order is important. Plugin have to be registered after `ProductOfferReferenceStrategyPlugin`.
 
 {% info_block warningBox "Verification" %}
 
@@ -1391,8 +1389,6 @@ merchant_product_offer.sold_by,Sold by,en_US
 merchant_product_offer.sold_by,Verkauft durch,de_DE
 merchant.sold_by,Sold by,en_US
 merchant.sold_by,Verkauft durch,de_DE
-merchant_product.sold_by,Sold by,en_US
-merchant_product.sold_by,Verkauft durch,de_DE
 product-offer.info.product-offer-inactive.removed,Inactive item %sku% was removed from your shopping cart.,en_US
 product-offer.info.product-offer-inactive.removed,Der inaktive Artikel %sku% wurde aus Ihrem Warenkorb entfernt.,de_DE
 product-offer.info.reference.invalid,Product offer reference not found for product with SKU '%sku%'.,en_US

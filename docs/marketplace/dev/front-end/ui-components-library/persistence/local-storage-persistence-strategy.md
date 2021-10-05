@@ -9,7 +9,7 @@ This article provides details about the Local Storage Persistence Strategy servi
 ## Overview
 
 Local Storage Persistence Strategy is an Angular Service that uses browser Local Storage to store the data.
-See an example below, how to use the Local Storage Persistence Strategy service.
+Check out this example below to see how to use the Local Storage Persistence Strategy service.
 
 `storage` - the persistence strategy type.  
 

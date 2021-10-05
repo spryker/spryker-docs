@@ -100,7 +100,7 @@ export interface ActionHandler<C = unknown, R = unknown>
 
 There are a few common Actions that are available in UI library as separate packages:
 
-- <!---[drawer](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-drawer.html) - opens component in the Drawer.  -->
+- [drawer](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-drawer.html) - opens component in the Drawer.
 - [close-drawer](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-close-drawer.html) - closes the first Drawer in the current context.  
 - [redirect](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-redirect.html) - performs the hard redirect to the URL.  
 - [refresh-drawer](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-drawer.html) - refreshes/rerenders opened Drawer in current context.  

@@ -552,6 +552,9 @@ entries:
                   - title: "In Memory Persistence Strategy"
                     url: /docs/marketplace/dev/front-end/ui-components-library/persistence/in-memory-persistence-strategy.html
 
+                  - title: "Local Storage Persistence Strategy"
+                    url: /docs/marketplace/dev/front-end/ui-components-library/persistence/local-storage-persistence-strategy.html
+
           - title: "Web components"
             url: /docs/marketplace/dev/front-end/web-components.html
 

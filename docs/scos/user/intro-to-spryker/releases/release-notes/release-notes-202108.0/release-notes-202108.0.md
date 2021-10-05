@@ -248,7 +248,7 @@ We have done a complete revamp of the Spryker external libraries where we are de
 * [Symfony 5 integration](/docs/scos/dev/migration-and-integration/{{page.version}}/technical-enhancements/symfony-5-integration.html#symfony-5-integration)
 * [Chromium browser for tests](/docs/scos/dev/migration-and-integration/{{page.version}}/technical-enhancements/chromium-browser-for-tests.html#chromium-browser-for-tests)
 * [Test framework](/docs/scos/dev/guidelines/testing/test-framework.html)
-* [Migrating from Twig v1 to Twig v3](/docs/scos/dev/migration-and-integration/{{page.version}}/migration-concepts/migrating-from-twig-v1-to-twig-v3.html#migrating-from-twig-v1-to-twig-v3)
+* [Migrating from Twig v1 to Twig v3](/docs/scos/dev/migration-concepts/migrating-from-twig-v1-to-twig-v3.html#migrating-from-twig-v1-to-twig-v3)
 * [Supported versions of PHP](/docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html#supported-versions-of-php)
 
 

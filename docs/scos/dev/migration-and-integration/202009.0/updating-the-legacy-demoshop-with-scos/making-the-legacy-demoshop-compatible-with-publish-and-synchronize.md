@@ -8,7 +8,7 @@ redirect_from:
   - /v6/docs/en/demoshop-with-publish-and-sync
 ---
 
-By following this document and adjusting all the necessary changes in the Legacy Demoshop, you will be able to set up the infrastructure for Publish &amp; Synchronize. If you need to learn more about any requirements needed and changes made to each particular feature, read their own [installation guides](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/about-integration-guides.html).
+By following this document and adjusting all the necessary changes in the Legacy Demoshop, you will be able to set up the infrastructure for Publish &amp; Synchronize. If you need to learn more about any requirements needed and changes made to each particular feature, read their own [installation guides](/docs/scos/dev/feature-integration-guides/{{page.version}}/about-integration-guides.html).
 
 ### 1. Add infrastructure modules
 You need to adjust the `composer.json` to get the latest version of the Storage and Search modules. By executing this code you will be able to update the library you need for running Publish &amp; Synchronize:

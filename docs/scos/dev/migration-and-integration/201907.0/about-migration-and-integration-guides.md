@@ -13,7 +13,7 @@ This section of the documentation is dedicated to content describing all the mig
 
 [Migration Concepts](/docs/scos/dev/migration-and-integration/201907.0/module-migration-guides/about-migration-guides.html-concepts) clarify the steps needed to be taken to migrate in case of extensive module migrations or deprecating some technical solution.
 
-[Feature integration guides](/docs/scos/dev/migration-and-integration/201907.0/feature-integration-guides/about-integration.html) will guide you through the steps of enabling individual features in your project.
+[Feature integration guides](/docs/scos/dev/feature-integration-guides/{{page.version}}/about-integration.html) will guide you through the steps of enabling individual features in your project.
 
 The [Updating the Legacy Demoshop with SCOS](/docs/scos/dev/migration-and-integration/201907.0/updating-the-legacy-demoshop-with-scos/updating-the-legacy-demoshop-with-scos.html) guides will help you enhance the Legacy Demoshop with specific components of SCOS or make the Legacy Demoshop compatible with them.
 

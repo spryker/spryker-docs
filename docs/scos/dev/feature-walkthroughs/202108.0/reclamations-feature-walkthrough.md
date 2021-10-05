@@ -15,4 +15,4 @@ To learn more about the feature and to find out how end users use it, see [Recla
 
 |INTEGRATION GUIDES  |
 |---------|
-|[Reclamations feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/reclamations-feature-integration.html)|
+|[Reclamations feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/reclamations-feature-integration.html)|

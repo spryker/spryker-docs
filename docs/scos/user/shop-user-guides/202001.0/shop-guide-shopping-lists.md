@@ -74,7 +74,7 @@ The _Edit shopping list_ page opens where you can:
 
 {% info_block warningBox %}
 To be able to search for products, make sure that [Search Widget for Concrete Products](/docs/scos/user/features/{{page.version}}/product-feature-overview/search-widget-for-concrete-products-overview.html
-{% endinfo_block %} feature is [integrated](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/search-widget-for-concrete-products-feature-integration.html) into your Project.)
+{% endinfo_block %} feature is [integrated](/docs/scos/dev/feature-integration-guides/{{page.version}}/search-widget-for-concrete-products-feature-integration.html) into your Project.)
 
 * View the shopping list owner and access rights.
 ![View a shopping list owner and access rights](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Lists/view-owner-on-edit-page.png) 

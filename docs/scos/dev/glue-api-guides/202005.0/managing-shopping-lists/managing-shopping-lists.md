@@ -19,7 +19,7 @@ Shopping lists are available in B2B scenarios only. This means that access to th
 In your development, the resources can help you to enable the shopping list functionality in your application.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Shopping Lists Feature Integration](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-shopping-lists-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Shopping Lists Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shopping-lists-feature-integration.html).
 
 ## Creating a Shopping List
 To create a shopping list for a registered user, send the request:

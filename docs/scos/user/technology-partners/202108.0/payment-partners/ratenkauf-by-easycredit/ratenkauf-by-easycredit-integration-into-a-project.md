@@ -567,7 +567,7 @@ To show the Easycredit info on the Product Details page, at the Summary and Paym
 
 You can find some examples below in `[`payment.twig`](#payment-step)`, [`summary.twig`](#summary-step) and [`pdp.twig`](#pdp-page).
 
-<details open>
+<details>
 <summary>payment.twig</summary>
 
 Payment step - `src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig`
@@ -660,7 +660,9 @@ Payment step - `src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.tw
 ```
 </details>
 
-<details open>
+<a name="summary-step"></a>
+
+<details>
 <summary>summary.twig</summary>
 
 Summary step - `src/Pyz/Yves/CheckoutPage/Theme/default/views/summary/summary.twig`
@@ -833,8 +835,8 @@ Summary step - `src/Pyz/Yves/CheckoutPage/Theme/default/views/summary/summary.tw
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 </details>
-
-<details open>
+<a name="pdp-page"></a>
+<details>
 <summary>pdp.twig</summary>
 
 PDP page - `src/Pyz/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.twig`

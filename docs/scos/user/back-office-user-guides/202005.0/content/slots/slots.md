@@ -28,7 +28,7 @@ On entering the page. the following is selected by default:
 * The first CMS Block from the **List of Blocks for Slot [name]** is selected by default. In the **Product Pages** field, you can see the pages in which this CMS block is displayed. Click on a different CMS block to display its pages.
 
 {% info_block warningBox "Integration required" %}
-You can work with slots after the [Templates & Slots feature has been integrated](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/cms-feature-integration-guide.html
+You can work with slots after the [Templates & Slots feature has been integrated](/docs/scos/dev/feature-integration-guides/{{page.version}}/cms-feature-integration-guide.html
 {% endinfo_block %} into your project.)
 ***
 **What's next?**

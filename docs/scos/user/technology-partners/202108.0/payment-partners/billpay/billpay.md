@@ -34,7 +34,7 @@ For further information on this partner and integration into Spryker, please con
 
 To use Billpay, you will need to create a Billpay account or use your existing credentials.
 
-If you do not have a Billpay account, you can create one on the Billpay website: [https://www.billpay.de/en/business-clients/merchant-request/](https://www.billpay.de/en/business-clients/merchant-request/)
+If you do not have a Billpay account, you can create one on the Billpay website: [https://www.billpay.de/en//](https://www.billpay.de/en//)
 
 You will also need your Merchant ID, Portal ID and security key - all provided by Billpay.
 

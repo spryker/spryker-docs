@@ -12,7 +12,7 @@ In addition to the catalog search, Elasticsearch also offers auto-completion ter
 In your development, this resource can help you to retrieve relevant information for your product listing and detail pages, for search, shopping cart, checkout, order history, wishlist and many more.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Catalog Search API Feature Integration](/docs/scos/dev/migration-and-integration/201907.0/feature-integration-guides/glue-api/catalog-search-api-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Catalog Search API Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/catalog-search-api-feature-integration.html).
 
 ## Usage
 To get search suggestion that you can use for auto-completion, you need to send GET requests to the following endpoint:

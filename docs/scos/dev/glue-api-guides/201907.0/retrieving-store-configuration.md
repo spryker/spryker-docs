@@ -12,7 +12,7 @@ Depending on your project needs, you can set up a single store that serves all y
 The configuration of the current store in a project can be retrieved via an endpoint provided by the **Stores API**.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue Application Feature Integration](/docs/scos/dev/migration-and-integration/201907.0/feature-integration-guides/glue-api/glue-application-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue Application Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-application-feature-integration.html).
 
 ## Usage
 To retrieve store configuration, send a GET request to the following endpoint:

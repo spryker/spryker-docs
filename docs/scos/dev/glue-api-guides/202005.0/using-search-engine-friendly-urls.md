@@ -125,7 +125,7 @@ SEF URLs can significantly boost the SEO presence of your product store and incr
 To facilitate their usage, Spryker Glue provides an endpoint that allows resolving a SEO-friendly URL, for example, `http://mysprykershop.com/en/canon-powershot-n-35`, into a URL of the relevant product resource in Glue API, for example, `http://glue.mysprykershop.com/abstract-products/035`. This capability is provided by the **URLs API**.
 
 ## Installation
-To enable the API functionality, you need to install version **201911** of Spryker Glue API. For detailed information and installation instructions, see [GLUE: Spryker Core Feature Integration](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-spryker-core-feature-integration.html).
+To enable the API functionality, you need to install version **201911** of Spryker Glue API. For detailed information and installation instructions, see [GLUE: Spryker Core Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html).
 
 ## Usage
 To resolve a SEO-friendly link into a Glue URL, send a GET request to the following endpoint:

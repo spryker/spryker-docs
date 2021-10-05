@@ -15,12 +15,12 @@ The following document covers the APIs for carts for **registered customers** on
 {% endinfo_block %}
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Carts API](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/glue-api/glue-api-cart-feature-integration.html){target="_blank"}.
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Carts API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html){target="_blank"}.
 
 ## Guest Carts and Carts of Registered Users
 Access to carts for registered users is provided by the **/carts** resource. Before accessing the resource, you need to authenticate a user first. For more details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html){target="_blank"}.
 
-Unlike guest carts, carts of registered users have an unlimited lifetime. Also, if the multiple carts feature is [integrated into your project](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/multiple-carts-feature-integration.html){target="_blank"} and Glue is [enabled for multi-cart operations](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/multiple-carts-feature-integration.html){target="_blank"}, registered users can have as many carts as they want. In the B2B scenario, this allows for creating different carts for different purposes. For instance, registered users can have a cart for daily purchases and one more for purchases made once a month.
+Unlike guest carts, carts of registered users have an unlimited lifetime. Also, if the multiple carts feature is [integrated into your project](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-feature-integration.html){target="_blank"} and Glue is [enabled for multi-cart operations](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-feature-integration.html){target="_blank"}, registered users can have as many carts as they want. In the B2B scenario, this allows for creating different carts for different purposes. For instance, registered users can have a cart for daily purchases and one more for purchases made once a month.
 
 ## Owned and Shared Carts
 Registered users can [share carts](/docs/scos/user/features/{{page.version}}/shared-carts-feature-overview.html) they own. Thus, a registered user can access both their personal carts and carts shared with them by other users. This feature allows company users to collaborate on company purchases as a team.

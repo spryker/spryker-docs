@@ -12,9 +12,9 @@ The Wishlists API allows creating list and deleting [wishlists](/docs/scos/user/
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see 
-* [Glue API: Wishlist feature integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-wishlist-feature-integration.html)
-* [Glue API: Products feature integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-products-feature-integration.html)
-* [Glue API: Product Labels feature integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-product-labels-feature-integration.html)
+* [Glue API: Wishlist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-wishlist-feature-integration.html)
+* [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-products-feature-integration.html)
+* [Glue API: Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-labels-feature-integration.html)
 
 ## Create a wishlist
 

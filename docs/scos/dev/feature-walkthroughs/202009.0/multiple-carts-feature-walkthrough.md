@@ -15,6 +15,6 @@ To learn more about the feature and to find out how end users use it, see [Multi
 
 |INTEGRATION GUIDES  |
 |---------|
-| [Multiple Carts feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/multiple-carts-feature-integration.html)  |
-| [Multiple carts + Quick Order feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/multiple-carts-quick-order-feature-integration.html)  |
-| [Multiple carts + Reorder feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/multiple-carts-reorder-feature-integration.html)   |
+| [Multiple Carts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-feature-integration.html)  |
+| [Multiple carts + Quick Order feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-quick-order-feature-integration.html)  |
+| [Multiple carts + Reorder feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-reorder-feature-integration.html)   |

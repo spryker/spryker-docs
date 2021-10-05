@@ -22,7 +22,7 @@ With this release we are bringing the variant selection functionality to the car
 | <ul><li>[CartVariant 1.0.0](https://github.com/spryker/cart-variant/releases/tag/1.0.0)</li><li>[ProductImageCartConnector 1.0.0](https://github.com/spryker/product-image-cart-connector/releases/tag/1.0.0)</li></ul> | n/a | n/a |
 
 **Documentation**
-For integration guides, see [Cart Integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/cart-integration.html).
+For integration guides, see [Cart Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-integration.html).
 
 **Migration Guides**
 To upgrade, follow the steps described below:

@@ -82,14 +82,14 @@ Below you will find the list of the new/updated documentation released as part o
 <details open>
 <summary>Integration guide</summary>
 
-[Packaging Units Feature Integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/product-packaging-unit-feature-integration.html)
+[Packaging Units Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-packaging-unit-feature-integration.html)
 
 </details>
 
 <details open>
 <summary>Migration  guide</summary>
 
-[Decimal Stock Migration Concept](/docs/scos/dev/migration-and-integration/{{page.version}}/migration-concepts/decimal-stock-migration-concept.html)
+[Decimal Stock Migration Concept](/docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html)
 
  </details>
 
@@ -111,7 +111,7 @@ Below you will find the list of the new/updated documentation released as part o
 <details open>
 <summary>Integration guide</summary>
 
-[Scheduled Prices Feature Integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/scheduled-prices-feature-integration.html)
+[Scheduled Prices Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/scheduled-prices-feature-integration.html)
 
 </details>
 <details open>
@@ -149,7 +149,7 @@ Below you will find the list of the new/updated documentation released as part o
 <details open>
 <summary>Integration guide</summary>
 
-[CMS Feature Integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/cms-feature-integration.html)
+[CMS Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cms-feature-integration.html)
 
 </details>
 
@@ -176,7 +176,7 @@ Below you will find the list of the new/updated documentation released as part o
 <details open>
 <summary>Technology Partners guides</summary>
 
-[Coremedia with Templates & Slots](/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia/coremedia.html)
+[Coremedia with Templates & Slots](/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia.html)
 
 
 </details>
@@ -194,8 +194,8 @@ Below you will find the list of the new/updated documentation released as part o
 <summary>Integration guides</summary>
 
 * [Approval Process Feature Integration](https://documentation.spryker.com/2021080/docs/approval-process-feature-integration)
-* [Shipment + Approval Process Feature Integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/shipment-approval-process-feature-integration.html)
-* [Shipment Feature Integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/shipment-feature-integration.html)
+* [Shipment + Approval Process Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shipment-approval-process-feature-integration.html)
+* [Shipment Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shipment-feature-integration.html)
 
 </details>
 
@@ -220,11 +220,11 @@ Below you will find the list of the new/updated documentation released as part o
 <summary>Integration guides</summary>
 
 * [Configurable Bundle Feature Integration](https://documentation.spryker.com/2021080/docs/configurable-bundle-feature-integration)
-* [Product Images + Configurable Bundle](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/product-images-configurable-bundle-feature-integration.html)
-* [Merchant Product Restrictions](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/merchant-product-restrictions-feature-integration.html)
-* [Product Lists + Catalog](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/product-lists-catalog-feature-integration.html)
-* [Prices](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/prices-feature-integration.html)
-* [Product](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/product-feature-integration.html)
+* [Product Images + Configurable Bundle](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-images-configurable-bundle-feature-integration.html)
+* [Merchant Product Restrictions](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-product-restrictions-feature-integration.html)
+* [Product Lists + Catalog](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-lists-catalog-feature-integration.html)
+* [Prices](/docs/scos/dev/feature-integration-guides/{{page.version}}/prices-feature-integration.html)
+* [Product](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)
 
 
 </details>
@@ -252,7 +252,7 @@ Below you will find the list of the new/updated documentation released as part o
 <details open>
 <summary>Integration guide</summary>
 
-[Glue API: Promotions & Discounts Feature Integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
+[Glue API: Promotions & Discounts Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
 
 </details>
 
@@ -261,7 +261,7 @@ Below you will find the list of the new/updated documentation released as part o
 <details open>
 <summary>Integration guide</summary>
 
-[Glue API: Promotions & Discounts Feature Integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
+[Glue API: Promotions & Discounts Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
 
 </details>
 
@@ -274,7 +274,7 @@ Below you will find the list of the new/updated documentation released as part o
 <details open>
 <summary>Integration guide</summary>
 
-[Glue API: Product Rating & Reviews Feature Integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-product-rating-and-reviews-feature-integration.html)
+[Glue API: Product Rating & Reviews Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-rating-and-reviews-feature-integration.html)
 
 </details>
 
@@ -286,7 +286,7 @@ Below you will find the list of the new/updated documentation released as part o
 <details open>
 <summary>Integration guide</summary>
 
-[Glue API: Product Options Feature Integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-product-options-feature-integration.html)
+[Glue API: Product Options Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html)
 
 </details>
 

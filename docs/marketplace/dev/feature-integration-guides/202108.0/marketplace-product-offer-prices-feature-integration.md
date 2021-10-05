@@ -18,7 +18,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
 | Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html) |
-| Prices | {{page.version}} |[Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html) |
+| Prices | {{page.version}} |[Prices feature integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/621773249/Prices+Feature+Integration+-+ongoing) |
 | Spryker Core | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
 
 
@@ -42,7 +42,6 @@ Make sure that the following modules were installed:
 | PriceProductOfferStorageExtension | spryker/price-product-offer-storage-extension |
 | PriceProductOfferVolume | spryker/price-product-offer-volume |
 | PriceProductOfferVolumeGui | spryker/price-product-offer-volume-gui |
-| PriceProductVolume | spryker/price-product-volume |
 
 {% endinfo_block %}
 
@@ -90,19 +89,17 @@ Make sure that the following changes were applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 |-|-|-|-|
-| PriceProductOfferCriteria | class | created | src/Generated/Shared/Transfer/PriceProductOfferCriteriaTransfer |
 | DataImporterReaderConfiguration | class | created | src/Generated/Shared/Transfer/DataImporterReaderConfigurationTransfer |
 | Currency.Code | attribute | created | src/Generated/Shared/Transfer/CurrencyTransfer |
-| MoneyValue | class | created |src/Generated/Shared/Transfer/MoneyValueTransfer |
-| PriceProduct | attribute | created | src/Generated/Shared/Transfer/PriceProductTransfer |
-| PriceType | class | created |src/Generated/Shared/Transfer/PriceTypeTransfer |
-| PriceProductFilter | class | created |src/Generated/Shared/Transfer/PriceProductFilterTransfer |
-| PriceProductFilter.quantity | class | created |src/Generated/Shared/Transfer/PriceProductFilterTransfer |
-| PriceProductFilter.filter | class | created | src/Generated/Shared/Transfer/PriceProductFilterTransfer |
-| PriceProductFilter.value | attribute | created | src/Generated/Shared/Transfer/PriceProductFilterTransfer |
-| PriceProductVolume | class | created |  src/Generated/Shared/Transfer/PriceProductVolumeTransfer |
-| PriceProductVolumeCollection | class | created |  src/Generated/Shared/Transfer/PriceProductVolumeCollectionTransfer |
-| PriceProductCriteria | class | created | src/Generated/Shared/Transfer/PriceProductCriteriaTransfer |
+| PriceProductCriteria.productOfferReference | attribute | created | src/Generated/Shared/Transfer/PriceProductCriteriaTransfer |
+| PriceProductDimension.productOfferReference| attribute | created | src/Generated/Shared/Transfer/PriceProductDimensionTransfer |
+| PriceProductFilter.productOfferReference | class | created |src/Generated/Shared/Transfer/PriceProductFilterTransfer |
+| PriceProductFilterIdentifier.productOfferReference | property | created |src/Generated/Shared/Transfer/PriceProductFilterIdentifierTransfer |
+| PriceProductOffer | class | created |  src/Generated/Shared/Transfer/PriceProductOfferTransfer |
+| PriceProductOfferCriteria | class | created | src/Generated/Shared/Transfer/PriceProductOfferCriteriaTransfer |
+| PriceProductOfferCollection | class | created |  src/Generated/Shared/Transfer/PriceProductOfferCollectionTransfer |
+| PriceProductOfferCollection.priceProductOffers | property | created | src/Generated/Shared/Transfer/PriceProductOfferCollectionTransfer |
+| ProductOffer.prices | property | created | src/Generated/Shared/Transfer/ProductOfferTransfer |
 
 {% endinfo_block %}
 

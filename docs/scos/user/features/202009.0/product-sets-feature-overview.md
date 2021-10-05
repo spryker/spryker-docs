@@ -29,9 +29,8 @@ A Back Office user can add a product sets to any page by [creating a product set
 
 
 For more details on product sets, check the video:
-<iframe src="https://spryker.wistia.com/medias/9co7uw35a9" title="Product Set" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>
 
-
+{% wistia 9co7uw35a9 960 720 %}
 
 ### Current Constraints
 Currently, the feature has the following functional constraints which are going to be resolved in the future:

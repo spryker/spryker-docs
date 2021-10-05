@@ -29,7 +29,9 @@ Currently, the feature has the following functional constraints which are going 
 ## Video tutorial
 
 For more details on managing ratings and reviews, check the video:
-<iframe src="https://spryker.wistia.com/medias/efvyq9vfb8" title="Ratings and Reviews" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>
+
+{% wistia efvyq9vfb8 960 720 %}
+
 
 ## Related Business User articles
 

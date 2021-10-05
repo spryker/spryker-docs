@@ -25,7 +25,8 @@ A Back Office user can manage merchants and merchant relations. See [Managing me
 A developer can also import merchants and merchant relations.
 
 Check out this video tutorial on how to set up merchants and merchant relations:
-<iframe src="https://fast.wistia.net/embed/iframe/aowgi1c6k1" title="How to Setup Merchant B2B Contractships in Spryker B2B Video" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="589" height="315"></iframe>
+
+{% wistia aowgi1c6k1 960 720 %}
 
 ## Related Business User articles
 

@@ -54,4 +54,6 @@ You can benefit from the APIs in these aspects:
 The REST API represents a contract that developers can stick to when they are extending the Commerce OS with new touchpoints or build integrations. The already existing APIs inside the Commerce OS are not meant to be used in the same way. Furthermore, all REST API requests are handled according to the [JSON REST API specification](https://jsonapi.org/). These specifications define how clients should request data, fetch it, modify it, and how the server should respond to it. Hence, the expected behavior stays the same across all endpoints.
 
 Check our introductory video on Glue API:
-<iframe src="https://spryker.wistia.com/medias/adls2vfqjm" title="Glue API Intro" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>
+
+{% wistia adls2vfqjm 960 720 %}
+

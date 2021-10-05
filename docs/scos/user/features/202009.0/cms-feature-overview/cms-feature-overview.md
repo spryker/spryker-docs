@@ -33,7 +33,7 @@ All the CMS elements are based on templates. They simplify the creation of simil
 | URL Redirect | Technique for delivering a page under more then one URL address. When a request is made to an URL that was redirected, a page with a different URL is opened. |
 | URL Redirect Status | When an URL is being redirected, the response contains a status code that describes the reason the redirect happened. The URL redirect status code plays an important role in search engine ranking. |
 
-<iframe src="https://fast.wistia.net/embed/iframe/lx0amx3m1b" title="CMS Overview" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="700" height="400"></iframe>
+{% wistia lx0amx3m1b 960 720 %}
 
 
 ## If you are:

@@ -136,8 +136,8 @@ A content item template defines how a content item is displayed on the Storefron
 
 
 For more details on navigation, check the video:
-<iframe src="https://spryker.wistia.com/medias/anlwttuexm" title="Navigation" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>
 
+{% wistia anlwttuexm 960 720 %}
 
 ### Database Schema
 The Navigation module provides the `spy_navigation` table that stores navigation menus. They have a `name` field which is only used for backend display and they also have a `key` field used to reference the navigation menus from Yves.

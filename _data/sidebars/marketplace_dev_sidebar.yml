@@ -488,7 +488,7 @@ entries:
                     url: /docs/marketplace/dev/front-end/table-design/table-filters/table-filter-tree-select.html
 
                   - title: "Date Range"
-                  url: /docs/marketplace/dev/front-end/table-design/table-filters/table-filter-date-range.html
+                    url: /docs/marketplace/dev/front-end/table-design/table-filters/table-filter-date-range.html
 
           - title: "UI components library"
             url: /docs/marketplace/dev/front-end/ui-components-library/

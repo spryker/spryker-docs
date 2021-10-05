@@ -9,7 +9,7 @@ This article provides details about the Url Persistence Strategy service in the 
 ## Overview
 
 Url Persistence Strategy is an Angular Service that uses browser URL to store the data.
-See an example below, how to use the Url Persistence Strategy service.
+Check out this example below to see how to use the Url Persistence Strategy service.
 
 `storage` - the persistence strategy type.  
 

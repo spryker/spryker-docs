@@ -8,9 +8,9 @@ This document provides details about the Data Transformer Collate Filter Equals 
 
 ## Overview
 
-Data Transformer Collate Filter Equals is an Angular Service that implements filtering to equal value of data based on configuration.
+Data Transformer Collate Filter Equals is an Angular Service that implements filtering to equalize data based on configuration.
 
-Example usage of the Data Transformer Collate Filter Equals in the `@spryker/table` config:
+In the `@spryker/table` configuration, the Data Transformer Collate Filter Equals is used as follows:
 
 ```html
 <spy-table

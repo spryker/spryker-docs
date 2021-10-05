@@ -8,8 +8,7 @@ This document provides details about the Data Transformer Data Configurators ser
 
 ## Overview
 
-Data Transformer Data Configurators is an Angular Service that implements re-population of data based on configuration.
-This allows backend systems to control where the re-population data.
+Data Transformer Data Configurators is an Angular Service that re-populates data based on configuration. This allows backend systems to control where re-population data is placed.
 
 Data Transformer Data Configurators are used in the Datasource service.
 
@@ -30,19 +29,19 @@ Data Transformer Data Configurators are used in the Datasource service.
 ></spy-table>
 ```
 
-## Main Service
+## Main service
 
-The main module provides an opportunity to register a configurator by key via static method `withConfigurators`. It assigns the object of configurators to the `DataTransformerConfiguratorTypesToken` under the hood.
+The main module provides a way to register a configurator by key using the static method `withConfigurators`. Under the hood, it assigns the object of configurators to the `DataTransformerConfiguratorTypesToken`.
 
 The main service injects all registered types from the `DataTransformerConfiguratorTypesToken` and `DataTransformerConfigurator`.
 
-Resolve method finds specific service from the `DataTransformerConfiguratorTypesToken` by `type` (from the argument) and returns observable with data by `DataTransformerConfigurator.resolve`.
+Resolve method finds a specific service from the `DataTransformerConfiguratorTypesToken` by `type` (from the argument) and returns an observable with data by calling `DataTransformerConfigurator.resolve`.
 
 ## Data Transformer Data Configurator
 
-Data Transformer Data Configurator is basically an Angular Service that encapsulates the algorithm of how the data is configured.
+Data Transformer Data Configurator is an Angular Service that encapsulates how the data is configured.
 
-Data Transformer Data Configurator must implement a specific interface (DataTransformerConfigurator) and then be registered to the Root Module via `CollateDataTransformerModule.withConfigurators()`.
+Data Transformer Data Configurator must implement a specific interface (DataTransformerConfigurator) and then be registered to the Root Module using `CollateDataTransformerModule.withConfigurators()`.
 
 ```ts
 ///// Module augmentation
@@ -77,7 +76,7 @@ export class RootModule {}
 
 ## Interfaces
 
-Below you can find interfaces for the DataTransformerConfigurator configuration and DataTransformerConfigurator type:
+Below you can find interfaces for the `DataTransformerConfigurator` configuration and `DataTransformerConfigurator` type:
 
 ```ts
 interface DataTransformerConfiguratorConfigT {
@@ -98,6 +97,6 @@ interface DataTransformerConfigurator {
 
 ## Data Transformer Data Configurator types
 
-There are a few common Data Transformer Data Configurators that are available in UI library as separate packages
+There are a few common Data Transformer Data Configurators that are available in UI library as separate packages:
 
 - [`table`](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/data-configurators/table.html) - integrates Table into Collate to re-populate data when the table updates.

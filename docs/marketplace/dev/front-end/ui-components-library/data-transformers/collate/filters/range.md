@@ -8,9 +8,9 @@ This document provides details about the Data Transformer Collate Filter Range s
 
 ## Overview
 
-Data Transformer Collate Filter Range is an Angular Service that implements filtering to range values of data based on configuration.
+Data Transformer Collate Filter Range is an Angular Service that implements filtering to range of data values based on configuration.
 
-Example usage of the Data Transformer Collate Filter Range in the `@spryker/table` config:
+The following `@spryker/table` config file shows an example of using the Data Transformer Collate Filter Range:
 
 ```html
 <spy-table

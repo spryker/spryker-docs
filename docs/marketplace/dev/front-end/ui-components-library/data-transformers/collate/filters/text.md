@@ -8,9 +8,9 @@ This document provides details about the Data Transformer Collate Filter Text se
 
 ## Overview
 
-Data Transformer Collate Filter Text is an Angular Service that implements filtering to text value of data based on configuration.
+Data Transformer Collate Filter Text is an Angular Service that implements filtering to the text value of data based on configuration.
 
-Example usage of the Data Transformer Collate Filter Text in the `@spryker/table` config:
+The following is an example of how to use the Data Transformer Collate Filter Text in the `@spryker/table` configuration:
 
 ```html
 <spy-table

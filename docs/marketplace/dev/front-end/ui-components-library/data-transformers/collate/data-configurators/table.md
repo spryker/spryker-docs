@@ -8,9 +8,9 @@ This document provides details about the Data Transformer Collate Configurator T
 
 ## Overview
 
-Data Transformer Collate Configurator Table is an Angular Service that implements re-population of data to the format appropriate for filtering (`DataTransformerConfiguratorConfigT`).
+Data Transformer Collate Configurator Table is an Angular Service that re-populates of data to a format suitable for filtering (`DataTransformerConfiguratorConfigT`).
 
-Example usage of the Data Transformer Collate Configurator Table in the `@spryker/table` config:
+Below is an example of the Data Transformer Collate Configurator Table in the `@spryker/table` configuration:
 
 ```html
 <spy-table

@@ -18,8 +18,8 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE |
 | - | - | - |
 | Spryker Core | {{page.version}}   | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Spryker Payments | {{page.version}}   | [Spryker Payments feature integration](https://documentation.spryker.com/docs/payments-feature-integration) |
-| Spryker Checkout | {{page.version}} | [Spryker Checkout feature integration](https://documentation.spryker.com/docs/checkout-feature-integration)
+| Payments | {{page.version}}   | [Payments feature integration](https://documentation.spryker.com/docs/payments-feature-integration) |
+| Checkout | {{page.version}} | [Checkout feature integration](https://documentation.spryker.com/docs/checkout-feature-integration)
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html)
 | Marketplace Order Management | {{page.version}} | [Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-feature-integration.html)
 
@@ -38,8 +38,7 @@ Make sure that the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 |-|-|
-| PaymentExtension | vendor/spryker/payment-extension |
-| StepEngine | vendor/spryker/step-engine |
+| DummyMarketplacePayment | vendor/spryker/dummy-marketplace-payment |
 
 {% endinfo_block %}
 
@@ -104,10 +103,8 @@ Enable the following behaviors by registering the plugins:
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 | --------- | ------- | ----- | ------------- |
 | MerchantProductItemPaymentMethodFilterPlugin | If not all order items contain of product reference, then filters dummy marketplace payment methods out. |  | Spryker\Zed\DummyMarketplacePayment\Communication\Plugin\Payment\MerchantProductItemPaymentMethodFilterPlugin |
-| DummyMarketplacePaymentHandlerPlugin | Expands Payment transfer with payment provider and payment selection. |  | Spryker\Yves\DummyMarketplacePayment\Plugin\StepEngine\DummyMarketplacePaymentHandlerPlugin |
-| DummyMarketplacePaymentInvoiceSubFormPlugin | Creates sub form for Invoice payment method. |  | Spryker\Yves\DummyMarketplacePayment\Plugin\StepEngine\SubForm\DummyMarketplacePaymentInvoiceSubFormPlugin |
 
-**Spryker\Zed\DummyMarketplacePayment\Communication\Plugin\Payment\MerchantProductItemPaymentMethodFilterPlugin**
+**Pyz\Zed\Payment\PaymentDependencyProvider.php**
 
 ```php
 <?php
@@ -132,77 +129,7 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
 }
 ```
 
-**Spryker\Yves\DummyMarketplacePayment\Plugin\StepEngine\DummyMarketplacePaymentHandlerPlugin**
-
-```php
-<?php
-
-namespace Pyz\Yves\CheckoutPage;
-
-use Spryker\Shared\DummyMarketplacePayment\DummyMarketplacePaymentConfig;
-use Spryker\Yves\DummyMarketplacePayment\Plugin\StepEngine\DummyMarketplacePaymentHandlerPlugin;
-use Spryker\Yves\Kernel\Container;
-use Spryker\Yves\StepEngine\Dependency\Plugin\Handler\StepHandlerPluginCollection;
-use SprykerShop\Yves\CheckoutPage\CheckoutPageDependencyProvider as SprykerShopCheckoutPageDependencyProvider;
-
-class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyProvider
-{
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
-    protected function extendPaymentMethodHandler(Container $container): Container
-    {
-        $container->extend(static::PAYMENT_METHOD_HANDLER, function (StepHandlerPluginCollection $paymentMethodHandler) {
-            $paymentMethodHandler->add(
-                new DummyMarketplacePaymentHandlerPlugin(),
-                DummyMarketplacePaymentConfig::PAYMENT_METHOD_DUMMY_MARKETPLACE_PAYMENT_INVOICE
-            );
-            
-            return $paymentMethodHandler;
-        });
-
-        return $container;
-    }
-}
-```
-
-**Spryker\Yves\DummyMarketplacePayment\Plugin\StepEngine\SubForm\DummyMarketplacePaymentInvoiceSubFormPlugin**
-
-```php
-<?php
-
-namespace Pyz\Yves\CheckoutPage;
-
-use Spryker\Yves\DummyMarketplacePayment\Plugin\StepEngine\SubForm\DummyMarketplacePaymentInvoiceSubFormPlugin;
-use Spryker\Yves\Kernel\Container;
-use Spryker\Yves\StepEngine\Dependency\Plugin\Form\SubFormPluginCollection;
-use SprykerShop\Yves\CheckoutPage\CheckoutPageDependencyProvider as SprykerShopCheckoutPageDependencyProvider;
-
-class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyProvider
-{
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
-    protected function extendSubFormPluginCollection(Container $container): Container
-    {
-        $container->extend(static::PAYMENT_SUB_FORMS, function (SubFormPluginCollection $paymentSubFormPluginCollection) {
-            $paymentSubFormPluginCollection->add(new DummyMarketplacePaymentInvoiceSubFormPlugin());
-
-            return $paymentSubFormPluginCollection;
-        });
-
-        return $container;
-    }
-}
-```
-
 ### 5) Import data
-
-Prepare merchant profile data according to your requirements using the demo data:
 
 1. Extend and import payment method data
 
@@ -237,9 +164,22 @@ dummyMarketplacePaymentInvoice,US
 | payment_method_key | &check; | string | dummyMarketplacePaymentInvoice | Payment method key. |
 | store | &check; | string | DE | Store identifier. |
 
+3. Import data:
+   
+```bash
+console data:import payment-method
+console data:import payment-method-store
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the new payment method is added to the `spy_payment_method` and `spy_payment_method_store` tables in the database.
+
+{% endinfo_block %}
+
 ## Install feature front end
 
-Follow the steps below to install the Marketplace Merchant feature front end.
+Follow the steps below to install the Dummy Payment feature front end.
 
 ### 1) Add translations
 
@@ -255,3 +195,82 @@ dummyMarketplacePaymentInvoice.invoice,Auf Rechnung bezahlen:,de_DE
 checkout.payment.provider.DummyMarketplacePayment,Dummy Marketplace Payment,en_US
 checkout.payment.provider.DummyMarketplacePayment,Beispiel Marktplatz Zahlungsmethode,de_DE
 ```
+
+Import data:
+
+```bash
+console data:import glossary
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the configured data is added to the `spy_glossary` table in the database.
+
+{% endinfo_block %}
+
+### 2) Set up behavior
+
+Enable the following behaviors by registering the plugins:
+
+| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
+| --------- | ------- | ----- | ------------- |
+| DummyMarketplacePaymentHandlerPlugin | Expands Payment transfer with payment provider and payment selection. |  | Spryker\Yves\DummyMarketplacePayment\Plugin\StepEngine\DummyMarketplacePaymentHandlerPlugin |
+| DummyMarketplacePaymentInvoiceSubFormPlugin | Creates sub form for Invoice payment method. |  | Spryker\Yves\DummyMarketplacePayment\Plugin\StepEngine\SubForm\DummyMarketplacePaymentInvoiceSubFormPlugin |
+
+**Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\CheckoutPage;
+
+use Spryker\Shared\DummyMarketplacePayment\DummyMarketplacePaymentConfig;
+use Spryker\Yves\DummyMarketplacePayment\Plugin\StepEngine\DummyMarketplacePaymentHandlerPlugin;
+use Spryker\Yves\Kernel\Container;
+use Spryker\Yves\StepEngine\Dependency\Plugin\Handler\StepHandlerPluginCollection;
+use SprykerShop\Yves\CheckoutPage\CheckoutPageDependencyProvider as SprykerShopCheckoutPageDependencyProvider;
+
+class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyProvider
+{
+    /**
+     * @param \Spryker\Yves\Kernel\Container $container
+     *
+     * @return \Spryker\Yves\Kernel\Container
+     */
+    protected function extendPaymentMethodHandler(Container $container): Container
+    {
+        $container->extend(static::PAYMENT_METHOD_HANDLER, function (StepHandlerPluginCollection $paymentMethodHandler) {
+            $paymentMethodHandler->add(
+                new DummyMarketplacePaymentHandlerPlugin(),
+                DummyMarketplacePaymentConfig::PAYMENT_METHOD_DUMMY_MARKETPLACE_PAYMENT_INVOICE
+            );
+            
+            return $paymentMethodHandler;
+        });
+
+        return $container;
+    }
+    
+    /**
+     * @param \Spryker\Yves\Kernel\Container $container
+     *
+     * @return \Spryker\Yves\Kernel\Container
+     */
+    protected function extendSubFormPluginCollection(Container $container): Container
+    {
+        $container->extend(static::PAYMENT_SUB_FORMS, function (SubFormPluginCollection $paymentSubFormPluginCollection) {
+            $paymentSubFormPluginCollection->add(new DummyMarketplacePaymentInvoiceSubFormPlugin());
+
+            return $paymentSubFormPluginCollection;
+        });
+
+        return $container;
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Add a merchant product to shopping cart, go to checkout and make sure that Dummy Payment Invoice payment method is available.
+
+{% endinfo_block %}

@@ -4,7 +4,8 @@ description: {Meta description}
 template: module-migration-guide-template
 ---
 
-# Upgrading from version {version number} to version {version number}
+## Upgrading from version {version number} to version {version number}
+<!-- For example "## Upgrading from version 4.* to version 5.0.0"
 
 *Estimated migration time: {time in hours or minutes}*
 

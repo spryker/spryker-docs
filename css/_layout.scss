@@ -16,15 +16,20 @@ body {
 .page-content {
     flex: 1 1 auto;
 
+    &--center {
+        align-items: center;
+    }
+
     &--post {
         display: flex;
+        position: relative;
 
         @include media("<laptop") {
             display: grid;
-            grid-column-gap: 0;
+            grid-column-gap: 30px;
             grid-row-gap: 0;
             grid-template-rows: auto 1fr;
-            grid-template-columns: auto 1fr;
+            grid-template-columns: auto auto;
             grid-template-areas: "a b"
                                  "a c";
             padding: 0 24px 0 0;
@@ -83,6 +88,7 @@ body {
 
     @include media("<laptop") {
         grid-area: a;
+        margin: 0;
     }
 
     @include media("<desktop") {
@@ -94,18 +100,18 @@ body {
 
 .post-content {
     flex: 1 1 auto;
-    padding: 40px 0 0;
+    padding: 40px 0 30px;
 
     @include media("<laptop") {
-        padding: 24px 0 0;
+        padding: 24px 0 30px;
     }
 
     @include media("<desktop") {
-        padding: 24px 24px 0;
+        padding: 24px 24px 30px;
     }
 
     @include media("<tablet") {
-        padding: 16px 16px 0;
+        padding: 16px 16px 30px;
     }
 }
 
@@ -140,7 +146,7 @@ body {
 
     &__sticky {
         position: sticky;
-        top: 40px;
+        top: 134px;
 
         @include media("<laptop") {
             position: static;

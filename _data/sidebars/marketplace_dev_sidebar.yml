@@ -546,7 +546,11 @@ entries:
                     url: /docs/marketplace/dev/front-end/ui-components-library/cache/static.html
 
               - title: "Persistence"
-                url: /docs/marketplace/dev/front-end/ui-components-library/persistence.html
+                url: /docs/marketplace/dev/front-end/ui-components-library/persistence/
+                nested:
+
+                  - title: "In Memory Persistence Strategy"
+                    url: /docs/marketplace/dev/front-end/ui-components-library/persistence/in-memory-persistence-strategy.html
 
           - title: "Web components"
             url: /docs/marketplace/dev/front-end/web-components.html

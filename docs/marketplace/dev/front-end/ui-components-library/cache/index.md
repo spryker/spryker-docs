@@ -171,4 +171,4 @@ cache until the expiration date and always retrieves them from cache if requeste
 
 ## Related articles
 
-[Persistence](/docs/marketplace/dev/front-end/ui-components-library/persistence.html)
+[Persistence](/docs/marketplace/dev/front-end/ui-components-library/persistence/)

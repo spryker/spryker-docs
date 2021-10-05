@@ -8,9 +8,8 @@ This article provides details about the In Memory Persistence Strategy service i
 
 ## Overview
 
-In Memory Persistence Strategy is an Angular Service that stores data in memory and will be lost 
-when the browser page is reloaded.
-See an example below, how to use the In Memory Persistence Strategy service.
+In Memory Persistence Strategy is an Angular Service that stores data in memory and will be lost when the browser page is reloaded.
+Check out this example below to see how to use the In Memory Persistence Strategy service.
 
 `storage` - the persistence strategy type.  
 

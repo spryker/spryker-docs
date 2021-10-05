@@ -555,6 +555,9 @@ entries:
                   - title: "Local Storage Persistence Strategy"
                     url: /docs/marketplace/dev/front-end/ui-components-library/persistence/local-storage-persistence-strategy.html
 
+                  - title: "Url Persistence Strategy"
+                    url: /docs/marketplace/dev/front-end/ui-components-library/persistence/url-persistence-strategy.html
+
           - title: "Web components"
             url: /docs/marketplace/dev/front-end/web-components.html
 

@@ -105,4 +105,4 @@ There are a few common Persistence Strategies that are available in the UI libra
 - [In Memory Persistence Strategy](/docs/marketplace/dev/front-end/ui-components-library/persistence/in-memory-persistence-strategy.html) — 
  stores data in memory and will be lost when the browser page is reloaded.
 - [Local Storage Persistence Strategy](/docs/marketplace/dev/front-end/ui-components-library/persistence/local-storage-persistence-strategy.html) — uses browser Local Storage to store the data.
-- `UrlPersistenceStrategy` — uses browser URL to store the data.
+- [Url Persistence Strategy](/docs/marketplace/dev/front-end/ui-components-library/persistence/url-persistence-strategy.html) — uses browser URL to store the data.

@@ -537,7 +537,28 @@ entries:
                     url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/chain.html
 
                   - title: "Collate"
-                    url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate.html
+                    url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/
+                    nested:
+
+                    - title: "Filters"
+                      url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/
+                      nested:
+
+                        - title: "Equals"
+                          url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/equals.html
+
+                        - title: "Range"
+                          url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/range.html
+
+                        - title: "Text"
+                          url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/text.html
+
+                    - title: "Data Configurators"
+                      url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/data-configurators/
+                      nested:
+
+                        - title: "Table"
+                          url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/data-configurators/table.html
 
               - title: "Cache"
                 url: /docs/marketplace/dev/front-end/ui-components-library/cache/

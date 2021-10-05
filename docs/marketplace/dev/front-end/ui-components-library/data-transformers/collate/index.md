@@ -4,7 +4,6 @@ description: This document provides details about the Data Transformer Collate s
 template: concept-topic-template
 ---
 
-
 This document provides details about the Data Transformer Collate service in the Components Library.
 
 ## Overview
@@ -51,9 +50,9 @@ Collate Filters are Angular Services that extend filtering in the Data Transform
 These services are registered via `CollateDataTransformer.withFilters()`.
 There are a few common Data Transformer Collate Filters that are available as separate packages in the UI library:
 
-  - `equals` - filters values that are strictly equal.
-  - `range` - filters values that are within a number range.
-  - `text` - filters values that match a string.
+  - [`equals`](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/equals.html) - filters values that are strictly equal.
+  - [`range`](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/range.html) - filters values that are within a number range.
+  - [`text`](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/text.html) - filters values that match a string.
 
 ## Collate Data Configurators
 
@@ -61,7 +60,7 @@ Data Configurators are Angular Services that enable re-population of data (sorti
 These services are registered via `CollateDataTransformer.withConfigurators()`.
 There are a few common Data Transformers Collate Data Configurators that are available:
 
-  - `table` - integrates Table into Collate to re-populate data when the table updates.
+  - [`table`](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/data-configurators/table.html) - integrates Table into Collate to re-populate data when the table updates.
 
 ## Interfaces
 

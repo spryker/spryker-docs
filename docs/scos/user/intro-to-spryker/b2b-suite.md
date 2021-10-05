@@ -66,7 +66,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 ## B2B Demo Shop
 To demonstrate the B2B features in a live impementation, we use a B2B Demo Shop. The B2B Demo Shop is a showcase that is pre-loaded with a combination of modules and functionalities best suited for B2B commerce. This Demo Shop is our recommended starting point for all standard B2B commerce projects. It comes with the new modern look-and-feel and atomic design approach. New features for the B2B Demo Shop are released every several months.
 
-<iframe src="https://fast.wistia.net/embed/iframe/gfmntivjsn" title="B2B Demo Shop Overview" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>
+{% wistia gfmntivjsn 960 720 %}
 
 To download the B2B Demo Shop, visit the following GitHub repository: [https://github.com/spryker-shop/b2b-demo-shop](https://github.com/spryker-shop/b2b-demo-shop)
 

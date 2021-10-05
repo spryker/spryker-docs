@@ -13,7 +13,8 @@ Every ERP system has its own structure and is customized for clients' needs that
 With the help of Punchout, a buyer can configure access from their e-procurement software to Spryker web store. Such setup allows B2B buyers to avoid logins to multiple e-commerce websites and helps them to manage their procurement better with the inbuilt complex workflows. 
 
 Check out this video to get more details on how Punchout works:
-<iframe src="https://fast.wistia.net/embed/iframe/ntehv57yxb" title="Punchout" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>
+
+{% wistia ntehv57yxb 960 720 %}
 
 ## If you are:
 

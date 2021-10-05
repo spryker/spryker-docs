@@ -16,7 +16,7 @@ For information about installing the Spryker Commerce OS see [Getting Started Gu
 
 Check out our release notes video for the quick illustration of the new features and improvements:
 
-<iframe src="https://fast.wistia.net/embed/iframe/ivsvzay3cl" title="Spryker Release Notes 202001.0" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="640" height="360"></iframe>
+{% wistia ivsvzay3cl 960 720 %}
 
 
 ## Spryker Commerce OS

@@ -22,15 +22,14 @@ The feature allows customer login by token. By dynamically generating a token, a
 
 
 
-Check out the following videos aboout managing company accounts:
+Check out the following videos about managing company accounts:
 Setting up company structure:
-<iframe src="https://fast.wistia.net/embed/iframe/qkdgkeannb" title="How to set up Company Structure in Spryker" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>
 
-Setting up company users:
-<iframe src="https://fast.wistia.net/embed/iframe/72qy3slwjo" title="How to set up Company Users and Roles in Spryker" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>
+{% wistia qkdgkeannb 960 720 %}
 
 Setting up company users and roles:
-<iframe src="https://fast.wistia.net/embed/iframe/72qy3slwjo" title="How to set up Company Users and Roles in Spryker" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>
+
+{% wistia 72qy3slwjo 960 720 %}
 
 ## If you are:
 

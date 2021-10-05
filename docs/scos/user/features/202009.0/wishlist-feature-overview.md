@@ -78,7 +78,8 @@ Buyers can do the following actions using the Wishlists feature:
 ## Video tutorial
 
 For more details on wishlists, check the video:
-<iframe src="https://spryker.wistia.com/medias/g7hzsa9xw7" title="Wishlists" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>
+
+{% wistia g7hzsa9xw7 960 720 %}
 
 {% info_block warningBox "Developer guides" %}
 

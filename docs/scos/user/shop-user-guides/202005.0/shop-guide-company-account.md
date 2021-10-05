@@ -46,5 +46,4 @@ A Company Administrator needs to log out and then log in to refresh the changes.
 {% endinfo_block %}
 Don't forget to check out the video tutorial on setting up [Company](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html) Structure in Spryker [B2B Demo Shop](/docs/scos/user/intro-to-spryker/{{site.version}}/about-spryker.html#spryker-b2b-b2c-demo-shops):
 
-<iframe src="https://fast.wistia.net/embed/iframe/qkdgkeannb" title="How to set up Company Structure in Spryker" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="589" height="315"></iframe>
-<!-- Last review date: Mar 18, 2019 -->
+{% wistia qkdgkeannb 960 720 %}

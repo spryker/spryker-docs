@@ -125,4 +125,6 @@ This takes you to the *Overview of Navigation Elements* page. You can see the me
 **What's next?** 
 * To know more about the attributes used to manage navigation elements, see [Navigation: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/references/navigation-reference-information.html).
 * For visual instructions on Navigation configuration, check the video:
-<iframe src="https://spryker.wistia.com/medias/2iepfhl6fu" title="How to configure Navigation" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>
+
+{% wistia 2iepfhl6fu 960 720 %}
+

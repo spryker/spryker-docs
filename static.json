@@ -2,5 +2,6 @@
   "clean_urls": true,
   "https_only": true,
   "root": "_site/",
-  "canonical_host": "${HOST}"
+  "canonical_host": "${HOST}",
+  "error_page": "404.html"
 }

@@ -16,9 +16,9 @@ Follow the steps below to install the Marketplace Product Offer Prices feature c
 To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
-|-|-|-|
+|---|---|---|
 | Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html) |
-| Prices | {{page.version}} |[Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html) |
+| Prices | {{page.version}} |[Prices feature integration](https://documentation.spryker.com/docs/prices-feature-integration) |
 | Spryker Core | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
 
 
@@ -998,3 +998,10 @@ Make sure that product offers are sorted by the lowest price first when fetched 
 Make sure that when a product offer with a volume price is selected and the selected quantity is over a certain threshold, its volume price is shown instead of the normal price.
 
 {% endinfo_block %}
+
+
+## Related features
+
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| -------------- | -------------------------------- | ----------------- |
+| Marketplace Product Offer + Prices API | | [Glue API: Marketplace Product Offer + Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-prices-feature-integration.html) |

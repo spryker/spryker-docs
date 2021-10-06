@@ -43,7 +43,7 @@ Install the needed packages for the Merchant Portal with dependencies, see the a
 
 **Merchants, users, and merchant users**
 
-1. Create users for merchant portal using Zed UI (Backoffice), or if you need them out of the box, add them into `\Pyz\Zed\User\UserConfig::getInstallerUsers()`, for example:
+1. Create users for merchant portal using Zed UI (Back Office), or if you need them out of the box, add them into `\Pyz\Zed\User\UserConfig::getInstallerUsers()`, for example:
 
    ```json
    [
@@ -54,7 +54,7 @@ Install the needed packages for the Merchant Portal with dependencies, see the a
    ],
    ```
 
-   1. Connect users and merchant using Zed UI (Backoffice) or data import with data/import/ files.
+   1. Connect users and merchant using Zed UI (Back Office) or data import with data/import/ files.
 
       1. merchant.csv
 

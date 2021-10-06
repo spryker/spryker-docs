@@ -9,19 +9,17 @@ This document describes how to integrate the Merchant Portal - Marketplace Merch
 
 ## Prerequisites
 
-To start feature integration, integrate the required features:
+To start feature integration, install the required features:
 
 | NAME  | VERSION | INTEGRATION GUIDE |
 | --------------- | --------- | ------------|
 | Marketplace Merchant Portal Product Offer Management | {{page.version}} | [Marketplace Merchant Portal Product Offer Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-product-offer-management-feature-integration.html)
-| Marketplace Merchant Portal Order Management | {{page.version}} | [Marketplace Merchant Portal Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-order-management-feature-integration.html)
+| Merchant Portal - Marketplace Order Management | {{page.version}} | [Marketplace Merchant Portal Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-order-management-feature-integration.html)
 
 
 ### 1) Set up behavior
 
-To set up behavior:
-
-1. Enable the following behaviors by registering the plugins:
+Enable the following behaviors by registering the plugins:
 
 | PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE |
 | --------------- | ------------ | ----------- | ------------ |

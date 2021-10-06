@@ -127,4 +127,4 @@ Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE |INTEGRATION GUIDE |
 | --- | --- | --- |
-| Marketplace Merchant Portal Product Offer Management + Merchant Portal Sales Management |  |[Merchant Portal - Marketplace Merchant Portal Product Offer Management + Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature-integration.html) |
+| Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management |  |[Merchant Portal - Marketplace Merchant Portal Product Offer Management + Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature-integration.html) |

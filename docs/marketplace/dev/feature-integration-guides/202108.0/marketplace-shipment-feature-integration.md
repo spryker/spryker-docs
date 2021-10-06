@@ -17,8 +17,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Merchant feature | {{page.version}} | [Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
-| Shipment feature | {{page.version}} | [Shipment feature integration](https://documentation.spryker.com/docs/shipment-feature-integration) |
+| Merchant | {{page.version}} | [Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
+| Shipment | {{page.version}} | [Shipment feature integration](https://documentation.spryker.com/docs/shipment-feature-integration) |
 
 
 ### 1) Install the required modules using Composer
@@ -72,13 +72,13 @@ class ShipmentConfig extends SprykerShipmentConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that `ShipmentService::groupItemsByShipment()` groups items by shipment using merchant reference.
+Make sure that `ShipmentService::groupItemsByShipment()` groups items by shipment using the merchant reference.
 
 {% endinfo_block %}
 
 ### 3) Set up the database schema and transfer definitions
 
-Apply database changes and to generate entity and transfer changes:
+Apply the database changes and generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -88,7 +88,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Verify that the following changes have been implemented by checking your database:
+Verify that the following changes have been applied by checking your database:
 
 | DATABASE ENTITY | TYPE | EVENT |
 |-|-|-|

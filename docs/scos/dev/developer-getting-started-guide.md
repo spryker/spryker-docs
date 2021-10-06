@@ -96,14 +96,14 @@ To configure and customize your Spryker Commerce OS, do the following:
     *   [Redis](/docs/scos/dev/setup/redis-configuration.html)
     <!---*   [ElasticSearch](/docs/scos/dev/back-end-development/zed/data-manipulation/data-interaction/search/configuring-elasticsearch.html)-->
     *   [Queue](/docs/scos/dev/back-end-development/data-manipulation/queue/queue.html)
-3. [Congiure stores](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/howto-set-up-multiple-stores.html#configure-stores) to have one or multiple stores in your online shop.
+3. [Congiure stores](/docs/scos/dev/tutorials-and-howtos/{{site.version}}/howtos/howto-set-up-multiple-stores.html#configure-stores) to have one or multiple stores in your online shop.
 4. [Schedule tasks](/docs/scos/dev/back-end-development/cronjobs/cronjobs.html) (Cron jobs).
 <!---4. Move to the maintenance mode-->
 
 ## 4. Debugging
 
 Before you start developing, set up and get to know your debugging environment. To learn how to configure debugging, see one of the following:
-* [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/{{page.version}}/configuring-debugging-in-docker.html)
+* [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html)
 * [Configuring debugging in Vagrant](/docs/scos/dev/setup/installing-spryker-with-vagrant/debugger-configuration/configuring-debugging-in-vagrant.html)
 
 {% info_block infoBox %}
@@ -138,10 +138,10 @@ Get to know the parts of the Spryker Development Virtual Machine with which we s
 Select one of the topics below depending on what you want to do next:
 
 * [About Spryker](/docs/scos/user/intro-to-spryker/about-spryker.html): general information about Spryker, news, and release notes.
-* [Features](/docs/scos/user/features/{{page.version}}/overview-of-the-feature-guides.html): general information about the Spryker features.
-* [Glue REST API](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-rest-api.html): Spryker Glue REST API overview, reference, and guides.
-* [User guides](/docs/scos/user/back-office-user-guides/{{page.version}}/about-back-office-user-guides.html): step-by-step Backoffice and Storefront user guides.
+* [Features](/docs/scos/user/features/{{site.version}}/overview-of-the-feature-guides.html): general information about the Spryker features.
+* [Glue REST API](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-rest-api.html): Spryker Glue REST API overview, reference, and guides.
+* [User guides](/docs/scos/user/back-office-user-guides/{{site.version}}/about-back-office-user-guides.html): step-by-step Backoffice and Storefront user guides.
 * [Developer guides](/docs/scos/dev/overview-of-the-developer-guides.html): technical information and guides for developers.
-* [Technology partners](/docs/scos/dev/technology-partners/{{page.version}}/technology-partner-integration.html): Spryker technology partners information and integration guides.
-* [Migration and integration](/docs/scos/dev/migration-and-integration/{{page.version}}/about-migration-and-integration-guides.html): instructions on how to migrate to newer versions of modules and features.
-* [Tutorials](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/about-tutorials.html): tutorials and HowTos.
+* [Technology partners](/docs/scos/dev/technology-partners/{{site.version}}/technology-partner-integration.html): Spryker technology partners information and integration guides.
+* [Migration and integration](/docs/scos/dev/migration-and-integration/{{site.version}}/about-migration-and-integration-guides.html): instructions on how to migrate to newer versions of modules and features.
+* [Tutorials](/docs/scos/dev/tutorials-and-howtos/tutorials-and-howtos.html): tutorials and HowTos.

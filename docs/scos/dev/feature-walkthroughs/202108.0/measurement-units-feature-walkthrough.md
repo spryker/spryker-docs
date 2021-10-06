@@ -33,4 +33,4 @@ The following schema illustrates relations between alternative products:
 |---------|---------|
 | [Product measurement unit feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/product-measurement-unit-feature-integration.html)  | [Retrieving measurement units](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html)  |
 | [Quick order + measurement units feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/quick-order-measurement-units-feature-integration.html) | [Retrieving sales units](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-sales-units.html)  |
-| [Glue API: Measurement units feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-measurement-units-feature-integration.html)  |   |
+| [Glue API: Measurement units feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-measurement-units-feature-integration.html)  |   |

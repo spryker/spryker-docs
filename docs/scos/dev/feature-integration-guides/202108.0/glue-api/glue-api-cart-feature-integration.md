@@ -18,8 +18,8 @@ To start feature integration, overview and install the following features and Gl
 
 | NAME                   | VERSION | INTEGRATION GUIDE                                            |
 | :--------------------- | :------ | :----------------------------------------------------------- |
-| Glue API: Spryker Core | master  | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-ore-feature-integration.html) |
-| Glue API: Product      | master  | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-products-feature-integration.html) |
+| Glue API: Spryker Core | master  | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Glue API: Product      | master  | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
 | Cart                   | master  | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html) |
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Tutorial - Content and Search - Attribute-Cart-Based Catalog Personalization - Spryker Commerce OS"
+title: Tutorial - Content and Search - Attribute-Cart-Based Catalog Personalization - Spryker Commerce OS
 description: The tutorial provides a step-by-step solution on how you can arrange your products in the cart by a color attribute
 originalLink: https://documentation.spryker.com/docs/t-content-search-attribute-cart-based-catalog-personalization
 originalArticleId: 7f335803-4f1b-4711-97b7-d32c7bcd57bb
@@ -18,24 +18,24 @@ redirect_from:
   - /v2/docs/en/t-content-search-attribute-cart-based-catalog-personalization
   - /v1/docs/t-content-search-attribute-cart-based-catalog-personalization
   - /v1/docs/en/t-content-search-attribute-cart-based-catalog-personalization
-
 ---
 
 In this tutorial, we will boost and personalize the catalog using the color attribute of a product when it is added to cart.
 
 {% info_block infoBox "Info" %}
 
-
-This tutorial is also available on the Spryker Training web-site. For more information and hands-on exercises, visit [Spryker Training](https://training.spryker.com/).)
+This tutorial is also available on the Spryker Training web-site. For more information and hands-on exercises, visit [Spryker Training](https://training.spryker.com/).
 
 {% endinfo_block %}
 
 ## Challenge Description
+
 When you add a red camera to cart, all red cameras are going to be boosted in the catalog and pushed to the top of the products.
 
 In this task, you will also learn how to work with plugins and extend the search plugin stack.
 
 ## Challenge Solving Highlights
+
 In this task, we are using the cart only for the sake of training. In a real-life scenario, you can use the customer's order history to analyze what colors this customer likes and boost the catalog accordingly, or even use another attribute.
 
 Fulltext search engines like Elasticsearch provide a possibility to influence sorting of products by tweaking the scoring function. The scoring function assigns weights to each result based on a formula, which in its turn is usually based on text similarity or synonyms, but we can change it to boost specific products higher than others.
@@ -370,7 +370,7 @@ protected function createCatalogSearchQueryExpanderPlugins(): array
 }
 ```
 
-Done! Now go to the *Cameras* catalog page in your shop [http://www.de.suite.local/en/cameras-&amp;-camcorders/digital-cameras](http://www.de.suite.local/en/cameras-&amp;-camcorders/digital-cameras) and do the following:
+Done! Now go to the *Cameras* catalog page in your shop http://www.de.suite.local/en/cameras-&amp;-camcorders/digital-cameras and do the following:
 1. Add a red camera to cart.
 2. Go back to the same catalog page.
 

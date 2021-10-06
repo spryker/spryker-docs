@@ -104,7 +104,7 @@ You can select a template when inserting a content item widget into a CMS block.
 
 </details>
 
-A developer can create and customize templates. See [Adding a Template for a Content Item Widget](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/cms/howto-create-cms-templates.html#adding-a-template-for-a-content-item-widget) for more details.
+A developer can create and customize templates. See [Adding a Template for a Content Item Widget](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#content-item-widget-template) for more details.
 
 
 

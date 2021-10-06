@@ -21,7 +21,7 @@ To start the feature integration, overview and install the necessary features:
 
 | Feature | Version | Integration guide |
 | --- | --- | --- |
-| Spryker Core | master | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-ore-feature-integration.html) |
+| Spryker Core | master | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
 | Configurable Bundle | master | [Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/configurable-bundle-feature-integration.html) | 
 |Cart |  master | [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html) |
 

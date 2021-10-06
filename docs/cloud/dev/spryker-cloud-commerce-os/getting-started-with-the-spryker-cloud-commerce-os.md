@@ -15,7 +15,7 @@ SCCOS is a fully-managed solution. Before you start developing, we set up enviro
 
 After the initial setup, the following is configured and available:
 
-* Environments: staging and production
+* [Environments](/docs/cloud/dev/spryker-cloud-commerce-os/environments-overview.html): staging and production
 * Services: RDS database, RDS backup, logs, SMTP, etc.
 * Access to AWS, internal resources and services
 * CD pipelines for staging and production environments

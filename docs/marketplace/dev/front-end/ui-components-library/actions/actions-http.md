@@ -11,9 +11,9 @@ This article provides details about the Actions HTTP service in the Components L
 Actions HTTP is an Angular Service that renders content via the HTML request.
 Check out this example below to see how to use Actions HTTP service.
 
-- `type` - is an action type.  
-- `url` - is an action request URL.  
-- `method` - is an action request method (`GET` by default).  
+- `type` - an action type.  
+- `url` - an action request URL.  
+- `method` - an action request method (`GET` by default).  
 
 ```html
 <spy-button-action

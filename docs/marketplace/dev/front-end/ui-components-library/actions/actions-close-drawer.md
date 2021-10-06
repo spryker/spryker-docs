@@ -11,7 +11,7 @@ This article provides details about the Actions Close Drawer service in the Comp
 Actions Close Drawer is an Angular Service that closes the first Drawer in the current context.
 Check out this example below to see how to use Actions Close Drawer:
 
-`type` - is an action type.
+`type` - an action type.
 
 ```html
 <spy-button-action

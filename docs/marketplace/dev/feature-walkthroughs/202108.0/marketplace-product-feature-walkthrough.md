@@ -7,7 +7,10 @@ template: feature-walkthrough-template
 <!--- Feature summary. Short and precise explanation of what the feature brings in terms of functionality.
 -->
 
-A Marketplace Product feature adds merchant information to the product that a merchant sells.
+A Marketplace Product feature adds merchant information to the product that a Merchant sells.
+There are two options for the Merchants to start selling in Marketplace: Either through creation of a completely new product to sell them without offers, or complement marketplace products with new offer. 
+A Merchant can assign attributes and custom labels to products, add product attributes, use limited offers and pricing.
+Customers can filter products and offers by Merchants right in the catalog or find them through the search function.
 
 <!--- Feel free to drop the following part if the User doc is not yet published-->
 {% info_block warningBox "User documentation" %}
@@ -32,10 +35,11 @@ Table content:
 
 | MODULE     | DESCRIPTION                |
 |------------|----------------------------|
-| MerchantProduct | Created `MerchantProductEvents` with publish.    |
-| MerchantProductDataImport | Adjusted `MerchantProductAbstractWriterStep` so that it triggers merchant product publish event.    |
-| MerchantProductOfferSearch | Adjusted `MerchantProductPageDataLoaderPlugin` to merge merchant names that we set to  PayloadTransfer with those that it already contains, updated plugins to make it compatible with `MerchantProductSearch` module.    |
-| MerchantProductSearch | Created new plugins and subscribes on `MerchantEvents` - publish and entity update.  |
+| MerchantProduct | Provides the connection between product entities and merchant entities.  |
+| MerchantProductDataImport | Imports relations between products and merchants from .csv file.  |
+| ProductMerchantPortalGui | Provides components for merchant products management.  |
+| ProductMerchantPortalGuiExtension | Provides extension interfaces for ProductMerchantPortalGui module.  |
+| MerchantProductSearch | Manages Elasticsearch documents for merchant product entities.  |
 
 ## Domain model
 <!--

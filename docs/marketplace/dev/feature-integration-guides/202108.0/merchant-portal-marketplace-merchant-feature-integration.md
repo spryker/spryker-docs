@@ -17,15 +17,15 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE  |
 | -------------------- | ------- | ------------------ |
-| Spryker Core         | master  | [Spryker Core feature integration ](https://documentation.spryker.com/docs/spryker-core-feature-integration)|
-| Marketplace Merchant | master | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
+| Spryker Core         | {{page.version}}  | [Spryker Core feature integration ](https://documentation.spryker.com/docs/spryker-core-feature-integration)|
+| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker/merchant-profile-merchant-portal-gui:"^0.3.0" --update-with-dependencies
+composer require spryker/merchant-profile-merchant-portal-gui:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -45,17 +45,8 @@ Generate transfer changes:
 ```bash
 console transfer:generate
 ```
-{% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
-
-| TRANSFER  | TYPE  | EVENT | PATH  |
-| ------------- | ------ | ------- | ----------------- |
-| MerchantProfile | object | Created | src/Generated/Shared/Transfer/MerchantProfile |
-
-{% endinfo_block %}
-
-### Zed translations
+### 3) Add translations
 
 Generate a new translation cache for Zed:
 

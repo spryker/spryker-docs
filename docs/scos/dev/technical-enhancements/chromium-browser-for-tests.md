@@ -16,7 +16,7 @@ redirect_from:
 
 ## Integration into Docker-based projects
 
-For Docker-based integration instructions, see [ChromeDriver](/docs/scos/dev/the-docker-sdk/configuring-services.html#chromedriver).
+For Docker-based integration instructions, see [ChromeDriver](/docs/scos/dev/the-docker-sdk/{{page.version}}/configuring-services.html#chromedriver).
 
 ## Integration into DevVM-based projects
 To integrate Chromium into a DevVM-based project:

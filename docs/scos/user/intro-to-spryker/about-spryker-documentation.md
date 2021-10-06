@@ -35,13 +35,13 @@ We try to organize our documentation in such a way that it would be easy to find
 ## Documentation Breakdown
 The Spryker documentation is broken into the following sections:
 **[About](/docs/scos/user/intro-to-spryker/about-spryker.html)**: Is for people who are thinking about adopting the Spryker Commerce OS. Here you will find all the information you need to help you make your decision. This section also contains the Spryker release notes, documentation updates, and news.
-**[Features](/docs/scos/user/features/{{page.version}}/overview-of-the-feature-guides.html)**: Contains descriptions of all Spryker features categorized into Capabilities. Feature overview pages contain a list of tasks and articles relevant for Developers, Back Office Users, and Shop Users. See [Personas](/docs/scos/user/intro-to-spryker/about-spryker-documentation.html#personas) for more information about these target groups.
-**[User Guides](/docs/scos/user/back-office-user-guides/{{page.version}}/about-back-office-user-guides.html)**: Meant primarily for the end-users who need assistance navigating and using features of the Spryker Back Office and Storefront.
-**[Glue API Guides](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-rest-api.html)**: Provides an overview of the Glue Rest API feature resources. To learn general information on the Glue API infrastructure, see [Glue Infrastructure](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-infrastructure.html). These guides are meant both for developers and the API users.
+**[Features](/docs/scos/user/features/{{site.version}}/overview-of-the-feature-guides.html)**: Contains descriptions of all Spryker features categorized into Capabilities. Feature overview pages contain a list of tasks and articles relevant for Developers, Back Office Users, and Shop Users. See [Personas](/docs/scos/user/intro-to-spryker/about-spryker-documentation.html#personas) for more information about these target groups.
+**[User Guides](/docs/scos/user/back-office-user-guides/{{site.version}}/about-back-office-user-guides.html)**: Meant primarily for the end-users who need assistance navigating and using features of the Spryker Back Office and Storefront.
+**[Glue API Guides](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-rest-api.html)**: Provides an overview of the Glue Rest API feature resources. To learn general information on the Glue API infrastructure, see [Glue Infrastructure](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-infrastructure.html). These guides are meant both for developers and the API users.
 **[Developer Guides](/docs/scos/dev/overview-of-the-developer-guides.html)**: Meant for the developers and contain instructions on how to install and configure Spryker for your project. This section will also help you understand the technical essentials and concepts of the Spryker Commerce OS.
-**[Technology Partners](/docs/scos/user/technology-partners/{{page.version}}/technology-partner-integration.html)**: Here, the developers will find the instructions on how to integrate third-party technology partners into your Spryker project.
-**[Migration and Integration](/docs/scos/dev/migration-and-integration/{{page.version}}/about-migration-and-integration-guides.html)**: Holds feature integration and module migration guides for the developers.
-**[Tutorials and HowTos](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/about-tutorials.html)**: Contains step-by-step instructions on how to perform all types of technical tasks with the Spryker Commerce OS. This section is meant for developers.
+**[Technology Partners](/docs/scos/user/technology-partners/{{site.version}}/technology-partner-integration.html)**: Here, the developers will find the instructions on how to integrate third-party technology partners into your Spryker project.
+**[Migration and Integration](/docs/scos/dev/migration-and-integration/{{site.version}}/about-migration-and-integration-guides.html)**: Holds feature integration and module migration guides for the developers.
+**[Tutorials and HowTos](/docs/scos/dev/tutorials-and-howtos/about-tutorials.html)**: Contains step-by-step instructions on how to perform all types of technical tasks with the Spryker Commerce OS. This section is meant for developers.
 
 ## Personas
 In our documentation, we refer to the following personas:
@@ -50,7 +50,7 @@ In our documentation, we refer to the following personas:
 * Back Office User
 * Shop User
 
-We also use these personas to categorize articles related to individual features. See [Business on Behalf feature summary page](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/business-on-behalf-overview.html) for example.
+We also use these personas to categorize articles related to individual features. See [Business on Behalf feature summary page](/docs/scos/user/features/{{site.version}}/company-account-feature-overview/business-on-behalf-overview.html) for example.
 The table below shows what specific roles each persona includes and what each role is up to:
 
 <table>
@@ -154,7 +154,7 @@ We use the following tags:
 
 * **B2B Shop**: Feature/topic in question is applied to [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html).
 * **B2C Shop**: Stands for [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html) features / topics.
-* **Glue API**: Signifies that feature is also available in the [Spryker Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-rest-api.html).
+* **Glue API**: Signifies that feature is also available in the [Spryker Glue API](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-rest-api.html).
 * **Versions** (201811.0, 201903.0, 201907.0 etc.):  Indicate what [product version\(s\)](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html) the feature described in the document relates to.
 {% info_block infoBox %}
 You can filter out the documents by specific product versions. For this, select the version in the top right green dropdown.

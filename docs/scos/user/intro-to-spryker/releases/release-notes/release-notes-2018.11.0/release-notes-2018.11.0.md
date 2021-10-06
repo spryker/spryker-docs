@@ -58,13 +58,13 @@ Shopping list is the feature that allows customers to create and share multiple 
 The shopping list widget provides quick access to the available shopping lists from the top menu.
 ![B2B shopping list](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.11.0/image16.png) 
 
-**Documentation**: [Shopping List](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html)
+**Documentation**: [Shopping List](/docs/scos/user/features/{{site.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html)
 
 ### B2B Cart
 Shopping cart experience has been improved and enhanced to meet B2B customers needs. Cart information is persistent throughout multiple sessions. Users can create multiple carts in their accounts and enable/disable sharing of the cart with particular users or whole business units. It is also possible to clone an existing cart with all products inside. Notes can also be added to the cart or cart item level. A user can access the list of available carts and switch between them from a shopping cart widget in the top menu.
 ![B2B cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.11.0/image6.png) 
 
-**Documentation**: [Cart](/docs/scos/user/features/{{page.version}}/cart-feature-overview/cart-feature-overview.html)
+**Documentation**: [Cart](/docs/scos/user/features/{{site.version}}/cart-feature-overview/cart-feature-overview.html)
 
 ### Quick Order
 The Quick Order functionality aims to help customers who want to purchase multiple products in bulk. A customer can prepare a list of product SKUs and quantity separated by spaces, semicolons or commas and paste it in the Quick Order page or manually add SKU and quantity per item one by one.
@@ -79,7 +79,7 @@ Customers can now resubmit any of their previous orders; the whole list of produ
 A customer can also reorder one or several products from the previous order on the Order Details page.
 ![Reorder on the Order details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.11.0/image17.png) 
 
-**Documentation**: [Reorder](/docs/scos/user/features/{{page.version}}/reorder-feature-overview.html)
+**Documentation**: [Reorder](/docs/scos/user/features/{{site.version}}/reorder-feature-overview.html)
 
 ## Product Management Enhancements
 ### Discontinued Products
@@ -127,7 +127,7 @@ We have introduced the concept of Merchant to allow our customers to implement t
 Easily set a minimum order value for any of your products where either the customer cannot proceed to checkout unless the value is reached, or the difference is added as a special fee to the total sum.
 ![Minimum order value](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.11.0/image11.png) 
 
-**Documentation**: [Minimum Order Value](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html)
+**Documentation**: [Minimum Order Value](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/order-thresholds-overview.html)
 
 ## Price Management Enhancements
 ### Net/Gross Price
@@ -140,7 +140,7 @@ You can easily manage gross and net prices per product, country, and currency. P
 With the Volume Prices feature, you can define individual prices for a product for different order quantities. Set specific volume thresholds for your products to encourage your customers to purchase larger quantities of a product in order to receive the special volume discount.
 ![Volume prices](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.11.0/image12.png) 
 
-**Documentation**: [Volume Prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview/volume-prices-overview.html)
+**Documentation**: [Volume Prices](/docs/scos/user/features/{{site.version}}/prices-feature-overview/prices-feature-overview/volume-prices-overview.html)
 
 ### Customer-specific Prices
 Offer your customers individual agreements and customize the prices per business unit accordingly. To avoid unnecessary repetition of values, the data is compressed in the database.
@@ -160,4 +160,4 @@ With the Agent Assist feature, you may enable your employees to help your custom
 ### Add Concrete Product to Existing Abstract Product
 With this improvement, you will be able to attach new product concretes to existing abstract products directly in the backend interface.
 
-**Documentation**: [Products](/docs/scos/user/features/{{page.version}}product-feature-overview/product-feature-overview.html)
+**Documentation**: [Products](/docs/scos/user/features/{{site.version}}product-feature-overview/product-feature-overview.html)

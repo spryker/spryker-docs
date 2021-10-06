@@ -8,7 +8,7 @@ redirect_from:
   - /v3/docs/en/spryker-in-docker-igs
 ---
 
-Spryker in Docker feature integration guides section provides instructions on integrating features related to [Spryker in Docker](/docs/scos/dev/the-docker-sdk/the-docker-sdk.html).
+Spryker in Docker feature integration guides section provides instructions on integrating features related to [Spryker in Docker](/docs/scos/dev/the-docker-sdk/{{page.version}}/the-docker-sdk.html).
 
 You will find the following integration guides in this section:
 

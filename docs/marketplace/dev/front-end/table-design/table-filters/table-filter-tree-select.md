@@ -13,7 +13,7 @@ Check out this example below to see how to use the Filter Tree Select feature.
 
 Feature configuration:
 
-- `enabled` - enables filter via config.  
+- `enabled` - enables the filter via config.  
 - `items` - an array with config for each filter tree-select.  
 
 ```html

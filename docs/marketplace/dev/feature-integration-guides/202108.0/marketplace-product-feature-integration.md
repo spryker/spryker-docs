@@ -40,6 +40,7 @@ Make sure that the following modules have been installed:
 | MerchantProductGui        | vendor/spryker/merchant-product-gui         |
 | MerchantProductSearch     | vendor/spryker/merchant-product-search      |
 | MerchantProductStorage    | vendor/spryker/merchant-product-storage     |
+| MerchantProductWidget     | vendor/spryker-shop/merchant-product-widget |
 
 {% endinfo_block %}
 
@@ -96,13 +97,14 @@ Make sure that the following changes have been applied in transfer objects:
 
 | TRANSFER  | TYPE | EVENT | PATH  |
 | ----------------- | ----- | ------ | -------------------------- |
-| MerchantProductCriteria   | object | Created | src/Generated/Shared/Transfer/MerchantProductCriteriaTransfer |
-| MerchantProduct           | object | Created | src/Generated/Shared/Transfer/MerchantProductTransfer        |
-| MerchantProductCollection | object | Created | src/Generated/Shared/Transfer/MerchantProductCollectionTransfer |
-| ProductAbstractMerchant   | object | Created | src/Generated/Shared/Transfer/ProductAbstractMerchantTransfer |
-| MerchantSearchCollection  | object | Created | src/Generated/Shared/Transfer/MerchantSearchCollectionTransfer |
-| MerchantProductStorage    | object | Created | src/Generated/Shared/Transfer/MerchantProductStorageTransfer |
-| ProductAbstract.idMerchant | attribute | Created | src/Generated/Shared/Transfer/ProductAbstractTransfer |
+| MerchantProductCriteria   | class | Created | src/Generated/Shared/Transfer/MerchantProductCriteriaTransfer |
+| MerchantProduct           | class | Created | src/Generated/Shared/Transfer/MerchantProductTransfer        |
+| MerchantProductCollection | class | Created | src/Generated/Shared/Transfer/MerchantProductCollectionTransfer |
+| ProductAbstractMerchant   | class | Created | src/Generated/Shared/Transfer/ProductAbstractMerchantTransfer |
+| MerchantSearchCollection  | class | Created | src/Generated/Shared/Transfer/MerchantSearchCollectionTransfer |
+| MerchantProductStorage    | class | Created | src/Generated/Shared/Transfer/MerchantProductStorageTransfer |
+| ProductAbstract.idMerchant | property | Created | src/Generated/Shared/Transfer/ProductAbstractTransfer |
+| MerchantProductView       | class | Created | src/Generated/Shared/Transfer/MerchantProductViewTransfer |
 
 {% endinfo_block %}
 
@@ -586,7 +588,32 @@ Make sure that when you add merchant product to cart, on a cart page is has the 
 
 {% endinfo_block %}
 
-### 2) Set up behavior
+### 2) Add Yves translations
+
+Append glossary according to your configuration:
+
+**src/data/import/common/common/glossary.csv**
+
+```
+merchant_product.message.invalid,Product "%sku%" with Merchant "%merchant_reference%" not found.,en_US
+merchant_product.message.invalid,Der Produkt "%sku%" mit dem Händler "%merchant_reference%" ist nicht gefunden.,de_DE
+merchant_product.sold_by,Sold by,en_US
+merchant_product.sold_by,Verkauft durch,de_DE
+```
+
+Import data:
+
+```bash
+console data:import glossary
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the configured data is added to the `spy_glossary` table in the database.
+
+{% endinfo_block %}
+
+### 3) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
@@ -690,13 +717,12 @@ Make sure when you add to cart merchant product, it has `merchantReference` set.
 
 {% endinfo_block %}
 
-<!--### 3) Configure export to Redis and Elasticsearch-->
-
 
 ## Related features
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | - | - | - |
-| Marketplace Product API | | [Glue API - Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-feature-integration.html) |
-| Marketplace Product + Inventory Management | | [Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-inventory-management-feature-integration.html) |
+| Marketplace Product API | | [Glue API: Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-feature-integration.html) |
 | Marketplace Product + Marketplace Product Offer | | [Marketplace Product + Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-marketplace-product-offer-feature-integration.html) |
+| Marketplace Product + Inventory Management | | [Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-inventory-management-feature-integration.html) |
+| Marketplace Product + Cart | | [Marketplace Product + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-cart-feature-integration.html) |

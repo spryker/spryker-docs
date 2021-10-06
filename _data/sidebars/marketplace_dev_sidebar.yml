@@ -177,8 +177,14 @@ entries:
           - title: Merchant Portal - Marketplace Product feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-feature-integration.html
 
-          - title: Marketplace Merchant Portal Product Offer Management feature integration
+          - title: Merchant Portal - Marketplace Merchant Portal Product Offer Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-portal-product-offer-management-feature-integration.html
+
+          - title: Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature-integration.html
+
+          - title: Merchant Portal - Marketplace Order Management feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-order-management-feature-integration.html
 
           - title: Merchant Portal - Marketplace Product + Tax feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-tax-feature-integration.html

@@ -195,6 +195,9 @@ entries:
           - title: Merchant Switcher feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-feature-integration.html
 
+          - title: Marketplace Dummy Payment feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-dummy-payment-feature-integration.html
+
           - title: ACL feature integration
             url: /docs/marketplace/dev/feature-integration-guides/acl-feature-integration.html
 

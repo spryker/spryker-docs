@@ -80,6 +80,8 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 
 ### 3) Set up transfer objects
 
+Run the following command:
+
 ```bash
 console transfer:generate
 ```
@@ -131,7 +133,7 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
 
 ### 5) Import data
 
-1. Extend and import payment method data
+1. Extend and import payment method data:
 
 **data/import/payment_method.csv**
 
@@ -148,7 +150,7 @@ dummyMarketplacePaymentInvoice,Invoice,DummyMarketplacePayment,Dummy Marketplace
 | payment_provider_name | &check; | string | Dummy Marketplace Payment | Payment provider name. |
 | is_active |  | boolean | 1 | Is payment method active. |
 
-2. Extend and import payment store data
+2. Extend and import payment store data:
 
 **data/import/payment_method_store.csv**
 

@@ -273,6 +273,6 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 
 {% info_block warningBox "Verification" %}
 
-Add a merchant product to shopping cart, go to checkout and make sure that Dummy Payment Invoice payment method is available.
+Add a merchant product to a shopping cart, go to checkout and make sure that Dummy Payment Invoice payment method is available.
 
 {% endinfo_block %}

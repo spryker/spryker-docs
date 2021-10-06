@@ -89,10 +89,17 @@ Make sure that the following changes were applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 |-|-|-|-|
-| PriceProductOfferCriteria | class | created | src/Generated/Shared/Transfer/PriceProductOfferCriteriaTransfer |
 | DataImporterReaderConfiguration | class | created | src/Generated/Shared/Transfer/DataImporterReaderConfigurationTransfer |
 | Currency.Code | attribute | created | src/Generated/Shared/Transfer/CurrencyTransfer |
-| PriceProductFilter.productOfferReference | attribute | created | src/Generated/Shared/Transfer/PriceProductFilterTransfer |
+| PriceProductCriteria.productOfferReference | attribute | created | src/Generated/Shared/Transfer/PriceProductCriteriaTransfer |
+| PriceProductDimension.productOfferReference| attribute | created | src/Generated/Shared/Transfer/PriceProductDimensionTransfer |
+| PriceProductFilter.productOfferReference | class | created |src/Generated/Shared/Transfer/PriceProductFilterTransfer |
+| PriceProductFilterIdentifier.productOfferReference | property | created |src/Generated/Shared/Transfer/PriceProductFilterIdentifierTransfer |
+| PriceProductOffer | class | created |  src/Generated/Shared/Transfer/PriceProductOfferTransfer |
+| PriceProductOfferCriteria | class | created | src/Generated/Shared/Transfer/PriceProductOfferCriteriaTransfer |
+| PriceProductOfferCollection | class | created |  src/Generated/Shared/Transfer/PriceProductOfferCollectionTransfer |
+| PriceProductOfferCollection.priceProductOffers | property | created | src/Generated/Shared/Transfer/PriceProductOfferCollectionTransfer |
+| ProductOffer.prices | property | created | src/Generated/Shared/Transfer/ProductOfferTransfer |
 
 {% endinfo_block %}
 
@@ -869,6 +876,7 @@ class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvid
 namespace Pyz\Zed\PriceProduct;
 
 use Spryker\Zed\PriceProduct\PriceProductDependencyProvider as SprykerPriceProductDependencyProvider;
+use Spryker\Zed\PriceProductVolume\Communication\Plugin\PriceProduct\PriceProductVolumeValidatorPlugin;
 use Spryker\Zed\PriceProductOffer\Communication\Plugin\PriceProduct\PriceProductOfferPriceDimensionConcreteSaverPlugin;
 use Spryker\Zed\PriceProductOffer\Communication\Plugin\PriceProduct\PriceProductOfferPriceDimensionQueryCriteriaPlugin;
 use Spryker\Zed\PriceProductOffer\Communication\Plugin\PriceProduct\PriceProductOfferPriceProductDimensionExpanderStrategyPlugin;
@@ -904,6 +912,16 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
     {
         return [
             new PriceProductOfferPriceProductDimensionExpanderStrategyPlugin(),
+        ];
+    }
+    
+    /**
+     * @return \Spryker\Zed\PriceProductExtension\Dependency\Plugin\PriceProductValidatorPluginInterface[]
+     */
+    protected function getPriceProductValidatorPlugins(): array
+    {
+        return [
+            new PriceProductVolumeValidatorPlugin(),
         ];
     }
 }
@@ -1071,7 +1089,6 @@ Make sure that product offers are sorted by the lowest price first when fetched 
 Make sure that when a product offer with a volume price is selected and the selected quantity is over a certain threshold, its volume price is shown instead of the normal price.
 
 {% endinfo_block %}
-
 
 ## Related features
 

@@ -1090,7 +1090,6 @@ Make sure that when a product offer with a volume price is selected and the sele
 
 {% endinfo_block %}
 
-
 ## Related features
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |

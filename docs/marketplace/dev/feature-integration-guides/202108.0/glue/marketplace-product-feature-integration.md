@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Marketplace Product feature integration"
-last_updated: Dec 07, 2020
+last_updated: Aug 31, 2021
 description: This document describes how to integrate the Marketplace Product Glue API feature into a Spryker project.
 template: feature-integration-guide-template
 ---
@@ -25,7 +25,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker/merchant-products-rest-api: "{{page.version}}" --update-with-dependencies
+composer require spryker/merchant-products-rest-api: "^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -64,34 +64,9 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| MerchantProductCartItemExpanderPlugin | Expands view data for abstract product with merchant data. |  | Spryker\Glue\MerchantProductsRestApi\Plugin\CartsRestApi |
 | MerchantByMerchantReferenceResourceRelationshipPlugin |  Adds merchants resources as relationship by merchant references in the attributes. |  | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |
 
-**src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Glue\CartsRestApi;
-
-use Spryker\Glue\CartsRestApi\CartsRestApiDependencyProvider as SprykerCartsRestApiDependencyProvider;
-use Spryker\Glue\MerchantProductsRestApi\Plugin\CartsRestApi\MerchantProductCartItemExpanderPlugin;
-
-class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvider
-{
-    /**
-     * @return \Spryker\Glue\CartsRestApiExtension\Dependency\Plugin\CartItemExpanderPluginInterface[]
-     */
-    protected function getCartItemExpanderPlugins(): array
-    {
-        return [
-            new MerchantProductCartItemExpanderPlugin(),
-        ];
-    }
-}
-```
-
-<details><summary markdown='span'>src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
+**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
 ```php
 <?php
@@ -135,14 +110,14 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</details>
-
 {% info_block warningBox "Verification" %}
-
-Make sure that you can add a merchant product to the cart using a `POST` request to `http://glue.de.demo-spryker.com/guest-cart-items or http://glue.de.demo-spryker.com/carts/{% raw %}{{idCart}}{% endraw %}/items`.
-
-Make sure that when you do a `GET` request for the carts with merchant products, their merchants are returned as well. `http://glue.de.demo-spryker.com/guest-carts/{idCart}?include=guest-cart-items,merchants` or `http://glue.de.demo-spryker.com/carts/{% raw %}{{idCart}}{% endraw %}?include=items,merchants`.
 
 Make sure that when you do a `GET` request to retrieve abstract products that belong to a specific merchant, it returns products' data together with their merchants `http://glue.de.demo-spryker.com/abstract-products/{% raw %}{{abstractProductSku}}{% endraw %}?include=merchants`.
 
 {% endinfo_block %}
+
+## Related features
+
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| -------------- | -------------------------------- | ----------------- |
+| Marketplace Product + Cart API | | [Glue API: Marketplace Product + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-cart-feature-integration.html) |

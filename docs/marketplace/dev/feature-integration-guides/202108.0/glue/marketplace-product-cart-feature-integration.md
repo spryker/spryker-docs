@@ -1,6 +1,5 @@
 ---
 title: "Glue API: Marketplace Product + Cart feature integration"
-last_updated: Sep 14, 2021
 description: This integration guide provides steps on how to integrate the Marketplace Product + Cart Glue API feature into a Spryker project.
 template: feature-integration-guide-template
 ---
@@ -15,8 +14,8 @@ Follow the steps below to install the Marketplace Product Offer + Cart Glue API 
 
 To start feature integration, integrate the required features:
 
-| NAME                  | VERSION | INTEGRATION GUIDE |
-| --------------------- | ------- | ------------------|
+| NAME        | VERSION | INTEGRATION GUIDE |
+| ----------- | ------- | ------------------|
 | Cart API | {{page.version}} | [Glue API: Cart feature integration](https://documentation.spryker.com/docs/glue-api-cart-feature-integration) |
 | Marketplace Product API | {{page.version}} | [Glue API: Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-feature-integration.html) |
 

@@ -204,8 +204,8 @@ To ensure a smooth merchant onboarding process and overall marketplace setup, we
 
 These are the new data importers available in our data import framework:
 
-* Product offers: The operator can provide a template to the merchants, so that they can add all offer-related information in one file that can be imported afterwards. Documentation: [File details: combined_merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-combined-merchant-product-offer-csv.html).
-* Merchant Order items status. Documentation: [File details: merchant-order-status.csv](/docs/marketplace/dev/data-import//{{site.version}}/file-details-merchant-order-status-csv.html).
+* Product offers: The operator can provide a template to the merchants, so that they can add all offer-related information in one file that can be imported afterwards. Documentation: [File details: combined_merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-combined-merchant-product-offer.csv.html).
+* Merchant Order items status. Documentation: [File details: merchant-order-status.csv](/docs/marketplace/dev/data-import//{{site.version}}/file-details-merchant-order-status.csv.html).
 
 
 ### Data export

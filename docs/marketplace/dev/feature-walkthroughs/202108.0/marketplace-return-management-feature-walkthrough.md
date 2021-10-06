@@ -13,9 +13,6 @@ To learn more about the feature and to find out how end users use it, see [Marke
 
 {% endinfo_block %}
 
-
-
-
 ## Related Developer articles
 
 | INTEGRATION GUIDES      | GLUE API GUIDES     |

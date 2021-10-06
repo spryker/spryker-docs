@@ -22,7 +22,7 @@ We've changed product label touch logic in order to be able to export label IDs 
 
 **Documentation**
 For module documentation, see [Product Label Module Guide](https://documentation.spryker.com/2021080/docs/product-label)
-For detailed migration guides, see [Product Label Migration Guide](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-productlabel.html).
+For detailed migration guides, see [Product Label Migration Guide](/docs/scos/dev/migration-and-integration/{{site.version}}/module-migration-guides/migration-guide-productlabel.html).
 
 **Migration Guides**
 To upgrade, follow the steps described below:
@@ -49,7 +49,7 @@ With this release, we are introducing a new `DataImport` module. This module is 
 | [DataImport 1.0.0](https://github.com/spryker/data-import/releases/tag/1.0.0) | [ErrorHandler 2.1.0](https://github.com/spryker/error-handler/releases/tag/2.1.0) | <ul><li>[Category 3.2.1](https://github.com/spryker/Category/releases/tag/3.2.1)</li><li>[CategoryExporter 3.0.1](https://github.com/spryker/category-exporter/releases/tag/3.0.1)</li><li>[Glossary 3.1.3](https://github.com/spryker/Glossary/releases/tag/3.1.3)</li><li>[Stock 4.0.2](https://github.com/spryker/Stock/releases/tag/4.0.2)</li><li>[Testify 3.2.6](https://github.com/spryker/Testify/releases/tag/3.2.6)</li></ul> |
 
 **Documentation**
-For module documentation, see [HowTo - Import Data](/docs/scos/dev/data-import/{{page.version}}/creating-a-data-importer.html).
+For module documentation, see [HowTo - Import Data](/docs/scos/dev/data-import/{{site.version}}/creating-a-data-importer.html).
 
 **Migration Guides**
 To upgrade, follow the steps described below:
@@ -117,10 +117,10 @@ For module documentation, see:
 
 For migration guides, see: 
 
-* [Category Migration Guide](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-category.html) 
-* [CMS Block Category Connector Migration Guide](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-cms-block-category-connector.html)
+* [Category Migration Guide](/docs/scos/dev/migration-and-integration/{{site.version}}/module-migration-guides/migration-guide-category.html) 
+* [CMS Block Category Connector Migration Guide](/docs/scos/dev/migration-and-integration/{{site.version}}/module-migration-guides/migration-guide-cms-block-category-connector.html)
 * Category Template Migration Console <!-- add a link -->
-* [CMS Block Category Connector Migration Console](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-cms-block-category-connector.html-console)
+* [CMS Block Category Connector Migration Console](/docs/scos/dev/migration-and-integration/{{site.version}}/module-migration-guides/migration-guide-cms-block-category-connector.html-console)
 
 **Migration Guides**
 To upgrade, follow the steps described below:

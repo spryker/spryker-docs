@@ -23,10 +23,10 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 <details open>
 <summary>B2B feature list</summary>
 
-[**Company Account Management**](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-account-feature-overview.html):
+[**Company Account Management**](/docs/scos/user/features/{{site.version}}/company-account-feature-overview/company-account-feature-overview.html):
 
-* [Company Account Overview](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-account-feature-overview.html-overview)
-* [Company User Roles and Permissions](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-user-roles-and-permissions-overview.html)
+* [Company Account Overview](/docs/scos/user/features/{{site.version}}/company-account-feature-overview/company-account-feature-overview.html-overview)
+* [Company User Roles and Permissions](/docs/scos/user/features/{{site.version}}/company-account-feature-overview/company-user-roles-and-permissions-overview.html)
 * [Business Units Management](https://documentation.spryker.com/2021080/docs/business-unit-management)
 * [Agent Assist](https://documentation.spryker.com/2021080/docs/agent-assist)
 * [Content Restrictions](https://documentation.spryker.com/2021080/docs/customer-access)
@@ -37,8 +37,8 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 * [Barcode Generator](https://documentation.spryker.com/2021080/docs/product-barcode)
 * [Product Restrictions for B2B Customers](https://documentation.spryker.com/2021080/docs/merchant-product-restrictions)
 
-[**Price**](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html):
-[Customer Specific Prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html-per-merchant-relation)
+[**Price**](/docs/scos/user/features/{{site.version}}/prices-feature-overview/prices-feature-overview.html):
+[Customer Specific Prices](/docs/scos/user/features/{{site.version}}/prices-feature-overview/prices-feature-overview.html-per-merchant-relation)
 
 [**Cart**](/docs/scos/user/features/{{site.ersion}}/cart-feature-overview/cart-feature-overview.html):
 
@@ -46,10 +46,10 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 * [Multiple Carts Per User](https://documentation.spryker.com/2021080/docs/multiple-carts)
 * [Quick Order](https://documentation.spryker.com/2021080/docs/quick-add-to-cart)
 
-[**Shopping List**](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html):
+[**Shopping List**](/docs/scos/user/features/{{site.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html):
 
 * [Multiple and Shared Shopping Lists](https://documentation.spryker.com/2021080/docs/multiple-shared-shopping-lists)
-* [Shopping List Notes](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html)
+* [Shopping List Notes](/docs/scos/user/features/{{site.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html)
 
 [**Packaging & Measurement Units**](https://documentation.spryker.com/2021080/docs/packaging-units):
 
@@ -57,9 +57,9 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 * [Measurement Units](https://documentation.spryker.com/2021080/docs/measurement-units)
 
 * [Approval Process](https://documentation.spryker.com/2021080/docs/approval-process)
-* [Quotation & Offer Management](/docs/scos/user/features/{{page.version}}/quotation-process/quotation-process.html)
+* [Quotation & Offer Management](/docs/scos/user/features/{{site.version}}/quotation-process/quotation-process.html)
 * [Punch Out](https://documentation.spryker.com/2021080/docs/punchout-201907)
-* [Customer Login by Token](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/customer-login-by-token-overview.html)
+* [Customer Login by Token](/docs/scos/user/features/{{site.version}}/company-account-feature-overview/customer-login-by-token-overview.html)
 <br>
 </details>
 

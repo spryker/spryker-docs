@@ -38,7 +38,7 @@ We establish a unique advantage for our customers by creating a commerce operati
 
 ### Modular architecture
 Modular architecture, or modularity of the Spryker Commerce OS, means that the system is composed of small parts called modules. The Spryker Commerce OS consists of over 750 modules. Some of them are mandatory and required by the OS to run, but many are optional and designed to provide certain functionality or connectivity to either internal or external systems.
-The modules combine to create [features](/docs/scos/user/features/{{page.version}}/overview-of-the-feature-guides.html) and have limited dependencies. The limited dependencies imply less development effort, increasing your return on investment and lowering the total cost of ownership.
+The modules combine to create [features](/docs/scos/user/features/{{site.version}}/overview-of-the-feature-guides.html) and have limited dependencies. The limited dependencies imply less development effort, increasing your return on investment and lowering the total cost of ownership.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker/modularity_transparent.png)
 
 #### Benefits of the Spryker modular architecture:
@@ -91,10 +91,10 @@ This documentation site contains lots of information on Spryker Commerce OS. Sel
 
 * [What's new](/docs/scos/user/intro-to-spryker/whats-new/whats-new.html): general information about Spryker, news, and release notes.
 * [Spryker Installation Guides](/docs/scos/dev/setup/about-the-installation-guides.html): installation of Spryker.
-* [Features](/docs/scos/user/features/{{page.version}}/overview-of-the-feature-guides.html): the Spryker features.
-* [Glue REST API](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-rest-api.html): Spryker Glue REST API overview, reference, and features.
-* [User Guides](/docs/scos/user/back-office-user-guides/{{page.version}}/about-back-office-user-guides.html): step-by-step Backoffice and Storefront user guides.
+* [Features](/docs/scos/user/features/{{site.version}}/overview-of-the-feature-guides.html): the Spryker features.
+* [Glue REST API](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-rest-api.html): Spryker Glue REST API overview, reference, and features.
+* [User Guides](/docs/scos/user/back-office-user-guides/{{site.version}}/about-back-office-user-guides.html): step-by-step Backoffice and Storefront user guides.
 * [Developer Guides](/docs/scos/dev/overview-of-the-developer-guides.html): technical information and guides for developers.
-* [Technology Partners](/docs/scos/user/technology-partners/{{page.version}}/technology-partner-integration.html): Spryker technology partners information and integration guides.
-* [Migration and Integration Guides](/docs/scos/dev/migration-and-integration/{{page.version}}/about-migration-and-integration-guides.html): instructions on how to migrate to newer versions of modules or features.
-* [Tutorials](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/about-tutorials.html): tutorials and HowTos.
+* [Technology Partners](/docs/scos/user/technology-partners/{{site.version}}/technology-partner-integration.html): Spryker technology partners information and integration guides.
+* [Migration and Integration Guides](/docs/scos/dev/migration-and-integration/{{site.version}}/about-migration-and-integration-guides.html): instructions on how to migrate to newer versions of modules or features.
+* [Tutorials](/docs/scos/dev/tutorials-and-howtos/about-tutorials.html): tutorials and HowTos.

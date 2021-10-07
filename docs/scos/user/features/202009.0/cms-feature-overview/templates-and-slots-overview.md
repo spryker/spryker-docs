@@ -385,7 +385,7 @@ Currently, the functionality has the following functional constraints which are 
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                                                <li><a href="/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia.html-with-templates-slots" class="mr-link">Learn about the CoreMedia technology partner integration</a></li>
+                                                <li><a href="/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia.html" class="mr-link">Learn about the CoreMedia technology partner integration</a></li>
                                 <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\cms-feature-integration.md" class="mr-link">Enable templates and slots in your project by integrating the CMS feature</a></li>
                                 <li><a href="/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html" class="mr-link">Learn how to create a visibility condition</a></li>                
                 <li><a href="/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-cmsblock.html#upgrading-from-version-2---to-version-3--" class="mr-link">Migrate the CmsBlock module from version 2.* to version 3.*</a></li>
@@ -397,7 +397,7 @@ Currently, the functionality has the following functional constraints which are 
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title">Back Office User</li>
-                                <li><a href="/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia.html-with-templates-slots" class="mr-link">Learn about the CoreMedia technology partner integration</a></li>
+                                <li><a href="/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia.html" class="mr-link">Learn about the CoreMedia technology partner integration</a></li>
                                 <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\content\adding-content-to-storefront-pages-using-templates-and-slots-best-practices.md" class="mr-link">Add content to Storefront using templates and slots</a></li>
                                 <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html" class="mr-link">Manage slots</a></li>
             </ul>

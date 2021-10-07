@@ -30,7 +30,7 @@ Follow the steps below to select a content item you want to create:
     * [Create a file list](#create-a-file-list-content-item)
     * [Create a navigation](#create-a-navigation-content-item)
 
-To learn about the content item types, see [Content item types: Module relations](/docs/scos/user/features/{{page.version}}/content-items/content-item-types-module-relations.html).
+To learn about the content item types, see [Content item types: Module relations](/docs/scos/user/feature-walkthroughs/{{page.version}}/content-items-feature-walkthrough/content-item-types-module-relations.html).
 
 ### Reference information: Select a content item
 

@@ -27,7 +27,7 @@ The article describes the flow on how to make a product searchable and displayed
 There are a number of conditions that should be fulfilled to make your product searchable and shown on Yves by URL. What is important is to make sure that your product meets the following conditions:
 
 * It is assigned to categories. See the [Category](/docs/scos/user/back-office-user-guides/{{site.version}}catalog/category/assigning-products-to-categories.html) section for details on how to assign products to categories.
-* It is in stock in the warehouse for the current store. See the [Availability](/docs/scos/user/back-office-user-guides/{{site.version}}catalog/availability/managing-products-availability.html) section to learn how to check products' availability.
+* It is in stock in the warehouse for the current store. See the [Availability](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/availability/managing-products-availability.html) section to learn how to check products' availability.
 * The product's status is **Active**. See the [Products](/docs/scos/user/back-office-user-guides/{{site.version}}catalog/products/managing-products/managing-products.html#activating-a-product) section to learn how to manage products, including status change.
 * It has a price in the current locale. See the [Products](/docs/scos/user/back-office-user-guides/{{site.version}}catalog/products/managing-products/managing-products.html) section for more details.
 * It has been marked as searchable in the Back Office. See the [Products](/docs/scos/user/back-office-user-guides/{{site.version}}catalog/products/concrete-products/creating-a-product-variant.html) section for more details

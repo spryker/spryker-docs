@@ -36,7 +36,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 * [Alternative Products](https://documentation.spryker.com/2021080/docs/alternative-products)
 * [Discountinued Products](https://documentation.spryker.com/2021080/docs/discontinued-products)
 
-[**Catalog Management**](/docs/scos/user/features/{{site.version}}/catalog.html):
+[**Catalog Management**](/docs/scos/user/features/{{site.version}}catalog-feature-overview.html):
 
 * [Category Management](/docs/scos/user/features/{{site.version}}/category-management-feature-overview.html)
 <!---* [Product to Category Association](https://documentation.spryker.com/2021080/docs/product-to-category-association)
@@ -52,9 +52,9 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 [**Search & Filter**](https://documentation.spryker.com/2021080/docs/search-filter):
 
 * [Filters & Search by Category](/docs/scos/user/features/{{site.version}}/search/search-feature-overview/category-filters-overview.html)
-* [Full-Site Search](/docs/scos/user/features/{{site.version}}/search/search.html)
-* [Multi-Language Search](/docs/scos/user/features/{{site.version}}/search/search.html)
-* [Textual Search](/docs/scos/user/features/{{site.version}}/search/search.html)
+* [Full-Site Search](/docs/scos/user/features/{{site.version}}/search-feature-overview/search-feature-overview.html)
+* [Multi-Language Search](/docs/scos/user/features/{{site.version}}/search-feature-overview/search-feature-overview.html)
+* [Textual Search](/docs/scos/user/features/{{site.version}}/search-feature-overview/search-feature-overview.html)
 * [Standard Filters](/docs/scos/user/features/{{site.version}}/search/search-feature-overview/standard-filters-overview.html)
 * [Dynamic Filters & Facets](https://documentation.spryker.com/2021080/docs/dynamic-filter-facets)
 

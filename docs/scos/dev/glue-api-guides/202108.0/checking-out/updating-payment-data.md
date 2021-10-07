@@ -16,7 +16,7 @@ When [checking out purchases](/docs/scos/dev/glue-api-guides/{{page.version}}/ch
 
 It is the responsibility of the API Client to redirect the customer to the page and capture the response. For information on how to process it, see the payment service provider's API reference.
 
-The formats of the payloads used in the request and response to the third-party page are defined by the Eco layer module that implements the interaction with the payment provider. See [3. Implement Payload Processor Plugin](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html#3-implement-payload-processor-plugin) to learn more.
+The formats of the payloads used in the request and response to the third-party page are defined by the Eco layer module that implements the interaction with the payment provider. See [3. Implement Payload Processor Plugin](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html#3-implement-payload-processor-plugin) to learn more.
 
 
 **Interaction Diagram**
@@ -45,7 +45,7 @@ To update payment with a payload from a third-party payment provider, send the r
 
 <details open>
     <summary>Request sample</summary>
-    
+
 `POST https://glue.mysprykershop.com/order-payments`
 
 ```json
@@ -64,9 +64,9 @@ To update payment with a payload from a third-party payment provider, send the r
   }
 }
 ```
-    
-</details> 
-    
+
+</details>
+
 
 
 
@@ -74,10 +74,10 @@ To update payment with a payload from a third-party payment provider, send the r
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| paymentIdentifier | String |  | Unique payment identifier. To get it, [place. an order](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html#place-an-order). The value depends on the payment services provider plugin used to process the payment. For details, see [3. Implement Payload Processor Plugin](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html#3-implement-payload-processor-plugin). |
+| paymentIdentifier | String |  | Unique payment identifier. To get it, [place. an order](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html#place-an-order). The value depends on the payment services provider plugin used to process the payment. For details, see [3. Implement Payload Processor Plugin](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html#3-implement-payload-processor-plugin). |
 | dataPayload | Array | v | Payload from the payment service provider. The attributes of the payload depend on the selected payment service provider. |
-			
-	
+
+
 
 ### Response
 
@@ -118,7 +118,3 @@ To update payment with a payload from a third-party payment provider, send the r
 | --- | --- |
 | 400	Bad request.  | <ul><li>POST data is incorrect</li><li>Neither Authorization nor X-Anonymous-Customer-Unique-Id headers were provided in the request.</li></ul> |
 |<ul><li>404	Order not found.</li><li>422	Order payment is not updated.</li></ul>|  Checkout data is incorrect. |
-
-
-
-

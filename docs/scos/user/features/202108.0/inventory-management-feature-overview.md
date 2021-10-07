@@ -26,7 +26,7 @@ You can define the warehouse address that will be used as the shipping origin ad
 
 {% info_block warningBox %}
 
-By default, a warehouse is not linked to a sales order item. The logic described below applies only when [Avalara](/docs/scos/user/features/{{page.version}}/tax/tax-feature-overview.html) is integrated into your project. That is, it is used to get warehouse addresses to calculate taxes in the USA.
+By default, a warehouse is not linked to a sales order item. The logic described below applies only when [Avalara](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html) is integrated into your project. That is, it is used to get warehouse addresses to calculate taxes in the USA.
 
 {% endinfo_block %}
 

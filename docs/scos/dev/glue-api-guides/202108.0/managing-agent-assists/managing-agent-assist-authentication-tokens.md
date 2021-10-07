@@ -127,7 +127,7 @@ To revoke an agent assist refresh token, send the request:
 
 For security purposes, the endpoint always returns the `204 No Content` status code, regardless of any refresh tokens being revoked.
 
-The tokens are marked as expired on the date and time of the request. You can configure expired tokens to be automatically deleted from the database by setting the lifetime of expired tokens. For details, see [Configuring Outdated Refresh Token Life Time](https://documentation.spryker.com/2021080/docs/configuring-outdated-refresh-token-life-time).
+The tokens are marked as expired on the date and time of the request. You can configure expired tokens to be automatically deleted from the database by setting the lifetime of expired tokens.
 
 ## Possible errors
 

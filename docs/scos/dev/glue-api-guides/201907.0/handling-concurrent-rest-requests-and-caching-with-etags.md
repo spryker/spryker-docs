@@ -74,7 +74,7 @@ Currently, only a single resource supports concurrent requests with ETag header
 
 | Endpoint | Methods | Resource |
 | --- | --- | --- |
-| [/carts](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/carts) | PATCH, DELETE | Registered user's cart. |
+| /carts | PATCH, DELETE | Registered user's cart. |
 
 {% info_block infoBox "Info" %}
 The list of resources supporting concurrent requests can vary depending on your project implementation.

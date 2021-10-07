@@ -112,7 +112,7 @@ To retrieve information about a company user, send the request:
 
 | Path parameter | Description |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}company_user_id{% raw %}}}{% endraw %}***  | Unique identifier of a company user to retrieve information for. To get it, [retrieve company users](#retireve-company-users). Enter `mine` to retrieve information on the company user available to the current authenticated company user. |
+| ***{% raw %}{{{% endraw %}company_user_id{% raw %}}}{% endraw %}***  | Unique identifier of a company user to retrieve information for. To get it, [retrieve company users](#retrieve-company-users). Enter `mine` to retrieve information on the company user available to the current authenticated company user. |
 
 
 ### Request

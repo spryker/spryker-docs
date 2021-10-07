@@ -81,9 +81,9 @@ Each route plugin implements `ResourceRoutePluginInterface`, which provides a se
 | `getResourceType` | 	Gets the resource type. | string | _carts_ |
 | `configure` | Configures a mapping of the HTTP verbs supported by the resource to the corresponding controller methods responsible for handling them. Also, it defines which of the verbs require authentication to use. | ResourceRouteCollectionInterface |  |
 | `getController` | Gets the name of the resource controller responsible for handling requests to the resource. The name must be provided in _kebab-case_, hyphen-separated | string | If the controller name is _CartsResourceController.php_, this function should return _carts-resource_. |
-| `getResourceAttributesClassName` | Gets the FQCN of the Resource Attributes Transfer that is used to handle request attributes for the given resource type. | string | See details in [5. Describe Fields for Post and Patch Calls](/docs/scos/dev/tutorials/202001.0/introduction/glue-api/implementing-a-rest-api-resource.html#5--describe-fields-for-post-and-patch-calls). |
+| `getResourceAttributesClassName` | Gets the FQCN of the Resource Attributes Transfer that is used to handle request attributes for the given resource type. | string | See details in [5. Describe Fields for Post and Patch Calls](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/implementing-a-rest-api-resource.html#describe-fields-for-post-and-patch-calls). |
 
-For more details on how to implement a route plugin, see [6. Route Requests to Your Controller](/docs/scos/dev/tutorials/202001.0/introduction/glue-api/implementing-a-rest-api-resource.html#6--route-requests-to-your-controller).
+For more details on how to implement a route plugin, see [6. Route Requests to Your Controller](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/implementing-a-rest-api-resource.html#route-requests-to-your-controller).
 
 All route plugins need to be added to `GlueApplicationDependencyProvider` implemented in the `GlueApplication` Module on the Project Level:
 

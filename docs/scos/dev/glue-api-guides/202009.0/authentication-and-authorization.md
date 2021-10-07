@@ -30,31 +30,31 @@ Below, you can find a list of the default protected resources. As Glue API is hi
 
 | Action | Method | Endpoints |
 | --- | --- | --- |
-| Customer - Retrieve a customer | GET | http://mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %} |
-| Customer - Update information | PATCH | http://mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %} |
-| Customer - Change password | PATCH | http://mysprykershop.com/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %} |
-| Customer - Delete | DELETE | http://mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %} |
-| Customer - Create a new address | POST | http://mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %}/addresses |
-| Customer - Update an existing address | PATCH | http://mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %}/addresses/{% raw %}{{{% endraw %}customer_address_uuid{% raw %}}}{% endraw %} |
-| Customer - Delete an address | DELETE | http://mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %}/addresses/{% raw %}{{{% endraw %}customer_address_uuid{% raw %}}}{% endraw %} |
-| Customer - Retrieve orders | GET | http://mysprykershop.com/orders |
-| Customer - Retrieve an order | GET | http://mysprykershop.com/orders/{% raw %}{{{% endraw %}order_id{% raw %}}}{% endraw %} |
-| Cart - Create a new cart | POST | http://mysprykershop.com/carts |
-| Cart - Retrieve carts | GET | http://mysprykershop.com/carts
-| Cart - Retrieve a cart | GET | http://mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}|
-| Cart - Add an item to a cart | POST | http://mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/items |
-| Cart - Update item quantity | PATCH | http://mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %} |
-| Cart - Remove a cart | DELETE | http://mysprykershop.com/carts/{% raw %}{{{% endraw %}url{% raw %}}}{% endraw %}/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %} |
-| Cart - Remove items from a cart | DELETE | http://mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}concrete_id{% raw %}}}{% endraw %} |
-| Wishlist - Add an item to a wishlist | POST | http://mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_uuid{% raw %}}}{% endraw %}/wishlist-items |
-| Wishlist - Create a wishlist | POST | http://mysprykershop.com/wishlists |
-| Wishlist - Delete a wishlist | DELETE | http://mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_uuid{% raw %}}}{% endraw %} |
-| Wishlist - Delete an item from a wishlist | DELETE | http://mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}/wishlist-items/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %} |
-| Wishlist - Retrieve wishlists | GET | http://mysprykershop.com/wishlists |
-| Wishlist - Retrieve a wishlist | GET | http://mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_uuid{% raw %}}}{% endraw %} |
-| Wishlist - Rename a wishlist | PATCH | http://mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_uuid{% raw %}}}{% endraw %} |
-| Agent - search by customers | GET | https://glue.mysprykershop.com/agent-customer-search |
-| Agent - impersonate a customer | POST | https://glue.mysprykershop.com/agent-customer-impersonation-access-tokens |
+| Customer - Retrieve a customer | GET | /customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %} |
+| Customer - Update information | PATCH | /customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %} |
+| Customer - Change password | PATCH | /customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %} |
+| Customer - Delete | DELETE | /customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %} |
+| Customer - Create a new address | POST | /customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %}/addresses |
+| Customer - Update an existing address | PATCH | /customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %}/addresses/{% raw %}{{{% endraw %}customer_address_uuid{% raw %}}}{% endraw %} |
+| Customer - Delete an address | DELETE | /customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %}/addresses/{% raw %}{{{% endraw %}customer_address_uuid{% raw %}}}{% endraw %} |
+| Customer - Retrieve orders | GET | /orders |
+| Customer - Retrieve an order | GET | /orders/{% raw %}{{{% endraw %}order_id{% raw %}}}{% endraw %} |
+| Cart - Create a new cart | POST | /carts |
+| Cart - Retrieve carts | GET | /carts
+| Cart - Retrieve a cart | GET | /carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}|
+| Cart - Add an item to a cart | POST | /carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/items |
+| Cart - Update item quantity | PATCH | /carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %} |
+| Cart - Remove a cart | DELETE | /carts/{% raw %}{{{% endraw %}url{% raw %}}}{% endraw %}/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %} |
+| Cart - Remove items from a cart | DELETE | /carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}concrete_id{% raw %}}}{% endraw %} |
+| Wishlist - Add an item to a wishlist | POST | /wishlists/{% raw %}{{{% endraw %}wishlist_uuid{% raw %}}}{% endraw %}/wishlist-items |
+| Wishlist - Create a wishlist | POST | /wishlists |
+| Wishlist - Delete a wishlist | DELETE | /wishlists/{% raw %}{{{% endraw %}wishlist_uuid{% raw %}}}{% endraw %} |
+| Wishlist - Delete an item from a wishlist | DELETE | /wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}/wishlist-items/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %} |
+| Wishlist - Retrieve wishlists | GET | /wishlists |
+| Wishlist - Retrieve a wishlist | GET | /wishlists/{% raw %}{{{% endraw %}wishlist_uuid{% raw %}}}{% endraw %} |
+| Wishlist - Rename a wishlist | PATCH | /wishlists/{% raw %}{{{% endraw %}wishlist_uuid{% raw %}}}{% endraw %} |
+| Agent - search by customers | GET | agent-customer-search |
+| Agent - impersonate a customer | POST | /agent-customer-impersonation-access-tokens |
 
 
 

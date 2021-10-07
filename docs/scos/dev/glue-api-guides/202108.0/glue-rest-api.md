@@ -30,7 +30,7 @@ To help you understand possible use cases, we provide a sample app as an exampla
 It delivers a full customer experience from browsing the catalog to placing an order. The application helps you understand how you can use the predefined APIs to create a B2C user experience. As an example, the full power of Elasticsearch, which is already present in our [B2B](/docs/scos/user/intro-to-spryker/{{page.version}}/b2b-suite.html#b2b-demo-shop) and [B2C Demo Shops](/docs/scos/user/intro-to-spryker/{{page.version}}/b2c-suite.html#b2c-demo-shop), is leveraged via dedicated endpoints to deliver catalog search functionality with auto-completion, auto-suggestion, facets, sorting, and pagination.
 
 {% info_block infoBox %}
-[Install and run!](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/advanced-tutorials/glue-api/b2c-api-react-example/b2c-api-react-example.html
+[Install and run!](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/b2c-api-react-example/b2c-api-react-example.html
 {% endinfo_block %})
 
 ### What can you use the REST API for?

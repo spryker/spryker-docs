@@ -7,7 +7,7 @@ template: concept-topic-template
 
 The _Catalog_ feature allows building and organizing products to meet your and your customer's demands, primarily to make sure everyone can quickly find what they are looking for.
 
-To learn more about the feature and to find out how end users use it, see [Catalog feature overview](/docs/scos/user/features/{{page.version}}/catalog.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Catalog feature overview](/docs/scos/user/features/{{page.version}}catalog-feature-overview.html) for business users.
 
 
 ## Related Developer articles

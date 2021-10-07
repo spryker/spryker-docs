@@ -66,7 +66,7 @@ The scheme below shows the module relations of the File list content item:
 
 ## Navigation
 
-Navigation content item is a content piece that consists of a [navigation element](/docs/scos/user/features/{{page.version}}/content-items/content-item-types-module-relations.html). A content manager selects a navigation element when [creating the Navigation content item](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html#create-a-navigation-content-item) in the Back Office.
+Navigation content item is a content piece that consists of a [navigation element](/docs/scos/user/feature-walkthroughs/{{page.version}}/content-items-feature-walkthrough/content-item-types-module-relations.html). A content manager selects a navigation element when [creating the Navigation content item](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html#create-a-navigation-content-item) in the Back Office.
 
 
 The scheme shows the module relations of the Navigation content item:

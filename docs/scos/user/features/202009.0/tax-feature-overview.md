@@ -95,7 +95,7 @@ Currently, the feature has the following functional constraints:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of the Tax feature](/docs/scos/user/features/{{page.version}}/tax/tax-feature-overview.html) |
+| [Get a general idea of the Tax feature](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html) |
 | [Manage tax rates](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-rates/managing-tax-rates.html) |
 | [Manage tax sets](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/managing-tax-sets.html) |
 

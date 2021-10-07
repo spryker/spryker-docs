@@ -5,7 +5,7 @@ description: This article explains how to choose and implement the most suitable
 template: concept-topic-template
 ---
 
-In a multi-store environment, you can manage the warehouses to stores and database relations in several ways. This article contains scenarios that can help you choose the most suitable warehouse management workflow and implement it using the [Inventory Management](https://documentation.spryker.com/docs/upcoming-release/docs/inventory-management-feature-overview) feature.
+In a multi-store environment, you can manage the warehouses to stores and database relations in several ways. This article contains scenarios that can help you choose the most suitable warehouse management workflow and implement it using the [Inventory Management](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html) feature.
 
 ## Scenario 1: Separate warehouses and databases
 

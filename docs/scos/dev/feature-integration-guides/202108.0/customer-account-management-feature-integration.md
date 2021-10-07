@@ -33,8 +33,8 @@ Overview and install the necessary features before beginning the integration.
 
 | Name | Version | Integration Guide |
 | --- | --- |--- |
-| Spryker Core | {% raw %}{{{% endraw %}variable.dev-master{% raw %}}}{% endraw %} | [Spryker Core feature integration](/upcoming-release/docs/spryker-core-feature-integration) |
-	
+| Spryker Core | {% raw %}{{{% endraw %}variable.dev-master{% raw %}}}{% endraw %} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+
 ### 1) Install the required modules using Composer
 
 Run the following command to install the required modules:
@@ -79,11 +79,11 @@ $config[OauthConstants::OAUTH_CLIENT_SECRET] = 'client-secret';
 
 ```php
 <?php
- 
+
 namespace Pyz\Shared\Customer;
- 
+
 use Spryker\Shared\Customer\CustomerConfig as SprykerCustomerConfig;
- 
+
 class CustomerConfig extends SprykerCustomerConfig
 {
     /**
@@ -107,19 +107,19 @@ Ensure that the double opt-in is enabled by registering a new customer and recei
 **config/Shared/config_default.php**
 ```php
 <?php
- 
+
 use Spryker\Shared\Customer\CustomerConstants;
- 
+
 $config[CustomerConstants::REGISTRATION_CONFIRMATION_TOKEN_URL] = $config[ApplicationConstants::BASE_URL_YVES] . '/register/confirm?token=%s';
 ```
 
-In case you do use double opt-in, you can also configure the link the customer will get in an email. This is valuable in case you use an alternative storefront. The Default link will lead to yves customer confirmation page. 
+In case you do use double opt-in, you can also configure the link the customer will get in an email. This is valuable in case you use an alternative storefront. The Default link will lead to yves customer confirmation page.
 **config/Shared/config_default.php**
 ```php
 <?php
- 
+
 use Spryker\Shared\Customer\CustomerConstants;
- 
+
 $config[CustomerConstants::REGISTRATION_CONFIRMATION_TOKEN_URL] = 'https://spa.mysprykershop.com/customer/confirm?token=%s';
 ```
 {% info_block warningBox "Verification" %}
@@ -131,16 +131,16 @@ There is a possibility to configure the password strength validation settings. Y
 **src/Pyz/Zed/Customer/CustomerConfig.php**
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Customer;
- 
+
 use Spryker\Zed\Customer\CustomerConfig as SprykerCustomerConfig;
- 
+
 class CustomerConfig extends SprykerCustomerConfig
 {
     protected const MIN_LENGTH_CUSTOMER_PASSWORD = 8;
     protected const MAX_LENGTH_CUSTOMER_PASSWORD = 64;
- 
+
     /**
      * @return string[]
      */
@@ -150,7 +150,7 @@ class CustomerConfig extends SprykerCustomerConfig
             'change123',
         ];
     }
- 
+
     /**
      * @return string[]
      */
@@ -160,7 +160,7 @@ class CustomerConfig extends SprykerCustomerConfig
             'qwerty',
         ];
     }
- 
+
     /**
      * @return string
      */
@@ -168,7 +168,7 @@ class CustomerConfig extends SprykerCustomerConfig
     {
         return "/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@#$%^&(){}:;\[\]<>,.?\/~_+\-=|])[a-zA-Z0-9*.!@#$%^& (){}:;\[\]<>,.?\/~_+\-=|]*$/";
     }
- 
+
     /**
      * @return int|null
      */
@@ -245,24 +245,24 @@ Set up behavior as follows:
 | CustomerImpersonationOauthScopeProviderPlugin | Returns the customer impersonation scopes. | None | Spryker\Zed\OauthCustomerConnector\Communication\Plugin\Oauth |		
 | CustomerImpersonationOauthGrantTypeConfigurationProviderPlugin | Provides configuration of `customer_impersonation` grant type. | None | Spryker\Zed\OauthCustomerConnector\Communication\Plugin\Oauth |
 | OauthExpiredRefreshTokenRemoverPlugin | Removes expired refresh tokens by the provided criteria transfer. | None | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth |
-| OauthRefreshTokenCheckerPlugin | Checks if refresh token has been revoked. | None | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth |	
+| OauthRefreshTokenCheckerPlugin | Checks if refresh token has been revoked. | None | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth |
 | OauthRefreshTokenReaderPlugin | Finds a refresh token by the provided criteria transfer. | None | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth |		
 | OauthRefreshTokenRevokerPlugin | Revokes a refresh token. | None | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth |		
-| OauthRefreshTokenPersistencePlugin | Persists a refresh token. | None | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth |	
+| OauthRefreshTokenPersistencePlugin | Persists a refresh token. | None | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth |
 | OauthRefreshTokensReaderPlugin | Retrieves refresh tokens by the provided criteria. | None | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth |
 | OauthRefreshTokensRevokerPlugin | Revokes all refresh tokens. | None | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth |		
 | CustomerPasswordResetConsole | Generates password restoration keys and sends a password reset email to the customers without a password. Sends a password reset email to all the customers if the corresponding command option is provided. | None | Spryker\Zed\Customer\Communication\Console |
 | CustomerPasswordSetConsole | Sends the password reset email to all the customers with the empty password value in the database. | None | Spryker\Zed\Customer\Communication\Console |		
-| CustomerRegistrationConfirmationMailTypePlugin | Builds a mail for customer registration confirmation that is used when double opt in feature is enabled. | None | Spryker\Zed\Customer\Communication\Plugin\Mail |	
+| CustomerRegistrationConfirmationMailTypePlugin | Builds a mail for customer registration confirmation that is used when double opt in feature is enabled. | None | Spryker\Zed\Customer\Communication\Plugin\Mail |
 
 <details open>
     <summary>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Oauth;
- 
+
 use Spryker\Zed\Oauth\OauthDependencyProvider as SprykerOauthDependencyProvider;
 use Spryker\Zed\OauthCustomerConnector\Communication\Plugin\Oauth\CustomerImpersonationOauthGrantTypeConfigurationProviderPlugin;
 use Spryker\Zed\OauthCustomerConnector\Communication\Plugin\Oauth\CustomerImpersonationOauthScopeProviderPlugin;
@@ -274,10 +274,10 @@ use Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth\OauthRefreshTokenCheckerP
 use Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth\OauthRefreshTokenPersistencePlugin
 use Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth\OauthRefreshTokenReaderPlugin;
 use Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth\OauthRefreshTokenRevokerPlugin;
- 
+
 use Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth\OauthRefreshTokensReaderPlugin;
 use Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth\OauthRefreshTokensRevokerPlugin;
-  
+
 class OauthDependencyProvider extends SprykerOauthDependencyProvider
 {
     /**
@@ -290,7 +290,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
             new CustomerImpersonationOauthUserProviderPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\OauthExtension\Dependency\Plugin\OauthScopeProviderPluginInterface[]
      */
@@ -301,7 +301,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
             new CustomerImpersonationOauthScopeProviderPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\OauthExtension\Dependency\Plugin\OauthGrantTypeConfigurationProviderPluginInterface[]
      */
@@ -311,7 +311,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
             new CustomerImpersonationOauthGrantTypeConfigurationProviderPlugin(),
         ]);
     }
- 
+
     /**
      * @return \Spryker\Zed\OauthExtension\Dependency\Plugin\OauthRefreshTokenRevokerPluginInterface[]
      */
@@ -321,7 +321,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
             new OauthRefreshTokenRevokerPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\OauthExtension\Dependency\Plugin\OauthRefreshTokensRevokerPluginInterface[]
      */
@@ -331,7 +331,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
             new OauthRefreshTokensRevokerPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\OauthExtension\Dependency\Plugin\OauthRefreshTokenPersistencePluginInterface[]
      */
@@ -341,7 +341,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
             new OauthRefreshTokenPersistencePlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\OauthExtension\Dependency\Plugin\OauthRefreshTokenCheckerPluginInterface[]
      */
@@ -351,7 +351,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
             new OauthRefreshTokenCheckerPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\OauthExtension\Dependency\Plugin\OauthExpiredRefreshTokenRemoverPluginInterface[]
      */
@@ -361,7 +361,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
             new OauthExpiredRefreshTokenRemoverPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\OauthExtension\Dependency\Plugin\OauthRefreshTokenReaderPluginInterface[]
      */
@@ -371,7 +371,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
             new OauthRefreshTokenReaderPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\OauthExtension\Dependency\Plugin\OauthRefreshTokensReaderPluginInterface[]
      */
@@ -392,14 +392,14 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Console;
- 
+
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
 use Spryker\Zed\Customer\Communication\Console\CustomerPasswordResetConsole;
 use Spryker\Zed\Customer\Communication\Console\CustomerPasswordSetConsole;
- 
+
 class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {
     /**
@@ -496,17 +496,17 @@ console customer:password:set
 
 <details open>
     <summary>src/Pyz/Zed/Mail/MailDependencyProvider.php</summary>
-        
+
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Mail;
- 
+
 use Spryker\Zed\Customer\Communication\Plugin\Mail\CustomerRegistrationConfirmationMailTypePlugin;
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Mail\Business\Model\Mail\MailTypeCollectionAddInterface;
 use Spryker\Zed\Mail\MailDependencyProvider as SprykerMailDependencyProvider;
- 
+
 class MailDependencyProvider extends SprykerMailDependencyProvider
 {
     /**
@@ -517,14 +517,14 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
     public function provideBusinessLayerDependencies(Container $container): Container
     {
         $container = parent::provideBusinessLayerDependencies($container);
- 
+
         $container->extend(static::MAIL_TYPE_COLLECTION, function (MailTypeCollectionAddInterface $mailCollection) {
             $mailCollection
                 ->add(new CustomerRegistrationConfirmationMailTypePlugin())
- 
+
             return $mailCollection;
         });
- 
+
         return $container;
     }
 }
@@ -543,19 +543,19 @@ Ensure that customer confirmation email is sent to the newly registered customer
 **config/Zed/cronjobs/jenkins.php**
 ```php
 <?php
- 
+
 /**
  * Notes:
  *
  * - jobs[]['name'] must not contains spaces or any other characters, that have to be urlencode()'d
  * - jobs[]['role'] default value is 'admin'
  */
- 
+
 $stores = require(APPLICATION_ROOT_DIR . '/config/Shared/stores.php');
 $allStores = array_keys($stores);
 ...
- 
- 
+
+
 /* Oauth */
 $jobs[] = [
     'name' => 'remove-expired-refresh-tokens',
@@ -582,13 +582,13 @@ Add infrastructural data as follows:
 **src/Pyz/Zed/Installer/InstallerDependencyProvider.php**
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Installer;
- 
+
 use Spryker\Zed\Installer\InstallerDependencyProvider as SprykerInstallerDependencyProvider;
 use Spryker\Zed\Oauth\Communication\Plugin\Installer\OauthClientInstallerPlugin;
 use Spryker\Zed\OauthCustomerConnector\Communication\Plugin\Installer\OauthCustomerScopeInstallerPlugin;
- 
+
 class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 {
     /**
@@ -652,11 +652,11 @@ Optional: To enable double opt-in for customer registration, make `CustomerPageC
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\CustomerPage;
- 
+
 use SprykerShop\Yves\CustomerPage\CustomerPageConfig as SprykerCustomerPageConfig;
- 
+
 class CustomerPageConfig extends SprykerCustomerPageConfig
 {
     /**
@@ -679,11 +679,11 @@ By default, in Spryker, posting the login form (where SecurityBlocker will make 
 **src/Pyz/Yves/CustomerPage/CustomerPageConfig.php**
 ```php
 <?php
- 
+
 namespace Pyz\Yves\CustomerPage;
- 
+
 use Spryker\Yves\CustomerPage\CustomerPageConfig as SprykerCustomerPageConfig;
- 
+
 class CustomerPageConfig extends SprykerCustomerPageConfig
 {
     /**
@@ -704,11 +704,11 @@ You can define the password minimum and maximum length the frontend will be usin
 **src/Pyz/Yves/CustomerPage/CustomerPageConfig.php**
 ```php
 <?php
- 
+
 namespace Pyz\Yves\CustomerPage;
- 
+
 use Spryker\Yves\CustomerPage\CustomerPageConfig as SprykerCustomerPageConfig;
- 
+
 class CustomerPageConfig extends SprykerCustomerPageConfig
 {
     protected const MIN_LENGTH_CUSTOMER_PASSWORD = 8;
@@ -775,12 +775,12 @@ Enable the following behaviors by registering the plugins:
 **src/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php**
 ```php
 <?php
- 
+
 namespace Pyz\Yves\CustomerPage;
- 
+
 use SprykerShop\Yves\CustomerPage\CustomerPageDependencyProvider as SprykerShopCustomerPageDependencyProvider;
 use SprykerShop\Yves\CustomerPage\Plugin\CustomerPage\RedirectUriCustomerRedirectStrategyPlugin;
- 
+
 class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyProvider
 {
     /**
@@ -805,12 +805,12 @@ Ensure that, when you open `https://mysprykershop.com/login?redirectUri=/cart`, 
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\ShopApplication;
- 
+
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 use SprykerShop\Yves\CustomerPage\Plugin\Application\CustomerConfirmationUserCheckerApplicationPlugin;
- 
+
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
@@ -837,14 +837,3 @@ Ensure that when you try to access your account without confirming the registrat
 | --- | --- |
 | Customer API	 | [Glue API: Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html) |
 | Customer Account Management + Order Management | [Customer Account Management + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-order-management-feature-integration.html)  |
-
-
-
-
-
-
-
-
-
-
-

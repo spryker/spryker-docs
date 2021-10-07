@@ -12,7 +12,7 @@ redirect_from:
 ## Features
 ### Filter by Product Labels
 We've changed product label touch logic in order to be able to export label IDs for products when their label relations change. This will allow you to further search and filter by labels.
-![Filter by product labels](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+July+-+2+2017/RN_filter_by_product_labels.gif) 
+![Filter by product labels](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+July+-+2+2017/RN_filter_by_product_labels.gif)
 
 **Affected Modules**
 
@@ -21,7 +21,7 @@ We've changed product label touch logic in order to be able to export label IDs 
 |[ProductLabel 2.0.0](https://github.com/spryker/product-label/releases/tag/2.0.0)  | n/a | n/a |
 
 **Documentation**
-For module documentation, see [Product Label Module Guide](https://documentation.spryker.com/2021080/docs/product-label)
+For module documentation, see [Product Label Module Guide](/docs/scos/user/features/{{site.version}}/product-labels-feature-overview.html)
 For detailed migration guides, see [Product Label Migration Guide](/docs/scos/dev/migration-and-integration/{{site.version}}/module-migration-guides/migration-guide-productlabel.html).
 
 **Migration Guides**
@@ -94,14 +94,14 @@ composer require spryker/product-new:"^1.0.0"
 ```
 
 ### Category Template and CMS Block Position
-With this release, we are introducing templating and CMS page block positioning for categories. 
+With this release, we are introducing templating and CMS page block positioning for categories.
 
 With our out of the box solution, you can manage categories as catalog pages, as a mix of catalog with blocks included or as pure content pages. You can modify the provided templates, as well as you can extend our solution to include your custom templates.
 
 CMS block positioning can be used for placing a block in certain places in your template (like for example include banners in the top position, some SEO text in the bottom position, etc.). Out of the box, category pages have only 1 default position. For a more advanced template take a look at our demoshop. Here we showcase top, middle and bottom positions. You can extend our solution in a way that will help you better manage your content by changing its configuration.
-![Category template Yves](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+July+-+2+2017/RN_category_template_and_cms_block_position_1.gif) 
+![Category template Yves](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+July+-+2+2017/RN_category_template_and_cms_block_position_1.gif)
 
-![Category template Zed](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+July+-+2+2017/RN_category_template_and_cms_block_position_2.gif) 
+![Category template Zed](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+July+-+2+2017/RN_category_template_and_cms_block_position_2.gif)
 
 **Affected Modules**
 
@@ -110,14 +110,14 @@ CMS block positioning can be used for placing a block in certain places in your 
 | <ul><li>[Category 4.0.0](https://github.com/spryker/Category/releases/tag/4.0.0)</li><li>[CmsBlockCategoryConnector 2.0.0](https://github.com/spryker/cms-block-category-connector/releases/tag/2.0.0)</li></ul> | <ul><li>[CmsBlock 1.2.0](https://github.com/spryker/cms-block/releases/tag/1.2.0)</li><li>[Gui 3.6.0](https://github.com/spryker/Gui/releases/tag/3.6.0)</li></ul>  | <ul><li>[CategoryDataFeed 0.2.1](https://github.com/spryker/category-data-feed/releases/tag/0.2.1)</li><li>[CategoryExporter 3.0.2](https://github.com/spryker/category-exporter/releases/tag/3.0.2)</li><li>[Cms 6.1.1](https://github.com/spryker/Cms/releases/tag/6.1.1)</li><li>[CmsBlockProductConnector 1.0.2](https://github.com/spryker/cms-block-product-connector/releases/tag/1.0.2)</li><li>[NavigationGui 1.0.4](https://github.com/spryker/navigation-gui/releases/tag/1.0.4)</li><li>[ProductCategory 4.2.1](https://github.com/spryker/product-category/releases/tag/4.2.1)</li><li>[ProductLabelGui 1.0.3](https://github.com/spryker/product-label-gui/releases/tag/1.0.3)</li><li>[ProductManagement 0.7.4](https://github.com/spryker/product-management/releases/tag/0.7.4)</li><li>[ProductRelation 1.0.5](https://github.com/spryker/product-relation/releases/tag/1.0.5)</li><li>[Transfer 3.3.3](https://github.com/spryker/transfer/releases/tag/3.3.3)</li></ul> |
 
 **Documentation**
-For module documentation, see: 
+For module documentation, see:
 
 * CMS Block Category Connector Module Guide<!-- link -->
 * Content Management Module Guide<!-- link -->
 
-For migration guides, see: 
+For migration guides, see:
 
-* [Category Migration Guide](/docs/scos/dev/migration-and-integration/{{site.version}}/module-migration-guides/migration-guide-category.html) 
+* [Category Migration Guide](/docs/scos/dev/migration-and-integration/{{site.version}}/module-migration-guides/migration-guide-category.html)
 * [CMS Block Category Connector Migration Guide](/docs/scos/dev/migration-and-integration/{{site.version}}/module-migration-guides/migration-guide-cms-block-category-connector.html)
 * Category Template Migration Console <!-- add a link -->
 * [CMS Block Category Connector Migration Console](/docs/scos/dev/migration-and-integration/{{site.version}}/module-migration-guides/migration-guide-cms-block-category-connector.html-console)
@@ -177,9 +177,9 @@ We also added a method to manage cache strategies where every controller can spe
 
 ## Bugfixes
 ### Filter Data Based on Activation Flags
-We had an issue with ES, where inactive CMS pages were searchable. To fix this issue, we added two new search expanders, to enable filtering of data based on activation flags. 
+We had an issue with ES, where inactive CMS pages were searchable. To fix this issue, we added two new search expanders, to enable filtering of data based on activation flags.
 
-`IsActiveInDateRangeQueryExpanderPlugin` is meant for filtering out active records within stored date range. 
+`IsActiveInDateRangeQueryExpanderPlugin` is meant for filtering out active records within stored date range.
 
 `IsActiveQueryExpanderPlugin` is used for filtering records with `is-active` flag.
 

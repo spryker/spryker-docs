@@ -14,7 +14,7 @@ This endpoint allows retrieving detailed information about the prices of abstrac
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-products-feature-integration.html)
+* [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
 * [Glue API: Prices feature integration](https://documentation.spryker.com/2021080/docs/glue-api-prices-feature-integration)
 
 ## Retrieve prices of an abstract product

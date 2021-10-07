@@ -19,7 +19,7 @@ To start feature integration, overview and install the necessary features:
 |Spryker Core|202001.0|[Glue Application](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-application-feature-integration.html)|
 |Product Relation|202001.0||
 |Glue API: Cart feature integration |202001.0| [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html) |
-|Glue API: Products |202001.0|[Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-products-feature-integration.html)|
+|Glue API: Products |202001.0|[Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)|
 
 ### 1) Install the required modules using Composer
 Run the following command to install the required modules:

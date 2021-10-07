@@ -1,11 +1,11 @@
 ---
-title: Products feature integration
+title: Glue API- Product feature integration
 description: This guide will navigate you through the process of installing and configuring the Product API feature in Spryker OS.
-originalLink: https://documentation.spryker.com/v3/docs/products-feature-integration
-originalArticleId: 1384ece4-b7f7-4dbb-bd19-de42b38cc8ae
+originalLink: https://documentation.spryker.com/v4/docs/glue-api-products-feature-integration
+originalArticleId: 59c96846-3dd7-4d2d-a269-fc8117892a19
 redirect_from:
-  - /v3/docs/products-feature-integration
-  - /v3/docs/en/products-feature-integration
+  - /v4/docs/glue-api-products-feature-integration
+  - /v4/docs/en/glue-api-products-feature-integration
 ---
 
 ## Install Feature API
@@ -94,16 +94,16 @@ Activate the following plugins:
 
 <details open>
 <summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\ProductsRestApi\Plugin\AbstractProductsResourceRoutePlugin;
 use Spryker\Glue\ProductsRestApi\Plugin\ConcreteProductsResourceRoutePlugin;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
 	/**
@@ -141,9 +141,9 @@ Activate the following plugin:
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
 use Spryker\Glue\ProductImageSetsRestApi\Plugin\AbstractProductImageSetsRoutePlugin;
@@ -151,7 +151,7 @@ use Spryker\Glue\ProductImageSetsRestApi\Plugin\ConcreteProductImageSetsRoutePlu
 use Spryker\Glue\ProductImageSetsRestApi\Plugin\Relationship\AbstractProductsProductImageSetsResourceRelationshipPlugin;
 use Spryker\Glue\ProductImageSetsRestApi\Plugin\Relationship\ConcreteProductsProductImageSetsResourceRelationshipPlugin;
 use Spryker\Glue\ProductsRestApi\ProductsRestApiConfig;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
 	/**
@@ -164,7 +164,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 			new ConcreteProductImageSetsRoutePlugin(),
 		];
 	}
- 
+
 	/**
 	* @param \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
 	*
@@ -181,7 +181,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 			ProductsRestApiConfig::RESOURCE_CONCRETE_PRODUCTS,
 			new ConcreteProductsProductImageSetsResourceRelationshipPlugin()
 		);
- 
+
 		return $resourceRelationshipCollection;
 	}
 }
@@ -209,9 +209,9 @@ Activate the following plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
 use Spryker\Glue\ProductPricesRestApi\Plugin\AbstractProductPricesRoutePlugin;
@@ -219,7 +219,7 @@ use Spryker\Glue\ProductPricesRestApi\Plugin\ConcreteProductPricesRoutePlugin;
 use Spryker\Glue\ProductPricesRestApi\Plugin\GlueApplication\AbstractProductPricesByResourceIdResourceRelationshipPlugin;
 use Spryker\Glue\ProductPricesRestApi\Plugin\GlueApplication\ConcreteProductPricesByResourceIdResourceRelationshipPlugin;
 use Spryker\Glue\ProductsRestApi\ProductsRestApiConfig;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
 	/**
@@ -232,7 +232,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 			new ConcreteProductPricesRoutePlugin(),
 		];
 	}
- 
+
 	/**
 	* @param \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
 	*
@@ -249,7 +249,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 			ProductsRestApiConfig::RESOURCE_CONCRETE_PRODUCTS,
 			new ConcreteProductPricesByResourceIdResourceRelationshipPlugin()
 		);
- 
+
 		return $resourceRelationshipCollection;
 	}
 }
@@ -274,14 +274,14 @@ Activate the following plugin:
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
 use Spryker\Glue\ProductsCategoriesResourceRelationship\Plugin\AbstractProductsCategoriesResourceRelationshipPlugin;
 use Spryker\Glue\ProductsRestApi\ProductsRestApiConfig;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
 	/**
@@ -296,7 +296,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 			ProductsRestApiConfig::RESOURCE_ABSTRACT_PRODUCTS,
 			new AbstractProductsCategoriesResourceRelationshipPlugin()
 		);
- 
+
 		return $resourceRelationshipCollection;
 	}
 }
@@ -365,7 +365,3 @@ Send a request to http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% 
 
 </br>
 </details>
-
-*Last review date: Aug 05, 2019*
-
-<!--by Tihran Voitov, Yuliia Boiko-->

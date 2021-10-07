@@ -17,8 +17,8 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Integration guide |
 | --- | --- | --- |
-| Spryker Core | 202009.0 | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-ore-feature-integration.html) |
-| Product | 202009.0 | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-products-feature-integration.html) |
+| Spryker Core | 202009.0 | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Product | 202009.0 | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
 | Promotions & Discounts | 202009.0 |  |
 
 ## 1) Install the required modules using Composer
@@ -710,7 +710,7 @@ Verify that the `PromotionItemByQuoteTransferResourceRelationshipPlugin` and `Pr
 
 Prerequisites:
 
-* Have a discount rule for a product. Discount application type should be chosen Promotional Product (see [Creating a Cart Rule Discount](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-a-cart-rule.html).
+* Have a discount rule for a product. Discount application type should be chosen Promotional Product (see [Creating a Cart Rule Discount](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
 * Create a cart.
 
 Add items to the cart to satisfy the conditions of the discount rule:
@@ -885,7 +885,7 @@ Verify the `DiscountPromotionCartItemExpanderPlugin` and `DiscountPromotionCartI
 
 Prerequisites:
 
-* Have a discount rule for a product. Discount application type should be Promotional product (see [Creating a Cart Rule Discount](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-a-cart-rule.html)).
+* Have a discount rule for a product. Discount application type should be Promotional product (see [Creating a Cart Rule Discount](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html)).
 * Create a cart with items that satisfy the conditions of the discount rule.
 * Get a concrete promotional product SKU.
 

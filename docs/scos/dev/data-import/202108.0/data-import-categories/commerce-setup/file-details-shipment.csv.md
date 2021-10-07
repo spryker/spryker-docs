@@ -9,7 +9,7 @@ redirect_from:
   - /docs/en/file-details-shipmentcsv
 ---
 
-This article contains content of the **shipment.csv** file to configure [shipment](https://documentation.spryker.com/2021080/docs/shipment) information in your Spryker Demo Shop.
+This article contains content of the **shipment.csv** file to configure [shipment](/docs/scos/user/features/{{page.version}}/shipment-feature-overview.html) information in your Spryker Demo Shop.
 
 To import the file, run
 

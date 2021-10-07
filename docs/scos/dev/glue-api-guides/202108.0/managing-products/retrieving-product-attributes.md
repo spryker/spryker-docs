@@ -19,7 +19,7 @@ Only preset attributes are retrieved. So if an attribute allows custom input ( `
 {% endinfo_block %}
 
 ## Installation 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-products-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html).
 
 <a name="{all-attributes}"></a>
 

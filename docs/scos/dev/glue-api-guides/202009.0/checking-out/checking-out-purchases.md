@@ -15,7 +15,7 @@ After sending a request, the cart is deleted, and you cannot make any changes in
 The endpoint also provides information on whether it is necessary to redirect the user to a third-party page to complete the payment.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Checkout API Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-checkout-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Checkout API Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html).
 
 
 

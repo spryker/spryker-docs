@@ -12,10 +12,10 @@ This endpoint allows to retrieve general information about concrete products.
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Products Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-products-feature-integration.html)
-* [Glue API: Measurement Units Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-measurement-units-feature-integration.html)
-* [Glue API: Product Options Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-product-options-feature-integration.html)
-* [Glue API: Product Labels feature integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-product-labels-feature-integration.html)
+* [Glue API: Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-products-feature-integration.html)
+* [Glue API: Measurement Units Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-measurement-units-feature-integration.html)
+* [Glue API: Product Options Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html)
+* [Glue API: Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-labels-feature-integration.html)
 
 
 ## Retrieve a concrete product 

@@ -18,7 +18,7 @@ In your development, these resources can help you to:
 * Enrich customer profiles with additional data such as addresses
 
 ## Installation
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-customer-account-management-feature-integration.html).
+For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html).
 
 ## Create a customer
 

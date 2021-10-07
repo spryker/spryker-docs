@@ -48,7 +48,7 @@ Below you will find the list of the new/updated documentation released as part o
 <summary>HowTo</summary>
 
 
-[HowTo - Disable Split Delivery in Yves Interface](/docs/scos/dev/tutorials-and-howtos/{{site.version}}/howtos/feature-howtos/howto-disable-split-delivery-in-yves-interface.html)
+[HowTo - Disable Split Delivery in Yves Interface](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-disable-split-delivery-in-yves-interface.html)
 
 
 </details>
@@ -82,21 +82,21 @@ Below you will find the list of the new/updated documentation released as part o
 <details open>
 <summary>Integration guide</summary>
 
-[Packaging Units Feature Integration](/docs/scos/dev/migration-and-integration/{{site.version}}/feature-integration-guides/product-packaging-unit-feature-integration.html)
+[Packaging Units Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-packaging-unit-feature-integration.html)
 
 </details>
 
 <details open>
 <summary>Migration  guide</summary>
 
-[Decimal Stock Migration Concept](/docs/scos/dev/migration-and-integration/{{site.version}}/migration-concepts/decimal-stock-migration-concept.html)
+[Decimal Stock Migration Concept](/docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html)
 
  </details>
 
  <details open>
 <summary>HowTo</summary>
 
-[HowTo - Import Packaging Units](/docs/scos/dev/tutorials-and-howtos/{{site.version}}/howtos/feature-howtos/data-imports/howto-import-packaging-units.html)
+[HowTo - Import Packaging Units](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-packaging-units.html)
 
  </details>
 
@@ -111,7 +111,7 @@ Below you will find the list of the new/updated documentation released as part o
 <details open>
 <summary>Integration guide</summary>
 
-[Scheduled Prices Feature Integration](/docs/scos/dev/migration-and-integration/{{site.version}}/feature-integration-guides/scheduled-prices-feature-integration.html)
+[Scheduled Prices Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/scheduled-prices-feature-integration.html)
 
 </details>
 <details open>
@@ -124,7 +124,7 @@ Below you will find the list of the new/updated documentation released as part o
 <details open>
 <summary>HowTo</summary>
 
-[Schedule Cron Job for Scheduled Prices](/docs/scos/dev/tutorials-and-howtos/{{site.version}}/howtos/feature-howtos/howto-schedule-cron-job-for-scheduled-prices.html)
+[Schedule Cron Job for Scheduled Prices](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-schedule-cron-job-for-scheduled-prices.html)
 
 </details>
 
@@ -149,7 +149,7 @@ Below you will find the list of the new/updated documentation released as part o
 <details open>
 <summary>Integration guide</summary>
 
-[CMS Feature Integration](/docs/scos/dev/migration-and-integration/{{site.version}}/feature-integration-guides/cms-feature-integration.html)
+[CMS Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/cms-feature-integration.html)
 
 </details>
 
@@ -176,7 +176,7 @@ Below you will find the list of the new/updated documentation released as part o
 <details open>
 <summary>Technology Partners guides</summary>
 
-[Coremedia with Templates & Slots](/docs/scos/dev/technology-partners/{{site.version}}/content-management/coremedia/coremedia.html)
+[Coremedia with Templates & Slots](/docs/scos/user/technology-partners/{{site.version}}/content-management/coremedia.html)
 
 
 </details>
@@ -194,8 +194,8 @@ Below you will find the list of the new/updated documentation released as part o
 <summary>Integration guides</summary>
 
 * [Approval Process Feature Integration](https://documentation.spryker.com/2021080/docs/approval-process-feature-integration)
-* [Shipment + Approval Process Feature Integration](/docs/scos/dev/migration-and-integration/{{site.version}}/feature-integration-guides/shipment-approval-process-feature-integration.html)
-* [Shipment Feature Integration](/docs/scos/dev/migration-and-integration/{{site.version}}/feature-integration-guides/shipment-feature-integration.html)
+* [Shipment + Approval Process Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/shipment-approval-process-feature-integration.html)
+* [Shipment Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/shipment-feature-integration.html)
 
 </details>
 
@@ -220,11 +220,11 @@ Below you will find the list of the new/updated documentation released as part o
 <summary>Integration guides</summary>
 
 * [Configurable Bundle Feature Integration](https://documentation.spryker.com/2021080/docs/configurable-bundle-feature-integration)
-* [Product Images + Configurable Bundle](/docs/scos/dev/migration-and-integration/{{site.version}}/feature-integration-guides/product-images-configurable-bundle-feature-integration.html)
-* [Merchant Product Restrictions](/docs/scos/dev/migration-and-integration/{{site.version}}/feature-integration-guides/merchant-product-restrictions-feature-integration.html)
-* [Product Lists + Catalog](/docs/scos/dev/migration-and-integration/{{site.version}}/feature-integration-guides/product-lists-catalog-feature-integration.html)
-* [Prices](/docs/scos/dev/migration-and-integration/{{site.version}}/feature-integration-guides/prices-feature-integration.html)
-* [Product](/docs/scos/dev/migration-and-integration/{{site.version}}/feature-integration-guides/product-feature-integration.html)
+* [Product Images + Configurable Bundle](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-images-configurable-bundle-feature-integration.html)
+* [Merchant Product Restrictions](/docs/scos/dev/feature-integration-guides/{{site.version}}/merchant-product-restrictions-feature-integration.html)
+* [Product Lists + Catalog](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-lists-catalog-feature-integration.html)
+* [Prices](/docs/scos/dev/feature-integration-guides/{{site.version}}/prices-feature-integration.html)
+* [Product](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)
 
 
 </details>
@@ -241,7 +241,7 @@ Below you will find the list of the new/updated documentation released as part o
 <details open>
 <summary>HowTo</summary>
 
-[Rendering Configurable Bundle Templates in the Storefront](/docs/scos/dev/tutorials-and-howtos/{{site.version}}/howtos/feature-howtos/howto-render-configurable-bundle-templates-in-the-storefront.html)
+[Rendering Configurable Bundle Templates in the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-render-configurable-bundle-templates-in-the-storefront.html)
 
 </details>
 
@@ -252,7 +252,7 @@ Below you will find the list of the new/updated documentation released as part o
 <details open>
 <summary>Integration guide</summary>
 
-[Glue API: Promotions & Discounts Feature Integration](/docs/scos/dev/migration-and-integration/{{site.version}}/feature-integration-guides/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
+[Glue API: Promotions & Discounts Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
 
 </details>
 
@@ -261,7 +261,7 @@ Below you will find the list of the new/updated documentation released as part o
 <details open>
 <summary>Integration guide</summary>
 
-[Glue API: Promotions & Discounts Feature Integration](/docs/scos/dev/migration-and-integration/{{site.version}}/feature-integration-guides/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
+[Glue API: Promotions & Discounts Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
 
 </details>
 
@@ -274,7 +274,7 @@ Below you will find the list of the new/updated documentation released as part o
 <details open>
 <summary>Integration guide</summary>
 
-[Glue API: Product Rating & Reviews Feature Integration](/docs/scos/dev/migration-and-integration/{{site.version}}/feature-integration-guides/glue-api/glue-api-product-rating-and-reviews-feature-integration.html)
+[Glue API: Product Rating & Reviews Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-rating-and-reviews-feature-integration.html)
 
 </details>
 
@@ -286,13 +286,13 @@ Below you will find the list of the new/updated documentation released as part o
 <details open>
 <summary>Integration guide</summary>
 
-[Glue API: Product Options Feature Integration](/docs/scos/dev/migration-and-integration/{{site.version}}/feature-integration-guides/glue-api/glue-api-product-options-feature-integration.html)
+[Glue API: Product Options Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-options-feature-integration.html)
 
 </details>
 
 * [Search Engine Friendly URLs](/docs/scos/dev/glue-api-guides/{{site.version}}/resolving-search-engine-friendly-urls.html)
 * [Assigning Guest Cart to Registered Customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/guest-carts/managing-guest-carts.html#assigning-guest-cart-to-registered-customer)
-* [Managing Customer Access to API Resources](/docs/scos/dev/tutorials-and-howtos/{{site.version}}/howtos/glue-api-howtos/managing-customer-access-to-glue-api-resources.html)
+* [Managing Customer Access to API Resources](/docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/managing-customer-access-to-glue-api-resources.html)
 * [Getting the List of Protected Resources](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-protected-resources.html)
 
 
@@ -300,7 +300,7 @@ Below you will find the list of the new/updated documentation released as part o
 
 * [Queue Worker](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html#8--queue)
 * [Deploy File Reference](https://documentation.spryker.com/2021080/docs/deploy-file-reference-version-1-201907#deploy-file-reference---1-0)
-* [Health checks](/docs/scos/dev/migration-and-integration/{{site.version}}/technical-enhancements/health-checks.html)
+* [Health checks](/docs/scos/dev/technical-enhancements/health-checks.html)
 * [Asset Management](/docs/scos/user/features/{{site.version}}/file-manager/file-manager-feature-overview/asset-management.html)
 <details open>
 <summary>Feature overview</summary>
@@ -312,7 +312,7 @@ Below you will find the list of the new/updated documentation released as part o
 <details open>
 <summary>Integration guide</summary>
 
-[Custom Location for Static Assets](/docs/scos/dev/migration-and-integration/{{site.version}}/technical-enhancements/custom-location-for-static-assets.html)
+[Custom Location for Static Assets](/docs/scos/dev/technical-enhancements/custom-location-for-static-assets.html)
 
 </details>
 
@@ -338,11 +338,11 @@ Below you will find the list of the new/updated documentation released as part o
 #### HowTos:
 
 * [HowTo - Import Warehouse Data](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html)
-* [HowTo - Import Delivery Methods Linked to Store](/docs/scos/dev/tutorials-and-howtos/{{site.version}}/howtos/feature-howtos/data-imports/howto-import-delivery-methods-linked-to-store.html)
-* [HowTo - Notify About Unsupported Browsers](/docs/scos/dev/tutorials-and-howtos/{{site.version}}/howtos/howto-notify-about-unsupported-browsers.html)
+* [HowTo - Import Delivery Methods Linked to Store](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-delivery-methods-linked-to-store.html)
+* [HowTo - Notify About Unsupported Browsers](/docs/scos/dev/tutorials-and-howtos/howtos/howto-notify-about-unsupported-browsers.html)
 
 #### Other documentation:
-* [Multiple Stores](/docs/scos/dev/tutorials-and-howtos/{{site.version}}/howtos/howto-set-up-multiple-stores.html)
-* [Inventory](/docs/scos/user/features/{{site.version}}/inventory-management-feature-overview.html)
+* [Multiple Stores](/docs/scos/dev/tutorials-and-howto/howtos/howto-set-up-multiple-stores.html)
+* [Inventory](https://documentation.spryker.com/2021080/docs/inventory-management)
 * [Custom Twig Functions for Yves](/docs/scos/dev/front-end-development/yves/custom-twig-functions-for-yves.html)
 * [Custom Twig Functions for Zed](/docs/scos/dev/front-end-development/zed/custom-twig-functions-for-zed.html)

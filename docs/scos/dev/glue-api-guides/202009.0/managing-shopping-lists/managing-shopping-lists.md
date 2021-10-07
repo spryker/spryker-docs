@@ -14,8 +14,8 @@ In your development, the resources can help you to enable the shopping list func
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see: 
-* [Glue API: Shopping Lists feature integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-shopping-lists-feature-integration.html)
-* [Glue API: Products feature integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-products-feature-integration.html)
+* [Glue API: Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shopping-lists-feature-integration.html)
+* [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-products-feature-integration.html)
 
 
 ## Create a shopping list

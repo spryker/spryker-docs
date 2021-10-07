@@ -101,7 +101,7 @@ class ContentFooFormPlugin extends AbstractPlugin implements ContentPluginInterf
   2. Create `ContentFooTermForm`. The main part of the plugin is the `Form` class that implements `\Symfony\Component\Form\FormBuilderInterface`. See:
 
 * [Forms](https://symfony.com/doc/current/forms.html) for more information about Symfony forms.
-* [Creating Forms](/docs/scos/dev/back-end-development/zed/data-manipulation/data-enrichment/forms/creating-forms.html#creating-forms) to learn about form creation procedure in Spryker.
+* [Creating Forms](/docs/scos/dev/back-end-development/data-manipulation/data-enrichment/forms/creating-forms.html#creating-forms) to learn about form creation procedure in Spryker.
 * `\Spryker\Zed\ContentBannerGui\Communication\Form\BannerContentTermForm` as an example of a simple form.
 * `\Spryker\Zed\ContentProductGui\Communication\Form\ProductAbstractListContentTermForm` as an example of a form with a dedicated template and a complex Javascript functionality.
 

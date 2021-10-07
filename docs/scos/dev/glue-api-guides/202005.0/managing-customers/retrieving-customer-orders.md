@@ -23,8 +23,8 @@ Since order history is available for registered users only, the endpoints provid
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Order Management Feature Integration](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-order-management-feature-integration.html)
-* [Glue API: Measurement Units Feature Integration](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-measurement-units-feature-integration.html)
+* [Glue API: Order Management Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html)
+* [Glue API: Measurement Units Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-measurement-units-feature-integration.html)
 
 ## Retrieving all Orders
 To retrieve a list of all orders made by a registered customer, send the request:

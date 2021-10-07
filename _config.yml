@@ -55,7 +55,7 @@ highlighter: rouge
 markdown: CommonMarkGhPages
 commonmark:
   options: ["SMART", "FOOTNOTES"]
-  extensions: ["strikethrough", "autolink", "table", "tagfilter"]
+  extensions: ["strikethrough", "autolink", "table"]
 
 plugins:
   - jekyll-last-modified-at

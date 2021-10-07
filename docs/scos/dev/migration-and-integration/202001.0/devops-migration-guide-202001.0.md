@@ -122,7 +122,7 @@ PHP 7.1 is no longer supported. Update PHP version to 7.2 or higher.
 
 ## Health Checks
 
-Heartbeat functionality was replaced with the [Health Сhecks](/docs/scos/dev/migration-and-integration/202001.0/technical-enhancements/health-checks.html) functionality.
+Heartbeat functionality was replaced with the [Health Сhecks](/docs/scos/dev/technical-enhancements/health-checks.html) functionality.
 
 Enable heath checks by defining `\Spryker\Shared\HealthCheck\HealthCheckConstants::HEALTH_CHECK_ENABLED = true` in configuration.
 
@@ -130,7 +130,7 @@ The `health-check/index` path is used to check the status of each application.
 
 ## Routing
 
-As [Silex has been replaced](/docs/scos/dev/migration-and-integration/202001.0/migration-concepts/silex-replacement/silex-replacement.html) together with the Routing service provider, we introduced a new routing that implements router cache. To warm up the router cache, include `vendor/bin/yves router:cache:warm-up` and `vendor/bin/console router:cache:warm-up` into the deployment recipe.
+As [Silex has been replaced](/docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html) together with the Routing service provider, we introduced a new routing that implements router cache. To warm up the router cache, include `vendor/bin/yves router:cache:warm-up` and `vendor/bin/console router:cache:warm-up` into the deployment recipe.
 
 ## Updated Console Commands
 

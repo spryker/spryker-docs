@@ -18,7 +18,7 @@ There is currently an issue when using giftcards with Computop. Our team is deve
 This article provides step-by-step instructions on integrating the Computop module into your project.
 
 ## Prerequisites
-Prior to integrating Computop into your project, make sure you [installed and configured the Computop module](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop-installation-and-configuration.html).
+Prior to integrating Computop into your project, make sure you [installed and configured the Computop module](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop-installation-and-configuration.html).
 
 ## Integrating Computop into your project
 To integrate Computop, do the following:
@@ -901,7 +901,7 @@ class SummaryStep extends SprykerShopSummaryStep
 
 ### CRIF configuration  
 
-To configure [CRIF](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-crif.html):
+To configure [CRIF](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-crif.html):
 
 1\. Adjust `PaymentDependencyProvider` to use `ComputopPaymentMethodFilterPlugin`:  
 
@@ -1102,7 +1102,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 </details>
 
 ## Integration into a project
-To integrate the computop module, make sure you [installed](http://#installation) and [configured](http://#configuration) it.
+To integrate the computop module, make sure you installed and configured it. See [Computop - Installation and configuration](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop-installation-and-configuration.html) for details.
 
 ## Test mode
 
@@ -1110,4 +1110,4 @@ Computop provides a test mode to test payment methods without making real transa
 
 To enable the test mode, in `\SprykerEco\Service\ComputopApi\Mapper\ComputopApiMapper::getDescriptionValue()`, add `Test:0000` to the beginning of the transaction description. 
 
-You can find Computop test cards at [Test Cards EN](https://developer.computop.com/display/public/DOCCT/Test+Cards+EN).
+You can find Computop test cards at [Test Cards EN](https://developer.computop.com/display/EN/Test+Cards).

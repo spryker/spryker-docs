@@ -20,7 +20,7 @@ With the help of the data provided by the API resources, you will be able to per
 * display the selected options during checkout and in the order history.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Product Options Feature Integration](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/glue-api/glue-api-product-options-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Product Options Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html).
 
 ## Retrieving Product Options for Products
 To retrieve the product options available for a specific product, send a *GET* request to retrieve the product information and include **product-options** as a relationship.

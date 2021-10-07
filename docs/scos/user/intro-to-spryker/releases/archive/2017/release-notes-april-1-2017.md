@@ -30,7 +30,7 @@ On a product detail page, we have related products for the given product. In the
 | [ProductRelationCollector 1.0.0](https://github.com/spryker/product-relation-collector/releases/tag/1.0.0) | n/a | [ProductRelation 1.0.2](https://github.com/spryker/product-relation/releases/tag/1.0.2) |
 
 **Documentation**
-For module documentation, see [Product Relations](/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html). For integration guides see: [Product Relations Feature Integration](https://documentation.spryker.com/2021080/docs/product-relation-integration).
+For module documentation, see [Product Relations](/docs/scos/user/features/{{site.version}}/product-relations-feature-overview.html). For integration guides see: [Product Relations Feature Integration](https://documentation.spryker.com/2021080/docs/product-relation-integration).
 
 ### Event Module
 This release introduces the `Event` module. It implements the Observer pattern where you can add extension points(events) in your code and allow other modules to listen and react to those events. Asynchronous event handling is supported.
@@ -42,7 +42,7 @@ This release introduces the `Event` module. It implements the Observer pattern w
 | [Event 1.0.0](https://github.com/spryker/Event/releases/tag/1.0.0) | <ul><li>[Category 3.1.0](https://github.com/spryker/Category/releases/tag/3.1.0)</li><li>[Product 5.1.0](https://github.com/spryker/Product/releases/tag/5.1.0)</li><li> [ProductCategory 4.1.0](https://github.com/spryker/product-category/releases/tag/4.1.0)</li></ul> | [Event 1.0.1](https://github.com/spryker/Event/releases/tag/1.0.1) |
 
 **Documentation**
-For module documentation, see [Event](/docs/scos/dev/back-end-development/zed/data-manipulation/event/event.html).
+For module documentation, see [Event](/docs/scos/dev/back-end-development/data-manipulation/event/event.html).
 
 **Migration Guides**
 To upgrade, follow the steps described below:

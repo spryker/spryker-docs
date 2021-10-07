@@ -17,7 +17,7 @@ The endpoints provided by this API cannot be accessed anonymously. To access the
 In your development, the endpoint can help you to provide information on the Business Units available in the company of the currently logged in user.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Company Account Feature Integration](/docs/scos/dev/migration-and-integration/201907.0/feature-integration-guides/glue-api/glue-api-company-account-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Company Account Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html).
 
 ## Retrieving General Business Unit Information
 ### Information on the Business Unit of the User

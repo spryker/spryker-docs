@@ -248,5 +248,5 @@ We have added `"strict" => true` for HTTP client calls to ZED, so that when redi
 ## Documentation Updates
 The following content has been added to the Academy:
 
-* [Authorization and Preauthorization-Capture Flows](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-authorization-and-preauthorization-capture-flows.html)
-* [PayPal Express Checkout Payment - Payone](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-paypal-express-checkout-payment.html)
+* [Authorization and Preauthorization-Capture Flows](/docs/scos/user/technology-partners/{{site.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-authorization-and-preauthorization-capture-flows.html)
+* [PayPal Express Checkout Payment - Payone](/docs/scos/user/technology-partners/{{site.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-paypal-express-checkout-payment.html)

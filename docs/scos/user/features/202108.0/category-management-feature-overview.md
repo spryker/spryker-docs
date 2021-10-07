@@ -51,7 +51,8 @@ Compared to standard filters, dynamic filters and facets allow creating more adv
 
 ## Video tutorial
 Check out this video on managing categories:
-<iframe src="https://fast.wistia.net/embed/iframe/g3l3c7xt93" title="Category Management" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>
+
+{% wistia g3l3c7xt93 960 720 %}
 
 ## Current constraints
 

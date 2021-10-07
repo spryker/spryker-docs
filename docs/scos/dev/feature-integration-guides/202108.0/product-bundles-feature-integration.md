@@ -296,6 +296,6 @@ Integrate the following related features:
 
 | Feature | Required for the current feature | Integration guide |
 | --- | --- | --- |
-| Product Bundles + Punchout GUI |  | [Eco: Punchout Catalogs + Product Bundles feature integration](/docs/scos/dev/technology-partners/{{page.version}}/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html) |
+| Product Bundles + Punchout GUI |  | [Eco: Punchout Catalogs + Product Bundles feature integration](/docs/scos/user/technology-partners/{{page.version}}/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html) |
 
 

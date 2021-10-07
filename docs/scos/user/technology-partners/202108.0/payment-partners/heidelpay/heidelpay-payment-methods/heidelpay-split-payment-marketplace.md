@@ -12,7 +12,7 @@ redirect_from:
 
 ## Setup
 
-The following configuration should be made after Heidelpay has been [installed](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/heidelpay/heidelpay-installation.html) and [integrated](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/heidelpay/scos-integration/heidelpay-configuration-for-scos.html).
+The following configuration should be made after Heidelpay has been [installed](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/heidelpay/heidelpay-installation.html) and [integrated](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/heidelpay/scos-integration/heidelpay-configuration-for-scos.html).
 
 ## Configuration
 
@@ -24,7 +24,7 @@ $config[HeidelpayConstants::CONFIG_IS_SPLIT_PAYMENT_ENABLED_KEY] = true;
 
 ## Project Implementation
 
-A project level should set quote items and expenses information the field Heidelpay Item Channel Id. It could be done [using cart expander plugin](/docs/scos/user/features/{{page.version}}/cart-feature-overview/cart-module-reference-information.html#cart-expanders).
+A project level should set quote items and expenses information the field Heidelpay Item Channel Id. It could be done [using cart expander plugin](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/cart-module-reference-information.html#cart-expanders).
 
 Example:
 ```php

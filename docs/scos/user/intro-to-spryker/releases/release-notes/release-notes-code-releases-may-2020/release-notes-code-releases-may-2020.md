@@ -31,7 +31,7 @@ For information about installing the Spryker Commerce OS see [Getting Started Gu
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes%3A+Code+Releases+May%2C+2020/image7.png)
 
 #### Documentation
-[Filter and Search in Order Archive](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-accounts-overview.html#customer-account-on-the-storefront)
+[Filter and Search in Order Archive](/docs/scos/user/features/{{site.version}}/customer-account-management-feature-overview/customer-accounts-overview.html#customer-account-on-the-storefront)
 
 ### Adding Shipment Cost to RFQ
 **Adding shipment cost for RFQ** is a new step in the Quotation Process at Spryker. Previously, it was not possible to create a quote with a shipment cost, which created limitations in digital negotiations about a purchase. Now, the negotiations can go further: the B2B Customers can negotiate with Supplier not only the item price and volume of order but the shipment cost of the purchase as well.
@@ -40,7 +40,7 @@ For information about installing the Spryker Commerce OS see [Getting Started Gu
 
 
 #### Documentation
-[Quotation Process and RFQ](/docs/scos/user/features/{{page.version}}/quotation-process/quotation-process.html)
+[Quotation Process and RFQ](/docs/scos/user/features/{{site.version}}/quotation-process/quotation-process.html)
 
 ### Configuration (YAML) File for Batch Data Import
 We have improved data importers’ usability.
@@ -50,14 +50,14 @@ You may now change names and location of the CSV files to be imported, define a 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes%3A+Code+Releases+May%2C+2020/image4.png)
 
 #### Documentation
-[Importing Data with a Configuration File](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html)
+[Importing Data with a Configuration File](/docs/scos/dev/data-import/{{site.version}}/importing-data-with-a-configuration-file.html)
 
 ### Data Import Documentation
 We have improved data importers’ documentation, making it easier to understand how Spryker Demo Shop data import works for most common import operations: Products, Prices, Stock, Content, Merchandising, etc.
 You will have access to detailed information about CSV files content, dependencies, and mandatory information needed to run your usual data import operation.
 
 #### Documentation
-[Demo Shop Data Import](/docs/scos/dev/data-import/{{page.version}}/demo-shop-data-import/importing-demo-shop-data.html)
+[Demo Shop Data Import](/docs/scos/dev/data-import/{{site.version}}/demo-shop-data-import/importing-demo-shop-data.html)
 
 ### Product Relation per Store
 We have enhanced our multi-store feature with a new product management functionality.
@@ -67,7 +67,7 @@ This way, you can adjust the relations between products depending on your market
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes%3A+Code+Releases+May%2C+2020/image6.gif)
 
 #### Documentation
-[Product Relations](/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html)
+[Product Relations](/docs/scos/user/features/{{site.version}}/product-relations-feature-overview.html)
 
 ### Product Abstract Card on Product List
 We have improved our Front-end component **Product Abstract Card** to fully support the Product Group feature. Whenever you hover the color selector on the card, the picture, title, and price of the product are updated to match your selection.
@@ -84,39 +84,39 @@ Enabling your customers to create shopping lists, allowing you to sell products 
 Both in the B2B and B2C contexts, you’ll find many cases when you want to sell products not by unit but by different measures. For example, you can offer apples by “kilogram” and cables by “Centimeter”, “Meter” or “Feet” instead of by “Item”. This API enables you to **use measurement units throughout the purchasing’s user journey in product detail pages, cart, checkout, and orders**.
 
 #### Documentation
-[Measurement Units API](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html)
+[Measurement Units API](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-measurement-units.html)
 
 ### Shopping Lists API
 In the B2B context, shopping lists play a key role. Company users can create and manage shopping lists of frequently purchased products to help them complete recurrent purchases and to organize their shopping preferences with ease. With this API, you can **enable your customers’ company users to create and retrieve shopping lists, edit and delete them, add and remove items from a shopping list, etc**.
 
 #### Documentation
-[Shopping Lists API](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-shopping-lists/managing-shopping-lists.html)
+[Shopping Lists API](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-shopping-lists/managing-shopping-lists.html)
 
 ### Promotional Products API
 Equally important in B2B and B2C are product discounts and promotions. In our previous release, we already provided endpoints for cart rules and vouchers. Now you will also be able to make use of the API to **offer discounts consisting of promotional products**. With this API, you can apply promotional product discounts to allow adding a promotional product to cart and highlight it among the cart items.
 
 #### Documentation
-[Promotions API](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-promotional-items.html)
+[Promotions API](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-promotional-items.html)
 
 ### Checkout API - Shipment and Payment Methods
 The checkout process is paramount for your business in any business model. With this API, you will be able to **integrate shipment and payment methods** seamlessly in your checkout process. You can get shipment and payment methods with one single request and also make use of only the information you need on each checkout step, with clear identification and decoupling of the selected methods’ information.
 
 #### Documentation
 
-* [Checking Out Purchases and Getting Checkout Data](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html)
-* [Retrieving Customer's Order History](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-orders.html)
+* [Checking Out Purchases and Getting Checkout Data](/docs/scos/dev/glue-api-guides/{{site.version}}/checking-out/checking-out-purchases.html)
+* [Retrieving Customer's Order History](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-orders.html)
 
 ### Refresh Token API - Create Possibility to Invalidate Refresh Tokens
 To enable the maximum level of security for your system, you must be able to invalidate refresh tokens in the presence of potential menaces. With this API **refresh tokens are made persistent long-term and you will be able to revoke them at any time for each user**. You can also configure the amount of time for persistence and clean the refresh tokens up from the database when necessary.
 
 #### Documentation
-[Token Revocation](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html#token-revocation)
+[Token Revocation](/docs/scos/dev/glue-api-guides/{{site.version}}/authentication-and-authorization.html#token-revocation)
 
 ### Swagger Documentation Generator Contains “Includes” by Endpoint
 In order to make it easier for API consumers to understand the content of those endpoints following the compound documents section of the JSONAPI specification, in this release, we have introduced improvements that will allow you to have upfront information by endpoint about the **primary resources that can be included in the response**. This can be useful not only for a basic understanding of the endpoints but also for automation purposes.
 
 #### Documentation
-[Resource Relationships](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/introduction-tutorials/glue-api/documenting-glue-api-resources.html#resource-relationships)
+[Resource Relationships](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/documenting-glue-api-resources.html#resource-relationships)
 
 ## Technical Enhancements
 ### Enable Jenkins v2 with SSL

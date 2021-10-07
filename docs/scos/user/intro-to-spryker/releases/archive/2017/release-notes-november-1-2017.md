@@ -27,9 +27,9 @@ This release focuses on enabling multi-currency for shipments. It allows you to 
 
 **Documentation**
 For module documentation, see Shipment Module Guide<!--/module_guide/spryker/shipment.htm)-->.
-For detailed migration guides, see [Shipment Module Migration Guide from Version 5. to 6](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-shipment.html#upgrading-from-version-5---to-version-6--).
+For detailed migration guides, see [Shipment Module Migration Guide from Version 5. to 6](/docs/scos/dev/migration-and-integration/{{site.version}}/module-migration-guides/migration-guide-shipment.html#upgrading-from-version-5---to-version-6--).
 For store administration guides, see Shipment Store Administration Guide<!--/administration_interface_guide/shipment.htm)-->
-For other related documentation, see [HowTo - Add New Shipment Method](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/howto-add-a-new-shipment-method-2.0.html)
+For other related documentation, see [HowTo - Add New Shipment Method](/docs/scos/dev/tutorials-and-howtos/howtos/howto-add-a-new-shipment-method-2.0.html)
 
 **Migration Guides**
 To upgrade, follow the steps described below:
@@ -56,7 +56,7 @@ This release provides the required infrastructure for Publish &amp; Synchronisat
 | <ul><li>[Event 2.0.0](https://github.com/spryker/Event/releases/tag/2.0.0)</li><li>[Queue 1.0.0](https://github.com/spryker/Queue/releases/tag/1.0.0)</li><li>[RabbitMq 1.0.0](https://github.com/spryker/rabbit-mq/releases/tag/1.0.0)</li></ul> | <ul><li>[Availability 5.2.0](https://github.com/spryker/Availability/releases/tag/5.2.0)</li><li>[Category 4.2.0](https://github.com/spryker/Category/releases/tag/4.2.0)</li><li>[Cms 6.3.0](https://github.com/spryker/Cms/releases/tag/6.3.0)</li><li>[CmsBlock 1.4.0](https://github.com/spryker/cms-block/releases/tag/1.4.0)</li><li>[Console 3.2.0](https://github.com/spryker/Console/releases/tag/3.2.0)</li><li>[EventBehavior 0.1.0](https://github.com/spryker/event-behavior/releases/tag/0.1.0)</li><li>[Glossary 3.2.0](https://github.com/spryker/Glossary/releases/tag/3.2.0)</li><li>[Kernel 3.12.0](https://github.com/spryker/Kernel/releases/tag/3.12.0)</li><li>[Navigation 2.1.0](https://github.com/spryker/Navigation/releases/tag/2.1.0)</li><li>[Price 4.3.0](https://github.com/spryker/Price/releases/tag/4.3.0)</li><li>[Product 5.3.0](https://github.com/spryker/Product/releases/tag/5.3.0)</li><li>[ProductCategory 4.4.0](https://github.com/spryker/product-category/releases/tag/4.4.0)</li><li>[ProductGroup 1.1.0](https://github.com/spryker/product-group/releases/tag/1.1.0)</li><li>[ProductImage 3.4.0](https://github.com/spryker/product-image/releases/tag/3.4.0)</li><li>[ProductLabel 2.2.0](https://github.com/spryker/product-label/releases/tag/2.2.0)</li><li>[ProductOption 5.4.0](https://github.com/spryker/product-option/releases/tag/5.4.0)</li><li>[ProductRelation 1.1.0](https://github.com/spryker/product-relation/releases/tag/1.1.0)</li><li>[ProductSearch 5.2.0](https://github.com/spryker/product-search/releases/tag/5.2.0)</li><li>[ProductSet 1.2.0](https://github.com/spryker/product-set/releases/tag/1.2.0)</li><li>[PropelOrm 1.3.0](https://github.com/spryker/propel-orm/releases/tag/1.3.0)</li><li>[Search 6.8.0](https://github.com/spryker/Search/releases/tag/6.8.0)</li><li>[Synchronization 0.1.0](https://github.com/spryker/Synchronization/releases/tag/0.1.0)</li><li>[SynchronizationBehavior 0.1.0](https://github.com/spryker/synchronization-behavior/releases/tag/0.1.0)</li><li>[Transfer 3.5.0](https://github.com/spryker/transfer/releases/tag/3.5.0)</li><li>[Url 3.2.0](https://github.com/spryker/Url/releases/tag/3.2.0)</li><li>[UtilSanitize 2.1.0](https://github.com/spryker/util-sanitize/releases/tag/2.1.0)</li></ul> | n/a |
 
 **Documentation**
-For detailed migration guides, see [RabbitMQ Module Migration Guide from Version 0. to 1](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-rabbitmq.html#upgrading-from-version-0---to-version-1--).
+For detailed migration guides, see [RabbitMQ Module Migration Guide from Version 0. to 1](/docs/scos/dev/migration-and-integration/{{site.version}}/module-migration-guides/migration-guide-rabbitmq.html#upgrading-from-version-0---to-version-1--).
 
 **Migration Guides**
 To upgrade, follow the steps described below:
@@ -75,7 +75,7 @@ composer require spryker/rabbit-mq:"^1.0.0" spryker/event:"^2.0.0" spryker/event
 
 ## Improvements
 ### State Machine Sub-process Reuse
-A sub-processes in Spryker state machine allows you to simplify workflows. Each sub-process can represent a part of your business logic. Sometimes within the business logic you might need to have same or similar sub-processes multiple times (e.g. transactional email, refund). With this release, we allow you to copy state machine sub-processes as many times as you need in a project workflow. This will allow you to reuse existing parts of a state machine schema. For more details, see [Modelling - State Machine](/docs/scos/dev/back-end-development/zed/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html).
+A sub-processes in Spryker state machine allows you to simplify workflows. Each sub-process can represent a part of your business logic. Sometimes within the business logic you might need to have same or similar sub-processes multiple times (e.g. transactional email, refund). With this release, we allow you to copy state machine sub-processes as many times as you need in a project workflow. This will allow you to reuse existing parts of a state machine schema. For more details, see [Modelling - State Machine](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html).
 
 **Affected Modules**
 
@@ -161,8 +161,8 @@ Our recent Calculation 4.2.0 release introduced a BC breaking issue in Calculati
 ## Documentation Updates
 The following content has been added to the Academy:
 
-* [Queue Integration - Loggly](/docs/scos/dev/technology-partners/{{page.version}}/operational-tools-monitoring-legal-etc/loggly.html)
-* [Payolution — Configuration](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/payolution/payolution-installation-and-configuration.html)
-* [Payolution — Workflow](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/payolution/technical-details-and-howtos/payolution-workflow.html)
+* [Queue Integration - Loggly](/docs/scos/user/technology-partners/{{site.version}}/operational-tools-monitoring-legal-etc/loggly.html)
+* [Payolution — Configuration](/docs/scos/user/technology-partners/{{site.version}}/payment-partners/payolution/payolution-installation-and-configuration.html)
+* [Payolution — Workflow](/docs/scos/user/technology-partners/{{site.version}}/payment-partners/payolution/technical-details-and-howtos/payolution-workflow.html)
 
 Your feedback would be highly appreciated. Please help us understand what you need from the Spryker Academy by filling out a very short [survey](https://docs.google.com/forms/d/1_vZg0lfqq24Qf9-fQhU50NgsEBy4eDqnDyx7gKz9Faw/edit).

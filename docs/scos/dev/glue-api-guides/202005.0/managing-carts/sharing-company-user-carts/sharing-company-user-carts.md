@@ -23,7 +23,7 @@ The endpoints provided by the API cannot be accessed anonymously. For this reaso
 {% endinfo_block %}{target="_blank"}.)
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Shared Carts Feature Integration](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/shared-carts-feature-integration.html){target="_blank"}.
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Shared Carts Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shared-carts-feature-integration.html){target="_blank"}.
 
 ## Shared Carts in Spryker
 Registered users can [share](/docs/scos/user/features/{{page.version}}/shared-carts-feature-overview.html){target="_blank"} the carts owned by them with other users in their company. The feature can help them distribute the workload among their team members.

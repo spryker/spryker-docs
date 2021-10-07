@@ -4,6 +4,8 @@ entries:
     nested:
       - title: Getting started with the Spryker Cloud Commerce OS
         url: /docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html
+      - title: Environments overview
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/environments-overview.html
       - title: Connecting Docker SDK
         url: /docs/cloud/dev/spryker-cloud-commerce-os/connecting-docker-sdk.html
       - title: Access
@@ -26,9 +28,9 @@ entries:
         url: /docs/cloud/dev/spryker-cloud-commerce-os/preparation-for-going-live.html
       - title: Setting up a custom domain name
         url: /docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-domain-name/setting-up-a-custom-domain-name.html
-        nested:      
+        nested:
           - title: Setting up a custom domain name with Route 53
-            url: /docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-domain-name/setting-up-a-custom-domain-name-with-route-53.html      
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-domain-name/setting-up-a-custom-domain-name-with-route-53.html
           - title: Setting up a custom domain name with a third-party DNS zone provider
             url: /docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-domain-name/setting-up-a-custom-domain-name-with-a-third-party-dns-zone-provider.html
       - title: Setting up a custom SSL certificate
@@ -58,6 +60,10 @@ entries:
         url: /docs/cloud/dev/spryker-cloud-commerce-os/customizing-aws-cloudwatch-dashboards.html      
       - title: Managing parameters in the Parameter Store
         url: /docs/cloud/dev/spryker-cloud-commerce-os/managing-parameters-in-the-parameter-store.html
+      - title: Verifying email addresses
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/verifying-email-addresses.html
+      - title: Peformance testing
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/performance-testing.html
       - title: Troubleshooting
         url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting.html
       - title: Release notes

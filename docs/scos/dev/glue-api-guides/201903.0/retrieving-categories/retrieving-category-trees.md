@@ -20,7 +20,7 @@ For more information on managing the category tree, see [Category Hierarchy](/do
 {% endinfo_block %}
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Category API Feature Integration](/docs/scos/dev/migration-and-integration/201903.0/feature-integration-guides/glue-api/category-api-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Category API Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/category-api-feature-integration.html).
 
 ## Get Full Category Tree
 To retrieve the full category tree, containing all available nodes and their children, send a GET request to the following endpoint:

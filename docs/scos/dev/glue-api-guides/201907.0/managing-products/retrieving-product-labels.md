@@ -14,7 +14,7 @@ Product labels are available only for abstract products.
 {% endinfo_block %}
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Product Labels API](/docs/scos/dev/migration-and-integration/201907.0/feature-integration-guides/glue-api/glue-promotions-and-discounts-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Product Labels API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-promotions-and-discounts-feature-integration.html).
 
 ## Get Product Label by ID
 To retrieve a product label, send this GET request:

@@ -17,7 +17,7 @@ The endpoints provided by this API cannot be accessed anonymously. To access the
 In your development, the API can help you to provide information on the company that the authenticated user belongs to.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Company Account Feature Integration](/docs/scos/dev/migration-and-integration/201907.0/feature-integration-guides/glue-api/glue-api-company-account-feature-integration.html)
+For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Company Account Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html)
 
 ## Retrieving Company Information
 ### Information on the User's Company

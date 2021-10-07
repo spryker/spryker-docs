@@ -188,7 +188,7 @@ The slot list contains the following information:
 | status | Defines whether the slot is active or not where "0" stands for "inactive" and "1" stands for "active". If a slot is inactive, it is not rendered in the Storefront by the slot widget. | 1 |
 
 ## Content Providers
-A content provider is a source from where Slot Widget fetches content to embed into slots and, subsequently, render it in the Storefront.  With templates and slots, you can use slots to embed the content created in your Spryker project or CMS editors of technology partners (e.g. [CoreMedia](/docs/scos/dev/technology-partners/{{page.version}}/content-management/coremedia/coremedia.html), [E-spirit](/docs/scos/dev/technology-partners/{{page.version}}/content-management/e-spirit.html), [Styla](/docs/scos/dev/technology-partners/{{page.version}}/content-management/styla.html), [Magnolia](/docs/scos/dev/technology-partners/{{page.version}}/content-management/magnolia.html)).
+A content provider is a source from where Slot Widget fetches content to embed into slots and, subsequently, render it in the Storefront.  With templates and slots, you can use slots to embed the content created in your Spryker project or CMS editors of technology partners (e.g. [CoreMedia](/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia.html), [E-spirit](/docs/scos/user/technology-partners/{{page.version}}/content-management/e-spirit.html), [Styla](/docs/scos/user/technology-partners/{{page.version}}/content-management/styla.html), [Magnolia](/docs/scos/user/technology-partners/{{page.version}}/content-management/magnolia.html)).
 
 With templates and slots, the following applies:
 
@@ -229,7 +229,7 @@ A developer can [import visibility conditions](/docs/scos/dev/developer-guides/{
 ## Slot Widget
 Slot widget is used to fetch content from a content provider and render it in specified pages. Content is fetched in the form of HTML code ready to be rendered in the Storefront. With the help of slot widgets, you can fetch and render content from the following content providers:
 
-* [CoreMedia](/docs/scos/dev/technology-partners/{{page.version}}/content-management/coremedia/coremedia.html)
+* [CoreMedia](/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia.html)
 * [Spryker CMS Blocks](#spryker-cms-blocks)
 
 
@@ -385,7 +385,7 @@ Currently, the functionality has the following functional constraints which are 
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                                                <li><a href="/docs/scos/dev/technology-partners/{{page.version}}/content-management/coremedia/coremedia.html-with-templates-slots" class="mr-link">Learn about the CoreMedia technology partner integration</a></li>
+                                                <li><a href="/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia.html-with-templates-slots" class="mr-link">Learn about the CoreMedia technology partner integration</a></li>
                                 <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\cms-feature-integration.md" class="mr-link">Enable templates and slots in your project by integrating the CMS feature</a></li>
                                 <li><a href="/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html" class="mr-link">Learn how to create a visibility condition</a></li>                
                 <li><a href="/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-cmsblock.html#upgrading-from-version-2---to-version-3--" class="mr-link">Migrate the CmsBlock module from version 2.* to version 3.*</a></li>
@@ -397,7 +397,7 @@ Currently, the functionality has the following functional constraints which are 
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title">Back Office User</li>
-                                <li><a href="/docs/scos/dev/technology-partners/{{page.version}}/content-management/coremedia/coremedia.html-with-templates-slots" class="mr-link">Learn about the CoreMedia technology partner integration</a></li>
+                                <li><a href="/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia.html-with-templates-slots" class="mr-link">Learn about the CoreMedia technology partner integration</a></li>
                                 <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\content\adding-content-to-storefront-pages-using-templates-and-slots-best-practices.md" class="mr-link">Add content to Storefront using templates and slots</a></li>
                                 <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html" class="mr-link">Manage slots</a></li>
             </ul>

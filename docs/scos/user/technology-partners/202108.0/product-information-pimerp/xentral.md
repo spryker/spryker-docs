@@ -11,7 +11,7 @@ redirect_from:
 ---
 
 ## Partner Information
-[ABOUT XENTRAL](https://xentral.com/){target="_blank"}
+[ABOUT XENTRAL](https://xentral.com/en/){target="_blank"}
 Xentral is a flexible ERP / CRM software that can be configured according to individual requirements. Xentral is available in four basic versions with different range of functions. The App-Store contains over 100 modules such as sales cockpit, automated warehouse management or major manufacturing programs that can be installed with just a few clicks. In addition, Xentral offers interfaces to all common online shop systems and marketplaces, shipping service providers, payment providers and much more.
 
 YOUR ADVANTAGES:

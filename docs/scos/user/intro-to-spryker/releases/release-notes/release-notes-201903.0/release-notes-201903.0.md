@@ -52,7 +52,7 @@ Starting from this release, you can also apply a discount to a group of products
 
 ![Discount on group of products](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201903.0/image1.png)
 
-**Documentation**: [Discount](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html).
+**Documentation**: [Discount](/docs/scos/user/features/{{site.version}}/promotions-discounts-feature-overview.html).
 
 ### Back Office Translated to Multiple Language
 With this release, we have added a new opportunity for you to go global and build a multi-cultural team within your organization. Now, Spryker Back Office supports multiple languages and is shipped with UI in both English (en_US) and German (de_DE) languages.
@@ -71,13 +71,13 @@ Previously, the Back Office “Category” page could not display a large number
 If you have multiple stores configured, you can define in which store a CMS page will be visible. A Back Office user can configure that in the back office.
 ![Multi-store support for CMS pages](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201903.0/image9.png)
 
-**Documentation**: [Multi-store CMS Pages](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html).
+**Documentation**: [Multi-store CMS Pages](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-pages-overview.html).
 
 ### CMS Pages in Search Results
 Spryker improved search capabilities by including CMS pages in search results. Now, customers are redirected to the search result page containing two tabs: one for product pages and the other for CMS pages. The new tab lists CMS pages either as a list or as a grid.
 ![CMS pages in search results](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201903.0/image7.png)
 
-**Documentation**: [CMS Pages in Search Results](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-in-search-results-overview.html).
+**Documentation**: [CMS Pages in Search Results](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-pages-in-search-results-overview.html).
 
 ### New Template for Category Page
 The new template for the category page provides another navigation option for shops with a complex category structure. Having clicked a top-level category, a webshop visitor will be redirected to a subcategory page that shows a grid consisting of subcategory images. The shop owner can assign an image to each category in Back Office that will be shown on the page.
@@ -96,7 +96,7 @@ In this release, we have improved the way the session works in Spryker. Out of t
 
 If a user does not interact with the site for a specific period of time, the session will expire, and the user will be redirected to the login page for their next action.
 
-**Documentation**: [Session Management](/docs/scos/dev/back-end-development/zed/data-manipulation/data-enrichment/session-handlers.html).
+**Documentation**: [Session Management](/docs/scos/dev/back-end-development/data-manipulation/data-enrichment/session-handlers.html).
 
 ## SDK
 ### Code Sniffer, Architecture Sniffer, PHPStan Improvements
@@ -104,12 +104,12 @@ In this release, we have extended the Code Sniffer with the new concepts of leve
 
 PHPStan has been updated with config file inheritance. From now on, only new or changed settings need to be defined for a module. General settings are defined and loaded automatically for all modules.
 
-**Documentation**: [Code Sniffer](/docs/scos/dev/sdk/{{page.version}}/development-tools/code-sniffer.html), [Architecture Sniffer](/docs/scos/dev/sdk/{{page.version}}/development-tools/architecture-sniffer.html), [PHPStan](/docs/scos/dev/sdk/{{page.version}}/development-tools/phpstan.html).
+**Documentation**: [Code Sniffer](/docs/scos/dev/sdk/{{site.version}}/development-tools/code-sniffer.html), [Architecture Sniffer](/docs/scos/dev/sdk/{{site.version}}/development-tools/architecture-sniffer.html), [PHPStan](/docs/scos/dev/sdk/{{site.version}}/development-tools/phpstan.html).
 
 ### Spryk: Code Generation Tool
 With this release, Spryker introduces a new code generator called Spryk. It helps with the generation of required boilerplate code. Spryk works for new and existing code and supports multiple scenarios or definitions. Some scenarios are complex and implemented as independent Spryk definitions linked together, allowing a developer to run code generation for the whole scenario or only for a part of it.
 
-**Documentation**: [Spryk](/docs/scos/dev/sdk/{{page.version}}/development-tools/spryk-code-generator.html).
+**Documentation**: [Spryk](/docs/scos/dev/sdk/{{site.version}}/development-tools/spryk-code-generator.html).
 
 ## Spryker Glue REST API
 ### Product Relations
@@ -125,12 +125,12 @@ Every navigation node and its structure are retrievable via the navigation API e
 ### Alternative Products
 Product alternatives for concrete and abstract products are available via the respective endpoints. This allows you to offer alternatives for discontinued and unavailable products when needed.
 
-**Documentation**: [Retrieving Alternative Products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-alternative-products.html).
+**Documentation**: [Retrieving Alternative Products](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/retrieving-alternative-products.html).
 
 ### Optional Resource Relationships
 From now on, resource relationships are not included in the response by default. This will minimize the load for all endpoints in the default mode. You can specify required relationships using the include parameter of GET requests.
 
-**Documentation**: [Configuring Visibility of the Included Section](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/glue-api-howtos/configuring-visibility-of-the-included-section.html).
+**Documentation**: [Configuring Visibility of the Included Section](/docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-visibility-of-the-included-section.html).
 
 ## B2B
 ### Quick Order Improvements
@@ -151,7 +151,7 @@ We are introducing one of the core B2B features which enables managers to contro
 * Business on Behalf: Back Office interface for creating Business on Behalf users has been implemented. Now, the feature supports both ways to create Business on Behalf users – via Import and through the Admin UI.
 * Reclamation: Allows creating a reclamation from an order on the item level.
 
-**Documentation**: [Checkout](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html), [Business on Behalf](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/business-on-behalf-overview.html), [Reclamations](https://documentation.spryker.com/2021080/docs/reclamations).
+**Documentation**: [Checkout](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/multi-step-checkout-overview.html), [Business on Behalf](/docs/scos/user/features/{{site.version}}/company-account-feature-overview/business-on-behalf-overview.html), [Reclamations](https://documentation.spryker.com/2021080/docs/reclamations).
 
 ## Partner Integrations
 ### Heidelpay Marketplace Payments
@@ -159,7 +159,7 @@ With the market showing an increasing number of marketplaces, Spryker has integr
 
 Customer payments can now be split in the background and assigned to the corresponding vendors when a client buys a product delivered by different vendors. This feature ensures customers can buy several units of the same product sold by different vendors while still going through the checkout with one single order and one single payment.
 
-**Documentation**: [Heidelpay - Split-payment Marketplace](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-split-payment-marketplace.html).
+**Documentation**: [Heidelpay - Split-payment Marketplace](/docs/scos/user/technology-partners/{{site.version}}/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-split-payment-marketplace.html).
 
 ### Adyen
 Our recently finished Adyen integration covers a wide range of payment methods used both in the DACH region as well as outside of it, thus making sure customers can select the most appropriate payment method.
@@ -175,11 +175,11 @@ Out-of-the-box the following payment methods are included:
 * QR code payment methods (Alipay, WeChat)
 * further ones can be added to the project
 
-**Documentation**: [Adyen](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/adyen/adyen.html).
+**Documentation**: [Adyen](/docs/scos/user/technology-partners/{{site.version}}/payment-partners/adyen/adyen.html).
 
 ### Arvato AfterPay
 In addition to the existing Arvato RSS integration, Spryker has added the AfterPay payment method of Arvato, further extending the overall payment integrations of the Spryker Ecosystem. This invoice payment method includes a risk check of the potential uncertainty behind specific purchases and lowers the overall risk of fraud; used by default for the companies.
 
-**Documentation**: [AfterPay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/afterpay/afterpay.html).
+**Documentation**: [AfterPay](/docs/scos/user/technology-partners/{{site.version}}/payment-partners/afterpay/afterpay.html).
 
 Check out [Documentation Updates](/docs/scos/user/intro-to-spryker/whats-new/documentation-updates.html) for all the updates to documentation made with this release.

@@ -27,27 +27,27 @@ The Spryker Commerce OS offers integrations with several payment providers that 
 
 The Spryker Commerce OS supports integration of the following payment providers, which are our official partners:
 
-* [Adyen](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/adyen/adyen.html)
-* [AfterPay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/afterpay/afterpay.html)
-* [Amazon Pay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/amazon-pay/amazon-pay.html)
-* [Arvato](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/arvato/arvato.html)
-* [Billie](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/billie.html)
-* [Billpay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/billpay/billpay.html)
-* [Braintree](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/braintree/braintree.html)
-* [BS Payone](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/bs-payone/bs-payone.html)
-* [Computop](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop.html)
-* [CrefoPay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/crefopay/crefopay.html)
-* [Heidelpay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/heidelpay/heidelpay.html)
-* [Klarna](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/klarna/klarna.html)
-* [Payolution](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/payolution/payolution.html)
-* [Powerpay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/powerpay.html)
-* [Ratenkauf by Easycredit](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html)
-* [RatePay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/ratepay/ratepay.html)
+* [Adyen](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen.html)
+* [AfterPay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/afterpay/afterpay.html)
+* [Amazon Pay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/amazon-pay/amazon-pay.html)
+* [Arvato](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/arvato/arvato.html)
+* [Billie](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/billie.html)
+* [Billpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/billpay/billpay.html)
+* [Braintree](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/braintree/braintree.html)
+* [BS Payone](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/bs-payone.html)
+* [Computop](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop.html)
+* [CrefoPay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/crefopay/crefopay.html)
+* [Heidelpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/heidelpay/heidelpay.html)
+* [Klarna](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/klarna/klarna.html)
+* [Payolution](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/payolution/payolution.html)
+* [Powerpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/powerpay.html)
+* [Ratenkauf by Easycredit](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html)
+* [RatePay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay/ratepay.html)
 
 ## Dummy payment
 
 By default, Spryker provides the [DummyPayment](https://github.com/spryker/dummy-payment) module, which has Credit Card and Invoice payments implemented. You can use these implemented payment methods, or refer to the DummyPayment modulewhen implementing additional payment methods in your project.
-For details on how a new payment method is implemeted, see the articles on [how to implement the Direct Debit payment method](/docs/scos/dev/back-end-development/zed/data-manipulation/payment-methods/direct-debit-example-implementation/implementing-direct-debit-payment.html). Based on the examples in these articles, you can implement other payment methods for your projects.
+For details on how a new payment method is implemeted, see the articles on [how to implement the Direct Debit payment method](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementing-direct-debit-payment.html). Based on the examples in these articles, you can implement other payment methods for your projects.
 
 ## Payment methods in the Back Office
 

@@ -24,9 +24,10 @@ Ensure a smooth shopping experience with the powerful product management feature
          </div>
 </div>
 
-Check out this video tutorial on how to build products and manage the product information: 
+Check out this video tutorial on how to build products and manage the product information:
 
-<iframe src="https://spryker.wistia.com/medias/5but6m8r57" title="Product Information Management" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>
+{% wistia 5but6m8r57 960 720 %}
+
 
 **Features:**
 <div>

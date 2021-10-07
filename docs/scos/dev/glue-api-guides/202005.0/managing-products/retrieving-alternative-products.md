@@ -30,7 +30,7 @@ It is the responsibility of the client to identify whether a product is unavaila
 {% endinfo_block %}
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Alternative Products Feature Integration](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-alternative-products-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Alternative Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-alternative-products-feature-integration.html).
 
 {% info_block infoBox %}
 To be able to use **Product Alternatives API**, first, you need to have the _Alternative Products_ feature integrated with your project.<br>To be able to handle discontinued products, first, integrate the _Discontinued Products_ feature.

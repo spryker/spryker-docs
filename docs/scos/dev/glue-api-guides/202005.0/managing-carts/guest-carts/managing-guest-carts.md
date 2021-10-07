@@ -21,9 +21,9 @@ See [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.v
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Carts API](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-cart-feature-integration.html)
-* [Glue API: Measurement Units Feature Integration](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-measurement-units-feature-integration.html)
-* [Promotions & Discounts API](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
+* [Carts API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)
+* [Glue API: Measurement Units Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-measurement-units-feature-integration.html)
+* [Promotions & Discounts API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
 
 
 

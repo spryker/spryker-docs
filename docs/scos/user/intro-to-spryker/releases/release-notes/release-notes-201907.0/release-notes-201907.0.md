@@ -69,7 +69,7 @@ In the Back Office, you can now define the order in which your images appear. Fo
 
 ![Reorder images](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image10.png)
 
-**Documentation**: [Product Image Management](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-images-overview.html)
+**Documentation**: [Product Image Management](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-images-overview.html)
 ***
 ## CMS
 ### CMS Content Items
@@ -114,10 +114,10 @@ In the B2B environment, users are organized in Business Units depending on the s
 
 **Documentation**:  
 
-* [Retrieving Company Information](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-companies.html)
-* [Retrieving Business Unit Information](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-business-units.html)
-* [Retrieving Company User Information](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-company-users.html)
-* [Retrieving Company Role Information](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-company-roles.html)
+* [Retrieving Company Information](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/retrieving-companies.html)
+* [Retrieving Business Unit Information](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/retrieving-business-units.html)
+* [Retrieving Company User Information](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/retrieving-company-users.html)
+* [Retrieving Company Role Information](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/retrieving-company-roles.html)
 
 ### OAuth + Customer Account
 Provides a way to authorize access to resources related to the level of permissions of each user, to update and revoke those permissions as well as manage the level of access of the company users to API resources according to their existing permissions at every given moment, everything is handled by the access token.
@@ -126,17 +126,17 @@ Provides a way to authorize access to resources related to the level of permissi
 
 * [Security and Authentication](/docs/scos/dev/glue-api-guides/security-and-authentication.html)
 * [B2B Logging in as Company User](https://documentation.spryker.com/2021080/docs/logging-in-as-company-user-201907)
-* [Retrieving Company Role Information](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-company-roles.html)
+* [Retrieving Company Role Information](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/retrieving-company-roles.html)
 
 ### Multicart API
 In the B2B world, company users can create and manage multiple carts according to their shopping needs and different purposes. With the Multicart API, users can create, manage and update multiple carts, assign products to each of them, update and delete items.
 
-**Documentation**: [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html)
+**Documentation**: [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html)
 
 ### Shared Carts API
 Users may also decide to work in a collaborative way and share their carts with other members of their Business Units, assign different levels of permissions to them and manage those permissions with ease. That’s the purpose of our Shared Carts API.
 
-**Documentation**: [Shared Carts API](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/sharing-company-user-carts/managing-shared-company-user-carts.html)
+**Documentation**: [Shared Carts API](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/sharing-company-user-carts/managing-shared-company-user-carts.html)
 
 ### Payments by Third Party Providers API
 In many cases, you may decide to provide your buyers and users with alternative payment methods that are handled completely by third party providers. The Payments by third Party Providers API provides you an endpoint to retrieve the payment completion order from those external providers to continue with the order according to your workflow.
@@ -199,7 +199,7 @@ The feature also supports an alternative flow when a customer and salesperson ha
 #### Compatibility Issues:
 Request for Quote v. 2.0.0  does not support bundles
 
-**Documentation**: [Request for Quote](/docs/scos/user/features/{{page.version}}/quotation-process/quotation-process.html)
+**Documentation**: [Request for Quote](/docs/scos/user/features/{{site.version}}/quotation-process/quotation-process.html)
 
 ### Punchout
 This new functionality allows the B2B buyers to access Spryker’s online shop from within their ERP or procurement system.
@@ -235,27 +235,27 @@ Cart in the Preview mode can also be shared with users in your company because i
 
 ![Unique URL for Easy Cart Sharing](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image4.png)
 
-**Documentation**: [Unique URL per Cart for Easy Sharing](/docs/scos/user/features/{{page.version}}/resource-sharing-feature-overview.html)
+**Documentation**: [Unique URL per Cart for Easy Sharing](/docs/scos/user/features/{{site.version}}/resource-sharing-feature-overview.html)
 
 ### Other Improvements
 
 * Vault - We introduce the Vault place where you can store valuable information and get it from there by ID in an encrypted form and vice versa
-    **Documentation**: [Vault for Tokens](/docs/scos/user/features/{{page.version}}/spryker-core/spryker-core-feature-overview/vault-for-tokens-overview.html)
+    **Documentation**: [Vault for Tokens](/docs/scos/user/features/{{site.version}}/spryker-core/spryker-core-feature-overview/vault-for-tokens-overview.html)
 
 * Customer Login by Token - Ability to log in to the Spryker Commerce OS by token
-    **Documentation**: [Customer Login by Token](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/customer-login-by-token-overview.html)
+    **Documentation**: [Customer Login by Token](/docs/scos/user/features/{{site.version}}/company-account-feature-overview/customer-login-by-token-overview.html)
 
 ***
 ## Partner Integrations
 ### Payone Cash on Delivery
 We have extended our Payone module with the cash-on-delivery payment method. This can now be used by merchants to address some of the most skeptical customers who wish to pay for the order only once they have the product in their hands.
 
-**Documentation**: [Payone - Cash on Delivery](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/bs-payone/scos-integration/payone-cash-on-delivery.html)
+**Documentation**: [Payone - Cash on Delivery](/docs/scos/user/technology-partners/{{site.version}}/payment-partners/bs-payone/scos-integration/payone-cash-on-delivery.html)
 
 ### Heidelpay Easycredit
 We have extended our existing Heidelpay module with the payment method Easycredit, which allows customers to pay via an installment plan. This can help to increase your conversion rates of more expensive products and services.
 
-**Documentation**: [Heidelpay - Easy Credit](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-easy-credit.html)
+**Documentation**: [Heidelpay - Easy Credit](/docs/scos/user/technology-partners/{{site.version}}/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-easy-credit.html)
 
 ### RatePay
 We have extended our partner portfolio with a RatePay integration that offers 4 payment methods out-of-the-box:
@@ -267,20 +267,20 @@ We have extended our partner portfolio with a RatePay integration that offers 4 
 
 **Documentation**:
 
-* [RatePay - Prepayment](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/ratepay/ratepay-payment-methods/ratepay-prepayment.html)
-* [RatePay - Invoice](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/ratepay/ratepay-payment-methods/ratepay-invoice.html)
-* [RatePay - Direct Debit](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/ratepay/ratepay-payment-methods/ratepay-direct-debit.html)
-* [RatePay - Installment](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/ratepay/ratepay-payment-methods/ratepay-installment.html)
+* [RatePay - Prepayment](/docs/scos/user/technology-partners/{{site.version}}/payment-partners/ratepay/ratepay-payment-methods/ratepay-prepayment.html)
+* [RatePay - Invoice](/docs/scos/user/technology-partners/{{site.version}}/payment-partners/ratepay/ratepay-payment-methods/ratepay-invoice.html)
+* [RatePay - Direct Debit](/docs/scos/user/technology-partners/{{site.version}}/payment-partners/ratepay/ratepay-payment-methods/ratepay-direct-debit.html)
+* [RatePay - Installment](/docs/scos/user/technology-partners/{{site.version}}/payment-partners/ratepay/ratepay-payment-methods/ratepay-installment.html)
 
 ### Episerver
 We now have a new integration of our new partner Episerver and their online platform to support newsletters as well as the transactional notifications required in the usual e-commerce transactions.
 
-**Documentation**: [Episerver](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/episerver/episerver.html)
+**Documentation**: [Episerver](/docs/scos/user/technology-partners/{{site.version}}/marketing-and-conversion/customer-communication/episerver/episerver.html)
 
 ### Easycredit Direct Integration
 We have now a new integration of our new partner TeamBank AG and their payment method Ratenkauf by Easycredit, which allows customers to pay via an installment plan. This can help to increase your conversion rates of the more expensive products and services.
 
-**Documentation**: [Ratenkauf by Easycredit - Installation and Configuration](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit-installation-and-configuration.html)
+**Documentation**: [Ratenkauf by Easycredit - Installation and Configuration](/docs/scos/user/technology-partners/{{site.version}}/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit-installation-and-configuration.html)
 
 ### CrefoPay
 We now have an integration with our new payment partner CrefoPay, which will provide the following payment methods out-of-the-box including partial operations and B2B:
@@ -292,7 +292,7 @@ We now have an integration with our new payment partner CrefoPay, which will pro
 * Sofort
 * Cash on Delivery
 
-**Documentation**: [CrefoPay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/crefopay/crefopay-installation-and-configuration.html)
+**Documentation**: [CrefoPay](/docs/scos/user/technology-partners/{{site.version}}/payment-partners/crefopay/crefopay-installation-and-configuration.html)
 
 ***
 ## Technical Enhancements

@@ -17,7 +17,7 @@ In your development, these resources can help you to:
 * Enrich customer profiles with additional data such as addresses
 
 ## Installation
-For details on the modules that provide the API functionality and how to install them, see [Customer API Feature Integration](/docs/scos/dev/migration-and-integration/201903.0/feature-integration-guides/glue-api/customer-api-feature-integration.html).
+For details on the modules that provide the API functionality and how to install them, see [Customer API Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/customer-api-feature-integration.html).
 
 ## Creating a Customer
 To create a new customer user, send a POST request to the following endpoint:

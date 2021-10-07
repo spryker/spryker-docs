@@ -23,7 +23,7 @@ For more details on managing navigation trees, see [Navigation](/docs/scos/user/
 {% endinfo_block %}
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Navigation Feature Integration](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/glue-api/glue-api-navigation-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Navigation Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-navigation-feature-integration.html).
 
 ## Usage
 To retrieve a navigation tree with detailed information on each node, send a GET request to the following endpoint:

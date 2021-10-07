@@ -22,7 +22,7 @@ Discounts provided based on *cart rules* are calculated and taken into account a
 In your development, the API will help you to enable customers to apply voucher discounts to their purchases and check the correct order amount, discount included.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Promotions & Discounts Feature Integration](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-promotions-and-discounts-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Promotions & Discounts Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html).
 
 ## Applying Discount Vouchers
 To apply a discount voucher, first, a customer needs to have a cart with some products in it.

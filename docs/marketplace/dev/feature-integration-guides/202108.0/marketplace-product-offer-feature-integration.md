@@ -49,7 +49,7 @@ Make sure that the following modules were installed:
 
 {% endinfo_block %}
 
-### 2) Set up database schema
+### 2) Set up database schema and transfer objects
 
 Adjust the schema definition so that entity changes will trigger events:
 
@@ -98,6 +98,7 @@ Verify that the following changes have been implemented by checking your databas
 | spy_product_offer_store                      | table  | created |
 | spy_product_concrete_product_offers_storage  | table  | created |
 | spy_product_offer_storage                    | table  | created |
+| spy_sales_order_item.product_offer_reference | column | created |
 | spy_product_offer_validity                   | table  | created |
 
 
@@ -105,25 +106,25 @@ Make sure that the following changes were applied in transfer objects:
 
 | TRANSFER  | TYPE  | EVENT | PATH  |
 | --------------- | -------- | ------ | ---------------- |
-| Item.productOfferReference         | property | created | src/Generated/Shared/Transfer/ItemTransfer                   |
-| MerchantProductOfferCriteria       | class     | created | src/Generated/Shared/Transfer/MerchantProductOfferCriteriaTransfer |
-| ProductOffer                       | class     | created | src/Generated/Shared/Transfer/ProductOfferTransfer           |
-| ProductOfferStore                  | class     | created | src/Generated/Shared/Transfer/ProductOfferStoreTransfer           |
-| ProductOfferResponse               | class     | created | src/Generated/Shared/Transfer/ProductOfferResponseTransfer           |
-| ProductOfferError                  | class     | created | src/Generated/Shared/Transfer/ProductOfferErrorTransfer           |
-| ProductOfferCollection             | class     | created | src/Generated/Shared/Transfer/ProductOfferCollectionTransfer           |
-| ProductOfferCriteria               | class     | created | src/Generated/Shared/Transfer/ProductOfferCriteriaTransfer           |
-| ProductOfferValidity               | class     | created | src/Generated/Shared/Transfer/ProductOfferValidityTransfer   |
-| ProductOfferValidityCollection     | class     | created | src/Generated/Shared/Transfer/ProductOfferValidityCollectionTransfer   |
-| ProductPageSearch.merchantReferences | property  | created | src/Generated/Shared/Transfer/ProductPageSearchTransfer   |
-| ProductPayload.merchantReferences    | property  | created | src/Generated/Shared/Transfer/ProductPayloadTransfer   |
-| PageMap.merchantReferences           | property  | created | src/Generated/Shared/Transfer/PageMapTransfer   |
-| ProductAbstractMerchant.merchantReferences | property  | created | src/Generated/Shared/Transfer/ProductAbstractMerchantTransfer   |
-| ProductView.productOfferReference | property  | created | src/Generated/Shared/Transfer/ProductViewTransfer   |
-| ProductOfferStorage               | class  | created | src/Generated/Shared/Transfer/ProductOfferStorageTransfer   |
-| ProductOfferStorageCollection     | class  | created | src/Generated/Shared/Transfer/ProductOfferStorageCollectionTransfer   |
-| ProductOfferStorageCriteria     | class  | created | src/Generated/Shared/Transfer/ProductOfferStorageCriteriaTransfer   |
-| ProductStorageCriteria.merchantReference     | property  | created | src/Generated/Shared/Transfer/ProductStorageCriteriaTransfer   |
+| Item.productOfferReference | property | created | src/Generated/Shared/Transfer/ItemTransfer
+| MerchantProductOfferCriteria | class | created | src/Generated/Shared/Transfer/MerchantProductOfferCriteriaTransfer
+| PageMap.merchantReferences | property | created | src/Generated/Shared/Transfer/PageMapTransfer
+| ProductAbstractMerchant.merchantReferences | property | created | src/Generated/Shared/Transfer/ProductAbstractMerchantTransfer
+| ProductOffer | class | created | src/Generated/Shared/Transfer/ProductOfferTransfer
+| ProductOfferCollection | class | created | src/Generated/Shared/Transfer/ProductOfferCollectionTransfer
+| ProductOfferCriteria | class | created | src/Generated/Shared/Transfer/ProductOfferCriteriaTransfer
+| ProductOfferError | class | created | src/Generated/Shared/Transfer/ProductOfferErrorTransfer
+| ProductOfferResponse | class | created | src/Generated/Shared/Transfer/ProductOfferResponseTransfer
+| ProductOfferStorage | class | created | src/Generated/Shared/Transfer/ProductOfferStorageTransfer
+| ProductOfferStorageCollection | class | created | src/Generated/Shared/Transfer/ProductOfferStorageCollectionTransfer
+| ProductOfferStorageCriteria | class | created | src/Generated/Shared/Transfer/ProductOfferStorageCriteriaTransfer
+| ProductOfferStore | class | created | src/Generated/Shared/Transfer/ProductOfferStoreTransfer
+| ProductOfferValidity | class | created | src/Generated/Shared/Transfer/ProductOfferValidityTransfer
+| ProductOfferValidityCollection | class | created | src/Generated/Shared/Transfer/ProductOfferValidityCollectionTransfer
+| ProductPageSearch.merchantReferences | property | created | src/Generated/Shared/Transfer/ProductPageSearchTransfer
+| ProductPayload.merchantReferences | property | created | src/Generated/Shared/Transfer/ProductPayloadTransfer
+| ProductStorageCriteria.merchantReference | property | created | src/Generated/Shared/Transfer/ProductStorageCriteriaTransfer
+| ProductView.productOfferReference | property | created | src/Generated/Shared/Transfer/ProductViewTransfer
 
 
 {% endinfo_block %}
@@ -242,7 +243,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 | ProductConcreteProductOffersSynchronizationDataBulkRepositoryPlugin | Allows synchronizing the entire storage table content into Storage. |           | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Synchronization |
 | ProductOfferSynchronizationDataBulkRepositoryPlugin                 | Allows synchronizing the entire storage table content into Storage. |           | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Synchronization |
 
-**rc/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
+**src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
 ```php
 <?php
@@ -1387,29 +1388,7 @@ Make sure that, in the navigation menu of the Back Office, you can see the **Mar
 
 Follow the steps below to install the Marketplace Product Offer feature front end.
 
-### Prerequisites
-
-To start feature integration, integrate the following features:
-
-| NAME | VERSION | INTEGRATION GUIDE |
-| ---------- | ----- | --------------|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration)  |
-
-### 1) Install the required modules using Composer
-
-If installed before, not needed.
-
-{% info_block warningBox "Verification" %}
-
-Verify that the following modules were installed:
-
-| MODULE | EXPECTED DIRECTORY |
-| ---------- | -------------- |
-| MerchantProductOfferWidget | spryker-shop/merchant-product-offer-widget |
-
-{% endinfo_block %}
-
-### 2) Add Translations
+### 1) Add Translations
 
 Append glossary according to your configuration:
 
@@ -1440,13 +1419,13 @@ Make sure that the configured data is added to the `spy_glossary` table in the d
 
 {% endinfo_block %}
 
-### 3) Set up widgets
+### 2) Set up widgets
 
 Register the following plugins to enable widgets:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 | -------------- | --------------- | ------ | ---------------- |
-| MerchantProductOfferWidget       | Shows the list of the offers with their prices for a concrete product. |           | SprykerShop\Yves\MerchantProductOfferWidget\Widget |
+| MerchantProductOfferWidget       | Shows the list of the offers with their prices for a concrete product. | | SprykerShop\Yves\MerchantProductOfferWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 

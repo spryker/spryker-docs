@@ -66,8 +66,7 @@ Make sure that the following changes have been applied in transfer objects:
 | ProductOfferCollection.pagination | property | Created | src/Generated/Shared/Transfer/ProductOfferCollectionTransfer |
 | ProductOfferCriteria.merchantIds | property | Created | src/Generated/Shared/Transfer/ProductOfferTransfer |
 | ProductOfferTableCriteria | class | Created | src/Generated/Shared/Transfer/ProductOfferTableCriteriaTransfer |
-| ProductTableCriteria.filterHasOffers | property | Created | src/Generated/Shared/Transfer/ProductTableCriteriaTransfer |
-| ProductTableCriteria.merchantReference | property | Created | src/Generated/Shared/Transfer/ProductTableCriteriaTransfer |
+| ProductTableCriteria | class | Created | src/Generated/Shared/Transfer/ProductTableCriteriaTransfer |
 | Item.merchantSku | property | Created | src/Generated/Shared/Transfer/ItemTransfer |
 
 {% endinfo_block %}
@@ -90,7 +89,6 @@ To set up behavior:
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE  |
 | ---------------- | ------------- | --------- | ---------------- |
 | OffersMerchantDashboardCardPlugin | Adds Product Offers card to `MerchantDashobard`. | | Spryker\Zed\ProductOfferMerchantPortalGui\Communication\Plugin\DashboardMerchantPortalGui |
-| ProductOfferMerchantOrderItemTableExpanderPlugin | Adds `merchantReference` and `ProductOfferSku` to Sales tables in the `MerchantPortal`. | Marketplace Sales Merchant Portal integrated | Spryker\Zed\ProductOfferMerchantPortalGui\Communication\Plugin |
 
 **src/Pyz/Zed/DashboardMerchantPortalGui/DashboardMerchantPortalGuiDependencyProvider.php**
 
@@ -115,35 +113,9 @@ class DashboardMerchantPortalGuiDependencyProvider extends SprykerDashboardMerch
 }
 ```
 
-**src/Pyz/Zed/SalesMerchantPortalGui/SalesMerchantPortalGuiDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\SalesMerchantPortalGui;
-
-use Spryker\Zed\ProductOfferMerchantPortalGui\Communication\Plugin\SalesMerchantPortalGui\ProductOfferMerchantOrderItemTableExpanderPlugin;
-use Spryker\Zed\SalesMerchantPortalGui\SalesMerchantPortalGuiDependencyProvider as SprykerSalesMerchantPortalGuiDependencyProvider;
-
-class SalesMerchantPortalGuiDependencyProvider extends SprykerSalesMerchantPortalGuiDependencyProvider
-{
-    /**
-     * @return \Spryker\Zed\SalesMerchantPortalGuiExtension\Dependency\Plugin\MerchantOrderItemTableExpanderPluginInterface[]
-     */
-    protected function getMerchantOrderItemTableExpanderPlugins(): array
-    {
-        return [
-            new ProductOfferMerchantOrderItemTableExpanderPlugin(),
-        ];
-    }
-}
-```
-
 {% info_block warningBox "Verification" %}
 
 Make sure that the `OffersMerchantDashboardCardPlugin` plugin is set up by opening `http://mp.mysprykershop.com/dashboard-portal-gui`. The Product Offers card should be presented on the page.
-
-Make sure that the `ProductOfferMerchantOrderItemTableExpanderPlugin` is set up by opening `http://zed.mysprykershop.com/sales-merchant-portal-gui/orders`. Click on any of the orders and check that the *Merchant Reference* and *Product Offer SKU* are present.
 
 {% endinfo_block %}
 

@@ -18,7 +18,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE |
 |---|---|---|
 | Spryker Core | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Prices | {{page.version}} |[Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html) |
+| Prices | {{page.version}} |[Prices feature integration](https://documentation.spryker.com/docs/prices-feature-integration) |
 | Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html) |
 
 
@@ -394,7 +394,7 @@ Make sure that when the following entities get updated via the ORM, the correspo
 
 Prepare your data according to your requirements using the demo data:
 
-<details><summary>data/import/common/{% raw %}{{shopType}}{% endraw %}/price_product_offer.csv</summary>
+<details><summary>data/import/common/common/marketplace/price_product_offer.csv</summary>
 
 ```csv
 product_offer_reference,price_type,store,currency,value_net,value_gross,price_data.volume_prices
@@ -820,6 +820,7 @@ Enable the following behaviors by registering the plugins:
 | PriceProductOfferVolumeValidatorPlugin | Validates volume prices. |   | Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer |
 | PriceProductOfferVolumeFilterPlugin | Applies correct volume pricing when applicable and quantity is selected |   | Spryker\Service\PriceProductOfferVolume\Plugin\PriceProductOffer |
 | PriceProductOfferProductOfferViewSectionPlugin | Returns template for render price product offer information |   | Spryker\Zed\PriceProductOfferGui\Communication\Plugin\ProductOfferGui |
+| PriceProductVolumeValidatorPlugin | Validates volume prices. |   | Spryker\Zed\PriceProductVolume\Communication\Plugin\PriceProduct |
 
 **src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php**
 
@@ -878,6 +879,7 @@ use Spryker\Zed\PriceProduct\PriceProductDependencyProvider as SprykerPriceProdu
 use Spryker\Zed\PriceProductOffer\Communication\Plugin\PriceProduct\PriceProductOfferPriceDimensionConcreteSaverPlugin;
 use Spryker\Zed\PriceProductOffer\Communication\Plugin\PriceProduct\PriceProductOfferPriceDimensionQueryCriteriaPlugin;
 use Spryker\Zed\PriceProductOffer\Communication\Plugin\PriceProduct\PriceProductOfferPriceProductDimensionExpanderStrategyPlugin;
+use Spryker\Zed\PriceProductVolume\Communication\Plugin\PriceProduct\PriceProductVolumeValidatorPlugin;
 
 class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvider
 {
@@ -911,6 +913,16 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
         return [
             new PriceProductOfferPriceProductDimensionExpanderStrategyPlugin(),
         ];
+    }
+    
+    /**	
+     * @return \Spryker\Zed\PriceProductExtension\Dependency\Plugin\PriceProductValidatorPluginInterface[]	
+     */	
+    protected function getPriceProductValidatorPlugins(): array	
+    {	
+        return [	
+            new PriceProductVolumeValidatorPlugin(),	
+        ];	
     }
 }
 ```

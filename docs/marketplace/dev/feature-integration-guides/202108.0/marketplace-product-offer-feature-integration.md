@@ -935,7 +935,8 @@ offer95,2020-07-01 00:00:00.000000,2025-12-01 00:00:00.000000
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | ------------ | ----------- | ------ | ----------- | ---------------- |
 | product_offer_reference | &check; | string    | offer1       | Unique product offer identifier.             |
-| store_name | &check; | string    | DE       | Related store to product offer identifier.             |
+| valid_from              |  | String  | 2020-01-01   | Date since which the product offer is valid. |
+| valid_to                |  | String | 2020-01-01   | Date till which the product offer is valid.  |
 
 Register the following plugins to enable data import:
 
@@ -1492,7 +1493,8 @@ Make sure that the following widgets were registered:
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | -------------- | -------------------------------- | ----------------- |
 | Marketplace Merchant Portal Product Offer Management | | [Marketplace Product Offer Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-product-offer-management-feature-integration.html) |
-| Marketplace Product Offer API | | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-feature-integration.html) |
-| Marketplace Product Offer + Price | | [Marketplace Product Offer + Price feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-prices-feature-integration.html) |
+| Marketplace Product Offer API | | [Glue API: Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-feature-integration.html) |
+| Marketplace Product + Marketplace Product Offer | | [Marketplace Product + Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-marketplace-product-offer-feature-integration.html) |
 | Marketplace Product Offer + Cart | | [Marketplace Product Offer + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-cart-feature-integration.html) |
 | Marketplace Product Offer + Checkout | | [Marketplace Product Offer + Checkout feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-checkout-feature-integration.html) |
+| Marketplace Product Offer + Prices | | [Marketplace Product Offer + Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-prices-feature-integration.html) |

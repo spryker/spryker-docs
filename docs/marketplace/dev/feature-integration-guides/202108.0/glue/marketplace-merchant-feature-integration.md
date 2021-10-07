@@ -50,10 +50,10 @@ Make sure that the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 |-|-|-|-|
-| RestMerchantsAttributesTransfer | object | Created | src/Generated/Shared/Transfer/RestMerchantsAttributesTransfer |
-| RestMerchantAddressesAttributesTransfer | object | Created | src/Generated/Shared/Transfer/RestMerchantAddressesAttributesTransfer |
-| RestMerchantAddressTransfer | object | Created | src/Generated/Shared/Transfer/RestMerchantAddressTransfer |
-| RestLegalInformationTransfer | object | Created | src/Generated/Shared/Transfer/RestLegalInformationTransfer |
+| RestMerchantsAttributesTransfer | class | Created | src/Generated/Shared/Transfer/RestMerchantsAttributesTransfer |
+| RestMerchantAddressesAttributesTransfer | class | Created | src/Generated/Shared/Transfer/RestMerchantAddressesAttributesTransfer |
+| RestMerchantAddressTransfer | class | Created | src/Generated/Shared/Transfer/RestMerchantAddressTransfer |
+| RestLegalInformationTransfer | class | Created | src/Generated/Shared/Transfer/RestLegalInformationTransfer |
 | RestOrdersAttributesTransfer.merchantReferences | property | Created | src/Generated/Shared/Transfer/RestOrdersAttributesTransfer |
 | RestOrderDetailsAttributesTransfer.merchantReferences | property | Created | src/Generated/Shared/Transfer/RestOrderDetailsAttributesTransfer |
 | RestOrderItemsAttributesTransfer.merchantReference | property | Created | src/Generated/Shared/Transfer/RestOrderItemsAttributesTransfer |

@@ -41,6 +41,7 @@ Make sure that the following modules have been installed:
 | ZedUi  | vendor/spryker/zed-ui |
 | GuiTable | vendor/spryker/gui-table |
 | UserMerchantPortalGui | vendor/spryker/user-merchant-portal-gui |
+| UserMerchantPortalGuiExtension | spryker/user-merchant-portal-gui-extension |
 
 {% endinfo_block %}
 
@@ -265,7 +266,7 @@ Add the `angular.json` file.
 wget -O angular.json https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/angular.json
 ```
 
-Rename default tsconfig to tsconfig.yves.json. Create market place specific tsconfig files (tsconfig.json, tsconfig.mp.json)
+Rename default `tsconfig` to `tsconfig.yves.json`. Create marketplace-specific `tsconfig` files (`tsconfig.json`, `tsconfig.mp.json`)
 
 ```bash
 mv tsconfig.json tsconfig.yves.json
@@ -273,9 +274,9 @@ wget -O tsconfig.json https://raw.githubusercontent.com/spryker-shop/suite/{{pag
 wget -O tsconfig.mp.json https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/tsconfig.mp.json
 ```
 
-Add `vendor/spryker/*/src/Spryker/Zed/*/Presentation/Components/**` and `**/node_modules/**` to exclude option in tslint.json.
+Add `vendor/spryker/*/src/Spryker/Zed/*/Presentation/Components/**` and `**/node_modules/**` to exclude option in `tslint.json`.
 
-Add the tslint.mp.json file.
+Add the `tslint.mp.json` file.
 
 ```bash
 wget -O tslint.mp.json https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/tslint.mp.json
@@ -287,7 +288,7 @@ Install npm dependencies:
 npm i rxjs@~6.6.0 zone.js@~0.10.3 @webcomponents/custom-elements@~1.3.1 @webcomponents/webcomponents-platform@~1.0.1 @webcomponents/webcomponentsjs@~2.4.0
 ```
 
-Install npm dev dependencies
+Install npm dev dependencies:
 
 ```bash
 npm i -D @angular-builders/custom-webpack@~9.1.0 @angular-devkit/build-angular@~0.901.11 @angular/cli@~9.1.11 @angular/common@~9.1.12 @angular/compiler@~9.1.12 @angular/compiler-cli@~9.1.12 @angular/core@~9.1.12 @angular/language-service@~9.1.12 @angular/platform-browser@~9.1.12 @angular/platform-browser-dynamic@~9.1.12 @babel/plugin-proposal-class-properties@~7.10.4 @babel/plugin-transform-runtime@~7.10.5 @babel/preset-typescript@~7.10.4 @jsdevtools/file-path-filter@~3.0.2 @nrwl/jest@~9.4.4 @nrwl/workspace@~9.4.4 @spryker/oryx-for-zed@~2.8.1 @types/jest@~26.0.4 @types/node@~12.11.1 @types/webpack@~4.41.17 jest@~26.1.0 jest-preset-angular@~8.2.1 node-sass@~4.14.1 npm-run-all@~4.1.5 rimraf@~3.0.2 ts-jest@~26.1.3 ts-node@~8.3.0 tslib@~1.11.1 typescript@~3.8.3
@@ -337,7 +338,7 @@ const globalSettings = {
 };
 ```
 
-Add a .yarnrc.yml file.
+Add a `.yarnrc.yml` file.
 
 **.yarnrc.yml**
 
@@ -353,7 +354,7 @@ plugins:
 yarnPath: .yarn/releases/yarn-2.3.3.js
 ```
 
-Add the .yarn folder and download plugin-workspace-tools.js and yarn-2.0.0-rc.32.js.
+Add the `.yarn` folder and download `plugin-workspace-tools.js` and `yarn-2.0.0-rc.32.js`.
 
 ```bash
 mkdir .yarn && mkdir .yarn/plugins && mkdir .yarn/releases
@@ -377,11 +378,11 @@ Now it is time to install project dependencies:
 yarn install
 ```
 
-Check if the MarketPlace packages are located in the `node_modules/@spryker` folder (e.g., utils).
+Check if the marketplace packages are located in the `node_modules/@spryker` folder (e.g., utils).
 
 ### 2) Install Marketplace builder
 
-Add the merchant-portal folder and builder files:
+Add the `merchant-portal` folder and builder files:
 
 **frontend/merchant-portal/entry-points.js**
 
@@ -439,9 +440,15 @@ export default async (
 
 If you want to configure deployment configuration to automatically install and build Merchant Portal, you need to change frontend dependencies and install commands in the deployment Yaml:
 
-- Remove existing Yves and Zed dependencies install commands from deployment Yaml: yves-isntall-dependenciesand yves-isntall-dependencies
+- Remove existing Yves and Zed dependencies install commands from deployment Yaml:
 
-- Update project install dependencies command dependencies-install command to: vendor/bin/console frontend:mp:install-dependencies -vvv
+ yves-isntall-dependencies and yves-isntall-dependencies
+
+- Update project install dependencies command dependencies-install command to: 
+
+```bash
+vendor/bin/console frontend:mp:install-dependencies -vvv
+```
 
 - Add Merchant Portal build command:
 
@@ -531,7 +538,7 @@ sudo service nginx reload
 
 {% info_block warningBox "Verification" %}
 
-Make sure to use environment variables in config-default.php:
+Make sure to use environment variables in `config-default.php`:
 
 **config/Shared/config_default.php**
 
@@ -551,5 +558,95 @@ The following page should now show the login page for MerchantPortal: `https://y
 {% info_block warningBox "Verification" %}
 
 Make sure the following pages do not open `https://your-merchant-portal.domain/security-gui/login`, `https://your-merchant-portal.domain/`
+
+{% endinfo_block %}
+
+### 4) Register modules in ACL
+
+Add new modules to installer rules:
+
+
+**src/Pyz/Zed/Acl/AclConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Acl;
+
+use Spryker\Shared\Acl\AclConstants;
+use Spryker\Zed\Acl\AclConfig as SprykerAclConfig;
+
+class AclConfig extends SprykerAclConfig
+{
+    /**
+     * @param string[][] $installerRules
+     *
+     * @return string[][]
+     */
+    protected function addMerchantPortalInstallerRules(array $installerRules): array
+    {
+        $bundleNames = [
+            'user-merchant-portal-gui',
+            'dashboard-merchant-portal-gui',
+            'security-merchant-portal-gui',
+        ];
+
+        foreach ($bundleNames as $bundleName) {
+            $installerRules[] = [
+                'bundle' => $bundleName,
+                'controller' => AclConstants::VALIDATOR_WILDCARD,
+                'action' => AclConstants::VALIDATOR_WILDCARD,
+                'type' => static::RULE_TYPE_DENY,
+                'role' => AclConstants::ROOT_ROLE,
+            ];
+        }
+
+        return $installerRules;
+    }
+}
+
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that after executing `console setup:init-db`, the `'user-merchant-portal-gui'` rule is present in the `spy_acl_rule` table.
+
+{% endinfo_block %}
+
+### 5) Update navigation
+
+Add MyAccount and Logout section to `navigation-secondary.xml`:
+
+**config/Zed/navigation-secondary.xml**
+
+```xml
+<?xml version="1.0"?>
+<config>
+    <my-account>
+        <label>My Account</label>
+        <title>My Account</title>
+        <bundle>user-merchant-portal-gui</bundle>
+        <controller>my-account</controller>
+        <action>index</action>
+    </my-account>
+    <logout>
+        <label>Logout</label>
+        <title>Logout</title>
+        <bundle>security-merchant-portal-gui</bundle>
+        <controller>logout</controller>
+        <action>index</action>
+        <type>danger</type>
+    </logout>
+</config>
+```
+
+Execute the following command:
+```bash
+console navigation:build-cache
+```
+
+{% info_block warningBox "Verification" %}
+
+Log in to the **Merchant Portal** and make sure that the MyAccount and Logout button are visible in the overlay of the secondary navigation, when clicking on the profile picture.
 
 {% endinfo_block %}

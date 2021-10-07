@@ -16,7 +16,7 @@ Follow the steps below to install the Marketplace Product Offer Prices feature c
 To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
-|-|-|-|
+|---|---|---|
 | Spryker Core | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
 | Prices | {{page.version}} |[Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html) |
 | Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html) |
@@ -25,6 +25,7 @@ To start feature integration, integrate the required features:
 ### 1) Install the required modules using Composer
 
 Install the required modules:
+
 ```bash
 composer require spryker-feature/marketplace-product-offer-prices:"{{page.version}}" --update-with-dependencies
 ```
@@ -90,6 +91,7 @@ Make sure that the following changes were applied in transfer objects:
 |-|-|-|-|
 | PriceProductOffer | class | created | src/Generated/Shared/Transfer/PriceProductOfferTransfer |
 | PriceProductOfferCriteria | class | created | src/Generated/Shared/Transfer/PriceProductOfferCriteriaTransfer |
+| PriceProductOfferCollection | class | created |  src/Generated/Shared/Transfer/PriceProductOfferCollectionTransfer |
 | PriceProductStoreCriteria | class | created | src/Generated/Shared/Transfer/PriceProductStoreCriteriaTransfer |
 | PriceProductCriteria.productOfferReference | property | created | src/Generated/Shared/Transfer/PriceProductCriteriaTransfer |
 | PriceProduct.concreteSku | property | created | src/Generated/Shared/Transfer/PriceProductTransfer |
@@ -99,6 +101,7 @@ Make sure that the following changes were applied in transfer objects:
 | ProductOffer.prices | property | created | src/Generated/Shared/Transfer/ProductOfferTransfer |
 | PriceProductFilterIdentifier.productOfferReference | property | created | src/Generated/Shared/Transfer/PriceProductFilterIdentifierTransfer |
 | ProductOfferStorage.price | property | created | src/Generated/Shared/Transfer/ProductOfferStorageTransfer |
+| PriceProductFilter.productOfferReference | property | created |src/Generated/Shared/Transfer/PriceProductFilterTransfer |
 
 {% endinfo_block %}
 
@@ -812,7 +815,6 @@ Enable the following behaviors by registering the plugins:
 | PriceProductOfferStorageExpanderPlugin | Expands `ProductOfferStorageTransfer` with Product Offer Price |   | Spryker\Client\PriceProductOfferStorage\Plugin\MerchantProductOfferStorage |
 | PriceProductOfferStorageFilterExpanderPlugin | Expands `PriceProductFilterTransfer` with ProductOfferReference when a `ProductViewTransfer` has a ProductOfferReference |   | Spryker\Client\PriceProductOfferStorage\Plugin\PriceProductStorage |
 | PriceProductOfferPriceProductFilterPlugin | Filters out inapplicable product offer prices and product concrete prices when a product offer is selected |   | Spryker\Service\PriceProductOfferStorage\Plugin\PriceProduct |
-| PriceProductOfferVolumeExtractorPlugin | Maps out JSON entries from price_data of `PriceProductTransfer` to new `PriceProductTransfers` with volume prices |   | Spryker\Client\PriceProductOfferVolume\Plugin\PriceProductOfferStorage |
 | PriceProductOfferVolumeExtractorPlugin | Extracts volume prices from the price product offer collection. |  | Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer |
 | PriceProductOfferVolumeExpanderPlugin | Expands `PriceProductTransfer` with `volumeQuantity` |   | Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer |
 | PriceProductOfferVolumeValidatorPlugin | Validates volume prices. |   | Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer |
@@ -1114,3 +1116,9 @@ Make sure that product offers are sorted by the lowest price first when fetched 
 Make sure that when a product offer with a volume price is selected and the selected quantity is over a certain threshold, its volume price is shown instead of the normal price.
 
 {% endinfo_block %}
+
+## Related features
+
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| -------------- | -------------------------------- | ----------------- |
+| Marketplace Product Offer + Prices API | | [Glue API: Marketplace Product Offer + Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-prices-feature-integration.html) |

@@ -162,7 +162,7 @@ To retrieve a product attribute, send the request:
 
 | PATH PARAMETER | 	DESCRIPTION |
 | --- | --- |
-| {% raw %}{{{% endraw %}attribute_id{% raw %}}}{% endraw %} | A unique identifier of an attribute. [Retrieve product attributes](#all-attributes) to get it. | 
+| {% raw %}{{{% endraw %}attribute_id{% raw %}}}{% endraw %} | A unique identifier of an attribute. [Retrieve product attributes](#retrieve-all-product-attributes) to get it. | 
 
 ### Request
 Request sample: `https://glue.mysprykershop.com/product-management-attributes/storage_capacity`

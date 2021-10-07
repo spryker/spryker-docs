@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/authenticating-as-a-customer
 ---
 
-This endpoint allows authenticating as a customer. As an authenticated customer, you can send requests to [protected resources](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html#list-of-private-resources).
+This endpoint allows authenticating as a customer. As an authenticated customer, you can send requests to [protected resources](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html#protected-resources).
 
 :::(Warning)
 This endpoint does not comply with OAuth 2.0. If your project requires such compliance, use the `/token`endpoint. For details about the `/token`endpoint, see [Manging customer authentication tokens via OAuth 2.0](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html).
@@ -47,8 +47,8 @@ Request sample: `POST https://mysprykershop.com/access-tokens`
 
 | ATTRIBUTE | TYPE | REQUIRED  |DESCRIPTION |
 | --- | --- | --- | --- |
-| username | string | &check; | Customer's username. You define it when [creating a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/manging-customers/managing-customers.html#create-a-customer). |
-| password | password | &check; | Customer's password. You define it when [creating a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/manging-customers/managing-customers.html#create-a-customer). |
+| username | string | &check; | Customer's username. You define it when [creating a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer). |
+| password | password | &check; | Customer's password. You define it when [creating a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer). |
 
 {% info_block infoBox "Username" %}
 
@@ -92,7 +92,7 @@ Note that depending on the Login feature configuration for your project, too man
 | expiresIn | Integer | The time in seconds in which the token expires.  |
 | accessToken | String | Authentication token used to send requests to the protected resources available for a customer.  |
 | refreshToken | String | Authentication token used to refresh the `accessToken`. |
-| idCompanyUser | string | A unique identifier of a user within a company. Use it to [impersonate a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/searching-by-company-users.html#impersonating-a-company-user). |
+| idCompanyUser | string | A unique identifier of a user within a company. Use it to [retrieve a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-company-users.html). |
 
 ## Possible errors
 
@@ -112,8 +112,8 @@ To view generic errors that originate from the Glue Application, see [Reference 
 * [Manage carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/carts-of-registered-users/managing-carts-of-registered-users.html)
 * [Manage cart items](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html)
 * [Manage gift cards](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html)
-* [Manage wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists//managing-wishlists/managing-wishlists.html)
-* [Manage orders](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/retrieving-customer-orders.html)
+* [Manage wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html)
+* [Manage orders](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html)
 * [Managing customer authentication tokens](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-authentication-tokens.html)
 * [Manage customer addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-addresses.html)
 * [Manage customer addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-addresses.html)

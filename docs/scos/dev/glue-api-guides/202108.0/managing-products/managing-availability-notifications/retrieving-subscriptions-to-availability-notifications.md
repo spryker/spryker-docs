@@ -71,7 +71,7 @@ Response
 </details>
 
 ## Other management options
-There is an alternative way to retrieve subscriptions to availability notifications of a registered customer. For details, see [Managing customers](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/manging-customers/managing-customers.html#create-a-customer).
+There is an alternative way to retrieve subscriptions to availability notifications of a registered customer. For details, see [Managing customers](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer).
 
 ## Possible errors
 

@@ -178,7 +178,7 @@ By default, if checkout is successful, the order is placed, and the cart is dele
 
 | Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
-| customer | Object | v | A list of attributes describing the [customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/manging-customers/managing-customers.html) to submit checkout data of. |
+| customer | Object | v | A list of attributes describing the [customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html) to submit checkout data of. |
 | customer.salutation | String | v | Salutation to use when addressing the customer. |
 | customer.email | String | v | Customer's email address. |
 | customer.firstName | String | v | Customer's first name. |
@@ -471,7 +471,7 @@ To prevent fraud, the *invoice* payment method is not accepted if a cart contain
 | redirectUrl | String | The URL to perform the payment verification requested by the selected payment method. After completing verification, ensure to [update payment data](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/updating-payment-data.html#update-payment-data). If the value is `null` or empty, no additional verification is reuiqred. |
 | isExternalRedirect | Boolean | Defines if the customer is redirected to an external URL. |
 
-For the attributes of included resources, see [Retrieve an order](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/retrieving-customer-orders.html#retrieve-an-order)
+For the attributes of included resources, see [Retrieve an order](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html#retrieve-an-order)
 
 
 

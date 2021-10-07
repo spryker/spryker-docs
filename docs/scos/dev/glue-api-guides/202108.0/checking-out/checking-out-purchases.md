@@ -335,7 +335,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 
 | Attribute                                                    | Type   | Required | Description                                                  |
 | :----------------------------------------------------------- | :----- | :------- | :----------------------------------------------------------- |
-| customer                                                     | Object | ✓        | A list of attributes describing the [customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/manging-customers/managing-customers.html) to submit checkout data of. |
+| customer                                                     | Object | ✓        | A list of attributes describing the [customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html) to submit checkout data of. |
 | customer.salutation                                          | String | ✓        | Salutation to use when addressing the customer.              |
 | customer.email                                               | String | ✓        | Customer's email address.                                    |
 | customer.firstName                                           | String | ✓        | Customer's first name.                                       |
@@ -1278,7 +1278,7 @@ To prevent fraud, the *invoice* payment method is not accepted if a cart contain
 | order-shipments       | country               | String   | Specifies the country.                          |
 | order-shipments       | iso2Code              | String   | ISO 2-Letter Country Code to use.               |
 
-For the attributes of other included resources, see [Retrieve an order](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/retrieving-customer-orders.html#retrieve-an-order)
+For the attributes of other included resources, see [Retrieve an order](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html#retrieve-an-order)
 
 
 

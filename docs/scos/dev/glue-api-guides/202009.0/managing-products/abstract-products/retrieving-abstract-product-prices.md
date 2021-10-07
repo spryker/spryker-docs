@@ -19,7 +19,7 @@ For detailed information on the modules that provide the API functionality and r
 
 ## Retrieve prices of an abstract product
 
-To retrieve prices of an abstract prdocut, send the request:
+To retrieve prices of an abstract product, send the request:
 
 ---
 `GET` **/abstract-products/*{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}*/abstract-product-prices**

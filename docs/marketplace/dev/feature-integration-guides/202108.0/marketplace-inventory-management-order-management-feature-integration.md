@@ -1,15 +1,15 @@
 ---
-title: Marketplace Inventory Management + Marketplace Order Management feature integration
+title: Marketplace Inventory Management + Order Management feature integration
 last_updated: Sep 07, 2021
-description: This document describes the process how to integrate the Marketplace Inventory Management + Marketplace Order Management feature into a Spryker project.
+description: This document describes the process how to integrate the Marketplace Inventory Management + Order Management feature into a Spryker project.
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the Marketplace Inventory Management + Marketplace Order Management feature into a Spryker project.
+This document describes how to integrate the Marketplace Inventory Management +  Order Management feature into a Spryker project.
 
 ## Install feature core
 
-Follow the steps below to install the Marketplace Inventory Management + Marketplace Order Management feature core.
+Follow the steps below to install the Marketplace Inventory Management + Order Management feature core.
 
 ### Prerequisites
 

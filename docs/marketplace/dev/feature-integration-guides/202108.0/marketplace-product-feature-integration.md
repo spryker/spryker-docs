@@ -622,7 +622,6 @@ Enable the following behaviors by registering the plugins:
 | ----------------- | ---------------------- | ------------ | -------------------- |
 | MerchantProductMerchantNameSearchConfigExpanderPlugin | Expands facet configuration with merchant name filter.       |           | Spryker\Client\MerchantProductSearch\Plugin\Search          |
 | ProductViewMerchantProductExpanderPlugin              | Expands ProductView transfer object with merchant reference. |           | Spryker\Client\MerchantProductStorage\Plugin\ProductStorage |
-| MerchantProductPreAddToCartPlugin                     | Sets merchant reference to item transfer on add to cart.     |           | SprykerShop\Yves\MerchantProductWidget\Plugin\CartPage      |
 
 **src/Pyz/Client/SearchElasticsearch/SearchElasticsearchDependencyProvider.php**
 
@@ -688,37 +687,6 @@ Make sure that merchant product is selected on the Product Details Page by defau
 
 {% endinfo_block %}
 
-**src/Pyz/Yves/CartPage/CartPageDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Yves\CartPage;
-
-use SprykerShop\Yves\CartPage\CartPageDependencyProvider as SprykerCartPageDependencyProvider;
-use SprykerShop\Yves\MerchantProductWidget\Plugin\CartPage\MerchantProductPreAddToCartPlugin;
-
-class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
-{
-    /**
-     * @return \SprykerShop\Yves\CartPageExtension\Dependency\Plugin\PreAddToCartPluginInterface[]
-     */
-    protected function getPreAddToCartPlugins(): array
-    {
-        return [
-            new MerchantProductPreAddToCartPlugin(),
-        ];
-    }
-}
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure when you add to cart merchant product, it has `merchantReference` set. (Can be checked in the `spy_quote` table).
-
-{% endinfo_block %}
-
-
 ## Related features
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
@@ -726,3 +694,4 @@ Make sure when you add to cart merchant product, it has `merchantReference` set.
 | Marketplace Product API | | [Glue API - Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-feature-integration.html) |
 | Marketplace Product + Inventory Management | | [Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-inventory-management-feature-integration.html) |
 | Marketplace Product + Marketplace Product Offer | | [Marketplace Product + Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-marketplace-product-offer-feature-integration.html) |
+| Marketplace Product + Cart feature integration | | [Marketplace Product + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-cart-feature-integration.html) |

@@ -19,7 +19,7 @@ To start feature integration, integrate the required features:
 | --------------- | ------- | -------|
 | Spryker Core         | {{page.version}}   | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
-| Product              | {{page.version}}   | [Product feature integration](https://github.com/spryker-feature/product) |
+| Product              | {{page.version}}   | [Product feature integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/895912554/APPROVED+Product+feature+integration+-+ongoing) |
 
 ###  1) Install the required modules using Composer
 

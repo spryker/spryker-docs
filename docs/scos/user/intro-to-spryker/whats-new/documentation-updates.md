@@ -291,15 +291,15 @@ Below you will find the list of the new/updated documentation released as part o
 </details>
 
 * [Search Engine Friendly URLs](/docs/scos/dev/glue-api-guides/{{site.version}}/resolving-search-engine-friendly-urls.html)
-* [Assigning Guest Cart to Registered Customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/guest-carts/managing-guest-carts.html#assigning-guest-cart-to-registered-customer)
+* [Assigning Guest Cart to Registered Customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/guest-carts/managing-guest-carts.html#assign-a-guest-cart-to-a-registered-customer)
 * [Managing Customer Access to API Resources](/docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/managing-customer-access-to-glue-api-resources.html)
 * [Getting the List of Protected Resources](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-protected-resources.html)
 
 
 ### Spryker in Docker
 
-* [Queue Worker](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html#8--queue)
-* [Deploy File Reference](https://documentation.spryker.com/2021080/docs/deploy-file-reference-version-1-201907#deploy-file-reference---1-0)
+* [Queue Worker](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html#queue)
+* [Deploy File Reference](/docs/dev/the-docker-sdk/{{page.version}}/deploy-file-reference-1.0.html)
 * [Health checks](/docs/scos/dev/technical-enhancements/health-checks.html)
 * [Asset Management](/docs/scos/user/features/{{site.version}}/file-manager/file-manager-feature-overview/asset-management.html)
 <details open>
@@ -332,7 +332,7 @@ Below you will find the list of the new/updated documentation released as part o
  * Warehouses
     * [Creating a Warehouse](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/warehouses/creating-a-warehouse.html)
     * [Managing Warehouses](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/warehouses/managing-warehouses.html)
-    * [Warehouses: Reference Information](https://documentation.spryker.com/2021080/docs/warehouses-reference-information)
+    * [Warehouses: Reference Information](/docs/user/features/{{page.version}}/inventory-management-feature-overview.html)
  * [Stores](https://documentation.spryker.com/2021080/docs/stores-reference-information-201911)
 
 #### HowTos:

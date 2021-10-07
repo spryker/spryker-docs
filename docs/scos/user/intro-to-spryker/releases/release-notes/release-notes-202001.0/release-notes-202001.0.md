@@ -167,7 +167,7 @@ Navigation vanity URLs are paramount for marketing purposes. To extend your navi
 
 #### Documentation
 
-* [Assigning Guest Cart to Registered Customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/guest-carts/managing-guest-carts.html#assigning-guest-cart-to-registered-customer)
+* [Assigning Guest Cart to Registered Customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/guest-carts/managing-guest-carts.html#assign-a-guest-cart-to-a-registered-customer)
 * [Getting the list of protected resources](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-protected-resources.html)
 * [Managing Customer Access to API Resources](/docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/managing-customer-access-to-glue-api-resources.html)
 
@@ -187,7 +187,7 @@ For production setups, now you can generate optimized docker images.
 
 #### Documentation
 
-* [Getting Started with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html#running-production)
+* [Getting Started with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html)
 * [Deploy File Reference](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file-reference-1.0.html)
 * [Spryker in Docker Services](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-services.html)
 
@@ -232,7 +232,7 @@ The **Queue manager** functionality is extended with the command that makes queu
 
 #### Documentation:
 
-[Tutorial - Handling Data - Publish and Synchronization - Spryker Commerce OS](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html#8--queue)
+[Tutorial - Handling Data - Publish and Synchronization - Spryker Commerce OS](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html#queue)
 
 ### Search Initialization Improvement
 To improve usability, the `vendor/bin/console setup:search` command which has been generating two processes, was split into two commands:

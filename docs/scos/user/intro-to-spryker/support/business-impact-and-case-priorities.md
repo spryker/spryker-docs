@@ -1,9 +1,9 @@
 ---
 title: Case Escalation
-originalLink: https://documentation.spryker.com/2021080/docs/case-priorities
+originalLink: https://documentation.spryker.com/docs/scos/user/intro-to-spryker/support/understanding-ticket-status.html#how-are-bug-tickets-prioritized
 originalArticleId: af927b8c-2fc0-46ab-a54d-4ae83d18ca89
 redirect_from:
-  - /2021080/docs/case-priorities
+  - /docs/scos/user/intro-to-spryker/support/understanding-ticket-status.html#how-are-bug-tickets-prioritized
   - /2021080/docs/en/case-priorities
 ---
 
@@ -14,7 +14,7 @@ While we are trying to solve cases in a timely manner, we need to triage and pri
 * The subject matter
 * The overall state and context of the project
 
-Please note, that prioritization is only one aspect that will influence how fast your case will be solved. Please see [here](/2021080/docs/how-to-get-the-most-out-of-spryker-support) to learn important tips about what you can do to speed up resolution times.
+Please note, that prioritization is only one aspect that will influence how fast your case will be solved. Please see [here](/docs/scos/user/intro-to-spryker/support/how-to-get-the-most-out-of-spryker-support.html) to learn important tips about what you can do to speed up resolution times.
 
 ## Business Impact
 By specifying the Business Impact, you can tell us directly how severely an issue affects your business. In the following, we would like to explain how to choose the appropriate business impact:

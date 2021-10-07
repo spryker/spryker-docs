@@ -147,3 +147,4 @@ class ShipmentGuiDependencyProvider extends SprykerShipmentGuiDependencyProvider
 | Marketplace Shipment + Cart | | [Marketplace Shipment + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-cart-feature-integration.html) |
 | Marketplace Shipment + Checkout | | [Marketplace Shipment + Checkout feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-checkout-feature-integration.html) |
 | Marketplace Shipment + Customer | | [Marketplace Shipment + Customer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-customer-feature-integration.html) |
+| Marketplace Order Management + Shipment |  |  [Marketplace Order Management + Shipment feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-shipment-feature-integration.html)  |

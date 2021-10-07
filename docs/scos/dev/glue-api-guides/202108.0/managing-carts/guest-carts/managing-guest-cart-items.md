@@ -44,7 +44,7 @@ To add items to a guest cart, send the request:
 
 | Path Parameter | Description |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart. To get it, [retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart). |
+| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart. To get it, [retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart). |
 
 {% endinfo_block %}
 
@@ -2557,7 +2557,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 
 For the attributes of the included resources, see:
-* [Retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/guest-carts/managing-guest-carts.html#guest-cart-response-attributes)
+* [Retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#guest-cart-response-attributes)
 * [Gift cards of guest users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html)
 * [Retrieving concrete products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 * [Retrieve an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html#abstract-products-response-attributes)
@@ -2795,15 +2795,15 @@ To change item quantity, send the request:
 
 | Path parameter | Description |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart in the system. To get it, [retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart). |
-| ***{% raw %}{{{% endraw %}groupKey{% raw %}}}{% endraw %}*** | Group key of the item. Usually, it is equal to the item’s SKU. To get it, [retrieve the guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart) with the guest cart items included. |
+| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart in the system. To get it, [retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart). |
+| ***{% raw %}{{{% endraw %}groupKey{% raw %}}}{% endraw %}*** | Group key of the item. Usually, it is equal to the item’s SKU. To get it, [retrieve the guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart) with the guest cart items included. |
     
 ### Request
 
 
 | HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart). |
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart). |
     
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
@@ -2859,14 +2859,14 @@ To change the quantity of the configurable bundles in a guest cart, send the req
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart in the system. To get it, [retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart). |
+| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart in the system. To get it, [retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart). |
 | ***{% raw %}{{{% endraw %}bundlegroupkey{% raw %}}}{% endraw %}*** | Group key of the configurable bundle. The value is generated based on the Configurable Bundle Template and items selected in the slot. You can get it when [adding the configurable bundle to a guest cart](#add-a-configurable-bundle-to-a-guest-cart). |
 
 ### Request
 
 | HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart). |
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart). |
 Request sample: `PATCH https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-5d40-9da1-db5289f216fa/guest-configured-bundles/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-60118379365c56.34709530?include=items`
 ```json
 {
@@ -3165,14 +3165,14 @@ To remove an item from a guest cart, send the request:
     
 | Path parameter | Description |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart in the system. To get it, [retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart). |
-| ***{% raw %}{{{% endraw %}groupKey{% raw %}}}{% endraw %}*** | Group key of the item. Usually, it is equal to the item’s SKU. To get it, [retrieve the guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart) with the guest cart items included. |
+| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart in the system. To get it, [retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart). |
+| ***{% raw %}{{{% endraw %}groupKey{% raw %}}}{% endraw %}*** | Group key of the item. Usually, it is equal to the item’s SKU. To get it, [retrieve the guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart) with the guest cart items included. |
     
 ### Request
 
 | HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart). |
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart). |
     
 Request sample: `DELETE https://glue.mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802/guest-cart-items/177_25913296`
 
@@ -3189,12 +3189,12 @@ To remove a configurable bundle from a guest cart, send the request:
     
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart in the system. To get it, [retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart). |
+| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart in the system. To get it, [retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart). |
 | ***{% raw %}{{{% endraw %}bundlegroupkey{% raw %}}}{% endraw %}*** | Group key of the configurable bundle. The value is generated based on the Configurable Bundle Template and items selected in the slot. You can get it when [adding the configurable bundle to a guest cart](#add-a-configurable-bundle-to-a-guest-cart). |
 
 | HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart). |
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart). |
 
 Request sample: `DELETE https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-5d40-9da1-db5289f216fa/guest-configured-bundles/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-60118379365c56.34709530?include=items`
 

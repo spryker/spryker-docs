@@ -27,14 +27,14 @@ For detailed information on the modules that provide the API functionality and r
 
 You can purchase a gift card as a regular product. To do that:
 
-1. Add a gift card to a guest cart. See [Add an item to a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-cart-items.html#additemstoaguestcart) for more details. 
+1. Add a gift card to a guest cart. See [Add an item to a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-cart-items.html#add-items-to-a-guest-cart) for more details. 
 2. [Submit the checkout data](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/submitting-checkout-data.html#submit-checkout-data).
 3. [Place the order](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html#place-an-order).
 
 After placing the order, you receive the gift card code to the email address specified in the checkout. You can redeem this code to pay for the products.
 
 
-## Redeeme a gift card in a guest cart
+## Redeem a gift card in a guest cart
 
 To redeem a gift card, send the request:
 
@@ -44,7 +44,7 @@ To redeem a gift card, send the request:
 
 | Path Parameter | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart to redeem the gift card in. To get it, [create](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart) or [retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/guest-carts/managing-guest-carts.html#retrieveaguestcart). |
+| ***{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart to redeem the gift card in. To get it, [create](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart) or [retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#retrieveaguestcart). |
 
 ### Request
 
@@ -138,7 +138,7 @@ Response sample:
     ]
 }
 ```
-For the guest cart attributes, see [Creating Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/guest-carts/managing-guest-carts.html#creating-a-guest-cart).
+For the guest cart attributes, see [Creating Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#creating-a-guest-cart).
 
 | Included resource | Attribute | Type | Description |
 | --- | --- | --- | --- |

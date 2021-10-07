@@ -33,8 +33,8 @@ To resolve a SEF URL into a Glue API URL, send the request:
 
 | Request sample | Usage |
 | --- | --- |
-| GET https://glue.mysprykershop.com/url-resolver?url=/de/acer-aspire-s7-134 | Resolve the following URL of a product: https://mysprykershop.com/de/acer-aspire-s7-134 |
-| GET https://glue.mysprykershop.com/url-resolver?url=/en/computer | Resolve the following URL of a category node: https://mysprykershop.com/en/computer |
+| GET https://glue.mysprykershop.com/url-resolver?url=/de/acer-aspire-s7-134 | Resolve the following URL of a product: `https://mysprykershop.com/de/acer-aspire-s7-134` |
+| GET https://glue.mysprykershop.com/url-resolver?url=/en/computer | Resolve the following URL of a category node: `https://mysprykershop.com/en/computer` |
 
 ### Response
 

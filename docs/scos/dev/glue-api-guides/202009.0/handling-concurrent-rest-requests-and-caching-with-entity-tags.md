@@ -69,7 +69,7 @@ The following resource support concurrent requests with ETag headers by default
 
 | Endpoint | Methods | Resource |
 | --- | --- | --- |
-| [/carts](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/carts) | PATCH, DELETE | Registered users' cart. |
+| /carts | PATCH, DELETE | Registered users' cart. |
 
 ## Possible errors
 The following error responses can be returned by the server when a resource supporting ETags is updated:

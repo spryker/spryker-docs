@@ -24,7 +24,7 @@ The default lifetime of the access tokens is 8 hours (28800 seconds) and 1 month
 
 For security purposes, when you finish sending requests as a user, or if a token gets compromised, we recommend revoking the refresh token. Revoked tokens are marked as expired on the date and time of the request and can no longer be exchanged for access tokens. 
 
-Expired tokens are stored in the database, and you can configure them to be deleted. For details, see [Deleting expired refresh tokens](https://documentation.spryker.com/2021080/docs/configuring-outdated-refresh-token-life-time). 
+Expired tokens are stored in the database, and you can configure them to be deleted.
 
 ## Protected resources
 
@@ -32,7 +32,7 @@ Below, you can find a list of the default protected resources. As Glue API is hi
 
 | Action | Method | Endpoints |
 | --- | --- | --- |
-| Customer - Retrieve a customer | GET | http://mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %} |
+| Customer - Retrieve a customer | GET | /customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %} |
 | Customers - Update customer address | PATCH | /customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}/addresses/{% raw %}{{{% endraw %}address_id{% raw %}}}{% endraw %} |
 | Customers - Delete customer address | DELETE | ​/customers​/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}​/addresses​/{addressId} |
 | Customers - Retrieve list of all customer addresses | GET | ​/customers​/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}​/addresses |

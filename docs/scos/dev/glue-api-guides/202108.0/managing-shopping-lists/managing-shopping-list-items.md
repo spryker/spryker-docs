@@ -15,7 +15,7 @@ This endpoint allows managing shopping list items
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see: 
 * [Glue API: Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shopping-lists-feature-integration.html)
-* [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-products-feature-integration.html)
+* [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
 
 ## Add items to a shopping list
 To add items to a shopping list, send the request:

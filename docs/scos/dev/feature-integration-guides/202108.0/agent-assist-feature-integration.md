@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/agent-assist-feature-integration
 ---
 
-This document describes how to integrate the [Agent Assist](/upcoming-release/docs/agent-assist-feature-integration) feature into a Spryker project.
+This document describes how to integrate the [Agent Assist](/docs/scos/user/features/{{page.version}}/agent-assist-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 Follow the steps below to install the feature core.

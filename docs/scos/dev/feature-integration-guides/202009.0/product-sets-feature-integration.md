@@ -8,7 +8,7 @@ redirect_from:
   - /v6/docs/en/product-sets-feature-integration
 ---
 
-This document describes how to integrate the [Product Sets feature](/docs/scos/user/features/{{page.version}}/product-sets/product-sets-feature-overview.html) into a Spryker project.
+This document describes how to integrate the [Product Sets feature](/docs/scos/user/features/{{page.version}}/product-sets-feature-overview.html) into a Spryker project.
 
 ## Prerequisites
 To prepare your project to work with Product Sets:

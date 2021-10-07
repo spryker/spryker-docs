@@ -101,7 +101,7 @@ Below you will find the list of the new/updated documentation released as part o
  </details>
 
 
-* [Scheduled Prices](https://documentation.spryker.com/2021080/docs/scheduled-prices)
+* [Scheduled Prices](/docs/scos/user/features/{{site.version}}/scheduled-prices-feature-overview.html)
 <details open>
 <summary>Feature overview</summary>
 

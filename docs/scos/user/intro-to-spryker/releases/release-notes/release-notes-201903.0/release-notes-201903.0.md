@@ -52,7 +52,7 @@ Starting from this release, you can also apply a discount to a group of products
 
 ![Discount on group of products](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201903.0/image1.png)
 
-**Documentation**: [Discount](/docs/scos/user/features/{{site.version}}/promotions-discounts-feature-overview.html). 
+**Documentation**: [Discount](/docs/scos/user/features/{{site.version}}/promotions-discounts-feature-overview.html).
 
 ### Back Office Translated to Multiple Language
 With this release, we have added a new opportunity for you to go global and build a multi-cultural team within your organization. Now, Spryker Back Office supports multiple languages and is shipped with UI in both English (en_US) and German (de_DE) languages.
@@ -64,7 +64,7 @@ With this release, we have added a new opportunity for you to go global and buil
 Previously, the Back Office “Category” page could not display a large number of categories (more than 10 000 for example). With this release, we have refactored the page so that it can handle as many categories as your shop has.
 ![Supporting unlimited number of categories](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201903.0/image3.png)
 
-**Documentation**: [Category](https://documentation.spryker.com/2021080/docs/category-management).
+**Documentation**: [Category](/docs/scos/user/features/{{page.version}}/category-management-feature-overview.html).
 
 ## CMS
 ### Multi-store Support for CMS Pages

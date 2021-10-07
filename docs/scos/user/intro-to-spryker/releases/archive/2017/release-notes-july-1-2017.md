@@ -131,7 +131,7 @@ With this release, we are now introducing a new connector module to handle disco
 | [ProductLabelDiscountConnector 1.0.0](https://github.com/spryker/product-label-discount-connector/releases/tag/1.0.0) | <ul><li>[Discount 4.2.0](https://github.com/spryker/Discount/releases/tag/4.2.0)</li><li>[ProductLabel 1.1.0](https://github.com/spryker/product-label/releases/tag/1.1.0)</li></ul> | [Discount 4.2.1](https://github.com/spryker/Discount/releases/tag/4.2.1) |
 
 **Documentation**
-For relevant documentation, see [Product Label Module Guide](https://documentation.spryker.com/2021080/docs/product-label), [Discount Module Guide](/docs/scos/user/features/{{site.version}}promotions-discounts-feature-overview.html)
+For relevant documentation, see [Product Label Module Guide](/docs/scos/user/features/{{site.version}}/product-labels-feature-overview.html), [Discount Module Guide](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html)
 
 **Migration Guides**
 To upgrade, follow the steps described below:
@@ -157,7 +157,7 @@ Previously, our schema allowed only one payment per sales-order. However, there 
 | [Payment 4.0.0](https://github.com/spryker/Payment/releases/tag/4.0.0) | n/a | <ul><li>[Braintree 0.5.3](https://github.com/spryker/Braintree/releases/tag/0.5.3)</li><li>[DummyPayment 2.0.3](https://github.com/spryker/dummy-payment/releases/tag/2.0.3)</li><li>[Payolution 4.0.3](https://github.com/spryker/Payolution/releases/tag/4.0.3)</li><li>[Ratepay 0.6.1](https://github.com/spryker/Ratepay/releases/tag/0.6.1)</li><li>[Transfer 3.3.2](https://github.com/spryker/transfer/releases/tag/3.3.2)</li></ul> |
 
 **Documentation**
-For module documentation, see [Payment Module Guide](https://documentation.spryker.com/2021080/docs/payments)
+For module documentation, see [Payment Module Guide](/docs/scos/user/features/{{site.version}}/payments-feature-overview.html)
 For detailed migration guides, see [Payment Migration Guide](/docs/scos/dev/migration-and-integration/{{site.version}}/module-migration-guides/migration-guide-payment.html)
 
 **Migration Guides**

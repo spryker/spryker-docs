@@ -31,14 +31,14 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 * [Product Sets](/docs/scos/user/features/{{site.version}}/product-sets-feature-overview.html)
 * [Product Relations](/docs/scos/user/features/{{site.version}}/product-relations-feature-overview.html)
 * [Product Options](/docs/scos/user/features/{{site.version}}/product-options-feature-overview.html)
-* [Product Labels](https://documentation.spryker.com/2021080/docs/product-label)
+* [Product Labels](/docs/scos/user/features/{{site.version}}/product-labels-feature-overview.html)
 * [Timed Product Availability](https://documentation.spryker.com/2021080/docs/product-ttl)
 * [Alternative Products](https://documentation.spryker.com/2021080/docs/alternative-products)
 * [Discountinued Products](https://documentation.spryker.com/2021080/docs/discontinued-products)
 
 [**Catalog Management**](/docs/scos/user/features/{{site.version}}/catalog.html):
 
-* [Category Management](https://documentation.spryker.com/2021080/docs/category-management)
+* [Category Management](/docs/scos/user/features/{{site.version}}/category-management-feature-overview.html)
 <!---* [Product to Category Association](https://documentation.spryker.com/2021080/docs/product-to-category-association)
 * [Category Hierarchy](https://documentation.spryker.com/2021080/docs/define-category-hierarchy)
 * [Product Catalog Management](https://documentation.spryker.com/2021080/docs/product-catalog-management)-->
@@ -90,7 +90,8 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 * [Autodetect of Currency](/docs/scos/user/features/{{site.version}}/prices-feature-overview/prices-feature-overview.html)
 * [Volume Prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html)
 * [Net & Gross Price Mode](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/net-and-gross-prices-management.html)
-* [Scheduled Prices](https://documentation.spryker.com/2021080/docs/scheduled-prices)
+* [Scheduled Prices]((/docs/scos/user/features/{{site.version}}/scheduled-prices-feature-overview.html)
+
 
 [**Tax**](/docs/scos/user/features/{{site.version}}/tax-feature-overview.html):
 [Manage Tax Rates & Sets](/docs/scos/user/features/{{site.version}}/tax-feature-overview.html)
@@ -109,20 +110,20 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 * [Discounts](/docs/scos/user/features/{{site.version}}/promotions-discounts-feature-overview.html)
 * [Order Thresholds](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/order-thresholds-overview.html)
 
-[**Shipment**](https://documentation.spryker.com/2021080/docs/shipment):
+[**Shipment**](/docs/scos/user/features/{{site.version}}/shipment-feature-overview.html):
 
 * [Shipment Carriers & Methods](https://documentation.spryker.com/2021080/docs/shipment-carriers-methods)
 * [Multiple Currencies for Shipments](/docs/scos/user/features/{{site.version}}/shipment/shipment-feature-overview.html)
 * [Shipment Calculation Rules](/docs/scos/user/features/{{site.version}}/shipment-feature-overview.html)
 * [Split Delivery](https://documentation.spryker.com/2021080/docs/split-delivery)
 
-[**Payment**](https://documentation.spryker.com/2021080/docs/payments):
+[**Payment**](/docs/scos/user/features/{{site.version}}/payments-feature-overview.html):
 
 * [Payment Provider Integration](https://documentation.spryker.com/2021080/docs/payments-provider-integration)
 * [Multiple Payment Methods per Order](https://documentation.spryker.com/2021080/docs/payments-methods-overview)
 * [Refund Management](/docs/scos/user/features/{{site.version}}/refunds-feature-overview.html)
 
-[**Gift Cards**](https://documentation.spryker.com/2021080/docs/gift-card):
+[**Gift Cards**](/docs/scos/user/features/{{site.version}}/gift-cards-feature-overview.html):
 [Gift Cards Purchase & Management](https://documentation.spryker.com/2021080/docs/gift-card-purchase-management-201907)
 
 [**Checkout**](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/checkout-feature-overview.html):
@@ -138,7 +139,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 * [Transactional E-Mail Management](https://documentation.spryker.com/2021080/docs/transactional-email-management)
 * [Newsletter Subscription](https://documentation.spryker.com/2021080/docs/newsletter-subscription)
 * [Back in Stock Notification](https://documentation.spryker.com/2021080/docs/availability-notification)
-* [Comment Widget](https://documentation.spryker.com/2021080/docs/comments)
+* [Comment Widget](/docs/scos/user/features/{{site.version}}/comments-feature-overview.html)
 
 [**CRM (Customer Relationship Management)**](/docs/scos/user/features/{{site.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html):
 
@@ -154,10 +155,10 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 <!---* [Order Processing](https://documentation.spryker.com/2021080/docs/order-processing)-->
 * [Reclamations](https://documentation.spryker.com/2021080/docs/reclamations)
 
-[**Inventory Management**](https://documentation.spryker.com/2021080/docs/inventory-management):
+[**Inventory Management**](/docs/scos/user/features/{{site.version}}/inventory-management-feature-overview.html):
 
-* [Stock & Availability Management](https://documentation.spryker.com/2021080/docs/inventory-management)
-* [Multiple Warehouse Stock Management](https://documentation.spryker.com/2021080/docs/multiple-warehouse-stock)
+* [Stock & Availability Management](/docs/scos/user/features/{{site.version}}/inventory-management-feature-overview.html)
+* [Multiple Warehouse Stock Management](/docs/scos/user/features/{{site.version}}/inventory-management-feature-overview.html)
 
 [**Back Office**](https://documentation.spryker.com/2021080/docs/back-office):
 

@@ -24,7 +24,7 @@ For information about installing the Spryker Commerce OS see [Getting Started Gu
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes%3A+Code+Releases+May%2C+2020/image1.png)
 
 #### Documentation
-[Custom Order Reference](https://documentation.spryker.com/2021080/docs/custom-order-reference)
+[Custom Order Reference](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/custom-order-reference-overview.html)
 
 ### Filter and Search in Order Archive
 **Filter and Search in Order Archive** allows B2C users to search and filter orders in their order archive, and for B2B users, it opens even more possibilities. **Filter and Search** adds two new permissions that allow B2B users to view their orders, orders of their Business Units, and orders of their Company. The order management has now become easier and provides multiple tools to find an order by order reference, product name, or product SKU and to see products of the orders on the order archive page.
@@ -110,7 +110,7 @@ The checkout process is paramount for your business in any business model. With 
 To enable the maximum level of security for your system, you must be able to invalidate refresh tokens in the presence of potential menaces. With this API **refresh tokens are made persistent long-term and you will be able to revoke them at any time for each user**. You can also configure the amount of time for persistence and clean the refresh tokens up from the database when necessary.
 
 #### Documentation
-[Token Revocation](/docs/scos/dev/glue-api-guides/{{site.version}}/authentication-and-authorization.html#token-revocation)
+[Token Revocation](/docs/scos/dev/glue-api-guides/202005.0/managing-customers/authenticating-as-a-customer.html#token-revocation)
 
 ### Swagger Documentation Generator Contains “Includes” by Endpoint
 In order to make it easier for API consumers to understand the content of those endpoints following the compound documents section of the JSONAPI specification, in this release, we have introduced improvements that will allow you to have upfront information by endpoint about the **primary resources that can be included in the response**. This can be useful not only for a basic understanding of the endpoints but also for automation purposes.

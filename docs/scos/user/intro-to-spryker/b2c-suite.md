@@ -43,7 +43,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 * [Category Hierarchy](https://documentation.spryker.com/2021080/docs/define-category-hierarchy)
 * [Product Catalog Management](https://documentation.spryker.com/2021080/docs/product-catalog-management)-->
 
-[**Navigation**](https://documentation.spryker.com/2021080/docs/navigation):
+[**Navigation**](/docs/user/features/{[site.version}}/navigation-feature-overview.html):
 
 * [Navigation](https://documentation.spryker.com/2021080/docs/en/navigation)
 * [Navigation feature](https://documentation.spryker.com/2021080/docs/en/navigation)

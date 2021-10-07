@@ -34,7 +34,7 @@ A developer can do the following:
 * [Retrieve banner content items](docs\scos\dev\glue-api-guides\202009.0\retrieving-content-items\retrieving-banner-content-items.html)
 * [Retrieve abstract product list content items](docs\scos\dev\glue-api-guides\202009.0\retrieving-content-items\retrieving-abstract-product-list-content-items.md)
 
-See [Content Items Types: Module Relations](/docs/scos/user/features/{{page.version}}/content-items/content-item-types-module-relations.html) for more information on each content item type and module relations.
+See [Content Items Types: Module Relations](/docs/scos/user/feature-walkthroughs/{{page.version}}/content-items-feature-walkthrough/content-item-types-module-relations.html) for more information on each content item type and module relations.
 
 ## Content Item Widget
 Content Item Widget is a Twig code piece that is used to render a content item on Storefront.

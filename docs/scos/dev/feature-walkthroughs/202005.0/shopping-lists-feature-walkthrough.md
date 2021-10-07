@@ -8,7 +8,7 @@ template: concept-topic-template
 The _Shopping Lists_ feature allows customers to create and share multiple lists of products between company business units or single users. Shopping lists can be shared between users with different sets of permissions.
 
 
-To learn more about the feature and to find out how end users use it, see [Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-lists/shopping-lists.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html) for business users.
 
 
 ## Related Developer articles

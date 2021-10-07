@@ -34,7 +34,7 @@ A product is associated with at least one stock product. It should be noted that
 
 When order is made, stock is not updated automatically in the system, you have to set it manually. You can define stock only for concrete products. You can set stock by:
 
-* Editing product stock in the Back Office. See [Editing stock](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/availability/managing-products-availability.html#editing-stock) for details.
+* Editing product stock in the Back Office. See [Editing stock](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/managing-products-availability.html#editing-stock) for details.
 * Importing the quantities of items stored in each of the warehouses. See [Stocks](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/stocks/stocks.html) for details.
 
 ### How Spryker stores your product stock
@@ -64,7 +64,7 @@ Product availability after the order:
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/after-order-placement.png)
 
-See [Checking availability](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/availability/managing-products-availability.html#checking-availability) for details on how you can check product availability in the Back Office.
+See [Checking availability](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/managing-products-availability.html#checking-availability) for details on how you can check product availability in the Back Office.
 
 {% info_block infoBox %}
 
@@ -93,7 +93,7 @@ For SEO purposes, products that are not available can still be displayed on the 
 |---|
 | [Create a warehouses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/warehouses/creating-warehouses.html)  |
 | [Manage warehouses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/warehouses/managing-warehouses.html) |
-| [Manage product availabilities](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/availability/managing-products-availability.html)  |
+| [Manage product availabilities](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/managing-products-availability.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

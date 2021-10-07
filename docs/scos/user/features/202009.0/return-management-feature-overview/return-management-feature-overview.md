@@ -32,7 +32,7 @@ The *Return Policy* is a set of rules that defines what items can be returned: i
 
 {% info_block infoBox "Info" %}
 
-For now, you can set the Return Policy period in code only. There is no UI for that. See [HowTo - Set the number of days for a return policy](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/howto-set-number-of-days-for-a-return-policy.html) for details.
+For now, you can set the Return Policy period in code only. There is no UI for that. See [HowTo - Set the number of days for a return policy](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-set-number-of-days-for-a-return-policy.html) for details.
 
 {% endinfo_block %}
 

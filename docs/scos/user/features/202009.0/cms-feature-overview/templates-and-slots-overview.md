@@ -219,7 +219,7 @@ Page identifiers used to define visibility conditions depend on the page type to
 For product details page type, you can use the Product ID or Category ID identifiers. Category ID is a collective identifier. By selecting a category, the content manager selects all the products that are [assigned to the category](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html).
 {% endinfo_block %}
 
-To meet your project requirements, you can extend the visibility conditions functionality by adding more conditions, like Customer ID, Customer Group ID or Navigation Nodes. See [HowTo - Create Visibility Conditions for CMS Blocks](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html) to learn more.
+To meet your project requirements, you can extend the visibility conditions functionality by adding more conditions, like Customer ID, Customer Group ID or Navigation Nodes. See [HowTo - Create Visibility Conditions for CMS Blocks](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html) to learn more.
 
 
 A content manager can define visibility conditions by [selecting pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html#selecting-pages) in the Back Office > **Content Management > Slots** section.
@@ -300,7 +300,7 @@ This section describes how Slot Widget works with the Spryker CMS Blocks content
 {% info_block infoBox %}
 
 
-* By default, names are used as unique identifiers of CMS blocks while Slot Widget requires keys. To enable Slot Widget to work with CMS blocks, [upgrade](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-cmsblock.html#upgrading-from-version-2---to-version-3--) the `CMSBlock` module in your project for CMS Blocks to have keys.
+* By default, names are used as unique identifiers of CMS blocks while Slot Widget requires keys. To enable Slot Widget to work with CMS blocks, [upgrade](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-cmsblock.html#upgrading-from-version-2---to-version-3--) the `CMSBlock` module in your project for CMS Blocks to have keys.
 
 
 {% endinfo_block %}
@@ -387,8 +387,8 @@ Currently, the functionality has the following functional constraints which are 
                 <li class="mr-title">Developer</li>
                                                 <li><a href="/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia.html-with-templates-slots" class="mr-link">Learn about the CoreMedia technology partner integration</a></li>
                                 <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\cms-feature-integration.md" class="mr-link">Enable templates and slots in your project by integrating the CMS feature</a></li>
-                                <li><a href="/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html" class="mr-link">Learn how to create a visibility condition</a></li>                
-                <li><a href="/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-cmsblock.html#upgrading-from-version-2---to-version-3--" class="mr-link">Migrate the CmsBlock module from version 2.* to version 3.*</a></li>
+                                <li><a href="/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html" class="mr-link">Learn how to create a visibility condition</a></li>                
+                <li><a href="/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-cmsblock.html#upgrading-from-version-2---to-version-3--" class="mr-link">Migrate the CmsBlock module from version 2.* to version 3.*</a></li>
                                 <li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-cmsblockstorage.md#upgrading-from-version-1---to-version-2--" class="mr-link">Migrate the CmsBlockStorage module from version 1.* to version 2.*</a></li>
                                                 <li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-cmsblockwidget.md">Migrate the CmsBlockWidget module from version 1.* to version 2.*</a></li>
             </ul>

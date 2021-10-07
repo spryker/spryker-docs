@@ -102,12 +102,12 @@ In this release, Spryker added the most relevant functionality to help you creat
 ### B2B Login API
 In the B2B context, buyers typically represent a company and act on its behalf. With the B2B Login API, Spryker Commerce OS provides a way for the user to log in not only as a Customer but also as a Company user, member of a Business Unit and with the level of permissions assigned by their organization according to the Company user’s roles.
 
-**Documentation**: [B2B Logging in as Company User](https://documentation.spryker.com/2021080/docs/logging-in-as-company-user-201907)
+**Documentation**: [B2B Logging in as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html)
 
 ### Business on Behalf API
 To impersonate a customer as a Company User, API clients can use the **Business on Behalf API**. It provides REST access to retrieve a list of the Company Users available to the currently logged in user and impersonate them as any user from that list.
 
-**Documentation**: [B2B Logging in as Company User](https://documentation.spryker.com/2021080/docs/logging-in-as-company-user-201907)
+**Documentation**: [B2B Logging in as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html)
 
 ### Company Account API
 In the B2B environment, users are organized in Business Units depending on the scope of their activity in the company for better manageability and accountability. Users also get roles assigned to them depending on their level of responsibility and hierarchy in the organization. The endpoints provided by the **Company Account API** allow you to retrieve Business Unit, Business unit addresses, and Company Roles information.
@@ -124,8 +124,8 @@ Provides a way to authorize access to resources related to the level of permissi
 
 **Documentation**:
 
-* [Security and Authentication](/docs/scos/dev/glue-api-guides/security-and-authentication.html)
-* [B2B Logging in as Company User](https://documentation.spryker.com/2021080/docs/logging-in-as-company-user-201907)
+* [Security and Authentication](/docs/scos/dev/glue-api-guides/{{site.version}}/security-and-authentication.html)
+* [B2B Logging in as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html)
 * [Retrieving Company Role Information](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/retrieving-company-roles.html)
 
 ### Multicart API

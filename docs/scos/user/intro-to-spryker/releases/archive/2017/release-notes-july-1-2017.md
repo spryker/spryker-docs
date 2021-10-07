@@ -64,7 +64,7 @@ In addition, we are introducing a set of new features for CMS blocks:
 **Documentation**
 For relevant documentation, see [CMS Block](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-blocks-overview.html).
 
-For detailed migration guides, see [CMS Migration Guide](/docs/scos/dev/migration-and-integration/{{site.version}}/module-migration-guides/migration-guide-cms.html), [CMS Block Migration Console](/docs/scos/dev/migration-and-integration/{{site.version}}/module-migration-guides/migration-guide-cms.html-block-category-connector-console)
+For detailed migration guides, see [CMS Migration Guide](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cms.html), [CMS Block Migration Console](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cms.html-block-category-connector-console)
 
 **Migration Guides**
 To upgrade, follow the steps described below:
@@ -158,7 +158,7 @@ Previously, our schema allowed only one payment per sales-order. However, there 
 
 **Documentation**
 For module documentation, see [Payment Module Guide](/docs/scos/user/features/{{site.version}}/payments-feature-overview.html)
-For detailed migration guides, see [Payment Migration Guide](/docs/scos/dev/migration-and-integration/{{site.version}}/module-migration-guides/migration-guide-payment.html)
+For detailed migration guides, see [Payment Migration Guide](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-payment.html)
 
 **Migration Guides**
 To upgrade, follow the steps described below:

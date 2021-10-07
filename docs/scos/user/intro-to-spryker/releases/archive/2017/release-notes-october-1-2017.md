@@ -26,7 +26,7 @@ The CMS Page Preview has an option to view draft CMS pages before publishing. To
 **Documentation**
 For module documentation, see CMS - Preview Draft Page<!--/capabilities/cms/page-draft-preview.htm)-->, Under the Hood - Customer User Connector.
 For feature integration, see Feature Integration - Customer User Connector.
-For detailed migration guides, see [CMS Collector Module Migration Guide from Version 1. to 2.](/docs/scos/dev/migration-and-integration/{{site.version}}/module-migration-guides/migration-guide-cmscollector.html#upgrading-from-version-1---to-version-2--)
+For detailed migration guides, see [CMS Collector Module Migration Guide from Version 1. to 2.](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cmscollector.html#upgrading-from-version-1---to-version-2--)
 
 **Migration Guides**
 To upgrade, follow the steps described below:
@@ -60,7 +60,7 @@ For module documentation, see [Navigation Module Guide](https://documentation.sp
 
 For feature integration, see [Feature Integration - Navigation](/docs/scos/dev/feature-walkthroughs/{{site.version}}/navigation-module-reference-information.html#under-the-hood#feature-integration)
 
-For detailed migration guides, see [Navigation Module Migration Guide from Version 1. to 2](/docs/scos/dev/migration-and-integration/{{site.version}}/module-migration-guides/migration-guide-navigation.html#upgrading-from-version-1---to-version-2--), [NavigationGui Module Migration Guide from Version 1. to 2.](/docs/scos/dev/migration-and-integration/{{site.version}}/module-migration-guides/migration-guide-navigationgui.html#upgrading-from-version-1---to-version-2--).
+For detailed migration guides, see [Navigation Module Migration Guide from Version 1. to 2](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-navigation.html#upgrading-from-version-1---to-version-2--), [NavigationGui Module Migration Guide from Version 1. to 2.](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-navigationgui.html#upgrading-from-version-1---to-version-2--).
 
 **Migration Guides**
 To upgrade, follow the steps described below:
@@ -89,7 +89,7 @@ This release focuses on enabling multi-currency for orders. It allows saving cur
 |[Sales 8.0.0](https://github.com/spryker/Sales/releases/tag/8.0.0)  | <ul><li>[Discount 4.6.0](https://github.com/spryker/Discount/releases/tag/4.6.0)</li><li>[Payment 4.1.0](https://github.com/spryker/Payment/releases/tag/4.1.0)</li><li>[Quote 1.1.0](https://github.com/spryker/Quote/releases/tag/1.1.0)</li><li>[Refund 5.1.0](https://github.com/spryker/Refund/releases/tag/5.1.0)</li><li>[Shipment 5.2.0](https://github.com/spryker/Shipment/releases/tag/5.2.0)</li></ul> | <ul><li>[Braintree 0.5.6](https://github.com/spryker/Braintree/releases/tag/0.5.6)</li><li>[Checkout 3.1.1](https://github.com/spryker/Checkout/releases/tag/3.1.1)</li><li>[DummyPayment 2.1.2](https://github.com/spryker/dummy-payment/releases/tag/2.1.2)</li><li>[Nopayment 3.0.3](https://github.com/spryker/Nopayment/releases/tag/3.0.3)</li><li>[Oms 7.0.5](https://github.com/spryker/Oms/releases/tag/7.0.5)</li><li>[Payolution 4.0.6](https://github.com/spryker/Payolution/releases/tag/4.0.6)</li><li>[ProductBundle 3.2.2](https://github.com/spryker/product-bundle/releases/tag/3.2.2)</li><li>[ProductOption 5.3.1](https://github.com/spryker/product-option/releases/tag/5.3.1)</li><li>[Ratepay 0.6.4](https://github.com/spryker/Ratepay/releases/tag/0.6.4)</li><li>[SalesProductConnector 1.0.1](https://github.com/spryker/sales-product-connector/releases/tag/1.0.1)</li><li>[SalesSplit 3.0.3](https://github.com/spryker/sales-split/releases/tag/3.0.3)</li></ul> |
 
 **Documentation**
-For detailed migration guides, see [Sales Module Migration Guide from Version 7. to 8](/docs/scos/dev/migration-and-integration/{{site.version}}/module-migration-guides/migration-guide-sales.html#upgrading-from-version-7---to-version-8--).
+For detailed migration guides, see [Sales Module Migration Guide from Version 7. to 8](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-sales.html#upgrading-from-version-7---to-version-8--).
 
 **Migration Guides**
 To upgrade, follow the steps described below:

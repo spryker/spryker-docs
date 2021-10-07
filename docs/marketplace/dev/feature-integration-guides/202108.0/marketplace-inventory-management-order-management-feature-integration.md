@@ -20,37 +20,7 @@ To start feature integration, integrate the required features:
 | Marketplace Inventory Management | {{page.version}} |  [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-feature-integration.html)  |
 | Marketplace Order Management | {{page.version}} |  [Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-feature-integration.html)  |
 
-### 1) Set up the database schema
-
-Adjust the schema definition so entity changes trigger events:
-
-**src/Pyz/Zed/OmsProductOfferReservation/Persistence/Propel/Schema/spy_oms_product_offer_reservation.schema.xml**
-
-```xml
-<?xml version="1.0"?>
-<database xmlns="spryker:schema-01"
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          name="zed"
-          xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
-          namespace="Orm\Zed\OmsProductOfferReservation\Persistence"
-          package="src.Orm.Zed.OmsProductOfferReservation.Persistence">
-
-    <table name="spy_oms_product_offer_reservation">
-        <behavior name="event">
-            <parameter name="spy_oms_product_offer_reservation_all" column="*"/>
-        </behavior>
-    </table>
-
-</database>
-```
-
-Apply database changes:
-
-```bash
-console propel:install
-```
-
-### 2) Set up behavior
+### 1) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 

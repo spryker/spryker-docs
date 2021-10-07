@@ -487,8 +487,8 @@ Set up widgets as follows:
 {code snippet with provider setup}
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
+
 <!--Describe how a developer can check they have completed the step correctly.-->
 
 Make sure that the following widgets have been registered by adding the respective code snippets to a Twig template:
@@ -496,6 +496,8 @@ Make sure that the following widgets have been registered by adding the respecti
 | WIDGET   | VERIFICATION                  |
 | -------- | ----------------------------- |
 | {widget} | {steps to verify the changes} |
+
+{% endinfo_block %}
 
 2. Enable Javascript and CSS changes:
 

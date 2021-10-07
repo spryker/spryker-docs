@@ -152,7 +152,7 @@ To get returnable items of a specific sales order item by the order ID, send the
 
 | Path parameter | Description |
 | --- | --- |
-| {% raw %}{{{% endraw %}OrderID{% raw %}}}{% endraw %} | A unique identifier of an order. [Retrieve all orders](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/retrieving-customer-orders.html#retrieving-all-orders) to get it. |
+| {% raw %}{{{% endraw %}OrderID{% raw %}}}{% endraw %} | A unique identifier of an order. [Retrieve all orders](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html#retrieving-all-orders) to get it. |
 
 ### Request
 Sample request: `GET https://glue.mysprykershop.com/returnable-items/14d86bb2-ea23-57ed-904c-eecc63ef10ac`

@@ -15,7 +15,7 @@ This endpoint allows retrieving detailed information about the prices of abstrac
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-products-feature-integration.html)
-* [Glue API: Prices feature integration](https://documentation.spryker.com/2021080/docs/glue-api-prices-feature-integration)
+* [Glue API: Product price feature integration](https://documentation.spryker.com/docs/glue-api-prices-api-feature-integration)
 
 ## Retrieve prices of an abstract product
 
@@ -201,7 +201,7 @@ Response sample with default prices and volume prices for an abstract product
 | currency.code | String | Currency code. |
 | currency.name | String | Currency name. |
 | currency.symbol | String | Currency symbol. |
-| volumePrices | Array | An array of objects defining the [volume prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview/volume-prices-overview.html) for the abstract product. |
+| volumePrices | Array | An array of objects defining the [volume prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html) for the abstract product. |
 | netAmount | Integer | Net price in cents. |
 | grossAmount | Integer | Gross price in cents. |
 | quantity | Integer | Number of items. |
@@ -210,7 +210,7 @@ Response sample with default prices and volume prices for an abstract product
 
 | CODE | MEANING |
 | --- | --- |
-| 307 | Abstract product price is not found (for example, becasue of the wrong abstract product SKU. |
+| 307 | Abstract product price is not found (for example, because of the wrong abstract product SKU. |
 | 311 | Abstract product SKU is not specified. |
 | 404 | Request URL or type is wrong. |
 

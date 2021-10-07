@@ -201,7 +201,7 @@ To retrieve prices of a concrete product, send the request:
 | currency.code | String | Currency code. |
 | currency.name | String | Currency name. |
 | currency.symbol | String | Currency symbol. |
-| volumePrices | Array | An array of objects defining the [volume prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview/volume-prices-overview.html) for the concrete product. |
+| volumePrices | Array | An array of objects defining the [volume prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html) for the concrete product. |
 | netAmount | Integer | Net price in cents. |
 | grossAmount | Integer | Gross price in cents. |
 | quantity | Integer | Number of items. |

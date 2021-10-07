@@ -88,7 +88,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 [**Price**](/docs/scos/user/features/{{site.version}}/prices-feature-overview/prices-feature-overview.html):
 
 * [Autodetect of Currency](/docs/scos/user/features/{{site.version}}/prices-feature-overview/prices-feature-overview.html)
-* [Volume Prices](/docs/scos/user/features/{{site.version}}/prices-feature-overview/prices-feature-overview/volume-prices-overview.html)
+* [Volume Prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html)
 * [Net & Gross Price Mode](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/net-and-gross-prices-management.html)
 * [Scheduled Prices](https://documentation.spryker.com/2021080/docs/scheduled-prices)
 

@@ -8,7 +8,7 @@ redirect_from:
   - /v6/docs/en/managing-product-ratings-and-reviews
 ---
 
-[Ratings and reviews](https://documentation.spryker.com/v6/docs/rating-reviews) allow customers to share their opinions and experiences about purchases. This enables customers to take meaningful decisions about purchases and increases their trust with the shop.
+[Ratings and reviews](https://documentation.spryker.com/docs/product-rating-reviews) allow customers to share their opinions and experiences about purchases. This enables customers to take meaningful decisions about purchases and increases their trust with the shop.
 
 Products and ratings API helps you to:
 

@@ -729,7 +729,7 @@ A list of images assigned to a configurable bundle template.  |
 
 For the attributes of other included resources, see:
 
-* [Retrieving concrete products](https://documentation.spryker.com/2021080/docs/retrieving-product-information#retrieve-concrete-products)
+* [Retrieving concrete products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#retrieve-concrete-products)
 * [Retrieving concrete product prices](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-product-prices.html)
 * [Retrieving concrete product image sets](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html)
 
@@ -740,10 +740,10 @@ You can use the configurable bundle resource in the following way:
 * [Add a configurable bundle to a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-cart-items.html#add-a-configurable-bundle-to-a-guest-cart)
 * [Change the quantity of the configurable bundles in a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-cart-items.html#change-quantity-of-configurable-bundles-in-a-guest-cart)
 * [Remove a configurable bundle from a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-cart-items.html#remove-a-configurable-bundle-from-a-guest-cart)
-* [Add a configurable bundle to a registered user’s cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-a-configurable-bundle-to-a-registered-user%E2%80%99s-cart)
-* [Change the quantity of the configurable bundles in a registered user’s cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#change-quantity-of-configurable-bundles-in-a-registered-user%E2%80%99s-cart)
-* [Remove a configurable bundle from a registered user’s cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#remove-a-configurable-bundle-from-a-registered-user%E2%80%99s-cart)
+* [Add a configurable bundle to a registered user’s cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-a-configurable-bundle-to-a-registered-user-s-cart)
+* [Change the quantity of the configurable bundles in a registered user’s cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#change-quantity-of-configurable-bundles-in-a-registered-user-s-cart)
+* [Remove a configurable bundle from a registered user’s cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#remove-a-configurable-bundle-from-a-registered-user-s-cart)
 * [Checking our purchases with configurable bundles](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html)
-* [Retrieving orders with configurable bundles](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/retrieving-customer-orders.html)
+* [Retrieving orders with configurable bundles](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html)
 
 

@@ -29,7 +29,7 @@ To add an address to a customer, send the request:
 
 | Path parameter | Description |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}*** | Unique identifier of the customer to add the address to. To get it, [Retrieve customers](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/manging-customers/managing-customers.html#retrieve-customers) or [Create a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/manging-customers/managing-customers.html#create-a-customer). |
+| ***{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}*** | Unique identifier of the customer to add the address to. To get it, [Retrieve customers](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#retrieve-customers) or [Create a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer). |
 
 
 ### Request
@@ -67,7 +67,7 @@ Request sample: `POST http://glue.mysprykershop.com/customers/DE--1/addresses`
 
 | Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
-| customer_reference | String | &check; | Unique identifier of the customer to add the address to. To get it, [Retrieve customers](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/manging-customers/managing-customers.html#retrieve-customers) or [Create a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/manging-customers/managing-customers.html#create-a-customer) |
+| customer_reference | String | &check; | Unique identifier of the customer to add the address to. To get it, [Retrieve customers](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#retrieve-customers) or [Create a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer) |
 | salutation | String | &check; | Salutation to use when addressing the customer. |
 | firstName | String | &check; | Customer's first name. |
 | lastName | String | &check; | Customer's last name. |
@@ -154,7 +154,7 @@ To edit an address, send the request:
 
 | Path parameter | Description |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}*** | Unique identifier of the customer to edit the address of. [Create a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/manging-customers/managing-customers.html#create-a-customer) to get it. |
+| ***{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}*** | Unique identifier of the customer to edit the address of. [Create a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer) to get it. |
 | ***{% raw %}{{{% endraw %}address_id{% raw %}}}{% endraw %}*** | Unique identifier of the address to edit. [Add an address](#add-an-address) to get it.  |
 
 ### Request
@@ -233,7 +233,7 @@ To retrieve a list of customer's addresses, send the request:
 
 | Path parameter | Description |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}*** | Unique identifier of the customer to retrieve the list of. [Create a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/manging-customers/managing-customers.html#create-a-customer) to get this id. |
+| ***{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}*** | Unique identifier of the customer to retrieve the list of. [Create a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer) to get this id. |
 
 ### Request
 
@@ -332,7 +332,7 @@ To retrieve an address, send the request:
 
 | Path parameter | Description |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}*** | Unique identifier of the customer to retrieve the address of. [Create a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/manging-customers/managing-customers.html#create-a-customer) to get it. |
+| ***{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}*** | Unique identifier of the customer to retrieve the address of. [Create a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer) to get it. |
 | ***{% raw %}{{{% endraw %}address_id{% raw %}}}{% endraw %}*** | Unique identifier of the address to retrieve. [Add an address](#add-an-address) to get it.  |
 
 
@@ -382,7 +382,7 @@ To delete an address, send the request:
 
 | Path parameter | Description |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}*** | Unique identifier of the customer to delete the address of. [Create a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/manging-customers/managing-customers.html#create-a-customer) to get it. |
+| ***{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}*** | Unique identifier of the customer to delete the address of. [Create a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer) to get it. |
 | ***{% raw %}{{{% endraw %}address_id{% raw %}}}{% endraw %}*** | Unique identifier of the address to delete. [Add an address](#add-an-address) to get it.  |
 
 
@@ -408,11 +408,11 @@ To view generic errors that originate from the Glue Application, see [Reference 
 
 ## Next steps
 
-* [Manage carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/carts-of-registered-users/managing-carts-of-registered-users.html)
+* [Manage carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html)
 * [Manage cart items](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html)
 * [Manage gift cards](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html)
-* [Manage wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists//managing-wishlists/managing-wishlists.html)
-* [Manage orders](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/retrieving-customer-orders.html)
+* [Manage wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html)
+* [Manage orders](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html)
 * [Manage customer authentication tokens](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-authentication-tokens.html)
 * [Manage customer passwords](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-passwords.html)
 

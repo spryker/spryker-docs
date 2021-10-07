@@ -111,7 +111,7 @@ After you’ve authenticated as a customer, you can impersonate them:
     
 *   [Manage gift cards](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html)
     
-*   [Manage wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists//managing-wishlists/managing-wishlists.html)
+*   [Manage wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html)
     
 *   [Manage orders](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html)  
     

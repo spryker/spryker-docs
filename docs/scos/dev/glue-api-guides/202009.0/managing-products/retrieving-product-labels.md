@@ -74,8 +74,8 @@ Apart from using this dedicated endpoint, you can retrieve product lables as an 
 * [Retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart)
 * [Retreive a registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-user-s-carts)
 * [Retrieve a registered user's cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-cart)
-* [Retrieve wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists//managing-wishlists/managing-wishlists.html#retrieve-wishlists)
-* [Retrieve a wishlist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists//managing-wishlists/managing-wishlists.html#retrieve-a-wishlist)
+* [Retrieve wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html#retrieve-wishlists)
+* [Retrieve a wishlist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html#retrieve-a-wishlist)
 
 
 ## Possible errors

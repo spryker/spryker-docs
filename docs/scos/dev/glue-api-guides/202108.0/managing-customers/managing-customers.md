@@ -108,7 +108,7 @@ To create a customer, send the request:
 
 
 
-After creating a customer, users receive a verification email. The email contains a link with the token that confirms and finalizes the customer registration process. Customers click the verification link from the email and finish the registration. Alternatively, you can confirm the customer registration via API (see [Confirming customer registration](/upcoming-release/docs/confirming-customer-registration)). After confirmation, you can authenticate as a customer to perform requests to the protected resources.
+After creating a customer, users receive a verification email. The email contains a link with the token that confirms and finalizes the customer registration process. Customers click the verification link from the email and finish the registration. Alternatively, you can confirm the customer registration via API (see [Confirming customer registration](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/confirming-customer-registration.html)). After confirmation, you can authenticate as a customer to perform requests to the protected resources.
 
 ## Retrieve customers
 
@@ -393,7 +393,7 @@ There is an alternative way to retrieve existing subscriptions, for details see 
 | 405 | Customer reference is missing. |
 | 410 | Failed to save changes. |
 | 414 | Provided gender is invalid. |
-| 422 | Terms of service were not accepted. Note that if you have the [REST Request Format](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/introduction-tutorials/glue-api/validating-rest-request-format.html) validation enabled, then you will recieve 901 instead of 422. |
+| 422 | Terms of service were not accepted. Note that if you have the [REST Request Format](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/validating-rest-request-format.html) validation enabled, then you will recieve 901 instead of 422. |
 | 4606 | Request is unauthorized.|
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

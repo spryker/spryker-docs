@@ -140,7 +140,7 @@ You can easily manage gross and net prices per product, country, and currency. P
 With the Volume Prices feature, you can define individual prices for a product for different order quantities. Set specific volume thresholds for your products to encourage your customers to purchase larger quantities of a product in order to receive the special volume discount.
 ![Volume prices](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.11.0/image12.png) 
 
-**Documentation**: [Volume Prices](/docs/scos/user/features/{{site.version}}/prices-feature-overview/prices-feature-overview/volume-prices-overview.html)
+**Documentation**: [Volume Prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html)
 
 ### Customer-specific Prices
 Offer your customers individual agreements and customize the prices per business unit accordingly. To avoid unnecessary repetition of values, the data is compressed in the database.

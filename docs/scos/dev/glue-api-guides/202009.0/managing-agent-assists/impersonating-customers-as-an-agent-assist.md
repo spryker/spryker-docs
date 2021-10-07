@@ -111,7 +111,7 @@ After you’ve authenticated as a customer, you can impersonate them:
     
 *   [Manage wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists//managing-wishlists/managing-wishlists.html)
     
-*   [Manage orders](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/retrieving-customer-orders.html)  
+*   [Manage orders](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html)  
     
 
 Also, you can [refresh the agent assist authentication token](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/managing-agent-assist-authentication-tokens.html#refresh-an-agent-assist-access-token) or [revoke the agent assist refresh token](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/managing-agent-assist-authentication-tokens.html#revoke-an-agent-assist-refresh-token).

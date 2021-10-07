@@ -659,7 +659,7 @@ Among the attributes returned, there is **orderReference** that can be used to r
 You can extend the response with the **orders** resource relationship in order to obtain detailed order information.
 
 {% info_block infoBox "Info" %}
-For detailed information and a list of attributes, see section [Retrieving Specific Order](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/retrieving-customer-orders.html#retrieving-specific-order
+For detailed information and a list of attributes, see section [Retrieving Specific Order](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html#retrieving-specific-order
 {% endinfo_block %}{target="_blank"}.)
 
 Sample request: *POST http://glue.mysprykershop.com/checkout?include=orders*

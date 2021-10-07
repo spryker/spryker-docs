@@ -16,7 +16,7 @@ This endpoint allows retrieving a customer’s orders.
 
 For details on the modules that provide the API functionality and how to install them, see [Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html).
 
-## Retrieve a customer’s orders
+## Retrieve customer’s orders
 
 To retrieve a customer’s orders, send the request:
 
@@ -26,13 +26,13 @@ To retrieve a customer’s orders, send the request:
 
 {% info_block infoBox "Note" %}
 
-Alternatively, you can retrieve all orders made by a customer through the **/orders** endpoint. For details, see [Retrieving orders](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/retrieving-customer-orders.html#retrieve-all-orders).
+Alternatively, you can retrieve all orders made by a customer through the **/orders** endpoint. For details, see [Retrieving orders](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-orders.html#retrieve-all-orders).
 
 {% endinfo_block %}
 
 | PATH PARAMETER | DESCRIPTION |
 |-|-|
-| ***{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}*** | Customer unique identifier to retrieve orders of. To get it, [retrieve a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/manging-customers/managing-customers.html#retrieve-customers) or [create a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/manging-customers/managing-customers.html#create-a-customer). |
+| ***{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}*** | Customer unique identifier to retrieve orders of. To get it, [retrieve a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#retrieve-customers) or [create a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer). |
 
 ### Request
 

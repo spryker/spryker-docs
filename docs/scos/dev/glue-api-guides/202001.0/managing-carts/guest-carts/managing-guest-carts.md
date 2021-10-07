@@ -780,7 +780,7 @@ To assign a guest cart to a customer, include the unique identifier associated w
 The the *X-Anonymous-Customer-Unique-Id* header is passed every time the API client creates or updates a guest cart. The header is managed by the client exclusively. For details, see section [Resources for Accessing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#resources-for-accessing-guest-carts
 {% endinfo_block %}.)
 
-Upon login, the behavior depends on whether your project is a single cart or [multiple cart](/docs/scos/user/features/{{page.version}}multiple-carts-feature-overview.html) environment:
+Upon login, the behavior depends on whether your project is a single cart or [multiple cart](/docs/scos/user/features/{{page.version}}/multiple-carts-feature-overview.html) environment:
 
 * in **single cart** environments, the products in the guest cart will be added to the customers' own cart;
 * in **multiple cart** environments, the guest cart will be converted to a regular user cart and added to the list of the customers' own carts.

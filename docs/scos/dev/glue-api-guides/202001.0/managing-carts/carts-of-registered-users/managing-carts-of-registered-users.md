@@ -41,8 +41,8 @@ Shared carts can be accessed and manipulated the same as regular carts. The only
 By default, there are 2 levels of permissions for shared carts: **read-only** and **full access**. If a user attempts to perform an unauthorized action on a shared cart, the API will respond with the **403 Forbidden** status code.
 
 {% info_block infoBox "Info" %}
-For more details, see section *Retrieving Cart Permission Groups* in [Sharing Company User Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html
-{% endinfo_block %}{target="_blank"}.)
+For more details, see section *Retrieving Cart Permission Groups* in [Sharing Company User Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/sharing-company-user-carts/retrieving-cart-permission-groups.html)
+{% endinfo_block %}{target="_blank"}.
 
 To distinguish whether a specific cart is owned by a user directly or shared with them, you need to extend the responses of the endpoints with the **cart-permission-groups** resource relationship. For example, if you want to get all carts available to a company user and distinguish which of them are shared, send the following request: *GET http://glue.mysprykershop.com/carts?**include=cart-permission-groups***. If a cart is shared with the user, it will contain the relationship, while if a cart is owned by the user directly, the relationship will not be present.
 
@@ -100,8 +100,8 @@ The following example represents **2** carts available to a user, where:
 ```
 
 {% info_block infoBox "Info" %}
-For more details, see section *Retrieving Cart Permission Groups* in [Sharing Company User Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html
-{% endinfo_block %}{target="_blank"}.)
+For more details, see section *Retrieving Cart Permission Groups* in [Sharing Company User Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/sharing-company-user-carts/retrieving-cart-permission-groups.html)
+{% endinfo_block %}{target="_blank"}.
 
 ## Creating Carts
 To create a cart for a registered user, send a *POST* request to the following endpoint:

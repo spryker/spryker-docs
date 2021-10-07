@@ -1,5 +1,5 @@
 ---
-title: Customer Account Management feature integration
+title: "Glue API: Customer Account Management feature integration"
 description: This guide will navigate through the process of installing and configuring of the Customer API feature used in Spryker OS.
 originalLink: https://documentation.spryker.com/v3/docs/customer-account-management-feature-integration-glue-201907
 originalArticleId: 1c3ee0f0-11af-4494-87f9-9ba3d4a8011c

@@ -404,6 +404,7 @@ Check your database to make sure that the following changes have been applied:
 |spy_merchant_sales_order_totals | table |created |
 |spy_sales_expense.merchant_reference | column |created |
 |spy_sales_order_item.merchant_reference | column |created  |
+|spy_sales_order_item.product_offer_reference | column | created |
 
 {% endinfo_block %}
 

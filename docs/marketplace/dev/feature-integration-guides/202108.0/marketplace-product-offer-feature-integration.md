@@ -35,7 +35,6 @@ Make sure that the following modules were installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | ------------------ | ---------------------- |
-| MerchantProductOfferWidget     | spryker-shop/merchant-product-offer-widget |
 | MerchantProductOffer           | spryker/merchant-product-offer             |
 | MerchantProductOfferDataImport | spryker/merchant-product-offer-data-import |
 | MerchantProductOfferGui        | spryker/merchant-product-offer-gui         |
@@ -98,7 +97,6 @@ Verify that the following changes have been implemented by checking your databas
 | spy_product_offer_store                      | table  | created |
 | spy_product_concrete_product_offers_storage  | table  | created |
 | spy_product_offer_storage                    | table  | created |
-| spy_sales_order_item.product_offer_reference | column | created |
 | spy_product_offer_validity                   | table  | created |
 
 
@@ -1388,7 +1386,30 @@ Make sure that, in the navigation menu of the Back Office, you can see the **Mar
 
 Follow the steps below to install the Marketplace Product Offer feature front end.
 
-### 1) Add Translations
+### Prerequisites
+
+To start feature integration, integrate the following features:
+
+| NAME | VERSION | INTEGRATION GUIDE |
+| ---------- | ----- | --------------|
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration)  |
+| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
+
+### 1) Install the required modules using Composer
+
+If installed before, not needed.
+
+{% info_block warningBox "Verification" %}
+
+Verify that the following modules were installed:
+
+| MODULE | EXPECTED DIRECTORY |
+| ---------- | -------------- |
+| MerchantProductOfferWidget | spryker-shop/merchant-product-offer-widget |
+
+{% endinfo_block %}
+
+### 2) Add Translations
 
 Append glossary according to your configuration:
 

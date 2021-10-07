@@ -17,7 +17,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Spryker Core | 202001.0 | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Merchant | {{page.version}} | [Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
+| Shipment | {{page.version}} | [Shipment feature integration](https://documentation.spryker.com/docs/shipment-feature-integration) |
 
 
 ### 1) Install the required modules using Composer
@@ -25,7 +26,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-shipment --update-with-dependencies
+composer require spryker-feature/marketplace-shipment:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -34,8 +35,8 @@ Make sure that the following modules were installed:
 
 | MODULE | EXPECTED DIRECTORY |
 |-|-|
-| MerchantShipment | spryker/merchant-shipment |
-| MerchantShipmentGui | spryker/merchant-shipment-gui |
+| MerchantShipment | vendor/spryker/merchant-shipment |
+| MerchantShipmentGui | vendor/spryker/merchant-shipment-gui |
 
 {% endinfo_block %}
 
@@ -71,13 +72,13 @@ class ShipmentConfig extends SprykerShipmentConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that `ShipmentService::groupItemsByShipment()` groups items by shipment using merchant reference.
+Make sure that `ShipmentService::groupItemsByShipment()` groups items by shipment using the merchant reference.
 
 {% endinfo_block %}
 
 ### 3) Set up the database schema and transfer definitions
 
-Apply database changes and to generate entity and transfer changes:
+Apply the database changes and generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -87,7 +88,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Verify that the following changes have been implemented by checking your database:
+Verify that the following changes have been applied by checking your database:
 
 | DATABASE ENTITY | TYPE | EVENT |
 |-|-|-|
@@ -97,11 +98,12 @@ Make sure that the following changes were applied in transfer objects:
 
 | TRANSFER  | TYPE  | EVENT | PATH  |
 |-|-|-|-|
-| Shipment.merchantReference | class | created | src/Generated/Shared/Transfer/ShipmentTransfer |
+| MerchantShipmentCriteria | class | created | src/Generated/Shared/Transfer/MerchantShipmentCriteria |
+| Shipment.merchantReference | property | created | src/Generated/Shared/Transfer/ShipmentTransfer |
 
 {% endinfo_block %}
 
-### 4) Setup behavior
+### 4) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 

@@ -14,7 +14,7 @@ Data Transformer Chain is an Angular Service that executes other Data Transforme
 In the example below, the `datasource` returns an array with the transformed `date` in every child object using chained transformers.
 
 
-```ts
+```html
 <spy-select
   [datasource]="{
     type: 'inline',

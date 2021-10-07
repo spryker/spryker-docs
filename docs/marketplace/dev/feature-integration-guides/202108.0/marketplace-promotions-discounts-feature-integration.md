@@ -46,7 +46,7 @@ Add the following configuration:
 
 | CONFIGURATION | SPECIFICATION | NAMESPACE |
 | ------------- | ------------- | --------- |
-| MerchantSalesOrderMerchantUserGuiConfig  | Introduces list of urls of order detail page configuration. | src/Pyz/Zed/MerchantSalesOrderMerchantUserGui/MerchantSalesOrderMerchantUserGuiConfig.php |
+| MerchantSalesOrderMerchantUserGuiConfig::getMerchantSalesOrderDetailExternalBlocksUrls()  | Introduces list of urls of order detail page configuration. | src/Pyz/Zed/MerchantSalesOrderMerchantUserGui/MerchantSalesOrderMerchantUserGuiConfig.php |
 
 **src/Pyz/Zed/MerchantSalesOrderMerchantUserGui/MerchantSalesOrderMerchantUserGuiConfig.php**
 

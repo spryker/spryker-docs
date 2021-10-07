@@ -978,6 +978,5 @@ Integrate the following related features:
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE |INTEGRATION GUIDE |
 | --- | --- | --- |
 | Marketplace Order Management + Order Threshold |  |[Marketplace Order Management + Order Threshold feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-order-threshold-feature-integration.html) |
-| Marketplace Order Management + Cart |  | [Marketplace Order Management + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-cart-feature-integration.html)|
 | Marketplace Order Management + Shipment |  |  [Marketplace Order Management + Shipment feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-shipment-feature-integration.html)  |
 | Marketplace Inventory Management + Marketplace Order Management |  |  [Marketplace Inventory Management + Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-order-management-feature-integration.html)  |

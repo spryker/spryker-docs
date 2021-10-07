@@ -1,15 +1,15 @@
 ---
-title: Marketplace Order Management + Cart feature integration
+title: Marketplace Cart feature integration
 last_updated:  Jan 05, 2021
-description: This document describes the process how to integrate the Marketplace Order Management Feature + Cart integration feature into a Spryker project.
+description: This document describes the process how to integrate the Marketplace Cart integration feature into a Spryker project.
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the Marketplace Order Management + Cart feature into a Spryker project.
+This document describes how to integrate the Marketplace Cart feature into a Spryker project.
 
 ## Install feature core
 
-Follow the steps below to install the Marketplace Order Management Feature + Cart feature core.
+Follow the steps below to install the Marketplace Cart feature core.
 
 ### Prerequisites
 
@@ -76,7 +76,7 @@ Ensure that cart notes are shown on the order view page when looking at merchant
 
 ## Install feature front end
 
-Follow the steps below to install the Marketplace Order Management Feature + Cart feature front end.
+Follow the steps below to install the Marketplace Cart feature front end.
 
 ### Prerequisites
 

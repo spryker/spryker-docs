@@ -17,7 +17,7 @@ To start feature integration, overview and install the necessary features:
 
 | FEATURE                               | VERSION | INTEGRATION GUIDE                                            |
 | :------------------------------------ | :------ | :----------------------------------------------------------- |
-| Glue API: Spryker Core                | master  | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-ore-feature-integration.html) |
+| Glue API: Spryker Core                | master  | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
 | Glue API: Cart                        | master  | [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html) |
 | Glue API: Customer Account Management | master  | [Glue API: Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html) |
 | Glue API: Payments                    | master  | [Glue API: Payments feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-payments-feature-integration.html) |
@@ -464,7 +464,7 @@ To make sure that `OrderPaymentsResourceRoutePlugin` is activated, check if you 
 
 {% endinfo_block %}
 
-For more details, see [Implementing Checkout Steps for Glue API](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html).
+For more details, see [Implementing Checkout Steps for Glue API](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html).
 
 ### Configure mapping
 

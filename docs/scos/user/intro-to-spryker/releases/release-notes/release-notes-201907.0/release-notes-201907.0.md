@@ -39,10 +39,10 @@ When **Gift Cards** are bought, they are treated just like regular products. How
 
 When **Gift Cards** are applied, they are treated as a separate payment method. Your customers can pay a part of or the whole order with a Gift Card. You can see the remaining balance for all active Gift Cards that your customers bought.
 
-![Gift Cards reintegration](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image5.png) 
+![Gift Cards reintegration](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image5.png)
 
 **Documentation:**
-Feature documentation: [Gift Cards](https://documentation.spryker.com/2021080/docs/gift-card)
+Feature documentation: [Gift Cards](/docs/scos/user/features/{{page.version}}/gift-cards-feature-overview.html)
 
 ### Scheduled Prices
 Spryker now supports price defining prices that will take effect the next day/week/month at a specific time.
@@ -50,24 +50,24 @@ In the Back Office, you can import CSV files to define **Scheduled Prices** for 
 
 Import your Scheduled Prices via a CSV file:
 
-![Scheduled Prices import](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image12.png) 
+![Scheduled Prices import](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image12.png)
 
 View the Scheduled Prices defined for a specific product:
 
-![Scheduled Prices](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image11.png) 
+![Scheduled Prices](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image11.png)
 
 #### Compatibility Issues
 
 * You cannot schedule prices for a merchant relation
 * You cannot schedule prices for a volume price
 
-**Documentation**: [Scheduled Prices](https://documentation.spryker.com/2021080/docs/scheduled-prices)
+**Documentation**: [Scheduled Prices]((/docs/scos/user/features/{{site.version}}/scheduled-prices-feature-overview.html))
 
 ### Defining the Order of Appearance for Images
 
 In the Back Office, you can now define the order in which your images appear. For products, product sets and categories, you can define which image is to be shown first, second, third, etc.
 
-![Reorder images](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image10.png) 
+![Reorder images](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image10.png)
 
 **Documentation**: [Product Image Management](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-images-overview.html)
 ***
@@ -83,13 +83,13 @@ The Spryker out-of-the-box **Content Items** are Banners, Abstract Product Lists
 
 The Content Manager manages the **Content Items** in the Back Office while the app developer accesses content items via the Glue API and uses the content across many touchpoints with a single source of truth.
 
-![Overview of content items page](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image7.png) 
+![Overview of content items page](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image7.png)
 
-![Create content item page](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image9.png) 
+![Create content item page](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image9.png)
 
-![Content item widget UI](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image8.png) 
+![Content item widget UI](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image8.png)
 
-**Documentation**: 
+**Documentation**:
 
 * [Content Items](https://documentation.spryker.com/2021080/docs/content-items)
 * [Content Item Widgets](https://documentation.spryker.com/2021080/docs/content-item-widgets-201907)
@@ -122,7 +122,7 @@ In the B2B environment, users are organized in Business Units depending on the s
 ### OAuth + Customer Account
 Provides a way to authorize access to resources related to the level of permissions of each user, to update and revoke those permissions as well as manage the level of access of the company users to API resources according to their existing permissions at every given moment, everything is handled by the access token.
 
-**Documentation**: 
+**Documentation**:
 
 * [Security and Authentication](/docs/scos/dev/glue-api-guides/security-and-authentication.html)
 * [B2B Logging in as Company User](https://documentation.spryker.com/2021080/docs/logging-in-as-company-user-201907)
@@ -141,7 +141,7 @@ Users may also decide to work in a collaborative way and share their carts with 
 ### Payments by Third Party Providers API
 In many cases, you may decide to provide your buyers and users with alternative payment methods that are handled completely by third party providers. The Payments by third Party Providers API provides you an endpoint to retrieve the payment completion order from those external providers to continue with the order according to your workflow.
 
-**Documentation**: 
+**Documentation**:
 
 * [Interacting with Third Party Payment Providers via Glue API](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html)
 * [B2B-B2C Checking Out Purchases and Getting Checkout Data](https://documentation.spryker.com/2021080/docs/checking-out-purchases-and-getting-checkout-data)
@@ -194,22 +194,22 @@ In the main use case, a buyer adds products to the cart, converts it to an **RFQ
 
 The feature also supports an alternative flow when a customer and salesperson had an off-line communication and the sales rep prepares a special offer on the buyer's behalf using the agent assist functionality.
 
-![Request for Quote](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image6.png) 
+![Request for Quote](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image6.png)
 
 #### Compatibility Issues:
 Request for Quote v. 2.0.0  does not support bundles
 
-**Documentation**: [Request for Quote](/docs/scos/user/features/{{site.version}}/quotation-process/quotation-process.html) 
+**Documentation**: [Request for Quote](/docs/scos/user/features/{{site.version}}/quotation-process/quotation-process.html)
 
 ### Punchout
 This new functionality allows the B2B buyers to access Spryker’s online shop from within their ERP or procurement system.
 
 The buyer can seamlessly log in to the chosen webshop within their browser, select items, and return the shopping cart to the procurement system. The final order will be placed within the ERP-system and can follow established procurement workflows.
 
-![Punchout](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image1.png) 
+![Punchout](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image1.png)
 
-The feature is implemented as an ECO module in partnership with 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image3.png) 
+The feature is implemented as an ECO module in partnership with
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image3.png)
 
 https://www.punchoutcatalogs.com/
 
@@ -220,9 +220,9 @@ The feature has been released as a global widget and can be integrated into any 
 
 Even better - conversation about the order can continue after the order had been placed, without losing any useful information.
 
-![Multiple comments](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image2.png) 
+![Multiple comments](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image2.png)
 
-**Documentation**: [Comments](https://documentation.spryker.com/2021080/docs/comments)
+**Documentation**: [Comments](/docs/scos/user/features/{{page.version}}/comments-feature-overview.html)
 
 ### Unique URL for Easy Cart Sharing
 This is a general feature that allows creating and sharing URL for any entity in the Spryker Commerce OS. With the **Persistent Cart Sharing** feature, you can quickly and easily share cart through communication channel like WhatsApp, Slack, or any other messenger, email, or social network.
@@ -233,7 +233,7 @@ In the first case, you provide users with the necessary level of access rights t
 
 Cart in the Preview mode can also be shared with users in your company because it's not limited in usage to external users only.
 
-![Unique URL for Easy Cart Sharing](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image4.png) 
+![Unique URL for Easy Cart Sharing](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image4.png)
 
 **Documentation**: [Unique URL per Cart for Easy Sharing](/docs/scos/user/features/{{site.version}}/resource-sharing-feature-overview.html)
 
@@ -244,7 +244,7 @@ Cart in the Preview mode can also be shared with users in your company because i
 
 * Customer Login by Token - Ability to log in to the Spryker Commerce OS by token
     **Documentation**: [Customer Login by Token](/docs/scos/user/features/{{site.version}}/company-account-feature-overview/customer-login-by-token-overview.html)
-    
+
 ***
 ## Partner Integrations
 ### Payone Cash on Delivery
@@ -265,7 +265,7 @@ We have extended our partner portfolio with a RatePay integration that offers 4 
 * Direct Debit
 * Installment
 
-**Documentation**: 
+**Documentation**:
 
 * [RatePay - Prepayment](/docs/scos/user/technology-partners/{{site.version}}/payment-partners/ratepay/ratepay-payment-methods/ratepay-prepayment.html)
 * [RatePay - Invoice](/docs/scos/user/technology-partners/{{site.version}}/payment-partners/ratepay/ratepay-payment-methods/ratepay-invoice.html)
@@ -275,7 +275,7 @@ We have extended our partner portfolio with a RatePay integration that offers 4 
 ### Episerver
 We now have a new integration of our new partner Episerver and their online platform to support newsletters as well as the transactional notifications required in the usual e-commerce transactions.
 
-**Documentation**: [Episerver](/docs/scos/user/technology-partners/{{site.version}}/marketing-and-conversion/customer-communication/episerver/episerver.html) 
+**Documentation**: [Episerver](/docs/scos/user/technology-partners/{{site.version}}/marketing-and-conversion/customer-communication/episerver/episerver.html)
 
 ### Easycredit Direct Integration
 We have now a new integration of our new partner TeamBank AG and their payment method Ratenkauf by Easycredit, which allows customers to pay via an installment plan. This can help to increase your conversion rates of the more expensive products and services.
@@ -292,7 +292,7 @@ We now have an integration with our new payment partner CrefoPay, which will pro
 * Sofort
 * Cash on Delivery
 
-**Documentation**: [CrefoPay](/docs/scos/user/technology-partners/{{site.version}}/payment-partners/crefopay/crefopay-installation-and-configuration.html) 
+**Documentation**: [CrefoPay](/docs/scos/user/technology-partners/{{site.version}}/payment-partners/crefopay/crefopay-installation-and-configuration.html)
 
 ***
 ## Technical Enhancements
@@ -309,7 +309,7 @@ Redis Sentinel configuration is available on the project side. Make use of Redis
 
 ### Module Constrainter
 Once a project extends or customizes Spryker functionalities of certain modules they should be constrained to ~ in project composer.json. This will help to avoid potentially dangerous updates of these modules.
-From now on Spryker provides a tool which helps to identify such modules and automatically suggest module constraints. Check it out: 
+From now on Spryker provides a tool which helps to identify such modules and automatically suggest module constraints. Check it out:
 
 ```bash
 code:constraint:modules.
@@ -318,4 +318,4 @@ code:constraint:modules.
 ### Code Quality
 We have updated Spryker tooling to support PHPStan 0.11, which help us and projects to bring the code quality to the new level. New features are described in the PHPStan release notes.
  
-Check out [Documentation Updates](/docs/scos/user/intro-to-spryker/whats-new/documentation-updates.html) for all the updates to documentation made with this release. 
+Check out [Documentation Updates](/docs/scos/user/intro-to-spryker/whats-new/documentation-updates.html) for all the updates to documentation made with this release.

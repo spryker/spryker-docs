@@ -22,7 +22,7 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Spryker Core | 202001.0 | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-ore-feature-integration.html) |
+| Spryker Core | 202001.0 | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
 

@@ -8,7 +8,7 @@ template: concept-topic-template
 The _Product Sets_ feature allows creating and selling collections of products.
 
 
-To learn more about the feature and to find out how end users use it, see [Product Sets feature overview](/docs/scos/user/features/{{page.version}}/product-sets/product-sets-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Product Sets feature overview](/docs/scos/user/features/{{page.version}}/product-sets-feature-overview.html) for business users.
 
 
 ## Entity diagram

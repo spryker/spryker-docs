@@ -9,7 +9,7 @@ redirect_from:
   - /docs/en/file-details-warehouse-storecsv
 ---
 
-This article contains content of the `warehouse_store.csv` file to configure the relation between [Warehouse](https://documentation.spryker.com/2021080/docs/multiple-warehouse-stock) and Store in your Spryker Demo Shop.
+This article contains content of the `warehouse_store.csv` file to configure the relation between [Warehouse](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html) and Store in your Spryker Demo Shop.
 
 ## Import file parameters
 The file should have the following parameters:

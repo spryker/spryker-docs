@@ -26,9 +26,9 @@ Follow the steps below to install the feature core.
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | master | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) | 
+| Spryker Core | master | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 |Cart | master | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html) |
-|Product  | master | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html) | 
+|Product  | master | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html) |
 |Tax  | master | |
 | Inventory Management | master | [Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/inventory-management-feature-integration.html) |
 |Glue API: Checkout  | master | [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html)|
@@ -48,15 +48,15 @@ composer require spryker-eco/avalara-tax:"^0.1.0" --update-with-dependencies
 
 Ensure that the following modules have been installed:
 
-|MODULE | EXPECTED DIRECTORY | 
-|--- | --- | 
+|MODULE | EXPECTED DIRECTORY |
+|--- | --- |
 | AvalaraTax | vendor/spryker-eco/avalara-tax|
 
 {% endinfo_block %}
 
 ### 2) Set up the configuration
 
-  
+
 Add the `US` ISO country code to the global store configuration:
 
 **config/Shared/stores.php**
@@ -71,7 +71,7 @@ $stores['DE'] = [
     ...
 ];
 ```
-  
+
 2. Configure the Avalara credentials:
 
     1. Add the following template to configuration:
@@ -94,14 +94,14 @@ $stores['DE'] = [
 
     2. Based on the data from your Avalara account, replace the placeholders in the template as described below.
 
-|PLACEHOLDER | DESCRIPTION | 
-|--- | --- | 
-| YOUR_APPLICATION_NAME | Application name. | 
-| YOUR_APPLICATION_VERSION | Application version. | 
-| YOUR_MACHINE_NAME | Name of the machine specific to your project. | 
-| AVALARA_ENVIRONMENT_NAME | Environment name. Acceptable values are `sandbox`, `production` or the full URL of your AvaTax instance. | 
-| YOUR_ACCAUNT_ID | Client identifier. | 
-| YOUR_LICENSE_KEY | Client secret. | 
+|PLACEHOLDER | DESCRIPTION |
+|--- | --- |
+| YOUR_APPLICATION_NAME | Application name. |
+| YOUR_APPLICATION_VERSION | Application version. |
+| YOUR_MACHINE_NAME | Name of the machine specific to your project. |
+| AVALARA_ENVIRONMENT_NAME | Environment name. Acceptable values are `sandbox`, `production` or the full URL of your AvaTax instance. |
+| YOUR_ACCAUNT_ID | Client identifier. |
+| YOUR_LICENSE_KEY | Client secret. |
 | YOUR_COMPANY_CODE | Company code.|
 
 
@@ -109,7 +109,7 @@ $stores['DE'] = [
 ### 3) Add translations
 
 1.  Append glossary according to your configuration:
-    
+
 
 **data/import/glossary.csv**
 ```csv
@@ -138,13 +138,13 @@ console transfer:generate
 
 Make sure that the following changes have been applied by checking your database:
 
-| DATABASE ENTITY | TYPE | EVENT | 
-| --- | --- | --- | 
+| DATABASE ENTITY | TYPE | EVENT |
+| --- | --- | --- |
 | spy_tax_avalara_api_log | table | created |
-| spy_tax_avalara_sales_order | table | created | 
-| spy_tax_avalara_sales_order_item | table | created | 
-| spy_tax_avalara_sales_detail | table | created | 
-| spy_product_abstract.avalara_tax_code | column | created | 
+| spy_tax_avalara_sales_order | table | created |
+| spy_tax_avalara_sales_order_item | table | created |
+| spy_tax_avalara_sales_detail | table | created |
+| spy_product_abstract.avalara_tax_code | column | created |
 | spy_product.avalara_tax_code | column | created
 
 {% endinfo_block %}
@@ -153,23 +153,23 @@ Make sure that the following changes have been applied by checking your databa
 
 Make sure that the following changes have been applied in the transfer objects:
 
-| TRANSFER | TYPE | EVENT | PATH | 
-| --- | --- | --- | --- | 
-| AvalaraApiLogTransfer | class | created | src/Generated/Shared/Transfer/AvalaraApiLogTransfer | 
-| AvalaraAddressTransfer | class | created | src/Generated/Shared/Transfer/AvalaraAddressTransfer | 
-| AvalaraLineItemTransfer | class | created | src/Generated/Shared/Transfer/AvalaraLineItemTransfer | 
-| AvalaraCreateTransactionTransfer | class | created | src/Generated/Shared/Transfer/AvalaraCreateTransactionTransfer | 
-| AvalaraCreateTransactionRequestTransfer | class | created | src/Generated/Shared/Transfer/AvalaraCreateTransactionRequestTransfer | 
-| AvalaraTransactionLineTransfer | class | created | src/Generated/Shared/Transfer/AvalaraTransactionLineTransfer | 
-| AvalaraTransactionTransfer | class | created | src/Generated/Shared/Transfer/AvalaraTransactionTransfer | 
-| AvalaraCreateTransactionResponseTransfer | class | created | src/Generated/Shared/Transfer/AvalaraCreateTransactionResponseTransfer | 
+| TRANSFER | TYPE | EVENT | PATH |
+| --- | --- | --- | --- |
+| AvalaraApiLogTransfer | class | created | src/Generated/Shared/Transfer/AvalaraApiLogTransfer |
+| AvalaraAddressTransfer | class | created | src/Generated/Shared/Transfer/AvalaraAddressTransfer |
+| AvalaraLineItemTransfer | class | created | src/Generated/Shared/Transfer/AvalaraLineItemTransfer |
+| AvalaraCreateTransactionTransfer | class | created | src/Generated/Shared/Transfer/AvalaraCreateTransactionTransfer |
+| AvalaraCreateTransactionRequestTransfer | class | created | src/Generated/Shared/Transfer/AvalaraCreateTransactionRequestTransfer |
+| AvalaraTransactionLineTransfer | class | created | src/Generated/Shared/Transfer/AvalaraTransactionLineTransfer |
+| AvalaraTransactionTransfer | class | created | src/Generated/Shared/Transfer/AvalaraTransactionTransfer |
+| AvalaraCreateTransactionResponseTransfer | class | created | src/Generated/Shared/Transfer/AvalaraCreateTransactionResponseTransfer |
 | AvalaraAddressValidationInfoTransfer | class | created | src/Generated/Shared/Transfer/AvalaraAddressValidationInfoTransfer |
-| AvalaraResolveAddressRequestTransfer | class | created | src/Generated/Shared/Transfer/AvalaraResolveAddressRequestTransfer | 
-| AvalaraResolveAddressResponseTransfer | class | created | src/Generated/Shared/Transfer/AvalaraResolveAddressResponseTransfer | 
-| QuoteTransfer.avalaraCreateTransactionResponse | property | created | src/Generated/Shared/Transfer/QuoteTransfer | 
-| ProductConcreteTransfer.avalaraTaxCode | property | created | src/Generated/Shared/Transfer/ProductConcreteTransfer | 
-| ProductAbstractTransfer.avalaraTaxCode | property | created | src/Generated/Shared/Transfer/ProductAbstractTransfer | 
-| ItemTransfer.avalaraTaxCode | property | created | src/Generated/Shared/Transfer/ItemTransfer | 
+| AvalaraResolveAddressRequestTransfer | class | created | src/Generated/Shared/Transfer/AvalaraResolveAddressRequestTransfer |
+| AvalaraResolveAddressResponseTransfer | class | created | src/Generated/Shared/Transfer/AvalaraResolveAddressResponseTransfer |
+| QuoteTransfer.avalaraCreateTransactionResponse | property | created | src/Generated/Shared/Transfer/QuoteTransfer |
+| ProductConcreteTransfer.avalaraTaxCode | property | created | src/Generated/Shared/Transfer/ProductConcreteTransfer |
+| ProductAbstractTransfer.avalaraTaxCode | property | created | src/Generated/Shared/Transfer/ProductAbstractTransfer |
+| ItemTransfer.avalaraTaxCode | property | created | src/Generated/Shared/Transfer/ItemTransfer |
 | ItemTransfer.warehouse | property | created | src/Generated/Shared/Transfer/ItemTransfer |
 
 {% endinfo_block %}
@@ -177,18 +177,18 @@ Make sure that the following changes have been applied in the transfer objec
 
 1.  Activate the following plugins:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE | 
-| --- | --- | --- | --- | 
-| AvalaraItemTaxRateCalculatorPlugin | Calculates taxes based on the response data received from the Avalara Tax API.  </br> Use it instead of `ProductItemTaxRateCalculatorPlugin`, `ProductOptionTaxRateCalculatorPlugin`, and `ShipmentTaxRateCalculatorPlugin`. | None | SprykerEco\Zed\AvalaraTax\Communication\Plugin\Calculation | 
-| AvalaraTaxCodeItemExpanderPlugin | Expands `CartChangeTransfer.items` with an Avalara tax code. | None | SprykerEco\Zed\AvalaraTax\Communication\Plugin\Cart | 
-| AvalaraTaxCodeProductConcreteBeforeCreatePlugin | Expands product concrete with an Avalara tax code. | None | SprykerEco\Zed\AvalaraTax\Communication\Plugin\Product | 
-| AvalaraTaxCheckoutPreConditionPlugin | Checks if a request to Avalara was successful. | None | SprykerEco\Zed\AvalaraTax\Communication\Plugin\Checkout | 
-| ItemWarehouseCartOperationPostSavePlugin | Expands `QuoteTransfer.items` with a warehouse property. | None | SprykerEco\Zed\AvalaraTax\Communication\Plugin\Cart | 
-| AvalaraReadCheckoutDataValidatorPlugin | Validates the shipping address data. | None |SprykerEco\Zed\AvalaraTax\Communication\Plugin\CheckoutRestApi | 
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| --- | --- | --- | --- |
+| AvalaraItemTaxRateCalculatorPlugin | Calculates taxes based on the response data received from the Avalara Tax API.  </br> Use it instead of `ProductItemTaxRateCalculatorPlugin`, `ProductOptionTaxRateCalculatorPlugin`, and `ShipmentTaxRateCalculatorPlugin`. | None | SprykerEco\Zed\AvalaraTax\Communication\Plugin\Calculation |
+| AvalaraTaxCodeItemExpanderPlugin | Expands `CartChangeTransfer.items` with an Avalara tax code. | None | SprykerEco\Zed\AvalaraTax\Communication\Plugin\Cart |
+| AvalaraTaxCodeProductConcreteBeforeCreatePlugin | Expands product concrete with an Avalara tax code. | None | SprykerEco\Zed\AvalaraTax\Communication\Plugin\Product |
+| AvalaraTaxCheckoutPreConditionPlugin | Checks if a request to Avalara was successful. | None | SprykerEco\Zed\AvalaraTax\Communication\Plugin\Checkout |
+| ItemWarehouseCartOperationPostSavePlugin | Expands `QuoteTransfer.items` with a warehouse property. | None | SprykerEco\Zed\AvalaraTax\Communication\Plugin\Cart |
+| AvalaraReadCheckoutDataValidatorPlugin | Validates the shipping address data. | None |SprykerEco\Zed\AvalaraTax\Communication\Plugin\CheckoutRestApi |
 
 <details open>
     <summary>src/Pyz/Zed/Calculation/CalculationDependencyProvider.php</summary>
-    
+
 ```php
 <?php
 
@@ -211,7 +211,7 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
             new AvalaraItemTaxRateCalculatorPlugin(),
         ];
     }
-    
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -233,7 +233,7 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
 Make sure you’ve enabled the plugins:
 
 1.  Adding items to a cart and proceed to checkout.
-    
+
 2.  On the summary page, you should see the calculated taxes for your order.
 
 {% endinfo_block %}    
@@ -242,7 +242,7 @@ Make sure you’ve enabled the plugins:
 
 <details open>
     <summary>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
-    
+
 ```php
 <?php
 
@@ -286,13 +286,13 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 {% info_block warningBox "Verification" %}
 
 1.  Add an address to a warehouse
-    
+
 2.  Increase the product stock of an item.
-    
+
 3.  Add the item to a cart.
-    
+
 4.  Proceed to the summary page of checkout.
-    
+
 5.  In the `spy_tax_avalara_api_log` table, check that the `ShipFrom` property is specified in the request data.
 
 {% endinfo_block %}
@@ -404,9 +404,9 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 Make sure that you’ve activated `AvalaraReadCheckoutDataValidatorPlugin`:
 
 1.  Send an incorrect address to the `/checkout-data` endpoint.  
-    
+
 2.  Make sure that request with the incorrect shipping address does not pass the validation check:
-    
+
 
 Request:
 ```json
@@ -457,9 +457,9 @@ Response:
 {% endinfo_block %}
 2. Update the following data import .csv files:
 
-|FILE NAME | COLUMN TO ADD | LOCATION | 
-|--- | --- | --- | 
-| product_abstract.csv | avalara_tax_code | data/import/common/common/product_abstract.csv | 
+|FILE NAME | COLUMN TO ADD | LOCATION |
+|--- | --- | --- |
+| product_abstract.csv | avalara_tax_code | data/import/common/common/product_abstract.csv |
 | product_concrete.csv | avalara_tax_code | data/import/common/common/product_concrete.csv|
 
 3. To handle the new field, adjust `ProductAbstract` and `ProductConcrete` data importers using the following example:
@@ -489,4 +489,3 @@ Open `spy_product_abstract`, and `spy_product` and make sure that all data has b
 | ---  |---  |---  |
 |Avalara Tax + Product Option  |✓| [Avalara Tax + Product Options feature integration](/docs/scos/user/technology-partners/{{page.version}}/taxes/avalara-tax-product-options-feature-integration.html) |
 |Avalara Tax + Shipment |✓ |[Avalara Tax + Shipment feature integration](/docs/scos/user/technology-partners/{{page.version}}/taxes/avalara-tax-shipment-feature-integration.html) |
-

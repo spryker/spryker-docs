@@ -117,3 +117,12 @@ Make sure that the `ProductOfferAvailabilitiesResourceRoutePlugin` plugin is set
 Make sure that `ProductOfferAvailabilitiesByProductOfferReferenceResourceRelationshipPlugin` is set up by sending the request `GET http://glue.mysprykershop.com{% raw %}{{url}}{% endraw %}/product-offers/{% raw %}{{productOfferReference}}{% endraw %}?include=product-offer-availabilities`. The response should include the `product-offer-availabilities` resource along with `product-offers`.
 
 {% endinfo_block %}
+
+
+## Related features
+
+Integrate the following related features:
+
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+|---|---|---|
+| Marketplace Wishlist + Inventory Management API |  |  [Glue API: Marketplace Wishlist + Inventory Management feature integration ](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-wishlist-inventory-management-feature-integration.html) |

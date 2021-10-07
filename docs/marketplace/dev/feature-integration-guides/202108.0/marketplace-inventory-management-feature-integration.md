@@ -714,4 +714,4 @@ Integrate the following related features:
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | - | - | -|
 | Marketplace Inventory Management + Marketplace Order Management |  |  [Marketplace Inventory Management + Marketplace Order Management Feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-marketplace-order-management-feature-integration.html)  |
-
+| Marketplace Product + Inventory Management | | [Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-inventory-management-feature-integration.html) |

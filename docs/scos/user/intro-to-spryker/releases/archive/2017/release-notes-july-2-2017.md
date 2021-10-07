@@ -22,7 +22,7 @@ We've changed product label touch logic in order to be able to export label IDs 
 
 **Documentation**
 For module documentation, see [Product Label Module Guide](/docs/scos/user/features/{{site.version}}/product-labels-feature-overview.html)
-For detailed migration guides, see [Product Label Migration Guide](/docs/scos/dev/migration-and-integration/{{site.version}}/module-migration-guides/migration-guide-productlabel.html).
+For detailed migration guides, see [Product Label Migration Guide](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-productlabel.html).
 
 **Migration Guides**
 To upgrade, follow the steps described below:
@@ -117,10 +117,10 @@ For module documentation, see:
 
 For migration guides, see:
 
-* [Category Migration Guide](/docs/scos/dev/migration-and-integration/{{site.version}}/module-migration-guides/migration-guide-category.html)
-* [CMS Block Category Connector Migration Guide](/docs/scos/dev/migration-and-integration/{{site.version}}/module-migration-guides/migration-guide-cms-block-category-connector.html)
+* [Category Migration Guide](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-category.html)
+* [CMS Block Category Connector Migration Guide](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cms-block-category-connector.html)
 * Category Template Migration Console <!-- add a link -->
-* [CMS Block Category Connector Migration Console](/docs/scos/dev/migration-and-integration/{{site.version}}/module-migration-guides/migration-guide-cms-block-category-connector.html-console)
+* [CMS Block Category Connector Migration Console](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cms-block-category-connector.html-console)
 
 **Migration Guides**
 To upgrade, follow the steps described below:

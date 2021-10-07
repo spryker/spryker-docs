@@ -14,7 +14,7 @@ The *Product Groups* feature allows product catalog managers to group products b
 
 {% info_block warningBox "Examplary content" %}
 
-By default, there is no way to display product groups on Storefront. This section describes an examplary implementation which you can add to your project. See [HowTo - Display product groups by color on Storefront](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/howto-display-product-groups-by-color-on-the-storefront.html) for more details.
+By default, there is no way to display product groups on Storefront. This section describes an examplary implementation which you can add to your project. See [HowTo - Display product groups by color on Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-product-groups-by-color-on-the-storefront.html) for more details.
 
 {% endinfo_block %}
 

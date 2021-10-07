@@ -164,9 +164,12 @@ You can find plain query examples in the following table.
 |day-of-week = '1'|Discount applies if the order is placed on Monday.|
 |shipment-carrier != '1' AND price-mode = 'GROSS_MODE'|Discount applies if the shipment carrier with the attribute "1" is not chosen and gross pricing is selected.|
 |currency != 'EUR' OR price-mode = 'GROSS_MODE'|Discount applies if the selected currency is not Euro or the pricing mode is gross.|
+
 {% info_block infoBox "Info" %}
-See [Token description tables](#token-descroption-tables
-{% endinfo_block %} for more information.)
+
+See [Token description tables](#token-description-tables for more information.)
+
+{% endinfo_block %}
 
 **Discount promotion to product**
 Sometimes, it is more profitable to give away free products or provide a discount for the products that are not yet in the cart instead of the ones that are already there. This discount application type enables you to do just that. When a customer fulfills the discount conditions, the promotional product appears below other items. The SKU of the promotional product you wish to be available for adding to cart is entered in the **Abstract product sku** field. Then, you enter the **Quantity** of the chosen promotional product to be available for adding to cart.
@@ -264,7 +267,7 @@ Use the placeholder **[code]** to indicate the position you want random characte
 **Voucher Code Pool**
 The voucher codes of a discount are all contained in the same voucher code pool. One customer may only redeem one voucher code per pool per cart.
 
-#### <a name="token-descroption-tables"></a>Token description tables
+#### <a name="token-description-tables"></a>Token description tables
 
 This section contains a set of tables that describe fields, value types, and operators you use when building a plain query.
 

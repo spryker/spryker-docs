@@ -22,10 +22,10 @@ It is possible to generate an invoice only once the order has acquired the `conf
 
 {% info_block infoBox "Info" %}
 
-You can use the default OMS states to be displayed on the *Order Details* pages on the Storefront or set custom states so they would make more sense for the Storefront users. For details on how to set the custom states for orders on the Storefront, see [HowTo - Display Custom Names for Order Item States on the Storefront](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html).
+You can use the default OMS states to be displayed on the *Order Details* pages on the Storefront or set custom states so they would make more sense for the Storefront users. For details on how to set the custom states for orders on the Storefront, see [HowTo - Display Custom Names for Order Item States on the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html).
 
 {% endinfo_block %}
-By default, the invoice can be generated only for the whole order (not for individual order items) and only once. However, on the project level, you can set up a configuration that forces the repeated invoice generation by running a console command. See [HowTo - Emailing Invoices Using BCC](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/howto-emailing-invoices-using-bcc.html)  for details.
+By default, the invoice can be generated only for the whole order (not for individual order items) and only once. However, on the project level, you can set up a configuration that forces the repeated invoice generation by running a console command. See [HowTo - Emailing Invoices Using BCC](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-emailing-invoices-using-bcc.html)  for details.
 
 
 ## Invoice template

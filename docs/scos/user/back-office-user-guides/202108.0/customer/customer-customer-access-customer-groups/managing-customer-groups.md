@@ -18,7 +18,7 @@ To start working with customer groups, navigate to the **Customers** > **Custome
 
 
 :::(Info)
-Out-of-the-box, there are no connections between customer groups and any other Back Office feature, except for the Discounts. You can set up the discount conditions to be applied to a specific customer group. See  [Discount Conditions: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-a-voucher.html) for more information on what the discount conditions are.
+Out-of-the-box, there are no connections between customer groups and any other Back Office feature, except for the Discounts. You can set up the discount conditions to be applied to a specific customer group. See  [Discount Conditions: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) for more information on what the discount conditions are.
 :::
 
 ## Adding a customer group

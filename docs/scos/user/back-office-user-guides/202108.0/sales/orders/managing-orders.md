@@ -59,7 +59,7 @@ The page refreshes to show the message about the successful status change. In th
 
 To change the status of all the items inside a shipment at once, click **pay** in the *Trigger all matching states of order inside this shipment* section of the corresponding shipment. 
 
-The order statuses you set here do not always have the same wording on the Storefront. For details on how you can display custom names for statuses on the Storefront, see [HowTo - Display custom names for order item states on the Storefront](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html).
+The order statuses you set here do not always have the same wording on the Storefront. For details on how you can display custom names for statuses on the Storefront, see [HowTo - Display custom names for order item states on the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html).
 
 ### Reference information: Changing order statuses 
 

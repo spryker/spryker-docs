@@ -179,7 +179,7 @@ You have a product in your shop - a pen. And there exists a packaging unit for a
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Import Packaging Unit Types](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/data-imports/howto-import-packaging-units.html)  |
+| [Import Packaging Unit Types](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-packaging-units.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

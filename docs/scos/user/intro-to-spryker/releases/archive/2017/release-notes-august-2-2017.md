@@ -36,7 +36,7 @@ new ProductOptionGroupIdHydratorPlugin(),
 | <ul><li>[Sales 7.0.0](https://github.com/spryker/Sales/releases/tag/7.0.0)</li><li>[SalesProductConnector 1.0.0](https://github.com/spryker/sales-product-connector/releases/tag/1.0.0)</li></ul> | <ul><li>[Customer 6.1.0](https://github.com/spryker/Customer/releases/tag/6.1.0)</li><li>[ProductBundle 3.2.0](https://github.com/spryker/product-bundle/releases/tag/3.2.0)</li><li>[ProductCartConnector 4.1.0](https://github.com/spryker/product-cart-connector/releases/tag/4.1.0)</li><li>[ProductOption 5.1.0](https://github.com/spryker/product-option/releases/tag/5.1.0)</li></ul> | <ul><li>[Braintree 0.5.4](https://github.com/spryker/Braintree/releases/tag/0.5.4)</li><li>[Discount 4.3.2](https://github.com/spryker/Discount/releases/tag/4.3.2)</li><li>[DummyPayment 2.0.4](https://github.com/spryker/dummy-payment/releases/tag/2.0.4)</li><li>[Nopayment 3.0.2](https://github.com/spryker/Nopayment/releases/tag/3.0.2)</li><li>[Oms 7.0.1](https://github.com/spryker/Oms/releases/tag/7.0.1)</li><li>[Payolution 4.0.4](https://github.com/spryker/Payolution/releases/tag/4.0.4)</li><li>[Payone 4.0.3](https://github.com/spryker/Payone/releases/tag/4.0.3)</li><li>[Ratepay 0.6.2](https://github.com/spryker/Ratepay/releases/tag/0.6.2)</li><li>[Refund 5.0.1](https://github.com/spryker/Refund/releases/tag/5.0.1)</li><li>[SalesSplit 3.0.2](https://github.com/spryker/sales-split/releases/tag/3.0.2)</li><li>[Shipment 5.0.1](https://github.com/spryker/Shipment/releases/tag/5.0.1)</li></ul> |
 
 **Documentation**
-For detailed migration guides, see [Sales Module Guide from Version 6.* to 7.*](/docs/scos/dev/migration-and-integration/{{site.version}}/module-migration-guides/migration-guide-sales.html#upgrading-from-version-6---to-version-7--).
+For detailed migration guides, see [Sales Module Guide from Version 6.* to 7.*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-sales.html#upgrading-from-version-6---to-version-7--).
 
 **Migration Guides**
 To upgrade, follow the steps described below:
@@ -66,7 +66,7 @@ With this release, we enable the `isSearchable` checkbox in CMS page Zed Admin U
 ### Initial Grand Total Calculator
 The discount module provides a plugin to set up a discount condition to grand total. However, previously the `Calculation` module did not provide information about grand totals to make this kind of discount applicable. We have now extended the `Calculation` stack to provide all required information by discounts.
 
-To enable this change, please adjust `\Pyz\Zed\Calculation\CalculationDependencyProvider::getQuoteCalculatorPluginStack` according to [Calculation Migration Guide](/docs/scos/dev/migration-and-integration/{{site.version}}/module-migration-guides/migration-guide-calculation.html). Place `InitialGrandTotalCalculatorPlugin()` in the right sequence.
+To enable this change, please adjust `\Pyz\Zed\Calculation\CalculationDependencyProvider::getQuoteCalculatorPluginStack` according to [Calculation Migration Guide](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-calculation.html). Place `InitialGrandTotalCalculatorPlugin()` in the right sequence.
 
 **Affected Modules**
 
@@ -229,7 +229,7 @@ When the `getStateDisplayName()` facade method was called on a state which is in
 | n/a | n/a | [Oms 7.0.3](https://github.com/spryker/Oms/releases/tag/7.0.3) |
 
 ### Adding Non Existing Product to Wishlist
-Previously, adding a product with a wrong SKU was causing a DB inserting error. The issue is fixed now. When a non-existing item is added to the wishlist, instead of throwing an exception a more customer friendly error message is displayed. 
+Previously, adding a product with a wrong SKU was causing a DB inserting error. The issue is fixed now. When a non-existing item is added to the wishlist, instead of throwing an exception a more customer friendly error message is displayed.
 
 To display an error message when wishlist add operation fails, add these few lines in `addItemAction` of  `\Pyz\Yves\Wishlist\Controller\WishlistController`
 
@@ -237,7 +237,7 @@ To display an error message when wishlist add operation fails, add these few lin
 $wishlistItemTransfer = $this->getClient()->addItem($wishlistItemTransfer);
                         if (!$wishlistItemTransfer->getIdWishlistItem()) {
                         $this->addErrorMessage(‘customer.account.wishlist.item.not_added’);
-                    
+
 ```
 
 **Affected Modules**

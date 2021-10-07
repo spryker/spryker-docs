@@ -39,7 +39,7 @@ Create the following content items:
 
 See [Creating content items](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html) for more details.
 
-If the content item types shipped by default are not sufficient for your project needs, new ones can be created by a developer. See [HowTo - Create a Content Item](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/cms/howto-create-a-custom-content-item.html) for more details.
+If the content item types shipped by default are not sufficient for your project needs, new ones can be created by a developer. See [HowTo - Create a Content Item](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-custom-content-item.html) for more details.
 
 ## Create CMS blocks
 

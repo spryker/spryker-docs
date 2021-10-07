@@ -19,7 +19,7 @@ To start the feature integration, overview and install the necessary features:
 | --- | --- | --- |
 | Spryker Core | 201907.0 | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-application-feature-integration.html) |
 | Company account | 201907.0 | [Company Account feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html) |
-| Customer Account Management | 201907.0 | [Customer API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/customer-account-management-feature-integration.html) |
+| Customer Account Management | 201907.0 | [Customer API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html) |
 | Uuid generation console | 201907.0 | UUID Generation Console |
 
 ### 1) Install the required modules using Composer

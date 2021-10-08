@@ -7,7 +7,9 @@ template: feature-walkthrough-template
 <!--- Feature summary. Short and precise explanation of what the feature brings in terms of functionality.
 -->
 
-A Marketplace Product feature adds merchant information to the product that a Merchant sells.
+Product is a central entity of a shop. The Product feature allows shop administrators to create a rich product catalog. Product configuration is highly customizable, so they can create different types of products.
+A Marketplace Product feature adds merchant information to the product that a Merchant sells. Product Restrictions from Merchant to Buyer give merchants another layer of control over the information, a customer can see in the shop application. Based on product restrictions, you can:
+create a list of products, hide the product information for the products (pricing, appearance in the search/filters), and limit access to a product details page.
 There are two options for the Merchants to start selling in Marketplace: Either through creation of a completely new product to sell them without offers, or complement marketplace products with new offer. 
 A Merchant can assign attributes and custom labels to products, add product attributes, use limited offers and pricing.
 Customers can filter products and offers by Merchants right in the catalog or find them through the search function.

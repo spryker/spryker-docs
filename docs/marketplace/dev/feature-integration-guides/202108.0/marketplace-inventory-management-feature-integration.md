@@ -1,6 +1,6 @@
 ---
 title: Marketplace Inventory Management feature integration
-last_updated: Dec 16, 2020
+last_updated: Sep 07, 2021
 description: This document describes the process how to integrate the Marketplace Inventory Management feature into a Spryker project.
 template: feature-integration-guide-template
 ---
@@ -28,6 +28,7 @@ Install the required modules:
 ```bash
 composer require spryker-feature/marketplace-inventory-management: "{{page.version}}" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
@@ -104,19 +105,19 @@ Make sure that the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 |-|-|-|-|
-| MerchantStock | object | Created | src/Generated/Shared/Transfer/MerchantStockTransfer |
-| MerchantStockCriteria | object | Created | src/Generated/Shared/Transfer/MerchantStockCriteriaTransfer |
-| ProductAvailabilityCriteria | object | Created | src/Generated/Shared/Transfer/ProductAvailabilityCriteriaTransfer |
-| ProductConcreteAvailability | object | Created | src/Generated/Shared/Transfer/ProductConcreteAvailabilityTransfer |
-| ProductOfferAvailabilityRequest | object | Created | src/Generated/Shared/Transfer/ProductOfferAvailabilityRequestTransfer |
-| ProductOfferAvailabilityStorage | object | Created | src/Generated/Shared/Transfer/ProductOfferAvailabilityStorageTransfer |
-| ProductOfferStock | object | Created | src/Generated/Shared/Transfer/ProductOfferStockTransfer |
-| ProductOfferStockRequest | object | Created | src/Generated/Shared/Transfer/ProductOfferStockRequestTransfer |
-| ReservationRequest | object | Created | src/Generated/Shared/Transfer/ReservationRequestTransfer |
-| SpyMerchantStockEntity | object | Created | src/Generated/Shared/Transfer/SpyMerchantStockEntityTransfer |
-| SpyMerchantUserEntity | object | Created | src/Generated/Shared/Transfer/SpyMerchantUserEntityTransfer |
-| SpyProductOfferAvailabilityStorageEntity | object | Created | src/Generated/Shared/Transfer/SpyProductOfferAvailabilityStorageEntityTransfer |
-| SpyProductOfferStockEntity | object | Created | src/Generated/Shared/Transfer/SpyProductOfferStockEntityTransfer |
+| MerchantStock | class | Created | src/Generated/Shared/Transfer/MerchantStockTransfer |
+| MerchantStockCriteria | class | Created | src/Generated/Shared/Transfer/MerchantStockCriteriaTransfer |
+| ProductAvailabilityCriteria | class | Created | src/Generated/Shared/Transfer/ProductAvailabilityCriteriaTransfer |
+| ProductConcreteAvailability | class | Created | src/Generated/Shared/Transfer/ProductConcreteAvailabilityTransfer |
+| ProductOfferAvailabilityRequest | class | Created | src/Generated/Shared/Transfer/ProductOfferAvailabilityRequestTransfer |
+| ProductOfferAvailabilityStorage | class | Created | src/Generated/Shared/Transfer/ProductOfferAvailabilityStorageTransfer |
+| ProductOfferStock | class | Created | src/Generated/Shared/Transfer/ProductOfferStockTransfer |
+| ProductOfferStockRequest | class | Created | src/Generated/Shared/Transfer/ProductOfferStockRequestTransfer |
+| ReservationRequest | class | Created | src/Generated/Shared/Transfer/ReservationRequestTransfer |
+| SpyMerchantStockEntity | class | Created | src/Generated/Shared/Transfer/SpyMerchantStockEntityTransfer |
+| SpyMerchantUserEntity | class | Created | src/Generated/Shared/Transfer/SpyMerchantUserEntityTransfer |
+| SpyProductOfferAvailabilityStorageEntity | class | Created | src/Generated/Shared/Transfer/SpyProductOfferAvailabilityStorageEntityTransfer |
+| SpyProductOfferStockEntity | class | Created | src/Generated/Shared/Transfer/SpyProductOfferStockEntityTransfer |
 
 {% endinfo_block %}
 
@@ -247,7 +248,7 @@ Make sure that when you view some product offer at `http://zed.de.demo-spryker.c
 
 {% endinfo_block %}
 
-<details><summary markdown='span'>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>
+**src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php**
 
 ```php
 <?php
@@ -292,8 +293,6 @@ class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvid
     }
 }
 ```
-
-</details>
 
 {% info_block warningBox "Verification" %}
 
@@ -707,3 +706,11 @@ console data:import product-offer-stock
 Make sure that the imported data is added to the `spy_merchant_stock` and `spy_product_offer_stock` tables.
 
 {% endinfo_block %}
+
+## Related features
+
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| - | - | -|
+| Marketplace Inventory Management + Order Management |  |  [Marketplace Inventory Management + Order Management feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-order-management-feature-integration.html)  |
+| Marketplace Inventory Management + Packaging Units |  |  [Marketplace Inventory Management + Packaging Units feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-packaging-units-feature-integration.html)  |
+| Marketplace Product + Inventory Management | | [Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-inventory-management-feature-integration.html) |

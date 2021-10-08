@@ -25,7 +25,7 @@ To start feature integration, integrate the required features:
 
 ### 1) Install the required modules using Composer
 
-1) Install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker-feature/marketplace-wishlist:"{{page.version}}" --update-with-dependencies
@@ -90,8 +90,6 @@ Enable the following behaviors by registering the plugins:
 | MerchantProductOfferWishlistItemRequestExpanderPlugin | Expands `WishlistItem` transfer by provided `product_offer_reference` in params. | None | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\WishlistPage |
 | MerchantProductWishlistItemMetaFormExpanderPlugin | Expands `WishlistItemMetaFormType` with hidden field for 'merchant_reference'. | None | SprykerShop\Yves\MerchantProductWidget\Plugin\WishlistPage |
 | MerchantProductOfferWishlistItemMetaFormExpanderPlugin | Expands `WishlistItemMetaFormType` with hidden fields for `merchant_reference` and `product_offer_reference`. | None | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\WishlistPage |
-| SingleMerchantWishlistReloadItemsPlugin | Expands `WishlistItemMetaFormType` with hidden fields for `merchant_reference` and `product_offer_reference`. | None | Spryker\Zed\MerchantSwitcher\Communication\Plugin\Wishlist |
-| SingleMerchantWishlistItemsValidatorPlugin | Expands `WishlistItemMetaFormType` with hidden fields for `merchant_reference` and `product_offer_reference`. | None | Spryker\Zed\MerchantSwitcher\Communication\Plugin\Wishlist |
 | WishlistMerchantProductPreAddItemPlugin | Expands `WishlistItemMetaFormType` with hidden fields for `merchant_reference` and `product_offer_reference`. | None | Spryker\Zed\MerchantProductWishlist\Communication\Plugin\Wishlist |
 | WishlistProductOfferPreAddItemPlugin | Expands `WishlistItemMetaFormType` with hidden fields for `merchant_reference` and `product_offer_reference`. | None | Spryker\Zed\MerchantProductOfferWishlist\Communication\Plugin\Wishlist |
 
@@ -181,32 +179,10 @@ namespace Pyz\Zed\Wishlist;
 
 use Spryker\Zed\MerchantProductOfferWishlist\Communication\Plugin\Wishlist\WishlistProductOfferPreAddItemPlugin;
 use Spryker\Zed\MerchantProductWishlist\Communication\Plugin\Wishlist\WishlistMerchantProductPreAddItemPlugin;
-use Spryker\Zed\MerchantSwitcher\Communication\Plugin\Wishlist\SingleMerchantWishlistItemsValidatorPlugin;
-use Spryker\Zed\MerchantSwitcher\Communication\Plugin\Wishlist\SingleMerchantWishlistReloadItemsPlugin;
 use Spryker\Zed\Wishlist\WishlistDependencyProvider as SprykerWishlistDependencyProvider;
 
 class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
 {
-    /**
-     * @return \Spryker\Zed\WishlistExtension\Dependency\Plugin\WishlistReloadItemsPluginInterface[]
-     */
-    protected function getWishlistReloadItemsPlugins(): array
-    {
-        return [
-            new SingleMerchantWishlistReloadItemsPlugin(),
-        ];
-    }
-
-    /**
-     * @return \Spryker\Zed\WishlistExtension\Dependency\Plugin\WishlistItemsValidatorPluginInterface[]
-     */
-    protected function getWishlistItemsValidatorPlugins(): array
-    {
-        return [
-            new SingleMerchantWishlistItemsValidatorPlugin(),
-        ];
-    }
-
     /**
      * @return \Spryker\Zed\WishlistExtension\Dependency\Plugin\WishlistPreAddItemPluginInterface[]
      */

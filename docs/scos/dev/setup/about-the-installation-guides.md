@@ -39,6 +39,6 @@ For additional information and resources see:
 
 * [Post-Installation Steps and Additional Info](/docs/scos/dev/setup/post-installation-steps-and-additional-info.html) - for steps you should take after you have installed Spryker
 * [Configuring the Database Server](/docs/scos/dev/setup/configuring-the-database-server.html) – if you want to switch a database
-* [Installation Troubleshooting](/docs/scos/dev/troubleshooting/spryker-in-vagrant-issues/databases-and-services-issues/peer-authentication-failed-for-user-postgres.html) - for frequently encountered issues
+* [Installation Troubleshooting](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/databases-and-services-issues/peer-authentication-failed-for-user-postgres.html) - for frequently encountered issues
 * [Debugging Setup](/docs/scos/dev/setup/installing-spryker-with-vagrant/debugger-configuration/configuring-debugging-in-vagrant.html) – how to install and use the Xdebug module
 * For a list of our available GitHub Repositories, see [B2B](/docs/scos/user/intro-to-spryker/b2b-suite.html), [B2C](/docs/scos/user/intro-to-spryker/b2c-suite.html), [Master Suite](/docs/scos/user/intro-to-spryker/master-suite.html).

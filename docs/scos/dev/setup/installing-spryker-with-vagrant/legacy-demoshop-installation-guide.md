@@ -85,7 +85,7 @@ Executing these steps will install all required dependencies, and run the instal
 
 When the installation process is complete, Spryker Commerce OS is ready to use. It can be accessed via the following links:
 
-* [http://www.de.demoshop.local](http://www.de.demoshop.local/) - front-end;
+* [`http://www.de.demoshop.local`](`http://www.de.demoshop.local`/) - front-end;
 * [http://zed.de.demoshop.local](http://zed.de.demoshop.local/) - backend (administrator interface).
 
 Credentials to access the administrator interface: user `admin@spryker.com` and password `change123`.
@@ -213,7 +213,7 @@ Executing these steps will install all required dependencies, and run the instal
 
 When the installation process is complete, Spryker Commerce OS is ready to use. It can be accessed via the following links:
 
-* [http://www.de.demoshop.local](http://www.de.demoshop.local/) - front-end;
+* [`http://www.de.demoshop.local`](`http://www.de.demoshop.local`/) - front-end;
 * [http://zed.de.demoshop.local](http://zed.de.demoshop.local/) - backend (administrator interface).
 
 Credentials to access the administrator interface: user `admin@spryker.com` and password `change123`.
@@ -236,7 +236,7 @@ This guide will help you install Spryker's Demoshop without using the virtual ma
   Please install appropriate version for your system, refer to <https://www.elastic.co/guide/en/elasticsearch/guide/current/running-elasticsearch.html>. Make sure it runs on **localhost:10005**, otherwise update config.
 
 * Graphviz v2.x
-  Please follow the instructions at <http://www.graphviz.org/Download_linux_ubuntu.php>.
+  Please follow the instructions at <https://www.graphviz.org/download/>.
 
 * Nginx or Apache
 
@@ -262,7 +262,7 @@ This guide will help you install Spryker's Demoshop without using the virtual ma
   Please install appropriate version for your system, refer to <https://www.elastic.co/guide/en/elasticsearch/guide/current/running-elasticsearch.html>. Make sure it runs on **localhost:10005**, otherwise update config.
 
 * Graphviz v2.x
-  Please follow the instructions at <http://www.graphviz.org/Download_linux_ubuntu.php>.
+  Please follow the instructions at <https://www.graphviz.org/download/>.
 
 * Nginx or Apache
 

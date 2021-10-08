@@ -35,7 +35,7 @@ Windows issues:
   * [Windows: The host path of the shared folder is missing](/docs/scos/dev/troubleshooting/spryker-in-vagrant-issues/windows-issues/windows-the-host-path-of-the-shared-folder-is-missing.html)
 
 Databases and services issues:
-  * [Peer authentication failed for user postgres](/docs/scos/dev/troubleshooting/spryker-in-vagrant-issues/databases-and-services-issues/peer-authentication-failed-for-user-postgres.html)
+  * [Peer authentication failed for user postgres](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/databases-and-services-issues/peer-authentication-failed-for-user-postgres.html)
   * [Setup MySQL Workbench to avoid port clashing with the host system](/docs/scos/dev/troubleshooting/spryker-in-vagrant-issues/databases-and-services-issues/setup-mysql-workbench-to-avoid-port-clashing-with-the-host-system.html)
   * [My Elasticsearch dies](/docs/scos/dev/troubleshooting/spryker-in-vagrant-issues/databases-and-services-issues/my-elasticsearch-dies.html)
   * [Exception connecting to Redis](/docs/scos/dev/troubleshooting/spryker-in-vagrant-issues/databases-and-services-issues/exception-connecting-to-redis.html)

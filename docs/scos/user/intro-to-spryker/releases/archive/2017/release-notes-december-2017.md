@@ -273,7 +273,7 @@ The following content has been added to the Academy:
 * [CMS Blocks](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-blocks-overview.html)
 * [CMS Pages](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-pages-overview.html)
 * [Demo Shop](https://documentation.spryker.com/2021080/docs/legacy-demoshop)
-* [Navigation](https://documentation.spryker.com/2021080/docs/navigation)
+* [Navigation](/docs/user/features/{[site.version}}/navigation-feature-overview.html)
 * [Product Groups](https://documentation.spryker.com/2021080/docs/product-groups)
 * [Product Management](https://documentation.spryker.com/2021080/docs/product-information-management)
 * [Product Sets](https://documentation.spryker.com/2021080/docs/product-sets)

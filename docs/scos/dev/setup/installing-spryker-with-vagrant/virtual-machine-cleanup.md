@@ -77,7 +77,9 @@ sudo /etc/init.d/elasticsearch restart
 
 Delete all indices in Elasticsearch:
 
+```bash
 curl -XDELETE 'http://localhost:9200/_all'
+```
 
 2. **Clear Zed database**:
 

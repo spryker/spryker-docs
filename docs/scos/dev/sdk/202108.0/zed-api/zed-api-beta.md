@@ -84,6 +84,6 @@ We recommend using [Postman](https://www.getpostman.com/) to import resource end
 The next pre-release is planned to contain the following:
 
 * Auth layer (e.g. basic token auth)
-* API docs parsing and an overview at http://zed.de.demoshop.local/api of all resource endpoints
+* API docs parsing and an overview at `http://zed.de.demoshop.local/api` of all resource endpoints
 * Better abstraction and invertion of control for {module}Api code via ApiQueryBuilder module
 * Useful customer feedback/requests

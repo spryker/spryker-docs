@@ -66,13 +66,12 @@ Make sure  the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 |-|-|-|-|
-| WishlistItem.merchantReference | attribute | Created | src/Generated/Shared/Transfer/WishlistItemTransfer |
-| WishlistItem.productOfferReference | attribute | Created | src/Generated/Shared/Transfer/WishlistItemTransfer |
-| WishlistItemMeta.merchantReference | attribute | Created | src/Generated/Shared/Transfer/WishlistItemMetaTransfer |
-| WishlistItemMeta.productOfferReference | attribute | Created | src/Generated/Shared/Transfer/WishlistItemMetaTransfer |
-| WishlistMoveToCartRequest.merchantReference | attribute | Created | src/Generated/Shared/Transfer/WishlistMoveToCartRequestTransfer |
-| WishlistMoveToCartRequest.productOfferReference | attribute | Created | src/Generated/Shared/Transfer/WishlistMoveToCartRequestTransfer |
-| ProductOfferCriteriaFilter | object | Created | src/Generated/Shared/Transfer/ProductOfferCriteriaFilterTransfer |
+| WishlistItem.productOfferReference | property | Created | src/Generated/Shared/Transfer/WishlistItemTransfer |
+| WishlistItem.merchantReference | property | Created | src/Generated/Shared/Transfer/WishlistItemTransfer |
+| WishlistMoveToCartRequest.productOfferReference | property | Created | src/Generated/Shared/Transfer/WishlistMoveToCartRequestTransfer |
+| WishlistMoveToCartRequest.merchantReference | property | Created | src/Generated/Shared/Transfer/WishlistMoveToCartRequestTransfer |
+| WishlistItemCriteria.productOfferReference | property | Created | src/Generated/Shared/Transfer/WishlistItemCriteriaTransfer |
+| WishlistItemCriteria.merchantReference | property | Created | src/Generated/Shared/Transfer/WishlistItemCriteriaTransfer |
 
 {% endinfo_block %}
 
@@ -82,7 +81,7 @@ Make sure  the following changes have been applied in transfer objects:
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
-|-|-|-|-|
+|---|---|---|---|
 | WishlistProductOfferPostMoveToCartCollectionExpanderPlugin | Expands `WishlistMoveToCartRequestCollection` transfer object with not valid product offers as request items. | None | Spryker\Client\WishlistExtension\Dependency\Plugin |
 | WishlistMerchantProductPostMoveToCartCollectionExpanderPlugin | Expands `WishlistMoveToCartRequestCollection` transfer object with not valid merchant products as request items. | None | Spryker\Client\WishlistExtension\Dependency\Plugin |
 | WishlistProductOfferCollectionToRemoveExpanderPlugin | Expands `WishlistItemCollectionTransfer` transfer object with product offer reference. | None | Spryker\Client\WishlistExtension\Dependency\Plugin |
@@ -225,9 +224,7 @@ class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
 {% info_block warningBox "Verification" %}
 
 - Make sure that you can add a product offer to a wishlist and see the product offer data in there.
-
 - Make sure that you can see the merchant information when the merchant product is added to the wishlist.
-
 - Make sure that you can move the wishlist with the product offers to a shopping cart and vice versa.
 
 {% endinfo_block %}

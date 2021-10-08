@@ -45,9 +45,10 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up database schema
+### 2) Set up database schema and transfer objects
 
 Set up database schema:
+
 1. Adjust the schema definition so entity changes trigger events:
 
 **src/Pyz/Zed/MerchantSearch/Persistence/Propel/Schema/spy_merchant_search.schema.xml**
@@ -77,7 +78,6 @@ console propel:install
 console transfer:generate
 ```
 
-
 {% info_block warningBox "Verification" %}
 
 Make sure that the following changes have occurred in the database:
@@ -91,8 +91,6 @@ Make sure that the following changes have occurred in the database:
 
 {% endinfo_block %}
 
-### 3) Set up transfer objects
-
 Generate transfer changes:
 
 ```bash
@@ -105,33 +103,34 @@ Make sure that the following changes have occurred in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 |---|---|---|---|
-| MerchantProfileAddress | object | Created | src/Generated/Shared/Transfer/MerchantProfileAddressTransfer |
-| MerchantProfileCollection | object | Created | src/Generated/Shared/Transfer/MerchantProfileCollectionTransfer|
-| MerchantProfileCriteriaFilter | object | Created | src/Generated/Shared/Transfer/MerchantProfileCriteriaFilterTransfer |
-| MerchantProfileGlossaryAttributeValues | object | Created | src/Generated/Shared/Transfer/MerchantProfileGlossaryAttributeValuesTransfer |
-| MerchantProfileLocalizedGlossaryAttributes | object | Created | src/Generated/Shared/Transfer/MerchantProfileLocalizedGlossaryAttributesTransfer |
-| MerchantSearch | object | Created | src/Generated/Shared/Transfer/MerchantSearchTransfer |
-| MerchantSearchCollection | object | Created | src/Generated/Shared/Transfer/MerchantSearchCollectionTransfer |
-| MerchantUser | object | Created | src/Generated/Shared/Transfer/MerchantUserTransfer |
-| MerchantUserCriteria | object | Created | src/Generated/Shared/Transfer/MerchantUserCriteriaTransfer |
-| MerchantUserResponse | object | Created | src/Generated/Shared/Transfer/MerchantUserResponseTransfer |
-| SpyMerchantProfileEntity | object | Created | src/Generated/Shared/Transfer/SpyMerchantProfileEntityTransfer |
-| SpyMerchantSearchEntity | object | Created | src/Generated/Shared/Transfer/SpyMerchantSearchEntityTransfer |
-| SpyMerchantStorageEntity |  object | Created | src/Generated/Shared/Transfer/SpyMerchantStorageEntityTransfer |
-| SpyMerchantUserEntity | object | Created |src/Generated/Shared/Transfer/SpyMerchantUserEntityTransfer |
+| MerchantProfileAddress | class | Created | src/Generated/Shared/Transfer/MerchantProfileAddressTransfer |
+| MerchantProfileCollection | class | Created | src/Generated/Shared/Transfer/MerchantProfileCollectionTransfer|
+| MerchantProfileCriteriaFilter | class | Created | src/Generated/Shared/Transfer/MerchantProfileCriteriaFilterTransfer |
+| MerchantProfileGlossaryAttributeValues | class | Created | src/Generated/Shared/Transfer/MerchantProfileGlossaryAttributeValuesTransfer |
+| MerchantProfileLocalizedGlossaryAttributes | class | Created | src/Generated/Shared/Transfer/MerchantProfileLocalizedGlossaryAttributesTransfer |
+| MerchantSearch | class | Created | src/Generated/Shared/Transfer/MerchantSearchTransfer |
+| MerchantSearchCollection | class | Created | src/Generated/Shared/Transfer/MerchantSearchCollectionTransfer |
+| MerchantUser | class | Created | src/Generated/Shared/Transfer/MerchantUserTransfer |
+| MerchantUserCriteria | class | Created | src/Generated/Shared/Transfer/MerchantUserCriteriaTransfer |
+| MerchantUserResponse | class | Created | src/Generated/Shared/Transfer/MerchantUserResponseTransfer |
+| SpyMerchantProfileEntity | class | Created | src/Generated/Shared/Transfer/SpyMerchantProfileEntityTransfer |
+| SpyMerchantSearchEntity | class | Created | src/Generated/Shared/Transfer/SpyMerchantSearchEntityTransfer |
+| SpyMerchantStorageEntity |  class | Created | src/Generated/Shared/Transfer/SpyMerchantStorageEntityTransfer |
+| SpyMerchantUserEntity | class | Created |src/Generated/Shared/Transfer/SpyMerchantUserEntityTransfer |
+| UrlStorage.fkResourceMerchant | property | Created |src/Generated/Shared/Transfer/UrlStorageTransfer |
 
 {% endinfo_block %}
 
 
-### 4) Add Zed translations
+### 3) Add Zed translations
 
-Generate a new translation cache for Zed:
+Generate new translation cache for Zed:
 
 ```bash
 console translator:generate-cache
 ```
 
-### 5) Set up behavior
+### 4) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
@@ -200,7 +199,8 @@ class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following:
+Make sure that:
+
 * When you create a merchant using `MerchantFacade::updateMerchant()`, its profile also gets created.
 * When you update a merchant using `MerchantFacade::updateMerchant()`, its profile also gets updated.
 * When you fetch a merchant using `MerchantFacade::findOne()`, its profile data also gets fetched.
@@ -266,11 +266,11 @@ class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you edit a merchant in the Merchants section of the Back Office, you can see merchant profile related tabs: Contact Person, Merchant Profile, Legal Information, Merchant User.
+Make sure that when you edit a merchant in the *Merchants* section of the Back Office, you can see merchant profile related tabs: Contact Person, Merchant Profile, Legal Information, Merchant User.
 
 {% endinfo_block %}
 
-### 6) Configure navigation
+### 5) Configure navigation
 
 Add marketplace section to `navigation.xml`:
 
@@ -303,15 +303,15 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, in the navigation menu of the Back Office, you can see the **Marketplace** button.
+Make sure that you can see the **Marketplace** button in the navigation menu of the Back Office.
 
 {% endinfo_block %}
 
-### 7) Configure export to Redis
+### 6) Configure export to Redis and Elasticsearch
 
-This step publishes tables on change (create, edit) to `spy_merchant_profile_storage` and synchronizes the data to Storage.
+This step publishes tables on change (create, edit) to `spy_merchant_profile_storage` and synchronizes data to Storage.
 
-Configure export to Redis:
+#### Configure export to Redis
 
 1. Set up event listeners and publishers:
 
@@ -476,11 +476,10 @@ Make sure that when merchant profile entities are created or updated through ORM
 
 {% endinfo_block %}
 
-### 8) Configure export to Elastica
+
+##### Configure export to Elastica
 
 This step publishes tables on change (create, edit) to `spy_merchant_search` and synchronizes the data to Search.
-
-Configure export to Elastica:
 
 1. Setup event listeners and publishers by registering the plugins:
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
@@ -509,7 +508,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 }
 ```
 
-2. Register a synchronization queue:
+2. Register synchronization queue:
 **src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
 
 ```php
@@ -821,7 +820,7 @@ Make sure that when merchant entities are created or updated through ORM, they a
  ```
  </details>
 
-1. Set up result formatters:
+6. Set up result formatters:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
@@ -879,7 +878,7 @@ class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyPr
     }
 }
 ```
-8. Add the `merchant` resource to supported search sources:
+8. Add the `merchant` resource to the supported search sources:
 
 ```php
 <?php
@@ -896,11 +895,11 @@ class SearchElasticsearchConfig extends SprykerSearchElasticsearchConfig
 }
 ```
 
-### 9) Import data
+### 7) Import data
 
 To import data:
-1. Prepare merchant profile data according to your requirements using the demo data:
 
+1. Prepare merchant profile data according to your requirements using the demo data:
 
 <details>
 <summary markdown='span'>/data/import/common/common/marketplace/merchant_profile.csv</summary>
@@ -919,7 +918,6 @@ MER000005,Merchandise Manager,Mr,Jason,Weidmann,030/123456789,https://d2s0ynfc62
 Budget Cameras is offering a great selection of digital cameras with the lowest prices.","DSLR- und spiegellose Kameras sind bei Filmemachern mit knappem Budget bei weitem am beliebtesten, wenn sie sich bestimmte Spezialkameras nicht leisten können.
 Budget Cameras bietet eine große Auswahl an Digitalkameras mit den niedrigsten Preisen.",https://d2s0ynfc62ej12.cloudfront.net/merchant/budgetcameras-banner.png,https://d2s0ynfc62ej12.cloudfront.net/merchant/budgetcameras-banner.png,2-4 days,2-4 Tage,"<p><span style=""font-weight: bold;"">General Terms</span><br><br>(1) This privacy policy has been compiled to better serve those who are concerned with how their 'Personally identifiable information' (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website. <br><br>(2) We do not collect information from visitors of our site or other details to help you with your experience.<br><br><span style=""font-weight: bold;"">Using your Information</span><br><br>We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways: <br><br>To personalize user's experience and to allow us to deliver the type of content and product offerings in which you are most interested.<br><br><span style=""font-weight: bold;"">Protecting visitor information</span><br><br>Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your visit to our site as safe as possible. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.</p>","<p><span style=""font-weight: bold;"">§ 1 Geltungsbereich &amp; Abwehrklausel</span><br><br>(1) Für die über diesen Internet-Shop begründeten Rechtsbeziehungen zwischen dem Betreiber des Shops (nachfolgend „Anbieter“) und seinen Kunden gelten ausschließlich die folgenden Allgemeinen Geschäftsbedingungen in der jeweiligen Fassung zum Zeitpunkt der Bestellung. <br><br>(2) Abweichende Allgemeine Geschäftsbedingungen des Kunden werden zurückgewiesen.<br><br><span style=""font-weight: bold;"">§ 2 Zustandekommen des Vertrages</span><br><br>(1) Die Präsentation der Waren im Internet-Shop stellt kein bindendes Angebot des Anbieters auf Abschluss eines Kaufvertrages dar. Der Kunde wird hierdurch lediglich aufgefordert, durch eine Bestellung ein Angebot abzugeben. <br><br>(2) Durch das Absenden der Bestellung im Internet-Shop gibt der Kunde ein verbindliches Angebot gerichtet auf den Abschluss eines Kaufvertrages über die im Warenkorb enthaltenen Waren ab. Mit dem Absenden der Bestellung erkennt der Kunde auch diese Geschäftsbedingungen als für das Rechtsverhältnis mit dem Anbieter allein maßgeblich an. <br><br>(3) Der Anbieter bestätigt den Eingang der Bestellung des Kunden durch Versendung einer Bestätigungs-Email. Diese Bestellbestätigung stellt noch nicht die Annahme des Vertragsangebotes durch den Anbieter dar. Sie dient lediglich der Information des Kunden, dass die Bestellung beim Anbieter eingegangen ist. Die Erklärung der Annahme des Vertragsangebotes erfolgt durch die Auslieferung der Ware oder eine ausdrückliche Annahmeerklärung.<br><br><span style=""font-weight: bold;"">§ 3 Eigentumsvorbehalt</span><br><br>Die gelieferte Ware verbleibt bis zur vollständigen Bezahlung im Eigentum des Anbieters.<br><br><span style=""font-weight: bold;"">§ 4 Fälligkeit</span><br><br>Die Zahlung des Kaufpreises ist mit Vertragsschluss fällig.</p>","You have the right to withdraw from this contract within 14 days without giving any reason. The withdrawal period will expire after 14 days from the day on which you acquire, or a third party other than the carrier and indicated by you acquires, physical possession of the last good. You may use the attached model withdrawal form, but it is not obligatory. To meet the withdrawal deadline, it is sufficient for you to send your communication concerning your exercise of the right of withdrawal before the withdrawal period has expired.","Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen. Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag, an dem Sie oder ein von Ihnen benannter Dritter, der nicht der Beförderer ist, die letzte Ware in Besitz genommen hat. Sie können dafür das beigefügte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist. Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.",<p>Budget Cameras<br><br>Spitalerstraße 3<br>20095 Hamburg<br>DE<br><br>Phone: 030 1234567<br>Email: support@budgetcamerasonline.com<br><br>Represented by<br>Managing Director: Max Mustermann<br>Register Court: Hamburg<br>Register Number: HXX 134305<br></p>,<p>Budget Cameras<br><br>Spitalerstraße 3<br>20095 Hamburg<br>DE<br><br>Phone: 030 1234567<br>Email: support@budgetcamerasonline.com<br><br>Vertreten durch<br>Geschäftsführer: Max Mustermann<br>Registergericht: Hamburg<br>Registernummer: HXX 134305<br></p>,Budget Cameras values the privacy of your personal data.,Für die Abwicklung ihrer Bestellung gelten auch die Datenschutzbestimmungen von Budget Cameras.,1,+49 30 234567500
 ```
-
 </details>
 
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |

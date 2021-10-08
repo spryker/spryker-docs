@@ -17,7 +17,7 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE  |
 | -------------------- | ------- | ------------------ |
-| Spryker Core         | {{page.version}}  | [Spryker Core feature integration ](https://documentation.spryker.com/docs/spryker-core-feature-integration)|
+| Marketplace Merchant Portal Core | {{page.version}}  | [Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-core-feature-integration.html)
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
@@ -25,7 +25,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker/merchant-profile-merchant-portal-gui:"^0.3.0" --update-with-dependencies
+composer require spryker/merchant-profile-merchant-portal-gui:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -45,20 +45,25 @@ Generate transfer changes:
 ```bash
 console transfer:generate
 ```
-{% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
-
-| TRANSFER  | TYPE  | EVENT | PATH  |
-| ------------- | ------ | ------- | ----------------- |
-| MerchantProfile | object | Created | src/Generated/Shared/Transfer/MerchantProfile |
-
-{% endinfo_block %}
-
-### Zed translations
+### 3) Add translations
 
 Generate a new translation cache for Zed:
 
 ```bash
 console translator:generate-cache
 ```
+### 4) Configure navigation
+
+Build navigation cache
+
+Execute the following command:
+```bash
+console navigation:build-cache
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that, the navigation menu of the **MerchantPortal** has **Profile** section.
+
+{% endinfo_block %}

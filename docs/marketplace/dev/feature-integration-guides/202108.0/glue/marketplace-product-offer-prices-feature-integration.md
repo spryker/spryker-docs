@@ -129,5 +129,5 @@ Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 |---|---|---|
-| Marketplace Wishlist + Product Offer Prices API | &check;  |  [Glue API: Marketplace Wishlist + Product Offer Prices feature integration ](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-wishlist-product-offer-prices-feature-integration.html) |
+| Marketplace Product Offer Prices + Wishlist Glue API | &check;  |  [Glue API: Marketplace Product Offer Prices + Wishlist feature integration ](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-prices-wishlist-feature-integration.html) |
 

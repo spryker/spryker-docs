@@ -212,14 +212,14 @@ entries:
               - title: "Glue API: Marketplace Product Offer + Cart feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-cart-feature-integration.html
 
-              - title: "Glue API: Marketplace Wishlist + Inventory Management feature integration"
-                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-wishlist-inventory-management-feature-integration.html
+              - title: "Glue API: Marketplace Inventory Management + Wishlist feature integration"
+                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-inventory-management-wishlist-feature-integration.html
 
-              - title: "Glue API: Marketplace Wishlist + Product Prices feature integration"
-                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-wishlist-product-prices-feature-integration.html
+              - title: "Glue API: Prices + Marketplace Wishlist feature integration"
+                url: /docs/marketplace/dev/feature-integration-guides/glue/prices-marketplace-wishlist-feature-integration.html
 
-              - title: "Glue API: Marketplace Wishlist + Product Offer Prices feature integration"
-                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-wishlist-product-offer-prices-feature-integration.html
+              - title: "Glue API: Marketplace Product Offer Prices + Wishlist feature integration"
+                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-prices-wishlist-feature-integration.html
 
       - title: Glue API guides
         nested:

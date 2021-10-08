@@ -125,4 +125,4 @@ Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 |---|---|---|
-| Marketplace Wishlist + Inventory Management API |  |  [Glue API: Marketplace Wishlist + Inventory Management feature integration ](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-wishlist-inventory-management-feature-integration.html) |
+| Marketplace Inventory Management + Wishlist Glue API |  |  [Glue API: Marketplace Inventory Management + Wishlist feature integration ](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-inventory-management-wishlist-feature-integration.html) |

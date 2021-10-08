@@ -40,7 +40,7 @@ First run `composer update spryker/*` to update your all modules to the latest m
  **CatalogPriceProductConnector** - we have added new currency aware formatter plugins for formatting prices when reading results from Elasticsearch. See Integration guide for more details.
 **Price >= 5.*** - see [Migration Guide - Price](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-price.html).
 **PriceProduct** - new module handling price product prices. Migration is a part of [Migration Guide - Price](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-price.html).
-**PriceCartConnector >= 4.*** -  [Migration Guide - PriceCartConnector](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-price.html-cart-connector) uses the new PriceProduct module.
+**PriceCartConnector >= 4.*** -  [Migration Guide - PriceCartConnector](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-pricecartconnector.html) uses the new PriceProduct module.
 **PriceDataFeed >= 0.2.*** - uses the new `PriceProduct` module.
 **ProductBundle >= 4.*** - [Migration Guide - ProductBundle](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-productbundle.html) uses the new `PriceProduct` module, the new plugin to watch cart item reload action.
 **ProductLabelGui >= 2.*** - see [Migration Guide - ProductLabelGui](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-productlabelgui.html).

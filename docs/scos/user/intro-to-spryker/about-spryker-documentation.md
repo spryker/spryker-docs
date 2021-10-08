@@ -157,12 +157,12 @@ We use the following tags:
 * **Glue API**: Signifies that feature is also available in the [Spryker Glue API](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-rest-api.html).
 * **Versions** (201811.0, 201903.0, 201907.0 etc.):  Indicate what [product version\(s\)](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html) the feature described in the document relates to.
 {% info_block infoBox %}
-You can filter out the documents by specific product versions. For this, select the version in the top right green dropdown.
-{% endinfo_block %}
-<a name="inapp"></a>
-<!--* **In-App Assistant**: Widget on the main page of the Spryker documentation website that allows you to find top search articles quickly. To open the In-App Assistant, click on a blue book icon in the bottom left corner:  
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker+Documentation/InApp+Assistant.png)-->
+You can filter out the documents by specific product versions. For this, select the version in the top right green dropdown.
+
+{% endinfo_block %}
+
+<a name="inapp"></a>
 
 ## Feedback
 

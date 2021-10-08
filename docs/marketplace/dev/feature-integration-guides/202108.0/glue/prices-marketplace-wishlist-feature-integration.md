@@ -79,6 +79,6 @@ class WishlistsRestApiDependencyProvider extends SprykerWishlistsRestApiDependen
 
 {% info_block warningBox "Verification" %}
 
-Make sure that `PriceProductWishlistItemExpanderPlugin`, and `ProductPriceRestWishlistItemsAttributesMapperPlugin` are set up by sending the request `GET http://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items`. You should get the price product collection within `attributes` in the response.
+Make sure that `PriceProductWishlistItemExpanderPlugin` and `ProductPriceRestWishlistItemsAttributesMapperPlugin` are set up by sending the request `GET http://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items`. You should get the price product collection within the `attributes` in the response.
 
 {% endinfo_block %}

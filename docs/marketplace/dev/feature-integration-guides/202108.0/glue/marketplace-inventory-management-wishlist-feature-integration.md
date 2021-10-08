@@ -30,7 +30,7 @@ Activate the following plugins:
 | SellableWishlistItemExpanderPlugin | Expands the `WishlistItem` transfer object with sellable status. |  | Spryker\Zed\Availability\Communication\Plugin\Wishlist |
 | ProductAvailabilityRestWishlistItemsAttributesMapperPlugin | Maps availability data to the `RestWishlistItemsAttributes` transfer object. |  | Spryker\Glue\ProductAvailabilitiesRestApi\Plugin\Wishlist |
 
-**src/Pyz/Zed/Wishlist/WishlistDependencyProvider.php</summary>**
+**src/Pyz/Zed/Wishlist/WishlistDependencyProvider.php**
 
 ```php
 <?php
@@ -81,8 +81,8 @@ class WishlistsRestApiDependencyProvider extends SprykerWishlistsRestApiDependen
 
 {% info_block warningBox "Verification" %}
 
-Make sure that `AvailabilityWishlistItemExpanderPlugin` and `ProductAvailabilityRestWishlistItemsAttributesMapperPlugin` are set up by sending the request `GET http://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items`. You should get `quantity` within `attributes` in the response.
+Make sure that `AvailabilityWishlistItemExpanderPlugin` and `ProductAvailabilityRestWishlistItemsAttributesMapperPlugin` are set up by sending the request `GET http://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items`. You should get the `quantity` value within the `attributes` in the response.
 
-Make sure that `SellableWishlistItemExpanderPlugin` is set up by sending the request `GET http://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items`. You should get `availability` within the `attributes` in the response.
+Make sure that `SellableWishlistItemExpanderPlugin` is set up by sending the request `GET http://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items`. You should get `availability` value within the `attributes` in the response.
 
 {% endinfo_block %}

@@ -42,13 +42,13 @@ First run `composer update spryker/*` to update your all modules to the latest m
  **CatalogPriceProductConnector** - we have added new currency aware formatter plugins for formatting prices when reading results from Elasticsearch. See Integration guide for more details.
 **Price >= 5.*** - see [Migration Guide - Price](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-price.html).
 **PriceProduct** - new module handling price product prices. Migration is a part of [Migration Guide - Price](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-price.html).
-**PriceCartConnector >= 4.*** -  [Migration Guide - PriceCartConnector](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-price.html-cart-connector) uses the new PriceProduct module.
+**PriceCartConnector >= 4.*** -  [Migration Guide - PriceCartConnector](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-pricecartconnector.html) uses the new PriceProduct module.
 **PriceDataFeed >= 0.2.*** - uses the new `PriceProduct` module.
 **ProductBundle >= 4.*** - [Migration Guide - ProductBundle](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-productbundle.html) uses the new `PriceProduct` module, the new plugin to watch cart item reload action.
 **ProductLabelGui >= 2.*** - see [Migration Guide - ProductLabelGui](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-productlabelgui.html).
 **ProductManagement >= 0.9.*** - see [Migration Guide - ProductManagement](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-productmanagement.html). New forms and views have been added.
-**ProductRelation >= 2.*** - see [Migration Guide - ProductRelation](/docs/scos/user/features/{{page.version}}/mg-product-relation).
-**ProductRelationCollector >= 2.*** - see [Migration Guide - ProductRelationCollector](/docs/scos/dev/module-migration-guides/{{page.version}}/mg-product-relation-collector.html).
+**ProductRelation >= 2.*** - see [Migration Guide - ProductRelation](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-productrelation.html).
+**ProductRelationCollector >= 2.*** - see [Migration Guide - ProductRelationCollector](/docs/scos/dev/module-migration-guides/{{page.version}}/{{page.version}}/migration-guide-productrelationcollector.html).
 **ProductSetGui >= 2.*** - see [Migration Guide - ProductSetGui](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-productsetgui.html).
 **Wishlist >= 2.*** - see [Migration Guide - Wishlist](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-wishlist.html).
 **Search >= 7.0** - see [Migration Guide - Search](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-search.html).

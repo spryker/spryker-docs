@@ -63,7 +63,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 <details open>
 <summary>Response sample with one order</summary>
-   
+
 ```
 {
     "data": [
@@ -121,7 +121,7 @@ To retrieve detailed information on an order, send the request:
 
 | PATH PARAMETER     | DESCRIPTON                                                   |
 | ------------------ | ------------------------------------------------------------ |
-| ***{% raw %}{{{% endraw %}order_id{% raw %}}}{% endraw %}*** | Unique identifier of an order. [Retrieve all orders](#retrieving-all-orders) to get it. |
+| ***{% raw %}{{{% endraw %}order_id{% raw %}}}{% endraw %}*** | Unique identifier of an order. [Retrieve all orders](#retrieve-all-orders) to get it. |
 
 ### Request
 
@@ -138,13 +138,13 @@ To retrieve detailed information on an order, send the request:
 | GET https://glue.mysprykershop.com/orders/DE--1              | Retrieve information about the order with the id `DE--6`.      |
 | GET https://glue.mysprykershop.com/orders/DE--6?include=order-shipments | Retrieve information about the order with the id `DE--6` with order shipments included. |
 
- 
+
 
 ### Response
 
 <details open>
     <summary>Response sample</summary>
-       
+
 ```json
 {
     "data": {
@@ -358,7 +358,7 @@ To retrieve detailed information on an order, send the request:
     }
 }
 ```
-    
+
 </details>
 
 <details open>
@@ -1265,7 +1265,7 @@ To retrieve detailed information on an order, send the request:
 | shippingAddress            | object | Shipment address of the order. This value is returned only if you submit an order without split delivery. See [Checking out purchases in version 202009.0](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html) to learn how to do that. |
 
 
-**Order item information** 
+**Order item information**
 
 
 
@@ -1275,7 +1275,7 @@ To retrieve detailed information on an order, send the request:
 | items.state                             | String  | Defines the state of the order in the state machine.         |
 | bundleItems | Array | Array of objects describing the concrete product bundles in the order. |
 | bundleItems.bundleItemIdentifier | Integer | Defines the relation between the bundle and its items. The items of the bundle have the same value in the `relatedBundleItemIdentifier` attribute. |
-| items.relatedBundleItemIdentifier | Integer | Defines the relation between the item and its bundle. The bundle to which this the item belongs has the same value in the `bundleItemIdentifier` attribute. | 
+| items.relatedBundleItemIdentifier | Integer | Defines the relation between the item and its bundle. The bundle to which this the item belongs has the same value in the `bundleItemIdentifier` attribute. |
 | items.name                              | String  | Product name.                                                |
 | items.sku                               | String  | Product SKU.                                                 |
 | items.sumPrice                          | Integer | Sum of all product prices.                                   |
@@ -1326,7 +1326,7 @@ To retrieve detailed information on an order, send the request:
 | salesUnit | Object | List of attributes defining the sales unit to be used for item amount calculation. |
 | conversion | integer | Factor to convert a value from sales to base unit. If it is "null", the information is taken from the global conversions. |
 | precision | integer | Ratio between a sales unit and a base unit. |
-| measurementUnit | string | Code of the measurement unit. | 
+| measurementUnit | string | Code of the measurement unit. |
 | name | String | Name of the measurement unit. |
 | code | String | Code of the measurement unit. |
 
@@ -1437,5 +1437,3 @@ To retrieve detailed information on an order, send the request:
 |801| Order with the given order reference is not found.  |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
-
-

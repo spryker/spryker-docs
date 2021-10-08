@@ -15,7 +15,7 @@ There are two steps to the two migration process.
 * The first is to migrate all your orders to the new structure and drop use of `SalesAggregator`. 
 * The second is to migrate your code to support the `old Aggregators`.
  
-To learn how to migrate to the new structure, see [Migration Guide - Calculation](https://docs.demo-spryker.com/v4/docs/mg-calculation).
+To learn how to migrate to the new structure, see [Migration Guide - Calculation](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-calculation.html).
 
 ### Enable the `SalesAggregator` in Your Project
 The `SalesAggregator` module has been deprecated but all calculators are still provided. If you want to keep them you can do so with a few changes to the code.

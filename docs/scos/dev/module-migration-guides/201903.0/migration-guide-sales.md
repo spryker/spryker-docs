@@ -199,8 +199,8 @@ Now you have two options:
 **OR**
 * migrate to the new calculators logic.
 
-1. To keep old calculation logic, see [Updating calculator stacks](https://docs.demo-spryker.com/v4/docs/mg-calculation).
-2. To migrate to the new structure, see [Migrating sales to new calculator logic](https://docs.demo-spryker.com/v4/docs/mg-calculation). 
+1. To keep old calculation logic, see [Updating calculator stacks](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-calculation.html).
+2. To migrate to the new structure, see [Migrating sales to new calculator logic](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-calculation.html). 
 
 ## Upgrading from Version 3.* to Version 4.*
     

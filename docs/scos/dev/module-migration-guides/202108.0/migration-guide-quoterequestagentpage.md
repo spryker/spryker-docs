@@ -17,7 +17,7 @@ Also, transfer property `QuoteRequestTranser::isLatestVersionHidden` was replace
 
 **To migrate do the following:**
 1. Update `spryker/quote-request-agent` to version ^2.0.0 by following the steps from [Migration Guide - QuoteRequest](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-quoterequest.html).
-2. Update `spryker/quote-request` to version ^2.0.0 by following the steps from [Migration Guide - Quote Request Agent](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-quoterequest.htmlagent).
+2. Update `spryker/quote-request` to version ^2.0.0 by following the steps from [Migration Guide - Quote Request Agent](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-quoterequest.html).
 3. Update `spryker-shop/quote-request-agent-page:^2.0.0`
 
 ```bash

@@ -28,19 +28,19 @@ Below you will find the list of the new/updated documentation released as part o
 
 ### Features:
 
-* [Split Delivery](https://documentation.spryker.com/2021080/docs/split-delivery)
+* [Split Delivery](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/split-delivery-overview.html)
 
 <details open>
 <summary>Feature overview</summary>
 
-[Split Delivery Overview](https://documentation.spryker.com/2021080/docs/split-delivery-overview)
+[Split Delivery Overview](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/split-delivery-overview.html)
 
 </details>
 
 <details open>
 <summary>Migration guide</summary>
 
-[Split Delivery Migration Concept](https://documentation.spryker.com/2021080/docs/split-delivery-concept)
+[Split Delivery Migration Concept](/docs/scos/dev/migration-concepts/split-delivery-migration-concept.html)
 
 
 </details>
@@ -157,7 +157,7 @@ Below you will find the list of the new/updated documentation released as part o
 <summary>Migration guides</summary>
 
 
-* [CmsBlock - migration from v. 2.* to v. 3.*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cmsblock.html#upgrading-from-version-2---to-version-3--)
+* [CmsBlock - migration from v. 2.* to v. 3.*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cmsblock.html#upgrading-from-version-2-to-version-3)
 * [CmsBlockStorage - migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cmsblockstorage.html)
 * [CmsBlockWidget - migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cmsblockwidget.html)
 

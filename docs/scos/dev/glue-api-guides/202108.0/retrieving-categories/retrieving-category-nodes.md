@@ -14,7 +14,7 @@ This endpoint allows retrieving category nodes.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Category API Feature Integration](https://documentation.spryker.com/2021080/docs/category-management-feature-integration-201907).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Category API Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html).
 
 
 ## Retrieve a category node

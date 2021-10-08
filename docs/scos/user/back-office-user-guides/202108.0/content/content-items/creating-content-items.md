@@ -8,6 +8,7 @@ redirect_from:
   - /2021080/docs/en/creating-content-items
   - /docs/creating-content-items
   - /docs/en/creating-content-items
+
 ---
 
 This topic describes how to create content items in the Back Office.
@@ -64,15 +65,15 @@ For the use cases and examples of the banner content item, see [Banner Content I
 {% endinfo_block %}
 Follow the steps to create a banner:
 
-1. On the *Create Content Item: Banner* page, enter **Name** and **Description**. The fields are mandatory. 
-2. In the *Default* tab, fill out the following mandatory fields: 
+1. On the *Create Content Item: Banner* page, enter **Name** and **Description**. The fields are mandatory.
+2. In the *Default* tab, fill out the following mandatory fields:
     * **Title**
     * **Subtitle**
     * **Image URL**
     * **Click URL**
     * **Alt-text**
 
-3. If needed, repeat the previous step in one or more locale-specific tabs. 
+3. If needed, repeat the previous step in one or more locale-specific tabs.
 {% info_block infoBox "Multi-language setup" %}
 
 The following logic applies in a multi-language setup:
@@ -134,8 +135,9 @@ Follow the steps to create an abstract product list:
     {% info_block warningBox "Verification" %}
 
     The added products should appear in the table above the *Add more products* table.
-    
-{% endinfo_block %}
+
+    {% endinfo_block %}
+
     2.  In the table above the *Add more products* table, sort the added products by clicking **Move Down** or **Move Up**.  
 
 3. If needed, repeat the previous step in one or more locale-specific tabs.
@@ -144,8 +146,7 @@ Follow the steps to create an abstract product list:
 The following logic applies in a multi-language setup:
 * Locale-specific products overwrite the default products when the Abstract Product List is rendered on a Storefront page with the [locale](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
 * If no products are selected for a locale, the default products are displayed on a Storefront page with the locale selected.
-
-
+*
 {% endinfo_block %}
 4. Click **Save**. This takes you to the *Overview of Content Items* page.
 {% info_block warningBox "Verification" %}
@@ -203,8 +204,8 @@ Follow the steps to create a product set:
     {% info_block warningBox "Verification" %}
 
     The added product set should appear in the table above the *Available Product Sets* table.
-    
-{% endinfo_block %}
+
+    {% endinfo_block %}
 
 3. If needed, repeat the previous step in one or more locale-specific tabs.
 {% info_block infoBox "Multi-language setup" %}
@@ -212,7 +213,6 @@ Follow the steps to create a product set:
 The following logic applies in a multi-language setup:
 * A locale-specific product set overwrites the default product set when the product set content item is rendered on a Storefront page with the [locale](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
 * If no product set is selected for a locale, the default product set is displayed on a Storefront page with the locale selected.
-
 
 {% endinfo_block %}
 4. Click **Save**. This takes you to the *Overview of Content Items* page.
@@ -261,17 +261,17 @@ For the use cases and examples of the file list content item, see [File List Con
 {% endinfo_block %}
 Follow the steps to create a file list:
 
-1. On the *Create Content Item: File List* page, enter **Name** and **Description**. The fields are mandatory. 
+1. On the *Create Content Item: File List* page, enter **Name** and **Description**. The fields are mandatory.
 2. In the *Default* tab, add files to the file list as follows:
     1.  In the *Available Files* table, click **+Add to list** next to the desired files.
     {% info_block warningBox "Verification" %}
 
     The added files should appear in the *Selected Files* table.
-    
-{% endinfo_block %}
-    2.  In the *Selected Files* table, sort the added files by clicking **Move Down** or **Move Up**. 
 
-See [Content items: reference information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-items.html#create-and-edit-abstract-product-list-content-item-page) to learn about the attributes on this page. 
+{% endinfo_block %}
+    2.  In the *Selected Files* table, sort the added files by clicking **Move Down** or **Move Up**.
+
+See [Content items: reference information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-items.html#create-and-edit-abstract-product-list-content-item-page) to learn about the attributes on this page.
 
 3. If needed, repeat the previous step in one or more locale-specific tabs.
 {% info_block infoBox "Multi-language setup" %}
@@ -335,7 +335,7 @@ The following logic applies in a multi-language setup:
 
 {% endinfo_block %}
 
-4. Click **Save**. 
+4. Click **Save**.
 This takes you to the *Overview of Content Items* page. You can see the message about successful content item creation. The created content item is displayed in the *List of Content Items*.
 
 ### Reference information: Create a navigation content item
@@ -349,7 +349,7 @@ The following table describes the attributes on the *Create Content Item: Naviga
 | Navigation | Field to select an existing navigation element. |
 
 **What's next?**
-The content item is created. Now, you can add it to a CMS block. 
+The content item is created. Now, you can add it to a CMS block.
 
 * To learn about adding content item to CMS blocks or a pages, see [Adding content items to CMS pages and blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).
 * To learn about editing content items, see [Editing content items](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/editing-content-items.html).

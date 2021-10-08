@@ -15,9 +15,9 @@ This document describes how to integrate the CMS + Category Management feature i
 
 To start feature integration, overview and install the necessary features:
 
-| NAME | VERSION | CMS | 
-| --- | --- | ---  | 
-| 202001.0 | Category Management | 202001.0| 
+| NAME | VERSION | CMS |
+| --- | --- | ---  |
+| 202001.0 | Category Management | 202001.0|
 
 ## 1) Install the required modules using Composer
 
@@ -25,15 +25,15 @@ Install the required modules:
 ```bash
 composer require spryker/cms-slot-block-category-connector:"^1.0.0" spryker/cms-slot-block-category-gui:"^1.0.0" --update-with-dependencies
 ```
-  
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
-|MODULE | EXPECTED DIRECTORY | 
-|--- | --- | 
-|CmsSlotBlock | vendor/spryker/cms-slot-block | 
-|CmsSlotBlockCategoryConnector | vendor/spryker/cms-slot-block-category-connector | 
+|MODULE | EXPECTED DIRECTORY |
+|--- | --- |
+|CmsSlotBlock | vendor/spryker/cms-slot-block |
+|CmsSlotBlockCategoryConnector | vendor/spryker/cms-slot-block-category-connector |
 |CmsSlotBlockCategoryGui | vendor/spryker/cms-slot-block-category-gui|
 
 {% endinfo_block %}
@@ -41,7 +41,7 @@ Make sure that the following modules have been installed:
 ## 2) Set up configuration
 
 1.  Add a CMS slot template to the condition key relation:
-    
+
 
 **Pyz\Zed\CmsSlotBlock\CmsSlotBlockConfig**
 ```php
@@ -101,10 +101,10 @@ class CategoryConfig extends CategoryCategoryConfig
 1. Prepare the Zed UI form plugins:
 
 |PLUGIN |SPECIFICATION |NAMESPACE |
-|--- | --- | --- | 
+|--- | --- | --- |
 |CategorySlotBlockConditionFormPlugin |Extends the CMS slot block form with a category condition form. |Spryker\Zed\CmsSlotBlockCategoryGui\Communication\Plugin|
 
-  
+
 
 **Pyz\Zed\CmsSlotBlockGui\CmsSlotBlockGuiDependencyProvider**
 ```php
@@ -128,13 +128,13 @@ class CmsSlotBlockGuiDependencyProvider extends SprykerCmsSlotBlockGuiDependency
     }
 }
 ```
-  
+
 {% info_block warningBox "Verification" %}
 
 
 1. In the Back Office, go to **Content** > **Slots**.
 
-2. In the *List of Templates* pane, select the template you've configured in [2) Set up configuration](#2-set-up-configuration).
+2. In the *List of Templates* pane, select the template you've configured in [2) Set up configuration](#set-up-configuration).
 
 3. Make sure that you can see a *List of Blocks for "{selected slot name}" Slot* pane.
 
@@ -143,11 +143,11 @@ class CmsSlotBlockGuiDependencyProvider extends SprykerCmsSlotBlockGuiDependency
 
 2. Add the visibility resolver plugin to the `CmsSlotBlock` client:
 
-|PLUGIN | SPECIFICATION | NAMESPACE | 
-|--- | --- | --- | 
+|PLUGIN | SPECIFICATION | NAMESPACE |
+|--- | --- | --- |
 |CategoryCmsSlotBlockConditionResolverPlugin | Provides a visibility resolver for the `CmsSlotBlock` client. | Spryker\Client\CmsSlotBlockCategoryConnector\Plugin\CmsSlotBlock |
 
-  
+
 
 **Pyz\Zed\CmsSlotBlockGui\CmsSlotBlockGuiDependencyProvider**
 ```php
@@ -171,12 +171,9 @@ class CmsSlotBlockGuiDependencyProvider extends SprykerCmsSlotBlockGuiDependency
     }
 }
 ```
-  
+
 {% info_block warningBox "Verification" %}
 
 Make sure that you can add visibility conditions to a CMS block and display it on the Storefront.
 
 {% endinfo_block %}
-  
-
-

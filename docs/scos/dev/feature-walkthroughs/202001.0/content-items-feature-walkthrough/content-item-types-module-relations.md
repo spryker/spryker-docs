@@ -13,19 +13,19 @@ This document describes each content item type and the modules relations used fo
 ## Banner
 Banner content item is a content piece that consists of text, a background image and a link. A content manager specifies the values when [creating the content item](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html#content-item--banner) in the Back Office > **Content Management** > **Content Items**.
 The scheme shows the module relations of the Banner content item:
-![Banner CI module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Types%3A+Module+Relations/banner-module-relations.png)
+<br>![Banner CI module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Types%3A+Module+Relations/banner-module-relations.png)
 
 ### Banner API
 A developer can fetch the content item data via API. Also, they can view the content item details for a specific locale.
 
 The scheme below shows the Banner API module relations:
-![Banner API module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Types%3A+Module+Relations/banner-api-module-relations.png)
+<br>![Banner API module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Types%3A+Module+Relations/banner-api-module-relations.png)
 
 ### Banner Data Importer
 A developer can create and edit the content items by importing them.
 
 The scheme below shows the module relations of the content item data importers:
-![Banner Content Item Data Importers module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Types%3A+Module+Relations/banner-data-importers-module-relations.png)
+<br>![Banner Content Item Data Importers module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Types%3A+Module+Relations/banner-data-importers-module-relations.png)
 
 
 See [Data Importers Overview and Implementation](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/data-importers/data-importers-overview-and-implementation.html) for more details.

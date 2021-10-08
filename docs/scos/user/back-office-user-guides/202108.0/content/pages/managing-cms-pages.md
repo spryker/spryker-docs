@@ -12,7 +12,6 @@ redirect_from:
 
 This article describes how to manage CMS pages.
 
----
 
 ## Prerequisites
 
@@ -23,8 +22,11 @@ Each section contains reference information. Make sure to review it before you s
 ## Previewing CMS pages
 
 If you would like to see how your page will look before you publish it, you can preview it in your browser.
+
 {% info_block warningBox "Note" %}
- To preview a draft of your page, link your Zed account to an Yves account.
+
+To preview a draft of your page, link your Zed account to an Yves account.
+
 {% endinfo_block %}
 
 To link a Zed customer to an Yves customer:
@@ -32,9 +34,13 @@ To link a Zed customer to an Yves customer:
 1. Navigate to **Users Control** > **User**.
 2. On the *Users list* page, click **Assign Customers to User: Zed account e-mail** in the _Actions_ column. This will take you to the *Assign Customers* page.
 3. Select a user you would like to assign to your Zed account.
-    {% info_block warningBox "Note" %}
+
+{% info_block warningBox "Note" %}
+
 Keep in mind that a customer *cannot* be assigned to multiple users at a time.
+
 {% endinfo_block %}
+
 4. To keep the changes, click **Save**.
 
 After you linked your Yves customer to your Zed user, make sure that you are logged in to Zed with your Zed account and logged in to Yves with the assigned customer account.
@@ -69,7 +75,7 @@ To view a CMS page:
 2. You can select the following options from the drop-down list:
     *  **Preview**: This option allows you to see the way the page will look like on the Storefront before publishing it.
     *  **In Zed**: This option opens the View CMS Page editor that includes general information about a published page, as well as its URL and metadata.
-    *  **In Shop**: This option opens a live page on the Storefront. 
+    *  **In Shop**: This option opens a live page on the Storefront.
     *  **Version History**: This option opens the *Version History: [Page Name]* page that displays all available versions of the page and general information of the version you are currently using.
  3. To view the page details in Zed, select **View** > **In Zed**.
  4. On the *View CMS Page: [Page Name]* page, the following information is available:

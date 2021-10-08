@@ -41,4 +41,4 @@ If you create a PR and feel that the issue is important, [contact our support](h
 
 ---
 **See also:**
-* [Contributing to the Documentation](/docs/scos/user/intro-to-spryker/about-spryker-documentation.html#contributing-to-the-documentation)
+* [Contributing to the Documentation](/docs/scos/user/intro-to-spryker/about-spryker-documentation.html#editing-documentation)

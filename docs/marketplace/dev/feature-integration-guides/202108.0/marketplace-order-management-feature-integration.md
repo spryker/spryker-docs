@@ -21,6 +21,7 @@ To start feature integration, integrate the required features:
 | Order Management | {{page.version}} | [Order Management feature integration](https://documentation.spryker.com/docs/order-management-feature-integration) |
 | State Machine | {{page.version}} | [State Machine feature integration](https://github.com/spryker-feature/state-machine) |
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
+| Marketplace Shipment | {{page.version}} | [Marketplace Shipment feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-feature-integration.html) |
 
 ### 1) Install required modules using Сomposer
 
@@ -709,6 +710,9 @@ Enable the following behaviors by registering the plugins:
 | DeliverMarketplaceOrderItemCommandPlugin | Triggers 'deliver' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
 | ShipByMerchantMarketplaceOrderItemCommandPlugin | Triggers 'ship by merchant' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
 | CancelMarketplaceOrderItemCommandPlugin | Triggers 'ship by merchant' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
+| ShipmentFormTypePlugin | Returns ShipmentFormType class name resolution.  |  | Spryker\Zed\ShipmentGui\Communication\Plugin\Form |
+| ItemFormTypePlugin | Returns ItemFormType class name resolution.  |  | Spryker\Zed\ShipmentGui\Communication\Plugin\Form |
+| MerchantReferenceShipmentExpenseExpanderPlugin | Expands expense transfer with merchant reference from items | | Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Shipment |
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/MerchantOmsCommunicationFactory.php</summary>
@@ -989,6 +993,68 @@ class MerchantOmsDependencyProvider extends SprykerMerchantOmsDependencyProvider
 ```
 </details>
 
+<details>
+<summary markdown='span'>src/Pyz/Zed/MerchantSalesOrderMerchantUserGui/MerchantSalesOrderMerchantUserGuiDependencyProvider.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantSalesOrderMerchantUserGui;
+
+use Spryker\Zed\Kernel\Communication\Form\FormTypeInterface;
+use Spryker\Zed\MerchantSalesOrderMerchantUserGui\MerchantSalesOrderMerchantUserGuiDependencyProvider as SprykerMerchantSalesOrderMerchantUserGuiDependencyProvider;
+use Spryker\Zed\ShipmentGui\Communication\Plugin\Form\ItemFormTypePlugin;
+use Spryker\Zed\ShipmentGui\Communication\Plugin\Form\ShipmentFormTypePlugin;
+
+class MerchantSalesOrderMerchantUserGuiDependencyProvider extends SprykerMerchantSalesOrderMerchantUserGuiDependencyProvider
+{
+    /**
+     * @return \Spryker\Zed\Kernel\Communication\Form\FormTypeInterface
+     */
+    public function getShipmentFormTypePlugin(): FormTypeInterface
+    {
+        return new ShipmentFormTypePlugin();
+    }
+
+    /**
+     * @return \Spryker\Zed\Kernel\Communication\Form\FormTypeInterface
+     */
+    public function getItemFormTypePlugin(): FormTypeInterface
+    {
+        return new ItemFormTypePlugin();
+    }
+}
+```
+
+</details>
+
+<details>
+<summary markdown='span'>src/Pyz/Zed/Shipment/ShipmentDependencyProvider.php**</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\Shipment;
+
+use Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Shipment\MerchantReferenceShipmentExpenseExpanderPlugin;
+use Spryker\Zed\Shipment\ShipmentDependencyProvider as SprykerShipmentDependencyProvider;
+
+class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
+{
+    /**
+     * @return \Spryker\Zed\ShipmentExtension\Dependency\Plugin\ShipmentExpenseExpanderPluginInterface[]
+     */
+    protected function getShipmentExpenseExpanderPlugins(): array
+    {
+        return [
+            new MerchantReferenceShipmentExpenseExpanderPlugin(),
+        ];
+    }
+}
+```
+
+</details>
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the Merchant State Machine is executed on merchant orders after the order has been split.
@@ -1005,5 +1071,4 @@ Integrate the following related features:
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE |INTEGRATION GUIDE |
 | --- | --- | --- |
 | Marketplace Order Management + Order Threshold |  |[Marketplace Order Management + Order Threshold feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-order-threshold-feature-integration.html) |
-| Marketplace Order Management + Shipment |  |  [Marketplace Order Management + Shipment feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-shipment-feature-integration.html)  |
 | Marketplace Inventory Management + Order Management |  |  [Marketplace Inventory Management + Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-order-management-feature-integration.html)  |

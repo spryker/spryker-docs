@@ -72,7 +72,7 @@ With Split Delivery, Product Bundles items can be shipped to different delivery 
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create a shipment](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-order-shipments.html#creating-a-new-shipment-for-order) |
+| [Create a shipment](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-order-shipments.html#creating-a-new-shipment-for-an-order) |
 | [Edit a shipment](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-order-shipments.html#editing-shipment-details) |
 
 {% info_block warningBox "Developer guides" %}

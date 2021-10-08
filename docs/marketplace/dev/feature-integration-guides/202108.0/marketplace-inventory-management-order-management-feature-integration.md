@@ -5,7 +5,7 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the Marketplace Inventory Management +  Order Management feature into a Spryker project.
+This document describes how to integrate the Marketplace Inventory Management + Order Management feature into a Spryker project.
 
 ## Install feature core
 

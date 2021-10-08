@@ -493,7 +493,6 @@ offer416,112_306918001,MER000002,,1,approved
 offer417,112_312526191,MER000005,,1,approved
 offer418,112_312526172,MER000002,,1,approved
 ```
-
 </details>
 
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
@@ -893,8 +892,8 @@ offer415,AT
 offer416,AT
 offer417,AT
 offer418,AT
-
 ```
+</details>
 
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | ---------------- | ------------ | ------- | ------------- | ------- |
@@ -928,8 +927,6 @@ offer93,2030-01-01 00:00:00.000000,
 offer94,2020-07-01 00:00:00.000000,2025-12-01 00:00:00.000000
 offer95,2020-07-01 00:00:00.000000,2025-12-01 00:00:00.000000
 ```
-
-</details>
 
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | ------------ | ----------- | ------ | ----------- | ---------------- |

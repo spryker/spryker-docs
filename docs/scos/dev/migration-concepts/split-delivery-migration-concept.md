@@ -48,20 +48,20 @@ console transfer:generate
 
 4. Follow individual migration guides of the modules listed below:
 
-* [Shipment](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-shipment.html#upgrading-from-version-6---to-version-7-0-0)
-* [CustomerPage](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-customerpage.html#upgrading-from-version-1---to-version-2-0-0)
+* [Shipment](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-shipment.html#upgrading-from-version-6-to-version-700)
+* [CustomerPage](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-customerpage.html#upgrading-from-version-1-to-version-200)
 
 The following table lists the modules affected by the Split Delivery update:
 
 | Module | Version | Migration guide |
 | --- | --- | --- |
-| `spryker/sales` | 11.0.0 | [Migration Guide - Sales](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-sales.html#upgrading-from-version-10---to-version-11-0-0) |
-| `spryker/shipment` | 7.0.0 | [Migration Guide - Shipment](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-shipment.html#upgrading-from-version-6---to-version-7-0-0) |
-| `spryker-shop/checkout-page` | 3.0.0 | [Migration Guide - CheckoutPage](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-checkoutpage.html#upgrading-from-version-2---to-version-3--) |
-| `spryker-shop/customer-page` | 2.0.0 | [Migration Guide - CustomerPage](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-customerpage.html#upgrading-from-version-1---to-version-2-0-0) |
-| `spryker/checkout-rest-api` | 2.0.0 | [Migration Guide - CheckoutRestApi](/docs/scos/dev/module-migration-guides/{{site.version}}/glue-api/migration-guide-checkoutrestapi.html#upgrading-from-version-1---to-version-2-0-0) |
-| `spryker/manual-order-entry-gui` | 0.8.0 | [Migration Guide - ManualOrderEntryGui](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-manualorderentrygui.html#upgrading-from-version-0-7---to-version-0-8-0) |
-| `spryker/shipment-cart-connector` | 2.0.0 | [Migration Guide - ShipmentCartConnector](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-shipmentcartconnector.html#upgrading-from-version-1-0---to-version-2-0-0) |
-| `spryker/shipment-сheckout-сonnector` | 2.0.0 | [Migration Guide - ShipmentCheckoutConnector](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-shipmentcheckoutconnector.html#upgrading-from-version-1-0---to-version-2-0-0) |
-| `spryker/shipment-discount-connector` | 4.0.0 | [Migration Guide - ShipmentDiscountConnector](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-shipmentdiscountconnector.html#upgrading-from-version-3-0---version-to-4-0-0) |
-| `spryker/orders-rest-api` | 4.0.0 | [Migration Guide - OrdersRestApi](/docs/scos/dev/module-migration-guides/{{site.version}}/glue-api/migration-guide-ordersrestapi.html#upgrading-from-version-3-0---to-version-4-0-0) |
+| `spryker/sales` | 11.0.0 | [Migration Guide - Sales](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-sales.html#upgrading-from-version-10-to-version-1100) |
+| `spryker/shipment` | 7.0.0 | [Migration Guide - Shipment](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-shipment.html#upgrading-from-version-6-to-version-700) |
+| `spryker-shop/checkout-page` | 3.0.0 | [Migration Guide - CheckoutPage](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-checkoutpage.html#upgrading-from-version-2-to-version-3) |
+| `spryker-shop/customer-page` | 2.0.0 | [Migration Guide - CustomerPage](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-customerpage.html#upgrading-from-version-1-to-version-200) |
+| `spryker/checkout-rest-api` | 2.0.0 | [Migration Guide - CheckoutRestApi](/docs/scos/dev/module-migration-guides/{{site.version}}/glue-api/migration-guide-checkoutrestapi.html#upgrading-from-version-1-to-version-200) |
+| `spryker/manual-order-entry-gui` | 0.8.0 | [Migration Guide - ManualOrderEntryGui](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-manualorderentrygui.html#upgrading-from-version-07-to-version-080) |
+| `spryker/shipment-cart-connector` | 2.0.0 | [Migration Guide - ShipmentCartConnector](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-shipmentcartconnector.html#upgrading-from-version-10-to-version-200) |
+| `spryker/shipment-сheckout-сonnector` | 2.0.0 | [Migration Guide - ShipmentCheckoutConnector](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-shipmentcheckoutconnector.html#upgrading-from-version-10-to-version-200) |
+| `spryker/shipment-discount-connector` | 4.0.0 | [Migration Guide - ShipmentDiscountConnector](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-shipmentdiscountconnector.html#upgrading-from-version-30-version-to-400) |
+| `spryker/orders-rest-api` | 4.0.0 | [Migration Guide - OrdersRestApi](/docs/scos/dev/module-migration-guides/{{site.version}}/glue-api/migration-guide-ordersrestapi.html#upgrading-from-version-30-to-version-400) |

@@ -30,7 +30,7 @@ To add items to a guest cart, send the request:
 {% info_block infoBox "**Creating a guest cart**" %}
 
 
-* If a guest cart does not exist for the current user, and you send a request to add items, the guest cart is created automatically. Otherwise, the items are added to the existing guest cart. 
+* If a guest cart does not exist for the current user, and you send a request to add items, the guest cart is created automatically. Otherwise, the items are added to the existing guest cart.
 * Guest users have one cart by default. You can optionally specify its ID by using the following endpoint. The information in this section is valid for both endpoints.
 
 `POST` **/guest-carts/*{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*/guest-cart-items**
@@ -122,7 +122,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 <summary>Request sample with product measurement units and sales units</summary>
 
 `POST https://glue.mysprykershop.com/guest-cart-items?include=sales-units`
-    
+
 ```json
 {
     "data": {
@@ -185,7 +185,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 <summary>Request sample with concrete products and product options</summary>
 
 `POST https://glue.mysprykershop.com/guest-cart-items?include=guest-cart-items,concrete-products,product-options`
-    
+
 ```json
 {
     "data": {
@@ -211,7 +211,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 | --- | --- | --- | --- |
 | sku | String | &check; | Specifies the SKU part number of the item to place on the new guest cart. To use promotions, specify the SKU of one of a product being promoted. Concrete product SKU required. |
 | quantity | Integer | &check; | Specifies the number of items to place on the guest cart. If you add a promotional item and the number of products exceeds the number of promotions, the exceeding items will be added without promotional benefits. |
-| idPromotionalItem | String |  | Promotional item ID. You need to specify the ID to apply the promotion benefits. | 
+| idPromotionalItem | String |  | Promotional item ID. You need to specify the ID to apply the promotion benefits. |
 | salesUnit | Object |  | List of attributes defining the sales unit to be used for item amount calculation. |
 | salesUnit.id | Integer |  | Unique identifier of the sales units to calculate the item amount in. |
 | salesUnit.amount | Decimal |  | Amount of the product in the defined sales units. |    
@@ -352,7 +352,7 @@ It is the responsibility of the API Client to track whether the selected items a
 ```
 
 </details>
-    
+
 
 
 <details open>
@@ -631,9 +631,9 @@ It is the responsibility of the API Client to track whether the selected items a
 }
 ```
 </details>
-    
 
-    
+
+
 <details open>
 <summary>Response sample: adding a gift cart</summary>
 
@@ -751,11 +751,11 @@ It is the responsibility of the API Client to track whether the selected items a
 }
 ```
 </details>
-    
-    
+
+
 <details open>
     <summary>Response sample with concrete products and product options</summary>
-    
+
 ```json
 {
     "data": {
@@ -1436,14 +1436,14 @@ To change item quantity, send the request:
 | --- | --- |
 | ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart in the system. To get it, [retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart). |
 | ***{% raw %}{{{% endraw %}groupKey{% raw %}}}{% endraw %}*** | Group key of the item. Usually, it is equal to the item’s SKU. To get it, [retrieve the guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart) with the guest cart items included. |
-    
+
 ### Request
 
 
 | HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
-    
+
 
 | QUERY PARAMETER | DESCRIPTION | Possible values |
 | --- | --- | --- |
@@ -1479,33 +1479,33 @@ To change item quantity, send the request:
 | --- | --- | --- | --- |
 | sku | String |  | SKU of the item to be updated. |
 | quantity | String | &check; | Quantity of the item to be set. |
-    
-    
+
+
 For more request body examples, see [Add items to a guest cart](#add-items-to-a-guest-cart)
 
 ### Response
 
 If the update is successful, the endpoint returns `RestCartsResponse` with the updated quantity. See [Add items to a guest cart](#add-items-to-a-guest-cart) for examples.
 
-## Remove an item from a guest carts
+## Remove an item from a guest cart
 
 To remove an item from a guest cart, send the request:
-    
+
 ***
 `DELETE` **/guest-carts/*{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}*/guest-cart-items/*{% raw %}{{{% endraw %}groupKey{% raw %}}}{% endraw %}***
 ***
-    
+
 | Path parameter | Description |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart in the system. To get it, [retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart). |
 | ***{% raw %}{{{% endraw %}groupKey{% raw %}}}{% endraw %}*** | Group key of the item. Usually, it is equal to the item’s SKU. To get it, [retrieve the guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart) with the guest cart items included. |
-    
+
 ### Request
 
 | HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart). |
-    
+
 Request sample: `DELETE https://glue.mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802/guest-cart-items/177_25913296`
 
 ### Response
@@ -1537,4 +1537,3 @@ If the item is deleted successfully, the endpoint returns the "204 No Content"�
 | 119 | Price mode is incorrect. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
-

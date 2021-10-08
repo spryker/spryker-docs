@@ -44,6 +44,8 @@ Make sure that the following modules have been installed:
 | MerchantSalesOrderMerchantUserGui | vendor/spryker/merchant-sales-order-merchant-user-gui |
 | MerchantSalesOrderDataExport | vendor/spryker/merchant-sales-order-data-export |
 | ProductOfferSales | vendor/spryker/product-offer-sales |
+| OmsProductOfferReservation | vendor/spryker/oms-product-offer-reservation |
+| ProductOfferReservationGui | vendor/spryker/product-offer-reservation-gui |
 
 {% endinfo_block %}
 
@@ -383,6 +385,28 @@ Make sure that, in the navigation menu of the Back Office, you can see the **Mar
 
 ### 3) Set up database schema and transfer objects
 
+Adjust the schema definition so entity changes trigger events:
+
+**src/Pyz/Zed/OmsProductOfferReservation/Persistence/Propel/Schema/spy_oms_product_offer_reservation.schema.xml**
+
+```xml
+<?xml version="1.0"?>
+<database xmlns="spryker:schema-01"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          name="zed"
+          xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
+          namespace="Orm\Zed\OmsProductOfferReservation\Persistence"
+          package="src.Orm.Zed.OmsProductOfferReservation.Persistence">
+
+    <table name="spy_oms_product_offer_reservation">
+        <behavior name="event">
+            <parameter name="spy_oms_product_offer_reservation_all" column="*"/>
+        </behavior>
+    </table>
+
+</database>
+```
+
 Apply database changes and generate entity and transfer changes:
 
 ```bash
@@ -424,6 +448,8 @@ Make sure that the following changes have been triggered in transfer objects:
 | MerchantOrderItemResponse | class | created | src/Generated/Shared/Transfer/MerchantOrderItemResponseTransfer |
 | MerchantOmsTriggerRequest | class | created | src/Generated/Shared/Transfer/MerchantOmsTriggerRequestTransfer |
 | MerchantOmsTriggerResponse | class | created | src/Generated/Shared/Transfer/MerchantOmsTriggerResponseTransfer |
+| OmsProductOfferReservationCriteria | class | created| src/Generated/Shared/Transfer/OmsProductOfferReservationCriteriaTransfer |
+| OmsProductOfferReservation | class | created| src/Generated/Shared/Transfer/OmsProductOfferReservationTransfer |
 
 {% endinfo_block %}
 
@@ -955,4 +981,4 @@ Integrate the following related features:
 | --- | --- | --- |
 | Marketplace Order Management + Order Threshold |  |[Marketplace Order Management + Order Threshold feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-order-threshold-feature-integration.html) |
 | Marketplace Order Management + Cart |  | [Marketplace Order Management + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-cart-feature-integration.html)|
-| Marketplace Inventory Management + Marketplace Order Management |  |  [Marketplace Inventory Management + Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-order-management-feature-integration.html)  |
+| Marketplace Inventory Management + Order Management |  |  [Marketplace Inventory Management + Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-order-management-feature-integration.html)  |

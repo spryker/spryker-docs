@@ -52,4 +52,4 @@ See the [architecture sniffer](https://github.com/spryker/architecture-sniffer) 
 
 ## Conventions and Guidelines
 
-If you have a running Demoshop, go to [Architecture rules](http://zed.mysprykershop.com/development/architecture/rules) in Zed backend to get an overview of all currently implemented rules.
+If you have a running Demoshop, go to [Architecture rules](`http://zed.mysprykershop.com/development/architecture/rules`) in Zed backend to get an overview of all currently implemented rules.

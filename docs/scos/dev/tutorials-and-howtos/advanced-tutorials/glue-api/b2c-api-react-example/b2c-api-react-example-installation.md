@@ -74,7 +74,7 @@ Sample local_inside_vm.env file implementation for a VM running B2C Demo Shop:
 10. Add a new **location** block as follows:
     ```
     location /react/ {
-        proxy_pass http://glue.de.b2c-demo-shop.local:3000;
+        proxy_pass `http://glue.de.b2c-demo-shop.local`:3000;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
     }
@@ -100,7 +100,7 @@ Sample local_inside_vm.env file implementation for a VM running B2C Demo Shop:
         set $application_store DE;
         include "spryker/glue.conf";
         location /react/ {
-            proxy_pass http://glue.de.b2c-demo-shop.local:3000;
+            proxy_pass `http://glue.de.b2c-demo-shop.local`:3000;
             proxy_set_header Host $host;
             proxy_set_header X-Real-IP $remote_addr;
         }
@@ -119,7 +119,7 @@ Sample local_inside_vm.env file implementation for a VM running B2C Demo Shop:
     npm run serve:vm
     ```
 
-13. Check that the example application is available at the following URL: `http://glue.de.b2c-demo-shop.local/react/`, where `glue.de.b2c-demo-shop.local` is the host name you specified in the `local_inside_vm.env` file.
+13. Check that the example application is available at the following URL: ``http://glue.de.b2c-demo-shop.local`/react/`, where `glue.de.b2c-demo-shop.local` is the host name you specified in the `local_inside_vm.env` file.
 14. To stop the app, press Ctrl+C. To start it again, run:
 `npm run serve:vm`
 

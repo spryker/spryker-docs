@@ -53,7 +53,7 @@ When writing in batches, there can be data inconsistency, which will be discover
 
 ### Using Queues
 
-Data processing has higher impacts on IO resources. To scale this process and take advantage of parallel processing, the use of Queues would be an ideal option to prioritize and buffer the data for asynchronous processing. Queues will allow multiple processes to consume the data messages and process them in different machines or clouds. Spryker has the [Queue DataImporter readers](/docs/scos/dev/data-import/{{site.version}}importing-data-with-the-queue-data-importer.html), so projects can integrate and use this feature for data processing.
+Data processing has higher impacts on IO resources. To scale this process and take advantage of parallel processing, the use of Queues would be an ideal option to prioritize and buffer the data for asynchronous processing. Queues will allow multiple processes to consume the data messages and process them in different machines or clouds. Spryker has the [Queue DataImporter readers](/docs/scos/dev/data-import/{{site.version}}/importing-data-with-the-queue-data-importer.html), so projects can integrate and use this feature for data processing.
 
 {% info_block infoBox "Note" %}
 

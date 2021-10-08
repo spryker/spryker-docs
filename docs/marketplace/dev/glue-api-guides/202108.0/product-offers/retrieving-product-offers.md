@@ -36,7 +36,6 @@ To retrieve the product offers, send the request:
 | -------------------- | ----------------- | ---------------- |
 | include          | Adds resource relationships to the request. | <ul><li>product-offer-availabilities</li><li>product-offer-prices</li><li>merchants</li> |
 
-
 | REQUEST | USAGE     |
 | ---------- | ----------- |
 | `GET https://glue.mysprykershop.com/product-offers/offer56`| Retrieve information about the with the `offer56` ID.   |

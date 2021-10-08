@@ -23,7 +23,7 @@ In this section you will find information about our Technology Partner Integrati
 ## Content Management
 
 * [Censhare](/docs/scos/dev/technology-partners/{{page.version}}/content-management/censhare.html)
-* [Coremedia](/docs/scos/dev/technology-partners/{{page.version}}/content-management/coremedia/coremedia.html)
+* [Coremedia](/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia.html)
 * [E-Spirit](/docs/scos/dev/technology-partners/{{page.version}}/content-management/e-spirit.html)
 * [Magnolia](/docs/scos/dev/technology-partners/{{page.version}}/content-management/magnolia.html)
 * [Styla](/docs/scos/dev/technology-partners/{{page.version}}/content-management/styla.html)

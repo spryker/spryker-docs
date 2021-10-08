@@ -24,7 +24,7 @@ This page lists all the updates to the documentation made for each release.
 Check out our [release notes](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html) to learn more about the releases.
 
 ## Release 202001.0
-Below you will find the list of the new/updated documentation released as part of the [202001.0 Spryker product release](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html):
+Below you will find the list of the new/updated documentation released as part of the [202001.0 Spryker product release](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202001.0/release-notes-202001.0.html):
 
 ### Features:
 
@@ -118,7 +118,7 @@ Below you will find the list of the new/updated documentation released as part o
 <summary>Migration guides</summary>
 
 * [PriceProductSchedule migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-priceproductschedule.html)
-* [PriceProductScheduleGui migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-priceproductschedule.html-gui)
+* [PriceProductScheduleGui migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-priceproductschedulegui.html)
 
 </details>
 <details open>

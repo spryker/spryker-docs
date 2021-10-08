@@ -22,7 +22,7 @@ redirect_from:
   - /v6/docs/en/security-updates 
 ---
 
-To receive a security updates email, please request the subscription at [support@spryker.com](support@spryker.com).
+To receive a security updates email, please request the subscription at [support@spryker.com](mailto:support@spryker.com).
      
 Check out our Security Release notes in the [Release Notes](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html) article for each respective release.
 

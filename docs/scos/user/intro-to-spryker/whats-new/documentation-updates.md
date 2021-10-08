@@ -57,7 +57,7 @@ Below you will find the list of the new/updated documentation released as part o
 <summary>Back Office user guides</summary>
 
 
-* [Creating a New Shipment for Order](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/managing-order-shipments.html#creating-a-new-shipment-for-order)
+* [Creating a New Shipment for Order](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/managing-order-shipments.html#creating-a-new-shipment-for-an-order)
 * [Editing Shipment Details](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/managing-order-shipments.html#editing-shipment-details)
 
 </details>
@@ -65,7 +65,7 @@ Below you will find the list of the new/updated documentation released as part o
 <summary>Shop user guide</summary>
 
 
-[Assigning Multiple Delivery Addresses to Order](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/managing-order-shipments.html#creating-a-new-shipment-for-order)
+[Assigning Multiple Delivery Addresses to Order](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/managing-order-shipments.html#creating-a-new-shipment-for-an-order)
 
 
 </details>

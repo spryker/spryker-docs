@@ -68,11 +68,11 @@ Add the following configuration:
 {code sample with the updated configuration}
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
+
 <!--Describe how a developer can check they have completed the step correctly.-->
 
----
+{% endinfo_block %}
 
 
 ### Set up database schema and transfer objects

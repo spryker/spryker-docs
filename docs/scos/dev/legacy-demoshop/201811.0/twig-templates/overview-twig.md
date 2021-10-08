@@ -72,7 +72,7 @@ You can use other technology for the front-end of your application as well; this
 </html>
 ```
 
-For more information, see [Best Practices - Twig Templates](/docs/scos/dev/front-end-development/legacy-demoshop/{{page.version}}/twig-templates/best-practices-twig-templates.html).
+For more information, see [Best Practices - Twig Templates](/docs/scos/dev/legacy-demoshop/{{page.version}}/twig-templates/best-practices-twig-templates.html).
 
 ## Markup Tags
 

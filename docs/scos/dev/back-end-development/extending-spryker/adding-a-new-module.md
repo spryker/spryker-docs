@@ -86,7 +86,7 @@ class HelloWorldDependencyProvider extends AbstractBundleDependencyProvider
 
 Additionally, you can use the code generator to create a module. For this, run `console spryk:run AddModule` that will create the basic module structure.
 
-<!-- for demoshop --> Requesting the URL http://zed.de.demoshop.local/hello-world will show the Hello World example. 
+<!-- for demoshop --> Requesting the URL `http://zed.de.demoshop.local/hello-world` will show the Hello World example. 
 
 ## Displaying a random salutation message
 

@@ -140,6 +140,6 @@ class SalesMerchantPortalGuiDependencyProvider extends SprykerSalesMerchantPorta
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the `ProductOfferMerchantOrderItemTableExpanderPlugin` plugin is set up by opening `http://zed.mysprykershop.com/sales-merchant-portal-gui/orders`. Click on any order and check that the *Cart Note* column  is present.
+Make sure that the `CartNoteMerchantOrderItemTableExpanderPlugin` plugin is set up by opening `http://zed.mysprykershop.com/sales-merchant-portal-gui/orders`. Click on any order and check that the *Cart Note* column  is present.
 
 {% endinfo_block %}

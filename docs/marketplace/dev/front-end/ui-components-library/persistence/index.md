@@ -5,7 +5,6 @@ description: This document provides details about the Persistence service in the
 template: concept-topic-template
 ---
 
-
 This document explains the Persistence service in the Components Library.
 
 ## Overview
@@ -26,7 +25,8 @@ Persistence is used in other components like Cache, Table State Sync Feature etc
       storage: PersistenceStrategyType,
     },
   }"
-></spy-select>
+>
+</spy-select>
 ```
 
 ## Main service
@@ -35,9 +35,9 @@ Persistence Strategy is an Angular Service that implements a specific interface 
 
 The main service injects all registered types from the `PersistenceStrategyTypesToken`.
 
-Select method finds a specific service from the `PersistenceStrategyTypesToken` by type(from the argument) and returns a specific strategy instance (`PersistenceStrategy`).
+`select()` method finds a specific service from the `PersistenceStrategyTypesToken` by type(from the argument) and returns a specific strategy instance (`PersistenceStrategy`).
 
-`GetAll` method returns an array of instances (`PersistenceStrategy[]`) of all registered strategies from `PersistenceStrategyTypesToken`.
+`getAll()` method returns an array of instances (`PersistenceStrategy[]`) of all registered strategies from `PersistenceStrategyTypesToken`.
 
 ## Persistence strategy
 
@@ -46,7 +46,7 @@ Persistence Strategy encapsulates the algorithm of how the data is persisted.
 Persistence Strategy must implement a specific interface (`PersistenceStrategy`) and then be registered to the Root Module via `PersistenceModule.withStrategies()`.
 
 ```ts
-///// Module augmentation
+// Module augmentation
 import { PersistenceStrategy } from '@spryker/persistence';
 
 declare module '@spryker/persistence' {
@@ -55,7 +55,7 @@ declare module '@spryker/persistence' {
   }
 }
 
-//// Services implementation
+// Services implementation
 @Injectable({
   providedIn: 'root',
 })
@@ -78,12 +78,12 @@ export class CustomPersistenceService implements PersistenceStrategy {
     }),
   ],
 })
-export class RootModule
+export class RootModule {}
 ```
 
 ## Interfaces
 
-Below you can find interfaces for the Persistence service configuration.
+Below you can find interfaces for the Persistence service:
 
 ```ts
 interface PersistenceStrategyService {
@@ -102,7 +102,7 @@ interface PersistenceStrategy {
 
 There are a few common Persistence Strategies that are available in the UI library:
 
-- [In Memory Persistence Strategy](/docs/marketplace/dev/front-end/ui-components-library/persistence/in-memory-persistence-strategy.html) — 
+- [In-memory](/docs/marketplace/dev/front-end/ui-components-library/persistence/in-memory-persistence-strategy.html) - 
  stores data in memory and will be lost when the browser page is reloaded.
-- [Local Storage Persistence Strategy](/docs/marketplace/dev/front-end/ui-components-library/persistence/local-storage-persistence-strategy.html) — uses browser Local Storage to store the data.
-- [Url Persistence Strategy](/docs/marketplace/dev/front-end/ui-components-library/persistence/url-persistence-strategy.html) — uses browser URL to store the data.
+- [Local-storage](/docs/marketplace/dev/front-end/ui-components-library/persistence/local-storage-persistence-strategy.html) - uses browser Local Storage to store the data.
+- [Url](/docs/marketplace/dev/front-end/ui-components-library/persistence/url-persistence-strategy.html) - uses browser URL to store the data.

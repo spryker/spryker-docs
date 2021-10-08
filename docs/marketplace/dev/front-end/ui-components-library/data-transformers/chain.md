@@ -4,8 +4,7 @@ description: This document provides details about the Data Transformer Chain ser
 template: concept-topic-template
 ---
 
-
-This document provides details about the Data Transformer Chain service in the Components Library.
+This document explains the Data Transformer Chain service in the Components Library.
 
 ## Overview
 
@@ -13,6 +12,9 @@ Data Transformer Chain is an Angular Service that executes other Data Transforme
 
 In the example below, the `datasource` returns an array with the transformed `date` in every child object using chained transformers.
 
+Service configuration:
+
+`transformers` - an array with Data Transformer configuration objects.
 
 ```html
 <spy-select
@@ -55,21 +57,15 @@ In the example below, the `datasource` returns an array with the transformed `da
       ],      
     },                  
   }"
-></spy-select>
+>
+</spy-select>
 ```
 
-## Interfaces
+## Service registration
 
-Below you can find interfaces for Data Transformer Chain.
-
-`transformers`—an array with Data Transformer configuration objects.
+Register the service:
 
 ```ts
-export interface ChainDataTransformerConfig extends DataTransformerConfig {
-  transformers: DataTransformerConfig[];
-}
-
-// Service registration
 @NgModule({
   imports: [
     DataTransformerModule.withTransformers({
@@ -78,4 +74,20 @@ export interface ChainDataTransformerConfig extends DataTransformerConfig {
   ],
 })
 export class RootModule {}
+```
+
+## Interfaces
+
+Below you can find interfaces for the Data Transformer Chain:
+
+```ts
+declare module '@spryker/data-transformer' {
+  interface DataTransformerRegistry {
+    chain: ChainDataTransformerConfig;
+  }
+}
+
+export interface ChainDataTransformerConfig extends DataTransformerConfig {
+  transformers: DataTransformerConfig[];
+}
 ```

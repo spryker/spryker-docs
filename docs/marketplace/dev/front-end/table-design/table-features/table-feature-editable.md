@@ -1,15 +1,18 @@
 ---
 title: Table Feature Editable
-description: This article provides details about the Table Feature Editable component in the Components Library.
+description: This document provides details about the Table Feature Editable component in the Components Library.
 template: concept-topic-template
 ---
 
-This article provides details about the Table Feature Editable component in the Components Library.
+This document explains the Table Feature Editable component in the Components Library.
 
 ## Overview
 
 Table Feature Editable is a feature of the Table Component that allows editing/adding rows to the table.
-You can see below the base configuration for the Editable feature, which includes the following options:
+
+Check out an example usage of the Table Feature Editable in the `@spryker/table` config.
+
+Component configuration:
 
 - `columns` - an array with the config for every editable column.  
 - `create` - an object with the config for the added rows.  
@@ -17,22 +20,24 @@ You can see below the base configuration for the Editable feature, which include
 - `disableRowKey` - disables the row that contains the mentioned column `id` (see the example below).   
 
 ```html
-<spy-table [config]="{
-  dataSource: { ... },
-  columns: [ ... ],
-  editable: {
+<spy-table 
+  [config]="{
+    dataSource: { ... },
     columns: [ ... ],
-    create: { ... },
-    update: { ... },
-    disableRowKey: 'col',
-  },                                                                                           
-}">
+    editable: {
+      columns: [ ... ],
+      create: { ... },
+      update: { ... },
+      disableRowKey: 'col',
+    },                                                                                           
+  }"
+>
 </spy-table>
 ```
 
 Take a closer look at all the options available.
 
-- `columns` (only required properties are listed, the entire interface can be found in [Table Design](https://docs.spryker.com/docs/marketplace/dev/front-end/table-design/#interfaces) article.):  
+- `columns` (only required properties are listed, the entire interface can be found in [Table Design](/docs/marketplace/dev/front-end/table-design/#interfaces) article.):  
   - `id` - a cell `id`.  
   - `type` - a cell `type`.  
   - `typeOptions`. Check [Column Type](/docs/marketplace/dev/front-end/table-design/table-column-types/)) to learn more about the column types available.):  
@@ -52,61 +57,63 @@ Take a closer look at all the options available.
   - `disableForCols` - an array with the cell `ids` to be disabled.  
 
 ```html
-<spy-table [config]="{
-  dataSource: { ... },
-  columns: [ ... ],
-  editable: {
-    columns: [
-      { id: 'col1', type: 'edit' },
-      { id: 'col2', type: 'edit', typeOptions: { value: 'default' } },
-    ],
-    create: {
-      addButton: {
-        title: 'Add price',
-        icon: 'icon',
-      },
-      cancelButton: {
-        title: 'Cancel',
-        icon: 'icon',
-      },
-      disableForCols: ['col2'],
-      formInputName: 'form-input-name',
-      initialData: {
-        data: [
-          { col1: 'value', col2: 'value' },
-          { col1: 'value' },
-        ],
-        errors: {
-          0: {
-            rowError: 'message',
-            columnErrors: {
-              col3: 'errorMessage errorMessage errorMessage',
+<spy-table 
+  [config]="{
+    dataSource: { ... },
+    columns: [ ... ],
+    editable: {
+      columns: [
+        { id: 'col1', type: 'edit' },
+        { id: 'col2', type: 'edit', typeOptions: { value: 'default' } },
+      ],
+      create: {
+        addButton: {
+          title: 'Add price',
+          icon: 'icon',
+        },
+        cancelButton: {
+          title: 'Cancel',
+          icon: 'icon',
+        },
+        disableForCols: ['col2'],
+        formInputName: 'form-input-name',
+        initialData: {
+          data: [
+            { col1: 'value', col2: 'value' },
+            { col1: 'value' },
+          ],
+          errors: {
+            0: {
+              rowError: 'message',
+              columnErrors: {
+                col3: 'errorMessage errorMessage errorMessage',
+              },
             },
           },
         },
       },
-    },
-    update: {
-      url: '/table-update-cell',
-      saveButton: {
-        title: 'Save',
-        icon: 'icon',
+      update: {
+        url: '/table-update-cell',
+        saveButton: {
+          title: 'Save',
+          icon: 'icon',
+        },
+        cancelButton: {
+          title: 'Cancel',
+          icon: 'icon',
+        },
+        disableForCols: ['col2'],
       },
-      cancelButton: {
-        title: 'Cancel',
-        icon: 'icon',
-      },
-      disableForCols: ['col2'],
-    },
-    disableRowKey: 'col1',
-  },                                                                                           
-}">
+      disableRowKey: 'col1',
+    },                                                                                           
+  }"
+>
 </spy-table>
 ```
 
-## Feature registration
+## Component registration
 
-Register the feature:
+Register the component:
 
 ```ts
 // Dynamic
@@ -141,7 +148,7 @@ export class RootModule {}
 
 ## Interfaces
 
-Below you can find interfaces for the Table Feature Editable.
+Below you can find interfaces for the Table Feature Editable:
 
 ```ts
 declare module '@spryker/table' {

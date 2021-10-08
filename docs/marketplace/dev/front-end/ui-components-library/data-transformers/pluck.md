@@ -4,13 +4,17 @@ description: This document provides details about the Data Transformer Pluck ser
 template: concept-topic-template
 ---
 
-
-This document provides details about the Data Transformer Pluck service in the Components Library.
+This document explains the Data Transformer Pluck service in the Components Library.
 
 ## Overview
 
 Data Transformer Pluck is an Angular Service that selects and returns a nested object by path via configuration.
+
 The `datasource` example below will return the value of the `three` key ('123') of the `data` input after receiving the response.
+
+Service configuration:
+
+`path` - the name of the property from which the value needs to be retrieved. The `path` may contain nested properties separated by dots, just like in a Javascript language.
 
 ```html
 <spy-select
@@ -28,21 +32,15 @@ The `datasource` example below will return the value of the `three` key ('123') 
       path: 'one.two.three',
     },
   }"
-></spy-select>
+>
+</spy-select>
 ```
 
-## Interfaces
+## Service registration
 
-Below you can find interfaces for Data Transformer Pluck.
-
-`path`—the name of the property from which the value needs to be retrieved. The `path` may contain nested properties separated by dots, just like in a Javascript language.
+Register the service:
 
 ```ts
-export interface PluckDataTransformerConfig extends DataTransformerConfig {
-  path: string;
-}
-
-// Service registration
 @NgModule({
   imports: [
     DataTransformerModule.withTransformers({
@@ -51,4 +49,20 @@ export interface PluckDataTransformerConfig extends DataTransformerConfig {
   ],
 })
 export class RootModule {}
+```
+
+## Interfaces
+
+Below you can find interfaces for the Data Transformer Pluck:
+
+```ts
+declare module '@spryker/data-transformer' {
+  interface DataTransformerRegistry {
+    pluck: PluckDataTransformerService;
+  }
+}
+
+export interface PluckDataTransformerConfig extends DataTransformerConfig {
+  path: string;
+}
 ```

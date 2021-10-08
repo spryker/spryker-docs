@@ -4,13 +4,13 @@ description: This document provides details about the Data Transformer Collate F
 template: concept-topic-template
 ---
 
-This document provides details about the Data Transformer Collate Filter Text service in the Components Library.
+This document explains the Data Transformer Collate Filter Text service in the Components Library.
 
 ## Overview
 
 Data Transformer Collate Filter Text is an Angular Service that implements filtering to the text value of data based on configuration.
 
-The following is an example of how to use the Data Transformer Collate Filter Text in the `@spryker/table` configuration:
+Check out an example usage of the Data Transformer Collate Filter Text in the `@spryker/table` config:
 
 ```html
 <spy-table
@@ -26,16 +26,41 @@ The following is an example of how to use the Data Transformer Collate Filter Te
       },
     },
   }"
-></spy-table>
+>
+</spy-table>
+```
+
+## Service registration
+
+Register the service:
+
+```ts
+@NgModule({
+  imports: [
+    DataTransformerModule.withTransformers({
+      collate: CollateDataTransformerService,
+    }),
+    CollateDataTransformer.withFilters({
+      text: TextDataTransformerFilterService,
+    }),
+  ],
+})
+export class RootModule {}
 ```
 
 ## Interfaces
 
-Below you can find interfaces for the Data Transformer Collate Filter Text type:
+Below you can find interfaces for the Data Transformer Collate Filter Text:
 
 ```ts
+declare module '@spryker/data-transformer.collate' {
+  interface DataTransformerFilterRegistry {
+    text: TextDataTransformerFilterService;
+  }
+}
+
 interface DataTransformerFilterConfig {
-    type: string;
-    propNames: string | string[];
+  type: string;
+  propNames: string | string[];
 }
 ```

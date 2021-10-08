@@ -1,38 +1,42 @@
 ---
 title: Table Feature Total
-description: This article provides details about the Table Feature Total component in the Components Library.
+description: This document provides details about the Table Feature Total component in the Components Library.
 template: concept-topic-template
 ---
 
-This article provides details about the Table Feature Total component in the Components Library.
+This document explains the Table Feature Total component in the Components Library.
 
 ## Overview
 
 Table Feature Total is a feature of the Table Component that renders the total number of the data 
 set via Chips component.
 In case table rows are selectable, Table Feature Total also renders a number of selected rows.
-Check out this example below to see how to use the Total feature.
 
-Feature configuration:
+Check out an example usage of the Table Feature Total in the `@spryker/table` config.
+
+Component configuration:
 
 `enabled` - enables the feature via config.
 
 ```html
-<spy-table [config]="{
-  dataSource: { ... },
-  columns: [ ... ],
-  total: {
-    enabled: true,
-  },                                                                                           
-}">
+<spy-table 
+  [config]="{
+    dataSource: { ... },
+    columns: [ ... ],
+    total: {
+      enabled: true,
+    },                                                                                           
+  }"
+>
 </spy-table>
 ```
 
-## Feature registration
+## Component registration
 
-Register the feature:
+Register the component:
 
 ```ts
+// Dynamic
 @NgModule({
   imports: [
     TableModule.forRoot(),
@@ -47,10 +51,31 @@ Register the feature:
 export class RootModule {}
 ```
 
+```html
+// Via HTML
+@NgModule({
+  imports: [
+    TableModule.forRoot(),
+    TableTotalFeatureModule,
+  ],
+})
+export class RootModule {}
+
+<spy-table [config]="config">
+  <spy-table-total-feature spy-table-feature></spy-table-total-feature>
+</spy-table>
+```
+
 ## Interfaces
 
-Below you can find interfaces for the Table Feature Total.
+Below you can find interfaces for the Table Feature Total:
 
 ```ts
+declare module '@spryker/table' {
+  interface TableConfig {
+    total?: TableTotalConfig;
+  }
+}
+
 export interface TableTotalConfig extends TableFeatureConfig {}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Table Column Type Extension
+title: Table Column Type extension
 description: This document provides details about the Table Column Type extension in the Components Library.
 template: concept-topic-template
 ---
@@ -10,10 +10,11 @@ This document explains the Table Column Type extension in the Components library
 
 Column Type is an Angular Component that describes how a specific type of the column is rendered within a table column.
 
-You can configure columns in the table config:
+Check out this example below to see how to configure columns in the table config:
 
 ```html
-<spy-table [config]="{
+<spy-table 
+  [config]="{
     ...,
     columns: [
       ...
@@ -56,7 +57,7 @@ As an Angular Component, Table Column must implement specific interface (`TableC
 It is also necessary to create your own column module and add it to the RootModule.
 
 ```ts
-///// Module augmentation
+// Module augmentation
 import {
   ColumnTypeOption,
   TableColumnTypeComponent,
@@ -70,7 +71,7 @@ declare module '@spryker/table' {
   }
 }
 
-/// Component Implementation
+// Component implementation
 @Injectable({ providedIn: 'root' })
 export class CustomTableColumnConfig {
   @ColumnTypeOption({
@@ -80,8 +81,17 @@ export class CustomTableColumnConfig {
   customOption? = 'customOption';
 }
 
+// Module
+@NgModule({
+    ...,
+    declarations: [CustomTableColumnComponent],
+    exports: [CustomTableColumnComponent],
+})
+export class CustomTableColumnModule {}
+
+// Component
 @Component({
-  ....
+  ...
 })
 @TableColumnTypeComponent(TableColumnTextConfig)
 export class CustomTableColumnComponent
@@ -90,29 +100,21 @@ export class CustomTableColumnComponent
   @Input() context?: TableColumnContext;
 }
 
-@NgModule({
-  ...,
-  declarations: [CustomTableColumnComponent],
-  exports: [CustomTableColumnComponent],
-})
-export class CustomTableColumnModule {}
-
-/// Table Integration
+// Root module
 @NgModule({
   imports: [
-    CustomTableColumnModule,
-
     TableModule.withColumnComponents({
       custom: CustomTableColumnComponent,
     }),
+    CustomTableColumnModule,
   ],
 })
-export class RootModule
+export class RootModule {}
 ```
 
 ## Interfaces
 
-Below you can find interfaces for the `TableColumnComponent` configuration.
+Below you can find interfaces for the Table Column Type extension configuration.
 
 ```ts
 export interface TableColumnComponent<C = any> {
@@ -142,17 +144,16 @@ export enum ColumnTypeOptionsType {
 }
 ```
 
-
 ## Table Column types
 
 UI library comes with a number of standard column types that can be used on any project:
 
-- [list](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-list.html)—renders a list of column types.
-- [autocomplete](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-autocomplete.html)—renders `@spryker/input` and `@spryker/autocomplete` components.
-- [chip](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-chip.html)—renders `@spryker/chip` component.
-- [date](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-date.html)—renders a formatted date by `config`.
-- [dynamic](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-dynamic.html)—is a higher-order column that gets `ColumnConfig` from the configured `Datasource` and renders a column with the retrieved `ColumnConfig`.
-- [image](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-image.html)—renders an image.
-- [input](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-input.html)—renders `@spryker/input`component.
-- [select](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-select.html)—renders `@spryker/select`component.
-- [text](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-text.html)—renders a static text.
+- [List](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-list.html) - renders a list of column types.
+- [Autocomplete](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-autocomplete.html) - renders `@spryker/input` and `@spryker/autocomplete` components.
+- [Chip](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-chip.html) - renders `@spryker/chip` component.
+- [Date](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-date.html) - renders a formatted date by `config`.
+- [Dynamic](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-dynamic.html) - is a higher-order column that gets `ColumnConfig` from the configured `Datasource` and renders a column with the retrieved `ColumnConfig`.
+- [Image](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-image.html) - renders an image.
+- [Input](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-input.html) - renders `@spryker/input` component.
+- [Select](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-select.html) - renders `@spryker/select` component.
+- [Text](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-text.html) - renders a static text.

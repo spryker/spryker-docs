@@ -4,12 +4,12 @@ description: This document provides details about the Data Transformer Date-pars
 template: concept-topic-template
 ---
 
-
-This document provides details about the Data Transformer Date-parse service in the Components Library.
+This document explains the Data Transformer Date-parse service in the Components Library.
 
 ## Overview
 
 Data Transformer Date-parse is an Angular Service that parses the string value as a Date ISO into the JS Date Object.
+
 In the example below, the `datasource` transforms the `date` string into the parsed `date` object.
 
 ```html
@@ -21,17 +21,15 @@ In the example below, the `datasource` transforms the `date` string into the par
       type: 'date-parse'
     },
   }"
-></spy-select>
+>
+</spy-select>
 ```
 
-## Interfaces
+## Service registration
 
-Below you can find interfaces for Data Transformer Date-parse.
+Register the service:
 
 ```ts
-export interface DateParseDataTransformerConfig extends DataTransformerConfig {}
-
-// Service registration
 @NgModule({
   imports: [
     DataTransformerModule.withTransformers({
@@ -40,4 +38,18 @@ export interface DateParseDataTransformerConfig extends DataTransformerConfig {}
   ],
 })
 export class RootModule {}
+```
+
+## Interfaces
+
+Below you can find interfaces for the Data Transformer Date-parse:
+
+```ts
+declare module '@spryker/data-transformer' {
+  interface DataTransformerRegistry {
+    'date-parse': DateParseDataTransformerConfig;
+  }
+}
+
+export interface DateParseDataTransformerConfig extends DataTransformerConfig {}
 ```

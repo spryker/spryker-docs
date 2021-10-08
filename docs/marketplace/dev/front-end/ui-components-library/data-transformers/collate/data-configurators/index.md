@@ -4,7 +4,7 @@ description: This document provides details about the Data Transformer Data Conf
 template: concept-topic-template
 ---
 
-This document provides details about the Data Transformer Data Configurators service in the Components Library.
+This document explains the Data Transformer Data Configurators service in the Components Library.
 
 ## Overview
 
@@ -26,16 +26,17 @@ Data Transformer Data Configurators are used in the Datasource service.
       },
     },
   }"
-></spy-table>
+>
+</spy-table>
 ```
 
 ## Main service
 
-The main module provides a way to register a configurator by key using the static method `withConfigurators`. Under the hood, it assigns the object of configurators to the `DataTransformerConfiguratorTypesToken`.
+The main module provides a way to register a configurator by key using the static method `withConfigurators()`. Under the hood, it assigns the object of configurators to the `DataTransformerConfiguratorTypesToken`.
 
 The main service injects all registered types from the `DataTransformerConfiguratorTypesToken` and `DataTransformerConfigurator`.
 
-Resolve method finds a specific service from the `DataTransformerConfiguratorTypesToken` by `type` (from the argument) and returns an observable with data by calling `DataTransformerConfigurator.resolve`.
+`resolve()` method finds a specific service from the `DataTransformerConfiguratorTypesToken` by `type` (from the argument) and returns an observable with data by calling `DataTransformerConfigurator.resolve()`.
 
 ## Data Transformer Data Configurator
 
@@ -44,32 +45,32 @@ Data Transformer Data Configurator is an Angular Service that encapsulates how t
 Data Transformer Data Configurator must implement a specific interface (DataTransformerConfigurator) and then be registered to the Root Module using `CollateDataTransformerModule.withConfigurators()`.
 
 ```ts
-///// Module augmentation
+// Module augmentation
 declare module '@spryker/data-transformer.collate' {
-    interface DataTransformerConfiguratorRegistry {
-        custom: CustomDataTransformerConfiguratorService;
-    }
+  interface DataTransformerConfiguratorRegistry {
+    custom: CustomDataTransformerConfiguratorService;
+  }
 }
 
-//// Services implementation
+// Services implementation
 import { DataTransformerConfiguratorConfigT } from '@spryker/data-transformer.collate';
 
 @Injectable({ providedIn: 'root' })
 export class CustomDataTransformerConfiguratorService implements DataTransformerConfigurator {
-    resolve(
-        config: DataTransformerConfiguratorConfig,
-        injector: Injector,
-    ): Observable<DataTransformerConfiguratorConfigT> {
-        ... 
-    }
+  resolve(
+    config: DataTransformerConfiguratorConfig,
+    injector: Injector,
+  ): Observable<DataTransformerConfiguratorConfigT> {
+    ... 
+  }
 }
 
 @NgModule({
-    imports: [
-        CollateDataTransformerModule.withConfigurators({
-            custom: CustomDataTransformerConfiguratorService,
-        }),
-    ],
+  imports: [
+    CollateDataTransformerModule.withConfigurators({
+      custom: CustomDataTransformerConfiguratorService,
+    }),
+  ],
 })
 export class RootModule {}
 ```
@@ -80,18 +81,18 @@ Below you can find interfaces for the `DataTransformerConfigurator` configuratio
 
 ```ts
 interface DataTransformerConfiguratorConfigT {
-    filter?: unknown;
-    search?: unknown;
-    sorting?: {
-        sortBy?: string;
-        sortDirection?: string;
-    };
-    page?: number;
-    pageSize?: number;
+  filter?: unknown;
+  search?: unknown;
+  sorting?: {
+    sortBy?: string;
+    sortDirection?: string;
+  };
+  page?: number;
+  pageSize?: number;
 }
 
 interface DataTransformerConfigurator {
-    resolve(injector: Injector): Observable<DataTransformerConfiguratorConfigT>;
+  resolve(injector: Injector): Observable<DataTransformerConfiguratorConfigT>;
 }
 ```
 
@@ -99,4 +100,4 @@ interface DataTransformerConfigurator {
 
 There are a few common Data Transformer Data Configurators that are available in UI library as separate packages:
 
-- [`table`](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/data-configurators/table.html) - integrates Table into Collate to re-populate data when the table updates.
+- [Table](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/data-configurators/table.html) - integrates Table into Collate to re-populate data when the table updates.

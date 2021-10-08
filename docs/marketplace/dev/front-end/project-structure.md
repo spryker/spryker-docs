@@ -1,10 +1,10 @@
 ---
 title: Project structure
-description: This articles provides details about the structure of the front-end project in the Spryker Marketplace.
+description: This document provides details about the structure of the front-end project in the Spryker Marketplace.
 template: concept-topic-template
 ---
 
-This articles explains the structure of the front-end project in the Spryker Marketplace.
+This document explains the structure of the front-end project in the Spryker Marketplace.
 
 ## Alias
 

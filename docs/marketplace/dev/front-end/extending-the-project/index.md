@@ -1,6 +1,6 @@
 ---
 title: Extending the project
-description: This articles provides details how to create new module with application
+description: This document provides details how to create new module with application.
 template: howto-guide-template
 ---
 
@@ -32,23 +32,23 @@ To extend/customize or override the default configuration, you must add a module
 
 ```ts
 @NgModule({
-    imports: [
-      BrowserModule,
-      BrowserAnimationsModule,
-      HttpClientModule,
-      DefaultMerchantPortalConfigModule,
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    DefaultMerchantPortalConfigModule,
 
-      /// Extend module on the project level
-      TableModule.withActions({
-          action_name: SpecificActionService,
-      })
+    // Extend module on the project level
+    TableModule.withActions({
+      action_name: SpecificActionService,
+    })
 
-      /// Customize module on the project level
-      TableModule.withActions({
-          already_used_action_name: ToOverrideActionService,
-      })
-    ],
-    providers: [appBootstrapProvider()],
+    // Customize module on the project level
+    TableModule.withActions({
+      already_used_action_name: ToOverrideActionService,
+    })
+  ],
+  providers: [appBootstrapProvider()],
 })
 export class AppModule {}
 ```
@@ -171,10 +171,10 @@ It is also possible to extend the vendor twig blocks. You need to extend the ven
 ```twig
 {%- raw -%}
 {% block headTitle %}
-    {{ 'Title' | trans }}
+  {{ 'Title' | trans }}
 {% endblock %}
 
-any other content
+// Any other content
 {% endraw %}
 ```
 
@@ -185,7 +185,7 @@ any other content
 {% extends '@Spryker:ZedUi/Example/example.twig' %}
 
 {% block headTitle %}
-    {{ 'Project Title' | trans }}
+  {{ 'Project Title' | trans }}
 {% endblock %}
 {% endraw %}
 ```

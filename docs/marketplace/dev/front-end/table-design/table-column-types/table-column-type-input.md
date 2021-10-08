@@ -13,7 +13,8 @@ Table Column Input is an Angular Component that renders a field using the `@spry
 Check out an example usage of the Table Column Input in the `@spryker/table` config:
 
 ```html
-<spy-table [config]="{
+<spy-table 
+  [config]="{
     ...,
     columns: [
       ...
@@ -35,22 +36,45 @@ Check out an example usage of the Table Column Input in the `@spryker/table` con
 </spy-table>
 ```
 
-## Interfaces
+## Component registration
 
-Below you can find an interface for the Table Column Input type:
+Register the component:
 
 ```ts
+@NgModule({
+  imports: [
+    TableModule.forRoot(),
+    TableModule.withColumnComponents({
+      input: TableColumnInputComponent,
+    } as any),
+    TableColumnInputModule,
+  ],
+})
+export class RootModule {}
+```
+
+## Interfaces
+
+Below you can find interfaces for the Table Column Input:
+
+```ts
+declare module '@spryker/table' {
+  interface TableColumnTypeRegistry {
+    input: TableColumnInputConfig;
+  }
+}
+
 interface TableColumnInputConfig {
-    /** Bound to the @spryker/input inputs */
-    type: string; // 'text' - by default
-    value?: any;
-    placeholder: string;
-    prefix?: string;
-    suffix?: string;
-    outerPrefix?: string;
-    outerSuffix?: string;
-    attrs?: Record<string, string>;
-    /** Bound to the @spryker/form-item input */
-    editableError?: string | boolean;
+  /** Bound to the @spryker/input inputs */
+  type: string; // 'text' - by default
+  value?: any;
+  placeholder: string;
+  prefix?: string;
+  suffix?: string;
+  outerPrefix?: string;
+  outerSuffix?: string;
+  attrs?: Record<string, string>;
+  /** Bound to the @spryker/form-item input */
+  editableError?: string | boolean;
 }
 ```

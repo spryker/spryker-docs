@@ -9,14 +9,14 @@ This document explains the Table Filter extension in the Components Library.
 
 ## Overview
 
-The Table Filters feature provides filtering functionality to the Core Table Component. The filters, however, are not included in the feature itself—instead, they are registered separately.
+The Table Filters feature provides filtering functionality to the Core Table Component. The filters, however, are not included in the feature itself — instead, they are registered separately.
 
 A Table Filter is an Angular Component that implements a specific interface (`TableFilterComponent`) and is registered to the Table Filters feature module via `TableFiltersFeatureModule.withFilterComponents()`.
 
 Furthermore, you need to create your own filter module and add it to the `RootModule`.
 
 ```ts
-///// Module augmentation
+// Module augmentation
 import { TableFilterBase } from '@spryker/table.feature.filters';
 
 declare module '@spryker/table.feature.filters' {
@@ -28,26 +28,26 @@ declare module '@spryker/table.feature.filters' {
 export interface TableFilterSelect extends TableFilterBase<TableFilterSelectValue> {
   type: 'custom';
   typeOptions: {
-    ....
+    ...
   };
 }
 
-//// Component implementation
+// Component implementation
+// Module
+@NgModule({
+    declarations: [TableFilterCustomComponent],
+    exports: [TableFilterCustomComponent],
+})
+export class TableFilterCustomModule {}
+
 // Component
 @Component({
   selector: 'spy-table-filter-custom',
   ...
 })
 export class TableFilterCustomComponent implements TableFilterComponent<TableFilterSelect> {
-  ....
+  ...
 }
-
-// Module
-@NgModule({
-  declarations: [TableFilterCustomComponent],
-  exports: [TableFilterCustomComponent],
-})
-export class TableFilterCustomModule {}
 
 // Root module
 @NgModule({
@@ -64,15 +64,16 @@ export class RootModule {}
 You can configure any filter in the table config.
 
 ```html
-<spy-table [config]="{
+<spy-table 
+  [config]="{
     ...,
     filters: {
       ...,
       items: [
         {
-          type: Fiilter_TYPE_NAME,
+          type: FILTER_TYPE_NAME,
           typeOptions: {
-            ...filter specific configuratiion...
+            ...filter specific configuration...
           },
         }
       ]
@@ -84,7 +85,7 @@ You can configure any filter in the table config.
 
 ## Main Filter feature
 
-Using the static method  `TableFiltersFeatureModule.withFilterComponents`, the table module allows registering any table filter by a key. Under the hood, this method assigns the object of filters to `TABLE_FILTERS_TOKEN`.
+Using the static method `TableFiltersFeatureModule.withFilterComponents()`, the table module allows registering any table filter by a key. Under the hood, this method assigns the object of filters to `TABLE_FILTERS_TOKEN`.
 
 The main component injects all registered types from the `TABLE_FILTERS_TOKEN` and `Injector`.
 
@@ -121,6 +122,6 @@ export interface TableFilterComponent<C extends TableFilterBase> {
 
 The Table Filters feature ships with a few common Table Filter types:
 
-- [Select](/docs/marketplace/dev/front-end/table-design/table-filters/table-filter-select.html) — allows filtering data via `SelectComponent`.
-- [Tree Select](/docs/marketplace/dev/front-end/table-design/table-filters/table-filter-tree-select.html) — allows filtering data via `TreeSelectComponent`.
-- [Date Range](/docs/marketplace/dev/front-end/table-design/table-filters/table-filter-date-range.html) — allows filtering data via `DateRangePickerComponent`.
+- [Select](/docs/marketplace/dev/front-end/table-design/table-filters/table-filter-select.html) - allows filtering data via `SelectComponent`.
+- [Tree Select](/docs/marketplace/dev/front-end/table-design/table-filters/table-filter-tree-select.html) - allows filtering data via `TreeSelectComponent`.
+- [Date Range](/docs/marketplace/dev/front-end/table-design/table-filters/table-filter-date-range.html) - allows filtering data via `DateRangePickerComponent`.

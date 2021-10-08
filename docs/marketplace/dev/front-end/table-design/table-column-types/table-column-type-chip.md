@@ -13,7 +13,8 @@ Table Column Chip is an Angular Component that renders a chip using the `@spryke
 Check out an example usage of the Table Column Chip in the `@spryker/table` config:
 
 ```html
-<spy-table [config]="{
+<spy-table 
+  [config]="{
     ...,
     columns: [
       ...
@@ -44,14 +45,37 @@ Check out an example usage of the Table Column Chip in the `@spryker/table` conf
 </spy-table>
 ```
 
-## Interfaces
+## Component registration
 
-Below you can find an interface for the Table Column Chip type:
+Register the component:
 
 ```ts
+@NgModule({
+  imports: [
+    TableModule.forRoot(),
+    TableModule.withColumnComponents({
+      chip: TableColumnChipComponent,
+    } as any),
+    TableColumnChipModule,
+  ],
+})
+export class RootModule {}
+```
+
+## Interfaces
+
+Below you can find interfaces for the Table Column Chip:
+
+```ts
+declare module '@spryker/table' {
+  interface TableColumnTypeRegistry {
+    chip: TableColumnChipConfig;
+  }
+}
+
 interface TableColumnChipConfig {
-    /** Bound to the @spryker/chips inputs */
-    text?: string;
-    color?: string;
+  /** Bound to the @spryker/chips inputs */
+  text?: string;
+  color?: string;
 }
 ```

@@ -15,9 +15,8 @@ A Table Feature is an Angular Component encapsulating a piece of UI that is targ
 
 The Table Feature must extend a specific Angular Component (`TableFeatureComponent`) and provide itself as a `TableFeatureComponent` via `ExistingProvider` in the registry.
 
-
 ```ts
-///// Module augmentation
+// Module augmentation
 import { TableFeatureConfig } from '@spryker/table';
 
 declare module '@spryker/table' {
@@ -30,7 +29,7 @@ export interface TableCustomFeatureConfig extends TableFeatureConfig {
   ...
 }
 
-//// Component implementation
+// Component implementation
 // Module
 import { ModuleWithFeature, TableFeatureModule } from '@spryker/table';
 
@@ -44,7 +43,7 @@ export class TableCustomFeatureModule implements ModuleWithFeature {
   featureComponent = TableCustomFeatureComponent;
 }
 
-//Component
+// Component
 @Component({
   selector: 'spy-table-custom-feature',
   ...,
@@ -61,6 +60,7 @@ export class TableCustomFeatureComponent extends TableFeatureComponent<
  ...
 }
 ```
+
 ```html
 <ng-container
   *spyTableFeatureTpl="
@@ -86,20 +86,20 @@ There are two ways to use the Table Feature:
 
   To add a feature via HTML, it's enough to include a feature tag with a custom attribute (`spy-table-feature`) inside a table. When the table content is initialized, the table receives all templates by attribute and initializes features.
 
-- Via the registry of the Table Module—the Table аeature can be lazy-loaded when the Table Component requires it based on the Table Configuration, but it does not allow custom loading (custom loading is possible if the Angular versions are the same and shared).
+- Via the registry of the Table Module — the Table feature can be lazy-loaded when the Table Component requires it based on the Table Configuration, but it does not allow custom loading (custom loading is possible if the Angular versions are the same and shared).
 
   ```ts
   @NgModule({
-  imports: [
-    TableModule.withFeatures({
-      title: () =>
-        import('@spryker/table.feature.title').then(
-          (m) => m.TableTitleFeatureModule,
-        ),
-    }),
-  ],
+    imports: [
+      TableModule.withFeatures({
+        title: () =>
+          import('@spryker/table.feature.title').then(
+            (m) => m.TableTitleFeatureModule,
+          ),
+      }),
+    ],
   })
-  export class RootModule
+  export class RootModule {}
   ```
 
 To add a feature via the registry, register the feature in the Table Module using static method `TableModule.withFeatures()`. Under the hood, it assigns the object of actions to the `TableFeaturesRegistryToken`. The `TableFeatureLoaderService` injects all registered types from the `TableFeaturesRegistryToken`, `Compiler`, and `Injector`. Upon initialization, the table loads only enabled feature modules and compiles them via Compiler with Injector before initializing them.
@@ -107,17 +107,17 @@ To add a feature via the registry, register the feature in the Table Module usin
 In the table configuration, you can enable or disable, and configure any feature.
 
 ```html
-<spy-table [config]="{
+<spy-table 
+  [config]="{
     ...,
     title: {
-      enable: true,
-      ....,
+      enabled: true,
+      ...,
     },
   }"
 >
 </spy-table>
 ```
-
 
 ## Interfaces
 
@@ -155,14 +155,14 @@ export enum TableFeatureLocation {
 
 There are multiple standard Table Features that are shipped with the UI library:
 
-- [Pagination](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-pagination.html) — renders pagination of the table.
-- [Total](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-total.html) — renders the total number of the data set.
-- [Title](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-title.html) — renders the title of the table.
-- [Selectable](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-selectable.html) — allows selecting multiple rows.
-- [Row Actions](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-row-actions.html) — allows triggering actions from rows.
-- [Batch Actions](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-batch-actions.html) — allows triggering batch/multiple actions from rows.
-- [Filters](/docs/marketplace/dev/front-end/table-design/table-filters/) — allows filtering the data set.
-- [Search](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-search.html) — allows searching within the data set.
-- [Sync State](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-sync-state.html) — allows syncing the state of the table with browser URL (like pagination, filters, sorting, etc.).
-- [Editable](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-editable.html) — allows editing/adding rows of the table
-- [Settings](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-settings.html) — allows customizing columns of the table (show/hide and reorder).
+- [Pagination](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-pagination.html) - renders pagination of the table.
+- [Total](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-total.html) - renders the total number of the data set.
+- [Title](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-title.html) - renders the title of the table.
+- [Selectable](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-selectable.html) - allows selecting multiple rows.
+- [Row Actions](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-row-actions.html) - allows triggering actions from rows.
+- [Batch Actions](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-batch-actions.html) - allows triggering batch/multiple actions from rows.
+- [Filters](/docs/marketplace/dev/front-end/table-design/table-filters/) - allows filtering the data set.
+- [Search](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-search.html) - allows searching within the data set.
+- [Sync State](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-sync-state.html) - allows syncing the state of the table with browser URL (like pagination, filters, sorting, etc.).
+- [Editable](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-editable.html) - allows editing/adding rows of the table
+- [Settings](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-settings.html) - allows customizing columns of the table (show/hide and reorder).

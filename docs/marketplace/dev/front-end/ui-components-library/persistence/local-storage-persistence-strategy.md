@@ -1,15 +1,18 @@
 ---
 title: Local Storage Persistence Strategy
-description: This article provides details about the Local Storage Persistence Strategy service in the Components Library.
+description: This document provides details about the Local Storage Persistence Strategy service in the Components Library.
 template: concept-topic-template
 ---
 
-This article provides details about the Local Storage Persistence Strategy service in the Components Library.
+This document explains the Local Storage Persistence Strategy service in the Components Library.
 
 ## Overview
 
 Local Storage Persistence Strategy is an Angular Service that uses browser Local Storage to store the data.
-Check out this example below to see how to use the Local Storage Persistence Strategy service.
+
+Check out an example usage of the Local Storage Persistence Strategy.
+
+Service configuration:
 
 `storage` - the persistence strategy type.  
 
@@ -23,27 +26,15 @@ Check out this example below to see how to use the Local Storage Persistence Str
       storage: 'local-storage',
     },
   }"
-></spy-select>
+>
+</spy-select>
 ```
 
-## Interfaces
+## Service registration
 
-Below you can find interfaces for the Local Storage Persistence Strategy.
+Register the service:
 
 ```ts
-interface LocalStoragePersistenceStrategy extends PersistenceStrategy {
-  save(key: string, value: unknown): Observable<void>;
-  retrieve<T>(key: string): Observable<T | undefined>;
-  remove(key: string): Observable<void>;
-}
-
-// Service registration
-declare module '@spryker/persistence' {
-  interface PersistenceStrategyRegistry {
-    'local-storage': LocalStoragePersistenceStrategy;
-  }
-}
-
 @NgModule({
   imports: [
     PersistenceModule.withStrategies({
@@ -52,4 +43,22 @@ declare module '@spryker/persistence' {
   ],
 })
 export class RootModule {}
+```
+
+## Interfaces
+
+Below you can find interfaces for the Local Storage Persistence Strategy:
+
+```ts
+declare module '@spryker/persistence' {
+  interface PersistenceStrategyRegistry {
+    'local-storage': LocalStoragePersistenceStrategy;
+  }
+}
+
+interface LocalStoragePersistenceStrategy extends PersistenceStrategy {
+  save(key: string, value: unknown): Observable<void>;
+  retrieve<T>(key: string): Observable<T | undefined>;
+  remove(key: string): Observable<void>;
+}
 ```

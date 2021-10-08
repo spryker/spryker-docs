@@ -1,36 +1,39 @@
 ---
 title: Table Feature Settings
-description: This article provides details about the Table Feature Settings component in the Components Library.
+description: This document provides details about the Table Feature Settings component in the Components Library.
 template: concept-topic-template
 ---
 
-This article provides details about the Table Feature Settings component in the Components Library.
+This document explains the Table Feature Settings component in the Components Library.
 
 ## Overview
 
 Table Feature Settings is a feature of the Table Component that allows customizing columns of the table (show or hide and reorder).
-Check out this example below to see how to use the Settings feature.
 
-Feature configuration:
+Check out an example usage of the Table Feature Settings in the `@spryker/table` config.
+
+Component configuration:
 
 - `enabled` - enables the feature via config.  
 - `tableId` - `id` of the table that syncs with the table toolbar settings.
 
 ```html
-<spy-table [config]="{
-  dataSource: { ... },
-  columns: [ ... ],
-  columnConfigurator: {
-    enabled: true,
-    tableId: 'table-id',
-  },                                                                                         
-}">
+<spy-table 
+  [config]="{
+    dataSource: { ... },
+    columns: [ ... ],
+    columnConfigurator: {
+      enabled: true,
+      tableId: 'table-id',
+    },                                                                                         
+  }"
+>
 </spy-table>
 ```
 
-## Feature registration
+## Component registration
 
-Register the feature:
+Register the component:
 
 ```ts
 // Dynamic
@@ -58,14 +61,14 @@ export class RootModule {}
 })
 export class RootModule {}
 
-<spy-table [config]="config" [tableId]="tableId">
+<spy-table [config]="config">
   <spy-table-settings-feature spy-table-feature></spy-table-settings-feature>
 </spy-table>
 ```
 
 ## Interfaces
 
-Below you can find an interface for the Table Feature Settings.
+Below you can find interfaces for the Table Feature Settings:
 
 ```ts
 declare module '@spryker/table' {

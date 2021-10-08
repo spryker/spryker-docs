@@ -1,10 +1,10 @@
 ---
 title: Web Components
-description: The purpose of this article is to provide details regarding how web components are used and what their function is in the Merchant Portal Frontend.
+description: This document provides details how web components are used and what their function is in the Merchant Portal Frontend.
 template: concept-topic-template
 ---
 
-The purpose of this article is to provide details regarding how web components are used and what their function is in the Merchant Portal Frontend.
+This document provides details how web components are used and what their function is in the Merchant Portal Frontend.
 
 ## Introduction
 

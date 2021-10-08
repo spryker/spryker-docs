@@ -17,7 +17,7 @@ npm install @spryker/package_name
 yarn add @spryker/package_name
 ```
 
-Under the hood, the UI Angular Components are built using Angular 9, rxjs and Ant Design. These components are used within the Spryker Core modules of the Merchant Portal. You can use them inside the angular ecosystem as default angular components, or you can transform them into web components and reuse them inside the Spryker `twig` modules (see web components<!---LINK-->).
+Under the hood, the UI Angular Components are built using Angular 9, rxjs and Ant Design. These components are used within the Spryker Core modules of the Merchant Portal. You can use them inside the angular ecosystem as default angular components, or you can transform them into web components and reuse them inside the Spryker `twig` modules (see [Web Components](/docs/marketplace/dev/front-end/web-components.html)).
 Many UI Components have extension points, and some of them must be configured on a project-level (e.g `Table`, `Datasource`).
 
 ## UI Components List

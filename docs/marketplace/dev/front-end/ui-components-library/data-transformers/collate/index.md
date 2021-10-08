@@ -4,7 +4,7 @@ description: This document provides details about the Data Transformer Collate s
 template: concept-topic-template
 ---
 
-This document provides details about the Data Transformer Collate service in the Components Library.
+This document explains the Data Transformer Collate service in the Components Library.
 
 ## Overview
 
@@ -41,67 +41,35 @@ In general, the meaning of the word `collate` is to collect, arrange and assembl
       },
     },
   }"
-></spy-table>
+>
+</spy-table>
 ```
 
 ## Collate Filters
 
 Collate Filters are Angular Services that extend filtering in the Data Transformer.
 These services are registered via `CollateDataTransformer.withFilters()`.
+
 There are a few common Data Transformer Collate Filters that are available as separate packages in the UI library:
 
-  - [`equals`](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/equals.html) - filters values that are strictly equal.
-  - [`range`](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/range.html) - filters values that are within a number range.
-  - [`text`](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/text.html) - filters values that match a string.
+  - [Equals](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/equals.html) - filters values that are strictly equal.
+  - [Range](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/range.html) - filters values that are within a number range.
+  - [Text](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/text.html) - filters values that match a string.
 
 ## Collate Data Configurators
 
 Data Configurators are Angular Services that enable re-population of data (sorting, pagination, filtering).
 These services are registered via `CollateDataTransformer.withConfigurators()`.
+
 There are a few common Data Transformers Collate Data Configurators that are available:
 
-  - [`table`](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/data-configurators/table.html) - integrates Table into Collate to re-populate data when the table updates.
+  - [Table](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/data-configurators/table.html) - integrates Table into Collate to re-populate data when the table updates.
 
-## Interfaces
+## Service registration
 
-Below you can find interfaces for Data Transformer Collate.
-
-### DataTransformerConfiguratorConfig
-`configurator` - the object with the Data Transformer configurator type and additional properties.  
-`filter` - the object based on a specific data property (`filterId`) that defines the properties on which the initial data object is filtered via `DataTransformerFilterConfig`.    
-`search` - defines the properties on which the initial data object is filtered via `DataTransformerFilterConfig`.  
-`transformerByPropName` - the object with data properties list that needs to be transformed.  
-
-### DataTransformerConfiguratorConfig
-`type` - the declared name of the module whose data needs to be transformed.  
-
-### DataTransformerFilterConfig
-`type` - the name of a filter, for example, `range`.  
-`propNames` - the array with the property names to which the filter is applied.
+Register the service:
 
 ```ts
-export interface CollateDataTransformerConfig extends DataTransformerConfig {
-  configurator: DataTransformerConfiguratorConfig;
-  filter?: {
-    [filterId: string]: DataTransformerFilterConfig;
-  };
-  search?: DataTransformerFilterConfig;
-  transformerByPropName?: DataFilterTransformerByPropName;
-}
-
-export interface DataTransformerConfiguratorConfig {
-  type: DataTransformerConfiguratorType;
-  [prop: string]: unknown; // Extra configuration for specific types
-}
-
-export interface DataTransformerFilterConfig {
-  type: string;
-  propNames: string | string[];
-}
-
-export type DataFilterTransformerByPropName = Record<string, string>;
-
-// Service registration
 @NgModule({
   imports: [
     DataTransformerModule.withTransformers({
@@ -122,4 +90,50 @@ export type DataFilterTransformerByPropName = Record<string, string>;
   ],
 })
 export class RootModule {}
+```
+
+## Interfaces
+
+Below you can find interfaces for the Data Transformer Collate:
+
+### DataTransformerConfiguratorConfig
+`configurator` - the object with the Data Transformer configurator type and additional properties.  
+`filter` - the object based on a specific data property (`filterId`) that defines the properties on which the initial data object is filtered via `DataTransformerFilterConfig`.    
+`search` - defines the properties on which the initial data object is filtered via `DataTransformerFilterConfig`.  
+`transformerByPropName` - the object with data properties list that needs to be transformed.  
+
+### DataTransformerConfiguratorConfig
+`type` - the declared name of the module whose data needs to be transformed.  
+
+### DataTransformerFilterConfig
+`type` - the name of a filter, for example, `range`.  
+`propNames` - the array with the property names to which the filter is applied.
+
+```ts
+declare module '@spryker/data-transformer' {
+  interface DataTransformerRegistry {
+    collate: CollateDataTransformerConfig;
+  }
+}
+
+export interface CollateDataTransformerConfig extends DataTransformerConfig {
+  configurator: DataTransformerConfiguratorConfig;
+  filter?: {
+    [filterId: string]: DataTransformerFilterConfig;
+  };
+  search?: DataTransformerFilterConfig;
+  transformerByPropName?: DataFilterTransformerByPropName;
+}
+
+export interface DataTransformerConfiguratorConfig {
+  type: DataTransformerConfiguratorType;
+  [prop: string]: unknown; // Extra configuration for specific types
+}
+
+export interface DataTransformerFilterConfig {
+  type: string;
+  propNames: string | string[];
+}
+
+export type DataFilterTransformerByPropName = Record<string, string>;
 ```

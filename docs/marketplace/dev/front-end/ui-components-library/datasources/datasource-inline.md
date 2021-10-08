@@ -1,15 +1,18 @@
 ---
 title: Datasource Inline
-description: This article provides details about the Datasource Inline service in the Components Library.
+description: This document provides details about the Datasource Inline service in the Components Library.
 template: concept-topic-template
 ---
 
-This article provides details about the Datasource Inline service in the Components Library.
+This document explains the Datasource Inline service in the Components Library.
 
 ## Overview
 
 Datasource Inline is an Angular Service that allows passing data along with the configuration of the Datasource.
-Check out this example below to see how to use the Datasource Inline service.
+
+Check out an example usage of the Datasource Inline.
+
+Service configuration:
 
 - `type` - is a datasource type.  
 - `data` - is a datasource data.  
@@ -20,25 +23,37 @@ Check out this example below to see how to use the Datasource Inline service.
     type: 'inline',
     data: ['Inline 1', 'Inline 2'],
   }"
-></spy-select>
+>
+</spy-select>
 ```
 
-## Interfaces
+## Service registration
 
-Below you can find interfaces for Datasource Inline service.
+Register the service:
 
 ```ts
-export interface DatasourceInlineConfig extends DatasourceConfig {
-  data: unknown;
-}
-
-// Component registration
 @NgModule({
   imports: [
     DatasourceModule.withDatasources({
-      inline: DatasourceInlineService,
+        inline: DatasourceInlineService,
     }),
   ],
 })
 export class RootModule {}
+```
+
+## Interfaces
+
+Below you can find interfaces for the Datasource Inline:
+
+```ts
+declare module '@spryker/datasource' {
+  interface DatasourceRegistry {
+    inline: DatasourceInlineService;
+  }
+}
+
+export interface DatasourceInlineConfig extends DatasourceConfig {
+  data: unknown;
+}
 ```

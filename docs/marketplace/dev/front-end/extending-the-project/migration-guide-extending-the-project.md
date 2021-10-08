@@ -1,6 +1,6 @@
 ---
 title: Migration guide - Extending the project
-description: This article provides details for migration of the marketplace modules to be able to extend the progect
+description: This document provides details for migration of the marketplace modules to be able to extend the project.
 template: module-migration-guide-template
 ---
 
@@ -30,9 +30,7 @@ wget -O tsconfig.json https://raw.githubusercontent.com/spryker-shop/suite/maste
 wget -O tsconfig.mp.json https://raw.githubusercontent.com/spryker-shop/suite/master/tsconfig.mp.json
 ```
 
-
 2. Update / create the following files in the `frontend/merchant-portal` folder:
-
 
 ```bash
 wget -O frontend/merchant-portal/entry-points.js https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/entry-points.js
@@ -41,7 +39,6 @@ wget -O frontend/merchant-portal/mp-paths.js https://raw.githubusercontent.com/s
 wget -O frontend/merchant-portal/tsconfig.spec.json https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/tsconfig.spec.json
 wget -O frontend/merchant-portal/update-config-paths.js https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/update-config-paths.js
 ```
- 
 
 3. Create the files tree on the project level in the `src/Pyz/Zed` folder:
 
@@ -61,8 +58,7 @@ wget -O frontend/merchant-portal/update-config-paths.js https://raw.githubuserco
       - styles.less
       - public-api.ts
   - mp.public-api.ts
-
- 
+  
 
 4. Fill in the newly created files with the code below:
 
@@ -77,13 +73,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DefaultMerchantPortalConfigModule, RootMerchantPortalModule } from '@mp/zed-ui';
 
 @NgModule({
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        HttpClientModule,
-        RootMerchantPortalModule,
-        DefaultMerchantPortalConfigModule,
-    ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    RootMerchantPortalModule,
+    DefaultMerchantPortalConfigModule,
+  ],
 })
 export class AppModule extends RootMerchantPortalModule {}
 
@@ -93,7 +89,7 @@ export class AppModule extends RootMerchantPortalModule {}
 
 ```ts
 export const environment = {
-    production: true,
+  production: true,
 };
 ```
 
@@ -105,7 +101,7 @@ export const environment = {
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-    production: false,
+  production: false,
 };
 
 /*
@@ -128,13 +124,13 @@ import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
 if (environment.production) {
-    enableProdMode();
+  enableProdMode();
 }
 
 platformBrowserDynamic()
-    .bootstrapModule(AppModule)
-    /* tslint:disable-next-line: no-console */
-    .catch((error) => console.error(error));
+  .bootstrapModule(AppModule)
+  /* tslint:disable-next-line: no-console */
+  .catch((error) => console.error(error));
 ```
 
 **polyfills.ts**
@@ -151,19 +147,13 @@ export * from './Presentation/Components/public-api';
 
 **public-api.ts**
 
-
-
 ```ts
 export * from './app/...';
-....
-packages that you want to be exported as public api
+...
+// Packages that you want to be exported as public api
 ```
 
- 
-
 5. Reinstall `node_modules`:
-
-
 
 ```bash
 rm -rf node_modules && yarn install
@@ -171,8 +161,8 @@ rm -rf node_modules && yarn install
 
 6. Build the Marketplace project:
 
-```npm
-npm run mp:build
+```bash
+yarn mp:build
 ```
 
 Related articles: 

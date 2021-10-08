@@ -13,7 +13,8 @@ Table Column Dynamic is an Angular Component that renders a dynamic Table Column
 Check out an example usage of the Table Column Dynamic in the `@spryker/table` config:
 
 ```html
-<spy-table [config]="{
+<spy-table 
+  [config]="{
     ...,
     columns: [
       ...
@@ -49,30 +50,53 @@ Check out an example usage of the Table Column Dynamic in the `@spryker/table` c
 </spy-table>
 ```
 
-## Interfaces
+## Component registration
 
-Below you can find interfaces for the Table Column Dynamic type:
+Register the component:
 
 ```ts
+@NgModule({
+  imports: [
+    TableModule.forRoot(),
+    TableModule.withColumnComponents({
+      dynamic: TableColumnDynamicComponent,
+    } as any),
+    TableColumnDynamicModule,
+  ],
+})
+export class RootModule {}
+```
+
+## Interfaces
+
+Below you can find interfaces for the Table Column Dynamic:
+
+```ts
+declare module '@spryker/table' {
+  interface TableColumnTypeRegistry {
+    dynamic: TableColumnDynamicConfig;
+  }
+}
+
 interface DataTransformerConfig {
-    type: string;
-    // Reserved for types that may have extra configuration
-    [extraConfig: string]: unknown;
+  type: string;
+  // Reserved for types that may have extra configuration
+  [extraConfig: string]: unknown;
 }
 
 interface DatasourceConfig {
-    type: string;
-    transform?: DataTransformerConfig;
-    // Specific Datasource types may have custom props
-    [k: string]: unknown;
+  type: string;
+  transform?: DataTransformerConfig;
+  // Specific Datasource types may have custom props
+  [k: string]: unknown;
 }
 
 interface TableColumnDynamicDatasourceConfig implements DatasourceConfig {
-    type: string;
-    [k: string]: unknown;
+  type: string;
+  [k: string]: unknown;
 }
 
 interface TableColumnDynamicConfig {
-    datasource: TableColumnDynamicDatasourceConfig;
+  datasource: TableColumnDynamicDatasourceConfig;
 }
 ```

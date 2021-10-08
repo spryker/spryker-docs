@@ -19,20 +19,20 @@ The rest of the sections are reserved for features (like Pagination, which descr
 
 ```html
 <spy-table
- config="{
- columns?: '### Section Columns Configuration ###',
- columnsUrl?: '### Section Columns Configuration ###',
- dataSource: '### See DataSource Doc ###',,
- rowActions: '### See Table Row Actions Feature Doc ###',
- pagination: '### See Table Pagination Feature Doc ###',
- search: '### See Table Search Feature Doc ###',
- title:: '### See Table Title Feature Doc ###',
- columnConfigurator: '### See Table Settings Feature Doc ###',
- filters: '### See Table Filters Feature Doc ###',
- itemSelection: '### See Table Selectable Feature Doc ###',
- syncStateUrl: '### See Table Sync State Feature Doc ###',
- editable: '### See Table Editable Feature Doc ###',
- }"
+  config="{
+    columns?: '### Section Columns Configuration ###',
+    columnsUrl?: '### Section Columns Configuration ###',
+    dataSource: '### See DataSource Doc ###',,
+    rowActions: '### See Table Row Actions Feature Doc ###',
+    pagination: '### See Table Pagination Feature Doc ###',
+    search: '### See Table Search Feature Doc ###',
+    title:: '### See Table Title Feature Doc ###',
+    columnConfigurator: '### See Table Settings Feature Doc ###',
+    filters: '### See Table Filters Feature Doc ###',
+    itemSelection: '### See Table Selectable Feature Doc ###',
+    syncStateUrl: '### See Table Sync State Feature Doc ###',
+    editable: '### See Table Editable Feature Doc ###',
+  }"
 >
 </spy-table>
 ```
@@ -49,53 +49,56 @@ Check out the example of the column configuration:
 
 ```ts
 [
- // chip
- {
- "id":"stock",
- "title":"Stock",
- "type":"chip",
- "typeOptions": {
- "color": "green"
- },
- "typeOptionsMappings: {
- "color": {"0": "red"}
- },
- },
- // chips
- {
- id: 'status',
- type: 'chips',
- typeOptions: {
- text: '${value}',
- color: 'red',
- },
- typeOptionsMappings: {
- text: {'true': 'Active', 'false': 'Inactive'},
- color: {'true': 'green'}
- },
- },
- // select
- {
- id:"store",
- type:"select",
- typeOptions: {
- multiselect: bool,
- values: [
- {value: 1, title:"DE"},
- {value: 2, title:"AT"}
- ]
- }
- },
- // input
- {
- id:"gross_price",
- type:"input",
- typeOptions: {
- type: '|text|number|tel',
- placeholder: '0.00',
- readOnly: bool,
- }
- },
+  // chip
+  {
+    id: 'stock',
+    title: 'Stock',
+    type: 'chip',
+    typeOptions: {
+      color: 'green',
+    },
+    typeOptionsMappings: {
+      color: { 0: 'red' },
+    },
+  },
+  // chips
+  {
+    id: 'status',
+    type: 'chips',
+    typeOptions: {
+      text: '${value}',
+      color: 'red',
+    },
+    typeOptionsMappings: {
+      text: {
+        'true': 'Active', 
+        'false': 'Inactive',
+      },
+      color: { 'true': 'green' },
+    },
+  },
+  // select
+  {
+    id: 'store',
+    type: 'select',
+    typeOptions: {
+      multiselect: bool,
+      values: [
+        { value: 1, title: 'DE' },
+        { value: 2, title: 'AT' },
+      ],
+    },
+  },
+  // input
+  {
+    id: 'gross_price',
+    type: 'input',
+    typeOptions: {
+      type: '|text|number|tel',
+      placeholder: '0.00',
+      readOnly: bool,
+    },
+  },
 ]
 ```
 
@@ -107,26 +110,26 @@ Below is the complete table context:
 
 ```ts
 interface TableColumnTplContext extends TableColumnContext {
- $implicit: TableColumnContext['value'];
+  $implicit: TableColumnContext['value'];
 }
 
 interface TableColumnContext {
- value: TableDataValue;
- row: TableDataRow;
- config: TableColumn;
- i: number;
- j: number;
+  value: TableDataValue;
+  row: TableDataRow;
+  config: TableColumn;
+  i: number;
+  j: number;
 }
 
 interface TableColumn extends Partial<TableColumnTypeDef> {
- id: string;
- title: string;
- width?: string;
- multiRenderMode?: boolean;
- multiRenderModeLimit?: number;
- emptyValue?: string;
- sortable?: boolean;
- searchable?: boolean;
+  id: string;
+  title: string;
+  width?: string;
+  multiRenderMode?: boolean;
+  multiRenderModeLimit?: number;
+  emptyValue?: string;
+  sortable?: boolean;
+  searchable?: boolean;
 }
 
 type TableDataRow = Record<TableColumn['id'], TableDataValue>;
@@ -137,21 +140,21 @@ type TableDataValue = unknown | unknown[];
 In addition, Table Column supports overriding defined *typeOptions* properties based on the value of the table column. As a result, the `typeOptionsMappings` object should be added where the `typeOption` key and all variants are defined.
 
 ```ts
- typeOptionsMappings: {
- TYPE_OPTION_KEY: { TABLE_COLUMN_VALUE: DESIRED_VALUE_1, TABLE_COLUMN_VALUE: DESIRED_VALUE_2 },
- },
+  typeOptionsMappings: {
+    TYPE_OPTION_KEY: { TABLE_COLUMN_VALUE: DESIRED_VALUE_1, TABLE_COLUMN_VALUE: DESIRED_VALUE_2 },
+  },
 ```
 
 ```ts
 ...
- typeOptions: {
- text: '${value}',
- color: 'red',
- },
- typeOptionsMappings: {
- text: { col3: 'Active', false: 'Inactive' },
- color: { col3: 'green'}
- },
+  typeOptions: {
+    text: '${value}',
+    color: 'red',
+  },
+  typeOptionsMappings: {
+    text: { col3: 'Active', 'false': 'Inactive' },
+    color: { col3: 'green'}
+  },
 ...
 
 // Possible showed table `text` and `color` variants:
@@ -168,10 +171,10 @@ Below you can find interfaces for the Table:
 
 ```ts
 export interface TableConfig {
- dataSource: DatasourceConfig;
- columnsUrl?: string;
- columns?: TableColumns;
- // Features may expect it's config under it's namespace
- [featureName: string]: TableFeatureConfig | unknown;
+  dataSource: DatasourceConfig;
+  columnsUrl?: string;
+  columns?: TableColumns;
+  // Features may expect it's config under it's namespace
+  [featureName: string]: TableFeatureConfig | unknown;
 }
 ```

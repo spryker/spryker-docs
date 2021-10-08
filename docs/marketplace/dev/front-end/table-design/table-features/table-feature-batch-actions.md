@@ -1,10 +1,10 @@
 ---
 title: Table Feature Batch Actions
-description: This article provides details about the Table Feature Batch Actions component in the Components Library.
+description: This document provides details about the Table Feature Batch Actions component in the Components Library.
 template: concept-topic-template
 ---
 
-This article provides details about the Table Feature Batch Actions component in the Components Library.
+This document explains the Table Feature Batch Actions component in the Components Library.
 
 ## Overview
 
@@ -12,9 +12,9 @@ Table Feature Batch Actions is a feature of the Table Component that allows trig
 As Table Feature Batch Actions is based on the [Table Feature Selectable](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-selectable.html), batch actions must be registered and enabled via the table config. Batch actions are functions that can be performed on multiple items within a table. As soon as at least one row is selected in the table, the batch action bar with allowed actions appears at the top of the table.
 To escape the `batch action mode`, it is necessary to unselect the table rows.
 
-Check out this example below to see how to use the Batch Actions feature.
+Check out an example usage of the Table Feature Batch Actions in the `@spryker/table` config.
 
-Feature configuration:
+Component configuration:
 
 `enabled` - enables the feature via the config.  
 `noActionsMessage` - error message text.  
@@ -23,31 +23,34 @@ Feature configuration:
 `availableActionsPath` - path to an array with available action IDs in the top bar (supports nested objects using dot notation for ex. `prop.nestedProp`).   
 
 ```html
-<spy-table [config]="{
-  dataSource: { ... },
-  columns: [ ... ],
-  itemSelection: {
-    enabled: true,
-  },
-  batchActions: {
-    enabled: true,
-    actions: [
-      { id: 'edit', title: 'Edit', type: 'edit-action' },
-      { id: 'update', title: 'Update', type: 'update-action' },
-    ],
-    noActionsMessage: 'No available actions for selected rows',
-    rowIdPath: 'sku',
-    availableActionsPath: 'path.to.actions',
-  },                                                                                           
-}">
+<spy-table 
+  [config]="{
+    dataSource: { ... },
+    columns: [ ... ],
+    batchActions: {
+      enabled: true,
+      actions: [
+        { id: 'edit', title: 'Edit', type: 'edit-action' },
+        { id: 'update', title: 'Update', type: 'update-action' },
+      ],
+      noActionsMessage: 'No available actions for selected rows',
+      rowIdPath: 'sku',
+      availableActionsPath: 'path.to.actions',
+    },  
+    itemSelection: {
+      enabled: true,
+    },                                                                                         
+  }"
+>
 </spy-table>
 ```
 
-## Feature registration
+## Component registration
 
-Register the feature:
+Register the component:
 
 ```ts
+// Dynamic
 @NgModule({
   imports: [
     TableModule.forRoot(),
@@ -55,18 +58,45 @@ Register the feature:
       batchActions: () =>
         import('@spryker/table.feature.batch-actions').then(
           (m) => m.TableBatchActionsFeatureModule,
-        ),    
+        ),
+      itemSelection: () =>
+        import('@spryker/table.feature.selectable').then(
+          (m) => m.TableSelectableFeatureModule,
+        ),
     }),
   ],
 })
 export class RootModule {}
 ```
 
+```html
+// Via HTML
+@NgModule({
+  imports: [
+    TableModule.forRoot(),
+    TableBatchActionsFeatureModule,
+    TableSelectableFeatureModule,
+  ],
+})
+export class RootModule {}
+
+<spy-table [config]="config">
+  <spy-table-batch-actions-feature spy-table-feature></spy-table-batch-actions-feature>
+  <spy-table-selectable-feature spy-table-feature></spy-table-selectable-feature>
+</spy-table>
+```
+
 ## Interfaces
 
-Below you can find interfaces for the Table Feature Batch Actions.
+Below you can find interfaces for the Table Feature Batch Actions:
 
 ```ts
+declare module '@spryker/table' {
+  interface TableConfig {
+    batchActions?: TableBatchActionsConfig;
+  }
+}
+
 export interface TableBatchActionsConfig extends TableFeatureConfig {
   actions: TableBatchAction[];
   rowIdPath: string;

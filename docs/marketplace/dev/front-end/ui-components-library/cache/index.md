@@ -9,9 +9,9 @@ This document explains the Cache service in the Component Library.
 ## Overview
 
 Cache Service is responsible for caching arbitrary operations based on the configuration.
-This allows backend systems to use caching without changing the front-end at all (ex. http datasource, etc.)
+This allows backend systems to use caching without changing the front-end at all (ex. http datasource, etc.).
 
-Cache Service uses Cache Strategy to define caching algorithm (static, cache first, freshness first, etc)
+Cache Service uses Cache Strategy to define caching algorithm (static, cache first, freshness first, etc.).
 
 ```html
 <spy-select
@@ -25,7 +25,8 @@ Cache Service uses Cache Strategy to define caching algorithm (static, cache fir
       // ... Additional Options
     },
   }"
-></spy-select>
+>
+</spy-select>
 ```
 
 ## Cache Storage Factory Service
@@ -37,9 +38,9 @@ This storage is not created every time, but cached for the same configurations w
 
 The factory injects `PersistenceStrategyService`.
 
-The `create` method gets the registered persistence strategy from `PersistenceStrategyService.select` by `config.type` from an argument and returns an adapted `CacheStorage`.
+`create()` method gets the registered persistence strategy from `PersistenceStrategyService.select()` by `config.type` from an argument and returns an adapted `CacheStorage`.
 
-`createAll` method gets all the registered persistence strategies from `PersistenceStrategyService.getAll` and returns an array of adapted `CacheStorage` instance types.
+`createAll()` method gets all the registered persistence strategies from `PersistenceStrategyService.getAll()` and returns an array of adapted `CacheStorage` instance types.
 
 ### Interfaces
 
@@ -71,9 +72,9 @@ A Cache Strategy is an Angular Service that implements a specific interface (`Ca
 
 The main service injects all registered types from the `CacheStrategyTypesToken` and `CacheStorageFactoryService`.
 
-The `getCached` method finds a specific strategy from the `CacheStrategyTypesToken` by type (from the `config.type` argument) and returns that strategy as observable with arguments passed thorough method (`CacheStrategy.getCached()`).
+`getCached()` method finds a specific strategy from the `CacheStrategyTypesToken` by type (from the `config.type` argument) and returns that strategy as observable with arguments passed thorough method (`CacheStrategy.getCached()`).
 
-The `clearCache` method returns an array of instances (PersistenceStrategy[]) of all the registered strategies from `PersistenceStrategyTypesToken`.
+`clearCache()` method returns an array of instances (PersistenceStrategy[]) of all the registered strategies from `PersistenceStrategyTypesToken`.
 
 ### Interfaces
 
@@ -100,7 +101,7 @@ Using the `namespace` (optional) option, you can separate different cache entrie
 The Cache Strategy implements a specific interface (`CacheStrategy`) and is registered to the Root Module via `CacheModule.withStrategies()`.
 
 ```ts
-///// Module augmentation
+// Module augmentation
 import { CacheStrategyConfig, CacheStrategy } from '@spryker/cache';
 
 declare module '@spryker/cache' {
@@ -113,7 +114,7 @@ interface CustomCacheStrategyConfig extends CacheStrategyConfig {
   customOption: 'customOption';
 }
 
-//// Services implementation
+// Services implementation
 @Injectable({
   providedIn: 'root',
 })
@@ -134,8 +135,9 @@ export class CustomCacheService implements CacheStrategy {
     }),
   ],
 })
-export class RootModule
+export class RootModule {}
 ```
+
 ### Interfaces
 
 Below you can find interfaces for the Cache Strategy:
@@ -166,7 +168,7 @@ interface CacheStrategyConfig {
 
 There are a few common Cache Strategies that are available in UI library as separate packages:
 
-- [static](/docs/marketplace/dev/front-end/ui-components-library/cache/static.html) — adds values immediately to the 
+- [Static](/docs/marketplace/dev/front-end/ui-components-library/cache/static.html) - adds values immediately to the 
 cache until the expiration date and always retrieves them from cache if requested.
 
 ## Related articles

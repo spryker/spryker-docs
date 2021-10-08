@@ -1,19 +1,19 @@
 ---
 title: Table Feature Row Actions
-description: This article provides details about the Table Feature Row Actions component in the Components Library.
+description: This document provides details about the Table Feature Row Actions component in the Components Library.
 template: concept-topic-template
 ---
 
-This article provides details about the Table Feature Row Actions component in the Components Library.
+This document explains the Table Feature Row Actions component in the Components Library.
 
 ## Overview
 
-Table Feature Row Actions is a feature of the Table Component that renders a drop down menu with actions applicable to the table row and when clicked triggers an Action which must be registered. Also this feature allows triggering actions via row click.
+Table Feature Row Actions is a feature of the Table Component that renders a drop-down menu with actions applicable to the table row and when clicked triggers an Action which must be registered. Also this feature allows triggering actions via row click.
 Each row has all actions by default, but they can be filtered using an array of action Ids in each row using the path configured by `availableActionsPath`.
 
-Check out this example below to see how to use the Row Actions feature.
+Check out an example usage of the Table Feature Row Actions in the `@spryker/table` config.
 
-Feature configuration:
+Component configuration:
 
 - `enabled` - enables the feature via config.  
 - `actions` - an array with actions that are displayed in the drop down menu and their type of registered [action](/docs/marketplace/dev/front-end/ui-components-library/actions/).  
@@ -22,28 +22,31 @@ Feature configuration:
 - `availableActionsPath` - path to an array with the available action IDs in the table data row (supports nested objects using dot notation for ex. `prop.nestedProp`).  
 
 ```html
-<spy-table [config]="{
-  dataSource: { ... },
-  columns: [ ... ],
-  rowActions: {
-    enabled: true,
-    actions: [
-      { id: 'edit', title: 'Edit', type: 'edit-action' },
-      { id: 'delete', title: 'Delete', type: 'delete-action' },
-    ],
-    click: 'edit',
-    rowIdPath: 'sku',
-    availableActionsPath: 'path.to.actions',
-  },                                                                                        
-}">
+<spy-table 
+  [config]="{
+    dataSource: { ... },
+    columns: [ ... ],
+    rowActions: {
+      enabled: true,
+      actions: [
+        { id: 'edit', title: 'Edit', type: 'edit-action' },
+        { id: 'delete', title: 'Delete', type: 'delete-action' },
+      ],
+      click: 'edit',
+      rowIdPath: 'sku',
+      availableActionsPath: 'path.to.actions',
+    },                                                                                        
+  }"
+>
 </spy-table>
 ```
 
-## Feature registration
+## Component registration
 
-Register the feature:
+Register the component:
 
 ```ts
+// Dynamic
 @NgModule({
   imports: [
     TableModule.forRoot(),
@@ -58,11 +61,32 @@ Register the feature:
 export class RootModule {}
 ```
 
+```html
+// Via HTML
+@NgModule({
+  imports: [
+    TableModule.forRoot(),
+    TableRowActionsFeatureModule,
+  ],
+})
+export class RootModule {}
+
+<spy-table [config]="config" [events]="{rowActions: logActionTriggered}">
+  <spy-table-row-actions-feature spy-table-feature></spy-table-row-actions-feature>
+</spy-table>
+```
+
 ## Interfaces
 
-Below you can find interfaces for the Table Feature Pagination.
+Below you can find interfaces for the Table Feature Row Actions:
 
 ```ts
+declare module '@spryker/table' {
+  interface TableConfig {
+    rowActions?: TableRowActionsConfig;
+  }
+}
+
 export interface TableRowActionsConfig extends TableFeatureConfig {
   actions?: TableRowActionBase[];
   click?: string;

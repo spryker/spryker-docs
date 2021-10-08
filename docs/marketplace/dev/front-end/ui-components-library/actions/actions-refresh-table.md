@@ -1,15 +1,18 @@
 ---
 title: Actions Refresh Table
-description: This article provides details about the Actions Refresh Table service in the Components Library.
+description: This document provides details about the Actions Refresh Table service in the Components Library.
 template: concept-topic-template
 ---
 
-This article provides details about the Actions Refresh Table service in the Components Library.
+This document explains the Actions Refresh Table service in the Components Library.
 
 ## Overview
 
 Actions Refresh Table is an Angular Service that refreshes data of the Table in current context.
-Check out this example below to see how to use Actions Refresh Table service.
+
+Check out an example usage of the Actions Refresh Table.
+
+Service configuration:
 
 - `type` - an action type.  
 - `tableId` - an `id` of the table that will be refreshed.  
@@ -21,20 +24,14 @@ Check out this example below to see how to use Actions Refresh Table service.
     tableId: 'table-id',
   }"
 >
-  ...
 </spy-button-action>
 ```
 
-## Interfaces
+## Service registration
 
-Below you can find interfaces for Actions Refresh Table.
+Register the service:
 
 ```ts
-export interface RefreshTableActionConfig extends ActionConfig {
-  tableId?: string;
-}
-
-// Service registration
 @NgModule({
   imports: [
     ActionsModule.withActions({
@@ -43,4 +40,14 @@ export interface RefreshTableActionConfig extends ActionConfig {
   ],
 })
 export class RootModule {}
+```
+
+## Interfaces
+
+Below you can find interfaces for Actions Refresh Table:
+
+```ts
+export interface RefreshTableActionConfig extends ActionConfig {
+  tableId?: string;
+}
 ```

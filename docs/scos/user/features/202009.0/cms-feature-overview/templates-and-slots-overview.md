@@ -389,7 +389,7 @@ Currently, the functionality has the following functional constraints which are 
                                 <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\cms-feature-integration.md" class="mr-link">Enable templates and slots in your project by integrating the CMS feature</a></li>
                                 <li><a href="/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html" class="mr-link">Learn how to create a visibility condition</a></li>                
                 <li><a href="/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-cmsblock.html#upgrading-from-version-2---to-version-3--" class="mr-link">Migrate the CmsBlock module from version 2.* to version 3.*</a></li>
-                                <li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-cmsblockstorage.md#upgrading-from-version-1---to-version-2--" class="mr-link">Migrate the CmsBlockStorage module from version 1.* to version 2.*</a></li>
+                                <li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-cmsblockstorage.md#upgrading-from-version-1-to-version-2" class="mr-link">Migrate the CmsBlockStorage module from version 1.* to version 2.*</a></li>
                                                 <li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-cmsblockwidget.md">Migrate the CmsBlockWidget module from version 1.* to version 2.*</a></li>
             </ul>
         </div>

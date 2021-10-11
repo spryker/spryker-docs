@@ -7,11 +7,11 @@ template: concept-topic-template
 ## Overview
 Persistence ACL feature allows to manage authorisation at the database entity level, and even a set of entities (segments). 
 This feature supports a flexible system of inheritance of rights, which simplifies the configuration of access in the system. 
-We will talk about it, as well as about other capabilities of the module below.
+We will talk about it, as well as about other capabilities of the feature below.
 As the name suggests, the Persistence ACL runs in the Persistence layer.
 
 ## Limitations
-The module based on Propel ORM (namely Propel Behavior and Propel Hooks). If you do not use PropelOrm to interact with data in your system, this module will not work.
+The feature based on Propel ORM (namely Propel Behavior and Propel Hooks). If you do not use PropelOrm to interact with data in your system, this feature will not work for you.
 
 ## Module dependency graph
 ![Module dependency graph](https://confluence-connect.gliffy.net/embed/image/b15ac7bf-e35f-4298-90da-b7d0c8227be9.png?utm_medium=live&utm_source=custom)
@@ -48,8 +48,3 @@ During query execution:
 When a query to the database is issued, the query will be intercepted and modified with additional joins to narrow down the result of the query to only the records the are available to the current user.
 If the user tries to perform a restricted action on an Active Record model (such an update, delete or create),
 an `\Spryker\Zed\AclEntity\Persistence\Exception\OperationNotAuthorizedException will be thrown.`
-
-## Learn more
-- Configuration <!---LINK-->
-- Rules and scopes <!---LINK-->
-- Execution flow <!---LINK-->

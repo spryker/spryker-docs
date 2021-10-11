@@ -8,7 +8,7 @@ Query processing flow
 
 The process of selecting and applying a rule for a query and when performing a model action are similar, but still they have some difference.
 If the user does not have enough permissions during query execution, the system will change the query so that the result of executing will be an empty collection.
-![Query execution flow](https://confluence-connect.gliffy.net/embed/image/c84bb011-1c7c-45e7-84b3-f98b2fee8e08.png?utm_medium=live&utm_source=custom)
+![Query processing flow](https://confluence-connect.gliffy.net/embed/image/9f520855-8387-4dda-a028-abe70e11611a.png?utm_medium=live&utm_source=custom)
 
 When processing a query, Persistence ACL will do the following:
 - Find User Roles that have Rules for the Entity from the query and the Operation from the Query.
@@ -73,7 +73,7 @@ ORDER BY `spy_merchant`.`updated_at`;
 The process of processing models actions is generally similar to the process of processing a query, but there are some differences:
 If the user performs unauthorized actions on the Active Record model (create, update or delete), then an exception will be thrown.
 
-![Model action execution flow](https://confluence-connect.gliffy.net/embed/image/c84bb011-1c7c-45e7-84b3-f98b2fee8e08.png?utm_medium=live&utm_source=custom)
+![Model action processing flow](https://confluence-connect.gliffy.net/embed/image/c84bb011-1c7c-45e7-84b3-f98b2fee8e08.png?utm_medium=live&utm_source=custom)
 
 ### Example of create action
 
@@ -99,4 +99,3 @@ The rules with id `1` and `3` filtered out because they don't belong to `Orm\Zed
 The rule with id `2` filtered out because it does not grant `create` permission, so rule ID `4` will apply, and the create operation will be allowed.
 
 If there were no rule with id `4`, a `Spryker\Zed\AclEntity\Persistence\Exception\OperationNotAuthorizedException` would be thrown.
-

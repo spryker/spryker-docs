@@ -57,4 +57,5 @@ The functionality of the composite entity is very similar to the internalized sc
 | Access granted through | Rule | Configuration |
 | Permission mask is defined by | Rule | Inherit from Composite root |
 | Assigned to | User (through the role) | Common for all users |
-| Can inherit permissions from the composite object | No | Yes |
+| Inherit permissions from the composite object | No | Yes |
+| Require additional relation condition | At least `Read` permission rule for the parent | No | 

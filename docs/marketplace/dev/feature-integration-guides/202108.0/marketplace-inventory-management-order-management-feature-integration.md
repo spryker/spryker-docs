@@ -1,6 +1,6 @@
 ---
 title: Marketplace Inventory Management + Order Management feature integration
-last_updated: Dec 16, 2020
+last_updated: Sep 07, 2021
 description: This document describes the process how to integrate the Marketplace Inventory Management + Order Management feature into a Spryker project.
 template: feature-integration-guide-template
 ---
@@ -17,91 +17,10 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Spryker Core | master | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration)  |
-| Inventory Management | master |  [Inventory Management Feature Integration](https://documentation.spryker.com/docs/inventory-management-feature-integration)  |
+| Marketplace Inventory Management | {{page.version}} |  [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-feature-integration.html)  |
+| Marketplace Order Management | {{page.version}} |  [Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-feature-integration.html)  |
 
-### 1) Install the required modules using Composer
-
-Install the required modules:
-
-```bash
-composer require spryker/oms-product-offer-reservation: "^0.1.0" --update-with-dependencies
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that the following modules have been installed:
-
-| MODULE | EXPECTED DIRECTORY |
-|-|-|
-| OmsProductOfferReservation | vendor/spryker/oms-product-offer-reservation |
-| OmsProductOfferReservationGui | vendor/spryker/product-offer-reservation-gui |
-
-{% endinfo_block %}
-
-### 2) Set up the database schema
-
-Adjust the schema definition so entity changes trigger events:
-
-**src/Pyz/Zed/OmsProductOfferReservation/Persistence/Propel/Schema/spy_oms_product_offer_reservation.schema.xml**
-
-```xml
-<?xml version="1.0"?>
-<database xmlns="spryker:schema-01"
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          name="zed"
-          xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
-          namespace="Orm\Zed\OmsProductOfferReservation\Persistence"
-          package="src.Orm.Zed.OmsProductOfferReservation.Persistence">
-
-    <table name="spy_oms_product_offer_reservation">
-        <behavior name="event">
-            <parameter name="spy_oms_product_offer_reservation_all" column="*"/>
-        </behavior>
-    </table>
-
-</database>
-```
-
-Apply database changes and to generate entity and transfer changes:
-
-```bash
-console transfer:generate
-console propel:install
-console transfer:generate
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that the following changes have been applied by checking your database:
-
-| DATABASE ENTITY | TYPE | EVENT |
-|-|-|-|
-| spy_oms_product_offer_reservation | table | created |
-
-{% endinfo_block %}
-
-### 3) Set up transfer objects
-
-Generate transfer changes:
-
-```bash
-console transfer:generate
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that the following changes have been applied in transfer objects:
-
-| TRANSFER | TYPE | EVENT | PATH |
-|-|-|-|-|
-| SpyOmsProductOfferReservationEntity | object | Created | src/Generated/Shared/Transfer/SpyOmsProductOfferReservationEntityTransfer |
-| OmsProductOfferReservationCriteria | object | Created | src/Generated/Shared/Transfer/OmsProductOfferReservationCriteriaTransfer |
-| OmsProductOfferReservation | object | Created | src/Generated/Shared/Transfer/OmsProductOfferReservationTransfer |
-
-{% endinfo_block %}
-
-### 4) Set up behavior
+### 1) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
@@ -113,13 +32,11 @@ Enable the following behaviors by registering the plugins:
 | ProductOfferReservationPostSaveTerminationAwareStrategyPlugin | Prevents generic product availability update for product offers. |  | Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms |
 | ProductOfferReservationProductOfferStockTableExpanderPlugin | Expands product offer stock table with reservations column. |  | Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms |
 
-<details><summary markdown='span'>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
+**src/Pyz/Zed/Oms/OmsDependencyProvider.php**
 
 ```php
 namespace Pyz\Zed\Oms;
 
-use Spryker\Zed\Availability\Communication\Plugin\Oms\AvailabilityReservationPostSaveTerminationAwareStrategyPlugin;
-use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Oms\OmsDependencyProvider as SprykerOmsDependencyProvider;
 use Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms\ProductOfferOmsReservationAggregationPlugin;
 use Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms\ProductOfferOmsReservationReaderStrategyPlugin;
@@ -169,8 +86,6 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
     }
 }
 ```
-
-</details>
 
 {% info_block warningBox "Verification" %}
 

@@ -19,8 +19,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ------ | --------|
-| Marketplace Merchant | dev-master  | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
-| Marketplace Return Management | dev-master | [Marketplace Return Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-return-management-feature-integration.html) |
+| Marketplace Merchant | {{page.version}}  | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
+| Marketplace Return Management | {{page.version}} | [Marketplace Return Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-return-management-feature-integration.html) |
 
 ### 1) Install the required modules using Сomposer
 <!--Provide one or more console commands with the exact latest version numbers of all required modules. If the Composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
@@ -28,7 +28,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker/merchant-sales-returns-rest-api:"^0.2.0" --update-with-dependencies
+composer require spryker/merchant-sales-returns-rest-api:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -59,11 +59,7 @@ Ensure the following transfers have been created:
 
 | TRANSFER | TYPE | EVENT  | PATH  |
 | --------- | ------- | ----- | ------------- |
-| Return.merchantReference | attribute | created | src/Generated/Shared/Transfer/ReturnTransfer |
-| ReturnCollection | class | created | src/Generated/Shared/Transfer/ReturnCollectionTransfer |
-| RestReturnsAttributes | class | created | src/Generated/Shared/Transfer/RestReturnsAttributesTransfer |
-| RestOrderItemsAttributes | class | created | src/Generated/Shared/Transfer/RestOrderItemsAttributesTransfer |
-| ReturnResponse.messages | attribute | created | src/Generated/Shared/Transfer/ReturnResponseTransfer |
+| RestReturnsAttributes.merchantReference | attribute | created |src/Generated/Shared/Transfer/RestReturnsAttributesTransfer |
 
 {% endinfo_block %}
 

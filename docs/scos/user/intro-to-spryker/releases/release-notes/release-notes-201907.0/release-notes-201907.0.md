@@ -42,7 +42,7 @@ When **Gift Cards** are applied, they are treated as a separate payment method. 
 ![Gift Cards reintegration](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image5.png)
 
 **Documentation:**
-Feature documentation: [Gift Cards](/docs/scos/user/features/{{page.version}}/gift-cards-feature-overview.html)
+Feature documentation: [Gift Cards](/docs/scos/user/features/{{site.version}}/gift-cards-feature-overview.html)
 
 ### Scheduled Prices
 Spryker now supports price defining prices that will take effect the next day/week/month at a specific time.
@@ -91,8 +91,8 @@ The Content Manager manages the **Content Items** in the Back Office while the a
 
 **Documentation**:
 
-* [Content Items](https://documentation.spryker.com/2021080/docs/content-items)
-* [Content Item Widgets](https://documentation.spryker.com/2021080/docs/content-item-widgets-201907)
+* [Content Items](/docs/scos/user/features/{{site.version}}/content-items-feature-overview.html)
+* [Content Item Widgets](/docs/scos/user/features/{{site.version}}/content-items-feature-overview.html)
 ***
 ## Spryker Glue REST API
 In this release, we’ve focused on exposing B2B functionality for our **B2B Front End API**.
@@ -102,12 +102,12 @@ In this release, Spryker added the most relevant functionality to help you creat
 ### B2B Login API
 In the B2B context, buyers typically represent a company and act on its behalf. With the B2B Login API, Spryker Commerce OS provides a way for the user to log in not only as a Customer but also as a Company user, member of a Business Unit and with the level of permissions assigned by their organization according to the Company user’s roles.
 
-**Documentation**: [B2B Logging in as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html)
+**Documentation**: [B2B Logging in as Company User](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html)
 
 ### Business on Behalf API
 To impersonate a customer as a Company User, API clients can use the **Business on Behalf API**. It provides REST access to retrieve a list of the Company Users available to the currently logged in user and impersonate them as any user from that list.
 
-**Documentation**: [B2B Logging in as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html)
+**Documentation**: [B2B Logging in as Company User](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html)
 
 ### Company Account API
 In the B2B environment, users are organized in Business Units depending on the scope of their activity in the company for better manageability and accountability. Users also get roles assigned to them depending on their level of responsibility and hierarchy in the organization. The endpoints provided by the **Company Account API** allow you to retrieve Business Unit, Business unit addresses, and Company Roles information.
@@ -125,7 +125,7 @@ Provides a way to authorize access to resources related to the level of permissi
 **Documentation**:
 
 * [Security and Authentication](/docs/scos/dev/glue-api-guides/{{site.version}}/security-and-authentication.html)
-* [B2B Logging in as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html)
+* [B2B Logging in as Company User](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html)
 * [Retrieving Company Role Information](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/retrieving-company-roles.html)
 
 ### Multicart API
@@ -144,7 +144,7 @@ In many cases, you may decide to provide your buyers and users with alternative 
 **Documentation**:
 
 * [Interacting with Third Party Payment Providers via Glue API](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html)
-* [B2B-B2C Checking Out Purchases and Getting Checkout Data](https://documentation.spryker.com/2021080/docs/checking-out-purchases-and-getting-checkout-data)
+* [B2B-B2C Checking Out Purchases and Getting Checkout Data](/docs/scos/dev/glue-api-guides/{{site.version}}/checking-out/checking-out-purchases.html)
 
 Additionally, the following APIs were modified to support B2B use cases (they work now both for B2C and B2B) :
 
@@ -199,7 +199,7 @@ The feature also supports an alternative flow when a customer and salesperson ha
 #### Compatibility Issues:
 Request for Quote v. 2.0.0  does not support bundles
 
-**Documentation**: [Request for Quote](/docs/scos/user/features/{{site.version}}/quotation-process/quotation-process.html)
+**Documentation**: [Request for Quote](/docs/scos/user/features/{{site.version}}/quotation-process-feature-overview.html)
 
 ### Punchout
 This new functionality allows the B2B buyers to access Spryker’s online shop from within their ERP or procurement system.
@@ -222,7 +222,7 @@ Even better - conversation about the order can continue after the order had been
 
 ![Multiple comments](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image2.png)
 
-**Documentation**: [Comments](/docs/scos/user/features/{{page.version}}/comments-feature-overview.html)
+**Documentation**: [Comments](/docs/scos/user/features/{{site.version}}/comments-feature-overview.html)
 
 ### Unique URL for Easy Cart Sharing
 This is a general feature that allows creating and sharing URL for any entity in the Spryker Commerce OS. With the **Persistent Cart Sharing** feature, you can quickly and easily share cart through communication channel like WhatsApp, Slack, or any other messenger, email, or social network.
@@ -240,7 +240,7 @@ Cart in the Preview mode can also be shared with users in your company because i
 ### Other Improvements
 
 * Vault - We introduce the Vault place where you can store valuable information and get it from there by ID in an encrypted form and vice versa
-    **Documentation**: [Vault for Tokens](/docs/scos/user/features/{{site.version}}/spryker-core/spryker-core-feature-overview/vault-for-tokens-overview.html)
+    **Documentation**: [Vault for Tokens](/docs/scos/user/features/{{site.version}}/spryker-core-feature-overview/vault-for-tokens-overview.html)
 
 * Customer Login by Token - Ability to log in to the Spryker Commerce OS by token
     **Documentation**: [Customer Login by Token](/docs/scos/user/features/{{site.version}}/company-account-feature-overview/customer-login-by-token-overview.html)

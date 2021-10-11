@@ -69,7 +69,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 * [CMS Templates & Slots](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html)
 * [CMS Blocks](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-feature-overview.html-block)
 * [CMS Pages](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-feature-overview.html-page)
-* [Content Items](https://documentation.spryker.com/2021080/docs/content-items)
+* [Content Items](/docs/scos/user/features/{{site.version}}/content-items-feature-overview.html)
 
 [**Media Management**](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/file-manager-feature-overview.md):
 
@@ -88,7 +88,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 [**Price**](/docs/scos/user/features/{{site.version}}/prices-feature-overview/prices-feature-overview.html):
 
 * [Autodetect of Currency](/docs/scos/user/features/{{site.version}}/prices-feature-overview/prices-feature-overview.html)
-* [Volume Prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html)
+* [Volume Prices](/docs/scos/user/features/{{site.version}}/prices-feature-overview/volume-prices-overview.html)
 * [Net & Gross Price Mode](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/net-and-gross-prices-management.html)
 * [Scheduled Prices]((/docs/scos/user/features/{{site.version}}/scheduled-prices-feature-overview.html)
 
@@ -138,7 +138,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 
 * [Transactional E-Mail Management](https://documentation.spryker.com/2021080/docs/transactional-email-management)
 * [Newsletter Subscription](https://documentation.spryker.com/2021080/docs/newsletter-subscription)
-* [Back in Stock Notification](https://documentation.spryker.com/2021080/docs/availability-notification)
+* [Back in Stock Notification](/docs/scos/user/features/{{site.version}}/availability-notification-feature-overview.html)
 * [Comment Widget](/docs/scos/user/features/{{site.version}}/comments-feature-overview.html)
 
 [**CRM (Customer Relationship Management)**](/docs/scos/user/features/{{site.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html):
@@ -153,7 +153,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 * [Order Management System (OMS) Matrix](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/oms-order-management-system-matrix.html)
 * [Reorder](/docs/scos/user/features/{{site.version}}/reorder-feature-overview.html)
 <!---* [Order Processing](https://documentation.spryker.com/2021080/docs/order-processing)-->
-* [Reclamations](https://documentation.spryker.com/2021080/docs/reclamations)
+* [Reclamations](/docs/scos/user/features/{{site.version}}/reclamations-feature-overview.html)
 
 [**Inventory Management**](/docs/scos/user/features/{{site.version}}/inventory-management-feature-overview.html):
 
@@ -162,7 +162,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 
 [**Back Office**](https://documentation.spryker.com/2021080/docs/back-office):
 
-* [Back Office Management](/docs/scos/user/features/{{site.version}}/spryker-core-back-office-feature-overview.html)
+* [Back Office Management](/docs/scos/user/features/{{site.version}}/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.html)
 * [Permission & ACL Management](/docs/scos/dev/feature-walkthroughs/{{site.version}}/user-and-rights-overview.html)
 [**Multi-Channel**](/docs/scos/user/features/{{site.version}}/multi-channel/multi-channel.html):
 

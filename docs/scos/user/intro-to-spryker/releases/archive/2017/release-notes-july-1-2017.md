@@ -131,7 +131,7 @@ With this release, we are now introducing a new connector module to handle disco
 | [ProductLabelDiscountConnector 1.0.0](https://github.com/spryker/product-label-discount-connector/releases/tag/1.0.0) | <ul><li>[Discount 4.2.0](https://github.com/spryker/Discount/releases/tag/4.2.0)</li><li>[ProductLabel 1.1.0](https://github.com/spryker/product-label/releases/tag/1.1.0)</li></ul> | [Discount 4.2.1](https://github.com/spryker/Discount/releases/tag/4.2.1) |
 
 **Documentation**
-For relevant documentation, see [Product Label Module Guide](/docs/scos/user/features/{{site.version}}/product-labels-feature-overview.html), [Discount Module Guide](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html)
+For relevant documentation, see [Product Label Module Guide](/docs/scos/user/features/{{site.version}}/product-labels-feature-overview.html), [Discount Module Guide](/docs/scos/user/features/{{site.version}}/promotions-discounts-feature-overview.html)
 
 **Migration Guides**
 To upgrade, follow the steps described below:

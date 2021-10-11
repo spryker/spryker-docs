@@ -42,9 +42,9 @@ In the database layer scope represented as enum
 | segment | 1 |
 | inherited | 2 |
 
-The behavior of the system differs depending on the scope used. Please read the documentation for each of them:
+The behavior of the system differs depending on the scope used. Please read the documentation for each of them:segment-scope.md
 - [Global scope](./global-scope.html)
-- [Segment scope](./segment-scope.md)
+- [Segment scope](./segment-scope.html)
 - [Inherited scope](./inherited-scope.html)
 - [Composite entity](./composite-entity.html)
 

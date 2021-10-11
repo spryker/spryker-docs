@@ -256,7 +256,7 @@ Below you will find the list of the new/updated documentation released as part o
 
 </details>
 
-* [Product Discounts API](https://documentation.spryker.com/2021080/docs/retrieving-discounts)
+* [Product Discounts API](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-promotional-items.html)
 
 <details open>
 <summary>Integration guide</summary>
@@ -269,7 +269,7 @@ Below you will find the list of the new/updated documentation released as part o
 
 </details>
 
-* [Ratings and Reviews API](https://documentation.spryker.com/2021080/docs/retrieving-ratings-and-reviews)
+* [Ratings and Reviews API](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/managing-product-ratings-and-reviews.html)
 
 <details open>
 <summary>Integration guide</summary>
@@ -323,12 +323,12 @@ Below you will find the list of the new/updated documentation released as part o
 
 * Payment Management
     * [Managing Payment Methods](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/payment-methods/managing-payment-methods.html)
-    * [Payment Methods: Reference Information](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/payment-methods/managing-payment-methods.html#reference-information--editing-payment-method-pages)
+    * [Payment Methods: Reference Information](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/payment-methods/managing-payment-methods.html#reference-information-editing-payment-method-pages)
 * [Shipment](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/managing-order-shipments.html)
 
     * [Creating a Carrier Company](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-carrier-companies.html)
     * [Creating and Managing Delivery Methods](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html)
-    * [Delivery Methods: Reference Information](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html#reference-information--creating-delivery-methods)
+    * [Delivery Methods: Reference Information](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html#reference-information-creating-delivery-methods)
  * Warehouses
     * [Creating a Warehouse](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/warehouses/creating-a-warehouse.html)
     * [Managing Warehouses](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/warehouses/managing-warehouses.html)

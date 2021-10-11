@@ -1,11 +1,17 @@
 ---
-title: Vault for Tokens Feature Overview
+title: Vault for Tokens overview
 description: The feature contains two modules where one of them encrypts/decrypts data and the other one - stores and retrieves data from the database
-originalLink: https://documentation.spryker.com/v5/docs/vault-for-tokens-feature-overview
-originalArticleId: ca603806-3a54-4fde-ab5a-3e6fa31e9ec3
+originalLink: https://documentation.spryker.com/v3/docs/vault-for-tokens-feature-overview
+originalArticleId: 74b81715-3f9b-4f34-af9d-30ca5f480597
 redirect_from:
-  - /v5/docs/vault-for-tokens-feature-overview
-  - /v5/docs/en/vault-for-tokens-feature-overview
+  - /2021080/docs/vault-for-tokens-feature-overview
+  - /2021080/docs/en/vault-for-tokens-feature-overview
+  - /docs/vault-for-tokens-feature-overview
+  - /docs/en/vault-for-tokens-feature-overview
+  - /2021080/docs/vault-for-tokens
+  - /2021080/docs/vault-for-tokens
+  - /docs/vault-for-tokens
+  - /docs/vault-for-tokens
 ---
 
 Vault for Tokens provides the functionality to store sensitive data. This feature doesn't have any GUI and consists of two modules: _Spryker.UtilEncryption_ and _Spryker.Vault_. 

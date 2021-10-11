@@ -184,7 +184,7 @@ B2B, B2C demo shops and master suite are covered at the moment.
 
 The following OSs are supported: Linux, Mac, and Windows 10 Pro.
 
-**Documentation**: [Spryker in Docker](https://documentation.spryker.com/2021080/docs/spryker-in-docker-201907)
+**Documentation**: [Spryker in Docker](/docs/scos/dev/the-docker-sdk/{{site.version}}/the-docker-sdk.html)
 ***
 ## B2B
 ### Request for Quote

@@ -21,7 +21,7 @@ Other changes are:
 
 {% info_block infoBox "Info" %}
 
-Keep in mind that `MerchantGui` module migration depends on the [Merchant](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-merchant.html#upgrading-from-version-2---to-version-3--) module migration.
+Keep in mind that `MerchantGui` module migration depends on the [Merchant](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-merchant.html#upgrading-from-version-2-to-version-3) module migration.
 
 {% endinfo_block %}
 

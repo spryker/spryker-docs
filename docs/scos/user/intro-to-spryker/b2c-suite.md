@@ -115,7 +115,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 * [Shipment Carriers & Methods](https://documentation.spryker.com/2021080/docs/shipment-carriers-methods)
 * [Multiple Currencies for Shipments](/docs/scos/user/features/{{site.version}}/shipment/shipment-feature-overview.html)
 * [Shipment Calculation Rules](/docs/scos/user/features/{{site.version}}/shipment-feature-overview.html)
-* [Split Delivery](https://documentation.spryker.com/2021080/docs/split-delivery)
+* [Split Delivery](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/split-delivery-overview.html)
 
 [**Payment**](/docs/scos/user/features/{{site.version}}/payments-feature-overview.html):
 

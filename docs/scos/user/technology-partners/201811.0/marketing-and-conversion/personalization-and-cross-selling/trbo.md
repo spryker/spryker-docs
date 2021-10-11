@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 ## Partner Information
-[ABOUT TRBO](http://uk.trbo.com/) 
+[ABOUT TRBO](https://www.trbo.com/en//) 
 
 Onsite. Realtime. Smart.trbo GmbH is a Munich-based technology company founded in 2013. With its cloud-based communication tool, the company enables online shops and websites to address visitors individually - onsite, in real-time and fully automated. A self-learning algorithm analyzes user behavior based on more than 50 visitor characteristics. This data then allows a targeted delivery of various layers in the design of the online presence, which demonstrably optimize the shopping experience of website visitors. For website operators this means: increased user engagement, lower bounce rates, better conversion rates, fuller shopping baskets and thus more turnover. trbo's customers include airline holidays, Buffalo, Galeria Kaufhof, L'Oréal, Limango, Lodenfrey, Medion, mydays, Rose Bikes and Thomas Cook AG. trbo GmbH is run by Felix Schirl. 
 

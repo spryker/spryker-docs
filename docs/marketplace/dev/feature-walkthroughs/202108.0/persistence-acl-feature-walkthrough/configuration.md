@@ -10,7 +10,7 @@ Persistence ACL functionality is based on the Propel behavior. You can enable th
 
 ## Connect Persistence ACL feature to one or more database tables
 
-Check an example of Persistence ACL connection to a single database table `spy_merchant`.
+In the following code snippet only SpyMerchant entity is configured to be handled by ACL.
 
 ```xml
 <?xml version="1.0"?>
@@ -27,9 +27,18 @@ Check an example of Persistence ACL connection to a single database table `spy_m
 ```
 
 ## Connect Persistence ACL feature to all database tables
-
-Check an example of Persistence ACL connection to all database tables in the project:
-
+In the following example all the entities on the system will be handled by ACL.
+Using such configuration don't forget to use [AllowList configuration](#allow-list-configuration) to exclude entities that are needed by ACL to function properly.
+Provide the list of entities that are needed:
+- `SpyUser`
+- `SpyAclRole`
+- `SpyAclGroup`
+- `SpyAclRule`
+- `SpyAclEntityRule`
+- `SpyUrl`
+- `SpyAclEntitySegment`
+- `SpyAclGroupsHasRoles`
+- `SpyAclUserHasGroup`
 ```xml
 <?xml version="1.0"?>
 <database xmlns="spryker:schema-01"
@@ -48,35 +57,37 @@ Check an example of Persistence ACL connection to all database tables in the pro
 
 The configuration, unlike the rule, is common to the entire system. The main configuration object for the module is `\Generated\Shared\Transfer\AclEntityMetadataConfigTransfer`. Through the plugin system, it can be extended. You just need to create a plugin and implement `\Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityMetadataConfigExpanderPluginInterface`.
 
-`\Generated\Shared\Transfer\AclEntityMetadataConfigTransfer`
+### `\Generated\Shared\Transfer\AclEntityMetadataConfigTransfer`
 
 | PROPERTY | TYPE | DESCRIPTION |
 |-----|-----|-----|
 | aclEntityMetadataCollection | \Generated\Shared\Transfer\AclEntityMetadataCollectionTransfer | The collection of configurations for different entities.|
 | aclEntityAllowList | string[] | The set of fully qualified classes that this module does not apply to (even if the user has rules for an entity that is in the allow list). |
 
-`\Generated\Shared\Transfer\AclEntityMetadataCollectionTransfer`
+### `\Generated\Shared\Transfer\AclEntityMetadataCollectionTransfer`
 
 | PROPERTY | TYPE | DESCRIPTION |
 |-----|-----|-----|
 | collection | \Generated\Shared\Transfer\AclEntityMetadataTransfer[] | The set of configurations for the models. |
 
-`\Generated\Shared\Transfer\AclEntityMetadataTransfer`
+### `\Generated\Shared\Transfer\AclEntityMetadataTransfer`
 
 | PROPERTY | TYPE | DESCRIPTION |
 |-----|-----|-----|
 | parent | \Generated\Shared\Transfer\AclEntityParentMetadataTransfer | This property is used to configure inheritance. Required for entity which has rules with [Inherited scope](rules-and-scopes/inherited-scope.html), or for [Composite entity](rules-and-scopes/composite-entity.html) (See [Inherited scope vs Composite entity](rules-and-scopes/composite-entity.html#inherited-scope-vs-composite-entity)). |
 | entityName | string | Fully qualified class name of configured entity (Propel Entity). |
-| hasSegmentTable | bool | Sets if configured entity supports segmentation (see [Segment scope documentation](rules-and-scopes/segment-scope.htmlSets the default binary access mask)). |
+| hasSegmentTable | bool | Sets if configured entity supports segmentation (see [Segment scope documentation](rules-and-scopes/segment-scope.html). |
 | defaultGlobalOperationMask | int | Sets the default binary access mask (see [Execution flow](execution-flow.html) documentation). |
 | isSubentity | bool | Indicates whether the configured entity is part of a composite object (see [Composite entity](rules-and-scopes/composite-entity.html) documentation). |
 
-`\Generated\Shared\Transfer\AclEntityParentMetadataTransfer`
+### `\Generated\Shared\Transfer\AclEntityParentMetadataTransfer`
 
 | PROPERTY | TYPE | DESCRIPTION |
 |-----|-----|-----|
 | connection | \Generated\Shared\Transfer\AclEntityParentConnectionMetadata | This property is used to set up the relationship between the current class and the parent. |
 | entityName | string | Fully qualified class name of parent entity |
+
+### `\Generated\Shared\Transfer\AclEntityParentConnectionMetadataTransfer`
 
 Sometimes, foreign keys are not used to link the child and parent tables, but rather "reference columns". As a result, a `/Generated/Shared/Transfer/AclEntityParentConnectionMetadataTransfer` is available.
 

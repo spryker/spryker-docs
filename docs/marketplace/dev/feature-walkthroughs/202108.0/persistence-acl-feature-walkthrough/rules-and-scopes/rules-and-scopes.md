@@ -40,6 +40,12 @@ In the database layer scope represented as enum:
 | segment | 1 |
 | inherited | 2 |
 
+The behavior of the system differs depending on the scope used. Please read the documentation for each of them:segment-scope.md
+- [Global scope](./global-scope.html)
+- [Segment scope](./segment-scope.html)
+- [Inherited scope](./inherited-scope.html)
+- [Composite entity](./composite-entity.html)
+
 ## Default rule
 
 If a user performs any operation on an entity for which he has no rules, the default rule is triggered. The default rule can be configured both within a specific class and in a general context. 

@@ -6,7 +6,7 @@ template: concept-topic-template
 ## Query processing flow
 Performing model actions and selecting and applying rules for a query share some similarities, but they have some differences as well. A user with insufficient permissions during query execution will be forced to run a query that results in an empty collection when the system executes the query.
 
-![Query execution flow](https://confluence-connect.gliffy.net/embed/image/c84bb011-1c7c-45e7-84b3-f98b2fee8e08.png?utm_medium=live&utm_source=custom)
+![Query processing flow](https://confluence-connect.gliffy.net/embed/image/9f520855-8387-4dda-a028-abe70e11611a.png?utm_medium=live&utm_source=custom)
 
 Persistence ACL will do the following when processing a query:
 
@@ -72,7 +72,7 @@ Model actions are generally handled the same way as queries, but there are certa
 
 Exceptions are thrown if a user performs unauthorized actions on the Active Record model (create, update or delete).
 
-![Model action execution flow](https://confluence-connect.gliffy.net/embed/image/c84bb011-1c7c-45e7-84b3-f98b2fee8e08.png?utm_medium=live&utm_source=custom)
+![Model action processing flow](https://confluence-connect.gliffy.net/embed/image/c84bb011-1c7c-45e7-84b3-f98b2fee8e08.png?utm_medium=live&utm_source=custom)
 
 ### Example of the create action
 

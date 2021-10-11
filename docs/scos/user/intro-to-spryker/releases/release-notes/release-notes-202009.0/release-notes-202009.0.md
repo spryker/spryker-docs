@@ -57,7 +57,7 @@ When creating a return, a Customer can see all the relevant return information s
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image6.png)
 
 #### Documentation
-[Quotation Process & RFQ](/docs/scos/user/features/{{site.version}}/quotation-process/quotation-process.html)
+[Quotation Process & RFQ](/docs/scos/user/features/{{site.version}}/quotation-process-feature-overview.html)
 
 ### Product Relations per Store
 We have enhanced our multi-store feature with a new product management functionality.

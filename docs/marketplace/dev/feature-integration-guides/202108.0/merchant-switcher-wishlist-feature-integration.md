@@ -1,7 +1,7 @@
 ---
 title: Merchant Switcher + Wishlist feature integration
-last_updated: Dec 16, 2020
-description: This document describes the process how to integrate the Merchant Switcher + Wishlist feature  into a Spryker project.
+last_updated: Oct 08, 2021
+description: This document describes the process how to integrate the Merchant Switcher + Wishlist feature into a Spryker project.
 template: feature-integration-guide-template
 ---
 
@@ -9,7 +9,7 @@ This document describes how to integrate the Merchant Switcher + Wishlist featur
 
 ## Install feature core
 
-Follow the steps below to install the Merchant Switcher + Wishlist feature  core.
+Follow the steps below to install the Merchant Switcher + Wishlist feature core.
 
 ### Prerequisites
 
@@ -26,8 +26,8 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| SingleMerchantWishlistReloadItemsPlugin | Expands `WishlistItemMetaFormType` with hidden fields for `merchant_reference` and `product_offer_reference`. |  | Spryker\Zed\MerchantSwitcher\Communication\Plugin\Wishlist |
-| SingleMerchantWishlistItemsValidatorPlugin | Expands `WishlistItemMetaFormType` with hidden fields for `merchant_reference` and `product_offer_reference`. |  | Spryker\Zed\MerchantSwitcher\Communication\Plugin\Wishlist |
+| SingleMerchantWishlistReloadItemsPlugin | Expands `WishlistItemMetaFormType` with the hidden fields for the `merchant_reference` and the `product_offer_reference`. |  | Spryker\Zed\MerchantSwitcher\Communication\Plugin\Wishlist |
+| SingleMerchantWishlistItemsValidatorPlugin | Expands `WishlistItemMetaFormType` with the hidden fields for the `merchant_reference` and the `product_offer_reference`. |  | Spryker\Zed\MerchantSwitcher\Communication\Plugin\Wishlist |
 
 ```php
 <?php

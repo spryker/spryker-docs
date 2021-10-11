@@ -4,23 +4,20 @@ last_updated: Sep 14, 2021
 template: concept-topic-template
 ---
 
-![Composite entity](https://confluence-connect.gliffy.net/embed/image/e57de4b7-b231-4e9b-8e5f-7cf64ed78874.png?utm_medium=live&utm_source=custom)
-
-Some Domain Entities represented by multiple tables in the database.
-In order to make the feature usable, CompositeEntity concept introduced:
-A Composite entity consists of one Main Entity and one or more SubEntities.
-Access granted implicitly. One AclEntityRule for Main Entity will grant access to all its Sub Entities.
-A Sub Entity cannot be used in AclEntityRule or Segment as a standalone one.
+There are some Domain Entities represented by multiple tables in the database. To make the feature usable, the CompositeEntity concept was introduced: Composite entities consist of one Main Entity and one or more SubEntities. Access is granted implicitly. An AclEntityRule for the Main Entity will grant access to all its Sub Entities. Sub Entities cannot be used as standalone entities in an AclEntityRule or Segment.
 
 Composite entity examples:
-- ProductAbstract
-    - ProductAbstract + ProductConcrete + ProductPrice + ProductImage + ProductOptions
-- Merchant
-    - Merchant + MerchantProfile + MerchantUser + MerchantStore
-- Order
-    - Order + OrderItems + OrderTotals
 
-If the user makes a request for a sub entity, the main entity will be joined, and the rules for the main entity will be applied.
+- ProductAbstract
+  - ProductAbstract + ProductConcrete + ProductPrice + ProductImage + ProductOptions
+- Merchant
+  - Merchant + MerchantProfile + MerchantUser + MerchantStore
+- Order
+  - Order + OrderItems + OrderTotals
+
+![Composite entity](https://confluence-connect.gliffy.net/embed/image/e57de4b7-b231-4e9b-8e5f-7cf64ed78874.png?utm_medium=live&utm_source=custom)
+
+If a user requests a sub entity, the main entity will be joined, and the rules for the main entity will apply.
 
 `spy_acl_entity_rule`
 
@@ -34,12 +31,12 @@ If the user makes a request for a sub entity, the main entity will be joined, an
 |-----|-----|-----|
 | 18 | Merchant Video King | merchant-video-king |
 
-Query before Persistence ACL
+Query before the Persistence ACL:
 ```sql
 SELECT * FROM `spy_merchant_profile`;
 ```
 
-Query after Persistence ACL
+Query after the Persistence ACL:
 ```sql
 SELECT `spy_merchant_profile`.* 
 FROM `spy_merchant_profile`
@@ -49,10 +46,10 @@ FROM `spy_merchant_profile`
       AND `spy_acl_entity_segment_merchant`.`fk_acl_entity_segment` IN (18)); 
 ```
 
-The functionality of the composite entity is very similar to the internalized scope, however, it has some differences.
+Although the composite entity has similar functionality to the internalized scope, there are some differences.
 
 ## Inherited scope vs Composite entity 
-| | Inherited scope | Composite entity |
+| FUNCTIONALITY | INHERITED SCOPE | COMPOSITE ENTITY |
 |-----|-----|-----|
 | Access granted through | Rule | Configuration |
 | Permission mask is defined by | Rule | Inherit from Composite root |

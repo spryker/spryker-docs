@@ -5,17 +5,18 @@ template: concept-topic-template
 ---
 
 ![Inherited scope](https://confluence-connect.gliffy.net/embed/image/e473a9ca-2eb7-481d-b0c4-72d2563ec466.png?utm_medium=live&utm_source=custom)
-Inherited scope rules used when you need to grant access to an entity (child) that inherits from another entity (parent).
-Here are some examples of inheritance:
+Inherited scope rules apply when you need to grant access to an entity (child) that inherits from another entity (parent). Here are a few examples of inheritance:
+
 - MerchantProductAbstracts → Merchants (through `MerchantProductAbstract.fk_merchant`)
 - MerchantSalesOrders → Merchants (through `MerchantSalesOrder.merchant_reference`)
 - Shipments → Orders (through `Shipment.order_reference`)
 
-Inheritance rules (child → parent relation) set in the configuration (learn more about [Persistence ACL configuration](../configuration.html)).
+Inheritance rules (child-parent relationship) are set in the configuration (read more about [Persistence ACL configuration](../configuration.html)).
 
-Inherited scope functionality has one feature: it is enough to have **read** access right to the parent for successful inheritance for any operation (create/read/update/delete). 
+Inherited scope functionality has one unique feature: it is sufficient to have **read** access to the parent for successful inheritance for any operation (create/read/update/delete).
 
-Let's look at an example where a user has a configuration where SpyMerchantProductAbstract inherits from SpyMerchant, and the user has 2 rules:
+Here is an example where a user has a configuration where `SpyMerchantProductAbstract` inherits from `SpyMerchant`, and the user has 2 rules:
+
 - inherited for `MerchantProductAbstract`
 - segment for `Merchant`
 
@@ -38,12 +39,12 @@ Let's look at an example where a user has a configuration where SpyMerchantProdu
 |-----|-----|
 | 112 | 5 |
 
-Query before Persistence ACL
+Query before the Persistence ACL:
 ```sql
 SELECT * FROM `spy_merchant_product_abstract` ORDER BY `updated_at` DESC;
 ```
 
-Query after Persistence ACL
+Query after the Persistence ACL:
 ```sql
 SELECT `spy_merchant_product_abstract`.* 
 FROM `spy_merchant_product_abstract`
@@ -54,11 +55,10 @@ FROM `spy_merchant_product_abstract`
 ORDER BY `spy_merchant_product_abstract`.`updated_at` DESC; 
 ```
 
-It is very important to understand that permissions checked in the context of roles. 
-The rules of one role do not affect the rules of another (learn more about [Execution Flow](../execution-flow.html)).
-Below is an example with two roles:
-1. DE product manager (Full CRUD for products in DE store)
-2. US product viewer (View only for products in US store)
+It is very important to understand that permissions are checked in the context of roles. Rules of one role do not affect the rules of another (learn more about [Execution Flow](../execution-flow.html)). Below is an example of two roles:
+
+1. DE product manager (Full CRUD for products in the DE store)
+2. US product viewer (View only for products in the US store)
 
 `spy_acl_role`
 
@@ -80,11 +80,10 @@ Below is an example with two roles:
 | 7 | null | 2 | `Orm\Zed\Product\Persistence\SpyProductAbstractStore` | 1  | 2 |
 | 8 | 2 | 2 | `Orm\Zed\Store\Persistence\SpyStore` | 1  | 1 |
 
-Note that rules with IDs 1, 2, 3 and 4 refer to one role (`fk_acl_role`: 1), and 5, 6, 7 and 8 to another (` fk_acl_role`: 2).
-When a user has both roles and performs Update on a Product, the Persistence ACL engine will do the following:
-- it will only find role #1 (because it has a rule that allows to update a product)
-- the role #2 will not be taken into consideration at all as this role doesn't allow to update products.
-  The context of a rule is limited by the role to which it is bound.
-  That is why a user with such set of roles and rules will be able to
-- Perform CRUD actions for products in the DE store
-- Read only for products in the US store
+Rules with IDs 1, 2, 3 and 4 refer to one role (fk_acl_role: 1), and rules with IDs 5, 6, 7 and 8 to another (fk_acl_role: 2). When a user has both roles and performs Update on a Product, the Persistence ACL engine will perform the following:
+- it will only find role #1 (since it has a rule for updating a product)
+- the role #2 will not be considered at all since it does not allow products to be updated. 
+  The context of a rule is determined by the role to which it is attached. 
+  Because of this, a user with such a set of roles and rules will be able to:
+- perform CRUD actions for products in the DE store.
+- have read-only permissions for products in the US store.

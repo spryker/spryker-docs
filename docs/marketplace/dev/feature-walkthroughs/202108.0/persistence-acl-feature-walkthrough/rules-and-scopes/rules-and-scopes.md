@@ -4,14 +4,11 @@ last_updated: Sep 14, 2021
 template: concept-topic-template
 ---
 
-The functionality of this feature based on such fundamental concepts as Rule and Configuration.
-It is very important to understand that the rule, in contrast to the configuration, which is common for the system,
-is tied to the user (more precisely to his roles) and determines the user's rights regarding the entity.
+The functionality of this feature is based on such fundamental concepts as Rule and Configuration.
+It is important to understand that the rule, in contrast to the configuration, is tied to the user (and his role) and determines the user's rights towards the entity.
 
 ## Rule
-One of the fundamental concepts of the Persistence ACL module is an entity rule.
-It is the rule that determines the capabilities and permissions of the current user.
-The rule is an entry in the `spy_acl_entity_rule` table.
+One of the fundamental concepts of the Persistence ACL module is an entity rule. It determines the capabilities and permissions of the current user. The rule is an entry in the `spy_acl_entity_rule` table.
 
 | Column | Description | Data example |
 |-----|-----|-----|
@@ -23,18 +20,19 @@ The rule is an entry in the `spy_acl_entity_rule` table.
 | scope | There are 3 types of rules: Global, Segment and Inherited. Their features and differences are described below | `AclEntityConstants::SCOPE_GLOBAL`, `AclEntityConstants::SCOPE_SEGMENT`, `AclEntityConstants::SCOPE_INHERITED` |
 
 ## Scope
-The concept of scopes is very flexible. It allows you to create any rules to suit the needs of your system. For example:
-- Grant read-only access to "All Products"
-- Grant read-write access to "All Products"
-- Grant read-write to "All Products in DE store"
-- Grant read-write to "All Products in DE store" and read-only to "All Products"
-- Grant read-write to "All Orders, Products, Offers of Merchant VideoKing"
-- Grant read access to "All Users that have Orders of Merchant VideoKing"
-- Grant read access to "All Shipments that are connected to Orders of Merchant VideoKing"
-- Grant read-write for "Products that have  prices >= 1000$" and read-only for "All Products"
+The concept of scopes is very flexible. It allows you to create any rules that suit the needs of your system. For example:
+
+- Grant read-only access to "All Products".
+- Grant read-write access to "All Products".
+- Grant read-write to "All Products in DE store".
+- Grant read-write to "All Products in DE store" and read-only to "All Products".
+- Grant read-write to "All Orders, Products, Offers of Merchant VideoKing".
+- Grant read access to "All Users that have Orders of Merchant VideoKing".
+- Grant read access to "All Shipments that are connected to Orders of Merchant VideoKing".
+- Grant read-write for "Products that have  prices >= 1000$" and read-only for "All Products".
 
 As mentioned above, there are 3 types of scopes: `global`, `segment` and `inherited`.
-In the database layer scope represented as enum
+In the database layer scope represented as enum:
 
 | Scope | Database value |
 |-----|-----|
@@ -44,18 +42,21 @@ In the database layer scope represented as enum
 
 ## Default rule
 
-When a user performs any operations with an entity for which he has no rules, the default rule triggered.
-The default rule can be configured both in the context of a specific class and in a general context.
-The class context takes precedence over the general context.
-This feature is especially in demand when the Persistence ACL feature connected to all database tables at once (See [configuration](../configuration.html#connect-persistence-acl-feature-to-all-tables) for details).
-Thus, you can define such publicly available entities as `Country`, `Currency`, `Region`, etc.
-The configuration of the default rule described in the [configuration section](../configuration.html).
+If a user performs any operation on an entity for which he has no rules, the default rule is triggered. The default rule can be configured both within a specific class and in a general context. 
 
-**_The default rule for global context is recommended to keep as 0 (no permission at all), this will ensure the sensitive data is protected by default._**
+A class context takes precedence over a general context. Persistence ACL feature is especially useful when all database tables are connected simultaneously (See [configuration](../configuration.html#connect-persistence-acl-feature-to-all-tables) for details). Thus, you can define publicly available entities such as `Country`, `Currency`, `Region`, etc. 
+
+The default rule configuration is described in the [configuration section](../configuration.html).
+
+{% info_block infoBox "Info" %}
+
+We recommend keeping the default permission for global context as 0 (no permission at all), which will ensure that sensitive data is protected by default.
+
+{% endinfo_block %}
 
 ## Permission concept
 Permission mask (`spy_acl_entity_rule.permission_mask)` is a binary representation of the operations that this rule allows.
-Each CRUD operation has its own binary mask.
+Every CRUD operation has its own binary mask.
 
 | Operation | Binary mask | Integer representation |
 |-----|-----|-----|

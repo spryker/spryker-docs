@@ -4,11 +4,14 @@ last_updated: Sep 14, 2021
 template: concept-topic-template
 ---
 
-Persistence ACL feature based functionality on Propel behavior. It's possible to enable the feature in 2 ways:
-- Connect the feature to one or several tables in the database
-- Connect the feature to all tables in the database
+Persistence ACL functionality is based on the Propel behavior. You can enable the feature in two different ways:
+- [Create a connection with one or more database tables](#connect-persistence-acl-feature-to-one-or-more-database-tables).
+- [Connect the feature to all database tables](#connect-persistence-acl-feature-to-all-database-tables).
 
-## Connect Persistence ACL feature to one or several tables
+## Connect Persistence ACL feature to one or more database tables
+
+Check an example of Persistence ACL connection to a single database table `spy_merchant`.
+
 ```xml
 <?xml version="1.0"?>
 <database xmlns="spryker:schema-01" 
@@ -23,7 +26,10 @@ Persistence ACL feature based functionality on Propel behavior. It's possible to
 </database>
 ```
 
-## Connect Persistence ACL feature to all tables
+## Connect Persistence ACL feature to all database tables
+
+Check an example of Persistence ACL connection to all database tables in the project:
+
 ```xml
 <?xml version="1.0"?>
 <database xmlns="spryker:schema-01"
@@ -34,33 +40,32 @@ Persistence ACL feature based functionality on Propel behavior. It's possible to
           package="src.Orm.Zed.AclEntity.Persistence">
     <behavior name="\Spryker\Zed\AclEntity\Persistence\Propel\Behavior\AclEntityBehavior"/>
 </database>
-
 ```
+
 ## Feature configuration
+
 ![Configuration entity relation diagram](https://confluence-connect.gliffy.net/embed/image/f2309504-8638-419d-abf9-783bc45c8792.png?utm_medium=live&utm_source=custom)
-The configuration, unlike the rule, is common to the system.
-The main configuration object of the module is `\Generated\Shared\Transfer\AclEntityMetadataConfigTransfer`.
-It's available for extension through the plugin system.
-All you need is create a plugin and implement `\Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityMetadataConfigExpanderPluginInterface`.
+
+The configuration, unlike the rule, is common to the entire system. The main configuration object for the module is `\Generated\Shared\Transfer\AclEntityMetadataConfigTransfer`. Through the plugin system, it can be extended. You just need to create a plugin and implement `\Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityMetadataConfigExpanderPluginInterface`.
 
 `\Generated\Shared\Transfer\AclEntityMetadataConfigTransfer`
 
-| property | type | description |
+| PROPERTY | TYPE | DESCRIPTION |
 |-----|-----|-----|
-| aclEntityMetadataCollection | `\Generated\Shared\Transfer\AclEntityMetadataCollectionTransfer` | The collection of configurations for different entities. |                                                                                                                           | 
+| aclEntityMetadataCollection | \Generated\Shared\Transfer\AclEntityMetadataCollectionTransfer | The collection of configurations for different entities.|
 | aclEntityAllowList | string[] | The set of fully qualified classes that this module does not apply to (even if the user has rules for an entity that is in the allow list). |
 
 `\Generated\Shared\Transfer\AclEntityMetadataCollectionTransfer`
 
-| property | type | description |
+| PROPERTY | TYPE | DESCRIPTION |
 |-----|-----|-----|
-| collection | `\Generated\Shared\Transfer\AclEntityMetadataTransfer[]` | The set of configurations for the models. |
+| collection | \Generated\Shared\Transfer\AclEntityMetadataTransfer[] | The set of configurations for the models. |
 
 `\Generated\Shared\Transfer\AclEntityMetadataTransfer`
 
-| property | type | description |
+| PROPERTY | TYPE | DESCRIPTION |
 |-----|-----|-----|
-| parent | `\Generated\Shared\Transfer\AclEntityParentMetadataTransfer` | This property is used to configure inheritance. Required for entity which has rules with [Inherited scope](rules-and-scopes/inherited-scope.html), or for [Composite entity](rules-and-scopes/composite-entity.html) (See [Inherited scope vs Composite entity](rules-and-scopes/composite-entity.html#inherited-scope-vs-composite-entity)). |
+| parent | \Generated\Shared\Transfer\AclEntityParentMetadataTransfer | This property is used to configure inheritance. Required for entity which has rules with [Inherited scope](rules-and-scopes/inherited-scope.html), or for [Composite entity](rules-and-scopes/composite-entity.html) (See [Inherited scope vs Composite entity](rules-and-scopes/composite-entity.html#inherited-scope-vs-composite-entity)). |
 | entityName | string | Fully qualified class name of configured entity (Propel Entity). |
 | hasSegmentTable | bool | Sets if configured entity supports segmentation (see [Segment scope documentation](rules-and-scopes/segment-scope.htmlSets the default binary access mask)). |
 | defaultGlobalOperationMask | int | Sets the default binary access mask (see [Execution flow](execution-flow.html) documentation). |
@@ -68,23 +73,25 @@ All you need is create a plugin and implement `\Spryker\Zed\AclEntityExtension\D
 
 `\Generated\Shared\Transfer\AclEntityParentMetadataTransfer`
 
-| property | type | description |
+| PROPERTY | TYPE | DESCRIPTION |
 |-----|-----|-----|
-| connection | `\Generated\Shared\Transfer\AclEntityParentConnectionMetadata` | This property is used to set up the relationship between the current class and the parent. |
+| connection | \Generated\Shared\Transfer\AclEntityParentConnectionMetadata | This property is used to set up the relationship between the current class and the parent. |
 | entityName | string | Fully qualified class name of parent entity |
 
-Sometimes the links between the child and parent tables established not through foreign keys, but using so-called "reference columns".
-There is a `\Generated\Shared\Transfer\AclEntityParentConnectionMetadataTransfer` to cover such a case.
+Sometimes, foreign keys are not used to link the child and parent tables, but rather "reference columns". As a result, a `/Generated/Shared/Transfer/AclEntityParentConnectionMetadataTransfer` is available.
 
 `\Generated\Shared\Transfer\AclEntityParentConnectionMetadataTransfer`
 
-| property | type | description |
+| PROPERTY | TYPE | DESCRIPTION |
 |-----|-----|-----|
 | reference | string | Current class field. |
 | referencedColumn | string | Parent class field.        |
 
 ## Example of configuration
 ### Basic inheritance configuration
+
+Below you can find an example of the basic inheritance configuration:
+
 ```php
     /**
      * @param \Generated\Shared\Transfer\AclEntityMetadataConfigTransfer $aclEntityMetadataConfigTransfer
@@ -131,6 +138,9 @@ There is a `\Generated\Shared\Transfer\AclEntityParentConnectionMetadataTransfer
 ```
 
 ### The inheritance through the reference column
+
+Below you can find an example of the inheritance configuration through the reference column:
+
 ```php
     /**
     * @param \Generated\Shared\Transfer\AclEntityMetadataConfigTransfer $aclEntityMetadataConfigTransfer
@@ -163,6 +173,9 @@ There is a `\Generated\Shared\Transfer\AclEntityParentConnectionMetadataTransfer
 ```
 
 ### Composite entity
+
+Below you can find an example of the composite entity configuration:
+
 ```php
     /**
     * @param \Generated\Shared\Transfer\AclEntityMetadataConfigTransfer $aclEntityMetadataConfigTransfer
@@ -211,6 +224,9 @@ There is a `\Generated\Shared\Transfer\AclEntityParentConnectionMetadataTransfer
 ```
 
 ### Data segmentation support
+
+Below you can find an example of the data segmentation:
+
 ```php
     /**
      * @param \Generated\Shared\Transfer\AclEntityMetadataConfigTransfer $aclEntityMetadataConfigTransfer
@@ -231,6 +247,9 @@ There is a `\Generated\Shared\Transfer\AclEntityParentConnectionMetadataTransfer
 ```
 
 ### Default operation mask
+
+Below you can find an example of the default operation mask:
+
 ```php
     /**
      * @param \Generated\Shared\Transfer\AclEntityMetadataConfigTransfer $aclEntityMetadataConfigTransfer
@@ -259,6 +278,9 @@ There is a `\Generated\Shared\Transfer\AclEntityParentConnectionMetadataTransfer
 ```
 
 ### Allow list configuration
+
+A sample allowing list configuration is shown below:
+
 ```php
     /**
      * @param \Generated\Shared\Transfer\AclEntityMetadataConfigTransfer $aclEntityMetadataConfigTransfer

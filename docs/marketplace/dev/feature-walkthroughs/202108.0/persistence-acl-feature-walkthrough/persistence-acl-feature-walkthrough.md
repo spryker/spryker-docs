@@ -5,15 +5,17 @@ template: concept-topic-template
 ---
 
 ## Overview
-Persistence ACL feature allows to manage authorisation at the database entity level, and even a set of entities (segments). 
-This feature supports a flexible system of inheritance of rights, which simplifies the configuration of access in the system. 
-We will talk about it, as well as about other capabilities of the module below.
-As the name suggests, the Persistence ACL runs in the Persistence layer.
+With the Persistence ACL feature, you may manage authorization at the database entity level, or even within a set of entities (segments).  This feature enables a flexible system of inheritance of rights, simplifying the configuration of access. 
+
+Next, we will discuss the peculiarities and capabilities of the module. The Persistence ACL runs in the Persistence layer, as its name suggests.
 
 ## Limitations
-The module based on Propel ORM (namely Propel Behavior and Propel Hooks). If you do not use PropelOrm to interact with data in your system, this module will not work.
+The module is based on the Propel ORM (namely Propel Behavior and Propel Hooks). If you are not using `PropelOrm` to interact with data in your system, this module will not work.
 
 ## Module dependency graph
+
+The module dependency graph and table below lists the main modules of the Persistence ACL feature and their interaction.
+
 ![Module dependency graph](https://confluence-connect.gliffy.net/embed/image/b15ac7bf-e35f-4298-90da-b7d0c8227be9.png?utm_medium=live&utm_source=custom)
 
 | MODULE | DESCRIPTION |
@@ -22,32 +24,45 @@ The module based on Propel ORM (namely Propel Behavior and Propel Hooks). If you
 | AclExtension | `Spryker\Zed\AclExtension\Dependency\Plugin\AclRolePostSavePluginInterface` used to save `AclEntityRules` for `AclRole`.|
 | AclEntityDataImport | `AclEntityRule` and `AclEntitySegment` are used for the data imports. |
 | AclEntityExtension |  `\Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityDisablerPluginInterface` used in `\Spryker\Zed\AclEntity\Business\AclEntityFacade::isActive()` to determine if feature enabled. <br /> `\Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityMetadataConfigExpanderPluginInterface` used in `\Spryker\Zed\AclEntity\Business\AclEntityFacade::getAclEntityMetadataConfig()` to expand the module configuration. |
-| PropelOrm | The module used as a container for Propel library. |
+| PropelOrm | The module is used as a container for Propel library. |
 | User | `\Spryker\Zed\User\Business\UserFacade::hasCurrentUser()` used to check if the user is logged in. <br /> `\Spryker\Zed\User\Business\UserFacade::getCurrentUser()` used to determine `AclEntityRules` which should be considered during query processing. |
 
 ## Domain model
+
+The following schema illustrates the Persistance ACL domain model:
+
 ![Domain model](https://confluence-connect.gliffy.net/embed/image/4fe4c0ba-1192-4aca-97f8-d996dfccc583.png?utm_medium=live&utm_source=custom)
 
 ## How it works
 ![The module in application layers](https://confluence-connect.gliffy.net/embed/image/13f16eaa-9491-43ab-887d-0004c716eef4.png?utm_medium=live&utm_source=custom)
-Persistence ACL supports permission check for both: when executing queries and when performing actions on Active Record models.
-After installation and configuration, code injected into the Active Record model and Query classes that checks the user's permissions for appropriate actions.
-The module is based on Propel hooks.
 
-**_Important: if you execute quires to the database outside of Propel API, they WILL NOT be handled by Persistence ACL_**
+Persistence ACL supports permission checks both when executing queries and when performing actions on Active Record models. Upon installation and configuration, code is injected into the Active Record model and Query classes that checks the user's permissions for appropriate actions. This module uses Propel hooks.
 
-The following hooks used during model operations:
+{% info_block warningBox "Important!" %}
+
+If you execute queries outside of Propel API, they WILL NOT be handled by Persistence ACL
+
+{% endinfo_block %}
+
+During model operations, the following hooks are used:
+
 - preInsert
+
 - preUpdate
+
 - preDelete
-During query execution:
+
+  
+
+  Query execution is performed using the following hooks:
+
 - preSelectQuery
+
 - preUpdateQuery
+
 - preDeleteQuery
 
-When a query to the database is issued, the query will be intercepted and modified with additional joins to narrow down the result of the query to only the records the are available to the current user.
-If the user tries to perform a restricted action on an Active Record model (such an update, delete or create),
-an `\Spryker\Zed\AclEntity\Persistence\Exception\OperationNotAuthorizedException will be thrown.`
+A query sent to the database is intercepted and modified with additional joins to limit the results of the query to only those records available to the current user. If the user attempts to perform a restricted action on an Active Record model (such as updating, deleting, or creating), an `\Spryker\Zed\AclEntity\Persistence\Exception\OperationNotAuthorizedException` is thrown.
 
 ## Learn more
 - Configuration <!---LINK-->

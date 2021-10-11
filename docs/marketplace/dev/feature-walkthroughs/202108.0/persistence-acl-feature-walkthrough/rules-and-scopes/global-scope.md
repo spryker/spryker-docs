@@ -4,11 +4,11 @@ last_updated: Sep 14, 2021
 template: concept-topic-template
 ---
 
-![Global scope](https://confluence-connect.gliffy.net/embed/image/61268adb-9b3c-46f4-a83c-ed5862420298.png?utm_medium=live&utm_source=custom)
+Global scope rules apply to an entire collection of entities (e.g. Users, Orders, etc.).
 
-The global scope rules applied globally to an entire entity collection (e.g Users, Orders. etc).
-If the user has a global rule with the corresponding permission, then Persistence ACL will not restrict the user in his actions at all.
-If the current user has a global scope rule with the appropriate permission, the original query to the database will remain unchanged.
+As long as the user has the corresponding global rule with permissions, the Persistence ACL will not restrict the user from performing their actions. Accordingly, if the current user has the appropriate permission on a global scope rule, the database query will remain unchanged.
+
+![Global scope](https://confluence-connect.gliffy.net/embed/image/61268adb-9b3c-46f4-a83c-ed5862420298.png?utm_medium=live&utm_source=custom)
 
 `spy_acl_entity_rule`
 
@@ -16,12 +16,12 @@ If the current user has a global scope rule with the appropriate permission, the
 |-----|-----|-----|-----|-----|
 | null | 15  | `Orm\Zed\Sales\Persistence\SpySalesOrder` | `AclEntityConstants::OPERATION_MASK_READ` | `AclEntityConstants::SCOPE_GLOBAL` |
 
-Query before Persistence ACL
+Query before the Persistence ACL:
 ```sql
 SELECT * FROM `spy_sales_order` ORDER BY `updated_at` DESC;
 ```
 
-Query after Persistence ACL
+Query after the Persistence ACL:
 ```sql
 SELECT * FROM `spy_sales_order` ORDER BY `updated_at` DESC;
 ```

@@ -1,17 +1,24 @@
 ---
-title: Marketplace Merchant Portal Core feature
-description:
-template: concept-topic-template
+title: Marketplace Merchant Portal Core feature walkthrough
+description: Marketplace MerchantPortal Core enables server configuration and the basic functionality of the Merchant Portal such as security login.
+template: feature-walkthrough-template
 ---
 
-Follow the [Marketplace Merchant Portal Core feature integration guide](/docs/marketplace/dev/feature-integration-guides/202108.0/marketplace-merchant-portal-core-feature-integration.html) to install the Marketplace Merchant Portal Core.
-
-Marketplace MerchantPortal Core enables server configuration and the basic functionality of the Merchant Portal 
+Marketplace MerchantPortal Core enables server configuration and the basic functionality of the Merchant Portal application 
 such as security login, GUI tables, dashboard etc. Merchant Portal and Back-office are different applications with 
 different entry points, bootstraps, and possibility to register application plugins, configuring of application 
 base URLs, debugging etc.
 
-## Modules relation
+Possibility to login and logout in Merchant Portal is provided by ``SecurityMerchantPortalGui`` module which provides 
+``MerchantUserSecurityPlugin`` extending security service with Merchant Portal firewall. 
+
+GuiTable is a part of Spryker infrastructure to support projects with rendering GuiTable frontend component which allows
+to display data as tables as well as searching by table items, filtering, sorting, various interaction with table rows. 
+GuiTables are widely used in Marketplace Merchant Portal for displaying of Orders, Offers, Products etc. 
+Based on the provided configuration GuiTable frontend component knows how to draw the table itself, 
+where to go for the data and how to interpret the provided data.
+
+## Module dependency graph
 
 ![Modules relation](https://confluence-connect.gliffy.net/embed/image/2e0be237-6e7b-4488-8d4b-811707c14ea0.png?utm_medium=live&utm_source=custom)
 
@@ -48,6 +55,10 @@ base URLs, debugging etc.
 ## Learn more
 
 - [GUI modules concept](/docs/marketplace/dev/back-end/marketplace-merchant-portal-core-feature/gui-modules-concept.html)
-- [GUI tables concept](/docs/marketplace/dev/back-end/marketplace-merchant-portal-core-feature/gui-table.html)
 - [How to extend Merchant portal dashboard?](/docs/marketplace/dev/howtos/how-to-extend-merchant-portal-dashboard.html)
-- [Login and Logout in Merchant Portal](/docs/marketplace/dev/back-end/marketplace-merchant-portal-core-feature/login-and-logout.html)
+
+## Related Developer articles
+
+|INTEGRATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  | REFERENCES  |
+|---------|---------|---------|--------|
+| [{Integration guide name}]({Integration guide link})          | [{Glue API guide name}]({Glue API guide link})          | [{Import file name}]({import file link})           | {Any doc related to this feature should be placed here}  |

@@ -12,7 +12,14 @@ entries:
 
       - title: Feature walkthroughs
         nested:
-          - title: Merchant
+          - title: Marketplace MerchantPortal Core feature walkthrough
+            url: /docs/marketplace/dev/back-end/marketplace-merchant-portal-core-feature.html
+            nested:
+
+              - title: GUI modules concept
+                url: /docs/marketplace/dev/back-end/marketplace-merchant-portal-core-feature/gui-modules-concept.html
+
+          - title: Merchant feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/merchant.html
 
           - title: Marketplace Merchant feature walkthrough
@@ -368,6 +375,9 @@ entries:
         - title: "File details: product-price.csv"
           url: /docs/marketplace/dev/data-import/file-details-product-price-csv.html
 
+        - title: "File details: merchant_user.csv"
+          url: /docs/marketplace/dev/data-import/file-details-merchant-user-csv.html
+
 
       - title: Front-end
         nested:
@@ -454,18 +464,6 @@ entries:
 
         - title: "Angular Components"
           url: /docs/marketplace/dev/front-end/angular-components.html
-
-      - title: Back-end
-        nested:
-          - title: "Marketplace MerchantPortal Core"
-            url: /docs/marketplace/dev/back-end/marketplace-merchant-portal-core-feature.html
-            nested:
-              - title: "Login and Logout"
-                url: /docs/marketplace/dev/back-end/marketplace-merchant-portal-core-feature/login-and-logout.html
-              - title: "GUI modules concept"
-                url: /docs/marketplace/dev/back-end/marketplace-merchant-portal-core-feature/gui-modules-concept.html
-              - title: "GUI tables concept"
-                url: /docs/marketplace/dev/back-end/marketplace-merchant-portal-core-feature/gui-table.html
 
       - title: HowTos
         nested:

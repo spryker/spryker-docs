@@ -19,7 +19,7 @@ To start feature integration, integrate the required features:
 |-|-|-|
 | Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration)  |
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html)   |
-| Product Management | {{page.version}} | [Inventory Management feature integration](https://documentation.spryker.com/docs/inventory-management-feature-integration)  |
+| Inventory Management | {{page.version}} | [Inventory Management feature integration](https://documentation.spryker.com/docs/inventory-management-feature-integration)  |
 
 ### Set up behavior
 

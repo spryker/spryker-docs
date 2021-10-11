@@ -17,9 +17,9 @@ Make sure that the table opened from another table, for ex. in the Drawer.
 
 {% endinfo_block %}
 
-- `rowActions` - is the table row actions, check Table Feature Row Actions<!---LINK--> for more details.  
-- `actions` - is an array with actions configuration.  
-- `type` - is an action type.  
+- `rowActions` - the table row actions, check Table Feature Row Actions<!---LINK--> for more details.  
+- `actions` - an array with actions configuration.  
+- `type` - an action type.  
 
 ```html
 <spy-table

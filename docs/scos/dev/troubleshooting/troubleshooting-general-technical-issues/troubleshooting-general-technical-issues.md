@@ -26,7 +26,7 @@ This section helps you troubleshoot general technical issues you might encounter
 * [ERROR: remove spryker_logs: volume is in use](/docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/error-remove-spryker-logs-volume-is-in-use.html)
 * [Fail whale on the front end](/docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/fail-whale-on-the-front-end.html)
 * [No data on the Storefront](/docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/no-data-on-the-storefront.html)
-* [Error response from daemon: OCI runtime create failed: .... \\\"no such file or directory\\\"\"": unknown](/docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/error-response-from-daemon-oci-runtime-create-failed-....-no-such-file-or-directory-unknown.html)
+* [Error response from daemon: OCI runtime create failed: .... \\\"no such file or directory\\\"\"": unknown](/docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/error-response-from-daemon-oci-runtime-create-failed-no-such-file-or-directory-unknown.html)
 * [Composer version 2 compatibility issues](/docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/composer-version-2-compatibility-issues.html)
 * [Router generates absolute URL with localhost](/docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/router-generates-absolute-url-with-localhost.html)
 * [PHPStan memory issues](/docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/phpstan-memory-issues.html)

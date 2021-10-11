@@ -9,7 +9,7 @@ redirect_from:
 
 ## Upgrading from Version 2.* to Version 4.0.0
 {% info_block infoBox %}
-In order to dismantle the Horizontal Barrier and enable partial module updates on projects, a Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Please [contact us](https://support.spryker.com/hc/en-us) if you have any questions.
+In order to dismantle the Horizontal Barrier and enable partial module updates on projects, a Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Please [contact us](https://spryker.com/en/support/) if you have any questions. if you have any questions.
 {% endinfo_block %}
 
 ## Upgrading from Version 1.* to Version 2.*
@@ -72,7 +72,7 @@ That `filter/criteria` is a flat object, so we filter only by its properties, ho
 ### Using the Price Dimensions
 In new `PriceProduct` module we have added a set of plugins necessary fo work with price dimensions. All new plugin interfaces are now in the new module `PriceProductExtension`. They are as follows:
 `Zed:PriceDimensionAbstractSaverPluginInterface` - saves price for abstract product in the DB for the selected price dimension (based on `PriceProductTransfer->getPriceDimension())PriceDimensionConcreteSaverPluginInterface` - saves price for concrete product in the DB for the selected price dimension (based on `PriceProductTransfer→getPriceDimension())PriceDimensionQueryCriteriaPluginInterface` is used for expanding `PriceProductStoreQuery` using new transfer object `QueryCriteriaTransfer`. Basing on `PriceProductCriteria`, you can build your own `QueryCriteria` to get prices using joins - all prices can be selected from needed price dimensions using only one SQL query. See the DB scheme:
-![Database scheme](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Module+Migration+Guides/Migration+Guide+-+PriceProduct/priece-dimensions-diagram.png) 
+![Database scheme](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Module+Migration+Guides/Migration+Guide+-+PriceProduct/priece-dimensions-diagram.png)
 
 * Service:
 `PriceProductFilterPluginInterface` - filters array of prices based on `PriceProductFilterTransfer`

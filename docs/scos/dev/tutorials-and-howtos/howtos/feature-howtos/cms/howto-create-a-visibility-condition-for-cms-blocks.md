@@ -14,13 +14,13 @@ redirect_from:
   - /v5/docs/en/howto-create-a-visibility-condition-for-cms-blocks
 ---
 
-Visibility Condition is a [Templates & Slots](/docs/scos/user/features/{{site.version}}/cms/cms-feature-overview/templates-and-slots-overview.html) feature functionality that allows you to define in which cases a CMS block is displayed on a page. The [Spryker CMS Blocks content provider](/docs/scos/user/features/{{site.version}}/cms/cms-feature-overview/templates-and-slots-overview.html#spryker-cms-blocks) for slots has the following [visibility conditions](/docs/scos/user/features/{{site.version}}/cms/cms-feature-overview/templates-and-slots-overview.html#visibility-conditions) by default:
+Visibility Condition is a [Templates & Slots](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html) feature functionality that allows you to define in which cases a CMS block is displayed on a page. The [Spryker CMS Blocks content provider](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html#spryker-cms-blocks) for slots has the following [visibility conditions](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html#visibility-conditions) by default:
 
 * Category condition for Category page.
 * Product and category conditions for Product details page.
 * CMS page condition for CMS page.
 
-Each page type has a dedicated template with several [slot widgets](/docs/scos/user/features/{{site.version}}/cms/cms-feature-overview/templates-and-slots-overview.html#slot-widget). The visibility conditions of each template are defined in module configuration.
+Each page type has a dedicated template with several [slot widgets](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html#slot-widget). The visibility conditions of each template are defined in module configuration.
 
 ```php
 namespace Pyz\Zed\CmsSlotBlock;
@@ -158,7 +158,7 @@ class CustomerSlotBlockConditionFormPlugin extends AbstractPlugin implements Cms
 3. Create `CustomerSlotBlockConditionForm`. It is a regular Symfony Form class which implements `\Symfony\Component\Form\FormBuilderInterface`, See:
 
 * [Forms](https://symfony.com/doc/current/forms.html) for more information about Symfony forms.
-* [Creating Forms](/docs/scos/dev/back-end-development/data-manipulation/data-enrichment/forms/creating-forms.html#creating-forms) to learn about form creation procedure in Spryker.
+* [Creating Forms](/docs/scos/dev/back-end-development/forms/creating-forms.html#creating-forms) to learn about form creation procedure in Spryker.
 * a form example in `\Spryker\Zed\CmsSlotBlockProductCategoryGui\Communication\Form\ProductCategorySlotBlockConditionForm`.
 
 {% info_block errorBox %}

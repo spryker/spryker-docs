@@ -23,7 +23,7 @@ This section describes how to configure Phpstorm to be used with Xdebug.
 
 Install the required software:
 
-1. [Install PhpStorm](https://www.jetbrains.com/phpstorm/download/#section=mac), [Early Access Program](https://www.jetbrains.com/phpstorm/nextversion/) preferred. 
+1. [Install PhpStorm](https://www.jetbrains.com/phpstorm/download/#section=mac), [Early Access Program](https://www.jetbrains.com/phpstorm/nextversion/) preferred.
 You can download PHPStorm through the [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/).
 2. [Install Xdebug](https://xdebug.org/docs/install).
 3. Optional: install the [Xdebug browser extension](https://www.jetbrains.com/help/phpstorm/2021.1/browser-debugging-extensions.html). In the extension settings, for **IDE key**, enter `PHPSTORM`.
@@ -50,7 +50,7 @@ To configure Xdebug in PhpStorm:
 
 ![image 2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Docker+SDK/Configuring+debugging+in+Docker/xdebug-external-connections-configuration.png)
 
-### Configuring servers 
+### Configuring servers
 To configure servers:
 1. Go to **Preferences** > **PHP** > **Servers**.
 
@@ -63,8 +63,8 @@ To configure servers:
     5. Select the **Use path mappings** checkbox.
     6. Set the absolute path to the `/data` folder on the server for the folder with your Spryker project files.
     ![Servers config](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Docker+SDK/Configuring+debugging+in+Docker/servers-confg.png)
-    
-    
+
+
 ### Troubleshooting the debugging configuration in PhpStorm
 
 **when**
@@ -78,19 +78,19 @@ A breakpoint does not work.
       The app should break at the `index.php` and open a debugger pane in the IDE:
       ![debugger-pane](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Docker+SDK/Configuring+debugging+in+Docker/debugger-pane.png)
 4. Re-try your breakpoints.
-       
-       
+
+
 ## Configuring VSCode for Xdebug
 
 This section describes how to configure Visual Studio Code (VSCode) to be used with Xdebug.
-  
+
 
 ### VScode configuration prerequisites
 
 Install the required software:
 
 1. [Install VScode](https://code.visualstudio.com/download), the [Insiders version](https://code.visualstudio.com/insiders/) preferred.
-2. [Install Xdebug](https://xdebug.org/docs/install). 
+2. [Install Xdebug](https://xdebug.org/docs/install).
 3. [Install PHP Debug Extension](https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-debug).
 
 ## Set up a new Launch.json
@@ -101,7 +101,7 @@ Set up a new `Launch.json`:
 {
     "version": "0.2.0",
     "configurations": [
-    
+
         {
             "name": "Listen for XDebug",
             "type": "php",
@@ -162,7 +162,7 @@ To debug an application:
 1. Make a breakpoint:
 ![Breakpoint](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Docker+SDK/Configuring+debugging+in+Docker/breakpoint.png)
 
-2. Select *Start listening* ![Start listening](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Debugging+Setup+in+Docker/start-listening.png).
+2. Select *Start listening* ![Start listening](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Docker+SDK/Configuring+debugging+in+Docker/start-listening.png).
 
 3. Open the application in a browser.
 
@@ -178,5 +178,3 @@ Find several examples below:
 * `docker/sdk cli -x console queue:worker:start`
 * `docker/sdk console -x queue:worker:start`
 * `docker/sdk testing -x codecept run -codeception.yml`
-
-

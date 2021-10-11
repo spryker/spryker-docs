@@ -10,8 +10,8 @@ redirect_from:
 ## Upgrading from Version 2.* to Version 4.0.0
 
 {% info_block infoBox %}
-In order to dismantle the Horizontal Barrier and enable partial module updates on projects, a Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Please [contact us](https://support.spryker.com/hc/en-us
-{% endinfo_block %} if you have any questions.)
+In order to dismantle the Horizontal Barrier and enable partial module updates on projects, a Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Please [contact us](https://spryker.com/en/support/) if you have any questions.
+{% endinfo_block %}
 
 ## Upgrading from Version 1.* to Version 2.*
 At version 2.0.0 we've introduced a couple of features for the **Quick Order** page.

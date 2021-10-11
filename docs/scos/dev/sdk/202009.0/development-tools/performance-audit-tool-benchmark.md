@@ -118,7 +118,7 @@ vendor/bin/console benchmark:run --path=tests/Benchmark/Zed/HomePage
 ## Writing the tests
 {% info_block infoBox %}
 
-Before you start writing the tests, check out the [PHPBench documentation](https://phpbench.readthedocs.io/en/latest/writing-benchmarks.html).
+Before you start writing the tests, check out the [PHPBench documentation](https://phpbench.readthedocs.io/en/latest/guides/writing-benchmarks.html?highlight=writing%20benchmarks).
 
 {% endinfo_block %}
 

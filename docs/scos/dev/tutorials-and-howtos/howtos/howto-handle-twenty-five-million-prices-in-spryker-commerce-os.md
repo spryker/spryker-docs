@@ -23,7 +23,7 @@ In Spryker, each price is imported as a [price dimension](/docs/scos/user/featur
 
 
 Price import flow:
-![price import flow ](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+handle+25+million+prices+in+Spryker+Commerce+OS/price-import-flow.jpg) 
+![price import flow ](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+handle+25+million+prices+in+Spryker+Commerce+OS/price-import-flow.jpg)
 
 
 ## Challenges
@@ -231,7 +231,7 @@ We evaluated the following solutions:
 
 #### Bulk insertion with raw SQL
 
-[Postgresql CTE](http://CTE) allows to manage bulk inserts and updates of huge data amounts, which speeds up the execution of PHP processes.
+[Postgresql CTE](https://www.postgresqltutorial.com/postgresql-cte/) allows managing bulk inserts and updates of huge data amounts, which speeds up the execution of PHP processes.
 
 <details open>
     <summary>SQL query example</summary>

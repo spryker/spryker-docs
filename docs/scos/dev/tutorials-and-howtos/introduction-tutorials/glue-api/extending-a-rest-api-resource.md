@@ -33,7 +33,7 @@ To complete this tutorial, you need to comply with the following prerequisites:
 * [Integrate Products API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-products-feature-integration.html).
 
 {% info_block infoBox %}
-If you have a development virtual machine with the [B2C Demo Shop](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2b-b2c-demo-shops
+If you have a development virtual machine with the [B2C Demo Shop](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2bb2c-demo-shops
 {% endinfo_block %} installed, all the required components will be available out of the box.)
 
 Also, let us assume that you modified the product storage data to match your product requirements. For example, let's assume that you added the `manufacturerCountry` field to the product data not as an attribute, but as another field in the database.

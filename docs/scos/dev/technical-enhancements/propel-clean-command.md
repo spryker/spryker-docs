@@ -32,7 +32,7 @@ Ensure that the related features are installed:
 
 | Name | Version | Required sub-feature |
 | --- | --- | --- |
-| Spryker Core | 201907.0 | [Feature](https://documentation.spryker.com/2021080/docs/spryker-core-feature-integration-201907) |
+| Spryker Core | 201907.0 | [Feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 
 #### 1)Install the Required Modules Using Composer
 

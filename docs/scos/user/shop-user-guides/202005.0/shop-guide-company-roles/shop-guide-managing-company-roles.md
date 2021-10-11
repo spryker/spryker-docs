@@ -26,7 +26,7 @@ You can delete a company user by clicking **Delete** icon next to the company us
 
 ![Delete a role](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/delete-role.png) 
 
-Don't forget to check out the video tutorial on setting up the [Company Roles](https://documentation.spryker.com/v5/docs/en/company-roles-permissions-overview) in Spryker [B2B Demo Shop](/docs/scos/user/intro-to-spryker/{{site.version}}/b2b-suite.html):
+Don't forget to check out the video tutorial on setting up the [Company Roles](https://documentation.spryker.com/v5/docs/en/company-roles-permissions-overview) in Spryker [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html):
 
 {% wistia 72qy3slwjo 960 720 %}
 

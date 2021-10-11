@@ -19,7 +19,7 @@ In the Spryker system, the tax rate values are:
 - Persisted in the placed orders, history of request for quotes, and changing the rate in the DB will neither affect these entities nor the display of the orders in Customer Account, Back Office, etc.
 - Not persisted in the products, carts, wishlists, shopping lists. Actual Spryker's code always uses the tax rate value from the DB to perform actual calculations.
 
-To adjust the tax rates for your project, you can simply [edit tax rates in the Back Office](https://documentation.spryker.com/2021080/docs/managing-tax-rates-sets) as and when you need to. However, you can also automate the process by scheduling the tax rates update. The section below describes how to do that.
+To adjust the tax rates for your project, you can simply [edit tax rates in the Back Office](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/tax-rates/managing-tax-rates.html) as and when you need to. However, you can also automate the process by scheduling the tax rates update. The section below describes how to do that.
 
 
 {% info_block warningBox "Project tax customizations" %}
@@ -58,7 +58,7 @@ Reduced Taxes,Germany,Germany Reduced,7
 $jobs[] = [
     'name' => 'reduce-tax-rate',
     'command' => '$PHP_BIN vendor/bin/console  data:import:tax -f data/import/reduce_tax.csv',
-    'schedule' => "TZ=Europe/Berlin\n0 0 1 7 *",
+    'schedule' => "TZ=Europe/Berlin/n0 0 1 7 *",
     'enable' => true,
     'stores' => $allStores,
 ];
@@ -66,7 +66,7 @@ $jobs[] = [
 $jobs[] = [
     'name' => 'restore-tax-rate',
     'command' => '$PHP_BIN vendor/bin/console  data:import:tax -f data/import/restore_tax.csv',
-    'schedule' => "TZ=Europe/Berlin\n0 0 1 1 *",
+    'schedule' => "TZ=Europe/Berlin/n0 0 1 1 *",
     'enable' => true,
     'stores' => $allStores,
 ];

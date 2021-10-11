@@ -52,7 +52,7 @@ This CMS Pages feature is ideal for specific landing pages with dedicated URLs t
 <li><a href="https://documentation.spryker.com/v5/docs/en/cms-extension-points" class="mr-link">Enable an extension point for post activation and deactivation of CMS pages</a></li>
 <li><a href="https://documentation.spryker.com/v5/docs/en/mg-cms#upgrading-from-version-6---to-version-7--" class="mr-link">Migrate the CMS module from version 6.* to version 7.*</a></li>
  <li><a href="https://documentation.spryker.com/v5/docs/en/mg-cmsstorage#upgrading-from-version-1-to-version-2" class="mr-link">Migrate the CmsStorage module from version 1.* to version 2.*</a></li>
-                <li><a href="https://documentation.spryker.com/v5/docs/en/migration-guide-cmsgui#upgrading-from-version-4---to-version-5--" class="mr-link">Migrate the CmsGui module from version 4.* to version 5.*</a></li>
+                <li><a href="https://documentation.spryker.com/v5/docs/en/migration-guide-cmsgui#upgrading-from-version-4-to-version-5" class="mr-link">Migrate the CmsGui module from version 4.* to version 5.*</a></li>
  </li><li><a href="https://documentation.spryker.com/v5/docs/en/mg-cmspagesearch#upgrading-from-version-1-to-version-2" class="mr-link">Migrate the CmsPageSearch module from version 1.* to version 2.*</a></li>
  </li><li><a href="https://documentation.spryker.com/v5/docs/en/cms-feature-integration-guide" class="mr-link">Integrate the CMS feature into your project </a></li>
   </li><li><a href="https://documentation.spryker.com/v5/docs/en/cms-page-search-product-lists-catalog-feature-integration-201903" class="mr-link">Integrate the CMS Page Search + Product Lists + Catalog Feature into your project </a></li>

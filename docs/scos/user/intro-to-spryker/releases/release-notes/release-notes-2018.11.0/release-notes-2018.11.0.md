@@ -51,7 +51,7 @@ For everyone interested in B2C commerce use cases, we provide Spryker’s B2C De
 Let your customers model their company hierarchies by defining business units including multiple addresses to make the ordering process more convenient. They can create and manage users and assign roles and permissions to the Business Units to give full control where it’s needed. The Business on Behalf feature provides users with the ability to log in to different business units with the same credentials fully inheriting business unit permissions.
 ![B2B company account](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.11.0/image8.png)
 
-**Documentation**: [Company Account](https://documentation.spryker.com/2021080/docs/company-account-management)
+**Documentation**: [Company Account](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-account-feature-overview.html)
 
 ### B2B Shopping List
 Shopping list is the feature that allows customers to create and share multiple lists of products between company business units or single users, allowing them to make regular or wholesale purchases in the most convenient way. All or selected products can be added to a Shopping Cart. Shopping lists can be shared between users with a different set of permissions. A user can also print a shopping list along with the barcodes.
@@ -155,7 +155,7 @@ The shop owner can set up a price per merchant/business unit combination.
 With the Agent Assist feature, you may enable your employees to help your customers with true efficiency, all while operating the same storefront interface. No more confusing backend UI. Agent Assist allows your employees to log-in to the storefront using a particular URL, search for a customer to assist and pick them up to do business on their behalf. A feature flag in the session allows for versatile customizations of the storefront functionality during an agent assist session. This feature may also be used as a point of sale solution in physical retail stores.
 ![Agent assist](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.11.0/image3.png)
 
-**Documentation**: [Agent Assist](https://documentation.spryker.com/2021080/docs/how-to-setup-agent-assist-b2b)
+**Documentation**: [Agent Assist](/docs/scos/user/features/{{page.version}}/agent-assist-feature-overview.html)
 
 ### Add Concrete Product to Existing Abstract Product
 With this improvement, you will be able to attach new product concretes to existing abstract products directly in the backend interface.

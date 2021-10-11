@@ -10,7 +10,7 @@ This document describes how to integrate the Marketplace Product Option + Cart f
 
 ## Install feature core
 
-Follow the steps below to install the Marketplace Product Option feature core.
+Follow the steps below to install the Marketplace Product Option + Cart feature core.
 
 ### Prerequisites
 

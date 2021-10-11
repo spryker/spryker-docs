@@ -119,6 +119,9 @@ entries:
           
           - title: Merchant Switcher feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-feature-integration.html
+
+          - title: Merchant Switcher + Wishlist feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-wishlist-feature-integration.html
           
           - title: Marketplace Order Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html

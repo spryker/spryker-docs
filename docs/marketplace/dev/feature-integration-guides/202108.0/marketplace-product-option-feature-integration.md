@@ -18,8 +18,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | LINK |
 | --------------- | ------- | ---------- |
-| Spryker Core         | master      | [Spryker Core Feature Integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Marketplace Merchant | master      | [Marketplace Merchant Feature Integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-product-option-feature-integration.html) |
+| Spryker Core         | {{page.version}}      | [Spryker Core Feature Integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Marketplace Merchant | {{page.version}}      | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
 
 
 ### 1) Install the required modules using Composer
@@ -94,7 +94,112 @@ Make sure that the following changes were applied in transfer objects:
 
 {% endinfo_block %}
 
-### 3) Set up behavior
+### 3) Add translations
+
+Append glossary according to your configuration:
+
+**src/data/import/glossary.csv**
+
+```yaml
+checkout.item.option.pre.condition.validation.error.exists,"Product option of %name% is not available anymore.",en_US
+checkout.item.option.pre.condition.validation.error.exists,"Produktoption von %name% ist nicht mehr verfügbar.",de_DE
+```
+
+Import data:
+
+```bash
+console data:import glossary
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the configured data is added to the `spy_glossary` table in the database.
+
+{% endinfo_block %}
+
+### 4) Import data
+
+Prepare your data according to your requirements using the demo data:
+
+<details><summary>data/import/common/common/marketplace/merchant_product_option_group.csv</summary>
+
+```csv
+product_option_group_key,merchant_reference,approval_status,merchant_sku
+insurance,MER000001,approved,spr-425453
+```
+
+</details>
+
+
+#### Register data importer:
+
+<details><summary>data/import/local/full_EU.yml</summary>
+
+```yml
+version: 0
+
+actions:
+    - data_entity: merchant-product-option-group
+      source: data/import/common/common/marketplace/merchant_product_option_group.csv
+```
+
+</details>
+
+<details><summary>data/import/local/full_US.yml</summary>
+
+```yml
+version: 0
+
+actions:
+    - data_entity: merchant-product-option-group
+      source: data/import/common/common/marketplace/merchant_product_option_group.csv
+```
+
+</details>
+
+Register the following plugin to enable data import:
+
+| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
+|-|-|-|-|
+| MerchantProductOptionGroupDataImportPlugin | Validates Merchant reference and inserts merchant product option groups into DB. | None | Spryker\Zed\MerchantProductOptionDataImport\Communication\Plugin\DataImport |
+
+**src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\DataImport;
+
+use Spryker\Zed\MerchantProductOptionDataImport\Communication\Plugin\DataImport\MerchantProductOptionGroupDataImportPlugin;
+use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
+
+class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
+{
+    /**
+     * @return array
+     */
+    protected function getDataImporterPlugins(): array
+    {
+        return [
+            new MerchantProductOptionGroupDataImportPlugin(),
+        ];
+    }
+}
+```
+
+Import data:
+
+```bash
+console data:import merchant-product-option-group
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the Merchant Product Option Group data is in the `spy_merchant_product_option_group` table.
+
+{% endinfo_block %}
+
+### 5) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
@@ -220,85 +325,9 @@ Make sure that merchant product options are part of a marketplace/merchant order
 
 {% endinfo_block %}
 
+## Related features
 
-### 4) Import data
-
-Prepare your data according to your requirements using the demo data:
-
-<details><summary>data/import/common/common/marketplace/merchant_product_option_group.csv</summary>
-
-```csv
-product_option_group_key,merchant_reference,approval_status,merchant_sku
-insurance,MER000001,approved,spr-425453
-```
-
-</details>
-
-
-#### Register data importer:
-
-<details><summary>data/import/local/full_EU.yml</summary>
-
-```yml
-version: 0
-
-actions:
-    - data_entity: merchant-product-option-group
-      source: data/import/common/common/marketplace/merchant_product_option_group.csv
-```
-
-</details>
-
-<details><summary>data/import/local/full_US.yml</summary>
-
-```yml
-version: 0
-
-actions:
-    - data_entity: merchant-product-option-group
-      source: data/import/common/common/marketplace/merchant_product_option_group.csv
-```
-
-</details>
-
-Register the following plugin to enable data import:
-
-| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
-|-|-|-|-|
-| MerchantProductOptionGroupDataImportPlugin | Validates Merchant reference and inserts merchant product option groups into DB. | None | Spryker\Zed\MerchantProductOptionDataImport\Communication\Plugin\DataImport |
-
-**src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\DataImport;
-
-use Spryker\Zed\MerchantProductOptionDataImport\Communication\Plugin\DataImport\MerchantProductOptionGroupDataImportPlugin;
-use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
-
-class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
-{
-    /**
-     * @return array
-     */
-    protected function getDataImporterPlugins(): array
-    {
-        return [
-            new MerchantProductOptionGroupDataImportPlugin(),
-        ];
-    }
-}
-```
-
-Import data:
-
-```bash
-console data:import merchant-product-option-group
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that the Merchant Product Option Group data is in the `spy_merchant_product_option_group` table.
-
-{% endinfo_block %}
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| -------------- | -------------------------------- | ----------------- |
+| Marketplace Product Option + Cart | | [Marketplace Product Option + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-option-cart-feature-integration.html) |
+| Marketplace Product Option + Checkout | | [Marketplace Product Option + Checkout feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-option-checkout-feature-integration.html) |

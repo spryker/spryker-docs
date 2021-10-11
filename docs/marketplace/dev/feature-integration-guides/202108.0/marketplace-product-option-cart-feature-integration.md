@@ -18,10 +18,10 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | LINK |
 | --------------- | ------- | ---------- |
-| Marketplace Product Option | master      | [Marketplace Product Option Feature Integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-product-option-feature-integration.html) |
-| Marketplace Product + Cart | master      | [Marketplace Product + Cart Feature Integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-product-cart-feature-integration.html) |
+| Marketplace Product Option | {{page.version}}      | [Marketplace Product Option Feature Integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-product-option-feature-integration.html) |
+| Cart | {{page.version}}   | [Cart feature integration](https://documentation.spryker.com/docs/cart-feature-integration)
 
-### Set up behavior
+### 1) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
@@ -55,3 +55,9 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     }
 }
 ```
+
+{% info_block warningBox "Verification" %}
+
+Make sure approved merchants product options are displayed in a cart without any errors.
+
+{% endinfo_block %}

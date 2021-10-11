@@ -28,7 +28,7 @@ The checkout is based on a flexible step engine and can be adjusted to any use c
                 <li><a href="https://documentation.spryker.com/v4/docs/checkout-steps-201903" class="mr-link">Get a general idea of the Checkout steps</a></li>
                 <li><a href="https://documentation.spryker.com/v4/docs/checkout-process-201903" class="mr-link">Get a general idea of the Checkout process</a></li>  
                 <li><a href="https://documentation.spryker.com/v4/docs/mg-checkout#upgrading-from-version-4---to-version-6-0-0" class="mr-link">Migrate the Checkout module from version 4.* to version 6.0.0</a></li> 
-                <li><a href="https://documentation.spryker.com/v4/docs/migration-guide-checkoutpage#upgrading-from-version-2---to-version-3--" class="mr-link">Migrate the CheckoutPage module from version 2.* to version 3.*</a></li>
+                <li><a href="https://documentation.spryker.com/v4/docs/migration-guide-checkoutpage#upgrading-from-version-2-to-version-3" class="mr-link">Migrate the CheckoutPage module from version 2.* to version 3.*</a></li>
             </ul>
         </div>
         <!-- col3 -->

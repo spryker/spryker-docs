@@ -22,7 +22,7 @@ This system of permissions is based on roles that provide access to the specific
 
 * [Integrating FACT-Finder](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/integrating-fact-finder.html)
 * [Installing and configuring FACT-Finder](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder.html)
-* [Installing and configuring FACT-Finder NG API](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder-ng-api.html)
+* [Installing and configuring FACT-Finder NG API](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-the-fact-finder-ng-api.html)
 * [Installing and configuring FACT-Finder web components](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder-web-components.html)
 * [Using FACT-Finder campaigns](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/using-fact-finder-campaigns.html)
 * [Using FACT-Finder recommendation engine](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/using-fact-finder-recommendation-engine.html)

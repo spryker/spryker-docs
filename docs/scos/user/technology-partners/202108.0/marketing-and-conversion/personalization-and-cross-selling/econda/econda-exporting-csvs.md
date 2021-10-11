@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/econda-export-csvs
 ---
 
-To implement Econda plugin you should be familiar with the concept of [extending Spryker](/docs/scos/dev/back-end-development/data-manipulation/data-enrichment/extending-spryker/extending-a-core-module-that-is-used-by-another.html) and [plugins.](/docs/scos/dev/back-end-development/plugins/plugins.html)
+To implement Econda plugin you should be familiar with the concept of [extending Spryker](/docs/scos/dev/back-end-development/extending-spryker/extending-a-core-module-that-is-used-by-another.html) and [plugins.](/docs/scos/dev/back-end-development/plugins/plugins.html)
 
 ## Zed Output Folder
 

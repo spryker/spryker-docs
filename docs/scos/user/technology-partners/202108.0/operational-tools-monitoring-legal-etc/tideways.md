@@ -24,7 +24,7 @@ YOUR ADVANTAGES
 * automated recognition of errors with precise and detailed leads to causes and bugfixing tips
 
 {% info_block errorBox "Attention!" %}
-[Register](https://tideways.com/spryker-monitoring-profiling
+[Register](https://app.tideways.io/login
 {% endinfo_block %} with Tideways now!)
 
 ### General information
@@ -52,7 +52,7 @@ Monitoring is a Spryker Module and it provides a hook to add any monitoring prov
 
 <b>See also:</b>
 
-* [Monitor Spryker Performance with Tideways](https://tideways.com/spryker-monitoring-profiling)
+* [Monitor Spryker Performance with Tideways](https://app.tideways.io/login)
 
 ---
 

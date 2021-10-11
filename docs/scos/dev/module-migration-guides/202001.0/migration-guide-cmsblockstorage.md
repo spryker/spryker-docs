@@ -14,7 +14,7 @@ CmsBlockStorage version 2.0.0 introduces the following backward incompatible cha
 
 * Introduced the `spy_cms_block_storage.cms_block_key` field to store the `cms_block` identifier.
 * Introduced the `mappings` parameter to synchronization behavior to support the ability to get data by block names.
-* Increased the minimum `spryker/cms-block` version in `composer.json`. See [Migration Guide - CMS Block](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-cmsblock.html#upgrading-from-version-2---to-version-3--) for more details.
+* Increased the minimum `spryker/cms-block` version in `composer.json`. See [Migration Guide - CMS Block](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-cmsblock.html#upgrading-from-version-2-to-version-3) for more details.
 * Removed `CmsBlockStorageClient::findBlockNamesByOptions()`.
 * Removed `CmsBlockStorageClientInterface::generateBlockNameKey()`.
 * Added return type as an array to `CmsBlockStorageClientInterface::findBlocksByNames()`.

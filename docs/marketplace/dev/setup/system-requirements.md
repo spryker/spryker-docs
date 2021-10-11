@@ -1,6 +1,6 @@
 ---
-title: System requirements
-Descriptions: System requirements for the Spryker Marketplace with Merchant Portal
+title: System infrastructure requirements
+Descriptions: System infrastructure requirements for the Spryker Marketplace with Merchant Portal
 template: howto-guide-template
 ---
 
@@ -8,7 +8,7 @@ template: howto-guide-template
 | ----------------------------------------- | ------------------------------------------------------------ |
 | **Web Server**                                | NginX - preferred. But any webserver which supports PHP will work such as lighttpd, Apache, Cherokee. |
 | **Databases**                             | Depending on the project, one of the databases: MariaDB >= 10.4 - preferred, PostgreSQL >=9.6, or MySQL >=5.7. |
-| **PHP**                                   | Spryker supports PHP >=7.3 with the following extensions: `curl`, `json`, `mysql`, `pdo-sqlite`, `sqlite3`, `gd`, `intl`, `mysqli`, `pgsql`, `ssh2`, `gmp`, `mcrypt`, `pdo-mysql`, `readline`, `twig`, `imagick`, `memcache`, `pdo-pgsql`, `redis`, `xml`, `bz2`, `mbstring`. The preferred version is 7.4. See [Supported Versions of PHP](https://documentation.spryker.com/docs/en/supported-versions-of-php) for details on the supported PHP versions.|
+| **PHP**                                   | Spryker supports PHP >=7.3 with the following extensions: <ul><li>`curl`</li><li>`json`</li><li>`mysql`</li><li>`pdo-sqlite`</li><li>`sqlite3`</li><li>`gd`</li><li>`intl`</li><li>`mysqli`</li><li>`pgsql`</li><li>`ssh2`</li><li>`gmp`</li><li>`mcrypt`</li> <li>`pdo-mysql`</li><li>`readline`</li><li>`twig`</li><li>`imagick`</li><li>`memcache`</li><li>`pdo-pgsql`</li><li>`redis`</li><li>`xml`</li><li>`bz2`</li><li>`mbstring`</li></ul> The preferred version is 7.4. See [Supported Versions of PHP](https://documentation.spryker.com/docs/en/supported-versions-of-php) for details on the supported PHP versions.|
 | **SSL**                                       | For production systems, a valid security certificate is required for HTTPS. |
 | **Redis**                                     | Version >=3.2, >=5.0                                                |
 | **Elasticsearch**                             | Version 6.x or 7.x                                        |
@@ -19,7 +19,7 @@ template: howto-guide-template
 |**Node.js**| Version >= 12.0.0 |
 |**Yarn**| Version >= 2.0.0 && <= 2.3.x |
 |**Intranet**| Back Office application (Zed) must be secured in an Intranet (using VPN, Basic Auth, IP Allowlist, DMZ, etc.) |
-| **Spryker Commerce OS**| Version >= 202001.0 |
+| **Spryker Commerce OS**| Version >= {{page.version}} |
 
 
 

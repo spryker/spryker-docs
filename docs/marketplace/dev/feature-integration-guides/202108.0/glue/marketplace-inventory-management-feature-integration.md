@@ -17,8 +17,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Spryker Core | master | [Glue API: Spryker Core feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration)  |
-| Marketplace Inventory Management | master | [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-feature-integration.html)  |
+| Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration)  |
+| Marketplace Inventory Management | {{page.version}} | [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-feature-integration.html)  |
 
 ### 1) Install the required modules using Composer
 
@@ -117,3 +117,12 @@ Make sure that the `ProductOfferAvailabilitiesResourceRoutePlugin` plugin is set
 Make sure that `ProductOfferAvailabilitiesByProductOfferReferenceResourceRelationshipPlugin` is set up by sending the request `GET http://glue.mysprykershop.com{% raw %}{{url}}{% endraw %}/product-offers/{% raw %}{{productOfferReference}}{% endraw %}?include=product-offer-availabilities`. The response should include the `product-offer-availabilities` resource along with `product-offers`.
 
 {% endinfo_block %}
+
+
+## Related features
+
+Integrate the following related features:
+
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+|---|---|---|
+| Marketplace Inventory Management + Wishlist Glue API |  |  [Glue API: Marketplace Inventory Management + Wishlist feature integration ](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-inventory-management-wishlist-feature-integration.html) |

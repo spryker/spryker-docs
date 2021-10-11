@@ -18,7 +18,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE |
 | ----------- | ------- | ------------------|
 | Order Threshold | {{page.version}}  | [Order Threshold feature integration](https://documentation.spryker.com/docs/order-threshold-feature-integration) |
-| Cart            | 202001.0    | [Cart feature integration](https://github.com/spryker-feature/cart) |
+| Cart            | {{page.version}}    | [Cart feature integration](https://documentation.spryker.com/docs/cart-feature-integration) |
 
 ### 1) Install the required modules using Composer
 
@@ -99,7 +99,7 @@ To start feature integration, integrate the required features:
 | NAME            | VERSION |
 | -------------------- | ----------- |
 | Order Threshold      | {{page.version}}  |
-| Cart                 | 202001.0    |
+| Cart                 | {{page.version}}  |
 | Merchant Portal Core | {{page.version}}  |
 
 ### 1) Install the required modules using Composer
@@ -153,6 +153,6 @@ class SalesMerchantPortalGuiDependencyProvider extends SprykerSalesMerchantPorta
 ```
 {% info_block warningBox "Verification" %}
 
-Make sure that the `ProductOfferMerchantOrderItemTableExpanderPlugin` plugin is set up by opening `http://zed.mysprykershop.com/sales-merchant-portal-gui/orders`. Click on any order and check that the *Cart Note* column  is present.
+Make sure that the `CartNoteMerchantOrderItemTableExpanderPlugin` plugin is set up by opening `http://zed.mysprykershop.com/sales-merchant-portal-gui/orders`. Click on any order and check that the *Cart Note* column  is present.
 
 {% endinfo_block %}

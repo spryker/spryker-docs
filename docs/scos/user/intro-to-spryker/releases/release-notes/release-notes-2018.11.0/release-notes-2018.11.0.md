@@ -33,7 +33,7 @@ For information about installing the Spryker Commerce OS, see [Getting Started G
 Spryker’s new B2B Demo Shop was made to provide you with the right combination of modules and functionalities to represent the most common B2B commerce use case. You will get an integrated and stable product that is consistent in both technological and feature completeness point of view. This Demo Shop is our recommended starting point for all standard B2B commerce projects. It comes with the new modern look-and-feel and atomic design approach.
 ![B2B Demo Shop](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.11.0/image1.png)
 
-**Documentation**: [B2B Demo Shop](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2b-b2c-demo-shops).
+**Documentation**: [B2B Demo Shop](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2bb2c-demo-shops).
 
 ### Non-authenticated B2B Shop User Permissions Manager
 Spryker has improved permissions control mechanism for non-authenticated B2B shop users. A shop administrator can hide/show specific shop features such as prices, shopping lists, an ability to add products to the cart or going to the checkout.
@@ -45,7 +45,7 @@ Spryker has improved permissions control mechanism for non-authenticated B2B sho
 For everyone interested in B2C commerce use cases, we provide Spryker’s B2C Demo Shop. It also consists of the most common combination of modules and functionalities to cover your needs in the B2C commerce.
 ![B2C Demo shop](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.11.0/image4.png)
 
-**Documentation**: [B2C Demo Shop](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2b-b2c-demo-shops#b2c-demo-shop)
+**Documentation**: [B2C Demo Shop](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2bb2c-demo-shops#b2c-demo-shop)
 
 ### B2B Company Account
 Let your customers model their company hierarchies by defining business units including multiple addresses to make the ordering process more convenient. They can create and manage users and assign roles and permissions to the Business Units to give full control where it’s needed. The Business on Behalf feature provides users with the ability to log in to different business units with the same credentials fully inheriting business unit permissions.

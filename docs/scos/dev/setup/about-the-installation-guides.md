@@ -30,7 +30,7 @@ Using various installation types and environments, you can install:
 
 * [Spryker B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html),
 * [Spryker B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html),
-* separate [features](/docs/scos/dev/feature-walkthroughs/feature-walkthroughs.html) and modules of the [Spryker Commerce OS](/docs/scos/user/intro-to-spryker/master-suite.html).
+* Separate [features](/docs/scos/dev/feature-walkthroughs/feature-walkthroughs.html) and modules of the [Spryker Commerce OS](/docs/scos/user/intro-to-spryker/master-suite.html).
 
 
 Check out the [Developer Getting Started Guide](/docs/scos/dev/developer-getting-started-guide.html) for information regarding the installation process. There you will find information about choosing the right installation type for you.

@@ -56,7 +56,7 @@ You set the `offset` value, which equals the difference by which the actual numb
 | `GET https://glue.mysprykershop.com/cms-pages` | Retrieve all active CMS pages. |
 | `GET https://glue.mysprykershop.com/cms-pages?page[limit]=24&page[offset]=0` | Return maximum 24 CMS pages. |
 | `GET https://glue.mysprykershop.com/cms-pages?page[limit]=12&page[offset]=12` | Return CMS pages 13 and further, maximum 12 pages. |
-| `GET https://glue.mysprykershop.com/cms-pages?include=content-product-abstract-lists` | Retrieve information about [Abstract Product List](/docs/scos/user/back-office-user-guides/{{page.version}}content/content-items/references/reference-information-content-item-widgets-types.html#abstract-product-list-content-item-widget) content item for CMS pages. |
+| `GET https://glue.mysprykershop.com/cms-pages?include=content-product-abstract-lists` | Retrieve information about [Abstract Product List](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-item-widgets-types.html#abstract-product-list-content-item-widget) content item for CMS pages. |
 | `GET https://glue.mysprykershop.com/cms-pages?include=content-product-abstract-list,abstract-products` | Retrieve information about Abstract Product List content item with its abstract products. |
 | `GET https://glue.mysprykershop.com/cms-pages?include=content-banners` | Retrieve information about [Banner](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-item-widgets-types.html#banner-content-item-widget) content item for CMS pages. |
 
@@ -597,9 +597,9 @@ To retrieve a specific CMS page, send the request:
 | REQUEST SAMPLE | USAGE |
 | --- | --- |
 | `GET https://glue.mysprykershop.com/cms-pages/0455b56c-55bf-54b6-859d-68753e6f480c` | Retrieve the specific CMS page. |
-| `GET https://glue.mysprykershop.com/cms-pages/0455b56c-55bf-54b6-859d-68753e6f480c?include=content-product-abstract-lists` | Retrieve information about [Abstract Product List](/docs/scos/user/back-office-user-guides/{{page.version}}content/content-items/references/reference-information-content-item-widgets-types.html#abstract-product-list-content-item-widget) content item for the CMS page. |
+| `GET https://glue.mysprykershop.com/cms-pages/0455b56c-55bf-54b6-859d-68753e6f480c?include=content-product-abstract-lists` | Retrieve information about [Abstract Product List](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-item-widgets-types.html#abstract-product-list-content-item-widget) content item for the CMS page. |
 | `GET https://glue.mysprykershop.com/cms-pages/0455b56c-55bf-54b6-859d-68753e6f480c?include=content-product-abstract-list,abstract-products` | Retrieve information about Abstract Product List content item with its abstract products. |
-| `GET https://glue.mysprykershop.com/cms-pages/0455b56c-55bf-54b6-859d-68753e6f480c?include=content-banners` | Retrieve information about [Banner](/docs/scos/user/back-office-user-guides/{{page.version}}content/content-items/references/reference-information-content-item-widgets-types.html#banner-content-item-widget) content item for the CMS page. |
+| `GET https://glue.mysprykershop.com/cms-pages/0455b56c-55bf-54b6-859d-68753e6f480c?include=content-banners` | Retrieve information about [Banner](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-item-widgets-types.html#banner-content-item-widget) content item for the CMS page. |
 
 <details open>
 <summary>Response sample: A specific CMS page</summary>

@@ -16,4 +16,4 @@ redirect_from:
 `nc` command does not give any output.
 
 ## Solution
-[Contact us](https://support.spryker.com/hc/en-us).
+[contact us](https://spryker.com/en/support/) if you have any questions.

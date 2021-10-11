@@ -164,7 +164,7 @@ To debug an application:
 1. Make a breakpoint:
 ![Breakpoint](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Docker+SDK/Configuring+debugging+in+Docker/breakpoint.png)
 
-2. Select *Start listening* ![Start listening](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Debugging+Setup+in+Docker/start-listening.png).
+2. Select *Start listening* ![Start listening](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Docker+SDK/Configuring+debugging+in+Docker/start-listening.png).
 
 3. Open the application in a browser.
 

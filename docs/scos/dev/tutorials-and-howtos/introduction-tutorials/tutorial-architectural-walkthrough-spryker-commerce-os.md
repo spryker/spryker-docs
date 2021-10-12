@@ -277,8 +277,8 @@ Transfer objects are a great way to send data from Yves to Zed, and for communic
     ```
 5. Update your model and `IndexController` accordingly.
     {% info_block infoBox "Info" %}
-You should still get **"!rekyrpS olleH"** when accessing [http://zed.de.suite.local/hello-spryker](http://zed.de.suite.local/hello-spryker
-{% endinfo_block %}.)
+You should still get **"!rekyrpS olleH"** when accessing [http://zed.de.suite.local/hello-spryker](http://zed.de.suite.local/hello-spryker).
+{% endinfo_block %}
 
 ### 4. Build a HelloSpryker Client to connect Yves to Zed
 To build the communication between Yves and Zed, we need the **Client**. Building a client for **HelloSpryker** is similar to building a module in Zed or Yves.

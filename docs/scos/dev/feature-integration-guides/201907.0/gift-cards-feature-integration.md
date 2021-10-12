@@ -1304,5 +1304,5 @@ class YvesBootstrap extends SprykerYvesBootstrap
 </details>
 
 {% info_block warningBox "Verification" %}
-Make sure that a valid gift card code can be added and removed from the cart by submitting the cart code form (activated by the previous step
-{% endinfo_block %}.)
+Make sure that a valid gift card code can be added and removed from the cart by submitting the cart code form (activated by the previous step).
+{% endinfo_block %}

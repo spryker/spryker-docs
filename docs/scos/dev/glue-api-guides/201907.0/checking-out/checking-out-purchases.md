@@ -140,8 +140,8 @@ To submit a request, the customer needs to have at least one cart with products 
 In your request, you can use the addresses stored in a customer's account rather than specify them explicitly. To do so, pass the address identifier as a part of the **billingAddress** or the **shippingAddress** fields.
 
 {% info_block infoBox "Info" %}
-The address identifiers will be available in the **addresses** field of the endpoint response. For details, see subsection *Response*.</br>You can also retrieve the IDs by querying the `/customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %}/addresses` endpoint. For details, see [Managing Customers](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html
-{% endinfo_block %}.)
+The address identifiers will be available in the **addresses** field of the endpoint response. For details, see subsection *Response*.</br>You can also retrieve the IDs by querying the `/customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %}/addresses` endpoint. For details, see [Managing Customers](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html).
+{% endinfo_block %}
 
 {% info_block warningBox "Note" %}
 The following address parts are compulsory: **salutation**, **firstName**, **lastName**, **address1**, **address2**, **zipCode**, **city**, **iso2Code**. If you are using an address ID, you can pass dummy values for the address parts. When resolving the ID, they will be replaced with the actual values of the customer account.
@@ -181,8 +181,8 @@ In order to access the endpoint, you need to identify the user whose cart you ar
 * If you are checking out a guest cart, you need to include the guest user identifier in the **X-Anonymous-Customer-Unique-Id** header. For details, see [Managing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html).
 
 {% info_block warningBox "Note" %}
-You can also use the **Accept-Language** header to specify the locale.</br>Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
-{% endinfo_block %}.)
+You can also use the **Accept-Language** header to specify the locale.</br>Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+{% endinfo_block %}
 
 ### Response
 In case of a successful update, the endpoint responds with information that can help you fill in the missing checkout data, such as the customer's addresses, available payment and shipment methods, etc.
@@ -546,8 +546,8 @@ By default, if the checkout is successful, the order is placed and the shopping 
 In your request, you can use the addresses stored in a customer's account rather than specify them explicitly. To do so, pass the address identifier as a part of the **billingAddress** or the **shippingAddress** fields.
 
 {% info_block infoBox "Info" %}
-The address identifiers will be available in the **addresses** field  of the `/checkout-data` endpoint response. For details, see subsection *Response*.</br>You can also retrieve the IDs by querying the `/customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %}/addresses` endpoint. For details, see [Managing Customers](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html
-{% endinfo_block %}.)
+The address identifiers will be available in the **addresses** field  of the `/checkout-data` endpoint response. For details, see subsection *Response*.</br>You can also retrieve the IDs by querying the `/customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %}/addresses` endpoint. For details, see [Managing Customers](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html).
+{% endinfo_block %}
 
 {% info_block warningBox "Note" %}
 The following address parts are compulsory: **salutation**, **firstName**, **lastName**, **address1**, **address2**, **zipCode**, **city**, **iso2Code**. If you are using an address ID, you can pass dummy values for the address parts. The **iso2Code** must be a valid code, for example, DE. When resolving the ID, they will be replaced with the actual values of the customer account.
@@ -613,8 +613,8 @@ In order to access the endpoint, you need to identify the user whose cart you ar
 * If you are checking out a guest cart, you need to include the guest user identifier in the **X-Anonymous-Customer-Unique-Id** header.</br>For details, see [Managing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html).
 
 {% info_block warningBox "Note" %}
-You can also use the **Accept-Language** header to specify the locale.</br>Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
-{% endinfo_block %}.)
+You can also use the **Accept-Language** header to specify the locale.</br>Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+{% endinfo_block %}
 
 ### Response
 The endpoint responds with the checkout information.
@@ -659,8 +659,8 @@ Among the attributes returned, there is **orderReference** that can be used to r
 You can extend the response with the **orders** resource relationship in order to obtain detailed order information.
 
 {% info_block infoBox "Info" %}
-For detailed information and a list of attributes, see section [Retrieving Specific Order](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html#retrieving-specific-order
-{% endinfo_block %}.)
+For detailed information and a list of attributes, see section [Retrieving Specific Order](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html#retrieving-specific-order).
+{% endinfo_block %}
 
 Sample request: *POST http://glue.mysprykershop.com/checkout?include=orders*
 
@@ -930,8 +930,8 @@ The identifier is specified in the **orderReference** attribute of the `/checkou
 | dataPayload | Array | v | Payload received from the payment service provider. |
 
 {% info_block warningBox "Note" %}
-You can also use the **Accept-Language** header to specify the locale.</br>Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
-{% endinfo_block %}.)
+You can also use the **Accept-Language** header to specify the locale.</br>Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+{% endinfo_block %}
 
 <details open>
 <summary>Sample Request Body</summary>

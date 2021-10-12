@@ -777,8 +777,8 @@ Initially, guest carts are anonymous. In other words, they are not related to an
 To assign a guest cart to a customer, include the unique identifier associated with the customer in the *X-Anonymous-Customer-Unique-Id* header of the authentication request if it is an existing customer, or request to create a customer account if it is a new one.
 
 {% info_block infoBox "Info" %}
-The the *X-Anonymous-Customer-Unique-Id* header is passed every time the API client creates or updates a guest cart. The header is managed by the client exclusively. For details, see section [Resources for Accessing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#resources-for-accessing-guest-carts
-{% endinfo_block %}.)
+The the *X-Anonymous-Customer-Unique-Id* header is passed every time the API client creates or updates a guest cart. The header is managed by the client exclusively. For details, see section [Resources for Accessing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#resources-for-accessing-guest-carts).
+{% endinfo_block %}
 
 Upon login, the behavior depends on whether your project is a single cart or [multiple cart](/docs/scos/user/features/{{page.version}}/multiple-carts-feature-overview.html) environment:
 

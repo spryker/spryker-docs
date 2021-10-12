@@ -1800,9 +1800,9 @@ entries:
           url: /docs/scos/user/intro-to-spryker/whats-new/roadmap.html
         - title: Security audit reports
           nested:
-          - title: "2019.11 \u2014 Security audit by SektionEins"
+          - title: '2019.11 \u2014 Security audit by SektionEins'
             url: /docs/scos/user/intro-to-spryker/whats-new/security-audit-reports/2019.11-security-audit-by-sektioneins.html
-          - title: "2020.11 \u2014 Penetration test by Port Zero (executive summary)"
+          - title: '2020.11 \u2014 Penetration test by Port Zero (executive summary)'
             url: /docs/scos/user/intro-to-spryker/whats-new/security-audit-reports/2020.11-penetration-test-by-port-zero-executive-summary.html
         - title: VAT rates reduction in Germany between July 2020 and January 2021
           url: /docs/scos/user/intro-to-spryker/whats-new/vat-rates-reduction-in-germany-between-july-2020-and-january-2021.html
@@ -4946,8 +4946,7 @@ entries:
               url: /docs/scos/user/technology-partners/payment-partners/amazon-pay/scos-integration/amazon-pay-api.html
           - title: Legacy Demoshop Integration
             nested:
-            - title: "Amazon Pay - Rendering a \u201CPay with Amazon\u201D Button on
-                the Cart Page"
+            - title: 'Amazon Pay - Rendering a \u201CPay with Amazon\u201D Button on the Cart Page'
               url: /docs/scos/user/technology-partners/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-rendering-a-pay-with-amazon-button-on-the-cart-page.html
             - title: Amazon Pay - Email Notifications
               url: /docs/scos/user/technology-partners/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-email-notifications.html

@@ -129,8 +129,8 @@ SELECT COUNT(*) FROM spy_customer_address WHERE uuid IS NULL;
 #### Enable resources and relationships
 
 {% info_block infoBox %}
-`CustomersResourceRoutePlugin` GET, PATCH, DELETE verbs, `AddressesResourceRoutePlugin` GET, POST, PATCH and DELETE, `CustomerPasswordResourceRoutePlugin` PATCH are protected resources. Refer to the configure section of [Configure documentation](/docs/scos/dev/concepts/glue-api/glue-infrastructure.html#resource-routing).
-{% endinfo_block %}.)
+`CustomersResourceRoutePlugin` GET, PATCH, DELETE verbs, `AddressesResourceRoutePlugin` GET, POST, PATCH and DELETE, `CustomerPasswordResourceRoutePlugin` PATCH are protected resources. Refer to the configure section of [Configure documentation](/docs/scos/dev/concepts/glue-api/glue-infrastructure.html#resource-routing).).
+{% endinfo_block %}
 
 Activate the following plugins:
 

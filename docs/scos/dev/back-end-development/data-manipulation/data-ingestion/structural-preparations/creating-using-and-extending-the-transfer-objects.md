@@ -224,8 +224,8 @@ class TransferConfig extends SprykerTransferConfig
 ```
 
 {% info_block infoBox "Naming" %}
-Make sure your transfer object definition files end with `.transfer.xml` (even for your custom packages
-{% endinfo_block %}.)
+Make sure your transfer object definition files end with `.transfer.xml` (even for your custom packages).
+{% endinfo_block %}
 
 ## Transfer object generation
 To generate the objects, run:

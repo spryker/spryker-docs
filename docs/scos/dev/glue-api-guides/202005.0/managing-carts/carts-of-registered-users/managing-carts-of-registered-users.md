@@ -27,8 +27,8 @@ To use a Company Account, a customer needs to retrieve a bearer token for the ac
 *  carts shared with the Company Account.
 
 {% info_block infoBox "Authentication" %}
-For details on how to receive the token, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html
-{% endinfo_block %}.)
+For details on how to receive the token, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html).
+{% endinfo_block %}
 
 To be able to access shared carts, the API client needs to access the endpoints provided by the Carts API using the token received when impersonating as the Company Account. Doing so provides access to management of both the user's own carts and the carts shared with the current Company Account based on the bearer token presented.
 

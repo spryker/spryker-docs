@@ -165,8 +165,8 @@ For each module that you want to add:
   Running composer update will remove all mentions of the module (for example: `refund`) and replace it with your module (for example: `replace_refund`).
 
 {% info_block infoBox %}
-For more information on using the composer replace command see  [Composer website](https://getcomposer.org/doc/04-schema.md#replace
-{% endinfo_block %}.)
+For more information on using the composer replace command see  [Composer website](https://getcomposer.org/doc/04-schema.md#replace).
+{% endinfo_block %}
 
 ```php
 {

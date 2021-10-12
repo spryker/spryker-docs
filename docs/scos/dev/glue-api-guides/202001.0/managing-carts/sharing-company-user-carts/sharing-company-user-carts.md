@@ -19,8 +19,8 @@ In your development, the endpoints will help you to:
 * Allow users to stop sharing their carts when no longer needed.
 
 {% info_block warningBox "Authentication" %}
-The endpoints provided by the API cannot be accessed anonymously. For this reason, you need to pass a user's authentication token in your REST requests. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html
-{% endinfo_block %}.)
+The endpoints provided by the API cannot be accessed anonymously. For this reason, you need to pass a user's authentication token in your REST requests. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+{% endinfo_block %}
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Shared Carts Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shared-carts-feature-integration.html).
@@ -33,8 +33,8 @@ To be able to manage shared carts, you need to impersonate customers as their re
 Carts can be shared only with users that belong to the same company. As customers can impersonate themselves as multiple Company Users belonging to different companies, the available carts, as well as cart access permissions, depend on the company that a Company User Account belongs to. The active Company User can be selected when impersonating a customer as a Company User. A bearer token provided during Company User impersonation will include, among other information, the company that the user belongs to.
 
 {% info_block infoBox "Info" %}
-For details on how to receive the token, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html
-{% endinfo_block %}.)
+For details on how to receive the token, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html).
+{% endinfo_block %}
 
 Each access type is represented by a **Permission Group**. There are 2 Permission Groups available out of the box: **Read-only**, and **Full access**.
 
@@ -54,8 +54,8 @@ Sample request: *GET http://glue.mysprykershop.com/cart-permission-groups/1*
 where **1** is the ID of the Permission Group you need.
 
 {% info_block warningBox "Authentication Required" %}
-To get Cart Permission Groups, you need to authenticate first and pass an access token as a part of your request. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html
-{% endinfo_block %}.)
+To get Cart Permission Groups, you need to authenticate first and pass an access token as a part of your request. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+{% endinfo_block %}
 
 ### Response
 If all Permission Groups are requested, the resource responds with a **RestCartPermissionGroupsCollectionResponse**. If a single group is queried, the response is a **RestCartPermissionGroupsResponse**.
@@ -145,19 +145,19 @@ Sample requests:
 where **4741fc84-2b9b-59da-bb8d-f4afab5be054** is the ID of the specific cart you need.
 
 {% info_block warningBox "Authentication" %}
-To use this endpoint, customers need to authenticate first.  For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html
-{% endinfo_block %}.)
+To use this endpoint, customers need to authenticate first.  For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+{% endinfo_block %}
 
 {% info_block warningBox "Note" %}
-You can also use the Accept-Language header to specify the locale.Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
-{% endinfo_block %}.)
+You can also use the Accept-Language header to specify the locale.Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+{% endinfo_block %}
 
 ### Response
 No matter which of the 2 endpoints you use, the response will consist of a single or multiple **RestCartsResponse** objects containing the requested cart(s).
 
 {% info_block infoBox "Info" %}
-For a detailed list of **RestCartsResponse** attributes, see section *Retrieving Carts* in [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieving-carts
-{% endinfo_block %}.)
+For a detailed list of **RestCartsResponse** attributes, see section *Retrieving Carts* in [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieving-carts).
+{% endinfo_block %}
 
 **Attributes Added by the Resource Relationships**
 
@@ -371,8 +371,8 @@ Sample request: *POST http://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aef
 where **f23f5cfa-7fde-5706-aefb-ac6c6bbadeab** is the ID of the cart you want to share.
 
 {% info_block warningBox "Authentication" %}
-To use this endpoint, customers need to authenticate first.  For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html
-{% endinfo_block %}.)
+To use this endpoint, customers need to authenticate first.  For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+{% endinfo_block %}
 
 **Attributes:**
 
@@ -382,8 +382,8 @@ To use this endpoint, customers need to authenticate first.  For details, see [A
 | idCartPermissionGroup | Integer | v | Specifies the ID of the **Cart Permission Group** that provides the desired permissions. |
 
 {% info_block warningBox "Note" %}
-You can also use the **Accept-Language** header to specify the locale.</br>Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
-{% endinfo_block %}.)
+You can also use the **Accept-Language** header to specify the locale.</br>Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+{% endinfo_block %}
 
 **Sample Request Body:**
     
@@ -451,8 +451,8 @@ Sample request: *PATCH http://glue.mysprykershop.com/shared-carts/4c677a6b-2f65-
 where **4c677a6b-2f65-5645-9bf8-0ef3532bbbccaa** is the ID of the shared cart object.
 
 {% info_block warningBox "Authentication" %}
-To use this endpoint, customers need to authenticate first.  For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html
-{% endinfo_block %}.)
+To use this endpoint, customers need to authenticate first.  For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+{% endinfo_block %}
 
 **Attributes:**
 
@@ -461,8 +461,8 @@ To use this endpoint, customers need to authenticate first.  For details, see [A
 | idCartPermissionGroup | Integer | v | Specifies the ID of the Cart Permission Group that provides the desired permissions. |
 
 {% info_block warningBox "Note" %}
-You can also use the **Accept-Language** header to specify the locale.</br>Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
-{% endinfo_block %}.)
+You can also use the **Accept-Language** header to specify the locale.</br>Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+{% endinfo_block %}
 
 **Sample Request Body:**
     
@@ -524,8 +524,8 @@ Sample request: *DELETE http://glue.mysprykershop.com/shared-carts/4c677a6b-2f65
 where **4c677a6b-2f65-5645-9bf8-0ef3532bbbccaa** is the ID of the shared cart object.
 
 {% info_block warningBox "Authentication" %}
-To use this endpoint, customers need to authenticate first.  For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html
-{% endinfo_block %}.)
+To use this endpoint, customers need to authenticate first.  For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+{% endinfo_block %}
 
 ### Response
 If a request was successful and a cart was shared, the endpoint responds with a **204 No Content** status code.

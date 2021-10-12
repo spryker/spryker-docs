@@ -22,8 +22,8 @@ redirect_from:
 Responses of Spryker Glue REST API can return the **included** and **relationships** sections. The sections contain additional information on the resource requested. Such information is presented in the form of related resources. For example, if you request information on products, the sections can include such additional related resources as image sets, prices, availability information etc.
 
 {% info_block infoBox %}
-For more details, see [Compound Documents](https://jsonapi.org/format/#document-compound-documents
-{% endinfo_block %}.)
+For more details, see [Compound Documents](https://jsonapi.org/format/#document-compound-documents).
+{% endinfo_block %}
 
 You can decide whether Glue REST API includes the sections in all responses by default:
 

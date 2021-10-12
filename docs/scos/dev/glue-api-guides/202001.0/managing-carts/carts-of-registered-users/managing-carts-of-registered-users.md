@@ -31,8 +31,8 @@ To use a Company Account, a customer needs to retrieve a bearer token for the ac
 * the carts shared with the Company Account.
 
 {% info_block infoBox "Info" %}
-For details on how to receive the token, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html
-{% endinfo_block %}.)
+For details on how to receive the token, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html).
+{% endinfo_block %}
 
 To be able to access shared carts, the API client needs to access the endpoints provided by the Carts API using the token received when impersonating as the Company Account. Doing so provides access to management of both the user's own carts and the carts shared with the current Company Account based on the bearer token presented.
 
@@ -124,8 +124,8 @@ Carts created via Glue API are always set as the default carts for the user.
 | store | String | v | Sets the name of the store where to create the cart. |
 
 {% info_block warningBox "Authentication" %}
-To use this endpoint, customers need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html
-{% endinfo_block %}.)
+To use this endpoint, customers need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+{% endinfo_block %}
 
 **Sample Request Body:**
     
@@ -144,8 +144,8 @@ To use this endpoint, customers need to authenticate first. For details, see [Au
 ```
 
 {% info_block warningBox "Note" %}
-You can also use the **Accept-Language** header to specify the locale.Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
-{% endinfo_block %}.)
+You can also use the **Accept-Language** header to specify the locale.Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+{% endinfo_block %}
 
 ### Response
 If a request was successful and a cart was created, the endpoint responds with a **RestCartsResponse** containing information about the new cart.
@@ -243,8 +243,8 @@ To use this endpoint, customers need to authenticate first. For details, see [Au
 {% endinfo_block %}
 
 {% info_block warningBox "Note" %}
-You can also use the **Accept-Language** header to specify the locale.Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
-{% endinfo_block %}.)
+You can also use the **Accept-Language** header to specify the locale.Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+{% endinfo_block %}
 
 ### Response
 No matter which of the 2 endpoints you use, the response will consist of a single or multiple **RestCartsResponse** objects containing the requested cart(s).
@@ -472,8 +472,8 @@ To use this endpoint, customers need to authenticate first. For details, see [Au
 {% endinfo_block %}
 
 {% info_block warningBox "Note" %}
-You can also use the **Accept-Language** header to specify the locale.Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
-{% endinfo_block %}.)
+You can also use the **Accept-Language** header to specify the locale.Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+{% endinfo_block %}
 
 **Attributes:**
 
@@ -525,8 +525,8 @@ Sample request: *DELETE http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f
 where **4741fc84-2b9b-59da-bb8d-f4afab5be054** is the ID of the cart you need and 177_25913296 is the SKU of the concrete product you want to remove.
 
 {% info_block warningBox "Authentication" %}
-To use this endpoint, customers need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html
-{% endinfo_block %}.)
+To use this endpoint, customers need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+{% endinfo_block %}
 
 ### Response
 If the item was deleted successfully, the endpoint will respond with a **204 No Content** status code.
@@ -552,8 +552,8 @@ Sample request: *PATCH http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4
 where **4741fc84-2b9b-59da-bb8d-f4afab5be054** is the ID of the cart you need and **177_25913296** is the SKU of the concrete product for which to change the quantity.
 
 {% info_block warningBox "Authentication" %}
-To use this endpoint, customers need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html
-{% endinfo_block %}.)
+To use this endpoint, customers need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+{% endinfo_block %}
 
 **Attributes:**
 
@@ -601,8 +601,8 @@ Sample request: *DELETE http://glue.mysprykershop.com/carts/4741fc84-2b9b-59da-b
 where **4741fc84-2b9b-59da-bb8d-f4afab5be054** is the ID of the cart you want to delete.
 
 {% info_block warningBox "Authentication" %}
-To use this endpoint, customers need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html
-{% endinfo_block %}.)
+To use this endpoint, customers need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+{% endinfo_block %}
 
 ### Response
 If the cart was deleted successfully, the endpoint will respond with a **204 No Content** status code.

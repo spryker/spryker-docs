@@ -42,13 +42,13 @@ Keep in mind that it will be visible on the Storefront.
    * Carrier
    * Availability Plugin
    * Price Plugin
-    
+
 {% info_block warningBox "Note" %}
 
 Regardless if you have multi-currency prices with multiple price modes or just one simple static price, the price plugin has priority over those prices and allows you to customize and apply logic over delivery price calculation.
 
 {% endinfo_block %}
-   
+
    * Delivery Time Plugin
 
 {% info_block warningBox "Note" %}
@@ -65,7 +65,7 @@ The fields marked with * are required.
    * Select the tax set from the drop-down list. The values are taken from the **Taxes** > **Tax Sets** section. For more information, see [Managing tax sets](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/managing-tax-sets.html).
 
 5. In the *Store Relation* tab, select the stores in which the delivery method should be available.
-   
+
 ![Store relation](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Shipment/Creating+and+Managing+Shipment+Methods/store-relation-delivery-method.png)
 
 6. To keep the changes, click **Save**. This redirects you to the *Delivery Methods* page, where you can see the new delivery method on the list and the following message: '*Shipment method has been successfully saved*'.
@@ -96,8 +96,8 @@ Keep in mind that **Delivery Method Key** cannot be edited.
 
 {% endinfo_block %}
 
-3. To keep the changes, click **Save**. For more details on the attributes, see the [Reference information: Creating delivery methods](#reference-information--creating-delivery-methods) section.
-   
+3. To keep the changes, click **Save**. For more details on the attributes, see the [Reference information: Creating delivery methods](#reference-information-creating-delivery-methods) section.
+
 **Tips & tricks**
 This is how the Back Office setup looks in the online store:
 
@@ -106,7 +106,7 @@ This is how the Back Office setup looks in the online store:
 
 ## Viewing delivery methods
 
-To view details of a delivery method, in the *Actions* column for the delivery method you want to view, click **View**. On the *View Delivery Method: [Delivery Method name]* page, you'll see three sections containing delivery method details: *Configuration*, *Store relation*, and *Price & Tax*. For more details on the attributes you see on the page, see [Reference information: Creating delivery methods](#reference-information--creating-delivery-methods) 
+To view details of a delivery method, in the *Actions* column for the delivery method you want to view, click **View**. On the *View Delivery Method: [Delivery Method name]* page, you'll see three sections containing delivery method details: *Configuration*, *Store relation*, and *Price & Tax*. For more details on the attributes you see on the page, see [Reference information: Creating delivery methods](#reference-information-creating-delivery-methods) 
 
 ## Deleting delivery methods
 

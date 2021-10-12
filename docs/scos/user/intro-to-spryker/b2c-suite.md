@@ -71,12 +71,12 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 * [CMS Pages](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-feature-overview.html-page)
 * [Content Items](https://documentation.spryker.com/2021080/docs/content-items)
 
-[**Media Management**](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/file-manager-feature-overview.md):
+[**Media Management**](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/file-manager-feature-overview.html):
 
 * [Product Image Management](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-images-overview.html)
 * [Image Hosting](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-images-overview.html)
 * [Asset Management](/docs/scos/user/features/{{site.version}}/file-manager/file-manager-feature-overview/asset-management.html)
-* [Video Embedding](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/file-manager-feature-overview.md)
+* [Video Embedding](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/file-manager-feature-overview.html)
 
 [**Internationalization**](https://documentation.spryker.com/2021080/docs/internationalization):
 
@@ -88,7 +88,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 [**Price**](/docs/scos/user/features/{{site.version}}/prices-feature-overview/prices-feature-overview.html):
 
 * [Autodetect of Currency](/docs/scos/user/features/{{site.version}}/prices-feature-overview/prices-feature-overview.html)
-* [Volume Prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html)
+* [Volume Prices](/docs/scos/user/features/{{site.version}}/prices-feature-overview/volume-prices-overview.html)
 * [Net & Gross Price Mode](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/net-and-gross-prices-management.html)
 * [Scheduled Prices]((/docs/scos/user/features/{{site.version}}/scheduled-prices-feature-overview.html)
 
@@ -169,9 +169,9 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 * [Multiple Touchpoint Integrations](/docs/scos/user/features/{{site.version}}/multi-channel/multi-channel.html)
 * [Responsive Design](/docs/scos/user/features/{{site.version}}/multi-channel/multi-channel.html)
 
-[**SDK**](/docs/scos/dev/sdk/{{site.version}}/development.html):
+[**SDK**](/docs/scos/dev/sdk/{{site.version}}/development-tools/architecture-sniffer.html):
 
-* [Development Tools](/docs/scos/dev/sdk/{{site.version}}/development.html-tools)
+* [Development Tools](/docs/scos/dev/sdk/{{site.version}}/development-tools/architecture-sniffer.html)
 * [Spryk Code Generator](/docs/scos/dev/sdk/{{site.version}}/development-tools/spryk-code-generator.html)
 * [Importer](/docs/scos/dev/sdk/{{site.version}}/data-import.html)
 * [Development Virtual Machine, Docker Containers & Console](/docs/scos/dev/sdk/{{site.version}}/development-virtual-machine-docker-containers-and-console.html)

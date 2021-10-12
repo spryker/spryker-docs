@@ -6,6 +6,8 @@ originalArticleId: 618e1260-8d42-47f7-b71f-3aa710879034
 redirect_from:
   - /v5/docs/development-tools
   - /v5/docs/en/development-tools
+  - /v5/docs/development
+  - /v5/docs/en/development
 ---
 
 The Spryker Commerce OS provides your developers with a range of coding tools that make sure your OS run smoothly.

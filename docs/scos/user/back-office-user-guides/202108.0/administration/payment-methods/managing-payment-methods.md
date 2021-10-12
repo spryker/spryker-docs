@@ -32,7 +32,7 @@ To view details of a payment mathod, in the *Actions* column, click **View** for
 * Payment method status
 * Availability of the payment method per store
 
-For the reference information, see the [Reference information: Editing payment method pages](#reference-information--editing-payment-method-pages) section.
+For the reference information, see the [Reference information: Editing payment method pages](#reference-information-editing-payment-method-pages) section.
 
 ## Editing payment method details
 

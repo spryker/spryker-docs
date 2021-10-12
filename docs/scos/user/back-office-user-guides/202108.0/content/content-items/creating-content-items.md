@@ -8,7 +8,6 @@ redirect_from:
   - /2021080/docs/en/creating-content-items
   - /docs/creating-content-items
   - /docs/en/creating-content-items
-
 ---
 
 This topic describes how to create content items in the Back Office.
@@ -76,13 +75,12 @@ Follow the steps to create a banner:
     * **Alt-text**
 
 3. If needed, repeat the previous step in one or more locale-specific tabs.
-4.
+
 {% info_block infoBox "Multi-language setup" %}
 
 The following logic applies in a multi-language setup:
 * Locale-specific values overwrite the default values when the banner is rendered on a Storefront page with the [locale](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
 * If the fields are not filled out for a locale, the default values are displayed on a Storefront page with the locale selected.
-
 
 {% endinfo_block %}
 
@@ -102,7 +100,7 @@ On the *Create Content Item: Banner* page, you can do the following:
 * Clear all the fields in a tab by clicking **Clear locale**.
 
 * Go back to the *Overview of Content Items* page by clicking **Back to Content Items** in the top right corner.
-*
+
 {% info_block warningBox "Saving changes" %}
 
 Make sure to click **Save** before clicking **Back to Content Items** or going to any other Back Office section. Otherwise, the changes are discarded.
@@ -279,11 +277,12 @@ Follow the steps to create a file list:
 1. On the *Create Content Item: File List* page, enter **Name** and **Description**. The fields are mandatory.
 2. In the *Default* tab, add files to the file list as follows:
     1.  In the *Available Files* table, click **+Add to list** next to the desired files.
+
     {% info_block warningBox "Verification" %}
 
     The added files should appear in the *Selected Files* table.
 
-{% endinfo_block %}
+    {% endinfo_block %}
 
     2.  In the *Selected Files* table, sort the added files by clicking **Move Down** or **Move Up**.
 

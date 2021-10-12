@@ -13,7 +13,7 @@ redirect_from:
   - /v6/docs/en/release-notes-code-releases-may-2020
 ---
 
-The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of new features and enhancements we are announcing in May of 2020 as part of the [code release](/docs/scos/user/intro-to-spryker/spryker-release-process.html#atomic--code--releases).
+The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of new features and enhancements we are announcing in May of 2020 as part of the [code release](/docs/scos/user/intro-to-spryker/spryker-release-process.html#atomic-code-releases).
 For information about installing the Spryker Commerce OS see [Getting Started Guide](/docs/scos/dev/developer-getting-started-guide.html).
 
 

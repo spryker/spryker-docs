@@ -333,7 +333,7 @@ Below you will find the list of the new/updated documentation released as part o
     * [Creating a Warehouse](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/warehouses/creating-a-warehouse.html)
     * [Managing Warehouses](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/warehouses/managing-warehouses.html)
     * [Warehouses: Reference Information](/docs/user/features/{{page.version}}/inventory-management-feature-overview.html)
- * [Stores](https://documentation.spryker.com/2021080/docs/stores-reference-information-201911)
+ * [Stores](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/stores.html)
 
 #### HowTos:
 

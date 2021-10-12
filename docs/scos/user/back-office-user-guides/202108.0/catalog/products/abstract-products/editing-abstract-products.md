@@ -92,7 +92,7 @@ The following table describes the attributes you enter and select when editing v
 
 ## Editing product variants of an abstract product
 
-To edit a product variant, see [Editing product variants](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/concrete-products/editing-a-product-variant.html). 
+To edit a product variant, see [Editing product variants](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/concrete-products/editing-product-variants.html). 
 To create a product variant, see [Creating product variants](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/concrete-products/creating-product-variants.html).
 
 ## Editing meta information of an abstract product

@@ -3605,7 +3605,7 @@ entries:
           url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/rabbitmq-zed.critical-phpamqplib-exception-amqpchannelclosedexception-channel-connection-is-closed.html
         - title: Router generates absolute URL with localhost
           url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/router-generates-absolute-url-with-localhost.html
-        - title: "Error response from daemon: OCI runtime create failed- .... \'no such file or directory\'- unknown"
+        - title: "Error response from daemon: OCI runtime create failed- .... 'no such file or directory'- unknown"
           url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/error-response-from-daemon-oci-runtime-create-failed-....-no-such-file-or-directory-unknown.html
         - title: No data on the Storefront
           url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/no-data-on-the-storefront.html

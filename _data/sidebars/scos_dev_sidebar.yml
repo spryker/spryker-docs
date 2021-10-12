@@ -332,7 +332,7 @@ entries:
             - "202005.0"
             - "202009.0"
             - "202108.0"
-          - title: '"File details: cms_page.csv"'
+          - title: File details- cms_page.csv
             url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-page.csv.html
             include_versions:
             - "202108.0"

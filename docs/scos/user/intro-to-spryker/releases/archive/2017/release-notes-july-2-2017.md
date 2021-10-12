@@ -75,9 +75,6 @@ We've added support for dynamic product labels. Labels now can be assigned to pr
 | --- | --- | --- |
 | [ProductNew 1.0.0](https://github.com/spryker/product-new/releases/tag/1.0.0) | <ul><li>[ProductLabel 2.1.0](https://github.com/spryker/product-label/releases/tag/2.1.0)</li><li>[ProductLabelCollector 1.1.0](https://github.com/spryker/product-label-collector/releases/tag/1.1.0)</li><li>[ProductLabelGui 1.1.0](https://github.com/spryker/product-label-gui/releases/tag/1.1.0)</li><li>[Search 6.4.0](https://github.com/spryker/Search/releases/tag/6.4.0)</li></ul> | [ProductManagement 0.7.5](https://github.com/spryker/product-management/releases/tag/0.7.5) |
 
-**Documentation**
-For module documentation and integration guides, see [ProductNew Module Guide](https://documentation.spryker.com/2021080/docs/new-products)
-
 **Migration Guides**
 To upgrade, follow the steps described below:
 

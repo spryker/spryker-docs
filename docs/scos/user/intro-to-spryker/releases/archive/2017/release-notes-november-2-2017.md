@@ -84,7 +84,7 @@ This change does not require database changes but it does require Propel model r
 
 **Documentation**
 For module documentation, see Customer Module Guide<!--/capabilities/crm/customer-module-overview.htm)-->.
-For detailed migration guides, see [Customer Module Migration Guide from Version 6. to 7](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-customer.html#upgrading-from-version-6---to-version-7-0).
+For detailed migration guides, see [Customer Module Migration Guide from Version 6. to 7](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-customer.html#upgrading-from-version-6-to-version-70).
 
 **Migration Guides**
 To upgrade, follow the steps described below:

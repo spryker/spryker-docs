@@ -56,9 +56,7 @@ With this release, we introduced date boundaries for navigation nodes. You can n
 | <ul><li>[Navigation 2.0.0](https://github.com/spryker/Navigation/releases/tag/2.0.0)</li><li>[NavigationGui 2.0.0](https://github.com/spryker/navigation-gui/releases/tag/2.0.0)</li></ul> | n/a | [NavigationCollector 1.0.3](https://github.com/spryker/navigation-collector/releases/tag/1.0.3) |
 
 **Documentation**
-For module documentation, see [Navigation Module Guide](/docs/user/features/{[site.version}}/navigation-feature-overview.html), [Under the Hood - Navigation](/docs/scos/dev/feature-walkthroughs/{{site.version}}/navigation-module-reference-information.html#under-the-hood).
-
-For feature integration, see [Feature Integration - Navigation](/docs/scos/dev/feature-walkthroughs/{{site.version}}/navigation-module-reference-information.html#under-the-hood#feature-integration)
+For module documentation, see [Navigation Module Guide](/docs/user/features/{[site.version}}/navigation-feature-overview.html), [Under the Hood - Navigation](/docs/scos/dev/feature-walkthroughs/{{site.version}}/navigation-feature-walkthrough/navigation-module-reference-information.html).
 
 For detailed migration guides, see [Navigation Module Migration Guide from Version 1. to 2](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-navigation.html#upgrading-from-version-1-to-version-2), [NavigationGui Module Migration Guide from Version 1. to 2.](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-navigationgui.html#upgrading-from-version-1-to-version-2).
 

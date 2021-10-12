@@ -49,6 +49,7 @@ FROM `spy_merchant_profile`
 Although the composite entity has similar functionality to the internalized scope, there are some differences.
 
 ## Inherited scope vs Composite entity 
+
 | FUNCTIONALITY | INHERITED SCOPE | COMPOSITE ENTITY |
 |-----|-----|-----|
 | Access granted through | Rule | Configuration |

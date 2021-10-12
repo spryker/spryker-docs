@@ -4,14 +4,15 @@ last_updated: Sep 14, 2021
 template: concept-topic-template
 ---
 
-![Inherited scope](https://confluence-connect.gliffy.net/embed/image/e473a9ca-2eb7-481d-b0c4-72d2563ec466.png?utm_medium=live&utm_source=custom)
 Inherited scope rules apply when you need to grant access to an entity (child) that inherits from another entity (parent). Here are a few examples of inheritance:
 
 - MerchantProductAbstracts → Merchants (through `MerchantProductAbstract.fk_merchant`)
 - MerchantSalesOrders → Merchants (through `MerchantSalesOrder.merchant_reference`)
 - Shipments → Orders (through `Shipment.order_reference`)
 
-Inheritance rules (child-parent relationship) are set in the configuration (read more about [Persistence ACL configuration](../configuration.html)).
+![Inherited scope](https://confluence-connect.gliffy.net/embed/image/e473a9ca-2eb7-481d-b0c4-72d2563ec466.png?utm_medium=live&utm_source=custom)
+
+Inheritance rules (child-parent relationship) are set in the configuration. See [Persistence ACL configuration](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/configuration.html) for more details.
 
 Inherited scope functionality has one unique feature: it is sufficient to have **read** access to the parent for successful inheritance for any operation (create/read/update/delete).
 
@@ -55,7 +56,7 @@ FROM `spy_merchant_product_abstract`
 ORDER BY `spy_merchant_product_abstract`.`updated_at` DESC; 
 ```
 
-It is very important to understand that permissions are checked in the context of roles. Rules of one role do not affect the rules of another (learn more about [Execution Flow](../execution-flow.html)). Below is an example of two roles:
+It is very important to understand that the permissions are checked in the context of roles. Rules of one role do not affect the rules of another. See [Execution Flow](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/execution-flow.html). Below is an example of the two roles:
 
 1. DE product manager (Full CRUD for products in the DE store)
 2. US product viewer (View only for products in the US store)
@@ -80,10 +81,11 @@ It is very important to understand that permissions are checked in the context o
 | 7 | null | 2 | `Orm\Zed\Product\Persistence\SpyProductAbstractStore` | 1  | 2 |
 | 8 | 2 | 2 | `Orm\Zed\Store\Persistence\SpyStore` | 1  | 1 |
 
-Rules with IDs 1, 2, 3 and 4 refer to one role (fk_acl_role: 1), and rules with IDs 5, 6, 7 and 8 to another (fk_acl_role: 2). When a user has both roles and performs Update on a Product, the Persistence ACL engine will perform the following:
-- it will only find role #1 (since it has a rule for updating a product)
-- the role #2 will not be considered at all since it does not allow products to be updated. 
-  The context of a rule is determined by the role to which it is attached. 
-  Because of this, a user with such a set of roles and rules will be able to:
+Rules with IDs `1`, `2`, `3` and `4` refer to one role (`fk_acl_role: 1`), and rules with IDs `5`, `6`, `7` and `8` to another (`fk_acl_role: 2`). When a user has both roles and performs `Update on a Product`, the Persistence ACL engine will perform the following:
+- it will only find role `1` (since it has a rule for updating a product).
+- the role `2` will not be considered at all since it does not allow products to be updated. 
+
+The context of a rule is determined by the role to which it is attached. Because of this, a user with such a set of roles and rules will be able to:
+
 - perform CRUD actions for products in the DE store.
 - have read-only permissions for products in the US store.

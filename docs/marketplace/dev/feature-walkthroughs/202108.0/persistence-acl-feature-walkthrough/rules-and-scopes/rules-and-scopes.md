@@ -10,16 +10,17 @@ It is important to understand that the rule, in contrast to the configuration, i
 ## Rule
 One of the fundamental concepts of the Persistence ACL module is an entity rule. It determines the capabilities and permissions of the current user. The rule is an entry in the `spy_acl_entity_rule` table.
 
-| Column | Description | Data example |
+| COLUMN | DESCRIPTION | DATA EXAMPLE |
 |-----|-----|-----|
-| id_acl_entity_rule | auto incremental primary key | |
+| id_acl_entity_rule | Auto incremental primary key. | |
 | fk_acl_entity_segment | A reference to the data segment to which the rule applies. The segment concept is described below. | |
-| fk_acl_role | The foreign key to the role to which the rule is applied. The rules are applied not to specific users, but to roles, which makes their use extremely flexible. | |
+| fk_acl_role | The foreign key of the role to which the rule applies. Rules are not applied to specific users, but to roles, which makes their use extremely flexible. | |
 | entity | Entity class. You must specify the full namespace without a leading slash. | `Orm\Zed\Product\Persistence\SpyProductAbstract`, `Orm\Zed\Store\Persistence\SpyStore` |
-| permission_mask | An integer representation of the binary permission mask (see [Permission concept](#permission-concept) documentation) . | `AclEntityConstants::OPERATION_MASK_READ`, <br />`AclEntityConstants::OPERATION_MASK_READ \| AclEntityConstants::OPERATION_MASK_UPDATE`, <br /> `AclEntityConstants::OPERATION_MASK_CRUD` |
-| scope | There are 3 types of rules: Global, Segment and Inherited. Their features and differences are described below | `AclEntityConstants::SCOPE_GLOBAL`, `AclEntityConstants::SCOPE_SEGMENT`, `AclEntityConstants::SCOPE_INHERITED` |
+| permission_mask | An integer representation of the binary permission mask. See [Permission concept](#permission-concept) documentation for more details. | `AclEntityConstants::OPERATION_MASK_READ`, <br />`AclEntityConstants::OPERATION_MASK_READ \| AclEntityConstants::OPERATION_MASK_UPDATE`, <br /> `AclEntityConstants::OPERATION_MASK_CRUD` |
+| scope | There are 3 types of rules: *Global*, *Segment* and *Inherited*. Their features and differences are described below. | `AclEntityConstants::SCOPE_GLOBAL`, `AclEntityConstants::SCOPE_SEGMENT`, `AclEntityConstants::SCOPE_INHERITED` |
 
 ## Scope
+
 The concept of scopes is very flexible. It allows you to create any rules that suit the needs of your system. For example:
 
 - Grant read-only access to "All Products".
@@ -40,19 +41,19 @@ In the database layer scope represented as enum:
 | segment | 1 |
 | inherited | 2 |
 
-The behavior of the system differs depending on the scope used. Please read the documentation for each of them:segment-scope.md
-- [Global scope](./global-scope.html)
-- [Segment scope](./segment-scope.html)
-- [Inherited scope](./inherited-scope.html)
-- [Composite entity](./composite-entity.html)
+Depending on the scope, the system behaves differently. Read the documentation for each of them:
+- [Global scope](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/global-scope.html)
+- [Segment scope](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/segment-scope.html)
+- [Inherited scope](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/inherited-scope.html)
+- [Composite entity](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/composite-entity.html)
 
 ## Default rule
 
 If a user performs any operation on an entity for which he has no rules, the default rule is triggered. The default rule can be configured both within a specific class and in a general context. 
 
-A class context takes precedence over a general context. Persistence ACL feature is especially useful when all database tables are connected simultaneously (See [configuration](../configuration.html#connect-persistence-acl-feature-to-all-tables) for details). Thus, you can define publicly available entities such as `Country`, `Currency`, `Region`, etc. 
+A class context takes precedence over a general context. Persistence ACL feature is especially useful when all database tables are connected simultaneously. See [configuration](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/configuration.html#connect-persistence-acl-feature-to-all-database-tables) for more details. Thus, you can define publicly available entities such as `Country`, `Currency`, `Region`, etc. 
 
-The default rule configuration is described in the [configuration section](../configuration.html).
+The default rule configuration is described in the [configuration document](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/configuration.html).
 
 {% info_block infoBox "Info" %}
 

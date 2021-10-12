@@ -4,7 +4,7 @@ last_updated: Sep 14, 2021
 template: concept-topic-template
 ---
 
-Global scope rules apply to an entire collection of entities (e.g. Users, Orders, etc.).
+Global scope rules apply to an entire collection of entities (e.g., Users, Orders, etc.).
 
 As long as the user has the corresponding global rule with permissions, the Persistence ACL will not restrict the user from performing their actions. Accordingly, if the current user has the appropriate permission on a global scope rule, the database query will remain unchanged.
 

@@ -63,26 +63,3 @@ Most of payment service providers (PSP) support a single delivery address for a 
 With Split Delivery, Product Bundles items can be shipped to different delivery addresses. However, if a product bundle is a part of the order and you don't want it to be split and delivered to different delivery addresses, you need to configure the implementation of the Checkout process on your project level.
 -->
 
-
-## If you are:
-
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
- <li><a href="/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-disable-split-delivery-in-yves-interface.html" class="mr-link">Disable Split Delivery on the Storefront</a></li>                
-                <li><a href="docs\scos\dev\migration-concepts\split-delivery-migration-concept.md" class="mr-link">Enable Split Delivery in your project</a></li>
-            </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\sales\orders\managing-order-shipments.md#creating-a-new-shipment-for-order" class="mr-link">Create a shipment</a></li>
-                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\sales\orders\managing-order-shipments.md#editing-shipment-details" class="mr-link">Edit a shipment</a></li>
-            </ul>
-        </div>
-    </div>
-</div>

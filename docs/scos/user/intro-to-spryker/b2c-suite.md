@@ -24,17 +24,16 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 [**Product Information Management**](https://documentation.spryker.com/2021080/docs/product-information-management):
 
 * [Product Abstraction](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html)
-* [Product Attributes](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html)
-* [Super Attributes](https://documentation.spryker.com/2021080/docs/super-attributes)
-* [Product Groups](https://documentation.spryker.com/2021080/docs/product-groups)
-* [Product Bundles](https://documentation.spryker.com/2021080/docs/product-bundles)
+* [Product Attributes](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-attributes-overview.html)
+* [Product Groups](/docs/scos/user/features/{{site.version}}/product-groups-feature-overview.html)
+* [Product Bundles](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html)
 * [Product Sets](/docs/scos/user/features/{{site.version}}/product-sets-feature-overview.html)
 * [Product Relations](/docs/scos/user/features/{{site.version}}/product-relations-feature-overview.html)
 * [Product Options](/docs/scos/user/features/{{site.version}}/product-options-feature-overview.html)
 * [Product Labels](/docs/scos/user/features/{{site.version}}/product-labels-feature-overview.html)
-* [Timed Product Availability](https://documentation.spryker.com/2021080/docs/product-ttl)
-* [Alternative Products](https://documentation.spryker.com/2021080/docs/alternative-products)
-* [Discountinued Products](https://documentation.spryker.com/2021080/docs/discontinued-products)
+* [Timed Product Availability](/docs/scos/user/features/{{site.version}}/product-feature-overview/timed-product-availability-overview.html)
+* [Alternative Products](/docs/scos/user/features/{{site.version}}/alternative-products-feature-overview.html)
+* [Discountinued Products](/docs/scos/user/features/{{site.version}}/product-feature-overview/discontinued-products-overview.html)
 
 [**Catalog Management**](/docs/scos/user/features/{{site.version}}catalog-feature-overview.html):
 
@@ -49,33 +48,32 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 * [Navigation feature](https://documentation.spryker.com/2021080/docs/en/navigation)
 
 
-[**Search & Filter**](https://documentation.spryker.com/2021080/docs/search-filter):
+[**Search & Filter**](/docs/scos/user/features/{{site.version}}/search-feature-overview.html)):
 
-* [Filters & Search by Category](/docs/scos/user/features/{{site.version}}/search/search-feature-overview/category-filters-overview.html)
+* [Filters & Search by Category](/docs/scos/user/features/{{site.version}}/search-feature-overview/category-filters-overview.html)
 * [Full-Site Search](/docs/scos/user/features/{{site.version}}/search-feature-overview/search-feature-overview.html)
 * [Multi-Language Search](/docs/scos/user/features/{{site.version}}/search-feature-overview/search-feature-overview.html)
 * [Textual Search](/docs/scos/user/features/{{site.version}}/search-feature-overview/search-feature-overview.html)
-* [Standard Filters](/docs/scos/user/features/{{site.version}}/search/search-feature-overview/standard-filters-overview.html)
-* [Dynamic Filters & Facets](https://documentation.spryker.com/2021080/docs/dynamic-filter-facets)
+* [Standard Filters](/docs/scos/user/features/{{site.version}}/search-feature-overview/standard-filters-overview.html)
 
 [**SEO**](https://documentation.spryker.com/2021080/docs/seo):
 
 * [Meta Tags](https://documentation.spryker.com/2021080/docs/seo)
 * [Landing Pages](https://documentation.spryker.com/2021080/docs/seo)
-* [URL Redirects](/docs/scos/user/features/{{site.version}}/spryker-core/spryker-core-feature-overview/url-redirects-overview.html)
+* [URL Redirects](/docs/scos/dev/feature-walkthroughs/{{site.version}}/spryker-core-feature-walkthrough/url-redirects-overview.html)
 
 [**CMS (Content Management System)**](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-feature-overview.html):
 
 * [CMS Templates & Slots](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html)
-* [CMS Blocks](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-feature-overview.html-block)
-* [CMS Pages](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-feature-overview.html-page)
+* [CMS Blocks](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-feature-overview/cms-blocks-overview.html)
+* [CMS Pages](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-feature-overview/cms-pages-overview.html)
 * [Content Items](/docs/scos/user/features/{{site.version}}/content-items-feature-overview.html)
 
 [**Media Management**](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/file-manager-feature-overview.html):
 
 * [Product Image Management](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-images-overview.html)
 * [Image Hosting](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-images-overview.html)
-* [Asset Management](/docs/scos/user/features/{{site.version}}/file-manager/file-manager-feature-overview/asset-management.html)
+* [Asset Management](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/asset-management.html)
 * [Video Embedding](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/file-manager-feature-overview.html)
 
 [**Internationalization**](https://documentation.spryker.com/2021080/docs/internationalization):
@@ -90,7 +88,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 * [Autodetect of Currency](/docs/scos/user/features/{{site.version}}/prices-feature-overview/prices-feature-overview.html)
 * [Volume Prices](/docs/scos/user/features/{{site.version}}/prices-feature-overview/volume-prices-overview.html)
 * [Net & Gross Price Mode](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/net-and-gross-prices-management.html)
-* [Scheduled Prices]((/docs/scos/user/features/{{site.version}}/scheduled-prices-feature-overview.html)
+* [Scheduled Prices](/docs/scos/user/features/{{site.version}}/scheduled-prices-feature-overview.html)
 
 
 [**Tax**](/docs/scos/user/features/{{site.version}}/tax-feature-overview.html):
@@ -113,7 +111,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 [**Shipment**](/docs/scos/user/features/{{site.version}}/shipment-feature-overview.html):
 
 * [Shipment Carriers & Methods](https://documentation.spryker.com/2021080/docs/shipment-carriers-methods)
-* [Multiple Currencies for Shipments](/docs/scos/user/features/{{site.version}}/shipment/shipment-feature-overview.html)
+* [Multiple Currencies for Shipments](/docs/scos/user/features/{{site.version}}/shipment-feature-overview.html)
 * [Shipment Calculation Rules](/docs/scos/user/features/{{site.version}}/shipment-feature-overview.html)
 * [Split Delivery](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/split-delivery-overview.html)
 

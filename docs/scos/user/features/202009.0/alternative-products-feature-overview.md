@@ -22,7 +22,7 @@ The schema below illustrates relations between the alternative products:
 All the available alternative products will be shown on the abstract product details page, if one of the following occurs:
 
 * All concrete products of an abstract one are in status "out of stock"
-* [Discontinued Products](docs\scos\user\features\202009.0\product\product-feature-overview\discontinued-product-overview.md) feature is enabled
+* [Discontinued Products](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/discontinued-product-overview.html) feature is enabled
 
 {% info_block infoBox %}
 

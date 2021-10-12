@@ -31,8 +31,8 @@ For use cases and exmaple of each of the content item, see [Content Item Widgets
 A content manager can [create content items](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html) in the Back Office > **Content Management** > **Content Items** section.
 A developer can do the following:
 * [Import content items](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html)
-* [Retrieve banner content items](docs\scos\dev\glue-api-guides\202009.0\retrieving-content-items\retrieving-banner-content-items.html)
-* [Retrieve abstract product list content items](docs\scos\dev\glue-api-guides\202009.0\retrieving-content-items\retrieving-abstract-product-list-content-items.md)
+* [Retrieve banner content items](/docs/scos/dev\glue-api-guides/{{page.version}}/retrieving-content-items/retrieving-banner-content-items.html)
+* [Retrieve abstract product list content items](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-content-items/retrieving-abstract-product-list-content-items.html)
 
 See [Content Items Types: Module Relations](/docs/scos/user/feature-walkthroughs/{{page.version}}/content-items-feature-walkthrough/content-item-types-module-relations.html) for more information on each content item type and module relations.
 

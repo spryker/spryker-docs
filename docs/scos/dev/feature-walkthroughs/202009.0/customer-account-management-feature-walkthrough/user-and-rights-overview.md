@@ -113,26 +113,3 @@ In the example, we grant the user **winner@spryker.com** access to all Zed resou
 
 * Note that if there is at least one `allow` type for a resource, the user will have access to it in spite of having a `deny` type for the same resource. It works for `AclConstants::ACL_USER_RULE_WHITELIST`, `AclConstants::ACL_DEFAULT_CREDENTIALS` and rules configured via Zed UI, except for `AclConstants::ACL_DEFAULT_RULES` as it is handled before checking if user logged in or not.
 
-
-
-## If you are:
-
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/spryker-core-back-office-feature-integration" class="mr-link">Enable Users and Rights by integrating the Spryker Core Back Office feature into your project</a></li></ul>
-        </div>
-  <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\users\roles-groups-and-users\managing-roles.md" class="mr-link">Create and manage roles</a></li>
-                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\users\roles-groups-and-users\managing-groups.md" class="mr-link">Create and manage groups</a></li>
-                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-users.html" class="mr-link">Create and manage users</a></li>
-            </ul>
-        </div>
- </div>
-</div>

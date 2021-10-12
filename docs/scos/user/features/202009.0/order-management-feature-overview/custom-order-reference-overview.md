@@ -49,31 +49,8 @@ If you submit a [quote request](/docs/scos/user/features/{{page.version}}/quotat
 
 In the [Approval Process](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) scenarios, both an approver and buyer can add or edit the custom order reference during the checkout.
 
-When [sharing a cart via a link with external users](docs\scos\user\features\202108.0\persistent-cart-sharing-feature-overview.md), they can only view the custom order reference. However, when [sharing a cart via a link with internal users](docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\order-management-feature-integration.md), they can update the custom order reference for the shopping cart with the read-only and full-access permissions.
+When [sharing a cart via a link with external users](/docs/scos/user/features/{{page.version}}/persistent-cart-sharing-feature-overview.html), they can only view the custom order reference. However, when [sharing a cart via a link with internal users](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/order-management-feature-integration.html), they can update the custom order reference for the shopping cart with the read-only and full-access permissions.
 
 
 ## Current constraints
 If you added a custom order reference to the cart, submitted a request for quote, and then converted the RFQ to the cart, the custom order reference will be removed. Thus, you will need to add the reference once the RFQ has been converted to the cart.
-
-
-## If you are:
-
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="docs\scos\user\features\202009.0\order-management\order-management-feature-overview\custom-order-reference-module-relations.md" class="mr-link">See the module relations for Custom Order Reference</a></li>
-              <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\custom-order-reference-feature-integration.md" class="mr-link">Enable Custom Order Reference by integrating the Order Management feature into your project</a></li>
-            </ul>
-        </div>
-      <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title">Back Office User</li>
-                 <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\sales\orders\managing-orders.md">Manage orders</a></li>
-            </ul>
-        </div>  
-</div>
-</div>

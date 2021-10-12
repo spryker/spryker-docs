@@ -51,26 +51,3 @@ Keep in mind that bundled product itself always has a 0 tax rate. However, all o
 
 * Product options are not fully supported in the generated invoice for now. If product options have one tax rate and the product itself another, the tax rate difference is not reflected in the invoice. The invoice shows prices that already include tax rates of products and product options.
 * .pdf files of the invoices are not generated.
-
-
-## If you are:
-
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\order-management-feature-integration.md" class="mr-link">Enable invoice generation by integrating the Order Management feature into your project </a></li>
-                <li><a href="/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-emailing-invoices-using-bcc.html" class="mr-link">Configure emailing of invoices using BCC</a></li>
-            </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\sales\orders\managing-orders.md#changing-order-statuses" class="mr-link">Trigger invoice generation in the Back Office</a></li>
-            </ul>
-        </div>
-    </div>
-</div>

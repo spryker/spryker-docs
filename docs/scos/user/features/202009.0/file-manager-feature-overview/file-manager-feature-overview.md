@@ -21,28 +21,3 @@ Apart from images, you can add a great variety of different types of assets to y
 
 This enables content managers to create rich, compelling and attractive content for your customers, as well as gives the chance to offer your customers additional information they might be interested in, like user manuals or instructions.
 
-
-
-
-## If you are:
-
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="docs\scos\user\features\202009.0\file-manager\file-manager-feature-overview\asset-management.md" class="mr-link">Get a general idea of asset measurement</a></li>
-                <li><a href="docs\scos\user\features\202009.0\file-manager\file-manager-feature-overview\file-uploader.md" class="mr-link">Get a general idea of the file uploader</a></li>
-            </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-            <li><a href="docs\scos\user\features\202009.0\file-manager\file-manager-feature-overview\asset-management.md" class="mr-link">Get a general idea of asset measurement</a></li>
-                <li><a href="docs\scos\user\features\202009.0\file-manager\file-manager-feature-overview\file-uploader.md" class="mr-link">Get a general idea of the file uploader</a></li>
-            </ul>
-        </div>
-    </div>
-</div>

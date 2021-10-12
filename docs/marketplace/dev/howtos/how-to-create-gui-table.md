@@ -297,10 +297,10 @@ class ProductsController extends AbstractController
 }
 ```
 
-Create a corresponding Twig template, pass configuration to frontend component:
+Create a corresponding Twig template, pass configuration to frontend component.
 
 
-INTRODUCE FRONTEND COMPONENT, LINK HOW TO CREATE A TABLE FRONTEND COMPONENT
+See [Table Design](/docs/marketplace/dev/front-end/table-design) to learn more about table components.
 
 ## 7) Data source
 

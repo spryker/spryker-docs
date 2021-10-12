@@ -9,7 +9,7 @@ This articles provides details how to create a new Gui table column type.
 Follow the [Marketplace Merchant Portal Core feature integration guide](/docs/marketplace/dev/feature-integration-guides/202108.0/marketplace-merchant-portal-core-feature-integration.html) 
 to install the Marketplace Merchant Portal Core feature providing ``GuiTable`` module.
 
-## 1) Adjust GuiTableConfigurationBuilder
+## Adjust GuiTableConfigurationBuilder
 
 Add a new addColumn***() method to ``Spryker\Shared\GuiTable\Configuration\Builder\GuiTableConfigurationBuilder``, where 
 pass all the required data for a new column configuration. Define a structure as it will be used by frontend component 
@@ -45,7 +45,7 @@ pass all the required data for a new column configuration. Define a structure as
     }
 ```
 
-## 2) DEFINE A FRONTEND COMPONENT
+See [Table Column Type Extension](/docs/marketplace/dev/front-end/table-design/table-column-types) to learn more about Column Type frontend components.
 
 ## See also
 

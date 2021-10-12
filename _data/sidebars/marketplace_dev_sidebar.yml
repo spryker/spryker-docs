@@ -404,7 +404,7 @@ entries:
             url: /docs/marketplace/dev/data-import/file-details-merchant-product-option-group.csv.html
 
           - title: "File details: merchant_user.csv"
-            url: /docs/marketplace/dev/data-import/file-details-merchant-user-csv.html
+            url: /docs/marketplace/dev/data-import/file-details-merchant-user.csv
 
       - title: Front-end
         nested:

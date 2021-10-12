@@ -52,13 +52,13 @@ where to go for the data and how to interpret the provided data.
 
 ![Domain model](https://confluence-connect.gliffy.net/embed/image/2f5bae0d-8b37-45f5-ad08-06ca5c0c562d.png?utm_medium=live&utm_source=custom)
 
-## Learn more
-
-- [GUI modules concept](/docs/marketplace/dev/back-end/marketplace-merchant-portal-core-feature/gui-modules-concept.html)
-- [How to extend Merchant portal dashboard?](/docs/marketplace/dev/howtos/how-to-extend-merchant-portal-dashboard.html)
-
 ## Related Developer articles
 
 |INTEGRATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  | REFERENCES  |
 |---------|---------|---------|--------|
-| [{Integration guide name}]({Integration guide link})          | [{Glue API guide name}]({Glue API guide link})          | [{Import file name}]({import file link})           | {Any doc related to this feature should be placed here}  |
+| [Marketplace Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/202108.0/marketplace-merchant-portal-core-feature-integration.html)          |          | [File details: merchant_user.csv](/docs/marketplace/dev/data-import/202108.0/file-details-merchant-user.csv)           | [GUI modules concept](/docs/marketplace/dev/back-end/marketplace-merchant-portal-core-feature/gui-modules-concept.html) |
+|        |          |          | [How to create a new GUI module](/docs/marketplace/dev/howtos/how-to-create-gui-module.html)  |
+|        |          |          | [How to create a new Gui table](/docs/marketplace/dev/howtos/how-to-create-gui-table.html)  |
+|        |          |          | [How to extend an existing Gui table](/docs/marketplace/dev/howtos/how-to-extend-gui-table.html)  |
+|        |          |          | [How to create a new Gui table filter type](/docs/marketplace/dev/howtos/how-to-add-new-filter-type.html)  |
+|        |          |          | [How to extend Merchant portal dashboard?](/docs/marketplace/dev/howtos/how-to-extend-merchant-portal-dashboard.html)  |

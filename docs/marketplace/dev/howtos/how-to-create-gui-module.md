@@ -9,7 +9,7 @@ This articles provides details how to create a new GUI module and add it to navi
 Follow the [Marketplace Merchant Portal Core feature integration guide](/docs/marketplace/dev/feature-integration-guides/202108.0/marketplace-merchant-portal-core-feature-integration.html) 
 to install the Marketplace Merchant Portal Core feature providing ``ZedUi``, ``Navigation`` and ACL related modules.
 
-### 1) Create a new module
+## 1) Create a new module
 
 Create a new folder ``Pyz\Zed\ExampleMerchantPortalGui`` with a controller and corresponding Twig template:
 
@@ -50,7 +50,7 @@ class ExampleController extends AbstractController
 ```
 {% endraw %}
 
-### 2) ACL rules
+## 2) ACL rules
 
 Adjust ``Spryker\Zed\AclMerchantPortal\AclMerchantPortalConfig::getMerchantAclRoleRules()`` - add a newly introduced module to allowed bundles list.
 
@@ -69,7 +69,7 @@ Check ``spy_acl_rule`` DB table and make sure that ACL rules for ``example-merch
 Adjust ``Pyz\Zed\Acl\AclConfig::getInstallerRules()`` to disallow ``example-merchant-portal-gui`` bundle in order to 
 deny access for Back-office users.
 
-### 3) Navigation
+## 3) Navigation
 
 Adjust ``config/Zed/navigation.xml`` with a link for a new page:
 
@@ -104,4 +104,3 @@ Login as a new merchant, go to any Merchant portal page, make sure a new navigat
 ## See also
 
 - [GUI modules concept](/docs/marketplace/dev/back-end/marketplace-merchant-portal-core-feature/gui-modules-concept.html)
-- [GUI tables concept](/docs/marketplace/dev/back-end/marketplace-merchant-portal-core-feature/gui-table.html)

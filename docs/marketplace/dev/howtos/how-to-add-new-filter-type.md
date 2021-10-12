@@ -9,7 +9,7 @@ This articles provides details how to create a new Gui table filter type.
 Follow the [Marketplace Merchant Portal Core feature integration guide](/docs/marketplace/dev/feature-integration-guides/202108.0/marketplace-merchant-portal-core-feature-integration.html) 
 to install the Marketplace Merchant Portal Core feature providing ``GuiTable`` module.
 
-## 1) Adjust GuiTableConfigurationBuilder
+## Adjust GuiTableConfigurationBuilder
 
 Add a new addFilter***() method to ``Spryker\Shared\GuiTable\Configuration\Builder\GuiTableConfigurationBuilder``, where 
 pass all the required data for a new filter configuration. Define a structure as it will be used by frontend component 
@@ -50,7 +50,7 @@ pass all the required data for a new filter configuration. Define a structure as
     }
 ```
 
-## 2) DEFINE A FRONTEND COMPONENT
+See [Table Filter extension](/docs/marketplace/dev/front-end/table-design/table-filters) to learn more about the Table Filters feature.
 
 ## See also
 

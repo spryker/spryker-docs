@@ -26,11 +26,11 @@ entries:
       - title: Feature walkthroughs
         nested:
           - title: Marketplace MerchantPortal Core feature walkthrough
-            url: /docs/marketplace/dev/back-end/marketplace-merchant-portal-core-feature.html
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-core-feature-walkthrough/marketplace-merchant-portal-core-feature-walkthrough.html
             nested:
 
               - title: GUI modules concept
-                url: /docs/marketplace/dev/back-end/marketplace-merchant-portal-core-feature/gui-modules-concept.html
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-core-feature-walkthrough/gui-modules-concept.html
 
           - title: Merchant feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/merchant.html

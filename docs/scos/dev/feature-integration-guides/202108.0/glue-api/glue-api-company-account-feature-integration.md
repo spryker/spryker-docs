@@ -254,7 +254,6 @@ Run the following command:
 ```bash
 console uuid:generate CompanyUnitAddress spy_company_unit_address
 ```
-:::
 
 {% info_block warningBox "Verification" %}
 

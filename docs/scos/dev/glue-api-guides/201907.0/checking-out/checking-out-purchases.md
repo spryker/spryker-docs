@@ -17,8 +17,8 @@ If necessary, checkout data can be updated each time additional checkout informa
 Apart from that, the API also supports redirecting to third party websites for additional checkout procession. Such a possibility may be needed, for example, when a customer pays with the help of an external payment system. For this purpose, the API allows generating a payload in the format and with the data as required by the third party, as well as processing the response received from it.
 
 {% info_block errorBox %}
-It is the responsibility of the API Client to redirect to the third party web site, send the payload and receive it (if necessary
-{% endinfo_block %}. The API is only responsible for generating a redirect URL, as well as generating and processing the payloads.)
+It is the responsibility of the API Client to redirect to the third party web site, send the payload and receive it (if necessary). The API is only responsible for generating a redirect URL, as well as generating and processing the payloads.
+{% endinfo_block %}
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see Checkout API Feature Integration <!-- link to https://documentation.spryker.com/v4/docs/checkout-feature-integration-201907 -->.

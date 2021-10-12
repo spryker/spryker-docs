@@ -219,9 +219,9 @@ To verify that `AvailabilityNotificationSubscriptionCustomerTransferExpanderPlug
 {% endinfo_block %}
 
 ## 4) Set up the configuration
-:::(Info)
+{% info_block infoBox %}
 You can control whether `AvailabilityNotificationFacade::subscribe()` throws an exception \Spryker\Zed\Product\Business\Exception\MissingProductException (if SKU does not exist in the database) or not. You can do it via the `AvailabilityNotificationConfig::AVAILABILITY_NOTIFICATION_CHECK_PRODUCT_EXISTS` config setting. If set to `false` (by default), then the exception is thrown. If set to `true`, then the exception is not thrown, but `AvailabilityNotificationFacade::subscribe()` returns the instance of `AvailabilityNotificationSubscriptionResponseTransfer::$isSuccess = true`.
-:::
+{% endinfo_block %}
 
 **src/Pyz/Glue/AvailabilityNotification/AvailabilityNotificationConfig.php**
 ```php
@@ -237,12 +237,12 @@ class AvailabilityNotificationConfig extends SprykerAvailabilityNotificationConf
 }
 ```
 
-:::(Warning)
+{% info_block warningBox %}
 We recommend setting `AVAILABILITY_NOTIFICATION_CHECK_PRODUCT_EXISTS` to true. 
 Make sure that you are not catching the mentioned above exception somewhere in your Pyz code but use check of `$availabilityNotificationSubscriptionResponseTransfer->getIsSuccess()`.
 
 The config setting exists for BC reasons only.
-:::
+{% endinfo_block %}
 
 ## Install feature frontend
 

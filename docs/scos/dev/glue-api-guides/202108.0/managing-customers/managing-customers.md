@@ -324,9 +324,9 @@ If the customer is anonymized successfully, the endpoint returns the `204 No Con
 
 To retrieve subscriptions to availability notifications, send the following:
 
-:::(Warning)
+{% info_block warningBox %}
 This request is available for registered customers only.
-:::
+{% endinfo_block %}
 
 ---
 `GET` **/customers/*{% raw %}{{{% endraw %}customerReference{% raw %}}}{% endraw %}*/availability-notifications**

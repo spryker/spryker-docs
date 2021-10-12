@@ -11,9 +11,9 @@ redirect_from:
 
 This endpoint allows refreshing customer authentication tokens and revoking customer refresh tokens. You may want to refresh an authentication token when it expires. Revocation is useful when an authentication token is compromised.
 
-:::(Warning)
+{% info_block warningBox %}
 This endpoint does not comply with OAuth 2.0. If your project requires such compliance, use the `/token`endpoint. For details about the `/token`endpoint, see [Manging customer authentication tokens via OAuth 2.0](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html).
-:::
+{% endinfo_block %}
 
 ## Installation
 For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html).

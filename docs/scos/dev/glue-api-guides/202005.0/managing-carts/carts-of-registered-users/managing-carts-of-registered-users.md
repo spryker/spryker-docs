@@ -44,8 +44,8 @@ To distinguish whether a specific cart is owned by a user directly or shared wit
 
 
 {% info_block infoBox "Info" %}
-For more details, see section *Retrieving Cart Permission Groups* in [Sharing Company User Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/sharing-company-user-carts/retrieving-cart-permission-groups.html)
-{% endinfo_block %}.
+For more details, see section *Retrieving Cart Permission Groups* in [Sharing Company User Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/sharing-company-user-carts/retrieving-cart-permission-groups.html).
+{% endinfo_block %}
 
 
 ## Installation

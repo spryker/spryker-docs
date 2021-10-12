@@ -156,8 +156,8 @@ The State Machine cannot be executed in parallel for the same Sales Order. For t
 ## Quote
 
 {% info_block infoBox %}
-The quote object contains the Cart and all user input from the Checkout (like Addresses
-{% endinfo_block %}. When the Quote is persisted in the database then we filter out all data which does not belong the Cart.)
+The quote object contains the Cart and all user input from the Checkout (like Addresses). When the Quote is persisted in the database then we filter out all data which does not belong the Cart.
+{% endinfo_block %}
 
 ### Persisted Quote (Multi-Cart per Customer)
 

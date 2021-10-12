@@ -26,8 +26,8 @@ The following information pertains to security-related issues that were discover
 Issues are listed by description and affected modules.
 
 {% info_block infoBox %}
-If you need any additional support with this content, please contact [support@spryker.com](mailto:support@spryker.com
-{% endinfo_block %}. If you found a new security vulnerability, please inform us via  [security@spryker.com](mailto:security@spryker.com).)
+If you need any additional support with this content, please contact [support@spryker.com](mailto:support@spryker.com). If you found a new security vulnerability, please inform us via  [security@spryker.com](mailto:security@spryker.com).
+{% endinfo_block %}
 
 ## OMS and StateMachine Module Vulnerability
 Both OMS and standalone StateMachine module were exposing their State Machine triggers directly via URL in Zed backend. Those actions could be invoked via GET which violated basic HTTP specs and security audits, thus allowing “hidden” or accidental links, faced images etc.

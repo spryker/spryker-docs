@@ -344,8 +344,8 @@ Send a request to *http://mysprykershop.com/customers/{% raw %}{{{% endraw %}cus
 {% endinfo_block %}
 
 {% info_block warningBox %}
-To verify `AccessTokenRestRequestValidatorPlugin` is set up correctly, you'll need to send a request to `/refresh-tokens` without "Authorization: Bearer {token}" (or with the outdated or wrong token
-{% endinfo_block %}. If you get one of the following errors, the plugin is installed:)
+To verify `AccessTokenRestRequestValidatorPlugin` is set up correctly, you'll need to send a request to `/refresh-tokens` without "Authorization: Bearer {token}" (or with the outdated or wrong token). If you get one of the following errors, the plugin is installed:
+{% endinfo_block %}
 
 <details open>
 <summary>Auth error</summary>

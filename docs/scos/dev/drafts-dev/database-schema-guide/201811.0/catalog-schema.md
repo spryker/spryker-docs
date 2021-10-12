@@ -12,8 +12,9 @@ redirect_from:
 ### Abstract and Concrete Products
 
 {% info_block infoBox %}
-Spryker's product catalog is divided into Abstract Products that contain all common Attributes and Variants (~ Concrete Products
-{% endinfo_block %}. The Attributes which make the difference among the Variants are called Super-Attributes (e.g. Size of T-Shirts).)
+Spryker's product catalog is divided into Abstract Products that contain all common Attributes and Variants (~ Concrete Products).
+The Attributes which make the difference among the Variants are called Super-Attributes (e.g. Size of T-Shirts).
+{% endinfo_block %}
 ![Database product abstract](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/product-abstract.png)
 
 | | | |
@@ -100,8 +101,9 @@ The schema below is not complete as there are a few more entities like product r
 ### Related Data (via SKU)
 
 {% info_block infoBox %}
-Products are also related to objects from different functional areas (e.g. sales-orders
-{% endinfo_block %}. Here we are using implicit relations via the natural identifier (SKU) to avoid hard coupling among different bounded contexts which makes it easier to operate Spryker in a service approach with separated databases (product-, order-, availability-service).)
+Products are also related to objects from different functional areas (e.g. sales-orders). 
+Here we are using implicit relations via the natural identifier (SKU) to avoid hard coupling among different bounded contexts which makes it easier to operate Spryker in a service approach with separated databases (product-, order-, availability-service).
+{% endinfo_block %}
 ![Related data via SKU](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/related-data-sku.png)
 
 * Soft relationships:
@@ -428,12 +430,12 @@ The table `spy_price_product_store` has a bad name. When it was introduced we on
 ### Stock
 
 {% info_block infoBox %}
-The Stock of a product represents the physical amount of products in the warehouse. This information should be imported from a WMS (warehouse management system
-{% endinfo_block %} and is never changed by Spryker directly.)
+The Stock of a product represents the physical amount of products in the warehouse. This information should be imported from a WMS (warehouse management system) and is never changed by Spryker directly.
+{% endinfo_block %}
 
 {% info_block warningBox %}
-Stocks are not directly related to Stores but there is a Store-to-Warehouse Mapping that be configured in code (see `StockConfig`
-{% endinfo_block %}. Stocks can be dedicated or shared among Stores.)
+Stocks are not directly related to Stores but there is a Store-to-Warehouse Mapping that be configured in code (see `StockConfig`). Stocks can be dedicated or shared among Stores.
+{% endinfo_block %}
 ![Stock](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/stock.png)
 
 **Structure**:

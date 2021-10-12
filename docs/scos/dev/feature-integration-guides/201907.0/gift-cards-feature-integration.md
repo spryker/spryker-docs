@@ -518,8 +518,9 @@ DummyPayment Order State Machine Example:
 #### Prepare Order State Machines - Gift Card Usage Process
 
 {% info_block infoBox "Info" %}
-In this step, you should customize your Order State Machine to place orders with 0 price to pay (by using gift cards
-{% endinfo_block %}. The process should skip payment-related steps as there is nothing for the customer to pay any more. Below you can see the example of how NoPayment state machine is defined.)
+In this step, you should customize your Order State Machine to place orders with 0 price to pay (by using gift cards). The process should skip payment-related steps as there is nothing for the customer to pay any more. Below you can see the example of how NoPayment state machine is defined.
+{% endinfo_block %}
+
 NoPayment Order State Machine Example:
 
 <details open>

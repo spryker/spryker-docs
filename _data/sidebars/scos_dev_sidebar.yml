@@ -4808,7 +4808,7 @@ entries:
           url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-twig-extensions.html
         - title: Tutorial - New Relic Monitoring
           url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-new-relic-monitoring.html
-        - title: Tutorial - How the "define" Twig Tag is Working
+        - title: Tutorial - How the 'define' Twig Tag is Working
           url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-how-the-define-twig-tag-is-working.html
         - title: Tutorial - Customer Import
           url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-customer-import.html
@@ -5547,13 +5547,13 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-        - title: '"Reference information: AvailabilityStorage module overview"'
+        - title: 'Reference information: AvailabilityStorage module overview'
           url: /docs/scos/dev/feature-walkthroughs/inventory-management-feature-walkthrough/reference-informaton-availabilitystorage-module-overview.html
           include_versions:
           - "201903.0"
           - "202009.0"
           - "202108.0"
-        - title: '"Managing stocks in a multi-store environment: Best practices"'
+        - title: 'Managing stocks in a multi-store environment: Best practices'
           url: /docs/scos/dev/feature-walkthroughs/inventory-management-feature-walkthrough/managing-stocks-in-a-multi-store-environment-best-practices.html
           include_versions:
           - "202009.0"
@@ -5572,7 +5572,7 @@ entries:
         url: /docs/scos/dev/feature-walkthroughs/product-options-feature-walkthrough.html
       - title: tax-feature-walkthrough
         nested:
-        - title: '"Reference information: Tax module"'
+        - title: 'Reference information: Tax module'
           url: /docs/scos/dev/feature-walkthroughs/tax-feature-walkthrough/reference-information-tax-module.html
         - title: Tax feature walkthrough
           url: /docs/scos/dev/feature-walkthroughs/tax-feature-walkthrough/tax-feature-walkthrough.html
@@ -5620,7 +5620,7 @@ entries:
           url: /docs/scos/dev/feature-walkthroughs/cart-feature-walkthrough/cart-functionality-and-calculations.html
           include_versions:
           - "201811.0"
-        - title: '"Cart module: Reference information"'
+        - title: 'Cart module: Reference information'
           url: /docs/scos/dev/feature-walkthroughs/cart-feature-walkthrough/cart-module-reference-information.html
           include_versions:
           - "202009.0"
@@ -5675,7 +5675,7 @@ entries:
           include_versions:
           - "202001.0"
           - "202005.0"
-        - title: '"Content item types: module relations"'
+        - title: 'Content item types: module relations'
           url: /docs/scos/dev/feature-walkthroughs/content-items-feature-walkthrough/content-item-types-module-relations.html
           include_versions:
           - "202108.0"
@@ -5725,7 +5725,7 @@ entries:
           url: /docs/scos/dev/feature-walkthroughs/order-management-feature-walkthrough/custom-order-reference-module-relations.html
           include_versions:
           - "202005.0"
-        - title: '"Sales module: reference information"'
+        - title: 'Sales module: reference information'
           url: /docs/scos/dev/feature-walkthroughs/order-management-feature-walkthrough/sales-module-reference-information.html
           include_versions:
           - "202108.0"
@@ -5859,7 +5859,7 @@ entries:
           include_versions:
           - "202005.0"
           - "202009.0"
-        - title: '"Navigation module: Reference information"'
+        - title: 'Navigation module: Reference information'
           url: /docs/scos/dev/feature-walkthroughs/navigation-feature-walkthrough/navigation-module-reference-information.html
           include_versions:
           - "202108.0"
@@ -5888,7 +5888,7 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-        - title: '"Reference information: Customer module overview"'
+        - title: 'Reference information: Customer module overview'
           url: /docs/scos/dev/feature-walkthroughs/customer-account-management-feature-walkthrough/reference-information-customer-module-overview.html
           include_versions:
           - "202108.0"
@@ -5944,11 +5944,11 @@ entries:
           - "201907.0"
           - "202001.0"
           - "202005.0"
-        - title: '"PriceProduct module details: reference information"'
+        - title: 'PriceProduct module details: reference information'
           url: /docs/scos/dev/feature-walkthroughs/prices-feature-walkthrough/priceproduct-module-details-reference-information.html
           include_versions:
           - "202108.0"
-        - title: '"Money module: reference information"'
+        - title: 'Money module: reference information'
           url: /docs/scos/dev/feature-walkthroughs/prices-feature-walkthrough/money-module-reference-information.html
           include_versions:
           - "202108.0"
@@ -5964,7 +5964,7 @@ entries:
         nested:
         - title: Shipment feature walkthrough
           url: /docs/scos/dev/feature-walkthroughs/shipment-feature-walkthrough/shipment-feature-walkthrough.html
-        - title: '"Reference information: Shipment method plugins"'
+        - title: 'Reference information: Shipment method plugins'
           url: /docs/scos/dev/feature-walkthroughs/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html
           include_versions:
           - "201811.0"
@@ -5977,7 +5977,7 @@ entries:
           url: /docs/scos/dev/feature-walkthroughs/shipment-feature-walkthrough/shipment-module-overview.html
           include_versions:
           - "201811.0"
-        - title: '"Reference information: Shipment method entities in the database"'
+        - title: 'Reference information: Shipment method entities in the database'
           url: /docs/scos/dev/feature-walkthroughs/shipment-feature-walkthrough/reference-information-shipment-method-entities-in-the-database.html
           include_versions:
           - "202005.0"
@@ -6002,7 +6002,7 @@ entries:
           - "201811.0"
           - "201903.0"
           - "201907.0"
-        - title: '"Reference information: Refund module"'
+        - title: 'Reference information: Refund module'
           url: /docs/scos/dev/feature-walkthroughs/refunds-feature-walkthrough/reference-information-refund-module.html
           include_versions:
           - "201811.0"
@@ -6026,28 +6026,23 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-        - title: '"CMS extension points: reference information"'
+        - title: 'CMS extension points: reference information'
           url: /docs/scos/dev/feature-walkthroughs/cms-feature-walkthrough/cms-extension-points-reference-information.html
           include_versions:
           - "202108.0"
-        - title: CMS extension points- reference information
+        - title: 'CMS extension points: reference information'
           url: /docs/scos/dev/feature-walkthroughs/cms-feature-walkthrough/cms-extension-points-reference-information.html
           include_versions:
           - "202009.0"
-      - title: product-relations-feature-walkthrough
+      - title: Product Relations Feature Walkthrough
+        url: /docs/scos/dev/feature-walkthroughs/product-relations-feature-walkthrough/product-relations-feature-walkthrough.html
         include_versions:
         - "202005.0"
         - "202009.0"
         - "202108.0"
         nested:
-        - title: Product Relations- module relations
+        - title: Product Relations module relations
           url: /docs/scos/dev/feature-walkthroughs/product-relations-feature-walkthrough/product-relations-module-relations.html
-          include_versions:
-          - "202005.0"
-          - "202009.0"
-          - "202108.0"
-        - title: Product Relations feature walkthrough
-          url: /docs/scos/dev/feature-walkthroughs/product-relations-feature-walkthrough/product-relations-feature-walkthrough.html
           include_versions:
           - "202005.0"
           - "202009.0"

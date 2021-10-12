@@ -40,7 +40,7 @@ For information about installing the Spryker Commerce OS see [Getting Started Gu
 
 
 #### Documentation
-[Quotation Process and RFQ](/docs/scos/user/features/{{site.version}}/quotation-process/quotation-process.html)
+[Quotation Process and RFQ](/docs/scos/user/features/{{site.version}}/quotation-process-feature-overview.html)
 
 ### Configuration (YAML) File for Batch Data Import
 We have improved data importers’ usability.

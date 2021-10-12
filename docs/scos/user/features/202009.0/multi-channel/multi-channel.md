@@ -24,9 +24,3 @@ Provide a holistic shopping experience by meeting your customers where they are.
 </div>
 </div>
 
-**Features:**
-<div>
-<a class="feature-link" >Multiple Touchpoints Integration</a>  
-    <a class="feature-link" >Responsive Design</a>
-    <a class="feature-link" href="docs\scos\user\features\202009.0\multi-channel\multi-theme\multi-theme-feature-overview.md">Multi-Theme</a>
-</div>

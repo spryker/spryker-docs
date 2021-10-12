@@ -34,30 +34,3 @@ All the CMS elements are based on templates. They simplify the creation of simil
 | URL Redirect Status | When an URL is being redirected, the response contains a status code that describes the reason the redirect happened. The URL redirect status code plays an important role in search engine ranking. |
 
 {% wistia lx0amx3m1b 960 720 %}
-
-
-## If you are:
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                                <li><a href="docs\scos\user\features\202009.0\cms\cms-feature-overview\templates-and-slots.md" class="mr-link">Get a general idea of templates and slots</a></li>
-                               <li><a href="docs\scos\user\features\202009.0\cms\cms-feature-overview\cms-page.md" class="mr-link">Get a general idea of CMS page</a></li>
-                               <li><a href="docs\scos\user\features\202009.0\cms\cms-feature-overview\cms-block.md" class="mr-link">Get a general idea of CMS block</a></li>
-                               <li><a href="docs\scos\user\features\202009.0\cms\cms-feature-overview\email-as-a-cms-block.md" class="mr-link">Get a general idea of email as a CMS block</a></li>
-                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\cms-feature-integration.md" class="mr-link">Integrate the CMS feature into your project</a></li>
-                <li><a href="docs\scos\user\features\202009.0\cms\cms-feature-overview\cms-extension-points-reference-information.md" class="mr-link">Learn about CMS extension points</a></li>
-    </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                               <li><a href="docs\scos\user\features\202009.0\cms\cms-feature-overview\templates-and-slots.md" class="mr-link">Get a general idea of templates and slots</a></li>
-                               <li><a href="docs\scos\user\features\202009.0\cms\cms-feature-overview\cms-page.md" class="mr-link">Get a general idea of CMS page</a></li>
-                               <li><a href="docs\scos\user\features\202009.0\cms\cms-feature-overview\cms-block.md" class="mr-link">Get a general idea of CMS block</a></li>
-                               <li><a href="docs\scos\user\features\202009.0\cms\cms-feature-overview\email-as-a-cms-block.md" class="mr-link">Get a general idea of email as a CMS block</a></li>
-                                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\content\blocks\creating-a-cms-block.md" class="mr-link">Create a CMS Block</a></li>
-                                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\content\blocks\managing-cms-blocks.md" class="mr-link">Manage CMS Blocks</a></li>

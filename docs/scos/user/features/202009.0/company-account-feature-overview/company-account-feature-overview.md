@@ -31,33 +31,4 @@ Setting up company users and roles:
 
 {% wistia 72qy3slwjo 960 720 %}
 
-## If you are:
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="docs\scos\user\features\202009.0\company-account\company-account-feature-overview\company-accounts.md" class="mr-link">Get a general idea of the company account organizational structure</a></li>
-                <li><a href="docs\scos\user\features\202009.0\company-account\company-account-feature-overview\company-user-roles-and-permissions.md" class="mr-link">Get a general idea of company user roles and permissions</a></li>
-                  <li><a href="docs\scos\user\features\202009.0\company-account\company-account-feature-overview\business-on-behalf.md" class="mr-link">Get a general idea of business on behalf</a></li>
-                  <li><a href="docs\scos\user\features\202009.0\company-account\company-account-feature-overview\business-units.md" class="mr-link">Get a general idea of business units</a></li>
-                  <li><a href="docs\scos\user\features\202009.0\company-account\company-account-feature-overview\customer-login-by-token.md" class="mr-link">Get a general idea of the login by token</a></li>
-                <li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-companyuser.md" class="mr-link">Migrate the CompanyUser module from version 1.* to version 2.*</a></li>
-                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\company-account-feature-integration.md" class="mr-link">Integrate the Company Account feature into your project</a></li>
-            </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-               <li><a href="docs\scos\user\features\202009.0\company-account\company-account-feature-overview\company-accounts.md" class="mr-link">Get a general idea of the company account organizational structure</a></li>
-                <li><a href="docs\scos\user\features\202009.0\company-account\company-account-feature-overview\company-user-roles-and-permissions.md" class="mr-link">Get a general idea of company user roles and permissions</a></li>
-                  <li><a href="docs\scos\user\features\202009.0\company-account\company-account-feature-overview\business-on-behalf.md" class="mr-link">Get a general idea of business on behalf</a></li>
-                  <li><a href="docs\scos\user\features\202009.0\company-account\company-account-feature-overview\business-units.md" class="mr-link">Get a general idea of business units</a></li>
-                  <li><a href="docs\scos\user\features\202009.0\company-account\company-account-feature-overview\customer-login-by-token.md" class="mr-link">Get a general idea of login by token</a></li>
-            </ul>
-        </div>
-    </div>
-</div>

@@ -112,6 +112,38 @@ export class CustomTableColumnComponent
 export class RootModule {}
 ```
 
+### Context interpolation
+
+Check out an example of getting a Table Column config value from the context:
+
+```ts
+// Module 
+import { ContextModule } from '@spryker/utils';
+
+@NgModule({
+    imports: [CommonModule, ContextModule],
+    exports: [CustomTableColumnModule],
+    declarations: [CustomTableColumnModule],
+})
+export class CustomTableColumnModule {}
+
+// Component
+@Injectable({ providedIn: 'root' })
+export class CustomTableColumnConfig {
+    @ColumnTypeOption()
+    propName? = this.contextService.wrap('value');
+
+    constructor(private contextService: ContextService) {}
+}
+```
+
+```html
+// Usage
+<div
+    [propName]="config.propName | context: context"
+/>
+```
+
 ## Interfaces
 
 Below you can find interfaces for the Table Column Type extension configuration.
@@ -148,12 +180,12 @@ export enum ColumnTypeOptionsType {
 
 UI library comes with a number of standard column types that can be used on any project:
 
-- [List](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-list.html) - renders a list of column types.
 - [Autocomplete](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-autocomplete.html) - renders `@spryker/input` and `@spryker/autocomplete` components.
 - [Chip](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-chip.html) - renders `@spryker/chip` component.
 - [Date](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-date.html) - renders a formatted date by `config`.
 - [Dynamic](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-dynamic.html) - is a higher-order column that gets `ColumnConfig` from the configured `Datasource` and renders a column with the retrieved `ColumnConfig`.
 - [Image](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-image.html) - renders an image.
 - [Input](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-input.html) - renders `@spryker/input` component.
+- [List](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-list.html) - renders a list of column types.
 - [Select](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-select.html) - renders `@spryker/select` component.
 - [Text](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-text.html) - renders a static text.

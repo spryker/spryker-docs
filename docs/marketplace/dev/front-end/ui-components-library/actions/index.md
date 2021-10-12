@@ -100,11 +100,11 @@ export interface ActionHandler<C = unknown, R = unknown>
 
 There are a few common Actions that are available in UI library as separate packages:
 
+- [Close-drawer](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-close-drawer.html) - closes the first Drawer in the current context.
 - [Drawer](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-drawer.html) - opens component in the Drawer.
-- [Close-drawer](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-close-drawer.html) - closes the first Drawer in the current context.  
+- [HTTP](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-http.html) - renders content via html request.
+- [Notification](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-notification.html) - renders notification box.
 - [Redirect](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-redirect.html) - performs the hard redirect to the URL.  
 - [Refresh-drawer](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-drawer.html) - refreshes/rerenders opened Drawer in current context.  
+- [Refresh-parent-table](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-parent-table.html) - refreshes data of the parent Table of a Table in current context.
 - [Refresh-table](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-table.html) - refreshes data of the Table in current context.  
-- [Refresh-parent-table](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-parent-table.html) - refreshes data of the parent Table of a Table in current context.  
-- [HTTP](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-http.html) - renders content via html request.  
-- [Notification](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-notification.html) - renders notification box.  

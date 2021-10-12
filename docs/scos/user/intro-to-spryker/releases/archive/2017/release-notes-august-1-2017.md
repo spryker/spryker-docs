@@ -36,9 +36,6 @@ You can now create discount calculation rules like the one in the example below.
 | --- | --- | --- |
 | [ShipmentDiscountConnector 1.0.0](https://github.com/spryker/shipment-discount-connector/releases/tag/1.0.0) | [Shipment 5.1.0](https://github.com/spryker/Shipment/releases/tag/5.1.0) | n/a |
 
-**Documentation**
-For module documentation, see [Shipment Module Guide](/docs/scos/dev/feature-walkthroughs/{{site.version}}/shipment-module-overview.html).
-
 **Migration Guides**
 To upgrade, follow the steps described below:
 

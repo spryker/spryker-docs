@@ -275,7 +275,7 @@ The following content has been added to the Academy:
 * [Demo Shop](https://documentation.spryker.com/2021080/docs/legacy-demoshop)
 * [Navigation](/docs/user/features/{[site.version}}/navigation-feature-overview.html)
 * [Product Groups](https://documentation.spryker.com/2021080/docs/product-groups)
-* [Product Management](https://documentation.spryker.com/2021080/docs/product-information-management)
+* [Product Management](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html)
 * [Product Sets](https://documentation.spryker.com/2021080/docs/product-sets)
 * [Wishlists](/docs/scos/user/features/{{site.version}}/wishlist-feature-overview.html)
  

@@ -23,9 +23,9 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 <details open>
 <summary>B2B feature list</summary>
 
-[**Company Account Management**](/docs/scos/user/features/{{site.version}}/company-account-feature-overview/company-account-feature-overview.html):
+[**Company Account feature overview**](/docs/scos/user/features/{{site.version}}/company-account-feature-overview/company-account-feature-overview.html):
 
-* [Company Account Overview](/docs/scos/user/features/{{site.version}}/company-account-feature-overview/company-account-feature-overview.html-overview)
+* [Company Accounts overview](/docs/scos/user/features/{{site.version}}/company-account-feature-overview/company-accounts-overview.html)
 * [Company User Roles and Permissions](/docs/scos/user/features/{{site.version}}/company-account-feature-overview/company-user-roles-and-permissions-overview.html)
 * [Business Units Management](/docs/scos/user/features/{{site.version}}/business-units-overview.html)
 * [Agent Assist](/docs/scos/user/features/{{site.version}}/agent-assist-overview.html)
@@ -34,7 +34,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 **Product Information Management**:
 
 * [Configurable Bundles](/docs/scos/user/features/{{site.version}}/configurable-bundle-feature-overview.html)
-* [Barcode Generator](/docs/scos/user/features/{{site.version}}/product-barcode-feature-overview.html)
+* [Product Barcode](/docs/scos/user/features/{{site.version}}/product-barcode-feature-overview.html)
 * [Product Restrictions for B2B Customers](/docs/scos/user/features/{{site.version}}/merchant-product-restrictions-feature-overview.html)
 
 [**Price**](/docs/scos/user/features/{{site.version}}/prices-feature-overview/prices-feature-overview.html):
@@ -44,7 +44,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 
 * [Shared Cart](/docs/scos/user/features/{{site.version}}/shared-carts-feature-overview.html)
 * [Multiple Carts Per User](/docs/scos/user/features/{{site.version}}/multiple-carts-feature-overview.html)
-* [Quick Order](/docs/scos/user/features/{{site.version}}/quick-add-to-cart-feature-overview.html)
+* [Quick add to cart](/docs/scos/user/features/{{site.version}}/quick-add-to-cart-feature-overview.html)
 
 **Shopping Lists**:
 
@@ -59,7 +59,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 **Workflow and process management**:
 
 * [Approval Process](/docs/scos/user/features/{{site.version}}/approval-process-feature-overview.html)
-* [Quotation & Offer Management](/docs/scos/user/features/{{site.version}}/quotation-process-feature-overview.html)
+* [Quotation Process](/docs/scos/user/features/{{site.version}}/quotation-process-feature-overview.html)
 * [Punch Out](/docs/scos/user/features/{{site.version}}/technology-partner-integrations/punch-out\punch-out-feature-overview.html)
 * [Customer Login by Token](/docs/scos/user/features/{{site.version}}/company-account-feature-overview/customer-login-by-token-overview.html)
 <br>
@@ -72,4 +72,4 @@ To demonstrate the B2B features in a live implementation, we use a B2B Demo Shop
 
 To download the B2B Demo Shop, visit the following GitHub repository: [https://github.com/spryker-shop/b2b-demo-shop](https://github.com/spryker-shop/b2b-demo-shop)
 
-To install the B2B Demo Shop, follow the instructions in [Installing Spryker with Docker](/docs/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
+To install the B2B Demo Shop, follow the instructions in [Installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).

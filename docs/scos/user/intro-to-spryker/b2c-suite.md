@@ -167,9 +167,9 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 * [Multiple Touchpoint Integrations](/docs/scos/user/features/{{site.version}}/multi-channel/multi-channel.html)
 * [Responsive Design](/docs/scos/user/features/{{site.version}}/multi-channel/multi-channel.html)
 
-[**SDK**](/docs/scos/dev/sdk/{{site.version}}/development.html):
+[**SDK**](/docs/scos/dev/sdk/{{site.version}}/development-tools/architecture-sniffer.html):
 
-* [Development Tools](/docs/scos/dev/sdk/{{site.version}}/development.html-tools)
+* [Development Tools](/docs/scos/dev/sdk/{{site.version}}/development-tools/architecture-sniffer.html)
 * [Spryk Code Generator](/docs/scos/dev/sdk/{{site.version}}/development-tools/spryk-code-generator.html)
 * [Importer](/docs/scos/dev/sdk/{{site.version}}/data-import.html)
 * [Development Virtual Machine, Docker Containers & Console](/docs/scos/dev/sdk/{{site.version}}/development-virtual-machine-docker-containers-and-console.html)

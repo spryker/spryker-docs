@@ -103,7 +103,7 @@ We evaluated the following solutions:
 1. ES join field type
 This ES functionality is similar to the classical joins in relational databases.
 
-We chose this solution because it looked like it solved our problem faster and with less effort. See [ElasticSearch join data type - implementation](#elasticsearch-join-data-type-implementation) to learn how we implemented this solution. Also, have a look at the other evaluated solutions as they may be more appropriate in your particular case.
+We chose this solution because it looked like it solved our problem faster and with less effort. See [ElasticSearch join data type - implementation](#elasticsearch-join-field-type---implementation) to learn how we implemented this solution. Also, have a look at the other evaluated solutions as they may be more appropriate in your particular case.
 
 Documentation: [Join field type](https://www.elastic.co/guide/en/elasticsearch/reference/current/parent-join.html)
 
@@ -195,7 +195,7 @@ These two documents can be viewed as two tables with a foreign key in terms of r
 
 The side effects of this solution are:
 
-1. The [Product Reviews feature](https://documentation.spryker.com/2021080/docs/product-reviews) is disabled because it requires multiple document types per index.
+1. The [Product Reviews feature](/docs/scos/user/features/{{site.version}}/product-rating-and-reviews-feature-overview.html) is disabled because it requires multiple document types per index.
 2. Performance requires additional attention. You can read about performance issues related to the feature in [Parent-join and performance](https://www.elastic.co/guide/en/elasticsearch/reference/current/parent-join.html#_parent_join_and_performance).
 3. You can’t build proper queries to run sorting by prices due to ES limitations. Only facet filtering is possible.
 
@@ -225,7 +225,7 @@ See [Detecting Dead TCP Connections with Heartbeats and TCP Keepalives](https://
 We evaluated the following solutions:
 
 
-1. Use [Common Table Expression (CTE)](https://www.postgresql.org/docs/10/queries-with.html) queries to handle bulk insert and update operations in the `_search` table. We chose this solution because we had implemented it previously. See [Data Importer Speed Optimization](/docs/scos/dev/data-import/{{site.version}}/data-importer-speed-optimization.html#data-importer-speed-optimization) to learn how this solution is used to optimize the speed of data importers.
+1. Use [Common Table Expression (CTE)](https://www.postgresql.org/docs/10/queries-with.html) queries to handle bulk insert and update operations in the `_search` table. We chose this solution because we had implemented it previously. See [Data Importer Speed Optimization](/docs/scos/dev/data-import/{{site.version}}/data-importer-speed-optimization.html) to learn how this solution is used to optimize the speed of data importers.
 2. Use [PostgreSQL trigger feature](https://www.postgresql.org/docs/9.1/sql-createtrigger.html) to fill the `search` table on the insert update operations in the `entity` table.
 3. Implement a reconnection logic that establishes a new connection after catching an exception.
 

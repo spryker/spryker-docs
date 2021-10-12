@@ -67,7 +67,7 @@ During the active development phase, it would make sense to do updates more ofte
 When you know that you need to update your Spryker-based project, you need to decide at which level you want to do updates: at the **feature level** or at the **module level**.
 {% info_block infoBox %}
 
-Spryker does big [Product Releases](/docs/scos/user/intro-to-spryker/spryker-release-process.html#product-releases) of **features** every several months. The **modules** fall under the [Code Release](/docs/scos/user/intro-to-spryker/spryker-release-process.html#atomic--code--releases) process, and therefore there can be up to several module updates per day.
+Spryker does big [Product Releases](/docs/scos/user/intro-to-spryker/spryker-release-process.html#product-releases) of **features** every several months. The **modules** fall under the [Code Release](/docs/scos/user/intro-to-spryker/spryker-release-process.html#atomic-code-releases) process, and therefore there can be up to several module updates per day.
 
 {% endinfo_block %}
 
@@ -190,7 +190,7 @@ For the **minor** module updates, where you have lots of customizations, it woul
 ```Bash
 php -d memory_limit=-1 composer.phar require "spryker/sales:^8.0.0"
 ```
-If no extra dependencies are found, *composer.json* will be updated, respectively. Otherwise, see the [Troubleshooting](/docs/scos/dev/updating-a-spryker-based-project.html#troubleshooting) section at the end of the article, *In case when update is not possible* part.
+If no extra dependencies are found, *composer.json* will be updated, respectively. Otherwise, see the [Troubleshooting](#troubleshooting) section at the end of the article, *In case when update is not possible* part.
 
 2. [Check the migration guide](/docs/scos/dev/module-migration-guides/{{page.version}}/about-migration-guides.html) for the respective major module version. See the [Sales](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-sales.html) migration guide for example. Find the section for your module version and complete all the steps it contains.
 3.  Check for project changes, just like for the *minor* updates in the section above. Go to  `https://github.com/[module-name-here]/compare/[your-version]…[available-version]` and check if there are any changes that might conflict with your business logic.
@@ -279,12 +279,12 @@ should be replaced with
 
 {% info_block infoBox "Info" %}
 
-A new feature might require a higher major version for a specific module. In this case, do a [single module update](#major).
+A new feature might require a higher major version for a specific module. In this case, do a [single module update](#major-version-updates-and-new-packages-installation).
 
 {% endinfo_block %}
 
 ## Troubleshooting
-This section contains common issues with the updates and provides solutions on how to fix them. If your issue is not on the list, and you need help, please [contact us](/docs/scos/dev/updating-a-spryker-based-project.html#let-us-know).
+This section contains common issues with the updates and provides solutions on how to fix them. If your issue is not on the list, and you need help, please [contact us](#let-us-know).
 
 ### I see Spryker Code Sniffer updates
 In case you see Code Sniffer updates from Spryker, first check if the new code sniffer rules have been added. Investigate what they are doing and decide with the team if you need them.

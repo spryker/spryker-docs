@@ -27,18 +27,18 @@ On this page, you can find commonly encountered cases of product restrictions be
             <p>All products assigned to a category are also included in the black/white list.</p>
          </td>
          <td>
-            <img title="Click Me!" src="https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/categories-blacklist.png" alt="" />
+            <img title="Click Me!" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/Feature+Walkthroughs/Merchant+Product+Restrictions+Feature+Walkthrough/Restricted+Products+Behavior/categories-blacklist.png" alt="" />
             <p>In case the products are added to the category after it was included in a list, it is reflected after some time with the help of <a href="/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html">publish &amp; sync</a> process.</p>
          </td>
       </tr>
       <tr>
          <td>Upon entering the direct link for the blacklisted product, the shop visitor will see <em>404 Not found</em> page.</td>
-         <td><img title="Click Me!" src="https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/404-not-found-blacklisted-product.png" alt="" /></td>
+         <td><img title="Click Me!" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/Feature+Walkthroughs/Merchant+Product+Restrictions+Feature+Walkthrough/Restricted+Products+Behavior/404-not-found-blacklisted-product.png" alt="" /></td>
       </tr>
       <tr>
          <td>Whitelist</td>
          <td>If the merchant relation has a whitelist, all buyers in the associated business units can interact only with the whitelisted products, except if they are also blacklisted. If a category is not part of any whitelist (if a whitelist exists), they are greyed out in navigation (you can also change this setting on the project level so, for example, that category is not greyed out).</td>
-         <td><img title="Click Me!" src="https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/categories-whitelist.png" alt="" /></td>
+         <td><img title="Click Me!" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/Feature+Walkthroughs/Merchant+Product+Restrictions+Feature+Walkthrough/Restricted+Products+Behavior/categories-whitelist.png" alt="" /></td>
       </tr>
       <tr>
          <td>Blacklist and Whitelist</td>
@@ -59,7 +59,7 @@ On this page, you can find commonly encountered cases of product restrictions be
          <td>Shopping cart</td>
          <td>Blacklist</td>
          <td>In case the products that already exist in carts get blacklisted, they are automatically removed from the cart.</td>
-         <td><img title="Click Me!" src="https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/blacklisted-product-in-cart.png" alt="" /></td>
+         <td><img title="Click Me!" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/Feature+Walkthroughs/Merchant+Product+Restrictions+Feature+Walkthrough/Restricted+Products+Behavior/blacklisted-product-in-cart.png" alt="" /></td>
       </tr>
       <tr>
          <td>
@@ -72,7 +72,7 @@ On this page, you can find commonly encountered cases of product restrictions be
             <p>During the <a href="/docs/scos/user/features/{{page.version}}/reorder/reorder.html">reorder</a> process, products that are restricted but exist in a previous order are automatically removed from the cart.</p>
          </td>
          <td>
-            <p><img title="Click Me!" src="https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/reorder-blacklist.png" alt="" /></p>
+            <p><img title="Click Me!" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/Feature+Walkthroughs/Merchant+Product+Restrictions+Feature+Walkthrough/Restricted+Products+Behavior/reorder-blacklist.png" alt="" /></p>
             <p>In the Order History, the customer is still able to see the order details even if the previously ordered items are currently blacklisted.</p>
          </td>
       </tr>
@@ -87,7 +87,7 @@ On this page, you can find commonly encountered cases of product restrictions be
             <p>If the product, that is added to the shopping list, has been blacklisted, it is displayed as if it is unavailable.</p>
          </td>
          <td>
-            <p><img title="Click Me!" src="https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/blacklisted-prodiuct-in-shopping-list.png" alt="" /></p>
+            <p><img title="Click Me!" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/Feature+Walkthroughs/Merchant+Product+Restrictions+Feature+Walkthrough/Restricted+Products+Behavior/blacklisted-product-in-shopping-list.png" alt="" /></p>
          </td>
       </tr>
       <tr>
@@ -101,7 +101,7 @@ On this page, you can find commonly encountered cases of product restrictions be
             <p>If a product that has been added to a list of the alternative products, is restricted, it is not suggested on product pages.</p>
          </td>
          <td>
-            <p><img title="Click Me!" src="https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/alternative-product-blacklisted.png" alt="" /></p>
+            <p><img title="Click Me!" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/Feature+Walkthroughs/Merchant+Product+Restrictions+Feature+Walkthrough/Restricted+Products+Behavior/alternative-product-blacklisted.png" alt="" /></p>
          </td>
       </tr>
       <tr>
@@ -115,7 +115,7 @@ On this page, you can find commonly encountered cases of product restrictions be
             <p>If any of the products that are added to a product group, is restricted, it is not displayed in the Shop Application.</p>
          </td>
          <td>
-            <p><img title="Click Me!" src="https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/product-groups-blacklisted.png" alt="" /></p>
+            <p><img title="Click Me!" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/Feature+Walkthroughs/Merchant+Product+Restrictions+Feature+Walkthrough/Restricted+Products+Behavior/product-groups-blacklisted.png" alt="" /></p>
          </td>
       </tr>
       <tr>
@@ -129,7 +129,7 @@ On this page, you can find commonly encountered cases of product restrictions be
             <p>If any of the related products is added to a blacklist - it is not displayed in the Shop Application.</p>
          </td>
          <td>
-            <p><img title="Click Me!" src="https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/related-product-blacklist.png" alt="" /></p>
+            <p><img title="Click Me!" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/Feature+Walkthroughs/Merchant+Product+Restrictions+Feature+Walkthrough/Restricted+Products+Behavior/related-product-blacklist.png" alt="" /></p>
          </td>
       </tr>
       <tr>
@@ -143,7 +143,7 @@ On this page, you can find commonly encountered cases of product restrictions be
             <p>In case any of the products in the product set are added to a whitelist - the other products are not displayed in the shop application.</p>
          </td>
          <td>
-            <p><img title="Click Me!" src="https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/product-set-whitelist.png" alt="" /></p>
+            <p><img title="Click Me!" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/Feature+Walkthroughs/Merchant+Product+Restrictions+Feature+Walkthrough/Restricted+Products+Behavior/product-set-whitelist.png" alt="" /></p>
          </td>
       </tr>
       <tr>
@@ -154,7 +154,7 @@ On this page, you can find commonly encountered cases of product restrictions be
             <p>In the case with the blacklist, when the whole product set is blacklisted - <em>This product is not available</em> message is shown on the product detail page, though the product set is still displayed on the <em>Product Sets</em> page.</p>
          </td>
          <td>
-            <p><img title="Click Me!" src="https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/product-set-blacklisted.png" alt="" /></p>
+            <p><img title="Click Me!" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/Feature+Walkthroughs/Merchant+Product+Restrictions+Feature+Walkthrough/Restricted+Products+Behavior/product-set-blacklisted.png" alt="" /></p>
          </td>
       </tr>
       <tr>
@@ -168,7 +168,7 @@ On this page, you can find commonly encountered cases of product restrictions be
             <p>If the products from CMS block have been added to a blacklist - they are not displayed on the website.</p>
          </td>
          <td>
-            <p><img title="Click Me!" src="https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/cms-blacklisted.png" alt="" /></p>
+            <p><img title="Click Me!" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/Feature+Walkthroughs/Merchant+Product+Restrictions+Feature+Walkthrough/Restricted+Products+Behavior/cms-blacklisted.png" alt="" /></p>
          </td>
       </tr>
       <tr>
@@ -183,7 +183,7 @@ On this page, you can find commonly encountered cases of product restrictions be
             <p>If all the variants for a promotional product are restricted - the restricted product is not shown at all.</p>
          </td>
          <td>
-            <p><img title="Click Me!" src="https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/promotional-products-blacklist.png" alt="" /></p>
+            <p><img title="Click Me!" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/Feature+Walkthroughs/Merchant+Product+Restrictions+Feature+Walkthrough/Restricted+Products+Behavior/promotional-products-blacklist.png" alt="" /></p>
          </td>
       </tr>
       <tr>

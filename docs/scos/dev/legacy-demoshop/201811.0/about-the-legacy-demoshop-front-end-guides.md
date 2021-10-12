@@ -32,7 +32,7 @@ The [Demoshop Guide](/docs/scos/dev/legacy-demoshop/{{page.version}}/demoshop-gu
 Assets represent a large collection of files, and to manage them effectively, we came up with the following 4-step procedure:
 
 1. [Download and structure](/docs/scos/dev/legacy-demoshop/{{page.version}}/download-and-structure.html): get external dependencies and put assets into the corresponding folders;
-2. [Development](/docs/scos/dev/sdk/{{site.version}}/development.html): create your project front-end;
+2. [Development tools](/docs/scos/dev/sdk/{{page.version}}/development-tools/development-tools.html): create your project front-end;
 3. [Transpile/build and optimization](/docs/scos/dev/legacy-demoshop/{{page.version}}/build-and-optimization.html): manipulate and optimize assets;
 4. [Public folder](/docs/scos/dev/legacy-demoshop/{{page.version}}/public-folder.html): place built output into a public and accessible folder.
 

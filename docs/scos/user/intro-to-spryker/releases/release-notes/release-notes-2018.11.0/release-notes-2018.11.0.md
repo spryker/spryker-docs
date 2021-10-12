@@ -33,7 +33,7 @@ For information about installing the Spryker Commerce OS, see [Getting Started G
 Spryker’s new B2B Demo Shop was made to provide you with the right combination of modules and functionalities to represent the most common B2B commerce use case. You will get an integrated and stable product that is consistent in both technological and feature completeness point of view. This Demo Shop is our recommended starting point for all standard B2B commerce projects. It comes with the new modern look-and-feel and atomic design approach.
 ![B2B Demo Shop](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.11.0/image1.png)
 
-**Documentation**: [B2B Demo Shop](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2b-b2c-demo-shops).
+**Documentation**: [B2B Demo Shop](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2bb2c-demo-shops).
 
 ### Non-authenticated B2B Shop User Permissions Manager
 Spryker has improved permissions control mechanism for non-authenticated B2B shop users. A shop administrator can hide/show specific shop features such as prices, shopping lists, an ability to add products to the cart or going to the checkout.
@@ -45,13 +45,13 @@ Spryker has improved permissions control mechanism for non-authenticated B2B sho
 For everyone interested in B2C commerce use cases, we provide Spryker’s B2C Demo Shop. It also consists of the most common combination of modules and functionalities to cover your needs in the B2C commerce.
 ![B2C Demo shop](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.11.0/image4.png)
 
-**Documentation**: [B2C Demo Shop](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2b-b2c-demo-shops#b2c-demo-shop)
+**Documentation**: [B2C Demo Shop](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2bb2c-demo-shops#b2c-demo-shop)
 
 ### B2B Company Account
 Let your customers model their company hierarchies by defining business units including multiple addresses to make the ordering process more convenient. They can create and manage users and assign roles and permissions to the Business Units to give full control where it’s needed. The Business on Behalf feature provides users with the ability to log in to different business units with the same credentials fully inheriting business unit permissions.
 ![B2B company account](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.11.0/image8.png)
 
-**Documentation**: [Company Account](https://documentation.spryker.com/2021080/docs/company-account-management)
+**Documentation**: [Company Account](/docs/scos/user/features/{{site.version}}/company-account-feature-overview/company-account-feature-overview.html)
 
 ### B2B Shopping List
 Shopping list is the feature that allows customers to create and share multiple lists of products between company business units or single users, allowing them to make regular or wholesale purchases in the most convenient way. All or selected products can be added to a Shopping Cart. Shopping lists can be shared between users with a different set of permissions. A user can also print a shopping list along with the barcodes.
@@ -120,7 +120,7 @@ With the Product Restrictions feature, you as a shop owner can easily define who
 ### Merchant Concept
 We have introduced the concept of Merchant to allow our customers to implement the Marketplace functionality. In a non-marketplace setup, there is always one Merchant. Product Restrictions and Customer Specific Prices are implemented by linking a B2B customer to the Merchant.
 
-**Documentation**: [Merchants and Merchant Relations](https://documentation.spryker.com/2021080/docs/merchants-and-merchant-relations)
+**Documentation**: [Merchants and Merchant Relations](/docs/scos/user/features/{{site.version}}/merchant-b2b-contracts-feature-overview.html)
 
 ## General Cart Enhancements
 ### Minimum Order Value
@@ -140,7 +140,7 @@ You can easily manage gross and net prices per product, country, and currency. P
 With the Volume Prices feature, you can define individual prices for a product for different order quantities. Set specific volume thresholds for your products to encourage your customers to purchase larger quantities of a product in order to receive the special volume discount.
 ![Volume prices](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.11.0/image12.png)
 
-**Documentation**: [Volume Prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html)
+**Documentation**: [Volume Prices](/docs/scos/user/features/{{site.version}}/prices-feature-overview/volume-prices-overview.html)
 
 ### Customer-specific Prices
 Offer your customers individual agreements and customize the prices per business unit accordingly. To avoid unnecessary repetition of values, the data is compressed in the database.
@@ -155,7 +155,7 @@ The shop owner can set up a price per merchant/business unit combination.
 With the Agent Assist feature, you may enable your employees to help your customers with true efficiency, all while operating the same storefront interface. No more confusing backend UI. Agent Assist allows your employees to log-in to the storefront using a particular URL, search for a customer to assist and pick them up to do business on their behalf. A feature flag in the session allows for versatile customizations of the storefront functionality during an agent assist session. This feature may also be used as a point of sale solution in physical retail stores.
 ![Agent assist](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.11.0/image3.png)
 
-**Documentation**: [Agent Assist](https://documentation.spryker.com/2021080/docs/how-to-setup-agent-assist-b2b)
+**Documentation**: [Agent Assist](/docs/scos/user/features/{{site.version}}/agent-assist-feature-overview.html)
 
 ### Add Concrete Product to Existing Abstract Product
 With this improvement, you will be able to attach new product concretes to existing abstract products directly in the backend interface.

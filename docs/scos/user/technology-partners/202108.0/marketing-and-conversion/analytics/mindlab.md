@@ -11,11 +11,11 @@ redirect_from:
 ---
 
 ## Partner Information
-[ABOUT MINDLAB SOLUTIONS](http://www.mindlab.de/)
+
 As a web analysis pioneer with 18 years of experience, Mindlab Solutions is one of the leading specialists in the implementation of challenging analytics projects for websites, apps and intranet systems. Germany's leading companies count on Mindlab when it comes to increasing the scope of digital applications, raising customer satisfaction and conversion rates, and evaluating the efficiency of digitally transformed processes. 
 {% info_block infoBox "Info" %}
-This integration is built and supported by our technology partner [Mindlab Solutions](http://www.mindlab.de
-{% endinfo_block %}.)
+This integration is built and supported by our technology partner Mindlab Solutions.
+{% endinfo_block %}{target="_blank"}.)
 
 ## Mindlab Documentation
 Spryker customers can easily connect to Mindlab and access comprehensive Mindlab e-commerce reporting. On request, this can be individually adapted to customer-specific questions. The Mindlab analytics solution grows long term with customer requirements and supports individual business models.
@@ -25,9 +25,6 @@ For successful e-commerce strategies in today's world, meaningful data analysis 
 ## Mindlab Download and Support
 
 For downloads, support and additional information send a message to: **info@mindlab.de**.
-
-**See also:**
-* [Mindlab solution page](https://www.mindlab.de/einsatzbereiche/intranet-und-social-collaboration)
 
 ## Copyright and Disclaimer
 

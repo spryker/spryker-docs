@@ -13,7 +13,7 @@ redirect_from:
 From version 2 we have removed the disabled users from the shared list. The ability to enable/disable users was added to the `CompanyUser` module, version 2.0.0.
 
 **To upgrade to the new version of the module, do the following:**
-1. Upgrade the `CompanyUser` module to version 2.0.0. See [Migration Guide - CompanyUser](https://docs.demo-spryker.com/v4/docs/mg-companyuser) for more details:
+1. Upgrade the `CompanyUser` module to version 2.0.0. See [Migration Guide - CompanyUser](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-companyuser.html) for more details:
 
 ```yaml
 composer require spryker/company-user: “^2.0.0”

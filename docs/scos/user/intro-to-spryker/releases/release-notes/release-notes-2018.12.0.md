@@ -47,17 +47,17 @@ Endpoints ensure access-token login and retrieval. Customers can also register a
 ### Cart
 Customers and guests can add products to their cart. Guest carts are now also persisted and retrievable via anonymous IDs, handled by your client application.
 
-**Documentation**: [Managing Carts](https://documentation.spryker.com/2021080/docs/managing-carts).
+**Documentation**: [Managing Carts](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html).
 
 ### Checkout
 Retrieve all the necessary information to build your checkout for guest customers and already registered customers with their personal data. If you offer different shipment or payment methods on your own conditions, they will be considered.
 
-**Documentation**: [Checking Out Purchases and Getting Checkout Data](https://documentation.spryker.com/2021080/docs/checking-out-purchases-and-getting-checkout-data).
+**Documentation**: [Checking Out Purchases and Getting Checkout Data](/docs/scos/dev/glue-api-guides/{{site.version}}/checking-out/checking-out-purchases.html).
 
 ### Customer Account
 Your customers can benefit from the same shop experience with the customer account endpoints. Not only can basic customer information be administered, but also wishlist and order history functionality is offered.
 
-**Documentation**: [Managing Customers](/docs/scos/user/back-office-user-guides/{{site.version}}/customer/customer-customer-access-customer-groups/managing-customers.html), [Managing Wishlists](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-wishlists/managing-wishlists.html), [Retrieving Customer's Order History](https://documentation.spryker.com/2021080/docs/retrieving-order-history).
+**Documentation**: [Managing Customers](/docs/scos/user/back-office-user-guides/{{site.version}}/customer/customer-customer-access-customer-groups/managing-customers.html), [Managing Wishlists](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-wishlists/managing-wishlists.html), [Retrieving Customer's Order History](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-orders.html).
 
 ## Documentation Swagger Generator
 ![Documentation Swagger generator](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.12.0/image3.png) 

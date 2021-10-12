@@ -202,11 +202,11 @@ Defines the list of *Regions*.
 
 <a name="regions-services"></a>
 * `regions: services:` - defines settings for *Region*-specific `services:`. Only `database:` and `mail: sender:` are allowed here.
-	* `regions: services: database:` - see [database:](#database-).
+	* `regions: services: database:` - see [database:](#database).
 	* `regions: services: mail: sender:` - defines the mail sender configuration. Possible values are `name:` and `email:`.
 * `regions: stores:` - defines the list of *Stores*.
 <a name="regions-stores-services"></a>
-* `regions: stores: services:` - defines application-wide, *Store*-specific settings for *Services*. Only `broker:`, `key_value_store:` and `search:` are currently allowed here. See [services:](#services-) to learn more.
+* `regions: stores: services:` - defines application-wide, *Store*-specific settings for *Services*. Only `broker:`, `key_value_store:` and `search:` are currently allowed here. See [services:](#services) to learn more.
 
 ```yaml
 version: "1.0"
@@ -233,7 +233,7 @@ regions:
 Defines the list of *Groups**.
 
 * `groups: region:` - defines the relation to a *Region* by key.
-* `groups: applications:` - defines the list of *Applications*. See [groups: applications:](#groups-applications-) to learn more.
+* `groups: applications:` - defines the list of *Applications*. See [groups: applications:](#groups-applications) to learn more.
 
 ```yaml
 version: "1.0"
@@ -309,7 +309,7 @@ The key must be project-wide unique.
 Obligatory parameters for `application:`:
 
 * `groups: applications: application:` - defines the type of *Application*. Possible values are `backoffice(zed)`, `yves`, and `glue`.
-* `groups: applications: endpoints:` - defines the list of *Endpoints* to access the *Application*. See [groups: applications: endpoints:](#groups-applications-endpoints-) to learn more.
+* `groups: applications: endpoints:` - defines the list of *Endpoints* to access the *Application*. See [groups: applications: endpoints:](#groups-applications-endpoints) to learn more.
 
 Optional parameters for `application:`:
 * `groups: applications: application: application:` - defines if the application is static. Only `static` is allowed here.
@@ -435,7 +435,7 @@ docker/sdk clean-data
 docker/sdk demo-data
 ```
 {% endinfo_block %}
-You can extend service settings on other levels for specific contexts. See [regions: services:](#regions-), [regions: stores: services:](#regions-) and [groups: applications: endpoints: services:](#groups-applications-endpoints-) to learn more.
+You can extend service settings on other levels for specific contexts. See [regions: services:](#regions), [regions: stores: services:](#regions) and [groups: applications: endpoints: services:](#groups-applications-endpoints) to learn more.
 
 ***
 

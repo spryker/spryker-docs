@@ -12,8 +12,8 @@ redirect_from:
 
 ## Upgrading from version 2.* to version 4.*
 {% info_block infoBox %}
-In order to dismantle the Horizontal Barrier and enable partial module updates on projects, a Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Please [contact us](https://support.spryker.com/hc/en-us
-{% endinfo_block %} if you have any questions.)
+In order to dismantle the Horizontal Barrier and enable partial module updates on projects, a Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Please [contact us](https://spryker.com/en/support/) if you have any questions.
+{% endinfo_block %}
 
 ## Upgrading from version 1.* to version 2.*
 There are new functionalities and changes that were added in this new module release. First of all, the changes imply implementation of the Price Dimension concept as well as adding of Service layer with PriceProductService. See [PriceProduct module details: Reference information](/docs/scos/dev/feature-walkthroughs/{{page.version}}/prices-feature-walkthrough/priceproduct-module-details-reference-information.html) for details.

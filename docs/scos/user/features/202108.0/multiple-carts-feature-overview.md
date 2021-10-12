@@ -116,7 +116,7 @@ On the storefront, company users can perform the following actions using the Mul
 * To add a customer order reference to an order, see [Custom Order Reference feature overview](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/custom-order-reference-overview.html).
 
 
-In this video, we explain how to use shopping carts in the Spryker [B2B Demo Shop](/docs/scos/user/intro-to-spryker/{{site.version}}/b2b-suite.html).
+In this video, we explain how to use shopping carts in the Spryker [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html).
 
 {% wistia s776wlo9ds 960 720 %}
 

@@ -17,7 +17,9 @@ This document describes how to install Spryker in [Development Mode](/docs/scos/
 
 ## Installing Docker prerequisites on Windows
 
-To install Docker prerequisites for Windows, follow [Installing Docker prerequisites on Windows](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows.html).
+To install Docker prerequisites on Windows with WSL1, follow [Installing Docker prerequisites on Windows with WSL1](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl1.html).
+
+To install Docker prerequisites on Windows with WSL2, follow [Installing Docker prerequisites on Windows with WSL2](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl2.html).
 
 
 
@@ -28,7 +30,7 @@ Follow the steps to install Spryker in Development mode:
 1. Open Ubuntu.
 2. Open a terminal.
 3. Create a new folder and navigate into it.
-4. Depending on the desired [Demo Shop](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2b-b2c-demo-shops):
+4. Depending on the desired [Demo Shop](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2bb2c-demo-shops):
 
     a. Clone the B2C repository:
 
@@ -150,7 +152,7 @@ To get the full and up-to-date list of commands, run `docker/sdk help`.
 
 ## Next steps
 
-* [Spryker in Docker troubleshooting](/docs/scos/dev/troubleshooting/spryker-in-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html)
+* [Spryker in Docker troubleshooting](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html)
 * [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/{{page.version}}/configuring-debugging-in-docker.html)
 * [Deploy File Reference - 1.0](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file-reference-1.0.html)
 * [Configuring services](/docs/scos/dev/the-docker-sdk/{{page.version}}/configuring-services.html)

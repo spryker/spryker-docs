@@ -24,23 +24,23 @@ This page lists all the updates to the documentation made for each release.
 Check out our [release notes](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html) to learn more about the releases.
 
 ## Release 202001.0
-Below you will find the list of the new/updated documentation released as part of the [202001.0 Spryker product release](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html-2020010):
+Below you will find the list of the new/updated documentation released as part of the [202001.0 Spryker product release](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202001.0/release-notes-202001.0.html):
 
 ### Features:
 
-* [Split Delivery](https://documentation.spryker.com/2021080/docs/split-delivery)
+* [Split Delivery](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/split-delivery-overview.html)
 
 <details open>
 <summary>Feature overview</summary>
 
-[Split Delivery Overview](https://documentation.spryker.com/2021080/docs/split-delivery-overview)
+[Split Delivery Overview](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/split-delivery-overview.html)
 
 </details>
 
 <details open>
 <summary>Migration guide</summary>
 
-[Split Delivery Migration Concept](https://documentation.spryker.com/2021080/docs/split-delivery-concept)
+[Split Delivery Migration Concept](/docs/scos/dev/migration-concepts/split-delivery-migration-concept.html)
 
 
 </details>
@@ -57,7 +57,7 @@ Below you will find the list of the new/updated documentation released as part o
 <summary>Back Office user guides</summary>
 
 
-* [Creating a New Shipment for Order](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/managing-order-shipments.html#creating-a-new-shipment-for-order)
+* [Creating a New Shipment for Order](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/managing-order-shipments.html#creating-a-new-shipment-for-an-order)
 * [Editing Shipment Details](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/managing-order-shipments.html#editing-shipment-details)
 
 </details>
@@ -65,7 +65,7 @@ Below you will find the list of the new/updated documentation released as part o
 <summary>Shop user guide</summary>
 
 
-[Assigning Multiple Delivery Addresses to Order](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/managing-order-shipments.html#creating-a-new-shipment-for-order)
+[Assigning Multiple Delivery Addresses to Order](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/managing-order-shipments.html#creating-a-new-shipment-for-an-order)
 
 
 </details>
@@ -118,7 +118,7 @@ Below you will find the list of the new/updated documentation released as part o
 <summary>Migration guides</summary>
 
 * [PriceProductSchedule migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-priceproductschedule.html)
-* [PriceProductScheduleGui migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-priceproductschedule.html-gui)
+* [PriceProductScheduleGui migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-priceproductschedulegui.html)
 
 </details>
 <details open>
@@ -157,7 +157,7 @@ Below you will find the list of the new/updated documentation released as part o
 <summary>Migration guides</summary>
 
 
-* [CmsBlock - migration from v. 2.* to v. 3.*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cmsblock.html#upgrading-from-version-2---to-version-3--)
+* [CmsBlock - migration from v. 2.* to v. 3.*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cmsblock.html#upgrading-from-version-2-to-version-3)
 * [CmsBlockStorage - migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cmsblockstorage.html)
 * [CmsBlockWidget - migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cmsblockwidget.html)
 
@@ -256,7 +256,7 @@ Below you will find the list of the new/updated documentation released as part o
 
 </details>
 
-* [Product Discounts API](https://documentation.spryker.com/2021080/docs/retrieving-discounts)
+* [Product Discounts API](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-promotional-items.html)
 
 <details open>
 <summary>Integration guide</summary>
@@ -269,7 +269,7 @@ Below you will find the list of the new/updated documentation released as part o
 
 </details>
 
-* [Ratings and Reviews API](https://documentation.spryker.com/2021080/docs/retrieving-ratings-and-reviews)
+* [Ratings and Reviews API](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/managing-product-ratings-and-reviews.html)
 
 <details open>
 <summary>Integration guide</summary>
@@ -299,7 +299,7 @@ Below you will find the list of the new/updated documentation released as part o
 ### Spryker in Docker
 
 * [Queue Worker](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html#queue)
-* [Deploy File Reference](/docs/dev/the-docker-sdk/{{page.version}}/deploy-file-reference-1.0.html)
+* [Deploy File Reference](/docs/dev/the-docker-sdk/{{site.version}}/deploy-file-reference-1.0.html)
 * [Health checks](/docs/scos/dev/technical-enhancements/health-checks.html)
 * [Asset Management](/docs/scos/user/features/{{site.version}}/file-manager/file-manager-feature-overview/asset-management.html)
 <details open>
@@ -323,16 +323,16 @@ Below you will find the list of the new/updated documentation released as part o
 
 * Payment Management
     * [Managing Payment Methods](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/payment-methods/managing-payment-methods.html)
-    * [Payment Methods: Reference Information](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/payment-methods/managing-payment-methods.html#reference-information--editing-payment-method-pages)
+    * [Payment Methods: Reference Information](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/payment-methods/managing-payment-methods.html#reference-information-editing-payment-method-pages)
 * [Shipment](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/managing-order-shipments.html)
 
     * [Creating a Carrier Company](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-carrier-companies.html)
     * [Creating and Managing Delivery Methods](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html)
-    * [Delivery Methods: Reference Information](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html#reference-information--creating-delivery-methods)
+    * [Delivery Methods: Reference Information](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html#reference-information-creating-delivery-methods)
  * Warehouses
     * [Creating a Warehouse](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/warehouses/creating-a-warehouse.html)
     * [Managing Warehouses](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/warehouses/managing-warehouses.html)
-    * [Warehouses: Reference Information](/docs/user/features/{{page.version}}/inventory-management-feature-overview.html)
+    * [Warehouses: Reference Information](/docs/user/features/{{site.version}}/inventory-management-feature-overview.html)
  * [Stores](https://documentation.spryker.com/2021080/docs/stores-reference-information-201911)
 
 #### HowTos:

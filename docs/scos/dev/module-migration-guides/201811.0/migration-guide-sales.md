@@ -44,8 +44,8 @@ console transfer:generate
 ## Upgrading from Version 8.* to Version 10.0.0
 
 {% info_block infoBox %}
-To dismantle the Horizontal Barrier and enable partial module updates on projects, a Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Please [contact us](https://support.spryker.com/hc/en-us
-{% endinfo_block %} if you have any questions.)
+To dismantle the Horizontal Barrier and enable partial module updates on projects, a Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Please [contact us](https://spryker.com/en/support/) if you have any questions.
+{% endinfo_block %}
 
 ## Upgrading from Version 7.* to Version 8.*
 
@@ -199,8 +199,8 @@ Now you have two options:
 **OR**
 * migrate to the new calculators logic.
 
-1. To keep old calculation logic, see [Updating calculator stacks](https://docs.demo-spryker.com/v4/docs/mg-calculation).
-2. To migrate to the new structure, see [Migrating sales to new calculator logic](https://docs.demo-spryker.com/v4/docs/mg-calculation). 
+1. To keep old calculation logic, see [Updating calculator stacks](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-calculation.html).
+2. To migrate to the new structure, see [Migrating sales to new calculator logic](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-calculation.html). 
 
 ## Upgrading from Version 3.* to Version 4.*
     

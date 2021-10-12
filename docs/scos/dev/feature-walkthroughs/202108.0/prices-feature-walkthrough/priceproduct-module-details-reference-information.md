@@ -6,7 +6,7 @@ template: concept-topic-template
 ---
 
 
-This article describes technical details of the [PriceProduct](https://github.com/spryker/price-product) module that are valid since [version 2](https://documentation.spryker.com/docs/mg-priceproduct#upgrading-from-version-1---to-version-2--) of the module.
+This article describes technical details of the [PriceProduct](https://github.com/spryker/price-product) module that are valid since [version 2](https://documentation.spryker.com/docs/mg-priceproduct#upgrading-from-version-1-to-version-2) of the module.
 
 ## Price dimension
 

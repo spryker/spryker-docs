@@ -34,7 +34,7 @@ A back-office user can also **split an order** into multiple shipments or modify
 * Sales-quantity module with the functionality of order quantity threshold
 
 #### Documentation
-[Split Delivery](https://documentation.spryker.com/2021080/docs/split-delivery)
+[Split Delivery](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/split-delivery-overview.html)
 
 ### Decimal Stock
 Spryker now supports product stock definition as **decimal** instead of integer. You can define a product stock as
@@ -53,7 +53,7 @@ The requirement is to share your package stock with another concrete product. In
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image5.png)
 
 #### Documentation
-[Packaging Units](https://documentation.spryker.com/2021080/docs/packaging-units-202001)
+[Packaging Units](/docs/scos/user/featurs/{{site.version}}/packaging-units-feature-overview.html)
 
 ### Improved Scheduled Prices
 The **Scheduled Price** feature allows you to define a price for your products that will take effect in the future. Create a scheduled price manually in the Back Office or import them in bulk via CSV files. Starting from this release, you can manage your previously imported **Scheduled Prices** directly in the Back Office.
@@ -64,7 +64,7 @@ The **Scheduled Price** feature allows you to define a price for your products t
 #### Documentation
 
 * [Scheduled Prices](/docs/scos/user/features/{{site.version}}/scheduled-prices-feature-overview.html)
-* [Creating Scheduled Prices in the Back Office](https://documentation.spryker.com/2021080/docs/creating-scheduled-prices-201907)
+* [Creating Scheduled Prices in the Back Office](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/scheduled-prices/creating-scheduled-prices.html)
 * [Managing Scheduled Prices in the Back Office](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/scheduled-prices/managing-scheduled-prices.html)
 
 ### Multi-store Improvements
@@ -138,19 +138,19 @@ There are many scenarios where shop owners want to display labels on product ite
 Shop owners need to be able to offer their customers discounts according to different conditions related to their shopping cart and also to provide them with vouchers to save money on the purchase of specific products or related to their shopping volume. With this API, we enable you to let your customers redeem vouchers and manage them in their carts and checkout and to apply discount rules to their carts according to the predefined conditions.
 
 #### Documentation
-[Discounts API](https://documentation.spryker.com/2021080/docs/retrieving-discounts)
+[Discounts API](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-promotional-items.html)
 
 #### Ratings and Reviews API
 Ratings and reviews are critical for the customer’s purchase decision. Shop owners want to display ratings and reviews related to products on the product page and rating averages on product previews.  With this API, you will be able to display the average rating of a product on the product page, to retrieve the existing ratings and reviews with their abstract and concrete products, to let your customers add a review to a product, to display the average rating and the number of reviews with related products, alternative products, up-selling products, wishlist items and on your catalog’s product reviews.
 
 #### Documentation
-[Ratings and Reviews API](https://documentation.spryker.com/2021080/docs/retrieving-ratings-and-reviews)
+[Ratings and Reviews API](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/managing-product-ratings-and-reviews.html)
 
 ### Product Options API
 With this API, you will be able to display a product with its different options each of them with its own price, product option group, and tax set, to display the item in the cart or guest cart with the selected option and to make use of those through the checkout process.
 
 #### Documentation
-[Product Options API](https://documentation.spryker.com/2021080/docs/retrieving-product-options)
+[Product Options API](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/abstract-produts/retrieving-abstract-products.html)
 
 ### Improved Navigation URLs
 

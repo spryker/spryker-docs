@@ -36,12 +36,12 @@ Blocks help to place content in certain places in your template, so you can easi
                 <li><a href="https://documentation.spryker.com/docs/en/product-block" class="mr-link">Install and configure a Product Block</a></li>
 <li><a href="https://documentation.spryker.com/docs/en/enabling-category-cms-block" class="mr-link">Install and configure a Category Block</a></li>
 <!-- <li><a href="https://documentation.spryker.com/docs/en/cms-block-multistore" class="mr-link">Enable multi-store management for CMS blocks</a></li>-->
-<li><a href="https://documentation.spryker.com/docs/en/mg-cms-collector#upgrading-from-version-1---to-version-2--" class="mr-link">Migrate the CMS Collector module from version 1.* to version 2.*</a></li>
-<li><a href="https://documentation.spryker.com/docs/en/mg-cms-block#upgrading-from-version-1---to-version-2--" class="mr-link">Migrate the CMS Block module from version 1.* to version 2.*</a></li>
+<li><a href="https://documentation.spryker.com/docs/en/mg-cms-collector#upgrading-from-version-1-to-version-2" class="mr-link">Migrate the CMS Collector module from version 1.* to version 2.*</a></li>
+<li><a href="https://documentation.spryker.com/docs/en/mg-cms-block#upgrading-from-version-1-to-version-2" class="mr-link">Migrate the CMS Block module from version 1.* to version 2.*</a></li>
 <li><a href="https://documentation.spryker.com/docs/en/mg-cms-block-category-connector#migration-guide---cms-block-category-connector" class="mr-link">Migrate the CMS Block Category Connector module from version 1.* to version 2.*</a></li>
 <li><a href="https://documentation.spryker.com/docs/en/mg-cms-block-category-connector-console" class="mr-link">Migrate the CMS Block Category Connector Console module from version 1.* to version 2.*</a></li>
-<li><a href="https://documentation.spryker.com/docs/en/mg-cms-block-collector#upgrading-from-version-1---to-version-2--" class="mr-link">Migrate the CMS Block Collector  module from version 1.* to version 2.*</a></li>
-<li><a href="https://documentation.spryker.com/docs/en/mg-cms-block-gui#upgrading-from-version-1---to-version-2--" class="mr-link">Migrate the CMS Block GUI  module from version 1.* to version 2.*</a></li>
+<li><a href="https://documentation.spryker.com/docs/en/mg-cms-block-collector#upgrading-from-version-1-to-version-2" class="mr-link">Migrate the CMS Block Collector  module from version 1.* to version 2.*</a></li>
+<li><a href="https://documentation.spryker.com/docs/en/mg-cms-block-gui#upgrading-from-version-1-to-version-2" class="mr-link">Migrate the CMS Block GUI  module from version 1.* to version 2.*</a></li>
     </ul>
         </div>
         <!-- col2 -->

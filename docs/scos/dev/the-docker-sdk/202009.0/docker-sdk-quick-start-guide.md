@@ -90,7 +90,7 @@ Depending on your requirements, you can select any combination of the following 
 
 ## Troubleshooting
 
-For solutions to common issues, see [Spryker in Docker troubleshooting](/docs/scos/dev/troubleshooting/spryker-in-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html).
+For solutions to common issues, see [Spryker in Docker troubleshooting](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html).
 
 
 ## What documents should I use to start developing and configuring my project?

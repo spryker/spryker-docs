@@ -277,4 +277,4 @@ To verify that SelectedPaymentMethodCheckoutDataResponseMapperPlugin is activate
 
 | Feature | Link |
 | --- | --- |
-| Checkout API | [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |
+| Checkout API | [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |

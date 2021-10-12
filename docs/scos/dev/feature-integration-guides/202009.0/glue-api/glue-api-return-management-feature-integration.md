@@ -15,7 +15,7 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Integration guide |
 | --- | --- | --- |
-| Spryker Core | 202009.0 | [Feature API](/docs/scos/dev/feature-integration-guides/{page.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | 202009.0 | [Feature API](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 | Return Management | 202009.0 | Feature |
 
 ### 1) Install the required modules using Composer

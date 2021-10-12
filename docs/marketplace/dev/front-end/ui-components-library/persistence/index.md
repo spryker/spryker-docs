@@ -17,14 +17,14 @@ Persistence is used in other components like Cache, Table State Sync Feature etc
 
 ```html
 <spy-select
-  [datasource]="{
-    type: 'http',
-    ...,
-    cache: {
-      ....,
-      storage: PersistenceStrategyType,
-    },
-  }"
+    [datasource]="{
+        type: 'http',
+        ...,
+        cache: {
+            ....,
+            storage: PersistenceStrategyType,
+        },
+    }"
 >
 </spy-select>
 ```
@@ -50,33 +50,33 @@ Persistence Strategy must implement a specific interface (`PersistenceStrategy`)
 import { PersistenceStrategy } from '@spryker/persistence';
 
 declare module '@spryker/persistence' {
-  interface PersistenceStrategyRegistry {
-    'custom': CustomPersistenceService;
-  }
+    interface PersistenceStrategyRegistry {
+        'custom': CustomPersistenceService;
+    }
 }
 
-// Services implementation
+// Service implementation
 @Injectable({
-  providedIn: 'root',
+    providedIn: 'root',
 })
 export class CustomPersistenceService implements PersistenceStrategy {
-  save(key: string, value: unknown): Observable<void> {
-    ...,
-  };
-  retrieve<T>(key: string): Observable<T | undefined> {
-    ...,
-  };
-  remove(key: string): Observable<void> {
-    ...,
-  };
+    save(key: string, value: unknown): Observable<void> {
+        ...,
+    };
+    retrieve<T>(key: string): Observable<T | undefined> {
+        ...,
+    };
+    remove(key: string): Observable<void> {
+        ...,
+    };
 }
 
 @NgModule({
-  imports: [
-    PersistenceModule.withStrategies({
-      custom: CustomPersistenceService,
-    }),
-  ],
+    imports: [
+        PersistenceModule.withStrategies({
+            custom: CustomPersistenceService,
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -87,14 +87,14 @@ Below you can find interfaces for the Persistence service:
 
 ```ts
 interface PersistenceStrategyService {
-  select(type: PersistenceStrategyType): PersistenceStrategy;
-  getAll(): PersistenceStrategy[];
+    select(type: PersistenceStrategyType): PersistenceStrategy;
+    getAll(): PersistenceStrategy[];
 }
 
 interface PersistenceStrategy {
-  save(key: string, value: unknown): Observable<void>;
-  retrieve<T>(key: string): Observable<T | undefined>;
-  remove(key: string): Observable<void>;
+    save(key: string, value: unknown): Observable<void>;
+    retrieve<T>(key: string): Observable<T | undefined>;
+    remove(key: string): Observable<void>;
 }
 ```
 

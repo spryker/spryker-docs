@@ -14,49 +14,49 @@ In the example below, the `datasource` returns an array with the transformed `da
 
 Service configuration:
 
-`transformers` - an array with Data Transformer configuration objects.
+- `transformers` - an array with Data Transformer configuration objects.
 
 ```html
 <spy-select
-  [datasource]="{
-    type: 'inline',
-    data: [
-      {
-        type: 'date',
-        date: '2020-09-24T15:20:08+02:00',
-      },
-      {
-        type: 'date',
-        date: '2020-09-22T15:20:08+02:00',
-      },
-    ],
-    transform: {
-      type: 'chain',
-      transformers: [
-        {
-          type: 'array-map',
-          mapItems: {
-            type: 'lens',
-            path: 'date',
-            transformer: {
-              type: 'date-parse',
+    [datasource]="{
+        type: 'inline',
+        data: [
+            {
+                type: 'date',
+                date: '2020-09-24T15:20:08+02:00',
             },
-          },
-        },                                            
-        {
-          type: 'array-map',
-          mapItems: {
-            type: 'object-map',
-            mapProps: {
-              date: {
-                type: 'date-serialize',
-              },
+            {
+                type: 'date',
+                date: '2020-09-22T15:20:08+02:00',
             },
-          },
-        },
-      ],      
-    },                  
-  }"
+        ],
+        transform: {
+            type: 'chain',
+            transformers: [
+                {
+                    type: 'array-map',
+                    mapItems: {
+                        type: 'lens',
+                        path: 'date',
+                        transformer: {
+                            type: 'date-parse',
+                        },
+                    },
+                },                                            
+                {
+                    type: 'array-map',
+                    mapItems: {
+                        type: 'object-map',
+                        mapProps: {
+                            date: {
+                                type: 'date-serialize',
+                            },
+                        },
+                    },
+                },
+            ],      
+        },                  
+    }"
 >
 </spy-select>
 ```
@@ -67,11 +67,11 @@ Register the service:
 
 ```ts
 @NgModule({
-  imports: [
-    DataTransformerModule.withTransformers({
-      chain: ChainDataTransformerService,
-    }),
-  ],
+    imports: [
+        DataTransformerModule.withTransformers({
+            chain: ChainDataTransformerService,
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -82,12 +82,12 @@ Below you can find interfaces for the Data Transformer Chain:
 
 ```ts
 declare module '@spryker/data-transformer' {
-  interface DataTransformerRegistry {
-    chain: ChainDataTransformerConfig;
-  }
+    interface DataTransformerRegistry {
+        chain: ChainDataTransformerConfig;
+    }
 }
 
 export interface ChainDataTransformerConfig extends DataTransformerConfig {
-  transformers: DataTransformerConfig[];
+    transformers: DataTransformerConfig[];
 }
 ```

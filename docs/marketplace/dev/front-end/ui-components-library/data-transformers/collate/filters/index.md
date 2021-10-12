@@ -15,30 +15,30 @@ Data Transformer Filters are used in the Datasource service.
 
 ```html
 <spy-table
-  [config]="{
-    datasource: {
-      ...                                                   
-      transform: {
-        type: 'collate',
-        configurator: {
-          type: 'table',
+    [config]="{
+        datasource: {
+            ...,                                                   
+            transform: {
+                type: 'collate',
+                configurator: {
+                    type: 'table',
+                },
+                filter: {
+                    date: {
+                        type: 'range',
+                        propNames: 'col1',
+                    },
+                },
+                search: {
+                    type: 'text',
+                    propNames: ['col2'],
+                },
+                transformerByPropName: {
+                    col1: 'date',
+                },  
+            },
         },
-        filter: {
-          date: {
-            type: 'range',
-            propNames: 'col1',
-          },
-        },
-        search: {
-          type: 'text',
-          propNames: ['col2'],
-        },
-        transformerByPropName: {
-          col1: 'date',
-        },  
-      },
-    },
-  }"
+    }"
 >
 </spy-table>
 ```
@@ -60,30 +60,30 @@ Data Transformer Filter must implement a specific interface (`DataTransformerFil
 ```ts
 // Module augmentation
 declare module '@spryker/data-transformer.collate' {
-  interface DataTransformerFilterRegistry {
-    custom: CustomDataTransformerFilterService;
-  }
+    interface DataTransformerFilterRegistry {
+        custom: CustomDataTransformerFilterService;
+    }
 }
 
-// Services implementation
+// Service implementation
 @Injectable({ providedIn: 'root' })
 export class CustomDataTransformerFilterService implements DataTransformerFilter {
-  filter(
-    data: DataTransformerFilterData,
-    options: DataTransformerFilterConfig,
-    byValue: DataTransformerFilterByValue,
-    transformerByPropName: DataFilterTransformerByPropName,
-  ): Observable<DataTransformerFilterData> { 
-    ... 
-  }
+    filter(
+        data: DataTransformerFilterData,
+        options: DataTransformerFilterConfig,
+        byValue: DataTransformerFilterByValue,
+        transformerByPropName: DataFilterTransformerByPropName,
+    ): Observable<DataTransformerFilterData> { 
+        ... 
+    }
 }
 
 @NgModule({
-  imports: [
-    CollateDataTransformerModule.withFilters({
-      custom: CustomDataTransformerFilterService,
-    }),
-  ],
+    imports: [
+        CollateDataTransformerModule.withFilters({
+            custom: CustomDataTransformerFilterService,
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -94,9 +94,9 @@ Below you can find interfaces for the `DataTransformerFilter` configuration and 
 
 ```ts
 declare module '@spryker/data-transformer' {
-  interface DataTransformerRegistry {
-    collate: CollateDataTransformerConfig;
-  }
+    interface DataTransformerRegistry {
+        collate: CollateDataTransformerConfig;
+    }
 }
 
 type DataTransformerFilterData = Record<string, unknown>[];
@@ -104,17 +104,17 @@ type DataTransformerFilterByValue = unknown[];
 type DataFilterTransformerByPropName = Record<string, string>;
 
 interface DataTransformerFilterConfig {
-  type: string;
-  propNames: string | string[];
+    type: string;
+    propNames: string | string[];
 }
 
 interface DataTransformerFilter {
-  filter(
-    data: DataTransformerFilterData,
-    options: DataTransformerFilterConfig,
-    byValue: DataTransformerFilterByValue,
-    transformerByPropName?: DataFilterTransformerByPropName,
-  ): Observable<DataTransformerFilterData>;
+    filter(
+        data: DataTransformerFilterData,
+        options: DataTransformerFilterConfig,
+        byValue: DataTransformerFilterByValue,
+        transformerByPropName?: DataFilterTransformerByPropName,
+    ): Observable<DataTransformerFilterData>;
 }
 ```
 
@@ -122,6 +122,6 @@ interface DataTransformerFilter {
 
 There are a few common Data Transformer Filters that are available in UI library as separate packages:
 
-  - [Equals](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/equals.html) - filters values that are strictly equal.
-  - [Range](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/range.html) - filters values that are within a number range.
-  - [Text](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/text.html) - filters values that match a string.
+- [Equals](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/equals.html) - filters values that are strictly equal.
+- [Range](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/range.html) - filters values that are within a number range.
+- [Text](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/text.html) - filters values that match a string.

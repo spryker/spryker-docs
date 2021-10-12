@@ -14,18 +14,18 @@ Data Transformer Data Configurators are used in the Datasource service.
 
 ```html
 <spy-table
-  [config]="{
-    datasource: {
-      ...                                                   
-      transform: {
-        type: 'collate',
-        configurator: {
-          type: 'table',
+    [config]="{
+        datasource: {
+            ...,                                                
+            transform: {
+                type: 'collate',
+                configurator: {
+                    type: 'table',
+                },
+                ...,
+            },
         },
-        ...  
-      },
-    },
-  }"
+    }"
 >
 </spy-table>
 ```
@@ -47,30 +47,30 @@ Data Transformer Data Configurator must implement a specific interface (DataTran
 ```ts
 // Module augmentation
 declare module '@spryker/data-transformer.collate' {
-  interface DataTransformerConfiguratorRegistry {
-    custom: CustomDataTransformerConfiguratorService;
-  }
+    interface DataTransformerConfiguratorRegistry {
+        custom: CustomDataTransformerConfiguratorService;
+    }
 }
 
-// Services implementation
+// Service implementation
 import { DataTransformerConfiguratorConfigT } from '@spryker/data-transformer.collate';
 
 @Injectable({ providedIn: 'root' })
 export class CustomDataTransformerConfiguratorService implements DataTransformerConfigurator {
-  resolve(
-    config: DataTransformerConfiguratorConfig,
-    injector: Injector,
-  ): Observable<DataTransformerConfiguratorConfigT> {
-    ... 
-  }
+    resolve(
+        config: DataTransformerConfiguratorConfig,
+        injector: Injector,
+    ): Observable<DataTransformerConfiguratorConfigT> {
+        ... 
+    }
 }
 
 @NgModule({
-  imports: [
-    CollateDataTransformerModule.withConfigurators({
-      custom: CustomDataTransformerConfiguratorService,
-    }),
-  ],
+    imports: [
+        CollateDataTransformerModule.withConfigurators({
+            custom: CustomDataTransformerConfiguratorService,
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -81,18 +81,18 @@ Below you can find interfaces for the `DataTransformerConfigurator` configuratio
 
 ```ts
 interface DataTransformerConfiguratorConfigT {
-  filter?: unknown;
-  search?: unknown;
-  sorting?: {
-    sortBy?: string;
-    sortDirection?: string;
-  };
-  page?: number;
-  pageSize?: number;
+    filter?: unknown;
+    search?: unknown;
+    sorting?: {
+        sortBy?: string;
+        sortDirection?: string;
+    };
+    page?: number;
+    pageSize?: number;
 }
 
 interface DataTransformerConfigurator {
-  resolve(injector: Injector): Observable<DataTransformerConfiguratorConfigT>;
+    resolve(injector: Injector): Observable<DataTransformerConfiguratorConfigT>;
 }
 ```
 

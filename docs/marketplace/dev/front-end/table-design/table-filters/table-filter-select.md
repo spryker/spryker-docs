@@ -19,28 +19,28 @@ Component configuration:
 
 ```html
 <spy-table 
-  [config]="{
-    dataSource: { ... },
-    columns: [ ... ],
-    filters: {
-      enabled: true,
-      items: [
-        {
-          id: 'select1',
-          title: 'Column 1',
-          type: 'select',
-          typeOptions: {
-            multiselect: false,
-            values: [
-              { value: 1, title: 'Option_1' },
-              { value: 2, title: 'Option_2' },
-              { value: 0, title: 'Option_0' },
+    [config]="{
+        dataSource: { ... },
+        columns: [ ... ],
+        filters: {
+            enabled: true,
+            items: [
+                {
+                    id: 'select1',
+                    title: 'Column 1',
+                    type: 'select',
+                    typeOptions: {
+                        multiselect: false,
+                        values: [
+                            { value: 1, title: 'Option_1' },
+                            { value: 2, title: 'Option_2' },
+                            { value: 0, title: 'Option_0' },
+                        ],
+                    },
+                },
             ],
-          },
-        },
-      ],
-    },                                                                                           
-  }"
+        },                                                                                           
+    }"
 >
 </spy-table>
 ```
@@ -52,19 +52,19 @@ Register the component:
 ```ts
 // Dynamic
 @NgModule({
-  imports: [
-    TableModule.forRoot(),
-    TableModule.withFeatures({
-      filters: () =>
-        import('@spryker/table.feature.filters').then(
-          (m) => m.TableFiltersFeatureModule,
-        ),    
-    }),
-    TableFiltersFeatureModule.withFilterComponents({
-      select: TableFilterSelectComponent,
-    }),
-    TableFilterSelectModule,
-  ],
+    imports: [
+        TableModule.forRoot(),
+        TableModule.withFeatures({
+            filters: () =>
+                import('@spryker/table.feature.filters').then(
+                    (m) => m.TableFiltersFeatureModule,
+                ),
+        }),
+        TableFiltersFeatureModule.withFilterComponents({
+            select: TableFilterSelectComponent,
+        }),
+        TableFilterSelectModule,
+    ],
 })
 export class RootModule {}
 ```
@@ -72,16 +72,16 @@ export class RootModule {}
 ```html
 // Via HTML
 @NgModule({
-  imports: [
-    TableModule.forRoot(),
-    TableFiltersFeatureModule,
-    TableFilterSelectModule,
-  ],
+    imports: [
+        TableModule.forRoot(),
+        TableFiltersFeatureModule,
+        TableFilterSelectModule,
+    ],
 })
 export class RootModule {}
 
 <spy-table [config]="config">
-  <spy-table-filters-feature spy-table-feature></spy-table-filters-feature>
+    <spy-table-filters-feature spy-table-feature></spy-table-filters-feature>
 </spy-table>
 ```
 
@@ -91,25 +91,25 @@ Below you can find interfaces for the Table Filter Select:
 
 ```ts
 declare module '@spryker/table.feature.filters' {
-  interface TableFiltersRegistry {
-    select: TableFilterSelect;
-  }
+    interface TableFiltersRegistry {
+        select: TableFilterSelect;
+    }
 }
 
 export interface TableFilterSelect
-  extends TableFilterBase<TableFilterSelectValue> {
-  type: 'select';
-  typeOptions: TableFilterSelectOptions;
+    extends TableFilterBase<TableFilterSelectValue> {
+    type: 'select';
+    typeOptions: TableFilterSelectOptions;
 }
 
 export interface TableFilterSelectOptions {
-  values: TableFilterSelectOptionsValue[];
-  multiselect?: boolean;
+    values: TableFilterSelectOptionsValue[];
+    multiselect?: boolean;
 }
 
 export interface TableFilterSelectOptionsValue {
-  value: TableFilterSelectValue;
-  title: string;
+    value: TableFilterSelectValue;
+    title: string;
 }
 
 export type TableFilterSelectValue = unknown | unknown[];

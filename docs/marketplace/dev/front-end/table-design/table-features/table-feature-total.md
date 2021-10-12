@@ -16,17 +16,17 @@ Check out an example usage of the Table Feature Total in the `@spryker/table` co
 
 Component configuration:
 
-`enabled` - enables the feature via config.
+- `enabled` - enables the feature via config.  
 
 ```html
 <spy-table 
-  [config]="{
-    dataSource: { ... },
-    columns: [ ... ],
-    total: {
-      enabled: true,
-    },                                                                                           
-  }"
+    [config]="{
+        dataSource: { ... },
+        columns: [ ... ],
+        total: {
+            enabled: true,
+        },                                                                                           
+    }"
 >
 </spy-table>
 ```
@@ -38,15 +38,15 @@ Register the component:
 ```ts
 // Dynamic
 @NgModule({
-  imports: [
-    TableModule.forRoot(),
-    TableModule.withFeatures({
-      total: () =>
-        import('@spryker/table.feature.total').then(
-          (m) => m.TableTotalFeatureModule,
-        ),
-    }),
-  ],
+    imports: [
+        TableModule.forRoot(),
+        TableModule.withFeatures({
+            total: () =>
+                import('@spryker/table.feature.total').then(
+                    (m) => m.TableTotalFeatureModule,
+                ),
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -54,15 +54,15 @@ export class RootModule {}
 ```html
 // Via HTML
 @NgModule({
-  imports: [
-    TableModule.forRoot(),
-    TableTotalFeatureModule,
-  ],
+    imports: [
+        TableModule.forRoot(),
+        TableTotalFeatureModule,
+    ],
 })
 export class RootModule {}
 
 <spy-table [config]="config">
-  <spy-table-total-feature spy-table-feature></spy-table-total-feature>
+    <spy-table-total-feature spy-table-feature></spy-table-total-feature>
 </spy-table>
 ```
 
@@ -72,9 +72,9 @@ Below you can find interfaces for the Table Feature Total:
 
 ```ts
 declare module '@spryker/table' {
-  interface TableConfig {
-    total?: TableTotalConfig;
-  }
+    interface TableConfig {
+        total?: TableTotalConfig;
+    }
 }
 
 export interface TableTotalConfig extends TableFeatureConfig {}

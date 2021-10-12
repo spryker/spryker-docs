@@ -14,33 +14,33 @@ In the example below, the `datasource` will return an array with the transformed
 
 Service configuration:
 
-`mapItems` - a Data Transformer that is set up with a configuration object.
+- `mapItems` - a Data Transformer that is set up with a configuration object.
 
 ```html
 <spy-select
-  [datasource]="{
-    type: 'inline',
-    data: [
-      {
-        type: 'date',
-        date: '2020-09-24T15:20:08+02:00',
-      },
-      {
-        type: 'date',
-        date: '2020-09-24T15:20:08+02:00',
-      },
-    ],
-    transform: {
-      type: 'array-map',
-      mapItems: {
-        type: 'lens',
-        path: 'date',
-        transformer: {
-          type: 'date-parse',
+    [datasource]="{
+        type: 'inline',
+        data: [
+            {
+                type: 'date',
+                date: '2020-09-24T15:20:08+02:00',
+            },
+            {
+                type: 'date',
+                date: '2020-09-24T15:20:08+02:00',
+            },
+        ],
+        transform: {
+            type: 'array-map',
+            mapItems: {
+                type: 'lens',
+                path: 'date',
+                transformer: {
+                    type: 'date-parse',
+                },
+            },
         },
-      },
-    },
-  }"
+    }"
 >
 </spy-select>
 ```
@@ -51,11 +51,11 @@ Register the service:
 
 ```ts
 @NgModule({
-  imports: [
-    DataTransformerModule.withTransformers({
-      'array-map': ArrayMapDataTransformerService,
-    }),
-  ],
+    imports: [
+        DataTransformerModule.withTransformers({
+            'array-map': ArrayMapDataTransformerService,
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -66,12 +66,12 @@ Below you can find interfaces for the Data Transformer Array-map:
 
 ```ts
 declare module '@spryker/data-transformer' {
-  interface DataTransformerRegistry {
-    'array-map': ArrayMapDataTransformerConfig;
-  }
+    interface DataTransformerRegistry {
+        'array-map': ArrayMapDataTransformerConfig;
+    }
 }
 
 export interface ArrayMapDataTransformerConfig extends DataTransformerConfig {
-  mapItems: DataTransformerConfig;
+    mapItems: DataTransformerConfig;
 }
 ```

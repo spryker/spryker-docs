@@ -19,37 +19,37 @@ Component configuration:
 
 ```html
 <spy-table 
-  [config]="{
-    dataSource: { ... },
-    columns: [ ... ],
-    filters: {
-      enabled: true,
-      items: [
-        {
-          id: 'tree-select',
-          title: 'TreeSelect',
-          type: 'tree-select',
-          typeOptions: {
-            multiselect: true,
-            values: [
-              { value: 1, title: 'Option_1' },
-              {
-                value: 2,
-                title: 'Option_2',
-                children: [
-                  { value: 6, title: 'Option_6' },
-                  { value: 7, title: 'Option_7' },
-                ],
-              },
-              { value: 3, title: 'Option_3' },
-              { value: 4, title: 'Option_4' },
-              { value: 5, title: 'Option_5' },
+    [config]="{
+        dataSource: { ... },
+        columns: [ ... ],
+        filters: {
+            enabled: true,
+            items: [
+                {
+                    id: 'tree-select',
+                    title: 'TreeSelect',
+                    type: 'tree-select',
+                    typeOptions: {
+                        multiselect: true,
+                        values: [
+                            { value: 1, title: 'Option_1' },
+                            {
+                                value: 2,
+                                title: 'Option_2',
+                                children: [
+                                    { value: 6, title: 'Option_6' },
+                                    { value: 7, title: 'Option_7' },
+                                ],
+                            },
+                            { value: 3, title: 'Option_3' },
+                            { value: 4, title: 'Option_4' },
+                            { value: 5, title: 'Option_5' },
+                        ],
+                    },
+                },
             ],
-          },
-        },
-      ],
-    },                                                                                           
-  }"
+        },                                                                                           
+    }"
 >
 </spy-table>
 ```
@@ -61,19 +61,19 @@ Register the component:
 ```ts
 // Dynamic
 @NgModule({
-  imports: [
-    TableModule.forRoot(),
-    TableModule.withFeatures({
-      filters: () =>
-        import('@spryker/table.feature.filters').then(
-          (m) => m.TableFiltersFeatureModule,
-        ),    
-    }),
-    TableFiltersFeatureModule.withFilterComponents({
-      'tree-select': TableFilterTreeSelectComponent,
-    }),
-    TableFilterTreeSelectModule,
-  ],
+    imports: [
+        TableModule.forRoot(),
+        TableModule.withFeatures({
+            filters: () =>
+                import('@spryker/table.feature.filters').then(
+                    (m) => m.TableFiltersFeatureModule,
+                ),
+        }),
+        TableFiltersFeatureModule.withFilterComponents({
+            'tree-select': TableFilterTreeSelectComponent,
+        }),
+        TableFilterTreeSelectModule,
+    ],
 })
 export class RootModule {}
 ```
@@ -81,16 +81,16 @@ export class RootModule {}
 ```html
 // Via HTML
 @NgModule({
-  imports: [
-    TableModule.forRoot(),
-    TableFiltersFeatureModule,
-    TableFilterTreeSelectModule,
-  ],
+    imports: [
+        TableModule.forRoot(),
+        TableFiltersFeatureModule,
+        TableFilterTreeSelectModule,
+    ],
 })
 export class RootModule {}
 
 <spy-table [config]="config">
-  <spy-table-filters-feature spy-table-feature></spy-table-filters-feature>
+    <spy-table-filters-feature spy-table-feature></spy-table-filters-feature>
 </spy-table>
 ```
 
@@ -100,26 +100,26 @@ Below you can find interfaces for the Table Filter Tree Select:
 
 ```ts
 declare module '@spryker/table.feature.filters' {
-  interface TableFiltersRegistry {
-    'tree-select': TableFilterTreeSelect;
-  }
+    interface TableFiltersRegistry {
+        'tree-select': TableFilterTreeSelect;
+    }
 }
 
 export interface TableFilterTreeSelect
-  extends TableFilterBase<TableFilterTreeSelectValue> {
-  type: 'tree-select';
-  typeOptions: TableFilterTreeSelectOptions;
+    extends TableFilterBase<TableFilterTreeSelectValue> {
+    type: 'tree-select';
+    typeOptions: TableFilterTreeSelectOptions;
 }
 
 export interface TableFilterTreeSelectOptions {
-  values: TableFilterTreeSelectOptionsValue[];
-  multiselect?: boolean;
+    values: TableFilterTreeSelectOptionsValue[];
+    multiselect?: boolean;
 }
 
 export interface TableFilterTreeSelectOptionsValue {
-  value: TableFilterTreeSelectValue;
-  title: string;
-  children?: TableFilterTreeSelectOptionsValue[];
+    value: TableFilterTreeSelectValue;
+    title: string;
+    children?: TableFilterTreeSelectOptionsValue[];
 }
 
 export type TableFilterTreeSelectValue = unknown | unknown[];

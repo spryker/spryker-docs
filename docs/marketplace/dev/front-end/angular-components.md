@@ -112,34 +112,34 @@ Below, you can find an example of the typical component:
 
 ```ts
 import {
-  ChangeDetectionStrategy,
-  Component,
-  EventEmitter,
-  Input,
-  OnInit,
-  Output,
-  ViewEncapsulation,
+    ChangeDetectionStrategy,
+    Component,
+    EventEmitter,
+    Input,
+    OnInit,
+    Output,
+    ViewEncapsulation,
 } from '@angular/core';
 import { ToBoolean } from '@spryker/utils';
 
 @Component({
-  selector: 'spy-example',
-  templateUrl: './path-to-example.component.html',
-  styleUrls: ['./path-to-example.component.less'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  encapsulation: ViewEncapsulation.None,
+    selector: 'spy-example',
+    templateUrl: './path-to-example.component.html',
+    styleUrls: ['./path-to-example.component.less'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    encapsulation: ViewEncapsulation.None,
 })
 export class ExampleComponent implements OnInit {
-  @Input() exampleInput = '';
-  @Input() @ToBoolean() exampleBooleanInput = false;
+    @Input() exampleInput = '';
+    @Input() @ToBoolean() exampleBooleanInput = false;
 
-  @Output() exampleOutput = new EventEmitter<void>();
+    @Output() exampleOutput = new EventEmitter<void>();
 
-  ngOnInit() {
-    // Logic that has to be done when component will be created
-  }
+    ngOnInit() {
+        // Logic that has to be done when component will be created
+    }
 
-  componentSpecificMethod() {}
+    componentSpecificMethod() {}
 }
 ```
 

@@ -14,18 +14,18 @@ Check out an example usage of the Data Transformer Collate Configurator Table in
 
 ```html
 <spy-table
-  [config]="{
-    datasource: {
-      ...                                                   
-      transform: {
-        type: 'collate',
-        configurator: {
-          type: 'table',
+    [config]="{
+        datasource: {
+            ...,                                                   
+            transform: {
+                type: 'collate',
+                configurator: {
+                    type: 'table',
+                },
+                ...,  
+            },
         },
-        ...  
-      },
-    },
-  }"
+    }"
 >
 </spy-table>
 ```
@@ -36,14 +36,14 @@ Register the service:
 
 ```ts
 @NgModule({
-  imports: [
-    DataTransformerModule.withTransformers({
-      collate: CollateDataTransformerService,
-    }),
-    CollateDataTransformer.withFilters({
-      table: TableDataTransformerConfiguratorService,
-    }),
-  ],
+    imports: [
+        DataTransformerModule.withTransformers({
+            collate: CollateDataTransformerService,
+        }),
+        CollateDataTransformer.withFilters({
+            table: TableDataTransformerConfiguratorService,
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -54,8 +54,8 @@ Below you can find interfaces for the Data Transformer Collate Configurator Tabl
 
 ```ts
 declare module '@spryker/data-transformer.collate' {
-  interface DataTransformerConfiguratorRegistry {
-    table: TableDataTransformerConfiguratorService;
-  }
+    interface DataTransformerConfiguratorRegistry {
+        table: TableDataTransformerConfiguratorService;
+    }
 }
 ```

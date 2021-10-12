@@ -20,11 +20,11 @@ Service configuration:
 
 ```html
 <spy-button-action
-  [action]="{
-    type: 'http',
-    url: '/html-request',
-    method: 'GET',
-  }"
+    [action]="{
+        type: 'http',
+        url: '/html-request',
+        method: 'GET',
+    }"
 >
 </spy-button-action>
 ```
@@ -35,11 +35,11 @@ Register the service:
 
 ```ts
 @NgModule({
-  imports: [
-    ActionsModule.withActions({
-      http: HttpActionHandlerService,
-    }),
-  ],
+    imports: [
+        ActionsModule.withActions({
+            http: HttpActionHandlerService,
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -50,11 +50,11 @@ Below you can find interfaces for the Actions HTTP:
 
 ```ts
 export interface HttpActionConfig extends ActionConfig {
-  url: string;
-  method?: string;
+    url: string;
+    method?: string;
 }
 
 export interface HttpActionResponse {
-  actions?: ActionConfig[];
+    actions?: ActionConfig[];
 }
 ```

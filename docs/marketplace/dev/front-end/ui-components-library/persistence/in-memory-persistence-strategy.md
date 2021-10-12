@@ -14,18 +14,18 @@ Check out an example usage of the In Memory Persistence Strategy.
 
 Service configuration:
 
-`storage` - the persistence strategy type.  
+- `storage` - the persistence strategy type.  
 
 ```html
 <spy-select
-  [datasource]="{
-    type: 'http',
-    ...,
-    cache: {
-      ...,
-      storage: 'in-memory',
-    },
-  }"
+    [datasource]="{
+        type: 'http',
+        ...,
+        cache: {
+            ...,
+            storage: 'in-memory',
+        },
+    }"
 >
 </spy-select>
 ```
@@ -36,11 +36,11 @@ Register the service:
 
 ```ts
 @NgModule({
-  imports: [
-    PersistenceModule.withStrategies({
-      'in-memory': InMemoryPersistenceStrategy,
-    }),
-  ],
+    imports: [
+        PersistenceModule.withStrategies({
+            'in-memory': InMemoryPersistenceStrategy,
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -51,14 +51,14 @@ Below you can find interfaces for the In Memory Persistence Strategy:
 
 ```ts
 declare module '@spryker/persistence' {
-  interface PersistenceStrategyRegistry {
-    'in-memory': InMemoryPersistenceStrategy;
-  }
+    interface PersistenceStrategyRegistry {
+        'in-memory': InMemoryPersistenceStrategy;
+    }
 }
 
 interface InMemoryPersistenceStrategy extends PersistenceStrategy {
-  save(key: string, value: unknown): Observable<void>;
-  retrieve<T>(key: string): Observable<T | undefined>;
-  remove(key: string): Observable<void>;
+    save(key: string, value: unknown): Observable<void>;
+    retrieve<T>(key: string): Observable<T | undefined>;
+    remove(key: string): Observable<void>;
 }
 ```

@@ -15,18 +15,18 @@ Check out an example usage of the Table Feature Settings in the `@spryker/table`
 Component configuration:
 
 - `enabled` - enables the feature via config.  
-- `tableId` - `id` of the table that syncs with the table toolbar settings.
+- `tableId` - `id` of the table that syncs with the table toolbar settings (also can be assigned to the table via HTML).  
 
 ```html
 <spy-table 
-  [config]="{
-    dataSource: { ... },
-    columns: [ ... ],
-    columnConfigurator: {
-      enabled: true,
-      tableId: 'table-id',
-    },                                                                                         
-  }"
+    [config]="{
+        dataSource: { ... },
+        columns: [ ... ],
+        columnConfigurator: {
+            enabled: true,
+            tableId: 'table-id',
+        },                                                                                         
+    }"
 >
 </spy-table>
 ```
@@ -38,15 +38,15 @@ Register the component:
 ```ts
 // Dynamic
 @NgModule({
-  imports: [
-    TableModule.forRoot(),
-    TableModule.withFeatures({
-      columnConfigurator: () =>
-        import('@spryker/table.feature.settings').then(
-          (m) => m.TableSettingsFeatureModule,
-        ),
-    }),
-  ],
+    imports: [
+        TableModule.forRoot(),
+        TableModule.withFeatures({
+            columnConfigurator: () =>
+                import('@spryker/table.feature.settings').then(
+                    (m) => m.TableSettingsFeatureModule,
+                ),
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -54,15 +54,15 @@ export class RootModule {}
 ```html
 // Via HTML
 @NgModule({
-  imports: [
-    TableModule.forRoot(),
-    TableSettingsFeatureModule,
-  ],
+    imports: [
+        TableModule.forRoot(),
+        TableSettingsFeatureModule,
+    ],
 })
 export class RootModule {}
 
-<spy-table [config]="config">
-  <spy-table-settings-feature spy-table-feature></spy-table-settings-feature>
+<spy-table [config]="config" [tableId]="tableId">
+    <spy-table-settings-feature spy-table-feature></spy-table-settings-feature>
 </spy-table>
 ```
 
@@ -72,12 +72,12 @@ Below you can find interfaces for the Table Feature Settings:
 
 ```ts
 declare module '@spryker/table' {
-  interface TableConfig {
-    columnConfigurator?: TableSettingsConfig;
-  }
+    interface TableConfig {
+        columnConfigurator?: TableSettingsConfig;
+    }
 }
 
 export interface TableSettingsConfig extends TableFeatureConfig {
-  tableId?: string;
+    tableId?: string;
 }
 ```

@@ -21,11 +21,11 @@ Service configuration:
 
 ```html
 <spy-select
-  [datasource]="{
-    type: 'http',
-    url: '/html-request',
-    method: 'POST',
-  }"
+    [datasource]="{
+        type: 'http',
+        url: '/html-request',
+        method: 'POST',
+    }"
 >
 </spy-select>
 ```
@@ -36,11 +36,11 @@ Register the service:
 
 ```ts
 @NgModule({
-  imports: [
-    DatasourceModule.withDatasources({
-      http: DatasourceHttpService,
-    }),
-  ],
+    imports: [
+        DatasourceModule.withDatasources({
+            http: DatasourceHttpService,
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -51,20 +51,20 @@ Below you can find interfaces for the Datasource Http:
 
 ```ts
 declare module '@spryker/datasource' {
-  interface DatasourceRegistry {
-    http: DatasourceHttpService;
-  }
+    interface DatasourceRegistry {
+        http: DatasourceHttpService;
+    }
 }
 
 export interface DatasourceHttpConfig extends DatasourceConfig {
-  url: string;
-  method?: string;
-  dataIn?: DatasourceHttpConfigDataIn;
-  cache?: CacheStrategyConfig;
+    url: string;
+    method?: string;
+    dataIn?: DatasourceHttpConfigDataIn;
+    cache?: CacheStrategyConfig;
 }
 
 export enum DatasourceHttpConfigDataIn {
-  Params = 'params',
-  Body = 'body',
+    Params = 'params',
+    Body = 'body',
 }
 ```

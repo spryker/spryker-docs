@@ -19,14 +19,14 @@ Service configuration:
 
 ```html
 <spy-select
-  [datasource]="{
-    type: 'http',
-    ...,
-    cache: {
-      type: 'static',
-      expiresIn: '1m 10d 3h',
-    },
-  }"
+    [datasource]="{
+        type: 'http',
+        ...,
+        cache: {
+            type: 'static',
+            expiresIn: '1m 10d 3h',
+        },
+    }"
 >
 </spy-select>
 ```
@@ -37,12 +37,12 @@ Register the service:
 
 ```ts
 @NgModule({
-  imports: [
-    CacheModule.withStrategies({
-      static: StaticCacheStrategy,
-    }),
-    StaticCacheStrategyModule,
-  ],
+    imports: [
+        CacheModule.withStrategies({
+            static: StaticCacheStrategy,
+        }),
+        StaticCacheStrategyModule,
+    ],
 })
 export class RootModule {}
 ```
@@ -70,15 +70,16 @@ Below you can find interfaces for the Cache Strategy Static:
  *  - 2y
  */
 export interface StaticCacheStrategyConfig extends CacheStrategyConfig {
-  expiresIn: TimeDurationString;
+    expiresIn: TimeDurationString;
 }
 
 export interface CacheStrategyConfig {
-  type: CacheStrategyType;
-  namespace?: string;
-  storage?: PersistenceStrategyType;
-  // Reserved for types that may have extra configuration
-  [extraConfig: string]: unknown;
+    type: CacheStrategyType;
+    namespace?: string;
+    storage?: PersistenceStrategyType;
+
+    // Reserved for types that may have extra configuration
+    [extraConfig: string]: unknown;
 }
 
 export type TimeDurationString = string;

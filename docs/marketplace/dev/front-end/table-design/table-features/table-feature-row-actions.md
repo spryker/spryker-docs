@@ -23,20 +23,20 @@ Component configuration:
 
 ```html
 <spy-table 
-  [config]="{
-    dataSource: { ... },
-    columns: [ ... ],
-    rowActions: {
-      enabled: true,
-      actions: [
-        { id: 'edit', title: 'Edit', type: 'edit-action' },
-        { id: 'delete', title: 'Delete', type: 'delete-action' },
-      ],
-      click: 'edit',
-      rowIdPath: 'sku',
-      availableActionsPath: 'path.to.actions',
-    },                                                                                        
-  }"
+    [config]="{
+        dataSource: { ... },
+        columns: [ ... ],
+        rowActions: {
+            enabled: true,
+            actions: [
+                { id: 'edit', title: 'Edit', type: 'edit-action' },
+                { id: 'delete', title: 'Delete', type: 'delete-action' },
+            ],
+            click: 'edit',
+            rowIdPath: 'sku',
+            availableActionsPath: 'path.to.actions',
+        },                                                                                        
+    }"
 >
 </spy-table>
 ```
@@ -48,15 +48,15 @@ Register the component:
 ```ts
 // Dynamic
 @NgModule({
-  imports: [
-    TableModule.forRoot(),
-    TableModule.withFeatures({
-      rowActions: () =>
-        import('@spryker/table.feature.row-actions').then(
-          (m) => m.TableRowActionsFeatureModule,
-        ),    
-    }),
-  ],
+    imports: [
+        TableModule.forRoot(),
+        TableModule.withFeatures({
+            rowActions: () =>
+                import('@spryker/table.feature.row-actions').then(
+                    (m) => m.TableRowActionsFeatureModule,
+                ),
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -64,15 +64,15 @@ export class RootModule {}
 ```html
 // Via HTML
 @NgModule({
-  imports: [
-    TableModule.forRoot(),
-    TableRowActionsFeatureModule,
-  ],
+    imports: [
+        TableModule.forRoot(),
+        TableRowActionsFeatureModule,
+    ],
 })
 export class RootModule {}
 
-<spy-table [config]="config" [events]="{rowActions: logActionTriggered}">
-  <spy-table-row-actions-feature spy-table-feature></spy-table-row-actions-feature>
+<spy-table [config]="config">
+    <spy-table-row-actions-feature spy-table-feature></spy-table-row-actions-feature>
 </spy-table>
 ```
 
@@ -82,25 +82,25 @@ Below you can find interfaces for the Table Feature Row Actions:
 
 ```ts
 declare module '@spryker/table' {
-  interface TableConfig {
-    rowActions?: TableRowActionsConfig;
-  }
+    interface TableConfig {
+        rowActions?: TableRowActionsConfig;
+    }
 }
 
 export interface TableRowActionsConfig extends TableFeatureConfig {
-  actions?: TableRowActionBase[];
-  click?: string;
-  rowIdPath?: string;
-  availableActionsPath?: string;
+    actions?: TableRowActionBase[];
+    click?: string;
+    rowIdPath?: string;
+    availableActionsPath?: string;
 }
 
 export interface TableRowActionBase extends TableActionBase {
-  title: string;
-  icon?: string;
+    title: string;
+    icon?: string;
 }
 
 export interface TableRowActionContext {
-  row: TableDataRow;
-  rowId?: string;
+    row: TableDataRow;
+    rowId?: string;
 }
 ```

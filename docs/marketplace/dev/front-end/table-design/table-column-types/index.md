@@ -14,20 +14,20 @@ Check out this example below to see how to configure columns in the table config
 
 ```html
 <spy-table 
-  [config]="{
-    ...,
-    columns: [
-      ...
-      {
-        id: 'columnId',
-        title: 'Column Title',
-        type: 'COLUMN_TYPE',
-        typeOptions: {
-          // ... COLUMN_TYPE Options
-        },
-      },
-      ...
-    ]
+    [config]="{
+        ...,
+        columns: [
+            ...
+            {
+                id: 'columnId',
+                title: 'Column Title',
+                type: 'COLUMN_TYPE',
+                typeOptions: {
+                    // ... COLUMN_TYPE Options
+                },
+            },
+            ...
+       ]
   }"
 >
 </spy-table>
@@ -59,26 +59,26 @@ It is also necessary to create your own column module and add it to the RootModu
 ```ts
 // Module augmentation
 import {
-  ColumnTypeOption,
-  TableColumnTypeComponent,
-  TableColumnComponent,
-  TableColumnContext,
+    ColumnTypeOption,
+    TableColumnTypeComponent,
+    TableColumnComponent,
+    TableColumnContext,
 } from '@spryker/table';
 
 declare module '@spryker/table' {
-  interface TableColumnTypeRegistry {
-    custom: CustomTableColumnConfig;
-  }
+    interface TableColumnTypeRegistry {
+        custom: CustomTableColumnConfig;
+    }
 }
 
 // Component implementation
 @Injectable({ providedIn: 'root' })
 export class CustomTableColumnConfig {
-  @ColumnTypeOption({
-    type: ColumnTypeOptionsType.AnyOf,
-    value: [String, Boolean],
-  })
-  customOption? = 'customOption';
+    @ColumnTypeOption({
+        type: ColumnTypeOptionsType.AnyOf,
+        value: [String, Boolean],
+    })
+    customOption? = 'customOption';
 }
 
 // Module
@@ -91,23 +91,23 @@ export class CustomTableColumnModule {}
 
 // Component
 @Component({
-  ...
+    ...
 })
 @TableColumnTypeComponent(TableColumnTextConfig)
 export class CustomTableColumnComponent
-  implements TableColumnComponent<CustomTableColumnConfig> {
-  @Input() config?: CustomTableColumnConfig;
-  @Input() context?: TableColumnContext;
+    implements TableColumnComponent<CustomTableColumnConfig> {
+    @Input() config?: CustomTableColumnConfig;
+    @Input() context?: TableColumnContext;
 }
 
 // Root module
 @NgModule({
-  imports: [
-    TableModule.withColumnComponents({
-      custom: CustomTableColumnComponent,
-    }),
-    CustomTableColumnModule,
-  ],
+    imports: [
+        TableModule.withColumnComponents({
+            custom: CustomTableColumnComponent,
+        }),
+        CustomTableColumnModule,
+    ],
 })
 export class RootModule {}
 ```
@@ -118,29 +118,29 @@ Below you can find interfaces for the Table Column Type extension configuration.
 
 ```ts
 export interface TableColumnComponent<C = any> {
-  config?: C;
-  context?: TableColumnContext;
+    config?: C;
+    context?: TableColumnContext;
 }
 
 export interface ColumnTypeOptions {
-  /** Is it required */
-  required?: boolean;
-  /** Expected type. Specify exact type in {@link value} prop */
-  type?: ColumnTypeOptionsType;
-  /** Value type. See {@link ColumnTypeOptionsType} for more details.
-   * May be recursive for some types */
-  value?: unknown | ColumnTypeOptions;
+    /** Is it required */
+    required?: boolean;
+    /** Expected type. Specify exact type in {@link value} prop */
+    type?: ColumnTypeOptionsType;
+    /** Value type. See {@link ColumnTypeOptionsType} for more details.
+     * May be recursive for some types */
+    value?: unknown | ColumnTypeOptions;
 }
 
 export enum ColumnTypeOptionsType {
-  /** Value will be compared with strict equality */
-  Literal = 'literal',
-  /** Value must be any Javascript type (String, Number, etc.)  */
-  TypeOf = 'typeOf',
-  /** Value will be compared with every array item. May be recursive */
-  ArrayOf = 'arrayOf',
-  /** Value must be an array of other types. May be recursive */
-  AnyOf = 'anyOf',
+    /** Value will be compared with strict equality */
+    Literal = 'literal',
+    /** Value must be any Javascript type (String, Number, etc.)  */
+    TypeOf = 'typeOf',
+    /** Value will be compared with every array item. May be recursive */
+    ArrayOf = 'arrayOf',
+    /** Value must be an array of other types. May be recursive */
+    AnyOf = 'anyOf',
 }
 ```
 

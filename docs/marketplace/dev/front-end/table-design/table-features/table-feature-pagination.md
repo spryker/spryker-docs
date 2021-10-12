@@ -20,14 +20,14 @@ Component configuration:
 
 ```html
 <spy-table 
-  [config]="{
-    dataSource: { ... },
-    columns: [ ... ],
-    pagination: {
-      enabled: true,
-      sizes: [10, 50, 100],
-    },                                                                                           
-  }"
+    [config]="{
+        dataSource: { ... },
+        columns: [ ... ],
+        pagination: {
+            enabled: true,
+            sizes: [10, 50, 100],
+        },                                                                                           
+    }"
 >
 </spy-table>
 ```
@@ -39,14 +39,14 @@ Register the component:
 ```ts
 // Dynamic
 @NgModule({
-  imports: [
-    TableModule.withFeatures({
-      pagination: () =>
-        import('@spryker/table.feature.pagination').then(
-          (m) => m.TablePaginationFeatureModule,
-        ),    
-    }),
-  ],
+    imports: [
+        TableModule.withFeatures({
+            pagination: () =>
+                import('@spryker/table.feature.pagination').then(
+                    (m) => m.TablePaginationFeatureModule,
+                ),
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -54,15 +54,15 @@ export class RootModule {}
 ```html
 // Via HTML
 @NgModule({
-  imports: [
-    TableModule.forRoot(),
-    TablePaginationFeatureModule,
-  ],
+    imports: [
+        TableModule.forRoot(),
+        TablePaginationFeatureModule,
+    ],
 })
 export class RootModule {}
 
 <spy-table [config]="config">
-  <spy-table-pagination-feature spy-table-feature></spy-table-pagination-feature>
+    <spy-table-pagination-feature spy-table-feature></spy-table-pagination-feature>
 </spy-table>
 ```
 
@@ -72,12 +72,12 @@ Below you can find interfaces for the Table Feature Pagination:
 
 ```ts
 declare module '@spryker/table' {
-  interface TableConfig {
-    pagination?: TablePaginationConfig;
-  }
+    interface TableConfig {
+        pagination?: TablePaginationConfig;
+    }
 }
 
 export interface TablePaginationConfig extends TableFeatureConfig {
-  sizes: number[];
+    sizes: number[];
 }
 ```

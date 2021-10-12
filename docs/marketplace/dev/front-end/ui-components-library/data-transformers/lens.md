@@ -14,25 +14,25 @@ In the example below `datasource` will return an object with the transformed `da
 
 Service configuration:
 
-`path` - the name of the object property, from which the value needs to be transformed. The `path` may contain nested properties separated by dots, just like in a Javascript language.  
-`transformer` - a Data Transformer that is set up with a configuration object.
+- `path` - the name of the object property, from which the value needs to be transformed. The `path` may contain nested properties separated by dots, just like in a Javascript language.  
+- `transformer` - a Data Transformer that is set up with a configuration object.
 
 ```html
 <spy-select
-  [datasource]="{
-    type: 'inline',
-    data: {
-      type: 'date',
-      date: '2020-09-24T15:20:08+02:00',
-    },
-    transform: {
-      type: 'lens',
-      path: 'date',
-      transformer: {
-        type: 'date-parse',
-      },
-    },
-  }"
+    [datasource]="{
+        type: 'inline',
+        data: {
+            type: 'date',
+            date: '2020-09-24T15:20:08+02:00',
+        },
+        transform: {
+            type: 'lens',
+            path: 'date',
+            transformer: {
+                type: 'date-parse',
+            },
+        },
+    }"
 >
 </spy-select>
 ```
@@ -43,11 +43,11 @@ Register the service:
 
 ```ts
 @NgModule({
-  imports: [
-    DataTransformerModule.withTransformers({
-      lens: LensDataTransformerService,
-    }),
-  ],
+    imports: [
+        DataTransformerModule.withTransformers({
+            lens: LensDataTransformerService,
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -58,13 +58,13 @@ Below you can find interfaces for the Data Transformer Lens:
 
 ```ts
 declare module '@spryker/data-transformer' {
-  interface DataTransformerRegistry {
-    lens: LensDataTransformerService;
-  }
+    interface DataTransformerRegistry {
+        lens: LensDataTransformerService;
+    }
 }
 
 export interface LensDataTransformerConfig extends DataTransformerConfig {
-  path: string;
-  transformer: DataTransformerConfig;
+    path: string;
+    transformer: DataTransformerConfig;
 }
 ```

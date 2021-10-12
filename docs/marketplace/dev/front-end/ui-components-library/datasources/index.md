@@ -16,10 +16,10 @@ Datasources are used in other components like Table, Select, Autocomplete, etc.
 
 ```html
 <spy-select
-  [datasource]="{
-    type: 'inline',
-    data: ['Inline 1', 'Inline 2'],
-  }"
+    [datasource]="{
+        type: 'inline',
+        data: ['Inline 1', 'Inline 2'],
+    }"
 >
 </spy-select>
 ```
@@ -43,36 +43,36 @@ Datasource must implement a specific interface (Datasource) and then be register
 import { DatasourceConfig } from '@spryker/datasource';
 
 declare module '@spryker/datasource' {
-  interface DatasourceRegistry {
-    'custom': CustomDatasourceService;
-  }
+    interface DatasourceRegistry {
+        'custom': CustomDatasourceService;
+    }
 }
 
 export interface CustomDatasourceConfig extends DatasourceConfig {
-  data: unknown;
-  ...
+    data: unknown;
+    ...
 }
 
-// Services implementation
+// Service implementation
 @Injectable({
-  providedIn: 'root',
+    providedIn: 'root',
 })
 export class CustomDatasourceService implements Datasource {
-  resolve(
-    injector: Injector,
-    config: CustomDatasourceConfig,
-    context?: unknown,
-  ): Observable<unknown> {
-    ...
-  }
+    resolve(
+        injector: Injector,
+        config: CustomDatasourceConfig,
+        context?: unknown,
+    ): Observable<unknown> {
+        ...
+    }
 }
 
 @NgModule({
-  imports: [
-    DatasourceModule.withDatasources({
-      custom: CustomDatasourceService,
-    }),
-  ],
+    imports: [
+        DatasourceModule.withDatasources({
+            custom: CustomDatasourceService,
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -85,18 +85,19 @@ Below you can find interfaces for the Datasource configuration and Datasource ty
 
 ```ts
 export interface DatasourceConfig {
-  type: DatasourceType;
-  transform?: DataTransformerConfig;
-  // Specific Datasource types may have custom props
-  [k: string]: unknown;
+    type: DatasourceType;
+    transform?: DataTransformerConfig;
+
+    // Specific Datasource types may have custom props
+    [k: string]: unknown;
 }
 
 export interface Datasource<D = unknown, C = unknown> {
-  resolve(
-    injector: Injector,
-    config: DatasourceConfig,
-    context?: C,
-  ): Observable<D>;
+    resolve(
+        injector: Injector,
+        config: DatasourceConfig,
+        context?: C,
+    ): Observable<D>;
 }
 ```
 

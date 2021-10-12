@@ -25,11 +25,11 @@ import { SomeComponentComponent } from './some-component/some-component.componen
 import { SomeComponentModule } from './some-component/some-component.module';
 
 @NgModule({
-  imports: [
-    WebComponentsModule.withComponents([SomeComponentComponent]),
-    SomeComponentModule,
-  ],
-  providers: [],
+    imports: [
+        WebComponentsModule.withComponents([SomeComponentComponent]),
+        SomeComponentModule,
+    ],
+    providers: [],
 })
 export class ComponentsModule {}
 ```
@@ -44,16 +44,16 @@ import { SomeComponentComponent } from './some-component/some-component.componen
 import { SomeComponentModule } from './some-component/some-component.module';
 
 @NgModule({
-  imports: [
-    WebComponentsModule.withComponents([
-      {
-        selector: 'new-web-component-selector',
-        component: SomeComponentComponent,
-      },
-    ]),
-    SomeComponentModule,
-  ],
-  providers: [],
+    imports: [
+        WebComponentsModule.withComponents([
+            {
+                selector: 'new-web-component-selector',
+                component: SomeComponentComponent,
+            },
+        ]),
+        SomeComponentModule,
+    ],
+    providers: [],
 })
 export class ComponentsModule {}
 ```

@@ -20,16 +20,14 @@ Furthermore, you need to create your own filter module and add it to the `RootMo
 import { TableFilterBase } from '@spryker/table.feature.filters';
 
 declare module '@spryker/table.feature.filters' {
-  interface TableFiltersRegistry {
-    custom: TableFilterCustom;
-  }
+    interface TableFiltersRegistry {
+        custom: TableFilterCustom;
+    }
 }
 
 export interface TableFilterSelect extends TableFilterBase<TableFilterSelectValue> {
-  type: 'custom';
-  typeOptions: {
-    ...
-  };
+    type: 'custom';
+    typeOptions: { ... };
 }
 
 // Component implementation
@@ -42,21 +40,19 @@ export class TableFilterCustomModule {}
 
 // Component
 @Component({
-  selector: 'spy-table-filter-custom',
-  ...
+    selector: 'spy-table-filter-custom',
+    ...
 })
-export class TableFilterCustomComponent implements TableFilterComponent<TableFilterSelect> {
-  ...
-}
+export class TableFilterCustomComponent implements TableFilterComponent<TableFilterSelect> {}
 
 // Root module
 @NgModule({
-  imports: [
-    TableFiltersFeatureModule.withFilterComponents({
-      custom: TableFilterCustomComponent,
-    }),
-    TableFilterCustomModule,
-  ],
+    imports: [
+        TableFiltersFeatureModule.withFilterComponents({
+            custom: TableFilterCustomComponent,
+        }),
+        TableFilterCustomModule,
+    ],
 })
 export class RootModule {}
 ```
@@ -65,20 +61,20 @@ You can configure any filter in the table config.
 
 ```html
 <spy-table 
-  [config]="{
-    ...,
-    filters: {
-      ...,
-      items: [
-        {
-          type: FILTER_TYPE_NAME,
-          typeOptions: {
-            ...filter specific configuration...
-          },
-        }
-      ]
-    },
-  }"
+    [config]="{
+        ...,
+        filters: {
+            ...,
+            items: [
+                {
+                    type: FILTER_TYPE_NAME,
+                    typeOptions: {
+                      // Filter specific configuration...
+                    },
+                },
+            ],
+        },
+    }"
 >
 </spy-table>
 ```
@@ -99,22 +95,22 @@ Below you can find interfaces for the Table Filter extension configuration.
 import { TableFeatureConfig } from '@spryker/table';
 
 export interface TableFiltersConfig extends TableFeatureConfig {
-  items: TableFilterBase[];
+    items: TableFilterBase[];
 }
 
 export interface TableFilterBase<V = unknown> {
-  __capturedValue: V;
-  id: string;
-  title: string;
-  type: string;
-  typeOptions?: unknown;
+    __capturedValue: V;
+    id: string;
+    title: string;
+    type: string;
+    typeOptions?: unknown;
 }
 
 export interface TableFilterComponent<C extends TableFilterBase> {
-  config?: C;
-  value?: C['__capturedValue'];
-  valueChange: EventEmitter<C['__capturedValue']>;
-  classes: Observable<string | string[]>; // @Output
+    config?: C;
+    value?: C['__capturedValue'];
+    valueChange: EventEmitter<C['__capturedValue']>;
+    classes: Observable<string | string[]>; // @Output
 }
 ```
 

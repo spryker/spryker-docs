@@ -20,55 +20,51 @@ The Table Feature must extend a specific Angular Component (`TableFeatureCompone
 import { TableFeatureConfig } from '@spryker/table';
 
 declare module '@spryker/table' {
-  interface TableConfig {
-    custom?: TableCustomFeatureConfig;
-  }
+    interface TableConfig {
+        custom?: TableCustomFeatureConfig;
+    }
 }
 
-export interface TableCustomFeatureConfig extends TableFeatureConfig {
-  ...
-}
+export interface TableCustomFeatureConfig extends TableFeatureConfig {}
 
 // Component implementation
 // Module
 import { ModuleWithFeature, TableFeatureModule } from '@spryker/table';
 
 @NgModule({
-  imports: [CommonModule, TableFeatureModule],
-  exports: [TableCustomFeatureComponent],
-  declarations: [TableCustomFeatureComponent],
-  entryComponents: [TableCustomFeatureComponent],
+    imports: [CommonModule, TableFeatureModule],
+    exports: [TableCustomFeatureComponent],
+    declarations: [TableCustomFeatureComponent],
+    entryComponents: [TableCustomFeatureComponent],
 })
 export class TableCustomFeatureModule implements ModuleWithFeature {
-  featureComponent = TableCustomFeatureComponent;
+    featureComponent = TableCustomFeatureComponent;
 }
 
 // Component
 @Component({
-  selector: 'spy-table-custom-feature',
-  ...,
-  providers: [
-    {
-      provide: TableFeatureComponent,
-      useExisting: TableCustomFeatureComponent,
-    },
-  ],
+    selector: 'spy-table-custom-feature',
+    ...,
+    providers: [
+        {
+            provide: TableFeatureComponent,
+            useExisting: TableCustomFeatureComponent,
+        },
+    ],
 })
 export class TableCustomFeatureComponent extends TableFeatureComponent<
-  TableCustomFeatureConfig
-> {
- ...
-}
+    TableCustomFeatureConfig
+> {}
 ```
 
 ```html
 <ng-container
-  *spyTableFeatureTpl="
-    tableFeatureLocation.beforeTable; // any location from TableFeatureLocation
-    styles: { order: '0' } // custom styles
-  "
+    *spyTableFeatureTpl="
+        tableFeatureLocation.beforeTable; // any location from TableFeatureLocation
+        styles: { order: '0' } // custom styles
+    "
 >
-  COMPONENT MARKUP
+    COMPONENT MARKUP
 </ng-container>
 ```
 
@@ -78,29 +74,29 @@ There are two ways to use the Table Feature:
 
 - Via HTML tag (as a component) being projected into the Table Component—this allows users to control how the Table Feature is loaded on the page, but it does not control its loading from the Table Configuration.
 
-  ```html
-  <spy-table>
-    <spy-table-title-feature spy-table-feature></spy-table-title-feature>
-  </spy-table>
-  ```
+    ```html
+    <spy-table>
+        <spy-table-title-feature spy-table-feature></spy-table-title-feature>
+    </spy-table>
+    ```
 
-  To add a feature via HTML, it's enough to include a feature tag with a custom attribute (`spy-table-feature`) inside a table. When the table content is initialized, the table receives all templates by attribute and initializes features.
+    To add a feature via HTML, it's enough to include a feature tag with a custom attribute (`spy-table-feature`) inside a table. When the table content is initialized, the table receives all templates by attribute and initializes features.
 
 - Via the registry of the Table Module — the Table feature can be lazy-loaded when the Table Component requires it based on the Table Configuration, but it does not allow custom loading (custom loading is possible if the Angular versions are the same and shared).
 
-  ```ts
-  @NgModule({
-    imports: [
-      TableModule.withFeatures({
-        title: () =>
-          import('@spryker/table.feature.title').then(
-            (m) => m.TableTitleFeatureModule,
-          ),
-      }),
-    ],
-  })
-  export class RootModule {}
-  ```
+    ```ts
+    @NgModule({
+        imports: [
+            TableModule.withFeatures({
+                title: () =>
+                    import('@spryker/table.feature.title').then(
+                        (m) => m.TableTitleFeatureModule,
+                    ),
+            }),
+        ],
+    })
+    export class RootModule {}
+    ```
 
 To add a feature via the registry, register the feature in the Table Module using static method `TableModule.withFeatures()`. Under the hood, it assigns the object of actions to the `TableFeaturesRegistryToken`. The `TableFeatureLoaderService` injects all registered types from the `TableFeaturesRegistryToken`, `Compiler`, and `Injector`. Upon initialization, the table loads only enabled feature modules and compiles them via Compiler with Injector before initializing them.
 
@@ -108,13 +104,13 @@ In the table configuration, you can enable or disable, and configure any feature
 
 ```html
 <spy-table 
-  [config]="{
-    ...,
-    title: {
-      enabled: true,
-      ...,
-    },
-  }"
+    [config]="{
+        ...,
+        title: {
+            enabled: true,
+            ...,
+        },
+    }"
 >
 </spy-table>
 ```
@@ -125,29 +121,29 @@ Below you can find interfaces for the Table Feature extension configuration.
 
 ```ts
 export interface ModuleWithFeature {
-  featureComponent: Type<TableFeatureComponent>;
+    featureComponent: Type<TableFeatureComponent>;
 }
 
 export interface TableFeatureConfig {
-  enabled?: boolean;
-  [k: string]: unknown;
+    enabled?: boolean;
+    [k: string]: unknown;
 }
 
 export enum TableFeatureLocation {
-  top = 'top',
-  beforeTable = 'before-table',
-  header = 'header',
-  headerExt = 'header-ext',
-  beforeRows = 'before-rows',
-  beforeColsHeader = 'before-cols-header',
-  beforeCols = 'before-cols',
-  cell = 'cell',
-  afterCols = 'after-cols',
-  afterColsHeader = 'after-cols-header',
-  afterRows = 'after-rows',
-  afterTable = 'after-table',
-  bottom = 'bottom',
-  hidden = 'hidden',
+    top = 'top',
+    beforeTable = 'before-table',
+    header = 'header',
+    headerExt = 'header-ext',
+    beforeRows = 'before-rows',
+    beforeColsHeader = 'before-cols-header',
+    beforeCols = 'before-cols',
+    cell = 'cell',
+    afterCols = 'after-cols',
+    afterColsHeader = 'after-cols-header',
+    afterRows = 'after-rows',
+    afterTable = 'after-table',
+    bottom = 'bottom',
+    hidden = 'hidden',
 }
 ```
 

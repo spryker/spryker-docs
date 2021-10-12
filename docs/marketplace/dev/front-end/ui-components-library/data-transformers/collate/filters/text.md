@@ -14,18 +14,18 @@ Check out an example usage of the Data Transformer Collate Filter Text in the `@
 
 ```html
 <spy-table
-  [config]="{
-    datasource: {
-      ...                                               
-      transform: {
-        ...
-        search: {
-          type: 'text',
-          propNames: ['col1', 'col2'],
+    [config]="{
+        datasource: {
+            ...,                                               
+            transform: {
+                ...,
+                search: {
+                    type: 'text',
+                    propNames: ['col1', 'col2'],
+                },
+            },
         },
-      },
-    },
-  }"
+    }"
 >
 </spy-table>
 ```
@@ -36,14 +36,14 @@ Register the service:
 
 ```ts
 @NgModule({
-  imports: [
-    DataTransformerModule.withTransformers({
-      collate: CollateDataTransformerService,
-    }),
-    CollateDataTransformer.withFilters({
-      text: TextDataTransformerFilterService,
-    }),
-  ],
+    imports: [
+        DataTransformerModule.withTransformers({
+            collate: CollateDataTransformerService,
+        }),
+        CollateDataTransformer.withFilters({
+            text: TextDataTransformerFilterService,
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -54,13 +54,13 @@ Below you can find interfaces for the Data Transformer Collate Filter Text:
 
 ```ts
 declare module '@spryker/data-transformer.collate' {
-  interface DataTransformerFilterRegistry {
-    text: TextDataTransformerFilterService;
-  }
+    interface DataTransformerFilterRegistry {
+        text: TextDataTransformerFilterService;
+    }
 }
 
 interface DataTransformerFilterConfig {
-  type: string;
-  propNames: string | string[];
+    type: string;
+    propNames: string | string[];
 }
 ```

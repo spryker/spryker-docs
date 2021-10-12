@@ -16,46 +16,46 @@ Anyone may use the Data Transformer Service to modify data by configuring a spec
 
 ```html
 <spy-select
-  [datasource]="{
-    type: 'http',
-    transform: {
-      type: 'chain',
-      transformers: [
-        {
-          type: 'array-map',
-          mapItems: {
-            type: 'object-map',
-            mapProps: {
-              colId: {
-                type: 'date-parse',
-              },
-            },
-          },
-        },
-        {
-          type: 'collate',
-          configurator: {
-            type: 'table',
-          },
-        },
-        {
-          type: 'lens',
-          path: 'data',
-          transformer: {
-            type: 'array-map',
-            mapItems: {
-              type: 'object-map',
-              mapProps: {
-                colId: {
-                  type: 'date-serialize',
+    [datasource]="{
+        type: 'http',
+        transform: {
+            type: 'chain',
+            transformers: [
+                {
+                    type: 'array-map',
+                    mapItems: {
+                        type: 'object-map',
+                        mapProps: {
+                            colId: {
+                                type: 'date-parse',
+                            },
+                        },
+                    },
                 },
-              },
-            },
-          },
+                {
+                    type: 'collate',
+                    configurator: {
+                        type: 'table',
+                    },
+                },
+                {
+                    type: 'lens',
+                    path: 'data',
+                    transformer: {
+                        type: 'array-map',
+                        mapItems: {
+                            type: 'object-map',
+                            mapProps: {
+                                colId: {
+                                    type: 'date-serialize',
+                                },
+                            },
+                        },
+                    },
+                },
+            ],
         },
-      ],
-    },
-  }"
+    }"
 >
 </spy-select>
 ```
@@ -79,39 +79,39 @@ Data Transformer must implement a specific interface (`DataTransformer`) and the
 import { DataTransformerConfig } from '@spryker/data-transformer';
 
 declare module '@spryker/data-transformer' {
-  interface DataTransformerRegistry {
-    'custom': CustomDataTransformerConfig;
-  }
+    interface DataTransformerRegistry {
+        'custom': CustomDataTransformerConfig;
+    }
 }
 
 export type CustomDataTransformerData = object;
 export type CustomDataTransformerDataT = unknown;
 
 export interface CustomDataTransformerConfig extends DataTransformerConfig {
-  property: unknown;
-  ...
+    property: unknown;
+    ...
 }
 
-// Services implementation
+// Service implementation
 @Injectable({
-  providedIn: 'root',
+    providedIn: 'root',
 })
 export class CustomDataTransformerService implements 
-  DataTransformer<CustomDataTransformerData, CustomDataTransformerDataT> {
-  transform(
-    data: CustomDataTransformerData,
-    config: CustomDataTransformerConfig,
-  ): Observable<CustomDataTransformerDataT> {
-    ...
-  }
+    DataTransformer<CustomDataTransformerData, CustomDataTransformerDataT> {
+    transform(
+        data: CustomDataTransformerData,
+        config: CustomDataTransformerConfig,
+    ): Observable<CustomDataTransformerDataT> {
+        ...
+    }
 }
 
 @NgModule({
-  imports: [
-    DataTransformerModule.withTransformers({
-      custom: CustomDataTransformerService,
-    }),
-  ],
+    imports: [
+        DataTransformerModule.withTransformers({
+            custom: CustomDataTransformerService,
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -124,21 +124,22 @@ Below you can find interfaces for the Data Transformer service configuration and
 
 ```ts
 interface DataTransformerService {
-  transform(data: unknown, config: DataTransformerConfig): Observable<unknown>;
+    transform(data: unknown, config: DataTransformerConfig): Observable<unknown>;
 }
 
 interface DataTransformerConfig {
-  type: DataTransformerType;
-  // Reserved for types that may have extra configuration
-  [extraConfig: string]: unknown;
+    type: DataTransformerType;
+
+    // Reserved for types that may have extra configuration
+    [extraConfig: string]: unknown;
 }
 
 interface DataTransformer<D, DT> {
-  transform(
-    data: D,
-    config: DataTransformerConfig,
-    injector?: Injector,
-  ): Observable<DT>;
+    transform(
+        data: D,
+        config: DataTransformerConfig,
+        injector?: Injector,
+    ): Observable<DT>;
 }
 ```
 
@@ -154,5 +155,5 @@ There are a few common Data Transformers that are available in the UI library as
 - [Date-parse](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-parse.html) - parses the string value as a Date ISO into the JS Date Object.
 - [Date-serialize](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-serialize.html) - serializes JS Date Object into a Date ISO string.
 - [Collate](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/) - sorts, filters, and paginates data based on configuration. It has extra extension points:
-  - [Filters](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/) - are services that extend the filtering. You need to register them via `CollateDataTransformer.withFilters()`. There are a few common Collate Filters that are available:
-  - [Data Configurators](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/data-configurators/) - are services that allow configuring re-population data (sorting, pagination, filtering). These services are registered via `CollateDataTransformer.withConfigurators()`. There are a few common Collate Data Configurators that are available:
+    - [Filters](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/) - are services that extend the filtering. You need to register them via `CollateDataTransformer.withFilters()`. There are a few common Collate Filters that are available:
+    - [Data Configurators](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/data-configurators/) - are services that allow configuring re-population data (sorting, pagination, filtering). These services are registered via `CollateDataTransformer.withConfigurators()`. There are a few common Collate Data Configurators that are available:

@@ -15,16 +15,16 @@ Cache Service uses Cache Strategy to define caching algorithm (static, cache fir
 
 ```html
 <spy-select
-  [datasource]="{
-    type: 'http',
-    ...,
-    cache: {
-      type: 'static',
-      namespace: 'namespace' // Optional
-      storage: PersistenceStrategyType, // Optional
-      // ... Additional Options
-    },
-  }"
+    [datasource]="{
+        type: 'http',
+        ...,
+        cache: {
+            type: 'static',
+            namespace: 'namespace' // Optional
+            storage: PersistenceStrategyType, // Optional
+            // Additional Options...
+        },
+    }"
 >
 </spy-select>
 ```
@@ -48,19 +48,19 @@ Below you can find interfaces for Cache Storage Factory Service:
 
 ```ts
 interface CacheStorageFactoryService {
-  create(config: CacheStrategyConfig): CacheStorage {}
-  createAll(): CacheStorage[] {}
+    create(config: CacheStrategyConfig): CacheStorage {};
+    createAll(): CacheStorage[] {};
 }
 
 interface CacheStorage {
-  has(id: CacheId, namespace?: string): Observable<boolean>;
-  get<T>(
-    id: CacheId,
-    namespace?: string,
-  ): Observable<CacheEntry<T> | undefined>;
-  set(id: CacheId, data: CacheEntry, namespace?: string): Observable<void>;
-  remove(id: CacheId, namespace?: string): Observable<void>;
-  clear(namespace?: string): Observable<void>;
+    has(id: CacheId, namespace?: string): Observable<boolean>;
+    get<T>(
+        id: CacheId,
+        namespace?: string,
+    ): Observable<CacheEntry<T> | undefined>;
+    set(id: CacheId, data: CacheEntry, namespace?: string): Observable<void>;
+    remove(id: CacheId, namespace?: string): Observable<void>;
+    clear(namespace?: string): Observable<void>;
 }
 ```
 
@@ -82,13 +82,13 @@ Below you can find interfaces for the Cache Service:
 
 ```ts
 interface CacheService {
-  getCached<T>(
-    id: CacheId,
-    config: CacheStrategyConfig,
-    operation: CacheOperation<T>,
-  ): Observable<T> {}
-
-  clearCache(namespace?: string): Observable<void> {}
+    getCached<T>(
+        id: CacheId,
+        config: CacheStrategyConfig,
+        operation: CacheOperation<T>,
+    ): Observable<T> {};
+    
+    clearCache(namespace?: string): Observable<void> {};
 }
 ```
 
@@ -105,35 +105,35 @@ The Cache Strategy implements a specific interface (`CacheStrategy`) and is regi
 import { CacheStrategyConfig, CacheStrategy } from '@spryker/cache';
 
 declare module '@spryker/cache' {
-  interface CacheStrategyRegistry {
-    custom: CustomCacheStrategyConfig;
-  }
+    interface CacheStrategyRegistry {
+        custom: CustomCacheStrategyConfig;
+    }
 }
 
 interface CustomCacheStrategyConfig extends CacheStrategyConfig {
-  customOption: 'customOption';
+    customOption: 'customOption';
 }
 
-// Services implementation
+// Service implementation
 @Injectable({
-  providedIn: 'root',
+    providedIn: 'root',
 })
 export class CustomCacheService implements CacheStrategy {
-  getCached<T>(
-    id: CacheId,
-    config: CustomCacheStrategyConfig,
-    operation: CacheOperation<T>,
-  ): Observable<T> {
-    ...
-  }
+    getCached<T>(
+        id: CacheId,
+        config: CustomCacheStrategyConfig,
+        operation: CacheOperation<T>,
+    ): Observable<T> {
+        ...
+    }
 }
 
 @NgModule({
-  imports: [
-    CacheModule.withStrategies({
-      custom: CustomCacheService,
-    }),
-  ],
+    imports: [
+        CacheModule.withStrategies({
+            custom: CustomCacheService,
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -144,23 +144,24 @@ Below you can find interfaces for the Cache Strategy:
 
 ```ts
 interface CacheId {
-  serialize(): string;
+    serialize(): string;
 }
 
 interface CacheStrategy {
-  getCached<T>(
-    id: CacheId,
-    config: CacheStrategyConfig,
-    operation: CacheOperation<T>,
-  ): Observable<T>;
+    getCached<T>(
+        id: CacheId,
+        config: CacheStrategyConfig,
+        operation: CacheOperation<T>,
+    ): Observable<T>;
 }
 
 interface CacheStrategyConfig {
-  type: CacheStrategyType;
-  namespace?: string;
-  storage?: PersistenceStrategyType;
-  // Reserved for types that may have extra configuration
-  [extraConfig: string]: unknown;
+    type: CacheStrategyType;
+    namespace?: string;
+    storage?: PersistenceStrategyType;
+
+    // Reserved for types that may have extra configuration
+    [extraConfig: string]: unknown;
 }
 ```
 

@@ -19,17 +19,17 @@ Service configuration:
 
 ```html
 <spy-button-action
-  [action]="{
-    type: 'notification',
-    notifications: [
-      {
-        type: 'info',
-        title': 'Notification title',
-        description: 'Notification description',
-        closeable: true,
-      },
-    ],
-  }"
+    [action]="{
+        type: 'notification',
+        notifications: [
+            {
+                type: 'info',
+                title': 'Notification title',
+                description: 'Notification description',
+                closeable: true,
+            },
+        ],
+    }"
 >
 </spy-button-action>
 ```
@@ -40,11 +40,11 @@ Register the service:
 
 ```ts
 @NgModule({
-  imports: [
-    ActionsModule.withActions({
-      notification: NotificationActionHandlerService,
-    }),
-  ],
+    imports: [
+        ActionsModule.withActions({
+            notification: NotificationActionHandlerService,
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -55,20 +55,20 @@ Below you can find interfaces for the Actions Notification:
 
 ```ts
 export interface NotificationActionConfig extends ActionConfig {
-  notifications: NotificationData[];
+    notifications: NotificationData[];
 }
 
 export interface NotificationData extends NotificationConfig {
-  type?: NotificationType;
-  title: string | TemplateRef<NotificationContext>;
-  description?: string | TemplateRef<NotificationContext>;
-  closeable?: boolean;
+    type?: NotificationType;
+    title: string | TemplateRef<NotificationContext>;
+    description?: string | TemplateRef<NotificationContext>;
+    closeable?: boolean;
 }
 
 export enum NotificationType {
-  Info = 'info',
-  Error = 'error',
-  Warning = 'warning',
-  Success = 'success',
+    Info = 'info',
+    Error = 'error',
+    Warning = 'warning',
+    Success = 'success',
 }
 ```

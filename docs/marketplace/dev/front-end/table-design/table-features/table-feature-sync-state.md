@@ -15,18 +15,18 @@ Check out an example usage of the Table Feature Sync State in the `@spryker/tabl
 Component configuration:
 
 - `enabled` - enables the feature via config.   
-- `tableId` - is an `id` of the table that syncs the state of the table with the browser URL.  
+- `tableId` - is an `id` of the table that syncs the state of the table with the browser URL (also can be assigned to the table via HTML).  
 
 ```html
 <spy-table 
-  [config]="{
-    dataSource: { ... },
-    columns: [ ... ],
-    syncStateUrl: {
-      enabled: true,
-      tableId: 'table-id',
-    },                                                                                           
-  }"
+    [config]="{
+        dataSource: { ... },
+        columns: [ ... ],
+        syncStateUrl: {
+            enabled: true,
+            tableId: 'table-id',
+        },                                                                                           
+    }"
 >
 </spy-table>
 ```
@@ -38,15 +38,15 @@ Register the component:
 ```ts
 // Dynamic
 @NgModule({
-  imports: [
-    TableModule.forRoot(),
-    TableModule.withFeatures({
-      syncStateUrl: () =>
-        import('@spryker/table.feature.sync-state').then(
-          (m) => m.TableSyncStateFeatureModule,
-        ),
-    }),
-  ],
+    imports: [
+        TableModule.forRoot(),
+        TableModule.withFeatures({
+            syncStateUrl: () =>
+                import('@spryker/table.feature.sync-state').then(
+                    (m) => m.TableSyncStateFeatureModule,
+                ),
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -54,15 +54,15 @@ export class RootModule {}
 ```html
 // Via HTML
 @NgModule({
-  imports: [
-    TableModule.forRoot(),
-    TableSyncStateFeatureModule,
-  ],
+    imports: [
+        TableModule.forRoot(),
+        TableSyncStateFeatureModule,
+    ],
 })
 export class RootModule {}
 
-<spy-table [config]="config">
-  <spy-table-sync-state-feature spy-table-feature></spy-table-sync-state-feature>
+<spy-table [config]="config" [tableId]="tableId">
+    <spy-table-sync-state-feature spy-table-feature></spy-table-sync-state-feature>
 </spy-table>
 ```
 
@@ -72,12 +72,12 @@ Below you can find interfaces for the Table Feature Sync State:
 
 ```ts
 declare module '@spryker/table' {
-  interface TableConfig {
-    syncStateUrl?: TableSyncStateConfig;
-  }
+    interface TableConfig {
+        syncStateUrl?: TableSyncStateConfig;
+    }
 }
 
 export interface TableSyncStateConfig extends TableFeatureConfig {
-  tableId?: string;
+    tableId?: string;
 }
 ```

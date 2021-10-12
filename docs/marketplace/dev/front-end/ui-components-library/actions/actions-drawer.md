@@ -17,17 +17,17 @@ Service configuration:
 - `type` - an action type. 
 - `component` - a component name. 
 - `options` - an object with a component options. 
-  - `inputs` - inputs of the component. 
+    - `inputs` - inputs of the component. 
 
 ```html
 <spy-button-action
-  [action]="{
-    type: 'drawer',
-    component: 'component_name',
-    options: {
-      inputs: { ... },
-    },
-  }"
+    [action]="{
+        type: 'drawer',
+        component: 'component_name',
+        options: {
+            inputs: { ... },
+        },
+    }"
 >
 </spy-button-action>
 ```
@@ -43,12 +43,12 @@ The main service injects all registered types from the `DrawerActionComponentTyp
 
 ```ts
 handleAction<C>(
-  injector: Injector,
-  config: DrawerActionConfig,
-  context: C,
+    injector: Injector,
+    config: DrawerActionConfig,
+    context: C,
 ): Observable<DrawerRef<C>> {
-  ...
-});
+    ...
+};
 ```
 
 Below, you can find an explanation of how both of them works:
@@ -76,9 +76,9 @@ the `DrawerRef.openComponent()` method is called without any manipulations with 
 Another way to open the Drawer is with `ng-template.` You need to create a template, get its reference and pass it to the `handleAction()` method as a `template` config prop.
 
 ```html
-  <ng-template #contentTpl>
-  ...
-  </ng-template>
+<ng-template #contentTpl>
+    ...
+</ng-template>
 ```
 
 ```ts
@@ -100,15 +100,15 @@ Also, it's possible to create and register a custom component that is rendered i
 
 ```ts
 @NgModule({
-  imports: [
-    ActionsModule.withActions({
-      drawer: DrawerActionHandlerService,
-    }),
-    DrawerActionModule.withComponents({
-      'custom': CustomComponent,
-    }),
-    CustomModule,
-  ],
+    imports: [
+        ActionsModule.withActions({
+            drawer: DrawerActionHandlerService,
+        }),
+        DrawerActionModule.withComponents({
+            'custom': CustomComponent,
+        }),
+        CustomModule,
+    ],
 })
 export class RootModule {}
 ```
@@ -119,24 +119,24 @@ Below you can find interfaces for the Actions Drawer:
 
 ```ts
 export interface DrawerActionComponentsRegistry {
-  // type: Type<unknown>
+    // type: Type<unknown>
 }
 
 export type DrawerActionComponentType = RegistryType<
-  DrawerActionComponentsRegistry
+    DrawerActionComponentsRegistry
 >;
 
 export interface DrawerActionConfigComponent extends ActionConfig {
-  component: DrawerActionComponentType | Type<unknown>;
-  options?: Partial<DrawerOptionsComponent>;
+    component: DrawerActionComponentType | Type<unknown>;
+    options?: Partial<DrawerOptionsComponent>;
 }
 
 export interface DrawerActionConfigTemplate extends ActionConfig {
-  template: TemplateRef<DrawerTemplateContext>;
-  options?: Partial<DrawerOptionsTemplate>;
+    template: TemplateRef<DrawerTemplateContext>;
+    options?: Partial<DrawerOptionsTemplate>;
 }
 
 export type DrawerActionConfig =
-  | DrawerActionConfigComponent
-  | DrawerActionConfigTemplate;
+    | DrawerActionConfigComponent
+    | DrawerActionConfigTemplate;
 ```

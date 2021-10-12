@@ -14,24 +14,24 @@ The `datasource` example below will return the value of the `three` key ('123') 
 
 Service configuration:
 
-`path` - the name of the property from which the value needs to be retrieved. The `path` may contain nested properties separated by dots, just like in a Javascript language.
+- `path` - the name of the property from which the value needs to be retrieved. The `path` may contain nested properties separated by dots, just like in a Javascript language.
 
 ```html
 <spy-select
-  [datasource]="{
-    type: 'inline',
-    data: {
-      one: {
-        two: {
-          three: '123',  
+    [datasource]="{
+        type: 'inline',
+        data: {
+            one: {
+                two: {
+                    three: '123',  
+                },
+            },
         },
-      },
-    },
-    transform: {
-      type: 'pluck',
-      path: 'one.two.three',
-    },
-  }"
+        transform: {
+            type: 'pluck',
+            path: 'one.two.three',
+        },
+    }"
 >
 </spy-select>
 ```
@@ -42,11 +42,11 @@ Register the service:
 
 ```ts
 @NgModule({
-  imports: [
-    DataTransformerModule.withTransformers({
-      pluck: PluckDataTransformerService,
-    }),
-  ],
+    imports: [
+        DataTransformerModule.withTransformers({
+            pluck: PluckDataTransformerService,
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -57,12 +57,12 @@ Below you can find interfaces for the Data Transformer Pluck:
 
 ```ts
 declare module '@spryker/data-transformer' {
-  interface DataTransformerRegistry {
-    pluck: PluckDataTransformerService;
-  }
+    interface DataTransformerRegistry {
+        pluck: PluckDataTransformerService;
+    }
 }
 
 export interface PluckDataTransformerConfig extends DataTransformerConfig {
-  path: string;
+    path: string;
 }
 ```

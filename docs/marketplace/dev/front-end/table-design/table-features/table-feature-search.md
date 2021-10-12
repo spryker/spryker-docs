@@ -19,14 +19,14 @@ Component configuration:
 
 ```html
 <spy-table 
-  [config]="{
-    dataSource: { ... },
-    columns: [ ... ],
-    search: {
-      enabled: true,
-      placeholder: 'Search',
-    },                                                                                       
-  }"
+    [config]="{
+        dataSource: { ... },
+        columns: [ ... ],
+        search: {
+            enabled: true,
+            placeholder: 'Search',
+        },                                                                                       
+    }"
 >
 </spy-table>
 ```
@@ -38,15 +38,15 @@ Register the component:
 ```ts
 // Dynamic
 @NgModule({
-  imports: [
-    TableModule.forRoot(),
-    TableModule.withFeatures({
-      search: () =>
-        import('@spryker/table.feature.search').then(
-          (m) => m.TableSearchFeatureModule,
-        ),   
-    }),
-  ],
+    imports: [
+        TableModule.forRoot(),
+        TableModule.withFeatures({
+            search: () =>
+                import('@spryker/table.feature.search').then(
+                    (m) => m.TableSearchFeatureModule,
+                ),
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -54,15 +54,15 @@ export class RootModule {}
 ```html
 // Via HTML
 @NgModule({
-  imports: [
-    TableModule.forRoot(),
-    TableSearchFeatureModule,
-  ],
+    imports: [
+        TableModule.forRoot(),
+        TableSearchFeatureModule,
+    ],
 })
 export class RootModule {}
 
 <spy-table [config]="config">
-  <spy-table-search-feature spy-table-feature></spy-table-search-feature>
+    <spy-table-search-feature spy-table-feature></spy-table-search-feature>
 </spy-table>
 ```
 
@@ -72,12 +72,12 @@ Below you can find interfaces for the Table Feature Search:
 
 ```ts
 declare module '@spryker/table' {
-  interface TableConfig {
-    search?: TableSearchConfig;
-  }
+    interface TableConfig {
+        search?: TableSearchConfig;
+    }
 }
 
 export interface TableSearchConfig extends TableFeatureConfig {
-  placeholder?: string;
+    placeholder?: string;
 }
 ```

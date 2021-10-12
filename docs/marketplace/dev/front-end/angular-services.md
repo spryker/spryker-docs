@@ -23,14 +23,14 @@ To define a class as a service in Angular, the `@Injectable()` decorator is used
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  // Declares that this service should be created
-  // by the root application injector.
-  providedIn: 'root',
+    // Declares that this service should be created
+    // by the root application injector.
+    providedIn: 'root',
 })
 export class SomeService {
-  reusableMethod(): void {
-    // ...some logic
-  }
+    reusableMethod(): void {
+        // ...some logic
+    }
 }
 ```
 
@@ -42,14 +42,14 @@ To use the service, you simply need to import it and inject it via DI in the con
 import { Component } from '@angular/core';
 
 @Component({
-  ...,
+    ...,
 })
 export class ServiceConsumer {
-  constructor(private someService: SomeService) {}
+    constructor(private someService: SomeService) {}
 
-  invokeServiceMethod(): void {
-    this.someService.reusableMethod();
-  }
+    invokeServiceMethod(): void {
+        this.someService.reusableMethod();
+    }
 }
 ```
 

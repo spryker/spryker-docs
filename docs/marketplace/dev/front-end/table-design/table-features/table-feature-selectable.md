@@ -17,17 +17,17 @@ Check out an example usage of the Table Feature Selectable in the `@spryker/tabl
 
 Component configuration:
 
-`enabled` - enables the feature via config.
+- `enabled` - enables the feature via config.
 
 ```html
 <spy-table 
-  [config]="{
-    dataSource: { ... },
-    columns: [ ... ],
-    itemSelection: {
-      enabled: true,
-    },                                                                                           
-  }"
+    [config]="{
+        dataSource: { ... },
+        columns: [ ... ],
+        itemSelection: {
+            enabled: true,
+        },                                                                                           
+    }"
 >
 </spy-table>
 ```
@@ -39,15 +39,15 @@ Register the component:
 ```ts
 // Dynamic
 @NgModule({
-  imports: [
-    TableModule.forRoot(),
-    TableModule.withFeatures({
-      itemSelection: () =>
-        import('@spryker/table.feature.selectable').then(
-          (m) => m.TableSelectableFeatureModule,
-        ),    
-    }),
-  ],
+    imports: [
+        TableModule.forRoot(),
+        TableModule.withFeatures({
+            itemSelection: () =>
+                import('@spryker/table.feature.selectable').then(
+                    (m) => m.TableSelectableFeatureModule,
+                ),
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -55,15 +55,15 @@ export class RootModule {}
 ```html
 // Via HTML
 @NgModule({
-  imports: [
-    TableModule.forRoot(),
-    TableSelectableFeatureModule,
-  ],
+    imports: [
+        TableModule.forRoot(),
+        TableSelectableFeatureModule,
+    ],
 })
 export class RootModule {}
 
 <spy-table [config]="config">
-  <spy-table-selectable-feature spy-table-feature></spy-table-selectable-feature>
+    <spy-table-selectable-feature spy-table-feature></spy-table-selectable-feature>
 </spy-table>
 ```
 
@@ -73,16 +73,16 @@ Below you can find interfaces for the Table Feature Selectable:
 
 ```ts
 declare module '@spryker/table' {
-  interface TableConfig {
-    itemSelection?: TableSelectableConfig;
-  }
+    interface TableConfig {
+        itemSelection?: TableSelectableConfig;
+    }
 }
 
 export interface TableSelectableConfig extends TableFeatureConfig {}
 
 export interface TableSelectionRow {
-  data: TableDataRow;
-  index: number;
+    data: TableDataRow;
+    index: number;
 }
 
 export type TableSelectionChangeEvent = TableSelectionRow[];

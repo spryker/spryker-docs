@@ -14,24 +14,24 @@ Check out an example usage of the Data Transformer Collate Filter Equals in the 
 
 ```html
 <spy-table
-  [config]="{
-    datasource: {
-      ...                                               
-      transform: {
-        ...
-        filter: {
-          select1: {
-            type: 'equals',
-            propNames: 'col1',
-          },
-          select2: {
-            type: 'equals',
-            propNames: ['col2', 'col1'],
-          },
+    [config]="{
+        datasource: {
+            ...,                                               
+            transform: {
+                ...,
+                filter: {
+                    select1: {
+                        type: 'equals',
+                        propNames: 'col1',
+                    },
+                    select2: {
+                        type: 'equals',
+                        propNames: ['col2', 'col1'],
+                    },
+                },
+            },
         },
-      },
-    },
-  }"
+    }"
 >
 </spy-table>
 ```
@@ -42,14 +42,14 @@ Register the service:
 
 ```ts
 @NgModule({
-  imports: [
-    DataTransformerModule.withTransformers({
-      collate: CollateDataTransformerService,
-    }),
-    CollateDataTransformer.withFilters({
-      equals: EqualsDataTransformerFilterService,
-    }),
-  ],
+    imports: [
+        DataTransformerModule.withTransformers({
+            collate: CollateDataTransformerService,
+        }),
+        CollateDataTransformer.withFilters({
+            equals: EqualsDataTransformerFilterService,
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -60,13 +60,13 @@ Below you can find interfaces for the Data Transformer Collate Filter Equals:
 
 ```ts
 declare module '@spryker/data-transformer.collate' {
-  interface DataTransformerFilterRegistry {
-    equals: EqualsDataTransformerFilterService;
-  }
+    interface DataTransformerFilterRegistry {
+        equals: EqualsDataTransformerFilterService;
+    }
 }
 
 interface DataTransformerFilterConfig {
-  type: string;
-  propNames: string | string[];
+    type: string;
+    propNames: string | string[];
 }
 ```

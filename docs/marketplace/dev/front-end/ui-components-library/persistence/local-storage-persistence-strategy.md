@@ -14,18 +14,18 @@ Check out an example usage of the Local Storage Persistence Strategy.
 
 Service configuration:
 
-`storage` - the persistence strategy type.  
+- `storage` - the persistence strategy type.  
 
 ```html
 <spy-select
-  [datasource]="{
-    type: 'http',
-    ...,
-    cache: {
-      ...,
-      storage: 'local-storage',
-    },
-  }"
+    [datasource]="{
+        type: 'http',
+        ...,
+        cache: {
+            ...,
+            storage: 'local-storage',
+        },
+    }"
 >
 </spy-select>
 ```
@@ -36,11 +36,11 @@ Register the service:
 
 ```ts
 @NgModule({
-  imports: [
-    PersistenceModule.withStrategies({
-      'local-storage': LocalStoragePersistenceStrategy,
-    }),
-  ],
+    imports: [
+        PersistenceModule.withStrategies({
+            'local-storage': LocalStoragePersistenceStrategy,
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -51,14 +51,14 @@ Below you can find interfaces for the Local Storage Persistence Strategy:
 
 ```ts
 declare module '@spryker/persistence' {
-  interface PersistenceStrategyRegistry {
-    'local-storage': LocalStoragePersistenceStrategy;
-  }
+    interface PersistenceStrategyRegistry {
+        'local-storage': LocalStoragePersistenceStrategy;
+    }
 }
 
 interface LocalStoragePersistenceStrategy extends PersistenceStrategy {
-  save(key: string, value: unknown): Observable<void>;
-  retrieve<T>(key: string): Observable<T | undefined>;
-  remove(key: string): Observable<void>;
+    save(key: string, value: unknown): Observable<void>;
+    retrieve<T>(key: string): Observable<T | undefined>;
+    remove(key: string): Observable<void>;
 }
 ```

@@ -14,13 +14,13 @@ In the example below, the `datasource` transforms the `date` string into the par
 
 ```html
 <spy-select
-  [datasource]="{
-    type: 'inline',
-    data: '2020-09-24T15:20:08+02:00',
-    transform: {
-      type: 'date-parse'
-    },
-  }"
+    [datasource]="{
+        type: 'inline',
+        data: '2020-09-24T15:20:08+02:00',
+        transform: {
+            type: 'date-parse'
+        },
+    }"
 >
 </spy-select>
 ```
@@ -31,11 +31,11 @@ Register the service:
 
 ```ts
 @NgModule({
-  imports: [
-    DataTransformerModule.withTransformers({
-      'date-parse': DateParseDataTransformerService,
-    }),
-  ],
+    imports: [
+        DataTransformerModule.withTransformers({
+            'date-parse': DateParseDataTransformerService,
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -46,9 +46,9 @@ Below you can find interfaces for the Data Transformer Date-parse:
 
 ```ts
 declare module '@spryker/data-transformer' {
-  interface DataTransformerRegistry {
-    'date-parse': DateParseDataTransformerConfig;
-  }
+    interface DataTransformerRegistry {
+        'date-parse': DateParseDataTransformerConfig;
+    }
 }
 
 export interface DateParseDataTransformerConfig extends DataTransformerConfig {}

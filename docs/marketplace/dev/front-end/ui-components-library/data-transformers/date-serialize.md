@@ -14,13 +14,13 @@ In the example below, the `datasource` transforms `date` object into the seriali
 
 ```html
 <spy-select
-  [datasource]="{
-    type: 'inline',
-    data: Date.now(),
-    transform: {
-      type: 'date-serialize'
-    },
-  }"
+    [datasource]="{
+        type: 'inline',
+        data: Date.now(),
+        transform: {
+            type: 'date-serialize'
+        },
+    }"
 >
 </spy-select>
 ```
@@ -31,11 +31,11 @@ Register the service:
 
 ```ts
 @NgModule({
-  imports: [
-    DataTransformerModule.withTransformers({
-      'date-serialize': DateSerializeDataTransformerService,
-    }),
-  ],
+    imports: [
+        DataTransformerModule.withTransformers({
+            'date-serialize': DateSerializeDataTransformerService,
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -46,9 +46,9 @@ Below you can find interfaces for the Data Transformer Date-serialize:
 
 ```ts
 declare module '@spryker/data-transformer' {
-  interface DataTransformerRegistry {
-    'date-serialize': DateSerializeDataTransformerConfig;
-  }
+    interface DataTransformerRegistry {
+        'date-serialize': DateSerializeDataTransformerConfig;
+    }
 }
 
 export interface DateSerializeDataTransformerConfig extends DataTransformerConfig {}

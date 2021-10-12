@@ -14,18 +14,18 @@ Check out an example usage of the Url Persistence Strategy.
 
 Service configuration:
 
-`storage` - the persistence strategy type.  
+- `storage` - the persistence strategy type.  
 
 ```html
 <spy-select
-  [datasource]="{
-    type: 'http',
-    ...,
-    cache: {
-      ...,
-      storage: 'url',
-    },
-  }"
+    [datasource]="{
+        type: 'http',
+        ...,
+        cache: {
+            ...,
+            storage: 'url',
+        },
+    }"
 >
 </spy-select>
 ```
@@ -36,11 +36,11 @@ Register the service:
 
 ```ts
 @NgModule({
-  imports: [
-    PersistenceModule.withStrategies({
-      'url': UrlPersistenceStrategy,
-    }),
-  ],
+    imports: [
+        PersistenceModule.withStrategies({
+            'url': UrlPersistenceStrategy,
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -51,14 +51,14 @@ Below you can find interfaces for the Url Persistence Strategy:
 
 ```ts
 declare module '@spryker/persistence' {
-  interface PersistenceStrategyRegistry {
-    'url': UrlPersistenceStrategy;
-  }
+    interface PersistenceStrategyRegistry {
+        'url': UrlPersistenceStrategy;
+    }
 }
 
 interface UrlPersistenceStrategy extends PersistenceStrategy {
-  save(key: string, value: unknown): Observable<void>;
-  retrieve<T>(key: string): Observable<T | undefined>;
-  remove(key: string): Observable<void>;
+    save(key: string, value: unknown): Observable<void>;
+    retrieve<T>(key: string): Observable<T | undefined>;
+    remove(key: string): Observable<void>;
 }
 ```

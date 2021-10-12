@@ -14,13 +14,13 @@ Check out an example usage of the Actions Refresh Drawer.
 
 Service configuration:
 
-`type` - an action type.
+- `type` - an action type.
 
 ```html
 <spy-button-action
-  [action]="{
-    type: 'refresh-drawer',
-  }"
+    [action]="{
+        type: 'refresh-drawer',
+    }"
 >
 </spy-button-action>
 ```
@@ -31,11 +31,11 @@ Register the service:
 
 ```ts
 @NgModule({
-  imports: [
-    ActionsModule.withActions({
-      'refresh-drawer': RefreshDrawerActionHandlerService,
-    }),
-  ],
+    imports: [
+        ActionsModule.withActions({
+            'refresh-drawer': RefreshDrawerActionHandlerService,
+        }),
+    ],
 })
 export class RootModule {}
 ```

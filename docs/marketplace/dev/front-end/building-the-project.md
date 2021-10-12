@@ -4,7 +4,6 @@ description: This article provides details how to build the frontend part of the
 template: concept-topic-template
 ---
 
-
 This article provides details how to build the front-end part of the Merchant Portal.
 
 ## Overview

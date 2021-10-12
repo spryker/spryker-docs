@@ -15,9 +15,9 @@ The context within which Actions are handled is defined by the invoker of the Ac
 
 ```html
 <spy-button-action
-  [action]="{ 
-    type: 'close-drawer' 
-  }"
+    [action]="{ 
+        type: 'close-drawer' 
+    }"
 >
 </spy-button-action>
 ```
@@ -38,36 +38,36 @@ Action Handler encapsulates the algorithm of how the data is loaded into the Com
 import { ActionConfig } from '@spryker/actions';
 
 declare module '@spryker/actions' {
-  interface ActionsRegistry {
-    custom: CustomActionHandlerService;
-  }
+    interface ActionsRegistry {
+        custom: CustomActionHandlerService;
+    }
 }
 
 export interface CustomActionConfig extends ActionConfig {
-  data: unknown;
-  ...
+    data: unknown;
+    ...
 }
 
 // Service implementation
 @Injectable({
-  providedIn: 'root',
+    providedIn: 'root',
 })
 export class CustomActionHandlerService implements ActionHandler<unknown, void> {
-  handleAction(
-    injector: Injector,
-    config: CustomActionConfig,
-    context: unknown,
-  ): Observable<void> {
-    ...
-  }
+    handleAction(
+        injector: Injector,
+        config: CustomActionConfig,
+        context: unknown,
+    ): Observable<void> {
+        ...
+    }
 }
 
 @NgModule({
-  imports: [
-    ActionsModule.withActions({
-      custom: CustomActionHandlerService,
-    }),
-  ],
+    imports: [
+        ActionsModule.withActions({
+            custom: CustomActionHandlerService,
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -80,18 +80,19 @@ Below you can find interfaces for the Actions configuration and Action type:
 
 ```ts
 export interface ActionConfig {
-  type: ActionType;
-  // Reserved for types that may have extra configuration
-  [k: string]: unknown;
+    type: ActionType;
+
+    // Reserved for types that may have extra configuration
+    [k: string]: unknown;
 }
 
 export interface ActionHandler<C = unknown, R = unknown>
-  extends Generics<[C, R]> {
-  handleAction(
-    injector: Injector,
-    config: ActionConfig,
-    context: C,
-  ): Observable<R>;
+    extends Generics<[C, R]> {
+    handleAction(
+        injector: Injector,
+        config: ActionConfig,
+        context: C,
+    ): Observable<R>;
 }
 ```
 

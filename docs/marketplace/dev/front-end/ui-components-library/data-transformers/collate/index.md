@@ -13,34 +13,34 @@ In general, the meaning of the word `collate` is to collect, arrange and assembl
 
 ```html
 <spy-table
-  [config]="{
-    datasource: {
-      type: 'inline',
-      data: {
-        col1: '2020-09-24T15:20:08+02:00',
-        col2: 'col 2',
-      },                                                     
-      transform: {
-        type: 'collate',
-        configurator: {
-          type: 'table',
+    [config]="{
+        datasource: {
+            type: 'inline',
+            data: {
+                col1: '2020-09-24T15:20:08+02:00',
+                col2: 'col 2',
+            },                                                     
+            transform: {
+                type: 'collate',
+                configurator: {
+                    type: 'table',
+                },
+                filter: {
+                    date: {
+                        type: 'range',
+                        propNames: 'col1',
+                    },
+                },
+                search: {
+                    type: 'text',
+                    propNames: ['col2'],
+                },
+                transformerByPropName: {
+                    col1: 'date',
+                },  
+            },
         },
-        filter: {
-          date: {
-            type: 'range',
-            propNames: 'col1',
-          },
-        },
-        search: {
-          type: 'text',
-          propNames: ['col2'],
-        },
-        transformerByPropName: {
-          col1: 'date',
-        },  
-      },
-    },
-  }"
+    }"
 >
 </spy-table>
 ```
@@ -52,9 +52,9 @@ These services are registered via `CollateDataTransformer.withFilters()`.
 
 There are a few common Data Transformer Collate Filters that are available as separate packages in the UI library:
 
-  - [Equals](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/equals.html) - filters values that are strictly equal.
-  - [Range](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/range.html) - filters values that are within a number range.
-  - [Text](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/text.html) - filters values that match a string.
+- [Equals](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/equals.html) - filters values that are strictly equal.
+- [Range](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/range.html) - filters values that are within a number range.
+- [Text](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/text.html) - filters values that match a string.
 
 ## Collate Data Configurators
 
@@ -63,7 +63,7 @@ These services are registered via `CollateDataTransformer.withConfigurators()`.
 
 There are a few common Data Transformers Collate Data Configurators that are available:
 
-  - [Table](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/data-configurators/table.html) - integrates Table into Collate to re-populate data when the table updates.
+- [Table](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/data-configurators/table.html) - integrates Table into Collate to re-populate data when the table updates.
 
 ## Service registration
 
@@ -71,23 +71,23 @@ Register the service:
 
 ```ts
 @NgModule({
-  imports: [
-    DataTransformerModule.withTransformers({
-      collate: CollateDataTransformerService,
-    }),
+    imports: [
+        DataTransformerModule.withTransformers({
+            collate: CollateDataTransformerService,
+        }),
 
-    // Filters
-    CollateDataTransformer.withFilters({
-      equals: EqualsDataTransformerFilterService,
-      range: RangeDataTransformerFilterService,
-      text: TextDataTransformerFilterService,
-    }),
+        // Filters
+        CollateDataTransformer.withFilters({
+            equals: EqualsDataTransformerFilterService,
+            range: RangeDataTransformerFilterService,
+            text: TextDataTransformerFilterService,
+        }),
 
-    // Configurators
-    CollateDataTransformer.withConfigurators({
-      table: TableDataTransformerConfiguratorService,
-    }),
-  ],
+        // Configurators
+        CollateDataTransformer.withConfigurators({
+            table: TableDataTransformerConfiguratorService,
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -111,28 +111,30 @@ Below you can find interfaces for the Data Transformer Collate:
 
 ```ts
 declare module '@spryker/data-transformer' {
-  interface DataTransformerRegistry {
-    collate: CollateDataTransformerConfig;
-  }
+    interface DataTransformerRegistry {
+        collate: CollateDataTransformerConfig;
+    }
 }
 
 export interface CollateDataTransformerConfig extends DataTransformerConfig {
-  configurator: DataTransformerConfiguratorConfig;
-  filter?: {
-    [filterId: string]: DataTransformerFilterConfig;
-  };
-  search?: DataTransformerFilterConfig;
-  transformerByPropName?: DataFilterTransformerByPropName;
+    configurator: DataTransformerConfiguratorConfig;
+    filter?: {
+        [filterId: string]: DataTransformerFilterConfig;
+    };
+    search?: DataTransformerFilterConfig;
+    transformerByPropName?: DataFilterTransformerByPropName;
 }
 
 export interface DataTransformerConfiguratorConfig {
-  type: DataTransformerConfiguratorType;
-  [prop: string]: unknown; // Extra configuration for specific types
+    type: DataTransformerConfiguratorType;
+
+    // Extra configuration for specific types
+    [prop: string]: unknown;
 }
 
 export interface DataTransformerFilterConfig {
-  type: string;
-  propNames: string | string[];
+    type: string;
+    propNames: string | string[];
 }
 
 export type DataFilterTransformerByPropName = Record<string, string>;

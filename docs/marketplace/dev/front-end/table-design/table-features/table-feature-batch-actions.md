@@ -16,31 +16,31 @@ Check out an example usage of the Table Feature Batch Actions in the `@spryker/t
 
 Component configuration:
 
-`enabled` - enables the feature via the config.  
-`noActionsMessage` - error message text.  
-`actions` - an array with actions that are displayed in the top bar, and their type of the registered [action](/docs/marketplace/dev/front-end/ui-components-library/actions/).   
-`rowIdPath` - gets a row `id` via the column `id` (in the example below `Sku` column).  
-`availableActionsPath` - path to an array with available action IDs in the top bar (supports nested objects using dot notation for ex. `prop.nestedProp`).   
+- `enabled` - enables the feature via the config.  
+- `noActionsMessage` - error message text.  
+- `actions` - an array with actions that are displayed in the top bar, and their type of the registered [action](/docs/marketplace/dev/front-end/ui-components-library/actions/).   
+- `rowIdPath` - gets a row `id` via the column `id` (in the example below `Sku` column).  
+- `availableActionsPath` - path to an array with available action IDs in the top bar (supports nested objects using dot notation for ex. `prop.nestedProp`).   
 
 ```html
 <spy-table 
-  [config]="{
-    dataSource: { ... },
-    columns: [ ... ],
-    batchActions: {
-      enabled: true,
-      actions: [
-        { id: 'edit', title: 'Edit', type: 'edit-action' },
-        { id: 'update', title: 'Update', type: 'update-action' },
-      ],
-      noActionsMessage: 'No available actions for selected rows',
-      rowIdPath: 'sku',
-      availableActionsPath: 'path.to.actions',
-    },  
-    itemSelection: {
-      enabled: true,
-    },                                                                                         
-  }"
+    [config]="{
+        dataSource: { ... },
+        columns: [ ... ],
+        batchActions: {
+            enabled: true,
+            actions: [
+                { id: 'edit', title: 'Edit', type: 'edit-action' },
+                { id: 'update', title: 'Update', type: 'update-action' },
+            ],
+            noActionsMessage: 'No available actions for selected rows',
+            rowIdPath: 'sku',
+            availableActionsPath: 'path.to.actions',
+        },  
+        itemSelection: {
+            enabled: true,
+        },                                                                                         
+    }"
 >
 </spy-table>
 ```
@@ -52,19 +52,19 @@ Register the component:
 ```ts
 // Dynamic
 @NgModule({
-  imports: [
-    TableModule.forRoot(),
-    TableModule.withFeatures({
-      batchActions: () =>
-        import('@spryker/table.feature.batch-actions').then(
-          (m) => m.TableBatchActionsFeatureModule,
-        ),
-      itemSelection: () =>
-        import('@spryker/table.feature.selectable').then(
-          (m) => m.TableSelectableFeatureModule,
-        ),
-    }),
-  ],
+    imports: [
+        TableModule.forRoot(),
+        TableModule.withFeatures({
+            batchActions: () =>
+                import('@spryker/table.feature.batch-actions').then(
+                    (m) => m.TableBatchActionsFeatureModule,
+                ),
+            itemSelection: () =>
+                import('@spryker/table.feature.selectable').then(
+                    (m) => m.TableSelectableFeatureModule,
+                ),
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -72,17 +72,17 @@ export class RootModule {}
 ```html
 // Via HTML
 @NgModule({
-  imports: [
-    TableModule.forRoot(),
-    TableBatchActionsFeatureModule,
-    TableSelectableFeatureModule,
-  ],
+    imports: [
+        TableModule.forRoot(),
+        TableBatchActionsFeatureModule,
+        TableSelectableFeatureModule,
+    ],
 })
 export class RootModule {}
 
 <spy-table [config]="config">
-  <spy-table-batch-actions-feature spy-table-feature></spy-table-batch-actions-feature>
-  <spy-table-selectable-feature spy-table-feature></spy-table-selectable-feature>
+    <spy-table-batch-actions-feature spy-table-feature></spy-table-batch-actions-feature>
+    <spy-table-selectable-feature spy-table-feature></spy-table-selectable-feature>
 </spy-table>
 ```
 
@@ -92,33 +92,34 @@ Below you can find interfaces for the Table Feature Batch Actions:
 
 ```ts
 declare module '@spryker/table' {
-  interface TableConfig {
-    batchActions?: TableBatchActionsConfig;
-  }
+    interface TableConfig {
+        batchActions?: TableBatchActionsConfig;
+    }
 }
 
 export interface TableBatchActionsConfig extends TableFeatureConfig {
-  actions: TableBatchAction[];
-  rowIdPath: string;
-  noActionsMessage?: string;
-  availableActionsPath?: string;
+    actions: TableBatchAction[];
+    rowIdPath: string;
+    noActionsMessage?: string;
+    availableActionsPath?: string;
 }
 
 export interface TableBatchAction extends TableActionBase {
-  title: string;
+    title: string;
 }
 
 export interface TableBatchActionContext {
-  rowIds: string[];
+    rowIds: string[];
 }
 
 export interface SelectedRows
-  extends Record<string, unknown>,
-    TableSelectionRow {}
+    extends Record<string, unknown>,
+        TableSelectionRow {
+}
 
 export interface TableItemActions {
-  actions: TableBatchAction[];
-  rowIdPath: string;
-  selectedRows: SelectedRows[];
+    actions: TableBatchAction[];
+    rowIdPath: string;
+    selectedRows: SelectedRows[];
 }
 ```

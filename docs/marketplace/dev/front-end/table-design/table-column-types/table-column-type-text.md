@@ -13,33 +13,33 @@ Table Column Text is an Angular Component that renders text.
 Check out an example usage of the Table Column Text in the `@spryker/table` config:
 
 ```html
-<spy-table 
-  [config]="{
-    ...,
-    columns: [
-      ...
-      {
-        id: 'columnId',
-        title: 'Column Title',
-        type: 'text',
-        typeOptions: {
-          text: '${value}',
-        },
-      },
-      {
-        id: 'columnId',
-        title: 'Column Title',
-        type: 'text',
-        typeOptions: {
-          text: '${value}',
-        },
-        typeOptionsMappings: {
-          color: { col3: 'green' },
-        },
-      },
-      ...
-    ]
-  }"
+<spy-table
+    [config]="{
+        ...,
+        columns: [
+            ...,
+            {
+                id: 'columnId',
+                title: 'Column Title',
+                type: 'text',
+                typeOptions: {
+                    text: '${value}',
+                },
+            },
+            {
+                id: 'columnId',
+                title: 'Column Title',
+                type: 'text',
+                typeOptions: {
+                    text: '${value}',
+                },
+                typeOptionsMappings: {
+                    color: { col3: 'green' },
+                },
+            },
+            ...,
+        ],
+    }"
 >
 </spy-table>
 ```
@@ -50,13 +50,13 @@ Register the component:
 
 ```ts
 @NgModule({
-  imports: [
-    TableModule.forRoot(),
-    TableModule.withColumnComponents({
-      text: TableColumnTextComponent,
-    } as any),
-    TableColumnTextModule,
-  ],
+    imports: [
+        TableModule.forRoot(),
+        TableModule.withColumnComponents({
+            text: TableColumnTextComponent,
+        }),
+        TableColumnTextModule,
+    ],
 })
 export class RootModule {}
 ```
@@ -67,12 +67,12 @@ Below you can find interfaces for the Table Column Text:
 
 ```ts
 declare module '@spryker/table' {
-  interface TableColumnTypeRegistry {
-    text: TableColumnTextConfig;
-  }
+    interface TableColumnTypeRegistry {
+        text: TableColumnTextConfig;
+    }
 }
 
 interface TableColumnTextConfig {
-  text?: string;
+    text?: string;
 }
 ```

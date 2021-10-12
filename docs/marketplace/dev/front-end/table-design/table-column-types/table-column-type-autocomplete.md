@@ -13,33 +13,33 @@ Table Column Autocomplete is an Angular Component that renders an autocomplete f
 Check out an example usage of the Table Column Autocomplete in the `@spryker/table` config:
 
 ```html
-<spy-table 
-  [config]="{
-    ...,
-    columns: [
-      ...
-      {
-        id: 'columnId',
-        title: 'Column Title',
-        type: 'autocomplete',
-        typeOptions: {
-          options: [
+<spy-table
+    [config]="{
+        ...,
+        columns: [
+            ...,
             {
-              value: 'Option Value',
-              title: 'Option Title',
+                id: 'columnId',
+                title: 'Column Title',
+                type: 'autocomplete',
+                typeOptions: {
+                    options: [
+                        {
+                            value: 'Option Value',
+                            title: 'Option Title',
+                        },
+                        {
+                            value: 'Second Option Value',
+                            title: 'Second Downing Street',
+                            isDisabled: true,
+                        },
+                    ],
+                    placeholder: 'Field Placeholder',
+                },
             },
-            {
-              value: 'Second Option Value',
-              title: 'Second Downing Street',
-              isDisabled: true,
-            },
-          ],
-          placeholder: 'Field Placeholder',
-        },
-      },
-      ...
-    ]
-  }"
+            ...,
+        ],
+    }"
 >
 </spy-table>
 ```
@@ -50,13 +50,13 @@ Register the component:
 
 ```ts
 @NgModule({
-  imports: [
-    TableModule.forRoot(),
-    TableModule.withColumnComponents({
-      autocomplete: TableColumnAutocompleteComponent,
-    } as any),
-    TableColumnAutocompleteModule,
-  ],
+    imports: [
+        TableModule.forRoot(),
+        TableModule.withColumnComponents({
+            autocomplete: TableColumnAutocompleteComponent,
+        }),
+        TableColumnAutocompleteModule,
+    ],
 })
 export class RootModule {}
 ```
@@ -67,44 +67,46 @@ Below you can find interfaces for the Table Column Autocomplete:
 
 ```ts
 declare module '@spryker/table' {
-  interface TableColumnTypeRegistry {
-    autocomplete: TableColumnAutocompleteConfig;
-  }
+    interface TableColumnTypeRegistry {
+        autocomplete: TableColumnAutocompleteConfig;
+    }
 }
 
 interface AutocompleteValue {
-  value: unknown;
-  title: string;
-  isDisabled?: boolean;
+    value: unknown;
+    title: string;
+    isDisabled?: boolean;
 }
 
 interface DataTransformerConfig {
-  type: string;
-  // Reserved for types that may have extra configuration
-  [extraConfig: string]: unknown;
+    type: string;
+
+    // Reserved for types that may have extra configuration
+    [extraConfig: string]: unknown;
 }
 
 interface DatasourceConfig {
-  type: string;
-  transform?: DataTransformerConfig;
-  // Specific Datasource types may have custom props
-  [k: string]: unknown;
+    type: string;
+    transform?: DataTransformerConfig;
+
+    // Specific Datasource types may have custom props
+    [k: string]: unknown;
 }
 
 interface TableColumnAutocompleteConfig {
-  /** Bound to the @spryker/autocomplete inputs */
-  options: AutocompleteValue[];
-  datasource?: DatasourceConfig;
-  /** Bound to the @spryker/input inputs */
-  value?: any;
-  type: string; // 'text' - by default
-  placeholder?: string;
-  prefix?: string;
-  suffix?: string;
-  outerPrefix?: string;
-  outerSuffix?: string;
-  attrs?: Record<string, string>;
-  /** Bound to the @spryker/form-item input */
-  editableError?: string | boolean;
+    /** Bound to the @spryker/autocomplete inputs */
+    options: AutocompleteValue[];
+    datasource?: DatasourceConfig;
+    /** Bound to the @spryker/input inputs */
+    value?: any;
+    type: string; // 'text' - by default
+    placeholder?: string;
+    prefix?: string;
+    suffix?: string;
+    outerPrefix?: string;
+    outerSuffix?: string;
+    attrs?: Record<string, string>;
+    /** Bound to the @spryker/form-item input */
+    editableError?: string | boolean;
 }
 ```

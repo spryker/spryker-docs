@@ -26,18 +26,18 @@ Service configuration:
 
 ```html
 <spy-table
-  [config]="{
-    dataSource: { ... },
-    columns: [ ... ],
-    rowActions: {
-      enabled: true,
-      actions: [
-        {
-          type: 'refresh-parent-table',
+    [config]="{
+        dataSource: { ... },
+        columns: [ ... ],
+        rowActions: {
+            enabled: true,
+            actions: [
+                {
+                    type: 'refresh-parent-table',
+                },
+            ],
         },
-      ],
-    },
-  }"
+    }"
 >
 </spy-table>
 ```
@@ -48,11 +48,11 @@ Register the service:
 
 ```ts
 @NgModule({
-  imports: [
-    ActionsModule.withActions({
-      'refresh-parent-table': RefreshParentTableActionHandlerService,
-    }),
-  ],
+    imports: [
+        ActionsModule.withActions({
+            'refresh-parent-table': RefreshParentTableActionHandlerService,
+        }),
+    ],
 })
 export class RootModule {}
 ```

@@ -19,24 +19,24 @@ Component configuration:
 
 ```html
 <spy-table 
-  [config]="{
-    dataSource: { ... },
-    columns: [ ... ],
-    filters: {
-      enabled: true,
-      items: [
-        {
-          id: 'range',
-          title: 'Range',
-          type: 'date-range',
-          typeOptions: {
-            placeholderFrom: 'from',
-            placeholderTo: 'to',
-          },
-        },
-      ],
-    },                                                                                           
-  }"
+    [config]="{
+        dataSource: { ... },
+        columns: [ ... ],
+        filters: {
+            enabled: true,
+            items: [
+                {
+                    id: 'range',
+                    title: 'Range',
+                    type: 'date-range',
+                    typeOptions: {
+                        placeholderFrom: 'from',
+                        placeholderTo: 'to',
+                    },
+                },
+            ],
+        },                                                                                           
+    }"
 >
 </spy-table>
 ```
@@ -48,19 +48,19 @@ Register the component:
 ```ts
 // Dynamic
 @NgModule({
-  imports: [
-    TableModule.forRoot(),
-    TableModule.withFeatures({
-      filters: () =>
-        import('@spryker/table.feature.filters').then(
-          (m) => m.TableFiltersFeatureModule,
-        ),    
-    }),
-    TableFiltersFeatureModule.withFilterComponents({
-      'date-range': TableFilterDateRangeComponent,
-    }),
-    TableFilterDateRangeModule,
-  ],
+    imports: [
+        TableModule.forRoot(),
+        TableModule.withFeatures({
+            filters: () =>
+                import('@spryker/table.feature.filters').then(
+                    (m) => m.TableFiltersFeatureModule,
+                ),
+        }),
+        TableFiltersFeatureModule.withFilterComponents({
+            'date-range': TableFilterDateRangeComponent,
+        }),
+        TableFilterDateRangeModule,
+    ],
 })
 export class RootModule {}
 ```
@@ -68,16 +68,16 @@ export class RootModule {}
 ```html
 // Via HTML
 @NgModule({
-  imports: [
-    TableModule.forRoot(),
-    TableFiltersFeatureModule,
-    TableFilterDateRangeModule,
-  ],
+    imports: [
+        TableModule.forRoot(),
+        TableFiltersFeatureModule,
+        TableFilterDateRangeModule,
+    ],
 })
 export class RootModule {}
 
 <spy-table [config]="config">
-  <spy-table-filters-feature spy-table-feature></spy-table-filters-feature>
+    <spy-table-filters-feature spy-table-feature></spy-table-filters-feature>
 </spy-table>
 ```
 
@@ -87,21 +87,21 @@ Below you can find interfaces for the Table Filter Date Range:
 
 ```ts
 declare module '@spryker/table.feature.filters' {
-  interface TableFiltersRegistry {
-    dateRange: TableFilterDateRange;
-  }
+    interface TableFiltersRegistry {
+        dateRange: TableFilterDateRange;
+    }
 }
 
 export interface TableFilterDateRange
-  extends TableFilterBase<DateRangeValueInput> {
-  type: 'date-range';
-  typeOptions: TableFilterDateRangeOptions;
+    extends TableFilterBase<DateRangeValueInput> {
+    type: 'date-range';
+    typeOptions: TableFilterDateRangeOptions;
 }
 
 export interface TableFilterDateRangeOptions {
-  placeholderFrom?: string;
-  placeholderTo?: string;
-  format?: string;
-  time?: string | boolean;
+    placeholderFrom?: string;
+    placeholderTo?: string;
+    format?: string;
+    time?: string | boolean;
 }
 ```

@@ -19,10 +19,10 @@ Service configuration:
 
 ```html
 <spy-select
-  [datasource]="{
-    type: 'inline',
-    data: ['Inline 1', 'Inline 2'],
-  }"
+    [datasource]="{
+        type: 'inline',
+        data: ['Inline 1', 'Inline 2'],
+    }"
 >
 </spy-select>
 ```
@@ -33,11 +33,11 @@ Register the service:
 
 ```ts
 @NgModule({
-  imports: [
-    DatasourceModule.withDatasources({
-        inline: DatasourceInlineService,
-    }),
-  ],
+    imports: [
+        DatasourceModule.withDatasources({
+            inline: DatasourceInlineService,
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -48,12 +48,12 @@ Below you can find interfaces for the Datasource Inline:
 
 ```ts
 declare module '@spryker/datasource' {
-  interface DatasourceRegistry {
-    inline: DatasourceInlineService;
-  }
+    interface DatasourceRegistry {
+        inline: DatasourceInlineService;
+    }
 }
 
 export interface DatasourceInlineConfig extends DatasourceConfig {
-  data: unknown;
+    data: unknown;
 }
 ```

@@ -14,13 +14,13 @@ Check out an example usage of the Actions Close Drawer.
 
 Service configuration:
 
-`type` - an action type.
+- `type` - an action type.
 
 ```html
 <spy-button-action
-  [action]="{
-    type: 'close-drawer',
-  }"
+    [action]="{
+        type: 'close-drawer',
+    }"
 >
 </spy-button-action>
 ```
@@ -31,11 +31,11 @@ Register the service:
 
 ```ts
 @NgModule({
-  imports: [
-    ActionsModule.withActions({
-      'close-drawer': CloseDrawerActionHandlerService,
-    }),
-  ],
+    imports: [
+        ActionsModule.withActions({
+            'close-drawer': CloseDrawerActionHandlerService,
+        }),
+    ],
 })
 export class RootModule {}
 ```

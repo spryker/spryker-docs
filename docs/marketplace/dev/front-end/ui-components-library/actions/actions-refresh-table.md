@@ -19,10 +19,10 @@ Service configuration:
 
 ```html
 <spy-button-action
-  [action]="{
-    type: 'refresh-table',
-    tableId: 'table-id',
-  }"
+    [action]="{
+        type: 'refresh-table',
+        tableId: 'table-id',
+    }"
 >
 </spy-button-action>
 ```
@@ -33,11 +33,11 @@ Register the service:
 
 ```ts
 @NgModule({
-  imports: [
-    ActionsModule.withActions({
-      'refresh-table': RefreshTableActionHandlerService,
-    }),
-  ],
+    imports: [
+        ActionsModule.withActions({
+            'refresh-table': RefreshTableActionHandlerService,
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -48,6 +48,6 @@ Below you can find interfaces for Actions Refresh Table:
 
 ```ts
 export interface RefreshTableActionConfig extends ActionConfig {
-  tableId?: string;
+    tableId?: string;
 }
 ```

@@ -19,10 +19,10 @@ Service configuration:
 
 ```html
 <spy-button-action
-  [action]="{
-    type: 'redirect',
-    url: 'https://spryker.com',
-  }"
+    [action]="{
+        type: 'redirect',
+        url: 'https://spryker.com',
+    }"
 >
 </spy-button-action>
 ```
@@ -33,11 +33,11 @@ Register the service:
 
 ```ts
 @NgModule({
-  imports: [
-    ActionsModule.withActions({
-      redirect: RedirectActionHandlerService,
-    }),
-  ],
+    imports: [
+        ActionsModule.withActions({
+            redirect: RedirectActionHandlerService,
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -48,6 +48,6 @@ Below you can find interfaces for the Actions Redirect:
 
 ```ts
 export interface RedirectActionConfig extends ActionConfig {
-  url: string;
+    url: string;
 }
 ```

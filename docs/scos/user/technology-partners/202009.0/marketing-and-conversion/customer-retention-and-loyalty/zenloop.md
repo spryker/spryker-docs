@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 ## Partner Information
-[ABOUT ZENLOOP](https://www.zenloop.com){target="_blank"}
+[ABOUT ZENLOOP](https://www.zenloop.com)
 
 Automate customer retention
 

@@ -16,7 +16,7 @@ The following guide only demonstrates how to enable a development tool.
 
 The _Web Profiler_ provides a toolbar for debugging and informational purposes. The toolbar is located at the bottom of a loaded page.
 
-Spryker Profiler is based on _Symfony Profiler_. For details, see [Profiler documentation](https://symfony.com/doc/current/profiler.html){target="_blank"}.
+Spryker Profiler is based on _Symfony Profiler_. For details, see [Profiler documentation](https://symfony.com/doc/current/profiler.html).
 
 ## Modules
 

@@ -11,7 +11,7 @@ redirect_from:
 ---
 
 ## Payment Information
-[ABOUT POWERPAY](https://getpowerpay.com/){target="_blank"}
+[ABOUT POWERPAY](https://getpowerpay.com/)
 Omni-channel payment solutions for the 21st century
 
 powerpay21 is a Global FinTech Network that provides payment products and solutions for merchants whether offline or online.

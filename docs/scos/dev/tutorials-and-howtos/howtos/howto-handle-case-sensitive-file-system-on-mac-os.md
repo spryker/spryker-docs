@@ -90,5 +90,5 @@ The first time you open one of the projects form the disk-image you will notice 
 2. Add the following option: `idea.case.sensitive.fs=true`.
 3. Save and close.
 
-For more information, see [Filesystem Case-Sensitivity Mismatch](https://confluence.jetbrains.com/display/IDEADEV/Filesystem+Case-Sensitivity+Mismatch){target="_blank"}.
+For more information, see [Filesystem Case-Sensitivity Mismatch](https://confluence.jetbrains.com/display/IDEADEV/Filesystem+Case-Sensitivity+Mismatch).
  

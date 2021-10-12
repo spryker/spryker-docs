@@ -24,7 +24,7 @@ redirect_from:
 
 {% info_block errorBox %}
 
-This article conforms the [DSGVO](https://de.wikipedia.org/wiki/Datenschutz-Grundverordnung){target="_blank"} and [RGPD](https://fr.wikipedia.org/wiki/R%C3%A8glement_g%C3%A9n%C3%A9ral_sur_la_protection_des_donn%C3%A9es){target="_blank"} rules.
+This article conforms the [DSGVO](https://de.wikipedia.org/wiki/Datenschutz-Grundverordnung) and [RGPD](https://fr.wikipedia.org/wiki/R%C3%A8glement_g%C3%A9n%C3%A9ral_sur_la_protection_des_donn%C3%A9es) rules.
 
 {% endinfo_block %}
 

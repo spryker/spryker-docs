@@ -15,12 +15,12 @@ The following document covers the APIs for carts for **registered customers** on
 {% endinfo_block %}
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Carts API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html){target="_blank"}.
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Carts API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html).
 
 ## Guest Carts and Carts of Registered Users
-Access to carts for registered users is provided by the **/carts** resource. Before accessing the resource, you need to authenticate a user first. For more details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html){target="_blank"}.
+Access to carts for registered users is provided by the **/carts** resource. Before accessing the resource, you need to authenticate a user first. For more details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
 
-Unlike guest carts, carts of registered users have an unlimited lifetime. Also, if the multiple carts feature is [integrated into your project](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-feature-integration.html){target="_blank"} and Glue is [enabled for multi-cart operations](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-feature-integration.html){target="_blank"}, registered users can have as many carts as they want. In the B2B scenario, this allows for creating different carts for different purposes. For instance, registered users can have a cart for daily purchases and one more for purchases made once a month.
+Unlike guest carts, carts of registered users have an unlimited lifetime. Also, if the multiple carts feature is [integrated into your project](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-feature-integration.html) and Glue is [enabled for multi-cart operations](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-feature-integration.html), registered users can have as many carts as they want. In the B2B scenario, this allows for creating different carts for different purposes. For instance, registered users can have a cart for daily purchases and one more for purchases made once a month.
 
 ## Owned and Shared Carts
 Registered users can [share carts](/docs/scos/user/features/{{page.version}}/shared-carts-feature-overview.html) they own. Thus, a registered user can access both their personal carts and carts shared with them by other users. This feature allows company users to collaborate on company purchases as a team.
@@ -32,7 +32,7 @@ To use a Company Account, a customer needs to retrieve a bearer token for the ac
 
 {% info_block infoBox "Info" %}
 For details on how to receive the token, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html
-{% endinfo_block %}{target="_blank"}.)
+{% endinfo_block %}.)
 
 To be able to access shared carts, the API client needs to access the endpoints provided by the Carts API using the token received when impersonating as the Company Account. Doing so provides access to management of both the user's own carts and the carts shared with the current Company Account based on the bearer token presented.
 
@@ -42,7 +42,7 @@ By default, there are 2 levels of permissions for shared carts: **read-only** an
 
 {% info_block infoBox "Info" %}
 For more details, see section *Retrieving Cart Permission Groups* in [Sharing Company User Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/sharing-company-user-carts/retrieving-cart-permission-groups.html)
-{% endinfo_block %}{target="_blank"}.
+{% endinfo_block %}.
 
 To distinguish whether a specific cart is owned by a user directly or shared with them, you need to extend the responses of the endpoints with the **cart-permission-groups** resource relationship. For example, if you want to get all carts available to a company user and distinguish which of them are shared, send the following request: *GET http://glue.mysprykershop.com/carts?**include=cart-permission-groups***. If a cart is shared with the user, it will contain the relationship, while if a cart is owned by the user directly, the relationship will not be present.
 
@@ -101,7 +101,7 @@ The following example represents **2** carts available to a user, where:
 
 {% info_block infoBox "Info" %}
 For more details, see section *Retrieving Cart Permission Groups* in [Sharing Company User Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/sharing-company-user-carts/retrieving-cart-permission-groups.html)
-{% endinfo_block %}{target="_blank"}.
+{% endinfo_block %}.
 
 ## Creating Carts
 To create a cart for a registered user, send a *POST* request to the following endpoint:
@@ -119,13 +119,13 @@ Carts created via Glue API are always set as the default carts for the user.
 | Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
 | name | String | v | Sets the cart name.</br>This field can be set only if you are using the multiple carts feature. If you are operating in a single-cart environment, an attempt to set the value will result in an error with the **422 Unprocessable Entry** status code. |
-| priceMode | Enum | v | Sets the price mode to be used for the cart. Possible values:<ul><li>GROSS_MODE - prices after tax;</li><li>NET_MODE - prices before tax.</li></ul>For details, see [Net &amp; Gross Prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html){target="_blank"}. |
+| priceMode | Enum | v | Sets the price mode to be used for the cart. Possible values:<ul><li>GROSS_MODE - prices after tax;</li><li>NET_MODE - prices before tax.</li></ul>For details, see [Net &amp; Gross Prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html). |
 | currency | String | v | Sets the cart currency. |
 | store | String | v | Sets the name of the store where to create the cart. |
 
 {% info_block warningBox "Authentication" %}
 To use this endpoint, customers need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html
-{% endinfo_block %}{target="_blank"}.)
+{% endinfo_block %}.)
 
 **Sample Request Body:**
     
@@ -145,7 +145,7 @@ To use this endpoint, customers need to authenticate first. For details, see [Au
 
 {% info_block warningBox "Note" %}
 You can also use the **Accept-Language** header to specify the locale.Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
-{% endinfo_block %}{target="_blank"}.)
+{% endinfo_block %}.)
 
 ### Response
 If a request was successful and a cart was created, the endpoint responds with a **RestCartsResponse** containing information about the new cart.
@@ -226,13 +226,13 @@ Totals
 ### Request
 To access all available carts, send a GET request to the following endpoint:
 
-[/carts](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/carts){target="_blank"}
+[/carts](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/carts)
 
 Sample request: *GET http://glue.mysprykershop.com/carts*
 
 To get a specific cart by ID, use the following endpoint:
 
-[/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/carts){target="_blank"}
+[/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/carts)
 
 Sample request: *GET http://glue.mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054*
 
@@ -244,7 +244,7 @@ To use this endpoint, customers need to authenticate first. For details, see [Au
 
 {% info_block warningBox "Note" %}
 You can also use the **Accept-Language** header to specify the locale.Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
-{% endinfo_block %}{target="_blank"}.)
+{% endinfo_block %}.)
 
 ### Response
 No matter which of the 2 endpoints you use, the response will consist of a single or multiple **RestCartsResponse** objects containing the requested cart(s).
@@ -473,7 +473,7 @@ To use this endpoint, customers need to authenticate first. For details, see [Au
 
 {% info_block warningBox "Note" %}
 You can also use the **Accept-Language** header to specify the locale.Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
-{% endinfo_block %}{target="_blank"}.)
+{% endinfo_block %}.)
 
 **Attributes:**
 
@@ -526,7 +526,7 @@ where **4741fc84-2b9b-59da-bb8d-f4afab5be054** is the ID of the cart you need an
 
 {% info_block warningBox "Authentication" %}
 To use this endpoint, customers need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html
-{% endinfo_block %}{target="_blank"}.)
+{% endinfo_block %}.)
 
 ### Response
 If the item was deleted successfully, the endpoint will respond with a **204 No Content** status code.
@@ -543,7 +543,7 @@ If the item was deleted successfully, the endpoint will respond with a **204 No 
 ## Changing Item Quantity
 To change the quantity of certain items in a cart, use the following endpoint with the PATCH method:
 
-[/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/carts){target="_blank"}
+[/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/carts)
 
 ### Request
 
@@ -553,7 +553,7 @@ where **4741fc84-2b9b-59da-bb8d-f4afab5be054** is the ID of the cart you need an
 
 {% info_block warningBox "Authentication" %}
 To use this endpoint, customers need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html
-{% endinfo_block %}{target="_blank"}.)
+{% endinfo_block %}.)
 
 **Attributes:**
 
@@ -589,7 +589,7 @@ In case of a successful update, the endpoint will respond with a **RestCartsResp
 ## Deleting Registered User's Cart
 To delete a cart of a registered user, send a DELETE request to the following endpoint::
 
-[/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/carts){target="_blank"}
+[/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/carts)
 
 {% info_block errorBox %}
 You cannot delete a cart if it is the customer's only cart. If you attempt to delete a customer's last cart, the endpoint responds with the **422 Unprocessable Entry** status code.If you delete the default cart of a customer, another cart will be assigned as default automatically.
@@ -602,7 +602,7 @@ where **4741fc84-2b9b-59da-bb8d-f4afab5be054** is the ID of the cart you want to
 
 {% info_block warningBox "Authentication" %}
 To use this endpoint, customers need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html
-{% endinfo_block %}{target="_blank"}.)
+{% endinfo_block %}.)
 
 ### Response
 If the cart was deleted successfully, the endpoint will respond with a **204 No Content** status code.

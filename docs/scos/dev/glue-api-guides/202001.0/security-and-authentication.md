@@ -88,7 +88,7 @@ In addition to user scopes, each endpoint can be secured individually. For this 
 
 {% info_block infoBox %}
 For details, see [Resource Routing](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-infrastructure.html#resource-routing
-{% endinfo_block %}{target="_blank"}.)
+{% endinfo_block %}.)
 
 
 For each function in the set, the second parameter determines, whether the corresponding verb requires authentication to use (the parameter value is true) or not (the value is false). If the parameter is not passed, the verb requires authentication.

@@ -16,7 +16,7 @@ The following document covers the APIs for carts for **registered customers** on
 
 ## Multiple Carts
 
-Unlike guest carts, carts of registered users have unlimited lifetime. Also, if the Multiple Carts feature is [integrated into your project](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-feature-integration.html){target="_blank"} and Glue is [enabled for multi-cart operations](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-feature-integration.html){target="_blank"}, registered users can have unlimited number of carts.
+Unlike guest carts, carts of registered users have unlimited lifetime. Also, if the Multiple Carts feature is [integrated into your project](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-feature-integration.html) and Glue is [enabled for multi-cart operations](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-feature-integration.html), registered users can have unlimited number of carts.
 
 ## Owned and Shared Carts
 Registered users can [share carts](/docs/scos/user/features/{{page.version}}/shared-carts-feature-overview.html) they own. Thus, a registered user can access both their personal carts and carts shared with them by other users. This feature allows company users to collaborate on company purchases as a team.
@@ -28,7 +28,7 @@ To use a Company Account, a customer needs to retrieve a bearer token for the ac
 
 {% info_block infoBox "Authentication" %}
 For details on how to receive the token, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html
-{% endinfo_block %}{target="_blank"}.)
+{% endinfo_block %}.)
 
 To be able to access shared carts, the API client needs to access the endpoints provided by the Carts API using the token received when impersonating as the Company Account. Doing so provides access to management of both the user's own carts and the carts shared with the current Company Account based on the bearer token presented.
 
@@ -45,7 +45,7 @@ To distinguish whether a specific cart is owned by a user directly or shared wit
 
 {% info_block infoBox "Info" %}
 For more details, see section *Retrieving Cart Permission Groups* in [Sharing Company User Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/sharing-company-user-carts/retrieving-cart-permission-groups.html)
-{% endinfo_block %}{target="_blank"}.
+{% endinfo_block %}.
 
 
 ## Installation
@@ -92,7 +92,7 @@ Sample request: `POST http://glue.mysprykershop.com/carts`
 | Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
 | name | String | v | Sets the cart name.</br>This field can be set only if you are using the multiple carts feature. If you are operating in a single-cart environment, an attempt to set the value will result in an error with the **422 Unprocessable Entry** status code. |
-| priceMode | Enum | v | Sets the price mode to be used for the cart. Possible values:<ul><li>GROSS_MODE - prices after tax;</li><li>NET_MODE - prices before tax.</li></ul>For details, see [Net &amp; Gross Prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html){target="_blank"}. |
+| priceMode | Enum | v | Sets the price mode to be used for the cart. Possible values:<ul><li>GROSS_MODE - prices after tax;</li><li>NET_MODE - prices before tax.</li></ul>For details, see [Net &amp; Gross Prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html). |
 | currency | String | v | Sets the cart currency. |
 | store | String | v | Sets the name of the store where to create the cart. |
 

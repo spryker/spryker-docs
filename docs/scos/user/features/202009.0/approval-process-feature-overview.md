@@ -36,7 +36,7 @@ For the approval process, you can set specific permissions for the Approver and 
 It is mandatory for the Buyer role to set this permission, if you want to use the Approval Process feature in your project.
 
 {% endinfo_block %}
-To configure this permission, use [this step-by-step instruction](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html#approval-process-on-the-storefront){target="_blank"}.
+To configure this permission, use [this step-by-step instruction](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html#approval-process-on-the-storefront).
 
 * The *Send cart for approval* permission that allows a buyer to send a cart for approval to their manager. Without this permission, a buyer cannot see the Request for Approval widget.
 

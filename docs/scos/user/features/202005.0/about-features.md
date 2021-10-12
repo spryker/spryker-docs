@@ -18,20 +18,20 @@ The **Features** section unfolds into a list of capabilities. Each capability co
 
 In the feature documentation, you will find the following information:
 
-* A short summary of a feature with lists of guidelines designed for different [personas](/docs/scos/user/intro-to-spryker/{{site.version}}/about-spryker-documentation.html#personas){target="_blank"}.
+* A short summary of a feature with lists of guidelines designed for different [personas](/docs/scos/user/intro-to-spryker/{{site.version}}/about-spryker-documentation.html#personas).
 * A detailed overview of a feature, workflows, database structure, and more.
 
 The documentation in this section provides detailed descriptions of features, highlights their functional abilities, business values, and use-case examples. This information will be useful for business owners, product owners, and anyone looking to learn more about the Spryker features or add new functionality to a Spryker-based project.
 
 {% info_block infoBox "Note" %}
 
-This documentation is meant for reference purposes only and does not contain step-by-step guides. If you need specific guides on how to use or install a feature, go to its summary page (for example, the [Content Items](/docs/scos/user/features/{{page.version}}/content-items.html){target="_blank"} feature summary), and depending on your role, find the guide in the **If you are** table.
+This documentation is meant for reference purposes only and does not contain step-by-step guides. If you need specific guides on how to use or install a feature, go to its summary page (for example, the [Content Items](/docs/scos/user/features/{{page.version}}/content-items.html) feature summary), and depending on your role, find the guide in the **If you are** table.
 
 Or, you can go directly to the following guides to search for the necessary information:
 
-* [Back Office User Guide](https://documentation.spryker.com/v5/docs/en/overview-of-the-back-office-user-guide){target="_blank"}: for step-by-step guides on how to work with the features in the Back Office.
-* [Feature integration guides](/docs/scos/dev/feature-integration-guides/{{page.version}}/about-integration-guides.html){target="_blank"}: for developer guides on how to integrate a feature into a Spryker project.
-* [Module guides](/docs/scos/dev/module-migration-guides/{{page.version}}/about-migration-guides.html){target="_blank"}: for developer guides on how to upgrade individual feature modules.
+* [Back Office User Guide](https://documentation.spryker.com/v5/docs/en/overview-of-the-back-office-user-guide): for step-by-step guides on how to work with the features in the Back Office.
+* [Feature integration guides](/docs/scos/dev/feature-integration-guides/{{page.version}}/about-integration-guides.html): for developer guides on how to integrate a feature into a Spryker project.
+* [Module guides](/docs/scos/dev/module-migration-guides/{{page.version}}/about-migration-guides.html): for developer guides on how to upgrade individual feature modules.
 
 
 {% endinfo_block %}

@@ -21,7 +21,7 @@ composer require spryker/product-configuration:"^0.2.0" --update-with-dependenc
 ```bash
 console transfer:generate
 ```
-3. From `\Pyz\Client\ProductConfiguration\ProductConfigurationDependencyProvider` remove the removed plugin stacks:
+3. From `\Pyz\Client\ProductConfiguration\ProductConfigurationDependencyProvider` remove the plugin stacks:
    - `\Pyz\Client\ProductConfiguration\ProductConfigurationDependencyProvider::getDefaultProductConfiguratorRequestPlugin()`
    - `\Pyz\Client\ProductConfiguration\ProductConfigurationDependencyProvider::getDefaultProductConfiguratorResponsePlugin()`
 

@@ -24,11 +24,11 @@ jobs:
           bundler-cache: true
 
       - name: Cache HTMLProofer
-          id: cachehtmlproofer
-          uses: actions/cache@v2
-          with:
-            path: tmp/.htmlproofer
-            key: ${{ runner.os }}-htmlproofer
+        id: cache-htmlproofer
+        uses: actions/cache@v2
+        with:
+          path: tmp/.htmlproofer
+          key: ${{ runner.os }}-htmlproofer
 
       - run: bundle exec jekyll build --config=_config.yml,_config_production.yml
 

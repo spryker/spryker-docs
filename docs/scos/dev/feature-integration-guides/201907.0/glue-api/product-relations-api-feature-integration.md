@@ -15,7 +15,7 @@ To start feature integration, overview and install the necessary features:
 
 |Name|Version|Required Sub-Feature|
 |---|---|---|
-|Spryker Core|201907.0|[Glue Application](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-application-feature-integration.html)|
+|Spryker Core|201907.0|[Glue Application](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html)|
 |Product Relation|201907.0||
 |Glue API: Cart|201907.0| [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html) |
 |Glue API: Products |201903.0|[Product API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/product-api-feature-integration.html)|

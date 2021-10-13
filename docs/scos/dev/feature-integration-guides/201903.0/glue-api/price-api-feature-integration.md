@@ -15,7 +15,7 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Integration guide |
 | --- | --- | --- |
-| Glue API: Glue Application | 201903.0 | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-application-feature-integration.html) |
+| Glue API: Glue Application | 201903.0 | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
 | Product | 201903.0 | [Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/products-feature-integration.html) |
 | Price | 201903.0 |  |
 

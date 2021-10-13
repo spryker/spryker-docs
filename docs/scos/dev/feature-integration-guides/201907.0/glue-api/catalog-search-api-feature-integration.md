@@ -14,7 +14,7 @@ redirect_from:
 To start feature integration, overview and install the necessary features:
 |Name|Version|Integration guide|
 |---|---|---|
-| Glue API: Glue Application |201903.0| [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-application-feature-integration.html) |
+| Glue API: Glue Application |201903.0| [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
 |Search|201903.0||
 |Catalog2|01903.0||
 |Product|201903.0|[Product API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/product-api-feature-integration.html) <!-- Replace by v201903 once available-->|

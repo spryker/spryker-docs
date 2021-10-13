@@ -30,7 +30,7 @@ On a product detail page, we have related products for the given product. In the
 | [ProductRelationCollector 1.0.0](https://github.com/spryker/product-relation-collector/releases/tag/1.0.0) | n/a | [ProductRelation 1.0.2](https://github.com/spryker/product-relation/releases/tag/1.0.2) |
 
 **Documentation**
-For module documentation, see [Product Relations](/docs/scos/user/features/{{site.version}}/product-relations-feature-overview.html). For integration guides see: [Product Relations Feature Integration](https://documentation.spryker.com/2021080/docs/product-relation-integration).
+For module documentation, see [Product Relations](/docs/scos/user/features/{{site.version}}/product-relations-feature-overview.html).
 
 ### Event Module
 This release introduces the `Event` module. It implements the Observer pattern where you can add extension points(events) in your code and allow other modules to listen and react to those events. Asynchronous event handling is supported.

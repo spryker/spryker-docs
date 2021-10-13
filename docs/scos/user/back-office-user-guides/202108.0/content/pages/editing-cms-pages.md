@@ -36,11 +36,11 @@ To change general information and SEO details, on the *Edit CMS Page: [Page Name
     * Template
      * Valid from and Valid to
      * Name and URL per locale
-   
-* In the *SEO* tab (per locale): 
+
+* In the *SEO* tab (per locale):
      * Meta title
      * Meta keywords
-     * Meta description 
+     * Meta description
 
 **Tips & tricks**
 On the *Edit CMS Page: [Page Name]* page, you can do the following:
@@ -61,8 +61,10 @@ To change the title and content of the page:
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Pages/Editing+CMS+Pages/placeholders.png)
 
 {% info_block infoBox %}
-In the placeholders editor, you can insert a banner, abstract product list, product set, and downloadable files using content item widgets. See [Adding content item widgets to a page](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html#adding-content-item-widgets-to-pages
-{% endinfo_block %} for more details. )
+
+In the placeholders editor, you can insert a banner, abstract product list, product set, and downloadable files using content item widgets. See [Adding content item widgets to a page](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html#adding-content-item-widgets-to-pages) for more details.
+
+{% endinfo_block %}
 
 **Tips & tricks**
 On the *Edit Placeholders: [Page Name]* editor, you can do the following:
@@ -93,4 +95,3 @@ The following table describes the attributes you enter when editing a CMS page.
 |  | Meta Title | Meta title. |
 |  | Meta Keywords  | Meta keywords.  |
 |  | Meta Description | Meta description. |
-

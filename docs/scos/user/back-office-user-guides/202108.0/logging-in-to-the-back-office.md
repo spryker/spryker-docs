@@ -17,7 +17,7 @@ To be able to use the Back Office, you have to log in to it. You can log in via:
 
 {% info_block warningBox %}
 
-Only [active](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-users.html#activating-and-deactivating-a-user) users can log in to the Back Office.
+Only [active](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-users.html#activating-and-deactivating-users) users can log in to the Back Office.
 
 {% endinfo_block %}
 
@@ -39,9 +39,9 @@ If you forgot your password:
 1. In the login form, click **Forgot password**.
 2. Enter the email that was used for your Back Office account registration and click **Recover password**.
 You should receive an email with the link to restore your password.
-3. In the email, click the change password link. 
+3. In the email, click the change password link.
 This takes you to the *Reset password page* in the Back Office.
-4. In the *Password* and *Repeat password* fields, enter your new password. 
+4. In the *Password* and *Repeat password* fields, enter your new password.
 5. Click **Reset**.
 
 Your password is now updated. To log in, enter the new password in the login form.
@@ -59,7 +59,7 @@ You are taken to the Back Office home page as a logged-in user. User with the em
 
 {% info_block warningBox %}
 
-Depending on the [third-party login strategy](https://documentation.spryker.com/2021080/docs/back-office-login-feature-overview#strategies) configured in your project, you might not be allowed to log in with a third-party account unless a user with an email that matches the existing third-party user email has not been [preliminary created](#prerequisites) and [activated](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-users.html#activating-and-deactivating-a-user). 
+Depending on the [third-party login strategy](/docs/scos/user/features/{{page.version}}/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.html#back-office-authentication) configured in your project, you might not be allowed to log in with a third-party account unless a user with an email that matches the existing third-party user email has not been [preliminary created](#prerequisites) and [activated](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-users.html#activating-and-deactivating-users).
 
 {% endinfo_block %}
 

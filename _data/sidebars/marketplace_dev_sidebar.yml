@@ -88,8 +88,33 @@ entries:
           - title: Marketplace Wishlist feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-wishlist-feature-walkthrough.html
 
+          - title: Persistence ACL feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html
+            nested:
+              - title: Configuration
+                url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/configuration.html
+              - title: Rules and scopes
+                url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/rules-and-scopes/rules-and-scopes.html
+                nested:
+                  - title: Global scope
+                    url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/rules-and-scopes/global-scope.html
+                  - title: Segment scope
+                    url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/rules-and-scopes/segment-scope.html
+                  - title: Inherited scope
+                    url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/rules-and-scopes/inherited-scope.html
+                  - title: Composite entity
+                    url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/rules-and-scopes/composite-entity.html
+              - title: Execution flow
+                url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/execution-flow.html
+
       - title: Feature integration guides
         nested:
+          - title: ACL feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/acl-feature-integration.html
+          
+          - title: Marketplace Dummy Payment feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-dummy-payment-feature-integration.html
+          
           - title: Marketplace Inventory Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-feature-integration.html
 
@@ -105,33 +130,45 @@ entries:
           - title: Marketplace Merchant Portal Core feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-portal-core-feature-integration.html
 
-          - title: Marketplace Order Management + Cart feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-cart-feature-integration.html
+          - title: Marketplace Cart feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-cart-feature-integration.html
 
-          - title: Marketplace Order Management + Customer Account Management feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-customer-account-management-feature-integration.html
+          - title: Merchant Category feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-category-feature-integration.html
+          
+          - title: Merchant Opening Hours feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-opening-hours-feature-integration.html
+          
+          - title: Merchant Switcher feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-feature-integration.html
+
+          - title: Merchant Switcher + Wishlist feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-wishlist-feature-integration.html
 
           - title: Marketplace Order Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html
+          
+          - title: Marketplace Order Management + Customer Account Management feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-customer-account-management-feature-integration.html
 
           - title: Marketplace Order Management + Order Threshold feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-order-threshold-feature-integration.html
 
-          - title: Marketplace Product + Cart feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-cart-feature-integration.html
-
           - title: Marketplace Product feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-feature-integration.html
+
+          - title: Marketplace Product + Cart feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-cart-feature-integration.html
 
           - title: Marketplace Product + Inventory Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-inventory-management-feature-integration.html
 
-          - title: Marketplace Product Offer feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-feature-integration.html
-
           - title: Marketplace Product + Marketplace Product Offer feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-marketplace-product-offer-feature-integration.html
 
+          - title: Marketplace Product Offer feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-feature-integration.html
+          
           - title: Marketplace Product Offer Prices feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-prices-feature-integration.html
 
@@ -162,12 +199,6 @@ entries:
           - title: Marketplace Wishlist feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-wishlist-feature-integration.html
 
-          - title: Merchant Category feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/merchant-category-feature-integration.html
-
-          - title: Merchant Opening Hours feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/merchant-opening-hours-feature-integration.html
-
           - title: Merchant Portal feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-feature-integration.html
 
@@ -177,8 +208,14 @@ entries:
           - title: Merchant Portal - Marketplace Product feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-feature-integration.html
 
-          - title: Marketplace Merchant Portal Product Offer Management feature integration
+          - title: Merchant Portal - Marketplace Merchant Portal Product Offer Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-portal-product-offer-management-feature-integration.html
+
+          - title: Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature-integration.html
+
+          - title: Merchant Portal - Marketplace Order Management feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-order-management-feature-integration.html
 
           - title: Merchant Portal - Marketplace Product + Tax feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-tax-feature-integration.html
@@ -186,46 +223,52 @@ entries:
           - title: Merchant Portal - Marketplace Product + Inventory Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-inventory-management-feature-integration.html
 
-          - title: Merchant Switcher feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-feature-integration.html
-
-          - title: ACL feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/acl-feature-integration.html
-
           - title: Glue API
             nested:
               - title: "Glue API: Marketplace Inventory Management feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-inventory-management-feature-integration.html
 
+              - title: "Glue API: Marketplace Inventory Management + Wishlist feature integration"
+                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-inventory-management-wishlist-feature-integration.html
+              
               - title: "Glue API: Marketplace Merchant feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-merchant-feature-integration.html
 
+              - title: "Glue API: Merchant Opening Hours feature integration"
+                url: /docs/marketplace/dev/feature-integration-guides/glue/merchant-opening-hours-feature-integration.html
+              
+              - title: "Glue API: Merchant Category feature integration"
+                url: /docs/marketplace/dev/feature-integration-guides/glue/merchant-category-feature-integration.html
+              
               - title: "Glue API: Marketplace Product feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-feature-integration.html
+
+              - title: "Glue API: Marketplace Product + Cart feature integration"
+                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-cart-feature-integration.html
 
               - title: "Glue API: Marketplace Product Offer feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-feature-integration.html
 
-              - title: "Glue API: Marketplace Product Offer Prices feature integration"
-                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-prices-feature-integration.html
-
+              - title: "Glue API: Marketplace Product Offer + Cart feature integration"
+                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-cart-feature-integration.html
+              
               - title: "Glue API: Marketplace Product Offer + Wishlist feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-wishlist-feature-integration.html
 
+              - title: "Glue API: Marketplace Product Offer Prices feature integration"
+                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-prices-feature-integration.html
+              
+              - title: "Glue API: Marketplace Product Offer Prices + Wishlist feature integration"
+                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-prices-wishlist-feature-integration.html
+              
+              - title: "Glue API: Prices + Marketplace Wishlist feature integration"
+                url: /docs/marketplace/dev/feature-integration-guides/glue/prices-marketplace-wishlist-feature-integration.html
+              
+              - title: "Glue API: Marketplace Product Offer Volume Prices feature integration"
+                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-volume-prices.html
+              
               - title: "Glue API: Marketplace Return Management feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-return-management-feature-integration.html
-
-              - title: "Glue API: Merchant Category feature integration"
-                url: /docs/marketplace/dev/feature-integration-guides/glue/merchant-category-feature-integration.html
-
-              - title: "Glue API: Merchant Opening Hours feature integration"
-                url: /docs/marketplace/dev/feature-integration-guides/glue/merchant-opening-hours-feature-integration.html
-
-              - title: "Glue API: Marketplace Product Offer Volume Prices feature integration"
-                url: /docs/marketplace/dev/feature-integration-guides/glue/glue-api-marketplace-product-offer-volume-prices.html
-
-              - title: "Glue API: Marketplace Product Offer + Cart feature integration"
-                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-cart-feature-integration.html
 
       - title: Glue API guides
         nested:

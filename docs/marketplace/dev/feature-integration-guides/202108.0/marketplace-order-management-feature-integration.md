@@ -44,6 +44,8 @@ Make sure that the following modules have been installed:
 | MerchantSalesOrderMerchantUserGui | vendor/spryker/merchant-sales-order-merchant-user-gui |
 | MerchantSalesOrderDataExport | vendor/spryker/merchant-sales-order-data-export |
 | ProductOfferSales | vendor/spryker/product-offer-sales |
+| OmsProductOfferReservation | vendor/spryker/oms-product-offer-reservation |
+| ProductOfferReservationGui | vendor/spryker/product-offer-reservation-gui |
 
 {% endinfo_block %}
 
@@ -57,6 +59,60 @@ Add the following configuration:
 | MerchantDefaultStateMachine | Introduce `MerchantDefaultStateMachine` configuration. | config/Zed/StateMachine/Merchant/MerchantDefaultStateMachine.xml |
 | MarketplacePayment  | Introduce `MarketplacePayment` order management system. | config/Zed/oms/MarketplacePayment01.xml |
 | Navigation  | Introduce navigation configuration. | config/Zed/navigation.xml |
+| MerchantOmsConfig  | Introduce OMS processes configuration. | src/Pyz/Zed/MerchantOms/MerchantOmsConfig.php |
+
+<details>
+<summary markdown='span'>src/Pyz/Zed/MerchantOms/MerchantOmsConfig.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantOms;
+
+use Spryker\Zed\MerchantOms\MerchantOmsConfig as SprykerMerchantOmsConfig;
+
+class MerchantOmsConfig extends SprykerMerchantOmsConfig
+{
+    /**
+     * @var string
+     */
+    protected const MAIN_MERCHANT_OMS_PROCESS_NAME = 'MainMerchantStateMachine';
+    /**
+     * @var string
+     */
+    protected const MAIN_MERCHANT_STATE_MACHINE_INITIAL_STATE = 'created';
+
+    /**
+     * @return string[]
+     */
+    public function getMerchantProcessInitialStateMap(): array
+    {
+        return array_merge(
+            parent::getMerchantProcessInitialStateMap(),
+            [
+                static::MAIN_MERCHANT_OMS_PROCESS_NAME => static::MAIN_MERCHANT_STATE_MACHINE_INITIAL_STATE,
+            ]
+        );
+    }
+
+    /**
+     * @api
+     *
+     * @return string[]
+     */
+    public function getMerchantOmsProcesses(): array
+    {
+        return array_merge(
+            parent::getMerchantOmsProcesses(),
+            [
+                static::MAIN_MERCHANT_OMS_PROCESS_NAME,
+            ]
+        );
+    }
+}
+```
+
+</details>
 
 <details>
 <summary markdown='span'>config/Zed/StateMachine/Merchant/MainMerchantStateMachine.xml</summary>
@@ -383,6 +439,28 @@ Make sure that, in the navigation menu of the Back Office, you can see the **Mar
 
 ### 3) Set up database schema and transfer objects
 
+Adjust the schema definition so entity changes trigger events:
+
+**src/Pyz/Zed/OmsProductOfferReservation/Persistence/Propel/Schema/spy_oms_product_offer_reservation.schema.xml**
+
+```xml
+<?xml version="1.0"?>
+<database xmlns="spryker:schema-01"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          name="zed"
+          xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
+          namespace="Orm\Zed\OmsProductOfferReservation\Persistence"
+          package="src.Orm.Zed.OmsProductOfferReservation.Persistence">
+
+    <table name="spy_oms_product_offer_reservation">
+        <behavior name="event">
+            <parameter name="spy_oms_product_offer_reservation_all" column="*"/>
+        </behavior>
+    </table>
+
+</database>
+```
+
 Apply database changes and generate entity and transfer changes:
 
 ```bash
@@ -404,6 +482,7 @@ Check your database to make sure that the following changes have been applied:
 |spy_merchant_sales_order_totals | table |created |
 |spy_sales_expense.merchant_reference | column |created |
 |spy_sales_order_item.merchant_reference | column |created  |
+|spy_sales_order_item.product_offer_reference | column | created |
 
 {% endinfo_block %}
 
@@ -423,6 +502,8 @@ Make sure that the following changes have been triggered in transfer objects:
 | MerchantOrderItemResponse | class | created | src/Generated/Shared/Transfer/MerchantOrderItemResponseTransfer |
 | MerchantOmsTriggerRequest | class | created | src/Generated/Shared/Transfer/MerchantOmsTriggerRequestTransfer |
 | MerchantOmsTriggerResponse | class | created | src/Generated/Shared/Transfer/MerchantOmsTriggerResponseTransfer |
+| OmsProductOfferReservationCriteria | class | created| src/Generated/Shared/Transfer/OmsProductOfferReservationCriteriaTransfer |
+| OmsProductOfferReservation | class | created| src/Generated/Shared/Transfer/OmsProductOfferReservationTransfer |
 
 {% endinfo_block %}
 
@@ -625,11 +706,13 @@ Enable the following behaviors by registering the plugins:
 | MerchantOrderDataOrderExpanderPlugin  | Expands order data with merchant order details | | Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Sales |
 | MerchantReferenceOrderItemExpanderPreSavePlugin  | Expands order item with merchant reference before saving an order item to the database | | Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Sales |
 | MerchantReferencesOrderExpanderPlugin  |Expands order with merchant references from order items  | |	Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Sales  |
-| MerchantReferenceShipmentExpenseExpanderPlugin | Expands expense transfer with merchant reference from items | | Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Shipment |
 | ProductOfferReferenceOrderItemExpanderPreSavePlugin |Expands order item with product offer reference before saving the order item to the database  | | Spryker\Zed\ProductOfferSales\Communication\Plugin\Sales |
 | DeliverMarketplaceOrderItemCommandPlugin | Triggers 'deliver' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
 | ShipByMerchantMarketplaceOrderItemCommandPlugin | Triggers 'ship by merchant' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
 | CancelMarketplaceOrderItemCommandPlugin | Triggers 'ship by merchant' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
+| ShipmentFormTypePlugin | Returns ShipmentFormType class name resolution.  |  | Spryker\Zed\ShipmentGui\Communication\Plugin\Form |
+| ItemFormTypePlugin | Returns ItemFormType class name resolution.  |  | Spryker\Zed\ShipmentGui\Communication\Plugin\Form |
+| MerchantReferenceShipmentExpenseExpanderPlugin | Expands expense transfer with merchant reference from items | | Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Shipment |
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/MerchantOmsCommunicationFactory.php</summary>
@@ -809,33 +892,6 @@ class StateMachineDependencyProvider extends SprykerStateMachineDependencyProvid
 </details>
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/Shipment/ShipmentDependencyProvider.php</summary>
-
-```php
-<?php
-
-namespace Pyz\Zed\Shipment;
-
-use Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Shipment\MerchantReferenceShipmentExpenseExpanderPlugin;
-use Spryker\Zed\Shipment\ShipmentDependencyProvider as SprykerShipmentDependencyProvider;
-
-class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
-{
-    /**
-     * @return \Spryker\Zed\ShipmentExtension\Dependency\Plugin\ShipmentExpenseExpanderPluginInterface[]
-     */
-    protected function getShipmentExpenseExpanderPlugins(): array
-    {
-        return [
-            new MerchantReferenceShipmentExpenseExpanderPlugin(),
-        ];
-    }
-}
-
-```
-</details>
-
-<details>
 <summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/DeliverMarketplaceOrderItemCommandPlugin.php</summary>
 
 ```php
@@ -937,6 +993,68 @@ class MerchantOmsDependencyProvider extends SprykerMerchantOmsDependencyProvider
 ```
 </details>
 
+<details>
+<summary markdown='span'>src/Pyz/Zed/MerchantSalesOrderMerchantUserGui/MerchantSalesOrderMerchantUserGuiDependencyProvider.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantSalesOrderMerchantUserGui;
+
+use Spryker\Zed\Kernel\Communication\Form\FormTypeInterface;
+use Spryker\Zed\MerchantSalesOrderMerchantUserGui\MerchantSalesOrderMerchantUserGuiDependencyProvider as SprykerMerchantSalesOrderMerchantUserGuiDependencyProvider;
+use Spryker\Zed\ShipmentGui\Communication\Plugin\Form\ItemFormTypePlugin;
+use Spryker\Zed\ShipmentGui\Communication\Plugin\Form\ShipmentFormTypePlugin;
+
+class MerchantSalesOrderMerchantUserGuiDependencyProvider extends SprykerMerchantSalesOrderMerchantUserGuiDependencyProvider
+{
+    /**
+     * @return \Spryker\Zed\Kernel\Communication\Form\FormTypeInterface
+     */
+    public function getShipmentFormTypePlugin(): FormTypeInterface
+    {
+        return new ShipmentFormTypePlugin();
+    }
+
+    /**
+     * @return \Spryker\Zed\Kernel\Communication\Form\FormTypeInterface
+     */
+    public function getItemFormTypePlugin(): FormTypeInterface
+    {
+        return new ItemFormTypePlugin();
+    }
+}
+```
+
+</details>
+
+<details>
+<summary markdown='span'>src/Pyz/Zed/Shipment/ShipmentDependencyProvider.php**</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\Shipment;
+
+use Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Shipment\MerchantReferenceShipmentExpenseExpanderPlugin;
+use Spryker\Zed\Shipment\ShipmentDependencyProvider as SprykerShipmentDependencyProvider;
+
+class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
+{
+    /**
+     * @return \Spryker\Zed\ShipmentExtension\Dependency\Plugin\ShipmentExpenseExpanderPluginInterface[]
+     */
+    protected function getShipmentExpenseExpanderPlugins(): array
+    {
+        return [
+            new MerchantReferenceShipmentExpenseExpanderPlugin(),
+        ];
+    }
+}
+```
+
+</details>
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the Merchant State Machine is executed on merchant orders after the order has been split.
@@ -945,89 +1063,6 @@ Make sure that when retrieving an order in the *Sales* module, it is split by th
 
 {% endinfo_block %}
 
-## Install feature front end
-
-Follow the steps below to install the Marketplace Order Management feature front end.
-
-### Prerequisites
-
-To start feature integration, integrate the required features:
-
-| NAME | VERSION | INTEGRATION GUIDE |
-| --------- | ------ | --------------|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-
-### 1) Install the required modules using Сomposer
-
-If installed before, not needed.
-
-Make sure that the following modules have been installed:
-
-| MODULE  | EXPECTED DIRECTORY <!--for public Demo Shops--> |
-| -------- | ------------------- |
-| SalesMerchantPortalGui | spryker/sales-merchant-portal-gui |
-
-### 2) Set up transfers
-
-Apply database changes and to generate entity and transfer changes:
-
-```bash
-console transfer:generate
-```
-
-{% info_block warningBox "Verification" %}
-
-Ensure the following transfers have been created:
-
-| TRANSFER | TYPE | EVENT  | PATH  |
-| --------- | ------- | ----- | ------------- |
-| MerchantOrderTableCriteria | class | created | src/Generated/Shared/Transfer/MerchantOrderCriteriaTransfer |
-| MerchantOrderItemTableCriteria | class | created | src/Generated/Shared/Transfer/DataImporterConfigurationTransfer |
-
-{% endinfo_block %}
-
-### 3) Set up plugins
-
-Register the following plugins to enable widgets:
-
-| PLUGIN | SPECIFICATION | PREREQUISITES   | NAMESPACE   |
-| --------------- | -------------- | ------ | -------------- |
-| OrdersMerchantDashboardCardPlugin | Adds the Sales widget to MerchantDashboard |  |   Spryker\Zed\SalesMerchantPortalGui\Communication\Plugin |
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/DashboardMerchantPortalGui/DashboardMerchantPortalGuiDependencyProvider.php</summary>
-
-```php
-<?php
-
-namespace Pyz\Zed\DashboardMerchantPortalGui;
-
-use Spryker\Zed\DashboardMerchantPortalGui\DashboardMerchantPortalGuiDependencyProvider as SprykerDashboardMerchantPortalGuiDependencyProvider;
-use Spryker\Zed\SalesMerchantPortalGui\Communication\Plugin\DashboardMerchantPortalGui\OrdersMerchantDashboardCardPlugin;
-
-class DashboardMerchantPortalGuiDependencyProvider extends SprykerDashboardMerchantPortalGuiDependencyProvider
-{
-    protected function getDashboardCardPlugins(): array
-    {
-        return [
-            new OrdersMerchantDashboardCardPlugin(),
-        ];
-    }
-}
-
-```
-
-</details>
-
-{% info_block warningBox "Verification" %}
-
-Make sure that the following widgets have been registered by adding the respective code snippets to a Twig template:
-
-| WIDGET | VERIFICATION |
-| ----------- | ---------- |
-| SalesMerchantPortalGui| Open MerchantDashboard at `http://mysprykershop.com/dashboard-merchant-portal-gui` and check that the Sales widget is available. |
-
-{% endinfo_block %}
 
 ## Related features
 
@@ -1036,5 +1071,4 @@ Integrate the following related features:
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE |INTEGRATION GUIDE |
 | --- | --- | --- |
 | Marketplace Order Management + Order Threshold |  |[Marketplace Order Management + Order Threshold feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-order-threshold-feature-integration.html) |
-| Marketplace Order Management + Cart |  | [Marketplace Order Management + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-cart-feature-integration.html)|
-| Marketplace Inventory Management + Marketplace Order Management |  |  [Marketplace Inventory Management + Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-order-management-feature-integration.html)  |
+| Marketplace Inventory Management + Order Management |  |  [Marketplace Inventory Management + Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-order-management-feature-integration.html)  |

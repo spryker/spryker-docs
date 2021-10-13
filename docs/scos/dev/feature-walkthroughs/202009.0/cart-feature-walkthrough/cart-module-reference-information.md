@@ -8,6 +8,11 @@ originalArticleId: 033d80e2-a5c6-436d-94e5-e8aef49d9bd5
 redirect_from:
   - /v6/docs/cart-module-reference-information
   - /v6/docs/en/cart-module-reference-information
+related:
+  - title: Calculation Data Structure
+    link: docs/scos/dev/feature-walkthroughs/page.version/cart-feature-walkthrough/calculation-data-structure.html
+  - title: Calculator Plugins
+    link: docs/scos/dev/feature-walkthroughs/page.version/cart-feature-walkthrough/calculator-plugins.html
 ---
 
 Our Cart consists of a few components in Yves and Zed. The Yves components create the cart requests and persist the cart into the session. The Zed components persist the data into the database and expand the items with data obtained from plugins.

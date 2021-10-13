@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/episerver-integration-into-project
   - /docs/episerver-integration-into-project
   - /docs/en/episerver-integration-into-project
+related:
+  - title: Episerver - Installation and Configuration
+    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html
 ---
 
 This article provides step-by-step instructions on integrating the Episerver module into your project.

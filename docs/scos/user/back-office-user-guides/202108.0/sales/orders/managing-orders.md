@@ -9,6 +9,13 @@ redirect_from:
   - /2021080/docs/en/managing-orders
   - /docs/managing-orders
   - /docs/en/managing-orders
+related:
+  - title: Order Management
+    link: docs/scos/user/features/page.version/order-management-feature-overview/order-management-feature-overview.html
+  - title: Reclamations Feature Overview
+    link: docs/scos/user/features/page.version/reclamations-feature-overview.html
+  - title: Return Management Feature Overview
+    link: docs/scos/user/features/page.version/return-management-feature-overview/return-management-feature-overview.html
 ---
 
 This article describes how to manage orders.

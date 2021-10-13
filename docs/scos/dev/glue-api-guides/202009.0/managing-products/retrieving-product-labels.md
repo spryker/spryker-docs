@@ -7,6 +7,11 @@ originalArticleId: 1e30eace-9582-4e79-9bea-c9093249579c
 redirect_from:
   - /v6/docs/retrieving-product-labels
   - /v6/docs/en/retrieving-product-labels
+related:
+  - title: Glue API- Promotions & Discounts feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-promotions-and-discounts-feature-integration.html
+  - title: Product Labels feature overview
+    link: docs/scos/user/features/page.version/product-labels-feature-overview.html
 ---
 
 [Product labels](https://documentation.spryker.com/v6/docs/product-label-feature-overview#product-label) are used to draw your customers' attention to some specific products. Each of them has a name, a priority, and a validity period. The Product Labels API provides endpoints for getting labels via the REST HTTP requests.

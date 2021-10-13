@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/shopping-list-notes-overview
   - /docs/shopping-list-notes-overview
   - /docs/en/shopping-list-notes-overview
+related:
+  - title: Shopping list widget overview
+    link: docs/scos/user/features/page.version/shopping-lists-feature-overview/shopping-list-widget-overview.html
+  - title: Shopping Lists feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/shopping-lists-feature-integration.html
 ---
 
 The Shopping List Notes feature allows buyers to manage notes for individual items they have on their shopping lists. For example, a bakery might have created a shopping list with products they buy on a regular basis. Suppose, they have 10 kg flour bag on the shopping list, but they want to make sure that they always have enough amount of flour in their stock and therefore need to buy more sometimes. They can leave a note at the "flour bag" product saying "check if more than one bag should be purchased". Notes to shopping list items are added on *Edit shopping list* page. Customers can edit and delete the created shopping list notes there as well.

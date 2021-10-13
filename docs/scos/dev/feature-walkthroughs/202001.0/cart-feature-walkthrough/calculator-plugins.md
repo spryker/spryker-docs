@@ -8,6 +8,9 @@ originalArticleId: 418ea9d6-b06f-45c1-83de-db2225925a79
 redirect_from:
   - /v4/docs/calculator-plugins
   - /v4/docs/en/calculator-plugins
+related:
+  - title: Calculation Data Structure
+    link: docs/scos/dev/feature-walkthroughs/page.version/cart-feature-walkthrough/calculation-data-structure.html
 ---
 
 Calculator plugins are registered in the `CalculationDependencyProvider::getQuoteCalculatorPluginStack()` for `QuoteTransfer` and `CalculationDependencyProvider::getOrderCalculatorPluginStack()` or in later versions of the Calculation module 4.00 and above `CalculationDependencyProvider::getQuoteCalculatorPluginStack()` for OrderTransfer.

@@ -6,6 +6,9 @@ originalArticleId: a85695e9-41b7-41b2-a96c-e266b620aa85
 redirect_from:
   - /v3/docs/mg-cms-block-category-connector-console
   - /v3/docs/en/mg-cms-block-category-connector-console
+related:
+  - title: Migration Guide - CMS Block Category Connector
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-cms-block-category-connector.html
 ---
 
 ## CMS Block Category Connector Migration script

@@ -7,6 +7,11 @@ originalArticleId: e88d1d57-9e00-4579-a64d-b646e5d270cd
 redirect_from:
   - /v5/docs/retrieving-banner-content-item-data-201907
   - /v5/docs/en/retrieving-banner-content-item-data-201907
+related:
+  - title: REST API Reference
+    link: docs/scos/dev/glue-api-guides/page.version/rest-api-reference.html
+  - title: Content Items Feature Overview
+    link: docs/scos/user/features/page.version/content-items-feature-overview.html
 ---
 
 The **Banner API** implements REST API endpoint that provides the possibility to retrieve Banner content item data available in the storage.

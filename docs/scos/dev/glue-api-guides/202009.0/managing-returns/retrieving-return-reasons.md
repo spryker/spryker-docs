@@ -7,6 +7,9 @@ originalArticleId: cc2ec9a6-530f-4c21-9271-24df3d0bbbc7
 redirect_from:
   - /v6/docs/retrieving-return-reasons
   - /v6/docs/en/retrieving-return-reasons
+related:
+  - title: Managing the returns
+    link: docs/scos/dev/glue-api-guides/page.version/managing-returns/managing-the-returns.html
 ---
 
 This endpoint allows retrieving returns reasons.

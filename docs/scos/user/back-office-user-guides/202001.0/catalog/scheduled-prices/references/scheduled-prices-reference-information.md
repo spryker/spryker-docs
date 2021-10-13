@@ -7,6 +7,11 @@ originalArticleId: 7f4a77c2-0bfa-4014-9a79-754b3243733b
 redirect_from:
   - /v4/docs/scheduled-prices-reference-information
   - /v4/docs/en/scheduled-prices-reference-information
+related:
+  - title: Managing Scheduled Prices
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/scheduled-prices/managing-scheduled-prices.html
+  - title: Creating Scheduled Prices
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/scheduled-prices/creating-scheduled-prices.html
 ---
 
 This topic contains the reference information that you need to know when working in the **Scheduled Prices** section.

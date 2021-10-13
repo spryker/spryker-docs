@@ -6,6 +6,11 @@ originalArticleId: 3491b1d4-a2a1-4deb-a651-4355d770b411
 redirect_from:
   - /v2/docs/mg-price-cart-connector
   - /v2/docs/en/mg-price-cart-connector
+related:
+  - title: Migration Guide - Price
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-price.html
+  - title: Migration Guide - Multi-Currency
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-multi-currency.html
 ---
 
 ## Upgrading from Version 4.* to Version 6.0.0

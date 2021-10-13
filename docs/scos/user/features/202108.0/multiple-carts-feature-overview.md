@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/multiple-carts-feature-overview
   - /docs/multiple-carts-feature-overview
   - /docs/en/multiple-carts-feature-overview
+related:
+  - title: Shared Cart Feature Overview
+    link: docs/scos/user/features/page.version/shared-carts-feature-overview.html
 ---
 
 Sometimes customers need more than one shopping cart, for example, one for daily purchases, the other one for monthly expenses. The *Multiple Carts* feature allows you to create and manage multiple shopping carts in one customer account.

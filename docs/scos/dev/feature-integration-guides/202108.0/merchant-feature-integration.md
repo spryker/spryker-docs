@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/merchant-feature-integration
   - /docs/merchant-feature-integration
   - /docs/en/merchant-feature-integration
+related:
+  - title: Order Thresholds
+    link: docs/scos/user/features/page.version/checkout-feature-overview/order-thresholds-overview.html
 ---
 
 This document describes how to integrate the Merchant feature into a Spryker project.

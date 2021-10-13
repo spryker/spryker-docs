@@ -7,6 +7,13 @@ originalArticleId: cbe8f489-f103-4cb0-9df7-17b55b4eaefa
 redirect_from:
   - /v6/docs/managing-discount-vouchers-in-carts-of-registered-users
   - /v6/docs/en/managing-discount-vouchers-in-carts-of-registered-users
+related:
+  - title: Managing discount vouchers in guest carts
+    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-discount-vouchers-in-guest-carts.html
+  - title: Managing carts of registered users
+    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
+  - title: Managing items in carts of registered users
+    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html
 ---
 
 This endpoint allows to manage discount vouchers in carts of registered users.

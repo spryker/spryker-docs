@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/mg-product-bundle
   - /docs/mg-product-bundle
   - /docs/en/mg-product-bundle
+related:
+  - title: Migration Guide - Price
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-price.html
+  - title: Migration Guide - Product
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-product.html
 ---
 
 ## Upgrading from Version 6.* to Version 7.0.0

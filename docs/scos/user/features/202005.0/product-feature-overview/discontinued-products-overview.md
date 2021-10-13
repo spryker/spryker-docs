@@ -9,6 +9,9 @@ redirect_from:
   - /v5/docs/en/discontinued-products-overview
   - /v5/docs/discontinued-products
   - /v5/docs/en/discontinued-products
+related:
+  - title: Discontinuing Products
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/discontinuing-products.html
 ---
 
 ## Out of Stock vs. Discontinued Products

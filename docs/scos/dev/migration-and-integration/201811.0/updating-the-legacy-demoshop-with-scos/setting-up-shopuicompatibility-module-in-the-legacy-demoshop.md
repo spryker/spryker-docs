@@ -6,6 +6,13 @@ originalArticleId: 3c6a7d28-d9dd-4ade-a65b-92df6ac2bec8
 redirect_from:
   - /v1/docs/setting-up-shopuicompatibility
   - /v1/docs/en/setting-up-shopuicompatibility
+related:
+  - title: Making the Legacy Demoshop Compatible with the Modular Frontend
+    link: docs/scos/dev/migration-and-integration/page.version/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-modular-frontend.html
+  - title: Making the Legacy Demoshop Compatible with the Atomic Frontend
+    link: docs/scos/dev/migration-and-integration/page.version/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-atomic-frontend.html
+  - title: Twig Compatibility- Legacy Demoshop vs SCOS
+    link: docs/scos/dev/migration-and-integration/page.version/updating-the-legacy-demoshop-with-scos/twig-compatibility-legacy-demoshop-vs-scos.html
 ---
 
 The `ShopUiCompatibility` module is the main module necessary for the [Atomic Frontend](/docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-frontend-general-overview.html). This module is provided in SCOS by default.

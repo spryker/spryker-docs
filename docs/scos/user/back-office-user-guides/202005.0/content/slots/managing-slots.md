@@ -7,6 +7,9 @@ originalArticleId: 2186f1a6-2af2-4211-be3f-5bc88c7bb064
 redirect_from:
   - /v5/docs/managing-slots
   - /v5/docs/en/managing-slots
+related:
+  - title: Templates & Slots Feature Overview
+    link: docs/scos/user/features/page.version/cms-feature-overview/templates-and-slots-overview.html
 ---
 
 This topic describes how to manage slots.

@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/managing-customer-passwords
   - /docs/managing-customer-passwords
   - /docs/en/managing-customer-passwords
+related:
+  - title: Password Management overview
+    link: docs/scos/user/features/page.version/customer-account-management-feature-overview/password-management-overview.html
 ---
 
 The endpoints in this document allows you to manage customer passwords. You can change or reset a password. 

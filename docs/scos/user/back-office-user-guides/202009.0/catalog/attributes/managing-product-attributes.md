@@ -7,6 +7,9 @@ originalArticleId: f8bb80e7-5ff2-406e-97cf-4e3391cf9d99
 redirect_from:
   - /v6/docs/managing-attributes
   - /v6/docs/en/managing-attributes
+related:
+  - title: Product Attributes
+    link: docs/scos/user/features/page.version/product-feature-overview/product-attributes-overview.html
 ---
 
 This topic describes how to manage product attributes.

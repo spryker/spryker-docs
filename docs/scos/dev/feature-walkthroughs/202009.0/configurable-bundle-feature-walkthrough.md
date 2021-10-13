@@ -8,6 +8,9 @@ originalArticleId: 32afb6b3-0cfc-4c00-98ba-345e482c0aac
 redirect_from:
   - /v6/docs/configurable-bundle-module-relations
   - /v6/docs/en/configurable-bundle-module-relations
+related:
+  - title: Configurable Bundle Feature Overview
+    link: docs/scos/user/features/page.version/configurable-bundle-feature-overview.html
 ---
 
 The _Configurable Bundle_ feature allows creating a configurable list of items.

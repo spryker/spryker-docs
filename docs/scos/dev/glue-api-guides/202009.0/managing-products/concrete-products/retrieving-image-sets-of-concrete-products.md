@@ -7,6 +7,9 @@ originalArticleId: e3168f25-de08-4701-b7cc-8a339e7e82a9
 redirect_from:
   - /v6/docs/retrieving-image-sets-of-concrete-products
   - /v6/docs/en/retrieving-image-sets-of-concrete-products
+related:
+  - title: Product image management
+    link: docs/scos/user/features/page.version/product-feature-overview/product-images-overview.html
 ---
 
 This endpoint allows retrieving image sets of concrete products.

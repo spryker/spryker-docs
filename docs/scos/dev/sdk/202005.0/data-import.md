@@ -7,6 +7,15 @@ originalArticleId: cbead472-a3cc-4f5e-94fc-2a44f4b4124a
 redirect_from:
   - /v5/docs/importer
   - /v5/docs/en/importer
+related:
+  - title: About Demo Shop Data Import
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/importing-demo-shop-data.html
+  - title: Execution Order of Data Importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
+  - title: About Data Import Categories
+    link: docs/scos/dev/data-import/page.version/data-import-categories/about-data-import-categories.html
+  - title: Importing Data with the Queue Data Importer
+    link: docs/scos/dev/data-import/page.version/importing-data-with-the-queue-data-importer.html
 ---
 
 Easily import your business logic and data, such as Product Information, Customer Base, Categories, and many more into the Spryker Commerce OS.

@@ -7,6 +7,15 @@ originalArticleId: 198bd180-e5a2-4ed0-940e-7b55dbf7474d
 redirect_from:
   - /v3/docs/managing-punchout-connections
   - /v3/docs/en/managing-punchout-connections
+related:
+  - title: Punch Out Feature Overview
+    link: docs/scos/user/features/page.version/technology-partner-integrations/punch-out/punch-out-feature-overview.html
+  - title: Punch Out
+    link: docs/scos/user/features/page.version/technology-partner-integrations/punch-out/punch-out.html
+  - title: Managing Transactions Log
+    link: docs/scos/user/back-office-user-guides/page.version/punch-out/managing-transactions-log.html
+  - title: Punch Out- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/punch-out/references/punch-out-reference-information.html
 ---
 
 This topic describes how to create and manage the Punch Out connections.

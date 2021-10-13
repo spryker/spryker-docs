@@ -6,6 +6,11 @@ originalArticleId: 8cbd7993-6902-4d7b-807c-fe0a6d01b0c4
 redirect_from:
   - /v2/docs/mg-wishlist
   - /v2/docs/en/mg-wishlist
+related:
+  - title: Migration Guide - Cart
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-cart.html
+  - title: Migration Guide - Price
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-price.html
 ---
 
 ## Upgrading from Version 6.* to Version 8.0.0

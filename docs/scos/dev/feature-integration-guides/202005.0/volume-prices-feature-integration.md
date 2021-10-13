@@ -7,6 +7,9 @@ originalArticleId: 8653f321-7622-4f92-913e-2658856901d0
 redirect_from:
   - /v5/docs/volume-prices-feature-integration
   - /v5/docs/en/volume-prices-feature-integration
+related:
+  - title: Volume Prices Feature Overview
+    link: docs/scos/user/features/page.version/prices-feature-overview/volume-prices-overview.html
 ---
 
 ## Install Feature Core

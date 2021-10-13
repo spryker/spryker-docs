@@ -7,6 +7,9 @@ originalArticleId: 13f9ed1f-a385-4cbe-8b6b-14310e43fd91
 redirect_from:
   - /v5/docs/mg-checkout
   - /v5/docs/en/mg-checkout
+related:
+  - title: Checkout
+    link: docs/scos/user/features/page.version/checkout-feature-overview/checkout-feature-overview.html
 ---
 
 ## Upgrading from Version 4.* to Version 6.0.0

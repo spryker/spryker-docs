@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/retrieving-abstract-products
   - /docs/retrieving-abstract-products
   - /docs/en/retrieving-abstract-products
+related:
+  - title: Product overview
+    link: docs/scos/user/features/page.version/product-feature-overview/product-feature-overview.html
 ---
 
 This endpoint allows to retrieve general information about abstract products.

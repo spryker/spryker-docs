@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/akeneo
   - /docs/akeneo
   - /docs/en/akeneo
+related:
+  - title: Akeneo - Console commands
+    link: docs/scos/user/technology-partners/page.version/product-information-pimerp/akeneo/akeneo-console-commands.html
+  - title: Akeneo - Installation and Configuration
+    link: docs/scos/user/technology-partners/page.version/product-information-pimerp/akeneo/akeneo-installation-and-configuration.html
 ---
 
 ## Partner Information

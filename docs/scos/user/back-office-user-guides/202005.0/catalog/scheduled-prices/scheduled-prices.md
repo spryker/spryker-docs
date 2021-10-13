@@ -7,6 +7,9 @@ originalArticleId: 95450aa4-4166-4c7b-b850-bc37a9d9b404
 redirect_from:
   - /v5/docs/managing-scheduled-prices-201907
   - /v5/docs/en/managing-scheduled-prices-201907
+related:
+  - title: Scheduled Prices Feature Overview
+    link: docs/scos/user/features/page.version/scheduled-prices-feature-overview.html
 ---
 
 The **Scheduled Prices** section in the Back Office is mostly used by Product Catalog Managers.

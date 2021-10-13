@@ -7,6 +7,9 @@ originalArticleId: dd065e28-1d63-410c-8e27-e3b66a098d5e
 redirect_from:
   - /v2/docs/navigation-guide
   - /v2/docs/en/navigation-guide
+related:
+  - title: Navigation Module
+    link: docs/scos/dev/feature-walkthroughs/page.version/navigation-feature-walkthrough/navigation-module.html
 ---
 
 The Navigation section of Spryker Back Office is mostly used by Backend Developers in cooperation with Product Catalog Managers to build the online store navigation.

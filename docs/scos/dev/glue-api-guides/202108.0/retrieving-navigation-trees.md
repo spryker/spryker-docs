@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/retrieving-navigation-trees
   - /docs/retrieving-navigation-trees
   - /docs/en/retrieving-navigation-trees
+related:
+  - title: Migration Guide - NavigationsRestApi
+    link: docs/scos/dev/module-migration-guides/page.version/glue-api/migration-guide-navigationsrestapi.html
+  - title: Browsing a Category Tree
+    link: docs/scos/dev/glue-api-guides/page.version/retrieving-categories/retrieving-category-trees.html
 ---
 
 The Navigation <!-- add link to feature overview later --> feature enables back-end developers to create navigtaion elements for Storefront. The navigation elements help shop users to navigate the shop and locate the necessary products and other content. Navigation elements can be linked to CMS pages, categories, as well as internal and external links. 

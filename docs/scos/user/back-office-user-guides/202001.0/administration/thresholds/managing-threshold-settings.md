@@ -7,6 +7,15 @@ originalArticleId: e05dd4ad-a8e3-4c48-9f90-1dcd0d8f973d
 redirect_from:
   - /v4/docs/managing-threshold-settings
   - /v4/docs/en/managing-threshold-settings
+related:
+  - title: Managing Global Thresholds
+    link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/managing-global-thresholds.html
+  - title: Managing Merchant Order Thresholds
+    link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/managing-merchant-order-thresholds.html
+  - title: Managing Merchant Relations
+    link: docs/scos/user/back-office-user-guides/page.version/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html
+  - title: Threshold- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/references/threshold-reference-information.html
 ---
 
 **Threshold settings** is the page where you can select the tax set that is applied to the threshold fee. Thus, the tax is calculated in the same way it is calculated for the products in the cart.

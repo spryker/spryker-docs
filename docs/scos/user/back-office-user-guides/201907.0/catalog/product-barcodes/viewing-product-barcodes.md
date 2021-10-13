@@ -7,6 +7,9 @@ originalArticleId: e1367438-9311-4011-93e6-ce6c32c6a675
 redirect_from:
   - /v3/docs/product-barcodes
   - /v3/docs/en/product-barcodes
+related:
+  - title: Barcode Generator Feature Overview
+    link: docs/scos/user/features/page.version/product-barcode-feature-overview.html
 ---
 
 Nowadays, B2B businesses face extraordinary challenges as more and more consumers are making comparisons of various e-commerce applications. To stay on top of the industry trends, improve customer experience and increase sales, every business must innovate with a deep understanding of their customer’s physical, emotional, and financial needs and triggers.

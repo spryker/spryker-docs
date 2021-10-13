@@ -7,6 +7,9 @@ originalArticleId: 16afedfe-ea2d-47fc-a6f6-81d0baddd40b
 redirect_from:
   - /v2/docs/optimise-it
   - /v2/docs/en/optimise-it
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
 ---
 
 ## Partner Information

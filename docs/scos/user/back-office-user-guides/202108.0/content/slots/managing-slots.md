@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/managing-slots
   - /docs/managing-slots
   - /docs/en/managing-slots
+related:
+  - title: Templates & Slots Feature Overview
+    link: docs/scos/user/features/page.version/cms-feature-overview/templates-and-slots-overview.html
 ---
 
 This topic describes how to manage slots.

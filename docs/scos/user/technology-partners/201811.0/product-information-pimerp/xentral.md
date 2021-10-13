@@ -7,6 +7,9 @@ originalArticleId: 0cdc7137-8ca6-453d-ae7f-99daae732833
 redirect_from:
   - /v1/docs/xentral
   - /v1/docs/en/xentral
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
 ---
 
 ## Partner Information

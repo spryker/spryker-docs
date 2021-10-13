@@ -9,6 +9,15 @@ redirect_from:
   - /2021080/docs/en/braintree
   - /docs/braintree
   - /docs/en/braintree
+related:
+  - title: Braintree - Installation and configuration
+    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/braintree-installation-and-configuration.html
+  - title: Braintree - Integration into a project
+    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/braintree-integration-into-a-project.html
+  - title: Braintree - Performing Requests
+    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/braintree-technical-details-and-howtos/braintree-performing-requests.html
+  - title: Braintree - Workflow
+    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/braintree-technical-details-and-howtos/braintree-workflow.html
 ---
 
 [ABOUT BRAINTREE](https://www.braintreepayments.com/) 

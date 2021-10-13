@@ -7,6 +7,21 @@ originalArticleId: efa68d41-79a9-4274-88ab-4f360342bb3e
 redirect_from:
   - /v5/docs/shop-guide-managing-shopping-carts
   - /v5/docs/en/shop-guide-managing-shopping-carts
+related:
+  - title: Comments feature overview
+    link: docs/scos/user/features/page.version/comments-feature-overview.html
+  - title: Shop Guide - Managing Comments
+    link: docs/scos/user/shop-user-guides/page.version/shop-guide-comments/shop-guide-managing-comments.html
+  - title: Cart Notes Feature Overview
+    link: docs/scos/user/features/page.version/cart-feature-overview/cart-notes-overview.html
+  - title: Multiple and Shared Shopping Lists overview
+    link: docs/scos/user/features/page.version/shopping-lists-feature-overview/shopping-lists-feature-overview.html
+  - title: Quick Add to Cart feature overview
+    link: docs/scos/user/features/page.version/quick-add-to-cart-feature-overview.html
+  - title: Shared Cart Feature Overview
+    link: docs/scos/user/features/page.version/shared-carts-feature-overview.html
+  - title: Custom order Reference Feature Overview
+    link: docs/scos/user/features/page.version/order-management-feature-overview/custom-order-reference-overview.html
 ---
 
 This topic describes the steps buyers can perform to manage their shopping carts.

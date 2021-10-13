@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/creating-a-voucher
   - /docs/creating-a-voucher
   - /docs/en/creating-a-voucher
+related:
+  - title: Creating cart rules
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/creating-cart-rules.html
 ---
 
 This guide describes how to create a voucher.

@@ -7,6 +7,9 @@ originalArticleId: bd62a07a-6e55-4b43-b767-9ae71e479f44
 redirect_from:
   - /v5/docs/checkout-quotation-process-feature-integration
   - /v5/docs/en/checkout-quotation-process-feature-integration
+related:
+  - title: Quotation Process feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/quotation-process-feature-integration.html
 ---
 
 ## Install Feature Core

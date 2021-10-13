@@ -7,6 +7,13 @@ originalArticleId: f8c63686-9b38-44e8-96f4-2788085457b8
 redirect_from:
   - /v5/docs/configurable-bundle-templates-reference-information
   - /v5/docs/en/configurable-bundle-templates-reference-information
+related:
+  - title: Creating Configurable Bundle Templates
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/configurable-bundle-templates/creating-configurable-bundle-templates.html
+  - title: Configurable Bundle Templates
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/configurable-bundle-templates/configurable-bundle-templates.html
+  - title: Managing Configurable Bundle Templates
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html
 ---
 
 This topic describes the attributes that you see, enter, and select while creating or managing the Configurable Bundle Templates.

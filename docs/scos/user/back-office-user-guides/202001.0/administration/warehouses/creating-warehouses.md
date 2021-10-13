@@ -7,6 +7,9 @@ originalArticleId: 6b3ee14f-6e6e-4b58-a7c2-c9ce6fc8322d
 redirect_from:
   - /v4/docs/creating-a-warehouse
   - /v4/docs/en/creating-a-warehouse
+related:
+  - title: Warehouses- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/administration/warehouses/references/warehouses-reference-information.html
 ---
 
 The topic provides steps on how to create a warehouse in the Back Office.

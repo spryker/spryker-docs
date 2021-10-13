@@ -7,6 +7,9 @@ originalArticleId: bfde5193-60ce-4e5d-bc84-ecc01e2c70b4
 redirect_from:
   - /v5/docs/managing-customer-access
   - /v5/docs/en/managing-customer-access
+related:
+  - title: Hide Content from Logged out Users Overview
+    link: docs/scos/user/features/page.version/customer-access-feature-overview.html
 ---
 
 The Customer Access page was designed to define what information can be viewed for the not-logged-into online store customers.

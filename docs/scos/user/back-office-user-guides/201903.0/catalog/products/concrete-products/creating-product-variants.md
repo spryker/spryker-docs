@@ -7,6 +7,23 @@ originalArticleId: 3256df48-49d2-4b12-b480-6972942a2753
 redirect_from:
   - /v2/docs/creating-a-product-variant
   - /v2/docs/en/creating-a-product-variant
+related:
+  - title: Abstract and Concrete Products
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-and-concrete-products.html
+  - title: Managing Products
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
+  - title: Discontinuing Products
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/discontinuing-products.html
+  - title: Creating Product Bundles
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-products/creating-product-bundles.html
+  - title: Adding Product Alternatives
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/adding-product-alternatives.html
+  - title: Adding Volume Prices to Abstract Products
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html
+  - title: Concrete Product- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/concrete-product-reference-information.html
+  - title: Managing Attributes
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/attributes/managing-product-attributes.html
 ---
 
 This topic describes the procedure you need to follow in order to add a new product variant to the abstract product.

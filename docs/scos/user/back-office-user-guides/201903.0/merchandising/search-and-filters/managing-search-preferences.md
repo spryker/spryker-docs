@@ -7,6 +7,15 @@ originalArticleId: 0e1cefe4-82a6-411f-9121-de99791b0eb4
 redirect_from:
   - /v2/docs/managing-search-preferences
   - /v2/docs/en/managing-search-preferences
+related:
+  - title: Managing Filter Preferences
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/managing-filter-preferences.html
+  - title: Managing Category Filters
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/managing-category-filters.html
+  - title: Reference- Search Preferences
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/references/reference-search-preferences.html
+  - title: Search Preferences Types
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/references/search-preferences-types.html
 ---
 
 This topic describes how you can add new attributes to search and manage the existing search preferences. 

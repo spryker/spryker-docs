@@ -7,6 +7,11 @@ originalArticleId: e21825a0-ac6a-47cb-80f7-02b2eaf8582f
 redirect_from:
   - /v5/docs/shipment-feature-integration
   - /v5/docs/en/shipment-feature-integration
+related:
+  - title: Shipment feature overview
+    link: docs/scos/user/features/page.version/shipment-feature-overview.html
+  - title: Shipment + Approval Process feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/shipment-approval-process-feature-integration.html
 ---
 
 {% info_block errorBox %}

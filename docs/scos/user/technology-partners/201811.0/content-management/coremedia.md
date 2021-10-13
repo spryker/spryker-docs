@@ -7,6 +7,9 @@ originalArticleId: fca123d9-83cb-4aa3-9415-bbc6594b50cb
 redirect_from:
   - /v1/docs/coremedia
   - /v1/docs/en/coremedia
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
 ---
 
 ## Partner Information

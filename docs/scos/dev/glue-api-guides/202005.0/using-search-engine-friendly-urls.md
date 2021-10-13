@@ -6,6 +6,9 @@ originalArticleId: fde85b1f-cc09-46d7-a990-3e52367db1f2
 redirect_from:
   - /v5/docs/using-search-engine-friendly-urls
   - /v5/docs/en/using-search-engine-friendly-urls
+related:
+  - title: Glue API- Spryker Core feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-spryker-core-feature-integration.html
 ---
 
 For SEO purposes, Spryker automatically generates Search Engine Friendly (SEF) URLs for products and categories. Such URLs are included in the URL attribute of responses of all endpoints related to abstract products and product categories, for example:

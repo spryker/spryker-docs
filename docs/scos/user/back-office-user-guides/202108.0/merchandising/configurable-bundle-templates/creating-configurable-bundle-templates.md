@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/creating-configurable-bundle-templates
   - /docs/creating-configurable-bundle-templates
   - /docs/en/creating-configurable-bundle-templates
+related:
+  - title: Managing Configurable Bundle Templates
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html
+  - title: Configurable Bundle Feature Overview
+    link: docs/scos/user/features/page.version/configurable-bundle-feature-overview.html
 ---
 
 This topic describes how to create configurable bundle templates.

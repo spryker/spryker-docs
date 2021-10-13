@@ -7,6 +7,9 @@ originalArticleId: 4289aae6-4be5-480d-a772-7f6cecb83f86
 redirect_from:
   - /v2/docs/merchants
   - /v2/docs/en/merchants
+related:
+  - title: Merchants and Merchant Relations Feature Overview
+    link: docs/scos/user/features/page.version/merchant-b2b-contracts-feature-overview.html
 ---
 
 The Merchants section in Back Office is mostly used by Spryker Admins. In a B2B environment, the business partnership between a buyer (company/business unit) and a seller (merchant) is often based on a range of agreements. So you should consider the Merchant and Merchant Relation sections as a contract between the seller and buyer.

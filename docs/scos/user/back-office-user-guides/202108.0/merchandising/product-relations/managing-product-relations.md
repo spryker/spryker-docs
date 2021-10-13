@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/managing-product-relations
   - /docs/managing-product-relations
   - /docs/en/managing-product-relations
+related:
+  - title: Product Relations Feature Overview
+    link: docs/scos/user/features/page.version/product-relations-feature-overview.html
 ---
 
 This topic describes how you manage product relations.

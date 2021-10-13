@@ -7,6 +7,11 @@ originalArticleId: 2e71d593-d3c1-4396-b9bf-b83143a60bcf
 redirect_from:
   - /v4/docs/mg-category
   - /v4/docs/en/mg-category
+related:
+  - title: Creating Categories
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/category/creating-categories.html
+  - title: Category
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/category/category.html
 ---
 
 ## Upgrading from Version 3.* to Version 4.*

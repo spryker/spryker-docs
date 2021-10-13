@@ -6,6 +6,9 @@ originalArticleId: 7d17c08f-805b-4a88-8a83-b0a9ddfce794
 redirect_from:
   - /v6/docs/glue-api-customer-account-management-feature-integration
   - /v6/docs/en/glue-api-customer-account-management-feature-integration
+related:
+  - title: Authentication and Authorization
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
 ---
 
 {% info_block errorBox %}

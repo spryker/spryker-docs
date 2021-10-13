@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/ab-tasty
   - /docs/ab-tasty
   - /docs/en/ab-tasty
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
 ---
 
 ## Partner Information

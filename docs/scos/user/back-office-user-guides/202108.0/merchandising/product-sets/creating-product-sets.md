@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/creating-product-sets
   - /docs/creating-product-sets
   - /docs/en/creating-product-sets
+related:
+  - title: Product Sets feature overview
+    link: docs/scos/user/features/page.version/product-sets-feature-overview.html
 ---
 
 This article describes how to create a product set.

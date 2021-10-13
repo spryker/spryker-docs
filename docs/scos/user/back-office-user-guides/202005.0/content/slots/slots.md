@@ -7,6 +7,9 @@ originalArticleId: 312ae9ee-5566-4955-af79-5eaa37582d0d
 redirect_from:
   - /v5/docs/slots
   - /v5/docs/en/slots
+related:
+  - title: Templates & Slots Feature Overview
+    link: docs/scos/user/features/page.version/cms-feature-overview/templates-and-slots-overview.html
 ---
 
 Slots are used to embed content into pages to which [templates with slots](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html) are applied.

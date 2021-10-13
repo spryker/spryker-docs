@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/creating-a-product-option
   - /docs/creating-a-product-option
   - /docs/en/creating-a-product-option
+related:
+  - title: Product Options feature overview
+    link: docs/scos/user/features/page.version/product-options-feature-overview.html
 ---
 
 This article describes how to create a product option.

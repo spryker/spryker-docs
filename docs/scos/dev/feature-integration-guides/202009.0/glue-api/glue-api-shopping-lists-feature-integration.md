@@ -6,6 +6,9 @@ originalArticleId: f9aca2bf-3320-4bc3-9d1c-fd340ca50274
 redirect_from:
   - /v6/docs/glue-api-shopping-lists-feature-integration
   - /v6/docs/en/glue-api-shopping-lists-feature-integration
+related:
+  - title: Managing Shopping Lists
+    link: docs/scos/dev/glue-api-guides/page.version/managing-shopping-lists/managing-shopping-lists.html
 ---
 
 {% info_block infoBox "Included features" %}

@@ -7,6 +7,9 @@ originalArticleId: b12600d8-4921-49d4-8409-eb4cdc02ce5e
 redirect_from:
   - /v1/docs/customer-api-feature-integration
   - /v1/docs/en/customer-api-feature-integration
+related:
+  - title: Managing Customers
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customers.html
 ---
 
 ## Install Feature API

@@ -7,6 +7,17 @@ originalArticleId: 5f4db30b-2c63-4929-9cce-acb280e95423
 redirect_from:
   - /v1/docs/creating-a-product-variant
   - /v1/docs/en/creating-a-product-variant
+related:
+  - title: Creating an Abstract Product
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html
+  - title: Managing Products
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
+  - title: Editing Product Variants
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/concrete-products/editing-product-variants.html
+  - title: Products- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/products-reference-information.html
+  - title: Concrete Product- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/concrete-product-reference-information.html
 ---
 
 This topic describes the procedure you need to follow in order to add a new product variant to the abstract product.

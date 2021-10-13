@@ -7,6 +7,23 @@ originalArticleId: ee189fe4-1899-4c19-a482-3c58678db3df
 redirect_from:
   - /v4/docs/managing-carts-of-registered-users-201907
   - /v4/docs/en/managing-carts-of-registered-users-201907
+related:
+  - title: Managing Guest Carts
+    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-carts.html
+  - title: Sharing Company User Carts
+    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html
+  - title: Checking Out Purchases and Getting Checkout Data
+    link: docs/scos/dev/glue-api-guides/page.version/checking-out-purchases-and-getting-checkout-data.html
+  - title: Logging In as Company User
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/authenticating-as-a-company-user.html
+  - title: Multiple Carts feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/multiple-carts-feature-integration.html
+  - title: Shared Cart Feature Overview
+    link: docs/scos/user/features/page.version/shared-carts-feature-overview.html
+  - title: Shopping Cart Widget Feature Overview
+    link: docs/scos/user/features/page.version/cart-feature-overview/cart-widget-overview.html
+  - title: Shopping Carts
+    link: docs/scos/user/shop-user-guides/page.version/shop-guide-shopping-carts/shopping-carts.html
 ---
 
 The **Carts API** provides access to management of customers' shopping carts. Carts come in two different forms: carts for registered customers and carts for guests. In your development, the resources provided by the API can support you in the development of shopping cart functionality.

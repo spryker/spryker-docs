@@ -6,6 +6,9 @@ originalArticleId: 78d2624a-3d89-4177-a7ff-0ca29fc5b1e7
 redirect_from:
   - /v5/docs/glue-api-shipment-feature-integration
   - /v5/docs/en/glue-api-shipment-feature-integration
+related:
+  - title: Checking Out Purchases and Getting Checkout Data
+    link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
 ---
 
 Follow the steps below to install Shipment feature API.

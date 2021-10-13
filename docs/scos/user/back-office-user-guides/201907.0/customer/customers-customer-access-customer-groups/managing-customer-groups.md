@@ -7,6 +7,17 @@ originalArticleId: e2627c35-c988-4d8b-8779-7860d162d3b4
 redirect_from:
   - /v3/docs/managing-customer-groups
   - /v3/docs/en/managing-customer-groups
+related:
+  - title: Managing Customer Access
+    link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/managing-customer-access.html
+  - title: Managing Customers
+    link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/managing-customers.html
+  - title: Managing Customer Addresses
+    link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/managing-customer-addresses.html
+  - title: Customer Accounts
+    link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html
+  - title: Customers- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/references/customers-reference-information.html
 ---
 
 This article describes how you can create and manage customer groups.

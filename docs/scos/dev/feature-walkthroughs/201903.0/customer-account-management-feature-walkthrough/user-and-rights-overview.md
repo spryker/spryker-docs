@@ -7,6 +7,9 @@ originalArticleId: 51c64121-6b74-4766-b280-042955c63b81
 redirect_from:
   - /v2/docs/user-and-rights-management
   - /v2/docs/en/user-and-rights-management
+related:
+  - title: Users and rights overview
+    link: docs/scos/dev/feature-walkthroughs/page.version/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html
 ---
 
 User and rights management is a general term that describes the security functionality for controlling user access to perform various roles throughout the system.

@@ -8,6 +8,9 @@ redirect_from:
   - /2021080/docs/en/shared-carts-feature-integration
   - /docs/shared-carts-feature-integration
   - /docs/en/shared-carts-feature-integration
+related:
+  - title: Shared Cart Feature Overview
+    link: docs/scos/user/features/page.version/shared-carts-feature-overview.html
 ---
 
 ## Install Feature Core

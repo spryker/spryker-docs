@@ -6,6 +6,9 @@ originalArticleId: 83e0ce3d-0327-4362-95eb-1bf2bb303f91
 redirect_from:
   - /v1/docs/hosting-provider-continum-1
   - /v1/docs/en/hosting-provider-continum-1
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
 ---
 
 This article describes the aspects you need to consider when using Heroku as an application hosting solution.

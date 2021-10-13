@@ -7,6 +7,11 @@ originalArticleId: e038a583-445a-4f3f-a6c1-df0a96019c09
 redirect_from:
   - /v4/docs/creating-a-product-set
   - /v4/docs/en/creating-a-product-set
+related:
+  - title: Product Sets- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-sets/references/product-sets-reference-information.html
+  - title: Product Sets feature overview
+    link: docs/scos/user/features/page.version/product-sets-feature-overview.html
 ---
 
 This article describes the procedure that you need to perform in order to create a product set.

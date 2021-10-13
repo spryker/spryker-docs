@@ -9,6 +9,13 @@ redirect_from:
   - /2021080/docs/en/managing-cms-pages
   - /docs/managing-cms-pages
   - /docs/en/managing-cms-pages
+related:
+  - title: CMS Page
+    link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
+  - title: Editing CMS Pages
+    link: docs/scos/user/back-office-user-guides/page.version/content/pages/editing-cms-pages.html
+  - title: Managing CMS Page Versions
+    link: docs/scos/user/back-office-user-guides/page.version/content/pages/managing-cms-page-versions.html
 ---
 
 This article describes how to manage CMS pages.

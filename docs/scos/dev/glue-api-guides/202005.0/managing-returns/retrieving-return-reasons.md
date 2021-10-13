@@ -7,6 +7,15 @@ originalArticleId: 6013be3e-9de7-40ec-88f6-e68b39454d5a
 redirect_from:
   - /v5/docs/retrieving-the-return-reasons
   - /v5/docs/en/retrieving-the-return-reasons
+related:
+  - title: Retrieving Returnable Items
+    link: docs/scos/dev/glue-api-guides/page.version/managing-returns/retrieving-returnable-items.html
+  - title: Retrieving Return Management Information
+    link: docs/scos/dev/glue-api-guides/page.version/managing-returns/retrieving-return-management-information.html
+  - title: Retrieving the Returned Items
+    link: docs/scos/dev/glue-api-guides/page.version/managing-returns/retrieving-the-returned-items.html
+  - title: Creating a Return
+    link: docs/scos/dev/glue-api-guides/page.version/managing-returns/creating-a-return.html
 ---
 
 To retrieve a list of predefined return reasons, send the request:

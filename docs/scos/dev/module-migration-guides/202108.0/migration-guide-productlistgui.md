@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/migration-guide-product-list-gui
   - /docs/migration-guide-product-list-gui
   - /docs/en/migration-guide-product-list-gui
+related:
+  - title: Migration Guide - MerchantRelationshipProductListGui
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-merchantrelationshipproductlistgui.html
 ---
 
 ## Upgrading from Version 2.* to Version 3.*

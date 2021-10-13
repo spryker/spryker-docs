@@ -7,6 +7,9 @@ originalArticleId: 3bbebdf6-a1d1-4c19-9251-4f1b1c2ec875
 redirect_from:
   - /v5/docs/editing-an-abstract-product
   - /v5/docs/en/editing-an-abstract-product
+related:
+  - title: Managing Products
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
 ---
 
 This article describes how to edit abstract products.

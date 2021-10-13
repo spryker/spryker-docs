@@ -7,6 +7,15 @@ originalArticleId: 2bb5e4ba-50ef-4963-937e-1d5c16a61d2d
 redirect_from:
   - /v5/docs/managing-company-users
   - /v5/docs/en/managing-company-users
+related:
+  - title: Managing Company Unit Addresses
+    link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/managing-company-unit-addresses.html
+  - title: Managing Company Units
+    link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/managing-company-units.html
+  - title: Managing Company Roles
+    link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/managing-company-roles.html
+  - title: Managing Companies
+    link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/managing-companies.html
 ---
 
 This topic describes how to manage company users.

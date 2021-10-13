@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/migration-guide-configurablebundlestorage
   - /docs/migration-guide-configurablebundlestorage
   - /docs/en/migration-guide-configurablebundlestorage
+related:
+  - title: Migration Guide - ConfigurableBundle
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-configurablebundle.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.0.0

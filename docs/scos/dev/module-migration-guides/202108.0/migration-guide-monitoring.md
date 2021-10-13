@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/mg-monitoring
   - /docs/mg-monitoring
   - /docs/en/mg-monitoring
+related:
+  - title: New Relic
+    link: docs/scos/user/technology-partners/page.version/operational-tools-monitoring-legal-etc/new-relic.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.*

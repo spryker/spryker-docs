@@ -7,6 +7,11 @@ originalArticleId: 4edef89d-8386-4f2f-9d8a-2a5530fa46ef
 redirect_from:
   - /v2/docs/managing-mime-type-settings
   - /v2/docs/en/managing-mime-type-settings
+related:
+  - title: Managing File Tree
+    link: docs/scos/user/back-office-user-guides/page.version/content/file-manager/managing-file-tree.html
+  - title: Managing File List
+    link: docs/scos/user/back-office-user-guides/page.version/content/file-manager/managing-file-list.html
 ---
 
 This article describes everything you need to know to create and manage the MIME type settings.

@@ -7,6 +7,9 @@ originalArticleId: b98b87fc-ed6d-45f2-881d-1d1ee89b8b58
 redirect_from:
   - /v5/docs/order-history-reference-information
   - /v5/docs/en/order-history-reference-information
+related:
+  - title: Shop Guide - Order History
+    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-order-history.html
 ---
 
 ## Order History Page

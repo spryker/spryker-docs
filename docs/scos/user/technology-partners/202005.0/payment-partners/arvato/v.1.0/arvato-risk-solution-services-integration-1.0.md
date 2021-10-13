@@ -7,6 +7,9 @@ originalArticleId: ab38a147-b562-42fb-9e2d-2e67ff083261
 redirect_from:
   - /v5/docs/arvato-1-0
   - /v5/docs/en/arvato-1-0
+related:
+  - title: Arvato - Risk Check 1.0
+    link: docs/scos/user/technology-partners/page.version/payment-partners/arvato/v.1.0/arvato-risk-check-1.0.html
 ---
 
 The purpose of developing the risk solution services is to provide a complete and comprehensive risk management for the eCommerce/mail-order industry, contributing to a high level of modularization and automation. Besides the use of pre-configured service modules for risk management, risk solution services comprise process support up to the outsourcing of the entire operative risk management. All risk management processes are supported by a business intelligence component.

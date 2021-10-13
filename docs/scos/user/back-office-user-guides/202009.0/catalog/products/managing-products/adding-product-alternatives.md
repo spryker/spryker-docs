@@ -7,6 +7,9 @@ originalArticleId: 90bfbbcb-ce19-47fb-ad74-62afe4cb8eba
 redirect_from:
   - /v6/docs/adding-product-alternatives
   - /v6/docs/en/adding-product-alternatives
+related:
+  - title: Alternative Products Feature Overview
+    link: docs/scos/user/features/page.version/alternative-products-feature-overview.html
 ---
 
 This article describes how to add product alternatives for a product.

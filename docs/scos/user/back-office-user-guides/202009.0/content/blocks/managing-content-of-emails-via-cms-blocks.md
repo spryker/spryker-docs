@@ -7,6 +7,9 @@ originalArticleId: c86f6d8d-82ec-4bc8-997e-bb1561c971d7
 redirect_from:
   - /v6/docs/managing-content-of-emails-via-cms-blocks
   - /v6/docs/en/managing-content-of-emails-via-cms-blocks
+related:
+  - title: Email as a CMS block
+    link: docs/scos/user/features/page.version/cms-feature-overview/email-as-a-cms-block-overview.html
 ---
 
 You can manage the content of emails you send to customers by editing [email templates via CMS Blocks](https://documentation.spryker.com/v6/docs/email-as-a-cms-block-overview). 

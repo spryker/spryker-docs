@@ -7,6 +7,9 @@ originalArticleId: c5edac72-d926-49d9-8972-10dd043fc091
 redirect_from:
   - /v3/docs/powerpay
   - /v3/docs/en/powerpay
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
 ---
 
 ## Payment Information

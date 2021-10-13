@@ -130,6 +130,9 @@ entries:
           - title: Marketplace Merchant Portal Core feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-portal-core-feature-integration.html
 
+          - title: Marketplace Cart feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-cart-feature-integration.html
+
           - title: Merchant Category feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-category-feature-integration.html
           
@@ -141,13 +144,10 @@ entries:
 
           - title: Merchant Switcher + Wishlist feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-wishlist-feature-integration.html
-          
+
           - title: Marketplace Order Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html
           
-          - title: Marketplace Order Management + Cart feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-cart-feature-integration.html
-
           - title: Marketplace Order Management + Customer Account Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-customer-account-management-feature-integration.html
 

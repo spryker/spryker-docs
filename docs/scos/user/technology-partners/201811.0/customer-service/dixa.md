@@ -7,6 +7,9 @@ originalArticleId: 69f38bfb-b204-411e-be58-80dae9246c75
 redirect_from:
   - /v1/docs/dixa
   - /v1/docs/en/dixa
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
 ---
 
 ## Partner Information

@@ -15,6 +15,11 @@ redirect_from:
   - /v5/docs/en/ht-activate-a-discount-rule-based-on-a-shipment-carrier
   - /v4/docs/ht-activate-a-discount-rule-based-on-a-shipment-carrier
   - /v4/docs/en/ht-activate-a-discount-rule-based-on-a-shipment-carrier
+related:
+  - title: Shipment feature overview
+    link: docs/scos/user/features/page.version/shipment-feature-overview.html
+  - title: "Reference information: Shipment method plugins"
+    link: docs/scos/dev/feature-walkthroughs/page.version/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html
 ---
 
 The HowTo guide provides steps on how to:

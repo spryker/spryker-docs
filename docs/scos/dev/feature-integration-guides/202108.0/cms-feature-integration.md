@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/cms-feature-integration-guide
   - /docs/cms-feature-integration-guide
   - /docs/en/cms-feature-integration-guide
+related:
+  - title: CMS page
+    link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
 ---
 
 ## Install Feature Core

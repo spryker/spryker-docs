@@ -7,6 +7,9 @@ originalArticleId: 95347b17-b8c3-4a8f-ab1c-43a3dad0e5c5
 redirect_from:
   - /v6/docs/proclane
   - /v6/docs/en/proclane
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
 ---
 
 ## Partner Information

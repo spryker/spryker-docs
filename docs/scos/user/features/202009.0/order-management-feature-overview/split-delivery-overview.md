@@ -7,6 +7,9 @@ originalArticleId: 5b01114f-0b85-4262-8498-1b0370925e2f
 redirect_from:
   - /v6/docs/split-delivery-overview
   - /v6/docs/en/split-delivery-overview
+related:
+  - title: Managing Order Shipments
+    link: docs/scos/user/back-office-user-guides/page.version/sales/orders/managing-order-shipments.html
 ---
 
 *Split Delivery* enables the same order as *shipments* to multiple delivery addresses and/or on different dates, and/or with different shipment methods. A *shipment* is a set of two or more products combined by the same delivery address.

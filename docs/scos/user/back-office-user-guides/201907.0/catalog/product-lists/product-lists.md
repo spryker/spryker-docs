@@ -7,6 +7,9 @@ originalArticleId: 31cf4998-3d09-4ea4-a423-2b5bd956914b
 redirect_from:
   - /v3/docs/product-lists
   - /v3/docs/en/product-lists
+related:
+  - title: Product Restrictions from Merchant to Buyer Overview
+    link: docs/scos/user/features/page.version/merchant-product-restrictions-feature-overview.html
 ---
 
 Product Lists section in Back Office is designed to set specific restrictions for the **B2B** customers. 

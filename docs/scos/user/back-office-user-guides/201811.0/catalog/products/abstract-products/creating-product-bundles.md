@@ -7,6 +7,21 @@ originalArticleId: cbb68e74-7ae1-4253-bbc4-1eddb75435d1
 redirect_from:
   - /v1/docs/creating-and-managing-product-bundles
   - /v1/docs/en/creating-and-managing-product-bundles
+related:
+  - title: Products- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/products-reference-information.html
+  - title: Abstract Product- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/abstract-product-reference-information.html
+  - title: Concrete Product- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/concrete-product-reference-information.html
+  - title: Managing Products
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
+  - title: Discontinuing Products
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/discontinuing-products.html
+  - title: Adding Product Alternatives
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/adding-product-alternatives.html
+  - title: Adding Volume Prices
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html
 ---
 
 This article describes how you add the product bundles and manage them.

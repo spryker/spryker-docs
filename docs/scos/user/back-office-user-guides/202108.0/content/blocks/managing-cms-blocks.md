@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/managing-cms-blocks
   - /docs/managing-cms-blocks
   - /docs/en/managing-cms-blocks
+related:
+  - title: CMS Block
+    link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
 ---
 
 This topic describes how to manage CMS blocks.

@@ -6,6 +6,9 @@ originalArticleId: 36efbeb7-64cf-4fa7-b3b7-a6674ca92564
 redirect_from:
   - /v5/docs/glue-api-payments-feature-integration
   - /v5/docs/en/glue-api-payments-feature-integration
+related:
+  - title: Checking Out Purchases and Getting Checkout Data
+    link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
 ---
 
 <section contenteditable="false" class="errorBox"><div class="content">

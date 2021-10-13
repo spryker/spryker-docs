@@ -7,6 +7,9 @@ originalArticleId: 53170360-66be-4642-938b-84479d9f1c33
 redirect_from:
   - /v6/docs/cart-feature-integration
   - /v6/docs/en/cart-feature-integration
+related:
+  - title: "Cart module: Reference information"
+    link: docs/scos/dev/feature-walkthroughs/page.version/cart-feature-walkthrough/cart-module-reference-information.html
 ---
 
 {% info_block errorBox %}

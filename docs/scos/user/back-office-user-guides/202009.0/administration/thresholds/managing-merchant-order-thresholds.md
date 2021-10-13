@@ -7,6 +7,11 @@ originalArticleId: 7ea70f5f-c009-4d56-b0ea-df93826b2d1b
 redirect_from:
   - /v6/docs/managing-merchant-order-thresholds
   - /v6/docs/en/managing-merchant-order-thresholds
+related:
+  - title: Managing Global Thresholds
+    link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/managing-global-thresholds.html
+  - title: Managing Threshold Settings
+    link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/managing-threshold-settings.html
 ---
 
 This topic describes how to manage [merchant order thresholds](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html#merchant-order-thresholds).

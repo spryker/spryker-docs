@@ -7,6 +7,13 @@ originalArticleId: ca84f253-0b8f-451d-a25d-4e2e818e2753
 redirect_from:
   - /v6/docs/twig-compatibility-mode-demoshop-vs-suite
   - /v6/docs/en/twig-compatibility-mode-demoshop-vs-suite
+related:
+  - title: Making the Legacy Demoshop Compatible with the Modular Frontend
+    link: docs/scos/dev/migration-and-integration/page.version/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-modular-frontend.html
+  - title: Making the Legacy Demoshop Compatible with the Atomic Frontend
+    link: docs/scos/dev/migration-and-integration/page.version/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-atomic-frontend.html
+  - title: Setting up ShopUiCompatibility Module in the Legacy Demoshop
+    link: docs/scos/dev/migration-and-integration/page.version/updating-the-legacy-demoshop-with-scos/setting-up-shopuicompatibility-module-in-the-legacy-demoshop.html
 ---
 
 In the SCOS, all variables available in the Twig templates can be accessed from the `_view` variable. In the Demoshop we used a different technique and passed the Twig variables to the global Twig namespace directly. The following code examples will help to understand the difference.

@@ -7,6 +7,9 @@ originalArticleId: 42c68105-db7e-4163-a29d-ef03b606e9f0
 redirect_from:
   - /v4/docs/new-relic
   - /v4/docs/en/new-relic
+related:
+  - title: Migration Guide - Session
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-session.html
 ---
 
 ## New Relic Monitoring

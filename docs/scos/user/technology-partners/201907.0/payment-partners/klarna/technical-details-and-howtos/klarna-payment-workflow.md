@@ -7,6 +7,15 @@ originalArticleId: e01865a4-bb54-48d0-9ca4-cdaaea42c3c5
 redirect_from:
   - /v3/docs/klarna-payment-workflow
   - /v3/docs/en/klarna-payment-workflow
+related:
+  - title: Klarna - Invoice Pay in 14 days
+    link: docs/scos/user/technology-partners/page.version/payment-partners/klarna/technical-details-and-howtos/klarna-invoice-pay-in-14-days.html
+  - title: Klarna
+    link: docs/scos/user/technology-partners/page.version/payment-partners/klarna/klarna.html
+  - title: Klarna - Part Payment Flexible
+    link: docs/scos/user/technology-partners/page.version/payment-partners/klarna/technical-details-and-howtos/klarna-part-payment-flexible.html
+  - title: Klarna - State Machine Commands and Conditions
+    link: docs/scos/user/technology-partners/page.version/payment-partners/klarna/technical-details-and-howtos/klarna-state-machine-commands-and-conditions.html
 ---
 
 Both `Part Payment` and `Invoice` payment methods have the same request flow. It basically consists of the following steps:

@@ -6,6 +6,21 @@ originalArticleId: 51a57eee-3a6a-4623-be41-b8ed81c2902a
 redirect_from:
   - /v2/docs/mg-cms
   - /v2/docs/en/mg-cms
+related:
+  - title: CMS
+    link: docs/scos/user/features/page.version/cms-feature-overview/cms-feature-overview.html
+  - title: CMS Pages
+    link: docs/scos/user/back-office-user-guides/page.version/content/pages/cms-pages.html
+  - title: Migration Guide - CMS Block
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-cmsblock.html
+  - title: Migration Guide - CMS Block Collector
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-cms-block-collector.html
+  - title: Migration Guide - CMS Block GUI
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-cmsblockgui.html
+  - title: Migration Guide - CMS Block Category Connector
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-cms-block-category-connector.html
+  - title: Migration Guide - CMS Collector
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-cmscollector.html
 ---
 
 ## Upgrading from Version 6.* to Version 7.*

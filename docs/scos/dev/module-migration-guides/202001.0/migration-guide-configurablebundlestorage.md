@@ -7,6 +7,9 @@ originalArticleId: e7ed35d9-3aec-4277-a761-135a88ca91d0
 redirect_from:
   - /v4/docs/migration-guide-configurablebundlestorage
   - /v4/docs/en/migration-guide-configurablebundlestorage
+related:
+  - title: Migration Guide - ConfigurableBundle
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-configurablebundle.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.0.0

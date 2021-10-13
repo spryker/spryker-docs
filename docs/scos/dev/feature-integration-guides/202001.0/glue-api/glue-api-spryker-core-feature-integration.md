@@ -7,6 +7,9 @@ originalArticleId: 1274ba9d-7dc3-4df9-902c-1193b1c6b74a
 redirect_from:
   - /v4/docs/glue-api-spryker-core-feature-integration
   - /v4/docs/en/glue-api-spryker-core-feature-integration
+related:
+  - title: Using Search Engine Friendly URLs
+    link: docs/scos/dev/glue-api-guides/page.version/using-search-engine-friendly-urls.html
 ---
 
 ## Install Feature API

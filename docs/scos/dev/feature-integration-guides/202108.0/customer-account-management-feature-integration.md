@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/customer-account-management-feature-integration
   - /docs/customer-account-management-feature-integration
   - /docs/en/customer-account-management-feature-integration
+related:
+  - title: Customer Account Management + Order Management feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/customer-account-management-order-management-feature-integration.html
+  - title: Glue API- Customer Account Management feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-customer-account-management-feature-integration.html
 ---
 
 This document describes how to integrate the Customer Account Management feature into a Spryker project.

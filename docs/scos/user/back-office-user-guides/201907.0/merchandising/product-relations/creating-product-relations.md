@@ -7,6 +7,9 @@ originalArticleId: ea49e2cb-7337-47e9-bc90-2e4d0d4d26a2
 redirect_from:
   - /v3/docs/creating-a-product-relation
   - /v3/docs/en/creating-a-product-relation
+related:
+  - title: Product Relations Feature Overview
+    link: docs/scos/user/features/page.version/product-relations-feature-overview.html
 ---
 
 This topic describes the procedure that needs to be performed in order to create a product relation.

@@ -7,6 +7,9 @@ originalArticleId: 7b32ae6f-1cc5-4bda-9df6-165c35fd2377
 redirect_from:
   - /v2/docs/prices-feature-integration-201903
   - /v2/docs/en/prices-feature-integration-201903
+related:
+  - title: Volume Prices Feature Overview
+    link: docs/scos/user/features/page.version/prices-feature-overview/volume-prices-overview.html
 ---
 
 {% info_block errorBox "Attention!" %}

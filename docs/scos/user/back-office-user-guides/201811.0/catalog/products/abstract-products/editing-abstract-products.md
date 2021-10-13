@@ -7,6 +7,17 @@ originalArticleId: d895943d-a48c-419a-99cd-39eb94fc35a8
 redirect_from:
   - /v1/docs/editing-an-abstract-product
   - /v1/docs/en/editing-an-abstract-product
+related:
+  - title: Creating an Abstract Product
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html
+  - title: Creating Product Variants
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/concrete-products/creating-product-variants.html
+  - title: Managing Products
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
+  - title: Products- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/products-reference-information.html
+  - title: Abstract Product- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/abstract-product-reference-information.html
 ---
 
 This article describes the procedure of editing abstract products.

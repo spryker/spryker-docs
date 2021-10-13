@@ -18,6 +18,13 @@ redirect_from:
   - /v2/docs/en/documenting-glue-api-resources
   - /v1/docs/documenting-glue-api-resources
   - /v1/docs/en/documenting-glue-api-resources
+related:
+  - title: Glue Infrastructure
+    link: docs/scos/dev/glue-api-guides/page.version/glue-infrastructure.html
+  - title: Glue API Installation and Configuration
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-installation-and-configuration.html
+  - title: REST API Reference
+    link: docs/scos/dev/glue-api-guides/page.version/rest-api-reference.html
 ---
 
 To help developers understand and use the public API of your project, you need to cover it with complete and up-to-date documentation. Spryker Glue provides the possibility to generate it automatically with the help of the **DocumentationGeneratorRestApi** Module. It extracts information on your REST API endpoints directly from their implementation. It also adds the possibility to provide additional information on endpoints, such as their purpose, usage details, request parameters (e.g. in headers, paths, queries, or cookies), etc.

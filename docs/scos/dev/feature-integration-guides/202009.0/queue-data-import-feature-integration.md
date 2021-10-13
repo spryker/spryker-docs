@@ -7,6 +7,9 @@ originalArticleId: 3bd928dc-4bb6-43e9-b67c-83961d318fd1
 redirect_from:
   - /v6/docs/queue-data-import-feature-integration
   - /v6/docs/en/queue-data-import-feature-integration
+related:
+  - title: Data import
+    link: docs/scos/dev/sdk/page.version/data-import.html
 ---
 
 ## Install Feature Core

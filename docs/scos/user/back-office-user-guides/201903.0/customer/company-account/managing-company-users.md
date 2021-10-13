@@ -7,6 +7,17 @@ originalArticleId: 42691368-9628-4b0b-9b85-aa550ac23f56
 redirect_from:
   - /v2/docs/managing-company-users
   - /v2/docs/en/managing-company-users
+related:
+  - title: Company Account- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/references/company-account-reference-information.html
+  - title: Managing Company Unit Addresses
+    link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/managing-company-unit-addresses.html
+  - title: Managing Companies
+    link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/managing-companies.html
+  - title: Managing Company Roles
+    link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/managing-company-roles.html
+  - title: Managing Company Units
+    link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/managing-company-units.html
 ---
 
 This topic describes the procedures for creating and managing company users. This is the final step in the company account setup.

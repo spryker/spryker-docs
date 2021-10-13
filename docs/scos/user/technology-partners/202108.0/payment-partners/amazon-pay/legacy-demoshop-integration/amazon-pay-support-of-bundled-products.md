@@ -9,6 +9,21 @@ redirect_from:
   - /2021080/docs/en/amazon-pay-support-bundled-products-demoshop
   - /docs/amazon-pay-support-bundled-products-demoshop
   - /docs/en/amazon-pay-support-bundled-products-demoshop
+related:
+  - title: Amazon Pay - Configuration for the Legacy Demoshop
+    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-configuration-for-the-legacy-demoshop.html
+  - title: Amazon Pay - Refund
+    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-refund.html
+  - title: Amazon Pay - API
+    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-api.html
+  - title: Amazon Pay - Email Notifications
+    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-email-notifications.html
+  - title: Amazon Pay - Sandbox Simulations
+    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-sandbox-simulations.html
+  - title: Amazon Pay - State Machine
+    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-state-machine.html
+  - title: Amazon Pay - Rendering a “Pay with Amazon” Button on the Cart Page
+    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-rendering-a-pay-with-amazon-button-on-the-cart-page.html
 ---
 
 Bundled products are optional in the shop, thus support of those should be configured.

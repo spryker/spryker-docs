@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/editing-content-items
   - /docs/editing-content-items
   - /docs/en/editing-content-items
+related:
+  - title: Content Items Feature Overview
+    link: docs/scos/user/features/page.version/content-items-feature-overview.html
 ---
 
 This topic describes how to edit content items in the Back Office.

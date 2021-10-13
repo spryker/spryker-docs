@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/order-cancellation-overview
   - /docs/order-cancellation-overview
   - /docs/en/order-cancellation-overview
+related:
+  - title: Managing Orders
+    link: docs/scos/user/back-office-user-guides/page.version/sales/orders/managing-orders.html
+  - title: Retrieving Customer's Order History
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
 ---
 
 Order cancellation makes the shopping experience of B2B and B2C shoppers more flexible by allowing them to cancel their orders within a defined time period. Also, it optimizes the workflow of sales and customer service by allowing them to cancel orders on customers’ behalf in the Back Office.

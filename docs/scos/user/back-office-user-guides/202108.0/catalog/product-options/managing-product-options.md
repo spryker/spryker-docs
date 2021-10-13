@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/managing-product-options
   - /docs/managing-product-options
   - /docs/en/managing-product-options
+related:
+  - title: Product Options feature overview
+    link: docs/scos/user/features/page.version/product-options-feature-overview.html
 ---
 
 This article describes the managing actions that you can perform with the product options. 

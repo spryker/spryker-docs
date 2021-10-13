@@ -21,6 +21,11 @@ redirect_from:
   - /v2/docs/en/performance-guidelines
   - /v1/docs/performance-guidelines
   - /v1/docs/en/performance-guidelines
+related:
+  - title: Web Profiler Widget for Yves
+    link: docs/scos/dev/migration-and-integration/page.version/development-tools/web-profiler-widget-for-yves.html
+  - title: Web Profiler for Zed
+    link: docs/scos/dev/migration-and-integration/page.version/development-tools/web-profiler-for-zed.html
 ---
 
 Spryker is a fast application by design. These guidelines explain how to optimize the server-side execution time.

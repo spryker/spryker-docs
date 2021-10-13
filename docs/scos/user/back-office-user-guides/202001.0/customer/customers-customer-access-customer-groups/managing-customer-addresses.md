@@ -7,6 +7,15 @@ originalArticleId: be79c3e1-c934-4f1f-ba33-e6e4fd4be28d
 redirect_from:
   - /v4/docs/managing-customer-addresses
   - /v4/docs/en/managing-customer-addresses
+related:
+  - title: Managing Customer Groups
+    link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/managing-customer-groups.html
+  - title: Managing Customers
+    link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/managing-customers.html
+  - title: Managing Customer Access
+    link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/managing-customer-access.html
+  - title: Customer Accounts
+    link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html
 ---
 
 This topic describes the procedures of managing customer addresses. You will also find the procedure of reviewing the orders placed by your customers.

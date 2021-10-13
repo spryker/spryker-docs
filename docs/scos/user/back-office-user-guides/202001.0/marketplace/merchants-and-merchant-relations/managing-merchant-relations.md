@@ -7,6 +7,9 @@ originalArticleId: 354f421c-0484-4dbf-af29-2d8bbd1c4297
 redirect_from:
   - /v4/docs/managing-merchant-relations
   - /v4/docs/en/managing-merchant-relations
+related:
+  - title: Merchants and Merchant Relations Feature Overview
+    link: docs/scos/user/features/page.version/merchant-b2b-contracts-feature-overview.html
 ---
 
 This article describes how you create and manage the Merchant Relations in the Back Office.

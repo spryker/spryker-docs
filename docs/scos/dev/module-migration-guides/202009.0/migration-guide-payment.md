@@ -7,6 +7,9 @@ originalArticleId: d088a6d2-2970-43f7-b552-ff263d642073
 redirect_from:
   - /v6/docs/mg-payment
   - /v6/docs/en/mg-payment
+related:
+  - title: Migration Guide - CheckoutRestApi
+    link: docs/scos/dev/module-migration-guides/page.version/glue-api/migration-guide-checkoutrestapi.html
 ---
 
 ## Upgrading from Version 4.* to Version 5.0.0

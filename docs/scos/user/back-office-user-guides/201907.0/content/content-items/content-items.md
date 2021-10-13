@@ -7,6 +7,9 @@ originalArticleId: f2101b26-58ba-4309-9859-50905f08238f
 redirect_from:
   - /v3/docs/content-items-guide-201907
   - /v3/docs/en/content-items-guide-201907
+related:
+  - title: Content Items Overview
+    link: docs/scos/user/features/page.version/content-items-feature-overview.html
 ---
 
 The main focus of content items is to work on the content and its placement separately. Thus, first, you create content and then decide where to insert it.

@@ -7,6 +7,9 @@ originalArticleId: a5508521-3ecc-424f-8001-97660c161f10
 redirect_from:
   - /v5/docs/mg-discount-sales-aggregator-connector
   - /v5/docs/en/mg-discount-sales-aggregator-connector
+related:
+  - title: Migration Guide - Discount
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-discount.html
 ---
 
 ## Upgrading from Version 2.* to Version 3.*

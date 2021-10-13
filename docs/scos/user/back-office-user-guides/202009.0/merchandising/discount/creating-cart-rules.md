@@ -7,6 +7,11 @@ originalArticleId: ae3f32da-eb63-4021-8002-8adce334a0dc
 redirect_from:
   - /v6/docs/creating-a-cart-rule
   - /v6/docs/en/creating-a-cart-rule
+related:
+  - title: Token Description Tables
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/references/token-description-tables.html
+  - title: Managing Discounts
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/managing-discounts.html
 ---
 
 This topic describes how to create a Cart Rule.

@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/managing-customer-access
   - /docs/managing-customer-access
   - /docs/en/managing-customer-access
+related:
+  - title: Hide Content from Logged out Users Overview
+    link: docs/scos/user/features/page.version/customer-access-feature-overview.html
 ---
 
 The *Customer Access* page allows you to define what information not logged-in to online store customers.

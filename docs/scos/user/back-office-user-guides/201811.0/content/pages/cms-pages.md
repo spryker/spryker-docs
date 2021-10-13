@@ -7,6 +7,9 @@ originalArticleId: baff2269-9604-4d91-8e40-a47bee520928
 redirect_from:
   - /v1/docs/cms-pages
   - /v1/docs/en/cms-pages
+related:
+  - title: CMS Page
+    link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
 ---
 
 CMS page is an extra HTML page of your Spryker shop that you, as a Back Office user, can create and edit using the WYSIWYG editor. The examples of CMS pages are About Us, Impressum, Terms and Conditions pages.

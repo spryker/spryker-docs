@@ -7,6 +7,21 @@ originalArticleId: bd2e579e-8f75-4390-bb32-3d8616b558dd
 redirect_from:
   - /v2/docs/crefopay-capture-refund-processes
   - /v2/docs/en/crefopay-capture-refund-processes
+related:
+  - title: CrefoPay - Integration
+    link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-integration-into-a-project.html
+  - title: CrefoPay
+    link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay.html
+  - title: CrefoPay - Installation and Configuration
+    link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-installation-and-configuration.html
+  - title: CrefoPay - Callback
+    link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-callback.html
+  - title: CrefoPay - Business to Business Model
+    link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-business-to-business-model.html
+  - title: CrefoPay - Provided Payment Methods
+    link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-provided-payment-methods.html
+  - title: CrefoPay - Notifications
+    link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-notifications.html
 ---
 
 CrefoPay module can have different capture and refund processes:

@@ -7,6 +7,9 @@ originalArticleId: bd5fb4f2-bdc0-43c5-bba0-2648b234fc1c
 redirect_from:
   - /v6/docs/glue-api-alternative-products-feature-integration
   - /v6/docs/en/glue-api-alternative-products-feature-integration
+related:
+  - title: Retrieving Alternative Products
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/retrieving-alternative-products.html
 ---
 
 ## Install Feature API

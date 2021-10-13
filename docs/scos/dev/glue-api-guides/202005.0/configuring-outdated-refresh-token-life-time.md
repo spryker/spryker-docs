@@ -6,6 +6,11 @@ originalArticleId: b695d109-b38a-430f-b0c4-b9fc86284bf8
 redirect_from:
   - /v5/docs/configuring-outdated-refresh-token-life-time
   - /v5/docs/en/configuring-outdated-refresh-token-life-time
+related:
+  - title: Authentication and Authorization
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
+  - title: Glue API- Customer Account Management feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-customer-account-management-feature-integration.html
 ---
 
 Refresh tokens generated when accessing Glue REST API expire after a certain period of time. In addition to that, they can be [forcibly revoked](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html#token-revocation) at any time. No matter how a token becomes invalidated, it is set to expire but remains in the Storage.

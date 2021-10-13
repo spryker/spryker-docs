@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/root360
   - /docs/root360
   - /docs/en/root360
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
 ---
 
 ## Partner Information

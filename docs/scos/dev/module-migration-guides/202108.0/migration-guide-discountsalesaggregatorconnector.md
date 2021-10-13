@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/mg-discount-sales-aggregator-connector
   - /docs/mg-discount-sales-aggregator-connector
   - /docs/en/mg-discount-sales-aggregator-connector
+related:
+  - title: Migration Guide - Discount
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-discount.html
 ---
 
 ## Upgrading from Version 2.* to Version 3.*

@@ -7,6 +7,21 @@ originalArticleId: 0c5c56a3-532e-4f9d-8d3b-a472058ca408
 redirect_from:
   - /v1/docs/search-factfinder-campaigns
   - /v1/docs/en/search-factfinder-campaigns
+related:
+  - title: Installing and configuring FACT-Finder NG API
+    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-the-fact-finder-ng-api.html
+  - title: Using FACT-Finder search
+    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search.html
+  - title: FACT-Finder
+    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/analytics/fact-finder.html
+  - title: Using FACT-Finder tracking
+    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/using-fact-finder-tracking.html
+  - title: Exporting product data for FACT-Finder
+    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/exporting-product-data-for-fact-finder.html
+  - title: Using FACT-Finder recommendation engine
+    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/using-fact-finder-recommendation-engine.html
+  - title: Using FACT-Finder search suggestions
+    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search-suggestions.html
 ---
 
 ## Prerequisites

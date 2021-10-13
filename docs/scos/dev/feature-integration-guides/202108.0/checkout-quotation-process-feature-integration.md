@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/checkout-quotation-process-feature-integration
   - /docs/checkout-quotation-process-feature-integration
   - /docs/en/checkout-quotation-process-feature-integration
+related:
+  - title: Quotation Process feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/quotation-process-feature-integration.html
 ---
 
 ## Install Feature Core

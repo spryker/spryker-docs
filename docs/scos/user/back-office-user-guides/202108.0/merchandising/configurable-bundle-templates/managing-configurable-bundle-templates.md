@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/managing-configurable-bundle-templates
   - /docs/managing-configurable-bundle-templates
   - /docs/en/managing-configurable-bundle-templates
+related:
+  - title: Configurable Bundle Feature Overview
+    link: docs/scos/user/features/page.version/configurable-bundle-feature-overview.html
 ---
 
 This article describes how to manage configurable bundle templates.

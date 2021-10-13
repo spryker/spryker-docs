@@ -7,6 +7,9 @@ originalArticleId: 895cbfac-815a-448f-9419-2e4520aba1e7
 redirect_from:
   - /v5/docs/product-relations-management
   - /v5/docs/en/product-relations-management
+related:
+  - title: Product Relations Feature Overview
+    link: docs/scos/user/features/page.version/product-relations-feature-overview.html
 ---
 
 Product relations help shop owners to promote the related goods as well as to point the customers' attention to the goods that they may also want to see.

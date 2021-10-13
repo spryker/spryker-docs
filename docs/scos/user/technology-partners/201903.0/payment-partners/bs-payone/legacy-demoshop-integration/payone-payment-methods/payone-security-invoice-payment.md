@@ -7,6 +7,19 @@ originalArticleId: 65093dc1-f8ed-49be-a544-0288deb399e1
 redirect_from:
   - /v2/docs/payone-security-invoice
   - /v2/docs/en/payone-security-invoice
+related:
+  - title: PayOne - Authorization and Preauthorization Capture Flows
+    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-authorization-and-preauthorization-capture-flows.html
+  - title: PayOne - Invoice Payment
+    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-invoice-payment.html
+  - title: PayOne - Cash on Delivery
+    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/scos-integration/payone-cash-on-delivery.html
+  - title: PayOne - Prepayment
+    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-prepayment.html
+  - title: PayOne - Direct Debit Payment
+    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-direct-debit-payment.html
+  - title: PayOne - Online Transfer Payment
+    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-online-transfer-payment.html
 ---
 
 ## Front-End Integration

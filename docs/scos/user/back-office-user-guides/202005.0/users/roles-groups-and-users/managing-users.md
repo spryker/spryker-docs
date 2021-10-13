@@ -7,6 +7,13 @@ originalArticleId: aa0a96e2-b0b4-4df0-a419-b5c122c67d97
 redirect_from:
   - /v5/docs/managing-users
   - /v5/docs/en/managing-users
+related:
+  - title: Roles- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/users/roles-groups-and-users/references/roles-reference-information.html
+  - title: User- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/users/roles-groups-and-users/references/user-reference-information.html
+  - title: User and Rights Management
+    link: docs/scos/dev/feature-walkthroughs/page.version/customer-account-management-feature-walkthrough/user-and-rights-overview.html
 ---
 
 This topic describes how to manage users.

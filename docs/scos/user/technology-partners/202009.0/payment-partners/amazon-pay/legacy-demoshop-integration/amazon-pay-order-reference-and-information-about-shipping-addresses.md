@@ -7,6 +7,23 @@ originalArticleId: daa93e41-08e2-43ff-9f81-2d009db904cd
 redirect_from:
   - /v6/docs/amazon-pay-order-ref-info-demoshop
   - /v6/docs/en/amazon-pay-order-ref-info-demoshop
+related:
+  - title: Amazon Pay - Configuration for the Legacy Demoshop
+    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-configuration-for-the-legacy-demoshop.html
+  - title: Amazon Pay - Refund
+    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-refund.html
+  - title: Amazon Pay - API
+    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-api.html
+  - title: Amazon Pay - Email Notifications
+    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-email-notifications.html
+  - title: Amazon Pay - Sandbox Simulations
+    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-sandbox-simulations.html
+  - title: Amazon Pay - State Machine
+    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-state-machine.html
+  - title: Amazon Pay - Support of Bundled Products
+    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-support-of-bundled-products.html
+  - title: Amazon Pay - Rendering a “Pay with Amazon” Button on the Cart Page
+    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-rendering-a-pay-with-amazon-button-on-the-cart-page.html
 ---
 
 After successful authorization, a buyer will be redirected to an order details page to enter all the information necessary for placing an order: address of shipment, payment method, delivery method and some calculations about taxes, possible discounts, delivery cost, etc.

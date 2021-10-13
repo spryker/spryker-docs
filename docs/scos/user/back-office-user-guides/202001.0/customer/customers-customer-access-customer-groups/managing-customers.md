@@ -7,6 +7,15 @@ originalArticleId: 8146a091-cb75-4354-9365-fa8b33297f32
 redirect_from:
   - /v4/docs/managing-customers
   - /v4/docs/en/managing-customers
+related:
+  - title: Customer Accounts
+    link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html
+  - title: Managing Customer Groups
+    link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/managing-customer-groups.html
+  - title: Managing Customer Access
+    link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/managing-customer-access.html
+  - title: Managing Customer Addresses
+    link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/managing-customer-addresses.html
 ---
 
 This article describes the procedures for creating and managing customers. 

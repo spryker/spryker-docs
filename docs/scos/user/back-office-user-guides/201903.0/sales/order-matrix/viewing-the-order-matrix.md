@@ -7,6 +7,9 @@ originalArticleId: 6d9cafd7-62a4-4f7a-8253-6444a33ad5a7
 redirect_from:
   - /v2/docs/order-matrix-reference-information
   - /v2/docs/en/order-matrix-reference-information
+related:
+  - title: OMS (Order Management System) Matrix
+    link: docs/scos/user/features/page.version/order-management-feature-overview/oms-order-management-system-matrix.html
 ---
 
 The Order Matrix page displays the information about ordered items.

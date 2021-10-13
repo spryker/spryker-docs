@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/mg-product-option-cart-connector
   - /docs/mg-product-option-cart-connector
   - /docs/en/mg-product-option-cart-connector
+related:
+  - title: Migration Guide - Product Option
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-productoption.html
 ---
 
 ## Upgrading from Version 5.* to Version 7.0.0

@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/mg-price-cart-connector
   - /docs/mg-price-cart-connector
   - /docs/en/mg-price-cart-connector
+related:
+  - title: Migration Guide - Price
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-price.html
+  - title: Migration Guide - Multi-Currency
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-multi-currency.html
 ---
 
 ## Upgrading from Version 4.* to Version 6.0.0

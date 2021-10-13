@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/shipment-cart-feature-integration
   - /docs/shipment-cart-feature-integration
   - /docs/en/shipment-cart-feature-integration
+related:
+  - title: Shipment feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/shipment-feature-integration.html
 ---
 
 ## Install Feature Core

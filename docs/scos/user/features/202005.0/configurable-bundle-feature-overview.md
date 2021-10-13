@@ -9,6 +9,23 @@ redirect_from:
   - /v5/docs/en/configurable-bundle-feature-overview
   - /v5/docs/configurable-bundle
   - /v5/docs/en/configurable-bundle
+related:
+  - title: Configurable Bundle Templates- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/configurable-bundle-templates/references/configurable-bundle-templates-reference-information.html
+  - title: Configurable Bundle- Module Relations
+    link: docs/scos/user/features/page.version/product-information-management/configurable-bundle/configurable-bundle-module-relations.html
+  - title: Configurable Bundle Templates
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/configurable-bundle-templates/configurable-bundle-templates.html
+  - title: Managing Configurable Bundle Templates
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html
+  - title: Creating Configurable Bundle Templates
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/configurable-bundle-templates/creating-configurable-bundle-templates.html
+  - title: Migration Guide - ConfigurableBundleStorage
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-configurablebundlestorage.html
+  - title: Migration Guide - ConfigurableBundle
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-configurablebundle.html
+  - title: Shop Guide - Managing Configurable Bundles
+    link: docs/scos/user/shop-user-guides/page.version/shop-guide-configurator/shop-guide-managing-configurable-bundles.html
 ---
 
 A **configurable bundle** is a product bundle, that a customer can configure in the Storefront on the go by choosing the suggested concrete products.

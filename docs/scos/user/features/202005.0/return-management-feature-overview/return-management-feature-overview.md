@@ -9,6 +9,23 @@ redirect_from:
   - /v5/docs/en/return-management-feature-overview
   - /v5/docs/return-management
   - /v5/docs/en/return-management
+related:
+  - title: Managing Orders
+    link: docs/scos/user/back-office-user-guides/page.version/sales/orders/managing-orders.html
+  - title: Orders- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/sales/orders/references/orders-reference-information.html
+  - title: Returns- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/sales/returns/references/returns-reference-information.html
+  - title: Return Details- Reference Information
+    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/references/return-details-reference-information.html
+  - title: Return Item States- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/sales/returns/references/return-item-states-reference-information.html
+  - title: Managing Returns
+    link: docs/scos/user/back-office-user-guides/page.version/sales/returns/managing-returns.html
+  - title: Shop Guide - Printing a Return Slip
+    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-returns-management/shop-guide-printing-a-return-slip.html
+  - title: Shop Guide - Creating a Return
+    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-returns-management/shop-guide-creating-a-return.html
 ---
 
 The *Return Management* feature allows you to create and manage returns for a sales order. 

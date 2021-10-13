@@ -7,6 +7,11 @@ originalArticleId: d58c9274-a369-459b-9397-ae12c4097a3e
 redirect_from:
   - /v3/docs/managing-product-relations
   - /v3/docs/en/managing-product-relations
+related:
+  - title: Product Relations Feature Overview
+    link: docs/scos/user/features/page.version/product-relations-feature-overview.html
+  - title: Creating Product Relations
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-relations/creating-product-relations.html
 ---
 
 This topic describes the managing actions that you can perform with the product options.

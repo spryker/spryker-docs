@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/retrieving-product-labels
   - /docs/retrieving-product-labels
   - /docs/en/retrieving-product-labels
+related:
+  - title: Glue API- Promotions & Discounts feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-promotions-and-discounts-feature-integration.html
+  - title: Product Labels feature overview
+    link: docs/scos/user/features/page.version/product-labels-feature-overview.html
 ---
 
 [Product labels](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) are used to draw your customers' attention to some specific products. Each of them has a name, a priority, and a validity period. The Product Labels API provides endpoints for getting labels via the REST HTTP requests.

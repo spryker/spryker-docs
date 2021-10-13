@@ -7,6 +7,9 @@ originalArticleId: cd355e06-f149-4fb1-a411-e61b6f08cbc3
 redirect_from:
   - /v6/docs/managing-discounts
   - /v6/docs/en/managing-discounts
+related:
+  - title: Token Description Tables
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/references/token-description-tables.html
 ---
 
 This topic describes how to manage discounts.

@@ -7,6 +7,11 @@ originalArticleId: 2250358f-e7ce-437e-8858-651d0769ffee
 redirect_from:
   - /v4/docs/managing-cms-blocks
   - /v4/docs/en/managing-cms-blocks
+related:
+  - title: CMS Block
+    link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
+  - title: Defining Validity Period for CMS Blocks
+    link: docs/scos/user/back-office-user-guides/page.version/content/blocks/defining-validity-period-for-cms-blocks.html
 ---
 
 This topic describes the procedures of managing CMS blocks.

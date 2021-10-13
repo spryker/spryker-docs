@@ -7,6 +7,11 @@ originalArticleId: 1502581d-c63d-4dbe-8bae-4a4c3a324c32
 redirect_from:
   - /v5/docs/attributes
   - /v5/docs/en/attributes
+related:
+  - title: Product Attributes
+    link: docs/scos/user/features/page.version/product-feature-overview/product-attributes-overview.html
+  - title: Super Attributes
+    link: docs/scos/user/features/page.version/product-information-management/super-attributes.html
 ---
 
 The attributes section is designed to create the super attributes that define the product variants and define the descriptive attributes that present the product features.

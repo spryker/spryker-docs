@@ -9,6 +9,23 @@ redirect_from:
   - /2021080/docs/en/search-factfinder-search
   - /docs/search-factfinder-search
   - /docs/en/search-factfinder-search
+related:
+  - title: Installing and configuring FACT-Finder
+    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder.html
+  - title: Integrating FACT-Finder
+    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/integrating-fact-finder.html
+  - title: Installing and configuring FACT-Finder web components
+    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder-web-components.html
+  - title: Using FACT-Finder campaigns
+    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/using-fact-finder-campaigns.html
+  - title: Exporting product data for FACT-Finder
+    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/exporting-product-data-for-fact-finder.html
+  - title: Using FACT-Finder recommendation engine
+    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/using-fact-finder-recommendation-engine.html
+  - title: Using FACT-Finder tracking
+    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/using-fact-finder-tracking.html
+  - title: Using FACT-Finder search suggestions
+    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search-suggestions.html
 ---
 
 ## Prerequisites

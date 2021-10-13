@@ -7,6 +7,25 @@ originalArticleId: d52a4f20-f706-44ed-973b-738d7eca17ee
 redirect_from:
   - /v5/docs/payone-v1-1
   - /v5/docs/en/payone-v1-1
+related:
+  - title: PayOne - Integration into the SCOS Project
+    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/scos-integration/payone-integration-into-the-scos-project.html
+  - title: PayOne - Risk Check and Address Check
+    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/scos-integration/payone-risk-check-and-address-check.html
+  - title: PayOne - Prepayment
+    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-prepayment.html
+  - title: PayOne - Authorization and Preauthorization Capture Flows
+    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-authorization-and-preauthorization-capture-flows.html
+  - title: PayOne - Invoice Payment
+    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-invoice-payment.html
+  - title: PayOne - Cash on Delivery
+    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/scos-integration/payone-cash-on-delivery.html
+  - title: PayOne - Credit Card Payment
+    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-credit-card-payment.html
+  - title: PayOne - PayPal Express Checkout Payment
+    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-paypal-express-checkout-payment.html
+  - title: PayOne - Security Invoice Payment
+    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-security-invoice-payment.html
 ---
 
 ## Partner Information

@@ -7,6 +7,17 @@ originalArticleId: b21c4e04-3792-43d6-a594-e46bcc949ede
 redirect_from:
   - /v3/docs/managing-customer-access
   - /v3/docs/en/managing-customer-access
+related:
+  - title: Managing Customer Groups
+    link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/managing-customer-groups.html
+  - title: Managing Customer Addresses
+    link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/managing-customer-addresses.html
+  - title: Managing Customers
+    link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/managing-customers.html
+  - title: Customer Accounts
+    link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html
+  - title: Customers- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/references/customers-reference-information.html
 ---
 
 The Customer Access page was designed to define what information can be viewed for the not-logged-into online store customers.

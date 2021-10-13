@@ -14,6 +14,15 @@ redirect_from:
   - /v4/docs/dummy-payment
   - /v4/docs/en/dummy-payment
 
+related:
+  - title: Migration Guide - Payment
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-payment.html
+  - title: Payments feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/payments-feature-integration.html
+  - title: Managing Payment Methods
+    link: docs/scos/user/back-office-user-guides/page.version/administration/payment-methods/managing-payment-methods.html
+  - title: Payment Methods- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/administration/payment-methods/references/payment-methods-reference-information.html
 ---
 
 The *Payments* feature allows your customers to pay for orders with none (for example, a [gift card](/docs/scos/user/features/{{page.version}}/gift-cards-feature-overview.html), one or multiple payment methods during the checkout process. Most orders are paid with a single payment method but in some cases, it may be useful to allow multiple payment methods. For instance, the customer may want to use two credit cards or a gift card in addition to a traditional payment method.

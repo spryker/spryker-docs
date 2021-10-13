@@ -7,6 +7,21 @@ originalArticleId: 25cc1fd0-7612-406b-a2a8-75f75ff0725b
 redirect_from:
   - /v6/docs/product-feature-integration
   - /v6/docs/en/product-feature-integration
+related:
+  - title: Configurable Bundle feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/configurable-bundle-feature-integration.html
+  - title: Product Lists feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/product-lists-feature-integration.html
+  - title: Prices feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/prices-feature-integration.html
+  - title: Merchant Product Restrictions feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/merchant-product-restrictions-feature-integration.html
+  - title: Product Images + Configurable Bundle feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/product-images-configurable-bundle-feature-integration.html
+  - title: Product + Order Management feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/product-order-management-feature-integration.html
+  - title: Product overview
+    link: docs/scos/user/features/page.version/product-feature-overview/product-feature-overview.html
 ---
 
 {% info_block errorBox %}

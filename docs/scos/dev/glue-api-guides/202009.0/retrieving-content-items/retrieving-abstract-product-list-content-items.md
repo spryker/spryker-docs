@@ -7,6 +7,11 @@ originalArticleId: 86b93b27-d9ed-474c-b42e-a2333c04aa92
 redirect_from:
   - /v6/docs/retireving-abstract-product-list-content-items
   - /v6/docs/en/retireving-abstract-product-list-content-items
+related:
+  - title: REST API Reference
+    link: docs/scos/dev/glue-api-guides/page.version/rest-api-reference.html
+  - title: Content Items Feature Overview
+    link: docs/scos/user/features/page.version/content-items-feature-overview.html
 ---
 
 This endpoint allows retrieving information about abstract product list content items.

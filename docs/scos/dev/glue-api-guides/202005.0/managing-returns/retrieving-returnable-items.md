@@ -7,6 +7,15 @@ originalArticleId: 2ede8cf4-3a79-43ab-8da1-f5b75655a463
 redirect_from:
   - /v5/docs/retrieving-returnable-items
   - /v5/docs/en/retrieving-returnable-items
+related:
+  - title: Retrieving Return Management Information
+    link: docs/scos/dev/glue-api-guides/page.version/managing-returns/retrieving-return-management-information.html
+  - title: Creating a Return
+    link: docs/scos/dev/glue-api-guides/page.version/managing-returns/creating-a-return.html
+  - title: Retrieving the Returned Items
+    link: docs/scos/dev/glue-api-guides/page.version/managing-returns/retrieving-the-returned-items.html
+  - title: Retrieving the Return Reasons
+    link: docs/scos/dev/glue-api-guides/page.version/managing-returns/retrieving-return-reasons.html
 ---
 
 You can retrieve information about:

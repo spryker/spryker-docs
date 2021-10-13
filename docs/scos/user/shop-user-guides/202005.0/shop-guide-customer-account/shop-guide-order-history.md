@@ -7,6 +7,27 @@ originalArticleId: 25acfa39-f693-469e-8839-e6260365fdc1
 redirect_from:
   - /v5/docs/shop-guide-order-history
   - /v5/docs/en/shop-guide-order-history
+related:
+  - title: Shop Guide - Customer Profile
+    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-customer-profile.html
+  - title: Shop Guide - Customer Addresses
+    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-customer-addresses.html
+  - title: Shop Guide - Customer Account Overview
+    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-customer-account-overview.html
+  - title: Shop Guide - Newsletter
+    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-newsletter.html
+  - title: Shop Guide - Wishlists
+    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-wishlists.html
+  - title: Shop Guide - Shopping Lists
+    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-shopping-lists.html
+  - title: Shop Guide - Managing a Shopping Cart
+    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-managing-a-shopping-cart.html
+  - title: Shop Guide - Managing Multiple Shopping Carts
+    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-managing-multiple-shopping-carts.html
+  - title: Shop Guide - Managing Requests for Quotes for a Sales Representative
+    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-managing-requests-for-quotes-for-a-sales-representative.html
+  - title: Shop Guide - Managing Requests for Quotes for a Buyer
+    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-managing-requests-for-quotes-for-a-buyer.html
 ---
 
 Order History is the page where you can check all the orders you have created in your Customer Account.

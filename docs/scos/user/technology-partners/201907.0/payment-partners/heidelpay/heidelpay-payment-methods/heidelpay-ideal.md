@@ -7,6 +7,27 @@ originalArticleId: 3948e535-c66c-4e8d-8938-35c170541252
 redirect_from:
   - /v3/docs/heidelpay-ideal
   - /v3/docs/en/heidelpay-ideal
+related:
+  - title: Heidelpay
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay.html
+  - title: Heidelpay - Integration into SCOS
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/scos-integration/heidelpay-integration-into-scos.html
+  - title: Heidelpay - Invoice Secured B2C
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-invoice-secured-b2c.html
+  - title: Heidelpay - Direct Debit
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-direct-debit.html
+  - title: Heidelpay - Credit Card Secure
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-credit-card-secure.html
+  - title: Heidelpay - Paypal Debit Workflow
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-paypal-debit-workflow.html
+  - title: Heidelpay - Configuration for SCOS
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/scos-integration/heidelpay-configuration-for-scos.html
+  - title: Heidelpay - Integration into the Legacy Demoshop
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-integration-into-the-legacy-demoshop.html
+  - title: Heidelpay - Split-payment Marketplace
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-split-payment-marketplace.html
+  - title: Heidelpay - Easy Credit
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-easy-credit.html
 ---
 
 ### Setup

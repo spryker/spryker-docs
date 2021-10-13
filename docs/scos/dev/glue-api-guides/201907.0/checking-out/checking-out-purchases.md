@@ -7,6 +7,11 @@ originalArticleId: 7147ffd2-fd6b-4510-a007-0129effaa291
 redirect_from:
   - /v3/docs/checking-out-purchases-and-getting-checkout-data-201907
   - /v3/docs/en/checking-out-purchases-and-getting-checkout-data-201907
+related:
+  - title: Retrieving Customer's Order History
+    link: docs/scos/dev/glue-api-guides/page.version/retrieving-customers-order-history.html
+  - title: Checkout feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/checkout-feature-integration.html
 ---
 
 The **Checkout API** provides endpoints for placing, updating and retrieving checkout information.

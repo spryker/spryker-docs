@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/ratenkauf-integration-into-project
   - /docs/ratenkauf-integration-into-project
   - /docs/en/ratenkauf-integration-into-project
+related:
+  - title: Ratenkauf by Easycredit
+    link: docs/scos/user/technology-partners/page.version/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html
+  - title: Ratenkauf by Easycredit - Installation and configuration
+    link: docs/scos/user/technology-partners/page.version/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit-installation-and-configuration.html
 ---
 
 {% info_block errorBox %}

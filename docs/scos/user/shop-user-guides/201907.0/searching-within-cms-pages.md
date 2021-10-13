@@ -7,6 +7,11 @@ originalArticleId: 3745805d-9a18-4bd9-bb7d-08c884ae357d
 redirect_from:
   - /v3/docs/searching-within-cms-pages
   - /v3/docs/en/searching-within-cms-pages
+related:
+  - title: CMS Pages
+    link: docs/scos/user/back-office-user-guides/page.version/content/pages/cms-pages.html
+  - title: CMS Pages in Search Results
+    link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-in-search-results-overview.html
 ---
 
 For the CMS pages in search results feature, the following details are provided:

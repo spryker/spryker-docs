@@ -7,6 +7,11 @@ originalArticleId: e4d93c0f-fafa-4f4d-ab30-d316732a87e3
 redirect_from:
   - /v4/docs/tooling-config-file
   - /v4/docs/en/tooling-config-file
+related:
+  - title: Code Sniffer
+    link: docs/scos/dev/sdk/page.version/development-tools/code-sniffer.html
+  - title: Architecture Sniffer
+    link: docs/scos/dev/sdk/page.version/development-tools/architecture-sniffer.html
 ---
 
 In order to make the tool configuring more convenient, we introduce the `.tooling.yml` file. It contains settings for different tools (the Architecture and the Code sniffers are supported at the moment) in one place, helping you to keep the number of files on the root level as small as possible. The `.tooling.yml` file should also be in `.gitattributes` to be ignored for tagging:

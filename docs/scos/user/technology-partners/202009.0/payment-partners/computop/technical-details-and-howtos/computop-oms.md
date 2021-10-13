@@ -7,6 +7,27 @@ originalArticleId: ac8607bf-275a-41b4-b683-f178b2b045ff
 redirect_from:
   - /v6/docs/computop-oms-details
   - /v6/docs/en/computop-oms-details
+related:
+  - title: Computop
+    link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop.html
+  - title: Computop - Sofort
+    link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-sofort.html
+  - title: Computop - PayPal
+    link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-paypal.html
+  - title: Computop - PayNow
+    link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-paynow.html
+  - title: Computop - Easy Credit
+    link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-easy-credit.html
+  - title: Computop - API
+    link: docs/scos/user/technology-partners/page.version/payment-partners/computop/technical-details-and-howtos/computop-api.html
+  - title: Computop - iDeal
+    link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-ideal.html
+  - title: Computop - Direct Debit
+    link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-direct-debit.html
+  - title: Computop - Credit Card
+    link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-credit-card.html
+  - title: Computop - CRIF
+    link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-crif.html
 ---
 
 The following plugins are used for performing calls to Paygate during OMS operation.

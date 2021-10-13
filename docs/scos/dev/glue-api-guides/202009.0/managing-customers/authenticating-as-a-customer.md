@@ -7,6 +7,11 @@ originalArticleId: 4f692494-e323-4a95-bff8-b45c984c1ff3
 redirect_from:
   - /v6/docs/authenticating-as-a-customer
   - /v6/docs/en/authenticating-as-a-customer
+related:
+  - title: Authentication and authorization
+    link: docs/scos/dev/glue-api-guides/page.version/authentication-and-authorization.html
+  - title: Searching by company users
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
 ---
 
 This endpoint allows authenticating as a customer. As an authenticated customer, you can send requests to [protected resources](//docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html#protected-resources).

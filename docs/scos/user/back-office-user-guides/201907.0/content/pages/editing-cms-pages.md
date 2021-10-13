@@ -7,6 +7,17 @@ originalArticleId: ea6cab7a-d42e-4f2a-bdb7-d5adb73fdb18
 redirect_from:
   - /v3/docs/editing-cms-pages
   - /v3/docs/en/editing-cms-pages
+related:
+  - title: CMS Page
+    link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
+  - title: Creating CMS Pages
+    link: docs/scos/user/back-office-user-guides/page.version/content/pages/creating-cms-pages.html
+  - title: Managing CMS Pages
+    link: docs/scos/user/back-office-user-guides/page.version/content/pages/managing-cms-pages.html
+  - title: Managing CMS Page Versions
+    link: docs/scos/user/back-office-user-guides/page.version/content/pages/managing-cms-page-versions.html
+  - title: Assigning Blocks to Category or Product Pages
+    link: docs/scos/user/back-office-user-guides/page.version/content/blocks/assigning-blocks-to-category-or-product-pages.html
 ---
 
 The topic describes how to edit CMS pages in the Back Office.

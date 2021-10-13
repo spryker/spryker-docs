@@ -7,6 +7,21 @@ originalArticleId: ebe3c82c-b276-405b-8ef2-880802914813
 redirect_from:
   - /v3/docs/crefopay-configuration
   - /v3/docs/en/crefopay-configuration
+related:
+  - title: CrefoPay - Integration
+    link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-integration-into-a-project.html
+  - title: CrefoPay
+    link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay.html
+  - title: CrefoPay - Provided Payment Methods
+    link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-provided-payment-methods.html
+  - title: CrefoPay - Capture and Refund Processes
+    link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-capture-and-refund-processes.html
+  - title: CrefoPay - Business to Business Model
+    link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-business-to-business-model.html
+  - title: CrefoPay - Callback
+    link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-callback.html
+  - title: CrefoPay - Notifications
+    link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-notifications.html
 ---
 
 To integrate CrefoPay into your project, first you need to install and configure the CrefoPay module. This topic describes how to do that.

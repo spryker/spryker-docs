@@ -7,6 +7,11 @@ originalArticleId: f5fdff16-96e6-49a3-a0cb-0699ce9dde6e
 redirect_from:
   - /v2/docs/enabling-category-cms-block
   - /v2/docs/en/enabling-category-cms-block
+related:
+  - title: CMS Block
+    link: docs/scos/user/back-office-user-guides/page.version/content/blocks/cms-block.html
+  - title: Migration Guide - CMS Block
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-cmsblock.html
 ---
 
 Category blocks are blocks that can be embedded into the category template.

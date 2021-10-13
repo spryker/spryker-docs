@@ -6,6 +6,9 @@ originalArticleId: 9f106f35-5a57-4027-988c-877927dd05d9
 redirect_from:
   - /v4/docs/billpay-integration
   - /v4/docs/en/billpay-integration
+related:
+  - title: Billpay
+    link: docs/scos/user/technology-partners/page.version/payment-partners/billpay/billpay.html
 ---
 
 Billpay offers multiple payment methods (Invoice, Direct Debit, PayLater, Instalment). Availability of payment methods differs from country to country. Please contact Billpay directly or visit the [Billpay website](https://www.billpay.de/en/)e  for details.

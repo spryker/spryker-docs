@@ -7,6 +7,15 @@ originalArticleId: 967a78e6-83d2-427a-b681-fe7c81e11b39
 redirect_from:
   - /v6/docs/demoshop-with-modular-frontend
   - /v6/docs/en/demoshop-with-modular-frontend
+related:
+  - title: Twig Compatibility- Legacy Demoshop vs SCOS
+    link: docs/scos/dev/migration-and-integration/page.version/updating-the-legacy-demoshop-with-scos/twig-compatibility-legacy-demoshop-vs-scos.html
+  - title: Making the Legacy Demoshop Compatible with the Atomic Frontend
+    link: docs/scos/dev/migration-and-integration/page.version/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-atomic-frontend.html
+  - title: Making the Legacy Demoshop Compatible with Publish & Synchronize
+    link: docs/scos/dev/migration-and-integration/page.version/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-publish-and-synchronize.html
+  - title: Setting up ShopUiCompatibility Module in the Legacy Demoshop
+    link: docs/scos/dev/migration-and-integration/page.version/updating-the-legacy-demoshop-with-scos/setting-up-shopuicompatibility-module-in-the-legacy-demoshop.html
 ---
 
 ## Infrastructure Preparation

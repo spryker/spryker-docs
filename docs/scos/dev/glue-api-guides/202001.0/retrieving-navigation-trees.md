@@ -7,6 +7,13 @@ originalArticleId: b99b0a42-7f08-419f-a379-cf6b1a50657e
 redirect_from:
   - /v4/docs/retrieving-navigation-trees-201907
   - /v4/docs/en/retrieving-navigation-trees-201907
+related:
+  - title: Migration Guide - NavigationsRestApi
+    link: docs/scos/dev/module-migration-guides/page.version/glue-api/migration-guide-navigationsrestapi.html
+  - title: Browsing a Category Tree
+    link: docs/scos/dev/glue-api-guides/page.version/retrieving-categories/retrieving-category-trees.html
+  - title: Catalog Search
+    link: docs/scos/dev/glue-api-guides/page.version/catalog-search.html
 ---
 
 Spryker offers the navigation feature, which enables shoppers to quickly navigate the shop and easily locate the necessary products and other content. For this purpose, backoffice users can create any number of navigations. Navigations come in a tree structure and can incorporate links to CMS pages, categories, as well as any other internal and external links.

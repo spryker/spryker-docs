@@ -7,6 +7,11 @@ originalArticleId: da740023-3f68-4292-800c-711585e7cfba
 redirect_from:
   - /v6/docs/product-labels-promotions-discounts-feature-integration
   - /v6/docs/en/product-labels-promotions-discounts-feature-integration
+related:
+  - title: Product labels feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/product-labels-feature-integration.html
+  - title: Promotions & Discounts feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/promotions-and-discounts-feature-integration.html
 ---
 
 ## Install Feature Core

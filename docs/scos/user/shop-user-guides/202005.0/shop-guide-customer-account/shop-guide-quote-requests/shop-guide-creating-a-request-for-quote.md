@@ -7,6 +7,11 @@ originalArticleId: c8d0fdd6-1640-41c7-b618-c7918434497a
 redirect_from:
   - /v5/docs/creating-rfq-shop-guide
   - /v5/docs/en/creating-rfq-shop-guide
+related:
+  - title: Quotation Process feature overview
+    link: docs/scos/user/features/page.version/quotation-process-feature-overview.html
+  - title: Request for Quote- Reference Information
+    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/references/request-for-quote-reference-information.html
 ---
 
 This topic describes how a Buyer can create a new Request for Quote (RFQ) and add a delivery address along with the shipment method.

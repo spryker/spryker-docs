@@ -7,6 +7,9 @@ originalArticleId: 046d140f-f470-41cd-85ba-2c4fa8ba4efb
 redirect_from:
   - /v5/docs/inxmail
   - /v5/docs/en/inxmail
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
 ---
 
 ## Partner Information

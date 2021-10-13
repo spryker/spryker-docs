@@ -8,6 +8,17 @@ redirect_from:
   - /2021080/docs/en/payolution-integration-into-project
   - /docs/payolution-integration-into-project
   - /docs/en/payolution-integration-into-project
+related:
+  - title: Payolution - Installation and Configuration
+    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/payolution-installation-and-configuration.html
+  - title: Payolution - Performing Requests
+    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/technical-details-and-howtos/payolution-performing-requests.html
+  - title: Payolution - Workflow
+    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/technical-details-and-howtos/payolution-workflow.html
+  - title: Payolution - Installment Payment
+    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/payolution-payment-methods/payolution-installment-payment.html
+  - title: Payolution - Invoice Payment
+    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/payolution-payment-methods/payolution-invoice-payment.html
 ---
 
 {% info_block errorBox %}

@@ -7,6 +7,15 @@ originalArticleId: 160c7ed8-06c1-4e33-8dc3-371b2218bc9f
 redirect_from:
   - /v2/docs/managing-merchant-relations
   - /v2/docs/en/managing-merchant-relations
+related:
+  - title: Merchants and Merchant Relations Feature Overview
+    link: docs/scos/user/features/page.version/merchant-b2b-contracts-feature-overview.html
+  - title: Creating an Abstract Product
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html
+  - title: Creating Product Variants
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/concrete-products/creating-product-variants.html
+  - title: Managing Merchant Order Thresholds
+    link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/managing-merchant-order-thresholds.html
 ---
 
 This article describes how you create and manage the Merchant Relations in the Back Office.

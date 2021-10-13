@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/creating-content-items
   - /docs/creating-content-items
   - /docs/en/creating-content-items
+related:
+  - title: Content Items Feature Overview
+    link: docs/scos/user/features/page.version/content-items-feature-overview.html
+  - title: Editing Content Items
+    link: docs/scos/user/back-office-user-guides/page.version/content/content-items/editing-content-items.html
 ---
 
 This topic describes how to create content items in the Back Office.

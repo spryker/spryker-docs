@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/phpstan
   - /docs/phpstan
   - /docs/en/phpstan
+related:
+  - title: Architecture Sniffer
+    link: docs/scos/dev/sdk/page.version/development-tools/architecture-sniffer.html
+  - title: Code Sniffer
+    link: docs/scos/dev/sdk/page.version/development-tools/code-sniffer.html
 ---
 
 [PHPStan](https://github.com/phpstan/phpstan) is a static code analyzer that introspects the code without running it and catches various classes of bugs prior to unit testing.

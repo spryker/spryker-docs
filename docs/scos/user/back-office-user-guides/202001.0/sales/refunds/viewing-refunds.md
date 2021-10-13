@@ -7,6 +7,9 @@ originalArticleId: 723bd280-d79d-41e2-9a3f-f6b329c8aa84
 redirect_from:
   - /v4/docs/refunds-reference-information
   - /v4/docs/en/refunds-reference-information
+related:
+  - title: Refunds feature overview
+    link: docs/scos/user/features/page.version/refunds-feature-overview.html
 ---
 
 If a customer changes their mind about an order, you can give him/her a refund for the order.

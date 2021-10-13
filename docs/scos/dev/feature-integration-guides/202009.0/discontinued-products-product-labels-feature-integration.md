@@ -7,6 +7,11 @@ originalArticleId: 2ec3cb7c-f514-4815-9850-0ddd9abf59a1
 redirect_from:
   - /v6/docs/discontinued-products-product-labels-feature-integration
   - /v6/docs/en/discontinued-products-product-labels-feature-integration
+related:
+  - title: Product labels feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/product-labels-feature-integration.html
+  - title: Discontinued product overview
+    link: docs/scos/user/features/page.version/product-feature-overview/discontinued-products-overview.html
 ---
 
 ## Install Feature Core

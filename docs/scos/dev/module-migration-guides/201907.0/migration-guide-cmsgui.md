@@ -6,6 +6,9 @@ originalArticleId: 5b60e771-2903-41b3-a8ca-ccff49636c16
 redirect_from:
   - /v3/docs/mg-cms-gui
   - /v3/docs/en/mg-cms-gui
+related:
+  - title: Creating CMS Pages
+    link: docs/scos/user/back-office-user-guides/page.version/content/pages/creating-cms-pages.html
 ---
 
 ## Upgrading from Version 4.* to Version 5.*

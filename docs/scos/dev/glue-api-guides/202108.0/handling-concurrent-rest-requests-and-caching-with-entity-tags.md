@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/handling-concurrent-rest-requests-and-caching-with-entity-tags
   - /docs/handling-concurrent-rest-requests-and-caching-with-entity-tags
   - /docs/en/handling-concurrent-rest-requests-and-caching-with-entity-tags
+related:
+  - title: Glue Infrastructure
+    link: docs/scos/dev/glue-api-guides/page.version/glue-infrastructure.html
+  - title: Shared Cart Feature Overview
+    link: docs/scos/user/features/page.version/shared-carts-feature-overview.html
 ---
 
 Some Spryker Glue API resources allow concurrent changes from multiple sources. For example, a shared cart can be changed by multiple users that act independently. 

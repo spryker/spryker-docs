@@ -6,6 +6,9 @@ originalArticleId: deed8520-986d-4b5d-8639-130d2147802c
 redirect_from:
   - /v5/docs/common-solutions
   - /v5/docs/en/common-solutions
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
 ---
 
 ---

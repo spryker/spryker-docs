@@ -7,6 +7,9 @@ originalArticleId: 2ab31309-f14d-4493-bc10-2099062f0326
 redirect_from:
   - /v4/docs/trustpilot
   - /v4/docs/en/trustpilot
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
 ---
 
 ## Partner Information

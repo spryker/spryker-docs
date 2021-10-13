@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/shipment-approval-process-feature-integration
   - /docs/shipment-approval-process-feature-integration
   - /docs/en/shipment-approval-process-feature-integration
+related:
+  - title: Approval Process feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/approval-process-feature-integration.html
+  - title: Shipment feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/shipment-feature-integration.html
 ---
 
 ## Install Feature Core

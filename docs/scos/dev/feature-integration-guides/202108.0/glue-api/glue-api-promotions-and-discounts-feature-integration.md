@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/glue-api-promotions-discounts-feature-integration
   - /docs/glue-api-promotions-discounts-feature-integration
   - /docs/en/glue-api-promotions-discounts-feature-integration
+related:
+  - title: Managing Guest Carts
+    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-carts.html
+  - title: Managing Carts of Registered Users
+    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
 ---
 
 Follow the steps below to install Promotions & Discounts feature API.

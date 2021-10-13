@@ -7,6 +7,9 @@ originalArticleId: 2cf1542f-5a75-449a-b684-61f4f27f61a3
 redirect_from:
   - /v2/docs/haensel-ams
   - /v2/docs/en/haensel-ams
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
 ---
 
 ## Partner Information

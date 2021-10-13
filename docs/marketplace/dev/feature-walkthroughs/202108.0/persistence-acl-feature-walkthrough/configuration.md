@@ -115,8 +115,9 @@ Examples of ACL configuration are provided in this section.
 
 ### Basic inheritance configuration
 
-Below you can find an example of the basic configuration of the inheritance of the `SpyProduct` from `SpyStora` (through the `SpyProductAbstract` and `SpyProductAbstractStore`).
-This configuration is necessary to use the functionality of the [Inherited scope](./rules-and-scopes/inherited-scope.html) rules and [Composite entity](./rules-and-scopes/composite-entity.html).
+This section shows how you can inherit the `SpyProduct` from `SpyStora` by using the `SpyProductAbstract` and the `SpyProductAbstractStore`.
+
+This configuration is necessary to use the functionality of the [Inherited scope](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/inherited-scope.html) rules and [Composite entity](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/composite-entity.html).
 
 ```php
     /**
@@ -165,8 +166,8 @@ This configuration is necessary to use the functionality of the [Inherited scope
 
 ### The inheritance through the reference column
 
-Sometimes, at the database level, data is linked not by foreign keys, but by "reference columns".
-The example below shows an example of inheritance `SpyAvailability` from `SpyProduct` through a reference column (`sku` for this example).
+In some databases, data is linked not by foreign keys but by "reference columns".
+Below is an example of inheriting `SpyAvailability` from `SpyProduct` through a reference column (*sku* in this example).
 Pay attention to the [AclEntityParentConnectionMetadataTransfer](#aclentityparentconnectionmetadatatransfer) property.
 
 ```php
@@ -202,7 +203,7 @@ Pay attention to the [AclEntityParentConnectionMetadataTransfer](#aclentityparen
 
 ### Composite entity
 
-Below you can find an example of a [Composite entity](./rules-and-scopes/composite-entity.html) `SpyMerchant`, which consists of:
+Below you can find an example of a [Composite entity](docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/composite-entity.html) `SpyMerchant`, which consists of:
 - `SpyMerchant`
 - `SpyMerchantProfile`
 - `SpyMerchantUser`
@@ -257,7 +258,7 @@ Below you can find an example of a [Composite entity](./rules-and-scopes/composi
 
 ### Data segmentation support
 
-Below you can find an example of the data segmentation for `SpyMerchant`. Data segmentation is required for [Segment scope](./rules-and-scopes/segment-scope.html) rules. 
+The following is an example of the data segmentation for the `SpyMerchant`. Data segmentation is required for the [Segment scope](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/segment-scope.html) rules. 
 
 ```php
     /**
@@ -279,8 +280,8 @@ Below you can find an example of the data segmentation for `SpyMerchant`. Data s
 ```
 
 ### Default operation mask
-The example below sets the default `Read` permissions for `SpyCountry` and `Create + Read`  for `SpyResetPassword`.
-Read more about [Default operation mask](#default-operation-mask).
+
+The example below sets the default `Read` permissions for the `SpyCountry` and `Create + Read` permissions for the `SpyResetPassword`.
 
 ```php
     /**
@@ -311,7 +312,7 @@ Read more about [Default operation mask](#default-operation-mask).
 
 ### Allow list configuration
 
-In the example below, we add all the entities needed for the correct operation of the Persistence Acl feature:
+The following example adds all the entities required for the Persistence Acl to function correctly:
 
 ```php
     /**

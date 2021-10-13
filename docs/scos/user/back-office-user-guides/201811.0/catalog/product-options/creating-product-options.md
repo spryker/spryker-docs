@@ -7,6 +7,9 @@ originalArticleId: 827fff89-4b27-4097-b542-b1f57475e8a0
 redirect_from:
   - /v1/docs/creating-a-product-option
   - /v1/docs/en/creating-a-product-option
+related:
+  - title: Product Options feature overview
+    link: docs/scos/user/features/page.version/product-options-feature-overview.html
 ---
 
 This article describes the procedure you need to perform in order to create a  product option.

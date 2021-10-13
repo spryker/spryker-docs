@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/company-account-feature-integration
   - /docs/company-account-feature-integration
   - /docs/en/company-account-feature-integration
+related:
+  - title: Glue API- Company Account feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-company-account-feature-integration.html
+  - title: Company Account + Order Management feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/company-account-order-management-feature-integration.html
 ---
 
 {% info_block errorBox %}

@@ -7,6 +7,9 @@ originalArticleId: 2db60295-edab-4d6a-b05f-653e2c6d0348
 redirect_from:
   - /v3/docs/paazl
   - /v3/docs/en/paazl
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
 ---
 
 ## Partner Information

@@ -7,6 +7,9 @@ originalArticleId: ac4d18d2-5da3-4565-a3d7-08ef06bf67b1
 redirect_from:
   - /v4/docs/claranet
   - /v4/docs/en/claranet
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
 ---
 
 ## Partner Information

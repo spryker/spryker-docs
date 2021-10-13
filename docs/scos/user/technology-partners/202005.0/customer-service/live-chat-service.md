@@ -7,6 +7,9 @@ originalArticleId: 7f2cd88e-0d89-4246-be7b-6e0f6b51cf9d
 redirect_from:
   - /v5/docs/live-chat-service
   - /v5/docs/en/live-chat-service
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
 ---
 
 ## Partner Information

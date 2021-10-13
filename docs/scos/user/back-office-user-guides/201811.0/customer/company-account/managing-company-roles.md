@@ -7,6 +7,19 @@ originalArticleId: d36afa06-1a49-4e55-a3b8-8677bfbeaeae
 redirect_from:
   - /v1/docs/managing-company-roles
   - /v1/docs/en/managing-company-roles
+related:
+  - title: Company Account- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/references/company-account-reference-information.html
+  - title: Company User Roles and Permissions Feature Overview
+    link: docs/scos/user/features/page.version/company-account-feature-overview/company-user-roles-and-permissions-overview.html
+  - title: Managing Company Users
+    link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/managing-company-users.html
+  - title: Managing Company Unit Addresses
+    link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/managing-company-unit-addresses.html
+  - title: Managing Companies
+    link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/managing-companies.html
+  - title: Managing Company Units
+    link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/managing-company-units.html
 ---
 
 This topic describes the procedures of creating and managing company roles. This is one of the steps in the Company Account setup.

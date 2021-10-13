@@ -11,6 +11,9 @@ redirect_from:
 - /v5/docs/back-office-translations
 - /v5/docs/en/back-office-translations
 
+related:
+  - title: Managing Users
+    link: docs/scos/user/back-office-user-guides/page.version/users/roles-groups-and-users/managing-users.html
 ---
 
 ---

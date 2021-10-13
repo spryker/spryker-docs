@@ -6,6 +6,11 @@ originalArticleId: 2bc4065c-8443-4bd8-a716-f884a2a677a8
 redirect_from:
   - /v1/docs/mg-product-option-cart-connector
   - /v1/docs/en/mg-product-option-cart-connector
+related:
+  - title: Product Options
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/product-options/product-options.html
+  - title: Migration Guide - Product Option
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-productoption.html
 ---
 
 ## Upgrading from Version 5.* to Version 7.0.0

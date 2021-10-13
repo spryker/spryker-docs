@@ -7,6 +7,9 @@ originalArticleId: 30aad86f-b489-4d64-b6bc-0fab68277361
 redirect_from:
   - /v5/docs/product-group-product-labels-feature-integration
   - /v5/docs/en/product-group-product-labels-feature-integration
+related:
+  - title: Product Groups feature overview
+    link: docs/scos/user/features/page.version/product-groups-feature-overview.html
 ---
 
 ## Install Feature Core

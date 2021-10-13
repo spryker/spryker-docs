@@ -7,6 +7,19 @@ originalArticleId: 00819aca-7dd5-4bc5-988a-a71a92e60f94
 redirect_from:
   - /v3/docs/payone-state-machine-cmd-cond-evnt
   - /v3/docs/en/payone-state-machine-cmd-cond-evnt
+related:
+  - title: PayOne - Authorization and Preauthorization Capture Flows
+    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-authorization-and-preauthorization-capture-flows.html
+  - title: PayOne - Invoice Payment
+    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-invoice-payment.html
+  - title: PayOne - Cash on Delivery
+    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/scos-integration/payone-cash-on-delivery.html
+  - title: PayOne - Prepayment
+    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-prepayment.html
+  - title: PayOne - Direct Debit Payment
+    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-direct-debit-payment.html
+  - title: PayOne - Security Invoice Payment
+    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-security-invoice-payment.html
 ---
 
 | Operation | Type | Description |

@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/retrieving-customer-carts
   - /docs/retrieving-customer-carts
   - /docs/en/retrieving-customer-carts
+related:
+  - title: Managing carts of registered users
+    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
 ---
 
 This endpoint allows retrieving a customer’s carts.

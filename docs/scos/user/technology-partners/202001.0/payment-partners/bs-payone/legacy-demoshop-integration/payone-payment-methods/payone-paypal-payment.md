@@ -7,6 +7,19 @@ originalArticleId: 7661aba7-6f64-419b-a853-43fc7b53d528
 redirect_from:
   - /v4/docs/payone-paypal
   - /v4/docs/en/payone-paypal
+related:
+  - title: PayOne - Prepayment
+    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-prepayment.html
+  - title: PayOne - Authorization and Preauthorization Capture Flows
+    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-authorization-and-preauthorization-capture-flows.html
+  - title: PayOne - Invoice Payment
+    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-invoice-payment.html
+  - title: PayOne - Cash on Delivery
+    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/scos-integration/payone-cash-on-delivery.html
+  - title: PayOne - Direct Debit Payment
+    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-direct-debit-payment.html
+  - title: PayOne - Security Invoice Payment
+    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-security-invoice-payment.html
 ---
 
 The payment using PayPal requires a redirect to PayPal website. When the customer is redirected to PayPal's website, he must authorize himself and he has the option to either cancel or validate the transaction.

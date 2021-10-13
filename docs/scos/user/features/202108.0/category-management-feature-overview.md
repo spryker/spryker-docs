@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/category-management-feature-overview
   - /docs/category-management-feature-overview
   - /docs/en/category-management-feature-overview
+related:
+  - title: Managing Categories
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/category/managing-categories.html
+  - title: Assigning Products to Categories
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/category/assigning-products-to-categories.html
 ---
 
 A category is a set of products that share a common attribute and, therefore, can be united logically. The *Category Management* feature allows Back Office users to structure products into a logical system where each product belongs to a category or set of interrelated categories. You can [assign categories to all or individual stores](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html) from the Back Office or [import stores for categories](). For details on how a Back Office user can group products under categories, see [Assigning products to categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html).

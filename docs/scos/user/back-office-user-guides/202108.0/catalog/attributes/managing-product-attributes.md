@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/managing-attributes
   - /docs/managing-attributes
   - /docs/en/managing-attributes
+related:
+  - title: Product Attributes
+    link: docs/scos/user/features/page.version/product-feature-overview/product-attributes-overview.html
 ---
 
 This topic describes how to manage product attributes.

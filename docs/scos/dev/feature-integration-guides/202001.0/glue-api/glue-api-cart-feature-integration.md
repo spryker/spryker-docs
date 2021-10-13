@@ -7,6 +7,9 @@ originalArticleId: 61c4ca5a-12f2-42e3-ae96-272338b60e4e
 redirect_from:
   - /v4/docs/cart-feature-integration
   - /v4/docs/en/cart-feature-integration
+related:
+  - title: Managing Guest Carts
+    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-carts.html
 ---
 
 ## Install Feature API

@@ -6,6 +6,9 @@ originalArticleId: 666a5d96-4603-4f38-bdb3-6b6d5d326de3
 redirect_from:
   - /v5/docs/mg-checkoutrestapi
   - /v5/docs/en/mg-checkoutrestapi
+related:
+  - title: Migration Guide - Payment
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-payment.html
 ---
 
 ## Upgrading from Version 2.* to Version 3.0.0

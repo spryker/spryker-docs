@@ -7,6 +7,11 @@ originalArticleId: bd31b6b9-8826-4bb0-99de-8e95d45ef5ab
 redirect_from:
   - /v5/docs/mg-product-search
   - /v5/docs/en/mg-product-search
+related:
+  - title: Migration Guide - Product
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-product.html
+  - title: Migration Guide - Product Set GUI
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-productsetgui.html
 ---
 
 ## Upgrading from Version 3.* to Version 4.*

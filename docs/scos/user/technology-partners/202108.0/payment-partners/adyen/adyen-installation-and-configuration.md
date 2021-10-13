@@ -9,6 +9,13 @@ redirect_from:
   - /2021080/docs/en/adyen-configuration
   - /docs/adyen-configuration
   - /docs/en/adyen-configuration
+related:
+  - title: Adyen - Integration into a project
+    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-integration-into-a-project.html
+  - title: Adyen - Filtering Payment Methods
+    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-filtering-payment-methods.html
+  - title: Adyen - Provided Payment Methods
+    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-provided-payment-methods.html
 ---
 
 This topic describes how to install and configure the Adyen module to integrate Adyen into your project.
@@ -60,9 +67,19 @@ The table below describes all general configuration keys and their values.
 | `AdyenApiConstants::ADJUST_AUTHORIZATION_ACTION_URL` | string | URL for the API call to adjust the authorized amount. |
 
 ## Specific Configuration
-Also, you have to add payment methods to State Machine (OMS) configuration:
+Also, you have to add payment methods to the State Machine (OMS), Domain Whitelist and Session Frontend configuration:
 
 ```php
+  $config[KernelConstants::DOMAIN_WHITELIST] = array_merge($trustedHosts, [
+     ...
+     'adyen.com', // trusted Adyen domain
+     'test.adyen.com', // trusted Adyen domain for tests
+ ]);
+ ...
+ // >>> SESSION FRONTEND
+ ...
+ $config[SessionConstants::YVES_SESSION_COOKIE_SAMESITE] = 'none';
+ ...
  $config[OmsConstants::PROCESS_LOCATION] = [
  ...
  APPLICATION_ROOT_DIR . '/vendor/spryker-eco/adyen/config/Zed/Oms',

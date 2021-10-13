@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/mg-product
   - /docs/mg-product
   - /docs/en/mg-product
+related:
+  - title: Migration Guide - Collector
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-collector.html
+  - title: Migration Guide - ProductManagement
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-productmanagement.html
 ---
 
 ## Upgrading from Version 5.* to Version 6.*

@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/product-quantity-restrictions-overview
   - /docs/product-quantity-restrictions-overview
   - /docs/en/product-quantity-restrictions-overview
+related:
+  - title: Product Merchandising
+    link: docs/scos/dev/data-import/page.version/data-import-categories/merchandising-setup/product-merchandising/product-merchandising.html
+  - title: File details- product_quantity.csv
+    link: docs/scos/dev/data-import/page.version/data-import-categories/merchandising-setup/product-merchandising/file-details-product-quantity.csv.html
 ---
 
 

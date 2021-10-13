@@ -7,6 +7,19 @@ originalArticleId: 2bce3269-9c53-4eff-a2a9-d21e4f5eed46
 redirect_from:
   - /v6/docs/searching-by-company-users
   - /v6/docs/en/searching-by-company-users
+related:
+  - title: Authentication and Authorization
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
+  - title: Retrieving Company Role Information
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-roles.html
+  - title: Retrieving Company User Information
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-users.html
+  - title: Company Account and General Organizational Structure
+    link: docs/scos/user/features/page.version/company-account-feature-overview/company-accounts-overview.html
+  - title: Prices per Merchant Relation Feature Overview
+    link: docs/scos/user/features/page.version/merchant-custom-prices-feature-overview.html
+  - title: Password Management
+    link: docs/scos/user/features/page.version/customer-account-management-feature-overview/password-management-overview.html
 ---
 
 This endpoint allows [authenticated customers](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html#authenticate-as-a-customer) to search by the company users available to them. Usually, authenticated customers search for a company user which they want to authenticate as. 

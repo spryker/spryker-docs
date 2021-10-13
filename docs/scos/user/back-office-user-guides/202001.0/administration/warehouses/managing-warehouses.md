@@ -7,6 +7,9 @@ originalArticleId: 309969f1-ea15-4eb4-ad13-868d9e7ecd08
 redirect_from:
   - /v4/docs/managing-warehouses
   - /v4/docs/en/managing-warehouses
+related:
+  - title: Warehouses- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/administration/warehouses/references/warehouses-reference-information.html
 ---
 
 This topic describes the managing actions you can perform on warehouses: view, edit and activate or deactivate.

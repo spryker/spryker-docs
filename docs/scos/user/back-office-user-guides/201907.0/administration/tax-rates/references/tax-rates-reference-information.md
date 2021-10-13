@@ -7,6 +7,9 @@ originalArticleId: 78f382b2-5ba1-4b97-8839-ee3c9c01da98
 redirect_from:
 - /v3/docs/taxes-reference-information
 - /v3/docs/en/taxes-reference-information
+related:
+  - title: Taxes Rates - Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/administration/tax-rates/references/tax-rates-reference-information.html
 ---
 
 This topic describes the procedures that you need to perform to create, edit, and delete tax rates

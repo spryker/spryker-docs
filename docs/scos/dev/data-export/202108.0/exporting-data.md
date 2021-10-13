@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/exporting-data
   - /docs/exporting-data
   - /docs/en/exporting-data
+related:
+  - title: Sales Data Export feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/sales-data-export-feature-integration.html
+  - title: Data Export Orders .csv Files Format
+    link: docs/scos/dev/data-export/page.version/data-export-orders-.csv-files-format.html
 ---
 
 {% info_block warningBox "BETA version" %}

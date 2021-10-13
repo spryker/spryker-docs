@@ -7,6 +7,9 @@ originalArticleId: 8bb28660-340d-48a4-a43b-8b990f6a6ea4
 redirect_from:
   - /v1/docs/zenloop
   - /v1/docs/en/zenloop
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
 ---
 
 ## Partner Information

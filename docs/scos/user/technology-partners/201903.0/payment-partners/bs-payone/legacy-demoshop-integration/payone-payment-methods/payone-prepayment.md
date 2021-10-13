@@ -7,6 +7,19 @@ originalArticleId: c80420d9-8976-4982-a715-f938a5b1d062
 redirect_from:
   - /v2/docs/payone-prepayment
   - /v2/docs/en/payone-prepayment
+related:
+  - title: PayOne - Authorization and Preauthorization Capture Flows
+    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-authorization-and-preauthorization-capture-flows.html
+  - title: PayOne - Invoice Payment
+    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-invoice-payment.html
+  - title: PayOne - Cash on Delivery
+    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/scos-integration/payone-cash-on-delivery.html
+  - title: PayOne - Direct Debit Payment
+    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-direct-debit-payment.html
+  - title: PayOne - Security Invoice Payment
+    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-security-invoice-payment.html
+  - title: PayOne - Online Transfer Payment
+    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-online-transfer-payment.html
 ---
 
 Prepayment method is a safe alternative to payments involving credit cards or debit cards (such as online banking transfer). Usually bank transfer would require manual processing to mark transaction as cancelled or completed, but the process is fully automated through the integration with the Payone platform.

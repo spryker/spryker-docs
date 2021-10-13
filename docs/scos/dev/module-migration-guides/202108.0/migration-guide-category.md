@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/migration-guide-category
   - /docs/migration-guide-category
   - /docs/en/migration-guide-category
+related:
+  - title: Creating Categories
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/category/creating-categories.html
 ---
 
 This document describes how to upgrade the `Category` module.

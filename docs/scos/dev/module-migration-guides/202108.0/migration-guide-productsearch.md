@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/mg-product-search
   - /docs/mg-product-search
   - /docs/en/mg-product-search
+related:
+  - title: Migration Guide - Product
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-product.html
+  - title: Migration Guide - Product Set GUI
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-productsetgui.html
 ---
 
 ## Upgrading from Version 3.* to Version 4.*

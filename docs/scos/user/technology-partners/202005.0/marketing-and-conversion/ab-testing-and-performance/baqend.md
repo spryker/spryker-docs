@@ -6,6 +6,9 @@ originalArticleId: 83c113a3-32b5-434f-aae3-4621ef67f66a
 redirect_from:
   - /v5/docs/baqend
   - /v5/docs/en/baqend
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
 ---
 
 ---

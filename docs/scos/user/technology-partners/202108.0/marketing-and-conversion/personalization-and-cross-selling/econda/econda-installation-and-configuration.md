@@ -8,6 +8,15 @@ redirect_from:
   - /2021080/docs/en/econda-installation-and-configuration
   - /docs/econda-installation-and-configuration
   - /docs/en/econda-installation-and-configuration
+related:
+  - title: Econda - Integration into project
+    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/personalization-and-cross-selling/econda/econda-integration-into-project.html
+  - title: Econda - Tracking
+    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/personalization-and-cross-selling/econda/econda-tracking.html
+  - title: Econda - Cross Sell
+    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/personalization-and-cross-selling/econda/econda-cross-sell.html
+  - title: Econda - Exporting CSVs
+    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/personalization-and-cross-selling/econda/econda-exporting-csvs.html
 ---
 
 ## Installation

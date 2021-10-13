@@ -7,6 +7,9 @@ originalArticleId: 46de7d30-57aa-4d02-9fc2-cace9bc4fa1a
 redirect_from:
   - /v6/docs/searching-by-customers-as-an-agent-assist
   - /v6/docs/en/searching-by-customers-as-an-agent-assist
+related:
+  - title: Agent Assist feature overview
+    link: docs/scos/user/features/page.version/agent-assist-feature-overview.html
 ---
 
 

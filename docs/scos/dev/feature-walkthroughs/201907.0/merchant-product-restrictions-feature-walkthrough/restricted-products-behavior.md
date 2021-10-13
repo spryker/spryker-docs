@@ -7,6 +7,11 @@ originalArticleId: f0345204-a70f-4180-8195-e87c61914403
 redirect_from:
   - /v3/docs/restricted-products-behavior
   - /v3/docs/en/restricted-products-behavior
+related:
+  - title: Creating Product Lists
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/product-lists/creating-product-lists.html
+  - title: Managing Product Lists
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/product-lists/managing-product-lists.html
 ---
 
 On this page, you can find commonly encountered cases of product restrictions behavior.

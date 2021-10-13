@@ -7,6 +7,11 @@ originalArticleId: 4f39cec0-c47e-498a-8513-a5f121a8c0be
 redirect_from:
   - /v6/docs/migration-guide-webprofiler
   - /v6/docs/en/migration-guide-webprofiler
+related:
+  - title: Web Profiler Widget for Yves
+    link: docs/scos/dev/migration-and-integration/page.version/development-tools/web-profiler-widget-for-yves.html
+  - title: Web Profiler for Zed
+    link: docs/scos/dev/migration-and-integration/page.version/development-tools/web-profiler-for-zed.html
 ---
 
 {% info_block errorBox %}

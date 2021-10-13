@@ -7,6 +7,19 @@ originalArticleId: bbabd9c6-72b1-462e-9119-037fb86b48de
 redirect_from:
   - /v5/docs/creating-a-voucher
   - /v5/docs/en/creating-a-voucher
+related:
+  - title: Discount- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/references/discount-reference-information.html
+  - title: Discount Calculation- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/references/discount-calculation-reference-information.html
+  - title: Discount Conditions- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/references/discount-conditions-reference-information.html
+  - title: Voucher Codes- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/references/voucher-codes-reference-information.html
+  - title: Token Description Tables
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/references/token-description-tables.html
+  - title: Creating Cart Rules
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/creating-cart-rules.html
 ---
 
 This topic describes how to create a Voucher.

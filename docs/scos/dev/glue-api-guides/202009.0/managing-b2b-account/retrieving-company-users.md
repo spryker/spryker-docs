@@ -7,6 +7,15 @@ originalArticleId: e8755bf3-ef7c-4482-a278-f156203694dc
 redirect_from:
   - /v6/docs/retrieving-company-users
   - /v6/docs/en/retrieving-company-users
+related:
+  - title: Logging In as Company User
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/authenticating-as-a-company-user.html
+  - title: Retrieving Company Information
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-companies.html
+  - title: Retrieving Company Role Information
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-roles.html
+  - title: Company Account and General Organizational Structure
+    link: docs/scos/user/features/page.version/company-account-feature-overview/company-accounts-overview.html
 ---
 
 This endpoint allows retrieving information about company users.

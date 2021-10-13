@@ -7,6 +7,17 @@ originalArticleId: 912cd489-2bde-4ae2-949b-82049c2e969a
 redirect_from:
   - /v4/docs/retrieving-company-role-information-201907
   - /v4/docs/en/retrieving-company-role-information-201907
+related:
+  - title: Logging In as Company User
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/authenticating-as-a-company-user.html
+  - title: Retrieving Company Information
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-companies.html
+  - title: Retrieving Company User Information
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-users.html
+  - title: Company User Roles and Permissions Feature Overview
+    link: docs/scos/user/features/page.version/company-account-feature-overview/company-user-roles-and-permissions-overview.html
+  - title: Authentication and Authorization
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
 ---
 
 In corporate environments, where users act as company representatives rather than private buyers, companies can leverage [Company Roles](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-user-roles-and-permissions-overview.html) in order to distribute scopes and permissions among [Company Users](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html). To identify which roles company users are assigned to, you can use the endpoints provided by the **Company Role API**.

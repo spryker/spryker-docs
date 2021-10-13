@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/multiple-carts-feature-integration
   - /docs/multiple-carts-feature-integration
   - /docs/en/multiple-carts-feature-integration
+related:
+  - title: Multiple Carts per User Feature Overview
+    link: docs/scos/user/features/page.version/multiple-carts-feature-overview.html
 ---
 
 ## Install Feature Core

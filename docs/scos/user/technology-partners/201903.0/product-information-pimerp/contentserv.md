@@ -6,6 +6,9 @@ originalArticleId: e4632a61-3b1b-48a5-ad7b-ab38bb6a1084
 redirect_from:
   - /v2/docs/contentserv
   - /v2/docs/en/contentserv
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
 ---
 
 ## Partner Information

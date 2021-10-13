@@ -9,6 +9,13 @@ redirect_from:
   - /2021080/docs/en/adyen-provided-payment-methods
   - /docs/adyen-provided-payment-methods
   - /docs/en/adyen-provided-payment-methods
+related:
+  - title: Adyen - Installation and Configuration
+    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-installation-and-configuration.html
+  - title: Adyen - Integration into a project
+    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-integration-into-a-project.html
+  - title: Adyen - Filtering Payment Methods
+    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-filtering-payment-methods.html
 ---
 
 ## Credit Card

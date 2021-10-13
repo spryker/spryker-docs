@@ -7,6 +7,9 @@ originalArticleId: d9b485a8-b639-4519-ac7e-8f8a20ca0289
 redirect_from:
   - /v1/docs/architecture-sniffer
   - /v1/docs/en/architecture-sniffer
+related:
+  - title: Code Sniffer
+    link: docs/scos/dev/sdk/page.version/development-tools/code-sniffer.html
 ---
 
 We use our [Architecture Sniffer Tool](https://github.com/spryker/architecture-sniffer) to assert a certain quality of Spryker architecture for both core and project.

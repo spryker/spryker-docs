@@ -6,6 +6,9 @@ originalArticleId: b962e15f-5c4b-4a7d-b7c8-f20685f54066
 redirect_from:
   - /v3/docs/cart-feature-integration
   - /v3/docs/en/cart-feature-integration
+related:
+  - title: Managing Carts
+    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/managing-carts.html
 ---
 
 ## Install Feature API

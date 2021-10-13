@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/retireving-abstract-product-list-content-items
   - /docs/retireving-abstract-product-list-content-items
   - /docs/en/retireving-abstract-product-list-content-items
+related:
+  - title: REST API Reference
+    link: docs/scos/dev/glue-api-guides/page.version/rest-api-reference.html
+  - title: Content Items Feature Overview
+    link: docs/scos/user/features/page.version/content-items-feature-overview.html
 ---
 
 This endpoint allows retrieving information about abstract product list content items.

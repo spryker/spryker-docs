@@ -7,6 +7,13 @@ originalArticleId: 09dd4f68-46a8-4524-91ef-5bb906a2d3d3
 redirect_from:
   - /v5/docs/braintree
   - /v5/docs/en/braintree
+related:
+  - title: Braintree - Performing Requests for SCOS
+    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/braintree-technical-details-and-howtos/braintree-performing-requests.html
+  - title: Braintree - Configuration for SCOS
+    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/braintree-installation-and-configuration.html
+  - title: Braintree - Workflow for SCOS
+    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/braintree-technical-details-and-howtos/braintree-workflow.html
 ---
 
 [ABOUT BRAINTREE](https://www.braintreepayments.com/) 

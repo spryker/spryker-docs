@@ -7,6 +7,9 @@ originalArticleId: affe5aa9-c60e-4e7b-86dc-127e90d49473
 redirect_from:
   - /v6/docs/managing-users
   - /v6/docs/en/managing-users
+related:
+  - title: User and Rights Management
+    link: docs/scos/dev/feature-walkthroughs/page.version/customer-account-management-feature-walkthrough/user-and-rights-overview.html
 ---
 
 This topic describes how to manage users.

@@ -8,6 +8,9 @@ redirect_from:
   - /2021080/docs/en/glue-api-shipment-feature-integration
   - /docs/glue-api-shipment-feature-integration
   - /docs/en/glue-api-shipment-feature-integration
+related:
+  - title: Checking Out Purchases and Getting Checkout Data
+    link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
 ---
 
 This document describes how to integrate the Shipment feature API into a Spryker project.

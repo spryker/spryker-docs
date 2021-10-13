@@ -7,6 +7,9 @@ originalArticleId: 28962a5d-1646-49eb-88d6-18160ec5ae9a
 redirect_from:
   - /v2/docs/product-sets
   - /v2/docs/en/product-sets
+related:
+  - title: Product Sets feature overview
+    link: docs/scos/user/features/page.version/product-sets-feature-overview.html
 ---
 
 Product Sets let customers shop for special sets of products that can be manually curated based on any characteristic of the products you wish.

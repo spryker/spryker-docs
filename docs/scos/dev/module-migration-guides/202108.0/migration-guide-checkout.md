@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/mg-checkout
   - /docs/mg-checkout
   - /docs/en/mg-checkout
+related:
+  - title: Checkout
+    link: docs/scos/user/features/page.version/checkout-feature-overview/checkout-feature-overview.html
 ---
 
 ## Upgrading from Version 4.* to Version 6.0.0

@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/managing-products-availability
   - /docs/managing-products-availability
   - /docs/en/managing-products-availability
+related:
+  - title: Managing Products
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
+  - title: Timed Product Availability Feature Overview
+    link: docs/scos/user/features/page.version/product-feature-overview/timed-product-availability-overview.html
 ---
 
 This topic describes the actions you can do in the **Availability** section of  the Back Office.

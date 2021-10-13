@@ -19,12 +19,17 @@ redirect_from:
   - /v2/docs/en/validating-rest-request-format
   - /v1/docs/validating-rest-request-format
   - /v1/docs/en/validating-rest-request-format
+related:
+  - title: Glue API Installation and Configuration
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-installation-and-configuration.html
+  - title: Glue Infrastructure
+    link: docs/scos/dev/glue-api-guides/page.version/glue-infrastructure.html
 ---
 
 Glue API allows you to validate requests sent to REST endpoints. It allows you to check if all required fields are present, and if the type and format of the fields is correct.
 
 ## Installation
-To enable validation of REST requests, install the `RestRequestValidation` module by following [Glue API: REST Schema Validation Feature Integration](https://documentation.spryker.com/2021080/docs/glue-api-rest-schema-validation-feature-integration).
+To enable validation of REST requests, install the `RestRequestValidation` module by following [Glue API: REST Schema Validation Feature Integration](/docs/scos/dev/feature-integration-guides/202001.0/glue-api/glue-api-rest-schema-validation-feature-integration.html).
 
 ## Default validation schema
 Spryker Glue API comes with a default validation schema. The schema provides default validation rules for the REST APIs shipped with Spryker. You can find it in `vendor/spryker/spryker/Bundles/RestRequestValidator/config/validation.dist.yaml`. Use the schema as a sample and a  reference for your own validation implementations.

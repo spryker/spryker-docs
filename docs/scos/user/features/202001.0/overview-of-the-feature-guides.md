@@ -17,7 +17,7 @@ The *Features* section unfolds into a list of capabilities. Each capability cont
 
 In the feature documentation, you will find the following information:
 
-* A short summary of a feature with lists of guidelines designed for different [personas](/docs/scos/user/about-spryker/{{page.version}}/about-spryker-documentation.html#personas).
+* A short summary of a feature with lists of guidelines designed for different [personas](/docs/scos/user/intro-to-spryker/about-spryker-documentation.html#personas).
 * A detailed overview of a feature, workflows, database structure, and more.
 
 {% info_block infoBox "Note" %}

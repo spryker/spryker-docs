@@ -9,6 +9,9 @@ redirect_from:
   - /v5/docs/en/discontinued-products-overview
   - /v5/docs/discontinued-products
   - /v5/docs/en/discontinued-products
+related:
+  - title: Discontinuing Products
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/discontinuing-products.html
 ---
 
 ## Out of Stock vs. Discontinued Products
@@ -22,7 +25,7 @@ Products are **discontinued** when the manufacturer or a current distributor has
 Discontinued products have a certain period of time when they will still be shown on the website (active_until). After this period ends - the products will become deactivated.
 
 {% info_block warningBox %}
-Only [concrete products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html#abstract-and-concrete-products--variants-
+Only [concrete products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html-
 {% endinfo_block %} can become discontinued.)
 
 The schema below illustrates the relations between discontinued products, abstract and concrete products:

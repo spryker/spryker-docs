@@ -6,6 +6,9 @@ originalLink:
 originalArticleId: 8e2ab836-79e9-4738-93a7-c92b16b79de4
 redirect_from:
 
+related:
+  - title: Taxes Rates - Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/administration/tax-rates/references/tax-rates-reference-information.html
 ---
 
 ## Managing Tax Sets

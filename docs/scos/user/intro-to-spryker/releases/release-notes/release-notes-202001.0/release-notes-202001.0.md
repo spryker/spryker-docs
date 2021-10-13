@@ -14,6 +14,9 @@ redirect_from:
   - /v4/docs/en/release-notes-2020010
   - /v6/docs/release-notes-2020010
   - /v6/docs/en/release-notes-2020010
+related:
+  - title: DevOps Migration Guide 202001.0
+    link: docs/scos/dev/migration-and-integration/page.version/devops-migration-guide-page.version.html
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of major new features and enhancements released in January of 2020.

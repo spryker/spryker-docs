@@ -10,6 +10,11 @@ redirect_from:
   - /v6/docs/product-options
   - /v6/docs/en/product-options
 
+related:
+  - title: Creating Product Options
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/product-options/creating-product-options.html
+  - title: Migration Guide - Product Option
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-productoption.html
 ---
 
 The **Product Options** feature allows a Back Office user to create and assign product options to abstract products. Product options are product additions that a customer can select on the product detail page before adding the product to the cart. For example, the product options can be gift wrappings for products, insurance, warranty, etc. Product options do not have stock, but a SKU linked to product abstracts. Thus, you cannot purchase them without buying a corresponding product.
@@ -38,7 +43,7 @@ In the Back Office, you can perform the following actions on product options:
 * assign product option groups to products
 * activate product options to make them visible in the Storefront
 
-See [Creating a Product Option](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html#creating-a-product-option) and [Managing Product Options](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/managing-product-options.html#managing-product-options) to learn more about how to work with product options in the Back Office.
+See [Creating a Product Option](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html#creating-a-product-option) and [Managing Product Options](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/managing-product-options.html) to learn more about how to work with product options in the Back Office.
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/product-option-back-office.png)
 
@@ -56,8 +61,6 @@ Each product option group may contain as many product options as you need. For e
 On the product detail page, the new product option group (1) will be displayed as a drop-down list with the option values (2).
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/product-option-yves.png)
-
-For more information about what other actions customers can perform on the product detail page, see [Shop Guide - Managing Products](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-managing-products.html).
 
 ## Current constraints
 

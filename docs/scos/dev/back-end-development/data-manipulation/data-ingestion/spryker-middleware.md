@@ -31,7 +31,7 @@ The Middleware applies the pipeline pattern allowing to connect different stages
 
 The pipeline contains 5 standard stages: reader, validator, mapper, translator, and writer. However, you can use them or define any number of stages.
 
-First of all, a source item is **read**. Then, it is **validated** to make sure that all attributes etc. are correct and all the necessary data is available. Having passed the validation, the item is **mapped**, i.e. keys of the source system are mapped onto the target system. This being done, the items go through a **translator** which processes the values and translates them into a respective format (for example, the price value is a decimal value, but should be init - it’s translator’s responsibility to change it to the required value). After that, the item is **written** to the target system (to the database, in case of import, to a file, if it’s export etc.).
+First of all, a source item is **read**. Then, it is **validated** to make sure that all attributes etc. are correct and all the necessary data is available. Having passed the validation, the item is **mapped**, i.e. keys of the source system are mapped onto the target system. This being done, the items go through a **translator** which processes the values and translates them into a respective format (for example, the price value is a decimal value, but should be integer - it’s translator’s responsibility to change it to the required value). After that, the item is **written** to the target system (to the database, in case of import, to a file, if it’s export etc.).
 ![Pipeline stages](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Spryker+Middleware/stages.png) 
 
 Each stage can be abstracted as having:

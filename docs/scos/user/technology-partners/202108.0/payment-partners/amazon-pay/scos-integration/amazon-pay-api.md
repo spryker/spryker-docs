@@ -9,6 +9,15 @@ redirect_from:
   - /2021080/docs/en/amazon-pay-api
   - /docs/amazon-pay-api
   - /docs/en/amazon-pay-api
+related:
+  - title: Amazon Pay - Configuration for the SCOS
+    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/scos-integration/amazon-pay-configuration-for-the-scos.html
+  - title: Amazon Pay - State Machine
+    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/scos-integration/amazon-pay-state-machine.html
+  - title: Amazon Pay - Sandbox Simulations
+    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/scos-integration/amazon-pay-sandbox-simulations.html
+  - title: Amazon Pay - Obtaining an Amazon Order Reference and Information About Shipping Addresses
+    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/scos-integration/amazon-pay-obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
 ---
 
 So far we discussed the client-side implementation provided by Amazon Pay. On the Spryker side, the bundle provides the tools for rendering Amazon Pay widgets.

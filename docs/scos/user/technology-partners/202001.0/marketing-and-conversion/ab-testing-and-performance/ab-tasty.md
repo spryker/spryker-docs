@@ -7,6 +7,9 @@ originalArticleId: e705ec77-7c8b-4087-b490-d60b4381c0bf
 redirect_from:
   - /v4/docs/ab-tasty
   - /v4/docs/en/ab-tasty
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
 ---
 
 ## Partner Information

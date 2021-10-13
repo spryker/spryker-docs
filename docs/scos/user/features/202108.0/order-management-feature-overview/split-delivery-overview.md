@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/split-delivery-overview
   - /docs/split-delivery-overview
   - /docs/en/split-delivery-overview
+related:
+  - title: Managing Order Shipments
+    link: docs/scos/user/back-office-user-guides/page.version/sales/orders/managing-order-shipments.html
 ---
 
 *Split Delivery* enables the same order as *shipments* to multiple delivery addresses and/or on different dates, and/or with different shipment methods. A *shipment* is a set of two or more products combined by the same delivery address.
@@ -37,7 +40,7 @@ Then, in the *Shipment* checkout step, you can see the products grouped by the s
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Checkout/Shop+Guide+-+Summary+Step/summary-step-new.png)
 
-See [Shop Guide - Address](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html) for more details on how to add multiple delivery addresses to order items in the Storefront.
+See [Multi-step checkout](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html) for more details on how to add multiple delivery addresses to order items in the Storefront.
 
 ## Split Delivery in the Back Office
 

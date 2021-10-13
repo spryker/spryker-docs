@@ -7,6 +7,9 @@ originalArticleId: 69514f54-dedc-416e-9c1e-7e7d03c33f07
 redirect_from:
   - /v5/docs/managing-customer-addresses
   - /v5/docs/en/managing-customer-addresses
+related:
+  - title: Customer Accounts
+    link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html
 ---
 
 This topic describes how to manage customer addresses and view orders.

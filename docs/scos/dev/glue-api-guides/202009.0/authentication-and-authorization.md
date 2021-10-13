@@ -7,6 +7,13 @@ originalArticleId: c9e1faf1-8666-4607-93e4-2badbe3ed59e
 redirect_from:
   - /v6/docs/authentication-and-authorization
   - /v6/docs/en/authentication-and-authorization
+related:
+  - title: Company Account and General Organizational Structure
+    link: docs/scos/user/features/page.version/company-account-feature-overview/company-accounts-overview.html
+  - title: Glue API- Customer Account Management feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-customer-account-management-feature-integration.html
+  - title: Searching by company users
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
 ---
 
 [Protected resources](#protected-resources) in Spryker Glue API require user authentication. For the authentication, Spryker implements the [OAuth 2.0 mechanism](https://tools.ietf.org/html/rfc6749). On the REST API level, it is represented by the Login API.

@@ -7,6 +7,11 @@ originalArticleId: 1fb0c62f-71f8-4ef1-ab54-36ea8bc43e23
 redirect_from:
   - /v4/docs/managing-attributes
   - /v4/docs/en/managing-attributes
+related:
+  - title: Product Attributes
+    link: docs/scos/user/features/page.version/product-feature-overview/product-attributes-overview.html
+  - title: Super Attributes
+    link: docs/scos/user/features/page.version/product-information-management/super-attributes.html
 ---
 
 This topic describes how you can manage the product attributes.

@@ -7,6 +7,11 @@ originalArticleId: f6278bed-4427-48ee-a01c-f84539e68fc9
 redirect_from:
   - /v4/docs/creating-a-product-attribute
   - /v4/docs/en/creating-a-product-attribute
+related:
+  - title: Product Attributes
+    link: docs/scos/user/features/page.version/product-feature-overview/product-attributes-overview.html
+  - title: Super Attributes
+    link: docs/scos/user/features/page.version/product-information-management/super-attributes.html
 ---
 
 This topic describes the procedure you need to perform in order to create a new product attribute, either a super attribute or a descriptive attribute.

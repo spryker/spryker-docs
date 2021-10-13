@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/glue-api-alternative-products-feature-integration
   - /docs/glue-api-alternative-products-feature-integration
   - /docs/en/glue-api-alternative-products-feature-integration
+related:
+  - title: Retrieving Alternative Products
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/retrieving-alternative-products.html
 ---
 
 ## Install Feature API

@@ -7,6 +7,11 @@ originalArticleId: 01cd58cf-74d1-445e-baba-8b236bd85342
 redirect_from:
   - /v6/docs/order-cancellation-overview
   - /v6/docs/en/order-cancellation-overview
+related:
+  - title: Managing Orders
+    link: docs/scos/user/back-office-user-guides/page.version/sales/orders/managing-orders.html
+  - title: Retrieving Customer's Order History
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
 ---
 
 Order cancellation makes the shopping experience of B2B and B2C shoppers more flexible by allowing them to cancel their orders within a defined time period. Also, it optimizes the workflow of sales and customer service by allowing them to cancel orders on customers’ behalf in the Back Office.
@@ -43,7 +48,7 @@ A customer can cancel an order only within a defined time period. By default, th
 
 Also, they can cancel an order only if all the included items are in the states that are defined as cancellable. By default, the *payment pending* and *confirmed* states are cancellable. If at least one of the items in an order is in a different state, the buttons to cancel the order are not available.
 
-In the [state machine](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html#order-process-modelling-via-state-machines), a developer can configure different order states to be cancellable and change the cancellation time period.
+In the [state machine](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html), a developer can configure different order states to be cancellable and change the cancellation time period.
 
 {% info_block warningBox "State machine" %}
 
@@ -51,7 +56,7 @@ Ensure that, in your state machine, the *refunded* state always goes before the 
 
 {% endinfo_block %}
 
-See [Managing Orders](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html#managing-orders) to learn how a Back Office user can skip timeout or cancel an order by changing order statuses.
+See [Managing Orders](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html) to learn how a Back Office user can skip timeout or cancel an order by changing order statuses.
 
 <a name="storefront"></a>
 

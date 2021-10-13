@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/creating-product-attributes
   - /docs/creating-product-attributes
   - /docs/en/creating-product-attributes
+related:
+  - title: Product Attributes
+    link: docs/scos/user/features/page.version/product-feature-overview/product-attributes-overview.html
 ---
 
 This document describes how to create product attributes.

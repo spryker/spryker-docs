@@ -9,6 +9,15 @@ redirect_from:
   - /v6/docs/en/navigation-feature-overview
   - /v6/docs/navigation
   - /v6/docs/en/navigation
+related:
+  - title: Content Items Feature Overview
+    link: docs/scos/user/features/page.version/content-items-feature-overview.html
+  - title: Adding Content to Storefront Pages Using Templates & Slots
+    link: docs/scos/user/back-office-user-guides/page.version/content/adding-content-to-storefront-pages-using-templates-and-slots-best-practices.html
+  - title: Navigation feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/navigation-feature-integration.html
+  - title: CMS feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/cms-feature-integration.html
 ---
 
 The *Navigation* feature enables product catalog managers to create intuitive navigation elements and display them on the Storefront.
@@ -93,7 +102,7 @@ The schema shows how the Navigation feature affects content management in a Spry
 ![navigation-as-content-item-schema](https://confluence-connect.gliffy.net/embed/image/a086fe4e-1d09-49ae-a181-ebd8b0f8c051.png?utm_medium=live&utm_source=custom)
 
 See [Create a Navigation Content Item](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html#create-a-navigation-content-item) to learn how a Back Office user can create a Navigation content item. 
-See [Adding Content to Storefront Pages Using Templates & Slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/adding-content-to-storefront-pages-using-templates-and-slots-best-practices.html#adding-content-to-storefront-pages-using-templates---slots) to learn how a marketing content manager can add content to the Storefront. 
+See [Adding Content to Storefront Pages Using Templates & Slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/adding-content-to-storefront-pages-using-templates-and-slots-best-practices.html) to learn how a marketing content manager can add content to the Storefront. 
 
 ### Navigation Content Item Templates
 A content item template defines how a content item is displayed on the Storefront. The following templates are shipped for the Navigation content item by default:

@@ -7,6 +7,11 @@ originalArticleId: b6861051-d094-4720-b43f-5d5c2339031f
 redirect_from:
   - /v6/docs/timed-product-availability-overview
   - /v6/docs/en/timed-product-availability-overview
+related:
+  - title: Migration Guide - Product Validity
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-productvalidity.html
+  - title: Creating Product Variants
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/concrete-products/creating-product-variants.html
 ---
 
 Timed product availability, or product TTL (Time to Live) allows you to define when your products are available online and when they are not. To get the main idea of the TTL, go to the general feature overview for more detailed information on how it works as well as familiarize yourself with its usage scenarios.

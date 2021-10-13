@@ -7,6 +7,13 @@ originalArticleId: 10d46e8c-c8ad-498c-8023-249711b71f8f
 redirect_from:
   - /v5/docs/creating-scheduled-prices
   - /v5/docs/en/creating-scheduled-prices
+related:
+  - title: Managing Scheduled Prices
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/scheduled-prices/managing-scheduled-prices.html
+  - title: Scheduled Prices- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/scheduled-prices/references/scheduled-prices-reference-information.html
+  - title: Scheduled Prices Feature Overview
+    link: docs/scos/user/features/page.version/scheduled-prices-feature-overview.html
 ---
 
 This topic describes how to create scheduled prices.

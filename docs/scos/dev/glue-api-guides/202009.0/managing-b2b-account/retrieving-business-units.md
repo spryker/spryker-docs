@@ -7,6 +7,19 @@ originalArticleId: e5ab5468-6acc-473b-9fbc-97d544958f95
 redirect_from:
   - /v6/docs/retrieving-business-units
   - /v6/docs/en/retrieving-business-units
+related:
+  - title: Logging In as Company User
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/authenticating-as-a-company-user.html
+  - title: Retrieving Company User Information
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-users.html
+  - title: Retrieving Company Information
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-companies.html
+  - title: Authentication and Authorization
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
+  - title: Business Units Management Feature Overview
+    link: docs/scos/user/features/page.version/company-account-feature-overview/business-units-overview.html
+  - title: Company Account and General Organizational Structure
+    link: docs/scos/user/features/page.version/company-account-feature-overview/company-accounts-overview.html
 ---
 
 In the B2B world, users represent their companies rather than act on their own behalf. Such users, called [Company Accounts](https://documentation.spryker.com/v6/docs/company-accounts-overview), are organized in business units depending on their job role and the scope of their activity. The endpoints allows retrieving business unit information.

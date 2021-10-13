@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/mg-product-label-gui
   - /docs/mg-product-label-gui
   - /docs/en/mg-product-label-gui
+related:
+  - title: Migration Guide - Product
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-product.html
+  - title: Migration Guide - Product Label
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-productlabel.html
 ---
 
 ## Upgrading from version 2.* to version 3.*

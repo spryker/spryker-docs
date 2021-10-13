@@ -7,6 +7,11 @@ originalArticleId: 55b4f842-5b2b-4871-8aec-905a604309ff
 redirect_from:
   - /v6/docs/data-export-orders-csv-files-format
   - /v6/docs/en/data-export-orders-csv-files-format
+related:
+  - title: Exporting Data
+    link: docs/scos/dev/data-export/page.version/exporting-data.html
+  - title: Sales Data Export feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/sales-data-export-feature-integration.html
 ---
 
 This article contains content of the following files you get when [exporting data on orders](/docs/scos/dev/data-export/{{page.version}}/exporting-data.html) generated in Spryker:

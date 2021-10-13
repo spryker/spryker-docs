@@ -7,6 +7,13 @@ originalArticleId: c004fb58-1e0e-413f-8586-9d0b99ce30fb
 redirect_from:
   - /v2/docs/braintree-workflow-legacy-demoshop
   - /v2/docs/en/braintree-workflow-legacy-demoshop
+related:
+  - title: Braintree
+    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/braintree.html
+  - title: Braintree - Configuration for the Legacy Demoshop
+    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/legacy-demoshop-integration/braintree-configuration-for-the-legacy-demoshop.html
+  - title: Braintree - Performing Requests for the Legacy Demoshop
+    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/legacy-demoshop-integration/braintree-performing-requests-for-the-legacy-demoshop.html
 ---
 
 Both credit card and PayPal utilize the same request flow. It basically consists of the following requests:

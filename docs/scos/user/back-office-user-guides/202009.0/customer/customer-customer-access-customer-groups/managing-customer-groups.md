@@ -7,6 +7,9 @@ originalArticleId: edef7be3-5695-4090-aa8b-854759d64a96
 redirect_from:
   - /v6/docs/managing-customer-groups
   - /v6/docs/en/managing-customer-groups
+related:
+  - title: Customer Accounts
+    link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html
 ---
 
 This article describes how to manage customer groups.

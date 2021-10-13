@@ -7,6 +7,9 @@ originalArticleId: dabd9d13-5213-4c63-860c-99696efb863b
 redirect_from:
   - /v4/docs/mg-monitoring
   - /v4/docs/en/mg-monitoring
+related:
+  - title: New Relic
+    link: docs/scos/user/technology-partners/page.version/operational-tools-monitoring-legal-etc/new-relic.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.*

@@ -7,6 +7,17 @@ originalArticleId: b621d411-3e0f-4d26-886e-691fdb2b2b4f
 redirect_from:
   - /v2/docs/editing-cms-pages
   - /v2/docs/en/editing-cms-pages
+related:
+  - title: CMS Pages- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/content/pages/references/cms-pages-reference-information.html
+  - title: CMS Page
+    link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
+  - title: CMS Pages Versioning
+    link: docs/scos/user/back-office-user-guides/page.version/content/pages/managing-cms-page-versions.html
+  - title: Managing CMS Pages
+    link: docs/scos/user/back-office-user-guides/page.version/content/pages/managing-cms-pages.html
+  - title: Creating CMS Pages
+    link: docs/scos/user/back-office-user-guides/page.version/content/pages/creating-cms-pages.html
 ---
 
 The topic describes how to edit CMS pages in the Back Office.

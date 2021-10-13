@@ -7,6 +7,9 @@ originalArticleId: 6e504899-ba21-4b1c-a2da-bd0075224acf
 redirect_from:
   - /v4/docs/creating-and-managing-product-bundles
   - /v4/docs/en/creating-and-managing-product-bundles
+related:
+  - title: Product Bundles feature overview
+    link: docs/scos/user/features/page.version/product-bundles-feature-overview.html
 ---
 
 This article describes how you add the product bundles and manage them. 

@@ -7,6 +7,11 @@ originalArticleId: 64196ce3-7cae-42ad-b2b2-25e72284c8e3
 redirect_from:
   - /v3/docs/company-account-guide
   - /v3/docs/en/company-account-guide
+related:
+  - title: Company Account Management
+    link: docs/scos/user/features/page.version/company-account-feature-overview/company-account-feature-overview.html
+  - title: Company Account and General Organizational Structure
+    link: docs/scos/user/features/page.version/company-account-feature-overview/company-accounts-overview.html
 ---
 
 The Company Account section is designed to manage the company structure and is mostly used by Sales people in cooperation with Spryker Admins that provides the details of the signed contracts.

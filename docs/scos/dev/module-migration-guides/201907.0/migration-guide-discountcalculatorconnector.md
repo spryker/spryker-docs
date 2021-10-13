@@ -6,6 +6,15 @@ originalArticleId: f8b37494-7595-43ff-8547-25da4049423f
 redirect_from:
   - /v3/docs/mg-discount-calculator-connector
   - /v3/docs/en/mg-discount-calculator-connector
+related:
+  - title: Migration Guide - Discount
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-discount.html
+  - title: Creating Vouchers
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/creating-vouchers.html
+  - title: Migration Guide - Tax
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-tax.html
+  - title: Migration Guide - DiscountSalesAggregatorConnector
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-discountsalesaggregatorconnector.html
 ---
 
 ## Upgrading from Version 4.* to Version 5.*

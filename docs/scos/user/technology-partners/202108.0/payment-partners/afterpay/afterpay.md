@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/afterpay
   - /docs/afterpay
   - /docs/en/afterpay
+related:
+  - title: Afterpay - Installation and Configuration
+    link: docs/scos/user/technology-partners/page.version/payment-partners/afterpay/afterpay-installation-and-configuration.html
 ---
 
 ## Partner Information

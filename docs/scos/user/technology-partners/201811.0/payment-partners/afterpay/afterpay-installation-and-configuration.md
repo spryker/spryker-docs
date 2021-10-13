@@ -7,6 +7,9 @@ originalArticleId: efd5b6f9-2a39-4768-8f62-ef1c8d8635a1
 redirect_from:
   - /v1/docs/afterpay-installation-and-configuration
   - /v1/docs/en/afterpay-installation-and-configuration
+related:
+  - title: AfterPay
+    link: docs/scos/user/technology-partners/page.version/payment-partners/afterpay/afterpay.html
 ---
 
 The following guide describes how to install and configure AfterPay in your project.

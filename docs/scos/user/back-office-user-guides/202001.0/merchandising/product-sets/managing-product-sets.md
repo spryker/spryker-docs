@@ -7,6 +7,11 @@ originalArticleId: dcbe12ac-5e44-427e-9763-501005031663
 redirect_from:
   - /v4/docs/managing-product-sets
   - /v4/docs/en/managing-product-sets
+related:
+  - title: Product Sets- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-sets/references/product-sets-reference-information.html
+  - title: Product Sets
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-sets/product-sets.html
 ---
 
 This article describes the managing actions that you can perform with a product set.

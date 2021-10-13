@@ -7,6 +7,23 @@ originalArticleId: 12a62ff8-1e79-4c15-a8a8-a3c23ba93764
 redirect_from:
   - /v1/docs/computop-ideal
   - /v1/docs/en/computop-ideal
+related:
+  - title: Computop - Sofort
+    link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-sofort.html
+  - title: Computop - PayPal
+    link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-paypal.html
+  - title: Computop - PayNow
+    link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-paynow.html
+  - title: Computop - Easy Credit
+    link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-easy-credit.html
+  - title: Computop - Direct Debit
+    link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-direct-debit.html
+  - title: Computop - Credit Card
+    link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-credit-card.html
+  - title: Computop - CRIF
+    link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-crif.html
+  - title: Computop - Paydirekt
+    link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-paydirekt.html
 ---
 
 Example State Machine:

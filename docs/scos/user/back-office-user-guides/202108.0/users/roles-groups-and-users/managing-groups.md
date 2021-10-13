@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/managing-groups
   - /docs/managing-groups
   - /docs/en/managing-groups
+related:
+  - title: Managing Users
+    link: docs/scos/user/back-office-user-guides/page.version/users/roles-groups-and-users/managing-users.html
+  - title: Customer Groups
+    link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-groups-overview.html
 ---
 
 This topic describes how to manage groups.

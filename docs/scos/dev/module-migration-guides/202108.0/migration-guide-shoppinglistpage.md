@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/mg-shopping-list-page
   - /docs/mg-shopping-list-page
   - /docs/en/mg-shopping-list-page
+related:
+  - title: Multiple and Shared Shopping Lists overview
+    link: docs/scos/user/features/page.version/shopping-lists-feature-overview/shopping-lists-feature-overview.html
 ---
 
 ## Upgrading from Version 0.* to Version 0.8.0

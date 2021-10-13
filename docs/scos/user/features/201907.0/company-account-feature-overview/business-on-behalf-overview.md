@@ -9,6 +9,9 @@ redirect_from:
   - /v3/docs/en/business-on-behalf-feature-overview-201903
   - /v3/docs/business-on-behalf-201903
   - /v3/docs/en/business-on-behalf-201903
+related:
+  - title: Managing Company Users
+    link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/managing-company-users.html
 ---
 
 Every [business unit](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/business-unit-management.html) includes some company users that have specific permissions within this business unit. Business on Behalf feature allows having multiple company users per customer account with a possibility to select one company user to be a default user. This default user can switch between the assigned business units.

@@ -6,6 +6,11 @@ originalArticleId: efe80690-3ca2-405d-9f57-3f8954d10033
 redirect_from:
   - /v5/docs/glue-api-customer-account-management-feature-integration
   - /v5/docs/en/glue-api-customer-account-management-feature-integration
+related:
+  - title: Authentication and Authorization
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
+  - title: Configuring Outdated Refresh Token Life Time
+    link: docs/scos/dev/glue-api-guides/page.version/configuring-outdated-refresh-token-life-time.html
 ---
 
 {% info_block errorBox %}

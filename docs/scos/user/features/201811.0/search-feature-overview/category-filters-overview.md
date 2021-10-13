@@ -7,6 +7,9 @@ originalArticleId: d074f85b-0e3a-4dd1-b775-d10ab67d110f
 redirect_from:
   - /v1/docs/filter-search-by-category
   - /v1/docs/en/filter-search-by-category
+related:
+  - title: Managing Category Filters
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/managing-category-filters.html
 ---
 
 To help your customers locate items in your shop more easily you can add customizable Category Filters. You can add, rearrange and define filters for any given parameter in the category tree, such as price or brand.

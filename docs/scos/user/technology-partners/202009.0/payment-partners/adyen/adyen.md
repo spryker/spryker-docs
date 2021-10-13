@@ -7,6 +7,15 @@ originalArticleId: b6832ce9-25d6-48fb-b7d2-c7ba5d2ea0a4
 redirect_from:
   - /v6/docs/adyen
   - /v6/docs/en/adyen
+related:
+  - title: Adyen - Installation and Configuration
+    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-installation-and-configuration.html
+  - title: Adyen - Integration
+    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-integration-into-a-project.html
+  - title: Adyen - Provided Payment Methods
+    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-provided-payment-methods.html
+  - title: Adyen - Filtering Payment Methods
+    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-filtering-payment-methods.html
 ---
 
 ## Partner Information

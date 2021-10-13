@@ -6,6 +6,11 @@ originalArticleId: f821f4cd-cccb-4283-8fe3-f22d72188e4f
 redirect_from:
   - /v2/docs/mg-shopping-list-page
   - /v2/docs/en/mg-shopping-list-page
+related:
+  - title: Multiple and Shared Shopping Lists overview
+    link: docs/scos/user/features/page.version/shopping-lists-feature-overview/shopping-lists-feature-overview.html
+  - title: Shop Guide - Shopping Lists
+    link: docs/scos/user/shop-user-guides/page.version/shop-guide-shopping-lists.html
 ---
 
 ## Upgrading from Version 0.* to Version 0.8.0

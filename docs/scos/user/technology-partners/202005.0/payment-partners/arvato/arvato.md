@@ -7,6 +7,9 @@ originalArticleId: 2c774f48-9459-4e98-bf97-c6195aa1c1c0
 redirect_from:
   - /v5/docs/arvato
   - /v5/docs/en/arvato
+related:
+  - title: Arvato - Store Order 2.0
+    link: docs/scos/user/technology-partners/page.version/payment-partners/arvato/arvato-store-order.html
 ---
 
 ## Partner Information

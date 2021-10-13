@@ -9,6 +9,13 @@ redirect_from:
   - /2021080/docs/en/mg-cms-block-collector
   - /docs/mg-cms-block-collector
   - /docs/en/mg-cms-block-collector
+related:
+  - title: Migration Guide - CMS Block
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-cmsblock.html
+  - title: Migration Guide - CMS Block GUI
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-cmsblockgui.html
+  - title: CMS Block
+    link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.*

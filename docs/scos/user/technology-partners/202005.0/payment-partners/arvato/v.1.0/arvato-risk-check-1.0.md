@@ -7,6 +7,11 @@ originalArticleId: f125d98e-d925-475a-b900-9a875ae35171
 redirect_from:
   - /v5/docs/arvato-risk-check-1-0
   - /v5/docs/en/arvato-risk-check-1-0
+related:
+  - title: Arvato - Risk Solution Services Integration 1.0
+    link: docs/scos/user/technology-partners/page.version/payment-partners/arvato/v.1.0/arvato-risk-solution-services-integration-1.0.html
+  - title: Arvato
+    link: docs/scos/user/technology-partners/page.version/payment-partners/arvato/arvato.html
 ---
 
 Accounted for by external credit agency data and internal existing customer- and order-details  the RiskCheck evaluates the probability of payment default for the customer orders.

@@ -6,6 +6,11 @@ originalArticleId: 4a3e9cf9-f23a-4f17-9b9c-497a8c67d179
 redirect_from:
   - /v2/docs/mg-shared-cart-page
   - /v2/docs/en/mg-shared-cart-page
+related:
+  - title: Shared Cart Feature Overview
+    link: docs/scos/user/features/page.version/shared-carts-feature-overview.html
+  - title: Migration Guide - CompanyUser
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-companyuser.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.*

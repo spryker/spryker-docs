@@ -7,6 +7,13 @@ originalArticleId: 5be8b5ed-d58b-4b8b-8389-fe06f3734a35
 redirect_from:
   - /v4/docs/configurable-bundle-module-relations
   - /v4/docs/en/configurable-bundle-module-relations
+related:
+  - title: Configurable Bundle Feature Overview
+    link: docs/scos/user/features/page.version/configurable-bundle-feature-overview.html
+  - title: Configurable Bundle Templates
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/configurable-bundle-templates/configurable-bundle-templates.html
+  - title: Shop Guide - Configurator
+    link: docs/scos/user/shop-user-guides/page.version/shop-guide-configurator/shop-guide-configurator.html
 ---
 
 On this page, you can find the module relations for the [Configurable Bundle](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html) feature. We have split the modules into projects for better readability.

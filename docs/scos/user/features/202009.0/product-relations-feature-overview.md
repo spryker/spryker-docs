@@ -9,6 +9,13 @@ redirect_from:
   - /v6/docs/en/product-relations-feature-overview
   - /v6/docs/product-relations
   - /v6/docs/en/product-relations
+related:
+  - title: Creating Product Relations
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-relations/creating-product-relations.html
+  - title: Managing Product Relations
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-relations/managing-product-relations.html
+  - title: Product Relations- module relations
+    link: docs/scos/dev/feature-walkthroughs/page.version/product-relations-feature-walkthrough/product-relations-module-relations.html
 ---
 
 The Product Relations feature enables product catalog managers to create logical relations between products based on their actual properties. Product relations are displayed on the Storefront to achieve multiple purposes.
@@ -43,7 +50,7 @@ With Upselling, when the product owing the relation is added to cart, related pr
 
 
 
-A product catalog manager can select a product relation type when [creating](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/creating-product-relations.html) or [editing](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/managing-product-relations.html#editing-a-product-relation) a product relation in the Back Office.
+A product catalog manager can select a product relation type when [creating](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/creating-product-relations.html) or [editing](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/managing-product-relations.html#editing-product-relations) a product relation in the Back Office.
 
 
 ## Product Types in Product Relations

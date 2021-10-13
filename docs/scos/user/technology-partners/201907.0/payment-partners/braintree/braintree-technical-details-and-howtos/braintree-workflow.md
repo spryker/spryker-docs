@@ -7,6 +7,13 @@ originalArticleId: 16bdc0c3-670f-4536-ab24-1ab6abb65998
 redirect_from:
   - /v3/docs/braintree-workflow
   - /v3/docs/en/braintree-workflow
+related:
+  - title: Braintree
+    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/braintree.html
+  - title: Braintree - Performing Requests for SCOS
+    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/braintree-technical-details-and-howtos/braintree-performing-requests.html
+  - title: Braintree - Configuration for SCOS
+    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/braintree-installation-and-configuration.html
 ---
 
 Both credit card and PayPal utilize the same request flow in

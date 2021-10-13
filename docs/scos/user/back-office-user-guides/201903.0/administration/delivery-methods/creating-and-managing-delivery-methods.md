@@ -7,6 +7,11 @@ originalArticleId: c38da436-9164-4573-b52a-782f880fb07a
 redirect_from:
   - /v2/docs/creating-and-managing-shipment-methods
   - /v2/docs/en/creating-and-managing-shipment-methods
+related:
+  - title: Shipment feature overview
+    link: docs/scos/user/features/page.version/shipment-feature-overview.html
+  - title: "Reference information: Shipment method plugins"
+    link: docs/scos/dev/feature-walkthroughs/page.version/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html
 ---
 
 This topic describes the procedures for creating and managing shipment methods.

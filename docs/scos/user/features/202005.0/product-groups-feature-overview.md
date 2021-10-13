@@ -9,6 +9,9 @@ redirect_from:
   - /v5/docs/en/product-group-feature-overview
   - /v5/docs/product-group
   - /v5/docs/en/product-group
+related:
+  - title: Managing Products
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
 ---
 
 The *Product Groups* feature allows product catalog managers to group products by attributes, like color or size. A typical use case is combining the same product in different colors into a product group (not to be confused with [product variant](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/products-overview.html)). The feature changes the way shop users interact with products by improving accessibility and navigation.
@@ -44,7 +47,7 @@ Product abstract card:
 
 ## Product groups in the Back Office
 
-In the Back Office, a product catalog manager can view what product group an abstract product belongs to. See [Viewing a Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/managing-products.html#viewing-a-product) to learn more.   
+In the Back Office, a product catalog manager can view what product group an abstract product belongs to. See [Viewing a Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/managing-products.html#viewing-products) to learn more.   
 
 Also, they can insert product groups into CMS pages via content widgets in the [WYSIWYG editor](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html#content-item-widget).
 
@@ -70,7 +73,7 @@ Check out this video tutorial on product groups:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Check what product group a product belongs to by viewing a product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/managing-products.html#viewing-a-product)  |
+| [Check what product group a product belongs to by viewing a product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/managing-products.html#viewing-products)  |
 
 {% info_block warningBox "Developer guides" %}
 

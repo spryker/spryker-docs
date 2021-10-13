@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/arvato-installation-configuration
   - /docs/arvato-installation-configuration
   - /docs/en/arvato-installation-configuration
+related:
+  - title: Arvato - Store Order 2.0
+    link: docs/scos/user/technology-partners/page.version/payment-partners/arvato/arvato-store-order.html
+  - title: Arvato
+    link: docs/scos/user/technology-partners/page.version/payment-partners/arvato/arvato.html
 ---
 
 {% info_block errorBox %}

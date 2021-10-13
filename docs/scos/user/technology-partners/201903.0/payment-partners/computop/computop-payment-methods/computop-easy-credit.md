@@ -7,6 +7,27 @@ originalArticleId: 2fcd8496-1e25-473b-a8d2-13b1ed2a34e4
 redirect_from:
   - /v2/docs/computop-easy-credit
   - /v2/docs/en/computop-easy-credit
+related:
+  - title: Computop
+    link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop.html
+  - title: Computop - Sofort
+    link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-sofort.html
+  - title: Computop - PayPal
+    link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-paypal.html
+  - title: Computop - PayNow
+    link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-paynow.html
+  - title: Computop - API
+    link: docs/scos/user/technology-partners/page.version/payment-partners/computop/technical-details-and-howtos/computop-api.html
+  - title: Computop - iDeal
+    link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-ideal.html
+  - title: Computop - Direct Debit
+    link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-direct-debit.html
+  - title: Computop - Credit Card
+    link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-credit-card.html
+  - title: Computop - CRIF
+    link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-crif.html
+  - title: Computop - Paydirekt
+    link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-paydirekt.html
 ---
 
 Example State Machine

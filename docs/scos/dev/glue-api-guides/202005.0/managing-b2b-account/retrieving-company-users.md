@@ -7,6 +7,17 @@ originalArticleId: f84a4096-0877-4370-8df2-52ba5b6c4b93
 redirect_from:
   - /v5/docs/retrieving-company-user-information-201907
   - /v5/docs/en/retrieving-company-user-information-201907
+related:
+  - title: Logging In as Company User
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/authenticating-as-a-company-user.html
+  - title: Retrieving Company Information
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-companies.html
+  - title: Retrieving Company Role Information
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-roles.html
+  - title: Retrieving Business Unit Information
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-business-unit-information.html
+  - title: Company Account and General Organizational Structure
+    link: docs/scos/user/features/page.version/company-account-feature-overview/company-accounts-overview.html
 ---
 
 The [Company Account](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html) feature provided by Spryker Commerce OS allows corporate customers to create [Company User Accounts](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html) for their employees. This capability enables customers to organize purchasing activities in their companies. Company Accounts are typically organized in Business Units depending on the job roles they perform. Any user can impersonate as multiple Company Accounts they have access to, which provides them the freedom to organize their work when performing different roles in a company.

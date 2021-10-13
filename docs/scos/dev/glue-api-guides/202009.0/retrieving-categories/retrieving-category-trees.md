@@ -7,6 +7,9 @@ originalArticleId: e85112d8-8488-49e4-a3c8-0e943fe85645
 redirect_from:
   - /v6/docs/retrieving-category-trees
   - /v6/docs/en/retrieving-category-trees
+related:
+  - title: Category Management feature overview
+    link: docs/scos/user/features/page.version/category-management-feature-overview.html
 ---
 
 By means of the category API, you are able to retrieve the exact structure of your category tree with its hierarchical characteristics.

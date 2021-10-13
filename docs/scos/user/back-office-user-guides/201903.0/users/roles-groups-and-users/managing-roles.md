@@ -7,6 +7,17 @@ originalArticleId: 99b3679a-c467-412f-a3ea-92952b2415f0
 redirect_from:
   - /v2/docs/managing-roles
   - /v2/docs/en/managing-roles
+related:
+  - title: Roles- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/users/roles-groups-and-users/references/roles-reference-information.html
+  - title: User- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/users/roles-groups-and-users/references/user-reference-information.html
+  - title: Managing Groups
+    link: docs/scos/user/back-office-user-guides/page.version/users/roles-groups-and-users/managing-groups.html
+  - title: Managing Users
+    link: docs/scos/user/back-office-user-guides/page.version/users/roles-groups-and-users/managing-users.html
+  - title: User and Rights Management
+    link: docs/scos/dev/feature-walkthroughs/page.version/customer-account-management-feature-walkthrough/user-and-rights-overview.html
 ---
 
 This topic describes the procedures that you need to perform to create, edit, and delete roles.

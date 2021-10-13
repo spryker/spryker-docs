@@ -11,6 +11,21 @@ redirect_from:
   - /v5/docs/en/discount
   - /v5/docs/promotions-discount
   - /v5/docs/en/promotions-discount
+related:
+  - title: Discount
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/discount.html
+  - title: Discount Promotion feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/discount-promotion-feature-integration.html
+  - title: Discount Calculation- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/references/discount-calculation-reference-information.html
+  - title: Discount Conditions- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/references/discount-conditions-reference-information.html
+  - title: Managing Discounts
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/managing-discounts.html
+  - title: Migration Guide - Discount
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-discount.html
+  - title: Retrieving Promotional Items
+    link: docs/scos/dev/glue-api-guides/page.version/retrieving-promotional-items.html
 ---
 
 The Promotions & Discounts feature enables product catalog managers to provide free value to their customers by discounting a percentage or a fixed sum of an order's subtotal or an item's price on predefined conditions.
@@ -102,14 +117,6 @@ With the rule groups, you can build multiple levels of rule hierarchy. When a ca
 ![Decision rule hierarchy](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+%26+Discounts/Discount/Discount+Feature+Overview/decision-rule-hierarchy.png)
 
 When a cart is evaluated on a level that has a rule and a rule group, the rule group is treated as a single rule. The diagram below shows how a cart is evaluated against the rules on the previous screenshot.
-
-<details open>
-    <summary>Cart evaluation diagram</summary>
-
-![cart evaluation diagram](https://confluence-connect.gliffy.net/embed/image/fd6a6ce1-2c3f-438a-8377-ca337c3703c3.png?utm_medium=live&utm_source=custom)
-
-
-</details>
 
 ### Discount Threshold
 Threshold is a minimum number of items in cart that should fulfill all the specified decision rules for the discount to be applied.

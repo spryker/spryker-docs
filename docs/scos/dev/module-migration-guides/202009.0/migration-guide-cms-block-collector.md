@@ -7,6 +7,13 @@ originalArticleId: eb0186ff-b948-4129-9dfa-f97517f5a277
 redirect_from:
   - /v6/docs/mg-cms-block-collector
   - /v6/docs/en/mg-cms-block-collector
+related:
+  - title: Migration Guide - CMS Block
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-cmsblock.html
+  - title: Migration Guide - CMS Block GUI
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-cmsblockgui.html
+  - title: CMS Block
+    link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.*

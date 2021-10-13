@@ -7,6 +7,17 @@ originalArticleId: 5038b978-5c21-472b-99a4-b2a10a5837d6
 redirect_from:
   - /v6/docs/payolution-configuration
   - /v6/docs/en/payolution-configuration
+related:
+  - title: Payolution - Integration into a project
+    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/payolution-integration-into-a-project.html
+  - title: Payolution - Performing Requests
+    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/technical-details-and-howtos/payolution-performing-requests.html
+  - title: Payolution - Workflow
+    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/technical-details-and-howtos/payolution-workflow.html
+  - title: Payolution - Installment Payment
+    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/payolution-payment-methods/payolution-installment-payment.html
+  - title: Payolution - Invoice Payment
+    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/payolution-payment-methods/payolution-invoice-payment.html
 ---
 
 To integrate Payolution into your project, first you need to install and configure the Payolution module. This topic describes how to do that.

@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/adding-content-to-storefront-pages-using-templates-slots-best-practices
   - /docs/adding-content-to-storefront-pages-using-templates-slots-best-practices
   - /docs/en/adding-content-to-storefront-pages-using-templates-slots-best-practices
+related:
+  - title: Managing Slots
+    link: docs/scos/user/back-office-user-guides/page.version/content/slots/managing-slots.html
+  - title: Templates & Slots Feature Overview
+    link: docs/scos/user/features/page.version/cms-feature-overview/templates-and-slots-overview.html
 ---
 
 This topic describes how to add content to Storefront pages using templates with slots. To start working with templates with slots, go to **Content Management** > **Slots**.
@@ -23,7 +28,7 @@ Let’s say you have *Sticky Notes* and *Writing Materials* categories, and you 
 To do that, you need to create content items, insert them into CMS blocks, assign CMS blocks to slots and select the pages the CMS blocks will be displayed on.
 {% info_block infoBox "Examplary content" %}
 
-All the content used in this guide is shipped by default in our [Demo Shops](/docs/scos/dev/legacy-demoshop/demoshop-guide.html).
+All the content used in this guide is shipped by default in our [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html) and [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html).
 
 {% endinfo_block %}
 

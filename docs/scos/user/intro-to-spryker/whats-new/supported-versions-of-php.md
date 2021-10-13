@@ -27,7 +27,7 @@ redirect_from:
 
 **PHP 8.0** is ready: Since October 2021 we recommend using **PHP 8.0** already, where possible.
 
-We plan to start supporting **PHP 8.1** end of 2021 and keep supporting **PHP 7.4** until the end of October 2022.
+We plan to start supporting **PHP 8.1** end of 2021 and keep supporting **PHP 7.4** until the end of June 2022.
 
 The following graph shows the timelines of support of different PHP versions.
 

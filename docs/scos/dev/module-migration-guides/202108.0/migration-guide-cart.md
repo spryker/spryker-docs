@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/mg-cart
   - /docs/mg-cart
   - /docs/en/mg-cart
+related:
+  - title: Migration Guide - Quote
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-quote.html
 ---
 
 ## Upgrading from Version 5.* to Version 7.0.0

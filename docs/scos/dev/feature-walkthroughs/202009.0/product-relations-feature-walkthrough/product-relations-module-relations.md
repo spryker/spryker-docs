@@ -7,6 +7,9 @@ originalArticleId: c9fcdd6d-7a44-45af-a75d-e03ccf7ec2f0
 redirect_from:
   - /v6/docs/product-relations-module-relations
   - /v6/docs/en/product-relations-module-relations
+related:
+  - title: Product Relations Feature Overview
+    link: docs/scos/user/features/page.version/product-relations-feature-overview.html
 ---
 
 The schema below illustrates the module relations within the [Product Relations](/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html) feature: 

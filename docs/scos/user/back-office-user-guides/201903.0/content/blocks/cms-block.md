@@ -7,6 +7,9 @@ originalArticleId: d755ca4d-6511-446b-b38d-f8567d95316e
 redirect_from:
   - /v2/docs/cms-block-guide
   - /v2/docs/en/cms-block-guide
+related:
+  - title: CMS Block
+    link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
 ---
 
 CMS blocks can be used for adding content such as banners, charts, static links, banner images or similar items to be displayed throughout the online store.

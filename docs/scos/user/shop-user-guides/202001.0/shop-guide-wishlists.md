@@ -7,6 +7,9 @@ originalArticleId: 461b5855-c1fd-42a4-9415-41358ee51cd1
 redirect_from:
   - /v4/docs/shop-guide-wishlists
   - /v4/docs/en/shop-guide-wishlists
+related:
+  - title: Managing Wishlists
+    link: docs/scos/dev/glue-api-guides/page.version/managing-wishlists/managing-wishlists.html
 ---
 
 This article describes how you, as a Buyer, can create and manage wishlists in the Storefront.

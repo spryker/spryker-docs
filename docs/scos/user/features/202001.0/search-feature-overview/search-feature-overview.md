@@ -8,6 +8,9 @@ redirect_from:
   - /v4/docs/en/search
   - /v4/docs/search-filter
   - /v4/docs/en/search-filter
+related:
+  - title: Search Preferences Types
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/references/search-preferences-types.html
 ---
 
 One of the most important features in an e-commerce application is to give the customer the ability to find the products that he needs. Depending on how easy it is to find the products the customer is searching for and how relevant the search results are, the search feature is a crucial aspect for an e-commerce business.

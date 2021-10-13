@@ -11,6 +11,9 @@ redirect_from:
   - /docs/en/howto-define-the-maxiumum-size-of-content-fields
   - /v6/docs/howto-define-the-maxiumum-size-of-content-fields
   - /v6/docs/en/howto-define-the-maxiumum-size-of-content-fields
+related:
+  - title: CMS
+    link: docs/scos/user/features/page.version/cms-feature-overview/cms-feature-overview.html
 ---
 
 By default CMS module doesn't specify the content field size. For MySQL and MariaDB, it is transferred to TEXT (65535 bytes), and, for PostgreSQL, it is transferred to TEXT (unlimited length).

@@ -6,6 +6,9 @@ originalArticleId: 7431d426-ddd0-44b1-ac17-a86eda21b717
 redirect_from:
   - /v1/docs/mg-catalog
   - /v1/docs/en/mg-catalog
+related:
+  - title: Migration Guide - Category
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-category.html
 ---
 
 ## Upgrading from Version 3.* to Version 4.*

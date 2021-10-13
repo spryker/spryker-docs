@@ -7,6 +7,9 @@ originalArticleId: 0de3203c-e76a-4174-8a14-b9cb1ce953f8
 redirect_from:
   - /v6/docs/managing-customers
   - /v6/docs/en/managing-customers
+related:
+  - title: Customer Accounts
+    link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html
 ---
 
 This article describes the how to manage customers. 

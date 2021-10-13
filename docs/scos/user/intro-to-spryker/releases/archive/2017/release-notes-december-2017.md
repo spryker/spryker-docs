@@ -272,11 +272,10 @@ The following content has been added to the Academy:
 * [Performing Core Updates Smoothly](/docs/scos/dev/setup/composer.html#core-updates)
 * [CMS Blocks](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-blocks-overview.html)
 * [CMS Pages](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-pages-overview.html)
-* [Demo Shop](https://documentation.spryker.com/2021080/docs/legacy-demoshop)
 * [Navigation](/docs/user/features/{[site.version}}/navigation-feature-overview.html)
 * [Product Groups](https://documentation.spryker.com/2021080/docs/product-groups)
 * [Product Management](https://documentation.spryker.com/2021080/docs/product-information-management)
-* [Product Sets](https://documentation.spryker.com/2021080/docs/product-sets)
+* [Product Sets](/docs/scos/user/features/{{site.version}}/product-sets-feature-overview.html)
 * [Wishlists](/docs/scos/user/features/{{site.version}}/wishlist-feature-overview.html)
  
 Your feedback would be highly appreciated. Please help us understand what you need from the Spryker Academy by filling out a very short survey [here](https://docs.google.com/forms/d/1_vZg0lfqq24Qf9-fQhU50NgsEBy4eDqnDyx7gKz9Faw/edit).

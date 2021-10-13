@@ -1,5 +1,6 @@
 ---
 title: File details- gift_card_abstract_configuration.csv
+template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-gift-card-abstract-configurationcsv
 originalArticleId: c11ce919-bf0c-4dc1-bcd5-65f0c477a8de
 redirect_from:

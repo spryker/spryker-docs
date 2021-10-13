@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductRelationCollector
 description: Use the guide to learn how to update the ProductRelationCollector module to a newer version.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-product-relation-collector
 originalArticleId: 2b97c2a3-14c3-41f1-8a7f-743019bf6bb6
 redirect_from:

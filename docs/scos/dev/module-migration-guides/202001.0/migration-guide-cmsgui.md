@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - CmsGui
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/migration-guide-cmsgui
 originalArticleId: 8b332349-789a-47f2-8158-701244f10002
 redirect_from:

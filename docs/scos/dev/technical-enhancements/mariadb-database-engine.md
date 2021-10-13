@@ -1,6 +1,7 @@
 ---
 title: MariaDB database engine
 description: Learn how to switch database engine to MariaDB.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mariadb-database-engine
 originalArticleId: 5ef5569f-0fab-488d-9c95-3e0c0dbb0ddb
 redirect_from:

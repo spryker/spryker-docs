@@ -1,6 +1,7 @@
 ---
 title: Technology Partner Integration
 description: Integrate technology partner solutions to boost your Spryker project performance.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/technology-partner-integration
 originalArticleId: ca846f85-98bc-4a66-9054-253d212920d3
 redirect_from:

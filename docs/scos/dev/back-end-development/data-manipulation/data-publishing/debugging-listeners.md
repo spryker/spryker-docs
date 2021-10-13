@@ -1,5 +1,6 @@
 ---
 title: Debugging Listeners
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-debug-listeners
 originalArticleId: 283a1100-8a5f-4c6d-8cdd-a8a093aea5a6
 redirect_from:

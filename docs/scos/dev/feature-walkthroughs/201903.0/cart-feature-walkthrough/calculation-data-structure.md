@@ -1,6 +1,7 @@
 ---
 title: Calculation Data Structure
 description: The diagram in this topic covers the Calculation Data Structure, as well as the available transfer objects, fields and their descriptions.
+template: feature-walkthrough-template
 originalLink: https://documentation.spryker.com/v2/docs/calculation-data-structure
 originalArticleId: 456a9ccd-c3a9-42cf-a624-84b2fd602c64
 redirect_from:

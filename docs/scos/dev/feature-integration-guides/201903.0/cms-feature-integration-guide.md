@@ -1,6 +1,7 @@
 ---
 title: CMS feature integration Guide
 description: Multi-store CMS Pages feature allows making CMS pages visible or hidden on the store website. The guide describes how to integrate the feature into your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/cms-feature-integration-guide-201903
 originalArticleId: 7367bb68-83b6-4921-b53b-48c8cf6990bf
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Amazon Pay - Refund
 description: This article contain information on the refund process for the Amazon Pay module in Spryker.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/amazon-pay-refund-demoshop
 originalArticleId: 88121190-774c-40b1-acb2-ba8acb8e31cc
 redirect_from:

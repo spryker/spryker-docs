@@ -1,5 +1,6 @@
 ---
 title: File details- cms_slot_block.csv
+template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-slot-blockcsv
 originalArticleId: 848a3e6c-edad-4c9b-b7af-0b0c847b258f
 redirect_from:

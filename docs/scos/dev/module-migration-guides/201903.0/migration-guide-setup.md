@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Setup
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/mg-setup
 originalArticleId: c7219331-054e-482c-8bbc-405f9b48e163
 redirect_from:

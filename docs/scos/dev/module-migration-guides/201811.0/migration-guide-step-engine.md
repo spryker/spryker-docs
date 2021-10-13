@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Step Engine
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/mg-step-engine
 originalArticleId: fa3d59b8-c732-425f-bb16-09e3b8939cb8
 redirect_from:

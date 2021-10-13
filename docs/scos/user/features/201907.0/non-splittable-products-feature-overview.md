@@ -1,6 +1,7 @@
 ---
 title: Non-splittable Products feature overview
 description: The article describes the concept of product quantity restrictions-  its types and how they can be imported
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/product-quantity-restrictions
 originalArticleId: 0c0a9f00-bf3b-4667-946e-fcb1f7c6494a
 redirect_from:

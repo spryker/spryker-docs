@@ -1,5 +1,6 @@
 ---
 title: Checking Out Purchases and Getting Checkout Data
+template: glue-api-storefront-guide-template
 originalLink: https:carts-of-registered-users/managing-carts-of-registered-users.htmldocumentation.spryker.com/v1/docs/checking-out-purchases-and-getting-checkout-data
 originalArticleId: ec24dbd9-e3b2-4db0-9f09-50594801b162
 redirect_from:

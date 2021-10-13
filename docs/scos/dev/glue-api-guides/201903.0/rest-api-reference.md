@@ -1,5 +1,6 @@
 ---
 title: REST API Reference
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/rest-api-reference
 originalArticleId: 16390926-e788-4387-849f-073c20bb71a6
 redirect_from:

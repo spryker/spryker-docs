@@ -1,6 +1,7 @@
 ---
 title: Download and Structure
 description: Here you will find out how to download external dependencies and where to place them, together with your own asset files.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/download-structure
 originalArticleId: d3f609fa-66c9-4727-bbaa-5c532e6fd356
 redirect_from:

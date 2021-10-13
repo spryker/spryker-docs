@@ -1,6 +1,7 @@
 ---
 title: Arvato - Risk Check 2.0
 description: Arvato Risk Check evaluates the probability of payment default for the customer orders.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/arvato-risk-check-2-0
 originalArticleId: 84ae807c-a3cf-432c-9e44-93046207445f
 redirect_from:

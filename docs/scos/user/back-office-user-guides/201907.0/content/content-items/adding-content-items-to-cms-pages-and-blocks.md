@@ -1,6 +1,7 @@
 ---
 title: Adding Content Item to Pages and Blocks
 description: The guide provides instructions for shop owners on how to add content items to blocks and pages using content item widgets in the Back Office
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/adding-content-item-widgets-to-pages-and-blocks
 originalArticleId: 6ba8cf91-fd82-47e1-9ba6-ae86bed86245
 redirect_from:

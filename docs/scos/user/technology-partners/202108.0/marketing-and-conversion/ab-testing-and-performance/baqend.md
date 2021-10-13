@@ -1,5 +1,6 @@
 ---
 title: Baqend
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/baqend
 originalArticleId: dc885480-133d-423b-b566-e11bfcfe0c39
 redirect_from:

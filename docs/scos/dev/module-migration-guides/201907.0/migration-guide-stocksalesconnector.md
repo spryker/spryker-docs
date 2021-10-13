@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - StockSalesConnector
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-stock-sales-connector
 originalArticleId: fe8aa228-0dc3-4ba2-bcf3-cd44c8f0372d
 redirect_from:

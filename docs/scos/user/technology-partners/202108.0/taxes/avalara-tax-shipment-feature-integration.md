@@ -1,6 +1,7 @@
 ---
 title: Avalara Tax + Shipment feature integration
 description: Integrate Avalara Tax + Shipment feature into your project.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/avalara-tax-shipment-feature-integration
 originalArticleId: a93d12c8-c40a-4cbb-b866-755ad29f2852
 redirect_from:

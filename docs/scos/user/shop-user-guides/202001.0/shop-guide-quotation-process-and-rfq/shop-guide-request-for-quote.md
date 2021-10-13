@@ -1,6 +1,7 @@
 ---
 title: Shop Guide - Request for Quote
 description: The section can be used when a buyer and a sales representative can negotiate a better price on products in the cart.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/request-for-quote-shop-guide
 originalArticleId: d84fd46b-28cc-4b1d-9887-5453baa72e27
 redirect_from:

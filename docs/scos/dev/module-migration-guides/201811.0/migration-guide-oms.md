@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - OMS
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/mg-oms
 originalArticleId: 4dfe9ffe-9a14-4997-a039-ae712adfa872
 redirect_from:

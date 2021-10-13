@@ -1,5 +1,6 @@
 ---
 title: Managing Carts
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/managing-carts
 originalArticleId: 986692c0-9e8b-4693-a1d0-430e4255ee14
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Managing Company Roles
 description: Use the procedures to create, update, delete, and assign company roles in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/managing-company-roles
 originalArticleId: d36afa06-1a49-4e55-a3b8-8677bfbeaeae
 redirect_from:

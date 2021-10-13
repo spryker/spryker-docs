@@ -1,6 +1,7 @@
 ---
 title: Product Lists feature overview
 description: Product lists is a Spryker Commerce OS feature that allows creating product lists.
+template: concept-topic-template
 ---
 
 Configure product availability for specific companies by blacklisting or whitelisting products for them. Let's say you want to hide some products, or even a category, from a company you've signed a contract with. You create a blacklist of those products and assign it to the company. This will make it impossible for this company to purchase the blacklisted product.

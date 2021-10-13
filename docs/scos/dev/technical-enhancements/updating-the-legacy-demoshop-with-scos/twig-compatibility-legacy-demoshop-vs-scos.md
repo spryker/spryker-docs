@@ -1,6 +1,7 @@
 ---
 title: Twig Compatibility- Legacy Demoshop vs SCOS
 description: Use the guide to learn how to configure the Twig variables passed to the global Twig namespace in the demoshop.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/twig-compatibility-mode-demoshop-vs-suite
 originalArticleId: da28a400-a280-45d2-94e3-293d47f108b0
 redirect_from:

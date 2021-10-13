@@ -1,6 +1,7 @@
 ---
 title: PayOne - Online Transfer Payment
 description: Integrate online transfer payment through Payone into the Spryker-based shop.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/payone-online-trans
 originalArticleId: 2ea0478f-7e15-4a7b-b69e-87bd20beeb9c
 redirect_from:

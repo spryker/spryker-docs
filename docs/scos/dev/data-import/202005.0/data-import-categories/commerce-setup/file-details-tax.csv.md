@@ -1,5 +1,6 @@
 ---
 title: File details- tax.csv
+template: data-import-template
 originalLink: https://documentation.spryker.com/v5/docs/file-details-taxcsv
 originalArticleId: 35aaaa94-0661-47e1-9782-b5059e56e52b
 redirect_from:

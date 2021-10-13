@@ -1,6 +1,7 @@
 ---
 title: Searching by company users
 description: Learn how to search by company users via Glue API.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/searching-by-company-users
 originalArticleId: a0cc11ce-40e9-4fcf-8cd5-eddd23b02363
 redirect_from:

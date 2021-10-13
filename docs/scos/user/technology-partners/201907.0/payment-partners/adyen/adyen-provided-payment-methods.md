@@ -1,6 +1,7 @@
 ---
 title: Adyen - Provided Payment Methods
 description: Adyen supports credit card, direct debit, Klarna invoice, Prepayment, Sofort,  PayPal, iDeal, AliPay, WeChatPay payment methods that can be integrated into the Spryker Commerce OS.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/adyen-provided-payment-methods
 originalArticleId: 823ec7d6-fdf7-45e1-bd8c-d9418d4d5158
 redirect_from:

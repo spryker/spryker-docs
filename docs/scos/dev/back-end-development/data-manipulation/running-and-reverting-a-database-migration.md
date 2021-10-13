@@ -1,6 +1,7 @@
 ---
 title: Running and Reverting a Database Migration
 description: Database migration allows you to update your database with the latest changes.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/running-reverting-db-migration
 originalArticleId: c4756a6e-9b72-400b-b5f3-a252da857af1
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Form
 description: Use the guide to perform the Form part of the Silex Migration Effort.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/migration-guide-form
 originalArticleId: 2383be68-2c7d-48ef-8ffc-d9b5dcaee422
 redirect_from:

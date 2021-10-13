@@ -1,6 +1,7 @@
 ---
 title: Content Widgets
 description: Content widgets are used to add content to pages and blocks in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/content-widgets
 originalArticleId: 53ec8484-0bd9-4ab6-a2df-23dd71e02397
 redirect_from:

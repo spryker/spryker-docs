@@ -9,6 +9,7 @@ redirect_from:
   - /v5/docs/en/multiple-shared-shopping-lists
   - /v5/docs/shopping-list
   - /v5/docs/en/shopping-list
+template: concept-topic-template
 ---
 
 A shopping list is a list of the items that shoppers buy or plan to buy frequently or regularly. For example, a consumer can compile a shopping list of the products they purchase every week. Shopping lists allow a buyer to have a quick overview of the products they are planning to buy and the sum of money they are going to spend.

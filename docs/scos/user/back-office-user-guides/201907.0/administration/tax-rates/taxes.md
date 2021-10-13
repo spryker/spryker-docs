@@ -1,6 +1,7 @@
 ---
 title: Taxes
 description: The guide provides a quick overview of the Taxes section that enables shop owners to define tax rates for different countries in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/taxes
 originalArticleId: 09f3c698-8819-4087-a1bb-6e046469e1e3
 redirect_from:

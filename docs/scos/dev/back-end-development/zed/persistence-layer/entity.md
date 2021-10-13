@@ -1,6 +1,7 @@
 ---
 title: Entity
 description: In Spryker, an entity represents one entry from a table in the database. Entities are an implementation of the Active record design pattern, so their usage is very simple.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/entity
 originalArticleId: 768b00eb-1182-4cf3-8c6c-1fbfb294a3b2
 redirect_from:

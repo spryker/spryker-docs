@@ -1,6 +1,7 @@
 ---
 title: File details- product_label_store.csv
 description: Description of the product_label_store.csv import file used to import store relations of product labels.
+template: data-import-template
 originalLink: https://documentation.spryker.com/v6/docs/file-details-product-label-storecsv
 originalArticleId: 808fb4f7-a2ff-4568-a91b-1b5c51cae9f1
 redirect_from:

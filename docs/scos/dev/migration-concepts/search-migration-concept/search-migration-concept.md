@@ -1,5 +1,6 @@
 ---
 title: Search migration concept
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/search-migration-concept
 originalArticleId: 9338954f-a18a-4214-8566-5100e8462ca7
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Spryker Core Back Office feature integration
 description: Learn how to integrate the Spryker Core Back Office feature into a Spryker project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/spryker-core-back-office-feature-integration
 originalArticleId: 53f711aa-6007-4fe2-8baf-ad91c72f33f4
 redirect_from:

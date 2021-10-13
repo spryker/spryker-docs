@@ -1,6 +1,7 @@
 ---
 title: Managing items in carts of registered users
 description: Retrieve details about the items of the registered users' carts, and learn what else you can do with the resource.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-items-in-carts-of-registered-users
 originalArticleId: 8dbe18a1-adef-48a8-9ea0-b496f13c5630
 redirect_from:

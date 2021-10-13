@@ -1,6 +1,7 @@
 ---
 title: Minimum Order Value feature integration
 description: The Minimum Order Value Feature allows setting a minimum threshold for customer's orders. The guide describes how to integrate the feature into your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/minimum-order-value-feature-integration-201811
 originalArticleId: 7e69b682-ec56-446f-824c-863bab61e078
 redirect_from:

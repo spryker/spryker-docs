@@ -1,6 +1,7 @@
 ---
 title: Multi-Store Products feature integration
 description: The guide describes the process of installing the Multi-Store Products into your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/product-store-relation-feature-integration
 originalArticleId: 091f07e0-bd44-4f13-b936-86b6c03f91c1
 redirect_from:

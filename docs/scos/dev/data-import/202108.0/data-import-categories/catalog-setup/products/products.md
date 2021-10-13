@@ -1,5 +1,6 @@
 ---
 title: Products
+template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/products-import
 originalArticleId: a2aeed1c-8613-43f2-9141-abb20c9aedb1
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - NavigationGui
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/mg-navigation-gui
 originalArticleId: 817a3ca0-6387-415b-8021-e8864bd88a03
 redirect_from:

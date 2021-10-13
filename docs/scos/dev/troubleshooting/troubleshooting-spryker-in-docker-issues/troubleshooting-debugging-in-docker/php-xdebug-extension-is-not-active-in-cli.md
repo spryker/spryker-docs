@@ -1,6 +1,7 @@
 ---
 title: PHP `xdebug` extension is not active in CLI
 description: Learn how to fix the issue when PHP `xdebug` extension is not active in CLI
+template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/php-xdebug-extension-is-not-active-in-cli
 originalArticleId: 5fe9a7c8-6e68-4024-952b-ae353d41bce0
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: File details- product_label.csv
+template: data-import-template
 originalLink: https://documentation.spryker.com/v5/docs/file-details-product-labelcsv
 originalArticleId: 98ff0cde-73d6-4340-a1c4-36e7f929bc0b
 redirect_from:

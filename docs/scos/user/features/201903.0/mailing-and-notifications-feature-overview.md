@@ -1,5 +1,6 @@
 ---
 title: Mailing & Notifications feature overview
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/mailing-communication
 originalArticleId: 633b156b-4a0c-4e3c-bda3-ea8d014d5eea
 redirect_from:

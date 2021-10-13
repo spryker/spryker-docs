@@ -1,6 +1,7 @@
 ---
 title: PayOne - Prepayment
 description: Integrate prepayment through Payone into the Spryker-based shop.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/payone-prepayment
 originalArticleId: 20225f1c-0df1-4498-97d2-6d7a6b7fabdd
 redirect_from:

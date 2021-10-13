@@ -1,6 +1,7 @@
 ---
 title: Product overview
 description: Detailed overview of the Product feature.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/product-overview
 originalArticleId: 4ce5b2fb-8116-476b-bc33-bc2bce818a70
 redirect_from:

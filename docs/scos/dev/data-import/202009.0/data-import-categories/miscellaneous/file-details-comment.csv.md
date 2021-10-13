@@ -1,5 +1,6 @@
 ---
 title: File details- comment.csv
+template: data-import-template
 originalLink: https://documentation.spryker.com/v6/docs/file-details-commentcsv
 originalArticleId: 1ef5628c-325d-4e2c-a778-48c898c9f94b
 redirect_from:

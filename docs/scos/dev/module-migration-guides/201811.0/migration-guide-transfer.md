@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Transfer
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/mg-transfer
 originalArticleId: ec9f70ff-6dfd-4694-9a25-792050f55303
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: Development virtual machine, docker containers & console
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/devvm
 originalArticleId: 68abbec6-248a-4a45-9623-67d36366bc74
 redirect_from:

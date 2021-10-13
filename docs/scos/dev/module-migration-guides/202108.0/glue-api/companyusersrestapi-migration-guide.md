@@ -1,5 +1,6 @@
 ---
 title: CompanyUsersRestApi Migration Guide
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/companyusersrestapi-migration-guide
 originalArticleId: e34e7c88-d2e4-4a05-bef5-f49da84d9420
 redirect_from:

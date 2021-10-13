@@ -1,6 +1,7 @@
 ---
 title: Checkout workflow
 description: Checkout workflow of Glue API.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/checkout-workflow
 originalArticleId: 0b31be43-4a26-4cf1-aff1-a3f46027fd84
 redirect_from:

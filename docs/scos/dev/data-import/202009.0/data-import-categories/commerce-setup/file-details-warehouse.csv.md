@@ -1,5 +1,6 @@
 ---
 title: File details- warehouse.csv
+template: data-import-template
 originalLink: https://documentation.spryker.com/v6/docs/file-details-warehousecsv
 originalArticleId: ba97c5c0-5fd4-4ea9-9bf0-afa24d198ab4
 redirect_from:

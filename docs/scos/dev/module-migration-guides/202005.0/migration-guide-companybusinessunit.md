@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - CompanyBusinessUnit
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/migration-guide-companybusinessunit
 originalArticleId: a74e1aab-f0a7-4ab8-b063-d72a25b7071d
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Company Account- Reference Information
 description: The guide provides additional information on the values you use when working with company roles, company unit addresses, company units, and company users.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/company-account-reference-information
 originalArticleId: 2a7b8a94-cf6f-4484-9525-e22dd4d5bbf6
 redirect_from:

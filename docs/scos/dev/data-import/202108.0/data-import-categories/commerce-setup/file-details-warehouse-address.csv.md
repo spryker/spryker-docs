@@ -1,6 +1,7 @@
 ---
 title: File details- warehouse_address.csv
 description: Import the warehouse address data into your project
+template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-warehouse-addresscsv
 originalArticleId: 330a69e6-3c7b-4aef-8b61-b70309dcc856
 redirect_from:

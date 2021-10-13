@@ -1,6 +1,7 @@
 ---
 title: live chat service
 description: Ensure that live chat helps their customers with new leads and
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/live-chat-service
 originalArticleId: 1ed07168-e61c-4953-a59b-d4de48e73c32
 redirect_from:

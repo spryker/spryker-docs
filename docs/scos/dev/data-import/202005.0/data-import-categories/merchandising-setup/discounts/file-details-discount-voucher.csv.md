@@ -1,5 +1,6 @@
 ---
 title: File details- discount_voucher.csv
+template: data-import-template
 originalLink: https://documentation.spryker.com/v5/docs/file-details-discount-vouchercsv
 originalArticleId: 3ed551a3-ba93-47db-a4bf-4a5d0c762d05
 redirect_from:

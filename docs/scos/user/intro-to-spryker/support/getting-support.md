@@ -1,5 +1,6 @@
 ---
 title: Getting support
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/getting-support
 originalArticleId: db44af78-45b9-497b-a5b7-2474f1d1460b
 redirect_from:

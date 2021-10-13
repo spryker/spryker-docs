@@ -1,6 +1,7 @@
 ---
 title: Shop Guide - Comments
 description: The section can be used to add comments to cart, filter by tags, or discuss order details with colleagues.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/comments-shop-guide
 originalArticleId: 09051b19-962a-4308-9a5b-f2514da67896
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Installing and configuring FACT-Finder web components
 description: Integrate Fact Finder Web Components into Spryker Commerce OS.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/fact-finder-web-components
 originalArticleId: 2c240c0e-67be-43d0-87fe-256dcf2f0a8f
 redirect_from:

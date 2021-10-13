@@ -1,6 +1,7 @@
 ---
 title: Documentation updates
 description: This page lists all the updates to the documentation made for each release.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/documentation-updates
 originalArticleId: 724de822-4f8b-466a-8c97-67acb59b878d
 redirect_from:

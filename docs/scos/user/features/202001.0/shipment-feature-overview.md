@@ -1,6 +1,7 @@
 ---
 title: Shipment feature overview
 description: With the feature, you can create and manage carrier companies and their delivery methods per specific store.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/shipment-overview
 originalArticleId: 994d1397-2207-4905-839e-57a3328f9b95
 redirect_from:

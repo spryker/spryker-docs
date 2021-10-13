@@ -1,6 +1,7 @@
 ---
 title: REST API Reference
 description: This page provides an exhaustive reference for the REST API endpoints present in Spryker by default with the corresponding parameters and data formats.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/rest-api-reference
 originalArticleId: 25079c04-035b-4278-ad7d-a2866388ab5e
 redirect_from:

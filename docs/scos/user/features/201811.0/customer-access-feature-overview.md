@@ -1,6 +1,7 @@
 ---
 title: Hide Content from Logged out Users Overview
 description: Hide Content from Logged out Users allows deciding whether certain information is visible to logged out users or not
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/hide-content-from-logged-out-users-overview
 originalArticleId: 3d595d66-1d35-4435-9e9a-190c4ea4966c
 redirect_from:

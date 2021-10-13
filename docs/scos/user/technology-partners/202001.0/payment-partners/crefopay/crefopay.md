@@ -1,5 +1,6 @@
 ---
 title: CrefoPay
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/crefopay
 originalArticleId: f0be0950-3d19-418c-b8cf-6c223f8663a2
 redirect_from:

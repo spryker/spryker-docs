@@ -1,6 +1,7 @@
 ---
 title: Retrieving product attributes
 description: The article explains how you can retrieve product attributes via the API
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-product-attributes
 originalArticleId: 11708dbe-4c10-47db-8e40-d5cf23a8c3eb
 redirect_from:

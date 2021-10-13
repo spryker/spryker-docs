@@ -25,6 +25,7 @@ module Spryker
       doc_path = get_docs_path
       page_files = get_md_files(doc_path)
       page_files.each do |file_name|
+        next if file_name.include? "/drafts-dev/"
         begin
           validation_result =validate_page(doc_path + file_name)
         rescue StandardError => e

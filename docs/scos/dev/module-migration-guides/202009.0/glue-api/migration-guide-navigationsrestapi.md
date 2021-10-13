@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - NavigationsRestApi
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/migration-guide-navigationsrestapi
 originalArticleId: e887fdd8-3389-4bc0-8fe9-0e06018782bb
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Multi-Term Auto Completion
 description: Term completion is a feature where a user gets suggestions for search terms and matching search results as he types the query.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/multi-term-auto-completion
 originalArticleId: 3856974a-ffa5-411d-ae2d-328dcfe5b405
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Shipment
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-shipment
 originalArticleId: 0994141f-1a15-475d-ade5-99486fe671f5
 redirect_from:

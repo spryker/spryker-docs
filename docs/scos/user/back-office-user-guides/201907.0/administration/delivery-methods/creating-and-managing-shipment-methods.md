@@ -1,5 +1,6 @@
 ---
 title: Creating and Managing Shipment Methods
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/creating-and-managing-shipment-methods
 originalArticleId: cbe45516-31e7-4f3a-99aa-434f5912cf33
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Amazon Pay - Support of Bundled Products
 description: Amazon Pay supports the bundled products and can be configured in the Spryker shop.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/amazon-pay-support-bundled-products-demoshop
 originalArticleId: 3e153bf2-6bde-4c03-b187-a5544521902d
 redirect_from:

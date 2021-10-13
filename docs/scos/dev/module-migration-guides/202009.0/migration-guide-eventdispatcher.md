@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - EventDispatcher
 description: Use the guide to perform the EventDispatcher part of the Silex Migration Effort.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/migration-guide-eventdispatcher
 originalArticleId: dd6bdfc3-42ce-4cb7-a114-9efc96c2aa19
 redirect_from:

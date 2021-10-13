@@ -1,6 +1,7 @@
 ---
 title: Split Delivery Overview
 description: The feature allows delivering order items to different shipping addresses and on different days, with different shipment methods.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/split-delivery-overview
 originalArticleId: 78f2daf7-913e-4b36-9a2a-9f2f1070b825
 redirect_from:

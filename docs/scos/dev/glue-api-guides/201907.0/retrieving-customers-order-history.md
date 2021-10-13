@@ -1,5 +1,6 @@
 ---
 title: Retrieving Customer's Order History
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/retrieving-order-history
 originalArticleId: 8c03651a-4645-4c55-95f1-aecdee411518
 redirect_from:

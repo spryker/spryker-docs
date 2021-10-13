@@ -1,6 +1,7 @@
 ---
 title: Assigning Blocks to Category or Product Pages
 description: The guide provides instructions on how to assign blocks to category and product pages in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/assigning-blocks-to-category-or-product-pages
 originalArticleId: 55144fd7-c519-4a5a-9b42-4f4e4000c2c0
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: No data on the Storefront
 description: The solution to the data being absent on the Storefront.
+template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/no-data-on-the-storefront
 originalArticleId: 5edf4ea6-b0e3-4284-90f3-a5ad06a30f58
 redirect_from:

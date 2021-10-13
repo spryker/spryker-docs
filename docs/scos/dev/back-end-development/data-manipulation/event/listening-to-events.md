@@ -1,5 +1,6 @@
 ---
 title: Listening to Events
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/event-listen
 originalArticleId: 484a93ea-5e3c-4079-b682-6d2c7196b4b7
 redirect_from:

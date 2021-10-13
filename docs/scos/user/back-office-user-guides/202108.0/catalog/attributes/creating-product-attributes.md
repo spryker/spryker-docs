@@ -1,6 +1,7 @@
 ---
 title: Creating product attributes
 description: Learn how to create product attributes in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-product-attributes
 originalArticleId: 1b1f5ddd-b2e3-4095-a1e0-abb9b298fd46
 redirect_from:

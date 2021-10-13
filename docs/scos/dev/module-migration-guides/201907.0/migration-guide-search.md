@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Search
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-search
 originalArticleId: b3e1f023-841b-43dc-910f-3a9892edb4a8
 redirect_from:

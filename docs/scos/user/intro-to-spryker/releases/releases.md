@@ -1,6 +1,7 @@
 ---
 title: Releases
 description: This section contains the notes for each release made by Spryker.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/releases
 originalArticleId: e2f76a3b-1e2e-4c57-8812-bf46dac54b10
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: Reference information- Delivery methods
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/delivery-methods-reference-information
 originalArticleId: 4c15d0f2-ae4e-421e-93c0-5f141e808769
 redirect_from:

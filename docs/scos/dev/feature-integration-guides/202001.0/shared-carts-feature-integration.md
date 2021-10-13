@@ -1,5 +1,6 @@
 ---
 title: Shared Carts feature integration
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/shared-carts-feature-integration
 originalArticleId: 03a19655-ff4d-40ec-9e2f-a2a3d9e7e658
 redirect_from:

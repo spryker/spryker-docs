@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - AvailabilityStorage
 description: Use the guide to migrate to a new version of the AvailabilityStorage module.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-availabilitystorage
 originalArticleId: ed8f56c7-a35d-48f2-ba2a-edfe2151e67e
 redirect_from:

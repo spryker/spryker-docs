@@ -1,6 +1,7 @@
 ---
 title: Creating a New Custom Scheduler
 description: This tutorial describes how to create a new custom scheduler.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-create-a-new-custom-scheduler
 originalArticleId: 782c6672-6cf9-4295-9bb5-d6c5fe98891d
 redirect_from:

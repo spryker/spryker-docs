@@ -1,6 +1,7 @@
 ---
 title: Getting the list of console commands and available options
 description: The command-line Console tool enables you to execute a great variety of commands, such as managing the Spryker Commerce OS installer, to run the OS in any environment.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/getting-the-list-of-console-commands-and-available-options
 originalArticleId: e075ad9a-b328-43d4-bde1-e6d0f6e5f0bc
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: Shopmacher
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/shopmacher
 originalArticleId: 7099886d-8bce-414c-b64e-cb37a01b8117
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: Stocks
+template: data-import-template
 originalLink: https://documentation.spryker.com/v6/docs/stocks
 originalArticleId: 2a96e1c0-442f-4607-ac0e-7fb663b4aa37
 redirect_from:

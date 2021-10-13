@@ -1,5 +1,6 @@
 ---
 title: File details- content_banner.csv
+template: data-import-template
 originalLink: https://documentation.spryker.com/v5/docs/file-details-content-bannercsv
 originalArticleId: fd73da08-dba6-4b81-a7cc-4aaa0f8eb6a3
 redirect_from:

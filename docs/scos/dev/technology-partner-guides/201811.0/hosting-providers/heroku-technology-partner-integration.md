@@ -1,5 +1,6 @@
 ---
 title: Heroku technology partner integration
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/hosting-provider-continum-1
 originalArticleId: 83e0ce3d-0327-4362-95eb-1bf2bb303f91
 redirect_from:

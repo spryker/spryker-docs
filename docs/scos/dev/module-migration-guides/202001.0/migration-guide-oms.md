@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - OMS
 description: Use the guide to upgrade the Oms module to the new version.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/mg-oms
 originalArticleId: 6dc9a8d8-1f7f-4bea-85d1-df3acff4d5aa
 redirect_from:

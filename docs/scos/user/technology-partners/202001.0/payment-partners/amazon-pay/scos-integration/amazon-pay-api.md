@@ -1,6 +1,7 @@
 ---
 title: Amazon Pay - API
 description: This article provides details on the API structure of the Amazon Pay module in Spryker Commerce OS.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/amazon-pay-api
 originalArticleId: 2b810a13-8bfb-444e-84c5-910d31533699
 redirect_from:

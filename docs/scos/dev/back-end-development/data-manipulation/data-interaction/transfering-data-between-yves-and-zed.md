@@ -1,6 +1,7 @@
 ---
 title: Transfering data between Yves and Zed
 description: In this article, we’ll exemplify how you can set up the communication between Yves and Zed.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-transfer-data-yves-zed
 originalArticleId: 92fb4df1-548a-44eb-aa4a-8ee1d8e70376
 redirect_from:

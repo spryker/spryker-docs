@@ -1,5 +1,6 @@
 ---
 title: Glue API- Order management feature integration
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/glue-api-order-management-feature-integration
 originalArticleId: 9f5cc210-bb1b-4d2a-8da9-85a518e648dd
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Company Account feature integration
 description: This integration guide provides a set of procedures needed to be performed in order to integrate the Business on Behalf feature into your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/company-account-feature-integration-201903
 originalArticleId: 1174b1af-17e3-46ce-8e04-a491c88994f7
 redirect_from:

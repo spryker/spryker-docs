@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - CheckoutRestApi
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/mg-checkoutrestapi
 originalArticleId: 3c54da07-f365-4c38-ab21-0ecdc03178fb
 redirect_from:

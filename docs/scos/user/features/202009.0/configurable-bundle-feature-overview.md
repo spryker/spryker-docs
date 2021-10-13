@@ -1,6 +1,7 @@
 ---
 title: Configurable Bundle feature overview
 description: A configurable bundle is a product bundle, that a customer can configure in the Storefront on the go by choosing the suggested concrete products.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/configurable-bundle-feature-overview
 originalArticleId: 5e2968d9-e284-4575-85f4-7b76fdba5014
 redirect_from:

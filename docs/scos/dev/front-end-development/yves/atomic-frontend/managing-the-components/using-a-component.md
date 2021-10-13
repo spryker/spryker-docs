@@ -1,5 +1,6 @@
 ---
 title: Using a Component
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-use-component
 originalArticleId: cb6a7b9c-c64d-480f-a4e9-0d122e56594e
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: PHPStan memory issues
+template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/phpstan-memory-issues
 originalArticleId: c234b12e-5260-4f86-97b4-44c7ef5c8dbf
 redirect_from:

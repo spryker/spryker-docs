@@ -1,5 +1,6 @@
 ---
 title: Release notes 202009.0
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes-2020090
 originalArticleId: e6f148ef-1701-4f47-970e-4bfc9414e1d4
 redirect_from:

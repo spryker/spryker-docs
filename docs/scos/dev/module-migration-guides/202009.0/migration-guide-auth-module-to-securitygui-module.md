@@ -1,5 +1,6 @@
 ---
 title: Migration guide- Auth module to SecurityGui module
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/migration-guide-auth-module-to-securitygui-module
 originalArticleId: 52ee3c29-7fb3-4537-91c6-e9df882dd457
 redirect_from:

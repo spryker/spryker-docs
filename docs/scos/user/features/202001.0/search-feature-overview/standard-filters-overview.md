@@ -1,6 +1,7 @@
 ---
 title: Standard Filters
 description: SCOS offers a variety of different filter types to ease the process of product discovery. These filters include single- or multi-select and range filters.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/standard-filters
 originalArticleId: ace82860-8e80-4a27-a4e7-515944920ac8
 redirect_from:

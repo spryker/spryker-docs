@@ -1,6 +1,7 @@
 ---
 title: Akeneo
 description: Provide product information management solutions through the existing IT environment by integrating Akeneo into the Spryker-based shop.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/akeneo
 originalArticleId: a7cbcb97-233b-47df-88a5-2d65d66d2e96
 redirect_from:

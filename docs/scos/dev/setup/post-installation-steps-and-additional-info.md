@@ -1,6 +1,7 @@
 ---
 title: Post-Installation Steps and Additional Info
 description: This article provides post-installation steps and additional info for the Spryker project.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/post-installation-steps-and-additional-info
 originalArticleId: 4c5b7267-f2d3-4d94-bb26-76dcb69befe1
 redirect_from:

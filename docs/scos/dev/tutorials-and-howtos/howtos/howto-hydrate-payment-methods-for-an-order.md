@@ -1,5 +1,6 @@
 ---
 title: HowTo - Hydrate Payment Methods for an Order
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-hydrate-payment-methods-for-order
 originalArticleId: 4e35e87f-d4a5-4a06-8cf5-d830eec89b5d
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: Services
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/services
 originalArticleId: 0e4f58e4-8a89-44e9-96ff-864c483461a0
 redirect_from:

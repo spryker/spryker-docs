@@ -1,5 +1,6 @@
 ---
 title: Content Management
+template: data-import-template
 originalLink: https://documentation.spryker.com/v6/docs/content-management
 originalArticleId: c5c056fc-2dbb-4e55-bb41-dc2aa9ee31ce
 redirect_from:

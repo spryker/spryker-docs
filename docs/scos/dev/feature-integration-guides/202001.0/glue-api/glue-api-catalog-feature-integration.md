@@ -1,6 +1,7 @@
 ---
 title: Glue API- Catalog feature integration
 description: Use the guide to install the Glue Catalog feature in your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/catalog-api-feature-integration
 originalArticleId: 5030b2d7-bba0-4118-b4cb-f846eeaf0121
 redirect_from:

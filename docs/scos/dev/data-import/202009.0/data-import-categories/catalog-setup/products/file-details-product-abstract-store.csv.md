@@ -1,5 +1,6 @@
 ---
 title: File details- product_abstract_store.csv
+template: data-import-template
 originalLink: https://documentation.spryker.com/v6/docs/file-details-product-abstract-storecsv
 originalArticleId: 732dc9b0-6f68-4ab0-ab05-98c2d03a6f79
 redirect_from:

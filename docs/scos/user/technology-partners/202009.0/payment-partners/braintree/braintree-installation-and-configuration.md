@@ -1,6 +1,7 @@
 ---
 title: Braintree - Installation and configuration
 description: This article contains information on configuring the Braintree module for the Spryker Commerce OS.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/braintree-configuration
 originalArticleId: e8c448d4-84b3-44bf-8968-a79602d97538
 redirect_from:

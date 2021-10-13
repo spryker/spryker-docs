@@ -1,6 +1,7 @@
 ---
 title: Discount
 description: This section can be used to create discounts and specify their types, vouchers, and cart rules, as well as to define what and when to apply the discount to.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/discount-1
 originalArticleId: 65497b4c-6d91-495b-a706-ab21951ddb20
 redirect_from:

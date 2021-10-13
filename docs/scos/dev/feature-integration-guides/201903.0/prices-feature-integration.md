@@ -1,6 +1,7 @@
 ---
 title: Prices feature integration
 description: The Volume Prices Feature allows setting specific prices for units based on quantities. The guide describes how to integrate the feature into your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/prices-feature-integration-201903
 originalArticleId: 7b32ae6f-1cc5-4bda-9df6-165c35fd2377
 redirect_from:

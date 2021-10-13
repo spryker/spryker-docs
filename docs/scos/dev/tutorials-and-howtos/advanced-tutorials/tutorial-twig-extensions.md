@@ -1,5 +1,6 @@
 ---
 title: Tutorial - Twig extensions
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-twig-extensions
 originalArticleId: 4a503169-a26b-4a37-bb44-f20b34a81c4e
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Customer Accounts
 description: Let your customers create an Account to save their contact details, addresses, order history and preferences, such as language and shipping options.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/customer-accounts
 originalArticleId: 9f79edff-00cb-4f19-8866-3af7ab7c9d82
 redirect_from:

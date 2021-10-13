@@ -1,6 +1,7 @@
 ---
 title: Calculation 3.0
 description: The Calculation module is used to calculate the cart totals displayed in the cart/checkout or when the order is placed. The article describes its workflow.
+template: feature-walkthrough-template
 originalLink: https://documentation.spryker.com/v1/docs/calculation-3-0
 originalArticleId: de8670c2-8f5e-463b-8527-3cc073ca78b8
 redirect_from:

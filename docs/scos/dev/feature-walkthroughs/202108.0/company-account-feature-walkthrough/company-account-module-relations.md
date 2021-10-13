@@ -1,6 +1,7 @@
 ---
 title: Company account- module relations
 description: Explore the module relations of the Company Account features
+template: feature-walkthrough-template
 originalLink: https://documentation.spryker.com/v7/docs/company-account-module-relations
 originalArticleId: c01aaea9-5602-4cb9-9d99-04d42aa2aa8a
 redirect_from:

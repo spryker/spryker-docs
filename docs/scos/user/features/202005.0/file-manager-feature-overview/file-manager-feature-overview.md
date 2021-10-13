@@ -1,6 +1,7 @@
 ---
 title: Media Management
 description: Reduce your bounce rate and create an enhanced shopping experience by providing impactful visuals while simultaneously maintaining fast response times.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/media-management
 originalArticleId: fda0d576-04c1-402c-a988-aee70260cd38
 redirect_from:

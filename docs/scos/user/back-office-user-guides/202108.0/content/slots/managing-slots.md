@@ -1,6 +1,7 @@
 ---
 title: Managing slots
 description: Learn about slot management in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-slots
 originalArticleId: 06d8bf64-4aee-4959-abae-f3fb849ccaa0
 redirect_from:

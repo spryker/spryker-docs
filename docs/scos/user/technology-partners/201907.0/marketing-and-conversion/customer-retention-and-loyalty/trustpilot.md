@@ -1,6 +1,7 @@
 ---
 title: Trustpilot
 description: Integrate Trustpilot that gives people a place to share and discover reviews of businesses, and we give every company the tools to turn consumer feedback into business results
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/trustpilot
 originalArticleId: 22995920-3664-4bab-94e7-67a25d29eda3
 redirect_from:

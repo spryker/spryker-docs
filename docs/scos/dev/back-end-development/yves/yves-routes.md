@@ -1,5 +1,6 @@
 ---
 title: Yves Routes
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-yves-routes
 originalArticleId: 163c596a-1229-4345-b524-e404420531aa
 redirect_from:

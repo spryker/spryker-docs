@@ -1,6 +1,7 @@
 ---
 title: Product API feature integration
 description: This guide will navigate you through the process of installing and configuring the Product API feature in Spryker OS.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/product-api-feature-integration-201812
 originalArticleId: 010d45ee-40e1-4ff4-82fe-3551786af605
 redirect_from:

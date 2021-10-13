@@ -1,5 +1,6 @@
 ---
 title: Customer Login overview
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-login-overview
 originalArticleId: 7641234a-88aa-4031-85e1-c67aa38eb030
 redirect_from:

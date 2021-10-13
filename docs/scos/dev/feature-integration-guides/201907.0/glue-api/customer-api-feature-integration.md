@@ -1,6 +1,7 @@
 ---
 title: Customer API feature integration
 description: This guide will navigate through the process of installing and configuring of the Customer API feature used in Spryker OS.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/customer-api-feature-integration-201903
 originalArticleId: d4ba1b74-8174-4c5f-8884-3bb24a0799c9
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: Project Implementation - Zed API
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/zed-api-project-implementation
 originalArticleId: d2f48387-b830-4e43-84b9-59fb4a72baa1
 redirect_from:

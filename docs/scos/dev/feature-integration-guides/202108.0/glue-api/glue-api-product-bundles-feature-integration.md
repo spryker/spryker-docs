@@ -1,6 +1,7 @@
 ---
 title: Glue API- Product Bundles feature integration
 description: Learn how to integrate the Glue API- Product Bundles feature into a Spryker project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-product-bundles-feature-integration
 originalArticleId: 7512d512-55f0-4d75-a206-993fe4b3617b
 redirect_from:

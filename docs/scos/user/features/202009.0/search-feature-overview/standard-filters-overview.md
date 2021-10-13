@@ -1,5 +1,6 @@
 ---
 title: Standard filters
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/standard-filters
 originalArticleId: 6702bfde-231a-42d1-ac44-91a09bf156f0
 redirect_from:

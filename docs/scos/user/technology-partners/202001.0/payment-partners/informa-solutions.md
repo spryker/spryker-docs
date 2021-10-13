@@ -1,5 +1,6 @@
 ---
 title: informa solutions
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/informa-solutions
 originalArticleId: d69db959-7199-4076-80d5-3a56ade9d63e
 redirect_from:

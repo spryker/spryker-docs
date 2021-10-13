@@ -1,5 +1,6 @@
 ---
 title: Search feature overview
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/search
 originalArticleId: 098cce50-3aa7-44fb-9896-e93873e2c7c3
 redirect_from:

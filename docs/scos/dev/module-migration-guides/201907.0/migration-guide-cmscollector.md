@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - CMS Collector
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-cms-collector
 originalArticleId: 4fd5e6c1-dbc7-44a3-9a53-022aafd80e9e
 redirect_from:

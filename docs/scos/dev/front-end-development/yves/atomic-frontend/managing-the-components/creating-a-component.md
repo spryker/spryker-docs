@@ -1,5 +1,6 @@
 ---
 title: Creating a Component
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-create-component
 originalArticleId: ab0fbc97-d449-45e6-8bab-d70d14183aaf
 redirect_from:

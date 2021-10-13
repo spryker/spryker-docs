@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - MultiCartPage
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/mg-multi-cart-page
 originalArticleId: ff8633dd-9142-409c-9087-c224ce84fd7e
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: Product Merchandising
+template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-merchandising
 originalArticleId: 27624f08-4097-4730-8adc-b2f141dbb550
 redirect_from:

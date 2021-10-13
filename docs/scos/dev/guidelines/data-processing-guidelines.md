@@ -1,6 +1,7 @@
 ---
 title: Data Processing Guidelines
 description: The article describes the most important concepts and best practices that should be used during data processing.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/data-processing-guidelines
 originalArticleId: 5db3896c-3085-4056-870c-2c28cd0fe62b
 redirect_from:

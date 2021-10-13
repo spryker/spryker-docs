@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Set Up a Hello World Queue - Legacy Demoshop
 description: The tutorial describes how to create a simple queue and send or receive messages to or from the queue with some content.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/setup-hello-world-queue
 originalArticleId: d6331bbd-89a2-4e5c-9c24-4d0770d4d8ce
 redirect_from:

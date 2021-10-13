@@ -1,5 +1,6 @@
 ---
 title: Using Search Engine Friendly URLs
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/using-search-engine-friendly-urls
 originalArticleId: a0679496-e71d-49b0-9789-d23e67dd14b0
 redirect_from:

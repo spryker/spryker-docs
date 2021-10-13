@@ -1,6 +1,7 @@
 ---
 title: Application
 description: Spryker Application and its Application Plugins will be used to add global services. All Application Plugins are added with corresponding Dependency Providers.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/application
 originalArticleId: e202f0ed-1278-473c-bfd1-1258f1195920
 redirect_from:

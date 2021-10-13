@@ -1,6 +1,7 @@
 ---
 title: Performance guidelines
 description: This guideline explains how to optimize the server-side execution time.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/performance-guidelines
 originalArticleId: 5feb83b8-5196-44f9-8f6a-ffb208a2c162
 redirect_from:

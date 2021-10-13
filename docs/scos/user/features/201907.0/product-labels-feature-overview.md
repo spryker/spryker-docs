@@ -1,5 +1,6 @@
 ---
 title: Product Labels feature overview
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/product-label
 originalArticleId: c912a0b2-4a6a-4ae9-9004-5a678198231c
 redirect_from:

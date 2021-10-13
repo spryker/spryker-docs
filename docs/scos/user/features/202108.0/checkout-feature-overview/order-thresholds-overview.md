@@ -1,6 +1,7 @@
 ---
 title: Order Thresholds
 description: Order thresholds allow you to control the values of the orders your customers place. You can define a maximum or a minimum value that should be reached for an order to be placed.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/order-thresholds
 originalArticleId: b6d4ac1a-fd06-420a-a4bf-9db638e20447
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: common solutions
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/common-solutions
 originalArticleId: cdce38c3-6ba8-456b-a809-4f1c08526d43
 redirect_from:

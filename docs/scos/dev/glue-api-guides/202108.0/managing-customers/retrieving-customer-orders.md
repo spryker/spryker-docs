@@ -1,6 +1,7 @@
 ---
 title: Retrieving customer orders
 description: This endpoint allows retrieving a customer's orders.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-customer-orders
 originalArticleId: 4390b08b-349a-406e-8e41-983014e30ab5
 redirect_from:

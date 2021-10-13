@@ -1,6 +1,7 @@
 ---
 title: Product bundles + order management feature integration
 description: This guide provides step-by-step instructions on integrating Product Bundles + Cart feature into your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/product-bundles-order-management-feature-integration
 originalArticleId: da765d17-1def-4a03-8db7-53fede7a0bfc
 redirect_from:

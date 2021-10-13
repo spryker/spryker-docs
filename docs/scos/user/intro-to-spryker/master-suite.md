@@ -1,5 +1,6 @@
 ---
 title: Master Suite
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/master-suite
 originalArticleId: c0bbeeda-3569-485b-9954-39a34c695152
 redirect_from:

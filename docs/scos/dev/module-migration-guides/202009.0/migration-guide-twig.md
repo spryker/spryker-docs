@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Twig
 description: Use the guide to perform the Twig part of the Silex Migration Effort.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/migration-guide-twig
 originalArticleId: c998da0c-6efc-4259-b5ae-7bdd5c4b9968
 redirect_from:

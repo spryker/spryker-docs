@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - MultiCartPage
 description: Use the guide to migrate to a newer version of the MultiCartPage module.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/mg-multi-cart-page
 originalArticleId: 7969e637-9dfe-4895-b32b-968a38fe92e6
 redirect_from:

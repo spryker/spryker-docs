@@ -7,6 +7,9 @@ originalArticleId: fd69f851-19fb-475c-b3c0-56ce30448fb0
 redirect_from:
   - /v6/docs/catalog-api-feature-integration
   - /v6/docs/en/catalog-api-feature-integration
+related:
+  - title: Catalog Search
+    link: docs/scos/dev/glue-api-guides/page.version/catalog-search.html
 ---
 
 ## Install Feature API

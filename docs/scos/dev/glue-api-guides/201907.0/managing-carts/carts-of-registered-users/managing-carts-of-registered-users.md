@@ -6,6 +6,9 @@ originalArticleId: a1af1548-328f-4928-83e8-7ea7b09ae2a6
 redirect_from:
   - /v3/docs/managing-carts-of-registered-users-201907
   - /v3/docs/en/managing-carts-of-registered-users-201907
+related:
+  - title: Managing Guest Carts
+    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-carts.html
 ---
 
 The **Carts API** provides access to management of customers' shopping carts. The following document covers working with **carts of registered users**.

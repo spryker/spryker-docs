@@ -7,6 +7,15 @@ originalArticleId: 9823c542-7e47-4112-9e7f-58a650010616
 redirect_from:
   - /v4/docs/managing-company-units
   - /v4/docs/en/managing-company-units
+related:
+  - title: Managing Company Users
+    link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/managing-company-users.html
+  - title: Managing Company Unit Addresses
+    link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/managing-company-unit-addresses.html
+  - title: Managing Company Roles
+    link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/managing-company-roles.html
+  - title: Company Account
+    link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/company-account.html
 ---
 
 This article describes the procedures you can perform in order to create and manage the company units. 

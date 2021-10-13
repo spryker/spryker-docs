@@ -7,6 +7,15 @@ originalArticleId: a8b3f4ad-1427-4497-ad15-a78fc1b11b15
 redirect_from:
   - /v5/docs/creating-a-return
   - /v5/docs/en/creating-a-return
+related:
+  - title: Retrieving Returnable Items
+    link: docs/scos/dev/glue-api-guides/page.version/managing-returns/retrieving-returnable-items.html
+  - title: Retrieving Return Management Information
+    link: docs/scos/dev/glue-api-guides/page.version/managing-returns/retrieving-return-management-information.html
+  - title: Retrieving the Return Reasons
+    link: docs/scos/dev/glue-api-guides/page.version/managing-returns/retrieving-return-reasons.html
+  - title: Retrieving the Returned Items
+    link: docs/scos/dev/glue-api-guides/page.version/managing-returns/retrieving-the-returned-items.html
 ---
 
 You can create a return for one or multiple sales order items.

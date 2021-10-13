@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/product-barcode-feature-overview
   - /docs/product-barcode-feature-overview
   - /docs/en/product-barcode-feature-overview
+related:
+  - title: Viewing Product Barcodes
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/product-barcodes/viewing-product-barcodes.html
 ---
 
 The *Product Barcode*  feature allows creating barcodes for any kind of entity. By default, barcodes are only generated for [products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html).

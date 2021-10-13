@@ -7,6 +7,9 @@ originalArticleId: b347bf0d-53e4-4afb-a652-02983300d730
 redirect_from:
   - /v1/docs/creating-cms-redirects
   - /v1/docs/en/creating-cms-redirects
+related:
+  - title: CMS Redirects- References
+    link: docs/scos/user/back-office-user-guides/page.version/content/redirects/references/cms-redirects-references.html
 ---
 
 This topic provides a list of steps to create a redirect in the Back Office.

@@ -6,6 +6,9 @@ originalArticleId: 1527ed38-1a7f-47cb-bd0f-007a9b7367fb
 redirect_from:
   - /v4/docs/retrieving-discounts
   - /v4/docs/en/retrieving-discounts
+related:
+  - title: Promotions & Discounts feature overview
+    link: docs/scos/user/features/page.version/promotions-discounts-feature-overview.html
 ---
 
 The Discount API enables shop owners to add free value to their customers by discounting a percentage or a fixed sum of an order's subtotal or an item's price. Discounts can be applied to a purchase in **2** ways:

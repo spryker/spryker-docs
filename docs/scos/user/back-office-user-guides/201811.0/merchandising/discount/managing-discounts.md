@@ -7,6 +7,17 @@ originalArticleId: b101c98e-4502-4fe4-b22b-b9a9e0a7b21f
 redirect_from:
   - /v1/docs/managing-discounts
   - /v1/docs/en/managing-discounts
+related:
+  - title: Discount- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/references/discount-reference-information.html
+  - title: Discount Calculation- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/references/discount-calculation-reference-information.html
+  - title: Discount Conditions- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/references/discount-conditions-reference-information.html
+  - title: Token Description Tables
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/references/token-description-tables.html
+  - title: Voucher Codes- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/references/voucher-codes-reference-information.html
 ---
 
 This topic provides the list of actions that you can perform with the discounts and steps you need to follow.

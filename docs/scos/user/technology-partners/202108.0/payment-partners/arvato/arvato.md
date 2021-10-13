@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/arvato
   - /docs/arvato
   - /docs/en/arvato
+related:
+  - title: Arvato - Store Order 2.0
+    link: docs/scos/user/technology-partners/page.version/payment-partners/arvato/arvato-store-order.html
 ---
 
 ## Partner Information

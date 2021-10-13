@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/managing-shopping-list-items
   - /docs/managing-shopping-list-items
   - /docs/en/managing-shopping-list-items
+related:
+  - title: Managing shopping lists
+    link: docs/scos/dev/glue-api-guides/page.version/managing-shopping-lists/managing-shopping-lists.html
 ---
 
 This endpoint allows managing shopping list items

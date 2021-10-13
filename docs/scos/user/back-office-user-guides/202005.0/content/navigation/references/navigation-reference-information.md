@@ -7,6 +7,9 @@ originalArticleId: 6f2ccc34-b591-4a73-a081-110fd5530ad6
 redirect_from:
   - /v5/docs/navigation-reference-information
   - /v5/docs/en/navigation-reference-information
+related:
+  - title: Managing Navigation Elements
+    link: docs/scos/user/back-office-user-guides/page.version/content/navigation/managing-navigation-elements.html
 ---
 
 This topic contains the reference information for working with [navigation elements](/docs/scos/user/features/{{page.version}}/navigation-feature-overview.html#navigation-element) in **Content** > **Navigation**.

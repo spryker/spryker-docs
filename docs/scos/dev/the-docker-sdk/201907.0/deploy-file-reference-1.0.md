@@ -7,6 +7,9 @@ originalArticleId: 1917f113-c920-49ae-a110-8a9faca6bc74
 redirect_from:
   - /v3/docs/deploy-file-reference-version-1-201907
   - /v3/docs/en/deploy-file-reference-version-1-201907
+related:
+  - title: Docker SDK
+    link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
 ---
 
 {% info_block infoBox %}

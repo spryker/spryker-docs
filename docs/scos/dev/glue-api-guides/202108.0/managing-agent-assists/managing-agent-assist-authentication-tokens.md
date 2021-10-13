@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/managing-agent-assist-authentication-tokens
   - /docs/managing-agent-assist-authentication-tokens
   - /docs/en/managing-agent-assist-authentication-tokens
+related:
+  - title: Agent Assist feature overview
+    link: docs/scos/user/features/page.version/agent-assist-feature-overview.html
 ---
 
 

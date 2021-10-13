@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/retrieving-customer-orders
   - /docs/retrieving-customer-orders
   - /docs/en/retrieving-customer-orders
+related:
+  - title: Retrieving orders
+    link: docs/scos/dev/glue-api-guides/page.version/retrieving-orders.html
 ---
 
 This endpoint allows retrieving a customer’s orders.

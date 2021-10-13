@@ -6,6 +6,9 @@ originalArticleId: 649873f7-3af5-4f72-8d3d-3fece4992fae
 redirect_from:
   - /v3/docs/mg-multi-cart-page
   - /v3/docs/en/mg-multi-cart-page
+related:
+  - title: Multiple Carts per User Feature Overview
+    link: docs/scos/user/features/page.version/multiple-carts-feature-overview.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.*

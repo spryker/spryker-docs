@@ -7,6 +7,13 @@ originalArticleId: a2ad2327-a608-4203-ab1e-3ec9cfe3760a
 redirect_from:
   - /v1/docs/managing-attributes
   - /v1/docs/en/managing-attributes
+related:
+  - title: Product Attributes
+    link: docs/scos/user/features/page.version/product-feature-overview/product-attributes-overview.html
+  - title: Creating Product Attributes
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/attributes/creating-product-attributes.html
+  - title: Attributes- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/attributes/references/attributes-reference-information.html
 ---
 
 This topic describes how you can manage the product attributes.

@@ -7,6 +7,17 @@ originalArticleId: 6db71865-46a6-447f-94d2-a176fdcb2b51
 redirect_from:
   - /v3/docs/payolution-configuration
   - /v3/docs/en/payolution-configuration
+related:
+  - title: Payolution - Installment Payment
+    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/payolution-payment-methods/payolution-installment-payment.html
+  - title: Payolution - Performing Requests
+    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/technical-details-and-howtos/payolution-performing-requests.html
+  - title: Payolution - Workflow
+    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/technical-details-and-howtos/payolution-workflow.html
+  - title: Payolution
+    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/payolution.html
+  - title: Payolution - Invoice Payment
+    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/payolution-payment-methods/payolution-invoice-payment.html
 ---
 
 Add `spryker-eco/payolution` to your project by running `composer require spryker-eco/payolution`

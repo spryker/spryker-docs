@@ -7,6 +7,9 @@ originalArticleId: 808fb4f7-a2ff-4568-a91b-1b5c51cae9f1
 redirect_from:
   - /v6/docs/file-details-product-label-storecsv
   - /v6/docs/en/file-details-product-label-storecsv
+related:
+  - title: Product Labels feature overview
+    link: docs/scos/user/features/page.version/product-labels-feature-overview.html
 ---
 
 This article contains content of the **product_label_store.csv** file to configure [Product Label](/docs/scos/user/features/{{page.version}}/product-labels/product-labels.html) information on your Spryker Demo Shop.

@@ -8,6 +8,17 @@ redirect_from:
   - /2021080/docs/en/order-management-feature-integration
   - /docs/order-management-feature-integration
   - /docs/en/order-management-feature-integration
+related:
+  - title: Comments + Order Management feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/comments-order-management-feature-integration.html
+  - title: Glue API- Order Management feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-order-management-feature-integration.html
+  - title: Company Account + Order Management feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/company-account-order-management-feature-integration.html
+  - title: Product + Order Management feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/product-order-management-feature-integration.html
+  - title: Customer Account Management + Order Management feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/customer-account-management-order-management-feature-integration.html
 ---
 
 

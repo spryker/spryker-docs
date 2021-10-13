@@ -7,6 +7,13 @@ originalArticleId: fbe9785c-cf03-4279-93f4-c10356c695a7
 redirect_from:
   - /v2/docs/managing-products
   - /v2/docs/en/managing-products
+related:
+  - title: Products- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/products-reference-information.html
+  - title: Abstract Product- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/abstract-product-reference-information.html
+  - title: Concrete Product- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/concrete-product-reference-information.html
 ---
 
 This article describes the managing actions that you do for both abstract and concrete products as those actions are very similar.

@@ -7,6 +7,19 @@ originalArticleId: 6e2cea74-de52-4db6-94ca-c8d24665377d
 redirect_from:
   - /v4/docs/administration-201911
   - /v4/docs/en/administration-201911
+related:
+  - title: Creating a Carrier Company
+    link: docs/scos/user/back-office-user-guides/page.version/administration/delivery-methods/creating-carrier-companies.html
+  - title: Creating Warehouses
+    link: docs/scos/user/back-office-user-guides/page.version/administration/warehouses/creating-warehouses.html
+  - title: Creating and Managing Delivery Methods
+    link: docs/scos/user/back-office-user-guides/page.version/administration/delivery-methods/creating-and-managing-delivery-methods.html
+  - title: Managing Warehouses
+    link: docs/scos/user/back-office-user-guides/page.version/administration/warehouses/managing-warehouses.html
+  - title: Stores
+    link: docs/scos/user/back-office-user-guides/page.version/administration/stores.html
+  - title: Managing Payment Methods
+    link: docs/scos/user/back-office-user-guides/page.version/administration/payment-methods/managing-payment-methods.html
 ---
 
 The **Administration** section in the Back Office is mostly used by Spryker Admins.

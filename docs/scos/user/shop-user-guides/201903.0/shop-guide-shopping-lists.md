@@ -7,6 +7,13 @@ originalArticleId: 09c05ca5-92e0-4104-b529-5bc79ca99b66
 redirect_from:
   - /v2/docs/shopping-lists-shop-guide
   - /v2/docs/en/shopping-lists-shop-guide
+related:
+  - title: Multiple and Shared Shopping Lists overview
+    link: docs/scos/user/features/page.version/shopping-lists-feature-overview/shopping-lists-feature-overview.html
+  - title: Shopping List Notes overview
+    link: docs/scos/user/features/page.version/shopping-lists-feature-overview/shopping-list-notes-overview.html
+  - title: Shopping list printing overview
+    link: docs/scos/user/features/page.version/shopping-lists-feature-overview/shopping-list-printing-overview.html
 ---
 
 The **Shopping Lists** page allows customers to create and manage the shopping lists of frequently purchased products and add all the items to the cart as well as manage existing shopping lists. 

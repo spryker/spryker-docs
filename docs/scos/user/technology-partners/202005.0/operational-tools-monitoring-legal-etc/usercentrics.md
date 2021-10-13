@@ -7,6 +7,9 @@ originalArticleId: c52c5aa3-b766-45be-90bc-0e806f7feffd
 redirect_from:
   - /v5/docs/usercentrics
   - /v5/docs/en/usercentrics
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
 ---
 
 ## Partner Information

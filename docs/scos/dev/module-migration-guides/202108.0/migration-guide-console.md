@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/mg-console
   - /docs/mg-console
   - /docs/en/mg-console
+related:
+  - title: Migration Guide - Collector
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-collector.html
 ---
 
 {% info_block errorBox "Prerequisites" %}

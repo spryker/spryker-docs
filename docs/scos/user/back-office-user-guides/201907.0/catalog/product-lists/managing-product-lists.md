@@ -7,6 +7,13 @@ originalArticleId: 7a128f75-0dac-4098-98ba-47ee9355fdac
 redirect_from:
   - /v3/docs/managing-product-lists
   - /v3/docs/en/managing-product-lists
+related:
+  - title: Product Restrictions from Merchant to Buyer Overview
+    link: docs/scos/user/features/page.version/merchant-product-restrictions-feature-overview.html
+  - title: Creating Product Lists
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/product-lists/creating-product-lists.html
+  - title: Product Lists- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/product-lists/references/product-lists-reference-information.html
 ---
 
 his article describes the managing actions that you can perform with the product list. 

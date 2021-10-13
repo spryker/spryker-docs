@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/deploy-file-reference-10
   - /docs/deploy-file-reference-10
   - /docs/en/deploy-file-reference-10
+related:
+  - title: Docker SDK
+    link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
 ---
 
 This reference page describes version 1 of the Deploy file format. This is the newest version.

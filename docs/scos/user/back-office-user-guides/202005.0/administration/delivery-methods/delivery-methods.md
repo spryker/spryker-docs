@@ -7,6 +7,11 @@ originalArticleId: 92f1d52c-e3ee-4e27-9b59-64ca44fc0b25
 redirect_from:
   - /v5/docs/delivery-methods
   - /v5/docs/en/delivery-methods
+related:
+  - title: Shipment feature overview
+    link: docs/scos/user/features/page.version/shipment-feature-overview.html
+  - title: Delivery Methods- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/administration/delivery-methods/references/delivery-methods-reference-information.html
 ---
 
 The Shipment section of the Spryker Back Office is mostly used by E-Commerce managers.

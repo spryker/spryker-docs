@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/managing-returns
   - /docs/managing-returns
   - /docs/en/managing-returns
+related:
+  - title: Return Management Feature Overview
+    link: docs/scos/user/features/page.version/return-management-feature-overview/return-management-feature-overview.html
+  - title: Managing Orders
+    link: docs/scos/user/back-office-user-guides/page.version/sales/orders/managing-orders.html
 ---
 
 After a [return](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html) has been [created by a Back Office User](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html#creating-a-return) or by a [Shop User](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html#return-management-on-the-storefront), it appears on the *Orders > Returns* page. On this page, you can manage the returns as follows:

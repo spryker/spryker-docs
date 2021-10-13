@@ -19,6 +19,9 @@ redirect_from:
   - /v2/docs/en/t-content-search-attribute-cart-based-catalog-personalization
   - /v1/docs/t-content-search-attribute-cart-based-catalog-personalization
   - /v1/docs/en/t-content-search-attribute-cart-based-catalog-personalization
+related:
+  - title: Search
+    link: docs/scos/user/features/page.version/search-feature-overview/search-feature-overview.html
 ---
 
 In this tutorial, we will boost and personalize the catalog using the color attribute of a product when it is added to cart.

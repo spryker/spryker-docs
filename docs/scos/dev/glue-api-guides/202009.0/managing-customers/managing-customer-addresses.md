@@ -7,6 +7,15 @@ originalArticleId: 0747a7a2-d10d-4f17-a0c3-4e2598282631
 redirect_from:
   - /v6/docs/managing-customer-addresses-via-glue-api
   - /v6/docs/en/managing-customer-addresses-via-glue-api
+related:
+  - title: Managing Wishlists
+    link: docs/scos/dev/glue-api-guides/page.version/managing-wishlists/managing-wishlists.html
+  - title: Password Management
+    link: docs/scos/user/features/page.version/customer-account-management-feature-overview/password-management-overview.html
+  - title: Customer Accounts
+    link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html
+  - title: Retrieving orders
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
 ---
 
 This endpoints allows to retrieve and edit customer addresses. 

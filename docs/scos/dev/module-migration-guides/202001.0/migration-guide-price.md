@@ -7,6 +7,9 @@ originalArticleId: aeaaeae7-8ce9-4bc7-bb82-e4aac76bc443
 redirect_from:
   - /v4/docs/mg-price
   - /v4/docs/en/mg-price
+related:
+  - title: Migration Guide - Multi-Currency
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-multi-currency.html
 ---
 
 ## Upgrading from Version 4.* to Version 5.*

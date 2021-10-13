@@ -7,6 +7,9 @@ originalArticleId: 8a49fe9b-75c3-4b9e-8e17-9c7714bbb89c
 redirect_from:
   - /v6/docs/discontinuing-a-product
   - /v6/docs/en/discontinuing-a-product
+related:
+  - title: Adding Product Alternatives
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/adding-product-alternatives.html
 ---
 
 This article describes what steps you need to follow to discontinue the product.

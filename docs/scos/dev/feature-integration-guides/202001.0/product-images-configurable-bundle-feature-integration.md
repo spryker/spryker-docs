@@ -7,6 +7,17 @@ originalArticleId: 1f2e3998-674c-4c33-8da5-b88efdbf0740
 redirect_from:
   - /v4/docs/product-images-configurable-bundle-feature-integration
   - /v4/docs/en/product-images-configurable-bundle-feature-integration
+related:
+  - title: Configurable Bundle feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/configurable-bundle-feature-integration.html
+  - title: Product Lists feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/product-lists-feature-integration.html
+  - title: Prices feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/prices-feature-integration.html
+  - title: Product feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/product-feature-integration.html
+  - title: Merchant Product Restrictions feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/merchant-product-restrictions-feature-integration.html
 ---
 
 ## Install Feature Core

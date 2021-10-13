@@ -7,6 +7,9 @@ originalArticleId: 955e0eed-f3c3-4510-a5ae-d7ba5d14166a
 redirect_from:
   - /v5/docs/inventory-management-feature-integration
   - /v5/docs/en/inventory-management-feature-integration
+related:
+  - title: Inventory Management feature overview
+    link: docs/scos/user/features/page.version/inventory-management-feature-overview.html
 ---
 
 {% info_block errorBox %}

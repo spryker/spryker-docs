@@ -7,6 +7,13 @@ originalArticleId: 9c0773da-5e89-4515-8613-441d20397e67
 redirect_from:
   - /v4/docs/creating-a-carrier-company
   - /v4/docs/en/creating-a-carrier-company
+related:
+  - title: Creating and Managing Delivery Methods
+    link: docs/scos/user/back-office-user-guides/page.version/administration/delivery-methods/creating-and-managing-delivery-methods.html
+  - title: Delivery Methods- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/administration/delivery-methods/references/delivery-methods-reference-information.html
+  - title: Shipment feature overview
+    link: docs/scos/user/features/page.version/shipment-feature-overview.html
 ---
 
 The topic provides steps on how to create a carrier company in the Back Office.

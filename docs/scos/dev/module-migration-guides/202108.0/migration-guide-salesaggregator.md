@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/mg-sales-aggregator
   - /docs/mg-sales-aggregator
   - /docs/en/mg-sales-aggregator
+related:
+  - title: Migration Guide - Sales
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-sales.html
 ---
 
 ## Upgrading from Version 4.* to Version 5.*

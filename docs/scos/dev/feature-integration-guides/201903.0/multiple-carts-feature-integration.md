@@ -7,6 +7,11 @@ originalArticleId: 170a0885-1e65-429b-bf25-039d9141e01a
 redirect_from:
   - /v2/docs/multiple-carts-feature-integration
   - /v2/docs/en/multiple-carts-feature-integration
+related:
+  - title: Multiple Carts per User Feature Overview
+    link: docs/scos/user/features/page.version/multiple-carts-feature-overview.html
+  - title: Multiple Carts- Reorder feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/multiple-carts-reorder-feature-integration.html
 ---
 
 ## Install Feature Core

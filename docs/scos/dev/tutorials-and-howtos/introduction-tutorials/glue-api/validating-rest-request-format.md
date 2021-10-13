@@ -19,6 +19,11 @@ redirect_from:
   - /v2/docs/en/validating-rest-request-format
   - /v1/docs/validating-rest-request-format
   - /v1/docs/en/validating-rest-request-format
+related:
+  - title: Glue API Installation and Configuration
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-installation-and-configuration.html
+  - title: Glue Infrastructure
+    link: docs/scos/dev/glue-api-guides/page.version/glue-infrastructure.html
 ---
 
 Glue API allows you to validate requests sent to REST endpoints. It allows you to check if all required fields are present, and if the type and format of the fields is correct.

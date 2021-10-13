@@ -7,6 +7,9 @@ originalArticleId: a57b4006-b16e-49f7-b16e-1977bac731d7
 redirect_from:
   - /v2/docs/shipment-method-plugins
   - /v2/docs/en/shipment-method-plugins
+related:
+  - title: Migration Guide - Shipment
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-shipment.html
 ---
 
 The main concerns regarding shipping services are :

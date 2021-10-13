@@ -7,6 +7,17 @@ originalArticleId: a855d9d5-872a-4602-ac3b-4cb0c5ffd8fc
 redirect_from:
   - /v5/docs/authentication-and-authorization
   - /v5/docs/en/authentication-and-authorization
+related:
+  - title: Logging In as Company User
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/authenticating-as-a-company-user.html
+  - title: Company Account and General Organizational Structure
+    link: docs/scos/user/features/page.version/company-account-feature-overview/company-accounts-overview.html
+  - title: Login & Registration Forms
+    link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-login-overview.html
+  - title: Configuring Outdated Refresh Token Life Time
+    link: docs/scos/dev/glue-api-guides/page.version/configuring-outdated-refresh-token-life-time.html
+  - title: Glue API- Customer Account Management feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-customer-account-management-feature-integration.html
 ---
 
 Some resources (see the List of the private resources below) in Spryker REST API require user authentication. This process is essential to protect sensitive data and resources from unauthorized access. For this purpose, Spryker implements the OAuth 2.0 mechanism for user authentication. On the REST API level, it is represented by the **Login API**.

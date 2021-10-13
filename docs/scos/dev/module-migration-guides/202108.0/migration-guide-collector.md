@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/mg-collector
   - /docs/mg-collector
   - /docs/en/mg-collector
+related:
+  - title: Migration Guide - Touch
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-touch.html
 ---
 
 ## Upgrading from Version 5.* to Version 6.*

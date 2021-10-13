@@ -7,6 +7,19 @@ originalArticleId: 4d16a85c-5fc2-4b91-ac8a-0773b01af15b
 redirect_from:
   - /v3/docs/braintree
   - /v3/docs/en/braintree
+related:
+  - title: Braintree - Configuration for SCOS
+    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/braintree-installation-and-configuration.html
+  - title: Braintree - Workflow for SCOS
+    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/braintree-technical-details-and-howtos/braintree-workflow.html
+  - title: Braintree - Performing Requests for the Legacy Demoshop
+    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/legacy-demoshop-integration/braintree-performing-requests-for-the-legacy-demoshop.html
+  - title: Braintree - Workflow for Legacy Demoshop
+    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/legacy-demoshop-integration/braintree-workflow-for-legacy-demoshop.html
+  - title: Braintree - Performing Requests for SCOS
+    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/braintree-technical-details-and-howtos/braintree-performing-requests.html
+  - title: Braintree - Configuration for the Legacy Demoshop
+    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/legacy-demoshop-integration/braintree-configuration-for-the-legacy-demoshop.html
 ---
 
 [ABOUT BRAINTREE](https://www.braintreepayments.com/) 

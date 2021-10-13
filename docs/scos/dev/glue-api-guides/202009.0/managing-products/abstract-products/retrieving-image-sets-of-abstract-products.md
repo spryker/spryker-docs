@@ -7,6 +7,9 @@ originalArticleId: 30b6dda2-d7b6-40d2-8936-52c2351d3167
 redirect_from:
   - /v6/docs/retrieving-image-sets-of-abstract-products
   - /v6/docs/en/retrieving-image-sets-of-abstract-products
+related:
+  - title: Product image management
+    link: docs/scos/user/features/page.version/product-feature-overview/product-images-overview.html
 ---
 
 This endpoint allows to retrieve image sets of abstract products.

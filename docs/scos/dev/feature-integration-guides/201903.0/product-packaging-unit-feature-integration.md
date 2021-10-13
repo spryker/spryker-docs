@@ -7,6 +7,9 @@ originalArticleId: 5e1fb07d-7a30-461c-bc91-ec59e5fabf62
 redirect_from:
   - /v2/docs/product-packaging-unit-feature-integration-201903
   - /v2/docs/en/product-packaging-unit-feature-integration-201903
+related:
+  - title: Packaging Units feature overview
+    link: docs/scos/user/features/page.version/packaging-units-feature-overview.html
 ---
 
 ## Install Feature Core

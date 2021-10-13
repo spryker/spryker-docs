@@ -7,6 +7,27 @@ originalArticleId: 71265437-669c-4e03-9e22-259d02147f8c
 redirect_from:
   - /v3/docs/products
   - /v3/docs/en/products
+related:
+  - title: Product Attributes
+    link: docs/scos/user/features/page.version/product-feature-overview/product-attributes-overview.html
+  - title: Managing Products Availability
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/availability/managing-products-availability.html
+  - title: Abstract and Concrete Products
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-and-concrete-products.html
+  - title: Viewing Product Barcodes
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/product-barcodes/viewing-product-barcodes.html
+  - title: Product Labels
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-labels/product-labels.html
+  - title: Product Lists
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/product-lists/product-lists.html
+  - title: Product Options
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/product-options/product-options.html
+  - title: Product Relations
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-relations/product-relations.html
+  - title: Product Reviews
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/product-reviews/product-reviews.html
+  - title: Product Sets
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-sets/product-sets.html
 ---
 
 The **Products** section in the Back Office is mostly used by the team members involved in Product Management.

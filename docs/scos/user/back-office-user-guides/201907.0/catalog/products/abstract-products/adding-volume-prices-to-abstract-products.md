@@ -7,6 +7,15 @@ originalArticleId: ab30786f-db7c-4d4e-9065-b93c48762fab
 redirect_from:
   - /v3/docs/adding-volume-prices
   - /v3/docs/en/adding-volume-prices
+related:
+  - title: Abstract Product- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/abstract-product-reference-information.html
+  - title: Abstract and Concrete Products
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-and-concrete-products.html
+  - title: Concrete Product- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/concrete-product-reference-information.html
+  - title: Products- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/products-reference-information.html
 ---
 
 This article describes the procedure of adding the volume prices for the product.

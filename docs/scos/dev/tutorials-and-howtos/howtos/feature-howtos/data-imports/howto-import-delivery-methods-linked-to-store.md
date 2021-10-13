@@ -15,6 +15,13 @@ redirect_from:
   - /v5/docs/en/ht-import-delivery-methods-linked-to-store
   - /v4/docs/ht-import-delivery-methods-linked-to-store
   - /v4/docs/en/ht-import-delivery-methods-linked-to-store
+related:
+  - title: Shipment feature overview
+    link: docs/scos/user/features/page.version/shipment-feature-overview.html
+  - title: Creating a Carrier Company
+    link: docs/scos/user/back-office-user-guides/page.version/administration/delivery-methods/creating-carrier-companies.html
+  - title: Creating and Managing Delivery Methods
+    link: docs/scos/user/back-office-user-guides/page.version/administration/delivery-methods/creating-and-managing-delivery-methods.html
 ---
 
 In addition to creating and managing delivery methods in the Back Office <!-- link -->, you can also import them with the stores assigned from a .CSV file.

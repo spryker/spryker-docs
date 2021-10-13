@@ -13,6 +13,9 @@ redirect_from:
   - /v2/docs/en/setup-hello-world-queue
   - /v1/docs/setup-hello-world-queue
   - /v1/docs/en/setup-hello-world-queue
+related:
+  - title: Migration Guide - RabbitMQ
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-rabbitmq.html
 ---
 
 This Tutorial demonstrates a simple `Hello, World` queue use case. We will create a `hello` queue and send/receive our messages to/from this queue with `Hello, World` content. 

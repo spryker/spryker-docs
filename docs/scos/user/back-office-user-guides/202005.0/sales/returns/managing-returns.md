@@ -7,6 +7,15 @@ originalArticleId: b6d7196b-c370-4168-8d59-0a73228ba91c
 redirect_from:
   - /v5/docs/managing-returns
   - /v5/docs/en/managing-returns
+related:
+  - title: Return Management Feature Overview
+    link: docs/scos/user/features/page.version/return-management-feature-overview/return-management-feature-overview.html
+  - title: Returns- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/sales/returns/references/returns-reference-information.html
+  - title: Return Item States- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/sales/returns/references/return-item-states-reference-information.html
+  - title: Managing Orders
+    link: docs/scos/user/back-office-user-guides/page.version/sales/orders/managing-orders.html
 ---
 
 After a [return](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html) has been [created by a Back Office User](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html#creating-a-return) or by a [Shop User](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/shop-guide-returns-management/shop-guide-creating-a-return.html), it appears on the *Orders > Returns* page. On this page, you can manage the returns as follows:

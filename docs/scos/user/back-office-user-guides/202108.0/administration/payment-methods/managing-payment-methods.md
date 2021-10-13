@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/managing-payment-methods
   - /docs/managing-payment-methods
   - /docs/en/managing-payment-methods
+related:
+  - title: Payments feature overview
+    link: docs/scos/user/features/page.version/payments-feature-overview.html
 ---
 
 The topic describes how to manage payment methods.

@@ -6,6 +6,15 @@ originalArticleId: f7d4ca6e-9146-45ce-a2f5-8cb076802655
 redirect_from:
   - /v6/docs/shopping-lists-feature-integration
   - /v6/docs/en/shopping-lists-feature-integration
+related:
+  - title: Shopping list widget overview
+    link: docs/scos/user/features/page.version/shopping-lists-feature-overview/shopping-list-widget-overview.html
+  - title: Shopping Lists + Product Options feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/shopping-lists-product-options-feature-integration.html
+  - title: Glue API- Shopping Lists feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-shopping-lists-feature-integration.html
+  - title: Shopping List Notes overview
+    link: docs/scos/user/features/page.version/shopping-lists-feature-overview/shopping-list-notes-overview.html
 ---
 
 ## Install Feature Core

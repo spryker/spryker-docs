@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/mg-manual-order-entry-gui
   - /docs/mg-manual-order-entry-gui
   - /docs/en/mg-manual-order-entry-gui
+related:
+  - title: Migration Guide - Shipment
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-shipment.html
 ---
 
 ## Upgrading from Version 0.8.* to Version 0.9.0

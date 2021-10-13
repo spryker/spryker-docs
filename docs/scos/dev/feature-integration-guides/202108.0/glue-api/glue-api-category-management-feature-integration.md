@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/glue-api-category-management-feature-integration
   - /docs/glue-api-category-management-feature-integration
   - /docs/en/glue-api-category-management-feature-integration
+related:
+  - title: Browsing a Category Tree
+    link: docs/scos/dev/glue-api-guides/page.version/retrieving-categories/retrieving-category-trees.html
 ---
 
 

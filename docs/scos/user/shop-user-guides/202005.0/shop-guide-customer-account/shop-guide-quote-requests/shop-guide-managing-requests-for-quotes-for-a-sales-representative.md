@@ -7,6 +7,13 @@ originalArticleId: 8adce809-98b4-44e8-bdda-6201a3940942
 redirect_from:
   - /v5/docs/managing-rfqs-sales-rep-shop-guide
   - /v5/docs/en/managing-rfqs-sales-rep-shop-guide
+related:
+  - title: Request for Quote- Reference Information
+    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/references/request-for-quote-reference-information.html
+  - title: Shop Guide - Address Step
+    link: docs/scos/user/shop-user-guides/page.version/shop-guide-checkout/shop-guide-address-step.html
+  - title: Shop Guide - Shipment Step
+    link: docs/scos/user/shop-user-guides/page.version/shop-guide-checkout/shop-guide-shipment-step.html
 ---
 
 This topic describes the procedure for managing the RFQs from the perspective of the Sales Representative.

@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/category-filter-feature-integration
   - /docs/category-filter-feature-integration
   - /docs/en/category-filter-feature-integration
+related:
+  - title: Managing Category Filters
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/managing-category-filters.html
 ---
 
 ## Prerequisites

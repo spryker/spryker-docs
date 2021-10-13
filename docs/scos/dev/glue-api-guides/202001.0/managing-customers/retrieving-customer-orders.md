@@ -7,6 +7,11 @@ originalArticleId: cc59e6b3-ff4a-4e66-96d6-036d589e26dc
 redirect_from:
   - /v4/docs/retrieving-order-history
   - /v4/docs/en/retrieving-order-history
+related:
+  - title: Order Management
+    link: docs/scos/user/features/page.version/order-management-feature-overview/order-management-feature-overview.html
+  - title: Calculation 3.0
+    link: docs/scos/dev/feature-walkthroughs/page.version/cart-feature-walkthrough/calculation-3-0.html
 ---
 
 For every registered customer, there is an order history retrievable. The list of orders, as well as detailed order information including every step of the calculation and addresses used in the orders, is available for retrieval.

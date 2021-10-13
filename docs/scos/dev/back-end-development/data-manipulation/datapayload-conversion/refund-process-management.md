@@ -15,6 +15,11 @@ redirect_from:
   - /v5/docs/en/refund-process-management
   - /v4/docs/refund-process-management
   - /v4/docs/en/refund-process-management
+related:
+  - title: Refunds feature overview
+    link: docs/scos/user/features/page.version/refunds-feature-overview.html
+  - title: Migration Guide - Refund
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-refund.html
 ---
 
 {% info_block infoBox %}

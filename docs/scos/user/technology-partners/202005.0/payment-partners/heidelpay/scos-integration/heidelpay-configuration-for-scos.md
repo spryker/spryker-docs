@@ -7,6 +7,25 @@ originalArticleId: 27085e8b-e45d-4801-b5b3-dd32c53ec77c
 redirect_from:
   - /v5/docs/heidelpay-configuration-scos
   - /v5/docs/en/heidelpay-configuration-scos
+related:
+  - title: Heidelpay
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay.html
+  - title: Heidelpay - Integration into SCOS
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/scos-integration/heidelpay-integration-into-scos.html
+  - title: Heidelpay - Credit Card Secure
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-credit-card-secure.html
+  - title: Heidelpay - Direct Debit
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-direct-debit.html
+  - title: Heidelpay - Paypal Authorize
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-paypal-authorize.html
+  - title: Heidelpay - Installation
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-installation.html
+  - title: Heidelpay - Workflow for Errors
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/technical-details-and-howtos/heidelpay-workflow-for-errors.html
+  - title: Heidelpay - Split-payment Marketplace
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-split-payment-marketplace.html
+  - title: Heidelpay - Easy Credit
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-easy-credit.html
 ---
 
 Base settings are located in `config/Shared/config_default.php`

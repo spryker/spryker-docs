@@ -7,6 +7,11 @@ originalArticleId: dde4d14c-50d2-4bad-9de1-d767ffc82236
 redirect_from:
   - /v6/docs/catalog-search
   - /v6/docs/en/catalog-search
+related:
+  - title: Catalog feature overview
+    link: docs/scos/user/features/page.version/catalog-feature-overview.html
+  - title: Glue API- Catalog feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-catalog-feature-integration.html
 ---
 
 The implementation of the search API offers you the same search experience as in the Spryker demo shops. The search engine used is Elasticsearch and search results go beyond the simple listing of products in the results section. The list of search results is paginated according to your configuration and spelling suggestions are offered when needed. In addition, sorting and facets are supported to narrow down the search results.

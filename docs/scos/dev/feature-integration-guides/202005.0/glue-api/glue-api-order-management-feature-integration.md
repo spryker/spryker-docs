@@ -6,6 +6,11 @@ originalArticleId: 73691bbd-3fd7-4726-903f-231d2595c5c7
 redirect_from:
   - /v5/docs/glue-api-order-management-feature-integration
   - /v5/docs/en/glue-api-order-management-feature-integration
+related:
+  - title: Retrieving Customer's Order History
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
+  - title: Checking Out Purchases and Getting Checkout Data
+    link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
 ---
 
 Follow the steps below to install Order Management feature API.

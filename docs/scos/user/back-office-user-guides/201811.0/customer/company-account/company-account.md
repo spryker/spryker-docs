@@ -7,6 +7,9 @@ originalArticleId: f0cf1f0f-e3c7-4074-8fbd-4ca8807aa889
 redirect_from:
   - /v1/docs/company-account-guide
   - /v1/docs/en/company-account-guide
+related:
+  - title: Company User Roles and Permissions Feature Overview
+    link: docs/scos/user/features/page.version/company-account-feature-overview/company-user-roles-and-permissions-overview.html
 ---
 
 The Company Account section is designed to manage the company structure and is mostly used by Sales people in cooperation with Spryker Admins that provides the details of the signed contracts.

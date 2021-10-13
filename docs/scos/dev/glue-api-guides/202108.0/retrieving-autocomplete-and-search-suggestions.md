@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/retrieving-autocomplete-and-search-suggestions
   - /docs/retrieving-autocomplete-and-search-suggestions
   - /docs/en/retrieving-autocomplete-and-search-suggestions
+related:
+  - title: Browsing a Category Tree
+    link: docs/scos/dev/glue-api-guides/page.version/retrieving-categories/retrieving-category-trees.html
 ---
 
 In addition to [catalog search](/docs/scos/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html), Glue API allows you to retrieve autocomplete suggestions for products, categories, and CMS pages. The feature allows developers to predict search strings and provide customers with available options.

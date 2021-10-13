@@ -7,6 +7,9 @@ originalArticleId: b5736d42-fb7e-423a-a624-b859e262657c
 redirect_from:
   - /v1/docs/customers
   - /v1/docs/en/customers
+related:
+  - title: Customer Accounts
+    link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html
 ---
 
 The **Customers** section in the Back Office is mostly used by Spryker Admins.

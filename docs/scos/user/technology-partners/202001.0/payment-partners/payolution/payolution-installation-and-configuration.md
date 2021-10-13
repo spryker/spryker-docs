@@ -7,6 +7,17 @@ originalArticleId: 58b7fbd8-a4e2-4595-b212-4e34b890c219
 redirect_from:
   - /v4/docs/payolution-configuration
   - /v4/docs/en/payolution-configuration
+related:
+  - title: Payolution - Installment Payment
+    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/payolution-payment-methods/payolution-installment-payment.html
+  - title: Payolution - Performing Requests
+    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/technical-details-and-howtos/payolution-performing-requests.html
+  - title: Payolution - Workflow
+    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/technical-details-and-howtos/payolution-workflow.html
+  - title: Payolution
+    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/payolution.html
+  - title: Payolution - Invoice Payment
+    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/payolution-payment-methods/payolution-invoice-payment.html
 ---
 
 To integrate Payolution into your project, first you need to install and configure the CrefoPay module. This topic describes how to do that.

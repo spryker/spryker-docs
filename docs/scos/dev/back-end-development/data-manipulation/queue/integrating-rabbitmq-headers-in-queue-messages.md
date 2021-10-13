@@ -14,6 +14,9 @@ redirect_from:
   - /v5/docs/en/rabbitmq-headers-in-queue-messages
   - /v4/docs/rabbitmq-headers-in-queue-messages
   - /v4/docs/en/rabbitmq-headers-in-queue-messages
+related:
+  - title: Migration Guide - RabbitMQ
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-rabbitmq.html
 ---
 
 ## General Information

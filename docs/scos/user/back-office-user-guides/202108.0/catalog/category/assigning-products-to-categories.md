@@ -9,6 +9,13 @@ redirect_from:
   - /2021080/docs/en/assigning-products-to-categories
   - /docs/assigning-products-to-categories
   - /docs/en/assigning-products-to-categories
+related:
+  - title: Creating Categories
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/category/creating-categories.html
+  - title: Managing Categories
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/category/managing-categories.html
+  - title: Category Management feature overview
+    link: docs/scos/user/features/page.version/category-management-feature-overview.html
 ---
 
 This topic describes how to assign products to categories.

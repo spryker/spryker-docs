@@ -9,6 +9,21 @@ redirect_from:
   - /2021080/docs/en/crefopay-business-to-business-model
   - /docs/crefopay-business-to-business-model
   - /docs/en/crefopay-business-to-business-model
+related:
+  - title: CrefoPay - Integration
+    link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-integration-into-a-project.html
+  - title: CrefoPay
+    link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay.html
+  - title: CrefoPay - Installation and Configuration
+    link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-installation-and-configuration.html
+  - title: CrefoPay - Provided Payment Methods
+    link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-provided-payment-methods.html
+  - title: CrefoPay - Capture and Refund Processes
+    link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-capture-and-refund-processes.html
+  - title: CrefoPay - Callback
+    link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-callback.html
+  - title: CrefoPay - Notifications
+    link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-notifications.html
 ---
 
 CrefoPay module enables B2B strategy in payments.

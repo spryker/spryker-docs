@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/episerver-order-referenced-commands
   - /docs/episerver-order-referenced-commands
   - /docs/en/episerver-order-referenced-commands
+related:
+  - title: Episerver - Installation and Configuration
+    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html
 ---
 
 The Episerver module has four different commands:

@@ -7,6 +7,17 @@ originalArticleId: ca8b4521-9367-4191-b9f6-1e4c080892d0
 redirect_from:
   - /v3/docs/creating-a-cms-page
   - /v3/docs/en/creating-a-cms-page
+related:
+  - title: CMS Pages- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/content/pages/references/cms-pages-reference-information.html
+  - title: CMS Page
+    link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
+  - title: Editing CMS Pages
+    link: docs/scos/user/back-office-user-guides/page.version/content/pages/editing-cms-pages.html
+  - title: Managing CMS Page Versions
+    link: docs/scos/user/back-office-user-guides/page.version/content/pages/managing-cms-page-versions.html
+  - title: Assigning Blocks to Category or Product Pages
+    link: docs/scos/user/back-office-user-guides/page.version/content/blocks/assigning-blocks-to-category-or-product-pages.html
 ---
 
 This topic provides a list of steps to create a CMS page in the Back Office.

@@ -9,6 +9,11 @@ redirect_from:
   - /v6/docs/en/company-user-roles-and-permissions
   - /v6/docs/company-roles-reference-information
   - /v6/docs/en/company-roles-reference-information
+related:
+  - title: Managing Company Users
+    link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/managing-company-users.html
+  - title: Managing Company Roles
+    link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/managing-company-roles.html
 ---
 
 

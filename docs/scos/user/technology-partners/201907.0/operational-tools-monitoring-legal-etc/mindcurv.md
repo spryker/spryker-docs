@@ -6,6 +6,9 @@ originalArticleId: 6a0e64bf-c6e4-4f27-9fc2-cc9ab1ba4776
 redirect_from:
   - /v3/docs/mindcurv
   - /v3/docs/en/mindcurv
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
 ---
 
 ---

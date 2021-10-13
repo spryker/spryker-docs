@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/configuring-services
   - /docs/configuring-services
   - /docs/en/configuring-services
+related:
+  - title: Deploy File Reference - 1.0
+    link: docs/scos/dev/the-docker-sdk/page.version/deploy-file-reference-1.0.html
+  - title: Docker SDK
+    link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
 ---
 
 

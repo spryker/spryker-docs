@@ -7,6 +7,11 @@ originalArticleId: 68b09a94-af04-4992-8047-d9ada995be13
 redirect_from:
   - /v4/docs/managing-punchout-connections
   - /v4/docs/en/managing-punchout-connections
+related:
+  - title: Punch Out Feature Overview
+    link: docs/scos/user/features/page.version/technology-partner-integrations/punch-out/punch-out-feature-overview.html
+  - title: Punch Out
+    link: docs/scos/user/features/page.version/technology-partner-integrations/punch-out/punch-out.html
 ---
 
 This topic describes how to create and manage the Punch Out connections.

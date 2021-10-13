@@ -7,6 +7,9 @@ originalArticleId: d57cacab-2360-4b99-8027-70c817eb4831
 redirect_from:
   - /v4/docs/nosto
   - /v4/docs/en/nosto
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
 ---
 
 ## Partner Information

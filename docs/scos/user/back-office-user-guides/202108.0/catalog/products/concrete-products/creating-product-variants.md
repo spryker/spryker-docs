@@ -9,6 +9,13 @@ redirect_from:
   - /2021080/docs/en/creating-a-product-variant
   - /docs/creating-a-product-variant
   - /docs/en/creating-a-product-variant
+related:
+  - title: Managing Products
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
+  - title: Discontinuing Products
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/discontinuing-products.html
+  - title: Adding Product Alternatives
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/adding-product-alternatives.html
 ---
 
 This topic describes how to add a product variant for an abstract product.

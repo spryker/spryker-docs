@@ -7,6 +7,11 @@ originalArticleId: 62308ccc-8e49-4d0b-ab6a-578de492bb51
 redirect_from:
   - /v4/docs/product-set
   - /v4/docs/en/product-set
+related:
+  - title: Managing Product Sets
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-sets/managing-product-sets.html
+  - title: Creating Product Sets
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-sets/creating-product-sets.html
 ---
 
 The *Product Sets* feature allows you to create and sell collections of products. For example, you can create a stationary workspace set, a set of clothing or accessories, or furniture for a specific room.

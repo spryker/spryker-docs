@@ -7,6 +7,9 @@ originalArticleId: 7512de04-1dd9-4283-9ae1-3ede8780b71e
 redirect_from:
   - /v4/docs/product-labels
   - /v4/docs/en/product-labels
+related:
+  - title: Product Labels feature overview
+    link: docs/scos/user/features/page.version/product-labels-feature-overview.html
 ---
 
 The product labels are designed for the purpose of adding a variety of information to products.

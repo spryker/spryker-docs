@@ -7,6 +7,31 @@ originalArticleId: 8e964d43-ad9d-4202-b3c9-89a444cfe182
 redirect_from:
   - /v1/docs/heidelpay-ideal
   - /v1/docs/en/heidelpay-ideal
+related:
+  - title: Heidelpay
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay.html
+  - title: Heidelpay - Integration into the Legacy Demoshop
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-integration-into-the-legacy-demoshop.html
+  - title: Heidelpay - Paypal Authorize
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-paypal-authorize.html
+  - title: Heidelpay - Integration into SCOS
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/scos-integration/heidelpay-integration-into-scos.html
+  - title: Heidelpay - Direct Debit
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-direct-debit.html
+  - title: Heidelpay - Installation
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-installation.html
+  - title: Heidelpay - Easy Credit
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-easy-credit.html
+  - title: Heidelpay - Paypal Debit Workflow
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-paypal-debit-workflow.html
+  - title: Heidelpay - Invoice Secured B2C
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-invoice-secured-b2c.html
+  - title: Heidelpay - Workflow for Errors
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/technical-details-and-howtos/heidelpay-workflow-for-errors.html
+  - title: Heidelpay - Split-payment Marketplace
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-split-payment-marketplace.html
+  - title: Heidelpay - Configuration for SCOS
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/scos-integration/heidelpay-configuration-for-scos.html
 ---
 
 ### Setup

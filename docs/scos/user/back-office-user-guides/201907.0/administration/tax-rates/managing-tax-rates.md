@@ -7,6 +7,9 @@ originalArticleId: 8e2ab836-79e9-4738-93a7-c92b16b79de4
 redirect_from:
 - /v3/docs/managing-tax-rates-sets
 - /v3/docs/en/managing-tax-rates-sets
+related:
+  - title: Taxes Rates - Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/administration/tax-rates/references/tax-rates-reference-information.html
 ---
 
 This topic describes the procedures that you need to perform to create, edit, and delete tax rates

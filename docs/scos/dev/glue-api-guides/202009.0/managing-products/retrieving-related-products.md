@@ -7,6 +7,13 @@ originalArticleId: 8cbe58e5-4b40-43c7-aa1f-bf32ff14f2cd
 redirect_from:
   - /v6/docs/retrieving-related-products
   - /v6/docs/en/retrieving-related-products
+related:
+  - title: Retrieving Alternative Products
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/retrieving-alternative-products.html
+  - title: Product Relations Feature Overview
+    link: docs/scos/user/features/page.version/product-relations-feature-overview.html
+  - title: Catalog Search
+    link: docs/scos/dev/glue-api-guides/page.version/catalog-search.html
 ---
 
 Using the [Product Relations](/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html) feature, sellers can define a list of comparable or additional items for each product. You can display such items, also called related products, in search and in the cart together with the products selected by customers.

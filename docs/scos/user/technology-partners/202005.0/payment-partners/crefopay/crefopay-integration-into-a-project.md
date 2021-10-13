@@ -7,6 +7,21 @@ originalArticleId: 01dec6fb-12cd-49da-b7db-b37553151437
 redirect_from:
   - /v5/docs/crefopay-integration
   - /v5/docs/en/crefopay-integration
+related:
+  - title: CrefoPay
+    link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay.html
+  - title: CrefoPay - Installation and Configuration
+    link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-installation-and-configuration.html
+  - title: CrefoPay - Provided Payment Methods
+    link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-provided-payment-methods.html
+  - title: CrefoPay - Capture and Refund Processes
+    link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-capture-and-refund-processes.html
+  - title: CrefoPay - Business to Business Model
+    link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-business-to-business-model.html
+  - title: CrefoPay - Callback
+    link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-callback.html
+  - title: CrefoPay - Notifications
+    link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-notifications.html
 ---
 
 This article provides step-by-step instructions on integrating the CrefoPay system into your project.

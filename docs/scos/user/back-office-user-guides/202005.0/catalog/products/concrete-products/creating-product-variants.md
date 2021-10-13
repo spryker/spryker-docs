@@ -7,6 +7,15 @@ originalArticleId: d01e697e-6bd3-448e-911e-c0d2c0d10b99
 redirect_from:
   - /v5/docs/creating-a-product-variant
   - /v5/docs/en/creating-a-product-variant
+related:
+  - title: Managing Products
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
+  - title: Discontinuing Products
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/discontinuing-products.html
+  - title: Adding Product Alternatives
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/adding-product-alternatives.html
+  - title: Adding Volume Prices
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/adding-volume-prices.html
 ---
 
 This topic describes how to add a product variant for an abstract product.

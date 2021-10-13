@@ -6,6 +6,9 @@ originalArticleId: 8dbb6e2b-b0bc-4171-85f8-c27041d4c1a0
 redirect_from:
   - /v3/docs/getting-abstract-product-list-content-item-data-201907
   - /v3/docs/en/getting-abstract-product-list-content-item-data-201907
+related:
+  - title: REST API Reference
+    link: docs/scos/dev/glue-api-guides/page.version/rest-api-reference.html
 ---
 
 The **Abstract Product List API** implements resources allowing you to retrieve information on each abstract product included in the Abstract Product List content item available in the storage. The list consists of abstract products that come with concrete products (variants) and may have characteristic attributes, such as memory, brand or color, that help your customers distinguish your products and choose the one matching their needs.

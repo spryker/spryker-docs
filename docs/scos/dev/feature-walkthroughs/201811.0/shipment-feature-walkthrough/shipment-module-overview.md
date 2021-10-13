@@ -7,6 +7,11 @@ originalArticleId: 37041f6b-f7a2-4f72-9758-f897e4102d92
 redirect_from:
   - /v1/docs/shipment-module-overview
   - /v1/docs/en/shipment-module-overview
+related:
+  - title: "Reference information: Shipment method plugins"
+    link: docs/scos/dev/feature-walkthroughs/page.version/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html
+  - title: Migration Guide - Shipment
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-shipment.html
 ---
 
 The main concepts regarding shipping that are modeled in the database are :

@@ -7,6 +7,27 @@ originalArticleId: e6d211cd-e665-4c47-a652-0914a4d407e2
 redirect_from:
   - /v5/docs/shop-guide-customer-addresses
   - /v5/docs/en/shop-guide-customer-addresses
+related:
+  - title: Shop Guide - Customer Profile
+    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-customer-profile.html
+  - title: Shop Guide - Customer Account Overview
+    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-customer-account-overview.html
+  - title: Shop Guide - Order History
+    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-order-history.html
+  - title: Shop Guide - Newsletter
+    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-newsletter.html
+  - title: Shop Guide - Wishlists
+    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-wishlists.html
+  - title: Shop Guide - Managing a Shopping Cart
+    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-managing-a-shopping-cart.html
+  - title: Shop Guide - Managing Multiple Shopping Carts
+    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-managing-multiple-shopping-carts.html
+  - title: Shop Guide - Shopping Lists
+    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-shopping-lists.html
+  - title: Shop Guide - Managing Requests for Quotes for a Sales Representative
+    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-managing-requests-for-quotes-for-a-sales-representative.html
+  - title: Shop Guide - Managing Requests for Quotes for a Buyer
+    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-managing-requests-for-quotes-for-a-buyer.html
 ---
 
 On the Addresses page, you can set/update the Billing and Shipping Addresses.

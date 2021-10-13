@@ -7,6 +7,9 @@ originalArticleId: 293c5b66-5f0a-4e79-aca2-6fae29deb2b6
 redirect_from:
   - /v2/docs/datavirtuality
   - /v2/docs/en/datavirtuality
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
 ---
 
 ## Partner Information

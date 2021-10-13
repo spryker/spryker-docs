@@ -9,6 +9,15 @@ redirect_from:
   - /2021080/docs/en/managing-shared-company-user-carts
   - /docs/managing-shared-company-user-carts
   - /docs/en/managing-shared-company-user-carts
+related:
+  - title: Logging In as Company User
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/authenticating-as-a-company-user.html
+  - title: Shared Cart Feature Overview
+    link: docs/scos/user/features/page.version/shared-carts-feature-overview.html
+  - title: Shared Carts feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/shared-carts-feature-integration.html
+  - title: Managing carts of registered users
+    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
 ---
 
 This endpoint allows managing shared company user carts.

@@ -7,6 +7,9 @@ originalArticleId: cb74204b-1190-4bc2-8b44-63f6336e6821
 redirect_from:
   - /v2/docs/alternative-products-product-labels-feature-integration
   - /v2/docs/en/alternative-products-product-labels-feature-integration
+related:
+  - title: Product Label feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/product-label-feature-integration.html
 ---
 
 ## Install Feature Core

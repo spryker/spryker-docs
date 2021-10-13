@@ -9,6 +9,17 @@ redirect_from:
   - /2021080/docs/en/mg-multi-currency
   - /docs/mg-multi-currency
   - /docs/en/mg-multi-currency
+related:
+  - title: Migration Guide - Currency
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-currency.html
+  - title: Migration Guide - Sales
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-sales.html
+  - title: Migration Guide - Price
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-price.html
+  - title: Migration Guide - Discount
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-discount.html
+  - title: Migration Guide - Shipment
+    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-shipment.html
 ---
 
 ## Migrating System to Multi-Currency

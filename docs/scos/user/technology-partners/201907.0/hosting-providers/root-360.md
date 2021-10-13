@@ -7,6 +7,9 @@ originalArticleId: 4aac81a8-22e8-4879-a81c-6f6d1a5af317
 redirect_from:
   - /v3/docs/root360
   - /v3/docs/en/root360
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
 ---
 
 ## Partner Information

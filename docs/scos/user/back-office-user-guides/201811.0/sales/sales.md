@@ -7,6 +7,15 @@ originalArticleId: 3dc759cc-a9b4-4edc-889d-a13bbd5321d3
 redirect_from:
   - /v1/docs/sales-management
   - /v1/docs/en/sales-management
+related:
+  - title: Managing Orders
+    link: docs/scos/user/back-office-user-guides/page.version/sales/orders/managing-orders.html
+  - title: Orders- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/sales/orders/references/orders-reference-information.html
+  - title: Viewing Refunds
+    link: docs/scos/user/back-office-user-guides/page.version/sales/refunds/viewing-refunds.html
+  - title: Viewing the Order Matrix
+    link: docs/scos/user/back-office-user-guides/page.version/sales/order-matrix/viewing-the-order-matrix.html
 ---
 
 The **Sales** section in Back Office is mostly used by the Sales Department.

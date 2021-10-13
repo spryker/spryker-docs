@@ -7,6 +7,11 @@ originalArticleId: 76d8925e-ef79-415b-b310-a43b7f0aba9d
 redirect_from:
   - /v4/docs/creating-content-items
   - /v4/docs/en/creating-content-items
+related:
+  - title: Content Items Feature Overview
+    link: docs/scos/user/features/page.version/content-items-feature-overview.html
+  - title: Editing Content Items
+    link: docs/scos/user/back-office-user-guides/page.version/content/content-items/editing-content-items.html
 ---
 
 This topic describes the procedure of creating content items in the Back Office.

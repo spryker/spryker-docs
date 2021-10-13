@@ -7,6 +7,19 @@ originalArticleId: 961f91e7-410a-4e8c-a2e2-88bd007f4490
 redirect_from:
   - /v1/docs/managing-cms-pages
   - /v1/docs/en/managing-cms-pages
+related:
+  - title: Managing CMS Page Versions
+    link: docs/scos/user/back-office-user-guides/page.version/content/pages/ managing-cms-page-versions.html
+  - title: CMS Page
+    link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
+  - title: CMS Pages- Reference Information
+    link: docs/scos/user/back-office-user-guides/page.version/content/pages/references/cms-pages-reference-information.html
+  - title: Editing CMS Pages
+    link: docs/scos/user/back-office-user-guides/page.version/content/pages/editing-cms-pages.html
+  - title: Creating CMS Pages
+    link: docs/scos/user/back-office-user-guides/page.version/content/pages/creating-cms-pages.html
+  - title: Assigning Blocks to Category and Product Pages
+    link: docs/scos/user/back-office-user-guides/page.version/content/pages/assigning-blocks-to-category-and-product-pages.html
 ---
 
 This article describes the managing actions you can perform on CMS pages:

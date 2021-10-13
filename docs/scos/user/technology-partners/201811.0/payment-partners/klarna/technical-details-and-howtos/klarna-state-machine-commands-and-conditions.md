@@ -7,6 +7,15 @@ originalArticleId: 349e7ae5-58e9-4d4e-b935-ac15225353d1
 redirect_from:
   - /v1/docs/klarna-state-machine-commands-and-conditions
   - /v1/docs/en/klarna-state-machine-commands-and-conditions
+related:
+  - title: Klarna - Invoice Pay in 14 days
+    link: docs/scos/user/technology-partners/page.version/payment-partners/klarna/technical-details-and-howtos/klarna-invoice-pay-in-14-days.html
+  - title: Klarna
+    link: docs/scos/user/technology-partners/page.version/payment-partners/klarna/klarna.html
+  - title: Klarna - Part Payment Flexible
+    link: docs/scos/user/technology-partners/page.version/payment-partners/klarna/technical-details-and-howtos/klarna-part-payment-flexible.html
+  - title: Klarna - Payment Workflow
+    link: docs/scos/user/technology-partners/page.version/payment-partners/klarna/technical-details-and-howtos/klarna-payment-workflow.html
 ---
 
 ## Commands

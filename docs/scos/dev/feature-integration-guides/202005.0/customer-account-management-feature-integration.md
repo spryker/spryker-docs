@@ -7,6 +7,11 @@ originalArticleId: 99b4a077-2df8-4313-b666-748af042776c
 redirect_from:
   - /v5/docs/customer-account-management-feature-integration
   - /v5/docs/en/customer-account-management-feature-integration
+related:
+  - title: Customer Account Management + Order Management feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/customer-account-management-order-management-feature-integration.html
+  - title: Glue API- Customer Account Management feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-customer-account-management-feature-integration.html
 ---
 
 {% info_block errorBox "Included features" %}

@@ -18,7 +18,7 @@ The **Features** section unfolds into a list of capabilities. Each capability co
 
 In the feature documentation, you will find the following information:
 
-* A short summary of a feature with lists of guidelines designed for different [personas](/docs/scos/user/intro-to-spryker/{{site.version}}/about-spryker-documentation.html#personas){target="_blank"}.
+* A short summary of a feature with lists of guidelines designed for different [personas](/docs/scos/user/intro-to-spryker/about-spryker-documentation.html#personas){target="_blank"}.
 * A detailed overview of a feature, workflows, database structure, and more.
 
 The documentation in this section provides detailed descriptions of features, highlights their functional abilities, business values, and use-case examples. This information will be useful for business owners, product owners, and anyone looking to learn more about the Spryker features or add new functionality to a Spryker-based project.

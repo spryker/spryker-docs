@@ -1,5 +1,6 @@
 ---
 title: Importing Data with a Configuration File
+template: data-import-template
 originalLink: https://documentation.spryker.com/v5/docs/importing-data-with-configuration-file
 originalArticleId: 965561ad-2b3f-4eed-b190-7588601c3188
 redirect_from:

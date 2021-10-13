@@ -1,5 +1,6 @@
 ---
 title: Overriding a Component
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-override-component
 originalArticleId: 9a8dbfcd-e0ef-4ff2-b435-5a66f638a503
 redirect_from:

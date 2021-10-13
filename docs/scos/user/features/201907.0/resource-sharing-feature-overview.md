@@ -1,6 +1,7 @@
 ---
 title: Unique URL per Cart for Easy Sharing Feature Overview
 description: With the feature, company users can generate the URL to share the cart with different levels of access.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/unique-url-per-cart-for-easy-sharing-overview
 originalArticleId: be619db1-7c51-4ce4-b04e-d485d3963d8f
 redirect_from:

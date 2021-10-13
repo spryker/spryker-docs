@@ -1,6 +1,7 @@
 ---
 title: "Content item types: module relations"
 description: Learn about all the content item types and module relations used for them.
+template: feature-walkthrough-template
 originalLink: https://documentation.spryker.com/2021080/docs/content-item-types-module-relations
 originalArticleId: dc32fefa-b80c-4924-8ee3-1da9be159722
 redirect_from:

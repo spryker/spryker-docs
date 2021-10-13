@@ -1,5 +1,6 @@
 ---
 title: Spryker Core feature overview
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/spryker-core
 originalArticleId: 7f92101c-a2c2-4d59-b608-f5002080a174
 redirect_from:

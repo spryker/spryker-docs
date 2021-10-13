@@ -1,5 +1,6 @@
 ---
 title: Pricing
+template: data-import-template
 originalLink: https://documentation.spryker.com/v5/docs/pricing
 originalArticleId: be38950b-4c60-496a-9fb7-b3e70aa20992
 redirect_from:

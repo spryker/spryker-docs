@@ -1,6 +1,7 @@
 ---
 title: Creating and configuring Zed tables
 description: This article helps you to get started on working with tables.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-and-configuring-zed-tables
 originalArticleId: e8fc8c5a-88fa-41f8-8d2b-de028e7c4165
 redirect_from:

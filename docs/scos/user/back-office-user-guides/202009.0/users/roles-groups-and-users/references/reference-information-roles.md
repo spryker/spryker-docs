@@ -1,6 +1,7 @@
 ---
 title: Reference information- Roles
 description: The guide provides additional information on the values you enter when creating or editing roles in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/roles-reference-information
 originalArticleId: 6708a2dd-005c-4c7d-bdc0-7ff4ffb6699d
 redirect_from:

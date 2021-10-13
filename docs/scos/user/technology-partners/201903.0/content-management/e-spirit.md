@@ -1,6 +1,7 @@
 ---
 title: E-Spirit
 description: Help your Spryker project engage customers and increase revenue with personalized, content-rich digital experiences anytime, anywhere by integrating E-Spirit.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/e-spirit
 originalArticleId: 1ab02c44-cc53-4e3d-9776-ca5c4932223b
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Implementation of Direct Debit in the Shared Layer
 description: This article provides step-by-step instructions on how to identify the new payment type using some unique constants.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/dd-shared-implementation
 originalArticleId: 106f7955-4143-4ed5-890b-f58b6ee24b9f
 redirect_from:

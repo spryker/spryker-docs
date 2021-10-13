@@ -1,6 +1,7 @@
 ---
 title: Reference information- slots
 description: The article provides reference information you see when working with creating and managing slots in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/slots-reference-information
 originalArticleId: 00351c12-75ae-463a-9f19-e4805a6444e2
 redirect_from:

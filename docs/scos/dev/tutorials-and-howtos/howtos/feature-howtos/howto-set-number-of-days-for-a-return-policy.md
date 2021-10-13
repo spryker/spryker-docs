@@ -1,6 +1,7 @@
 ---
 title: HowTo - Set Number of Days for a Return Policy
 description: The article describes how to set a number of days for a Return Policy
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-set-number-of-days-for-a-return-policy
 originalArticleId: 6211b701-75ae-4ac9-8d98-94972cc1f91b
 redirect_from:

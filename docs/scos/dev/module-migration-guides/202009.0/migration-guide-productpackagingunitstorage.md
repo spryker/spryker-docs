@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductPackagingUnitStorage
 description: Use the guide to migrate to a newer version of the ProductPackagingUnitStorage module.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/mg-product-packaging-unit-storage
 originalArticleId: bfcb0462-0653-4b9c-8e3f-ee110627a9e6
 redirect_from:

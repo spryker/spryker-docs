@@ -1,6 +1,7 @@
 ---
 title: Configuration management
 description: There are several files that allow you to add the needed configuration for the exact use-case you want.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/configuration-management
 originalArticleId: d0060038-0140-4763-824e-aaa264ac39fe
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: HowTo - enable SFTP for Flysystem
 description: Learn how to enable SFTP for Flysystem.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-enable-sftp-for-flysystem
 originalArticleId: 239ae5f5-3363-4581-90a5-20d7f22376d7
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: CRUD Functionality - Zed API
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/zed-api-crud-functionality
 originalArticleId: 89991bc8-95e0-4786-81c3-63f5f3548bf6
 redirect_from:

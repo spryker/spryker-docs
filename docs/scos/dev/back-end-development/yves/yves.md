@@ -1,5 +1,6 @@
 ---
 title: Yves overview
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/yves-overview
 originalArticleId: 473f3418-acda-43ac-b9d2-70bfdb0bf048
 redirect_from:

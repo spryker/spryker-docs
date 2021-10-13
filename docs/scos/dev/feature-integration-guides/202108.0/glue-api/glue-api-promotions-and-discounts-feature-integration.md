@@ -1,6 +1,7 @@
 ---
 title: Glue API- Promotions & discounts feature integration
 description: Use the guide to install the Promotions and Discounts feature in your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-promotions-discounts-feature-integration
 originalArticleId: e39ff236-644f-41fe-9aee-796304a59df2
 redirect_from:

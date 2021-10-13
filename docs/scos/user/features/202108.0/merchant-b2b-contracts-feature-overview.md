@@ -1,6 +1,7 @@
 ---
 title: Merchant B2B Contracts feature overview
 description: In the context of Spryker B2B eCommerce platform, there can be three key figures- marketplace owner, merchant, and buyer.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/merchant-b2b-contracts-feature-overview
 originalArticleId: 5cc762f1-aee0-4f60-8030-14cc53e7cb6c
 redirect_from:

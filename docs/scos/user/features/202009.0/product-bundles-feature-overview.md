@@ -1,6 +1,7 @@
 ---
 title: Product Bundles feature overview
 description: With the Product Bundles feature you can freely tie individual items together and sell them as a package.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/product-bundles-feature-overview
 originalArticleId: df7ddd47-0b19-449f-a624-a4c1219fbcf1
 redirect_from:

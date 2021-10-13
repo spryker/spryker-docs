@@ -1,6 +1,7 @@
 ---
 title: Product Lists feature integration
 description: The Product Lists Feature allows defining access to particular items. The guide will walk you through the process of integrating this feature into your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/product-lists-feature-integration-201811
 originalArticleId: 6e63a7f4-063b-4874-be64-866ca5eedcb8
 redirect_from:

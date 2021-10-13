@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - SharedCartPage
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/mg-shared-cart-page
 originalArticleId: 79c6338f-01ab-4e25-98ed-b20348a9cf92
 redirect_from:

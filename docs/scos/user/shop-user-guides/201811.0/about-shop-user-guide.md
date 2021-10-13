@@ -1,6 +1,7 @@
 ---
 title: About Shop User Guide
 description: This section contains instructions on working with Demo Shop interface.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/about-shop-user-guide
 originalArticleId: 816bb588-5273-4a9e-b81e-b2fdcdc4d3b0
 redirect_from:

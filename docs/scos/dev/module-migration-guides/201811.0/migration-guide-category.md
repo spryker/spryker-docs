@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Category
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/mg-category
 originalArticleId: 3bc13647-cd92-4f4f-8664-757de5b932ca
 redirect_from:

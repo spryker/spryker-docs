@@ -1,5 +1,6 @@
 ---
 title: Understanding Project and Core Level Fixes
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/understanding-project-and-core-level-fixes
 originalArticleId: cbc63cb1-4eb5-4d96-903a-b0eade141458
 redirect_from:

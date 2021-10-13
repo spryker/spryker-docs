@@ -1,6 +1,7 @@
 ---
 title: Sales Data Export feature integration
 description: Integrate the Sales Data Export feature into your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/sales-data-export-feature-integration
 originalArticleId: 2a966512-34e2-4668-bb9d-ecc62989354d
 redirect_from:

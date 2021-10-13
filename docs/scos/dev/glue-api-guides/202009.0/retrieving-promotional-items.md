@@ -1,5 +1,6 @@
 ---
 title: Retrieving promotional items
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/retrieving-promotional-items
 originalArticleId: faa8dba7-bc21-4f22-876f-bb56160d94e7
 redirect_from:

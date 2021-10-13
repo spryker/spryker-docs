@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Calculation
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/mg-calculation
 originalArticleId: 2cc7011e-8d03-47fe-82a2-b6ac14fbc751
 redirect_from:

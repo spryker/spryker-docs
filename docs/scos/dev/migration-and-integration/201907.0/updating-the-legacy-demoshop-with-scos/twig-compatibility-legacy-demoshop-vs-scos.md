@@ -1,5 +1,6 @@
 ---
 title: Twig Compatibility- Legacy Demoshop vs SCOS
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/twig-compatibility-mode-demoshop-vs-suite
 originalArticleId: 12dd7328-95b2-4833-a0e3-67dcb720b122
 redirect_from:

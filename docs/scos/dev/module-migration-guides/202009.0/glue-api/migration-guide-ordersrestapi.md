@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - OrdersRestApi
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/mg-ordersrestapi
 originalArticleId: c455310b-0be8-4dc3-a5c2-a1c926fe3a3c
 redirect_from:

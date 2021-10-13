@@ -1,6 +1,7 @@
 ---
 title: Managing Products Availability
 description: This guide provides steps on how to check whether products are in stock in the warehouse of the current store in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/managing-products-availability
 originalArticleId: defcee9f-8019-4ee4-afc8-55ba1ee9bb73
 redirect_from:

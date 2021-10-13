@@ -1,5 +1,6 @@
 ---
 title: Back Office Translations overview
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/back-office-translations-overview
 redirect_from:
   - /2021080/docs/back-office-translations-overview

@@ -1,6 +1,7 @@
 ---
 title: iAdvize
 description: Connect customers in need of advice with experts who are available 24/7 via real-time messaging by integrating iAdvize into the Spryker Commerce OS.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/iadvize
 originalArticleId: 9284434a-b0d9-4bde-95b2-3080da8f0f66
 redirect_from:

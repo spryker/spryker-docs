@@ -1,6 +1,7 @@
 ---
 title: Creating product labels
 description: Back Office guide for creating product labels.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/creating-product-labels
 originalArticleId: ddbd7e1f-fe5e-4319-8af3-37182c5e8e40
 redirect_from:

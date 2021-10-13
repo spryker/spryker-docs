@@ -1,6 +1,7 @@
 ---
 title: Promotions & Discounts feature overview
 description: The feature allows creating different types of discounts and applying multiple in-built discount settings suitable for any business requirements.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/discount-feature-overview-201903
 originalArticleId: 1929341f-ca10-409b-949d-e30f1fdde36b
 redirect_from:

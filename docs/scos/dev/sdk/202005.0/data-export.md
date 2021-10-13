@@ -1,6 +1,7 @@
 ---
 title: Data Export
 description: The data export feature allows you to export orders from a Spryker shop to an external system.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/data-export
 originalArticleId: 957e00dc-8861-4f29-847c-de1e89b31656
 redirect_from:

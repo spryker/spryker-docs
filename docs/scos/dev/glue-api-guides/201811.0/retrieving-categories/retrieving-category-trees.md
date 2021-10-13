@@ -1,5 +1,6 @@
 ---
 title: Browsing a Category Tree
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/retrieving-category-trees
 originalArticleId: 85516777-92cc-4d5d-bad9-e340bc47bd77
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Choosing a mount mode
 description: Learn about supported mount modes and how to choose one.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/choosing-a-mount-mode
 originalArticleId: b5accb12-910a-4958-b39f-3c4d21d96b95
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: Persistent Cart Sharing feature module relations
+template: feature-walkthrough-template
 ---
 
 The following schema illustrates module relations in the Unique URL per Cart for Easy Sharing feature:

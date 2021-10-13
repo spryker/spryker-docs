@@ -1,6 +1,7 @@
 ---
 title: PayOne - Direct Debit Payment
 description: Integrate Direct Debit payment through Payone into the Spryker-based shop.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/payone-direct-debit
 originalArticleId: 86ae2298-71e6-48d5-8a27-810e27c92cf5
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: About the Back Offfice User Guide
 description: The Spryker Back Office user guide provides shop owners with procedures on how to manage the online store in the Back Office using Spryker Commerce OS.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/about-the-back-office-user-guide
 originalArticleId: 767efba8-865f-4f48-be3c-bf87a16bbe84
 redirect_from:

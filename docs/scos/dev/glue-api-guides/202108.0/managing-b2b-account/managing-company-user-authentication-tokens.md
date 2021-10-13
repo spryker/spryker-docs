@@ -1,6 +1,7 @@
 ---
 title: Managing company user authentication tokens
 description: Learn how to manage company user authentication tokens via Glue API.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-company-user-authentication-tokens
 originalArticleId: 93de3785-709e-48d2-a1f5-d5edf0e4bc93
 redirect_from:

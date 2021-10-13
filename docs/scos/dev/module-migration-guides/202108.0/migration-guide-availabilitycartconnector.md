@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - AvailabilityCartConnector
 description: Use the guide to migrate to a new version of the AvailabilityCartConnector module.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-availability-cart-connector
 originalArticleId: c7378d46-9fbb-446a-8e24-d0c0e13ce381
 redirect_from:

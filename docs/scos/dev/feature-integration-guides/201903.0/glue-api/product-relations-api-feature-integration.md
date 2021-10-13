@@ -1,6 +1,7 @@
 ---
 title: Product Relations API feature integration
 description: This guide will navigate you through the process of installing and configuring the Product Relations feature in Spryker OS.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/product-relations-api-feature-integration-201903
 originalArticleId: 92a22dbc-988d-45df-ba3c-005ba5f4cac4
 redirect_from:

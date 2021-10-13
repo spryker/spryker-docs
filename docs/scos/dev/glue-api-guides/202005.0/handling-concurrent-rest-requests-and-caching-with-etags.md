@@ -1,6 +1,7 @@
 ---
 title: Handling Concurrent REST Requests and Caching with Etags
 description: This article will provide you with information on how to handle concurrent requests and implement client-side caching with the help of entity tags.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/handling-concurrent-rest-requests-and-caching-with-etags-201907
 originalArticleId: 337cc5c9-d4db-44e5-8cf8-ffcba6803bec
 redirect_from:

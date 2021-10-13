@@ -1,5 +1,6 @@
 ---
 title: Catalog Setup
+template: data-import-template
 originalLink: https://documentation.spryker.com/v6/docs/catalog-setup
 originalArticleId: a1aab860-e1ed-42b4-9228-4db913be101f
 redirect_from:

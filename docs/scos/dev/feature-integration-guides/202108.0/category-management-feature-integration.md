@@ -1,5 +1,6 @@
 ---
 title: Category Management feature integration
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/category-management-feature-integration
 originalArticleId: fc4add5d-25e3-4c5c-b171-98726a915e66
 redirect_from:

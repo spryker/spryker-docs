@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ShipmentCheckoutConnector
 description: Use the guide to learn how to update the ShipmentCheckoutConnector module to a newer version.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-shipment-checkout-connector
 originalArticleId: dfb849a9-6f08-4091-ab6d-87f097eb7811
 redirect_from:

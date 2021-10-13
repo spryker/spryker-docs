@@ -1,5 +1,6 @@
 ---
 title: Retrieving Discounts
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/retrieving-discounts
 originalArticleId: 1afa9ae5-e357-4616-bd9b-8667501ea502
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: CatalogSearchRestApi Migration Guide
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/catalogsearchrestapi-migration-guide
 originalArticleId: ba726860-285f-40b4-bfc4-4f7ca8c41ea3
 redirect_from:

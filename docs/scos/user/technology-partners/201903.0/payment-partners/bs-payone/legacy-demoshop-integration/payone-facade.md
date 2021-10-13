@@ -1,6 +1,7 @@
 ---
 title: PayOne - Facade
 description: This article includes facade methods provided by Payone.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/payone-facade
 originalArticleId: 0c7ca518-32ea-4d15-89b0-37a2d0184643
 redirect_from:

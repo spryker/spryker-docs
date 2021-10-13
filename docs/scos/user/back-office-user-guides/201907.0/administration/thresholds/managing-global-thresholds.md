@@ -1,6 +1,7 @@
 ---
 title: Managing Global Threshold
 description: Use the procedures to set up hard and soft thresholds when working with global thresholds in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/managing-global-threshold
 originalArticleId: 0fcce965-3860-4b4f-b41f-aba27b961c16
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Refund
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/mg-refund
 originalArticleId: 90b92a6b-ea2d-4772-8031-0bf5dc7b44ad
 redirect_from:

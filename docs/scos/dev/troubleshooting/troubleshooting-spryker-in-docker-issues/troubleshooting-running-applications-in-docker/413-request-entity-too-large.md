@@ -1,6 +1,7 @@
 ---
 title: 413 Request Entity Too Large
 description: Learn how to fix the issue "413 Request Entity Too Large"
+template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/413-request-entity-too-large
 originalArticleId: 5cfeaaf5-441d-4e75-92c8-215c2db21af5
 redirect_from:

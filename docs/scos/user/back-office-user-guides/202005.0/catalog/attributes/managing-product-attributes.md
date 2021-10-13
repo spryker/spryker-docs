@@ -1,6 +1,7 @@
 ---
 title: Managing Product Attributes
 description: Use the Managing Attributes procedures to view and updated product attributes in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/managing-attributes
 originalArticleId: 8541388b-389d-4d93-9b31-68ed355534bb
 redirect_from:

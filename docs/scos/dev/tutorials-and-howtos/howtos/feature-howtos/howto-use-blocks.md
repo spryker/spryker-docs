@@ -1,5 +1,6 @@
 ---
 title: HowTo - Use Blocks
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-use-cms-blocks
 originalArticleId: 655564ee-69d9-455c-a495-88b6c4c4bfe2
 redirect_from:

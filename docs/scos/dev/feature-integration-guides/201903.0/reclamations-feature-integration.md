@@ -1,6 +1,7 @@
 ---
 title: Reclamations feature integration
 description: The guide walks you through the process of installing the Reclamations feature in your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/reclamations-feature-integration
 originalArticleId: f7043557-10e4-4fea-905d-6940f4899948
 redirect_from:

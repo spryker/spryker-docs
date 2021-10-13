@@ -1,6 +1,7 @@
 ---
 title: Product relations feature integration
 description: Integrate the Product Relations feature into your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/product-relations-feature-integration
 originalArticleId: b226ab2a-b373-4547-b840-a45edfad3c0e
 redirect_from:

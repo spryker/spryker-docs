@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Translator
 description: Use the guide to perform the Translator part of the Silex Migration Effort.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/migration-guide-translator
 originalArticleId: 51a0ed59-29bd-48a0-941b-6f8c25f29c69
 redirect_from:

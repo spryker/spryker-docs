@@ -1,6 +1,7 @@
 ---
 title: Managing Discounts
 description: Use these procedures to view and update discounts, activate/deactivate discounts, and add voucher codes in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/managing-discounts
 originalArticleId: e60eed77-8046-481b-b268-95606432119b
 redirect_from:

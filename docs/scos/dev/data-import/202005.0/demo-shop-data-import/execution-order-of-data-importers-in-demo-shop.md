@@ -1,5 +1,6 @@
 ---
 title: Execution Order of Data Importers in Demo Shop
+template: data-import-template
 originalLink: https://documentation.spryker.com/v5/docs/execution-order-of-data-importers-in-demo-shop
 originalArticleId: aaef1ebb-d420-419a-84ad-92ed8e4dfb28
 redirect_from:

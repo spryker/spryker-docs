@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - ContentBannerGui
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/mg-contentbannergui-201907
 originalArticleId: fc6ebc8c-820e-4f7c-9206-f2111a88576c
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: How Spryker Support works
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/how-spryker-support-works-1
 originalArticleId: 2923122e-fde2-4893-98df-1375f8cc7742
 redirect_from:

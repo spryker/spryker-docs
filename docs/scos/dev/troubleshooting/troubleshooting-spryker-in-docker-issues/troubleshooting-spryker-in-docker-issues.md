@@ -1,6 +1,7 @@
 ---
 title: Troubleshooting Spryker in Docker issues
 description: Troubleshoot issues you might encounter when you have your Spryker-based project in Docker.
+template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/troubleshooting-spryker-in-docker-issues
 originalArticleId: 86164c2a-2a65-4c15-a36e-3f37d4e8c001
 redirect_from:

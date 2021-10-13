@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - PriceCartConnector
 description: Use the guide to learn how to update the PriceCartConnector module.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/mg-price-cart-connector
 originalArticleId: 8394a6a7-a1cf-4616-b310-93cf4874f641
 redirect_from:

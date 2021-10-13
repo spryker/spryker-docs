@@ -1,6 +1,7 @@
 ---
 title: Product Images + Configurable Bundle feature integration
 description: This guide provides step-by-step instruction on integrating the Product Images + Configurable Bundle feature into the Spryker Commerce OS.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/product-images-configurable-bundle-feature-integration
 originalArticleId: 1f2e3998-674c-4c33-8da5-b88efdbf0740
 redirect_from:

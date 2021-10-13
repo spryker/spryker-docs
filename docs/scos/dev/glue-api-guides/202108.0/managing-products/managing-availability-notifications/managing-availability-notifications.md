@@ -1,6 +1,7 @@
 ---
 title: Managing availability notifications
 description: Manage product availability notifications for registered users
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-availability-notifications
 originalArticleId: 664b1f47-879b-43c4-8538-5f74397d6816
 redirect_from:

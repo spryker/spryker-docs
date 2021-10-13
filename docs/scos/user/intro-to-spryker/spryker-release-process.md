@@ -1,5 +1,6 @@
 ---
 title: Spryker release process
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/spryker-release-process
 originalArticleId: 3195aac4-0b8e-43a7-b540-0222f567c9fc
 redirect_from:

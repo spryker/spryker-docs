@@ -1,6 +1,7 @@
 ---
 title: Adyen
 description: Integrate Adyen into the Spryker Commerce OS to accept e-commerce, mobile, and point-of-sale payments.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/adyen
 originalArticleId: 37e5acc4-5c29-4385-9025-7cd00ab65910
 redirect_from:

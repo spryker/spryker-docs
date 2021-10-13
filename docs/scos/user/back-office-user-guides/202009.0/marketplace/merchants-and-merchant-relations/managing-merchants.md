@@ -1,6 +1,7 @@
 ---
 title: Managing merchants
 description: Use the procedures to create, update and/or delete merchants in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/managing-merchants
 originalArticleId: 2e9ab989-9386-4fed-b614-2545522ad503
 redirect_from:

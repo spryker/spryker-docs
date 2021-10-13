@@ -1,6 +1,7 @@
 ---
 title: Submitting checkout data
 description: Submit checkout data and retrieve information needed for completing checkout.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/submitting-checkout-data
 originalArticleId: 6191b28b-1c88-4fcf-8944-26c43a631495
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Product Tax Sets API feature integration
 description: This guide will navigate you through the process of installing and configuring the Product Tax Sets API feature in Spryker OS.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/product-tax-sets-api-feature-integration
 originalArticleId: ad00daf1-7c6f-4a1b-b358-9fc415a3a093
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Shop Guide - Managing Company Roles
 description: The guide provides procedures to edit, view, and delete company roles in the Spryker storefront.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/company-roles-shop-guide
 originalArticleId: 6ed0a682-0f29-447e-a813-9b8fb824844d
 redirect_from:

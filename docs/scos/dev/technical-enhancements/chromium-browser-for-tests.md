@@ -1,6 +1,7 @@
 ---
 title: Chromium browser for tests
 description: Integrate Chromium with ChromeDriver into your project for acceptance and functional test.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/chromium-browser-for-tests
 originalArticleId: 689f82e3-3fdb-4c39-91b7-10c81daa018f
 redirect_from:

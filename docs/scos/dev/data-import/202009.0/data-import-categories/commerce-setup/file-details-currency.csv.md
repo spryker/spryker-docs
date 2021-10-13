@@ -1,5 +1,6 @@
 ---
 title: File details- currency.csv
+template: data-import-template
 originalLink: https://documentation.spryker.com/v6/docs/file-details-currencycsv
 originalArticleId: 202d8f4c-d408-42b0-b572-9e9fed08b97c
 redirect_from:

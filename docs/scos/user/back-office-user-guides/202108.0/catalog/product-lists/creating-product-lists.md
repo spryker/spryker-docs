@@ -1,6 +1,7 @@
 ---
 title: Creating product lists
 description: Use the procedure to create a product list by assigning products and selecting the category in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-a-product-list
 originalArticleId: e7682701-b572-4934-9422-2a95d31610a1
 redirect_from:

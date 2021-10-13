@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Monitoring
 description: Use the guide to migrate to a newer version of the Monitoring module.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/mg-monitoring
 originalArticleId: 60956a9b-2238-4790-b7d0-a5d9cc1ec43d
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: About Data Import Categories
+template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/about-data-import-categories
 originalArticleId: 1ba07d74-e2a7-461c-8eb7-cb1d8b32e9c0
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - DiscountPromotionWidget
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/mg-discount-promotion-widget
 originalArticleId: 81fbdcaa-7b4c-4f38-9a05-81e359de1e26
 redirect_from:

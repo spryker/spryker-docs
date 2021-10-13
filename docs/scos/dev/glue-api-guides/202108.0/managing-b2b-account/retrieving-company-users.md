@@ -1,6 +1,7 @@
 ---
 title: Retrieving company users
 description: Learn how to retrieve company users via Glue API.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-company-users
 originalArticleId: 4c9db88b-8496-4989-aff3-d0a676bf1a94
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Validator
 description: Use the guide to perform the Validator part of the Silex Migration Effort.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/migration-guide-validator
 originalArticleId: a420bdae-d2c0-49c4-9b4b-3d65ad6da9a7
 redirect_from:

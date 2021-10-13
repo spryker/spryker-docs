@@ -1,6 +1,7 @@
 ---
 title: Legacy Demoshop Installation Guide
 description: This article provides step-by-step instructions on the Legacy Demoshop installation.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/installation-guide-legacy-demoshop
 originalArticleId: eaf066b6-1b73-4c93-bec1-34825f063618
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Braintree - Configuration for the Legacy Demoshop
 description: This article contains information on the configuration of the Braintree module for Spryker Legacy Demoshop.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/braintree-configuration-legacy-demoshop
 originalArticleId: 156313b7-1121-4d09-8256-1c638facc48a
 redirect_from:

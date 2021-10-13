@@ -1,6 +1,7 @@
 ---
 title: Approval Process feature overview
 description: This topic provides a detailed overview of the Approval Process feature.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/approval-process-feature-overview
 originalArticleId: 33f712cc-7aee-4ef0-b126-c4bc9b293190
 redirect_from:

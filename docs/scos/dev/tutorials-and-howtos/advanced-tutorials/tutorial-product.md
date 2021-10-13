@@ -1,5 +1,6 @@
 ---
 title: Tutorial- Product
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-product-challenge
 originalArticleId: a6596169-fd8f-4b34-b365-e258cd29026e
 redirect_from:

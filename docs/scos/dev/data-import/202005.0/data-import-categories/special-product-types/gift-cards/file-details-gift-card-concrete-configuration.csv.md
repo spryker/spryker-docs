@@ -1,5 +1,6 @@
 ---
 title: File details- gift_card_concrete_configuration.csv
+template: data-import-template
 originalLink: https://documentation.spryker.com/v5/docs/file-details-gift-card-concrete-configurationcsv
 originalArticleId: 03acbbf6-ee0f-4c2a-b665-6fd733f059bd
 redirect_from:

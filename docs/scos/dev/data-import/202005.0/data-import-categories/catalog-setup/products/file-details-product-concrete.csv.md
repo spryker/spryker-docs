@@ -1,5 +1,6 @@
 ---
 title: File details- product_concrete.csv
+template: data-import-template
 originalLink: https://documentation.spryker.com/v5/docs/file-details-product-concretecsv
 originalArticleId: bf535214-3304-423a-ae82-27044cdd4ec6
 redirect_from:

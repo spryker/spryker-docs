@@ -1,5 +1,6 @@
 ---
 title: VAT rates reduction in Germany between July 2020 and January 2021
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/vat-rates-reduction-in-germany-between-july-2020-and-january-2021
 originalArticleId: 5d2bb005-8d7e-4e1e-b493-0611b991be14
 redirect_from:

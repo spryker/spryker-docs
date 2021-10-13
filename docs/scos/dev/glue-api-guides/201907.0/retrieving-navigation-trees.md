@@ -1,5 +1,6 @@
 ---
 title: Retrieving Navigation Trees
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/retrieving-navigation-trees-201907
 originalArticleId: 3512d402-aabe-4816-8aa3-38264029a67c
 redirect_from:

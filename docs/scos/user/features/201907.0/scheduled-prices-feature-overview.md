@@ -1,5 +1,6 @@
 ---
 title: Scheduled Prices Feature Overview
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/scheduled-prices-feature-overview
 originalArticleId: bb3f3936-2772-4aa6-bd1e-f37133b967cf
 redirect_from:

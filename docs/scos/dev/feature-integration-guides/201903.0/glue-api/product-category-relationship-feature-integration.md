@@ -1,5 +1,6 @@
 ---
 title: Product Category Relationship feature integration
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/product-category-relationship-feature-integration
 originalArticleId: 61ba2a42-4e84-47c9-8868-b67ecd625e5b
 redirect_from:

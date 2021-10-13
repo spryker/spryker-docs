@@ -1,6 +1,7 @@
 ---
 title: Prices feature integration
 description: The guide walks you through the process of installing the Volume Prices feature in your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/prices-feature-integration
 originalArticleId: 1a34fa02-8eb0-4b87-b35e-d137241389bc
 redirect_from:

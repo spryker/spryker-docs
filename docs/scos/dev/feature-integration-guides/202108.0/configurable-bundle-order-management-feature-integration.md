@@ -1,6 +1,7 @@
 ---
 title: Configurable bundle + order management feature integration
 description: This integration guide provides step-by-step instructions on installing Configurable Bundle + Order Management feature.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/configurable-bundle-order-management-feature-integration
 originalArticleId: aedcdbc2-c678-4fa2-ba0d-8ddfc6264415
 redirect_from:

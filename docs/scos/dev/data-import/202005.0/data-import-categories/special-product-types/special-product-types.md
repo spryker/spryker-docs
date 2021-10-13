@@ -1,5 +1,6 @@
 ---
 title: Special Product Types
+template: data-import-template
 originalLink: https://documentation.spryker.com/v5/docs/special-product-types
 originalArticleId: d118a354-3763-4cdb-8d10-7205cf31e147
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: Managing Guest Carts
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/managing-guest-carts
 originalArticleId: 5fb03aee-c62e-4d0a-b589-2feaa984adca
 redirect_from:

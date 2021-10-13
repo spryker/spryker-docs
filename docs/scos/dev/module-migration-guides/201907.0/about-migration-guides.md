@@ -1,5 +1,6 @@
 ---
 title: About Migration Guides
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/about-migration
 originalArticleId: 937ebf96-a3bf-47bc-a5ec-697c51adf8ea
 redirect_from:

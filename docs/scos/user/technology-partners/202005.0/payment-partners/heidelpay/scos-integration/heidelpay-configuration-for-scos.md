@@ -1,6 +1,7 @@
 ---
 title: Heidelpay - Configuration for SCOS
 description: This article contains information on configuring the Heidelpay module for the Spryker Commerce OS.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/heidelpay-configuration-scos
 originalArticleId: 27085e8b-e45d-4801-b5b3-dd32c53ec77c
 redirect_from:

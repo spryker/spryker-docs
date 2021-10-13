@@ -1,6 +1,7 @@
 ---
 title: Docker SDK
 description: Spryker Docker SDK is a tool that builds a production-like Docker infrustructure for Spryker.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/docker-sdk
 originalArticleId: a92eb836-a764-4178-a9fa-6005bd36ae7f
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Shop Guide - Printing a Return Slip
 description: This article provides steps on how to print the return slip in the Spryker Storefront.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/shop-guide-printing-a-return-slip
 originalArticleId: 9f453ab9-9f84-43d4-b84d-1f23d25c9853
 redirect_from:

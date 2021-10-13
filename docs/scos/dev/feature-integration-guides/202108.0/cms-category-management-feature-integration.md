@@ -1,5 +1,6 @@
 ---
 title: CMS + Category Management feature integration
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/cms-category-management-feature-integration
 originalArticleId: 7fda2277-78fa-4351-8b4e-547cf6803fd6
 redirect_from:

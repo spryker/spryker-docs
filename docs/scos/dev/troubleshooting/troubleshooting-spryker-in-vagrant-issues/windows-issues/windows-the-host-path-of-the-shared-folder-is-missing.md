@@ -1,6 +1,7 @@
 ---
 title: Windows- The host path of the shared folder is missing
 description: Learn how to resolve an issue on Windows when Windows the host path of the shared folder is missing
+template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/windows-the-host-path-of-the-shared-folder-is-missing
 originalArticleId: 92633686-f92a-4642-bcf8-6e97e00debfc
 redirect_from:

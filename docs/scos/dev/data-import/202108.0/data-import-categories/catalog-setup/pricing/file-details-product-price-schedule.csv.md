@@ -1,5 +1,6 @@
 ---
 title: File details - product_price_schedule.csv
+template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-price-schedulecsv
 originalArticleId: 0662559b-6487-4d88-855e-3b605fc326c1
 redirect_from:

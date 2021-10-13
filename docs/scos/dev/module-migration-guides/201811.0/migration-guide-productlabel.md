@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Product Label
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/mg-product-label
 originalArticleId: 24fe3fd7-32be-4c91-bf14-af3c1aedf1f3
 redirect_from:

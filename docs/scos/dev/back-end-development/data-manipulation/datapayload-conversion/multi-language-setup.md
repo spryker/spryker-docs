@@ -1,5 +1,6 @@
 ---
 title: Multi-Language Setup
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/multi-language-setup
 originalArticleId: cf160490-ae8e-45c1-80a6-bcd667498ae0
 redirect_from:

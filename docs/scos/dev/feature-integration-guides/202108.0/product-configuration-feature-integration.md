@@ -1,6 +1,7 @@
 ---
 title: Product Configuration feature integration
 description: Learn how to integrate the Product Configuration feature into a Spryker project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-configuration-feature-integration
 originalArticleId: cb5de2c0-dc31-4e94-b347-e6aa55b49268
 redirect_from:

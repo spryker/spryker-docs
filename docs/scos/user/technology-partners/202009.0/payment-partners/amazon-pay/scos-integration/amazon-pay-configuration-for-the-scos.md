@@ -1,6 +1,7 @@
 ---
 title: Amazon Pay - Configuration for the SCOS
 description: Configure and integrate Amazon Pay into the Spryker Commerce OS by following the instructions from this article.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/amazon-pay-configuration-scos
 originalArticleId: e5eeeb03-9c0a-43cb-ac59-82c90661af07
 redirect_from:

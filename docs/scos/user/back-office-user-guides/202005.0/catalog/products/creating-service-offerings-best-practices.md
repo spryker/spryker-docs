@@ -1,5 +1,6 @@
 ---
 title: Creating Service Offerings Best Practices
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/creating-service-offerings
 originalArticleId: 1428f917-f2a8-4c8a-9898-4b4641dbaa43
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - DiscountCalculatorConnector
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/mg-discount-calculator-connector
 originalArticleId: 683bc4bc-85ad-4427-b749-02dad134a39b
 redirect_from:

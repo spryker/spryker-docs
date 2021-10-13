@@ -1,5 +1,6 @@
 ---
 title: Retrieving Ratings and Reviews
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/retrieving-ratings-and-reviews
 originalArticleId: 3c078943-f7b0-4db0-8dcf-5d015d04e739
 redirect_from:

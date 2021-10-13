@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - ProductNew
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-productnew
 originalArticleId: 89798e9a-5600-4e1e-b252-70491bd3ad8e
 redirect_from:

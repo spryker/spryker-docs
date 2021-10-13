@@ -1,6 +1,7 @@
 ---
 title: Publish and Synchronize and Multi-Store Shop Systems
 description: This article describes a way to synchronize data between multiple stores.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/p-s-and-multi-store-shop-systems
 originalArticleId: 06d70e00-611d-4d96-835e-70a6490066f7
 redirect_from:

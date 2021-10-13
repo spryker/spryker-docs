@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ConfigurableBundleStorage
 description: This migration guide contains instructions on upgrading ConfigurableBundleStorage to the newer major version.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/migration-guide-configurablebundlestorage
 originalArticleId: fd9bf209-6e20-4a17-92ec-99c8489ddece
 redirect_from:

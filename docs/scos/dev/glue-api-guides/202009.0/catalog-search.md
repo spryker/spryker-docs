@@ -1,6 +1,7 @@
 ---
 title: Catalog search
 description: This article provides a bunch of sample requests to be used to achieve the implementation of search options and gives explanations of request values.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/catalog-search
 originalArticleId: dde4d14c-50d2-4bad-9de1-d767ffc82236
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Glue API- Wishlist feature integration
 description: This guide will navigate you through the process of installing and configuring the Wishlist API feature in Spryker OS.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/glue-api-wishlist-feature-integration
 originalArticleId: a4f04f2f-63cb-4ef1-8a58-211cac2b5362
 redirect_from:

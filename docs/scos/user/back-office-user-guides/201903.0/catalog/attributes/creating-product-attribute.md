@@ -1,6 +1,7 @@
 ---
 title: Creating Product Attributes
 description: Use the Creating a product attribute procedure to add an attribute key, a super attribute and other values to create an attribute.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/creating-a-product-attribute
 originalArticleId: 4b41f053-b125-490b-914c-0198693cfe07
 redirect_from:

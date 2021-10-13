@@ -1,5 +1,6 @@
 ---
 title: General Back Office Overview
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/general-back-office-overview
 originalArticleId: aee0da60-3f48-4849-b336-44ab6f248bd4
 redirect_from:

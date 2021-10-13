@@ -1,6 +1,7 @@
 ---
 title: Shop Guide - Approval Process
 description: Use the procedures to create the approve/buyer with limit roles, set up permissions to the approver and buyer role in the storefront and be able to submit/approve/deny approval requests.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/approval-process-shop-guide
 originalArticleId: 46f9d964-e8cb-48e7-a47f-2f2b54ba6bbb
 redirect_from:

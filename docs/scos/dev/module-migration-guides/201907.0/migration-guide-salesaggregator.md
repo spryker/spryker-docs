@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - SalesAggregator
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-sales-aggregator
 originalArticleId: dd14361a-c534-43d0-81e4-b4e8a351a5ac
 redirect_from:

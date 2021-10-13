@@ -1,6 +1,7 @@
 ---
 title: Configurable Bundle- Module Relations
 description: In this article, you will find module schema for the Configurable Bundle feature in the Spryker OS.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/configurable-bundle-module-relations
 originalArticleId: ff062c15-03a2-4837-8093-d75e28edbad8
 redirect_from:

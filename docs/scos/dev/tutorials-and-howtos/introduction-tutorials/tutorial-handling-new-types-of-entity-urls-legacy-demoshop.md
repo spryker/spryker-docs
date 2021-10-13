@@ -1,5 +1,6 @@
 ---
 title: Tutorial - Handling New Types of Entity URLs - Legacy Demoshop
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/url-handling-new-entity
 originalArticleId: a604a955-5745-46bf-9b12-b775ca853b8d
 redirect_from:

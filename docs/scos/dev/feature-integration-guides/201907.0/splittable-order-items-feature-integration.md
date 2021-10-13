@@ -1,5 +1,6 @@
 ---
 title: Splittable Order Items feature integration
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/splittable-order-items-integration
 originalArticleId: ea499c83-900d-4788-bcaf-c7981220b441
 redirect_from:

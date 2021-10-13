@@ -1,6 +1,7 @@
 ---
 title: Product Relations
 description: This section can be used to define and manage product relations, set types of relations and assign related products in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/product-relations-management
 originalArticleId: 13e5b35f-b9ad-4c9d-8083-5ec6c035a032
 redirect_from:

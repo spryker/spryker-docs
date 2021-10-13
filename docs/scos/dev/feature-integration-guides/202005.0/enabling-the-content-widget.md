@@ -1,6 +1,7 @@
 ---
 title: Enabling the Content Widget
 description: The guide walks you through the process of installing the Content Widget feature in the project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/enabling-cms-widget
 originalArticleId: e238d585-bfc1-48e6-a132-eb4404d901ac
 redirect_from:

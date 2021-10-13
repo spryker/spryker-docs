@@ -1,6 +1,7 @@
 ---
 title: Dixa
 description: Unify customer engagement across email, chat, messaging and phone in one platform for a better customer and agent experience by integrating Dixa into the Spryker Commerce OS.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/dixa
 originalArticleId: dc886da2-70f3-4c30-9ca7-8a35f3c3de8e
 redirect_from:

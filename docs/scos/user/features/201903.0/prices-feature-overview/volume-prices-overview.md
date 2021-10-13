@@ -1,6 +1,7 @@
 ---
 title: Volume Prices Feature Overview
 description: Volume pricing helps the merchants to gain the commitment of the customers. Providing volume discounts results in increasing the placement of large orders.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/volume-prices-overview
 originalArticleId: f709b9ce-794e-4d46-8543-aae7a355a666
 redirect_from:

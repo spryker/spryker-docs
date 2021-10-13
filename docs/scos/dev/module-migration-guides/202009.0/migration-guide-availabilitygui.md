@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - AvailabilityGui
 description: Use the guide to update versions to the newer ones of the AvailabilityGui module.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/mg-availability-gui
 originalArticleId: 29e84816-5405-48a8-a680-8db6442365db
 redirect_from:

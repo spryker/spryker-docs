@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - NavigationGui
 description: Use the guide to migrate to a newer version of the NavigationGui module.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/mg-navigation-gui
 originalArticleId: c0875773-2dbe-4b08-89d3-1d2aa544bd2b
 redirect_from:

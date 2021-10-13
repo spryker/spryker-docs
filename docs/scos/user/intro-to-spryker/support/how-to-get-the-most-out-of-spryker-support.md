@@ -1,5 +1,6 @@
 ---
 title: How to get the most out of Spryker Support
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/how-to-get-the-most-out-of-spryker-support
 originalArticleId: 3ab286da-5f06-4035-bc52-0b0237ed410f
 redirect_from:

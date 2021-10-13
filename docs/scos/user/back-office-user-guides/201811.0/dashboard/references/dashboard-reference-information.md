@@ -1,6 +1,7 @@
 ---
 title: Dashboard- Reference Information
 description: The guide provides an overview of the Count Orders, Orders by Status, and Top Orders charts you can see when working from the Dashboard.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/dashboard-reference-information
 originalArticleId: ad87350e-b8de-4bc6-971c-590b6ee1c53b
 redirect_from:

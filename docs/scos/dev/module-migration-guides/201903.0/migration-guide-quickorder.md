@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - QuickOrder
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/mg-quick-order
 originalArticleId: 86d0fdd8-bffe-4b04-a9ec-9c926b776abc
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: Heroku
+template: concept-topic-template
 ---
 
 ## Partner Information

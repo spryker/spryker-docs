@@ -1,6 +1,7 @@
 ---
 title: About the Legacy Demoshop Front-end Guides
 description: The Legacy Demoshop Front-end guides provide information of how the front-end was built in the Legacy Demoshop.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/about-legacy-demoshop-guides
 originalArticleId: eaea41d9-f876-48ea-ba2b-8ab71b06c027
 redirect_from:

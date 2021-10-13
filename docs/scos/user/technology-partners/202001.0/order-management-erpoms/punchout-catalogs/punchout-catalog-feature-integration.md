@@ -1,6 +1,7 @@
 ---
 title: Punchout Catalog Feature Integration
 description: Integrate Punchout Catalog into the Spryker Commerce OS.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/punchout-catalog-feature-integration
 originalArticleId: 62ede901-01df-498d-8e16-2465bd3fff85
 redirect_from:

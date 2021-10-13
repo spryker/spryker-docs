@@ -1,5 +1,6 @@
 ---
 title: Code Generator
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/code-generator
 originalArticleId: 67355fa9-f508-4c41-90a3-3e4d982b2923
 redirect_from:

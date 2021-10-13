@@ -1,6 +1,7 @@
 ---
 title: Choosing an installation mode
 description: Choose an installation mode to install Spryker in.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/choosing-an-installation-mode
 originalArticleId: f463210d-1b1c-432f-b0f1-53ada2a017e5
 redirect_from:

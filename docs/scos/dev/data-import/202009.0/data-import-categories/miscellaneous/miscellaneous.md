@@ -1,5 +1,6 @@
 ---
 title: Miscellaneous
+template: data-import-template
 originalLink: https://documentation.spryker.com/v6/docs/miscellaneous
 originalArticleId: df2dcac7-7a8d-4142-b31d-4ccc516e2f92
 redirect_from:

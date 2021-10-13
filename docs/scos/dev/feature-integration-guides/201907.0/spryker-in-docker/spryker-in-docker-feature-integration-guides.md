@@ -1,6 +1,7 @@
 ---
 title: Spryker in Docker feature integration Guides
 description: This section is devoted to feature integration guides related to Spryker in Docker.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/spryker-in-docker-igs
 originalArticleId: 8e285e7d-c122-4661-bc0d-c2bf2d5cb07d
 redirect_from:

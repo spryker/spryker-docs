@@ -1,6 +1,7 @@
 ---
 title: Viewing product barcodes
 description: Use this section to review in the Back Office what barcodes have been generated for concrete products.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/viewing-product-barcodes
 originalArticleId: 57210613-8962-45ea-ab4a-d90eb36e066d
 redirect_from:

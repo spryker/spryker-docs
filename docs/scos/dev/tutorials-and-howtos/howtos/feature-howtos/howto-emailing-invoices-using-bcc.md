@@ -1,6 +1,7 @@
 ---
 title: HowTo - Emailing Invoices Using BCC
 description: This article provides detailed instructions on emailing invoices using BCC.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-emailing-invoices-using-bcc
 originalArticleId: 5fdd0927-fb7a-43b7-9feb-caa171a3c51a
 redirect_from:

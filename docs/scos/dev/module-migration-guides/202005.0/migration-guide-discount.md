@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Discount
 description: Use the guide to migrate to a newer version of the Discount module.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/mg-discount
 originalArticleId: 6f8565ac-1132-4599-bc5f-1ac307664140
 redirect_from:

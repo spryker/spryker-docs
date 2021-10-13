@@ -1,6 +1,7 @@
 ---
 title: Retrieving configurable bundle templates
 description: Retrieve configurable bundle templates via Glue API
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-configurable-bundle-templates
 originalArticleId: 7d42fcee-0edb-4f80-826c-988162b30119
 redirect_from:

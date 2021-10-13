@@ -1,5 +1,6 @@
 ---
 title: Checkout feature integration
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/checkout-feature-integration-201907
 originalArticleId: da2e9095-7be6-4214-8d15-8bf7934438f0
 redirect_from:

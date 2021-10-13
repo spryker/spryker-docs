@@ -1,5 +1,6 @@
 ---
 title: Shop guide - Configurator
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/shop-guide-configurator
 originalArticleId: 5f7cdc6f-a42e-46bf-9326-ff6d7f53743a
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Entity Manager
 description: It is possible to create an entity manager class in your persistence layer. It will be responsible for saving, updating and deleting data. Using the class, you can separate data from persistence details (Propel).
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/entity-manager
 originalArticleId: 87716913-526e-429c-82e4-1fe32fc10d7b
 redirect_from:

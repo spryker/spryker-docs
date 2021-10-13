@@ -1,6 +1,7 @@
 ---
 title: Amazon Pay - API
 description: This article provides details on the API structure of the Amazon Pay module in Spryker Legacy Demoshop.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/amazon-pay-api-demoshop
 originalArticleId: 13c17ac9-e873-41c1-99d2-0c6d78892def
 redirect_from:

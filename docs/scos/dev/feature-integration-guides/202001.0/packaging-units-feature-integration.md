@@ -14,11 +14,11 @@ To start feature integration, overview and install the necessary features:
 
 | Name |Version  |
 | --- | --- |
-| Inventory Management | 202001.0 |
-|Spryker Core  |202001.0 |
-|Order Management  | 202001.0 |
-| Product | 202001.0 |
-| Measurement Units | 202001.0 |
+| Inventory Management | {{page.version}} |
+|Spryker Core  |{{page.version}} |
+|Order Management  | {{page.version}} |
+| Product | {{page.version}} |
+| Measurement Units | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
@@ -792,15 +792,15 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Spryker Core E-commerce | 202001.0 |
-| Measurement Units |  202001.0 |
-| Non-splittable Products |  202001.0 |
+| Spryker Core E-commerce | {{page.version}} |
+| Measurement Units |  {{page.version}} |
+| Non-splittable Products |  {{page.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/packaging-units: "^202001.0" --update-with-dependencies
+composer require spryker-feature/packaging-units: "^{{page.version}}" --update-with-dependencies
 ```
 {% info_block warningBox "Verification" %}
 Make sure that the following modules have been installed:<table><th>Module</th><th>Expected Directory</th><tr><td>`ProductPackagingUnitWidget`</td><td>`vendor/spryker-shop/product-packaging-unit-widget`</td></tr></table>

@@ -230,7 +230,7 @@ The checkout process is paramount for your business in any business model. With 
 To enable the maximum level of security for your system, you must be able to invalidate (refresh) tokens in the presence of potential menaces. With this API, **refresh tokens are made persistent long-term, and you will be able to revoke them at any time for each user**. You can also configure the amount of time for persistence and clean the refresh tokens up from the database when necessary.
 
 #### Documentation
-[Token Revocation](/docs/scos/dev/glue-api-guides/202005.0/managing-customers/authenticating-as-a-customer.html#token-revocation)
+[Token Revocation](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html#token-revocation)
 
 ### Gift Cards API
 Enabling your customers to **use and redeem gift cards** in your shop provides an important business value. We enable you to set this process also through the GLUE API. The cart codes endpoint provides your customers with the gift card’s redemption functionality. These endpoints can also be used for voucher redemption for a unified experience.

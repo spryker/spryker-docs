@@ -10,11 +10,14 @@ redirect_from:
 ---
 
 ## Install Feature API
+
 ### Prerequisites
+
 To start feature integration, review and install the necessary features:
 |Name|Version|
 |---|---|
-|Spryker Core|2018.12.0|
+|Spryker Core|{{page.version}}|
+
 ### 1) Install the required modules using Composer
 
 Run the following command to install the required modules:
@@ -31,6 +34,7 @@ Make sure that the following modules are installed:
 |`GlueApplicationExtension`|`vendor/spryker/glue-application-extension`|
 
 ### 2) Set up Configuration
+
 {% info_block infoBox "Info" %}
 `GLUE_APPLICATION_DOMAIN` should be configured for every domain used in project.
 {% endinfo_block %}
@@ -59,7 +63,9 @@ Make sure that the following changes are present in transfer objects:
 |`TransferRestVersionTransfer`|class|created|`src/Generated/Shared/Transfer/RestVersionTransfer`|
 
 ### 4) Set up Behavior
+
 #### Set up front controller
+
 **Implementation**
 Activate the following plugins:
 |Plugin|Specification|Prerequisites|Namespace|
@@ -127,7 +133,9 @@ $bootstrap
     -&gt;boot()
     -&gt;run();
 ```
+
 #### Configure web server
+
 Configure your web server's host to have access to the freshly created front controller. If you use nginx, you can use the following configuration for your web-server:
 Nginx configuration example:
 ```nginx
@@ -152,7 +160,7 @@ server {
 ```
 **Verification**
 {% info_block infoBox %}
-If everything has been set up correctly, you should be able to access http://glue.example.com/ and see the correct JSON response:
+If everything has been set up correctly, you should be able to access http://glue.mysprykershop.com/ and see the correct JSON response:
 {% endinfo_block %}
 ```JSON
 {
@@ -164,4 +172,3 @@ If everything has been set up correctly, you should be able to access http://glu
     ]
 }
 ```
- *Last review date: Feb 25, 2019* <!-- by  Anton Khabiuk and Dmitry Beirak-->

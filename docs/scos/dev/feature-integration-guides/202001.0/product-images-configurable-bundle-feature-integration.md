@@ -27,8 +27,8 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Configurable Bundle  | 202001.0 |
-| Product Images | 202001.0 |
+| Configurable Bundle  | {{page.version}} |
+| Product Images | {{page.version}} |
 
 ### 1) Set up Database Schema and Transfer Objects
 

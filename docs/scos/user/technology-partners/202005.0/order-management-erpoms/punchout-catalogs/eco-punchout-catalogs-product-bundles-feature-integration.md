@@ -15,7 +15,7 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Product Bundles | 202001.0 |
+| Product Bundles | {{page.version}} |
 To start feature integration, overview and install the necessary packages:
 
 

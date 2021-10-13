@@ -17,8 +17,8 @@ related:
 To start feature integration, review ad install the necessary features.
 |Name|Version|
 |---|---|
-|Product Options|202001.0|
-|Shopping Lists|202001.0|
+|Product Options|{{page.version}}|
+|Shopping Lists|{{page.version}}|
 
 ### 1) Install the Required Modules by Using Composer
 Run the following command to install the required modules:
@@ -130,8 +130,8 @@ Make sure that when creating a cart from a shopping list, the product options ar
 Please review and install the necessary features before beginning the integration step.
 |Name|Version|
 |---|---|
-|Spryker Core |202001.0|
-|Product Options|202001.0|
+|Spryker Core |{{page.version}}|
+|Product Options|{{page.version}}|
 
 ### 1) Add Translations
 Append glossary according to your configuration:

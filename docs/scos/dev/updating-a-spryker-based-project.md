@@ -93,11 +93,11 @@ If you have started with the Spryker features, you should see something like thi
 "ext-readline": "*",
 "ext-redis": "*",
 "spryker-eco/loggly": "^0.1.0",
-"spryker-feature/agent-assist": "^202001.0",
-"spryker-feature/alternative-products": "^202001.0",
-"spryker-feature/approval-process": "^202001.0",
-"spryker-feature/availability-notification": "^202001.0",
-"spryker-feature/cart": "^202001.0",
+"spryker-feature/agent-assist": "^{{page.version}}",
+"spryker-feature/alternative-products": "^{{page.version}}",
+"spryker-feature/approval-process": "^{{page.version}}",
+"spryker-feature/availability-notification": "^{{page.version}}",
+"spryker-feature/cart": "^{{page.version}}",
 ....
 ```
 Every Spryker feature is nothing more than a standalone module with a *composer.json* file that contains a list of individual Spryker modules as dependencies. A feature contains no functional code; the entire code is kept in modules.

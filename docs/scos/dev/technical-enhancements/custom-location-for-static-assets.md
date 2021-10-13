@@ -31,13 +31,13 @@ To start the integration, overview and install the necessary feature:
 
 | Name | Version |
 | --- | --- |
-| Spryker Core | 202001.0 |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the Required Modules Using Composer
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/spryker-core: "^202001.0" --update-with-dependencies
+composer require spryker-feature/spryker-core: "^{{page.version}}" --update-with-dependencies
 ```
 
 ### 2) Set up Behavior

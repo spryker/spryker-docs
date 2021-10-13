@@ -4,7 +4,7 @@ description: Learn how to integrate the Product Configuration feature into a Spr
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the [Product Configuration](/docs/scos/user/features/{{page.version}}/configurable-product/configurable-product-feature-overview.html) feature into a Spryker project.
+This document describes how to integrate the [Product Configuration](/docs/scos/user/features/{{page.version}}/configurable-product-feature-overview.html) feature into a Spryker project.
 
 
 ## Install feature core

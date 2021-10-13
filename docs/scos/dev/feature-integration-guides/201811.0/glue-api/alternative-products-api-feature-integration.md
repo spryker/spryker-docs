@@ -10,13 +10,15 @@ redirect_from:
 ---
 
 ## Install Feature API
+
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Spryker Core | 201903.0 |
-| Alternative Products | 201903.0 |
+| Spryker Core | {{page.version}} |
+| Alternative Products | {{page.version}} |
 | ProductsRestApi | 2.3.0 |
 
 ## 1) Install the required modules using Composer
@@ -65,17 +67,16 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
+{% info_block warningBox "Warning" %}
 
-<section contenteditable="false" class="warningBox"><div class="content">
-    Make sure that the following endpoints are available:
+Make sure that the following endpoints are available:
 
 * `http://example.org/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/abstract-alternative-products`
 * `http://example.org/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/abstract-alternative-products`
-</div></section>
+
+{% endinfo_block %}
+
 
 **See also:**
-[Retrieving Alternative Products](/docs/scos/dev/glue-api-guides/{{page.verison}}j/retrieving-alternative-products.html)
- 
-_Last review date: Mar 14, 2019_
+[Retrieving Alternative Products](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-alternative-products.html)
 
-<!--by Volodymyr Volkov-->

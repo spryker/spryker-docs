@@ -33,8 +33,8 @@ composer require spryker-feature/marketplace-cart:"{{page.version}}" --update-wi
 
 Make sure that the following modules have been installed:
 
-| MODULE                  | EXPECTED DIRECTORY                   |
-| ----------------------------- | ------------------------------------------ |
+| MODULE    | EXPECTED DIRECTORY      |
+| ------------------- | --------------------- |
 | CartNoteMerchantSalesOrderGui | vendor/spryker/cart-note-merchant-sales-order-gui |
 
 {% endinfo_block %}
@@ -45,7 +45,7 @@ Add the following configuration:
 
 | CONFIGURATION | SPECIFICATION | NAMESPACE |
 | ------------- | ------------- | --------- |
-| MerchantSalesOrderMerchantUserGuiConfig::getMerchantSalesOrderDetailExternalBlocksUrls() | Introduces list of urls of order detail page configuration. | src/Pyz/Zed/MerchantSalesOrderMerchantUserGui/MerchantSalesOrderMerchantUserGuiConfig.php |
+| MerchantSalesOrderMerchantUserGuiConfig::getMerchantSalesOrderDetailExternalBlocksUrls() | Introduces a list of urls for order details page configuration. | src/Pyz/Zed/MerchantSalesOrderMerchantUserGui/MerchantSalesOrderMerchantUserGuiConfig.php |
 
 ```php
 <?php
@@ -70,7 +70,7 @@ class MerchantSalesOrderMerchantUserGuiConfig extends SprykerMerchantSalesOrderM
 
 {% info_block warningBox "Verification" %}
 
-Ensure that cart notes are shown on the order view page when looking at merchant orders in Backoffice.
+Ensure that the cart notes are displayed on the order view page when looking at merchant orders in the Back Office.
 
 {% endinfo_block %}
 

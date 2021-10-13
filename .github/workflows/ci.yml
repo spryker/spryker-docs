@@ -24,7 +24,7 @@ jobs:
           bundler-cache: true
 
       - name: Cache HTMLProofer
-          id: cache-htmlproofer
+          id: cachehtmlproofer
           uses: actions/cache@v2
           with:
             path: tmp/.htmlproofer

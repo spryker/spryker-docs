@@ -40,7 +40,6 @@ The *regular registration*  is the registration triggered from the registration 
 
 
 After checkout registration, the cart created by a customer as a guest user is converted into a registered user's cart and appears in the customer's list of carts.
-:::
 
 ### Registration by creating an account in the Back Office
 

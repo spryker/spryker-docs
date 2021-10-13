@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 ## Partner Information
-[ABOUT LIVECHAT SERVICE](https://livechatservice.de/){target="_blank"}
+[ABOUT LIVECHAT SERVICE](https://livechatservice.de/)
 We are the plus for your company
 
 LiveChat Service is an online service provider in the field of live chat. Through trained chat

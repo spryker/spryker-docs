@@ -18,7 +18,7 @@ redirect_from:
   - /v3/docs/en/router-yves-201907
 ---
 
-The Router is responsible for matching a request to a route and generating URLs based on a route name. The Spryker's Route module is based on the Symfony's Routing component. For more information on it, check out the [documentation](https://symfony.com/doc/current/routing.html){target="_blank"}.
+The Router is responsible for matching a request to a route and generating URLs based on a route name. The Spryker's Route module is based on the Symfony's Routing component. For more information on it, check out the [documentation](https://symfony.com/doc/current/routing.html).
 
 ## Modules
 

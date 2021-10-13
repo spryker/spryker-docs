@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 ## Partner Information
-[ABOUT COREMEDIA](https://www.coremedia.com){target="_blank"}
+[ABOUT COREMEDIA](https://www.coremedia.com)
 
 Take content to the next level with the CoreMedia Content Cloud, which enables the enterprise-level creation, orchestration, and preview of sophisticated omnichannel experiences, delivered across multiple brands, markets, channels, and languages. React to market trends instantly, stay ahead of the competition and become an instantly recognizable iconic brand. Be iconic.
 

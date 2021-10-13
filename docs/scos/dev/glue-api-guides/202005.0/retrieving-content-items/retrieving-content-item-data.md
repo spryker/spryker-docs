@@ -11,5 +11,5 @@ This section provides guides that can help you access and manage relevant data o
 
 See the following guides for more details:
 
-* [Retrieving Banner Content Item Data](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-content-item-data/retrieving-banner-content-items.html){target="_blank"}
-* [Getting Abstract Product List Content Item Data](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-content-item-data/retrieving-abstract-product-list-content-items.html){target="_blank"}
+* [Retrieving Banner Content Item Data](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-content-item-data/retrieving-banner-content-items.html)
+* [Getting Abstract Product List Content Item Data](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-content-item-data/retrieving-abstract-product-list-content-items.html)

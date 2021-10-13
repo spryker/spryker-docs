@@ -22,7 +22,7 @@ If you need any additional support with this content, please contact support@spr
 {% endinfo_block %}
 
 ## CSRF vulnerabilities
-Starting from PHP 7.3, the session cookie supports the [SameSite attribute](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite){target="_blank"}, which decreases the attack surface. `symfony/http-foundation` supports the attribute since version 3.4.28, having it empty by default but configurable. Since versions 4.2.0, 4.3.0, and 4.4.0, the attribute is set to `lax` by default. We recommend updating and activating the feature accordingly.
+Starting from PHP 7.3, the session cookie supports the [SameSite attribute](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite), which decreases the attack surface. `symfony/http-foundation` supports the attribute since version 3.4.28, having it empty by default but configurable. Since versions 4.2.0, 4.3.0, and 4.4.0, the attribute is set to `lax` by default. We recommend updating and activating the feature accordingly.
 
 ## CSRF protection in cart manipulation forms
 Previously, without CSRF protection, it was possible to manipulate carts externally. To prevent this possibility, we’ve set a CSRF token to be generated for each cart-related operation.
@@ -52,7 +52,7 @@ composer update spryker-shop/cart-page spryker-shop/customer-page spryker-shop/c
 3. Adjust project-level templates for the cart-related operations, if you have any. Check the changes in core templates as an example.
 
 ## CSRF protection in the login form
-Previously, the login form was vulnerable to [Login CSRF attacks](https://en.wikipedia.org/wiki/Cross-site_request_forgery#Forging_login_requests){target="_blank"}. To avoid this vulnerability, we’ve set a CSRF token to be generated for every login form.
+Previously, the login form was vulnerable to [Login CSRF attacks](https://en.wikipedia.org/wiki/Cross-site_request_forgery#Forging_login_requests). To avoid this vulnerability, we’ve set a CSRF token to be generated for every login form.
 
 Affected modules:
 * Security (1.2.0)

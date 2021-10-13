@@ -28,15 +28,15 @@ To create a category, take the following steps:
 4. In the *Images* tab, add an image to the category:
     1. Click **Add image set**.
     2. Enter the attributes of your image set.
-    :::(Info)
+    {% info_block infoBox %}
     Keep in mind that small images are used when subcategories on the parent category page are displayed as a list, while the large images are used when subcategories are displayed as a grid.
-    :::
+    {% endinfo_block %}
 5. To assign several images or image sets, click **Add image** or **Add image set** respectively, and enter URLs.
-    :::(Info)
+   {% info_block infoBox %}
     Even though you can add several image sets and several images to an image set, out of the box, there is no place in the back end and front end where several image sets or images can be displayed for a category. However, if you still do that, the following logic applies:
     * When adding several image sets, the image set going first or having the name "default" is applied to the category.
     * When adding several images to the image set that is active for the category, the image with the lowest Sort Order field value is applied to the category. If there are several images with the same value, the image which has been added first is applied. The lowest possible value is "0".
-    :::
+    {% endinfo_block %}
 6. Click **Save**.
 
 
@@ -127,9 +127,9 @@ Select the *Sub Category grid* template to create a multilevel category structur
 **A template with slots**
 
 
-:::(Info)
+{% info_block infoBox %}
 To use a template with slots, make sure the [Templates and slots](/docs/scos/dev/feature-integration-guides/{{page.version}}/cms-feature-integration.html) feature is integrated into your project.
-:::
+{% endinfo_block %}
 
 Select such a template to have slots for this category page. Slots can embed content from CMS Blocks and technology partner integrations. See [Templates and slots](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html) for more details.
 

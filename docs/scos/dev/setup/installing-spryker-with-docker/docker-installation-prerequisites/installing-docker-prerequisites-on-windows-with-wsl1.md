@@ -26,9 +26,9 @@ Review the minimum system requirements in the table:
 ## Install and configure the required software with WSL1
 Follow the steps below to install and configure the required software with WSL1.
 
-:::(Error) (Outdated software)
+{% info_block errorBox "Outdated software" %}
 WSL1 is outdated, so we highly recommend [installing and configuring the required software with WSL2](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl2.html). Use it only if you can't use WSL2.
-:::
+{% endinfo_block %}
 
 ### Install Docker Desktop    
 

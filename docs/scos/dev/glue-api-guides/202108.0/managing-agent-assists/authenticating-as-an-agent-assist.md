@@ -54,9 +54,9 @@ Request sample: `POST https://glue.mysprykershop.com/agent-access-tokens`
 | username | String | &check; | Username of the agent assist. |
 | password | String | &check; | Password of the agent assist. |
 
-:::(Warning)
+{% info_block warningBox %}
 Note that depending on the Login feature configuration for your project, too many unsuccessful login attempts may result in the 429 error, and the user will be locked out for some time. For details, see [Storefront Login feature overview](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-login-overview.html)
-:::
+{% endinfo_block %}
 
 
 ### Response

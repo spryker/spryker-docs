@@ -11,7 +11,7 @@ redirect_from:
 ---
 
 ## Partner Information
-[ABOUT PROCLANE](https://proclane.com/){target="_blank"}
+[ABOUT PROCLANE](https://proclane.com/)
 
 PROCLANE Integration is a leading German integration house and specializes in connecting.
 SAP and other ERP systems to eCommerce solutions, such as those required for real-time processes in B2B shops. The integration platform &quot;PROCLANE IntegrationMan&quot; already provides around 80% of all processes for the SAP connection of online shops as standard.

@@ -81,8 +81,8 @@ Product stock the DECIMAL(20,10) value, which means that your product stock can 
 6. Click **Save**.
 
 {% info_block warningBox "Note" %}
-Please note that you are updating the product variant availability, not the bundle availability itself. To see examples of how the bundle availability is calculated, see [Availability calculation example](#availability-calculation-example
-{% endinfo_block %}.)
+Please note that you are updating the product variant availability, not the bundle availability itself. To see examples of how the bundle availability is calculated, see [Availability calculation example](#availability-calculation-example).
+{% endinfo_block %}
 
 **Tips & tricks**
 

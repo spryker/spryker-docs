@@ -206,7 +206,7 @@ Other changes are listed below:
 
 {% info_block infoBox "Info" %}
 
-Keep in mind that the Merchant module makes sense only in connection with the [MerchantExtension](https://github.com/spryker/merchant-extension){target="_blank"} module.
+Keep in mind that the Merchant module makes sense only in connection with the [MerchantExtension](https://github.com/spryker/merchant-extension) module.
 
 {% endinfo_block %}
 

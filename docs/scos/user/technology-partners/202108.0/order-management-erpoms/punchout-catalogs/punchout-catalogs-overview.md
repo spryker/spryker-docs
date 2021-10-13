@@ -39,8 +39,8 @@ From the B2B buyer perspective, the Punchout process typically involves the foll
 ## Punchout formats
 The cart from Spryker Commerce OS is transferred to the client's ERP using [cXML](https://en.wikipedia.org/wiki/CXML) or [OCI](https://en.wikipedia.org/wiki/Open_Catalog_Interface) formats. The standards provide similar functionality. 
 {% info_block warningBox "Note" %}
-Spyker provides the Back Office user interface for managing the connections between Spryker Commerce OS and an EPR. The ERP-related workflows and logics are managed by our partner [PunchoutCatalogs](https://www.punchoutcatalogs.com/
-{% endinfo_block %}.)
+Spyker provides the Back Office user interface for managing the connections between Spryker Commerce OS and an EPR. The ERP-related workflows and logics are managed by our partner [PunchoutCatalogs](https://www.punchoutcatalogs.com/).
+{% endinfo_block %}
 
 ### cXML
 cXML is the most popular and supported standard based on the XML format. It allows to modify and validate cart data without prior knowledge of their form and included fields. Mose e-procurement use this standard.

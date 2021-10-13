@@ -14,8 +14,8 @@ Guest carts come with an expiration date, which means that unregistered users ca
 Only one cart can be created for each guest customer.
 
 {% info_block infoBox %}
-If you want to know how to process carts of registered users, see [Managing Carts of Registered Users](https://documentation.spryker.com/v1/docs/managing-carts-of-registered-users-201907
-{% endinfo_block %}.)
+If you want to know how to process carts of registered users, see [Managing Carts of Registered Users](https://documentation.spryker.com/v1/docs/managing-carts-of-registered-users-201907).
+{% endinfo_block %}
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Carts API](https://documentation.spryker.com/v1/docs/cart-feature-integration).

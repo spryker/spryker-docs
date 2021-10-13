@@ -10,8 +10,8 @@ redirect_from:
 As a staring point to working with the Spryker Commerce OS, we created a list of all the capabilities we have to offer that arrive out-of-the-box.
 
 {% info_block infoBox %}
-What to know more? Learn about [Demo Shops](/docs/scos/user/intro-to-spryker/master-suite.html
-{% endinfo_block %} demoshops we provide.)
+What to know more? Learn about [Demo Shops](/docs/scos/user/intro-to-spryker/master-suite.html) we provide.
+{% endinfo_block %}
 
 Capabilities are high level descriptions of what a certain facet of Spryker can do. Each Capability is mapped to a list of Features. A Feature is a specific aspect of a Capability, for example, the Inventory Management Capability includes the features, **Stock and Availability Management** and **Multiple Warehouse Stock Management** . All the features together help to define the exact scope of a Capability. This helps us to guide you to the relevant functionality you are looking for.
 ![Features on the Capability page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/features-list-on-capability-page.png)

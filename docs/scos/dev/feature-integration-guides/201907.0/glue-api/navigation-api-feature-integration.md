@@ -56,8 +56,8 @@ Make sure that the following changes have been applied in transfer objects:
 ### 3) Set up Configuration
 #### Configure navigation mapping
 {% info_block infoBox %}
-Specify mapping for the source field from which the resourceId field should be filled (depends on a navigation node type
-{% endinfo_block %}.)
+Specify mapping for the source field from which the resourceId field should be filled (depends on a navigation node type).
+{% endinfo_block %}
 
 <details open>
 <summary>src/Pyz/Glue/NavigationsRestApi/NavigationsRestApiConfig.php</summary>

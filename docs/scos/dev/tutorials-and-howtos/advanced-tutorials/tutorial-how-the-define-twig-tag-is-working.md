@@ -30,7 +30,7 @@ Example of usage:
 } {% raw %}%}{% endraw %}
 ```
 
-In twig, this is a regular hash [literal](https://twig.symfony.com/doc/2.x/templates.html#literals){target="_blank"}, which is a representation of the associative array in PHP. In the current example, it means that an object with the name **data** should be passed to the template, and the **id** field is required. Now, we can include or embed this template as follows, for example:
+In twig, this is a regular hash [literal](https://twig.symfony.com/doc/2.x/templates.html#literals), which is a representation of the associative array in PHP. In the current example, it means that an object with the name **data** should be passed to the template, and the **id** field is required. Now, we can include or embed this template as follows, for example:
 
 ```json
 {% raw %}{%{% endraw %} include molecule('our_molecule_template') with {

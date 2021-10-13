@@ -27,8 +27,8 @@ In the following guide, we will review customizing Spryker UI on each of these l
 The visual layout of each component, be that a molecule or a whole organism, is defined using Symphony Twig. Twig is a template language for defining the HTML code of pages rendered dynamically. It is a common technology used for building web components, like the ones that comprise Spryker atomic frontend.
 
 {% info_block infoBox %}
-For more information on Twig basics, see [Twig Homepage](https://twig.symfony.com/
-{% endinfo_block %}.)
+For more information on Twig basics, see [Twig Homepage](https://twig.symfony.com/).
+{% endinfo_block %}
 
 After you integrate Spryker Shop application in your project, all UI components shipped with Spryker will be located in `vendor/spryker-shop`. The layout of any of them can be overridden on the project level. For this purpose, you need to create a Twig file with your own layout in folder `src/Pyz/Yves`. To override the structure of any component, the Twig file name must be the same as the name of the Twig template you want to override, and also the folder structure must replicate the structure of the component you are overriding.
 
@@ -213,8 +213,8 @@ Another important aspect you can override are styles. The global styles are defi
 * `util.scss` - can be used for utility stles, like reset, align or is-hidden implementations.
 
 {% info_block infoBox %}
-For detailed information on global styles, see the _SASS Layer_ section in [Atomic Frontend](/docs/scos/dev/front-end-development/yves/atomic-frontend/customizing-spryker-front-end.html#sass-layer
-{% endinfo_block %}.)
+For detailed information on global styles, see the _SASS Layer_ section in [Atomic Frontend](/docs/scos/dev/front-end-development/yves/atomic-frontend/customizing-spryker-front-end.html#sass-layer).
+{% endinfo_block %}
 
 Typical implementations on the project level look as follows:
 

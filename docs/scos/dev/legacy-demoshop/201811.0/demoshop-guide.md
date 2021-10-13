@@ -40,8 +40,8 @@ npm run yves:tslint # helps you avoid errors and enforce conventions in your Typ
 ```
 
 {% info_block infoBox "Inside and outside the VM" %}
-You can run these scripts inside and outside the VM. Run them outside the VM if you want to improve the build performance and the watchers speed. To use NPM commands outside the VM, you need to download and install [Node.js](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
-{% endinfo_block %}. Minimum versions for node is 8.x and for npm - 5.x. Maximum version for Node.js is the one [Recommended for Most Users](https://nodejs.org/en/).)
+You can run these scripts inside and outside the VM. Run them outside the VM if you want to improve the build performance and the watchers speed. To use NPM commands outside the VM, you need to download and install [Node.js](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm). Minimum versions for node is 8.x and for npm - 5.x. Maximum version for Node.js is the one [Recommended for Most Users](https://nodejs.org/en/).
+{% endinfo_block %}
 
 ### Zed
 To build assets for Zed, run in the console:
@@ -54,8 +54,8 @@ npm run zed:production # build assets in production mode
 ```
 
 {% info_block infoBox "Inside and outside the VM" %}
-You can run these scripts inside and outside the VM. Run them outside the VM if you want to improve the build performance and the watchers speed. To use NPM commands outside of the VM, you need to download and install [Node.js](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
-{% endinfo_block %}. Minimum versions for Node.js is 8.x and for npm - 5.x. Maximum version for Node.js is the one [Recommended for Most Users](https://nodejs.org/en/).)
+You can run these scripts inside and outside the VM. Run them outside the VM if you want to improve the build performance and the watchers speed. To use NPM commands outside of the VM, you need to download and install [Node.js](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm). Minimum versions for Node.js is 8.x and for npm - 5.x. Maximum version for Node.js is the one [Recommended for Most Users](https://nodejs.org/en/).
+{% endinfo_block %}
 
 ### Custom scripts
 If you need to add or change the scripts, open the `@project/package.json` manifest file and change the related section:

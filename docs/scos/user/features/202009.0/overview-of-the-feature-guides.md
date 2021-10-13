@@ -18,7 +18,7 @@ The *Features* section is divided into capabilities. Each capability contains a 
 
 In the feature documentation, you will find the following information:
 
-* A short feature summary with guidelines designed for different [personas](/docs/scos/user/intro-to-spryker/about-spryker-documentation.html#personas){target="_blank"}.
+* A short feature summary with guidelines designed for different [personas](/docs/scos/user/intro-to-spryker/about-spryker-documentation.html#personas).
 * A detailed feature overview, workflows, database structure, and more.
 
 {% info_block infoBox "Reference documenatation" %}
@@ -27,7 +27,7 @@ The documentation in the *Features* section provides reference information that 
 
 Or, you can go directly to the following guides:
 
-* [Back Office user guide](/docs/scos/user/back-office-user-guides/{{page.version}}/about-back-office-user-guides.html){target="_blank"}: for step-by-step guides on how to work with the features in the Back Office.
-* [Feature integration guides](/docs/scos/dev/feature-integration-guides/{{page.version}}/about-integration-guides.html){target="_blank"}: for developer guides on how to integrate a feature into a Spryker project.
+* [Back Office user guide](/docs/scos/user/back-office-user-guides/{{page.version}}/about-back-office-user-guides.html): for step-by-step guides on how to work with the features in the Back Office.
+* [Feature integration guides](/docs/scos/dev/feature-integration-guides/{{page.version}}/about-integration-guides.html): for developer guides on how to integrate a feature into a Spryker project.
 
 {% endinfo_block %}

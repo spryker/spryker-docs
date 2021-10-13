@@ -12,13 +12,13 @@ redirect_from:
   - /v6/docs/en/handling-new-feature-requests
 ---
 
-At Spryker, we strive to deliver the software that suits our customers. That's why we appreciate it when you contribute with your ideas, suggestions, and new features to the upcoming releases of the Spryker product. Please share your idea with others by posting it on the [Spryker idea portal](https://spryker.ideas.aha.io/ideas){target="_blank"}. Ensure that you clearly described your desired change and explained why this change is useful.
+At Spryker, we strive to deliver the software that suits our customers. That's why we appreciate it when you contribute with your ideas, suggestions, and new features to the upcoming releases of the Spryker product. Please share your idea with others by posting it on the [Spryker idea portal](https://spryker.ideas.aha.io/ideas). Ensure that you clearly described your desired change and explained why this change is useful.
 
 We consider the upvotes and comments for the existing ideas, so if you like someone else's idea, feel free to upvote it and comment on it. The more votes an idea gets, the more chances it has to be developed!
 ![Spryker idea portal](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Support/Handling+new+feature+requests/Spryker+idea+portal+interface.png)
 
 ## What happens after I have created a feature request?
-After we get your request, we evaluate your idea and gather the necessary details. The idea is marked as **New** in the [Spryker idea portal](https://spryker.ideas.aha.io/ideas){target="_blank"}. At this point, we may contact you and discuss the request in detail. Once we have the whole picture, your idea is moved to **In Review**. This status reflects the internal discussions about the idea. We assess the feature and decide on the next steps.
+After we get your request, we evaluate your idea and gather the necessary details. The idea is marked as **New** in the [Spryker idea portal](https://spryker.ideas.aha.io/ideas). At this point, we may contact you and discuss the request in detail. Once we have the whole picture, your idea is moved to **In Review**. This status reflects the internal discussions about the idea. We assess the feature and decide on the next steps.
 
 After our evaluation, we can assign the following statuses to the ideas:
 

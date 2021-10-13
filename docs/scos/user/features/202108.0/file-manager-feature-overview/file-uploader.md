@@ -52,8 +52,8 @@ To upload a file to a particular directory follow the steps:
 {% info_block infoBox %}
 
 If Use file name option is selected, then File Name field is not required and will be disregarded. In this case, the file will be uploaded with its original name (the one you see in your local storage
-
-{% endinfo_block %}.)
+).
+{% endinfo_block %}
 
 {% info_block warningBox %}
 

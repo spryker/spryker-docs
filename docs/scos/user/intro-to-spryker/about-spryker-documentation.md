@@ -203,9 +203,9 @@ You need to fork the repository only the first time you edit the Spryker documen
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker+Documentation/edit+button.png)
 {% info_block infoBox %}
 
-Spryker documentation is written using Markdown. If you don’t know Markdown yet, check the [GitHub Markdown Guide](https://guides.github.com/features/mastering-markdown/)
+Spryker documentation is written using Markdown. If you don’t know Markdown yet, check the [GitHub Markdown Guide](https://guides.github.com/features/mastering-markdown/).
 
-{% endinfo_block %}.
+{% endinfo_block %}
 4.	Once done, write a message explaining what you changed and click  **Propose file change**. You will see a a diff of your changes compared to the current version of the master branch.
 5.	Click **Create pull request**.
 6.	Click **Create pull request** again to confirm the creation.

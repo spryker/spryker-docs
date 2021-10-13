@@ -15,8 +15,8 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Required Sub-Feature |
 | --- | --- | --- |
-| Spryker Core | master | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
-| Product Management | master | [Products API feature integration](/docs/scos/dev/feature-integration-guides/{page.version}}/glue-api/glue-api-products-feature-integration.html) |
+| Spryker Core | master | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
+| Product Management | master | [Products API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-products-feature-integration.html) |
 | Product Label | master | |
 
 

@@ -52,9 +52,9 @@ In case you cannot approve the registration, you can deny it.
 To disapprove a company, click **Deny**.
 ![Denying a company](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/Managing+Companies/denying-company.png)
 
-:::(Info)
+{% info_block infoBox %}
 You can approve and activate the record in a later event. The record itself will continue existing in the system.
-:::
+{% endinfo_block %}
 
 ### Deactivating companies
 

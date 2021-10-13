@@ -9,6 +9,7 @@ task :check do
     :allow_hash_href => true,
     :url_ignore => ["/glue.mysprykershop.com\/[\.\w\-\/\?]+/", "/github.com\/[\.\w\-\/]+\.md/"],
     :check_html => false,
+    :empty_alt_ignore => true,
     :only_4xx => false,
     :http_status_ignore => [429],
     :parallel => { :in_processes => 4},

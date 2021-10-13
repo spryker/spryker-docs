@@ -77,7 +77,7 @@ Next to each sales order item, there is the date till which the item can be retu
 
 {% endinfo_block %}
 
-All the returns created by the Buyer or by the Back Office User for the Buyer, are listed on the *Returns* page in the Customer Account. From here, the Buyer can [view the return details](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/references/return-details-reference-information.html) and [print the return slip](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/shop-guide-returns-management/shop-guide-printing-a-return-slip.html).
+All the returns created by the Buyer or by the Back Office User for the Buyer, are listed on the *Returns* page in the Customer Account. From here, the Buyer can view the return details and [print the return slip](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/shop-guide-returns-management/shop-guide-printing-a-return-slip.html).
 ![Returns details](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Return+Management/Return+Management+Feature+Overview/return-details.png) 
 
 ## Return Management in the Back Office

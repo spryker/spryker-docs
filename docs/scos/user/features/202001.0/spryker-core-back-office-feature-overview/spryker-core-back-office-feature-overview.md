@@ -70,7 +70,7 @@ Each of the Identity Managers is an ECO module that should be developed separate
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of the Back Office Translations](/docs/scos/user/features/{{page.version}}/spryker-core-back-office/spryker-core-back-office-feature-overview/back-office-translations-overview.html) |
+| [Get a general idea of the Back Office Translations](/docs/scos/user/features/{{page.version}}/spryker-core-back-office-feature-overview/back-office-translations-overview.html) |
 | **Work with the Back Office**: |
 | [Log in to the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/logging-in-to-the-back-office.html) |
 | [View Dashboard](/docs/scos/user/back-office-user-guides/{{page.version}}/dashboard/viewing-dashboard.html) |

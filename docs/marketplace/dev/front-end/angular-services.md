@@ -1,16 +1,15 @@
 ---
 title: Angular Services
-description: This articles provides details about the Angular Services, and how to create and use them.
+description: This document provides details about the Angular Services, and how to create and use them.
 template: concept-topic-template
 ---
 
-This article describes what Angular Services are, how to create and use them.
+This document describes what Angular Services are, how to create and use them.
 
 ## Introduction
 
 The Angular Services are stateless objects which provide useful functionality. These functions can be invoked from any component of Angular, such as Components, Directives, etc. It enables services to organize and share business logic, models, data and functions with other components of an Angular application and thus divide the web application into small, reusable logical units. A service typically encapsulates a particular aspect/function of the system (HTTP, part of business logic, etc.).
 Using Angular Services methods, the data is maintained throughout the life of an application, i.e., it is never refreshed and is always available.
-
 
 #### Component communication using Angular Services
 
@@ -24,15 +23,14 @@ To define a class as a service in Angular, the `@Injectable()` decorator is used
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  // declares that this service should be created
-  // by the root application injector.
-  providedIn: 'root',
+    // Declares that this service should be created
+    // by the root application injector.
+    providedIn: 'root',
 })
 export class SomeService {
-
-  reusableMethod(): void {
-    ...some logic
-  }
+    reusableMethod(): void {
+        // ...some logic
+    }
 }
 ```
 
@@ -44,14 +42,14 @@ To use the service, you simply need to import it and inject it via DI in the con
 import { Component } from '@angular/core';
 
 @Component({
-  ....,
+    ...,
 })
 export class ServiceConsumer {
-  constructor(private someService: SomeService) {}
+    constructor(private someService: SomeService) {}
 
-  invokeServiceMethod(): void {
-    this.someService.reusableMethod();
-  }
+    invokeServiceMethod(): void {
+        this.someService.reusableMethod();
+    }
 }
 ```
 

@@ -1,11 +1,10 @@
 ---
 title: Setting up the Merchant Portal
-description: This article provides details about setting up Spryker Marketplace project.
+description: This document provides details about setting up Spryker Marketplace project.
 template: howto-guide-templat
 ---
 
-
-This article provides details on how to set up the Spryker Merchant Portal.
+This document provides details on how to set up the Spryker Merchant Portal.
 
 ## Prerequisites
 To start using Merchant Portal, install Spryker demo-shop:
@@ -33,11 +32,11 @@ Using a "unified" approach, all front-end dependencies must be installed in one 
 
 ## Install dependencies and build Merchant Portal
 
-```yarn
+```bash
 yarn install
 ```
 
-```yarn
+```bash
 yarn mp:build
 ```
 

@@ -1,10 +1,10 @@
 ---
 title: Web Components
-description: The purpose of this article is to provide details regarding how web components are used and what their function is in the Merchant Portal Frontend.
+description: This document provides details how web components are used and what their function is in the Merchant Portal Frontend.
 template: concept-topic-template
 ---
 
-The purpose of this article is to provide details regarding how web components are used and what their function is in the Merchant Portal Frontend.
+This document provides details how web components are used and what their function is in the Merchant Portal Frontend.
 
 ## Introduction
 
@@ -25,11 +25,11 @@ import { SomeComponentComponent } from './some-component/some-component.componen
 import { SomeComponentModule } from './some-component/some-component.module';
 
 @NgModule({
-  imports: [
-    WebComponentsModule.withComponents([SomeComponentComponent]),
-    SomeComponentModule,
-  ],
-  providers: [],
+    imports: [
+        WebComponentsModule.withComponents([SomeComponentComponent]),
+        SomeComponentModule,
+    ],
+    providers: [],
 })
 export class ComponentsModule {}
 ```
@@ -44,16 +44,16 @@ import { SomeComponentComponent } from './some-component/some-component.componen
 import { SomeComponentModule } from './some-component/some-component.module';
 
 @NgModule({
-  imports: [
-    WebComponentsModule.withComponents([
-      {
-        selector: 'new-web-component-selector',
-        component: SomeComponentComponent,
-      },
-    ]),
-    SomeComponentModule,
-  ],
-  providers: [],
+    imports: [
+        WebComponentsModule.withComponents([
+            {
+                selector: 'new-web-component-selector',
+                component: SomeComponentComponent,
+            },
+        ]),
+        SomeComponentModule,
+    ],
+    providers: [],
 })
 export class ComponentsModule {}
 ```

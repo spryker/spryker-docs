@@ -80,6 +80,6 @@ You can delete a company user by clicking ![Delete icon](https://spryker.s3.eu-c
 
 ![Delete a user](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Users/delete-user.png) 
 
-Don't forget to check out the video tutorial on setting up the [Company Users](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html) in Spryker [B2B Demo Shop](/docs/scos/user/intro-to-spryker/{{site.version}}/about-spryker.html#spryker-b2b-b2c-demo-shops):
+Don't forget to check out the video tutorial on setting up the [Company Users](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html) in Spryker [B2B Demo Shop](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2bb2c-demo-shops):
 
 {% wistia 72qy3slwjo 960 720 %}

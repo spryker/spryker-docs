@@ -77,7 +77,7 @@ $config[OmsConstants::ACTIVE_PROCESSES] = [
 ```
 
 5. Check the state machine graph while building it.
-    1. Go to the **Maintenance → OMS** page in the Backend Office, you will see your state machine **Demo01**.
+    1. Go to the **Administration → OMS** page in the Backend Office, you will see your state machine **Demo01**.
     2. Click on it and you will see the graph that represents your XML file.
 {% info_block infoBox %}
 Whenever you change the skeleton in the XML file, refresh the page so see the new changes.

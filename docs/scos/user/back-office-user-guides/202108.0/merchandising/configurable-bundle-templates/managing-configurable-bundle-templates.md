@@ -51,10 +51,10 @@ To edit a slot in a configurable bundle template:
 2. Select **Edit** next to the slot you want to edit.
 3. On the *Edit Slot: [slot ID] for [template name]* page:
     * In the **General** tab, update the slot **Name** for one or more locales.
-    * [Assign categories to the slot](assigning-categories-to-slots-in-configurable-bundle-templates).
-    * [Deassign categories from the slot](deassigning-categories-from-slots-in-configurable-bundle-templates).
-    * [Assign products to the slot](assigning-products-to-slots-in-configurable-bundle-templates).
-    * [Deassign products from the slot](deassigning-products-from-slots-in-configurable-bundle-templates).
+    * [Assign categories to the slot](#assigning-categories-to-slots-in-configurable-bundle-templates).
+    * [Deassign categories from the slot](#deassigning-categories-from-slots-in-configurable-bundle-templates).
+    * [Assign products to the slot](#assigning-products-to-slots-in-configurable-bundle-templates).
+    * [Deassign products from the slot](#deassigning-products-from-slots-in-configurable-bundle-templates).
 4. Select **Save**.
 The page refreshes with the success message displayed.
 
@@ -82,7 +82,7 @@ To assign products to slot in a configurable bundle template:
 
 1. On the *Edit Slot: [slot ID] for [template name]* page, switch to the *Assign Products* tab.
 2. Assign one or more products as follows:
-    * Under *Import Product List*, select **Choose File**. 
+    * Under *Import Product List*, select **Choose File**.
     * Select a CSV file with the product list.
         The file should contain `product_list_key` and `concrete_sku` fields.
 
@@ -129,4 +129,3 @@ To delete a configurable bundle template:
 1. Select **Delete** next to the configurable bundle template you want to delete.
 2. On the *Delete Configurable Bundle Template #[template ID]* page, select **Delete Template**.
 This opens the *Configurable Bundle Templates* page with the success message displayed.
-

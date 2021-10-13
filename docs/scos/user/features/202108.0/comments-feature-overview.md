@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/comments-feature-overview
 ---
 
-The *Comments* feature provides the ability for online owners to add the сomments widget. The widget allows the customers to leave comments, special requests or instructions to any entity in the Spryker shop and tag these comments depending on your project specification.
+The *Comments* feature provides the ability for online owners to add the comments widget. The widget allows the customers to leave comments, special requests or instructions to any entity in the Spryker shop and tag these comments depending on your project specification.
 
 An *entity* is a unit or a component that has some properties and may have relationships with other entities within a system. So, in terms of Spryker Commerce OS, an entity is represented by a Shopping Cart, a Shopping List, a CMS page, etc. It is where the Comments Widget can be located.
 
@@ -35,15 +35,16 @@ The comment contains the following information:
 Company users can add comments to a shared cart in both Read-only and Full Access permissions. A user can also add a comment before submitting the order, on the *Checkout Summary* page as well as post factum, after the order has been placed, on the *Order History* page:
 
 {% info_block warningBox "Note" %}
+
 When reordering the existing order, the comments attached to the order are not duplicated.
+
 {% endinfo_block %}
+
 When the order with the attached comments is placed, the Back Office user can view it with the comments in the  **Orders** section of the Back Office.
 
 ### Comment tags
 
 Every comment may be tagged. *Tags* are keywords associated with the comments. The tags are added to group the comments sharing a similar idea or topic. For example, you may have several comments where colleagues have covered the details on how the order should be delivered, so you may tag these comments with the *Delivery* tag for convenience. Also, in the drop-down menu, you can filter the comments according to tags added.
-
-
 
 ## Comments on the Storefront
 Company users can perform the following actions using the Comments widget on the Storefront:

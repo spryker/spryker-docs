@@ -27,7 +27,7 @@ You can do the following:
 
 ## Creating users
 
-You have already done the primary setup (you have created a [role](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-roles.html) and [group](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-groups.html)), so now it is time to add an actual user record to the system.
+You have already done the primary setup (you have created a [role](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-roles.html) and [group](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-groups.html), so now it is time to add an actual user record to the system.
 
 To create a user record:
 1. In the top right corner of the *User* page, click **Add New User**.
@@ -38,7 +38,7 @@ To create a user record:
     * Assigned groups
     * Agent
     * Interface language
-         
+
 3. Click **Create**.
 
 That's it. The created user record appears on the *Users* page.    
@@ -49,7 +49,7 @@ There is a way to initiate a create-new-user flow while editing a user record. T
 ## Editing users
 
 To edit a user:
-1. In *Users List* > *Action* column, click **Edit**  if you want to change user's details. 
+1. In *Users List* > *Action* column, click **Edit**  if you want to change user's details.
 2. Click **Update**.
 
 ## Reference information: Createing and editing users
@@ -58,9 +58,9 @@ This section describes attributes you see, select, and enter when creating and e
 
 ### Agent user
 
-While creating or editing a user, you can make a specific user to be an agent. 
+While creating or editing a user, you can make a specific user to be an agent.
 
-This is very helpful for Customer Service and Sales departments. 
+This is very helpful for Customer Service and Sales departments.
 
 **Who is an agent user?**
 This is a user that can do the same actions in the online store as a regular buyer.
@@ -69,13 +69,17 @@ This is a user that can do the same actions in the online store as a regular buy
 Let's pretend that there is a customer that needs assistance with his order. He needs a store representative to find the needed items in the catalog and submit an order on his behalf. This is exactly what an agent can do.
 
 **How this can be done?**
-An agent user goes to Yves using _/agent/login_ at the end of the online store URL and logins with their Back Office credentials. 
+An agent user goes to Yves using _/agent/login_ at the end of the online store URL and logins with their Back Office credentials.
 
-In the **Search** field on the top, he searches for the customer email. Once found, clicks **Confirm** on the right. 
+In the **Search** field on the top, he searches for the customer email. Once found, clicks **Confirm** on the right.
 
-Since now he can perform the same actions as a regular customer. Once all needed actions are done and the order is placed, he clicks **End Customer Assistance**. 
+Since now he can perform the same actions as a regular customer. Once all needed actions are done and the order is placed, he clicks **End Customer Assistance**.
+
 {% info_block infoBox %}
-Click to see how it looks on Yves.</br>![Agent User](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Users+Control/User:+Reference+Information/Agent+User.gif
+
+Click to see how it looks on Yves.
+![Agent User](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Users+Control/User:+Reference+Information/Agent+User.gif)
+
 {% endinfo_block %}
 
 ### Creating and editing user page attributes
@@ -97,16 +101,21 @@ The following table describes the attributes used when creating or updating a us
 ## Assigning customers to users
 
 The *Assign Customers* option is used to assign store customers' records to the Back office user records. This is done to enable the Back Office user to preview the CMS Pages in the online store (see [CMS Pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/managing-cms-pages.html#previewing-cms-pages) set of topics).
- 
+
 To assign a customer:
 1. Navigate to the *Users* page.
-2. In the *Users List* > *Action* column, select **Assign Customers**. 
+2. In the *Users List* > *Action* column, select **Assign Customers**.
 3. In the *List of customers* > *Select customers to assign* table, select the check-box next to the customer you want to assign (multiple customers can be selected).
 4. Click **Save**.
-{% info_block infoBox "A customer cannot be assigned to multiple users at a time.)
+
+{% info_block infoBox %}
+
+A customer cannot be assigned to multiple users at a time.
+
+{% endinfo_block %}
 
 **Tips & tricks**
-To de-assign a customer: 
+To de-assign a customer:
 1. On the *Assign Customers to User* page, scroll down to the *Assigned customer*s table.
 2. Remove the check-box next to the customer(s) that needs to become unassigned, and click **Save**.
 
@@ -114,17 +123,23 @@ To de-assign a customer:
 
 To activate or deactivate a user:
 1. In the *Users List* > *Action* column, click **Activate** (or **Deactivate**).
-@(Info" %}
 
-{% endinfo_block %}(If a user has deactivated themselves, this user will get logged out immediately and the message about the successful deactivation will be shown)
+{% info_block infoBox %}
+
+If a user has deactivated themselves, this user will get logged out immediately and the message about the successful deactivation will be shown.
+
+{% endinfo_block %}
+
 2. The status in the _Status_ column will be changed to *Active* or *Deactivated* depending on the action you performed.
- 
- ## Deleting users 
- 
+
+ ## Deleting users
+
 To delete a user:
  1. In the *Users List* > *Action* column, click **Delete**.
 2. On the *Warning* page, click **Delete** to confirm the action.
-{% info_block infoBox %}
-The user's status in the _Status_ column will change to _Deleted_; however, the user still stays in the *Users List* table. If the user has deleted themselves, this user will get logged out immediately and the message about the successful deletion will be shown.
-{% endinfo_block %}
 
+{% info_block infoBox %}
+
+The user's status in the *Status* column will change to *Deleted*. However, the user still stays in the *Users List* table. If the user has deleted themselves, this user will get logged out immediately and the message about the successful deletion will be shown.
+
+{% endinfo_block %}

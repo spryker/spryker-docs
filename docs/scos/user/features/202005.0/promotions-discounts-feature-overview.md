@@ -118,14 +118,6 @@ With the rule groups, you can build multiple levels of rule hierarchy. When a ca
 
 When a cart is evaluated on a level that has a rule and a rule group, the rule group is treated as a single rule. The diagram below shows how a cart is evaluated against the rules on the previous screenshot.
 
-<details open>
-    <summary>Cart evaluation diagram</summary>
-
-![cart evaluation diagram](https://confluence-connect.gliffy.net/embed/image/fd6a6ce1-2c3f-438a-8377-ca337c3703c3.png?utm_medium=live&utm_source=custom)
-
-
-</details>
-
 ### Discount Threshold
 Threshold is a minimum number of items in cart that should fulfill all the specified decision rules for the discount to be applied.
 The default value is *1* . It means that a discount is applied if at least one item fulfills the discount's decision rules.

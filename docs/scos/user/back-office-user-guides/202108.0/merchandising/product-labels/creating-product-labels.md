@@ -44,9 +44,9 @@ Even if there is only one store in your shop, you still need to select it for th
 {% endinfo_block %}
 
 5. In the *Translations* section, enter **Name** for all the locales.
-See [Product Label: References](https://documentation.spryker.com/2021080/docs/product-labels-reference-information) to learn about the attributes on this page.
+See [Reference information: Creating product labels](#reference-information-creating-product-labels) to learn about the attributes on this page.
 6. Switch to the *Products* tab.
-7. In the *Select* column, select one or more products to assign the label to. 
+7. In the *Select* column, select one or more products to assign the label to.
 
 {% info_block warningBox %}
 
@@ -62,7 +62,7 @@ The page refreshes to display the success message about product label creation.
 * Filter the products in the *Available products* tab by entering its name, SKU, or category name in the **Search** field.
 * In the *Selected* column of the *Selected products to assign ({number of products})*, click **Remove** to remove a selected product.
 
-### Reference information: Creating product labels 
+### Reference information: Creating product labels
 
 The following table describes the attributes you see, select, or enter while creating and editing a product label in the Settings tab.
 
@@ -97,4 +97,3 @@ In the *Products* tab, you can do the following:
 
 * To learn how to edit product labels, see [Editing Product Labels](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/managing-product-labels.html#editing-product-labels).
 * To learn how you can manage product labels, see [Managing Product Labels](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/managing-product-labels.html).
-

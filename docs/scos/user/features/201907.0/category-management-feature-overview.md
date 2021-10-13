@@ -61,7 +61,7 @@ The default filter functionality includes s*tandard filters* and *dynamic filter
 
 #### Standard filters
 
-On the Storefront, the standard filters allow buyers to narrow down the search results by filtering products according to the specified price range, product ratings, product labels, color, material, brand, etc. For more details about standard filters, see [Standard filters](/docs/scos/user/features/{{page.version}}/search/search-feature-overview/standard-filters-overview.html).
+On the Storefront, the standard filters allow buyers to narrow down the search results by filtering products according to the specified price range, product ratings, product labels, color, material, brand, etc. For more details about standard filters, see [Standard filters](/docs/scos/user/features/{{page.version}}/search-feature-overview/standard-filters-overview.html).
 
 #### Dynamic filters and facets
 

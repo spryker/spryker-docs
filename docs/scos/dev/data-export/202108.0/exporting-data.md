@@ -1,5 +1,5 @@
 ---
-title: Exporting Data
+title: Exporting data
 description: This article will teach you how to export data from a Spryker shop to an external system
 template: data-export-template
 originalLink: https://documentation.spryker.com/2021080/docs/exporting-data
@@ -21,6 +21,7 @@ related:
 The Data Export is currently a BETA feature.
 
 {% endinfo_block %}
+
 To quickly populate an external system like ERP or OMS with data from your Spryker shop, you can export it as .csv files from the Spryker shop and then import them into the external system.
 
 For now, you can export only order data, which includes data on:
@@ -47,8 +48,7 @@ Spryker Data Export supports the multi-store functionality, which means that you
 
 {% endinfo_block %}
 
-## .yml Export Configuration File
-<a href="yml-export-configuration-file"></a>
+## .yml export configuration file
 
 The .yml export configuration file allows you to define what orders you want to export. The following content is exported:
 
@@ -63,9 +63,10 @@ By default, the .yml export configuration file resides in `./data/export/config/
 The root of data export files is configured globally, and it is not changeable by data export.
 
 {% endinfo_block %}
+
 <a name="structure"></a>
 
-### Structure of the .yml Export Configuration File
+### Structure of the .yml export configuration file
 
 Structure of the .yml export configuration file is as follows:
 
@@ -122,14 +123,14 @@ When running the command for data export with this file,` console data:export --
 See[ Data Export Ordres .csv Files Format](/docs/scos/dev/data-export/{{page.version}}/data-export-orders-.csv-files-format.html)  for details on the content of each of the files.
 <a name="filter"></a>
 
-### Setting the Filter Criteria in a .yml File
+### Setting the filter criteria in a .yml file
 
 You can set the following filter criteria for the order data export in your .yml export configuration file:
 
 * *Store names*: stores from which the data are exported.
 * *Date and time range*: interval *from* what date and time *to* what date and time the order was created, including the *from* and the *to* values. If you use the label `order_updated_at`, the range is relative to the date and time the order was updated.
 
-#### Defining the Stores for Order Data Export
+#### Defining the stores for order data export
 
 To define the stores you want to export the order data for, specify them in *destination* for the specific data entities. Keep in mind that you have to create individual files for each data entity and for each store if your filter criteria include *store_name*.
 
@@ -217,7 +218,7 @@ actions:
 ```
 After running the command with the changed filter criteria for *order-expense*, the *order-expenses_AT.csv* file will only contain the orders created on May 15th, 2020. The other files will contain the orders created from May 1st till July 6th, as specified in *&default_filter_criteria* of the *defaults* section.
 
-## Overwriting Existing .csv Files Upon Repeated Command Run
+## Overwriting existing .csv files upon repeated command run
 
 When exporting data, the newly generated .csv files overwrite the existing ones. Currently, this behavior is not configurable.
 

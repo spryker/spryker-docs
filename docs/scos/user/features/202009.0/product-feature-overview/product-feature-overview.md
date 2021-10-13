@@ -31,7 +31,7 @@ In Spryker Commerce OS, you create and manage products in the [Back Office](/doc
 
 A product can have multiple variants, such as size or color. Such product variations are called *product variants*, or *concrete products*. To distinguish product versions, track their stock, and provide a better shopping experience, product variants are grouped under *abstract products*.
 
-The abstract product is the highest level of the product hierarchy. It does not have its own stock, but defines the properties shared by its product variants. A product variant always belongs to one abstract product, has a distinctive stock, and is always different from another product variant with at least one [super product attribute](#super-product-attributes).
+The abstract product is the highest level of the product hierarchy. It does not have its own stock, but defines the properties shared by its product variants. A product variant always belongs to one abstract product, has a distinctive stock, and is always different from another product variant with at least one [super product attribute](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html).
 
 The following table shows the differences between abstract products and product variants:
 

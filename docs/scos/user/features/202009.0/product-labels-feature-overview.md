@@ -153,7 +153,7 @@ A product label can have the following statuses:
 
 If a product label is active, it is displayed on all the product pages it is applied to. If a product label is inactive, it is still applied to the selected product, but it is not displayed on the respective product pages. This might be useful when you want to prepare for an event beforehand. You can create an inactive product label and apply it to the desired products. When the event starts, you just need to activate the label to show it on all the product pages it is applied to.
 
-See [Activating/deactivating a product label](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/managing-product-labels.html#activating-deactivating-a-product-label) to learn how a Back Office user can activate and deactivate product labels in the Back Office.
+See [Activating/deactivating a product label](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/managing-product-labels.html#editing-product-labels) to learn how a Back Office user can activate and deactivate product labels in the Back Office.
 
 ## Product label exclusivity
 

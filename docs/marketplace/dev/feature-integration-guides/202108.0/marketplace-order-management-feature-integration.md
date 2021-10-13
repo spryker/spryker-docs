@@ -59,6 +59,60 @@ Add the following configuration:
 | MerchantDefaultStateMachine | Introduce `MerchantDefaultStateMachine` configuration. | config/Zed/StateMachine/Merchant/MerchantDefaultStateMachine.xml |
 | MarketplacePayment  | Introduce `MarketplacePayment` order management system. | config/Zed/oms/MarketplacePayment01.xml |
 | Navigation  | Introduce navigation configuration. | config/Zed/navigation.xml |
+| MerchantOmsConfig  | Introduce OMS processes configuration. | src/Pyz/Zed/MerchantOms/MerchantOmsConfig.php |
+
+<details>
+<summary markdown='span'>src/Pyz/Zed/MerchantOms/MerchantOmsConfig.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantOms;
+
+use Spryker\Zed\MerchantOms\MerchantOmsConfig as SprykerMerchantOmsConfig;
+
+class MerchantOmsConfig extends SprykerMerchantOmsConfig
+{
+    /**
+     * @var string
+     */
+    protected const MAIN_MERCHANT_OMS_PROCESS_NAME = 'MainMerchantStateMachine';
+    /**
+     * @var string
+     */
+    protected const MAIN_MERCHANT_STATE_MACHINE_INITIAL_STATE = 'created';
+
+    /**
+     * @return string[]
+     */
+    public function getMerchantProcessInitialStateMap(): array
+    {
+        return array_merge(
+            parent::getMerchantProcessInitialStateMap(),
+            [
+                static::MAIN_MERCHANT_OMS_PROCESS_NAME => static::MAIN_MERCHANT_STATE_MACHINE_INITIAL_STATE,
+            ]
+        );
+    }
+
+    /**
+     * @api
+     *
+     * @return string[]
+     */
+    public function getMerchantOmsProcesses(): array
+    {
+        return array_merge(
+            parent::getMerchantOmsProcesses(),
+            [
+                static::MAIN_MERCHANT_OMS_PROCESS_NAME,
+            ]
+        );
+    }
+}
+```
+
+</details>
 
 <details>
 <summary markdown='span'>config/Zed/StateMachine/Merchant/MainMerchantStateMachine.xml</summary>
@@ -652,11 +706,13 @@ Enable the following behaviors by registering the plugins:
 | MerchantOrderDataOrderExpanderPlugin  | Expands order data with merchant order details | | Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Sales |
 | MerchantReferenceOrderItemExpanderPreSavePlugin  | Expands order item with merchant reference before saving an order item to the database | | Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Sales |
 | MerchantReferencesOrderExpanderPlugin  |Expands order with merchant references from order items  | |	Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Sales  |
-| MerchantReferenceShipmentExpenseExpanderPlugin | Expands expense transfer with merchant reference from items | | Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Shipment |
 | ProductOfferReferenceOrderItemExpanderPreSavePlugin |Expands order item with product offer reference before saving the order item to the database  | | Spryker\Zed\ProductOfferSales\Communication\Plugin\Sales |
 | DeliverMarketplaceOrderItemCommandPlugin | Triggers 'deliver' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
 | ShipByMerchantMarketplaceOrderItemCommandPlugin | Triggers 'ship by merchant' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
 | CancelMarketplaceOrderItemCommandPlugin | Triggers 'ship by merchant' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
+| ShipmentFormTypePlugin | Returns ShipmentFormType class name resolution.  |  | Spryker\Zed\ShipmentGui\Communication\Plugin\Form |
+| ItemFormTypePlugin | Returns ItemFormType class name resolution.  |  | Spryker\Zed\ShipmentGui\Communication\Plugin\Form |
+| MerchantReferenceShipmentExpenseExpanderPlugin | Expands expense transfer with merchant reference from items | | Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Shipment |
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/MerchantOmsCommunicationFactory.php</summary>
@@ -836,33 +892,6 @@ class StateMachineDependencyProvider extends SprykerStateMachineDependencyProvid
 </details>
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/Shipment/ShipmentDependencyProvider.php</summary>
-
-```php
-<?php
-
-namespace Pyz\Zed\Shipment;
-
-use Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Shipment\MerchantReferenceShipmentExpenseExpanderPlugin;
-use Spryker\Zed\Shipment\ShipmentDependencyProvider as SprykerShipmentDependencyProvider;
-
-class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
-{
-    /**
-     * @return \Spryker\Zed\ShipmentExtension\Dependency\Plugin\ShipmentExpenseExpanderPluginInterface[]
-     */
-    protected function getShipmentExpenseExpanderPlugins(): array
-    {
-        return [
-            new MerchantReferenceShipmentExpenseExpanderPlugin(),
-        ];
-    }
-}
-
-```
-</details>
-
-<details>
 <summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/DeliverMarketplaceOrderItemCommandPlugin.php</summary>
 
 ```php
@@ -964,6 +993,68 @@ class MerchantOmsDependencyProvider extends SprykerMerchantOmsDependencyProvider
 ```
 </details>
 
+<details>
+<summary markdown='span'>src/Pyz/Zed/MerchantSalesOrderMerchantUserGui/MerchantSalesOrderMerchantUserGuiDependencyProvider.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantSalesOrderMerchantUserGui;
+
+use Spryker\Zed\Kernel\Communication\Form\FormTypeInterface;
+use Spryker\Zed\MerchantSalesOrderMerchantUserGui\MerchantSalesOrderMerchantUserGuiDependencyProvider as SprykerMerchantSalesOrderMerchantUserGuiDependencyProvider;
+use Spryker\Zed\ShipmentGui\Communication\Plugin\Form\ItemFormTypePlugin;
+use Spryker\Zed\ShipmentGui\Communication\Plugin\Form\ShipmentFormTypePlugin;
+
+class MerchantSalesOrderMerchantUserGuiDependencyProvider extends SprykerMerchantSalesOrderMerchantUserGuiDependencyProvider
+{
+    /**
+     * @return \Spryker\Zed\Kernel\Communication\Form\FormTypeInterface
+     */
+    public function getShipmentFormTypePlugin(): FormTypeInterface
+    {
+        return new ShipmentFormTypePlugin();
+    }
+
+    /**
+     * @return \Spryker\Zed\Kernel\Communication\Form\FormTypeInterface
+     */
+    public function getItemFormTypePlugin(): FormTypeInterface
+    {
+        return new ItemFormTypePlugin();
+    }
+}
+```
+
+</details>
+
+<details>
+<summary markdown='span'>src/Pyz/Zed/Shipment/ShipmentDependencyProvider.php**</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\Shipment;
+
+use Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Shipment\MerchantReferenceShipmentExpenseExpanderPlugin;
+use Spryker\Zed\Shipment\ShipmentDependencyProvider as SprykerShipmentDependencyProvider;
+
+class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
+{
+    /**
+     * @return \Spryker\Zed\ShipmentExtension\Dependency\Plugin\ShipmentExpenseExpanderPluginInterface[]
+     */
+    protected function getShipmentExpenseExpanderPlugins(): array
+    {
+        return [
+            new MerchantReferenceShipmentExpenseExpanderPlugin(),
+        ];
+    }
+}
+```
+
+</details>
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the Merchant State Machine is executed on merchant orders after the order has been split.
@@ -980,5 +1071,4 @@ Integrate the following related features:
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE |INTEGRATION GUIDE |
 | --- | --- | --- |
 | Marketplace Order Management + Order Threshold |  |[Marketplace Order Management + Order Threshold feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-order-threshold-feature-integration.html) |
-| Marketplace Order Management + Cart |  | [Marketplace Order Management + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-cart-feature-integration.html)|
-| Marketplace Inventory Management + Order Management |  |  [Marketplace Inventory Management + Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-order-management-feature-integration.html)  |
+| Marketplace Inventory Management + Order Management |  |  [Marketplace Inventory Management + Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-order-management-feature-integration.html)  |

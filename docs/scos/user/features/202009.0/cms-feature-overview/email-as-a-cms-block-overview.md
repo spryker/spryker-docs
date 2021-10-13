@@ -49,7 +49,7 @@ The email format itself is defined on the code level, the tales serving as ident
 
 
 ### Default Email Templates
-There is a number of email templates with the respective Email CMS Blocks available in the [Spryker Demo Shops](/docs/scos/user/intro-to-spryker/{{site.version}}/about-spryker.html#spryker-b2b-b2c-demo-shops).
+There is a number of email templates with the respective Email CMS Blocks available in the [Spryker Demo Shops](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2b-b2c-demo-shops).
 
 The table below contains the list of the default email templates, their Email CMS Blocks, and purpose.
 
@@ -120,24 +120,3 @@ A developer can provide a full list of variables and create new ones.
 ### Content Items in Email Templates
 
 The CMS capability in Spryker allows you to add [content items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html) into CMS Blocks. Unlike the regular CMS Blocks, the Email CMS Blocks do not support content items. If you insert one, its content is not rendered when the email is sent.
-
-
-## If you are:
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\cms-feature-integration.md" class="mr-link">Enable email as a CMS block in your project by integrate the CMS feature</a></li>
-    </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\content\blocks\managing-content-of-emails-via-cms-blocks.md" class="mr-link">Manage content of emails via CMS Blocks</a></li>
-            </ul>
-        </div>  
-</div>
-</div>

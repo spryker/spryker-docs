@@ -19,32 +19,10 @@ When a Back Office user discountinues a product, they can define the date until 
 
 {% info_block warningBox %}
 
-Only [concrete products](docs\scos\user\features\202009.0\product\product-feature-overview\product-overview.md#abstract-and-concrete-products-variants) can become discontinued.
+Only [concrete products](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/product-feature-overview.html) can become discontinued.
 
 {% endinfo_block %}
 
 The schema below illustrates the relations between discontinued products, abstract and concrete products:
 ![Module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Discontinued+Products/Discontinued+Products+Feature+Overview/discontinued-schema.png)
 
-
-## If you are:
-
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="docs\scos\dev\migration-and-integration\202108.0\feature-integration-guides\quick-add-to-cart-discontinued-products-feature-integration.md" class="mr-link">Integrate the Quick Order + Discontinued Products into your project</a></li>
-                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\alternative-products-discontinued-products-feature-integration.md" class="mr-link">Integrate Alternative Products + Discontinued Products into your project</a></li>
-            </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\catalog\products\managing-products\discontinuing-a-product.md" class="mr-link">Discontinue a product</a></li>
-            </ul>
-        </div>
-    </div>
-</div>

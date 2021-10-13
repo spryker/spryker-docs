@@ -13,7 +13,7 @@ redirect_from:
 ### PHP 7.2 is There Soon / EOL for PHP5.6
 With the release of PHP 7.2, we want our Spryker code to stay cutting edge and using the best features available. Soon, we want to start leveraging the new typehinting features the language provides and for that we need to stop supporting legacy version 5.*.
 
-With the **end of October**, we stop supporting PHP 5.6 and PHP 7.0. Please make sure your infrastructure is running on 7.1+ before that. Read [gophp71.org](https://gophp71.org/) for details on why 7.1+ is the next minimum version.
+With the **end of October**, we stop supporting PHP 5.6 and PHP 7.0. Please make sure your infrastructure is running on 7.1+ before that. Read [gophp71.org](https://gophp71.org//) for details on why 7.1+ is the next minimum version.
 
 ## Features
 ### Shipment Discount
@@ -28,7 +28,6 @@ For this reason, three shipment discount types have been implemented:
 * Price – a discount to a delivery price
 
 You can now create discount calculation rules like the one in the example below. The example below will ensure that if the selected shipment carrier is the Spryker Dummy Shipment, selected shipment method is the Express and the price of this Express shipment method is greater than or equal to 5, then the discount is applied. If, for example, you remove the middle rule ("shipment-method equal Express (Spryker Dummy Shipment)", then the discount will be applied for all shipment methods from Spryker Dummy Shipment shipment carrier if the price of the shipment method is greater than or equal to 5.
-![Shipment discount](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Archive/RN_shipment_discount.png)
 
 **Affected Modules**
 

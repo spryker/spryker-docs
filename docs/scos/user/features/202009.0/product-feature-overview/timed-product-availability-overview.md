@@ -28,18 +28,3 @@ The table below shows possible usage scenarios with the TTL feature and resultin
 | "Valid from" is not set, "Valid to" is set | Product goes online after manual activation and remains online till "Valid to" time is reached. |
 | "Valid to" is set in the past | Product will be deactivated shortly. |
 | "Valid from" is set, "Valid to" is set and lies in the future, the product is deactivated manually | Message saying that the product will be activated because of setting "Valid from" and "Valid to" time.|
-
-
-## If you are:
-
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\catalog\products\concrete-products\creating-a-product-variant.md" class="mr-link">Manage concrete product validity dates</a></li>
-            </ul>
-        </div>
-    </div>
-</div>

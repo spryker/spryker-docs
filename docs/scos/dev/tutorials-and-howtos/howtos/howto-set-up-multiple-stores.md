@@ -188,4 +188,4 @@ return 'DE';
 
 ## 4. Verification
 
-Once done, you can check the list of the created stores in the Back Office, in [**Administration > Stores**](https://documentation.spryker.com/2021080/docs/stores-reference-information-201911).
+Once done, you can check the list of the created stores in the Back Office, in [**Administration > Stores**](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/stores.html).

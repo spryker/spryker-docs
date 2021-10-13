@@ -9,8 +9,10 @@ redirect_from:
 ---
 
 {% info_block infoBox "Info" %}
-Check [this article](/docs/scos/user/intro-to-spryker/{{site.version}}/about-spryker.html#spryker-b2b-b2c-demo-shops
-{% endinfo_block %} to learn about Spryker Commerce OS (SCOS).)
+
+Check [this article](/docs/scos/user/intro-to-spryker/{{site.version}}/about-spryker.html#spryker-b2b-b2c-demo-shops) to learn about Spryker Commerce OS (SCOS)
+
+{% endinfo_block %}
 
 ## Include Econda Libraries and Scripts for Tracking and Cross-sell
 Econda scripts are recommended to be connected at all the shop pages. To implement that:

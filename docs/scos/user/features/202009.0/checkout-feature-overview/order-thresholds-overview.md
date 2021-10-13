@@ -122,23 +122,3 @@ If the global minimum threshold is €400, and the minimum threshold per merchan
 
 The scheme below shows the relations of entities in the order thresholds functionality.  
 ![context-of-the-minimum-order-value-module](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Minimum+Order+Value/Minimum+Order+Value+Feature+Overview/context-of-the-minimum-order-value-module.png)
-
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="">Enable order thresholds by integrating the Checkout feature into your project</a></li>
-            </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title">Back Office User</li>
-                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\glue-api\glue-api-checkout-feature-integration.md">Manage global thresholds</a></li>
-                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\administration\thresholds\managing-merchant-order-thresholds.md" class="mr-link">Manage merchant order thresholds</a></li>
-            </ul>
-        </div>
-    </div>
-</div>

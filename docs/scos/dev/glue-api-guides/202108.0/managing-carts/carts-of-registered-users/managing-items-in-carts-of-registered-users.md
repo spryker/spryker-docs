@@ -79,7 +79,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 <summary>Request sample with product measurement units and sales units</summary>
 
 `POST http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items?include=sales-units,product-measurement-units`
-    
+
 ```json
 {
     "data": {
@@ -114,7 +114,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 }
 ```
 
-</details> 
+</details>
 
 <details open>
 <summary>Request sample with vouchers</summary>
@@ -133,18 +133,18 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 }
 ```
 
-</details> 
+</details>
 
 <details open>
 <summary>Request sample with a promotional item and cart rules</summary>
-    
+
 {% info_block infoBox "Cart rules" %}
 
 
 To add the promotional product to the cart, make sure that the cart fulfills the cart rules for the promotional item.
 
 {% endinfo_block %}
-    
+
 `POST https://glue.myspsrykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/items?include=cart-rules`
 
 ```json
@@ -165,7 +165,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 <summary>Request sample with concrete products and product options</summary>
 
 `POST http://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398/items?include=concrete-products,product-options`
-    
+
 ```json
 {
     "data": {
@@ -2345,9 +2345,9 @@ It is the responsibility of the API Client to track whether the selected items a
 | sumDiscountAmountFullAggregation | Integer | Item total discount amount with additions. |
 | unitPriceToPayAggregation | Integer | Item total price to pay after discounts with additions. |
 | sumPriceToPayAggregation | Integer | Sum of the prices to pay (after discounts).|
-| salesUnit |Object | List of attributes defining the sales unit to be used for item amount calculation. | 
+| salesUnit |Object | List of attributes defining the sales unit to be used for item amount calculation. |
 | salesUnit.id | Integer | Numeric value the defines the sales units to calculate the item amount in. |
-| salesUnit.amount | Integer | Amount of product in the defined sales units. | 
+| salesUnit.amount | Integer | Amount of product in the defined sales units. |
 | selectedProductOptions | array | List of attributes describing the product options that were added to cart with the product. |
 | selectedProductOptions.optionGroupName | String | Name of the group to which the option belongs. |
 | selectedProductOptions.sku | String | SKU of the product option. |
@@ -2783,7 +2783,7 @@ Request sample:
 ```    
 </details>
 
-For the attributes of the included resources, see [Retrieving Concrete Products](https://documentation.spryker.com/2021080/docs/retrieving-product-information#retrieve-concrete-products).
+For the attributes of the included resources, see [Retrieving Concrete Products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html).
 
 ## Change quantity of configurable bundles in a registered user’s cart
 

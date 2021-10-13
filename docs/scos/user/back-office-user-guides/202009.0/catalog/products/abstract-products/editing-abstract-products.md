@@ -80,8 +80,8 @@ To edit volume prices of an abstract product:
 
 ## Editing product variants of an abstract product
 
-To edit a product variant, follow [Editing product variants](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/concrete-products/editing-a-product-variant.html). 
-To create a product variant, follow [Creating product variants](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/concrete-products/editing-a-product-variant.html)
+To edit a product variant, follow [Editing product variants](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/concrete-products/editing-product-variants.html). 
+To create a product variant, follow [Creating product variants](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/concrete-products/editing-product-variants.html)
 
 ## Editing meta information of an abstract product
 

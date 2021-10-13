@@ -16,27 +16,3 @@ Check out this video to get more details on how Punchout works:
 
 {% wistia ntehv57yxb 960 720 %}
 
-## If you are:
-
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="docs\scos\user\features\202009.0\technology-partner-integrations\punchout\punchout-feature-overview.md" class="mr-link">Familiarize yourself with the Punchout feature</a></li>
-                <li><a href="docs\scos\dev\technology-partners\202009.0\order-management-erpoms\punchout-catalogs\punchout-catalog-feature-integration.md" class="mr-link">Integrate Punchout Catalog feature into your project</a></li>
-                <li><a href="docs\scos\dev\technology-partners\202009.0\order-management-erpoms\punchout-catalogs\eco-punchout-catalogs-feature-integration.md" class="mr-link">Integrate Eco: Punchout Catalogs feature into your project</a></li>
-                  <li><a href="docs\scos\dev\technology-partners\202009.0\order-management-erpoms\punchout-catalogs\eco-punchout-catalogs-product-bundles-feature-integration.md" class="mr-link">Integrate Eco: Punchout Catalogs + Product Bundles feature into your project</a></li>
-            </ul>
-        </div>
-         <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\punch-out\managing-punch-out-connections.md" class="mr-link">Manage Punchout Connections</a></li>
-                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\punch-out\managing-transactions-log.md" class="mr-link">Manage Transactions Logs</a></li>
-            </ul>
-        </div>
-         </div>
-</div>

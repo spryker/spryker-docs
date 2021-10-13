@@ -19,29 +19,3 @@ With *Order Cancellation*, allow your customers to cancel orders within a define
 To make it easier for your customers to manage their orders and shipments, you can offer them to split a single order into multiple shipments with *Split Delivery*. For example, they might want to buy presents for the holidays and ship them to different addresses. With just the standard single delivery, they would have to place multiple orders for this. Split Delivery allows delivering order items to different shipping addresses and on different days, with different shipment methods.
 
 B2B customers usually purchase large volumes of products selecting specific measuring and packaging units relevant for their orders. In B2B eCommerce shops, some products, for example in pallets, might contain hundreds or even thousands and millions of items. Buying such products generally results in creation of hundreds, thousands or more sales order items in the database, and this might affect the system performance. Also, the customer ends up with a huge list of products on the checkout and order overview pages, which creates a bad buying experience. *Splittable Order Items* allow you to avoid long lists of sales order items, as you can choose not to split product concretes into separate sales items upon order.
-
-
-## If you are:
-
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\order-management-feature-integration.md" class="mr-link">Get a general idea of Invoice Generation</a></li>
-                <li><a href="docs\scos\user\features\202009.0\order-management\order-management-feature-overview\invoice-generation-overview.md" class="mr-link">Get a general idea of Invoice Generation</a></li>
-               <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\order-management-feature-integration.md" class="mr-link">Integrate the Order Management feature into your project</a></li>
-                <li><a href="docs\scos\dev\glue-api-guides\202009.0\retrieving-orders.md" class="mr-link">Manage orders via Glue API</a></li>
-            </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\sales\orders\managing-orders.md" class="mr-link">Manage Orders</a></li>
-            </ul>
-                </div>
-                  <!-- col3 -->
-        
-</div>

@@ -59,27 +59,3 @@ This is how the Order Cancellation feature works on the Spryker Demo Shop Storef
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Order+Cancellation/Order+Cancellation+Feature+Overview/shop-guide-cancelling-orders.gif)
 
-
-
-## If you are:
-
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-               <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\order-management-feature-integration.md" class="mr-link">Enable order cancellation by integrating the Order Management feature into your project</a></li>
-                <li><a href="docs\scos\dev\glue-api-guides\202009.0\retrieving-orders.md" class="mr-link">Manage orders via Glue API</a></li>
-            </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\sales\orders\managing-orders.md" class="mr-link">Manage Orders</a></li>
-            </ul>
-                </div>
-                  <!-- col3 -->
-
-</div>

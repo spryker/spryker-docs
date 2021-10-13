@@ -21,130 +21,56 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 <details open>
 <summary>B2C feature list</summary>
 
-[**Product feature overview**](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html):
+- [Configurable Product](/docs/scos/user/features/{{site.version}}/configurable-product-feature-overview.html)
+- [Return Management](/docs/scos/user/features/{{site.version}}/return-management-feature-overview/return-management-feature-overview.html)
+- [Configurable Bundle](/docs/scos/user/features/{{site.version}}/configurable-bundle-feature-overview.html)
+- [Comments](/docs/scos/user/features/{{site.version}}/comments-feature-overview.html)
+- [Persistent Cart Sharing](/docs/scos/user/features/{{site.version}}/persistent-cart-sharing-feature-overview.html)
+- [Scheduled Prices](/docs/scos/user/features/{{site.version}}/scheduled-prices-feature-overview.html)
+- [Availability Notification](/docs/scos/user/features/{{site.version}}/availability-notification-feature-overview.html)
+- [Customer Account Management](/docs/scos/user/features/{{site.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html)
+- [Customer Access](/docs/scos/user/features/{{site.version}}/customer-access-feature-overview.html)
+- [Order Management](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/order-management-feature-overview.html)
+- [Refunds](/docs/scos/user/features/{{site.version}}/refunds-feature-overview.html)
+- [Reclamations](/docs/scos/user/features/{{site.version}}/reclamations-feature-overview.html)
+- [State Machine](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html)
+- [Inventory Management](/docs/scos/user/features/{{site.version}}/inventory-management-feature-overview.html)
+- [Spryker Core Back Office](/docs/scos/user/features/{{site.version}}/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.html)
+<!---- [Development tools]()-->
+<!---- [Deployment tools]()-->
+- [Prices](/docs/scos/user/features/{{site.version}}/prices-feature-overview/prices-feature-overview.html)
+- [Tax](/docs/scos/user/features/{{site.version}}/tax-feature-overview.html)
+- [Promotions & Discounts](/docs/scos/user/features/{{site.version}}/promotions-discounts-feature-overview.html)
+- [Wishlist](/docs/scos/user/features/{{site.version}}/wishlist-feature-overview.html)
+- [Cart](/docs/scos/user/features/{{site.version}}/cart-feature-overview/cart-feature-overview.html)
+- [Reorder](/docs/scos/user/features/{{site.version}}/reorder-feature-overview.html)
+- [Shipment](/docs/scos/user/features/{{site.version}}/shipment-feature-overview.html)
+- [Agent Assist](/docs/scos/user/features/{{site.version}}/agent-assist-feature-overview.html)
+- [Payments](/docs/scos/user/features/{{site.version}}/payments-feature-overview.html)
+<!---- [Invoice]()-->
+- [Gift cards](/docs/scos/user/features/{{site.version}}/gift-cards-feature-overview.html)
+- [Checkout](docs/scos/user/features/{{site.version}}/checkout-feature-overview/checkout-feature-overview.html)
+- [Mailing & Notifications](/docs/scos/user/features/{{site.version}}/mailing-and-notifications-feature-overview.html)
+- [Spryker Core](/docs/scos/user/features/{{site.version}}/spryker-core-feature-overview/spryker-core-feature-overview.html)
+- [Product](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html)
+- [Alternative Products](/docs/scos/user/features/{{site.version}}/alternative-products-feature-overview.html)
+- [Product Groups](/docs/scos/user/features/{{site.version}}/product-groups-feature-overview.html)
+- [Product Relations](/docs/scos/user/features/{{site.version}}/product-relations-feature-overview.html)
+- [Product Sets](/docs/scos/user/features/{{site.version}}/product-sets-feature-overview.html)
+- [Product Options](/docs/scos/user/features/{{site.version}}/product-options-feature-overview.html)
+- [Product Barcode](/docs/scos/user/features/{{site.version}}/product-barcode-feature-overview.html)
+- [Product Bundles](/docs/scos/user/features/{{site.version}}/product-bundles-feature-overview.html)
+- [Product Rating & Reviews](/docs/scos/user/features/{{site.version}}/product-rating-and-reviews-feature-overview.html)
+- [Product Labels](/docs/scos/user/features/{{site.version}}/product-labels-feature-overview.html)
+- [Product Lists](/docs/scos/user/features/{{site.version}}/product-lists-feature-overview.html)
+- [Non-splittable Products](docs/scos/user/features/{{site.version}}/non-splittable-products-feature-overview.html)
+- [Catalog](/docs/scos/user/features/{{site.version}}/catalog-feature-overview.html)
+- [Category Management](/docs/scos/user/features/{{site.version}}/category-management-feature-overview.html)
+- [Navigation](/docs/scos/user/features/{{site.version}}/navigation-feature-overview.html)
+- [Search](/docs/scos/user/features/{{site.version}}/search-feature-overview/search-feature-overview.html)
+- [CMS](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-feature-overview.html)
+- [File Manager](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/file-manager-feature-overview.html)
 
-* [Product Abstraction](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html)
-* [Product Attributes](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-attributes-overview.html)
-* [Product Groups](/docs/scos/user/features/{{site.version}}}/product-groups-feature-overview.html)
-* [Product Bundles](/docs/scos/user/features/{{site.version}}}/product-bundles-feature-overview.html)
-* [Product Sets](/docs/scos/user/features/{{site.version}}/product-sets-feature-overview.html)
-* [Product Relations](/docs/scos/user/features/{{site.version}}/product-relations-feature-overview.html)
-* [Product Options](/docs/scos/user/features/{{site.version}}/product-options-feature-overview.html)
-* [Product Labels](/docs/scos/user/features/{{site.version}}/product-labels-feature-overview.html)
-* [Timed Product Availability](/docs/scos/user/features/{{site.version}}/product-feature-overview/timed-product-availability-overview.html)
-* [Alternative Products](/docs/scos/user/features/{{site.version}}/alternative-products-feature-overview.html)
-* [Discountinued Products](/docs/scos/user/features/{{site.version}}/product-feature-overview/discontinued-products-overview.html)
-
-[**Catalog Management**](/docs/scos/user/features/{{site.version}}catalog-feature-overview.html):
-
-* [Category Management](/docs/scos/user/features/{{site.version}}/category-management-feature-overview.html)
-
-[**Navigation**](/docs/user/features/{[site.version}}/navigation-feature-overview.html)
-
-[**Search & Filter**](/docs/scos/user/features/{{site.version}}/search-feature-overview/search-feature-overview.html):
-
-* [Category Filters](/docs/scos/user/features/{{site.version}}/search/search-feature-overview/category-filters-overview.html)
-* [Standard Filters](/docs/scos/user/features/{{site.version}}/search/search-feature-overview/standard-filters-overview.html)
-
-[**CMS (Content Management System)**](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-feature-overview.html):
-
-* [CMS Templates & Slots](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html)
-* [CMS Blocks](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-feature-overview.html-block)
-* [CMS Pages](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-feature-overview.html-page)
-* [Content Items](/docs/scos/user/features/{{site.version}}/content-items-feature-overview.html)
-
-[**Media Management**](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/file-manager-feature-overview.md):
-
-* [Product Image Management](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-images-overview.html)
-* [Image Hosting](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-images-overview.html)
-* [Asset Management](/docs/scos/user/features/{{site.version}}/file-manager/file-manager-feature-overview/asset-management.html)
-* [Video Embedding](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/file-manager-feature-overview.md)
-
-* [Multiple Stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html)
-* [Multiple Currencies per Store](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multiple-currencies-per-store-configuration.html)
-* [Tax feature overview](/docs/scos/user/features/{{site.version}}/tax-feature-overview.html)
-* [Glossary Creation](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/glossary/managing-glossary.html)
-
-[**Price**](/docs/scos/user/features/{{site.version}}/prices-feature-overview/prices-feature-overview.html):
-
-* [Autodetect of Currency](/docs/scos/user/features/{{site.version}}/prices-feature-overview/prices-feature-overview.html)
-* [Volume Prices](/docs/scos/user/features/{{site.version}}/prices-feature-overview/volume-prices-overview.html)
-* [Net & Gross Price Mode](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/net-and-gross-prices-management.html)
-* [Scheduled Prices](/docs/scos/user/features/{{site.version}}/scheduled-prices-feature-overview.html)
-
-
-[**Tax**](/docs/scos/user/features/{{site.version}}/tax-feature-overview.html):
-[Manage Tax Rates & Sets](/docs/scos/user/features/{{site.version}}/tax-feature-overview.html)
-
-[**Promotions & Discounts**](/docs/scos/user/features/{{site.version}}/promotions-discounts-feature-overview.html)
-
-[**Wishlist**](/docs/scos/user/features/{{site.version}}/wishlist-feature-overview.html):
-
-* [Multiple Wishlists](/docs/scos/user/features/{{site.version}}/wishlist-feature-overview.html)
-* [Named Wishlists](/docs/scos/user/features/{{site.version}}/wishlist-feature-overview.html)
-* [Convert Wishlist to Cart](/docs/scos/user/features/{{site.version}}/wishlist-feature-overview.html#converting-wishlist-to-cart)
-
-[**Shopping Cart**](/docs/scos/user/features/{{site.ersion}}/cart-feature-overview/cart-feature-overview.html):
-
-* [Cart Functionality & Calculations](/docs/scos/user/features/{{site.ersion}}/cart-feature-overview/cart-feature-overview.html)
-* [Discounts](/docs/scos/user/features/{{site.version}}/promotions-discounts-feature-overview.html)
-* [Order Thresholds](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/order-thresholds-overview.html)
-
-[**Shipment**](/docs/scos/user/features/{{site.version}}/shipment-feature-overview.html):
-
-* [Split Delivery](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/split-delivery-overview.html)
-
-[**Payment**](/docs/scos/user/features/{{site.version}}/payments-feature-overview.html):
-
-* [Refund Management](/docs/scos/user/features/{{site.version}}/refunds-feature-overview.html)
-
-[**Gift Cards**](/docs/scos/user/features/{{site.version}}/gift-cards-feature-overview.html):
-
-[**Checkout**](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/checkout-feature-overview.html):
-
-* [Multi-Step Checkout](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/multi-step-checkout-overview.html)
-* [Define Shipment Methods](/docs/scos/user/features/{{site.version}}/shipment-feature-overview.html)
-
-[**Ratings & Review**](/docs/scos/user/features/{{site.version}}/product-rating-and-reviews-feature-overview.html):
-
-[**Mailing & Notifications**](/docs/scos/user/features/{{site.version}}/mailing-and-notifications-feature-overview.html):
-
-* [Back in Stock Notification](/docs/scos/user/features/{{site.version}}/availability-notification-feature-overview.html)
-* [Comment Widget](/docs/scos/user/features/{{site.version}}/comments-feature-overview.html)
-
-[**CRM (Customer Relationship Management)**](/docs/scos/user/features/{{site.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html):
-
-* [Customer Accounts](/docs/scos/user/features/{{site.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html)
-* [Login & Registration Forms](/docs/scos/user/features/{{site.version}}/customer-account-management-feature-overview/customer-registration-overview.html)
-* [Password Management](/docs/scos/user/features/{{site.version}}/customer-account-management-feature-overview/password-management-overview.html)
-* [Customer Groups](/docs/scos/user/features/{{site.version}}/customer-account-management-feature-overview/customer-groups-overview.html)
-
-[**Order Management**](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/order-management-feature-overview.html):
-
-* [Order Management System (OMS) Matrix](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/oms-order-management-system-matrix.html)
-* [Reorder](/docs/scos/user/features/{{site.version}}/reorder-feature-overview.html)
-* [Reclamations](/docs/scos/user/features/{{site.version}}/reclamations-feature-overview.html)
-
-[**Inventory Management**](/docs/scos/user/features/{{site.version}}/inventory-management-feature-overview.html):
-
-* [Stock & Availability Management](/docs/scos/user/features/{{site.version}}/inventory-management-feature-overview.html)
-* [Multiple Warehouse Stock Management](/docs/scos/user/features/{{site.version}}/inventory-management-feature-overview.html)
-
-**Back Office**:
-
-* [Back Office Management](/docs/scos/user/features/{{site.version}}/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.html)
-* [Permission & ACL Management](/docs/scos/dev/feature-walkthroughs/{{site.version}}/user-and-rights-overview.html)
-
-**SDK**:
-
-* [Spryk Code Generator](/docs/scos/dev/sdk/{{site.version}}/development-tools/spryk-code-generator.html)
-* [Importer](/docs/scos/dev/sdk/{{site.version}}/data-import.html)
-* [Development Virtual Machine, Docker Containers & Console](/docs/scos/dev/sdk/{{site.version}}/development-virtual-machine-docker-containers-and-console.html)
-* [CSS Class Customization](/docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html)
-* [Cronjob Scheduling](/docs/scos/dev/back-end-development/cronjobs/adding-and-configuring-a-cronjob.html)
-
-[**Technology Partner Integrations**](/docs/scos/user/technology-partners/{{site.version}}/technology-partner-integration.html):
-[External Integrations](/docs/scos/user/technology-partners/{{site.version}}/technology-partner-integration.html)
 <br>
 </details>
 

@@ -23,7 +23,7 @@ You manage orders by:
 
 To start managing orders, go to **Sales** > **Orders**.
 
-The instuctions assume that there is an existing order with the *Payment pending* status.
+The instructions assume that there is an existing order with the *Payment pending* status.
 
 Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
 
@@ -172,8 +172,6 @@ This section describes the attributes you see when viewing the returns for order
 | Order reference | Reference number of the order.|
 | Order date | Date when the order was placed. |
 | Unique Product Quantity | Number of unique products in the order. |
-
-
 
 #### Returns section
 <a name="returns-section"></a>

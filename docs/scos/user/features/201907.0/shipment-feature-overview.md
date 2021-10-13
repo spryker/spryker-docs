@@ -56,7 +56,7 @@ You can give shipment discounts based on the carrier, shipment method, or cart v
 |BACK OFFICE USER GUIDES|
 |---|
 | [Get a general idea of the Shipment feature](/docs/scos/user/features/{{page.version}}/shipment/shipment-feature-overview.html)  |
-| [Create a carrier company](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-a-carrier-company.html)  |
+| [Create a carrier company](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-carrier-companies.html)  |
 | [Create and manage delivery methods](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html)  |
 
 {% info_block warningBox "Developer guides" %}

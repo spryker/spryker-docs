@@ -98,7 +98,7 @@ The table below contains the list of the default email templates, their Email CM
 
 See [Managing Content of Emails via CMS Blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-content-of-emails-via-cms-blocks.html) to learn how a Back Office User manages the content of email templates by editing Email CMS Blocks.
 
-After creating email templates, a developer can [import](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-cms-block.csv.html#file-details--cms_block-csv) their assigned Email CMS Blocks. See [example of the import file](https://github.com/spryker-shop/suite/blob/master/data/import/common/common/cms_block.csv) with the Email CMS Blocks in Spryker Master Suite.
+After creating email templates, a developer can [import](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-cms-block.csv.html) their assigned Email CMS Blocks. See [example of the import file](https://github.com/spryker-shop/suite/blob/master/data/import/common/common/cms_block.csv) with the Email CMS Blocks in Spryker Master Suite.
 
 ## Email Content
 

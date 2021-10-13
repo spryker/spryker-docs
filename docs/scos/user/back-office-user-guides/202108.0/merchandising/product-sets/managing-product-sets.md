@@ -28,9 +28,12 @@ To edit a product set:
     2. Define the position of the products in the set by putting the appropriate numbers in the _Position_ column. The product that has 0 in the _Position_ column goes first.
 ![Editing a product set](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Sets/Managing+Product+Sets/editing-product-set.png)
 
-    {% info_block infoBox "Info" %}
-The attributes you see are described in [Product Sets: Reference Information](https://documentation.spryker.com/2021080/docs/product-sets-reference-information).
+{% info_block infoBox "Info" %}
+
+The attributes you see are described in [Reference Information: Creating product sets](/docs/scos/user/back-office-user-guides/202108.0/merchandising/product-sets/creating-product-sets.html#reference-information-creating-product-sets).
+
 {% endinfo_block %}
+
 3. Click **Submit**.
 
 **Tips & tricks**
@@ -41,9 +44,9 @@ On this page,  in the top right corner, you can click **View** and switch to the
 The weight defines the order of the product sets displayed in the Product Sets section.
 
 If you want to reorder the product sets, you:
-1. In the top right corner of the *Product Sets* page, click **Reorder Product Sets**. 
-2. On the *Reorder Product Sets* page, define the order by putting the appropriate numbers in the _Weight_ column. Product sets with higher numbers are listed first. 
-   
+1. In the top right corner of the *Product Sets* page, click **Reorder Product Sets**.
+2. On the *Reorder Product Sets* page, define the order by putting the appropriate numbers in the _Weight_ column. Product sets with higher numbers are listed first.
+
 ![Reordering product sets](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Sets/Managing+Product+Sets/reorder-product-sets.png)
 
 3. Click **Submit**.
@@ -59,18 +62,17 @@ To view a product set:
 
 ## Activating and deactivating product sets
 
-To activate/deactivate a product set: 
+To activate/deactivate a product set:
 1. In the _Actions_ column of the Product Sets table, click **Deactivate** for a specific product set.
     **Or**
 2. Navigate to the **View Product Set** table, and in the top right corner, and click **Deactivate**.
 
 ## Deleting product set
 
-To delete a product set, in the _Actions_ column of the *Product Sets* page, click **Delete**. 
+To delete a product set, in the _Actions_ column of the *Product Sets* page, click **Delete**.
+
 {% info_block infoBox "Info" %}
 
 This will not delete the products included in this set. Those products will continue to exist in the system, and customers will be able to buy them. Only the logical connection between the products will be erased, and the product set will not be displayed for your customers.
 
 {% endinfo_block %}
-
-

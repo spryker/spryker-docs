@@ -26,7 +26,7 @@ Only [active](/docs/scos/user/back-office-user-guides/{{page.version}}/users/rol
 <a name="prerequisites"></a>
 {% info_block warningBox "Prerequisites" %}
 
-To log in with a Back Office user account, you should have the account preliminary created either [by the existing Back Office user](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-users.html#creating-users) or [programmatically by a developer](/docs/scos/user/features/{{page.version}}/spryker-core-back-office/spryker-core-back-office-feature-overview/users-and-rights-overview.html#add-acl).
+To log in with a Back Office user account, you should have the account preliminary created either [by the existing Back Office user](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-users.html#creating-users) or [programmatically by a developer](/docs/scos/user/feature-walkthroughs/{{page.version}}/customer-account-management-feature-walkthrough/user-and-rights-overview.html).
 
 {% endinfo_block %}
 
@@ -56,7 +56,7 @@ To log in with a third-party system credentials:
 1. In the login form, click **Login with {Third-party service name}**. This redirects your to the third-party sign-in page.
 2. Log in to the third-party system by entering your username and password.
 
-You are taken to the Back Office home page as a logged-in user. User with the email you used for the third-party service login appears on the [*Users*](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-users.html#user-page) page.
+You are taken to the Back Office home page as a logged-in user. User with the email you used for the third-party service login appears on the [*Users*](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-users.html) page.
 
 {% info_block warningBox %}
 

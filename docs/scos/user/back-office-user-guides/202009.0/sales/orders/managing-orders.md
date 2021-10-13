@@ -21,18 +21,18 @@ You manage orders by:
 ## Prerequisites
 The instuctions assume that there is an existing order with the *Payment pending* status.
 
-## Changing Order Statuses 
+## Changing Order Statuses
 
 **To change the status of an order:**
-1. In the **List of orders**, click **View** next to the order you want to change the status of. 
+1. In the **List of orders**, click **View** next to the order you want to change the status of.
 You are taken to the *View Order: [order ID]* page.
 2. In the **Trigger all matching states** section, click **pay**.
-    The page refreshes to show the message about successful status change. In the **Trigger all matching states** section, you can see the *ship* button. 
+    The page refreshes to show the message about successful status change. In the **Trigger all matching states** section, you can see the *ship* button.
 3. Repeat step 2 until you get the desired order status.
 
 
 **To change the status of the items in a shipment:**
-1. In the **List of orders**, click **View** next to the order owing the items you want to change the status of. 
+1. In the **List of orders**, click **View** next to the order owing the items you want to change the status of.
 You are taken to the *View Order: [order ID]* page.
 2. Scroll down to the desired shipment.
 3. Select the checkbox next to the products you want to change the status of.
@@ -42,7 +42,7 @@ You are taken to the *View Order: [order ID]* page.
 
 
 **To change the status of an item:**
-1. In the **List of orders**, click **View** next to the order owing the items you want to change the status of. 
+1. In the **List of orders**, click **View** next to the order owing the items you want to change the status of.
 You are taken to the *View Order: [order ID]* page.
 2. Scroll down to the desired item.
 3. In the _Trigger event_ column next to the desired product, click **pay**.
@@ -50,13 +50,13 @@ The page refreshes to show the message about successful status change. In the _T
 
 
 **Tips & Tricks**
-To change the status of all the items inside a shipment at once, click **pay** in the **Trigger all matching states of order inside this shipment** section of the corresponding shipment. 
+To change the status of all the items inside a shipment at once, click **pay** in the **Trigger all matching states of order inside this shipment** section of the corresponding shipment.
 
 To learn more about order statuses, see [Orders: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/references/reference-information-orders.html).
 
 The order statuses you set here do not always have the same wording on the Storefront. For details on how you can display custom names for statuses on the Storefront, see [HowTo - Display Custom Names for Order Item States on the Storefront](/docs/scos/dev/tutorials-and-howtos/202009.0/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html).
 
-## Creating a Return
+## Creating Returns
 If a sales order item is[ returnable](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html), you can create a return for it. Keep in mind, that you can create returns as for the registered, so also for the guest users. Creating a return from the Back Office is the only way for the *guest users* to return an order.
 
 To create a return:
@@ -79,7 +79,7 @@ You can create returns for the items that are in *Exported* or *Delivered* state
 {% endinfo_block %}
 
 ## Viewing the Returns for Orders
-If returns have been created for an order, they are displayed on the *View Order: [Order ID]* page in the Returns section. 
+If returns have been created for an order, they are displayed on the *View Order: [Order ID]* page in the Returns section.
 
 {% info_block infoBox "Info" %}
 
@@ -95,7 +95,7 @@ To view details on a return, click **View** in the Actions column of the *Return
 
 1. In the **List of orders**, click **View** next to the order you want to update the custom order reference of.
 2. In the **Custom Order Reference** section of the *View Order: [Order ID]* page, click **Edit Reference**.
-![edit-custom-order-reference](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Sales/Managing+Orders/edit-custom-order-reference.png) 
+![edit-custom-order-reference](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Sales/Managing+Orders/edit-custom-order-reference.png)
 3. Update the custom order reference.
 4. Click **Save**.
 
@@ -115,7 +115,7 @@ Claiming an order does not change the status of the order or the items inside th
 
 ## Commenting Orders
 
-To [comment](/docs/scos/user/features/{{page.version}}/comments/comments-feature-overview.html) an order:
+To [comment](/docs/scos/user/features/{{page.version}}/comments-feature-overview.html) an order:
 1. Click **View** next to the order you want to comment.
 2. On the *View Order: [Order ID]* page, scroll down to the **Comments** section.
 3. Enter the comment in the **Message** field.
@@ -125,23 +125,22 @@ The page refreshes to show the success message about comment creation. Your mess
 **Tips & Tricks**
 * To send an email to a customer, on the *Overview of Orders* page, click the hyperlinked customer email in the _Email_ column.
 * To view customer details:
-    * On the *Overview of Orders* page, click the hyperlinked customer name in the *Customer Full Name* column. 
-    * On the *View Order* page, scroll down to the *Customer* section and click the hyperlinked **Reference**. 
+    * On the *Overview of Orders* page, click the hyperlinked customer name in the *Customer Full Name* column.
+    * On the *View Order* page, scroll down to the *Customer* section and click the hyperlinked **Reference**.
 
-## Editing a Billing Address 
+## Editing a Billing Address
 
 To edit a billing address:
 
 1. Click **View** next to the order you want to edit the billing address of.
 2. On the *View Order* page, scroll down to the **Customer** section.
 3. Under the **Billing address**, click **Edit**. The *Edit Address for Order* page opens.  
-![Edit billing address button](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Sales/Managing+Orders/edit-billing-information.png) 
+![Edit billing address button](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Sales/Managing+Orders/edit-billing-information.png)
 
 3. Make the updates and click **Save**.
 
 ***
 **Next Steps**
 
-* To learn how you can manage the created returns, see [Managing Returns](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/returns/managing-returns.html). 
+* To learn how you can manage the created returns, see [Managing Returns](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/returns/managing-returns.html).
 * See [Orders: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/references/reference-information-orders.html) to learn about the attributes used to manage orders.
-

@@ -77,7 +77,7 @@ The [Product Bundles](/docs/scos/user/features/{{page.version}}/product-bundles-
 
 {% endinfo_block %}
 
-Once a return request has been submitted, it acquires the *Waiting for return* state. The return states change as the Back Office user [processes the return](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html#creating-a-return). See [Return items states](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/returns/managing-returns.html) for details on the return states.
+Once a return request has been submitted, it acquires the *Waiting for return* state. The return states change as the Back Office user [processes the return](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html#creating-returns). See [Return items states](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/returns/managing-returns.html) for details on the return states.
 
 {% info_block infoBox "Info" %}
 
@@ -116,7 +116,7 @@ Currently, the feature has the following functional constraints which are going 
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create returns in the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html#creating-a-return)  |
+| [Create returns in the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html#creating-returns)  |
 | [View return details, set return statuses and print return slips in the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/returns/managing-returns.html)  |
 | [Choose a suitable return management process for your project](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/building-a-return-management-process-best-practices.html)  |
 

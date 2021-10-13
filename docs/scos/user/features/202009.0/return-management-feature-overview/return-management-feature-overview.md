@@ -71,7 +71,7 @@ The [Product Bundles](/docs/scos/user/features/{{page.version}}/product-bundles-
 
 {% endinfo_block %}
 
-Once a return request has been submitted, it acquires the *Waiting for return* state. The return states change as the Back Office user [processes the return](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html#creating-a-return). See [Return items states](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/returns/references/reference-information-return-item-states.html) for details on the return states.
+Once a return request has been submitted, it acquires the *Waiting for return* state. The return states change as the Back Office user [processes the return](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html#creating-returns). See [Return items states](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/returns/references/reference-information-return-item-states.html) for details on the return states.
 
 {% info_block infoBox "Info" %}
 

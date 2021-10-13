@@ -27,18 +27,18 @@ The instuctions assume that there is an existing order with the *Payment pending
 
 Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
 
-## Changing order statuses 
+## Changing order statuses
 
 To change the status of an order:
 
-1. In the *List of orders* table, click **View** next to the order you want to change the status of. 
+1. In the *List of orders* table, click **View** next to the order you want to change the status of.
 You are taken to the *View Order: [Order ID]* page.
-2. In the *Trigger all matching states inside this order* section, click **pay**. The page refreshes to show the message about the successful status change. In the *Trigger all matching states inside this order* section, you can see the **ship** button. 
+2. In the *Trigger all matching states inside this order* section, click **pay**. The page refreshes to show the message about the successful status change. In the *Trigger all matching states inside this order* section, you can see the **ship** button.
 3. Repeat step 2 until you get the desired order status.
 
 To change the status of the items in a shipment:
 
-1. In *List of orders*, click **View** next to the order owning the items you want to change the status of. 
+1. In *List of orders*, click **View** next to the order owning the items you want to change the status of.
 You are taken to the *View Order: [Order ID]* page.
 2. Scroll down to the desired shipment.
 3. Select the checkbox next to the products you want to change the status of.
@@ -49,7 +49,7 @@ You are taken to the *View Order: [Order ID]* page.
 
 To change the status of an item:
 
-1. In *List of orders*, click **View** next to the order owning the items you want to change the status of. 
+1. In *List of orders*, click **View** next to the order owning the items you want to change the status of.
 You are taken to the *View Order: [order ID]* page.
 2. Scroll down to the desired item.
 3. In the _Trigger event_ column next to the desired product, click **pay**.
@@ -58,11 +58,11 @@ The page refreshes to show the message about the successful status change. In th
 
 **Tips & tricks**
 
-To change the status of all the items inside a shipment at once, click **pay** in the *Trigger all matching states of order inside this shipment* section of the corresponding shipment. 
+To change the status of all the items inside a shipment at once, click **pay** in the *Trigger all matching states of order inside this shipment* section of the corresponding shipment.
 
 The order statuses you set here do not always have the same wording on the Storefront. For details on how you can display custom names for statuses on the Storefront, see [HowTo - Display custom names for order item states on the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html).
 
-### Reference information: Changing order statuses 
+### Reference information: Changing order statuses
 
 You can set different statuses for your order. The followning describes the statuses you can select:
 
@@ -80,7 +80,7 @@ You can set different statuses for your order. The followning describes the stat
 
 Statuses flow:
 * **Payment pending**—the initial order statuses.
-* **Canceled**—state  of the order after it is canceled by the customer on the Storefront or by the Back Office user. 
+* **Canceled**—state  of the order after it is canceled by the customer on the Storefront or by the Back Office user.
 * When you select **Pay**, the state becomes **Confirmed**.
 * When you select **Skip Timeout**, the state becomes **Exported**.
 * When you select **Cancel**, the state becomes **Cancelled**.
@@ -99,14 +99,15 @@ To create a return:
 
 1. On the *View Order: [Order ID]* page, click **Return** in the top right corner. This opens the *Create Return* page.
 2. On the *Create Return* page, select the items you want to return and optionally the return reason for the items.
+
 {% info_block warningBox "Note" %}
 
 For a [Configurable Bundle](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html), you can’t select to return an entire Configurable Bundle, but you can select to return separate items from it.
-The [Product Bundles](https://documentation.spryker.com/2021080/docs/product-bundles), on the contrary, are handled as one product, so only the whole bundle can be returned. You can not return individual items of a Product Bundle.
+The [Product Bundles](/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.html), on the contrary, are handled as one product, so only the whole bundle can be returned. You can not return individual items of a Product Bundle.
 
 {% endinfo_block %}
 
-3. Click **Create return**. This creates the return and takes you to the *Overview of Return* *[Return reference]* page, where you can change the return states. 
+3. Click **Create return**. This creates the return and takes you to the *Overview of Return* *[Return reference]* page, where you can change the return states.
 
 {% info_block infoBox "Info" %}
 
@@ -151,7 +152,7 @@ All columns with headers having arrows in the *List of Returns* table are sortab
 
 ## Viewing the returns for orders
 
-If returns have been created for an order, they are displayed on the *View Order: [Order ID]* page in the *Returns* section. 
+If returns have been created for an order, they are displayed on the *View Order: [Order ID]* page in the *Returns* section.
 
 {% info_block infoBox "Info" %}
 
@@ -221,7 +222,7 @@ Claiming an order does not change the status of the order or the items inside th
 
 ## Commenting orders
 
-To add a [comment](/docs/scos/user/features/{{page.version}}/comments/comments-feature-overview.html) to an order:
+To add a [comment](/docs/scos/user/features/{{page.version}}/comments-feature-overview.html) to an order:
 1. Click **View** next to the order you want to comment.
 2. On the *View Order: [Order ID]* page, scroll down to the *Comments* section.
 3. Enter the comment in the *Message* field.
@@ -232,8 +233,8 @@ The page refreshes to show the success message about comment creation. Your mess
 
 * To send an email to a customer, on the *Overview of Orders* page, click the hyperlinked customer email in the _Email_ column.
 * To view customer details:
-    * On the *Overview of Orders* page, click the hyperlinked customer name in the *Customer Full Name* column. 
-    * On the *View Order* page, scroll down to the *Customer* section and click the hyperlinked **Reference**. 
+    * On the *Overview of Orders* page, click the hyperlinked customer name in the *Customer Full Name* column.
+    * On the *View Order* page, scroll down to the *Customer* section and click the hyperlinked **Reference**.
 
 ## Editing billing addresses
 
@@ -245,7 +246,7 @@ To edit a billing address:
 
 3. Make the updates and click **Save**.
 
-### Reference information: Editing billing addresses 
+### Reference information: Editing billing addresses
 
 The followning table describes the attributes you enter and select when adding a new customer address.
 
@@ -260,6 +261,4 @@ The followning table describes the attributes you enter and select when adding a
 
 
 **Next steps**
-To learn how you can manage the created returns, see [Managing returns](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/returns/managing-returns.html). 
-
-
+To learn how you can manage the created returns, see [Managing returns](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/returns/managing-returns.html).

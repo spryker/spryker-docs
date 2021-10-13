@@ -1,6 +1,7 @@
 ---
 title: Searching by customers as an agent assist
 description: As an agent assist, search by customers to find the customer reference you want to impersonate.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/searching-by-customers-as-an-agent-assist
 originalArticleId: 46de7d30-57aa-4d02-9fc2-cace9bc4fa1a
 redirect_from:

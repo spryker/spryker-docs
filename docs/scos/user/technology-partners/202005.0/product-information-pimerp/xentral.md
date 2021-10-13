@@ -1,6 +1,7 @@
 ---
 title: Xentral
 description: Provide customers with ERP / CRM software that is configured according to individual requirements by integrating Xentral to the Spryker-based project.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/xentral
 originalArticleId: 3ed1d537-597b-4e96-a410-99fddd0f7835
 redirect_from:
@@ -9,7 +10,7 @@ redirect_from:
 ---
 
 ## Partner Information
-[ABOUT XENTRAL](https://xentral.com/en/){target="_blank"}
+[ABOUT XENTRAL](https://xentral.com/en/)
 Xentral is a flexible ERP / CRM software that can be configured according to individual requirements. Xentral is available in four basic versions with different range of functions. The App-Store contains over 100 modules such as sales cockpit, automated warehouse management or major manufacturing programs that can be installed with just a few clicks. In addition, Xentral offers interfaces to all common online shop systems and marketplaces, shipping service providers, payment providers and much more.
 
 YOUR ADVANTAGES:

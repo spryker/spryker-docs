@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - OfferGui
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/mg-offer-gui
 originalArticleId: 6e354ca6-5971-4a74-bab1-76f6e6de36f1
 redirect_from:

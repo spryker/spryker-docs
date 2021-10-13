@@ -1,6 +1,7 @@
 ---
 title: Modules and layers
 description: Learn about the layers in the Spryker Commerce OS and how they are related with each other.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/modules-and-layers
 originalArticleId: 2c4ec7d1-3056-4dc2-bc82-8865dfbc49de
 redirect_from:

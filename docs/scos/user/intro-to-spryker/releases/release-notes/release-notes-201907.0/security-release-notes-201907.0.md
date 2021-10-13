@@ -1,6 +1,7 @@
 ---
 title: Security Release Notes 201907.0
 description: The following information pertains to security-related issues that were discovered and resolved during the 201907.0 release.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/security-release-notes-201907-0
 originalArticleId: 216cfc42-96f5-4a5c-b62b-df2d8e49398b
 redirect_from:
@@ -26,8 +27,8 @@ The following information pertains to security-related issues that were discover
 Issues are listed by description and affected modules.
 
 {% info_block infoBox %}
-If you need any additional support with this content, please contact [support@spryker.com](mailto:support@spryker.com
-{% endinfo_block %}. If you found a new security vulnerability, please inform us via  [security@spryker.com](mailto:security@spryker.com).)
+If you need any additional support with this content, please contact [support@spryker.com](mailto:support@spryker.com). If you found a new security vulnerability, please inform us via  [security@spryker.com](mailto:security@spryker.com).
+{% endinfo_block %}
 
 ## OMS and StateMachine Module Vulnerability
 Both OMS and standalone StateMachine module were exposing their State Machine triggers directly via URL in Zed backend. Those actions could be invoked via GET which violated basic HTTP specs and security audits, thus allowing “hidden” or accidental links, faced images etc.

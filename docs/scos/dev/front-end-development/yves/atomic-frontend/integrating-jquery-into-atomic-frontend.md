@@ -1,5 +1,6 @@
 ---
 title: Integrating JQuery into Atomic Frontend
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-integrate-jquery
 originalArticleId: 8cd14f0a-a0e9-4036-b90b-a1ac4e5f3560
 redirect_from:
@@ -177,5 +178,5 @@ $('.any-target-selector').countdown('2100/01/01', function (event: any) {
 ```
 
 {% info_block errorBox %}
-Make sure that it is invoked inside/after `mountCallback (readyCallback` can be used as well, but it's now deprecated
-{% endinfo_block %}.)
+Make sure that it is invoked inside/after `mountCallback (readyCallback` can be used as well, but it's now deprecated).
+{% endinfo_block %}

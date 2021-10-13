@@ -1,6 +1,7 @@
 ---
 title: Release Notes 2018.11.0
 description: This document contains a business level description of major new features and enhancements released in November of 2018.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes-2018-11-0
 originalArticleId: 32076dc8-dd8a-438c-8029-cbf2eb7cf2e3
 redirect_from:
@@ -25,8 +26,8 @@ redirect_from:
  The Spryker Commerce OS is an end-to-end solution for e-commerce. This document contains a business level description of major new features and enhancements released in November of 2018.
 
 {% info_block infoBox %}
-For information about installing the Spryker Commerce OS, see [Getting Started Guide](/docs/scos/dev/developer-getting-started-guide.html
-{% endinfo_block %}.
+For information about installing the Spryker Commerce OS, see [Getting Started Guide](/docs/scos/dev/developer-getting-started-guide.html).
+{% endinfo_block %}
 
 ## Demo Shops
 ### B2B Demo Shop

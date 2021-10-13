@@ -1,6 +1,7 @@
 ---
 title: Persistent Cart Sharing feature integration
 description: The guide describes the process of installing the Persistent Cart feature into your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/persistent-cart-sharing-feature-integration
 originalArticleId: 197ed04e-88d6-4611-a894-c266d4c21b0c
 redirect_from:
@@ -247,8 +248,8 @@ Run the following command to enable Javascript and CSS changes:
 console frontend:yves:build
 ```
 {% info_block warningBox "Verification" %}
-Make sure, that when you're on a cart page, you can see the "Share Cart via Link" widget with an "External Users" radio button (if you logged in as company user
-{% endinfo_block %}.)
+Make sure, that when you're on a cart page, you can see the "Share Cart via Link" widget with an "External Users" radio button (if you logged in as company user).
+{% endinfo_block %}
 {% info_block warningBox "Verification" %}
-Login to Yves as Company User, add some product to the cart and go to the cart page.<br>Make sure, that you can see the "Share Cart via Link" widget on a cart page.<br>Make sure you can see an "External Users" radio button. Click on it.<br>Make sure, that you can see the generated link for Preview access.<br>Make sure, that you can see a "Copy" button near the link. Click on it.<br>Make sure, that the link was copied to the clipboard (or a message that it's impossible due to some browser limitations
-{% endinfo_block %}.<br>Copy the Cart Preview link and proceed with it. Make sure, that you are redirected to Cart Preview page.)
+Login to Yves as Company User, add some product to the cart and go to the cart page.<br>Make sure, that you can see the "Share Cart via Link" widget on a cart page.<br>Make sure you can see an "External Users" radio button. Click on it.<br>Make sure, that you can see the generated link for Preview access.<br>Make sure, that you can see a "Copy" button near the link. Click on it.<br>Make sure, that the link was copied to the clipboard (or a message that it's impossible due to some browser limitations).<br>Copy the Cart Preview link and proceed with it. Make sure, that you are redirected to Cart Preview page.
+{% endinfo_block %}

@@ -1,6 +1,7 @@
 ---
 title: Web Profiler for Zed
 description: This guide describes how to integrate and use the Web Profiler toolbar available in Zed for development purposes.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/web-profiler
 originalArticleId: 582e3a3b-4014-4008-998b-da6e15ebc83e
 redirect_from:
@@ -16,7 +17,7 @@ The following guide only demonstrates how to enable a development tool.
 
 The _Web Profiler_ provides a toolbar for debugging and informational purposes. The toolbar is located at the bottom of a loaded page.
 
-Spryker Profiler is based on _Symfony Profiler_. For details, see [Profiler documentation](https://symfony.com/doc/current/profiler.html){target="_blank"}.
+Spryker Profiler is based on _Symfony Profiler_. For details, see [Profiler documentation](https://symfony.com/doc/current/profiler.html).
 
 ## Modules
 

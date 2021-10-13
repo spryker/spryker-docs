@@ -1,6 +1,7 @@
 ---
 title: Retrieving Navigation Trees
 description: The topic demonstrates how to retrieve navigation trees with the help of API endpoints.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/retrieving-navigation-trees-201907
 originalArticleId: b99b0a42-7f08-419f-a379-cf6b1a50657e
 redirect_from:
@@ -39,8 +40,8 @@ Navigation IDs are case sensitive.
 {% endinfo_block %}
 
 {% info_block warningBox "Note" %}
-You can also use the **Accept-Language** header to specify the locale.</br>Sample header:</br>`[{"key":"Accept-Language","value":"de, en;q=0.9"}]`where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
-{% endinfo_block %}.)
+You can also use the **Accept-Language** header to specify the locale.</br>Sample header:</br>`[{"key":"Accept-Language","value":"de, en;q=0.9"}]`where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+{% endinfo_block %}
 
 If the request was successful, the resource responds with a **RestNavigationResponse**.
 

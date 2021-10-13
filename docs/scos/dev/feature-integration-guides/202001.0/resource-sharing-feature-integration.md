@@ -1,5 +1,6 @@
 ---
 title: Resource Sharing feature integration
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/resource-sharing-feature-integration
 originalArticleId: fbad04e5-e297-4cbb-94ae-451e1643c491
 redirect_from:

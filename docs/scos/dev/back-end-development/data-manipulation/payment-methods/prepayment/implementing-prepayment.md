@@ -1,6 +1,7 @@
 ---
 title: Implementing Prepayment
 description: This section describes how to add a prepayment payment method.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-implement-prepayment
 originalArticleId: bf4dd938-9a69-4f00-ba90-6f2136934e88
 redirect_from:
@@ -31,7 +32,7 @@ In this HowTo section, we will add a new module called `PaymentMethods`.
 If this is your first time creating a new module, see [Tutorial - Adding a New Module](/docs/scos/dev/back-end-development/extending-spryker/adding-a-new-module.html).
 
 * [Implement Prepayment in Front-End](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-front-end.html)
-* [Integrate Prepayment into Checkout](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrating-prepayment-into-checkout.html){target="_blank"}
-* [Implement Prepayment in Back-End](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-back-end.html){target="_blank"}
-* [Implement Prepayment in Shared layer](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-shared-layer.html){target="_blank"}
-* [Test Prepayment Implementation](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/testing-the-prepayment-implementation.html){target="_blank"}
+* [Integrate Prepayment into Checkout](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrating-prepayment-into-checkout.html)
+* [Implement Prepayment in Back-End](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-back-end.html)
+* [Implement Prepayment in Shared layer](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-shared-layer.html)
+* [Test Prepayment Implementation](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/testing-the-prepayment-implementation.html)

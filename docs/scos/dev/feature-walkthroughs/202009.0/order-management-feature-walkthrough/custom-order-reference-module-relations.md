@@ -1,5 +1,6 @@
 ---
 title: Custom order reference- module relations
+template: feature-walkthrough-template
 originalLink: https://documentation.spryker.com/2021080/docs/custom-order-reference-module-relations
 originalArticleId: 4edd02ad-f7db-4db0-b231-a6fbad0c100b
 redirect_from:

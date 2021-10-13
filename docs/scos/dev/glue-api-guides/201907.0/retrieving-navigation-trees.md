@@ -1,5 +1,6 @@
 ---
 title: Retrieving Navigation Trees
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/retrieving-navigation-trees-201907
 originalArticleId: 3512d402-aabe-4816-8aa3-38264029a67c
 redirect_from:
@@ -38,8 +39,8 @@ Navigation IDs are case sensitive.
 {% endinfo_block %}
 
 {% info_block warningBox "Note" %}
-You can also use the **Accept-Language** header to specify the locale.</br>Sample header:</br>`[{"key":"Accept-Language","value":"de, en;q=0.9"}]`where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
-{% endinfo_block %}.)
+You can also use the **Accept-Language** header to specify the locale.</br>Sample header:</br>`[{"key":"Accept-Language","value":"de, en;q=0.9"}]`where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+{% endinfo_block %}
 
 If the request was successful, the resource responds with a **RestNavigationResponse**.
 

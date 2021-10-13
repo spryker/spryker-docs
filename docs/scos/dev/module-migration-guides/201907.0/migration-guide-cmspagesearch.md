@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - CmsPageSearch
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-cmspagesearch
 originalArticleId: c63eeace-aabe-4dfe-8039-0e7b5d0a3cbf
 redirect_from:

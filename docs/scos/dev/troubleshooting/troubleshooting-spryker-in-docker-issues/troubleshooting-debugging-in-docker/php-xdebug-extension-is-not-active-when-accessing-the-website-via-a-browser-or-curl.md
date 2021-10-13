@@ -1,6 +1,7 @@
 ---
 title: PHP `xdebug` extension is not active when accessing the website via a browser or curl
 description: Learn how to fix an issue when PHP `xdebug` extension is not active when accessing the website via a browser or curl
+template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/php-xdebug-extension-is-not-active-when-accessing-the-website-via-a-browser-or-curl
 originalArticleId: eb4a91fe-ab09-4e6f-a591-f942dea005f5
 redirect_from:

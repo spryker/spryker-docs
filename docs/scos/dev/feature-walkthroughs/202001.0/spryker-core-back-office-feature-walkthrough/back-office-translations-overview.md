@@ -1,14 +1,4 @@
 ---
-title: Back Office Translations Feature Overview
-description: Back Office Translations feature allows a user with administrative rights to translate the Back Office into different languages in a per-user manner.
-originalLink: https://documentation.spryker.com/v4/docs/back-office-translations-overview
-originalArticleId: 3323a118-bfb5-41d8-8c6d-6a4e40945878
-redirect_from:
-  - /v4/docs/back-office-translations-overview
-  - /v4/docs/en/back-office-translations-overview
----
-
----
 title: Back Office Translations overview
 last_updated: Aug 20, 2021
 description: The Back Office Translations feature introduces a way to translate the Administration interface (Zed) into different languages in a per-user manner.
@@ -20,7 +10,6 @@ redirect_from:
   - /v4/docs/en/back-office-translations-overview
   - /v4/docs/back-office-translations
   - /v4/docs/en/back-office-translations
-
 ---
 
 The _Back Office Translations_ feature introduces a way to translate the Administration interface (Zed) into different languages in a per-user manner. In terms of hierarchy, only the user with administrative rights who has access to User Control section of Zed, can manage the feature. For example, a team of developers might include a French and a German. In this case, the Shop Administrator might set up French and German Zed translations for their accounts accordingly, and those translations wouldn't interfere with each other.

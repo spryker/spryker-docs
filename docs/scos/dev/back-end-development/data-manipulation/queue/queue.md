@@ -1,6 +1,7 @@
 ---
 title: Queue
 description: The article explains the Spryker Queue System- its work, benefits and configuration
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/queue
 originalArticleId: c9916ed4-acec-43d0-8a68-0e9805ce8c15
 redirect_from:
@@ -191,7 +192,7 @@ $jobs[] = [
 ```
 
 {% info_block infoBox %}
-For more information and examples of how to get started with the Queue module, see [Tutorial - Set Up a "Hello World" Queue](https://documentation.spryker.com/2021080/docs/setup-hello-world-queue
-{% endinfo_block %}.)
+For more information and examples of how to get started with the Queue module, see [Tutorial - Set Up a "Hello World" Queue](https://documentation.spryker.com/2021080/docs/setup-hello-world-queue).
+{% endinfo_block %}
 
 <!-- Last review date: Apr 9, 2019 by Ehsan Zanjani and Dmitry Beirak -->

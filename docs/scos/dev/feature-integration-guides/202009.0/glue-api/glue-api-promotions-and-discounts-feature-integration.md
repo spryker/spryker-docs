@@ -1,6 +1,7 @@
 ---
 title: Glue API- Promotions & discounts feature integration
 description: Use the guide to install the Promotions and Discounts feature in your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/glue-api-promotions-discounts-feature-integration
 originalArticleId: c3b317bf-4c2f-4f39-bc8e-58614fe2bfb1
 redirect_from:
@@ -15,8 +16,8 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Integration guide |
 | --- | --- | --- |
-| Spryker Core | 202009.0 | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Product | 202009.0 | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{page.version}}/glue-api/glue-api-products-feature-integration.html) |
+| Spryker Core | 202009.0 | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Product | 202009.0 | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-products-feature-integration.html) |
 | Promotions & Discounts | 202009.0 |  |
 
 ## 1) Install the required modules using Composer

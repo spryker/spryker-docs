@@ -1,6 +1,7 @@
 ---
 title: CollectAI
 description: Integrate Collect AI into Spryker Commerce OS  to have digitized, AI-based payments and collection services to manage account receivables.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/collect-ai
 originalArticleId: e595f23a-c8e1-4a98-9cd6-a298e38fce00
 redirect_from:

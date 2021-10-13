@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - PriceProductStorage
 description: Use the guide to learn how to update the PriceProductStorage module.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-price-product-storage
 originalArticleId: 6b3d53ff-f1b1-43c3-9dde-310f45818d30
 redirect_from:

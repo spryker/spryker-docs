@@ -1,6 +1,7 @@
 ---
 title: Glue API- Navigation feature integration
 description: This guide will walk you through the process of installing and configuring the Navigation API feature in Spryker OS.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/glue-api-navigation-feature-integration
 originalArticleId: ffa1e1a0-ccd9-4a46-9f88-b54e26dde6dc
 redirect_from:
@@ -56,8 +57,8 @@ Make sure that the following changes have been applied in transfer objects:
 ### 3) Set up Configuration
 #### Configure navigation mapping
 {% info_block infoBox %}
-Specify mapping for the source field from which the resourceId field should be filled (depends on a navigation node type
-{% endinfo_block %}.)
+Specify mapping for the source field from which the resourceId field should be filled (depends on a navigation node type).
+{% endinfo_block %}
 
 <details open>
 <summary>src/Pyz/Glue/NavigationsRestApi/NavigationsRestApiConfig.php</summary>

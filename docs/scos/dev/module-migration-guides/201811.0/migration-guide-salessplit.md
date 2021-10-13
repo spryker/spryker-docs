@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - SalesSplit
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/mg-sales-split
 originalArticleId: 1a742ee2-7f21-4cb8-b2cd-82af53a3966e
 redirect_from:

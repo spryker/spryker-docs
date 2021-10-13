@@ -1,6 +1,7 @@
 ---
 title: Product labels feature integration
 description: This guide provides step-by-step instruction on integrating
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/product-labels-feature-integration
 originalArticleId: 7330bdd4-2674-4ad5-9e4b-ad1ae7f6763b
 redirect_from:
@@ -407,14 +408,14 @@ Ensure that the product label trigger plugin works correctly:
 
 {% endinfo_block %}
 
-::(Warning) (Verification)
+{% info_block warningBox "Verification" %}
 your content goes hereEnsure that the product label synchronization plugin works correctly:
 
 1. Fill `spy_product_label_product_abstract` table with some data. 
 2. Run the `console publish:trigger-events -r product_abstract_label` command. 
 3. Ensure that the `spy_product_abstract_label_storage` table is filled with respective data.
 4. Ensure that storage entries appear in your system with the `kv:product_abstract_label:id_product_abstract` mask.
-:::
+{% endinfo_block %}
 
 **src/Pyz/Zed/ProductLabel/ProductLabelDependencyProvider.php**
 
@@ -440,12 +441,12 @@ class ProductLabelDependencyProvider extends SprykerProductLabelDependencyProvid
 }
 ```
 
-::(Warning) (Verification)
+{% info_block warningBox "Verification" %}
 Ensure that the product label new works:
 
 1. Create a product and enter `new_from` and `new_to` fields, so that the current date is between the entered ones.
 2. Check that, on the Storefront, the product is displayed with the new product label.
-:::
+{% endinfo_block %}
 
 ### 4) Import Data
 Follow the steps to import product label data:
@@ -565,13 +566,13 @@ Run the following command(s) to install the required modules:
 composer require "spryker-feature/product-labels:"202009.0" --update-with-dependencies
 ```
 
-::(Warning) (Verification)
+{% info_block warningBox "Verification" %}
 Ensure that the following modules have been installed:
 
 | Module | Expected Directory |
 | --- | --- |
 | ProductLabelWidget | vendor/spryker-shop/product-label-widget |
-:::
+{% endinfo_block %}
 
 ### 2) Set up Widgets
 Set up widgets as follows:

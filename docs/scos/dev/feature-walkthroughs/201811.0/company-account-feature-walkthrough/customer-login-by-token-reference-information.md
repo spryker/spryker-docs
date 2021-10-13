@@ -1,6 +1,7 @@
 ---
 title: Customer Login by Token reference information
 description: This document describes the token structure.
+template: feature-walkthrough-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-login-by-token-overview
 ---
 

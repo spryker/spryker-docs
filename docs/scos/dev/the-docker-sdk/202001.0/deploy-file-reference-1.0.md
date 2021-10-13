@@ -1,6 +1,7 @@
 ---
 title: Deploy File Reference - 1.0
 description: Use this reference to create a deploy file for building environment for Spryker in Docker.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/deploy-file-reference-10
 originalArticleId: 759044a2-1e3c-4c1c-8aa9-42854822f11a
 redirect_from:
@@ -344,7 +345,7 @@ broker:
 		endpoints:
 			mail.spryker.local:
  ```
-:::(Warning)
+{% info_block warningBox %}
 After changing a service version, make sure to re-import demo data:
 1. Remove all Spryker volumes:
 ```shell
@@ -355,7 +356,7 @@ docker/sdk clean-data
 ```shell
 docker/sdk demo-data
 ```
-:::
+{% endinfo_block %}
 Service settings can be extended on other levels for specific contexts. See [regions: services:](#regions-services), [regions: stores: services:](#regions-stores-services) and [groups: applications: endpoints: services:](groups-applications-endpoints-services) to learn more.
 
 ***

@@ -1,6 +1,7 @@
 ---
 title: Coding Best Practices
 description: In this article we outline a few common PHP coding problems and the recommended solutions.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/coding-best-practices
 originalArticleId: 5df9f9bf-c445-4d56-af59-a95757696009
 redirect_from:

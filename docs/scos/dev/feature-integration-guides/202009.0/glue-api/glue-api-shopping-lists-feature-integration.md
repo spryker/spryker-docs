@@ -1,5 +1,6 @@
 ---
 title: Glue API- Shopping lists feature integration
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/glue-api-shopping-lists-feature-integration
 originalArticleId: f9aca2bf-3320-4bc3-9d1c-fd340ca50274
 redirect_from:
@@ -22,8 +23,8 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Integration guide|
 | --- | --- |--- |
-| Spryker Core	 | 202009.0 |[Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Shopping Lists	 | 202009.0 |[Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{page.version}}/shopping-lists-feature-integration.html) |
+| Spryker Core	 | 202009.0 |[Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Shopping Lists	 | 202009.0 |[Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shopping-lists-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
 Run the following command to install the required modules:
@@ -289,7 +290,7 @@ Check the response:
 
 {% endinfo_block %}
 
-:::(Warning) (Verification)
+{% info_block warningBox "Verification" %}
 To verify that the `ShoppingListItemsResourcePlugin` is set up correctly, make sure that the following endpoint is available:
 
 * http://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}/shopping-list-items
@@ -333,3 +334,5 @@ Check the response:
 ```
  <br>
 </details>
+
+{% endinfo_block %}

@@ -1,6 +1,7 @@
 ---
 title: Router Yves
 description: The article provides instructions on how to install the extension module along with the router and integrate it then in Yves.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/router-yves
 originalArticleId: d8b857cc-0e43-4be9-891a-a57afdbe1d2b
 redirect_from:
@@ -18,7 +19,7 @@ redirect_from:
   - /v3/docs/en/router-yves-201907
 ---
 
-The Router is responsible for matching a request to a route and generating URLs based on a route name. The Spryker's Route module is based on the Symfony's Routing component. For more information on it, check out the [documentation](https://symfony.com/doc/current/routing.html){target="_blank"}.
+The Router is responsible for matching a request to a route and generating URLs based on a route name. The Spryker's Route module is based on the Symfony's Routing component. For more information on it, check out the [documentation](https://symfony.com/doc/current/routing.html).
 
 ## Modules
 

@@ -1,6 +1,7 @@
 ---
 title: Security and Authentication
 description: This article describes the authorization mechanism used in Spryker, the modules that provide it, as well as user scopes, database tables, and extension points.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/security-and-authentication
 originalArticleId: f37cbced-75fa-4ea4-aad6-7afdeea109a4
 redirect_from:
@@ -93,8 +94,8 @@ B2B functionality is available in Spryker Glue API since version 201907.0.
 In addition to user scopes, each endpoint can be secured individually. For this purpose, you need to configure the routing of your Resource Feature Module. The Route Plugins of each module define which verbs are supported by the corresponding endpoint. This is done via the config function of the plugin class. The verbs are passed to it as a set of functions that should be called when the corresponding verb is passed.
 
 {% info_block infoBox %}
-For details, see [Resource Routing](/docs/scos/dev/concepts/glue-api/glue-infrastructure.html#resource-routing
-{% endinfo_block %}{target="_blank"}.)
+For details, see [Resource Routing](/docs/scos/dev/concepts/glue-api/glue-infrastructure.html#resource-routing).
+{% endinfo_block %}
 
 
 For each function in the set, the second parameter determines, whether the corresponding verb requires authentication to use (the parameter value is true) or not (the value is false). If the parameter is not passed, the verb requires authentication.

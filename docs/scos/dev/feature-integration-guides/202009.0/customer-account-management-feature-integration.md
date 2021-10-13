@@ -1,6 +1,7 @@
 ---
 title: Customer Account Management feature integration
 description: The guide walks you through the process of adding Redirect support for Customer login functionality to your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/customer-account-management-feature-integration
 originalArticleId: 7a6a566f-2c3f-409e-8188-86532c36307d
 redirect_from:
@@ -337,7 +338,7 @@ SELECT * FROM spy_oauth_client WHERE identifier = 'some-client-identifier';
 
 {% info_block warningBox "Verification" %}
 
-Ensure that it is possible to obtain the customer OAuth access token with customer credentials or customer reference. See [Glue API: Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html) for details.
+Ensure that it is possible to obtain the customer OAuth access token with customer credentials or customer reference. See [Glue API: Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html) for details.
 
 {% endinfo_block %}
 
@@ -691,8 +692,8 @@ Ensure that, when you try to access your account without confirming the registra
 
 | Name | Integration guide |
 | --- | --- |
-| Customer API	 | [Glue API: Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html) |
-| Customer Account Management + Order Management | [Customer Account Management + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{page.version}}/customer-account-management-order-management-feature-integration.html)  |
+| Customer API	 | [Glue API: Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html) |
+| Customer Account Management + Order Management | [Customer Account Management + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-order-management-feature-integration.html)  |
 
 
 

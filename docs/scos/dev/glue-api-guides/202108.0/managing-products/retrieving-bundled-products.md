@@ -1,5 +1,6 @@
 ---
 title: Retrieving bundled products
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-bundled-products
 originalArticleId: f77455d1-e0ca-470c-a6f6-15a060ea2647
 redirect_from:

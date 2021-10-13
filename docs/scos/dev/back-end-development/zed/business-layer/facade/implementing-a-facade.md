@@ -1,6 +1,7 @@
 ---
 title: Implementing a Facade
 description: This article describes how to implement a facade.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/implementing-facade
 originalArticleId: 7a2cbc0a-f4d6-422a-8481-b385e6bfaf4d
 redirect_from:

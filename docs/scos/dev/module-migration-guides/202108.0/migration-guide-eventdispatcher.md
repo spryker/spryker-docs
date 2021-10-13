@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - EventDispatcher
 description: Use the guide to perform the EventDispatcher part of the Silex Migration Effort.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-eventdispatcher
 originalArticleId: 1e681073-e4f0-4f0b-bd57-f1469a76f36f
 redirect_from:
@@ -74,9 +75,9 @@ That's it! You've upgraded the EventDispatcher module to 1.1.2 version.
 
 ---
 
-:::(Error)
+{% info_block errorBox %}
 The following migration guide is a part of the [Silex migration effort](/docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html).
-:::
+{% endinfo_block %}
 To upgrade the module, do the following:
 
 1. Update the module using composer:

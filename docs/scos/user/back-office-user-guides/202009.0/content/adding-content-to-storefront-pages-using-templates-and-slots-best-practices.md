@@ -1,6 +1,7 @@
 ---
 title: Adding content to storefront pages using templates & slots- Best practices
 description: Templates with slots allows managing all the Storefront content in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/adding-content-to-storefront-pages-using-templates-slots-best-practices
 originalArticleId: 77445e0b-327c-48ae-aeb5-d912f5dd326e
 redirect_from:
@@ -20,7 +21,7 @@ Let’s say you have *Sticky Notes* and *Writing Materials* categories, and you 
 To do that, you need to create content items, insert them into CMS blocks, assign CMS blocks to slots and select the pages the CMS blocks will be displayed on.
 {% info_block infoBox "Examplary content" %}
 
-All the content used in this guide is shipped by default in our [Demo Shops](/docs/scos/user/intro-to-spryker/{{site.version}}/about-spryker.html#spryker-b2b-b2c-demo-shops).
+All the content used in this guide is shipped by default in our [Demo Shops](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2b-b2c-demo-shops).
 
 {% endinfo_block %}
  

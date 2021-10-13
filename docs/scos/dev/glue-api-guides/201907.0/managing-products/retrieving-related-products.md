@@ -1,5 +1,6 @@
 ---
 title: Retrieving Related Products
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/retrieving-related-products-201903
 originalArticleId: d3e3e10a-0d5b-4969-b43b-9dcd8e87f447
 redirect_from:
@@ -284,8 +285,8 @@ For a detailed list of the fields included in the response for each product, see
 </details>
 
 {% info_block infoBox %}
-You can also use the Accept-Language header to specify the locale.<br>Sample header:```[{"key":"Accept-Language","value":"de, en;q=0.9"}]```where de and en are the locales; q=0.9 is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
-{% endinfo_block %}.)
+You can also use the Accept-Language header to specify the locale.<br>Sample header:```[{"key":"Accept-Language","value":"de, en;q=0.9"}]```where de and en are the locales; q=0.9 is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+{% endinfo_block %}
 
 ### Possible Errors
 | Code | Reason |
@@ -1372,8 +1373,8 @@ For a detailed list of the fields included in the response for each product, see
 </details>
 
 {% info_block infoBox %}
-You can also use the **Accept-Language** header to specify the locale.<br>Sample header:<br>`[{"key":"Accept-Language","value":"de, en;q=0.9"}]`<br>where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
-{% endinfo_block %}.)
+You can also use the **Accept-Language** header to specify the locale.<br>Sample header:<br>`[{"key":"Accept-Language","value":"de, en;q=0.9"}]`<br>where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+{% endinfo_block %}
 
 ### Possible Errors
 | Code | Reason |
@@ -1603,8 +1604,8 @@ For a detailed list of the fields included in the response for each product, see
 </details>
 
 {% info_block infoBox %}
-You can also use the **Accept-Language** header to specify the locale.<br>Sample header:<br>`[{"key":"Accept-Language","value":"de, en;q=0.9"}]`<br>where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
-{% endinfo_block %}.)
+You can also use the **Accept-Language** header to specify the locale.<br>Sample header:<br>`[{"key":"Accept-Language","value":"de, en;q=0.9"}]`<br>where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+{% endinfo_block %}
 
 ### Possible Errors
 | Code | Reason |

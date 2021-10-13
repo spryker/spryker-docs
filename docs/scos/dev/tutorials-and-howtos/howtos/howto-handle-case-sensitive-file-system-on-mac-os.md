@@ -1,6 +1,7 @@
 ---
 title: HowTo - Handle Case Sensitive File-System on Mac OS
 description: Use the guide to change the case-sensitive file system on Mac OS.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-case-sensitive-file-system-mac
 originalArticleId: e2843984-3d25-4bef-b0d3-d7eb764591bd
 redirect_from:
@@ -90,5 +91,5 @@ The first time you open one of the projects form the disk-image you will notice 
 2. Add the following option: `idea.case.sensitive.fs=true`.
 3. Save and close.
 
-For more information, see [Filesystem Case-Sensitivity Mismatch](https://confluence.jetbrains.com/display/IDEADEV/Filesystem+Case-Sensitivity+Mismatch){target="_blank"}.
+For more information, see [Filesystem Case-Sensitivity Mismatch](https://confluence.jetbrains.com/display/IDEADEV/Filesystem+Case-Sensitivity+Mismatch).
  

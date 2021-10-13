@@ -1,6 +1,7 @@
 ---
 title: Multi-Channel
 description: You can easily promote and sell your products and services across multiple channels beyond your store's website, on- and offline.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/multi-channel
 originalArticleId: ef3a2410-828f-408e-886d-d91c50530eb9
 redirect_from:

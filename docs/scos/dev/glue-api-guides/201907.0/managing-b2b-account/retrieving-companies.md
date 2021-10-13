@@ -1,6 +1,7 @@
 ---
 title: Retrieving Company Information
 description: The article describes how to leverage endpoints provided by Spryker Glue API to retrieve company information.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/retrieving-company-information-201907
 originalArticleId: 97d79556-4638-4876-8d70-e3abe7a75d70
 redirect_from:
@@ -11,8 +12,8 @@ redirect_from:
 Spryker provides the [Company Account](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html) feature that allows purchasing goods and performing other actions on behalf of a user's company. The endpoints provided by the Company API allow retrieving information on companies.
 
 {% info_block warningBox "Authentication" %}
-The endpoints provided by this API cannot be accessed anonymously. To access them, you need to impersonate users as Company Accounts and pass the authentication tokens received. For details on how to authenticate and retrieve such a token, see [Logging In as Company User](https://documentation.spryker.com/v3/docs/logging-in-as-company-user-201907
-{% endinfo_block %}.)
+The endpoints provided by this API cannot be accessed anonymously. To access them, you need to impersonate users as Company Accounts and pass the authentication tokens received. For details on how to authenticate and retrieve such a token, see [Logging In as Company User](https://documentation.spryker.com/v3/docs/logging-in-as-company-user-201907).
+{% endinfo_block %}
 
 In your development, the API can help you to provide information on the company that the authenticated user belongs to.
 
@@ -28,8 +29,8 @@ To retrieve information on the company a user belongs to, send a GET request to 
 Sample request: *GET http://glue.mysprykershop.com/companies/mine*
 
 {% info_block warningBox "Note" %}
-You can use the Accept-Language header to specify the locale.Sample header: [{"key":"Accept-Language","value":"de, en;q=0.9"}]where de, en are the locales; q=0.9 is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
-{% endinfo_block %}.)
+You can use the Accept-Language header to specify the locale.Sample header: [{"key":"Accept-Language","value":"de, en;q=0.9"}]where de, en are the locales; q=0.9 is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+{% endinfo_block %}
 
 #### Response
 The endpoint responds with a collection of **RestCompanyResponse** consisting of a single item that represents the user's company.
@@ -85,8 +86,8 @@ The endpoint provides information only on the companies a user has access to. If
 {% endinfo_block %}
 
 {% info_block warningBox "Note" %}
-You can use the Accept-Language header to specify the locale.Sample header: [{"key":"Accept-Language","value":"de, en;q=0.9"}]where de, en are the locales; q=0.9 is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
-{% endinfo_block %}.)
+You can use the Accept-Language header to specify the locale.Sample header: [{"key":"Accept-Language","value":"de, en;q=0.9"}]where de, en are the locales; q=0.9 is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+{% endinfo_block %}
 
 #### Response
 The endpoint responds with a **RestCompanyResponse** containing information on the requested company.

@@ -1,5 +1,6 @@
 ---
 title: Retrieving Customer's Order History
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/retrieving-order-history
 originalArticleId: 16d6503d-10ad-4a6a-8076-de730d45d124
 redirect_from:
@@ -17,8 +18,8 @@ In your development, this resource can help you to:
 The **Order History API** allows you to retrieve all orders made by a registered customer.
 
 {% info_block warningBox "Authentication" %}
-Since order history is available for registered users only, the endpoints provided by the API cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token in your REST requests. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](
-{% endinfo_block %}.)
+Since order history is available for registered users only, the endpoints provided by the API cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token in your REST requests. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization]().
+{% endinfo_block %}
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see Order History API.

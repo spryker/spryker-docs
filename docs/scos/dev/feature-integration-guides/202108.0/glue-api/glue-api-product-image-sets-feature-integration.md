@@ -1,6 +1,7 @@
 ---
 title: Glue API- Product image sets feature integration
 description: This guide will navigate you through the process of installing and configuring the Product Image Sets API feature in Spryker OS.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-product-image-sets-api-feature-integration
 originalArticleId: 830ee74b-7a54-441e-9c41-b1c38c66d4cf
 redirect_from:

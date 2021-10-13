@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - CMS
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-cms
 originalArticleId: 01aa9bfb-a541-4cfd-80f8-33031cba7a3e
 redirect_from:

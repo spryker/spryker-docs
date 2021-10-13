@@ -1,6 +1,7 @@
 ---
 title: Minimum Order Value feature integration
 description: This guide provides a set of procedure needed to be performed in order to integrate the latest version of Minimum Order Value feature to your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/minimum-order-value-feature-integration
 originalArticleId: 2c93bf01-1b5f-4eaf-9dac-eda467d370b3
 redirect_from:

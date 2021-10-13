@@ -1,6 +1,7 @@
 ---
 title: CMS feature integration Guide
 description: The guide describes how to integrate the CMS feature into your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/cms-feature-integration-guide
 originalArticleId: 82e16ca1-a0db-4966-a6d5-5b44a79b6ff9
 redirect_from:
@@ -1573,9 +1574,9 @@ Verify the changes by adding a slot widget to a page. See [Templates & Slots Fea
 
 ### Set up SprykerCmsBlocks Content Provider Behavior
 
-:::(Info)
+{% info_block warningBox %}
 Follow the further steps only if you are going to use the [visibility conidtions](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html#visibility-conditions) functionality with `SprykerCmsBlocks` content provider for slots.
-:::
+{% endinfo_block %}
 
 #### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:

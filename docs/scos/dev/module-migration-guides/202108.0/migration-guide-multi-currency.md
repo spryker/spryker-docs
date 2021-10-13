@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Multi-Currency
 description: Use the guide to migrate to a newer version of the MultiCurrency module.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-multi-currency
 originalArticleId: 95dd322c-44ae-476b-8587-7773565cafc2
 redirect_from:

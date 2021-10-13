@@ -1,16 +1,13 @@
 ---
 title: Catalog search
 description: This article provides a bunch of sample requests to be used to achieve the implementation of search options and gives explanations of request values.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/catalog-search
 originalArticleId: dde4d14c-50d2-4bad-9de1-d767ffc82236
 redirect_from:
   - /v6/docs/catalog-search
   - /v6/docs/en/catalog-search
 ---
-
-:::(Internal) (Updated doc in Confluence)
-Don't update this document! We have an updated version in Confluence: https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1876852957/CC-10992+Catalog+search+WIP and https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1923022945/Catalog+search+GLUE-10204
-:::
 
 The implementation of the search API offers you the same search experience as in the Spryker demo shops. The search engine used is Elasticsearch and search results go beyond the simple listing of products in the results section. The list of search results is paginated according to your configuration and spelling suggestions are offered when needed. In addition, sorting and facets are supported to narrow down the search results.
 

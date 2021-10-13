@@ -1,5 +1,6 @@
 ---
 title: Advanced Tutorials
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/advanced-tutorials
 originalArticleId: 4465ffa9-2d19-4a26-b418-75670e602604
 redirect_from:

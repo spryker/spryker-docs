@@ -1,6 +1,7 @@
 ---
 title: Password Management overview
 description: Spryker offers multiple ways of managing customer account passwords.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/password-management-overview
 originalArticleId: 0e61f839-2432-47f4-a9ea-40c743c63585
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Billie
 description: Provide various payment options from Billie.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/billie
 originalArticleId: 9fb3e50f-7d04-4036-8371-7b2e33affbfe
 redirect_from:
@@ -9,7 +10,7 @@ redirect_from:
 ---
 
 ## Partner Information
-[ABOUT BILLIE](https://www.billie.io/){target="_blank"}
+[ABOUT BILLIE](https://www.billie.io/)
 
 B2B-PayAfterDelivery for the 21st century
 

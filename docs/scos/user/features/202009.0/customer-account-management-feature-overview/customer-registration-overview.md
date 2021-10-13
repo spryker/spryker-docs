@@ -1,5 +1,6 @@
 ---
 title: Customer Registration overview
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/customer-registration-overview
 originalArticleId: 2e6aaeee-ae30-4325-88d8-aac38dbdbd08
 redirect_from:

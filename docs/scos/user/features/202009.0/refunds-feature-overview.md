@@ -1,6 +1,7 @@
 ---
 title: Refunds feature overview
 description: Refunds can be handled automatically in the Admin Interface, once the order has been delivered. All refunds can be listed per order or as a full overview.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/refunds
 originalArticleId: 250b531e-aa7a-4e58-9134-37f8e765cdaa
 redirect_from:

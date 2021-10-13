@@ -1,6 +1,7 @@
 ---
 title: Demo data was imported incorrectly
 description: Learn how to fix the issue when demo data was imported incorrectly
+template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/demo-data-was-imported-incorrectly
 originalArticleId: 49e90c4b-9c36-4d31-af99-c48dc9d0b412
 redirect_from:

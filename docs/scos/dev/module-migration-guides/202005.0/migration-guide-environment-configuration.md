@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Environment Configuration
 description: Use the guide to install new configuration options to update project implementations for Spryker compatibility.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/mg-environment-config
 originalArticleId: eb262e38-64ab-4163-a3ec-c357ea2e6e8a
 redirect_from:

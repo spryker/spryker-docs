@@ -1,5 +1,6 @@
 ---
 title: Code Generator
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/code-generator
 originalArticleId: 67355fa9-f508-4c41-90a3-3e4d982b2923
 redirect_from:
@@ -12,8 +13,8 @@ The CodeGenerator module can generate your project code.
 Out of the box it provides generators for Yves, Zed, Client, Service and Shared application layers.
 
 {% info_block errorBox %}
-Check out our new code generation tool [Spryk](https://documentation.spryker.com/v1/docs/spryk
-{% endinfo_block %}.)
+Check out our new code generation tool [Spryk](https://documentation.spryker.com/v1/docs/spryk).
+{% endinfo_block %}
 
 
 ## Installation

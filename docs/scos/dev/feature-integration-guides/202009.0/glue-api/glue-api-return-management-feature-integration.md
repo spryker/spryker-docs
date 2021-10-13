@@ -1,6 +1,7 @@
 ---
 title: Glue API- Return management feature integration
 description: This integration guide provides step-by-step instructions on integrating Glue API- Return Management feature into your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/glue-api-return-management-feature-integration
 originalArticleId: fc4b461d-f76e-4873-9bef-1c2d0c0c7934
 redirect_from:
@@ -15,7 +16,7 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Integration guide |
 | --- | --- | --- |
-| Spryker Core | 202009.0 | [Feature API](/docs/scos/dev/feature-integration-guides/{page.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | 202009.0 | [Feature API](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 | Return Management | 202009.0 | Feature |
 
 ### 1) Install the required modules using Composer

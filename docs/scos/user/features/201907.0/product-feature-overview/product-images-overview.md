@@ -1,6 +1,7 @@
 ---
 title: Product Image Management
 description: Group several images into sets and link them to products. One product can have several named and localized sets of images.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/product-image-management
 originalArticleId: e4190d06-d112-4c1d-8df1-0bcbb3775314
 redirect_from:

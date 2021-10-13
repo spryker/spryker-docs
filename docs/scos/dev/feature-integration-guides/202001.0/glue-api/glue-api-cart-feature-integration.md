@@ -1,6 +1,7 @@
 ---
 title: Glue API- Cart feature integration
 description: Install the Cart API feature in your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/cart-feature-integration
 originalArticleId: 61c4ca5a-12f2-42e3-ae96-272338b60e4e
 redirect_from:
@@ -127,8 +128,8 @@ Activate the following plugins:
 | `AddGuestQuoteItemsToCustomerQuotePostAuthPlugin` | Adds items from a guest quote to a customer quote. | None | `Spryker\Zed\CartsRestApi\Communication\Plugin\AuthRestApi` |
 
 {% info_block infoBox "Info" %}
-Wiring `AddGuestQuoteItemsToCustomerQuotePostAuthPlugin` or `UpdateGuestQuoteToCustomerQuotePostAuthPlugin` depends on the cart behavior strategy (they cannot be wired at the same time
-{% endinfo_block %}.</br>There are two strategies for the behavior of carts: single cart behavior and multiple cart behavior. The difference is that in multiple cart behavior it is allowed to create more than one cart for a customer, unlike the single cart behavior.</br>To apply one of those strategies, wire one of the `QuoteCreatorPlugin` plugins in `CartsRestApiDependencyProvider` (Zed). </br>There are two `QuoteCreatorPlugins` placed in different modules:<ul><li>`Spryker\Zed\CartsRestApi\Communication\Plugin\CartsRestApi\QuoteCreatorPlugin` that doesn't allow creating more than one cart.</li><li>`Spryker\Zed\PersistentCart\Communication\Plugin\CartsRestApi\QuoteCreatorPlugin` that allows creating more than one cart.</li></ul>In case when a **single cart** strategy is applied, the `AddGuestQuoteItemsToCustomerQuotePostAuthPlugin` plugin should be wired in `AuthRestApiDependencyProvider`. </br>In case when a **multiple cart** strategy is applied, the `UpdateGuestQuoteToCustomerQuotePostAuthPlugin` plugin should be wired in `AuthRestApiDependencyProvider`. </br>Wiring plugins is illustrated in the code blocks below. )
+Wiring `AddGuestQuoteItemsToCustomerQuotePostAuthPlugin` or `UpdateGuestQuoteToCustomerQuotePostAuthPlugin` depends on the cart behavior strategy (they cannot be wired at the same time).</br>There are two strategies for the behavior of carts: single cart behavior and multiple cart behavior. The difference is that in multiple cart behavior it is allowed to create more than one cart for a customer, unlike the single cart behavior.</br>To apply one of those strategies, wire one of the `QuoteCreatorPlugin` plugins in `CartsRestApiDependencyProvider` (Zed). </br>There are two `QuoteCreatorPlugins` placed in different modules:<ul><li>`Spryker\Zed\CartsRestApi\Communication\Plugin\CartsRestApi\QuoteCreatorPlugin` that doesn't allow creating more than one cart.</li><li>`Spryker\Zed\PersistentCart\Communication\Plugin\CartsRestApi\QuoteCreatorPlugin` that allows creating more than one cart.</li></ul>In case when a **single cart** strategy is applied, the `AddGuestQuoteItemsToCustomerQuotePostAuthPlugin` plugin should be wired in `AuthRestApiDependencyProvider`. </br>In case when a **multiple cart** strategy is applied, the `UpdateGuestQuoteToCustomerQuotePostAuthPlugin` plugin should be wired in `AuthRestApiDependencyProvider`. </br>Wiring plugins is illustrated in the code blocks below.
+{% endinfo_block %}
 
 src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php
 

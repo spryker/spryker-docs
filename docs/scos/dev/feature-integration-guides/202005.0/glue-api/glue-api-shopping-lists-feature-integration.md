@@ -1,5 +1,6 @@
 ---
 title: Glue API- Shopping Lists feature integration
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/glue-api-shopping-lists-feature-integration
 originalArticleId: b9a2fd6a-31a7-40f1-9ab3-6495b2650a6b
 redirect_from:
@@ -289,7 +290,7 @@ Check the response:
 
 {% endinfo_block %}
 
-:::(Warning) (Verification)
+{% info_block warningBox "Verification" %}
 To verify that the `ShoppingListItemsResourcePlugin` is set up correctly, make sure that the following endpoint is available:
 
 * http://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}/shopping-list-items
@@ -333,3 +334,5 @@ Check the response:
 ```
  <br>
 </details>
+
+{% endinfo_block %}

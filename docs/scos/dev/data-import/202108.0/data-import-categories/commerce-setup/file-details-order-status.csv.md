@@ -1,6 +1,7 @@
 ---
 title: File details- order-status.csv
 description: Import the data to to configure the update of the regular order status information
+template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-order-statuscsv
 originalArticleId: 9dcde9fc-7757-4a62-997c-a53def8250d1
 redirect_from:

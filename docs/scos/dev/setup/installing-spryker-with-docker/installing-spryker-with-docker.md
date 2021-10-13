@@ -1,6 +1,7 @@
 ---
 title: Installing Spryker with Docker
 description: Spryker provides an easy way to bootstrap applications and prepare development and production environments for running Spryker OS in Docker.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/installing-spryker-with-docker
 originalArticleId: 41fb5887-0351-4678-8e21-9c37ce898925
 redirect_from:
@@ -18,7 +19,7 @@ redirect_from:
 
 This section is a complete stack for running Spryker in Docker containers.
 
-Spryker provides a standardized and customizable way to bootstrap applications and prepare development and production environments using the [Docker SDK tool](/docs/scos/dev/the-docker-sdk/{{page.version}}/the-docker-sdk.html).
+Spryker provides a standardized and customizable way to bootstrap applications and prepare development and production environments using the [Docker SDK tool](/docs/scos/dev/the-docker-sdk/{{site.version}}/the-docker-sdk.html).
 
 Below, you will find a step-by-step checklist that you will be able to follow through all the stages to start working with Spryker in Docker.
 
@@ -43,6 +44,6 @@ If you've already selected an installation mode, follow one of the guides below:
 ## Configuration
 
 Once you have a running instance, the following documents will help you adjust the project to your requirements:
-* [Configuring services](/docs/scos/dev/the-docker-sdk/{{page.version}}/configuring-services.html)
-* [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file-reference-1.0.html)
+* [Configuring services](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-services.html)
+* [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file-reference-1.0.html)
 * [Additional DevOPS guidelines](/docs/scos/dev/setup/installing-spryker-with-docker/configuration/additional-devops-guidelines.html)

@@ -1,6 +1,7 @@
 ---
 title: Assigning products to categories
 description: The guide provides instructions on how to assign products to the category in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/assigning-products-to-categories
 originalArticleId: 4c14098e-c5c1-4f63-9957-202bca4a638a
 redirect_from:
@@ -32,9 +33,9 @@ To assign one or more products to a category:
 
 1. In the *Select Products to assign* tab, select the checkbox next to the product you want to assign in the *Selected* column.
 
-:::(Info)
+{% info_block infoBox %}
  If you need to select all products displayed on the page, select **Select all** at the bottom of the table. If you do not see the needed product on the page, there is no need to navigate through the pages manually. Use the Search field to find your product. You can use either SKU or Name value to find the needed product.
-:::
+{% endinfo_block %}
 2. Click **Save**.
 
 **Tips & tricks**

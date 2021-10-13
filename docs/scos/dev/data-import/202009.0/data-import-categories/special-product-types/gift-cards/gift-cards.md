@@ -1,5 +1,6 @@
 ---
 title: Gift Cards
+template: data-import-template
 originalLink: https://documentation.spryker.com/v6/docs/gift-cards-import
 originalArticleId: 772775f2-2543-4dd0-ad93-7d367498138d
 redirect_from:

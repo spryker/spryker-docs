@@ -1,6 +1,7 @@
 ---
 title: Punchout feature overview
 description: The Punch Out feature allows connecting a buyer's procurement software with a seller's e-commerce shop, Spryker Commerce OS.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/punchout-feature-overview
 originalArticleId: 034de771-9fba-4fcc-9c62-45a0f6d922c8
 redirect_from:
@@ -37,8 +38,8 @@ From the B2B buyer perspective, the Punchout process typically involves the foll
 ## Punchout Formats
 The cart from Spryker Commerce OS is transferred to the client's ERP using [cXML](https://en.wikipedia.org/wiki/CXML) or [OCI](https://en.wikipedia.org/wiki/Open_Catalog_Interface) formats. Both standards provide similar functionality.
 {% info_block warningBox "Note" %}
-Spyker only provides the user interface in the Back Office where the connection between Spryker Commerce OS and customer's e-procurement system is set up. The ERP-related workflows and logics are managed by our partner [PunchoutCatalogs](https://www.punchoutcatalogs.com/
-{% endinfo_block %}.)
+Spyker only provides the user interface in the Back Office where the connection between Spryker Commerce OS and customer's e-procurement system is set up. The ERP-related workflows and logics are managed by our partner [PunchoutCatalogs](https://www.punchoutcatalogs.com/).
+{% endinfo_block %}
 
 ### cXML
 cXML is the most popular and supported standard, and it is based on the XML format. cXML is used by most e-procurement systems and allows to modify and validate the cart data without prior knowledge of their form and the included fields.

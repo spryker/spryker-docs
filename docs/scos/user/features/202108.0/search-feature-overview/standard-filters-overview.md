@@ -1,5 +1,6 @@
 ---
 title: Standard filters overview
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/standard-filters-overview
 originalArticleId: 0b675c4c-6163-4402-82a5-8a9198260fda
 redirect_from:
@@ -31,7 +32,7 @@ Products appropriate for the active filters are displayed in the results.
 Filter preferences can be configured in the **Back Office > Search and Filters > Filter Preferences**. Filter options depend on the attributes configured for the products.
 
 ## Current constraints
-Price Range Filter is not supported with the Merchant Relations, that is why this filter is not included in the B2B demo shop. However, in [the B2C demo shop](/docs/scos/user/intro-to-spryker/{{site.version}}/about-spryker.html#spryker-b2b-b2c-demo-shops), you can still filter the products using the price range filter.
+Price Range Filter is not supported with the Merchant Relations, that is why this filter is not included in the B2B demo shop. However, in [the B2C demo shop](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2b-b2c-demo-shops), you can still filter the products using the price range filter.
 
 ## Related Business User articles
 

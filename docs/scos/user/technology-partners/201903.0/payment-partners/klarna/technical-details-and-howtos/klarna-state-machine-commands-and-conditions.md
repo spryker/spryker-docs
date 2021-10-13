@@ -1,6 +1,7 @@
 ---
 title: Klarna - State Machine Commands and Conditions
 description: This article includes the state machine commands and conditions provided by Klarna.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/klarna-state-machine-commands-and-conditions
 originalArticleId: 3afbf280-80e0-4a32-92d9-34ab333179ab
 redirect_from:

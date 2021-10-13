@@ -1,5 +1,6 @@
 ---
 title: Tutorial - Interacting with Third Party Payment Providers via Glue API
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-interacting-with-third-party-payment-providers-via-glue-api
 originalArticleId: c9d486b4-ac75-46f5-917e-f3935043f018
 redirect_from:

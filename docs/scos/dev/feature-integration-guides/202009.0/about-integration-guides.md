@@ -1,5 +1,6 @@
 ---
 title: About integration guides
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/about-integration
 originalArticleId: d310d07d-6d2e-46e8-a014-aba1fa24dfbe
 redirect_from:

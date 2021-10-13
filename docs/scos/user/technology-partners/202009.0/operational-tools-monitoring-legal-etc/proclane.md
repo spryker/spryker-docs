@@ -1,6 +1,7 @@
 ---
 title: Proclane
 description: Connect SAP and other ERP systems with your shop application by integrating Proclane into the Spryker Commerce OS.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/proclane
 originalArticleId: 95347b17-b8c3-4a8f-ab1c-43a3dad0e5c5
 redirect_from:
@@ -9,7 +10,7 @@ redirect_from:
 ---
 
 ## Partner Information
-[ABOUT PROCLANE](https://proclane.com/){target="_blank"}
+[ABOUT PROCLANE](https://proclane.com/)
 
 PROCLANE Integration is a leading German integration house and specializes in connecting.
 SAP and other ERP systems to eCommerce solutions, such as those required for real-time processes in B2B shops. The integration platform &quot;PROCLANE IntegrationMan&quot; already provides around 80% of all processes for the SAP connection of online shops as standard.

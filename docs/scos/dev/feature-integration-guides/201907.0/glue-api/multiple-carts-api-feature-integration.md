@@ -1,6 +1,7 @@
 ---
 title: Multiple Carts API feature integration
 description: The guide walks you through the process of installing the Multiple Carts API feature into the project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/multiple-carts-api-feature-integration-201907
 originalArticleId: 0b3107fb-825e-481e-bb6d-27e13f4a7d0f
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: Managing Customers
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/managing-customers-api
 originalArticleId: bff44067-c078-4006-9f30-ba1c01f4666b
 redirect_from:
@@ -156,8 +157,8 @@ To modify an existing customer account, send a _PATCH_ request to the following 
 `/customers/{% raw %}{{{% endraw %}customerReference{% raw %}}}{% endraw %}`
 
 {% info_block infoBox "Modifying Customer Addresses " %}
-You need to use specialized endpoints to retrieve and manage addresses registered for a customer. For details, see [Managing the List of Customer Addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html#managing-the-list-of-customer-addresses
-{% endinfo_block %}.)
+You need to use specialized endpoints to retrieve and manage addresses registered for a customer. For details, see [Managing the List of Customer Addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html#managing-the-list-of-customer-addresses).
+{% endinfo_block %}
 
 Sample request: `PATCH http://mysprykershop.com/customers/DE-25`
 where `DE-25` is the unique identifier of the customer you want to modify.

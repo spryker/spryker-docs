@@ -1,6 +1,7 @@
 ---
 title: Paazl
 description: Connect e-commerce brands and retailers to a wide range of global, national and inner-city delivery carriers by integrating Paazl intot he Spryker-based shop.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/paazl
 originalArticleId: 4d83a1a9-9be0-4204-9f00-02dd395faf1c
 redirect_from:
@@ -9,7 +10,7 @@ redirect_from:
 ---
 
 ## Partner Information
-[ABOUT PAAZL](https://paazl.com/){target="_blank"}
+[ABOUT PAAZL](https://paazl.com/)
 When Shipping gets serious.
 
 Paazl is a multi-carrier platform on a mission to change the world of e-commerce delivery. The Paazl technology connects e-commerce brands and retailers to a wide range of global, national and inner-city delivery carriers.

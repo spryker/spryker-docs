@@ -1,6 +1,7 @@
 ---
 title: Dixa
 description: Unify customer engagement across email, chat, messaging and phone in one platform for a better customer and agent experience by integrating Dixa into the Spryker Commerce OS.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/dixa
 originalArticleId: dc886da2-70f3-4c30-9ca7-8a35f3c3de8e
 redirect_from:
@@ -12,7 +13,7 @@ redirect_from:
 
 ## Partner Information
 
-[ABOUT DIXA](https://dixa.com/){target="_blank"}
+[ABOUT DIXA](https://dixa.com/)
 Meet Conversational Customer Engagement- Helping brands build stronger bonds with their customers and eliminate bad customer service. Dixa is the Conversational Customer Engagement platform of choice for hundreds of the world’s leading brands. Our software unifies customer engagement across email, chat, messaging and phone in one platform for a
 better customer and agent experience.
 Dixa is a truly international company with 14+ nationalities working together in the heart of Copenhagen and with offices in London, Berlin and Kiev. With customers in 20+ countries, Dixa has experienced incredible growth since it’s global launch in 2018, quickly becoming one of Scandinavia’s fastest growing SaaS companies.

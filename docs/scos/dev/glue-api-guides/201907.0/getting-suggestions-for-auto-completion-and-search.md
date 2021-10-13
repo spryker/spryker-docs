@@ -1,5 +1,6 @@
 ---
 title: Getting Suggestions for Auto-Completion and Search
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/getting-suggestions-for-autocompletion-and-search
 originalArticleId: 7c265e1b-a970-47fd-8383-e83e1222fb1b
 redirect_from:

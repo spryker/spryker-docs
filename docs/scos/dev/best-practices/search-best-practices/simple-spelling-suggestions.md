@@ -1,6 +1,7 @@
 ---
 title: Simple Spelling Suggestions
 description: Spelling suggestions provide the users with alternative search terms when the search query does not return any results
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/simple-spelling-suggestions
 originalArticleId: 336cc842-ecf5-4403-8979-21a973ce0e70
 redirect_from:

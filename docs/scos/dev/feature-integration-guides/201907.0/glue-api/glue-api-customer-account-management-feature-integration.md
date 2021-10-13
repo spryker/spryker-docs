@@ -1,6 +1,7 @@
 ---
 title: "Glue API: Customer Account Management feature integration"
 description: This guide will navigate through the process of installing and configuring of the Customer API feature used in Spryker OS.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/customer-account-management-feature-integration-glue-201907
 originalArticleId: 1c3ee0f0-11af-4494-87f9-9ba3d4a8011c
 redirect_from:
@@ -129,8 +130,8 @@ SELECT COUNT(*) FROM spy_customer_address WHERE uuid IS NULL;
 #### Enable resources and relationships
 
 {% info_block infoBox %}
-`CustomersResourceRoutePlugin` GET, PATCH, DELETE verbs, `AddressesResourceRoutePlugin` GET, POST, PATCH and DELETE, `CustomerPasswordResourceRoutePlugin` PATCH are protected resources. Refer to the configure section of [Configure documentation](/docs/scos/dev/concepts/glue-api/glue-infrastructure.html#resource-routing).
-{% endinfo_block %}.)
+`CustomersResourceRoutePlugin` GET, PATCH, DELETE verbs, `AddressesResourceRoutePlugin` GET, POST, PATCH and DELETE, `CustomerPasswordResourceRoutePlugin` PATCH are protected resources. Refer to the configure section of [Configure documentation](/docs/scos/dev/concepts/glue-api/glue-infrastructure.html#resource-routing).).
+{% endinfo_block %}
 
 Activate the following plugins:
 
@@ -344,8 +345,8 @@ Send a request to *http://mysprykershop.com/customers/{% raw %}{{{% endraw %}cus
 {% endinfo_block %}
 
 {% info_block warningBox %}
-To verify `AccessTokenRestRequestValidatorPlugin` is set up correctly, you'll need to send a request to `/refresh-tokens` without "Authorization: Bearer {token}" (or with the outdated or wrong token
-{% endinfo_block %}. If you get one of the following errors, the plugin is installed:)
+To verify `AccessTokenRestRequestValidatorPlugin` is set up correctly, you'll need to send a request to `/refresh-tokens` without "Authorization: Bearer {token}" (or with the outdated or wrong token). If you get one of the following errors, the plugin is installed:
+{% endinfo_block %}
 
 <details open>
 <summary>Auth error</summary>

@@ -1,6 +1,7 @@
 ---
 title: Conceptual overview
 description: Spryker is a Commerce Operating System composed of the following applications- Storefront (Yves), Backoffice (Zed), Storefront API (Glue).
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/conceptual-overview
 originalArticleId: 92a95e93-3608-4a70-93be-cf6aec4f9017
 redirect_from:
@@ -43,7 +44,7 @@ The Spryker OS provides the following Application Layers:
 
 * [Yves](/docs/scos/dev/back-end-development/yves/yves.html) - provides frontend functionality with the light-weight data access.
 * [Zed](/docs/scos/dev/back-end-development/zed/zed.html) - provides backoffice/backend functionality with heavy calculations.
-* [Glue](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-infrastructure.html) - provides infrastructure for API with the mixed data access.
+* [Glue](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-infrastructure.html) - provides infrastructure for API with the mixed data access.
 * [Client](/docs/scos/dev/back-end-development/client/client.html) - provides data access infrastructure.
 * Shared - provides shared code abstractions to be used in other Application Layers of the same module.
 * Service - provides infrastructure for the stateless operations, usually utils.

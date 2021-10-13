@@ -1,6 +1,7 @@
 ---
 title: Composer
 description: Spryker Commerce OS uses Composer as a dependency manager.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/composer
 originalArticleId: 89fb7da0-72ec-4f0a-897a-92a99e146ba5
 redirect_from:
@@ -165,8 +166,8 @@ For each module that you want to add:
   Running composer update will remove all mentions of the module (for example: `refund`) and replace it with your module (for example: `replace_refund`).
 
 {% info_block infoBox %}
-For more information on using the composer replace command see  [Composer website](https://getcomposer.org/doc/04-schema.md#replace
-{% endinfo_block %}.)
+For more information on using the composer replace command see  [Composer website](https://getcomposer.org/doc/04-schema.md#replace).
+{% endinfo_block %}
 
 ```php
 {

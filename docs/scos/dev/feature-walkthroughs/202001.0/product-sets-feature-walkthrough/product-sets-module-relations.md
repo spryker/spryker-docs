@@ -1,6 +1,7 @@
 ---
 title: Product Sets- module relations
 description: Module relations and database schema of the Product Sets feature.
+template: feature-walkthrough-template
 ---
 
 The Product Set feature consists of the following modules:

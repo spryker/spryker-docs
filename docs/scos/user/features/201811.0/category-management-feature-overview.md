@@ -1,6 +1,7 @@
 ---
 title: Category Management feature overview
 description: The feature allows keeping your product catalog organized and comprehensible for the customers who can easily navigate the storefront and search products quicker
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/catalog-management
 originalArticleId: 5e9364e6-5a35-4fba-9b4c-bdc0f76bfdd5
 redirect_from:
@@ -72,7 +73,7 @@ Currently, the Category Management feature has the following functional constrai
 * A store can only be linked to one root category tree, but in the future, a store will be able to have multiple root category trees.
 * Category URLs are locale-dependent.
 * Category URLs are available in all the stores that share the same locales.
-* Price Range Filter is not supported with merchant relations. That is why this filter is not included in the [B2B demo shop](/docs/scos/user/intro-to-spryker/b2b-suite.html). However, in the [B2C demo shop](/docs/scos/user/intro-to-spryker/{{site.version}}/b2c-suite.html), you can still filter the products using the price range filter.
+* Price Range Filter is not supported with merchant relations. That is why this filter is not included in the [B2B demo shop](/docs/scos/user/intro-to-spryker/b2b-suite.html). However, in the [B2C demo shop](/docs/scos/user/intro-to-spryker/b2c-suite.html), you can still filter the products using the price range filter.
 
 ## Related Business User articles
 

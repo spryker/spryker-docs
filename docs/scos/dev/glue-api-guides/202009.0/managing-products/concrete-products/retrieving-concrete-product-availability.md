@@ -1,6 +1,7 @@
 ---
 title: Retrieving concrete product availability
 description: Retrieve availability of concrete products.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/retrieving-concrete-product-availability
 originalArticleId: 643790b7-3c3c-4d98-8bca-90f1e39a654a
 redirect_from:

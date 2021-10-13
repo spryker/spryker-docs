@@ -1,6 +1,7 @@
 ---
 title: Retrieving Product Information
 description: This article explains how to get various information and resources of an abstract or concrete product, such as availability, price, taxes, and image sets.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/retrieving-product-information
 originalArticleId: d405dd72-8c6d-46d0-b23c-58540d16e5c7
 redirect_from:
@@ -394,8 +395,8 @@ If the request was successful, the resource responds with a **RestConcreteProduc
 ## Prices
 The below endpoints return prices for a concrete or an abstract product.
 {% info_block infoBox %}
-For information on the different price types available in Spryker, see [Price](
-{% endinfo_block %}.)
+For information on the different price types available in Spryker, see [Price]().
+{% endinfo_block %}
 
 `/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/abstract-product-prices`
 Gets prices for an **abstract** product by SKU.
@@ -588,8 +589,8 @@ where `001` is the SKU of the abstract product; `CHF` is the currency to display
 To retrieve information on tax-related information for a product, you can use the endpoint described below.
 
 {% info_block infoBox %}
-For more information on how to manage product taxes, see [Tax](
-{% endinfo_block %}.)
+For more information on how to manage product taxes, see [Tax]().
+{% endinfo_block %}
 
 `/abstract-products/{% raw %}{{{% endraw %}SKU{% raw %}}}{% endraw %}/tax-sets`
 Gets prices for an abstract product by SKU.

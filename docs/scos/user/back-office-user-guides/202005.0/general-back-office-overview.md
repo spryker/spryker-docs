@@ -1,6 +1,7 @@
 ---
 title: General Back Office Overview
 description: The article provides general information about the actions you can perform in Spryker Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/general-back-office-overview
 originalArticleId: c8df52c1-f4f9-45e5-85d7-aee38f7e9a1b
 redirect_from:

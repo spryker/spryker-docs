@@ -1,6 +1,7 @@
 ---
 title: Ratenkauf by Easycredit - Installation and Configuration
 description: This article contains installation and configuration information for the Ratenkauf by Easycredit module into the Spryker-based shop.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/ratenkauf-by-easycredit-installation-and-configuration
 originalArticleId: bb0abfd9-0e73-4a4f-92ef-4dc0b5f753fc
 redirect_from:

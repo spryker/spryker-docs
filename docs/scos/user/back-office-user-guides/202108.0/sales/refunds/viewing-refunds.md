@@ -1,6 +1,7 @@
 ---
 title: Viewing refunds
 description: The article provides reference information about attributes Back Office users see when viewing the list of refunds.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/viewing-refunds
 originalArticleId: 36f1525b-6f90-41be-b0bf-75d368e91b8c
 redirect_from:

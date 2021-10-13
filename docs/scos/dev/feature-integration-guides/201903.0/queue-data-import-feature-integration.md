@@ -1,6 +1,7 @@
 ---
 title: Queue Data Import feature integration
 description: This guide will navigate you through the process of integrating the Queue Data feature in Spryker OS.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/queue-data-import-feature-integration
 originalArticleId: c1e1efc8-672e-4799-8cef-37475a458e84
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: Adding volume prices to abstract products
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/adding-volume-prices-to-abstract-products
 originalArticleId: 5e6dac98-955a-4e8c-abad-ce2b0dd6bacf
 redirect_from:

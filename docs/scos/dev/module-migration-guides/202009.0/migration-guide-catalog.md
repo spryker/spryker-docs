@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Catalog
 description: Use the guide to migrate to a newer version of the Catalog module.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/mg-catalog
 originalArticleId: 2a66b291-71c3-4edb-928a-d3a578c82599
 redirect_from:

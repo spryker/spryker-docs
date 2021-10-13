@@ -1,6 +1,7 @@
 ---
 title: Authenticating as a customer
 description: Retrieve customer authentication tokens to send requests to protected resources.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/authenticating-as-a-customer
 originalArticleId: 4d61554f-dce0-40a2-9091-2db810bcf9a2
 redirect_from:
@@ -12,9 +13,9 @@ redirect_from:
 
 This endpoint allows authenticating as a customer. As an authenticated customer, you can send requests to [protected resources](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html#protected-resources).
 
-:::(Warning)
+{% info_block warningBox %}
 This endpoint does not comply with OAuth 2.0. If your project requires such compliance, use the `/token`endpoint. For details about the `/token`endpoint, see [Managing customer authentication tokens via OAuth 2.0](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html).
-:::
+{% endinfo_block %}
 
 ## Installation
 For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html).
@@ -56,9 +57,9 @@ If you are authenticating as a newly created customer, make sure to verify your 
 
 {% endinfo_block %}
 
-:::(Warning) 
+{% info_block warningBox %} 
 Note that depending on the Login feature configuration for your project, too many unsuccessful login attempts may result in the 429 error, and the user will be locked out for some time. For details, see [Storefront Login feature overview](https://documentation.spryker.com/2021080/docs/storefront-login-feature-overview).
-:::
+{% endinfo_block %}
 
 ### Response
 

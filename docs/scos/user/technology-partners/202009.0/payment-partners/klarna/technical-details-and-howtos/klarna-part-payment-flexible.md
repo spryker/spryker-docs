@@ -1,6 +1,7 @@
 ---
 title: Klarna - Part Payment Flexible
 description: In this article, you will find part payment flexible scenarios for the payment process with Klarna.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/klarna-part-payment-flexible
 originalArticleId: e99772e7-8bdf-4358-a902-fb1264595c98
 redirect_from:

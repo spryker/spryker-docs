@@ -1,6 +1,7 @@
 ---
 title: Product Lists feature integration
 description: The Product Lists Feature allows defining access to particular items. The guide walks you through the process of integrating this feature into your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/product-lists-feature-integration-201903
 originalArticleId: da3a7c0f-8a1f-411f-87e4-4e447887919c
 redirect_from:
@@ -890,5 +891,5 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 Make sure that no restricted products can be added to a cart and if they were already in a cart, they get properly removed once a product became restricted for the customer.
 {% endinfo_block %}
 {% info_block warningBox "Verification" %}
-After completing the integration of this feature, you need to further extend it to provide one or many owner types for product lists to be able to assign them. A product list can only be fully functional when a user who browses the catalog gets product lists assigned and this can be done by providing owners for product lists. Check out our Merchant Relationship Product Restrictions integration guide that adds this functionality for merchant relationships: [Merchant Product Restrictions feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-product-restrictions-feature-integration.html
-{% endinfo_block %}.)
+After completing the integration of this feature, you need to further extend it to provide one or many owner types for product lists to be able to assign them. A product list can only be fully functional when a user who browses the catalog gets product lists assigned and this can be done by providing owners for product lists. Check out our Merchant Relationship Product Restrictions integration guide that adds this functionality for merchant relationships: [Merchant Product Restrictions feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-product-restrictions-feature-integration.html).
+{% endinfo_block %}

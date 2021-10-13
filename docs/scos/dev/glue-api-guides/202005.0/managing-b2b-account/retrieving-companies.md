@@ -1,6 +1,7 @@
 ---
 title: Retrieving Company Information
 description: The article describes how to leverage endpoints provided by Spryker Glue API to retrieve company information.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/retrieving-company-information-201907
 originalArticleId: c919a004-8d7f-4573-9014-73949cf1eb8f
 redirect_from:
@@ -28,8 +29,8 @@ To retrieve information on the company a user belongs to, send a GET request to 
 Sample request: *GET http://glue.mysprykershop.com/companies/mine*
 
 {% info_block warningBox "Note" %}
-You can use the Accept-Language header to specify the locale.Sample header: [{"key":"Accept-Language","value":"de, en;q=0.9"}]where de, en are the locales; q=0.9 is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
-{% endinfo_block %}.)
+You can use the Accept-Language header to specify the locale.Sample header: [{"key":"Accept-Language","value":"de, en;q=0.9"}]where de, en are the locales; q=0.9 is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+{% endinfo_block %}
 
 #### Response
 The endpoint responds with a collection of **RestCompanyResponse** consisting of a single item that represents the user's company.
@@ -81,8 +82,8 @@ The endpoint provides information only on the companies a user has access to. If
 {% endinfo_block %}
 
 {% info_block warningBox "Note" %}
-You can use the Accept-Language header to specify the locale.Sample header: [{"key":"Accept-Language","value":"de, en;q=0.9"}]where de, en are the locales; q=0.9 is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
-{% endinfo_block %}.)
+You can use the Accept-Language header to specify the locale.Sample header: [{"key":"Accept-Language","value":"de, en;q=0.9"}]where de, en are the locales; q=0.9 is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+{% endinfo_block %}
 
 #### Response
 The endpoint responds with a **RestCompanyResponse** containing information on the requested company.

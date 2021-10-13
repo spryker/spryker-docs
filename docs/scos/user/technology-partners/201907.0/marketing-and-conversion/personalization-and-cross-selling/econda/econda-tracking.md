@@ -1,6 +1,7 @@
 ---
 title: Econda - Tracking
 description: Add the Econda tracking code into Spryker Commerce OS.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/econda-tracking
 originalArticleId: 29803d89-9e6b-4788-aeb1-a4c402df05b8
 redirect_from:

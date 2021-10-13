@@ -1,5 +1,6 @@
 ---
 title: File details- payment_method.csv
+template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-payment-methodcsv
 originalArticleId: 77b583a2-c11e-433a-8883-4fa5a4fb2815
 redirect_from:

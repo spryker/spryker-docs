@@ -1,6 +1,7 @@
 ---
 title: Product lists + catalog feature integration
 description: The guide walks you through the process of installing the Product Lists as a catalog  feature in the project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/product-lists-catalog-feature-integration
 originalArticleId: 6433800f-3780-4c15-9de4-0b6486686ba4
 redirect_from:
@@ -38,7 +39,7 @@ Once the Product List data is exported to Elasticsearch, make sure to extend you
 
 | Plugin | Specification | Prerequisites | Namespace |
 | --- | --- | --- | --- |
-| `ProductListQueryExpanderPlugin` | Expands an Elasticsearch query for Abstract and Concrete Products with Blacklist and Whitelist filters based on the Customer session.<br>The result of the query will contain only Products that were on the given Whitelists, but not on the given Blacklists.| The Customer session must contain Product List information. See [Merchant Product Restrictions feature integration](/docs/scos/dev/feature-integration-guides/{page.version}}/merchant-product-restrictions-feature-integration.html) for an example implementation. | `Spryker\Client\CustomerCatalog\Plugin\Search` |
+| `ProductListQueryExpanderPlugin` | Expands an Elasticsearch query for Abstract and Concrete Products with Blacklist and Whitelist filters based on the Customer session.<br>The result of the query will contain only Products that were on the given Whitelists, but not on the given Blacklists.| The Customer session must contain Product List information. See [Merchant Product Restrictions feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-product-restrictions-feature-integration.html) for an example implementation. | `Spryker\Client\CustomerCatalog\Plugin\Search` |
 | `ProductListQueryExpanderPlugin` | Expands search query with filtering by product list ID. | None | `Spryker\Client\ProductListSearch\Plugin\Search` |
 
 {% info_block infoBox "Info" %}

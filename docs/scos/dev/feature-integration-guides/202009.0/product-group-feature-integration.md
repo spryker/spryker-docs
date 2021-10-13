@@ -1,6 +1,7 @@
 ---
 title: Product group feature integration
 description: The guide describes the process of installing the Product Group feature in your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/product-group-feature-integration
 originalArticleId: 61499964-c547-4a4a-9321-13361b56dec5
 redirect_from:
@@ -369,8 +370,8 @@ Make sure that `ProductGroupColorWidget` has been registered:
 
 | Feature | feature integration guide |
 | --- | --- |
-| Product Group + Product Labels | [Product Group + Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{page.version}}/product-group-product-labels-feature-integration.html) |
-| Product Group + Product Rating & Reviews | [Product Group + Product Rating & Reviews feature integration](/docs/scos/dev/feature-integration-guides/{page.version}}/product-group-product-rating-and-reviews-feature-integration.html) |
-| Product Group + Cart | [Product Group + Cart feature integration](/docs/scos/dev/feature-integration-guides/{page.version}}/product-group-cart-feature-integration.html)  |
+| Product Group + Product Labels | [Product Group + Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-group-product-labels-feature-integration.html) |
+| Product Group + Product Rating & Reviews | [Product Group + Product Rating & Reviews feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-group-product-rating-and-reviews-feature-integration.html) |
+| Product Group + Cart | [Product Group + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-group-cart-feature-integration.html)  |
 
 

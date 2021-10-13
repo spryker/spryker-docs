@@ -1,6 +1,7 @@
 ---
 title: Too many open files in Dev VM
 description: Learn how to fix the issue with too many open files in Dev VM
+template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/too-many-open-files-in-dev-vm
 originalArticleId: 2a0c315f-bb24-4c40-a28d-b98531652677
 redirect_from:

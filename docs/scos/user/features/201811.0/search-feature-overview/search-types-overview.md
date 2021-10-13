@@ -7,6 +7,7 @@ redirect_from:
   - /v1/docs/en/multi-language-search
   - /v1/docs/textual-search
   - /v1/docs/en/textual-search
+template: concept-topic-template
 ---
 
 This document describes the default search types shipped with the *Search* feature.

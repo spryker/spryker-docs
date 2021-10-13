@@ -1,5 +1,6 @@
 ---
 title: Glue API- Shipment feature integration
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/glue-api-shipment-feature-integration
 originalArticleId: 86eb8077-de56-4922-9e20-ffc33fa00123
 redirect_from:
@@ -14,7 +15,7 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Integration guide|
 | --- | --- |--- |
-| Spryker Core	 | master |[Spryker Core API](/docs/scos/dev/feature-integration-guides/{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Spryker Core	 | master |[Spryker Core API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
 | Shipments	 | master | |
 
 ## 1) Install the required modules using Composer
@@ -262,7 +263,7 @@ To verify that `ShipmentMethodCheckoutDataValidatorPlugin` is activated, send a 
 
 | Feature | Link |
 | --- | --- |
-| Checkout API | [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |
+| Checkout API | [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |
 
 
 

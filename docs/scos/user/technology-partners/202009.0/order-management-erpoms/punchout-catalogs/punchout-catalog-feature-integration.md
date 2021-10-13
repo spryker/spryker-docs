@@ -1,6 +1,7 @@
 ---
 title: Punchout Catalog Feature Integration
 description: Integrate Punchout Catalog into the Spryker Commerce OS.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/punchout-catalog-feature-integration
 originalArticleId: 4e6553d9-1c8b-4ddf-98d0-c009177b5a25
 redirect_from:
@@ -127,8 +128,8 @@ class PunchoutCatalogConfig extends SprykerPunchoutCatalogConfig
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that you do not receive an `MissingYvesUrlConfigurationException` exception when trying to click on the Transfer Cart button on a cart page (this button will be available when the "Feature Frontend" is fully installed
-{% endinfo_block %}.)
+Make sure that you do not receive an `MissingYvesUrlConfigurationException` exception when trying to click on the Transfer Cart button on a cart page (this button will be available when the "Feature Frontend" is fully installed).
+{% endinfo_block %}
 
 ### 3) Set up Database Schema and Transfer Objects
 Run the following commands to apply database changes and generate entity and transfer changes:
@@ -1340,8 +1341,8 @@ class PunchoutCatalogDependencyProvider extends BasePunchoutCatalogDependencyPro
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that in transferred cart XML bundled product items has `childBundleItems` section (in case you have Product Bundles feature - otherwise this plugin should not be registered
-{% endinfo_block %}.)
+Make sure that in transferred cart XML bundled product items has `childBundleItems` section (in case you have Product Bundles feature - otherwise this plugin should not be registered).
+{% endinfo_block %}
 
 **src/Pyz/Zed/OauthCompanyUser/OauthCompanyUserDependencyProvider.php**
 

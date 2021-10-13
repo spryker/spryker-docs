@@ -1,6 +1,7 @@
 ---
 title: Tutorial - CMS
 description: Use the tutorial to create a static Contact Us page with its own template and integrate it to Yves.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-cms
 originalArticleId: 010de313-e57b-49d1-9350-b31a6e2e1ed7
 redirect_from:

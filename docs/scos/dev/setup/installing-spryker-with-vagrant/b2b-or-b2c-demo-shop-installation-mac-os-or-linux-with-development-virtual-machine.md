@@ -1,6 +1,7 @@
 ---
 title: B2B or B2C Demo Shop installation- Mac OS or Linux, with Development Virtual Machine
 description: This article provides step-by-step instructions on the B2B or B2C Demo Shop installation on Mac OS or Linux with Development Virtual Machine.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/b2b-b2c-demo-shop-installation-mac-os-or-linux-with-devvm
 originalArticleId: 1d644ef6-acab-4d55-afa8-24628043bae7
 redirect_from:
@@ -36,9 +37,9 @@ To install the Demo Shop for [B2B](/docs/scos/user/intro-to-spryker/b2b-suite.ht
 
 To set up your environment, install the following prerequisites:
 
-* [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git){target="_blank"}
-* [VirtualBox 5.2.2+](https://www.virtualbox.org/wiki/Downloads){target="_blank"}
-* [Vagrant 2.0.0+](https://www.vagrantup.com/downloads.html){target="_blank"}
+* [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+* [VirtualBox 5.2.2+](https://www.virtualbox.org/wiki/Downloads)
+* [Vagrant 2.0.0+](https://www.vagrantup.com/downloads.html)
 * *vagrant-vbguest* and *vagrant-hostmanager* plugins:
 
 ```bash
@@ -123,9 +124,9 @@ When the installation process is complete, Spryker Commerce OS is ready to use. 
 * [`http://glue.de.b2b-demo-shop.local`](`http://glue.de.b2b-demo-shop.local`)- REST API (Glue).
 
 **B2C Demo Shop:**
-* [http://de.b2c-demo-shop.local/](`http://www.de.b2c-demo-shop.local`/){target="_blank"} - front-end (Storefront);
-* [`http://zed.de.b2c-demo-shop.local`/](`http://zed.de.b2c-demo-shop.local`/){target="_blank"} - backend (the Back Office).
-* [`http://glue.de.b2c-demo-shop.local`/](`http://glue.de.b2c-demo-shop.local`/){target="_blank"} - REST API (Glue).
+* [http://de.b2c-demo-shop.local/](`http://www.de.b2c-demo-shop.local`/) - front-end (Storefront);
+* [`http://zed.de.b2c-demo-shop.local`/](`http://zed.de.b2c-demo-shop.local`/) - backend (the Back Office).
+* [`http://glue.de.b2c-demo-shop.local`/](`http://glue.de.b2c-demo-shop.local`/) - REST API (Glue).
 
 Credentials to access the administrator interface: user `admin@spryker.com` and password `change123`.
 

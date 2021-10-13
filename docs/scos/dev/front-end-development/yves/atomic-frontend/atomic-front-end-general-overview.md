@@ -1,5 +1,6 @@
 ---
 title: Atomic Front End- general overview
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/atomic-front-end-general-overview
 originalArticleId: 98f5fe06-2e55-4271-a793-928272216dd5
 redirect_from:
@@ -26,8 +27,8 @@ Spryker UI is based upon the following concepts:
 The main idea of a component is that it should contain and carry in itself all the behavior and visual assets necessary to use it on a web page. Also, components should not manipulate DOM directly, they are always declarative. This makes integrating different components seamlessly and effortlessly regardless of where and how they are used.
 
 {% info_block warningBox %}
-For more details on the component module implemented by Spryker, and detailed specifications, see [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components
-{% endinfo_block %}.)
+For more details on the component module implemented by Spryker, and detailed specifications, see [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components).
+{% endinfo_block %}
 
 The component model provides the following benefits:
 

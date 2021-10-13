@@ -1,5 +1,6 @@
 ---
 title: Glue API- Checkout feature integration
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/glue-api-checkout-feature-integration
 originalArticleId: 3a50ec89-a41d-4591-84c3-bb5bcb7fac54
 redirect_from:
@@ -19,10 +20,10 @@ To start feature integration, overview and install the necessary features:
 | Name | Version | Integration guide |
 | --- | --- | --- |
 | Spryker Core | 202009.0 | [Glue Application](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-application-feature-integration.html) |
-| Cart | 202009.0 | [Cart API](/docs/scos/dev/feature-integration-guides/{page.version}}/cart-feature-integration.html) |
+| Cart | 202009.0 | [Cart API](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html) |
 | Customer Account Management | 202009.0 | |
 | Payments | 202009.0 | [Payments API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/payments-api-feature-integration.html) |
-|Shipments| 202009.0 | [Shipments API](/docs/scos/dev/feature-integration-guides/{page.version}}/glue-api/glue-api-shipment-feature-integration.html) |
+|Shipments| 202009.0 | [Shipments API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shipment-feature-integration.html) |
 
 ## 1)  Install the required modules using Composer
 Run the following command(s) to install the required modules:
@@ -395,7 +396,7 @@ To verify that `OrderPaymentsResourceRoutePlugin` is activated, make sure that t
 }
 ```
 
-For more details, see [Updating Payment Data](/docs/scos/dev/glue-api-guides/{page.version}}/checking-out/checking-out-purchases.html#updating-payment-data).
+For more details, see [Updating Payment Data](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html#updating-payment-data).
 
 ### Configure mapping
 Mappers should be configured on the project level to map the data from the request to `QuoteTransfer`:
@@ -491,5 +492,5 @@ To verify that `SinglePaymentCheckoutRequestAttributesValidatorPlugin` is activa
 
 | Feature | Link |
 | --- | --- |
-| Shipment API | [Glue API: Shipment feature integration](/docs/scos/dev/feature-integration-guides/{page.version}}/glue-api/glue-api-shipment-feature-integration.html) |
-| Payments API | [Glue API: Payments feature integration](/docs/scos/dev/feature-integration-guides/{page.version}}/glue-api/glue-api-payments-feature-integration.html) |
+| Shipment API | [Glue API: Shipment feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shipment-feature-integration.html) |
+| Payments API | [Glue API: Payments feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-payments-feature-integration.html) |

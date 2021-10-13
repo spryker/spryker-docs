@@ -1,6 +1,7 @@
 ---
 title: Legacy Demoshop Installation Guide
 description: This article provides step-by-step instructions on the Legacy Demoshop installation.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/installation-guide-legacy-demoshop
 originalArticleId: eaf066b6-1b73-4c93-bec1-34825f063618
 redirect_from:
@@ -11,8 +12,8 @@ redirect_from:
 To install the Legacy Demoshop, use the following instructions:
 
 {% info_block infoBox %}
-All customers using the Legacy Demoshop can make their project compatible with the new Spryker Commerce OS architecture available starting from the [November release](/docs/scos/user/intro-to-spryker/{{site.version}}/releases/release-notes/release-notes-2018.11.0/release-notes-2018.11.0.html
-{% endinfo_block %}. For details, see [Updating the Legacy Demoshop with SCOS](/docs/scos/dev/technical-enhancements/updating-the-legacy-demoshop-with-scos/updating-the-legacy-demoshop-with-scos.html).)
+All customers using the Legacy Demoshop can make their project compatible with the new Spryker Commerce OS architecture available starting from the [November release](/docs/scos/user/intro-to-spryker/{{site.version}}/releases/release-notes/release-notes-2018.11.0/release-notes-2018.11.0.html). For details, see [Updating the Legacy Demoshop with SCOS](/docs/scos/dev/technical-enhancements/updating-the-legacy-demoshop-with-scos/updating-the-legacy-demoshop-with-scos.html).
+{% endinfo_block %}
 
 
 ## Mac OS or Linux, with Development Virtual Machine

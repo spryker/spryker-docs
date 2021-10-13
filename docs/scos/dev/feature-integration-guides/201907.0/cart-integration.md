@@ -1,6 +1,7 @@
 ---
 title: Cart Integration
 description: The guide describes the process of integrating the Cart feature into your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/cart-integration
 originalArticleId: d44365b7-24ec-4d27-8c87-5739c625e524
 redirect_from:

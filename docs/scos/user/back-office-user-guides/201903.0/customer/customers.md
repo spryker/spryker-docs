@@ -1,6 +1,7 @@
 ---
 title: Customers
 description: The Customers section is designed for managing customer's data such as personal information, billing, and shipping addresses.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/customers
 originalArticleId: 28b295ef-e450-4210-9e75-d2532f6aa74b
 redirect_from:
@@ -13,8 +14,8 @@ The **Customers** section in the Back Office is mostly used by Spryker Admins.
 This section is used for managing customer data from the Back Office by adding personal information like name and email address, as well as customer billing and shipping addresses. In most cases, the customer profiles are added by customers in the online store. In the B2B world, customer data is also managed in the online store.
 
 {% info_block warningBox "Important" %}
-The customer registration can be completed only by the customer by setting up the password for the account (either by following the link sent by email or by clicking the reset password button in the shop
-{% endinfo_block %}.)
+The customer registration can be completed only by the customer by setting up the password for the account (either by following the link sent by email or by clicking the reset password button in the shop).
+{% endinfo_block %}
 
 **Standardized flow of actions for a Spryker Admin**
 ![Flow of actions](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Customers/customers-section.png) 

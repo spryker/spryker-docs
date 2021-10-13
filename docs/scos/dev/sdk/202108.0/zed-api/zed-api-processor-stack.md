@@ -1,6 +1,7 @@
 ---
 title: Zed API processor stack
 description: To keep URL format flexible for customers, we provide a basic pre and post-stack for prcessing the incoming request and the outgoing response.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/zed-api-processor-stack
 originalArticleId: e2266829-54c3-4dce-b6d8-65a6ad575010
 redirect_from:

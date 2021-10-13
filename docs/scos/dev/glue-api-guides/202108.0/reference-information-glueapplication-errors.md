@@ -1,6 +1,7 @@
 ---
 title: Reference information- GlueApplication errors
 description: Find out what common GlueAplication errors you can come across when sending and receiving data via the Glue API.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/reference-information-glueapplication-errors
 originalArticleId: f6139bab-d9f0-4394-8cab-40665a1866d8
 redirect_from:

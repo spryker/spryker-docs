@@ -1,6 +1,7 @@
 ---
 title: Managing carts of registered users
 description: Retrieve details about the carts of the registered users and learn what else you can do with the resource.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/managing-carts-of-registered-users
 originalArticleId: aeac0d48-0f5e-4662-9202-e55473d92a7e
 redirect_from:
@@ -62,7 +63,7 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
 | Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
 | name | String | &check; | Sets the cart name.</br>This field can be set only if you are using the multiple carts feature. If you are operating in a single-cart environment, an attempt to set the value will result in an error with the "422 Unprocessable Entry" status code. |
-| priceMode | Enum | &check; | Sets the price mode to be used for the cart. Possible values:<ul><li>GROSS_MODE—prices after tax;</li><li>NET_MODE—prices before tax.</li></ul>For details, see [Net &amp; Gross Prices](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/net-and-gross-prices-management.html){target="_blank"}. |
+| priceMode | Enum | &check; | Sets the price mode to be used for the cart. Possible values:<ul><li>GROSS_MODE—prices after tax;</li><li>NET_MODE—prices before tax.</li></ul>For details, see [Net &amp; Gross Prices](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/net-and-gross-prices-management.html). |
 | currency | String | &check; | Sets the cart currency. |
 | store | String | &check; | Sets the name of the store where to create the cart. |
 

@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Form
 description: Use the guide to perform the Form part of the Silex Migration Effort.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/migration-guide-form
 originalArticleId: 8e2a22cf-1e5e-4e56-8ace-aad30e3de4c7
 redirect_from:
@@ -8,9 +9,9 @@ redirect_from:
   - /v6/docs/en/migration-guide-form
 ---
 
-:::(Error) 
+{% info_block errorBox %} 
 This migration guide is a part of the [Silex migration effort](/docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html).
-:::
+{% endinfo_block %}
 To upgrade the module, do the following:
 
 1. Update the module using composer:

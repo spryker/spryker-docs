@@ -5,6 +5,7 @@ originalLink:
 originalArticleId: afe1de9f-49e8-4472-831a-f62109072768
 redirect_from:
 
+template: back-office-user-guide-template
 ---
 This topic describes the procedures that you need to perform to create, edit, and delete tax sets.
 

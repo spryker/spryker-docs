@@ -1,6 +1,7 @@
 ---
 title: Tutorial - How the "define" Twig Tag is Working
 description: Use the guide to learn how to the define twig tag works in the template.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/tutorial-how-define-twig-tag-is-working
 originalArticleId: caa98ac5-fcd3-4e58-b6f8-2aa573e5ed36
 redirect_from:
@@ -30,7 +31,7 @@ Example of usage:
 } {% raw %}%}{% endraw %}
 ```
 
-In twig, this is a regular hash [literal](https://twig.symfony.com/doc/2.x/templates.html#literals){target="_blank"}, which is a representation of the associative array in PHP. In the current example, it means that an object with the name **data** should be passed to the template, and the **id** field is required. Now, we can include or embed this template as follows, for example:
+In twig, this is a regular hash [literal](https://twig.symfony.com/doc/2.x/templates.html#literals), which is a representation of the associative array in PHP. In the current example, it means that an object with the name **data** should be passed to the template, and the **id** field is required. Now, we can include or embed this template as follows, for example:
 
 ```json
 {% raw %}{%{% endraw %} include molecule('our_molecule_template') with {

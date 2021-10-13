@@ -1,5 +1,6 @@
 ---
 title: Econda - Integration into project
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/econda-integration-into-project
 originalArticleId: 9ad1860d-305d-4a05-a960-146bc976a002
 redirect_from:

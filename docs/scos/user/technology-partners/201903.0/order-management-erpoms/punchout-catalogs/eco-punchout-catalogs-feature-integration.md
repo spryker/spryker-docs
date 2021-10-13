@@ -1,6 +1,7 @@
 ---
 title: Eco- Punchout Catalogs Feature Integration
 description: Integrate Eco- Punchout Catalogs Feature into the Spryker Commerce OS.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/eco-punchout-catalogs-feature-integration
 originalArticleId: d314f907-61b3-4014-9dd8-10b221eb08d7
 redirect_from:
@@ -50,7 +51,7 @@ include:
 <br>
 </details>
 
-{% info_block infoBox "Мукшашсфешщт" %}
+{% info_block infoBox "Verification" %}
 Make sure that when you run `codeception run`  command it also runs PunchoutCatalogs module tests.
 {% endinfo_block %}
 

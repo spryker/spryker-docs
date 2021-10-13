@@ -1,6 +1,7 @@
 ---
 title: Merchant feature integration
 description: Learn how to integrate the Merchant feature into a Spryker project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/merchant-feature-integration
 originalArticleId: 7b98e6df-b4e5-4aa7-9471-9bbed2344433
 redirect_from:

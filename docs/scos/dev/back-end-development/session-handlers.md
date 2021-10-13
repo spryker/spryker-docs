@@ -1,6 +1,7 @@
 ---
 title: Session Handlers
 description: We provide a number of session handlers to work with different storages- File, Couchbase, MySql, Redis, Redis (locking).
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/session-handlers
 originalArticleId: 68ebf87c-9ddd-4b0a-8f81-93a229271e09
 redirect_from:

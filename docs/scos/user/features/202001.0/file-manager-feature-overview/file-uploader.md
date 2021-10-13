@@ -1,6 +1,7 @@
 ---
 title: File Uploader
 description: File Uploader feature allows a Store Administrator to upload files in accordance to their specifications for a file type to the Back Office.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/file-uploader
 originalArticleId: 2b8c1595-97ef-4d85-91ee-72bd47cf3944
 redirect_from:
@@ -46,8 +47,8 @@ To upload a file to a particular directory follow the steps:
 * In the **File upload** field, click **Choose File** and from your local storage, select the file you are going to upload to the Back Office.
 
 {% info_block infoBox %}
-If Use file name option is selected, then File Name field is not required and will be disregarded. In this case, the file will be uploaded with its original name (the one you see in your local storage
-{% endinfo_block %}.)
+If Use file name option is selected, then File Name field is not required and will be disregarded. In this case, the file will be uploaded with its original name (the one you see in your local storage).
+{% endinfo_block %}
 
 {% info_block warningBox %}
 A Store Administrator cannot upload an empty text file.

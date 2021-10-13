@@ -1,5 +1,6 @@
 ---
 title: Zed API (BETA)
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/zed-api
 originalArticleId: 8554c9b8-b4e8-4efb-8415-3c5acd03c670
 redirect_from:

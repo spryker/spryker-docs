@@ -1,6 +1,7 @@
 ---
 title: Wishlist feature overview
 description: Help your customers track and save items for later purchase through multiple Wish Lists, which are connected to the users' accounts.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/wishlist-feature-overview
 originalArticleId: 25c1bb12-0698-4c02-a2b7-04b0827920a8
 redirect_from:
@@ -17,12 +18,12 @@ Help your customers track and save items for later purchase through multiple wis
 Customers can manage their wishlists in the *Wishlist* section of the customer account. In there, they can see the list of wishlists that they have, the number of items inside each one, the date of creation, **Edit** and **Delete** options.
 
 <!---Your users can add items from different lists to the cart.--->
-:::(Warning)
+{% info_block warningBox %}
 Note the following:
 * Only logged-in customers can use the Wishlist functionality.
 * If the same item is added to the cart from multiple wishlists, then in the cart, this item will have the quantity value updated based on the number of times this specific item was added.
 * Each wishlist is an independent entity.
-:::
+{% endinfo_block %}
 
 
 ## Naming a wishlist

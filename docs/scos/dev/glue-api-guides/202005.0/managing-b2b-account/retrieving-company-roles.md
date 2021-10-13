@@ -1,6 +1,7 @@
 ---
 title: Retrieving Company Role Information
 description: The article describes how to use Spryker Glue API to retrieve company roles.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/retrieving-company-role-information-201907
 originalArticleId: 722b3bc5-1ec4-4b5a-aa11-9b26373bdfa0
 redirect_from:
@@ -28,8 +29,8 @@ To retrieve information on the Company Roles assigned to the currently logged in
 Sample request: *GET http://glue.mysprykershop.com/company-roles/mine*
 
 {% info_block warningBox "Note" %}
-You can use the **Accept-Language** header to specify the locale.Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de**, **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
-{% endinfo_block %}{target="_blank"}.)
+You can use the **Accept-Language** header to specify the locale.Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de**, **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+{% endinfo_block %}
 
 #### Response
 The endpoint responds with a collection of **RestCompanyRoleResponse**, each containing information on a specific role.
@@ -69,7 +70,7 @@ The endpoint responds with a collection of **RestCompanyRoleResponse**, each con
 ### Specific Role
 To retrieve information on a specific Company Role, send a GET request to the following endpoint:
 
-[/company-roles/{% raw %}{{{% endraw %}role_id{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#//company-roles){target="_blank"}
+[/company-roles/{% raw %}{{{% endraw %}role_id{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#//company-roles)
 Sample request: *GET http://glue.mysprykershop.com/company-roles/**2f0a9d3e-9e69-53eb-8518-284a0db04376***
 
 where **2f0a9d3e-9e69-53eb-8518-284a0db04376** is the ID of the Company Role you need.
@@ -79,8 +80,8 @@ The endpoint provides information only on the roles a user has access to. If a r
 {% endinfo_block %}
 
 {% info_block warningBox "Note" %}
-You can use the **Accept-Language** header to specify the locale.Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de**, **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
-{% endinfo_block %}{target="_blank"}.)
+You can use the **Accept-Language** header to specify the locale.Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de**, **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+{% endinfo_block %}
 
 #### Response
 The endpoint responds with a **RestCompanyRoleResponse** that contains information on the requested role.

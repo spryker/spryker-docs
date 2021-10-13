@@ -1,6 +1,7 @@
 ---
 title: Availability  Notification feature overview
 description: The feature allows both registered and guest users to subscribe to the newsletter by specifying the email address they wish to receive the notifications to
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/back-in-stock-notification-feature-overview
 originalArticleId: b58e715c-adce-4830-9036-637b5817f5f1
 redirect_from:

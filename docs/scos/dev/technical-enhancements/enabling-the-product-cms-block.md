@@ -1,6 +1,7 @@
 ---
 title: Enabling the product CMS block
 description: The guide describes the process of installing the Product CMS Block into your project.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/enabling-the-product-cms-block
 originalArticleId: 2fd5636b-9196-4a11-8191-4a97dc7a4406
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Powerpay
 description: Deliver results for your merchants by integrating Powerpay into the Spryker Commerce OS.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/powerpay
 originalArticleId: 4798809a-534c-4993-bf30-10bdd8761ec7
 redirect_from:
@@ -9,7 +10,7 @@ redirect_from:
 ---
 
 ## Payment Information
-[ABOUT POWERPAY](https://getpowerpay.com/){target="_blank"}
+[ABOUT POWERPAY](https://getpowerpay.com/)
 Omni-channel payment solutions for the 21st century
 
 powerpay21 is a Global FinTech Network that provides payment products and solutions for merchants whether offline or online.

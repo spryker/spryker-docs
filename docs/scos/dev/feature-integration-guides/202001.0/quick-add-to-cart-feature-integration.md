@@ -1,6 +1,7 @@
 ---
 title: Quick Order feature integration
 description: This guide walks you through the process of integrating the Quick Order feature into your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/quick-order-feature-integration
 originalArticleId: c2003eb0-6900-45de-ac06-f3004aa7c8b7
 redirect_from:

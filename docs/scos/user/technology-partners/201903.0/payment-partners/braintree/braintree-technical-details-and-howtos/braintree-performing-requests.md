@@ -1,6 +1,7 @@
 ---
 title: Braintree - Performing Requests for SCOS
 description: This article contains information on the state machine commands and conditions for the Braintree module in the Spryker Commerce OS.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/braintree-performing-requests
 originalArticleId: 7429d003-9a75-45b8-9a98-b1ea6966d32a
 redirect_from:

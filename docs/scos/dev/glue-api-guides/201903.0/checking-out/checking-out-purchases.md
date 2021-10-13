@@ -1,5 +1,6 @@
 ---
 title: Checking Out Purchases and Getting Checkout Data
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/checking-out-purchases-and-getting-checkout-data
 originalArticleId: 3ad1ce2d-bc09-4eb5-8a1a-7382e450847d
 redirect_from:
@@ -454,8 +455,8 @@ To get information on a particular order, send the following POST request:
 `/checkout-data`
 Sample request: `POST http://mysprykershop.com/checkout-data`
 {% info_block errorBox "Authentication" %}
-To use this endpoint:<ul><li>**Registered** customers need to authenticate first. For details, see [Authentication and Authorization](
-{% endinfo_block %}.</li><li>For **anonymous** users, you need to add their _X-Anonymous-Customer-Unique-Id_ in the request header. For details, see Managing Guest Carts.</li></ul>)
+To use this endpoint:<ul><li>**Registered** customers need to authenticate first. For details, see [Authentication and Authorization]().</li><li>For **anonymous** users, you need to add their _X-Anonymous-Customer-Unique-Id_ in the request header. For details, see Managing Guest Carts.</li></ul>
+{% endinfo_block %}
 
 ### Request
 To request order details, the POST body must contain the order reference received during checkout.

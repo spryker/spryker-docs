@@ -1,6 +1,7 @@
 ---
 title: Adding Content Items to CMS Pages and Blocks
 description: The guide provides instructions for shop owners on how to add content items to blocks and pages using content item widgets in the Back Office
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/adding-content-items-to-cms-pages-and-blocks
 originalArticleId: ad66ebbd-edf5-4fa1-850e-5b2d6d964dd6
 redirect_from:
@@ -42,8 +43,8 @@ This will insert a content item widget with the following details:
 * Template
 
 {% info_block infoBox %}
-Templates are project-specific and are usually created by a developer and a business person. If you are missing a Content Item Widget template, contact them and refer to [HowTo - Create a Content Item Widget template](/docs/scos/dev/tutorials/202005.0/howtos/feature-howtos/cms/howto-create-cms-templates.html#adding-a-template-for-a-content-item-widget
-{% endinfo_block %}.)
+Templates are project-specific and are usually created by a developer and a business person. If you are missing a Content Item Widget template, contact them and refer to [HowTo - Create a Content Item Widget template](/docs/scos/dev/tutorials/202005.0/howtos/feature-howtos/cms/howto-create-cms-templates.html#adding-a-template-for-a-content-item-widget).
+{% endinfo_block %}
 
 6. Click **Save**. A new content item widget will be added to the page.
 

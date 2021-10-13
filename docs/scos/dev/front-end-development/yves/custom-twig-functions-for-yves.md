@@ -1,6 +1,7 @@
 ---
 title: Custom Twig Functions for Yves
 description: The article describes twig functions, its method signatures, and examples of their usage.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/custom-twig-functions-for-yves
 originalArticleId: 04bc2269-b231-4d52-aa81-29a3cbb45655
 redirect_from:
@@ -16,7 +17,7 @@ redirect_from:
   - /v4/docs/en/custom-twig-functions-for-yves
 ---
 
-To improve developer experience, [Twig](https://twig.symfony.com/){target="_blank"} functionality has been extended with the new Twig functions introduced. All the Twig extension implementations are located in the `ShopUi` module and can be found in `ShopUi/src/SprykerShop/Yves/ShopUi/Twig`.
+To improve developer experience, [Twig](https://twig.symfony.com/) functionality has been extended with the new Twig functions introduced. All the Twig extension implementations are located in the `ShopUi` module and can be found in `ShopUi/src/SprykerShop/Yves/ShopUi/Twig`.
 
 | Function Name | Description | Method Signature | Usage Example |
 | --- | --- | --- | --- |

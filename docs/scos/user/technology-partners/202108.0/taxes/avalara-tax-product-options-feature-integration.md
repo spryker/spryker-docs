@@ -1,6 +1,7 @@
 ---
 title: Avalara Tax + Product Options feature integration
 description: Integrate the Avalara Tax + Product Options feature into your project
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/avalara-tax-product-options-feature-integration
 originalArticleId: baa66b26-825e-404a-a8e4-1b48cb00cd67
 redirect_from:

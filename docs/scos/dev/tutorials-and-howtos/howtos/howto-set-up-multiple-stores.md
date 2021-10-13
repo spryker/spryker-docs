@@ -1,6 +1,7 @@
 ---
-title: HowTo — Set up multiple stores
+title: HowTo - Set up multiple stores
 description: Learn how to set up multiple stores for your project.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-set-up-multiple-stores
 originalArticleId: 218ea4d5-de80-4aba-96fc-f67a9d13711c
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: Shopping lists feature integration
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/shopping-lists-feature-integration
 originalArticleId: 58263f9f-e8b2-48f1-9564-caad27602169
 redirect_from:
@@ -955,8 +956,8 @@ class ShoppingListSessionDependencyProvider extends SprykerShoppingListSessionDe
 ```
 
 {% info_block warningBox "Verification" %}
-Share User A's shopping list with User B, then change the shopping list from User A's profile; User B should get the updated shopping list. Also, make sure that sharing shopping lists have the correct permission group (the ones you had in your installation
-{% endinfo_block %}.)
+Share User A's shopping list with User B, then change the shopping list from User A's profile; User B should get the updated shopping list. Also, make sure that sharing shopping lists have the correct permission group (the ones you had in your installation).
+{% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 Make sure that shopping list item notes are being saved when saving shopping list item and deleted when deleting shopping list item. Also, make sure that shopping list item notes are transferred to cart item notes when creating a cart from a shopping list.

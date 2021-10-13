@@ -1,6 +1,7 @@
 ---
 title: Shop Guide - Company Roles
 description: The guide provides procedures to create, edit or view company roles in the storefront.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/company-roles-shop-guide
 originalArticleId: 525f5d80-a843-425f-a8de-90950d9217ec
 redirect_from:

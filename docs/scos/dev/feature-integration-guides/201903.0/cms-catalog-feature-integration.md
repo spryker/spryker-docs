@@ -1,6 +1,7 @@
 ---
 title: CMS Page- Search + Catalog feature integration
 description: The CMS Page Search Catalog feature allows viewing search results for subcategory pages. The guide describes how to enable the feature in the project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/cms-pages-in-search-results-integration
 originalArticleId: 05ee6f69-662c-4509-bc3e-6ff4d9862408
 redirect_from:
@@ -95,8 +96,8 @@ class CmsPageSearchDependencyProvider extends SprykerCmsPageSearchDependencyProv
 </details>
 
 {% info_block warningBox "Verification" %}
-Once you have finished the full integration of the feature, make sure that the actual CMS page results match the expectations (filtered, sorted, and paginated correctly
-{% endinfo_block %}.)
+Once you have finished the full integration of the feature, make sure that the actual CMS page results match the expectations (filtered, sorted, and paginated correctly).
+{% endinfo_block %}
 
 #### Configure the CMS Page Search Count Query
 
@@ -143,8 +144,8 @@ class CmsPageSearchDependencyProvider extends SprykerCmsPageSearchDependencyProv
 </details>
 
 {% info_block warningBox "Verification" %}
-Once you have finished the full integration of the feature, make sure that the actual count of CMS pages as a result matches the expectations (filtered correctly
-{% endinfo_block %}.)
+Once you have finished the full integration of the feature, make sure that the actual count of CMS pages as a result matches the expectations (filtered correctly).
+{% endinfo_block %}
 
 #### Configure the Catalog Search Count Query
 
@@ -193,8 +194,8 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 </details>
 
 {% info_block warningBox "Verification" %}
-Once you have finished the full integration of the feature, make sure that the actual count of products as a result matches the expectations (filtered correctly
-{% endinfo_block %}.)
+Once you have finished the full integration of the feature, make sure that the actual count of products as a result matches the expectations (filtered correctly).
+{% endinfo_block %}
 
 ## Install Feature Frontend
 

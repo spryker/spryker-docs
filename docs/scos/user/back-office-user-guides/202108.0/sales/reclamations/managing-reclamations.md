@@ -1,6 +1,7 @@
 ---
 title: Managing reclamations
 description: The guide provides instructions for shop owners to learn how to handle all order claims made by their customers and make refunds if needed in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-reclamations
 originalArticleId: 20fab61a-f966-4fe9-9702-c04e1f77ccb1
 redirect_from:
@@ -18,9 +19,9 @@ This topic describes how to manage all order claims made by your customers.
 
 To start working with claims, go to **Sales** > **Reclamations**.
 
-:::(Info)
+{% info_block warningBox %}
 You can either view or close the reclamation from the _Actions_ column of the *List of Reclamations *table.
-:::
+{% endinfo_block %}
 Review the reference information before you start, or just look up the necessary information as you go through the process.
 
 ## Viewing reclamations

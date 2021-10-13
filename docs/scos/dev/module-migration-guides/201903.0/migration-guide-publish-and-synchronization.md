@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Publish and Synchronization
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/mg-pub-and-sync
 originalArticleId: 1bdf5f8b-614e-4d35-90ee-fbd240750a48
 redirect_from:

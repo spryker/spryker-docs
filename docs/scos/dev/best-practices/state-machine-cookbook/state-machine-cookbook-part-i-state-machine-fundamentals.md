@@ -1,6 +1,7 @@
 ---
 title: State machine cookbook - part I - state machine fundamentals
 description: State machines are a model of computation used to automate processes. In Spryker you can use the OMS module to automate the management of orders or the StateMachine module to automate other processes you define in your shop.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/state-machine-cookbook
 originalArticleId: c69ec585-3962-4da9-a973-ca1e23d256d8
 redirect_from:
@@ -27,8 +28,8 @@ State machines are a model of computation used to automate processes. In Spryker
 The machine can be in one of a finite number of states and it can be only in one state at a time. ( e.g. : state machine is in the `waiting for payment` state).
 
 {% info_block infoBox %}
-State machines can model problems that involve performing of a predetermined sequence of actions that depend on a sequence of events (e.g. : order is being shipped if the payment is successful
-{% endinfo_block %}.)
+State machines can model problems that involve performing of a predetermined sequence of actions that depend on a sequence of events (e.g. : order is being shipped if the payment is successful).
+{% endinfo_block %}
 
 
 ## State machine components
@@ -189,8 +190,8 @@ By triggering an event we tell the state machine which transition we want to get
 Triggering an event follows the transition that has the current state as a source state and the triggered event type attached to it. The event triggers the transaction and the related command is executed. The condition(s) is/are checked afterwards. If no condition is evaluated to true, the item stays on the source state (and the timeout is reseted because it moved away for a moment).
 
 {% info_block errorBox %}
-Event names should be verbs like `ship`, `pay`, `authorize`, while state names should express that something happened or will happen (like `paid` or `payment pending`, `closed`, `cancelled`
-{% endinfo_block %}.)
+Event names should be verbs like `ship`, `pay`, `authorize`, while state names should express that something happened or will happen (like `paid` or `payment pending`, `closed`, `cancelled`).
+{% endinfo_block %}
 
 This is how an event is defined:
 

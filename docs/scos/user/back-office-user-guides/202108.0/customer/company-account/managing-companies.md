@@ -1,6 +1,7 @@
 ---
 title: Managing companies
 description: Use the procedures to create and edit companies, approve and activate/deactivate a company, and/or deny a company in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-companies
 originalArticleId: 5e075d70-a08b-4995-ad61-25bfc5a2e68b
 redirect_from:
@@ -52,9 +53,9 @@ In case you cannot approve the registration, you can deny it.
 To disapprove a company, click **Deny**.
 ![Denying a company](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/Managing+Companies/denying-company.png)
 
-:::(Info)
+{% info_block infoBox %}
 You can approve and activate the record in a later event. The record itself will continue existing in the system.
-:::
+{% endinfo_block %}
 
 ### Deactivating companies
 

@@ -1,6 +1,7 @@
 ---
 title: PayOne - Risk Check and Address Check
 description: In this article, you will get information on the Payone risk check and address check services.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/payone-risk-check-address-check-scos
 originalArticleId: 19be3323-4b03-4bb5-8616-0c18aba74515
 redirect_from:

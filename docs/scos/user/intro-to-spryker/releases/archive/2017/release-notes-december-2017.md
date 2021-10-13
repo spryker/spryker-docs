@@ -1,5 +1,6 @@
 ---
 title: Release Notes - December - 2017
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes-december-2017
 originalArticleId: 7251b552-8e8d-4453-a48c-5834563c6410
 redirect_from:
@@ -274,7 +275,7 @@ The following content has been added to the Academy:
 * [CMS Pages](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-pages-overview.html)
 * [Navigation](/docs/user/features/{[site.version}}/navigation-feature-overview.html)
 * [Product Groups](https://documentation.spryker.com/2021080/docs/product-groups)
-* [Product Management](https://documentation.spryker.com/2021080/docs/product-information-management)
+* [Product Management](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html)
 * [Product Sets](/docs/scos/user/features/{{site.version}}/product-sets-feature-overview.html)
 * [Wishlists](/docs/scos/user/features/{{site.version}}/wishlist-feature-overview.html)
  

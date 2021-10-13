@@ -1,5 +1,6 @@
 ---
 title: File details- category_template.csv
+template: data-import-template
 originalLink: https://documentation.spryker.com/v5/docs/file-details-category-templatecsv
 originalArticleId: 87edad35-fe53-4fad-9c78-1f6c5ea358d1
 redirect_from:

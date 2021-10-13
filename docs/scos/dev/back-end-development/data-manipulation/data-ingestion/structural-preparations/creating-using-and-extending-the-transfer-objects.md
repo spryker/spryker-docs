@@ -1,6 +1,7 @@
 ---
 title: Creating, using, and extending the transfer objects
 description: The article provides information on creation and usage of the Transfer objects.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-use-transfer-objects
 originalArticleId: f3c1c5d9-348c-4d02-9d4b-f0cede048566
 redirect_from:
@@ -224,8 +225,8 @@ class TransferConfig extends SprykerTransferConfig
 ```
 
 {% info_block infoBox "Naming" %}
-Make sure your transfer object definition files end with `.transfer.xml` (even for your custom packages
-{% endinfo_block %}.)
+Make sure your transfer object definition files end with `.transfer.xml` (even for your custom packages).
+{% endinfo_block %}
 
 ## Transfer object generation
 To generate the objects, run:

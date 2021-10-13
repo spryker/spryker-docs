@@ -1,5 +1,6 @@
 ---
 title: Glue API- Company Account feature integration
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/glue-api-company-account-api-feature-integration
 originalArticleId: 20bf2fc2-a34c-45b4-805c-d18d3d8d697b
 redirect_from:
@@ -553,7 +554,7 @@ To log in as a Company User, send a `POST` request to `http://glue.mysprykershop
 </details>
 </br>
 
-To verify that all the required data is provided in the access token, go to [jwt.io](https://jwt.io/){target="_blank"} to decode the token and check that the required `customer_reference`, `id_customer`, `id_company_user` and permissions are present in the `sub` property of the payload data.
+To verify that all the required data is provided in the access token, go to [jwt.io](https://jwt.io/) to decode the token and check that the required `customer_reference`, `id_customer`, `id_company_user` and permissions are present in the `sub` property of the payload data.
 
 {% endinfo_block %}
 

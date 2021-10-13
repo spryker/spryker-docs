@@ -1,6 +1,7 @@
 ---
 title: live chat service
 description: Ensure that live chat helps their customers with new leads and
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/live-chat-service
 originalArticleId: 08efaacb-82f8-4de9-88d6-658b7adbe9d7
 redirect_from:
@@ -9,7 +10,7 @@ redirect_from:
 ---
 
 ## Partner Information
-[ABOUT LIVECHAT SERVICE](https://livechatservice.de/){target="_blank"}
+[ABOUT LIVECHAT SERVICE](https://livechatservice.de/)
 We are the plus for your company
 
 LiveChat Service is an online service provider in the field of live chat. Through trained chat

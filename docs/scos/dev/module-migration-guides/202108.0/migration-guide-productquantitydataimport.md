@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductQuantityDataImport
 description: Use the guide to learn how to update the ProductQuantityDataImport module.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-product-quantity-data-import
 originalArticleId: cf6f3759-1248-4b1a-aa27-f7cb01491e03
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Attributes
 description: Use the Attributes  section to add super attributes to product variants to highlight its specific peculiarities.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/attributes
 originalArticleId: 2876686d-4498-46db-9b42-1c7a557fc896
 redirect_from:

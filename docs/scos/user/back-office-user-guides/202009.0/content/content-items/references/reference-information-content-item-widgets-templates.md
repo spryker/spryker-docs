@@ -1,6 +1,7 @@
 ---
 title: Reference information- content Item widgets templates
 description: The guide provides reference information about content item widgets templates used in Spryker Commerce OS.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/content-item-widgets-templates-reference-information
 originalArticleId: dfa2579c-af75-46ec-bab3-02772db565ea
 redirect_from:

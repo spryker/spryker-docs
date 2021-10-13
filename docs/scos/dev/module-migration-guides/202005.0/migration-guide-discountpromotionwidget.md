@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - DiscountPromotionWidget
 description: Use the guide to migrate to a newer version of the DiscountPromotionWidget module.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/mg-discount-promotion-widget
 originalArticleId: 641517d8-800a-4cde-8099-8069dc946fd9
 redirect_from:

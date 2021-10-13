@@ -1,5 +1,6 @@
 ---
 title: Payments API feature integration
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/payments-api-feature-integration-201903
 originalArticleId: 785e21c3-4474-447c-bfbf-ca1942f9c80a
 redirect_from:
@@ -135,7 +136,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 ```
 
 {% info_block infoBox %}
-To verify that `SalesPaymentMethodTypeInstallerPlugin` is successfully activated, run `vendor/bin/console setup:init-db` and make sure the `spy_sales_payment_method_type` table in the database contains the available payment methods (provided in `PaymentConfig`
-{% endinfo_block %}.)
+To verify that `SalesPaymentMethodTypeInstallerPlugin` is successfully activated, run `vendor/bin/console setup:init-db` and make sure the `spy_sales_payment_method_type` table in the database contains the available payment methods (provided in `PaymentConfig`).
+{% endinfo_block %}
 
 _Last review date: Apr 25, 2019_ <!-- by Eugenia Poidenko and Dmitry Beirak -->

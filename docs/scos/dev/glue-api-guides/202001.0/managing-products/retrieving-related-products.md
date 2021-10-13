@@ -1,6 +1,7 @@
 ---
 title: Retrieving Related Products
 description: The article demonstrates how to find alternatives for discontinued products with the help of Glue API endpoints.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/retrieving-related-products-201903
 originalArticleId: 0d407a05-715c-446a-84f7-c5a54f302d02
 redirect_from:
@@ -25,8 +26,8 @@ In your development, the endpoints can help you to:
 * Provide additional products items in a customer's cart to offer upscale variations, accessories and other additional items for products in the cart. This will help you in boosting the cart value.
 
 {% info_block infoBox %}
-To be able to use **Product Relations API**, first, you need to have the Product Relations feature integrated with your project. For details, see [Product Relation Integration](
-{% endinfo_block %}.)
+To be able to use **Product Relations API**, first, you need to have the Product Relations feature integrated with your project. For details, see [Product Relation Integration]().
+{% endinfo_block %}
 
 {% info_block infoBox %}
 Different types of relations, as well as their logic, are defined on the project level and can vary depending on the project-specific implementation. The API does not define any new relations. Its task is only to present related products via REST requests.
@@ -1373,8 +1374,8 @@ For a detailed list of the fields included in the response for each product, see
 </details>
 
 {% info_block infoBox %}
-You can also use the **Accept-Language** header to specify the locale.<br>Sample header:<br>`[{"key":"Accept-Language","value":"de, en;q=0.9"}]`<br>where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](
-{% endinfo_block %}.)
+You can also use the **Accept-Language** header to specify the locale.<br>Sample header:<br>`[{"key":"Accept-Language","value":"de, en;q=0.9"}]`<br>where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language]().
+{% endinfo_block %}
 
 ### Possible Errors
 | Code | Reason |
@@ -1391,8 +1392,8 @@ where `1ce91011-8d60-59ef-9fe0-4493ef3628b2` is the ID of the guest cart you nee
 Your request must specify a unique identifier of the **guest user** in the **X-Anonymous-Customer-Unique-Id** header.
 
 {% info_block infoBox %}
-For details on how to retrieve and manage the identifier, see [Managing Guest Carts](
-{% endinfo_block %}.)
+For details on how to retrieve and manage the identifier, see [Managing Guest Carts]().
+{% endinfo_block %}
 
 ### Response
 If the request was successful, the resource responds with an array of **RestAbstractProductsResponse**, where each item specifies a related up-selling item.
@@ -1604,8 +1605,8 @@ For a detailed list of the fields included in the response for each product, see
 </details>
 
 {% info_block infoBox %}
-You can also use the **Accept-Language** header to specify the locale.<br>Sample header:<br>`[{"key":"Accept-Language","value":"de, en;q=0.9"}]`<br>where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](
-{% endinfo_block %}.)
+You can also use the **Accept-Language** header to specify the locale.<br>Sample header:<br>`[{"key":"Accept-Language","value":"de, en;q=0.9"}]`<br>where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language]().
+{% endinfo_block %}
 
 ### Possible Errors
 | Code | Reason |

@@ -1,6 +1,7 @@
 ---
 title: Managing Wishlists
 description: Using the PATCH, GET, DELETE, and POST request sent to the endpoints provided in the Wishlists API, you can create, access, modify, delete, and to get wishlists.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/managing-wishlists
 originalArticleId: 854de46f-eaf2-4621-aa94-34fe4a9378f8
 redirect_from:
@@ -13,8 +14,8 @@ The Wishlists API provides REST access to managing [wishlists]() of a customer. 
 In your development, these resources can help you to enable complete wishlist functionality for your customers.
 
 {% info_block warningBox "Authentication " %}
-Since wishlists are available for registered users only, the endpoints provided by the API cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token in your REST requests. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](
-{% endinfo_block %}.)
+Since wishlists are available for registered users only, the endpoints provided by the API cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token in your REST requests. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization]().
+{% endinfo_block %}
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Wishlist API Feature Integration]().

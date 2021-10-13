@@ -1,6 +1,7 @@
 ---
 title: CSS Class Customization
 description: Customize the storefront appearance to match your CI using the CSS Classes.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/css-class-customization
 originalArticleId: 7df9572c-6b23-4bf8-8df6-36ecde2ac714
 redirect_from:

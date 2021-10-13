@@ -1,6 +1,7 @@
 ---
 title: Adyen - Installation and Configuration
 description: Install and configure Adyen module to work in the Spryker Commerce OS.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/adyen-configuration
 originalArticleId: 806d31d5-a796-4f6c-87b8-045de00388a2
 redirect_from:

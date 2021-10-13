@@ -1,5 +1,6 @@
 ---
 title: Browsing a Category Tree
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/retrieving-category-trees
 originalArticleId: 674be3f7-9956-4eb5-ba94-93cc789d9e66
 redirect_from:
@@ -16,8 +17,8 @@ In your development, these resources can help you to:
 * Find out which categories a product belongs to
 
 {% info_block infoBox %}
-For more information on managing the category tree, see [Category Hierarchy](
-{% endinfo_block %}.)
+For more information on managing the category tree, see [Category Hierarchy]().
+{% endinfo_block %}
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Category API Feature Integration]().

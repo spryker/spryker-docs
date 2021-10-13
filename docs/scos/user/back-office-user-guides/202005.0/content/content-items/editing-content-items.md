@@ -1,6 +1,7 @@
 ---
 title: Editing Content Items
 description: The guide provides steps on how to update content items in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/editing-content-items
 originalArticleId: 4405c705-4043-4049-85d8-81286d7dcc34
 redirect_from:

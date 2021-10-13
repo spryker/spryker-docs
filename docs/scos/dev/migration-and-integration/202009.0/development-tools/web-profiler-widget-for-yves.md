@@ -1,6 +1,7 @@
 ---
 title: Web Profiler Widget for Yves
 description: This guide describes how to integrate and use the Web Profiler Widget available in Yves for development purposes.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/web-profiler-widget
 originalArticleId: 03e9f1af-80b7-4814-8893-1e57a0b8d387
 redirect_from:
@@ -16,7 +17,7 @@ The following guide only demonstrates how to enable a development tool.
 
 The _Web Profiler Widget_ provides a toolbar for debugging and for informational purposes. The toolbar is located at the bottom of a loaded page.
 
-The widget is based on _Symfony Profiler_. For details, see [Profiler documentation](https://symfony.com/doc/current/profiler.html){target="_blank"}.
+The widget is based on _Symfony Profiler_. For details, see [Profiler documentation](https://symfony.com/doc/current/profiler.html).
 
 ## Modules
 

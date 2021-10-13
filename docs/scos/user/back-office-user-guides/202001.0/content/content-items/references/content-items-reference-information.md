@@ -1,6 +1,7 @@
 ---
 title: Content Items- Reference Information
 description: The guide provides reference information you work with when creating, updating and viewing content items in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/content-items-reference-information
 originalArticleId: 9abd485f-7bfd-4347-987c-0feb30f5100c
 redirect_from:

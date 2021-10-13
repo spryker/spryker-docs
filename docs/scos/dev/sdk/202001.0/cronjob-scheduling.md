@@ -1,6 +1,7 @@
 ---
 title: Cronjob Scheduling
 description: With the feature, jobs can be scheduled, versioned, queued, or changed by developers.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/cronjob-scheduling
 originalArticleId: c9edfed3-3f27-450e-89f0-1329b522e836
 redirect_from:

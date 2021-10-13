@@ -1,6 +1,7 @@
 ---
 title: Resource Sharing feature integration
 description: The guide walks you through the process of installing the Resource Sharing feature in your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/resource-sharing-feature-integration
 originalArticleId: b2294d73-f295-451e-988c-63eaa201428d
 redirect_from:

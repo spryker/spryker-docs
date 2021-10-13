@@ -1,6 +1,7 @@
 ---
 title: Retrieving concrete product prices
 description: Retrieve prices of concrete products.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/retrieving-concrete-product-prices
 originalArticleId: 1ce17649-6f18-4188-8841-6d56d20fae2e
 redirect_from:

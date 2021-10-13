@@ -1,6 +1,7 @@
 ---
 title: Tax Rates - Reference Information
 description: The guide provides additional information on the values you use when managing tax rates in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/taxes-reference-information
 originalArticleId: 0dc7a9df-1297-43b1-8e2a-66d90d553261
 redirect_from:

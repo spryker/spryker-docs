@@ -1,6 +1,7 @@
 ---
 title: Shop Guide - Searching within CMS Pages
 description: The guide provides information on how to types of sorting options applied to search results in the Storefront.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/searching-within-cms-pages
 originalArticleId: 48fcfa3b-7de1-4734-993e-8e8f7f778ca6
 redirect_from:

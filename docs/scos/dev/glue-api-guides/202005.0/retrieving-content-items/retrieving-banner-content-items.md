@@ -1,6 +1,7 @@
 ---
 title: Retrieving Banner Content Item Data
 description: Banner API implements REST API endpoint that can retrieve banner content item data available in the storage for all or a specific locale
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/retrieving-banner-content-item-data-201907
 originalArticleId: e88d1d57-9e00-4579-a64d-b646e5d270cd
 redirect_from:
@@ -13,8 +14,8 @@ The **Banner API** implements REST API endpoint that provides the possibility to
 In your development, these resources can help you get relevant information for your Banner content item for all or a specific locale. For example, you can view what page address your banner is linked to or what details are displayed for a specific locale.
 
 {% info_block infoBox %}
-For more information on creating and managing content items in CMS, see [Content Items](https://documentation.spryker.com/v5/docs/en/content-items-guide-201907
-{% endinfo_block %}.)
+For more information on creating and managing content items in CMS, see [Content Items](https://documentation.spryker.com/v5/docs/en/content-items-guide-201907).
+{% endinfo_block %}
 
 ## Installation
 For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-content-items-api-feature-integration.html).

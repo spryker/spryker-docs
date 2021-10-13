@@ -1,5 +1,6 @@
 ---
 title: Queue Pool
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/queue-pool
 originalArticleId: 44879d08-bebd-4028-80ff-13404057aaef
 redirect_from:

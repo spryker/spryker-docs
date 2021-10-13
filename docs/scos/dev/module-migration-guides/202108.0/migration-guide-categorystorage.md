@@ -1,6 +1,7 @@
 ---
 title: Migration guide - CategoryStorage
 description: Migration instructions for the CategoryStorage module.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-categorystorage
 originalArticleId: 170f9839-b247-4898-a0c1-967fc231f6b8
 redirect_from:

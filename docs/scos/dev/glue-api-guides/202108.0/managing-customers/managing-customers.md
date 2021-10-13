@@ -1,6 +1,7 @@
 ---
 title: Managing customers
 description: Learn how to manage customers via Glue API.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customers-via-glue-api
 originalArticleId: 246e73d7-562f-414f-bbc0-d102ef54ff5c
 redirect_from:
@@ -324,9 +325,9 @@ If the customer is anonymized successfully, the endpoint returns the `204 No Con
 
 To retrieve subscriptions to availability notifications, send the following:
 
-:::(Warning)
+{% info_block warningBox %}
 This request is available for registered customers only.
-:::
+{% endinfo_block %}
 
 ---
 `GET` **/customers/*{% raw %}{{{% endraw %}customerReference{% raw %}}}{% endraw %}*/availability-notifications**

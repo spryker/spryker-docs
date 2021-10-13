@@ -1,6 +1,7 @@
 ---
 title: Searching the product catalog
 description: This article provides a bunch of sample requests to be used to achieve the implementation of search options and gives explanations of request values.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/searching-the-product-catalog
 originalArticleId: d8d530bf-7cb2-473f-a7cb-0db96957700e
 redirect_from:
@@ -6653,8 +6654,8 @@ To search by products, send the request:
 
 For other abstract product attributes, see:
 
-* [Retrieving abstract products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html){target="_blank"}
-* [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html){target="_blank"}
+* [Retrieving abstract products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html)
+* [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html)
 
 **Value facets**
 

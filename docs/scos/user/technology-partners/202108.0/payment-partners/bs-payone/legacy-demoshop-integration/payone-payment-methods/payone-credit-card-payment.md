@@ -1,6 +1,7 @@
 ---
 title: PayOne - Credit Card Payment
 description: Integrate Credit Card payment through Payone into the Spryker-based shop.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/payone-credit-card
 originalArticleId: b0238458-4982-4762-99e5-6140eee627aa
 redirect_from:
@@ -11,8 +12,8 @@ redirect_from:
 ---
 
 {% info_block infoBox "PCI Compliance" %}
-Because of PCI compliance reasons, credit card data is communicated to the third party through AJAX calls (sensitive information stays at the browser side
-{% endinfo_block %}.)
+Because of PCI compliance reasons, credit card data is communicated to the third party through AJAX calls (sensitive information stays at the browser side).
+{% endinfo_block %}
 
 ## PCI Compliance
 

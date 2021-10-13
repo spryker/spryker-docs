@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductSearchWidget
 description: Use the guide to learn how to update the ProductSearchWidget module.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/mg-product-search-widget
 originalArticleId: 41200114-adea-4a49-bba2-3685c1c383bf
 redirect_from:

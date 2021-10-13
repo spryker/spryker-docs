@@ -1,5 +1,6 @@
 ---
 title: Template
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/template
 originalArticleId: c367aa97-9849-4f0e-9d0e-92a026990ad9
 redirect_from:

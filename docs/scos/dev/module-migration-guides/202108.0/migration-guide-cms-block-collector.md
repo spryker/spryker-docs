@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - CMS Block Collector
 description: Use the guide to update versions to the newer ones of the CMS Block Collector module.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-cms-block-collector
 originalArticleId: 3e039058-48d7-4a5c-bae4-2afa9c5cc0d6
 redirect_from:

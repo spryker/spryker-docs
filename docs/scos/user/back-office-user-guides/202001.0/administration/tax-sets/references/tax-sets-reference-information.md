@@ -1,6 +1,7 @@
 ---
 title: Tax Sets Reference Information
 description: The guide provides additional information on the values you use when managing tax sets in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/taxes-reference-information
 originalArticleId: 3c35a459-afed-48e3-b12c-822a5dc463f2
 redirect_from:

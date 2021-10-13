@@ -1,6 +1,7 @@
 ---
 title: Formatter integration guide
 description: Learn how to integrate Formatter into your project
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/formatter-integration-guide
 originalArticleId: 7da96c5e-958f-4ddb-bae3-469dda90ca61
 redirect_from:

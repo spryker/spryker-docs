@@ -1,6 +1,7 @@
 ---
 title: Shop guide - Managing configurable bundles
 description: In this article, you can find instructions on managing the Configurable Bundle in the Spryker Storefront.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/shop-guide-managing-configurable-bundles
 originalArticleId: 8f0dca31-3eac-4fa3-900d-16526930e97a
 redirect_from:

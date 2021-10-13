@@ -1,5 +1,6 @@
 ---
 title: Session Management
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/session-management-201903
 originalArticleId: 53d2c060-c45d-45a8-8d00-d0f1b10c7dbb
 redirect_from:

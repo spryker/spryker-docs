@@ -1,5 +1,6 @@
 ---
 title: File details- discount.csv
+template: data-import-template
 originalLink: https://documentation.spryker.com/v5/docs/file-details-discountcsv
 originalArticleId: 8cfdac97-98af-45e6-af5d-293a381d969d
 redirect_from:

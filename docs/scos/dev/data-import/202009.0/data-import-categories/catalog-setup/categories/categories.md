@@ -1,5 +1,6 @@
 ---
 title: Categories
+template: data-import-template
 originalLink: https://documentation.spryker.com/v6/docs/categories
 originalArticleId: 0ab1b1ed-e3ef-4144-9557-5483d545e2e0
 redirect_from:

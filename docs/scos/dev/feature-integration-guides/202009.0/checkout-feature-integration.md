@@ -1,6 +1,7 @@
 ---
 title: Checkout feature integration
 description: Learn how to integrate the Checkout feature into a Spryker project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/checkout-feature-integration
 originalArticleId: a38cae5f-63d5-4764-81bf-1f475069e388
 redirect_from:
@@ -658,4 +659,4 @@ Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Glue API: Checkout |  | [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |
+| Glue API: Checkout |  | [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |

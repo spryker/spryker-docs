@@ -1,5 +1,6 @@
 ---
 title: Glue API- Company account feature integration
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/glue-api-company-account-api-feature-integration
 originalArticleId: 15e70979-0f15-419c-bd1c-603e36b0e006
 redirect_from:
@@ -586,7 +587,7 @@ http://mysprykershop.com/company-user-access-tokens response
 }
 ```
 
-To verify that all the required data is provided in the access token, go to [jwt.io](https://jwt.io/){target="_blank"} to decode the token and check that the required `customer_reference`, `id_customer`, `id_company_user` and permissions are present in the `sub` property of the payload data.
+To verify that all the required data is provided in the access token, go to [jwt.io](https://jwt.io/) to decode the token and check that the required `customer_reference`, `id_customer`, `id_company_user` and permissions are present in the `sub` property of the payload data.
 
 {% endinfo_block %}
 

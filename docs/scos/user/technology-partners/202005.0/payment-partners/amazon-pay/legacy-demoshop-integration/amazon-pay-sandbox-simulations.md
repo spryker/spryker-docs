@@ -1,6 +1,7 @@
 ---
 title: Amazon Pay - Sandbox Simulations
 description: In this article, you can get information about sandbox simulations for the Amazon Pay module in Spryker Legacy Demoshop.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/amazon-pay-simulations-demoshop
 originalArticleId: fa986c53-3b3b-42c4-8674-883821273e15
 redirect_from:

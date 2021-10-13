@@ -1,6 +1,7 @@
 ---
 title: Comments feature integration
 description: The guide walks you through the process of installing the Comments feature into your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/comments-feature-integration
 originalArticleId: 9cb9ce64-71dd-4c15-b34b-60290206605b
 redirect_from:

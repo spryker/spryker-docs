@@ -1,6 +1,7 @@
 ---
 title: Creating Cart Rules
 description: Use the procedure to create a cart-based discount rule along with its conditions in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/creating-a-cart-rule-discount
 originalArticleId: 173c3b58-644c-4ec7-b4ec-66b72415b8bc
 redirect_from:

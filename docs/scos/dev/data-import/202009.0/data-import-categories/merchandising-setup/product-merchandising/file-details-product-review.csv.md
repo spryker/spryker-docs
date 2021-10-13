@@ -1,5 +1,6 @@
 ---
 title: File details- product_review.csv
+template: data-import-template
 originalLink: https://documentation.spryker.com/v6/docs/file-details-product-reviewcsv
 originalArticleId: 9fd9a7a4-5c68-4d5e-b07c-3b60784f0196
 redirect_from:

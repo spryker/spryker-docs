@@ -1,5 +1,6 @@
 ---
 title: Authentication and Authorization
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/authentication-and-authorization
 originalArticleId: 5555295f-2ede-43ad-86e4-ba8c03dd7968
 redirect_from:

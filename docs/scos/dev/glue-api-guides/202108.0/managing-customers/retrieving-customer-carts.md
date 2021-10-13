@@ -1,6 +1,7 @@
 ---
 title: Retrieving customer carts
 description: Retrieve customer's carts via Glue API
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-customer-carts
 originalArticleId: a09a087b-5fca-483c-a2c2-f8441681b43e
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Navigation API feature integration
 description: This guide will walk you through the process of installing and configuring the Navigation API feature in Spryker OS.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/navigation-api-feature-integration-1
 originalArticleId: 87ec1804-7443-4361-af1f-bb0f12e7d2de
 redirect_from:
@@ -56,8 +57,8 @@ Make sure that the following changes have been applied in transfer objects:
 ### 3) Set up Configuration
 #### Configure navigation mapping
 {% info_block infoBox %}
-Specify mapping for the source field from which the resourceId field should be filled (depends on a navigation node type
-{% endinfo_block %}.)
+Specify mapping for the source field from which the resourceId field should be filled (depends on a navigation node type).
+{% endinfo_block %}
 
 <details open>
 <summary>src/Pyz/Glue/NavigationsRestApi/NavigationsRestApiConfig.php</summary>

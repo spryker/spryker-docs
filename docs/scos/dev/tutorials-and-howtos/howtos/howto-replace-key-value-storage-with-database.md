@@ -1,5 +1,6 @@
 ---
 title: HowTo - Replace key-value storage with database
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-replace-key-value-storage-with-database
 originalArticleId: 76d0dff6-6837-4f27-a64b-d3eacf7134c7
 redirect_from:
@@ -104,8 +105,7 @@ class SynchronizationBehaviorConfig extends SprykerSynchronizationBehaviorConfig
 }
 ```
 {% info_block infoBox %}
-By changing `isSynchronizationEnabled` to false you disable the synchronization for all modules (storage and search
-{% endinfo_block %}. To keep the search synchronization (essential for the search functionality), go through all installed `Search modules and modify the schema.xml` file, for example:)
+By changing `isSynchronizationEnabled` to false you disable the synchronization for all modules (storage and search). To keep the search synchronization (essential for the search functionality), go through all installed `Search modules and modify the schema.xml` file, for example:
 
 spy_product_page_search.schema.xml
 
@@ -123,6 +123,8 @@ spy_product_page_search.schema.xml
 
 </database>
 ```
+
+{% endinfo_block %}
 
 3. Run the propel install command and sync for storage data to apply all the changes to entities:
 

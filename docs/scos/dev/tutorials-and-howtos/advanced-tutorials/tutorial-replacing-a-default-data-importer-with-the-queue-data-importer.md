@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Replacing a default data importer with the queue data importer
 description: This tutorial is a quick step-by-step guide on how to replace a default data importer with a queue data importer.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/tutorial-replacing-a-default-data-importer-with-the-queue-data-importer
 originalArticleId: fab80f36-95c1-480d-a5c2-1ad5488587e8
 redirect_from:

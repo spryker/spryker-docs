@@ -1,6 +1,7 @@
 ---
 title: Trustpilot
 description: Integrate Trustpilot that gives people a place to share and discover reviews of businesses, and we give every company the tools to turn consumer feedback into business results
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/trustpilot
 originalArticleId: 2ab31309-f14d-4493-bc10-2099062f0326
 redirect_from:
@@ -9,7 +10,7 @@ redirect_from:
 ---
 
 ## Partner Information
-[ABOUT TRUSTPILOT](https://de.business.trustpilot.com/){target="_blank"}
+[ABOUT TRUSTPILOT](https://de.business.trustpilot.com/)
 The world’s most powerful review platform
 
 Trustpilot is a leading independent review platform – free and open to all. With more than 550 million reviews of over 260,000 domains, Trustpilot gives people a place to share and discover reviews of businesses, and we give every company the tools to turn consumer feedback into business results. Our mission is to bring people and businesses closer together to create ever improving experiences for everyone. Trustpilot reviews are seen more than 2.5 billion times each month by consumers worldwide. With offices in Copenhagen, London, New York, Denver, Berlin, Melbourne and Vilnius, Trustpilot’s 700 employees represent more than 40 different nationalities. For more information, visit https://www.trustpilot.com/

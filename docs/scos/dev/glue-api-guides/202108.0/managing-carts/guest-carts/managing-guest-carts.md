@@ -1,6 +1,7 @@
 ---
 title: Managing guest carts
 description: Retrieve details about guest carts and learn what else you can do with the resource.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-guest-carts
 originalArticleId: 70f8ca95-9dc9-4083-8056-4acd342e0054
 redirect_from:

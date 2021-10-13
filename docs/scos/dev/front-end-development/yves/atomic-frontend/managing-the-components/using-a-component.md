@@ -1,5 +1,6 @@
 ---
 title: Using a Component
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-use-component
 originalArticleId: cb6a7b9c-c64d-480f-a4e9-0d122e56594e
 redirect_from:
@@ -63,8 +64,8 @@ The most common attributes to include are:
 * `modifiers` (optional) - used to enable component modifiers.
 
 {% info_block infoBox %}
-For more details, see section _Twig_ in [Atomic Frontend](/docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html#twig
-{% endinfo_block %}.)
+For more details, see section _Twig_ in [Atomic Frontend](/docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html#twig).
+{% endinfo_block %}
 
 ## Include
 By including a component, you place it on a page as is. Each component has the `data`, `attributes` and other properties that allows passing the necessary information to configure it, but apart from that, you cannot change it. The outlook of the component depends only on configuration. By including an element, you also pass the context of the page where it is added.

@@ -1,6 +1,7 @@
 ---
 title: Shop Guide - Checkout
 description: The section can be used to buy products added to the cart by setting a delivery address, shipment details, a payment method and placing an order.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/checkout-shop-guide-201911
 originalArticleId: 413692b5-da67-4889-9528-769b41a2822b
 redirect_from:

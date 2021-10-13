@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - WebProfiler
 description: Use the guide to perform the WebProfiler part of the Silex Migration Effort.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/migration-guide-webprofiler
 originalArticleId: 8967884e-cec9-49b9-9d9a-a2189db06463
 redirect_from:

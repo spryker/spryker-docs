@@ -1,5 +1,6 @@
 ---
 title: Tutorial - Internationalization
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-internationalization
 originalArticleId: ab5fb80c-57d6-44a7-a85f-41034cb5c3be
 redirect_from:
@@ -48,8 +49,8 @@ Internationalization is the process of building software so that it supports loc
 Localization is adapting the design and layout of your software product so that it displays content that’s adapted to the users culture and language, such as translated text, cultural accepted images, and layout. Its main focus is gathering the necessary resources and follow the conventions that are implemented through internationalization. This means that for each locale that’s supported by the application, the application should have its corresponding resources.
 
 {% info_block infoBox %}
-A locale is a parameter that describes the users' language, country, and variant preferences (For example, for Belgium there are two locales available: nl_BE and fr_BE
-{% endinfo_block %}.)
+A locale is a parameter that describes the users' language, country, and variant preferences (For example, for Belgium there are two locales available: nl_BE and fr_BE).
+{% endinfo_block %}
 
 ## Summary
 

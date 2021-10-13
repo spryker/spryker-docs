@@ -1,6 +1,7 @@
 ---
 title: Gift Cards feature integration
 description: The guide walks you through the process of installing the Gift Cards feature in the project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/gift-cards-feature-integration
 originalArticleId: bb02c8e1-7e4d-4091-beb8-db232821455e
 redirect_from:
@@ -518,8 +519,9 @@ DummyPayment Order State Machine Example:
 #### Prepare Order State Machines - Gift Card Usage Process
 
 {% info_block infoBox "Info" %}
-In this step, you should customize your Order State Machine to place orders with 0 price to pay (by using gift cards
-{% endinfo_block %}. The process should skip payment-related steps as there is nothing for the customer to pay any more. Below you can see the example of how NoPayment state machine is defined.)
+In this step, you should customize your Order State Machine to place orders with 0 price to pay (by using gift cards). The process should skip payment-related steps as there is nothing for the customer to pay any more. Below you can see the example of how NoPayment state machine is defined.
+{% endinfo_block %}
+
 NoPayment Order State Machine Example:
 
 <details open>
@@ -1304,5 +1306,5 @@ class YvesBootstrap extends SprykerYvesBootstrap
 </details>
 
 {% info_block warningBox "Verification" %}
-Make sure that a valid gift card code can be added and removed from the cart by submitting the cart code form (activated by the previous step
-{% endinfo_block %}.)
+Make sure that a valid gift card code can be added and removed from the cart by submitting the cart code form (activated by the previous step).
+{% endinfo_block %}

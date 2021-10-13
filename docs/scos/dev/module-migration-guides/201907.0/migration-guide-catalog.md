@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Catalog
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-catalog
 originalArticleId: 717a657c-30cd-4ff0-ac5b-4a6e574f4127
 redirect_from:

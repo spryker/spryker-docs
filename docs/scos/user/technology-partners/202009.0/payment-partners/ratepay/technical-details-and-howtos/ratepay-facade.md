@@ -1,6 +1,7 @@
 ---
 title: RatePay - Facade
 description: This article includes facade methods provided by Ratepay.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/ratepay-facade
 originalArticleId: 500af5e7-cbd7-47df-b4e8-e8539edafc20
 redirect_from:

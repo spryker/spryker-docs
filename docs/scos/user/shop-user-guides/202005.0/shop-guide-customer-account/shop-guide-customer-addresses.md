@@ -1,6 +1,7 @@
 ---
 title: Shop Guide - Customer Addresses
 description: This guide provides instructions on managing Customer Addresses in the Spryker-based shop.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/shop-guide-customer-addresses
 originalArticleId: e6d211cd-e665-4c47-a652-0914a4d407e2
 redirect_from:
@@ -35,10 +36,11 @@ To start working with the addresses, navigate to the **Customer Account > Addres
 **To create a new Address**:
 
 1. On the **Addresses** page in the Customer Account, click **Add New Address**.
-2. On the **Add Address** page populate the required fields. See [Addresses: Reference Information](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/references/addresses-reference-information.html) to learn what fields are required. 
-    :::(Info) (Info)
+2. On the **Add Address** page populate the required fields. See [Addresses: Reference Information](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/references/addresses-reference-information.html) to learn what fields are required.
+    {% info_block infoBox %}
     `Is default shipping address` checkmark defines that this address will be used as the default shipping address for your Customer Account.
     `Is default billing address` checkmark defines that this address will be used as the default billing address for your Customer Account.
+   {% endinfo_block %}
 3. Once done, click **Submit**.
 ***
 ## Editing the Existing Address

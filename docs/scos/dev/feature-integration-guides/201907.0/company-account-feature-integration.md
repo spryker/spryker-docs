@@ -1,6 +1,7 @@
 ---
 title: Company Account feature integration
 description: The guide walks you through the process of installing Business on Behalf, Company Account Storage, and Company Account OAuth functionality into your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/company-account-integration
 originalArticleId: 3c345ef3-ea56-4e79-87ad-bfebe40ad808
 redirect_from:

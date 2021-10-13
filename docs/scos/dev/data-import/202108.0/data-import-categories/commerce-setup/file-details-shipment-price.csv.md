@@ -1,5 +1,6 @@
 ---
 title: File details- shipment_price.csv
+template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-shipment-pricecsv
 originalArticleId: 5a755c1f-20a7-42d0-a1ac-30f4b8586351
 redirect_from:

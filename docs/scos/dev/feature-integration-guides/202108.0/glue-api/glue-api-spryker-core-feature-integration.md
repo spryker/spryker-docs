@@ -1,6 +1,7 @@
 ---
 title: Glue API- Spryker Сore feature integration
 description: Use the guide to install the Spryker Core feature in your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-spryker-core-feature-integration
 originalArticleId: e7a1a56e-b305-4a95-87b4-7cf7d6868603
 redirect_from:
@@ -54,9 +55,9 @@ $config[GlueApplicationConstants::GLUE_APPLICATION_REST_DEBUG] = false;
 
 #### Add global CORS policy
 
-:::(Info)
-`GLUE_APPLICATION_CORS_ALLOW_ORIGIN` should be configured for every domain used in the project. 
-:::
+{% info_block infoBox %}
+`GLUE_APPLICATION_CORS_ALLOW_ORIGIN` should be configured for every domain used in the project.
+{% endinfo_block %}
 
 Adjust `config/Shared/config_default.php`:
 **config/Shared/config_default.php**
@@ -82,10 +83,10 @@ To make sure that the CORS headers are set up correctly, send the OPTIONS reques
 
 #### Configure included section
 
-:::(Info)
+{% info_block infoBox %}
 * When the `GlueApplicationConfig::isEagerRelationshipsLoadingEnabled()` option is set to `false`, no relationship is loaded, unless they are explicitly specified in the include query parameter (e.g., `/abstract-products?include=abstract-product-prices`). 
 * When the `GlueApplicationConfig::isEagerRelationshipsLoadingEnabled()` option is set to `true`, all resource relationships is loaded by default unless you pass the empty include query parameter (e.g., `/abstract-products?include=`). If you specify needed relationships in the include query parameter, only required relationships are added to response data.
-:::
+{% endinfo_block %}
 
 ### 3) Set up transfer objects
 
@@ -94,7 +95,7 @@ Generate transfer objects:
 console transfer:generate
 ```
 
-::: (Warning) (Verification)
+{% info_block warningBox "Verification" %}
 Make sure that the following changes have occurred:
 
 | TRANSFER | TYPE | EVENT | PATH |
@@ -114,7 +115,7 @@ StoreCountryRestAttributesTransfer| class | created  | src/Generated/Shared/Tran
 | SecurityCheckAuthResponseTransfer |  class | created | src/Generated/Shared/Transfer/SecurityCheckAuthResponseTransfer.php |
 | RestAccessTokensAttributesTransfer |  class | created | src/Generated/Shared/Transfer/RestAccessTokensAttributesTransfer.php |
 | RestAgentAccessTokensRequestAttributesTransfer |  class | created | src/Generated/Shared/Transfer/RestAgentAccessTokensRequestAttributesTransfer.php |
-:::
+{% endinfo_block %}
     
 ### 4) Set up behavior
 

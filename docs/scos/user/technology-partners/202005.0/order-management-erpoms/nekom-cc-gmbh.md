@@ -1,5 +1,6 @@
 ---
 title: NEKOM CC GmbH
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/nekom
 originalArticleId: 1de5a942-c47d-46e6-b64d-4e56201e0e3d
 redirect_from:
@@ -8,7 +9,7 @@ redirect_from:
 ---
 
 ## Partner Information
-[ABOUT NEKOM](https://www.nekom.com/){target="_blank"}
+[ABOUT NEKOM](https://www.nekom.com/)
 Scaleable Omnichannel for high-growth brands
 
 NEKOM is an Austrian platform provider for eCommerce services and multichannel processes. The system is completely modularly programmed and can therefore quickly react to your requirements and those of the market. NEKOM also provides the modules as Micro Services. These Microservices are easy and fast to integrate and extend the existing feature set of online shops without large implementation projects and costs. NEKOM’s goal is to provide retailers the best tools to be successful on- and offline.

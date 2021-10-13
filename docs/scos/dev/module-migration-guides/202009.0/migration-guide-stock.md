@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Stock
 description: Use the guide to migrate to a new version of the Stock module.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/mg-stock
 originalArticleId: 6a873842-5ec7-4935-aeec-39467a24e27c
 redirect_from:

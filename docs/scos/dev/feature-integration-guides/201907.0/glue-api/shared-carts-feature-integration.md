@@ -1,6 +1,7 @@
 ---
 title: Shared Carts feature integration
 description: The guide walks you through the process of installing and configuring Shared Carts into Spryker OS
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/shared-carts-feature-integration-glue-201907
 originalArticleId: e41ed2fe-59ea-4d8e-9390-91dd5f89b7da
 redirect_from:

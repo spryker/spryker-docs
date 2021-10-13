@@ -1,6 +1,7 @@
 ---
 title: Definition of Module API
 description: This article defines internal APIs according to which the version type is defined.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/definition-api
 originalArticleId: d86471b1-719e-4ab5-b5eb-b5e915f0a837
 redirect_from:

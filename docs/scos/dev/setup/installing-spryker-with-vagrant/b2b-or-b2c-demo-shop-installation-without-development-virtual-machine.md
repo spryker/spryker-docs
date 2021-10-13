@@ -1,6 +1,7 @@
 ---
 title: B2B or B2C Demo Shop installation- without Development Virtual Machine
 description: Learn how to install a B2B or a B2C Demo Shop without the Development Virtual Machine
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/b2b-b2c-demo-shop-installation-without-development-virtual-machine
 originalArticleId: 295cdca0-3f88-46e0-b8b2-947d21e84fcf
 redirect_from:
@@ -221,9 +222,9 @@ If you want to configure the hostname, set the values for Yves and Zed hostnames
 * [`http://glue.de.b2b-demo-shop.local`](`http://glue.de.b2b-demo-shop.local`)- REST API (Glue).
 
 **B2C Demo Shop:**
-* [http://de.b2c-demo-shop.local/](`http://www.de.b2c-demo-shop.local`/){target="_blank"} - front-end (Storefront);
-* [`http://zed.de.b2c-demo-shop.local`/](`http://zed.de.b2c-demo-shop.local`/){target="_blank"} - backend (the Back Office).
-* [`http://glue.de.b2c-demo-shop.local`/](`http://glue.de.b2c-demo-shop.local`/){target="_blank"} - REST API (Glue).
+* [http://de.b2c-demo-shop.local/](`http://www.de.b2c-demo-shop.local`/) - front-end (Storefront);
+* [`http://zed.de.b2c-demo-shop.local`/](`http://zed.de.b2c-demo-shop.local`/) - backend (the Back Office).
+* [`http://glue.de.b2c-demo-shop.local`/](`http://glue.de.b2c-demo-shop.local`/) - REST API (Glue).
 
 Credentials to access the administrator interface: user `admin@spryker.com` and password `change123`.
 

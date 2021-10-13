@@ -1,6 +1,7 @@
 ---
 title: Retrieving Store Configuration
 description: This article explains how to retrieve the store configuration including currencies, countries, locales, and time zones.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/retrieving-store-configuration
 originalArticleId: 8e5c5deb-2dd9-4de9-98fc-5e73da6ef885
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Econda
 description: Store the data, enrich it and provide instant reports by integrating Econda into Spryker Commerce OS.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/econda
 originalArticleId: e34d8caa-0fda-438f-b8cc-e502e7963a0c
 redirect_from:

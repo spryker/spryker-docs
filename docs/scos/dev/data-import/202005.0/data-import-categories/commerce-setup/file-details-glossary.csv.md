@@ -1,5 +1,6 @@
 ---
 title: File details- glossary.csv
+template: data-import-template
 originalLink: https://documentation.spryker.com/v5/docs/file-details-glossarycsv
 originalArticleId: ca662124-7a04-470e-b3ec-a4549a2b9ec2
 redirect_from:

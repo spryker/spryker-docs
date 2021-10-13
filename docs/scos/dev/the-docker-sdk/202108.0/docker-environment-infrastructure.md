@@ -1,5 +1,6 @@
 ---
 title: Docker environment infrastructure
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/docker-environment-infrastructure
 originalArticleId: e94dd005-cda2-48f8-a224-dea6d6e5ea46
 redirect_from:

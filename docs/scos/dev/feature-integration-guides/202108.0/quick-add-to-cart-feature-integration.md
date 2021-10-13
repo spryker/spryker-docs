@@ -1,6 +1,7 @@
 ---
 title: Quick Add to Cart feature integration
 description: Learn how to integrate the Quick Add to Cart feature into a Spryker project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/quick-order-feature-integration
 originalArticleId: c48beede-6189-4a05-9ad3-d3de0bfa5592
 redirect_from:

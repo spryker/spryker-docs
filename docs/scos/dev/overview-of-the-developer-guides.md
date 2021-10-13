@@ -1,6 +1,7 @@
 ---
 title: Overview of the developer guides
 description: The Developer Guides cover all the technical aspects of the Spryker Commece Operating System, and is tailored for back-end, front-end and theme developers.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/overview-of-the-developer-guides
 originalArticleId: eda293dd-aace-47ed-a6df-20ec0a8a3e1d
 redirect_from:

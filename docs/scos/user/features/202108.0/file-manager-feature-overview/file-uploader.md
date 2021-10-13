@@ -1,6 +1,7 @@
 ---
 title: File uploader
 description: The File Uploader feature is helpful when a Back Office user needs to add instructions or additional documentation to the product as an attachment.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-uploader
 originalArticleId: d87e4d32-6c7d-40c3-9aeb-64df4623cab1
 redirect_from:
@@ -52,8 +53,8 @@ To upload a file to a particular directory follow the steps:
 {% info_block infoBox %}
 
 If Use file name option is selected, then File Name field is not required and will be disregarded. In this case, the file will be uploaded with its original name (the one you see in your local storage
-
-{% endinfo_block %}.)
+).
+{% endinfo_block %}
 
 {% info_block warningBox %}
 

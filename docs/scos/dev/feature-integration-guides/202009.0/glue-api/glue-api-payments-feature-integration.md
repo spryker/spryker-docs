@@ -1,5 +1,6 @@
 ---
 title: Glue API- Payments feature integration
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/glue-api-payments-feature-integration
 originalArticleId: 33dfea8f-3e42-4501-b2ec-6b56300b99ba
 redirect_from:
@@ -277,4 +278,4 @@ To verify that SelectedPaymentMethodCheckoutDataResponseMapperPlugin is activate
 
 | Feature | Link |
 | --- | --- |
-| Checkout API | [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |
+| Checkout API | [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |

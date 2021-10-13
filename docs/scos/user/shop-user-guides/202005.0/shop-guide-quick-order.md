@@ -1,6 +1,7 @@
 ---
 title: Shop Guide - Quick Order
 description: Use the procedures to create a quick order, add products to the quick order in bulk, upload products, add the order to a shopping list or a shopping cart.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/quick-order-shop-guide
 originalArticleId: 83272228-96a8-4c9c-a611-923ee33766d9
 redirect_from:

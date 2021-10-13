@@ -1,6 +1,7 @@
 ---
 title: Shop Guide - Summary Step
 description: Use the procedures to view and update shipment details, a payment method or billing address, and place the order in the Storefront.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/summary-step-shop-guide-201911
 originalArticleId: 5d06bbae-ff44-4212-96f0-dcb6716622d5
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Importing Data with a Configuration File
 description: Learn how to run import in bulk using a .yml configuration file
+template: data-import-template
 originalLink: https://documentation.spryker.com/v6/docs/importing-data-with-configuration-file
 originalArticleId: 4d9dd584-1d23-423f-8cea-cb3d36abd7bc
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Other Best Practices
 description: This article provides a list of some additional and potentially useful principles regarding the setup of on-site search experience.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/other-best-practices
 originalArticleId: 964c3ef2-57fe-4b57-a0bb-45a5cf6527fd
 redirect_from:
@@ -28,8 +29,8 @@ Finally, we want to provide you with a list of some additional and potentially u
 Each document we put in Elasticsearch corresponds to an URL.
 
 {% info_block warningBox %}
-The mapping type in our schema is called `page`, not `product` or something else
-{% endinfo_block %}.)
+The mapping type in our schema is called `page`, not `product` or something else.
+{% endinfo_block %}
 
 We do this because we think that different page types (for example brand pages, category pages, CMS pages) can be relevant for the same search. There is no reason why somebody interested in [shipping prices](https://www.contorion.de/versandkosten) should not be able to find corresponding information using the search bar of a website (unfortunately this is rarely the case)–so we put it in the same index as products, using the same document structure:
 

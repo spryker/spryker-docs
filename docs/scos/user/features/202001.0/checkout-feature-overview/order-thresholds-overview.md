@@ -1,6 +1,7 @@
 ---
 title: Minimum Order Value Feature Overview
 description: Define a minimum order value for orders placed by buyers. Minimum order value (also referred to as threshold) is a monetary value stipulated by a shop owner.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/order-thresholds-feature-overview
 originalArticleId: 3a73693d-0ca2-4ef9-aa63-c6da8431afcd
 redirect_from:

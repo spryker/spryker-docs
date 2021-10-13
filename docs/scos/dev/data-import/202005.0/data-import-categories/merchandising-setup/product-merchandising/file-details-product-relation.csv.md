@@ -1,5 +1,6 @@
 ---
 title: File details- product_relation.csv
+template: data-import-template
 originalLink: https://documentation.spryker.com/v5/docs/file-details-product-relationcsv
 originalArticleId: 52fb1d3f-242a-4fb0-9069-6d4c4fe24281
 redirect_from:

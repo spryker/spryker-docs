@@ -1,5 +1,6 @@
 ---
 title: Implementing a REST API Resource
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/implementing-rest-api-resource
 originalArticleId: 051a0adb-bfcf-4a36-a137-eb1151797d57
 redirect_from:

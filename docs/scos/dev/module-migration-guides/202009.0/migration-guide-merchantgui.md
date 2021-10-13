@@ -1,6 +1,7 @@
 ---
 title: Migration guide- MerchantGui
 description: This guide contains instructions on migrating the MerchantGui module provided by Spryker to a newer version.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/migration-guide-merchantgui
 originalArticleId: 65c33911-9e93-41fd-8496-0077eaf315ff
 redirect_from:
@@ -117,7 +118,7 @@ Other changes are:
 
 {% info_block infoBox "Info" %}
 
-Keep in mind that the `MerchantGui` module makes sense only in connection with modules [MerchantGuiExtension](https://github.com/spryker/merchant-gui-extension){target="_blank"} and [Merchant](https://github.com/spryker/merchant){target="_blank"}.
+Keep in mind that the `MerchantGui` module makes sense only in connection with modules [MerchantGuiExtension](https://github.com/spryker/merchant-gui-extension) and [Merchant](https://github.com/spryker/merchant).
 
 {% endinfo_block %}
 

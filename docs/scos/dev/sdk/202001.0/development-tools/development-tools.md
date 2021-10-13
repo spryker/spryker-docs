@@ -1,6 +1,7 @@
 ---
 title: Development Tools
 description: The Spryker Commerce OS provides your developers with a range of coding tools that make sure your OS run smoothly
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/development-tools
 originalArticleId: 8f7c3b35-7fb7-419d-9518-4aa158925d22
 redirect_from:

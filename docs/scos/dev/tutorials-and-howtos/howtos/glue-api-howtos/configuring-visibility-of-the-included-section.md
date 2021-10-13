@@ -1,5 +1,6 @@
 ---
 title: Configuring Visibility of the Included Section
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-configuring-visibility-included-section-201903
 originalArticleId: d6d74121-749a-4a8d-8f95-d3455b2db252
 redirect_from:
@@ -22,8 +23,8 @@ redirect_from:
 Responses of Spryker Glue REST API can return the **included** and **relationships** sections. The sections contain additional information on the resource requested. Such information is presented in the form of related resources. For example, if you request information on products, the sections can include such additional related resources as image sets, prices, availability information etc.
 
 {% info_block infoBox %}
-For more details, see [Compound Documents](https://jsonapi.org/format/#document-compound-documents
-{% endinfo_block %}.)
+For more details, see [Compound Documents](https://jsonapi.org/format/#document-compound-documents).
+{% endinfo_block %}
 
 You can decide whether Glue REST API includes the sections in all responses by default:
 

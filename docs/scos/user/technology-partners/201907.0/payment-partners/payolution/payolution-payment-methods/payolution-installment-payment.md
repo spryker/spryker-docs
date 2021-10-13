@@ -1,6 +1,7 @@
 ---
 title: Payolution - Installment Payment
 description: Integrate installment payment through Payolution into the Spryker-based shop.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/payolution-installment
 originalArticleId: e1ef9f4e-66e8-4534-8e0c-7bdc56b7e35a
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Database access credentials
 description: Database access credentials for MariaDB, MySQL, and PostgreSQL.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/database-access-credentials
 originalArticleId: 1e227c7f-f4f2-4c7e-b5c4-5ed1d9174ec7
 redirect_from:
@@ -26,4 +27,4 @@ PostgreSQL database:
 * `user` - `spryker`
 * `pw` - `secret`
 
-You can change the credentials in the [Deploy file](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file-reference-1.0.html).
+You can change the credentials in the [Deploy file](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file-reference-1.0.html).

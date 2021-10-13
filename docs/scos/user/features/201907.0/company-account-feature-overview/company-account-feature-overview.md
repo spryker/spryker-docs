@@ -1,5 +1,6 @@
 ---
 title: Company Account Management
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/company-account-management
 originalArticleId: d84c63a9-3f45-43ef-b73e-ceafefb759b7
 redirect_from:

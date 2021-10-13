@@ -1,6 +1,7 @@
 ---
 title: Multiple Touchpoints Integration
 description: With the Spryker Commerce OS, you can flexibly integrate any and as many customer-facing touchpoints as you wish.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/multiple-touchpoint-integration
 originalArticleId: fca0f536-ab15-48ff-aca2-514b9f7d9e0c
 redirect_from:

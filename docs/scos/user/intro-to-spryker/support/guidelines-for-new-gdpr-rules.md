@@ -1,6 +1,7 @@
 ---
 title: Guidelines for new GDPR rules
 description: GDPR contains rules relating to the protection and control of personal data.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/guidelines-for-new-gdpr-rules
 originalArticleId: 256c82f9-5bae-4788-ab23-1ed7398edb1a
 redirect_from:
@@ -24,7 +25,7 @@ redirect_from:
 
 {% info_block errorBox %}
 
-This article conforms the [DSGVO](https://de.wikipedia.org/wiki/Datenschutz-Grundverordnung){target="_blank"} and [RGPD](https://fr.wikipedia.org/wiki/R%C3%A8glement_g%C3%A9n%C3%A9ral_sur_la_protection_des_donn%C3%A9es){target="_blank"} rules.
+This article conforms the [DSGVO](https://de.wikipedia.org/wiki/Datenschutz-Grundverordnung) and [RGPD](https://fr.wikipedia.org/wiki/R%C3%A8glement_g%C3%A9n%C3%A9ral_sur_la_protection_des_donn%C3%A9es) rules.
 
 {% endinfo_block %}
 

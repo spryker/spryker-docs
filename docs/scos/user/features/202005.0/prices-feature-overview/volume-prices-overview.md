@@ -1,6 +1,7 @@
 ---
 title: Volume Prices Feature Overview
 description: Volume pricing helps the merchants to gain the commitment of the customers. Providing volume discounts results in increasing the placement of large orders.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/volume-prices-overview
 originalArticleId: 09ac8bf9-fca0-4d82-97a2-ccd7c0949255
 redirect_from:
@@ -60,8 +61,8 @@ Volume prices are configured per store and per currency and a Store Administrato
 Volume prices are set for both gross and net mode and are either inherited from the abstract product or specified directly for a standalone concrete product.
 
 {% info_block infoBox %}
-The concrete product can also have its own volume prices different from its abstract (if they are explicitly defined per `concrete_sku`
-{% endinfo_block %}.)
+The concrete product can also have its own volume prices different from its abstract (if they are explicitly defined per `concrete_sku`).
+{% endinfo_block %}
 
 A specific volume price for a concrete product has a higher priority over an inherited one from its abstract product.
 

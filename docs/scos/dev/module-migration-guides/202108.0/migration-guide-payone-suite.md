@@ -1,5 +1,6 @@
 ---
 title: Migration guide - Payone Suite
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-payonesuite
 originalArticleId: 426479ec-2420-47df-9997-73b5270c4f1e
 redirect_from:

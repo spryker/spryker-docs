@@ -1,6 +1,7 @@
 ---
 title: Econda - Exporting CSVs
 description: Export Econda data via CSVs.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/econda-export-csvs
 originalArticleId: 8670c8e5-e15b-45c6-87df-6c8500249f78
 redirect_from:
@@ -8,7 +9,7 @@ redirect_from:
   - /v2/docs/en/econda-export-csvs
 ---
 
-To implement Econda plugin you should be familiar with the concept of [extending Spryker](/docs/scos/dev/back-end-development/extending-spryker/extending-a-core-module-that-is-used-by-another.html) and [plugins.]((/docs/scos/dev/{{site.version}}/back-end-development/implementing-and-using-plugins.html/implementing-and-using-plugins.html)
+To implement Econda plugin you should be familiar with the concept of [extending Spryker](/docs/scos/dev/back-end-development/extending-spryker/extending-a-core-module-that-is-used-by-another.html) and [plugins.]((/docs/scos/dev/back-end-development/implementing-and-using-plugins.html/implementing-and-using-plugins.html)
 
 ## Zed Output Folder
 

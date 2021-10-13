@@ -1,5 +1,6 @@
 ---
 title: Email as a CMS block overview
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/email-as-a-cms-block-overview
 originalArticleId: a986b331-c2dd-4a91-be52-fabd837fd493
 redirect_from:
@@ -51,7 +52,7 @@ The email format itself is defined on the code level, the tales serving as ident
 
 
 ### Default Email Templates
-There is a number of email templates with the respective Email CMS Blocks available in the [Spryker Demo Shops](/docs/scos/user/intro-to-spryker/{{site.version}}/about-spryker.html#spryker-b2b-b2c-demo-shops).
+There is a number of email templates with the respective Email CMS Blocks available in the [Spryker Demo Shops](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2b-b2c-demo-shops).
 
 The table below contains the list of the default email templates, their Email CMS Blocks, and purpose.
 

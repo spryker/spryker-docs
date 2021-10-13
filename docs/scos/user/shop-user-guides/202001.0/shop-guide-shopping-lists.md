@@ -1,6 +1,7 @@
 ---
 title: Shop Guide - Shopping Lists
 description: Use the procedures to create, update, share, and print shopping lists, dismiss shared shopping lists, and add items to a shopping list.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/shopping-lists-shop-guide
 originalArticleId: 595c0b2a-c9d6-4179-9a00-92ecd9424828
 redirect_from:

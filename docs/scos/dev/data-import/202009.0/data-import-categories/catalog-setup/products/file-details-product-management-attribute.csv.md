@@ -1,5 +1,6 @@
 ---
 title: File details- product_management_attribute.csv
+template: data-import-template
 originalLink: https://documentation.spryker.com/v6/docs/file-details-product-management-attributecsv
 originalArticleId: 0d02ef26-201b-4d65-bcc2-9a7c22ba3e10
 redirect_from:

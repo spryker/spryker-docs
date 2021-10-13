@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductAvailabilitiesRestApi
 description: Use the guide to migrate to a new version of the ProductAvailabilitiesRestApi module.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/productavailabilitiesrestapi-migration-guide
 originalArticleId: 192ef615-640f-48af-aaf3-1b2891dc6570
 redirect_from:
@@ -23,8 +24,8 @@ This release is a part of the **Decimal Stock** concept migration. When you upgr
 1. Upgrade the **ProductAvailabilitiesRestApi** module to the new version:
 
 {% info_block errorBox %}
-`spryker/product-availabilities-rest-api:4.0.0` has a critical issue fixed in the subsequent minor release (`spryker/product-availabilities-rest-api:4.1.0`
-{% endinfo_block %}. Version `4.0.0` should never be used by the projects.)
+`spryker/product-availabilities-rest-api:4.0.0` has a critical issue fixed in the subsequent minor release (`spryker/product-availabilities-rest-api:4.1.0`). Version `4.0.0` should never be used by the projects.
+{% endinfo_block %}
 
 ```bash
 composer require spryker/product-availabilities-rest-api: "^4.1.0" --update-with-dependencies

@@ -1,6 +1,7 @@
 ---
 title: Resource Sharing feature overview
 description: The feature allows you to generate a link to your cart and share it within your business unit with various access permissions
+template: concept-topic-template
 ---
 
 The Resource Sharing feature makes sharing of different resources easy. You can generate a unique URL for any entity in Spryker. For example, you can generate a unique URL for a cart and share it with different access permissions.

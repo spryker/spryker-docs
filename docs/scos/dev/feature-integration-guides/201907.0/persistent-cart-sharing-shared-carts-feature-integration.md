@@ -1,6 +1,7 @@
 ---
 title: Persistent Cart Sharing + Shared Carts feature integration
 description: The guide walks you through the process of installing the Shared Carts and Persistent Cart Sharing features in the project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/persisitent-cart-sharing-shared-carts-integration
 originalArticleId: cc1c8614-51dd-464d-a93b-002b47724c06
 redirect_from:
@@ -214,12 +215,12 @@ console frontend:yves:build
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure, that "Share Cart by Link" widget on the Cart page generates a cart share link with Read-only access (which can be used by other company users from the same business unit only
-{% endinfo_block %}.)
+Make sure, that "Share Cart by Link" widget on the Cart page generates a cart share link with Read-only access (which can be used by other company users from the same business unit only).
+{% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure, that "Share Cart by Link" widget on the Cart page generates a cart share link with Full Access access (which can be used by other company users from the same business unit only
-{% endinfo_block %}.)
+Make sure, that "Share Cart by Link" widget on the Cart page generates a cart share link with Full Access access (which can be used by other company users from the same business unit only).
+{% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 Make sure, that when you proceed with the cart share link with Read-only or Full Access access, your default cart will be switched to shared one, and you'll be redirected to the cart page.

@@ -1,6 +1,7 @@
 ---
 title: Unique URL per Cart for Easy Sharing Feature Overview
 description: With the feature, company users can generate the URL to share the cart with different levels of access.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/unique-url-per-cart-for-easy-sharing-overview
 originalArticleId: 2580cd53-fa7a-4448-a838-bb7d1fb860b7
 redirect_from:
@@ -35,8 +36,8 @@ Preview link is the only available option for the B2C environment. B2C users wil
 * **Full Access**. For details on the Full Access permission, check [Permissions Management for Shared Shopping Lists](https://documentation.spryker.com/v4/docs/multiple-and-shared-shopping-lists-overview#full-access) section in *Multiple and Shared Shopping Lists Overview*.
 
 {% info_block warningBox "Note" %}
-Sharing cart with Read-Only or Full Access permissions is available only for internal users (the users within the same business unit
-{% endinfo_block %}. To open the link for internal users, a customer needs to be logged in to a company account.)
+Sharing cart with Read-Only or Full Access permissions is available only for internal users (the users within the same business unit). To open the link for internal users, a customer needs to be logged in to a company account.
+{% endinfo_block %}
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Unique+URL+per+Cart+for+Easy+Sharing/internal-users-interface.png)
 The link allows displaying the prices in accordance with the currency selected. That means, that the cart shared via the link will display the prices in the currency that the owner has set up. If for example, the default currency was set to EUR and the owner has changed the currency to CHF, the shopping cart shared through the link will also display the prices in CHF.
 

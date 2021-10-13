@@ -1,6 +1,7 @@
 ---
 title: Filters and Search by Category
 description: You can add, rearrange and define filters for any given parameter in the category tree, such as price or brand.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/filter-search-by-category
 originalArticleId: 48e6491f-6369-4d5a-b75a-964839ac9c56
 redirect_from:

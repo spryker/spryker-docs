@@ -1,6 +1,7 @@
 ---
 title: Dynamic Filters and Facets
 description: Freely define facet filters for any Product Attribute. The design, placement on page, quantity of filters, content and order are completely customizable.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/dynamic-filter-facets
 originalArticleId: ee78eb92-2ec9-4a23-8fbd-4f0f7ab77db8
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Product labels + promotions & discounts feature integration
 description: This guide provides step-by-step instructions on integrating Product Labels + Promotions & Discounts feature into a Spryker-based project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-labels-promotions-discounts-feature-integration
 originalArticleId: b1e08ad1-ac8b-4986-ab62-1d99816fe36f
 redirect_from:

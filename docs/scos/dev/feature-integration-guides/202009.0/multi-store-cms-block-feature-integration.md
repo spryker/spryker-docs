@@ -1,6 +1,7 @@
 ---
 title: Multi-store CMS block feature integration
 description: This integration guide provides step-by-step instruction on integrating Multi-store CMS Block Feature into your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/multi-store-cms-block-feature-integration
 originalArticleId: 38fa3c2e-269e-4eb2-95d1-2e51507cef33
 redirect_from:
@@ -44,4 +45,4 @@ class StoreConfig extends SprykerStoreConfig
 ```
 
 You should now be able to use the CMS Block in the administration interface to manage CMS Block-store relations.
-Check out our [Demoshop implementation](https://github.com/spryker/demoshop){target="_blank"} for implementation example and idea.
+Check out our [Demoshop implementation](https://github.com/spryker/demoshop) for implementation example and idea.

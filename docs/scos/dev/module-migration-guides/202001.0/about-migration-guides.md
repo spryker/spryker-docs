@@ -1,6 +1,7 @@
 ---
 title: About Migration Guides
 description: The section provides articles for each module available that learn how to migrate to a newer version of the module.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/about-migration
 originalArticleId: e7554240-0dab-4149-a43b-f0cbcd745330
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: PHPStan
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/phpstan
 originalArticleId: f5de1ecf-c6c2-4073-80a4-659c907975a4
 redirect_from:

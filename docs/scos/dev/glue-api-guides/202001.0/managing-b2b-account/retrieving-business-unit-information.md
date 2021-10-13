@@ -1,6 +1,7 @@
 ---
 title: Retrieving Business Unit Information
 description: The article describes how to use Spryker Glue API to retrieve business unit information.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/retrieving-business-unit-information-201907
 originalArticleId: afc22012-3e1a-4d60-af8e-e7ba7544aebf
 redirect_from:
@@ -28,8 +29,8 @@ To retrieve information on the business unit a user belongs to, send a GET reque
 Sample request: *GET http://glue.mysprykershop.com/company-business-units/mine*
 
 {% info_block warningBox "Note" %}
-You can use the Accept-Language header to specify the locale.Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de**, **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
-{% endinfo_block %}.)
+You can use the Accept-Language header to specify the locale.Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de**, **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+{% endinfo_block %}
 
 #### Response
 The endpoint responds with a collection of **RestCompanyBusinessUnitResponse**, each containing information on a specific Business Unit.
@@ -90,8 +91,8 @@ The endpoint provides information only on the business units a user has access t
 {% endinfo_block %}
 
 {% info_block warningBox "Note" %}
-You can use the Accept-Language header to specify the locale.Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de**, **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
-{% endinfo_block %}.)
+You can use the Accept-Language header to specify the locale.Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de**, **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+{% endinfo_block %}
 
 #### Response
 The endpoint returns a **RestCompanyBusinessUnitResponse** containing information on the requested unit.
@@ -261,8 +262,8 @@ Sample request: *GET http://glue.mysprykershop.com/company-business-unit-address
 where **eec036ee-b999-5753-a7dd-8d0710a2312f** is the ID of the Business Unit Address you need.
 
 {% info_block warningBox "Note" %}
-You can use the Accept-Language header to specify the locale.Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de**, **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
-{% endinfo_block %}.)
+You can use the Accept-Language header to specify the locale.Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de**, **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+{% endinfo_block %}
 
 ### Response
 The endpoint responds with a **RestCompanyBusinessUnitAddressResponse** that contains the requested address.

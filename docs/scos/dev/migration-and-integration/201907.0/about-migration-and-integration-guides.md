@@ -1,5 +1,6 @@
 ---
 title: About Migration and Integration Guides
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/about-migration-integration
 originalArticleId: cb79cb0b-6ed8-41ed-86d1-a47492b23303
 redirect_from:

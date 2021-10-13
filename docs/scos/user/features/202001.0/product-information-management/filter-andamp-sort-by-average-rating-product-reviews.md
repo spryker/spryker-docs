@@ -1,5 +1,6 @@
 ---
 title: Filter &amp; Sort by Average Rating - Product Reviews
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/product-review-filter-and-sort
 originalArticleId: 0bdea944-224a-451e-a0e5-e2bddc4c4675
 redirect_from:

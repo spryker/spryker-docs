@@ -1,5 +1,6 @@
 ---
 title: Catalog Search
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/catalog-search
 originalArticleId: 5480b135-7345-42d1-8c8f-78c0e636d931
 redirect_from:

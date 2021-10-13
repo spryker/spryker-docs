@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - AvailabilityOfferConnector
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/mg-availability-offer-connector
 originalArticleId: 08084421-02e0-46c6-9b9a-27892e87fca1
 redirect_from:

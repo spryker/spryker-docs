@@ -1,5 +1,6 @@
 ---
 title: Censhare PIM
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/censhare-pim
 originalArticleId: 7f205a35-7afe-4cd5-a622-efc78eccb4dc
 redirect_from:
@@ -8,7 +9,7 @@ redirect_from:
 ---
 
 ## Partner Information
-[ABOUT CENSHARE](https://www.censhare.com/){target="_blank"}
+[ABOUT CENSHARE](https://www.censhare.com/)
 
 Our pioneering, universal content management platform lets you connect with your audiences on any channel, in any language, locally or globally. Expect complete control over all your content. Enjoy new freedom to create. Experience lower costs. And join Jaguar Land Rover, Dyson, Christie’s, Lufthansa and hundreds more in delivering quality communications with exceptional efficiency.
 

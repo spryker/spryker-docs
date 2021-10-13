@@ -1,6 +1,7 @@
 ---
 title: Alternative products feature integration
 description: This guide walks you through the process of installing the Alternative Products feature into your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/alternative-products-feature-integration
 originalArticleId: 5ceaadb9-b1d5-46d2-ab91-e24971960ee2
 redirect_from:
@@ -472,7 +473,7 @@ Make sure that the following widgets were registered:<table><thead><tr><td>Modul
 
 {% info_block infoBox "Store relation" %}
 
-If the [Product Label feature](/docs/scos/user/features/{{page.version}}/product-labels/product-labels.html) is integrated into your project, make sure to define store relations for *Discontinued* and *Alternatives available* product labels by re-importing [product_label_store.csv](/docs/scos/dev/data-import/{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront.
+If the [Product Label feature](/docs/scos/user/features/{{page.version}}/product-labels/product-labels.html) is integrated into your project, make sure to define store relations for *Discontinued* and *Alternatives available* product labels by re-importing [product_label_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront.
 
 
 {% endinfo_block %}

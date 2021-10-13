@@ -1,6 +1,7 @@
 ---
 title: Deploy file reference - 1.0
 description: Use this reference to create a deploy file for building environment for Spryker in Docker.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/deploy-file-reference-10
 originalArticleId: 9bba41b4-3fc7-4129-a2b7-8e98d32b5f20
 redirect_from:
@@ -97,7 +98,6 @@ For example, Docker images and volumes are tagged with a `tag:` to avoid interse
 This variable is optional. If not specified, the default value applies: `tag: '1.0'`.
 
 
-:::
 
 ```yaml
 version: 1.0
@@ -426,7 +426,7 @@ services:
     endpoints:
       mail.spryker.local:
  ```
-:::(Warning)
+{% info_block warningBox %}
 After changing a service version, make sure to re-import demo data:
 1. Remove all Spryker volumes:
 ```shell
@@ -437,7 +437,7 @@ docker/sdk clean-data
 ```shell
 docker/sdk demo-data
 ```
-:::
+{% endinfo_block %}
 You can extend service settings on other levels for specific contexts. See [regions: services:](#regions), [regions: stores: services:](#regions) and [groups: applications: endpoints: services:](#groups-applications-endpoints) to learn more.
 
 ***
@@ -563,7 +563,6 @@ Defines the configuration for testing.
 
 * `docker: testing: store:` defines a *Store* as the context for running tests using specific console commands, like `docker/sdk console code:test`. This variable is optional. If not specified, the default value applies: `store: DE`.
 
-:::
 ***
 
 ### docker: mount:

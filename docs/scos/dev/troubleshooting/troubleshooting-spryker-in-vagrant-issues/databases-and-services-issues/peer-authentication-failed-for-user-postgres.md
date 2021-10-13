@@ -1,6 +1,7 @@
 ---
 title: Peer authentication failed for user postgres
 description: Learn how to fix the issue Peer authentication failed for user postgres
+template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/peer-authentication-failed-for-user-postgres
 originalArticleId: 62007cfd-f1d2-4cd8-ade0-47a440cfdebf
 redirect_from:

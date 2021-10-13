@@ -1,6 +1,7 @@
 ---
 title: Multiple Carts feature integration
 description: Multiple Carts allows customers to manage multiple shopping carts in one account. The guide describes how to integrate the feature into your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/multiple-carts-feature-integration-201811
 originalArticleId: b67b5107-0ec1-4a8a-93ba-887e5885a314
 redirect_from:

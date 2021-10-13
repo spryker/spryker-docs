@@ -1,5 +1,6 @@
 ---
 title: Retrieving Ratings and Reviews
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/retrieving-ratings-and-reviews
 originalArticleId: 60b37718-78b9-40f9-a3cb-edad3c01af51
 redirect_from:
@@ -296,8 +297,8 @@ If the product hasn’t been reviewed yet, the `reviewCount` attribute is **null
 ```
 
 {% info_block infoBox "Info" %}
-For detailed information on the endpoints, response attributes, possible errors, etc., see [General Product Information](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-information.html#general-product-information
-{% endinfo_block %}.)
+For detailed information on the endpoints, response attributes, possible errors, etc., see [General Product Information](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-information.html#general-product-information).
+{% endinfo_block %}
 
 ## Rating and Reviewing Products
 To post a rating and review of a product, send a POST request to the following endpoint:

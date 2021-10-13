@@ -1,5 +1,6 @@
 ---
 title: Retrieving Alternative Products
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/retrieving-alternative-products-201903
 originalArticleId: ad1dcb2e-8774-4aba-897d-48fdbcb5ba25
 redirect_from:
@@ -113,11 +114,11 @@ If the request was successful and a product with the specified SKU was found, th
 ```
 
 {% info_block infoBox %}
-For a detailed listing of all fields available in the response, as well as possible errors, see [General Product Information](
-{% endinfo_block %}.)
+For a detailed listing of all fields available in the response, as well as possible errors, see [General Product Information]().
+{% endinfo_block %}
 {% info_block infoBox %}
-You can also use the **Accept-Language** header to specify the locale.<br>Sample header:<br>`[{"key":"Accept-Language","value":"de, en;q=0.9"}]`<br>where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](
-{% endinfo_block %}.)
+You can also use the **Accept-Language** header to specify the locale.<br>Sample header:<br>`[{"key":"Accept-Language","value":"de, en;q=0.9"}]`<br>where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language]().
+{% endinfo_block %}
 
 ### Possible Errors
 | Code | Reason |
@@ -145,8 +146,8 @@ Depending on the endpoint used, the request will be either an **AbstractProducts
 * `ConcreteProductsRestCollectionResponse` - represents a collection, where each item is a **concrete** alternative to the product requested.
 
 {% info_block infoBox %}
-For a detailed description of abstract and concrete product fields, see [General Product Information](
-{% endinfo_block %}.)
+For a detailed description of abstract and concrete product fields, see [General Product Information]().
+{% endinfo_block %}
 
 #### Sample Responses:
 
@@ -213,8 +214,8 @@ For a detailed description of abstract and concrete product fields, see [General
 </details>
 
 {% info_block infoBox %}
-You can also use the **Accept-Language** header to specify the locale.<br>Sample header:<br>`[{"key":"Accept-Language","value":"de, en;q=0.9"}]`<br>where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](
-{% endinfo_block %}.)
+You can also use the **Accept-Language** header to specify the locale.<br>Sample header:<br>`[{"key":"Accept-Language","value":"de, en;q=0.9"}]`<br>where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language]().
+{% endinfo_block %}
 
 ### Possible Errors
 | Code | Reason |

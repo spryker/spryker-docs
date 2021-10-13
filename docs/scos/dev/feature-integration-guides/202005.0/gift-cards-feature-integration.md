@@ -1,6 +1,7 @@
 ---
 title: Gift Cards feature integration
 description: The guide walks you through the process of installing the Gift Cards feature in the project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/gift-cards-feature-integration
 originalArticleId: 30103fa9-5e8f-4ad7-b044-1b2c42ec983b
 redirect_from:
@@ -486,8 +487,7 @@ DummyPayment Order State Machine Example:
 #### Prepare Order State Machines - Gift Card Usage Process
 
 {% info_block infoBox "Info" %}
-In this step, you should customize your Order State Machine to place orders with 0 price to pay (by using gift cards
-{% endinfo_block %}. The process should skip payment-related steps as there is nothing for the customer to pay any more. Below you can see the example of how NoPayment state machine is defined.)
+In this step, you should customize your Order State Machine to place orders with 0 price to pay (by using gift cards). The process should skip payment-related steps as there is nothing for the customer to pay any more. Below you can see the example of how NoPayment state machine is defined.)
 NoPayment Order State Machine Example:
 
 **config/Zed/oms/Nopayment01.xml**
@@ -566,6 +566,8 @@ NoPayment Order State Machine Example:
  
 </statemachine>
 ```
+
+{% endinfo_block %}
 
 ![Nopayment](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Feature+Integration+Guides/Gift+Cards+Feature+Integration/nopayment.svg) 
 
@@ -1218,5 +1220,5 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that a valid gift card code can be added and removed from the cart by submitting the cart code form (activated by the previous step
-{% endinfo_block %}.)
+Make sure that a valid gift card code can be added and removed from the cart by submitting the cart code form (activated by the previous step).
+{% endinfo_block %}

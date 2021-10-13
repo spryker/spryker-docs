@@ -1,6 +1,7 @@
 ---
 title: Category- Reference Information
 description: The guide provides reference information you see when working with categories in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/category-reference-information
 originalArticleId: 4fa44865-d668-42f2-97e7-afbdd7b8129b
 redirect_from:

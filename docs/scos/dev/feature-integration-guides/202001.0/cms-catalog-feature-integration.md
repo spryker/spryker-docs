@@ -1,6 +1,7 @@
 ---
 title: CMS + Catalog feature integration
 description: The CMS Page Search Catalog feature allows viewing search results for subcategory pages. The guide describes how to enable the feature in the project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/cms-pages-in-search-results-integration
 originalArticleId: e6b727af-7bb7-4dd5-9912-b3c5ac3c3301
 redirect_from:
@@ -92,8 +93,8 @@ class CmsPageSearchDependencyProvider extends SprykerCmsPageSearchDependencyProv
  ```
 
 {% info_block warningBox "Verification" %}
-Once you have finished the full integration of the feature, make sure that the actual CMS page results match the expectations (filtered, sorted, and paginated correctly
-{% endinfo_block %}.)
+Once you have finished the full integration of the feature, make sure that the actual CMS page results match the expectations (filtered, sorted, and paginated correctly).
+{% endinfo_block %}
 
 #### Configure the CMS Page Search Count Query
 
@@ -137,8 +138,8 @@ class CmsPageSearchDependencyProvider extends SprykerCmsPageSearchDependencyProv
  ```
 
 {% info_block warningBox "Verification" %}
-Once you have finished the full integration of the feature, make sure that the actual count of CMS pages as a result matches the expectations (filtered correctly
-{% endinfo_block %}.)
+Once you have finished the full integration of the feature, make sure that the actual count of CMS pages as a result matches the expectations (filtered correctly).
+{% endinfo_block %}
 
 #### Configure the Catalog Search Count Query
 
@@ -184,8 +185,8 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
  ```
 
 {% info_block warningBox "Verification" %}
-Once you have finished the full integration of the feature, make sure that the actual count of products as a result matches the expectations (filtered correctly
-{% endinfo_block %}.)
+Once you have finished the full integration of the feature, make sure that the actual count of products as a result matches the expectations (filtered correctly).
+{% endinfo_block %}
 
 ## Install Feature Frontend
 

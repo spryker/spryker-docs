@@ -1,6 +1,7 @@
 ---
 title: Shopping list widget overview
 description: For convenience and ease of use, when customer puts a cursor on the shopping list icon, a drop-down list with all their shopping lists is displayed.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/shopping-list-widget
 originalArticleId: 4c698341-c418-4979-a8d0-46e734e65519
 redirect_from:

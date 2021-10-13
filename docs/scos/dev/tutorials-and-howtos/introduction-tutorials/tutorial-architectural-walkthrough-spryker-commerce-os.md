@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Architectural Walkthrough - Spryker Commerce OS
 description: The tutorial describes Spryker architecture and explains on the example of how its components work together to provide the result in the shop application.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/tutorial-architecture-walkthrough-scos
 originalArticleId: 8a582525-be21-49b8-9b48-ca3420302cab
 redirect_from:
@@ -277,8 +278,8 @@ Transfer objects are a great way to send data from Yves to Zed, and for communic
     ```
 5. Update your model and `IndexController` accordingly.
     {% info_block infoBox "Info" %}
-You should still get **"!rekyrpS olleH"** when accessing [http://zed.de.suite.local/hello-spryker](http://zed.de.suite.local/hello-spryker
-{% endinfo_block %}.)
+You should still get **"!rekyrpS olleH"** when accessing [http://zed.de.suite.local/hello-spryker](http://zed.de.suite.local/hello-spryker).
+{% endinfo_block %}
 
 ### 4. Build a HelloSpryker Client to connect Yves to Zed
 To build the communication between Yves and Zed, we need the **Client**. Building a client for **HelloSpryker** is similar to building a module in Zed or Yves.

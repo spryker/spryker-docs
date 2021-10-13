@@ -1,5 +1,6 @@
 ---
 title: Computop - Installation and configuration
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/computop-installation-and-configuration
 originalArticleId: 7d6fd0b4-0e5e-41ac-9788-0361d3252a58
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Econda - Cross Sell
 description: Cross Sell takes the online behavior of your visitors, along with current product and website interactions and comes up with intelligent, dynamic, relevant recommendations for your visitors.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/econda-cross-sell
 originalArticleId: 8a88b17e-ad62-4d9e-b7b6-cf028ce470d8
 redirect_from:

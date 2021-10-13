@@ -1,5 +1,6 @@
 ---
 title: Developer's Corner
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/developers-corner
 originalArticleId: 4a9c8fdd-0200-498c-a81d-0213ae0374bf
 redirect_from:

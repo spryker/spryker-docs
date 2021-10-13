@@ -1,6 +1,7 @@
 ---
 title: Upcoming major module releases
 description: Learn what modules and when will have the next major versions release
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/upcoming-major-module-releases
 originalArticleId: e02b704f-db3a-4c76-a522-b81e326b0c08
 redirect_from:

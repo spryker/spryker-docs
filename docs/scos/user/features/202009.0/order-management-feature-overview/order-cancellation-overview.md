@@ -1,6 +1,7 @@
 ---
 title: Order Cancellation overview
 description: Allow your customer to cancel orders or cancel orders on their behalf.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/order-cancellation-overview
 originalArticleId: 01cd58cf-74d1-445e-baba-8b236bd85342
 redirect_from:

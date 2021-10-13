@@ -1,6 +1,7 @@
 ---
 title: Administration
 description: The section can be used to work with shipments, stores, and warehouses in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/administration-201911
 originalArticleId: 6e2cea74-de52-4db6-94ca-c8d24665377d
 redirect_from:

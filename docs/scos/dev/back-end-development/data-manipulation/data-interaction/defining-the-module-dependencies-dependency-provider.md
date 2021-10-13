@@ -1,6 +1,7 @@
 ---
 title: Defining the Module Dependencies- Dependency Provider
 description: Each module ships with a DependencyProvider class which explicitly defines services and external dependencies to other modules.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/dependency-provider
 originalArticleId: a08f126e-9ccc-44ac-91b4-2c00b536ff25
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: An error during front end setup
 description: Learn how to fix the error error during front end setup
+template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/an-error-during-front-end-setup
 originalArticleId: 4bce6fdf-0686-44a7-8608-ae5f292cfdba
 redirect_from:

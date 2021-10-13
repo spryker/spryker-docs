@@ -1,5 +1,6 @@
 ---
 title: Documenting GLUE API Resources
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/documenting-glue-api-resources
 originalArticleId: 6e10e5c4-e2ba-4e7a-b665-5dc7c5fb94dc
 redirect_from:

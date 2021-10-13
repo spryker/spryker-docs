@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - PriceProductVolumeGui
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-price-product-volume-gui
 originalArticleId: 04cc4be0-97ab-4185-a1e5-6c545a39f993
 redirect_from:

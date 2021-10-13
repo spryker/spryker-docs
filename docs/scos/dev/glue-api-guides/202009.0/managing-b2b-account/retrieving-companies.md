@@ -1,6 +1,7 @@
 ---
 title: Retrieving companies
 description: Learn how to retrieve company information via Glue API.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/retrieving-companies
 originalArticleId: ad451cf2-3446-4377-b1c3-ec6932de1924
 redirect_from:

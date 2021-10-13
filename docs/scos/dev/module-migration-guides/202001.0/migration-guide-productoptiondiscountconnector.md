@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductOptionDiscountConnector
 description: Use the guide to learn how to update the ProductOptionDiscountConnector module to a newer version.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/mg-product-option-discount-connector
 originalArticleId: 3dc63c1e-6764-456e-b057-6d87dc7cc0a7
 redirect_from:

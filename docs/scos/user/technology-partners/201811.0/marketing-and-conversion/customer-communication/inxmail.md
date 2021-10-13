@@ -1,6 +1,7 @@
 ---
 title: Inxmail
 description: Support customers and partners with fantastic email marketing service and grow their potential in a targeted way by integrating Inxmail into spryker Commerce OS.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/inxmail
 originalArticleId: cc087e2a-8830-4fe4-8f22-ef033476a014
 redirect_from:

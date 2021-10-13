@@ -1,5 +1,6 @@
 ---
 title: About Demo Shop Data Import
+template: data-import-template
 originalLink: https://documentation.spryker.com/v5/docs/about-demo-shop-data-import
 originalArticleId: 81140103-574b-4320-995a-ae82de863d05
 redirect_from:

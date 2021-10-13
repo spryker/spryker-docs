@@ -1,6 +1,7 @@
 ---
 title: Frontend Overview
 description: This article provides an overview of frontend and assets.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/frontend-overview
 originalArticleId: fa3424cc-94c7-4fd7-8a18-9351bb6e072d
 redirect_from:

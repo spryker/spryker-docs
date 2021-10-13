@@ -1,6 +1,7 @@
 ---
 title: CMS Pages overview
 description: Summary of the CMS page functionality.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/cms-pages-overview
 originalArticleId: 8b0f95c3-e1b8-42e9-8d5c-d05ea8a84e4d
 redirect_from:

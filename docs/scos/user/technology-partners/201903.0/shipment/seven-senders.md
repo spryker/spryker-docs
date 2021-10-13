@@ -1,6 +1,7 @@
 ---
 title: Seven Senders
 description: Optimize international cross-border shipment by integrating Seven Senders into the Spryker Commerce OS.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/sevensenders
 originalArticleId: bfe579d6-6829-42f2-b65b-72a5caee7ec8
 redirect_from:

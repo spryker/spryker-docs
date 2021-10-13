@@ -1,6 +1,7 @@
 ---
 title: Authentication and Authorization
 description: This article provides the list of private resources and describes how to install and use the means needed to work with the sensitive data.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/authentication-and-authorization
 originalArticleId: dca72be0-941c-4cdf-985f-276267461e8d
 redirect_from:

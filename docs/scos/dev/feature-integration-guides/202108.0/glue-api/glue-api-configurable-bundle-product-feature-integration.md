@@ -1,6 +1,7 @@
 ---
 title: Glue API- Configurable Bundle + Product feature integration
 description: Learn how to integrate the Glue API- Configurable Bundle + Product feature into a Spryker project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-configurable-bundle-product-feature-integration
 originalArticleId: 6afcf67c-cdf1-43c8-8881-c87650dba091
 redirect_from:

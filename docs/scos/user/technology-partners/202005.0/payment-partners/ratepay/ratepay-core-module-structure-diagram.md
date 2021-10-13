@@ -1,6 +1,7 @@
 ---
 title: RatePay- Core Module Structure Diagram
 description: This article includes module schema with the class structure and flow.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/ratepay-structure-diag
 originalArticleId: 8543e757-6840-4977-8d48-80239ec9c6fc
 redirect_from:

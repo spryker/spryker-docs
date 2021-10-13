@@ -1,6 +1,7 @@
 ---
 title: Computop - API
 description: This article provides details on the API structure of the Computop module in the Spryker Commerce OS.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/computop-api-details
 originalArticleId: ee47c2c1-4140-4a6a-8c8c-1281a4b1f11c
 redirect_from:

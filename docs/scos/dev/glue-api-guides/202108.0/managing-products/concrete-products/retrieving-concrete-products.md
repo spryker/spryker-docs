@@ -1,6 +1,7 @@
 ---
 title: Retrieving concrete products
 description: Retrieve general information about concrete products.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-concrete-products
 originalArticleId: 4f36b42a-e2a2-46a1-be84-ae9f3b2a1a25
 redirect_from:

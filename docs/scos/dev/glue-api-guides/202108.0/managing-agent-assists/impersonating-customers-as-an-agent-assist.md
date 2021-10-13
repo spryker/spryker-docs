@@ -1,6 +1,7 @@
 ---
 title: Impersonating customers as an agent assist
 description: As an agent assist, authenticate as a customer and impersonate them.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/impersonating-customers-as-an-agent-assist
 originalArticleId: 603fa249-5eab-42d0-93c3-3c09f75da9d0
 redirect_from:

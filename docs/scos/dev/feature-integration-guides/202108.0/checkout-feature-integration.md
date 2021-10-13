@@ -1,6 +1,7 @@
 ---
 title: Checkout feature integration
 description: Learn how to integrate the Checkout feature into a Spryker project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/checkout-feature-integration
 originalArticleId: f18436a4-91c4-41a4-9bf2-65d858764ab6
 redirect_from:

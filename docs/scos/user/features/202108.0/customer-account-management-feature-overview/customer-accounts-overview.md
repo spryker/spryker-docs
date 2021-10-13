@@ -1,5 +1,6 @@
 ---
 title: Customer Accounts overview
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-accounts-overview
 originalArticleId: 94150bcb-e1c5-4290-b661-71af9fc3cbb3
 redirect_from:

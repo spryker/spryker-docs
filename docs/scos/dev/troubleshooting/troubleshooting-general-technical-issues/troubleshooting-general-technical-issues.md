@@ -1,6 +1,7 @@
 ---
 title: Troubleshooting general technical issues
 description: Troubleshoot general technical issues you might encounter when running your Spryker-based project
+template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/troubleshooting-general-technical-issues
 originalArticleId: b625da8e-d503-4450-90d2-ff1297d3a809
 redirect_from:

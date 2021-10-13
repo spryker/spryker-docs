@@ -1,6 +1,7 @@
 ---
 title: TS linter integration guide
 description: Learn how to integrate the SCSS linter into your project
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/ts-linter-integration-guide
 originalArticleId: 5f724a39-fc67-47e1-bca8-51e06ac191c0
 redirect_from:

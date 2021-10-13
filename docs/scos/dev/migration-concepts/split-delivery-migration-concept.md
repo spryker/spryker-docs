@@ -1,6 +1,7 @@
 ---
 title: Split delivery migration concept
 description: The article provides instructions on how to install Split Delivery on all modules affected in bulk and then individually.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/split-delivery-concept
 originalArticleId: 6b5f2740-8a4a-405b-bf72-2849ce60c2a8
 redirect_from:

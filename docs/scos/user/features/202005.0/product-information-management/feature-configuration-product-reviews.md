@@ -1,5 +1,6 @@
 ---
 title: Feature Configuration - Product Reviews
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/product-review-feature-configuration
 originalArticleId: fd2c3736-246c-4649-afc8-546dc04f9814
 redirect_from:

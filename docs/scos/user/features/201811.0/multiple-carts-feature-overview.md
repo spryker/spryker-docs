@@ -1,6 +1,7 @@
 ---
 title: Multiple Carts per User Feature Overview
 description: Shopping Cart is where the record of the items a buyer has ‘picked up’ from the online store is kept. Select products, review them and add more with ease.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/multiple-carts-per-user-overview
 originalArticleId: f1a35213-d5d5-4aeb-bd29-8416903ee604
 redirect_from:

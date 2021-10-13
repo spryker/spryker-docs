@@ -1,6 +1,7 @@
 ---
 title: Glue API- Availability Notification feature integration
 description: Integrate the Glue API- Availability Notification feature into your project
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-availability-notification-feature-integration
 originalArticleId: d9bc0dfd-658f-412c-a127-d967b568de67
 redirect_from:

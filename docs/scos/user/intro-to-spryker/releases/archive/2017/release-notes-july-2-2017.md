@@ -1,5 +1,6 @@
 ---
 title: Release Notes - July - 2 2017
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes-july-2-2017
 originalArticleId: e125a926-7b69-45b1-a378-d569e9c7dfa5
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: Glue API- Shopping List feature integration - ongoing
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/glue-api-shopping-list-feature-integration-ongoing
 originalArticleId: f2d5e3af-dbe0-472f-a33f-808d3f6a762c
 redirect_from:

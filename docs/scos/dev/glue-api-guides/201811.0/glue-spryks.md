@@ -1,6 +1,7 @@
 ---
 title: Glue Spryks
 description: This article demonstrates how to manage the Glue REST API layer of Spryker with the help of code automation tools (Spryks).
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-spryks
 originalArticleId: 7cc8495c-c842-412c-8878-7448157ddac4
 redirect_from:

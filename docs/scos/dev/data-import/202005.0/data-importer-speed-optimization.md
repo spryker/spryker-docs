@@ -1,6 +1,7 @@
 ---
 title: Data Importer Speed Optimization
 description: This article defines the best practices for Spryker modules that need to work with two infrastructure concepts like DataImport and Publish & Synchronize.
+template: data-import-template
 originalLink: https://documentation.spryker.com/v5/docs/dataimporter-speed-optimization
 originalArticleId: cf5c0a7b-88d1-4891-b74f-90a62f9e928d
 redirect_from:

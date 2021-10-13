@@ -1,6 +1,7 @@
 ---
 title: Product options + order management feature integration
 description: This guide provides step-by-step instructions on integrating Product Options + Order Management feature into your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/product-options-order-management-feature-integration
 originalArticleId: 34fc5df1-7335-4e46-93cf-d8cb10cd7ad5
 redirect_from:

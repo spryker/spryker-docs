@@ -1,6 +1,7 @@
 ---
 title: Configuring a mount mode
 description: Learn how to configure a mount mode.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/configuring-a-mount-mode
 originalArticleId: fe2dc3e8-cd52-46d9-a77a-ee55d58fb07c
 redirect_from:

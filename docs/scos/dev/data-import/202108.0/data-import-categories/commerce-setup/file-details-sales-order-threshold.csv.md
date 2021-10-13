@@ -1,5 +1,6 @@
 ---
 title: File details- sales_order_threshold.csv
+template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-sales-order-thresholdcsv
 originalArticleId: 6a897bd7-2a39-4fb0-8eb3-9704e23cd423
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: PayOne - Integration into the SCOS Project
 description: Integrate Payone into the Spryker Commerce OS by following the instructions from this article.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/payone-integration-with-project-scos
 originalArticleId: 32926276-8391-494b-b2db-846989ec59c7
 redirect_from:

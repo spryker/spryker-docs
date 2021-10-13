@@ -1,6 +1,7 @@
 ---
 title: Managing Companies
 description: Use the procedures to create and edit companies, approve and activate/deactivate a company, and/or deny a company in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/managing-companies
 originalArticleId: 1ce23dfe-db69-4d0d-913f-efe6c1f98e6e
 redirect_from:

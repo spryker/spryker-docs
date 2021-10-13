@@ -1,6 +1,7 @@
 ---
 title: Managing Configurable Bundle Templates
 description: On this page, you will find details on how to work with the Configurable Bundle Templates in the Spryker Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/managing-configurable-bundle-templates
 originalArticleId: 3fa9ed2b-7971-445d-83ed-f74292a4bd7c
 redirect_from:

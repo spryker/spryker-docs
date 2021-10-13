@@ -1,6 +1,7 @@
 ---
 title: Managing returns
 description: In this article, you will know how to manage returns in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/managing-returns
 originalArticleId: 40f00c1c-437d-4f30-b1ac-451589ecbde4
 redirect_from:

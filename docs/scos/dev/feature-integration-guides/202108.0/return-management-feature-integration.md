@@ -1,6 +1,7 @@
 ---
 title: Return management feature integration
 description: This guide provides step-by-step instructions on integrating the Return Management feature into your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/return-management-feature-integration
 originalArticleId: c914ddfc-69f6-4eb5-8098-c7a14908d9ca
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: PayOne - Credit Card Payment
 description: Integrate Credit Card payment through Payone into the Spryker-based shop.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/payone-credit-card
 originalArticleId: 7c0758ed-b626-4f72-b556-2388a3875968
 redirect_from:

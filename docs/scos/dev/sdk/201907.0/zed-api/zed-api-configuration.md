@@ -1,5 +1,6 @@
 ---
 title: Zed API Configuration
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/zed-api-config
 originalArticleId: 8b822738-193c-4c8f-89da-6c65627a9eb7
 redirect_from:

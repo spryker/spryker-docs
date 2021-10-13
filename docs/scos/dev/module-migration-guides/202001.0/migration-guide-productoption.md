@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductOption
 description: Use the guide to learn how to update the ProductOption module to a newer version.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/mg-product-option
 originalArticleId: d79318d2-519e-434c-8475-fef31b32b110
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Managing CMS Blocks
 description: The guide provides procedures on how to view, update, activate and deactivate CMS blocks in the editor from the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/managing-cms-blocks
 originalArticleId: 25d10977-c448-4fe3-8d75-22e813443e9d
 redirect_from:

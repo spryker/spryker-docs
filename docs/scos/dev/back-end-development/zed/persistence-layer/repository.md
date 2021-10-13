@@ -1,6 +1,7 @@
 ---
 title: Repository
 description: It's possible to use a Repository class in your persistence layer. The repository implements the repository pattern, which means you have a clear separation between business and persistence layers.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/repository
 originalArticleId: 11453043-a810-40f9-84c1-774ed4dba854
 redirect_from:

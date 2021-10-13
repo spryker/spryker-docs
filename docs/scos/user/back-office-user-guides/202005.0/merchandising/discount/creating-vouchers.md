@@ -1,6 +1,7 @@
 ---
 title: Creating Vouchers
 description: Use the procedure to create discount vouchers your customer can redeem during checkout.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/creating-a-voucher
 originalArticleId: bbabd9c6-72b1-462e-9119-037fb86b48de
 redirect_from:

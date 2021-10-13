@@ -1,6 +1,7 @@
 ---
 title: RatePay - Payment Workflow
 description: This article describes the request flow that uses Ratepay.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/ratepay-payment-workflow
 originalArticleId: f514f3c8-bab1-4bbe-872f-926f07d80e43
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Creating Product Labels
 description: Use these procedures to create and/or activate/deactivate product labels in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/creating-a-product-label
 originalArticleId: 54b72ab7-3653-4f81-9c02-99f5a5a037c5
 redirect_from:

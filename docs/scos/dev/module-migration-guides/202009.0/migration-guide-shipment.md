@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Shipment
 description: Use the guide to learn how to update the Shipment module to a newer version.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/mg-shipment
 originalArticleId: fdbf6b80-c5f2-4397-a89f-1a1fe9c47ac9
 redirect_from:

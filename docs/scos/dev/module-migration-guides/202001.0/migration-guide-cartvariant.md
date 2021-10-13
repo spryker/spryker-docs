@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - CartVariant
 description: Use the guide to migrate to a new version of the CartVariant module.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/mg-cart-variant
 originalArticleId: e1a4772f-cc98-4b27-8c89-cac26640173a
 redirect_from:

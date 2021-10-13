@@ -1,6 +1,7 @@
 ---
 title: Multi-store CMS Block feature integration
 description: The guide describes the process of installing multi-store CMS Blocks into the project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/cms-block-multistore-feature-integration
 originalArticleId: ad7f5440-f747-4354-8266-7602e4d2acd2
 redirect_from:

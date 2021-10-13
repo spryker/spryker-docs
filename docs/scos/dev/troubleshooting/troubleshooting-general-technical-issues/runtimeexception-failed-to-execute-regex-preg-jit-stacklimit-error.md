@@ -1,6 +1,7 @@
 ---
 title: RuntimeException- Failed to execute regex- PREG_JIT_STACKLIMIT_ERROR
 description: This troubleshooting guide will help you to fix the error `RuntimeException- Failed to execute regex- PREG_JIT_STACKLIMIT_ERROR`.
+template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/runtimeexception-failed-to-execute-regex-preg-jit-stacklimit-error
 originalArticleId: 53d95154-60db-40db-b4b8-6e0c4ae9233b
 redirect_from:

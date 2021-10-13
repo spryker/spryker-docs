@@ -1,5 +1,6 @@
 ---
 title: Search
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/search
 originalArticleId: ac2bd955-b455-4a52-81d6-a1987f0f4e8b
 redirect_from:

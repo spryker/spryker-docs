@@ -1,6 +1,7 @@
 ---
 title: Importing data with the queue data importer
 description: This article describes the process of importing data with the Queue Data Importer in the Spryker OS.
+template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/importing-data-with-queue-data-importer
 originalArticleId: c20bef51-1460-4459-b45e-c13b92798a19
 redirect_from:

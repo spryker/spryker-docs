@@ -1,5 +1,6 @@
 ---
 title: NEKOM CC GmbH
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/nekom
 originalArticleId: 85f853ba-9310-43b2-b18a-ee7bce18ccce
 redirect_from:

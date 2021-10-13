@@ -1,5 +1,6 @@
 ---
 title: Accessing Product Labels
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/retrieving-product-labels
 originalArticleId: e69ad9ff-6a46-48dc-84b9-d07d2f1051d0
 redirect_from:

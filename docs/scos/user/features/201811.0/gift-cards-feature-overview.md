@@ -1,5 +1,6 @@
 ---
 title: Gift Cards Purchase and Redeeming
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/gift-cards-purchase-redeeming
 originalArticleId: d95b8918-3ef7-40cc-8620-99637467b617
 redirect_from:

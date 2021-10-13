@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Sales
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-sales
 originalArticleId: 064570b0-168b-471e-8489-4466a941ab06
 redirect_from:

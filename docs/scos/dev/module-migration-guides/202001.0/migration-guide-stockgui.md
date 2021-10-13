@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - StockGui
 description: Use the guide to learn how to update the StockGui module to a newer version.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/mg-stockgui
 originalArticleId: 05170cd4-e52b-484a-a560-b50eba977d01
 redirect_from:

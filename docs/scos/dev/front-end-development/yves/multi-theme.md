@@ -1,6 +1,7 @@
 ---
 title: Multi-theme
 description: The article describes Spryker Frontend- Atomic Frontend and Modular Frontend that support theming- current theme and default theme.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/multi-theme-feature-overview
 originalArticleId: cf8b9f81-8053-422c-805d-1554529652c0
 redirect_from:

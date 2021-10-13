@@ -1,5 +1,6 @@
 ---
 title: Glue Infrastructure
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/glue-infrastructure
 originalArticleId: 6eb164f7-7c51-4b3d-8d8d-eb3bc41ce1e5
 redirect_from:

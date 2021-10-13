@@ -1,6 +1,7 @@
 ---
 title: Adding Volume Prices
 description: Use the guide to set or update discounts to products purchased in bulk from the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/adding-volume-prices
 originalArticleId: 8f5cf85b-eb77-45a9-8f5e-79264957c627
 redirect_from:

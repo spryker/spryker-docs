@@ -1,6 +1,7 @@
 ---
 title: Usercentrics
 description: Enable your business to collect, manage and optimize user consents across all digital such as websites or apps by integrating Usercentrics into the Spryker Commerce OS.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/usercentrics
 originalArticleId: 3dfd56e2-4367-4041-83d8-4f0af55cbd5e
 redirect_from:

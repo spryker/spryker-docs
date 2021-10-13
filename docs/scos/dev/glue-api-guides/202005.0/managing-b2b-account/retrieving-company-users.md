@@ -1,6 +1,7 @@
 ---
 title: Retrieving Company User Information
 description: The article provides information on how to retrieve information on company user accounts via endpoints provided by Spryker Glue API.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/retrieving-company-user-information-201907
 originalArticleId: f84a4096-0877-4370-8df2-52ba5b6c4b93
 redirect_from:

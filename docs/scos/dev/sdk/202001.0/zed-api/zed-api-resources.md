@@ -1,5 +1,6 @@
 ---
 title: Zed API Resources
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/zed-api-resources
 originalArticleId: caa26760-670f-4cda-8e7a-60df48a3ce0f
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: Features
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/about-features
 originalArticleId: 75d5cb72-8c01-4543-ad4a-3cfaf8af021a
 redirect_from:

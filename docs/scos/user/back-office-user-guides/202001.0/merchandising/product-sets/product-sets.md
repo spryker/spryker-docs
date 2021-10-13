@@ -1,6 +1,7 @@
 ---
 title: Product Sets
 description: This section is used if you want to create or update s product set based on specific relations, as well as activate or deactivate them in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/product-sets
 originalArticleId: 9f25481b-bd72-4b8b-adb0-10d90dab0439
 redirect_from:

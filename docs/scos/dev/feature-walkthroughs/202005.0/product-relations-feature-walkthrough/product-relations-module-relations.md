@@ -1,6 +1,7 @@
 ---
 title: Product Relations- module relations
 description: Module relations of the product relations.
+template: feature-walkthrough-template
 originalLink: https://documentation.spryker.com/v5/docs/product-relations-module-relations
 originalArticleId: 9904a8a8-7ccf-4ea6-895a-199363bce02f
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Twig and TwigExtension
 description: Learn how to install and configure the Twig and TwigExtension modules for Zed and Yves on the core and project levels.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/twig-and-twig-extension
 originalArticleId: d8252696-6822-4929-b7ba-b03940caa16a
 redirect_from:

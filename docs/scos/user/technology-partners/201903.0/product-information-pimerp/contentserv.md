@@ -1,5 +1,6 @@
 ---
 title: Contentserv
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/contentserv
 originalArticleId: e4632a61-3b1b-48a5-ad7b-ab38bb6a1084
 redirect_from:

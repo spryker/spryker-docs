@@ -1,6 +1,7 @@
 ---
 title: Arvato - Installation and Configuration
 description: Provide complete and comprehensive risk management for the eCommerce/mail-order industry, contributing to a high level of modularization and automation.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/arvato-installation-configuration
 originalArticleId: a5fdb1dd-1cbf-46d1-9a88-d7b80f07c948
 redirect_from:

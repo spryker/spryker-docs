@@ -1,6 +1,7 @@
 ---
 title: Quotation Process feature overview
 description: The article describes the Quotation Process feature, its statuses, and workflow (by a customer, sales representative, agent account and interaction with approval process.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/quotation-process-feature-overview
 originalArticleId: ac631ac7-189d-46e7-beb7-f4d0ff03de12
 redirect_from:

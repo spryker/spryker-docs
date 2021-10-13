@@ -1,6 +1,7 @@
 ---
 title: Managing Roles
 description: Use the procedures to create, update or delete the role, add a rule for the role, and assign the role to a group in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/managing-roles
 originalArticleId: c5ad85d0-e0bf-4773-919f-17115ea91cbe
 redirect_from:

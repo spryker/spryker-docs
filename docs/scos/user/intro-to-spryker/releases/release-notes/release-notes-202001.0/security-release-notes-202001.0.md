@@ -1,5 +1,6 @@
 ---
 title: Security Release Notes 202001.0
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/security-release-notes-202001
 originalArticleId: aafbb7d4-5b71-41c2-a68c-1124d38c2d8e
 redirect_from:

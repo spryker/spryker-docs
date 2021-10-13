@@ -1,6 +1,7 @@
 ---
 title: Content Item Widgets
 description: This section is designed to add content items to pages and blocks using the content item widgets in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/content-item-widgets
 originalArticleId: 4576d4b6-5be3-4291-945e-6e06bbda700e
 redirect_from:

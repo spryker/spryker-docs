@@ -1,6 +1,7 @@
 ---
 title: Browsing a Category Tree
 description: The article helps you get the full category tree, including information on a category node, as well as retrieve categories by product easily and quickly.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/retrieving-category-trees
 originalArticleId: 4b1fcd08-55b7-4c74-9907-6dbe2bd63247
 redirect_from:

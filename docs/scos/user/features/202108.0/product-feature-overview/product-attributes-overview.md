@@ -1,5 +1,6 @@
 ---
 title: Product Attributes overview
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-attributes-overview
 originalArticleId: 7421d5b0-37d2-4902-a531-ac67a2424fb7
 redirect_from:

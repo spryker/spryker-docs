@@ -1,6 +1,7 @@
 ---
 title: Shop Guide - Managing Products
 description: Use the guide to learn how to manage products in the online store, add products to the cart, shopping list and wishlist, as well as add reviews.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/shop-guide-managing-products
 originalArticleId: 431d485b-b207-43e7-af59-929be2b5dd9d
 redirect_from:

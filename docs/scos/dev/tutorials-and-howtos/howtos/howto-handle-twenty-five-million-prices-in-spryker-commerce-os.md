@@ -1,6 +1,7 @@
 ---
 title: HowTo - Handle twenty five million prices in Spryker Commerce OS
 description: Learn how we enabled Spryker to handle 25 million of prices.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-handle-twenty-five-million-prices-in-spryker-commerce-os
 originalArticleId: f6f42291-bbf4-4fd1-b506-131fafcd0257
 redirect_from:

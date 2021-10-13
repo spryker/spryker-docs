@@ -1,6 +1,7 @@
 ---
 title: Managing Tax Rates
 description: Use these procedures to create, update, view and/or delete tax rates in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/managing-tax-rates-sets
 originalArticleId: 78f382b2-5ba1-4b97-8839-ee3c9c01da98
 redirect_from:

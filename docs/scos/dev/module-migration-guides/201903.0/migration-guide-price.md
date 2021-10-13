@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Price
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/mg-price
 originalArticleId: 17ff375a-0dea-4c2f-8b63-b5dab13b8026
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: Computop - Integration into a project
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/computop-integration-into-project
 originalArticleId: dee3b189-78b2-4dd2-ae97-45506831a9b8
 redirect_from:

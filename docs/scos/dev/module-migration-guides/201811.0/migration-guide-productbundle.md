@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Product Bundle
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/mg-product-bundle
 originalArticleId: 98d7141f-e061-4644-9cd1-6d8d521f53d5
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Product Relation Integration
 description: The guide walks you through the process of installing the Product Relation feature in your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/product-relation-integration
 originalArticleId: ed3d3753-b440-491b-a3df-778fdff13d1e
 redirect_from:

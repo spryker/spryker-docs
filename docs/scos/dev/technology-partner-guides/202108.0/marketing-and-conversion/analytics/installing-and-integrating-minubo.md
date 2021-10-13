@@ -1,6 +1,7 @@
 ---
 title: Installing and integrating Minubo
 description: Learn how to install and integrate Minubo
+template: howto-guide-template
 ---
 
 The Minubo module provides functionality to export order and customer data that was updated since last run of export. Data exported to Amazon S3 bucket as file with list of JSON-objects.

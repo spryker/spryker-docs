@@ -1,5 +1,6 @@
 ---
 title: Discounts
+template: data-import-template
 originalLink: https://documentation.spryker.com/v6/docs/discounts
 originalArticleId: e6947e32-768b-4ea9-942a-21595f0ea812
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Availability
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/mg-availability
 originalArticleId: 76805acb-790a-427d-b0b5-b82584325214
 redirect_from:

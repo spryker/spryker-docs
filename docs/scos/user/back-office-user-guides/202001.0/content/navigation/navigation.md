@@ -1,6 +1,7 @@
 ---
 title: Navigation
 description: The section can be used to create navigation elements with CMS pages, categories, and other relevant links, and build a nested structure with nodes.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/navigation-guide
 originalArticleId: 45bc77e5-91f0-4d5e-bd90-c74640c72d08
 redirect_from:

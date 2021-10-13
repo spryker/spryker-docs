@@ -1,6 +1,7 @@
 ---
 title: Product Bundles feature integration
 description: Learn how to integrate the Product bundles feature into a Spryker project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-bundles-feature-integration
 originalArticleId: d72b5db3-a8e5-4332-a2f5-b40c95bfd92c
 redirect_from:

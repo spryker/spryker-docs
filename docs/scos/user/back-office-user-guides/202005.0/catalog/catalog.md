@@ -1,6 +1,7 @@
 ---
 title: Catalog
 description: This section is designed to manage products from product creation to stock and product reviews, options, labels, relations, lists, etc in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/catalog
 originalArticleId: 3404db73-d840-49ca-8ba7-13b8a028c3eb
 redirect_from:

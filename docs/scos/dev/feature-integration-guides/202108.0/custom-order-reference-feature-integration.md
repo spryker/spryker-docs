@@ -1,6 +1,7 @@
 ---
 title: Custom order reference feature integration
 description: Use the guide to install the Custom Order Reference feature in your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/custom-order-reference-feature-integration
 originalArticleId: 705625ff-2007-49ad-b7d7-6bb7cfdf49fb
 redirect_from:

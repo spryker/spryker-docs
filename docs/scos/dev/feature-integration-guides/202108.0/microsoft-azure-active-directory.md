@@ -1,6 +1,7 @@
 ---
 title: Microsoft Azure Active Directory
 description: Learn  how to integrate Microsoft Azure Active Directory into a Spryker project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/microsoft-azure-active-directory
 originalArticleId: 11224ada-6cfc-4217-94e9-085e64755ad6
 redirect_from:

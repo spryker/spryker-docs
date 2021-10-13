@@ -1,6 +1,7 @@
 ---
 title: Making the Legacy Demoshop Compatible with the Modular Frontend
 description: This guide provides step-by-step instructions on how to make the Legacy Demoshop compatible with the Modular Frontend.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/demoshop-with-modular-frontend
 originalArticleId: 0ebdd823-5cb0-4c83-bea7-5c86b5089e59
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Cart feature integration
 description: This guide provides step-by-step instruction for integrating Add product to cart from the Catalog page feature into your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/cart-feature-integration
 originalArticleId: 77563ea2-8a5a-46c2-97e5-5e1f20267689
 redirect_from:

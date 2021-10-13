@@ -1,6 +1,7 @@
 ---
 title: Retrieving Customer's Order History
 description: The guide instantiates a step-by-step procedure on how to retrieve a list of orders or a specific order for the customer.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/retrieving-order-history
 originalArticleId: cc59e6b3-ff4a-4e66-96d6-036d589e26dc
 redirect_from:

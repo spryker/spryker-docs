@@ -1,6 +1,7 @@
 ---
 title: Sharing company user carts
 description: Share company user carts via Glue API.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/sharing-company-user-carts
 originalArticleId: 94d4010a-b373-4954-9bb2-728d9d90bd33
 redirect_from:

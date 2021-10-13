@@ -1,5 +1,6 @@
 ---
 title: Glue API- Customer account management feature integration
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/glue-api-customer-account-management-feature-integration
 originalArticleId: 7d17c08f-805b-4a88-8a83-b0a9ddfce794
 redirect_from:

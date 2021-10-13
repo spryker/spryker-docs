@@ -1,5 +1,6 @@
 ---
 title: Special product types import category
+template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/special-product-types-import-category
 originalArticleId: 4e6f56a9-fcfb-47be-88b0-9022ee227a06
 redirect_from:

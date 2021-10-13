@@ -1,5 +1,6 @@
 ---
 title: Product API feature integration
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/product-api-feature-integration
 originalArticleId: 9cbf9b4e-ce57-4b16-9505-59a9b528c26b
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Test Helpers
 description: Learn about the test helpers, how you can enable them, use, and create your own.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/test-helpers
 originalArticleId: 2704ed21-1ff3-4646-8d0b-67b8a1094a04
 redirect_from:

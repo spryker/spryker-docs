@@ -1,6 +1,7 @@
 ---
 title: Glue API- Glue application feature integration
 description: This guide will navigate you through the process of installing and configuring the Glue Application feature in Spryker OS.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/glue-api-glue-application-feature-integration
 originalArticleId: 1ccab62d-5c74-4980-ac78-e800c5ce6d7b
 redirect_from:

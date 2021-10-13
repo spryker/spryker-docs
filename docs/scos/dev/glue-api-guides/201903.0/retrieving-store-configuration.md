@@ -1,5 +1,6 @@
 ---
 title: Retrieving Store Configuration
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/retrieving-store-configuration
 originalArticleId: f809aafb-828e-46cc-9ce6-048a410990a8
 redirect_from:

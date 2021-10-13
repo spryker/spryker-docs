@@ -1,6 +1,7 @@
 ---
 title: Prices per Merchant Relation feature integration
 description: The guide walks you through the process of installing the Prices per Merchant feature in your project.
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/prices-per-merchant-relation-integration
 originalArticleId: b9204502-52e9-464c-a772-74331c251380
 redirect_from:

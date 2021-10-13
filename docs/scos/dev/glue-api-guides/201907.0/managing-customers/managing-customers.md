@@ -1,5 +1,6 @@
 ---
 title: Managing Customers
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/managing-customers-api
 originalArticleId: a1e7c9d9-29c1-4cf0-a734-847cf626955a
 redirect_from:

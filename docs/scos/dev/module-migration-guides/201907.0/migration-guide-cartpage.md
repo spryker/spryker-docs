@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - CartPage
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-cart-page
 originalArticleId: a6b49f7a-63d0-4288-8696-e9626738eaba
 redirect_from:

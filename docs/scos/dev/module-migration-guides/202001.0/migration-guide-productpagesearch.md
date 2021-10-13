@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - ProductPageSearch
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/migration-guide-productpagesearch
 originalArticleId: 8dc65c2e-d127-4ec9-a286-79939c4cee65
 redirect_from:

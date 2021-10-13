@@ -1,6 +1,7 @@
 ---
 title: Mac OSX- Wrong curl version error
 description: Learn how to fix an error about a wrong curl version on Mac OS
+template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mac-osx-wrong-curl-version-error
 originalArticleId: 7d83f9dd-33f1-4282-89e4-4a4e24b5c8b0
 redirect_from:

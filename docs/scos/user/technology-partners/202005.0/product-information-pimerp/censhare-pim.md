@@ -1,5 +1,6 @@
 ---
 title: Censhare PIM
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/censhare-pim
 originalArticleId: c68fcb3c-e54d-4f0a-9441-701513595269
 redirect_from:

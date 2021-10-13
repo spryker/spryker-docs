@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ManualOrderEntryGui
 description: Use the guide to migrate to a newer version of the ManualOrderEntryGui module.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/mg-manual-order-entry-gui
 originalArticleId: 66c6d3e8-1aea-454b-9b08-c8dcf29fc9bd
 redirect_from:

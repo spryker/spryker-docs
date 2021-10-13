@@ -1,5 +1,6 @@
 ---
 title: Release Notes - April - 2 2017
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes-april-2-2017
 originalArticleId: c48eca84-7169-4357-9fcc-3763f692fded
 redirect_from:

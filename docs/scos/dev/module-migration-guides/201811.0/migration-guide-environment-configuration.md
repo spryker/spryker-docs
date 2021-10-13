@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Environment Configuration
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/mg-environment-config
 originalArticleId: e7efdc07-eb0c-4c80-9161-bd04736b9115
 redirect_from:

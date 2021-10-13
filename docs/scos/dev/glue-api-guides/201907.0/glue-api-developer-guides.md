@@ -1,5 +1,6 @@
 ---
 title: Glue API Developer Guides
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/glue-api-developer-guides
 originalArticleId: 488bbfa7-fc96-471a-abbb-260871a333b7
 redirect_from:

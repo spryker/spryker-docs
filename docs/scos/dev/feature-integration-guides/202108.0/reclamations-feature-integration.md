@@ -1,5 +1,6 @@
 ---
 title: Reclamations feature integration
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/reclamations-feature-integration
 originalArticleId: a4e601de-2e86-44a0-8806-d3ba35776f6b
 redirect_from:

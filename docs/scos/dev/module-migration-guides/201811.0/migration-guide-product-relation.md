@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Product Relation
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/mg-product-relation
 originalArticleId: efff9c87-a8b6-4c15-b5a5-22cf08c6af71
 redirect_from:

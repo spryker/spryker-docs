@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - CMS Block Collector
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/mg-cms-block-collector
 originalArticleId: 03f7513b-e9fa-44f2-963e-47d4bb72e9b4
 redirect_from:

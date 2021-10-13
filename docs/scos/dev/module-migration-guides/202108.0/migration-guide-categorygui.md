@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - CategoryGui
 description: Learn how to upgrade the CategoryGui module.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-categorygui
 originalArticleId: 2c38692c-31e1-4d90-8a86-9b73487f02d5
 redirect_from:

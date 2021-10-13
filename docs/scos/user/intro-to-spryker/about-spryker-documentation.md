@@ -1,6 +1,7 @@
 ---
 title: About Spryker documentation
 description: Spryker Documentation is a central hub for knowledge and information about the Spryker Commerce OS.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/about-documentation
 originalArticleId: 685607f6-27a6-4a09-9f39-29c637378167
 redirect_from:

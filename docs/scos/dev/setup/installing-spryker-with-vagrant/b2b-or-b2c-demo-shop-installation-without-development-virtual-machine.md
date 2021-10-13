@@ -1,6 +1,7 @@
 ---
 title: B2B or B2C Demo Shop installation- without Development Virtual Machine
 description: Learn how to install a B2B or a B2C Demo Shop without the Development Virtual Machine
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/b2b-b2c-demo-shop-installation-without-development-virtual-machine
 originalArticleId: 295cdca0-3f88-46e0-b8b2-947d21e84fcf
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Agent Assist feature overview
 description: An agent helps customers to perform activities in the online store and provides support by carrying out actions on customer's behalf in the web-shop
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/agent-assist-overview
 originalArticleId: fbb3c84a-2edf-4f18-a129-ca44b10e732d
 redirect_from:

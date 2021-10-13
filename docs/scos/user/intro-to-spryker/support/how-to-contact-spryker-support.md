@@ -1,5 +1,6 @@
 ---
 title: How to contact Spryker Support
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/how-to-contact-spryker-support
 originalArticleId: f9c8d398-7305-4a0c-9dbd-b88d5ce7f988
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Managing Guest Carts
 description: This article describes the endpoints that provide access to shopping carts management functionality for the guest carts.
+template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/managing-guest-carts
 originalArticleId: 794ed6c0-fdea-48d5-bb63-5909ee093a2f
 redirect_from:

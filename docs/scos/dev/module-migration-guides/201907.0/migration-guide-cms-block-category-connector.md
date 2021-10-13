@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - CMS Block Category Connector
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-cms-block-category-connector
 originalArticleId: 3190ed70-865f-44e8-9191-ef1d49c67b47
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: 8Select
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/8select
 originalArticleId: 04487338-af0a-476f-9e9f-933ea981bc46
 redirect_from:

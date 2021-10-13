@@ -1,6 +1,7 @@
 ---
 title: Propel Clean Command
 description: Learn how to integrate the Propel clean command into your project.
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/propel-clean-command
 originalArticleId: 6fd10cbd-243f-488a-8ad8-43b7f973e561
 redirect_from:

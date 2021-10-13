@@ -1,6 +1,7 @@
 ---
 title: Managing Company Users
 description: Use the procedures to create, edit, enable/disable, delete, and attach company users to business units in the Back Office.
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/managing-company-users
 originalArticleId: 2b668ca0-cfed-4663-99ab-df54e7f1c492
 redirect_from:

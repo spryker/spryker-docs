@@ -1,6 +1,7 @@
 ---
 title: Zed API configuration
 description: The article describes how you can configure API for Zed.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/zed-api-config
 originalArticleId: 6d9a2c77-b71b-4187-bac8-0b1917502c6a
 redirect_from:

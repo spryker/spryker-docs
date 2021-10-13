@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductQuantity
 description: Use the guide to learn how to update the ProductQuantity module.
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/mg-product-quantity
 originalArticleId: 8b592c33-8669-4908-8c34-f86acd384d58
 redirect_from:

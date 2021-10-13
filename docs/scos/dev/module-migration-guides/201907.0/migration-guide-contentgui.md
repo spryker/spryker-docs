@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - ContentGui
+template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-contentgui-201907
 originalArticleId: d2ac39e9-c858-4eac-a4c1-e99643bf1023
 redirect_from:

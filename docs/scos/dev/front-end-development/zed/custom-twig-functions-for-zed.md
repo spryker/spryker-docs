@@ -1,5 +1,6 @@
 ---
 title: Custom Twig Functions for Zed
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/custom-twig-functions-for-zed
 originalArticleId: 573c0374-a901-44e1-8996-348f40292e5c
 redirect_from:

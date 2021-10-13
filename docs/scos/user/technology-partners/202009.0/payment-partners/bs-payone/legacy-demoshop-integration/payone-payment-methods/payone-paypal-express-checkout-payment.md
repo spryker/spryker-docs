@@ -1,6 +1,7 @@
 ---
 title: PayOne - PayPal Express Checkout Payment
 description: Integrate PayPal Express Checkout Payment through Payone into the Spryker-based shop.
+template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/payone-paypal-express-checkout-payment
 originalArticleId: a1c28359-9cc6-4a85-995d-b2c6bac3b5a0
 redirect_from:

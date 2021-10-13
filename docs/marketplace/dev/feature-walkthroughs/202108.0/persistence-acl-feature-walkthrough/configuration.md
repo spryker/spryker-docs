@@ -202,7 +202,7 @@ Pay attention to the [AclEntityParentConnectionMetadataTransfer](#aclentityparen
 
 ### Composite entity
 
-Below you can find an example of a [Composite entity](./rules-and-scopes/composite-entity.md) `SpyMerchant`, which consists of:
+Below you can find an example of a [Composite entity](./rules-and-scopes/composite-entity.html) `SpyMerchant`, which consists of:
 - `SpyMerchant`
 - `SpyMerchantProfile`
 - `SpyMerchantUser`

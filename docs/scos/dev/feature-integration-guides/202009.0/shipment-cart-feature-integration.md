@@ -7,6 +7,9 @@ originalArticleId: ca3fb1e7-be43-4645-b8f4-44e0924f98c7
 redirect_from:
   - /v6/docs/shipment-cart-feature-integration
   - /v6/docs/en/shipment-cart-feature-integration
+related:
+  - title: Shipment feature integration
+    link: docs/scos/dev/feature-integration-guides/202005.0/shipment-feature-integration.html
 ---
 
 ## Install Feature Core

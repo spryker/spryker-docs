@@ -7,6 +7,11 @@ originalArticleId: eecfc768-47e1-4698-a471-0ed7436c78bb
 redirect_from:
   - /v3/docs/product-labels
   - /v3/docs/en/product-labels
+related:
+  - title: Product Labels feature overview
+    link: docs/scos/user/features/201907.0/product-labels-feature-overview.html
+  - title: Accessing Product Labels
+    link: docs/scos/dev/glue-api-guides/201907.0/managing-products/retrieving-product-labels.html
 ---
 
 The product labels are designed for the purpose of adding a variety of information to products.

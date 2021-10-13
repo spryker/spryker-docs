@@ -7,6 +7,9 @@ originalArticleId: 984a33fb-0a5a-4a74-951e-e961c2669912
 redirect_from:
   - /v5/docs/coremedia
   - /v5/docs/en/coremedia
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/201811.0/technology-partner-integration.html
 ---
 
 ## Partner Information

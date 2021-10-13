@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/shipment-feature-integration
   - /docs/shipment-feature-integration
   - /docs/en/shipment-feature-integration
+related:
+  - title: Shipment feature overview
+    link: docs/scos/user/features/202001.0/shipment-feature-overview.html
+  - title: Shipment + Approval Process feature integration
+    link: docs/scos/dev/feature-integration-guides/202005.0/shipment-approval-process-feature-integration.html
 ---
 
 {% info_block errorBox %}

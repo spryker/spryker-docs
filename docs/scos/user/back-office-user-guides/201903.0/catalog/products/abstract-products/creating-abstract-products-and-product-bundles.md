@@ -7,6 +7,25 @@ originalArticleId: e31647d5-e5cf-4b95-b02d-70b54bb7de48
 redirect_from:
   - /v2/docs/creating-an-abstract-product
   - /v2/docs/en/creating-an-abstract-product
+related:
+  - title: Creating Product Variants
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/concrete-products/creating-product-variants.html
+  - title: Editing Product Variants
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/concrete-products/editing-product-variants.html
+  - title: Managing Products
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/managing-products/managing-products.html
+  - title: Discontinuing Products
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/managing-products/discontinuing-products.html
+  - title: Creating and Managing Product Bundles
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/abstract-products/creating-product-bundles.html
+  - title: Adding Product Alternatives
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/managing-products/adding-product-alternatives.html
+  - title: Adding Volume Prices
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html
+  - title: Managing Attributes
+    link: docs/scos/user/back-office-user-guides/201903.0/catalog/attributes/managing-product-attributes.html
+  - title: Abstract Product- Reference Information
+    link: docs/scos/user/back-office-user-guides/201903.0/catalog/products/references/abstract-product-reference-information.html
 ---
 
 This topic describes the procedures that you need to follow in order to create an abstract product and its variants.

@@ -6,6 +6,17 @@ originalArticleId: f7a6a7d3-a1a6-462b-adf4-1a0c5c4d4e11
 redirect_from:
   - /v5/docs/glue-api-company-account-api-feature-integration
   - /v5/docs/en/glue-api-company-account-api-feature-integration
+related:
+  - title: Logging In as Company User
+    link: docs/scos/dev/glue-api-guides/202001.0/managing-b2b-account/authenticating-as-a-company-user.html
+  - title: Retrieving Company User Information
+    link: docs/scos/dev/glue-api-guides/202001.0/managing-b2b-account/retrieving-company-users.html
+  - title: Retrieving Company Information
+    link: docs/scos/dev/glue-api-guides/202001.0/managing-b2b-account/retrieving-companies.html
+  - title: Retrieving Company Role Information
+    link: docs/scos/dev/glue-api-guides/202001.0/managing-b2b-account/retrieving-company-roles.html
+  - title: Retrieving Business Unit Information
+    link: docs/scos/dev/glue-api-guides/202001.0/managing-b2b-account/retrieving-business-unit-information.html
 ---
 
 {% info_block errorBox %}

@@ -8,6 +8,9 @@ redirect_from:
   - /2021080/docs/en/file-details-product-price-schedulecsv
   - /docs/file-details-product-price-schedulecsv
   - /docs/en/file-details-product-price-schedulecsv
+related:
+  - title: HowTo - Schedule Cron Job for Scheduled Prices
+    link: docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-schedule-cron-job-for-scheduled-prices.html
 ---
 
 This article contains content of the **product_price_schedule.csv** file to configure[ Product Price Schedule](/docs/scos/user/features/{{page.version}}/scheduled-prices-feature-overview.html) information on your Spryker Demo Shop.

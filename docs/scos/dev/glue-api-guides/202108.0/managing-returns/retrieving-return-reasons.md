@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/retrieving-return-reasons
   - /docs/retrieving-return-reasons
   - /docs/en/retrieving-return-reasons
+related:
+  - title: Retrieving Returnable Items
+    link: docs/scos/dev/glue-api-guides/202005.0/managing-returns/retrieving-returnable-items.html
+  - title: Managing the returns
+    link: docs/scos/dev/glue-api-guides/202009.0/managing-returns/managing-the-returns.html
 ---
 
 This endpoint allows retrieving returns reasons.

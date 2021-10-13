@@ -7,6 +7,11 @@ originalArticleId: 47cb7364-6eab-490a-9a90-73b42658e03b
 redirect_from:
   - /v5/docs/docker-sdk
   - /v5/docs/en/docker-sdk
+related:
+  - title: Deploy File Reference - 1.0
+    link: docs/scos/dev/the-docker-sdk/202001.0/deploy-file-reference-1.0.html
+  - title: Services
+    link: docs/scos/dev/the-docker-sdk/202001.0/services.html
 ---
 
 Spryker Docker SDK is a tool designed to help you set up docker environment for your Spryker project.

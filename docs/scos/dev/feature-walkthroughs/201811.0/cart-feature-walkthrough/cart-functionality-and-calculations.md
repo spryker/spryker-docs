@@ -7,6 +7,13 @@ originalArticleId: 85ee84a7-555e-4748-a5f2-18740aa6948c
 redirect_from:
   - /v1/docs/cart-functionality-calculations
   - /v1/docs/en/cart-functionality-calculations
+related:
+  - title: Cart Functionality
+    link: docs/scos/dev/feature-walkthroughs/201811.0/cart-feature-walkthrough/cart-functionality.html
+  - title: Calculation Data Structure
+    link: docs/scos/dev/feature-walkthroughs/201811.0/cart-feature-walkthrough/calculation-data-structure.html
+  - title: Calculator Plugins
+    link: docs/scos/dev/feature-walkthroughs/201811.0/cart-feature-walkthrough/calculator-plugins.html
 ---
 
 The extensive Cart allows your customers to add products to their Cart by simply selecting the desired quantity. Inside the Cart, customers can change the quantity of items, switch between different Variants of the product, add personal notes, apply vouchers and remove items. The total price is immediately adjusted whenever changes are made to the Cart. Additionally, logged-in customers can see and edit their Cart from any device. As an additional option, the Persistent Cart functionality lets logged-in customers store their Cart throughout multiple sessions. The Cart features also ensures that your business rules, such as discounts, taxes or shipping, will be applied, based on the customer's final choice of items. With the Mini-Cart symbol in the header of the page your customers can easily check the contents of their Cart via a flyout box.

@@ -13,6 +13,21 @@ redirect_from:
   - /2021080/docs/en/promotions-discounts
   - /docs/promotions-discounts
   - /docs/en/promotions-discounts
+related:
+  - title: Discount Promotion feature integration
+    link: docs/scos/dev/feature-integration-guides/201811.0/discount-promotion-feature-integration.html
+  - title: Discounts Schema
+    link: docs/scos/dev/drafts-dev/database-schema-guide/201811.0/discounts-schema.html
+  - title: Discount Calculation- Reference Information
+    link: docs/scos/user/back-office-user-guides/201811.0/merchandising/discount/references/discount-calculation-reference-information.html
+  - title: Discount Conditions- Reference Information
+    link: docs/scos/user/back-office-user-guides/201811.0/merchandising/discount/references/discount-conditions-reference-information.html
+  - title: Managing Discounts
+    link: docs/scos/user/back-office-user-guides/201811.0/merchandising/discount/managing-discounts.html
+  - title: Migration Guide - Discount
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-discount.html
+  - title: Retrieving Promotional Items
+    link: docs/scos/dev/glue-api-guides/202005.0/retrieving-promotional-items.html
 ---
 
 The Promotions & Discounts feature enables product catalog managers to provide free value to their customers by discounting a percentage or a fixed sum of an order's subtotal or an item's price on predefined conditions.

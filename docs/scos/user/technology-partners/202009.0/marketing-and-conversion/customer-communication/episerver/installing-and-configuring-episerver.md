@@ -7,6 +7,13 @@ originalArticleId: 6a9116bd-ba85-4c53-acb9-3851681ff02b
 redirect_from:
   - /v6/docs/episerver-installation-and-configuration
   - /v6/docs/en/episerver-installation-and-configuration
+related:
+  - title: Episerver - Integration into a project
+    link: docs/scos/user/technology-partners/202009.0/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html
+  - title: Episerver - Order referenced commands
+    link: docs/scos/user/technology-partners/202009.0/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-order-referenced-commands.html
+  - title: Episerver - API Requests
+    link: docs/scos/user/technology-partners/202009.0/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-api-requests.html
 ---
 
 ## Installation

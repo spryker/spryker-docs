@@ -7,6 +7,9 @@ originalArticleId: f8e811a8-3bf9-4541-8be1-0b59d1c9af76
 redirect_from:
   - /v5/docs/addresses-reference-information
   - /v5/docs/en/addresses-reference-information
+related:
+  - title: Shop Guide - Customer Addresses
+    link: docs/scos/user/shop-user-guides/202005.0/shop-guide-customer-account/shop-guide-customer-addresses.html
 ---
 
 This topic contains the reference information you need to know when working with the Addresses page of the Customer Account.

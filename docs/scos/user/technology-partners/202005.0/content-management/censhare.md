@@ -6,6 +6,9 @@ originalArticleId: c4623a7e-cfb8-4b81-8142-05b7a536605f
 redirect_from:
   - /v5/docs/censhare
   - /v5/docs/en/censhare
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/201811.0/technology-partner-integration.html
 ---
 
 ## Partner Information

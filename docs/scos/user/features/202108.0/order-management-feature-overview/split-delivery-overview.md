@@ -9,6 +9,17 @@ redirect_from:
   - /2021080/docs/en/split-delivery-overview
   - /docs/split-delivery-overview
   - /docs/en/split-delivery-overview
+related:
+  - title: Orders- Reference Information
+    link: docs/scos/user/back-office-user-guides/201811.0/sales/orders/references/orders-reference-information.html
+  - title: Shop Guide - Checkout
+    link: docs/scos/user/shop-user-guides/201811.0/checkout/shop-guide-checkout.html
+  - title: Shop Guide - Address Step
+    link: docs/scos/user/shop-user-guides/201811.0/checkout/shop-guide-address-step.html
+  - title: Shop Guide - Shipment Step
+    link: docs/scos/user/shop-user-guides/201811.0/checkout/shop-guide-shipment-step.html
+  - title: Managing Order Shipments
+    link: docs/scos/user/back-office-user-guides/202001.0/sales/orders/managing-order-shipments.html
 ---
 
 *Split Delivery* enables the same order as *shipments* to multiple delivery addresses and/or on different dates, and/or with different shipment methods. A *shipment* is a set of two or more products combined by the same delivery address.

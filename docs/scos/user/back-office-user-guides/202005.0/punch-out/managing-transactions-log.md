@@ -7,6 +7,11 @@ originalArticleId: df771a47-370e-4eb5-982c-b2a26b770c84
 redirect_from:
   - /v5/docs/managing-transactions-log
   - /v5/docs/en/managing-transactions-log
+related:
+  - title: Punch Out Feature Overview
+    link: docs/scos/user/features/202001.0/technology-partner-integrations/punch-out/punch-out-feature-overview.html
+  - title: Punch Out
+    link: docs/scos/user/features/202001.0/technology-partner-integrations/punch-out/punch-out.html
 ---
 
 In this section, you can view the data that is being transmitted during the cart transfer in the Punch Out protocol.

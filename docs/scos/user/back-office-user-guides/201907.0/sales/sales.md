@@ -7,6 +7,25 @@ originalArticleId: ec48ac7c-598e-467b-8b15-dc1a63570139
 redirect_from:
   - /v3/docs/sales-management
   - /v3/docs/en/sales-management
+related:
+  - title: Managing Reclamations
+    link: docs/scos/user/back-office-user-guides/201907.0/sales/reclamations/managing-reclamations.html
+  - title: Managing Orders
+    link: docs/scos/user/back-office-user-guides/201907.0/sales/orders/managing-orders.html
+  - title: "Reference information: Refund module"
+    link: docs/scos/dev/feature-walkthroughs/201907.0/refunds-feature-walkthrough/reference-information-refund-module.html
+  - title: Refunds- Reference Information
+    link: docs/scos/user/back-office-user-guides/201907.0/sales/refunds/viewing-refunds.html
+  - title: Viewing the Order Matrix
+    link: docs/scos/user/back-office-user-guides/201907.0/sales/order-matrix/viewing-the-order-matrix.html
+  - title: Reclamations- Reference Information
+    link: docs/scos/user/back-office-user-guides/201907.0/sales/reclamations/references/reclamations-reference-information.html
+  - title: Orders- Reference Information
+    link: docs/scos/user/back-office-user-guides/201907.0/sales/orders/references/orders-reference-information.html
+  - title: Order Management
+    link: docs/scos/user/features/201907.0/order-management-feature-overview/order-management-feature-overview.html
+  - title: Reclamations Feature Overview
+    link: docs/scos/user/features/201907.0/reclamations-feature-overview.html
 ---
 
 The **Sales** section in Back Office is mostly used by the Sales Department.

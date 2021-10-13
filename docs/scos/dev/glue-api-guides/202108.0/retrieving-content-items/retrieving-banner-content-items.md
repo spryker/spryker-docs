@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/retrieving-banner-content-items
   - /docs/retrieving-banner-content-items
   - /docs/en/retrieving-banner-content-items
+related:
+  - title: REST API Reference
+    link: docs/scos/dev/glue-api-guides/201811.0/rest-api-reference.html
+  - title: Content Items Feature Overview
+    link: docs/scos/user/features/202001.0/content-items-feature-overview.html
 ---
 
 This endpoint allows retrieving information about banner content items.

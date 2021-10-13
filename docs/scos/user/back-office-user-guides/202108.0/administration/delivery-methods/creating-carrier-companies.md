@@ -9,6 +9,13 @@ redirect_from:
   - /2021080/docs/en/creating-a-carrier-company
   - /docs/creating-a-carrier-company
   - /docs/en/creating-a-carrier-company
+related:
+  - title: Creating and Managing Delivery Methods
+    link: docs/scos/user/back-office-user-guides/202001.0/administration/delivery-methods/creating-and-managing-delivery-methods.html
+  - title: Delivery Methods- Reference Information
+    link: docs/scos/user/back-office-user-guides/202001.0/administration/delivery-methods/references/delivery-methods-reference-information.html
+  - title: Shipment feature overview
+    link: docs/scos/user/features/202001.0/shipment-feature-overview.html
 ---
 
 The topic describes how to create a carrier company.

@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/mg-multi-cart-page
   - /docs/mg-multi-cart-page
   - /docs/en/mg-multi-cart-page
+related:
+  - title: Multiple Carts per User Feature Overview
+    link: docs/scos/user/features/201811.0/multiple-carts-feature-overview.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.*

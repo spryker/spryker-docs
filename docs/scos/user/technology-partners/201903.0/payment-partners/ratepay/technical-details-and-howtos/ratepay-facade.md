@@ -7,6 +7,25 @@ originalArticleId: 44a2fd30-53f5-4f23-9b0e-5d9689d23346
 redirect_from:
   - /v2/docs/ratepay-facade
   - /v2/docs/en/ratepay-facade
+related:
+  - title: RatePay
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/ratepay/ratepay.html
+  - title: RatePay - Payment Workflow
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/ratepay/technical-details-and-howtos/ratepay-payment-workflow.html
+  - title: RatePay - How to Disable Address Updates from the Backend Application
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/ratepay/technical-details-and-howtos/ratepay-how-to-disable-address-updates-from-the-backend-application.html
+  - title: RatePay - Invoice
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-invoice.html
+  - title: RatePay- Core Module Structure Diagram
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/ratepay/ratepay-core-module-structure-diagram.html
+  - title: RatePay - Installment
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-installment.html
+  - title: RatePay - Prepayment
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-prepayment.html
+  - title: RatePay - State Machine Commands and Conditions
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/ratepay/technical-details-and-howtos/ratepay-state-machine-commands-and-conditions.html
+  - title: RatePay - Direct Debit
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-direct-debit.html
 ---
 
 | Facade Method | Param | Return | Description |

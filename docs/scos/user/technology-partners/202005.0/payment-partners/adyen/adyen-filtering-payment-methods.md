@@ -7,6 +7,15 @@ originalArticleId: 49464b8f-9788-4edf-a44c-992245d22862
 redirect_from:
   - /v5/docs/adyen-filter-payment-methods
   - /v5/docs/en/adyen-filter-payment-methods
+related:
+  - title: Payment Integration - Adyen
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/adyen/adyen.html
+  - title: Adyen - Integration
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/adyen/adyen-integration-into-a-project.html
+  - title: Adyen - Installation and Configuration
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/adyen/adyen-installation-and-configuration.html
+  - title: Adyen - Provided Payment Methods
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/adyen/adyen-provided-payment-methods.html
 ---
 
 Adyen module provides filtering available payment methods depend on result of `/paymentMethods` API call.

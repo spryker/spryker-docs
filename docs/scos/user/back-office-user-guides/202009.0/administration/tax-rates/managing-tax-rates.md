@@ -7,6 +7,9 @@ originalArticleId: ee2efd18-d6a9-4bc2-abdd-8c909e995e4c
 redirect_from:
   - /v6/docs/managing-tax-rates
   - /v6/docs/en/managing-tax-rates
+related:
+  - title: Taxes Rates - Reference Information
+    link: docs/scos/user/back-office-user-guides/201811.0/administration/tax-rates/references/tax-rates-reference-information.html
 ---
 
 This document describes how to create, edit, and delete [tax rates](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html).

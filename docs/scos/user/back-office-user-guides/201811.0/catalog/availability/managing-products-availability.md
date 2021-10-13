@@ -7,6 +7,13 @@ originalArticleId: a6d1f054-1489-4a3b-9770-cd68329555c8
 redirect_from:
   - /v1/docs/managing-products-availability
   - /v1/docs/en/managing-products-availability
+related:
+  - title: Abstract and Concrete Products
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/abstract-and-concrete-products.html
+  - title: Managing Products
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/managing-products/managing-products.html
+  - title: Availability- Reference Information
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/availability/references/availability-reference-information.html
 ---
 
 This topic describes the actions you can do in the **Availability** section of  the Back Office.

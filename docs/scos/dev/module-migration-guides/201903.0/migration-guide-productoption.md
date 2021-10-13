@@ -6,6 +6,11 @@ originalArticleId: 3fdb157b-5080-4244-846e-a7989d55e924
 redirect_from:
   - /v2/docs/mg-product-option
   - /v2/docs/en/mg-product-option
+related:
+  - title: Migration Guide - Currency
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-currency.html
+  - title: Migration Guide - Product Option Cart Connector
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-productoptioncartconnector.html
 ---
 
 ## Upgrading from Version 6.* to Version 8.0.0

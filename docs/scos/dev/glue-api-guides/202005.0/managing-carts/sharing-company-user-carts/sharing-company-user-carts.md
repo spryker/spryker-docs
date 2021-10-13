@@ -7,6 +7,15 @@ originalArticleId: a3b21add-72fb-42a5-ab1e-3b57f53d195b
 redirect_from:
   - /v5/docs/sharing-company-user-carts-201907
   - /v5/docs/en/sharing-company-user-carts-201907
+related:
+  - title: Logging In as Company User
+    link: docs/scos/dev/glue-api-guides/202001.0/managing-b2b-account/authenticating-as-a-company-user.html
+  - title: Managing Carts of Registered Users
+    link: docs/scos/dev/glue-api-guides/202001.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
+  - title: Shared Cart Feature Overview
+    link: docs/scos/user/features/202001.0/shared-carts-feature-overview.html
+  - title: Shared Carts feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/shared-carts-feature-integration.html
 ---
 
 Company users can share their carts with others so that multiple representatives of the same company can work together on the same order. In addition to that, users can choose what type of access they want to grant to different users.

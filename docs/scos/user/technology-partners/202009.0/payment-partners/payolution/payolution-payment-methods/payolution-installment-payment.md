@@ -7,6 +7,17 @@ originalArticleId: 0cf8a86d-6e80-493c-8b97-4df039a204b0
 redirect_from:
   - /v6/docs/payolution-installment
   - /v6/docs/en/payolution-installment
+related:
+  - title: Payolution - Installation and Configuration
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/payolution/payolution-installation-and-configuration.html
+  - title: Payolution - Integration into a project
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/payolution/payolution-integration-into-a-project.html
+  - title: Payolution - Performing Requests
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/payolution/technical-details-and-howtos/payolution-performing-requests.html
+  - title: Payolution - Workflow
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/payolution/technical-details-and-howtos/payolution-workflow.html
+  - title: Payolution - Invoice Payment
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/payolution/payolution-payment-methods/payolution-invoice-payment.html
 ---
 
 ## Installment Scenarios

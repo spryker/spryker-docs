@@ -7,6 +7,13 @@ originalArticleId: a5fdb1dd-1cbf-46d1-9a88-d7b80f07c948
 redirect_from:
   - /v6/docs/arvato-installation-configuration
   - /v6/docs/en/arvato-installation-configuration
+related:
+  - title: Arvato - Store Order 2.0
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/arvato/arvato-store-order.html
+  - title: Arvato - Risk Check 2.0
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/arvato/v.2.0/arvato-risk-check-2.0.html
+  - title: Arvato
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/arvato/arvato.html
 ---
 
 {% info_block errorBox %}

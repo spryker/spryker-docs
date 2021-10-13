@@ -7,6 +7,13 @@ originalArticleId: 399dfd96-3354-4f70-9aab-210958cd5e7c
 redirect_from:
   - /v2/docs/arvato-risk-check-2-0
   - /v2/docs/en/arvato-risk-check-2-0
+related:
+  - title: Arvato - Store Order 2.0
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/arvato/arvato-store-order.html
+  - title: Arvato - Risk Solution Services Integration 2.0
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/arvato/v.2.0/arvato-risk-solution-services-integration-2.0.html
+  - title: Arvato
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/arvato/arvato.html
 ---
 
 Accounted for by external credit agency data and internal existing customer- and order-details the `RiskCheck` evaluates the probability of payment default for the customer orders.

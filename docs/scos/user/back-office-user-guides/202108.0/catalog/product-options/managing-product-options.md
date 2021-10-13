@@ -9,6 +9,13 @@ redirect_from:
   - /2021080/docs/en/managing-product-options
   - /docs/managing-product-options
   - /docs/en/managing-product-options
+related:
+  - title: Product Options
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/product-options/product-options.html
+  - title: Product Options feature overview
+    link: docs/scos/user/features/202001.0/product-options-feature-overview.html
+  - title: Product Options- Reference Information
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/product-options/references/product-options-reference-information.html
 ---
 
 This article describes the managing actions that you can perform with the product options. 

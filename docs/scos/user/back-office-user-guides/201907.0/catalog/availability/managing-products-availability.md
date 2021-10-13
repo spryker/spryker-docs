@@ -7,6 +7,21 @@ originalArticleId: defcee9f-8019-4ee4-afc8-55ba1ee9bb73
 redirect_from:
   - /v3/docs/managing-products-availability
   - /v3/docs/en/managing-products-availability
+related:
+  - title: Abstract and Concrete Products
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/abstract-and-concrete-products.html
+  - title: Managing Products
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/managing-products/managing-products.html
+  - title: Discontinuing Products
+    link: docs/scos/user/back-office-user-guides/201907.0/catalog/products/managing-products/discontinuing-products.html
+  - title: Creating Product Bundles
+    link: docs/scos/user/back-office-user-guides/201907.0/catalog/products/abstract-products/creating-product-bundles.html
+  - title: Adding Product Alternatives
+    link: docs/scos/user/back-office-user-guides/201907.0/catalog/products/managing-products/adding-product-alternatives.html
+  - title: Adding Volume Prices to Abstract Products
+    link: docs/scos/user/back-office-user-guides/201907.0/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html
+  - title: Availability- Reference Information
+    link: docs/scos/user/back-office-user-guides/201907.0/catalog/availability/references/availability-reference-information.html
 ---
 
 This topic describes the actions you can do in the **Availability** section of  the Back Office.

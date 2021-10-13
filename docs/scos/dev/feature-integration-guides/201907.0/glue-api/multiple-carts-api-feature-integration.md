@@ -7,6 +7,11 @@ originalArticleId: 0b3107fb-825e-481e-bb6d-27e13f4a7d0f
 redirect_from:
   - /v3/docs/multiple-carts-api-feature-integration-201907
   - /v3/docs/en/multiple-carts-api-feature-integration-201907
+related:
+  - title: Managing Guest Carts
+    link: docs/scos/dev/glue-api-guides/201811.0/managing-carts/guest-carts/managing-guest-carts.html
+  - title: Managing Carts of Registered Users
+    link: docs/scos/dev/glue-api-guides/201811.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
 ---
 
 ## Install Feature API

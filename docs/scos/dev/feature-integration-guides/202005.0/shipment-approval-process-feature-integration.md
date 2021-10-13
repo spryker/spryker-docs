@@ -7,6 +7,11 @@ originalArticleId: ebf2ebe0-8c3d-41d0-9546-c093cb97b0d8
 redirect_from:
   - /v5/docs/shipment-approval-process-feature-integration
   - /v5/docs/en/shipment-approval-process-feature-integration
+related:
+  - title: Approval Process feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/approval-process-feature-integration.html
+  - title: Shipment feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/shipment-feature-integration.html
 ---
 
 ## Install Feature Core

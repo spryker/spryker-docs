@@ -7,6 +7,9 @@ originalArticleId: 90c2b15c-6328-4717-be38-0f2b4f272cf0
 redirect_from:
   - /v5/docs/managing-reclamations
   - /v5/docs/en/managing-reclamations
+related:
+  - title: Reclamations Feature Overview
+    link: docs/scos/user/features/202001.0/reclamations-feature-overview.html
 ---
 
 This topic describes how to manage all order claims made by your customers. 

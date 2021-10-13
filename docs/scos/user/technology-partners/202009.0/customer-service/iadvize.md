@@ -7,6 +7,9 @@ originalArticleId: 71b26717-6290-43db-8350-ef8dced3e07c
 redirect_from:
   - /v6/docs/iadvize
   - /v6/docs/en/iadvize
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/201811.0/technology-partner-integration.html
 ---
 
 ## Partner Information

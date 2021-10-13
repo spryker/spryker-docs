@@ -7,6 +7,9 @@ originalArticleId: 1fba93b1-f344-472b-a14b-b3e49aa2aa52
 redirect_from:
   - /v4/docs/loggly-queue
   - /v4/docs/en/loggly-queue
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/201811.0/technology-partner-integration.html
 ---
 
 The Loggly module provides a plugin to read log messages from a queue and send the messages via https to [Loggly](https://www.loggly.com/).

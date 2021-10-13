@@ -7,6 +7,11 @@ originalArticleId: b3b5a044-f7aa-40d4-8006-2c8460e86e29
 redirect_from:
   - /v5/docs/retrieving-product-information
   - /v5/docs/en/retrieving-product-information
+related:
+  - title: Browsing a Category Tree
+    link: docs/scos/dev/glue-api-guides/202001.0/retrieving-categories/retrieving-category-trees.html
+  - title: Price Functionality
+    link: docs/scos/user/features/202001.0/prices-feature-overview/prices-feature-overview.html
 ---
 
 Different Product resources allow you to retrieve all the product information available in your storage. These resources follow the same hierarchical structure that exists as a basis in the Spryker Commerce OS. Products can come with multiple Variants (Concrete products) and have Availability, Prices, Tax Sets, as well as Image Sets. Furthermore, you can see what category your product belongs to or what product label is available.

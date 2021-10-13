@@ -6,6 +6,9 @@ originalArticleId: 60c5e46c-4942-4bbe-a0c5-1381b3ca0d3e
 redirect_from:
   - /v6/docs/common-solutions
   - /v6/docs/en/common-solutions
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/201811.0/technology-partner-integration.html
 ---
 
 ---

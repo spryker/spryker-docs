@@ -7,6 +7,9 @@ originalArticleId: 6b027a59-fc98-4bae-80a2-1a76d463a9ff
 redirect_from:
   - /v6/docs/cms-feature-integration-guide
   - /v6/docs/en/cms-feature-integration-guide
+related:
+  - title: CMS page
+    link: docs/scos/user/features/202009.0/cms-feature-overview/cms-pages-overview.html
 ---
 
 ## Install Feature Core

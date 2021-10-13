@@ -9,6 +9,13 @@ redirect_from:
   - /2021080/docs/en/adding-content-to-storefront-pages-using-templates-slots-best-practices
   - /docs/adding-content-to-storefront-pages-using-templates-slots-best-practices
   - /docs/en/adding-content-to-storefront-pages-using-templates-slots-best-practices
+related:
+  - title: Slots- Reference Information
+    link: docs/scos/user/back-office-user-guides/202001.0/content/slots/references/slots-reference-information.html
+  - title: Managing Slots
+    link: docs/scos/user/back-office-user-guides/202001.0/content/slots/managing-slots.html
+  - title: Templates & Slots Feature Overview
+    link: docs/scos/user/features/202001.0/cms-feature-overview/templates-and-slots-overview.html
 ---
 
 This topic describes how to add content to Storefront pages using templates with slots. To start working with templates with slots, go to **Content Management** > **Slots**.

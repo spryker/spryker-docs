@@ -7,6 +7,13 @@ originalArticleId: 96bc5974-d9f0-4ffd-9571-599a3b12624e
 redirect_from:
   - /v6/docs/quotation-process-feature-integration
   - /v6/docs/en/quotation-process-feature-integration
+related:
+  - title: Quotation Process + Approval Process feature integration
+    link: docs/scos/dev/feature-integration-guides/202005.0/quotation-process-approval-process-feature-integration.html
+  - title: Quotation Process + Multiple Carts feature integration
+    link: docs/scos/dev/feature-integration-guides/202005.0/quotation-process-multiple-carts-feature-integration.html
+  - title: Checkout + Quotation Process feature integration
+    link: docs/scos/dev/feature-integration-guides/202005.0/checkout-quotation-process-feature-integration.html
 ---
 
 ## Install Feature Core

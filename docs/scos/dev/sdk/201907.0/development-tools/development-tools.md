@@ -9,6 +9,9 @@ redirect_from:
   - /v3/docs/en/development-tools
   - /v3/docs/development
   - /v3/docs/en/development
+related:
+  - title: Zed API (BETA)
+    link: docs/scos/dev/sdk/201811.0/zed-api/zed-api-beta.html
 ---
 
 The Spryker Commerce OS provides your developers with a range of coding tools that make sure your OS run smoothly.

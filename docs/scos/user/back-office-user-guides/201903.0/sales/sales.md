@@ -7,6 +7,23 @@ originalArticleId: 0a4675d4-b4dc-4ec2-ab9c-4b4e1c07f578
 redirect_from:
   - /v2/docs/sales-management
   - /v2/docs/en/sales-management
+related:
+  - title: Viewing Refunds
+    link: docs/scos/user/back-office-user-guides/201903.0/sales/refunds/viewing-refunds.html
+  - title: Managing Reclamations
+    link: docs/scos/user/back-office-user-guides/201903.0/sales/reclamations/managing-reclamations.html
+  - title: Managing Orders
+    link: docs/scos/user/back-office-user-guides/201903.0/sales/orders/managing-orders.html
+  - title: Orders- Reference Information
+    link: docs/scos/user/back-office-user-guides/201903.0/sales/orders/references/orders-reference-information.html
+  - title: Viewing the Order Matrix
+    link: docs/scos/user/back-office-user-guides/201903.0/sales/order-matrix/viewing-the-order-matrix.html
+  - title: Reclamations Feature Overview
+    link: docs/scos/user/features/201903.0/reclamations-feature-overview.html
+  - title: Order Management
+    link: docs/scos/user/features/201903.0/order-management-feature-overview/order-management-feature-overview.html
+  - title: OMS (Order Management System) Matrix
+    link: docs/scos/user/features/201903.0/order-management-feature-overview/oms-order-management-system-matrix.html
 ---
 
 The **Sales** section in Back Office is mostly used by the Sales Department.

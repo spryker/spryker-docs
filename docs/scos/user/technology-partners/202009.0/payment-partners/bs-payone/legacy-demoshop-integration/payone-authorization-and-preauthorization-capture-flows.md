@@ -7,6 +7,21 @@ originalArticleId: 43a125cb-3291-4b18-9c1c-16d3a0504128
 redirect_from:
   - /v6/docs/payone-authorization-and-preauthorization-capture-flows
   - /v6/docs/en/payone-authorization-and-preauthorization-capture-flows
+related:
+  - title: PayOne - Prepayment
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-prepayment.html
+  - title: PayOne - Invoice Payment
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-invoice-payment.html
+  - title: PayOne - Cash on Delivery
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/bs-payone/scos-integration/payone-cash-on-delivery.html
+  - title: PayOne - Credit Card Payment
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-credit-card-payment.html
+  - title: PayOne - PayPal Express Checkout Payment
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-paypal-express-checkout-payment.html
+  - title: PayOne - Security Invoice Payment
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-security-invoice-payment.html
+  - title: PayOne - Direct Debit Payment
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-direct-debit-payment.html
 ---
 
 Payone module makes it possible for a project to choose which Payone flow it wants to implement: authorize or preauthorize + capture.

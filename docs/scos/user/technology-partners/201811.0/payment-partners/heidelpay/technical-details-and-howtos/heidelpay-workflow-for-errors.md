@@ -7,6 +7,27 @@ originalArticleId: c2aa8f50-fd92-4573-b1eb-d7420b69fa49
 redirect_from:
   - /v1/docs/heidelpay-error-workflow
   - /v1/docs/en/heidelpay-error-workflow
+related:
+  - title: Heidelpay
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/heidelpay/heidelpay.html
+  - title: Heidelpay - Credit Card Secure
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-credit-card-secure.html
+  - title: Heidelpay - Configuration for SCOS
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/heidelpay/scos-integration/heidelpay-configuration-for-scos.html
+  - title: Heidelpay - Integration into the Legacy Demoshop
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/heidelpay/heidelpay-integration-into-the-legacy-demoshop.html
+  - title: Heidelpay - Paypal Authorize
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-paypal-authorize.html
+  - title: Heidelpay - Integration into SCOS
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/heidelpay/scos-integration/heidelpay-integration-into-scos.html
+  - title: Heidelpay - Direct Debit
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-direct-debit.html
+  - title: Heidelpay - Installation
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/heidelpay/heidelpay-installation.html
+  - title: Heidelpay - Easy Credit
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-easy-credit.html
+  - title: Heidelpay - Invoice Secured B2C
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-invoice-secured-b2c.html
 ---
 
 From the user's perspective, there is almost no difference between successful and unsuccessful order flow.

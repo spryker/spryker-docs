@@ -7,6 +7,9 @@ originalArticleId: 0e86ec2e-286c-4906-a02f-8f0a1df5d35c
 redirect_from:
   - /v6/docs/managing-shopping-list-items
   - /v6/docs/en/managing-shopping-list-items
+related:
+  - title: Managing shopping lists
+    link: docs/scos/dev/glue-api-guides/202009.0/managing-shopping-lists/managing-shopping-lists.html
 ---
 
 This endpoint allows managing shopping list items

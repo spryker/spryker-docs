@@ -7,6 +7,13 @@ originalArticleId: b226ab2a-b373-4547-b840-a45edfad3c0e
 redirect_from:
   - /v6/docs/product-relations-feature-integration
   - /v6/docs/en/product-relations-feature-integration
+related:
+  - title: GLUE API- Product Relations feature integration
+    link: docs/scos/dev/feature-integration-guides/202005.0/glue-api/glue-api-product-relations-feature-integration.html
+  - title: Spryker Core feature integration
+    link: docs/scos/dev/feature-integration-guides/202005.0/spryker-core-feature-integration.html
+  - title: Glue API- Spryker Core feature integration
+    link: docs/scos/dev/feature-integration-guides/202005.0/glue-api/glue-api-spryker-core-feature-integration.html
 ---
 
 ## Install Feature Core

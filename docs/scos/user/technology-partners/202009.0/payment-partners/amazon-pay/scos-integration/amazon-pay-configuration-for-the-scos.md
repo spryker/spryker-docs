@@ -7,6 +7,15 @@ originalArticleId: e5eeeb03-9c0a-43cb-ac59-82c90661af07
 redirect_from:
   - /v6/docs/amazon-pay-configuration-scos
   - /v6/docs/en/amazon-pay-configuration-scos
+related:
+  - title: Amazon Pay - API
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/amazon-pay/scos-integration/amazon-pay-api.html
+  - title: Amazon Pay - State Machine
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/amazon-pay/scos-integration/amazon-pay-state-machine.html
+  - title: Amazon Pay - Sandbox Simulations
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/amazon-pay/scos-integration/amazon-pay-sandbox-simulations.html
+  - title: Amazon Pay - Obtaining an Amazon Order Reference and Information About Shipping Addresses
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/amazon-pay/scos-integration/amazon-pay-obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
 ---
 
 {% info_block errorBox %}

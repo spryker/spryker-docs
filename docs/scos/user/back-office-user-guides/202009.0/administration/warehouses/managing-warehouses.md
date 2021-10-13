@@ -7,6 +7,9 @@ originalArticleId: f4cce366-16df-4de5-b9b9-9a9122e812ca
 redirect_from:
   - /v6/docs/managing-warehouses
   - /v6/docs/en/managing-warehouses
+related:
+  - title: Warehouses- Reference Information
+    link: docs/scos/user/back-office-user-guides/202001.0/administration/warehouses/references/warehouses-reference-information.html
 ---
 
 This topic describes how to manage warehouses.

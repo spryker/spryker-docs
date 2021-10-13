@@ -7,6 +7,15 @@ originalArticleId: d5396bd8-d914-4230-8a65-0e3d6299ddbd
 redirect_from:
   - /v4/docs/product-store-relation-feature-integration
   - /v4/docs/en/product-store-relation-feature-integration
+related:
+  - title: Migration Guide - Collector
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-collector.html
+  - title: Migration Guide - Touch
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-touch.html
+  - title: Migration Guide - Product
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-product.html
+  - title: Migration Guide - ProductManagement
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-productmanagement.html
 ---
 
 By default abstract products are available in all stores. This feature provides additional configuration when:

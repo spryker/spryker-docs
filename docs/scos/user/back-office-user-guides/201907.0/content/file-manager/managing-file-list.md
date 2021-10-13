@@ -7,6 +7,11 @@ originalArticleId: c62ec56e-00a8-45a7-b5dd-ed7d0958c35a
 redirect_from:
   - /v3/docs/managing-file-list
   - /v3/docs/en/managing-file-list
+related:
+  - title: Managing File Tree
+    link: docs/scos/user/back-office-user-guides/201907.0/content/file-manager/managing-file-tree.html
+  - title: Managing MIME Type Settings
+    link: docs/scos/user/back-office-user-guides/201907.0/administration/mime-type-settings/managing-mime-type-settings.html
 ---
 
 The File List section is a way to quickly review all the files from the file tree.

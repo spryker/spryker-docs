@@ -7,6 +7,11 @@ originalArticleId: 49badead-ebff-42ab-b159-79d536c36a4c
 redirect_from:
   - /v5/docs/managing-filter-preferences
   - /v5/docs/en/managing-filter-preferences
+related:
+  - title: Search Preferences Types
+    link: docs/scos/user/back-office-user-guides/201811.0/merchandising/search-and-filters/references/search-preferences-types.html
+  - title: Managing Search Preferences
+    link: docs/scos/user/back-office-user-guides/202001.0/merchandising/search-and-filters/managing-search-preferences.html
 ---
 
 This article describes how to manage filter preferences.

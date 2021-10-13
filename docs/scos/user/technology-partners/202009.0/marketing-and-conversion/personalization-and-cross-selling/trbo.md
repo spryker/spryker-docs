@@ -7,6 +7,9 @@ originalArticleId: 15fbf135-5608-4a51-90a4-c66670b69c0a
 redirect_from:
   - /v6/docs/trbo
   - /v6/docs/en/trbo
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/201811.0/technology-partner-integration.html
 ---
 
 ## Partner Information

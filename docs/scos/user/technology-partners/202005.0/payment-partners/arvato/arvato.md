@@ -7,6 +7,13 @@ originalArticleId: 2c774f48-9459-4e98-bf97-c6195aa1c1c0
 redirect_from:
   - /v5/docs/arvato
   - /v5/docs/en/arvato
+related:
+  - title: Arvato - Risk Solution Services Integration 2.0
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/arvato/v.2.0/arvato-risk-solution-services-integration-2.0.html
+  - title: Arvato - Store Order 2.0
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/arvato/arvato-store-order.html
+  - title: Arvato - Risk Check 2.0
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/arvato/v.2.0/arvato-risk-check-2.0.html
 ---
 
 ## Partner Information

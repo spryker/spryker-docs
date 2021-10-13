@@ -7,6 +7,9 @@ originalArticleId: 88c1dd5f-0588-43c1-bf05-ec84d4d39ccc
 redirect_from:
   - /v5/docs/users
   - /v5/docs/en/users
+related:
+  - title: User and Rights Management
+    link: docs/scos/dev/feature-walkthroughs/202001.0/customer-account-management-feature-walkthrough/user-and-rights-overview.html
 ---
 
 The Users Control section in the Back Office is mostly used by Spryker Admins.

@@ -8,6 +8,17 @@ redirect_from:
 - /v6/docs/en/product-labels-feature-overview
 - /v6/docs/product-label
 - /v6/docs/en/product-label
+related:
+  - title: Product labels + promotions & discounts feature integration
+    link: docs/scos/dev/feature-integration-guides/202009.0/product-labels-promotions-and-discounts-feature-integration.html
+  - title: Reference information- product labels
+    link: docs/scos/user/back-office-user-guides/202009.0/merchandising/product-labels/references/reference-information-product-labels.html
+  - title: Product labels feature integration
+    link: docs/scos/dev/feature-integration-guides/202009.0/product-labels-feature-integration.html
+  - title: Creating product labels
+    link: docs/scos/user/back-office-user-guides/202009.0/merchandising/product-labels/creating-product-labels.html
+  - title: Managing product labels
+    link: docs/scos/user/back-office-user-guides/202009.0/merchandising/product-labels/managing-product-labels.html
 ---
 
 The Product Label feature enables product catalog managers to highlight the desired products by adding a special type of information - product labels.

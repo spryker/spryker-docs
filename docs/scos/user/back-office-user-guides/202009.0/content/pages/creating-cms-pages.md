@@ -7,6 +7,13 @@ originalArticleId: 56546895-bcc4-4a22-aca8-72ae36012ae1
 redirect_from:
   - /v6/docs/creating-a-cms-page
   - /v6/docs/en/creating-a-cms-page
+related:
+  - title: CMS Page
+    link: docs/scos/user/features/202001.0/cms-feature-overview/cms-pages-overview.html
+  - title: Editing CMS Pages
+    link: docs/scos/user/back-office-user-guides/202001.0/content/pages/editing-cms-pages.html
+  - title: Managing CMS Page Versions
+    link: docs/scos/user/back-office-user-guides/202001.0/content/pages/managing-cms-page-versions.html
 ---
 
 This topic describes how to create a CMS page in the Back Office.

@@ -8,6 +8,9 @@ redirect_from:
   - /2021080/docs/en/shopmacher
   - /docs/shopmacher
   - /docs/en/shopmacher
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/201811.0/technology-partner-integration.html
 ---
 
 ---

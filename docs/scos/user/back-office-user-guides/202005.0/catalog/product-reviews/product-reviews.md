@@ -7,6 +7,9 @@ originalArticleId: b930af34-6ecb-49bf-ac51-2a295e1ef98f
 redirect_from:
   - /v5/docs/product-reviews-management
   - /v5/docs/en/product-reviews-management
+related:
+  - title: Product Rating & Reviews feature overview
+    link: docs/scos/user/features/202001.0/product-rating-and-reviews-feature-overview.html
 ---
 
 The **Product Reviews** section of the Back Office is mostly used by the Customer Service. 

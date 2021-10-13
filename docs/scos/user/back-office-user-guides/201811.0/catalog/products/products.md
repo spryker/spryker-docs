@@ -7,6 +7,27 @@ originalArticleId: 9caabe13-c261-453d-a5f5-39481dcc460b
 redirect_from:
   - /v1/docs/products
   - /v1/docs/en/products
+related:
+  - title: Abstract and Concrete Products
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/abstract-and-concrete-products.html
+  - title: Managing Product Attributes
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/attributes/managing-product-attributes.html
+  - title: Managing Products
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/managing-products/managing-products.html
+  - title: Viewing Product Barcodes
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/product-barcodes/viewing-product-barcodes.html
+  - title: Accessing Product Labels
+    link: docs/scos/dev/glue-api-guides/201811.0/managing-products/retrieving-product-labels.html
+  - title: Managing Product Labels
+    link: docs/scos/user/back-office-user-guides/201811.0/merchandising/product-labels/managing-product-labels.html
+  - title: Managing Product Lists
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/product-lists/managing-product-lists.html
+  - title: Managing Product Relations
+    link: docs/scos/user/back-office-user-guides/201811.0/merchandising/product-relations/managing-product-relations.html
+  - title: Managing Product Reviews
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/product-reviews/managing-product-reviews.html
+  - title: Managing Product Sets
+    link: docs/scos/user/back-office-user-guides/201811.0/merchandising/product-sets/managing-product-sets.html
 ---
 
 The **Products** section in the Back Office is mostly used by the team members involved in Product Management.

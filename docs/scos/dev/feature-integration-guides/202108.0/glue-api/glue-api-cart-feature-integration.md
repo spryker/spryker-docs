@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/glue-api-cart-feature-integration
   - /docs/glue-api-cart-feature-integration
   - /docs/en/glue-api-cart-feature-integration
+related:
+  - title: Managing Guest Carts
+    link: docs/scos/dev/glue-api-guides/202001.0/managing-carts/guest-carts/managing-guest-carts.html
 ---
 
 This document describes how to integrate the Glue API: Cart feature into a Spryker project.

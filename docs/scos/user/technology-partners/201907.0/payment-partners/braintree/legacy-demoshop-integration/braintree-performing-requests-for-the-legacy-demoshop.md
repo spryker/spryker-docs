@@ -7,6 +7,13 @@ originalArticleId: b29e0b7c-d8bd-4b4a-b95b-6d1ba86d8527
 redirect_from:
   - /v3/docs/braintree-requests-legacy-demoshop
   - /v3/docs/en/braintree-requests-legacy-demoshop
+related:
+  - title: Braintree
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/braintree/braintree.html
+  - title: Braintree - Workflow for Legacy Demoshop
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/braintree/legacy-demoshop-integration/braintree-workflow-for-legacy-demoshop.html
+  - title: Braintree - Configuration for the Legacy Demoshop
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/braintree/legacy-demoshop-integration/braintree-configuration-for-the-legacy-demoshop.html
 ---
 
 To perform the needed requests, you can easily use the implemented state machine commands and conditions. The next section gives a summary of them. You can also use the facade methods directly which, however, are invoked by the state machine.

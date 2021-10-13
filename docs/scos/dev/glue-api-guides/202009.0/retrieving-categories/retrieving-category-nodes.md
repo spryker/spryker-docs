@@ -7,6 +7,9 @@ originalArticleId: 4b5a4e8f-5998-4f3d-bd43-e230eb7a5c22
 redirect_from:
   - /v6/docs/retrieving-category-nodes
   - /v6/docs/en/retrieving-category-nodes
+related:
+  - title: Category Management feature overview
+    link: docs/scos/user/features/202009.0/category-management-feature-overview.html
 ---
 
 This endpoint allows retrieving category nodes.

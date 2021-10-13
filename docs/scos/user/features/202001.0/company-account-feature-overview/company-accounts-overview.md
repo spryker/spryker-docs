@@ -9,6 +9,11 @@ redirect_from:
   - /v4/docs/en/company-account-general-organizational-structure
   - /v4/docs/company-account-overview
   - /v4/docs/en/company-account-overview
+related:
+  - title: Company Account
+    link: docs/scos/user/back-office-user-guides/201811.0/customer/company-account/company-account.html
+  - title: Company User Roles and Permissions Feature Overview
+    link: docs/scos/user/features/201811.0/company-account-feature-overview/company-user-roles-and-permissions-overview.html
 ---
 
 In the context of permissions management, the top level of a B2B business model hierarchy is a Company. The Company represents a legal organization, which is related to stores and has specific metadata (e.g. a tax-number). A Company can have a name, activity state and status attributes represented by _name, is-active_ and _status_ fields respectively.

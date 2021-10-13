@@ -7,6 +7,9 @@ originalArticleId: 2578a60c-34f2-4c28-9c48-af5efaec0e15
 redirect_from:
   - /v1/docs/episerver
   - /v1/docs/en/episerver
+related:
+  - title: Episerver - Installation and Configuration
+    link: docs/scos/user/technology-partners/201811.0/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html
 ---
 
 ## Partner Information

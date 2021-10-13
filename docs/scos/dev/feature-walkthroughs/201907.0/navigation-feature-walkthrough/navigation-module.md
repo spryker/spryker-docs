@@ -7,6 +7,15 @@ originalArticleId: 32112e91-7c2f-4ceb-93d0-f331ff8d449f
 redirect_from:
   - /v3/docs/module-navigation
   - /v3/docs/en/module-navigation
+related:
+  - title: Managing Navigation Elements
+    link: docs/scos/user/back-office-user-guides/201811.0/content/navigation/managing-navigation-elements.html
+  - title: Migration Guide - Navigation
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-navigation.html
+  - title: Migration Guide - NavigationGui
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-navigationgui.html
+  - title: Navigation Module Integration
+    link: docs/scos/dev/feature-integration-guides/201811.0/navigation-module-integration.html
 ---
 
 ## Overview

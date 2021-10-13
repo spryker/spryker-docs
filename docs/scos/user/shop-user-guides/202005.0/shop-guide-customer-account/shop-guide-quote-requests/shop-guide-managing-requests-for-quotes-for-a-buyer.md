@@ -7,6 +7,17 @@ originalArticleId: c70d37b0-fcfa-41bf-b7a2-f945e194f0a1
 redirect_from:
   - /v5/docs/managing-rfqs-for-buyer-shop-guide
   - /v5/docs/en/managing-rfqs-for-buyer-shop-guide
+related:
+  - title: Request for Quote- Reference Information
+    link: docs/scos/user/shop-user-guides/202005.0/shop-guide-customer-account/references/request-for-quote-reference-information.html
+  - title: Quotation Process feature overview
+    link: docs/scos/user/features/202005.0/quotation-process-feature-overview.html
+  - title: Shop Guide - Checkout
+    link: docs/scos/user/shop-user-guides/202005.0/shop-guide-checkout/shop-guide-checkout.html
+  - title: Shop Guide - Address Step
+    link: docs/scos/user/shop-user-guides/202005.0/shop-guide-checkout/shop-guide-address-step.html
+  - title: Shop Guide - Shipment Step
+    link: docs/scos/user/shop-user-guides/202005.0/shop-guide-checkout/shop-guide-shipment-step.html
 ---
 
 This topic describes the procedure for managing the Request for Quotes (RFQs) from the Buyer perspective:

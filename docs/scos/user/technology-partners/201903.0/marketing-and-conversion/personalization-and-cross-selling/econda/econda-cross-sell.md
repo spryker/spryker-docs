@@ -7,6 +7,15 @@ originalArticleId: 8a88b17e-ad62-4d9e-b7b6-cf028ce470d8
 redirect_from:
   - /v2/docs/econda-cross-sell
   - /v2/docs/en/econda-cross-sell
+related:
+  - title: Econda
+    link: docs/scos/user/technology-partners/201811.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda.html
+  - title: Econda - Tracking
+    link: docs/scos/user/technology-partners/201811.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda-tracking.html
+  - title: Econda - Exporting CSVs
+    link: docs/scos/user/technology-partners/201811.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda-exporting-csvs.html
+  - title: Econda - Frontend Integration
+    link: docs/scos/user/technology-partners/201811.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda-frontend-integration.html
 ---
 
 Cross sell is highly customizable and it depends on your setup. Please refer to [Econda offical documentation](https://support.econda.de/display/CSDE/Control+Panel).

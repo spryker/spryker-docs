@@ -9,6 +9,15 @@ redirect_from:
   - /2021080/docs/en/managing-global-thresholds
   - /docs/managing-global-thresholds
   - /docs/en/managing-global-thresholds
+related:
+  - title: Managing Merchant Order Thresholds
+    link: docs/scos/user/back-office-user-guides/202001.0/administration/thresholds/managing-merchant-order-thresholds.html
+  - title: Managing Merchant Relations
+    link: docs/scos/user/back-office-user-guides/202001.0/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html
+  - title: Managing Threshold Settings
+    link: docs/scos/user/back-office-user-guides/202001.0/administration/thresholds/managing-threshold-settings.html
+  - title: Threshold- Reference Information
+    link: docs/scos/user/back-office-user-guides/202001.0/administration/thresholds/references/threshold-reference-information.html
 ---
 
 This topic describes how to manage global thresholds.

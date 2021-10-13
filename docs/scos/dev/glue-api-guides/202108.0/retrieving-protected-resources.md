@@ -9,6 +9,13 @@ redirect_from:
   - /2021080/docs/en/retrieving-protected-resources
   - /docs/retrieving-protected-resources
   - /docs/en/retrieving-protected-resources
+related:
+  - title: Authentication and Authorization
+    link: docs/scos/dev/glue-api-guides/202001.0/managing-customers/authenticating-as-a-customer.html
+  - title: Hide Content from Logged out Users Overview
+    link: docs/scos/user/features/202001.0/customer-access-feature-overview.html
+  - title: Searching by company users
+    link: docs/scos/dev/glue-api-guides/202009.0/managing-b2b-account/searching-by-company-users.html
 ---
 
 Since shop owners can define which resources are protected, the list is different in each shop. That's why, before sending any requests, you might need to check which resources are protected and [authenticate](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html). 

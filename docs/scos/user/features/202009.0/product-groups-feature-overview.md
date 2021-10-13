@@ -9,6 +9,9 @@ redirect_from:
   - /v6/docs/en/product-group-feature-overview
   - /v6/docs/product-groups
   - /v6/docs/en/product-groups
+related:
+  - title: Managing Products
+    link: docs/scos/user/back-office-user-guides/202005.0/catalog/products/managing-products/managing-products.html
 ---
 
 The *Product Groups* feature allows product catalog managers to group products by attributes, like color or size. A typical use case is combining the same product in different colors into a product group (not to be confused with [product variant](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/products-overview.html)). The feature changes the way shop users interact with products by improving accessibility and navigation.

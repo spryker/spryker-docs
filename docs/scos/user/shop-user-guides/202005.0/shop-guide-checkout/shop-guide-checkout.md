@@ -7,6 +7,9 @@ originalArticleId: ead39673-f6ad-423f-9783-8783e83fda75
 redirect_from:
   - /v5/docs/checkout-shop-guide-201911
   - /v5/docs/en/checkout-shop-guide-201911
+related:
+  - title: Split Delivery Overview
+    link: docs/scos/user/features/202001.0/order-management-feature-overview/split-delivery-overview.html
 ---
 
 Checkout allows purchasing the items added to the cart.

@@ -7,6 +7,9 @@ originalArticleId: 7421b3db-421b-4987-8239-f03b5eb27a01
 redirect_from:
   - /v3/docs/plusserver
   - /v3/docs/en/plusserver
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/201811.0/technology-partner-integration.html
 ---
 
 ## Partner Information

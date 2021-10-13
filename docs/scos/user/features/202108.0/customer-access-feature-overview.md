@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/customer-access-feature-overview
   - /docs/customer-access-feature-overview
   - /docs/en/customer-access-feature-overview
+related:
+  - title: Managing Customer Access
+    link: docs/scos/user/back-office-user-guides/201811.0/customer/customers-customer-access-customer-groups/managing-customer-access.html
 ---
 
 Customer Access allows store administrators to define if a certain information is visible to logged out users.

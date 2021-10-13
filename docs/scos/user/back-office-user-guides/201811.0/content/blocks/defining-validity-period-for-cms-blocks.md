@@ -7,6 +7,15 @@ originalArticleId: 85f5369d-97e6-45b7-a04c-b2c78df3b6c9
 redirect_from:
   - /v1/docs/defining-validity-period-for-cms-blocks
   - /v1/docs/en/defining-validity-period-for-cms-blocks
+related:
+  - title: CMS Block
+    link: docs/scos/user/features/201811.0/cms-feature-overview/cms-blocks-overview.html
+  - title: Creating CMS Blocks
+    link: docs/scos/user/back-office-user-guides/201811.0/content/blocks/creating-cms-blocks.html
+  - title: Managing CMS Blocks
+    link: docs/scos/user/back-office-user-guides/201811.0/content/blocks/managing-cms-blocks.html
+  - title: CMS Block- Reference Information
+    link: docs/scos/user/back-office-user-guides/201811.0/content/blocks/references/cms-block-reference-information.html
 ---
 
 This topic describes the steps of setting up the validity period for CMS blocks.

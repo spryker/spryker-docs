@@ -7,6 +7,13 @@ originalArticleId: 678aaa96-3ec4-4143-8eee-e982082eeb0a
 redirect_from:
   - /v2/docs/attributes
   - /v2/docs/en/attributes
+related:
+  - title: Products- Reference Information
+    link: docs/scos/user/back-office-user-guides/201903.0/catalog/products/references/products-reference-information.html
+  - title: Abstract Product- Reference Information
+    link: docs/scos/user/back-office-user-guides/201903.0/catalog/products/references/abstract-product-reference-information.html
+  - title: Concrete Product- Reference Information
+    link: docs/scos/user/back-office-user-guides/201903.0/catalog/products/references/concrete-product-reference-information.html
 ---
 
 The attributes section is designed to create the super attributes that define the product variants and define the descriptive attributes that present the product features.

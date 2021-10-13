@@ -7,6 +7,9 @@ originalArticleId: 4d022a90-652d-478d-b18c-0e283fa74e68
 redirect_from:
   - /v3/docs/fact-finder-web-components
   - /v3/docs/en/fact-finder-web-components
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/201811.0/technology-partner-integration.html
 ---
 
 ## Installation

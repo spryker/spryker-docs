@@ -7,6 +7,13 @@ originalArticleId: 984cf6f9-27d0-46ea-a1f6-48265bdbe57b
 redirect_from:
   - /v5/docs/returns-reference-information
   - /v5/docs/en/returns-reference-information
+related:
+  - title: Return Management Feature Overview
+    link: docs/scos/user/features/202005.0/return-management-feature-overview/return-management-feature-overview.html
+  - title: Return Item States- Reference Information
+    link: docs/scos/user/back-office-user-guides/202005.0/sales/returns/references/return-item-states-reference-information.html
+  - title: Managing Returns
+    link: docs/scos/user/back-office-user-guides/202005.0/sales/returns/managing-returns.html
 ---
 
 This topic contains the reference information for working with Returns in *Sales>Returns*.

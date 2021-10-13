@@ -7,6 +7,21 @@ originalArticleId: 9f93b75f-7e46-4903-84c0-9bc29ad4bcd9
 redirect_from:
   - /v6/docs/amazon-pay-rendering-pay-demoshop
   - /v6/docs/en/amazon-pay-rendering-pay-demoshop
+related:
+  - title: Amazon Pay - Configuration for the Legacy Demoshop
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-configuration-for-the-legacy-demoshop.html
+  - title: Amazon Pay - Refund
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-refund.html
+  - title: Amazon Pay - API
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-api.html
+  - title: Amazon Pay - Email Notifications
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-email-notifications.html
+  - title: Amazon Pay - Sandbox Simulations
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-sandbox-simulations.html
+  - title: Amazon Pay - State Machine
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-state-machine.html
+  - title: Amazon Pay - Support of Bundled Products
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-support-of-bundled-products.html
 ---
 
 Usually the checkout page includes information for the buyer to review, items in the cart, prices, total price information and some other order related details.

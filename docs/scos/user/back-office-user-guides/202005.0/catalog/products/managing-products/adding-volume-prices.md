@@ -7,6 +7,9 @@ originalArticleId: 080e6510-22a9-4be6-ad53-e679beb7e209
 redirect_from:
   - /v5/docs/adding-volume-prices
   - /v5/docs/en/adding-volume-prices
+related:
+  - title: Volume Prices Feature Overview
+    link: docs/scos/user/features/202001.0/prices-feature-overview/volume-prices-overview.html
 ---
 
 This article describes how to add volume prices for a product.

@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/adding-product-alternatives
   - /docs/adding-product-alternatives
   - /docs/en/adding-product-alternatives
+related:
+  - title: Alternative Products Feature Overview
+    link: docs/scos/user/features/202001.0/alternative-products-feature-overview.html
 ---
 
 This article describes how to add product alternatives for a product.

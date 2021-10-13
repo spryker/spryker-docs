@@ -7,6 +7,11 @@ originalArticleId: c8b469cf-8136-4c47-9b4e-ef6ffab4b8ad
 redirect_from:
   - /v6/docs/migration-guide-category
   - /v6/docs/en/migration-guide-category
+related:
+  - title: Creating Categories
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/category/creating-categories.html
+  - title: Category
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/category/category.html
 ---
 
 ## Upgrading from Version 3.* to Version 4.*

@@ -7,6 +7,9 @@ originalArticleId: 2e9ab989-9386-4fed-b614-2545522ad503
 redirect_from:
   - /v6/docs/managing-merchants
   - /v6/docs/en/managing-merchants
+related:
+  - title: Merchants and Merchant Relations Feature Overview
+    link: docs/scos/user/features/202001.0/merchant-b2b-contracts-feature-overview.html
 ---
 
 This topic describes how to manage merchant records.

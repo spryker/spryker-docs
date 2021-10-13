@@ -7,6 +7,9 @@ originalArticleId: 449d5c16-0752-46a3-9783-9410f70bb740
 redirect_from:
   - /v5/docs/spryk
   - /v5/docs/en/spryk
+related:
+  - title: Code Generator
+    link: docs/scos/dev/sdk/201811.0/code-generator.html
 ---
 
 The Spryk Code Generator is a tool developed to ease the process of generating pieces of code on core and project level. Furthermore, it links individual code generation definitions into specific scenarios you need on a daily basis.

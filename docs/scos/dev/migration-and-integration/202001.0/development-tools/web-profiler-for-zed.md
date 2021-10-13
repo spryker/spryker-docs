@@ -7,6 +7,9 @@ originalArticleId: 3948d431-5847-42d4-8bc3-31f3a8af06c2
 redirect_from:
   - /v4/docs/web-profiler
   - /v4/docs/en/web-profiler
+related:
+  - title: Web Profiler Widget for Yves
+    link: docs/scos/dev/migration-and-integration/202001.0/development-tools/web-profiler-widget-for-yves.html
 ---
 
 {% info_block errorBox %}

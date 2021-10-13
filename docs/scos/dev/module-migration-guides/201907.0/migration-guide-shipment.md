@@ -6,6 +6,11 @@ originalArticleId: 0994141f-1a15-475d-ade5-99486fe671f5
 redirect_from:
   - /v3/docs/mg-shipment
   - /v3/docs/en/mg-shipment
+related:
+  - title: "Reference information: Shipment method plugins"
+    link: docs/scos/dev/feature-walkthroughs/201811.0/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html
+  - title: Shipment feature overview
+    link: docs/scos/user/features/201907.0/shipment-feature-overview.html
 ---
 
 ## Upgrading from version 7.* to 8.*

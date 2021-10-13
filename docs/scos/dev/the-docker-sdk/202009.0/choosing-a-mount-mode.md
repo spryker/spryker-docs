@@ -7,6 +7,9 @@ originalArticleId: 78dfc04f-3573-4ae6-8acb-a46764c472b7
 redirect_from:
   - /v6/docs/choosing-a-mount-mode
   - /v6/docs/en/choosing-a-mount-mode
+related:
+  - title: Configuring a mount mode
+    link: docs/scos/dev/the-docker-sdk/202009.0/configuring-a-mount-mode.html
 ---
 
 This document describes mount modes and how you can choose one. 

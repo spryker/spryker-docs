@@ -7,6 +7,23 @@ originalArticleId: abf1825f-78bd-457c-afd7-1a6ec6ff3ebf
 redirect_from:
   - /v6/docs/product-lists-feature-integration
   - /v6/docs/en/product-lists-feature-integration
+related:
+  - title: Product Lists + Catalog feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/product-lists-catalog-feature-integration.html
+  - title: CMS + Product Lists + Catalog feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/cms-product-lists-catalog-feature-integration.html
+  - title: Configurable Bundle feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/configurable-bundle-feature-integration.html
+  - title: Product feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/product-feature-integration.html
+  - title: Prices feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/prices-feature-integration.html
+  - title: Merchant Product Restrictions feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/merchant-product-restrictions-feature-integration.html
+  - title: Product Images + Configurable Bundle feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/product-images-configurable-bundle-feature-integration.html
+  - title: Merchant Product Restrictions feature overview
+    link: docs/scos/user/features/202009.0/merchant-product-restrictions-feature-overview.html
 ---
 
 This document describes how to integrate the Product Lists feature into a Spryker project. 

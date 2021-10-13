@@ -7,6 +7,11 @@ originalArticleId: 076b8ea0-f31a-45d6-be1e-6e1ea354ff02
 redirect_from:
   - /v3/docs/calculation-3-0
   - /v3/docs/en/calculation-3-0
+related:
+  - title: Cart Functionality
+    link: docs/scos/dev/feature-walkthroughs/201811.0/cart-feature-walkthrough/cart-functionality.html
+  - title: Calculation Data Structure
+    link: docs/scos/dev/feature-walkthroughs/201811.0/cart-feature-walkthrough/calculation-data-structure.html
 ---
 
 Spryker uses the Calculation module to calculate the cart totals that are displayed in the cart/checkout or when the order is placed.

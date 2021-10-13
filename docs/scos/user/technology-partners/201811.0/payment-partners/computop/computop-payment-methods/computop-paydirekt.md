@@ -7,6 +7,27 @@ originalArticleId: 799491cc-dc45-4820-a81a-6fc9455bbddd
 redirect_from:
   - /v1/docs/computop-paydirekt
   - /v1/docs/en/computop-paydirekt
+related:
+  - title: Computop
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/computop/computop.html
+  - title: Computop - Sofort
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/computop/computop-payment-methods/computop-sofort.html
+  - title: Computop - PayPal
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/computop/computop-payment-methods/computop-paypal.html
+  - title: Computop - PayNow
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/computop/computop-payment-methods/computop-paynow.html
+  - title: Computop - Easy Credit
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/computop/computop-payment-methods/computop-easy-credit.html
+  - title: Computop - API
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/computop/technical-details-and-howtos/computop-api.html
+  - title: Computop - iDeal
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/computop/computop-payment-methods/computop-ideal.html
+  - title: Computop - OMS
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/computop/technical-details-and-howtos/computop-oms.html
+  - title: Computop - Direct Debit
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/computop/computop-payment-methods/computop-direct-debit.html
+  - title: Computop - Credit Card
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/computop/computop-payment-methods/computop-credit-card.html
 ---
 
 Example State Machine:

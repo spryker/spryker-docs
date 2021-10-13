@@ -7,6 +7,15 @@ originalArticleId: 29803d89-9e6b-4788-aeb1-a4c402df05b8
 redirect_from:
   - /v3/docs/econda-tracking
   - /v3/docs/en/econda-tracking
+related:
+  - title: Econda - Cross Sell
+    link: docs/scos/user/technology-partners/201811.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda-cross-sell.html
+  - title: Econda - Exporting CSVs
+    link: docs/scos/user/technology-partners/201811.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda-exporting-csvs.html
+  - title: Econda - Frontend Integration
+    link: docs/scos/user/technology-partners/201811.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda-frontend-integration.html
+  - title: Econda
+    link: docs/scos/user/technology-partners/201811.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda.html
 ---
 
 Now that we have integrated Econda to the website we can start adding the tracking code.

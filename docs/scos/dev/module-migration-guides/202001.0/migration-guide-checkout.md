@@ -7,6 +7,11 @@ originalArticleId: 07b6d9a8-a85c-4ff3-80bf-18ed86b378f6
 redirect_from:
   - /v4/docs/mg-checkout
   - /v4/docs/en/mg-checkout
+related:
+  - title: Checkout
+    link: docs/scos/user/features/201811.0/checkout-feature-overview/checkout-feature-overview.html
+  - title: Shop Guide - Checkout
+    link: docs/scos/user/shop-user-guides/201811.0/checkout/shop-guide-checkout.html
 ---
 
 ## Upgrading from Version 4.* to Version 6.0.0

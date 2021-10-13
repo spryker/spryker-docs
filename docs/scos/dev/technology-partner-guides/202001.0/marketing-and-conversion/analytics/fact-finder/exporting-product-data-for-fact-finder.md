@@ -7,6 +7,21 @@ originalArticleId: 58fa6b4a-dba2-49c4-94b8-280f4c84459f
 redirect_from:
   - /v4/docs/search-factfinder-export-csv
   - /v4/docs/en/search-factfinder-export-csv
+related:
+  - title: FACT-Finder
+    link: docs/scos/user/technology-partners/201811.0/marketing-and-conversion/analytics/fact-finder.html
+  - title: Installing and configuring FACT-Finder NG API
+    link: docs/scos/dev/technology-partner-guides/201811.0/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-the-fact-finder-ng-api.html
+  - title: Using FACT-Finder tracking
+    link: docs/scos/dev/technology-partner-guides/201811.0/marketing-and-conversion/analytics/fact-finder/using-fact-finder-tracking.html
+  - title: Using FACT-Finder recommendation engine
+    link: docs/scos/dev/technology-partner-guides/201811.0/marketing-and-conversion/analytics/fact-finder/using-fact-finder-recommendation-engine.html
+  - title: Using FACT-Finder search suggestions
+    link: docs/scos/dev/technology-partner-guides/201811.0/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search-suggestions.html
+  - title: Using FACT-Finder search
+    link: docs/scos/dev/technology-partner-guides/201811.0/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search.html
+  - title: Using FACT-Finder campaigns
+    link: docs/scos/dev/technology-partner-guides/201811.0/marketing-and-conversion/analytics/fact-finder/using-fact-finder-campaigns.html
 ---
 
 ## Output Folder

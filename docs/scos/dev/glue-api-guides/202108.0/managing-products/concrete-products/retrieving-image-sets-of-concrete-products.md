@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/retrieving-image-sets-of-concrete-products
   - /docs/retrieving-image-sets-of-concrete-products
   - /docs/en/retrieving-image-sets-of-concrete-products
+related:
+  - title: Product image management
+    link: docs/scos/user/features/202009.0/product-feature-overview/product-images-overview.html
 ---
 
 This endpoint allows retrieving image sets of concrete products.

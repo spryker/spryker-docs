@@ -9,6 +9,17 @@ redirect_from:
   - /2021080/docs/en/payolution-requests
   - /docs/payolution-requests
   - /docs/en/payolution-requests
+related:
+  - title: Payolution - Invoice Payment
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/payolution/payolution-payment-methods/payolution-invoice-payment.html
+  - title: Payolution - Workflow
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/payolution/technical-details-and-howtos/payolution-workflow.html
+  - title: Payolution - Installment Payment
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/payolution/payolution-payment-methods/payolution-installment-payment.html
+  - title: Payolution
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/payolution/payolution.html
+  - title: Payolution - Configuration
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/payolution/payolution-installation-and-configuration.html
 ---
 
 To perform the needed requests, you can easily use the implemented state machine commands and conditions. This article gives a summary of them. You can also use the facade methods directly, which, however, are invoked by the state machine.

@@ -7,6 +7,9 @@ originalArticleId: 0b9549d0-1d41-41aa-829a-d7d5debf13d7
 redirect_from:
   - /v6/docs/sevensenders
   - /v6/docs/en/sevensenders
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/201811.0/technology-partner-integration.html
 ---
 
 ## Partner Information

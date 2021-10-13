@@ -7,6 +7,9 @@ originalArticleId: ebe59e41-d6d2-49ee-99d5-af8c606d6686
 redirect_from:
   - /v5/docs/namogoo
   - /v5/docs/en/namogoo
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/201811.0/technology-partner-integration.html
 ---
 
 ## Partner Information

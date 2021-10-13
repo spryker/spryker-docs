@@ -7,6 +7,9 @@ originalArticleId: 291e7416-9fd4-4dd0-899d-32e3eddda8d3
 redirect_from:
   - /v1/docs/users-control
   - /v1/docs/en/users-control
+related:
+  - title: Company User Roles and Permissions Feature Overview
+    link: docs/scos/user/features/201811.0/company-account-feature-overview/company-user-roles-and-permissions-overview.html
 ---
 
 The Users Control section in the Back Office is mostly used by Spryker Admins.

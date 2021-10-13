@@ -6,6 +6,9 @@ originalArticleId: 3ad1ce2d-bc09-4eb5-8a1a-7382e450847d
 redirect_from:
   - /v2/docs/checking-out-purchases-and-getting-checkout-data
   - /v2/docs/en/checking-out-purchases-and-getting-checkout-data
+related:
+  - title: Retrieving Customer's Order History
+    link: docs/scos/dev/glue-api-guides/201903.0/managing-customers/retrieving-customer-orders.html
 ---
 
 The **Checkout API** allows you to place orders and retrieve checkout information.

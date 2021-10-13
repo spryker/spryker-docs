@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/retrieving-concrete-products
   - /docs/retrieving-concrete-products
   - /docs/en/retrieving-concrete-products
+related:
+  - title: Product Options feature overview
+    link: docs/scos/user/features/202009.0/product-options-feature-overview.html
 ---
 
 This endpoint allows to retrieve general information about concrete products.

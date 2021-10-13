@@ -6,6 +6,11 @@ originalArticleId: ad41d772-1e85-4d54-a645-653a273bcb81
 redirect_from:
   - /v3/docs/mg-product-management
   - /v3/docs/en/mg-product-management
+related:
+  - title: Migration Guide - Product
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-product.html
+  - title: Migration Guide - Price
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-price.html
 ---
 
 ## Upgrading from Version 0.* to Version 0.18.0

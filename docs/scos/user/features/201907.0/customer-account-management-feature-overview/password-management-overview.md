@@ -7,6 +7,11 @@ originalArticleId: 17226e18-b7d8-4ca9-8662-211be66f2208
 redirect_from:
   - /v3/docs/password-management
   - /v3/docs/en/password-management
+related:
+  - title: Customers
+    link: docs/scos/user/back-office-user-guides/201811.0/customer/customers.html
+  - title: Customers- Reference Information
+    link: docs/scos/user/back-office-user-guides/201811.0/customer/references/customers-reference-information.html
 ---
 
 All accounts are password protected. Therefore all customers are asked to provide their unique passwords during the registration. As well as each time a customer logs into the store, the email address and password values must be provided.

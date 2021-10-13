@@ -7,6 +7,13 @@ originalArticleId: f994f1c2-87dd-4ef2-b82c-10f638fc515c
 redirect_from:
   - /v5/docs/return-item-states-reference-information
   - /v5/docs/en/return-item-states-reference-information
+related:
+  - title: Return Management Feature Overview
+    link: docs/scos/user/features/202005.0/return-management-feature-overview/return-management-feature-overview.html
+  - title: Returns- Reference Information
+    link: docs/scos/user/back-office-user-guides/202005.0/sales/returns/references/returns-reference-information.html
+  - title: Managing Returns
+    link: docs/scos/user/back-office-user-guides/202005.0/sales/returns/managing-returns.html
 ---
 
 Once a return has been created, it acquires the *Waiting for return* state. You can trigger the following states for the returns on the *Overview of Returns [Return ID]* page:

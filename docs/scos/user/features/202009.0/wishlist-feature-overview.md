@@ -9,6 +9,9 @@ redirect_from:
   - /v6/docs/en/wishlist-feature-overview
   - /v6/docs/wishlist
   - /v6/docs/en/wishlist
+related:
+  - title: Customer Lists Schema
+    link: docs/scos/dev/drafts-dev/database-schema-guide/201811.0/customer-lists-schema.html
 ---
 
 Help your customers track and save items for later purchase through multiple wishlists, which are connected to the users' accounts.

@@ -9,6 +9,17 @@ redirect_from:
   - /2021080/docs/en/password-management-overview
   - /docs/password-management-overview
   - /docs/en/password-management-overview
+related:
+  - title: Managing Customers
+    link: docs/scos/dev/glue-api-guides/202005.0/managing-customers/managing-customers.html
+  - title: Importing Data with a Configuration File
+    link: docs/scos/dev/data-import/202005.0/importing-data-with-a-configuration-file.html
+  - title: Shop Guide - Customer Profile
+    link: docs/scos/user/shop-user-guides/202005.0/shop-guide-customer-account/shop-guide-customer-profile.html
+  - title: Managing Customers
+    link: docs/scos/user/back-office-user-guides/202005.0/customer/customer-customer-access-customer-groups/managing-customers.html
+  - title: Customer Account Management feature integration
+    link: docs/scos/dev/feature-integration-guides/202005.0/customer-account-management-feature-integration.html
 ---
 
 *Password Management* enables Spryker admins to manage customer account passwords. It also allows B2B and B2C Shoppers to manage their own account passwords.

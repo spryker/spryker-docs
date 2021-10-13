@@ -7,6 +7,9 @@ originalArticleId: 71227d36-13ea-4921-9684-0bab0736b33e
 redirect_from:
   - /v3/docs/wishlist-api-feature-integration-201907
   - /v3/docs/en/wishlist-api-feature-integration-201907
+related:
+  - title: Managing Wishlists
+    link: docs/scos/dev/glue-api-guides/201811.0/managing-wishlists/managing-wishlists.html
 ---
 
 ## Install Feature API

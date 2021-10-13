@@ -11,6 +11,13 @@ redirect_from:
   - /v4/docs/en/multiple-shared-shopping-lists
   - /v4/docs/shopping-list
   - /v4/docs/en/shopping-list
+related:
+  - title: Shopping list printing overview
+    link: docs/scos/user/features/201811.0/shopping-lists-feature-overview/shopping-list-printing-overview.html
+  - title: Shopping List Notes overview
+    link: docs/scos/user/features/201811.0/shopping-lists-feature-overview/shopping-list-notes-overview.html
+  - title: Shopping Lists feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/shopping-lists-feature-integration.html
 ---
 
 A shopping list is a list of the items that shoppers buy or plan to buy frequently or regularly. For example, a consumer can compile a shopping list of the products they purchase every week. Shopping lists allow a buyer to have a quick overview of the products they are planning to buy and the sum of money they are going to spend.

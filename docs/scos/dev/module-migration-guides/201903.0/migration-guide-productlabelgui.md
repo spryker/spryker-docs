@@ -6,6 +6,11 @@ originalArticleId: eec0d769-770d-4253-b6a0-e3ecd1279f01
 redirect_from:
   - /v2/docs/mg-product-label-gui
   - /v2/docs/en/mg-product-label-gui
+related:
+  - title: Migration Guide - Product
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-product.html
+  - title: Migration Guide - Product Label
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-productlabel.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.*

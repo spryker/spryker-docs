@@ -7,6 +7,9 @@ originalArticleId: 22b01afb-0377-4c1f-96f1-9f69fdc4ca74
 redirect_from:
   - /v2/docs/merchant-product-restrictions-feature-integration
   - /v2/docs/en/merchant-product-restrictions-feature-integration
+related:
+  - title: Product Lists feature integration
+    link: docs/scos/dev/feature-integration-guides/201903.0/product-lists-feature-integration.html
 ---
 
 ## Install Feature Core

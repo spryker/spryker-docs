@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/product-rating-reviews-feature-integration
   - /docs/product-rating-reviews-feature-integration
   - /docs/en/product-rating-reviews-feature-integration
+related:
+  - title: Product Rating & Reviews feature overview
+    link: docs/scos/user/features/202009.0/product-rating-and-reviews-feature-overview.html
 ---
 
 ## Prerequisites

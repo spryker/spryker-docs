@@ -7,6 +7,15 @@ originalArticleId: 9f62304b-a74f-4f1c-976f-ed427be5e439
 redirect_from:
   - /v4/docs/managing-products
   - /v4/docs/en/managing-products
+related:
+  - title: Discontinuing Products
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/products/managing-products/discontinuing-products.html
+  - title: Creating and Managing Product Bundles
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/products/managing-products/creating-and-managing-product-bundles.html
+  - title: Adding Product Alternatives
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/products/managing-products/adding-product-alternatives.html
+  - title: Adding Volume Prices
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/products/managing-products/adding-volume-prices.html
 ---
 
 This article describes the managing actions that you do for both abstract and concrete products as those actions are very similar.

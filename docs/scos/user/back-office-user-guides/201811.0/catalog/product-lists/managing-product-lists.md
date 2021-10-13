@@ -7,6 +7,9 @@ originalArticleId: 2d3f89d6-f107-46b6-afaa-392b2fe9b0ba
 redirect_from:
   - /v1/docs/managing-product-lists
   - /v1/docs/en/managing-product-lists
+related:
+  - title: Creating Product Lists
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/product-lists/creating-product-lists.html
 ---
 
 his article describes the managing actions that you can perform with the product list. 

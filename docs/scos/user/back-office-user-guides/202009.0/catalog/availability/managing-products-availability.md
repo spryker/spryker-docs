@@ -7,6 +7,15 @@ originalArticleId: 60ab1be5-da62-4dbe-89fa-729d6a7f42ec
 redirect_from:
   - /v6/docs/managing-products-availability
   - /v6/docs/en/managing-products-availability
+related:
+  - title: Abstract and Concrete Products
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/abstract-and-concrete-products.html
+  - title: Managing Products
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/managing-products/managing-products.html
+  - title: Product Information Management
+    link: docs/scos/user/features/202001.0/product-information-management/product-information-management.html
+  - title: Timed Product Availability Feature Overview
+    link: docs/scos/user/features/202001.0/product-feature-overview/timed-product-availability-overview.html
 ---
 
 This topic describes the actions you can do in the **Availability** section of  the Back Office.

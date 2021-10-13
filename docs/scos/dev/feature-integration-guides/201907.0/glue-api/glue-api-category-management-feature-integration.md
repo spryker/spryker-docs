@@ -7,6 +7,9 @@ originalArticleId: 995b8468-f118-41bb-93a4-4319f4f12984
 redirect_from:
   - /v3/docs/glue-api-category-management-feature-integration
   - /v3/docs/en/glue-api-category-management-feature-integration
+related:
+  - title: Browsing a Category Tree
+    link: docs/scos/dev/glue-api-guides/201811.0/retrieving-categories/retrieving-category-trees.html
 ---
 
 ## Install Feature API

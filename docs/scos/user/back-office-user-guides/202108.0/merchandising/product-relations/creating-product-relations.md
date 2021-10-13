@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/creating-product-relations
   - /docs/creating-product-relations
   - /docs/en/creating-product-relations
+related:
+  - title: Product Relations Feature Overview
+    link: docs/scos/user/features/202001.0/product-relations-feature-overview.html
 ---
 
 This topic describes how you create a product relation.

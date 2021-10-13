@@ -7,6 +7,17 @@ originalArticleId: cbeddd51-b236-49cc-966b-aa1bdab62324
 redirect_from:
   - /v6/docs/mg-multi-currency
   - /v6/docs/en/mg-multi-currency
+related:
+  - title: Migration Guide - Currency
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-currency.html
+  - title: Migration Guide - Sales
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-sales.html
+  - title: Migration Guide - Price
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-price.html
+  - title: Migration Guide - Discount
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-discount.html
+  - title: Migration Guide - Shipment
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-shipment.html
 ---
 
 ## Migrating System to Multi-Currency

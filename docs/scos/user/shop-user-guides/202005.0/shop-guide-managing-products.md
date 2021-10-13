@@ -7,6 +7,15 @@ originalArticleId: 431d485b-b207-43e7-af59-929be2b5dd9d
 redirect_from:
   - /v5/docs/shop-guide-managing-products
   - /v5/docs/en/shop-guide-managing-products
+related:
+  - title: Product Options feature overview
+    link: docs/scos/user/features/202001.0/product-options-feature-overview.html
+  - title: Product Attributes
+    link: docs/scos/user/features/202001.0/product-feature-overview/product-attributes-overview.html
+  - title: Product Labels
+    link: docs/scos/user/back-office-user-guides/202001.0/merchandising/product-labels/product-labels.html
+  - title: Shopping Cart Widget Feature Overview
+    link: docs/scos/user/features/202001.0/cart-feature-overview/cart-widget-overview.html
 ---
 
 This article describes how you, as a Buyer, can manage products in the Storefront, and provides step-by-step instructions on how to add products to the shopping cart, shopping lists and wishlists, and add the product reviews.

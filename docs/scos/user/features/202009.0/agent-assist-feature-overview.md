@@ -9,6 +9,19 @@ redirect_from:
   - /v6/docs/en/agent-assist-overview
   - /v6/docs/agent-assist
   - /v6/docs/en/agent-assist
+related:
+  - title: Managing Users
+    link: docs/scos/user/back-office-user-guides/201811.0/users/roles-groups-and-users/managing-users.html
+  - title: Agent Assist feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/agent-assist-feature-integration.html
+  - title: Authenticating as an agent assist
+    link: docs/scos/dev/glue-api-guides/202009.0/managing-agent-assists/authenticating-as-an-agent-assist.html
+  - title: Searching by customers as an agent assist
+    link: docs/scos/dev/glue-api-guides/202009.0/managing-agent-assists/searching-by-customers-as-an-agent-assist.html
+  - title: Impersonating customers as an agent assist
+    link: docs/scos/dev/glue-api-guides/202009.0/managing-agent-assists/impersonating-customers-as-an-agent-assist.html
+  - title: Managing agent assist authentication tokens
+    link: docs/scos/dev/glue-api-guides/202009.0/managing-agent-assists/managing-agent-assist-authentication-tokens.html
 ---
 
 An *Agent* is a person with unrivaled product knowledge who can help customers to perform various activities in the Storefront. For example, a customer might call an Agent and ask him/her to help choose the right product or assist with the buying process or even perform some actions in the Storefront for them. Say, a customer wants to add items to a shopping list or create a company but cannot do it for some reason. This is when the Agent steps in and provides practical support acting on the customer's behalf in the online store.

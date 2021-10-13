@@ -9,6 +9,9 @@ redirect_from:
   - /v2/docs/en/multiple-carts-per-user-overview
   - /v2/docs/multiple-cart-per-user
   - /v2/docs/en/multiple-cart-per-user
+related:
+  - title: Shared Cart Feature Overview
+    link: docs/scos/user/features/201811.0/shared-carts-feature-overview.html
 ---
 
 Shopping Cart is a part of the online shop where the record of the items a buyer has ‘picked up’ from the online store is kept. The shopping cart enables consumers to select products, review what they selected, make modifications or add extra items if needed, and purchase the products.

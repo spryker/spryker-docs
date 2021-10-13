@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/inventory-management-feature-integration
   - /docs/inventory-management-feature-integration
   - /docs/en/inventory-management-feature-integration
+related:
+  - title: Inventory Management feature overview
+    link: docs/scos/user/features/202001.0/inventory-management-feature-overview.html
 ---
 
 This document describes how to ingrate the [Inventory Management](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html) feature into a Spryker project.

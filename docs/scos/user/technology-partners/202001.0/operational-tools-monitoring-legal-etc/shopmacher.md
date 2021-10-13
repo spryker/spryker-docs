@@ -6,6 +6,9 @@ originalArticleId: 6cc5d504-40eb-4779-8c46-b0d00a60f03b
 redirect_from:
   - /v4/docs/shopmacher
   - /v4/docs/en/shopmacher
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/201811.0/technology-partner-integration.html
 ---
 
 ---

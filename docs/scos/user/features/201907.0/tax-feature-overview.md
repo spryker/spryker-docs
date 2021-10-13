@@ -15,6 +15,9 @@ redirect_from:
   - /v3/docs/en/international-tax-rates-sets
   - /v3/docs/internationalization
   - /v3/docs/en/internationalization
+related:
+  - title: Tax Schema
+    link: docs/scos/dev/drafts-dev/database-schema-guide/201811.0/tax-schema.html
 ---
 
 The *Tax* feature allows you to define taxes for the items you sell. The feature is represented by two entities: tax rates and tax sets.

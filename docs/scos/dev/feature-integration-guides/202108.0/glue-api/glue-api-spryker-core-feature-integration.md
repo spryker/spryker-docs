@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/glue-api-spryker-core-feature-integration
   - /docs/glue-api-spryker-core-feature-integration
   - /docs/en/glue-api-spryker-core-feature-integration
+related:
+  - title: Using Search Engine Friendly URLs
+    link: docs/scos/dev/glue-api-guides/202001.0/using-search-engine-friendly-urls.html
 ---
 
 This document describes how to integrate the Glue API: Spryker Core feature into a Spryker project.

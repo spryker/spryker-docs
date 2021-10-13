@@ -7,6 +7,9 @@ originalArticleId: 6e133c6f-a830-4938-bfdf-5425ee93fea1
 redirect_from:
   - /v6/docs/product-review-feature-integration
   - /v6/docs/en/product-review-feature-integration
+related:
+  - title: Product Rating & Reviews feature overview
+    link: docs/scos/user/features/202009.0/product-rating-and-reviews-feature-overview.html
 ---
 
 ## Prerequisites

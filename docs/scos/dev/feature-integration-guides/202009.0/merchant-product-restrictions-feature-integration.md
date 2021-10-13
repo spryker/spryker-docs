@@ -7,6 +7,17 @@ originalArticleId: b1ad9ba8-ba91-4356-936c-81bb54eea2e5
 redirect_from:
   - /v6/docs/merchant-product-restrictions-feature-integration
   - /v6/docs/en/merchant-product-restrictions-feature-integration
+related:
+  - title: Configurable Bundle feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/configurable-bundle-feature-integration.html
+  - title: Product feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/product-feature-integration.html
+  - title: Product Lists feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/product-lists-feature-integration.html
+  - title: Prices feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/prices-feature-integration.html
+  - title: Product Images + Configurable Bundle feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/product-images-configurable-bundle-feature-integration.html
 ---
 
 ## Install Feature Core

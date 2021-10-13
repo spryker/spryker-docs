@@ -8,6 +8,11 @@ redirect_from:
   - /2021080/docs/en/managing-shopping-lists
   - /docs/managing-shopping-lists
   - /docs/en/managing-shopping-lists
+related:
+  - title: Glue API- Shopping Lists feature integration
+    link: docs/scos/dev/feature-integration-guides/202005.0/glue-api/glue-api-shopping-lists-feature-integration.html
+  - title: Managing shopping list items
+    link: docs/scos/dev/glue-api-guides/202009.0/managing-shopping-lists/managing-shopping-list-items.html
 ---
 
 With the help of the [Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html) feature, company users can manage shopping lists for their company to plan purchasing activities beforehand. Unlike [Wishlists](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html), shopping lists contain not only a list of items to be purchased but also the quantity of each item.

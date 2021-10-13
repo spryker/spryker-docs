@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/managing-product-labels
   - /docs/managing-product-labels
   - /docs/en/managing-product-labels
+related:
+  - title: Product Labels feature overview
+    link: docs/scos/user/features/202001.0/product-labels-feature-overview.html
 ---
 
 This topic describes how to manage product labels.

@@ -7,6 +7,11 @@ originalArticleId: d717777d-b2cc-48a0-82f4-ee8a66ab2b9b
 redirect_from:
   - /v5/docs/shop-guide-creating-a-new-company-role
   - /v5/docs/en/shop-guide-creating-a-new-company-role
+related:
+  - title: Company Roles- Reference Information
+    link: docs/scos/user/shop-user-guides/202005.0/shop-guide-company-roles/references/company-roles-reference-information.html
+  - title: Managing Company Roles
+    link: docs/scos/user/back-office-user-guides/202005.0/customer/company-account/managing-company-roles.html
 ---
 
 The article describes how you can create a new company role.

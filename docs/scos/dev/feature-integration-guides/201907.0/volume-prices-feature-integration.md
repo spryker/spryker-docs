@@ -7,6 +7,11 @@ originalArticleId: 2c12542c-4dbe-4b35-8b3b-ae390b682fc6
 redirect_from:
   - /v3/docs/volume-prices-feature-integration
   - /v3/docs/en/volume-prices-feature-integration
+related:
+  - title: Volume Prices Feature Overview
+    link: docs/scos/user/features/201811.0/prices-feature-overview/volume-prices-overview.html
+  - title: Adding Volume Prices
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html
 ---
 
 ## Install Feature Core

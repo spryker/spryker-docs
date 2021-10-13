@@ -7,6 +7,9 @@ originalArticleId: 259c8d84-d953-438f-a1f2-3fe02dab755a
 redirect_from:
   - /v6/docs/managing-cms-blocks
   - /v6/docs/en/managing-cms-blocks
+related:
+  - title: CMS Block
+    link: docs/scos/user/features/202001.0/cms-feature-overview/cms-blocks-overview.html
 ---
 
 This topic describes how to manage CMS blocks.

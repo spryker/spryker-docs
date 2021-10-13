@@ -6,6 +6,9 @@ originalArticleId: f806410e-21ea-4476-a622-2665374eff42
 redirect_from:
   - /v3/docs/shopping-lists-feature-integration
   - /v3/docs/en/shopping-lists-feature-integration
+related:
+  - title: Multiple and Shared Shopping Lists overview
+    link: docs/scos/user/features/201811.0/shopping-lists-feature-overview/shopping-lists-feature-overview.html
 ---
 
 ## Install Feature Core

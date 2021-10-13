@@ -7,6 +7,15 @@ originalArticleId: 68864374-9f7f-4b46-a02c-3b515c5716a5
 redirect_from:
   - /v6/docs/amazon-sandbox-simulations
   - /v6/docs/en/amazon-sandbox-simulations
+related:
+  - title: Amazon Pay - API
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/amazon-pay/scos-integration/amazon-pay-api.html
+  - title: Amazon Pay - Configuration for the SCOS
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/amazon-pay/scos-integration/amazon-pay-configuration-for-the-scos.html
+  - title: Amazon Pay - State Machine
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/amazon-pay/scos-integration/amazon-pay-state-machine.html
+  - title: Amazon Pay - Obtaining an Amazon Order Reference and Information About Shipping Addresses
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/amazon-pay/scos-integration/amazon-pay-obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
 ---
 
  In order to reproduce some edge cases like declined payment or pending capture Amazon provides two solutions. First is special methods marked with red star on payment widget.

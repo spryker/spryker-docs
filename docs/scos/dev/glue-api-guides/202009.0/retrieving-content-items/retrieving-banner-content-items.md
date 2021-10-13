@@ -7,6 +7,11 @@ originalArticleId: 15bb2260-48d3-4535-a3e1-de38fc7dd7e8
 redirect_from:
   - /v6/docs/retrieving-banner-content-items
   - /v6/docs/en/retrieving-banner-content-items
+related:
+  - title: REST API Reference
+    link: docs/scos/dev/glue-api-guides/201811.0/rest-api-reference.html
+  - title: Content Items Feature Overview
+    link: docs/scos/user/features/202001.0/content-items-feature-overview.html
 ---
 
 This endpoint allows retrieving information about banner content items.

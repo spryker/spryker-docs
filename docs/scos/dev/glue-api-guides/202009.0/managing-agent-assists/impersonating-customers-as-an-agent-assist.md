@@ -7,6 +7,9 @@ originalArticleId: 2b2595d9-65bf-4257-84bf-5abb92e1b929
 redirect_from:
   - /v6/docs/impersonating-customers-as-an-agent-assist
   - /v6/docs/en/impersonating-customers-as-an-agent-assist
+related:
+  - title: Agent Assist feature overview
+    link: docs/scos/user/features/202009.0/agent-assist-feature-overview.html
 ---
 
 Impersonating a customer allows an [agent assist](/docs/scos/user/features/{{page.version}}/agent-assist-feature-overview.html) to perform actions on their behalf. To impersonate a customer, they receive their Glue API authentication token. Using the token, agent assists perform any action available to the customer.

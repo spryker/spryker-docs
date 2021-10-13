@@ -7,6 +7,9 @@ originalArticleId: f3c7b66b-784e-495a-b747-8774196fcb8f
 redirect_from:
   - /v3/docs/content-items-types-module-relations-201907
   - /v3/docs/en/content-items-types-module-relations-201907
+related:
+  - title: Content Items Overview
+    link: docs/scos/user/features/201907.0/content-items-feature-overview.html
 ---
 
 {% info_block infoBox %}

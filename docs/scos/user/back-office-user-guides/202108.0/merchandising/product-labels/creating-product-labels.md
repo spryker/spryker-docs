@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/creating-product-labels
   - /docs/creating-product-labels
   - /docs/en/creating-product-labels
+related:
+  - title: Product Labels feature overview
+    link: docs/scos/user/features/202009.0/product-labels-feature-overview.html
 ---
 
 This topic describes how to create and activate product labels.

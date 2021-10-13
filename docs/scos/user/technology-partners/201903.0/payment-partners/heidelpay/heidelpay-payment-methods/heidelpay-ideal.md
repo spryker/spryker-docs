@@ -7,6 +7,29 @@ originalArticleId: 3c751fb0-2794-4678-8143-e7c41493a83f
 redirect_from:
   - /v2/docs/heidelpay-ideal
   - /v2/docs/en/heidelpay-ideal
+related:
+  - title: Heidelpay
+    link: docs/scos/user/technology-partners/201903.0/payment-partners/heidelpay/heidelpay.html
+  - title: Heidelpay - Paypal Debit Workflow
+    link: docs/scos/user/technology-partners/201903.0/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-paypal-debit-workflow.html
+  - title: Heidelpay - Configuration for SCOS
+    link: docs/scos/user/technology-partners/201903.0/payment-partners/heidelpay/scos-integration/heidelpay-configuration-for-scos.html
+  - title: Heidelpay - Direct Debit
+    link: docs/scos/user/technology-partners/201903.0/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-direct-debit.html
+  - title: Heidelpay - Credit Card Secure
+    link: docs/scos/user/technology-partners/201903.0/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-credit-card-secure.html
+  - title: Heidelpay - Workflow for Errors
+    link: docs/scos/user/technology-partners/201903.0/payment-partners/heidelpay/technical-details-and-howtos/heidelpay-workflow-for-errors.html
+  - title: Heidelpay - Integration into SCOS
+    link: docs/scos/user/technology-partners/201903.0/payment-partners/heidelpay/scos-integration/heidelpay-integration-into-scos.html
+  - title: Heidelpay - Integration into the Legacy Demoshop
+    link: docs/scos/user/technology-partners/201903.0/payment-partners/heidelpay/heidelpay-integration-into-the-legacy-demoshop.html
+  - title: Heidelpay - Installation
+    link: docs/scos/user/technology-partners/201903.0/payment-partners/heidelpay/heidelpay-installation.html
+  - title: Heidelpay - Paypal Authorize
+    link: docs/scos/user/technology-partners/201903.0/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-paypal-authorize.html
+  - title: Heidelpay - Split-payment Marketplace
+    link: docs/scos/user/technology-partners/201903.0/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-split-payment-marketplace.html
 ---
 
 ### Setup

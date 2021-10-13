@@ -7,6 +7,27 @@ originalArticleId: 42f8b813-b2b7-4b20-8ffb-1f956cd475b7
 redirect_from:
   - /v1/docs/amazon-order-reference-information
   - /v1/docs/en/amazon-order-reference-information
+related:
+  - title: Amazon Pay - Refund
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-refund.html
+  - title: Amazon Pay - API
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/amazon-pay/scos-integration/amazon-pay-api.html
+  - title: Amazon Pay - State Machine
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/amazon-pay/scos-integration/amazon-pay-state-machine.html
+  - title: Amazon Pay - Sandbox Simulations
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-sandbox-simulations.html
+  - title: Amazon Pay - Rendering a “Pay with Amazon” Button on the Cart Page
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-rendering-a-pay-with-amazon-button-on-the-cart-page.html
+  - title: Amazon Pay - Sandbox Simulations
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/amazon-pay/scos-integration/amazon-pay-sandbox-simulations.html
+  - title: Amazon Pay - Configuration for the SCOS
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/amazon-pay/scos-integration/amazon-pay-configuration-for-the-scos.html
+  - title: Amazon Pay - API
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-api.html
+  - title: Amazon Pay - Email Notifications
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-email-notifications.html
+  - title: Amazon Pay - Order Reference and Information about Shipping Addresses
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-order-reference-and-information-about-shipping-addresses.html
 ---
 
 After successful authorization, a buyer will be redirected to an order detils page to enter all the information necessary for placing an order: address of shipment, payment method, delivery method and some calculations about taxes, possible discounts, delivery cost, etc.

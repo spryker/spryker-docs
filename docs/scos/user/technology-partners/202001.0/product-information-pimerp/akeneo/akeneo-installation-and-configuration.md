@@ -7,6 +7,9 @@ originalArticleId: 58d95ca9-f124-41b5-9c75-bf2a805fa0d1
 redirect_from:
   - /v4/docs/akeneo-installation-configuration
   - /v4/docs/en/akeneo-installation-configuration
+related:
+  - title: Akeneo
+    link: docs/scos/user/technology-partners/201811.0/product-information-pimerp/akeneo/akeneo.html
 ---
 
 ## Installation

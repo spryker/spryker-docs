@@ -7,6 +7,9 @@ originalArticleId: 05898fa6-359c-45c5-9d78-b9d9b8dca252
 redirect_from:
   - /v4/docs/e-spirit
   - /v4/docs/en/e-spirit
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/201811.0/technology-partner-integration.html
 ---
 
 ## Partner Information

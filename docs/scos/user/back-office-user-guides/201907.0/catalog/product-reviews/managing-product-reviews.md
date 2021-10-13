@@ -7,6 +7,9 @@ originalArticleId: 49b37cf1-27b7-425c-80ad-e3fbf4a388d8
 redirect_from:
   - /v3/docs/managing-product-reviews
   - /v3/docs/en/managing-product-reviews
+related:
+  - title: Product Rating & Reviews feature overview
+    link: docs/scos/user/features/201907.0/product-rating-and-reviews-feature-overview.html
 ---
 
 This topic describes how to manage product reviews received from the customers.

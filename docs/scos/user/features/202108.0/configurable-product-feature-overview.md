@@ -9,6 +9,13 @@ redirect_from:
   - /2021080/docs/en/configurable-product-feature-overview
   - /docs/configurable-product-feature-overview
   - /docs/en/configurable-product-feature-overview
+related:
+  - title: Product Configuration feature integration
+    link: docs/scos/dev/feature-integration-guides/202108.0/product-configuration-feature-integration.html
+  - title: Glue API- Product Configuration feature integration
+    link: docs/scos/dev/feature-integration-guides/202108.0/glue-api/glue-api-product-configuration-feature-integration.html
+  - title: File details- product_concrete_pre_configuration.csv
+    link: docs/scos/dev/data-import/202108.0/data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html
 ---
 
 {% info_block errorBox "Beta version" %}

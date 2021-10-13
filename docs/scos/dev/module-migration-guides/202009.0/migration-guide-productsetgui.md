@@ -7,6 +7,9 @@ originalArticleId: 95e50d58-f4b3-4009-82c5-cb1fd0e056f5
 redirect_from:
   - /v6/docs/mg-product-set-gui
   - /v6/docs/en/mg-product-set-gui
+related:
+  - title: Migration Guide - Price
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-price.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.*

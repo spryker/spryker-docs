@@ -9,6 +9,23 @@ redirect_from:
   - /2021080/docs/en/amazon-pay-refund-demoshop
   - /docs/amazon-pay-refund-demoshop
   - /docs/en/amazon-pay-refund-demoshop
+related:
+  - title: Amazon Pay - Configuration for the Legacy Demoshop
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-configuration-for-the-legacy-demoshop.html
+  - title: Amazon Pay - API
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-api.html
+  - title: Amazon Pay - Email Notifications
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-email-notifications.html
+  - title: Amazon Pay - Sandbox Simulations
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-sandbox-simulations.html
+  - title: Amazon Pay - State Machine
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-state-machine.html
+  - title: Amazon Pay - Order Reference and Information about Shipping Addresses
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-order-reference-and-information-about-shipping-addresses.html
+  - title: Amazon Pay - Support of Bundled Products
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-support-of-bundled-products.html
+  - title: Amazon Pay - Rendering a “Pay with Amazon” Button on the Cart Page
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-rendering-a-pay-with-amazon-button-on-the-cart-page.html
 ---
 
 After the successful authorization and capture processes, the order should be closed. This blocks any modifications to an order. From this state only Refund operation is possible. The refund can be partial if more than one item is set to refund or full.

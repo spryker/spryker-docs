@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/mg-tax
   - /docs/mg-tax
   - /docs/en/mg-tax
+related:
+  - title: "Reference information: Tax module"
+    link: docs/scos/dev/feature-walkthroughs/201811.0/tax-feature-walkthrough/reference-information-tax-module.html
 ---
 
 ## Upgrading from Version 4.* to Version 5.*

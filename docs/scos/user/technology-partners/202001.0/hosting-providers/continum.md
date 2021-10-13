@@ -7,6 +7,9 @@ originalArticleId: 1c1cce6e-da22-45aa-91cc-834844d9201b
 redirect_from:
   - /v4/docs/continum
   - /v4/docs/en/continum
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/201811.0/technology-partner-integration.html
 ---
 
 ## Partner Information

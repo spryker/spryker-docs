@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/data-export-orders-csv-files-format
   - /docs/data-export-orders-csv-files-format
   - /docs/en/data-export-orders-csv-files-format
+related:
+  - title: Exporting Data
+    link: docs/scos/dev/data-export/202005.0/exporting-data.html
+  - title: Sales Data Export feature integration
+    link: docs/scos/dev/feature-integration-guides/202005.0/sales-data-export-feature-integration.html
 ---
 
 This article contains content of the following files you get when [exporting data on orders](/docs/scos/dev/data-export/{{page.version}}/exporting-data.html) generated in Spryker:

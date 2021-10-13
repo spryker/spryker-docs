@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/paqato
   - /docs/paqato
   - /docs/en/paqato
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/201811.0/technology-partner-integration.html
 ---
 
 ## Partner Information

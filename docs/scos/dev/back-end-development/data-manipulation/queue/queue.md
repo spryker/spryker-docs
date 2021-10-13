@@ -21,6 +21,9 @@ redirect_from:
   - /v2/docs/en/queue
   - /v1/docs/queue
   - /v1/docs/en/queue
+related:
+  - title: Migration Guide - RabbitMQ
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-rabbitmq.html
 ---
 
 ## Concepts

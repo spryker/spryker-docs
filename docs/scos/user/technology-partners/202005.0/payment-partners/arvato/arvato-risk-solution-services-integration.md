@@ -7,6 +7,13 @@ originalArticleId: fedbe73d-a0db-4f5a-af99-bd186c95a76c
 redirect_from:
   - /v5/docs/arvato-2-0
   - /v5/docs/en/arvato-2-0
+related:
+  - title: Arvato - Store Order 2.0
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/arvato/arvato-store-order.html
+  - title: Arvato - Risk Check 2.0
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/arvato/v.2.0/arvato-risk-check-2.0.html
+  - title: Arvato
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/arvato/arvato.html
 ---
 
 The purpose of developing the risk solution services is to provide a complete and comprehensive risk management for the eCommerce/mail-order industry, contributing to a high level of modularization and automation. Besides the use of pre-configured service modules for risk management, risk solution services comprise process support up to the  outsourcing of the entire operative risk management. All risk management processes are supported by a business intelligence component.

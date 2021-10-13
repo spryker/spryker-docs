@@ -6,6 +6,11 @@ originalArticleId: ccda72ae-7a95-4e61-bcde-ae73fe8c77c8
 redirect_from:
   - /v6/docs/cms-page-search-product-lists-catalog-feature-integration
   - /v6/docs/en/cms-page-search-product-lists-catalog-feature-integration
+related:
+  - title: CMS pages in search results
+    link: docs/scos/user/features/202009.0/cms-feature-overview/cms-pages-in-search-results-overview.html
+  - title: CMS page
+    link: docs/scos/user/features/202009.0/cms-feature-overview/cms-pages-overview.html
 ---
 
 ## Install Feature Core

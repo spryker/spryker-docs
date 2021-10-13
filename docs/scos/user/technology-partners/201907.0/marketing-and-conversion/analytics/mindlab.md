@@ -7,6 +7,9 @@ originalArticleId: 0f9aa626-ab00-440c-a187-f2cde159b074
 redirect_from:
   - /v3/docs/mindlab
   - /v3/docs/en/mindlab
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/201811.0/technology-partner-integration.html
 ---
 
 ## Partner Information

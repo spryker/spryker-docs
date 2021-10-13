@@ -7,6 +7,9 @@ originalArticleId: 57210613-8962-45ea-ab4a-d90eb36e066d
 redirect_from:
   - /v6/docs/viewing-product-barcodes
   - /v6/docs/en/viewing-product-barcodes
+related:
+  - title: Barcode Generator Feature Overview
+    link: docs/scos/user/features/202001.0/product-barcode-feature-overview.html
 ---
 
 To view product barcodes, go to **Catalog > Product Barcodes**.

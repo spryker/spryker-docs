@@ -7,6 +7,19 @@ originalArticleId: a9320fb7-1758-4fca-b8df-47356144750d
 redirect_from:
   - /v6/docs/creating-abstract-products-and-product-bundles
   - /v6/docs/en/creating-abstract-products-and-product-bundles
+related:
+  - title: Creating Product Variants
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/concrete-products/creating-product-variants.html
+  - title: Editing Product Variants
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/concrete-products/editing-product-variants.html
+  - title: Managing Products
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/managing-products/managing-products.html
+  - title: Discontinuing Products
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/managing-products/discontinuing-products.html
+  - title: Adding Product Alternatives
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/managing-products/adding-product-alternatives.html
+  - title: Adding Volume Prices
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html
 ---
 
 This topic describes how to create [abstract products](https://documentation.spryker.com/v6/docs/products-overview#abstract-products-and-product-variants) and [product bundles](/docs/scos/user/features/{{page.version}}/product-bundles/product-bundles-feature-overview.html).

@@ -8,6 +8,9 @@ redirect_from:
   - /2021080/docs/en/mg-checkoutrestapi
   - /docs/mg-checkoutrestapi
   - /docs/en/mg-checkoutrestapi
+related:
+  - title: Migration Guide - Payment
+    link: docs/scos/dev/module-migration-guides/202001.0/migration-guide-payment.html
 ---
 
 ## Upgrading from Version 2.* to Version 3.0.0

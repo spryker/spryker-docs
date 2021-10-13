@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/managing-attributes
   - /docs/managing-attributes
   - /docs/en/managing-attributes
+related:
+  - title: Product Attributes
+    link: docs/scos/user/features/202001.0/product-feature-overview/product-attributes-overview.html
+  - title: Super Attributes
+    link: docs/scos/user/features/202001.0/product-information-management/super-attributes.html
 ---
 
 This topic describes how to manage product attributes.

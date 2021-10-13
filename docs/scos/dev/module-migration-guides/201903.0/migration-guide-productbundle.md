@@ -6,6 +6,11 @@ originalArticleId: 00241217-6a9b-4d73-9496-ff0271485b4b
 redirect_from:
   - /v2/docs/mg-product-bundle
   - /v2/docs/en/mg-product-bundle
+related:
+  - title: Migration Guide - Price
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-price.html
+  - title: Migration Guide - Product
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-product.html
 ---
 
 ## Upgrading from Version 4.* to Version 5.0.0

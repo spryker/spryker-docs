@@ -7,6 +7,27 @@ originalArticleId: f78ed79d-25dc-42cb-92f0-bebaf77e6926
 redirect_from:
   - /v5/docs/amazon-pay-api-demoshop
   - /v5/docs/en/amazon-pay-api-demoshop
+related:
+  - title: Amazon Pay - Obtaining an Amazon Order Reference and Information About Shipping Addresses
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/amazon-pay/scos-integration/amazon-pay-obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
+  - title: Amazon Pay - Rendering a “Pay with Amazon” Button on the Cart Page
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-rendering-a-pay-with-amazon-button-on-the-cart-page.html
+  - title: Amazon Pay - Support of Bundled Products
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-support-of-bundled-products.html
+  - title: Amazon Pay - State Machine
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-state-machine.html
+  - title: Amazon Pay - API
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/amazon-pay/scos-integration/amazon-pay-api.html
+  - title: Amazon Pay - Order Reference and Information about Shipping Addresses
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-order-reference-and-information-about-shipping-addresses.html
+  - title: Amazon Pay - Configuration for the SCOS
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/amazon-pay/scos-integration/amazon-pay-configuration-for-the-scos.html
+  - title: Amazon Pay - Sandbox Simulations
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/amazon-pay/scos-integration/amazon-pay-sandbox-simulations.html
+  - title: Amazon Pay - Sandbox Simulations
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-sandbox-simulations.html
+  - title: Amazon Pay - Email Notifications
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-email-notifications.html
 ---
 
 So far we discussed the client side implementation provided by Amazon Pay. On the Spryker OS side, the module provides tools for rendering Amazon Pay widgets.

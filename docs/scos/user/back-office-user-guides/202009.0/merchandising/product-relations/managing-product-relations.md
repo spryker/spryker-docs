@@ -7,6 +7,9 @@ originalArticleId: 9164f118-89ff-4ba3-a1f2-9defa0e94631
 redirect_from:
   - /v6/docs/managing-product-relations
   - /v6/docs/en/managing-product-relations
+related:
+  - title: Product Relations Feature Overview
+    link: docs/scos/user/features/202001.0/product-relations-feature-overview.html
 ---
 
 This topic describes how you manage product relations.

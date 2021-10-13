@@ -9,6 +9,19 @@ redirect_from:
   - /2021080/docs/en/retrieving-companies
   - /docs/retrieving-companies
   - /docs/en/retrieving-companies
+related:
+  - title: Logging In as Company User
+    link: docs/scos/dev/glue-api-guides/202001.0/managing-b2b-account/authenticating-as-a-company-user.html
+  - title: Retrieving Company User Information
+    link: docs/scos/dev/glue-api-guides/202001.0/managing-b2b-account/retrieving-company-users.html
+  - title: Retrieving Business Unit Information
+    link: docs/scos/dev/glue-api-guides/202001.0/managing-b2b-account/retrieving-business-unit-information.html
+  - title: Retrieving Company Role Information
+    link: docs/scos/dev/glue-api-guides/202001.0/managing-b2b-account/retrieving-company-roles.html
+  - title: Authentication and Authorization
+    link: docs/scos/dev/glue-api-guides/202001.0/managing-customers/authenticating-as-a-customer.html
+  - title: Company Account and General Organizational Structure
+    link: docs/scos/user/features/202001.0/company-account-feature-overview/company-accounts-overview.html
 ---
 
 This endpoint allows retrieving information about companies.

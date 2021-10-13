@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/file-details-product-label-storecsv
   - /docs/file-details-product-label-storecsv
   - /docs/en/file-details-product-label-storecsv
+related:
+  - title: Product Labels feature overview
+    link: docs/scos/user/features/202009.0/product-labels-feature-overview.html
 ---
 
 This article contains content of the **product_label_store.csv** file to configure [Product Label](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) information on your Spryker Demo Shop.

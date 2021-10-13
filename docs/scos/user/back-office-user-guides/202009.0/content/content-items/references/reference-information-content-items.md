@@ -7,6 +7,11 @@ originalArticleId: 05a48f6c-5e6b-4ce1-a76e-625dd46cef13
 redirect_from:
   - /v6/docs/content-items-reference-information
   - /v6/docs/en/content-items-reference-information
+related:
+  - title: Creating Content Items
+    link: docs/scos/user/back-office-user-guides/202005.0/content/content-items/creating-content-items.html
+  - title: Editing Content Items
+    link: docs/scos/user/back-office-user-guides/202005.0/content/content-items/editing-content-items.html
 ---
 
 This topic contains the reference information for working with content items in **Content Management** > **Content Items** section.

@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/mg-product-relation-collector
   - /docs/mg-product-relation-collector
   - /docs/en/mg-product-relation-collector
+related:
+  - title: Migration Guide - Product Relation
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-product-relation.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.*

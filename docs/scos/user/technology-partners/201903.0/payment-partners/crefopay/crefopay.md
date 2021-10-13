@@ -7,6 +7,19 @@ originalArticleId: 5fa9a0f1-c6d5-48fb-964b-29d4dbf35311
 redirect_from:
   - /v2/docs/crefopay
   - /v2/docs/en/crefopay
+related:
+  - title: CrefoPay - Integration
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/crefopay/crefopay-integration-into-a-project.html
+  - title: CrefoPay - Installation and Configuration
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/crefopay/crefopay-installation-and-configuration.html
+  - title: CrefoPay - Capture and Refund Processes
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-capture-and-refund-processes.html
+  - title: CrefoPay - Business to Business Model
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-business-to-business-model.html
+  - title: CrefoPay - Callback
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-callback.html
+  - title: CrefoPay - Notifications
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-notifications.html
 ---
 
 ## Partner Information

@@ -7,6 +7,19 @@ originalArticleId: acbf86b9-8718-451e-adad-9362e1c8e557
 redirect_from:
   - /v5/docs/administration-201911
   - /v5/docs/en/administration-201911
+related:
+  - title: Creating a Carrier Company
+    link: docs/scos/user/back-office-user-guides/202001.0/administration/delivery-methods/creating-carrier-companies.html
+  - title: Creating Warehouses
+    link: docs/scos/user/back-office-user-guides/202001.0/administration/warehouses/creating-warehouses.html
+  - title: Creating and Managing Delivery Methods
+    link: docs/scos/user/back-office-user-guides/202001.0/administration/delivery-methods/creating-and-managing-delivery-methods.html
+  - title: Managing Warehouses
+    link: docs/scos/user/back-office-user-guides/202001.0/administration/warehouses/managing-warehouses.html
+  - title: Stores
+    link: docs/scos/user/back-office-user-guides/202001.0/administration/stores.html
+  - title: Managing Payment Methods
+    link: docs/scos/user/back-office-user-guides/202001.0/administration/payment-methods/managing-payment-methods.html
 ---
 
 The **Administration** section in the Back Office is mostly used by:

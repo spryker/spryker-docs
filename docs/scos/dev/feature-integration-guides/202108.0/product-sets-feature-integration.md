@@ -9,6 +9,13 @@ redirect_from:
   - /2021080/docs/en/product-sets-feature-integration
   - /docs/product-sets-feature-integration
   - /docs/en/product-sets-feature-integration
+related:
+  - title: Product Sets feature overview
+    link: docs/scos/user/features/202009.0/product-sets-feature-overview.html
+  - title: Managing product sets
+    link: docs/scos/user/back-office-user-guides/202009.0/merchandising/product-sets/managing-product-sets.html
+  - title: Creating product sets
+    link: docs/scos/user/back-office-user-guides/202009.0/merchandising/product-sets/creating-product-sets.html
 ---
 
 This document describes how to integrate the [Product Sets feature](/docs/scos/user/features/{{page.version}}/product-sets-feature-overview.html) into a Spryker project.

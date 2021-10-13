@@ -18,6 +18,11 @@ redirect_from:
   - /v2/docs/en/extending-a-rest-request-resource
   - /v1/docs/extending-a-rest-request-resource
   - /v1/docs/en/extending-a-rest-request-resource
+related:
+  - title: Glue API Installation and Configuration
+    link: docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-installation-and-configuration.html
+  - title: Glue Infrastructure
+    link: docs/scos/dev/glue-api-guides/201811.0/glue-infrastructure.html
 ---
 
 Spryker Glue REST API comes with a set of predefined APIs out of the box. You have the possibility to extend and customize them to your own project needs. For this purpose, you need to extend the Glue API modules that provide the relevant functionality on your project level.

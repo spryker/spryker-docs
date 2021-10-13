@@ -15,6 +15,11 @@ redirect_from:
   - /v5/docs/en/standard-filters-backend-and-frontend-technical-details
   - /v4/docs/standard-filters-backend-and-frontend-technical-details
   - /v4/docs/en/standard-filters-backend-and-frontend-technical-details
+related:
+  - title: Category Filters feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/category-filters-feature-integration.html
+  - title: Managing Category Filters
+    link: docs/scos/user/back-office-user-guides/202001.0/merchandising/search-and-filters/managing-category-filters.html
 ---
 
 ## Backend Technical Details

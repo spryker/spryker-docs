@@ -7,6 +7,21 @@ originalArticleId: e9d392df-5379-4d6c-8231-899fe0b500ff
 redirect_from:
   - /v2/docs/updating-a-product-variant
   - /v2/docs/en/updating-a-product-variant
+related:
+  - title: Abstract and Concrete Products
+    link: docs/scos/user/back-office-user-guides/201903.0/catalog/products/abstract-and-concrete-products.html
+  - title: Managing Products
+    link: docs/scos/user/back-office-user-guides/201903.0/catalog/products/managing-products/managing-products.html
+  - title: Creating Product Bundles
+    link: docs/scos/user/back-office-user-guides/201903.0/catalog/products/abstract-products/creating-product-bundles.html
+  - title: Discontinuing Products
+    link: docs/scos/user/back-office-user-guides/201903.0/catalog/products/managing-products/discontinuing-products.html
+  - title: Adding Product Alternatives
+    link: docs/scos/user/back-office-user-guides/201903.0/catalog/products/managing-products/adding-product-alternatives.html
+  - title: Adding Volume Prices to Abstract Products
+    link: docs/scos/user/back-office-user-guides/201903.0/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html
+  - title: Concrete Product- Reference Information
+    link: docs/scos/user/back-office-user-guides/201903.0/catalog/products/references/concrete-product-reference-information.html
 ---
 
 This article describes how you update the product variant added during the abstract product setup.

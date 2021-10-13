@@ -7,6 +7,17 @@ originalArticleId: 10b16701-7623-4b04-b5e3-9160b30cc752
 redirect_from:
   - /v6/docs/payolution-workflow
   - /v6/docs/en/payolution-workflow
+related:
+  - title: Payolution - Invoice Payment
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/payolution/payolution-payment-methods/payolution-invoice-payment.html
+  - title: Payolution - Installment Payment
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/payolution/payolution-payment-methods/payolution-installment-payment.html
+  - title: Payolution
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/payolution/payolution.html
+  - title: Payolution - Configuration
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/payolution/payolution-installation-and-configuration.html
+  - title: Payolution - Performing Requests
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/payolution/technical-details-and-howtos/payolution-performing-requests.html
 ---
 
 Both [invoice](/docs/scos/dev/technology-partners/202009.0/payment-partners/payolution/payolution-payment-methods/payolution-invoice-payment.html) and [installment](/docs/scos/dev/technology-partners/202009.0/payment-partners/payolution/payolution-payment-methods/payolution-installment-payment.html) payemnt methods utilize the same request flow. It basically consists of the following requests:

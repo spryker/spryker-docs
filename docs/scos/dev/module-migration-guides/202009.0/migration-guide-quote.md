@@ -7,6 +7,9 @@ originalArticleId: c6cbacdb-0d62-4a2f-99ae-81e9ebe66360
 redirect_from:
   - /v6/docs/mg-quote
   - /v6/docs/en/mg-quote
+related:
+  - title: Migration Guide - Cart
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-cart.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.*

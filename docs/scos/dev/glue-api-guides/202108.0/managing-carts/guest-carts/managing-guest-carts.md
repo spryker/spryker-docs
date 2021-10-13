@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/managing-guest-carts
   - /docs/managing-guest-carts
   - /docs/en/managing-guest-carts
+related:
+  - title: Managing gift cards of guest users
+    link: docs/scos/dev/glue-api-guides/202009.0/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html
+  - title: Managing guest cart items
+    link: docs/scos/dev/glue-api-guides/202009.0/managing-carts/guest-carts/managing-guest-cart-items.html
 ---
 
 This endpoint allows to manage guest carts.

@@ -7,6 +7,11 @@ originalArticleId: 2d17f027-34ce-4b45-b2e1-bb0d7572418d
 redirect_from:
   - /v2/docs/prioritizing-labels
   - /v2/docs/en/prioritizing-labels
+related:
+  - title: Product Labels feature overview
+    link: docs/scos/user/features/201903.0/product-labels-feature-overview.html
+  - title: Product Labels- Reference Information
+    link: docs/scos/user/back-office-user-guides/201903.0/merchandising/product-labels/references/product-labels-reference-information.html
 ---
 
 This article describes how you can prioritize the labels.

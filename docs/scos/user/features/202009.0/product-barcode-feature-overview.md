@@ -9,6 +9,9 @@ redirect_from:
   - /v6/docs/en/product-barcode-feature-overview
   - /v6/docs/product-barcode
   - /v6/docs/en/product-barcode
+related:
+  - title: Viewing Product Barcodes
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/product-barcodes/viewing-product-barcodes.html
 ---
 
 

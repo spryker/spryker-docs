@@ -7,6 +7,9 @@ originalArticleId: 437ed78f-b437-4fb5-8186-f7286e1207f1
 redirect_from:
   - /v6/docs/managing-agent-assist-authentication-tokens
   - /v6/docs/en/managing-agent-assist-authentication-tokens
+related:
+  - title: Agent Assist feature overview
+    link: docs/scos/user/features/202009.0/agent-assist-feature-overview.html
 ---
 
 

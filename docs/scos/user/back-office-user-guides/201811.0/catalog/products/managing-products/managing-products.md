@@ -7,6 +7,23 @@ originalArticleId: 6c8da871-37bf-492f-ae1d-301320e16e76
 redirect_from:
   - /v1/docs/managing-products
   - /v1/docs/en/managing-products
+related:
+  - title: Creating Product Variants
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/concrete-products/creating-product-variants.html
+  - title: Discontinuing Products
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/managing-products/discontinuing-products.html
+  - title: Creating and Managing Product Bundles
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/abstract-products/creating-product-bundles.html
+  - title: Adding Product Alternatives
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/managing-products/adding-product-alternatives.html
+  - title: Adding Volume Prices
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html
+  - title: Products- Reference Information
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/references/products-reference-information.html
+  - title: Abstract Product- Reference Information
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/references/abstract-product-reference-information.html
+  - title: Concrete Product- Reference Information
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/references/concrete-product-reference-information.html
 ---
 
 This article describes the managing actions that you do for both abstract and concrete products as those actions are very similar.

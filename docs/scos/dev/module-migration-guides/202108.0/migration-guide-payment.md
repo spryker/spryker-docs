@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/mg-payment
   - /docs/mg-payment
   - /docs/en/mg-payment
+related:
+  - title: Migration Guide - CheckoutRestApi
+    link: docs/scos/dev/module-migration-guides/202001.0/glue-api/migration-guide-checkoutrestapi.html
 ---
 
 ## Upgrading from Version 4.* to Version 5.0.0

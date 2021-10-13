@@ -7,6 +7,17 @@ originalArticleId: bcf91d9d-1f8d-45f6-bce5-2441446d1467
 redirect_from:
   - /v3/docs/creating-a-cart-rule-discount
   - /v3/docs/en/creating-a-cart-rule-discount
+related:
+  - title: Discount- Reference Information
+    link: docs/scos/user/back-office-user-guides/201811.0/merchandising/discount/references/discount-reference-information.html
+  - title: Discount Calculation- Reference Information
+    link: docs/scos/user/back-office-user-guides/201811.0/merchandising/discount/references/discount-calculation-reference-information.html
+  - title: Discount Conditions- Reference Information
+    link: docs/scos/user/back-office-user-guides/201811.0/merchandising/discount/references/discount-conditions-reference-information.html
+  - title: Voucher Codes- Reference Information
+    link: docs/scos/user/back-office-user-guides/201811.0/merchandising/discount/references/voucher-codes-reference-information.html
+  - title: Token Description Tables
+    link: docs/scos/user/back-office-user-guides/201811.0/merchandising/discount/references/token-description-tables.html
 ---
 
 This topic describes how to create a Cart Rule discount.

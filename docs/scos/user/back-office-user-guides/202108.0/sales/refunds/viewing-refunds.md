@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/viewing-refunds
   - /docs/viewing-refunds
   - /docs/en/viewing-refunds
+related:
+  - title: Refunds feature overview
+    link: docs/scos/user/features/202001.0/refunds-feature-overview.html
 ---
 
 This topic describes how to view refunds. 

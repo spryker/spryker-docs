@@ -7,6 +7,9 @@ originalArticleId: e550e031-ff30-4382-98a5-c0868e304b53
 redirect_from:
   - /v1/docs/order-history-api-feature-integration
   - /v1/docs/en/order-history-api-feature-integration
+related:
+  - title: Retrieving Customer's Order History
+    link: docs/scos/dev/glue-api-guides/201811.0/managing-customers/retrieving-customer-orders.html
 ---
 
 ## Install Feature API

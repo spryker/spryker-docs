@@ -7,6 +7,13 @@ originalArticleId: dd99a610-fa07-4de6-99b2-5a5a13e3d366
 redirect_from:
   - /v4/docs/mg-calculation
   - /v4/docs/en/mg-calculation
+related:
+  - title: Calculation 3.0
+    link: docs/scos/dev/feature-walkthroughs/201811.0/cart-feature-walkthrough/calculation-3.0.html
+  - title: Calculation Data Structure
+    link: docs/scos/dev/feature-walkthroughs/201811.0/cart-feature-walkthrough/calculation-data-structure.html
+  - title: Calculator Plugins
+    link: docs/scos/dev/feature-walkthroughs/201811.0/cart-feature-walkthrough/calculator-plugins.html
 ---
 
 ## Upgrading from Version 3.* to Version 4.*

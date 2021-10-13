@@ -7,6 +7,13 @@ originalArticleId: 7e78a9c5-3440-432b-a658-4dd368929879
 redirect_from:
   - /v1/docs/arvato-store-order-2-0
   - /v1/docs/en/arvato-store-order-2-0
+related:
+  - title: Arvato - Risk Check 2.0
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/arvato/v.2.0/arvato-risk-check-2.0.html
+  - title: Arvato - Risk Solution Services Integration 2.0
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/arvato/v.2.0/arvato-risk-solution-services-integration-2.0.html
+  - title: Arvato
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/arvato/arvato.html
 ---
 
  As soon as the order is activated in the eShop it has to be directly delivered by the service call StoreOrder in risk solution services. Based on the transmitted data a limit check is processed again. The result and action codes returned by `StoreOrder` should be analyzed and the order process should be stopped if applicable.

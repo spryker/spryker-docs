@@ -7,6 +7,21 @@ originalArticleId: 0f7861dd-2789-44cb-958d-578f4fe8723e
 redirect_from:
   - /v1/docs/search-factfinder-suggest
   - /v1/docs/en/search-factfinder-suggest
+related:
+  - title: FACT-Finder
+    link: docs/scos/user/technology-partners/201811.0/marketing-and-conversion/analytics/fact-finder.html
+  - title: Installing and configuring FACT-Finder NG API
+    link: docs/scos/dev/technology-partner-guides/201811.0/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-the-fact-finder-ng-api.html
+  - title: Using FACT-Finder search
+    link: docs/scos/dev/technology-partner-guides/201811.0/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search.html
+  - title: Using FACT-Finder tracking
+    link: docs/scos/dev/technology-partner-guides/201811.0/marketing-and-conversion/analytics/fact-finder/using-fact-finder-tracking.html
+  - title: Using FACT-Finder recommendation engine
+    link: docs/scos/dev/technology-partner-guides/201811.0/marketing-and-conversion/analytics/fact-finder/using-fact-finder-recommendation-engine.html
+  - title: Using FACT-Finder campaigns
+    link: docs/scos/dev/technology-partner-guides/201811.0/marketing-and-conversion/analytics/fact-finder/using-fact-finder-campaigns.html
+  - title: Exporting product data for FACT-Finder
+    link: docs/scos/dev/technology-partner-guides/201811.0/marketing-and-conversion/analytics/fact-finder/exporting-product-data-for-fact-finder.html
 ---
 
 ## Prerequisites

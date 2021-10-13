@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/managing-content-of-emails-via-cms-blocks
   - /docs/managing-content-of-emails-via-cms-blocks
   - /docs/en/managing-content-of-emails-via-cms-blocks
+related:
+  - title: Email as a CMS block
+    link: docs/scos/user/features/202009.0/cms-feature-overview/email-as-a-cms-block-overview.html
 ---
 
 You can manage the content of emails you send to customers by editing [email templates via CMS Blocks](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html). 

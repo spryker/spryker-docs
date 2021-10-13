@@ -15,6 +15,9 @@ redirect_from:
   - /v5/docs/en/ht-create-a-new-custom-scheduler
   - /v4/docs/ht-create-a-new-custom-scheduler
   - /v4/docs/en/ht-create-a-new-custom-scheduler
+related:
+  - title: Cronjob Scheduling
+    link: docs/scos/dev/sdk/201811.0/cronjob-scheduling.html
 ---
 
 To create a new custom scheduler:

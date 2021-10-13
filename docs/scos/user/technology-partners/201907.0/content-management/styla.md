@@ -7,6 +7,9 @@ originalArticleId: b791c01e-1d90-4157-96e8-1135ba82ac8b
 redirect_from:
   - /v3/docs/styla
   - /v3/docs/en/styla
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/201811.0/technology-partner-integration.html
 ---
 
 ## Partner Information

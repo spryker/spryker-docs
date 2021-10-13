@@ -7,6 +7,17 @@ originalArticleId: 7330bdd4-2674-4ad5-9e4b-ad1ae7f6763b
 redirect_from:
   - /v6/docs/product-labels-feature-integration
   - /v6/docs/en/product-labels-feature-integration
+related:
+  - title: Alternative products + product label feature integration
+    link: docs/scos/dev/feature-integration-guides/202009.0/alternative-products-product-label-feature-integration.html
+  - title: Product group + product labels feature integration
+    link: docs/scos/dev/feature-integration-guides/202009.0/product-group-product-labels-feature-integration.html
+  - title: Glue API- Product labels feature integration
+    link: docs/scos/dev/feature-integration-guides/202009.0/glue-api/glue-api-product-labels-feature-integration.html
+  - title: Discontinued products + product labels feature integration
+    link: docs/scos/dev/feature-integration-guides/202009.0/discontinued-products-product-labels-feature-integration.html
+  - title: Product labels + promotions & discounts feature integration
+    link: docs/scos/dev/feature-integration-guides/202009.0/product-labels-promotions-and-discounts-feature-integration.html
 ---
 
 ## Install Feature Core

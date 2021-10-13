@@ -7,6 +7,9 @@ originalArticleId: f29677ba-ddc3-4646-a392-fe5a8bb6657e
 redirect_from:
   - /v3/docs/merchant-custom-prices-feature-integration
   - /v3/docs/en/merchant-custom-prices-feature-integration
+related:
+  - title: Prices per Merchant Relation Feature Overview
+    link: docs/scos/user/features/201811.0/merchant-custom-prices-feature-overview.html
 ---
 
 ## Install Feature Core

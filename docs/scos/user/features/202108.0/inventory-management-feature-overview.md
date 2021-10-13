@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/inventory-management-feature-overview
   - /docs/inventory-management-feature-overview
   - /docs/en/inventory-management-feature-overview
+related:
+  - title: Managing warehouses
+    link: docs/scos/user/back-office-user-guides/202108.0/administration/warehouses/managing-warehouses.html
+  - title: File details- product_stock.csv
+    link: docs/scos/dev/data-import/202108.0/data-import-categories/catalog-setup/stocks/file-details-product-stock.csv.html
 ---
 
 Thr *Inventory Management* feature refers to warehousing and managing your store’s stock. In this context, a *warehouse* is the physical place where your products are stored, and *stock* is the number of products available in the warehouse. See [Warehouse management](#warehouse-management) and [Stock management](#stock-management) for details on how to manage them.

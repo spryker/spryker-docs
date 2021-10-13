@@ -7,6 +7,17 @@ originalArticleId: 242c2c18-c58d-4fd9-b2cb-51b17329072e
 redirect_from:
   - /v5/docs/retrieving-alternative-products-201903
   - /v5/docs/en/retrieving-alternative-products-201903
+related:
+  - title: Retrieving Related Products
+    link: docs/scos/dev/glue-api-guides/202001.0/managing-products/retrieving-related-products.html
+  - title: Retrieving Product Information
+    link: docs/scos/dev/glue-api-guides/202001.0/managing-products/retrieving-product-information.html
+  - title: Alternative Products Feature Overview
+    link: docs/scos/user/features/202001.0/alternative-products-feature-overview.html
+  - title: Discontinued Products Feature Overview
+    link: docs/scos/user/features/202001.0/product-feature-overview/discontinued-products-overview.html
+  - title: Catalog Search
+    link: docs/scos/dev/glue-api-guides/202001.0/catalog-search.html
 ---
 
 The _Alternative Products_ feature allows customers to quickly find a substitute product in case if their preferred item runs out of stock or is no longer available for other reasons. The feature is particularly useful when a certain product becomes discontinued. In this case, customers usually look for a more up-to-date generation of the same product, and suggesting possible alternatives is especially crucial.

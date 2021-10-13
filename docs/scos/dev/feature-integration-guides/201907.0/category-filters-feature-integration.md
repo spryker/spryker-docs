@@ -7,6 +7,9 @@ originalArticleId: 0d24abeb-9978-40ca-af6d-ca9bdaffb9af
 redirect_from:
   - /v3/docs/category-filter-feature-integration
   - /v3/docs/en/category-filter-feature-integration
+related:
+  - title: Managing Category Filters
+    link: docs/scos/user/back-office-user-guides/201811.0/merchandising/search-and-filters/managing-category-filters.html
 ---
 
 ## Prerequisites

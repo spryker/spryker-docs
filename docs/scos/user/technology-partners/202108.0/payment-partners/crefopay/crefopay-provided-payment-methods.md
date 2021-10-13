@@ -9,6 +9,21 @@ redirect_from:
   - /2021080/docs/en/crefopay-provided-payment-methods
   - /docs/crefopay-provided-payment-methods
   - /docs/en/crefopay-provided-payment-methods
+related:
+  - title: CrefoPay - Integration
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/crefopay/crefopay-integration-into-a-project.html
+  - title: CrefoPay
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/crefopay/crefopay.html
+  - title: CrefoPay - Installation and Configuration
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/crefopay/crefopay-installation-and-configuration.html
+  - title: CrefoPay - Capture and Refund Processes
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-capture-and-refund-processes.html
+  - title: CrefoPay - Business to Business Model
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-business-to-business-model.html
+  - title: CrefoPay - Callback
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-callback.html
+  - title: CrefoPay - Notifications
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-notifications.html
 ---
 
 CrefoPay supports key payment methods across different regions, channels, and verticals. This article gives overview of these payment methods.

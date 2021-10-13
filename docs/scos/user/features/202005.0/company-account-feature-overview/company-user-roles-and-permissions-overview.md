@@ -9,6 +9,15 @@ redirect_from:
   - /v5/docs/en/company-user-roles-and-permissions-overview
   - /v5/docs/company-user-roles-and-permissions
   - /v5/docs/en/company-user-roles-and-permissions
+related:
+  - title: Managing Company Users
+    link: docs/scos/user/back-office-user-guides/201811.0/customer/company-account/managing-company-users.html
+  - title: Shop Guide - Company Users
+    link: docs/scos/user/shop-user-guides/201811.0/shop-guide-company-users.html
+  - title: Managing Company Roles
+    link: docs/scos/user/back-office-user-guides/201811.0/customer/company-account/managing-company-roles.html
+  - title: Shop Guide - Company Roles
+    link: docs/scos/user/shop-user-guides/201811.0/shop-guide-company-roles.html
 ---
 
 Usually employees within a company have different roles (e.g. purchasing, administration, supervision, etc.). These roles are related to Company Users and are referred to as **Company Roles**. A role can be default (“is_default” flag), which means that it is used for all new users automatically.

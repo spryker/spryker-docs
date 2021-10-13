@@ -17,6 +17,11 @@ redirect_from:
   - /2021080/docs/en/shop-guide-managing-products
   - /docs/shop-guide-managing-products
   - /docs/en/shop-guide-managing-products
+related:
+  - title: Managing Products
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/managing-products/managing-products.html
+  - title: Product Attributes
+    link: docs/scos/user/features/201811.0/product-feature-overview/product-attributes-overview.html
 ---
 
 The *Product* feature allows creating products, manage their characteristics and settings.

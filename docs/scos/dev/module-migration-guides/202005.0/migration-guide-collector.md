@@ -7,6 +7,9 @@ originalArticleId: 5f6f58ea-f821-4a39-9e14-e25249c91b6a
 redirect_from:
   - /v5/docs/mg-collector
   - /v5/docs/en/mg-collector
+related:
+  - title: Migration Guide - Touch
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-touch.html
 ---
 
 ## Upgrading from Version 5.* to Version 6.*

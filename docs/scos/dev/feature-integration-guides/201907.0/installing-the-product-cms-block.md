@@ -7,6 +7,17 @@ originalArticleId: caf9c694-3afb-497f-96b8-32f269c443a3
 redirect_from:
   - /v3/docs/product-block
   - /v3/docs/en/product-block
+related:
+  - title: CMS Block
+    link: docs/scos/user/features/201811.0/cms-feature-overview/cms-blocks-overview.html
+  - title: Creating CMS Blocks
+    link: docs/scos/user/back-office-user-guides/201811.0/content/blocks/creating-cms-blocks.html
+  - title: Managing CMS Blocks
+    link: docs/scos/user/back-office-user-guides/201811.0/content/blocks/managing-cms-blocks.html
+  - title: Migration Guide - CMS Block
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-cmsblock.html
+  - title: Migration Guide - CMS Block GUI
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-cmsblockgui.html
 ---
 
 Product blocks are blocks that can be embedded in the product template, for which we can specify on which specific product we want them to be rendered.

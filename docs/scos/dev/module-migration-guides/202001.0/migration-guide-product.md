@@ -7,6 +7,11 @@ originalArticleId: 1c819a63-3799-48b8-860c-ffb9f03fa0d6
 redirect_from:
   - /v4/docs/mg-product
   - /v4/docs/en/mg-product
+related:
+  - title: Migration Guide - Collector
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-collector.html
+  - title: Migration Guide - ProductManagement
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-productmanagement.html
 ---
 
 ## Upgrading from Version 5.* to Version 6.*

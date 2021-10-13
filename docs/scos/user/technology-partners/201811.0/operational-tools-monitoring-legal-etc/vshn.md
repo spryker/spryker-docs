@@ -7,6 +7,9 @@ originalArticleId: b498f6f9-2d15-4991-a0af-c454f9458214
 redirect_from:
   - /v1/docs/vshn
   - /v1/docs/en/vshn
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/201811.0/technology-partner-integration.html
 ---
 
 ## Partner Information

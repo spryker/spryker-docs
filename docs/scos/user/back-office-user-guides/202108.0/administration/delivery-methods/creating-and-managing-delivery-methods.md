@@ -9,6 +9,13 @@ redirect_from:
   - /2021080/docs/en/creating-and-managing-shipment-methods
   - /docs/creating-and-managing-shipment-methods
   - /docs/en/creating-and-managing-shipment-methods
+related:
+  - title: Shipment feature overview
+    link: docs/scos/user/features/202001.0/shipment-feature-overview.html
+  - title: Creating a Carrier Company
+    link: docs/scos/user/back-office-user-guides/202001.0/administration/delivery-methods/creating-carrier-companies.html
+  - title: Delivery Methods- Reference Information
+    link: docs/scos/user/back-office-user-guides/202001.0/administration/delivery-methods/references/delivery-methods-reference-information.html
 ---
 
 This topic describes how to create and manage shipment methods.

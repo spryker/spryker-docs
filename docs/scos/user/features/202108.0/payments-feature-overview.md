@@ -9,6 +9,19 @@ redirect_from:
   - /2021080/docs/en/payments-feature-overview
   - /docs/payments-feature-overview
   - /docs/en/payments-feature-overview
+related:
+  - title: Migration Guide - Payment
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-payment.html
+  - title: Payments feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/payments-feature-integration.html
+  - title: Managing Payment Methods
+    link: docs/scos/user/back-office-user-guides/202001.0/administration/payment-methods/managing-payment-methods.html
+  - title: Payment Methods- Reference Information
+    link: docs/scos/user/back-office-user-guides/202001.0/administration/payment-methods/references/payment-methods-reference-information.html
+  - title: File details- payment_method.csv
+    link: docs/scos/dev/data-import/202009.0/data-import-categories/commerce-setup/file-details-payment-method.csv.html
+  - title: File details- payment_method_store.csv
+    link: docs/scos/dev/data-import/202009.0/data-import-categories/commerce-setup/file-details-payment-method-store.csv.html
 ---
 
 The *Payments* feature allows your customers to pay for orders with none (for example, a [gift card](/docs/scos/user/features/{{page.version}}/gift-cards-feature-overview.html), one or multiple payment methods during the checkout process. Most orders are paid with a single payment method but in some cases, it may be useful to allow multiple payment methods. For instance, the customer may want to use two credit cards or a gift card in addition to a traditional payment method.

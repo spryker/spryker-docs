@@ -6,6 +6,9 @@ originalArticleId: c0c66225-7379-4754-8986-896934225dc1
 redirect_from:
   - /v3/docs/mg-console
   - /v3/docs/en/mg-console
+related:
+  - title: Migration Guide - Collector
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-collector.html
 ---
 
 ## Upgrading from Version 3.* to Version 4.*

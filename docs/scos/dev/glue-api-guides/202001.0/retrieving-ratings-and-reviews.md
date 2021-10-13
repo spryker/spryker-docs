@@ -6,6 +6,11 @@ originalArticleId: 60b37718-78b9-40f9-a3cb-edad3c01af51
 redirect_from:
   - /v4/docs/retrieving-ratings-and-reviews
   - /v4/docs/en/retrieving-ratings-and-reviews
+related:
+  - title: Rating and Reviews
+    link: docs/scos/user/features/202001.0/rating-and-reviews/rating-and-reviews.html
+  - title: Rating and Review Management
+    link: docs/scos/user/features/202001.0/rating-and-reviews/rating-and-review-management.html
 ---
 
 [Ratings and reviews](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews-feature-overview.html) allow customers to share their opinions and experiences about purchases. This enables customers to take meaningful decisions about purchases and increases their trust with the shop.

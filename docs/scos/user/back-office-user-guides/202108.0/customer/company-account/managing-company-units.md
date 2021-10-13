@@ -9,6 +9,15 @@ redirect_from:
   - /2021080/docs/en/managing-company-units
   - /docs/managing-company-units
   - /docs/en/managing-company-units
+related:
+  - title: Managing Company Users
+    link: docs/scos/user/back-office-user-guides/202001.0/customer/company-account/managing-company-users.html
+  - title: Managing Company Unit Addresses
+    link: docs/scos/user/back-office-user-guides/202001.0/customer/company-account/managing-company-unit-addresses.html
+  - title: Managing Company Roles
+    link: docs/scos/user/back-office-user-guides/202001.0/customer/company-account/managing-company-roles.html
+  - title: Company Account
+    link: docs/scos/user/back-office-user-guides/202001.0/customer/company-account/company-account.html
 ---
 
 This article describes how to manage company units. 

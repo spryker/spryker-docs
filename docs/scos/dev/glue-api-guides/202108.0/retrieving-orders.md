@@ -9,6 +9,13 @@ redirect_from:
   - /2021080/docs/en/retrieving-orders
   - /docs/retrieving-orders
   - /docs/en/retrieving-orders
+related:
+  - title: Order Management
+    link: docs/scos/user/features/202001.0/order-management-feature-overview/order-management-feature-overview.html
+  - title: Calculation 3.0
+    link: docs/scos/dev/feature-walkthroughs/202001.0/cart-feature-walkthrough/calculation-3-0.html
+  - title: Retrieving customer orders
+    link: docs/scos/dev/glue-api-guides/202108.0/managing-customers/retrieving-customer-orders.html
 ---
 
 This endpoint allows retrieving customer's orders.

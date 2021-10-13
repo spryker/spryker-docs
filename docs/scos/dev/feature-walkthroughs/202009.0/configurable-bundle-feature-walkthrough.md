@@ -8,6 +8,13 @@ originalArticleId: 32afb6b3-0cfc-4c00-98ba-345e482c0aac
 redirect_from:
   - /v6/docs/configurable-bundle-module-relations
   - /v6/docs/en/configurable-bundle-module-relations
+related:
+  - title: Configurable Bundle Feature Overview
+    link: docs/scos/user/features/202001.0/configurable-bundle-feature-overview.html
+  - title: Configurable Bundle Templates
+    link: docs/scos/user/back-office-user-guides/202001.0/merchandising/configurable-bundle-templates/configurable-bundle-templates.html
+  - title: Shop Guide - Configurator
+    link: docs/scos/user/shop-user-guides/202001.0/shop-guide-configurator/shop-guide-configurator.html
 ---
 
 The _Configurable Bundle_ feature allows creating a configurable list of items.

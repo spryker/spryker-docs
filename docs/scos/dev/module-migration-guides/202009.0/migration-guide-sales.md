@@ -7,6 +7,9 @@ originalArticleId: a6e6c4b0-16ba-4b07-be2a-6d1421e601a4
 redirect_from:
   - /v6/docs/mg-sales
   - /v6/docs/en/mg-sales
+related:
+  - title: Sales
+    link: docs/scos/dev/feature-walkthroughs/201811.0/order-management-feature-walkthrough/sales-module-reference-information.html
 ---
 
 ## Upgrading from Version 10.* to Version 11.0.0

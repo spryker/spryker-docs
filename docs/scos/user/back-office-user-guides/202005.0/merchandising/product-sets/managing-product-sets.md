@@ -7,6 +7,11 @@ originalArticleId: 5cd422ba-931b-4165-bbcd-89db03a488cc
 redirect_from:
   - /v5/docs/managing-product-sets
   - /v5/docs/en/managing-product-sets
+related:
+  - title: Product Sets- Reference Information
+    link: docs/scos/user/back-office-user-guides/201811.0/merchandising/product-sets/references/product-sets-reference-information.html
+  - title: Product Sets
+    link: docs/scos/user/back-office-user-guides/202001.0/merchandising/product-sets/product-sets.html
 ---
 
 This article describes how to manage product sets.

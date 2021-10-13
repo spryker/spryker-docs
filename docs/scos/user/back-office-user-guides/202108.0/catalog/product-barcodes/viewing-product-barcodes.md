@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/viewing-product-barcodes
   - /docs/viewing-product-barcodes
   - /docs/en/viewing-product-barcodes
+related:
+  - title: Barcode Generator Feature Overview
+    link: docs/scos/user/features/202001.0/product-barcode-feature-overview.html
 ---
 
 To view product barcodes, go to **Catalog > Product Barcodes**.

@@ -6,6 +6,9 @@ originalArticleId: 7e615a56-cfb2-4e47-887b-cd27e1dff0b8
 redirect_from:
   - /v2/docs/code-sniffer
   - /v2/docs/en/code-sniffer
+related:
+  - title: Architecture Sniffer
+    link: docs/scos/dev/sdk/201811.0/development-tools/architecture-sniffer.html
 ---
 
 To correspond to [PSR-2 standards](http://www.php-fig.org/psr/psr-2/), we integrated the well known [PHP-CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) and [PHPCodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).

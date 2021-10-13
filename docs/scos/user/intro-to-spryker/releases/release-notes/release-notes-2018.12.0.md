@@ -21,6 +21,17 @@ redirect_from:
   - /v1/docs/en/release-notes-2018-12-0
   - /v6/docs/release-notes-2018-12-0
   - /v6/docs/en/release-notes-2018-12-0
+related:
+  - title: Catalog Search
+    link: docs/scos/dev/glue-api-guides/201811.0/catalog-search.html
+  - title: Managing Customers
+    link: docs/scos/dev/glue-api-guides/201811.0/managing-customers/managing-customers.html
+  - title: Managing Wishlists
+    link: docs/scos/dev/glue-api-guides/201811.0/managing-wishlists/managing-wishlists.html
+  - title: Retrieving Customer's Order History
+    link: docs/scos/dev/glue-api-guides/201811.0/managing-customers/retrieving-customer-orders.html
+  - title: REST API Reference
+    link: docs/scos/dev/glue-api-guides/201811.0/rest-api-reference.html
 ---
 
  The Spryker Commerce OS is an end-to-end solution for e-commerce. This document contains business level description of major new features and enhancements released in November of 2018.

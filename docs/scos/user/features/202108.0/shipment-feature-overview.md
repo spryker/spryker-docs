@@ -13,6 +13,13 @@ redirect_from:
   - /2021080/docs/en/shipment-summary
   - /docs/shipment-summary
   - /docs/en/shipment-summary
+related:
+  - title: "Reference information: Shipment method plugins"
+    link: docs/scos/dev/feature-walkthroughs/201811.0/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html
+  - title: Migration Guide - Shipment
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-shipment.html
+  - title: Shipment feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/shipment-feature-integration.html
 ---
 
 The *Shipment* feature allows you to create and manage carrier companies and assign multiple delivery methods associated with specific stores, which your customers can select during the checkout. With the feature in place, you can define delivery price and expected delivery time, tax sets, and availability of the delivery method per store.

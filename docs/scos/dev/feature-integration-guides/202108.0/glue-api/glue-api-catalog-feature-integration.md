@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/catalog-api-feature-integration
   - /docs/catalog-api-feature-integration
   - /docs/en/catalog-api-feature-integration
+related:
+  - title: Catalog Search
+    link: docs/scos/dev/glue-api-guides/202001.0/catalog-search.html
+  - title: Getting Suggestions for Auto-Completion and Search
+    link: docs/scos/dev/glue-api-guides/202001.0/getting-suggestions-for-auto-completion-and-search.html
 ---
 
 ## Install Feature API

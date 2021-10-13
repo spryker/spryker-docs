@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/glue-api-wishlist-feature-integration
   - /docs/glue-api-wishlist-feature-integration
   - /docs/en/glue-api-wishlist-feature-integration
+related:
+  - title: Managing Wishlists
+    link: docs/scos/dev/glue-api-guides/202005.0/managing-wishlists/managing-wishlists.html
 ---
 
 Follow the steps below to install Wishlist feature API.

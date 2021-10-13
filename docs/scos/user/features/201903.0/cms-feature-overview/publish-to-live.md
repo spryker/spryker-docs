@@ -7,6 +7,11 @@ originalArticleId: e2ffd4f9-7db5-4dba-abd0-f7bc28cd7c4d
 redirect_from:
   - /v2/docs/publish-to-live
   - /v2/docs/en/publish-to-live
+related:
+  - title: Managing CMS Blocks
+    link: docs/scos/user/back-office-user-guides/201811.0/content/blocks/managing-cms-blocks.html
+  - title: Managing CMS Pages
+    link: docs/scos/user/back-office-user-guides/201811.0/content/pages/managing-cms-pages.html
 ---
 
 {% info_block infoBox %}

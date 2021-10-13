@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/searching-by-customers-as-an-agent-assist
   - /docs/searching-by-customers-as-an-agent-assist
   - /docs/en/searching-by-customers-as-an-agent-assist
+related:
+  - title: Agent Assist feature overview
+    link: docs/scos/user/features/202009.0/agent-assist-feature-overview.html
 ---
 
 

@@ -7,6 +7,9 @@ originalArticleId: b0bf811c-d33c-4137-b630-7bf35242057a
 redirect_from:
   - /v6/docs/channelpilot-analytics
   - /v6/docs/en/channelpilot-analytics
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/201811.0/technology-partner-integration.html
 ---
 
 ## Partner Information

@@ -7,6 +7,9 @@ originalArticleId: 006c6ee8-1f3d-455f-83a2-93fd5b697c4f
 redirect_from:
   - /v6/docs/sales-data-export-feature-integration
   - /v6/docs/en/sales-data-export-feature-integration
+related:
+  - title: Data export
+    link: docs/scos/dev/sdk/202009.0/data-export.html
 ---
 
 ## Install Feature Core

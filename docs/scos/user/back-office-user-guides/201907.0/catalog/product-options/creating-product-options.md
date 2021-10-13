@@ -7,6 +7,13 @@ originalArticleId: ba11713e-413d-45f6-ad27-ea6d03da5c8b
 redirect_from:
   - /v3/docs/creating-a-product-option
   - /v3/docs/en/creating-a-product-option
+related:
+  - title: Product Options feature overview
+    link: docs/scos/user/features/201907.0/product-options-feature-overview.html
+  - title: Product Options- Reference Information
+    link: docs/scos/user/back-office-user-guides/201907.0/catalog/product-options/references/product-options-reference-information.html
+  - title: Managing Product Options
+    link: docs/scos/user/back-office-user-guides/201907.0/catalog/product-options/managing-product-options.html
 ---
 
 This article describes the procedure you need to perform in order to create a  product option.

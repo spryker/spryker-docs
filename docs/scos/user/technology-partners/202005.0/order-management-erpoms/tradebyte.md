@@ -7,6 +7,9 @@ originalArticleId: ac5da55d-96a1-4b7b-877e-ea00147d2fc3
 redirect_from:
   - /v5/docs/tradebyte
   - /v5/docs/en/tradebyte
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/201811.0/technology-partner-integration.html
 ---
 
 ## Partner Information

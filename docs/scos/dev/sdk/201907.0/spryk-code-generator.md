@@ -7,6 +7,9 @@ originalArticleId: 45df363e-60db-4796-b804-a0253248c3fb
 redirect_from:
   - /v3/docs/spryk
   - /v3/docs/en/spryk
+related:
+  - title: Code Generator
+    link: docs/scos/dev/sdk/201811.0/code-generator.html
 ---
 
 Spryk is a code generation tool for Spryker OS that ships as a part of the SDK product.

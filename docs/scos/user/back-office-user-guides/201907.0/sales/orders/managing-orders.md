@@ -7,6 +7,11 @@ originalArticleId: 09502324-ea05-49a8-9367-46cb7a8f74b9
 redirect_from:
   - /v3/docs/managing-orders
   - /v3/docs/en/managing-orders
+related:
+  - title: Orders- Reference Information
+    link: docs/scos/user/back-office-user-guides/201811.0/sales/orders/references/orders-reference-information.html
+  - title: Order Management
+    link: docs/scos/user/features/201907.0/order-management-feature-overview/order-management-feature-overview.html
 ---
 
 When a customer buys something from your online store, the information on their order is automatically transferred to the Orders page. 

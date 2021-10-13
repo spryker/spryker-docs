@@ -7,6 +7,9 @@ originalArticleId: 7ce46d18-6174-4878-80f1-aa909260fe6d
 redirect_from:
   - /v6/docs/mg-console
   - /v6/docs/en/mg-console
+related:
+  - title: Migration Guide - Collector
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-collector.html
 ---
 
 {% info_block errorBox "Prerequisites" %}

@@ -7,6 +7,11 @@ originalArticleId: a7cbcb97-233b-47df-88a5-2d65d66d2e96
 redirect_from:
   - /v6/docs/akeneo
   - /v6/docs/en/akeneo
+related:
+  - title: Akeneo - Console commands
+    link: docs/scos/user/technology-partners/202009.0/product-information-pimerp/akeneo/akeneo-console-commands.html
+  - title: Akeneo - Installation and Configuration
+    link: docs/scos/user/technology-partners/202009.0/product-information-pimerp/akeneo/akeneo-installation-and-configuration.html
 ---
 
 ## Partner Information

@@ -7,6 +7,9 @@ originalArticleId: cab21403-229f-4837-8ce6-315f77835df7
 redirect_from:
   - /v1/docs/product-lists
   - /v1/docs/en/product-lists
+related:
+  - title: Product Quantity Restrictions Feature Overview
+    link: docs/scos/user/features/201811.0/non-splittable-products-feature-overview.html
 ---
 
 Product Lists section in Back Office is designed to set specific restrictions for the **B2B** customers.

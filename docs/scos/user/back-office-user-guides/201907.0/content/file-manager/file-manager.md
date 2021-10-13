@@ -7,6 +7,11 @@ originalArticleId: 3484eeef-7b4d-4299-a8b5-25788647c9ab
 redirect_from:
   - /v3/docs/file-manager
   - /v3/docs/en/file-manager
+related:
+  - title: File Uploader
+    link: docs/scos/user/features/201907.0/file-manager-feature-overview/file-uploader.html
+  - title: Media Management
+    link: docs/scos/user/features/201907.0/file-manager-feature-overview/file-manager-feature-overview.html
 ---
 
 The File Manager section in Spryker Back Office is mostly used by the Marketing Content Manager to download different types of files that are going to be used in the **Content Management > Content Items** section to create **File List** content items.

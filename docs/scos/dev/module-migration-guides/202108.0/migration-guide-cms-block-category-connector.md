@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/mg-cms-block-category-connector
   - /docs/mg-cms-block-category-connector
   - /docs/en/mg-cms-block-category-connector
+related:
+  - title: CMS Block
+    link: docs/scos/user/back-office-user-guides/201811.0/content/blocks/cms-block.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.*

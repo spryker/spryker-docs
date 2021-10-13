@@ -7,6 +7,13 @@ originalArticleId: 2912886c-7abc-48df-a373-85c7c946ed20
 redirect_from:
   - /v5/docs/shop-guide-creating-a-return
   - /v5/docs/en/shop-guide-creating-a-return
+related:
+  - title: Shop Guide - Printing a Return Slip
+    link: docs/scos/user/shop-user-guides/202005.0/shop-guide-customer-account/shop-guide-returns-management/shop-guide-printing-a-return-slip.html
+  - title: Return Details- Reference Information
+    link: docs/scos/user/shop-user-guides/202005.0/shop-guide-customer-account/references/return-details-reference-information.html
+  - title: Return Management Feature Overview
+    link: docs/scos/user/features/202005.0/return-management-feature-overview/return-management-feature-overview.html
 ---
 
 If you are not satisfied with the order items received from the seller or don’t need the items anymore, and the items are [returnable](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html) according to the Return Policy, you can return them. 

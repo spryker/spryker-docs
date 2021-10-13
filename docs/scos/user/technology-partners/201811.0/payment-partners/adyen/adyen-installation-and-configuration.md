@@ -7,6 +7,15 @@ originalArticleId: ff6765b6-058f-44a6-85d0-9d1270b7910d
 redirect_from:
   - /v1/docs/adyen-configuration
   - /v1/docs/en/adyen-configuration
+related:
+  - title: Payment Integration - Adyen
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/adyen/adyen.html
+  - title: Adyen - Integration
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/adyen/adyen-integration-into-a-project.html
+  - title: Adyen - Provided Payment Methods
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/adyen/adyen-provided-payment-methods.html
+  - title: Adyen - Filtering Payment Methods
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/adyen/adyen-filtering-payment-methods.html
 ---
 
 To integrate Adyen into your project, first you need to install and configure the Adyen module. This topic describes how to do that.

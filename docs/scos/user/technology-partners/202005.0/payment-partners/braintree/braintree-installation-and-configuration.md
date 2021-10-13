@@ -7,6 +7,13 @@ originalArticleId: e7838a29-b3fa-4780-a1bd-ef31cfcc0cd6
 redirect_from:
   - /v5/docs/braintree-configuration
   - /v5/docs/en/braintree-configuration
+related:
+  - title: Braintree - Performing Requests for SCOS
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/braintree/braintree-technical-details-and-howtos/braintree-performing-requests.html
+  - title: Braintree - Workflow for SCOS
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/braintree/braintree-technical-details-and-howtos/braintree-workflow.html
+  - title: Braintree
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/braintree/braintree.html
 ---
 
 To configure Braintree module for Spryker Commerce OS (SCOS), do the following:

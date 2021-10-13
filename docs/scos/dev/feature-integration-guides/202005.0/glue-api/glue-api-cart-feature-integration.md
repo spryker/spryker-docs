@@ -7,6 +7,9 @@ originalArticleId: 38873ba8-2abd-4884-86ed-be6b9f939bfe
 redirect_from:
   - /v5/docs/glue-api-cart-feature-integration
   - /v5/docs/en/glue-api-cart-feature-integration
+related:
+  - title: Managing Guest Carts
+    link: docs/scos/dev/glue-api-guides/202001.0/managing-carts/guest-carts/managing-guest-carts.html
 ---
 
 Follow the steps below to install Cart feature API.

@@ -7,6 +7,9 @@ originalArticleId: bce296c2-f6d0-4304-81a7-7a5df4404aac
 redirect_from:
   - /v5/docs/migration-guide-product-list-gui
   - /v5/docs/en/migration-guide-product-list-gui
+related:
+  - title: Migration Guide - MerchantRelationshipProductListGui
+    link: docs/scos/dev/module-migration-guides/202001.0/migration-guide-merchantrelationshipproductlistgui.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.0.0

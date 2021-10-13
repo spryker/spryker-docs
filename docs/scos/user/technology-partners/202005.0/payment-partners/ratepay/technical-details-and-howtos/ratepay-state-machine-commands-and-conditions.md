@@ -7,6 +7,25 @@ originalArticleId: 27aa3eae-3882-4eeb-a7c7-602fb16dccd0
 redirect_from:
   - /v5/docs/ratepay-state-machine
   - /v5/docs/en/ratepay-state-machine
+related:
+  - title: RatePay
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/ratepay/ratepay.html
+  - title: RatePay - Facade
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/ratepay/technical-details-and-howtos/ratepay-facade.html
+  - title: RatePay - How to Disable Address Updates from the Backend Application
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/ratepay/technical-details-and-howtos/ratepay-how-to-disable-address-updates-from-the-backend-application.html
+  - title: RatePay - Prepayment
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-prepayment.html
+  - title: RatePay- Core Module Structure Diagram
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/ratepay/ratepay-core-module-structure-diagram.html
+  - title: RatePay - Invoice
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-invoice.html
+  - title: RatePay - Payment Workflow
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/ratepay/technical-details-and-howtos/ratepay-payment-workflow.html
+  - title: RatePay - Installment
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-installment.html
+  - title: RatePay - Direct Debit
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-direct-debit.html
 ---
 
 ## Commands

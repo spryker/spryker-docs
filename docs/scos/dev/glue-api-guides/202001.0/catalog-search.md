@@ -7,6 +7,9 @@ originalArticleId: 5c66b9db-fe87-4ce3-b841-c56aa12f817c
 redirect_from:
   - /v4/docs/catalog-search
   - /v4/docs/en/catalog-search
+related:
+  - title: Catalog feature overview
+    link: docs/scos/user/features/201907.0/catalog-feature-overview.html
 ---
 
 The implementation of the search API offers you the same search experience as in the Spryker demo shops. The search engine used is Elasticsearch and search results go beyond the simple listing of products in the results section. The list of search results is paginated according to your configuration and spelling suggestions are offered when needed. In addition, sorting and facets are supported to narrow down the search results.

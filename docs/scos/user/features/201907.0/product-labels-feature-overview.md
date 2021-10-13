@@ -6,6 +6,17 @@ originalArticleId: c912a0b2-4a6a-4ae9-9004-5a678198231c
 redirect_from:
   - /v3/docs/product-label
   - /v3/docs/en/product-label
+related:
+  - title: Product Labels
+    link: docs/scos/user/back-office-user-guides/201811.0/merchandising/product-labels/product-labels.html
+  - title: Accessing Product Labels
+    link: docs/scos/dev/glue-api-guides/201811.0/managing-products/retrieving-product-labels.html
+  - title: Managing Product Labels
+    link: docs/scos/user/back-office-user-guides/201811.0/merchandising/product-labels/managing-product-labels.html
+  - title: Creating Product Labels
+    link: docs/scos/user/back-office-user-guides/201811.0/merchandising/product-labels/creating-product-labels.html
+  - title: Prioritizing Labels
+    link: docs/scos/user/back-office-user-guides/201811.0/merchandising/product-labels/prioritizing-labels.html
 ---
 
 The Product Label feature enables product catalog managers to highlight the desired products by adding a special type of information - product labels.

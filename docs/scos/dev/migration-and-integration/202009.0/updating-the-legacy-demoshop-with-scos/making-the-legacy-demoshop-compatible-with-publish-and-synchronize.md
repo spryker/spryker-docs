@@ -7,6 +7,11 @@ originalArticleId: 9abbb406-181f-46f3-b4ac-a5cb59dd57bb
 redirect_from:
   - /v6/docs/demoshop-with-publish-and-sync
   - /v6/docs/en/demoshop-with-publish-and-sync
+related:
+  - title: Making the Legacy Demoshop Compatible with the Modular Frontend
+    link: docs/scos/dev/migration-and-integration/201811.0/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-modular-frontend.html
+  - title: Making the Legacy Demoshop Compatible with the Atomic Frontend
+    link: docs/scos/dev/migration-and-integration/201811.0/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-atomic-frontend.html
 ---
 
 By following this document and adjusting all the necessary changes in the Legacy Demoshop, you will be able to set up the infrastructure for Publish &amp; Synchronize. If you need to learn more about any requirements needed and changes made to each particular feature, read their own [installation guides](/docs/scos/dev/feature-integration-guides/{{page.version}}/about-integration-guides.html).

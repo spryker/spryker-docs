@@ -7,6 +7,9 @@ originalArticleId: 8cbfb8e9-738f-4e49-a88b-e2ccc1a4e0dd
 redirect_from:
   - /v4/docs/company-account-integration
   - /v4/docs/en/company-account-integration
+related:
+  - title: Glue API- Company Account feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/glue-api/glue-api-company-account-feature-integration.html
 ---
 
 {% info_block errorBox %}

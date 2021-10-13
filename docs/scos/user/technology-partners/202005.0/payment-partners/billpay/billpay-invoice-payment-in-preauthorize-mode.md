@@ -6,6 +6,9 @@ originalArticleId: 4fdbdebb-5210-46b2-857d-aae0aa0b8c10
 redirect_from:
   - /v5/docs/billpay-payment-methods
   - /v5/docs/en/billpay-payment-methods
+related:
+  - title: Billpay
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/billpay/billpay.html
 ---
 
 Refer to [Billpay payment information](https://www.billpay.de/en/business-clients/payment-information/) for information about payment methods.

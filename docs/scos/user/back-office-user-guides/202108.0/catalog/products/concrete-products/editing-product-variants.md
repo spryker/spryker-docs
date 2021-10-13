@@ -9,6 +9,17 @@ redirect_from:
   - /2021080/docs/en/editing-a-product-variant
   - /docs/editing-a-product-variant
   - /docs/en/editing-a-product-variant
+related:
+  - title: Managing Products
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/products/managing-products/managing-products.html
+  - title: Discontinuing Products
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/products/managing-products/discontinuing-products.html
+  - title: Adding Product Alternatives
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/products/managing-products/adding-product-alternatives.html
+  - title: Adding Volume Prices
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/products/managing-products/adding-volume-prices.html
+  - title: Creating product bundles
+    link: docs/scos/user/back-office-user-guides/202009.0/catalog/products/abstract-products/creating-product-bundles.html
 ---
 
 This article describes how to update the product variant added during the abstract product setup.

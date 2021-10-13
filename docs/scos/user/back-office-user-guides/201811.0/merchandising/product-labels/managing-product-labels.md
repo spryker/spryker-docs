@@ -7,6 +7,13 @@ originalArticleId: 3ee5bca7-4008-4995-9a8a-8bc39ef40fb8
 redirect_from:
   - /v1/docs/managing-product-labels
   - /v1/docs/en/managing-product-labels
+related:
+  - title: Product Labels feature overview
+    link: docs/scos/user/features/201811.0/product-labels-feature-overview.html
+  - title: Accessing Product Labels
+    link: docs/scos/dev/glue-api-guides/201811.0/managing-products/retrieving-product-labels.html
+  - title: Creating Product Labels
+    link: docs/scos/user/back-office-user-guides/201811.0/merchandising/product-labels/creating-product-labels.html
 ---
 
 This topic describes the procedures of managing product labels.

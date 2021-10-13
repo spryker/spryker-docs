@@ -7,6 +7,11 @@ originalArticleId: 1ef20e80-954d-4057-845c-367237640ceb
 redirect_from:
   - /v1/docs/attributes
   - /v1/docs/en/attributes
+related:
+  - title: Attributes- Reference Information
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/attributes/references/attributes-reference-information.html
+  - title: Product Attributes
+    link: docs/scos/user/features/201811.0/product-feature-overview/product-attributes-overview.html
 ---
 
 The attributes section is designed to create the super attributes that define the product variants and define the descriptive attributes that present the product features.

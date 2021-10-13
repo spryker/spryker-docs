@@ -6,6 +6,9 @@ originalArticleId: da2e9095-7be6-4214-8d15-8bf7934438f0
 redirect_from:
   - /v3/docs/checkout-feature-integration-201907
   - /v3/docs/en/checkout-feature-integration-201907
+related:
+  - title: Checking Out Purchases and Getting Checkout Data
+    link: docs/scos/dev/glue-api-guides/201811.0/checking-out-purchases-and-getting-checkout-data.html
 ---
 
 {% info_block errorBox %}

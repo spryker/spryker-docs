@@ -7,6 +7,15 @@ originalArticleId: 93e81706-b37b-462f-ad32-239d2e23503f
 redirect_from:
   - /v6/docs/mg-product-option-discount-connector
   - /v6/docs/en/mg-product-option-discount-connector
+related:
+  - title: Migration Guide - Product
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-product.html
+  - title: Migration Guide - Product Label
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-productlabel.html
+  - title: Migration Guide - Product Bundle
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-productbundle.html
+  - title: Migration Guide - Product Label GUI
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-productlabelgui.html
 ---
 
 ## Upgrading from Version 2.* to Version 3.*

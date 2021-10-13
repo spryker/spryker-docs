@@ -7,6 +7,15 @@ originalArticleId: 3a6d2490-2dc6-48a7-bc5f-9dbbbe64c5ba
 redirect_from:
   - /v6/docs/creating-content-items
   - /v6/docs/en/creating-content-items
+related:
+  - title: Content Items Feature Overview
+    link: docs/scos/user/features/202001.0/content-items-feature-overview.html
+  - title: Editing Content Items
+    link: docs/scos/user/back-office-user-guides/202001.0/content/content-items/editing-content-items.html
+  - title: Content Item Widgets types- Reference Information
+    link: docs/scos/user/back-office-user-guides/202005.0/content/content-items/references/content-item-widgets-types-reference-information.html
+  - title: Content Item Widgets templates- Reference Information
+    link: docs/scos/user/back-office-user-guides/202005.0/content/content-items/references/content-item-widgets-templates-reference-information.html
 ---
 
 This topic describes how to create content items in the Back Office.

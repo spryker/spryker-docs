@@ -16,6 +16,9 @@ redirect_from:
   - /v4/docs/ht-disable-split-delivery-in-yves-interface
   - /v4/docs/en/ht-disable-split-delivery-in-yves-interface
 
+related:
+  - title: Split Delivery Overview
+    link: docs/scos/user/features/202001.0/order-management-feature-overview/split-delivery-overview.html
 ---
 
 Sometimes payment service providers do not support multiple shipments for the same order, which contradicts the essence of the Split Delivery feature. In this case, you can disable the Split Delivery feature in the Сheckout process, however, it will still work in the Back Office.

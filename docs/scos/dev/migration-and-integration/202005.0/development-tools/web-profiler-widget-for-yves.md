@@ -7,6 +7,9 @@ originalArticleId: 90cc8f11-ab60-40bc-8462-a9b63e0af125
 redirect_from:
   - /v5/docs/web-profiler-widget
   - /v5/docs/en/web-profiler-widget
+related:
+  - title: Web Profiler for Zed
+    link: docs/scos/dev/migration-and-integration/202001.0/development-tools/web-profiler-for-zed.html
 ---
 
 {% info_block errorBox %}

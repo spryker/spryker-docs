@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/retrieving-category-nodes
   - /docs/retrieving-category-nodes
   - /docs/en/retrieving-category-nodes
+related:
+  - title: Category Management feature overview
+    link: docs/scos/user/features/202009.0/category-management-feature-overview.html
 ---
 
 This endpoint allows retrieving category nodes.

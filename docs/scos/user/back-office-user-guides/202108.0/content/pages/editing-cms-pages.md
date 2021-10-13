@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/editing-cms-pages
   - /docs/editing-cms-pages
   - /docs/en/editing-cms-pages
+related:
+  - title: CMS Page
+    link: docs/scos/user/features/202001.0/cms-feature-overview/cms-pages-overview.html
+  - title: Managing CMS Page Versions
+    link: docs/scos/user/back-office-user-guides/202001.0/content/pages/managing-cms-page-versions.html
 ---
 
 The topic describes how to edit CMS pages in the Back Office.

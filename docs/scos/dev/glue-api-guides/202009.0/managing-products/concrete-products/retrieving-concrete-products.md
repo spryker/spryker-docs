@@ -7,6 +7,9 @@ originalArticleId: e9d1f7fe-5e4e-47b6-a273-ae4bde21da95
 redirect_from:
   - /v6/docs/retrieving-concrete-products
   - /v6/docs/en/retrieving-concrete-products
+related:
+  - title: Product Options feature overview
+    link: docs/scos/user/features/202009.0/product-options-feature-overview.html
 ---
 
 This endpoint allows to retrieve general information about concrete products.

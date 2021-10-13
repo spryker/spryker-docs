@@ -9,6 +9,21 @@ redirect_from:
   - /2021080/docs/en/product-feature-integration
   - /docs/product-feature-integration
   - /docs/en/product-feature-integration
+related:
+  - title: Configurable Bundle feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/configurable-bundle-feature-integration.html
+  - title: Product Lists feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/product-lists-feature-integration.html
+  - title: Prices feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/prices-feature-integration.html
+  - title: Merchant Product Restrictions feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/merchant-product-restrictions-feature-integration.html
+  - title: Product Images + Configurable Bundle feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/product-images-configurable-bundle-feature-integration.html
+  - title: Product + Order Management feature integration
+    link: docs/scos/dev/feature-integration-guides/202005.0/product-order-management-feature-integration.html
+  - title: Product overview
+    link: docs/scos/user/features/202009.0/product-feature-overview/product-feature-overview.html
 ---
 
 {% info_block errorBox %}

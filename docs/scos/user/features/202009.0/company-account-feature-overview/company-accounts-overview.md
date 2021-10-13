@@ -7,6 +7,11 @@ originalArticleId: fd615737-2c0e-48f2-962e-984c2addad74
 redirect_from:
   - /v6/docs/company-accounts
   - /v6/docs/en/company-accounts
+related:
+  - title: Company Account
+    link: docs/scos/user/back-office-user-guides/201811.0/customer/company-account/company-account.html
+  - title: Company User Roles and Permissions Feature Overview
+    link: docs/scos/user/features/201811.0/company-account-feature-overview/company-user-roles-and-permissions-overview.html
 ---
 
 Company accoounts allow you to build an organizational structure of your B2B business.

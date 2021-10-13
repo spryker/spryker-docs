@@ -7,6 +7,9 @@ originalArticleId: 255a84e0-c2f9-452b-9e01-ccca621c1762
 redirect_from:
   - /v4/docs/address-step-shop-guide-201911
   - /v4/docs/en/address-step-shop-guide-201911
+related:
+  - title: Split Delivery Overview
+    link: docs/scos/user/features/202001.0/order-management-feature-overview/split-delivery-overview.html
 ---
 
 The topic provides a list of steps to select billing and shipping addresses for the order.

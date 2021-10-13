@@ -14,6 +14,13 @@ redirect_from:
   - /v5/docs/en/ht-import-warehouse-data
   - /v4/docs/ht-import-warehouse-data
   - /v4/docs/en/ht-import-warehouse-data
+related:
+  - title: Managing Warehouses
+    link: docs/scos/user/back-office-user-guides/202001.0/administration/warehouses/managing-warehouses.html
+  - title: Creating Warehouses
+    link: docs/scos/user/back-office-user-guides/202001.0/administration/warehouses/creating-warehouses.html
+  - title: Warehouses- Reference Information
+    link: docs/scos/user/back-office-user-guides/202001.0/administration/warehouses/references/warehouses-reference-information.html
 ---
 
 This HowTo provides the steps on how to import warehouse data using a .CSV file, including:

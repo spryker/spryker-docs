@@ -7,6 +7,9 @@ originalArticleId: f13cbaa7-3346-4523-a282-4ff79ff5d8ae
 redirect_from:
   - /v2/docs/nitrobox
   - /v2/docs/en/nitrobox
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/201811.0/technology-partner-integration.html
 ---
 
 ## Partner Information

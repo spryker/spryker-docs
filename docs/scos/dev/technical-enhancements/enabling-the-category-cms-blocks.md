@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/enabling-the-category-cms-block
   - /docs/enabling-the-category-cms-block
   - /docs/en/enabling-the-category-cms-block
+related:
+  - title: CMS Block
+    link: docs/scos/user/back-office-user-guides/201811.0/content/blocks/cms-block.html
+  - title: Migration Guide - CMS Block
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-cmsblock.html
 ---
 
 This document describes how to enable category CMS blocks in a Spryker project. 

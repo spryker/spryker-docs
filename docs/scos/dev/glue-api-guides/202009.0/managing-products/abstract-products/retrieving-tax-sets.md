@@ -7,6 +7,9 @@ originalArticleId: 643a3fb7-80b8-431b-84e0-e550d061fd3c
 redirect_from:
   - /v6/docs/retrieving-tax-sets
   - /v6/docs/en/retrieving-tax-sets
+related:
+  - title: Wishlist feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/202009.0/wishlist-feature-walkthrough.html
 ---
 
 This endpoint allows to retrieve detailed information about tax sets of abstract products.

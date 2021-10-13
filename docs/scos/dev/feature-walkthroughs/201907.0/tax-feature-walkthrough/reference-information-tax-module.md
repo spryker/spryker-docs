@@ -8,6 +8,9 @@ originalArticleId: d31da059-e15e-48d1-b9a9-d962a813f768
 redirect_from:
   - /v3/docs/tax-module
   - /v3/docs/en/tax-module
+related:
+  - title: Migration Guide - Tax
+    link: docs/scos/dev/module-migration-guides/201907.0/migration-guide-tax.html
 ---
 
 

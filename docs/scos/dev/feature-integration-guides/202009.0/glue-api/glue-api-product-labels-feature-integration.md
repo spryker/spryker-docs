@@ -7,6 +7,9 @@ originalArticleId: 62468311-c8a1-4679-a76a-28472fc1714e
 redirect_from:
   - /v6/docs/glue-api-product-labels-feature-integration
   - /v6/docs/en/glue-api-product-labels-feature-integration
+related:
+  - title: Accessing Product Labels
+    link: docs/scos/dev/glue-api-guides/202005.0/managing-products/retrieving-product-labels.html
 ---
 
 Follow the steps below to install Product Labels Feature API.

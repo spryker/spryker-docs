@@ -7,6 +7,9 @@ originalArticleId: 86e6d2b6-238c-44aa-b0bf-da1a1f689598
 redirect_from:
   - /v4/docs/afterpay
   - /v4/docs/en/afterpay
+related:
+  - title: Afterpay - Installation and Configuration
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/afterpay/afterpay-installation-and-configuration.html
 ---
 
 ## Partner Information

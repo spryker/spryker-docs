@@ -7,6 +7,11 @@ originalArticleId: f35ea44d-be7b-4e08-a628-7e91b73b609f
 redirect_from:
   - /v4/docs/managing-roles
   - /v4/docs/en/managing-roles
+related:
+  - title: Roles- Reference Information
+    link: docs/scos/user/back-office-user-guides/201811.0/users/roles-groups-and-users/references/roles-reference-information.html
+  - title: User- Reference Information
+    link: docs/scos/user/back-office-user-guides/201811.0/users/roles-groups-and-users/references/user-reference-information.html
 ---
 
 This topic describes the procedures that you need to perform to create, edit, and delete roles.

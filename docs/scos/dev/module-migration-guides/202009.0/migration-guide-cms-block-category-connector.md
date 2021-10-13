@@ -7,6 +7,9 @@ originalArticleId: 8ec3eb69-128e-4178-9720-296866e7fe4f
 redirect_from:
   - /v6/docs/mg-cms-block-category-connector
   - /v6/docs/en/mg-cms-block-category-connector
+related:
+  - title: CMS Block
+    link: docs/scos/user/back-office-user-guides/201811.0/content/blocks/cms-block.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.*

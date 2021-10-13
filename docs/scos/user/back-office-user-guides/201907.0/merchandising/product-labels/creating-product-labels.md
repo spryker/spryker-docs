@@ -7,6 +7,11 @@ originalArticleId: 54b72ab7-3653-4f81-9c02-99f5a5a037c5
 redirect_from:
   - /v3/docs/creating-a-product-label
   - /v3/docs/en/creating-a-product-label
+related:
+  - title: Product Labels feature overview
+    link: docs/scos/user/features/201907.0/product-labels-feature-overview.html
+  - title: Accessing Product Labels
+    link: docs/scos/dev/glue-api-guides/201907.0/managing-products/retrieving-product-labels.html
 ---
 
 This topic describes how you create and activate product labels.

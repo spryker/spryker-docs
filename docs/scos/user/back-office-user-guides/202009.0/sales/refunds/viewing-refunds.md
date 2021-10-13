@@ -7,6 +7,9 @@ originalArticleId: 022d663d-393b-4298-8bb8-fb63ce126f11
 redirect_from:
   - /v6/docs/refunds-reference-information
   - /v6/docs/en/refunds-reference-information
+related:
+  - title: Refunds feature overview
+    link: docs/scos/user/features/202001.0/refunds-feature-overview.html
 ---
 
 This topic contains the reference information for working refunds in **Sales** > **Refunds**.

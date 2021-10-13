@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/managing-file-list
   - /docs/managing-file-list
   - /docs/en/managing-file-list
+related:
+  - title: Managing File Tree
+    link: docs/scos/user/back-office-user-guides/202001.0/content/file-manager/managing-file-tree.html
+  - title: Managing MIME Type Settings
+    link: docs/scos/user/back-office-user-guides/202001.0/administration/mime-type-settings/managing-mime-type-settings.html
 ---
 
 The *File List* section is a way to quickly review all the files from the file tree.

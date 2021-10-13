@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/product-lists-catalog-feature-integration
   - /docs/product-lists-catalog-feature-integration
   - /docs/en/product-lists-catalog-feature-integration
+related:
+  - title: Merchant Product Restrictions feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/merchant-product-restrictions-feature-integration.html
 ---
 
 ## Install Feature Core

@@ -9,6 +9,11 @@ redirect_from:
   - /v2/docs/en/agent-assist-overview
   - /v2/docs/agent-assist
   - /v2/docs/en/agent-assist
+related:
+  - title: Managing Users
+    link: docs/scos/user/back-office-user-guides/201811.0/users/roles-groups-and-users/managing-users.html
+  - title: Agent Assist feature integration
+    link: docs/scos/dev/feature-integration-guides/201811.0/agent-assist-feature-integration.html
 ---
 
 An **agent** is a person who helps customers to perform various activities in an online store. For example, a customer might call an agent and ask him/her to help choose a right product and assist in the buying process or even perform some actions in the web-shop for them. Say the customer is willing to add items to shopping list, or create a company, but can not do it for some reason. This is when the agent comes in and provides practical support by carrying out actions on customer's behalf in the web-shop.

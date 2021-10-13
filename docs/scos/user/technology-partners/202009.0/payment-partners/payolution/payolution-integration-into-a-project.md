@@ -6,6 +6,17 @@ originalArticleId: afc5f082-b6fe-4031-a01b-f50de89fd889
 redirect_from:
   - /v6/docs/payolution-integration-into-project
   - /v6/docs/en/payolution-integration-into-project
+related:
+  - title: Payolution - Installation and Configuration
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/payolution/payolution-installation-and-configuration.html
+  - title: Payolution - Performing Requests
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/payolution/technical-details-and-howtos/payolution-performing-requests.html
+  - title: Payolution - Workflow
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/payolution/technical-details-and-howtos/payolution-workflow.html
+  - title: Payolution - Installment Payment
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/payolution/payolution-payment-methods/payolution-installment-payment.html
+  - title: Payolution - Invoice Payment
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/payolution/payolution-payment-methods/payolution-invoice-payment.html
 ---
 
 {% info_block errorBox %}

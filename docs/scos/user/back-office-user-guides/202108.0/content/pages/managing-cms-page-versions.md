@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/managing-cms-page-versions
   - /docs/managing-cms-page-versions
   - /docs/en/managing-cms-page-versions
+related:
+  - title: CMS Page
+    link: docs/scos/user/features/202001.0/cms-feature-overview/cms-pages-overview.html
 ---
 
 

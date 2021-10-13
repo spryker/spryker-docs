@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/mg-sales
   - /docs/mg-sales
   - /docs/en/mg-sales
+related:
+  - title: Sales
+    link: docs/scos/dev/feature-walkthroughs/201811.0/order-management-feature-walkthrough/sales-module-reference-information.html
 ---
 
 ## Upgrading from Version 10.* to Version 11.0.0

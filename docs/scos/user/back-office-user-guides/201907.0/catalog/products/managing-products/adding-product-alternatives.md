@@ -7,6 +7,17 @@ originalArticleId: ce61840c-4322-4825-9cc1-29faab337c00
 redirect_from:
   - /v3/docs/adding-product-alternatives
   - /v3/docs/en/adding-product-alternatives
+related:
+  - title: Abstract Product- Reference Information
+    link: docs/scos/user/back-office-user-guides/201907.0/catalog/products/references/abstract-product-reference-information.html
+  - title: Abstract and Concrete Products
+    link: docs/scos/user/back-office-user-guides/201907.0/catalog/products/abstract-and-concrete-products.html
+  - title: Managing Products
+    link: docs/scos/user/back-office-user-guides/201907.0/catalog/products/managing-products/managing-products.html
+  - title: Concrete Product- Reference Information
+    link: docs/scos/user/back-office-user-guides/201907.0/catalog/products/references/concrete-product-reference-information.html
+  - title: Products- Reference Information
+    link: docs/scos/user/back-office-user-guides/201907.0/catalog/products/references/products-reference-information.html
 ---
 
 This article describes the procedure of setting the alternatives for the products.

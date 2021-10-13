@@ -17,6 +17,9 @@ redirect_from:
   - v4/docs/en/additional-devops-guidelines
   - /v3/docs/additional-devops-information-201907
   - /v3/docs/en/additional-devops-information-201907
+related:
+  - title: Debugging Setup in Docker
+    link: docs/scos/dev/the-docker-sdk/202001.0/debugging-setup-in-docker.html
 ---
 
 This document provides additional DevOPS guidelines for running Spryker in Docker.

@@ -8,6 +8,11 @@ redirect_from:
   - /2021080/docs/en/glue-api-order-management-feature-integration
   - /docs/glue-api-order-management-feature-integration
   - /docs/en/glue-api-order-management-feature-integration
+related:
+  - title: Retrieving Customer's Order History
+    link: docs/scos/dev/glue-api-guides/202005.0/managing-customers/retrieving-customer-orders.html
+  - title: Checking Out Purchases and Getting Checkout Data
+    link: docs/scos/dev/glue-api-guides/202005.0/checking-out/checking-out-purchases.html
 ---
 
 Follow the steps below to install the Glue API: Order Management feature.

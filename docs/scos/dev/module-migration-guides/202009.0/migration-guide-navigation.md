@@ -7,6 +7,9 @@ originalArticleId: 75e680bf-0d3d-4622-8566-95e8f3d7327e
 redirect_from:
   - /v6/docs/mg-navigation
   - /v6/docs/en/mg-navigation
+related:
+  - title: Migration Guide - NavigationGui
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-navigationgui.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.*

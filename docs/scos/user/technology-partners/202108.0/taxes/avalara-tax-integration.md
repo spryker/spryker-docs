@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/avalara-tax-integration
   - /docs/avalara-tax-integration
   - /docs/en/avalara-tax-integration
+related:
+  - title: Tax feature overview
+    link: docs/scos/user/features/202009.0/tax-feature-overview.html
 ---
 
 *Avalara* is a software that calculates sales order taxes during checkout in the US market. It provides real-time tax calculation and an automatic filing of returns. 

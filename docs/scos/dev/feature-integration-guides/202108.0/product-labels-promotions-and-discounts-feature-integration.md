@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/product-labels-promotions-discounts-feature-integration
   - /docs/product-labels-promotions-discounts-feature-integration
   - /docs/en/product-labels-promotions-discounts-feature-integration
+related:
+  - title: Product labels feature integration
+    link: docs/scos/dev/feature-integration-guides/202009.0/product-labels-feature-integration.html
+  - title: Promotions & Discounts feature integration
+    link: docs/scos/dev/feature-integration-guides/202009.0/promotions-and-discounts-feature-integration.html
 ---
 
 ## Install Feature Core

@@ -7,6 +7,13 @@ originalArticleId: 4605c423-e002-4550-b551-ec1ce50ae4a7
 redirect_from:
   - /v6/docs/managing-product-options
   - /v6/docs/en/managing-product-options
+related:
+  - title: Product Options
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/product-options/product-options.html
+  - title: Product Options feature overview
+    link: docs/scos/user/features/202001.0/product-options-feature-overview.html
+  - title: Product Options- Reference Information
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/product-options/references/product-options-reference-information.html
 ---
 
 This article describes the managing actions that you can perform with the product options. 

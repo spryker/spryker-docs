@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/mg-cms-block-category-connector-console
   - /docs/mg-cms-block-category-connector-console
   - /docs/en/mg-cms-block-category-connector-console
+related:
+  - title: Migration Guide - CMS Block Category Connector
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-cms-block-category-connector.html
 ---
 
 ## CMS Block Category Connector Migration script

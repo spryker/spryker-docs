@@ -7,6 +7,9 @@ originalArticleId: 98d11fa9-ec69-40a7-9345-3dce67225dda
 redirect_from:
   - /v2/docs/creating-a-product-label
   - /v2/docs/en/creating-a-product-label
+related:
+  - title: Product Labels feature overview
+    link: docs/scos/user/features/201903.0/product-labels-feature-overview.html
 ---
 
 This topic describes how you create and activate product labels.

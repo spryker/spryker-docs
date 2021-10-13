@@ -7,6 +7,9 @@ originalArticleId: f42aee00-c114-496f-a098-c2eb0461da06
 redirect_from:
   - /v6/docs/retrieving-sales-units
   - /v6/docs/en/retrieving-sales-units
+related:
+  - title: Measurement units feature overview
+    link: docs/scos/user/features/202009.0/measurement-units-feature-overview.html
 ---
 
 This endpoint allows to retrieve sales units of concrete products.

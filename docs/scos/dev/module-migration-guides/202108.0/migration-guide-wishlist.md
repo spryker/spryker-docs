@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/mg-wishlist
   - /docs/mg-wishlist
   - /docs/en/mg-wishlist
+related:
+  - title: Migration Guide - Cart
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-cart.html
+  - title: Migration Guide - Price
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-price.html
 ---
 
 ## Upgrading from Version 6.* to Version 8.0.0

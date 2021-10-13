@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/shopping-list-widget-overview
   - /docs/shopping-list-widget-overview
   - /docs/en/shopping-list-widget-overview
+related:
+  - title: Shopping list printing overview
+    link: docs/scos/user/features/201811.0/shopping-lists-feature-overview/shopping-list-printing-overview.html
+  - title: Shopping List Notes overview
+    link: docs/scos/user/features/201811.0/shopping-lists-feature-overview/shopping-list-notes-overview.html
 ---
 
 Shopping list is a list of items that a customer plans to buy. Many of the B2B customers compile shopping lists of items they buy on a regular basis. Also, such customers often use multiple shopping lists to cover their specific purchasing needs. For example, cafes prefer using Shopping list feature to create several shopping lists where they save items they keep ordering every day, week etc.

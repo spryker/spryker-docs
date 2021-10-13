@@ -7,6 +7,19 @@ originalArticleId: 26d4c7be-150a-4c5f-8a75-aef5a9b293d8
 redirect_from:
   - /v6/docs/checking-out-purchases
   - /v6/docs/en/checking-out-purchases
+related:
+  - title: Glue API- Checkout feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/glue-api/glue-api-checkout-feature-integration.html
+  - title: Checkout
+    link: docs/scos/user/features/202001.0/checkout-feature-overview/checkout-feature-overview.html
+  - title: Multi-Step Checkout
+    link: docs/scos/user/features/202001.0/checkout-feature-overview/multi-step-checkout-overview.html
+  - title: Retrieving Customer's Order History
+    link: docs/scos/dev/glue-api-guides/202005.0/managing-customers/retrieving-customer-orders.html
+  - title: Managing guest carts
+    link: docs/scos/dev/glue-api-guides/202009.0/managing-carts/guest-carts/managing-guest-carts.html
+  - title: Managing carts of registered users
+    link: docs/scos/dev/glue-api-guides/202009.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
 ---
 
 This endpoint allows finalizing the checkout process by placing an order. 

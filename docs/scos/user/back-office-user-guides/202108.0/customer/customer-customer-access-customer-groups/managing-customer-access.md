@@ -9,6 +9,15 @@ redirect_from:
   - /2021080/docs/en/managing-customer-access
   - /docs/managing-customer-access
   - /docs/en/managing-customer-access
+related:
+  - title: Managing Customer Groups
+    link: docs/scos/user/back-office-user-guides/201811.0/customer/customers-customer-access-customer-groups/managing-customer-groups.html
+  - title: Managing Customer Addresses
+    link: docs/scos/user/back-office-user-guides/201811.0/customer/customers-customer-access-customer-groups/managing-customer-addresses.html
+  - title: Managing Customers
+    link: docs/scos/user/back-office-user-guides/201811.0/customer/customers-customer-access-customer-groups/managing-customers.html
+  - title: Hide Content from Logged out Users Overview
+    link: docs/scos/user/features/202001.0/customer-access-feature-overview.html
 ---
 
 The *Customer Access* page allows you to define what information not logged-in to online store customers.

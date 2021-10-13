@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/creating-a-warehouse
   - /docs/creating-a-warehouse
   - /docs/en/creating-a-warehouse
+related:
+  - title: Warehouses- Reference Information
+    link: docs/scos/user/back-office-user-guides/202001.0/administration/warehouses/references/warehouses-reference-information.html
 ---
 
 The topic describes how to create warehouses in the Back Office.

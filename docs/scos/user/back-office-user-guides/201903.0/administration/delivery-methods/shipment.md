@@ -7,6 +7,11 @@ originalArticleId: 720d4ce2-8b6d-468c-973b-0e363e03b660
 redirect_from:
   - /v2/docs/shipment-management
   - /v2/docs/en/shipment-management
+related:
+  - title: Shipment feature overview
+    link: docs/scos/user/features/201903.0/shipment-feature-overview.html
+  - title: "Reference information: Shipment method plugins"
+    link: docs/scos/dev/feature-walkthroughs/201903.0/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html
 ---
 
 The Shipment section of the Spryker Back Office is mostly used by E-Commerce managers.

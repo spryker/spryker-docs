@@ -7,6 +7,11 @@ originalArticleId: 1fe59e98-967d-48b9-9bc7-73dd4a70c2d4
 redirect_from:
   - /v6/docs/managing-configurable-bundle-templates
   - /v6/docs/en/managing-configurable-bundle-templates
+related:
+  - title: Configurable Bundle Templates- Reference Information
+    link: docs/scos/user/back-office-user-guides/202001.0/merchandising/configurable-bundle-templates/references/configurable-bundle-templates-reference-information.html
+  - title: Configurable Bundle Feature Overview
+    link: docs/scos/user/features/202001.0/configurable-bundle-feature-overview.html
 ---
 
 This article describes how to manage configurable bundle templates.

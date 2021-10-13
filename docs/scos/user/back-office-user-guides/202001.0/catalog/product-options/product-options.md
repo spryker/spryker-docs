@@ -7,6 +7,9 @@ originalArticleId: 7fe01e5b-fb94-4e17-817f-a3875c94a2ba
 redirect_from:
   - /v4/docs/product-options-management
   - /v4/docs/en/product-options-management
+related:
+  - title: Product Options feature overview
+    link: docs/scos/user/features/202001.0/product-options-feature-overview.html
 ---
 
 The Product Options feature is meant for creating and managing product additions. With this feature, online stores can offer their customers an opportunity to add some additional item or service to their products during the product purchase.

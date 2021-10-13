@@ -6,6 +6,11 @@ originalArticleId: 03b96930-118b-41bb-971e-64858ce4017d
 redirect_from:
   - /v3/docs/catalog-api-feature-integration
   - /v3/docs/en/catalog-api-feature-integration
+related:
+  - title: Catalog Search
+    link: docs/scos/dev/glue-api-guides/201811.0/catalog-search.html
+  - title: Getting Suggestions for Auto-Completion and Search
+    link: docs/scos/dev/glue-api-guides/201811.0/getting-suggestions-for-auto-completion-and-search.html
 ---
 
 ## Install Feature API

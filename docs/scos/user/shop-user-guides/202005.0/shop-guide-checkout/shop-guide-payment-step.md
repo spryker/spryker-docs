@@ -7,6 +7,9 @@ originalArticleId: 6d7c02e8-dd74-4e66-9c35-6fb8e766e7f2
 redirect_from:
   - /v5/docs/payment-step-shop-guide-201911
   - /v5/docs/en/payment-step-shop-guide-201911
+related:
+  - title: Payments feature overview
+    link: docs/scos/user/features/202001.0/payments-feature-overview.html
 ---
 
 The topic provides a list of steps you need to perform to pay for the order.

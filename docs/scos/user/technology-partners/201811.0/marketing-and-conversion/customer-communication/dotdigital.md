@@ -7,6 +7,9 @@ originalArticleId: d1ea88a3-32d5-4942-b294-506938762348
 redirect_from:
   - /v1/docs/dotdigital
   - /v1/docs/en/dotdigital
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/201811.0/technology-partner-integration.html
 ---
 
 ## Partner Information

@@ -7,6 +7,27 @@ originalArticleId: bae2fc7b-e8e2-468b-9ac3-df35f4f1cec0
 redirect_from:
   - /v4/docs/amazon-pay-configuration-demoshop
   - /v4/docs/en/amazon-pay-configuration-demoshop
+related:
+  - title: Amazon Pay - Obtaining an Amazon Order Reference and Information About Shipping Addresses
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/amazon-pay/scos-integration/amazon-pay-obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
+  - title: Amazon Pay - Rendering a “Pay with Amazon” Button on the Cart Page
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-rendering-a-pay-with-amazon-button-on-the-cart-page.html
+  - title: Amazon Pay - Support of Bundled Products
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-support-of-bundled-products.html
+  - title: Amazon Pay - State Machine
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-state-machine.html
+  - title: Amazon Pay - API
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-api.html
+  - title: Amazon Pay - API
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/amazon-pay/scos-integration/amazon-pay-api.html
+  - title: Amazon Pay - Order Reference and Information about Shipping Addresses
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-order-reference-and-information-about-shipping-addresses.html
+  - title: Amazon Pay - Configuration for the SCOS
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/amazon-pay/scos-integration/amazon-pay-configuration-for-the-scos.html
+  - title: Amazon Pay - Sandbox Simulations
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/amazon-pay/scos-integration/amazon-pay-sandbox-simulations.html
+  - title: Amazon Pay - Sandbox Simulations
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-sandbox-simulations.html
 ---
 
 {% info_block infoBox "Note" %}

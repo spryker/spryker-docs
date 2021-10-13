@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/mg-product-option-cart-connector
   - /docs/mg-product-option-cart-connector
   - /docs/en/mg-product-option-cart-connector
+related:
+  - title: Product Options
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/product-options/product-options.html
+  - title: Migration Guide - Product Option
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-productoption.html
 ---
 
 ## Upgrading from Version 5.* to Version 7.0.0

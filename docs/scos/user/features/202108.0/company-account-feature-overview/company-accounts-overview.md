@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/company-accounts-overview
   - /docs/company-accounts-overview
   - /docs/en/company-accounts-overview
+related:
+  - title: Company Account
+    link: docs/scos/user/back-office-user-guides/201811.0/customer/company-account/company-account.html
+  - title: Company User Roles and Permissions Feature Overview
+    link: docs/scos/user/features/201811.0/company-account-feature-overview/company-user-roles-and-permissions-overview.html
 ---
 
 

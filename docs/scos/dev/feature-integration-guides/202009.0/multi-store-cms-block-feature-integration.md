@@ -7,6 +7,11 @@ originalArticleId: 38fa3c2e-269e-4eb2-95d1-2e51507cef33
 redirect_from:
   - /v6/docs/multi-store-cms-block-feature-integration
   - /v6/docs/en/multi-store-cms-block-feature-integration
+related:
+  - title: CMS Block
+    link: docs/scos/user/back-office-user-guides/201811.0/content/blocks/cms-block.html
+  - title: Migration Guide - CMS Block
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-cmsblock.html
 ---
 
 To prepare your project to work with multi-store CMS Blocks, the following minimum module versions are required:

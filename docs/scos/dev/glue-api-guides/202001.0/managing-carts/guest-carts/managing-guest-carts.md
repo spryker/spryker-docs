@@ -7,6 +7,17 @@ originalArticleId: a2cc1bc6-c3ec-4c20-abc1-9ec8b2ace98d
 redirect_from:
   - /v4/docs/managing-guest-carts
   - /v4/docs/en/managing-guest-carts
+related:
+  - title: Managing Carts of Registered Users
+    link: docs/scos/dev/glue-api-guides/202001.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
+  - title: Checking Out Purchases and Getting Checkout Data
+    link: docs/scos/dev/glue-api-guides/202001.0/checking-out-purchases-and-getting-checkout-data.html
+  - title: Multiple Carts feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/multiple-carts-feature-integration.html
+  - title: Glue API- Cart feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/glue-api/glue-api-cart-feature-integration.html
+  - title: Shopping Cart Widget Feature Overview
+    link: docs/scos/user/features/202001.0/cart-feature-overview/cart-widget-overview.html
 ---
 
 The Carts API provides access to management of customers' shopping carts. The following document covers working with guest carts.

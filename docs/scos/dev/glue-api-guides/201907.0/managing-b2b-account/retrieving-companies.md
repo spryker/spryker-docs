@@ -7,6 +7,17 @@ originalArticleId: 97d79556-4638-4876-8d70-e3abe7a75d70
 redirect_from:
   - /v3/docs/retrieving-company-information-201907
   - /v3/docs/en/retrieving-company-information-201907
+related:
+  - title: Logging In as Company User
+    link: docs/scos/dev/glue-api-guides/201907.0/managing-b2b-account/authenticating-as-a-company-user.html
+  - title: Retrieving Company User Information
+    link: docs/scos/dev/glue-api-guides/201907.0/managing-b2b-account/retrieving-company-users.html
+  - title: Retrieving Company Role Information
+    link: docs/scos/dev/glue-api-guides/201907.0/managing-b2b-account/retrieving-company-roles.html
+  - title: Retrieving Business Unit Information
+    link: docs/scos/dev/glue-api-guides/201907.0/managing-b2b-account/retrieving-business-units.html
+  - title: Authentication and Authorization
+    link: docs/scos/dev/glue-api-guides/201907.0/authentication-and-authorization.html
 ---
 
 Spryker provides the [Company Account](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html) feature that allows purchasing goods and performing other actions on behalf of a user's company. The endpoints provided by the Company API allow retrieving information on companies.

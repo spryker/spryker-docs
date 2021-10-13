@@ -7,6 +7,9 @@ originalArticleId: 2fcd3cce-6bf2-48f5-838a-318476b0c6c7
 redirect_from:
   - /v1/docs/ratenkauf-by-easycredit-installation-and-configuration
   - /v1/docs/en/ratenkauf-by-easycredit-installation-and-configuration
+related:
+  - title: Ratenkauf by Easycredit
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html
 ---
 
 ## Installation

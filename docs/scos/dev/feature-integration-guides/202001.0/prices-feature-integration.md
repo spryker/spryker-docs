@@ -7,6 +7,19 @@ originalArticleId: 1a34fa02-8eb0-4b87-b35e-d137241389bc
 redirect_from:
   - /v4/docs/prices-feature-integration
   - /v4/docs/en/prices-feature-integration
+related:
+  - title: Glue API- Product Price API feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/glue-api/glue-api-product-price-api-feature-integration.html
+  - title: Configurable Bundle feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/configurable-bundle-feature-integration.html
+  - title: Product Images + Configurable Bundle feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/product-images-configurable-bundle-feature-integration.html
+  - title: Product feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/product-feature-integration.html
+  - title: Product Lists feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/product-lists-feature-integration.html
+  - title: Merchant Product Restrictions feature integration
+    link: docs/scos/dev/feature-integration-guides/202001.0/merchant-product-restrictions-feature-integration.html
 ---
 
 {% info_block errorBox "Attention!" %}

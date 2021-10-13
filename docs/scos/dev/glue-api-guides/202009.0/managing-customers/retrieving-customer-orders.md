@@ -7,6 +7,11 @@ originalArticleId: edc0ef42-4039-4fa6-9ed0-f6f4fe31273d
 redirect_from:
   - /v6/docs/retrieving-orders
   - /v6/docs/en/retrieving-orders
+related:
+  - title: Order Management
+    link: docs/scos/user/features/202001.0/order-management-feature-overview/order-management-feature-overview.html
+  - title: Calculation 3.0
+    link: docs/scos/dev/feature-walkthroughs/202001.0/cart-feature-walkthrough/calculation-3-0.html
 ---
 
 This endpoint allows retrieving customer's orders.

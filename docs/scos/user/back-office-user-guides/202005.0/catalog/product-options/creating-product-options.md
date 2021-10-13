@@ -7,6 +7,11 @@ originalArticleId: 9d330e5c-aae8-4a45-96b2-f29de65bc2f1
 redirect_from:
   - /v5/docs/creating-a-product-option
   - /v5/docs/en/creating-a-product-option
+related:
+  - title: Product Options
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/product-options/product-options.html
+  - title: Product Options feature overview
+    link: docs/scos/user/features/202001.0/product-options-feature-overview.html
 ---
 
 This article describes how to create a product option.

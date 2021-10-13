@@ -7,6 +7,11 @@ originalArticleId: 6ed0a682-0f29-447e-a813-9b8fb824844d
 redirect_from:
   - /v5/docs/company-roles-shop-guide
   - /v5/docs/en/company-roles-shop-guide
+related:
+  - title: Shop Guide - Creating a New Company Role
+    link: docs/scos/user/shop-user-guides/202005.0/shop-guide-company-roles/shop-guide-creating-a-new-company-role.html
+  - title: Company Roles- Reference Information
+    link: docs/scos/user/shop-user-guides/202005.0/shop-guide-company-roles/references/company-roles-reference-information.html
 ---
 
 The article describes how you can manage the existing company roles.

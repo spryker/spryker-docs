@@ -9,6 +9,13 @@ redirect_from:
   - /2021080/docs/en/managing-order-shipments
   - /docs/managing-order-shipments
   - /docs/en/managing-order-shipments
+related:
+  - title: Managing Orders
+    link: docs/scos/user/back-office-user-guides/201811.0/sales/orders/managing-orders.html
+  - title: Orders- Reference Information
+    link: docs/scos/user/back-office-user-guides/201811.0/sales/orders/references/orders-reference-information.html
+  - title: Split Delivery Overview
+    link: docs/scos/user/features/202001.0/order-management-feature-overview/split-delivery-overview.html
 ---
 
 This topic describes how to manage shipments.

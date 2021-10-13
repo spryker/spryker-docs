@@ -7,6 +7,23 @@ originalArticleId: 256e5583-3cb6-4319-86bb-0061ce72824c
 redirect_from:
   - /v6/docs/ratepay-payment-workflow
   - /v6/docs/en/ratepay-payment-workflow
+related:
+  - title: RatePay - Facade
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/ratepay/technical-details-and-howtos/ratepay-facade.html
+  - title: RatePay - How to Disable Address Updates from the Backend Application
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/ratepay/technical-details-and-howtos/ratepay-how-to-disable-address-updates-from-the-backend-application.html
+  - title: RatePay - Invoice
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-invoice.html
+  - title: RatePay- Core Module Structure Diagram
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/ratepay/ratepay-core-module-structure-diagram.html
+  - title: RatePay - Prepayment
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-prepayment.html
+  - title: RatePay - State Machine Commands and Conditions
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/ratepay/technical-details-and-howtos/ratepay-state-machine-commands-and-conditions.html
+  - title: RatePay - Installment
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-installment.html
+  - title: RatePay - Direct Debit
+    link: docs/scos/user/technology-partners/201811.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-direct-debit.html
 ---
 
 Invoice, Prepayment and Direct Debit methods have the same request flow. 

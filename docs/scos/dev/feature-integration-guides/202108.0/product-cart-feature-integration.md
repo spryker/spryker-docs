@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/product-cart-feature-integration
   - /docs/product-cart-feature-integration
   - /docs/en/product-cart-feature-integration
+related:
+  - title: Product image management
+    link: docs/scos/user/features/202009.0/product-feature-overview/product-images-overview.html
 ---
 
 {% info_block errorBox "The following feature integration guide expects the basic feature to be in place. The current feature integration guide only adds the **Product Image functionality**.)

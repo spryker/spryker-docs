@@ -7,6 +7,9 @@ originalArticleId: 009ad7da-7319-4363-8f7e-a5cdb0dba24d
 redirect_from:
   - /v4/docs/content-item-types-module-relations
   - /v4/docs/en/content-item-types-module-relations
+related:
+  - title: Creating Content Items
+    link: docs/scos/user/back-office-user-guides/202001.0/content/content-items/creating-content-items.html
 ---
 
 This document describes each content item type and the modules relations used for them.

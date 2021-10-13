@@ -7,6 +7,9 @@ originalArticleId: 7dc2d028-9d24-45c1-9bbf-b20665c7d852
 redirect_from:
   - /v4/docs/cms-pages-versioning
   - /v4/docs/en/cms-pages-versioning
+related:
+  - title: CMS Page
+    link: docs/scos/user/features/202001.0/cms-feature-overview/cms-pages-overview.html
 ---
 
 This article describes how you can manage versions of CMS pages: view general information, SEO details, compare CMS versions, and roll back to the selected version or discard changes to a page.

@@ -7,6 +7,13 @@ originalArticleId: 73bf6d03-4555-4856-916f-d6712b58c014
 redirect_from:
   - /v3/docs/editing-content-item-widgets
   - /v3/docs/en/editing-content-item-widgets
+related:
+  - title: Content Item Widgets templates- Reference Information
+    link: docs/scos/user/back-office-user-guides/201907.0/content/content-items/references/content-item-widgets-templates-reference-information.html
+  - title: Content Item Widgets types- Reference Information
+    link: docs/scos/user/back-office-user-guides/201907.0/content/content-items/references/content-item-widgets-types-reference-information.html
+  - title: Adding Content Item to Pages and Blocks
+    link: docs/scos/user/back-office-user-guides/201907.0/content/content-items/adding-content-items-to-cms-pages-and-blocks.html
 ---
 
 This topic provides a list of steps you can perform to edit content item widgets in the Back Office.

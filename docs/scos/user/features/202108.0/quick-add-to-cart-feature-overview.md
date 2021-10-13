@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/quick-add-to-cart-feature-overview
   - /docs/quick-add-to-cart-feature-overview
   - /docs/en/quick-add-to-cart-feature-overview
+related:
+  - title: Migration Guide - QuickOrder
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-quickorder.html
+  - title: Quick Add to Cart feature integration
+    link: docs/scos/dev/feature-integration-guides/202009.0/quick-add-to-cart-feature-integration.html
 ---
 
 Regular buyers, and especially B2B wholesale customers, often know what exactly they want to order from the shop—by product SKU, product name, etc. The *Quick Add to Cart* feature enables your customers to find and buy products in just a few clicks. Instead of going to each product page individually, they can go to the *Quick Add to Cart* page, accessible directly from the header, and quickly order items by typing product SKU and its quantity in respective fields. At the same time, if some specific [quantity restrictions](/docs/scos/user/features/{{page.version}}/non-splittable-products-feature-overview.html) apply to products, they will also be taken into account when ordering through the *Quick Add to Cart* page. The *Quick Add to Cart* form can also be used to add items to [shopping lists](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html). Also, if a customer has a list of products to be ordered, for example, in a .csv file or other, the ordering process becomes even faster. The customer can bulk add SKUs and put quantities next to them in a single field. This being done, the customer either adds the items to cart or proceeds directly to checkout.

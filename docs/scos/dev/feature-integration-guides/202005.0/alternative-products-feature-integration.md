@@ -7,6 +7,15 @@ originalArticleId: 28513cd8-8992-4bfc-9285-d6d1312aa7bc
 redirect_from:
   - /v5/docs/alternative-products-feature-integration
   - /v5/docs/en/alternative-products-feature-integration
+related:
+  - title: Alternative Products- Inventory Management feature integration
+    link: docs/scos/dev/feature-integration-guides/202005.0/alternative-products-inventory-management-feature-integration.html
+  - title: Alternative Products- Wishlist feature integration
+    link: docs/scos/dev/feature-integration-guides/202005.0/alternative-products-wishlist-feature-integration.html
+  - title: Alternative Products- Product Label feature integration
+    link: docs/scos/dev/feature-integration-guides/202005.0/alternative-products-product-label-feature-integration.html
+  - title: Alternative Products- Discontinued Products feature integration
+    link: docs/scos/dev/feature-integration-guides/202005.0/alternative-products-discontinued-products-feature-integration.html
 ---
 
 ## Install Feature Core

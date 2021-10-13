@@ -9,6 +9,9 @@ redirect_from:
   - /v5/docs/en/barcode-generator-feature-overview
   - /v5/docs/barcode-generator
   - /v5/docs/en/barcode-generator
+related:
+  - title: Viewing Product Barcodes
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/product-barcodes/viewing-product-barcodes.html
 ---
 
 The Barcode Generator can be used for any kind of entity, and by default, we provide a solution for products.

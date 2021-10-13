@@ -7,6 +7,31 @@ originalArticleId: 00b4f5c0-9148-4214-927e-757904b0687a
 redirect_from:
   - /v4/docs/products
   - /v4/docs/en/products
+related:
+  - title: Product Information Management
+    link: docs/scos/user/features/202001.0/product-information-management/product-information-management.html
+  - title: Managing Products Availability
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/availability/managing-products-availability.html
+  - title: Abstract and Concrete Products
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/products/abstract-and-concrete-products.html
+  - title: Attributes
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/attributes/attributes.html
+  - title: Viewing Product Barcodes
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/product-barcodes/viewing-product-barcodes.html
+  - title: Product Labels
+    link: docs/scos/user/back-office-user-guides/202001.0/merchandising/product-labels/product-labels.html
+  - title: Product Lists
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/product-lists/product-lists.html
+  - title: Product Options
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/product-options/product-options.html
+  - title: Product Relations
+    link: docs/scos/user/back-office-user-guides/202001.0/merchandising/product-relations/product-relations.html
+  - title: Product Reviews
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/product-reviews/product-reviews.html
+  - title: Product Sets feature overview
+    link: docs/scos/user/features/202001.0/product-sets-feature-overview.html
+  - title: Configurable Bundle Templates
+    link: docs/scos/user/back-office-user-guides/202001.0/merchandising/configurable-bundle-templates/configurable-bundle-templates.html
 ---
 
 The **Products** section in the Back Office is mostly used by the team members involved in Product Management.

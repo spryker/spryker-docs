@@ -7,6 +7,13 @@ originalArticleId: 0c709f2c-3e85-4202-9a2c-99fcb0fa3ae6
 redirect_from:
   - /v4/docs/managing-category-filters
   - /v4/docs/en/managing-category-filters
+related:
+  - title: Search Preferences Types
+    link: docs/scos/user/back-office-user-guides/201811.0/merchandising/search-and-filters/references/search-preferences-types.html
+  - title: Managing Search Preferences
+    link: docs/scos/user/back-office-user-guides/202001.0/merchandising/search-and-filters/managing-search-preferences.html
+  - title: Managing Filter Preferences
+    link: docs/scos/user/back-office-user-guides/202001.0/merchandising/search-and-filters/managing-filter-preferences.html
 ---
 
 This topic describes the procedure of setting up category filters.

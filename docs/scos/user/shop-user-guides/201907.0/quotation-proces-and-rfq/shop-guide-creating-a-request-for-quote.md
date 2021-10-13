@@ -7,6 +7,11 @@ originalArticleId: 94b35e65-4e4d-4cc4-9a29-eb840d1b225a
 redirect_from:
   - /v3/docs/creating-rfq-shop-guide
   - /v3/docs/en/creating-rfq-shop-guide
+related:
+  - title: Shop Guide - Managing Requests for Quotes for a Buyer
+    link: docs/scos/user/shop-user-guides/201907.0/quotation-proces-and-rfq/shop-guide-managing-requests-for-quotes-for-a-buyer.html
+  - title: Shop Guide - Managing Requests for Quotes for a Sales Representative
+    link: docs/scos/user/shop-user-guides/201907.0/quotation-proces-and-rfq/shop-guide-managing-requests-for-quotes-for-a-sales-representative.html
 ---
 
 This topic describes how a buyer can create a new Request for Quote (RFQ).

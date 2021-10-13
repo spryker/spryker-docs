@@ -7,6 +7,9 @@ originalArticleId: 9e8203a1-3383-45e8-b115-33320686bd0f
 redirect_from:
   - /v1/docs/managing-navigation
   - /v1/docs/en/managing-navigation
+related:
+  - title: Navigation Module
+    link: docs/scos/dev/feature-walkthroughs/201811.0/navigation-feature-walkthrough/navigation-module.html
 ---
 
 This topic describes the procedures that you need to perform to manage navigation elements and navigation nodes.

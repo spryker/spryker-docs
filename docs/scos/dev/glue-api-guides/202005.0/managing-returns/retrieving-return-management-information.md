@@ -7,6 +7,15 @@ originalArticleId: 3c3cb4b5-714d-44a4-95b6-8a0c5abb43b7
 redirect_from:
   - /v5/docs/retrieving-return-management-information
   - /v5/docs/en/retrieving-return-management-information
+related:
+  - title: Retrieving Returnable Items
+    link: docs/scos/dev/glue-api-guides/202005.0/managing-returns/retrieving-returnable-items.html
+  - title: Creating a Return
+    link: docs/scos/dev/glue-api-guides/202005.0/managing-returns/creating-a-return.html
+  - title: Retrieving the Returned Items
+    link: docs/scos/dev/glue-api-guides/202005.0/managing-returns/retrieving-the-returned-items.html
+  - title: Retrieving the Return Reasons
+    link: docs/scos/dev/glue-api-guides/202005.0/managing-returns/retrieving-return-reasons.html
 ---
 
 The Return Management API allows developers to retrieve return information and create a return. The list of retrievable information includes: 

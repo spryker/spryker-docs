@@ -7,6 +7,11 @@ originalArticleId: 05525f7f-87f8-4e2a-8adb-cf97dbb42916
 redirect_from:
   - /v6/docs/deploy-file-reference-10
   - /v6/docs/en/deploy-file-reference-10
+related:
+  - title: Docker SDK
+    link: docs/scos/dev/the-docker-sdk/202001.0/the-docker-sdk.html
+  - title: Services
+    link: docs/scos/dev/the-docker-sdk/202001.0/services.html
 ---
 
 This reference page describes version 1 of the Deploy file format. This is the newest version.

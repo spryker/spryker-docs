@@ -8,6 +8,9 @@ redirect_from:
   - /2021080/docs/en/glue-api-shopping-lists-feature-integration
   - /docs/glue-api-shopping-lists-feature-integration
   - /docs/en/glue-api-shopping-lists-feature-integration
+related:
+  - title: Managing Shopping Lists
+    link: docs/scos/dev/glue-api-guides/202005.0/managing-shopping-lists/managing-shopping-lists.html
 ---
 
 {% info_block infoBox "Included features" %}

@@ -7,6 +7,33 @@ originalArticleId: a62df4c4-3958-4334-a60f-f8d49b9afaff
 redirect_from:
   - /v4/docs/heidelpay
   - /v4/docs/en/heidelpay
+related:
+  - title: Heidelpay - Integration into SCOS
+    link: docs/scos/user/technology-partners/202001.0/payment-partners/heidelpay/scos-integration/heidelpay-integration-into-scos.html
+  - title: Heidelpay - Configuration for SCOS
+    link: docs/scos/user/technology-partners/202001.0/payment-partners/heidelpay/scos-integration/heidelpay-configuration-for-scos.html
+  - title: Heidelpay - Installation
+    link: docs/scos/user/technology-partners/202001.0/payment-partners/heidelpay/heidelpay-installation.html
+  - title: Heidelpay - Workflow for Errors
+    link: docs/scos/user/technology-partners/202001.0/payment-partners/heidelpay/technical-details-and-howtos/heidelpay-workflow-for-errors.html
+  - title: Heidelpay - Integration into the Legacy Demoshop
+    link: docs/scos/user/technology-partners/202001.0/payment-partners/heidelpay/heidelpay-integration-into-the-legacy-demoshop.html
+  - title: Heidelpay - Easy Credit
+    link: docs/scos/user/technology-partners/202001.0/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-easy-credit.html
+  - title: Heidelpay - Direct Debit
+    link: docs/scos/user/technology-partners/202001.0/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-direct-debit.html
+  - title: Heidelpay - Credit Card Secure
+    link: docs/scos/user/technology-partners/202001.0/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-credit-card-secure.html
+  - title: Heidelpay - Paypal Authorize
+    link: docs/scos/user/technology-partners/202001.0/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-paypal-authorize.html
+  - title: Heidelpay - Invoice Secured B2C
+    link: docs/scos/user/technology-partners/202001.0/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-invoice-secured-b2c.html
+  - title: Heidelpay - Sofort (Online Transfer)
+    link: docs/scos/user/technology-partners/202001.0/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-sofort-online-transfer.html
+  - title: Heidelpay - iDeal
+    link: docs/scos/user/technology-partners/202001.0/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-ideal.html
+  - title: Heidelpay - Split-payment Marketplace
+    link: docs/scos/user/technology-partners/202001.0/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-split-payment-marketplace.html
 ---
 
 ## Partner Information

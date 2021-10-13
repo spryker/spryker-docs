@@ -7,6 +7,9 @@ originalArticleId: 0eeea4d1-d793-41b2-ba4c-995893adbdca
 redirect_from:
   - /v1/docs/oms-matrix
   - /v1/docs/en/oms-matrix
+related:
+  - title: Sales Schema
+    link: docs/scos/dev/drafts-dev/database-schema-guide/201811.0/sales-schema.html
 ---
 
 The **OMS Matrix** gives you a quick overview of all orders and their current statuses, taken from the State Machine. It allows you to see how many order items currently exist in each status and for how long they have been there. From this overview you can easily go into a detail per status and order page.

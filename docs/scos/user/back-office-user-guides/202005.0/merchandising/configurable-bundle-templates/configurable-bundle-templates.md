@@ -7,6 +7,15 @@ originalArticleId: e48dc7fa-5fed-4542-a612-348de5010d72
 redirect_from:
   - /v5/docs/configurable-bundle-templates
   - /v5/docs/en/configurable-bundle-templates
+related:
+  - title: Managing Configurable Bundle Templates
+    link: docs/scos/user/back-office-user-guides/202001.0/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html
+  - title: Creating Configurable Bundle Templates
+    link: docs/scos/user/back-office-user-guides/202001.0/merchandising/configurable-bundle-templates/creating-configurable-bundle-templates.html
+  - title: Configurable Bundle Templates- Reference Information
+    link: docs/scos/user/back-office-user-guides/202001.0/merchandising/configurable-bundle-templates/references/configurable-bundle-templates-reference-information.html
+  - title: Configurable Bundle Feature Overview
+    link: docs/scos/user/features/202001.0/configurable-bundle-feature-overview.html
 ---
 
 Configurable Bundle is a product that can be composed of individual items chosen by a customer. For example, in a shop selling custom furniture, a customer can buy a desk and add a suitable monitor stand, keyboard tray, etc. to it.

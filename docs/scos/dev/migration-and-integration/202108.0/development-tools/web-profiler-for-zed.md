@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/web-profiler
   - /docs/web-profiler
   - /docs/en/web-profiler
+related:
+  - title: Web Profiler Widget for Yves
+    link: docs/scos/dev/migration-and-integration/202001.0/development-tools/web-profiler-widget-for-yves.html
 ---
 
 {% info_block errorBox %}

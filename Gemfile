@@ -18,6 +18,7 @@ group :jekyll_plugins do
 end
 
 gem "rake"
+gem "parallel"
 gem "liquid-c"
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

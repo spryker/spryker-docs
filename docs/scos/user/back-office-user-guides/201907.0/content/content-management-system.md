@@ -7,6 +7,11 @@ originalArticleId: 9808ae5a-6f3a-4200-8cad-3c14cfee64b6
 redirect_from:
   - /v3/docs/cms-guide
   - /v3/docs/en/cms-guide
+related:
+  - title: CMS Page
+    link: docs/scos/user/features/201907.0/cms-feature-overview/cms-pages-overview.html
+  - title: CMS Block
+    link: docs/scos/user/features/201907.0/cms-feature-overview/cms-blocks-overview.html
 ---
 
 The **Content Management** section in the Back Office is mostly used by Marketing Content Managers and Marketing Team.

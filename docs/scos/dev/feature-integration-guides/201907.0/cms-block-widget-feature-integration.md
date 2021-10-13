@@ -7,6 +7,9 @@ originalArticleId: bd00828f-9b5d-4de2-9af5-284828885000
 redirect_from:
   - /v3/docs/cms-block-widget-integration
   - /v3/docs/en/cms-block-widget-integration
+related:
+  - title: CMS Block
+    link: docs/scos/user/features/201811.0/cms-feature-overview/cms-blocks-overview.html
 ---
 
 ## Install Feature Frontend

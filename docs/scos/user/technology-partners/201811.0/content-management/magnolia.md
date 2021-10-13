@@ -7,6 +7,9 @@ originalArticleId: b6af5ec8-9cea-48a4-b122-725846fc1f7c
 redirect_from:
   - /v1/docs/magnolia-cms
   - /v1/docs/en/magnolia-cms
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/201811.0/technology-partner-integration.html
 ---
 
 ## Partner Information

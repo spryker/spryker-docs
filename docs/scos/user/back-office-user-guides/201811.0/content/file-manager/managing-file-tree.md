@@ -7,6 +7,11 @@ originalArticleId: a17723bb-035a-4ab3-885e-6717258db21f
 redirect_from:
   - /v1/docs/managing-file-tree
   - /v1/docs/en/managing-file-tree
+related:
+  - title: Managing MIME Type Settings
+    link: docs/scos/user/back-office-user-guides/201811.0/administration/mime-type-settings/managing-mime-type-settings.html
+  - title: Managing File List
+    link: docs/scos/user/back-office-user-guides/201811.0/content/file-manager/managing-file-list.html
 ---
 
 The File Tree section is used to upload the files, create/delete the directories and manage the files/directories order.

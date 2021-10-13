@@ -7,6 +7,11 @@ originalArticleId: 4875a610-0791-4f2e-9706-91f32a4dfada
 redirect_from:
   - /v4/docs/handling-concurrent-rest-requests-and-caching-with-etags-201907
   - /v4/docs/en/handling-concurrent-rest-requests-and-caching-with-etags-201907
+related:
+  - title: Glue Infrastructure
+    link: docs/scos/dev/glue-api-guides/202001.0/glue-infrastructure.html
+  - title: Shared Cart Feature Overview
+    link: docs/scos/user/features/202001.0/shared-carts-feature-overview.html
 ---
 
 Certain resources of Spryker Glue API allow concurrent changes from multiple sources. For example, a shared cart can be changed by multiple users who may not know about each other's actions and act independently. To ensure resource integrity and consistency, such resources implement **Entity Tags** (also called ETags). An ETag is a unique identifier of the state of a specific resource at a certain point in time. It allows the server to identify whether the client initiating a change has received the last state of the resource known to the server prior to sending the change request.

@@ -8,6 +8,9 @@ redirect_from:
   - /2021080/docs/en/hosting-provider-continum-1
   - /docs/hosting-provider-continum-1
   - /docs/en/hosting-provider-continum-1
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/201811.0/technology-partner-integration.html
 ---
 
 This article describes the aspects you need to consider when using Heroku as an application hosting solution.

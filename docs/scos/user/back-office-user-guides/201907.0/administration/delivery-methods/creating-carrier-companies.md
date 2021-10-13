@@ -6,6 +6,11 @@ originalArticleId: 96607861-f44a-4083-acd3-4ea56b73aca3
 redirect_from:
   - /v3/docs/creating-a-carrier-company
   - /v3/docs/en/creating-a-carrier-company
+related:
+  - title: Shipment feature overview
+    link: docs/scos/user/features/201907.0/shipment-feature-overview.html
+  - title: "Reference information: Shipment method plugins"
+    link: docs/scos/dev/feature-walkthroughs/201907.0/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html
 ---
 
 This article describes the procedure to follow when adding a new carrier company.

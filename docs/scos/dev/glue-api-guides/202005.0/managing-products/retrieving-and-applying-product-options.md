@@ -6,6 +6,9 @@ originalArticleId: e6b8bc1c-46dc-4116-bbcd-4905bd2c9347
 redirect_from:
   - /v5/docs/retrieving-and-applying-product-options
   - /v5/docs/en/retrieving-and-applying-product-options
+related:
+  - title: Product Options feature overview
+    link: docs/scos/user/features/202001.0/product-options-feature-overview.html
 ---
 
 The [Product Options](/docs/scos/user/features/{{page.version}}/product-options-feature-overview.html) Feature enables shop owners to suggest various additions to the main product. Such extras enhance the customer experience and ensure their loyalty to the shop. These typically include gift wrapping, warranty services, insurance, app installation, etc.

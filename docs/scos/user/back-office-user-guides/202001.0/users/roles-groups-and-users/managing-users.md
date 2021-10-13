@@ -7,6 +7,13 @@ originalArticleId: 6cd8b2a9-c486-482a-84db-31c8743991b5
 redirect_from:
   - /v4/docs/managing-users
   - /v4/docs/en/managing-users
+related:
+  - title: Roles- Reference Information
+    link: docs/scos/user/back-office-user-guides/201811.0/users/roles-groups-and-users/references/roles-reference-information.html
+  - title: User- Reference Information
+    link: docs/scos/user/back-office-user-guides/201811.0/users/roles-groups-and-users/references/user-reference-information.html
+  - title: User and Rights Management
+    link: docs/scos/dev/feature-walkthroughs/202001.0/customer-account-management-feature-walkthrough/user-and-rights-overview.html
 ---
 
 This topic describes all procedures that you need to perform to manage the user records in the **Content Management > Users** section.

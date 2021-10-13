@@ -7,6 +7,17 @@ originalArticleId: be5d5720-c020-4b64-a184-7d86673a6deb
 redirect_from:
   - /v5/docs/managing-customers-api
   - /v5/docs/en/managing-customers-api
+related:
+  - title: Managing Wishlists
+    link: docs/scos/dev/glue-api-guides/202001.0/managing-wishlists/managing-wishlists.html
+  - title: Login & Registration Forms
+    link: docs/scos/user/features/202001.0/customer-account-management-feature-overview/customer-login-overview.html
+  - title: Password Management
+    link: docs/scos/user/features/202001.0/customer-account-management-feature-overview/password-management-overview.html
+  - title: Customer Accounts
+    link: docs/scos/user/features/202001.0/customer-account-management-feature-overview/customer-account-management-feature-overview.html
+  - title: Retrieving Customer's Order History
+    link: docs/scos/dev/glue-api-guides/202005.0/managing-customers/retrieving-customer-orders.html
 ---
 
 The Customer API provides functionality for the creation of customers and administration of their account data. This administration includes the possibility to maintain a set of customer addresses as separate resources. In checkout process, these address resources can be retrieved and used to speed up the buying process. On the authentication side, the API supports authentication via OAuth 2.0 protocol and password restoring functionality.

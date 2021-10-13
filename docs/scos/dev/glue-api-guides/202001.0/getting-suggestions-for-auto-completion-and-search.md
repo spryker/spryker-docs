@@ -7,6 +7,15 @@ originalArticleId: aafe0de5-a866-40dd-834b-9f7eeb26f723
 redirect_from:
   - /v4/docs/retrieving-suggestions-for-auto-completion-and-search
   - /v4/docs/en/retrieving-suggestions-for-auto-completion-and-search
+related:
+  - title: Catalog Search
+    link: docs/scos/dev/glue-api-guides/202001.0/catalog-search.html
+  - title: Browsing a Category Tree
+    link: docs/scos/dev/glue-api-guides/202001.0/retrieving-categories/retrieving-category-trees.html
+  - title: Retrieving Product Information
+    link: docs/scos/dev/glue-api-guides/202001.0/managing-products/retrieving-product-information.html
+  - title: Using Search Engine Friendly URLs
+    link: docs/scos/dev/glue-api-guides/202001.0/using-search-engine-friendly-urls.html
 ---
 
 In addition to [catalog search](/docs/scos/dev/glue-api-guides/{{page.version}}/catalog-search.html), Spryker search engine also provides auto-completion terms and suggestions for products, categories, and CMS pages. The feature allows developers to predict search strings and provide customers with available options.

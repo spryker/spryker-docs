@@ -7,6 +7,25 @@ originalArticleId: 59f72a8c-fab0-4992-b850-67b007536c9d
 redirect_from:
   - /v2/docs/editing-an-abstract-product
   - /v2/docs/en/editing-an-abstract-product
+related:
+  - title: Abstract and Concrete Products
+    link: docs/scos/user/back-office-user-guides/201903.0/catalog/products/abstract-and-concrete-products.html
+  - title: Creating Product Variants
+    link: docs/scos/user/back-office-user-guides/201903.0/catalog/products/concrete-products/creating-product-variants.html
+  - title: Editing Product Variant
+    link: docs/scos/user/back-office-user-guides/201903.0/catalog/products/concrete-products/editing-product-variant.html
+  - title: Creating Product Bundles
+    link: docs/scos/user/back-office-user-guides/201903.0/catalog/products/abstract-products/creating-product-bundles.html
+  - title: Managing Attributes
+    link: docs/scos/user/back-office-user-guides/201903.0/catalog/attributes/managing-product-attributes.html
+  - title: Discontinuing Products
+    link: docs/scos/user/back-office-user-guides/201903.0/catalog/products/managing-products/discontinuing-products.html
+  - title: Adding Product Alternatives
+    link: docs/scos/user/back-office-user-guides/201903.0/catalog/products/managing-products/adding-product-alternatives.html
+  - title: Adding Volume Prices to Abstract Products
+    link: docs/scos/user/back-office-user-guides/201903.0/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html
+  - title: Abstract Product- Reference Information
+    link: docs/scos/user/back-office-user-guides/201903.0/catalog/products/references/abstract-product-reference-information.html
 ---
 
 This article describes the procedure of editing abstract products.

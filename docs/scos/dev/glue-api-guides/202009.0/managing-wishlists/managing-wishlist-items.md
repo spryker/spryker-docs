@@ -7,6 +7,11 @@ originalArticleId: 021104f9-5b55-46d8-a4c4-73d4b27840ff
 redirect_from:
   - /v6/docs/managing-wishlist-items
   - /v6/docs/en/managing-wishlist-items
+related:
+  - title: Managing wishlists
+    link: docs/scos/dev/glue-api-guides/202009.0/managing-wishlists/managing-wishlists.html
+  - title: Authenticating as a customer
+    link: docs/scos/dev/glue-api-guides/202009.0/managing-customers/authenticating-as-a-customer.html
 ---
 
 This endpoint allows to add and remove items from wishlists. 

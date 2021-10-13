@@ -7,6 +7,9 @@ originalArticleId: 5c66c303-8562-4731-bc8a-7ad869f8087c
 redirect_from:
   - /v5/docs/mg-product-relation-collector
   - /v5/docs/en/mg-product-relation-collector
+related:
+  - title: Migration Guide - Product Relation
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-product-relation.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.*

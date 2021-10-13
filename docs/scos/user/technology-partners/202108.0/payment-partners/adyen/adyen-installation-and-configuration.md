@@ -9,6 +9,13 @@ redirect_from:
   - /2021080/docs/en/adyen-configuration
   - /docs/adyen-configuration
   - /docs/en/adyen-configuration
+related:
+  - title: Adyen - Integration into a project
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/adyen/adyen-integration-into-a-project.html
+  - title: Adyen - Filtering Payment Methods
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/adyen/adyen-filtering-payment-methods.html
+  - title: Adyen - Provided Payment Methods
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/adyen/adyen-provided-payment-methods.html
 ---
 
 This topic describes how to install and configure the Adyen module to integrate Adyen into your project.

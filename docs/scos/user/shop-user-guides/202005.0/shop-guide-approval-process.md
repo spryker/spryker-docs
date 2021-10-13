@@ -7,6 +7,9 @@ originalArticleId: 9c4b8126-9e50-4e37-a49f-1554f9933ba6
 redirect_from:
   - /v5/docs/approval-process-shop-guide
   - /v5/docs/en/approval-process-shop-guide
+related:
+  - title: Approval Process Feature Overview
+    link: docs/scos/user/features/202001.0/approval-process-feature-overview.html
 ---
 
 

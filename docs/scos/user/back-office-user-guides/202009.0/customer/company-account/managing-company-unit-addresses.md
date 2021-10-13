@@ -7,6 +7,9 @@ originalArticleId: ace2fa27-d8ed-473c-ad00-d5c569b6582a
 redirect_from:
   - /v6/docs/managing-company-unit-addresses
   - /v6/docs/en/managing-company-unit-addresses
+related:
+  - title: Managing Company Units
+    link: docs/scos/user/back-office-user-guides/202001.0/customer/company-account/managing-company-units.html
 ---
 
 This page describes the procedure of creating and managing company unit addresses. The address is created to be assigned to a company business unit.

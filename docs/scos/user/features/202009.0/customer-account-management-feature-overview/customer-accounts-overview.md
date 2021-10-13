@@ -10,6 +10,9 @@ redirect_from:
   - /v6/docs/en/addresses-reference-information
   - /v6/docs/order-history-reference-information
   - /v6/docs/en/order-history-reference-information
+related:
+  - title: Managing customers
+    link: docs/scos/user/back-office-user-guides/202009.0/customer/customer-customer-access-customer-groups/managing-customers.html
 ---
 
 A *customer account* contains the following customer information on the Storefront:

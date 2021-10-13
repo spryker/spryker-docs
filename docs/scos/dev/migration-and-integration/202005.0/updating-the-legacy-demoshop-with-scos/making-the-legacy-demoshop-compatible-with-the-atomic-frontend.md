@@ -7,6 +7,15 @@ originalArticleId: e98a9fcc-b44c-48a5-b22a-f1c697c63770
 redirect_from:
   - /v5/docs/demoshop-with-atomic-frontend
   - /v5/docs/en/demoshop-with-atomic-frontend
+related:
+  - title: Twig Compatibility- Legacy Demoshop vs SCOS
+    link: docs/scos/dev/migration-and-integration/201811.0/updating-the-legacy-demoshop-with-scos/twig-compatibility-legacy-demoshop-vs-scos.html
+  - title: Making the Legacy Demoshop Compatible with the Modular Frontend
+    link: docs/scos/dev/migration-and-integration/201811.0/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-modular-frontend.html
+  - title: Making the Legacy Demoshop Compatible with Publish & Synchronize
+    link: docs/scos/dev/migration-and-integration/201811.0/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-publish-and-synchronize.html
+  - title: Setting up ShopUiCompatibility Module in the Legacy Demoshop
+    link: docs/scos/dev/migration-and-integration/201811.0/updating-the-legacy-demoshop-with-scos/setting-up-shopuicompatibility-module-in-the-legacy-demoshop.html
 ---
 
 The following guide will help migrating an existing Demoshop project to Atomic Frontend.

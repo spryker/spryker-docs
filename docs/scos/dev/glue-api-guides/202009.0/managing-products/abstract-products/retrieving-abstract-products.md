@@ -7,6 +7,9 @@ originalArticleId: 0c7b28da-e935-4c00-a7c4-bd403ce8b5a7
 redirect_from:
   - /v6/docs/retrieving-abstract-products
   - /v6/docs/en/retrieving-abstract-products
+related:
+  - title: Product overview
+    link: docs/scos/user/features/202009.0/product-feature-overview/product-feature-overview.html
 ---
 
 This endpoint allows to retrieve general information about abstract products.

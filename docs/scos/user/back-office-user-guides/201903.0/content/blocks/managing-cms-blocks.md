@@ -7,6 +7,13 @@ originalArticleId: dbe69702-d37f-49c8-b382-74680d7966db
 redirect_from:
   - /v2/docs/managing-cms-blocks
   - /v2/docs/en/managing-cms-blocks
+related:
+  - title: CMS Block
+    link: docs/scos/user/features/201903.0/cms-feature-overview/cms-blocks-overview.html
+  - title: CMS Block- Reference Information
+    link: docs/scos/user/back-office-user-guides/201903.0/content/blocks/references/cms-block-reference-information.html
+  - title: Creating a CMS Block
+    link: docs/scos/user/back-office-user-guides/201903.0/content/blocks/creating-cms-blocks.html
 ---
 
 This topic describes the procedures of managing CMS blocks.

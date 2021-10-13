@@ -7,6 +7,13 @@ originalArticleId: dda0c500-044d-41d2-966d-50947be45522
 redirect_from:
   - /v6/docs/braintree-integration
   - /v6/docs/en/braintree-integration
+related:
+  - title: Braintree - Installation and configuration
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/braintree/braintree-installation-and-configuration.html
+  - title: Braintree - Performing Requests
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/braintree/braintree-technical-details-and-howtos/braintree-performing-requests.html
+  - title: Braintree - Workflow
+    link: docs/scos/user/technology-partners/202009.0/payment-partners/braintree/braintree-technical-details-and-howtos/braintree-workflow.html
 ---
 
 {% info_block errorBox %}

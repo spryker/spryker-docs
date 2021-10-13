@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/editing-abstract-products
   - /docs/editing-abstract-products
   - /docs/en/editing-abstract-products
+related:
+  - title: Managing Products
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/products/managing-products/managing-products.html
+  - title: Updating Product Variants
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/products/concrete-products/updating-product-variants.html
 ---
 
 This document describes how to edit abstract products.

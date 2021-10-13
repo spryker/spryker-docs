@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/discontinued-products-product-labels-feature-integration
   - /docs/discontinued-products-product-labels-feature-integration
   - /docs/en/discontinued-products-product-labels-feature-integration
+related:
+  - title: Product labels feature integration
+    link: docs/scos/dev/feature-integration-guides/202009.0/product-labels-feature-integration.html
+  - title: Discontinued product overview
+    link: docs/scos/user/features/202009.0/product-feature-overview/discontinued-products-overview.html
 ---
 
 ## Install Feature Core

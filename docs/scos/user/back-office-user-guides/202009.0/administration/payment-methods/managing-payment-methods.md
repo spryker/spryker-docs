@@ -7,6 +7,11 @@ originalArticleId: 4e73018a-e19c-4cad-b657-65a849ef14ee
 redirect_from:
   - /v6/docs/managing-payment-methods
   - /v6/docs/en/managing-payment-methods
+related:
+  - title: Payment Methods- Reference Information
+    link: docs/scos/user/back-office-user-guides/202001.0/administration/payment-methods/references/payment-methods-reference-information.html
+  - title: Payments feature overview
+    link: docs/scos/user/features/202009.0/payments-feature-overview.html
 ---
 
 The topic describes how to manage payment methods

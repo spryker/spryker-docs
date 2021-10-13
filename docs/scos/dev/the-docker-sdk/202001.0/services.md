@@ -6,6 +6,11 @@ originalArticleId: 8d57ad63-f1fc-4ee9-85ee-2e19138374ca
 redirect_from:
   - /v4/docs/services
   - /v4/docs/en/services
+related:
+  - title: Deploy File Reference - 1.0
+    link: docs/scos/dev/the-docker-sdk/202001.0/deploy-file-reference-1.0.html
+  - title: Docker SDK
+    link: docs/scos/dev/the-docker-sdk/202001.0/the-docker-sdk.html
 ---
 
 ## General Information

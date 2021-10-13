@@ -7,6 +7,9 @@ originalArticleId: a2a5d787-e23a-43c4-aee3-ca875ab76280
 redirect_from:
   - /v4/docs/glue-api-customer-access-feature-integration
   - /v4/docs/en/glue-api-customer-access-feature-integration
+related:
+  - title: Getting the List of Protected Resources
+    link: docs/scos/dev/glue-api-guides/202001.0/getting-the-list-of-protected-resources.html
 ---
 
 {% info_block errorBox %}

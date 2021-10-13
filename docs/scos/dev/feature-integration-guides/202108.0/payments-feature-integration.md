@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/payments-feature-integration
   - /docs/payments-feature-integration
   - /docs/en/payments-feature-integration
+related:
+  - title: Payments feature overview
+    link: docs/scos/user/features/202001.0/payments-feature-overview.html
 ---
 
 {% info_block errorBox %}

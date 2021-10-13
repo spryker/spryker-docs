@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/managing-warehouses
   - /docs/managing-warehouses
   - /docs/en/managing-warehouses
+related:
+  - title: Warehouses- Reference Information
+    link: docs/scos/user/back-office-user-guides/202001.0/administration/warehouses/references/warehouses-reference-information.html
 ---
 
 This topic describes how to manage warehouses.

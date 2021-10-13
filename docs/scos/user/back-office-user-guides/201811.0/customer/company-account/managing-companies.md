@@ -7,6 +7,19 @@ originalArticleId: fbbe5576-78f3-457e-8bde-83378a0d1174
 redirect_from:
   - /v1/docs/managing-companies
   - /v1/docs/en/managing-companies
+related:
+  - title: Company User Roles and Permissions Feature Overview
+    link: docs/scos/user/features/201811.0/company-account-feature-overview/company-user-roles-and-permissions-overview.html
+  - title: Managing Company Users
+    link: docs/scos/user/back-office-user-guides/201811.0/customer/company-account/managing-company-users.html
+  - title: Managing Company Unit Addresses
+    link: docs/scos/user/back-office-user-guides/201811.0/customer/company-account/managing-company-unit-addresses.html
+  - title: Managing Company Units
+    link: docs/scos/user/back-office-user-guides/201811.0/customer/company-account/managing-company-units.html
+  - title: Managing Company Roles
+    link: docs/scos/user/back-office-user-guides/201811.0/customer/company-account/managing-company-roles.html
+  - title: Company Account- Reference Information
+    link: docs/scos/user/back-office-user-guides/201811.0/customer/company-account/references/company-account-reference-information.html
 ---
 
 This topic describes how you create and manage company records, which is the initial step in setting up the company infrastructure.

@@ -7,6 +7,15 @@ originalArticleId: 02be625d-eafb-4bfc-bda5-3867285de643
 redirect_from:
   - /v2/docs/creating-categories
   - /v2/docs/en/creating-categories
+related:
+  - title: Assigning Products to Categories
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/category/assigning-products-to-categories.html
+  - title: Managing Categories
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/category/managing-categories.html
+  - title: Category Management feature overview
+    link: docs/scos/user/features/201903.0/category-management-feature-overview.html
+  - title: Category- Reference Information
+    link: docs/scos/user/back-office-user-guides/201903.0/catalog/category/references/category-reference-information.html
 ---
 
 This topic describes how you create categories.

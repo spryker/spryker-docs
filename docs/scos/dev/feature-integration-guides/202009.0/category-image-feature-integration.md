@@ -7,6 +7,9 @@ originalArticleId: e1e18026-7558-4730-be7a-2bd3f135dac3
 redirect_from:
   - /v6/docs/category-image-feature-integration
   - /v6/docs/en/category-image-feature-integration
+related:
+  - title: Product image management
+    link: docs/scos/user/features/202009.0/product-feature-overview/product-images-overview.html
 ---
 
 ## Install Feature Core

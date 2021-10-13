@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/ht-create-cms-templates
   - /docs/ht-create-cms-templates
   - /docs/en/ht-create-cms-templates
+related:
+  - title: CMS Page
+    link: docs/scos/user/features/201811.0/cms-feature-overview/cms-pages-overview.html
+  - title: CMS Block
+    link: docs/scos/user/features/201811.0/cms-feature-overview/cms-blocks-overview.html
 ---
 
 This document describes how to create CMS templates for Yves.

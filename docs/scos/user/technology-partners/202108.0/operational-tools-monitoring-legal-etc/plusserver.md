@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/plusserver
   - /docs/plusserver
   - /docs/en/plusserver
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/201811.0/technology-partner-integration.html
 ---
 
 ## Partner Information

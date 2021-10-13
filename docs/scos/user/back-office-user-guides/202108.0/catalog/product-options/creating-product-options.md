@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/creating-a-product-option
   - /docs/creating-a-product-option
   - /docs/en/creating-a-product-option
+related:
+  - title: Product Options
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/product-options/product-options.html
+  - title: Product Options feature overview
+    link: docs/scos/user/features/202001.0/product-options-feature-overview.html
 ---
 
 This article describes how to create a product option.

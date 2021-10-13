@@ -7,6 +7,9 @@ originalArticleId: 224d201f-0d8b-4990-9792-5cdfdb33f27b
 redirect_from:
   - /v6/docs/authenticating-as-an-agent-assist
   - /v6/docs/en/authenticating-as-an-agent-assist
+related:
+  - title: Agent Assist feature overview
+    link: docs/scos/user/features/202009.0/agent-assist-feature-overview.html
 ---
 
 

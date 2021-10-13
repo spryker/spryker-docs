@@ -7,6 +7,11 @@ originalArticleId: eb262e38-64ab-4163-a3ec-c357ea2e6e8a
 redirect_from:
   - /v5/docs/mg-environment-config
   - /v5/docs/en/mg-environment-config
+related:
+  - title: Migration Guide - Currency
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-currency.html
+  - title: Migration Guide - Discount
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-discount.html
 ---
 
 The environment configuration was restructured to solve a couple of inconsistencies and dependencies within the configuration itself. To untangle some of the configuration options it was necessary to introduce a few new configuration constants. Although the Spryker core should be fully backward compatible it is advised to update project implementations to make use of the new configuration options.

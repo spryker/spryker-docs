@@ -7,6 +7,9 @@ originalArticleId: fee7504e-6ff8-4466-9e1f-3ae314e6772c
 redirect_from:
   - /v5/docs/tideways
   - /v5/docs/en/tideways
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/201811.0/technology-partner-integration.html
 ---
 
 ## Partner Information

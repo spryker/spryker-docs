@@ -7,6 +7,9 @@ originalArticleId: d3af5e77-ec04-4371-831c-8cfd72b96553
 redirect_from:
   - /v1/docs/paqato
   - /v1/docs/en/paqato
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/201811.0/technology-partner-integration.html
 ---
 
 ## Partner Information

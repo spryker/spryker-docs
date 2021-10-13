@@ -6,6 +6,11 @@ originalArticleId: 90e8843b-0ce2-48a1-b952-990827eff3d2
 redirect_from:
   - /v1/docs/security-and-authentication
   - /v1/docs/en/security-and-authentication
+related:
+  - title: Authentication and Authorization
+    link: docs/scos/dev/glue-api-guides/201811.0/authentication-and-authorization.html
+  - title: Glue Infrastructure
+    link: docs/scos/dev/glue-api-guides/201811.0/glue-infrastructure.html
 ---
 
 When exposing information via Spryker Glue API and integrating with third-party applications, it is essential to protect API endpoints from unauthorized access. For this purpose, Spryker provides an authorization mechanism, using which you can request users to authenticate themselves before accessing a resource. For this purpose, Spryker Glue is shipped with an implementation of the OAuth 2.0 protocol. It allows users to authenticate themselves with their username and password and receive an access token. The token can then be used to access protected resources.

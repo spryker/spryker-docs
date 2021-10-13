@@ -7,6 +7,11 @@ originalArticleId: 5e18f86a-ffdf-4fe6-abb4-b6015ef6b622
 redirect_from:
   - /v6/docs/product-quantity-restrictions-overview
   - /v6/docs/en/product-quantity-restrictions-overview
+related:
+  - title: Product Merchandising
+    link: docs/scos/dev/data-import/202009.0/data-import-categories/merchandising-setup/product-merchandising/product-merchandising.html
+  - title: File details- product_quantity.csv
+    link: docs/scos/dev/data-import/202009.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-quantity.csv.html
 ---
 
 Product quantity restriction values define the number of items that customers can put into the cart. You can specify the product quantity restrictions by importing them for your project with the `data:import:product-quantity` command. See [File details: product_quantity.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-quantity.csv.html) for details on the import file. 

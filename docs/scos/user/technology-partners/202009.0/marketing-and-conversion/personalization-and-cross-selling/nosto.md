@@ -7,6 +7,9 @@ originalArticleId: c976bdb8-f091-4c50-9e08-1cac60155e53
 redirect_from:
   - /v6/docs/nosto
   - /v6/docs/en/nosto
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/201811.0/technology-partner-integration.html
 ---
 
 ## Partner Information

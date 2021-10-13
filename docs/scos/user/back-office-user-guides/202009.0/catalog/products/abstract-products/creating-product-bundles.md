@@ -7,6 +7,9 @@ originalArticleId: adefeaa9-e3db-4d18-844d-82d2dea1e18f
 redirect_from:
   - /v6/docs/creating-product-bundles
   - /v6/docs/en/creating-product-bundles
+related:
+  - title: Product Bundles feature overview
+    link: docs/scos/user/features/202001.0/product-bundles-feature-overview.html
 ---
 
 This article describes how to create product bundles. 

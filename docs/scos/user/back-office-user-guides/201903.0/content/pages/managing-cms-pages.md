@@ -7,6 +7,17 @@ originalArticleId: 277b75df-7043-45f3-9820-ed777453d74b
 redirect_from:
   - /v2/docs/managing-cms-pages
   - /v2/docs/en/managing-cms-pages
+related:
+  - title: CMS Page
+    link: docs/scos/user/features/201903.0/cms-feature-overview/cms-pages-overview.html
+  - title: Creating CMS Pages
+    link: docs/scos/user/back-office-user-guides/201903.0/content/pages/creating-cms-pages.html
+  - title: Editing CMS Pages
+    link: docs/scos/user/back-office-user-guides/201903.0/content/pages/editing-cms-pages.html
+  - title: CMS Pages Versioning
+    link: docs/scos/user/back-office-user-guides/201903.0/content/pages/managing-cms-page-versions.html
+  - title: CMS Pages- Reference Information
+    link: docs/scos/user/back-office-user-guides/201903.0/content/pages/references/cms-pages-reference-information.html
 ---
 
 This article describes the managing actions you can perform on CMS pages:

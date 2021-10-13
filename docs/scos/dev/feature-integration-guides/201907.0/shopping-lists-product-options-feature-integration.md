@@ -7,6 +7,9 @@ originalArticleId: cdd813c0-7cff-44f9-873d-e0bddb3b5be6
 redirect_from:
   - /v3/docs/shopping-lists-product-options-feature-integration
   - /v3/docs/en/shopping-lists-product-options-feature-integration
+related:
+  - title: Shopping Lists feature integration
+    link: docs/scos/dev/feature-integration-guides/201907.0/shopping-lists-feature-integration.html
 ---
 
 ## Install Feature Core

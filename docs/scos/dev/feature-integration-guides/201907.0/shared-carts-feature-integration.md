@@ -7,6 +7,9 @@ originalArticleId: 637f1793-caa9-47b0-9e0e-d4e2f65bf777
 redirect_from:
   - /v3/docs/shared-carts-feature-integration
   - /v3/docs/en/shared-carts-feature-integration
+related:
+  - title: Shared Cart Feature Overview
+    link: docs/scos/user/features/201811.0/shared-carts-feature-overview.html
 ---
 
 ## Install Feature Core

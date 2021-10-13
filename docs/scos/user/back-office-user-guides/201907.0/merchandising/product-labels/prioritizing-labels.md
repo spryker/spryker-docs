@@ -7,6 +7,17 @@ originalArticleId: 55db0675-63af-4fe4-bcb9-3657fdc40d42
 redirect_from:
   - /v3/docs/prioritizing-labels
   - /v3/docs/en/prioritizing-labels
+related:
+  - title: Product Labels feature overview
+    link: docs/scos/user/features/201907.0/product-labels-feature-overview.html
+  - title: Managing Product Labels
+    link: docs/scos/user/back-office-user-guides/201907.0/merchandising/product-labels/managing-product-labels.html
+  - title: Accessing Product Labels
+    link: docs/scos/dev/glue-api-guides/201907.0/managing-products/retrieving-product-labels.html
+  - title: Creating Product Labels
+    link: docs/scos/user/back-office-user-guides/201907.0/merchandising/product-labels/creating-product-labels.html
+  - title: Product Labels- Reference Information
+    link: docs/scos/user/back-office-user-guides/201907.0/merchandising/product-labels/references/product-labels-reference-information.html
 ---
 
 This article describes how you can prioritize the labels.

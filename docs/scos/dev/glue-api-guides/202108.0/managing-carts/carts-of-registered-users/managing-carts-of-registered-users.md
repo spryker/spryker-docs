@@ -9,6 +9,13 @@ redirect_from:
   - /2021080/docs/en/managing-carts-of-registered-users
   - /docs/managing-carts-of-registered-users
   - /docs/en/managing-carts-of-registered-users
+related:
+  - title: Managing items in carts of registered users
+    link: docs/scos/dev/glue-api-guides/202009.0/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html
+  - title: Managing gift cards of registered users
+    link: docs/scos/dev/glue-api-guides/202009.0/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html
+  - title: Retrieving customer carts
+    link: docs/scos/dev/glue-api-guides/202108.0/managing-customers/retrieving-customer-carts.html
 ---
 
 This endpoint allows managing carts by creating, retrieving, and deleting them.

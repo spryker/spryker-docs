@@ -7,6 +7,13 @@ originalArticleId: dbb4ed18-78d4-4746-bb97-3a9a09a3edc2
 redirect_from:
   - /v3/docs/creating-cms-block
   - /v3/docs/en/creating-cms-block
+related:
+  - title: CMS Block
+    link: docs/scos/user/features/201907.0/cms-feature-overview/cms-blocks-overview.html
+  - title: CMS Block- Reference Information
+    link: docs/scos/user/back-office-user-guides/201907.0/content/blocks/references/cms-block-reference-information.html
+  - title: Defining Validity Period for CMS Blocks
+    link: docs/scos/user/back-office-user-guides/201907.0/content/blocks/defining-validity-period-for-cms-blocks.html
 ---
 
 This topic provides a list of steps to create a CMS block in Back Office.

@@ -7,6 +7,15 @@ originalArticleId: d28a6800-6428-408f-8039-9baee6749ecd
 redirect_from:
   - /v4/docs/managing-groups
   - /v4/docs/en/managing-groups
+related:
+  - title: Roles- Reference Information
+    link: docs/scos/user/back-office-user-guides/201811.0/users/roles-groups-and-users/references/roles-reference-information.html
+  - title: User- Reference Information
+    link: docs/scos/user/back-office-user-guides/201811.0/users/roles-groups-and-users/references/user-reference-information.html
+  - title: Managing Users
+    link: docs/scos/user/back-office-user-guides/202001.0/users/roles-groups-and-users/managing-users.html
+  - title: Customer Groups
+    link: docs/scos/user/features/202001.0/customer-account-management-feature-overview/customer-groups-overview.html
 ---
 
 This topic describes the procedures that you need to perform to create and update groups.

@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/managing-search-preferences
   - /docs/managing-search-preferences
   - /docs/en/managing-search-preferences
+related:
+  - title: Managing Category Filters
+    link: docs/scos/user/back-office-user-guides/202001.0/merchandising/search-and-filters/managing-category-filters.html
+  - title: Managing Filter Preferences
+    link: docs/scos/user/back-office-user-guides/202001.0/merchandising/search-and-filters/managing-filter-preferences.html
 ---
 
 This topic describes how to manage search preferences. 

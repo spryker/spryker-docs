@@ -11,6 +11,11 @@ redirect_from:
   - /v1/docs/en/product-review-feature-configuration
   - /v1/docs/rating-revew-management
   - /v1/docs/en/rating-revew-management
+related:
+  - title: Product Reviews feature integration
+    link: docs/scos/dev/feature-integration-guides/201811.0/product-reviews-feature-integration.html
+  - title: Managing Product Reviews
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/product-reviews/managing-product-reviews.html
 ---
 ---
 

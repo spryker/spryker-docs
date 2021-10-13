@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/company-account-order-management-feature-integration
   - /docs/company-account-order-management-feature-integration
   - /docs/en/company-account-order-management-feature-integration
+related:
+  - title: Company Account
+    link: docs/scos/user/features/202009.0/company-account-feature-overview/company-account-feature-overview.html
 ---
 
 ## Install Feature Core

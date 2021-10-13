@@ -13,6 +13,13 @@ redirect_from:
   - /v4/docs/en/navigation
   - /v4/docs/product-based-shop-navigation
   - /v4/docs/en/product-based-shop-navigation
+related:
+  - title: Navigation Module
+    link: docs/scos/dev/feature-walkthroughs/201811.0/navigation-feature-walkthrough/navigation-module.html
+  - title: Navigation Schema
+    link: docs/scos/dev/drafts-dev/database-schema-guide/201811.0/navigation-schema.html
+  - title: Managing Navigation Elements
+    link: docs/scos/user/back-office-user-guides/201811.0/content/navigation/managing-navigation-elements.html
 ---
 
 The Spryker Commerce OS navigation is built in a tree structure to support multiple levels of linking to:

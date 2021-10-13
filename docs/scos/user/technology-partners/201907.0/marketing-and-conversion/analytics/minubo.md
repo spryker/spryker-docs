@@ -7,6 +7,9 @@ originalArticleId: 047e3e2f-02bc-4d55-aaab-a4cd1b3ee0cc
 redirect_from:
   - /v3/docs/minubo
   - /v3/docs/en/minubo
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/201811.0/technology-partner-integration.html
 ---
 
 ## Partner Information

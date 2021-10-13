@@ -7,6 +7,9 @@ originalArticleId: 4bb441c1-bc60-4fb3-b473-36c98722b6c8
 redirect_from:
   - /v4/docs/mg-manual-order-entry-gui
   - /v4/docs/en/mg-manual-order-entry-gui
+related:
+  - title: Migration Guide - Shipment
+    link: docs/scos/dev/module-migration-guides/202001.0/migration-guide-shipment.html
 ---
 
 ## Upgrading from Version 0.8.* to Version 0.9.0

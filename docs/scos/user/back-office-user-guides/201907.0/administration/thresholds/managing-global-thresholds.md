@@ -7,6 +7,13 @@ originalArticleId: 0fcce965-3860-4b4f-b41f-aba27b961c16
 redirect_from:
   - /v3/docs/managing-global-threshold
   - /v3/docs/en/managing-global-threshold
+related:
+  - title: Managing Merchant Order Thresholds
+    link: docs/scos/user/back-office-user-guides/201907.0/administration/thresholds/managing-merchant-order-thresholds.html
+  - title: Threshold- Reference Information
+    link: docs/scos/user/back-office-user-guides/201907.0/administration/thresholds/references/threshold-reference-information.html
+  - title: Managing Threshold Settings
+    link: docs/scos/user/back-office-user-guides/201907.0/administration/thresholds/managing-threshold-settings.html
 ---
 
 This topic describes the procedures for managing thresholds per merchant relation.

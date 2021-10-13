@@ -31,6 +31,11 @@ redirect_from:
   - /v3/docs/en/multicurrency-search
   - /v2/docs/multicurrency-search
   - /v2/docs/en/multicurrency-search
+related:
+  - title: Migration Guide - Multi-Currency
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-multi-currency.html
+  - title: Migration Guide - Price
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-price.html
 ---
 
 If you don't have the multi-currency feature in you current project yet and want to migrate, you have to follow certain steps to migrate your system. First [migrate Price](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-price.html) and [modules related to multi-currency](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html) before proceeding with the search for multi-currency.

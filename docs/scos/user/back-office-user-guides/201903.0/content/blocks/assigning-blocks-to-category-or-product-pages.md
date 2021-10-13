@@ -7,6 +7,13 @@ originalArticleId: 55144fd7-c519-4a5a-9b42-4f4e4000c2c0
 redirect_from:
   - /v2/docs/assigning-blocks-to-category-or-product-pages
   - /v2/docs/en/assigning-blocks-to-category-or-product-pages
+related:
+  - title: CMS Block
+    link: docs/scos/user/features/201903.0/cms-feature-overview/cms-blocks-overview.html
+  - title: Managing CMS Blocks
+    link: docs/scos/user/back-office-user-guides/201903.0/content/blocks/managing-cms-blocks.html
+  - title: Creating a CMS Block
+    link: docs/scos/user/back-office-user-guides/201903.0/content/blocks/creating-cms-blocks.html
 ---
 
 The topic describes how to create a category and a product details page by assigning CMS blocks to those pages.

@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/mg-catalog
   - /docs/mg-catalog
   - /docs/en/mg-catalog
+related:
+  - title: Migration Guide - Category
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-category.html
 ---
 
 ## Upgrading from Version 5.5* to  Version 5.6*

@@ -7,6 +7,25 @@ originalArticleId: a084c458-1110-491a-abda-de41dfaba06c
 redirect_from:
   - /v1/docs/discontinuing-a-product
   - /v1/docs/en/discontinuing-a-product
+related:
+  - title: Creating an Abstract Product
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html
+  - title: Creating and Managing Product Bundles
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/abstract-products/creating-product-bundles.html
+  - title: Creating Product Variants
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/concrete-products/creating-product-variants.html
+  - title: Managing Products
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/managing-products/managing-products.html
+  - title: Adding Product Alternatives
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/managing-products/adding-product-alternatives.html
+  - title: Adding Volume Prices
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html
+  - title: Products- Reference Information
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/references/products-reference-information.html
+  - title: Abstract Product- Reference Information
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/references/abstract-product-reference-information.html
+  - title: Concrete Product- Reference Information
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/references/concrete-product-reference-information.html
 ---
 
 This article describes what steps you need to follow to discontinue the product.

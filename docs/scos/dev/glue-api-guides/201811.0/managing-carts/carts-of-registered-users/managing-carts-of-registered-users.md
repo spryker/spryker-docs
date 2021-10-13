@@ -6,6 +6,11 @@ originalArticleId: cdee2948-be3c-43ec-8f99-0d7dc381326e
 redirect_from:
   - /v1/docs/managing-carts-of-registered-users
   - /v1/docs/en/managing-carts-of-registered-users
+related:
+  - title: Managing Guest Carts
+    link: docs/scos/dev/glue-api-guides/201811.0/managing-carts/guest-carts/managing-guest-carts.html
+  - title: Checking Out Purchases and Getting Checkout Data
+    link: docs/scos/dev/glue-api-guides/201811.0/checking-out-purchases-and-getting-checkout-data.html
 ---
 
 The **Carts API** provides access to management of customers' shopping carts. The following document covers working with **carts of registered users**.

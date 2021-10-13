@@ -7,6 +7,11 @@ originalArticleId: 59a590b2-fe13-4a95-b8a7-9783b9fd04c5
 redirect_from:
   - /v6/docs/creating-cms-block
   - /v6/docs/en/creating-cms-block
+related:
+  - title: CMS Block
+    link: docs/scos/user/back-office-user-guides/202001.0/content/blocks/cms-block.html
+  - title: Managing CMS Blocks
+    link: docs/scos/user/back-office-user-guides/202001.0/content/blocks/managing-cms-blocks.html
 ---
 
 This topic describes how to create a CMS block.

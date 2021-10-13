@@ -7,6 +7,9 @@ originalArticleId: 85b1959a-781f-42b8-a03b-1dcd1140b419
 redirect_from:
   - /v2/docs/category
   - /v2/docs/en/category
+related:
+  - title: Category Management feature overview
+    link: docs/scos/user/features/201903.0/category-management-feature-overview.html
 ---
 
 The **Category** section in the Back Office is mostly used by Product Catalog Managers. 

@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/authenticating-as-an-agent-assist
   - /docs/authenticating-as-an-agent-assist
   - /docs/en/authenticating-as-an-agent-assist
+related:
+  - title: Agent Assist feature overview
+    link: docs/scos/user/features/202009.0/agent-assist-feature-overview.html
 ---
 
 Log into the Storefront as an [agent assist](/docs/scos/user/features/{{page.version}}/agent-assist-feature-overview.html) to help customers by performing actions on their behalf. After you’ve logged in, you can search by customers and impersonate them to perform any action available to them.

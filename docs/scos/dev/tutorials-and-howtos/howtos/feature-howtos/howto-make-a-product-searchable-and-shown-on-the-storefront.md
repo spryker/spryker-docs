@@ -19,6 +19,11 @@ redirect_from:
   - /v2/docs/en/ht-make-product-shown-on-frontend-by-url
   - /v1/docs/ht-make-product-shown-on-frontend-by-url
   - /v1/docs/en/ht-make-product-shown-on-frontend-by-url
+related:
+  - title: Creating Product Variants
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/products/concrete-products/creating-product-variants.html
+  - title: Updating Product Variants
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/products/concrete-products/updating-product-variants.html
 ---
 
 {% info_block infoBox %}

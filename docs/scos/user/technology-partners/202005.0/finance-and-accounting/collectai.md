@@ -7,6 +7,9 @@ originalArticleId: 362169bd-a8e9-4ef2-8396-98cb93d7f57d
 redirect_from:
   - /v5/docs/collect-ai
   - /v5/docs/en/collect-ai
+related:
+  - title: Technology Partner Integration
+    link: docs/scos/user/technology-partners/201811.0/technology-partner-integration.html
 ---
 
 ## Partner Information

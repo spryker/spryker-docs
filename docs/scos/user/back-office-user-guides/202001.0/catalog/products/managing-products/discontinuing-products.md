@@ -7,6 +7,15 @@ originalArticleId: afea6342-98ff-4afe-ae96-f6d248a07c6c
 redirect_from:
   - /v4/docs/discontinuing-a-product
   - /v4/docs/en/discontinuing-a-product
+related:
+  - title: Updating Product Variants
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/products/concrete-products/updating-product-variants.html
+  - title: Creating and Managing Product Bundles
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/products/managing-products/creating-and-managing-product-bundles.html
+  - title: Adding Product Alternatives
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/products/managing-products/adding-product-alternatives.html
+  - title: Adding Volume Prices
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/products/managing-products/adding-volume-prices.html
 ---
 
 This article describes what steps you need to follow to discontinue the product.

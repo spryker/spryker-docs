@@ -7,6 +7,9 @@ originalArticleId: 81929db2-42f8-4f8c-9589-b799f8b92983
 redirect_from:
   - /v5/docs/payments-feature-integration
   - /v5/docs/en/payments-feature-integration
+related:
+  - title: Payments feature overview
+    link: docs/scos/user/features/202001.0/payments-feature-overview.html
 ---
 
 {% info_block errorBox %}

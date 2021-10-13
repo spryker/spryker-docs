@@ -6,6 +6,9 @@ originalArticleId: 8558dd55-d3ac-44d7-b3cd-6cbbc3acab72
 redirect_from:
   - /v3/docs/mg-tax
   - /v3/docs/en/mg-tax
+related:
+  - title: "Reference information: Tax module"
+    link: docs/scos/dev/feature-walkthroughs/201811.0/tax-feature-walkthrough/reference-information-tax-module.html
 ---
 
 ## Upgrading from Version 4.* to Version 5.*

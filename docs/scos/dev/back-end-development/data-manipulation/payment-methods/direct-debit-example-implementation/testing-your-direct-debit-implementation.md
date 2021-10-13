@@ -21,6 +21,11 @@ redirect_from:
   - /v2/docs/en/dd-test-implementation
   - /v1/docs/dd-test-implementation
   - /v1/docs/en/dd-test-implementation
+related:
+  - title: Managing Orders
+    link: docs/scos/user/back-office-user-guides/201811.0/sales/orders/managing-orders.html
+  - title: Shop Guide - Checkout
+    link: docs/scos/user/shop-user-guides/201811.0/checkout/shop-guide-checkout.html
 ---
 
 After the Direct Debit payment method has been set up on the [front end](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-yves.html), [back end](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-zed.html) and [shared implementation](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-the-shared-layer.html), test it by [submitting a new order](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/multi-step-checkout-overview.html) from Yves. Then, you can manage the flow of the order [in the Back Office](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/managing-orders.html).

@@ -7,6 +7,13 @@ originalArticleId: 9e994f24-1266-4344-9373-13502dfa1a04
 redirect_from:
   - /v1/docs/cms-extension-points
   - /v1/docs/en/cms-extension-points
+related:
+  - title: CMS Page
+    link: docs/scos/user/features/201811.0/cms-feature-overview/cms-pages-overview.html
+  - title: Migration Guide - CMS
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-cms.html
+  - title: Migration Guide - CMS Collector
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-cmscollector.html
 ---
 
 The CMS module provides an extension point for post activation and deactivation of CMS pages. The plugin interface set for this extension point is as follows:

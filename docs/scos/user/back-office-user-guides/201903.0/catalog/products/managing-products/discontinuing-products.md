@@ -7,6 +7,13 @@ originalArticleId: 1ece09fe-4087-4885-b358-785002c59b8d
 redirect_from:
   - /v2/docs/discontinuing-a-product
   - /v2/docs/en/discontinuing-a-product
+related:
+  - title: Abstract and Concrete Products
+    link: docs/scos/user/back-office-user-guides/201903.0/catalog/products/abstract-and-concrete-products.html
+  - title: Editing Product Variant
+    link: docs/scos/user/back-office-user-guides/201903.0/catalog/products/concrete-products/editing-product-variant.html
+  - title: Concrete Product- Reference Information
+    link: docs/scos/user/back-office-user-guides/201903.0/catalog/products/references/concrete-product-reference-information.html
 ---
 
 This article describes what steps you need to follow to discontinue the product.

@@ -7,6 +7,19 @@ originalArticleId: afc22012-3e1a-4d60-af8e-e7ba7544aebf
 redirect_from:
   - /v4/docs/retrieving-business-unit-information-201907
   - /v4/docs/en/retrieving-business-unit-information-201907
+related:
+  - title: Logging In as Company User
+    link: docs/scos/dev/glue-api-guides/202001.0/managing-b2b-account/authenticating-as-a-company-user.html
+  - title: Retrieving Company User Information
+    link: docs/scos/dev/glue-api-guides/202001.0/managing-b2b-account/retrieving-company-users.html
+  - title: Retrieving Company Information
+    link: docs/scos/dev/glue-api-guides/202001.0/managing-b2b-account/retrieving-companies.html
+  - title: Authentication and Authorization
+    link: docs/scos/dev/glue-api-guides/202001.0/managing-customers/authenticating-as-a-customer.html
+  - title: Business Units Management Feature Overview
+    link: docs/scos/user/features/202001.0/company-account-feature-overview/business-units-overview.html
+  - title: Company Account and General Organizational Structure
+    link: docs/scos/user/features/202001.0/company-account-feature-overview/company-accounts-overview.html
 ---
 
 In the B2B world, users represent their companies rather than act on their own behalf. Such users, called [Company Accounts](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html), are organized in Business Units depending on their job role and the scope of their activity. The endpoints provided by the **Business Unit** and **Business Unit Address** APIs allow retrieving Business Unit information.

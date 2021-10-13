@@ -7,6 +7,15 @@ originalArticleId: f692b3c8-e99f-4326-9a0c-2aa012fe9b76
 redirect_from:
   - /v5/docs/orders-reference-information
   - /v5/docs/en/orders-reference-information
+related:
+  - title: Returns- Reference Information
+    link: docs/scos/user/back-office-user-guides/202005.0/sales/returns/references/returns-reference-information.html
+  - title: Return Item States- Reference Information
+    link: docs/scos/user/back-office-user-guides/202005.0/sales/returns/references/return-item-states-reference-information.html
+  - title: Return Management Feature Overview
+    link: docs/scos/user/features/202005.0/return-management-feature-overview/return-management-feature-overview.html
+  - title: Managing Returns
+    link: docs/scos/user/back-office-user-guides/202005.0/sales/returns/managing-returns.html
 ---
 
 This topic contains the reference for working with orders in **Sales** > **Orders**.

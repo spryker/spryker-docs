@@ -7,6 +7,11 @@ originalArticleId: 26c521dc-2d4d-4c5c-b2b8-710b902377c3
 redirect_from:
   - /v5/docs/mg-sales-aggregator
   - /v5/docs/en/mg-sales-aggregator
+related:
+  - title: Sales
+    link: docs/scos/dev/feature-walkthroughs/201811.0/order-management-feature-walkthrough/sales-module-reference-information.html
+  - title: Migration Guide - Sales
+    link: docs/scos/dev/module-migration-guides/201811.0/migration-guide-sales.html
 ---
 
 ## Upgrading from Version 4.* to Version 5.*

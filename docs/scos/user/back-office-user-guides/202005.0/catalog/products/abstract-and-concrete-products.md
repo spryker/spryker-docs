@@ -7,6 +7,17 @@ originalArticleId: 5a94bbee-0948-4b7e-82e6-a3cde72db03d
 redirect_from:
   - /v5/docs/abstract-and-concrete-products
   - /v5/docs/en/abstract-and-concrete-products
+related:
+  - title: Creating an Abstract Product
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html
+  - title: Editing an Abstract Product
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/products/abstract-products/editing-abstract-products.html
+  - title: Creating Product Variants
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/products/concrete-products/creating-product-variants.html
+  - title: Updating Product Variants
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/products/concrete-products/updating-product-variants.html
+  - title: Managing Products
+    link: docs/scos/user/back-office-user-guides/202001.0/catalog/products/managing-products/managing-products.html
 ---
 
 Products can extensively vary, for example, in size or color. In order to provide a nice shopping experience to your customers, the different Variants, or Concrete Products, are grouped under an Abstract Product.

@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/managing-product-ratings-and-reviews
   - /docs/managing-product-ratings-and-reviews
   - /docs/en/managing-product-ratings-and-reviews
+related:
+  - title: Rating and Reviews
+    link: docs/scos/user/features/202001.0/rating-and-reviews/rating-and-reviews.html
+  - title: Rating and Review Management
+    link: docs/scos/user/features/202001.0/rating-and-reviews/rating-and-review-management.html
 ---
 
 [Ratings and reviews](https://documentation.spryker.com/docs/product-rating-reviews) allow customers to share their opinions and experiences about purchases. This enables customers to take meaningful decisions about purchases and increases their trust with the shop.

@@ -9,6 +9,13 @@ redirect_from:
   - /2021080/docs/en/managing-users
   - /docs/managing-users
   - /docs/en/managing-users
+related:
+  - title: Roles- Reference Information
+    link: docs/scos/user/back-office-user-guides/201811.0/users/roles-groups-and-users/references/roles-reference-information.html
+  - title: User- Reference Information
+    link: docs/scos/user/back-office-user-guides/201811.0/users/roles-groups-and-users/references/user-reference-information.html
+  - title: User and Rights Management
+    link: docs/scos/dev/feature-walkthroughs/202001.0/customer-account-management-feature-walkthrough/user-and-rights-overview.html
 ---
 
 This topic describes how to manage users.

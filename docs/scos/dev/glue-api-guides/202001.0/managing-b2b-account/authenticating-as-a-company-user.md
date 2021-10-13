@@ -7,6 +7,21 @@ originalArticleId: 08173a2d-b5a4-4a7b-a261-902ff1d7194b
 redirect_from:
   - /v4/docs/logging-in-as-company-user-201907
   - /v4/docs/en/logging-in-as-company-user-201907
+related:
+  - title: Authentication and Authorization
+    link: docs/scos/dev/glue-api-guides/202001.0/managing-customers/authenticating-as-a-customer.html
+  - title: Retrieving Business Unit Information
+    link: docs/scos/dev/glue-api-guides/202001.0/managing-b2b-account/retrieving-business-unit-information.html
+  - title: Retrieving Company Role Information
+    link: docs/scos/dev/glue-api-guides/202001.0/managing-b2b-account/retrieving-company-roles.html
+  - title: Retrieving Company User Information
+    link: docs/scos/dev/glue-api-guides/202001.0/managing-b2b-account/retrieving-company-users.html
+  - title: Company Account and General Organizational Structure
+    link: docs/scos/user/features/202001.0/company-account-feature-overview/company-accounts-overview.html
+  - title: Prices per Merchant Relation Feature Overview
+    link: docs/scos/user/features/202001.0/merchant-custom-prices-feature-overview.html
+  - title: Password Management
+    link: docs/scos/user/features/202001.0/customer-account-management-feature-overview/password-management-overview.html
 ---
 
 In the B2B context, buyers typically represent a company and act on its behalf. For this reason, Spryker Commerce OS provides the [Company Account](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html) capability which allows companies to create multiple [Company Users](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html), as well as organize them in Business Units depending on the user role and scope. Customers can impersonate as various *Company Accounts* depending on the task they need to perform.

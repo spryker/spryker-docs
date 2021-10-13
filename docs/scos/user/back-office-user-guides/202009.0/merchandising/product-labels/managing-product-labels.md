@@ -7,6 +7,9 @@ originalArticleId: 9c7648cc-d700-45a7-9eb6-7b4369151786
 redirect_from:
   - /v6/docs/managing-product-labels
   - /v6/docs/en/managing-product-labels
+related:
+  - title: Product Labels feature overview
+    link: docs/scos/user/features/202001.0/product-labels-feature-overview.html
 ---
 
 This topic describes how to manage product labels.

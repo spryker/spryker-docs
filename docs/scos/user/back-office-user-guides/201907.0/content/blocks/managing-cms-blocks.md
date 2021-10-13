@@ -7,6 +7,11 @@ originalArticleId: 8a6a8a71-d850-4dbd-9dab-93350164dced
 redirect_from:
   - /v3/docs/managing-cms-blocks
   - /v3/docs/en/managing-cms-blocks
+related:
+  - title: CMS Block
+    link: docs/scos/user/features/201907.0/cms-feature-overview/cms-blocks-overview.html
+  - title: Assigning Blocks to Category or Product Pages
+    link: docs/scos/user/back-office-user-guides/201907.0/content/blocks/assigning-blocks-to-category-or-product-pages.html
 ---
 
 This topic describes the procedures of managing CMS blocks.

@@ -7,6 +7,9 @@ originalArticleId: 39819a25-78a0-46f8-b9a7-f49c644c22f0
 redirect_from:
   - /v1/docs/product-barcodes
   - /v1/docs/en/product-barcodes
+related:
+  - title: Managing Products
+    link: docs/scos/user/back-office-user-guides/201811.0/catalog/products/managing-products/managing-products.html
 ---
 
 Nowadays, B2B businesses face extraordinary challenges as more and more consumers are making comparisons of various e-commerce applications. To stay on top of the industry trends, improve customer experience and increase sales, every business must innovate with a deep understanding of their customer’s physical, emotional, and financial needs and triggers.

@@ -43,7 +43,7 @@ With Upselling, when the product owing the relation is added to cart, related pr
 
 
 
-A product catalog manager can select a product relation type when [creating](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/creating-product-relations.html) or [editing](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/managing-product-relations.html#editing-a-product-relation) a product relation in the Back Office.
+A product catalog manager can select a product relation type when [creating](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/creating-product-relations.html) or [editing](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/managing-product-relations.html#editing-product-relations) a product relation in the Back Office.
 
 
 ## Product Types in Product Relations

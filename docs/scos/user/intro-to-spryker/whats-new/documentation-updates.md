@@ -302,11 +302,11 @@ Below you will find the list of the new/updated documentation released as part o
 * [Queue Worker](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html#queue)
 * [Deploy File Reference](/docs/dev/the-docker-sdk/{{site.version}}/deploy-file-reference-1.0.html)
 * [Health checks](/docs/scos/dev/technical-enhancements/health-checks.html)
-* [Asset Management](/docs/scos/user/features/{{site.version}}/file-manager/file-manager-feature-overview/asset-management.html)
+* [Asset Management](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/asset-management.html)
 <details open>
 <summary>Feature overview</summary>
 
-[Asset Management Feature Overview](/docs/scos/user/features/{{site.version}}/file-manager/file-manager-feature-overview/asset-management.html)
+[Asset Management Feature Overview](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/asset-management.html)
 
 </details>
 

@@ -253,7 +253,7 @@ protected function getCsvHeaders(): array
 }
 ```
 
-#### Implementing GetDownloadQuery
+#### Implementing formatCsvRow
 
 The `GetDownloadQuery` method returns the query that is used to fetch the data from the database. In the background, `\Propel\Runtime\Formatter\OnDemandFormatter` is set for performance reasons.
 

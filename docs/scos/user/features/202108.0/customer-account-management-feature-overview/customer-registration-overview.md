@@ -71,7 +71,7 @@ A developer can register a customer by importing their customer account details.
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customers.html#creating-cusomers)  |
+| [Create customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customers.html#creating-customers)  |
 
 {% info_block warningBox "Developer guides" %}
 

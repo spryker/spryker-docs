@@ -68,7 +68,7 @@ The [Product Bundles](/docs/scos/user/features/{{page.version}}/product-bundles-
 
 {% endinfo_block %}
 
-Once a return request has been submitted, it acquires the *Waiting for return* state. The return states change as the Back Office User [processes the return](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html#creating-a-return). See [Return Items States](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/returns/references/return-item-states-reference-information.html) for details on the return states.
+Once a return request has been submitted, it acquires the *Waiting for return* state. The return states change as the Back Office User [processes the return](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html#creating-returns). See [Return Items States](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/returns/references/return-item-states-reference-information.html) for details on the return states.
 ![Create return](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Return+Management/Return+Management+Feature+Overview/create-return.png) 
 
 {% info_block infoBox "Info" %}

@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/managing-returns
 ---
 
-After a [return](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html) has been [created by a Back Office User](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html#creating-a-return) or by a [Shop User](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html#return-management-on-the-storefront), it appears on the *Orders > Returns* page. On this page, you can manage the returns as follows:
+After a [return](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html) has been [created by a Back Office User](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html#creating-returns) or by a [Shop User](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html#return-management-on-the-storefront), it appears on the *Orders > Returns* page. On this page, you can manage the returns as follows:
 
 * View the return details
 * Set the return statuses
@@ -99,17 +99,17 @@ The *Total* section displays the total amount of items to be returned.
 
 ## Setting return statuses
 
-You can either accept the returns created by the Back Office users or by the customers or cancel them if the returns are no longer relevant, can not be made due to the Return Policy, or for another reason. 
+You can either accept the returns created by the Back Office users or by the customers or cancel them if the returns are no longer relevant, can not be made due to the Return Policy, or for another reason.
 
-To set and track the return statuses, you trigger the return states. 
+To set and track the return statuses, you trigger the return states.
 
 To trigger the return states:
 
 1. On the *Returns* page, click **View** in the *Actions* column. This takes you to the *Return Overview [Return Reference]* page.
 
 2. In the *Trigger all matching state* section, click the necessary state. The return state changes, and the new states that you can trigger appear.
-![Trigger states](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Sales/Returns/trigger-status.png) 
- 
+![Trigger states](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Sales/Returns/trigger-status.png)
+
 {% info_block infoBox "Info" %}
 
 The triggered return states are reflected in the [customer account on the Storefront](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html#return-management-on-the-storefront), informing customers about the statuses of their returns.<!--- You can rename the default statuses that display on the Storefront so they would make more sense for the Storefront users. See *Display Custom Names for Order Item States on the Storefront* for details on how to do that.-->
@@ -118,7 +118,7 @@ The triggered return states are reflected in the [customer account on the Storef
 
 **Tips & tricks**
 
-To trigger the return states for all the items in the return, click the states at the *Trigger all matching states* field. To trigger the return states for individual items of the return, trigger the states in the *Trigger event* column for the necessary items. 
+To trigger the return states for all the items in the return, click the states at the *Trigger all matching states* field. To trigger the return states for individual items of the return, trigger the states in the *Trigger event* column for the necessary items.
 
 ### Reference information: Setting return statuses
 
@@ -134,12 +134,11 @@ Once a return has been created, it acquires the *Waiting for return* state. You 
 | close | You can trigger this state after the *Delivered* state. Select this state to close the return. The return status is changed to *Closed*. |
 
 ## Printing a return slip
-For all returns, irrespective of their statuses, you can print the automatically generated [return slip](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html#return-slip). 
+For all returns, irrespective of their statuses, you can print the automatically generated [return slip](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html#return-slip).
 
 To print the return slip:
 
-* In the *Actions* column on the *List of Returns* page, click **Print slip**. 
+* In the *Actions* column on the *List of Returns* page, click **Print slip**.
 * On the *Return Overview [Return Reference]* page, click **Print Return Slip**.
 
 This takes you to the page with the print version of the return slip.
-

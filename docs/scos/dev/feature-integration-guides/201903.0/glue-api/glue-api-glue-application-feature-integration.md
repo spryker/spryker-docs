@@ -1,5 +1,5 @@
 ---
-title: Glue Application feature integration
+title: "Glue API: Glue Application feature integration"
 description: This guide will navigate you through the process of installing and configuring the Glue Application feature in Spryker OS.
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/glue-application-feature-integration-v2019030
@@ -79,12 +79,12 @@ Activate the following plugins:
 
 <details open>
 <summary>src/Pyz/Glue/GlueApplication/Bootstrap/GlueBootstrap.php</summary>
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication\Bootstrap;
- 
+
 use Silex\Provider\ServiceControllerServiceProvider;
 use Silex\Provider\SessionServiceProvider;
 use Spryker\Glue\GlueApplication\Bootstrap\AbstractGlueBootstrap;
@@ -92,7 +92,7 @@ use Spryker\Glue\GlueApplication\Plugin\Rest\GlueServiceProviderPlugin;
 use Spryker\Glue\GlueApplication\Plugin\Rest\ServiceProvider\GlueApplicationServiceProvider;
 use Spryker\Glue\GlueApplication\Plugin\Rest\ServiceProvider\GlueResourceBuilderService;
 use Spryker\Glue\GlueApplication\Plugin\Rest\ServiceProvider\GlueRoutingServiceProvider;
- 
+
 class GlueBootstrap extends AbstractGlueBootstrap
 {
     /**
@@ -121,21 +121,21 @@ Create a new entry point for Glue Application:
 
 ```php
 <?php
- 
+
 use Pyz\Glue\GlueApplication\Bootstrap\GlueBootstrap;
 use Spryker\Shared\Config\Application\Environment;
 use Spryker\Shared\ErrorHandler\ErrorHandlerEnvironment;
- 
+
 define('APPLICATION', 'GLUE');
 defined('APPLICATION_ROOT_DIR') || define('APPLICATION_ROOT_DIR', realpath(__DIR__ . '/../..'));
- 
+
 require_once APPLICATION_ROOT_DIR . '/vendor/autoload.php';
- 
+
 Environment::initialize();
- 
+
 $errorHandlerEnvironment = new ErrorHandlerEnvironment();
 $errorHandlerEnvironment-&gt;initialize();
- 
+
 $bootstrap = new GlueBootstrap();
 $bootstrap
     ->boot()
@@ -155,18 +155,18 @@ Create Nginx VHOST configuration:
 server {
     # Listener for production/staging - requires external LoadBalancer directing traffic to this port
     listen 10001;
- 
+
     # Listener for testing/development - one host only, doesn't require external LoadBalancer
     listen 80;
- 
+
     server_name ~^glue\\..+\\.com$;
- 
+
     keepalive_timeout 0;
     access_log  /data/logs/development/glue-access.log extended;
- 
+
     # entry point for Glue Application
     root /data/shop/development/current/public/Glue;
- 
+
     set $application_env development;
     # Binding store
     set $application_store DE;
@@ -205,12 +205,12 @@ If everything is set up correctly, you should be able to access `http://glue.mys
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\GlueApplication\Plugin\Rest\SetStoreCurrentLocaleBeforeActionPlugin;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**

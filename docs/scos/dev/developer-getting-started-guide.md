@@ -143,6 +143,6 @@ Select one of the topics below depending on what you want to do next:
 * [Glue REST API](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-rest-api.html): Spryker Glue REST API overview, reference, and guides.
 * [User guides](/docs/scos/user/back-office-user-guides/{{site.version}}/about-back-office-user-guides.html): step-by-step Backoffice and Storefront user guides.
 * [Developer guides](/docs/scos/dev/overview-of-the-developer-guides.html): technical information and guides for developers.
-* [Technology partners](/docs/scos/dev/technology-partners/{{site.version}}/technology-partner-integration.html): Spryker technology partners information and integration guides.
+* [Technology partners](/docs/scos/user/technology-partners/{{site.version}}/technology-partner-integration.html): Spryker technology partners information and integration guides.
 * [Migration and integration](/docs/scos/dev/migration-and-integration/{{site.version}}/about-migration-and-integration-guides.html): instructions on how to migrate to newer versions of modules and features.
 * [Tutorials](/docs/scos/dev/tutorials-and-howtos/tutorials-and-howtos.html): tutorials and HowTos.

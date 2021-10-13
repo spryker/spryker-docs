@@ -28,7 +28,7 @@ To start the feature integration, overview and install the necessary features:
 
 | Name | Version | Integration guide |
 | --- | --- | --- |
-| Spryker Core | master | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-application-feature-integration.html) |
+| Spryker Core | master | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
 | Company account | master | [Company Account](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html) |
 | Customer Account Management | muster | [Customer API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api-customer-account-management-feature-integration.html) |
 | Uuid generation console | master| UUID Generation Console |

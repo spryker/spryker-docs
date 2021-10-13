@@ -32,7 +32,7 @@ Assets are files, a large collection of files; a solution to manage them it’s 
 We point out 4 different steps to achieve this:
 
 1. [download and structure](/docs/scos/dev/legacy-demoshop/{{page.version}}/download-and-structure.html): get external dependencies and put assets into the corresponding folders;
-2. [development](/docs/scos/dev/sdk/{{page.version}}/development.html): create your frontend;
+2. [development tools](/docs/scos/dev/sdk/{{page.version}}/development-tools/development-tools.html): create your frontend;
 3. [transpile/build and optimization](/docs/scos/dev/legacy-demoshop/{{page.version}}/build-and-optimization.html): manipulate and optimize assets;
 4. [public folder](/docs/scos/dev/legacy-demoshop/{{page.version}}/public-folder.html): place built output into a public and accessible folder.
 

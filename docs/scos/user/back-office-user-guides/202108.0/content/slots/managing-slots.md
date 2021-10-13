@@ -55,16 +55,16 @@ To assign a CMS block to a slot:
 1. In *List of Slots for [Name] Template*, click on the row of the slot you wish to assign CMS blocks to.
 2. Open the drop-down menu in *List of Blocks for [Name] Slot*;
 3. Select a CMS block and click **+Add**;
-:::(Warning) 
+{% info_block warningBox %}
 Repeat step 2 for each CMS block that you want to assign.
-:::
-:::(Info) 
+{% endinfo_block %}
+{% info_block infoBox %}
 * The **+Add** button is not active until a CMS block is selected.
 * In the drop-down menu, start typing the name of a CMS block to filter the list.
 * You can only add one CMS block at a time. When you click on a CMS block in the drop-down menu to select it, the drop-down menu closes with the selected CMS Block shown in the drop-down field. If you do not click  **+Add** and select another CMS block, the previous CMS Block is replaced with the new one. If you click **+Add** after replacing one CMS block with another, only the last selected CMS block is added.
 * Newly added CMS blocks are placed on top of *List of Blocks for [Name] Slot*.
-* You can add an inactive CMS block to a slot. The content of the inactive CMS block won't be displayed until the CMS block is activated. 
-:::
+* You can add an inactive CMS block to a slot. The content of the inactive CMS block won't be displayed until the CMS block is activated.
+{% endinfo_block %}
 4. Click **Save** to assign all the selected CMS blocks to the slot.
 
 The order of the assigned CMS blocks in the *List of Blocks for [Name] Slot* reflects the order of CMS blocks displayed on the corresponding Storefront page(s). See Changing the position of CMS blocks to define the desired order.
@@ -154,9 +154,9 @@ To move a CMS block:
     - to move a CMS block one position up, click **Move Up**. This will swap this slot with the one located above. The content of the CMS blocks will be swapped respectively on the corresponding page(s).
     - to move a CMS block one position down, click **Move Down**. This will swap this slot with the one located below. The content of the CMS blocks will be swapped respectively on the corresponding page(s).
 
-:::(Info) 
+{% info_block infoBox %} 
 If there is only one CMS block assigned to a slot, Move Up and Move Down actions are not available.
-:::
+{% endinfo_block %}
 
 ## Viewing CMS blocks
 To view a CMS block, click **View Block** in the *Actions* column in the *List of Blocks for [Name] Slot* section.
@@ -167,9 +167,9 @@ To learn about attributes on this page, see [Creating a CMS block](/docs/scos/us
 You can delete the assignment of a CMS block to a slot removing its content from the corresponding Storefront page.
 
 To delete an assignment, click **Delete** in the *Actions* column in *List of Blocks for [Name] Slot*. This will remove the content of the CMS block from the corresponding Storefront page.
-:::(Info) 
+{% info_block infoBox %} 
 Deleting an assignment does not delete the CMS block itself.
-:::
+{% endinfo_block %}
 
 ## Selecting pages
 You can select the Storefront pages in which CMS blocks will be displayed. This defines particular pages in which the content of the selected CMS block is rendered. Otherwise, a CMS block is rendered in all the pages to which the corresponding template with slots is applied.
@@ -183,9 +183,9 @@ To select pages:
     a. The **All Categories Pages** radio button if you want the CMS block content to be displayed in all the category pages to which the corresponding template is applied.
     b. The **Specific Category Pages** radio button if you want the CMS block content to be displayed in a specific category page or in a selection of the category pages to which the corresponding template is applied. 
 
-:::(Info)
+{% info_block infoBox %}
 The **All Category Pages** radio button is selected by default with the CMS block content displayed in all the pages to which the corresponding template is applied.
-:::
+{% endinfo_block %}
 
 If you selected the **Specific Category Pages** radio button:
 
@@ -201,9 +201,9 @@ If you selected the **Specific Category Pages** radio button:
 2. In the *List of Blocks for [Name] Slot*, select:
     a. **All CMS Pages** radio button if you want the CMS block content to be displayed in all the CMS Pages to which the corresponding template is applied.
     b. **Specific CMS Pages** radio button if you want the CMS block content to be displayed in a specific CMS page or in a selection of the CMS pages to which the corresponding template is applied.
-:::(Info) 
+{% info_block infoBox %} 
 The **All CMS Pages** radio button is selected by default with the CMS block content displayed in all the CMS pages to which the corresponding template is applied.
-:::
+{% endinfo_block %}
 If you selected the **Specific CMS Pages** radio button:
 3. In the *CMS Pages* field, select the CMS pages in which the CMS block content will be displayed.
 4. Click **Save** to apply the changes.
@@ -217,16 +217,16 @@ If you selected the **Specific CMS Pages** radio button:
 2. In *List of Blocks for [Name] Slot*, select:
     a. The **All Product Pages** radio button if you want the CMS block content to be displayed in all the product details pages to which the corresponding template is applied.
     b. A specific **Product Pages** radio button if you want the CMS block content to be displayed in a specific product details page or in a selection of the product details pages to which the corresponding template is applied.
-:::(Info) 
+{% info_block infoBox %} 
 The **All Product Pages** radio button is selected by default with the CMS block content displayed in all the product details pages to which the corresponding template is applied.
-:::
+{% endinfo_block %}
 If you select the **Specific Product Pages** radio button:
 
 3. In the *Product Pages* field, select the product details pages on which the CMS block content will be displayed.
 4. In the *Product Pages per Category* field, select the categories for the products assigned to these categories to show the CMS block content.
-:::(Info) 
+{% info_block infoBox %} 
 Selecting a product both as part of a category in the *Product Pages per Category* field and separately in the *Product Pages* field still defines that the CMS block content should only appear once on that product page. Thus if a product is included in a category that you select in the *Product Pages per Category* field, there is no reason to select the product in the Product Pages field.
-:::
+{% endinfo_block %}
 5. Click **Save** to apply the changes.
 <br>
 </details>

@@ -18,8 +18,8 @@ redirect_from:
 The following information pertains to security-related issues that have been recently resolved. Issues are listed by description and affected modules.
 
 {% info_block infoBox %}
-If you need any additional support with this content, please contact [support@spryker.com](mailto:support@spryker.com
-{% endinfo_block %}. If you found a new security vulnerability, please inform us via  [security@spryker.com](mailto:security@spryker.com).)
+If you need any additional support with this content, please contact [support@spryker.com](mailto:support@spryker.com). If you found a new security vulnerability, please inform us via  [security@spryker.com](mailto:security@spryker.com).
+{% endinfo_block %}
 
 ## Enhanced Regular Expressions to be Stricter
 Regular expressions are used to restrict the set of allowed values. However, some regular expressions are missing boundary characters (^ or $) or use wildcards (.*) that potentially allow bypassing this filter. 

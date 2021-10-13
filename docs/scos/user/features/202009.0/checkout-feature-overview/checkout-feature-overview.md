@@ -28,28 +28,3 @@ With order thresholds, you can:
 * Prevent waste of resources on small orders
 * Ensure that the cost of items sold is not too high for each transaction, which, in the long run, can make your business more profitable
 * Support promotional campaigns, for example, by offering free shipping for orders above a threshold
-
-
-## If you are:
-
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="docs\scos\user\features\202009.0\checkout\checkout-feature-overview\multi-step-checkout.md" class="mr-link">Get a general idea of the multi-step checkout</a></li>
-                <li><a href="docs\scos\user\features\202009.0\checkout\checkout-feature-overview\order-thresholds.md" class="mr-link">Get a general idea of order thresholds</a></li>
-                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\glue-api\glue-api-checkout-feature-integration.md">Integrate the Checkout feature into your project</a></li>
-            </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="docs\scos\user\features\202009.0\checkout\checkout-feature-overview\multi-step-checkout.md" class="mr-link">Get a general idea of the multi-step checkout</a></li>
-                <li><a href="docs\scos\user\features\202009.0\checkout\checkout-feature-overview\order-thresholds.md" class="mr-link">Get a general idea of order thresholds</a></li>
-            </ul>
-        </div>
-    </div>
-</div>

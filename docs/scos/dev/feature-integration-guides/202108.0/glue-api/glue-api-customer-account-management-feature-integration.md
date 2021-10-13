@@ -930,5 +930,6 @@ Ensure that you’ve set up `OauthRefreshTokenRemoverPlugin`:
 {% endinfo_block %}
 
 
-:::(Warning) (Verification)
+{% info_block warningBox "Verification" %}
 To make sure that you’ve activated `AddressByCheckoutDataResourceRelationshipPlugin`, send the `POST http://glue.mysprykershop.com/checkout-data?include=addresses` request and check that the response contains the information from the addresses resource.
+{% endinfo_block %}

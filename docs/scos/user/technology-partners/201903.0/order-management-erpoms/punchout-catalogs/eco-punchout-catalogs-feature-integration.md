@@ -50,7 +50,7 @@ include:
 <br>
 </details>
 
-{% info_block infoBox "Мукшашсфешщт" %}
+{% info_block infoBox "Verification" %}
 Make sure that when you run `codeception run`  command it also runs PunchoutCatalogs module tests.
 {% endinfo_block %}
 

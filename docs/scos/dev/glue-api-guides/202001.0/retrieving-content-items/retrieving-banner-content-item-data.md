@@ -13,8 +13,8 @@ The **Banner API** implements REST API endpoint that provides the possibility to
 In your development, these resources can help you get relevant information for your Banner content item for all or a specific locale. For example, you can view what page address your banner is linked to or what details are displayed for a specific locale.
 
 {% info_block infoBox %}
-For more information on creating and managing content items in CMS, see [Content Items](https://documentation.spryker.com/v4/docs/content-items-guide-201907
-{% endinfo_block %}.)
+For more information on creating and managing content items in CMS, see [Content Items](https://documentation.spryker.com/v4/docs/content-items-guide-201907).
+{% endinfo_block %}
 
 ## Installation
 For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-content-items-api-feature-integration.html).

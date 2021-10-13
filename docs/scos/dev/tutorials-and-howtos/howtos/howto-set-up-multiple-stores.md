@@ -1,5 +1,5 @@
 ---
-title: HowTo — Set up multiple stores
+title: HowTo - Set up multiple stores
 description: Learn how to set up multiple stores for your project.
 originalLink: https://documentation.spryker.com/2021080/docs/howto-set-up-multiple-stores
 originalArticleId: 218ea4d5-de80-4aba-96fc-f67a9d13711c
@@ -188,4 +188,4 @@ return 'DE';
 
 ## 4. Verification
 
-Once done, you can check the list of the created stores in the Back Office, in [**Administration > Stores**](https://documentation.spryker.com/2021080/docs/stores-reference-information-201911).
+Once done, you can check the list of the created stores in the Back Office, in [**Administration > Stores**](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/stores.html).

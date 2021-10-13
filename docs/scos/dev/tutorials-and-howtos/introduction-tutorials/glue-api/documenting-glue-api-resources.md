@@ -51,7 +51,7 @@ After installation, open the file `src/Pyz/Zed/DocumentationGeneratorRestApi/Doc
 | `APPLICATION_PROJECT_ANNOTATION_SOURCE_DIRECTORY_PATTERN` | Specifies a template for paths where to search for REST API controllers on the **project** level. | `/Glue/%1$s/Controller/` |
 | `APPLICATION_CORE_ANNOTATION_SOURCE_DIRECTORY_PATTERN` | Specifies a template for paths where to search for REST API controllers on the **vendor** level. | `/*/*/src/*/Glue/%1$s/Controller/` |
 
-For details on REST API controllers, see step [4. Create a Resource Controller](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/implementing-a-rest-api-resource.html#4--create-a-resource-controller) in the **Implementing a REST API Resource** article.
+For details on REST API controllers, see step [4. Create a Resource Controller](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/implementing-a-rest-api-resource.html#create-a-resource-controller) in the **Implementing a REST API Resource** article.
 
 ## 2. Test Run
 To make sure that the documentation generator is working properly, run the following command in the console:
@@ -93,7 +93,7 @@ vendor/bin/console transfer:generate
 ```
 
 ### Resource Relationships
-Many REST API resources are related to each other. For example, the cart items resource is related to the products resources describing the products included in a cart, and so on. On the API side, such relationships are expressed with the help of [resource relationships](/docs/scos/dev/back-end-development/glue-api/glue-infrastructure.html#resource-relationships).
+Many REST API resources are related to each other. For example, the cart items resource is related to the products resources describing the products included in a cart, and so on. On the API side, such relationships are expressed with the help of [resource relationships](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-infrastructure.html#resource-relationships).
 
 The resource relationships that already exist, are added to the documentation automatically. However, some resources are only available through the relationships, which means, they do not have their own resource route. In these cases, to facilitate implementation of clients based on the Glue REST API of your project, you can describe such relationships in the generated documentation. To describe how two resources are related to each other, add an additional annotation to the `ResourceRelationshipPlugin` that links the resources together. For example, in the code sample below `ResourceRelationshipPlugin` allows including items while requesting a cart, is expanded with the specification of the relationship attributes type:
 
@@ -110,7 +110,7 @@ The resource relationships that already exist, are added to the documentation au
 
 {% info_block infoBox "Info" %}
 
-For more information on `ResourceRelationshipPlugins`, see [Relationship Plugin](/docs/scos/dev/back-end-development/glue-api/glue-infrastructure.html#resource-relationships).
+For more information on `ResourceRelationshipPlugins`, see [Relationship Plugin](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-infrastructure.html#resource-relationships).
 
 {% endinfo_block %}
 

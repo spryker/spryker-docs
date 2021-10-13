@@ -20,16 +20,3 @@ The following example shows how the checkout works in the Spryker Demo Shop for 
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Checkout/Multi-Step+Checkout/shop-guide-checkout.gif)
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                        <li><a href="docs\scos\dev\back-end-development\data-manipulation\datapayload-conversion\checkout\checkout-process-review-and-implementation.md" class="mr-link">Get a general idea of the checkout process</a></li>  
-                        <li><a href="docs\scos\dev\back-end-development\data-manipulation\datapayload-conversion\checkout\checkout-steps.md" class="mr-link">Get a general idea of the checkout steps</a></li>  
-                <li><a href="docs\scos\dev\module-migration-guides\202108.0\migration-guide-checkout.md" class="mr-link">Migrate the Checkout module from version 4.* to version 6.0.0</a></li>
-                <li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-checkoutpage.md" class="mr-link">Migrate the CheckoutPage module from version 2.* to version 3.*</a></li>
-            </ul>
-        </div>
-</div>

@@ -726,5 +726,5 @@ Find the list of related feature integration guides below:
 
 | Feature | Link |
 | --- | --- |
-| Spryker Core API | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Spryker Core API | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
 

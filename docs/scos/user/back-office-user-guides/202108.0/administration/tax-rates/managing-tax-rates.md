@@ -46,7 +46,7 @@ To edit a tax rate:
 
 1. In the *List of tax rates* > *Actions* column, click **Edit** for a specific tax rate.
 2. On the *Edit Tax Rate* page, change the attributes.
-3. Click **Save**. For more details on the reference information of the attributes, see the [Reference information: Creating tax rates](#reference-information--creating-tax-rates) section.
+3. Click **Save**. For more details on the reference information of the attributes, see the [Reference information: Creating tax rates](#reference-information-creating-tax-rates) section.
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Taxes/Managing+Tax+Rates/editing-tax-rate.png)
 
@@ -62,7 +62,7 @@ The *Tax Rate* details page includes the following information:
 * Created at
 * Updated at
 
-For more details on the reference information of the attributes, see the [Reference information: Creating tax rates](#reference-information--creating-tax-rates) section.
+For more details on the reference information of the attributes, see the [Reference information: Creating tax rates](#reference-information-creating-tax-rates) section.
 
 To return back to the list, click **Back to Tax Rates**.
 

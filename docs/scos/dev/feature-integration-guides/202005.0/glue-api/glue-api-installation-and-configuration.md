@@ -371,8 +371,8 @@ The API is provided by the following modules:
 
 You can chose whether to install all modules of the API to retrieve full Products API functionality, or install any of the modules individually to get only the endpoints you need.
 {% info_block infoBox "Relationship Modules" %}
-Relationship modules provide relationship between products and related entities (e.g. between products and the tax sets available for them
-{% endinfo_block %}. This means that, when a module is installed, a request for information on a certain product will also return information on the related resource by default. If the module is not installed, you need to query the related resource explicitly. In other words, if the `ProductsProductTaxSetsResourceRelationship` module is installed, a query for an abstract product will also return full data of the tax sets related to them. If it is not installed, you will need to query the `/abstract-products/{% raw %}{{{% endraw %}SKU{% raw %}}}{% endraw %}/product-tax-sets` explicitly.)
+Relationship modules provide relationship between products and related entities (e.g. between products and the tax sets available for them). This means that, when a module is installed, a request for information on a certain product will also return information on the related resource by default. If the module is not installed, you need to query the related resource explicitly. In other words, if the `ProductsProductTaxSetsResourceRelationship` module is installed, a query for an abstract product will also return full data of the tax sets related to them. If it is not installed, you will need to query the `/abstract-products/{% raw %}{{{% endraw %}SKU{% raw %}}}{% endraw %}/product-tax-sets` explicitly.
+{% endinfo_block %}
 
 Installation steps:
 **`ProductsRestApi`**:

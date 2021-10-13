@@ -13,8 +13,8 @@ redirect_from:
 ### Overview
 
 {% info_block infoBox %}
-Discounts are applied during the checkout either manually by the customer via Voucher code or automatically as Cart Rule. In both cases, the discount can have a fixed or a percentage value which is applied for all items or a subset that can be defined with a query string (e.g. only products with a specific attribute
-{% endinfo_block %}. Discounts can be toggled per store.)
+Discounts are applied during the checkout either manually by the customer via Voucher code or automatically as Cart Rule. In both cases, the discount can have a fixed or a percentage value which is applied for all items or a subset that can be defined with a query string (e.g. only products with a specific attribute). Discounts can be toggled per store.
+{% endinfo_block %}
 
 The main process works like this:
 | | | |
@@ -24,8 +24,8 @@ The main process works like this:
 | 3 |  **Filter** | When more than one Discounts are applicable then there are two scenarios:<ol><li>If one of the Discounts is marked as **Exclusive** then only this one is used (If more then one are exclusive then the one with the highest Discount amount is used)</li><li>If none of the Discounts is exclusive, then all Discounts are used</li></ol> |
 | 4 |  **Distribution** | The filtered Discounts are distributed on those items that have been collected. See [Sales Schema](db-schema-sales.htm)to understand the resulting data structure.|
 {% info_block warningBox "Collection & Calculation example" %}
-There is a Discount which says "10% on T-Shirts". So first we need to **collect** these items which can be discounted - T-Shirts in this case - and then the amount needs to be **calculated** (10% on the price of the T-Shirts; not the whole Quote
-{% endinfo_block %}. )
+There is a Discount which says "10% on T-Shirts". So first we need to **collect** these items which can be discounted - T-Shirts in this case - and then the amount needs to be **calculated** (10% on the price of the T-Shirts; not the whole Quote).
+{% endinfo_block %}
 {% info_block warningBox "Distribution example" %}
 When more than one discount was calculated it's important to know that each discount was calculated based on the price of the collected items. So it does not matter in which order the Discounts are applied. 
 {% endinfo_block %}

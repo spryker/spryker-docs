@@ -21,26 +21,3 @@ You can enjoy the following benefits of the feature:
 * Adjustable sort order of images in a set
 * Possibility to create different image sets for different use cases on different pages per product
 * Possibility to define the order of images to be displayed on front-end
-
-## If you are:
-
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\category-image-feature-integration.md" class="mr-link">Integrate the Category Image feature into your project</a></li>
-                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\product-cart-feature-integration.md" class="mr-link">Integrate the Product + Cart feature into your project</a></li>
-            </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\catalog\products\abstract-products\creating-abstract-products-and-product-bundles.md#adding-images" class="mr-link">Assign images to a product</a></li>
-                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\catalog\category\creating-categories.md" class="mr-link">Assign images to categories</a></li>
-                </ul>
-        </div>
-         </div>
-</div>

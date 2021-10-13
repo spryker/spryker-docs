@@ -46,4 +46,4 @@ class StoreConfig extends SprykerStoreConfig
 ```
 
 You should now be able to use the CMS Block in the administration interface to manage CMS Block-store relations.
-Check out our [Demoshop implementation](https://github.com/spryker/demoshop){target="_blank"} for implementation example and idea.
+Check out our [Demoshop implementation](https://github.com/spryker/demoshop) for implementation example and idea.

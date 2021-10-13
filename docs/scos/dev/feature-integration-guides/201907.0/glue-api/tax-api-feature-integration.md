@@ -15,7 +15,7 @@ To start feature integration, overview and install the necessary features:
 | Name | Version | Integration guide |
 | --- | --- | --- |
 | Spryker Core | 201907.0 | [Glue Application](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-application-feature-integration.html) |
-| Product | 201907.0 | [Products API](docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/product-api-feature-integration.html) |
+| Product | 201907.0 | [Products API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/product-api-feature-integration.html) |
 | Tax | 201907.0 |  |
 
 ### 1) Install the required modules using Composer

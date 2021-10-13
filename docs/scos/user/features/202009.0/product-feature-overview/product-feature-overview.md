@@ -99,22 +99,3 @@ The Spryker Commerce OS supports integration of the following PIM systems:
 * [Akeneo](/docs/scos/dev/back-end-development/extending-spryker/extending-the-core.html)
 * [Censhare PIM](/docs/scos/user/technology-partners/{{page.version}}/product-information-pimerp/censhare-pim.html)
 * [Xentral](/docs/scos/user/technology-partners/{{page.version}}/product-information-pimerp/xentral.html)
-
-
-## If you are:
-
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a h ref="docs\scos\user\user-guides\202009.0\back-office-user-guide\catalog\products\abstract-products\creating-abstract-products-and-product-bundles.md" class="mr-link">Create an abstract product</a></li>
-                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\catalog\products\abstract-products\editing-abstract-products.md" class="mr-link">Edit an abstract product</a></li>
-                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\catalog\products\concrete-products\creating-a-product-variant.md" class="mr-link">Create a product variant</a></li>
-                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\catalog\products\concrete-products\editing-a-product-variant.md" class="mr-link">Edit a product variant</a></li>
-               <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\catalog\products\managing-products\managing-products.md" class="mr-link">Manage products</a></li>               
-            </ul>
-        </div>
-    </div>
-</div>

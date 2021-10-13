@@ -15,7 +15,7 @@ To start working with merchant order thresholds, go to **Administration** > **Me
 
 ## Prerequisites
 
-The list of the merchant relations for which you can define thresholds is based on the merchant relations created in **Merchant** > **Merchant Relations**. See [Creating a Merchant](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchants.html#creating-a-merchant) to learn more. 
+The list of the merchant relations for which you can define thresholds is based on the merchant relations created in **Merchant** > **Merchant Relations**. See [Creating a Merchant](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchants.html#creating-a-merchant) to learn more.
 
 ## Setting up a Hard Minimum Threshold
 
@@ -76,4 +76,3 @@ The page refreshes, and the message about successful threshold update is display
 **Tips & Tricks**
 
 In the **Message** field, enter *{% raw %}{{{% endraw %}threshold{% raw %}}}{% endraw %}* or *{% raw %}{{{% endraw %}fee{% raw %}}}{% endraw %}* to reference the threshold name or the defined fee, respectively. When the message is rendered on the Storefront, the placeholders are replaced with the values from **Enter threshold value** and **Enter flexible fee** or **Enter fixed fee** fields.
-

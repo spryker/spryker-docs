@@ -13,8 +13,8 @@ The [Company Account](/docs/scos/user/features/{{page.version}}/company-account-
 The **Company Accounts API** provides REST access to retrieving Company User information.
 
 {% info_block warningBox "Authentication" %}
-The endpoints provided by this API cannot be accessed anonymously. To access them, you need to impersonate users as Company Accounts and pass the authentication tokens received. For details on how to authenticate and retrieve such a token, see [Logging In as Company User](https://documentation.spryker.com/v3/docs/logging-in-as-company-user-201907
-{% endinfo_block %}.)
+The endpoints provided by this API cannot be accessed anonymously. To access them, you need to impersonate users as Company Accounts and pass the authentication tokens received. For details on how to authenticate and retrieve such a token, see [Logging In as Company User](https://documentation.spryker.com/v3/docs/logging-in-as-company-user-201907).
+{% endinfo_block %}
 
 In your development, the API can help you to provide information on *Company User Accounts* within the company that the authenticated user belongs to.
 
@@ -133,8 +133,8 @@ If the currently logged in user does not have access to any Company User account
 *The attributes mentioned are all attributes in the response. Type is not mentioned.
 
 {% info_block warningBox "Note" %}
-The company user identifier contained in the id member can be used to access the Company User in the future as well as impersonate as that account. For details, see [Logging In as Company User](https://documentation.spryker.com/v3/docs/logging-in-as-company-user-201907
-{% endinfo_block %}.)
+The company user identifier contained in the id member can be used to access the Company User in the future as well as impersonate as that account. For details, see [Logging In as Company User](https://documentation.spryker.com/v3/docs/logging-in-as-company-user-201907).
+{% endinfo_block %}
 
 <details open>
 <summary>Sample Response</summary>

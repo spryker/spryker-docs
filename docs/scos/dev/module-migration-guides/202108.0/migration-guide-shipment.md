@@ -463,25 +463,27 @@ class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
 8. The `ShipmentFacadeInterface::updateMethod` method now expects "prices" `MoneyValue` transfer object collection to be set in the provided `ShipmentMethod` transfer object. Update your custom calls to this method accordingly.
 
 9. The `ShipmentFacadeInterface::getAvailableMethods` method applies multi-currency feature:
-        1. Does not populate `taxRate` transfer object property anymore in shipment method transfer objects.
-        2. Excludes shipment methods which would end up with `NULL` value for the request's currency and preconfigured `store + price` mode.
-    Amend your custom calls to ShipmentFacadeInterface::getAvailableMethods method accordingly to your requirements.
-    {% info_block errorBox "Important" %}
+   1. Does not populate `taxRate` transfer object property anymore in shipment method transfer objects.
+   2. Excludes shipment methods which would end up with `NULL` value for the request's currency and preconfigured `store + price` mode. Amend your custom calls to ShipmentFacadeInterface::getAvailableMethods method accordingly to your requirements.
+
+{% info_block errorBox "Important" %}
+
 `CheckoutAvailableShipmentMethodsPlugin` is an adapter to `ShipmentFacadeInterface::getAvailableMethods`. If you use this plugin, you will need to amend its usage in your code.
+
 {% endinfo_block %}
 
-10. The `MethodForm::setDefaultOptions` deprecated method was removed, use `MethodForm::configureOptions` instead.
+10.  The `MethodForm::setDefaultOptions` deprecated method was removed, use `MethodForm::configureOptions` instead.
 
-11. The `ShipmentDependencyProvider::STORE` static dependency access was replaced with proper `StoreFacadeInterface` bridged access. Amend your implementation if you have customized it.
+11.  The `ShipmentDependencyProvider::STORE` static dependency access was replaced with proper `StoreFacadeInterface` bridged access. Amend your implementation if you have customized it.
 
-12. Note: The `MethodForm.defaultPrice` form field was replaced with its multi-currency representation. Amend your implementation if you have customized it.
+12.  Note: The `MethodForm.defaultPrice` form field was replaced with its multi-currency representation. Amend your implementation if you have customized it.
 
-13. Note: The `MethodForm` form now works on the `ShipmentMethod` transfer object instead of simple array. Amend your implementation if you have customized it.
+13.  Note: The `MethodForm` form now works on the `ShipmentMethod` transfer object instead of simple array. Amend your implementation if you have customized it.
 
-14. Note: The `ShipmentMethodDeliveryTimePluginInterface` interface now expects the returned delivery time in seconds. Amend your implementations of this plugin accordingly. The DemoShop example implementation of the plugin and its usage in the `ShipmentFormDataProvider::getDeliveryTime` method are also updated.
+14.  Note: The `ShipmentMethodDeliveryTimePluginInterface` interface now expects the returned delivery time in seconds. Amend your implementations of this plugin accordingly. The DemoShop example implementation of the plugin and its usage in the `ShipmentFormDataProvider::getDeliveryTime` method are also updated.
 
 Go to the Shipment management Back Office to verify your shipment method prices.
-***
+
 ## Upgrading from Version 4.* to Version 5.*
 
 In version 5, shipment lost the direct foreign key `sales.fk_shipment_method` to the `sales_order` table, it was replaced with the `spy_sales_shipment` table where all shipment information is stored.

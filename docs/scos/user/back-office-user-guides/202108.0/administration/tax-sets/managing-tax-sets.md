@@ -25,7 +25,7 @@ To be able to use this taxes for products, threshold, or shipment methods, you n
 
 To create a tax set:
 1. On the *Overview of Tax Sets* page, in the top right corner of the page, click **Create Tax Set**. 
-2. On the *Create Tax Set* page, enter the tax set name and select one or several tax rates to assign. See [Reference information: Creating and editing tax sets](#reference-information--creating-and-editing-tax-sets).
+2. On the *Create Tax Set* page, enter the tax set name and select one or several tax rates to assign. See [Reference information: Creating and editing tax sets](#reference-information-creating-and-editing-tax-sets).
 3. Click **Save**.
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Taxes/Managing+Tax+Rates/create-tax-set.png) 

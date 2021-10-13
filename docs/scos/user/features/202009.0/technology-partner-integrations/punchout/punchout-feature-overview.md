@@ -27,7 +27,7 @@ From the B2B buyer perspective, the Punchout process typically involves the foll
 2. The buyer gets immediately forwarded to the supplier's e-commerce store (Spryker web shop) within the buyer's e-procurement system. A Punchout session is initiated.
 ![Supplier store](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Technology+Partner+Integrations/Punch+Out/Punch+Out+Feature+Overview/supplier-store.png)
 
-3. Authentication is handled with the help of the [Customer login by token](docs\scos\user\features\202009.0\company-account\company-account-feature-overview\customer-login-by-token.md) feature. So, the buyer doesn't need to enter any login details to get to the customer account. The [Vault for Tokens](docs\scos\user\features\202009.0\spryker-core\spryker-core-feature-overview\vault-for-tokens-overview.html) feature allows securely keeping the sensitive data (username and password) and retrieving it on request.
+3. Authentication is handled with the help of the [Customer login by token](/docs/scos/user\features\202009.0\company-account\company-account-feature-overview\customer-login-by-token.html) feature. So, the buyer doesn't need to enter any login details to get to the customer account. The [Vault for Tokens](/docs/scos/user/features/{{page.version}}/spryker-core/spryker-core-feature-overview/vault-for-tokens-overview.html) feature allows securely keeping the sensitive data (username and password) and retrieving it on request.
 4. The buyer browses the store and adds items to their shopping cart.
 ![Shopping cart supplier](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Technology+Partner+Integrations/Punch+Out/Punch+Out+Feature+Overview/shopping-cart-supplier.png)
 
@@ -37,8 +37,8 @@ From the B2B buyer perspective, the Punchout process typically involves the foll
 ## Punchout Formats
 The cart from Spryker Commerce OS is transferred to the client's ERP using [cXML](https://en.wikipedia.org/wiki/CXML) or [OCI](https://en.wikipedia.org/wiki/Open_Catalog_Interface) formats. Both standards provide similar functionality.
 {% info_block warningBox "Note" %}
-Spyker only provides the user interface in the Back Office where the connection between Spryker Commerce OS and customer's e-procurement system is set up. The ERP-related workflows and logics are managed by our partner [PunchoutCatalogs](https://www.punchoutcatalogs.com/
-{% endinfo_block %}.)
+Spyker only provides the user interface in the Back Office where the connection between Spryker Commerce OS and customer's e-procurement system is set up. The ERP-related workflows and logics are managed by our partner [PunchoutCatalogs](https://www.punchoutcatalogs.com/).
+{% endinfo_block %}
 
 ### cXML
 cXML is the most popular and supported standard, and it is based on the XML format. cXML is used by most e-procurement systems and allows to modify and validate the cart data without prior knowledge of their form and the included fields.

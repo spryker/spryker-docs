@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 ## Partner Information
-[ABOUT BILLIE](https://www.billie.io/){target="_blank"}
+[ABOUT BILLIE](https://www.billie.io/)
 
 B2B-PayAfterDelivery for the 21st century
 

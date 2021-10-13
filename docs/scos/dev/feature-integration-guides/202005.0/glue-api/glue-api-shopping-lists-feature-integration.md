@@ -289,7 +289,7 @@ Check the response:
 
 {% endinfo_block %}
 
-:::(Warning) (Verification)
+{% info_block warningBox "Verification" %}
 To verify that the `ShoppingListItemsResourcePlugin` is set up correctly, make sure that the following endpoint is available:
 
 * http://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}/shopping-list-items
@@ -333,3 +333,5 @@ Check the response:
 ```
  <br>
 </details>
+
+{% endinfo_block %}

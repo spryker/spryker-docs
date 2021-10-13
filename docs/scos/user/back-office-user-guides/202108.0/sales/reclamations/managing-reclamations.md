@@ -18,9 +18,9 @@ This topic describes how to manage all order claims made by your customers.
 
 To start working with claims, go to **Sales** > **Reclamations**.
 
-:::(Info)
+{% info_block warningBox %}
 You can either view or close the reclamation from the _Actions_ column of the *List of Reclamations *table.
-:::
+{% endinfo_block %}
 Review the reference information before you start, or just look up the necessary information as you go through the process.
 
 ## Viewing reclamations

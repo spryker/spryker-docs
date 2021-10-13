@@ -394,8 +394,8 @@ If the request was successful, the resource responds with a **RestConcreteProduc
 ## Prices
 The below endpoints return prices for a concrete or an abstract product.
 {% info_block infoBox %}
-For information on the different price types available in Spryker, see [Price](
-{% endinfo_block %}.)
+For information on the different price types available in Spryker, see [Price]().
+{% endinfo_block %}
 
 `/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/abstract-product-prices`
 Gets prices for an **abstract** product by SKU.
@@ -588,8 +588,8 @@ where `001` is the SKU of the abstract product; `CHF` is the currency to display
 To retrieve information on tax-related information for a product, you can use the endpoint described below.
 
 {% info_block infoBox %}
-For more information on how to manage product taxes, see [Tax](
-{% endinfo_block %}.)
+For more information on how to manage product taxes, see [Tax]().
+{% endinfo_block %}
 
 `/abstract-products/{% raw %}{{{% endraw %}SKU{% raw %}}}{% endraw %}/tax-sets`
 Gets prices for an abstract product by SKU.

@@ -284,8 +284,8 @@ For a detailed list of the fields included in the response for each product, see
 </details>
 
 {% info_block infoBox %}
-You can also use the Accept-Language header to specify the locale.<br>Sample header:```[{"key":"Accept-Language","value":"de, en;q=0.9"}]```where de and en are the locales; q=0.9 is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
-{% endinfo_block %}.)
+You can also use the Accept-Language header to specify the locale.<br>Sample header:```[{"key":"Accept-Language","value":"de, en;q=0.9"}]```where de and en are the locales; q=0.9 is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+{% endinfo_block %}
 
 ### Possible Errors
 | Code | Reason |
@@ -300,8 +300,8 @@ Sample request: `GET http://mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493
 where `1ce91011-8d60-59ef-9fe0-4493ef3628b2` is the ID of the cart you need items for.
 
 {% info_block infoBox %}
-For details on peculiarities of managing carts of registered users, see [Managing Carts of Registered Users](https://documentation.spryker.com/v2/docs/managing-carts-of-registered-users-201907
-{% endinfo_block %}.)
+For details on peculiarities of managing carts of registered users, see [Managing Carts of Registered Users](https://documentation.spryker.com/v2/docs/managing-carts-of-registered-users-201907).
+{% endinfo_block %}
 
 ### Response
 If the request was successful, the resource responds with an array of **RestAbstractProductsResponse**, where each item specifies a related up-selling item.
@@ -1372,8 +1372,8 @@ For a detailed list of the fields included in the response for each product, see
 </details>
 
 {% info_block infoBox %}
-You can also use the **Accept-Language** header to specify the locale.<br>Sample header:<br>`[{"key":"Accept-Language","value":"de, en;q=0.9"}]`<br>where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
-{% endinfo_block %}.)
+You can also use the **Accept-Language** header to specify the locale.<br>Sample header:<br>`[{"key":"Accept-Language","value":"de, en;q=0.9"}]`<br>where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+{% endinfo_block %}
 
 ### Possible Errors
 | Code | Reason |
@@ -1603,8 +1603,8 @@ For a detailed list of the fields included in the response for each product, see
 </details>
 
 {% info_block infoBox %}
-You can also use the **Accept-Language** header to specify the locale.<br>Sample header:<br>`[{"key":"Accept-Language","value":"de, en;q=0.9"}]`<br>where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
-{% endinfo_block %}.)
+You can also use the **Accept-Language** header to specify the locale.<br>Sample header:<br>`[{"key":"Accept-Language","value":"de, en;q=0.9"}]`<br>where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+{% endinfo_block %}
 
 ### Possible Errors
 | Code | Reason |

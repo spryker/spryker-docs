@@ -12,8 +12,8 @@ redirect_from:
 ### Abstract and Concrete Products
 
 {% info_block infoBox %}
-Spryker's product catalog is divided into Abstract Products that contain all common Attributes and Variants (~ Concrete Products
-{% endinfo_block %}. The Attributes which make the difference among the Variants are called Super-Attributes (e.g. Size of T-Shirts).)
+Spryker's product catalog is divided into Abstract Products that contain all common Attributes and Variants (~ Concrete Products). The Attributes which make the difference among the Variants are called Super-Attributes (e.g. Size of T-Shirts).
+{% endinfo_block %}
 ![Database product abstract](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/product-abstract.png)
 
 | | | |
@@ -100,8 +100,9 @@ The schema below is not complete as there are a few more entities like product r
 ### Related Data (via SKU)
 
 {% info_block infoBox %}
-Products are also related to objects from different functional areas (e.g. sales-orders
-{% endinfo_block %}. Here we are using implicit relations via the natural identifier (SKU) to avoid hard coupling among different bounded contexts which makes it easier to operate Spryker in a service approach with separated databases (product-, order-, availability-service).)
+Products are also related to objects from different functional areas (e.g. sales-orders).
+Here we are using implicit relations via the natural identifier (SKU) to avoid hard coupling among different bounded contexts which makes it easier to operate Spryker in a service approach with separated databases (product-, order-, availability-service).
+{% endinfo_block %}
 ![Related data via SKU](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/related-data-sku.png)
 
 * Soft relationships:
@@ -115,8 +116,8 @@ Products are also related to objects from different functional areas (e.g. sales
 ### Product Options
 
 {% info_block infoBox %}
-Product options are additional items with a price but without their own stock. Customers can only buy them together with a product. (e.g. an insurance for a phone
-{% endinfo_block %}.)
+Product options are additional items with a price but without their own stock. Customers can only buy them together with a product. (e.g. an insurance for a phone).
+{% endinfo_block %}
 ![Product options](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/product-options.png)
 
 **Structure:**
@@ -146,8 +147,8 @@ Two or more product variants can be bundled together and mapped to a  Product Bu
 ### Product Groups
 
 {% info_block infoBox %}
-Product groups are used to link products together which are equal from the customer point of view (e.g. different colors of a T-Shirt
-{% endinfo_block %}.)
+Product groups are used to link products together which are equal from the customer point of view (e.g. different colors of a T-Shirt).
+{% endinfo_block %}
 ![Product groups](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/product-groups.png)
 
 * Typical use case:
@@ -225,8 +226,8 @@ Products can be sold in different **Measurement Units**. For instance, apples ca
 ### Product Quantity
 
 {% info_block infoBox %}
-When products are added to the cart there can be restrictions like min/max quantity or an interval. This is especially useful in combination with Measurement Units (e.g. to disallow that a client buys 3g or 3 tons of apple
-{% endinfo_block %}.)
+When products are added to the cart there can be restrictions like min/max quantity or an interval. This is especially useful in combination with Measurement Units (e.g. to disallow that a client buys 3g or 3 tons of apple).
+{% endinfo_block %}
 ![Product quantity](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/product-quantity.png)
 
 ### Splittable Products
@@ -244,8 +245,8 @@ But this does not work for all kinds of products. For instance, when a customer 
 * This boolean information and the quantity are also saved to the Sales-Order-Item
 
 {% info_block warningBox %}
-Even when the product is marked as splittable, Spryker may still save them into a single item. This is a performance optimization that can be applied to orders with very high quantities (e.g. "1000 nails"
-{% endinfo_block %}.)
+Even when the product is marked as splittable, Spryker may still save them into a single item. This is a performance optimization that can be applied to orders with very high quantities (e.g. "1000 nails").
+{% endinfo_block %}
 
 ### Packaging Units
 
@@ -432,8 +433,8 @@ The Stock of a product represents the physical amount of products in the warehou
 {% endinfo_block %} and is never changed by Spryker directly.)
 
 {% info_block warningBox %}
-Stocks are not directly related to Stores but there is a Store-to-Warehouse Mapping that be configured in code (see `StockConfig`
-{% endinfo_block %}. Stocks can be dedicated or shared among Stores.)
+Stocks are not directly related to Stores but there is a Store-to-Warehouse Mapping that be configured in code (see `StockConfig`). Stocks can be dedicated or shared among Stores.
+{% endinfo_block %}
 ![Stock](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/stock.png)
 
 **Structure**:
@@ -445,8 +446,8 @@ Stocks are not directly related to Stores but there is a Store-to-Warehouse Mapp
 ### Availability
 
 {% info_block infoBox %}
-The Availability of a Product is a calculated information: Available Quantity = Stock Quantity - Number of Reserved Items The Availability is used to determine if a product is available or sold out. The available quantity can  be a negative value (Scenario of overselling
-{% endinfo_block %}.)
+The Availability of a Product is a calculated information: Available Quantity = Stock Quantity - Number of Reserved Items The Availability is used to determine if a product is available or sold out. The available quantity can  be a negative value (Scenario of overselling).
+{% endinfo_block %}
 
 {% info_block warningBox %}
 "Reserved Item" means that there is a Sales Order Item with a State that is marked as "Reserved" in the State Machine.

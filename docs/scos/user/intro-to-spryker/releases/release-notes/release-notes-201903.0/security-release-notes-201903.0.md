@@ -28,8 +28,8 @@ The following information pertains to security-related issues that were discover
 Issues are listed by description and affected modules.
 
 {% info_block infoBox %}
-If you need any additional support with this content, please contact [support@spryker.com](mailto:support@spryker.com
-{% endinfo_block %}.)
+If you need any additional support with this content, please contact [support@spryker.com](mailto:support@spryker.com).
+{% endinfo_block %}
 
 First, two potential vulnerabilities require direct Zed access to be exploitable; it is advised to always secure Zed, review users having access and put Zed into demilitarized zones in your infrastructure perimeter.
 

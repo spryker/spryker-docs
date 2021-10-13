@@ -11,7 +11,7 @@ redirect_from:
 ---
 
 ## Partner Information
-[ABOUT EPISERVER](https://www.episerver.com/){target="_blank"}
+[ABOUT EPISERVER](https://www.episerver.com/)
 Episerver empowers digital leaders to easily create standout experiences for customers – everywhere they engage, and always with measurable business results. The Episerver Digital Experience Cloud™ unifies digital content, commerce and marketing in one platform, including omnichannel solutions for smart personalization and intelligent campaigns. Founded in 1994, Episerver has offices in the US, UK, Sweden, Australia, Germany, Denmark, Finland, Norway, the Netherlands, Spain, South Africa, Singapore, Vietnam and the UAE.
 Episerver Intelligent Campaigns is a suite of intelligent marketing automation products. It helps already more than 1.300 companies to quickly create, automate and personalize campaigns across all channels. This includes web, mobile, email, text, social and the Internet of Things. The solution uses artificial intelligence and customer data to send and personalize content based on real-time behavior. Intelligent Campaign automatically tracks and analyzes every customer visit, click, email and purchase, to provide valuable insights about customers and segments. By reaching out to customers at exactly the right time, with exactly the right content, you can quickly increase leads, conversions and revenue.
 

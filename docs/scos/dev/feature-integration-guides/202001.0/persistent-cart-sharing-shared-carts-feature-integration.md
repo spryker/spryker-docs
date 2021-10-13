@@ -200,12 +200,12 @@ console frontend:yves:build
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure, that "Share Cart by Link" widget on the Cart page generates a cart share link with Read-only access (which can be used by other company users from the same business unit only
-{% endinfo_block %}.)
+Make sure, that "Share Cart by Link" widget on the Cart page generates a cart share link with Read-only access (which can be used by other company users from the same business unit only).
+{% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure, that "Share Cart by Link" widget on the Cart page generates a cart share link with Full Access access (which can be used by other company users from the same business unit only
-{% endinfo_block %}.)
+Make sure, that "Share Cart by Link" widget on the Cart page generates a cart share link with Full Access access (which can be used by other company users from the same business unit only).
+{% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 Make sure, that when you proceed with the cart share link with Read-only or Full Access access, your default cart will be switched to shared one, and you'll be redirected to the cart page.

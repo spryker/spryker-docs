@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 ## Partner Information
-[ABOUT NOSTO](https://www.nosto.com/){target="_blank"}
+[ABOUT NOSTO](https://www.nosto.com/)
 
 Powerful Personalization. Made Easy.
 

@@ -77,7 +77,7 @@ This approach is suitable only for Scenario 1 - that is, when the service is opt
 {% endinfo_block %}
 One more way to have a product with an optional service offering would be to make the product a [configurable bundle](https://documentation.spryker.com/2021080/docs/configurable-bundle). It means that you create a product (for example, equipment) and suggest another product (Installation service) as a bundle. To create such a configurable bundle product, follow the steps below.
 
-1. Create the *Installation Service* product as a usual abstract product, like you did in the [Prerequisites](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/creating-service-offerings-best-practices.html#prerequisites) section. Make sure you set the **Availability** as *Never out of stock*. See [Managing Products Availability](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/managing-products-availability.html#managing-products-availability) for details on how to do that.
+1. Create the *Installation Service* product as a usual abstract product, like you did in the [Prerequisites](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/creating-service-offerings-best-practices.html#prerequisites) section. Make sure you set the **Availability** as *Never out of stock*. See [Managing Products Availability](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/managing-products-availability.html) for details on how to do that.
 {% info_block infoBox "Note" %}
 
 If you don’t want to display the Service products in the Storefront so buyers can not find them in the products catalog, don’t check the Searchable checkbox for it in the **General** tab of the **Create/Edit Concrete Product** page.
@@ -113,7 +113,7 @@ This approach can be applied to both Scenario 1 and Scenario 2 - that is when th
 If you need an approach that would best suit your specific business needs, we recommend your development team to implement a custom solution for your project. The custom solution can be handled as follows:
 
 #### 1. Identify the respective products with labels
-First of all, you need to somehow identify the products for which the custom solution will be applied. We recommend doing this via product labels. For this, create specific labels for the products that require service from your side. The labels can be, for example, *free service, installation service, 1-day service*, etc. See [Creating a Product Label](https://documentation.spryker.com/2021080/docs/creating-a-product-label#creating-a-product-label) for details on how to create labels and assign products to them.
+First of all, you need to somehow identify the products for which the custom solution will be applied. We recommend doing this via product labels. For this, create specific labels for the products that require service from your side. The labels can be, for example, *free service, installation service, 1-day service*, etc. See [Creating a Product Label](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/creating-product-labels.html#creating-product-labels) for details on how to create labels and assign products to them.
 
 #### 2.  Override the Add to Cart functionality
 At this step, you need the development team to change the default *Add to Cart* functionality to meet your project’s needs.

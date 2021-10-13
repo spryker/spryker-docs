@@ -25,4 +25,4 @@ To know how the prices are managed, see the following article:
 * [Creating Scheduled Prices](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/scheduled-prices/creating-scheduled-prices.html)
 
 To know more about the attributes you use to create and manage the scheduled prices, see the following article:
-* [Creating Scheduled Prices: Reference Information](docs/scos/user/back-office-user-guides/{{page.version}}/catalog/scheduled-prices/references/scheduled-prices-reference-information.html)
+* [Creating Scheduled Prices: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/scheduled-prices/references/scheduled-prices-reference-information.html)

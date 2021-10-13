@@ -27,7 +27,7 @@ This command will generate some new classes in your project under `\Orm\Zed\Prod
 
 <details open>
 <summary>Example: collector plugin list extension</summary>
-        
+
 ```php
 <?php
 
@@ -83,7 +83,7 @@ You should now be able to use the Zed API of Product Reviews to approve, reject 
 ### Submitting a Product Review
 To store an already validated product review, populate a `\Generated\Shared\Transfer\ProductReviewTransfer` transfer object and send it to Zed by calling the `\Spryker\Client\ProductReview\ProductReviewClientInterface::submitCustomerReview` method.
 This action will create a new pending product review in your persistent storage. The saved product review will be exported to Search and Storage after it was approved on Zed UI.
-Make sure that the provided rating value does not exceed [the configured maximum rating](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-review-feature-configuration.html#configure-maximum-rating) limit.
+Make sure that the provided rating value does not exceed [the configured maximum rating](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-configure-the-product-reviews.html#configuring-the-maximum-rating) limit.
 Example of how to store a validated customer review:
 ```php
 <?php

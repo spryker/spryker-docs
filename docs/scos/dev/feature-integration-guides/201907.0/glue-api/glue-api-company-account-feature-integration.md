@@ -553,7 +553,7 @@ To log in as a Company User, send a `POST` request to `http://glue.mysprykershop
 </details>
 </br>
 
-To verify that all the required data is provided in the access token, go to [jwt.io](https://jwt.io/){target="_blank"} to decode the token and check that the required `customer_reference`, `id_customer`, `id_company_user` and permissions are present in the `sub` property of the payload data.
+To verify that all the required data is provided in the access token, go to [jwt.io](https://jwt.io/) to decode the token and check that the required `customer_reference`, `id_customer`, `id_company_user` and permissions are present in the `sub` property of the payload data.
 
 {% endinfo_block %}
 

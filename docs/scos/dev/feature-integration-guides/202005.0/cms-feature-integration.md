@@ -1335,7 +1335,7 @@ Enable Twig plugins:
 | --- | --- | --- |
 | `CmsBlockTwigPlugin` | Provides the list of plugins for CMS block widget. See the [table](#plugin-table). | `SprykerShop\Yves\CmsBlockWidget\Plugin` |
 | `CmsTwigPlugin` | Provides the spyCms function. | `SprykerShop\Yves\CmsPage\Plugin\Twig` |
-| `CmsContentWidgetTwigPlugin` | Provides the list of plugins for enabling content widgets. You can use them inside CMS blocks and page content. However, we recommend using the [Content Items Widgets feature](docs/scos/user/features{{page.version}}/cms/content-item-widgets/content-item-widgets-overview.html) instead. | `Spryker\Yves\CmsContentWidget\Plugin\Twig` |
+| `CmsContentWidgetTwigPlugin` | Provides the list of plugins for enabling content widgets. You can use them inside CMS blocks and page content. However, we recommend using the [Content Items Widgets feature](/docs/scos/user/features{{page.version}}/cms/content-item-widgets/content-item-widgets-overview.html) instead. | `Spryker\Yves\CmsContentWidget\Plugin\Twig` |
 | `ShopCmsSlotTwigPlugin` | Provides the `cms_slot` Twig tag. | `SprykerShop\Yves\ShopCmsSlot\Plugin\Twig` |
 
 **Pyz\Yves\Twig\TwigDependencyProvider**
@@ -1573,9 +1573,9 @@ Verify the changes by adding a slot widget to a page. See [Templates & Slots Fea
 
 ### Set up SprykerCmsBlocks Content Provider Behavior
 
-:::(Info)
+{% info_block warningBox %}
 Follow the further steps only if you are going to use the [visibility conidtions](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html#visibility-conditions) functionality with `SprykerCmsBlocks` content provider for slots.
-:::
+{% endinfo_block %}
 
 #### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:

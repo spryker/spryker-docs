@@ -15,7 +15,7 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Integration guide |
 | --- | --- | --- |
-| Spryker Core | Master | [Feature API](/docs/scos/dev/feature-integration-guides/{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Spryker Core | Master | [Feature API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
 | Product |master |  |
 | Price | master |  |
 

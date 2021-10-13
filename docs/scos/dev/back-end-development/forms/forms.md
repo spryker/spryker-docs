@@ -20,7 +20,7 @@ Spryker uses **Symfony Forms** as the default form engine and **Symfony Validato
 
 {% info_block infoBox %}
 
-For more details, see [Symfony Forms](https://symfony.com/doc/current/forms.html){target="_blank"}.
+For more details, see [Symfony Forms](https://symfony.com/doc/current/forms.html).
 
 {% endinfo_block %}
 

@@ -17,32 +17,3 @@ Spryker has implemented a specific feature for that: CMS pages in Search Results
 Also, sorting pages by a name and pagination available on the search results page help shop visitors to find the content they are looking for, much quicker and easier, especially, if there are many CMS pages on the store website. Breadcrumbs navigation allows a shop administrator to structure the content and this way reduce the number of steps the visitors of your online shop should perform to return to the previous page.
 
 To sum it up, this advanced tool for browsing and searching will not only enhance the user experience, but will move forward the search functionality of your online shop. That means that shop visitors will be more likely to become or stay your customers who can quickly and easily find the content they are looking for.
-
-## If you are:
-
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html-search-product-lists-catalog-feature-integration-201903" class="mr-link">Integrate CMS page search + Product Lists + Catalog Feature v. 201903.0 into your project</a></li>
-                <li><a href="/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.htmls-in-search-results-integration-201903" class="mr-link">Integrate CMS page search + Catalog Feature v. 201903.0 into your project</a></li>
-            </ul>
-        </div>
-         <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                  <li><a href="/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html" class="mr-link">Familiarize yourself with CMS Page feature</a></li>
-            </ul>
-        </div>
-         <!-- col3 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-red">
-                <li class="mr-title">Shop User</li>
-                <li><a href="https://documentation.spryker.com/v2/docs/searching-within-cms-pages" class="mr-link">Search within CMS Pages</a></li> 
-            </ul>
-        </div>
-    </div>
-</div>      

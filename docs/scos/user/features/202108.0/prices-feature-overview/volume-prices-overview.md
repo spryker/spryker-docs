@@ -106,8 +106,6 @@ Volume prices can also mean higher prices per item at increasing thresholds.
 That is a particular case of electricity bills where you pay more if you use more.
 {% endinfo_block %}
 
-Should you have any questions - feel free to post the related issues in the [forum](https://discuss.spryker.com/).
-
 ##  Current Constraints
 
 {% info_block infoBox %}

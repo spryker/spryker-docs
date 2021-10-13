@@ -110,7 +110,7 @@ On the storefront, company users can perform the following actions using the Mul
 ![Dismiss and duplicate a cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/dismiss-and-duplicate-a-shopping-cart.gif)
 </details>
 
-* To share a cart with external and internal users via a link, see [Unique URL per Cart for Easy Sharing feature overview](/docs/scos/user/features/{{page.version}}/persistent-cart-sharing/persistent-cart-sharing-feature-overview.html).
+* To share a cart with external and internal users via a link, see [Unique URL per Cart for Easy Sharing feature overview](/docs/scos/user/features/{{page.version}}/persistent-cart-sharing-feature-overview.html).
 * To share a cart with users within one business unit, see [Shared Cart feature overview](/docs/scos/user/features/{{page.version}}/shared-carts-feature-overview.html#shared-cart-on-the-storefront).
 * To add a custom order reference to a cart, see [Custom Order Reference feature overview](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/custom-order-reference-overview.html).
 * To add comments to a cart, see [Comments feature overview](/docs/scos/user/features/{{page.version}}/comments-feature-overview.html#comments-on-the-storefront).

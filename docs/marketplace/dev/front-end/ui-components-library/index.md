@@ -13,6 +13,7 @@ Separate from Spryker Core, there is a set of UI Angular Components that are dis
 ```bash
 npm install @spryker/package_name
 ```
+
 ```bash
 yarn add @spryker/package_name
 ```

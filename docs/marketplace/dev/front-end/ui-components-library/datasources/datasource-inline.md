@@ -14,8 +14,8 @@ Check out an example usage of the Datasource Inline.
 
 Service configuration:
 
-- `type` - is a datasource type.  
-- `data` - is a datasource data.  
+- `type` - a datasource type.  
+- `data` - a datasource data.  
 
 ```html
 <spy-select

@@ -14,7 +14,7 @@ Check out an example usage of the In Memory Persistence Strategy.
 
 Service configuration:
 
-- `storage` - the persistence strategy type.  
+- `storage` - persistence strategy type.  
 
 ```html
 <spy-select

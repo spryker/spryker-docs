@@ -13,8 +13,8 @@ It is an essential building block of a user interface.
 
 A basic Table Component is `<spy-table [config]="config"></spy-table>` where `config` is:
 
-- `dataSource` - is the Datasource configuration from which the data is taken.
-- `columns` - is an array of columns configuration.
+- `dataSource` - the Datasource configuration from which the data is taken.
+- `columns` - an array of columns configuration.
 
 ```ts
 const config: TableConfig = {
@@ -97,8 +97,7 @@ export class AppModule {}
 Table Component does not contain any filters a table usually will have (filtering, searching, etc.).
 The Core Table Component has just a view of the columns and data and has built-in sorting.
 
-To use [Filter components](/docs/marketplace/dev/front-end/table-design/table-filters/), the Table Module must implement a
-specific interface (TableConfig) and then be registered to the Root Module via `TableModule.withFilterComponents()`:
+To use [Filter components](/docs/marketplace/dev/front-end/table-design/table-filters/), the Table Module must implement a specific interface (TableConfig) and then be registered to the Root Module via `TableModule.withFilterComponents()`:
 
 ```ts
 @NgModule({
@@ -120,8 +119,7 @@ There is a way to trigger some [Actions](/docs/marketplace/dev/front-end/ui-comp
 
 A few common Table Features that can trigger actions are available in the UI library:
 
-- [Row actions](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-row-actions.html) - renders dropdown
-menu that contains actions applicable to the table row and on click triggers an Action which must be registered.
+- [Row actions](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-row-actions.html) - renders a dropdown menu that contains actions applicable to the table row and on click triggers an Action which must be registered.
 - [Batch actions](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-batch-actions.html) - allows triggering batch/multiple actions from rows.
 
 ## Interfaces

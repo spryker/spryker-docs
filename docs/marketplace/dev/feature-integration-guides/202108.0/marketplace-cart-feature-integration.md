@@ -87,13 +87,14 @@ To start feature integration, integrate the required features:
 | Order Threshold      | {{page.version}}  |
 | Cart                 | {{page.version}}  |
 | Merchant Portal Core | {{page.version}}  |
+| Marketplace Order Management | {{page.version}}  |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker/cart-note-merchant-portal-gui:"^0.1.2" --update-with-dependencies
+composer require spryker/cart-note-merchant-portal-gui:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

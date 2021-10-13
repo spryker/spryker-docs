@@ -89,7 +89,7 @@ Make sure that the following changes were applied in transfer objects:
 
 {% endinfo_block %}
 
-### 4) Zed translations
+### 4) Add translations
 
 Generate a new translation cache for Zed:
 

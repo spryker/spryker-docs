@@ -23,9 +23,17 @@ jobs:
           ruby-version: 2.6
           bundler-cache: true
 
+      - name: Cache HTMLProofer
+          id: cache-htmlproofer
+          uses: actions/cache@v2
+          with:
+            path: tmp/.htmlproofer
+            key: ${{ runner.os }}-htmlproofer
+
       - run: bundle exec jekyll build --config=_config.yml,_config_production.yml
 
-      - run: bundle exec htmlproofer ./_site --allow-hash-href --url-ignore="/glue.mysprykershop.com\/[\.\w\-\/\?]+/,/github.com\/[\.\w\-\/]+\.md/"
+#      - run: bundle exec htmlproofer ./_site --allow-hash-href --url-ignore="/glue.mysprykershop.com\/[\.\w\-\/\?]+/,/github.com\/[\.\w\-\/]+\.md/"
+      - run: bundle exec rake check
 
   page_validation:
     name: Page validation

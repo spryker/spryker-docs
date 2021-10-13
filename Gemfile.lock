@@ -162,6 +162,7 @@ DEPENDENCIES
   jekyll-sitemap
   liquid-c
   page_template_validator!
+  parallel
   rake
   tzinfo (~> 1.2)
   tzinfo-data

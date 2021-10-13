@@ -15,61 +15,61 @@ Please visit our [Partners Registry](https://spryker.com/find-a-partner/) for a 
 
 ##  Hosting Providers
 
-* [Claranet](/docs/scos/dev/technology-partners/201907.0/hosting-providers/claranet.html)
-* [Continum](/docs/scos/dev/technology-partners/201907.0/hosting-providers/continum.html)
-* [Metaways](/docs/scos/dev/technology-partners/201907.0/hosting-providers/metaways.html)
-* [root360](/docs/scos/dev/technology-partners/201907.0/hosting-providers/root-360.html)
+* [Claranet](/docs/scos/user/technology-partners/201907.0/hosting-providers/claranet.html)
+* [Continum](/docs/scos/user/technology-partners/201907.0/hosting-providers/continum.html)
+* [Metaways](/docs/scos/user/technology-partners/201907.0/hosting-providers/metaways.html)
+* [root360](/docs/scos/user/technology-partners/201907.0/hosting-providers/root-360.html)
 
 
 ## Content Management
 
-<!--* [Censhare](/docs/scos/dev/technology-partners/201907.0/content-management/censhare.html)-->
-* [Coremedia](/docs/scos/dev/technology-partners/201907.0/content-management/coremedia.html)
-* [E-Spirit](/docs/scos/dev/technology-partners/201907.0/content-management/e-spirit.html)
-* [Magnolia](/docs/scos/dev/technology-partners/201907.0/content-management/magnolia.html)
-* [Styla](/docs/scos/dev/technology-partners/201907.0/content-management/styla.html)
+<!--* [Censhare](/docs/scos/user/technology-partners/201907.0/content-management/censhare.html)-->
+* [Coremedia](/docs/scos/user/technology-partners/201907.0/content-management/coremedia.html)
+* [E-Spirit](/docs/scos/user/technology-partners/201907.0/content-management/e-spirit.html)
+* [Magnolia](/docs/scos/user/technology-partners/201907.0/content-management/magnolia.html)
+* [Styla](/docs/scos/user/technology-partners/201907.0/content-management/styla.html)
 
 ## Customer Service
 
-* [Dixa](/docs/scos/dev/technology-partners/201907.0/customer-service/dixa.html)
-* [iAdvize](/docs/scos/dev/technology-partners/201907.0/customer-service/iadvize.html)
-* [Optimise it](/docs/scos/dev/technology-partners/201907.0/customer-service/optimise-it.html)
-* [Live chat service](/docs/scos/dev/technology-partners/201907.0/customer-service/live-chat-service.html)
+* [Dixa](/docs/scos/user/technology-partners/201907.0/customer-service/dixa.html)
+* [iAdvize](/docs/scos/user/technology-partners/201907.0/customer-service/iadvize.html)
+* [Optimise it](/docs/scos/user/technology-partners/201907.0/customer-service/optimise-it.html)
+* [Live chat service](/docs/scos/user/technology-partners/201907.0/customer-service/live-chat-service.html)
 
 ## Finance & Accounting
 
-* [CollectAI](/docs/scos/dev/technology-partners/201907.0/finance-and-accounting/collectai.html)
-* [Nitrobox](/docs/scos/dev/technology-partners/201907.0/finance-and-accounting/nitrobox.html)
+* [CollectAI](/docs/scos/user/technology-partners/201907.0/finance-and-accounting/collectai.html)
+* [Nitrobox](/docs/scos/user/technology-partners/201907.0/finance-and-accounting/nitrobox.html)
 
 ## Marketing & Conversion
 ### A/B Testing & Performance
 
-* [AB Tasty](/docs/scos/dev/technology-partners/201907.0/marketing-and-conversion/ab-testing-and-performance/ab-tasty.html)
-<!--* [Baqend](/docs/scos/dev/technology-partners/201907.0/marketing-and-conversion/ab-testing-and-performance/baqend.html)-->
+* [AB Tasty](/docs/scos/user/technology-partners/201907.0/marketing-and-conversion/ab-testing-and-performance/ab-tasty.html)
+<!--* [Baqend](/docs/scos/user/technology-partners/201907.0/marketing-and-conversion/ab-testing-and-performance/baqend.html)-->
 
 ### Analytics
 
-* [ChannelPilot Analytics](/docs/scos/dev/technology-partners/201907.0/marketing-and-conversion/analytics/channelpilot-analytics.html)
-* [FactFinder](/docs/scos/dev/technology-partners/201907.0/marketing-and-conversion/analytics/fact-finder/fact-finder.html)
-* [Haensel AMS](/docs/scos/dev/technology-partners/201907.0/marketing-and-conversion/analytics/haensel-ams.html)
-* [Mindlab](/docs/scos/dev/technology-partners/201907.0/marketing-and-conversion/analytics/mindlab.html)
-* [Minubo](/docs/scos/dev/technology-partners/201907.0/marketing-and-conversion/analytics/minubo.html)
+* [ChannelPilot Analytics](/docs/scos/user/technology-partners/201907.0/marketing-and-conversion/analytics/channelpilot-analytics.html)
+* [FactFinder](/docs/scos/user/technology-partners/201907.0/marketing-and-conversion/analytics/fact-finder/fact-finder.html)
+* [Haensel AMS](/docs/scos/user/technology-partners/201907.0/marketing-and-conversion/analytics/haensel-ams.html)
+* [Mindlab](/docs/scos/user/technology-partners/201907.0/marketing-and-conversion/analytics/mindlab.html)
+* [Minubo](/docs/scos/user/technology-partners/201907.0/marketing-and-conversion/analytics/minubo.html)
 
 ### Customer Communication
 
-* [Dotdigital](/docs/scos/dev/technology-partners/201907.0/marketing-and-conversion/customer-communication/dotdigital.html)
-* [Episerver](/docs/scos/dev/technology-partners/201907.0/marketing-and-conversion/customer-communication/episerver/episerver.html)
-* [Inxmail](/docs/scos/dev/technology-partners/201907.0/marketing-and-conversion/customer-communication/inxmail.html)
+* [Dotdigital](/docs/scos/user/technology-partners/201907.0/marketing-and-conversion/customer-communication/dotdigital.html)
+* [Episerver](/docs/scos/user/technology-partners/201907.0/marketing-and-conversion/customer-communication/episerver/episerver.html)
+* [Inxmail](/docs/scos/user/technology-partners/201907.0/marketing-and-conversion/customer-communication/inxmail.html)
 
 ### Customer Retention & Loyalty
 
-* [Namogoo](/docs/scos/dev/technology-partners/201907.0/marketing-and-conversion/customer-retention-and-loyalty/namogoo.html) 
-* [Trustpilot](/docs/scos/dev/technology-partners/201907.0/marketing-and-conversion/customer-retention-and-loyalty/trustpilot.html)
-* [Zenloop](/docs/scos/dev/technology-partners/201907.0/marketing-and-conversion/customer-retention-and-loyalty/zenloop.html)
+* [Namogoo](/docs/scos/user/technology-partners/201907.0/marketing-and-conversion/customer-retention-and-loyalty/namogoo.html) 
+* [Trustpilot](/docs/scos/user/technology-partners/201907.0/marketing-and-conversion/customer-retention-and-loyalty/trustpilot.html)
+* [Zenloop](/docs/scos/user/technology-partners/201907.0/marketing-and-conversion/customer-retention-and-loyalty/zenloop.html)
 
 ### Personalization & Cross-Selling
 
-<!--* [8Select](/docs/scos/dev/technology-partners/201907.0/marketing-and-conversion/personalization-and-cross-selling/8select.html)-->
+<!--* [8Select](/docs/scos/user/technology-partners/201907.0/marketing-and-conversion/personalization-and-cross-selling/8select.html)-->
 <!--* [Contentserv](https://documentation.spryker.com/v3/docs/)-->
 * [Econda](https://documentation.spryker.com/v3/docs/econda)
 * [Nosto](https://documentation.spryker.com/v3/docs/nosto)

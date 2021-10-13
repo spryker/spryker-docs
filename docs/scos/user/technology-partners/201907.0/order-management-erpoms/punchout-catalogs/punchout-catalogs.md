@@ -11,9 +11,9 @@ redirect_from:
 
 This section page information on configuring and integrating the Punchout feature into your project:
 
-* [Punchout Catalog Feature Integration Guide](/docs/scos/dev/technology-partners/201907.0/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html)
-* [Eco: Punchout Catalogs Feature Integration](/docs/scos/dev/technology-partners/201907.0/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-feature-integration.html)
-* [Eco: Punchout Catalogs + Product Bundles Feature Integration](/docs/scos/dev/technology-partners/201907.0/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html)
+* [Punchout Catalog Feature Integration Guide](/docs/scos/user/technology-partners/201907.0/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html)
+* [Eco: Punchout Catalogs Feature Integration](/docs/scos/user/technology-partners/201907.0/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-feature-integration.html)
+* [Eco: Punchout Catalogs + Product Bundles Feature Integration](/docs/scos/user/technology-partners/201907.0/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html)
 
 ---
 

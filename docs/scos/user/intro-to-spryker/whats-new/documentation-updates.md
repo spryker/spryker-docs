@@ -143,7 +143,7 @@ Below you will find the list of the new/updated documentation released as part o
 <details open>
 <summary>Feature overview</summary>
 
-[CMS Templates & Slots Feature Overview](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html-feature-overview )
+[CMS Templates & Slots Feature Overview](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html )
 
 </details>
 
@@ -234,7 +234,7 @@ Below you will find the list of the new/updated documentation released as part o
 <summary>Migration guides</summary>
 
 * [ConfigurableBundle migration from v. 1* to v. 2*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-configurablebundle.html)
-* [ConfigurableBundleStorage migration from v. 1* to v. 2*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-configurablebundle.htmlstorage)
+* [ConfigurableBundleStorage migration from v. 1* to v. 2*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-configurablebundlestorage.html)
 * [MerchantRelationshipProductListGui migration from v. 1* to v. 2*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-merchantrelationshipproductlistgui.html)
 * [ProductListGui migration from v. 1* to v. 2*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-productlistgui.html)
 
@@ -300,7 +300,7 @@ Below you will find the list of the new/updated documentation released as part o
 ### Spryker in Docker
 
 * [Queue Worker](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html#queue)
-* [Deploy File Reference](/docs/dev/the-docker-sdk/{{site.version}}/deploy-file-reference-1.0.html)
+* [Deploy File Reference](/docs/scos/the-docker-sdk/{{site.version}}/deploy-file-reference-1.0.html)
 * [Health checks](/docs/scos/dev/technical-enhancements/health-checks.html)
 * [Asset Management](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/asset-management.html)
 <details open>
@@ -343,7 +343,7 @@ Below you will find the list of the new/updated documentation released as part o
 * [HowTo - Notify About Unsupported Browsers](/docs/scos/dev/tutorials-and-howtos/howtos/howto-notify-about-unsupported-browsers.html)
 
 #### Other documentation:
-* [Multiple Stores](/docs/scos/dev/tutorials-and-howto/howtos/howto-set-up-multiple-stores.html)
+* [Multiple Stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html)
 * [Inventory](https://documentation.spryker.com/2021080/docs/inventory-management)
 * [Custom Twig Functions for Yves](/docs/scos/dev/front-end-development/yves/custom-twig-functions-for-yves.html)
 * [Custom Twig Functions for Zed](/docs/scos/dev/front-end-development/zed/custom-twig-functions-for-zed.html)

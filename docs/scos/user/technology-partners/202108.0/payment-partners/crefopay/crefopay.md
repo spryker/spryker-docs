@@ -36,7 +36,7 @@ The `SprykerEco.CrefoPay` module provides the following payment methods:
 * [Direct Debit](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/crefopay/crefopay-provided-payment-methods.html#direct-debit)
 * [PayPal](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/crefopay/crefopay-provided-payment-methods.html#paypal)
 * [Cash in advance](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/crefopay/crefopay-provided-payment-methods.html#cash-in-advance)
-* [SofortÜberweisung](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/crefopay/crefopay-provided-payment-methods.html#sofort-berweisung)
+* [SofortÜberweisung](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/crefopay/crefopay-provided-payment-methods.html#sofortberweisung)
 
 ## What's next?
 To integrate CrefoPay into your system the see following articles:

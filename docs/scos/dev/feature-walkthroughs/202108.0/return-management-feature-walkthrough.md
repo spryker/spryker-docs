@@ -24,4 +24,4 @@ To learn more about the feature and to find out how end users use it, see [Retur
 | [Product Bundles + Return Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-bundles-return-management-feature-integration.html) |  |  |
 | [Product Measurement Unit feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-measurement-unit-feature-integration.html) |  |  |
 | [Product Options + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-options-order-management-feature-integration.html) |  |  |
-| [Product Packaging Unit feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-packaging-unit-feature-integration.html) |  |  |
+| [Product Packaging Unit feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/packaging-units-feature-integration.html) |  |  |

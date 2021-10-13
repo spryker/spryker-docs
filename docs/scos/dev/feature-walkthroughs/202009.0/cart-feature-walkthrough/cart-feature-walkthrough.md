@@ -21,4 +21,4 @@ To learn more about the feature and to find out how end users use it, see [Cart]
 | [Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/inventory-management-feature-integration.html) |   |   | [Cart module: Reference information](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/cart-module-reference-information.html)  |
 | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html) |   |   |   |
 | [Product Measurement feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-measurement-unit-feature-integration.html)  |   |   |   |
-| [Product Packaging Unit feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-packaging-unit-feature-integration.html)   |   |   |   |
+| [Product Packaging Unit feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/packaging-units-feature-integration.html)   |   |   |   |

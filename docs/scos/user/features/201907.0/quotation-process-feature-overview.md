@@ -25,7 +25,7 @@ Within the Spryker Commerce OS, RFQ is represented by the ability of a sales rep
 One of the RFQ features is a tool for creating special offers for buyers with limited validity. For example, a sales representative can update the prices for products in the RFQ and set the exact time until which this offer is valid, e.g., the 29th of December, 2019, 11:58 PM. If the buyer tries to proceed with this RFQ to checkout on the 29th of December, 2019, at 11:59 PM, then this RFQ will not be available.
 ![RFQ Validity](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Quotation+process+and+RFQ/Quotation+Process+&+RFQ+Feature+Overview/valid-till.png)
 
-To view how to create and mange RFQs, see [Quotation process & RFQ on the Storefront](#quotation-process-rfq-on-the-storefront).
+To view how to create and mange RFQs, see [Quotation process & RFQ on the Storefront](#quotation-process-and-rfq-on-the-storefront).
 
 ## RFQ statuses
 
@@ -47,7 +47,7 @@ The process of requesting the quote includes two workflows depending on the role
 ### Buyer workflow
 A buyer can create a quote request the product prices from a shopping cart.
 
-To view how to create and mange RFQs, see [Quotation process & RFQ on the Storefront](#quotation-process-rfq-on-the-storefront).
+To view how to create and mange RFQs, see [Quotation process & RFQ on the Storefront](#quotation-process-and-rfq-on-the-storefront).
 
 After submitting the request, RFQ gets to the status **Draft**.
 
@@ -95,7 +95,7 @@ A sales representative can quickly access the RFQs via a Quote Request Widget th
 #### On behalf of a company user
 A sales representative can create an RFQ on behalf of any company user, then process it and even complete checkout. This option is especially convenient when, for example, a company user is busy or doesn't have access to an account.
 
-To create an RFQ on behalf of a user, see [Creating an RFQ for a Customer](#quotation-process-rfq-on-the-storefront)
+To create an RFQ on behalf of a user, see [Creating an RFQ for a Customer](#quotation-process-and-rfq-on-the-storefront)
 
 The workflow with statuses for a sales representative is presented in the schema below:
 ![Sales Rep Workflow](https://confluence-connect.gliffy.net/embed/image/0dedd086-45ab-494d-a2f8-04c92501a229.png?utm_medium=live&utm_source=custom)
@@ -133,7 +133,7 @@ Mixing several workflows adds complexity to the process and increases the steps 
 Example: In the project, the cart needs approval when the cart total exceeds €1000. A buyer adds the products to cart with the card total of €1500 and converts the shopping cart into the RFQ. The sales representative reviews the cart and updates the prices for products so that the cart total makes up €1300 and sends the RFQ back to the buyer. The buyer cannot proceed to checkout as the cart total still exceeds the limit, so the buyer has to send the RFQ to their approver. If the approver approves the cart, then the buyer will finally be able to create the order and pay for it.
 {% endinfo_block %}
 
-## Quotation Process & RFQ on the Storefront
+## Quotation Process and RFQ on the Storefront
 Company users can perform the following actions using the CommentsQuotation process & RFQ feature on the Storefront:
 
 <details>

@@ -36,7 +36,7 @@ In the Back Office in the order list, a Back Office user doesn't have the functi
 |BACK OFFICE USER GUIDES|
 |---|
 | [Create an order linked to a reclamation](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/reclamations/managing-reclamations.html)  |
-| [Create a new order-related reclamation](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html#claiming-orders.html)  |
+| [Create a new order-related reclamation](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html#claiming-orders)  |
 | [Manage reclamations](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/reclamations/managing-reclamations.html)  |
 
 {% info_block warningBox "Developer guides" %}

@@ -59,7 +59,7 @@ To be able to use the Spryker Back Office, users have to authenticate to the Bac
 * Regular Back Office user account
 * Third-party sign-on (optional)
 
-To *authenticate as a regular Back Office user*, you should have the Back Office user account. See [Managing user](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-users.html#managing-users)s to learn how you can create and manage Back Office user accounts.
+To *authenticate as a regular Back Office user*, you should have the Back Office user account. See [Managing users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-users.html) to learn how you can create and manage Back Office user accounts.
 
 You can also enable your users to sign in from a third-party service set up for your project. The third-party sign-on uses the [OpenID](https://en.wikipedia.org/wiki/OpenID) protocol for authentication.
 
@@ -103,7 +103,7 @@ Each of the Identity Managers is an ECO module that should be developed separate
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of the Back Office Translations](/docs/scos/user/features/{{page.version}}/spryker-core-back-office/spryker-core-back-office-feature-overview/back-office-translations-overview.html) |
+| [Get a general idea of the Back Office Translations](/docs/scos/user/features/{{page.version}}/spryker-core-back-office-feature-overview/back-office-translations-overview.html) |
 | **Work with the Back Office**: |
 | [Log in to the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/logging-in-to-the-back-office.html) |
 | [View Dashboard](/docs/scos/user/back-office-user-guides/{{page.version}}/dashboard/viewing-dashboard.html) |

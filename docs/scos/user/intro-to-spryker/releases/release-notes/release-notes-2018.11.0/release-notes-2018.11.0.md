@@ -47,7 +47,7 @@ Spryker’s new B2B Demo Shop was made to provide you with the right combination
 Spryker has improved permissions control mechanism for non-authenticated B2B shop users. A shop administrator can hide/show specific shop features such as prices, shopping lists, an ability to add products to the cart or going to the checkout.
 ![Non-authenticated  B2B shop users](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.11.0/image2.png)
 
-**Documentation**: [Hide Content from Logged-out Users](https://documentation.spryker.com/2021080/docs/customer-access)
+**Documentation**: [Hide Content from Logged-out Users](/docs/scos/user/features/{{site.version}}/customer-access-feature-overview.html)
 
 ### B2C Demo Shop
 For everyone interested in B2C commerce use cases, we provide Spryker’s B2C Demo Shop. It also consists of the most common combination of modules and functionalities to cover your needs in the B2C commerce.
@@ -78,7 +78,7 @@ Shopping cart experience has been improved and enhanced to meet B2B customers ne
 The Quick Order functionality aims to help customers who want to purchase multiple products in bulk. A customer can prepare a list of product SKUs and quantity separated by spaces, semicolons or commas and paste it in the Quick Order page or manually add SKU and quantity per item one by one.
 ![Quick order](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.11.0/image13.png)
 
-**Documentation**: [Quick Order](https://documentation.spryker.com/2021080/docs/quick-add-to-cart)
+**Documentation**: [Quick Order](/docs/scos/user/features/{{site.version}}/quick-add-to-cart-feature-overview.html)
 
 ### Reorder
 Customers can now resubmit any of their previous orders; the whole list of products can be reordered in one click using recent orders from Customer Account / Orders History.
@@ -105,7 +105,7 @@ A shop owner can define a list of alternative products that will be suggested to
 The measurement units feature allows shop owners to specify multiple measurement units per product: meter, centimeter, gallon, pint, and piece. This feature provides additional flexibility to how products can be measured and sold. No matter what you sell – fruits, fabric, clothing or any other items, this feature will help you to apply custom measurement settings to any product.
 ![Measurement units](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.11.0/image15.png)
 
-**Documentation**: [Measurement Units](https://documentation.spryker.com/2021080/docs/measurement-units)
+**Documentation**: [Measurement Units](/docs/scos/user/features/{{site.version}}/measurement-units-feature-overview.html)
 
 ### Packaging Units
 Offer cost-efficient and flexible packaging units that suit the type of the product and your customer needs, such as bags, palettes, or packets in addition to single item packaging.
@@ -113,7 +113,7 @@ Offer cost-efficient and flexible packaging units that suit the type of the prod
 Packaging units can either contain a fixed or variable quantity of items.
 ![Packaging units](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.11.0/image18.png)
 
-**Documentation**: [Packaging Units](https://documentation.spryker.com/2021080/docs/packaging-units)
+**Documentation**: [Packaging Units](/docs/scos/user/features/{{site.version}}/packaging-units-feature-overview.html)
 
 ### Barcode Generator
 Enrich your products with an individual barcode that is generated based on the SKU number. The barcode can be printed for scanning directly from a product or attached to a shopping list for easy reordering.
@@ -123,7 +123,7 @@ Enrich your products with an individual barcode that is generated based on the S
 ### Products Restrictions
 With the Product Restrictions feature, you as a shop owner can easily define who of your customers gets to see what items or categories. Any item in your product catalog can be either whitelisted or blacklisted per customer. The lists can be uploaded or imported to make it easier to set up.
 
-**Documentation**: [Product Restrictions](https://documentation.spryker.com/2021080/docs/merchant-product-restrictions)
+**Documentation**: [Product Restrictions](/docs/scos/user/features/{{site.version}}/merchant-product-restrictions-feature-overview.html)
 
 ### Merchant Concept
 We have introduced the concept of Merchant to allow our customers to implement the Marketplace functionality. In a non-marketplace setup, there is always one Merchant. Product Restrictions and Customer Specific Prices are implemented by linking a B2B customer to the Merchant.

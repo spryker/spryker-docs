@@ -260,5 +260,5 @@ composer require --dev spryker/code-sniffer squizlabs/php_codesniffer
 ## Documentation Updates
 The following content has been added to the Academy:
 
-* [Fact-Finder - Campaigns](/docs/scos/user/technology-partners/{{site.version}}/marketing-and-conversion/analytics/fact-finder/fact-finder-campaigns.html)
-* [Fact-Finder - Recommendation](/docs/scos/user/technology-partners/{{site.version}}/marketing-and-conversion/analytics/fact-finder/fact-finder-recommendation.html)
+* [Fact-Finder - Campaigns](/docs/scos/user/technology-partners/{{site.version}}/marketing-and-conversion/analytics/fact-finder.html)
+* [Fact-Finder - Recommendation](/docs/scos/user/technology-partners/{{site.version}}/marketing-and-conversion/analytics/fact-finder.html)

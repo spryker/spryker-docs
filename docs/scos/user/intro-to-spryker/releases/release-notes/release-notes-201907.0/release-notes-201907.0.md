@@ -69,7 +69,7 @@ View the Scheduled Prices defined for a specific product:
 * You cannot schedule prices for a merchant relation
 * You cannot schedule prices for a volume price
 
-**Documentation**: [Scheduled Prices]((/docs/scos/user/features/{{site.version}}/scheduled-prices-feature-overview.html))
+**Documentation**: [Scheduled Prices](/docs/scos/user/features/{{site.version}}/scheduled-prices-feature-overview.html)
 
 ### Defining the Order of Appearance for Images
 
@@ -221,7 +221,7 @@ The feature is implemented as an ECO module in partnership with
 
 https://www.punchoutcatalogs.com/
 
-**Documentation**: [Punchout](https://documentation.spryker.com/2021080/docs/punchout-201907)
+**Documentation**: [Punchout](/docs/scos/user/features/{{site.version}}/technology-partner-integrations/punch-out/punch-out-feature-overview.html)
 
 ### Multiple Comments
 The feature has been released as a global widget and can be integrated into any page or entity of your online store. By default, the Comments widget is integrated to the Cart page. This allows you to add multiple comments with tags, so these comments will be linked to the order and appear not only in Zed Order Details page but also in Yves Order Details.

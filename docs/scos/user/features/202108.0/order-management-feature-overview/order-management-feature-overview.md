@@ -27,7 +27,7 @@ B2B customers usually purchase large volumes of products selecting specific meas
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of Custom Order Reference](/docs/scos/dev/feature-walkthrough/{{page.version}}/order-management-feature-walkthrough/custom-order-reference-module-relations.html)   |
+| [Get a general idea of Custom Order Reference](/docs/scos/dev/feature-walkthroughs/{{page.version}}/order-management-feature-walkthrough/custom-order-reference-module-relations.html)   |
 | [Get a general idea of Invoice Generation](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/invoice-generation-overview.html)   |
 | [Get a general idea of Order Cancellation](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/order-cancellation-overview.html)   |
 | [Get a general idea of Split Delivery](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/split-delivery-overview.html)   |

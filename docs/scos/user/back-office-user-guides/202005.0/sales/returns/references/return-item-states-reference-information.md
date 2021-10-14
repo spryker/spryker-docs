@@ -9,7 +9,7 @@ redirect_from:
   - /v5/docs/en/return-item-states-reference-information
 related:
   - title: Return Management Feature Overview
-    link: docs/scos/user/features/page.version/return-management-feature-overview/return-management-feature-overview.html
+    link: /docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html
   - title: Returns- Reference Information
     link: docs/scos/user/back-office-user-guides/page.version/sales/returns/references/returns-reference-information.html
   - title: Managing Returns

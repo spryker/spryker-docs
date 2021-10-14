@@ -31,7 +31,7 @@ In the **View** page, the following information is available:
 * Scheduled prices inside this import
 
 {% info_block infoBox %}
-See [Scheduled Prices: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/scheduled-prices/references/reference-information-scheduled-prices.html
+See [Scheduled Prices: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/scheduled-prices/creating-scheduled-prices.html#reference-information-creating-scheduled-prices
 {% endinfo_block %} to learn more about attributes on this page.)
 
 ## Editing Scheduled Price Imports
@@ -42,7 +42,7 @@ To edit an import:
     * edit a scheduled price;
     * delete a scheduled price.
 {% info_block infoBox %}
-See [Scheduled Prices: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/scheduled-prices/references/reference-information-scheduled-prices.html
+See [Scheduled Prices: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/scheduled-prices/creating-scheduled-prices.html#reference-information-creating-scheduled-prices
 {% endinfo_block %} for more details.)
 ## Editing Scheduled Prices
 
@@ -57,7 +57,7 @@ To edit a scheduled price:
     * specify the validity period.
 
 {% info_block infoBox %}
-See [Scheduled Prices: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/scheduled-prices/references/reference-information-scheduled-prices.html
+See [Scheduled Prices: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/scheduled-prices/creating-scheduled-prices.html#reference-information-creating-scheduled-prices
 {% endinfo_block %} for more details.)
 {% info_block errorBox %}
 Performing this action triggers the scheduled prices cron job to be run for the product for which this scheduled price has been added.

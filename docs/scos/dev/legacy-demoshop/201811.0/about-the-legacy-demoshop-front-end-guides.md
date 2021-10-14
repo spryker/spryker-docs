@@ -25,7 +25,7 @@ redirect_from:
 
 The Legacy Demoshop Front-end guides provide information of how the front-end was built in the Legacy Demoshop. Here you will find the following information:
 
-* [Overview of the Twig Template Engine](/docs/scos/dev/legacy-demoshop/{{page.version}}/twig-templates/overview-twig.html) used for building the front-end;
+* [Overview of the Twig Template Engine](/docs/scos/dev/legacy-demoshop/201811.0/twig-templates/overview-twig.html) used for building the front-end;
 * [Twig Templates best practices](/docs/scos/dev/legacy-demoshop/{{page.version}}/twig-templates/best-practices-twig-templates.html) providing in-depth information on how to extend Twig templates: create pages in Zed, add multiple widgets to pages, add forms etc.
 
 The [Demoshop Guide](/docs/scos/dev/legacy-demoshop/{{page.version}}/demoshop-guide.html)  will work you through the process of building your assets. The assets is a set of resources used to build the UI, that includes html, css (or less, sass, stylus, etc.) and js (or jsx, etc.) files, images, fonts and so on.

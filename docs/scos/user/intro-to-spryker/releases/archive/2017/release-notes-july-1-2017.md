@@ -65,7 +65,7 @@ In addition, we are introducing a set of new features for CMS blocks:
 **Documentation**
 For relevant documentation, see [CMS Block](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-blocks-overview.html).
 
-For detailed migration guides, see [CMS Migration Guide](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cms.html), [CMS Block Migration Console](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cms.html-block-category-connector-console)
+For detailed migration guides, see [CMS Migration Guide](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cms.html), [CMS Block Migration Console](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cms-block-category-connector-migration-console.html)
 
 **Migration Guides**
 To upgrade, follow the steps described below:

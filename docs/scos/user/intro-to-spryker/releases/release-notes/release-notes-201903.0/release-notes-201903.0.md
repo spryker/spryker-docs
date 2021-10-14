@@ -116,7 +116,7 @@ In this release, we have extended the Code Sniffer with the new concepts of leve
 
 PHPStan has been updated with config file inheritance. From now on, only new or changed settings need to be defined for a module. General settings are defined and loaded automatically for all modules.
 
-**Documentation**: [Code Sniffer](/docs/scos/dev/sdk/{{site.version}}/development-tools/code-sniffer.html), [Architecture Sniffer](/docs/scos/dev/sdk/{{site.version}}ntent ), [PHPStan](/docs/scos/dev/sdk/{{site.version}}/development-tools/phpstan.html).
+**Documentation**: [Code Sniffer](/docs/scos/dev/sdk/{{site.version}}/development-tools/code-sniffer.html), [Architecture Sniffer](/docs/scos/dev/sdk/{{site.version}}development-tools/architecture-sniffer.html ), [PHPStan](/docs/scos/dev/sdk/{{site.version}}/development-tools/phpstan.html).
 
 ### Spryk: Code Generation Tool
 With this release, Spryker introduces a new code generator called Spryk. It helps with the generation of required boilerplate code. Spryk works for new and existing code and supports multiple scenarios or definitions. Some scenarios are complex and implemented as independent Spryk definitions linked together, allowing a developer to run code generation for the whole scenario or only for a part of it.
@@ -149,7 +149,7 @@ From now on, resource relationships are not included in the response by default.
 With this release, we have implemented significant improvements to the Quick Order feature. First, Quick Order now supports uploading of big packs of data with the help of CSV files, which allows the shop customers to order multiple products at once. Also, we have integrated a Search Widget for concrete products into Quick Order to enable full-text search for concrete products with the support of Measuring Units, Packaging Units and all kinds of Product restrictions (minimum and maximum quantity, Customer specific products, etc). Out of the box, the Spryker Search Widget can be used not only in Quick Order but as a separate widget for the Cart page and Shopping list.
 ![Quick order improvements](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201903.0/image10.png)
 
-**Documentation**: [Quick Order](https://documentation.spryker.com/2021080/docs/quick-add-to-cart).
+**Documentation**: [Quick Order](/docs/scos/user/features/{{site.version}}/quick-add-to-cart-feature-overview.html).
 
 ### Approval Process
 We are introducing one of the core B2B features which enables managers to control purchases requested by their employees. A customer can choose to have an order approved by a responsible person before allowing the checkout. The company administrator can limit some roles with flexible permissions and define a threshold on the Cart Total value so a buyer would need to ask for approval when the Cat Total limit is exceeded.

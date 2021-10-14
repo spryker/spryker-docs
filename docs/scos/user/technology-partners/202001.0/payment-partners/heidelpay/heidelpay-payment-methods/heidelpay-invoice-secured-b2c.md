@@ -31,7 +31,7 @@ related:
 ---
 
 ## Setup
-The following configuration should be made after Heidelpay has been [installed](/docs/scos/dev/technology-partners/202001.0/payment-partners/heidelpay/heidelpay-installation.html) and [integrated](/docs/scos/dev/technology-partners/202001.0/payment-partners/heidelpay/scos-integration/heidelpay-integration-into-scos.html).
+The following configuration should be made after Heidelpay has been [installed](/docs/scos/user/technology-partners/202001.0/payment-partners/heidelpay/heidelpay-installation.html) and [integrated](/docs/scos/user/technology-partners/202001.0/payment-partners/heidelpay/scos-integration/heidelpay-integration-into-scos.html).
 
 ## Configuration
 ```php

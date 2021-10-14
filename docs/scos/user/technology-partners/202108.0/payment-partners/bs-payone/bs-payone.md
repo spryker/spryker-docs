@@ -57,7 +57,7 @@ Payone provides the following methods of payment:
 * [Prepayment](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-prepayment.html)
 * [Invoice](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-invoice-payment.html)
 * [Security Invoice](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-security-invoice-payment.html)
-* [Paypal Express Checkout](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/scos-integration/payone-integration-into-the-scos-project.html-express-checkout)
+* [Paypal Express Checkout](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/scos-integration/payone-integration-into-the-scos-project.html)
 
 We use state machines for handling and managing orders and payments. To integrate Payone payments, a state machine for Payone should be created.
 

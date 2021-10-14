@@ -24,7 +24,7 @@ There is currently an issue when using giftcards with Braintree. Our team is dev
 
 ## Prerequisites
 
-Before proceeding with the integration, make sure you have [installed and configured](/docs/scos/dev/technology-partners/202009.0/payment-partners/braintree/braintree-installation-and-configuration.html) the Braintree module.
+Before proceeding with the integration, make sure you have [installed and configured](/docs/scos/user/technology-partners/202009.0/payment-partners/braintree/braintree-installation-and-configuration.html) the Braintree module.
 
 ## Frontend integration
 

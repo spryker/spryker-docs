@@ -268,12 +268,12 @@ To use a new infrastructure, please make sure you moved your `Pyz` test into `Py
 The following content has been added to the Academy:
 
 * [Payment Integration - Heidelpay](/docs/scos/user/technology-partners/{{site.version}}/payment-partners/heidelpay/heidelpay.html)
-* [Risk Solution Services Integration - Arvato 2.0](/docs/scos/user/technology-partners/{{site.version}}/payment-partners/arvato/arvato.html-2-0)
+* [Risk Solution Services Integration - Arvato 2.0](/docs/scos/user/technology-partners/{{site.version}}/payment-partners/arvato/arvato.html)
 * [Performance Guidelines](/docs/scos/dev/guidelines/performance-guidelines.html)
 * [Performing Core Updates Smoothly](/docs/scos/dev/setup/composer.html#core-updates)
 * [CMS Blocks](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-blocks-overview.html)
 * [CMS Pages](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-pages-overview.html)
-* [Navigation](/docs/user/features/{[site.version}}/navigation-feature-overview.html)
+* [Navigation](/docs/scos/user/features/{{site.version}}/navigation-feature-overview.html)
 * [Product Groups](https://documentation.spryker.com/2021080/docs/product-groups)
 * [Product Management](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html)
 * [Product Sets](/docs/scos/user/features/{{site.version}}/product-sets-feature-overview.html)

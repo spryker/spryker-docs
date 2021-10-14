@@ -71,7 +71,7 @@ Below you will find the list of the new/updated documentation released as part o
 
 </details>
 
-* [Packaging Units with Decimal Stock](https://documentation.spryker.com/2021080/docs/packaging-units)
+* [Packaging Units with Decimal Stock](/docs/scos/user/features/{{site.version}}/packaging-units-feature-overview.html)
 
 <details open>
 <summary>Feature overview</summary>
@@ -134,7 +134,7 @@ Below you will find the list of the new/updated documentation released as part o
 
 * [Creating Scheduled Prices](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/scheduled-prices/creating-scheduled-prices.html)
 * [Managing Scheduled Prices](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/scheduled-prices/managing-scheduled-prices.html)
-* [Scheduled Prices: Reference Information](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/scheduled-prices/references/reference-information-scheduled-prices.html)   
+* [Scheduled Prices: Reference Information](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/scheduled-prices/creating-scheduled-prices.html#reference-information-creating-scheduled-prices)   
 
 </details>
 
@@ -143,7 +143,7 @@ Below you will find the list of the new/updated documentation released as part o
 <details open>
 <summary>Feature overview</summary>
 
-[CMS Templates & Slots Feature Overview](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html-feature-overview )
+[CMS Templates & Slots Feature Overview](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html )
 
 </details>
 
@@ -170,7 +170,6 @@ Below you will find the list of the new/updated documentation released as part o
 
 * [Slots](/docs/scos/user/back-office-user-guides/{{site.version}}/content/slots/managing-slots.html)
 * [Managing Slots](/docs/scos/user/back-office-user-guides/{{site.version}}/content/slots/managing-slots.html)
-* [Slots: Reference Information](/docs/scos/user/back-office-user-guides/{{site.version}}/content/slots/managing-slots.html-reference-information)
 
 </details>
 
@@ -182,19 +181,19 @@ Below you will find the list of the new/updated documentation released as part o
 
 </details>
 
-* [Approval Process](https://documentation.spryker.com/2021080/docs/approval-process)
+* [Approval Process](/docs/scos/user/features/{{site.version}}/approval-process-feature-overview.html)
 
 <details open>
 <summary>Feature overview</summary>
 
-[Approval Process Feature Overview](https://documentation.spryker.com/2021080/docs/approval-process)
+[Approval Process Feature Overview](/docs/scos/user/features/{{site.version}}/approval-process-feature-overview.html)
 
 </details>
 
 <details open>
 <summary>Integration guides</summary>
 
-* [Approval Process Feature Integration](https://documentation.spryker.com/2021080/docs/approval-process-feature-integration)
+* [Approval Process Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/approval-process-feature-integration.html)
 * [Shipment + Approval Process Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/shipment-approval-process-feature-integration.html)
 * [Shipment Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/shipment-feature-integration.html)
 
@@ -203,24 +202,24 @@ Below you will find the list of the new/updated documentation released as part o
 <details open>
 <summary>Shop User guide</summary>
 
-[Shop Guide - Approval Process](https://documentation.spryker.com/2021080/docs/approval-process-shop-guide)
+[Shop Guide - Approval Process](/docs/scos/user/features/{{site.version}}/approval-process-feature-overview.html-shop-guide)
 
 
 </details>
 
-* [Configurable Bundle](https://documentation.spryker.com/2021080/docs/configurable-bundle)
+* [Configurable Bundle](/docs/scos/user/features/{{site.version}}/configurable-bundle-feature-overview.html)
 
 <details open>
 <summary>Feature overview</summary>
 
-[Configurable Bundle Feature Overview](https://documentation.spryker.com/2021080/docs/configurable-bundle-feature-overview)
+[Configurable Bundle Feature Overview](/docs/scos/user/features/{{site.version}}/configurable-bundle-feature-overview.html)
 
 </details>
 
 <details open>
 <summary>Integration guides</summary>
 
-* [Configurable Bundle Feature Integration](https://documentation.spryker.com/2021080/docs/configurable-bundle-feature-integration)
+* [Configurable Bundle Feature Integration](/docs/scos/user/features/{{site.version}}/configurable-bundle-feature-overview.html)
 * [Product Images + Configurable Bundle](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-images-configurable-bundle-feature-integration.html)
 * [Merchant Product Restrictions](/docs/scos/dev/feature-integration-guides/{{site.version}}/merchant-product-restrictions-feature-integration.html)
 * [Product Lists + Catalog](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-lists-catalog-feature-integration.html)
@@ -234,7 +233,7 @@ Below you will find the list of the new/updated documentation released as part o
 <summary>Migration guides</summary>
 
 * [ConfigurableBundle migration from v. 1* to v. 2*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-configurablebundle.html)
-* [ConfigurableBundleStorage migration from v. 1* to v. 2*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-configurablebundle.htmlstorage)
+* [ConfigurableBundleStorage migration from v. 1* to v. 2*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-configurablebundlestorage.html)
 * [MerchantRelationshipProductListGui migration from v. 1* to v. 2*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-merchantrelationshipproductlistgui.html)
 * [ProductListGui migration from v. 1* to v. 2*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-productlistgui.html)
 
@@ -300,7 +299,7 @@ Below you will find the list of the new/updated documentation released as part o
 ### Spryker in Docker
 
 * [Queue Worker](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html#queue)
-* [Deploy File Reference](/docs/dev/the-docker-sdk/{{site.version}}/deploy-file-reference-1.0.html)
+* [Deploy File Reference](/docs/scos/the-docker-sdk/{{site.version}}/deploy-file-reference-1.0.html)
 * [Health checks](/docs/scos/dev/technical-enhancements/health-checks.html)
 * [Asset Management](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/asset-management.html)
 <details open>
@@ -331,9 +330,9 @@ Below you will find the list of the new/updated documentation released as part o
     * [Creating and Managing Delivery Methods](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html)
     * [Delivery Methods: Reference Information](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html#reference-information-creating-delivery-methods)
  * Warehouses
-    * [Creating a Warehouse](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/warehouses/creating-a-warehouse.html)
+    * [Creating a Warehouse](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/warehouses/creating-warehouses.html)
     * [Managing Warehouses](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/warehouses/managing-warehouses.html)
-    * [Warehouses: Reference Information](/docs/user/features/{{site.version}}/inventory-management-feature-overview.html)
+    * [Warehouses: Reference Information](/docs/scos/user/features/{{site.version}}/inventory-management-feature-overview.html)
     * [Stores](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/stores.html)
 
 #### HowTos:
@@ -343,7 +342,7 @@ Below you will find the list of the new/updated documentation released as part o
 * [HowTo - Notify About Unsupported Browsers](/docs/scos/dev/tutorials-and-howtos/howtos/howto-notify-about-unsupported-browsers.html)
 
 #### Other documentation:
-* [Multiple Stores](/docs/scos/dev/tutorials-and-howto/howtos/howto-set-up-multiple-stores.html)
-* [Inventory](https://documentation.spryker.com/2021080/docs/inventory-management)
+* [Multiple Stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html)
+* [Inventory](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html)
 * [Custom Twig Functions for Yves](/docs/scos/dev/front-end-development/yves/custom-twig-functions-for-yves.html)
 * [Custom Twig Functions for Zed](/docs/scos/dev/front-end-development/zed/custom-twig-functions-for-zed.html)

@@ -118,7 +118,7 @@ For migration guides, see:
 * [Category Migration Guide](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-category.html)
 * [CMS Block Category Connector Migration Guide](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cms-block-category-connector.html)
 * Category Template Migration Console <!-- add a link -->
-* [CMS Block Category Connector Migration Console](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cms-block-category-connector.html-console)
+* [CMS Block Category Connector Migration Console](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cms-block-category-connector-migration-console.html)
 
 **Migration Guides**
 To upgrade, follow the steps described below:

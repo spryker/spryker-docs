@@ -15,7 +15,7 @@ related:
   - title: Reclamations Feature Overview
     link: docs/scos/user/features/page.version/reclamations-feature-overview.html
   - title: Return Management Feature Overview
-    link: docs/scos/user/features/page.version/return-management-feature-overview/return-management-feature-overview.html
+    link: /docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html
   - title: Return Item States- Reference Information
     link: docs/scos/user/back-office-user-guides/page.version/sales/returns/references/return-item-states-reference-information.html
   - title: Returns- Reference Information
@@ -68,7 +68,7 @@ To change the status of all the items inside a shipment at once, click **pay** i
 To learn more about order statuses, see [Orders: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/references/orders-reference-information.html).
 
 ## Creating Returns
-If a sales order item is[ returnable](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html), you can create a return for it.
+If a sales order item is[ returnable](/docs/scos/user/features/{{page.version}}/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html), you can create a return for it.
 
 To create a return:
 

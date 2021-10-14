@@ -27,7 +27,7 @@ related:
 This article provides step-by-step instructions on integrating the CrefoPay system into your project.
 
 ## Prerequisites
-Prior to integrating CrefoPay into your project, make sure you [installed and configured the CrefoPay module](/docs/scos/dev/technology-partners/201907.0/payment-partners/crefopay/crefopay-installation-and-configuration.html).
+Prior to integrating CrefoPay into your project, make sure you [installed and configured the CrefoPay module](/docs/scos/user/technology-partners/201907.0/payment-partners/crefopay/crefopay-installation-and-configuration.html).
 
 ## Integrating CrefoPay into Your Project
 To integrate CrefoPay, do the following:

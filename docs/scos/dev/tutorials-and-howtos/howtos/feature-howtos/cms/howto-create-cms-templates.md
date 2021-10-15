@@ -89,7 +89,7 @@ A content manager can apply this template when [creating a CMS page](/docs/scos/
 Templates with slots are universal. In the Back Office, a content manager can:
 
 *     apply this template when [creating a CMS page](/docs/scos/user/back-office-user-guides/{{site.version}}/content/pages/creating-a-cms-page.html).
-*     apply this template when [creating a category](/docs/scos/user/back-office-user-guides/{{site.version}}catalog/category/creating-categories.html).
+*     apply this template when [creating a category](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/category/creating-categories.html).
 
 {% info_block warningBox %}
 

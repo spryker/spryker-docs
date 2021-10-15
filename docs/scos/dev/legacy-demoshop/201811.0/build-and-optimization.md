@@ -67,7 +67,7 @@ const webpackConfiguration = {
 ### Zed
 Zed frontend is fully managed by Oryx for Zed. It relies on the  `oryx.find()` API to automatically globb the entry point files across the project.
 
-To add or change entry points in Zed, [extend the Oryx for Zed Webpack configuration](/docs/scos/dev/front-end-development/zed/oryx-builder-overview-and-setup.html-for-zed).
+To add or change entry points in Zed, [extend the Oryx for Zed Webpack configuration](/docs/scos/dev/front-end-development/zed/oryx-builder-overview-and-setup.html).
 
 For more about Zed assets management:
 

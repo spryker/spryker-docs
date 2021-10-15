@@ -48,14 +48,14 @@ We integrate with a wide range of payment methods that can be configured accordi
 
 Payone provides the following methods of payment:
 
-* [Credit Card](/docs/scos/dev/technology-partners/202009.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-credit-card-payment.html)
-* [Direct Debit](/docs/scos/dev/technology-partners/202009.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-direct-debit-payment.html)
-* [Online Transfer](/docs/scos/dev/technology-partners/202009.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-online-transfer-payment.html)
-* [Paypal](/docs/scos/dev/technology-partners/202009.0/payment-partners/bs-payone/scos-integration/payone-integration-into-the-scos-project.html)
-* [Prepayment](/docs/scos/dev/technology-partners/202009.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-prepayment.html)
-* [Invoice](/docs/scos/dev/technology-partners/202009.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-invoice-payment.html)
-* [Security Invoice](/docs/scos/dev/technology-partners/202009.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-security-invoice-payment.html)
-* [Paypal Express Checkout](/docs/scos/dev/technology-partners/202009.0/payment-partners/bs-payone/scos-integration/payone-integration-into-the-scos-project.html-express-checkout)
+* [Credit Card](/docs/scos/user/technology-partners/202009.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-credit-card-payment.html)
+* [Direct Debit](/docs/scos/user/technology-partners/202009.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-direct-debit-payment.html)
+* [Online Transfer](/docs/scos/user/technology-partners/202009.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-online-transfer-payment.html)
+* [Paypal](/docs/scos/user/technology-partners/202009.0/payment-partners/bs-payone/scos-integration/payone-integration-into-the-scos-project.html)
+* [Prepayment](/docs/scos/user/technology-partners/202009.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-prepayment.html)
+* [Invoice](/docs/scos/user/technology-partners/202009.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-invoice-payment.html)
+* [Security Invoice](/docs/scos/user/technology-partners/202009.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-security-invoice-payment.html)
+* [Paypal Express Checkout](/docs/scos/user/technology-partners/202009.0/payment-partners/bs-payone/scos-integration/payone-integration-into-the-scos-project.html)
 
 We use state machines for handling and managing orders and payments. To integrate Payone payments, a state machine for Payone should be created.
 

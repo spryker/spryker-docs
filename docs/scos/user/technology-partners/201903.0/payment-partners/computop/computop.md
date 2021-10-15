@@ -53,14 +53,14 @@ The `SprykerEco.Computop` module includes integration with:
 
 The `SprykerEco.Computop` module provides the following payment methods:
 
-* [Credit Card](/docs/scos/dev/technology-partners/201903.0/payment-partners/computop/computop-credit-card.html)
-* [Direct Debit](/docs/scos/dev/technology-partners/201903.0/payment-partners/computop/computop-direct-debit.html)
-* [EasyCredit](/docs/scos/dev/technology-partners/201903.0/payment-partners/computop/computop-easy-credit.html)
-* [iDeal](/docs/scos/dev/technology-partners/201903.0/payment-partners/computop/computop-ideal.html)
-* [Paydirekt](/docs/scos/dev/technology-partners/201903.0/payment-partners/computop/computop-paydirekt.html)
-* [PayNow](/docs/scos/dev/technology-partners/201903.0/payment-partners/computop/computop-paynow.html)
-* [PayPal](/docs/scos/dev/technology-partners/201903.0/payment-partners/computop/computop-paypal.html)
-* [SofortÜberweisung](/docs/scos/dev/technology-partners/201903.0/payment-partners/computop/computop-sofort.html)
+* [Credit Card](/docs/scos/user/technology-partners/201903.0/payment-partners/computop/computop-credit-card.html)
+* [Direct Debit](/docs/scos/user/technology-partners/201903.0/payment-partners/computop/computop-direct-debit.html)
+* [EasyCredit](/docs/scos/user/technology-partners/201903.0/payment-partners/computop/computop-easy-credit.html)
+* [iDeal](/docs/scos/user/technology-partners/201903.0/payment-partners/computop/computop-ideal.html)
+* [Paydirekt](/docs/scos/user/technology-partners/201903.0/payment-partners/computop/computop-paydirekt.html)
+* [PayNow](/docs/scos/user/technology-partners/201903.0/payment-partners/computop/computop-paynow.html)
+* [PayPal](/docs/scos/user/technology-partners/201903.0/payment-partners/computop/computop-paypal.html)
+* [SofortÜberweisung](/docs/scos/user/technology-partners/201903.0/payment-partners/computop/computop-sofort.html)
 
 To install the payment provider, run:
 ```

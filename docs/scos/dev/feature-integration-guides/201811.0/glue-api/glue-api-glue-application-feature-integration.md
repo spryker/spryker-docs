@@ -1,5 +1,5 @@
 ---
-title: Glue Application feature integration
+title: "Glue API: Glue Application feature integration"
 description: This guide will navigate you through the process of installing and configuring the Glue Application feature in Spryker OS.
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/glue-application-feature-integration
@@ -81,9 +81,9 @@ Create a GlueBootstrap file for your project and register all the needed plugins
 **`src/Pyz/Glue/GlueApplication/Bootstrap/GlueBootstrap.php`**
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication\Bootstrap;
- 
+
 use Silex\Provider\ServiceControllerServiceProvider;
 use Silex\Provider\SessionServiceProvider;
 use Spryker\Glue\GlueApplication\Bootstrap\AbstractGlueBootstrap;
@@ -91,7 +91,7 @@ use Spryker\Glue\GlueApplication\Plugin\Rest\GlueServiceProviderPlugin;
 use Spryker\Glue\GlueApplication\Plugin\Rest\ServiceProvider\GlueApplicationServiceProvider;
 use Spryker\Glue\GlueApplication\Plugin\Rest\ServiceProvider\GlueResourceBuilderService;
 use Spryker\Glue\GlueApplication\Plugin\Rest\ServiceProvider\GlueRoutingServiceProvider;
- 
+
 class GlueBootstrap extends AbstractGlueBootstrap
 {
     /**
@@ -113,21 +113,21 @@ Create a new entry point for the Glue Application in the public/Glue folder:
 **`public/Glue/index.php`**
 ```php
 <?php
- 
+
 use Pyz\Glue\GlueApplication\Bootstrap\GlueBootstrap;
 use Spryker\Shared\Config\Application\Environment;
 use Spryker\Shared\ErrorHandler\ErrorHandlerEnvironment;
- 
+
 define('APPLICATION', 'GLUE');
 defined('APPLICATION_ROOT_DIR') || define('APPLICATION_ROOT_DIR', realpath(__DIR__ . '/../..'));
- 
+
 require_once APPLICATION_ROOT_DIR . '/vendor/autoload.php';
- 
+
 Environment::initialize();
- 
+
 $errorHandlerEnvironment = new ErrorHandlerEnvironment();
 $errorHandlerEnvironment-&gt;initialize();
- 
+
 $bootstrap = new GlueBootstrap();
 $bootstrap
     -&gt;boot()
@@ -142,17 +142,17 @@ Nginx configuration example:
 server {
     # Listener for production/staging - requires external LoadBalancer directing traffic to this port
     listen 10001;
- 
+
     # Listener for testing/development - one host only, doesn't require external LoadBalancer
     listen 80;
- 
+
     server_name ~^glue\\.de\\..+\\.com$;
- 
+
     keepalive_timeout 0;
     access_log  /data/logs/development/glue-access.log extended;
- 
+
     root /data/shop/development/current/public/Glue;
- 
+
     set $application_env development;
     set $application_store DE;
     include "spryker/zed.conf";

@@ -49,7 +49,7 @@ Spryker now supports product stock definition as **decimal** instead of integer.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+{{page.version}}/image3.png)
 
 #### Documentation
-[Packaging Units](https://documentation.spryker.com/2021080/docs/packaging-units)
+[Packaging Units](/docs/scos/user/features/{{site.version}}/packaging-units-feature-overview.html)
 
 ### Improved Packaging Unit
 You can set a **decimal amount** for your packages, which allows you to sell products in flexible quantities.
@@ -57,7 +57,7 @@ The requirement is to share your package stock with another concrete product. In
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+{{page.version}}/image5.png)
 
 #### Documentation
-[Packaging Units](/docs/scos/user/featurs/{{site.version}}/packaging-units-feature-overview.html)
+[Packaging Units](/docs/scos/user/features/{{site.version}}/packaging-units-feature-overview.html)
 
 ### Improved Scheduled Prices
 The **Scheduled Price** feature allows you to define a price for your products that will take effect in the future. Create a scheduled price manually in the Back Office or import them in bulk via CSV files. Starting from this release, you can manage your previously imported **Scheduled Prices** directly in the Back Office.
@@ -118,7 +118,7 @@ In the **Approval Process**, previously, it was not possible to add shipment cos
 
 
 #### Documentation
-[Approval Process](https://documentation.spryker.com/2021080/docs/approval-process)
+[Approval Process](/docs/scos/user/features/{{site.version}}/approval-process-feature-overview.html)
 
 ### Configurable Bundle
 Configurable Bundle provides a guiding tool to simplify the purchasing of complex product combinations and brings a smooth shopping experience. It allows companies to sell online complex combinations of products that would otherwise require a physical presence in the store.
@@ -126,7 +126,7 @@ Configurable bundles are compatible with both B2B & B2C stores but at this point
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+{{page.version}}/image10.png)
 
 #### Documentation
-[Configurable Bundle](https://documentation.spryker.com/2021080/docs/configurable-bundle)
+[Configurable Bundle](/docs/scos/user/features/{{site.version}}/configurable-bundle-feature-overview.html)
 ***
 ## Spryker Glue REST API
 In this release, we continue exposing the Storefront functionality for both B2C and B2B.
@@ -154,7 +154,7 @@ Ratings and reviews are critical for the customer’s purchase decision. Shop ow
 With this API, you will be able to display a product with its different options each of them with its own price, product option group, and tax set, to display the item in the cart or guest cart with the selected option and to make use of those through the checkout process.
 
 #### Documentation
-[Product Options API](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/abstract-produts/retrieving-abstract-products.html)
+[Product Options API](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/abstract-products/retrieving-abstract-products.html)
 
 ### Improved Navigation URLs
 

@@ -96,4 +96,4 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 See [CrefoPay - Provided Payment Methods](https://docs.demo-spryker.com/v4/docs/crefopay-provided-payment-methods) for more information on the payment methods provided by CrefoPay.
 
 ## What's next?
-Once you are done with the installation and configuration of the CrefoPay module, [integrate CrefoPay into your project](/docs/scos/dev/technology-partners/201811.0/payment-partners/crefopay/crefopay-integration.html).
+Once you are done with the installation and configuration of the CrefoPay module, [integrate CrefoPay into your project](/docs/scos/user/technology-partners/201811.0/payment-partners/crefopay/crefopay-integration.html).

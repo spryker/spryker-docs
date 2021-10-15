@@ -25,7 +25,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 <summary>B2B feature list</summary>
 
 - [Configurable Product](/docs/scos/user/features/{{site.version}}/configurable-product-feature-overview.html)
-- [Return Management](/docs/scos/user/features/{{site.version}}/return-management-feature-overview/return-management-feature-overview.html)
+- [Return Management](/docs/scos/user/features/{{site.version}}/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html)
 - [Configurable Bundle](/docs/scos/user/features/{{site.version}}/configurable-bundle-feature-overview.html)
 - [Comments](/docs/scos/user/features/{{site.version}}/comments-feature-overview.html)
 - [Persistent Cart Sharing](/docs/scos/user/features/{{site.version}}/persistent-cart-sharing-feature-overview.html)
@@ -63,7 +63,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 - [Agent Assist](/docs/scos/user/features/{{site.version}}/agent-assist-feature-overview.html)
 - [Payments](/docs/scos/user/features/{{site.version}}/payments-feature-overview.html)
 <!---- [Invoice]()-->
-- [Checkout](docs/scos/user/features/{{site.version}}/checkout-feature-overview/checkout-feature-overview.html)
+- [Checkout](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/checkout-feature-overview.html)
 - [Mailing & Notifications](/docs/scos/user/features/{{site.version}}/mailing-and-notifications-feature-overview.html)
 - [Spryker Core](/docs/scos/user/features/{{site.version}}/spryker-core-feature-overview/spryker-core-feature-overview.html)
 - [Product](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html)
@@ -80,7 +80,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 - [Product Rating & Reviews](/docs/scos/user/features/{{site.version}}/product-rating-and-reviews-feature-overview.html)
 - [Product Labels](/docs/scos/user/features/{{site.version}}/product-labels-feature-overview.html)
 - [Product Lists](/docs/scos/user/features/{{site.version}}/product-lists-feature-overview.html)
-- [Non-splittable Products](docs/scos/user/features/{{site.version}}/non-splittable-products-feature-overview.html)
+- [Non-splittable Products](/docs/scos/user/features/{{site.version}}/non-splittable-products-feature-overview.html)
 - [Catalog](/docs/scos/user/features/{{site.version}}/catalog-feature-overview.html)
 - [Category Management](/docs/scos/user/features/{{site.version}}/category-management-feature-overview.html)
 - [Navigation](/docs/scos/user/features/{{site.version}}/navigation-feature-overview.html)

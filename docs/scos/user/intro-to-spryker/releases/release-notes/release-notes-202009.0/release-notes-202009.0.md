@@ -35,7 +35,7 @@ When creating a return, a Customer can see all the relevant return information s
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image9.png)
 
 #### Documentation
-[Return Management](/docs/user/features/{{site.version}}/return-management-feature-overview/return-management-feature-overview.html)
+[Return Management](/docs/scos/user/features/{{site.version}}/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html)
 
 ### Custom Order Reference
 **Custom Order Reference** is a small but powerful feature that allows Customers and Back Office Users to add an external reference to the orders. It can be a reference to a system that manages internal purchases or a ticket system. This reference can be saved and viewed both on the Storefront and in the Back Office.
@@ -73,7 +73,7 @@ We have enhanced the Product Labels feature so that now you can define the store
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image8.png)
 
 #### Documentation
-[Product Labels](/docs/user/features/{{site.version}}/product-labels-feature-overview.html)
+[Product Labels](/docs/scos/user/features/{{site.version}}/product-labels-feature-overview.html)
 
 ### Ability to Change Image and Name in a Product Group
 We have improved our Front-end component **Product Abstract Card** to fully support the Product Group feature. Whenever you hover over the color selector on the card, the picture, title, and price of the product are updated to match your selection.
@@ -88,7 +88,7 @@ This also allows creating a different navigation for each store and locale.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image11.gif)
 
 #### Documentation
-[Navigation](/docs/user/features/{[site.version}}/navigation-feature-overview.html)
+[Navigation](/docs/scos/user/features/{{site.version}}/navigation-feature-overview.html)
 
 ### Emails as CMS Blocks
 You can now manage emails you send to customers, using the Spryker CMS. Starting from this release, you can **define emails' content and layout** by editing CMS Blocks and applying email templates.
@@ -136,7 +136,7 @@ Besides using the default OMS states to be displayed on the Storefront, you can 
 Customer, Agent, and Back Office users can now **cancel orders** during the cancelation period. The cancellation period is 30 minutes by default, and you can customize it for your project. The Sales Order item states in which a product can be canceled are defined with a dedicated flag in the State Machine.
 
 #### Documentation
-[Order Cancellation](/docs/user/features/{{site.version}}/order-management-feature-overview/order-cancellation-overview.html)
+[Order Cancellation](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/order-cancellation-overview.html)
 
 ### Invoice Generation
 Spryker now supports **invoice generation** inside the OMS processes. Starting from this release, the Back Office users can trigger the `invoice-generate` order state, which generates the order invoice and sends it to the Customer’s email address.

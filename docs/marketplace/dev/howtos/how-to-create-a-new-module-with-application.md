@@ -1,10 +1,10 @@
 ---
 title: "How-To: Create a new module with application"
-description: This articles provides details how to create new module with application
+description: This document provides details how to create new module with application
 template: howto-guide-template
 ---
 
-This articles provides details how to create new module with application.
+This document provides details how to create new module with application.
 
 ## 1) Create module scaffolding structure
 
@@ -17,7 +17,7 @@ To register components, a special Angular Module is created. It lists all Angula
 2.1. Register Web Components:
 
 ```ts
-/// Registration
+// Registration
 import { NgModule } from '@angular/core';
 import { WebComponentsModule } from '@spryker/web-components';
 
@@ -25,11 +25,11 @@ import { SomeComponentComponent } from './some-component/some-component.componen
 import { SomeComponentModule } from './some-component/some-component.module';
 
 @NgModule({
-  imports: [
-    WebComponentsModule.withComponents([SomeComponentComponent]),
-    SomeComponentModule,
-  ],
-  providers: [],
+    imports: [
+        WebComponentsModule.withComponents([SomeComponentComponent]),
+        SomeComponentModule,
+    ],
+    providers: [],
 })
 export class ComponentsModule {}
 ```
@@ -55,12 +55,11 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'mp-some-component',
-    ....
+    ...,
 })
-export class SomeComponentComponent {
-}
+export class SomeComponentComponent {}
 
-/// After web component registration selector will be look like if we use this component as web inside twig file:
+// After web component registration selector will be look like if we use this component as web inside twig file:
 'web-mp-some-component'
 ```
 
@@ -73,7 +72,7 @@ export class SomeComponentComponent {
 {% endblock %}
 
 {% block content %}
-  <web-some-component></web-some-component>
+    <web-some-component></web-some-component>
 {% block content %}
 
 {% block footerJs %}
@@ -83,6 +82,4 @@ export class SomeComponentComponent {
 {% endblock %}
 {% endraw %}
 ```
-
 {% endinfo_block %}
-

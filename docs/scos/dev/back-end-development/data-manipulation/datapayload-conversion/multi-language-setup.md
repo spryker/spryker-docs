@@ -61,9 +61,9 @@ In Demoshop, for listing the current content of the cart, the following URLs are
 
 | URL | Locale |
 | --- | --- |
-| `http://www.de.demoshop.local/cart` | en_US |
-| `http://www.de.demoshop.local/de/cart` | de_DE |
-| `http://www.de.demoshop.local/en/cart` | en_US |
+| `https://mysprykershop.com/cart` | en_US |
+| `https://mysprykershop.com/de/cart` | de_DE |
+| `https://mysprykershop.com/en/cart` | en_US |
 
 #### Routing the URLs
 For URL routing, when defining the controllers in your controller provider, you must include the allowed locales for the application.

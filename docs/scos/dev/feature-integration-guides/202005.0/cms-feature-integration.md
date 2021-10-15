@@ -1251,7 +1251,7 @@ Make sure that:
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/cms:"^202001.0" --update-with-dependencies
+composer require spryker-feature/cms:"^{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

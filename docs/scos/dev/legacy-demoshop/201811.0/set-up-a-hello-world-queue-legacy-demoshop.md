@@ -32,7 +32,7 @@ The management UI is used for managing queues in the RabbitMQ UI therefore, we n
 
 **To add Admin permissions:**
 
-1. Go to the RabbitMQ management UI: `http://zed.de.demoshop.local:15672/` and log in.
+1. Go to the RabbitMQ management UI: `https://zed.mysprykershop.com:15672/` and log in.
 2. Go to the `Admin` tab and select `admin` from user table under`All users`.
 3. From `Virtual Host` select `/DE_development_zed` (for other stores it might be different).
 4. Click `Set permission`.
@@ -136,7 +136,7 @@ Next, we call the action.
 
 **To call an action:**
 
-1. Open a browser and call the following url `http://www.de.demoshop.local/queue/send`.
+1. Open a browser and call the following url `https://mysprykershop.com/queue/send`.
 2. Check the RabbitMQ management UI `http://zed.de.project.local:15672/#/queues` to see if the hello queue is created and there is a message in there.
 
 ![RabbitMQ creation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Set+up+Hello+World+Queue/rabbitmq_creation.png){height="" width=""}
@@ -181,7 +181,7 @@ Result: you should be able to see this:
 
 ![Receiving messages](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Set+up+Hello+World+Queue/rabbitmq_receive.png){height="" width=""}
 
-Now, open a browser and call the following url `http://www.de.demoshop.local/queue/receive`.
+Now, open a browser and call the following url `https://mysprykershop.com/queue/receive`.
 
 ## Advanced Topics
 Until now we demonstrated working with a simple queue and performing simple send receive actions on it. However, these actions can be automated to help developers focus on business logic. To automate the queue you can use Spryker’s Task and Worker to provide flexibility and freedom when managing queues. This chapter includes three parts. Parts one and two demonstrate Task and Plugin which bind together and in third part we will describe background processes and task management.

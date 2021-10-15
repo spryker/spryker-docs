@@ -95,7 +95,7 @@ On the category detail page, the `catalogSearch($searchString, $parameters)` sho
     }
 ```
 **Example:**
-Making a request on the URL `http://www.de.demoshop.local/en/computers/notebooks` in Demoshop will be routed to the `CatalogController:indexAction` controller action, which is designated for a category detail page.
+Making a request on the URL `https://mysprykershop.com/en/computers/notebooks` in Demoshop will be routed to the `CatalogController:indexAction` controller action, which is designated for a category detail page.
 
 A facet search will be executed using the category facet with the provided category node as a parameter.
 
@@ -142,6 +142,6 @@ The search attributes must be configured in the `CatalogDependencyProvider`.
 
 Having the price attribute added to configuration as an active facet enables us to filter the products on the value of this attribute.
 
-`http://www.de.demoshop.local/en/computers/notebooks?price=0-300` request will perform a search using the category and price facets. It will return the products that are under the notebooks category with the price range between 0 and 300.
+`https://mysprykershop.com/en/computers/notebooks?price=0-300` request will perform a search using the category and price facets. It will return the products that are under the notebooks category with the price range between 0 and 300.
 
-`http://www.de.demoshop.local/search?q=tablet&price=0-300` request will perform a full-text search with the search string tablet and with the facet filter price (price in the range 0-300).
+`https://mysprykershop.com/search?q=tablet&price=0-300` request will perform a full-text search with the search string tablet and with the facet filter price (price in the range 0-300).

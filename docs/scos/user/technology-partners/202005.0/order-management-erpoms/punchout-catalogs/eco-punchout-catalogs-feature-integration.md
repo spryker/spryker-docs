@@ -15,9 +15,9 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Spryker Core | 202001.0 |
-| Company Account | 202001.0 |
-| Cart | 202001.0 |
+| Spryker Core | {{page.version}} |
+| Company Account | {{page.version}} |
+| Cart | {{page.version}} |
 To start feature integration, overview and install the necessary packages:
 
 | Name | Version |

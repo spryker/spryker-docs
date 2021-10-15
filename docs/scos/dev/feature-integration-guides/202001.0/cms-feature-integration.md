@@ -16,13 +16,13 @@ Please overview and install the necessary features before beginning the integrat
 
 | Name | Version |
 | --- | --- |
-| SprykerCore | 202001.0 |
+| SprykerCore | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/cms:"^202001.0" --update-with-dependencies
+composer require spryker-feature/cms:"^{{page.version}}" --update-with-dependencies
 ```
 {% info_block warningBox "Verification" %}
 Make sure that the following modules have been installed:<table><thead><tr><td>Module</td><td>Expected Directory</td></tr></thead><tbody><tr><td>`Cms`</td><td>`vendor/spryker/cms`</td></tr><tr><td>`CmsBlock`</td><td>`vendor/spryker/cms-block`</td></tr><tr><td>`CmsBlockCategoryStorage`</td><td>`vendor/spryker/cms-block-category-storage`</td></tr><tr><td>`CmsBlockGui`</td><td>`vendor/spryker/cms-block-gui`</td></tr><tr><td>`CmsBlockProductStorage`</td><td>`vendor/spryker/cms-block-product-storage`</td></tr><tr><td>`CmsBlockStorage`</td><td>`vendor/spryker/cms-block-storage`</td></tr><tr><td>`CmsContentWidget`</td><td>`vendor/spryker/cms-content-widget`</td></tr><tr><td>`CmsGui`</td><td>`vendor/spryker/cms-gui`</td></tr><tr><td>`CmsPageDataImport`</td><td>`vendor/spryker/cms-page-data-import`</td></tr><tr><td>`CmsPageSearch`</td><td>`vendor/spryker/cms-page-search`</td></tr><tr><td>`CmsSlot`</td><td>`vendor/spryker/cms-slot`</td></tr><tr><td>`CmsSlotBlock`</td><td>`vendor/spryker/cms-slot-block`</td></tr><tr><td>`CmsSlotBlockDataImport`</td><td>`vendor/spryker/cms-slot-block-data-import`</td></tr><tr><td>`CmsSlotBlockExtension`</td><td>`vendor/spryker/cms-slot-block-extension`</td></tr><tr><td>`CmsSlotBlockGui`</td><td>`vendor/spryker/cms-slot-block-gui`</td></tr><tr><td>`CmsSlotBlockGuiExtension`</td><td>`vendor/spryker/cms-slot-block-gui-extension`</td></tr><tr><td>`CmsSlotDataImport`</td><td>`vendor/spryker/cms-slot-data-import`</td></tr><tr><td>`CmsSlotGui`</td><td>`vendor/spryker/cms-slot-gui`</td></tr><tr><td>`CmsSlotStorage`</td><td>`vendor/spryker/cms-slot-storage`</td></tr><tr><td>`CmsStorage`</td><td>`vendor/spryker/cms-storage`</td></tr></tbody></table>
@@ -1254,7 +1254,7 @@ Make sure that:
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/cms:"^202001.0" --update-with-dependencies
+composer require spryker-feature/cms:"^{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

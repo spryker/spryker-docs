@@ -221,7 +221,7 @@ The feature is implemented as an ECO module in partnership with
 
 https://www.punchoutcatalogs.com/
 
-**Documentation**: [Punchout](/docs/scos/user/features/{{site.version}}/technology-partner-integrations/punch-out/punch-out-feature-overview.html)
+**Documentation**: [Punchout](/docs/scos/user/features/201907.0/technology-partner-integrations/punch-out/punch-out-feature-overview.html)
 
 ### Multiple Comments
 The feature has been released as a global widget and can be integrated into any page or entity of your online store. By default, the Comments widget is integrated to the Cart page. This allows you to add multiple comments with tags, so these comments will be linked to the order and appear not only in Zed Order Details page but also in Yves Order Details.

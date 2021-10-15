@@ -116,7 +116,7 @@ To complete the payment modification requests (cancel, capture, refund), it's ne
 
 You can get more information form [Adyen documentation](https://docs.adyen.com/developers).
 
-The link to accept notifications from Adyen looks like http://www.de.your-project.com/adyen/notification.
+The link to accept notifications from Adyen looks like https://mysprykershop.com/adyen/notification.
 
 ## Adyen Configuration
 

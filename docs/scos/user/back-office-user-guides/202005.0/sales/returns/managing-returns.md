@@ -20,6 +20,7 @@ related:
 
 After a [return](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html) has been [created by a Back Office User](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html#creating-returns) or by a [Shop User](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/shop-guide-returns-management/shop-guide-creating-a-return.html), it appears on the *Orders > Returns* page. On this page, you can manage the returns as follows:
 
+
 * View the return details
 * Set the return statuses
 * Print the return slip
@@ -55,6 +56,7 @@ To trigger the return states for all the items in the return, click the states a
 ***
 
 ## Printing a Return Slip
+
 For all returns, irrespective of their statuses, you can print the automatically generated [return slip](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html#return-slip). 
 
 To print the return slip:

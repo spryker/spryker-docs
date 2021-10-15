@@ -16,6 +16,7 @@ related:
     link: /docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html
 ---
 
+
 If you are not satisfied with the order items received from the seller or don’t need the items anymore, and the items are [returnable](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html) according to the Return Policy, you can return them. 
 
 To return items from your order:

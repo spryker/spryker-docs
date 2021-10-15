@@ -19,7 +19,7 @@ Different Product resources allow you to retrieve all the product information av
 In your development, these resources can help you to retrieve relevant information for your product listing and detail pages, for search, shopping cart, checkout, order history, wishlist and many more.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-products-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html).
 
 ## Abstract and Concrete Products
 As Spryker Commerce OS implements product data in a hierarchical structure, this concept is also implemented in the Product API. The API provides separate endpoints for abstract and concrete products. Their names contain the abstract and concrete words, respectively.

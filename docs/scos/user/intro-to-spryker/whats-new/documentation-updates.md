@@ -24,8 +24,8 @@ redirect_from:
 This page lists all the updates to the documentation made for each release.
 Check out our [release notes](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html) to learn more about the releases.
 
-## Release 202001.0
-Below you will find the list of the new/updated documentation released as part of the [202001.0 Spryker product release](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202001.0/release-notes-202001.0.html):
+## Release {{page.version}}
+Below you will find the list of the new/updated documentation released as part of the [{{site.version}} Spryker product release](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html):
 
 ### Features:
 
@@ -83,7 +83,7 @@ Below you will find the list of the new/updated documentation released as part o
 <details open>
 <summary>Integration guide</summary>
 
-[Packaging Units Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-packaging-unit-feature-integration.html)
+[Packaging Units Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/packaging-units-feature-integration.html)
 
 </details>
 
@@ -202,7 +202,7 @@ Below you will find the list of the new/updated documentation released as part o
 <details open>
 <summary>Shop User guide</summary>
 
-[Shop Guide - Approval Process](/docs/scos/user/features/{{site.version}}/approval-process-feature-overview.html-shop-guide)
+[Shop Guide - Approval Process](/docs/scos/user/features/{{site.version}}/approval-process-feature-overview.html)
 
 
 </details>
@@ -299,7 +299,7 @@ Below you will find the list of the new/updated documentation released as part o
 ### Spryker in Docker
 
 * [Queue Worker](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html#queue)
-* [Deploy File Reference](/docs/scos/the-docker-sdk/{{site.version}}/deploy-file-reference-1.0.html)
+* [Deploy File Reference](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file-reference-1.0.html)
 * [Health checks](/docs/scos/dev/technical-enhancements/health-checks.html)
 * [Asset Management](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/asset-management.html)
 <details open>
@@ -343,6 +343,6 @@ Below you will find the list of the new/updated documentation released as part o
 
 #### Other documentation:
 * [Multiple Stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html)
-* [Inventory](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html)
+* [Inventory](/docs/scos/user/features/{{site.version}}/inventory-management-feature-overview.html)
 * [Custom Twig Functions for Yves](/docs/scos/dev/front-end-development/yves/custom-twig-functions-for-yves.html)
 * [Custom Twig Functions for Zed](/docs/scos/dev/front-end-development/zed/custom-twig-functions-for-zed.html)

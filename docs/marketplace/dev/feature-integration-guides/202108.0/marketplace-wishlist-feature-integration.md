@@ -1,6 +1,6 @@
 ---
 title: Marketplace Wishlist feature integration
-last_updated: Jul 05, 2020
+last_updated: Jul 05, 2021
 Description: This document describes the process how to integrate the Marketplace wishlist feature into a Spryker project.
 template: feature-integration-guide-template
 ---
@@ -25,7 +25,7 @@ To start feature integration, integrate the required features:
 
 ### 1) Install the required modules using Composer
 
-1) Install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker-feature/marketplace-wishlist:"{{page.version}}" --update-with-dependencies
@@ -86,6 +86,12 @@ Enable the following behaviors by registering the plugins:
 | WishlistMerchantProductPostMoveToCartCollectionExpanderPlugin | Expands `WishlistMoveToCartRequestCollection` transfer object with not valid merchant products as request items. | None | Spryker\Client\WishlistExtension\Dependency\Plugin |
 | WishlistProductOfferCollectionToRemoveExpanderPlugin | Expands `WishlistItemCollectionTransfer` transfer object with product offer reference. | None | Spryker\Client\WishlistExtension\Dependency\Plugin |
 | WishlistMerchantProductCollectionToRemoveExpanderPlugin | Expands `WishlistItemCollection` transfer object with merchant product wishlist items from the `WishlistMoveToCartRequestCollection` transfer object. | None | Spryker\Client\WishlistExtension\Dependency\Plugin |
+| MerchantProductWishlistItemRequestExpanderPlugin | Expands `WishlistItem` transfer by provided merchant_reference in params. | None | SprykerShop\Yves\MerchantProductWidget\Plugin\WishlistPage |
+| MerchantProductOfferWishlistItemRequestExpanderPlugin | Expands `WishlistItem` transfer by provided `product_offer_reference` in params. | None | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\WishlistPage |
+| MerchantProductWishlistItemMetaFormExpanderPlugin | Expands `WishlistItemMetaFormType` with hidden field for 'merchant_reference'. | None | SprykerShop\Yves\MerchantProductWidget\Plugin\WishlistPage |
+| MerchantProductOfferWishlistItemMetaFormExpanderPlugin | Expands `WishlistItemMetaFormType` with hidden fields for `merchant_reference` and `product_offer_reference`. | None | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\WishlistPage |
+| WishlistMerchantProductPreAddItemPlugin | Expands `WishlistItemMetaFormType` with hidden fields for `merchant_reference` and `product_offer_reference`. | None | Spryker\Zed\MerchantProductWishlist\Communication\Plugin\Wishlist |
+| WishlistProductOfferPreAddItemPlugin | Expands `WishlistItemMetaFormType` with hidden fields for `merchant_reference` and `product_offer_reference`. | None | Spryker\Zed\MerchantProductOfferWishlist\Communication\Plugin\Wishlist |
 
 
 **src/Pyz/Client/Wishlist/WishlistDependencyProvider.php**
@@ -127,10 +133,75 @@ class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
 }
 ```
 
+**src/Pyz/Yves/WishlistPage/WishlistPageDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\WishlistPage;
+
+use SprykerShop\Yves\MerchantProductOfferWidget\Plugin\WishlistPage\MerchantProductOfferWishlistItemMetaFormExpanderPlugin;
+use SprykerShop\Yves\MerchantProductOfferWidget\Plugin\WishlistPage\MerchantProductOfferWishlistItemRequestExpanderPlugin;
+use SprykerShop\Yves\MerchantProductWidget\Plugin\WishlistPage\MerchantProductWishlistItemMetaFormExpanderPlugin;
+use SprykerShop\Yves\MerchantProductWidget\Plugin\WishlistPage\MerchantProductWishlistItemRequestExpanderPlugin;
+use SprykerShop\Yves\WishlistPage\WishlistPageDependencyProvider as SprykerWishlistPageDependencyProvider;
+
+class WishlistPageDependencyProvider extends SprykerWishlistPageDependencyProvider
+{
+    /**
+     * @return \SprykerShop\Yves\WishlistPageExtension\Dependency\Plugin\WishlistItemRequestExpanderPluginInterface[]
+     */
+    protected function getWishlistItemRequestExpanderPlugins(): array
+    {
+        return [
+            new MerchantProductWishlistItemRequestExpanderPlugin(),
+            new MerchantProductOfferWishlistItemRequestExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return \SprykerShop\Yves\WishlistPageExtension\Dependency\Plugin\WishlistItemMetaFormExpanderPluginInterface[]
+     */
+    protected function getWishlistItemMetaFormExpanderPlugins(): array
+    {
+        return [
+            new MerchantProductWishlistItemMetaFormExpanderPlugin(),
+            new MerchantProductOfferWishlistItemMetaFormExpanderPlugin(),
+        ];
+    }
+}
+```
+
+```php
+<?php
+
+namespace Pyz\Zed\Wishlist;
+
+use Spryker\Zed\MerchantProductOfferWishlist\Communication\Plugin\Wishlist\WishlistProductOfferPreAddItemPlugin;
+use Spryker\Zed\MerchantProductWishlist\Communication\Plugin\Wishlist\WishlistMerchantProductPreAddItemPlugin;
+use Spryker\Zed\Wishlist\WishlistDependencyProvider as SprykerWishlistDependencyProvider;
+
+class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
+{
+    /**
+     * @return \Spryker\Zed\WishlistExtension\Dependency\Plugin\WishlistPreAddItemPluginInterface[]
+     */
+    protected function getWishlistPreAddItemPlugins(): array
+    {
+        return [
+            new WishlistMerchantProductPreAddItemPlugin(),
+            new WishlistProductOfferPreAddItemPlugin(),
+        ];
+    }
+}
+```
+
+
 {% info_block warningBox "Verification" %}
 
-Make sure that you can add a product offer to a wishlist and see the product offer data in there.
-Make sure that you can see the merchant information when the merchant product is added to the wishlist.
-Make sure that you can move the wishlist with the product offers to a shopping cart and vice versa.
+- Make sure that you can add a product offer to a wishlist and see the product offer data in there.
+- Make sure that you can see the merchant information when the merchant product is added to the wishlist.
+- Make sure that you can move the wishlist with the product offers to a shopping cart and vice versa.
 
 {% endinfo_block %}
+

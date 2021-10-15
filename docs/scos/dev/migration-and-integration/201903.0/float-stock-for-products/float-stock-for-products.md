@@ -70,7 +70,7 @@ console transfer:generate
 | spryker/price-product-storage | 3.0.0 | [Migration Guide - PriceProductStorage](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-priceproductstorage.html) |
 | spryker/price-product-volume | 2.0.0 | [Migration Guide - PriceProductVolume](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-priceproductvolume.html) |
 | spryker/price-product-volume-gui | 2.0.0 | [Migration Guide - PriceProductVolumeGui](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-priceproductvolumegui.htmlgration-guide-priceproductvolumegui.html) |
-| spryker/product-availabilities-rest-api | 2.0.0 | [Migration Guide - ProductAvailabilitiesRestApi](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-productavailabilitiesrestapi.html) |
+| spryker/product-availabilities-rest-api | 2.0.0 | [Migration Guide - ProductAvailabilitiesRestApi](/docs/scos/dev/module-migration-guides/{{page.version}}/glue-api/migration-guide-productavailabilitiesrestapi.html) |
 | spryker/product-bundle | 5.0.0 | [Migration Guide - ProductBundle](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-productbundle.html) |
 | spryker/product-discount-connector | 4.0.0 | [Migration Guide - ProductDiscountConnector](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-productdiscountconnector.html) |
 | spryker/product-label-discount-connector | 2.0.0 | [Migration Guide - ProductLabelDiscountConnector](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-productlabeldiscountconnector.html) |

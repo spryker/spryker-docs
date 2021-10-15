@@ -13,30 +13,54 @@ Table Column Image is an Angular Component that renders an image.
 Check out an example usage of the Table Column Image in the `@spryker/table` config:
 
 ```html
-<spy-table [config]="{
-    ...,
-    columns: [
-      ...
-      {
-        id: 'columnId',
-        title: 'Column Title',
-        type: 'image',
-        typeOptions: {
-          src: 'image URL',
-        },
-      },
-      ...
-    ]
-  }"
+<spy-table
+    [config]="{
+        ...,
+        columns: [
+            ...,
+            {
+                id: 'columnId',
+                title: 'Column Title',
+                type: 'image',
+                typeOptions: {
+                    src: 'image URL',
+                },
+            },
+            ...,
+        ],
+    }"
 >
 </spy-table>
 ```
 
-## Interfaces
+## Component registration
 
-Below you can find an interface for the Table Column Image type:
+Register the component:
 
 ```ts
+@NgModule({
+    imports: [
+        TableModule.forRoot(),
+        TableModule.withColumnComponents({
+            image: TableColumnImageComponent,
+        }),
+        TableColumnImageModule,
+    ],
+})
+export class RootModule {}
+```
+
+## Interfaces
+
+Below you can find interfaces for the Table Column Image:
+
+```ts
+declare module '@spryker/table' {
+    interface TableColumnTypeRegistry {
+        image: TableColumnImageConfig;
+    }
+}
+
 interface TableColumnImageConfig {
     src?: string;
 }

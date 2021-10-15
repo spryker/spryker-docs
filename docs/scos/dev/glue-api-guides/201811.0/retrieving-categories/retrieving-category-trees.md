@@ -17,7 +17,7 @@ In your development, these resources can help you to:
 * Find out which categories a product belongs to
 
 {% info_block infoBox %}
-For more information on managing the category tree, see [Category Hierarchy](/docs/scos/user/features/{{page.version}}catalog-feature-overview.html).
+For more information on managing the category tree, see [Category Hierarchy](/docs/scos/user/features/{{page.version}}/catalog-feature-overview.html).
 {% endinfo_block %}
 
 ## Installation

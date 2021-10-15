@@ -44,7 +44,7 @@ To retrieve prices of an abstract product, send the request:
 
 ### Response
 <details><summary>Response sample with default abstract product prices</summary>
-   
+
 ```JSON
 {
     "data": [
@@ -85,15 +85,15 @@ To retrieve prices of an abstract product, send the request:
         "self": "http://glue.mysprykershop.com/abstract-products/001/abstract-product-prices"
     }
 }
-``` 
-    
+```
+
 </details>
 
 <details>  
 <summary>
 Response sample with default prices and volume prices for an abstract product
 </summary>
-    
+
 ```JSON    
 {
     "data": [
@@ -141,13 +141,13 @@ Response sample with default prices and volume prices for an abstract product
         "self": "https://glue.mysprykershop.com/abstract-products/093/abstract-product-prices"
     }
 }
-    
+
 ```
-    
+
 </details>
 
 <details><summary>Response sample with a gross price in Swiss Franc for an abstract product</summary>
-    
+
  ```JSON
     {
     "data": [
@@ -189,7 +189,7 @@ Response sample with default prices and volume prices for an abstract product
     }
 }
 ```
-    
+
 </details>
 
 
@@ -214,6 +214,3 @@ Response sample with default prices and volume prices for an abstract product
 | 307 | Abstract product price is not found (for example, because of the wrong abstract product SKU. |
 | 311 | Abstract product SKU is not specified. |
 | 404 | Request URL or type is wrong. |
-
-
-

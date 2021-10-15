@@ -21,6 +21,7 @@ Check out our release notes video for the quick illustration of the new features
 
 
 ## Spryker Commerce OS
+
 ### Return Management
 
 The **Return Management** feature provides multiple ways to return items of an order:
@@ -35,7 +36,7 @@ When creating a return, a Customer can see all the relevant return information s
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image9.png)
 
 #### Documentation
-[Return Management](/docs/scos/user/features/{{site.version}}/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html)
+[Return Management](/docs/scos/user/features/{{site.version}}/return-management-feature-overview/return-management-feature-overview.html)
 
 ### Custom Order Reference
 **Custom Order Reference** is a small but powerful feature that allows Customers and Back Office Users to add an external reference to the orders. It can be a reference to a system that manages internal purchases or a ticket system. This reference can be saved and viewed both on the Storefront and in the Back Office.
@@ -142,7 +143,7 @@ Customer, Agent, and Back Office users can now **cancel orders** during the canc
 Spryker now supports **invoice generation** inside the OMS processes. Starting from this release, the Back Office users can trigger the `invoice-generate` order state, which generates the order invoice and sends it to the Customer’s email address.
 
 #### Documentation
-[Invoice Generation](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/nvoice-generation-overview.html)
+[Invoice Generation](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/invoice-generation-overview.html)
 
 ### Maximum Order Threshold
 The Order Thresholds feature, in addition to the minimum order threshold, now supports the maximum one. The **maximum order threshold** allows to define an order value that shouldn't be reached for the order to be placed.

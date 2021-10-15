@@ -16,7 +16,7 @@ related:
     link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/references/return-details-reference-information.html
 ---
 
-After you have [created a return](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/shop-guide-returns-management/shop-guide-creating-a-return.html) for order or a Shop Owner has done it for you, you can [print the return slip](/docs/scos/user/features/{{page.version}}/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html).
+After you have [created a return](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/shop-guide-returns-management/shop-guide-creating-a-return.html) for order or a Shop Owner has done it for you, you can [print the return slip](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html).
 
 To print the return slip:
 

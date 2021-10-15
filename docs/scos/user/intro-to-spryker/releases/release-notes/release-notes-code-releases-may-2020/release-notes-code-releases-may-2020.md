@@ -75,7 +75,7 @@ We have improved our Front-end component **Product Abstract Card** to fully supp
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes%3A+Code+Releases+May%2C+2020/image8.gif)
 
 #### Documentation
-[Product Groups](https://documentation.spryker.com/2021080/docs/product-groups)
+[Product Groups](/docs/scos/user/features/{{site.version}}/product-groups-feature-overview.html)
 
 ## Spryker Glue API
 In this release, we continue exposing functionality with high-impact on your **B2C and B2B Storefront**.

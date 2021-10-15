@@ -21,7 +21,7 @@ To apply the basic SEO techniques such as improved headings structure and use of
 To start the integration, overview and install the necessary features:
 | Name | Version | Integration guide |
 | --- | --- | --- |
-| Spryker Core | 202009.0 | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}spryker-ore-feature-integration.html) |
+| Spryker Core | 202009.0 | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
 
 ## 1) Update the required SprykerShop modules using Composer
 Run the following command to update the required modules:

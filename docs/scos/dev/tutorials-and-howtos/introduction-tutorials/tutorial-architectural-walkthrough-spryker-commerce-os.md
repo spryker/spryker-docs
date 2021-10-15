@@ -78,7 +78,7 @@ A new module is simply a new folder.
 	    {% raw %}{{{% endraw %} string {% raw %}}}{% endraw %}
     {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
     ```
-4. To see **"Hello Spryker!"**, go to[http://zed.de.suite.local/hello-spryker](http://zed.de.suite.local/hello-spryker).
+4. To see **"Hello Spryker!"**, go to `https://zed.mysprykershop.com/hello-spryker`.
 
 As reversing a string belongs to the business logic, you need to build a Business layer for your module.
 1. Add a folder called **Business** inside the **HelloSpryker** module.
@@ -156,7 +156,7 @@ It's time to hook things together.
     }		
     ```
     To summarize, when accessing a URL in Zed UI the action responds to the requests, then it calls the facade which finally calls the model to perform the needed business logic.
-3. Go to [http://zed.de.suite.local/hello-spryker](http://zed.de.suite.local/hello-spryker) to see **"!rekyrpS olleH"**
+3. Go to https://zed.mysprykershop.com/hello-spryker` to see **"!rekyrpS olleH"**
 
 ### 2. Build the HelloSpryker module in Yves
 
@@ -278,7 +278,7 @@ Transfer objects are a great way to send data from Yves to Zed, and for communic
     ```
 5. Update your model and `IndexController` accordingly.
     {% info_block infoBox "Info" %}
-You should still get **"!rekyrpS olleH"** when accessing [http://zed.de.suite.local/hello-spryker](http://zed.de.suite.local/hello-spryker).
+You should still get **"!rekyrpS olleH"** when accessing `https://zed.mysprykershop.com/hello-spryker`.
 {% endinfo_block %}
 
 ### 4. Build a HelloSpryker Client to connect Yves to Zed
@@ -457,7 +457,7 @@ Let's get everything hooked together:
     }			
     ```
 3. Finally, update the twig template in Yves to use `reversedString`.
-Done! Now go to [http://www.de.suite.local/hello-spryker](http://www.de.suite.local/hello-spryker). You should see: **"!rekyrpS olleH"**.
+Done! Now go to `https://mysprykershop.com/hello-spryker1`. You should see: **"!rekyrpS olleH"**.
 
 ### 5. Make HelloSpryker Module Read from Database
 1. Working with the database means working with the persistence layer in Zed. Go back to Zed and add a new folder inside the **HelloSpryker** module and call it *Persistence*. Inside *Persistence*, add the directories *Propel*/*Schema*.
@@ -582,7 +582,7 @@ To make sure, open the database and check if the table is there.
 	    return $helloSprykerTransfer;
     }							
     ```					
-Now go to [http://zed.de.suite.local/hello-spryker](http://zed.de.suite.local/hello-spryker) to see **"!rekyrpS olleH"**.
+Now go to `https://zed.mysprykershop.com/hello-spryker` to see **"!rekyrpS olleH"**.
 
 ### 6. Bonus: HelloSpryker Module Dependency with StringReverser
 The idea of this bonus task is to handle module dependency using the concept of Dependency Providers.
@@ -646,4 +646,4 @@ You need to build a business later inside *StringReverser* with a facade and a m
 
 6. Use the `StringReverserFacade` to reverse the string instead of using the logic directly inside the **HelloSpryker** module.
 
-Go to [http://zed.de.suite.local/hello-spryker](http://zed.de.suite.local/hello-spryker) and [http://www.de.suite.local/hello-spryker](http://www.de.suite.local/hello-spryker). You should see: **"!rekyrpS olleH"**.
+Go to `https://zed.mysprykershop.com/hello-spryker` and `https://mysprykershop.com/hello-spryker`. You should see: **"!rekyrpS olleH"**.

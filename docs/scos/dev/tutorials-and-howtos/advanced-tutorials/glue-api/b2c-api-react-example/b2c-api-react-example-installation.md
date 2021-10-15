@@ -168,7 +168,7 @@ Sample `local_outside_vm.env` file implementation:
     DEV_SERVER_PORT=3000
     WEB_PORT=3000
     WEB_PATH="/"
-    API_URL="http://glue.de.project-name.local"
+    API_URL="`https://glue.mysprykershop.com`"
     APP_TITLE=Spryker API React Example
     ```
 

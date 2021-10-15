@@ -354,7 +354,7 @@ protected function getRouteProvider($isSsl)
 vendor/bin/console router:cache:warm-up
 ```
 
-That's it! `http://www.de.demoshop.local/hello` now displays a random salutation message.
+That's it! `https://mysprykershop.com/hello` now displays a random salutation message.
 
 ## ZedRequest header
 Since [ZedRequest 3.16.0](https://github.com/spryker/zed-request/releases/tag/3.16.0), you can alter the headers sent with each ZedRequest. You can either use the *default header plugins* or *create your own* by using the `\Spryker\Client\ZedRequestExtension\Dependency\Plugin\HeaderExpanderPluginInterface`.

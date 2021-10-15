@@ -64,7 +64,9 @@ To learn more about order statuses, see [Orders: Reference Information](/docs/sc
 The order statuses you set here do not always have the same wording on the Storefront. For details on how you can display custom names for statuses on the Storefront, see [HowTo - Display Custom Names for Order Item States on the Storefront](/docs/scos/dev/tutorials-and-howtos/202009.0/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html).
 
 ## Creating Returns
-If a sales order item is[ returnable](docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html.html), you can create a return for it. Keep in mind, that you can create returns as for the registered, so also for the guest users. Creating a return from the Back Office is the only way for the *guest users* to return an order.
+
+If a sales order item is[ returnable](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html), you can create a return for it. Keep in mind, that you can create returns as for the registered, so also for the guest users. Creating a return from the Back Office is the only way for the *guest users* to return an order.
+
 
 To create a return:
 

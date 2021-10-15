@@ -26,7 +26,7 @@ Only [active](/docs/scos/user/back-office-user-guides/{{page.version}}/users/rol
 <a name="prerequisites"></a>
 {% info_block warningBox "Prerequisites" %}
 
-To log in with a Back Office user account, you should have the account preliminary created either [by the existing Back Office user](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-users.html#creating-users) or [programmatically by a developer](/docs/scos/user/feature-walkthroughs/{{page.version}}/customer-account-management-feature-walkthrough/user-and-rights-overview.html).
+To log in with a Back Office user account, you should have the account preliminary created either [by the existing Back Office user](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-users.html#creating-users) or [programmatically by a developer](/docs/scos/dev/feature-walkthroughs/{{page.version}}/customer-account-management-feature-walkthrough/user-and-rights-overview.html).
 
 {% endinfo_block %}
 

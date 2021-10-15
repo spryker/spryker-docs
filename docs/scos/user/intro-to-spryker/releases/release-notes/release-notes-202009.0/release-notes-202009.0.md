@@ -81,7 +81,7 @@ We have improved our Front-end component **Product Abstract Card** to fully supp
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image16.gif)
 
 #### Documentation
-[Product Group](https://documentation.spryker.com/2021080/docs/product-groups)
+[Product Group](/docs/scos/user/features/{{site.version}}/product-groups-feature-overview.html)
 
 ### Navigation as Content Item
 Our **Navigation** feature joins the Content Management capability. You can now define navigation as a content item and use it anywhere inside your Storefront. Simply add the navigation content item to a CMS Block or Page.

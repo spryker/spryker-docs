@@ -93,11 +93,11 @@ If you have started with the Spryker features, you should see something like thi
 "ext-readline": "*",
 "ext-redis": "*",
 "spryker-eco/loggly": "^0.1.0",
-"spryker-feature/agent-assist": "^202001.0",
-"spryker-feature/alternative-products": "^202001.0",
-"spryker-feature/approval-process": "^202001.0",
-"spryker-feature/availability-notification": "^202001.0",
-"spryker-feature/cart": "^202001.0",
+"spryker-feature/agent-assist": "^{{page.version}}",
+"spryker-feature/alternative-products": "^{{page.version}}",
+"spryker-feature/approval-process": "^{{page.version}}",
+"spryker-feature/availability-notification": "^{{page.version}}",
+"spryker-feature/cart": "^{{page.version}}",
 ....
 ```
 Every Spryker feature is nothing more than a standalone module with a *composer.json* file that contains a list of individual Spryker modules as dependencies. A feature contains no functional code; the entire code is kept in modules.
@@ -193,7 +193,7 @@ php -d memory_limit=-1 composer.phar require "spryker/sales:^8.0.0"
 ```
 If no extra dependencies are found, *composer.json* will be updated, respectively. Otherwise, see the [Troubleshooting](#troubleshooting) section at the end of the article, *In case when update is not possible* part.
 
-2. [Check the migration guide](/docs/scos/dev/module-migration-guides/{{page.version}}/about-migration-guides.html) for the respective major module version. See the [Sales](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-sales.html) migration guide for example. Find the section for your module version and complete all the steps it contains.
+2. [Check the migration guide](/docs/scos/dev/module-migration-guides/{{site.version}}/about-migration-guides.html) for the respective major module version. See the [Sales](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-sales.html) migration guide for example. Find the section for your module version and complete all the steps it contains.
 3.  Check for project changes, just like for the *minor* updates in the section above. Go to  `https://github.com/[module-name-here]/compare/[your-version]…[available-version]` and check if there are any changes that might conflict with your business logic.
 
 ## Test after each iteration
@@ -220,9 +220,9 @@ The goal of the automoted tests in case of updates is not to have a 100% code co
 ### 2. Run code analysis tools
 We find the following static code analysis tools the most helpful for running after the update and strongly recommend that you use them:
 
-* [PhpStan](https://github.com/phpstan/phpstan):  helps you find incompatible interface signatures, undefined method calls, missing classes, use of deprecated methods (phpstan-deprecation-rules) and many more. See [PHPStan](/docs/scos/dev/sdk/{{page.version}}/development-tools/phpstan.html) for information on how to install and use the tool.
-* [PHP Code Sniffer](https://github.com/squizlabs/PHP_CodeSniffer): keeps the project code clean  and consistent after the update. See [Code Sniffer](/docs/scos/dev/sdk/{{page.version}}/development-tools/code-sniffer.html) for information on how to use the tool.
-* [Architecture Sniffer](https://github.com/spryker/architecture-sniffer): helps you maintain the quality of the architecture. See [Architecture Sniffer](/docs/scos/dev/sdk/{{page.version}}/development-tools/architecture-sniffer.html) for information on how to run the tool.
+* [PhpStan](https://github.com/phpstan/phpstan):  helps you find incompatible interface signatures, undefined method calls, missing classes, use of deprecated methods (phpstan-deprecation-rules) and many more. See [PHPStan](/docs/scos/dev/sdk/{{site.version}}/development-tools/phpstan.html) for information on how to install and use the tool.
+* [PHP Code Sniffer](https://github.com/squizlabs/PHP_CodeSniffer): keeps the project code clean  and consistent after the update. See [Code Sniffer](/docs/scos/dev/sdk/{{site.version}}/development-tools/code-sniffer.html) for information on how to use the tool.
+* [Architecture Sniffer](https://github.com/spryker/architecture-sniffer): helps you maintain the quality of the architecture. See [Architecture Sniffer](/docs/scos/dev/sdk/{{site.version}}/development-tools/architecture-sniffer.html) for information on how to run the tool.
 
 ### 3. Make other possible checks
 In addition to the automotive tests and code analysis tools, you can optionally do the following:
@@ -259,11 +259,11 @@ At some point, you will need to add new or update the existing features for your
 {% info_block infoBox "Info" %}
 
 You can learn about a new Spryker feature from the [Release Notes](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html). We recommend [subscribing to our release mail](/docs/scos/user/intro-to-spryker/releases/releases.html) in order not to miss a new release announcement.
-A complete list of all Spryker features can be found in the [Features](/docs/scos/user/features/{{site.version}}/overview-of-the-feature-guides.html) section. This section contains general descriptions of the features and links to their [Integration Guides](/docs/scos/dev/feature-integration-guides/{{page.version}}/about-integration-guides.html) that you will use to install or update the features.  
+A complete list of all Spryker features can be found in the [Features](/docs/scos/user/features/{{site.version}}/overview-of-the-feature-guides.html) section. This section contains general descriptions of the features and links to their [Integration Guides](/docs/scos/dev/feature-integration-guides/{{site.version}}/about-integration-guides.html) that you will use to install or update the features.  
 
 {% endinfo_block %}
 
-To install a new feature or update an existing one, follow the instructions of the [Integration Guide](/docs/scos/dev/feature-integration-guides/{{page.version}}/about-integration-guides.html) for the feature you want to install/update.
+To install a new feature or update an existing one, follow the instructions of the [Integration Guide](/docs/scos/dev/feature-integration-guides/{{site.version}}/about-integration-guides.html) for the feature you want to install/update.
 
 {% info_block warningBox "Warning" %}
 
@@ -350,7 +350,7 @@ Please let us know in case if anything goes wrong with your update. Feel free to
 
 * You found an issue in the code while reviewing the diff in a Spryker repo.
 * After running autotests / testing the website you found an issue that broke the website. If this is not a project-related conflict and other projects can potentially be affected, please report the issue as soon as you can.
-* There are missing steps in a [migration guide](/docs/scos/dev/module-migration-guides/{{page.version}}/about-migration-guides.html) in our documentation.
+* There are missing steps in a [migration guide](/docs/scos/dev/module-migration-guides/{{site.version}}/about-migration-guides.html) in our documentation.
 
 Reach us out at:
 

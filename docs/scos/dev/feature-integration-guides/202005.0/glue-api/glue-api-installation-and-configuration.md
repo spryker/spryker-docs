@@ -296,7 +296,7 @@ add the following line to the end of the file:
 ```
 ip glue.de.project-name.local
 ```
-After performing this change, you should be able to access [http://glue.de.project-name.local/ URL](http://glue.de.project-name.local/) with a 404 error and JSON response indicating that resource is not found.
+After performing this change, you should be able to access `https://glue.mysprykershop.com` with a 404 error and JSON response indicating that resource is not found.
 
 If you are running your project in the Spryker VM, you also need to make changes to the Vagrant file of the virtual machine. To do so:
 

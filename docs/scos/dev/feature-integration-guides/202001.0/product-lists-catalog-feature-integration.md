@@ -18,9 +18,9 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version  |
 | --- | --- |
-| Product Lists | 202001.0 |
-| Catalog | 202001.0 |
-| Customer | 202001.0 |
+| Product Lists | {{page.version}} |
+| Catalog | {{page.version}} |
+| Customer | {{page.version}} |
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
 ```

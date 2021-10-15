@@ -35,7 +35,7 @@ WSL1 is outdated, so we highly recommend [installing and configuring the require
 
 Install Docker Desktop:
 
-1. Download <a href="https://download.docker.com/win/stable/Docker for Windows Installer.exe">Docker Desktop for Windows</a>.
+1. Download [Docker Desktop for Windows](https://download.docker.com/win/static/stable/x86_64/).
 
 2. Open the installation file and follow the instructions of the wizard.
 
@@ -66,10 +66,10 @@ To enable WSL1:
 
 1. Open **Windows Control Panel** > **Programs** > **Programs and Features**.
 2. Select the **Turn Windows features on or off**  hyperlink.
-![step 2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Docker+Install+Prerequisites+-+Windows/w-features-on-off.png) 
+![step 2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Docker+Install+Prerequisites+-+Windows/w-features-on-off.png)
 
 3. Select **Windows Subsystem for Linux** and select **OK**.
-![step 3](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Docker+Install+Prerequisites+-+Windows/windows-subsystem.png) 
+![step 3](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Docker+Install+Prerequisites+-+Windows/windows-subsystem.png)
 
 ### Install and update Ubuntu
 
@@ -78,7 +78,7 @@ Install Ubuntu:
 1. Open Microsoft Store.
 2. In the Search filed, enter *Ubuntu* and press *Enter*.
 3. From the search results page, select **Ubuntu 18.04 LTS** and install it.
-![Ubuntu step 3](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Docker+Install+Prerequisites+-+Windows/ubuntu-in-store.png) 
+![Ubuntu step 3](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Docker+Install+Prerequisites+-+Windows/ubuntu-in-store.png)
 
 Update Ubuntu:
 

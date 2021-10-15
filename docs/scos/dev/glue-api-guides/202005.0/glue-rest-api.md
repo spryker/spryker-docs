@@ -32,7 +32,7 @@ In order to help you understand possible use cases, we offer you a sample app av
 What is more, it delivers a full customer experience from browsing the catalog to placing an order. The application allows you to understand, how the existing APIs can be leveraged to create a B2C user experience. As an example, the full power of Elasticsearch, which is already present in our other demo shops (B2C and B2B), is leveraged via dedicated endpoints to deliver catalog search functionality with auto-completion, auto-suggestion, facets, sorting, and pagination.
 
 {% info_block infoBox %}
-[Install and run!](/docs/scos/dev/tutorials/202005.0/advanced/glue-api/b2c-api-react-example/b2c-api-react-example.html
+[Install and run!](/docs/scos/dev/tutorials/{{page.version}}/advanced/glue-api/b2c-api-react-example/b2c-api-react-example.html
 {% endinfo_block %})
 
 ### What can I use the REST API for?

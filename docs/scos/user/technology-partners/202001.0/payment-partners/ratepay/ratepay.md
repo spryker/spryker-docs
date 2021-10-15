@@ -50,10 +50,10 @@ RatePAY bears the full risk and takes over the complete processing.
 
 <b>RatePAY provides four methods of payment</b>:
 
-* [Invoice](/docs/scos/user/technology-partners/202001.0/payment-partners/ratepay/ratepay-invoice.html)
-* [Prepayment](/docs/scos/user/technology-partners/202001.0/payment-partners/ratepay/ratepay-prepayment.html)
-* [Direct Debit (ELV)](/docs/scos/user/technology-partners/202001.0/payment-partners/ratepay/ratepay-direct-debit.html)
-* [Installment](/docs/scos/user/technology-partners/202001.0/payment-partners/ratepay/ratepay-installment.html)
+* [Invoice](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/ratepay/ratepay-invoice.html)
+* [Prepayment](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/ratepay/ratepay-prepayment.html)
+* [Direct Debit (ELV)](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/ratepay/ratepay-direct-debit.html)
+* [Installment](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/ratepay/ratepay-installment.html)
 
 We use state machines for handling and managing orders and payments. To integrate RatePAY payments, a state machine for RatePAY should be created.
 

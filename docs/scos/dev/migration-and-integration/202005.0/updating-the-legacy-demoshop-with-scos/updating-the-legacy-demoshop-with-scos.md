@@ -15,8 +15,8 @@ With last releases we introduced 3 new concepts: Modular Frontend (Yves), Atomic
 
 * [Make the Legacy Demoshop compatible with the Modular Frontend](/docs/scos/dev/migration-and-integration/{{page.version}}/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-modular-frontend.html)
 * [Make the Legacy Demoshop compatible with the Atomic Frontend](/docs/scos/dev/migration-and-integration/{{page.version}}/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-atomic-frontend.html)
-* [Set up ShopUiCompatibility module](/docs/scos/dev/migration-and-integration/{{page.version}}/updating-the-legacy-demoshop-with-scos/setting-up-shopuicompatibility-module-in-the-legacy-demoshop.html), which is the key module of the Atomic Frontend
-* [Configure the Legacy Demoshop to use SCOS Twig templates](/docs/scos/dev/migration-and-integration/{{page.version}}/updating-the-legacy-demoshop-with-scos/twig-compatibility-legacy-demoshop-vs-scos.html), or
-* [Make the Legacy Demoshop compatible with Publish &amp; Syncrhonize](/docs/scos/dev/migration-and-integration/{{page.version}}/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-publish-and-synchronize.html).
+* [Set up ShopUiCompatibility module](/docs/scos/dev/migration-and-integration/{{page.version}}/updating-the-legacy-demoshop-with-scos/setting-up-shopuicompatibility-module-in-the-legacy-demoshop.html), which is the key module of the Atomic Frontend.
+* [Configure the Legacy Demoshop to use SCOS Twig templates](/docs/scos/dev/migration-and-integration/202005.0/updating-the-legacy-demoshop-with-scos/twig-compatibility-legacy-demoshop-vs-scos.html), or
+* [Make the Legacy Demoshop compatible with Publish &amp; Syncrhonize](/docs/scos/dev/migration-and-integration/202005.0/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-publish-and-synchronize.html).
 
-Not found a guide you are looking for? Let us know about it by [creating an issue on Github](https://github.com/spryker/spryker-documentation/issues/new) or dropping an email to [academy@spryker.com](mailto:academy@spryker.com).
+Not found a guide you are looking for? Let us know about it by [creating an issue on Github](https://github.com/spryker/spryker-docs/issues/new) or dropping an email to [academy@spryker.com](mailto:academy@spryker.com).

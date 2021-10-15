@@ -46,7 +46,7 @@ Create the following content items:
 
 See [Creating Content Items](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html) for more details.
 
-If the content item types shipped by default are not sufficient for your project needs, new ones can be created by a developer. See [HowTo - Create a Content Item](/docs/scos/dev/tutorials/202005.0/howtos/feature-howtos/cms/howto-create-a-content-item.html) for more details.
+If the content item types shipped by default are not sufficient for your project needs, new ones can be created by a developer. See [HowTo - Create a Content Item](/docs/scos/dev/tutorials/{{page.version}}/howtos/feature-howtos/cms/howto-create-a-content-item.html) for more details.
 
 ## Create CMS Blocks
 
@@ -100,7 +100,7 @@ Follow the steps to select a template with slots:
 2. In the **List of Templates**, select the *Product* template with slots.
     This template with slots is assigned to all the product pages. By selecting it, you select to work with all the product pages at once.
 
-If the templates with slots shipped by default are not sufficient for your project needs, new ones can be created by a developer. See [Template with Slots](/docs/scos/dev/tutorials/202005.0/howtos/feature-howtos/cms/howto-create-cms-templates.html#template-with-slots) for more details.
+If the templates with slots shipped by default are not sufficient for your project needs, new ones can be created by a developer. See [Template with Slots](/docs/scos/dev/tutorials/{{page.version}}/howtos/feature-howtos/cms/howto-create-cms-templates.html#template-with-slots) for more details.
 
 ## Select a Slot
 

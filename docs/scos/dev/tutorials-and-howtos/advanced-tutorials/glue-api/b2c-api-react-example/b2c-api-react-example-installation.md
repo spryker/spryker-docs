@@ -73,6 +73,7 @@ Sample local_inside_vm.env file implementation for a VM running B2C Demo Shop:
 9. Open the Nginx configuration file for the Glue vhost:
 `sudo nano /etc/nginx/sites-available/DE_development_glue`
 10. Add a new **location** block as follows:
+    
     ```
     location /react/ {
         proxy_pass `http://glue.de.b2c-demo-shop.local`:3000;
@@ -80,8 +81,10 @@ Sample local_inside_vm.env file implementation for a VM running B2C Demo Shop:
         proxy_set_header X-Real-IP $remote_addr;
     }
     ```
+
     where `proxy_pass` specifies the host and port where the B2C API React Example will run. The value must match the values of `DEV_SERVER_HOST` and `DEV_SERVER_PORT` of the `local_inside_vm.env` file you edited on step **7**.
-**`Sample vhost implementation for a VM running B2C Demo Shop`**
+**Sample vhost implementation for a VM running B2C Demo Shop**
+    
     ```php
     server {
         # Listener for production/staging - requires external LoadBalancer directi$
@@ -107,22 +110,28 @@ Sample local_inside_vm.env file implementation for a VM running B2C Demo Shop:
         }
     }
     ```
+
     When done, save the changes and close the file.
 
-11. Restart the nginx service:
-`sudo /etc/init.d/nginx restart`
+11.  Restart the nginx service:
 
+```
+sudo /etc/init.d/nginx restart`
+```
 
 12. Build and run the application:
-    ```
-    npm i
-    npm run dist
-    npm run serve:vm
-    ```
+    
+```
+npm i
+npm run dist
+npm run serve:vm
+```
 
-13. Check that the example application is available at the following URL: ``http://glue.de.b2c-demo-shop.local`/react/`, where `glue.de.b2c-demo-shop.local` is the host name you specified in the `local_inside_vm.env` file.
+13. Check that the example application is available at the following URL: `http://glue.de.b2c-demo-shop.local/react/`, where `glue.de.b2c-demo-shop.local` is the host name you specified in the `local_inside_vm.env` file.
 14. To stop the app, press Ctrl+C. To start it again, run:
-`npm run serve:vm`
+```
+npm run serve:vm
+```
 
 ## Installation on a Dedicated Server
 To perform the app installation on a dedicated web server:
@@ -136,20 +145,23 @@ To perform the app installation on a dedicated web server:
 ```
 <Glue_IP> glue.de.project-name.local
 127.0.0.1 react.local
-```
-where:
+    ```
 
-* **<Glue_IP>** - the IP of the Glue REST API server;
-* **glue.de.project-name.local** - the local hostname of the Glue REST API server;
-* **react.local** - the local hostname of the B2C API React Example application.
+    where:
 
-4. Clone the B2C API React Example repository:
+   * **<Glue_IP>** - the IP of the Glue REST API server;
+   * **glue.de.project-name.local** - the local hostname of the Glue REST API server;
+   * **react.local** - the local hostname of the B2C API React Example application.
+
+1. Clone the B2C API React Example repository:
+
 ```
 git clone https://github.com/spryker-shop/b2c-api-react-example .
 ```
 5. Open the `local_outside_vm.env` file for editing.
 6. Change the `DEV_SERVER_HOST` variable to point to the example app hostname, for example, `react.local`, and the `API_URL` variable to point to the local hostname of the Glue REST API server. Also, you can change the example app page title. It is specified via the `APP_TITLE` variable.
 Sample `local_outside_vm.env` file implementation:
+    
     ```
     NODE_ENV=development
     DEV_SERVER_HOST=localhost
@@ -159,15 +171,24 @@ Sample `local_outside_vm.env` file implementation:
     API_URL="`https://glue.mysprykershop.com`"
     APP_TITLE=Spryker API React Example
     ```
+
     When done, save the changes and close the file.
+
 7. Install npm cpy globally:
-`npm install --global cpy-cli`
+
+```
+npm install --global cpy-cli
+```
 8. Build and run the application:
-    ```
-    npm i
-    npm run dist
-    npm run serve:local
-    ```
-9. Check that the example application is available at the following URL: `http://react.local.`
+
+```
+npm i
+npm run dist
+npm run serve:local
+```
+9. Check that the example application is available at the following URL: `http://react.local`
 10. To stop the app, press Ctrl+C. To start it again, run:
-`npm run serve:local`
+
+```
+npm run serve:local
+```

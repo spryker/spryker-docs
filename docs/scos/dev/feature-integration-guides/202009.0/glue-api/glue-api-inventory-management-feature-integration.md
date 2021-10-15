@@ -18,7 +18,7 @@ To start feature integration, overview and install the necessary features:
 | Name | Version | Integration guide |
 | --- | --- | --- |
 | Spryker Core| 201907.0| [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html)| 
-| Product | 201907.0 | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-products-feature-integration.html) | 
+| Product | 201907.0 | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) | 
 |Inventory Management| 201907.0| |
 
   

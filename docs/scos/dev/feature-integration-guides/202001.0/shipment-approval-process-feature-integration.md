@@ -22,8 +22,8 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Shipment | 202001.0 |
-| Approval Process | 202001.0 |
+| Shipment | {{page.version}} |
+| Approval Process | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
@@ -148,7 +148,7 @@ To start feature integration, overview and install the necessary features:
 
 |Name|Version |
 | --- | --- |
-| `CheckoutPage` | 202001.0 |
+| `CheckoutPage` | {{page.version}} |
 
 ### 1) Set up Behavior
 

@@ -19,7 +19,7 @@ related:
 ---
 
 {% info_block infoBox "Info" %}
-Check [this article](/docs/scos/user/about-spryker/202001.0/about-spryker.html#spryker-b2b-b2c-demo-shops
+Check [this article](/docs/scos/user/about-spryker/{{page.version}}/about-spryker.html#spryker-b2b-b2c-demo-shops
 {% endinfo_block %} to learn about Spryker Commerce OS (SCOS).)
 
 ## Include Econda Libraries and Scripts for Tracking and Cross-sell

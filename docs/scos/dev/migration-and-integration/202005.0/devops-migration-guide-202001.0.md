@@ -1,5 +1,5 @@
 ---
-title: DevOps Migration Guide 202001.0
+title: DevOps Migration Guide {{page.version}}
 description: All the DevOps details you need to know to keep your project up to date with the latest release.
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/devops-migration-guide
@@ -11,7 +11,7 @@ redirect_from:
 
 This document covers all the maintenance related details that a DevOps engineer would want to know to keep a Spryker project up to date with the latest release changes.
 
-The 202001.0 release introduces the following updates:
+The {{page.version}} release introduces the following updates:
 
 *     Elasticsearch version
 *     PHP version 

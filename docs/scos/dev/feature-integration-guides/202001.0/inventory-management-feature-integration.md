@@ -22,13 +22,13 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Inventory Management | 202001.0 |
+| Inventory Management | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command to install the required module:
 
 ```bash
-composer require spryker-feature/inventory-management: "^202001.0" --update-with-dependencies
+composer require spryker-feature/inventory-management: "^{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

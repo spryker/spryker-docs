@@ -111,7 +111,7 @@ The checkout process is paramount for your business in any business model. With 
 To enable the maximum level of security for your system, you must be able to invalidate refresh tokens in the presence of potential menaces. With this API **refresh tokens are made persistent long-term and you will be able to revoke them at any time for each user**. You can also configure the amount of time for persistence and clean the refresh tokens up from the database when necessary.
 
 #### Documentation
-[Token Revocation](/docs/scos/dev/glue-api-guides/202005.0/managing-customers/authenticating-as-a-customer.html#token-revocation)
+[Token Revocation](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html#token-revocation)
 
 ### Swagger Documentation Generator Contains “Includes” by Endpoint
 In order to make it easier for API consumers to understand the content of those endpoints following the compound documents section of the JSONAPI specification, in this release, we have introduced improvements that will allow you to have upfront information by endpoint about the **primary resources that can be included in the response**. This can be useful not only for a basic understanding of the endpoints but also for automation purposes.

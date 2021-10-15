@@ -374,7 +374,7 @@ protected function createCatalogSearchQueryExpanderPlugins(): array
 }
 ```
 
-Done! Now go to the *Cameras* catalog page in your shop http://www.de.suite.local/en/cameras-&amp;-camcorders/digital-cameras and do the following:
+Done! Now go to the *Cameras* catalog page in your shop `https://mysprykershop.com/en/cameras-&amp;-camcorders/digital-cameras` and do the following:
 1. Add a red camera to cart.
 2. Go back to the same catalog page.
 

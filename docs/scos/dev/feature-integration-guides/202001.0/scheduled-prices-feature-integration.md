@@ -18,16 +18,16 @@ To start feature integration, review and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Spryker Core | 202001.0 |
-| Product | 202001.0 |
-| Price | 202001.0 |
+| Spryker Core | {{page.version}} |
+| Product | {{page.version}} |
+| Price | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command to install the required modules:
 
 ```bash
-composer require spryker-feature/scheduled-prices:"^202001.0" --update-with-dependencies
+composer require spryker-feature/scheduled-prices:"^{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

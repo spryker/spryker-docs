@@ -15,11 +15,11 @@ To start feature integration, overview, and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Spryker Core	 | 202001.0 |
-| Company Account	 | 202001.0 |
-| Cart | 202001.0 |
-| Product | 202001.0 |
-| Vault | 202001.0 |
+| Spryker Core	 | {{page.version}} |
+| Company Account	 | {{page.version}} |
+| Cart | {{page.version}} |
+| Product | {{page.version}} |
+| Vault | {{page.version}} |
 
 ### 1) Install the Required Modules Using Composer
 Run the following command(s) to install the required modules:

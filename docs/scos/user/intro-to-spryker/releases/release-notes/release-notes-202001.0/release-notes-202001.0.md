@@ -1,5 +1,5 @@
 ---
-title: Release Notes 202001.0
+title: Release Notes {{page.version}}
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes-2020010
 originalArticleId: 8e561ae0-5d15-45d1-934d-94a7c36d4be8
@@ -15,7 +15,7 @@ redirect_from:
   - /v6/docs/release-notes-2020010
   - /v6/docs/en/release-notes-2020010
 related:
-  - title: DevOps Migration Guide 202001.0
+  - title: DevOps Migration Guide {{page.version}}
     link: docs/scos/dev/migration-and-integration/page.version/devops-migration-guide-page.version.html
 ---
 
@@ -29,7 +29,7 @@ For information about installing the Spryker Commerce OS see [Getting Started Gu
 Spryker now supports **splitting of orders** across multiple delivery addresses during the checkout process.
 Starting from this release, besides delivering an order to one address, a customer can choose delivery to multiple addresses as well.
 A back-office user can also **split an order** into multiple shipments or modify shipment data on the order details page.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image12.png)
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+{{page.version}}/image12.png)
 
 #### Compatibility Issues
 **Split delivery** is not compatible with the following features:
@@ -46,7 +46,7 @@ Spryker now supports product stock definition as **decimal** instead of integer.
 * 0.0123456789
 * 415.51
 * 1000
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image3.png)
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+{{page.version}}/image3.png)
 
 #### Documentation
 [Packaging Units](/docs/scos/user/features/{{site.version}}/packaging-units-feature-overview.html)
@@ -54,16 +54,16 @@ Spryker now supports product stock definition as **decimal** instead of integer.
 ### Improved Packaging Unit
 You can set a **decimal amount** for your packages, which allows you to sell products in flexible quantities.
 The requirement is to share your package stock with another concrete product. In the previous implementation of **Packaging Units**, it was required to add the *Lead Concrete Product* that was holding the stock for all other concrete products. With the new release creating the *Lead Concrete Product* is optional.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image5.png)
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+{{page.version}}/image5.png)
 
 #### Documentation
 [Packaging Units](/docs/scos/user/features/{{site.version}}/packaging-units-feature-overview.html)
 
 ### Improved Scheduled Prices
 The **Scheduled Price** feature allows you to define a price for your products that will take effect in the future. Create a scheduled price manually in the Back Office or import them in bulk via CSV files. Starting from this release, you can manage your previously imported **Scheduled Prices** directly in the Back Office.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image1.png)
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+{{page.version}}/image1.png)
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image8.png)
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+{{page.version}}/image8.png)
 
 #### Documentation
 
@@ -80,13 +80,13 @@ Spryker increases the number of features that you can manage per store.
 * Fourth, you can now set which Delivery Methods are available to your customers in the checkout process for a given store.
 * Fifth, you can perform all those actions in the Back Office.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image7.png)
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+{{page.version}}/image7.png)
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image9.png)
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+{{page.version}}/image9.png)
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image2.png)
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+{{page.version}}/image2.png)
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image6.png)
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+{{page.version}}/image6.png)
 
 #### Documentation
 
@@ -106,7 +106,7 @@ Out-of-the-box, the B2C and the B2B Demos Shops now come with the following Temp
 Another significant advantage of the **Templates with Slots** feature is that it offers a better integration pattern of a Technology Partner CMS within Spryker. A partner-specific Slot Widget fetches and renders content created in the Technology Partner CMS editor.
 Moreover, a project can mix both e-commerce content created in Spryker, and rich media content created in a 3rd party CMS.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image11.png)
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+{{page.version}}/image11.png)
 
 #### Documentation
 [Templates and Slots](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html)
@@ -114,7 +114,7 @@ Moreover, a project can mix both e-commerce content created in Spryker, and rich
 ## B2B
 ### Adding Shipment Cost for the Approval Process
 In the **Approval Process**, previously, it was not possible to add shipment cost before submitting an order for approval. This has been solved by moving the Approval action to the Summary page of the checkout and adding shipment cost for it.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image4.png)
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+{{page.version}}/image4.png)
 
 
 #### Documentation
@@ -123,7 +123,7 @@ In the **Approval Process**, previously, it was not possible to add shipment cos
 ### Configurable Bundle
 Configurable Bundle provides a guiding tool to simplify the purchasing of complex product combinations and brings a smooth shopping experience. It allows companies to sell online complex combinations of products that would otherwise require a physical presence in the store.
 Configurable bundles are compatible with both B2B & B2C stores but at this point have been only integrated into the B2B Demo Shop.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image10.png)
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+{{page.version}}/image10.png)
 
 #### Documentation
 [Configurable Bundle](/docs/scos/user/features/{{site.version}}/configurable-bundle-feature-overview.html)

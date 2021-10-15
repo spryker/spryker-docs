@@ -22,13 +22,13 @@ To start the feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Spryker Core | 202001.0 |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require "spryker-feature/payments:^202001.0" "spryker/checkout-rest-api:^3.0.0" --update-with-dependencies
+composer require "spryker-feature/payments:^{{page.version}}" "spryker/checkout-rest-api:^3.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

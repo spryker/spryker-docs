@@ -62,7 +62,7 @@ EOF
             else
                 sidebar_string += <<-EOF
 <li#{' class="active-page-item"' if sidebar_item_url == @page_url}>
-    <a title="#{sidebar_item_title}" href="#{sidebar_item_url}" class="sidebar-nav__link#{' sidebar-nav__link--shifted' unless sidebar_item_url.nil? || sub_items.nil? }">#{sidebar_item_title}</a>
+    <a title="#{sidebar_item_title.gsub! '"', '' }" href="#{sidebar_item_url}" class="sidebar-nav__link#{' sidebar-nav__link--shifted' unless sidebar_item_url.nil? || sub_items.nil? }">#{sidebar_item_title}</a>
 EOF
                 unless sidebar_item_url.nil? || sub_items.nil?
                     sidebar_string += <<-EOF

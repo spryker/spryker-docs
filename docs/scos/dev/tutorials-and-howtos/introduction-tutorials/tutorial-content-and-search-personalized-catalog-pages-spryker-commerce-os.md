@@ -72,7 +72,7 @@ Inside this folder, add a twig file called _my-offers.twig_.
 Use any title and description you like to add.
 
 4. Save the page, and publish it.
-Now, we need to test the CMS page. Go to the **My Offers** page in your shop: [http://www.de.suite.local/my-offers](http://www.de.suite.local/my-offers).
+Now, we need to test the CMS page. Go to the **My Offers** page in your shop: `https://mysprykershop.com/my-offers.`
 
 That is it! It is very simple to add a CMS page and publish it.
 Next, let's get the personalized products and add them to the page.
@@ -483,7 +483,7 @@ The method takes a path for the route name as a parameter. What it does is that 
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```		
 
-Done! To check the results, go to [http://www.de.suite.local/my-offers](http://www.de.suite.local/my-offers).
+Done! To check the results, go to `https://mysprykershop.com/my-offers`.
 
 Remove the Spryker cookie and refresh again to see different personalized products.
 

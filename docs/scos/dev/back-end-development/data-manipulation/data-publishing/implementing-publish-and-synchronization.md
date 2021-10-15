@@ -380,7 +380,7 @@ To debug Publish and Synchronize:
    console setup:jenkins:disable
    ```
 
-2. Trigger your event. Now, you should be able to see the messages in the **event** queue of RabbitMQ management UI. To open it, use the following URL: <http://zed.de.suite.local:15672/#/queues>.
+2. Trigger your event. Now, you should be able to see the messages in the **event** queue of RabbitMQ management UI. To open it, use the following URL: <https://mysprykershop.com:15672/#/queues>.
 
 3. Set a breakpoint inside a listener mapped to the event and enable the PhpStorm debugging mode.
 

@@ -59,7 +59,7 @@ class IndexController extends SprykerIndexController
 }
 ```
 
-3. Check the [Backend Office](http://zed.de.suite.local/) to see the new message for the DE store.
+3. Check the Backend Office (`https://zed.mysprykershop.com/`) to see the new message for the DE store.
 
 ## Add the New DEMO Store
 The next thing to do is to add a new store and a new home page for it.
@@ -111,6 +111,6 @@ class IndexController extends AbstractController
 7. Restart _Nginx_ by running `sudo /etc/init.d/nginx restart`.
 8. Finally, run `console data:import:store`. This command will create a store record in our `spy_store database` table.
 
-Check the [Backend Office](http://zed.de.suite.local/) again to see the new message for the DEMO store.
+Check the Backend Office (`https://zed.mysprykershop.com/`) again to see the new message for the DEMO store.
 
 <!-- Last review date: Jul 18, 2018 by Hussam Hebbo, Anastasija Datsun -->

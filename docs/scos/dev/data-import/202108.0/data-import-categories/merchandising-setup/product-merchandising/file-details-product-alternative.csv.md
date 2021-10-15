@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/file-details-product-alternativecsv
 ---
 
-This article contains content of the **product_alternative.csv** file to configure [Alternative Product](https://documentation.spryker.com/2021080/docs/alternative-products) information on your Spryker Demo Shop.
+This article contains content of the **product_alternative.csv** file to configure [Alternative Product](/docs/scos/user/features/{{page.version}}/alternative-products-feature-overview.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:

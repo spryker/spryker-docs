@@ -24,6 +24,7 @@ task :check do
       :ssl_verifypeer => false,
       :ssl_verifyhost => 0
     },
+    :disable_external => true,
     :check_html => false,
     :empty_alt_ignore => true,
     :only_4xx => true,

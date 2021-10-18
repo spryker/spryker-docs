@@ -205,14 +205,14 @@ Executing these steps will install all required dependencies, and run the instal
 When the installation process is complete, Spryker Commerce OS is ready to use. It can be accessed via the following links:
 
 **B2B Demo Shop:**
- * [`http://de.b2b-demo-shop.local`](`http://de.b2b-demo-shop.local`)- front-end (Storefront);
-* [`http://zed.de.b2b-demo-shop.local`](`http://zed.de.b2b-demo-shop.local`)- backend (the Back Office).
-* [`http://glue.de.b2b-demo-shop.local`](`http://glue.de.b2b-demo-shop.local`)- REST API (Glue).
+* [`http://de.b2b-demo-shop.local`](http://de.b2b-demo-shop.local/)- front-end (Storefront);
+* [`http://zed.de.b2b-demo-shop.local`](http://zed.de.b2b-demo-shop.local/)- backend (the Back Office).
+* [`http://glue.de.b2b-demo-shop.local`](http://glue.de.b2b-demo-shop.local/)- REST API (Glue).
 
 **B2C Demo Shop:**
-* `http://de.b2c-demo-shop.local` - front-end (Storefront);
-* `http://zed.de.b2c-demo-shop.local` - backend (the Back Office).
-* `http://glue.de.b2c-demo-shop.local` - REST API (Glue).
+* [`http://de.b2c-demo-shop.local`](http://de.b2c-demo-shop.local/)- front-end (Storefront);
+* [`http://zed.de.b2c-demo-shop.local`](http://zed.de.b2c-demo-shop.local/) - backend (the Back Office).
+* [`http://glue.de.b2c-demo-shop.local`](http://glue.de.b2c-demo-shop.local/)- REST API (Glue).
 
 Credentials to access the administrator interface: user `admin@spryker.com` and password `change123`.
 

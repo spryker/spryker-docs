@@ -9,6 +9,10 @@ task :check do
     :allow_hash_href => true,
     :url_ignore => [
       /mysprykershop.com\/[\.\w\-\/\?]+/,
+      /b2c-demo-shop.local\/[\.\w\-\/\?]+/,
+      /zed.de.b2b-demo-shop.local\/[\.\w\-\/\?]+/,
+      /mydomain.com\/[\.\w\-\/\?]+/,
+      /demoshop.local\/[\.\w\-\/\?]+/,
       /mysprykershop.com:10007\/[\.\w\-\/\?]+/,
       /github.com\/[\.\w\-\/]+\.md/
     ],
@@ -24,7 +28,7 @@ task :check do
       :ssl_verifypeer => false,
       :ssl_verifyhost => 0
     },
-    :disable_external => true,
+    :disable_external => false,
     :check_html => false,
     :empty_alt_ignore => true,
     :only_4xx => true,

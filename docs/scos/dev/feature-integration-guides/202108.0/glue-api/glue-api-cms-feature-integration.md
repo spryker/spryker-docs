@@ -16,10 +16,10 @@ This document describes how to integrate the CMS feature API into a Spryker proj
 
 To start feature integration, overview and install the necessary features:
 
-| NAME         | VERSION | REQUIRED SUB-FEATURE                                         |
-| :----------- | :------ | :----------------------------------------------------------- |
-| Spryker Core | master  | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| CMS          | master  | [CMS feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cms-feature-integration.html) |
+| NAME     | VERSION | REQUIRED SUB-FEATURE     |
+| --------- | ------ | ------------------------ |
+| Spryker Core | {{page.version}}  | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| CMS          | {{page.version}}  | [CMS feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cms-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
 
@@ -31,15 +31,13 @@ composer require spryker/cms-pages-rest-api spryker/content-product-abstract-lis
 
 {% info_block warningBox "Verification" %}
 
-
 Make sure that the following modules have been installed:
 
-| MODULE                                     | EXPECTED DIRECTORY                                           |
-| :----------------------------------------- | :----------------------------------------------------------- |
+| MODULE   | EXPECTED DIRECTORY    |
+| --------------------- | ------------------- |
 | CmsPagesRestApi                            | vendor/spryker/cms-pages-rest-api                            |
 | ContentProductAbstractListsRestApi         | vendor/spryker/content-product-abstract-lists-rest-api       |
 | CmsPagesContentBannersResourceRelationship | vendor/spryker/cms-pages-content-banners-resource-relationship |
-
 
 {% endinfo_block %}
 
@@ -56,24 +54,20 @@ console transfer:generate
 {% info_block warningBox "Verification" %}
 
 
-
-
 Make sure that the following changes have been applied in the database:
 
 | DATABASE ENTRY    | TYPE  | EVENT   |
-| :---------------- | :---- | :------ |
+| -------------- | ---- | ------ |
 | spy_cms_page.uuid | field | created |
-
 
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
-
 Make sure that the following changes have been applied in the transfer objects:
 
-| TRANSFER                          | TYPE     | EVENT   | PATH                                                         |
-| :-------------------------------- | :------- | :------ | :----------------------------------------------------------- |
+| TRANSFER  | TYPE     | EVENT   | PATH |
+| ------------- | ------ | ------ | ----------------------- |
 | RestCmsPagesAttributesTransfer    | class    | created | src/Generated/Shared/Transfer/RestCmsPagesAttributesTransfer |
 | LocaleCmsPageDataTransfer         | property | created | src/Generated/Shared/Transfer/LocaleCmsPageDataTransfer      |
 | CmsPageStorageTransfer            | class    | created | src/Generated/Shared/Transfer/CmsPageStorageTransfer         |
@@ -81,7 +75,6 @@ Make sure that the following changes have been applied in the transfer objects:
 | RestErrorMessageTransfer          | class    | created | src/Generated/Shared/Transfer/RestErrorMessageTransfer       |
 | RestUrlResolverAttributesTransfer | class    | created | src/Generated/Shared/Transfer/RestUrlResolverAttributesTransfer |
 | UrlStorageTransfer                | class    | created | src/Generated/Shared/Transfer/UrlStorageTransfer             |
-
 
 {% endinfo_block %}
 
@@ -93,9 +86,7 @@ console uuid:generate Cms spy_cms_page
 
 {% info_block warningBox "Verification" %}
 
-
 Make sure that all the records in the `spy_cms_page` have the `uuid` field populated with auto-generated values. 
-
 
 {% endinfo_block %}
 
@@ -103,8 +94,8 @@ Make sure that all the records in the `spy_cms_page` have the `uuid` field popul
 
 Activate the following plugins:
 
-| PLUGIN                                                       | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                                    |
-| :----------------------------------------------------------- | :----------------------------------------------------------- | :------------ | :----------------------------------------------------------- |
+| PLUGIN   | SPECIFICATION   | PREREQUISITES | NAMESPACE  |
+| ----------------------------- | --------------------- | ----------- | ------------------------ |
 | ContentProductAbstractListAbstractProductsResourceRoutePlugin | Adds the `abstract-products` resource route with the `content-product-abstract-lists` resource as a parent. | None          | Spryker\Glue\ContentProductAbstractListsRestApi\Plugin\GlueApplication |
 | CmsPagesResourceRoutePlugin                                  | Adds the `cms-pages` resource route.                         | None          | Spryker\Glue\CmsPagesRestApi\Plugin\GlueApplication          |
 | ContentProductAbstractListsResourceRoutePlugin               | Adds `the content-product-abstract-lists` resource route.    | None          | Spryker\Glue\ContentProductAbstractListsRestApi\Plugin\GlueApplication |
@@ -169,7 +160,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
         return $resourceRelationshipCollection;
     }
 }
-
 ```
 
 **src/Pyz/Glue/UrlsRestApi/UrlsRestApiDependencyProvider.php**
@@ -194,13 +184,11 @@ class UrlsRestApiDependencyProvider extends SprykerUrlsRestApiDependencyProvider
         ];
     }
 }
-
 ```
 
  
 
 {% info_block warningBox "Verification" %}
-
 
 Make sure that the `cms-pages` resource is available by sending the request:`GET https://glue.mysprykershop.com/cms-pages`.
 
@@ -214,16 +202,15 @@ Make sure that you can retrieve the product abstract lists added to a CMS page b
 
 Make sure that you can retrieve the abstract products added to an abstract product list by sending the request: `GET https://glue.mysprykershop.com/content-product-abstract-lists?includes=abstract-products`.
 
-
 {% endinfo_block %}
 
 ## Related features
 
 Integrate the following related features:
 
-| FEATURE       | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                            |
-| :------------ | :------------------------------- | :----------------------------------------------------------- |
-| Content items |                                  | [[Approved\] Content Items feature integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/941034461) |
-| CMS           | ✓                                | [[PUBLISHED\] CMS feature integration - ongoing](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/960201069) |
+| FEATURE      | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE     |
+| ---------- | ----------------- | ---------------------------- |
+| Content items |                                  | [Content Items feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/content-items-feature-integration.html) |
+| CMS           | ✓                                | [CMS feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cms-feature-integration.html) |
 
 

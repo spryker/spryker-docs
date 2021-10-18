@@ -94,7 +94,7 @@ Activate the following plugins:
 | `ConcreteProductsResourceRoutePlugin` | Registers the concrete product resource. | None | `Spryker\Glue\ProductsRestApi\Plugin` |
 
 <details open>
-<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -138,7 +138,7 @@ Activate the following plugin:
 | `ConcreteProductsProductImageSetsResourceRelationshipPlugin` | Adds the concrete product image sets resource as a relationship to the concrete product resource. | None | `Spryker\Glue\ProductImageSetsRestApi\Plugin\Relationship` |
 
 <details open>
-<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -206,7 +206,7 @@ Activate the following plugins:
 | `ConcreteProductPricesByResourceIdResourceRelationshipPlugin` | `Adds the concrete product prices resource as a relationship to the concrete product resource.` | None | `Spryker\Glue\ProductPricesRestApi\Plugin\GlueApplication` |
 
 <details open>
-<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -271,7 +271,7 @@ Activate the following plugin:
 | `AbstractProductsCategoriesResourceRelationshipPlugin` | Adds the categories resource as a relationship to the abstract product. | None | `Spryker\Glue\ProductsCategoriesResourceRelationship\Plugin` |
 
 <details open>
-<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -311,7 +311,7 @@ Send a request to http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% 
 {% endinfo_block %}
 
 <details open>
-<summary>Example:</summary>
+<summary markdown='span'>Example:</summary>
 
 ```json
 {  

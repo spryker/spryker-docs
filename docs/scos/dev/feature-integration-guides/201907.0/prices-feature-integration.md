@@ -79,7 +79,7 @@ The following imported entities will be used as product volumes in Spryker OS.
 Prepare your data according to your requirements using our demo data:
 
 <details open>
-<summary>src/data/import/product_price.csv</summary>
+<summary markdown='span'>src/data/import/product_price.csv</summary>
 
 ```yaml
 abstract_sku,concrete_sku,price_type,store,currency,value_net,value_gross,price_data.volume_prices
@@ -108,7 +108,7 @@ Register the following plugin to enable data import:
 |  `PriceProductDataImportPlugin` | Imports demo product price data into the database. | None |  `Spryker\Zed\PriceProductDataImport\Communication\Plugin` |
 
 <details open>
-<summary>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -152,7 +152,7 @@ Enable the following behaviors by registering the plugins:
 |  `PriceProductVolumeFilterPlugin` | Provides the ability to decide, based on selected product quantity, which `PriceProduct` should be chosen based on the set Volume Prices. | None |  `Spryker\Service\PriceProductVolume\Plugin\PriceProductExtension` |
 
 <details open>
-<summary>src/Pyz/Zed/PriceProduct/PriceProductDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/PriceProduct/PriceProductDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -180,7 +180,7 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
 
 
 <details open>
-<summary>src/Pyz/Client/PriceProductStorage/PriceProductStorageDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/PriceProductStorage/PriceProductStorageDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -208,7 +208,7 @@ class PriceProductStorageDependencyProvider extends SprykerPriceProductStorageDe
 
 
 <details open>
-<summary>src/Pyz/Service/PriceProduct/PriceProductDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Service/PriceProduct/PriceProductDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -278,7 +278,7 @@ Make sure that the following modules were installed:
 Append glossary according to your configuration:
 
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 page.detail.volume_price.quantity,Quantity,en_US
@@ -308,7 +308,7 @@ Enable global widgets:
 |  `ProductPriceVolumeWidget` | Shows a table of Volume Prices for a product that contains the columns: quantity and price for that quantity threshold. |  `SprykerShop\Yves\PriceProductVolumeWidget\Widget` |
 
 <details open>
-<summary>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

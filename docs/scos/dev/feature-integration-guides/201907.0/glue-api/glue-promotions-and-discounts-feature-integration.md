@@ -68,7 +68,7 @@ Activate the following plugin:
 | `ProductLabelsResourceRoutePlugin` | Registers a product labels resource. | None | `Spryker\Glue\ProductLabelsRestApi\Plugin\GlueApplication` |
 
 <details open>
-<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
     
 ```php
 <?php

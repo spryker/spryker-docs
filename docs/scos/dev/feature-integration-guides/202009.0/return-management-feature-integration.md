@@ -749,7 +749,7 @@ Add translations as follows:
 
 1. Append glossary according to your configuration:
 <details open>
-<summary>data/import/common/common/glossary.csv</summary>
+<summary markdown='span'>data/import/common/common/glossary.csv</summary>
 
 ```yaml
 customer.order.remunerationTotal,Remuneration Total,en_US

@@ -130,7 +130,7 @@ Activate the following plugins:
 
 
 <details open>
-    <summary>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -186,7 +186,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 Ensure that the Agent can get the access token with valid credentials by sending the request:
 
 <details open>
-    <summary>Request sample</summary>
+    <summary markdown='span'>Request sample</summary>
 
 `POST https://glue.mysprykershop.com/agent-access-tokens`
 
@@ -204,7 +204,7 @@ Ensure that the Agent can get the access token with valid credentials by sending
 </details>
 
 <details open>
-    <summary>Expected response</summary>
+    <summary markdown='span'>Expected response</summary>
 
 ```json
 {

@@ -44,7 +44,7 @@ console transfer:generate
 * ShoppingListWidget
 
 <details open>
-    <summary>Affected modules</summary>
+    <summary markdown='span'>markdown='span'>Affected modules</summary>
     You can find the affected modules of the float stock update in the following list.
 
 | Operator | Operator for plain query | Migration guide |

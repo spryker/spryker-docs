@@ -26,7 +26,7 @@ related:
 
 ### Extending Checkout Page
 <details open>
-<summary>src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php</summary>
 
  ```php
  <?php
@@ -83,7 +83,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 
 ### Extending the State Machine
 <details open>
-<summary>config/Shared/config_default.php</summary>
+<summary markdown='span'>config/Shared/config_default.php</summary>
 
  ```php
  <?php

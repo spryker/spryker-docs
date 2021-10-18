@@ -42,7 +42,7 @@ Add the following configuration to your project:
 | Adjust `codeception.yml` | Enables tests execution for eco modules. | None |
 
 <details open>
-<summary>codeception.yml</summary>
+<summary markdown='span'>codeception.yml</summary>
 
 ```html
 include:
@@ -66,7 +66,7 @@ Enable the following behaviors by registering the plugins:
 | `SetupRequestPunchoutCatalogConnectionTypePlugin` | Expands punchout catalog connection form `Connection Type` choice field with `setup_request` option. | None |`SprykerEco\Zed\PunchoutCatalogs\Communication\Plugin\PunchoutCatalogs` |
 
 <details open>
-<summary>src/Pyz/Zed/PunchoutCatalogs/PunchoutCatalogsDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/PunchoutCatalogs/PunchoutCatalogsDependencyProvider.php</summary>
 
 ```php
 <?php

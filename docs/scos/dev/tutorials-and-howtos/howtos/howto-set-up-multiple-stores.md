@@ -110,7 +110,7 @@ stores['DE'] = [
 Example of configuration for an application supporting two stores:
 
 <details open>
-<summary>config/Shared/stores.php</summary>
+<summary markdown='span'>config/Shared/stores.php</summary>
 
 ```php
 <?php

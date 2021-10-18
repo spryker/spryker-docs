@@ -58,7 +58,7 @@ Register the following plugins:
 | `ProductImageCartPlugin` | Expands `ItemsTransfers` from `CartChangeTransfer` with `ProductImages`. | None | `Spryker\Zed\ProductImageCartConnector\Communication\Plugin` |
 
 <details open>
-<summary>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
     
 ```php
 <?php

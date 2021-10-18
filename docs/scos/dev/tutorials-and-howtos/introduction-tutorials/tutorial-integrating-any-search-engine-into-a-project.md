@@ -51,7 +51,7 @@ To build a query, you have to define, for example, `FfSearchQueryTransfer` objec
 Then you create a query model, for example, `FactFinderQuery`. The basic version might look like this:
 
 <details open>
-<summary>Code sample</summary>
+<summary markdown='span'>Code sample</summary>
 
 ```PHP
 class FactFinderQuery implements QueryInterface, SearchContextAwareQueryInterface
@@ -132,7 +132,7 @@ To handle search requests through a different source, you need your own model im
 Template for this model is:
 
 <details open>
-<summary>Code sample</summary>
+<summary markdown='span'>Code sample</summary>
 
 ```PHP
 class FFSearchAdapterPlugin implements SearchAdapterPluginInterface
@@ -248,7 +248,7 @@ You have to respond with an object, supporting an array-based or `get`-based ind
 
 Example of a response from the search provider:
 <details open>
-<summary>Code sample</summary>
+<summary markdown='span'>Code sample</summary>
 
 ```
 {

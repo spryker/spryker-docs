@@ -44,7 +44,7 @@ You can find additional details on the [Collector module release page](https://g
 3. If you have multiple stores: Amend your existing custom `AbstractPdoCollectorQuery` extended queries to always select current store related `spy_touch_storage` and `spy_touch_search` records. This has to be made for all of the queries regardless if they work with a multi-store entity or a single-store entity. You can find additional details regarding collector multi-store concept in the previous step, on the [Collector module release page](https://github.com/spryker/collector/releases), and on our [Demoshop implementation](https://github.com/spryker/demoshop).
 
 <details open>
-<summary>Example of a modified query</summary>
+<summary markdown='span'>markdown='span'>Example of a modified query</summary>
     
 ```php
 <?php

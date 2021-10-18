@@ -18,17 +18,18 @@ Follow the steps below to install the feature core.
 
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
-| Name | Version | Integration guide|
+
+| NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {% raw %}{{{% endraw %}variable.master{% raw %}}}{% endraw %} | [Spryker core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Product | {% raw %}{{{% endraw %}variable.master{% raw %}}}{% endraw %} | [Spryker Core Back Office feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-back-office-feature-integration.html) |
-| Cart | {% raw %}{{{% endraw %}variable.master{% raw %}}}{% endraw %}| [Customer Account Management](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Spryker core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Product | {{page.version}} | [Spryker Core Back Office feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-back-office-feature-integration.html) |
+| Cart | {{page.version}}| [Customer Account Management](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) |
 
 ### 1) Install the required modules using composer
 
 Run the following command to install the required modules:
 ```bash
-composer require spryker-feature/agent-assist:"^master" --update-with-dependencies
+composer require spryker-feature/agent-assist:"{{page.version}}" --update-with-dependencies
 ```
 {% info_block warningBox "Verification" %}
 
@@ -53,7 +54,8 @@ console transfer:generate
 {% info_block warningBox "Verification" %}
 
 Verify the following changes by checking your database:
-| Database entity | Type | Event |
+
+| DATABASE ENTITY | TYPE | EVENT |
 | --- | --- | --- |
 | spy_user.is_agent | column | created |
 
@@ -65,7 +67,7 @@ Set up the following behaviors.
 #### Configure user Zed UI for agent handling
 Enable the following behaviors by registering the plugins:
 
-| Plugin | Description | Prerequisites | Namespace |
+| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | UserAgentFormExpanderPlugin | Adds the *is an agent* checkbox to the Zed User form. | None | Spryker\Zed\AgentGui\Communication\Plugin |
 | UserAgentTableConfigExpanderPlugin | Adds the *is an agent* column to the Zed Users table. | None | Spryker\Zed\AgentGui\Communication\Plugin |
@@ -120,7 +122,7 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
 
 Ensure that the following plugins have been registered:
 
-| Module | Test |
+| MODULE | TEST |
 | --- | --- |
 | UserAgentFormExpanderPlugin | 1. In the Back Office, go to **Users** > **Users**. <br>2. Select **Edit** next to a user. <br>3. Ensure that the *This user is an agent* checkbox exists. |
 | UserAgentTableConfigExpanderPlugin | 1. In the Back Office, go to **Users** > **Users**. <br>2. Ensure that the *Agent* column exists.  |
@@ -134,20 +136,23 @@ Follow the steps below to install the feature front end.
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
 | Spryker Core | master |
 
-### 1) Install the required modules using composer
+### 1) Install the required modules using Composer
+
 Run the following command to install the required modules:
+
 ```bash
-composer require spryker-feature/agent-assist:"^master" --update-with-dependencies
+composer require spryker-feature/agent-assist:"{{page.version}}" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
 Ensure that the following modules have been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | AgentPage | vendor/spryker-shop/agent-page |
 | AgentWidget | vendor/spryker-shop/agent-widget |
@@ -156,7 +161,9 @@ Ensure that the following modules have been installed:
 
 ### 2) Set up configuration
 By default, in Spryker, posting login form (where SecurityBlocker will make its check and block agents who made too many failed login attempts) is locale-independent. So, to be able to see error messages translated into different languages, you need to configure the locale to be added to the agent login path. You can do this by modifying the following configs:
+
 **src/Pyz/Yves/AgentPage/AgentPageConfig.php**
+
 ```php
 <?php
 
@@ -185,7 +192,9 @@ Make sure that when the login form for the agent is submitted, the URL it uses c
 Add translations as follows:
 
 1. Append the glossary according to your configuration:
+
 **src/data/import/glossary.csv**
+
 ```yaml
 agent.authentication.failed,Authentication failed,en_US
 agent.authentication.failed,Authentifizierung fehlgeschlagen,de_DE
@@ -210,21 +219,25 @@ agent.autocomplete.no_results,Keine Ergebnisse gefunden,de_DE
 autocomplete.placeholder,Search,en_US
 autocomplete.placeholder,Suche,de_DE
 ```
+
 2. Run the following command to add the glossary keys:
+
 ```bash
 console data:import:glossary
 ```
+
 ### 4) Enable controllers
 Enable the following controllers.
 
 #### Service provider list
 Register the service provider in the Yves application:
 
-| Provider | Namespace | Specification |
+| PROVIDER | NAMESPACE | SPECIFICATION |
 | --- | --- | --- |
 | AgentPageSecurityServiceProvider | SprykerShop\Yves\AgentPage\Plugin\Provider | Registers security firewalls, access rules, impersonate rules, login and logout handlers for Agent users. |
 
 **src/Pyz/Yves/ShopApplication/YvesBootstrap.php**
+
 ```php
 <?php
 
@@ -244,6 +257,7 @@ class YvesBootstrap extends SprykerYvesBootstrap
     }
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 Ensure that you've registered the providers correctly:
@@ -256,12 +270,13 @@ Ensure that you've registered the providers correctly:
 #### Controller provider list
 Register the controller provider(s) in the Yves application:
 
-| Provider | Namespace | Enabled Controller | Controller Specification |
+| PROVIDER | NAMESPACE | ENABLED CONTROLLER | CONTROLLER SPECIFICATION |
 | --- | --- | --- | --- |
 | AgentPageControllerProvider | SprykerShop\Yves\AgentPage\Plugin\Provider | AgentPage\AuthController | Provides Login and Logout actions for the agent user. |
 | AgentWidgetControllerProvider | SprykerShop\Yves\AgentWidget\Plugin\Provider | AgentWidget\CustomerAutocompleteController | Provides the customer autocomplete action for the agent control bar. |
 
 **src/Pyz/Yves/ShopApplication/YvesBootstrap.php**
+
 ```php
 <?php
 
@@ -287,11 +302,12 @@ class YvesBootstrap extends SprykerYvesBootstrap
     }
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 Ensure that you have registered the providers correctly:
 
-| Provider | Test |
+| PROVIDER | TEST |
 | --- | --- |
 | AgentPageControllerProvider | Ensure that you can open https://mysprykershop.com/agent/login. |
 | AgentWidgetControllerProvider | 1. Log in as an agent. <br>2. Ensure that you can search by customers using the Agent control bar. |
@@ -303,12 +319,13 @@ Set up widgets as follows:
 
 1. Register the following global widget(s):
 
-| Widget | Specification | Namespace |
+| WIDGET | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
 | AgentControlBarWidget | Allows agents to select and impersonate customers. | SprykerShop\Yves\AgentWidget\Widget |
 
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
+
 ```php
 <?php
 
@@ -330,19 +347,24 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     }
 }
 ```
+
 2.  Enable Javascript and CSS changes:
+
 ```bash
 console frontend:yves:build
 ```
+
 3. If you have a custom layout template, place the Agent widget above the site header:
+
 ```xml
 {% raw %}{%{% endraw %} widget 'AgentControlBarWidget' only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}
 ```
+
 {% info_block warningBox "Verification" %}
 
 Ensure that the following widgets have been registered:
 
-| Module | Test |
+| MODULE | TEST |
 | --- | --- |
 | AgentControlBarWidget | Log in as an agent. The control bar widget should appear above the site header. |
 

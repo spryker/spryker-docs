@@ -60,7 +60,7 @@ The Episerver module has `SprykerEco\Zed\Episerver\Communication\Plugin\Customer
 
 To use it,  set up `provideBusinessLayerDependencies` in the class `Pyz\Zed\Mail\MailDependencyProvider`, for example:
 <details open>
-<summary>MailDependencyProvider</summary>
+<summary markdown='span'>MailDependencyProvider</summary>
 
 ```php
  ->addProvider(new EpiserverCustomerMailPlugin(), [
@@ -79,7 +79,7 @@ The Episerver module has `\SprykerEco\Zed\Episerver\Business\Mapper\Customer\Cus
 To use it, set up `provideBusinessLayerDependencies` in the class `Pyz\Zed\Mail\MailDependencyProvider`, for example:
 
 <details open>
-<summary>MailDependencyProvider</summary>
+<summary markdown='span'>MailDependencyProvider</summary>
 
 ```php
 ->addProvider(new EpiserverNewsletterSubscriptionMailPlugin(), [
@@ -93,7 +93,7 @@ To use it, set up `provideBusinessLayerDependencies` in the class `Pyz\Zed\Mail\
 
 Add a page for (un)subscribing on your site's side. To complete it, first you need a controller:
 <details open>
-<summary>NewsletterController</summary>
+<summary markdown='span'>NewsletterController</summary>
 
 ```php
 <?php
@@ -168,7 +168,7 @@ class NewsletterController extends SprykerNewsletterController
 Expand the factory like this:
 
 <details open>
-<summary>NewsletterPageFactory</summary>
+<summary markdown='span'>NewsletterPageFactory</summary>
 
 ```php
 <?php
@@ -195,7 +195,7 @@ class NewsletterPageFactory extends SprykerNewsletterPageFactory
 
 `CLIENT_NEWSLETTER_SUBSCRIPTION` should be defined like this:
 <details open>
-<summary>NewsletterPageDependencyProvider</summary>
+<summary markdown='span'>NewsletterPageDependencyProvider</summary>
 
 ```php
 <?php
@@ -242,7 +242,7 @@ class NewsletterPageDependencyProvider extends SprykerNewsletterPageDependencyPr
 Prepare `NewsletterPageToNewsletterClientBridge`:
 
 <details open>
-<summary>NewsletterPageToNewsletterClientBridge</summary>
+<summary markdown='span'>NewsletterPageToNewsletterClientBridge</summary>
 
 ```php
 <?php
@@ -273,7 +273,7 @@ class NewsletterPageToNewsletterClientBridge extends SprykerNewsletterPageToNews
 And a contract for it:
 
 <details open>
-<summary>NewsletterPageToNewsletterClientInterface</summary>
+<summary markdown='span'>NewsletterPageToNewsletterClientInterface</summary>
 
 ```php
 <?php
@@ -301,7 +301,7 @@ interface NewsletterPageToNewsletterClientInterface extends SprykerNewsletterPag
 Create a route for our controller. Here's an example:
 
 <details open>
-<summary>NewsletterPageControllerProvider</summary>
+<summary markdown='span'>NewsletterPageControllerProvider</summary>
 
 ```php
 <?php
@@ -358,7 +358,7 @@ class NewsletterPageControllerProvider extends SprykerNewsletterPageControllerPr
 A small template for a subscription:
 
 <details open>
-<summary>subscription-success</summary>
+<summary markdown='span'>subscription-success</summary>
 
 ```html
 {% raw %}{%{% endraw %} extends template('page-layout-main') {% raw %}%}{% endraw %}
@@ -381,7 +381,7 @@ A small template for a subscription:
 And the second one is almost the same:
 
 <details open>
-<summary>unsubscription-success</summary>
+<summary markdown='span'>unsubscription-success</summary>
 
 ```html
 {% raw %}{%{% endraw %} extends template('page-layout-main') {% raw %}%}{% endraw %}
@@ -406,7 +406,7 @@ And the second one is almost the same:
 In case you want to change user data on the Episerver side, you need to extend the Customer model
 
 <details open>
-<summary>Customer</summary>
+<summary markdown='span'>Customer</summary>
 
 ```php
 <?php
@@ -473,7 +473,7 @@ class Customer extends SprykerCustomer
 Set up a factory for the Customer module on the project level
 
 <details open>
-<summary>CustomerBusinessFactory</summary>
+<summary markdown='span'>CustomerBusinessFactory</summary>
 ```php
 <?php
 /**
@@ -517,7 +517,7 @@ class CustomerBusinessFactory extends SprykerCustomerBusinessFactory
 Create one more mail plugin for Customer on data changing (without a body)
 
 <details open>
-<summary>CustomerChangeProfileMailTypePlugin</summary>
+<summary markdown='span'>CustomerChangeProfileMailTypePlugin</summary>
 
 ```phph
 <?php
@@ -588,7 +588,7 @@ The Episerver module has four different commands:
 You can use these commands in `\Pyz\Zed\Oms\OmsDependencyProvider::getCommandPlugins`
 
 <details open>
-<summary>OmsDependencyProvider</summary>
+<summary markdown='span'>OmsDependencyProvider</summary>
 ```php
 ...
 use SprykerEco\Zed\Episerver\Communication\Plugin\Oms\Command\EpiserverNewOrderPlugin;
@@ -619,7 +619,7 @@ protected function getCommandPlugins(Container $container)
 After that you are ready to use commands in the OMS setup:
 
 <details open>
-<summary>OmsDependencyProvider</summary>
+<summary markdown='span'>OmsDependencyProvider</summary>
 ```html
 <events>
     <event name="authorize" onEnter="true" command="Episerver/SendNewOrderRequest"/>
@@ -633,7 +633,7 @@ After that you are ready to use commands in the OMS setup:
 
 
 <details open>
-<summary>oms-statemachine</summary>
+<summary markdown='span'>oms-statemachine</summary>
 ```html
 <?xml version="1.0"?>
 <statemachine
@@ -708,7 +708,7 @@ After that you are ready to use commands in the OMS setup:
 It sends the request via `\Generated\Shared\Transfer\EpiserverRequestTransfer`
 
 <details open>
-<summary>OmsDependencyProvider</summary>
+<summary markdown='span'>OmsDependencyProvider</summary>
 ```html
 <?xml version="1.0"?>
 <transfers xmlns="spryker:transfer-01"

@@ -49,7 +49,7 @@ Add the following configuration to your project:
 | `TranslatorConstants::TRANSLATION_ZED_FILE_PATH_PATTERNS` | Paths to project level translations. A glob pattern can be used. | `Spryker\Shared\Translator` |
 
 <details open>
-<summary>config/Shared/config_default.php</summary>
+<summary markdown='span'>config/Shared/config_default.php</summary>
 
 ```php
 <?php
@@ -93,7 +93,7 @@ Activate the following plugins:
 | `UserLocaleFormExpanderPlugin` | Anonymizes customer data during customer anonymization. | None | `Spryker\Zed\UserLocaleGui\Communication\Plugin\UserLocaleFormExpanderPlugin` |
 
 <details open>
-<summary>src/Pyz/Zed/Installer/InstallerDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Installer/InstallerDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -128,7 +128,7 @@ Make sure that:<ul><li>the command has cleaned previous translation cache inform
 {% endinfo_block %}
 
 <details open>
-<summary>src/Pyz/Zed/Messenger/MessengerDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Messenger/MessengerDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -157,7 +157,7 @@ class MessengerDependencyProvider extends SprykerMessengerDependencyProvider
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/Twig/TwigDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Twig/TwigDependencyProvider.php</summary>
 ```php
 <?php
 
@@ -188,7 +188,7 @@ Make sure the trans and `transChoice` twig filters are working and using transla
 {% endinfo_block %}
 
 <details open>
-<summary>src/Pyz/Zed/Locale/LocaleDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Locale/LocaleDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -218,7 +218,7 @@ Make sure that the locale of the back office matches the locale of the logged in
 {% endinfo_block %}
 
 <details open>
-<summary>src/Pyz/Zed/User/UserDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/User/UserDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -280,7 +280,7 @@ Make sure that plugins work: </br>1. Log into back office.</br>2. Go to the *Use
 | `GenerateTranslationCacheConsole` | Generates new translation cache for Zed. | None | `Spryker\Zed\Translator\Communication\Console\GenerateTranslationCacheConsole` |
 
 <details open>
-<summary>src\Pyz\Zed\Console\ConsoleDependencyProvider</summary>
+<summary markdown='span'>src\Pyz\Zed\Console\ConsoleDependencyProvider</summary>
 
 ```php
 <?php

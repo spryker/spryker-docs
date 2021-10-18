@@ -46,7 +46,7 @@ Make sure that the following modules have been installed:
 Define the following transfer objects:
 
 <details open>
-<summary>src/Pyz/Shared/ProductList/Transfer/product_list.transfer.xml</summary>
+<summary markdown='span'>src/Pyz/Shared/ProductList/Transfer/product_list.transfer.xml</summary>
 
 ```html
 <?xml version="1.0"?>
@@ -81,7 +81,7 @@ Adjust the schema definition so that entity changes trigger events.
 | `spy_product_list_category` | `Entity.spy_product_list_category.create`<br>`Entity.spy_product_list_category.update`<br>`Entity.spy_product_list_category.delete` |
 
 <details open>
-<summary>src/Pyz/Zed/ProductList/Persistence/Propel/Schema/spy_product_list.schema.xml</summary>
+<summary markdown='span'>src/Pyz/Zed/ProductList/Persistence/Propel/Schema/spy_product_list.schema.xml</summary>
 
 ``` html
 <?xml version="1.0"?>
@@ -112,7 +112,7 @@ Adjust the schema definition so that entity changes trigger events.
 
 Set up synchronization queue pools so that non-multistore entities (not store specific entities) can be synchronized among stores:
 <details open>
-<summary>src/Pyz/Zed/ProductList/Persistence/Propel/Schema/spy_product_list.schema.xml</summary>
+<summary markdown='span'>src/Pyz/Zed/ProductList/Persistence/Propel/Schema/spy_product_list.schema.xml</summary>
 
 ``` html
 <?xml version="1.0"?>
@@ -228,7 +228,7 @@ Make sure that the changes were implemented successfully. For this purpose, trig
 
 Append glossary according to your language configuration:
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 product-cart.info.restricted-product.removed,"Unavailable item %sku% was removed from your shopping cart.",en_US
@@ -257,7 +257,7 @@ With this step, you will be able to publish tables on change (create, edit, dele
 |`ProductListSearchEventSubscriber`|Registers listeners that are responsible for publishing product list information to search when a related entity changes.|None|`Spryker\Zed\ProductListSearch\Communication\Plugin\Event\Subscriber`|
 
 <details open>
-<summary>src/Pyz/Zed/Event/EventDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Event/EventDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -299,7 +299,7 @@ Make sure when a product list is created, updated or deleted, they are exported 
 </div></section>
 
 <details open>
-<summary>Example expected data fragment for Product Abstract Product List</summary>
+<summary markdown='span'>Example expected data fragment for Product Abstract Product List</summary>
 ```yaml
 {
 "id_product_abstract": 1,
@@ -311,7 +311,7 @@ Make sure when a product list is created, updated or deleted, they are exported 
 </details>
 
 <details open>
-<summary>Example expected data fragment for Product Concrete Product List</summary>
+<summary markdown='span'>Example expected data fragment for Product Concrete Product List</summary>
 ```yaml
 {
 "id_product_concrete": 1,
@@ -323,7 +323,7 @@ Make sure when a product list is created, updated or deleted, they are exported 
 </details>
 
 <details open>
-<summary>Example expected data fragment for Product Abstract</summary>
+<summary markdown='span'>Example expected data fragment for Product Abstract</summary>
 ```yaml
 {
 "product-lists": {
@@ -336,7 +336,7 @@ Make sure when a product list is created, updated or deleted, they are exported 
 </details>
 
 <details open>
-<summary>Example expected data fragment for Product Concrete</summary>
+<summary markdown='span'>Example expected data fragment for Product Concrete</summary>
 ```yaml
 {
 "product-lists": {
@@ -362,7 +362,7 @@ With this step, we are extending Elasticsearch documents with product list data.
 |`ProductConcreteProductListPageMapExpanderPlugin`|Maps product list data related to concrete products to Elasticsearch document structure.|Product list data should be available. Suggestion: use `ProductConcreteProductListPageDataExpanderPlugin` (see above).|`Spryker\Zed\ProductListSearch\Communication\Plugin\ProductPageSearch`|
 
 <details open>
-<summary>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -414,7 +414,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -447,7 +447,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 Prepare your data according to your requirements using our demo data:
 
 <details open>
-<summary>vendor/spryker/product-list-data-import/data/import/product_list.csv</summary>
+<summary markdown='span'>vendor/spryker/product-list-data-import/data/import/product_list.csv</summary>
 
 ```yaml
 "product_list_key","name","type"
@@ -475,7 +475,7 @@ Register the following plugin to enable data import:
 | `ProductListDataImportPlugin` | Imports basic product list data into the database. | None | `Spryker\Zed\ProductListDataImport\Communication\Plugin` |
 
 <details open>
-<summary>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -514,7 +514,7 @@ Make sure that in the database the configured data are added to the `spy_product
 #### Import Product List Category Assignments
 Prepare your data according to your requirements using our demo data:
 <details open>
-<summary>vendor/spryker/product-list-data-import/data/import/product_list_to_category.csv</summary>
+<summary markdown='span'>vendor/spryker/product-list-data-import/data/import/product_list_to_category.csv</summary>
 
 ```yaml
 product_list_key,category_key
@@ -539,7 +539,7 @@ Register the following plugin to enable data import:
 | `ProductListCategoryDataImportPlugin` | Imports category assignments for product lists. | Product list data and category data must exist before this installer plugin runs. | `Spryker\Zed\ProductListDataImport\Communication\Plugin` |
 
 <details open>
-<summary>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -578,7 +578,7 @@ Make sure that the configured data are added to the `spy_product_list_category` 
 
 Prepare your data according to your requirements using our demo data:
 <details open>
-<summary>vendor/spryker/product-list-data-import/data/import/product_list_to_concrete_product.csv</summary>
+<summary markdown='span'>vendor/spryker/product-list-data-import/data/import/product_list_to_concrete_product.csv</summary>
 
 ```yaml
 product_list_key,concrete_sku
@@ -636,7 +636,7 @@ Register the following plugin to enable data import:
 | `ProductListProductConcreteDataImportPlugin` | Imports concrete product assignments for product lists. | Product list data and concrete product data must exist before this importer plugin runs. | `vendor/spryker/product-list-data-import/src/Spryker/Zed/ProductListDataImport/Communication/Plugin/ProductListProductConcreteDataImportPlugin.php` |
 
 <details open>
-<summary>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -677,7 +677,7 @@ Make sure that the configured data are added to the `spy_product_list_product_co
 Prepare your data according to your requirements using our demo data:
 
 <details open>
-<summary>vendor/spryker/product-list-data-import/data/import/product_list_to_concrete_product.csv</summary>
+<summary markdown='span'>vendor/spryker/product-list-data-import/data/import/product_list_to_concrete_product.csv</summary>
 
 ```yaml
 vendor/spryker/product-list-data-import/data/import/product_list_to_concrete_product.csvproduct_list_key,concrete_sku
@@ -735,7 +735,7 @@ Register the following plugin to enable the data import:
 | `ProductListProductConcreteDataImportPlugin` | Imports concrete product assignments for product lists. | Product list data and concrete product data must exist before this importer plugin runs. | `vendor/spryker/product-list-data-import/src/Spryker/Zed/ProductListDataImport/Communication/Plugin/ProductListProductConcreteDataImportPlugin.php` |
 
 <details open>
-<summary>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -784,7 +784,7 @@ Add the following plugins to your project:
 |`ProductViewVariantRestrictionPlugin`|This plugin is responsible for filtering out product variants of a product view object.|The product view object should contain all available variant information.<br>Suggestion: use `ProductViewVariantExpanderPlugin`before, to collect variant data.|`Spryker\Client\ProductListStorage\Plugin\ProductStorageExtension`|
 
 <details open>
-<summary>src/Pyz/Client/ProductStorage/ProductStorageDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/ProductStorage/ProductStorageDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -845,7 +845,7 @@ Add the following plugins to handle product restrictions for cart items:
 |`RemoveRestrictedItemsPreReloadPlugin`|Checks and removes restricted cart items from the quote and adds a message for each removed item.|None|`Spryker\Zed\ProductList\Communication\Plugin\CartExtension`|
 
 <details open>
-<summary>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
 
 ```php
 <?php

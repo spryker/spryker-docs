@@ -63,7 +63,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 {% endinfo_block %}
 
 <details open>
-<summary>Request sample</summary>
+<summary markdown='span'>Request sample</summary>
 
 `POST http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items`
 ```json
@@ -82,7 +82,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 
 
 <details open>
-<summary>Request sample with product measurement units and sales units</summary>
+<summary markdown='span'>Request sample with product measurement units and sales units</summary>
 
 `POST http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items?include=sales-units,product-measurement-units`
 
@@ -104,7 +104,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 </details>
 
 <details open>
-<summary>Request sample with cart rules</summary>
+<summary markdown='span'>Request sample with cart rules</summary>
 
 `POST http://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830/items?include=cart-rules`
 
@@ -123,7 +123,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 </details>
 
 <details open>
-<summary>Request sample with vouchers</summary>
+<summary markdown='span'>Request sample with vouchers</summary>
 
 `POST http://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830/items?include=vouchers`
 
@@ -142,7 +142,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 </details>
 
 <details open>
-<summary>Request sample with a promotional item and cart rules</summary>
+<summary markdown='span'>Request sample with a promotional item and cart rules</summary>
 
 {% info_block infoBox "Cart rules" %}
 
@@ -168,7 +168,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 </details>
 
 <details open>
-<summary>Request sample with concrete products and product options</summary>
+<summary markdown='span'>Request sample with concrete products and product options</summary>
 
 `POST http://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398/items?include=concrete-products,product-options`
 
@@ -194,7 +194,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 </details>
 
 <details open>
-<summary>Request sample with bundle items</summary>
+<summary markdown='span'>Request sample with bundle items</summary>
 
 `POST https://glue.mysprykershop.com/carts/bd873e3f-4670-523d-b5db-3492d2c0bee3/items?include=bundle-items` - retrieve the cart with the `bd873e3f-4670-523d-b5db-3492d2c0bee3` ID and the product bundles inside it.
 
@@ -213,7 +213,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 </details>
 
 <details open>
-<summary>Request sample with bundle items and bundled items</summary>
+<summary markdown='span'>Request sample with bundle items and bundled items</summary>
 
 `POST https://glue.mysprykershop.com/carts/bd873e3f-4670-523d-b5db-3492d2c0bee3/items?include=bundle-items,bundled-items` - retrieve the cart with the `bd873e3f-4670-523d-b5db-3492d2c0bee3` ID, the product bundles inside it, and the products of the product bundles.
 
@@ -232,7 +232,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 </details>
 
 <details open>
-<summary>Request sample with bundle items, bundled items, concrete products, and abstract products</summary>
+<summary markdown='span'>Request sample with bundle items, bundled items, concrete products, and abstract products</summary>
 
 `POST https://glue.mysprykershop.com/carts/bd873e3f-4670-523d-b5db-3492d2c0bee3/items?include=bundle-items,bundled-items,concrete-products,abstract-products` - retrieve the cart with the `bd873e3f-4670-523d-b5db-3492d2c0bee3` ID. Retrieve the product bundles inside it, the products of the product bundles, and respective abstract and concrete products.
 
@@ -277,7 +277,7 @@ It is the responsibility of the API Client to track whether the selected items a
 ### Response
 
 <details open>
-<summary>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -312,7 +312,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 
 <details open>
-<summary>Response sample with items, product measurement units, and sales units</summary>
+<summary markdown='span'>Response sample with items, product measurement units, and sales units</summary>
 
 ```json
 {
@@ -453,7 +453,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 
 <details open>
-<summary>Response sample with cart rules</summary>
+<summary markdown='span'>Response sample with cart rules</summary>
 
 ```json
 {
@@ -556,7 +556,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 
 <details open>
-<summary>Response sample with vouchers</summary>
+<summary markdown='span'>Response sample with vouchers</summary>
 
 ```json
 {
@@ -699,7 +699,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details open>
-<summary>Response sample: adding a promotional item without cart-rules relationship</summary>
+<summary markdown='span'>Response sample: adding a promotional item without cart-rules relationship</summary>
 
 ```json
 {
@@ -742,7 +742,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 
 <details open>
-<summary>Response sample: adding a promotional item with cart-rules relationship</summary>
+<summary markdown='span'>Response sample: adding a promotional item with cart-rules relationship</summary>
 
 ```json
 {
@@ -1019,7 +1019,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details>
-    <summary>Response sample with concrete products and product options</summary>
+    <summary markdown='span'>Response sample with concrete products and product options</summary>
 
 ```json
     {
@@ -1258,7 +1258,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details open>
-<summary>Response sample with bundle items</summary>
+<summary markdown='span'>Response sample with bundle items</summary>
 
 ```json
 {
@@ -1348,7 +1348,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details open>
-<summary>Response sample with bundle items and bundled items</summary>
+<summary markdown='span'>Response sample with bundle items and bundled items</summary>
 
 ```json
 {
@@ -1573,7 +1573,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details open>
-<summary>Response sample with bundle items, bundled items, concrete products, and abstract products</summary>
+<summary markdown='span'>Response sample with bundle items, bundled items, concrete products, and abstract products</summary>
 
 ```json
 {
@@ -2449,7 +2449,7 @@ Request sample: `POST https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1
 ### Response
 
 <details open>
-<summary>Response sample: add a configurable bundle</summary>
+<summary markdown='span'>Response sample: add a configurable bundle</summary>
 
 ```json
 {
@@ -2664,7 +2664,7 @@ Request sample:
 ### Response
 
 <details open>
-<summary>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -2833,7 +2833,7 @@ Request sample:
 ### Response
 
 <details open>
-<summary>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {

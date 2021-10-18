@@ -99,5 +99,5 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 ```
 
 {% info_block infoBox "Verification" %}
-Make sure that the following endpoint is available:</br>http://example.org/navigations/`{navigationId}`
+Make sure that the following endpoint is available:</br>http://mysprykershop.com/navigations/`{navigationId}`
 {% endinfo_block %}

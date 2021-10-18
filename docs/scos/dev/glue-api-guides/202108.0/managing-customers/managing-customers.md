@@ -35,7 +35,7 @@ To create a customer, send the request:
 
 ### Request
 
-<details open><summary>Request sample: POST http://glue.mysprykershop.com/customers</summary>
+<details open><summary markdown='span'>Request sample: POST http://glue.mysprykershop.com/customers</summary>
 
 ```json
 {
@@ -70,7 +70,7 @@ To create a customer, send the request:
 
 ### Response
 
-<details open><summary>Response sample</summary>
+<details open><summary markdown='span'>Response sample</summary>
     
 ```json
 {
@@ -129,7 +129,7 @@ Request sample: `GET https://glue.mysprykershop.com/customers`
 
 ### Response 
 
-<details open><summary>Response sample</summary>
+<details open><summary markdown='span'>Response sample</summary>
     
 ```json
 {
@@ -186,7 +186,7 @@ Request sample: `GET http://glue.mysprykershop.com/customers/DE-25`
 
 ### Response
 
-<details open><summary>Response sample</summary>
+<details open><summary markdown='span'>Response sample</summary>
     
 ```json
 {
@@ -262,7 +262,7 @@ Request sample: `PATCH http://glue.mysprykershop.com/customers/DE-25`
 
 ### Response
 
-<details open><summary>Response sample</summary>
+<details open><summary markdown='span'>Response sample</summary>
     
 ```json
 {
@@ -348,7 +348,7 @@ Request sample: `GET https://glue.mysprykershop.com/customers/DE--21/availabilit
 
 ### Response
 
-<details open><summary>Response sample</summary>
+<details open><summary markdown='span'>Response sample</summary>
     
 ```json
 {

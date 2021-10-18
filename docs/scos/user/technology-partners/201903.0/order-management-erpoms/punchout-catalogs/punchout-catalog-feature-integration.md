@@ -45,7 +45,7 @@ Add the following configuration to your project:
 | `PunchoutCatalogConfig::getBaseUrlYves()` | Defines urls for Punchout API endpoints. | Pyz\Zed\PunchoutCatalog |
 
 <details open>
-<summary>config/Shared/config_default.php</summary>
+<summary markdown='span'>config/Shared/config_default.php</summary>
 
 ```php
 <?php
@@ -75,7 +75,7 @@ Make sure that you can access `http://zed.mysprykershop/punchout-catalog/request
 {% endinfo_block %}
 
 <details open>
-<summary>src/Pyz/Zed/Auth/AuthConfig.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Auth/AuthConfig.php</summary>
 
 ```php
 <?php
@@ -105,7 +105,7 @@ Make sure that you can access `http://zed.mysprykershop/punchout-catalog/request
 {% endinfo_block %}
 
 <details open>
-<summary>config/Shared/config_default.php</summary>
+<summary markdown='span'>config/Shared/config_default.php</summary>
 
 ```php
 <?php
@@ -162,7 +162,7 @@ Make sure that the following changes in transfer objects:<table><thead><tr><th>T
 Append glossary according to your configuration:
 
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```html
 punchout-catalog.connection.list.title,Punch-out Catalog,en_US
@@ -248,7 +248,7 @@ Make sure that in the database the configured data are added to the `spy_glossar
 Prepare your data according to your requirements using our demo data:
 
 <details open>
-<summary>vendor/punchout-catalogs/punchout-catalog-spryker/data/import/punchout_catalog_connection.csv</summary>
+<summary markdown='span'>vendor/punchout-catalogs/punchout-catalog-spryker/data/import/punchout_catalog_connection.csv</summary>
 
 ```html
 business_unit_key,username,password,credentials,is_active,type,format,name,mapping
@@ -388,7 +388,7 @@ business-unit-mitte-1,user_30,user_30_pass,,1,setup_request,oci,Client 3 - Oci -
 | `mapping` | mandatory | string | | Mapping JSON for the transfer request. |
 
 <details open>
-<summary>Example for mapping<summary>
+<summary markdown='span'>Example for mapping<summary markdown='span'>
 
 ```php
 {
@@ -419,7 +419,7 @@ business-unit-mitte-1,user_30,user_30_pass,,1,setup_request,oci,Client 3 - Oci -
 </details>
 
 <details open>
-<summary>vendor/punchout-catalogs/punchout-catalog-spryker/data/import/punchout_catalog_connection_cart.csv</summary>
+<summary markdown='span'>vendor/punchout-catalogs/punchout-catalog-spryker/data/import/punchout_catalog_connection_cart.csv</summary>
 
 ```html
 connection_name,default_supplier_id,max_description_length,bundle_mode,totals_mode,encoding,mapping
@@ -765,7 +765,7 @@ Client 3 - Oci - User 3,spryker_sup_5,,composite,line,,{}
 | mapping | mandatory | string |  |  JSON definition for cart mapping.|
 
 <details open>
-<summary>Example for mapping</summary>
+<summary markdown='span'>Example for mapping</summary>
 
 ```php
 {
@@ -878,7 +878,7 @@ Client 3 - Oci - User 3,spryker_sup_5,,composite,line,,{}
 </details>
 
 <details open>
-<summary>vendor/punchout-catalogs/punchout-catalog-spryker/data/import/punchout_catalog_connection_setup.csv</summary>
+<summary markdown='span'>vendor/punchout-catalogs/punchout-catalog-spryker/data/import/punchout_catalog_connection_setup.csv</summary>
 
 ```php
 connection_name,default_supplier_id,max_description_length,bundle_mode,totals_mode,encoding,mapping
@@ -1228,7 +1228,7 @@ Register the following plugins to enable data import:
 | `PunchoutCatalogCartDataImportPlugin` | Imports connections cart data into the database. | None | `PunchoutCatalog\Zed\PunchoutCatalog\Communication\Plugin\DataImport` |
 
 <details open>
-<summary>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1280,7 +1280,7 @@ Enable the following behaviors by registering the plugins:
 | `ImpersonationDetailsCustomerExpanderPlugin` | Expands `CustomerTransfer` with Punchout impersonation details. | None |`PunchoutCatalog\Zed\PunchoutCatalog\Communication\Plugin\OauthCompanyUser` |
 
 <details open>
-<summary>src/Pyz/Client/BusinessOnBehalf/BusinessOnBehalfDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/BusinessOnBehalf/BusinessOnBehalfDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1311,7 +1311,7 @@ Make sure that you can't change the company user in your account details when yo
 {% endinfo_block %}
 
 <details open>
-<summary>src/Pyz/Client/Quote/QuoteDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/Quote/QuoteDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1342,7 +1342,7 @@ Make sure that punchout catalogs carts for `SingleUser` connection types do not 
 {% endinfo_block %}
 
 <details open>
-<summary>src/Pyz/Yves/PunchoutCatalog/PunchoutCatalogDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/PunchoutCatalog/PunchoutCatalogDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1376,7 +1376,7 @@ Make sure that in transferred cart XML bundled product items has `childBundleIte
 {% endinfo_block %}
 
 <details open>
-<summary>src/Pyz/Zed/OauthCompanyUser/OauthCompanyUserDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/OauthCompanyUser/OauthCompanyUserDependencyProvider.php</summary>
 
 ```php
 namespace Pyz\Zed\OauthCompanyUser;
@@ -1432,7 +1432,7 @@ Register the following global widgets:
 | `PunchoutCatalogCheckoutButtonsWidget` | Displays `Transfer Cart` and `Cancel Cart & Return` buttons on the cart page. | None | `PunchoutCatalog\Yves\PunchoutCatalog\Widget` |
 
 <details open>
-<summary>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1461,7 +1461,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 Adjust codebase to register `PunchoutCatalogCheckoutButtonsWidget` widget.
 
 <details open>
-<summary>src/Pyz/Yves/CartPage/CartPageDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/CartPage/CartPageDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1507,7 +1507,7 @@ class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
 </details>
 
 <details open>
-<summary>src/Pyz/Yves/CartPage/CartPageFactory.php</summary>
+<summary markdown='span'>src/Pyz/Yves/CartPage/CartPageFactory.php</summary>
 
 ```phph
 <?php
@@ -1532,7 +1532,7 @@ class CartPageFactory extends SprykerCartPageFactory
 </details>
 
 <details open>
-<summary>src/Pyz/Yves/CartPage/Controller/CartController.php</summary>
+<summary markdown='span'>src/Pyz/Yves/CartPage/Controller/CartController.php</summary>
 
 ```php
 namespace Pyz\Yves\CartPage\Controller;
@@ -1565,7 +1565,7 @@ class CartController extends SprykerCartController
 </details>
 
 <details open>
-<summary>src/Pyz/Yves/CartPage/Theme/default/components/molecules/cart-summary/cart-summary.twig</summary>
+<summary markdown='span'>src/Pyz/Yves/CartPage/Theme/default/components/molecules/cart-summary/cart-summary.twig</summary>
 
 ```html
 {% raw %}{%{% endraw %} define data = {
@@ -1598,7 +1598,7 @@ class CartController extends SprykerCartController
 </details>
 
 <details open>
-<summary>src/Pyz/Yves/CartPage/Theme/default/templates/page-layout-cart/page-layout-cart.twig</summary>
+<summary markdown='span'>src/Pyz/Yves/CartPage/Theme/default/templates/page-layout-cart/page-layout-cart.twig</summary>
 
 ```html
 {% raw %}{%{% endraw %} define data = {
@@ -1632,7 +1632,7 @@ Register the following plugin:
 | `PunchoutCatalogControllerProvider` | Provides routes used in `PunchoutCatalogCheckoutButtonsWidget`. | None | `PunchoutCatalog\Yves\PunchoutCatalog\Plugin\Provider` |
 
 <details open>
-<summary>src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>
 
 ```php
 <?php
@@ -1667,7 +1667,7 @@ Make sure that when you click `Transfer Cart` button on a cart page, it redirect
 ### 3) Set up Behavior
 #### Set up Punchout Catalogs Workflow
 <details open>
-<summary>src/Pyz/Yves/CustomerPage/Controller/AccessTokenController.php</summary>
+<summary markdown='span'>src/Pyz/Yves/CustomerPage/Controller/AccessTokenController.php</summary>
 
 ```php
 <?php

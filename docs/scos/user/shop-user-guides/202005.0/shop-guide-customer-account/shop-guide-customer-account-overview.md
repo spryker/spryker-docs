@@ -37,13 +37,13 @@ The article describes how you can get information about your customer activity a
 * Newsletter. See [Newsletter](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/shop-guide-newsletter.html) for details.
 
 <details open>
-<summary>B2B Shop</summary>
+<summary markdown='span'>B2B Shop</summary>
 
 ![b2b-overview](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Customer+Account/Overview/b2b-overview.png) 
 </details>
 
 <details open>
-<summary>B2C Shop</summary>
+<summary markdown='span'>B2C Shop</summary>
 
 ![b2c-overview](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Customer+Account/Overview/b2c-overview.png) 
 </details>

@@ -106,7 +106,7 @@ The following templates are used to set up your category look:
 
 Select this template to display all product pages linked to the selected category. The product pages include the general product description, a price, an image, and a clickable **View** button that redirects you to the product details page.
 
-<details><summary>The Catalog(default) template on the Storefront</summary>
+<details><summary markdown='span'>The Catalog(default) template on the Storefront</summary>
 
 ![Catalog](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Category/Category%3A+Reference+Information/Catalog.gif)
 
@@ -115,7 +115,7 @@ Select this template to display all product pages linked to the selected categor
 **Catalog+Slots**
 Select this template to show all product pages assigned to the selected category and a CMS Block. Depending on your design requirements, you need to set a specific CMS block and specify where it should be displayed: top, middle, or bottom.
 
-<details><summary>The Catalog+CMS Block template on the Storefront</summary>
+<details><summary markdown='span'>The Catalog+CMS Block template on the Storefront</summary>
 
 ![Catalog + Slots](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Category/Category%3A+Reference+Information/Catalog%2BCms+Block.gif)
 
@@ -126,7 +126,7 @@ The category is in the catalog, and two CMS blocks are now displayed on the page
 **Sub Category grid**
 Select the *Sub Category grid* template to create a multilevel category structure. Here you can assign an image to each subcategory.
 
-<details><summary>The Sub Category grid template on the Storefront</summary>
+<details><summary markdown='span'>The Sub Category grid template on the Storefront</summary>
 
 ![Sub Category grid](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Category/Category:+Reference+Information/sub+category.gif)
 

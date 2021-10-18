@@ -60,7 +60,7 @@ The following imported entities will be used as data for Business on Behalf Comp
 Prepare your data according to your requirements using our demo data:
 
 <details open>
-<summary>vendor/spryker/spryker/Bundles/BusinessOnBehalfDataImport/data/import/company_user.csv</summary>
+<summary markdown='span'>vendor/spryker/spryker/Bundles/BusinessOnBehalfDataImport/data/import/company_user.csv</summary>
  
 ```bash
 customer_reference,company_key,business_unit_key,default
@@ -88,7 +88,7 @@ Register the following plugin to enable data import:
 |`BusinessOnBehalfCompanyUserDataImportPlugin`|Imports Business on Behalf Company Users.|Assumes that the Customer keys exist in the database.</br>Assumes that the Company keys exist in the database.</br>Assumes that the Company Business Unit keys exist in the database.|`Spryker\Zed\BusinessOnBehalfDataImport\Communication\Plugin\DataImport`|
 
 <details open>
-<summary>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -130,7 +130,7 @@ Enable the following behaviors by registering the plugins:
 |`IsOnBehalfCustomerTransferExpanderPlugin`| Sets `CustomerTransfer.IsOnBehalf` property so other features can determine if the selected Company User is a Business on Behalf Company User.|None|`Spryker\Zed\BusinessOnBehalf\Communication\Plugin\Customer`|
 
 <details open>
-<summary>src/Pyz/Zed/Customer/CustomerDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Customer/CustomerDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -186,7 +186,7 @@ Make sure that the following module has been installed:<table><thead><tr><td>Mod
 ### 2) Add Translations
 Append glossary according to your configuration:
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 business_on_behalf_widget.no_selected_company,No selected company,en_US
@@ -219,7 +219,7 @@ Register the following plugin to enable widgets:
 |`BusinessOnBehalfStatusWidget`|Displays the selected Company Users and allows for Business on Behalf customers to change it through a link.|None|`SprykerShop\Yves\BusinessOnBehalfWidget\Widget`|
 
 <details open>
-<summary>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

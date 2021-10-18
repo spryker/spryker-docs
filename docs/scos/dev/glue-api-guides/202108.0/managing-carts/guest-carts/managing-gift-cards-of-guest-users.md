@@ -61,7 +61,7 @@ To redeem a gift card, send the request:
 
 
 <details open>
-<summary>Request sample</summary>
+<summary markdown='span'>Request sample</summary>
 
 `https://glue.mysprykershop.com/guest-carts/f8782b6c-848d-595e-b3f7-57374f1ff6d7/cart-codes?include=vouchers,gift-cards`
 

@@ -75,7 +75,7 @@ To get related items of an abstract product, send the request:
 ### Response
 
 <details open>
-<summary>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
     {
@@ -317,7 +317,7 @@ To get related items of an abstract product, send the request:
 
 
 <details open>
-<summary>Response sample with included product labels</summary>
+<summary markdown='span'>Response sample with included product labels</summary>
 
 ```json
  {
@@ -659,7 +659,7 @@ Request sample : `GET http://mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-449
 
 
 <details open>
-<summary> Sample Response</summary>
+<summary markdown='span'> Sample Response</summary>
 
 ```json
 {
@@ -935,7 +935,7 @@ Request sample : `GET http://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59
 ### Response
 
 <details open>
-<summary>Sample Response </summary>
+<summary markdown='span'>Sample Response </summary>
 
 ```js
 {

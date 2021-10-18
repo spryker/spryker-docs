@@ -38,7 +38,7 @@ $config[FactFinderNgConstants::FACT_FINDER_PASSWORD] = ''; # Fact-Finder passwor
 ## Import Usage
 Fact-Finder has an import API call. It can be used to update product information by URL set on the Fact-Finder side. To trigger the import, you have to add Console command to `ConsoleDependecyProvider`.
 <details open>
-<summary>ConsoleDependencyProvider.php</summary>
+<summary markdown='span'>ConsoleDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -66,7 +66,7 @@ You can import using the console fact-finder-ng:import:search command.
 ## Tracking Usage
 There are tracking functions at the Client layer in the module. 
 <details open>
-<summary>FactFinderNgClientInterface.php</summary>
+<summary markdown='span'>FactFinderNgClientInterface.php</summary>
 
 ```php
 <?php
@@ -122,7 +122,7 @@ You can use it anywhere you want in your application. You can send a few events 
 
 E.g., you can use it on the Success step during the checkout process:
 <details open>
-<summary>SuccessStep</summary>
+<summary markdown='span'>SuccessStep</summary>
 
 ```php
 <?php
@@ -174,7 +174,7 @@ class SuccessStep extends SprykerSuccessStep
 For using search functions, you have to extend SearchClient on the project level. If you want to use different search engines, you might need to create search router, for choosing the right engine. 
 
 <details open>
-<summary>SearchRouter</summary>
+<summary markdown='span'>SearchRouter</summary>
 
 ```php
 <?php
@@ -229,7 +229,7 @@ class SearchRouter implements SearchRouterInterface
 
 If you want to use ElasticSearch for specific cases, you have to create a plugin on the project level
 <details open>
-<summary>ElasticSearchHandlerPlugin</summary>
+<summary markdown='span'>ElasticSearchHandlerPlugin</summary>
 
 ```php
 <?php
@@ -278,7 +278,7 @@ class ElasticSearchHandlerPlugin extends AbstractPlugin
 The Fact-Finder Ng module contains plugins for choosing search, suggestion, or navigation request should be used. By now you can create plugin stack in `SearchDependencyProvider` for using in `SearchRouter`. 
 
 <details open>
-<summary>SearchDependencyProvider</summary>
+<summary markdown='span'>SearchDependencyProvider</summary>
 
 ```php
 <?php
@@ -364,7 +364,7 @@ class SearchDependencyProvider extends SprykerSearchDependencyProvider
 Then SearchClient can be adjusted:
 
 <details open>
-<summary>SearchRouter</summary>
+<summary markdown='span'>SearchRouter</summary>
 
 ```php
 <?php
@@ -410,7 +410,7 @@ class SearchClient extends SprykerSearchClient
 The idea that you have to adjust places, where the search is called for adding needed params to request parameters. For example, you can adjust `SuggestionController` for adding a suggest parameter, so `FactFinderNgSuggestHandlerPlugin` will know that it should be called.
 
 <details open>
-<summary>SuggestionController</summary>
+<summary markdown='span'>SuggestionController</summary>
 
 ```php
 <?php

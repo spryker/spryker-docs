@@ -114,7 +114,7 @@ To configure the Composer authentication environment variable:
     ```json
     {
         "gitlab-token": {
-            "example.org": "{GITLAB_TOKEN}"
+            "mysprykershop.com": "{GITLAB_TOKEN}"
         }
     }
     ```

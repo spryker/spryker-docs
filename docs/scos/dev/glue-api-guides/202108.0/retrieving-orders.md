@@ -68,7 +68,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 
 <details open>
-<summary>Response sample with one order</summary>
+<summary markdown='span'>markdown='span'>Response sample with one order</summary>
 
 ```
 {
@@ -149,7 +149,7 @@ To retrieve detailed information on an order, send the request:
 ### Response
 
 <details open>
-    <summary>Response sample</summary>
+    <summary markdown='span'>markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -368,7 +368,7 @@ To retrieve detailed information on an order, send the request:
 </details>
 
 <details open>
-<summary>Response sample with order shipments</summary>
+<summary markdown='span'>markdown='span'>Response sample with order shipments</summary>
 
 ```json
 {
@@ -664,7 +664,7 @@ To retrieve detailed information on an order, send the request:
 </details>
 
 <details open>
-<summary>Response sample with a configurable bundle</summary>
+<summary markdown='span'>markdown='span'>Response sample with a configurable bundle</summary>
 
 ```json
 {

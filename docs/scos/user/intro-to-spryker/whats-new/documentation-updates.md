@@ -32,21 +32,21 @@ Below you will find the list of the new/updated documentation released as part o
 * [Split Delivery](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/split-delivery-overview.html)
 
 <details open>
-<summary>Feature overview</summary>
+<summary markdown='span'>Feature overview</summary>
 
 [Split Delivery Overview](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/split-delivery-overview.html)
 
 </details>
 
 <details open>
-<summary>Migration guide</summary>
+<summary markdown='span'>Migration guide</summary>
 
 [Split Delivery Migration Concept](/docs/scos/dev/migration-concepts/split-delivery-migration-concept.html)
 
 
 </details>
 <details open>
-<summary>HowTo</summary>
+<summary markdown='span'>HowTo</summary>
 
 
 [HowTo - Disable Split Delivery in Yves Interface](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-disable-split-delivery-in-yves-interface.html)
@@ -55,7 +55,7 @@ Below you will find the list of the new/updated documentation released as part o
 </details>
 
 <details open>
-<summary>Back Office user guides</summary>
+<summary markdown='span'>Back Office user guides</summary>
 
 
 * [Creating a New Shipment for Order](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/managing-order-shipments.html#creating-a-new-shipment-for-an-order)
@@ -63,7 +63,7 @@ Below you will find the list of the new/updated documentation released as part o
 
 </details>
 <details open>
-<summary>Shop user guide</summary>
+<summary markdown='span'>Shop user guide</summary>
 
 
 [Assigning Multiple Delivery Addresses to Order](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/managing-order-shipments.html#creating-a-new-shipment-for-an-order)
@@ -74,28 +74,28 @@ Below you will find the list of the new/updated documentation released as part o
 * [Packaging Units with Decimal Stock](/docs/scos/user/features/{{site.version}}/packaging-units-feature-overview.html)
 
 <details open>
-<summary>Feature overview</summary>
+<summary markdown='span'>Feature overview</summary>
 
 [Packaging Units Feature Overview](/docs/scos/user/features/{{site.version}}/packaging-units-feature-overview.html)
 
 </details>
 
 <details open>
-<summary>Integration guide</summary>
+<summary markdown='span'>Integration guide</summary>
 
 [Packaging Units Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/packaging-units-feature-integration.html)
 
 </details>
 
 <details open>
-<summary>Migration  guide</summary>
+<summary markdown='span'>Migration  guide</summary>
 
 [Decimal Stock Migration Concept](/docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html)
 
  </details>
 
  <details open>
-<summary>HowTo</summary>
+<summary markdown='span'>HowTo</summary>
 
 [HowTo - Import Packaging Units](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-packaging-units.html)
 
@@ -104,33 +104,33 @@ Below you will find the list of the new/updated documentation released as part o
 
 * [Scheduled Prices](/docs/scos/user/features/{{site.version}}/scheduled-prices-feature-overview.html)
 <details open>
-<summary>Feature overview</summary>
+<summary markdown='span'>Feature overview</summary>
 
 [Scheduled Prices Feature Overview](/docs/scos/user/features/{{site.version}}/scheduled-prices-feature-overview.html)
 
 </details>
 <details open>
-<summary>Integration guide</summary>
+<summary markdown='span'>Integration guide</summary>
 
 [Scheduled Prices Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/scheduled-prices-feature-integration.html)
 
 </details>
 <details open>
-<summary>Migration guides</summary>
+<summary markdown='span'>Migration guides</summary>
 
 * [PriceProductSchedule migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-priceproductschedule.html)
 * [PriceProductScheduleGui migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-priceproductschedulegui.html)
 
 </details>
 <details open>
-<summary>HowTo</summary>
+<summary markdown='span'>HowTo</summary>
 
 [Schedule Cron Job for Scheduled Prices](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-schedule-cron-job-for-scheduled-prices.html)
 
 </details>
 
 <details open>
-<summary>Back Office user guides</summary>
+<summary markdown='span'>Back Office user guides</summary>
 
 * [Creating Scheduled Prices](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/scheduled-prices/creating-scheduled-prices.html)
 * [Managing Scheduled Prices](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/scheduled-prices/managing-scheduled-prices.html)
@@ -141,21 +141,21 @@ Below you will find the list of the new/updated documentation released as part o
 * [CMS Templates & Slots](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html)
 
 <details open>
-<summary>Feature overview</summary>
+<summary markdown='span'>Feature overview</summary>
 
 [CMS Templates & Slots Feature Overview](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html )
 
 </details>
 
 <details open>
-<summary>Integration guide</summary>
+<summary markdown='span'>Integration guide</summary>
 
 [CMS Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/cms-feature-integration.html)
 
 </details>
 
 <details open>
-<summary>Migration guides</summary>
+<summary markdown='span'>Migration guides</summary>
 
 
 * [CmsBlock - migration from v. 2.* to v. 3.*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cmsblock.html#upgrading-from-version-2-to-version-3)
@@ -166,7 +166,7 @@ Below you will find the list of the new/updated documentation released as part o
 </details>
 
 <details open>
-<summary>Back Office user guides</summary>
+<summary markdown='span'>Back Office user guides</summary>
 
 * [Slots](/docs/scos/user/back-office-user-guides/{{site.version}}/content/slots/managing-slots.html)
 * [Managing Slots](/docs/scos/user/back-office-user-guides/{{site.version}}/content/slots/managing-slots.html)
@@ -174,7 +174,7 @@ Below you will find the list of the new/updated documentation released as part o
 </details>
 
 <details open>
-<summary>Technology Partners guides</summary>
+<summary markdown='span'>Technology Partners guides</summary>
 
 [Coremedia with Templates & Slots](/docs/scos/user/technology-partners/{{site.version}}/content-management/coremedia.html)
 
@@ -184,14 +184,14 @@ Below you will find the list of the new/updated documentation released as part o
 * [Approval Process](/docs/scos/user/features/{{site.version}}/approval-process-feature-overview.html)
 
 <details open>
-<summary>Feature overview</summary>
+<summary markdown='span'>Feature overview</summary>
 
 [Approval Process Feature Overview](/docs/scos/user/features/{{site.version}}/approval-process-feature-overview.html)
 
 </details>
 
 <details open>
-<summary>Integration guides</summary>
+<summary markdown='span'>Integration guides</summary>
 
 * [Approval Process Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/approval-process-feature-integration.html)
 * [Shipment + Approval Process Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/shipment-approval-process-feature-integration.html)
@@ -200,7 +200,7 @@ Below you will find the list of the new/updated documentation released as part o
 </details>
 
 <details open>
-<summary>Shop User guide</summary>
+<summary markdown='span'>Shop User guide</summary>
 
 [Shop Guide - Approval Process](/docs/scos/user/features/{{site.version}}/approval-process-feature-overview.html)
 
@@ -210,14 +210,14 @@ Below you will find the list of the new/updated documentation released as part o
 * [Configurable Bundle](/docs/scos/user/features/{{site.version}}/configurable-bundle-feature-overview.html)
 
 <details open>
-<summary>Feature overview</summary>
+<summary markdown='span'>Feature overview</summary>
 
 [Configurable Bundle Feature Overview](/docs/scos/user/features/{{site.version}}/configurable-bundle-feature-overview.html)
 
 </details>
 
 <details open>
-<summary>Integration guides</summary>
+<summary markdown='span'>Integration guides</summary>
 
 * [Configurable Bundle Feature Integration](/docs/scos/user/features/{{site.version}}/configurable-bundle-feature-overview.html)
 * [Product Images + Configurable Bundle](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-images-configurable-bundle-feature-integration.html)
@@ -230,7 +230,7 @@ Below you will find the list of the new/updated documentation released as part o
 </details>
 
 <details open>
-<summary>Migration guides</summary>
+<summary markdown='span'>Migration guides</summary>
 
 * [ConfigurableBundle migration from v. 1* to v. 2*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-configurablebundle.html)
 * [ConfigurableBundleStorage migration from v. 1* to v. 2*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-configurablebundlestorage.html)
@@ -239,7 +239,7 @@ Below you will find the list of the new/updated documentation released as part o
 
 </details>
 <details open>
-<summary>HowTo</summary>
+<summary markdown='span'>HowTo</summary>
 
 [Rendering Configurable Bundle Templates in the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-render-configurable-bundle-templates-in-the-storefront.html)
 
@@ -250,7 +250,7 @@ Below you will find the list of the new/updated documentation released as part o
 * [Product Labels API](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/retrieving-product-labels.html)
 
 <details open>
-<summary>Integration guide</summary>
+<summary markdown='span'>Integration guide</summary>
 
 [Glue API: Promotions & Discounts Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
 
@@ -259,7 +259,7 @@ Below you will find the list of the new/updated documentation released as part o
 * [Product Discounts API](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-promotional-items.html)
 
 <details open>
-<summary>Integration guide</summary>
+<summary markdown='span'>Integration guide</summary>
 
 [Glue API: Promotions & Discounts Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
 
@@ -272,7 +272,7 @@ Below you will find the list of the new/updated documentation released as part o
 * [Ratings and Reviews API](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/managing-product-ratings-and-reviews.html)
 
 <details open>
-<summary>Integration guide</summary>
+<summary markdown='span'>Integration guide</summary>
 
 [Glue API: Product Rating & Reviews Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-rating-and-reviews-feature-integration.html)
 
@@ -284,7 +284,7 @@ Below you will find the list of the new/updated documentation released as part o
 [Retrieving prodiuct options for concrete products](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-products.html)
 
 <details open>
-<summary>Integration guide</summary>
+<summary markdown='span'>Integration guide</summary>
 
 [Glue API: Product Options Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-options-feature-integration.html)
 
@@ -303,14 +303,14 @@ Below you will find the list of the new/updated documentation released as part o
 * [Health checks](/docs/scos/dev/technical-enhancements/health-checks.html)
 * [Asset Management](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/asset-management.html)
 <details open>
-<summary>Feature overview</summary>
+<summary markdown='span'>Feature overview</summary>
 
 [Asset Management Feature Overview](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/asset-management.html)
 
 </details>
 
 <details open>
-<summary>Integration guide</summary>
+<summary markdown='span'>Integration guide</summary>
 
 [Custom Location for Static Assets](/docs/scos/dev/technical-enhancements/custom-location-for-static-assets.html)
 

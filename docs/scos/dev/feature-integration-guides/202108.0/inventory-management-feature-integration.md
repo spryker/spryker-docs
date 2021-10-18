@@ -491,7 +491,7 @@ Register the following plugins for warehouse address management:
 | StockAddressStockCollectionExpanderPlugin | Expands a warehouse collection with related addresses. |  | Spryker\Zed\StockAddress\Communication\Plugin\Stock |
 
 <details open>
-    <summary>Zed/Stock/StockDependencyProvider.php</summary>
+    <summary markdown='span'>Zed/Stock/StockDependencyProvider.php</summary>
 
 ```php
 <?php

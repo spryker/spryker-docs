@@ -59,7 +59,7 @@ Activate the following plugin:
 | `ConcreteProductAvailabilitiesResourceRelationshipPlugin` | Adds concrete product availability resource as a relationship to concrete product resource. | None | `Spryker\Glue\ProductsProductAvailabilitiesResourceRelationship\Plugin` |
 
 <details open>
-<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

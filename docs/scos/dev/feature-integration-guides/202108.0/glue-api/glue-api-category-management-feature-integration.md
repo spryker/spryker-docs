@@ -1,5 +1,5 @@
 ---
-title: Glue API- Category management feature integration
+title: Glue API - Category management feature integration
 description: This guide will navigate you through the process of installing and configuring the Category API feature in Spryker OS.
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-category-management-feature-integration
@@ -39,18 +39,21 @@ composer require spryker/categories-rest-api:"^1.1.3" --update-with-dependencies
 
 
 Make sure that the following module has been installed: 
-|MODULE |EXPECTED DIRECTORY |
-|--- |--- |
+
+| MODULE |EXPECTED DIRECTORY |
+| --- | --- |
 |CategoriesRestApi |vendor/spryker/categories-rest-api|
 
 
 {% endinfo_block %}
+
 ## 2) Set up configuration
 
 Set up the following configuration
 
 **src/Pyz/Glue/NavigationsRestApi/NavigationsRestApiConfig.php**
-```
+
+```php
 <?php
 
 namespace Pyz\\Glue\\NavigationsRestApi;
@@ -78,7 +81,8 @@ class NavigationsRestApiConfig extends SprykerNavigationsRestApiConfig
 ## 3) Set up transfer objects
 
 Generate transfer changes:
-```
+
+```bash
 console transfer:generate
 ```
   
@@ -93,22 +97,21 @@ Make sure that the following changes have occurred:
 |RestCategoryNodesAttributesTransfer |class |created |src/Generated/Shared/Transfer/RestCategoryNodesAttributesTransfer|
 
 {% endinfo_block %}
+
 ## 4) Enable resources and relationships
 
 Activate the following plugins:
-
   
-
 |PLUGIN| SPECIFICATION| PREREQUISITES| NAMESPACE| 
 |--- |--- |--- |--- |
 |CategoriesResourceRoutePlugin| Registers the `category-tree` resource.| | Spryker\Glue\CategoriesRestApi\Plugin| 
 |CategoryResourceRoutePlugin| Registers the `category-nodes` resource.| | Spryker\Glue\CategoriesRestApi\Plugin | 
 |CategoryNodeRestUrlResolverAttributesTransferProviderPlugin| Maps the data for `RestUrlResolverAttributesTransfer` from `UrlStorageTransfer`.| | Spryker\Glue\CategoriesRestApi\Plugin\UrlsRestApi|
-
   
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
-```
+
+```php
 <?php
 
 namespace Pyz\Glue\GlueApplication;
@@ -134,7 +137,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
   
 
 **src/Pyz/Glue/UrlsRestApi/UrlsRestApiDependencyProvider.php**
-```
+
+```php
 <?php
 
 namespace Pyz\Glue\UrlsRestApi;

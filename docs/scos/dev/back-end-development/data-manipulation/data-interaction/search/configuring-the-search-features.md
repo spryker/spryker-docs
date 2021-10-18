@@ -30,7 +30,7 @@ This configuration is only relevant if you enable the three query expanders and 
 To build configuration for the search features, provide implementation for `\Spryker\Client\SearchExtension\Dependency\Plugin\SearchConfigBuilderPluginInterface`:
 
 <details open>
-<summary>SearchElasticsearch</summary>
+<summary markdown='span'>SearchElasticsearch</summary>
 
 ```php
 <?php
@@ -69,7 +69,7 @@ The goal is to create `FacetConfigTransfer` instances with some data, and set it
 Let’s assume that previously in your `PageMapInterface`you mapped an integer facet called “price” with some data (note the use of `addIntegerFacet()` in the example above). So now you want to add a price range filter for that data.
 
 <details open>
-<summary>Plugin\SearchElasticsearch</summary>
+<summary markdown='span'>Plugin\SearchElasticsearch</summary>
 
 ```php
 <?php
@@ -126,7 +126,7 @@ You can create and add as many `FacetConfigTransfers` as you need. Let’s analy
 * The next method you implement is the`buildSortConfig()`, where you configure your sorting options. Let’s assume you want to sort by name and price, and you’ve already added them when implementing `PageMapInterface` (check the use of `addStringSort()` and `addIntegerSort()` in the example above).
 
 <details open>
-<summary>Pyz\Client\Catalog\Plugin\Config</summary>
+<summary markdown='span'>Pyz\Client\Catalog\Plugin\Config</summary>
 
 ```php
 <?php
@@ -264,7 +264,7 @@ Note that, by default, Elasticsearch is sorting by relevance. The cost of each d
 {% endinfo_block %}
 To add the code that configures the pagination of the results.
 <details open>
-<summary>Pyz\Client\Catalog\Plugin\Config</summary>
+<summary markdown='span'>Pyz\Client\Catalog\Plugin\Config</summary>
 
 ```php
 <?php

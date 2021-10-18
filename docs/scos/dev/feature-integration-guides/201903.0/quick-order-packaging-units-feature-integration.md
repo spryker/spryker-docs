@@ -27,7 +27,7 @@ Enable the following behaviors by registering the plugins:
 |`QuickOrderItemDefaultPackagingUnitExpanderPlugin`|Expands `ItemTransfer` with packaging unit data if available.|None|`SprykerShop\Yves\ProductPackagingUnitWidget\Plugin\QuickOrder`|
 
 <details open>
-<summary>src/Pyz/Yves/QuickOrderPage/QuickOrderPageDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/QuickOrderPage/QuickOrderPageDependencyProvider.php</summary>
 
 ```php
 <?php

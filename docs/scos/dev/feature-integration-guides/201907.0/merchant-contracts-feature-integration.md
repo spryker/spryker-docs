@@ -57,7 +57,7 @@ The following imported entities will be used as merchant relationships in Spryke
 Prepare your data according to your requirements using our demo data:
 
 <details open>
-<summary> vendor/spryker/merchant-relationship-data-import/data/import/merchant_relationship.csv</summary>
+<summary markdown='span'> vendor/spryker/merchant-relationship-data-import/data/import/merchant_relationship.csv</summary>
 
  ```yaml
 merchant_relation_key,merchant_key,company_business_unit_owner_key,company_business_unit_assignee_keys
@@ -101,7 +101,7 @@ Register the following plugin to enable data import:
 |  `MerchantRelationshipDataImportPlugin` | Imports merchant relationship data into the database. | None |  `Spryker\Zed\MerchantRelationshipDataImport\Communication\Plugin` |
 
 <details open>
- <summary> src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
+ <summary markdown='span'> src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -145,7 +145,7 @@ Enable the following behaviors by registering the plugins:
 |  `MerchantRelationshipHydratePlugin` | Expands company user transfers, which has a company business unit with the merchant relationship data. | Expects, that company users have an assigned company business unit, which will be expanded with the merchant relationship data. |  `Spryker\Zed\MerchantRelationship\Communication\Plugin\CompanyUser` |
 
 <details>
-<summary> src/Pyz/Zed/CompanyUser/CompanyUserDependencyProvider.php</summary>
+<summary markdown='span'> src/Pyz/Zed/CompanyUser/CompanyUserDependencyProvider.php</summary>
 
  ```php
 <?php

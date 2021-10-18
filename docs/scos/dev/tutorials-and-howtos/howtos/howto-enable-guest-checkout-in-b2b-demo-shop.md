@@ -41,7 +41,7 @@ To enable guest checkout:
 
 5. In CheckoutPage module, create `src/Pyz/Yves/CheckoutPage/Theme/default/views/login/login.twig`.
 <details open>
-    <summary>src/Pyz/Yves/CheckoutPage/Theme/default/views/login/login.twig</summary>
+    <summary markdown='span'>src/Pyz/Yves/CheckoutPage/Theme/default/views/login/login.twig</summary>
 
 ```twig
 {% raw %}{%{% endraw %} extends template('page-layout-checkout', 'CheckoutPage') {% raw %}%}{% endraw %}

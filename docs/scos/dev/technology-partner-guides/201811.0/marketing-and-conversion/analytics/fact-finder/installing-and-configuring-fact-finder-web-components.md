@@ -24,7 +24,7 @@ composer require spryker-eco/fact-finder-web-components
 To set up the authorization configuration, use the following code example:
 
 <details open>
-<summary>config/Shared/config_default.php</summary>
+<summary markdown='span'>config/Shared/config_default.php</summary>
 
 ```php
 ...
@@ -46,7 +46,7 @@ $config[FactFinderWebComponentsConstants::COMMUNICATION_COMPONENT_CONFIG] = [
 To set up the components configuration, use the following config code as an example:
 
 <details open>
-<summary>config/Shared/config_default.php</summary>
+<summary markdown='span'>config/Shared/config_default.php</summary>
 
 ```php
 ...
@@ -242,7 +242,7 @@ $config[FactFinderWebComponentsConstants::CAMPAIGN_COMPONENT_CONFIG] = [
 ## Integration into Project
 
 <details open>
-<summary> frontend/settings.js</summary>
+<summary markdown='span'> frontend/settings.js</summary>
 
 ```js
 // define project relative paths to context
@@ -288,7 +288,7 @@ module.exports = {
 </details>
 
  <details open>
-<summary>src/Pyz/Yves/ShopUi/Theme/default/es6-polyfill.ts</summary>
+<summary markdown='span'>src/Pyz/Yves/ShopUi/Theme/default/es6-polyfill.ts</summary>
 
 ```js
 // add es6 polyfill
@@ -310,7 +310,7 @@ if (hasNativeCustomElements) {
 </details>
 
  <details open>
-<summary> src/Pyz/Yves/ShopUi/Theme/default/vendor.ts</summary>
+<summary markdown='span'> src/Pyz/Yves/ShopUi/Theme/default/vendor.ts</summary>
 
 ```js
 // add es6 polyfill
@@ -332,7 +332,7 @@ if (hasNativeCustomElements) {
 </details>
 
  <details open>
-<summary>src/Pyz/Yves/ShopUi/Theme/default/vendor.ts</summary>
+<summary markdown='span'>src/Pyz/Yves/ShopUi/Theme/default/vendor.ts</summary>
 
 ```js
 // add webcomponents polyfill
@@ -347,7 +347,7 @@ import 'ff-web-components/dist/bundle';
 Update in Core "@webcomponents/webcomponentsjs": "^2.0.4",
 
  <details open>
-<summary>package.json</summary>
+<summary markdown='span'>package.json</summary>
 
 ```json
 "dependencies": {

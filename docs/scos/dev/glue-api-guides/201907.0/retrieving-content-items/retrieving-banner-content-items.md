@@ -37,7 +37,7 @@ The locale must be specified in the **header** of the GET request. If no locale 
 If the request is successful and the Banner content item with the specified content item key has been found, the endpoint will respond with **RestContentBannerResponse**.
 
 <details open>
-<summary>Sample response:</summary>
+<summary markdown='span'>Sample response:</summary>
     
 ```php
 {

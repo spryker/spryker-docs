@@ -64,7 +64,7 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 
 
 <details open>
-    <summary>Request sample with one shipment</summary>
+    <summary markdown='span'>Request sample with one shipment</summary>
 
 ```json
 {
@@ -125,7 +125,7 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 </details>
 
 <details open>
-    <summary>Request sample with a split shipment</summary>
+    <summary markdown='span'>Request sample with a split shipment</summary>
 
 ```json
 {
@@ -207,7 +207,7 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 </details>
 
 <details open>
-    <summary>Request sample with a split shipment and addresses passed as IDs</summary>
+    <summary markdown='span'>Request sample with a split shipment and addresses passed as IDs</summary>
 
 ```json
 {
@@ -299,7 +299,7 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 In case of a successful update, the endpoint responds with information that can help you fill in the missing checkout data, like the customer's addresses, available payment and shipment methods.
 
 <details open>
-<summary>Response sample with one shipment</summary>
+<summary markdown='span'>Response sample with one shipment</summary>
     
 ```json
 {
@@ -334,7 +334,7 @@ In case of a successful update, the endpoint responds with information that can 
 
 
 <details open>
-<summary>Response sample with a split shipment</summary>
+<summary markdown='span'>Response sample with a split shipment</summary>
 
 ```json
 {
@@ -463,7 +463,7 @@ In case of a successful update, the endpoint responds with information that can 
 </details>
 
 <details open>
-<summary>Response sample with a split shipment, shipments, and shipment methods</summary>
+<summary markdown='span'>Response sample with a split shipment, shipments, and shipment methods</summary>
 
 ```json
 {
@@ -714,7 +714,7 @@ In case of a successful update, the endpoint responds with information that can 
 </details>
 
 <details open>
-<summary>Response sample with customer addresses</summary>
+<summary markdown='span'>Response sample with customer addresses</summary>
 
 ```json
 {
@@ -837,7 +837,7 @@ In case of a successful update, the endpoint responds with information that can 
 
 
 <details open>
-<summary>Response sample with company business unit addresses</summary>
+<summary markdown='span'>Response sample with company business unit addresses</summary>
 
 ```json
 {
@@ -909,7 +909,7 @@ In case of a successful update, the endpoint responds with information that can 
 </details>
 
 <details open>
-<summary>Response sample with payment methods</summary>
+<summary markdown='span'>Response sample with payment methods</summary>
 
 ```json
 {

@@ -63,7 +63,7 @@ Activate the following plugin:
 | `VoucherByQuoteResourceRelationshipPlugin` | Adds the **vouchers** resource as a relationship by quote. | None | `Spryker\Glue\CartCodesRestApi\Plugin\GlueApplication` |
 
 <details open>
-   <summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+   <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
     
 ```php
 <?php
@@ -262,7 +262,7 @@ Make sure that the following endpoint is available:<ul><li>`http://glue.myspryke
 {% endinfo_block %}
 
 <details open>
-<summary>Example</summary>
+<summary markdown='span'>Example</summary>
 
 ```json
 {
@@ -364,7 +364,7 @@ Make sure that the following endpoint is available:<ul><li>`http://glue.myspryke
 {% endinfo_block %}
 
 <details open>
-<summary>Example</summary>
+<summary markdown='span'>Example</summary>
 
 ```json
 {

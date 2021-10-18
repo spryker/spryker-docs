@@ -75,7 +75,7 @@ The endpoint responds with a `RestCompanyUserCollectionResponse` that contains
 *The attributes mentioned are all attributes in the response. Type is not mentioned.
 
 <details open>
-<summary>Sample Response</summary>
+<summary markdown='span'>Sample Response</summary>
     
 ```json
 {
@@ -151,7 +151,7 @@ In this case, the following additional attributes will be added to the response:
 *The attributes mentioned are all attributes in the response. Type and ID are not mentioned.
 
 <details open>
-<summary>Sample Response</summary>
+<summary markdown='span'>Sample Response</summary>
     
 ```json
 {
@@ -347,7 +347,7 @@ To access the endpoint, you need to authenticate customers as regular users firs
 | idCompanyUser | String | Specifies the ID of the Company User to impersonate.</br>Company User IDs can be retrieved using the **/company-users/mine** endpoint. |
 
 <details open>
-<summary>Sample Request:</summary>
+<summary markdown='span'>Sample Request:</summary>
     
 ```json
 {
@@ -378,7 +378,7 @@ If the request was successful, the endpoint responds with a **RestCompanyUserAc
 *The attributes mentioned are all attributes in the response. Type and ID are not mentioned.
 
 <details open>
-<summary>Sample Response</summary>
+<summary markdown='span'>Sample Response</summary>
     
 ```json
 {

@@ -56,7 +56,7 @@ Adjust the schema definition so that entity changes can trigger events.
 |`spy_shopping_list_company_business_unit`|`Entity.spy_shopping_list_company_business_unit.create`</br>`Entity.spy_shopping_list_company_business_unit.update`</br>`Entity.spy_shopping_list_company_business_unit.delete`|
 
 <details open>
-<summary>src/Pyz/Zed/ShoppingList/Persistence/Propel/Schema/spy_shopping_list.schema.xml</summary>
+<summary markdown='span'>src/Pyz/Zed/ShoppingList/Persistence/Propel/Schema/spy_shopping_list.schema.xml</summary>
     
 ```xml
 <?xml version="1.0"?>
@@ -178,7 +178,7 @@ Make sure that the changes were implemented successfully. For this purpose, trig
 Append a glossary for the feature:
 
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
     
 ```bash
 customer.account.shopping_list.item.add.success,Item %sku% was added to the List.,en_US
@@ -220,7 +220,7 @@ This step will publish tables on change (create, edit, delete) to the `spy_shopp
 |`ShoppingListStorageEventSubscriber`|Registers listeners that are responsible for publishing shopping list data based on changes to shopping lists or related entities.|None|`Spryker\Zed\ShoppingListStorage\Communication\Plugin\Event\Subscriber`|
 
 <details>
-<summary>src/Pyz/Zed/Event/EventDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Event/EventDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -251,7 +251,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 |`ShoppingListSynchronizationDataPlugin`|Allows populating an empty storage table with data.|None|`Spryker\Zed\ShoppingListStorage\Communication\Plugin\Synchronization`|
 
 <details open>
-<summary>src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -286,7 +286,7 @@ Add Infrastructural Data
 |`ShoppingListPermissionsInstallerPlugin`|Installs infrastructural shopping list permissions and permission groups.|None|`Spryker\Zed\ShoppingList\Communication\Plugin`|
 
 <details open>
-<summary>src/Pyz/Zed/Installer/InstallerDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Installer/InstallerDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -351,7 +351,7 @@ Register the following plugin to enable data import:
 |`ShoppingListDataImportPlugin`|Imports demo shopping lists into the database.|None|`Spryker\Zed\ShoppingListDataImport\Communication\Plugin\DataImport`|
 
 <details open>
-<summary>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -391,7 +391,7 @@ The following imported entities will be used as shopping list items in Spryker O
 Prepare your data according to your requirements using our demo data:
 
 <details open>
-<summary>vendor/spryker/shopping-list-data-import/data/import/shopping_list_item.csv</summary>
+<summary markdown='span'>vendor/spryker/shopping-list-data-import/data/import/shopping_list_item.csv</summary>
 
 ```yaml
 shopping_list_key,product_sku,quantity
@@ -444,7 +444,7 @@ Register the following plugin to enable data import:
 |`ShoppingListItemDataImportPlugin`|Imports demo shopping list items into the database.|Assumes that the shopping list keys exist in the database.|`Spryker\Zed\ShoppingListDataImport\Communication\Plugin\DataImport`|
 
 <details open>
-<summary>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -486,7 +486,7 @@ The following imported entities will be used as shopping lists being directly sh
 Prepare your data according to your requirements using our demo data:
 
 <details open>
-<summary>vendor/spryker/shopping-list-data-import/data/import/shopping_list_company_user.csv</summary>
+<summary markdown='span'>vendor/spryker/shopping-list-data-import/data/import/shopping_list_company_user.csv</summary>
 
 ```yaml
 shopping_list_key,company_user_key,permission_group_name
@@ -513,7 +513,7 @@ Register the following plugin to enable data import:
 |`ShoppingListCompanyUserDataImportPlugin`|Imports demo shopping lists sharing data with company users.|Assumes that the shopping list keys, company user keys, and the permission groups exist in the database.|`Spryker\Zed\ShoppingListDataImport\Communication\Plugin\DataImport`|
 
 <details open>
-<summary>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -555,7 +555,7 @@ The following imported entities will be used as shopping lists being directly sh
 Prepare your data according to your requirements using our demo data:
 
 <details open>
-<summary>vendor/spryker/shopping-list-data-import/data/import/shopping_list_company_business_unit.csv</summary>
+<summary markdown='span'>vendor/spryker/shopping-list-data-import/data/import/shopping_list_company_business_unit.csv</summary>
 
 ```yaml
 shopping_list_key,business_unit_key,permission_group_name
@@ -579,7 +579,7 @@ Register the following plugin to enable data import:
 |`ShoppingListCompanyBusinessUnitDataImportPlugin`|Imports demo shopping lists sharing data with company business units.|Assumes that the shopping list keys, company business unit keys, and the permission groups exist in the database.|`Spryker\Zed\ShoppingListDataImport\Communication\Plugin\DataImport`|
 
 <details open>
-<summary>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -631,7 +631,7 @@ Enable the following behaviors by registering the plugins:
 |`ShoppingListItemNotePostSavePlugin`|Saves a shopping list item note when saving a shopping list item.|None|`Spryker\Zed\ShoppingListNote\Communication\Plugin`|
 
 <details open>
-<summary>src/Pyz/Client/Permission/PermissionDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/Permission/PermissionDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -660,7 +660,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/Permission/PermissionDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Permission/PermissionDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -700,7 +700,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 </details>
 
 <details>
-<summary>src/Pyz/Zed/Customer/CustomerDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Customer/CustomerDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -727,7 +727,7 @@ class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 </details>
 
 <details open>
-<summary>src/Pyz/Client/ShoppingList/ShoppingListDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/ShoppingList/ShoppingListDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -755,7 +755,7 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
 
 
 <details open>
-<summary>src/Pyz/Client/ShoppingList/ShoppingListDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/ShoppingList/ShoppingListDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -862,7 +862,7 @@ Make sure that the following modules were installed:
 Append glossary according to your configuration:
 
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```bash
 customer.account.shopping_list.overview.edit,Edit,en_US
@@ -1092,7 +1092,7 @@ Enable global widgets:
 |`ShoppingListDismissWidget`|Allows a customer to dismiss the Shopping List that was shared.|`SprykerShop\Yves\ShoppingListPage\Widget`|
 
 <details open>
-<summary>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

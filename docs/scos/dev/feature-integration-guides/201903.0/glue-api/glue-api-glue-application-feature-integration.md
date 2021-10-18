@@ -78,7 +78,7 @@ Activate the following plugins:
 | `SetStoreCurrentLocaleBeforeActionPlugin` | Sets a locale for the whole current store. | None | `Spryker\Glue\GlueApplication\Plugin\Rest\SetStoreCurrentLocaleBeforeActionPlugin` |
 
 <details open>
-<summary>src/Pyz/Glue/GlueApplication/Bootstrap/GlueBootstrap.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/Bootstrap/GlueBootstrap.php</summary>
 
 ```php
 <?php
@@ -117,7 +117,7 @@ class GlueBootstrap extends AbstractGlueBootstrap
 Create a new entry point for Glue Application:
 
 <details open>
-<summary>public/Glue/index.php</summary>
+<summary markdown='span'>public/Glue/index.php</summary>
 
 ```php
 <?php
@@ -149,7 +149,7 @@ $bootstrap
 Create Nginx VHOST configuration:
 
 <details open>
-<summary>/etc/nginx/sites-enabled/DE_development_glue</summary>
+<summary markdown='span'>/etc/nginx/sites-enabled/DE_development_glue</summary>
 
 ```php
 server {
@@ -201,7 +201,7 @@ If everything is set up correctly, you should be able to access `http://glue.mys
 ```
 
 <details open>
-<summary>\Pyz\Glue\GlueApplication\GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>\Pyz\Glue\GlueApplication\GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

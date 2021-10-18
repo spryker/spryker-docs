@@ -63,7 +63,7 @@ This value will serve as the upper boundary for a generated processor identifier
 4. Configure the OMS console commands. Let's take `oms:check-timeout` as an example. Create as many cronjobs, as many process workers you have. Each cronjob should run the command with different processor identifiers within the boundaries defined in Step 3. In our example, we have defined the maximum number of OMS process workers to be 10, thus, we must configure 10 distinct cronjobs each dealing with its own processor identifier:
 
 <details>
-<summary>config/Zed/cronjobs/jenkins.php</summary>
+<summary markdown='span'>config/Zed/cronjobs/jenkins.php</summary>
 
 ```PHP
 /* STATE MACHINE */

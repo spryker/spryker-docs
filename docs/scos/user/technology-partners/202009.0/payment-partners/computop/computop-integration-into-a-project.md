@@ -68,7 +68,7 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 2. In the `OmsDependencyProvider`, add OMS command and condition plugins:
 
 <details open>
-<summary>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
     
 ```php
 <?php
@@ -227,7 +227,7 @@ To configure checkout:
 
 
 <details open>
-    <summary>src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php</summary>
    
 ```php
 <?php
@@ -279,7 +279,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 2. Add the subforms of the desired payment methods to `CheckoutPageDependencyProvider`:
 
 <details open>
-    <summary>src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php</summary>
     
 ```php
 <?php
@@ -406,7 +406,7 @@ Payment methods like CreditCard, PayNow, EasyCredit require adjustments in the `
 1. To create Computop specific steps and replace placeOrder and Summary steps with the project-level ones, adjust `StepFactory`:
 
 <details open>
-    <summary>src/Pyz/Yves/CheckoutPage/Process/StepFactory.php</summary>
+    <summary markdown='span'>src/Pyz/Yves/CheckoutPage/Process/StepFactory.php</summary>
     
 ```php
 <?php
@@ -555,7 +555,7 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 3. Adjust `CheckoutController` with the step actions of the desired payment methods:
 
 <details open>
-    <summary>src/Pyz/Yves/CheckoutPage/Controller/CheckoutController.php</summary>
+    <summary markdown='span'>src/Pyz/Yves/CheckoutPage/Controller/CheckoutController.php</summary>
     
 ```php
 <?php=
@@ -645,7 +645,7 @@ class CheckoutController extends SprykerShopCheckoutController
 
 
 <details open>
-    <summary>src/Pyz/Yves/CheckoutPage/Plugin/Router/CheckoutPageRouteProviderPlugin.php</summary>
+    <summary markdown='span'>src/Pyz/Yves/CheckoutPage/Plugin/Router/CheckoutPageRouteProviderPlugin.php</summary>
 
 ```php
 <?php
@@ -774,7 +774,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 
 <details open>
-    <summary>src/Pyz/Yves/CheckoutPage/Process/Steps/PlaceOrderStep.php</summary>
+    <summary markdown='span'>src/Pyz/Yves/CheckoutPage/Process/Steps/PlaceOrderStep.php</summary>
 
 ```php
 <?php
@@ -818,7 +818,7 @@ class PlaceOrderStep extends SprykerShopPlaceOrderStep
 7. Only for EasyCredit payment method: adjust the SummaryStep with EasyCredit installment information by adding the `easy-credit-summary` molecule to `summary.twig`.
 
 <details open>
-    <summary>src/Pyz/Yves/CheckoutPage/Process/Steps/SummaryStep.php</summary>
+    <summary markdown='span'>src/Pyz/Yves/CheckoutPage/Process/Steps/SummaryStep.php</summary>
 
 ```php
 <?php
@@ -932,7 +932,7 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
 2. Adjust `ShipmentStep` to perform the API call of CRIF risk check:
 
 <details open>
-    <summary>\Pyz\Yves\CheckoutPage\Process\Steps\ShipmentStep</summary>
+    <summary markdown='span'>\Pyz\Yves\CheckoutPage\Process\Steps\ShipmentStep</summary>
 
 ```php
 <?php
@@ -1006,7 +1006,7 @@ class ShipmentStep extends SprykerShipmentStep
 3. To use the project-level `ShipmentStep`, adjust `StepFactory`:
 
 <details open>
-    <summary>src/Pyz/Yves/CheckoutPage/Process/StepFactory.php</summary>
+    <summary markdown='span'>src/Pyz/Yves/CheckoutPage/Process/StepFactory.php</summary>
 
 ```php
 <?php
@@ -1056,7 +1056,7 @@ class StepFactory extends SprykerStepFactory
 4. To add `ComputopClient` to dependencies, adjust `CheckoutPageDependencyProvider`:
 
 <details open>
-    <summary>src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php</summary>
 
 ```php
 <?php

@@ -57,7 +57,7 @@ Activate the following plugin:
 | --- | --- | --- | --- |
 | `ProductDiscontinuedConcreteProductsResourceExpanderPlugin` | Expands the `concrete-products` resource with discontinued data. | None | `Spryker\Glue\ProductDiscontinuedRestApi\Plugin` |
 
-<details open><summary>src/Pyz/Glue/ProductsRestApi/ProductsRestApiDependencyProvider.php</summary>
+<details open><summary markdown='span'>src/Pyz/Glue/ProductsRestApi/ProductsRestApiDependencyProvider.php</summary>
     
 ```php
 <?php
@@ -93,7 +93,7 @@ Make sure that the `concrete-products` resource is expanded with the discontinue
 {% endinfo_block %}
 
 <details open>
-<summary>JSON response example</summary>
+<summary markdown='span'>JSON response example</summary>
 
 *GET http://glue.mysprykershop.com/145_29885470*
 

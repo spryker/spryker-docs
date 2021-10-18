@@ -46,7 +46,7 @@ To retrieve prices of a concrete product, send the request:
 
 ### Response
 
-<details><summary>Response sample with default concrete product prices</summary>
+<details><summary markdown='span'>Response sample with default concrete product prices</summary>
 
 ```json
 {
@@ -92,7 +92,7 @@ To retrieve prices of a concrete product, send the request:
 
 </details>
 
-<details><summary>Response sample with default and volume concrete prices</summary>
+<details><summary markdown='span'>Response sample with default and volume concrete prices</summary>
 
 ```json
 
@@ -147,7 +147,7 @@ To retrieve prices of a concrete product, send the request:
 
 </details>
 
-<details><summary>Response sample with a gross price in Swiss Franc for a concrete product</summary>
+<details><summary markdown='span'>Response sample with a gross price in Swiss Franc for a concrete product</summary>
 
 ```json
 {

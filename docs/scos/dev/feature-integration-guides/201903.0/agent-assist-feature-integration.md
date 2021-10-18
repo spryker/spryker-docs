@@ -58,7 +58,7 @@ Enable the following behaviors by registering the plugins:
 |  `UserAgentTableConfigExpanderPlugin` | Adds "is an agent" column to the Zed Users table. | None |  `Spryker\Zed\AgentGui\Communication\Plugin` |
 |  `UserAgentTableDataExpanderPlugin` | Fills "is an agent" column in the Zed Users table. | None |  `Spryker\Zed\AgentGui\Communication\Plugin` |
 
-<details open><summary>src/Pyz/Zed/User/UserDependencyProvider.php</summary>
+<details open><summary markdown='span'>src/Pyz/Zed/User/UserDependencyProvider.php</summary>
 
  ```php
  <?php
@@ -136,7 +136,7 @@ Verify if the following modules were installed:<table><thead><tr><td>Module</td>
 
 Append glossary according to your configuration:
 
-<details open><summary>src/data/import/glossary.csv</summary>
+<details open><summary markdown='span'>src/data/import/glossary.csv</summary>
 
  ```yaml
  agent.authentication.failed,Authentication failed,en_US
@@ -184,7 +184,7 @@ Register service provider(s) in the Yves application:
 | --- | --- | --- |
 |  `AgentPageSecurityServiceProvider` |  `SprykerShop\Yves\AgentPage\Plugin\Provider` | Registers security firewalls, access rules, impersonate rules and login/logout handlers for Agent users. |
 
- <details open><summary>src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>
+ <details open><summary markdown='span'>src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>
 
  ```php
  <?php
@@ -223,7 +223,7 @@ Register controller provider(s) in the Yves application:
 |  `AgentPageControllerProvider` |  `SprykerShop\Yves\AgentPage\Plugin\Provider` |  `AgentPage\AuthController` | Login/Logout actions for the Agent user. |
 |  `AgentWidgetControllerProvider` |  `SprykerShop\Yves\AgentWidget\Plugin\Provide` |  `AgentWidget\CustomerAutocompleteController` | Customer autocomplete action for the Agent control bar. |
 
- <details open><summary>src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>
+ <details open><summary markdown='span'>src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>
 
  ```php
  <?php
@@ -254,7 +254,7 @@ class YvesBootstrap extends SprykerYvesBootstrap
 </details>
 
 {% info_block warningBox "Verfication" %}
-Verify the `AgentPageControllerProvider` opening the agent login page by the link: `http://mysprykershop.com/agent/login](http://example.org/agent/login`
+Verify the `AgentPageControllerProvider` opening the agent login page by the link: `http://mysprykershop.com/agent/login](http://mysprykershop.com/agent/login`
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
@@ -269,7 +269,7 @@ Register the following global widget(s):
 | --- | --- | --- |
 |  `AgentControlBarWidget` | Allows agents to select customers and impersonate. |  `SprykerShop\Yves\AgentWidget\Widget` |
 
- <details open><summary>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
+ <details open><summary markdown='span'>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
 
  ```php
  <?php

@@ -71,7 +71,7 @@ Activate the console command provided by the module:
 | `GenerateRestApiDocumentationConsole` | Registers the `rest-api:generate:documentation` console command. | None | `Spryker\Zed\DocumentationGeneratorRestApi\Communication\Console` |
 
 <details open>
-<summary>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
     
 ```php
 <?php
@@ -116,7 +116,7 @@ Activate the following plugins:
 | `ResourceRelationshipCollectionProviderPlugin` | Registers the enabled `ResourceRelationship` plugin collections. | None | `Spryker\Glue\GlueApplication\Plugin\DocumentationGeneratorRestApi` |
 
 <details open>
-<summary>src/Pyz/Zed/DocumentationGeneratorRestApi/DocumentationGeneratorRestApiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/DocumentationGeneratorRestApi/DocumentationGeneratorRestApiDependencyProvider.php</summary>
 
 ```php
 <?php

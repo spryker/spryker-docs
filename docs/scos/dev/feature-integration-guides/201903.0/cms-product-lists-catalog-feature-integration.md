@@ -32,7 +32,7 @@ Add the following plugins to your project:
 |  `ProductListQueryExpanderPlugin` | Extends a search query by filtering down results to match the current customer's product restrictions. | None |  `\Spryker\Client\CustomerCatalog\Plugin\Search\ProductListQueryExpanderPlugin` |
 
 <details open>
-    <summary> src/Pyz/Client/Catalog/CatalogDependencyProvider.php</summary>
+    <summary markdown='span'> src/Pyz/Client/Catalog/CatalogDependencyProvider.php</summary>
     
  ```php
  <?php

@@ -44,7 +44,7 @@ Request sample: `GET http://glue.mysprykershop.com/concrete-products/cable-vga-1
 ### Response
 
 <details open>
-    <summary>Response sample</summary>
+    <summary markdown='span'>markdown='span'>Response sample</summary>
 
 ```json
 {

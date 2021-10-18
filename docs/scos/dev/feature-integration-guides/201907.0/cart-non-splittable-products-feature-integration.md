@@ -27,7 +27,7 @@ Add the following plugins to your project:
 | `CartChangeTransferQuantityNormalizerPlugin` | The plugin is responsible for adjusting concrete products quantity and adding notification messages about that. | The `ProductQuantity` and `ProductQuantityStorage` modules should be installed. | `Spryker\Zed\ProductQuantity\Communication\Plugin\Cart` |
 
 <details open>
-<summary>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
 
 ```php
 <?php

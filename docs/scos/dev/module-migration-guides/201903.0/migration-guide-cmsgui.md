@@ -25,7 +25,7 @@ To enable the feature, make sure you have the store relation type plugin. See be
 2. Add the Store Relation Form Type Plugin:
 
 <details open>
-<summary>src/Pyz/Zed/CmsGui/CmsGuiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/CmsGui/CmsGuiDependencyProvider.php</summary>
 
 ```php
 use Spryker\Zed\Kernel\Communication\Form\FormTypeInterface;

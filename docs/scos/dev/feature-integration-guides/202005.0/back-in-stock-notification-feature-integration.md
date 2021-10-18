@@ -244,7 +244,7 @@ Make sure that the following modules have been installed:<table><thead><tr class
 Feature-specific glossary keys:
 
 <details open>
-<summary> /data/import/glossary.csv</summary>
+<summary markdown='span'> /data/import/glossary.csv</summary>
 
  ```yaml
 availability_notification.notify_me,Notify me when back in stock,en_US

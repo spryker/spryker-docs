@@ -27,7 +27,7 @@ Register the following global widget:
 |`AddItemsToShoppingListWidget`|Adds another submit button and a drop-down list with the shopping lists available for the logged-in customer. Note: You don't need it if you don't use Shopping List functionality or just don't want it to be displayed on the Quick Order page.|`SprykerShop\Yves\ShoppingListWidget\Widget`|
 
 <details open>
-<summary>src\Pyz\Yves\ShopApplication\ShopApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src\Pyz\Yves\ShopApplication\ShopApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -68,7 +68,7 @@ Enable the following behaviors by registering the plugins:
 |`ShoppingListQuickOrderFormHandlerStrategyPlugin`|Send items to Shopping list instead of Cart if **Add to shopping list** has been selected.|None|`SprykerShop\Yves\ShoppingListWidget\Plugin\QuickOrderPage`|
 
 <details open>
-<summary>src/Pyz/Yves/QuickOrderPage/QuickOrderPageDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/QuickOrderPage/QuickOrderPageDependencyProvider.php</summary>
 
 ```php
 <?php

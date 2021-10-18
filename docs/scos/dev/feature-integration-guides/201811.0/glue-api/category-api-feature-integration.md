@@ -52,7 +52,7 @@ console transfer:generate
 | `CategoriesResourceRoutePlugin`| Registers a `category-tree` resource. |None  | `Spryker\Glue\CategoriesRestApi\Plugin`|
 | `CategoryResourceRoutePlugin`	 |Registers a `category- nodes` resource. | None|`Spryker\Glue\CategoriesRestApi\Plugin` |
 <details open>
-<summary> src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'> src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 ```bash 
  namespace Pyz\Glue\GlueApplication;
  
@@ -77,8 +77,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     </details>
     
  Make sure the following endpoints are available:
-*  `http://example.org/category-trees`
-* `http://example.org/category-nodes/{% raw %}{{{% endraw %}category_node_id{% raw %}}}{% endraw %}`
+*  `http://mysprykershop.com/category-trees`
+* `http://mysprykershop.com/category-nodes/{% raw %}{{{% endraw %}category_node_id{% raw %}}}{% endraw %}`
 
 _Last review date: Feb 26, 2019_  <!-- by   Tihran Voitov and Dmitry Beirak-->
 

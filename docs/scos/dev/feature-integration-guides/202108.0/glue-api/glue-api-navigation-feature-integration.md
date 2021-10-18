@@ -1,5 +1,5 @@
 ---
-title: Glue API- Navigation feature integration
+title: Glue API - Navigation feature integration
 description: This guide will walk you through the process of installing and configuring the Navigation API feature in Spryker OS.
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-navigation-feature-integration
@@ -16,54 +16,62 @@ The following feature integration guide expects the basic feature to be in place
 {% endinfo_block %}
 
 ## Install Feature API
+
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Spryker Core | 201907.0 |
-| Navigation | 201907.0 |
+| Spryker Core | {{page.version}} |
+| Navigation | {{page.version}} |
 
 ### 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
 
 ```bash
 composer require spryker/navigations-rest-api:"^2.0.0" spryker/navigations-category-nodes-resource-relationship:"^1.0.0" --update-with-dependencies
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
 Make sure that the following modules were installed:
+
+| MODULE | EXPECTED DIRECTORY |
+| --- | --- |
+| NavigationsRestApi | vendor/spryker/navigations-rest-api |
+| NavigationsCategoryNodesResourceRelationship | vendor/spryker/navigations-category-nodes-resource-relationship |
+
 {% endinfo_block %}
 
-| Module | Expected Directory |
-| --- | --- |
-| `NavigationsRestApi` | `vendor/spryker/navigations-rest-api` |
-| `NavigationsCategoryNodesResourceRelationship` | `vendor/spryker/navigations-category-nodes-resource-relationship` |
+### 2) Set up transfer objects
 
-### 2) Set up Transfer Objects
 Run the following commands to generate transfer changes:
 
 ```bash
 console transfer:generate
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the following changes have been applied in transfer objects:
+
+| TRANSFER | TYPE | EVENT | PATH |
+| --- | --- | --- | --- |
+| RestNavigationAttributesTransfer | class | created | src/Generated/Shared/Transfer/RestNavigationAttributesTransfer |
+| RestNavigationNodeTransfer | class | created | src/Generated/Shared/Transfer/RestNavigationNodeTransfer |
+
 {% endinfo_block %}
 
-| Transfer | Type | Event | Path |
-| --- | --- | --- | --- |
-| `RestNavigationAttributesTransfer` | class | created | `src/Generated/Shared/Transfer/RestNavigationAttributesTransfer` |
-| `RestNavigationNodeTransfer` | class | created | `src/Generated/Shared/Transfer/RestNavigationNodeTransfer` |
 
-### 3) Set up Configuration
+### 3) Set up configuration
+
 #### Configure navigation mapping
+
 {% info_block infoBox %}
 Specify mapping for the source field from which the resourceId field should be filled (depends on a navigation node type).
 {% endinfo_block %}
 
-<details open>
-<summary>src/Pyz/Glue/NavigationsRestApi/NavigationsRestApiConfig.php</summary>
+**src/Pyz/Glue/NavigationsRestApi/NavigationsRestApiConfig.php**
     
 ```php
 <?php
@@ -87,24 +95,21 @@ class NavigationsRestApiConfig extends SprykerNavigationsRestApiConfig
 }
 ```
 
-</br>
-</details>
-
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
 The verification for this step can be provided once the resource is provided in the *Set up Behavior* section below.
 {% endinfo_block %}
 
-### 4) Set up Behavior
+### 4) Set up behavior
+
 #### Enable resources and relationships
 Activate the following plugin:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `NavigationsResourceRoutePlugin` | Registers the `navigations` resource. | None | `Spryker\Glue\NavigationsRestApi\Plugin\ResourceRoute` |
-| `CategoryNodeByResourceIdResourceRelationshipPlugin` | Adds the `category node` resource as a relationship. | None | `\Spryker\Glue\NavigationsCategoryNodesResourceRelationship\Plugin\GlueApplication` |
+| NavigationsResourceRoutePlugin | Registers the `navigations` resource. | None | Spryker\Glue\NavigationsRestApi\Plugin\ResourceRoute |
+| CategoryNodeByResourceIdResourceRelationshipPlugin | Adds the `category node` resource as a relationship. | None | \Spryker\Glue\NavigationsCategoryNodesResourceRelationship\Plugin\GlueApplication |
 
-<details open>
-<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
 ```php
 <?php
@@ -144,23 +149,19 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</br>
-</details>
-
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
 `NavigationsResourceRoutePlugin` is set up correctly if the following endpoint is available: *http://glue.mysprykershop.com/navigations/{navigationId}*
 {% endinfo_block %}
 
-{% info_block warningBox %}
-Now, it is possible to verify that the configuration of NavigationsRestApiConfig is done correctly. Perform the "http://glue.mysprykershop.com/navigations/{navigationId}" request and check that each node of the type you set up in the configuration (category and CMS pages in the example
-{% endinfo_block %} "resourceId" is filled with the valid foreign key.)
+{% info_block warningBox “Verification” %}
+Now, it is possible to verify that the configuration of NavigationsRestApiConfig is done correctly. Perform the "http://glue.mysprykershop.com/navigations/{navigationId}" request and check that each node of the type you set up in the configuration (category and CMS pages in the example "resourceId" is filled with the valid foreign key.)
+{% endinfo_block %} 
 
-{% info_block warningBox "your title goes here" %}
+{% info_block warningBox “Verification” %}
 Send a request to *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?include=category-nodes*.</br>Make sure that the response contains `category-nodes` as a relationship and `category-nodes` data included.
-{% endinfo_block %}
 
 <details open>
-<summary>http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?include=category-nodes</summary>
+<summary markdown='span'>http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?include=category-nodes</summary>
 
 ```json
 {
@@ -439,7 +440,7 @@ Send a request to *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?inc
 	]
 }
 ```
-
-</br>
 </details>
+
+{% endinfo_block %}
 

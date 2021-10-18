@@ -67,7 +67,7 @@ Tracking is highly customizable and it depends on your setup. Please refer to [e
 
 Here is a sample `econda-tracking.js` you can use as a help to integrate tracking to your website:
 <details open>
-<summary>Sample econda-tracking.js</summary>
+<summary markdown='span'>markdown='span'>Sample econda-tracking.js</summary>
 
 ```js
 'use strict';
@@ -177,7 +177,7 @@ to `econda.js`.
 The econda module comes with a partial twig template `econda_tracker.twig` that you can use as an example in your project.
 
 <details open>
-<summary>Twig Template</summary>
+<summary markdown='span'>markdown='span'>Twig Template</summary>
 
 ```php
 <input type="hidden" name="econda_tracking_content" value="{% raw %}{{{% endraw %} content {% raw %}}}{% endraw %}">

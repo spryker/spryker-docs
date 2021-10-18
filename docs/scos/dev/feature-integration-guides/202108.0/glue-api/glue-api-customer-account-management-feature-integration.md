@@ -1,5 +1,5 @@
 ---
-title: Glue API- Customer Account Management feature integration
+title: Glue API - Customer Account Management feature integration
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-customer-account-management-feature-integration
 originalArticleId: fa53308d-8078-477d-9297-7597d51afbcf
@@ -29,13 +29,13 @@ This feature integration guide expects the basic feature to be in place. It only
 
 To start feature integration, integrate the required features:
 
-| FEATURE  | VERSION    | INTEGRATION GUIDE                                            |
-| --------------------------- | ---------- | ------------------------------------------------------------ |
-| Glue API: Spryker Core                | dev-master | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Glue API: Glue Application            | dev-master | [Glue API: Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
-| Glue API: Shipment              | dev-master | [Glue API: Shipment feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shipment-feature-integration.html) |
-| Glue API: Checkout              | dev-master | [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |
-| Customer Account Management | dev-master | [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) |
+| FEATURE  | VERSION    | INTEGRATION GUIDE   |
+| ------------- | ---------- | ------------- |
+| Glue API: Spryker Core                | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Glue API: Glue Application            | {{page.version}} | [Glue API: Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
+| Glue API: Shipment              | {{page.version}} | [Glue API: Shipment feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shipment-feature-integration.html) |
+| Glue API: Checkout              | {{page.version}} | [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |
+| Customer Account Management | {{page.version}} | [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) |
 
 
 
@@ -58,7 +58,6 @@ Ensure that the following modules have been installed:
 | OauthCustomerConnector | vendor/spryker/oauth-customer-connector |
 | AuthRestApi            | vendor/spryker/auth-rest-api            |
 | CustomersRestApi       | vendor/spryker/customers-rest-api       |
-
 
 {% endinfo_block %}
 
@@ -107,10 +106,9 @@ class OauthConfig extends SprykerOauthConfig
 
 Configure password validation rules for `CustomerRestApi` endpoints:
 
-<details open>
-<summary>src/Pyz/Glue/CustomersRestApi/Validation/customers.validation.yml</summary>
+**src/Pyz/Glue/CustomersRestApi/Validation/customers.validation.yml**
 
-```text
+```yaml
 customers:
     post:
         password:
@@ -153,8 +151,6 @@ customer-restore-password:
                   max: 64
 ```
 
-</details>
-
 
 ## 3) Set up database schema and transfer objects
 
@@ -165,7 +161,6 @@ console transfer:generate
 console propel:install
 console transfer:generate
 ```
-
 
 
 {% info_block warningBox "Verification" %}
@@ -190,8 +185,8 @@ Ensure that the following changes have occurred in the database:
 
 Ensure that the following changes have occurred in transfer objects:
 
-| TRANSFER                                        | TYPE   | EVENT   | PATH                                                         |
-| ----------------------------------------------- | ------ | ------- | ------------------------------------------------------------ |
+| TRANSFER     | TYPE   | EVENT   | PATH   |
+| ---------------- | ------ | ------- | ------------------ |
 | AddressTransfer.uuid                            | column | created | src/Generated/Shared/Transfer/AddressTransfer.php            |
 | RestCustomersAttributesTransfer                 | class  | created | src/Generated/Shared/Transfer/RestCustomersAttributesTransfer.php |
 | RestCustomersResponseAttributesTransfer         | class  | created | src/Generated/Shared/Transfer/RestCustomersResponseAttributesTransfer.php |
@@ -228,11 +223,12 @@ Ensure that the following changes have occurred in transfer objects:
 | RestShipmentsTransfer                           | class  | created | src/Generated/Shared/Transfer/RestShipmentsTransfer.php      |
 
 {% endinfo_block %}
+
 ## 4) Add translations
 
 1. Append glossary according to your configuration:
 
-```
+```csv
 checkout.validation.customer_address.not_found,Customer address with ID %id% not found.,en_US
 checkout.validation.customer_address.not_found, Kundenaddresse mit ID %id% wurde nicht gefunden.,de_DE
 checkout.validation.customer_address.not_applicable,Customer addresses are applicable only for customers.,en_US
@@ -244,8 +240,6 @@ checkout.validation.customer_address.not_applicable, Kundenaddressen sind nur f�
 ```bash
 console data:import glossary
 ```
-
-
 
 {% info_block warningBox "Verification" %}
 
@@ -266,7 +260,6 @@ console uuid:generate Customer spy_customer_address
 ```
 
 
-
 {% info_block warningBox "Verification" %}
 
 Ensure that, in the `spy_customer_address` table, the `UUID` field has been populated for all the records:
@@ -280,6 +273,7 @@ Ensure that, in the `spy_customer_address` table, the `UUID` field has been popu
 2. Check that the result is 0 records.
 
 {% endinfo_block %}
+
 ### Enable Jenkins to find and delete expired refresh tokens
 
 Set up the following configuration:
@@ -312,6 +306,7 @@ $jobs[] = [
 ```
 
 ### Enable resources and relationships
+
 {% info_block infoBox %}
 
 For information on how to protect resources, see [Security and authentication](/docs/scos/dev/glue-api-guides/{{page.version}}/security-and-authentication.html).
@@ -322,8 +317,8 @@ Enable resources and relationships as follows:
 
 1. Activate the following plugins:
 
-| **PLUGIN**                                      | SPECIFICATION                                                | PREREQUISITES                                      | NAMESPACE                                                    |
-| ----------------------------------------------- | ------------------------------------------------------------ | -------------------------------------------------- | ------------------------------------------------------------ |
+| PLUGIN | SPECIFICATION  | PREREQUISITES  | NAMESPACE   |
+| ----------------- | --------------- | --------------- | --------------------- |
 | SetCustomerBeforeActionPlugin                   | Adds customer data to the session.                           | Expects the user field to be set in REST requests. | Spryker\Glue\CustomersRestApi\Plugin                         |
 | CustomersResourceRoutePlugin                    | Registers the `customers` resource.                            | None                                               | Spryker\Glue\CustomersRestApi\Plugin                         |
 | AddressesResourceRoutePlugin                    | Registers the `addresses` resource.                            | None                                               | Spryker\Glue\CustomersRestApi\Plugin                         |
@@ -355,7 +350,7 @@ Enable resources and relationships as follows:
 | CustomerAddressProviderStrategyPlugin           | Finds a customer address based on the UUID provided in `RestAddressTransfer.id`. If the address was found, returns it. | None                                               | Spryker\Zed\CustomersRestApi\Communication\Plugin\ShipmentsRestApi |
 
 <details open>
-<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -463,13 +458,11 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
-
 </details>
 
 
 <details open>
-<summary>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
-
+<summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -580,7 +573,6 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
     }
 }
 ```
-
 </details>
 
 **src/Pyz/Zed/Installer/InstallerDependencyProvider.php**
@@ -684,9 +676,7 @@ class ShipmentsRestApiDependencyProvider extends SprykerShipmentsRestApiDependen
 }
 ```
 
-<details open>
-<summary>src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
-
+**src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
 
 ```php
 <?php
@@ -723,9 +713,8 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 }
 ```
 
-</details>
 
-2. Set up the OAuth client:
+1. Set up the OAuth client:
 
 ```bash
 console setup:init-db
@@ -935,5 +924,7 @@ Ensure that you’ve set up `OauthRefreshTokenRemoverPlugin`:
 
 
 {% info_block warningBox "Verification" %}
+
 To make sure that you’ve activated `AddressByCheckoutDataResourceRelationshipPlugin`, send the `POST http://glue.mysprykershop.com/checkout-data?include=addresses` request and check that the response contains the information from the addresses resource.
+
 {% endinfo_block %}

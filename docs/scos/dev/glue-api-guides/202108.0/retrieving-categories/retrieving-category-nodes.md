@@ -41,7 +41,7 @@ Request sample : `GET http://glue.mysprykershop.com/category-nodes/5`
 ### Response
 
 <details open>
-<summary>Response sample</summary>
+<summary markdown='span'>markdown='span'>Response sample</summary>
     
 ```js
 {

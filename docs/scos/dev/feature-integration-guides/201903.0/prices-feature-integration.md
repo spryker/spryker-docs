@@ -59,7 +59,7 @@ The following imported entities will be used as *productvol* in Spryker OS.
 
 Prepare your data according to your requirements using our demo data:
 <details open>
-    <summary>src/data/import/product_price.csv</summary>
+    <summary markdown='span'>src/data/import/product_price.csv</summary>
 
 ```yaml           abstract_sku,concrete_sku,price_type,store,currency,value_net,value_gross,price_data.volume_prices
 193,,DEFAULT,DE,EUR,16195,17994,"[{""quantity"":5,""net_price"":150,""gross_price"":165}, {""quantity"":10,""net_price"":145,""gross_price"":158}, {""quantity"":20,""net_price"":140,""gross_price"":152}]"
@@ -87,7 +87,7 @@ Register the following plugin to enable data import:
 |  `PriceProductDataImportPlugin` | Imports demo product price data into the database. | None |  `Spryker\Zed\PriceProductDataImport\Communication\Plugin` |
 
 <details open>
-    <summary>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
 
 ```php
  <?php
@@ -130,7 +130,7 @@ Enable the following behaviors by registering the plugins:
 |  `PriceProductVolumeFilterPlugin` | Provides the ability to decide based on the selected product quantity, which `PriceProduct` should be chosen based on the Volume Prices set. | None |  `Spryker\Service\PriceProductVolume\Plugin\PriceProductExtension` |
 
 <details open>
-<summary>src/Pyz/Zed/PriceProduct/PriceProductDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/PriceProduct/PriceProductDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -157,7 +157,7 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
 </details>
 
 <details open>
-<summary>src/Pyz/Client/PriceProductStorage/PriceProductStorageDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/PriceProductStorage/PriceProductStorageDependencyProvider.php</summary>
 
  ```php
 <?php
@@ -185,7 +185,7 @@ class PriceProductStorageDependencyProvider extends SprykerPriceProductStorageDe
 </details>
 
 <details open>
-<summary>src/Pyz/Service/PriceProduct/PriceProductDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Service/PriceProduct/PriceProductDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -243,7 +243,7 @@ Make sure that the following modules were installed:<table><thead><tr><th>Module
 
 Append glossary according to your configuration:
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 page.detail.volume_price.quantity,Quantity,en_US
@@ -272,7 +272,7 @@ Enable Global Widgets:
 |  `ProductPriceVolumeWidget` | Shows a table of Volume Prices for a product that contains the following columns: quantity and price for that quantity threshold. |  `SprykerShop\Yves\PriceProductVolumeWidget\Widget` |
 
 <details open>
-<summary>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

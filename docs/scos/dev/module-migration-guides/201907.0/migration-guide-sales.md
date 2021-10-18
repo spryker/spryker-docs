@@ -218,7 +218,7 @@ Please update your templates if overwritten.
 ## Sales Migration Console Command
 
 <details open>
-<summary>Console Command</summary>
+<summary markdown='span'>Console Command</summary>
 
 ```php
 <?php

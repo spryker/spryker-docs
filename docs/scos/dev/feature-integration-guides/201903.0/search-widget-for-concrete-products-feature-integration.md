@@ -57,7 +57,7 @@ Make sure that the following changes are present in the transfer objects:
 Append glossary according to your language configuration:
 
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 cart.quick_add_to_cart,Schnell zum Warenkorb hinzufügen,de_DE

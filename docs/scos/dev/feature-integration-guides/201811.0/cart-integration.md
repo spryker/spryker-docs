@@ -134,7 +134,7 @@ $itemAttributesBySku = $this->getFactory()
 ```
 
 <details open>
-<summary>The full indexAction code should be as follows:</summary>
+<summary markdown='span'>The full indexAction code should be as follows:</summary>
 
 ```php
 /**
@@ -173,7 +173,7 @@ public function indexAction(array $selectedAttributes = null)
 To complete the feature integration:
 
 <details>
-<summary>Add `src/Pyz/Yves/Cart/Plugin/Provider/AttributeVariantsProvider.php` by copying the following code:</summary>
+<summary markdown='span'>Add `src/Pyz/Yves/Cart/Plugin/Provider/AttributeVariantsProvider.php` by copying the following code:</summary>
 
 ```php
 <?php
@@ -277,7 +277,7 @@ class AttributeVariantsProvider
 </details>
 
 <details open>
-<summary>Also, add `src/Pyz/Yves/Cart/Handler/CartItemHandler.php`:</summary>
+<summary markdown='span'>Also, add `src/Pyz/Yves/Cart/Handler/CartItemHandler.php`:</summary>
 ```php
 <?php
 
@@ -483,7 +483,7 @@ class CartItemHandler extends BaseHandler implements CartItemHandlerInterface
 </details>
 
 <details open>
-<summary>Add src/Pyz/Yves/Cart/Handler/CartItemHandlerInterface.php</summary>
+<summary markdown='span'>Add src/Pyz/Yves/Cart/Handler/CartItemHandlerInterface.php</summary>
 
 ```php
 <?php
@@ -534,7 +534,7 @@ interface CartItemHandlerInterface
 </details>
 
 <details open>
-<summary>Add `src/Pyz/Yves/Cart/Plugin/Provider/AttributeVariantsProvider.php`</summary>
+<summary markdown='span'>Add `src/Pyz/Yves/Cart/Plugin/Provider/AttributeVariantsProvider.php`</summary>
 
 ```php
 <?php
@@ -700,7 +700,7 @@ protected function filterConcreteProductIds(array $concreteProducts)
 You can use the demoshop's `cart-item.twig` as a template for your own project. 
 
 <details open>
-<summary>The following code sample demonstrates the feature's use:</summary>
+<summary markdown='span'>The following code sample demonstrates the feature's use:</summary>
 
 ```
 &lt;form method="POST" action="{% raw %}{{{% endraw %} path('cart/update', {'sku': cartItem.sku }) {% raw %}}}{% endraw %}"&gt;
@@ -753,7 +753,7 @@ You can use the demoshop's `cart-item.twig` as a template for your own project.
 Seemingly complex, you can simplify the code if your implementation does not support narrowing down of attributes (only one super attribute per product, i.e. T-shirt size). 
 
 <details open>
-<summary>The following snippet should help:</summary>
+<summary markdown='span'>The following snippet should help:</summary>
 
 ```
 {% raw %}{%{% endraw %} set itemAttributes = attribute(data.attributes, cartItem.sku) {% raw %}%}{% endraw %}
@@ -789,7 +789,7 @@ Seemingly complex, you can simplify the code if your implementation does not sup
 </details>
 
 <details open>
-<summary>To submit a form when the user changes a cart item's attribute (such as a T-shirt size etc) , use  Java Script. The following snippet is an example implementation:</summary>
+<summary markdown='span'>To submit a form when the user changes a cart item's attribute (such as a T-shirt size etc) , use  Java Script. The following snippet is an example implementation:</summary>
 
 ```
 'use strict';

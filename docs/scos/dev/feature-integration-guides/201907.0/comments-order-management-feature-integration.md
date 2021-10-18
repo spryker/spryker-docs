@@ -36,7 +36,7 @@ Add the following configuration to your project:
 | `SalesConfig::getSalesDetailExternalBlocksUrls()` | Used to display a block with comments related to the order. | `Pyz\Zed\Sales` |
 
 <details open>
-<summary>Pyz\Zed\Sales\SalesConfig.php</summary>
+<summary markdown='span'>Pyz\Zed\Sales\SalesConfig.php</summary>
     
 ```php
 <?php
@@ -86,7 +86,7 @@ Register the following plugins:
 | `CommentThreadAttachedCommentOrderPostSavePlugin` | Duplicates `commentThread` from Quote to a new order. | None | `Spryker\Zed\CommentSalesConnector\Communication\Plugin\Sales` |
 
 <details open>
-<summary>Pyz\Zed\Sales\SalesDependencyProvider.php</summary>
+<summary markdown='span'>Pyz\Zed\Sales\SalesDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -117,7 +117,7 @@ Make sure that `OrderTransfer::commentThread` contains information about comment
 {% endinfo_block %}
 
 <details open>
-<summary>Pyz\Zed\Sales\SalesDependencyProvider.php</summary>
+<summary markdown='span'>Pyz\Zed\Sales\SalesDependencyProvider.php</summary>
 
 ```php
 <?php

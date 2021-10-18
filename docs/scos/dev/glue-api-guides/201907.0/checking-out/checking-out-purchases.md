@@ -80,7 +80,7 @@ To submit a request, the customer needs to have at least one cart with products 
 | shipment | RestShipmentTransfer | x | Shipment details.</br>For details, see [Shipment Step](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html#shipment-step). |
 
 <details open>
-<summary>Body Sample</summary>
+<summary markdown='span'>Body Sample</summary>
     
 ```json
 {
@@ -154,7 +154,7 @@ The following address parts are compulsory: **salutation**, **firstName**, **las
 {% endinfo_block %}
 
 <details open>
-<summary>Body Sample</summary>
+<summary markdown='span'>Body Sample</summary>
     
 ```json
 {
@@ -204,7 +204,7 @@ In case of a successful update, the endpoint responds with information that can 
 *The attributes mentioned are all attributes in the response. Type and ID are not mentioned.
 
 <details open>
-<summary>Response Sample</summary>
+<summary markdown='span'>Response Sample</summary>
     
 ```json
 {
@@ -486,7 +486,7 @@ By default, if the checkout is successful, the order is placed and the shopping 
 | shipment | RestShipmentTransfer | v | Shipment details.</br>For details, see [Shipment Step](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html#shipment-step). |
 
 <details open>
-<summary>Body Sample</summary>
+<summary markdown='span'>Body Sample</summary>
     
 ```json
 {
@@ -560,7 +560,7 @@ The following address parts are compulsory: **salutation**, **firstName**, **las
 {% endinfo_block %}
 
 <details open>
-<summary>Body Sample</summary>
+<summary markdown='span'>Body Sample</summary>
     
 ```json
 {
@@ -640,7 +640,7 @@ Among the attributes returned, there is **orderReference** that can be used to r
 *The attributes mentioned are all attributes in the response. Type and ID are not mentioned.
 
 <details open>
-<summary>Response Sample</summary>
+<summary markdown='span'>Response Sample</summary>
     
 ```json
 {
@@ -671,7 +671,7 @@ For detailed information and a list of attributes, see section [Retrieving Speci
 Sample request: *POST http://glue.mysprykershop.com/checkout?include=orders*
 
 <details open>
-<summary>Response Sample</summary>
+<summary markdown='span'>Response Sample</summary>
     
 ```json
 {
@@ -940,7 +940,7 @@ You can also use the **Accept-Language** header to specify the locale.</br>Sampl
 {% endinfo_block %}
 
 <details open>
-<summary>Sample Request Body</summary>
+<summary markdown='span'>Sample Request Body</summary>
     
 ```json
 {
@@ -975,7 +975,7 @@ If the request was successful, the endpoint will respond with a 201 Created stat
 *The attributes mentioned are all attributes in the response. Type and ID are not mentioned.
 
 <details open>
-<summary>Response Sample</summary>
+<summary markdown='span'>Response Sample</summary>
     
 ```json
 {

@@ -25,7 +25,7 @@ If containers are already running, the fastest option is to run `docker/sdk run 
 ### Required Configuration
 
 <details open>
-    <summary> Xdebug configuration</summary>
+    <summary markdown='span'> Xdebug configuration</summary>
 
 Open **Preferences** → **Languages & Frameworks** → **PHP** → **Debug** in PhpStorm and do the following:
 
@@ -47,7 +47,7 @@ Open **Preferences** → **Languages & Frameworks** → **PHP** → **Debug** in
 </details>
 
 <details open>
-    <summary> Servers configuration</summary>
+    <summary markdown='span'> Servers configuration</summary>
 
 Open **Preferences** → **Languages & Frameworks** → **PHP** → **Servers** in PhpStorm and do the following:
 
@@ -64,7 +64,7 @@ Add a server:
 ### Optional Configuration
 
 <details open>
-    <summary> Remote PHP interpreter Setup</summary>
+    <summary markdown='span'> Remote PHP interpreter Setup</summary>
 
 1. Open **Preferences** → **Languages & Frameworks** → **PHP**.
 2. Add new remote PHP interpreter:
@@ -77,7 +77,7 @@ Add a server:
 </details>
 
 <details open>
-    <summary>Remote Debug configuration</summary>
+    <summary markdown='span'>Remote Debug configuration</summary>
 
 1. Open **Run** → **Edit Configurations...**.
 ![Edit configurations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Debugging+Setup+in+Docker/edit-configs.png) 

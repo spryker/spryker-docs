@@ -1,5 +1,5 @@
 ---
-title: Glue API- Product Bundle + Cart feature integration
+title: Glue API - Product Bundle + Cart feature integration
 description: Learn how to integrate the Glue API- Product Bundle + Cart feature into a Spryker project.
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-product-bundle-cart-feature-integration
@@ -20,9 +20,9 @@ To start the feature integration, overview and install the necessary features:
 
 | Name | Version | Integration guide |
 | --- | --- | --- |
-| Spryker Core | master | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Product Bundles |master| [Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-bundles-feature-integration.html)|
-| Cart |master| [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)|
+| Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Product Bundles |{{page.version}}| [Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-bundles-feature-integration.html)|
+| Cart |{{page.version}}| [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)|
 
 ## 1) Install the required modules using Composer
 
@@ -78,7 +78,7 @@ Activate the following plugins:
 
 
 <details open>
-    <summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -214,14 +214,14 @@ Ensure that you can:
 *   Edit bundle item quantity: `PATCH https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}bundleItemGroupKey{% raw %}}}{% endraw %}`.
     
 *   Delete a bundle from cart: `DELETE https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}bundleItemGroupKey{% raw %}}}{% endraw %}`.
-    
 
 {% endinfo_block %}
+
 ## Related features
 
 Integrate the following related features:
 
-| Feature | Required for the current feature | Integration guide |
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Products | ✓ | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
 | Product Bundles |✓ |[Glue API: Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-bundles-feature-integration.html)|

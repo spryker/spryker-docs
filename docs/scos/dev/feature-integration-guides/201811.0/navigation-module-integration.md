@@ -114,7 +114,7 @@ The following code examples show the Demoshop implementation of how to render `M
 In `Pyz/Yves/Application/Theme/default/layout/navigation/main.twig` we traverse the root navigation nodes of the navigation tree and for each root node we render their children nodes as well.
 
 <details open>
-<summary>Code sample:</summary>
+<summary markdown='span'>Code sample:</summary>
     
 ```
 <div class="callout show-for-large">
@@ -170,7 +170,7 @@ In `Pyz/Yves/Application/Theme/default/layout/navigation/main.twig` we traverse 
 The children nodes are rendered recursively by `Pyz/Yves/Application/Theme/default/layout/navigation/_partials/nodes.twig`.
 
 <details open>
-<summary>Code sample:</summary>
+<summary markdown='span'>Code sample:</summary>
     
 ```
 <ul class="vertical menu {% raw %}{%{% endraw %} if nested|default(false) {% raw %}%}{% endraw %}nested{% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}">
@@ -214,7 +214,7 @@ To prevent code duplication we implemented the `Pyz/Yves/Application/Theme/defau
 This is also the place where we take the visibility controller parameters into account : `valid_from`, `valid_to`, and `is_active`.
 
 <details open>
-<summary>Code sample:</summary>
+<summary markdown='span'>Code sample:</summary>
     
 ```
 {% raw %}{%{% endraw %} set class = node.navigationNode.navigationNodeLocalizedAttributes[0].cssClass {% raw %}%}{% endraw %}

@@ -33,7 +33,7 @@ Register the following plugins:
 |  `ReorderPersistentCartChangeExpanderPlugin` | Adds a default reorder name and adds it to add item request. | 1 |  `Spryker\Client\MultiCart\Plugin` |
 
 <details open>
-    <summary>src/Pyz/Client/PersistentCart/PersistentCartDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Client/PersistentCart/PersistentCartDependencyProvider.php</summary>
 
 ```php
     <?php

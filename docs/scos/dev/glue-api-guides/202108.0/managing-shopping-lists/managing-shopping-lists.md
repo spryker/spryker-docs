@@ -59,7 +59,7 @@ Request sample: `POST http://glue.mysprykershop.com/shopping-lists`
 ### Response
 
 <details open>
-<summary>Response sample</summary>
+<summary markdown='span'>markdown='span'>Response sample</summary>
    
 ```json
 {
@@ -129,7 +129,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 
 ### Response
 <details open>
-<summary>Response sample with no shopping lists</summary>
+<summary markdown='span'>markdown='span'>Response sample with no shopping lists</summary>
    
 ```json
   {
@@ -143,7 +143,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 </details>    
 
 <details open>
-<summary>Response sample with own and shared shopping lists</summary>
+<summary markdown='span'>markdown='span'>Response sample with own and shared shopping lists</summary>
    
 ```json
 {
@@ -200,7 +200,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 </details>
 
 <details open>
-<summary>Response sample with shopping list items and concrete products</summary>
+<summary markdown='span'>markdown='span'>Response sample with shopping list items and concrete products</summary>
    
 ```json
 {
@@ -391,7 +391,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 
 ### Response
 <details open>
-<summary>Response sample</summary>
+<summary markdown='span'>markdown='span'>Response sample</summary>
    
 ```json
 {
@@ -416,7 +416,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 
 
 <details open>
-<summary>Response sample with shopping list items</summary>
+<summary markdown='span'>markdown='span'>Response sample with shopping list items</summary>
    
 ```json
 {
@@ -470,7 +470,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 </details>
 
 <details open>
-<summary>Response sample with shopping list items and concrete products</summary>
+<summary markdown='span'>markdown='span'>Response sample with shopping list items and concrete products</summary>
    
 ```json
 {
@@ -668,7 +668,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 
 ### Response
 <details open>
-<summary>Response sample</summary>
+<summary markdown='span'>markdown='span'>Response sample</summary>
    
 ```json
 {
@@ -692,7 +692,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 </details> 
 
 <details open>
-<summary>Response sample with shopping list items and information on concrete products</summary>
+<summary markdown='span'>markdown='span'>Response sample with shopping list items and information on concrete products</summary>
    
 ```json
 "data": {

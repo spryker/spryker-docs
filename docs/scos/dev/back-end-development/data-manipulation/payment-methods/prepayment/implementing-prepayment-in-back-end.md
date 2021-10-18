@@ -33,7 +33,7 @@ Perform the following procedure:
 1. Add the following 2 plugins in Zed, inside the `Communication/Plugin/Checkout/` folder of the new added module.
 
 <details open>
-<summary>PrepaymentPreCheckPlugin</summary>
+<summary markdown='span'>PrepaymentPreCheckPlugin</summary>
 
 ```php
 <?php
@@ -67,7 +67,7 @@ class PrepaymentPreCheckPlugin extends AbstractPlugin implements CheckoutPreChec
 </details>
 
 <details open>
-<summary>PrepaymentSaveOrderPlugin</summary>
+<summary markdown='span'>PrepaymentSaveOrderPlugin</summary>
 
 ```php
 <?php

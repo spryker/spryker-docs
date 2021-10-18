@@ -54,7 +54,7 @@ Make sure that the following changes in transfer objects have been applied:<tabl
 
 Append glossary for the approval process feature:
 <details open>
-<summary> src/data/import/glossary.csv</summary>
+<summary markdown='span'> src/data/import/glossary.csv</summary>
 
 ```bash
 
@@ -119,7 +119,7 @@ To setup the permission integration, register the following plugins:
 |  `PlaceOrderPermissionPlugin` | Permission check that verifies if the customer can place an order in Zed layer. | None |  `Spryker\Zed\QuoteApproval\Communication\Plugin\Permission` |
 
 <details open>
-<summary> src/Pyz/Client/Permission/PermissionDependencyProvider.php</summary>
+<summary markdown='span'> src/Pyz/Client/Permission/PermissionDependencyProvider.php</summary>
  
  ```php
 ?php
@@ -152,7 +152,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 </details>
 
 <details open>
-<summary> src/Pyz/Zed/Permission/PermissionDependencyProvider.php</summary>
+<summary markdown='span'> src/Pyz/Zed/Permission/PermissionDependencyProvider.php</summary>
 
  ```php
     <?php
@@ -194,7 +194,7 @@ To set up the quote integration, register the following plugins:
 |  `RemoveQuoteApprovalsBeforeQuoteDeletePlugin` | Removes quote approvals from database before quote deletion. | None |  `Spryker\Zed\QuoteApproval\Communication\Plugin\Quote` |
 
 <details open>
-<summary> src/Pyz/Zed/Quote/QuoteDependencyProvider.php</summary>
+<summary markdown='span'> src/Pyz/Zed/Quote/QuoteDependencyProvider.php</summary>
 
  ```php
 <?php
@@ -242,7 +242,7 @@ To set up the checkout integration, register the following plugin:
 | --- | --- | --- | --- |
 |  `QuoteApprovalCheckoutPreCheckPlugin` | Verifies that quote applicable for checkout if any of these conditions are met:<ul><li>Quote has an approved quote approval.</li><li>The quote does not require approval.</li> </ul>| None |  `Spryker\Client\QuoteApproval\Plugin\Checkout` |
 <details open>
-<summary>src/Pyz/Client/Checkout/CheckoutDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/Checkout/CheckoutDependencyProvider.php</summary>
 
  ```php
 <?php
@@ -299,7 +299,7 @@ Make sure that the following module has been installed:<table><thead><tr><th>Mod
 Append glossary according to your configuration:
 
 <details open>
-<summary> src/data/import/glossary.csv</summary>
+<summary markdown='span'> src/data/import/glossary.csv</summary>
 
  ```yaml
 quote_approval_widget.title,Approval Request,en_US
@@ -357,7 +357,7 @@ Register the following global widgets:
 |  `QuoteApproveRequestWidget` | Adds the request for quote approve functionality to the Cart page. | None |  `SprykerShop\Yves\QuoteApprovalWidget\Widget` |
 
  <details open>
-<summary>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
 
  ```php
 <?php
@@ -405,7 +405,7 @@ To enable the controllers, register the following plugin:
 |  `QuoteApprovalControllerProvider` | Provides routes used in `QuoteApprovalWidget`. | None |  `SprykerShop\Yves\QuoteApprovalWidget\Plugin\Provider` |
 
 <details open>
-<summary> src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>
+<summary markdown='span'> src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>
 
  ```php
 <?php

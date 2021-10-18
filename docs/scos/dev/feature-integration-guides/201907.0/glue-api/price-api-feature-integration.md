@@ -64,7 +64,7 @@ Activate the following plugins:
 | `ConcreteProductsProductPricesResourceRelationshipPlugin` | Adds the `concrete-product-prices` resource as a relationship to the `concrete-products` resource. | None | `Spryker\Glue\ProductsProductPricesResourceRelationship\Plugin` |
 
 <details open>
-<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

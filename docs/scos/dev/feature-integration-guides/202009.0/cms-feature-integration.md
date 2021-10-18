@@ -639,7 +639,7 @@ Make sure that all the CMS entity changes performed manually in the Back Office 
 1. Prepare your pages data according to your requirements using our demo data:
 
 <details open>
-<summary>vendor/spryker/cms-page-data-import/data/import/cms_page.csv</summary>
+<summary markdown='span'>vendor/spryker/cms-page-data-import/data/import/cms_page.csv</summary>
 
 ```yaml
 page_key,template_name,is_searchable,is_active,publish,url.de_DE,url.en_US,name.de_DE,name.en_US,meta_title.de_DE,meta_title.en_US,meta_keywords.de_DE,meta_keywords.en_US,meta_description.de_DE,meta_description.en_US,placeholder.title.de_DE,placeholder.title.en_US,placeholder.content.de_DE,placeholder.content.en_US

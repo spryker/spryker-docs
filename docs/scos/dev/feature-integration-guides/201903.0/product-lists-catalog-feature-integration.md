@@ -48,7 +48,7 @@ The order of the query expander plugins matters for the search result. Make sure
 {% endinfo_block %}
 
 <details open>
-<summary>src/Pyz/Client/Catalog/CatalogDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/Catalog/CatalogDependencyProvider.php</summary>
 
 ```php
 <?php

@@ -127,7 +127,7 @@ use SprykerEco\Zed\AfterPay\Communication\Plugin\Checkout\AfterPaySaveOrderPlugi
 
 In `src/Pyz/Zed/Oms/OmsDependencyProvider.php`, add:
 <details open>
- <summary>Click to expand the code sample</summary>
+ <summary markdown='span'>Click to expand the code sample</summary>
 
  ```php
  ...

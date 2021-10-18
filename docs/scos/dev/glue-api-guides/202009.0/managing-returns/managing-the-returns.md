@@ -89,7 +89,7 @@ Request sample: `POST https://glue.mysprykershop.com/returns`
 ### Response
 
 <details>
-  <summary>Response sample</summary>
+  <summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -276,7 +276,7 @@ Request sample: `GET https://glue.mysprykershop.com/returns`
 ### Response
 
 <details open>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -375,7 +375,7 @@ Sample request: `GET http://glue.mysprykershop.com/returns/DE--1-R3`
 ### Response
 
 <details>
-<summary>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {

@@ -1,5 +1,5 @@
 ---
-title: Glue API- Payments feature integration
+title: Glue API - Payments feature integration
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-payments-feature-integration
 originalArticleId: 37aaeca3-9205-4ca3-8332-6a1ab7b31c80
@@ -13,45 +13,49 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
 ---
 
-<section contenteditable="false" class="errorBox"><div class="content">
+{% info_block errorBox %}
 
-**The following feature integration Guide expects the basic feature to be in place.**
+
+The following feature integration Guide expects the basic feature to be in place.
 The current guide only adds the Payment Management API functionality.
-</div></section>
+
+{% endinfo_block %}
+
 
 Follow the steps below to install Payments feature API.
 
 ## Prerequisites
+
 To start the feature integration, overview and install the necessary features:
 
-| Name | Version | Integration guide |
+| NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | master | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html)  |
-| Payments | master |  |
+| Spryker Core | {{page.version}} | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html)  |
+| Payments | {{page.version}} |  |
 
 ## 1)  Install the required modules using Composer
+
 Run the following command to install the required modules:
 
 ```bash
 composer require spryker/payments-rest-api:"1.1.0" --update-with-dependencies
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
-
-**Verification**
+{% info_block warningBox “Verification” %}
 
 Make sure that the following modules are installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-| `PaymentsRestApi` | `vendor/spryker/payments-rest-api` |
-</div></section>
+| PaymentsRestApi | vendor/spryker/payments-rest-api |
 
-## 2) Set Up Configuration
+{% endinfo_block %}
+
+## 2) Set up configuration
+
 Put all the payment methods available in the shop to  `CheckoutRestApiConfig`, for example:
 
-<details open>
-<summary>src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiConfig.php</summary>
+**src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiConfig.php**
 
 ```php
 <?php
@@ -86,16 +90,14 @@ class PaymentsRestApiConfig extends SprykerPaymentsRestApiConfig
 }
 ```
 
-</br>
-</details>
 
+## 3) Set up transfer objects
 
-## 3) Set Up Transfer Objects
 ### Install payment methods
+
 To have payment methods available for the checkout,  extend `RestPaymentTransfer` with project-specific payment method transfers:
 
-<details open>
-<summary>src/Pyz/Shared/CheckoutRestApi/Transfer/checkout_rest_api.transfer.xml</summary>
+**src/Pyz/Shared/CheckoutRestApi/Transfer/checkout_rest_api.transfer.xml**
 
 ```xml
 <?xml version="1.0"?>
@@ -112,52 +114,49 @@ To have payment methods available for the checkout,  extend `RestPaymentTransfer
 </transfers>
 ```
 
-</br>
-</details>
 
-<p>Run the following command to generate transfer changes:
+Run the following command to generate transfer changes:
 
 ```bash
 console transfer:generate
 ```
-</p>
 
 {% info_block warningBox "Verification" %}
 
 Make sure that the following changes have occurred:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
-| `RestCheckoutRequestAttributesTransfer` | class | created | `src/Generated/Shared/Transfer/RestCheckoutRequestAttributesTransfer.php` |
-| `QuoteTransfer` | class | created | `src/Generated/Shared/Transfer/QuoteTransfer.php` |
-| `PaymentTransfer` | class | created | `src/Generated/Shared/Transfer/PaymentTransfer.php` |
-| `RestPaymentTransfer` | class | created | `src/Generated/Shared/Transfer/RestPaymentTransfer.php` |
-| `RestPaymentMethodsAttributesTransfer` | class | created | `src/Generated/Shared/Transfer/RestPaymentMethodsAttributesTransfer.php` |
-| `RestCheckoutTransfer` | class | created | `src/Generated/Shared/Transfer/RestCheckoutTransfer.php` |
-| `PaymentMethodTransfer` | class | created | `src/Generated/Shared/Transfer/PaymentMethodTransfer.php` |
-| `PaymentProviderTransfer` | class | created | `src/Generated/Shared/Transfer/PaymentProviderTransfer.php` |
-| `PaymentMethodsTransfer` | class | created | `src/Generated/Shared/Transfer/PaymentMethodsTransfer.php` |
-| `RestCheckoutDataTransfer` | class | created | `src/Generated/Shared/Transfer/RestCheckoutDataTransfer.php` |
-| `PaymentProviderCollectionTransfer` | class | created | `src/Generated/Shared/Transfer/PaymentProviderCollectionTransfer.php` |
-| `RestCheckoutDataResponseAttributesTransfer` | class | created | `src/Generated/Shared/Transfer/RestCheckoutDataResponseAttributesTransfer.php` |
-| `RestPaymentMethodTransfer` | class | created | `src/Generated/Shared/Transfer/RestPaymentMethodTransfer.php` |
-| `RestPaymentTransfer.DummyPayment` | property | created | `src/Generated/Shared/Transfer/RestPaymentTransfer.php` |
-| `RestPaymentTransfer.DummyPaymentInvoicet` | property | created | `src/Generated/Shared/Transfer/RestPaymentTransfer.php` |
-| `RestPaymentTransfer.DummyPaymentCreditCard` | property | created | `src/Generated/Shared/Transfer/RestPaymentTransfer.php` |
+| RestCheckoutRequestAttributesTransfer | class | created | src/Generated/Shared/Transfer/RestCheckoutRequestAttributesTransfer.php |
+| QuoteTransfer | class | created | src/Generated/Shared/Transfer/QuoteTransfer.php |
+| PaymentTransfer | class | created | src/Generated/Shared/Transfer/PaymentTransfer.php |
+| RestPaymentTransfer | class | created | src/Generated/Shared/Transfer/RestPaymentTransfer.php |
+| RestPaymentMethodsAttributesTransfer | class | created | src/Generated/Shared/Transfer/RestPaymentMethodsAttributesTransfer.php |
+| RestCheckoutTransfer | class | created | src/Generated/Shared/Transfer/RestCheckoutTransfer.php |
+| PaymentMethodTransfer | class | created | src/Generated/Shared/Transfer/PaymentMethodTransfer.php |
+| PaymentProviderTransfer | class | created | src/Generated/Shared/Transfer/PaymentProviderTransfer.php |
+| PaymentMethodsTransfer | class | created | src/Generated/Shared/Transfer/PaymentMethodsTransfer.php |
+| RestCheckoutDataTransfer | class | created | src/Generated/Shared/Transfer/RestCheckoutDataTransfer.php |
+| PaymentProviderCollectionTransfer | class | created | src/Generated/Shared/Transfer/PaymentProviderCollectionTransfer.php |
+| RestCheckoutDataResponseAttributesTransfer | class | created | src/Generated/Shared/Transfer/RestCheckoutDataResponseAttributesTransfer.php |
+| RestPaymentMethodTransfer | class | created | src/Generated/Shared/Transfer/RestPaymentMethodTransfer.php |
+| RestPaymentTransfer.DummyPayment | property | created | src/Generated/Shared/Transfer/RestPaymentTransfer.php |
+| RestPaymentTransfer.DummyPaymentInvoice | property | created | src/Generated/Shared/Transfer/RestPaymentTransfer.php |
+| RestPaymentTransfer.DummyPaymentCreditCard | property | created | src/Generated/Shared/Transfer/RestPaymentTransfer.php |
 
 {% endinfo_block %}
 
 
-## 4) Set Up Behavior
+## 4) Set up behavior
+
 ### Enable resources and relationships
 Activate the following plugin:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `PaymentMethodsByCheckoutDataResourceRelationshipPlugin` | Adds payment-methods resource as relationship in case `RestCheckoutDataTransfer` is provided as payload. | None | `Spryker\Glue\PaymentsRestApi\Plugin\GlueApplication` |
+| PaymentMethodsByCheckoutDataResourceRelationshipPlugin | Adds payment-methods resource as relationship in case `RestCheckoutDataTransfer` is provided as payload. | None | Spryker\Glue\PaymentsRestApi\Plugin\GlueApplication |
 
-<details open>
-<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
 ```php
 <?php
@@ -189,9 +188,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</br>
-</details>
-
 {% info_block warningBox "Verification" %}
 
 To verify `PaymentMethodsByCheckoutDataResourceRelationshipPlugin` is activated, send a POST request to `http://glue.mysprykershop.com/checkout-data?include=payment-methods` and make sure that `checkout-data` resource has a relationship to the `payment-methods` resources.
@@ -199,14 +195,14 @@ To verify `PaymentMethodsByCheckoutDataResourceRelationshipPlugin` is activated,
 {% endinfo_block %}
 
 ### Configure mapping
+
 Mappers should be configured on a project level to map the data from the request into `QuoteTransfer`:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- |--- |
 | PaymentsQuoteMapperPlugin | Adds a mapper that maps Payments information to `QuoteTransfer`. | None | `Spryker\Zed\PaymentsRestApi\Communication\Plugin\CheckoutRestApi` |
 
-<details open>
-<summary>src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
+**src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
 
 ```php
 <?php
@@ -230,8 +226,6 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 }
 ```
 
-</br>
-</details>
 
 {% info_block warningBox "Verification" %}
 
@@ -240,12 +234,11 @@ To verify that `PaymentsQuoteMapperPlugin` is activated, send a POST request to 
 {% endinfo_block %}
 
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| SelectedPaymentMethodCheckoutDataResponseMapperPlugin | Maps the selected payment method data to the checkout-data resource attributes. | None | `Spryker\Glue\PaymentsRestApi\Plugin\CheckoutRestApi` |
+| SelectedPaymentMethodCheckoutDataResponseMapperPlugin | Maps the selected payment method data to the checkout-data resource attributes. | None | Spryker\Glue\PaymentsRestApi\Plugin\CheckoutRestApi |
 
-<details open>
-<summary>src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
+**src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
 
 ```php
 <?php
@@ -270,8 +263,6 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 ```
 
-</br>
-</details>
 
 {% info_block warningBox "Verification" %}
 
@@ -281,6 +272,6 @@ To verify that SelectedPaymentMethodCheckoutDataResponseMapperPlugin is activate
 
 ## Related Features
 
-| Feature | Link |
+| FEATURE | LINK |
 | --- | --- |
 | Checkout API | [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |

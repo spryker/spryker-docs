@@ -40,7 +40,7 @@ Make sure that the following module is installed:<table><thead><tr class="TableS
 Append the glossary according to your configuration:
 
 <details open>
-    <summary>src/data/import/glossary.csv</summary>
+    <summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 quick-order.input.placeholder,Search by SKU or Name,en_US
@@ -69,7 +69,7 @@ Register the following plugins to enable widgets:
 |`ProductConcreteSearchWidget`|Allows customers to search for concrete products on the Cart page.|None|  `SprykerShop\Yves\ProductSearchWidget\Widget`|`ProductConcreteAddWidget`|Incorporates `ProductConcreteSearchWidget` and allows customers to search for concrete products and quickly add them to the Cart with the desired quantity.|None|`SprykerShop\Yves\ProductSearchWidget\Widget`|
 
 <details open>
-<summary>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

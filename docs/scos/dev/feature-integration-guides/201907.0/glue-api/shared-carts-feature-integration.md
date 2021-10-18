@@ -107,7 +107,7 @@ Activate the following plugins:
 | `QuotePermissionGroupQuoteExpanderPlugin` | Expands the quote transfer with a quote permission group. | None | `Spryker\Zed\SharedCartsRestApi\Communication\Plugin\CartsRestApi\QuotePermissionGroupQuoteExpanderPlugin` |
 
 <details open>
-<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
     
 ```php
 <?php
@@ -172,7 +172,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -211,7 +211,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 </details>
 
 <details open>
-<summary>src/Pyz/Glue/SharedCartsRestApi/SharedCartsRestApiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/SharedCartsRestApi/SharedCartsRestApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -238,7 +238,7 @@ class SharedCartsRestApiDependencyProvider extends SprykerSharedCartsRestApiDepe
 </details>
 
 <details open>
-<summary>src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -290,7 +290,7 @@ To make sure that `SharedCartsResourceRoutePlugin` is installed correctly, make 
 {% endinfo_block %}
 
 <details open>
-<summary>POST http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/shared-carts</summary>
+<summary markdown='span'>POST http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/shared-carts</summary>
 
 ```json
 {
@@ -312,7 +312,7 @@ The same plugin, `SharedCartsResourceRoutePlugin`, allows accepting a PATCH requ
 {% endinfo_block %}
 
 <details open>
-<summary>PATCH http://glue.mysprykershop.com/shared-carts/{% raw %}{{{% endraw %}shared_cart_uuid{% raw %}}}{% endraw %}</summary>
+<summary markdown='span'>PATCH http://glue.mysprykershop.com/shared-carts/{% raw %}{{{% endraw %}shared_cart_uuid{% raw %}}}{% endraw %}</summary>
 
 ```json
 {

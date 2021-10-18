@@ -25,7 +25,7 @@ Enable the following behaviors by registering the plugins:
 |`AvailabilityCheckAlternativeProductApplicablePlugin`|Checks if product alternatives should be shown for the product.|Expects SKU and `IdProductAbstract` to be set for the ProductViewTransfer.|`Spryker\Client\AvailabilityStorage\Plugin\ProductAlternativeStorage`|
 
 <details open>
-<summary>src/Pyz/Client/ProductAlternativeStorage/ProductAlternativeStorageDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/ProductAlternativeStorage/ProductAlternativeStorageDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -52,7 +52,7 @@ class ProductAlternativeStorageDependencyProvider extends SprykerProductAlternat
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/ProductAlternative/ProductAlternativeDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/ProductAlternative/ProductAlternativeDependencyProvider.php</summary>
 
 ```php
 <?php

@@ -47,7 +47,7 @@ Basic parameters:
 Controller example:
 
  <details open>
-<summary>Click here to expand the code sample</summary>
+<summary markdown='span'>Click here to expand the code sample</summary>
 
  ```php
 <?php

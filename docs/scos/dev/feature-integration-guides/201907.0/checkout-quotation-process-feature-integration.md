@@ -27,7 +27,7 @@ Register the following plugins:
 | `CloseQuoteRequestCheckoutPostSaveHookPlugin` | Closes a quote request after the order has been placed from it. | None | `Spryker\Zed\QuoteRequest\Communication\Plugin\Checkout` |
 
 <details open>
-<summary>Pyz\Zed\Checkout\CheckoutDependencyProvider.php</summary>
+<summary markdown='span'>Pyz\Zed\Checkout\CheckoutDependencyProvider.php</summary>
     
 ```php
 <?php

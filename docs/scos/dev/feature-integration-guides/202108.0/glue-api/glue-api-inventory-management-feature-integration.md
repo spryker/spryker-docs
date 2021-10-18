@@ -1,5 +1,5 @@
 ---
-title: Glue API- Inventory Management feature integration
+title: Glue API - Inventory Management feature integration
 description: Learn how to integrate the Inventory Management feature API into a Spryker project.
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-inventory-management-feature-integration
@@ -17,13 +17,12 @@ This document describes how to install the Inventory Management feature API into
 
 To start feature integration, overview and install the necessary features:
 
-| Name | Version | Integration guide |
+| NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core| 201907.0| [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html)| 
-| Product | 201907.0 | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) | 
-|Inventory Management| 201907.0| |
+| Spryker Core| {{page.version}}| [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html)| 
+| Product | {{page.version}} | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) | 
+|Inventory Management| {{page.version}} | |
 
-  
 
 ## 1) Install the required modules using Composer
 
@@ -36,16 +35,17 @@ composer require spryker/product-availabilities-rest-api:"^2.0.0" --update-with-
 
 Make sure that the following modules have been installed:
 
-
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | ProductAvailabilitiesRestApi| vendor/spryker/product-availabilities-rest-api| 
 | ProductsRestApi| vendor/spryker/products-rest-api |
 
 {% endinfo_block %}
+
 ## 2) Set up transfer objects
 
 Run the following command to generate transfer changes:
+
 ```bash
 console transfer:generate
 ```
@@ -54,11 +54,10 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| Transfer| Type| Event| Path|
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | RestAbstractProductAvailabilityAttributesTransfer| class| created| src/Generated/Shared/Transfer/RestAbstractProductAvailabilityAttributesTransfer| 
 | RestConcreteProductAvailabilityAttributesTransfer| class| created| src/Generated/Shared/Transfer/RestConcreteProductAvailabilityAttributesTransfer|
-
 
 {% endinfo_block %}
 
@@ -66,9 +65,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 Activate the following plugins:  
 
-
-
-| Plugin | Specification | Prerequisites | Namespace | 
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- | 
 |AbstractProductAvailabilitiesRoutePlugin | Registers the abstract product availabilities resource. | None | Spryker\Glue\ProductAvailabilitiesRestApi\Plugin |
 | ConcreteProductAvailabilitiesRoutePlugin | Registers the concrete product availabilities resource. | None | Spryker\Glue\ProductAvailabilitiesRestApi\Plugin | 
@@ -77,7 +74,7 @@ Activate the following plugins:
 
   
 <details open>
-    <summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -126,10 +123,9 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
-
 </details>
-{% info_block warningBox "Verification" %}
 
+{% info_block warningBox "Verification" %}
 
 Make sure that the following endpoints are available:
 
@@ -142,6 +138,4 @@ Send the `GET http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}
 
 Send the `GET http://mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}?include=concrete-product-availabilities` and make sure that the response includes relationships to the `concrete-product-availabilities` resource.
 
-
 {% endinfo_block %}  
-

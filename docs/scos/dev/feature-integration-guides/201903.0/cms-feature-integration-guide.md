@@ -35,7 +35,7 @@ Adjust the schema definition so that entity changes can trigger events.
 | `spy_cms_page_store` | <ul><li>`Entity.spy_cms_page_store.create`</li><li>`Entity.spy_cms_page_store.update`</li><li>`Entity.spy_cms_page_store.delete`</li></ul> |
 
 <details open>
-<summary>src/Pyz/Zed/Cms/Persistence/Propel/Schema/spy_cms.schema.xml</summary>
+<summary markdown='span'>src/Pyz/Zed/Cms/Persistence/Propel/Schema/spy_cms.schema.xml</summary>
 
 ```html
 <?xml version="1.0"?>
@@ -77,7 +77,7 @@ Add CMS Page plugins in the correct order.
 | `CmsPageStoreDataImportPlugin` |Associates a page with different stores.  |<ul><li>`CmsPageStoreDataImportPlugin` must load after `CmsPageDataImport`</li><li>Navigation Import (if installed) must load after all CMS Page data importers.</li></ul>  | `\Spryker\Zed\CmsPageDataImport\Communication\Plugin` |
 
 <details open>
-<summary>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -134,7 +134,7 @@ Add the following plugins:
 | `StoreRelationToggleFormTypePlugin` | Enables a list of toggleable stores. | None | `Spryker\Zed\Store\Communication\Plugin\Form` |
 
 <details open>
-<summary>src/Pyz/Zed/CmsGui/CmsGuiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/CmsGui/CmsGuiDependencyProvider.php</summary>
 
 ```php
 <?php

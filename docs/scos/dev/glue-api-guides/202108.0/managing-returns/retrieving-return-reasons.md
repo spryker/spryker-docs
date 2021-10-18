@@ -35,7 +35,7 @@ Request sample :  `GET https://glue.mysprykershop.com/return-reasons`
 
 
 <details open>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
     
 ```json
 {

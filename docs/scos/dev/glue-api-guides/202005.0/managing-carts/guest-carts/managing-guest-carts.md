@@ -133,7 +133,7 @@ When defining product amount in sales units, make sure that the correlation betw
 ### Response
 
 <details>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
     
 ```json
 {
@@ -211,7 +211,7 @@ When defining product amount in sales units, make sure that the correlation betw
     
     
 <details>
-    <summary>Response sample with product measurement units and sales units</summary>
+    <summary markdown='span'>Response sample with product measurement units and sales units</summary>
     
 ```json
 {
@@ -461,7 +461,7 @@ Even though guest users have one cart by default, you can optionally specify its
 #### Response
 
 <details>
-    <summary>Response sample with concrete products</summary>
+    <summary markdown='span'>Response sample with concrete products</summary>
     
 ```json
 {
@@ -578,7 +578,7 @@ Even though guest users have one cart by default, you can optionally specify its
 </details>
 
 <details>
-    <summary>Response sample with product measurement units and sales units</summary>
+    <summary markdown='span'>Response sample with product measurement units and sales units</summary>
     
 ```json
 {
@@ -712,7 +712,7 @@ Even though guest users have one cart by default, you can optionally specify its
 </details>
 
 <details open>
-<summary>Response sample with a promotional item</summary>
+<summary markdown='span'>Response sample with a promotional item</summary>
    
 ```json
 {
@@ -751,7 +751,7 @@ Even though guest users have one cart by default, you can optionally specify its
 </details>
 
 <details open>
-<summary>Response sample with details on a promotional item</summary>
+<summary markdown='span'>Response sample with details on a promotional item</summary>
    
 ```json
 {
@@ -895,7 +895,7 @@ Even though guest users have one cart by default, you can optionally specify its
 </details>
 
 <details>
-    <summary>Response sample with concrete products and product labels</summary>
+    <summary markdown='span'>Response sample with concrete products and product labels</summary>
     
 ```json
 {
@@ -1156,7 +1156,7 @@ The `cart-rules` parameter allows you to retrieve detailed information on promot
 ### Response
 
 <details>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
     
 ```json
 {
@@ -1233,7 +1233,7 @@ The `cart-rules` parameter allows you to retrieve detailed information on promot
 </details>
 
 <details>
-    <summary>Response sample with product measurment units and sales units</summary>
+    <summary markdown='span'>Response sample with product measurment units and sales units</summary>
     
 ```json
 {
@@ -1352,7 +1352,7 @@ The `cart-rules` parameter allows you to retrieve detailed information on promot
 </details>
 
 <details open>
-<summary>Response sample: adding a promotional item without the cart-rules relationship</summary>
+<summary markdown='span'>Response sample: adding a promotional item without the cart-rules relationship</summary>
    
 ```json
 {
@@ -1395,7 +1395,7 @@ The `cart-rules` parameter allows you to retrieve detailed information on promot
 </details>
 
 <details open>
-<summary>Response sample: adding a promotional item with the cart-rules relationship</summary>
+<summary markdown='span'>Response sample: adding a promotional item with the cart-rules relationship</summary>
    
 ```json
 {

@@ -105,7 +105,7 @@ Add the following plugins to your project:
 |  `AvailabilityNotificationUnsubscribedMailTypePlugin` | Handles the email sent after unsubscribing from product availability notification. |  |  `Spryker\Zed\AvailabilityNotification\Communication\Plugin\Mail` |
 |  `AvailabilityNotificationMailTypePlugin` | Handles the email sent after the product's availability status change. | None |  `Spryker\Zed\AvailabilityNotification\Communication\Plugin\Mail` |
 
-<details><summary>src/Pyz/Zed/Mail/MailDependencyProvider.php</summary>
+<details><summary markdown='span'>src/Pyz/Zed/Mail/MailDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -272,7 +272,7 @@ Make sure that the following modules have been installed:<table><thead><tr class
 Feature-specific glossary keys:
 
 <details open>
-<summary> /data/import/glossary.csv</summary>
+<summary markdown='span'> /data/import/glossary.csv</summary>
 
  ```yaml
 availability_notification.notify_me,Notify me when back in stock,en_US

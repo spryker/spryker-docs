@@ -82,5 +82,5 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 ```
 
 {% info_block infoBox "Verification" %}
-Make sure that following endpoint is available:<br>`http://example.org/stores`
+Make sure that following endpoint is available:<br>`http://mysprykershop.com/stores`
 {% endinfo_block %}

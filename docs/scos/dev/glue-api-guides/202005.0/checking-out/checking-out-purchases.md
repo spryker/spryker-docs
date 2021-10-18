@@ -192,7 +192,7 @@ You can also use the **Accept-Language** header to specify the locale.</br>Sampl
 In case of a successful update, the endpoint responds with information that can help you fill in the missing checkout data, such as the customer's addresses, available payment and shipment methods, etc.
 
 <details open>
-<summary>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
     
 ```json
 {
@@ -296,7 +296,7 @@ To fetch the available payment methods, include the **payment-methods** resource
 **POST http://glue.mysprykershop.com/checkout-data?include=payment-methods**
 
 <details open>
-<summary>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
    
 ```
 {
@@ -377,7 +377,7 @@ To retrieve shipment methods, include the **shipment-methods** resource relation
 **POST http://glue.mysprykershop.com/checkout-data?include=shipment-methods**
 
 <details open>
-<summary>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
    
 ```
 {
@@ -520,7 +520,7 @@ In the following example request, shipment methods are sorted by attributes carr
 If the payment and/or shipment methods have been specified in the request to the /checkout-data endpoint, they are returned in the `selectedPaymentMethods` and the `selectedShipmentMethods` attribute, respectively:
 
 <details open>
-<summary>Response sample with shipment and payment methods selected</summary>
+<summary markdown='span'>Response sample with shipment and payment methods selected</summary>
    
 ```
 {

@@ -63,7 +63,7 @@ To retrieve related abstract products, include both `concrete-products` and `abs
 ### Response
 
 <details open>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -111,7 +111,7 @@ To retrieve related abstract products, include both `concrete-products` and `abs
 </details>
 
 <details open>
-    <summary>Response sample with concrete products</summary>
+    <summary markdown='span'>Response sample with concrete products</summary>
    
 ```json
 {
@@ -311,7 +311,7 @@ To retrieve related abstract products, include both `concrete-products` and `abs
 </details>
 
 <details open>
-    <summary>Response sample with concrete and abstract products</summary>
+    <summary markdown='span'>Response sample with concrete and abstract products</summary>
 
 ```json
 {

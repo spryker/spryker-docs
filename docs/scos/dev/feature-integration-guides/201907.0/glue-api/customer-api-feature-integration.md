@@ -78,7 +78,7 @@ Activate the console command provided by the module:
 | --- | --- | --- | --- |
 | `CustomerAddressesUuidWriterConsole` | Provides the `customer-addresses:uuid:generate console` command for generating UUIDs for existing `spy_customer_address` records. | None | `Spryker\Zed\WishlistsRestApi\Communication\Console` |
 
-<details open><summary>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
+<details open><summary markdown='span'>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
     
 ```php
 <?php
@@ -144,7 +144,7 @@ Activate the following plugins:
 | `CustomersToAddressesRelationshipPlugin` | Adds the `addresses` resource as a relationship to the `customers` resource. | None | `Spryker\Glue\CustomersRestApi\Plugin` |
 
 <details open>
-<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

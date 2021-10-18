@@ -16,56 +16,64 @@ redirect_from:
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| Name | Version | Integration guide |
+| NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | 202009.0 | [Feature API](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Return Management | 202009.0 | Feature |
+| Spryker Core | {{page.version}} | [Feature API](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Return Management | {{page.version}} | Feature |
 
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
+
 ```bash
-composer require spryker/sales-returns-rest-api:"202009.0" --update-with-dependencies
+composer require spryker/sales-returns-rest-api:"{{page.version}}" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-| `SalesReturnsRestApi` | `vendor/spryker/sales-returns-rest-api` |
+| SalesReturnsRestApi | vendor/spryker/sales-returns-rest-api |
 
 {% endinfo_block %}
 
-### 2) Set up Transfer Objects
+### 2) Set up transfer objects
+
 Run the following commands to generate transfer changes:
+
 ```bash
 console transfer:generate
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the configured data are added to the `spy_glossary` table  in the database.
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
-| `RestReturnsAttributes` | class | created | `src/Generated/Shared/Transfer/RestReturnsAttributesTransfer` |
-| `RestReturnReasonsAttributes` | class | created | `src/Generated/Shared/Transfer/RestReturnReasonsAttributesTransfer` |
-| `RestReturnRequestAttributes` | class | created | `src/Generated/Shared/Transfer/RestReturnRequestAttributesTransfer` |
-| `RestReturnItemRequestAttributes` | class | created | `src/Generated/Shared/Transfer/RestReturnItemRequestAttributesTransfer` |
-| `RestReturnTotalsAttributes` | class | created | `src/Generated/Shared/Transfer/RestReturnTotalsAttributesTransfer` |
-| `RestReturnItemsAttributes` | class | created | `src/Generated/Shared/Transfer/RestReturnItemsAttributesTransfer` |
+| RestReturnsAttributes | class | created | src/Generated/Shared/Transfer/RestReturnsAttributesTransfer |
+| RestReturnReasonsAttributes | class | created | src/Generated/Shared/Transfer/RestReturnReasonsAttributesTransfer |
+| RestReturnRequestAttributes | class | created | src/Generated/Shared/Transfer/RestReturnRequestAttributesTransfer |
+| RestReturnItemRequestAttributes | class | created | src/Generated/Shared/Transfer/RestReturnItemRequestAttributesTransfer |
+| RestReturnTotalsAttributes | class | created | src/Generated/Shared/Transfer/RestReturnTotalsAttributesTransfer |
+| RestReturnItemsAttributes | class | created | src/Generated/Shared/Transfer/RestReturnItemsAttributesTransfer |
 
 {% endinfo_block %}
 
-### 3) Set up Behavior
+### 3) Set up behavior
+
 Enable resources and relationships:
-| Plugin | Specification | Prerequisites | Namespace |
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `OrderItemByResourceIdResourceRelationshipPlugin` | Adds order-items resource as relationship by order item uuid. | None | `Spryker\Glue\OrdersRestApi\Plugin` |
-| `ReturnItemByReturnResourceRelationshipPlugin` | Adds return-items resource as relationship by return. | None | `Spryker\Glue\SalesReturnsRestApi\Plugin` |
-| `ReturnsResourceRoutePlugin` | Registers /returns route. | None | `Spryker\Glue\SalesReturnsRestApi\Plugin` |
-| `ReturnReasonsResourceRoutePlugin` | Registers /return-reasons route. | None | `Spryker\Glue\SalesReturnsRestApi\Plugin` |
+| OrderItemByResourceIdResourceRelationshipPlugin | Adds order-items resource as relationship by order item uuid. | None | Spryker\Glue\OrdersRestApi\Plugin |
+| ReturnItemByReturnResourceRelationshipPlugin | Adds return-items resource as relationship by return. | None | `Spryker\Glue\SalesReturnsRestApi\Plugin |
+| ReturnsResourceRoutePlugin | Registers `/returns` route. | None | Spryker\Glue\SalesReturnsRestApi\Plugin |
+| ReturnReasonsResourceRoutePlugin | Registers `/return-reasons` route. | None | Spryker\Glue\SalesReturnsRestApi\Plugin |
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
+
 ```php
 <?php
  

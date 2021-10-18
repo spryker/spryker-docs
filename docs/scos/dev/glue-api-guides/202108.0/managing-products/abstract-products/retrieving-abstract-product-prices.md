@@ -43,7 +43,7 @@ To retrieve prices of an abstract product, send the request:
 | priceMode | Defines the price mode to retrieve the price in. | GROSS_MODE, NET_MODE |
 
 ### Response
-<details><summary>Response sample with default abstract product prices</summary>
+<details><summary markdown='span'>Response sample with default abstract product prices</summary>
 
 ```JSON
 {
@@ -90,7 +90,7 @@ To retrieve prices of an abstract product, send the request:
 </details>
 
 <details>  
-<summary>
+<summary markdown='span'>
 Response sample with default prices and volume prices for an abstract product
 </summary>
 
@@ -146,7 +146,7 @@ Response sample with default prices and volume prices for an abstract product
 
 </details>
 
-<details><summary>Response sample with a gross price in Swiss Franc for an abstract product</summary>
+<details><summary markdown='span'>Response sample with a gross price in Swiss Franc for an abstract product</summary>
 
  ```JSON
     {

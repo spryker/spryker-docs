@@ -81,7 +81,7 @@ class ProductsRestApiDependencyProvider extends SprykerProductsRestApiDependency
 
     **`JSON response example`**
 ```js
-GET http://example.org/concrete-products/145_29885470
+GET http://mysprykershop.com/concrete-products/145_29885470
 {
     "data": {
         "type": "concrete-products",

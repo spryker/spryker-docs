@@ -27,7 +27,7 @@ Register the following plugins:
 | `DiscontinuedCheckAlternativeProductApplicablePlugin` | Checks if product alternatives should be shown for the product. | None | `Spryker\Zed\ProductDiscontinued\Communication\Plugin\ProductAlternative` |
 
 <details open>
-<summary>src/Pyz/Client/ProductAlternativeStorage/ProductAlternativeStorageDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/ProductAlternativeStorage/ProductAlternativeStorageDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -54,7 +54,7 @@ class ProductAlternativeStorageDependencyProvider extends SprykerProductAlternat
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/ProductAlternative/ProductAlternativeDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/ProductAlternative/ProductAlternativeDependencyProvider.php</summary>
 
 ```php
 <?php

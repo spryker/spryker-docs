@@ -30,7 +30,7 @@ Adyen module provides the following integration options:
 1. Add an additional Checkout Step. Examplary implementation:
 
 <details open>
-<summary>src/Pyz/Yves/CheckoutPage/Process/Steps/AdyenExecute3DStep.php</summary>
+<summary markdown='span'>src/Pyz/Yves/CheckoutPage/Process/Steps/AdyenExecute3DStep.php</summary>
     
  ```php
 <?php
@@ -114,7 +114,7 @@ class AdyenExecute3DStep extends AbstractBaseStep
 
 2. Add template for this step:
 <details open>
- <summary>src/Pyz/Yves/CheckoutPage/Theme/default/views/adyen/execute_3d.twig</summary>
+ <summary markdown='span'>src/Pyz/Yves/CheckoutPage/Theme/default/views/adyen/execute_3d.twig</summary>
 
  ```php
 {% raw %}{%{% endraw %} extends template('page-layout-main') {% raw %}%}{% endraw %}
@@ -135,7 +135,7 @@ class AdyenExecute3DStep extends AbstractBaseStep
 
 3. Put the step between place order and success steps:
 <details open>
- <summary>src/Pyz/Yves/CheckoutPage/Process/StepFactory.php</summary>
+ <summary markdown='span'>src/Pyz/Yves/CheckoutPage/Process/StepFactory.php</summary>
 
  ```php
 <?php
@@ -218,7 +218,7 @@ class StepFactory extends SprykerShopStepFactory
 
 4. Add controller to process 3D secure step:
 <details open>
-<summary>src/Pyz/Yves/CheckoutPage/Controller/CheckoutController.php</summary>
+<summary markdown='span'>src/Pyz/Yves/CheckoutPage/Controller/CheckoutController.php</summary>
 
  ```php
  <?php
@@ -264,7 +264,7 @@ class CheckoutController extends SprykerShopCheckoutController
 
 5. Add action to controller provider:
 <details open>
- <summary>src/Pyz/Yves/CheckoutPage/Plugin/Provider/CheckoutPageControllerProvider.php</summary>
+ <summary markdown='span'>src/Pyz/Yves/CheckoutPage/Plugin/Provider/CheckoutPageControllerProvider.php</summary>
 
  ```php
  <?php
@@ -321,7 +321,7 @@ class CheckoutPageControllerProvider extends SprykerShopCheckoutPageControllerPr
 
 6. Extend `PlaceOrder` step to set 3D Secure url and params into `QuoteTransfer`:
 <details open>
-<summary>src/Pyz/Yves/CheckoutPage/Process/Steps/PlaceOrderStep.php</summary>
+<summary markdown='span'>src/Pyz/Yves/CheckoutPage/Process/Steps/PlaceOrderStep.php</summary>
 
  ```php
 <?php
@@ -372,7 +372,7 @@ class PlaceOrderStep extends SprykerShopPlaceOrderStep
 7. Move `CheckoutPageControllerProvider` from core to project level in `YvesBootstrap`:
 
 <details open>
-<summary>\Pyz\Yves\ShopApplication\YvesBootstrap</summary>
+<summary markdown='span'>\Pyz\Yves\ShopApplication\YvesBootstrap</summary>
 
 ```php
 - use SprykerShop\Yves\CheckoutPage\Plugin\Provider\CheckoutPageControllerProvider;
@@ -384,7 +384,7 @@ class PlaceOrderStep extends SprykerShopPlaceOrderStep
 8. Extend `CheckoutPageConfig` to add method for checking if 3D Secure is enabled:
 
 <details open>
-<summary>\Pyz\Yves\CheckoutPage\CheckoutPageConfig</summary>
+<summary markdown='span'>\Pyz\Yves\CheckoutPage\CheckoutPageConfig</summary>
 
 ```php
 <?php
@@ -416,7 +416,7 @@ class CheckoutPageConfig extends SprykerShopCheckoutPageConfig
 9. Extend `CheckoutPageFactory` to replace SprykerShop Step Factory with the project-level one:
 
 <details open>
-<summary>\Pyz\Yves\CheckoutPage\CheckoutPageFactory</summary>
+<summary markdown='span'>\Pyz\Yves\CheckoutPage\CheckoutPageFactory</summary>
 
 ```php
 <?php

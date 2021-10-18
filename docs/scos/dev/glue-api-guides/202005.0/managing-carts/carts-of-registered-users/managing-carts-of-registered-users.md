@@ -221,7 +221,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
 #### Response 
 
 <details>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -235,7 +235,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
 </details>
 
 <details>
-    <summary>Response sample - multiple carts</summary>
+    <summary markdown='span'>Response sample - multiple carts</summary>
 
 ```json
 {
@@ -301,7 +301,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
 
 
 <details>
-    <summary>Response sample with items, concrete products and cart permission groups</summary>
+    <summary markdown='span'>Response sample with items, concrete products and cart permission groups</summary>
 
 ```json
 {
@@ -429,7 +429,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
 
 
 <details>
-    <summary>Response sample with items, product measurement units and sales units</summary>
+    <summary markdown='span'>Response sample with items, product measurement units and sales units</summary>
 
 ```json
 {
@@ -553,7 +553,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
 </details>
 
 <details>
-    <summary>Response sample with a promotional item</summary>
+    <summary markdown='span'>Response sample with a promotional item</summary>
 
 ```json
  "data": [
@@ -646,7 +646,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
 </details>
 
 <details>
-    <summary>Response sample with details on a promtotional item</summary>
+    <summary markdown='span'>Response sample with details on a promtotional item</summary>
 
 ```json
 {
@@ -923,7 +923,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
 #### Response 
 
 <details>
-    <summary>Response sample with items, concrete products and cart permission groups</summary>
+    <summary markdown='span'>Response sample with items, concrete products and cart permission groups</summary>
 
 ```json
 {
@@ -1045,7 +1045,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
 </details>
 
 <details>
-    <summary>Response sample with items, sales units and product measurement units</summary>
+    <summary markdown='span'>Response sample with items, sales units and product measurement units</summary>
 
 ```json
 {
@@ -1164,7 +1164,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
 </details>
 
 <details>
-    <summary>Response sample with a promotional item</summary>
+    <summary markdown='span'>Response sample with a promotional item</summary>
 
 ```json
 {
@@ -1225,7 +1225,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
 </details>
 
 <details>
-    <summary>Response sample with details on a promotional item</summary>
+    <summary markdown='span'>Response sample with details on a promotional item</summary>
 
 ```json
 {
@@ -1378,7 +1378,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 
 ### Response
 <details>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
 
 ```json
  {
@@ -1519,7 +1519,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 </details>
 
 <details>
-    <summary>Response sample: adding a promotional item without cart-rules relationship</summary>
+    <summary markdown='span'>Response sample: adding a promotional item without cart-rules relationship</summary>
 
 ```json
 {
@@ -1562,7 +1562,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 </details>
 
 <details>
-    <summary>Response sample: adding a promotional item with cart-rules relationshop</summary>
+    <summary markdown='span'>Response sample: adding a promotional item with cart-rules relationshop</summary>
 
 ```json
 {
@@ -1930,7 +1930,7 @@ Request sample: `PATCH http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4
 ### Response
 
 <details>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
 
 ```json
 {

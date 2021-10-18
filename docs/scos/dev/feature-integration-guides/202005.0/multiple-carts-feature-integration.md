@@ -411,7 +411,7 @@ Make sure that the following modules have been installed:<table><thead><tr><th>M
 ### 2) Add Translations
 Append glossary according to your configuration:
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 page.multi_cart.shopping_cart.list.title,Shopping cart,en_US

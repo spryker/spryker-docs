@@ -50,7 +50,7 @@ Make sure that the following modules are installed:
 Put all the payment methods available in the shop to  `PaymentConfig`, for example:
 
 <details open>
-<summary>src/Pyz/Zed/Payment/PaymentConfig.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Payment/PaymentConfig.php</summary>
     
 ```php
 <?php
@@ -106,7 +106,7 @@ Make sure that calling `Pyz\Zed\Payment\PaymentConfig::getSalesPaymentMethodType
 In order to have payment methods available for the checkout, you need to extend `RestPaymentTransfer` with project-specific payment method transfers installed in your project:
 
 <details open>
-<summary>src/Pyz/Shared/CheckoutRestApi/Transfer/checkout_rest_api.transfer.xml</summary>
+<summary markdown='span'>src/Pyz/Shared/CheckoutRestApi/Transfer/checkout_rest_api.transfer.xml</summary>
 
 ```xml
 <?xml version="1.0"?>
@@ -158,7 +158,7 @@ Activate the following plugin:
 | `SalesPaymentMethodTypeInstallerPlugin` | Installs available payment methods. | None | `Spryker\Zed\Payment\Communication\Plugin\Installer` |
 
 <details open>
-<summary>src/Pyz/Zed/Installer/InstallerDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Installer/InstallerDependencyProvider.php</summary>
     
 ```php
 <?php

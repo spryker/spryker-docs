@@ -21,6 +21,7 @@ Check out our release notes video for the quick illustration of the new features
 
 
 ## Spryker Commerce OS
+
 ### Return Management
 
 The **Return Management** feature provides multiple ways to return items of an order:
@@ -142,7 +143,7 @@ Customer, Agent, and Back Office users can now **cancel orders** during the canc
 Spryker now supports **invoice generation** inside the OMS processes. Starting from this release, the Back Office users can trigger the `invoice-generate` order state, which generates the order invoice and sends it to the Customer’s email address.
 
 #### Documentation
-[Invoice Generation](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/nvoice-generation-overview.html)
+[Invoice Generation](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/invoice-generation-overview.html)
 
 ### Maximum Order Threshold
 The Order Thresholds feature, in addition to the minimum order threshold, now supports the maximum one. The **maximum order threshold** allows to define an order value that shouldn't be reached for the order to be placed.
@@ -230,7 +231,7 @@ The checkout process is paramount for your business in any business model. With 
 To enable the maximum level of security for your system, you must be able to invalidate (refresh) tokens in the presence of potential menaces. With this API, **refresh tokens are made persistent long-term, and you will be able to revoke them at any time for each user**. You can also configure the amount of time for persistence and clean the refresh tokens up from the database when necessary.
 
 #### Documentation
-[Token Revocation](/docs/scos/dev/glue-api-guides/202005.0/managing-customers/authenticating-as-a-customer.html#token-revocation)
+[Token Revocation](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html#token-revocation)
 
 ### Gift Cards API
 Enabling your customers to **use and redeem gift cards** in your shop provides an important business value. We enable you to set this process also through the GLUE API. The cart codes endpoint provides your customers with the gift card’s redemption functionality. These endpoints can also be used for voucher redemption for a unified experience.

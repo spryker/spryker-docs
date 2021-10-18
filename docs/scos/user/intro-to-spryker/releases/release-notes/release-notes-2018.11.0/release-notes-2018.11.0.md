@@ -93,13 +93,13 @@ A customer can also reorder one or several products from the previous order on t
 ### Discontinued Products
 Indicate products that are no longer available in your store with a "discontinued" label. At the same time, you can offer alternative products to your customers to keep up revenues and customer loyalty.
 
-**Documentation**: [Discontinued Products](https://documentation.spryker.com/2021080/docs/discontinued-products)
+**Documentation**: [Discontinued Products](/docs/scos/user/features/{{site.version}}/product-feature-overview/discontinued-products-overview.html)
 
 ### Alternative Products
 A shop owner can define a list of alternative products that will be suggested to customers if the selected item is not available.
 ![Alternative products](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.11.0/Image+3.png)
 
-**Documentation**: [Alternative Products](https://documentation.spryker.com/2021080/docs/alternative-products)
+**Documentation**: [Alternative Products](/docs/scos/user/features/{{site.version}}/alternative-products-feature-overview.html)
 
 ### Measurement Units
 The measurement units feature allows shop owners to specify multiple measurement units per product: meter, centimeter, gallon, pint, and piece. This feature provides additional flexibility to how products can be measured and sold. No matter what you sell – fruits, fabric, clothing or any other items, this feature will help you to apply custom measurement settings to any product.

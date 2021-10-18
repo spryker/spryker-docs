@@ -15,12 +15,12 @@ If you use Spryker Legacy Demoshop, you can enhance it with specific components 
 
 With last releases we introduced 3 new concepts: Modular Frontend (Yves), Atomic Frontend (JS/CSS) and Publish&amp;Sync. You can extend your project with these concepts. For example, you can:
 
-* [Make the Legacy Demoshop compatible with the Modular Frontend](/docs/scos/dev/migration-and-integration/{{page.version}}/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-modular-frontend.html)
-* [Make the Legacy Demoshop compatible with the Atomic Frontend](/docs/scos/dev/migration-and-integration/{{page.version}}/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-atomic-frontend.html)
-* [Set up ShopUiCompatibility module](/docs/scos/dev/migration-and-integration/{{page.version}}/updating-the-legacy-demoshop-with-scos/setting-up-shopuicompatibility-module-in-the-legacy-demoshop.html), which is the key module of the Atomic Frontend
-* [Configure the Legacy Demoshop to use SCOS Twig templates](/docs/scos/dev/technical-enhancements/updating-the-legacy-demoshop-with-scos/twig-compatibility-legacy-demoshop-vs-scos.html), or 
-* [Make the Legacy Demoshop compatible with Publish &amp; Synchronize](/docs/scos/dev/migration-and-integration/{{page.version}}/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-publish-and-synchronize.html).
+* [Make the Legacy Demoshop compatible with the Modular Frontend](/docs/scos/dev/technical-enhancements/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-modular-frontend.html)
+* [Make the Legacy Demoshop compatible with the Atomic Frontend](/docs/scos/dev/technical-enhancements/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-atomic-frontend.html)
+* [Set up ShopUiCompatibility module](/docs/scos/dev/technical-enhancements/updating-the-legacy-demoshop-with-scos/setting-up-shopuicompatibility-module-in-the-legacy-demoshop.html), which is the key module of the Atomic Frontend
+* [Configure the Legacy Demoshop to use SCOS Twig templates](/docs/scos/dev/migration-and-integration/{{page.version}}/updating-the-legacy-demoshop-with-scos/twig-compatibility-legacy-demoshop-vs-scos.html), or
+* [Make the Legacy Demoshop compatible with Publish &amp; Synchronize](/docs/scos/dev/technical-enhancements/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-publish-and-synchronize.html).
 
-Not found a guide you are looking for? Let us know about it by [creating an issue on Github](https://github.com/spryker/spryker-documentation/issues/new) or dropping an email to [documentation@spryker.com](mailto:documentation@spryker.com).
+Not found a guide you are looking for? Let us know about it by [creating an issue on Github](https://github.com/spryker/spryker-docs/issues/new) or dropping an email to [documentation@spryker.com](mailto:documentation@spryker.com).
 
 /docs/scos/dev/technical-enhancements/updating-the-legacy-demoshop-with-scos/twig-compatibility-legacy-demoshop-vs-scos.html

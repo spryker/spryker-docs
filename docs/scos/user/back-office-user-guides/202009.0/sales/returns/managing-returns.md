@@ -29,22 +29,22 @@ To start managing returns, navigate to the *Sales >Returns* section.
 Returns of the registered and guest users have different return references. See [Returns Section](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/references/reference-information-orders.html#returns-section) for details on the return references.
 
 {% endinfo_block %}
-To view details on a return, in the *Actions* column of the return, click **View**. 
+To view details on a return, in the *Actions* column of the return, click **View**.
 
 This takes you to the *Return Overview [Return reference]* page where you can view the return details, set the return statuses and print the return slip as described below.
 
 ## Setting the Return Statuses
-You can either accept the returns created by the Back Office Users or by the Shop Users, or cancel them if the returns are no longer relevant, can not be made due to the Return Policy, or for other reason. 
+You can either accept the returns created by the Back Office Users or by the Shop Users, or cancel them if the returns are no longer relevant, can not be made due to the Return Policy, or for other reason.
 
-To set and track the return statuses, you trigger the return states. 
+To set and track the return statuses, you trigger the return states.
 
 To trigger the return states:
 
 1. On the *Returns* page, click **View** in the *Actions* column. This takes you to the *Return Overview [Return reference]*.
 
 2. *Trigger all matching state* section of the *Return Overview [Return reference]* page, click the necessary state. The return state changes and the new states that you can trigger, appear. See [Return Item States: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/returns/references/reference-information-return-item-states.html) for information on the return items states and the flow.
-![Trigger states](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Sales/Returns/trigger-status.png) 
- 
+![Trigger states](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Sales/Returns/trigger-status.png)
+
 {% info_block infoBox "Info" %}
 
 The triggered return states are reflected in [Customer Account on the Storefront](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html#return-management-on-the-storefront) informing Customers about the statuses of their returns.<!--- You can rename the default statuses that display on the Storefront so they would make more sense for the Storefront users. See *Display Custom Names for Order Item States on the Storefront* for details on how to do that.-->
@@ -53,15 +53,15 @@ The triggered return states are reflected in [Customer Account on the Storefront
 ***
 ### Tips & Tricks
 
-To trigger the return states for all the items in the return, click the states at the *Trigger all matching states* field. To trigger the return states for individual items of the return, trigger the states in the *Trigger event* column for the necessary items. 
+To trigger the return states for all the items in the return, click the states at the *Trigger all matching states* field. To trigger the return states for individual items of the return, trigger the states in the *Trigger event* column for the necessary items.
 ***
 
 ## Printing a Return Slip
-For all returns, irrespective of their statuses, you can print the automatically generated [return slip](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html#return-slip). 
+For all returns, irrespective of their statuses, you can print the automatically generated [return slip](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html#return-slip).
 
 To print the return slip:
 
-* In the *Actions* column on the *List of Returns* page, click **Print slip**. 
+* In the *Actions* column on the *List of Returns* page, click **Print slip**.
 * On the *Return Overview [Return reference]* page, click **Print Return Slip**.
 
 This takes you to the page with the print version of the return slip.
@@ -69,4 +69,4 @@ This takes you to the page with the print version of the return slip.
 **What's next?**
 
 * To learn about the attributes you enter and select while managing returns, see [Returns: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/returns/references/reference-information-returns.html).
-* To learn about the return item states, see [Return Item States: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/returns/references/reference-information-return-item-states.html). 
+* To learn about the return item states, see [Return Item States: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/returns/references/reference-information-return-item-states.html).

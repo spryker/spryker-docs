@@ -174,7 +174,6 @@ We are striving to improve our documentation, make it easier for you to find the
 Your feedback is very important and much valued! Let us know what you think by clicking **Yes** or **No** for **Was this article helpful?** at the end of every article.
 
 ## Contributing to the Documentation
-<a href="contributing-to-the-documentation"></a>
 
 We at Spryker aim to constantly improve the content we provide our customers and partners with. You can get involved in improving the Spryker documentation by reporting issues and editing documentation via pull requests on GitHub.
 {% info_block infoBox %}

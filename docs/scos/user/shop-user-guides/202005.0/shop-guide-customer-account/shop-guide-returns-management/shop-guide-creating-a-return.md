@@ -16,11 +16,11 @@ related:
     link: /docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html
 ---
 
-If you are not satisfied with the order items received from the seller or don’t need the items anymore, and the items are [returnable](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html) according to the Return Policy, you can return them. 
+If you are not satisfied with the order items received from the seller or don’t need the items anymore, and the items are [returnable](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html) according to the Return Policy, you can return them.
 
 To return items from your order:
 
-1. Go to *My Account > Order History*. 
+1. Go to *My Account > Order History*.
 2. Click the return arrow next to the order you want to return. This takes you to the *Create Return* page.
 
 {% info_block infoBox "Info" %}
@@ -43,5 +43,3 @@ The [Product Bundles](/docs/scos/user/features/{{page.version}}/product-informat
 
 * To print the return slip for the created return, see [Shop Guide - Printing a Return Slip](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/shop-guide-returns-management/shop-guide-printing-a-return-slip.html).
 * To learn about the attributes of the *Return Details* page, see [Shop Guide - Return Details: Reference Information](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/references/return-details-reference-information.html).
-
- 

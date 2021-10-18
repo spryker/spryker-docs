@@ -38,7 +38,7 @@ To start feature integration, overview, and install the necessary features:
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
 ```bash
-composer require spryker-feature/configurable-bundle:"^202001.0" --update-with-dependencies
+composer require spryker-feature/configurable-bundle:"^{{page.version}}" --update-with-dependencies
 ```
 {% info_block warningBox "Verification" %}
 
@@ -1160,16 +1160,16 @@ Please overview and install the necessary features before beginning the integrat
 
 | Feature | Version |
 | --- | --- |
-| Spryker Core | 202001.0 |
-| Cart | 202001.0 |
-| Product | 202001.0 |
-| Prices | 202001.0 |
+| Spryker Core | {{page.version}} |
+| Cart | {{page.version}} |
+| Product | {{page.version}} |
+| Prices | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/configurable-bundle: "^202001.0" --update-with-dependencies
+composer require spryker-feature/configurable-bundle: "^{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

@@ -18,9 +18,9 @@ To integrate GLUE API in your project, you need to:
 *  <a href="#enable">Enable GLUE</a>
 
 
-## <a name="install"></a> 1. Installing GLUE 
+## <a name="install"></a> 1. Installing GLUE
 
-GLUE infrastructure is shipped with the following modules: 
+GLUE infrastructure is shipped with the following modules:
 
 | Module |Description  |
 | --- | --- |
@@ -34,33 +34,33 @@ Spryker Shop Suite contains GLUE out of the box. If your project has the latest 
 {% endinfo_block %}
 
 1. Install the necessary modules using composer:
-    
+
     ```yaml
     composer update "spryker/*" "spryker-shop/*" --update-with-dependencies
     composer require spryker/glue-application --update-with-dependencies
     ```
-    
+
  2. Add a Front Controller for GLUE:
     * In the directory where your code is installed, locate a directory public and create a subdirectory Glue in it.
     * Create a file index.php in the Glue directory with the following content:
-    
+
 ```php
 <?php
 
 use Pyz\Glue\GlueApplication\Bootstrap\GlueBootstrap;
 use Spryker\Shared\Config\Application\Environment;
 use Spryker\Shared\ErrorHandler\ErrorHandlerEnvironment;
- 
+
 define('APPLICATION', 'GLUE');
 defined('APPLICATION_ROOT_DIR') || define('APPLICATION_ROOT_DIR', realpath(__DIR__ . '/../..'));
- 
+
 require_once APPLICATION_ROOT_DIR . '/vendor/autoload.php';
- 
+
 Environment::initialize();
- 
+
 $errorHandlerEnvironment = new ErrorHandlerEnvironment();
 $errorHandlerEnvironment->initialize();
- 
+
 $bootstrap = new GlueBootstrap();
 $bootstrap
     ->boot()
@@ -70,10 +70,10 @@ $bootstrap
 3. Create GLUE application bootstrap:
     * In the `src/Pyz` directory of your Spryker code installation, create a folder Glue, then create a subfolder `GlueApplication/Bootstrap` in it.
     * In the GlueApplication/Bootstrap folder, create file GlueBootstrap.php with the following content:
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication\Bootstrap;
 
 use Spryker\Glue\GlueApplication\Bootstrap\AbstractGlueBootstrap;
@@ -96,7 +96,7 @@ use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlu
 use Spryker\Glue\GlueApplication\Plugin\Application\GlueApplicationApplicationPlugin;
 use Spryker\Glue\Router\Plugin\Application\RouterApplicationPlugin;
 use Spryker\Glue\Session\Plugin\Application\SessionApplicationPlugin;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
@@ -106,7 +106,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     {
         return [];
     }
- 
+
     /**
      * @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ValidateRestRequestPluginInterface[]
      */
@@ -114,7 +114,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     {
         return [];
     }
- 
+
     /**
      * @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\FormatResponseHeadersPluginInterface[]
      */
@@ -122,7 +122,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     {
         return [];
     }
- 
+
     /**
      * @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ControllerBeforeActionPluginInterface[]
      */
@@ -130,7 +130,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     {
         return [];
     }
-   
+
     /**
      * @return \Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface[]
      */
@@ -148,7 +148,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 5. Add GLUE application constants to your environment.
 
  Finally, you need to add GLUE application constants to your environment configuration file. The following is an example of the development environment:
-    
+
 ```php
 use Spryker\Shared\GlueApplication\GlueApplicationConstants;
 ...
@@ -174,7 +174,7 @@ Add use statements for the required OAuth plugins:
 ```php
 ...
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\AuthRestApi\Plugin\AccessTokensResourceRoutePlugin;
 use Spryker\Glue\AuthRestApi\Plugin\FormatAuthenticationErrorResponseHeadersPlugin;
 use Spryker\Glue\AuthRestApi\Plugin\GlueApplication\AccessTokenRestRequestValidatorPlugin;
@@ -228,11 +228,11 @@ protected function getRestUserFinderPlugins(): array
 <?php
 
 namespace Pyz\Zed\Oauth;
- 
+
 use Spryker\Zed\Oauth\OauthDependencyProvider as SprykerOauthDependencyProvider;
 use Spryker\Zed\OauthCustomerConnector\Communication\Plugin\Oauth\CustomerOauthScopeProviderPlugin;
 use Spryker\Zed\OauthCustomerConnector\Communication\Plugin\Oauth\CustomerOauthUserProviderPlugin;
- 
+
 class OauthDependencyProvider extends SprykerOauthDependencyProvider
 {
     /**
@@ -244,7 +244,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
             new CustomerOauthUserProviderPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\OauthExtension\Dependency\Plugin\OauthScopeProviderPluginInterface[]
      */
@@ -266,7 +266,7 @@ use Spryker\Shared\Oauth\OauthConstants;
 $config[OauthConstants::PRIVATE_KEY_PATH] = 'file://' . APPLICATION_ROOT_DIR . '/config/Zed/dev_only_private.key';
 $config[OauthConstants::PUBLIC_KEY_PATH] = 'file://' . APPLICATION_ROOT_DIR . '/config/Zed/dev_only_public.key';
 $config[OauthConstants::ENCRYPTION_KEY] = 'lxZFUEsBCJ2Yb14IF2ygAHI5N4+ZAUXXaSeeJm6+twsUmIen';
- 
+
 // ----------- AuthRestApi
 $config[OauthConstants::OAUTH_CLIENT_IDENTIFIER] = 'frontend';
 $config[OauthConstants::OAUTH_CLIENT_SECRET] = 'abc123';
@@ -284,17 +284,17 @@ In the _nano_ console that opens, paste the following:
 server {
     # Listener for production/staging - requires external LoadBalancer directing traffic to this port
     listen 10001;
-  
+
     # Listener for testing/development - one host only, doesn't require external LoadBalancer
     listen 80;
-  
+
     server_name ~^glue\\.de\\..+\\.local$;
-  
+
     keepalive_timeout 0;
     access_log  /data/logs/development/glue-access.log extended;
-  
+
     root /data/shop/development/current/public/Glue;
-  
+
     set $application_env development;
     set $application_store DE;
     include "spryker/zed.conf";
@@ -314,7 +314,7 @@ Add the following line to the end of the file:
 ```
 ip glue.de.project-name.local
 ```
-After performing this change, you should be able to access [http://glue.de.project-name.local/ URL](http://glue.de.project-name.local/) with a 404 error and JSON response indicating that the resource is not found.
+After performing this change, you should be able to access `https://glue.mysprykershop.com` with a 404 error and JSON response indicating that the resource is not found.
 
 If you are running your project in the Spryker VM, you also need to make changes to the Vagrant file of the virtual machine. To do so:
 
@@ -337,4 +337,3 @@ chmod 660 config/Zed/dev_only_private.key
 ## Integrate REST API resources
 
 After installing and enabling GLUE, you can integrate various REST API resources with it. It is not required to integrate all modules for REST API to work. You can integrate only the modules you need.
-

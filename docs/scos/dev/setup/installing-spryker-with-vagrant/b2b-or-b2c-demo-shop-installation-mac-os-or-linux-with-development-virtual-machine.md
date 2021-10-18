@@ -61,7 +61,7 @@ cd devvm
 2. **Initialize the Vagrant environment**:
 
 ```bash
-vagrant init devvm3.1.0 https://github.com/spryker/devvm/releases/download/v3.1.0/spryker-devvm.box
+vagrant init devvm4.1.0 https://github.com/spryker/devvm/releases/download/v4.1.0/spryker-devvm.box
 ```
 {% info_block warningBox %}
 
@@ -124,9 +124,9 @@ When the installation process is complete, Spryker Commerce OS is ready to use. 
 * [`http://glue.de.b2b-demo-shop.local`](`http://glue.de.b2b-demo-shop.local`)- REST API (Glue).
 
 **B2C Demo Shop:**
-* [http://de.b2c-demo-shop.local/](`http://www.de.b2c-demo-shop.local`/) - front-end (Storefront);
-* [`http://zed.de.b2c-demo-shop.local`/](`http://zed.de.b2c-demo-shop.local`/) - backend (the Back Office).
-* [`http://glue.de.b2c-demo-shop.local`/](`http://glue.de.b2c-demo-shop.local`/) - REST API (Glue).
+* `http://de.b2c-demo-shop.local/`- front-end (Storefront);
+* `http://zed.de.b2c-demo-shop.local` - backend (the Back Office).
+* `http://glue.de.b2c-demo-shop.local`- REST API (Glue).
 
 Credentials to access the administrator interface: user `admin@spryker.com` and password `change123`.
 

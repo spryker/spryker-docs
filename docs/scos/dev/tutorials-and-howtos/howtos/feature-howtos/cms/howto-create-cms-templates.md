@@ -71,7 +71,7 @@ To learn how the template is created, check the exemplary procedure below.
 
 The text in the defined placeholders will be replaced at runtime by the glossary keys assigned to them.
 
-A content manager can apply this template when [creating a CMS page](/docs/scos/user/back-office-user-guides/{{site.version}}/content/pages/creating-a-cms-page.html) in the Back Office.
+A content manager can apply this template when [creating a CMS page](/docs/scos/user/back-office-user-guides/{{site.version}}/content/pages/creating-cms-pages.html) in the Back Office.
 
 ## Template with Slots
 
@@ -88,8 +88,8 @@ A content manager can apply this template when [creating a CMS page](/docs/scos/
 
 Templates with slots are universal. In the Back Office, a content manager can:
 
-*     apply this template when [creating a CMS page](/docs/scos/user/back-office-user-guides/{{site.version}}/content/pages/creating-a-cms-page.html).
-*     apply this template when [creating a category](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/category/creating-categories.html).
+*     apply this template when [creating a CMS page](/docs/scos/user/back-office-user-guides/{{site.version}}/content/pages/creating-cms-pages.html).
+*     apply this template when [creating a category](/docs/scos/user/back-office-user-guides/{{site.version}}catalog/category/creating-categories.html).
 
 {% info_block warningBox %}
 

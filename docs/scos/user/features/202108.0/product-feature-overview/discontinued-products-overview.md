@@ -21,11 +21,11 @@ Once the stock is updated with a positive number, the concrete product becomes a
 
 A *discontinued product* is a product which is no longer produced by its manufacturer. The discontinued product may have positive or negative stock.
 
-When a Back Office user discountinues a product, they can define the date until which the product is displayed in the shop. Discontinued products have a certain period of time when they will still be shown on the website (active_until). This may be usefule, for example, when a product was discontinued but it's still in stock in the shop. On the define date, the product becomes inactive.
+When a Back Office user discountinues a product, they can define the date until which the product is displayed in the shop. Discontinued products have a certain period of time when they will still be shown on the website (active_until). This may be useful, for example, when a product was discontinued but it's still in stock in the shop. On the define date, the product becomes inactive.
 
 {% info_block warningBox %}
 
-Only [concrete products](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/product-feature-overview.html) can become discontinued.
+Only [concrete products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) can become discontinued.
 
 {% endinfo_block %}
 

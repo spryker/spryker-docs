@@ -22,4 +22,4 @@ To print the return slip:
 
 1. Go to *My Account > Returns* page.
 2. In the Actions column next to the return you want to print the return slip for, click **Print Slip**. This takes you to the print version of the return slip.
-![Return slip](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Return+Management/Return+Management+Feature+Overview/return-slip.png) 
+![Return slip](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Return+Management/Return+Management+Feature+Overview/return-slip.png)

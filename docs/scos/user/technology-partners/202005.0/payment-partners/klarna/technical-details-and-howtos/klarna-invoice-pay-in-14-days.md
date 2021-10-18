@@ -62,4 +62,4 @@ You can copy over configuration to your config from the Klarna modules `config.d
 
 ## Perform Requests
 
-In order to perform the needed requests, you can easily use the implemented [Klarna State Machine Commands and Conditions](/docs/scos/user/technology-partners/202005.0/payment-partners/klarna/klarna-state-machine-commands-and-conditions.html). The next section gives a summary of them.
+In order to perform the needed requests, you can easily use the implemented [Klarna State Machine Commands and Conditions](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/klarna/klarna-state-machine-commands-and-conditions.html). The next section gives a summary of them.

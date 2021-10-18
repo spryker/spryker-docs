@@ -394,7 +394,7 @@ Check this by sending a GET request to `http://glue.mysprykershop.com/{% raw %}{
 Make sure the `EntityTagRestRequestValidatorPlugin` is set up correctly.
 
 Send a PATCH request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identitifer{% raw %}}}{% endraw %}` with the `If-Match` header equal the value of `ETag` from the GET response header:
-**PATCH http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/identitifer**
+`PATCH http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/identitifer`
 
 ```json
 HEADER If-Match: cc1eb2e0b45ee5026b72d21dbded0090

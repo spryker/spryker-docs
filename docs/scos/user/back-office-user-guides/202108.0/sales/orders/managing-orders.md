@@ -102,6 +102,9 @@ Statuses flow:
 
 If a sales order item is[ returnable](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html), you can create a return for it. Keep in mind that you can create returns for both the registered and guest users. Creating a return from the Back Office is the only way for the *guest users* to return an order.
 
+If a sales order item is[ returnable](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html), you can create a return for it. Keep in mind that you can create returns for both the registered and guest users. Creating a return from the Back Office is the only way for the *guest users* to return an order.
+
+
 To create a return:
 
 1. On the *View Order: [Order ID]* page, click **Return** in the top right corner. This opens the *Create Return* page.

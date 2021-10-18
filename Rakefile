@@ -9,7 +9,14 @@ task :check do
     :allow_hash_href => true,
     :url_ignore => [
       /mysprykershop.com\/[\.\w\-\/\?]+/,
+      /b2c-demo-shop.local\/[\.\w\-\/\?]+/,
+      /zed.de.b2b-demo-shop.local\/[\.\w\-\/\?]+/,
+      /mydomain.com\/[\.\w\-\/\?]+/,
+      /demoshop.local\/[\.\w\-\/\?]+/,
       /mysprykershop.com:10007\/[\.\w\-\/\?]+/,
+      /www.pexels.com\/[@\.\w\-\/\?]+/,
+      /pixabay.com\/[\.\w\-\/\?]+/,
+      /xentral.com\/[\.\w\-\/\?]+/,
       /github.com\/[\.\w\-\/]+\.md/
     ],
     :file_ignore => [
@@ -18,13 +25,14 @@ task :check do
       /docs\/scos\/\w+\/[\w-]+\/201907\.0\/.+/,
       /docs\/scos\/\w+\/[\w-]+\/202001\.0\/.+/,
       /docs\/scos\/\w+\/[\w-]+\/202005\.0\/.+/,
-      /docs\/scos\/\w+\/[\w-]+\/202009\.0\/.+/
+      /docs\/scos\/\w+\/[\w-]+\/202009\.0\/.+/,
+      /docs\/scos\/\w+\/[\w-]+\/202200\.0\/.+/
     ],
     :typhoeus => {
       :ssl_verifypeer => false,
       :ssl_verifyhost => 0
     },
-    :disable_external => true,
+    :disable_external => false,
     :check_html => false,
     :empty_alt_ignore => true,
     :only_4xx => true,

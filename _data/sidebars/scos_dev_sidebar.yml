@@ -3735,9 +3735,6 @@ entries:
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/an-error-during-front-end-setup.html
         - title: Vendor folder synchronization error
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/vendor-folder-synchronization-error.html
-  - title: Developer's Corner
-    url: /docs/scos/dev/developers-corner/developers-corner.html
-    nested: []
   - title: architecture
     nested:
     - title: About the Architecture Guide
@@ -6186,16 +6183,15 @@ entries:
         url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-part-2-building-a-state-machine.html
       - title: State machine cookbook - part I - state machine fundamentals
         url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-part-i-state-machine-fundamentals.html
-    - title: Updating a Spryker-based project
-      url: /docs/scos/dev/docs/scos/dev/updating-a-spryker-based-project.html
-    - title: About the Development Guide
-      url: /docs/scos/dev/docs/scos/dev/about-the-development-guide.html
-    - title: Tutorial - Content and Search - Attribute-Cart-Based Catalog Personalization
-        - Spryker Commerce OS
-      url: /docs/scos/dev/docs/scos/dev/tutorial-content-and-search-attribute-cart-based-catalog-personalization.html
-    - title: Code contribution guide
-      url: /docs/scos/dev/docs/scos/dev/code-contribution-guide.html
-    - title: Overview of the developer guides
-      url: /docs/scos/dev/docs/scos/dev/overview-of-the-developer-guides.html
-    - title: Developer getting started guide
-      url: /docs/scos/dev/docs/scos/dev/developer-getting-started-guide.html
+  - title: Updating a Spryker-based project
+    url: /docs/scos/dev/updating-a-spryker-based-project.html
+  - title: About the Development Guide
+    url: /docs/scos/dev/about-the-development-guide.html
+  - title: Tutorial - Content and Search - Attribute-Cart-Based Catalog Personalization - Spryker Commerce OS
+    url: /docs/scos/dev/tutorial-content-and-search-attribute-cart-based-catalog-personalization.html
+  - title: Code contribution guide
+    url: /docs/scos/dev/code-contribution-guide.html
+  - title: Overview of the developer guides
+    url: /docs/scos/dev/overview-of-the-developer-guides.html
+  - title: Developer getting started guide
+    url: /docs/scos/dev/developer-getting-started-guide.html

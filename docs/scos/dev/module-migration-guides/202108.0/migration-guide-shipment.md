@@ -17,6 +17,7 @@ related:
 ---
 
 ## Upgrading from version 7.* to 8.*
+
 In the version 8.0.0 of the `Shipment` module, we have added the ability to assign a delivery method to a store in the Back Office. You can find more details about the changes on the [Shipment module release](https://github.com/spryker/shipment/releases) page.
 
 **To upgrade to the new version of the module, do the following:**
@@ -45,55 +46,57 @@ console transfer:generate
 *Estimated migration time: 5 min*
 ***
 ## Upgrading from Version 6.* to Version 7.*
-    
+
 In this new version of the **Shipment** module, we have added support of split delivery. You can find more details about the changes on the [Shipment module release page](https://github.com/spryker/shipment/releases).
-    
+
 {% info_block errorBox %}
+
 This release is a part of the Split delivery concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Split Delivery Migration Concept](/docs/scos/dev/migration-concepts/split-delivery-migration-concept.html).
+
 {% endinfo_block %}
-    
+
 **To upgrade to the new version of the module, do the following:**
-    
+
 1.  Upgrade the `Shipment` module to the new version:
-    
+
 ```bash
 composer require spryker/shipment: "^7.0.0" --update-with-dependencies
 ```
-    
+
 2. Clean up the database entity schema for each store in the system:
-    
+
 ```bash
 APPLICATION_STORE=DE console propel:schema:copy
 APPLICATION_STORE=US console propel:schema:copy
 ...
 ```
-    
+
 3. Run the database migration:
-    
+
 ```bash
 console propel:install
 console transfer:generate
 ```
-    
+
 4. Enable the following plugins:
-    
+
 | Plugin | Specification | Prerequisites | Namespace |
 | --- | --- | --- | --- |
 | `GiftCardShipmentGroupMethodFilterPlugin` | Filters available shipment methods for a shipment group. | None | `\Spryker\Zed\GiftCard\Communication\Plugin\Shipment\GiftCardShipmentGroupMethodFilterPlugin` |
 | `ShipmentOrderMailExpanderPlugin` | Expands order mail transfer data with shipment groups data. | None | `\Spryker\Zed\Shipment\Dependency\Plugin\Oms\ShipmentOrderMailExpanderPlugin` |
 | `ShipmentManualEventGrouperPlugin` | Groups manual events by sales shipment ID. | None | `\Spryker\Zed\Shipment\Dependency\Plugin\Oms\ShipmentManualEventGrouperPlugin` |
-    
-src/Pyz/Zed/Shipment/ShipmentDependencyProvider.php
-  
+
+**src/Pyz/Zed/Shipment/ShipmentDependencyProvider.php**
+
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Shipment;
- 
+
 use Spryker\Zed\GiftCard\Communication\Plugin\Shipment\GiftCardShipmentGroupMethodFilterPlugin;
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Shipment\ShipmentDependencyProvider as SprykerShipmentDependencyProvider;
- 
+
 class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
 {
 	/**
@@ -110,23 +113,23 @@ class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
 }
 ```
 
-src/Pyz/Zed/Oms/OmsDependencyProvider.php
+**src/Pyz/Zed/Oms/OmsDependencyProvider.php**
 
 ```php
 <?php
- 
+
 /**
 * This file is part of the Spryker Suite.
 * For full license information, please view the LICENSE file that was distributed with this source code.
 */
- 
+
 namespace Pyz\Zed\Oms;
- 
+
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Oms\OmsDependencyProvider as SprykerOmsDependencyProvider;
 use Spryker\Zed\Shipment\Dependency\Plugin\Oms\ShipmentManualEventGrouperPlugin;
 use Spryker\Zed\Shipment\Dependency\Plugin\Oms\ShipmentOrderMailExpanderPlugin;
- 
+
 class OmsDependencyProvider extends SprykerOmsDependencyProvider
 {
 	/**
@@ -140,7 +143,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 			new ShipmentOrderMailExpanderPlugin(),
 		];
 	}
- 
+
 	/**
 	* @param \Spryker\Zed\Kernel\Container $container
 	*
@@ -159,11 +162,11 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Shared\Shipment;
- 
+
 use Spryker\Shared\Shipment\ShipmentConfig as SprykerShipmentConfig;
- 
+
 class ShipmentConfig extends SprykerShipmentConfig
 {
 	/**
@@ -177,14 +180,22 @@ class ShipmentConfig extends SprykerShipmentConfig
 ```
 
 *Estimated migration time: 10 min*
+
 ***
+
 ## Upgrading from Version 5.* to Version 6.*
+
 In version 6, multi-currency prices are introduced for shipment methods, allowing to set up different net and gross price per shipment method for each preconfigured currency.
 
 The `spy_shipment_method.default_price` database column becomes deprecated. Shipment method prices are stored in `spy_shipment_method_price` database table instead. `spy_shipment_method_price` database table holds a store + currency specific gross and net price for each shipment method.
 
-Database structure is as follows: 
-![Database structure](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Module+Migration+Guides/Migration+Guide+-+Shipment/shipment_method_price_database_schema.png){height="20%" width="60%"}
+Database structure is as follows:
+
+<div class="width-100">
+
+![Database structure](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Module+Migration+Guides/Migration+Guide+-+Shipment/shipment_method_price_database_schema.png)
+
+</div>
 
 1. Update `spryker/shipment` module to at least 6.0.0 version.
 2. Update database
@@ -197,7 +208,7 @@ Database structure is as follows:
 3. Run `vendor/bin/console transfer:generate` to update and generate transfer object changes.
 
 **Transfer object changes**
-    
+
     Property `defaultPrice` in `ShipmentMethod` transfer object is replaced by prices, and      `storeCurrencyPrice` properties.
 
     * `prices transfer` object property contains the shipment method related prices from `spy_shipment_method_price` database table as a `MoneyValue` transfer object collection.
@@ -438,7 +449,7 @@ class MigrateShipmentMethodPricesConsole extends Console
 </br>
 </details>
 
-6. Register the prepared multi-currency handling `MoneyCollectFormType` form type in your project. 
+6. Register the prepared multi-currency handling `MoneyCollectFormType` form type in your project.
 
 Here is the example of MoneyCollectionTypePlugin registration:
 
@@ -461,7 +472,7 @@ class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
     {
         return new MoneyCollectionFormTypePlugin();
     }
-} 
+}
 ```
 
 7. The `ShipmentFacadeInterface::createMethod` method now expects "prices" `MoneyValue` transfer object collection to be set in the provided `ShipmentMethod` transfer object. Update your custom calls to this method accordingly.

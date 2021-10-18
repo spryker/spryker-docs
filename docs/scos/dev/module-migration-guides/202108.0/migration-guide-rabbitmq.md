@@ -13,14 +13,16 @@ redirect_from:
 
 ## Upgrading from Version 0.* to Version 1.*
 
-### Version 1 of the RabbitMq module 
+### Version 1 of the RabbitMq module
 
 #### Configuration
+
 The configuration codes have moved from `RabbitMqDependencyProvider` to `RabbitMqConfiguration`.
+
 **RabbitMqOption TransferObject**
-* `RabbitMqOption` transfer has changed: 
+* `RabbitMqOption` transfer has changed:
 `bindingQueue` property has changed to `bindingQueueCollection`
-* `RabbitMqOption` transfer has changed: 
+* `RabbitMqOption` transfer has changed:
 `routingKey` property with string type has changed to routingKeys with array type.
 
 <details open>
@@ -110,9 +112,10 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 ***
 ## Upgrading from Version 1.* to Version 2.*
 
-### Version 2 of the RabbitMq module 
+### Version 2 of the RabbitMq module
 
 #### Configuration
+
 The configuration parameters have been changed, Now the rabbitMQ configurations are stored in a numeric array under the `RabbitMqEnv::RABBITMQ_CONNECTIONS`  key. The structure of a rabbit MQ definition is `default_config.php`
 
 ```php

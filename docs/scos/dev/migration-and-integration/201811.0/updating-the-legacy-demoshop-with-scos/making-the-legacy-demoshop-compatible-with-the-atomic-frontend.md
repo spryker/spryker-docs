@@ -122,7 +122,7 @@ require('@webcomponents/webcomponentsjs/webcomponents-bundle');
 </details>
 
 4. Update `src/Pyz/Yves/Application/Theme/default/layout/layout.twig`.
-Add <script src="/assets/default/js/runtime.js"></script> to <head>:
+Add `<script src="/assets/default/js/runtime.js"></script>` to <head>:
     
 ```html
 <!-- add here -->
@@ -134,7 +134,7 @@ Add <script src="/assets/default/js/runtime.js"></script> to <head>:
 </details>
     
     
-Add <script src="/assets/default/js/es6-polyfill.js"></script> at the very bottom of the page skeleton, before `app.js` and `vendor.js`:
+Add `<script src="/assets/default/js/es6-polyfill.js"></script>` at the very bottom of the page skeleton, before `app.js` and `vendor.js`:
 
 ```js
 <!-- add here -->

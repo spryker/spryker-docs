@@ -26,6 +26,8 @@ All the CMS elements are based on templates. They simplify the creation of simil
 
 ### CMS glossary
 
+<div class="width-100">
+
 | CONCEPT | DEFINITION |
 | --- | --- |
 | Page | Pages defined in CMS refer to web pages that are meant to be displayed in the front-end application (Yves). A page is defined by an URL and a template. |
@@ -35,6 +37,8 @@ All the CMS elements are based on templates. They simplify the creation of simil
 | Block | Partial page that can be embedded in other web pages. |
 | URL Redirect | Technique for delivering a page under more then one URL address. When a request is made to an URL that was redirected, a page with a different URL is opened. |
 | URL Redirect Status | When an URL is being redirected, the response contains a status code that describes the reason the redirect happened. The URL redirect status code plays an important role in search engine ranking. |
+
+</div>
 
 {% wistia lx0amx3m1b 960 720 %}
 

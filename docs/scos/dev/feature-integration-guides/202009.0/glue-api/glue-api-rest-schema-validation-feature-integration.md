@@ -2,11 +2,6 @@
 title: Glue API- REST Schema Validation feature integration
 description: This guide will navigate you through the process of installing and configuring the REST Schema Validation feature in Spryker OS.
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/v4/docs/glue-api-rest-schema-validation-feature-integration
-originalArticleId: 7d4c6479-7d0e-43f9-885e-cf69f3820dec
-redirect_from:
-  - /v4/docs/glue-api-rest-schema-validation-feature-integration
-  - /v4/docs/en/glue-api-rest-schema-validation-feature-integration
 ---
 
 Follow the steps below to install Rest schema validation feature API.
@@ -180,7 +175,7 @@ Make sure that `ValidateRestRequestAttributesPlugin` has been activated:
 
 2. Make a call to the endpoint you described in the validation file with invalid data. Request sample:
 
-`POST http://mysprykershop.comop.com/access-tokens`
+`POST http://example.org/access-tokens`
 
 ```json
 {

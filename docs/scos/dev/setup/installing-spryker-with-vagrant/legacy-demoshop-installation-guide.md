@@ -12,7 +12,7 @@ redirect_from:
 To install the Legacy Demoshop, use the following instructions:
 
 {% info_block infoBox %}
-All customers using the Legacy Demoshop can make their project compatible with the new Spryker Commerce OS architecture available starting from the [November release](/docs/scos/user/intro-to-spryker/{{site.version}}/releases/release-notes/release-notes-2018.11.0/release-notes-2018.11.0.html). For details, see [Updating the Legacy Demoshop with SCOS](/docs/scos/dev/technical-enhancements/updating-the-legacy-demoshop-with-scos/updating-the-legacy-demoshop-with-scos.html).
+All customers using the Legacy Demoshop can make their project compatible with the new Spryker Commerce OS architecture available starting from the [November release](/docs/scos/user/intro-to-spryker/{{site.version}}/releases/release-notes/release-notes-2018.11.0/release-notes-2018.11.0.html). For details, see [Updating the Legacy Demoshop with SCOS](/docs/scos/dev/migration-and-integration/{{page.version}}/updating-the-legacy-demoshop-with-scos/updating-the-legacy-demoshop-with-scos.html).
 {% endinfo_block %}
 
 
@@ -86,7 +86,7 @@ Executing these steps will install all required dependencies, and run the instal
 
 When the installation process is complete, Spryker Commerce OS is ready to use. It can be accessed via the following links:
 
-* [`http://www.de.demoshop.local`](`http://www.de.demoshop.local`/) - front-end;
+* [`http://www.de.demoshop.local`](http://www.de.demoshop.local/) - front-end;
 * [http://zed.de.demoshop.local](http://zed.de.demoshop.local/) - backend (administrator interface).
 
 Credentials to access the administrator interface: user `admin@spryker.com` and password `change123`.
@@ -214,7 +214,7 @@ Executing these steps will install all required dependencies, and run the instal
 
 When the installation process is complete, Spryker Commerce OS is ready to use. It can be accessed via the following links:
 
-* [`http://www.de.demoshop.local`](`http://www.de.demoshop.local`/) - front-end;
+* [`http://www.de.demoshop.local`](http://www.de.demoshop.local/) - front-end;
 * [http://zed.de.demoshop.local](http://zed.de.demoshop.local/) - backend (administrator interface).
 
 Credentials to access the administrator interface: user `admin@spryker.com` and password `change123`.

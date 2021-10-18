@@ -17,6 +17,7 @@ related:
 ---
 
 ## Upgrading from version 2.* to version 3.*
+
 Version 3.* of the ProductLabelGui module adds the possibility to assign stores to the product labels in the Back Office.
 
  To upgrade to the new version of the module, do the following:
@@ -25,7 +26,7 @@ Version 3.* of the ProductLabelGui module adds the possibility to assign stores 
 ```Bash
 composer require spryker/product-label-gui:"^3.0.0" --update-with-dependencies
 ```
-2. Regenerate data transfer object: 
+2. Regenerate data transfer object:
 ```Bash
 console transfer:generate
 ```
@@ -52,6 +53,7 @@ class ProductLabelGuiDependencyProvider extends SprykerProductLabelGuiDependency
 ```
 
 ## Upgrading from version 1.* to version 2.*
+
 In version 2 we have added multi-currency support. First of all make sure you [migrated the Price module](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-price.html). We have changed ZED tables to use `PriceProductFacade` instead of the database join to get price, because that requires additional business logic processing before deciding which price to display. If you changed `AbstractRelatedProductTable` or `RelatedProductTableQueryBuilder`, check core implementation and update accordingly.
 
 <!--Last review date: Nov 23, 2017 by Aurimas Ličkus  -->

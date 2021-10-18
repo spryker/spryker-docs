@@ -11,6 +11,7 @@ redirect_from:
 ---
 
 ## Upgrading from Version 1.* to Version 2.*
+
 Version 2.* of the ProductLabelStorage module changes the storage data structure to maintain relations of product labels to stores.
 
 To upgrade to the new version of the module, do the following:
@@ -21,7 +22,7 @@ composer require spryker/product-label-storage:"^2.0.0" --update-with-dependenci
 2. Prepare the project for changes:
     2.1. Remove synchronization behavior setup from the `spy_product_label_dictionary_storage` table on the project level in `src/Pyz/Zed/ProductLabelStorage/Persistence/Propel/Schema/spy_product_label_storage.schema.xml`
     2.2. Add the configuration on the project level in `src/Pyz/Zed/ProductLabelStorage/ProductLabelStorageConfig.php`:
- 
+
 ```PHP
  <?php
 
@@ -202,5 +203,3 @@ console sync:data product_label_dictionary
 ```
 
 *Estimated migration time: 1 hour.*
-
-

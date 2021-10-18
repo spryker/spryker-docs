@@ -11,9 +11,12 @@ redirect_from:
   - /docs/en/migration-guide-errorhandler
 ---
 
-{% info_block errorBox %} 
+{% info_block errorBox %}
+
 This migration guide is a part of the [Silex migration effort](/docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html).
+
 {% endinfo_block %}
+
 To upgrade the module, do the following:
 
 1. Update the module using composer:
@@ -30,16 +33,16 @@ composer update spryker/error-handler
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Application;
- 
+
 use Spryker\Zed\Application\ApplicationDependencyProvider as SprykerApplicationDependencyProvider;
 use Spryker\Zed\ErrorHandler\Communication\Plugin\Application\ErrorHandlerApplicationPlugin;
- 
+
 class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 {
     ...
- 
+
     /**
      * @return \Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface[]
      */
@@ -59,16 +62,16 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\ShopApplication;
- 
+
 use Spryker\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 use Spryker\Yves\ErrorHandler\Plugin\Application\ErrorHandlerApplicationPlugin;
- 
+
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     ...
- 
+
     /**
      * @return \Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface[]
      */
@@ -88,7 +91,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 ```php
 // Replace
 $config[ApplicationConstants::IS_PRETTY_ERROR_HANDLER_ENABLED] = true;
- 
+
 // with
 $config[ErrorHandlerConstants::IS_PRETTY_ERROR_HANDLER_ENABLED] = true;
 ```

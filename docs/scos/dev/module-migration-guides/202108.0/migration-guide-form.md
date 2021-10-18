@@ -11,9 +11,12 @@ redirect_from:
   - /docs/en/migration-guide-form
 ---
 
-{% info_block errorBox %} 
+{% info_block errorBox %}
+
 This migration guide is a part of the [Silex migration effort](/docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html).
+
 {% endinfo_block %}
+
 To upgrade the module, do the following:
 
 1. Update the module using composer:
@@ -92,7 +95,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Form;
 
 use Spryker\Zed\Form\Communication\Plugin\Form\CsrfFormPlugin;
@@ -155,4 +158,3 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
 For information on how to eliminate Silex Validator, see  [Migration Guide - Validator](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-validator.html).
 
 {% endinfo_block %}
-

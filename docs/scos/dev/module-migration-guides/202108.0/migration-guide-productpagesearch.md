@@ -11,11 +11,13 @@ redirect_from:
 ---
 
 ## Upgrading from Version 3.11.* to Version 3.12.*
+
 {% info_block errorBox "Prerequisites" %}
 
-This migration guide is a part of the [Search migration effort](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-search.html#upgrading-from-version-8-9---to-version-8-10--). 
+This migration guide is a part of the [Search migration effort](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-search.html#upgrading-from-version-8-9---to-version-8-10--).
 
 {% endinfo_block %}
+
 To upgrade the module, do the following:
 1. Update the module with composer:
 ```bash
@@ -24,8 +26,8 @@ composer update spryker/product-page-search
 2. Remove `ProductPageSearchDependencyProvider::getMapExpanderPlugins()` method.
 3. Enable the new abstract product map expander plugins:
 
-Pyz\Zed\ProductPageSearch
-   
+**Pyz\Zed\ProductPageSearch**
+
 ```php
 <?php
 
@@ -65,7 +67,7 @@ ProductPageSearch 3.0.0 got separate search index for Concrete Products. It incl
 
 To perform the migration, follow the steps:
 
-1. Run the database migration: 
+1. Run the database migration:
 ```Bash
 vendor/bin/console propel:install
 ```
@@ -81,10 +83,9 @@ vendor/bin/console search:setup
 ```Bash:
 vendor/bin/console data:import:product-concrete
 ```
-or 
+or
 ```Bash
 vendor/bin/console event:trigger -r product_concrete
 ```
 
 *Estimated migration time: ~2h*
-

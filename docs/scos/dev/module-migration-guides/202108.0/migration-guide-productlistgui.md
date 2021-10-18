@@ -15,6 +15,7 @@ related:
 ---
 
 ## Upgrading from Version 2.* to Version 3.*
+
 Version 3.* of the ProductLabelGui module adds the possibility to assign stores to the product labels in the Back Office.
 
  To upgrade to the new version of the module, do the following:
@@ -23,7 +24,7 @@ Version 3.* of the ProductLabelGui module adds the possibility to assign stores 
 ```Bash
 composer require spryker/product-label-gui:"^3.0.0" --update-with-dependencies
 ```
-2. Regenerate the data transfer object: 
+2. Regenerate the data transfer object:
 ```Bash
 console transfer:generate
 ```
@@ -50,6 +51,7 @@ class ProductLabelGuiDependencyProvider extends SprykerProductLabelGuiDependency
 ```
 
 ## Upgrading from Version 1.* to Version 2.0.0
+
 The main point of the `ProductListGui` v2.0.0 is the following: exclusive ownership for product lists was removed from the merchant relations.
 
 Instead of this, an enhanced ownership concept was introduced to allow multiple different domain entities to own a product list.
@@ -71,7 +73,9 @@ Other changes are listed below:
 * Deprecated `ProductListOwnerTypeFormExpanderPluginInterface` to allow multiple owners concept.
 
 {% info_block warningBox "Note" %}
+
 Keep in mind, that the Products Lists feature with the `ProductListGui` module makes sense only in connection with modules `MerchantRelationshipProductListGui` v. 2.0.0 and `ConfigurableBundleGui`.
+
 {% endinfo_block %}
 
 **To upgrade to the new version of the module, do the following:**
@@ -89,11 +93,17 @@ console transfer:generate
 console translator:generate-cache
 ```
 {% info_block infoBox "Info" %}
-If your project code contains any `ProductListFacade::deleteProductList(
-{% endinfo_block %}` methods usage, then update them to be `ProductListFacade::removeProductList()` since the old method is deprecated now and should not be used anymore.)
-{% info_block infoBox "Info" %}
-Avoid using of the plugins implementing `ProductListOwnerTypeFormExpanderPluginInterface`, since the last one is deprecated and not relevant anymore.
+
+If your project code contains any `ProductListFacade::deleteProductList()` methods usage, then update them to be `ProductListFacade::removeProductList()` since the old method is deprecated now and should not be used anymore.
+
 {% endinfo_block %}
+
+{% info_block infoBox "Info" %}
+
+Avoid using of the plugins implementing `ProductListOwnerTypeFormExpanderPluginInterface`, since the last one is deprecated and not relevant anymore.
+
+{% endinfo_block %}
+
 4. Remove following methods from `src/Pyz/Zed/ProductListGui/ProductListGuiDependencyProvider.php` (if any present):
 
 * `getProductListOwnerTypeFormExpanderPlugins`

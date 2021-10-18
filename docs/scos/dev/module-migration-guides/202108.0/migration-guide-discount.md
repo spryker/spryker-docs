@@ -12,13 +12,16 @@ redirect_from:
 ---
 
 ## Upgrading from Version 7.* to Version 9.0.0
+
 {% info_block infoBox %}
+
 In order to dismantle the Horizontal Barrier and enable partial module updates on projects, a Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Please [contact us](https://spryker.com/en/support/) if you have any questions.
+
 {% endinfo_block %}
 
 ## Upgrading from Version 6.* to Version 7.*
 
-The seventh version of the `Discount` module introduces the Minimum Quantity of Items value for discounts. This functionality allows you to define discounts that will be applied only when the number of items which satisfies the conditions, is equal to or greater than the defined amount. 
+The seventh version of the `Discount` module introduces the Minimum Quantity of Items value for discounts. This functionality allows you to define discounts that will be applied only when the number of items which satisfies the conditions, is equal to or greater than the defined amount.
 
 To achieve this, we have added a new database field: `spy_discount.minimum_item_amount`.
 
@@ -46,14 +49,14 @@ This command will generate some new classes in your project under the  `\Orm\Zed
 To migrate the `spy_discount_store` table, create connections between your discounts and the desired stores.
 
 **Example migration for multiple (or single) stores**
-    
+
 PostgreSQL:
-    
+
 ```sql
     INSERT INTO spy_discount_store (id_discount_store, fk_discount, fk_store)
     SELECT nextval('id_discount_store_pk_seq'), id_discount, id_store FROM spy_discount, spy_store;
 ```
-    
+
 MySQL:
 
 ```sql
@@ -64,7 +67,7 @@ MySQL:
 7. To populate current Store information into the Quote transfer object, the `StoreQuoteTransferExpanderPlugin` has to be provided through the `QuoteDependencyProvider::getQuoteTransferExpanderPlugins()`.
 
 **Example plugin registration**
-    
+
 ```php
 <?php
 namespace Pyz\Client\Quote;
@@ -183,7 +186,7 @@ In the `Discount` module version 5, we have introduced multicurrency support for
 composer update spryker/discount spryker/currency spryker/store spryker/money spryker/calculation spryker/cart spryker/kernel.
 ```
 
-Install the new module to be able to use the new currency plugin. 
+Install the new module to be able to use the new currency plugin.
 
 ```bash
 composer require spryker/cart-currency-connector
@@ -232,9 +235,9 @@ This console command will move all discount amount with fixed calculator plugin 
 
 ```php
 <?php
- 
+
 /**
-           
+
  * Copyright © 2017-present Spryker Systems GmbH. All rights reserved.
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
@@ -324,4 +327,3 @@ class MigrateDiscountsConsole extends Console
 }
 ?>
 ```
-

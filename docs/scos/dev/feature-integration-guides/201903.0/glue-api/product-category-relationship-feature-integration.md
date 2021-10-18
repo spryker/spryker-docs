@@ -74,7 +74,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 ```
 
 {% info_block infoBox "Verification" %}
-Make a request to `http://example.org/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=category-nodes.`
+Make a request to `http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=category-nodes.`
 {% endinfo_block %}
 <details open>
 <summary markdown='span'>Request Example</summary>
@@ -88,7 +88,7 @@ Make a request to `http://example.org/abstract-products/{% raw %}{{{% endraw %}a
          ...
       },
       "links":{  
-         "self":"http://example.org/abstract-products/001"
+         "self":"http://mysprykershop.com/abstract-products/001"
       },
       "relationships":{  
          "category-nodes":{  
@@ -113,7 +113,7 @@ Make a request to `http://example.org/abstract-products/{% raw %}{{{% endraw %}a
             ...
          },
          "links":{  
-            "self":"http://example.org/category-nodes/4"
+            "self":"http://mysprykershop.com/category-nodes/4"
          }
       },
       {  
@@ -123,7 +123,7 @@ Make a request to `http://example.org/abstract-products/{% raw %}{{{% endraw %}a
             ...
          },
          "links":{  
-            "self":"http://example.org/category-nodes/2"
+            "self":"http://mysprykershop.com/category-nodes/2"
          }
       }
    ]

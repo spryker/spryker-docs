@@ -246,7 +246,7 @@ class YvesBootstrap extends SprykerYvesBootstrap
 ```
 
 {% info_block warningBox "Verfication" %}
-Verify the `AgentPageControllerProvider` opening the agent login page by the link: `http://mysprykershop.com/agent/login](http://example.org/agent/login`
+Verify the `AgentPageControllerProvider` opening the agent login page by the link: `http://mysprykershop.com/agent/login](http://mysprykershop.com/agent/login`
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}

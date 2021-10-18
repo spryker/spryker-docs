@@ -19,13 +19,13 @@ This document describes how to integrate the Shipment feature API into a Spryker
 
 To start feature integration, overview and install the necessary features:
 
-| FEATURE                    | VERSION | INTEGRATION GUIDE                                            |
-| :------------------------- | :------ | :----------------------------------------------------------- |
-| Glue API: Spryker Core     | master  | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Shipment                  | master  | [Shipment feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shipment-feature-integration.html) |
-| Glue API: Checkout         | master  | [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |
-| Glue API: Glue Application      | master  | [Glue API: Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
-| Glue API: Order Management | master  | [Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html) |
+| FEATURE | VERSION | INTEGRATION GUIDE  |
+| ----------------- | ------ | ------------------- |
+| Glue API: Spryker Core     | {{page.version}}  | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Shipment                  | {{page.version}}  | [Shipment feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shipment-feature-integration.html) |
+| Glue API: Checkout         | {{page.version}}  | [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |
+| Glue API: Glue Application      | {{page.version}}  | [Glue API: Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
+| Glue API: Order Management | {{page.version}}  | [Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
 
@@ -37,15 +37,11 @@ composer require spryker/shipments-rest-api:"1.4.0" --update-with-dependencies
 
 {% info_block warningBox "Verification" %}
 
-
-
 Make sure that the following modules have been installed:
 
-| MODULE           | EXPECTED DIRECTORY                |
-| :--------------- | :-------------------------------- |
+| MODULE         | EXPECTED DIRECTORY            |
+| -------------- | ----------------------------- |
 | ShipmentsRestApi | vendor/spryker/shipments-rest-api |
-
-
 
 {% endinfo_block %}
 
@@ -59,19 +55,12 @@ Generate transfer changes:
 console transfer:generate
 ```
 
-
-
-
 {% info_block warningBox "Verification" %}
-
-
 
 Make sure that the following changes have been applied in transfer objects:
 
- 
-
-| TRANSFER                                   | TYPE     | EVENT   | PATH                                                         |
-| :----------------------------------------- | :------- | :------ | :----------------------------------------------------------- |
+| TRANSFER    | TYPE     | EVENT   | PATH     |
+| ----------------- | ------ | ----- | -------------------------- |
 | RestCheckoutDataTransfer                   | class    | created | src/Generated/Shared/Transfer/RestCheckoutDataTransfer.php   |
 | RestCheckoutRequestAttributesTransfer      | class    | created | src/Generated/Shared/Transfer/RestCheckoutRequestAttributesTransfer.php |
 | RestShipmentTransfer                       | class    | created | src/Generated/Shared/Transfer/RestShipmentTransfer.php       |
@@ -134,8 +123,6 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-
-
 Make sure that in the database the configured data has been added to the `spy_glossary` table.
 
 
@@ -151,11 +138,8 @@ Set up the following behaviors.
 Activate the following plugin(s):
 
 
-
-
-
-| PLUGIN                                                  | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                            |
-| :------------------------------------------------------ | :----------------------------------------------------------- | :------------ | :--------------------------------------------------- |
+| PLUGIN  | SPECIFICATION   | PREREQUISITES | NAMESPACE        |
+|--------- | -------------------- | ---------- | -------------- |
 | ShipmentMethodsByCheckoutDataResourceRelationshipPlugin | If `RestCheckoutDataTransfer` is provided as payload, adds the `shipment-methods` resource as relationship. |               | Spryker\Glue\ShipmentsRestApi\Plugin\GlueApplication |
 | OrderShipmentByOrderResourceRelationshipPlugin          | If `OrderTransfer` is provided as a payload, adds the `order-shipments` resource as a relationship . |               | Spryker\Glue\ShipmentsRestApi\Plugin\GlueApplication |
 | ShipmentMethodsByShipmentResourceRelationshipPlugin     | If`ShipmentGroupTransfer` is provided as payload, adds the `shipment-methods` resource as relationship. |               | Spryker\Glue\ShipmentsRestApi\Plugin\GlueApplication |
@@ -163,7 +147,7 @@ Activate the following plugin(s):
 
 
 <details open>
-    <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -206,20 +190,14 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
-
 </details>
 
-
-
 {% info_block warningBox "Verification" %}
-
 
 * To make sure that `ShipmentMethodsByCheckoutDataResourceRelationshipPlugin` is activated, check that the information from the `shipment-methods` resource is returned by sending the `POST http://glue.mysprykershop.com/checkout-data?include=shipment-methods` request.
 * To make sure that `OrderShipmentByOrderResourceRelationshipPlugin` is activated, make sure that the information from the `order-shipments` resource is returned by sending the `GET http://glue.mysprykershop.com/orders?include=order-shipments` request.
 * To make sure that `ShipmentMethodsByShipmentResourceRelationshipPlugin` is activated, make sure that the information from the `shipment-methods` resource is returned by sending the `GET http://glue.http://mysprykershop.com /shipments?include=shipment-methods` request.
 * To make sure that `ShipmentsByCheckoutDataResourceRelationshipPlugin` is activated, make sure that the information from the `shipments` resource is returned by sending the `POST http://glue.http://mysprykershop.com /checkout-data?include=shipments` request.
-
-
 
 {% endinfo_block %}
 
@@ -229,18 +207,11 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 To map the data from requests to `QuoteTransfer`, configure the following mappers on the project level:
 
-
-
-
-
-| PLUGIN                                         | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                                    |
-| :--------------------------------------------- | :----------------------------------------------------------- | :------------ | :----------------------------------------------------------- |
+| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE   |
+| ---------------------- | ---------------------- |---------- | ------------------------- |
 | ShipmentQuoteMapperPlugin                      | Adds a mapper that maps shipment information to `QuoteTransfer`. |               | Spryker\Zed\ShipmentsRestApi\Communication\Plugin\CheckoutRestApi |
 | ShipmentRestOrderDetailsAttributesMapperPlugin | Maps the shipments from `OrderTransfer` to `RestOrderDetailsAttributesTransfer`. |               | Spryker\Glue\ShipmentsRestApi\Plugin\OrdersRestApi           |
 | ShipmentsQuoteMapperPlugin                     | Maps the shipments from `RestCheckoutRequestAttributesTransfer` to `QuoteTransfer`. |               | Spryker\Zed\ShipmentsRestApi\Communication\Plugin\CheckoutRestApi |
-
-
-
 
 
 **src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
@@ -270,9 +241,6 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 ```
 
 
-
-
-
 **src/Pyz/Glue/OrdersRestApi/OrdersRestApiDependencyProvider.php**
 
 ```php
@@ -298,9 +266,6 @@ class OrdersRestApiDependencyProvider extends SprykerOrdersRestApiDependencyProv
 ```
 
 
-
-
-
 {% info_block warningBox "Verification" %}
 
 
@@ -316,16 +281,10 @@ class OrdersRestApiDependencyProvider extends SprykerOrdersRestApiDependencyProv
 Activate the following plugin(s):
 
 
-
-
-
-| PLUGIN                                                 | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                                    |
-| :----------------------------------------------------- | :----------------------------------------------------------- | :------------ | :----------------------------------------------------------- |
+| PLUGIN   | SPECIFICATION    | PREREQUISITES | NAMESPACE   |
+| ----------------- | ------------------------- | ---------- | -------------------- |
 | SelectedShipmentMethodCheckoutDataResponseMapperPlugin | Maps the selected shipment method data to the `checkout-data`resource attributes. |               | Spryker\Glue\ShipmentsRestApi\Plugin\CheckoutRestApi         |
 | ShipmentMethodCheckoutDataValidatorPlugin              | Validates shipment methods.                                  |               | Spryker\Zed\ShipmentsRestApi\Communication\Plugin\CheckoutRestApi |
-
-
-
 
 
 **src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
@@ -350,12 +309,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
         ];
     }
 }
-
-
 ```
-
-
-
 
 
 **src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
@@ -382,18 +336,11 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 }
 ```
 
-
-
-
 {% info_block warningBox "Verification" %}
-
-
 
 To make sure that `SelectedShipmentMethodCheckoutDataResponseMapperPlugin` is activated, send the `POST http://glue.mysprykershop.com/checkout-data` request endpoint with shipment a method id and check that, in the response, the `selectedShipmentMethods` is not empty:
 
-
-<details open>
-    <summary markdown='span'>Response sample</summary>
+**Response sample**
 
 ```json
 {
@@ -422,33 +369,25 @@ To make sure that `SelectedShipmentMethodCheckoutDataResponseMapperPlugin` is ac
 }
 ```
 
-</details>
-
 {% endinfo_block %}
+
 {% info_block warningBox "Verification" %}
 
 To verify that `ShipmentMethodCheckoutDataValidatorPlugin` is activated, send the `POST http://glue.mysprykershop.com/checkout` request and check that you get the error saying that a shipment method is not found.
 
-
 {% endinfo_block %}
+
 ### Configure the multi-shipment method validator and expander plugins
 
 Activate the following plugins:
 
-
-
-
-
-| PLUGIN                                      | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                                    |
-| :------------------------------------------ | :----------------------------------------------------------- | :------------ | :----------------------------------------------------------- |
+| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE     |
+| ------------------- | --------------------------- | ------------ | -------------------- |
 | AddressSourceCheckoutRequestValidatorPlugin | Validates the attributes of given shipments and returns an array of errors if necessary. |               | Spryker\Glue\ShipmentsRestApi\Plugin\CheckoutRestApi         |
 | ShipmentDataCheckoutRequestValidatorPlugin  | Checks if `RestCheckoutRequestAttributesTransfer` provides shipment data per item or per order. |               | Spryker\Glue\ShipmentsRestApi\Plugin\CheckoutRestApi         |
 | ItemsCheckoutDataValidatorPlugin            | Checks if `CheckoutDataTransfer` provides shipment data per item and per bundle item. |               | Spryker\Zed\ShipmentsRestApi\Communication\Plugin\CheckoutRestApi |
 | ItemsReadCheckoutDataValidatorPlugin        | Checks if `CheckoutDataTransfer` provides shipment data per item and bundle item. |               | Spryker\Zed\ShipmentsRestApi\Communication\Plugin\CheckoutRestApi |
 | ShipmentCheckoutDataExpanderPlugin          | Expands `RestCheckoutDataTransfer` with available shipment methods. |               | Spryker\Zed\ShipmentsRestApi\Communication\Plugin\CheckoutRestApi |
-
-
-
 
 
 **src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
@@ -479,7 +418,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 
 <details open>
-    <summary markdown='span'>src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -524,16 +463,13 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
     }
 }
 ```
-
 </details>
 
 
 
 {% info_block warningBox "Verification" %}
 
-
 To make sure that the plugins are activated, send the `POST http://glue.mysprykershop.com/checkout` request with invalid shipments and check that errors are returned.
-
 
 {% endinfo_block %}
 
@@ -544,7 +480,7 @@ To make sure that the plugins are activated, send the `POST http://glue.myspryke
 
 Integrate the following related features.
 
-| FEATURE      | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                            |
-| :----------- | :------------------------------- | :----------------------------------------------------------- |
+| FEATURE      | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE       |
+| ------- | -------------- | ------------------------- |
 | Glue API: Checkout | ✓                                | [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |
 

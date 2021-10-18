@@ -1,5 +1,5 @@
 ---
-title: Glue API- Product Configuration feature integration
+title: Glue API - Product Configuration feature integration
 description: Learn how to integrate the Product Configurator feature API into a Spryker project.
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-product-configuration-feature-integration
@@ -27,15 +27,16 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | master | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Product |master |[Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)|
-| Cart| master| [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)|
-| Order Management| master |[Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html)|
-|Product Configuration |master |[Product Configuration feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-configuration-feature-integration.html)|
+| Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Product |{{page.version}} |[Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)|
+| Cart| {{page.version}}| [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)|
+| Order Management| {{page.version}} |[Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html)|
+|Product Configuration |{{page.version}} |[Product Configuration feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-configuration-feature-integration.html)|
 
 ## 1) Install the required modules using Composer
 
 Install the required modules:
+
 ```bash
 composer install spryker/product-configurations-rest-api:"^0.1.0" spryker/product-configurations-price-product-volumes-rest-api:"^0.1.0" --update-with-dependencies
 ```
@@ -56,12 +57,12 @@ Ensure the following modules have been installed:
 ## 2) Set up transfer objects
 
 Generate transfer changes:
+
 ```bash
 vendor/bin/console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
-
 
 Ensure that the following changes have occurred in transfer objects:
 
@@ -77,6 +78,7 @@ Ensure that the following changes have occurred in transfer objects:
 |RestOrderItemsAttributesTransfer.salesOrderItemConfiguration |property |added |src/Generated/Shared/Transfer/RestOrderItemsAttributesTransfer|
 
 {% endinfo_block %}
+
 ## 3) Set up behavior
 
 Set up the following behaviors.
@@ -122,7 +124,7 @@ Make sure that the `https://glue.mysprykershop.com/concrete-products/{% raw %}{{
 Make sure that the `concrete-products` resource is expanded with the product configuration properties. For an example, see the following response to the `GET https://glue.mysprykershop.com/concrete-products/093_24495843` request.
 
 <details open>
-    <summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -174,11 +176,11 @@ Make sure that the `concrete-products` resource is expanded with the product con
     }
 }
 ```
-
 </details>
 
 
 {% endinfo_block %}
+
 ### Enable items resource expanding plugin
 
 Activate the following plugins:
@@ -194,8 +196,7 @@ Activate the following plugins:
 | ProductConfigurationRestOrderItemsAttributesMapperPlugin| Maps `ItemTransfer.salesOrderItemConfiguration` to `RestOrderItemsAttributesTransfer.salesOrderItemConfiguration`. |None |Spryker\Glue\ProductConfigurationsRestApi\Plugin\OrdersRestApi|
 
 
-<details open>
-    <summary markdown='span'>src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
+**src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php**
 
 ```php
 <?php
@@ -230,10 +231,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 }
 ```
 
-</details>
-
-<details open>
-    <summary markdown='span'>src/Pyz/Glue/ProductConfigurationsRestApi/ProductConfigurationsRestApiDependencyProvider.php</summary>
+**src/Pyz/Glue/ProductConfigurationsRestApi/ProductConfigurationsRestApiDependencyProvider.php**
 
 ```php
 <?php
@@ -268,10 +266,9 @@ class ProductConfigurationsRestApiDependencyProvider extends SprykerProductConfi
 }
 ```
 
-</details>
-
 
 **src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php**
+
 ```php
 <?php
 
@@ -295,6 +292,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 ``` 
 
 **src/Pyz/Glue/OrdersRestApi/OrdersRestApiDependencyProvider.php**
+
 ```php
 <?php
 
@@ -319,11 +317,10 @@ class OrdersRestApiDependencyProvider extends SprykerOrdersRestApiDependencyProv
 
 {% info_block warningBox "Verification" %}
 
-
 Make sure that the `orders` resource is expanded with the product configuration properties. For an example, see the following response to the `GET https://glue.mysprykershop.com/orders/DE--2` request:
 
 <details open>
-    <summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -547,12 +544,11 @@ Make sure that the `orders` resource is expanded with the product configuration 
     }
 }
 ```
-
-
 {% endinfo_block %}
 
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
+
 ```php
 <?php
 
@@ -577,11 +573,10 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-
 Make sure that the `items` resource is expanded with the product configuration properties. For an example, see the following response to the `POST https://glue.mysprykershop.com/carts/2f0a0b59-b988-5829-8fd3-6d636fc8ea33/items?include=items` request:
 
 <details open>
-    <summary markdown='span'>Request sample</summary>
+<summary markdown='span'>Request sample</summary>
 
 ```json
 {
@@ -631,11 +626,10 @@ Make sure that the `items` resource is expanded with the product configuration p
     }
 }
 ```
-
 </details>
 
 <details open>
-    <summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
     
 ```json
 {
@@ -755,7 +749,6 @@ Make sure that the `items` resource is expanded with the product configuration p
     ]
 }
 ```
-
 </details>
 
 {% endinfo_block %}

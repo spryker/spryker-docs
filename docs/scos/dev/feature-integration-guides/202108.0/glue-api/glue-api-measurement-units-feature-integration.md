@@ -1,5 +1,5 @@
 ---
-title: Glue API- Measurement units feature integration
+title: Glue API - Measurement units feature integration
 description: The procedure of integrating Measurement Units Feature API into a Spryker project.
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-measurement-units-feature-integration
@@ -16,10 +16,10 @@ Follow the steps below to install Measurement units feature API.
 ## Prerequisites
 To start the feature integration, overview and install the necessary features:
 
-| Name | Version |Link |
+| NAME | VERSION | LINK |
 | --- | --- | --- |
-| Spryker Core | 202009.0 | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html)  |
-| Product Measurement Units | 202009.0 | [Product Measurement Units feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-measurement-unit-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html)  |
+| Product Measurement Units | {{page.version}} | [Product Measurement Units feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-measurement-unit-feature-integration.html) |
 
 ## 1)  Install the required modules using Composer
 Run the following command to install the required modules:
@@ -32,17 +32,14 @@ composer require spryker/product-measurement-units-rest-api:"^1.0.0" --update-wi
 
 Make sure that the following modules have been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-| `ProductMeasurementUnitsRestApi` | `vendor/spryker/product-measurement-units-rest-api` |
+| ProductMeasurementUnitsRestApi | vendor/spryker/product-measurement-units-rest-api |
 
 {% endinfo_block %}
 
-    
 
-
-
-## 2) Set up Database Schema and Transfer Objects
+## 2) Set up database schema and transfer objects
 
 Run the following command to generate the transfer changes:
 
@@ -57,12 +54,10 @@ console transfer:generate
 Make sure that `SpyProductMeasurementUnitStorage` and `SpyProductConcreteStorage` have been extended with synchronization behavior, namely with the methods:
 
 
-| Entity | Type | Event | Path | Methods |
+| ENTITY | TYPE | EVENT | PATH | METHODS |
 | --- | --- | --- | --- | --- |
 | SpyProductMeasurementUnitStorage | class | extended | src/Orm/Zed/ProductMeasurementUnitStorage/Persistence/Base/SpyProductMeasurementUnitStorage | syncPublishedMessageForMappings(), syncUnpublishedMessageForMappings() |
 | SpyProductConcreteStorage | class | extended | src/Orm/Zed/ProductStorage/Persistence/Base/SpyProductConcreteStorage | syncPublishedMessageForMappings(), syncUnpublishedMessageForMappings() |
-
-
 
 {% endinfo_block %}
 
@@ -70,8 +65,7 @@ Make sure that `SpyProductMeasurementUnitStorage` and `SpyProductConcreteStorage
 
 Make sure that the following changes have occurred:
 
-
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | RestProductMeasurementUnitsAttributesTransfer | class | created | src/Generated/Shared/Transfer/RestProductMeasurementUnitsAttributesTransfer |
 | RestSalesUnitsAttributesTransfer | class | created | src/Generated/Shared/Transfer/RestSalesUnitsAttributesTransfer |
@@ -83,19 +77,13 @@ Make sure that the following changes have occurred:
 | RestItemsAttributesTransfer.sku | property | added | src/Generated/Shared/Transfer/RestItemsAttributesTransfer |
 | RestOrderItemsAttributesTransfer.salesUnit | property | added | src/Generated/Shared/Transfer/RestOrderItemsAttributesTransfer |
 
-
-
 {% endinfo_block %}
 
 
-
-
-
-
-## 3) Set Up Behavior
+## 3) Set up behavior
 Set up the following behaviors.
 
-### Re-export Data to Storage
+### Re-export data to storage
 Run the following commands to reload abstract and concrete product data to the Storage:
 
 ```bash
@@ -113,11 +101,11 @@ Make sure that the following Redis keys exist and there is data in them:
 
 {% endinfo_block %}
 
-### Enable Resources and Relationships
+### Enable resources and relationships
 Activate the following plugins:
 
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | ProductMeasurementUnitsResourceRoutePlugin | Registers the `product-measurement-units` resource. | None | Spryker\Glue\ProductMeasurementUnitsApi\Plugin |
 | SalesUnitsResourceRoutePlugin | Registers the `sales-units` resource. | None | Spryker\Glue\ProductMeasurementUnitsApi\Plugin |
@@ -125,9 +113,6 @@ Activate the following plugins:
 | SalesUnitsByProductConcreteResourceRelationshipPlugin | Adds the `sales-units` resource as a relationship of the `product-concrete` resource. | None | Spryker\Glue\ProductMeasurementUnitsApi\Plugin\GlueApplication |
 | ProductMeasurementUnitsBySalesUnitResourceRelationshipPlugin | Adds  the `product-measurement-units` resource as a relationship of the `sales-units` resource. | None | Spryker\Glue\ProductMeasurementUnitsApi\Plugin\GlueApplication |
 | SalesUnitsByCartItemResourceRelationshipPlugin | Adds the `sales-units` resource as relationship of the `item` resource. | None | Spryker\Glue\ProductMeasurementUnitsApi\Plugin\GlueApplication |
-
-
-
 
 
 <details open>
@@ -196,7 +181,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
- 
 </details>
 
 
@@ -222,13 +206,7 @@ Make sure that the `ProductMeasurementUnitsResourceRoutePlugin` plugin is set up
     }
 }
 ```
-
-
-
 {% endinfo_block %}
-
-
-
 
 
 
@@ -288,9 +266,7 @@ Make sure that the `SalesUnitsResourceRoutePlugin` and `ProductMeasurementUnitsB
     ]
 }
 ```
-
 </details>
-
 
 {% endinfo_block %}
 
@@ -436,9 +412,7 @@ Make sure that the `ProductMeasurementUnitsByProductConcreteResourceRelationship
     ]
 }
 ```
-
 </details>
-
 
 {% endinfo_block %}
 
@@ -555,18 +529,15 @@ Make sure that the `SalesUnitsByCartItemResourceRelationshipPlugin` relationship
     ]
 }
 ```
-
 </details>
-
 
 {% endinfo_block %}
 
-### Provide Dependencies for the CartsRestApi Module
+### Provide dependencies for the CartsRestApi module
 
 Activate the following plugins:
 
-
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | SalesUnitsRestCartItemsAttributesMapperPlugin | Maps `ItemTransfer::$amountSalesUnit` to `RestItemsAttributesTransfer::$salesUnit`. | None | Spryker\Glue\ProductMeasurementUnitsApi\Plugin\CartsRestApi |
 | SalesUnitCartItemExpanderPlugin | Expands `CartItemRequestTransfer` with `amount` and `idProductMeasurementSalesUnit`. | None | Spryker\Glue\ProductMeasurementUnitsApi\Plugin\CartsRestApi |
@@ -660,11 +631,11 @@ Make sure that the plugins have been set up:
 
 {% endinfo_block %}
 
-### Provide Dependencies for the OrdersRestApi Module
+### Provide dependencies for the OrdersRestApi module
 
 Activate the following plugin:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | SalesUnitRestOrderItemsAttributesMapperPlugin | Maps `ItemTransfer::$amountSalesUnit` to `RestOrderItemsAttributesTransfer::$salesUnit`. | None | Spryker\Glue\ProductMeasurementUnitsRestApi\Plugin\OrdersRestApi |
 

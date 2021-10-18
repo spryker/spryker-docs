@@ -21,9 +21,9 @@ To start feature integration, overview and install the necessary features:
 
 |NAME|VERSION|INTEGRATION GUIDE|
 |---|---|---|
-Spryker Core|201907.0|[Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html)|
-|Product|201907.0|[Product API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)|
-|Wishlist| 201907.0 |
+Spryker Core| {{page.version}} |[Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html)|
+|Product| {{page.version}} |[Product API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)|
+|Wishlist| {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
@@ -32,16 +32,18 @@ Run the following command to install the required modules:
 ```bash
 composer require spryker/wishlists-rest-api:"^1.0.0" --update-with-dependencies
 ```
-<section contenteditable="false" class="warningBox"><div class="content">
-    Make sure that the following module has been installed:
+{% info_block warningBox “Verification” %}
+
+Make sure that the following module has been installed:
 
 |MODULE|EXPECTED DIRECTORY|
 |---|---|
-|`WishlistsRestApi`|`vendor/spryker/wishlists-rest-apiWishlistItems`|
+|WishlistsRestApi|vendor/spryker/wishlists-rest-apiWishlistItems|
 
-</div></section>
+{% endinfo_block %}
 
-### 2) Set Up Database Schema and Transfer Objects
+
+### 2) Set up database schema and transfer objects
 
 Run the following commands to apply database changes, and generate entity and transfer changes:
 
@@ -51,25 +53,30 @@ console propel:install
 console transfer:generate
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
-    Make sure that the following changes have occurred in the database:
+{% info_block warningBox “Verification” %}
+
+Make sure that the following changes have occurred in the database:
 
 |DATABASE ENTITY|TYPE|EVENT|
 |---|---|---|
-|`spy_wishlist.uuid`|column|added|
-</div></section>
+|spy_wishlist.uuid|column|added|
 
-<section contenteditable="false" class="warningBox"><div class="content">
+{% endinfo_block %}
+
+{% info_block warningBox “Verification” %}
+
 Make sure that the following changes have occurred in transfer objects:
 
 |TRANSFER|TYPE|EVENT|PATH|
 |---|---|---|---|
-|`RestWishlistItemsAttributesTransfer`|class|created|`src/Generated/Shared/Transfer/RestWishlistItemsAttributesTransfer`|
-|`RestWishlistsAttributesTransfer`|class|created|`src/Generated/Shared/Transfer/RestWishlistsAttributesTransfer`|
-|`WishlistTransfer.uuid`|property|added|`src/Generated/Shared/Transfer/WishlistTransfer`|
-</div></section>
+|RestWishlistItemsAttributesTransfer|class|created|src/Generated/Shared/Transfer/RestWishlistItemsAttributesTransfer|
+|RestWishlistsAttributesTransfer|class|created|src/Generated/Shared/Transfer/RestWishlistsAttributesTransfer|
+|WishlistTransfer.uuid|property|added|src/Generated/Shared/Transfer/WishlistTransfer|
 
-### 3) Set Up Behavior
+{% endinfo_block %}
+
+### 3) Set up behavior
+
 #### Migrate data in the database
 
 {% info_block infoBox %}
@@ -84,7 +91,7 @@ Run the following command:
 console uuid:update Wishlist spy_wishlist
 ```
 
-{% info_block "warningBox" %}
+{% info_block warningBox “Verification” %}
 
 Make sure that the `uuid` field is populated for all records in the `spy_wishlist` table.
 For this purpose, run the following SQL query and make sure that the result is 0 records:
@@ -97,17 +104,14 @@ For this purpose, run the following SQL query and make sure that the result is 0
 
 Activate the following plugins:
 
-|PLUGIN|SPECIFICAION|PREREQUISITES|NAMESPACE|
+|PLUGIN|SPECIFICATION|PREREQUISITES|NAMESPACE|
 |---|---|---|---|
 |WishlistsResourceRoutePlugin|Registers the `wishlists` resource.|None|Spryker\Glue\WishlistsRestApi\Plugin|
 |WishlistItemsResourceRoutePlugin|Registers the `wishlist-items` resource.|None|Spryker\Glue\WishlistsRestApi\Plugin|
 |WishlistRelationshipByResourceIdPlugin|Adds the `wishlists` resource as a relationship to the customers resource.|None|Spryker\Glue\WishlistsRestApi\Plugin|
 | ConcreteProductBySkuResourceRelationshipPlugin | Adds the `concrete-products` resource as a relationship to the `wishlist-items` resource. | None | Spryker\Glue\ProductsRestApi\Plugin\GlueApplication |
 
-
-
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
 ```php
 <?php
@@ -151,11 +155,9 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
-
-</br>
 </details>
 
-{% info_block "warningBox" %}
+{% info_block warningBox “Verification” %}
 
 Make sure that the following endpoints are available:
 `http:///glue.mysprykershop.com/wishlists`
@@ -164,8 +166,3 @@ Send a request to `http://glue.mysprykershop.com/customers/{% raw %}{{{% endraw 
 
 {% endinfo_block %}
 
-**See also:**
-
-* [Managing Wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html)
-
-*Last review date: Aug 02, 2019* <!-- by  Tihran Voitov, Yuliia Boiko-->

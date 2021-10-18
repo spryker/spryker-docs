@@ -75,7 +75,7 @@ Ensure that the following changes have occurred in the database:
 Ensure that the following changes have occurred in transfer objects:
 
 | TRANSFER   | TYPE     | EVENT   | PATH      |
-| -------------------- | ------- | ------ |------------------------------- |
+| ---------------- | ------- | ------ |----------------- |
 |RestCartsAttributesTransfer                            | class    | created | src/Generated/Shared/Transfer/RestCartsAttributesTransfer    |
 | RestCartItemsAttributesTransfer                        | class    | created | src/Generated/Shared/Transfer/RestCartItemsAttributesTransfer |
 | RestItemsAttributesTransfer                            | class    | created | src/Generated/Shared/Transfer/RestItemsAttributesTransfer    |
@@ -128,8 +128,8 @@ The result should be `0 records`.
 
 Activate the following plugin:
 
-| PLUGIN   | SPECIFICATION      | PREREQUISITES | NAMESPACE   |
-| ---------------------- | ---------------- | ------------ | --------------------- |
+| PLUGIN   | SPECIFICATION  | PREREQUISITES | NAMESPACE   |
+| ---------------- | ---------------- | ------------ | ------------- |
 | AnonymousCustomerUniqueIdValidatorPlugin | Validates a REST resource request before processing it. Checks if `X-Anonymous-Customer-Unique-Id` header is set and can be used for requested resource.  |               | Spryker\Glue\CrtsRestApi\Plugin\Vlidator |
  
 
@@ -206,7 +206,7 @@ Activate the following plugins:
 
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| ------------------- | ------------------- | ------------ | ----------------------- |
+| ------------------- | ----------------- | ------------ | -------------------- |
 | CartsResourceRoutePlugin                           | Registers the `carts` resource.                              |               | Spryker\Glue\CartsRestApi\Plugin\ResourceRoute               |
 | CartItemsResourceRoutePlugin                       | Registers the `cart-items` resource.                         |               | Spryker\Glue\CartsRestApi\Plugin\ResourceRoute               |
 | GuestCartsResourceRoutePlugin                      | Registers the `guest-carts` resource.                        |               | Spryker\Glue\CartsRestApi\Plugin\ResourceRoute               |
@@ -305,7 +305,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
-
 </details>
 
 
@@ -325,7 +324,6 @@ Ensure that the `http://glue.mysprykershop.com/carts` endpoint is available:
 
 
 
-
 {% info_block warningBox "Verification" %}
 
 
@@ -340,12 +338,6 @@ Ensure that the `http://glue.mysprykershop.com/guest-carts` endpoint is availabl
 
 
 
-
-
-
-
-
-
 {% info_block warningBox "Verification" %}
 
 Ensure that the `items` resource relationships is registered as a relationship of the `carts` resource:
@@ -356,7 +348,6 @@ Ensure that the `items` resource relationships is registered as a relationship o
 
 
 {% endinfo_block %}
-
 
 
 
@@ -381,9 +372,6 @@ Ensure that the `guest-cart-items` resource relationship is registered as a rela
 Make sure that the `https://glue.mysprykershop.com/customers/{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}/carts` endpoint is available.
 
 
-{% endinfo_block %}
-
- 
 **src/Pz/Glue/CstomersRestApi/CustomersRestApiDependencyProvider.php**
 
 ```
@@ -408,21 +396,15 @@ class CustomersRestApiDependencyProvider extends SprykerCustomersRestApiDependen
 }
 ```
 
+{% endinfo_block %}
 
-
+ 
 
 
 {% info_block warningBox "Verification" %}
 
 
 To ensure that you've installed `UpdateCartCreateCustomerReferencePlugin`, check if, after a guest user with a cart registers, their guest cart is converted into a regular cart.
-
-
-{% endinfo_block %}
-
-
-
-
 
 **src/Pyz/Zed/AuthRestApi/AuthRestApiDependencyProvider.php**
 
@@ -448,7 +430,7 @@ class AuthRestApiDependencyProvider extends SprykerAuthRestApiDependencyProvider
 }
 ```
 
-
+{% endinfo_block %}
 
 
 
@@ -459,11 +441,6 @@ Ensure that `UpdateGuestQuoteToCustomerQuotePostAuthPlugin` is installed correct
 1. Create a guest cart with one or more items.
 2. Authenticate as a customer.
 3. Check if the guest cart has been converted into a new cart of the registered customer.
-
-
-{% endinfo_block %}
-
- 
 
 **src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php**
 
@@ -488,8 +465,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 }
 ```
 
-
-
+{% endinfo_block %}
 
 
 {% info_block warningBox "Verification" %}

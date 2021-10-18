@@ -143,11 +143,11 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 
  {% info_block warningBox %}
-Make sure that the following endpoint is available: `http://example.org//abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-tax-sets `
+Make sure that the following endpoint is available: `http://mysprykershop.comop.com//abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-tax-sets `
 {% endinfo_block %}
 
 {% info_block warningBox %}
-Send a request to `http://example.org//abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=product-tax-sets`. Make sure that the response includes relationships to the `product-tax-sets` resources.
+Send a request to `http://mysprykershop.comop.com//abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=product-tax-sets`. Make sure that the response includes relationships to the `product-tax-sets` resources.
 {% endinfo_block %}
 
 <!-- Last review date: Feb 21, 2019 -->

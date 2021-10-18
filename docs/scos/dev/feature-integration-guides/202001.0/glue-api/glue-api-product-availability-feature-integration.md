@@ -120,16 +120,16 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 Make sure that the following endpoints are available:
 
-* `http://example.org/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/abstract-product-availabilities`
-* `http://example.org/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/concrete-product-availabilities`
+* `http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/abstract-product-availabilities`
+* `http://mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/concrete-product-availabilities`
 
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make a request to `http://example.org/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=abstract-product-availabilities`. Make sure that the response includes relationships to the `abstract-product-availabilities` resource.
+Make a request to `http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=abstract-product-availabilities`. Make sure that the response includes relationships to the `abstract-product-availabilities` resource.
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make a request to `http://example.org/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}?include=concrete-product-availabilities`. Make sure that the response includes relationships to the `concrete-product-availabilities` resource.
+Make a request to `http://mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}?include=concrete-product-availabilities`. Make sure that the response includes relationships to the `concrete-product-availabilities` resource.
 {% endinfo_block %}
 

@@ -1,5 +1,5 @@
 ---
-title: Glue API- Configurable Bundle feature integration
+title: Glue API - Configurable Bundle feature integration
 description: Learn how to integrate the Glue API- Configurable Bundle feature into a Spryker project.
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-configurable-bundle-feature-integration
@@ -19,11 +19,11 @@ This document describes how to integrate the Configurable Bundle feature.
 To start the feature integration, overview and install the necessary features:
 
 
-| Feature | Version | Integration guide |
+| FEATURE | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | master | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-|Configurable Bundles |master | [Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/configurable-bundle-feature-integration.html)|
-|Order Management |master |[Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html)|
+| Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+|Configurable Bundles |{{page.version}} | [Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/configurable-bundle-feature-integration.html)|
+|Order Management |{{page.version}} |[Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html)|
 
 ## 1) Install the required modules using Composer
 
@@ -37,11 +37,9 @@ composer require spryker/configurable-bundles-rest-api:"^1.0.0" --update-with-d
 
 Make sure that the following module has been installed:
 
-
-| Module | Expected directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | ConfigurableBundlesRestApi | vendor/spryker/configurable-bundles-rest-api |
-
 
 {% endinfo_block %}
 
@@ -50,6 +48,7 @@ Make sure that the following module has been installed:
 
 
 Set up transfer objects:
+
 ```bash
 console transfer:generate
 ```
@@ -59,7 +58,7 @@ console transfer:generate
 Make sure that the following changes have been applied in transfer objects:
 
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | RestConfigurableBundleTemplatesAttributesTransfer | class | created | src/Generated/Shared/Transfer/RestConfigurableBundleTemplatesAttributesTransfer |
 | RestConfigurableBundleTemplateSlotsAttributesTransfer | class |created | src/Generated/Shared/Transfer/RestConfigurableBundleTemplateSlotsAttributesTransfer |
@@ -89,7 +88,7 @@ Make sure that the following changes have been applied in transfer objects:
 Activate the following plugins:
 
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | ConfigurableBundleTemplateSlotByConfigurableBundleTemplateResourceRelationshipPlugin | Adds `configurable-bundle-template-slots` resource as a relationship by configurable bundle template. | None | Spryker\Glue\ConfigurableBundlesRestApi\Plugin\GlueApplication |
 | ConfigurableBundleTemplateImageSetByConfigurableBundleTemplateResourceRelationshipPlugin | Adds `configurable-bundle-template-image-sets` resource as a relationship by configurable bundle template. | None | Spryker\Glue\ConfigurableBundlesRestApi\Plugin\GlueApplication |
@@ -97,7 +96,7 @@ Activate the following plugins:
 SalesConfiguredBundleRestOrderItemsAttributesMapperPlugin | Maps the additional information from the`ItemTransfer` to `RestOrderItemsAttributesTransfer`. | None | Spryker\Glue\ConfigurableBundlesRestApi\Plugin\OrdersRestApi | 
 
 <details open>
-    <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -145,7 +144,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
-
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -158,11 +156,9 @@ Make sure that:
     
 *   Each `configurable-bundle-template` resource has a relationship to `configurable-bundle-template-image-sets` by sending the request:`GET https://glue.mysprykershop.com/configurable-bundle-templates?include=configurable-bundle-template-image-sets`.
 
-{% endinfo_block %}
-
-    
 
 **src/Pyz/Glue/OrdersRestApi/OrdersRestApiDependencyProvider.php**
+
 ```php
 <?php
 
@@ -185,6 +181,9 @@ class OrdersRestApiDependencyProvider extends SprykerOrdersRestApiDependencyProv
 }
 ```
 
+{% endinfo_block %}
+
+    
 {% info_block warningBox "Verification" %}
 
 1.  Create an order with a configurable bandle.
@@ -193,16 +192,14 @@ class OrdersRestApiDependencyProvider extends SprykerOrdersRestApiDependencyProv
     Make sure the endpoint returns the sections: `data.attributes.items.salesOrderConfiguredBundle` and `data.attributes.items.salesOrderConfiguredBundleItem`.
 
 {% endinfo_block %}
-
     
 
 ## Related features
 
-
 Integrate the following related features:
 
 
-| Feature | Required for the current feature | Integration guide |
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Glue API: Configurable Bundle + Cart Feature | ✓ | [Glue API: Configurable Bundle + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-cart-feature-integration.html) |
 | Glue API: Configurable Bundle + Product Feature | ✓ | [Glue API: Configurable Bundle + Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-product-feature-integration.html) |

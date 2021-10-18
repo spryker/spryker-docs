@@ -88,8 +88,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 <section contenteditable="false" class="warningBox"><div class="content">
     Make sure that the following endpoints are available:
 
-* http://example.org/orders
-* http://example.org/orders/`{% raw %}{{{% endraw %}order_reference{% raw %}}}{% endraw %}`		
+* http://mysprykershop.com/orders
+* http://mysprykershop.com/orders/`{% raw %}{{{% endraw %}order_reference{% raw %}}}{% endraw %}`		
  </div></section>
  
  <!-- Last review date: Feb 12, 2019 by Tihran Voitov, Dmitry Beirak-->

@@ -19,15 +19,17 @@ related:
 Follow the steps below to install Promotions & Discounts feature API.
 
 ## Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
-| Name | Version | Integration guide |
+| NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | 202009.0 | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Product | 202009.0 | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
-| Promotions & Discounts | 202009.0 |  |
+| Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Product | {{page.version}} | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
+| Promotions & Discounts | {{page.version}} |  |
 
 ## 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
 
 ```bash
@@ -40,7 +42,7 @@ composer require spryker/discount-promotions-rest-api:"^1.1.0" --update-with-dep
 
 Make sure that the following modules have been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | ProductLabelsRestApi | vendor/spryker/product-labels-rest-api |
 | CartCodesRestApi | vendor/spryker/cart-codes-rest-api |
@@ -48,7 +50,8 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-## 2) Set up Database Schema and Transfer Objects
+## 2) Set up database schema and transfer objects
+
 Run the following commands to generate transfer changes:
 
 ```bash
@@ -61,7 +64,7 @@ console transfer:generate
 
 Make sure that the following changes have occurred in the database:
 
-| Database entity | Type | Event |
+| DATABASE ENTITY | TYPE | EVENT |
 | --- | --- | --- |
 | spy_discount_promotion.uuid | column | added |
 
@@ -71,8 +74,7 @@ Make sure that the following changes have occurred in the database:
 
 Make sure that the following changes have occurred in the database:
 
-
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | RestProductLabelsAttributesTransfer | class | created | src/Generated/Shared/Transfer/RestDiscountsAttributesTransfer |
 | RestDiscountsAttributesTransfer | class | created | src/Generated/Shared/Transfer/RestProductLabelsAttributesTransfer |
@@ -86,9 +88,9 @@ Make sure that the following changes have occurred in the database:
 
 {% info_block warningBox "Verification" %}
 
-Make sure that SpyProductAbstractStorage and SpyProductConcreteStorage are extended with synchronization behavior using the following methods:
+Make sure that `SpyProductAbstractStorage` and `SpyProductConcreteStorage` are extended with synchronization behavior using the following methods:
 
-| Entity | Type | Event | Path | Methods |
+| ENTITY | TYPE | EVENT | PATH | METHODS |
 | --- | --- | --- | --- | --- |
 | SpyProductAbstractStorage | class | extended | src/Orm/Zed/ProductStorage/Persistence/Base/SpyProductAbstractStorage	| syncPublishedMessageForMappings(), syncUnpublishedMessageForMappings() |
 | SpyProductConcreteStorage | class | extended | src/Orm/Zed/ProductStorage/Persistence/Base/SpyProductConcreteStorage | syncPublishedMessageForMappings(), syncUnpublishedMessageForMappings() |
@@ -97,16 +99,18 @@ Make sure that SpyProductAbstractStorage and SpyProductConcreteStorage are exten
 
 {% info_block warningBox "Verification" %}
 
-Make sure that SpyDiscountPromotion is extended with UUID behavior using the following method:
+Make sure that `SpyDiscountPromotion` is extended with UUID behavior using the following method:
 
-| Entity | Type | Event | Path | Methods |
+| ENTITY | TYPE | EVENT | PATH | METHODS |
 | --- | --- | --- | --- | --- |
 | SpyDiscountPromotion | class | extended | src/Orm/Zed/DiscountPromotion/Persistence/Base/SpyDiscountPromotion	| setGeneratedUuid() |
 
 {% endinfo_block %}
 
-## 3) Set up Behavior
+## 3) Set up behavior
+
 ### Generate UUIDs for existing discount promotion records that do not have them
+
 Run the following command:
 ```bash
 console uuid:generate DiscountPromotion spy_discount_promotion
@@ -118,14 +122,15 @@ Make sure that the UUID field is populated for all records in the spy_discount_p
 
 ```sql
 SELECT COUNT(*) FROM spy_discount_promotion WHERE uuid IS NULL;
-``
+```
 
 {% endinfo_block %}
 
 ### Enable the Quote field list to save
+
 Add the following fields into the *Quote Fields Allowed for Saving* list:
 
-| Field | 	Specification |
+| FIELD | 	SPECIFICATION |
 | --- | --- |
 | QuoteTransfer::VOUCHER_DISCOUNTS | Stores information about voucher discounts in the Quote transfer object. |
 | QuoteTransfer::CART_RULE_DISCOUNTS | Stores information about cart rule discounts in the Quote transfer object. |
@@ -133,8 +138,7 @@ Add the following fields into the *Quote Fields Allowed for Saving* list:
 
 To do so, modify the following file:
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/Quote/QuoteConfig.php</summary>
+**src/Pyz/Zed/Quote/QuoteConfig.php**</summary>**
 
 ```php
 <?php
@@ -159,33 +163,30 @@ class QuoteConfig extends SprykerQuoteConfig
     }
 }
 ```
- <br>
-</details>
 
 
 ### Enable resources and relationships
 Activate the following plugin:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `ProductLabelsResourceRoutePlugin` | Registers the **product labels** resource. | None | `Spryker\Glue\ProductLabelsRestApi\Plugin\GlueApplication` |
-| `ProductLabelsRelationshipByResourceIdPlugin` | Adds the **product labels** resource as a relationship to the **abstract product** resource. | None | `Spryker\Glue\ProductLabelsRestApi\Plugin\GlueApplication` |
-| `ProductLabelByProductConcreteSkuResourceRelationshipPlugin` | Adds the **product labels** resource as a relationship to the **concrete product** resource. | None | `Spryker\Glue\ProductLabelsRestApi\Plugin\GlueApplication` |
-| `CartVouchersResourceRoutePlugin` | Registers the **vouchers** resource. | None | `Spryker\Glue\CartCodesRestApi\Plugin\GlueApplication` |
-| `GuestCartVouchersResourceRoutePlugin` | Registers the **guest vouchers** resource. | None | `Spryker\Glue\CartCodesRestApi\Plugin\GlueApplication` |
-| `CartRuleByQuoteResourceRelationshipPlugin` | Adds the **cart-rules** resource as a relationship by quote. | None | `Spryker\Glue\CartCodesRestApi\Plugin\GlueApplication` |
-| `VoucherByQuoteResourceRelationshipPlugin` | Adds the **vouchers** resource as a relationship by quote. | None | `Spryker\Glue\CartCodesRestApi\Plugin\GlueApplication` |
-| `DiscountPromotionCartItemExpanderPlugin` | Expands the Add to Cart request data with discount promotion information. | None | `Spryker\Glue\DiscountPromotionsRestApi\Plugin\CartsRestApi` |
-| `DiscountPromotionCartItemMapperPlugin` | Maps a discount to the *Add to Cart* request data. | None | `Spryker\Zed\DiscountPromotionsRestApi\Communication\Plugin\CartsRestApi` |
-| `PromotionItemByQuoteTransferResourceRelationshipPlugin` | Adds the `promotional-items` resource as a relationship to the carts and `guest-carts` resources. | None | `Spryker\Glue\DiscountPromotionsRestApi\Plugin\GlueApplication` |
-| `ProductAbstractBySkuResourceRelationshipPlugin` | Adds the `abstract-products` resource as a relationship to the `promotional-items` resource. | None | `Spryker\Glue\ProductsRestApi\Plugin\GlueApplication` |
+| ProductLabelsResourceRoutePlugin | Registers the **product labels** resource. | None | Spryker\Glue\ProductLabelsRestApi\Plugin\GlueApplication |
+| ProductLabelsRelationshipByResourceIdPlugin | Adds the **product labels** resource as a relationship to the **abstract product** resource. | None | Spryker\Glue\ProductLabelsRestApi\Plugin\GlueApplication |
+| ProductLabelByProductConcreteSkuResourceRelationshipPlugin | Adds the **product labels** resource as a relationship to the **concrete product** resource. | None | Spryker\Glue\ProductLabelsRestApi\Plugin\GlueApplication |
+| CartVouchersResourceRoutePlugin | Registers the **vouchers** resource. | None | Spryker\Glue\CartCodesRestApi\Plugin\GlueApplication |
+| GuestCartVouchersResourceRoutePlugin | Registers the **guest vouchers** resource. | None | Spryker\Glue\CartCodesRestApi\Plugin\GlueApplication |
+| CartRuleByQuoteResourceRelationshipPlugin | Adds the **cart-rules** resource as a relationship by quote. | None | Spryker\Glue\CartCodesRestApi\Plugin\GlueApplication |
+| VoucherByQuoteResourceRelationshipPlugin | Adds the **vouchers** resource as a relationship by quote. | None | `Spryker\Glue\CartCodesRestApi\Plugin\GlueApplication |
+| DiscountPromotionCartItemExpanderPlugin | Expands the Add to Cart request data with discount promotion information. | None | Spryker\Glue\DiscountPromotionsRestApi\Plugin\CartsRestApi |
+| DiscountPromotionCartItemMapperPlugin | Maps a discount to the *Add to Cart* request data. | None | Spryker\Zed\DiscountPromotionsRestApi\Communication\Plugin\CartsRestApi |
+| PromotionItemByQuoteTransferResourceRelationshipPlugin | Adds the `promotional-items` resource as a relationship to the carts and `guest-carts` resources. | None | Spryker\Glue\DiscountPromotionsRestApi\Plugin\GlueApplication |
+| ProductAbstractBySkuResourceRelationshipPlugin | Adds the `abstract-products` resource as a relationship to the `promotional-items` resource. | None | Spryker\Glue\ProductsRestApi\Plugin\GlueApplication |
 
 <details open>
-   <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
-
-    <?php
+<?php
 
 namespace Pyz\Glue\GlueApplication;
 
@@ -267,12 +268,9 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
-
-</br>
 </details>
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
+**src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php**
 
 ```php
 
@@ -296,11 +294,9 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
     }
 }
 ```
- <br>
 </details>
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
+**src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php**
 
 ```php
 
@@ -324,13 +320,13 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
     }
 }
 ```
- <br>
 </details>
 
 
 {% info_block warningBox "Verification" %}
-Make sure that the following endpoint is available:<ul><li>`http://glue.mysprykershop.com/product-labels/{% raw %}{{{% endraw %}idProductLabel{% raw %}}}{% endraw %}`</li></ul>
-{% endinfo_block %}
+
+Make sure that the following endpoint is available:
+- `http://glue.mysprykershop.com/product-labels/{% raw %}{{{% endraw %}idProductLabel{% raw %}}}{% endraw %}`</li></ul>
 
 **Example response:**
 
@@ -351,15 +347,16 @@ Make sure that the following endpoint is available:<ul><li>`http://glue.myspryke
     }
 }
 ```
+{% endinfo_block %}
+
 
 {% info_block warningBox "Verification" %}
 
-To verify that ProductLabelsResourceRoutePlugin is set up correctly, make sure that the following endpoint is available:
+To verify that `ProductLabelsResourceRoutePlugin` is set up correctly, make sure that the following endpoint is available:
 
 * `http://glue.mysprykershop.com/product-labels/{% raw %}{{{% endraw %}idProductLabel{% raw %}}}{% endraw %}`
 
-<details open>
-<summary markdown='span'>Example response</summary>
+**Example response**
 
 ```json
 {
@@ -378,9 +375,6 @@ To verify that ProductLabelsResourceRoutePlugin is set up correctly, make sure t
     }
 }
 ```
- <br>
-</details>
-
 
 {% endinfo_block %}
 
@@ -388,8 +382,7 @@ To verify that ProductLabelsResourceRoutePlugin is set up correctly, make sure t
 
 To check `ProductLabelsRelationshipByResourceIdPlugin` plugin installation, send a request to `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}?include=product-labels` with an SKU of a product with at least one product label assigned to it. Make sure that the response includes relationships to the product-labels resource(s).
 
-<details open>
-<summary markdown='span'>Example response</summary>
+**Example response**
 
 ```json
 {
@@ -430,7 +423,6 @@ To check `ProductLabelsRelationshipByResourceIdPlugin` plugin installation, send
     ]
 }
 ```
- <br>
 </details>
 
 
@@ -440,8 +432,7 @@ To check `ProductLabelsRelationshipByResourceIdPlugin` plugin installation, send
 
 To check `ProductLabelByProductConcreteSkuResourceRelationshipPlugin` plugin installation, send a request to `http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}?include=product-labels` with an SKU of a product with at least one product label assigned to it. Make sure that the response includes relationships to the product-labels resource(s).
 
-<details open>
-<summary markdown='span'>Example response</summary>
+**Example response**
 
 ```json
 {
@@ -482,7 +473,6 @@ To check `ProductLabelByProductConcreteSkuResourceRelationshipPlugin` plugin ins
     ]
 }
 ```
- <br>
 </details>
 
 
@@ -490,17 +480,16 @@ To check `ProductLabelByProductConcreteSkuResourceRelationshipPlugin` plugin ins
 
 {% info_block warningBox "Verification" %}
 
-To verify the CartVouchersResourceRoutePlugin and GuestCartVouchersResourceRoutePlugin plugin integration, make sure that the following endpoints are available:
+To verify the `CartVouchersResourceRoutePlugin` and `GuestCartVouchersResourceRoutePlugin` plugin integration, make sure that the following endpoints are available:
 
 * `http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/vouchers`
 * `http://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}/vouchers`
-
 
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
-To verify installation of CartRuleByQuoteResourceRelationshipPlugin and VoucherByQuoteResourceRelationshipPlugin make sure that the vouchers and cart-rules relationships are available when requesting a cart:
+To verify installation of `CartRuleByQuoteResourceRelationshipPlugin` and `VoucherByQuoteResourceRelationshipPlugin` make sure that the vouchers and cart-rules relationships are available when requesting a cart:
 
 * `http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}?include=vouchers,cart-rules`
 
@@ -598,7 +587,6 @@ To verify installation of CartRuleByQuoteResourceRelationshipPlugin and VoucherB
     ]
 }
 ```
- <br>
 </details>
 
 
@@ -704,7 +692,6 @@ Make sure that the cart-rules and vouchers relationships are also available for 
     ]
 }
 ```
- <br>
 </details>
 
 
@@ -723,8 +710,7 @@ Add items to the cart to satisfy the conditions of the discount rule:
 
 * `POST http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/items?include=promotional-items,abstract-product`
 
-<details open>
-<summary markdown='span'>Example of Request</summary>
+**Example of Request**
 
 ```json
 {
@@ -737,7 +723,6 @@ Add items to the cart to satisfy the conditions of the discount rule:
     }
 }
 ```
- <br>
 </details>
 
 Make sure that the following relations are available:
@@ -899,8 +884,7 @@ Add the selected promotional product to the cart and check the cart in the respo
 
 * `POST http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart-uuid{% raw %}}}{% endraw %}/items?include=items,cart-rules`
 
-<details open>
-<summary markdown='span'>Example of Request to Add Selected Promotional Product Into The Cart</summary>
+**Example of Request to Add Selected Promotional Product Into The Cart**
 
 ```json
 {
@@ -914,8 +898,6 @@ Add the selected promotional product to the cart and check the cart in the respo
     }
 }
 ```
- <br>
-</details>
 
 <details open>
 <summary markdown='span'>Example of Response</summary>
@@ -1023,7 +1005,6 @@ Add the selected promotional product to the cart and check the cart in the respo
     ]
 }
 ```
- <br>
 </details>
 
 {% endinfo_block %}

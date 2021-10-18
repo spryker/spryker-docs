@@ -89,8 +89,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 Make sure the following endpoints are available:
 {% endinfo_block %}
 
-* `http://example.org/category-trees`
-* `http://example.org/category-nodes/{% raw %}{{{% endraw %}category_node_id{% raw %}}}{% endraw %}`
+* `http://mysprykershop.com/category-trees`
+* `http://mysprykershop.com/category-nodes/{% raw %}{{{% endraw %}category_node_id{% raw %}}}{% endraw %}`
 
 **See also:**
 Browsing a Category Tree

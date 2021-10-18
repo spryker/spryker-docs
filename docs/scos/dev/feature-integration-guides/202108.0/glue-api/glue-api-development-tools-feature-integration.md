@@ -1,5 +1,5 @@
 ---
-title: Glue API- Development Tools feature integration
+title: Glue API - Development Tools feature integration
 description: This guide explains how to integrate the Glue- Development Tools feature into a Spryker project.
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-development-tools-feature-integration
@@ -18,9 +18,10 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION |
 |-|-|
-| Development Tools | 202009.0 |
+| Development Tools | {{page.version}} |
 
 ## 1) Install the required modules using Composer
+
 Install the required modules:
 ```bash
 composer require "spryker/documentation-generator-rest-api":"^1.12.1" --update-with-dependencies
@@ -34,10 +35,10 @@ Ensure that the following modules have been installed:
 |-|-|
 | DocumentationGeneratorRestApi | vendor/spryker/documentation-generator-rest-api |
 
-
 {% endinfo_block %}
 
 ## 2) Set up behavior
+
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
@@ -67,6 +68,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Verify that it was set up correctly:
+
 ```bash
 console rest-api:generate:documentation
 ```

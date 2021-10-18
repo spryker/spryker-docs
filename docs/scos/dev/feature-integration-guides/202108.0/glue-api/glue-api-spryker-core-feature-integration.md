@@ -21,11 +21,12 @@ To start feature integration, integrate the required features:
 
 | NAME | TYPE | VERSION |
 | --- | --- | --- |
-| Spryker Core | Feature | dev-master |
+| Spryker Core | Feature | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
+
 ```bash
 composer require spryker/glue-application:"^1.0.0" spryker/entity-tags-rest-api:"^1.0.0" spryker/stores-rest-api:"^1.0.0" spryker/urls-rest-api:"^1.0.0" spryker/security-blocker-rest-api:"^1.0.0" --update-with-dependencies
 ```
@@ -33,6 +34,7 @@ composer require spryker/glue-application:"^1.0.0" spryker/entity-tags-rest-api:
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
+
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | GlueApplication | vendor/spryker/glue-application |
@@ -46,7 +48,9 @@ Make sure that the following modules have been installed:
 ### 2) Set up configuration
 
 Add the necessary parameters to `config/Shared/config_default.php`:
+
 **config/Shared/config_default.php**
+
 ```php
 $config[GlueApplicationConstants::GLUE_APPLICATION_DOMAIN] = 'http://glue.mysprykershop.com';
 $config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = 'http://glue.mysprykershop.com';
@@ -60,7 +64,9 @@ $config[GlueApplicationConstants::GLUE_APPLICATION_REST_DEBUG] = false;
 {% endinfo_block %}
 
 Adjust `config/Shared/config_default.php`:
+
 **config/Shared/config_default.php**
+
 ```php
 $config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = 'http://glue.mysprykershop.com';
 ```
@@ -68,10 +74,13 @@ $config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = 'http://
 #### Allow CORS requests to any domain
 
 Adjust `config/Shared/config_default.php`:
+
 **config/Shared/config_default.php**
+
 ```php
 $config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = '*';
 ```
+
 {% info_block warningBox "Verification" %}
 
 To make sure that the CORS headers are set up correctly, send the OPTIONS request to any valid GLUE resource with the `Origin` header `http://glue.mysprykershop.com/` and see the correct JSON response:
@@ -84,8 +93,9 @@ To make sure that the CORS headers are set up correctly, send the OPTIONS reques
 #### Configure included section
 
 {% info_block infoBox %}
-* When the `GlueApplicationConfig::isEagerRelationshipsLoadingEnabled()` option is set to `false`, no relationship is loaded, unless they are explicitly specified in the include query parameter (e.g., `/abstract-products?include=abstract-product-prices`). 
-* When the `GlueApplicationConfig::isEagerRelationshipsLoadingEnabled()` option is set to `true`, all resource relationships is loaded by default unless you pass the empty include query parameter (e.g., `/abstract-products?include=`). If you specify needed relationships in the include query parameter, only required relationships are added to response data.
+  -  When the `GlueApplicationConfig::isEagerRelationshipsLoadingEnabled()` option is set to `false`, no relationship is loaded, unless they are explicitly specified in the include query parameter (e.g., `/abstract-products?include=abstract-product-prices`). 
+  - When the `GlueApplicationConfig::isEagerRelationshipsLoadingEnabled()` option is set to `true`, all resource relationships is loaded by default unless you pass the empty include query parameter (e.g., `/abstract-products?include=`). If you specify needed relationships in the include query parameter, only required relationships are added to response data.
+  
 {% endinfo_block %}
 
 ### 3) Set up transfer objects
@@ -96,6 +106,7 @@ console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that the following changes have occurred:
 
 | TRANSFER | TYPE | EVENT | PATH |
@@ -115,6 +126,7 @@ StoreCountryRestAttributesTransfer| class | created  | src/Generated/Shared/Tran
 | SecurityCheckAuthResponseTransfer |  class | created | src/Generated/Shared/Transfer/SecurityCheckAuthResponseTransfer.php |
 | RestAccessTokensAttributesTransfer |  class | created | src/Generated/Shared/Transfer/RestAccessTokensAttributesTransfer.php |
 | RestAgentAccessTokensRequestAttributesTransfer |  class | created | src/Generated/Shared/Transfer/RestAgentAccessTokensRequestAttributesTransfer.php |
+
 {% endinfo_block %}
     
 ### 4) Set up behavior
@@ -142,6 +154,7 @@ Activate the following plugins:
 | SecurityBlockerAgentControllerAfterActionPlugin | Counts the failed agent login attempts. |  | Spryker\Glue\SecurityBlockerRestApi\Plugin\GlueApplication |
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
+
 ```php
 <?php
   
@@ -202,7 +215,9 @@ $bootstrap
 #### Configure web server
 
 Create Nginx VHOST configuration:
+
 **/etc/nginx/sites-enabled/DE_development_glue**
+
 ```php
 server {
     # Listener for production/staging - requires external LoadBalancer directing traffic to this port
@@ -227,16 +242,16 @@ server {
 ```
 
 Update hosts configuration by adding the following line (replace **ip** with your server's IP address):
+
 **/etc/hosts**
-```
+
+```bash
 ip glue.mysprykershop.com
 ```
 
 {% info_block warningBox "Verification" %}
 
 If everything is set up correctly, you should be able to access `http://glue.mysprykershop.com` and get a correct JSON response as follows:
-
-{% endinfo_block %}
 
 **Default JSON Response**
 ```json
@@ -249,6 +264,8 @@ If everything is set up correctly, you should be able to access `http://glue.mys
     ]
 }
 ```
+{% endinfo_block %}
+
 
 <details><summary markdown='span'>\Pyz\Glue\GlueApplication\GlueApplicationDependencyProvider.php</summary>
 
@@ -325,6 +342,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 ```
 
 **\Pyz\Glue\UrlsRestApi\UrlsRestApiDependencyProvider.php**
+
 ```php
 <?php
  
@@ -374,8 +392,6 @@ use Spryker\Glue\EntityTagsRestApi\EntityTagsRestApiConfig as SprykerEntityTagsR
 }
 ```
 
-</details>
-
 {% info_block warningBox "Verification" %}
 
 If everything is set up correctly, a request to `http://glue.mysprykershop.com` with the header `[{"key":"Accept-Language","value":"de_DE, de;q=0.9"}]` should result in a response that contains the `content-language` header set to **de_DE**.
@@ -389,6 +405,7 @@ If everything is set up correctly, a request to `http://glue.mysprykershop.com` 
 Check this by sending a GET request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}`.
 
 {% endinfo_block %}
+
 {% info_block warningBox "Verification" %}
 
 Make sure the `EntityTagRestRequestValidatorPlugin` is set up correctly.
@@ -440,9 +457,8 @@ Make sure that the `http://glue.mysprykershop.com/stores` endpoint is available:
 
 To make sure the `ProductAbstractRestUrlResolverAttributesTransferProviderPlugin` plugin is set up correctly, request the abstract-products URL via the /URLs API endpoint and make sure you receive the correct resource identifier in response.
 
-{% endinfo_block %}
-
 **Request body**
+
 ```json
 http://glue.mysprykershop.com/url-resolver/?url=/product-abstract-url
 {
@@ -464,11 +480,14 @@ http://glue.mysprykershop.com/url-resolver/?url=/product-abstract-url
     }
 }
 ```
+
+{% endinfo_block %}
+
+
 {% info_block warningBox "Verification" %}
 
 To make sure `CategoryNodeRestUrlResolverAttributesTransferProviderPlugin` is set up correctly, request the category URL via the /URLs API endpoint, and ensure you receive the correct resource identifier in response.
 
-{% endinfo_block %}
 **Request body**
 ```json
 http://glue.mysprykershop.com/url-resolver/?url=/category-url
@@ -492,11 +511,13 @@ http://glue.mysprykershop.com/url-resolver/?url=/category-url
 }
 ```
 
+{% endinfo_block %}
+
+
 {% info_block warningBox "Verification" %}
 
 Make sure `SecurityBlockerCustomerControllerAfterActionPlugin` and `SecurityBlockerCustomerRestRequestValidatorPlugin` are activated correctly by attempting to get an access token (see [Authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html) with the wrong credentials as a customer. After making the number of attempts you specified in `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_NUMBER_OF_ATTEMPTS`, the account should be blocked for `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCK_FOR` seconds. Check that with the consequent login attempts, you get the `429 Too many requests` error.
 
 Repeat the same actions for the agent sign-in to check `SecurityBlockerAgentRestRequestValidatorPlugin` and `SecurityBlockerAgentControllerAfterActionPlugin`. The agent should get the blocking configuration specific for agents if you specified the agent-specific settings in step 3 of the integration of the feature core. See  [Authenticating as an agent assist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/authenticating-as-an-agent-assist.html#authenticate-as-an-agent-assist) for agent access tokens manual.
-
 
 {% endinfo_block %}

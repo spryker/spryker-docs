@@ -76,8 +76,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 <section contenteditable="false" class="warningBox"><div class="content">
     Make sure that the following endpoints are available:
 
-* `http://example.org/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/abstract-alternative-products`
-* `http://example.org/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/abstract-alternative-products`
+* `http://mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/abstract-alternative-products`
+* `http://mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/abstract-alternative-products`
 </div></section>
 
 **See also:**

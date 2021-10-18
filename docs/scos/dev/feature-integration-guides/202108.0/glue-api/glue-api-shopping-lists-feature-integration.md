@@ -1,5 +1,5 @@
 ---
-title: Glue API- Shopping lists feature integration
+title: Glue API - Shopping lists feature integration
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-shopping-lists-feature-integration
 originalArticleId: 36dac1bc-e05e-4a7e-85fa-af59e77fa7ee
@@ -18,37 +18,39 @@ related:
 The following feature integration guide expects the basic feature to be in place.
 The current feature integration guide only adds the Shopping List Rest API functionality.
 
-
 {% endinfo_block %}
 
 Follow the steps below to install Shopping List feature API.
 
 ## Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
-| Name | Version | Integration guide|
+| FEATURE | VERSION | INTEGRATION GUIDE  |
 | --- | --- |--- |
-| Spryker Core	 | 202009.0 |[Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Shopping Lists	 | 202009.0 |[Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shopping-lists-feature-integration.html) |
+| Spryker Core	 | {{page.version}} |[Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Shopping Lists	 | {{page.version}} |[Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shopping-lists-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
+
 Run the following command to install the required modules:
 
 ```bash
-omposer require spryker/shopping-lists-rest-api:"^1.0.0" --update-with-dependencies
+composer require spryker/shopping-lists-rest-api:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
 
 Make sure that the following module is installed:
-| Module | Expected Directory |
-| --- | --- |   
-| `ShoppingListsRestApi` | `vendor/spryker/shopping-lists-rest-api` |
 
- 
+| MODULE | EXPECTED DIRECTORY |
+| --- | --- |   
+| ShoppingListsRestApi | vendor/spryker/shopping-lists-rest-api |
+
 {% endinfo_block %}
 
-## 2) Set up Transfer Objects
+## 2) Set up transfer objects
+
 Run the following commands to generate the transfer changes:
 
 ```bash
@@ -61,10 +63,10 @@ console transfer:generate
 
 Make sure that the following changes have been applied by checking your database:
 
-| Database Entity | Type | Event |
+| DATABASE ENTITY | TYPE | EVENT |
 | --- | --- | --- |
-| `spy_shopping_list.uuid` | column | added |
-| `spy_shopping_list_item.uuid` | column | added |
+| spy_shopping_list.uuid | column | added |
+| spy_shopping_list_item.uuid | column | added |
 
 {% endinfo_block %}
     
@@ -72,22 +74,21 @@ Make sure that the following changes have been applied by checking your database
 {% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in transfer objects:
-| Transfer | Type | Event | Path | 
-| --- | --- | --- | --- |
-| `RestShoppingListsAttributesTransfer` | class | created | `src/Generated/Shared/Transfer/RestShoppingListsAttributesTransfer` |
-| `RestShoppingListRequestAttributesTransfer` | class | created | `src/Generated/Shared/Transfer/RestShoppingListRequestAttributesTransfer` |
-| `ShoppingListItemRequestTransfer` | class | created | `src/Generated/Shared/Transfer/ShoppingListItemRequestTransfer` |
-| `RestShoppingListItemsAttributesTransfer` | class | created | `src/Generated/Shared/Transfer/RestShoppingListItemsAttributesTransfer` |
-| `ShoppingListTransfer.uuid` | property | added | `src/Generated/Shared/Transfer/ShoppingListTransfer` |
-| `ShoppingListItemTransfer.uuid` | property | added | `src/Generated/Shared/Transfer/ShoppingListItemTransfer` |
 
+| TRANSFER | TYPE | EVENT | PATH |
+| --- | --- | --- | --- |
+| RestShoppingListsAttributesTransfer | class | created | src/Generated/Shared/Transfer/RestShoppingListsAttributesTransfer |
+| RestShoppingListRequestAttributesTransfer | class | created | src/Generated/Shared/Transfer/RestShoppingListRequestAttributesTransfer |
+| ShoppingListItemRequestTransfer | class | created | src/Generated/Shared/Transfer/ShoppingListItemRequestTransfer |
+| RestShoppingListItemsAttributesTransfer | class | created | src/Generated/Shared/Transfer/RestShoppingListItemsAttributesTransfer |
+| ShoppingListTransfer.uuid | property | added | src/Generated/Shared/Transfer/ShoppingListTransfer |
+| ShoppingListItemTransfer.uuid | property | added | src/Generated/Shared/Transfer/ShoppingListItemTransfer |
 
 {% endinfo_block %}
     
 
 
-
-## 3) Set up Behavior
+## 3) Set up behavior
 
 Set up the following behavior. 
 
@@ -103,11 +104,14 @@ console uuid:generate ShoppingList spy_shopping_list_item
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the uuid field is populated for all records in the spy_shopping_list table. To do so, run the following SQL query and make sure that the result is **0 records**. :
+Make sure that the uuid field is populated for all records in the spy_shopping_list table. To do so, run the following SQL query and make sure that the result is **0 records** :
+
 ```php
 SELECT COUNT(*) FROM spy_shopping_list WHERE uuid IS NULL;
 ```
+
 Make sure that the uuid field is populated for all records in the spy_shopping_list_item table. To do so, run the following SQL query and make sure that the result is **0 records**. 
+
 ```php
 SELECT COUNT(*) FROM spy_shopping_list_item WHERE uuid IS NULL;
 ```
@@ -115,14 +119,15 @@ SELECT COUNT(*) FROM spy_shopping_list_item WHERE uuid IS NULL;
 {% endinfo_block %}
 
 ### Enable resources
+
 {% info_block infoBox %}
 
-ShoppingListsResourcePlugin GET, POST, PATCH and DELETE, ShoppingListItemsResourcePlugin POST, PATCH and DELETE verbs are protected resources. For details, refer to the Configure section of [Glue Infrastructure documentation](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-infrastructure.html#resource-routing).
+`ShoppingListsResourcePlugin` GET, POST, PATCH and DELETE, `ShoppingListItemsResourcePlugin` POST, PATCH and DELETE verbs are protected resources. For details, refer to the Configure section of [Glue Infrastructure documentation](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-infrastructure.html#resource-routing).
 
 {% endinfo_block %}
 
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | ShoppingListsResourcePlugin | Registers the shopping-lists resource. | None | Spryker\Glue\ShoppingListsRestApi\Plugin |
 | ShoppingListItemsResourcePlugin | Registers the shopping-list-items resource. | None | Spryker\Glue\ShoppingListsRestApi\Plugin |
@@ -179,9 +184,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
         return $resourceRelationshipCollection;
     }
 }
-
 ```
-<br>
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -194,7 +197,7 @@ Check the response:
 <details open>
 <summary markdown='span'>GET http://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}?include=shopping-list-items,concrete-products</summary>
    
-```
+```json
 {
     "data": [
         {
@@ -289,9 +292,7 @@ Check the response:
     ]
 }
 ```
- <br>
 </details>
-
 
 {% endinfo_block %}
 
@@ -301,10 +302,10 @@ To verify that the `ShoppingListItemsResourcePlugin` is set up correctly, make s
 * http://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}/shopping-list-items
 
 Post a request with the following body:
-<details open>
-<summary markdown='span'>Body request</summary>
+
+**Body request**
    
-```
+```json
 {
     "data": {
         "type": "shopping-list-items",
@@ -315,14 +316,12 @@ Post a request with the following body:
     }
 }
 ```
- <br>
-</details>
 
 Check the response:
-<details open>
-<summary markdown='span'>POST http://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}/shopping-list-items</summary>
+
+**POST http://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}/shopping-list-items**
    
-```
+```json
 {
     "data": {
         "type": "shopping-list-items",
@@ -337,7 +336,4 @@ Check the response:
     }
 }
 ```
- <br>
-</details>
-
 {% endinfo_block %}

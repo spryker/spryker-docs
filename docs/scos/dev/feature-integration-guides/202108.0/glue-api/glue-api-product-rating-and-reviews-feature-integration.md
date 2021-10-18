@@ -1,5 +1,5 @@
 ---
-title: Glue API- Product rating & reviews feature integration
+title: Glue API - Product rating & reviews feature integration
 description: This guide contains step-by-step instructions on integrating Product Rating & Reviews API feature into a Spryker-based project.
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-product-rating-reviews-feature-integration
@@ -12,16 +12,20 @@ redirect_from:
 ---
 
 ## Install Feature API
+
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
-| Name | Version | Integration guide |
+| NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Feature API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
 | Product Rating & Reviews  | {{page.version}} |  |
 
 ### 1) Install the required modules using Composer
+
 Run the following command to install the required modules:
+
 ```bash
 composer require spryker/product-reviews-rest-api:"^1.0.0" --update-with-dependencies
 ```
@@ -29,13 +33,16 @@ composer require spryker/product-reviews-rest-api:"^1.0.0" --update-with-depende
 
 Make sure that the following module was installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-| `ProductReviewsRestApi` | `vendor/spryker/product-reviews-rest-api` |
+| ProductReviewsRestApi | vendor/spryker/product-reviews-rest-api |
 
 {% endinfo_block %}
-### 2) Set up Database Schema and Transfer Objects
+
+### 2) Set up database schema and transfer objects
+
 Run the following command to generate transfer changes:
+
 ```bash
 console transfer:generate
 console propel:install
@@ -45,25 +52,30 @@ console transfer:generate
 
 Make sure that the following changes have been applied in the transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
-| `RestProductReviewsAttributesTransfer` | class | created |`src/Generated/Shared/Transfer/RestProductReviewsAttributesTransfer` |
-| `BulkProductReviewSearchRequestTransfer` | class | created |`src/Generated/Shared/Transfer/BulkProductReviewSearchRequestTransfer`|
+| RestProductReviewsAttributesTransfer | class | created |src/Generated/Shared/Transfer/RestProductReviewsAttributesTransfer |
+| BulkProductReviewSearchRequestTransfer | class | created |src/Generated/Shared/Transfer/BulkProductReviewSearchRequestTransfer|
 
 {% endinfo_block %}
+
 {% info_block warningBox "Verification" %}
 
-Make sure that SpyProductAbstractStorage and SpyProductConcreteStorage are extended by synchronization behavior with these methods:
+Make sure that `SpyProductAbstractStorage` and `SpyProductConcreteStorage` are extended by synchronization behavior with these methods:
 
-| Entity | Type | Event | Path | Methods |
+| ENTITY | TYPE | EVENT | PATH | METHODS |
 | --- | --- | --- | --- | --- |
-| `SpyProductAbstractStorage` | class | extended |`src/Orm/Zed/ProductStorage/Persistence/Base/SpyProductAbstractStorage` | `syncPublishedMessageForMappings()`, `syncUnpublishedMessageForMappings()` |
-| `SpyProductConcreteStorage` | class | extended | `src/Orm/Zed/ProductStorage/Persistence/Base/SpyProductConcreteStorage` | `syncPublishedMessageForMappings()`, `yncUnpublishedMessageForMappings()` |
+| SpyProductAbstractStorage | class | extended |src/Orm/Zed/ProductStorage/Persistence/Base/SpyProductAbstractStorage | syncPublishedMessageForMappings(), syncUnpublishedMessageForMappings() |
+| SpyProductConcreteStorage | class | extended | src/Orm/Zed/ProductStorage/Persistence/Base/SpyProductConcreteStorage | syncPublishedMessageForMappings(), yncUnpublishedMessageForMappings() |
 
 {% endinfo_block %}
-### 3) Set up Behavior
-#### Reload Data to Storage
+
+### 3) Set up behavior
+
+#### Reload data to storage
+
 Run the following commands to reload abstract and product data to storage.
+
 ```bash
 console event:trigger -r product_abstract
 console event:trigger -r product_concrete
@@ -76,14 +88,15 @@ Make sure that there is data in Redis with keys:
 `kv:product_concrete:{% raw %}{{{% endraw %}locale_name{% raw %}}}{% endraw %}:sku:{% raw %}{{{% endraw %}sku_product_concrete{% raw %}}}{% endraw %}`
 
 {% endinfo_block %}
-#### Enable Resources
+
+#### Enable resources
 Activate the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `AbstractProductsProductReviewsResourceRoutePlugin` | Registers the product-reviews resource. | None | `Spryker\Glue\ProductReviewsRestApi\Plugin\GlueApplication` |
+| AbstractProductsProductReviewsResourceRoutePlugin | Registers the product-reviews resource. | None | Spryker\Glue\ProductReviewsRestApi\Plugin\GlueApplication |
 
-src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php
+**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
 ```php
 <?php
@@ -191,22 +204,21 @@ Make sure that the following endpoint is available:
     }
 }
 ```
-<br>
 </details>
 
 {% endinfo_block %}
 
-#### Enable Relationships
+#### Enable relationships
 Activate the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `ProductReviewsRelationshipByProductAbstractSkuPlugin` | Adds product-reviews relationship by abstract product sku. | None |`\Spryker\Glue\ProductReviewsRestApi\Plugin\GlueApplication` |
-| `ProductReviewsRelationshipByProductConcreteSkuPlugin` | Adds product-reviews relationship by concrete product sku. | None | `\Spryker\Glue\ProductReviewsRestApi\Plugin\GlueApplication` |
-| `ProductReviewsAbstractProductsResourceExpanderPlugin` | Expands abstract-products resource with reviews data. | None | `Spryker\Glue\ProductReviewsRestApi\Plugin\ProductsRestApi` |
-| `ProductReviewsConcreteProductsResourceExpanderPlugin` | Expands concrete-products resource with reviews data. | None | `Spryker\Glue\ProductReviewsRestApi\Plugin\ProductsRestApi` |
+| ProductReviewsRelationshipByProductAbstractSkuPlugin | Adds product-reviews relationship by abstract product sku. | None |\Spryker\Glue\ProductReviewsRestApi\Plugin\GlueApplication |
+| ProductReviewsRelationshipByProductConcreteSkuPlugin | Adds product-reviews relationship by concrete product sku. | None | \Spryker\Glue\ProductReviewsRestApi\Plugin\GlueApplication |
+| ProductReviewsAbstractProductsResourceExpanderPlugin | Expands abstract-products resource with reviews data. | None | Spryker\Glue\ProductReviewsRestApi\Plugin\ProductsRestApi |
+| ProductReviewsConcreteProductsResourceExpanderPlugin | Expands concrete-products resource with reviews data. | None | Spryker\Glue\ProductReviewsRestApi\Plugin\ProductsRestApi |
 
-src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php
+**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
 ```php
 <?php
@@ -243,7 +255,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-src/Pyz/Glue/ProductsRestApi/ProductsRestApiDependencyProvider.php
+**src/Pyz/Glue/ProductsRestApi/ProductsRestApiDependencyProvider.php**
 
 ```php
 <?php
@@ -433,7 +445,6 @@ Make sure that `averageRating` and `reviewCount` attributes are present in concr
     ]
 }
 ```
-<br>
 </details>
 
 {% endinfo_block %}
@@ -584,7 +595,6 @@ Make sure that the response contains product-reviews as a relationship and produ
     ]
 }
 ```
-<br>
 </details>
 
 {% endinfo_block %}

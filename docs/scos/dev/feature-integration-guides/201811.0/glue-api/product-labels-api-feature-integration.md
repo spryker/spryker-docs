@@ -108,10 +108,10 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 </details>
 
 {% info_block infoBox %}
-Make sure the following endpoint is available: `http://example.org/product-labels/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}`
+Make sure the following endpoint is available: `http://mysprykershop.com/product-labels/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}`
 {% endinfo_block %}
 {% info_block infoBox %}
-Make a request to `http://example.org/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}?include=product-labels`. An abstract product with the given SKU should have at least one assigned product label. Make sure the response includes relationships to the `product-labels` resources.
+Make a request to `http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}?include=product-labels`. An abstract product with the given SKU should have at least one assigned product label. Make sure the response includes relationships to the `product-labels` resources.
 {% endinfo_block %}
 
 <!-- Last review date: Feb 22, 2019 -->

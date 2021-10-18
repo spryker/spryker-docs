@@ -39,7 +39,7 @@ The page is there! You can see the page [here](https://mysprykershop.com/de/cont
 2. Add a placeholder and call it `MyPlaceholder`. You can open some other templates to see how it’s done.
 3. Go back to the CMS Pages(`https://zed.mysprykershop.com/cms-gui/list-page`) backend and edit your page, then change the template to use `contact`.
 4. Add a new text to the placeholder `MyPlaceholder`.
-Go back to the [page](`https://mysprykershop.com`/de/contact`) and have a look at the changes.
+Go back to the [page](https://mysprykershop.com/de/contact) and have a look at the changes.
 
 ## References
 

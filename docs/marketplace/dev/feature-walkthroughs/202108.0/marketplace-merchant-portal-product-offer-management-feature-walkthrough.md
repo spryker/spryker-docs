@@ -4,7 +4,7 @@ description: This article provides reference information about product offers in
 template: concept-topic-template
 ---
 
-The *Marketplace Merchant Portal Product Offer Management* feature allows merchants to manage product offers in the Merchant portal.
+The *Marketplace Merchant Portal Product Offer Management* feature allows merchants to manage product offers and its prices, stock, validity dates in the Merchant portal.
 
 {% info_block warningBox "User documentation" %}
 
@@ -19,6 +19,14 @@ To learn more about the feature and to find out how end users use it, see [Marke
 | NAME | DESCRIPTION | 
 | --- | --- |
 | [ProductOfferMerchantPortalGui](https://github.com/spryker/product-offer-merchant-portal-gui) | Provides UI for merchant product offers management. |
+| [DashboardMerchantPortalGuiExtension](https://github.com/spryker/dashboard-merchant-portal-gui-extension) | Provides extension interfaces for DashboardMerchantPortalGui module. |
+| [SalesMerchantPortalGuiExtension](https://github.com/spryker/sales-merchant-portal-gui-extension) | Provides extension interfaces for SalesMerchantPortalGui module. |
+| [MerchantProductOffer](https://github.com/spryker/merchant-product-offer) | Provides ability for working with merchant product offer. |
+| [ProductOffer](https://github.com/spryker/product-offer) | Provides the core functionality for product offer features. |
+| [ProductOfferStock](https://github.com/spryker/product-offer-stock) | Provides product offers stock functionality. |
+| [ProductOfferValidity](https://github.com/spryker/product-offer-validity) | Provides validity dates for product offers. Based on the validity dates product offers will be triggered as active/inactive. |
+| [PriceProductOffer](https://github.com/spryker/price-product-offer) | Provides product offer price related functionality, price type, store relation and currency/price mode. |
+| [PriceProductOfferVolume](https://github.com/spryker/price-product-offer-volume) | Provides functionality to handle volume prices for product offers. |
 
 ## Related Developer articles
 

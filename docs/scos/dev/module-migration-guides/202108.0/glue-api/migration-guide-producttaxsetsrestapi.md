@@ -11,6 +11,7 @@ redirect_from:
 ---
 
 ## Upgrading from Version 1.* to Version 2.*
+
 ProductTaxSetsRestApi version 2 introduces performance improvements that allow getting tax set data from the Redis storage instead of multiple Zed calls.
 
 These improvements do not change the request and response format.
@@ -27,13 +28,13 @@ RabbitMqConfig.php
 
 ```php
 <?php
-  
+
 namespace Pyz\Client\RabbitMq;
- 
+
 use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
 use Spryker\Shared\TaxProductStorage\TaxProductStorageConfig;
 use Spryker\Shared\TaxStorage\TaxStorageConfig;
- 
+
 class RabbitMqConfig extends SprykerRabbitMqConfig
 {
 	/**
@@ -57,13 +58,13 @@ GlueApplicationDependencyProvider.php
 
 ```php
 <?php
-  
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\ProductTaxSetsRestApi\Plugin\GlueApplication\ProductTaxSetByProductAbstractSkuResourceRelationshipPlugin;
 use Spryker\Glue\ProductTaxSetsRestApi\Plugin\GlueApplication\ProductTaxSetsResourceRoutePlugin;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
 	/**
@@ -90,11 +91,11 @@ TaxWriterStep.php
 
 ```php
 <?php
-  
+
  use Spryker\Zed\DataImport\Business\Model\DataImportStep\PublishAwareStep;
  use Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface;
  use Spryker\Zed\Tax\Dependency\TaxEvents;
- 
+
  class TaxWriterStep extends PublishAwareStep implements DataImportStepInterface
  {
     public const BULK_SIZE = 100;
@@ -115,13 +116,13 @@ EventDependencyProvider.php
 
 ```php
 <?php
-  
+
  namespace Pyz\Zed\Event;
- 
+
  use Spryker\Zed\Event\EventDependencyProvider as SprykerEventDependencyProvider;
  use Spryker\Zed\TaxProductStorage\Communication\Plugin\Event\Subscriber\TaxProductStorageSubscriber;
  use Spryker\Zed\TaxStorage\Communication\Plugin\Event\Subscriber\TaxStorageSubscriber;
- 
+
  class EventDependencyProvider extends SprykerEventDependencyProvider
  {
     /**
@@ -145,13 +146,13 @@ QueueDependencyProvider.php
 
 ```php
 <?php
-  
+
  namespace Pyz\Zed\Event;
- 
+
  use Spryker\Zed\Queue\QueueDependencyProvider as SprykerDependencyProvider;
  use Spryker\Shared\TaxProductStorage\TaxProductStorageConfig;
  use Spryker\Shared\TaxStorage\TaxStorageConfig;
- 
+
  class QueueDependencyProvider extends SprykerDependencyProvider
  {
     /**
@@ -178,13 +179,13 @@ QueueDependencyProvider.php
 
 ```php
 <?php
-  
+
  namespace Pyz\Zed\Event;
- 
+
  use Spryker\Zed\Queue\QueueDependencyProvider as SprykerDependencyProvider;
  use Spryker\Shared\TaxProductStorage\TaxProductStorageConfig;
  use Spryker\Shared\TaxStorage\TaxStorageConfig;
- 
+
  class QueueDependencyProvider extends SprykerDependencyProvider
  {
     /**
@@ -211,13 +212,13 @@ SynchronizationDependencyProvider.php
 
 ```php
 <?php
-  
+
  namespace Pyz\Zed\Event;
- 
+
  use Spryker\Zed\Queue\QueueDependencyProvider as SprykerDependencyProvider;
  use Spryker\Zed\TaxProductStorage\Communication\Plugin\Synchronization\TaxProductSynchronizationDataPlugin;
  use Spryker\Zed\TaxStorage\Communication\Plugin\Synchronization\TaxSynchronizationDataPlugin;
- 
+
  class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
  {
     /**

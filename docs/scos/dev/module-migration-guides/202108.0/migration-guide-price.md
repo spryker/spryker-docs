@@ -15,6 +15,7 @@ related:
 ---
 
 ## Upgrading from Version 4.* to Version 5.*
+
 From version 5 we have changed price module responsibilities: previously it was responsible for handling product price related functionality. This responsibility has now been moved to the new PriceProduct module which handles product prices, while Price module is responsible for generic spryker core related functionality.
 
 Due to this change of the Price module responsibility, all related modules have also be updated to work with the `PriceProduct` module.
@@ -233,4 +234,3 @@ class ProductAbstractCollector extends AbstractStoragePdoCollector
      }
 }
 ```
-

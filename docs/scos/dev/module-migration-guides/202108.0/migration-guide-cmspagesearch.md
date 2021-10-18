@@ -11,11 +11,13 @@ redirect_from:
 ---
 
 ## Upgrading from Version 2.1.* to Version 2.2.*
+
 {% info_block errorBox "Prerequisites" %}
 
-This migration guide is a part of the [Search migration effort](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-search.html#upgrading-from-version-8-9---to-version-8-10--). 
+This migration guide is a part of the [Search migration effort](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-search.html#upgrading-from-version-89-to-version-810).
 
 {% endinfo_block %}
+
 To upgrade the module, do the following:
 1. Update the module with composer:
 ```bash
@@ -31,7 +33,7 @@ Spryker\Client\Search\Plugin\Elasticsearch\QueryExpander\StoreQueryExpanderPlugi
 3. Enable the replacement plugins:
 
 Pyz\Client\CmsPageSearch
-   
+
 ```php
 <?php
 
@@ -47,7 +49,7 @@ use Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\StoreQueryExpanderPl
 class CmsPageSearchDependencyProvider extends SprykerCmsPageSearchDependencyProvider
 {
     ...
-    
+
     /**
      * @return \Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface[]
      */
@@ -82,6 +84,7 @@ class CmsPageSearchDependencyProvider extends SprykerCmsPageSearchDependencyProv
 Spryker\Zed\CmsPageSearch\Communication\Plugin\Search\CmsDataPageMapBuilder
 ```
 ## Upgrading from Version 1.* to Version 2.*
+
 Version 2.0.0 of the CmsPageSearch module introduces the [multi-store functionality](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
 
 To avoid the BC break, a synchronization behavior must be removed.
@@ -90,9 +93,13 @@ To avoid the BC break, a synchronization behavior must be removed.
 1. Update `cms-page-search` to `^2.0.0` with the command: `composer update spryker/cms-page-search:^2.0.0`
 2. Remove `queue_pool=synchronizationPool` behavior from the `spy_cms_page_search` table.
 `src/Pyz/Zed/CmsPageSearch/Persistence/Propel/Schema/spy_cms_page_search.schema.xml<behavior name="synchronization"><parameter name="queue_pool" value="synchronizationPool" /></behavior>`
+
 {% info_block infoBox %}
+
 When completed, the above synchronization parameter should not be in the file.
+
 {% endinfo_block %}
+
 3. Apply the database changes:
 `$ console propel:install`
 4. Generate new transfers:

@@ -139,7 +139,6 @@ Once a return has been created, it acquires the *Waiting for return* state. You 
 | close | You can trigger this state after the *Delivered* state. Select this state to close the return. The return status is changed to *Closed*. |
 
 ## Printing a return slip
-
 For all returns, irrespective of their statuses, you can print the automatically generated [return slip](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html#return-slip).
 
 To print the return slip:

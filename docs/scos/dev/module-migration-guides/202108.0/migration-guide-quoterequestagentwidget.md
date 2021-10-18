@@ -11,6 +11,7 @@ redirect_from:
 ---
 
 ## Upgrading from Version 1.x.x to Version 2.x.x
+
 The only major change of `QuoteRequestAgentWidget` 2.x.x is the dependency update for `spryker/quote-request-agent:^2.0.0`.
 
 **To migrate, do the following:**

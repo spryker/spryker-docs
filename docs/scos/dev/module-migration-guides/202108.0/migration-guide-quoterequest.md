@@ -11,6 +11,7 @@ redirect_from:
 ---
 
 ## Upgrading from Version 1.x.x to Version 2.x.x
+
 `QuoteRequest` module version 2.0.0 brings one major change - column `is_latest_version_hidden` has been replaced by `is_latest_version_visible` column in the `spy_quote_request` database table.
 
 Its main purpose is to make the parameter name more intuitive for the end user.
@@ -25,17 +26,21 @@ composer require spryker/quote-request: "^2.0.0" --update-with-dependencies
 
 ```sql
 BEGIN;
- 
+
 ALTER TABLE spy_quote_request ADD COLUMN is_latest_version_visible boolean default true;
- 
+
 UPDATE spy_quote_request SET is_latest_version_visible = NOT is_latest_version_hidden;
- 
+
 ALTER TABLE spy_quote_request DROP COLUMN is_latest_version_hidden;
- 
+
 COMMIT;
 ```
 
-{% info_block warningBox "Make sure that the `spy_quote_request` table now has a new column `is_latest_version_visible`.)
+{% info_block warningBox %}
+
+Make sure that the `spy_quote_request` table now has a new column `is_latest_version_visible`.
+
+{% endinfo_block %}
 
 3. Rebuild Propel models:
 

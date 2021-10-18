@@ -11,6 +11,7 @@ redirect_from:
 ---
 
 ## Upgrading from Version 1.* to Version 2.*
+
 From version 2 we have removed the disabled users from the shared list. The ability to enable/disable users was added to the `CompanyUser` module, version 2.0.0.
 
 **To upgrade to the new version of the module, do the following:**
@@ -27,4 +28,4 @@ vendor/bin/console transfer:generate
 
 *Estimated migration time: 10 minutes*
  
-<!-- Last review date: Feb 4, 2019* -by Sergey Samoylov, Yuliia Boiko--> 
+<!-- Last review date: Feb 4, 2019* -by Sergey Samoylov, Yuliia Boiko-->

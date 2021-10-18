@@ -15,6 +15,7 @@ related:
 ---
 
 ## Upgrading from Version 1.* to Version 2.0.0
+
 The main point of the `MerchantRelationshipProductListGui` v2.0.0 is the following: exclusive ownership for product lists was removed from the merchant relations.
 
 So, `MerchantRelationshipProductListGui` currently provides plugins to extend the `ProductListGui` module with information about domain entities that use Product Lists (Merchant Relationships).
@@ -35,7 +36,7 @@ Here is the change list for the `MerchantRelationshipProductListGui` v2.0.0:
 composer require spryker/merchant-relationship-product-list-gui:"^2.0.0" --update-with-dependencies
 ```
 2. Update transfer objects:
-```bash 
+```bash
 console transfer:generate
 ```
 3. Generate translator cache by running the following command to get the latest Zed translations:

@@ -11,6 +11,7 @@ redirect_from:
 ---
 
 ## Upgrading from Version 1.* to Version 2.*
+
 Version 2.0.0 of the ContentGui module introduces the [Content Items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html) functionality that allows creating and managing content and later selecting where it should be inserted.
 
 With the ContentBanner version 2.0, the following changes have been made:

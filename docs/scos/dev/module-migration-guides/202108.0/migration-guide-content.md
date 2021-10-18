@@ -11,6 +11,7 @@ redirect_from:
 ---
 
 ## Upgrading from Version 1.* to Version 2.*
+
 The Content module version 2.0.0 implemented the following improvements:
 
 * Introduced the `spy_content.key` field to store the identifier for entities.
@@ -43,7 +44,7 @@ console propel:install
 **If you need to update existing content items in the Database, please follow these steps:**
 1. In `src/Pyz/Zed/Content/Persistence/Propel/Schema/spy_content.schema.xml`, update the key column's property "required" to false for the data migration on the project level:
 
-src/Pyz/Zed/Content/Persistence/Propel/Schema/spy_content.schema.xml
+**src/Pyz/Zed/Content/Persistence/Propel/Schema/spy_content.schema.xml**
 
 ```xml
 <?xml version="1.0"?>
@@ -51,11 +52,11 @@ src/Pyz/Zed/Content/Persistence/Propel/Schema/spy_content.schema.xml
 			xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd"
 			namespace="Orm\Zed\Content\Persistence"
 			package="src.Orm.Zed.Content.Persistence">
- 
+
 	<table name="spy_content" phpName="SpyContent">
 		<column name="key" required="false" type="VARCHAR" size="255" description="Identifier for existing entities. It should never be changed."/>
 	</table>
- 
+
 </database>
 ```
 
@@ -66,17 +67,17 @@ console propel:install
 ```
 
 3. Create a new command in `src/Pyz/Zed/Content/Communication/Console/ContentItemKeyGeneratorConsoleCommand.php`.
-				
+
 ```php                
 <?php
- 
+
 /**
 * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
 * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
 */
- 
+
 namespace Pyz\Zed\Content\Communication\Console;
- 
+
 use Orm\Zed\Content\Persistence\Map\SpyContentTableMap;
 use Orm\Zed\Content\Persistence\SpyContentQuery;
 use Propel\Runtime\Collection\ObjectCollection;
@@ -91,41 +92,41 @@ use Spryker\Zed\Content\Persistence\ContentRepositoryInterface;
 use Spryker\Zed\Kernel\Communication\Console\Console;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
- 
+
 class ContentItemKeyGeneratorConsoleCommand extends Console
 {
 	protected const COMMAND_NAME = 'content-items:generate-keys';
 	protected const LIMIT_CONTENT_ITEMS = 1000;
- 
+
 	protected function configure(): void
 	{
 		$this->setName(static::COMMAND_NAME);
 		$this->setDescription('Content item key generator');
 	}
- 
+
 	protected function execute(InputInterface $input, OutputInterface $output)
 	{
 		$offset = 0;
 		$contentItems = $this->findContentItems($i);
- 
+
 		while($contentItems->count()) {
- 
+
 			foreach ($contentItems as $contentItem) {
 				$contentItem->setKey(
 					$this->createContentKeyProvider()->generateContentKey()
 				);
 			}
- 
+
 			$contentItems->save();
 			$offset += static::LIMIT_CONTENT_ITEMS;
 			$contentItems = $this->findContentItems($offset);
 		}
 	}
- 
+
 	protected function findContentItems($offset): array
 	{
 		$clause = SpyContentTableMap::COL_KEY . " = '' OR " . SpyContentTableMap::COL_KEY . " IS NULL";
- 
+
 		return (new SpyContentQuery())
 			->where($clause)
 			->offset($offset)
@@ -133,7 +134,7 @@ class ContentItemKeyGeneratorConsoleCommand extends Console
 			->orderByIdContent()
 			->find();
 	}
- 
+
 	protected function createContentKeyProvider(): ContentKeyProviderInterface
 	{
 		return new ContentKeyProvider(
@@ -141,17 +142,17 @@ class ContentItemKeyGeneratorConsoleCommand extends Console
 			$this->createContentRepository()
 		);
 	}
- 
+
 	protected function createUtilUuidGeneratorServiceBridge(): ContentToUtilUuidGeneratorServiceInterface
 	{
 		return new ContentToUtilUuidGeneratorServiceBridge($this->createUtilUuidGeneratorService());
 	}
- 
+
 	protected function createUtilUuidGeneratorService(): UtilUuidGeneratorServiceInterface
 	{
 		return new UtilUuidGeneratorService();
 	}
- 
+
 	protected function createContentRepository(): ContentRepositoryInterface
 	{
 		return new ContentRepository();
@@ -160,19 +161,19 @@ class ContentItemKeyGeneratorConsoleCommand extends Console
 ```				
 
 4. Add the newly created command to `src/Pyz/Zed/Console/ConsoleDependencyProvider.php`:
-					
+
 ```php                    
 <?php
- 
+
 /**
 * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
 * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
 */
- 
+
 namespace Pyz\Zed\Console;
- 
+
 use Pyz\Zed\Content\Communication\Console\ContentItemKeyGeneratorConsoleCommand;
- 
+
 class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {
 	/**
@@ -197,8 +198,8 @@ console content-items:generate-keys
 
 6. Revert the previous changes to the `spy_content.schema.xml` file:
 (restore the required value of key to true):
-				
-src/Pyz/Zed/Content/Persistence/Propel/Schema/spy_content.schema.xml
+
+**src/Pyz/Zed/Content/Persistence/Propel/Schema/spy_content.schema.xml**
 
 ```xml
 <?xml version="1.0"?>
@@ -206,11 +207,11 @@ src/Pyz/Zed/Content/Persistence/Propel/Schema/spy_content.schema.xml
           xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd"
           namespace="Orm\Zed\Content\Persistence"
           package="src.Orm.Zed.Content.Persistence">
- 
+
     <table name="spy_content" phpName="SpyContent">
         <column name="key" required="true" type="VARCHAR" size="255" description="Identifier for existing entities. It should never be changed."/>
     </table>
- 
+
 </database>
 ```
 

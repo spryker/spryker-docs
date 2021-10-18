@@ -15,4 +15,5 @@ related:
 ---
 
 ## Upgrading from Version 2.* to Version 3.*
+
 The tax plugins are using the version 3.* of the Tax module. You need to upgrade the [Tax](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-tax.html) module.

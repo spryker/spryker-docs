@@ -14,6 +14,7 @@ This document describes how to upgrade the `CategoryPageSearch` module.
 
 
 ## Upgrading from version 1.* to 2.*
+
 _Estimated migration time: 1 hour._ 
 
 This section describes how to upgrade the `CategoryPageSearch` from version `1.*` to `2.*`.
@@ -31,23 +32,23 @@ composer require spryker/product-category-search
 composer require spryker/category-page-search:"^2.0.0" --update-with-dependencies
 ```    
 3.  From the `spy_category_node_page_search` table on the project level in `Pyz/Zed/CategoryPageSearch/Persistence/Propel/Schema/spy_category_page_search.schema.xml`, remove the synchronization behavior setup.
-    
+
 4.  Update the database schema and the generated classes:
 ```bash    
 console propel:install
 console transfer:generate
 ```    
 5.  In the `CategoryPageSearch` module, replace the deprecated plugins:
-    
-    *   `ProductCategoryPageDataLoaderExpanderPlugin`
-        
-    *   `CategoryPageDataLoaderPlugin`
-        
-    *   `ProductCategoryMapExpanderPlugin`
+
+* `ProductCategoryPageDataLoaderExpanderPlugin`
+
+* `CategoryPageDataLoaderPlugin`
+
+* `ProductCategoryMapExpanderPlugin`
 
 <details open>
         <summary>Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider</summary>
-        
+
 ```php        
 <?php
 
@@ -71,7 +72,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 
         return $dataExpanderPlugins;
     }
-    
+
     /**
      * @return \Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductAbstractMapExpanderPluginInterface[]
      */
@@ -81,7 +82,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
             new ProductCategoryMapExpanderPlugin(),
         ];
     }
-    
+
     /**
      * @return \Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductPageDataLoaderPluginInterface[]
      */
@@ -97,14 +98,14 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 </details>   
 
 6.  From `Pyz\Zed\Event\EventDependencyProvider`, remove the deprecated subscriber: `CategoryPageSearchEventSubscriber`.
-    
+
 7.  From `Pyz\EventBehavior\EventBehaviorDependencyProvider`, remove the deprecated plugin: `CategoryPageEventResourceQueryContainerPlugin`.
-    
+
 8.  Add the new plugins:
 
 <details open>
         <summary>Pyz\Zed\Publisher\PublisherDependencyProvider</summary>
-        
+
 ```php    
 <?php
 
@@ -153,7 +154,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             new CategoryPageSearchCategoryTemplateWritePublisherPlugin(),
         ];
     }
-    
+
     /**
      * @return \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherTriggerPluginInterface[]
      */
@@ -169,7 +170,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 </details>
 
 9.  From `Pyz\Zed\Synchronization\SynchronizationDependencyProvider`, remove the deprecated plugin:`CategoryPageSynchronizationDataPlugin`.
-    
+
 10.  Add the new synchronization plugin to `Pyz\Zed\Synchronization\SynchronizationDependencyProvider`:
 ```php    
 <?php
@@ -209,7 +210,7 @@ console publish:trigger-events -r category_node
 ```bash
 console sync:data category_node
 ```
-    
+
 {% info_block warningBox "Verification" %}
 
 Ensure that the data in the `spy_category_node_page_search` database table is divided by stores.
@@ -217,16 +218,20 @@ Ensure that the data in the `spy_category_node_page_search` database table is di
 {% endinfo_block %}
 
 ## Upgrading from Version 1.4.* to Version 1.5.*
+
 {% info_block errorBox "Prerequisites" %}
 
-This migration guide is a part of the [Search migration effort](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-search.html#upgrading-from-version-8-9---to-version-8-10--). 
+This migration guide is a part of the [Search migration effort](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-search.html#upgrading-from-version-89-to-version-810).
 
 {% endinfo_block %}
+
 To upgrade the module, do the following:
+
 1. Update the modules with composer:
 ```Bash
 composer update spryker/category-page-search
 ```
+
 2. Remove deprecated plugin usages listed below (in case it is used) from `Pyz\Zed\Search\SearchDependencyProvider`:
 ```Bash
 Spryker\Zed\CategoryPageSearch\Communication\Plugin\Search\CategoryNodeDataPageMapBuilder

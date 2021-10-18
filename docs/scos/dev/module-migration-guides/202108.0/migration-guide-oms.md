@@ -16,7 +16,9 @@ redirect_from:
 In this new version of the **OMS** module, we have added support of decimal stock. You can find more details about the changes on the OMS module release page.
 
 {% info_block errorBox %}
+
 This release is a part of the Decimal Stock concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Decimal Stock Migration Concept](/docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html).
+
 {% endinfo_block %}
 
 **To upgrade to the new version of the module, do the following:**
@@ -42,8 +44,11 @@ console transfer:generate
 *Estimated migration time: 5 min*
 
 ## Upgrading from Version 8.* to Version 10.0.0
+
 {% info_block infoBox %}
+
 In order to dismantle the Horizontal Barrier and enable partial module updates on projects, a Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Please [contact us](https://spryker.com/en/support/) if you have any questions.
+
 {% endinfo_block %}
 
 ## Upgrading from Version 7.* to Version 8.*
@@ -53,9 +58,13 @@ With the new OMS version, detail lock logging has been introduced and execution 
 **To successfully migrate to the new OMS version, perform the following steps:**
 1. Migrate the database:
 * `vendor/bin/console propel:diff`
+
 {% info_block warningBox "Note" %}
+
 Manual review is necessary for the generated migration file.
+
 {% endinfo_block %}
+
 * `vendor/bin/console propel:migrate`;    
 * `vendor/bin/console propel:model:build`;
 
@@ -87,57 +96,57 @@ In the **OMS** module version 8, we have also added support for stock reservatio
 Run the database migrations:
 
 **Code sample:**
-    
+
 ```sql
-ALTER TABLE "spy_oms_product_reservation" 
-  ADD "fk_store" INTEGER; 
+ALTER TABLE "spy_oms_product_reservation"
+  ADD "fk_store" INTEGER;
 
-ALTER TABLE "spy_oms_product_reservation" 
-  ADD CONSTRAINT "spy_oms_product_reservation-fk_store" FOREIGN KEY ("fk_store") 
-  REFERENCES "spy_store" ("id_store"); 
+ALTER TABLE "spy_oms_product_reservation"
+  ADD CONSTRAINT "spy_oms_product_reservation-fk_store" FOREIGN KEY ("fk_store")
+  REFERENCES "spy_store" ("id_store");
 
-CREATE SEQUENCE "spy_oms_product_reservation_store_pk_seq"; 
+CREATE SEQUENCE "spy_oms_product_reservation_store_pk_seq";
 
-CREATE TABLE "spy_oms_product_reservation_store" 
-  ( 
-     "id_oms_product_reservation_store" INTEGER NOT NULL, 
-     "store"                            VARCHAR(255) NOT NULL, 
-     "sku"                              VARCHAR(255) NOT NULL, 
-     "reservation_quantity"             INTEGER NOT NULL, 
-     "version"                          INT8 NOT NULL, 
-     "created_at"                       TIMESTAMP, 
-     "updated_at"                       TIMESTAMP, 
-     PRIMARY KEY ("id_oms_product_reservation_store"), 
-     CONSTRAINT "spy_oms_product_reservation_store-unique-store-sku" UNIQUE ( 
-     "store", "sku") 
-  ); 
+CREATE TABLE "spy_oms_product_reservation_store"
+  (
+     "id_oms_product_reservation_store" INTEGER NOT NULL,
+     "store"                            VARCHAR(255) NOT NULL,
+     "sku"                              VARCHAR(255) NOT NULL,
+     "reservation_quantity"             INTEGER NOT NULL,
+     "version"                          INT8 NOT NULL,
+     "created_at"                       TIMESTAMP,
+     "updated_at"                       TIMESTAMP,
+     PRIMARY KEY ("id_oms_product_reservation_store"),
+     CONSTRAINT "spy_oms_product_reservation_store-unique-store-sku" UNIQUE (
+     "store", "sku")
+  );
 
-CREATE INDEX "spy_oms_product_reservation_store-version" 
-  ON "spy_oms_product_reservation_store" ("version"); 
+CREATE INDEX "spy_oms_product_reservation_store-version"
+  ON "spy_oms_product_reservation_store" ("version");
 
-CREATE INDEX "spy_oms_product_reservation_store-sku" 
-  ON "spy_oms_product_reservation_store" ("sku"); 
+CREATE INDEX "spy_oms_product_reservation_store-sku"
+  ON "spy_oms_product_reservation_store" ("sku");
 
-CREATE INDEX "spy_oms_product_reservation_store-store" 
-  ON "spy_oms_product_reservation_store" ("store"); 
+CREATE INDEX "spy_oms_product_reservation_store-store"
+  ON "spy_oms_product_reservation_store" ("store");
 
-CREATE SEQUENCE "spy_oms_product_reservation_change_version_pk_seq"; 
+CREATE SEQUENCE "spy_oms_product_reservation_change_version_pk_seq";
 
-CREATE TABLE "spy_oms_product_reservation_change_version" 
-  ( 
-     "version"                       INT8 NOT NULL, 
-     "id_oms_product_reservation_id" INTEGER NOT NULL, 
-     "created_at"                    TIMESTAMP, 
-     "updated_at"                    TIMESTAMP, 
-     PRIMARY KEY ("version") 
-  ); 
+CREATE TABLE "spy_oms_product_reservation_change_version"
+  (
+     "version"                       INT8 NOT NULL,
+     "id_oms_product_reservation_id" INTEGER NOT NULL,
+     "created_at"                    TIMESTAMP,
+     "updated_at"                    TIMESTAMP,
+     PRIMARY KEY ("version")
+  );
 
-CREATE TABLE "spy_oms_product_reservation_last_exported_version" 
-  ( 
-     "version"    INT8 NOT NULL, 
-     "created_at" TIMESTAMP, 
-     "updated_at" TIMESTAMP 
-  ); 
+CREATE TABLE "spy_oms_product_reservation_last_exported_version"
+  (
+     "version"    INT8 NOT NULL,
+     "created_at" TIMESTAMP,
+     "updated_at" TIMESTAMP
+  );
 ```
 
 ## Upgrading from Version 6.* to Version 7.*
@@ -163,5 +172,5 @@ CREATE TABLE "spy_oms_product_reservation"
 );
 ```
 
-A new **Oms** plugin added `ReservationHandlerPluginInterface` which is executed when an item is transferred to the state with the "reserved" flag. 
+A new **Oms** plugin added `ReservationHandlerPluginInterface` which is executed when an item is transferred to the state with the "reserved" flag.
 To start using it with core implementation, add `Spryker\Zed\Availability\Communication\Plugin\AvailabilityHandlerPlugin` to your project `OmsDependencyProvider::getReservationHandlerPlugins()`.

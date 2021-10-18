@@ -68,9 +68,7 @@ To change the status of all the items inside a shipment at once, click **pay** i
 To learn more about order statuses, see [Orders: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/references/orders-reference-information.html).
 
 ## Creating Returns
-
 If a sales order item is[ returnable](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html), you can create a return for it.
-
 
 To create a return:
 

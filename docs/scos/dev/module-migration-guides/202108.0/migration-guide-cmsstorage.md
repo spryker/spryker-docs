@@ -23,22 +23,24 @@ Version 2.0.0 of the CmsStorage module introduces the [multi-store functionality
 1. Update `cms-storage` to `^2.0.0` with the command `composer update spryker/cms-storage": "^2.0.0`
 2. Remove `queue_pool=synchronizationPool` behavior from `spy_cms_page_storage` table.
 
-src/Pyz/Zed/CmsStorage/Persistence/Propel/Schema/spy_cms_storage.schema.xml
-    
+**src/Pyz/Zed/CmsStorage/Persistence/Propel/Schema/spy_cms_storage.schema.xml**
+
 ```php
 <behavior name="synchronization">
 	<parameter name="queue_pool" value="synchronizationPool">
 </behavior>
 ```
-    
+
 {% info_block infoBox %}
+
 When completed, the above synchronization parameter should not be in the file.
+
 {% endinfo_block %}
 
 3. Make changes to the CMS Storage Dependency Provider:
 The return annotation for `getContentWidgetDataExpander()` has been changed. `CmsPageDataExpanderPluginInterface` was moved to `CmsExtension` module and should be referenced as such.
 
-src/Pyz/Zed/CmsStorage/CmsStorageDependencyProvider.php
+**src/Pyz/Zed/CmsStorage/CmsStorageDependencyProvider.php**
 
 ```php
 class CmsStorageDependencyProvider extends SprykerCmsStorageDependencyProvider
@@ -49,7 +51,7 @@ class CmsStorageDependencyProvider extends SprykerCmsStorageDependencyProvider
 	protected function getContentWidgetDataExpander()
 	{
 ```
-    
+
 4. Apply the database change:
 `$ console propel:install`
 

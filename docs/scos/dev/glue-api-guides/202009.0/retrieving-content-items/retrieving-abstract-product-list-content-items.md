@@ -66,7 +66,7 @@ To retrieve information about an abstract product list content item, send the re
 .
 
 <details open>
-<summary>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
     
 ```json
 {
@@ -166,7 +166,7 @@ To retrieve information about an abstract product list content item, send the re
 </details>
 
 <details open>
-    <summary>Response sample with abstact product availability</summary>
+    <summary markdown='span'>Response sample with abstact product availability</summary>
     
 ```json
 {
@@ -309,7 +309,7 @@ To retrieve information about an abstract product list content item, send the re
 </details>
 
 <details open>
-    <summary>Response sample with abstract product image sets</summary>
+    <summary markdown='span'>Response sample with abstract product image sets</summary>
     
 ```json
 ...
@@ -396,7 +396,7 @@ To retrieve information about an abstract product list content item, send the re
 </details>
 
 <details open>
-<summary>Response sample with abstract product prices</summary>
+<summary markdown='span'>Response sample with abstract product prices</summary>
 
 ```json
 {
@@ -563,7 +563,7 @@ To retrieve information about an abstract product list content item, send the re
 
 
 <details open>
-    <summary>Response sample with category nodes</summary>
+    <summary markdown='span'>Response sample with category nodes</summary>
     
 ```json
 {
@@ -789,7 +789,7 @@ To retrieve information about an abstract product list content item, send the re
 
 
 <details open>
-<summary>Response sample with tax sets</summary>
+<summary markdown='span'>Response sample with tax sets</summary>
     
 ```json
 {
@@ -999,7 +999,7 @@ To retrieve information about an abstract product list content item, send the re
 
 
 <details open>
-<summary>Response sample with product labels</summary>
+<summary markdown='span'>Response sample with product labels</summary>
 
 ```json
 {
@@ -1100,7 +1100,7 @@ To retrieve information about an abstract product list content item, send the re
 
 
 <details open>
-    <summary>Response sample with filtered fields</summary>
+    <summary markdown='span'>Response sample with filtered fields</summary>
     
 ```json
 {

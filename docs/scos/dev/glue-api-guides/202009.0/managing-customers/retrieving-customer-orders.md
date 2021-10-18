@@ -62,7 +62,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 
 <details open>
-<summary>Response sample with one order</summary>
+<summary markdown='span'>Response sample with one order</summary>
    
 ```
 {
@@ -135,7 +135,7 @@ Request sample:
 ### Response
 
 <details open>
-    <summary>Response sample with a specific order</summary>
+    <summary markdown='span'>Response sample with a specific order</summary>
        
 ```json
 {

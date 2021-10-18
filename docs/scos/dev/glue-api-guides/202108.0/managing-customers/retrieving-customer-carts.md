@@ -70,7 +70,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 
 ### Response
 
-<details><summary>Response sample: no carts</summary>
+<details><summary markdown='span'>Response sample: no carts</summary>
 
 ```json
 {
@@ -84,7 +84,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 </details>
 
 
-<details><summary>Response sample: multiple carts</summary>
+<details><summary markdown='span'>Response sample: multiple carts</summary>
 
 ```json
 {
@@ -148,7 +148,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 
 </details>
 
-<details><summary>Response sample</summary>
+<details><summary markdown='span'>Response sample</summary>
 
 ```json
 
@@ -156,7 +156,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 
 </details>
 
-<details><summary>Response sample with items</summary>
+<details><summary markdown='span'>Response sample with items</summary>
 
 ```json
 {
@@ -449,7 +449,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 
 </details>
 
-<details><summary>Response sample with cart permission groups</summary>
+<details><summary markdown='span'>Response sample with cart permission groups</summary>
 
 ```json
 {
@@ -585,7 +585,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 
 </details>
 
-<details><summary>Response sample with shared carts</summary>
+<details><summary markdown='span'>Response sample with shared carts</summary>
 
 ```json
 {
@@ -721,7 +721,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 
 </details>
 
-<details><summary>Response sample with shared carts and company users they are shared with</summary>
+<details><summary markdown='span'>Response sample with shared carts and company users they are shared with</summary>
 
 ```json
 {
@@ -825,7 +825,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 
 </details>
 
-<details><summary>Response sample with cart rules</summary>
+<details><summary markdown='span'>Response sample with cart rules</summary>
 
 ```json
 {
@@ -956,7 +956,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 
 </details>
 
-<details><summary>Response sample with vouchers</summary>
+<details><summary markdown='span'>Response sample with vouchers</summary>
 
 ```json
 {
@@ -1026,7 +1026,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 
 </details>
 
-<details><summary>Response sample with a promotional item</summary>
+<details><summary markdown='span'>Response sample with a promotional item</summary>
 
 ```json
 {
@@ -1092,7 +1092,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 
 </details>
 
-<details><summary>Response sample with gift cards applied</summary>
+<details><summary markdown='span'>Response sample with gift cards applied</summary>
 
 ```json
 {
@@ -1163,7 +1163,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 
 </details>
 
-<details><summary>Response sample with items, concrete products, and product options</summary>
+<details><summary markdown='span'>Response sample with items, concrete products, and product options</summary>
 
 ```json
 {
@@ -1416,7 +1416,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 
 </details>
 
-<details><summary>Response sample with product labels</summary>
+<details><summary markdown='span'>Response sample with product labels</summary>
 
 ```json
 {

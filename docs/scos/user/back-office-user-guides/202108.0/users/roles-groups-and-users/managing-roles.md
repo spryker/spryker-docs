@@ -76,7 +76,7 @@ at `/project/config/Zed/navigation.xml` or at ```https://github.com/spryker/[bun
 See the example of the `navigation.xml` file of the AvailabilityGui module:
 
 <details open>
-<summary>navigation.xml</summary>
+<summary markdown='span'>navigation.xml</summary>
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>

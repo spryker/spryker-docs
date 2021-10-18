@@ -42,7 +42,7 @@ To view generic errors that originate from the Glue Application, see [Reference 
 
 
 <details open>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
 
 ```json
 {

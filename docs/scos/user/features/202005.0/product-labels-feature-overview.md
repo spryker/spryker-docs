@@ -19,14 +19,14 @@ The product labels are applied to products to be displayed on their product card
 
 <details open>
 
-<summary>Product label on a product card—Storefront</summary>
+<summary markdown='span'>Product label on a product card—Storefront</summary>
 
 ![product label on product card](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/product-label-on-product-card.png)
 
 </details>
 
  <details open>
-<summary>Product label on a product details page - Storefront</summary>
+<summary markdown='span'>Product label on a product details page - Storefront</summary>
 
 ![product label on product details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/product-label-on-product-details-page.png)
 
@@ -65,7 +65,7 @@ An original price is displayed as a strikethrough to identify that the value of 
 A Back Office user can select the design and the position of the product label on a product card. The following label designs are shipped by default:
 
  <details open>
-<summary>alternative</summary>
+<summary markdown='span'>alternative</summary>
 
 ![alternative product label design](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/alternatives-available-product-label-design.png)
 
@@ -73,7 +73,7 @@ A Back Office user can select the design and the position of the product label o
 
 
  <details open>
-<summary>discontinued</summary>
+<summary markdown='span'>discontinued</summary>
 
 ![discontinued product label design](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/discontinued-product-label-design.png)
 
@@ -81,7 +81,7 @@ A Back Office user can select the design and the position of the product label o
 
 
  <details open>
-<summary>top</summary>
+<summary markdown='span'>top</summary>
 
 ![top product label design](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/top-product-label-design.png)
 
@@ -90,14 +90,14 @@ A Back Office user can select the design and the position of the product label o
 
 
  <details open>
-<summary>new</summary>
+<summary markdown='span'>new</summary>
 
 ![new product label design](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/new-product-label-design.png)
 
 </details>
 
  <details open>
-<summary>sale</summary>
+<summary markdown='span'>sale</summary>
 
 ![sale product label design](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/sale-product-label-design.png)
 

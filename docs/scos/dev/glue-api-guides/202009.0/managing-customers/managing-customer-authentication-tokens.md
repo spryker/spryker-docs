@@ -27,7 +27,7 @@ To refresh an authentication token, send the request:
 
 
 <details open>
-    <summary>Request sample: POST http://glue.mysprykershop.com/refresh-tokens</summary>
+    <summary markdown='span'>Request sample: POST http://glue.mysprykershop.com/refresh-tokens</summary>
     
 ```json
 {
@@ -49,7 +49,7 @@ To refresh an authentication token, send the request:
 ### Response
 
 <details open>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
 
 ```json
 {

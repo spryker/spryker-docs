@@ -61,7 +61,7 @@ MySQL:
 7. To populate current Store information into the Quote transfer object, the `StoreQuoteTransferExpanderPlugin` has to be provided through the `QuoteDependencyProvider::getQuoteTransferExpanderPlugins()`.
 
 <details open>
-<summary>Example plugin registration</summary>
+<summary markdown='span'>Example plugin registration</summary>
     
 ```php
 <?php
@@ -230,7 +230,7 @@ This console command will move all discount amount with fixed calculator plugin 
 5. Register a new currency plugin to reload cart items when currency is changed. Take `\Spryker\Yves\CartCurrencyConnector\CurrencyChange\RebuildCartOnCurrencyChangePlugin`and place it to `\Pyz\Yves\Currency\CurrencyDependencyProvider::getCurrencyPostChangePlugins` plugin stack. This way we make sure that when currency in Yves is changed, we have updated product prices and discounts.
 
 <details open>
-<summary>Discount Amounts Migration Console Command</summary>
+<summary markdown='span'>Discount Amounts Migration Console Command</summary>
 
 ```php
 <?php

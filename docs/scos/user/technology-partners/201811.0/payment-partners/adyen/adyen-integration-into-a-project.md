@@ -23,7 +23,7 @@ related:
 Add sub form plugins and payment method handlers:
 
 <details open>
-    <summary>\Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider:</summary>
+    <summary markdown='span'>\Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider:</summary>
     
 ```php
 <?php
@@ -123,7 +123,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 Add controller provider: 
 
 <details open>
-<summary>\Pyz\Yves\ShopApplication\YvesBootstrap:</summary>
+<summary markdown='span'>\Pyz\Yves\ShopApplication\YvesBootstrap:</summary>
 
 ```php
 <?php
@@ -163,7 +163,7 @@ class YvesBootstrap extends SprykerYvesBootstrap
  Add checkout plugins:
  
  <details open>
-<summary>\Pyz\Zed\Checkout\CheckoutDependencyProvider</summary>
+<summary markdown='span'>\Pyz\Zed\Checkout\CheckoutDependencyProvider</summary>
     
  ```php
     <?php
@@ -220,7 +220,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 Add OMS commands and conditions:
 
 <details open>
-<summary> \Pyz\Zed\Oms\OmsDependencyProvider</summary>
+<summary markdown='span'> \Pyz\Zed\Oms\OmsDependencyProvider</summary>
 
 ```php
 <?php
@@ -322,7 +322,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 To make Adyen module work properly, update `payment.twig` file and add payment method forms into `customForms`:
 
 <details open>
-<summary>src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig:</summary>
+<summary markdown='span'>src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig:</summary>
 
  ```twig
 ...

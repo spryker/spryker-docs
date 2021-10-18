@@ -180,7 +180,7 @@ You can select the Storefront pages in which CMS blocks will be displayed. This 
 
 To select pages:
 <details open>
-<summary>Category pages</summary>
+<summary markdown='span'>Category pages</summary>
 
 1. In *List of Blocks for [Name] Slot*, click on the row of the CMS block you wish to select pages for.
 2. Select:
@@ -199,7 +199,7 @@ If you selected the **Specific Category Pages** radio button:
 </details>
 
 <details open>
-<summary>CMS Pages</summary>
+<summary markdown='span'>CMS Pages</summary>
 
 1. In *List of Blocks for [Name] Slot*, click on the row of the CMS block you wish to select pages for.
 2. In the *List of Blocks for [Name] Slot*, select:
@@ -215,7 +215,7 @@ If you selected the **Specific CMS Pages** radio button:
 </details>
 
 <details open>
-<summary>Product details pages</summary>
+<summary markdown='span'>Product details pages</summary>
 
 1. In the *List of Blocks for [Name] Slot*, click on the row of the CMS block you wish to select pages for.
 2. In *List of Blocks for [Name] Slot*, select:

@@ -22,7 +22,7 @@ Version 2.0.0 of the CmsStorage module introduces the [multi-store functionality
 2. Remove `queue_pool=synchronizationPool` behavior from `spy_cms_page_storage` table.
 
 <details open>
-<summary>src/Pyz/Zed/CmsStorage/Persistence/Propel/Schema/spy_cms_storage.schema.xml</summary>
+<summary markdown='span'>src/Pyz/Zed/CmsStorage/Persistence/Propel/Schema/spy_cms_storage.schema.xml</summary>
     
 ```php
 <behavior name="synchronization">
@@ -41,7 +41,7 @@ When completed, the above synchronization parameter should not be in the file.
 The return annotation for `getContentWidgetDataExpander()` has been changed. `CmsPageDataExpanderPluginInterface` was moved to `CmsExtension` module and should be referenced as such.
 
 <details open>
-<summary>src/Pyz/Zed/CmsStorage/CmsStorageDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/CmsStorage/CmsStorageDependencyProvider.php</summary>
 
 ```php
 class CmsStorageDependencyProvider extends SprykerCmsStorageDependencyProvider

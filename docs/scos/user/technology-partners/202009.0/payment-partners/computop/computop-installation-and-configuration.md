@@ -24,7 +24,7 @@ You can check all the necessary configurations in `vendor/spryker-eco/computop/c
 Find an example of the Computop module configuration below:
 
 <details open>
-<summary>config/Shared/config_default.php</summary>
+<summary markdown='span'>config/Shared/config_default.php</summary>
     
 ```php
 // Spryker security configuration

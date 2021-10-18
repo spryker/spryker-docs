@@ -343,7 +343,7 @@ src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig
 
 8. Update `summary.twig` to template to display `Easycredit` related fees:
 <details open>
-<summary>src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig</summary>
+<summary markdown='span'>src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig</summary>
 
 ```html
 {% raw %}{%{% endraw %} extends template('page-layout-checkout', 'CheckoutPage') {% raw %}%}{% endraw %}

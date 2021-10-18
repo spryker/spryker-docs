@@ -57,7 +57,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
 
 
 <details open>
-    <summary>Response sample</summary>
+    <summary markdown='span'>markdown='span'>Response sample</summary>
     
 ```json
 {
@@ -121,7 +121,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
 </details>
 
 <details open>
-<summary>Response sample with category nodes</summary>
+<summary markdown='span'>markdown='span'>Response sample with category nodes</summary>
     
 ```json
 {

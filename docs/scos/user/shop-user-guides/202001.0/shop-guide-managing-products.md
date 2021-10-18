@@ -45,7 +45,7 @@ On the product detail page, you can view some general product information that i
 * Product reviews
 
 <details open>
-<summary>For the descriptions of the elements you see on the page, expand this section:</summary>
+<summary markdown='span'>For the descriptions of the elements you see on the page, expand this section:</summary>
 
 ![Basic elements available on the product detail page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Managing+Products/basic-elements.png)
 

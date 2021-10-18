@@ -725,7 +725,7 @@ Payment step - `src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.tw
 ```
 
 <details open>
-<summary>summary.twig</summary>
+<summary markdown='span'>summary.twig</summary>
 
 Summary step - `src/Pyz/Yves/CheckoutPage/Theme/default/views/summary/summary.twig`
 

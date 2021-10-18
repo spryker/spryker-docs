@@ -28,7 +28,7 @@ related:
 
 On the Newsletter page, you can subscribe to the Newsletter and keep updated about the news and sale campaigns the shop has.
 <details open>
-<summary>B2B Shop</summary>
+<summary markdown='span'>B2B Shop</summary>
 
 ![b2b-newsletter](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Customer+Account/Newsletter/b2b-newsletter.png) 
 
@@ -36,7 +36,7 @@ On the Newsletter page, you can subscribe to the Newsletter and keep updated abo
 
 
 <details open>
-<summary>B2C Shop</summary>
+<summary markdown='span'>B2C Shop</summary>
 
 ![b2c-newsletter](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Customer+Account/Newsletter/b2c-newsletter.png) 
 

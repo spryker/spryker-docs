@@ -24,7 +24,7 @@ Version 2.0.0 of the `NavigationsRestApi` module introduces the resourceId field
 Configure mapping to specify source field from which the resourceId field should be filled depending on navigation node type.
 
 <details open>
-<summary>src/Pyz/Glue/NavigationsRestApi/NavigationsRestApiConfig.php</summary>
+<summary markdown='span'>src/Pyz/Glue/NavigationsRestApi/NavigationsRestApiConfig.php</summary>
 
 ```php
 <?php

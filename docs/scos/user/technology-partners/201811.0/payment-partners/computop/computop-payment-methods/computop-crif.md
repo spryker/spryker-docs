@@ -49,7 +49,7 @@ Integrated into Computop module CRIF provides risk check functionality based on 
 1. First of all you need to add CRIF specific configurations into `config_default.php` file:
 
 <details open>
-<summary>config/Shared/config_default.php</summary>
+<summary markdown='span'>markdown='span'>config/Shared/config_default.php</summary>
 
 ```php
 $config[ComputopConstants::CRIF_ENABLED] = false; // Enable or disable CRIF functionality.
@@ -67,7 +67,7 @@ $config[ComputopConstants::CRIF_RED_AVAILABLE_PAYMENT_METHODS] = []; //List of a
 2. Extend `ShipmentStep` to add CRIF risk check call before checkout payment step:
 
 <details open>
-<summary>\Pyz\Yves\CheckoutPage\Process\Steps\ShipmentStep</summary>
+<summary markdown='span'>markdown='span'>\Pyz\Yves\CheckoutPage\Process\Steps\ShipmentStep</summary>
 
 ```php
 <?php
@@ -137,7 +137,7 @@ class ShipmentStep extends SprykerShipmentStep
 3. Extend `StepFactory` to update shipment checkout step:
 
 <details open>
-<summary>\Pyz\Yves\CheckoutPage\Process\StepFactory</summary>
+<summary markdown='span'>markdown='span'>\Pyz\Yves\CheckoutPage\Process\StepFactory</summary>
 
 ```php
 <?php
@@ -190,7 +190,7 @@ class StepFactory extends SprykerStepFactory
 4. Extend `CheckoutPageFactory` for project level `StepFactory` usage:
 
 <details open>
-<summary>\Pyz\Yves\CheckoutPage\CheckoutPageFactory</summary>
+<summary markdown='span'>markdown='span'>\Pyz\Yves\CheckoutPage\CheckoutPageFactory</summary>
 
 ```php
 <?php

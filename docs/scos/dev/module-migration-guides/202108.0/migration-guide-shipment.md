@@ -213,7 +213,7 @@ Database structure is as follows:
     Depending on your requirements, you can set `gross/net` prices as `0`/`null`/`any integer` value as cents.
 
 <details open>
-<summary>Example: Migration</summary>
+<summary markdown='span'>markdown='span'>Example: Migration</summary>
     
 ```php
 <?php

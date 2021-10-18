@@ -64,28 +64,28 @@ See [Managing customers](/docs/scos/user/back-office-user-guides/{{page.version}
 ## Customer account on the Storefront
 Customer can perform the following actions the Storefront:
 <details open>
-<summary>View the account activity</summary>
+<summary markdown='span'>View the account activity</summary>
 
 ![view-account-activity](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Customer+Relationship+Management/Customer+Account/Customer+Account+Feature+Overview/view-account-activity.gif)
 
 </details>
 
 <details open>
-<summary>Create, edit, and delete a customer address</summary>
+<summary markdown='span'>Create, edit, and delete a customer address</summary>
 
 ![create-edit-delete-a-customer-address](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Customer+Relationship+Management/Customer+Account/Customer+Account+Feature+Overview/create-edit-delete-a-customer-address.gif)
 
 </details>
 
 <details open>
-<summary>Filter order history</summary>
+<summary markdown='span'>Filter order history</summary>
 
 ![filter-order-history](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Customer+Relationship+Management/Customer+Account/Customer+Account+Feature+Overview/filter-order-history.gif)
 
 </details>
 
 <details open>
-<summary>Reorder selected items</summary>
+<summary markdown='span'>Reorder selected items</summary>
 
 ![reorder-selected-items](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Customer+Relationship+Management/Customer+Account/Customer+Account+Feature+Overview/reorder-selected-items.gif)
 

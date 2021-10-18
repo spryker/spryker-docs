@@ -27,7 +27,7 @@ related:
 On the project level, you should override execute and postCondition methods of `SprykerShop\Yves\CheckoutPage\Process\Steps\AddressStep`.
 
 <details open>
- <summary>src/Pyz/Yves/CheckoutPage/Process/Steps/AddressStep.php</summary>
+ <summary markdown='span'>src/Pyz/Yves/CheckoutPage/Process/Steps/AddressStep.php</summary>
 
 ```php
 <?php
@@ -88,7 +88,7 @@ class AddressStep extends SprykerAddressStep
 Also, `src/Pyz/Yves/CheckoutPage/Process/StepFactory.php` should be updated on the project level.
 
 <details open>
-<summary>src/Pyz/Yves/CheckoutPage/Process/StepFactory.php</summary>
+<summary markdown='span'>src/Pyz/Yves/CheckoutPage/Process/StepFactory.php</summary>
 
 ```php
 <?php
@@ -138,7 +138,7 @@ class StepFactory extends SprykerStepFactory
 On the project level, you should override the execute method of `SprykerShop\Yves\CheckoutPage\Process\Steps\AddressStep`.
 
 <details open>
-<summary>src/Pyz/Yves/CheckoutPage/Process/Steps/ShipmentStep.php</summary>
+<summary markdown='span'>src/Pyz/Yves/CheckoutPage/Process/Steps/ShipmentStep.php</summary>
 
  ```php
 <?php
@@ -184,7 +184,7 @@ class ShipmentStep extends SprykerShipmentStep
 `src/Pyz/Yves/CheckoutPage/Process/StepFactory.php` should be updated:
 
 <details open>
-<summary>src/Pyz/Yves/CheckoutPage/Process/Steps/ShipmentStep.php</summary>
+<summary markdown='span'>src/Pyz/Yves/CheckoutPage/Process/Steps/ShipmentStep.php</summary>
 
  ```php
 <?php
@@ -230,7 +230,7 @@ class ShipmentStep extends SprykerShipmentStep
 `src/Pyz/Yves/CheckoutPage/Process/StepFactory.php` should be updated:
 
  <details open>
-<summary>src/Pyz/Yves/CheckoutPage/Process/StepFactory.php</summary>
+<summary markdown='span'>src/Pyz/Yves/CheckoutPage/Process/StepFactory.php</summary>
 
  ```php
 <?php
@@ -275,7 +275,7 @@ class StepFactory extends SprykerStepFactory
 `src/Pyz/Zed/Payment/PaymentDependencyProvider.php` should be updated:
 
  <details open>
-<summary>src/Pyz/Zed/Payment/PaymentDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Payment/PaymentDependencyProvider.php</summary>
 
  ```php
 <?php
@@ -306,7 +306,7 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
 </br>Now Payone is ready for filtering Payment methods. Configuration for each score result should be defined in the config:
 
  <details open>
-<summary>Example of configuration for score results</summary>
+<summary markdown='span'>Example of configuration for score results</summary>
 
  ```php
 <?php

@@ -57,7 +57,7 @@ Request sample:
 
 
 <details>
-    <summary>Response sample</summary>
+    <summary markdown='span'>markdown='span'>Response sample</summary>
     
 ```json
 {

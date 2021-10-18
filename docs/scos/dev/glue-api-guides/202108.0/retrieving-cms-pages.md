@@ -63,7 +63,7 @@ You set the `offset` value, which equals the difference by which the actual numb
 
 ### Response
 <details open>
-<summary>Response sample: All CMS pages</summary>
+<summary markdown='span'>markdown='span'>Response sample: All CMS pages</summary>
 
 ```json
 {
@@ -161,7 +161,7 @@ You set the `offset` value, which equals the difference by which the actual numb
 </details>
 
 <details open>
-<summary>Response sample: CMS pages with pagination</summary>
+<summary markdown='span'>markdown='span'>Response sample: CMS pages with pagination</summary>
 
 ```json
 {
@@ -212,7 +212,7 @@ When paging is enabled, the links section of the response contains links for the
 {% endinfo_block %}
 
 <details open>
-<summary>Response sample: CMS pages with Abstract Product List and Banner content items</summary>
+<summary markdown='span'>markdown='span'>Response sample: CMS pages with Abstract Product List and Banner content items</summary>
 
 ```
 {
@@ -328,7 +328,7 @@ When paging is enabled, the links section of the response contains links for the
 </details>
 
 <details open>
-<summary>Response sample: CMS pages with Abstract Product List content items and their abstract products</summary>
+<summary markdown='span'>markdown='span'>Response sample: CMS pages with Abstract Product List content items and their abstract products</summary>
 
 ```json
 {
@@ -603,7 +603,7 @@ To retrieve a specific CMS page, send the request:
 | `GET https://glue.mysprykershop.com/cms-pages/0455b56c-55bf-54b6-859d-68753e6f480c?include=content-banners` | Retrieve information about [Banner](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-item-widgets-types.html#banner-content-item-widget) content item for the CMS page. |
 
 <details open>
-<summary>Response sample: A specific CMS page</summary>
+<summary markdown='span'>markdown='span'>Response sample: A specific CMS page</summary>
 
 ```json
 {
@@ -626,7 +626,7 @@ To retrieve a specific CMS page, send the request:
 </details>
 
 <details open>
-<summary>Response sample: A CMS page with Abstract Product List and Banner content items</summary>
+<summary markdown='span'>markdown='span'>Response sample: A CMS page with Abstract Product List and Banner content items</summary>
 
 ```json
 {
@@ -690,7 +690,7 @@ To retrieve a specific CMS page, send the request:
 </details>
 
 <details open>
-<summary>Response sample: A CMS page with Abstract Product List content items and abstract products</summary>
+<summary markdown='span'>markdown='span'>Response sample: A CMS page with Abstract Product List content items and abstract products</summary>
 
 ```json
 {

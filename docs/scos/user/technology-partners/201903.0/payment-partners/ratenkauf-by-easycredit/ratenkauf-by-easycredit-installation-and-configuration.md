@@ -96,7 +96,7 @@ $config[EasycreditConstants::DENIED_URL] = $config[ApplicationConstants::BASE_UR
 To show the Easycredit payment method on the payment step, you should define `SubFormPlugin` and `StepHandlerPlugin`.   
 
 <details open>
-<summary>CheckoutPageDependencyProvider.php</summary>
+<summary markdown='span'>CheckoutPageDependencyProvider.php</summary>
 
 ```php
 public const CLIENT_EASYCREDIT = 'CLIENT_EASYCREDIT';
@@ -169,7 +169,7 @@ public const CLIENT_EASYCREDIT = 'CLIENT_EASYCREDIT';
 To use commands and conditions for events in OMS,  define them.   
 
 <details open>
-<summary>OmsDependencyProvider</summary>
+<summary markdown='span'>OmsDependencyProvider</summary>
     
 ```php
 ...
@@ -186,7 +186,7 @@ $container->extend(self::CONDITION_PLUGINS, function (ConditionCollectionInterfa
 To send requests to Easycredit, you need the technical order identifier value. After adding this plugin, the order identifier will be saved to the database in table `spy_payment_easycredit_order_identifier`.   
 
 <details open>
-<summary>CheckoutDependencyProvider</summary>
+<summary markdown='span'>CheckoutDependencyProvider</summary>
 
 ```php
 ...
@@ -208,7 +208,7 @@ To use Easycredit requests during the checkout process, you have to create your 
 1. Extend `StepFactory`.
 
 <details open>
-<summary>CheckoutPageFactory</summary>
+<summary markdown='span'>CheckoutPageFactory</summary>
 
 ```php
 <?php
@@ -235,7 +235,7 @@ class CheckoutPageFactory extends SprykerCheckoutPageFactory
 2. Implement `StepFactory` as shown in this example:
 
 <details open>
-<summary>StepFactory</summary>
+<summary markdown='span'>StepFactory</summary>
 
 ```php
 <?php
@@ -342,7 +342,7 @@ class StepFactory extends SprykerStepFactory
 Examples of steps implementations:   
 
 <details open>
-<summary>EasycreditStep.php</summary>
+<summary markdown='span'>EasycreditStep.php</summary>
 
 ```php
 <?php
@@ -447,7 +447,7 @@ class EasycreditStep extends AbstractBaseStep implements StepWithExternalRedirec
 </details>
 
 <details open>
-<summary>ShipmentStep</summary> 
+<summary markdown='span'>ShipmentStep</summary> 
 ```php
 <?php
 
@@ -499,7 +499,7 @@ class ShipmentStep extends SprykerShipmentStep
 </details>
 
 <details open>
-<summary>SummaryStep</summary> 
+<summary markdown='span'>SummaryStep</summary> 
 ```php
 <?php
 
@@ -545,7 +545,7 @@ class SummaryStep extends SprykerSummaryStep
 
 4. To run the step process for the new Easycredit step, you should extend the default `CheckoutController` with a new action for handling the Easycredit step.
 <details open>
-<summary>CheckoutController</summary>
+<summary markdown='span'>CheckoutController</summary>
 
 ```php
 <?php
@@ -573,7 +573,7 @@ class CheckoutController extends SprykerCheckoutController
 
 5. After creating a new action in the checkout controller, define a new route in `CheckoutPageControllerProvider`.
 <details open>
-<summary>CheckoutPageControllerProvider.php</summary>
+<summary markdown='span'>CheckoutPageControllerProvider.php</summary>
 
 ```php
 <?php
@@ -612,7 +612,7 @@ class CheckoutPageControllerProvider extends BaseCheckoutPageControllerProvider
 
 6. Also, the Easycredit bundle has its own `YvesController` for handling a success response from Easycredit, so you have to define a controller in `YvesBootstrap`.
 <details open>
-<summary>YvesBootstrap.php</summary>
+<summary markdown='span'>YvesBootstrap.php</summary>
 
 ```php
 <?php
@@ -645,7 +645,7 @@ class YvesBootstrap extends SprykerYvesBootstrap
 You can find some examples below in `[`payment.twig`](#payment-step)`, [`summary.twig`](#summary-step) and [`pdp.twig`](#pdp-page).
 
  <details open>
-<summary>payment.twig</summary>
+<summary markdown='span'>payment.twig</summary>
 
 Payment step - `src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig`
 
@@ -739,7 +739,7 @@ Payment step - `src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.tw
 </details>
 
 <details open>
-<summary>summary.twig</summary>
+<summary markdown='span'>summary.twig</summary>
 
 Summary step - `src/Pyz/Yves/CheckoutPage/Theme/default/views/summary/summary.twig`
 
@@ -915,7 +915,7 @@ Summary step - `src/Pyz/Yves/CheckoutPage/Theme/default/views/summary/summary.tw
 
 
  <details open>
-<summary>pdp.twig</summary>
+<summary markdown='span'>pdp.twig</summary>
 
 PDP page - `src/Pyz/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.twig`
 
@@ -1014,7 +1014,7 @@ You might want to configure the product detail page to add some validation and s
 {% endinfo_block %}
 
 <details open>
-<summary>product-configurator.twig</summary>
+<summary markdown='span'>product-configurator.twig</summary>
 
 ```php
 ...

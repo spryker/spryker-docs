@@ -35,7 +35,7 @@ To integrate CrefoPay, do the following:
 1. Add shipment step plugin, payment subform plugins and payment method handlers:
 
 <details open>
-    <summary>\Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider</summary>
+    <summary markdown='span'>\Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider</summary>
 
 ```PHP
 <?php
@@ -160,7 +160,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 2. Extend `ShipmentStep` to add payment methods filtering logic:
 
 <details open>
-<summary>\Pyz\Yves\CheckoutPage\Process\Steps\ShipmentStep</summary>
+<summary markdown='span'>\Pyz\Yves\CheckoutPage\Process\Steps\ShipmentStep</summary>
 
 ```PHP
 <?php
@@ -196,7 +196,7 @@ class ShipmentStep extends SprykerShopShipmentStep
 3. Extend `StepFactory` for the project-level `ShipmentStep` usage:
 
 <details open>
-<summary>\Pyz\Yves\CheckoutPage\Process\StepFactory</summary>
+<summary markdown='span'>\Pyz\Yves\CheckoutPage\Process\StepFactory</summary>
 
 ```PHP
 <?php
@@ -257,7 +257,7 @@ class StepFactory extends SprykerShopStepFactory
 4. Extend `CheckoutPageFactory` for the project-level `StepFactory` usage:
 
 <details open>
-<summary>\Pyz\Yves\CheckoutPage\CheckoutPageFactory</summary>
+<summary markdown='span'>\Pyz\Yves\CheckoutPage\CheckoutPageFactory</summary>
 
 ```PHP
 <?php
@@ -289,7 +289,7 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 5. Extend checkout page layout to add `jQuery`:
 
 <details open>
-<summary>Pyz/Yves/CheckoutPage/Theme/default/templates/page-layout-checkout/page-layout-checkout.twig</summary>
+<summary markdown='span'>Pyz/Yves/CheckoutPage/Theme/default/templates/page-layout-checkout/page-layout-checkout.twig</summary>
 
 ```PHP
 {% raw %}{%{% endraw %} extends template('page-layout-main') {% raw %}%}{% endraw %}
@@ -331,7 +331,7 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 6. Extend payment twig to add CrefoPay payment methods:
 
 <details open>
-<summary>Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig</summary>
+<summary markdown='span'>Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig</summary>
 
 ```PHP
 {% raw %}{%{% endraw %} extends template('page-layout-checkout', 'CheckoutPage') {% raw %}%}{% endraw %}
@@ -451,7 +451,7 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 7. Add controller provider:
 <details open>
 
-<summary>\Pyz\Yves\ShopApplication\YvesBootstrap</summary>
+<summary markdown='span'>\Pyz\Yves\ShopApplication\YvesBootstrap</summary>
 
 ```PHP
 <?php
@@ -483,7 +483,7 @@ class YvesBootstrap extends SprykerYvesBootstrap
 8. Add checkout plugins:
 
 <details open>
-<summary>\Pyz\Zed\Checkout\CheckoutDependencyProvider</summary>
+<summary markdown='span'>\Pyz\Zed\Checkout\CheckoutDependencyProvider</summary>
 
 
 ```PHP
@@ -534,7 +534,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 
 <details open>
 
-<summary>\Pyz\Zed\Oms\OmsDependencyProvider</summary>
+<summary markdown='span'>\Pyz\Zed\Oms\OmsDependencyProvider</summary>
 
 
 ```PHP
@@ -633,7 +633,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 10. Extend `PaymentDependencyProvider` to add payment method filter plugin:
 
 <details open>
-<summary>\Pyz\Zed\Payment\PaymentDependencyProvider</summary>
+<summary markdown='span'>\Pyz\Zed\Payment\PaymentDependencyProvider</summary>
 
 ```PHP
 <?php

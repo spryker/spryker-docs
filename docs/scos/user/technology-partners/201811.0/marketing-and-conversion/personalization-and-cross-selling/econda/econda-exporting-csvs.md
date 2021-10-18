@@ -57,7 +57,7 @@ To register the query in the Econda module, extend the `AbstractPdoEcondaQuery` 
 
 If you are using the demo shop as your starting point, you can use the code snippets below.
 <details open>
-<summary>For Categories</summary>
+<summary markdown='span'>For Categories</summary>
 
 ```php
 <?php
@@ -125,7 +125,7 @@ class CategoryNodeEcondaQuery extends AbstractPdoEcondaQuery
 <br>
 </details>
 <details open>
-<summary>For Products</summary>
+<summary markdown='span'>For Products</summary>
 
  ```
 <?php

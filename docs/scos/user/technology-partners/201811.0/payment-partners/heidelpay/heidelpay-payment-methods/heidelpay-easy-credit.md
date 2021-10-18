@@ -45,7 +45,7 @@ The following configuration should be implemented after Heidelpay has been [inst
 
 1. Activate Heidelpay Easycredit payment method.
 <details open>
-<summary>OMS Configuration</summary>
+<summary markdown='span'>OMS Configuration</summary>
 
 ```php
 $config[OmsConstants::PROCESS_LOCATION] = [
@@ -66,7 +66,7 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 
 2. Add Easycredit checkout steps to `StepFactory`.
 <details open>
-<summary>\Pyz\Yves\CheckoutPage\Process\StepFactory</summary>
+<summary markdown='span'>\Pyz\Yves\CheckoutPage\Process\StepFactory</summary>
 
 ```php
 <?php
@@ -149,7 +149,7 @@ class StepFactory extends BaseStepFactory
 
 3. Extend `CheckoutPageFactory` to change step factory creation:
 <details open>
-<summary>\Pyz\Yves\CheckoutPage\CheckoutPageFactory</summary>
+<summary markdown='span'>\Pyz\Yves\CheckoutPage\CheckoutPageFactory</summary>
 
 ```php
 <?php
@@ -175,7 +175,7 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 
 4. Extend `CheckoutController` to add `Easycredit` step action:
 <details open>
-<summary>\Pyz\Yves\CheckoutPage\Controller\CheckoutController</summary>
+<summary markdown='span'>\Pyz\Yves\CheckoutPage\Controller\CheckoutController</summary>
 
 ```php
 <?php
@@ -206,7 +206,7 @@ class CheckoutController extends BaseCheckoutController
 
 5. Extend `CheckoutPageControllerProvider` to add `Easycredit` actions:
 <details open>
-<summary>\Pyz\Yves\CheckoutPage\Plugin\Provider\CheckoutPageControllerProvider</summary>
+<summary markdown='span'>\Pyz\Yves\CheckoutPage\Plugin\Provider\CheckoutPageControllerProvider</summary>
 
 ```php
 <?php
@@ -269,7 +269,7 @@ class CheckoutPageControllerProvider extends BaseCheckoutPageControllerProvider
 
 6. Update `CheckoutPageDependencyProvider` with `Easycredit` related modifications:
 <details open>
-<summary>\Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider</summary>
+<summary markdown='span'>\Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider</summary>
 
 ```php
 <?php
@@ -353,7 +353,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 
 7. Update `payment.twig` template with `Easycredit` payment method:
 <details open>
-<summary>src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig</summary>
+<summary markdown='span'>src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig</summary>
 
 ```html
 {% raw %}{%{% endraw %} extends template('page-layout-checkout', 'CheckoutPage') {% raw %}%}{% endraw %}
@@ -380,7 +380,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 
 8. Update `summary.twig` to template to display `Easycredit` related fees:
 <details open>
-<summary>src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig</summary>
+<summary markdown='span'>src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig</summary>
 
 ```html
 {% raw %}{%{% endraw %} extends template('page-layout-checkout', 'CheckoutPage') {% raw %}%}{% endraw %}

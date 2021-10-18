@@ -30,7 +30,7 @@ The new version provides support to manage "abstract product-store" relations pe
 **Note:** `Spryker\Zed\Store\Communication\Plugin\Form\StoreRelationToggleFormTypePlugin` is introduced in `spryker/store` version 1.2.0.
 
 <details open>
-<summary>Example of injection:</summary>
+<summary markdown='span'>markdown='span'>Example of injection:</summary>
 
 ```php
 <?php

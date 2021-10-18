@@ -30,7 +30,7 @@ First, you need to create a new table with the name `pyz_product_country`. This 
 File: `Pyz/Zed/ProductCountry/Persistence/Propel/Schema/pyz_product_country.schema.xml`
 
 <details open>
-<summary>Click to expand the code sample</summary>
+<summary markdown='span'>Click to expand the code sample</summary>
 
 ```
 &lt;?xml version="1.0"?&gt;
@@ -67,7 +67,7 @@ Next, call the console propel:install console command in order to migrate the da
 Method: `Pyz\Zed\ProductCountry\Communication\Controller\ImportController::indexAction()`
 
 <details open>
-<summary>Click to expand the code sample</summary>
+<summary markdown='span'>Click to expand the code sample</summary>
 
 ```
 &lt;?php
@@ -101,7 +101,7 @@ class ProductCountryQueryContainer extends AbstractQueryContainer implements Pro
 In the `ProductCountryBusinessFactory` class you need to create a new instance of the `ProductCountryManager`. The dependency to the product module facade is missing in the class. Create a new method `getProductFacade` that returns the facade from the `ProductCountryDependencyProvider`.
 
 <details open>
-<summary>Click to expand the code sample</summary>
+<summary markdown='span'>Click to expand the code sample</summary>
 
 ```
 &lt;?php
@@ -143,7 +143,7 @@ class ProductCountryBusinessFactory extends SprykerBusinessFactory
 Now, implement the logic to save a new product, within the `ProductCountryManager`.
 
 <details open>
-<summary>Click to expand the code sample</summary>
+<summary markdown='span'>Click to expand the code sample</summary>
 
 ```
 &lt;?php
@@ -222,7 +222,7 @@ LEFT JOIN spy_country ON (spy_country.id_country = spy_product_country.fk_countr
 Now we need to add the new selected column `product_country` to the collectItem list in `Pyz\Zed\Collector\Business\Storage\ProductCollector`.
 
 <details open>
-<summary>Click to expand the code sample</summary>
+<summary markdown='span'>Click to expand the code sample</summary>
 
 ```
 &lt;?php

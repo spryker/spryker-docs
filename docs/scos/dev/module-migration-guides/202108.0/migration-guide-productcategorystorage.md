@@ -41,7 +41,7 @@ console transfer:generate
 6.  Add the new plugins:
 
 <details open>
-    <summary>Pyz\Zed\Publisher\PublisherDependencyProvider</summary>
+    <summary markdown='span'>Pyz\Zed\Publisher\PublisherDependencyProvider</summary>
 
 ```php    
 <?php

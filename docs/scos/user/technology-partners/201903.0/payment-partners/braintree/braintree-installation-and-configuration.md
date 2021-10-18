@@ -185,7 +185,7 @@ All payment plugins are located in the `SprykerEco\Zed\Braintree\Communication\P
 ## Frontend Integration
 
 <details open>
-<summary>src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig</summary>
+<summary markdown='span'>src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig</summary>
 
  ```php
  {% raw %}{%{% endraw %} extends template('page-layout-checkout', 'CheckoutPage') {% raw %}%}{% endraw %}

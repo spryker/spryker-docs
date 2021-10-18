@@ -144,7 +144,7 @@ The tax plugins are using the version 3.* of the Tax module. See [Migration Guid
 ## SalesAggregator Migration Console Command
 
 <details details>
-<summary>SalesAggregator Migration Console Command:</summary>
+<summary markdown='span'>SalesAggregator Migration Console Command:</summary>
 
 ```php
 <?php

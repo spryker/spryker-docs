@@ -60,7 +60,7 @@ There is a number of email templates with the respective Email CMS Blocks availa
 The table below contains the list of the default email templates, their Email CMS Blocks, and purpose.
 
 <details open>
-    <summary>Default email templates</summary>
+    <summary markdown='span'>Default email templates</summary>
 
 | When an email is sent | Email CMS Block name | Twig template |
 | --- | --- | --- |

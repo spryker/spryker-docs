@@ -37,7 +37,7 @@ To integrate Heidelpay, follow the steps below:
 1. Add sub form plugins and payment method handlers:
 
 <details open>
-<summary>Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider</summary>
+<summary markdown='span'>Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider</summary>
 
 ```php
  protected function addSubFormPluginCollection(Container $container): Container
@@ -80,7 +80,7 @@ protected function addPaymentMethodHandlerPluginCollection(Container $container)
 2. Add controller provider:
 
 <details open>
-<summary>\Pyz\Yves\ShopApplication\YvesBootstrap</summary>  
+<summary markdown='span'>\Pyz\Yves\ShopApplication\YvesBootstrap</summary>  
 
     ```php
  protected function getControllerProviderStack($isSsl)
@@ -97,7 +97,7 @@ protected function addPaymentMethodHandlerPluginCollection(Container $container)
 3. Add checkout plugins:
  
  <details open>
-<summary>\Pyz\Zed\Checkout\CheckoutDependencyProvider</summary>
+<summary markdown='span'>\Pyz\Zed\Checkout\CheckoutDependencyProvider</summary>
 
 ```php
  protected function getCheckoutOrderSavers(Container $container)
@@ -124,7 +124,7 @@ protected function getCheckoutPostHooks(Container $container)
 4. Add OMS commands and conditions:
 
 <details open>
-<summary>\Pyz\Zed\Oms\OmsDependencyProvider</summary>
+<summary markdown='span'>\Pyz\Zed\Oms\OmsDependencyProvider</summary>
 
 ```php
 public function provideBusinessLayerDependencies(Container $container)
@@ -173,7 +173,7 @@ protected function addCommandPlugins(Container $container): Container
 To make Heidelpay module work with your project, it's necessary to extend the frontend part:
 
 <details open>
-<summary>tsconfig.json</summary>
+<summary markdown='span'>tsconfig.json</summary>
  
  ```json
  "include": [
@@ -187,7 +187,7 @@ To make Heidelpay module work with your project, it's necessary to extend the fr
 
 
 <details open>
-<summary>frontend/settings.js</summary>
+<summary markdown='span'>frontend/settings.js</summary>
 
     ```bash
  // eco folders
@@ -208,7 +208,7 @@ eco: {
 </details>
 
  <details open>
-<summary>src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig</summary>
+<summary markdown='span'>src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig</summary>
 
     ```twig
  ...
@@ -297,7 +297,7 @@ eco: {
 </details>
 
  <details open>
-<summary>src/Pyz/Yves/Twig/TwigConfig.php</summary>
+<summary markdown='span'>src/Pyz/Yves/Twig/TwigConfig.php</summary>
 
  ```twig
  protected function addCoreTemplatePaths(array $paths)

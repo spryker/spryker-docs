@@ -60,7 +60,7 @@ All necessary configurations can be found in `vendor/spryker-eco/crefo-pay/confi
 ### Specific Configuration
 Add necessary payment methods to State Machine (OMS) configuration in the following file:
 <details open>
-<summary>inconfig_default.php</summary>
+<summary markdown='span'>inconfig_default.php</summary>
 
 ```php
 $config[OmsConstants::PROCESS_LOCATION] = [

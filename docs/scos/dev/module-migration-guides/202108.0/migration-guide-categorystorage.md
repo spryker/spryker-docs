@@ -42,7 +42,7 @@ console transfer:generate
         
 6.  Add the new plugins:
 <details open>
-    <summary>Pyz\Zed\Publisher\PublisherDependencyProvider</summary>
+    <summary markdown='span'>Pyz\Zed\Publisher\PublisherDependencyProvider</summary>
 
 ```php
 <?php
@@ -124,7 +124,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 8.  Add the new synchronization plugins:
 
 <details open>
-    <summary>Pyz\Zed\Synchronization\SynchronizationDependencyProvider</summary>
+    <summary markdown='span'>Pyz\Zed\Synchronization\SynchronizationDependencyProvider</summary>
 
 ```php    
 <?php

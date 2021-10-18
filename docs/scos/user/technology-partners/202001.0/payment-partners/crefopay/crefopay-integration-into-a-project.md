@@ -35,7 +35,7 @@ To integrate CrefoPay, do the following:
 1. Add shipment step plugin, payment subform plugins and payment method handlers:
 
 <details open>
-    <summary>\Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider</summary>
+    <summary markdown='span'>\Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider</summary>
 
 ```php
 <?php

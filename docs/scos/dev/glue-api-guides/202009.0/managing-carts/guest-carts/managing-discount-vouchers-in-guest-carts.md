@@ -46,7 +46,7 @@ To apply a discount voucher to a guest cart, send the request:
 
 
 <details open>
-    <summary>Request sample</summary>
+    <summary markdown='span'>Request sample</summary>
     
 `POST https://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers`
 
@@ -64,7 +64,7 @@ To apply a discount voucher to a guest cart, send the request:
 </details>
 
 <details open>
-    <summary>Request sample with discount voucher information</summary>
+    <summary markdown='span'>Request sample with discount voucher information</summary>
     
 `POST https://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers?include=vouchers`
 
@@ -89,7 +89,7 @@ To apply a discount voucher to a guest cart, send the request:
 ### Response
 
 <details open>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
     
 ```json
 {
@@ -126,7 +126,7 @@ To apply a discount voucher to a guest cart, send the request:
 </details>
 
 <details open>
-    <summary>Response sample with discount voucher information</summary>
+    <summary markdown='span'>Response sample with discount voucher information</summary>
     
 ```json
 {

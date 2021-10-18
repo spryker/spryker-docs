@@ -33,7 +33,7 @@ Sample request: `GET http://glue.mysprykershop.com/category-trees`
 
 ### Reponse 
 <details open>
-<summary>Response sample </summary>
+<summary markdown='span'>Response sample </summary>
 
 ```json
 {

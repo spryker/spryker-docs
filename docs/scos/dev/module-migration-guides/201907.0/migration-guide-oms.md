@@ -50,7 +50,7 @@ In OMS module version 8 we have also added support for stock reservations per st
 Run the database migrations:
 
 <details open>
-<summary>Code sample:</summary>
+<summary markdown='span'>Code sample:</summary>
     
 ```sql
 ALTER TABLE "spy_oms_product_reservation" 

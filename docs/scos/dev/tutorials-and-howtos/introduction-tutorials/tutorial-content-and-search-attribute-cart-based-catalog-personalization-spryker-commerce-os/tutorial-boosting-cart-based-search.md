@@ -73,7 +73,7 @@ class CatalogFactory extends SprykerCatalogFactory
 
 Check out the example code of the `CartBoostQueryExpanderPlugin` plugin:
 <details open>
-<summary>src/Pyz/Client/Catalog/Plugin/Elasticsearch/QueryExpander/CartBoostQueryExpanderPlugin.php</summary>
+<summary markdown='span'>src/Pyz/Client/Catalog/Plugin/Elasticsearch/QueryExpander/CartBoostQueryExpanderPlugin.php</summary>
 
 ```php
 <?php

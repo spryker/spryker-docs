@@ -103,7 +103,7 @@ To retrieve information about a specific Configurable Bundle template, send the 
 | `https://glue.mysprykershop.com/configurable-bundle-templates/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de?include=configurable-bundle-template-image-sets` | Retrieve information about the Configurable Bundle template `c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de with image sets`. |
 
 <details open>
-<summary>Response sample: retrieve information about a specific configurable bundle</summary>
+<summary markdown='span'>Response sample: retrieve information about a specific configurable bundle</summary>
 
 ```json
 {
@@ -122,7 +122,7 @@ To retrieve information about a specific Configurable Bundle template, send the 
 </details>
 
 <details open>
-<summary>Response sample: retrieve informatio abjout a specific configurable bundle including configurable bundle template slots, concrete products per slot, cocrete product prices, and image sets</summary>
+<summary markdown='span'>Response sample: retrieve informatio abjout a specific configurable bundle including configurable bundle template slots, concrete products per slot, cocrete product prices, and image sets</summary>
 
 ```json
 {
@@ -660,7 +660,7 @@ To retrieve information about a specific Configurable Bundle template, send the 
 </details>
 
 <details open>
-<summary>Response sample: retrieve information about a specific cofigurable bundle including configurable bundle image sets</summary>
+<summary markdown='span'>Response sample: retrieve information about a specific cofigurable bundle including configurable bundle image sets</summary>
 
 ```json
 {

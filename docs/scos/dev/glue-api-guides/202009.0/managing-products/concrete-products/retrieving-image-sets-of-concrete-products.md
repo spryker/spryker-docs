@@ -39,7 +39,7 @@ Request sample : `GET http://glue.mysprykershop.com/concrete-products/001_259040
 ### Response
 
 <details open>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
 
 ```json
 Sample response

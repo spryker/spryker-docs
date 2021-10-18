@@ -68,7 +68,7 @@ Request sample: `POST http://glue.mysprykershop.com/customers`
 
 
 <details open>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
     
 ```json
 {
@@ -128,7 +128,7 @@ Request sample: `GET https://glue.mysprykershop.com/customers`
 ### Response 
 
 <details open>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
     
 ```json
 {
@@ -187,7 +187,7 @@ Request sample: `GET http://glue.mysprykershop.com/customers/DE-25`
 ### Response
 
 <details open>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
     
 ```json
 {
@@ -264,7 +264,7 @@ Request sample: `PATCH http://glue.mysprykershop.com/customers/DE-25`
 ### Response
 
 <details open>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
     
 ```json
 {

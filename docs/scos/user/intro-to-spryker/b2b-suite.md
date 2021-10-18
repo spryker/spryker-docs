@@ -22,7 +22,7 @@ redirect_from:
 The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of course, every B2B project has its own set of features that meet their business needs and B2C features can be used as well, but the most common features for the B2B commerce are listed below.
 
 <details open>
-<summary>B2B feature list</summary>
+<summary markdown='span'>B2B feature list</summary>
 
 - [Configurable Product](/docs/scos/user/features/{{site.version}}/configurable-product-feature-overview.html)
 - [Return Management](/docs/scos/user/features/{{site.version}}/return-management-feature-overview/return-management-feature-overview.html)

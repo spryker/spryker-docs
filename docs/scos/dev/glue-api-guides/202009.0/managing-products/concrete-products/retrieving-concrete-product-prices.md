@@ -52,7 +52,7 @@ To retrieve prices of a concrete product, send the request:
 
 
 <details open>
-    <summary>Response sample</summary>
+    <summary markdown='span'>markdown='span'>Response sample</summary>
     
 ```json
 {
@@ -99,7 +99,7 @@ To retrieve prices of a concrete product, send the request:
 </details>
 
 <details open>
-    <summary>Response sample with a gross price in Swiss Franc</summary>
+    <summary markdown='span'>markdown='span'>Response sample with a gross price in Swiss Franc</summary>
 
 ```
 {

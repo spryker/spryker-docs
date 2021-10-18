@@ -68,21 +68,21 @@ The `itemscope` element in an HTML tag encloses information about the item. The 
  </details>
 
 <details open>
- <summary>Brand,  SKU, offer, and price</summary>
+ <summary markdown='span'>Brand,  SKU, offer, and price</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Applying+basic+SEO+approaches+to+your+project/brand-sku-offer-price.png) 
 
 </details>
 
 <details open>
-<summary>Description, product details, ratings</summary>
+<summary markdown='span'>Description, product details, ratings</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Applying+basic+SEO+approaches+to+your+project/description-product-details-ratings.png) 
 
  </details>
 
 <details open>
- <summary>Review</summary>
+ <summary markdown='span'>Review</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Applying+basic+SEO+approaches+to+your+project/review.png.png) 
 

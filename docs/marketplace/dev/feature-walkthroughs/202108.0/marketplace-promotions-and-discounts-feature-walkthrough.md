@@ -19,7 +19,7 @@ To learn more about the feature and to find out how end users use it, see [Marke
 | NAME | DESCRIPTION | 
 | --- | --- |
 | [DiscountMerchantSalesOrder](https://github.com/spryker/discount-merchant-sales-order) | Provides plugin for filtering out discounts in `MerchantOrderTransfer.order` that does not belongs to the current merchant order. |
-| [DiscountMerchantSalesOrderGui](https://github.com/spryker/discount-merchant-sales-order) | Provides the the endpoint `/discount-merchant-sales-order-gui/merchant-sales-order/list` to view of merchant order discounts list in Backoffice. |
+| [DiscountMerchantSalesOrderGui](https://github.com/spryker/discount-merchant-sales-order) | Provides the the endpoint `/discount-merchant-sales-order-gui/merchant-sales-order/list` to view a list merchant order discounts list in Backoffice. |
 | [MerchantSalesOrderExtension](https://github.com/spryker/merchant-sales-order-extension) | Provides plugin interfaces for `MerchantSalesOrder` module. |
 | [MerchantSalesOrder](https://github.com/spryker/merchant-sales-order) | Provides functionality to link merchant to sales orders. |
 

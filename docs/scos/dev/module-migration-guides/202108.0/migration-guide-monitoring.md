@@ -15,6 +15,7 @@ related:
 ---
 
 ## Upgrading from Version 1.* to Version 2.*
+
 For BC reasons, the initial version of this module had dependencies to the`spryker/new-relic` and `spryker/new-relic-api` modules.
 
 In this version, we have removed this hard dependency. If you still want to use New Relic as a monitoring service you can use the `spryker-eco/new-relic` module by running the command:
@@ -29,10 +30,10 @@ To enable the New Relic monitoring extension, add it to  `MonitoringDependencyPr
 ```php
 <?php
 namespace Pyz\Service\Monitoring;
-                         
+
 use Spryker\Service\Monitoring\MonitoringDependencyProvider as SprykerMonitoringDependencyProvider;
 use SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin;
-                         
+
 class MonitoringDependencyProvider extends SprykerMonitoringDependencyProvider
 {
 	/**
@@ -57,7 +58,7 @@ protected function getConsoleCommands(Container $container)
 		new \SprykerEco\Zed\NewRelic\Communication\Console\RecordDeploymentConsole(),
 	];
 }
- 
+
 /**
 * @param \Spryker\Zed\Kernel\Container $container
 *
@@ -66,11 +67,11 @@ protected function getConsoleCommands(Container $container)
 public function getEventSubscriber(Container $container)
 {
 	$eventSubscriber = parent::getEventSubscriber($container);
- 
+
 	if (extension_loaded('newrelic')) {
 		$eventSubscriber[] = new \Spryker\Zed\Monitoring\Communication\Plugin\MonitoringConsolePlugin();
 	}
- 
+
 	return $eventSubscriber;
 }
 ```
@@ -88,4 +89,3 @@ $config[\SprykerEco\Shared\NewRelic\NewRelicEnv::NEW_RELIC_APPLICATION_ID_ARRAY]
 ```
 
 For more details, see [Performance Monitoring - New Relic](/docs/scos/user/technology-partners/{{page.version}}/operational-tools-monitoring-legal-etc/new-relic.html).
-

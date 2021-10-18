@@ -20,14 +20,14 @@ This document describes how to upgrade the `CategoryGui` module.
 In version 2.* of the `CategoryGui` module, we:
 
 *   Increased the `Category` module version dependency.
-    
+
 *   Enabled the store assignment for `Category` to be changed in the Back Office.
-    
+
 
 Upgrade the `CategoryGui` module from version 1.* to 2.*:
 
 1.  To migrate the `Category` module to version 5.*, follow [Upgrading from version 4.* to 5.*](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-category.html#upgrading-from-version-4---to-5--).
-    
+
 2.  Update the `CategoryGui` module to version 2.0.0:
 ```bash    
 composer require spryker/category-gui:"^2.0.0" --update-with-dependencies
@@ -41,15 +41,15 @@ console transfer:generate
 console navigation:build-cache
 ```    
 5.  From `Pyz\Zed\Category\CategoryDependencyProvider`, remove the following deprecated plugins:
-    
-    *   `CategoryImageFormPlugin`
-        
-    *   `CategoryImageFormTabExpanderPlugin`
-        
-    *   `ReadCmsBlockCategoryRelationsPlugin`
-        
-    *   `ReadProductCategoryRelationPlugin`
-        
+
+* `CategoryImageFormPlugin`
+
+* `CategoryImageFormTabExpanderPlugin`
+
+* `ReadCmsBlockCategoryRelationsPlugin`
+
+* `ReadProductCategoryRelationPlugin`
+
 6.  To implement new plugins, update the related modules:
 ```bash    
 composer require spryker/category-image-gui:"^1.3.0" spryker/cms-block-category-connector:"^2.4.0" spryker/product-category:"^4.12.0" spryker/store-gui:"^1.1.0" --update-with-dependencies
@@ -58,7 +58,7 @@ composer require spryker/category-image-gui:"^1.3.0" spryker/cms-block-category-
 
 <details open>
     <summary>\Pyz\Zed\CategoryGui\CategoryGuiDependencyProvider</summary>
-    
+
 ```php    
 <?php
 
@@ -124,13 +124,12 @@ class CategoryGuiDependencyProvider extends SpykerCategoryGuiDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-
 Make sure that, in the Back Office:
 
-*   Category management is working correctly.
-    
-*   You can change the store assignment of categories.
-    
+* Category management is working correctly.
+
+* You can change the store assignment of categories.
+
 
 
 {% endinfo_block %}

@@ -38,7 +38,9 @@ console transfer:generate
 In this new version of the **ManualOrderEntryGui** module, we have added support of split delivery. You can find more details about the changes on the [ManualOrderEntryGui module](https://github.com/spryker/manual-order-entry-gui/releases) release page.
 
 {% info_block errorBox %}
+
 This release is a part of the **Split delivery** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Split Delivery Migration Concept](/docs/scos/dev/migration-concepts/split-delivery-migration-concept.html).
+
 {% endinfo_block %}
 
 **To upgrade to the new version of the module, do the following:**
@@ -59,5 +61,7 @@ console transfer:generate
 ## Upgrading from Version 0.5.* to Version 0.7.0
 
 {% info_block infoBox %}
+
  In order to dismantle the Horizontal Barrier and enable partial module updates on projects, Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Please [contact us](https://spryker.com/en/support/) if you have any questions.
-{% endinfo_block %} if you have any questions. )
+
+ {% endinfo_block %}

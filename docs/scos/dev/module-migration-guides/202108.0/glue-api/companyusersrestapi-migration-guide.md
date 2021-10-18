@@ -15,7 +15,7 @@ In this version, the behavior of the `GET company-users` endpoint was changed. N
 Adjust your code to use new functionality:
 1. If you were using the `/company-users` endpoint to get available Business-on-Behalf Company Users, change it to `/company-users/mine`.
 
-1. Re-generate transfer objects:
+1. Regenerate transfer objects:
 
 ```php
 vendor/bin/console transfer:generate

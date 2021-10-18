@@ -20,8 +20,11 @@ The `setup:install` command utilizes two new commands for cleaning up generated 
 The new commands need to be registered in projects in order to enable `setup:install` to run them. `ConsoleDependencyProvider::getConsoleCommands()` needs to return instances of `\Spryker\Zed\Setup\Communication\Console\EmptyGeneratedDirectoryConsole` and `\Spryker\Zed\Cache\Communication\Console\EmptyAllCachesConsole.`
 
 {% info_block infoBox "Deprecation Notice" %}
+
 As of this release the following commands have been deprecated and need to be removed `\Spryker\Zed\Setup\Communication\Console\RemoveGeneratedDirectoryConsole`</br> `\Spryker\Zed\Cache\Communication\Console\DeleteAllCachesConsole`
+
 {% endinfo_block %}
+
 ```php
 <?php
 
@@ -34,7 +37,7 @@ use Spryker\Zed\Setup\Communication\Console\EmptyGeneratedDirectoryConsole;
 
 class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {
-    
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -48,7 +51,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
             new EmptyGeneratedDirectoryConsole(),
             // ...
         ];
-        
+
         return $commands;
     }
 }
@@ -57,4 +60,3 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 * Checkout other Console commands
 -->
-

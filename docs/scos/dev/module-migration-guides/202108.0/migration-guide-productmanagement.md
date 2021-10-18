@@ -21,7 +21,9 @@ related:
 In this new version of the **ProductManagement** module, we have added support of decimal stock. You can find more details about the changes on the [ProductManagement module](https://github.com/spryker/product-management/releases) release page.
 
 {% info_block errorBox %}
+
 This release is a part of the **Decimal Stock** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Decimal Stock Migration Concept](/docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html).
+
 {% endinfo_block %}
 
 **To upgrade to the new version of the module, do the following:**
@@ -48,8 +50,11 @@ console transfer:generate
 *Estimated migration time: 5 min*
 
 ## Upgrading from Version 0.* to Version 0.18.0
+
 {% info_block infoBox %}
+
 In order to dismantle the Horizontal Barrier and enable partial module updates on projects, a Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Please [contact us](https://spryker.com/en/support/) if you have any questions.
+
 {% endinfo_block %}
 
 ## Upgrading from Version 0.9.* to Version 0.10.*
@@ -62,11 +67,13 @@ The new version provides support to manage the `abstract product-store` relation
 4. The Product Information Management (PIM) Back Office expects the `abstract product-store` relation handling a partial form to be defined in the dependency provider using the `Spryker\Zed\Kernel\Communication\Form\FormTypeInterface`. You can use the single store and multi-store compatible default implementation `Spryker\Zed\Store\Communication\Form\Type\StoreRelationToggleType` wrapped in `Spryker\Zed\Store\Communication\Plugin\Form\StoreRelationToggleFormTypePlugin`.
 
 {% info_block warningBox "Note" %}
+
 `Spryker\Zed\Store\Communication\Plugin\Form\StoreRelationToggleFormTypePlugin` is introduced in `spryker/store` version 1.2.0.
+
 {% endinfo_block %}
 
 **Example of injection:**
-    
+
 ```php
 <?php
 namespace Pyz\Zed\ProductManagement;
@@ -86,7 +93,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 }
 ```
 
-You should be able now to see the `abstract product-store` relations in the Product Information Management (PIM) Back Office. However, you will not able to manage / change anything yet. If you would like to enable the entire multi-store product behavior, see [Multi-Store Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/multi-store-products-feature-integration.html). 
+You should be able now to see the `abstract product-store` relations in the Product Information Management (PIM) Back Office. However, you will not able to manage / change anything yet. If you would like to enable the entire multi-store product behavior, see [Multi-Store Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/multi-store-products-feature-integration.html).
 
 ## Upgrading from Version 0.8.* to Version 0.9.*
 
@@ -135,17 +142,19 @@ Project's importer was also updated to take advantage of the new `ProductAttribu
 
 * `src/Pyz/Zed/Importer/Business/Factory/AbstractFactory.php`
 Removed `getProductManagementFacade()` and replaced it with the `getProductAttributeFacade()` method.
-    
+
 * `src/Pyz/Zed/Importer/Business/Factory/ImporterFactory.php`
 Removed `getProductManagementFacade()` and replaced it with the `getProductAttributeFacade()` method.
-    
+
 * `src/Pyz/Zed/Importer/Business/Importer/ProductManagement/ProductManagementAttributeImporter.php`
 Removed `$productManagementFacade` and replaced it with the `$productAttributeFacade` property.
-    
-* `src/Pyz/Zed/Importer/ImporterDependencyProvider.php` 
+
+* `src/Pyz/Zed/Importer/ImporterDependencyProvider.php`
 Removed `FACADE_PRODUCT_MANAGEMENT` and replaced it with the `FACADE_PRODUCT_ATTRIBUTE` constant.
         Removed `addProductManagementFacade()` and replaced it with the `addProductAttributeFacade()` method.
 
 {% info_block errorBox %}
+
 There were no changes to the database schema.
+
 {% endinfo_block %}

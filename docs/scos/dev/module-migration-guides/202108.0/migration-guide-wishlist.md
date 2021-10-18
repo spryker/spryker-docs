@@ -19,9 +19,13 @@ related:
 ## Upgrading from Version 6.* to Version 8.0.0
 
 {% info_block infoBox %}
+
 In order to dismantle the Horizontal Barrier and enable partial module updates on projects, a Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Please [contact us](https://spryker.com/en/support/) if you have any questions.
+
 {% endinfo_block %}
+
 ***
+
 ## Upgrading from Version 5.* to Version 6.*
 
 With the implementation of the quote storage strategies, the new version 5.0.0 of the Cart module has been released. The Wishlist module is dependent on it, so make sure your Cart module's version is 5.0.0 or higher.
@@ -32,7 +36,9 @@ With the implementation of the quote storage strategies, the new version 5.0.0 o
 
 From version 2 have we added support for multi-currency. First of all, make sure you migrated the Price module. We have changed `ProductStoreClient` to resolve product prices based on the currently selected price mode/currency.
 We have added a new depedendecy to `ProductStoreClient`: now use `Spryker\Client\Wishlist\Dependency\Client\WishlistToPriceProductInterface`. If you have extended this class, merge your changes with core accordingly.
+
 ***
+
 ## Upgrading from Version 2.* to Version 3.*
 
 If you’re migrating the Wishlist module from version 2 to version 3, you need to follow the steps described below.
@@ -70,4 +76,9 @@ CREATE UNIQUE INDEX "spy_wishlist_item-unique-fk_wishlist-fk_product" ON spy_wis
 ```
 
 Schema diagram:
-![wishlist_schema.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Module+Migration+Guides/Migration+Guide+-+Wishlist/wishlist_schema.png) 
+
+<div class="width-100">
+
+![wishlist_schema.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Module+Migration+Guides/Migration+Guide+-+Wishlist/wishlist_schema.png)
+
+</div>

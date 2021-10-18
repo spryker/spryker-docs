@@ -1,5 +1,5 @@
 ---
-title: Migration guide- Auth module to SecurityGui module
+title: Migration guide - Auth module to SecurityGui module
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-auth-module-to-securitygui-module
 originalArticleId: 3c77ca14-9017-4a29-8576-aea8a0bd3294
@@ -31,6 +31,7 @@ To migrate from the `Auth` module to `Symfony Security`, do the following:
 The steps in this section show you how to re-configure the YVES system user and update the configuration file to avoid using the `Auth` module constants, which will be removed.
 
 {% endinfo_block %}
+
 1. Run:
     ```bash
     composer require spryker-feature/spryker-core:dev-master
@@ -40,11 +41,11 @@ The steps in this section show you how to re-configure the YVES system user and 
     ```php
     use Spryker\Shared\Auth\AuthConstants;
     ```
-    * Add: 
+    * Add:
     ```php
     use Spryker\Shared\SecuritySystemUser\SecuritySystemUserConstants;
     ```
-    * Change: 
+    * Change:
     ```php
     $config[AuthConstants::AUTH_DEFAULT_CREDENTIALS]['yves_system']['token'] = 'JDJ5JDEwJFE0cXBwYnVVTTV6YVZXSnVmM2l1UWVhRE94WkQ4UjBUeHBEWTNHZlFRTEd4U2F6QVBqejQ2';
     ```
@@ -53,11 +54,11 @@ The steps in this section show you how to re-configure the YVES system user and 
     $config[SecuritySystemUserConstants::AUTH_DEFAULT_CREDENTIALS]['yves_system']['token'] = 'JDJ5JDEwJFE0cXBwYnVVTTV6YVZXSnVmM2l1UWVhRE94WkQ4UjBUeHBEWTNHZlFRTEd4U2F6QVBqejQ2';
     ```
 3. Adjust `config/Shared/config_default.php`.
-    *  Remove: 
+    *  Remove:
     ```php
     use Spryker\Shared\Auth\AuthConstants;
     ```
-    *  Add: 
+    *  Add:
     ```php
     use Spryker\Shared\SecuritySystemUser\SecuritySystemUserConstants;
     ```
@@ -84,10 +85,10 @@ The steps in this section show you how to re-configure the YVES system user and 
     ],
     ];
     ```
-    * Change: 
+    * Change:
     ```php
     $config[AuthConstants::SYSTEM_USER_SESSION_REDIS_LIFE_TIME] = 20;
-    ``` 
+    ```
     to:             
      ```php
     $config[SecuritySystemUserConstants::SYSTEM_USER_SESSION_REDIS_LIFE_TIME] = 20;
@@ -95,11 +96,11 @@ The steps in this section show you how to re-configure the YVES system user and 
 
 4. Adjust `tests/PyzTest/Zed/Console/_data/cli_sandbox/config/Shared/config_default.php`.
 
-    *  Remove: 
+    *  Remove:
     ```php
     use Spryker\Shared\Auth\AuthConstants;
     ```
-    *  Add: 
+    *  Add:
     ```php
     use Spryker\Shared\SecuritySystemUser\SecuritySystemUserConstants;
     ```
@@ -137,27 +138,32 @@ The steps in this section show you how to re-configure the YVES system user and 
 
     * If you are using the plugin `Spryker/Zed/Auth/Communication/Plugin/SessionRedis/SystemUserSessionRedisLifeTimeCalculatorPlugin` in `src/Pyz/Zed/SessionRedis/SessionRedisDependencyProvider::getSessionRedisLifeTimeCalculatorPlugins()`, please replace it with `Spryker/Zed/SecuritySystemUser/Communication/Plugin/SessionRedis/SystemUserSessionRedisLifeTimeCalculatorPlugin`.
 
-## Update Security module   
+## Update Security module  
+
 {% info_block infoBox "Info" %}
 
 Updating the Security module is necessary to use the `SecurityGui` module, which replaces part of the `Auth` module's functionality.
 
 {% endinfo_block %}
+
 Run:
 ```bash
 composer update spryker/security --with-dependencies
 ```
 
 ## Update spryker-feature/spryker-core-back-office
+
 {% info_block infoBox "Info" %}
 
 This section contains the basic steps for migrating from the `Auth` module to the `SecurityGui` module.
 
 {% endinfo_block %}
+
 1. Run:
 ```bash
 composer require spryker-feature/spryker-core-back-office:dev-master
 ```
+
 2. Adjust `config/Shared/config_default.php`.
 
     * Change:
@@ -169,6 +175,7 @@ composer require spryker-feature/spryker-core-back-office:dev-master
         'action' => '*',
         'type' => 'allow',
     ```
+
     to:
     ```php
     $config[AclConstants::ACL_DEFAULT_RULES] = [
@@ -178,6 +185,7 @@ composer require spryker-feature/spryker-core-back-office:dev-master
         'action' => '*',
         'type' => 'allow',
     ```
+
 3. Adjust `src/Pyz/Zed/Application/ApplicationDependencyProvider.php`.
 
 Add `Spryker\Zed\Security\Communication\Plugin\Application\SecurityApplicationPlugin` to `getApplicationPlugins()`.
@@ -191,9 +199,10 @@ Add `Spryker\Zed\Security\Communication\Plugin\Application\SecurityApplicationPl
             ...,
             new SecurityApplicationPlugin(),
         ];
-        
+
         ...
     }
+
 ```
 4. Adjust `src/Pyz/Zed/EventDispatcher/EventDispatcherDependencyProvider.php`.
 
@@ -226,6 +235,7 @@ Remove `RestorePasswordMailTypePlugin()` and add `UserPasswordResetMailTypePlugi
         ...
     }
 ```
+
 6. Update `src/Pyz/Zed/Security/SecurityDependencyProvider.php` with code:
 ```php
 <?php
@@ -257,6 +267,7 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
     }
 }
 ```
+
 7. Update `src/Pyz/Zed/SecurityGui/SecurityGuiConfig.php` with code:
 ```php
 <?php
@@ -275,6 +286,7 @@ class SecurityGuiConfig extends SprykerSecurityGuiConfig
     protected const IGNORABLE_ROUTE_PATTERN = '^/(security-gui|health-check|_profiler/wdt)';
 }
 ```
+
 8. Update `src/Pyz/Zed/UserPasswordReset/UserPasswordResetDependencyProvider.php` with code:   
 ```php
 <?php
@@ -304,35 +316,41 @@ class UserPasswordResetDependencyProvider extends SprykerUserPasswordResetDepend
 ```
 
 ## Remove the old modules
+
 {% info_block infoBox "Info" %}
 
 This section guides you how to remove the old module files.
 
 {% endinfo_block %}
+
 1. If the `Auth` module has not been uninstalled, run:
 ```bash
 composer remove spryker/auth
 ```
+
 2. Run:
 ```bash
 composer remove spryker/auth-mail-connector spryker/auth-mail-connector-extension
 ```
+
 3. Remove `src/Orm/Zed/Auth folder`, including all the files.
 4. Remove `src/Pyz/Zed/Auth` folder, including all the files.
 5. Remove `src/Pyz/Zed/AuthMailConnector` folder, including all the files.
 
 ## Update SprykerTests
+
 {% info_block infoBox "Info" %}
 
 This action is required for the SprykerTests to be up-to-date.
 
 {% endinfo_block %}
+
 1. Run:
 ```bash
 composer update spryker/application --with-dependencies
 ```
 2. Adjust `tests/PyzTest/Zed/Console/_data/cli_sandbox/config/Shared/config_default.php`.
-   
+
     * Change:
     ```php
     $config[AclConstants::ACL_DEFAULT_CREDENTIALS] = [
@@ -448,8 +466,9 @@ composer update spryker/application --with-dependencies
     ],
     ];
     ```
-    
+
 ## Generate transfers
+
 {% info_block infoBox "Info" %}
 
 This section helps you to generate transfer objects.
@@ -475,4 +494,3 @@ console propel:install
 ```
 
 *Estimated migration time: 2 hours.*
-

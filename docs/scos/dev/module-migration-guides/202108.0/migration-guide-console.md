@@ -16,9 +16,10 @@ related:
 
 {% info_block errorBox "Prerequisites" %}
 
-This migration guide is a part of the [Search migration effort](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-search.html#upgrading-from-version-8-9---to-version-8-10--). 
+This migration guide is a part of the [Search migration effort](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-search.html#upgrading-from-version-89-to-version-810).
 
 {% endinfo_block %}
+
 To upgrade the module, do the following:
 1. Remove the deprecated search related console command classes from `Pyz\Zed\Console\ConsoleDependencyProvider`:
 ```bash
@@ -87,14 +88,16 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 ## Upgrading from Version 3.* to Version 4.*
 
 Console version 4 has been prepared for a standalone usage. Now, you are able to use `Console` module even without a DB configuration.
-Find or create `ConsoleDependencyProvider` in your project. 
+Find or create `ConsoleDependencyProvider` in your project.
 
 {% info_block warningBox %}
+
 Make sure it extends `\Spryker\Zed\Console\ConsoleDependencyProvider`.
+
 {% endinfo_block %}
 
 Find `getServiceProviders method` and add `\Spryker\Zed\Propel\Communication\Plugin\ServiceProvider\PropelServiceProvider` to the service stack.
-        
+
 The method could look like this:
 
 ```php

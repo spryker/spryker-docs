@@ -11,11 +11,13 @@ redirect_from:
 ---
 
 ## Upgarding from Version 1.1* to Version 1.2*
+
 {% info_block errorBox "Prerequisites" %}
 
-This migration guide is a part of the [Search migration effort](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-search.html#upgrading-from-version-8-9---to-version-8-10--). 
+This migration guide is a part of the [Search migration effort](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-search.html#upgrading-from-version-8-9---to-version-8-10--).
 
 {% endinfo_block %}
+
 To upgrade the module, do the following:
 1. Remove all  deprecated query expander and result formatter plugins coming from the Search module (if any) from `Pyz\Client\ProductNew\ProductNewDependencyProvider`:
 
@@ -32,7 +34,7 @@ To upgrade the module, do the following:
 2. Enable the new plugins from SearchElasticsearch in `Pyz\Client\ProductNew\ProductNewDependencyProvider`:
 
 Pyz\Client\ProductNew
-   
+
 ```php
 <?php
 

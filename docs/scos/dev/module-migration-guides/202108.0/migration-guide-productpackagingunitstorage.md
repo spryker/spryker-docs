@@ -16,7 +16,9 @@ redirect_from:
 In this new version of the **ProductPackagingUnitStorage** module, we have added support of decimal stock. You can find more details about the changes on the [ProductPackagingUnitStorage module](https://github.com/spryker/product-packaging-unit-storage/releases) release page.
 
 {% info_block errorBox %}
+
 This release is a part of the **Decimal Stock** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Decimal Stock Migration Concept](/docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html).
+
 {% endinfo_block %}
 
 **To upgrade to the new version of the module, do the following:**
@@ -28,7 +30,7 @@ composer require spryker/product-packaging-unit-storage: "^5.0.0" --update-with-
 ```
 2. Rename the `spy_product_abstract_packaging_storage.schema.xml` to `spy_product_packaging_unit_storage.schema.xml` and do the following changes:
 
-src/Pyz/Zed/ProductPackagingUnitStorage/Persistence/Propel/Schema/spy_product_packaging_unit_storage.schema.xml
+**src/Pyz/Zed/ProductPackagingUnitStorage/Persistence/Propel/Schema/spy_product_packaging_unit_storage.schema.xml**
 
 ```xml
 <?xml version="1.0"?>
@@ -38,13 +40,13 @@ src/Pyz/Zed/ProductPackagingUnitStorage/Persistence/Propel/Schema/spy_product_pa
           xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
           namespace="Orm\Zed\ProductPackagingUnitStorage\Persistence"
           package="src.Orm.Zed.ProductPackagingUnitStorage.Persistence">
- 
+
     <table name="spy_product_packaging_unit_storage">
         <behavior name="synchronization">
             <parameter name="queue_pool" value="synchronizationPool"/>
         </behavior>
     </table>
- 
+
 </database>
 ```
 
@@ -80,16 +82,16 @@ done
 
 7. Add the following plugin to the project dependency provider, if applicable, and remove the old `ProductAbstractPackagingEventResourceRepositoryPlugin` plugin.
 
-src/Pyz/Zed/EventBehavior/EventBehaviorDependencyProvider.php
+**src/Pyz/Zed/EventBehavior/EventBehaviorDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\EventBehavior;
- 
+
 use Spryker\Zed\EventBehavior\EventBehaviorDependencyProvider as SprykerEventBehaviorDependencyProvider;
 use Spryker\Zed\ProductPackagingUnitStorage\Communication\Plugin\Event\ProductPackagingUnitEventResourceBulkRepositoryPlugin;
- 
+
 class EventBehaviorDependencyProvider extends SprykerEventBehaviorDependencyProvider
 {
     /**
@@ -110,7 +112,9 @@ class EventBehaviorDependencyProvider extends SprykerEventBehaviorDependencyProv
 ## Upgrading from Version 2.* to Version 4.0.0
 
 {% info_block infoBox %}
+
 In order to dismantle the Horizontal Barrier and enable partial module updates on projects, Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Please contact us if you have any questions.
+
 {% endinfo_block %}
 
 ## Upgrading from Version 1.* to Version  2.*
@@ -132,5 +136,3 @@ vendor/bin/console transfer:generate
 ```
 
 *Estimated migration time: ~1h.*
-
-

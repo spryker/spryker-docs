@@ -11,6 +11,7 @@ redirect_from:
 ---
 
 ## Upgrading from Version 1.* to Version 2.*
+
 Version 2.* of the ProductLabelSearch module changes the storage data structure to maintain relations of product labels to stores.
 
 To upgrade to the new version of the module, do the following:
@@ -71,9 +72,10 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 {% info_block errorBox "Prerequisites" %}
 
-This migration guide is a part of the [Search migration effort](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-search.html#upgrading-from-version-8-9---to-version-8-10--). 
+This migration guide is a part of the [Search migration effort](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-search.html#upgrading-from-version-89-to-version-810).
 
 {% endinfo_block %}
+
 To upgrade the module, do the following:
 1. Update the module with composer:
 ```Bash

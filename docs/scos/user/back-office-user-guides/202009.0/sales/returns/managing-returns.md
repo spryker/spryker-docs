@@ -62,7 +62,7 @@ To trigger the return states for all the items in the return, click the states a
 
 For all returns, irrespective of their statuses, you can print the automatically generated [return slip](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html#return-slip). 
 
-For all returns, irrespective of their statuses, you can print the automatically generated [return slip](docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html.html#return-slip). 
+For all returns, irrespective of their statuses, you can print the automatically generated [return slip](docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html.#return-slip). 
 
 To print the return slip:
 

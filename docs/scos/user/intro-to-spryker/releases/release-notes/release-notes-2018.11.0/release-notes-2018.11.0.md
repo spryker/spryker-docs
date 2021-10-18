@@ -118,7 +118,7 @@ Packaging units can either contain a fixed or variable quantity of items.
 ### Barcode Generator
 Enrich your products with an individual barcode that is generated based on the SKU number. The barcode can be printed for scanning directly from a product or attached to a shopping list for easy reordering.
 
-**Documentation**: [Barcode Generator](https://documentation.spryker.com/2021080/docs/product-barcode)
+**Documentation**: [Barcode Generator](/docs/scos/user/features/{{page.version}}/product-barcode-feature-overview.html)
 
 ### Products Restrictions
 With the Product Restrictions feature, you as a shop owner can easily define who of your customers gets to see what items or categories. Any item in your product catalog can be either whitelisted or blacklisted per customer. The lists can be uploaded or imported to make it easier to set up.

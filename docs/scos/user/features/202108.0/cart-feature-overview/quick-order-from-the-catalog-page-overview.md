@@ -12,6 +12,7 @@ redirect_from:
 ---
 
 Buyers can add simple products with one product variant to cart directly from the Category page by clicking the **Add to cart** icon on the product card.
+
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Catalog+Management/Quick+Order+from+the+Catalog+Page/Quick+Order+from+the+Catalog+Page+Feature+Overview/quick-order-from-catalog.png)
 
 For the **Add to cart** icon to be active for the product on the Catalog page, the following criteria should be met:

@@ -63,7 +63,7 @@ Request sample: `POST https://glue.mysprykershop.com/agent-access-tokens`
 ### Response
 
 <details open>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
 
 ```json
 {

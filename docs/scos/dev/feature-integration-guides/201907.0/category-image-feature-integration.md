@@ -39,7 +39,7 @@ Adjust the schema definition so entity changes will trigger events.
 | `spy_category_image_set_to_category_image` | `Entity.spy_category_image_set_to_category_image.create`</br>`Entity.spy_category_image_set_to_category_image.update`</br>`Entity.spy_category_image_set_to_category_image.delete` |
 
 <details open>
-   <summary>src/Pyz/Zed/CategoryImage/Persistence/Propel/Schema/spy_category_image.schema.xml</summary>
+   <summary markdown='span'>src/Pyz/Zed/CategoryImage/Persistence/Propel/Schema/spy_category_image.schema.xml</summary>
     
 ```html
 <?xml version="1.0"?>
@@ -71,7 +71,7 @@ Adjust the schema definition so entity changes will trigger events.
 Set up synchronization queue pools so non-multistore entities (not store specific entities) are synchronized among stores:
 
 <details open>
-<summary>src/Pyz/Zed/CategoryImageStorage/Persistence/Propel/Schema/spy_category_image_storage.schema.xml</summary>
+<summary markdown='span'>src/Pyz/Zed/CategoryImageStorage/Persistence/Propel/Schema/spy_category_image_storage.schema.xml</summary>
     
 ```html
 <?xml version="1.0"?>
@@ -126,7 +126,7 @@ In this step, you will enable publishing of table changes (create, edit, delete
 | `CategoryImageStorageEventSubscriber` | Registers listeners that are responsible for publishing category image information to storage when a related entity changes. | None | `Spryker\Zed\CategoryImageStorage\Communication\Plugin\Event\Subscriber` |
 
 <details open>
-<summary>src/Pyz/Zed/Event/EventDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Event/EventDependencyProvider.php</summary>
     
 ```php
 <?php
@@ -151,7 +151,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/CategoryImageStorage/CategoryImageStorageConfig.php</summary>
+<summary markdown='span'>src/Pyz/Zed/CategoryImageStorage/CategoryImageStorageConfig.php</summary>
 
 ```php
 <?php
@@ -183,7 +183,7 @@ Add the following plugins to your project:
 | `CategoryImageSynchronizationDataPlugin` | Synchronizes all category image entries from the database to Redis. | None | `Spryker\Zed\CategoryImageStorage\Communication\Plugin\Synchronization` |
 
 <details open>
-<summary>src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -246,7 +246,7 @@ In this step, category template will be configured to be able to display categor
 Prepare your data according to your requirements using our demo data:
 
 <details open>
-<summary>data/import/category_template.csv</summary>
+<summary markdown='span'>data/import/category_template.csv</summary>
 
 ```bash
 template_name,template_path
@@ -284,7 +284,7 @@ Add the following plugins to your project:
 | `CategoryImageFormTabExpanderPlugin` | Extends create/edit category tabs with category image set related item. | None | `\Spryker\Zed\CategoryImageGui\Communication\Plugin` |
 
 <details open>
-<summary>src/Pyz/Zed/Category/CategoryDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Category/CategoryDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -404,7 +404,7 @@ Register the following global widgets:
 | `CategoryImageStorageWidget` | Finds the given category image set in Storage and displays its first image in a given size format. | `SprykerShop\Yves\CategoryImageStorageWidget\Widget` |
 
 <details open>
-<summary>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
 
 ```php
 <?php  

@@ -49,7 +49,7 @@ Make sure that the following modules are installed:
 Put all the payment methods available in the shop to  `CheckoutRestApiConfig`, for example:
 
 <details open>
-<summary>src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiConfig.php</summary>
+<summary markdown='span'>src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiConfig.php</summary>
     
 ```php
 <?php
@@ -93,7 +93,7 @@ class PaymentsRestApiConfig extends SprykerPaymentsRestApiConfig
 To have payment methods available for the checkout,  extend `RestPaymentTransfer` with project-specific payment method transfers:
 
 <details open>
-<summary>src/Pyz/Shared/CheckoutRestApi/Transfer/checkout_rest_api.transfer.xml</summary>
+<summary markdown='span'>src/Pyz/Shared/CheckoutRestApi/Transfer/checkout_rest_api.transfer.xml</summary>
 
 ```xml
 <?xml version="1.0"?>
@@ -155,7 +155,7 @@ Activate the following plugin:
 | `PaymentMethodsByCheckoutDataResourceRelationshipPlugin` | Adds payment-methods resource as relationship in case `RestCheckoutDataTransfer` is provided as payload. | None | `Spryker\Glue\PaymentsRestApi\Plugin\GlueApplication` |
 
 <details open>
-<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
     
 ```php
 <?php
@@ -204,7 +204,7 @@ Mappers should be configured on a project level to map the data from the request
 | PaymentsQuoteMapperPlugin | Adds a mapper that maps Payments information to `QuoteTransfer`. | None | `Spryker\Zed\PaymentsRestApi\Communication\Plugin\CheckoutRestApi` |
 
 <details open>
-<summary>src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
     
 ```php
 <?php
@@ -243,7 +243,7 @@ To verify that `PaymentsQuoteMapperPlugin` is activated, send a POST request to 
 | SelectedPaymentMethodCheckoutDataResponseMapperPlugin | Maps the selected payment method data to the checkout-data resource attributes. | None | `Spryker\Glue\PaymentsRestApi\Plugin\CheckoutRestApi` |
 
 <details open>
-<summary>src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
     
 ```php
 <?php

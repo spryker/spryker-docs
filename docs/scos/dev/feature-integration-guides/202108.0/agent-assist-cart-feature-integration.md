@@ -27,8 +27,8 @@ To start the feature integration, overview and install the necessary features:
 
 Activate the following plugins:
 
-| PLUGIN                                                  | SPECIFICATION               | PREREQUISITES | NAMESPACE                         |
-| ------------------------------------------------------- | --------------------------- | ------------- | --------------------------------- |
+| PLUGIN   | SPECIFICATION   | PREREQUISITES | NAMESPACE   |
+| -------------------- | -------------------- | ------------- | -------------------- |
 | SanitizeCustomerQuoteImpersonationSessionFinisherPlugin | Sanitizes a customer quote. | None          | Spryker\Client\Quote\Plugin\Agent |
 
 **src/Pyz/Client/Agent/AgentDependencyProvider.php**
@@ -66,13 +66,8 @@ Ensure that, after finishing a customer impersonation, the session quote is empt
 
 Integrate the following related features:
 
-| FEATURE                              | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                            |
-| ------------------------------------ | -------------------------------- | ------------------------------------------------------------ |
-<<<<<<< HEAD:docs/scos/dev/feature-integration-guides/202108.0/agent-assist-cart-feature-integration-guide.md
-| Agent Assist            | ✓                                | [Agent Assist feature integration guide](/docs/scos/dev/feature-integration-guides/{{page.version}}/agent-assist-feature-integration.html) |
-| Agent Assist + Shopping List |                                  | [Agent Assist + Shopping List feature integration guide](/docs/scos/dev/feature-integration-guides/{{page.version}}/agent-assist-shopping-list-feature-integration.html) |
-=======
-| Agent Assist            | ✓                                | [Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/agent-assist-feature-integration.html) |
-| Agent Assist + Shopping List |                                  | [Agent Assist + Shopping List feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/agent-assist-shopping-list-feature-integration.html) |
+| FEATURE   | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE  |
+| ----------------- | ------------ | ----------------------- |
+| Agent Assist            | ✓     | [Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/agent-assist-feature-integration.html) |
+| Agent Assist + Shopping List |         | [Agent Assist + Shopping List feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/agent-assist-shopping-list-feature-integration.html) |
 
->>>>>>> scos-migration-updated:docs/scos/dev/feature-integration-guides/202108.0/agent-assist-cart-feature-integration.md

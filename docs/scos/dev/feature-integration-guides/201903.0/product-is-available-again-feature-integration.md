@@ -65,7 +65,7 @@ Add the following plugin in your project:
 |  `AvailabilityNotificationSubscriber` | This plugins is responsible for listening and processing product availability changes. | None |  `Spryker\Zed\AvailabilityNotification\Business\Subscription` |
 
 <details open>
-<summary> src/Pyz/Zed/Event/EventDependencyProvider.php</summary>
+<summary markdown='span'> src/Pyz/Zed/Event/EventDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -109,7 +109,7 @@ Add the following plugins in your project:
 |  `AvailabilityNotificationMailTypePlugin` | Handles the email sent after product's availability status change. | None |  `Spryker\Zed\AvailabilityNotification\Communication\Plugin\Mail` |
 
 <details open>
-<summary> src/Pyz/Zed/Mail/MailDependencyProvider.php</summary>
+<summary markdown='span'> src/Pyz/Zed/Mail/MailDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -172,7 +172,7 @@ Add the following plugins in your project:
 |  `AvailabilityNotificationSubscriptionCustomerTransferExpanderPlugin` | Expands `CustomerTransfer` with availability notification subscriptions data. | None |  `Spryker\Zed\AvailabilityNotification\Communication\Plugin\Customer` |
 
 <details open>
-<summary> src/Pyz/Zed/Customer/CustomerDependencyProvider.php</summary>
+<summary markdown='span'> src/Pyz/Zed/Customer/CustomerDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -253,7 +253,7 @@ Make sure that the following modules have been installed:<table><thead><tr class
 Feature-specific glossary keys:
 
 <details open>
-<summary> /data/import/glossary.csv</summary>
+<summary markdown='span'> /data/import/glossary.csv</summary>
 
  ```yaml
 availability_notification.notify_me,Notify me when back in stock,en_US
@@ -315,7 +315,7 @@ Register the following controller providers in Yves application:
 |  `AvailabilityNotificationWidgetControllerProvider` |  `SprykerShop\Yves\AvailabilityNotificationWidget\Plugin\Provider` |  `AvailabilityNotificationSubscriptionController` | Provides subscription management functionality for `AvailabilityNotificationWidget`. |
 
 <details open>
-<summary> src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>
+<summary markdown='span'> src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>
 
 ```php
 <?php
@@ -367,7 +367,7 @@ Register the following plugins to enable widgets:
 |  `AvailabilityNotificationSubscriptionWidget` | Renders the subscription form in the *product details* page |  `SprykerShop\Yves\AvailabilityNotificationWidget\Widget` |
 
 <details open>
-<summary> src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
+<summary markdown='span'> src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

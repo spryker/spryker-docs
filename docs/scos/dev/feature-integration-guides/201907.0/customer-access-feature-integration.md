@@ -40,7 +40,7 @@ These are going to be the setup content types in your system, so make sure that 
 {% endinfo_block %}
 
 <details open>
-<summary> src/Pyz/Zed/CustomerAccess/CustomerAccessConfig.php</summary>
+<summary markdown='span'> src/Pyz/Zed/CustomerAccess/CustomerAccessConfig.php</summary>
 
  ```php
   <?php
@@ -83,7 +83,7 @@ Adjust the schema definition so entity changes will trigger events.
 |  `spy_unauthenticated_customer_access` | `Entity.spy_unauthenticated_customer_access.create``Entity.spy_unauthenticated_customer_access.update``Entity.spy_unauthenticated_customer_access.delete` |
 
 <details open>
-<summary> src/Pyz/Zed/CustomerAccess/Persistence/Propel/Schema/spy_unauthenticated_customer_access.schema.xml</summary>
+<summary markdown='span'> src/Pyz/Zed/CustomerAccess/Persistence/Propel/Schema/spy_unauthenticated_customer_access.schema.xml</summary>
 
  ```html
 <?xml version="1.0"?>
@@ -128,7 +128,7 @@ This step will publish tables on change (create, edit, delete) to the `spy_unaut
 |  `CustomerAccessStorageEventSubscriber` | Registers listeners that are responsible for publishing customer access data based on changes to customer access entities | None |  `Spryker\Zed\CustomerAccessStorage\Communication\Plugin\Event\Subscriber` |
 
 <details open>
-<summary> src/Pyz/Zed/Event/EventDependencyProvider.php</summary>
+<summary markdown='span'> src/Pyz/Zed/Event/EventDependencyProvider.php</summary>
 
  ```php
     <?php
@@ -161,7 +161,7 @@ Make sure that when a product list is created, updated or deleted, they are expo
 |  `spy_unauthenticated_customer_access` |  `kv:unauthenticated_customer_access` |
 
 <details open>
-<summary>Example Expected Data Fragment</summary>
+<summary markdown='span'>Example Expected Data Fragment</summary>
 
 ```xml 
 {
@@ -205,7 +205,7 @@ Make sure that when a product list is created, updated or deleted, they are expo
 |  `CustomerAccessSynchronizationDataPlugin` | Allows populating empty storage table with data. | None |  `Spryker\Zed\CustomerAccessStorage\Communication\Plugin\Synchronization` |
 
 <details open>
-<summary> src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php</summary>
+<summary markdown='span'> src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php</summary>
 
  ```php
 <?php
@@ -240,7 +240,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 |  `CustomerAccessInstallerPlugin` | Installs configured content types | None |  `Spryker\Zed\CustomerAccess\Communication\Plugin` |
 
 <details open>
-<summary> src/Pyz/Zed/Installer/InstallerDependencyProvider.php</summary>
+<summary markdown='span'> src/Pyz/Zed/Installer/InstallerDependencyProvider.php</summary>
 
  ```php
 <?php
@@ -290,7 +290,7 @@ Enable the following behaviors by registering the plugins:
 |  `CustomerAccessPermissionStoragePlugin` | Provides ability to fetch customer access permissions on customer login | None |  `Spryker\Client\CustomerAccessPermission\Plugin` |
 
 <details>
-<summary> src/Pyz/Client/Permission/PermissionDependencyProvider.php</summary>
+<summary markdown='span'> src/Pyz/Client/Permission/PermissionDependencyProvider.php</summary>
 
  ```php
 <?php
@@ -351,7 +351,7 @@ Overview and install the necessary features before beginning the integration ste
 ### 1) Add Translations
 Append glossary according to your configuration:
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```html
 customer.access.cannot_see_price,Please login to see the price,en_US

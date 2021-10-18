@@ -40,7 +40,7 @@ Make sure that the following modules have been installed:<table><thead><tr><th>M
 Extend your project with the following configuration.
 
 <details open>
-<summary>src/Pyz/Zed/GiftCard/GiftCardConfig.php</summary>
+<summary markdown='span'>src/Pyz/Zed/GiftCard/GiftCardConfig.php</summary>
     
 ```php
 <?php
@@ -76,7 +76,7 @@ Once you've finished the *Setup Behaviour* step, make sure that "NoShipment" shi
 Extend your project with the following configuration.
 
 <details open>
-<summary>config/Shared/config_default.php</summary>
+<summary markdown='span'>config/Shared/config_default.php</summary>
 
 ```php
 <?php
@@ -119,7 +119,7 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/GiftCard/GiftCardConfig.php</summary>
+<summary markdown='span'>src/Pyz/Zed/GiftCard/GiftCardConfig.php</summary>
 
 ```php
 <?php
@@ -148,7 +148,7 @@ class GiftCardConfig extends SprykerGiftCardConfig
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/Sales/SalesConfig.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Sales/SalesConfig.php</summary>
 
 ```php
 <?php
@@ -205,7 +205,7 @@ The following step imports abstract and concrete gift card configurations. Imple
 {% endinfo_block %} (only Console and DataImport module changes are relevant). The following data import examples are based on this implementation.)
 
 <details open>
-<summary>data/import/gift_card_abstract_configuration.csv</summary>
+<summary markdown='span'>data/import/gift_card_abstract_configuration.csv</summary>
 
 ```yaml
 abstract_sku,pattern
@@ -220,7 +220,7 @@ abstract_sku,pattern
 | `pattern` |mandatory  | string | {prefix}-{randomPart}-{suffix} | A pattern that is used to generate codes for purchased gift card codes. |
 
 <details open>
-<summary>data/import/gift_card_concrete_configuration.csv</summary>
+<summary markdown='span'>data/import/gift_card_concrete_configuration.csv</summary>
 
 ```yaml
 sku,value
@@ -253,7 +253,7 @@ In this step, you will create a shipment method called "NoShipment". The name of
 Taking into account project customizations, extend shipment method data importer as shown below:
 
 <details open>
-<summary>data/import/shipment.csv</summary>
+<summary markdown='span'>data/import/shipment.csv</summary>
 
 ```bash
 shipment_method_key,name,carrier,taxSetName
@@ -265,7 +265,7 @@ spryker_no_shipment,NoShipment,NoShipment,Tax Exempt
 Taking into account project customizations, extend your shipment price data importer as shown below:
 
 <details open>
-<summary>data/import/shipment_price.csv</summary>
+<summary markdown='span'>data/import/shipment_price.csv</summary>
 
 ```bash
 shipment_method_key,store,currency,value_net,value_gross
@@ -298,7 +298,7 @@ In this step, you will customize your Order State Machine to purchase gift cards
 {% endinfo_block %}
 DummyPayment Order State Machine Example:
 <details open>
-<summary>config/Zed/oms/DummyPayment01.xml</summary>
+<summary markdown='span'>config/Zed/oms/DummyPayment01.xml</summary>
 
 ```html
 <?xml version="1.0"?>
@@ -428,7 +428,7 @@ DummyPayment Order State Machine Example:
 ![Dummy payment](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Feature+Integration+Guides/Gift+Cards+Feature+Integration/dummy-payment.svg) 
 
 <details open>
-<summary>config/Zed/oms/GiftCardSubprocess/CreateGiftCard01.xml</summary>
+<summary markdown='span'>config/Zed/oms/GiftCardSubprocess/CreateGiftCard01.xml</summary>
 
 ```html
 <?xml version="1.0"?>
@@ -472,7 +472,7 @@ DummyPayment Order State Machine Example:
 </details>
 
 <details open>
-<summary>config/Zed/oms/DummySubprocess/DummyRefund01.xml</summary>
+<summary markdown='span'>config/Zed/oms/DummySubprocess/DummyRefund01.xml</summary>
 
 ```html
 <?xml version="1.0"?>
@@ -525,7 +525,7 @@ In this step, you should customize your Order State Machine to place orders with
 NoPayment Order State Machine Example:
 
 <details open>
-<summary>config/Zed/oms/Nopayment01.xml</summary>
+<summary markdown='span'>config/Zed/oms/Nopayment01.xml</summary>
     
 ```html
 <?xml version="1.0"?>
@@ -629,7 +629,7 @@ Add the following plugins to your project:
 |`OnlyGiftCardShipmentMethodFilterPlugin`  | Filters non-available shipment methods for gift card items to be purchased. | - | `Spryker\Zed\GiftCard\Communication\Plugin` |
 
 <details open>
-<summary>src/Pyz/Zed/Calculation/CalculationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Calculation/CalculationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -659,7 +659,7 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -689,7 +689,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -719,7 +719,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/Discount/DiscountDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Discount/DiscountDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -746,7 +746,7 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/Mail/MailDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Mail/MailDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -783,7 +783,7 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -853,7 +853,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/Shipment/ShipmentDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Shipment/ShipmentDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -909,7 +909,7 @@ Add the following plugins to your project:
 |`NopaymentPreCheckPlugin`| Checks if a "Nopayment" payment method is allowed to be used. | - | `Spryker\Zed\Nopayment\Communication\Plugin\Checkout`|
 
 <details open>
-<summary>src/Pyz/Client/CartCode/CartCodeDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/CartCode/CartCodeDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -936,7 +936,7 @@ class CartCodeDependencyProvider extends SprykerCartCodeDependencyProvider
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -966,7 +966,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/GiftCard/GiftCardDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/GiftCard/GiftCardDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1013,7 +1013,7 @@ class GiftCardDependencyProvider extends SprykerGiftCardDependencyProvider
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/Mail/MailDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Mail/MailDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1049,7 +1049,7 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/Payment/PaymentDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Payment/PaymentDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1162,7 +1162,7 @@ Make sure that the following modules have been installed:<table><thead><tr><th>M
 Extend your project with the following configuration.
 
 <details open>
-<summary>config/Shared/config_default.php</summary>
+<summary markdown='span'>config/Shared/config_default.php</summary>
 
 ```php
 <?php
@@ -1188,7 +1188,7 @@ Make sure to have "nopayment" payment method successfully selected when you cove
 Append glossary according to your configuration:
 
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 cart.total.price_to_pay,Zu bezahlender Betrag,de_DE
@@ -1239,7 +1239,7 @@ Register the following global widget(s):
 | `CartCodeFormWidget` |Provides a cart code activation form.  | `SprykerShop\Yves\CartCodeWidget\Widget` |
 
 <details open>
-<summary>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1277,7 +1277,7 @@ Register the following controller provider(s) in the Yves application:
 | `CartCodeWidgetControllerProvider` |`SprykerShop\Yves\CartCodeWidget\Plugin\Provider`  | `CartCodeWidget/CodeController` | `Handles add, remove and clear of cart codes for of the activated CartCodePlugins (i.e. gift card code, voucher code, etc.) of the cart.` |
 
 <details open>
-<summary>src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>
 
 ```php
 <?php

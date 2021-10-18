@@ -235,7 +235,7 @@ Activate the following plugins:
 | `CompanyUserAccessTokensResourceRoutePlugin` | Registers the `company-user-access-tokens` resource | None | `Spryker\Glue\CompanyUserAuthRestApi\Plugin\GlueApplication` |
 
 <details open>
-<summary>src/Pyz/Zed/OauthCustomerConnector/OauthCustomerConnectorDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/OauthCustomerConnector/OauthCustomerConnectorDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -265,7 +265,7 @@ class OauthCustomerConnectorDependencyProvider extends SprykerOauthCustomerConne
 </details>
 
 <details open>
-<summary>src/Pyz/Glue/AuthRestApi/AuthRestApiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/AuthRestApi/AuthRestApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -293,7 +293,7 @@ class AuthRestApiDependencyProvider extends SprykerAuthRestApiDependencyProvider
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/OauthCompanyUser/OauthCompanyUserDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/OauthCompanyUser/OauthCompanyUserDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -321,7 +321,7 @@ class OauthCompanyUserDependencyProvider extends SprykerOauthCompanyUserDependen
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -349,7 +349,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/OauthPermission/OauthPermissionConfig.php</summary>
+<summary markdown='span'>src/Pyz/Zed/OauthPermission/OauthPermissionConfig.php</summary>
 
 ```php
 <?php
@@ -377,7 +377,7 @@ class OauthPermissionConfig extends SprykerOauthPermissionConfig
 </details>
 
 <details open>
-<summary>src/Pyz/Glue/CustomersRestApi/CustomersRestApiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/CustomersRestApi/CustomersRestApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -407,7 +407,7 @@ class CustomersRestApiDependencyProvider extends SprykerCustomersRestApiDependen
 </details>
 
 <details open>
-<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -499,7 +499,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 To verify that everything is set up correctly, first, you need to authenticate as a regular customer. Then, to get the ID of the Company Users you can impersonate as, send a `GET` request to `http://glue.mysprykershop.com/company-users/mine`.
 <details open>
-<summary>http://mysprykershop.com/company-users/mine response</summary>
+<summary markdown='span'>http://mysprykershop.com/company-users/mine response</summary>
 
 ```json
 {
@@ -523,7 +523,7 @@ To verify that everything is set up correctly, first, you need to authenticate a
 
 To log in as a Company User, send a `POST` request to `http://glue.mysprykershop.com/company-user-access-tokens` passing the ID of the necessary Company User in the request. Make sure that the response contains all the necessary data.
 <details open>
-<summary>http://mysprykershop.com/company-user-access-tokens request</summary>
+<summary markdown='span'>http://mysprykershop.com/company-user-access-tokens request</summary>
 
 ```json
 {
@@ -539,7 +539,7 @@ To log in as a Company User, send a `POST` request to `http://glue.mysprykershop
 </br>
 </details>
 <details open>
-<summary>http://mysprykershop.com/company-user-access-tokens response</summary>
+<summary markdown='span'>http://mysprykershop.com/company-user-access-tokens response</summary>
 
 ```json
 {

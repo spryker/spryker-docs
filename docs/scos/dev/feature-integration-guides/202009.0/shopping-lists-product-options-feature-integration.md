@@ -65,7 +65,7 @@ Enable the following behaviors by registering the plugins:
 |`ProductOptionToItemProductOptionMapperPlugin`|Provides the ability to map a shopping list item product option to an item product option when transferring items from a shopping list to a cart.|None|`Spryker\Client\ShoppingListProductOptionConnector\ShoppingList`|
 
 <details open>
-<summary>src/Pyz/Client/ShoppingList/ShoppingListDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/ShoppingList/ShoppingListDependencyProvider.php</summary>
  
 ```php    
 <?php
@@ -156,7 +156,7 @@ Enable the following behaviors by registering the plugins:
 |`ShoppingListItemProductOptionFormDataProviderMapperPlugin`|Provides the ability to populate the Shopping List Form Item with product option data.|None|`SprykerShop\Yves\ProductOptionWidget\Plugin\ShoppingListPage`|
 
 <details open>
-<summary>src/Pyz/Yves/ShoppingListPage/ShoppingListPageDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ShoppingListPage/ShoppingListPageDependencyProvider.php</summary>
 
 ```php
 <?php

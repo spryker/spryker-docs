@@ -59,7 +59,7 @@ If the request was successful, the resource responds with an array of **RestAbst
 For a detailed list of the fields included in the response for each product, see [General Product Information]().
 
 <details open>
-<summary>Sample Response </summary>
+<summary markdown='span'>Sample Response </summary>
 
 ```js
     {
@@ -322,7 +322,7 @@ If the request was successful, the resource responds with an array of **RestAbst
 For a detailed list of the fields included in the response for each product, see **General Product Information**.
 
 <details open>
-<summary> Sample Response</summary>
+<summary markdown='span'> Sample Response</summary>
 
 ```js
 {
@@ -1412,7 +1412,7 @@ If the request was successful, the resource responds with an array of **RestAbst
 For a detailed list of the fields included in the response for each product, see [General Product Information]().
 
 <details open>
-<summary>Sample Response </summary>
+<summary markdown='span'>Sample Response </summary>
 
 ```js
 {

@@ -77,7 +77,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 Make a request to `http://example.org/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=category-nodes.`
 {% endinfo_block %}
 <details open>
-<summary>Request Example</summary>
+<summary markdown='span'>Request Example</summary>
 
 ```yaml
 {  

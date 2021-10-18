@@ -109,7 +109,7 @@ Activate the following plugins:
 
 
 <details open>
-    <summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -192,7 +192,7 @@ To verify that `CustomerOrdersResourceRoutePlugin` is set up correctly, make sur
 To verify that `OrderRelationshipByOrderReferencePlugin` is set up correctly, make sure that the `orders` relationship is returned after sending the following request:
 
 <details open>
-    <summary>POST http://glue.mysprykershop.com/checkout?include=orders</summary>
+    <summary markdown='span'>POST http://glue.mysprykershop.com/checkout?include=orders</summary>
     
 ```json
 {

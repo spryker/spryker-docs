@@ -151,7 +151,7 @@ In this case, the following additional attributes will be added to the response:
 *The attributes mentioned are all attributes in the response. Type and ID are not mentioned.
 
 <details open>
-<summary>Sample Response</summary>
+<summary markdown='span'>Sample Response</summary>
     
 ```json
 {

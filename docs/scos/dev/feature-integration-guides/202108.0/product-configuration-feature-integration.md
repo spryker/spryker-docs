@@ -76,7 +76,7 @@ Add the following configuration to your project:
 |KernelConstants::DOMAIN_WHITELIST| Defines a set of whitelist domains that every external URL is checked against before redirecting. |Spryker\Shared\Kernel\KernelConstants|
 
 <details open>
-    <summary>config/Shared/config_default.php</summary>
+    <summary markdown='span'>config/Shared/config_default.php</summary>
 
 ```php
 <?php
@@ -105,7 +105,7 @@ Set up database schema and transfer objects as follows:
 1. For entity changes to trigger events, adjust the schema definition:
 
 <details open>
-    <summary>src/Pyz/Zed/ProductConfiguration/Persistence/Propel/Schema/spy\_product\_configuration.schema.xml</summary>
+    <summary markdown='span'>src/Pyz/Zed/ProductConfiguration/Persistence/Propel/Schema/spy\_product\_configuration.schema.xml</summary>
 
 ```xml
 <?xml version="1.0"?>
@@ -129,7 +129,7 @@ Set up database schema and transfer objects as follows:
 
 
 <details open> 
-    <summary>src/Pyz/Zed/ProductConfigurationStorage/Persistence/Propel/Schema/spy_product_configuration_storage.schema.xml</summary>
+    <summary markdown='span'>src/Pyz/Zed/ProductConfigurationStorage/Persistence/Propel/Schema/spy_product_configuration_storage.schema.xml</summary>
 
 ```xml
 <?xml version="1.0"?>
@@ -230,7 +230,7 @@ SynchronizationStorageQueueMessageProcessorPlugin|Reads messages from the synchr
 
 
 <details open>
-    <summary>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -269,7 +269,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 </details>
 
 <details open>
-    <summary>src/Pyz/Zed/Queue/QueueDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Zed/Queue/QueueDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -954,7 +954,7 @@ Make sure that, on the *Product Details* page of a configurable product, you can
 | ProductConfiguratorCheckSumResponsePlugin | Validates a response trough a validators stack. | None | Spryker\Client\ProductConfigurationStorage\Plugin\ProductConfiguration | 
 
 <details open>
-    <summary>src/Pyz/Client/ProductConfiguration/ProductConfigurationDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Client/ProductConfiguration/ProductConfigurationDependencyProvider.php</summary>
     
 ```php
 <?php

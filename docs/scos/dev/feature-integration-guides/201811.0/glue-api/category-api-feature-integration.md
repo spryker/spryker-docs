@@ -52,7 +52,7 @@ console transfer:generate
 | `CategoriesResourceRoutePlugin`| Registers a `category-tree` resource. |None  | `Spryker\Glue\CategoriesRestApi\Plugin`|
 | `CategoryResourceRoutePlugin`	 |Registers a `category- nodes` resource. | None|`Spryker\Glue\CategoriesRestApi\Plugin` |
 <details open>
-<summary> src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'> src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 ```bash 
  namespace Pyz\Glue\GlueApplication;
  

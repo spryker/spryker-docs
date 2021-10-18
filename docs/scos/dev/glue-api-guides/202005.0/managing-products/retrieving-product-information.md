@@ -69,7 +69,7 @@ To retrieve general information about an abstract product, send the request:
 ### Response
 
 <details>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
     
 ```json
 {
@@ -132,7 +132,7 @@ To retrieve general information about an abstract product, send the request:
  </details>
 
 <details>
-    <summary>Response sample with product labels</summary>
+    <summary markdown='span'>Response sample with product labels</summary>
     
 ```json
 {
@@ -269,7 +269,7 @@ Sample requests:
 
 ### Response
 <details>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -317,7 +317,7 @@ Sample requests:
  </details>
 
 <details>
-    <summary>Response sample with sales units and product measurement units</summary>
+    <summary markdown='span'>Response sample with sales units and product measurement units</summary>
 
 ```json
 {
@@ -410,7 +410,7 @@ Sample requests:
  </details>
  
  <details>
-    <summary>Response sample with product labels</summary>
+    <summary markdown='span'>Response sample with product labels</summary>
 
 ```json
 {

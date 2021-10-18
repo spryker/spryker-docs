@@ -57,7 +57,7 @@ The endpoint responds with a collection of **RestCompanyResponse** consisting of
 *The attributes mentioned are all attributes in the response. Type and ID are not mentioned.
 
 <details open>
-<summary>Sample Response</summary>
+<summary markdown='span'>Sample Response</summary>
     
 ```json
 {
@@ -114,7 +114,7 @@ The endpoint responds with a **RestCompanyResponse** containing information on t
 *The attributes mentioned are all attributes in the response. Type and ID are not mentioned.
 
 <details open>
-<summary>Sample Response</summary>
+<summary markdown='span'>Sample Response</summary>
     
 ```json
 {

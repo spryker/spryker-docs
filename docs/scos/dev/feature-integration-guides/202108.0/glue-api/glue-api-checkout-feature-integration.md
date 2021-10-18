@@ -52,7 +52,7 @@ Add all the payment methods available in the shop to `CheckoutRestApiConfig`. Fo
 
 
 <details open>
-    <summary>src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiConfig.php</summary>
+    <summary markdown='span'>src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiConfig.php</summary>
 
 ```php
 <?php
@@ -169,7 +169,7 @@ For the `checkout-data` endpoint to keep returning shipment methods, keep `Pyz\G
 If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isShipmentMethodsMappedToAttributes()` is true, make sure the shipping method attributes are returned in the `shipmentMethods` after sending the `POST http://glue.mysprykershop.com/checkout-data` request:
 
 <details open>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -247,7 +247,7 @@ For the `checkout-data` endpoint to keep returning payment methods, keep `Checko
 If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isPaymentProvidersMappedToAttributes()` is true, make sure the payment methods attributes are returned in the `paymentProviders `attribute after sending the `POST http://glue.mysprykershop.com/checkout-data` request:
 
 <details open>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
     
 ```json
 {
@@ -380,7 +380,7 @@ Activate the following plugins:
 
 
 <details open>
-    <summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

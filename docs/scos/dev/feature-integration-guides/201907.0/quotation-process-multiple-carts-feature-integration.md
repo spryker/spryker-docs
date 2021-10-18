@@ -26,7 +26,7 @@ Register the following plugins:
 | `MultiCartQuotePersistPlugin` | Creates a new active customer cart. | None | `Spryker\Client\MultiCart\Plugin\PersistentCart` |
 
 <details open>
-<summary>src/Pyz/Client/PersistentCart/PersistentCartDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/PersistentCart/PersistentCartDependencyProvider.php</summary>
 
 ```php
 <?php

@@ -46,7 +46,7 @@ Add the following configuration to your project:
 |Customer login access control regular expression (See below in `config/Shared/config_default.php`) | Used to close access for not logged in customers. | - |
 
 <details open>
-<summary>src/Pyz/Zed/Quote/QuoteConfig.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Quote/QuoteConfig.php</summary>
 
 ```php
 <?php
@@ -76,7 +76,7 @@ class QuoteConfig extends SprykerQuoteConfig
 @(Waring)(Verification)(Make sure that when you converted quote request to quote, JSON data in the database column `spy_quote.quote_data` of the corresponding quote contains `quoteRequestVersionReference`.)
 
 <details open>
-<summary>src/Pyz/Zed/QuoteRequest/QuoteRequestConfig.php</summary>
+<summary markdown='span'>src/Pyz/Zed/QuoteRequest/QuoteRequestConfig.php</summary>
 
 ```php
 <?php
@@ -117,7 +117,7 @@ Make sure that,  when you created quote request, JSON data in the database colum
 {% endinfo_block %}
 
 <details open>
-<summary>config/Zed/cronjobs/jobs.php</summary>
+<summary markdown='span'>config/Zed/cronjobs/jobs.php</summary>
 
 ```php
 <?php
@@ -143,7 +143,7 @@ Make sure that quote request with outdated **Valid Until** changes its status to
 {% endinfo_block %}
 
 <details open>
-<summary>config/Shared/config_default.php</summary>
+<summary markdown='span'>config/Shared/config_default.php</summary>
 
 ```php
 <?php
@@ -180,7 +180,7 @@ Make sure that the following changes in transfer objects:<table><thead><tr><td>T
 Append glossary according to your configuration:
 
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 quote_request.status.waiting,Waiting,en_US
@@ -249,7 +249,7 @@ Enable the following behaviors by registering the plugins:
 | `SanitizeSourcePricesQuoteLockPreResetPlugin` | Sanitizes source prices in quote items. | None | `Spryker\Zed\PriceCartConnector\Communication\Plugin\Cart`|
 
 <details open>
-<summary>Pyz\Client\Quote\QuoteDependencyProvider.php</summary>
+<summary markdown='span'>Pyz\Client\Quote\QuoteDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -280,7 +280,7 @@ Make sure editing quote request items does not trigger new quote creation in per
 {% endinfo_block %}
 
 <details open>
-<summary>Pyz\Client\PersistentCart\PersistentCartDependencyProvider.php</summary>
+<summary markdown='span'>Pyz\Client\PersistentCart\PersistentCartDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -310,7 +310,7 @@ Make sure that you can edit quote request items.
 {% endinfo_block %}
 
 <details open>
-<summary>Pyz\Zed\Console\ConsoleDependencyProvider.php</summary>
+<summary markdown='span'>Pyz\Zed\Console\ConsoleDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -348,7 +348,7 @@ Make sure that status of quote request with outdated Valid Until changes to clos
 {% endinfo_block %}
 
 <details open>
-<summary>Pyz/Zed/Cart/CartDependencyProvider.php</summary>
+<summary markdown='span'>Pyz/Zed/Cart/CartDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -411,7 +411,7 @@ Make sure that the following modules were installed:<table><thead><tr><td>Module
 Append glossary according to your configuration:
 
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 quote_request_widget.request_for_quote,Request for Quote,en_US
@@ -557,7 +557,7 @@ Enable the following behaviors by registering the plugins:
 | NoteMetadataFieldPlugin | Adds note to metadata for `QuoteRequestAgent` form. | None | `SprykerShop\Yves\QuoteRequestAgentPage\Plugin\QuoteRequestAgentPage` |
 
 <details open>
-<summary>Pyz\Yves\QuoteRequestPage\QuoteRequestPageDependencyProvider.php</summary>
+<summary markdown='span'>Pyz\Yves\QuoteRequestPage\QuoteRequestPageDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -592,7 +592,7 @@ Verify that, as a customer, on quote request edit page, you can edit following f
 {% endinfo_block %}
 
 <details open>
-<summary>Pyz\Yves\QuoteRequestAgentPage\QuoteRequestAgentPageDependencyProvider.php</summary>
+<summary markdown='span'>Pyz\Yves\QuoteRequestAgentPage\QuoteRequestAgentPageDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -639,7 +639,7 @@ Register controller provider(s) in the Yves application:
 | `QuoteRequestWidgetControllerProvider` |`SprykerShop\Yves\QuoteRequestWidget\Plugin\Provider`  |
 
 <details open>
-<summary>src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>
 
 ```php
 <?php
@@ -703,7 +703,7 @@ Register the following plugins to enable widgets:
 |`QuoteRequestAgentCancelWidget`  |Displays cancel quote request button on agent quote request list page.  | None | `SprykerShop\Yves\QuoteRequestAgentPage\Widget `|
 
 <details open>
-<summary>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

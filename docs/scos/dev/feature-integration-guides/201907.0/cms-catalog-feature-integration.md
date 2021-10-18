@@ -44,7 +44,7 @@ Add the following Result Formatter Plugins to your project:
 |  `RawCmsPageSearchResultFormatterPlugin` | Formats the CMS page hits related raw search result data. | None |  `\Spryker\Client\CmsPageSearch\Plugin\Elasticsearch\ResultFormatter\RawCmsPageSearchResultFormatterPlugin` |
 
 <details open>
-<summary>src/Pyz/Client/CmsPageSearch/CmsPageSearchDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/CmsPageSearch/CmsPageSearchDependencyProvider.php</summary>
 
  ```php
 <?php
@@ -111,7 +111,7 @@ Add the following plugins to your project:
 |  `IsActiveInDateRangeQueryExpanderPlugin` | Extends a search query by filtering down results to be active by the current date time. | None |  `\Spryker\Client\Search\Plugin\Elasticsearch\QueryExpander\IsActiveInDateRangeQueryExpanderPlugin` |
 
 <details open>
-<summary> src/Pyz/Client/CmsPageSearch/CmsPageSearchDependencyProvider.php</summary>
+<summary markdown='span'> src/Pyz/Client/CmsPageSearch/CmsPageSearchDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -159,7 +159,7 @@ Add the following plugins to your project:
 |  `IsActiveInDateRangeQueryExpanderPlugin` | Extends a search query by filtering down results to be active by the current date time. | None |  `\Spryker\Client\Search\Plugin\Elasticsearch\QueryExpander\IsActiveInDateRangeQueryExpanderPlugin` |
 
 <details>
-<summary>src/Pyz/Client/Catalog/CatalogDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/Catalog/CatalogDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -223,7 +223,7 @@ Make sure that the following modules were installed:<table><thead><tr><th>Module
 ### 2) Add Translations
 Append glossary according to your language configuration:
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 global.search.pages,Seiten,de_DE
@@ -260,7 +260,7 @@ Register controller provider(s) to the Yves application:
 |`CmsSearchPageControllerProvider`|`\SprykerShop\Yves\CmsSearchPage\Plugin\Provider\CmsSearchPageControllerProvider`|`CmsSearchController`|Provides functionality to execute full-text search for CMS pages.|
 
 <details>
-<summary>src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>
 
 ```php
 <?php
@@ -304,7 +304,7 @@ Add the following plugins to your project:
 |`FullTextSearchProductsTabPlugin`|Adds a tab item to the Catalog Page full-text search results.|None|`\SprykerShop\Yves\CatalogPage\Plugin\FullTextSearchProductsTabPlugin`|`FullTextSearchCmsPageTabPlugin`|Adds a tab item for CMS Search Page full-text search results.|None|`\SprykerShop\Yves\CmsSearchPage\Plugin\FullTextSearchCmsPageTabPlugin`|
 
 <details open>
-<summary>src/Pyz/Yves/TabsWidget/TabsWidgetDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/TabsWidget/TabsWidgetDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -345,7 +345,7 @@ Register the following global widgets:
 |`FullTextSearchTabsWidget`|Displays a tabs component with its items configured by a stack of plugins implementing| `FullTextSearchTabPluginInterface`.|`\SprykerShop\Yves\TabsWidget\Widget\FullTextSearchTabsWidget`|
 
 <details open>
-<summary>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

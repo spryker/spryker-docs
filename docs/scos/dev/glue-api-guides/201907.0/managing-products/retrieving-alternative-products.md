@@ -159,7 +159,7 @@ For a detailed description of abstract and concrete product fields, see [General
 #### Sample Responses:
 
 <details open>
-<summary>Response containing abstract alternatives for a product </summary>
+<summary markdown='span'>Response containing abstract alternatives for a product </summary>
 
 ```js
 {
@@ -190,7 +190,7 @@ For a detailed description of abstract and concrete product fields, see [General
 </details>
 
 <details open>
-<summary>Response containing concrete alternatives for a product </summary>
+<summary markdown='span'>Response containing concrete alternatives for a product </summary>
 
 ```js
 {

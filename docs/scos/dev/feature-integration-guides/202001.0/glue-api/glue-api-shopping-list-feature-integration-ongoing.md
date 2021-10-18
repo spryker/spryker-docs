@@ -127,7 +127,7 @@ ShoppingListsResourcePlugin GET, POST, PATCH and DELETE, ShoppingListItemsResour
  |
 
 <details open>
-<summary>
+<summary markdown='span'>
 src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
     
 ```
@@ -189,7 +189,7 @@ To verify that the `ShoppingListsResourcePlugin` resource route plugin and the `
 
 Check the response:
 <details open>
-<summary>GET http://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}?include=shopping-list-items,concrete-products</summary>
+<summary markdown='span'>GET http://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}?include=shopping-list-items,concrete-products</summary>
    
 ```
 {
@@ -299,7 +299,7 @@ To verify that the `ShoppingListItemsResourcePlugin` is set up correctly, make s
 
 Post a request with the following body:
 <details open>
-<summary>Body request</summary>
+<summary markdown='span'>Body request</summary>
    
 ```
 {
@@ -317,7 +317,7 @@ Post a request with the following body:
 
 Check the response:
 <details open>
-<summary>POST http://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}/shopping-list-items</summary>
+<summary markdown='span'>POST http://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}/shopping-list-items</summary>
    
 ```
 {

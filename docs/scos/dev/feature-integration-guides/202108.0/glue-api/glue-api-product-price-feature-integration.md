@@ -79,7 +79,7 @@ Activate the following plugins:
 |PriceProductVolumeRestProductPricesAttributesMapperPlugin |Adds volume price data to `abstract-product-prices`  and `concrete-product-prices` resources. |None| Spryker\Glue\PriceProductVolumesRestApi\Plugin\ProductPriceRestApi|
   
 <details open>
-    <summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
     
 ```php
 <?php

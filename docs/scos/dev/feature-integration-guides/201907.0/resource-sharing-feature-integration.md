@@ -106,7 +106,7 @@ Make sure that the following modules were installed:
 Append glossary according to your configuration:
 
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 resource_share.activator.error.strategy_expects_logged_in_customer,Please login to access requested shared resource.,en_US
@@ -144,7 +144,7 @@ Register controller provider(s) to Yves application:
 | `ResourceSharePageControllerProvider` | `SprykerShop\Yves\ResourceSharePage\Plugin\Provider` | `ResourceSharePageController` | Provides a starting point for all resource share links. |
 
 <details open>
-<summary>src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>
 
 ```php
 <?php

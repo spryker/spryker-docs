@@ -56,7 +56,7 @@ The endpoint responds with a collection of **RestCompanyRoleResponse**, each con
 *The attributes mentioned are all attributes in the response. Type and ID are not mentioned.
 
 <details open>
-<summary>Sample Response</summary>
+<summary markdown='span'>Sample Response</summary>
     
 ```json
 {
@@ -111,7 +111,7 @@ The endpoint responds with a **RestCompanyRoleResponse** that contains informati
 *The attributes mentioned are all attributes in the response. Type and ID are not mentioned.
 
 <details open>
-<summary>Sample Response</summary>
+<summary markdown='span'>Sample Response</summary>
     
 ```json
 {
@@ -148,7 +148,7 @@ The response will include the following additional attributes:
 *The attributes mentioned are all attributes in the response. Type and ID are not mentioned.
 
 <details open>
-<summary>Sample Response</summary>
+<summary markdown='span'>Sample Response</summary>
     
 ```json
 {

@@ -34,7 +34,7 @@ Make sure that the following modules were installed:<table><thead><tr><th>Module
 #### Implementation
 Add the following configuration to your project:
 <details open>
-<summary>src/Pyz/Zed/CmsContentWidget/CmsContentWidgetConfig.php</summary>
+<summary markdown='span'>src/Pyz/Zed/CmsContentWidget/CmsContentWidgetConfig.php</summary>
 
 ```php
 <?php
@@ -75,7 +75,7 @@ Add the following plugin to your project:
 |  `CmsBlockContentWidgetPlugin`| Creates a new Widget for editing CMS Blocks. |None  | `Spryker\Yves\CmsContentWidgetCmsBlockConnector\Plugin` |
 
 <details open>
-<summary>src/Pyz/Yves/CmsContentWidget/CmsContentWidgetDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/CmsContentWidget/CmsContentWidgetDependencyProvider.php</summary>
 
 ```php
 <?php

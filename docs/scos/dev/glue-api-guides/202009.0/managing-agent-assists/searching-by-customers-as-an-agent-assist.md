@@ -78,7 +78,7 @@ To search by customers, send the request:
 ### Response
 
 <details open>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -168,7 +168,7 @@ To search by customers, send the request:
 </details>
 
 <details open>
-    <summary>Response sample of search with page limit and page offset</summary>
+    <summary markdown='span'>Response sample of search with page limit and page offset</summary>
     
 ```json
 {
@@ -228,7 +228,7 @@ To search by customers, send the request:
 </details>
 
 <details open>
-    <summary>Response sample of search by email address</summary>
+    <summary markdown='span'>Response sample of search by email address</summary>
     
 ```json
 {
@@ -262,7 +262,7 @@ To search by customers, send the request:
 </details>
 
 <details open>
-    <summary>Response sample of search by name</summary>
+    <summary markdown='span'>Response sample of search by name</summary>
     
 ```json
  {
@@ -296,7 +296,7 @@ To search by customers, send the request:
 </details>
 
 <details open>
-    <summary>Response sample of search by customer reference</summary>
+    <summary markdown='span'>Response sample of search by customer reference</summary>
     
 ```json
 {

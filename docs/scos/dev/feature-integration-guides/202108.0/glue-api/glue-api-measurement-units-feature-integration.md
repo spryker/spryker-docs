@@ -131,7 +131,7 @@ Activate the following plugins:
 
 
 <details open>
-<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -240,7 +240,7 @@ Make sure that the `SalesUnitsResourceRoutePlugin` and `ProductMeasurementUnitsB
 2. You should get a valid response, similar to the following:
 
 <details open>
-<summary>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -303,7 +303,7 @@ Make sure that the `ProductMeasurementUnitsByProductConcreteResourceRelationship
 2. You should get a valid response, similar to the following:
 
 <details open>
-<summary>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -451,7 +451,7 @@ Make sure that the `SalesUnitsByCartItemResourceRelationshipPlugin` relationship
 2. You should get a valid response, similar to the following:
 
 <details open>
-<summary>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {

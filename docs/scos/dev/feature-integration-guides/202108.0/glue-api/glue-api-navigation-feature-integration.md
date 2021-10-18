@@ -63,7 +63,7 @@ Specify mapping for the source field from which the resourceId field should be f
 {% endinfo_block %}
 
 <details open>
-<summary>src/Pyz/Glue/NavigationsRestApi/NavigationsRestApiConfig.php</summary>
+<summary markdown='span'>src/Pyz/Glue/NavigationsRestApi/NavigationsRestApiConfig.php</summary>
     
 ```php
 <?php
@@ -104,7 +104,7 @@ Activate the following plugin:
 | `CategoryNodeByResourceIdResourceRelationshipPlugin` | Adds the `category node` resource as a relationship. | None | `\Spryker\Glue\NavigationsCategoryNodesResourceRelationship\Plugin\GlueApplication` |
 
 <details open>
-<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -160,7 +160,7 @@ Send a request to *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?inc
 {% endinfo_block %}
 
 <details open>
-<summary>http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?include=category-nodes</summary>
+<summary markdown='span'>http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?include=category-nodes</summary>
 
 ```json
 {

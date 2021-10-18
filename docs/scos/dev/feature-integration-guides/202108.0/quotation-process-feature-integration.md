@@ -402,7 +402,7 @@ Make sure that the following modules were installed:
 Append glossary according to your configuration:
 
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 quote_request_widget.request_for_quote,Request for Quote,en_US

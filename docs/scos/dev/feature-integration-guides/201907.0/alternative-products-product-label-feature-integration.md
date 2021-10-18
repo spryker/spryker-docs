@@ -37,7 +37,7 @@ Make sure that the following modules have been installed:<table><thead><tr><th>M
 
 Add the following to your project:
 <details open>
-<summary>src/Pyz/Zed/Installer/InstallerDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Installer/InstallerDependencyProvider.php</summary>
     
  ```php   
 <?php
@@ -84,7 +84,7 @@ Enable the following behavior types by registering the plugins:
 |`ProductAlternativeLabelUpdaterPlugin`|Used to persist alternative product label relation changes into the database. </br>The plugin is called when the `ProductLabelRelationUpdaterConsole` command is executed.|None|`Spryker\Zed\ProductAlternativeProductLabelConnector\Communication\Plugin`|
 
 <details open>
-<summary>src/Pyz/Zed/ProductAlternative/ProductAlternativeDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/ProductAlternative/ProductAlternativeDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -122,7 +122,7 @@ class ProductAlternativeDependencyProvider extends SprykerProductAlternativeDepe
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/ProductLabel/ProductLabelDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/ProductLabel/ProductLabelDependencyProvider.php</summary>
 
 ```php
 <?php

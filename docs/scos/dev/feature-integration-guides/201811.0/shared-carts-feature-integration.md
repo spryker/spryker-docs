@@ -56,7 +56,7 @@ Make sure that the following changes in transfer objects have been applied:<tabl
 Glossary keys for flash messages:
 
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 shared_cart.share.error.already_exist,Cart was already shared with this customer,en_US
@@ -90,7 +90,7 @@ Register the following plugins:
 | `WriteSharedCartPermissionPlugin` | Quote permission to check write shared cart permissions in zed layer. |None |`Spryker\Zed\SharedCart\Communication\Plugin` |
 
 <details open>
-<summary>src/Pyz/Zed/Installer/InstallerDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Installer/InstallerDependencyProvider.php</summary>
     
 ```php
 <?php
@@ -117,7 +117,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 </details>
 
 <details open>
-<summary>src/Pyz/Client/Permission/PermissionDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/Permission/PermissionDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -146,7 +146,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/Permission/PermissionDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Permission/PermissionDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -193,7 +193,7 @@ The following imported entities will be used as carts to the company user relati
 Prepare your data according to your requirements using our demo data:
 
 <details open>
-<summary>vendor/spryker/shared-cart-data-import/data/import/shared_cart.csv</summary>
+<summary markdown='span'>vendor/spryker/shared-cart-data-import/data/import/shared_cart.csv</summary>
 
 ```yaml
 quote_key,company_user_key,permission_group_name
@@ -273,7 +273,7 @@ All shared cart plugins must be added after multicart plugins have been register
 {% endinfo_block %}
 
 <details open>
-<summary>src/Pyz/Zed/Quote/QuoteDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Quote/QuoteDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -353,7 +353,7 @@ Register the following plugins:
 |  `SharedCartQuoteResponseExpanderPlugin`| Expands `QuoteResponseTransfer` with the following shared cart related data:<ul><li>Carts shared with the customer.</li><li>Customer permission list.</li><li>Expands a customer cart with the sharing data.</li></ul> |1 | `Spryker\Zed\SharedCart\Communication\Plugin` |
 
 <details open>
-<summary>src/Pyz/Client/PersistentCart/PersistentCartDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/PersistentCart/PersistentCartDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -394,7 +394,7 @@ class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyPr
 
 
 <details open>
-<summary>src/Pyz/Zed/PersistentCart/PersistentCartDependencyProvider</summary>
+<summary markdown='span'>src/Pyz/Zed/PersistentCart/PersistentCartDependencyProvider</summary>
 
 ```php
 <?php
@@ -434,7 +434,7 @@ Register the following plugin:
 | `QuotePermissionStoragePlugin`| Shared cart permission provider. | None | `Spryker\Zed\SharedCart\Communication\Plugin` |
 
 <details open>
-<summary>src/Pyz/Zed/Permission/PermissionDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Permission/PermissionDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -473,7 +473,7 @@ Register the following plugin:
 |`QuotePermissionCustomerExpanderPlugin`| Expands customer with shared cart permissions. |None  |  `Spryker\Zed\SharedCart\Communication\Plugin`|
 
 <details open>
-<summary>src/Pyz/Zed/Customer/CustomerDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Customer/CustomerDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -512,7 +512,7 @@ Register the following plugin:
 | `SharedCartCompanyUserPreDeletePlugin` |  Removes all company users from the cart relations before a company user has been removed.| None | `Spryker\Zed\SharedCart\Communication\Plugin\CompanyUserExtension` |
 
 <details open>
-<summary>src/Pyz/Zed/CompanyUser/CompanyUserDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/CompanyUser/CompanyUserDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -572,7 +572,7 @@ Make sure  that the following modules have been installed:<table><thead><tr><th>
 Append glossary according to your configuration:
 
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 shared_cart_widget.add_product.separate,"Add as separate item",en_US
@@ -664,7 +664,7 @@ Register the following global widgets:
 | `CartDeleteCompanyUsersListWidget` |Renders a list, shared with the customer, for the cart confirm delete page.  | None | `SprykerShop\Yves\SharedCartWidget\Widget` |
 
 <details open>
-<summary>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -718,7 +718,7 @@ Make sure that the following plugin has been registered: </br>Open Yves and log 
 | `SharedCartPageControllerProvider` |Provides routes used in SharedCartPage.  |None  | `SprykerShop\Yves\SharedCartPage\Plugin\Provider` |
 
 <details open>
-<summary>src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>
 
 ```php
 <?php

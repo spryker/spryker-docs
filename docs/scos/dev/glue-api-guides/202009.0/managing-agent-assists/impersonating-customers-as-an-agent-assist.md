@@ -63,7 +63,7 @@ Request sample: `POST http://glue.mysprykershop.com/agent-customer-impersonation
 ### Response
 
 <details open>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
 
 ```json
 {

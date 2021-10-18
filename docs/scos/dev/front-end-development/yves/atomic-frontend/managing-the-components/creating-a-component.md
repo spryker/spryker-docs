@@ -258,7 +258,7 @@ When done, you can include it into other components, views and templates.
 ```
 
 <details open>
-<summary>See resulting file (page-layout-main.twig)</summary>
+<summary markdown='span'>See resulting file (page-layout-main.twig)</summary>
 
 ```twig
 {% raw %}{%{% endraw %} extends template('page-blank') {% raw %}%}{% endraw %}

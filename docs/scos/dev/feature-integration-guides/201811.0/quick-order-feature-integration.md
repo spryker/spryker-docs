@@ -63,7 +63,7 @@ Make sure that the modules listed in the following table have been installed:
 
 Feature specific glossary keys:
 
-<details open><summary>src/data/import/glossary.csv</summary>
+<details open><summary markdown='span'>src/data/import/glossary.csv</summary>
    
 ```yaml
 quick-order.page-title,Quick Order,en_US
@@ -118,7 +118,7 @@ Register controller provider(s) to Yves application:
 | --- | --- | --- | --- |
 | ` QuickOrderPageControllerProvider`  | ` SprykerShop\Yves\QuickOrderPage\Plugin\Provider`  | ` QuickOrderController`  |Provides functionality to display and process Quick Order table.  |
 
-<details open><summary>src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>
+<details open><summary markdown='span'>src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>
    
 ```php
 <?php

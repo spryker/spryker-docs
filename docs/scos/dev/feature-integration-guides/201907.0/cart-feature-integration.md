@@ -117,7 +117,7 @@ Activate the following plugin:
 | `AnonymousCustomerUniqueIdValidatorPlugin` | Validates Rest requests before procession. Executed immediately after formatting an HTTP resource request. | None | `Spryker\Glue\CartsRestApi\Plugin\Validator` |
 
 <details open>
-<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -179,7 +179,7 @@ Activate the following plugins:
 | `QuoteCreatorPlugin` | Creates a single quote for a customer. | None | `Spryker\Zed\CartsRestApi\Communication\Plugin\CartsRestApi` |
 
 <details open>
-<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```PHP
 <?php
@@ -262,7 +262,7 @@ To verify the plugin integration:
 </div></section>
 
 <details open>
-<summary>src/Pyz/Glue/CustomersRestApi/CustomersRestApiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/CustomersRestApi/CustomersRestApiDependencyProvider.php</summary>
 
 ```PHP
 <?php
@@ -297,7 +297,7 @@ To verify that `UpdateCartCreateCustomerReferencePlugin` is installed correctly,
 </div></section>
 
 <details open>
-<summary>src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
 
 ```PHP
 <?php

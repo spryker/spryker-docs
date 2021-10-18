@@ -55,7 +55,7 @@ The endpoint responds with a **RestCompanyUserCollectionResponse** that contains
 *The attributes mentioned are all attributes in the response. Type and ID are not mentioned.
 
 <details open>
-<summary>Sample Response</summary>
+<summary markdown='span'>Sample Response</summary>
     
 ```json
 {
@@ -147,7 +147,7 @@ The company user identifier contained in the id member can be used to access the
 {% endinfo_block %}
 
 <details open>
-<summary>Sample Response</summary>
+<summary markdown='span'>Sample Response</summary>
     
 ```json
 {
@@ -223,7 +223,7 @@ If the currently logged in user does not have access to the specified Company Us
 *The attributes mentioned are all attributes in the response. Type is not mentioned.
 
 <details open>
-<summary>Sample Response</summary>
+<summary markdown='span'>Sample Response</summary>
     
 ```json
 {
@@ -269,7 +269,7 @@ In this case, the following additional attributes will be added to the response:
 *The attributes mentioned are all attributes in the response. Type and ID are not mentioned.
 
 <details open>
-<summary>Sample Response</summary>
+<summary markdown='span'>Sample Response</summary>
     
 ```json
 {

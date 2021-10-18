@@ -27,7 +27,7 @@ Enable the following behaviors by registering the plugins:
 | `ProductDiscontinuedItemValidatorPlugin` |Checks if the provided product SKU is discontinued, if yes - adds an error message.  | None | `Spryker\Client\ProductDiscontinuedStorage\Plugin\QuickOrder` |
 
 <details open>
-<summary> src/Pyz/Client/QuickOrder/QuickOrderDependencyProvider.php</summary>
+<summary markdown='span'> src/Pyz/Client/QuickOrder/QuickOrderDependencyProvider.php</summary>
 
 ```php
  <?php

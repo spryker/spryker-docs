@@ -113,7 +113,7 @@ Make sure that the following endpoint is available:
 `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-reviews`
 
 <details open>
-<summary>Example</summary>
+<summary markdown='span'>Example</summary>
 
 ```yaml
 {
@@ -287,7 +287,7 @@ Make sure that the response contains product-reviews as a relationship and produ
 Make sure that `averageRating` and `reviewCount` attributes are present in concrete-products and abstract-products resources attributes section.
 
 <details open>
-<summary>Example</summary>
+<summary markdown='span'>Example</summary>
 
 ```yaml
 {
@@ -445,7 +445,7 @@ Make a request to `http://glue.mysprykershop.com/concrete-products/{% raw %}{{{%
 Make sure that the response contains product-reviews as a relationship and product-reviews data included.
 
 <details open>
-<summary>Example</summary>
+<summary markdown='span'>Example</summary>
 
 ```yaml
 {

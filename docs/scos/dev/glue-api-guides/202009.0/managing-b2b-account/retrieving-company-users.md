@@ -44,7 +44,7 @@ Sample request: `GET https://glue.mysprykershop.com/company-users`
 
 
 <details open>
-<summary>Sample Response</summary>
+<summary markdown='span'>Sample Response</summary>
     
 ```json
 {
@@ -146,7 +146,7 @@ To retrieve information about a company user, send the request:
 
 
 <details open>
-<summary>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
     
 ```json
 {
@@ -167,7 +167,7 @@ To retrieve information about a company user, send the request:
 </details>
 
 <details open>
-<summary>Response sample with companies, company business units and company roles</summary>
+<summary markdown='span'>Response sample with companies, company business units and company roles</summary>
     
 ```json
 {

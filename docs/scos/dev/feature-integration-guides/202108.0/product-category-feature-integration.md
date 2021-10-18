@@ -53,7 +53,7 @@ Set up the following configuration:
 
 
 <details open>
-    <summary>src/Pyz/Zed/ProductCategoryStorage/ProductCategoryStorageConfig.php</summary>
+    <summary markdown='span'>src/Pyz/Zed/ProductCategoryStorage/ProductCategoryStorageConfig.php</summary>
 
 ```php
 <?php
@@ -86,7 +86,7 @@ class ProductCategoryStorageConfig extends SprykerProductCategoryStorageConfig
 
 </details>
 <details open>
-    <summary>src/Pyz/Zed/ProductCategoryFilterStorage/ProductCategoryFilterStorageConfig.php</summary>
+    <summary markdown='span'>src/Pyz/Zed/ProductCategoryFilterStorage/ProductCategoryFilterStorageConfig.php</summary>
 
 ```php
 <?php
@@ -183,7 +183,7 @@ Configure tables to be published to the `spy_product_abstract_category_storage`,
 
 
 <details open>
-    <summary>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -376,7 +376,7 @@ Make sure that, when a category product assignment is changed through ORM, it is
 
 
 <details open>
-    <summary>EXAMPLE EXPECTED DATA GRAGMENT: product_abstract_category:de:de_de:1</summary>
+    <summary markdown='span'>EXAMPLE EXPECTED DATA GRAGMENT: product_abstract_category:de:de_de:1</summary>
 
 ```json
 {
@@ -403,7 +403,7 @@ Make sure that, when a category product assignment is changed through ORM, it is
 
 
 <details open>
-    <summary>EXAMPLE EXPECTED DATA GRAGMENT: product_category_filter:8</summary>
+    <summary markdown='span'>EXAMPLE EXPECTED DATA GRAGMENT: product_category_filter:8</summary>
 
 ```json
 {
@@ -489,7 +489,7 @@ Add the following plugins to your project:
 
 
 <details open>
-    <summary>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -543,7 +543,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 Make sure that the product abstract contains the category property in Elasticsearch:
 
 <details open>
-    <summary>Data fragment</summary>
+    <summary markdown='span'>Data fragment</summary>
 
 ```json
 {
@@ -610,7 +610,7 @@ class CategoryGuiDependencyProvider extends SpykerCategoryGuiDependencyProvider
 
 Make sure that, on the *Delete Category* in the Back Office, the *Products to be de-assigned* column is displayed.
 <details open>
-    <summary>src/Pyz/Zed/Category/CategoryDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Zed/Category/CategoryDependencyProvider.php</summary>
 
 ```php
 <?php

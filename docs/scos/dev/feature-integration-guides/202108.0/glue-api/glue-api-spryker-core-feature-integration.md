@@ -250,7 +250,7 @@ If everything is set up correctly, you should be able to access `http://glue.mys
 }
 ```
 
-<details><summary>\Pyz\Glue\GlueApplication\GlueApplicationDependencyProvider.php</summary>
+<details><summary markdown='span'>\Pyz\Glue\GlueApplication\GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

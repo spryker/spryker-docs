@@ -54,7 +54,7 @@ The `QueryInterface` instance is a stateful class; sometimes, the `getSearchQuer
 Besides, this new `QueryInterface ` instance has to implement `Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextAwareQueryInterface`. To be compliant with this interface, implementations for the `::setSearchContext()` and `::getSearchContext()` methods must be provided. This is needed for setting and maintaining a search context that would later be used during the search process, particularly for resolving the correct Elasticsearch index for search. For more information, see [Search migration concept](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html).
 
 <details open>
-<summary>Query</summary>
+<summary markdown='span'>Query</summary>
 
 ```php
 <?php

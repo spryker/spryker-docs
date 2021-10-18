@@ -30,7 +30,7 @@ This command will generate some new classes in your project under `\Orm\Zed\Prod
 6.  Activate the product review collectors by adding the `ProductReviewCollectorSearchPlugin` and the `ProductAbstractReviewCollectorStoragePlugin` to the Storage and Search Collector plugin stack.
 
 <details open>
-<summary>Example: collector plugin list extension</summary>
+<summary markdown='span'>Example: collector plugin list extension</summary>
 
 ```php
 <?php

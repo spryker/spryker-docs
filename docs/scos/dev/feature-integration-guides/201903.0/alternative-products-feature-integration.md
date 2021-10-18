@@ -40,7 +40,7 @@ Adjust the schema definition so that entity changes trigger the events.
 |  `spy_product_alternative` |  `Entity.spy_product_alternative.create` `Entity.spy_product_alternative.update` `Entity.spy_product_alternative.delete` |
 
 <details open>
-<summary>src/Pyz/Zed/ProductAlternative/Persistence/Propel/Schema/spy_product_alternative.schema.xml</summary>
+<summary markdown='span'>src/Pyz/Zed/ProductAlternative/Persistence/Propel/Schema/spy_product_alternative.schema.xml</summary>
     
 ```html
 <?xml version="1.0"?>
@@ -62,7 +62,7 @@ Adjust the schema definition so that entity changes trigger the events.
     
 Set up synchronization queue pools so that non-multistore entities (not store specific entities) get synchronized among stores:
 
-<details open><summary>src/Pyz/Zed/ProductAlternativeStorage/Persistence/Propel/Schema/spy_product_alternative_storage.schema.xml</summary>
+<details open><summary markdown='span'>src/Pyz/Zed/ProductAlternativeStorage/Persistence/Propel/Schema/spy_product_alternative_storage.schema.xml</summary>
 
 ```html
  <?xml version="1.0"?>
@@ -122,7 +122,7 @@ This step will publish tables on change (create, edit, delete
 |  `ProductAlternativeStorageEventSubscriber` | Registers listeners that are responsible to publish alternative products storage entity changes when a related entity change event occurs. | None |  `Spryker\Zed\ProductAlternativeStorage\Communication\Plugin\Event\Subscriber` |
 
 <details open>
-<summary>src/Pyz/Zed/Event/EventDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Event/EventDependencyProvider.php</summary>
  
  ```php
  <?php
@@ -154,7 +154,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 |  `ProductReplacementForSynchronizationDataPlugin` | Allows synchronizing the whole storage table content into Storage. | None |  `Spryker\Zed\ProductAlternativeStorage\Communication\Plugin\Synchronization` |
 
 <details open>
-<summary>src/Pyz/Zed/ProductAlternativeStorage/ProductAlternativeStorageConfig.php</summary>
+<summary markdown='span'>src/Pyz/Zed/ProductAlternativeStorage/ProductAlternativeStorageConfig.php</summary>
 
 ```php
 <?php
@@ -187,7 +187,7 @@ class ProductAlternativeStorageConfig extends SprykerProductAlternativeStorageCo
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -226,7 +226,7 @@ The following imported entities will be used as alternative products in the Spry
 Prepare your data according to your requirements using our demo data:
 
 <details>
-<summary>vendor/spryker/spryker/Bundles/ProductAlternativeDataImport/data/import/product_alternative.csv</summary>
+<summary markdown='span'>vendor/spryker/spryker/Bundles/ProductAlternativeDataImport/data/import/product_alternative.csv</summary>
 
  ```yaml
 concrete_sku,alternative_product_concrete_sku,alternative_product_abstract_sku
@@ -256,7 +256,7 @@ Register the following plugin to enable data import:
 |  `ProductAlternativeDataImportPlugin` | Imports alternative product data into the database. | None |  `Spryker\Zed\ProductAlternativeDataImport\Communication\Plugin` |
 
 <details open>
-<summary>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -303,7 +303,7 @@ Enable the following behaviors by registering the plugins:
 |  `ProductFormTransferMapperExpanderPlugin` | Adds product alternative create requests to product concrete transfer. | None |  `Spryker\Zed\ProductAlternativeGui\Communication\Plugin\ProductManagement` |
 
 <details open>
-<summary>src/Pyz/Zed/Product/ProductDependencyProvider</summary>
+<summary markdown='span'>src/Pyz/Zed/Product/ProductDependencyProvider</summary>
 
 ```php
 <?php
@@ -332,7 +332,7 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -422,7 +422,7 @@ Make sure that the following modules have been installed:<table><thead><tr><td>M
 Append glossary according to your configuration:
 
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 replacement_for_widget.replacement_for,Replacement for,en_US
@@ -459,7 +459,7 @@ Register the following plugins to enable widgets:
 |  `ProductAlternativeListWidget` | Display list of alternative products for the provided product. | None |  `SprykerShop\Yves\ProductAlternativeWidget\Widget` |
 
 <details open>
-<summary>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

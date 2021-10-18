@@ -42,7 +42,7 @@ Adjust the schema definition so that entity changes can trigger events:
 | `spy_price_product_merchant_relationship` | `Entity.spy_price_product_merchant_relationship.create` `Entity.spy_price_product_merchant_relationship.update` `Entity.spy_price_product_merchant_relationship.delete`  |
 
 <details open>
-<summary>src/Pyz/Zed/PriceProductMerchantRelationship/Persistence/Propel/Schema/spy_price_product_merchant_relationship.schema.xml</summary>
+<summary markdown='span'>src/Pyz/Zed/PriceProductMerchantRelationship/Persistence/Propel/Schema/spy_price_product_merchant_relationship.schema.xml</summary>
     
 ```html
 <?xml version="1.0"?>
@@ -93,7 +93,7 @@ With this step you will be able to publish prices on change (create, edit, delet
 | `PriceProductMerchantRelationshipStorageEventSubscriber` | Registers listeners that are responsible to publish merchant prices to storage when a related entity changes. | None |`Spryker\Zed\ProductListStorage\Communication\Plugin\Event\Subscriber` |
 
 <details open>
-<summary>src/Pyz/Zed/Event/EventDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Event/EventDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -123,7 +123,7 @@ Make sure when prices are exported, created, updated, or deleted manually in Zed
 {% endinfo_block %} to Redis accordingly.<table><thead><tr><th>Storage type</th><th>Target entity</th><th>Example expected data fragment</th></tr></thead><tbody><tr><td>Redis</td><td>Product Abstract Price</td><td>`kv:price_product_concrete_merchant_relationship:de:1:1`</td><td></td></tr><tr><td>Redis</td><td>Product Concrete Price</td><td>`kv:price_product_abstract_merchant_relationship:de:1:1`</td><td></td></tr></tbody></table>)
 
 <details open>
-<summary>Example expected data fragment: Product Abstract Price</summary>
+<summary markdown='span'>Example expected data fragment: Product Abstract Price</summary>
 
 ```php
 {
@@ -155,7 +155,7 @@ Make sure when prices are exported, created, updated, or deleted manually in Zed
 </details>
 
 <details open>
-<summary>Example expected data fragment: Product Concrete Price</summary>
+<summary markdown='span'>Example expected data fragment: Product Concrete Price</summary>
 
 ```php
 {
@@ -194,7 +194,7 @@ Add synchronization plugins:
 |`PriceProductConcreteMerchantRelationSynchronizationDataPlugin`  | Can be executed to synchronize all `price_product_concrete_merchant_relationship` entries from the database to Redis. | None | `Spryker\Zed\PriceProductMerchantRelationshipStorage\Communication\Plugin\Synchronization` |
 
 <details open>
-    <summary>src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php</summary>
  
 ```php
 <?php
@@ -231,7 +231,7 @@ Verify if "console sync:data --help" has `price_product_abstract_merchant_relati
 Prepare your prices data according to your requirements using our demo data:
 
 <details open>
-<summary>vendor/spryker/price-product-merchant-relationship-data-import/data/import/price_product_merchant_relationship.csv</summary>
+<summary markdown='span'>vendor/spryker/price-product-merchant-relationship-data-import/data/import/price_product_merchant_relationship.csv</summary>
 
 ```yaml
 merchant_relation_key,abstract_sku,concrete_sku,price_type,store,currency,price_net,price_gross
@@ -277,7 +277,7 @@ merchant_relation_key,abstract_sku,concrete_sku,price_type,store,currency,price_
 Register the following plugin to enable data import:
 
 <details open>
-<summary>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -330,7 +330,7 @@ Enable the following behaviors by registering the plugins:
 | `MerchantRelationshipProductConcreteFormExpanderPlugin` | Adds select control to PIM (product variants) where an admin can choose Merchant Relationship on the Prices tab to manage prices for a concrete Merchant Relationship. | None | `Spryker\Zed\PriceProductMerchantRelationshipGui\Communication\Plugin\ProductManagement` |
 
 <details open>
-<summary>src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -369,7 +369,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 
 
 <details open>
-<summary>src/Pyz/Zed/PriceProduct/PriceProductDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/PriceProduct/PriceProductDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -429,7 +429,7 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
 </details>
 
 <details open>
-<summary>src/Pyz/Service/PriceProduct/PriceProductDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Service/PriceProduct/PriceProductDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -456,7 +456,7 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
 </details>
 
 <details open>
-<summary>src/Pyz/Client/PriceProductStorage/PriceProductStorageDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/PriceProductStorage/PriceProductStorageDependencyProvider.php</summary>
 
 ```php
 <?php

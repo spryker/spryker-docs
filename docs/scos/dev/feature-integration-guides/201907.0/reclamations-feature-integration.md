@@ -85,7 +85,7 @@ Enable the following behaviors by registering the plugins:
 | `ReclamationSalesTablePlugin` | Expands sales order table with a "Claim" button, that redirects to "Create Reclamation" page, where the whole order or its specific items can be reclaimed. | None | `Spryker\Zed\SalesReclamationGui\Communication\Plugin\Sales` |
 
 <details open>
-<summary>src/Pyz/Zed/Sales/SalesDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Sales/SalesDependencyProvider.php</summary>
 
 ```php
 <?php

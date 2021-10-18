@@ -48,7 +48,7 @@ Request sample:
 The endpoint responds with an array of orders placed by the authenticated customer. In the response, each order will have a unique identifier. It is specified in the **id** attribute. You can use the ID to retrieve detailed order information. Also, **self** links will be provided to access an order. individually using the REST API.
 
 <details open>
-<summary>Response sample with one order</summary>
+<summary markdown='span'>Response sample with one order</summary>
    
 ```
 {
@@ -109,7 +109,7 @@ By default, the above request will return all orders placed by a customer. Howev
 When paging is enabled, the **links** section of the JSON response will contain links for the first, previous, next and last pages.
 
 <details open>
-<summary>View example</summary>
+<summary markdown='span'>View example</summary>
    
 ```
 {
@@ -165,7 +165,7 @@ Request sample: `GET http://glue.mysprykershop.com/orders/DE--1`
 ### Response
 
 <details open>
-<summary>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {

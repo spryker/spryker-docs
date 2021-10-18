@@ -118,7 +118,7 @@ Add the following configuration to your project:
 
   
 <details open>
-    <summary>config/Shared/config_default.php</summary>
+    <summary markdown='span'>config/Shared/config_default.php</summary>
     
 ```php
 use Spryker\Shared\Translator\TranslatorConstants;
@@ -520,7 +520,7 @@ Ensure that the locale of the Back Office matches the locale of a logged-in user
 
   
 <details open>
-    <summary>src/Pyz/Zed/User/UserDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Zed/User/UserDependencyProvider.php</summary>
 
 ```php
 <?php

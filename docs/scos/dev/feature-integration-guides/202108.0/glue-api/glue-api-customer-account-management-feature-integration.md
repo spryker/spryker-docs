@@ -108,7 +108,7 @@ class OauthConfig extends SprykerOauthConfig
 Configure password validation rules for `CustomerRestApi` endpoints:
 
 <details open>
-<summary>src/Pyz/Glue/CustomersRestApi/Validation/customers.validation.yml</summary>
+<summary markdown='span'>src/Pyz/Glue/CustomersRestApi/Validation/customers.validation.yml</summary>
 
 ```text
 customers:
@@ -355,7 +355,7 @@ Enable resources and relationships as follows:
 | CustomerAddressProviderStrategyPlugin           | Finds a customer address based on the UUID provided in `RestAddressTransfer.id`. If the address was found, returns it. | None                                               | Spryker\Zed\CustomersRestApi\Communication\Plugin\ShipmentsRestApi |
 
 <details open>
-<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -468,7 +468,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 
 <details open>
-<summary>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
 
 
 ```php
@@ -685,7 +685,7 @@ class ShipmentsRestApiDependencyProvider extends SprykerShipmentsRestApiDependen
 ```
 
 <details open>
-<summary>src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
 
 
 ```php

@@ -162,7 +162,7 @@ To include the category information, you need to extend the response of the reso
 Sample Request: GET *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?**include=category-nodes***
 
 <details open>
-<summary>Sample Response</summary>
+<summary markdown='span'>Sample Response</summary>
     
 ```json
 {

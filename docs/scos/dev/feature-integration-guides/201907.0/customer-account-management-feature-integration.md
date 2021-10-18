@@ -38,7 +38,7 @@ Enable the following behaviors by registering the plugins:
 | `RedirectUriCustomerRedirectStrategyPlugin` | Redirects just logged in Customer to the provided "redirectURI" in parameters. | None | `SprykerShop\Yves\CustomerPage\Plugin\CustomerPage` |
 
 <details open>
-<summary>src/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php</summary>
 
 ```
 <?php

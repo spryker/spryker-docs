@@ -100,7 +100,7 @@ Although CMS pages also expose the `url` parameter, resolving of CMS page SEF UR
 {% endinfo_block %}
 
 <details open>
-    <summary>Response Sample</summary>
+    <summary markdown='span'>Response Sample</summary>
 
 ```json
 {

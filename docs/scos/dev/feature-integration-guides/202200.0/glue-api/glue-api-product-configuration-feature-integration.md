@@ -108,7 +108,7 @@ Make sure that the `https://glue.mysprykershop.com/concrete-products/{% raw %}{{
 Make sure that the `concrete-products` resource is expanded with the product configuration properties. For an example, see the following response to the `GET https://glue.mysprykershop.com/concrete-products/093_24495843` request.
 
 <details>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -181,7 +181,7 @@ Activate the following plugins:
 
 
 <details>
-    <summary>src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -219,7 +219,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 </details>
 
 <details>
-    <summary>src/Pyz/Glue/ProductConfigurationsRestApi/ProductConfigurationsRestApiDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Glue/ProductConfigurationsRestApi/ProductConfigurationsRestApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -309,7 +309,7 @@ class OrdersRestApiDependencyProvider extends SprykerOrdersRestApiDependencyProv
 Make sure that the `orders` resource is expanded with the product configuration properties. For an example, see the following response to the `GET https://glue.mysprykershop.com/orders/DE--2` request:
 
 <details>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -567,7 +567,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 Make sure that the `items` resource is expanded with the product configuration properties. For an example, see the following response to the `POST https://glue.mysprykershop.com/carts/2f0a0b59-b988-5829-8fd3-6d636fc8ea33/items?include=items` request:
 
 <details>
-    <summary>Request sample</summary>
+    <summary markdown='span'>Request sample</summary>
 
 ```json
 {
@@ -621,7 +621,7 @@ Make sure that the `items` resource is expanded with the product configuration p
 </details>
 
 <details>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
     
 ```json
 {

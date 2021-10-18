@@ -31,7 +31,7 @@ Request sample : `GET https://glue.mysprykershop.com/stores`
 ### Response
 
 <details open>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
 ```json
 {
 		"data": [

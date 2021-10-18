@@ -55,7 +55,7 @@ To submit checkout data without order confirmation, send the request:
 
 
 <details open>
-    <summary>Request sample</summary>
+    <summary markdown='span'>Request sample</summary>
 
 ```json
 {
@@ -153,7 +153,7 @@ To submit checkout data without order confirmation, send the request:
 In case of a successful update, the endpoint responds with information that can help you fill in the missing checkout data, like the customer's addresses, available payment and shipment methods.
 
 <details open>
-<summary>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
     
 ```json
 {
@@ -233,7 +233,7 @@ In case of a successful update, the endpoint responds with information that can 
 
 
 <details open>
-<summary>Response sample with payment methods</summary>
+<summary markdown='span'>Response sample with payment methods</summary>
 
 ```json
 {
@@ -304,7 +304,7 @@ In case of a successful update, the endpoint responds with information that can 
 </details>
 
 <details open>
-<summary>Response sample with shipment methods</summary>
+<summary markdown='span'>Response sample with shipment methods</summary>
 
 ```json
 {
@@ -423,7 +423,7 @@ In case of a successful update, the endpoint responds with information that can 
 </details>
 
 <details open>
-<summary>Response sample with customer addresses</summary>
+<summary markdown='span'>Response sample with customer addresses</summary>
 
 ```json
 {
@@ -546,7 +546,7 @@ In case of a successful update, the endpoint responds with information that can 
 
 
 <details open>
-<summary>Response sample with company business unit addresses</summary>
+<summary markdown='span'>Response sample with company business unit addresses</summary>
 
 ```json
 {

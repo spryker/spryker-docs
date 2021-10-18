@@ -47,7 +47,7 @@ Make sure that the following modules have been installed:
 Put all the payment methods available in the shop to CheckoutRestApiConfig. For example:
 
 <details open>
-<summary>src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiConfig.php</summary>
+<summary markdown='span'>src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiConfig.php</summary>
 
 ```php
 <?php
@@ -142,7 +142,7 @@ Setting `CheckoutRestApiConfig::IS_PAYMENT_PROVIDER_METHOD_TO_STATE_MACHINE_MAPP
 `CheckoutRestApiConfig::isShipmentMethodsMappedToAttributes()` must be set to *true* if you want to continue receiving shipment methods in the checkout-data attributes. This configuration defaults to true for backward compatibility.
 In case the `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isShipmentMethodsMappedToAttributes(`) is *true*, make sure the shipping methods attributes are returned. To verify that, send a POST request to the `http://glue.mysprykershop.com/checkout-data` endpoint and make sure that you get not empty `shipmentMethods` attribute in response:
 <details open>
-<summary>Response example</summary>
+<summary markdown='span'>Response example</summary>
 
 ```json
 {
@@ -212,7 +212,7 @@ In case the `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isShipmentMethodsMa
 `CheckoutRestApiConfig::isPaymentProvidersMappedToAttributes()` must be set to *true* if you want to continue receiving payment methods in the checkout-data attributes. This configuration defaults to true for backward compatibility.
 In case the `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isPaymentProvidersMappedToAttributes()` is *true*, make sure the payment methods attributes are returned.  To verify that, send a POST request to the `http://glue.mysprykershop.com/checkout-data` endpoint and make sure that you get not empty `paymentProviders` attribute in response:
 <details open>
-<summary>Response example</summary>
+<summary markdown='span'>Response example</summary>
 
 ```json
 {

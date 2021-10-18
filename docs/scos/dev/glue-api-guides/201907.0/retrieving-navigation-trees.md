@@ -78,7 +78,7 @@ In addition to that, each node element exposes the following fields:
 *The fields mentioned are all attributes in the response. Type and ID are not mentioned.
 
 <details open>
-<summary>Sample Response</summary>
+<summary markdown='span'>Sample Response</summary>
     
 ```json
 {
@@ -167,7 +167,7 @@ To include the category information, you need to extend the response of the reso
 Sample Request: GET *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?**include=category-nodes***
 
 <details open>
-<summary>Sample Response</summary>
+<summary markdown='span'>Sample Response</summary>
     
 ```json
 {

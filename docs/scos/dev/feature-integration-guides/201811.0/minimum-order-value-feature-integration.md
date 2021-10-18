@@ -53,7 +53,7 @@ Make sure that the following changes in transfer objects have been applied:<tabl
 Append glossary for core feature of shopping lists:
 
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 sales-order-threshold.strategy.soft-minimum-threshold-fixed-fee,Zuschlag,de_DE
@@ -66,7 +66,7 @@ sales-order-threshold.strategy.soft-minimum-threshold-flexible-fee,Surcharge,en_
 
 Demo data glossary keys are as follows:
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
  
 ```yaml
 sales-order-threshold.hard-minimum-threshold.de.eur.message,"You should add items for {% raw %}{{{% endraw %}threshold{% raw %}}}{% endraw %} to pass a recommended threshold. You can't proceed with checkout",en_US
@@ -89,7 +89,7 @@ sales-order-threshold.soft-minimum-threshold.de.chf.message,"Sie sollten Waren i
 |`SalesOrderThresholdTypeInstallerPlugin`  | Installs sales order threshold types. |None| `Spryker\Zed\SalesOrderThreshold\Communication\Plugin\Installer` |
 
 <details open>
-<summary>src/Pyz/Zed/Installer/InstallerDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Installer/InstallerDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -134,7 +134,7 @@ The following imported entities will be used as sales order thresholds in Spryke
 Prepare your data according to your requirements using our demo data:
 
 <details open>
-<summary>vendor/spryker/sales-order-threshold-data-import/data/import/sales_order_threshold.csv</summary>
+<summary markdown='span'>vendor/spryker/sales-order-threshold-data-import/data/import/sales_order_threshold.csv</summary>
 
 ```yaml
 store,currency,threshold_type_key,threshold,fee,message_glossary_key
@@ -162,7 +162,7 @@ Register the following plugin to enable data import:
 | `SalesOrderThresholdDataImportPlugin` | Imports demo sales order threshold data into a database. |None| `Spryker\Zed\SalesOrderThresholdDataImport\Communication\Plugin\DataImport`|
 
 <details open>
-<summary>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -199,7 +199,7 @@ Make sure that the configured data is added to the `spy_sales_order_threshold` t
 Add the following data to the imported tax sets to have Sales Order Threshold expenses tax sets.
 
 <details open>
-<summary>data/import/tax.csv</summary>
+<summary markdown='span'>data/import/tax.csv</summary>
 
 ```yaml
 MOV Taxes,Austria,Austria Standard,20
@@ -248,7 +248,7 @@ Enable the behavior by registering the following plugins:
 | `SoftMinimumThresholdWithMessageStrategyPlugin`| Strategy that provides a soft threshold type which fails if the order value is less than the threshold. |None | `Spryker\Zed\SalesOrderThreshold\Communication\Plugin\Strategy`|
 
 <details open>
-<summary>src/Pyz/Zed/Calculation/CalculationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Calculation/CalculationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -282,7 +282,7 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -310,7 +310,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -355,7 +355,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/SalesOrderThreshold/SalesOrderThresholdDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/SalesOrderThreshold/SalesOrderThresholdDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -422,7 +422,7 @@ Make sure that the following modules were installed:<table><thead><tr><th>Module
 Append glossary according to your configuration:
 		
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 sales-order-threshold.expense.name,Zuschlag,de_DE
@@ -451,7 +451,7 @@ Enable global widgets:
 |`SalesOrderThresholdWidget`  | Shows the expenses added to the quote transfer related to the sales order threshold. | `SprykerShop\Yves\SalesOrderThresholdWidget\Widget` |
 
 <details open>
-<summary>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

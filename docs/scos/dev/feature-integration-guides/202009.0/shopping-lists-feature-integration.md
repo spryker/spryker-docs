@@ -1015,7 +1015,7 @@ Make sure that the following modules were installed:
 Append glossary according to your configuration:
 
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 customer.account.shopping_list.overview.edit,Edit,en_US

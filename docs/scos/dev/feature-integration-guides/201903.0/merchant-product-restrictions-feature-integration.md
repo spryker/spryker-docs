@@ -74,7 +74,7 @@ Register the following plugin to enable data import:
 | `MerchantRelationshipProductListDataImportPlugin` | Imports basic product list data into the database. | <ul><li>Merchant relations must be imported first.</li><li>Product lists must be imported first.</li></ul> | `Spryker\Zed\MerchantRelationshipProductListDataImport\Communication\Plugin` |
 
 <details open>
-<summary>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
     
 ```php
 <?php
@@ -120,7 +120,7 @@ Activate the following plugins:
 | `MerchantRelationshipTableExpanderPlugin` | Provides table header, config and data extensions for product lists with merchant relationship owner type. | None | `Spryker\Zed\MerchantRelationshipProductListGui\Communication\Plugin\ProductListGuiExtension` |
 
 <details open>
-<summary>src/Pyz/Zed/Customer/CustomerDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Customer/CustomerDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -147,7 +147,7 @@ class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/ProductListGui/ProductListGuiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/ProductListGui/ProductListGuiDependencyProvider.php</summary>
 
 ```php
 <?php

@@ -67,7 +67,7 @@ If the request is successful and the Abstract Product List content item with the
 *The fields mentioned are all attributes in the response. Type and ID are not mentioned.
 
 <details open>
-<summary>Sample response:</summary>
+<summary markdown='span'>Sample response:</summary>
     
 ```php
 {
@@ -201,7 +201,7 @@ The following additional attributes are added to the response:
 If the request is successful and the abstract product image sets with the specified ID have been found, the endpoint will respond with a **RestAbstractProductsResponse**. It provides only links to the images.
 
 <details open>
-<summary>Sample response:</summary>
+<summary markdown='span'>Sample response:</summary>
     
 ```php
 ...
@@ -306,7 +306,7 @@ The following additional attributes will be added to the response:
 If the request is successful and the availability of abstract products with the specified content item key has been found, the resource will respond with a **RestAbstractProductAvailabilityResponse**. It provides only links to the images.
 
 <details open>
-<summary>Sample response:</summary>
+<summary markdown='span'>Sample response:</summary>
     
 ```php
 {
@@ -470,7 +470,7 @@ The following additional attributes will be added to the response:
 *The fields mentioned are all attributes in the response. Type and ID are not mentioned.
 
 <details open>
-<summary>Sample response:</summary>
+<summary markdown='span'>Sample response:</summary>
 
 ```php
 {
@@ -659,7 +659,7 @@ The following additional attributes will be added to the response:
 *The fields mentioned are all attributes in the response. Type and ID are not mentioned.
 
 <details open>
-<summary>Sample response:</summary>
+<summary markdown='span'>Sample response:</summary>
     
 ```php
 {
@@ -902,7 +902,7 @@ The following additional attributes will be added to the response:
 *The fields mentioned are all attributes in the response. Type and ID are not mentioned.
 
 <details open>
-<summary>Sample response:</summary>
+<summary markdown='span'>Sample response:</summary>
     
 ```php
 {
@@ -1129,7 +1129,7 @@ The following additional attributes will be added to the response:
 *The fields mentioned are all attributes in the response. Type and ID are not mentioned.
 
 <details open>
-<summary>Sample response:</summary>
+<summary markdown='span'>Sample response:</summary>
     
 ```php
 {
@@ -1236,7 +1236,7 @@ Sample request: _GET http://mysprykershop.com/content-product-abstract-lists/apl
 where **apl-1** is the key of the Abstract Product List content item you want to retrieve.
 
 <details open>
-<summary>Sample response:</summary>
+<summary markdown='span'>Sample response:</summary>
     
 ```php
 {

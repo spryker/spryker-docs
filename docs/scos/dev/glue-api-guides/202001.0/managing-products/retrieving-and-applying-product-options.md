@@ -56,7 +56,7 @@ Each product option is represented by a related resource with the following attr
 * Type and ID are not mentioned.
 
 <details open>
-<summary>Sample Response</summary>
+<summary markdown='span'>Sample Response</summary>
     
 ```json
 {
@@ -248,7 +248,7 @@ Each product option available for every product in the cart is represented by a 
 * Type and ID are not mentioned.
 
 <details open>
-<summary>Sample Response - Guest Cart</summary>
+<summary markdown='span'>Sample Response - Guest Cart</summary>
     
 ```json
 {
@@ -383,7 +383,7 @@ Each product option available for every product in the cart is represented by a 
 </details>
 
 <details open>
-<summary>Sample Response - Cart of Registered User</summary>
+<summary markdown='span'>Sample Response - Cart of Registered User</summary>
     
 ```json
 {

@@ -219,7 +219,9 @@ Page identifiers used to define visibility conditions depend on the page type to
 
 
 {% info_block infoBox "Product details page" %}
+
 For product details page type, you can use the Product ID or Category ID identifiers. Category ID is a collective identifier. By selecting a category, the content manager selects all the products that are [assigned to the category](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html).
+
 {% endinfo_block %}
 
 To meet your project requirements, you can extend the visibility conditions functionality by adding more conditions, like Customer ID, Customer Group ID or Navigation Nodes. See [HowTo - Create Visibility Conditions for CMS Blocks](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html) to learn more.
@@ -250,6 +252,8 @@ A slot widget template looks as follows:
 ### Properties
 Properties are used by slot widgets to identify for which entity content is being fetched. At the same time, all the content that is meant to be fetched by a slot widget can be identified using the same properties on the side of the content provider. When a slot widget make a request to fetch content from a content provider, It passes the property values and fetches what the content provider returns to render it in the specified page. You can find the list of exemplary properties with descriptions in the table:
 
+<div class="width-100">
+
 | PROPERTY | SPECIFICATION |
 | --- | --- |
 | Slot key | Unique slot identifier. Using this identifier, slot widget fetches all the information about slot from storage. |
@@ -258,6 +262,8 @@ Properties are used by slot widgets to identify for which entity content is bein
 | Category ID | Numeric identifier of the category page for which content is fetched. |
 | Product ID | Numeric identifier of the product details page for which content is fetched. |
 | CMS page ID | Numeric identifier of the CMS page for which content is fetched. |
+
+</div>
 
 You can add other properties to meet your project or external content provider requirements.
 

@@ -16,6 +16,7 @@ related:
 
 After a [return](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html) has been [created by a Back Office User](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html#creating-returns) or by a [Shop User](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html#return-management-on-the-storefront), it appears on the *Orders > Returns* page. On this page, you can manage the returns as follows:
 
+
 * View the return details
 * Set the return statuses
 * Print the return slip
@@ -50,6 +51,7 @@ To trigger the return states:
 The triggered return states are reflected in [Customer Account on the Storefront](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html#return-management-on-the-storefront) informing Customers about the statuses of their returns.<!--- You can rename the default statuses that display on the Storefront so they would make more sense for the Storefront users. See *Display Custom Names for Order Item States on the Storefront* for details on how to do that.-->
 
 {% endinfo_block %}
+
 ***
 ### Tips & Tricks
 

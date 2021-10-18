@@ -1,4 +1,4 @@
----
+
 title: SCOS Developer Guides
 entries:
 - product: SCOS
@@ -972,6 +972,9 @@ entries:
         - "201903.0"
         - "201907.0"
         - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
       - title: Glue API- Product Availability feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-availability-feature-integration.html
         include_versions:
@@ -1298,7 +1301,7 @@ entries:
         - "202009.0"
         - "202108.0"
       - title: Glue API- CMS feature integration guide
-        url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-cms-feature-integration-guide.html
+        url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-cms-feature-integration.html
         include_versions:
         - "202108.0"
       - title: "Glue API- Spryker \u0421ore feature integration"
@@ -2573,21 +2576,6 @@ entries:
       url: /docs/scos/dev/technical-enhancements/custom-location-for-static-assets.html
     - title: Chromium browser for tests
       url: /docs/scos/dev/technical-enhancements/chromium-browser-for-tests.html
-    - title: Updating the Legacy Demoshop with SCOS
-      url: /docs/scos/dev/technical-enhancements/updating-the-legacy-demoshop-with-scos/updating-the-legacy-demoshop-with-scos.html
-      nested:
-      - title: Making the Legacy Demoshop Compatible with the Atomic Frontend
-        url: /docs/scos/dev/technical-enhancements/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-atomic-frontend.html
-      - title: Setting up ShopUiCompatibility Module in the Legacy Demoshop
-        url: /docs/scos/dev/technical-enhancements/updating-the-legacy-demoshop-with-scos/setting-up-shopuicompatibility-module-in-the-legacy-demoshop.html
-      - title: Making the Legacy Demoshop Compatible with Publish & Synchronize
-        url: /docs/scos/dev/technical-enhancements/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-publish-and-synchronize.html
-      - title: Twig Compatibility- Legacy Demoshop vs SCOS
-        url: /docs/scos/dev/technical-enhancements/updating-the-legacy-demoshop-with-scos/twig-compatibility-legacy-demoshop-vs-scos.html
-      - title: Integrating Modular Frontend into Legacy Demoshop
-        url: /docs/scos/dev/technical-enhancements/updating-the-legacy-demoshop-with-scos/integrating-modular-frontend-into-legacy-demoshop.html
-      - title: Making the Legacy Demoshop Compatible with the Modular Frontend
-        url: /docs/scos/dev/technical-enhancements/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-modular-frontend.html
   - title: setup
     nested:
     - title: Installing Spryker with Docker
@@ -3655,14 +3643,14 @@ entries:
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/other-spryker-in-vagrant-issues/failed-to-decode-response-zlib-decode-data-error.html
         - title: NFS export issues
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/other-spryker-in-vagrant-issues/nfs-export-issues.html
-        - title: .NFS files crash my console commands
-          url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/other-spryker-in-vagrant-issues/.nfs-files-crash-my-console-commands.html
         - title: Too many open files in Dev VM
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/other-spryker-in-vagrant-issues/too-many-open-files-in-dev-vm.html
         - title: Dev VM takes a lot of disk space (40+ GB)
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/other-spryker-in-vagrant-issues/dev-vm-takes-a-lot-of-disk-space-40-gb.html
         - title: Error on box image download
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/other-spryker-in-vagrant-issues/error-on-box-image-download.html
+        - title: .NFS files crash my console commands
+          url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/other-spryker-in-vagrant-issues/nfs-files-crash-my-console-commands.html
       - title: Windows issues
         nested:
         - title: Windows- The host path of the shared folder is missing
@@ -5354,7 +5342,7 @@ entries:
     - title: Float Stock for Products
       url: /docs/scos/dev/migration-and-integration/float-stock-for-products/float-stock-for-products.html
       nested: []
-    - title: DevOps Migration Guide 202001.0
+    - title: DevOps Migration Guide {{page.version}}
       url: /docs/scos/dev/migration-and-integration/devops-migration-guide-202001.0.html
       include_versions:
       - "202001.0"

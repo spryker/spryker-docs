@@ -61,7 +61,7 @@ cd devvm
 2. **Initialize the Vagrant environment**:
 
 ```bash
-vagrant init devvm4.1.0 https://github.com/spryker/devvm/releases/download/v4.1.0/spryker-devvm.box
+vagrant init devv410 https://u220427-sub1:PpiiHzuF2OIUzmcH@u220427-sub1.your-storagebox.de/devvm_v4.1.0.box
 ```
 {% info_block warningBox %}
 

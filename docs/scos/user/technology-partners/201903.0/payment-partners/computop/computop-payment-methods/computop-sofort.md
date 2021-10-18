@@ -84,4 +84,4 @@ Important for a live MID is:
 * [Configure iDeal payment method for Computop](/docs/scos/user/technology-partners/201903.0/payment-partners/computop/computop-payment-methods/computop-ideal.html)
 * [Configure Paydirekt payment method for Computop](/docs/scos/user/technology-partners/201903.0/payment-partners/computop/computop-payment-methods/computop-paydirekt.html)
 * [Configure PayNow payment method for Computop](/docs/scos/user/technology-partners/201903.0/payment-partners/computop/computop.html-paynow)
-* [Configure PayPal payment method for Computop](/docs/scos/user/technology-partners/201903.0/payment-partners/computop/computop-payment-methods/computop-paypal.htm)
+* [Configure PayPal payment method for Computop](/docs/scos/user/technology-partners/201903.0/payment-partners/computop/computop-payment-methods/computop-paypal.html)

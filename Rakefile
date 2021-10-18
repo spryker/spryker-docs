@@ -14,7 +14,7 @@ task :check do
       /mydomain.com\/[\.\w\-\/\?]+/,
       /demoshop.local\/[\.\w\-\/\?]+/,
       /mysprykershop.com:10007\/[\.\w\-\/\?]+/,
-      /www.pexels.com\/[\.\w\-\/\?]+/,
+      /www.pexels.com\/[@\.\w\-\/\?]+/,
       /pixabay.com\/[\.\w\-\/\?]+/,
       /xentral.com\/[\.\w\-\/\?]+/,
       /github.com\/[\.\w\-\/]+\.md/

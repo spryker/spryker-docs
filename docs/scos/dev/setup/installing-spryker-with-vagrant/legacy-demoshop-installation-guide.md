@@ -86,7 +86,7 @@ Executing these steps will install all required dependencies, and run the instal
 
 When the installation process is complete, Spryker Commerce OS is ready to use. It can be accessed via the following links:
 
-* [`http://www.de.demoshop.local`](`http://www.de.demoshop.local`/) - front-end;
+* [`http://www.de.demoshop.local`](http://www.de.demoshop.local/) - front-end;
 * [http://zed.de.demoshop.local](http://zed.de.demoshop.local/) - backend (administrator interface).
 
 Credentials to access the administrator interface: user `admin@spryker.com` and password `change123`.
@@ -214,7 +214,7 @@ Executing these steps will install all required dependencies, and run the instal
 
 When the installation process is complete, Spryker Commerce OS is ready to use. It can be accessed via the following links:
 
-* [`http://www.de.demoshop.local`](`http://www.de.demoshop.local`/) - front-end;
+* [`http://www.de.demoshop.local`](http://www.de.demoshop.local/) - front-end;
 * [http://zed.de.demoshop.local](http://zed.de.demoshop.local/) - backend (administrator interface).
 
 Credentials to access the administrator interface: user `admin@spryker.com` and password `change123`.

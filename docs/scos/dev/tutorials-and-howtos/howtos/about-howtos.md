@@ -53,4 +53,4 @@ With these guides you will learn how to:
 * [Start using an HTTPS protocol](/docs/scos/dev/tutorials-and-howtos/howtos/howto-force-https.html)
 * [Set up your store with multiple locals](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-stores-with-multiple-locales.html)
 * [Build your own DataImport](/docs/scos/dev/data-import/{{site.version}}/creating-a-data-importer.html)
-* [Install Spryker with MySQL database](/docs/scos/dev/data-import/{{site.version}}/creating-a-data-importer.html/ht-setup-spryker-with-mysql)
+* [Install Spryker with MySQL database](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-spryker-with-mysql.html)

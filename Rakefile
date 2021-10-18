@@ -14,6 +14,9 @@ task :check do
       /mydomain.com\/[\.\w\-\/\?]+/,
       /demoshop.local\/[\.\w\-\/\?]+/,
       /mysprykershop.com:10007\/[\.\w\-\/\?]+/,
+      /www.pexels.com\/[@\.\w\-\/\?]+/,
+      /pixabay.com\/[\.\w\-\/\?]+/,
+      /xentral.com\/[\.\w\-\/\?]+/,
       /github.com\/[\.\w\-\/]+\.md/
     ],
     :file_ignore => [
@@ -28,7 +31,7 @@ task :check do
       :ssl_verifypeer => false,
       :ssl_verifyhost => 0
     },
-    :disable_external => true,
+    :disable_external => false,
     :check_html => false,
     :empty_alt_ignore => true,
     :only_4xx => true,

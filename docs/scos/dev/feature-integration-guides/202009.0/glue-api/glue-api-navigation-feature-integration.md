@@ -29,7 +29,8 @@ Run the following command(s) to install the required modules:
 composer require spryker/navigations-rest-api:"^2.0.0" spryker/navigations-category-nodes-resource-relationship:"^1.0.0" --update-with-dependencies
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the following modules were installed:
 {% endinfo_block %}
 
@@ -45,7 +46,8 @@ Run the following commands to generate transfer changes:
 console transfer:generate
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the following changes have been applied in transfer objects:
 {% endinfo_block %}
 
@@ -88,7 +90,8 @@ class NavigationsRestApiConfig extends SprykerNavigationsRestApiConfig
 </br>
 </details>
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 The verification for this step can be provided once the resource is provided in the *Set up Behavior* section below.
 {% endinfo_block %}
 
@@ -145,11 +148,13 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 </br>
 </details>
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 `NavigationsResourceRoutePlugin` is set up correctly if the following endpoint is available: *http://glue.mysprykershop.com/navigations/{navigationId}*
 {% endinfo_block %}
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Now, it is possible to verify that the configuration of NavigationsRestApiConfig is done correctly. Perform the "http://glue.mysprykershop.com/navigations/{navigationId}" request and check that each node of the type you set up in the configuration (category and CMS pages in the example
 {% endinfo_block %} "resourceId" is filled with the valid foreign key.)
 

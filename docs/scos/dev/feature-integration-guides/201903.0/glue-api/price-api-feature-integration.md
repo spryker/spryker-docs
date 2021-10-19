@@ -23,7 +23,8 @@ To start feature integration, overview and install the necessary features:
 Run the following command to install the required modules:
 `composer require spryker/product-prices-rest-api:"^1.1.0" spryker/products-product-prices-resource-relationship:"^1.0.0" --update-with-dependencies`
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the following modules are installed:<br><table><th>Module</th><th>Expected Directory</th><tr><td>`ProductPricesRestApi`</td><td>`vendor/spryker/product-prices-rest-api`</td></tr><tr><td>`ProductsProductPricesResourceRelationship`</td><td>`vendor/spryker/products-product-prices-resource-relationship`</td></tr></table>
 {% endinfo_block %}
 
@@ -31,7 +32,8 @@ Make sure that the following modules are installed:<br><table><th>Module</th><th
 Run the following commands to generate transfer changes:
 `console transfer:generate`
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the following changes are present in the transfer objects:<br><table><th>Transfer</th><th>Type</th><th>Event</th><th>Path</th><tr><td>`RestProductPriceAttributesTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/RestProductPriceAttributesTransfer`</td></tr><tr><td>`RestProductPricesAttributesTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/RestProductPricesAttributesTransfer`</td></tr><tr><td>`RestCurrencyTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/RestCurrencyTransfer`</td></tr></table>
 {% endinfo_block %}
 
@@ -100,7 +102,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 </br>
 </details>
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the following endpoints are available:<br><ul><li>`http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/abstract-product-prices`</li><li>`http://mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/concrete-product-prices`</li></ul>Send a request to `http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=abstract-product-prices`. Make sure that the response includes relationships to the `abstract-product-prices` resources.<br>Send a request to `http://mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}?include=concrete-product-prices`. Make sure that the response includes relationships to the `concrete-product-prices` resources.
 {% endinfo_block %}
 

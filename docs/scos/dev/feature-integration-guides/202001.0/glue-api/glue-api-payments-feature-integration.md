@@ -175,6 +175,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 </br>
 </details>
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 To make sure that `SalesPaymentMethodTypeInstallerPlugin` is successfully activated, run  `vendor/bin/console setup:init-db and verify` that the  `spy_sales_payment_method_type` table contains the available payment methods as provided in `PaymentConfig`.
 {% endinfo_block %}

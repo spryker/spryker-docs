@@ -356,7 +356,7 @@ packaging_unit_type.pack_100.name
 packaging_unit_type.pack_500.name
 ```
 
-| Column | Is Obligatory? |Data Type  |Data Example  |Data Explanation  |
+| Column | IS REQUIRED? |Data Type  |Data Example  |Data Explanation  |
 | --- | --- | --- | --- | --- |
 | `name` |  mandatory|string  | `packaging_unit_type.ring_500.name` |Glossary key that will be used to display a packaging unit type . Each name needs a glossary key definition for all configured locales.  |
 
@@ -414,7 +414,7 @@ concrete_sku,lead_product_sku,packaging_unit_type_name,default_amount,is_amount_
 215_124,215_123,packaging_unit_type.ring_500.name,1,0,,,
 ```
 
-| Column | Is Obligatory? | Data Type | Data Example | Data Explanation |
+| Column | IS REQUIRED? | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
 | `concrete_sku` | mandatory | string | 218_123 |Concrete product SKU of packaging unit. |
 | `lead_product_sku	` | mandatory | string | 1 | Lead product concrete SKU. |

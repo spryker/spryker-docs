@@ -69,7 +69,7 @@ Prepare your data according to your requirements using our demo data:
 <br>
 </details>
 
-| Column | Is Obligatory? | Data Type | Data Example | Data Explanation |
+| Column | IS REQUIRED? | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
 |  `abstract_sku` | optional | string | 193 | Either `abstract_sku` or `concrete_sku` should exist to attach the given prices to the correct product. |
 |  `concrete_sku` | optional | string | 117_29890338 | Either `abstract_sku` or `concrete_sku` should exist to attach the given prices to the correct product. |

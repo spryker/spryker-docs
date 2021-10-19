@@ -29,27 +29,28 @@ Follow the steps below to install the Checkout feature core.
 
 To start feature integration, overview and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Cart | 202009.0 |
-| Checkout |  202009.0|
-| Order Management |202009.0  |
-| Prices |202009.0  |
-| Spryker Core | 202009.0 |
-| Tax | 202009.0 |
+| Cart | {{page.version}} |
+| Checkout |  {{page.version}} |
+| Order Management | {{page.version}}  |
+| Prices | {{page.version}}  |
+| Spryker Core | {{page.version}} |
+| Tax | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
+
 ```bash
-composer require spryker-feature/order-threshold:"202009.0" --update-with-dependencies
+composer require spryker-feature/order-threshold:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
 
 Ensure that the following modules have been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | SalesOrderThreshold | vendor/spryker/sales-order-threshold |
 | SalesOrderThresholdExtension | vendor/spryker/sales-order-threshold-extension |
@@ -57,11 +58,10 @@ Ensure that the following modules have been installed:
 | SalesOrderThresholdGui | vendor/spryker/sales-order-threshold-gui |
 | SalesOrderThresholdGuiExtension | vendor/spryker/sales-order-threshold-gui-extension |
 	
-	
-
 {% endinfo_block %}
 
 ### 2) Set up database schema and transfer objects
+
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
@@ -74,13 +74,11 @@ console transfer:generate
 
 Ensure that you've triggered the following changes by checking the database:
 
-
-| Database entity | Type |
+| DATABASE ENTITY | TYPE |
 | --- | --- |
 | spy_sales_order_threshold | table |
 | spy_sales_order_threshold_tax_set | table |
 | spy_sales_order_threshold_type | table |
-	
 
 {% endinfo_block %}
 
@@ -88,8 +86,7 @@ Ensure that you've triggered the following changes by checking the database:
 
 Ensure that you've triggered the following changes in transfer objects:
 
-
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | SalesOrderThresholdType | class | created | src/Generated/Shared/Transfer/SalesOrderThresholdTypeTransfer |
 | SalesOrderThresholdValue | class | created | src/Generated/Shared/Transfer/SalesOrderThresholdValueTransfer |
@@ -120,6 +117,7 @@ sales-order-threshold.strategy.soft-minimum-threshold-flexible-fee,Surcharge,en_
 2. Add demo data glossary keys:
 
 **src/data/import/glossary.csv**
+
 ```yaml
 sales-order-threshold.hard-minimum-threshold.de.eur.message,"You should add items for {% raw %}{{{% endraw %}threshold{% raw %}}}{% endraw %} to pass a recommended threshold. You can't proceed with checkout",en_US
 sales-order-threshold.hard-minimum-threshold.de.eur.message,"Sie sollten Waren im Wert von {% raw %}{{{% endraw %}threshold{% raw %}}}{% endraw %} dem Warenkorb hinzufügen um die empfohlene Schwelle zu erreichen. Sie können nicht mit der Bestellung fortfahren",de_DE
@@ -142,7 +140,9 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
+
 Ensure that, in the database, the configured data has been added to the `spy_glossary` table.
+
 {% endinfo_block %}
 
 ### 4) Import data
@@ -156,9 +156,9 @@ Import infrastructural data as follows:
 
 1. Install the plugin:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `SalesOrderThresholdTypeInstallerPlugin` |Installs sales order threshold types. | None | `Spryker\Zed\SalesOrderThreshold\Communication\Plugin\Installer` |
+| SalesOrderThresholdTypeInstallerPlugin |Installs sales order threshold types. | None | Spryker\Zed\SalesOrderThreshold\Communication\Plugin\Installer |
 
 **src/Pyz/Zed/Installer/InstallerDependencyProvider.php**
     
@@ -200,9 +200,10 @@ Ensure that, in the database, the sales order threshold types have been added to
 #### Import sales order thresholds
 
 {% info_block infoBox "Info" %}
-The following imported entities will be used as sales order thresholds in Spryker OS.
-{% endinfo_block %}
 
+The following imported entities will be used as sales order thresholds in Spryker OS.
+
+{% endinfo_block %}
 
 Import sales order thresholds as follows:
 
@@ -220,20 +221,20 @@ DE,CHF,soft-minimum-threshold,200000,,
 DE,CHF,hard-maximum-threshold,320000,,
 ```
 
-| Column | Is Mandatory? | Data Type | Data Example | Data Explanation |
+| COLUMN | IS REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-|  `store`| mandatory |string  | DE | The store where the sales order threshold is applicable.  |
-|`currency`  | mandatory | string | EUR | The currency for which the sales order threshold is applicable. |
-|`threshold_type_key`  | mandatory | string | soft-minimum-threshold | The type of threshold to import. It should be the key to a configured plugin from the previous step. |
-|  `threshold`| mandatory | int, in cents |1000  | The amount in cents to be reached or not reached(depending on the threshold type) by an order to pass a threshold check. |
-| `fee` |optional  | integer, in cents |50  | The amount in cents or the percentage of order subtotal that is added to the order automatically if the order subtotal is below the threshold. |
-| `message_glossary_key` | optional | string |sales-order-threshold.hard-minimum-threshold.de.eur.message  | The glossary key identifying the threshold message to show when the threshold is reached or not reached, depending on the threshold type. |
+| store| mandatory |string  | DE | The store where the sales order threshold is applicable.  |
+| currency | mandatory | string | EUR | The currency for which the sales order threshold is applicable. |
+| threshold_type_key | mandatory | string | soft-minimum-threshold | The type of threshold to import. It should be the key to a configured plugin from the previous step. |
+| threshold | mandatory | int, in cents |1000  | The amount in cents to be reached or not reached(depending on the threshold type) by an order to pass a threshold check. |
+| fee |optional  | integer, in cents |50  | The amount in cents or the percentage of order subtotal that is added to the order automatically if the order subtotal is below the threshold. |
+| message_glossary_key | optional | string |sales-order-threshold.hard-minimum-threshold.de.eur.message  | The glossary key identifying the threshold message to show when the threshold is reached or not reached, depending on the threshold type. |
 
 2. Register the following plugin to enable data import:
 
-| Plugin | Specification | Prerequisites |  Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `SalesOrderThresholdDataImportPlugin` | Imports sales order threshold data into the database. | None |Spryker\Zed\SalesOrderThresholdDataImport\Communication\Plugin\DataImport  |
+| SalesOrderThresholdDataImportPlugin | Imports sales order threshold data into the database. | None | Spryker\Zed\SalesOrderThresholdDataImport\Communication\Plugin\DataImport |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -268,8 +269,6 @@ console data:import sales-order-threshold
 Ensure that, in the database, the configured data has been added to the `spy_sales_order_threshold` table.
 
 {% endinfo_block %}
-
-
 
 
 #### Import sales order threshold taxes
@@ -310,11 +309,12 @@ console data:import:tax
 Ensure that, in the database, the configured data has been added to the `spy_tax_set` and `spy_tax_rate` tables.
 
 {% endinfo_block %}
+
 ### 5) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | RemoveSalesOrderThresholdExpenseCalculatorPlugin | Removes sales order threshold expenses if the sales order threshold is exceeded by quote subtotal during price recalculation. | None | Spryker\Zed\SalesOrderThreshold\Communication\Plugin\Calculation |
 | AddSalesOrderThresholdExpenseCalculatorPlugin |Adds sales order threshold expenses if the sales order threshold was not reached by quote subtotal during price recalculation. |Expects Items to be in `QuoteTransfer` as well as calculated `QuoteTransfer::SubTotal`. Also, expects `QuoteTransfer` to contain a Store and a Currency.  | Spryker\Zed\SalesOrderThreshold\Communication\Plugin\Calculation |
@@ -505,8 +505,6 @@ class SalesOrderThresholdGuiDependencyProvider extends SprykerSalesOrderThreshol
 }
 ```
 
-
-
 {% info_block warningBox "Verification" %}
 
 Ensure that:
@@ -537,26 +535,25 @@ Follow the steps below to install the Checkout feature front end.
 
 Overview and install the necessary features before beginning the integration step.
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Spryker Core | 202009.0 |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 		
 ```bash
-composer require spryker-feature/order-threshold:"202009.0" --update-with-dependencies
+composer require spryker-feature/order-threshold:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
 
 Ensure that the following modules have been installed:
 
-| Module | Expected directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | SalesOrderThresholdWidget | vendor/spryker-shop/sales-order-threshold-widget |
-
 
 {% endinfo_block %}
 
@@ -608,9 +605,9 @@ Set up widgets as follows:
 		
 1. Enable global widgets:
 
-| Widget | Description | Namespace |
+| WIDGET | DESCRIPTION | NAMESPACE |
 | --- | --- | --- |
-|`SalesOrderThresholdWidget`  | Shows the expenses added to the quote transfer which are related to a sales order threshold. |`SprykerShop\Yves\SalesOrderThresholdWidget\Widget`  |
+| SalesOrderThresholdWidget | Shows the expenses added to the quote transfer which are related to a sales order threshold. | SprykerShop\Yves\SalesOrderThresholdWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -650,14 +647,11 @@ Ensure that the `SalesOrderThresholdWidget` widget has been registered:
 2.     Create a cart with a subtotal that is below the threshold.
 3.     The threshold fee should be added to the cart automatically.
 
-
 {% endinfo_block %}
 
 ### Related features
 
 Integrate the following related features:
-
-  
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | --- | --- | --- |

@@ -431,7 +431,7 @@ Workstations,129_30706500,1
 </br>
 </details>
 
-|Column|Is Obligatory?|Data Type|Data Example|Data Explanation|
+|Column|IS REQUIRED?|Data Type|Data Example|Data Explanation|
 |---|---|---|---|---|
 |`shopping_list_key`|mandatory|string|Laptops|Key that will identify the shopping list to add data to.|
 |`product_sku`	|mandatory|string|187_2630635|SKU of the concrete product variant that will be added to the shopping list.|
@@ -502,7 +502,7 @@ Workstations,Spryker--6,READ_ONLY
 </br>
 </details>
 
-|Column|Is Obligatory?|Data Type|Data Example|Data Explanation|
+|Column|IS REQUIRED?|Data Type|Data Example|Data Explanation|
 |---|---|---|---|---|
 |`shopping_list_key`|mandatory|string|Laptops|Key that will identify the shopping list to add data to.|
 |`company_user_key`|mandatory|string|Spryker--7|Key that will identify the company user that the shopping list is shared with.|
@@ -566,7 +566,7 @@ Workstations,spryker_systems_Berlin,READ_ONLY
 </br>
 </details>
 
-|Column|Is Obligatory?|Data Type|Data Example|Data Explanation|
+|Column|IS REQUIRED?|Data Type|Data Example|Data Explanation|
 |---|---|---|---|---|
 |`shopping_list_key`|mandatory|string|Laptops|Key that will identify the shopping list to add data to.|
 |`business_unit_key`|mandatory|string|spryker_systems_HR|Key that will identify the company business unit that the shopping list is shared with.|

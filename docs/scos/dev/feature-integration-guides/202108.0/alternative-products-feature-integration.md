@@ -20,7 +20,7 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/alternative-products-discontinued-products-feature-integration.html
 ---
 
-## Install Feature Core
+## Install feature core
 
 ### Prerequisites
 
@@ -28,31 +28,38 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 |---|---|
-| Product | 202009.0 |
-| Spryker Core | 202009.0 |
+| Product | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 ```bash
-composer require spryker-feature/alternative-products: "^202009.0" --update-with-dependencies
+composer require spryker-feature/alternative-products: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following modules were installed:<table><thead><tr><td>Module</td><td>Expected Directory</td></tr></thead><tbody><tr><td>`ProductAlternative`</td><td>`vendor/spryker/product-alternative`</td></tr><tr><td>`ProductAlternativeDataImport`</td><td>`vendor/spryker/product-alternative-data-import`</td></tr><tr><td>`ProductAlternativeGui`</td><td>`vendor/spryker/product-alternative-gui`</td></tr><tr><td>`ProductAlternativeStorage`</td><td>`vendor/spryker/product-alternative-storage`</td></tr></tbody></table>
+Make sure that the following modules were installed:
+
+| MODULE | EXPECTED DIRECTORY |
+| --- | --- |
+| ProductAlternative | vendor/spryker/product-alternative |
+| ProductAlternativeDataImport | vendor/spryker/product-alternative-data-import |
+| ProductAlternativeGui | vendor/spryker/product-alternative-gui |
+| ProductAlternativeStorage | vendor/spryker/product-alternative-storage |
 {% endinfo_block %}
 
 ### 2) Set up Database Schema and Transfer Objects
 
 Adjust the schema definition so that entity changes trigger the events.
 
-| Affected Entity | Triggered Events |
+| AFFECTED ENTITY | TRIGGERED EVENTS |
 |---|---|
-|  `spy_product_alternative` |  `Entity.spy_product_alternative.create` `Entity.spy_product_alternative.update` `Entity.spy_product_alternative.delete` |
+| spy_product_alternative |  Entity.spy_product_alternative.create<br>Entity.spy_product_alternative.update<br>Entity.spy_product_alternative.delete |
 
 **src/Pyz/Zed/ProductAlternative/Persistence/Propel/Schema/spy_product_alternative.schema.xml**
 
-```html
+```xml
 <?xml version="1.0"?>
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  name="zed"
@@ -72,7 +79,7 @@ Set up synchronization queue pools so that non-multistore entities (not store sp
 
 **src/Pyz/Zed/ProductAlternativeStorage/Persistence/Propel/Schema/spy_product_alternative_storage.schema.xml**
 
-```html
+```xml
  <?xml version="1.0"?>
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  name="zed"
@@ -104,33 +111,64 @@ console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes have been applied by checking your database:<table><thead><tr><td>Database Entity</td><td>Type</td><td>Event</td></tr></thead><tbody><tr><td>`spy_product_alternative`</td><td>table</td><td>created</td></tr><tr><td>`spy_product_alternative_storage`</td><td>table</td><td>created</td></tr><tr><td>`spy_product_replacement_for_storage`</td>`<td>table</td><td>created</td></tr></tbody></table>
+
+Make sure that the following changes have been applied by checking your database:
+
+| DATABASE ENTITY | TYPE | EVENT |
+| --- | --- | --- |
+| spy_product_alternative | table | created |
+| spy_product_alternative_storage | table | created |
+| spy_product_replacement_for_storage | table | created |
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes have been applied in transfer objects:<table><thead><tr><td>Transfer</td><td>Type</td><td>Event</td><td>Path</td></tr></thead><tbody><tr><td>`SpyProductAlternativeEntityTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyProductAlternativeEntityTransfer`</td></tr><tr><td>`SpyProductAlternativeStorageEntityTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyProductAlternativeStorageEntityTransfer`</td></tr><tr><td>`SpyProductReplacementForStorageEntityTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyProductReplacementForStorageEntityTransfer`</td></tr><tr><td>`ProductAlternative`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductAlternative`</td></tr><tr><td>`ProductAlternativeResponse`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductAlternativeResponse`</td></tr><tr><td>`ResponseMessage`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ResponseMessage`</td></tr><tr><td>`ProductAlternativeCollection`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductAlternativeCollection`</td></tr><tr><td>`ProductAlternativeCreateRequest`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductAlternativeCreateRequest`</td></tr><tr><td>`ProductAlternativeListItem`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductAlternativeListItem`</td></tr><tr><td>`ProductAlternativeList`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductAlternativeList`</td></tr><tr><td>`ProductAlternativeStorage`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductAlternativeStorage`</td></tr><tr><td>`ProductReplacementStorage`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductReplacementStorage`</td></tr></tbody></table>
+
+Make sure that the following changes have been applied in transfer objects:
+
+| TRANSFER | TYPE | EVENT | PATH |
+| --- | --- | --- | --- |
+| SpyProductAlternativeEntityTransfer | class | created | src/Generated/Shared/Transfer/SpyProductAlternativeEntityTransfer |
+| SpyProductAlternativeStorageEntityTransfer | class | created | src/Generated/Shared/Transfer/SpyProductAlternativeStorageEntityTransfer |
+| SpyProductReplacementForStorageEntityTransfer | class | created | src/Generated/Shared/Transfer/SpyProductReplacementForStorageEntityTransfer |
+| ProductAlternative | class | created | src/Generated/Shared/Transfer/ProductAlternative |
+| ProductAlternativeResponse | class | created | src/Generated/Shared/Transfer/ProductAlternativeResponse |
+| ResponseMessage | class | created | src/Generated/Shared/Transfer/ResponseMessage |
+| ProductAlternativeCollection | class | created | src/Generated/Shared/Transfer/ProductAlternativeCollection |
+| ProductAlternativeCreateRequest | class | created | src/Generated/Shared/Transfer/ProductAlternativeCreateRequest |
+| ProductAlternativeListItem | class | created | src/Generated/Shared/Transfer/ProductAlternativeListItem |
+| ProductAlternativeList | class | created | src/Generated/Shared/Transfer/ProductAlternativeList |
+| ProductAlternativeStorage | class | created | src/Generated/Shared/Transfer/ProductAlternativeStorage |
+| ProductReplacementStorage | class | created | src/Generated/Shared/Transfer/ProductReplacementStorage |
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that the changes have been implemented successfully. For this purpose, trigger the following methods and make sure that the above events have been triggered:<table><thead><tr><td>Path</td><td>Method Name</td></tr></thead><tbody><tr><td>`src/Orm/Zed/ProductAlternative/Persistence/Base/SpyProductAlternative.php`</td><td>`prepareSaveEventName(
-{% endinfo_block %}`<br />`addSaveEventToMemory()`<br />`addDeleteEventToMemory()`</td></tr></tbody></table>)
 
-### 3) Configure Export to Redis
+Make sure that the changes have been implemented successfully. For this purpose, trigger the following methods and make sure that the above events have been triggered:
+
+| PATH | METHOD NAME |
+| --- | --- |
+| src/Orm/Zed/ProductAlternative/Persistence/Base/SpyProductAlternative.php | prepareSaveEventName()<br>addSaveEventToMemory()<br>addDeleteEventToMemory() |
+
+{% endinfo_block %}
+
+### 3) Configure export to Redis
 
 {% info_block infoBox "Info" %}
-This step will publish tables on change (create, edit, delete
-{% endinfo_block %} to the `spy_product_alternative_storage`, `spy_product_replacement_for_storage`  and synchronize the data to Storage.)
+This step will publish tables on change (create, edit, delete to the `spy_product_alternative_storage`, `spy_product_replacement_for_storage`  and synchronize the data to Storage.)
+{% endinfo_block %}
 
-#### Set up Event Listeners
+#### Set up event listeners
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
-|  `ProductAlternativeStorageEventSubscriber` | Registers listeners that are responsible to publish alternative products storage entity changes when a related entity change event occurs. | None |  `Spryker\Zed\ProductAlternativeStorage\Communication\Plugin\Event\Subscriber` |
+|  ProductAlternativeStorageEventSubscriber | Registers listeners that are responsible to publish alternative products storage entity changes when a related entity change event occurs. | None |  Spryker\Zed\ProductAlternativeStorage\Communication\Plugin\Event\Subscriber |
 
 **src/Pyz/Zed/Event/EventDependencyProvider.php**
 
- ```php
- <?php
+```php
+<?php
 
 namespace Pyz\Zed\Event;
 
@@ -149,12 +187,12 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 }
 ```
 
-#### Set up Re-Generate and Re-Sync Features
+#### Set up re-generate and re-sync features
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
-|  `ProductAlternativeSynchronizationDataPlugin` | Allows synchronizing the whole storage table content into Storage. | None |  `Spryker\Zed\ProductAlternativeStorage\Communication\Plugin\Synchronization` |
-|  `ProductReplacementForSynchronizationDataPlugin` | Allows synchronizing the whole storage table content into Storage. | None |  `Spryker\Zed\ProductAlternativeStorage\Communication\Plugin\Synchronization` |
+| ProductAlternativeSynchronizationDataPlugin | Allows synchronizing the whole storage table content into Storage. | None |  Spryker\Zed\ProductAlternativeStorage\Communication\Plugin\Synchronization |
+| ProductReplacementForSynchronizationDataPlugin | Allows synchronizing the whole storage table content into Storage. | None |  Spryker\Zed\ProductAlternativeStorage\Communication\Plugin\Synchronization |
 
 **src/Pyz/Zed/ProductAlternativeStorage/ProductAlternativeStorageConfig.php**
 
@@ -212,9 +250,9 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 }
 ```
 
-### 4) Import Data
+### 4) Import data
 
-#### Import Product Alternatives
+#### Import product alternatives
 
 {% info_block infoBox "Info" %}
 The following imported entities will be used as alternative products in the Spryker OS.
@@ -224,7 +262,7 @@ Prepare your data according to your requirements using our demo data:
 
 **vendor/spryker/spryker/Bundles/ProductAlternativeDataImport/data/import/product_alternative.csv**
 
- ```yaml
+```yaml
 concrete_sku,alternative_product_concrete_sku,alternative_product_abstract_sku
 145_29885470,134_26145012,
 145_29885471,134_29759322,
@@ -237,17 +275,17 @@ concrete_sku,alternative_product_concrete_sku,alternative_product_abstract_sku
 155_30149933,134_26145012,
 ```
 
-| Column | Is Obligatory? | Data Type | Data Example | Data Explanation |
+| COLUMN | IS REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |---|---|---|---|---|
-|  `concrete_sku` | mandatory | string | 420566 | SKU of concrete product which will have alternative products. |
-|  `alternative_product_concrete_sku` | optional | string | 420565 | SKU of the concrete alternative product. |
-|  `alternative_product_abstract_sku` | optional | string | M1000785 | SKU of the abstract alternative product. |
+|  concrete_sku | mandatory | string | 420566 | SKU of concrete product which will have alternative products. |
+|  alternative_product_concrete_sku | optional | string | 420565 | SKU of the concrete alternative product. |
+|  alternative_product_abstract_sku | optional | string | M1000785 | SKU of the abstract alternative product. |
 
 Register the following plugin to enable data import:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
-|  `ProductAlternativeDataImportPlugin` | Imports alternative product data into the database. | None |  `Spryker\Zed\ProductAlternativeDataImport\Communication\Plugin` |
+| ProductAlternativeDataImportPlugin | Imports alternative product data into the database. | None | Spryker\Zed\ProductAlternativeDataImport\Communication\Plugin |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -280,19 +318,19 @@ console data:import product-alternative
 Make sure that, in the database, the configured data has been added to the `spy_product_alternative` table.
 {% endinfo_block %}
 
-### 5) Set up Behavior
+### 5) Set up behavior
 
-#### Set up Alternative Products Workflow
+#### Set up alternative products workflow
 
 Enable the following behaviors by registering the plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
-|  `ProductConcretePluginUpdate` | Saves product alternatives on product concrete save. | None |  `Spryker\Zed\ProductAlternativeGui\Communication\Plugin\Product` |
-|  `ProductConcreteFormEditTabsExpanderPlugin` | Expands form tabs for `ProductConcreteEditForm` with `Product Alternatives` section. | None |  `Spryker\Zed\ProductAlternativeGui\Communication\Plugin\ProductManagement` |
-|  `ProductConcreteEditFormExpanderPlugin` | Expands `ProductConcreteEditForm` with `AddProductAlternativeForm` form. | None |  `Spryker\Zed\ProductAlternativeGui\Communication\Plugin\ProductManagement` |
-|  `ProductConcreteFormEditDataProviderExpanderPlugin` | Adds alternative product information to `ProductConcreteEditForm` data. | Expected `idProductConcrete` set for `ProductConcreteTransfer`. |  `Spryker\Zed\ProductAlternativeGui\Communication\Plugin\ProductManagement` |
-|  `ProductFormTransferMapperExpanderPlugin` | Adds product alternative create requests to product concrete transfer. | None |  `Spryker\Zed\ProductAlternativeGui\Communication\Plugin\ProductManagement` |
+| ProductConcretePluginUpdate | Saves product alternatives on product concrete save. | None |  Spryker\Zed\ProductAlternativeGui\Communication\Plugin\Product |
+| ProductConcreteFormEditTabsExpanderPlugin | Expands form tabs for `ProductConcreteEditForm` with `Product Alternatives` section. | None |  Spryker\Zed\ProductAlternativeGui\Communication\Plugin\ProductManagement |
+| ProductConcreteEditFormExpanderPlugin | Expands `ProductConcreteEditForm` with `AddProductAlternativeForm` form. | None |  Spryker\Zed\ProductAlternativeGui\Communication\Plugin\ProductManagement |
+| ProductConcreteFormEditDataProviderExpanderPlugin | Adds alternative product information to `ProductConcreteEditForm` data. | Expected `idProductConcrete` set for `ProductConcreteTransfer`. | Spryker\Zed\ProductAlternativeGui\Communication\Plugin\ProductManagement |
+| ProductFormTransferMapperExpanderPlugin` | Adds product alternative create requests to product concrete transfer. | None |  Spryker\Zed\ProductAlternativeGui\Communication\Plugin\ProductManagement |
 
 **src/Pyz/Zed/Product/ProductDependencyProvider**
 
@@ -378,19 +416,21 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that when you edit any product variant in Zed you have "Product Alternatives" tab, and you can add some product SKU's as alternatives.
+
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 
 Please overview and install the necessary features before beginning the integration step.
 
-| Name | Version |
+| NAME | VERSION |
 |---|---|
-| Product | 202009.0 |
-| Spryker Core | 202009.0 |
+| Product | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
@@ -399,11 +439,19 @@ Run the following command(s) to install the required modules:
 ```bash
 composer require spryker-feature/alternative-products: "^202009.0" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
-Make sure that the following modules have been installed:<table><thead><tr><td>Module</td><td>Expected Directory</td></tr></thead><tbody><tr><td>`ProductAlternativeWidget`</td><td>`vendor/spryker-shop/product-alternative-widget`</td></tr><tr><td>`ProductReplacementForWidget`</td><td>`vendor/spryker-shop/product-replacement-for-widget`</td></tr></tbody></table>
+
+Make sure that the following modules have been installed:
+
+| MODULE | EXPECTED DIRECTORY |
+| --- | --- |
+| ProductAlternativeWidget | vendor/spryker-shop/product-alternative-widget |
+| ProductReplacementForWidget | vendor/spryker-shop/product-replacement-for-widget |
+
 {% endinfo_block %}
 
-### 2) Add Translations
+### 2) Add translations
 
 Append glossary according to your configuration:
 
@@ -431,16 +479,16 @@ console data:import glossary
 Make sure that in the database the configured data are added to the `spy_glossary` table.
 {% endinfo_block %}
 
-### 3) Set up Widgets
+### 3) Set up widgets
 
 Register the following plugins to enable widgets:
 
-| Plugin | Description | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
-|  `ProductAlternativeWidget` | Displays alternative product. | None |  `SprykerShop\Yves\ProductWidget\Widget` |
-|  `PdpProductReplacementForListWidget` | Displays list of products for replacement. | None |  `SprykerShop\Yves\ProductWidget\Widget` |
-|  `ProductReplacementForListWidget` | Displays product for replacement. | None |  `SprykerShop\Yves\ProductReplacementForWidget\Widget` |
-|  `ProductAlternativeListWidget` | Display list of alternative products for the provided product. | None |  `SprykerShop\Yves\ProductAlternativeWidget\Widget` |
+| ProductAlternativeWidget | Displays alternative product. | None |  SprykerShop\Yves\ProductWidget\Widget |
+| PdpProductReplacementForListWidget | Displays list of products for replacement. | None |  SprykerShop\Yves\ProductWidget\Widget |
+| ProductReplacementForListWidget | Displays product for replacement. | None |  SprykerShop\Yves\ProductReplacementForWidget\Widget |
+| ProductAlternativeListWidget | Display list of alternative products for the provided product. | None | SprykerShop\Yves\ProductAlternativeWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -478,7 +526,15 @@ console frontend:yves:build
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following widgets were registered:<table><thead><tr><td>Module</td><td>Test</td></tr></thead><tbody><tr><td>`ProductAlternativeWidget`</td><td>Assign some alternative products in Zed, and make sure that they are displayed on the detail page of the product to which they were assigned.</td></tr><tr><td>`ProductReplacementForListWidget`</td><td>Make that after you've assigned some product as an alternative for another you can see "Replacement for" section on its product detail page.</td></tr><tr><td>`PdpProductReplacementForListWidget`</td><td>Make that after you've assigned some product as an alternative for another you can see "Replacement for" section on its product detail page.</td></tr><tr><td>`ProductAlternativeListWidget`</td><td>Assign some alternative products in Zed, and make sure that they are displayed on the PDP of the product to which they were assigned.</td></tr></tbody></table>
+Make sure that the following widgets were registered:
+
+| MODULE | TEST |
+| --- | --- |
+| ProductAlternativeWidget | Assign some alternative products in Zed, and make sure that they are displayed on the detail page of the product to which they were assigned. |
+| ProductReplacementForListWidget | Make that after you've assigned some product as an alternative for another you can see "Replacement for" section on its product detail page. |
+| PdpProductReplacementForListWidget | Make that after you've assigned some product as an alternative for another you can see "Replacement for" section on its product detail page. |
+| ProductAlternativeListWidget | Assign some alternative products in Zed, and make sure that they are displayed on the PDP of the product to which they were assigned. |
+
 {% endinfo_block %}
 
 

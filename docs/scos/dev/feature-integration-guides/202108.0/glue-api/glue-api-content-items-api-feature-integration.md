@@ -50,7 +50,8 @@ Run the following command to generate transfer changes:
 console transfer:generate
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 
 Make sure that the following changes have been applied in transfer objects, see `src/Generated/Shared/Transfer/` folder:
 

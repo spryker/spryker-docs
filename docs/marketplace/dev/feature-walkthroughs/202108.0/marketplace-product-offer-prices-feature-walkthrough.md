@@ -15,19 +15,24 @@ To learn more about the feature and to find out how end users use it, see [Produ
 
 ## Marketplace Product Offer Prices - Overview
 Product offer prices can be defined for each product offer by merchants. 
-If price has not defined for product offer, will be used price from concrete product which is tied to the product offer by default.
+If price for product offer is not defined, a price from concrete product will be used which is tied to the product offer by default.
 Each price should have type. 
 The price type it is an entity to define what type of prices will be used for selling. 
 There are 2 price types defined in the Spryker system, it's ORIGINAL and DEFAULT. 
-You can add own price types and use it in your app.
+You can add own price types and use it in your app. 
+New price type can be added by price data import. 
+Will be added or updated price type mentioned in csv file for prices import.
+
+To learn more details about prices import file, see: [File details: product_price.csv](https://documentation.spryker.com/docs/file-details-product-pricecsv) 
+
 The price can have gross or net value which can be used based on a price mode selected by customer in Storefront. 
 You can have shop running in both modes and select net mode for business customer, for example. 
 Price also has currency and store assigned to it.
-To support product offer prices has been added *PriceProductOffer* table to connect *PriceProductStore* and *ProductOffer* tables.
+To support product offer prices  *PriceProductOffer* DB table has been added to connect *PriceProductStore* and *ProductOffer* tables.
 To store data about product offer prices has been added *ProductConcreteProductOfferPriceStorage*.
 The data updated, when creating/updating/deleting/activating/deactivating concrete products and when create price product offers. 
-Also for product offers has been added support volume prices. 
-So merchants can add volume prices for product offers and based on chosen quantity of product offers customer will see the price on the Storefront.
+Also, product offers support volume prices. 
+So merchants can add volume prices for product offers and based on chosen quantity of items a customer will see the corresponding price on the Storefront.
 Volume prices for product offers work the same as for products.
 
 To learn more about prices and volume prices, see: [Prices](https://documentation.spryker.com/docs/prices-overview), [Volume Prices](https://documentation.spryker.com/docs/volume-prices-overview)

@@ -1,6 +1,6 @@
 ---
 title: Infrastructure requirements
-description: This article provides required system infrastructure setup for a Spryker Marketplace project.
+description: This article provides the required system infrastructure requirements for a Spryker Marketplace project.
 template: concept-topic-template
 ---
 

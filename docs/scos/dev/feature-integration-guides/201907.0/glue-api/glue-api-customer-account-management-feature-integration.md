@@ -7,6 +7,8 @@ originalArticleId: 1c3ee0f0-11af-4494-87f9-9ba3d4a8011c
 redirect_from:
   - /v3/docs/customer-account-management-feature-integration-glue-201907
   - /v3/docs/en/customer-account-management-feature-integration-glue-201907
+  - /v3/docs/customer-api-feature-integration-201903
+  - /v3/docs/en/customer-api-feature-integration-201903
 related:
   - title: Managing Customers
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customers.html

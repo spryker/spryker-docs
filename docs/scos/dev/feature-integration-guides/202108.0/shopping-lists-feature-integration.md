@@ -13,7 +13,7 @@ related:
     link: docs/scos/user/features/page.version/shopping-lists-feature-overview/shopping-list-widget-overview.html
   - title: Shopping Lists + Product Options feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/shopping-lists-product-options-feature-integration.html
-  - title: Glue API- Shopping Lists feature integration
+  - title: Glue API - Shopping Lists feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-shopping-lists-feature-integration.html
   - title: Shopping List Notes overview
     link: docs/scos/user/features/page.version/shopping-lists-feature-overview/shopping-list-notes-overview.html

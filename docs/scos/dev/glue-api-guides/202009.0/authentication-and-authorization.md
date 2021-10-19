@@ -10,7 +10,7 @@ redirect_from:
 related:
   - title: Company Account and General Organizational Structure
     link: docs/scos/user/features/page.version/company-account-feature-overview/company-accounts-overview.html
-  - title: Glue API- Customer Account Management feature integration
+  - title: Glue API - Customer Account Management feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-customer-account-management-feature-integration.html
   - title: Searching by company users
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html

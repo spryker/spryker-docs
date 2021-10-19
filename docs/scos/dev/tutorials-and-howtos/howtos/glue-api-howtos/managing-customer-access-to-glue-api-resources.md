@@ -17,7 +17,7 @@ redirect_from:
 related:
   - title: Authentication and Authorization
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
-  - title: Glue API- Customer Access feature integration
+  - title: Glue API - Customer Access feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-customer-access-feature-integration.html
 ---
 

@@ -12,7 +12,7 @@ redirect_from:
 related:
   - title: Product Configuration feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-configuration-feature-integration.html
-  - title: Glue API- Product Configuration feature integration
+  - title: Glue API - Product Configuration feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-configuration-feature-integration.html
   - title: File details- product_concrete_pre_configuration.csv
     link: docs/scos/dev/data-import/page.version/data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html

@@ -1,6 +1,6 @@
 ---
-title: Glue API- Agent Assist feature integration
-description: Integrate the Glue API- Agent Assist feature into your project.
+title: Glue API - Agent Assist feature integration
+description: Integrate the Glue API - Agent Assist feature into your project.
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-agent-assist-feature-integration
 originalArticleId: 3edbb45b-83fc-4123-ac09-3c80a98ab670

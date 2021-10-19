@@ -16,7 +16,7 @@ related:
     link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-login-overview.html
   - title: Configuring Outdated Refresh Token Life Time
     link: docs/scos/dev/glue-api-guides/page.version/configuring-outdated-refresh-token-life-time.html
-  - title: Glue API- Customer Account Management feature integration
+  - title: Glue API - Customer Account Management feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-customer-account-management-feature-integration.html
 ---
 

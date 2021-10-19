@@ -11,7 +11,7 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/shopping-lists-product-options-feature-integration.html
   - title: Quick Order + Shopping Lists feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/quick-order-shopping-lists-feature-integration.html
-  - title: Glue API- Shopping Lists feature integration
+  - title: Glue API - Shopping Lists feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-shopping-lists-feature-integration.html
 ---
 

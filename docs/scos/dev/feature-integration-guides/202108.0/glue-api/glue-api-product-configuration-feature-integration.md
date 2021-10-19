@@ -1,5 +1,5 @@
 ---
-title: Glue API- Product Configuration feature integration
+title: Glue API - Product Configuration feature integration
 description: Learn how to integrate the Product Configurator feature API into a Spryker project.
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-product-configuration-feature-integration

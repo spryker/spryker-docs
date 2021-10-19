@@ -21,7 +21,7 @@ Review the reference information before you start, or just look up the necessary
 
 ## Creating tax rates
 
-To define a rate under which a product, shipment, or threshold is going to be taxed, create a tax rate. 
+To define a rate under which a product, shipment, or threshold is going to be taxed, create a tax rate.
 
 To create a tax rate:
 
@@ -58,7 +58,7 @@ To view details on a specific tax rate,  in the *List of tax rates > Actions* co
 The *Tax Rate* details page includes the following information:
 * Name
 * Tax rate ID
-* Country	
+* Country
 * Percentage
 * Created at
 * Updated at
@@ -68,7 +68,7 @@ For more details on the reference information of the attributes, see the [Refere
 To return back to the list, click **Back to Tax Rates**.
 
 **Tips & tricks**
-You can start editing a tax rate while viewing it:
+<br>You can start editing a tax rate while viewing it:
 1. On the *View Tax Rate* page, click **Edit** in the top right corner.
 2. Go over the [Editing tax rates](#editing-tax-rates) procedure.
 
@@ -78,20 +78,20 @@ To delete a tax rate:
 
 1. In the *List of tax rates > Actions* column, click **Delete** for a specific tax rate.
 2. On the *Delete Tax Rate* page, click **Delete Tax Rate** to confirm the action.
-The tax rate is deleted. Remember that it will also be deleted from the [tax set](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/managing-tax-sets.html) to which it has been assigned. 
+The tax rate is deleted. Remember that it will also be deleted from the [tax set](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/managing-tax-sets.html) to which it has been assigned.
+
 {% info_block warningBox "Note" %}
+
 Even if you delete the only tax rate assigned to a tax set, the tax set itself remains.
+
 {% endinfo_block %}
 
 **Tips & tricks**
-You can delete a tax rate while viewing it:
+<br>You can delete a tax rate while viewing it:
 1. On the *View Tax Rate* page, click **Delete** in the top-right corner.
 2. On the *Delete Tax Rate* page, confirm your action.
 
 ## What's next?
 
-You cannot use the tax rate itself for products, shipment, and threshold taxation. You use tax sets instead. 
-So you can proceed to the procedure of [creating a tax set and assigning it to the tax rate](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/managing-tax-sets.html). 
-
-
-
+You cannot use the tax rate itself for products, shipment, and threshold taxation. You use tax sets instead.
+So you can proceed to the procedure of [creating a tax set and assigning it to the tax rate](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/managing-tax-sets.html).

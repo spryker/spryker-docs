@@ -64,8 +64,7 @@ The page refreshes to show the message about the successful status change. In th
 
 
 **Tips & tricks**
-
-To change the status of all the items inside a shipment at once, click **pay** in the *Trigger all matching states of order inside this shipment* section of the corresponding shipment.
+<br>To change the status of all the items inside a shipment at once, click **pay** in the *Trigger all matching states of order inside this shipment* section of the corresponding shipment.
 
 The order statuses you set here do not always have the same wording on the Storefront. For details on how you can display custom names for statuses on the Storefront, see [HowTo - Display custom names for order item states on the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html).
 
@@ -205,7 +204,7 @@ To edit a custom order reference:
 4. Click **Save**.
 
 **Tips & tricks**
-To remove the custom order reference, clear the *Custom Order Reference* field and click **Save**.
+<br>To remove the custom order reference, clear the *Custom Order Reference* field and click **Save**.
 
 ## Claiming orders
 
@@ -216,7 +215,7 @@ To [claim an order](/docs/scos/user/features/{{page.version}}/reclamations-featu
     The page refreshes to show the success message about reclamation creation.
 
 **Tips & tricks**
-Claiming an order does not change the status of the order or the items inside the order. When a reclamation is created, a sales team member processes the order manually.
+<br>laiming an order does not change the status of the order or the items inside the order. When a reclamation is created, a sales team member processes the order manually.
 
 ### Reference information: Claiming orders
 

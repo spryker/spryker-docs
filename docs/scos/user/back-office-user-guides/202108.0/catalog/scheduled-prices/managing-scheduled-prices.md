@@ -100,7 +100,7 @@ Performing this action triggers the scheduled prices cron job to be run for the 
 {% endinfo_block %}
 
 **Tips & tricks**
-In the Edit Scheduled Price page, you can return to the *Edit Import* page. To do this, click **Back to the import**.
+<br>In the Edit Scheduled Price page, you can return to the *Edit Import* page. To do this, click **Back to the import**.
 
 ### Reference information: Editing scheduled prices
 
@@ -121,14 +121,12 @@ The following table describes the attributes you enter and select while editing 
 ## Downloading scheduled price imports
 
 To download an import:
-
 1. On the *Scheduled Prices* page, next to the scheduled price import that you want to download, click **Download**
 2. Confirm the action in the pop-up window.
 
 ## Deleting scheduled price imports
 
 To delete an import:
-
 1. On the *Scheduled Prices* page,  next to the import that you want to delete, click **Delete**.
 2. On the *Delete Import* page, click **Yes**, delete those prices to confirm the action.
 
@@ -141,7 +139,6 @@ To delete an import:
 ## Deleting scheduled prices
 
 To delete a scheduled price:
-
 1. On the *Scheduled Prices* page, click **Edit** next to the import in which the scheduled price that you want to delete is located.
 2. On the *Edit Import* page, click **Delete** next to the scheduled price that you want to delete.
 3. Click **Yes, delete this price** to confirm the action.

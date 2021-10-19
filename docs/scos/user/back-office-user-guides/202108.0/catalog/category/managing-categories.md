@@ -37,13 +37,16 @@ To define the order of displaying products, set the numbers under which each pro
 For example, you have ten products assigned to your category. For five of them, there is a seasonal discount applied. So you need those to be at the top of the list.
 
 To change the order of products:
-
 1. In the *Categories* table, for a specific category, select **Assign Products** from the *Actions* drop-down list. You are taken to the Assign products to category page.
 2. Scroll down to the *Products in this category* tab.
 3. In the *Order* column, set numbers 1-5 for specific products that define the order of products in the category. For example, if you have 5 products, set the numbers from 1 to 5.
+
 {% info_block infoBox %}
+
 In case you have several products with the identical order number value, the ordering will be performed based on the product name attribute. The product with 0 in the Order column will be displayed at the bottom
+
 {% endinfo_block %}
+
 4. Click **Save**.
 
 ### Reference information: Ordering products in categories
@@ -65,7 +68,7 @@ For the description of all other attributes on the Assign products to category p
 
 To edit a category:
 
-1. In the *Categories* table, select **Edit** from the *Actions* drop-down list. 
+1. In the *Categories* table, select **Edit** from the *Actions* drop-down list.
 You are taken to the *Edit category* page.
 2. Update the needed values.
 3. Click **Save**.
@@ -144,8 +147,11 @@ Select the *Sub Category grid* template to create a multilevel category structur
 </details>
 
 **A template with slots**
+
 {% info_block infoBox %}
+
 To use a template with slots, make sure the [Templates and slots](/docs/scos/dev/feature-integration-guides/{{page.version}}/cms-feature-integration.html) feature is integrated into your project.
+
 {% endinfo_block %}
 
 Select such a template to have slots for this category page. Slots can embed content from CMS Blocks and technology partner integrations. See [Templates and slots](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html) for more details.
@@ -154,20 +160,25 @@ Select such a template to have slots for this category page. Slots can embed con
 
 To delete a category:
 
- 1. In the *Actions* drop-down, select **Delete** next to a specific category. 
+ 1. In the *Actions* drop-down, select **Delete** next to a specific category.
 You are taken to the *Delete category [Category name]* page.
 On *Delete category [Category name]*, you see detailed information about everything that will be de-assigned, moved, or deleted along with that category.
 2. Select the checkbox next to **Yes, I am sure** to confirm your awareness and click **Delete**.
-   {% info_block infoBox %} 
+
+   {% info_block infoBox %}
+
     Products assigned to a deleted category are de-assigned and remain in the system. If the same products are assigned to other categories, they stay assigned to those.
+
    {% endinfo_block %}
 
-{% info_block infoBox %} 
+{% info_block infoBox %}
+
 Child categories of the deleted category are assigned to its parent categories.
+
 {% endinfo_block %}
 
 **Tips & tricks**
-If your category contains any nested categories, you can re-sort them by a simple drag-and-drop action:
+<br>If your category contains any nested categories, you can re-sort them by a simple drag-and-drop action:
 1. To get to *Re-sort View*, for a specific category on the table view page, click *Re-sort child categories*.
 2. Once in **Re-sort View**, you can drag and drop categories.
 3. Once you see the correct order, click **Save**.

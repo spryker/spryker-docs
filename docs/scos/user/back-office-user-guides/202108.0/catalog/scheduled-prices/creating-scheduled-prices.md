@@ -36,10 +36,10 @@ Review the reference information before you start, or just look up the necessary
 
 To create a price schedule:
 
-1.     Create a CSV file with predefined product price schedules.
-2.     Enter and select the attributes for your price schedule.
-3.     Click **Choose File** and select the file you've prepared in step 1.
-4.     Click **Import your CSV file**.
+1. Create a CSV file with predefined product price schedules.
+2. Enter and select the attributes for your price schedule.
+3. Click **Choose File** and select the file you've prepared in step 1.
+4. Click **Import your CSV file**.
 5. Once redirected to the _Import dry run_ page, check whether there are incorrect entries in your file in the *Errors found inside your file* section.
 
 {% info_block infoBox "Info" %}
@@ -54,8 +54,9 @@ If needed, you can [edit the imported scheduled prices](/docs/scos/user/back-off
 7. If you are satisfied with the results, in the *Publish the scheduled prices* section, click **Publish** to apply the price schedules.
 
 **Tips & tricks**
-*     If you leave the _Import dry run_ page without publishing the imported price schedules, they do not get deleted. However, you won't be able to return to that page unless you import the file once again.
-*     You can check the current price schedules of each product in the *Products* section > the *Edit Product* page > the *Scheduled Prices* tab.
+
+* If you leave the _Import dry run_ page without publishing the imported price schedules, they do not get deleted. However, you won't be able to return to that page unless you import the file once again.
+* You can check the current price schedules of each product in the *Products* section > the *Edit Product* page > the *Scheduled Prices* tab.
 
 ### Reference information: Creating scheduled prices
 
@@ -63,10 +64,10 @@ This section describes the attributes you see, select, and enter when creating s
 
 In the *Import new scheduled prices* section, you see the following:
 
-*     A link to the page where the format of the file with price schedules is described.
-*     The Schedule name field.
-*     The Choose file button.
-*     The button for importing price schedules from the selected file.
+* A link to the page where the format of the file with price schedules is described.
+* The Schedule name field.
+* The Choose file button.
+* The button for importing price schedules from the selected file.
 In the *Scheduled prices imported* section, you see the following:
 
 | ATTRIBUTE | DESCRIPTION |
@@ -84,7 +85,7 @@ In the *Scheduled prices imported* section, you see the following:
 The *Scheduled Prices: Import dry run* page is divided into four sections.
 
 * **Dry run of your import**. In this section, you see the following:
-    * Link to the page where the format of the file with price schedules is described.
+    * Link to the page where the format of the file with price schedules is described
     * Schedule name
     * File selection button
     * The button for importing price schedules from the selected file

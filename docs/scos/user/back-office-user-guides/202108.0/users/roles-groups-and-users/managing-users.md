@@ -44,7 +44,7 @@ To create a user record:
 That's it. The created user record appears on the *Users* page.    
 
 **Tips & tricks**
-There is a way to initiate a create-new-user flow while editing a user record. To do that, on the *Edit User* page, in the top right corner, click **Add User**.
+<br>There is a way to initiate a create-new-user flow while editing a user record. To do that, on the *Edit User* page, in the top right corner, click **Add User**.
 
 ## Editing users
 
@@ -115,7 +115,7 @@ A customer cannot be assigned to multiple users at a time.
 {% endinfo_block %}
 
 **Tips & tricks**
-To de-assign a customer:
+<br>To de-assign a customer:
 1. On the *Assign Customers to User* page, scroll down to the *Assigned customer*s table.
 2. Remove the check-box next to the customer(s) that needs to become unassigned, and click **Save**.
 

@@ -36,8 +36,8 @@ To edit a configurable bundle template:
 The page refreshes with the success message displayed.
 
 ### Creating slots in configurable bundle templates
-To create a slot in a configurable bundle template:
 
+To create a slot in a configurable bundle template:
 1. On the *Edit Configurable Bundle Template: [template ID]* page, in the top right corner, select **+ Add Slot**.
 2. On the *Create Slot for [template name]* page, enter a **Name** for each available locale.
 3. Select **Save**.
@@ -46,7 +46,6 @@ The *Edit Slot: [ID of the created slot] for [template name]* page opens with th
 ### Editing slots in configurable bundle templates
 
 To edit a slot in a configurable bundle template:
-
 1. On the *Edit Configurable Bundle Template: [template ID]* page, switch to the *Slots* tab.
 2. Select **Edit** next to the slot you want to edit.
 3. On the *Edit Slot: [slot ID] for [template name]* page:
@@ -79,37 +78,32 @@ The page refreshes with the success message displayed.
 #### Assigning products to slots in configurable bundle templates
 
 To assign products to slot in a configurable bundle template:
-
 1. On the *Edit Slot: [slot ID] for [template name]* page, switch to the *Assign Products* tab.
 2. Assign one or more products as follows:
-    * Under *Import Product List*, select **Choose File**.
-    * Select a CSV file with the product list.
-        The file should contain `product_list_key` and `concrete_sku` fields.
-
-    * In the **Select Products to assign** table, select one or more products.
+   - Under *Import Product List*, select **Choose File**.
+   - Select a CSV file with the product list. The file should contain `product_list_key` and `concrete_sku` fields.
+   - In the **Select Products to assign** table, select one or more products.
 6. Select **Save**.
 The page refreshes with the success message displayed.
 
 **Tips & tricks**
-To double-check the list of products that are to be assigned, switch to the *Products to be assigned* tab.
+<br>To double-check the list of products that are to be assigned, switch to the *Products to be assigned* tab.
 
 #### Deassigning products from slots in configurable bundle templates
 
 To deassign a product from a slot in a configurable bundle template:
-
 1. On the *Edit Slot: [slot ID] for [template name]* page, switch to the *Assign Products* tab.
 2. In the *Products in this list* table, select one or more products.
 3. Select **Save**.
 The page refreshes with the success message displayed.
 
 **Tips & tricks**
-To double-check the list of products that are to be deassigned, switch to the *Products to be deassigned* tab.
+<br>To double-check the list of products that are to be deassigned, switch to the *Products to be deassigned* tab.
 
 
 ### Deleting slots from configurable bundle templates
 
 To delete a slot from a configurable bundle template:
-
 1. On the *Edit Configurable Bundle Template: [template ID]* page, switch to the *Slots* tab.
 2. Select **Delete** next to the slot you want to delete.
 The page refreshes with the success message displayed.
@@ -125,7 +119,6 @@ After activating or deactivating a template, the page refreshes with the success
 ## Deleting configurable bundle templates
 
 To delete a configurable bundle template:
-
 1. Select **Delete** next to the configurable bundle template you want to delete.
 2. On the *Delete Configurable Bundle Template #[template ID]* page, select **Delete Template**.
 This opens the *Configurable Bundle Templates* page with the success message displayed.

@@ -14,7 +14,7 @@ related:
     link: docs/scos/user/features/page.version/reclamations-feature-overview.html
 ---
 
-This topic describes how to manage all order claims made by your customers. 
+This topic describes how to manage all order claims made by your customers.
 
 ---
 
@@ -43,11 +43,11 @@ Click **View** next to the order you want to view the reclamation for. You are t
 
 ## Closing reclamations
 
-To close a reclamation, click **Close** next to the order you want to close the reclamation for. 
+To close a reclamation, click **Close** next to the order you want to close the reclamation for.
 The state of the reclamation chages from **Open** to **Closed** in the _State_ column.
 
 **Tips & tricks**
-While viewing a reclamation, you can:
+<br>While viewing a reclamation, you can:
 * Navigate to the *View Order* page of the order that is claimed.
 * Navigate to the *View Product Abstract* page of the product that is in the claimed order.
 </br>

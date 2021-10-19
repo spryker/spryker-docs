@@ -25,7 +25,6 @@ To start working with discounts, go to **Merchandising** > **Discount**.
 ## Creating a cart rule discount
 
 To create a cart rule discount:
-
 1. On the *Discount* page, in the top right corner, click **Create new discount**.
 2. On the *Create Discount* page, in the *General information* tab, do the following:
     1. In **Store relation**, check the stores you wish the discount to be active in.
@@ -35,15 +34,20 @@ To create a cart rule discount:
     5. Specify if the discount is exclusive. For reference information, in the Creating a voucher guide, see the [Discount Overview page](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#discount-overview-page) section.
     6. Specify the validity interval (lifetime) of the discount.
 * Click **Next** or select the *Discount calculation* tab to proceed.
+
 * On the *Create Discount* page, in the *Discount calculation* tab, do the following:
     1.  Select either Calculator percentage or Calculator fixed in the **Calculator type** drop-down. For reference information, in the Creating a voucher guide, see the [Discount calculation tab](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#discount-calculation-tab) section.
-    {% info_block warningBox "Note" %}
 
-    The next step varies based on the selected calculator type:
-    a. **Calculator fixed**: Enter the prices to be discounted.
-    b.  **Calculator percentage**: Enter the values (percentage) to be discounted.
+        {% info_block warningBox "Note" %}
 
-{% endinfo_block %}
+        The next step varies based on the selected calculator type:
+
+          a. **Calculator fixed**: Enter the prices to be discounted.
+          
+          b.  **Calculator percentage**: Enter the values (percentage) to be discounted.
+
+        {% endinfo_block %}
+
     2. Select the **Discount application type** and define what products the discount will be applied to. For reference information, in the Creating a voucher guide, see the [Discount calculation tab](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#discount-calculation-tab) section.
  * Click **Next**, or select the **Conditions** tab to proceed.
  * On the *Create Discount* page, in the *Conditions* tab, do the following:
@@ -53,4 +57,4 @@ To create a cart rule discount:
 
 
 **What's next?**
-See [Managing discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/managing-discounts.html) to know more about the actions you can do once the discount is created.
+<br>See [Managing discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/managing-discounts.html) to know more about the actions you can do once the discount is created.

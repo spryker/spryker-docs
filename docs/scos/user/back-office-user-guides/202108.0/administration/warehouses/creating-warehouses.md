@@ -32,7 +32,9 @@ The *Create warehouse* page with two tabs opens: *Configuration* and *Store rela
 To make your warehouse unavailable for specific store, clear the checkbox for those stores.
 
 {% info_block warningBox "Note" %}
+
 If you clear all checkboxes for stores assigned to a specific warehouse, this warehouse won't appear on the *Edit Stock* page.
+
 {% endinfo_block %}
 
 4. To keep the changes, click **Save**. This redirects you to the *Warehouses* page where you can see the new warehouse in the table and the following message: '*Warehouse has been successfully saved*'.

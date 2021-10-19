@@ -30,7 +30,10 @@ To define the restrictions:
     * **Wishlist**: if selected, no **Wishlist** option is available.
     * **Shopping List**: if selected, no **Add to Shopping List** option is available.
 
-    {% info_block errorBox "**B2B Only**" %}
+{% info_block errorBox "B2B Only" %}
+
 This option is selected by default and cannot be deselected.
+
 {% endinfo_block %}
+
 2. Click **Save** to save the changes.

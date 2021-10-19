@@ -22,8 +22,6 @@ This topic describes how to create a CMS page in the Back Office.
 
 A CMS page is an additional page of your online shop, such as Terms and Conditions, About Us, Contact Us, etc. Here you can create, publish, edit, and manage CMS pages, as well as add content item widgets coupled with the template and multiple CMS blocks.
 
----
-
 ## Prerequisites
 
 To start working with CMS pages, navigate to **Content** > **Pages**.
@@ -33,7 +31,6 @@ Review the reference information before you start, or just look up the necessary
 ## Creating a CMS page
 
 To create a page:
-
 1. In the top right corner, click **+Create page**.
 2. On the *Create CMS Page* page, you can see two tabs: *General* and *SEO*.
 3. In the *General* tab, do the following:
@@ -56,11 +53,11 @@ Templates are project-specific and are usually created by a developer and busine
 **Tips & tricks**
 
 * Keep in mind that by default, **Store Relation** is enabled for all stores. To hide your page per specific locale(s), clear checkboxes per that(those) locale(s).
-</br>
+
 * Consider the following cases:
     * If **Is searchable** is selected, and **Store Relation** is turned off for all stores, the CMS page will not be displayed and will not be searchable.
     * If **Is searchable** is not selected, and **Store Relation** is turned on, the CMS page will be shown but will not be searchable.
- </br>
+
  * If you want to create *different* versions of the page per locale, add the general information to the section in the corresponding language.
 
 ### Reference information: Creating a CMS page
@@ -78,7 +75,6 @@ On the *Overview of CMS Pages* page, you see the following:
 | Actions | Set of actions that can be performed on a CMS page. |
 
 On this page, you can also:
-
 * Create a new CMS page.
 * Sort pages a sequence number (#), names, and templates.
 * Filter content items by a sequence number, name, and template.
@@ -99,9 +95,7 @@ The following table describes the attributes you enter when creating a CMS page.
 |  | Meta Keywords  | Meta keywords.  |
 |  | Meta Description | Meta description. |
 
----
-
 **What's next?**
-Until now, you have created a page draft. The page itself will be available in the online store after you publish it.
+<br>Until now, you have created a page draft. The page itself will be available in the online store after you publish it.
 
 To learn how to view or publish the page, see [Managing CMS pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/managing-cms-pages.html).

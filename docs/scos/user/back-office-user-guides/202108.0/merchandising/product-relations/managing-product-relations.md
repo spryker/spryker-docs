@@ -24,7 +24,7 @@ Review the reference information before you start, or just look up the necessary
 
 ## Viewing product relations
 
-To view a product relation,  in the **Actions** column, click **View** next to the product relation you want to view. 
+To view a product relation,  in the **Actions** column, click **View** next to the product relation you want to view.
 
 On the *View Product Relation: [Product relation key]* page, you can see the information:
 
@@ -34,8 +34,7 @@ On the *View Product Relation: [Product relation key]* page, you can see the inf
  Number, SKU, name, price, category, and the status of the related products.
 
 **Tips & tricks**
-
-In the upper right corner of the page, click:
+<br>In the upper right corner of the page, click:
 * **Edit**:  To edit the product relation you are viewing.
 * **List of product relations**: To return to the list of product relations.
 
@@ -51,7 +50,7 @@ To edit a product relation:
 3. To keep the changes, click **Save**.
 
 **Tips & tricks**
-To return to the list of product relations, in the upper right corner of the page, click **List of product relations**
+<br>To return to the list of product relations, in the upper right corner of the page, click **List of product relations**
 
 {% info_block warningBox "Saving changes" %}
 
@@ -74,7 +73,7 @@ On the *Product Relations* page, you can see product relations, including the fo
 * Relation type: up-selling or related-products
 * Status of the product relation: Active or Inactive
 * Stores in which the product relation is displayed
-* Number of products assigned to the 
+* Number of products assigned to the
 * Product relation
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Relations/Product+Relations%3A+Reference+Information/202006.0/product-relations-list.png)
@@ -96,13 +95,13 @@ The following table describes the attributes you select and enter while creating
 | Update regularly:  | Checkbox that defines if the product catalog should be checked against the specified rules on a regular basis. New products fulfilling the rules are added to related products automatically. Existing related products that no longer fulfill the rules are removed automatically. |
 | Is active | Option to activate (make visible on the Storefront) or deactivate (make it invisible on the Storefront) the product relation.|
 | Select product | Table for selecting a product that owns the relation. |
-| Select stores | Defines the stores the product relation is displayed in. | 
+| Select stores | Defines the stores the product relation is displayed in. |
 
 #### Assigning related product rules, groups, and types
 
 The rules and the group of rules are used to specify the specific conditions under which this or that similar product should appear on the *Abstract Product* page or in the cart.
 
-Let's say you have a _Pen_ as an abstract product, and you need another abstract product _Pencil_ to be displayed as a similar product on the _Pen_ product details page. 
+Let's say you have a _Pen_ as an abstract product, and you need another abstract product _Pencil_ to be displayed as a similar product on the _Pen_ product details page.
 
 For this specific case, you will specify **Related products** as a relation type. As a rule, you can select from a wide range of abstract product attributes to specify, like SKU, category, size, and so on. You can also specify if the attribute you select is equal, greater, less (or any other value from the list) than a defined value:
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Relations/Product+Relations%3A+Reference+Information/product-relations-reference.png)
@@ -117,8 +116,7 @@ So the place where a similar product will appear is defined by the relation type
 ## Deleting product relations
 
 To delete a product relation:
-1. In the *Actions* column, click **Delete** next to the product relation you want to delete. 
+1. In the *Actions* column, click **Delete** next to the product relation you want to delete.
 2. On the *Delete Product Relation* page, click:
     * **No, I want to keep this product relation** to cancel the deletion.
     * **Yes, delete this product relation** to confirm the deletion. This deletes the product relation and redirects you to the updated list of product relations.
-

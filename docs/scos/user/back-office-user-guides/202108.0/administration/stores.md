@@ -22,7 +22,7 @@ By default, the last created store goes on top of the table. You can sort and se
 The *Name* column is sortable.
 
 {% info_block infoBox %}
+
 Currently, there are no actions that you can perform in this section. All the information is fetched from your database.
+
 {% endinfo_block %}
-
-

@@ -38,7 +38,6 @@ To start working with products:
 
 Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
 
-
 {% info_block warningBox "Adding super attributes" %}
 
 You can add super attributes to product variants only when creating an abstract product.
@@ -81,12 +80,11 @@ The following table describes the attributes you enter and select when defining 
 ## Defining prices
 
 In the *Prices & Tax* tab, define prices:
-    1. B2B Shop: Optional: To define prices for a merchant, select a **Merchant Price Dimension**.
-    2. Enter **DEFAULT** prices for all the desired locales and currencies.
-    3. Optional: To display promotions, enter **ORIGINAL** prices for the desired locales and currencies.
-    4. Select a **Tax Set**.
-    5. Select **Next >** and follow [Defining product variants](#defining-product-variants).
-        This opens the **Variants** tab.
+1. B2B Shop: Optional: To define prices for a merchant, select a **Merchant Price Dimension**.
+2. Enter **DEFAULT** prices for all the desired locales and currencies.
+3. Optional: To display promotions, enter **ORIGINAL** prices for the desired locales and currencies.
+4. Select a **Tax Set**.
+5. Select **Next >** and follow [Defining product variants](#defining-product-variants). This opens the **Variants** tab.
 
 
 ### Reference information: Defining prices
@@ -109,21 +107,21 @@ The default prices are displayed in the online store as a current price, while t
 ## Defining product variants
 
 In the *Variants* tab, define product variants:
-* Product bundle: Select **Save** and follow [Defining meta information](#defining-meta-information).
-           The page refreshes with a product variant created automatically.
+* Product bundle: Select **Save** and follow [Defining meta information](#defining-meta-information). The page refreshes with a product variant created automatically.
 * Abstract product: Define product variants as follows:
     1. Select one or more super attributes that define your product variants.
     2. In the field next to the super attribute you've selected, select one or more product attribute values.
     3. Repeat the previous step until you select at least one value for each selected super attribute.  
-    4. Select **Save** and follow [Defining meta information](#defining-meta-information).
-        The page refreshes with the created product variants displayed in the table.
+    4. Select **Save** and follow [Defining meta information](#defining-meta-information). The page refreshes with the created product variants displayed in the table.
 
     ![Defining product variants](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+user+guide/Catalog/Products/Abstract+products/Creating+abstract+products/defining-product-variants.gif)
 
 ### Reference information: Defining product variants
 
 {% info_block warningBox "Product bundles" %}
+
 The reference information in this section is relevant only for abstract products. When you create a product bundle, a single product variant is created automatically.
+
 {% endinfo_block %}
 
 In the *Variants* tab, you can see all the existing [super attributes](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html#super-attributes). You can [create](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html) or [manage](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/managing-product-attributes.html) super attributes in **Catalog** > **Attributes**.
@@ -179,9 +177,8 @@ The following table describes the attributes you enter and select when adding im
 |Large| Link to the image that will be displayed for the product on the *Product details* page. |
 |Sort Order| Arrenges the images displayed for the product in an ascending order. The smalles number is `0`. |
 
-## Tips and tricks
-
-To delete an image set with all its pictures, select **Delete image set**.
+**Tips & tricks**
+<br>To delete an image set with all its pictures, select **Delete image set**.
 <!---
 To convert an abstract product into a product bundle, you can update the **Assign bundled products** tab for a variant. The product will automatically be transformed into a bundle. -->
 

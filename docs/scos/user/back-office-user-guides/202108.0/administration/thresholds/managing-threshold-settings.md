@@ -27,6 +27,5 @@ To start working with Thershold Settings, navigate to **Administration** > **Thr
 ## Managing Threshold Settings
 
 To configure Threshold Settings:
-1. On the *Edit Threshold Settings* page, select from the drop-down list the tax set that will be applied to the threshold.
+1. On the *Edit Threshold Settings* page, from the drop-down list, select the tax set that will be applied to the threshold.
 2. Click **Save**.
-

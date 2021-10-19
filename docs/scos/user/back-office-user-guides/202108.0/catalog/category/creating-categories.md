@@ -36,15 +36,23 @@ To create a category, take the following steps:
 4. In the *Images* tab, add an image to the category:
     1. Click **Add image set**.
     2. Enter the attributes of your image set.
+
     {% info_block infoBox %}
+
     Keep in mind that small images are used when subcategories on the parent category page are displayed as a list, while the large images are used when subcategories are displayed as a grid.
+
     {% endinfo_block %}
+
 5. To assign several images or image sets, click **Add image** or **Add image set** respectively, and enter URLs.
+
    {% info_block infoBox %}
+
     Even though you can add several image sets and several images to an image set, out of the box, there is no place in the back end and front end where several image sets or images can be displayed for a category. However, if you still do that, the following logic applies:
     * When adding several image sets, the image set going first or having the name "default" is applied to the category.
     * When adding several images to the image set that is active for the category, the image with the lowest Sort Order field value is applied to the category. If there are several images with the same value, the image which has been added first is applied. The lowest possible value is "0".
+
     {% endinfo_block %}
+
 6. Click **Save**.
 
 
@@ -55,7 +63,6 @@ This section holds reference information related to the category creation proces
 #### Category page
 
 On the *Category* page, you see the following:
-
 * Category key, category name, and the parent category to which a specific one is assigned.
 * Identifiers for active, visible, and searchable.
 * Template type.
@@ -98,13 +105,13 @@ If the CMS-related template is selected, the following additional attributes app
 | Sort Order | Numeric identifier of the image in the order of other images of an image set. This defines the order in which the images are shown in the back end and front end. The order starts from "0". |
 
 #### <a name="category-page-template-types"></a>Category page template types
+
 When you create or update categories, you select a template according to which your category (and products assigned to it ) is going to be displayed in your online store.
 
 The following templates are used to set up your category look:
 
 **Catalog (default)**
-
-Select this template to display all product pages linked to the selected category. The product pages include the general product description, a price, an image, and a clickable **View** button that redirects you to the product details page.
+<br>Select this template to display all product pages linked to the selected category. The product pages include the general product description, a price, an image, and a clickable **View** button that redirects you to the product details page.
 
 <details><summary markdown='span'>The Catalog(default) template on the Storefront</summary>
 
@@ -113,7 +120,7 @@ Select this template to display all product pages linked to the selected categor
 </details>
 
 **Catalog+Slots**
-Select this template to show all product pages assigned to the selected category and a CMS Block. Depending on your design requirements, you need to set a specific CMS block and specify where it should be displayed: top, middle, or bottom.
+<br>Select this template to show all product pages assigned to the selected category and a CMS Block. Depending on your design requirements, you need to set a specific CMS block and specify where it should be displayed: top, middle, or bottom.
 
 <details><summary markdown='span'>The Catalog+CMS Block template on the Storefront</summary>
 
@@ -136,14 +143,15 @@ Select the *Sub Category grid* template to create a multilevel category structur
 
 
 {% info_block infoBox %}
+
 To use a template with slots, make sure the [Templates and slots](/docs/scos/dev/feature-integration-guides/{{page.version}}/cms-feature-integration.html) feature is integrated into your project.
+
 {% endinfo_block %}
 
 Select such a template to have slots for this category page. Slots can embed content from CMS Blocks and technology partner integrations. See [Templates and slots](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html) for more details.
 
 **Tips & tricks**
-
-When you already know the exact parent category under which the category that you create is going to be nested, you can click **Add categoryto this node** for a specific parent category. This redirects you to the *Create category* page where you can perform the steps described above. The only difference is that the *Parent* field is auto-populated with the needed value.
+<br>When you already know the exact parent category under which the category that you create is going to be nested, you can click **Add categoryto this node** for a specific parent category. This redirects you to the *Create category* page where you can perform the steps described above. The only difference is that the *Parent* field is auto-populated with the needed value.
 
 The same products can be assigned to multiple categories.
 

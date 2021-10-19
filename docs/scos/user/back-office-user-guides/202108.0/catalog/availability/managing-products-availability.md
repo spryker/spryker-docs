@@ -18,31 +18,30 @@ related:
 
 This topic describes the actions you can do in the **Availability** section of  the Back Office.
 
-## Prerequisites 
+## Prerequisites
 
 To start working with availability, navigate to **Catalog > Availability**.
 
 Here, inventory managers or other team members responsible for stock updates can check and edit the products' stock.
 
-The main advantage is that you do not need to make any manual calculations. The system does all the calculations automatically, and you get the aggregated availability value. You will have a single table with a comparison of the product's stock value and the ordered value. It also calculates the bundled products stock. 
+The main advantage is that you do not need to make any manual calculations. The system does all the calculations automatically, and you get the aggregated availability value. You will have a single table with a comparison of the product's stock value and the ordered value. It also calculates the bundled products stock.
 
 Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
 
-## Checking availability 
+## Checking availability
 
 To check the product availability:
-
-1. In the _Actions_ column of the *Products availability list* table, click **View** next to the corresponding product item. 
+1. In the _Actions_ column of the *Products availability list* table, click **View** next to the corresponding product item.
 This will take you to the *Product Availability* page.
 2. In case of a multistore setup, in the **Store** drop-down, select the store locale to check the product's availability for each specific locale.
 
-### Reference information: Checking availability 
+### Reference information: Checking availability
 
 This section describes attributes you see when checking availability.
 
 #### Overview of Products Availability page
 
-On the *Overview of Products Availability* page, you see the following: 
+On the *Overview of Products Availability* page, you see the following:
 * The SKUs and names of the abstract products and the SKU values is a hyperlink to this product Edit page.
 * The number of products in current stock and the number of reserved products (meaning ordered ones)
 *  The identifier for the bundled product and for those that are **never out of stock** (Yes/No values)
@@ -50,7 +49,7 @@ On the *Overview of Products Availability* page, you see the following:
 #### Product Availability page
 
 On the *Product Availability* page, you see 2 sections:
-* Abstract product availability 
+* Abstract product availability
 * Variant availability
 
 The *Abstract product availability* section is not modifiable. It only provides overview information. As the abstract product itself does not have any stock, the Current Stock value will display the summarized value of all its variants.
@@ -77,7 +76,7 @@ Product stock the DECIMAL(20,10) value, which means that your product stock can 
 
 {% endinfo_block %}
 
-</br>To edit the bundled product stock:
+To edit the bundled product stock:
 
 1. Navigate to the *Product Availability* page of a bundle whose bundled product variant availability you would like to change.
 2. Click **View bundled products** in the *Variant availability* table.
@@ -87,12 +86,13 @@ Product stock the DECIMAL(20,10) value, which means that your product stock can 
 6. Click **Save**.
 
 {% info_block warningBox "Note" %}
+
 Please note that you are updating the product variant availability, not the bundle availability itself. To see examples of how the bundle availability is calculated, see [Availability calculation example](#availability-calculation-example).
+
 {% endinfo_block %}
 
 **Tips & tricks**
-
-You can edit stock for variants from the *Edit Concrete Product* page:
+<br>You can edit stock for variants from the *Edit Concrete Product* page:
 1. Navigate to the *Edit Product Abstract* using one of the following options:
     1.  **Products** > **Products** > **Edit**.
     2.  Click a hyperlinked SKU value in the **Availability** > **Product availability list** table.
@@ -102,7 +102,9 @@ You can edit stock for variants from the *Edit Concrete Product* page:
 5. Click **Save**.
 
 {% info_block infoBox "Info" %}
+
 Once on the *Edit Concrete Product* page, you can update any of the product details you need.
+
 {% endinfo_block %}
 
 ### Reference information: Editing stock
@@ -118,7 +120,7 @@ The following table describes the attributes you see and enter when editing stoc
 
 #### <a name="availability-calculation-example"></a>Availability calculation example
 
-A good example of availability calculation is a product bundle. 
+A good example of availability calculation is a product bundle.
 Let's say you have two products: a Smartphone and three Glass Screen Protectors for it. They are presented in the store as separate items but also included in a bundle.
 
 This means that a customer can either buy those separately from their product details pages or buy a "smartphone+3 glass screen protectors" bundle.

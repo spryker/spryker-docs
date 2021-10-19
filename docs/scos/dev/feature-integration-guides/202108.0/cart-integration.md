@@ -12,12 +12,16 @@ redirect_from:
 ---
 
 {% info_block infoBox %}
+
 This article describes how to add product variants and product images to an existing cart.
 {% endinfo_block %}
+
 ## Prerequisites:
+
 Before starting make sure you are familiar with the concept of Spryker Super Attributes.
 
 ## UI Changes:
+
 Cart now supports changing the items in the cart by modifying their attributes. If we have a wrong T-Shirt size in the cart we will be able to change it.
 
 Cart now also supports product images out of the box.
@@ -27,7 +31,9 @@ If we have products with multiple super attributes we can now, narrowing-down in
 ![product_super_attributes](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/product_super_attributes.png){height="" width=""}
 
 ## Installation
+
 ### Item images in cart
+
 To support  images in a cart,  install the optional module `ProductImageCartConnector` by running:
 
 ```bash
@@ -69,10 +75,13 @@ protected function getExpanderPlugins(Container $container)
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure the `ExpandBundleItemsWithImagesPlugin` is registered after the `ExpandBundleItemsPlugin` plugin.
+
 {% endinfo_block %}
 
 #### Cart variants
+
 Spryker provides the `CartVariant` module for this purpose. 
 To install the `CartVariant` module, run:
 

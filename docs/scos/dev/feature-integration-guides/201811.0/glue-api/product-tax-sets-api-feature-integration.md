@@ -31,7 +31,8 @@ composer require spryker/product-tax-sets-rest-api:"^1.0.6" --update-with-depend
 composer require spryker/products-product-tax-sets-resource-relationship:"^1.0.0" --update-with-dependencies 
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the following modules have been installed:
 {% endinfo_block %}
 
@@ -142,11 +143,13 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 </details>
 
 
- {% info_block warningBox %}
+ {% info_block warningBox “Verification” %}
+
 Make sure that the following endpoint is available: `http://mysprykershop.comop.com//abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-tax-sets `
 {% endinfo_block %}
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Send a request to `http://mysprykershop.comop.com//abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=product-tax-sets`. Make sure that the response includes relationships to the `product-tax-sets` resources.
 {% endinfo_block %}
 

@@ -14,38 +14,51 @@ related:
     link: docs/scos/user/features/page.version/product-feature-overview/product-images-overview.html
 ---
 
-## Install Feature Core
+## Install feature core
+
 ### Prerequisites
+
 Please overview and install the necessary features before beginning the integration step.
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Category | master |
-| Spryker Core | master |
+| Category | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/category-image:"^master" --update-with-dependencies
+composer require spryker-feature/category-image:"{{page.version}}" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
-Make sure that the following modules were installed:<table><thead><tr><th>Module</th><th>Expected Directory</th></tr></thead><tbody><tr><td>`CategoryImage`</td><td>`vendor/spryker/category-image`</td></tr><tr><td>`CategoryImageGui`</td><td>`vendor/spryker/category-image-gui`</td></tr><tr><td>`CategoryImageStorage`</td><td>`vendor/spryker/category-image-storage`</td></tr><tr><td>`CategoryExtension`</td><td>`vendor/spryker/category-extension`</td></tr></tbody></table>
+
+Make sure that the following modules were installed:
+
+| MODULE | EXPECTED DIRECTORY |
+| --- | --- |
+| CategoryImage | vendor/spryker/category-image |
+| CategoryImageGui | vendor/spryker/category-image-gui |
+| CategoryImageStorage | vendor/spryker/category-image-storage |
+| CategoryExtension | vendor/spryker/category-extension |
+
 {% endinfo_block %}
 
 
-### 2) Set up Database Schema and Transfer Objects
+### 2) Set up database schema and transfer objects
 Adjust the schema definition so entity changes will trigger events.
 
-| Affected entity | Triggered events |
+| AFFECTED ENTITY | TRIGGERED EVENTS |
 | --- | --- |
-| `spy_category_image_set` | `Entity.spy_category_image_set.create`</br>`Entity.spy_category_image_set.update`</br>`Entity.spy_category_image_set.delete` |
-| `spy_category_image` | `Entity.spy_category_image_set.create`</br>`Entity.spy_category_image_set.update`</br>`Entity.spy_category_image_set.delete` |
-| `spy_category_image_set_to_category_image` | `Entity.spy_category_image_set_to_category_image.create`</br>`Entity.spy_category_image_set_to_category_image.update`</br>`Entity.spy_category_image_set_to_category_image.delete` |
+| spy_category_image_set | Entity.spy_category_image_set.create</br>Entity.spy_category_image_set.update</br>Entity.spy_category_image_set.delete |
+| spy_category_image | Entity.spy_category_image_set.create</br>Entity.spy_category_image_set.update</br>Entity.spy_category_image_set.delete |
+| spy_category_image_set_to_category_image | Entity.spy_category_image_set_to_category_image.create</br>Entity.spy_category_image_set_to_category_image.update</br>Entity.spy_category_image_set_to_category_image.delete |
 
 **src/Pyz/Zed/CategoryImage/Persistence/Propel/Schema/spy_category_image.schema.xml**
     
-```html
+```xml
 <?xml version="1.0"?>
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\CategoryImage\Persistence" package="src.Orm.Zed.CategoryImage.Persistence">
  
@@ -69,11 +82,11 @@ Adjust the schema definition so entity changes will trigger events.
     </database>
 ```
 
-Set up synchronization queue pools so non-multistore entities (not store specific entities) are synchronized among stores:
+Set up synchronization queue pools so that non-multistore entities (not store specific entities) are synchronized among stores:
 
 **src/Pyz/Zed/CategoryImageStorage/Persistence/Propel/Schema/spy_category_image_storage.schema.xml**
     
-```html
+```xml
 <?xml version="1.0"?>
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	name="zed"
@@ -98,28 +111,60 @@ console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes have been applied by checking your database.<table><thead><tr><th>Database Entity</th><th>Type</th><th>Event</th></tr></thead><tbody><tr><td>`spy_category_image_set`</td><td>table</td><td>created</td></tr><tr><td>`spy_category_image`</td><td>table</td><td>created</td></tr><tr><td>`spy_category_image_set_to_category_image`</td><td>table</td><td>created</td></tr><tr><td>`spy_category_image_storage`</td><td>table</td><td>created</td></tr></tbody></table>
+
+Make sure that the following changes have been applied by checking your database.
+
+| DATABASE ENTITY | TYPE | EVENT |
+| --- | --- | --- |
+| spy_category_image_set | table | created |
+| spy_category_image | table | created |
+| spy_category_image_set_to_category_image | table | created |
+| spy_category_image_storage | table | created |
+
 {% endinfo_block %}
 
 {% info_block warningBox %}
-Make sure that propel entities have been generated successfully by checking their existence. Also, change the generated entity classes to extend from Spryker core classes.<table><thead><tr><th>Class path</th><th>Extends</th></tr></thead><tbody><tr><td>`src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImage.php`</td><td>`Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImage`</td></tr><tr><td>`src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageQuery.php`</td><td>`Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImageQuery`</td></tr><tr><td>`src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageSet.php`</td><td>`Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImageSet`</td></tr><tr><td>`src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageSetQuery.php`</td><td>`Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImageSetQuery`</td></tr><tr><td>`src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageSetToCategoryImage.php`</td><td>`Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImageSetToCategoryImage`</td></tr><tr><td>`src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageSetToCategoryImageQuery.php`</td><td>`Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImageSetToCategoryImageQuery`</td></tr><tr><td>`src/Orm/Zed/CategoryImageStorage/Persistence/Base/SpyCategoryImageStorage.php`</td><td>`Spryker\Zed\CategoryImageStorage\Persistence\Propel\AbstractSpyCategoryImageStorage`</td></tr><tr><td>`src/Orm/Zed/CategoryImageStorage/Persistence/Base/SpyCategoryImageStorageQuery.php`</td><td>`Spryker\Zed\CategoryImageStorage\Persistence\Propel\AbstractSpyCategoryImageStorageQuery`</td></tr></tbody></table>
+
+Make sure that propel entities have been generated successfully by checking their existence. Also, change the generated entity classes to extend from Spryker core classes.
+
+| CLASS PATH | EXTENDS |
+| --- | --- |
+| src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImage.php | Spryker\\Zed\\CategoryImage\\Persistence\\Propel\\AbstractSpyCategoryImage |
+| src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageQuery.php | Spryker\\Zed\\CategoryImage\\Persistence\\Propel\\AbstractSpyCategoryImageQuery |
+| src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageSet.php | Spryker\\Zed\\CategoryImage\\Persistence\\Propel\\AbstractSpyCategoryImageSet |
+| src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageSetQuery.php | Spryker\\Zed\\CategoryImage\\Persistence\\Propel\\AbstractSpyCategoryImageSetQuery |
+| src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageSetToCategoryImage.php | Spryker\\Zed\\CategoryImage\\Persistence\\Propel\\AbstractSpyCategoryImageSetToCategoryImage |
+| src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageSetToCategoryImageQuery.php | Spryker\\Zed\\CategoryImage\\Persistence\\Propel\\AbstractSpyCategoryImageSetToCategoryImageQuery |
+| src/Orm/Zed/CategoryImageStorage/Persistence/Base/SpyCategoryImageStorage.php | Spryker\\Zed\\CategoryImageStorage\\Persistence\\Propel\\AbstractSpyCategoryImageStorage |
+| src/Orm/Zed/CategoryImageStorage/Persistence/Base/SpyCategoryImageStorageQuery.php | Spryker\\Zed\\CategoryImageStorage\\Persistence\\Propel\\AbstractSpyCategoryImageStorageQuery |
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes have been implemented in transfer objects:<table><thead><tr><th>Transfer</th><th>Type</th><th>Event</th><th>Path</th></tr></thead><tbody><tr><td>`CategoryImageSetTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CategoryImageSetTransfer.php`</td></tr><tr><td>`CategoryImageTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CategoryImageTransfer.php`</td></tr><tr><td>`CategoryTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CategoryTransfer.php`</td></tr></tbody></table>
+Make sure that the following changes have been implemented in transfer objects:
+
+| TRANSFER | TYPE | EVENT | PATH |
+| --- | --- | --- | --- |
+| CategoryImageSetTransfer | class | created | src/Generated/Shared/Transfer/CategoryImageSetTransfer.php |
+| CategoryImageTransfer | class | created | src/Generated/Shared/Transfer/CategoryImageTransfer.php |
+| CategoryTransfer | class | created | src/Generated/Shared/Transfer/CategoryTransfer.php |
+
 {% endinfo_block %}
 
 
-### 3) Configure Export to Redis
-#### Set up Event Listeners
+### 3) Configure export to Redis
+
+#### Set up event listeners
 
 {% info_block infoBox %}
-In this step, you will enable publishing of table changes (create, edit, delete
-{% endinfo_block %} to `spy_category_image_storage` and synchronization of data to Storage.)
 
-| Plugin | Specification | Prerequisites | Namespace |
+In this step, you will enable publishing of table changes (create, edit, delete to `spy_category_image_storage` and synchronization of data to Storage.)
+
+{% endinfo_block %}
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `CategoryImageStorageEventSubscriber` | Registers listeners that are responsible for publishing category image information to storage when a related entity changes. | None | `Spryker\Zed\CategoryImageStorage\Communication\Plugin\Event\Subscriber` |
+| CategoryImageStorageEventSubscriber | Registers listeners that are responsible for publishing category image information to storage when a related entity changes. | None | Spryker\Zed\CategoryImageStorage\Communication\Plugin\Event\Subscriber |
 
 **src/Pyz/Zed/Event/EventDependencyProvider.php**
     
@@ -165,12 +210,13 @@ class CategoryImageStorageConfig extends SprykerCategoryImageSTorageConfig
 }
 ```
 
-#### Set up Data Synchronization
+#### Set up data synchronization
+
 Add the following plugins to your project:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `CategoryImageSynchronizationDataPlugin` | Synchronizes all category image entries from the database to Redis. | None | `Spryker\Zed\CategoryImageStorage\Communication\Plugin\Synchronization` |
+| CategoryImageSynchronizationDataPlugin | Synchronizes all category image entries from the database to Redis. | None | Spryker\Zed\CategoryImageStorage\Communication\Plugin\Synchronization |
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
@@ -196,11 +242,13 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 }
 ```
 
-{% info_block warningBox %}
-Make sure that when a category image is created, updated or deleted, it is exported (or removed
-{% endinfo_block %} to Redis accordingly.)
+{% info_block warningBox “Verification” %}
 
-| Storage type | Target entity | Example expected data identifier |
+Make sure that when a category image is created, updated or deleted, it is exported or removed from Redis accordingly.
+
+{% endinfo_block %}
+
+| STORAGE TYPE | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
 | --- | --- | --- |
 | Redis | Category Image | `kv:category_image:en_us:1` |
 
@@ -224,25 +272,27 @@ Make sure that when a category image is created, updated or deleted, it is expor
 }
 ```
 
-### 4) Import Data
+### 4) Import data
 
 {% info_block infoBox %}
+
 In this step, category template will be configured to be able to display category images.
+
 {% endinfo_block %}
 
 Prepare your data according to your requirements using our demo data:
 
-data/import/category_template.csv
+**data/import/category_template.csv**
 
-```bash
+```csv
 template_name,template_path
 "Sub Categories grid","@CatalogPage/views/sub-categories-grid/sub-categories-grid.twig"
 ```
 
-| Column | Is obligatory? | Data type | Data example | Data explanation |
+| COLUMN | IS REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| `template_name` | mandatory | string | My category template | A human readable name of the category template. |
-| `template_path` | mandatory | string | `@ModuleName/path/to/category/template.twig` | Category template path that is used to display a category page. |
+| template_name | mandatory | string | My category template | A human readable name of the category template. |
+| template_path | mandatory | string | @ModuleName/path/to/category/template.twig | Category template path that is used to display a category page. |
 
 Run the following console command to import data:
 

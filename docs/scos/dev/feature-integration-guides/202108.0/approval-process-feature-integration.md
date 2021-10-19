@@ -16,36 +16,40 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/shipment-approval-process-feature-integration.html
 ---
 
-## Install Feature Core
+## Install feature core
+
 ### Prerequisites
+
 To start feature integration, review and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Company Account | 202009.0|
-| Shared Carts | 202009.0 |
-| Checkout | 202009.0 |
-| Spryker Core | 202009.0 |
+| Company Account | {{page.version}}|
+| Shared Carts | {{page.version}} |
+| Checkout | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command to install the required modules:
 
 ```bash
-composer require spryker-feature/approval-process:"^202009.0" --update-with-dependencies
+composer require spryker-feature/approval-process:"{{page.version}}" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules were installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-| `QuoteApproval` | `vendor/spryker/quote-approval` |
+| QuoteApproval | vendor/spryker/quote-approval |
 
 {% endinfo_block %}
 
 
-### 2) Set up Configuration
+### 2) Set up configuration
+
 Add the following configuration to your project:
 
 **src/Pyz/Shared/QuoteApproval/QuoteApprovalConfig.php**
@@ -79,7 +83,8 @@ Make sure that the configuration returns the billing address and payment keys.
 
 {% endinfo_block %}
 
-### 3) Set up Database Schema and Transfer Objects
+### 3) Set up database schema and transfer objects
+
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
@@ -92,9 +97,9 @@ console transfer:generate
 
 Make sure that the following changes were applied by checking your database:
 
-| Database Entity | Type | Event |
+| DATABASE ENTITY | TYPE | EVENT |
 | --- | --- | --- |
-| `spy_quote_approval` | table | created |
+| spy_quote_approval | table | created |
 
 {% endinfo_block %}
 
@@ -102,17 +107,17 @@ Make sure that the following changes were applied by checking your database:
 
 Make sure that the following changes were applied in transfer objects:
 
-| Tranfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
-| `QuoteTransfer.quoteApprovals` | column | created	 | `src/Generated/Shared/Transfer/QuoteTransfer` |
-| `QuoteActivationRequestTransfer` | class | created | `src/Generated/Shared/Transfer/QuoteApprovalTransfer` |
-| `QuoteApprovalRequestTransfer` | class | created | `src/Generated/Shared/Transfer/QuoteApprovalRequestTransfer` |
-| `QuoteApprovalResponseTransfer` | class | created | `src/Generated/Shared/Transfer/QuoteApprovalResponseTransfer` |
-| `QuoteApprovalCollectionTransfer` | class | created	 | `src/Generated/Shared/Transfer/QuoteApprovalResponseTransfer` |
+| QuoteTransfer.quoteApprovals | column | created	 | src/Generated/Shared/Transfer/QuoteTransfer|
+| QuoteActivationRequestTransfer | class | created | src/Generated/Shared/Transfer/QuoteApprovalTransfer |
+| QuoteApprovalRequestTransfer | class | created | src/Generated/Shared/Transfer/QuoteApprovalRequestTransfer |
+| QuoteApprovalResponseTransfer | class | created | src/Generated/Shared/Transfer/QuoteApprovalResponseTransfer |
+| QuoteApprovalCollectionTransfer | class | created	 | src/Generated/Shared/Transfer/QuoteApprovalResponseTransfer |
 
 {% endinfo_block %}
 
-### 4) Add Translations
+### 4) Add translations
 
 Append glossary for the approval process feature:
 
@@ -167,20 +172,20 @@ console data:import glossary
 Make sure that the configured data has been added to the `spy_glossary` table in the database.
 {% endinfo_block %}
 
-### 4) Set up Behavior
+### 4) Set up behavior
 
-#### Set up Permission Integration
+#### Set up permission integration
 
 Register the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-|  `ApproveQuotePermissionPlugin` | Checks if the customer can approve the quote in the client layer. | None |  `Spryker\Client\QuoteApproval\Plugin\Permission` |
-|  `PlaceOrderPermissionPlugin` | Checks if the customer can place an order in the client layer. | None |  `Spryker\Client\QuoteApproval\Plugin\Permission` |
-|  `RequestQuoteApprovalPermissionPlugin` | Checks if the customer can request for approval in the client layer. | None |  `Spryker\Client\QuoteApproval\Plugin\Permission` |
-|  `ApproveQuotePermissionPlugin` | Checks if the customer can approve quote approval in the Zed layer. | None |  `Spryker\Zed\QuoteApproval\Communication\Plugin\Permission` |
-|  `PlaceOrderPermissionPlugin` | Checks if the customer can place an order in the Zed layer. | None |  `Spryker\Zed\QuoteApproval\Communication\Plugin\Permission` |
-| `SanitizeQuoteApprovalQuoteLockPreResetPlugin` | Allows complete removal of all the approval process-related data from the quote on cart lock reset. | None | `Spryker\Zed\QuoteApproval\Communication\Plugin\Cart`|
+| ApproveQuotePermissionPlugin | Checks if the customer can approve the quote in the client layer. | None | Spryker\Client\QuoteApproval\Plugin\Permission |
+| PlaceOrderPermissionPlugin | Checks if the customer can place an order in the client layer. | None | Spryker\Client\QuoteApproval\Plugin\Permission |
+| RequestQuoteApprovalPermissionPlugin | Checks if the customer can request for approval in the client layer. | None | Spryker\Client\QuoteApproval\Plugin\Permission |
+| ApproveQuotePermissionPlugin | Checks if the customer can approve quote approval in the Zed layer. | None | Spryker\Zed\QuoteApproval\Communication\Plugin\Permission |
+| PlaceOrderPermissionPlugin | Checks if the customer can place an order in the Zed layer. | None | Spryker\Zed\QuoteApproval\Communication\Plugin\Permission |
+| SanitizeQuoteApprovalQuoteLockPreResetPlugin | Allows complete removal of all the approval process-related data from the quote on cart lock reset. | None | Spryker\Zed\QuoteApproval\Communication\Plugin\Cart |
 
 **src/Pyz/Client/Permission/PermissionDependencyProvider.php**
  
@@ -272,14 +277,15 @@ Check that when you reset the cart lock, all the approval process-related data i
 
 {% endinfo_block %}
 
-#### Set up Quote Integration
+#### Set up quote integration
+
 Register the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-|  `QuoteApprovalExpanderPlugin` | Expands the quote with the QuoteApproval data. | None |  `Spryker\Zed\QuoteApproval\Communication\Plugin\Quote` |
-|  `RemoveQuoteApprovalsBeforeQuoteDeletePlugin` | Removes quote approvals from the database before the quote deletion. | None |  `Spryker\Zed\QuoteApproval\Communication\Plugin\Quote` |
-| `QuoteApprovalQuoteFieldsAllowedForSavingProviderPlugin` | Returns required quote fields from the configuration if the approval request is not canceled. |None | `Spryker\Zed\QuoteApproval\Communication\Plugin\Quote` |
+| QuoteApprovalExpanderPlugin | Expands the quote with the QuoteApproval data. | None |  Spryker\Zed\QuoteApproval\Communication\Plugin\Quote |
+| RemoveQuoteApprovalsBeforeQuoteDeletePlugin | Removes quote approvals from the database before the quote deletion. | None |  Spryker\Zed\QuoteApproval\Communication\Plugin\Quote |
+| QuoteApprovalQuoteFieldsAllowedForSavingProviderPlugin | Returns required quote fields from the configuration if the approval request is not canceled. |None | Spryker\Zed\QuoteApproval\Communication\Plugin\Quote |
 
 **src/Pyz/Zed/Quote/QuoteDependencyProvider.php**
 
@@ -337,17 +343,17 @@ Make sure that the billing address and payment are saved with the quote in the `
 
 {% endinfo_block %}
 
-#### Set up Checkout Integration
+#### Set up checkout integration
 
 Register the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-|  `QuoteApprovalCheckoutPreConditionPlugin` | Checks if the quote is ready to checkout.| None |  `Spryker\Zed\QuoteApproval\Communication\Plugin\Checkout` |
+| QuoteApprovalCheckoutPreConditionPlugin | Checks if the quote is ready to checkout.| None |  Spryker\Zed\QuoteApproval\Communication\Plugin\Checkout |
 
 **src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php**
 
- ```php
+```php
 <?php
  
 namespace Pyz\Zed\Checkout;
@@ -377,42 +383,42 @@ Check that the customer without PlaceOrderPermission cannot proceed to checkout.
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 
 To start feature integration, review and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Cart | 202009.0 |
-| Checkout | 202009.0 |
-| Spryker Core | 202009.0 |
+| Cart | {{page.version}} |
+| Checkout | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command to install the required modules:
 
 ```bash
-composer require spryker-feature/approval-process: "^202009.0" --update-with-dependencies
+composer require spryker-feature/approval-process: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules were installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-| `QuoteApprovalWidget` | `vendor/spryker-shop/quote-approval-widget` |
+| QuoteApprovalWidget | vendor/spryker-shop/quote-approval-widget |
 
 {% endinfo_block %}
 
-### 2) Add Translations
+### 2) Add translations
 
 Append glossary according to your configuration:
 
 **src/data/import/glossary.csv**
 
- ```yaml
+```yaml
 quote_approval_widget.title,Approval Request,en_US
 quote_approval_widget.title,Genehmigungsanfrage,de_DE
 quote_approval_widget.limit.unlimited,Unlimited,en_US
@@ -462,15 +468,16 @@ Make sure that the configured data is added to the `spy_glossary` table in the d
 {% endinfo_block %}
 
 
-### 3) Set up Behavior
-#### Set up Permission Integration
+### 3) Set up behavior
+
+#### Set up permission integration
+
 Register the following plugins:
 
-
-| Plugin | Secification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `QuoteApprovalCheckerCheckoutAddressStepEnterPreCheckPlugin` | Checks if the quote approval status is approved or waiting on the address step of checkout. | None | `SprykerShop\Yves\QuoteApprovalWidget\Plugin\CheckoutPage` |
-| `QuoteApprovalCheckerCheckoutPaymentStepEnterPreCheckPlugin` | Checks if the quote approval status is approved or waiting on the payment step of checkout. | None | `SprykerShop\Yves\QuoteApprovalWidget\Plugin\CheckoutPage` |
+| QuoteApprovalCheckerCheckoutAddressStepEnterPreCheckPlugin | Checks if the quote approval status is approved or waiting on the address step of checkout. | None | SprykerShop\Yves\QuoteApprovalWidget\Plugin\CheckoutPage |
+| QuoteApprovalCheckerCheckoutPaymentStepEnterPreCheckPlugin | Checks if the quote approval status is approved or waiting on the payment step of checkout. | None | SprykerShop\Yves\QuoteApprovalWidget\Plugin\CheckoutPage |
 
 **src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php**
 
@@ -519,14 +526,14 @@ Check that the customer with the sent approval request cannot open the payment s
 {% endinfo_block %}
 
 
-### 4) Set up Widgets
+### 4) Set up widgets
 Register the following global widgets:
 
-| Widget | Description | Prerequisites | Namespace |
+| WIDGET | DESCRIPTION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-|  `QuoteApprovalStatusWidget` | Adds a quote approval status for the multicart list in the header and on the multicart list page. | None |  `SprykerShop\Yves\QuoteApprovalWidget\Widget` |
-|  `QuoteApprovalWidget` | Adds an approve functionality to the Cart page. | None |  `SprykerShop\Yves\QuoteApprovalWidget\Widget` |
-|  `QuoteApproveRequestWidget` | Adds the request for quote approve functionality to the Cart page. | None |  `SprykerShop\Yves\QuoteApprovalWidget\Widget` |
+|  QuoteApprovalStatusWidget | Adds a quote approval status for the multicart list in the header and on the multicart list page. | None |  SprykerShop\Yves\QuoteApprovalWidget\Widget |
+|  QuoteApprovalWidget | Adds an approve functionality to the Cart page. | None | SprykerShop\Yves\QuoteApprovalWidget\Widget |
+|  QuoteApproveRequestWidget | Adds the request for quote approve functionality to the Cart page. | None |  SprykerShop\Yves\QuoteApprovalWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -570,7 +577,7 @@ Make sure that the following plugin was registered:
 2. Open `https://mysprykershop.com/company/company-role/` and assign `RequestQuoteApprovalPermission`, `PlaceOrderPermission`, `ApproveQuotePermission` permissions to any role related to the current customer.
 3. Add the record to the `spy_quote_approval` for the current customer quote id and current customer company user as an approver.
 
-| Module | Test |
+| MODULE | TEST |
 | --- | --- |
 | QuoteApprovalStatusWidget | Hover over the multicart list in the header: should contain quote approval status column.<br>Open the `https://mysprykershop.com/multi-cart/`, table should contain the quote approval status column. |
 | QuoteApproveRequestWidget | Open the `https://mysprykershop.com/checkout/summary/` - should contain widget request for approval with list approvers. |
@@ -578,17 +585,17 @@ Make sure that the following plugin was registered:
 
 {% endinfo_block %}
 
-### 4) Enable Controllers
+### 4) Enable controllers
 
 Register the following plugin:
 
-| Widget | Description | Prerequisites | Namespace |
+| WIDGET | DESCRIPTION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-|  `QuoteApprovalControllerProvider` | Provides routes used in the `QuoteApprovalWidget`.| None |  `SprykerShop\Yves\QuoteApprovalWidget\Plugin\Provider` |
+| QuoteApprovalControllerProvider | Provides routes used in the `QuoteApprovalWidget`.| None |  SprykerShop\Yves\QuoteApprovalWidget\Plugin\Provider |
 
 **src/Pyz/Yves/ShopApplication/YvesBootstrap.php**
 
- ```php
+```php
 <?php
  
 namespace Pyz\Yves\ShopApplication;

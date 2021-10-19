@@ -100,7 +100,8 @@ To import the glossary data, run the following console command:
 console data:import glossary 
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the configured data has been added to the `spy_glossary` table in the database.
 {% endinfo_block %}
 
@@ -373,7 +374,8 @@ Run the following console command to import the glossary data:
 console data:import glossary
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that  the configured data has been added to the `spy_glossary` table in the database.
 {% endinfo_block %}
 

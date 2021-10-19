@@ -11,15 +11,19 @@ redirect_from:
   - /docs/en/alternative-products-wishlist-feature-integration
 ---
 
-## Install Feature Frontend
+## Install feature frontend
+
 ### Prerequisites
+
 To start feature integration, review and install the necessary features:
-|Name|Version|
+
+|NAME|VERSION|
 |---|---|
-|Alternative Products|202009.0|
-|Wishlist|202009.0|
+|Alternative Products|{{page.version}}|
+|Wishlist|{{page.version}}|
 
 ### 1) Add Translations
+
 Append glossary according to your configuration:
 
 **src/data/import/glossary.csv**
@@ -38,11 +42,13 @@ console data:import glossary
 Make sure that in the database the configured data are added to the `spy_glossary` table.
 {% endinfo_block %}
 
-### 2) Set up Widgets
+### 2) Set up widgets
+
 Register the following plugins to enable widgets:
-|Plugin|Description|Prerequisites|Namespace|
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
-|`WishlistProductAlternativeWidget`|Displays a list of alternative products on wishlist page.|None|`SprykerShop\Yves\ProductAlternativeWidget\Widget`|
+|WishlistProductAlternativeWidget|Displays a list of alternative products on wishlist page.|None|SprykerShop\Yves\ProductAlternativeWidget\Widget|
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -73,6 +79,13 @@ Run the following command to enable Javascript and CSS changes:
 ```bash
 console frontend:yves:build
 ```
+
 {% info_block warningBox "Verification" %}
-Make sure that the following widgets were registered:<table><thead><tr><td>Module</td><td>Test</td></tr></thead><tbody><tr><td>`WishlistProductAlternativeWidget`</td><td>Assign some alternative products in Zed, and make sure that they are displayed on the wishlist page of the product to which they were assigned.</td></tr></tbody></table>
+
+Make sure that the following widgets were registered:
+
+| MODULE | TEST |
+| --- | --- |
+| WishlistProductAlternativeWidget | Assign some alternative products in Zed, and make sure that they are displayed on the wishlist page of the product to which they were assigned. |
+
 {% endinfo_block %}

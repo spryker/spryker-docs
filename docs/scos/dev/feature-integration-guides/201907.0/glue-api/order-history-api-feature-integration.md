@@ -117,7 +117,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 </br>
 </details>
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 To verify that `OrdersResourceRoutePlugin` is set up correctly, make sure that the following endpoints are available:<ul><li>http://glue.mysprykershop.com/orders</li><li>http://glue.mysprykershop.com/orders/{% raw %}{{{% endraw %}order_reference{% raw %}}}{% endraw %}</li></ul>
 {% endinfo_block %}
 

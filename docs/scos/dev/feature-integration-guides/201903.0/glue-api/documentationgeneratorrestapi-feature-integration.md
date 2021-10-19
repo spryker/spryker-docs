@@ -24,7 +24,8 @@ Run the following command to install the required modules:
 composer require spryker/documentation-generator-rest-api:"^1.0.0" --update-with-dependencies
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the following modules are installed:
 {% endinfo_block %}
 
@@ -39,7 +40,8 @@ Run the following command to generate transfer changes:
 console transfer:generate
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the following changes have occurred:
 {% endinfo_block %}
 
@@ -103,7 +105,8 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 </br>
 </details>
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 To verify that `GenerateRestApiDocumentationConsole` is activated, make sure that the `vendor/bin/console rest-api:generate:documentation` console command exists by running  `vendor/bin/console | grep rest-api:generate`
 {% endinfo_block %}
 
@@ -154,7 +157,8 @@ class DocumentationGeneratorRestApiDependencyProvider extends SprykerDocumentati
 </br>
 </details>
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 To make sure that everything is set up correctly, run the command `vendor/bin/console rest-api:generate:documentation` and verify that a specification file was generated successfully. By default, generated files are located at `src/Generated/Glue/Specification/spryker_rest_api.schema.yml`.
 {% endinfo_block %}
 

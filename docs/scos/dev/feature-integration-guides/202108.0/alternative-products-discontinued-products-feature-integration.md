@@ -11,22 +11,25 @@ redirect_from:
   - /docs/en/alternative-products-discontinued-products-feature-integration
 ---
 
-## Install Feature Core
+## Install feature core
+
 ### Prerequisites
+
 Please review and install the necessary features before beginning the integration.
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Alternative Products | 202009.0 |
-| Discontinued Products | 202009.0 |
+| Alternative Products | {{page.version}} |
+| Discontinued Products | {{page.version}} |
 
-### 1) Set up Behavior
+### 1) Set up behavior
+
 Register the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `DiscontinuedCheckAlternativeProductApplicablePlugin` | Checks if product alternatives should be shown for the product. | Expects `SKU `and `idProductConcrete` to be set for `ProductViewTransfer`. | `Spryker\Client\ProductDiscontinuedStorage\Plugin\ProductAlternativeStorage` |
-| `DiscontinuedCheckAlternativeProductApplicablePlugin` | Checks if product alternatives should be shown for the product. | None | `Spryker\Zed\ProductDiscontinued\Communication\Plugin\ProductAlternative` |
+| DiscontinuedCheckAlternativeProductApplicablePlugin | Checks if product alternatives should be shown for the product. | Expects `SKU `and `idProductConcrete` to be set for `ProductViewTransfer`. | Spryker\Client\ProductDiscontinuedStorage\Plugin\ProductAlternativeStorage |
+| DiscontinuedCheckAlternativeProductApplicablePlugin | Checks if product alternatives should be shown for the product. | None | Spryker\Zed\ProductDiscontinued\Communication\Plugin\ProductAlternative |
 
 **src/Pyz/Client/ProductAlternativeStorage/ProductAlternativeStorageDependencyProvider.php**
 
@@ -84,6 +87,5 @@ Make sure that you can see alternatives for products that are marked as **discon
 {% info_block infoBox "Store relation" %}
 
 If the [Product Labels feature](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) is integrated into your project, make sure to define store relations for *Discontinued* and *Alternatives available* product labels by re-importing [product_label_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront.
-
 
 {% endinfo_block %}

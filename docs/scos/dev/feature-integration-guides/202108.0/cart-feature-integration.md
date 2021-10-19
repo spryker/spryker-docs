@@ -19,25 +19,29 @@ The current feature integration guide only adds the [Add product to cart from th
 
 {% endinfo_block %}
 
-## Install Feature Core
+## Install feature core
 
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Spryker Core | 202009.0 |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
+
 ```bash
-composer require spryker-feature/cart 202009.0 --update-with-dependencies
+composer require spryker-feature/cart {{page.version}} --update-with-dependencies
 ```
 
-### 2) Add Translations
+### 2) Add translations
 Append glossary according to your configuration:
 
 **src/data/import/glossary.csv**
+
 ```yaml
 global.add-to-cart,In den Warenkorb,de_DE
 global.add-to-cart,Add to Cart,en_US
@@ -46,6 +50,7 @@ cart_page.error_message.unexpected_error,Ein unerwarteter Fehler aufgetreten.,de
 ```
 
 Run the following console command to import data:
+
 ```bash
 console data:import glossary
 ```
@@ -55,36 +60,44 @@ Make sure that above keys and corresponding translations are present in the `spy
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
+
 Please overview and install the necessary features before beginning the integration step.
-| Name | Version |
+
+| NAME | VERSION |
 | --- | --- |
-| Spryker Core | 202009.0 |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
+
 ```bash
-composer require spryker-feature/cart 202009.0 --update-with-dependencies
+composer require spryker-feature/cart {{page.version}} --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-| `CartPage` | `vendor/spryker-shop/cart-page` |
+| CartPage | vendor/spryker-shop/cart-page |
 
 {% endinfo_block %}
 
-### 2) Set up Widgets
+### 2) Set up widgets
+
 Register the following widgets:
-| Plugin | Specification | Prerequisites | Namespace |
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `ProductAbstractAddToCartButtonWidget` | Displays a button for adding the product abstract to the cart in case the product is eligible. | None | `SprykerShop\Yves\CartPage\Widget` |
+| ProductAbstractAddToCartButtonWidget | Displays a button for adding the product abstract to the cart in case the product is eligible. | None | SprykerShop\Yves\CartPage\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
+
 ```php
 <?php
 
@@ -106,10 +119,13 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     }
 }
 ```
+
 Run the following command to enable Javascript and CSS changes:
+
 ```bash
 console frontend:yves:build
 ```
+
 {% info_block warningBox "Verification" %}
 
 Navigate to catalog and find an abstract product with single concrete. You should see a button for adding this concrete product to the cart right from the catalog page.

@@ -56,6 +56,7 @@ class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyPr
 <br>
 </details>
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 When using the reorder feature, a new customer quote must be created with the name "Cart from order {Order reference}".
 {% endinfo_block %}

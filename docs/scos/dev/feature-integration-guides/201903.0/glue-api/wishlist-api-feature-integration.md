@@ -100,7 +100,8 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 </br>
 </details>
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Run the following console command:</br>`console list`</br>Make sure that `wishlists:uuid:update` appears in the list.
 {% endinfo_block %}
 
@@ -188,7 +189,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% endinfo_block %}(Make sure that the following endpoints are available:</br>http:///glue.mysprykershop.com/wishlists</br>http:///glue.mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}/wishlists-items</br>Make a request to http://glue.mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}/wishlists-items?include=concrete-products and make sure that the given wishlist has at least one product added.</br>Make sure that the response includes relationships to the concrete-products resources.)
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make a request to http://glue.mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}?include=wishlists and make sure that the given customer has at least one wishlist.</br>Make sure that the response includes relationships to the wishlists resources.
 {% endinfo_block %}
 

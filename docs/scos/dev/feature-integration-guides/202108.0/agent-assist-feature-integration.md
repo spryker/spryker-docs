@@ -28,6 +28,7 @@ To start feature integration, overview and install the necessary features:
 ### 1) Install the required modules using composer
 
 Run the following command to install the required modules:
+
 ```bash
 composer require spryker-feature/agent-assist:"{{page.version}}" --update-with-dependencies
 ```
@@ -35,7 +36,7 @@ composer require spryker-feature/agent-assist:"{{page.version}}" --update-with-d
 
 Ensure that the following modules have been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | Agent | vendor/spryker/agent |
 | AgentGui | vendor/spryker/agent-gui|
@@ -160,6 +161,7 @@ Ensure that the following modules have been installed:
 {% endinfo_block %}
 
 ### 2) Set up configuration
+
 By default, in Spryker, posting login form (where SecurityBlocker will make its check and block agents who made too many failed login attempts) is locale-independent. So, to be able to see error messages translated into different languages, you need to configure the locale to be added to the agent login path. You can do this by modifying the following configs:
 
 **src/Pyz/Yves/AgentPage/AgentPageConfig.php**

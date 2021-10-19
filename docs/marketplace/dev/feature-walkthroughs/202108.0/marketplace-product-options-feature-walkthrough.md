@@ -1,6 +1,6 @@
 ---
 title: Marketplace Product Options feature walkthrough
-description: Merchant categories allows creating product options and groups.
+description: Marketplace Product Options allows merchants to create their product option groups and values.
 template: concept-topic-template
 ---
 

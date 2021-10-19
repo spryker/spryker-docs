@@ -10,6 +10,8 @@ The feature modules provide plugins to validate merchant in a quote on cart and 
 So if merchant is not equal - finds substitution for items depending on the chosen merchant.
 If  the system doesn't have suitable items, a customer will see the error or warning about these items.
 
+*MerchantSwitcherWidget* module provides plugins for *Cart*, *Checkout*, *Wishlist* modules, to validate, reload items in the list. 
+
 ## Module dependency graph
 ![Entity Diagram](https://confluence-connect.gliffy.net/embed/image/8db03d24-88d4-4715-a5e1-afae4f2ff8ca.png?utm_medium=live&utm_source=confluence)
 

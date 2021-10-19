@@ -29,7 +29,7 @@ Ensure that the related features are installed:
 Install the required modules:
 
 ```bash
-composer require "spryker-feature/availability-notification":"{{page.version}}" --update-with-dependencies 
+composer require "spryker-feature/availability-notification":"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -49,7 +49,7 @@ Apply database changes, generate entities and transfer changes:
 ```bash
 console transfer:generate
 console propel:install
-console transfer:generate 
+console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
@@ -123,7 +123,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 
  return $eventSubscriberCollection;
  }
-} 
+}
 ```
 
 {% info_block warningBox "Verification" %}
@@ -134,7 +134,7 @@ To verify that `AvailabilityNotificationSubscriber` is working:
 2. As a customer, subscribe to its availability notifications on Yves.
 3. Make the product available.
 4. Check your mailbox for the email about the product's availability.
-   
+
 {% endinfo_block %}
 
 #### Email handling
@@ -191,7 +191,7 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 
  return $container;
  }
-} 
+}
 ```
 </details>
 
@@ -253,7 +253,7 @@ class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
  new AvailabilityNotificationSubscriptionCustomerTransferExpanderPlugin(),
  ];
  }
-} 
+}
 ```
 
 {% info_block warningBox "Verification" %}
@@ -273,7 +273,7 @@ To verify that `AvailabilityNotificationSubscriptionCustomerTransferExpanderPlug
 2. On Yves, as a company user, subscribe to its availability notifications.
 3. On Yves, go to account overview > *Newsletters*.
 4. Check that you are subscribed to the product's availability notifications.
-   
+
 {% endinfo_block %}
 
 ## 4) Set up the configuration
@@ -327,7 +327,7 @@ Ensure that the related features are installed:
 Install the required modules:
 
 ```bash
-composer require "spryker-feature/availability-notification":"{{page.version}}" --update-with-dependencies 
+composer require "spryker-feature/availability-notification":"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -384,14 +384,14 @@ availability_notification_subscription.mail.copyright,"<em>Copyright © Name des
 availability_notification_subscription.mail.unsubscribe,"Want to change how you receive these emails?<br>You can <a target=""_blank"" href=""%link%"" style=""mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #656565;font-weight: normal;text-decoration: underline;"">unsubscribe from this list</a>.",en_US
 availability_notification_subscription.mail.unsubscribe,"Möchten Sie ändern, wie Sie diese E-Mails erhalten?<br>Sie können <a target=""_blank"" href=""%link%"" style=""mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #656565;font-weight: normal;text-decoration: underline;"">aus dieser Liste austragen</a>.",de_DE
 availability_notification.email_address,"Email address",en_US
-availability_notification.email_address,"E-Mail-Addresse",de_DE 
+availability_notification.email_address,"E-Mail-Addresse",de_DE
 ```
 </details>
 
 Import data:
 
 ```bash
-console data:import glossary 
+console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
@@ -451,7 +451,7 @@ Make sure that the following URLs are available on Yves:
 - `http://mysprykershop.com/availability-notification/unsubscribe-by-key/{32 characters key}`
 - `http://mysprykershop.com/en/availability-notification/unsubscribe-by-key/{32 characters key}`
 - `http://mysprykershop.com/de/availability-notification/unsubscribe-by-key/{32 characters key}`
-  
+
 {% endinfo_block %}
 
 If you have any other languages configured, the corresponding links must be available too.
@@ -485,19 +485,18 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
  AvailabilityNotificationSubscriptionWidget::class,
  ];
  }
-} 
+}
 ```
 
 Enable Javascript and CSS changes:
 
 ```bash
-console frontend:yves:build 
+console frontend:yves:build
 ```
 
 In case you have a custom template, put `AvailabilityNotificationSubscriptionWidget` to your `src/Pyz/Yves/ProductDetailPage/Theme/default/components/molecules/product-configurator/product-configurator.twig` file:
 
 ```twig
-{%- raw -%}
 ...
 {% raw %}{%{% endraw %} set isProductAbstract = data.product.idProductConcrete is empty {% raw %}%}{% endraw %}
 ...
@@ -506,7 +505,6 @@ In case you have a custom template, put `AvailabilityNotificationSubscriptionWid
     {% raw %}{%{% endraw %} widget 'AvailabilityNotificationSubscriptionWidget' args [data.product] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}
 {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 ...
-{% endraw %}
 ```
 
 {% info_block warningBox "Verification" %}

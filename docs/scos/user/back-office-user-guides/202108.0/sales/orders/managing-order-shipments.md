@@ -40,14 +40,14 @@ If you create or edit a shipment of an order created by a customer, the grand to
 To create a new shipment for the order:
 1. Scroll down to the *Order Items* section and click **Create Shipment**.
 
-![Create shipment button](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Sales/Managing+Order+Shipments/create-shipment-btn.png) 
+![Create shipment button](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Sales/Managing+Order+Shipments/create-shipment-btn.png)
 
 2. On the *New Shipment for Order* page, populate the required fields marked with *.
-3. In the *Order items inside this shipment* section, select the order items you want to be delivered in this shipment. 
+3. In the *Order items inside this shipment* section, select the order items you want to be delivered in this shipment.
 4. To keep the changes, click **Save**. This will take you to the *View Order: [Order ID]* page, where you can see the new order shipment.
 
 **Tips & tricks**
-Clicking **Back to Order** in the top right corner of the page prior to saving the changes will discard all the changes and take you to the *View Order: [Order ID]* page.
+<br>Clicking **Back to Order** in the top right corner of the page prior to saving the changes will discard all the changes and take you to the *View Order: [Order ID]* page.
 
 ## Editing shipment details
 
@@ -68,7 +68,7 @@ The shipment is automatically deleted if it doesn't contain any items.
 1. Once done, click **Save** to keep the changes. This will take you to the *View Order: [Order ID]* page with the following message: '*Shipment has been successfully edited'*.
 
 **Tips & tricks**
-Clicking **Back to Order** in the top right corner of the page can trigger different actions:
+<br>Clicking **Back to Order** in the top right corner of the page can trigger different actions:
 * Selecting this option prior to saving the changes will discard all the changes and then take you to the *List of Orders* page.
 * Selecting this option after the changes have been saved will redirect you to the *List of Orders* page.
 

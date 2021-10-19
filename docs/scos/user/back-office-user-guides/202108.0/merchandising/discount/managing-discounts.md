@@ -22,9 +22,12 @@ To manage discounts, navigate to **Merchandising** > **Discount**.
 To edit a discount, do the following:
 1. On the **Overview of Discounts** page, click **Edit** in the _Actions_ column.
 2. Update the attributes and click **Save**.
+
 {% info_block infoBox %}
-To find out more information about the attributes that you see on the *Edit Discount* page, in the Creating a voucher guides, see the [Reference information: Creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#reference-information--creating-a-voucher).
-{% endinfo_block %} section.
+
+To find out more information about the attributes that you see on the *Edit Discount* page, in the Creating a voucher guides, see the [Reference information: Creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#reference-information--creating-a-voucher) section.
+
+{% endinfo_block %}
 
 ## Viewing a discount
 
@@ -35,6 +38,7 @@ To view a discount, do the following:
     2.  To get back to the *Discount Overview* page, click **List of discounts**.
 
 ## Adding voucher codes (voucher discount type)
+
 You can add voucher codes while editing the discount entity.
 And you can also do the following:
 1. On the *Overview of Discounts* page, in the _Actions_ column, click **Add code**.

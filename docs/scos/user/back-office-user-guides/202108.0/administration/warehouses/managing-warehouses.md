@@ -25,9 +25,9 @@ To view the warehouse details:
 
 1. In the *Actions* column, click **View** for the warehouse you want to view. This takes you to the *View Warehouse: [Warehouse name]* page.
 2. On the *View Warehouse: [Warehouse name]* page, the following information is available:
-    * warehouse name
-    * status: whether the warehouse is available or not
-    * store(s) in which the warehouse is available
+    * Warehouse name
+    * Status: whether the warehouse is available or not
+    * Store(s) in which the warehouse is available
 
 
 ## Editing warehouse details

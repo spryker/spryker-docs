@@ -69,8 +69,6 @@ To activate it, click **Activate** on the *View Product Set* page, or select **A
 
 {% endinfo_block %}
 
-
-
 ### Reference information: Creating product sets
 <a name="reference-information-creating-product-sets"></a>
 
@@ -129,5 +127,4 @@ The Back Office set up for this product set looks the following way:
 ![Product set in the Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Sets/Product+Sets%3A+Reference+Information/product-set-example-in-back-office.png)
 
 **What's next?**
-
-To know how the product sets are managed, see [Managing product sets](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-sets/managing-product-sets.html).
+<br>To know how the product sets are managed, see [Managing product sets](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-sets/managing-product-sets.html).

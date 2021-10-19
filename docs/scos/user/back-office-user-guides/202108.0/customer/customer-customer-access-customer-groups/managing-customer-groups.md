@@ -20,15 +20,15 @@ This article describes how to manage customer groups.
 
 To start working with customer groups, navigate to the **Customers** > **Customer Groups** section.
 
-
 {% info_block infoBox %}
+
 Out-of-the-box, there are no connections between customer groups and any other Back Office feature, except for the Discounts. You can set up the discount conditions to be applied to a specific customer group. See  [Discount Conditions: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) for more information on what the discount conditions are.
+
 {% endinfo_block %}
 
 ## Adding a customer group
 
 To add a customer group:
-
 1. On the *Customer groups* page, in the top right corner, click **Add Customer Group**.
 On the **Add a Customer Group** page there are two tabs: *General Information* and *Customers*.
 3. In the *General Information* tab, enter the name and description for your customer group.
@@ -42,7 +42,7 @@ On the **Add a Customer Group** page there are two tabs: *General Information* a
 To edit a customer group:
 1. On the *Customer groups* page, click **Edit** in the _Actions_ column for the specific group you want to edit.
 2. Update the needed attributes:
-    * To unassign a user from the group, scroll down to the *Assigned customers* table and clear the checkbox on the left of the user you want to unassign. 
+    * To unassign a user from the group, scroll down to the *Assigned customers* table and clear the checkbox on the left of the user you want to unassign.
     * To reassign all customers, click **De-select All**.
 3.  Click **Save**.
 

@@ -28,7 +28,7 @@ Review the reference information before you start, or just look up the necessary
 
 ## Viewing payment methods
 
-To view details of a payment mathod, in the *Actions* column, click **View** for the payment method. On the *View Payment Method: [Payment Method name]* page, you can see the following information:
+To view details of a payment method, in the *Actions* column, click **View** for the payment method. On the *View Payment Method: [Payment Method name]* page, you can see the following information:
 
 * Payment method key
 * Name of the payment method
@@ -54,7 +54,9 @@ To edit a payment method:
 4. To apply the changes, click **Save**.
 
 {% info_block warningBox "Note" %}
+
 The payment method must be assigned to a store; otherwise, it won’t be displayed during the checkout process.
+
 {% endinfo_block %}
 
 ### Reference information: Editing payment method pages

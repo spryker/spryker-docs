@@ -23,8 +23,10 @@ The schema below illustrates the connection between `spy_price_product_store` ta
 `price_data` in` spy_price_product_store` table contains a JSON with prices per mode, currency and type.
 
 {% info_block infoBox %}
-("price_data"
-{% endinfo_block %} field is a JSON with attributes such as volume prices, merchant prices, customer prices and then a specific set of prices inside its price type (["QTY" => 10, "GROSS(DEFAULT)" => 100, "NET(DEFAULT)" => 90]).)
+
+The "price_data" field is a JSON with attributes such as volume prices, merchant prices, customer prices and then a specific set of prices inside its price type (["QTY" => 10, "GROSS(DEFAULT)" => 100, "NET(DEFAULT)" => 90]).
+
+{% endinfo_block %} 
 
 
 You can find the example of the JSON below:

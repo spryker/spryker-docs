@@ -22,8 +22,6 @@ If you want to manage a CMS block for [email](/docs/scos/user/features/{{page.ve
 
 {% endinfo_block %}
 
----
-
 ## Prerequisites
 
 To start managing CMS blocks, go to **Content Management** > **Blocks**.
@@ -33,19 +31,17 @@ Each section contains reference information. Make sure to review it before you s
 ## Viewing CMS blocks
 
 To view a block:
-
-1. On the *Overview of CMS Blocks* page, click **View Block** in the _Actions_ column. 
+1. On the *Overview of CMS Blocks* page, click **View Block** in the _Actions_ column.
 2. On the *View CMS Block: [Block ID]* page that opens, the following information is available:
     * General information
     * Placeholders
 
 **Tips & tricks**
-On the *View CMS Block: [Block ID]* page, you can do the following:
-
+<br>On the *View CMS Block: [Block ID]* page, you can do the following:
 * Edit a block's general information and layout by clicking **Edit block** in the top right corner of the page.
 * Edit a block's content and insert CMS widgets by clicking **Edit placeholders** in the top right corner of the page.
 * Make a CMS block invisible on the store website by clicking **Deactivate** in the top right corner of the page.
-* Make a CMS block visible on the store website by clicking **Activate** in the top right corner of the page. 
+* Make a CMS block visible on the store website by clicking **Activate** in the top right corner of the page.
 * Return to the list of CMS blocks by clicking **Back to list** in the top right corner of the page.
 
 ### Reference information: Viewing CMS blocks
@@ -62,24 +58,21 @@ The following table describes the attributes you see when viewing a CMS block.
 ## Editing placeholders
 
 To edit a placeholder:
-
-1. On the *Overview of CMS Blocks* page in the _Actions_ column, click *Edit Placeholder* next to the block you want to update. 
+1. On the *Overview of CMS Blocks* page in the _Actions_ column, click *Edit Placeholder* next to the block you want to update.
 2. On the *Edit Block Glossary: [Block ID]* page, you can update a title or content of the CMS block, as well as insert a content item widget. For more details, see [Adding content item widgets to a block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html#adding-content-item-widgets-to-blocks).
 3. To save the updates, click **Save**. The updated block is displayed on the grid of *List of CMS Blocks*.
 
 **Tips & tricks**
-
-On the *Edit Block Glossary: [Block ID]* page, you can do the following:
-
+<br>On the *Edit Block Glossary: [Block ID]* page, you can do the following:
 * Edit a block general information and layout by clicking **Edit block** in the top right corner of the page.
 * Make a CMS block invisible on the store website by clicking **Deactivate** in the top right corner of the page.
-* Make a CMS block visible on the store website by clicking **Activate** in the top right corner of the page. 
+* Make a CMS block visible on the store website by clicking **Activate** in the top right corner of the page.
 * Return to the list of CMS blocks by clicking **Back to list** in the top right corner of the page.
 
 ## Editing blocks
 
 To edit a CMS block:
-1. On the *Overview of CMS Blocks* page in the _Actions_ column, click **Edit Block** next to the block you want to update. 
+1. On the *Overview of CMS Blocks* page in the _Actions_ column, click **Edit Block** next to the block you want to update.
 2. On the *Edit CMS Block: [Block ID]* page that opens, you can perform the following actions on the CMS block:
     * Specify a locale where the store will be available.
     * Select a template of the block.
@@ -88,11 +81,10 @@ To edit a CMS block:
 
 
 **Tips & tricks**
-On the *Edit CMS Block: [Block ID]* page, you can do the following:
-
+<br>On the *Edit CMS Block: [Block ID]* page, you can do the following:
 * Return to the page where you can edit block title and content. For this, click **Edit placeholders** in the top right corner of the page.
 * Make the CMS block invisible on the store website by clicking **Deactivate** in the top right corner of the page.
-* Make the CMS block visible on the store website by clicking **Activate** in the top right corner of the page. 
+* Make the CMS block visible on the store website by clicking **Activate** in the top right corner of the page.
 * Return to a list of CMS blocks. To do this, click **Back to list**.
 
 ### Reference information: Editing blocks
@@ -112,12 +104,13 @@ The following table describes the attributes on the *Edit CMS Block: [Block ID]*
 
 
 ## Activating or deactivating a CMS block
+
 You can make a CMS block either active (visible on the store website) or inactive (invisible on the store website).
 
 To activate a CMS block:
-1. On the *Overview of CMS Blocks* page in the _Actions_ column, click **Activate** next to the block you want to update. 
+1. On the *Overview of CMS Blocks* page in the _Actions_ column, click **Activate** next to the block you want to update.
 2. The status will be changed from _Inactive_ to _Active_. The CMS block with the updated status will appear on the grid of CMS blocks.
 
 To deactivate a CMS block:
-1. On the *Overview of CMS Blocks* page in the _Actions_ column, click **Deactivate** next to the block you want to update. 
+1. On the *Overview of CMS Blocks* page in the _Actions_ column, click **Deactivate** next to the block you want to update.
 2. The status is changed from _Active_ to _Inactive_ and the block is removed from the store website. The CMS block with the updated status appears on the grid of CMS blocks.

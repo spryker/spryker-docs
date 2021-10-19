@@ -16,7 +16,7 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/managing-filter-preferences.html
 ---
 
-This topic describes how to manage search preferences. 
+This topic describes how to manage search preferences.
 
 ## Prerequisites
 
@@ -49,14 +49,14 @@ To edit a search preference:
 
 This section describes attributes you see and enter when creating  new attributes to search and editing search preferences.
 
-There is a set of search preferences' types that you can specify for your attribute key. All of those types possess different features. 
+There is a set of search preferences' types that you can specify for your attribute key. All of those types possess different features.
 
 ### Full text
 
 Full text implies that, if set to **Yes**, the attributes will be included for full-text search. It means that a user will be able to find products when they search for a text which is present in the value of a searchable attribute.
 
-**Example** 
-The _focus_adjustment_ attribute key has the following values: 
+**Example**
+The _focus_adjustment_ attribute key has the following values:
 * Auto
 * Auto/Manual
 
@@ -68,7 +68,7 @@ If **Include for full text** is set to Yes for this attribute, then, when typing
 Full text boosted implies that, if set to **Yes**, the attributes will be included for full text boosted. It means that the attribute values of these specific attributes will receive a higher relevance than other attributes having the same values.
 
 **Example**
-The *white-balance* and *light_exposure_modes* attributes both have *manual* attribute value, but: 
+The *white-balance* and *light_exposure_modes* attributes both have *manual* attribute value, but:
 * *white-balance* has the *Include for full-text search* value set to **Yes**
 *  *light_exposure_modes* has *Include for full text boosted* set to **Yes**
 
@@ -103,11 +103,14 @@ The _storage_media_ attribute has **SSD** and **Flash** values. If **Include for
 ![Completion terms](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Search+Preferences+Types/completion-terms.png)
 
 **Tips & tricks**
-When you first decide on activating search preference types for attributes, keep in mind, that enabling all of them is **highly unrecommended**, as this will result in a huge list of search results.
+<br>When you first decide on activating search preference types for attributes, keep in mind, that enabling all of them is **highly unrecommended**, as this will result in a huge list of search results.
 Instead of this, you might want to consider enabling search preference types for only those attributes that you really want your users to find while searching, or the attributes that refer to products you want to appear in the search results above all.
+
 {% info_block infoBox "Example" %}
-There is a new device in your shop which is popular on the market for its video recording properties. You know that users are very interested in a device with such property and they might search for products by it.</br>Suppose, you have created the _video_recording_ attribute in your shop with the values **Geotaging** and **Autofocus**.</br>However, suppose there are other attributes having the same values.</br>Since you want to advertise the specific new device more, it would make sense for you to disable, or at least to restrict the number of active search preference types for all other attributes with **Geotagging** and **Autofocus** values and enable an individual (or even all
-{% endinfo_block %} search preference types for the _video_recording_.</br>This way you will make the _video_recording_ product attribute searchable and therefore the products with this attribute will stand out in the search results when your customers search by attributes.)
+
+There is a new device in your shop which is popular on the market for its video recording properties. You know that users are very interested in a device with such property and they might search for products by it.</br>Suppose, you have created the _video_recording_ attribute in your shop with the values **Geotaging** and **Autofocus**.</br>However, suppose there are other attributes having the same values.</br>Since you want to advertise the specific new device more, it would make sense for you to disable, or at least to restrict the number of active search preference types for all other attributes with **Geotagging** and **Autofocus** values and enable an individual (or even all) search preference types for the _video_recording_.</br>This way you will make the _video_recording_ product attribute searchable and therefore the products with this attribute will stand out in the search results when your customers search by attributes.
+
+{% endinfo_block %}
 
 Also, it does not make much sense to activate search preferences for attributes with the **numeric** and **Yes/No** values. As numbers may occur not only in attributes but in product SKUs, names and descriptions (which are actually ranked higher than attributes in search results), therefore the probability that a user will find what they were looking for is low, but the list of search results will be huge, and the search term will be present in multiple places.
 Besides, it is very unlikely that users will be searching for an attribute with a numeric value or the Yes/No values.
@@ -116,8 +119,10 @@ Besides, it is very unlikely that users will be searching for an attribute with 
 
 After adding or updating all necessary attributes, you need to apply the changes by clicking **Synchronize search preferences**. This triggers an action that searches for all products that have those attributes and were modified since the last synchronization and touches them. This means that next time, the search collector execution will update the necessary products, so they can be found by performing a full text search.
 
- {% info_block infoBox "Synchronization" %}
+{% info_block infoBox "Synchronization" %}
+
 Depending on the size of your database, the synchronization can be slow sometimes. Make sure that you don't trigger it often if it's not necessary.
+
 {% endinfo_block %}
 
 To have your search collector collect all the dynamic product attributes, make sure you also followed the steps described in the Dynamic product attribute mapping section.
@@ -138,4 +143,3 @@ To deactivate individual search preferences of an attribute, do the following:
 2. On the *Edit search preferences* page, set a specific search preference type to **No**.
 
 To deactivate all search preferences for specific attributes at once,  in the _Actions_ column of an attribute for which you want to disable all search preferences, click **Deactivate all**.
-

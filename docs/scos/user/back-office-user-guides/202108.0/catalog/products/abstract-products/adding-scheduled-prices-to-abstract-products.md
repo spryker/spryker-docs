@@ -13,11 +13,11 @@ redirect_from:
 
 This document describes how to add scheduled prices to abstract products.
 
-## Prerequisites 
+## Prerequisites
 
 To start working with abstract products, go to  **Catalog > Products**.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process. 
+Review the reference information before you start, or just look up the necessary information as you go through the process.
 
 ## Adding a scheduled price to an abstract product
 
@@ -34,7 +34,7 @@ To add a scheduled price to an abstract product:
 10. Select a **Finish at (included)** date and time.
 11. Click **Save**.
     This opens the *Edit Product* page with the success message displayed. The scheduled price you've added is displayed in the table.
-    
+
 
 ### Reference information: Adding a scheduled price to an abstract product
 
@@ -52,9 +52,7 @@ The following table describes the attributes you enter and select when adding a 
 | Start from (included)  | Date and time on which the scheduled price will be applied. |
 | Finish at (included) | Date and time on which the product price will be reverted to the regular price. |
 
-    
-**Tips and tricks**
-You can add multiple scheduled prices for the same abstract product. Repeat the steps in [Add a scheduled price for an abstract product](#adding-a-scheduled-price-to-an-abstract-product) until you add the desired number of scheduled prices. 
+**Tips & tricks**
+<br>You can add multiple scheduled prices for the same abstract product. Repeat the steps in [Add a scheduled price for an abstract product](#adding-a-scheduled-price-to-an-abstract-product) until you add the desired number of scheduled prices.
 
 If you want to add more than five scheduled prices, it might be quicker to [import the scheduled prices](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/scheduled-prices/creating-scheduled-prices.html).
-

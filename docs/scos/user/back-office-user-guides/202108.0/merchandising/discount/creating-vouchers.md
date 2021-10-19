@@ -31,18 +31,24 @@ To create a discount voucher:
 2. On the *Create new discount* page, in the *General* tab, do the following:
     1. In *Store relation*, check the stores you wish the discount to be active in.
     2. In the *Discount Type* drop-down, select **Voucher codes**.
-   3. In the **Name** field, specify the name for the voucher.
+    3. In the **Name** field, specify the name for the voucher.
     4. _Optional_: Enter the description for the voucher in the **Description** field.
     5. Specify if the voucher is exclusive.
     6. Specify the validity interval (lifetime) of the voucher.
  3. Click **Next** or select the **Discount calculation** tab to proceed.
  4. On the *Create Discount* page, in the *Discount calculation* tab, do the following:
     1.  Select either **Calculator percentage** or **Calculator fixed** in the **Calculator type** drop-down.
-    {% info_block warningBox "Note" %}
-The next step varies based on the selected calculator type.
-{% endinfo_block %}
-    a. **Calculator fixed**: Enter the prices to be discounted
-    b.  **Calculator percentage**: Enter the values (percentage) to be discounted
+
+      {% info_block warningBox "Note" %}
+
+      The next step varies based on the selected calculator type:
+
+      1. **Calculator fixed**: Enter the prices to be discounted.
+
+      2.  **Calculator percentage**: Enter the values (percentage) to be discounted.
+
+      {% endinfo_block %}
+
     2. Select the **Discount application type** and define what products the voucher will be applied to. See reference information of the [Discount calculation](#discount-calculation-tab) tab for more details.
  5. Click **Next**, or select the *Conditions* tab to proceed.
  6. On the *Create new discount* page, in the *Conditions* tab, do the following:
@@ -62,12 +68,15 @@ In the *Voucher code* tab, do the following:
     The voucher codes will be generated according to your specifications. The codes will be displayed in the table at the bottom of the page.
 5. Click **Activate** in the top right corner to activate the voucher.
 Even if a voucher is valid and the decision rules are satisfied, a voucher can only be redeemed if it’s currently active.
+
 {% info_block infoBox %}
-See [Voucher code](#voucher-code
-{% endinfo_block %} for more information.
+
+See [Voucher code](#voucher-code) for more information.
+
+{% endinfo_block %}
 
 **Tips & tricks**
-Once you generated voucher codes, you can export them as a .csv file.
+<br>Once you generated voucher codes, you can export them as a .csv file.
 To do that, click **Export** below *Generate*.
 
 ## Reference information: Creating a voucher
@@ -77,7 +86,6 @@ This section describes attributes you enter and select when creating or editing 
 ### <a name="discount-overview-page"></a>Discount Overview page
 
 In the *Discount* section, you see the following:
-
 * The discount ID and name.
 * The amount that is discounted.
 * The type of discount, its validity period, and status.
@@ -117,7 +125,9 @@ The following table describes the attributes you enter and select in the *Genera
 | Valid from and Valid to| Vouchers are redeemable/the cart rule is active between Valid From and Valid To dates, inclusive. E.g., a voucher can be redeemed/discount applies to the cart starting from 1/1/2018 until 31/12/2019.|
 
 {% info_block infoBox "Info" %}
+
 The name and the description should be meaningful to help other Back Office users understand what the discount does. Besides, the given name is displayed in the customer's cart when redeeming the voucher. Therefore, it must be unique.
+
 {% endinfo_block %}
 
 #### <a name="discount-calculation-tab"></a>Discount calculation tab
@@ -155,8 +165,11 @@ The query builder lets you combine different conditions with connectors (**AND**
 * field (e.g., attribute.color)
 * operator (e.g., equal(=))
 * value tokens (e.g., blue)
+
 {% info_block infoBox "Info" %}
+
 The fields and values are defined by your shop data.
+
 {% endinfo_block %}
 
 These tokens are used to build plain queries too. The pattern of the plain query is as follows:
@@ -171,7 +184,7 @@ You can find plain query examples in the following table.
 
 {% info_block infoBox "Info" %}
 
-See [Token description tables](#token-description-tables for more information.)
+See [Token description tables](#token-description-tables) for more information.
 
 {% endinfo_block %}
 
@@ -193,7 +206,9 @@ Conditions are also called decision rules.
 The conditions are created in the form of a query and may be entered as a plain query or via the query builder. (See the [Discount calculation tab](#discount-calculation-tab) section for more details.)
 
 {% info_block infoBox "Info" %}
+
 If you do not need to add a condition, you can leave the query builder empty.
+
 {% endinfo_block %}
 
 Example: Discount is applied if five or more items are in the cart and it is Tuesday or Wednesday.
@@ -211,34 +226,25 @@ Let's say you have received a task to create a discount with the following condi
 
 **B2B Scenario**
 The discount is going to be applied if one of the following is fulfilled:
-1. The price mode is **Gross**, and:
-    * the subtotal amount is greater or equal: 100 € (Euro) **OR** 115 CHF (Swiss Franc)
+* The price mode is **Gross**, and the subtotal amount is greater or equal: 100 € (Euro) **OR** 115 CHF (Swiss Franc)
 
 **OR**
 
-2. The price mode is **Net**, and:
-    * the subtotal amount is greater or equal: 80 € (Euro) **OR** 95 CHF (Swiss Franc)
+* The price mode is **Net**, and the subtotal amount is greater or equal: 80 € (Euro) **OR** 95 CHF (Swiss Franc)
 
 The setup will look like the following:
 ![B2B scenario](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/b2b-scenario.png)
 
 **B2C Scenario**
 The discount is going to be applied if one of the following is fulfilled:
-1. On **Tuesday**, and:
-    * the item color is red, this item does not have the label **New**, and the customer adds at least two items (or more) to a cart
+* On **Tuesday**, and the item color is red, this item does not have the label **New**, and the customer adds at least two items (or more) to a cart
 
 **OR**
 
-2. On **Thursday**, and:
-    * the item color is white, this item does not have the label **New**, and the customer adds at least two items (or more) to a cart
+* On **Thursday**, and the item color is white, this item does not have the label **New**, and the customer adds at least two items (or more) to a cart
 
 The setup will look like the following:
 ![B2C scenario](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/b2c-scenario.png)
-
-
-
-
-
 
 #### <a name="voucher-code"></a>Voucher code tab
 
@@ -266,7 +272,6 @@ Use the placeholder **[code]** to indicate the position you want random characte
 | n > 1 | Voucher can be redeemed _n_ times. |  
 
 ![Voucher code](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Voucher+Codes:+Reference+Information/voucher-code.png)
-
 
 **Voucher Code Pool**
 The voucher codes of a discount are all contained in the same voucher code pool. One customer may only redeem one voucher code per pool per cart.
@@ -320,4 +325,4 @@ This section contains a set of tables that describe fields, value types, and ope
 |Greater or equal|>=|Number|Checks if the value is greater than or equal to the value of the right operand|
 
 **What's next?**
-See [Managing Discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/managing-discounts.html) to know more about the actions you can do once the discount is created.
+<br>See [Managing Discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/managing-discounts.html) to know more about the actions you can do once the discount is created.

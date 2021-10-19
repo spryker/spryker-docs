@@ -25,6 +25,7 @@ This topic describes how to manage company users.
 ## Prerequisites
 
 To start working with company users, go to the **Customers** > **Company Users** section.
+
 {% info_block warningBox "Note" %}
 
 Make sure you have a [company role](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-roles.html), [company](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-companies.html), and [business unit](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-units.html) created.
@@ -34,8 +35,8 @@ Make sure you have a [company role](/docs/scos/user/back-office-user-guides/{{pa
 Review the reference information before you start, or just look up the necessary information as you go through the process.
 
 ## Creating company users
-To add a new company user:
 
+To add a new company user:
 1. On the *Overview of Company Users* page, in the top right corner, click **Add User**.
 2. On the *Create Company User* page:
     1. Enter customer's email, salutation, first name, last name, and gender in the respective fields.
@@ -51,13 +52,17 @@ To add a new company user:
 To edit a company user:
 1. On the *Overview of Company Users* page, in the _Actions_ column, click **Edit** for the user you want to update.
 2. Update the needed values and click **Save**.
-    {% info_block infoBox "Info" %}
+
+{% info_block infoBox "Info" %}
+
 All values are available for modifications except for the email. The *Email* field is greyed out and is not available for modifications.
+
 {% endinfo_block %}
-    
+
 ### Reference information: Creating and editing and  a company user
 
 The following table describes the attributes you see, select, or enter while creating or editing a company user.
+
 | ATTRIBUTE |DESCRIPTION  |
 | --- | --- |
 | Email | Email of the customer that is used for logging in to the online store. It is not available for modifications on the *Edit* page. |
@@ -69,8 +74,7 @@ The following table describes the attributes you see, select, or enter while cre
 Company  | Drop-down list with the companies from **Customers** > **Companies**. This selection defines the list of available business unit. |
 | Business Unit | Business unit to which the user is going to be assigned. The list of the available values depends on the selected company. |
 | Assigned Roles | Roles assigned to the customer. |
-Unassigned Roles|Roles that you can select to be assigned to the customer.|
-
+Unassigned Roles | Roles that you can select to be assigned to the customer.|
 
 ## Attaching a company user to a business unit
 
@@ -91,8 +95,11 @@ To deactivate an enabled user, click **Disable**.
 ## Deleting a company user
 
 To delete a company user:
-1. On the *Overview of Company Users* page, click **Delete** in the *Actions* column. 
-2. On the *Company user deletion confirmation* page, confirm the deletion. 
+1. On the *Overview of Company Users* page, click **Delete** in the *Actions* column.
+2. On the *Company user deletion confirmation* page, confirm the deletion.
+
 {% info_block warningBox "Note" %}
+
 If confirmed, the user is deleted from everywhere and is no longer able to log in to the online store.
+
 {% endinfo_block %}

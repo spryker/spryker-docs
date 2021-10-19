@@ -39,21 +39,21 @@ To create a new delivery method:
    * Delivery Method Key
    * Name
 
-{% info_block warningBox "Note" %}
+   {% info_block warningBox "Note" %}
 
-Keep in mind that it will be visible on the Storefront.
+   Keep in mind that it will be visible on the Storefront.
 
-{% endinfo_block %}
+   {% endinfo_block %}
 
    * Carrier
    * Availability Plugin
    * Price Plugin
 
-{% info_block warningBox "Note" %}
+   {% info_block warningBox "Note" %}
 
-Regardless if you have multi-currency prices with multiple price modes or just one simple static price, the price plugin has priority over those prices and allows you to customize and apply logic over delivery price calculation.
+   Regardless if you have multi-currency prices with multiple price modes or just one simple static price, the price plugin has priority over those prices and allows you to customize and apply logic over delivery price calculation.
 
-{% endinfo_block %}
+   {% endinfo_block %}
 
    * Delivery Time Plugin
 
@@ -105,7 +105,7 @@ Keep in mind that **Delivery Method Key** cannot be edited.
 3. To keep the changes, click **Save**. For more details on the attributes, see the [Reference information: Creating delivery methods](#reference-information-creating-delivery-methods) section.
 
 **Tips & tricks**
-This is how the Back Office setup looks in the online store:
+<br>This is how the Back Office setup looks in the online store:
 
 ![Editing a shipment method](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Shipment/Creating+and+Managing+Shipment+Methods/editing-shipment-method.png)
 
@@ -130,4 +130,4 @@ To delete a delivery method:
    * **Yes, delete this delivery method** if you want to delete the delivery method. This deletes the delivery method and redirects you to the list of delivery methods.
 
 **Online Store**
-![Online store](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Shipment/Creating+and+Managing+Shipment+Methods/online-store.png){height="400" width="300"}
+![Online store](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Shipment/Creating+and+Managing+Shipment+Methods/online-store.png)

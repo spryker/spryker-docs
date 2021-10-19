@@ -17,6 +17,7 @@ related:
 This topic describes how to edit content items in the Back Office.
 
 ## Prerequisites
+
 To start working with abstract products, go to **Catalog** > **Products**.
 
 Review the reference information before you start, or just look up the necessary information as you go through the process.
@@ -24,25 +25,22 @@ Review the reference information before you start, or just look up the necessary
 ## Editing a content item
 
 To edit a content item:
-
 1. On the left-side navigation bar, navigate to  **Content** > **Content Items**.
-2. In the _Actions_ column of the *List of Content Items* table, click **Edit** next to the item you want to modify. The *Edit Content Item Type: Content Item Key* page opens. 
-3. Make changes to the needed attributes. 
+2. In the _Actions_ column of the *List of Content Items* table, click **Edit** next to the item you want to modify. The *Edit Content Item Type: Content Item Key* page opens.
+3. Make changes to the needed attributes.
 4. To save the updates, click **Save**. The updated content item will be displayed on the grid of _List of Content Items_, and the following message is displayed: "_Content item has been successfully updated_".
 
 **Tips & tricks**
-On the *Edit Content Item Type: Content Item Key* page, you can clear all the fields in the current locale by clicking **Clear locale**.
+<br>On the *Edit Content Item Type: Content Item Key* page, you can clear all the fields in the current locale by clicking **Clear locale**.
 
 Clicking **Back to Content Items** in the top right corner of the page can trigger different actions:
-
 * Selecting this option *prior to* saving the changes will discard all the changes and then take you to the _List of Content Items_ page.
-</br>
 * Selecting this option *after* the changes have been saved will redirect you to the _List of Content Items_ page.
 
 ### Reference information: Editing a content item
 
 This section describes atribbutes on the *Overview of Content Items* page and attribbutes of the following content item pages:
-* [Edit Content Item Banner: [Content Item Key] ](#edit-content-item-banner-content-item-key-page)
+* [Edit Content Item Banner: [Content Item Key]](#edit-content-item-banner-content-item-key-page)
 * [Edit a Content Item Abstract Product List: [Content Item Key]](#edit-content-item-abstract-product-list-content-item-key-page)
 * [Edit Content Item Product Set: [Content Item Key]](#edit-content-item-product-set-content-item-key-page)
 * [Edit Content Item File List: [Content Item Key]](#edit-content-item-file-list-content-item-key-page)
@@ -69,7 +67,7 @@ On the *Overview of Content Items* page, you can:
 * Filter content items using the search by *Content Item Key*, *Name*, *Description*, *Content type*, *Created*, and *Updated* dates.
 * Edit a content item.
 
-#### <a name="edit-content-item-banner-content-item-key-page"></a> Edit content Item Banner: [Content Item Key] page 
+#### <a name="edit-content-item-banner-content-item-key-page"></a> Edit content Item Banner: [Content Item Key] page
 
 The following table describes the attributes on the *Edit Content Item Banner: [Content Item Key]* page.
 
@@ -147,7 +145,6 @@ The following table describes the attributes on the *Create Content Item: Naviga
 | Navigation | Field to select an existing navigation element. |
 
 **What's next?**
-
-When content item is updated, you can add it via content item widgets to a block or a page if needed.
+<br>When content item is updated, you can add it via content item widgets to a block or a page if needed.
 
 * To learn more about adding content item widgets to a block or page, see [Adding Content Item Widgets to Pages and Blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).

@@ -1,6 +1,6 @@
 ---
 title: Marketplace Inventory Management + Packaging Units feature integration
-last_updated: Dec 16, 2020
+last_updated: Sep 07, 2021
 description: This document describes the process how to integrate the Marketplace Inventory Management + Packaging Units feature into a Spryker project.
 template: feature-integration-guide-template
 ---
@@ -17,28 +17,11 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration)  |
-| Marketplace Inventory Management | {{page.version}} | [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-inventory-management-feature-integration.html)  |
-| Marketplace Inventory Management + Order Management | {{page.version}} | [Marketplace Inventory Management + Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-order-management-feature-integration.html)  |
+| Packaging Units  | {{page.version}} | [Packaging Units feature integration](https://documentation.spryker.com/docs/packaging-unit-feature-integration)  |
+| Marketplace Inventory Management | {{page.version}} | [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-feature-integration.html)  |
+| Marketplace Order Management | {{page.version}} | [Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-feature-integration.html)  |
 
-### 1) Install the required modules using Composer
-
-Install the required modules:
-
-```bash
-composer require spryker/product-offer-packaging-unit:"^0.1.0" --update-with-dependencies
-```
-{% info_block warningBox "Verification" %}
-
-Make sure that the following modules have been installed:
-
-| MODULE | EXPECTED DIRECTORY |
-|-|-|
-| ProductOfferPackagingUnit | vendor/spryker/product-offer-packaging-unit |
-
-{% endinfo_block %}
-
-### 2) Enable resources and relationships
+### 1) Set up behavior
 
 Activate the following plugins:
 

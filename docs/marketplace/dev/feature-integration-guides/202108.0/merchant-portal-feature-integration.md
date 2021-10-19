@@ -84,20 +84,12 @@ class UserConfig extends SprykerUserConfig
 
 Connect users and merchants using Zed UI (Backoffice) or using the next data import.
 
-#### Import merchant and merchant use data.
+      1. merchant.csv
 
-In case you don't have merchant data import been integrated, you can find how to do it in [Merchant feature integration](https://documentation.spryker.com/2021080/docs/merchant-feature-integration)
-
-**data/import/common/common/marketplace/merchant.csv**
-
-<details>
-
-<summary markdown='span'>Prepare your data according to your requirements using the demo data:</summary>
-
-```csv
-merchant_key,merchant_reference,merchant_name,registration_number,status,email,is_active,url.de_DE,url.en_US
-sony-experts,MER000006,Sony Experts,HYY 134306,approved,michele@sony-experts.com,1,/de/merchant/sony-experts,/en/merchant/sony-experts
-```
+         ```yaml
+         merchant_key,merchant_reference,merchant_name,registration_number,status,email,is_active,url.de_DE,url.en_US
+         sony-experts,MER000006,Sony Experts,HYY 134306,approved,michele@sony-experts.com,1,/de/merchant/sony-experts,/en/merchant/sony-experts
+         ```
 
 </details>
 

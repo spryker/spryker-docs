@@ -18,7 +18,7 @@ To start feature integration, integrate the required features:
 | NAME      | VERSION  | INTEGRATION GUIDE |
 | --------- | -------- | ------------------|
 | Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html)
-| Cart | 202001.0   | [Cart feature integration](https://github.com/spryker-feature/cart)
+| Cart | {{page.version}}   | [Cart feature integration](https://documentation.spryker.com/docs/cart-feature-integration)
 
 ### Set up behavior
 
@@ -104,7 +104,7 @@ To start feature integration, overview, and install the necessary features:
 | NAME        | VERSION    | INTEGRATION GUIDE |
 | ----------- | ---------- | ------------------|
 | Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html) |
-| Cart                      | 202001.0   | [Cart feature integration](https://github.com/spryker-feature/cart) |
+| Cart                      | {{page.version}}   | [Cart feature integration](https://documentation.spryker.com/docs/cart-feature-integration) |
 
 ### Set up behavior
 
@@ -148,4 +148,4 @@ Make sure that the product offer reference (and sold by merchant) is added to th
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | - | - | - |
-| Marketplace Product Offer API + Cart API | | [Marketplace Product Offer + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-cart-feature-integration.html) |
+| Marketplace Product Offer + Cart API | | [Glue API: Marketplace Product Offer + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-cart-feature-integration.html) |

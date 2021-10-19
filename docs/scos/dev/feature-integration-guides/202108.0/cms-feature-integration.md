@@ -14,52 +14,55 @@ related:
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
 ---
 
-## Install Feature Core
+## Install feature core
+
 ### Prerequisites
+
 Please overview and install the necessary features before beginning the integration step.
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Spryker Core | 202009.0 |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/cms:"202009.0" --update-with-dependencies
+composer require spryker-feature/cms:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-| Cms | `vendor/spryker/cms` |
-| CmsBlock | `vendor/spryker/cms-block` |
-| CmsBlockCategoryStorage | `vendor/spryker/cms-block-category-storage` |
-| CmsBlockGui | `vendor/spryker/cms-block-gui` |
-| CmsBlockProductStorage | `vendor/spryker/cms-block-product-storage` |
-| CmsBlockStorage | `vendor/spryker/cms-block-storage` |
-| CmsContentWidget | `vendor/spryker/cms-content-widget` |
-| CmsGui | `vendor/spryker/cms-gui` |
-| CmsPageDataImport | `vendor/spryker/cms-page-data-import` |
-| CmsPageSearch | `vendor/spryker/cms-page-search` |
-| CmsSlot | `vendor/spryker/cms-slot` |
-| CmsSlotBlock | `vendor/spryker/cms-slot-block` |
-| CmsSlotBlockDataImport | `vendor/spryker/cms-slot-block-data-import` |
-| CmsSlotBlockExtension | `vendor/spryker/cms-slot-block-extension` |
-| CmsSlotBlockGui | `vendor/spryker/cms-slot-block-gui` |
-| CmsSlotBlockGuiExtension | `vendor/spryker/cms-slot-block-gui-extension` |
-| CmsSlotDataImport | `vendor/spryker/cms-slot-data-import` |
-| CmsSlotGui | `vendor/spryker/cms-slot-gui` |
-| CmsSlotStorage | `vendor/spryker/cms-slot-storage` |
-| CmsStorage | `vendor/spryker/cms-storage` |
-
+| Cms | vendor/spryker/cms |
+| CmsBlock | vendor/spryker/cms-block |
+| CmsBlockCategoryStorage | vendor/spryker/cms-block-category-storage |
+| CmsBlockGui | vendor/spryker/cms-block-gui |
+| CmsBlockProductStorage | vendor/spryker/cms-block-product-storage |
+| CmsBlockStorage | vendor/spryker/cms-block-storage |
+| CmsContentWidget | vendor/spryker/cms-content-widget |
+| CmsGui | vendor/spryker/cms-gui |
+| CmsPageDataImport | vendor/spryker/cms-page-data-import |
+| CmsPageSearch | vendor/spryker/cms-page-search |
+| CmsSlot | vendor/spryker/cms-slot |
+| CmsSlotBlock | vendor/spryker/cms-slot-block |
+| CmsSlotBlockDataImport | vendor/spryker/cms-slot-block-data-import |
+| CmsSlotBlockExtension | vendor/spryker/cms-slot-block-extension |
+| CmsSlotBlockGui | vendor/spryker/cms-slot-block-gui |
+| CmsSlotBlockGuiExtension | vendor/spryker/cms-slot-block-gui-extension |
+| CmsSlotDataImport | vendor/spryker/cms-slot-data-import |
+| CmsSlotGui | vendor/spryker/cms-slot-gui |
+| CmsSlotStorage | vendor/spryker/cms-slot-storage |
+| CmsStorage | vendor/spryker/cms-storage |
 
 {% endinfo_block %}
 
-### 2) Set up Database Schema and Transfer Objects 
+### 2) Set up database schema and transfer objects
+
 1. Adjust the schema definition so entity changes trigger events:
 
 **src/Pyz/Zed/Cms/Persistence/Propel/Schema/spy_cms.schema.xml**
@@ -67,19 +70,19 @@ Make sure that the following modules have been installed:
 ```xml
 <?xml version="1.0"?>
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\Cms\Persistence" package="src.Orm.Zed.Cms.Persistence">
- 
+
     <table name="spy_cms_page">
         <behavior name="event">
             <parameter name="spy_cms_page_all" column="*"/>
         </behavior>
     </table>
- 
+
     <table name="spy_cms_version">
         <behavior name="event">
             <parameter name="spy_cms_version_all" column="*"/>
         </behavior>
     </table>
- 
+
 </database>
 ```
 
@@ -88,25 +91,25 @@ Make sure that the following modules have been installed:
 ```xml
 <?xml version="1.0"?>
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\CmsBlock\Persistence" package="src.Orm.Zed.CmsBlock.Persistence">
- 
+
     <table name="spy_cms_block_glossary_key_mapping">
         <behavior name="event">
             <parameter name="spy_cms_block_glossary_key_mapping_all" column="*"/>
         </behavior>
     </table>
- 
+
     <table name="spy_cms_block" phpName="SpyCmsBlock">
         <behavior name="event">
             <parameter name="spy_cms_block_all" column="*"/>
         </behavior>
     </table>
- 
+
     <table name="spy_cms_block_store">
         <behavior name="event">
             <parameter name="spy_cms_block_store_all" column="*"/>
         </behavior>
     </table>
- 
+
 </database>
 ```
 
@@ -115,13 +118,13 @@ Make sure that the following modules have been installed:
 ```xml
 <?xml version="1.0"?>
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\CmsSlot\Persistence" package="src.Orm.Zed.CmsSlot.Persistence">
- 
+
     <table name="spy_cms_slot">
         <behavior name="event">
             <parameter name="spy_cms_slot_all" column="*"/>
         </behavior>
     </table>
- 
+
 </database>
 ```
 
@@ -133,14 +136,105 @@ console propel:install
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes have been applied by checking your database.<table><thead><tr><td>Database entity</td><td>Type</td><td>Event</td></tr></thead><tbody><tr><td>`spy_cms_block`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_block_glossary_key_mapping`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_block_storage`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_block_store`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_block_template`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_glossary_key_mapping`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_page`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_page_localized_attributes`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_page_search`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_page_storage`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_page_store`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_slot`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_slot_block`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_slot_block_storage`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_slot_storage`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_slot_template`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_slot_to_cms_slot_template`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_template`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_version`</td><td>table</td><td>created</td></tr></tbody></table>
+
+Make sure that the following changes have been applied by checking your database.
+
+| DATABASE ENTITY | TYPE | EVENT |
+| --- | --- | --- |
+| spy_cms_block | table | created |
+| spy_cms_block_glossary_key_mapping | table | created |
+| spy_cms_block_storage | table | created |
+| spy_cms_block_store | table | created |
+| spy_cms_block_template | table | created |
+| spy_cms_glossary_key_mapping | table | created |
+| spy_cms_page | table | created |
+| spy_cms_page_localized_attributes | table | created |
+| spy_cms_page_search | table | created |
+| spy_cms_page_storage | table | created |
+| spy_cms_page_store | table | created |
+| spy_cms_slot | table | created |
+| spy_cms_slot_block | table | created |
+| spy_cms_slot_bloc_storage | table | created |
+| spy_cms_slot_storage | table | created |
+| spy_cms_slot_template | table | created |
+| spy_cms_slot_to_cms_slot_template | table | created |
+| spy_cms_template | table | created |
+| spy_cms_version | table | created |
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes have been applied in transfer objects:<table><thead><tr><td>Transfer</td><td>Type</td><td>Event</td><td>Path</td></tr></thead><tbody><tr><td>`SpyCmsTemplateEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsTemplateEntityTransfer`</td></tr><tr><td>`SpyCmsPageEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsPageEntityTransfer`</td></tr><tr><td>`SpyCmsPageStoreEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsPageStoreEntityTransfer`</td></tr><tr><td>`SpyCmsGlossaryKeyMappingEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsGlossaryKeyMappingEntityTransfer`</td></tr><tr><td>`SpyCmsVersionEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsVersionEntityTransfer`</td></tr><tr><td>`SpyCmsBlockTemplateEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsBlockTemplateEntityTransfer`</td></tr><tr><td>`SpyCmsBlockGlossaryKeyMappingEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsBlockGlossaryKeyMappingEntityTransfer`</td></tr><tr><td>`SpyCmsBlockEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsBlockEntityTransfer`</td></tr><tr><td>`SpyCmsBlockStorageEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsBlockStorageEntityTransfer`</td></tr><tr><td>`SpyCmsBlockStoreEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsBlockStoreEntityTransfer`</td></tr><tr><td>`SpyCmsPageStorageEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsPageStorageEntityTransfer`</td></tr><tr><td>`SpyCmsBlockProductStorageEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsBlockProductStorageEntityTransfer`</td></tr><tr><td>`SpyCmsBlockCategoryStorageEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsBlockCategoryStorageEntityTransfer`</td></tr><tr><td>`SpyCmsSlotEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsSlotEntityTransfer`</td></tr><tr><td>`SpyCmsSlotBlockEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsSlotBlockEntityTransfer`</td></tr><tr><td>`SpyCmsSlotStorageEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsSlotStorageEntityTransfer`</td></tr><tr><td>`SpyCmsSlotTemplateEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsSlotTemplateEntity`</td></tr><tr><td>`SpyCmsSlotToCmsSlotTemplateEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsSlotToCmsSlotTemplateEntity`</td></tr><tr><td>`CmsTemplate`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsTemplateTransfer`</td></tr><tr><td>`Page`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PageTransfer`</td></tr><tr><td>`CmsPageLocalizedAttributes`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsPageLocalizedAttributesTransfer`</td></tr><tr><td>`PageKeyMapping`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PageKeyMappingTransfer`</td></tr><tr><td>`CmsBlock`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsBlockTransfer`</td></tr><tr><td>`CmsPage`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsPageTransfer`</td></tr><tr><td>`CmsPageAttributes`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsPageAttributesTransfer`</td></tr><tr><td>`CmsGlossary`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsGlossaryTransfer`</td></tr><tr><td>`CmsGlossaryAttributes`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsGlossaryAttributesTransfer`</td></tr><tr><td>`CmsPlaceholderTranslation`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsPlaceholderTranslationTransfer`</td></tr><tr><td>`CmsVersion`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsVersionTransfer`</td></tr><tr><td>`CmsVersionData`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsVersionDataTransfer`</td></tr><tr><td>`LocaleCmsPageData`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/LocaleCmsPageDataTransfer`</td></tr><tr><td>`FlattenedLocaleCmsPageDataRequest`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/FlattenedLocaleCmsPageDataRequestTransfer`</td></tr><tr><td>`StoreRelation`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/StoreRelationTransfer`</td></tr><tr><td>`Store`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/StoreTransfer`</td></tr><tr><td>`CmsBlockGlossary`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsBlockGlossaryTransfer`</td></tr><tr><td>`CmsBlockGlossaryPlaceholder`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsBlockGlossaryPlaceholderTransfer`</td></tr><tr><td>`CmsBlockGlossaryPlaceholderTranslation`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsBlockGlossaryPlaceholderTranslationTransfer`</td></tr><tr><td>`CmsBlockTemplate`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsBlockTemplateTransfer`</td></tr><tr><td>`Category`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CategoryTransfer`</td></tr><tr><td>`CmsBlockCategoryPosition`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsBlockCategoryPositionTransfer`</td></tr><tr><td>`CmsBlockProduct`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsBlockProductTransfer`</td></tr><tr><td>`CmsContentWidgetConfigurationList`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsContentWidgetConfigurationListTransfer`</td></tr><tr><td>`CmsContentWidgetConfiguration`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsContentWidgetConfigurationTransfer`</td></tr><tr><td>`CmsContentWidgetFunctions`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsContentWidgetFunctionsTransfer`</td></tr><tr><td>`CmsContentWidgetFunction`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsContentWidgetFunctionTransfer`</td></tr><tr><td>`CmsPageMetaAttributes`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsPageMetaAttributesTransfer`</td></tr><tr><td>`CmsSlot`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsSlotTransfer`</td></tr><tr><td>`CmsSlotBlock`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsSlotBlockTransfer`</td></tr><tr><td>`CmsSlotBlockCollection`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsSlotBlockCollectionTransfer`</td></tr><tr><td>`CmsSlotBlockCondition`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsSlotBlockConditionTransfer`</td></tr><tr><td>`CmsSlotBlockCriteria`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsSlotBlockCriteriaTransfer`</td></tr><tr><td>`CmsSlotBlockStorage`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsSlotBlockStorageTransfer`</td></tr><tr><td>`CmsSlotCriteria`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsSlotCriteriaTransfer`</td></tr><tr><td>`CmsSlotExternalData`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsSlotExternalDataTransfer`</td></tr><tr><td>`CmsSlotParams`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsSlotParamsTransfer`</td></tr><tr><td>`CmsSlotStorage`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsSlotStorageTransfer`</td></tr><tr><td>`CmsSlotTemplate`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsSlotTemplateTransfer`</td></tr><tr><td>`CmsSlotTemplateConfiguration`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsSlotTemplateConfigurationTransfer`</td></tr><tr><td>`ConstraintViolation`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ConstraintViolationTransfer`</td></tr><tr><td>`Filter`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/FilterTransfer`</td></tr><tr><td>`Message`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/MessageTransfer`</td></tr><tr><td>`ValidationResponse`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ValidationResponseTransfer`</td></tr></tbody></table>
+
+Make sure that the following changes have been applied in transfer objects:
+
+| Transfer | Type | Event | Path |
+| --- | --- | --- | --- |
+| SpyCmsTemplateEntity | class | created | src/Generated/Shared/Transfer/SpyCmsTemplateEntityTransfer |
+| SpyCmsPageEntity | class | created | src/Generated/Shared/Transfer/SpyCmsPageEntityTransfer |
+| SpyCmsPageStoreEntity | class | created | src/Generated/Shared/Transfer/SpyCmsPageStoreEntityTransfer |
+| SpyCmsGlossaryKeyMappingEntity | class | created | src/Generated/Shared/Transfer/SpyCmsGlossaryKeyMappingEntityTransfer |
+| SpyCmsVersionEntity | class | created | src/Generated/Shared/Transfer/SpyCmsVersionEntityTransfer |
+| SpyCmsBlockTemplateEntity | class | created | src/Generated/Shared/Transfer/SpyCmsBlockTemplateEntityTransfer |
+| SpyCmsBlockGlossaryKeyMappingEntity | class | created | src/Generated/Shared/Transfer/SpyCmsBlockGlossaryKeyMappingEntityTransfer |
+| SpyCmsBlockEntity | class | created | src/Generated/Shared/Transfer/SpyCmsBlockEntityTransfer |
+| SpyCmsBlockStorageEntity | class | created | src/Generated/Shared/Transfer/SpyCmsBlockStorageEntityTransfer |
+| SpyCmsBlockStoreEntity | class | created | src/Generated/Shared/Transfer/SpyCmsBlockStoreEntityTransfer |
+| SpyCmsPageStorageEntity | class | created | src/Generated/Shared/Transfer/SpyCmsPageStorageEntityTransfer |
+| SpyCmsBlockProductStorageEntity | class | created | src/Generated/Shared/Transfer/SpyCmsBlockProductStorageEntityTransfer |
+| SpyCmsBlockCategoryStorageEntity | class | created | src/Generated/Shared/Transfer/SpyCmsBlockCategoryStorageEntityTransfer |
+| SpyCmsSlotEntity | class | created | src/Generated/Shared/Transfer/SpyCmsSlotEntityTransfer |
+| SpyCmsSlotBlockEntity | class | created | src/Generated/Shared/Transfer/SpyCmsSlotBlockEntityTransfer |
+| SpyCmsSlotStorageEntity | class | created | src/Generated/Shared/Transfer/SpyCmsSlotStorageEntityTransfer |
+| SpyCmsSlotTemplateEntity | class | created | src/Generated/Shared/Transfer/SpyCmsSlotTemplateEntity |
+| SpyCmsSlotToCmsSlotTemplateEntity | class | created | src/Generated/Shared/Transfer/SpyCmsSlotToCmsSlotTemplateEntity |
+| CmsTemplate | class | created | src/Generated/Shared/Transfer/CmsTemplateTransfer |
+| Page | class | created | src/Generated/Shared/Transfer/PageTransfer |
+| CmsPageLocalizedAttributes | class | created | src/Generated/Shared/Transfer/CmsPageLocalizedAttributesTransfer |
+| PageKeyMapping | class | created | src/Generated/Shared/Transfer/PageKeyMappingTransfer |
+| CmsBlock | class | created | src/Generated/Shared/Transfer/CmsBlockTransfer |
+| CmsPage | class | created | src/Generated/Shared/Transfer/CmsPageTransfer |
+| CmsPageAttributes | class | created | src/Generated/Shared/Transfer/CmsPageAttributesTransfer |
+| CmsGlossary | class | created | src/Generated/Shared/Transfer/CmsGlossaryTransfer |
+| CmsGlossaryAttributes | class | created | src/Generated/Shared/Transfer/CmsGlossaryAttributesTransfer |
+| CmsPlaceholderTranslation | class | created | src/Generated/Shared/Transfer/CmsPlaceholderTranslationTransfer |
+| CmsVersion | class | created | src/Generated/Shared/Transfer/CmsVersionTransfer |
+| CmsVersionData | class | created | src/Generated/Shared/Transfer/CmsVersionDataTransfer |
+| LocaleCmsPageData | class | created | src/Generated/Shared/Transfer/LocaleCmsPageDataTransfer |
+| FlattenedLocaleCmsPageDataRequest | class | created | src/Generated/Shared/Transfer/FlattenedLocaleCmsPageDataRequestTransfer |
+| StoreRelation | class | created | src/Generated/Shared/Transfer/StoreRelationTransfer |
+| Store | class | created | src/Generated/Shared/Transfer/StoreTransfer |
+| CmsBlockGlossary | class | created | src/Generated/Shared/Transfer/CmsBlockGlossaryTransfer |
+| CmsBlockGlossaryPlaceholder | class | created | src/Generated/Shared/Transfer/CmsBlockGlossaryPlaceholderTransfer |
+| CmsBlockGlossaryPlaceholderTranslation | class | created | src/Generated/Shared/Transfer/CmsBlockGlossaryPlaceholderTranslationTransfer |
+| CmsBlockTemplate | class | created | src/Generated/Shared/Transfer/CmsBlockTemplateTransfer |
+| Category | class | created | src/Generated/Shared/Transfer/CategoryTransfer |
+| CmsBlockCategoryPosition | class | created | src/Generated/Shared/Transfer/CmsBlockCategoryPositionTransfer |
+| CmsBlockProduct | class | created | src/Generated/Shared/Transfer/CmsBlockProductTransfer |
+| CmsContentWidgetConfigurationList | class | created | src/Generated/Shared/Transfer/CmsContentWidgetConfigurationListTransfer |
+| CmsContentWidgetConfiguration | class | created | src/Generated/Shared/Transfer/CmsContentWidgetConfigurationTransfer |
+| CmsContentWidgetFunctions | class | created | src/Generated/Shared/Transfer/CmsContentWidgetFunctionsTransfer |
+| CmsContentWidgetFunction | class | created | src/Generated/Shared/Transfer/CmsContentWidgetFunctionTransfer |
+| CmsPageMetaAttributes | class | created | src/Generated/Shared/Transfer/CmsPageMetaAttributesTransfer |
+| CmsSlot | class | created | src/Generated/Shared/Transfer/CmsSlotTransfer |
+| CmsSlotBlock | class | created | src/Generated/Shared/Transfer/CmsSlotBlockTransfer |
+| CmsSlotBlockCollection | class | created | src/Generated/Shared/Transfer/CmsSlotBlockCollectionTransfer |
+| CmsSlotBlockCondition | class | created | src/Generated/Shared/Transfer/CmsSlotBlockConditionTransfer |
+| CmsSlotBlockCriteria | class | created | src/Generated/Shared/Transfer/CmsSlotBlockCriteriaTransfer |
+| CmsSlotBlockStorage | class | created | src/Generated/Shared/Transfer/CmsSlotBlockStorageTransfer |
+| CmsSlotCriteria | class | created | src/Generated/Shared/Transfer/CmsSlotCriteriaTransfer |
+| CmsSlotExternalData | class | created | src/Generated/Shared/Transfer/CmsSlotExternalDataTransfer |
+| CmsSlotParams | class | created | src/Generated/Shared/Transfer/CmsSlotParamsTransfer |
+| CmsSlotStorage | class | created | src/Generated/Shared/Transfer/CmsSlotStorageTransfer |
+| CmsSlotTemplate | class | created | src/Generated/Shared/Transfer/CmsSlotTemplateTransfer |
+| CmsSlotTemplateConfiguration | class | created | src/Generated/Shared/Transfer/CmsSlotTemplateConfigurationTransfer |
+| ConstraintViolation | class | created | src/Generated/Shared/Transfer/ConstraintViolationTransfer |
+| Filter | class | created | src/Generated/Shared/Transfer/FilterTransfer |
+| Message | class | created | src/Generated/Shared/Transfer/MessageTransfer |
+| ValidationResponse | class | created | src/Generated/Shared/Transfer/ValidationResponseTransfer |
+
 {% endinfo_block %}
 
-### 3) Add Translations
+### 3) Add translations
 Run the following command to update translations:
 
 ```bash
@@ -149,25 +243,26 @@ console translator:generate-cache
 
 {% info_block warningBox "Verification" %}
 
-You can switch the language in the **Back Office > User Control > User section > Edit > Interface language**. Make sure that the **Content Management** section is translatable. 
+You can switch the language in the **Back Office > User Control > User section > Edit > Interface language**. Make sure that the **Content Management** section is translatable.
 
 {% endinfo_block %}
 
-### 4) Configure Export to Redis and Elasticsearch
+### 4) Configure export to Redis and Elasticsearch
+
 1. Set up event listeners. By doing this step, you enable tables to be published upon a change - create, edit or delete.
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `CmsStorageEventSubscriber` | Registers listeners that are responsible for publishing CMS pages to storage when a related entity changes. | None | `Spryker\Zed\CmsStorage\Communication\Plugin\Event\Subscriber` |
-| `CmsBlockStorageEventSubscriber` | Registers listeners that are responsible for publishing CMS blocks to storage when a related entity changes. | None | `Spryker\Zed\CmsBlockStorage\Communication\Plugin\Event\Subscriber` |
-| `CmsPageSearchEventSubscriber` | Registers listeners that are responsible for publishing CMS pages to Elasticsearch when a related entity changes. | None | `Spryker\Zed\CmsPageSearch\Communication\Plugin\Event\Subscriber` |
-| `CmsSlotStorageEventSubscriber` | Registers listeners that are responsible for publishing slots to storage when a related entity changes. | None | `Spryker\Zed\CmsSlotStorage\Communication\Plugin\Event\Subscriber` |
-| `CmsSlotBlockStorageEventSubscriber` | Registers listeners that are responsible for publishing slots to CMS block relations to storage when a related entity changes. | None | `Spryker\Zed\CmsSlotBlockStorage\Communication\Plugin\Event\Subscriber` | `ContentStorageEventSubscriber` | Registers listeners that are responsible for publishing content items to storage when a related entity changes. | None | `Spryker\Zed\ContentStorage\Communication\Plugin\Event\Subscriber`
-| `CmsBlockCategoryStorageEventSubscriber` | Registers listeners that are responsible for publishing category to CMS block relations to storage when a related entity changes (optional) | None | `Spryker\Zed\CmsBlockCategoryStorage\Communication\Plugin\Event\Subscriber` |
-| `CmsBlockProductStorageEventSubscriber` | Registers listeners that are responsible for publishing product to CMS block relations to storage when a related entity changes (optional) | None | `Spryker\Zed\CmsBlockProductStorage\Communication\Plugin\Event\Subscriber` |
+| CmsStorageEventSubscriber | Registers listeners that are responsible for publishing CMS pages to storage when a related entity changes. | None | Spryker\Zed\CmsStorage\Communication\Plugin\Event\Subscriber |
+| CmsBlockStorageEventSubscriber | Registers listeners that are responsible for publishing CMS blocks to storage when a related entity changes. | None | Spryker\Zed\CmsBlockStorage\Communication\Plugin\Event\Subscriber |
+| CmsPageSearchEventSubscriber | Registers listeners that are responsible for publishing CMS pages to Elasticsearch when a related entity changes. | None | Spryker\Zed\CmsPageSearch\Communication\Plugin\Event\Subscriber |
+| CmsSlotStorageEventSubscriber | Registers listeners that are responsible for publishing slots to storage when a related entity changes. | None | Spryker\Zed\CmsSlotStorage\Communication\Plugin\Event\Subscriber |
+| CmsSlotBlockStorageEventSubscriber | Registers listeners that are responsible for publishing slots to CMS block relations to storage when a related entity changes. | None | Spryker\Zed\CmsSlotBlockStorage\Communication\Plugin\Event\Subscriber | ContentStorageEventSubscriber | Registers listeners that are responsible for publishing content items to storage when a related entity changes. | None | Spryker\Zed\ContentStorage\Communication\Plugin\Event\Subscriber
+| CmsBlockCategoryStorageEventSubscriber | Registers listeners that are responsible for publishing category to CMS block relations to storage when a related entity changes (optional) | None | Spryker\Zed\CmsBlockCategoryStorage\Communication\Plugin\Event\Subscriber |
+| CmsBlockProductStorageEventSubscriber | Registers listeners that are responsible for publishing product to CMS block relations to storage when a related entity changes (optional) | None | Spryker\Zed\CmsBlockProductStorage\Communication\Plugin\Event\Subscriber |
 
 **Pyz\Zed\Event\EventDependencyProvider**
-    
+
 ```php
 <?php
 
@@ -222,16 +317,16 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Queue;
- 
+
 use Spryker\Shared\CmsPageSearch\CmsPageSearchConstants;
 use Spryker\Shared\CmsStorage\CmsStorageConstants;
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Queue\QueueDependencyProvider as SprykerDependencyProvider;
 use Spryker\Zed\Synchronization\Communication\Plugin\Queue\SynchronizationStorageQueueMessageProcessorPlugin;
 use Spryker\Zed\Synchronization\Communication\Plugin\Queue\SynchronizationSearchQueueMessageProcessorPlugin;
- 
+
 class QueueDependencyProvider extends SprykerDependencyProvider
 {
     /**
@@ -253,9 +348,9 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\RabbitMq;
- 
+
 class RabbitMqConfig extends SprykerRabbitMqConfig
 {
     /**
@@ -265,7 +360,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
     {
         $queueOptionCollection->append($this->createQueueOption(CmsStorageConstants::CMS_SYNC_STORAGE_QUEUE, CmsStorageConstants::CMS_SYNC_STORAGE_ERROR_QUEUE));
         $queueOptionCollection->append($this->createQueueOption(CmsPageSearchConstants::CMS_SYNC_SEARCH_QUEUE, CmsPageSearchConstants::CMS_SYNC_SEARCH_ERROR_QUEUE));
- 
+
         return $queueOptionCollection;
     }
 }
@@ -277,12 +372,12 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 ```php
 <?php
-  
+
 namespace Pyz\Zed\CmsSlotStorage;
-  
+
 use Pyz\Zed\Synchronization\SynchronizationConfig;
 use Spryker\Zed\CmsSlotStorage\CmsSlotStorageConfig as SprykerCmsSlotStorageConfig;
-  
+
 class CmsSlotStorageConfig extends SprykerCmsSlotStorageConfig
 {
     /**
@@ -299,12 +394,12 @@ class CmsSlotStorageConfig extends SprykerCmsSlotStorageConfig
 
 ```php
 <?php
-  
+
 namespace Pyz\Zed\CmsSlotBlockStorage;
-  
+
 use Pyz\Zed\Synchronization\SynchronizationConfig;
 use Spryker\Zed\CmsSlotBlockStorage\CmsSlotBlockStorageConfig as SprykerCmsSlotBlockStorageConfig;
-  
+
 class CmsSlotBlockStorageConfig extends SprykerCmsSlotBlockStorageConfig
 {
     /**
@@ -319,22 +414,22 @@ class CmsSlotBlockStorageConfig extends SprykerCmsSlotBlockStorageConfig
 
 4. Enable synchronization plugins to be re-synchronize data manually (sending data from `*_storage` and `*_search` tables to Storage and Search).
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `CmsPageSynchronizationDataPlugin` | Synchronizes the `spy_cms_page_search` table content into Elasticsearch. | None | `Spryker\Zed\CmsPageSearch\Communication\Plugin\Synchronization` |
-| `CmsSynchronizationDataPlugin` | Synchronizes the `spy_cms_page_storage` table content into Storage. | None | `Spryker\Zed\CmsStorage\Communication\Plugin\Synchronization` |
-| `CmsBlockSynchronizationDataPlugin` | Synchronizes the `spy_cms_block_storage` table content into Storage. | None | `Spryker\Zed\CmsBlockStorage\Communication\Plugin\Synchronization` |
-| `CmsSlotBlockSynchronizationDataBulkPlugin` | Synchronizes the `spy_cms_slot_block_storage` table content into Storage. | None | `Spryker\Zed\CmsSlotBlockStorage\Communication\Plugin\Synchronization` |
-| `CmsSlotSynchronizationDataBulkPlugin` | Synchronizes the `spy_cms_slot_storage` table content into Storage. | None | `Spryker\Zed\CmsSlotStorage\Communication\Plugin\Synchronization` |
-| `ContentStorageSynchronizationDataPlugin` | Synchronizes the `spy_content_storage` table content into Storage. | None | `Spryker\Zed\ContentStorage\Communication\Plugin\Synchronization` |
-| `CmsBlockCategorySynchronizationDataPlugin` | Synchronizes the `spy_cms_block_categoty_storage` table content into Storage. (*optional*) | None | `Spryker\Zed\CmsBlockCategoryStorage\Communication\Plugin\Synchronization` |
-| `CmsBlockProductSynchronizationDataPlugin` | Synchronizes the `spy_cms_block_product_storage` table content into Storage. (*optional*) | None | `Spryker\Zed\CmsBlockProductStorage\Communication\Plugin\Synchronization` |
+| CmsPageSynchronizationDataPlugin | Synchronizes the `spy_cms_page_search` table content into Elasticsearch. | None | Spryker\Zed\CmsPageSearch\Communication\Plugin\Synchronization |
+| CmsSynchronizationDataPlugin | Synchronizes the `spy_cms_page_storage` table content into Storage. | None | Spryker\Zed\CmsStorage\Communication\Plugin\Synchronization |
+| CmsBlockSynchronizationDataPlugin | Synchronizes the `spy_cms_block_storage` table content into Storage. | None | Spryker\Zed\CmsBlockStorage\Communication\Plugin\Synchronization |
+| CmsSlotBlockSynchronizationDataBulkPlugin | Synchronizes the `spy_cms_slot_block_storage` table content into Storage. | None | Spryker\Zed\CmsSlotBlockStorage\Communication\Plugin\Synchronization |
+| CmsSlotSynchronizationDataBulkPlugin | Synchronizes the `spy_cms_slot_storage` table content into Storage. | None | Spryker\Zed\CmsSlotStorage\Communication\Plugin\Synchronization |
+| ContentStorageSynchronizationDataPlugin | Synchronizes the `spy_content_storage` table content into Storage. | None | Spryker\Zed\ContentStorage\Communication\Plugin\Synchronization |
+| CmsBlockCategorySynchronizationDataPlugin | Synchronizes the `spy_cms_block_categoty_storage` table content into Storage. (*optional*) | None | Spryker\Zed\CmsBlockCategoryStorage\Communication\Plugin\Synchronization |
+| CmsBlockProductSynchronizationDataPlugin | Synchronizes the `spy_cms_block_product_storage` table content into Storage. (*optional*) | None | Spryker\Zed\CmsBlockProductStorage\Communication\Plugin\Synchronization |
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Synchronization;
 
 use Spryker\Zed\CmsBlockCategoryStorage\Communication\Plugin\Synchronization\CmsBlockCategorySynchronizationDataPlugin;
@@ -346,7 +441,7 @@ use Spryker\Zed\CmsSlotStorage\Communication\Plugin\Synchronization\CmsSlotSynch
 use Spryker\Zed\CmsStorage\Communication\Plugin\Synchronization\CmsSynchronizationDataPlugin;
 use Spryker\Zed\ContentStorage\Communication\Plugin\Synchronization\ContentStorageSynchronizationDataPlugin;
 use Spryker\Zed\Synchronization\SynchronizationDependencyProvider as SprykerSynchronizationDependencyProvider;
- 
+
 class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
 {
     /**
@@ -361,7 +456,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
             new CmsSlotBlockSynchronizationDataBulkPlugin(),
             new CmsSlotSynchronizationDataBulkPlugin(),
 			new ContentStorageSynchronizationDataPlugin(),
-			
+
 			// Optional subscribers, use only if you need CMS Block relationship with categories or products.
 			new CmsBlockCategorySynchronizationDataPlugin(),
             new CmsBlockProductSynchronizationDataPlugin(),
@@ -372,21 +467,21 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 5. Enable event trigger plugins to be able to re-trigger publish events.
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `CmsPageEventResourceQueryContainerPlugin` | Triggers publish events for all or particular CMS pages (using the ID identifier) which sends them to the `spy_cms_page_search` table. | None | `Spryker\Zed\CmsPageSearch\Communication\Plugin\Event` |
-| `CmsEventResourceQueryContainerPlugin` | Triggers publish events for all or particular CMS pages (using the ID identifier) which sends them to the `spy_cms_page_storage` table. | None | `Spryker\Zed\CmsStorage\Communication\Plugin\Event` |
-| `CmsBlockEventResourceQueryContainerPlugin` | Triggers publish events for all or particular CMS blocks (using the ID identifier) which sends them to the `spy_cms_block_storage` table. | None | `Spryker\Zed\CmsBlockStorage\Communication\Plugin\Event` |
-| `CmsSlotEventResourceBulkRepositoryPlugin` | Triggers publish events for all or particular slots (using the ID identifier) which sends them to the `spy_cms_slot_storage` table. | None | `Spryker\Zed\CmsSlotStorage\Communication\Plugin\Event` |
-| `CmsSlotBlockEventResourceBulkRepositoryPlugin` | Triggers publish events for all or particular CMS block to slot assignments (using the ID identifier) which sends them to the `spy_cms_slot_block_storage` table. | None | `Spryker\Zed\CmsSlotBlockStorage\Communication\Plugin\EventBehavior` |
-| `ContentStorageEventResourceBulkRepositoryPlugin` | Triggers publish events for all or particular content items (using the ID identifier) which sends them to `spy_content_storage` table. | None | `Spryker\Zed\ContentStorage\Communication\Plugin\Event` |
-| `CmsBlockCategoryEventResourceQueryContainerPlugin` | Triggers publish events for all or particular CMS block to category relationships (using the ID identifier) which sends them to the `spy_cms_block_category_storage` table. (*optional*) | None | `Spryker\Zed\CmsBlockCategoryStorage\Communication\Plugin\Event` |
-| `CmsBlockProductEventResourceQueryContainerPlugin`| Triggers publish events for all or particular CMS block to product relationships (using the ID identifier) which sends them to the `spy_cms_block_category_storage` table. (*optional*) | None | `Spryker\Zed\CmsBlockProductStorage\Communication\Plugin\Event`|
+| CmsPageEventResourceQueryContainerPlugin | Triggers publish events for all or particular CMS pages (using the ID identifier) which sends them to the `spy_cms_page_search` table. | None | Spryker\Zed\CmsPageSearch\Communication\Plugin\Event |
+| CmsEventResourceQueryContainerPlugin | Triggers publish events for all or particular CMS pages (using the ID identifier) which sends them to the `spy_cms_page_storage` table. | None | Spryker\Zed\CmsStorage\Communication\Plugin\Event |
+| CmsBlockEventResourceQueryContainerPlugin | Triggers publish events for all or particular CMS blocks (using the ID identifier) which sends them to the `spy_cms_block_storage` table. | None | Spryker\Zed\CmsBlockStorage\Communication\Plugin\Event |
+| CmsSlotEventResourceBulkRepositoryPlugin | Triggers publish events for all or particular slots (using the ID identifier) which sends them to the `spy_cms_slot_storage` table. | None | Spryker\Zed\CmsSlotStorage\Communication\Plugin\Event |
+| CmsSlotBlockEventResourceBulkRepositoryPlugin | Triggers publish events for all or particular CMS block to slot assignments (using the ID identifier) which sends them to the `spy_cms_slot_block_storage` table. | None | Spryker\Zed\CmsSlotBlockStorage\Communication\Plugin\EventBehavior |
+| ContentStorageEventResourceBulkRepositoryPlugin | Triggers publish events for all or particular content items (using the ID identifier) which sends them to `spy_content_storage` table. | None | Spryker\Zed\ContentStorage\Communication\Plugin\Event |
+| CmsBlockCategoryEventResourceQueryContainerPlugin | Triggers publish events for all or particular CMS block to category relationships (using the ID identifier) which sends them to the `spy_cms_block_category_storage` table. (*optional*) | None | Spryker\Zed\CmsBlockCategoryStorage\Communication\Plugin\Event |
+| CmsBlockProductEventResourceQueryContainerPlugin| Triggers publish events for all or particular CMS block to product relationships (using the ID identifier) which sends them to the `spy_cms_block_category_storage` table. (*optional*) | None | Spryker\Zed\CmsBlockProductStorage\Communication\Plugin\Event |
 
 **src/Pyz/Zed/EventBehavior/EventBehaviorDependencyProvider.php**
 
 ```php
-<?php 
+<?php
 
 namespace Pyz\Zed\EventBehavior;
 
@@ -399,7 +494,7 @@ use Spryker\Zed\CmsSlotStorage\Communication\Plugin\Event\CmsSlotEventResourceBu
 use Spryker\Zed\CmsStorage\Communication\Plugin\Event\CmsEventResourceQueryContainerPlugin;
 use Spryker\Zed\ContentStorage\Communication\Plugin\Event\ContentStorageEventResourceBulkRepositoryPlugin;
 use Spryker\Zed\EventBehavior\EventBehaviorDependencyProvider as SprykerEventBehaviorDependencyProvider;
- 
+
 class EventBehaviorDependencyProvider extends SprykerEventBehaviorDependencyProvider
 {
     /**
@@ -423,7 +518,19 @@ class EventBehaviorDependencyProvider extends SprykerEventBehaviorDependencyProv
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that all the CMS entity changes performed manually in the Back Office are exported or removed from Redis and Elasticsearch accordingly.<table><thead><tr><td>Storage Type</td><td>Target Entity</td><td>Example Expected Data Identifier</td></tr></thead><tbody><tr><td>Redis</td><td>`CmsBlock`</td><td>`cms_block:de:de_de:blck-1`</td></tr><tr><td>Redis</td><td>`CmsBlockCategory`</td><td>`cms_block_category:5`</td></tr><tr><td>Redis</td><td>`CmsBlockProduct`</td><td>`cms_block_product:93`</td></tr><tr><td>Redis</td><td>`CmsPage`</td><td>`cms_page:de:de_de:1`</td></tr><tr><td>Redis</td><td>`CmsSlot`</td><td>`cms_slot:slt-1`</td></tr><tr><td>Redis</td><td>`CmsSlotBlock`</td><td>`cms_slot_block:@productdetailpage/views/pdp/pdp.twig:slt-5`</td></tr><tr><td>Elasticsearch</td><td>`CmsPage`</td><td>`cms_page:de:de_de:6`</td></tr></tbody></table>
+
+Make sure that all the CMS entity changes performed manually in the Back Office are exported or removed from Redis and Elasticsearch accordingly.
+
+| STORAGE TYPE | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
+| --- | --- | --- |
+| Redis | CmsBlock | cms\_block:de:de\_de:blck-1 |
+| Redis | CmsBlockCategory | cms\_block\_category:5 |
+| Redis | CmsBlockProduct | cms\_block\_product:93 |
+| Redis | CmsPage | cms\_page:de:de\_de:1 |
+| Redis | CmsSlot | cms_slot:slt-1 |
+| Redis | CmsSlotBlock | cms\_slot\_block:@productdetailpage/views/pdp/pdp.twig:slt-5 |
+| Elasticsearch | CmsPage | cms\_page:de:de\_de:6 |
+
 {% endinfo_block %}
 
 **Example Expected Data Fragment: Redis, CmsBlock**
@@ -637,7 +744,9 @@ Make sure that all the CMS entity changes performed manually in the Back Office 
 ```
 
 ### 6) Import Data
+
 #### Import Cms Pages
+
 1. Prepare your pages data according to your requirements using our demo data:
 
 <details open>
@@ -655,7 +764,7 @@ cms-page--7,Placeholders Title & Content,1,1,1,/de/ruecknahmegarantie,/en/return
 ```
 </details>
 
-| Column | Is obligatory? | Data type | Data example | Data explanation |
+| COLUMN | IS REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 |template_name |yes |string |static full |Template name. |
 |is_searchable |yes |bool |1 |Flag that defines if entity is searchable. |
@@ -698,12 +807,13 @@ cms-page--7,AT
 cms-page--7,US
 ```
 
-| Column | Is obligatory? | Data type | Data example | Data explanation |
+| COLUMN | IS REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| `page_key` | mandatory | string | `page_5` | Unique page identifier. |
-| `store_name` | mandatory | string | `DE` | Unique store identifier. |
+| page_key | mandatory | string | page_5 | Unique page identifier. |
+| store_name | mandatory | string | DE | Unique store identifier. |
 
 **vendor/spryker/cms-slot-data-import/data/import/cms_block.csv**
+
 ```yaml
 block_key,block_name,template_name,template_path,active,placeholder.title.de_DE,placeholder.title.en_US,placeholder.description.de_DE,placeholder.description.en_US,placeholder.link.de_DE,placeholder.link.en_US,placeholder.content.de_DE,placeholder.content.en_US
 blck-1,Teaser for home page,Title and description block,@CmsBlock/template/title_and_description_block.twig,1,Static CMS Block,Static CMS Block,"<p class='columns'>Sed imperdiet non quam nec molestie. Integer eu ipsum non odio dignissim rutrum. Proin malesuada metus ac tempor convallis. Pellentesque finibus, urna et vestibulum egestas, metus purus porta ligula, sit amet tincidunt dui justo vel nulla. Nam sodales nisi vel augue consectetur malesuada. Nulla semper neque a nunc tristique ullamcorper. Mauris at nisi non elit fringilla commodo. Curabitur at libero sed nisl condimentum cursus eget nec ligula. Aenean nec elit ut lacus feugiat fermentum. Phasellus quis quam mi. Duis id arcu quis ipsum viverra egestas at at diam. Cras vel dui maximus, scelerisque dui ut, suscipit lectus.</p>","<p class='columns'>Ut cursus, ligula vel pretium porta, justo nulla consectetur mauris, in aliquet nisl sapien feugiat lectus. Pellentesque sit amet sagittis justo, congue fringilla lacus. Sed vel dui et nunc sodales feugiat non in erat. Aliquam nunc mi, dignissim id tempor bibendum, sodales a tellus. Aliquam vitae efficitur turpis, quis consequat neque. Suspendisse interdum semper mi. Cras tortor justo, pretium at convallis a, lobortis non lorem. Duis ullamcorper sagittis efficitur. In erat libero, suscipit ac metus in, varius laoreet neque. Morbi ligula arcu, rutrum facilisis varius non, viverra id dui. Curabitur accumsan ultricies mauris eget vestibulum. Mauris pellentesque molestie nibh eu finibus. Fusce ut gravida massa, et vehicula arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed convallis erat ut mi pretium dapibus. Ut orci leo, scelerisque vitae velit a, ultricies porta ligula.</p>",,,,
@@ -718,7 +828,7 @@ blck-9,CMS block for the main navigation mobile,Navigation block,@CmsBlock/templ
 blck-10,CMS block for the footer navigation,Navigation block,@CmsBlock/template/navigation_block.twig,1,,,"<div class=""grid""><div class=""col col--sm-12 col--md-6 col--lg-6 spacing-bottom"">{% raw %}{{{% endraw %} content_navigation('navigation-footer', 'list') {% raw %}}}{% endraw %}</div><ul class=""col col--sm-12 col--md-6 col--lg-3""><li><h5>{% raw %}{{{% endraw %} 'global.get_in_touch' | trans {% raw %}}}{% endraw %}</h5></li><li>+49 (0)30 2084983 50</li><li><a href=""mailto:info@spryker.com"">info@spryker.com</a></li></ul><div class=""col col--lg-3 is-hidden-sm-md""><h5>{% raw %}{{{% endraw %} 'global.social' | trans {% raw %}}}{% endraw %}</h5>{% raw %}{{{% endraw %} content_navigation('navigation-social-links', 'list-inline') {% raw %}}}{% endraw %}</div><div class=""is-hidden-lg-xl""><h5>{% raw %}{{{% endraw %} 'global.social' | trans {% raw %}}}{% endraw %}</h5>{% raw %}{{{% endraw %} content_navigation('navigation-social-links', 'list-inline') {% raw %}}}{% endraw %}</div></div>","<div class=""grid""><div class=""col col--sm-12 col--md-6 col--lg-6 spacing-bottom"">{% raw %}{{{% endraw %} content_navigation('navigation-footer', 'list') {% raw %}}}{% endraw %}</div><ul class=""col col--sm-12 col--md-6 col--lg-3""><li><h5>{% raw %}{{{% endraw %} 'global.get_in_touch' | trans {% raw %}}}{% endraw %}</h5></li><li>+49 (0)30 2084983 50</li><li><a href=""mailto:info@spryker.com"">info@spryker.com</a></li></ul><div class=""col col--lg-3 is-hidden-sm-md""><h5>{% raw %}{{{% endraw %} 'global.social' | trans {% raw %}}}{% endraw %}</h5>{% raw %}{{{% endraw %} content_navigation('navigation-social-links', 'list-inline') {% raw %}}}{% endraw %}</div><div class=""is-hidden-lg-xl""><h5>{% raw %}{{{% endraw %} 'global.social' | trans {% raw %}}}{% endraw %}</h5>{% raw %}{{{% endraw %} content_navigation('navigation-social-links', 'list-inline') {% raw %}}}{% endraw %}</div></div>",,,,
 ```
 
-| Column | Is obligatory? | Data type | Data example | Data explanation |
+| COLUMN | IS REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 |block_key |yes |string |blck-31 |Block key. |
 | block_name| yes|string |10% Discount |Block name. |
@@ -731,6 +841,7 @@ blck-10,CMS block for the footer navigation,Navigation block,@CmsBlock/template/
 | placeholder.content.*(de_DE,en_US)|no |string |Lorem ipsum |Page content. |
 
 **vendor/spryker/cms-slot-data-import/data/import/cms_block_store.csv**
+
 ```yaml
 block_key,store_name
 blck-2,DE
@@ -773,7 +884,8 @@ blck-31,DE
 blck-31,AT
 blck-31,US
 ```
-| Column | Is obligatory? | Data type | Data example | Data explanation |
+
+| COLUMN | IS REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 |block_key|yes|string|blck-31|Block key.|
 |store_name|yes|string|DE|Store name.|
@@ -790,11 +902,11 @@ Product,"The layout of Slots in the Product Pages, always below Header including
 CMS Page: Placeholders Title and Content + Slot,A CMS Page that includes a Slot as well.,@Cms/templates/placeholders-title-content-slot/placeholders-title-content-slot.twig
 ```
 
-| Column | Is obligatory? | Data type | Data example | Data explanation |
+| COLUMN | IS REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| `template_path` | yes | string | `@HomePage/views/home/home.twig` | Unique path to the corresponding Twig file. |
-| `name` | yes | string | Home Page | Template name used in the Back Office. |
-| `description` | no | string | text | Template description used in the Back Office. |
+| template_path | yes | string | @HomePage/views/home/home.twig | Unique path to the corresponding Twig file. |
+| name | yes | string | Home Page | Template name used in the Back Office. |
+| description | no | string | text | Template description used in the Back Office. |
 
 **vendor/spryker/cms-slot-data-import/data/import/cms_slot.csv**
 
@@ -811,14 +923,14 @@ slt-footer,Footer,"In the store Footer section, On desktop, bottom of the page. 
 slt-mobile-header,Header mobile view,"In the store Header section. On mobile, under the hamburger menu.",SprykerCmsSlotBlock,@ShopUi/templates/page-layout-main/page-layout-main.twig,1
 ```
 
-| Column | Is obligatory? | Data type | Data example | Data explanation |
+| COLUMN | IS REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| `template_path` | mandatory | string | `@HomePage/views/home/home.twig` | Path to the Twig template to which slot is assigned. |
-| `slot_key` | mandatory | string | `slt-4` |Unique slot identifier. |
-| `content_provider` | mandatory | string | `SprykerCmsSlotBlock` | Unique content provider identifier. |
-| `name` | mandatory | string | `Home Page Main` | Slot name used in the Back Office. |
-| `description` | no | string | `text` | Slot description used in the Back Office. |
-| `is_active` | mandatory | bool | 1 | Flag that defines if slot is active. |
+| template_path | mandatory | string | @HomePage/views/home/home.twig | Path to the Twig template to which slot is assigned. |
+| slot_key | mandatory | string | slt-4 |Unique slot identifier. |
+| content_provider | mandatory | string | SprykerCmsSlotBlock | Unique content provider identifier. |
+| name | mandatory | string | Home Page Main | Slot name used in the Back Office. |
+| description | no | string | text | Slot description used in the Back Office. |
+| is_active | mandatory | bool | 1 | Flag that defines if slot is active. |
 
 **vendor/spryker/cms-slot-block-data-import/data/import/cms_slot_block.csv**
 
@@ -838,13 +950,13 @@ slt-footer,blck-12,3,@ShopUi/templates/page-layout-main/page-layout-main.twig,,,
 slt-mobile-header,blck-9,1,@ShopUi/templates/page-layout-main/page-layout-main.twig,,,,,,,
 ```
 
-| Column | Is obligatory? | Data type | Data example | Data explanation |
+| COLUMN | IS REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| `template_path` | mandatory | string | `@HomePage/views/home/home.twig` | Path to the Twig template to which this CMS block to slot assignment belongs. |
-| `slot_key` | mandatory | string | `slt-4` | Unique slot identifier. |
-| `block_key` | mandatory | string | `blck-2` | Unique CMS block identifier. |
-| `position` | mandatory | integer | 1 | CMS Block position in the slot. |
-| `conditions` | no | mixed |  | Slot-CMS block conditions data. |
+| template_path | mandatory | string | @HomePage/views/home/home.twig | Path to the Twig template to which this CMS block to slot assignment belongs. |
+| slot_key | mandatory | string | slt-4 | Unique slot identifier. |
+| block_key | mandatory | string | blck-2 | Unique CMS block identifier. |
+| position | mandatory | integer | 1 | CMS Block position in the slot. |
+| conditions | no | mixed |  | Slot-CMS block conditions data. |
 
 2. Register the following plugin to enable data import:
 
@@ -852,15 +964,15 @@ slt-mobile-header,blck-9,1,@ShopUi/templates/page-layout-main/page-layout-main.t
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\DataImport;
- 
+
 use Spryker\Zed\CmsPageDataImport\Communication\Plugin\CmsPageDataImportPlugin;
 use Spryker\Zed\CmsPageDataImport\Communication\Plugin\CmsPageStoreDataImportPlugin;
 use Spryker\Zed\CmsSlotBlockDataImport\Communication\Plugin\CmsSlotBlockDataImportPlugin;
 use Spryker\Zed\CmsSlotDataImport\Communication\Plugin\CmsSlotDataImportPlugin;
 use Spryker\Zed\CmsSlotDataImport\Communication\Plugin\CmsSlotTemplateDataImportPlugin;
- 
+
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
     /**
@@ -906,34 +1018,35 @@ Make sure that, in the database, the configured data has been added to the follo
 
 {% endinfo_block %}
 
-### 7) Set up Behavior
-#### Set up Additional Functionality
+### 7) Set up behavior
+
+#### Set up additional functionality
 
 Enable the following behaviors by registering the plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `CmsPageParameterMapExpanderPlugin` | Expands collector data with the parameter map of CMS content page. | None | `Spryker\Zed\CmsContentWidget\Communication\Plugin\CmsPageDataExpander` |
-| `CmsBlockStorageStorageParameterMapExpanderPlugin` | Expands storage data with the parameter map of CMS content widget. | None | `Spryker\Zed\CmsContentWidget\Communication\Plugin\CmsBlockStorage` |
-| `CmsPageTableExpanderPlugin` | **Preview** button in the **List of CMS pages**. | None | `Spryker\Zed\CmsGui\Communication\Plugin` |
-| `CreateGlossaryExpanderPlugin` | Adds a **Preview** button to the *create a glossary* page. | None | `Spryker\Zed\CmsGui\Communication\Plugin` |
-|`CmsBlockTemplateTwigLoaderPlugin`|Loads the CMS block templates for being rendered using the CMS block template paths on Zed level.|None|`Spryker\Zed\CmsBlock\Communication\Plugin\Twig`|
-|`CmsBlockTwigExtensionPlugin`|Imports the Twig extension provided in the CMS block module.|None|`Spryker\Zed\CmsBlock\Communication\Plugin\Twig`|
+| CmsPageParameterMapExpanderPlugin | Expands collector data with the parameter map of CMS content page. | None | Spryker\Zed\CmsContentWidget\Communication\Plugin\CmsPageDataExpander |
+| CmsBlockStorageStorageParameterMapExpanderPlugin | Expands storage data with the parameter map of CMS content widget. | None | Spryker\Zed\CmsContentWidget\Communication\Plugin\CmsBlockStorage |
+| CmsPageTableExpanderPlugin | **Preview** button in the **List of CMS pages**. | None | Spryker\Zed\CmsGui\Communication\Plugin |
+| CreateGlossaryExpanderPlugin | Adds a **Preview** button to the *create a glossary* page. | None | Spryker\Zed\CmsGui\Communication\Plugin |
+|CmsBlockTemplateTwigLoaderPlugin|Loads the CMS block templates for being rendered using the CMS block template paths on Zed level.|None|Spryker\Zed\CmsBlock\Communication\Plugin\Twig|
+|CmsBlockTwigExtensionPlugin|Imports the Twig extension provided in the CMS block module.|None|Spryker\Zed\CmsBlock\Communication\Plugin\Twig|
 
 **Pyz\Zed\Cms\CmsDependencyProvider**
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Cms;
- 
+
 use Spryker\Zed\Cms\CmsDependencyProvider as SprykerCmsDependencyProvider;
 use Spryker\Zed\CmsContentWidget\Communication\Plugin\CmsPageDataExpander\CmsPageParameterMapExpanderPlugin;
- 
+
 class CmsDependencyProvider extends SprykerCmsDependencyProvider
 {
-  
- 
+
+
     /**
      * @return \Spryker\Zed\CmsExtension\Dependency\Plugin\CmsPageDataExpanderPluginInterface[]
      */
@@ -950,12 +1063,12 @@ class CmsDependencyProvider extends SprykerCmsDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\CmsBlockStorage;
- 
+
 use Spryker\Zed\CmsBlockStorage\CmsBlockStorageDependencyProvider as SprykerCmsBlockStorageDependencyProvider;
 use Spryker\Zed\CmsContentWidget\Communication\Plugin\CmsBlockStorage\CmsBlockStorageStorageParameterMapExpanderPlugin;
- 
+
 class CmsBlockStorageDependencyProvider extends SprykerCmsBlockStorageDependencyProvider
 {
     /**
@@ -974,14 +1087,14 @@ class CmsBlockStorageDependencyProvider extends SprykerCmsBlockStorageDependency
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\CmsGui;
- 
+
 use Spryker\Zed\CmsGui\CmsGuiDependencyProvider as SprykerCmsGuiDependencyProvider;
 use Spryker\Zed\CmsGui\Communication\Plugin\CmsPageTableExpanderPlugin;
 use Spryker\Zed\CmsGui\Communication\Plugin\CreateGlossaryExpanderPlugin;
- 
- 
+
+
 class CmsGuiDependencyProvider extends SprykerCmsGuiDependencyProvider
 {
     /**
@@ -993,7 +1106,7 @@ class CmsGuiDependencyProvider extends SprykerCmsGuiDependencyProvider
             new CmsPageTableExpanderPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\CmsGui\Dependency\Plugin\CreateGlossaryExpanderPluginInterface[]
      */
@@ -1010,14 +1123,14 @@ class CmsGuiDependencyProvider extends SprykerCmsGuiDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Twig;
- 
+
 use Spryker\Zed\CmsBlock\Communication\Plugin\Twig\CmsBlockTemplateTwigLoaderPlugin;
 use Spryker\Zed\CmsBlock\Communication\Plugin\Twig\CmsBlockTwigExtensionPlugin;
 ...
 use Spryker\Zed\Twig\TwigDependencyProvider as SprykerTwigDependencyProvider;
- 
+
 class TwigDependencyProvider extends SprykerTwigDependencyProvider
 {
     /**
@@ -1031,7 +1144,7 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
             ...
         ];
     }
- 
+
     /**
      * @return \Spryker\Shared\TwigExtension\Dependency\Plugin\TwigLoaderPluginInterface[]
      */
@@ -1058,19 +1171,33 @@ Make sure that:
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
+
 ### 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/cms:"202009.0" --update-with-dependencies
+composer require spryker-feature/cms:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following modules have been installed:<table><thead><tr><td>Module</td><td>Expected Directory</td></tr></thead><tbody><tr><td>`CmsBlockWidget`</td><td>`vendor/spryker-shop/cms-block-widget`</td></tr><tr><td>`CmsPage`</td><td>`vendor/spryker-shop/cms-page`</td></tr><tr><td>`CmsSearchPage`</td><td>`vendor/spryker-shop/cms-search-page`</td></tr><tr><td>`CmsSlotBlockWidget`</td><td>`vendor/spryker-shop/cms-slot-block-widget`</td></tr><tr><td>`ShopCmsSlot`</td><td>`vendor/spryker-shop/shop-cms-slot`</td></tr><tr><td>`ShopCmsSlotExtension`</td><td>`vendor/spryker-shop/shop-cms-slot-extension`</td></tr></tbody></table>
+
+Make sure that the following modules have been installed:
+
+| MODULE | EXPECTED DIRECTORY |
+| --- | --- |
+| CmsBlockWidget | vendor/spryker-shop/cms-block-widget |
+| CmsPage | vendor/spryker-shop/cms-page |
+| CmsSearchPage | vendor/spryker-shop/cms-search-page |
+| CmsSlotBlockWidget | vendor/spryker-shop/cms-slot-block-widget |
+| ShopCmsSlot | vendor/spryker-shop/shop-cms-slot |
+| ShopCmsSlotExtension | vendor/spryker-shop/shop-cms-slot-extension |
+
 {% endinfo_block %}
 
-### 2) Add Translations
+### 2) Add translations
+
 1. Append glossary according to your configuration:
 
 **src/data/import/glossary.csv**
@@ -1100,20 +1227,21 @@ Make sure that in the configured data has been added to the `spy_glossary` table
 
 {% endinfo_block %}
 
-### 3) Enable Controllers
+### 3) Enable controllers
+
 Register route provider(s) in the Yves application:
 
 **Pyz\Yves\Router\RouterDependencyProvider**
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\ShopApplication;
- 
+
 use Spryker\Yves\Router\RouterDependencyProvider as SprykerRouterDependencyProvider;
 use SprykerShop\Yves\CmsPage\Plugin\Router\CmsPageRouteProviderPlugin;
 use SprykerShop\Yves\CmsSearchPage\Plugin\Router\CmsSearchPageRouteProviderPlugin;
- 
+
 class RouterDependencyProvider extends SprykerRouterDependencyProvider
 {
     /**
@@ -1129,10 +1257,10 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 }
 ```
 
-| Provider Plugin | Namespace | Enabled Controller | Controller specification | Prerequisites |
+| PROVIDER PLUGIN | NAMESPACE | ENABLED CONTROLLER | CONTROLLER SPECIFICATION | PREREQUISITES |
 | --- | --- | --- | --- | --- |
-| `CmsSearchPageRouteProviderPlugin` | `SprykerShop\Yves\CmsSearchPage\Plugin\Router` | `CmsSearchController` | Allows searching for CMS pages by content and CMS page name. |  |
-| `CmsPageRouteProviderPlugin` | `SprykerShop\Yves\CmsPage\Plugin\Router` | `PreviewController` | Allows previewing unpublished CMS pages in the Back Office. | <ol><li>Config file contains `$config[CmsGuiConstants::CMS_PAGE_PREVIEW_URI] = '/en/cms/preview/%d'; .`</li><li>The `spryker/customer-user-connector` package is installed.</li><li>The `spryker/customer-user-connector-gui` package is installed.</li><li>The `\Spryker\Zed\CustomerUserConnectorGui\Communication\Plugin\UserTableActionExpanderPlugin` plugin is enabled in `\Pyz\Zed\User\UserDependencyProvider::getUserTableActionExpanderPlugins()`.</li><li>You assigned a customer to your Back Office user.</li></ol> |
+| CmsSearchPageRouteProviderPlugin | SprykerShop\Yves\CmsSearchPage\Plugin\Router | CmsSearchController | Allows searching for CMS pages by content and CMS page name. |  |
+| CmsPageRouteProviderPlugin | SprykerShop\Yves\CmsPage\Plugin\Router | PreviewController | Allows previewing unpublished CMS pages in the Back Office. | <ol><li>Config file contains `$config[CmsGuiConstants::CMS_PAGE_PREVIEW_URI] = '/en/cms/preview/%d'; .`</li><li>The `spryker/customer-user-connector` package is installed.</li><li>The `spryker/customer-user-connector-gui` package is installed.</li><li>The `\Spryker\Zed\CustomerUserConnectorGui\Communication\Plugin\UserTableActionExpanderPlugin` plugin is enabled in `\Pyz\Zed\User\UserDependencyProvider::getUserTableActionExpanderPlugins()`.</li><li>You assigned a customer to your Back Office user.</li></ol> |
 
 {% info_block warningBox "Verification" %}
 
@@ -1141,29 +1269,30 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 {% endinfo_block %}
 
-### 4) Set up Widgets
+### 4) Set up widgets
+
 Enable Twig plugins:
 
-| Plugin | Specification | Namespace |
+| PLUGIN | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
-| `CmsBlockTwigPlugin` | Provides the list of plugins for CMS block widget. See the [table](#plugin-table). | `SprykerShop\Yves\CmsBlockWidget\Plugin` |
-| `CmsTwigPlugin` | Provides the spyCms function. | `SprykerShop\Yves\CmsPage\Plugin\Twig` |
-| `CmsContentWidgetTwigPlugin` | Provides the list of plugins for enabling content widgets. You can use them inside CMS blocks and page content. However, we recommend using the [Content Items Widgets feature](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html) instead. | `Spryker\Yves\CmsContentWidget\Plugin\Twig` |
-| `ShopCmsSlotTwigPlugin` | Provides the `cms_slot` Twig tag. | `SprykerShop\Yves\ShopCmsSlot\Plugin\Twig` |
+| CmsBlockTwigPlugin | Provides the list of plugins for CMS block widget. See the [table](#plugin-table). | SprykerShop\Yves\CmsBlockWidget\Plugin |
+| CmsTwigPlugin | Provides the `spyCms` function. | SprykerShop\Yves\CmsPage\Plugin\Twig |
+| CmsContentWidgetTwigPlugin | Provides the list of plugins for enabling content widgets. You can use them inside CMS blocks and page content. However, we recommend using the [Content Items Widgets feature](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html) instead. | Spryker\Yves\CmsContentWidget\Plugin\Twig |
+| ShopCmsSlotTwigPlugin | Provides the `cms_slot` Twig tag. | SprykerShop\Yves\ShopCmsSlot\Plugin\Twig |
 
 **Pyz\Yves\Twig\TwigDependencyProvider**
 
 ```php
 <?php  
- 
+
 namespace Pyz\Yves\Twig;
- 
+
 use Spryker\Yves\CmsContentWidget\Plugin\Twig\CmsContentWidgetTwigPlugin;
 use Spryker\Yves\Twig\TwigDependencyProvider as SprykerTwigDependencyProvider;
 use SprykerShop\Yves\CmsBlockWidget\Plugin\Twig\CmsBlockTwigPlugin;
 use SprykerShop\Yves\CmsPage\Plugin\Twig\CmsTwigPlugin;
 use SprykerShop\Yves\ShopCmsSlot\Plugin\Twig\ShopCmsSlotTwigPlugin;
- 
+
 class TwigDependencyProvider extends SprykerTwigDependencyProvider
 {
     /**
@@ -1183,22 +1312,22 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 
 <a name="plugin-table"></a>
 
-| Plugin | Specification | Namespace |
+| PLUGIN | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
-| `CmsBlockWidgetTwigPlugin` | Provides the `spyCmsBlock` twig function for rendering block. |`SprykerShop\Yves\CmsBlockWidget\Plugin\Twig` |
-| `CmsBlockPlaceholderTwigPlugin` | Provides the `spyCmsBlockPlaceholder` Twig function for placeholder. | `Spryker\Yves\CmsBlock\Plugin\Twig` |
+| CmsBlockWidgetTwigPlugin | Provides the `spyCmsBlock` twig function for rendering block. |SprykerShop\Yves\CmsBlockWidget\Plugin\Twig |
+| CmsBlockPlaceholderTwigPlugin | Provides the `spyCmsBlockPlaceholder` Twig function for placeholder. | Spryker\Yves\CmsBlock\Plugin\Twig |
 
 **Pyz\Yves\CmsBlockWidget\CmsBlockWidgetDependencyProvider**
 
 ```php
 <?php  
- 
+
 namespace Pyz\Yves\CmsBlockWidget;
- 
+
 use Spryker\Yves\CmsBlock\Plugin\Twig\CmsBlockPlaceholderTwigPlugin;
 use SprykerShop\Yves\CmsBlockWidget\CmsBlockWidgetDependencyProvider as SprykerCmsBlockWidgetDependencyProvider;
 use SprykerShop\Yves\CmsBlockWidget\Plugin\Twig\CmsBlockWidgetTwigPlugin;
- 
+
 class CmsBlockWidgetDependencyProvider extends SprykerCmsBlockWidgetDependencyProvider
 {
     /**
@@ -1221,33 +1350,34 @@ class CmsBlockWidgetDependencyProvider extends SprykerCmsBlockWidgetDependencyPr
 
 {% endinfo_block %}
 
-### 5) Set up Behavior
+### 5) Set up behavior
+
 Set up Search and Storage clients:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `PaginatedCmsPageQueryExpanderPlugin` | Allows fetching paginated search results of CMS pages. | None | `Spryker\Client\CmsPageSearch\Plugin\Elasticsearch\QueryExpander` |
-| `SortedCmsPageQueryExpanderPlugin` | Allows sorting CMS pages in search results. Search suggestion options are provided by the sort config builder of CMS pages. | None | `Spryker\Client\CmsPageSearch\Plugin\Elasticsearch\QueryExpander` |
-| `PaginatedCmsPageResultFormatterPlugin` | Adds pagination information to search results. | None | `Spryker\Client\CmsPageSearch\Plugin\Elasticsearch\ResultFormatter` |
-| `RawCmsPageSearchResultFormatterPlugin` | Raw search result formatter. | None | `Spryker\Client\CmsPageSearch\Plugin\Elasticsearch\ResultFormatter` |
-| `SortedCmsPageSearchResultFormatterPlugin` | Allows sorting results.  | None | `Spryker\Client\CmsPageSearch\Plugin\Elasticsearch\ResultFormatter` |
-| `UrlStorageCmsPageMapperPlugin` | Allows getting a page resource from Redis. | None | `Spryker\Client\CmsStorage\Plugin` |
+| PaginatedCmsPageQueryExpanderPlugin | Allows fetching paginated search results of CMS pages. | None | Spryker\Client\CmsPageSearch\Plugin\Elasticsearch\QueryExpander |
+| SortedCmsPageQueryExpanderPlugin | Allows sorting CMS pages in search results. Search suggestion options are provided by the sort config builder of CMS pages. | None | Spryker\Client\CmsPageSearch\Plugin\Elasticsearch\QueryExpander |
+| PaginatedCmsPageResultFormatterPlugin | Adds pagination information to search results. | None | Spryker\Client\CmsPageSearch\Plugin\Elasticsearch\ResultFormatter |
+| RawCmsPageSearchResultFormatterPlugin | Raw search result formatter. | None | Spryker\Client\CmsPageSearch\Plugin\Elasticsearch\ResultFormatter |
+| SortedCmsPageSearchResultFormatterPlugin | Allows sorting results.  | None | Spryker\Client\CmsPageSearch\Plugin\Elasticsearch\ResultFormatter |
+| UrlStorageCmsPageMapperPlugin | Allows getting a page resource from Redis. | None | Spryker\Client\CmsStorage\Plugin |
 
 **Pyz\Client\CmsPageSearch\CmsPageSearchDependencyProvider**
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\CmsPageSearch;
- 
+
 use Spryker\Client\CmsPageSearch\CmsPageSearchDependencyProvider as SprykerCmsPageSearchDependencyProvider;
 use Spryker\Client\CmsPageSearch\Plugin\Elasticsearch\QueryExpander\PaginatedCmsPageQueryExpanderPlugin;
 use Spryker\Client\CmsPageSearch\Plugin\Elasticsearch\QueryExpander\SortedCmsPageQueryExpanderPlugin;
 use Spryker\Client\CmsPageSearch\Plugin\Elasticsearch\ResultFormatter\PaginatedCmsPageResultFormatterPlugin;
 use Spryker\Client\CmsPageSearch\Plugin\Elasticsearch\ResultFormatter\RawCmsPageSearchResultFormatterPlugin;
 use Spryker\Client\CmsPageSearch\Plugin\Elasticsearch\ResultFormatter\SortedCmsPageSearchResultFormatterPlugin;
- 
- 
+
+
 class CmsPageSearchDependencyProvider extends SprykerCmsPageSearchDependencyProvider
 {
     /**
@@ -1260,7 +1390,7 @@ class CmsPageSearchDependencyProvider extends SprykerCmsPageSearchDependencyProv
             new PaginatedCmsPageQueryExpanderPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Client\Search\Dependency\Plugin\ResultFormatterPluginInterface[]
      */
@@ -1281,20 +1411,20 @@ Verify the changes by searching for a CMS page. On the *Search* page you should 
 
 {% endinfo_block %}
 
-| Router | Specification | Namespace |
+| ROUTER | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
-| `PageResourceCreatorPlugin` | When a CMS page is opened in Storefront, fetches its data from Storage and inserts it into the controller. | `SprykerShop\Yves\CmsPage\Plugin\StorageRouter` |
+| PageResourceCreatorPlugin | When a CMS page is opened in Storefront, fetches its data from Storage and inserts it into the controller. | SprykerShop\Yves\CmsPage\Plugin\StorageRouter |
 
 **Pyz\Yves\ShopRouter\ShopRouterDependencyProvider**
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\ShopRouter;
- 
+
 use SprykerShop\Yves\CmsPage\Plugin\PageResourceCreatorPlugin;
 use SprykerShop\Yves\ShopRouter\ShopRouterDependencyProvider as SprykerShopRouterDependencyProvider;
- 
+
 class ShopRouterDependencyProvider extends SprykerShopRouterDependencyProvider
 {
     /**
@@ -1315,20 +1445,20 @@ Verify the changes by opening an existing CMS page.
 
 {% endinfo_block %}
 
-| Plugin | Specification | Namespace |
+| PLUGIN | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
-| `FullTextSearchCmsPageTabPlugin` | Shows the **Page** tab in the search page. | `SprykerShop\Yves\CmsSearchPage\Plugin` |
+| FullTextSearchCmsPageTabPlugin | Shows the **Page** tab in the search page. | SprykerShop\Yves\CmsSearchPage\Plugin |
 
 **Pyz\Yves\TabsWidget\TabsWidgetDependencyProvider**
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\TabsWidget;
- 
+
 use SprykerShop\Yves\CmsSearchPage\Plugin\FullTextSearchCmsPageTabPlugin;
 use SprykerShop\Yves\TabsWidget\TabsWidgetDependencyProvider as SprykerTabsWidgetDependencyProvider;
- 
+
 class TabsWidgetDependencyProvider extends SprykerTabsWidgetDependencyProvider
 {
     /**
@@ -1349,21 +1479,21 @@ Verify the changes by searching for an existing page. You should see the **Page*
 
 {% endinfo_block %}
 
-| Plugin | Specification | Namespace |
+| PLUGIN | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
-| `CmsSlotBlockWidgetCmsSlotContentPlugin` | Provides content for slot widgets. | `SprykerShop\Yves\CmsSlotBlockWidget\Plugin\ShopCmsSlot` |
+| CmsSlotBlockWidgetCmsSlotContentPlugin | Provides content for slot widgets. | SprykerShop\Yves\CmsSlotBlockWidget\Plugin\ShopCmsSlot |
 
 **Pyz\Yves\ShopCmsSlot\ShopCmsSlotDependencyProvider**
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\ShopCmsSlot;
- 
+
 use Spryker\Shared\CmsSlotBlock\CmsSlotBlockConfig;
 use SprykerShop\Yves\CmsSlotBlockWidget\Plugin\ShopCmsSlot\CmsSlotBlockWidgetCmsSlotContentPlugin;
 use SprykerShop\Yves\ShopCmsSlot\ShopCmsSlotDependencyProvider as SprykerShopShopCmsSlotDependencyProvider;
- 
+
 class ShopCmsSlotDependencyProvider extends SprykerShopShopCmsSlotDependencyProvider
 {
     /**
@@ -1384,13 +1514,14 @@ Verify the changes by adding a slot widget to a page. See [Templates & Slots Fea
 
 {% endinfo_block %}
 
-### Set up SprykerCmsBlocks Content Provider Behavior
+### Set up SprykerCmsBlocks content provider behavior
 
 {% info_block infoBox %}
 Follow the further steps only if you are going to use the [visibility conidtions](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html#visibility-conditions) functionality with `SprykerCmsBlocks` content provider for slots.
 {% endinfo_block %}
 
 #### 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
 
 ```bash
@@ -1398,24 +1529,37 @@ composer require spryker/cms-slot-block-product-category-connector:"^1.0.0" sspr
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following modules have been installed:<table><thead><tr><td>Module</td><td>Expected Directory</td></tr></thead><tbody><tr><td>`CmsSlotBlock`</td><td>`vendor/spryker/cms-slot-block`</td></tr><tr><td>`CmsSlotBlockProductCategoryConnector`</td><td>`vendor/spryker/cms-slot-block-product-category-connector`</td></tr><tr><td>`CmsSlotBlockProductCategoryGui`</td><td>`vendor/spryker/cms-slot-block-product-category-gui`</td></tr><tr><td>`CmsSlotBlockCategoryConnector`</td><td>`vendor/spryker/cms-slot-block-category-connector`</td></tr><tr><td>`CmsSlotBlockCategoryGui`</td><td>`vendor/spryker/cms-slot-block-category-gui`</td></tr><tr><td>`CmsSlotBlockCmsConnector`</td><td>`vendor/spryker/cms-slot-block-cms-connector`</td></tr><tr><td>`CmsSlotBlockCmsGui`</td><td>`vendor/spryker/cms-slot-block-cms-gui`</td></tr></tbody></table>
+
+Make sure that the following modules have been installed:
+
+| MODULE | EXPECTED DIRECTORY |
+| --- | --- |
+| CmsSlotBlock | vendor/spryker/cms-slot-block |
+| CmsSlotBlockProductCategoryConnector | vendor/spryker/cms-slot-block-product-category-connector |
+| CmsSlotBlockProductCategoryGui | vendor/spryker/cms-slot-block-product-category-gui |
+| CmsSlotBlockCategoryConnector | vendor/spryker/cms-slot-block-category-connector |
+| CmsSlotBlockCategoryGui | vendor/spryker/cms-slot-block-category-gui |
+| CmsSlotBlockCmsConnector | vendor/spryker/cms-slot-block-cms-connector |
+| CmsSlotBlockCmsGui | vendor/spryker/cms-slot-block-cms-gui |
+
 {% endinfo_block %}
 
-#### 2) Set up Configuration
+#### 2) Set up configuration
+
 Add the relation of CMS slot template to condition key:
 
 **Pyz\Zed\CmsSlotBlock\CmsSlotBlockConfig**
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\CmsSlotBlock;
- 
+
 use Spryker\Shared\CmsSlotBlockCategoryConnector\CmsSlotBlockCategoryConnectorConfig;
 use Spryker\Shared\CmsSlotBlockCmsConnector\CmsSlotBlockCmsConnectorConfig;
 use Spryker\Shared\CmsSlotBlockProductCategoryConnector\CmsSlotBlockProductCategoryConnectorConfig;
 use Spryker\Zed\CmsSlotBlock\CmsSlotBlockConfig as SprykerCmsSlotBlockConfig;
- 
+
 class CmsSlotBlockConfig extends SprykerCmsSlotBlockConfig
 {
     /**
@@ -1439,13 +1583,14 @@ class CmsSlotBlockConfig extends SprykerCmsSlotBlockConfig
 ```
 
 #### 3) Enable plugins
+
 1. Prepare the Back Office form plugins:
 
-| Plugin | Specification | Namespace |
+| PLUGIN | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
-| `ProductCategorySlotBlockConditionFormPlugin` | Extends `CmsSlotBlockForm` with a product category condition form. | `Spryker\Zed\CmsSlotBlockProductCategoryGui\Communication\Plugin` |
-| `CategorySlotBlockConditionFormPlugin` | Extends `CmsSlotBlockForm` with a category condition form. | `Spryker\Zed\CmsSlotBlockCategoryGui\Communication\Plugin` |
-| `CmsSlotBlockConditionFormPlugin` | Extends `CmsSlotBlockForm` by with a CMS condition form. | `Spryker\Zed\CmsSlotBlockCmsGui\Communication\Plugin` |
+| ProductCategorySlotBlockConditionFormPlugin | Extends `CmsSlotBlockForm` with a product category condition form. | Spryker\Zed\CmsSlotBlockProductCategoryGui\Communication\Plugin |
+| CategorySlotBlockConditionFormPlugin | Extends `CmsSlotBlockForm` with a category condition form. | Spryker\Zed\CmsSlotBlockCategoryGui\Communication\Plugin |
+| CmsSlotBlockConditionFormPlugin | Extends `CmsSlotBlockForm` by with a CMS condition form. | Spryker\Zed\CmsSlotBlockCmsGui\Communication\Plugin |
 
 **Pyz\Zed\CmsSlotBlockGui\CmsSlotBlockGuiDependencyProvider**
 
@@ -1490,24 +1635,24 @@ class CmsSlotBlockGuiDependencyProvider extends SprykerCmsSlotBlockGuiDependency
 
 2. Add a visibility resolver plugin to the `CmsSlotBlock` client:
 
-| Plugin | Specification | Namespace |
+| PLUGIN | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
-| `ProductCategoryCmsSlotBlockConditionResolverPlugin` | Provides visibility resolver for products and product categories. | `Spryker\Client\CmsSlotBlockProductCategoryConnector\Plugin\CmsSlotBlock` |
-| `CategoryCmsSlotBlockConditionResolverPlugin` | Provides a visibility resolver for categories. | `Spryker\Client\CmsSlotBlockCategoryConnector\Plugin\CmsSlotBlock` |
-| `CmsPageCmsSlotBlockConditionResolverPlugin` | Provides a visibility resolver for CMS pages. | `Spryker\Client\CmsSlotBlockCmsConnector\Plugin\CmsSlotBlock` |
+| ProductCategoryCmsSlotBlockConditionResolverPlugin | Provides visibility resolver for products and product categories. | Spryker\Client\CmsSlotBlockProductCategoryConnector\Plugin\CmsSlotBlock |
+| CategoryCmsSlotBlockConditionResolverPlugin | Provides a visibility resolver for categories. | Spryker\Client\CmsSlotBlockCategoryConnector\Plugin\CmsSlotBlock |
+| CmsPageCmsSlotBlockConditionResolverPlugin | Provides a visibility resolver for CMS pages. | Spryker\Client\CmsSlotBlockCmsConnector\Plugin\CmsSlotBlock |
 
 **Pyz\Client\CmsSlotBlock\CmsSlotBlockDependencyProvider**
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\CmsSlotBlock;
- 
+
 use Spryker\Client\CmsSlotBlock\CmsSlotBlockDependencyProvider as SprykerCmsSlotBlockDependencyProvider;
 use Spryker\Client\CmsSlotBlockCategoryConnector\Plugin\CmsSlotBlock\CategoryCmsSlotBlockConditionResolverPlugin;
 use Spryker\Client\CmsSlotBlockCmsConnector\Plugin\CmsSlotBlock\CmsPageCmsSlotBlockConditionResolverPlugin;
 use Spryker\Client\CmsSlotBlockProductCategoryConnector\Plugin\CmsSlotBlock\ProductCategoryCmsSlotBlockConditionResolverPlugin;
- 
+
 class CmsSlotBlockDependencyProvider extends SprykerCmsSlotBlockDependencyProvider
 {
     /**

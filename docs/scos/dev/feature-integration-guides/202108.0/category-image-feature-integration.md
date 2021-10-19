@@ -123,7 +123,8 @@ Make sure that the following changes have been applied by checking your database
 
 {% endinfo_block %}
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 
 Make sure that propel entities have been generated successfully by checking their existence. Also, change the generated entity classes to extend from Spryker core classes.
 
@@ -300,22 +301,23 @@ Run the following console command to import data:
 console data:import:category-template
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that in the database the configured data is added to the `spy_category_template` table.
 {% endinfo_block %}
 
-### 5) Set up Behavior
+### 5) Set up behavior
 
 Add the following plugins to your project:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `CategoryImageSetCreatorPlugin` | Persists new category image sets into the database after the category creation. | None | `\Spryker\Zed\CategoryImage\Communication\Plugin` |
-| `CategoryImageSetExpanderPlugin` | Hydrates category with image data after reading them from the database. | None | `\Spryker\Zed\CategoryImage\Communication\Plugin` |
-| `CategoryImageSetUpdaterPlugin` | Persists category image set changes into the database after the category update. | None | `\Spryker\Zed\CategoryImage\Communication\Plugin` |
-| `RemoveCategoryImageSetRelationPlugin` | Deletes category image sets when a category is deleted. | None | `\Spryker\Zed\CategoryImage\Communication\Plugin` |
-| `CategoryImageFormPlugin` | Extends create/edit category forms with category image set related fields. | None | `\Spryker\Zed\CategoryImageGui\Communication\Plugin` |
-| `CategoryImageFormTabExpanderPlugin` | Extends create/edit category tabs with category image set related item. | None | `\Spryker\Zed\CategoryImageGui\Communication\Plugin` |
+| CategoryImageSetCreatorPlugin | Persists new category image sets into the database after the category creation. | None | \Spryker\Zed\CategoryImage\Communication\Plugin |
+| CategoryImageSetExpanderPlugin | Hydrates category with image data after reading them from the database. | None | \Spryker\Zed\CategoryImage\Communication\Plugin |
+| CategoryImageSetUpdaterPlugin | Persists category image set changes into the database after the category update. | None | \Spryker\Zed\CategoryImage\Communication\Plugin |
+| RemoveCategoryImageSetRelationPlugin | Deletes category image sets when a category is deleted. | None | \Spryker\Zed\CategoryImage\Communication\Plugin |
+| CategoryImageFormPlugin | Extends create/edit category forms with category image set related fields. | None | \Spryker\Zed\CategoryImageGui\Communication\Plugin |
+| CategoryImageFormTabExpanderPlugin | Extends create/edit category tabs with category image set related item. | None | \Spryker\Zed\CategoryImageGui\Communication\Plugin |
 
 **src/Pyz/Zed/Category/CategoryDependencyProvider.php**
 
@@ -401,37 +403,47 @@ class CategoryDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that category image handling is integrated successfully by going to Zed and creating, editing, and deleting categories with images.
+
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
+
 ### Prerequisites
 
 Please overview and install the necessary features before beginning the integration step.
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Category | master |
-| Spryker Core | master |
+| Category | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/category-image:"^master" --update-with-dependencies
+composer require spryker-feature/category-image:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following modules have been installed:<table><thead><tr><th>Module</th><th>Expected Directory</th></tr></thead><tbody><tr><td>`CategoryImageStorageWidget`</td><td>`vendor/spryker-shop/category-image-storage-widget`</td></tr></tbody></table>
+
+Make sure that the following modules have been installed:
+
+| MODULE | EXPECTED DIRECTORY |
+| --- | --- |
+| CategoryImageStorageWidget | vendor/spryker-shop/category-image-storage-widget |
+
 {% endinfo_block %}
 
-### 2) Set up Widgets
+### 2) Set up widgets
 Register the following global widgets:
 
-| Widget | Description | Namespace |
+| WIDGET | DESCRIPTION | NAMESPACE |
 | --- | --- | --- |
-| `CategoryImageStorageWidget` | Finds the given category image set in Storage and displays its first image in a given size format. | `SprykerShop\Yves\CategoryImageStorageWidget\Widget` |
+| CategoryImageStorageWidget | Finds the given category image set in Storage and displays its first image in a given size format. | SprykerShop\Yves\CategoryImageStorageWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -458,6 +470,12 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following widgets have been registered:<table><thead><tr><th>Module</th><th>Test</th></tr></thead><tbody><tr><td>`CategoryImageStorageWidget`</td><td>Make sure you have category image data in your storage. Then, render the widget for all the categories that have images assigned.</td></tr></tbody></table>
+
+Make sure that the following widgets have been registered:
+
+| MODULE | TEST |
+| --- | --- |
+| CategoryImageStorageWidget | Make sure you have category image data in your storage. Then, render the widget for all the categories that have images assigned. |
+
 {% endinfo_block %}
 

@@ -1,6 +1,6 @@
 ---
 title: Marketplace Merchant feature integration
-last_updated: Sep 9, 2021
+last_updated: Oct 19, 2021
 description: This integration guide provides steps on how to integrate the Merchants feature into a Spryker project.
 template: feature-integration-guide-template
 ---
@@ -1016,7 +1016,7 @@ console data:import merchant-profile-address
 ```
 
 
-In order to import merchant user data preform the folowing steps:
+In order to import merchant user data perform the following steps:
 
 1. Prepare merchant user data according to your requirements using the demo data:
 
@@ -1037,6 +1037,7 @@ MER000006,michele@sony-experts.com
 
 2. Create the Step model for writing merchant user data.
 
+<details>
 **src/Pyz/Zed/DataImport/Business/Model/MerchantUser/MerchantUserWriterStep.php**
 
 ```php
@@ -1138,6 +1139,8 @@ class MerchantUserWriterStep implements DataImportStepInterface
     }
 }
 ```
+</details>
+
 3. Add the merchant user import type to full import (if needed).
 
 **src/Pyz/Zed/DataImport/DataImportConfig.php**

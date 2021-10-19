@@ -1,6 +1,6 @@
 ---
 title: Merchant Portal feature integration
-last_updated: Sep 9, 2021
+last_updated: Oct 19, 2021
 description: This document describes the process how to integrate the Merchant Portal feature into a Spryker project.
 draft: true
 template: feature-integration-guide-template
@@ -84,12 +84,16 @@ class UserConfig extends SprykerUserConfig
 
 Connect users and merchants using Zed UI (Backoffice) or using the next data import.
 
-      1. merchant.csv
+**data/import/common/common/marketplace/merchant.csv**
 
-         ```yaml
-         merchant_key,merchant_reference,merchant_name,registration_number,status,email,is_active,url.de_DE,url.en_US
-         sony-experts,MER000006,Sony Experts,HYY 134306,approved,michele@sony-experts.com,1,/de/merchant/sony-experts,/en/merchant/sony-experts
-         ```
+<details>
+
+<summary markdown='span'>Prepare your data according to your requirements using the demo data:</summary>
+
+```csv
+ merchant_key,merchant_reference,merchant_name,registration_number,status,email,is_active,url.de_DE,url.en_US
+ sony-experts,MER000006,Sony Experts,HYY 134306,approved,michele@sony-experts.com,1,/de/merchant/sony-experts,/en/merchant/sony-experts
+```
 
 </details>
 
@@ -108,11 +112,11 @@ sony-experts,michele@sony-experts.com
 
 </details>
 
-Run the following command to import data:
+Run the following commands to import data:
 
 ```bash
 console data:import merchant
-console data:import:merchant-use
+console data:import:merchant-user
 ```
 
 ### 3) ACL adjustments.
@@ -121,7 +125,9 @@ By default all newly created merchants and merchant users will automatically hav
 
 Adjust `AclConfig` up to your needs in order to allow Merchant Portal pages (*-merchant-portal-gui) for merchant users (optionally deny access to them for Admin roles)
 
-**src/Pyz/Zed/Acl/AclConfig.php**
+You can check the available list of packages for the Merchant Portal here https://github.com/spryker/?q=merchant-portal-gui
+
+<details><summary markdown='span'>src/Pyz/Zed/Acl/AclConfig.php</summary>
 
 ```php
 <?php
@@ -194,6 +200,7 @@ class AclConfig extends SprykerAclConfig
     }
 }
 ```
+</details>
 
 Run the following command to create users with ACL rules :
 
@@ -201,7 +208,7 @@ Run the following command to create users with ACL rules :
 console setup:init-db
 ```
 
-#### Extending acl entity metadata configuration.
+#### Extending ACL entity metadata configuration.
 
 You can use our `AclEntityDummyProduct` module as an example of extending AclEntityMetadata configuration.
 
@@ -242,11 +249,12 @@ To configure the Merchant Portal Sidebar add installed MP gui modules into `conf
 **config/Zed/navigation.xml**
 
 <details>
-
 <summary markdown='span'>Prepare your configuration according to your requirements using the demo configuration:</summary>
 
 ```xml
-<merchant-portal-dashboard>
+<?xml version="1.0"?>
+<config>
+    <merchant-portal-dashboard>
         <label>Dashboard</label>
         <title>Merchant Dashboard</title>
         <icon>dashboard</icon>
@@ -304,6 +312,7 @@ To configure the Merchant Portal Sidebar add installed MP gui modules into `conf
         <controller>logout</controller>
         <action>index</action>
     </security-merchant-portal-gui>
+</config>
 ```
 
 </details>
@@ -313,6 +322,12 @@ Run the following command to build navigation cache:
 ```bash
 console navigation:build-cache
 ```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that all configured items are present in Merchant Portal Sidebar and routes you accordingly. 
+
+{% endinfo_block %}
 
 Make sure that you have enabled `\Spryker\Zed\Acl\Communication\Plugin\Navigation\AclNavigationItemCollectionFilterPlugin` in `\Pyz\Zed\ZedNavigation\ZedNavigationDependencyProvider`.
 

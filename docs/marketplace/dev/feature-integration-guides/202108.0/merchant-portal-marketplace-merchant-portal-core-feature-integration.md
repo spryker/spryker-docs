@@ -1,6 +1,6 @@
 ---
 title: Marketplace Merchant Portal Core feature integration
-last_updated: Mar 31, 2021
+last_updated: Oct 19, 2021
 description: This document describes how to integrate the Merchant Portal Core feature into a Spryker project.
 template: feature-integration-guide-template
 ---
@@ -18,7 +18,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE |
 | -------------------- | ---------- | ---------|
 | Spryker Core         | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Spryker Core BO      | {{page.version}}r | [Spryker Core Back Office feature integration](https://github.com/spryker-feature/spryker-core-back-office) | 
+| Spryker Core BO      | {{page.version}}r | [Spryker Core Back Office feature integration](https://documentation.spryker.com/docs/spryker-core-back-office-feature-integration) | 
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
 | Acl | {{page.version}} | [ACL feature integration](/docs/marketplace/dev/feature-integration-guides/acl-feature-integration.html) |
 
@@ -35,112 +35,24 @@ composer require spryker-feature/marketplace-merchantportal-core:"{{page.version
 Make sure that the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
-| ------------- | --------------- |
-| Acl   | vendor/spryker/acl  |
-| AclEntity   | vendor/spryker/acl-entity  |
+|-|-|
+| ZedUi  | vendor/spryker/zed-ui |
+| GuiTable | vendor/spryker/gui-table |
 | AclMerchantPortal   | vendor/spryker/acl-merchant-portal  |
 | MerchantPortalApplication   | vendor/spryker/merchant-portal-application  |
-| MerchantUser   | vendor/spryker/merchant-user  |
 | MerchantUserPasswordResetMail   | vendor/spryker/merchant-user-password-reset-mail  |
 | Navigation   | vendor/spryker/navigation  |
 | SecurityMerchantPortalGui  | vendor/spryker/security-merchant-portal-gui |
-| ZedUi  | vendor/spryker/zed-ui |
-| GuiTable | vendor/spryker/gui-table |
 | UserMerchantPortalGui | vendor/spryker/user-merchant-portal-gui |
 | UserMerchantPortalGuiExtension | spryker/user-merchant-portal-gui-extension |
 
 {% endinfo_block %}
 
-### 2) Set up the database schema
-
-Apply database changes and to generate entity and transfer changes:
-
-```bash
-console transfer:generate
-console propel:install
-console transfer:generate
-```
-
-{% info_block warningBox "Verification" %}
-
-Verify that the following changes have been implemented by checking your database:
-
-| DATABASE ENTITY               | TYPE  | EVENT   |
-| ----------------------------- | ----- | ------- |
-| spy_acl_group.reference | column |created  |
-| spy_merchant_user.id_merchant_user | column | created |
-| spy_merchant_user.fk_merchant | column | created |
-| spy_merchant_user.fk_user | column | created |
-
-Make sure that the following changes were applied in transfer objects:
-
-| TRANSFER | TYPE | EVENT | PATH |
-|-|-|-|-|
-| GuiTableDataRequest | class | Created | src/Generated/Shared/Transfer/GuiTableDataRequestTransfer |
-| GuiTableConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableConfigurationTransfer |
-| GuiTableColumnConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableColumnConfigurationTransfer |
-| GuiTableTitleConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableTitleConfigurationTransfer |
-| GuiTableDataSourceConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableDataSourceConfigurationTransfer |
-| GuiTableRowActionsConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableRowActionsConfigurationTransfer |
-| GuiTableBatchActionsConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableBatchActionsConfigurationTransfer |
-| GuiTablePaginationConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTablePaginationConfigurationTransfer |
-| GuiTableSearchConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableSearchConfigurationTransfer |
-| GuiTableFiltersConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableFiltersConfigurationTransfer |
-| GuiTableItemSelectionConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableItemSelectionConfigurationTransfer |
-| GuiTableSyncStateUrlConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableSyncStateUrlConfigurationTransfer |
-| GuiTableEditableConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableEditableConfigurationTransfer |
-| GuiTableEditableCreateConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableEditableCreateConfigurationTransfer |
-| GuiTableEditableUpdateConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableEditableUpdateConfigurationTransfer |
-| GuiTableEditableButton | class | Created | src/Generated/Shared/Transfer/GuiTableEditableButtonTransfer |
-| GuiTableEditableUrl | class | Created | src/Generated/Shared/Transfer/GuiTableEditableUrlTransfer |
-| GuiTableEditableInitialData | class | Created | src/Generated/Shared/Transfer/GuiTableEditableInitialDataTransfer |
-| GuiTableEditableDataError | class | Created | src/Generated/Shared/Transfer/GuiTableEditableDataErrorTransfer |
-| GuiTableDataResponse | class | Created | src/Generated/Shared/Transfer/GuiTableDataResponseTransfer |
-| GuiTableRowDataResponse | class | Created | src/Generated/Shared/Transfer/GuiTableRowDataResponseTransfer |
-| GuiTableDataResponsePayload | class | Created | src/Generated/Shared/Transfer/GuiTableDataResponsePayloadTransfer |
-| SelectGuiTableFilterTypeOptions | class | Created | src/Generated/Shared/Transfer/SelectGuiTableFilterTypeOptionsTransfer |
-| OptionSelectGuiTableFilterTypeOptions | class | Created | src/Generated/Shared/Transfer/OptionSelectGuiTableFilterTypeOptionsTransfer |
-| GuiTableFilter | class | Created | src/Generated/Shared/Transfer/GuiTableFilterTransfer |
-| GuiTableRowAction | class | Created | src/Generated/Shared/Transfer/GuiTableRowActionTransfer |
-| GuiTableRowActionOptions | class | Created | src/Generated/Shared/Transfer/GuiTableRowActionOptionsTransfer |
-| DateRangeGuiTableFilterTypeOptions | class | Created | src/Generated/Shared/Transfer/DateRangeGuiTableFilterTypeOptionsTransfer |
-| CriteriaRangeFilter | class | Created | src/Generated/Shared/Transfer/CriteriaRangeFilterTransfer |
-| GuiTableBatchAction | class | Created | src/Generated/Shared/Transfer/GuiTableBatchActionTransfer |
-| GuiTableBatchActionOptions | class | Created | src/Generated/Shared/Transfer/GuiTableBatchActionOptionsTransfer |
-| GuiTableColumnConfiguratorConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableColumnConfiguratorConfigurationTransfer |
-| ZedUiFormResponseAction | class | Created | src/Generated/Shared/Transfer/ZedUiFormResponseActionTransfer |
-| PriceProductOfferCriteria | class | created | src/Generated/Shared/Transfer/PriceProductOfferCriteriaTransfer |
-| DataImporterReaderConfiguration | class | created | src/Generated/Shared/Transfer/DataImporterReaderConfigurationTransfer |
-| Currency.Code | attribute | created | src/Generated/Shared/Transfer/CurrencyTransfer |
-| PriceProductFilter.Filter | attribute | created | src/Generated/Shared/Transfer/PriceProductFilterTransfer |
-| PriceProductFilter.value | attribute | created | src/Generated/Shared/Transfer/PriceProductFilterTransfer |
-| Rule | class | created | src/Generated/Shared/Transfer/RuleTransfer |
-| AclEntityRule | class | created | src/Generated/Shared/Transfer/AclEntityRuleTransfer |
-| MerchantResponse | class | created | src/Generated/Shared/Transfer/MerchantResponseTransfer |
-| Merchant | class | created | src/Generated/Shared/Transfer/MerchantTransfer |
-| MerchantError | class | created | src/Generated/Shared/Transfer/MerchantErrorTransfer |
-| Roles | class | created | src/Generated/Shared/Transfer/RolesTransfer |
-| Role | class | created | src/Generated/Shared/Transfer/RoleTransfer |
-| AclEntitySegment | class | created | src/Generated/Shared/Transfer/AclEntitySegmentTransfer |
-| AclEntitySegmentRequest | class | created | src/Generated/Shared/Transfer/AclEntitySegmentRequestTransfer |
-| AclEntitySegmentResponse | class | created | src/Generated/Shared/Transfer/AclEntitySegmentResponseTransfer |
-| Group | class | created | src/Generated/Shared/Transfer/GroupTransfer |
-| AclEntityMetadataCollection | class | created | src/Generated/Shared/Transfer/AclEntityMetadataCollectionTransfer |
-| AclEntityMetadata | class | created | src/Generated/Shared/Transfer/AclEntityMetadataTransfer |
-| AclEntityParentMetadata | class | created | src/Generated/Shared/Transfer/AclEntityParentMetadataTransfer |
-| AclEntityParentConnectionMetadata | class | created | src/Generated/Shared/Transfer/AclEntityParentConnectionMetadataTransfer |
-| GroupCriteria | class | created | src/Generated/Shared/Transfer/GroupCriteriaTransfer |
-| AclEntityMetadataConfig | class | created | src/Generated/Shared/Transfer/AclEntityMetadataConfigTransfer |
-| User | class | created | src/Generated/Shared/Transfer/UserTransfer |
-| MerchantUser | class | created | src/Generated/Shared/Transfer/MerchantUserTransfer |
-
-{% endinfo_block %}
-
-### 3) Set up behavior
+### 2) Set up behavior
 
 Set up behavior as follows:
 
-1. Install the following plugins with modules:
+#### 1. Integrate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ----------- | ------------ | ------------- | --------- |
@@ -354,9 +266,9 @@ class AclDependencyProvider extends SprykerAclDependencyProvider
 }
 ```
 
-Enable Merchant Portal infrastructural plugins. 
+#### 2. Enable Merchant Portal infrastructural plugins. 
 
-**src/Pyz/Zed/Acl/AclDependencyProvider.php**
+<details><summary markdown='span'>src/Pyz/Zed/Acl/AclDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -409,6 +321,7 @@ class MerchantPortalApplicationDependencyProvider extends SprykerMerchantPortalA
     }
 }
 ```
+</details>
 
 Open access to the *Merchant Portal* login page by default:
 

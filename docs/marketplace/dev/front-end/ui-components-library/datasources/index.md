@@ -5,7 +5,6 @@ description: This document provides details about the Datasources service in the
 template: concept-topic-template
 ---
 
-
 This document explains the Datasources service in the Components Library.
 
 ## Overview
@@ -17,20 +16,21 @@ Datasources are used in other components like Table, Select, Autocomplete, etc.
 
 ```html
 <spy-select
-  [datasource]="{
-    type: 'inline',
-    data: ['Inline 1', 'Inline 2'],
-  }"
-></spy-select>
+    [datasource]="{
+        type: 'inline',
+        data: ['Inline 1', 'Inline 2'],
+    }"
+>
+</spy-select>
 ```
 
 ## Main Service
 
-The main module provides an opportunity to register any datasource by key via static method `withDatasources`. It assigns the object of datasources to the `DatasourceTypesToken` under the hood.
+The main module provides an opportunity to register any datasource by key via static method `withDatasources()`. It assigns the object of datasources to the `DatasourceTypesToken` under the hood.
 
-The main service injects all registered types from the `DatasourceTypesToken` and `DataTransformerService` (see [Data Transformers](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/index.html)).
+The main service injects all registered types from the `DatasourceTypesToken` and `DataTransformerService` (see [Data Transformers](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/)).
 
-Resolve method finds specific service from the `DatasourceTypesToken` by `config.type` (from the argument) and returns observable with data by `Datasource.resolve`. Data is also transformed by `DataTransformerService` if `config.transform` exists.
+`resolve()` method finds specific service from the `DatasourceTypesToken` by `config.type` (from the argument) and returns observable with data by `Datasource.resolve()`. Data is also transformed by `DataTransformerService` if `config.transform` exists.
 
 ## Datasource
 
@@ -39,42 +39,42 @@ Datasource is basically an Angular Service that encapsulates the algorithm of ho
 Datasource must implement a specific interface (Datasource) and then be registered to the Root Module via `DatasourceModule.withDatasources()`.
 
 ```ts
-///// Module augmentation
+// Module augmentation
 import { DatasourceConfig } from '@spryker/datasource';
 
 declare module '@spryker/datasource' {
-  interface DatasourceRegistry {
-    'custom': CustomDatasourceService;
-  }
+    interface DatasourceRegistry {
+        'custom': CustomDatasourceService;
+    }
 }
 
 export interface CustomDatasourceConfig extends DatasourceConfig {
-  data: unknown;
-  ....,
+    data: unknown;
+    ...
 }
 
-//// Services implementation
+// Service implementation
 @Injectable({
-  providedIn: 'root',
+    providedIn: 'root',
 })
 export class CustomDatasourceService implements Datasource {
-  resolve(
-    injector: Injector,
-    config: CustomDatasourceConfig,
-    context?: unknown,
-  ): Observable<unknown> {
-    ....
-  }
+    resolve(
+        injector: Injector,
+        config: CustomDatasourceConfig,
+        context?: unknown,
+    ): Observable<unknown> {
+        ...
+    }
 }
 
 @NgModule({
-  imports: [
-    DatasourceModule.withDatasources({
-      custom: CustomDatasourceService,
-    }),
-  ],
+    imports: [
+        DatasourceModule.withDatasources({
+            custom: CustomDatasourceService,
+        }),
+    ],
 })
-export class RootModule
+export class RootModule {}
 ```
 
 The context within which Datasources operate is defined by the local injector where it’s being used.
@@ -85,26 +85,27 @@ Below you can find interfaces for the Datasource configuration and Datasource ty
 
 ```ts
 export interface DatasourceConfig {
-  type: DatasourceType;
-  transform?: DataTransformerConfig;
-  // Specific Datasource types may have custom props
-  [k: string]: unknown;
+    type: DatasourceType;
+    transform?: DataTransformerConfig;
+
+    // Specific Datasource types may have custom props
+    [k: string]: unknown;
 }
 
 export interface Datasource<D = unknown, C = unknown> {
-  resolve(
-    injector: Injector,
-    config: DatasourceConfig,
-    context?: C,
-  ): Observable<D>;
+    resolve(
+        injector: Injector,
+        config: DatasourceConfig,
+        context?: C,
+    ): Observable<D>;
 }
 ```
 
 ## Datasource types
 
-There are a few common Datasources that are available in UI library as separate packages
+There are a few common Datasources that are available in UI library as separate packages:
 
-- [inline](/docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-inline.html) — Allows passing data along with the configuration of the Datasource.
-- [inline.table](/docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-inline-table.html) — Allows passing transformed for the table format data along with the configuration of the Datasource
-- [http](/docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-http.html) — Allows fetching data from URL via HTTP configured in the configuration of the Datasource. 
-HTTP Datasource supports caching strategy (see [Cache](/docs/marketplace/dev/front-end/ui-components-library/cache.html)) that may be configured via config and used before the request is made when applicable.
+- [HTTP](/docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-http.html) - allows fetching data from URL via HTTP configured in the configuration of the Datasource.
+  HTTP Datasource supports caching strategy (see [Cache](/docs/marketplace/dev/front-end/ui-components-library/cache/)) that may be configured via config and used before the request is made when applicable.
+- [Inline](/docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-inline.html) - allows passing data along with the configuration of the Datasource.
+- [Inline.table](/docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-inline-table.html) - allows passing transformed for the table format data along with the configuration of the Datasource

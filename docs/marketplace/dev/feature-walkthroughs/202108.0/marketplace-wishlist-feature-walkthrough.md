@@ -24,6 +24,7 @@ To learn more about the feature and to find out how end users use it, see [Marke
 | Wishlist | Provides infrastructure and functionality to handle multiple wishlists for a customer account |
 | WishlistPage | Provides enduser wishlist management functionality |
 | WishlistWidget | Provides wishlist rendering functionality integration to other modules |
+| MerchantProductOfferWishlistRestApi | Provides ability to manage product offers for wishlist Rest API |
 
 ## Domain model
 

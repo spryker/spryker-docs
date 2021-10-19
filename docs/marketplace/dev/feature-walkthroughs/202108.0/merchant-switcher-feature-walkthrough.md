@@ -6,8 +6,8 @@ template: merchant-switcher-feature-walkthrough
 ---
 
 With the *Merchant Switcher* feature, the customers can select an active merchant so that he can only see products and offers which belong to this merchant.
-Has been created plugins to check that chosen merchant is equal in all items in Cart, Quote, Checkout modules.
-So if merchant is not equal the item replaces with offer or merchant product from owned to chosen merchant.
+The feature modules provide plugins to validate merchant in a quote on cart and checkout as well as in wishlist items.
+So if merchant is not equal - finds substitution for items depending on the chosen merchant.
 If  the system doesn't have suitable items, a customer will see the error or warning about these items.
 
 ## Module dependency graph
@@ -15,7 +15,6 @@ If  the system doesn't have suitable items, a customer will see the error or war
 
 | MODULE     | DESCRIPTION                |
 |------------|----------------------------|
-| MerchantSearch | Manages Elasticsearch documents for merchant entities   |
 | MerchantSwitcher | Provides functionality for switching merchant in a quote and in quote items   |
 | MerchantSwitcherWidget | Allows to select a merchant from an active merchants list and store the selected merchant data   |
 
@@ -23,4 +22,4 @@ If  the system doesn't have suitable items, a customer will see the error or war
 
 | INTEGRATION GUIDES | GLUE API GUIDES  |
 | ------------- | -------------- |
-| [Marketplace Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-switcher-feature-integration.html) | [Managing wishlists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html)
+| [Merchant Switcher feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-switcher-feature-integration.html) |

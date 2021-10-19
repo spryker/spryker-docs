@@ -29,6 +29,8 @@ Enable the following behaviors by registering the plugins:
 |-|-|-|-|
 | MerchantProductProductOfferReferenceStrategyPlugin | Allows selecting a merchant product by default on PDP. |  | Spryker\Client\MerchantProductOfferStorageExtension\Dependency\Plugin |
 
+Note : the order is important. Plugin have to be registered after `ProductOfferReferenceStrategyPlugin`.
+
 **src/Pyz/Client/MerchantProductOfferStorage/MerchantProductOfferStorageDependencyProvider.php**
 
 ```php

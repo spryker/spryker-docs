@@ -108,6 +108,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 ### 3) Add translations
 
+
 Generate a new translation cache for Zed:
 
 ```bash
@@ -342,34 +343,6 @@ Make sure that data contains `merchant_references`'s for merchant products in th
 {% endinfo_block %}
 
 
-If you have integrated the [Marketplace Product Offer feature](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html)
-please enable the `MerchantProductProductOfferReferenceStrategyPlugin` in order to recognize that if the merchantReference is set - we are dealing with MerchantProduct not the ProductOffer.
-Note : the order is important. Plugin have to be registered after `ProductOfferReferenceStrategyPlugin`.
-
-**src/Pyz/Client/MerchantProductOfferStorage/MerchantProductOfferStorageDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Client\MerchantProductOfferStorage;
-
-use Spryker\Client\MerchantProductOfferStorage\MerchantProductOfferStorageDependencyProvider as SprykerMerchantProductOfferStorageDependencyProvider;
-use Spryker\Client\MerchantProductStorage\Plugin\MerchantProductOfferStorage\MerchantProductProductOfferReferenceStrategyPlugin;
-
-class MerchantProductOfferStorageDependencyProvider extends SprykerMerchantProductOfferStorageDependencyProvider
-{
-    /**
-     * @return \Spryker\Client\MerchantProductOfferStorageExtension\Dependency\Plugin\ProductOfferReferenceStrategyPluginInterface[]
-     */
-    protected function getProductOfferReferenceStrategyPlugins(): array
-    {
-        return [
-             new MerchantProductProductOfferReferenceStrategyPlugin(),
-        ];
-    }
-}
-```
-
 ### 5) Import merchant product data
 
 Prepare your data according to your requirements using the demo data:
@@ -567,7 +540,30 @@ Make sure that the imported data is added to the `spy_merchant_product` table.
 
 Follow the steps below to install the Marketplace Product feature front end.
 
-### 1) Set up widgets
+### 1) Add Yves Translations
+
+Append glossary according to your configuration:
+
+**src/data/import/glossary.csv**
+
+```csv
+merchant_product.sold_by,Sold by,en_US
+merchant_product.sold_by,Verkauft durch,de_DE
+```
+
+Import data:
+
+```bash
+console data:import glossary
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the configured data is added to the `spy_glossary` table in the database.
+
+{% endinfo_block %}
+
+### 2) Set up widgets
 
 Register the following plugins to enable widgets:
 
@@ -614,7 +610,7 @@ Make sure that when you add merchant product to cart, on a cart page is has the 
 
 {% endinfo_block %}
 
-### 2) Set up behavior
+### 3) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 

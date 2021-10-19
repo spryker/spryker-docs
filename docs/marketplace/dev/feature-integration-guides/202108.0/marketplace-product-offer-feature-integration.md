@@ -1292,9 +1292,6 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     }
 }
 ```
-If you have already integrated  [Marketplace Product feature](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-feature-integration.html)
-please check the `MerchantProductProductOfferReferenceStrategyPlugin` to be registered as described in [Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-feature-integration.html)
-Note : the order is important. Plugin have to be registered after `ProductOfferReferenceStrategyPlugin`.
 
 {% info_block warningBox "Verification" %}
 

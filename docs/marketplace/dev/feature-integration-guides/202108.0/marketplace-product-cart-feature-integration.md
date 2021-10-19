@@ -106,6 +106,6 @@ class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure when you add to cart merchant product, it has `merchantReference` set. (Can be checked in the `spy_quote` table).
+Make sure when you add a merchant product to cart, it has `merchantReference` set. (Can be checked in the `spy_quote` table).
 
 {% endinfo_block %}

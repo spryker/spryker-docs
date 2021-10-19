@@ -52,7 +52,7 @@ The merchant portal should be in a dedicated public network (not the same networ
 
 ## Database (MariaDb/Mysql/Postgres)
 
-Each database user should have dedicated user credentials:
+Each database user must have dedicated user credentials:
 
 | User                      | DB User rights               |
 | ------------------------- | ---------------------------- |

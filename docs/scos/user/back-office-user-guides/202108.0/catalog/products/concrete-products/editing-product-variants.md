@@ -34,14 +34,18 @@ Review the reference information before you start, or just look up the necessary
 To edit a product variant:
 
 1. Navigate to the *Edit Concrete Product* page using one of the following paths:
-   * **Products** > **View** in the _Actions_ column for a specific abstract product **>** scroll down to the **Variants tab** > **Edit** in the _Actions_ column for a specific product variant
-    * **Products > Edit** in the _Actions_ column for a specific abstract product **> Variants tab > Edit** in the _Actions_ column for a specific product variant
+   * **Products** > **View** in the _Actions_ column for a specific abstract product **>** scroll down to the **Variants tab** > **Edit** in the _Actions_ column for a specific product variant.
+    * **Products > Edit** in the _Actions_ column for a specific abstract product **> Variants tab > Edit** in the _Actions_ column for a specific product variant.
 2. On the *Edit Concrete Product* page, update the following tabs:
     1. *General* tab: populate name and description, valid from and to dates, make the product searchable by selecting the Searchable checkbox for the appropriate locale (or all locales).
     2. *Price & Stock* tab: define the default/original, gross/net prices, and stock.
+
     {% info_block warningBox "Note" %}
-The prices for the variant are inherited from the abstract product so you will see the same values as you have entered while creating the abstract product. **B2B:** The merchant relation prices are inherited by Product Variants as well.
-{% endinfo_block %}
+
+    The prices for the variant are inherited from the abstract product so you will see the same values as you have entered while creating the abstract product. **B2B:** The merchant relation prices are inherited by Product Variants as well.
+
+    {% endinfo_block %}
+
     3. *Image* tab: define the image(s), image set(s), and the image order for you product variant.
     4. *Assign bundled products* tab: this tab is used in case you need to create a product bundle. See [Creating Product Bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html) for details.
     5. *Discontinue* tab: This tab is used in case you want to discontinue the product. See [Discontinuing a Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/discontinuing-products.html) to know more.
@@ -104,9 +108,10 @@ The only field available is **Add Product Alternative by Name or SKU**. Here it 
 #### Scheduled Prices tab
 
 On this tab, you see a table with the scheduled prices imported via a CSV file. The following information is available:
-* Currency, store, net, and gross price values
+* Currency, store, net, and gross price values.
 * Start from (included) and Finish at (included) values that identify a period of time when a specific price is going to be set for a product automatically.
 
 **What's next?**
-Following the same steps, you will update all variants that you have added to your abstract product.
+<br>Following the same steps, you will update all variants that you have added to your abstract product.
+
 You may also want to add more product variants. Learn how you do that by navigating to [Creating a product variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/concrete-products/creating-product-variants.html).

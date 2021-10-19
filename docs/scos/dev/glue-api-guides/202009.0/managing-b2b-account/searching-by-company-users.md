@@ -56,7 +56,7 @@ To retrieve company users of the current authenticated customer, send the reques
 ### Response
 
 <details open>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
     
 ```json
 {
@@ -104,7 +104,7 @@ To retrieve company users of the current authenticated customer, send the reques
 </details>
 
 <details open>
-<summary>Response sample with companies, company business units and company roles</summary>
+<summary markdown='span'>Response sample with companies, company business units and company roles</summary>
     
 ```json
 {

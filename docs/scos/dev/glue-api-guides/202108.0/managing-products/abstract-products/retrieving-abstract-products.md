@@ -88,7 +88,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 ### Response
 
 <details open>
-    <summary>Response sample</summary>
+    <summary markdown='span'>markdown='span'>Response sample</summary>
     
 ```json
 {
@@ -151,7 +151,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
  </details>
  
  <details open>
-    <summary>Response sample with image sets</summary>
+    <summary markdown='span'>markdown='span'>Response sample with image sets</summary>
     
 ```json
 {
@@ -247,7 +247,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
  
  
  <details open>
-    <summary>Response sample with product availability</summary>
+    <summary markdown='span'>markdown='span'>Response sample with product availability</summary>
     
 ```json
 {
@@ -332,7 +332,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
  </details>
 
-<details> <summary>Response sample with default product prices</summary>
+<details> <summary markdown='span'>markdown='span'>Response sample with default product prices</summary>
 
 ```php
 {
@@ -438,7 +438,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
 </details>
 
-<details> <summary>Response sample with volume prices</summary>
+<details> <summary markdown='span'>markdown='span'>Response sample with volume prices</summary>
 
 ```json
 {
@@ -554,7 +554,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 </details>
 
 <details open>
-    <summary>Response sample with category nodes</summary>
+    <summary markdown='span'>markdown='span'>Response sample with category nodes</summary>
     
 ```json
 {
@@ -736,7 +736,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
 
 <details open>
-    <summary>Response sample with tax rates</summary>
+    <summary markdown='span'>markdown='span'>Response sample with tax rates</summary>
     
 ```json
 {
@@ -899,7 +899,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
 
 <details open>
-    <summary>Response sample with product labels</summary>
+    <summary markdown='span'>markdown='span'>Response sample with product labels</summary>
     
 ```json
 {
@@ -958,7 +958,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
 
 <details open>
-    <summary>Response sample with concrete products</summary>
+    <summary markdown='span'>markdown='span'>Response sample with concrete products</summary>
     
 ```json
 {
@@ -1072,7 +1072,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
 
 <details open>
-    <summary>Response sample with product options</summary>
+    <summary markdown='span'>markdown='span'>Response sample with product options</summary>
     
 ```json
 {
@@ -1181,7 +1181,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
  
 
 <details open>
-    <summary>Response sample with product reviews</summary>
+    <summary markdown='span'>markdown='span'>Response sample with product reviews</summary>
     
 ```json
 {
@@ -1305,7 +1305,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
 
 <details open>
-    <summary>Response sample with concrete product bundle, bundled products and corresponding abstact products</summary>
+    <summary markdown='span'>markdown='span'>Response sample with concrete product bundle, bundled products and corresponding abstact products</summary>
     
 ```json
 {

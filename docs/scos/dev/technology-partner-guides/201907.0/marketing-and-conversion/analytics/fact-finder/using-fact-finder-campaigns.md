@@ -73,7 +73,7 @@ To fetch Fact-Finder campaigns for product page, you need to make a call using F
 
 1. Add FactFinder client to dependency provider:
 <details open>
-<summary>Click here to expand the code sample</summary>
+<summary markdown='span'>Click here to expand the code sample</summary>
 
 ```php
 <?php
@@ -119,7 +119,7 @@ class ProductDependencyProvider extends AbstractBundleDependencyProvider
 2. Add methods to get FactFinder client and to create product campaign request transfer:
 
 <details open>
-<summary>Click here to expand the code sample</summary>
+<summary markdown='span'>Click here to expand the code sample</summary>
 
  ```php
 <?php
@@ -153,7 +153,7 @@ class ProductFactory extends AbstractFactory
 3. Fetch product campaigns from controller:
 
  <details open>
-<summary>Click here to expand the code sample</summary>
+<summary markdown='span'>Click here to expand the code sample</summary>
 
  ```php
 <?php

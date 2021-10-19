@@ -28,7 +28,7 @@ Enable the following behaviors by registering the plugins:
 | `SwitchDefaultCartResourceShareClientActivatorStrategyPlugin` | Switches default cart for company user after he proceeded cart share link with Read-only or Full Access access. | None | `Spryker\Client\SharedCart\Plugin\ResourceShare` |
 
 <details open>
-<summary>src/Pyz/Zed/ResourceShare/ResourceShareDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/ResourceShare/ResourceShareDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -55,7 +55,7 @@ class ResourceShareDependencyProvider extends SprykerResourceShareDependencyProv
 </details>
 
 <details open>
-<summary>src/Pyz/Client/ResourceShare/ResourceShareDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/ResourceShare/ResourceShareDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -121,7 +121,7 @@ To start feature integration, overview and install the necessary features:
 Append glossary according to your configuration:
 
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```html
 shared_cart.resource_share.strategy.error.cart_access_denied,The cart URL is wrong or try to login with another company user account.,en_US
@@ -153,7 +153,7 @@ Enable the following behaviors by registering the plugins:
 | `SharedCartRouterStrategyPlugin` | Provides a route to the page, where the customer will be redirected to, after successful cart share with Read-only or Full Access access. | None | `SprykerShop\Yves\SharedCartPage\Plugin\ResourceShare` |
 
 <details open>
-<summary>src/Pyz/Client/PersistentCartShare/PersistentCartShareDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/PersistentCartShare/PersistentCartShareDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -182,7 +182,7 @@ class PersistentCartShareDependencyProvider extends SprykerPersistentCartShareDe
 </details>
 
 <details open>
-<summary>src/Pyz/Yves/ResourceSharePage/ResourceSharePageDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ResourceSharePage/ResourceSharePageDependencyProvider.php</summary>
 
 ```php
 <?php

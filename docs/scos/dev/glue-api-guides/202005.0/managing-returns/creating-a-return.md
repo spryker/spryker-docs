@@ -58,7 +58,7 @@ Sample request: `POST https://glue.mysprykershop.com/returns`
 
 ## Response
 <details>
-  <summary>Sample response</summary>
+  <summary markdown='span'>Sample response</summary>
 
 ```json
 {

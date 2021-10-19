@@ -69,7 +69,7 @@ To retrieve general information about a concrete product, send the request:
 ### Response
 
 <details>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -117,7 +117,7 @@ To retrieve general information about a concrete product, send the request:
  </details>
 
 <details>
-    <summary>Response sample with sales units and product measurement units</summary>
+    <summary markdown='span'>Response sample with sales units and product measurement units</summary>
 
 ```json
 {
@@ -210,7 +210,7 @@ To retrieve general information about a concrete product, send the request:
  </details>
  
  <details>
-    <summary>Response sample with product labels</summary>
+    <summary markdown='span'>Response sample with product labels</summary>
 
 ```json
 {
@@ -258,7 +258,7 @@ To retrieve general information about a concrete product, send the request:
  </details>
  
  <details open>
-    <summary>Response sample with product image sets</summary>
+    <summary markdown='span'>Response sample with product image sets</summary>
     
 ```json
 {
@@ -338,7 +338,7 @@ To retrieve general information about a concrete product, send the request:
 </details>
 
  <details open>
-    <summary>Response sample with product availability</summary>
+    <summary markdown='span'>Response sample with product availability</summary>
     
 ```json
 {
@@ -410,7 +410,7 @@ To retrieve general information about a concrete product, send the request:
 </details>
 
  <details open>
-    <summary>Response sample with concrete product prices</summary>
+    <summary markdown='span'>Response sample with concrete product prices</summary>
     
 ```json
 {
@@ -502,7 +502,7 @@ To retrieve general information about a concrete product, send the request:
 </details>
 
  <details open>
-    <summary>Response sample with product options</summary>
+    <summary markdown='span'>Response sample with product options</summary>
     
 ```json
 {
@@ -594,7 +594,7 @@ To retrieve general information about a concrete product, send the request:
 </details>
 
  <details open>
-    <summary>Response sample with reviews</summary>
+    <summary markdown='span'>Response sample with reviews</summary>
     
 ```json
 {

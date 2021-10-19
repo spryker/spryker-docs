@@ -27,12 +27,11 @@ To start working with the file list, navigate to **File Manager** > **File List*
 ## Viewing files
 
 To view a file:
-
 1. On the *File List* page in the _Actions_ column, click **View**.
 2. On the *View File* page, you see the version, file name, the date and time when the file was uploaded.
 
 **Tips & tricks**
-On this page, you can download the file:
+<br>On this page, you can download the file:
 1. Click **Download** in the _Actions_ column.
 2. Follow the download pop-up instructions.
 
@@ -50,7 +49,7 @@ The *File versions* tab shows the version of the file.
 * If you only update the attributes, no new version is created.
 
 **Tips & tricks**
-In the *File versions* tab, you can manage the versions by:
+<br>In the *File versions* tab, you can manage the versions by:
 * Removing the not needed versions. Click **Delete** in the _Actions_ column for the version you want to remove.
 * Downloading a specific version by clicking **Download**.
 

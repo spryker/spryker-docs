@@ -20,7 +20,6 @@ related:
 
 This article describes how to manage CMS pages.
 
-
 ## Prerequisites
 
 To start managing CMS pages, got to **Content** > **Pages**.
@@ -38,7 +37,6 @@ To preview a draft of your page, link your Zed account to an Yves account.
 {% endinfo_block %}
 
 To link a Zed customer to an Yves customer:
-
 1. Navigate to **Users Control** > **User**.
 2. On the *Users list* page, click **Assign Customers to User: Zed account e-mail** in the _Actions_ column. This will take you to the *Assign Customers* page.
 3. Select a user you would like to assign to your Zed account.
@@ -58,7 +56,6 @@ Now, you can proceed with the steps to preview a draft of your page.
 You can use the Preview mode from either the *Overview of CMS Pages* page or the *Edit Placeholders* editor.
 
 To preview a draft of your CMS page from the *Overview of CMS Pages* page:
-
 1. On the *Overview of CMS Pages* page, click **View** and select **Preview** from the drop-down list next to the page whose draft you want to view.
 2. The page in the Preview mode is opened in a new tab of your browser.
 
@@ -70,15 +67,12 @@ To preview a draft of your CMS page from the *Edit Placeholders* editor, see the
 To keep changes and display them on the shop website, you need to publish them.
 
 You can publish your page either from the *Overview of CMS Pages* page or from the *Edit Placeholders* editor:
-
 * To publish a CMS page from the *Overview of CMS Pages* page, click **Publish** in the _Actions_ column. The page is successfully published.
-
 * To publish a CMS page from the *Edit Placeholders* editor, see the [Editing placeholders](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/editing-cms-pages.html#selecting-the-placeholders-option) section.
 
 ## Viewing a CMS page
 
 To view a CMS page:
-
 1. On the *Overview of CMS Pages* page, click **View** in the _Actions_ column.
 2. You can select the following options from the drop-down list:
     *  **Preview**: This option allows you to see the way the page will look like on the Storefront before publishing it.
@@ -93,18 +87,12 @@ To view a CMS page:
     * Placeholders
 
 **Tips & tricks**
-On the *View CMS Page: [Page Name]* page, you can do the following:
-
+<br>On the *View CMS Page: [Page Name]* page, you can do the following:
 * Navigate to the page where you can view all available versions for the page, general information of the version you are currently using, and roll back to the previous page version if needed, as well as compare version. To do this, click **Version History** at the top of the page.
-
 * Make changes to page layout or its SEO information by clicking **Edit page** at the top of the page.
-
 * Add some content to a page by clicking **Edit placeholders**.
-
 * Remove a published page (make it invisible) from the Storefront by clicking **Deactivate**.
-
 * Make the page visible on the website clicking **Activate**.
-
 * Return to the _Overview of CMS pages_ page by clicking **Back to CMS**.
 
 ### Reference information: Viewing a CMS page

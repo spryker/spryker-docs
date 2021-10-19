@@ -90,7 +90,7 @@ Make sure that the encryption key is secured in your live environment. This key 
 {% endinfo_block %}
 
 <details open>
-<summary>config/Shared/config_local.php</summary>
+<summary markdown='span'>config/Shared/config_local.php</summary>
     
 ```php
 <?php
@@ -137,7 +137,7 @@ The following Session and Storage configuration constants were deprecated and mo
 * In case of multi-instance Redis setup, extend your project with the following configuration:
 
 <details open>
-<summary>config/Shared/config_default.php</summary>
+<summary markdown='span'>config/Shared/config_default.php</summary>
 
 ```php
 <?php
@@ -166,7 +166,7 @@ This configuration is used exclusively. In other words, you can't use any other 
 * In case of single-instance Redis setup, extend your project with the following configuration:
 
 <details open>
-<summary>config/Shared/config_default.php</summary>
+<summary markdown='span'>config/Shared/config_default.php</summary>
 
 ```php
 <?php
@@ -193,7 +193,7 @@ All the values in the examples above should be replaced with the real ones used 
 If you're using Redis as session storage, extend your project with the following configuration:
 
 <details open>
-<summary>config/Shared/config_default.php</summary>
+<summary markdown='span'>config/Shared/config_default.php</summary>
 
 ```php
 <?php
@@ -221,7 +221,7 @@ $config[SessionRedisConstants::LOCKING_LOCK_TTL_MILLISECONDS] = 0;
 * In case of a multi-instance Redis setup, extend your project with the following configuration:
 
 <details open>
-<summary>config/Shared/config_default.php</summary>
+<summary markdown='span'>config/Shared/config_default.php</summary>
 
 ```php
 <?php
@@ -249,7 +249,7 @@ This configuration is used exclusively. In other words, you can't use any other 
 * In case of a single-instance Redis setup, extend your project with the following configuration:
 
 <details open>
-<summary>config/Share/config_default.php</summary>
+<summary markdown='span'>config/Share/config_default.php</summary>
 
 ```php
 <?php
@@ -269,7 +269,7 @@ $config[SessionRedisConstants::ZED_SESSION_REDIS_DATABASE] = 2;
 If you're using file system as session storage, extend your project with the following configuration:
 
 <details open>
-<summary>config/Shared/config_default.php</summary>
+<summary markdown='span'>config/Shared/config_default.php</summary>
 
 ```php
 <?php
@@ -304,7 +304,7 @@ Find the list of all the plugins installed along with new modules:
 | `StorageRedisPlugin` | Provides a Redis-based storage implementation. | None | `Spryker\Client\StorageRedis\Plugin` |
 
 <details open>
-<summary>src/Pyz/Zed/Session/SessionDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Session/SessionDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -347,7 +347,7 @@ class SessionDependencyProvider extends SprykerSessionDependencyProvider
 </details>
 
 <details open>
-<summary>src/Pyz/Client/Storage/StorageDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/Storage/StorageDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -385,7 +385,7 @@ Set up the console commands:
 | `StorageRedisImportRdbConsole` | Imports an **rdb** file. | None | `Spryker\Zed\StorageRedis\Communication\Console` |
 
 <details open>
-<summary>Pyz\Zed\Console\ConsoleDependencyProvider</summary>
+<summary markdown='span'>Pyz\Zed\Console\ConsoleDependencyProvider</summary>
 
 ```php
 <?php
@@ -446,7 +446,7 @@ Add the following configuration to your project:
 | `SessionRedisConstants::YVES_SESSION_REDIS_CLIENT_OPTIONS` |Defines the list of client options used while connection to Redis as Yves session storage in replication mode. | `Spryker\Shared\SessionRedis` |
 
 <details open>
-<summary>config/Shared/config_default.php</summary>
+<summary markdown='span'>config/Shared/config_default.php</summary>
 
 ```php
 <?php
@@ -471,7 +471,7 @@ $config[SessionRedisConstants::YVES_SESSION_TIME_TO_LIVE] = SessionConfig::SESSI
 * In case of a multi-instance Redis setup, extend your project with the following configuration:
 
 <details open>
-<summary>config/Shared/config_default.php</summary>
+<summary markdown='span'>config/Shared/config_default.php</summary>
 
 ```php
 <?php
@@ -499,7 +499,7 @@ This configuration is used exclusively. In other words, you can't use any other 
 * In case of a single-instance Redis setup, extend your project with the following configuration:
 
 <details open>
-<summary>config/Share/config_default.php</summary>
+<summary markdown='span'>config/Share/config_default.php</summary>
 
 ```php
 <?php
@@ -523,7 +523,7 @@ Make sure you don't use the same Redis database for Yves and Zed sessions.
 * If you're using file system as session storage, extend your project with the following configuration:
 
 <details open>
-<summary>config/Shared/config_default.php</summary>
+<summary markdown='span'>config/Shared/config_default.php</summary>
 
 ```php
 <?php
@@ -558,7 +558,7 @@ Find the list of all the plugins installed along with new modules:
 | `StorageRedisPlugin` | Provides a Redis-based storage implementation. | None | `Spryker\Client\StorageRedis\Plugin` |
 
 <details open>
-<summary>src/Pyz/Yves/Session/SessionDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/Session/SessionDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -590,7 +590,7 @@ class SessionDependencyProvider extends SprykerSessionDependencyProvider
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/Session/SessionDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Session/SessionDependencyProvider.php</summary>
 
 ```php
 <?php

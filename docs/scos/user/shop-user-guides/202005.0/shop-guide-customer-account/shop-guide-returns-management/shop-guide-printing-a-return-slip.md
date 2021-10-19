@@ -16,11 +16,10 @@ related:
     link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/references/return-details-reference-information.html
 ---
 
-
 After you have [created a return](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/shop-guide-returns-management/shop-guide-creating-a-return.html) for order or a Shop Owner has done it for you, you can [print the return slip](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html).
 
 To print the return slip:
 
 1. Go to *My Account > Returns* page.
 2. In the Actions column next to the return you want to print the return slip for, click **Print Slip**. This takes you to the print version of the return slip.
-![Return slip](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Return+Management/Return+Management+Feature+Overview/return-slip.png) 
+![Return slip](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Return+Management/Return+Management+Feature+Overview/return-slip.png)

@@ -56,7 +56,7 @@ The company user contains all the information about the customer and has a one-t
 Company users can perform the following actions on the Storefront:
 
 <details>
-<summary>Create a company</summary>
+<summary markdown='span'>Create a company</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account/Company+Account+Feature+Overview/create-a-company.gif)
 
@@ -64,20 +64,20 @@ Company users can perform the following actions on the Storefront:
 
 
 <details>
-<summary>Create a business unit</summary>
+<summary markdown='span'>Create a business unit</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account/Company+Account+Feature+Overview/create-a-business-unit.gif)
 
 </details>
 
 <details>
-<summary>Edit a business unit</summary>
+<summary markdown='span'>Edit a business unit</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account/Company+Account+Feature+Overview/edit-a-business-unit.gif)
 </details>
 
 <details>
-<summary>Delete a business unit</summary>
+<summary markdown='span'>Delete a business unit</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account/Company+Account+Feature+Overview/delete-a-business-unit.gif)
 
@@ -85,20 +85,20 @@ Company users can perform the following actions on the Storefront:
 
 
 <details>
-<summary>Create a user</summary>
+<summary markdown='span'>Create a user</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account/Company+Account+Feature+Overview/create-a-user.gif)
 </details>
 
 <details>
-<summary>Edit, enable, and disable a user</summary>
+<summary markdown='span'>Edit, enable, and disable a user</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account/Company+Account+Feature+Overview/enable-disable-edit-a-user.gif)
 
 </details>
 
 <details>
-<summary>Delete a user</summary>
+<summary markdown='span'>Delete a user</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account/Company+Account+Feature+Overview/delete-a-user.gif)
 </details>

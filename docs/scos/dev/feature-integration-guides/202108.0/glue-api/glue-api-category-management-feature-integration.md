@@ -24,9 +24,9 @@ To start feature integration, overview and install the necessary features:
 |FEATURE  |VERSION |REQUIRED SUB-FEATURE |
 |---  |--- |--- |
 | Spryker Core |dev-master |[Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Category Management |dev-master| | 
+| Category Management |dev-master| |
 
-  
+
 
 ## 1) Install the required modules using Composer
 
@@ -34,23 +34,26 @@ Run the following command to install the required modules:
 ```
 composer require spryker/categories-rest-api:"^1.1.3" --update-with-dependencies
 ```
-  
+
 {% info_block warningBox "Verification" %}
 
 
-Make sure that the following module has been installed: 
-|MODULE |EXPECTED DIRECTORY |
-|--- |--- |
+Make sure that the following module has been installed:
+
+| MODULE |EXPECTED DIRECTORY |
+| --- | --- |
 |CategoriesRestApi |vendor/spryker/categories-rest-api|
 
 
 {% endinfo_block %}
+
 ## 2) Set up configuration
 
 Set up the following configuration
 
 **src/Pyz/Glue/NavigationsRestApi/NavigationsRestApiConfig.php**
-```
+
+```php
 <?php
 
 namespace Pyz\\Glue\\NavigationsRestApi;
@@ -73,15 +76,16 @@ class NavigationsRestApiConfig extends SprykerNavigationsRestApiConfig
     }
 }
 ```
-  
+
 
 ## 3) Set up transfer objects
 
 Generate transfer changes:
-```
+
+```bash
 console transfer:generate
 ```
-  
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following changes have occurred:
@@ -93,22 +97,21 @@ Make sure that the following changes have occurred:
 |RestCategoryNodesAttributesTransfer |class |created |src/Generated/Shared/Transfer/RestCategoryNodesAttributesTransfer|
 
 {% endinfo_block %}
+
 ## 4) Enable resources and relationships
 
 Activate the following plugins:
 
-  
-
-|PLUGIN| SPECIFICATION| PREREQUISITES| NAMESPACE| 
+|PLUGIN| SPECIFICATION| PREREQUISITES| NAMESPACE|
 |--- |--- |--- |--- |
-|CategoriesResourceRoutePlugin| Registers the `category-tree` resource.| | Spryker\Glue\CategoriesRestApi\Plugin| 
-|CategoryResourceRoutePlugin| Registers the `category-nodes` resource.| | Spryker\Glue\CategoriesRestApi\Plugin | 
+|CategoriesResourceRoutePlugin| Registers the `category-tree` resource.| | Spryker\Glue\CategoriesRestApi\Plugin|
+|CategoryResourceRoutePlugin| Registers the `category-nodes` resource.| | Spryker\Glue\CategoriesRestApi\Plugin |
 |CategoryNodeRestUrlResolverAttributesTransferProviderPlugin| Maps the data for `RestUrlResolverAttributesTransfer` from `UrlStorageTransfer`.| | Spryker\Glue\CategoriesRestApi\Plugin\UrlsRestApi|
 
-  
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
-```
+
+```php
 <?php
 
 namespace Pyz\Glue\GlueApplication;
@@ -131,10 +134,11 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
-  
+
 
 **src/Pyz/Glue/UrlsRestApi/UrlsRestApiDependencyProvider.php**
-```
+
+```php
 <?php
 
 namespace Pyz\Glue\UrlsRestApi;
@@ -155,17 +159,16 @@ class UrlsRestApiDependencyProvider extends SprykerUrlsRestApiDependencyProvider
     }
 }
 ```
-  
+
 
 {% info_block warningBox "Verification" %}
- 
+
 
 Make sure that the following endpoints are available:
 
 *   `http://glue.mysprykershop.com/category-trees`
-    
+
 *   `http://glue.mysprykershop.com/category-nodes/{% raw %}{{{% endraw %}category_node_id{% raw %}}}{% endraw %}`
-    
+
 
 {% endinfo_block %}
-  

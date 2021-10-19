@@ -11,6 +11,7 @@ redirect_from:
 ---
 
 ## Upgrading from Version 1.* to Version 2.*
+
 Version 2.0.0 of the ContentStorage module  introduces the following changes:
 
 * Changed Storage key structure from `content:locale:id` to `content:locale:key`.

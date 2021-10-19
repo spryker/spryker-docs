@@ -74,7 +74,7 @@ console transfer:generate
 | ShipmentMethodsByCheckoutDataResourceRelationshipPlugin | Adds `shipment-methods` resource as relationship in case `RestCheckoutDataTransfer` is provided as payload. | None | Spryker\Glue\ShipmentsRestApi\Plugin\GlueApplication |
 
 <details open>
-<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
    
 ```php
 <?php
@@ -122,7 +122,7 @@ Mappers should be configured on a project level in order to map the data from th
 | ShipmentQuoteMapperPlugin | Adds a mapper that maps Shipment information to `QuoteTransfer`. | None | Spryker\Zed\ShipmentsRestApi\Communication\Plugin\CheckoutRestApi |
 
 <details open>
-<summary>src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
    
 ```php
 <?php
@@ -165,7 +165,7 @@ Activate the following plugins:
 | ShipmentMethodCheckoutDataValidatorPlugin | Verifies if a shipment method is valid. | None | Spryker\Zed\ShipmentsRestApi\Communication\Plugin\CheckoutRestApi |
 
 <details open>
-<summary>src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
    
 ```php
 <?php
@@ -192,7 +192,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
    
 ```php
 <?php
@@ -222,7 +222,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 To verify that `SelectedShipmentMethodCheckoutDataResponseMapperPlugin` is activated, send a *POST* request to the `http://glue.mysprykershop.com/checkout-data` endpoint with shipment method id and make sure that you get not empty `selectedShipmentMethods` attribute in response:
 <details open>
-<summary>Response example</summary>
+<summary markdown='span'>Response example</summary>
    
 ```json
 {

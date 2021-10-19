@@ -36,7 +36,7 @@ It is important to make sure that they extend the base classes from the Spryker 
 6.  Activate the product category filters collector by adding `ProductCategoryFilterCollectorPlugin` to    the Storage Collector plugin stack.
 
 <details open>
-    <summary>Example: collector plugin list extension</summary> 
+    <summary markdown='span'>Example: collector plugin list extension</summary> 
     
 ```php
 <?php

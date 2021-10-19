@@ -35,7 +35,7 @@ Another change is that new methods for enabling and disabling company user were 
 They both return `CompanyUserResponseTransfer` object, that can be used to determine whether the attempt was successful or not.
 
 <details open>
-<summary>Code sample:</summary>
+<summary markdown='span'>Code sample:</summary>
     
 ```php
 /**
@@ -57,7 +57,7 @@ public function enableCompanyUser(CompanyUserTransfer $companyUserTransfer): Com
 </details>
     
 <details open>
-<summary>Code sample:</summary>
+<summary markdown='span'>Code sample:</summary>
     
 ```php/**
  * Specification:

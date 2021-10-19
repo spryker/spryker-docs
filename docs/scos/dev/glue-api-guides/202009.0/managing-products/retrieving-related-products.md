@@ -64,7 +64,7 @@ To get related items of an abstract product, send the request:
 ### Response
 
 <details open>
-<summary>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
     {
@@ -306,7 +306,7 @@ To get related items of an abstract product, send the request:
 
 
 <details open>
-<summary>Response sample with included product labels</summary>
+<summary markdown='span'>Response sample with included product labels</summary>
 
 ```json
  {
@@ -656,7 +656,7 @@ To get upselling items for all products in a cart of a registered customer, send
 ### Response
 
 <details open>
-<summary>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -907,7 +907,7 @@ To get upselling items for all products in a cart of a registered customer, send
 </details>
 
 <details open>
-<summary>Response sample with product labels</summary>
+<summary markdown='span'>Response sample with product labels</summary>
 
 ```json
 {
@@ -1044,7 +1044,7 @@ To retrieve upselling products of a guest cart, send the request:
 ### Response
 
 <details open>
-<summary>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -1247,7 +1247,7 @@ To retrieve upselling products of a guest cart, send the request:
 
 
 <details open>
-<summary>Response sample with product labels</summary>
+<summary markdown='span'>Response sample with product labels</summary>
     
 ```json
 {

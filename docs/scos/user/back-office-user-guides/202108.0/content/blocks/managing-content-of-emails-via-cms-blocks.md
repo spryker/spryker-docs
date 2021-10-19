@@ -14,9 +14,9 @@ related:
     link: docs/scos/user/features/page.version/cms-feature-overview/email-as-a-cms-block-overview.html
 ---
 
-You can manage the content of emails you send to customers by editing [email templates via CMS Blocks](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html). 
+You can manage the content of emails you send to customers by editing [email templates via CMS Blocks](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html).
 
-There is a number of default emails that are automatically sent on different occasions, like customer registration or order shipment. You can change the default emails by editing their email templates via respective CMS blocks. For the full list of the emails with their email CMS blocks, see [Default email templates](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html#default-email-templates) 
+There is a number of default emails that are automatically sent on different occasions, like customer registration or order shipment. You can change the default emails by editing their email templates via respective CMS blocks. For the full list of the emails with their email CMS blocks, see [Default email templates](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html#default-email-templates)
 
 ## Prerequisites
 
@@ -24,9 +24,8 @@ To start managing the content of emails, go to **Content > Blocks**.
 
 Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
 
----
-
 ## Creating an email CMS block
+
 If your development team has introduced a new email for your project, you have to create an email CMS Block for it.
 
 {% info_block infoBox "Info" %}
@@ -37,7 +36,7 @@ You don’t need to create new email CMS Blocks for the [default email templates
 
 To create an email CMS Block:
 
-1. On the *Overview of CMS Blocks* page, select **+ Create block**. 
+1. On the *Overview of CMS Blocks* page, select **+ Create block**.
 2. On the *Create CMS block* page, select a **Template**.
 3. Enter a **Name**.
 4. Click **Save**. This saves your block and takes you to the page.
@@ -47,7 +46,8 @@ To create an email CMS Block:
 On the *Create CMS block* page, you can ignore all the other fields, including *Store Relation*, as they do not affect the behavior of the email templates.
 
 {% endinfo_block %}
-5. Enter the content of your email for all the locales. 
+
+5. Enter the content of your email for all the locales.
 
 {% info_block warningBox "Note" %}
 
@@ -61,7 +61,7 @@ Content Items are not rendered in emails.
 
 {% info_block warningBox "Note" %}
 
-You don’t need to activate the email CMS block, as the deactivated status of the email CMS block does not prevent emails from being sent. 
+You don’t need to activate the email CMS block, as the deactivated status of the email CMS block does not prevent emails from being sent.
 
 {% endinfo_block %}
 
@@ -91,7 +91,7 @@ To edit an email CMS block:
 
 {% info_block warningBox "Note" %}
 
-If you updated the **name**, pass it to your development team to update the name of the respective [.twig email template](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html#cms-block-email-template). 
+If you updated the **name**, pass it to your development team to update the name of the respective [.twig email template](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html#cms-block-email-template).
 
 {% endinfo_block %}
 
@@ -116,7 +116,6 @@ The page refreshes, displaying the message about the successful update of the em
 ## Editing content of email CMS blocks
 
 To edit the content of an Email CMS block:
-
 1. In the *Actions* column of the *Overview of CMS Blocks* page, select **Edit Placeholder** next to the email CMS block you want to update.
 
 2. On the *Edit Block Glossary: [Block ID]* page, update the content of the email CMS block. You can use plain text to create content of the emails, or apply glossary keys and variables. See **Tips & tricks** for details.
@@ -127,9 +126,8 @@ Content Items are not rendered in emails.
 
 {% endinfo_block %}
 
-3. Select **Save**. 
-The page refreshed displaying the message about the successful update. 
-
+3. Select **Save**.
+The page refreshed displaying the message about the successful update.
 
 **Tips & tricks**
 

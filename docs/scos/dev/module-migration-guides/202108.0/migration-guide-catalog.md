@@ -15,11 +15,13 @@ related:
 ---
 
 ## Upgrading from Version 5.5* to  Version 5.6*
+
 {% info_block errorBox "Prerequisites" %}
 
-This migration guide is a part of the [Search migration effort](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-search.html#upgrading-from-version-8-9---to-version-8-10--). 
+This migration guide is a part of the [Search migration effort](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-search.html#upgrading-from-version-8-9---to-version-8-10--).
 
 {% endinfo_block %}
+
 To upgrade the module, do the following:
 1. Remove usages of all deprecated query expander and result formatter plugins (if any) from `Pyz\Client\Catalog\CatalogDependencyProvider`
 ```php
@@ -44,7 +46,7 @@ Spryker\Client\Search\Plugin\Elasticsearch\ResultFormatter\SuggestionByTypeResul
 2. Enable the replacement plugins:
 
 Pyz\Client\Catalog
-   
+
 ```php
 <?php
 

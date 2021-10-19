@@ -63,7 +63,7 @@ If you are authenticating as a newly created customer, make sure to verify your 
 
 
 <details open>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
     
 ```json
 {

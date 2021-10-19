@@ -1,5 +1,5 @@
 ---
-title: Migration guide- Auth module to SecurityGui module
+title: Migration guide - Auth module to SecurityGui module
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/migration-guide-auth-module-to-securitygui-module
 originalArticleId: 52ee3c29-7fb3-4537-91c6-e9df882dd457
@@ -38,11 +38,11 @@ The steps in this section show you how to re-configure the YVES system user and 
     ```php
     use Spryker\Shared\Auth\AuthConstants;
     ```
-    * Add: 
+    * Add:
     ```php
     use Spryker\Shared\SecuritySystemUser\SecuritySystemUserConstants;
     ```
-    * Change: 
+    * Change:
     ```php
     $config[AuthConstants::AUTH_DEFAULT_CREDENTIALS]['yves_system']['token'] = 'JDJ5JDEwJFE0cXBwYnVVTTV6YVZXSnVmM2l1UWVhRE94WkQ4UjBUeHBEWTNHZlFRTEd4U2F6QVBqejQ2';
     ```
@@ -51,11 +51,11 @@ The steps in this section show you how to re-configure the YVES system user and 
     $config[SecuritySystemUserConstants::AUTH_DEFAULT_CREDENTIALS]['yves_system']['token'] = 'JDJ5JDEwJFE0cXBwYnVVTTV6YVZXSnVmM2l1UWVhRE94WkQ4UjBUeHBEWTNHZlFRTEd4U2F6QVBqejQ2';
     ```
 3. Adjust `config/Shared/config_default.php`.
-    *  Remove: 
+    *  Remove:
     ```php
     use Spryker\Shared\Auth\AuthConstants;
     ```
-    *  Add: 
+    *  Add:
     ```php
     use Spryker\Shared\SecuritySystemUser\SecuritySystemUserConstants;
     ```
@@ -82,10 +82,10 @@ The steps in this section show you how to re-configure the YVES system user and 
     ],
     ];
     ```
-    * Change: 
+    * Change:
     ```php
     $config[AuthConstants::SYSTEM_USER_SESSION_REDIS_LIFE_TIME] = 20;
-    ``` 
+    ```
     to:             
      ```php
     $config[SecuritySystemUserConstants::SYSTEM_USER_SESSION_REDIS_LIFE_TIME] = 20;
@@ -93,11 +93,11 @@ The steps in this section show you how to re-configure the YVES system user and 
 
 4. Adjust `tests/PyzTest/Zed/Console/_data/cli_sandbox/config/Shared/config_default.php`.
 
-    *  Remove: 
+    *  Remove:
     ```php
     use Spryker\Shared\Auth\AuthConstants;
     ```
-    *  Add: 
+    *  Add:
     ```php
     use Spryker\Shared\SecuritySystemUser\SecuritySystemUserConstants;
     ```
@@ -189,7 +189,7 @@ Add `Spryker\Zed\Security\Communication\Plugin\Application\SecurityApplicationPl
             ...,
             new SecurityApplicationPlugin(),
         ];
-        
+
         ...
     }
 ```
@@ -330,7 +330,7 @@ This action is required for the SprykerTests to be up-to-date.
 composer update spryker/application --with-dependencies
 ```
 2. Adjust `tests/PyzTest/Zed/Console/_data/cli_sandbox/config/Shared/config_default.php`.
-   
+
     * Change:
     ```php
     $config[AclConstants::ACL_DEFAULT_CREDENTIALS] = [
@@ -446,7 +446,7 @@ composer update spryker/application --with-dependencies
     ],
     ];
     ```
-    
+
 ## Generate transfers
 {% info_block infoBox "Info" %}
 
@@ -473,4 +473,3 @@ console propel:install
 ```
 
 *Estimated migration time: 2 hours.*
-

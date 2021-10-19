@@ -71,7 +71,7 @@ Activate the following plugin:
 | `OrderRelationshipByOrderReferencePlugin` | Adds the `orders` resource as a relationship by order reference. | None | `Spryker\Glue\OrdersRestApi\Plugin` |
 
 <details open>
-<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
     
 ```php
 <?php
@@ -124,7 +124,7 @@ To verify that `OrdersResourceRoutePlugin` is set up correctly, make sure that t
 @(Warning)(To verify that `OrderRelationshipByOrderReferencePlugin` is set up correctly, make sure that the `orders relationship is included when you request it with the `/checkout` request:)
 
 <details open>
-<summary>POST http://glue.mysprykershop.com/checkout?include=orders</summary>
+<summary markdown='span'>POST http://glue.mysprykershop.com/checkout?include=orders</summary>
 
 ```json
 {

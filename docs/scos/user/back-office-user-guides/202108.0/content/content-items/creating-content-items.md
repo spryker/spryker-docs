@@ -20,14 +20,14 @@ This topic describes how to create content items in the Back Office.
 
 ## Prerequisites
 
-To start working with сontent items, go to **Content** > **Content Items**.
+To start working with content items, go to **Content** > **Content Items**.
 
 Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
 
 
 ## Select a content item
-Follow the steps below to select a content item you want to create:
 
+Follow the steps below to select a content item you want to create:
 1. On the *Overview of Content Items* page, click **Add Content Item** in the top right corner of the page.
 2.  Select a content item type you want to create and follow the steps from the corresponding section:
     * [Create a banner](#create-a-banner-content-item)
@@ -71,7 +71,6 @@ For the use cases and examples of the banner content item, see [Banner Content I
 {% endinfo_block %}
 
 Follow the steps to create a banner:
-
 1. On the *Create Content Item: Banner* page, enter **Name** and **Description**. The fields are mandatory.
 2. In the *Default* tab, fill out the following mandatory fields:
     * **Title**
@@ -101,10 +100,8 @@ Make sure the banner has been created:
 {% endinfo_block %}
 
 **Tips & Tricks**
-On the *Create Content Item: Banner* page, you can do the following:
-
+<br>On the *Create Content Item: Banner* page, you can do the following:
 * Clear all the fields in a tab by clicking **Clear locale**.
-
 * Go back to the *Overview of Content Items* page by clicking **Back to Content Items** in the top right corner.
 
 {% info_block warningBox "Saving changes" %}
@@ -170,7 +167,7 @@ Make sure the abstract product list has been created:
 {% endinfo_block %}
 
 **Tips & tricks**
-On the *Create Content Item: Abstract Product List* page, you can do the following:
+<br>On the *Create Content Item: Abstract Product List* page, you can do the following:
 
 * Filter the products in the *Add more products* table by entering a product name or SKU in the *Search* field.
 * Clear all the fields in a tab by clicking **Clear locale**.
@@ -241,7 +238,7 @@ Make sure the product set has been created:
 {% endinfo_block %}
 
 **Tips & tricks**
-On the *Create Content Item: Product Set* page, you can do the following:
+<br>On the *Create Content Item: Product Set* page, you can do the following:
 
 * Filter the product sets in the *Available Product Sets* table by entering a product set name in the **Search** field.
 * Clear all the fields in a tab by clicking **Clear locale**.
@@ -279,7 +276,6 @@ For the use cases and examples of the file list content item, see [File List Con
 {% endinfo_block %}
 
 Follow the steps to create a file list:
-
 1. On the *Create Content Item: File List* page, enter **Name** and **Description**. The fields are mandatory.
 2. In the *Default* tab, add files to the file list as follows:
     1.  In the *Available Files* table, click **+Add to list** next to the desired files.
@@ -315,7 +311,7 @@ Make sure the file list has been created:
 {% endinfo_block %}
 
 **Tips & tricks**
-On the *Create Content Item: File List* page, you can do the following:
+<br>On the *Create Content Item: File List* page, you can do the following:
 
 * Filter the files in the *Available Files* table by entering a file name in the *Search* field.
 * Clear all the fields in a tab by clicking **Clear locale**.
@@ -345,7 +341,6 @@ The following table describes the attributes on the *Create Content Item: File L
 ## Create a navigation content item
 
 To create a navigation content item:
-
 1. On the *Create Content Item: Navigation* page, enter **Name** and **Description**.
 2. In the *Default* tab, select a navigation from the *Navigation* drop-down list. See [Creating navigation elements](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/managing-navigation-elements.html#creating-a-navigation-element) to learn about creating navigation elements.
 
@@ -373,7 +368,7 @@ The following table describes the attributes on the *Create Content Item: Naviga
 | Navigation | Field to select an existing navigation element. |
 
 **What's next?**
-The content item is created. Now, you can add it to a CMS block.
+<br>The content item is created. Now, you can add it to a CMS block.
 
 * To learn about adding content item to CMS blocks or a pages, see [Adding content items to CMS pages and blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).
 * To learn about editing content items, see [Editing content items](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/editing-content-items.html).

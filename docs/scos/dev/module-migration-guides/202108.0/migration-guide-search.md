@@ -12,6 +12,7 @@ redirect_from:
 ---
 
 ## Upgrading from Version 8.9.* to Version 8.10.*
+
 {% info_block errorBox "Prerequisites" %}
 
 This migration guide is a part of the [Search migration effort](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html).
@@ -241,10 +242,15 @@ We moved the possible facet type option constants from `Spryker\Client\Search\Pl
 * `FacetConfigBuilder::TYPE_BOOL`-> not supported
 
 We have added a type field to the default “page” index type defined by `Search/src/Spryker/Shared/Search/IndexMap/search.json`. With this field it’s possible to differentiate multiple item types (e.g. products, cms pages, categories, etc.). Additionally, we also fixed the indexing strategy of store and `locale` field, they are set to “not_analyzed”. These changes require a repeated indexation of your existing data. In a non-production environment this means that you need to delete your index and then install the new one by running `vendor/bin/console setup:search`.
+
 {% info_block errorBox "Important" %}
+
 In production environments, follow the official Elasticsearch guide about [Index Aliases and Zero Downtime](https://www.elastic.co/guide/en/elasticsearch/guide/current/index-aliases.html).
+
 {% endinfo_block %}
+
 ***
+
 ## Upgrading from Version 3.* to Version 4.*
 
 With the version 4 of the Search module, the logic and configuration of how the results are sorted has been changed. Previously there were two request parameters that controlled what field we are sorting by as well as the direction of the sorting (e.g /?sort=price&sort_order=desc).

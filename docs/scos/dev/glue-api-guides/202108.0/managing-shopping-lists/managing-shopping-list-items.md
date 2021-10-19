@@ -70,7 +70,7 @@ To add items to a shopping list, send the request:
 
 ### Response
 <details open>
-<summary>Response sample</summary>
+<summary markdown='span'>markdown='span'>Response sample</summary>
    
 ```json
   {
@@ -91,7 +91,7 @@ To add items to a shopping list, send the request:
 </details>
 
 <details open>
-<summary>Response sample with concrete products</summary>
+<summary markdown='span'>markdown='span'>Response sample with concrete products</summary>
 
 ```json
     {
@@ -219,7 +219,7 @@ To change item quantity in a shopping list, send the request:
 
 ### Response
 <details open>
-<summary>Response sample</summary>
+<summary markdown='span'>markdown='span'>Response sample</summary>
 
 ```json
     {
@@ -240,7 +240,7 @@ To change item quantity in a shopping list, send the request:
 </details>     
 
 <details open>
-<summary>Response sample with information on concrete products</summary>
+<summary markdown='span'>markdown='span'>Response sample with information on concrete products</summary>
 
 ```json
 {

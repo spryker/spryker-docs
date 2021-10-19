@@ -39,7 +39,7 @@ If the request is successful, the resource responds with a **RestCategoryTreesRe
 \*The fields mentioned are all attributes in the response. Type and ID are not mentioned
 
 <details open>
-<summary>Sample </summary>
+<summary markdown='span'>Sample </summary>
 
 ```js
 {
@@ -158,7 +158,7 @@ where `058` is the SKU of the abstract product.
 If the request is successful, the response will contain category nodes which a product belongs to.
 
 <details open>
-<summary>Response sample </summary>
+<summary markdown='span'>Response sample </summary>
 
 ```js
 {
@@ -427,7 +427,7 @@ Response sample:
 \*The fields mentioned are all attributes in the response. Type and ID are not mentioned.
 
 <details open>
-<summary>Sample </summary>
+<summary markdown='span'>Sample </summary>
 
 ```js
 {

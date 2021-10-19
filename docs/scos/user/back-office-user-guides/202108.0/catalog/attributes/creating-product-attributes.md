@@ -29,9 +29,13 @@ Review the reference information before you start, or just look up the necessary
 To create a product attribute:
 1. On the *Attributes* page, select **+ Create Product Attribute**.
 2. On the *Create a Product Attribute* page, enter an **Attribute Key**.
+
 {% info_block warningBox "Attribute key format" %}
+
 The *Attribute Key* field accepts lower case letters, digits, numbers, underscores, hyphens, and colons.
+
 {% endinfo_block %}
+
 3. Select an **Input type**.
 4. To make this attribute a supper attribute, select the **Super attribute** checkbox.
     This disables the **Allow input any value other than predefined** checkbox because a super attribute always uses predefined values.
@@ -48,9 +52,9 @@ The *Attribute Key* field accepts lower case letters, digits, numbers, underscor
     This takes you to the *View Product Attribute* page with the success message displayed.
 
 **Tips & tricks**
-To apply a translation to all the other locales, select ![copy to other languages icon](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Catalog/Attributes/Creating+product+attributes/copy-to-other-languages-icon.png) *Copy to other languages* next to the **Translation** you want to apply.
+<br>To apply a translation to all the other locales, select ![copy to other languages icon](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Catalog/Attributes/Creating+product+attributes/copy-to-other-languages-icon.png) *Copy to other languages* next to the **Translation** you want to apply.
 
-### Reference infromation: Creating product attributes
+### Reference information: Creating product attributes
 
 This section describes attributes that you select and enter when creating product attributes.
 
@@ -73,7 +77,7 @@ The following table describes the attributes you enter and select on the *Create
 | Translation | Translation for either an attribute key into the other language based on the locales for which you add the translation.|
 | Translate predefined values | Checkbox that defines if the predefined values will also be translated. If selected, the predefined value itself and the *Translation* field for it appears. |
 
-The super attributes are displayed in the *Variants* tab of the *Create a Product* page of an abstract product. 
+The super attributes are displayed in the *Variants* tab of the *Create a Product* page of an abstract product.
 ![Create a product](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Attributes/Attributes:+Reference+Information/create-product.png)
 
 Once you select any super attribute, you will be able to select among its values.
@@ -86,5 +90,4 @@ In the online store, the descriptive attributes are displayed on the product det
 ![Descriptive attributes](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Attributes/Attributes:+Reference+Information/descriptive-attributes.png)
 
 ## Next steps
-* Learn how to [manage the product attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/managing-product-attributes.html). 
-
+* Learn how to [manage the product attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/managing-product-attributes.html).

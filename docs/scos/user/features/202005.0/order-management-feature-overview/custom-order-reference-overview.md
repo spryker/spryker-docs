@@ -23,7 +23,7 @@ Keep in mind that the feature is available only for logged-in users.
 
 <details open>
 
-<summary>Cart Page</summary>
+<summary markdown='span'>Cart Page</summary>
 
 ![yves-custom-order-ref-cart-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Custom+Order+Reference/yves-custom-order-ref-cart-page.png) 
 
@@ -31,7 +31,7 @@ Keep in mind that the feature is available only for logged-in users.
 
 <details open>
 
-<summary>Summary Page</summary>
+<summary markdown='span'>Summary Page</summary>
 
 ![yves-custom-order-ref-summary-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Custom+Order+Reference/yves-custom-order-ref-summary-page.png) 
 
@@ -39,7 +39,7 @@ Keep in mind that the feature is available only for logged-in users.
 
 <details open>
 
-<summary>Order Details Page </summary>
+<summary markdown='span'>Order Details Page </summary>
 
 ![yves-custom-order-ref-order-details-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Custom+Order+Reference/yves-custom-order-ref-order-details-page.png) 
 

@@ -76,7 +76,7 @@ Availability of a product bundle is defined by the availability of each product 
 In the [state machine](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html), a developer can use the `reserved` parameter to define the states at which the order items are reserved. There can also be states that release an item. For example, when payment fails and order is cancelled, the item is not reserved anymore:
 
 <details open>
-<summary>State machine example</summary>
+<summary markdown='span'>markdown='span'>State machine example</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/state-machine.png)
 

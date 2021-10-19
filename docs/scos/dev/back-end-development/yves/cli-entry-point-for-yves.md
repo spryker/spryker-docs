@@ -29,7 +29,7 @@ To create a console command for Yves, you need to create a class inside the `Plu
 
 <details open>
 
-<summary>Pyz\Yves\YourModule\Plugin\Console</summary>
+<summary markdown='span'>Pyz\Yves\YourModule\Plugin\Console</summary>
 
 ```php
 <?php

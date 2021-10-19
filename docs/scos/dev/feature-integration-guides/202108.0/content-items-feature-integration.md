@@ -390,7 +390,7 @@ Make sure that, when content banners are exported or created, updated, deleted i
 {% endinfo_block %}
 
 <details open>
-    <summary>EXAMPLE EXPECTED DATA FRAGMENT: content:en_us:br1</summary>
+    <summary markdown='span'>EXAMPLE EXPECTED DATA FRAGMENT: content:en_us:br1</summary>
 
 ```text
 {
@@ -408,7 +408,7 @@ Make sure that, when content banners are exported or created, updated, deleted i
 </details>
 
 <details open>
-    <summary>EXAMPLE EXPECTED DATA FRAGMENT: content:en_us:apl2</summary>
+    <summary markdown='span'>EXAMPLE EXPECTED DATA FRAGMENT: content:en_us:apl2</summary>
     
 ```text
 {
@@ -425,7 +425,7 @@ Make sure that, when content banners are exported or created, updated, deleted i
 </details>
 
 <details open>
-    <summary>EXAMPLE EXPECTED DATA FRAGMENT: content:en_us:ps-1</summary>
+    <summary markdown='span'>EXAMPLE EXPECTED DATA FRAGMENT: content:en_us:ps-1</summary>
     
 ```text
 {
@@ -439,7 +439,7 @@ Make sure that, when content banners are exported or created, updated, deleted i
 </details>
 
 <details open>
-    <summary>EXAMPLE EXPECTED DATA FRAGMENT: content:en_us:0d9f4722-d076-5acc-9d8e-e9daff7cd61</summary>
+    <summary markdown='span'>EXAMPLE EXPECTED DATA FRAGMENT: content:en_us:0d9f4722-d076-5acc-9d8e-e9daff7cd61</summary>
     
 ```text
 {
@@ -679,7 +679,7 @@ Enable the following behaviors by registering the plugins:
 
 
 <details open>
-    <summary>src/Pyz/Zed/ContentGui/ContentGuiDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Zed/ContentGui/ContentGuiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -761,7 +761,7 @@ Make sure that, when editing CMS pages and blocks in the WYSIWYG editor, in the 
 
 
 <details open>
-    <summary>src/Pyz/Zed/CmsBlockGui/CmsBlockGuiDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Zed/CmsBlockGui/CmsBlockGuiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -801,7 +801,7 @@ class CmsBlockGuiDependencyProvider extends SprykerCmsBlockGuiDependencyProvider
 
 
 <details open>
-    <summary>src/Pyz/Zed/CmsGui/CmsGuiDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Zed/CmsGui/CmsGuiDependencyProvider.php</summary>
 
 ```php
 <?php

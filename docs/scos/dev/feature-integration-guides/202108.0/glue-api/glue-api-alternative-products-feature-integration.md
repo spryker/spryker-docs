@@ -1,6 +1,6 @@
 ---
 title: Glue API - Alternative products feature integration
-description: This guide will navigate you through the process of installing and configuring the Alternative Products API feature in Spryker OS.
+description: This guide will navigate you through the process of installing and configuring the Alternative Products API feature in the Spryker OS.
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-alternative-products-feature-integration
 originalArticleId: 0cac6f60-0429-4b7e-8ff4-9236b8cc51d0
@@ -15,14 +15,15 @@ related:
 ---
 
 ## Install Feature API
+
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| Name | Version | Required Sub-Feature |
+| NAME | VERSION | REQUIRED SUB-FEATURE |
 | --- | --- | --- |
-| Spryker Core | 201907.0 | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
-| Alternative Products | 201907.0 | |
-| Products | 201907.0 | [Product API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
+| Alternative Products | {{page.version}} | |
+| Products | {{page.version}} | [Product API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
 
@@ -32,24 +33,27 @@ Run the following command to install the required modules:
 composer require spryker/alternative-products-rest-api:"^1.0.0" --update-with-dependencies
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
-    Make sure that the following module is installed:
+{% info_block warningBox “Verification” %}
 
-| Module | Expected Directory |
+Make sure that the following module is installed:
+
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-| `AlternativeProductsRestApi` | `vendor/spryker/alternative-products-rest-api` |
-</div></section>
+| AlternativeProductsRestApi | vendor/spryker/alternative-products-rest-api |
 
-## 2) Set up Behavior
+{% endinfo_block %}
+
+
+## 2) Set up behavior
 
 Activate the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `AbstractAlternativeProductsResourceRoutePlugin` | Registers the abstract alternative products resource. | None | `Spryker\Glue\AlternativeProductsRestApi\Plugin\GlueApplication` |
-| `ConcreteAlternativeProductsResourceRoutePlugin` | Registers the concrete alternative products resource. | None | `Spryker\Glue\AlternativeProductsRestApi\Plugin\GlueApplication` |
+| AbstractAlternativeProductsResourceRoutePlugin | Registers the abstract alternative products resource. | None | Spryker\Glue\AlternativeProductsRestApi\Plugin\GlueApplication |
+| ConcreteAlternativeProductsResourceRoutePlugin | Registers the concrete alternative products resource. | None | Spryker\Glue\AlternativeProductsRestApi\Plugin\GlueApplication |
 
-src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php
+**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
 ```php
 <?php
@@ -75,10 +79,11 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
+{% info_block warningBox “Verification” %}
+
 Make sure that the following endpoints are available:
 
-* `http://example.org/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/abstract-alternative-products`
-* `http://example.org/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/abstract-alternative-products`
+* `http://mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/abstract-alternative-products`
+* `http://mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/abstract-alternative-products`
 
-</div></section>
+{% endinfo_block %}

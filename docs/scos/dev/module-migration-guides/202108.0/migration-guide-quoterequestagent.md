@@ -11,6 +11,7 @@ redirect_from:
 ---
 
 ## Upgrading from Version 2.x.x to Version 3.x.x
+
 In this new version of the `QuoteRequestAgentPage` module, we have added support of shipment costs. You can find more details about the changes on the [QuoteRequestAgentPage module release page](https://github.com/spryker-shop/quote-request-agent-page/releases). The major changes are:
 
 * Added new dependency spryker/shipment:^8.4.0.
@@ -19,7 +20,7 @@ In this new version of the `QuoteRequestAgentPage` module, we have added support
 * Added new dependency spryker/persistent-cart:^3.0.0.
 * Removed several twig files.
 
-**To migrate the module `QuoteRequestAgent` from version 2.0.0 to 3.0.0, do the following: **
+**To migrate the module `QuoteRequestAgent` from version 2.0.0 to 3.0.0, do the following:**
 
 1) Update the `QuoteRequestPage` module:
 ```bash

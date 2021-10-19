@@ -69,7 +69,7 @@ Note that depending on the Login feature configuration for your project, too man
 ### Response
 
 <details open>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
     
 ```json
 {

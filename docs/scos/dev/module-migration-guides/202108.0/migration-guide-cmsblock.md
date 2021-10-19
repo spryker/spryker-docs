@@ -21,12 +21,12 @@ related:
 ## Upgrading from Version 2.* to Version 3.*
 CmsBlock version 3.0.0 introduces the following backward incompatible changes:
 
-*     Introduced the `spy_cms_block.spy_cms_block-key` unique index.
-*     Adjusted `CmsBlockWriter` to use `CmsBlockKeyProvider` that persists the `key` field while writing a content entity.
-*     Removed `CmsBlockClient`. Use the `CmsBlockStorageClient` module instead.
-*     Removed the deprecated columns in `spy_cms_block`:  `type`, `fk_page`, `value`. If you use them directly, make sure to add their definition on the project level to `src/Pyz/Zed/CmsBlock/Persistence/Propel/Schema/spy_cms_block.schema.xml`.
-*     Removed `CmsBlockConstants::YVES_THEME`. Use `CmsBlockConfig::getThemeName()` instead.
-*     Moved `CmsBlockPlaceholderTwigPlugin` to the `SprykerShop\CmsBlockWidget` module.
+* Introduced the `spy_cms_block.spy_cms_block-key` unique index.
+* Adjusted `CmsBlockWriter` to use `CmsBlockKeyProvider` that persists the `key` field while writing a content entity.
+* Removed `CmsBlockClient`. Use the `CmsBlockStorageClient` module instead.
+* Removed the deprecated columns in `spy_cms_block`:  `type`, `fk_page`, `value`. If you use them directly, make sure to add their definition on the project level to `src/Pyz/Zed/CmsBlock/Persistence/Propel/Schema/spy_cms_block.schema.xml`.
+* Removed `CmsBlockConstants::YVES_THEME`. Use `CmsBlockConfig::getThemeName()` instead.
+* Moved `CmsBlockPlaceholderTwigPlugin` to the `SprykerShop\CmsBlockWidget` module.
 
 **Upgrade the module to the new version:**
 
@@ -47,21 +47,21 @@ console transfer:generate
 
 1. On the project level in `src/Pyz/Zed/CmsBlock/Persistence/Propel/Schema/spy_cms_block.schema.xml`, update the `key` column property from `required` to `false` for data migration:
 
-src/Pyz/Zed/Content/Persistence/Propel/Schema/spy_content.schema.xml
-    
+**src/Pyz/Zed/Content/Persistence/Propel/Schema/spy_content.schema.xml**
+
 ```php
 <?xml version="1.0"?>
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed"
           xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd"
           namespace="Orm\Zed\CmsBlock\Persistence"
           package="src.Orm.Zed.CmsBlock.Persistence">
- 
+
     <table name="spy_cms_block" phpName="SpyCmsBlock">
         <column name="key" required="false" type="VARCHAR" size="255" description="Identifier for existing entities. It should never be changed."/>
     </table>
- 
+
 </database>
-``` 
+```
 
 2. Run the database migration:
 ```bash
@@ -70,18 +70,18 @@ src/Pyz/Zed/Content/Persistence/Propel/Schema/spy_content.schema.xml
 
 3. Create the `cms-block:generate-keys` command in `src/Pyz/Zed/CmsBlock/Communication/Console/CmsBlockKeyGeneratorConsoleCommand.php`:
 
-src/Pyz/Zed/CmsBlock/Communication/Console/CmsBlockKeyGeneratorConsoleCommand.php
-    
+**src/Pyz/Zed/CmsBlock/Communication/Console/CmsBlockKeyGeneratorConsoleCommand.php**
+
 ```php
 <?php
- 
+
 /**
  * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
- 
+
 namespace Pyz\Zed\CmsBlock\Communication\Console;
- 
+
 use Orm\Zed\CmsBlock\Persistence\Map\SpyCmsBlockTableMap;
 use Orm\Zed\CmsBlock\Persistence\SpyCmsBlockQuery;
 use Spryker\Zed\CmsBlock\Business\KeyProvider\CmsBlockKeyProvider;
@@ -91,41 +91,41 @@ use Spryker\Zed\CmsBlock\Persistence\CmsBlockRepositoryInterface;
 use Spryker\Zed\Kernel\Communication\Console\Console;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
- 
+
 class ContentItemKeyGeneratorConsoleCommand extends Console
 {
     protected const COMMAND_NAME = 'cms-block:generate-keys';
     protected const LIMIT_CMS_BLOCKS = 1000;
- 
+
     protected function configure(): void
     {
         $this->setName(static::COMMAND_NAME);
         $this->setDescription('CmsBlock key generator');
     }
- 
+
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $offset = 0;
         $cmsBlocks = $this->findCmsBlocks($offset);
- 
+
         while($cmsBlocks->count()) {
- 
+
             foreach ($cmsBlocks as $cmsBlock) {
                 $cmsBlock->setKey(
                     $this->createCmsBlockKeyProvider()->generateKeyByIdCmsBlock($cmsBlock->getIdCmsBlock())
                 );
             }
- 
+
             $cmsBlocks->save();
             $offset += static::LIMIT_CONTENT_ITEMS;
             $cmsBlocks = $this->findCmsBlocks($offset);
         }
     }
- 
+
     protected function findCmsBlocks($offset): array
     {
         $clause = SpyCmsBlockTableMap::COL_KEY . " = '' OR " . SpyCmsBlockTableMap::COL_KEY . " IS NULL";
- 
+
         return (new SpyCmsBlockQuery())
             ->where($clause)
             ->offset($offset)
@@ -133,14 +133,14 @@ class ContentItemKeyGeneratorConsoleCommand extends Console
             ->orderByIdCmsBlock()
             ->find();
     }
- 
+
     protected function createCmsBlockKeyProvider(): CmsBlockKeyProviderInterface
     {
         return new CmsBlockKeyProvider(
             $this->createCmsBlockRepository()
         );
     }
- 
+
     protected function createCmsBlockRepository(): CmsBlockRepositoryInterface
     {
         return new CmsBlockRepository();
@@ -155,19 +155,19 @@ console cms-block:generate-keys
 
 9. Revert the previous changes to the file `spy_cms_block.schema.xml` by restoring the `required` value of key to `true`:
 
-src/Pyz/Zed/Content/Persistence/Propel/Schema/spy_content.schema.xml
-    
+**src/Pyz/Zed/Content/Persistence/Propel/Schema/spy_content.schema.xml**
+
 ```php
 <?xml version="1.0"?>
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed"
           xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd"
           namespace="Orm\Zed\CmsBlock\Persistence"
           package="src.Orm.Zed.CmsBlock.Persistence">
- 
+
     <table name="spy_cms_block" phpName="SpyCmsBlock">
         <column name="key" required="true" type="VARCHAR" size="255" description="Identifier for existing entities. It should never be changed."/>
     </table>
- 
+
 </database>
 ```
 
@@ -204,9 +204,9 @@ If you have a custom CMS Block Collector, make sure that it collects CMS Blocks 
 8. The newly created `spy_cms_block_store` table definess 1 row per CMS Block-store association. Populate this table according to your requirements.
 
 **Example data**
-    
+
 **Assumptions**
-You have the following CMS Blocks: Block_1, Block_2, and stores: AT, DE, US.
+<br>You have the following CMS Blocks: Block_1, Block_2, and stores: AT, DE, US.
 
 The `spy_cms_block_store` can have a configuration like this:
 
@@ -218,15 +218,17 @@ The `spy_cms_block_store` can have a configuration like this:
 | Block_2 | AT |
 
 This example defines "Block_1" to be enabled in all of your stores, but restricts "Block_2" to AT store only.
-    
+
 {% info_block warningBox "IMPORTANT" %}
+
 Even if you have 1 store, the associations between CMS Blocks and stores have to be defined.
+
 {% endinfo_block %}
-    
+
 **Example migration query**
-    
+
 To populate the new `spy_cms_block_store` table to have all CMS Blocks in all stores as an initial configuration, run the following query:
-    
+
 ```sql
 PostgreSQL:
 INSERT INTO spy_cms_block_store (id_cms_block_store, fk_cms_block, fk_store)

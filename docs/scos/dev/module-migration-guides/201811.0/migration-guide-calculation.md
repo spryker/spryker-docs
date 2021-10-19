@@ -30,7 +30,7 @@ By default the demoshop ships with these plugins. If you have your custom plugin
 If you want to keep having old calculated fields, add the plugins to `getQuoteCalculatorPluginStack`. Take into consideration, that we recommend you discard old plugins and use the new ones.
 
 <details open>
-<summary>Code sample:</summary>
+<summary markdown='span'>Code sample:</summary>
 
 ```php
 <?php
@@ -54,7 +54,7 @@ The `Caclulator` module also returns `back sales.fk_customer, sales.fk_shipment_
 After this you should see new values calculated + legacy ones.
 
 <details open>
-<summary>Code sample:</summary>
+<summary markdown='span'>Code sample:</summary>
 
 ```php
 <?php
@@ -185,7 +185,7 @@ It is necessary only if you extended the `\Spryker\Zed\PriceCartConnector\Busine
 If you extended the core `CartItemPricePlugin`, adapt the following code:
 
 <details open>
-<summary>Code sample:</summary>
+<summary markdown='span'>Code sample:</summary>
 
 ```php
 <?php
@@ -220,7 +220,7 @@ By default, all data is nullable so you can easily run inserts. We will provide 
 {% endinfo_block %}
 
 <details open>
-<summary>Code sample:</summary>
+<summary markdown='span'>Code sample:</summary>
 
 ```SQL
 BEGIN;
@@ -338,7 +338,7 @@ Create a class `Pyz\Zed\Sales\SalesDependencyProvider`, if not already created. 
 Include two new hydrator plugins:
 
 <details open>
-<summary>Code sample:</summary>
+<summary markdown='span'>Code sample:</summary>
 
 ```php
 <?php
@@ -387,7 +387,7 @@ This plugin expands quote items so each item has a single quantity, then runs or
 **To add a new plugin to `\Pyz\Zed\Checkout\CheckoutDependencyProvider`**
 
 <details open>
-<summary>Code sample:</summary>
+<summary markdown='span'>Code sample:</summary>
  
 ```php
 <?php
@@ -418,7 +418,7 @@ To migrate old orders, use the deprecated `SalesAggregator` to populate the new 
 All `SalesAggregator` plugins were moved to the `SalesAggregator` module.
 
 <details open>
-<summary>The final core plugins list is:</summary>
+<summary markdown='span'>The final core plugins list is:</summary>
 
 ```php
 <?php
@@ -462,7 +462,7 @@ To download this console command, go to Console Command.
 Register the following console command: `\Pyz\Zed\SalesAggregator\Communication\Console\SalesAggregatorMigrationConsole` in the Spryker Console module dependency provider: `\Pyz\Zed\Console\ConsoleDependencyProvider::getConsoleCommands` method.
 
 <details open>
-<summary>Code sample:</summary>
+<summary markdown='span'>Code sample:</summary>
 
 ```php
 <?php

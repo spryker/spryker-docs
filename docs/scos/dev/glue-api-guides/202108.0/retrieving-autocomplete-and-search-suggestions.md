@@ -52,7 +52,7 @@ To retrieve a search suggestion, send the request:
 ### Response
 
 <details open>
-    <summary>Response sample</summary>
+    <summary markdown='span'>markdown='span'>Response sample</summary>
 
 ```json
 {

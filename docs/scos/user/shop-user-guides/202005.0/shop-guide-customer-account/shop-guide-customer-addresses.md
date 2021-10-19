@@ -32,14 +32,14 @@ related:
 
 On the Addresses page, you can set/update the Billing and Shipping Addresses.
 <details open>
-<summary>B2B Shop</summary>
+<summary markdown='span'>B2B Shop</summary>
 
 ![b2b-addresses](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Customer+Account/Addresses/b2b-addresses.png) 
 
 </details>
 
 <details open>
-<summary>B2C Shop</summary>
+<summary markdown='span'>B2C Shop</summary>
 
 ![b2c-addresses](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Customer+Account/Addresses/b2c-addresses.png) 
 

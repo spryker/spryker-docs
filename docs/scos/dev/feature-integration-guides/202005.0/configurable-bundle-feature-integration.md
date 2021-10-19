@@ -201,7 +201,7 @@ Name is represented by a slugified version of a name for default locale, e.g.: C
 Append glossary according to your configuration:
 
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 configured_bundle.quantity,Quantity:,en_US
@@ -423,7 +423,7 @@ use Spryker\Zed\Event\EventDependencyProvider as SprykerEventDependencyProvider;
 use Spryker\Zed\ConfigurableBundleStorage\Communication\Plugin\Event\Subscriber\ConfigurableBundleStorageEventSubscriber;
 
 <details open>
-<summary></summary>
+<summary markdown='span'></summary>
 Your text
 <br>
 </details>
@@ -1005,7 +1005,7 @@ Make sure an error occurs while deleting a product list that was assigned to a s
 
 
 <details open>
-<summary>src/Pyz/Zed/ConfigurableBundleGui/ConfigurableBundleGuiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/ConfigurableBundleGui/ConfigurableBundleGuiDependencyProvider.php</summary>
 
 ```php
 <?php

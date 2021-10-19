@@ -69,7 +69,7 @@ Activate the following plugins:
 |`CatalogSearchResourceRoutePlugin`|Registers the `search` resource.|None|`Spryker\Glue\CatalogSearchRestApi\Plugin`|
 |`CatalogSearchSuggestionsResourceRoutePlugin`|Registers the `search-suggestions` resource.|None|`Spryker\Glue\CatalogSearchRestApi\Plugin`|
 <details open>
-<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

@@ -385,7 +385,7 @@ class CustomersRestApiDependencyProvider extends SprykerCustomersRestApiDependen
 ```
 
 <details open>
-<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

@@ -20,29 +20,30 @@ redirect_from:
 This command will update `spy_touch_storage`, and `spy_touch_search` classes to have the newly created `fk_store` columns and their relations.
 5. Populate `fk_store` records respectively to `spy_touch_storage.key`, and `spy_touch_search.key`.
 **Example migrations**
-    1. If you have a single Store, spy_store contains 1 row which represents your active store. Use its spy_store.id_store value to update touch records.
-In our current example the store ID is considered: 1.
-```sql
-UPDATE spy_touch_storage SET fk_store = 1;
-UPDATE spy_touch_search SET fk_store = 1;
-```
-2. If you have multiple Stores already, you will need to create a query which updates the fk_store values based on the records' key (if it contains the store information).
-Example update when the key has the following structure: {STORE_NAME}.{LOCALE_NAME}.{ENTITY_NAME}.{ENTITY_ID}.
-```sql
-MySql:
-      UPDATE spy_touch_storage JOIN spy_store SET spy_touch_storage.fk_store = spy_store.id_store
-      WHERE LOWER(spy_store.name) = LOWER(SUBSTR(`key`, 1, LOCATE(`key`, '.') - 1));
+    1. If you have a single Store, `spy_store` contains 1 row which represents your active store. Use its `spy_store.id_store` value to update touch records.
+    In our current example the store ID is considered: 1.
+    ```sql
+      UPDATE spy_touch_storage SET fk_store = 1;
+      UPDATE spy_touch_search SET fk_store = 1;
+    ```
+    2. If you have multiple Stores already, you will need to create a query which updates the `fk_store` values based on the records' key (if it contains the store information).
+    <br>Example update when the key has the following structure: `{STORE_NAME}.{LOCALE_NAME}.{ENTITY_NAME}.{ENTITY_ID}`.
 
-      UPDATE spy_touch_search JOIN spy_store SET spy_touch_search.fk_store = spy_store.id_store
-      WHERE LOWER(spy_store.name) = LOWER(SUBSTR(`key`, 1, LOCATE(`key`, '.') - 1));
+    ```sql
+    MySql:
+          UPDATE spy_touch_storage JOIN spy_store SET spy_touch_storage.fk_store = spy_store.id_store
+          WHERE LOWER(spy_store.name) = LOWER(SUBSTR(`key`, 1, LOCATE(`key`, '.') - 1));
 
-PostgreSql:
-      UPDATE spy_touch_storage SET fk_store = spy_store.id_store
-      FROM spy_store WHERE LOWER(spy_store.name) = LOWER(SUBSTR(key, 1, STRPOS(key, '.') - 1));
+          UPDATE spy_touch_search JOIN spy_store SET spy_touch_search.fk_store = spy_store.id_store
+          WHERE LOWER(spy_store.name) = LOWER(SUBSTR(`key`, 1, LOCATE(`key`, '.') - 1));
 
-      UPDATE spy_touch_search SET fk_store = spy_store.id_store
-      FROM spy_store WHERE LOWER(spy_store.name) = LOWER(SUBSTR(key, 1, STRPOS(key, '.') - 1));
-```
+    PostgreSql:
+          UPDATE spy_touch_storage SET fk_store = spy_store.id_store
+          FROM spy_store WHERE LOWER(spy_store.name) = LOWER(SUBSTR(key, 1, STRPOS(key, '.') - 1));
+
+          UPDATE spy_touch_search SET fk_store = spy_store.id_store
+          FROM spy_store WHERE LOWER(spy_store.name) = LOWER(SUBSTR(key, 1, STRPOS(key, '.') - 1));
+    ```
 
 6. The following deprecated methods were removed, please check your code if you have custom calls or dependencies:
 * `TouchFacadeInterface::bulkTouchActive()`

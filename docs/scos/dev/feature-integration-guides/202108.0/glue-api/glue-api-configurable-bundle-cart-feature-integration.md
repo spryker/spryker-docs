@@ -20,11 +20,11 @@ This document describes how to install the Glue API: Configurable Bundle + Cart 
 To start the feature integration, overview and install the necessary features:
 
 
-| Feature | Version | Integration guide |
+| FEATURE | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | master | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Configurable Bundle | master | [Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/configurable-bundle-feature-integration.html) | 
-|Cart |  master | [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Configurable Bundle | {{page.version}} | [Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/configurable-bundle-feature-integration.html) |
+|Cart |  {{page.version}} | [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
 
@@ -35,19 +35,15 @@ composer require spryker/configurable-bundle-carts-rest-api:"^0.1.0" --update-wi
 
 {% info_block warningBox "Verification" %}
 
-your content goes here
-
 Make sure that the following module has been installed:
 
-| Module | Expected directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | ConfigurableBundleCartsRestApi | vendor/spryker/configurable-bundle-carts-rest-api |
-
 
 {% endinfo_block %}
 
 ## 2) Set up configuration
-
 
 Enable validation of the `X-Anonymous-Customer-Unique-Id` guest header for the new resource: `guest-configured-bundles`.
 
@@ -72,8 +68,8 @@ class CartsRestApiConfig extends SprykerCartsRestApiConfig
 
 ## 3) Set up transfer objects
 
-
 Set up transfer objects:
+
 ```bash
 console transfer:generate
 ```
@@ -82,7 +78,7 @@ console transfer:generate
 
 Make sure that the following changes have been applied in the transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | RestConfiguredBundlesAttributesTransfer | class | created | src/Generated/Shared/Transfer/RestConfiguredBundlesAttributesTransfer |
 | RestConfiguredBundleItemsAttributesTransfer | class | created | src/Generated/Shared/Transfer/RestConfiguredBundleItemsAttributesTransfer |
@@ -92,8 +88,8 @@ Make sure that the following changes have been applied in the transfer objec
 | CustomerTransfer | class | created | src/Generated/Shared/Transfer/CustomerTransfer |
 | ConfiguredBundleTransfer | class | created | src/Generated/Shared/Transfer/ConfiguredBundleTransfer |
 | ConfiguredBundleItemTransfer | class | created | src/Generated/Shared/Transfer/ConfiguredBundleItemTransfer |
-| ConfigurableBundleTemplateTransfer | class | created | src/Generated/Shared/Transfer/ConfigurableBundleTemplateTransfer | 
-| ConfigurableBundleTemplateSlotTransfer | class | created | src/Generated/Shared/Transfer/ConfigurableBundleTemplateSlotTransfer| 
+| ConfigurableBundleTemplateTransfer | class | created | src/Generated/Shared/Transfer/ConfigurableBundleTemplateTransfer |
+| ConfigurableBundleTemplateSlotTransfer | class | created | src/Generated/Shared/Transfer/ConfigurableBundleTemplateSlotTransfer|
 | RestItemsAttributesTransfer | class | created | src/Generated/Shared/Transfer/RestItemsAttributesTransfer |
 | RestConfiguredBundleTransfer | class | created | src/Generated/Shared/Transfer/RestConfiguredBundleTransfer |
 | RestConfiguredBundleItemTransfer | class | created | src/Generated/Shared/Transfer/RestConfiguredBundleItemTransfer |
@@ -110,8 +106,8 @@ Make sure that the following changes have been applied in the transfer objec
 | CompanyUserTransfer | class | created | src/Generated/Shared/Transfer/CompanyUserTransfer |
 | QuoteCriteriaFilterTransfer | class | created | src/Generated/Shared/Transfer/QuoteCriteriaFilterTransfer |
 | QuoteCollectionTransfer | class | created | src/Generated/Shared/Transfer/QuoteCollectionTransfer |
-| CurrencyTransfer | class | created | src/Generated/Shared/Transfer/CurrencyTransfer | 
-| StoreTransfer | class | created | src/Generated/Shared/Transfer/StoreTransfer| 
+| CurrencyTransfer | class | created | src/Generated/Shared/Transfer/CurrencyTransfer |
+| StoreTransfer | class | created | src/Generated/Shared/Transfer/StoreTransfer|
 
 
 {% endinfo_block %}
@@ -121,14 +117,14 @@ Make sure that the following changes have been applied in the transfer objec
 
 Activate the following plugins:
 
-
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | ConfiguredBundlesResourceRoutePlugin | Provides the `configured-bundles` resource route. | None | Spryker\Glue\ConfigurableBundleCartsRestApi\Plugin\GlueApplication |
 | GuestConfiguredBundlesResourceRoutePlugin |Provides the `guest-configured-bundles` resource route. | None | Spryker\Glue\ConfigurableBundleCartsRestApi\Plugin\GlueApplication |
-| ConfiguredBundleItemsAttributesMapperPlugin | Maps the additional information from `ItemTransfer` to `RestItemsAttributesTransfer`. | None | Spryker\Glue\ConfigurableBundleCartsRestApi\Plugin\CartsRestApi | 
+| ConfiguredBundleItemsAttributesMapperPlugin | Maps the additional information from `ItemTransfer` to `RestItemsAttributesTransfer`. | None | Spryker\Glue\ConfigurableBundleCartsRestApi\Plugin\CartsRestApi |
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
+
 ```php
 <?php
 
@@ -164,6 +160,7 @@ Make sure that:
 
 
 **src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php**
+
 ```php
 <?php
 
@@ -189,12 +186,12 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 {% info_block warningBox "Verification" %}
 
 1.  Create a guest cart with a configurable bundle.
-    
+
 2.  Retrieve the guest cart with the items included by sending the request: `https://glue.mysprykershop.com/guest-carts/:uuid?include=guest-cart-items`.  
     Make sure that the endpoint returns the sections: `data.attributes.items.configuredBundle` and `data.attributes.items.configuredBundleItem`.
-    
+
 3.  Create a cart with a configurable bundle.
-    
+
 4.  Retrieve the guest cart with the items included by sending the request: `https://glue.mysprykershop.com/carts/:uuid?include=items`.  
     Make sure that the endpoint returns the sections: `data.attributes.items.configuredBundle` and `data.attributes.items.configuredBundleItem`.
 
@@ -206,9 +203,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 Integrate the following related features:
 
 
-| Feature | Required for the current feature | Integration guide |
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Glue API: Configurable Bundle Feature | ✓ | [Glue API: Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-feature-integration.html) |
 | Glue API: Configurable Bundle + Product Feature | ✓ |  [Glue API: Configurable Bundle + Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-product-feature-integration.html) |
-
-

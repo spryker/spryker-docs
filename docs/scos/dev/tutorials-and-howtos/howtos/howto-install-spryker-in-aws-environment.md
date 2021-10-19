@@ -332,7 +332,7 @@ To configure PHP, do the following:
 1. Create or update the following files using the provided templates:
 
 <details open>
-<summary>/etc/php/7.2/fpm/php.ini</summary>
+<summary markdown='span'>/etc/php/7.2/fpm/php.ini</summary>
 
 ```
 memory_limit = 1024M
@@ -344,7 +344,7 @@ sendmail_path = /usr/sbin/sendmail -t -i
 
 
 <details open>
-<summary>/etc/php/7.2/fpm/pool.d/yves.conf</summary>
+<summary markdown='span'>/etc/php/7.2/fpm/pool.d/yves.conf</summary>
 
 ```
 [yves]
@@ -380,7 +380,7 @@ php_admin_value[error_log] = /dev/stderr
 </details>
 
 <details open>
-<summary>/etc/php/7.2/fpm/pool.d/zed.conf</summary>/
+<summary markdown='span'>/etc/php/7.2/fpm/pool.d/zed.conf</summary>/
 
 ```
 [zed]
@@ -416,7 +416,7 @@ php_admin_value[error_log] = /dev/stderr
 </details>
 
 <details open>
-<summary>/etc/php/7.2/fpm/pool.d/glue.conf</summary>
+<summary markdown='span'>/etc/php/7.2/fpm/pool.d/glue.conf</summary>
 
 ```
 [glue]
@@ -455,7 +455,7 @@ php_admin_value[error_log] = /dev/stderr
 2. Edit the following file using the template:
 
 <details open>
-<summary>
+<summary markdown='span'>
 /etc/php/7.2/fpm/conf.d/10-opcache.ini</summary>
 
 ```
@@ -503,7 +503,7 @@ To configure Nginx, do the following:
 1. Update `{% raw %}{{{% endraw %}YVES_HOST{% raw %}}}{% endraw %}` and `application_store` variables for each store (AT, DE, US), and create `/etc/nginx/conf.d/vhost-yves-{% raw %}{{{% endraw %}STORE_NAME{% raw %}}}{% endraw %}.conf` using the template:
 
 <details open>
-<summary>vhost-yves.conf template</summary>
+<summary markdown='span'>vhost-yves.conf template</summary>
 
 ```
 upstream backend-yves {
@@ -586,7 +586,7 @@ sudo htpasswd -c /etc/nginx/.htpasswd {% raw %}{{{% endraw %}SOME_USER{% raw %}}
 3. Update `{% raw %}{{{% endraw %}ZED_HOST{% raw %}}}{% endraw %}` and `application_store` variables for each store (AT, DE, US), and create `/etc/nginx/conf.d/vhost-zed-{% raw %}{{{% endraw %}STORE_NAME{% raw %}}}{% endraw %}.conf` using the template:
 
 <details open>
-<summary>vhost-zed.conf template</summary>
+<summary markdown='span'>vhost-zed.conf template</summary>
 
 ```
 upstream backend-zed {
@@ -650,7 +650,7 @@ more_clear_headers 'X-Powered-By' 'X-Store' 'X-Locale' 'X-Env' 'Server';
 4. Update `{% raw %}{{{% endraw %}GLUE_HOST{% raw %}}}{% endraw %}` and `application_store` variables for each store (AT, DE, US), and create `/etc/nginx/conf.d/vhost-glue-{% raw %}{{{% endraw %}STORE_NAME{% raw %}}}{% endraw %}.conf` using the template:
 
 <details open>
-<summary>vhost-glue.conf template</summary>
+<summary markdown='span'>vhost-glue.conf template</summary>
 
 ```
 upstream backend-glue {
@@ -718,7 +718,7 @@ sudo service php7.2-fpm restart
 6. Create  `/etc/nginx/conf.d/jenkins.conf`:
 
 <details open>
-<summary>/etc/nginx/conf.d/jenkins.conf</summary>
+<summary markdown='span'>/etc/nginx/conf.d/jenkins.conf</summary>
 
 ```
 server {
@@ -758,7 +758,7 @@ proxy_request_buffering off;
 7. Create `/etc/nginx/fastcgi_params` using the template:
 
 <details open>
-<summary>fastcgi_params template</summary>
+<summary markdown='span'>fastcgi_params template</summary>
 
 ```
 fastcgi_param QUERY_STRING $query_string;
@@ -902,7 +902,7 @@ sudo systemctl daemon-reload
 6. Update Jenkins configuration file:
 
 <details open>
-<summary>/var/lib/jenkins/config.xml</summary>
+<summary markdown='span'>/var/lib/jenkins/config.xml</summary>
 
 ```
 <?xml version='1.1' encoding='UTF-8'?>
@@ -1013,7 +1013,7 @@ You should update all variables in curly braces such as {% raw %}{{{% endraw %}R
 
 
 <details open>
-<summary>/data/config/Shared/config_local.php</summary>
+<summary markdown='span'>/data/config/Shared/config_local.php</summary>
 
 ```
 <?php
@@ -1206,7 +1206,7 @@ $config[SessionFileConstants::ZED_SESSION_TIME_TO_LIVE] = $config[SessionConstan
 
 
 <details open>
-<summary>/data/config/Shared/config_local_DE.php</summary>
+<summary markdown='span'>/data/config/Shared/config_local_DE.php</summary>
 
 ```
 <?php
@@ -1319,7 +1319,7 @@ $config[KernelConstants::DOMAIN_WHITELIST] = [
 </details>
 
 <details open>
-<summary>/data/config/Shared/config_local_AT.php</summary>
+<summary markdown='span'>/data/config/Shared/config_local_AT.php</summary>
 
 ```
 <?php
@@ -1431,7 +1431,7 @@ $config[KernelConstants::DOMAIN_WHITELIST] = [
 </details>
 
 <details open>
-<summary>/data/config/Shared/config_local_US.php</summary>
+<summary markdown='span'>/data/config/Shared/config_local_US.php</summary>
 
 ```
 <?php
@@ -1554,7 +1554,7 @@ composer require --no-update aws/aws-sdk-php
 5. Create the following file:
 
 <details open>
-<summary>/data/config/install/staging.yml</summary>
+<summary markdown='span'>/data/config/install/staging.yml</summary>
 
 ```
 env:

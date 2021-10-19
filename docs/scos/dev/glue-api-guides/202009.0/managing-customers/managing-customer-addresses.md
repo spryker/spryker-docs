@@ -45,7 +45,7 @@ To add an address to a customer, send the request:
 Request sample: `POST http://glue.mysprykershop.com/customers/DE--1/addresses`
 
 <details open>
-    <summary>Request sample body</summary>
+    <summary markdown='span'>Request sample body</summary>
     
 ```json
 {
@@ -96,7 +96,7 @@ Request sample: `POST http://glue.mysprykershop.com/customers/DE--1/addresses`
 ### Response
     
 <details open>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
     
 ```json
 {
@@ -170,7 +170,7 @@ To edit an address, send the request:
 Request sample: `PATCH` **http://glue.mysprykershop.com/customers/DE-25/addresses/3a6ee102-007f-5245-aaec-af5b6e05685b**
 
 <details open>
-    <summary>Request sample body</summary>
+    <summary markdown='span'>Request sample body</summary>
     
 </details>
 
@@ -195,7 +195,7 @@ Request sample: `PATCH` **http://glue.mysprykershop.com/customers/DE-25/addresse
 ### Response
     
 <details open>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -251,7 +251,7 @@ Sample request: `GET http://glue.mysprykershop.com/customers/DE-25/addresses`
 ### Response
 
 <details open>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
     
 ```json
 {
@@ -353,7 +353,7 @@ Request sample : `GET http://glue.mysprykershop.com/customers/DE-25/addresses/3a
 ### Response
 
 <details open>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
 
 </details>
 

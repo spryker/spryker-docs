@@ -62,7 +62,7 @@ Make sure that the following changes have been applied in transfer objects:
 Feature-specific glossary keys:
 
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 quick-order.upload-order.errors.upload-order-invalid-sku-item,Product with this SKU is not found.,en_US
@@ -102,7 +102,7 @@ Enable the following behaviors by registering the plugins:
 |`ProductPriceItemValidatorPlugin`|Checks if the provided product SKU has the price, if no - adds the error message.|None|`Spryker\Client\PriceProductStorage\Plugin\QuickOrder`|
 
 <details open>
-<summary>src/Pyz/Client/QuickOrder/QuickOrderDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/QuickOrder/QuickOrderDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -167,7 +167,7 @@ Make sure that the following modules were installed:
 Feature-specific glossary keys:
 
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 quick-order.page-title,Quick Order,en_US
@@ -259,7 +259,7 @@ Register controller provider(s) to Yves application:
 |`QuickOrderPageControllerProvider`|`SprykerShop\Yves\QuickOrderPage\Plugin\Provider`|`QuickOrderController`|Provides functionality to display and process the Quick Order table.|
 
 <details open>
-<summary>src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>
 
 ```php
 namespace Pyz\Yves\ShopApplication;
@@ -309,7 +309,7 @@ Enable the following behaviors by registering the plugins:
 |`QuickOrderCsvUploadedFileValidatorStrategyPlugin`|Validates CSV header presence, checks mandatory columns based on header.|None|`SprykerShop\Yves\QuickOrderPage\Plugin\QuickOrderPage`|
 
 <details open>
-<summary>src/Pyz/Yves/QuickOrderPage/QuickOrderPageDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/QuickOrderPage/QuickOrderPageDependencyProvider.php</summary>
  
 ```php
 <?php

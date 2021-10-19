@@ -111,7 +111,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 {% info_block infoBox "Verification" %}
 Make sure that following endpoints are available:
 {% endinfo_block %}
-* `http://example.org/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}`
-* `http://example.org/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}`
+* `http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}`
+* `http://mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}`
 
 _Last review date: Feb 19, 2019_

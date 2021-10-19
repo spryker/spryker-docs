@@ -106,7 +106,7 @@ $bootstrap
 ```
 
 <details open>
-    <summary>public/Backoffice/index.php</summary>
+    <summary markdown='span'>markdown='span'>public/Backoffice/index.php</summary>
 
 ```php
 <?php
@@ -140,7 +140,7 @@ $bootstrap
 2. Add the following error pages:
 
 <details open>
-    <summary>public/Backoffice/errorpage/4xx.html</summary>
+    <summary markdown='span'>markdown='span'>public/Backoffice/errorpage/4xx.html</summary>
     
 ```html
 <!DOCTYPE html>
@@ -187,7 +187,7 @@ $bootstrap
 
 
 <details open>
-    <summary>public/Backoffice/errorpage/5xx.html</summary>
+    <summary markdown='span'>markdown='span'>public/Backoffice/errorpage/5xx.html</summary>
     
 ```html
 <!DOCTYPE html>
@@ -237,7 +237,7 @@ $bootstrap
     1. Add the maintenance page:
 
     <details open>
-    <summary>public/Backoffice/maintenance/index.html</summary>
+    <summary markdown='span'>markdown='span'>public/Backoffice/maintenance/index.html</summary>
     
         ```html
         <!DOCTYPE html>
@@ -304,7 +304,7 @@ $bootstrap
 
 
 <details open>
-    <summary>src/Pyz/Zed/Application/ApplicationDependencyProvider.php</summary>
+    <summary markdown='span'>markdown='span'>src/Pyz/Zed/Application/ApplicationDependencyProvider.php</summary>
 
 ```php
 class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
@@ -383,7 +383,7 @@ Update `src/Pyz/Zed/EventDispatcher/EventDispatcherDependencyProvider.php` with 
 
 
 <details open>
-    <summary>src/Pyz/Zed/EventDispatcher/EventDispatcherDependencyProvider.php</summary>
+    <summary markdown='span'>markdown='span'>src/Pyz/Zed/EventDispatcher/EventDispatcherDependencyProvider.php</summary>
     
 ```php
 class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependencyProvider
@@ -426,7 +426,7 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 Replace `RouterDependencyProvider::getRouterPlugins();`  with two new methods:
 
 <details open>
-    <summary>src/Pyz/Zed/Router/RouterDependencyProvider.php</summary>
+    <summary markdown='span'>markdown='span'>src/Pyz/Zed/Router/RouterDependencyProvider.php</summary>
     
 ```php
 // 
@@ -463,7 +463,7 @@ Configure the following console commands with a router cache warmup per endpoint
 
 
 <details open>
-    <summary>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
+    <summary markdown='span'>markdown='span'>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
     
 ```php
 //src/Pyz/Zed/Console/ConsoleDependencyProvider.php
@@ -502,7 +502,7 @@ You’ve added the following commands:
 1. Configure the Back Office error page, default port, and the ACL rule for the rest endpoint: 
 
 <details open>
-    <summary>config/Shared/config_default.php</summary>
+    <summary markdown='span'>markdown='span'>config/Shared/config_default.php</summary>
 
 ```php
 // >>> ERROR HANDLING

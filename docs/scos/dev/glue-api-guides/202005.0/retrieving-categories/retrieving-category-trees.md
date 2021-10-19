@@ -40,7 +40,7 @@ Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]`
 
 ### Reponse 
 <details open>
-<summary>Response sample </summary>
+<summary markdown='span'>Response sample </summary>
 
 ```json
 {
@@ -194,7 +194,7 @@ Request sample : `GET http://mysprykershop.com/abstract-products/058?include=cat
 
 ### Response
 <details open>
-<summary>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```js
 {
@@ -445,7 +445,7 @@ Request sample : `GET http://mysprykershop.com/category-nodes/5`
 ### Response
 
 <details open>
-<summary>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
     
 ```js
 {

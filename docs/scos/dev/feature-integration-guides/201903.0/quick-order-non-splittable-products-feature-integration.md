@@ -30,7 +30,7 @@ Enable the following behaviors by registering the plugins:
 |`ProductQuantityItemValidatorPlugin`|Checks if the provided product quantity has quantity restrictions and provided quantity fits them, if no - adds an error message.|None|`Spryker\Client\ProductQuantityStorage\Plugin\QuickOrder`|
 
 <details open>
-<summary>src/Pyz/Client/QuickOrder/QuickOrderDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/QuickOrder/QuickOrderDependencyProvider.php</summary>
 
 ```php
 <?php

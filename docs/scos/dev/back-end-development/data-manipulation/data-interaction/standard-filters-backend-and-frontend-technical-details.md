@@ -39,7 +39,7 @@ The core of each page is `page-layout-catalog.twig`, which extends another globa
 The general look of the `page-layout-catalog.twig` template is shown below:
 
 <details open>
-<summary>src/Pyz/Yves/CatalogPage/Theme/default/templates/page-layout-catalog/page-layout-catalog.twig</summary>
+<summary markdown='span'>src/Pyz/Yves/CatalogPage/Theme/default/templates/page-layout-catalog/page-layout-catalog.twig</summary>
 
 ```twig
 {% raw %}{%{% endraw %} extends model('component') {% raw %}%}{% endraw %}
@@ -324,7 +324,7 @@ src/Pyz/Yves/CatalogPage/Theme/default/templates/page-layout-catalog/page-layout
 When you look closer to the `filter-section.twig` template, you may notice, that this template is responsible for rendering both Filters and Categories (another feature):
 
 <details open>
-<summary>src/Pyz/Yves/CatalogPage/Theme/default/components/organisms/filter-section/filter-section.twig</summary>
+<summary markdown='span'>src/Pyz/Yves/CatalogPage/Theme/default/components/organisms/filter-section/filter-section.twig</summary>
 
 ```twig
 {% raw %}{%{% endraw %} extends model('component') {% raw %}%}{% endraw %}

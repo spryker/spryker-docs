@@ -69,7 +69,7 @@ Also, keep in mind that a doc block with non-existing methods was removed from `
 3. Update Database Schema.
 The event behavior needs to be applied to all `SpyCmsPageStore columns`.
 
-src/Pyz/Zed/Cms/Persistence/Propel/Schema/spy_cms.schema.xml
+**src/Pyz/Zed/Cms/Persistence/Propel/Schema/spy_cms.schema.xml**
 
 ```xml
 <?xml version="1.0"?>
@@ -92,6 +92,7 @@ console transfer:generate
 console propel:install
 console transfer:generate
 ```
+
 When looking to generate a production migration, this command will help you find the SQL patches needed against your production schema.
 
 ```bash
@@ -99,7 +100,9 @@ vendor/bin/console propel:diff
 ```
 
 {% info_block warningBox %}
+
 Before migrating a production database, always review each SQL statement individually, even when there are many of them.
+
 {% endinfo_block %}
 
 5. Perform Data Migration.
@@ -108,7 +111,7 @@ For quick and smooth migration, we have prepared an example migration script. Th
 
 This script will only migrate pages to stores where persistence is shared.
 
-Pyz\Zed\Cms\Communication\Console\CmsStoreToPageDataMigration.php
+**Pyz\Zed\Cms\Communication\Console\CmsStoreToPageDataMigration.php**
 
 ```php
 <?php
@@ -198,13 +201,17 @@ class CmsStoreToPageDataMigration extends Console
 ```
 
 {% info_block warningBox %}
+
 Don't forget to register your migration console command in `Pyz\Zed\Console\ConsoleDependencyProvider`.
+
 {% endinfo_block %}
 
 Your command should be executable with `$ console cms-store-cms-page:migrate`.
 
 {% info_block warningBox %}
+
 Don't forget to sync your newly updated Zed data with the storage tables.
+
 {% endinfo_block %}
 
 ```bash
@@ -246,10 +253,11 @@ Now, your block and page templates can be found in `src/Pyz/Yves/Cms/Theme/defau
 Move CMS Block templates to the `src/Pyz/Shared/CmsBlock/Theme/default/template/*` folder.
 
 ### Run migration script
+
 For quick and smooth migration, we have prepared a migration script. You can find it below.
 
 <details>
-<summary>Code sample</summary>
+<summary markdown='span'>Code sample</summary>
 
 ```php
 <?php
@@ -474,10 +482,13 @@ Run the script with the command `vendor/bin/console cms-cms-block:migrate`.
 CMS Version 5.0 has a new concept for showing pages in the frontend. In the previous CMS versions, after creating a CMS page and running the collectors, we were able to see the page in the frontend, but now this has changed. After creating a CMS page, another step called **Publish** is needed to display the page in the frontend. Publish aggregates all CMS related data and puts it to our new CMS table `spy_cms_version`. The new collectors push this data to the frontend storage and search.
 
 {% info_block warningBox %}
-Before upgrading, make sure that you do not use any deprecated code from version 3|4.*. Check the description of the deprecated code (inside the code
-{% endinfo_block %} to see what you will need to use instead.)
+
+Before upgrading, make sure that you do not use any deprecated code from version 3|4.*. Check the description of the deprecated code (inside the code to see what you will need to use instead).
+
+{% endinfo_block %}
 
 ### Database Migration
+
 To start Database migration, run the following commands:
 
 * `vendor/bin/console propel:diff`, manual review is necessary for the generated migration file.
@@ -496,11 +507,13 @@ In this version, we have moved all CMS templates to the Shared layer instead of 
 `src/Pyz/Yves/Cms/Theme/default/template/*` => `src/Pyz/Shared/Cms/Theme/default/template/*`
 
 ### CMS Twig Functions
+
 The `TwigCms` function has been improved to provide better speed and performance, it will only send a query to Redis when the translations are not available.
 You can still work with the current version although upgrading is highly recommended.
 You can find it here: `src/Pyz/Yves/Cms/Plugin/TwigCms.php`.
 
 ### CMS Collector
+
 To push new CMS version data to the frontend storage and search, add it to the `src/Pyz/Zed/Collector/CollectorDependencyProvider.php` plugin stack:
 
 **Code sample:**

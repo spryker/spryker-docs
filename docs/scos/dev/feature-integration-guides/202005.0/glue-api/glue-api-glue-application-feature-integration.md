@@ -38,7 +38,7 @@ composer require spryker/glue-application:"^1.0.0" spryker/entity-tags-rest-api:
 Add the necessary parameters to `config/Shared/config_default.php`:
 
 <details open>
-<summary>config/Shared/config_default.php</summary>
+<summary markdown='span'>config/Shared/config_default.php</summary>
     
 ```bash
 $config[GlueApplicationConstants::GLUE_APPLICATION_DOMAIN] = 'http://glue.mysprykershop.com';
@@ -58,7 +58,7 @@ $config[GlueApplicationConstants::GLUE_APPLICATION_REST_DEBUG] = false;
 Adjust `config/Shared/config_default.php`:
 
 <details open>
-<summary>config/Shared/config_default.ph</summary>
+<summary markdown='span'>config/Shared/config_default.ph</summary>
     
 ```bash
 $config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = 'http://glue.mysprykershop.com';
@@ -71,7 +71,7 @@ $config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = 'http://
 Adjust `config/Shared/config_default.php`:
 
 <details open>
-<summary>config/Shared/config_default.php</summary>
+<summary markdown='span'>config/Shared/config_default.php</summary>
 
 ```bash
 $config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = '*';
@@ -129,7 +129,7 @@ Activate the following plugins:
 | `StoresResourceRoutePlugin` | Registers the `stores` resource. | None | `Spryker\Glue\StoresRestApi\Plugin` |
 
 <details open>
-<summary>src/Pyz/Glue/GlueApplication/Bootstrap/GlueBootstrap.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/Bootstrap/GlueBootstrap.php</summary>
     
 ```php
 <?php
@@ -168,7 +168,7 @@ class GlueBootstrap extends AbstractGlueBootstrap
 Create a new entry point for Glue Application:
 
 <details open>
-<summary>public/Glue/index.php</summary>
+<summary markdown='span'>public/Glue/index.php</summary>
 
 ```php
 <?php
@@ -200,7 +200,7 @@ $bootstrap
 Create Nginx VHOST configuration:
 
 <details open>
-<summary>/etc/nginx/sites-enabled/DE_development_glue</summary>
+<summary markdown='span'>/etc/nginx/sites-enabled/DE_development_glue</summary>
 
 ```php
 server {
@@ -231,7 +231,7 @@ server {
 Update hosts configuration by adding the following line (replace IP with your server's IP address):
 
 <details open>
-<summary>/etc/hosts</summary>
+<summary markdown='span'>/etc/hosts</summary>
 
 ```
 ip glue.mysprykershop.com
@@ -245,7 +245,7 @@ If everything is set up correctly, you should be able to access http://glue.mysp
 {% endinfo_block %}
 
 <details open>
-<summary>Default JSON Response</summary>
+<summary markdown='span'>Default JSON Response</summary>
 
 ```json
 {
@@ -262,7 +262,7 @@ If everything is set up correctly, you should be able to access http://glue.mysp
 </details>
 
 <details open>
-<summary>\Pyz\Glue\GlueApplication\GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>\Pyz\Glue\GlueApplication\GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -325,7 +325,7 @@ Use constant of resource name instead of plain string.
 {% endinfo_block %}
 
 <details open>
-<summary>src/Pyz/Glue/EntityTagsRestApi/EntityTagsRestApiConfig.php</summary>
+<summary markdown='span'>src/Pyz/Glue/EntityTagsRestApi/EntityTagsRestApiConfig.php</summary>
 
 ```php
 <?php

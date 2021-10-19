@@ -22,7 +22,7 @@ With the CMS draft feature the Back Office user can create drafts of CMS pages w
 * If you do not have the `spryker/cms-collector` module installed, register your CMS page data expander plugins to the `spryker/cms` module in the `CmsDependencyProvider` dependency provider.
 
 <details open>
-<summary>Example of CMS page data expander plugin registration:</summary>
+<summary markdown='span'>Example of CMS page data expander plugin registration:</summary>
     
 ```php
 <?php
@@ -55,7 +55,7 @@ class CmsDependencyProvider extends SprykerCmsDependencyProvider
 2. Use `CmsClientInterface::getFlattenedLocaleCmsPageData` to retrieve the flattened draft data for a specific locale.
 
 <details open>
-<summary>Example of data retrieval:</summary>
+<summary markdown='span'>Example of data retrieval:</summary>
 
 ```php
 <?php
@@ -88,7 +88,7 @@ class CmsDependencyProvider extends SprykerCmsDependencyProvider
 1. Define the Yves preview page URI in configuration with a numeric sprintf placeholder which stands for the CMS page id.
 
 <details open>
-<summary>Example of preview page URI registration:</summary>
+<summary markdown='span'>Example of preview page URI registration:</summary>
 
 ```php
 <?php
@@ -105,7 +105,7 @@ class CmsDependencyProvider extends SprykerCmsDependencyProvider
 2. Optionally add the **Preview** button group item to the "List of CMS pages" in the Back Office by registering the `CmsPageTableExpanderPlugin` plugin to access the preview page.
 
 <details open>
-<summary>Example of page table expander plugin registration:</summary>
+<summary markdown='span'>Example of page table expander plugin registration:</summary>
 
 ```php
 <?php
@@ -134,7 +134,7 @@ class CmsGuiDependencyProvider extends SprykerCmsGuiDependencyProvider
 3. Optionally add the **Preview** action button to the **Edit Placeholders** in the Back Office by registering the `CreateGlossaryExpanderPlugin` plugin to access the preview page.
 
 <details open>
-<summary>Example of glossary expander plugin registration:</summary>
+<summary markdown='span'>Example of glossary expander plugin registration:</summary>
 
 ```php
 <?php

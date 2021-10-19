@@ -18,35 +18,31 @@ related:
 Follow the steps below to install the Glue API: Order Management feature.
 
 
-
 ## Prerequisites
 
 To start feature integration, overview and install the following features and Glue APIs:
 
-| NAME                   | VERSION  | INTEGRATION GUIDE                                            |
-| :--------------------- | :------- | :----------------------------------------------------------- |
-| Glue API: Spryker Core | 202009.0 | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Order Management       | 202009.0 | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html) |
+| NAME  | VERSION  | INTEGRATION GUIDE   |
+| ---------------- | ------- | --------------------------- |
+| Glue API: Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Order Management       | {{page.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
 
 Install the required modules:
 
-```shell
+```bash
 composer require spryker/orders-rest-api:"^4.7.0" --update-with-dependencies
 ```
 
- 
 
 {% info_block warningBox "Verification" %}
-
 
 Make sure that the following module has been installed:
 
 | MODULE        | EXPECTED DIRECTORY             |
-| :------------ | :----------------------------- |
+| ------------ | ------------------ |
 | OrdersRestApi | vendor/spryker/orders-rest-api |
-
 
 {% endinfo_block %}
 
@@ -56,21 +52,17 @@ Make sure that the following module has been installed:
 
 Generate the transfer changes:
 
-```shell
+```bash
 console transfer:generate
 ```
 
 
-
-
-
 {% info_block warningBox "Verification" %}
-
 
 Make sure that the following changes have occurred:
 
-| TRANSFER                            | TYPE  | EVENT   | PATH                                                         |
-| :---------------------------------- | :---- | :------ | :----------------------------------------------------------- |
+| TRANSFER   | TYPE  | EVENT   | PATH    |
+| --------------- | ---- | ------ | ------------------ |
 | RestOrdersAttributesTransfer        | class | created | src/Generated/Shared/Transfer/RestOrdersAttributesTransfer   |
 | RestOrderDetailsAttributesTransfer  | class | created | src/Generated/Shared/Transfer/RestOrderDetailsAttributesTransfer |
 | RestOrderItemsAttributesTransfer    | class | created | src/Generated/Shared/Transfer/RestOrderItemsAttributesTransfer |
@@ -84,7 +76,6 @@ Make sure that the following changes have occurred:
 | ShipmentMethodTransfer              | class | created | src/Generated/Shared/Transfer/ShipmentMethodTransfer         |
 | ExpenseTransfer                     | class | created | src/Generated/Shared/Transfer/ExpenseTransfer                |
 | RestUserTransfer                    | class | created | src/Generated/Shared/Transfer/RestUserTransfer               |
-
 
 {% endinfo_block %}
 
@@ -100,8 +91,8 @@ Activate the following plugins:
 
 
 
-| PLUGIN                                  | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                         |
-| :-------------------------------------- | :----------------------------------------------------------- | :------------ | :-------------------------------- |
+| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE  |
+| -------------------- | --------------------- | ------------ | --------------- |
 | OrdersResourceRoutePlugin               | Registers the `orders` resource.                             | None          | Spryker\Glue\OrdersRestApi\Plugin |
 | OrderRelationshipByOrderReferencePlugin | Adds the `orders` resource as a relationship by order reference. | None          | Spryker\Glue\OrdersRestApi\Plugin |
 | CustomerOrdersResourceRoutePlugin       | Adds the configuration for resource routing, mapping of HTTP methods to controller actions and defines if actions are protected. | None          | Spryker\Glue\OrdersRestApi\Plugin |
@@ -109,7 +100,7 @@ Activate the following plugins:
 
 
 <details open>
-    <summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -153,7 +144,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 	}
 }
 ```
-
 </details>
 
 
@@ -161,38 +151,29 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-
 To verify that `OrdersResourceRoutePlugin` is set up correctly, make sure that the following endpoints are available:
 
 - `http://glue.mysprykershop.com/orders`
 - `http://glue.mysprykershop.com/orders/{% raw %}{{{% endraw %}order_reference{% raw %}}}{% endraw %}`
 
-
 {% endinfo_block %}
 
 
 
-
 {% info_block warningBox "Verification" %}
-
-
 
 To verify that `CustomerOrdersResourceRoutePlugin` is set up correctly, make sure that the `https://glue.mysprykershop.com/customers/{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}/orders` endpoint is available.
 
-
 {% endinfo_block %}
 
  
 
- 
-
 {% info_block warningBox "Verification" %}
-
 
 To verify that `OrderRelationshipByOrderReferencePlugin` is set up correctly, make sure that the `orders` relationship is returned after sending the following request:
 
 <details open>
-    <summary>POST http://glue.mysprykershop.com/checkout?include=orders</summary>
+<summary markdown='span'>POST http://glue.mysprykershop.com/checkout?include=orders</summary>
     
 ```json
 {
@@ -358,13 +339,6 @@ To verify that `OrderRelationshipByOrderReferencePlugin` is set up correctly, ma
     ]
 }
 ```
-
 </details>
-
-    
-    
-    
-    
-
 
 {% endinfo_block %}

@@ -146,7 +146,7 @@ The verification of the invoice state machine configuration will be checked in a
 Using the `DummyPayment01.xml` process as an example, adjust your OMS state-machine configuration according to your project’s requirements.
 
 <details open>
-    <summary>config/Zed/oms/DummyPayment01.xml</summary>
+    <summary markdown='span'>config/Zed/oms/DummyPayment01.xml</summary>
     
 ```xml
 <?xml version="1.0"?>
@@ -380,7 +380,7 @@ class SalesInvoiceConfig extends SprykerSalesInvoiceConfig
 ```
 Add oder invoice twig template. For example:
 <details open>
-    <summary>src/Pyz/Zed/SalesInvoice/Presentation/Invoice/Invoice.twig</summary>
+    <summary markdown='span'>src/Pyz/Zed/SalesInvoice/Presentation/Invoice/Invoice.twig</summary>
     
 ```html
 {# @var order \Generated\Shared\Transfer\OrderTransfer #}

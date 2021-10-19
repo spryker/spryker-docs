@@ -27,7 +27,7 @@ Register the following plugins:
 | `QuoteRequestQuoteApprovalUnlockPreCheckPlugin` | Prevents quote unlock  by approval process when it is in quotation process. | None | `Spryker\Zed\QuoteRequest\Communication\Plugin\QuoteApproval` |
 
 <details open>
-<summary>src/Pyz/Client/QuoteRequest/QuoteRequestDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/QuoteRequest/QuoteRequestDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -54,7 +54,7 @@ class QuoteRequestDependencyProvider extends SprykerQuoteRequestDependencyProvid
 </details>
 
 <details open>
-<summary>src/Pyz/Client/QuoteApproval/QuoteApprovalDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/QuoteApproval/QuoteApprovalDependencyProvider.php</summary>
 
 ```php
 <?php

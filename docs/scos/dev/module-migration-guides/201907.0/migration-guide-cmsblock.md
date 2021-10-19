@@ -23,7 +23,7 @@ This version allows saving CMS Block-Store relation.
 2. Update your `spryker/cms-block-collector` module to at least Version 2.0.0. See [Migration Guide - CMS Collector](https://documentation.spryker.com/module_migration_guides/mg-cms-collector.htm) for more details.
 
 <details open>
-<summary>Custom CMS Block Collector</summary>
+<summary markdown='span'>markdown='span'>markdown='span'>Custom CMS Block Collector</summary>
 
 If you have a custom CMS Block Collector, make sure that it collects CMS Blocks only when the related CMS Block has an entity in the `spy_cms_block_store` table for the desired store.
     
@@ -33,7 +33,7 @@ If you have a custom CMS Block Collector, make sure that it collects CMS Blocks 
 3. Run `vendor/bin/console transfer:generate` to update and generate transfer object changes.
 
 <details open>
-<summary>Transfer object changes</summary>
+<summary markdown='span'>markdown='span'>markdown='span'>Transfer object changes</summary>
 
 `CmsBlock` transfer object has now a `StoreRelation` property which allows you to retrieve/define the stores assigned to the current CMS Block.
     
@@ -50,7 +50,7 @@ If you have a custom CMS Block Collector, make sure that it collects CMS Blocks 
 8. The newly created `spy_cms_block_store` table definess 1 row per CMS Block-store association. Populate this table according to your requirements.
 
 <details open>
-<summary>Example data</summary>
+<summary markdown='span'>markdown='span'>markdown='span'>Example data</summary>
     
 **Assumptions**
 You have the following CMS Blocks: Block_1, Block_2, and stores: AT, DE, US.
@@ -74,7 +74,7 @@ Even if you have 1 store, the associations between CMS Blocks and stores have to
 </details>
 
 <details open>
-<summary>Example migration query</summary>    
+<summary markdown='span'>markdown='span'>markdown='span'>Example migration query</summary>    
     
 To populate the new `spy_cms_block_store` table to have all CMS Blocks in all stores as an initial configuration, run the following query:
     

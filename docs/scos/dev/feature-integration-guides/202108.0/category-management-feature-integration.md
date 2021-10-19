@@ -58,7 +58,7 @@ Make sure that the following modules have been installed:
 Set up the following configuration:
 
 <details open>
-    <summary>src/Pyz/Zed/CategoryImageStorage/CategoryImageStorageConfig.php</summary>
+    <summary markdown='span'>src/Pyz/Zed/CategoryImageStorage/CategoryImageStorageConfig.php</summary>
 
 ```php
 <?php
@@ -92,7 +92,7 @@ class CategoryImageStorageConfig extends SprykerCategoryImageStorageConfig
 </details>
 
 <details open>
-    <summary>src/Pyz/Zed/CategoryPageSearch/CategoryPageSearchConfig.php</summary>
+    <summary markdown='span'>src/Pyz/Zed/CategoryPageSearch/CategoryPageSearchConfig.php</summary>
 
 ```php
 <?php
@@ -125,7 +125,7 @@ class CategoryPageSearchConfig extends SprykerCategoryPageSearchConfig
 </details>
 
 <details open>
-    <summary>src/Pyz/Zed/CategoryStorage/CategoryStorageConfig.php</summary>
+    <summary markdown='span'>src/Pyz/Zed/CategoryStorage/CategoryStorageConfig.php</summary>
 
 ```php
 <?php
@@ -175,7 +175,7 @@ class CategoryStorageConfig extends SprykerCategoryStorageConfig
 </details>
 
 <details open>
-    <summary>src/Pyz/Client/RabbitMq/RabbitMqConfig.php</summary>
+    <summary markdown='span'>src/Pyz/Client/RabbitMq/RabbitMqConfig.php</summary>
 
 ```php
 <?php
@@ -204,7 +204,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 </details>
 
 <details open>
-    <summary>src/Pyz/Zed/Queue/QueueDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Zed/Queue/QueueDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -242,7 +242,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 1.  Adjust the schema definition so that entity changes trigger the events:
 
 <details open>
-    <summary>src/Pyz/Zed/Category/Persistence/Propel/Schema/spy_category.schema.xml</summary>
+    <summary markdown='span'>src/Pyz/Zed/Category/Persistence/Propel/Schema/spy_category.schema.xml</summary>
 
 ```xml
 <?xml version="1.0"?>
@@ -284,7 +284,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 </details>
 
 <details open>
-    <summary>src/Pyz/Zed/CategoryImage/Persistence/Propel/Schema/spy_category_image.schema.xml</summary>
+    <summary markdown='span'>src/Pyz/Zed/CategoryImage/Persistence/Propel/Schema/spy_category_image.schema.xml</summary>
 
 ```xml
 <?xml version="1.0"?>
@@ -499,7 +499,7 @@ Configure tables to be published to the `spy_category_image_storage`, `spy_cate
 
 
 <details open>
-    <summary>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -627,7 +627,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 | CategoryPagePublisherTriggerPlugin | Retrieves category nodes based on the provided limit and offset. | | Spryker\Zed\CategoryPageSearch\Communication\Plugin\Publisher|
 
 <details open>
-    <summary>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -678,7 +678,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 
 <details open>
-    <summary>src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -755,7 +755,7 @@ Make sure that when a category is created or edited through ORM, it is exported 
 | Redis | CategoryImage| category_image:de_de:15|
 
 <details open>
-    <summary>EXAMPLE EXPECTED DATA FRAGMENT: category_node:at:en_us:2</summary>
+    <summary markdown='span'>EXAMPLE EXPECTED DATA FRAGMENT: category_node:at:en_us:2</summary>
 
 ```yaml
 {
@@ -799,7 +799,7 @@ Make sure that when a category is created or edited through ORM, it is exported 
 </details>
 
 <details open>
-    <summary>EXAMPLE EXPECTED DATA FRAGMENT: category_node:de:de_de:5</summary>
+    <summary markdown='span'>EXAMPLE EXPECTED DATA FRAGMENT: category_node:de:de_de:5</summary>
 
 ```yaml
 {
@@ -873,7 +873,7 @@ Make sure that when a category is created or edited through ORM, it is exported 
 
 
 <details open>
-    <summary>EXAMPLE EXPECTED DATA FRAGMENT: category_tree:de:en_us</summary>
+    <summary markdown='span'>EXAMPLE EXPECTED DATA FRAGMENT: category_tree:de:en_us</summary>
 
 ```yaml
 {
@@ -925,7 +925,7 @@ Make sure that when a category is created or edited through ORM, it is exported 
 </details>
 
 <details open>
-    <summary>EXAMPLE EXPECTED DATA FRAGMENT: category_image:de_de:15</summary>
+    <summary markdown='span'>EXAMPLE EXPECTED DATA FRAGMENT: category_image:de_de:15</summary>
 
 ```yaml
 {
@@ -1108,7 +1108,7 @@ Add the following plugins to your project:
 
 
 <details open>
-    <summary>src/Pyz/Zed/Category/CategoryDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Zed/Category/CategoryDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1189,7 +1189,7 @@ class CategoryDependencyProvider extends SprykerDependencyProvider
 
 
 <details open>
-    <summary>src/Pyz/Zed/CategoryGui/CategoryGuiDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Zed/CategoryGui/CategoryGuiDependencyProvider.php</summary>
 
 ```php
 <?php

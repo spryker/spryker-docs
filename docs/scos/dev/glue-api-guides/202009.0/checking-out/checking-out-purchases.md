@@ -62,7 +62,7 @@ By default, if checkout is successful, the order is placed, and the cart is dele
 
 
 <details open>
-    <summary>Request sample</summary>
+    <summary markdown='span'>Request sample</summary>
 `POST https://glue.mysprykershop.com/checkout`
     
 ```json
@@ -126,7 +126,7 @@ By default, if checkout is successful, the order is placed, and the cart is dele
 </details>
 
 <details open>
-    <summary>Request sample with order information</summary>
+    <summary markdown='span'>Request sample with order information</summary>
 `POST https://glue.mysprykershop.com/checkout?include=orders`
 
 ```json
@@ -233,7 +233,7 @@ To prevent fraud, the *invoice* payment method is not accepted if a cart contain
 
 
 <details>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
     
 ```json
 {
@@ -255,7 +255,7 @@ To prevent fraud, the *invoice* payment method is not accepted if a cart contain
 </details>
 
 <details open>
-    <summary>Response sample with order information</summary>
+    <summary markdown='span'>Response sample with order information</summary>
     
 ```json
 {

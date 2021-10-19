@@ -60,7 +60,7 @@ Enable the following behavior be registering the plugins:
 |`ShoppingListItemProductOptionToItemProductOptionMapperPlugin`|Provides the ability to map a shopping list item product option to an item product option when transferring items from a shopping list to a cart.|None|`Spryker\Client\ShoppingListProductOptionConnector\ShoppingList`|
 
 <details open>
-<summary>src/Pyz/Client/ShoppingList/ShoppingListDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/ShoppingList/ShoppingListDependencyProvider.php</summary>
     
     
 ```php
@@ -124,7 +124,7 @@ Please review  and install the necessary features before beginning the integrati
 #### Implemenation
 Append glossary according to your configuration:
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 customer.account.shopping_list.remove_all,Remove all,en_US
@@ -148,7 +148,7 @@ Enable the following behaviors by registering the plugins:
 |`ShoppingListItemProductOptionFormExpanderPlugin`|Provides the ability to have the ability to product option form elements to shopping list item form.|None|`SprykerShop\Yves\ProductOptionWidget\Plugin\ShoppingListPage`|
 |`ShoppingListItemProductOptionToItemProductOptionMapperPlugin`|Provides the ability to populate the shopping list with product option data.|None|`SprykerShop\Yves\ProductOptionWidget\Plugin\ShoppingListPage`|
 <details open>
-<summary>src/Pyz/Yves/ShoppingListPage/ShoppingListPageDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ShoppingListPage/ShoppingListPageDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -202,7 +202,7 @@ Register the following plugins to enable widgets:
 |`ShoppingListItemProductOptionWidgetPlugin`|Shows a drop-down of product options when showing a shopping list item with the selected product option as the selected one.|None|`SprykerShop\Yves\ProductOptionWidget\Plugin\ShoppingListPage`|
 
 <details open>
-<summary>Yves/ShoppingListPage/ShoppingListPageDependencyProvider.php</summary>
+<summary markdown='span'>Yves/ShoppingListPage/ShoppingListPageDependencyProvider.php</summary>
 
 ```php
 <?php

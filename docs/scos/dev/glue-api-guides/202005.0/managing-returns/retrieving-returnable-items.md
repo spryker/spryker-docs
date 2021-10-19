@@ -35,7 +35,7 @@ Sample request: `GET https://glue.mysprykershop.com/returnable-items`
 
 ### Response
 <details>
-  <summary>Sample response - no returnable items</summary>
+  <summary markdown='span'>Sample response - no returnable items</summary>
   
 ```json
     {
@@ -48,7 +48,7 @@ Sample request: `GET https://glue.mysprykershop.com/returnable-items`
 </details>
 
 <details>
-  <summary>Sample response with returnable items</summary>
+  <summary markdown='span'>Sample response with returnable items</summary>
 
 ```json
 {

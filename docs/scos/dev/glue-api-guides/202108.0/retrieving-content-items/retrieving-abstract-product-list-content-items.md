@@ -57,7 +57,7 @@ To retrieve information about an abstract product list content item, send the re
 .
 
 <details open>
-<summary>Response sample: Abstract Product List content item</summary>
+<summary markdown='span'>markdown='span'>Response sample: Abstract Product List content item</summary>
     
 ```json
 {
@@ -74,7 +74,7 @@ To retrieve information about an abstract product list content item, send the re
 </details>
 
 <details open>
-    <summary>Response sample: Abstract Product List content item and its abstract products</summary>
+    <summary markdown='span'>markdown='span'>Response sample: Abstract Product List content item and its abstract products</summary>
     
 ```json
 {
@@ -238,7 +238,7 @@ Request sample: ` GET https://mysprykershop.com/content-product-abstract-lists/a
 ### Response
 
 <details open>
-    <summary>Response sample: Abstract Product List content item and its abstract products</summary>
+    <summary markdown='span'>markdown='span'>Response sample: Abstract Product List content item and its abstract products</summary>
     
 ```json
 {

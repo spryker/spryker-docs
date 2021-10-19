@@ -68,7 +68,7 @@ Make sure that the following changes in transfer objects have been applied:<tabl
 Append glossary for the feature:
 
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 multi_cart.cart.set_default.success,"Cart '%quote%' was successfully set as active.",en_US
@@ -95,7 +95,7 @@ The following imported entities will be used as carts in Spryker OS.
 Prepare your data according to your requirements using our demo data:
 
 <details open>
-<summary>vendor/spryker/spryker/multi-cart-data-import/data/import/multi_cart.csv</summary>
+<summary markdown='span'>vendor/spryker/spryker/multi-cart-data-import/data/import/multi_cart.csv</summary>
 
 ```yaml
  key,name,customer_reference,store,is_default,quote_data
@@ -139,7 +139,7 @@ Register the following plugin to enable data import:
 | `MultiCartDataImportPlugin` | Imports customer's quotes to database. | Make sure that customers have been imported. | `Spryker\Zed\MultiCartDataImport\Communication\Plugin` |
 
 <details open>
-<summary>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -188,7 +188,7 @@ Register the following plugins:
 | `NameQuoteTransferExpanderPlugin` | Sets default quote name if quote does not have a name. Default guest quote name is used for guest customer quotes. |  | Spryker\Client\MultiCart\Plugin |
 
 <details open>
-<summary>src/Pyz/Zed/Quote/QuoteDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Quote/QuoteDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -253,7 +253,7 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 </details>
 
 <details open>
-<summary>src/Pyz/Client/Quote/QuoteDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/Quote/QuoteDependencyProvider.php</summary>
 
 ```php
 
@@ -304,7 +304,7 @@ Register the following plugins:
 | `QuoteSelectorPersistentCartChangeExpanderPlugin` | Takes quote ID form parameters and replaces it in quote change request. |  | `Spryker\Client\MultiCart\Plugin` |
 
 <details open>
-<summary>src/Pyz/Client/PersistentCart/PersistentCartDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/PersistentCart/PersistentCartDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -344,7 +344,7 @@ class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyPr
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/PersistentCart/PersistentCartDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/PersistentCart/PersistentCartDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -382,7 +382,7 @@ Register the following plugins:
 |`GuestCartSaveCustomerSessionSetPlugin`|Executed after the customer has been added to the session. Saves a guest customer quote to the database if it is not empty.Takes an actual customer quote from the database if the guest cart is empty.|Should be added before `GuestCartUpdateCustomerSessionSetPlugin`.|`Spryker\Client\MultiCart\Plugin`|
 
 <details open>
-<summary>src/Pyz/Client/Customer/CustomerDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/Customer/CustomerDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -437,7 +437,7 @@ Make sure that the following modules have been installed:<table><thead><tr><th>M
 ### 2) Add Translations
 Append glossary according to your configuration:
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 page.multi_cart.shopping_cart.list.title,Shopping cart,en_US
@@ -562,7 +562,7 @@ Register the following controller provider(s) to the Yves application:
 | `MultiCartPageControllerProvider` | `SprykerShop\Yves\MultiCartPage\Plugin\Provider` | `MultiCartController` | Provides functionality to manage multicarts. |
 
 <details open>
-<summary>src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>
 
 ```php
 <?php
@@ -605,7 +605,7 @@ Register the following global widgets:
 | `MultiCartMenuItemWidget` | Shows link to cart list page in customer account navigation. | `SprykerShop\Yves\MultiCartWidget\Widget` |
 
 <details open>
-<summary>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

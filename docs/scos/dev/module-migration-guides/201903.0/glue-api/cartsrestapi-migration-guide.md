@@ -21,7 +21,7 @@ In order to dismantle the Horizontal Barrier and enable partial module updates o
 Find and remove `CartsRestApiDependencyProvider` in a project:
 
 <details open>
-<summary>CartsRestApiDependencyProvider.php</summary>
+<summary markdown='span'>CartsRestApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -60,7 +60,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 Find and update `CustomersRestApiDependencyProvider` in a project. The `getCustomerPostCreatePlugins` method should replace `getCustomerPostRegisterPlugins`.
 
 <details open>
-<Summary>CustomersRestApiDependencyProvider.php</summary>
+<summary markdown='span'>CustomersRestApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -88,7 +88,7 @@ Find or create `CartsRestApiDependencyProvider` in a project. Make sure that it 
 Find the `getQuoteCreatorPlugin` method and add `\Spryker\Zed\PersistentCart\Communication\Plugin\CartsRestApi\QuoteCreatorPlugin` to the plugin stack.
 
 <details open>
-<summary>CartsRestApiDependencyProvider.php</summary>
+<summary markdown='span'>CartsRestApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -119,7 +119,7 @@ Find or create `QuoteDependencyProvider` in a project. Make sure that it extends
 Find the `getQuoteValidatorPlugins` method and add `\Spryker\Zed\Currency\Communication\Plugin\Quote\QuoteCurrencyValidatorPlugin`, `\Spryker\Zed\Price\Communication\Plugin\Quote\QuotePriceModeValidatorPlugin` and `\Spryker\Zed\Store\Communication\Plugin\Quote\QuoteStoreValidatorPlugin` to the plugin stack.
 
 <details open>
-<summary>CartsRestApiDependencyProvider.php</summary>
+<summary markdown='span'>CartsRestApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -173,7 +173,7 @@ To migrate to the new version, do the following:
 The file could look like this:
 
 <details open>
-<summary>CartsRestApiDependencyProvider.php</summary>
+<summary markdown='span'>CartsRestApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -214,7 +214,7 @@ The file could look like this:
 * The file could look like this:
 
 <details open>
-<summary>CustomersRestApiDependencyProvider.php</summary>
+<summary markdown='span'>CustomersRestApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -252,7 +252,7 @@ The file could look like this:
 
 * The file could look like this:
 <details open>
-<summary>GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -340,7 +340,7 @@ To have an ability to run the console command in order to delete expired guest c
 `$config[QuoteConstants::GUEST_QUOTE_LIFETIME] = 'P01M';`
 
 <details open>
-<summary>config/Zed/cronjobs/jobs.phpjobs.php</summary>
+<summary markdown='span'>config/Zed/cronjobs/jobs.phpjobs.php</summary>
 
 ```php
 /* Quote */
@@ -363,7 +363,7 @@ Find the `getConsoleCommands` method and add `Spryker\Zed\Quote\Communication\Co
 The file could look like this:
 
 <details open>
-<summary>ConsoleDependencyProvider.php</summary>
+<summary markdown='span'>ConsoleDependencyProvider.php</summary>
 
 ```php
 <?php

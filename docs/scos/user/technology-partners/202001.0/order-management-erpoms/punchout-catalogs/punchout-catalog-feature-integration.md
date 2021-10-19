@@ -150,7 +150,7 @@ Make sure that the following changes in transfer objects:<table><thead><tr><th>T
 Append glossary according to your configuration:
 
 <details open>
-<summary>data/import/glossary.csv</summary>
+<summary markdown='span'>data/import/glossary.csv</summary>
 
 ```html
 punchout-catalog.connection.list.title,Punch-out Catalog,en_US
@@ -236,7 +236,7 @@ Make sure that in the database the configured data are added to the `spy_glossar
 Prepare your data according to your requirements using our demo data:
 
 <details open>
-<summary>vendor/punchout-catalogs/punchout-catalog-spryker/data/import/punchout_catalog_connection.csv</summary>
+<summary markdown='span'>vendor/punchout-catalogs/punchout-catalog-spryker/data/import/punchout_catalog_connection.csv</summary>
 
 ```html
 business_unit_key,username,password,credentials,is_active,type,format,name,mapping
@@ -402,7 +402,7 @@ business-unit-mitte-1,user_30,user_30_pass,,1,setup_request,oci,Client 3 - Oci -
 }
 ```
 <details open>
-<summary>vendor/punchout-catalogs/punchout-catalog-spryker/data/import/punchout_catalog_connection_cart.csv</summary>
+<summary markdown='span'>vendor/punchout-catalogs/punchout-catalog-spryker/data/import/punchout_catalog_connection_cart.csv</summary>
 
 ```html
 connection_name,default_supplier_id,max_description_length,bundle_mode,totals_mode,encoding,mapping
@@ -858,7 +858,7 @@ Client 3 - Oci - User 3,spryker_sup_5,,composite,line,,{}
 ```
 
 <details open>
-<summary>vendor/punchout-catalogs/punchout-catalog-spryker/data/import/punchout_catalog_connection_setup.csv</summary>
+<summary markdown='span'>vendor/punchout-catalogs/punchout-catalog-spryker/data/import/punchout_catalog_connection_setup.csv</summary>
 
 ```php
 connection_name,default_supplier_id,max_description_length,bundle_mode,totals_mode,encoding,mapping

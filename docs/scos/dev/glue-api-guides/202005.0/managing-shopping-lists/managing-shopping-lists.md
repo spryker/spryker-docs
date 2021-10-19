@@ -53,7 +53,7 @@ Request sample:
 
 ### Response
 <details open>
-<summary>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
    
 ```
 {
@@ -130,7 +130,7 @@ The `concrete-products` resource can be included only together with the `shoppin
 
 ### Response
 <details open>
-<summary>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
    
 ```
   {
@@ -151,7 +151,7 @@ The `concrete-products` resource can be included only together with the `shoppin
 </details>
 
 <details open>
-<summary>Response sample with shopping list items and information on concrete products</summary>
+<summary markdown='span'>Response sample with shopping list items and information on concrete products</summary>
     ```
     {
     "data": {
@@ -253,7 +253,7 @@ The `concrete-products` resource can be included only together with the `shoppin
 
 ### Response
 <details open>
-<summary>Response sample with no shopping lists</summary>
+<summary markdown='span'>Response sample with no shopping lists</summary>
    
 ```
   {
@@ -267,7 +267,7 @@ The `concrete-products` resource can be included only together with the `shoppin
 </details>    
 
 <details open>
-<summary>Response sample with own and shared shopping lists</summary>
+<summary markdown='span'>Response sample with own and shared shopping lists</summary>
    
 ```
 {
@@ -324,7 +324,7 @@ The `concrete-products` resource can be included only together with the `shoppin
 </details>
 
 <details open>
-<summary>Response sample with shopping list items and information on concrete products</summary>
+<summary markdown='span'>Response sample with shopping list items and information on concrete products</summary>
    
 ```
 {
@@ -527,7 +527,7 @@ The `concrete-products` resource can be included only together with the `shoppin
 
 ### Response
 <details open>
-<summary>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
    
 ```
 {
@@ -552,7 +552,7 @@ The `concrete-products` resource can be included only together with the `shoppin
 
 
 <details open>
-<summary>Response sample with shopping list items</summary>
+<summary markdown='span'>Response sample with shopping list items</summary>
    
 ```
 {
@@ -606,7 +606,7 @@ The `concrete-products` resource can be included only together with the `shoppin
 </details>
 
 <details open>
-<summary>Response sample with shopping list items and information on concrete products</summary>
+<summary markdown='span'>Response sample with shopping list items and information on concrete products</summary>
    
 ```
 {
@@ -795,7 +795,7 @@ The `concrete-products` resource can be included only together with the `shoppin
 
 ### Response
 <details open>
-<summary>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
    
 ```
 {
@@ -819,7 +819,7 @@ The `concrete-products` resource can be included only together with the `shoppin
 </details> 
 
 <details open>
-<summary>Response sample with shopping list items and information on concrete products</summary>
+<summary markdown='span'>Response sample with shopping list items and information on concrete products</summary>
    
 ```
 "data": {
@@ -1005,7 +1005,7 @@ The `concrete-products` resource can be included only together with the `shoppin
 
 ### Response
 <details open>
-<summary>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
     ```
     {
     "data": {
@@ -1025,7 +1025,7 @@ The `concrete-products` resource can be included only together with the `shoppin
 </details>     
 
 <details open>
-<summary>Response sample with shopping list items and information on concrete products</summary>
+<summary markdown='span'>Response sample with shopping list items and information on concrete products</summary>
  ```
  {
     "data": {

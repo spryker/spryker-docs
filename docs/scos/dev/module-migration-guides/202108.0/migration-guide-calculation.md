@@ -19,8 +19,10 @@ To upgrade from 3* to 4*, composer update your calculator to version 4.
 In the new version there are two new calculator stacks, `getQuoteCalculatorPluginStack` and `getOrderCalculatorPluginStack`. They are both defined in `\Pyz\Zed\Calculation\CalculationDependencyProvider`.
 
 {% info_block errorBox %}
-In the previous version (3*
-{% endinfo_block %}, the calculator stack was called `getCalculatorStack`. You must rename this method to `getQuoteCalculatorPluginStack`.)
+
+In the previous version (3*), the calculator stack was called `getCalculatorStack`. You must rename this method to `getQuoteCalculatorPluginStack`.
+
+{% endinfo_block %}
 
 By default the demoshop ships with these plugins. If you have your custom plugins, please add them accordingly, old and new calculators plugins are backwards compatible.
 If you want to keep having old calculated fields, add the plugins to `getQuoteCalculatorPluginStack`. Take into consideration, that we recommend you discard old plugins and use the new ones.
@@ -38,7 +40,9 @@ new ExpenseTaxCalculatorPlugin(),
 ```
 
 {% info_block errorBox %}
+
 The old Calculator plugins were moved to the following separate repository: `spryker/calculation-migration`. Please include into your `composer.json` like `"spryker/calculation-migration": "dev-master"` and run composer update. This should enable you to use old plugins.
+
 {% endinfo_block %}
 
 The `Caclulator` module also returns `back sales.fk_customer, sales.fk_shipment_method, sales.shipment_delivery_time` - these are deprecated methods. To safely migrate them, see [Migration Guide - Sales](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-sales.html).
@@ -46,7 +50,7 @@ The `Caclulator` module also returns `back sales.fk_customer, sales.fk_shipment_
 After this you should see new values calculated + legacy ones.
 
 <details open>
-<summary>Code sample:</summary>
+<summary markdown='span'>Code sample:</summary>
 
 ```php
 <?php
@@ -199,12 +203,15 @@ protected function setQuotePriceMode(QuoteTransfer $quoteTransfer)
 ```
 
 ### Migrating Sales to the New Calculator Logic
+
 To migrate all your orders, do the following:
 1. Update Yves to use the new version of the `Calculator` module with the new Calculator plugins.
 2. Update your schema by running the following SQL inserts:
 
 {% info_block errorBox %}
+
 By default, all data is nullable so you can easily run inserts. We will provide a migration script to make those fields not nullable after migration is done.
+
 {% endinfo_block %}
 
 **Code sample:**
@@ -307,7 +314,9 @@ COMMIT;
 * `vendor/bin/console propel:model:build`
 
 {% info_block infoBox %}
+
 You should now be able to persist an order with the new calculated values.
+
 {% endinfo_block %}
 
 ### Sales Aggregation
@@ -315,7 +324,7 @@ You should now be able to persist an order with the new calculated values.
 Because `SalesAggregator` is not used, we added a new extension point when the order is read. At this point, you can enrich `OrderTransfer` with your own data.
 `\Spryker\Zed\Sales\Dependency\Plugin\HydrateOrderPluginInterface` provides a new plugin interface to inject more data for an order.
 
-<!-- See  for more information about the hydration plugins.--> 
+<!-- See  for more information about the hydration plugins.-->
 There is also a list of "required by default" plugins. For out-of-the-box projects the following plugins should be configured as described below.
 
 Create a class `Pyz\Zed\Sales\SalesDependencyProvider`, if not already created. Add the new method `SalesDependencyProvider::getOrderHydrationPlugins`.
@@ -350,7 +359,9 @@ Include two new hydrator plugins:
 After this, when you read an order using `SalesFacade::getOrderByIdSalesOrder()`, the above mentioned plugins will be called to populate the order with additional data,  in this case `ProductOptions` and `Discounts`.
 
 {% info_block errorBox %}
+
 The Sales module does not depend on the `SalesAggregator` anymore. Therefore, you need to remove the `/sales-aggregator/sales/list` from `\Pyz\Zed\Sales\SalesConfig::getSalesDetailExternalBlocksUrls` as it is no longer in use. Totals were moved to Sales to the template `Spryker/Zed/Sales/Presentation/Detail/boxes/totals.twig` available in Sales version >= 6.\*.
+
 {% endinfo_block %}
 
 ### Template Changes in SalesBundle >= 6.\*:
@@ -367,7 +378,7 @@ This plugin expands quote items so each item has a single quantity, then runs or
 **To add a new plugin to `\Pyz\Zed\Checkout\CheckoutDependencyProvider`**
 
 **Code sample:**
- 
+
 ```php
 <?php
 
@@ -420,12 +431,17 @@ If you want to receive future patches for the related plugins, it's recommended 
 The modules `ProductOption`, `DiscountSalesAggregatorConnector`, `DiscountSalesAggregatorConnector` no longer store Aggregator plugins.
 
 ## Old Order Migration Guide
+
 Use this guide as a reference when preparing migration script.
+
 {% info_block errorBox %}
+
 Before beginning, make a backup of your sales order data!
+
 {% endinfo_block %}
 
 ### Console Command
+
 We prepared a migration console command which will  populate your old orders with the new calculated values.
 To download this console command, go to Console Command.
 Register the following console command: `\Pyz\Zed\SalesAggregator\Communication\Console\SalesAggregatorMigrationConsole` in the Spryker Console module dependency provider: `\Pyz\Zed\Console\ConsoleDependencyProvider::getConsoleCommands` method.
@@ -451,8 +467,11 @@ Register the following console command: `\Pyz\Zed\SalesAggregator\Communication\
 ```
 
 {% info_block errorBox %}
-**Please back up your data now!**
+
+Please back up your data now!
+
 {% endinfo_block %}
+
 You can now execute the command via `vendor/bin/console sales-aggregator:migrate` - you will be prompted to confirm before executing the migration.
 Console command accepts an argument to make "dry run" by verifying if all data is correct, it compares aggregated and new calculated values.
 If any order fails verification, it will be skipped and you will have to manually investigate and fix it.

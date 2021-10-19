@@ -49,7 +49,7 @@ Make sure that the following modules are installed:
 Set the required OAuth config (see the [Installation documentation](https://oauth2.thephpleague.com/installation/) for more information about keys generation):
 
 <details open>
-<summary>config/Shared/config_default.php</summary>
+<summary markdown='span'>config/Shared/config_default.php</summary>
 
 ```php
 $config[OauthConstants::PRIVATE_KEY_PATH] = 'file://path/to/private.key';
@@ -66,7 +66,7 @@ $config[OauthConstants::OAUTH_CLIENT_SECRET] = 'some-client-secret';
 To override the default interval which defines for how long the refresh tokens will be stored in the system after they expire, extend the `Spryker\Shared\Oauth\OauthConfig` on the project level. The value has to be provided in the format acceptable by `DateInterval` object.
 
 <details open>
-<summary>src/Pyz/Zed/Shared/OauthConfig.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Shared/OauthConfig.php</summary>
 
 ```php
 <?php
@@ -180,7 +180,7 @@ SELECT COUNT(*) FROM spy_customer_address WHERE uuid IS NULL;
 ### Enable Jenkins check for finding and deleting the expired refresh token
 
 <details open>
-<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -249,7 +249,7 @@ Activate the following plugins:
 | `OauthRefreshTokensRevokerPlugin` | Revokes all the refresh tokens. | None | `Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth` |
 
 <details open>
-<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -348,7 +348,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -464,7 +464,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/Installer/InstallerDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Installer/InstallerDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -535,7 +535,7 @@ Send a request to `http://mysprykershop.com/customers/{% raw %}{{{% endraw %}cus
 To verify `AccessTokenRestRequestValidatorPlugin` is set up correctly, send a request to `/refresh-tokens` *without Authorization: Bearer {token}* (or with the outdated or wrong token). If you get one of the following errors, the plugin is installed:
 
 <details open>
-<summary>Auth error</summary>
+<summary markdown='span'>Auth error</summary>
 
 ```json
 {
@@ -553,7 +553,7 @@ To verify `AccessTokenRestRequestValidatorPlugin` is set up correctly, send a re
 </details>
 
 <details open>
-<summary>Auth error</summary>
+<summary markdown='span'>Auth error</summary>
 
 ```json
 {
@@ -621,7 +621,7 @@ SELECT * FROM spy_oauth_refresh_token WHERE customer_reference = 'authenticated-
 To verify that `OauthRefreshTokenCheckerPlugin` is set up correctly, send a *POST* request to `http://glue.mysprykershop.com/refresh-tokens` and specify the revoked refresh token. If you get the following errors, the plugin is installed:
 
 <details open>
-<summary>POST request example</summary>
+<summary markdown='span'>POST request example</summary>
 
 ```json
 {
@@ -637,7 +637,7 @@ To verify that `OauthRefreshTokenCheckerPlugin` is set up correctly, send a *P
 </details>
 
 <details open>
-<summary>Response example</summary>
+<summary markdown='span'>Response example</summary>
 
 ```json
 {

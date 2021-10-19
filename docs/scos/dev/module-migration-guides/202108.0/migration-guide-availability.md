@@ -16,7 +16,9 @@ redirect_from:
 In this new version of the **Availability** module, we have added support of decimal stock. You can find more details about the changes on the [Availability release](https://github.com/spryker/availability/releases) page.
 
 {% info_block errorBox %}
+
 This release is a part of the **Decimal Stock** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Decimal Stock Migration Concept](/docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html).
+
 {% endinfo_block %}
 
 **To upgrade to the new version of the module, do the following:**
@@ -45,16 +47,16 @@ src/Pyz/Zed/Cart/CartDependencyProvider.php
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Cart;
- 
+
 use Spryker\Zed\AvailabilityCartConnector\Communication\Plugin\CheckAvailabilityPlugin;
 use Spryker\Zed\Cart\CartDependencyProvider as SprykerCartDependencyProvider;
 use Spryker\Zed\Kernel\Container;
- 
+
 class CartDependencyProvider extends SprykerCartDependencyProvider
 {
- 
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -70,11 +72,12 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 ```
 *Estimated migration time: 5 min*
 
-
 ## Upgrading from Version 6.* to Version 8.0.0
 
 {% info_block infoBox %}
+
 In order to dismantle the Horizontal Barrier and enable partial module updates on projects, Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Please [contact us](https://spryker.com/en/support/) if you have any questions.
+
 {% endinfo_block %}
 
 ## Upgrading from Version 5.* to Version 6.*
@@ -98,7 +101,7 @@ To upgrade, first you need to run database migrations:
              FOREIGN KEY ("fk_store")
              REFERENCES "spy_store" ("id_store");
  ```
- 
+
 Then:
 
 * Run `vendor/bin/console propel:model:build` - this will update models.
@@ -116,7 +119,7 @@ $productConcreteAvailability = SpyAvailabilityQuery::create()
             ->findByFkAvailabilityAbstract($idAvailabilityAbstract);
 ```
 
-Change: `\Pyz\Zed\Collector\Persistence\Storage\Propel\AvailabilityCollectorQuery` to collect only current store availability: 
+Change: `\Pyz\Zed\Collector\Persistence\Storage\Propel\AvailabilityCollectorQuery` to collect only current store availability:
 
 ```php
 $this->touchQuery->addJoin(
@@ -137,8 +140,8 @@ $this->touchQuery->addJoin(
 All `Availability` UI has been moved to `AvailabilitGui` module, mostly Communication or Persistence were changed. If you have overwritten any of moved classes from those layers please change base class namespace from `Availability` to `AvailabilityGui` root.
 
 ## Upgrading from Version 2.* to Version 3.*
-    
-With Availability version 3, we have changed the way availability is calculated. 
+
+With Availability version 3, we have changed the way availability is calculated.
 Two new tables have been added:
 
 ```php

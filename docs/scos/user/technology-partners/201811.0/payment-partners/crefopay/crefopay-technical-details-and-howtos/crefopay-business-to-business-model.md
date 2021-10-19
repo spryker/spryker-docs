@@ -31,7 +31,7 @@ To enable the B2B business model for CrefoPay:
 1. Set `$config[CrefoPayConstants::IS_BUSINESS_TO_BUSINESS]` to true.
 2. Add company data into `QuoteTransfer` on project level. It should be done before customer goes to checkout payment step.
 <details open>
-<summary>Company Data</summary>
+<summary markdown='span'>markdown='span'>Company Data</summary>
 ```php
 $quoteTransfer->setCrefoPayCompany(
     (new CrefoPayApiCompanyTransfer())

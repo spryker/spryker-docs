@@ -74,7 +74,7 @@ Activate the following plugin:
 |`AbstractProductsResourceRoutePlugin`|Registers an abstract product resource.|None|`Spryker\Glue\ProductsRestApi\Plugin`|`ConcreteProductsResourceRoutePlugin`|Registers an concrete product resource.| None| `Spryker\Glue\ProductsRestApi\Plugin`|
 
 <details open>   
-<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
  
 ```php
 <?php
@@ -102,7 +102,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 </details>
 
-*`http://example.org/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}`
-*`http://example.org/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}`
+*`http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}`
+*`http://mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}`
 
 *Last review date: Feb 19, 2019* 

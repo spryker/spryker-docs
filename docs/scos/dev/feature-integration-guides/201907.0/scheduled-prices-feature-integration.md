@@ -66,7 +66,7 @@ The following imported entities will be used as product price schedules in Spryk
 Prepare your data according to your requirements using our demo data:
 
 <details open>
-    <summary>vendor/spryker/spryker/Bundles/PriceProductScheduleDataImport/data/import</summary>
+    <summary markdown='span'>vendor/spryker/spryker/Bundles/PriceProductScheduleDataImport/data/import</summary>
 
 ```yaml
 abstract_sku,concrete_sku,price_type,store,currency,value_net,value_gross,from_included,to_included
@@ -108,7 +108,7 @@ Register the following plugin to enable data import:
 |  `PriceProductScheduleDataImportPlugin` | Imports scheduled prices data into database. | None |  `\Spryker\Zed\PriceProductScheduleDataImport\Communication\Plugin` |
 
 <details open>
-    <summary>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
 
 ```PHP
 <?php
@@ -158,7 +158,7 @@ Enable the following behaviors by registering the console commands, view and tab
 | `ScheduledPriceProductConcreteEditViewExpanderPlugin` | Expands the **Scheduled Prices** tab of the *Edit Product concrete* page with the scheduled prices data. | None | `Spryker\Zed\PriceProductScheduleGui\Communication\Plugin\ProductManagement` |
 
 <details open>
-<summary> src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
+<summary markdown='span'> src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
 
 ```PHP
 <?php
@@ -194,7 +194,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 </details>
 
 <details open>
-<summary> src/Pyz/Zed/PriceProductScheduleDataImport/PriceProductScheduleDataImportConfig.php</summary>
+<summary markdown='span'> src/Pyz/Zed/PriceProductScheduleDataImport/PriceProductScheduleDataImportConfig.php</summary>
 
 ```PHP
 <?php
@@ -220,7 +220,7 @@ class PriceProductScheduleDataImportConfig extends SprykerPriceProductScheduleDa
 </details>
 
 <details open>
-<summary> src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php</summary>
+<summary markdown='span'> src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -305,7 +305,7 @@ Make sure that applied scheduled prices have been correctly removed from the dat
 Enable the `apply-price-product-schedule` console command in the cron-job list:
 
 <details open>
-<summary> config/Zed/cronjobs/jobs.php</summary>
+<summary markdown='span'> config/Zed/cronjobs/jobs.php</summary>
 
 ```php
 <?php

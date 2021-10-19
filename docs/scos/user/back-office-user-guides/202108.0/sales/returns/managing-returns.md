@@ -122,8 +122,7 @@ The triggered return states are reflected in the [customer account on the Storef
 {% endinfo_block %}
 
 **Tips & tricks**
-
-To trigger the return states for all the items in the return, click the states at the *Trigger all matching states* field. To trigger the return states for individual items of the return, trigger the states in the *Trigger event* column for the necessary items.
+<br>To trigger the return states for all the items in the return, click the states at the *Trigger all matching states* field. To trigger the return states for individual items of the return, trigger the states in the *Trigger event* column for the necessary items.
 
 ### Reference information: Setting return statuses
 
@@ -139,7 +138,6 @@ Once a return has been created, it acquires the *Waiting for return* state. You 
 | close | You can trigger this state after the *Delivered* state. Select this state to close the return. The return status is changed to *Closed*. |
 
 ## Printing a return slip
-
 For all returns, irrespective of their statuses, you can print the automatically generated [return slip](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html#return-slip).
 
 To print the return slip:

@@ -29,11 +29,11 @@ src/Pyz/Glue/NavigationsRestApi/NavigationsRestApiConfig.php
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\NavigationsRestApi;
- 
+
 use Spryker\Glue\NavigationsRestApi\NavigationsRestApiConfig as SprykerNavigationsRestApiConfigi;
- 
+
 class NavigationsRestApiConfig extends SprykerNavigationsRestApiConfig
 {
     /**
@@ -49,10 +49,10 @@ class NavigationsRestApiConfig extends SprykerNavigationsRestApiConfig
 }
 ```
 
-3.  Perform database schema migration.
+3. Perform database schema migration.
 If you do not have the spryker/url-storage module in your project - you need to perform database schema migration to get the required tables.
 
-On your local development environment you may run
+On your local development environment you may run:
 
 ```bash
 console transfer:generate
@@ -67,7 +67,9 @@ vendor/bin/console propel:diff
 ```
 
 {% info_block infoBox %}
+
 Before migrating a production database, always review each SQL statement individually, even when there are many of them.
+
 {% endinfo_block %}
 
 _Estimated migration time: 30 minutes_

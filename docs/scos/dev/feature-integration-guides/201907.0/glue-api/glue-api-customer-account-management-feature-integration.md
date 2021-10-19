@@ -50,7 +50,7 @@ Make sure that the following modules are installed:
 Set required OAuth config (see the [Installation documentation](https://oauth2.thephpleague.com/installation/) for more information about keys generation):
 
 <details open>
-<summary>config/Shared/config_default.php</summary>
+<summary markdown='span'>config/Shared/config_default.php</summary>
 
 ```php
 $config[OauthConstants::PRIVATE_KEY_PATH] = 'file://path/to/private.key';
@@ -160,7 +160,7 @@ Activate the following plugins:
 | `CustomerOauthScopeProviderPlugin` | Provides a list of customer scopes. | None | `Spryker\Zed\OauthCustomerConnector\Communication\Plugin` |
 
 <details open>
-<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -259,7 +259,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -298,7 +298,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/Installer/InstallerDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Installer/InstallerDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -354,7 +354,7 @@ To verify `AccessTokenRestRequestValidatorPlugin` is set up correctly, you'll ne
 {% endinfo_block %}
 
 <details open>
-<summary>Auth error</summary>
+<summary markdown='span'>Auth error</summary>
 
 ```json
 {
@@ -372,7 +372,7 @@ To verify `AccessTokenRestRequestValidatorPlugin` is set up correctly, you'll ne
 </details>
 
 <details open>
-<summary>Auth error</summary>
+<summary markdown='span'>Auth error</summary>
 
 ```json
 {

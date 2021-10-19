@@ -27,7 +27,7 @@ Enable the following behaviors by registering the plugins:
 |`QuickOrderFormMeasurementUnitColumnPlugin`|Adds the additional **Measuring Unit** column to a quick order table.|None|`SprykerShop\Yves\QuickOrderPage\Plugin\QuickOrder`|
 
 <details open>
-<summary>src/Pyz/Yves/QuickOrderPage/QuickOrderPageDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/QuickOrderPage/QuickOrderPageDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -62,7 +62,7 @@ Make the following checks at  https://mysprykershop.com/quick-order:</br> `Quick
 |`ProductConcreteTransferBaseMeasurementUnitExpanderPlugin`|Expands the provided array of `ProductConcreteTransfers` with the base measurement unit information (if available) for the product.|None|`Spryker\Client\ProductMeasurementUnitStorage\Plugin\QuickOrder`|
 
 <details open>
-<summary>src/Pyz/Client/QuickOrder/QuickOrderDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/QuickOrder/QuickOrderDependencyProvider.php</summary>
 
 ```php
 <?php

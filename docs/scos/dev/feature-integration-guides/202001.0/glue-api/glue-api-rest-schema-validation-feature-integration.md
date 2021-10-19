@@ -180,7 +180,7 @@ Make sure that `ValidateRestRequestAttributesPlugin` has been activated:
 
 2. Make a call to the endpoint you described in the validation file with invalid data. Request sample:
 
-`POST http://example.org/access-tokens`
+`POST http://mysprykershop.comop.com/access-tokens`
 
 ```json
 {

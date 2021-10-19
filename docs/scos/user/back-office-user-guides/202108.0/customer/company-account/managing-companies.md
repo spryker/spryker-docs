@@ -24,13 +24,16 @@ Review the reference information before you start, or just look up the necessary
 To create a new company record, do the following:
 1. On the *Overview of Companies* page, click **Create Company** in the top right corner.
 2. On the *Create Company* page, in the *Name* field, enter the name of the company you would like to create.
-3. Click **Save**. 
+3. Click **Save**.
     The new created company appears in the _List of the Companies_ table on the *Companies* page.
-{% info_block errorBox "Important" %}
-Once the company is created, one business unit for it is created by default. This is considered to be a headquarter and can be managed in the same ways as the other business units. See [Managing company units](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-units.html
-{% endinfo_block %} for more details.)
 
-The companies can be managed by triggering certain actions in the _Actions_ column in the _List of Companies_ table on the *Companies* page. 
+{% info_block errorBox "Important" %}
+
+Once the company is created, one business unit for it is created by default. This is considered to be a headquarter and can be managed in the same ways as the other business units. See [Managing company units](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-units.html) for more details.
+
+{% endinfo_block %}
+
+The companies can be managed by triggering certain actions in the _Actions_ column in the _List of Companies_ table on the *Companies* page.
 Specifically, company roles can be **Edited**, **Activated**, **Deactivated**, **Approved**, and **Denied**.
 
 ## Managing companies
@@ -41,7 +44,7 @@ Right after the company has been created whether in the shop application or in t
 ### Approving and activating companies
 
 To approve a company and activate a company:
-1. Click **Approve** in the _Actions_ column. 
+1. Click **Approve** in the _Actions_ column.
     As a result, the status of the company is changed to *Approved*.
 2. Click **Activate** in the _Actions_ column. As a result, the activity state of the company will change from **Inactive** to **Active**.
 
@@ -54,7 +57,9 @@ To disapprove a company, click **Deny**.
 ![Denying a company](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/Managing+Companies/denying-company.png)
 
 {% info_block infoBox %}
+
 You can approve and activate the record in a later event. The record itself will continue existing in the system.
+
 {% endinfo_block %}
 
 ### Deactivating companies
@@ -63,13 +68,13 @@ To deactivate a company, click **Deactivate**.
 
 ### Editing companies
 
-To change the name of a company: 
+To change the name of a company:
 1. Click **Edit** in the _Actions_ column.
 2. On the *Edit Company* page, in the *Name* file, edit the name of the company.
 The updated company name is displayed in the _List of the Companies_ table of the *Companies* page.
 
 **What's next?**
-The company record is added and now you can proceed with creating a company unit. See [Managing company units](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-units.html) for more details.
+<br>The company record is added and now you can proceed with creating a company unit. See [Managing company units](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-units.html) for more details.
 
 ### Reference information: Creating and managing companies
 
@@ -78,5 +83,3 @@ The following table describes the information that you see on the *Overview of C
 |PAGE NAME | INFORMATION |
 | --- | --- |
 | Overview of Companies | On this page, you can see the company ID and name, either Active, or Inactive label, the company status (either *Approved* or *Declined*), and the actions you can perform (**Edit**, **Activate**/**Deactivate**, **Approve**/**Deny**). |
-
-

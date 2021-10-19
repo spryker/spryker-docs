@@ -32,14 +32,14 @@ related:
 
 On the Profile page, you can set/update the general information for your profile.
 <details open>
-<summary>B2B Shop</summary>
+<summary markdown='span'>markdown='span'>B2B Shop</summary>
 
 ![b2b-profile](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Customer+Account/Profile/b2b-profile.png) 
 
 </details>
 
 <details open>
-<summary>B2C Shop</summary>
+<summary markdown='span'>markdown='span'>B2C Shop</summary>
 
 ![b2c-profile](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Customer+Account/Profile/b2c-profile.png) 
 

@@ -19,15 +19,17 @@ The current feature integration Guide only adds the Company Account REST API fun
 {% endinfo_block %}
 
 ## Install Feature API
+
 ### Prerequisites
 To start the feature integration, overview and install the necessary features:
 
-| Name | Version | Integration guide |
+| NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Feature API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-installation-and-configuration.html) | 
 | Customer Access | {{page.version}} | [Feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-access-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
+
 Run the following command to install the required modules:
 
 ```bash
@@ -38,20 +40,21 @@ composer require spryker/customer-access-rest-api:"^1.1.0" --update-with-depende
 
 Make sure that the following module has been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | `CustomerAccessRestApi` | `vendor/spryker/customer-access-rest-api` |
 
 {% endinfo_block %}
 
 ### 2) Set up configuration
+
 Add the following configuration:
 
-| Configuration | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `CustomerAccessRestApiConfig::CUSTOMER_ACCESS_CONTENT_TYPE_TO_RESOURCE_TYPE_MAPPING` | Array that provides a mapping between customer access content types and the corresponding REST resource names. | None |`\Spryker\Glue\CustomerAccessRestApi` |
+| CustomerAccessRestApiConfig::CUSTOMER_ACCESS_CONTENT_TYPE_TO_RESOURCE_TYPE_MAPPING | Array that provides a mapping between customer access content types and the corresponding REST resource names. | None | \Spryker\Glue\CustomerAccessRestApi |
 
-src/Pyz/Glue/CustomerAccessRestApi/CustomerAccessRestApiConfig.php
+**src/Pyz/Glue/CustomerAccessRestApi/CustomerAccessRestApiConfig.php**
     
 ```php
 <?php
@@ -87,7 +90,8 @@ class CustomerAccessRestApiConfig extends SprykerCustomerAccessRestApiConfig
 }
 ```
 
-### 3) Set up Transfer Objects
+### 3) Set up transfer objects
+
 Run the following command to generate transfer changes:
 
 ```bash
@@ -98,23 +102,24 @@ console transfer:generate
 
 Make sure that the following changes have occurred:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
-| `RestCustomerAccessAttributesTransfer` | class | created | `src/Generated/Shared/Transfer/RestCustomerAccessAttributesTransfer` |
+| RestCustomerAccessAttributesTransfer | class | created | src/Generated/Shared/Transfer/RestCustomerAccessAttributesTransfer |
 
 {% endinfo_block %}
 
-### 4) Set up Behavior
+### 4) Set up behavior
+
 #### Enable resources
 
 Activate the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `CustomerAccessResourceRoutePlugin` | Registers the `customer-access` resource. | None | `Spryker\Glue\CustomerAccessRestApi\Plugin\GlueApplication` |
-| `CustomerAccessFormatRequestPlugin` | Checks whether the current resource is restricted by the `spryker/customer-access` module. | None | `Spryker\Glue\CustomerAccessRestApi\Plugin\GlueApplication` |
+| CustomerAccessResourceRoutePlugin | Registers the `customer-access` resource. | None | Spryker\Glue\CustomerAccessRestApi\Plugin\GlueApplication |
+| CustomerAccessFormatRequestPlugin | Checks whether the current resource is restricted by the `spryker/customer-access` module. | None | Spryker\Glue\CustomerAccessRestApi\Plugin\GlueApplication |
 
-src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php
+**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
 ```php
 <?php
@@ -179,12 +184,12 @@ Make that following endpoint is available:
 }
 ```
 
-
 {% endinfo_block %}
+
 
 {% info_block warningBox "Verification" %}
 
-Make that `CustomerAccessFormatRequestPlugin` is set up correctly:
+Make sure that `CustomerAccessFormatRequestPlugin` is set up correctly:
 
 * Go to the **Customer Access** tab in *Spryker Back Office* and hide the `price` content.
 * Make a request to: `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract-sku{% raw %}}}{% endraw %}/abstract-product-prices`
@@ -204,7 +209,6 @@ Make that `CustomerAccessFormatRequestPlugin` is set up correctly:
     ]
 }
 ```
-
 
 {% endinfo_block %}
 

@@ -69,7 +69,7 @@ To retrieve a business unit, send the request:
 
 
 <details open>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
     
 ```json
 {
@@ -101,7 +101,7 @@ To retrieve a business unit, send the request:
 
 
 <details open>
-    <summary>Response sample with business units of a company user</summary>
+    <summary markdown='span'>Response sample with business units of a company user</summary>
 
 ```json
 {
@@ -128,7 +128,7 @@ To retrieve a business unit, send the request:
 
 
 <details open>
-    <summary>Response sample with companies</summary>
+    <summary markdown='span'>Response sample with companies</summary>
 
 ```json
 {
@@ -168,7 +168,7 @@ To retrieve a business unit, send the request:
 </details>
 
 <details open>
-    <summary>Response sample with company business unit addresses</summary>
+    <summary markdown='span'>Response sample with company business unit addresses</summary>
 
 ```json
 {

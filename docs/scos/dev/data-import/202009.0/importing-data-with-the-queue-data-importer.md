@@ -140,7 +140,7 @@ protected function getQueueOptions()
 
 7. Add a method for creating `DataSetWriterCollection` based on that plugin and another one for creating the data importer, which works on top of this collection. Add a call to this method to `DataImportBusinessFactory::getImporter()`.
 
-<details><summary>Pyz\Zed\DataImport\Business\DataImportBusinessFactory</summary>
+<details><summary markdown='span'>Pyz\Zed\DataImport\Business\DataImportBusinessFactory</summary>
 
 ```php
 <?php

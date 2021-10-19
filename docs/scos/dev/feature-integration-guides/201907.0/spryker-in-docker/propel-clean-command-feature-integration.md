@@ -50,7 +50,7 @@ Use  `SprykerTest\Shared\Testify\Helper\DataCleanupHelper ` instead to clean up 
 Enable the  `DatabaseDropTablesConsole ` console command in  `Pyz\Zed\Console\ConsoleDependencyProvider `:
 
 <details open>
-    <summary>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
 
 ```
     <?php

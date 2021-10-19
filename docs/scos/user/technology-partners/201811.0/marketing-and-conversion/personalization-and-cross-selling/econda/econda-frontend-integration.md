@@ -29,7 +29,7 @@ Econda scripts are recommended to be connected at all the shop pages. To impleme
 2. Add path to folder to webpack in `frontend/configs/development.js`.
 
 <details open>
-<summary>development.js</summary>
+<summary markdown='span'>development.js</summary>
 
 ```js
 CopyWebpackPlugin([
@@ -47,7 +47,7 @@ CopyWebpackPlugin([
 3. Extend `page-layout-main.twig` scripts block.
 
 <details open>
-<summary>page-layout-main.twig</summary>
+<summary markdown='span'>page-layout-main.twig</summary>
     
 ```xml
 {% raw %}{%{% endraw %} block footerScripts {% raw %}%}{% endraw %}
@@ -64,7 +64,7 @@ CopyWebpackPlugin([
  ## Econda Cross Sell Integration
 Extend `ProductController` on the project level.
 <details open>
-<summary>ProductController</summary>
+<summary markdown='span'>ProductController</summary>
 
 ```php
 <?php
@@ -128,7 +128,7 @@ Add a new field `econdaAccountId` to the `pdp.twig` file on the project level an
 To add Cross Sell Widget you should include Econda Cross-sell-widget molecule to the product detail page in `product-detail.twig` and add required data field:
 
 <details open>
-<summary>product-detail.twig</summary>
+<summary markdown='span'>product-detail.twig</summary>
 
 ```html
 {% raw %}{%{% endraw %} define data = {
@@ -157,7 +157,7 @@ Include `econda-tracker.twig` molecule to the page you need to track and pass sp
 product -detail.twig
 
 <details open>
-<summary>product -detail.twig</summary>
+<summary markdown='span'>product -detail.twig</summary>
 
 ```html
 {% raw %}{%{% endraw %} include molecule('econda-tracker', 'Econda') with {

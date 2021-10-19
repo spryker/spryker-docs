@@ -45,7 +45,7 @@ To upgrade the `Category` module from version 4.* to 5.*:
              <parameter name="spy_category_template_all" column="*"/>
          </behavior>
    </table>
-   
+
    <table name="spy_category_store">
          <behavior name="event">
              <parameter name="spy_category_store_all" column="*"/>
@@ -68,21 +68,21 @@ To upgrade the `Category` module from version 4.* to 5.*:
 
 5. From `\Pyz\Zed\Category\CategoryDependencyProvider`, remove the deprecated plugin stacks:
 
-   - `\Pyz\Zed\Category\CategoryDependencyProvider::getCategoryFormPlugins()`
-   - `\Pyz\Zed\Category\CategoryDependencyProvider::getCategoryFormTabExpanderPlugins()`
-   - `\Pyz\Zed\Category\CategoryDependencyProvider::getRelationReadPluginStack()`
+* `\Pyz\Zed\Category\CategoryDependencyProvider::getCategoryFormPlugins()`
+* `\Pyz\Zed\Category\CategoryDependencyProvider::getCategoryFormTabExpanderPlugins()`
+* `\Pyz\Zed\Category\CategoryDependencyProvider::getRelationReadPluginStack()`
 
 6. In `\Pyz\Zed\Category\CategoryDependencyProvider` on the project level, register the plugin that describes the strategy of attaching a category to a store:  
 
    ```php
    <?php
-   
+
    namespace Pyz\Zed\Category;
-   
+
    use Spryker\Zed\Category\CategoryDependencyProvider as SprykerDependencyProvider;
    use Spryker\Zed\Category\Communication\Plugin\Category\MainChildrenPropagationCategoryStoreAssignerPlugin;
    use Spryker\Zed\CategoryExtension\Dependency\Plugin\CategoryStoreAssignerPluginInterface;
-   
+
    class CategoryDependencyProvider extends SprykerDependencyProvider
    {
        /**
@@ -95,7 +95,7 @@ To upgrade the `Category` module from version 4.* to 5.*:
    }
    ```
 
-7.  if you are using data import: 
+7.  if you are using data import:
 
     1. Update the `CategoryDataImport` module:
 
@@ -107,12 +107,12 @@ To upgrade the `Category` module from version 4.* to 5.*:
 
       ```php
       <?php
-      
+
       namespace Pyz\Zed\DataImport;
-      
+
       use Spryker\Zed\CategoryDataImport\Communication\Plugin\DataImport\CategoryStoreDataImportPlugin;
       use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
-      
+
       class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
       {
           /**
@@ -127,18 +127,18 @@ To upgrade the `Category` module from version 4.* to 5.*:
       }
       ```
 
-      
+
 
     3. Add the category store import to the list of the import types by the given path`Pyz/Zed/DataImport/DataImportConfig`:
 
       ```php
       <?php
-      
+
       namespace Pyz\Zed\DataImport;
-      
+
       use Spryker\Zed\CategoryDataImport\CategoryDataImportConfig;
       use Spryker\Zed\DataImport\DataImportConfig as SprykerDataImportConfig;
-      
+
       class DataImportConfig extends SprykerDataImportConfig
       {
           /**
@@ -157,18 +157,18 @@ To upgrade the `Category` module from version 4.* to 5.*:
 
       ```php
       <?php
-      
+
       namespace Pyz\Zed\Console;
-      
+
       use Spryker\Zed\Kernel\Container;
       use Spryker\Zed\CategoryDataImport\CategoryDataImportConfig;
       use Spryker\Zed\DataImport\Communication\Console\DataImportConsole;
       use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
-      
+
       class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
       {
            protected const COMMAND_SEPARATOR = ':';
-      
+
           /**
            * @param \Spryker\Zed\Kernel\Container $container
            *
@@ -202,9 +202,11 @@ To upgrade the `Category` module from version 4.* to 5.*:
 Ensure that the `spy_category_store` table has been added and filled with data.
 
 {% endinfo_block %}
+
 ## Upgrading from Version 3.* to Version 4.*
 
 ### Changes
+
 The fourth version of the Category module introduced the changes described below.
 
 Added:
@@ -219,15 +221,17 @@ Removed:
 * category `is_clickable` functionality
 
 ### Update modules
+
 1. Update the Category module by adding `"spryker/category": "^4.0.0"` to your `composer.json` and running composer update.
 Due to the changes in the Category module, all related modules have to be updated too.
 2. Run composer require `spryker/event spryker/storage` to install Event and Storage modules.
 
 ### Database update and migration
+
 Execute the following SQL statement to create the table `spy_category_template` and modify the `spy_category` one:
 
 **Code sample:**
-     
+
 ```sql
 CREATE SEQUENCE "spy_category_template_pk_seq";
 
@@ -244,11 +248,12 @@ ALTER TABLE "spy_category" ADD "fk_category_template" INTEGER;
 
 ALTER TABLE "spy_category" ADD FOREIGN KEY("fk_category_template") REFERENCES spy_category_template(id_category_template);
 ```
-    
+
 4. Run `console propel:diff; console propel:migrate; console propel:model:build` to build propel models.
 5. Run `console transfer:generate` to generate objects.
 
 #### Resolve deprecations
+
 Before upgrading to the new version, make sure that you do not use any deprecated code from version 3.\*. You can find replacements for the deprecated code in the table below.
 
 | Deprecated code | Replacement |
@@ -258,10 +263,13 @@ Before upgrading to the new version, make sure that you do not use any deprecate
 |`\Spryker\Zed\Category\Communication\Form\CategoryLocalizedAttributeType::setDefaultOptions()`|`\Spryker\Zed\Category\Communication\Form\CategoryLocalizedAttributeType::configureOptions()`|
 
 {% info_block errorBox %}
-Also, `is_clickable` form field was removed because this functionality is obsolete, so make sure that you do not use it.
+
+Also, the `is_clickable` form field was removed because this functionality is obsolete, so make sure that you do not use it.
+
 {% endinfo_block %}
 
 #### Data migration
+
 The following migration script is designed to add the category template selection functionality to your project. If necessary, adjust the script to cover your category implementation
 
 CategoryTemplateMigration.php

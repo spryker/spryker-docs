@@ -15,6 +15,7 @@ related:
 ---
 
 ## Upgrading from Version 4.* to Version 5.0.0
+
 In this new version of the **Payment** module, we have added support of the payment method per store. You can find more details about the changes on the [Payment module](https://github.com/spryker/payment/releases) release page.
 
 **To upgrade to the new version of the module, do the following:**
@@ -49,8 +50,8 @@ console transfer:generate
 In the Payment module version 4 we have added new payment tables to store order payment related information.
 To enable the new version:
 
-1. Composer update `spryker/payment` to new version
-2. Run `vendor/bin/console transfer:generate` to generate new transfer objects
+1. Composer update `spryker/payment` to new version.
+2. Run `vendor/bin/console transfer:generate` to generate new transfer objects.
 3. Insert new sales payment tables by executing the following queries:
 
 ```sql
@@ -86,4 +87,4 @@ You should now be able to see that the new order saved payment information into 
 
 You may also want to enable the new plugin `\Spryker\Zed\Payment\Communication\Plugin\Sales\PaymentOrderHydratePlugin` by adding it to `\Pyz\Zed\Sales\SalesDependencyProvider::getOrderHydrationPlugins`.
 
-This enables new payment provider hydration plugins which are hydrated to `OrderTransfer`. 
+This enables new payment provider hydration plugins which are hydrated to `OrderTransfer`.

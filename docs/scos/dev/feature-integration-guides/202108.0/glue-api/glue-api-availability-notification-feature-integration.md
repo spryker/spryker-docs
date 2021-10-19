@@ -11,16 +11,16 @@ redirect_from:
   - /docs/en/glue-api-availability-notification-feature-integration
 ---
 
-This document describes how to integrate the Glue API: Availability Notification feature into a Spryker project. 
+This document describes how to integrate the Glue API - Availability Notification feature into a Spryker project.
 
-Follow the steps below to integrate the Glue API: Availability Notification feature.
+Follow the steps below to integrate the Glue API - Availability Notification feature.
 
 ## Prerequisites
 To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 |-|-|
-| Availability Notification | 202009.0 |
+| Availability Notification | {{page.version}} |
 
 ## 1) Install required modules using Composer
 
@@ -28,9 +28,11 @@ Install the required modules:
 ```bash
 composer require spryker/availability-notifications-rest-api --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
 Ensure that the following modules have been installed:
+
 | MODULE | EXPECTED DIRECTORY |
 |-|-|
 | AvailabilityNotificationsRestApi | vendor/spryker/availability-notifications-rest-api |
@@ -39,10 +41,13 @@ Ensure that the following modules have been installed:
 {% endinfo_block %}
 
 ## 2) Set up transfer objects
+
 Generate transfer changes:
+
 ```bash
 console transfer:generate
 ```
+
 {% info_block warningBox "Verification" %}
 
 Ensure that the following changes have occurred in transfer objects:
@@ -54,10 +59,10 @@ Ensure that the following changes have occurred in transfer objects:
 | AvailabilityNotificationSubscriptionCollectionTransfer | class | created | src/Generated/Shared/Transfer/AvailabilityNotificationSubscriptionCollectionTransfer.php |
 | AvailabilityNotificationCriteriaTransfer | class | created | src/Generated/Shared/Transfer/AvailabilityNotificationCriteriaTransfer.php |
 
-
 {% endinfo_block %}
 
 ## 3) Enable resources and relationships
+
 Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
@@ -92,6 +97,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that you can send the following requests:
@@ -101,6 +107,7 @@ Make sure that you can send the following requests:
 * `GET http://glue.mysprykershop.com/customers/{customerReference}/availability-notifications`
 
 * `POST http://glue.mysprykershop.com/availability-notifications`
+
 ```json
 {
     "data" : {

@@ -42,12 +42,12 @@ You can add from one to many rules to a specific role. Each time you click **Add
 You have set up a role to be assigned to a group.
 
 **Tips & tricks**
-In case you need a specific role to have access to all sections, you can put an asterisk (*) value for a bundle, controller, and action. Add _allow for permission_. This grants access to everything you see in Back Office and allow to perform any action.
+<br>In case you need a specific role to have access to all sections, you can put an asterisk (*) value for a bundle, controller, and action. Add _allow for permission_. This grants access to everything you see in Back Office and allow to perform any action.
 
 
 ## Editing roles
 
-To edit a role:
+<br>To edit a role:
 
 1. In the *Role list* > *Actions* column,  for a specific role, click **Edit**.
 2. On the *Edit Role* page, you can:
@@ -76,7 +76,7 @@ at `/project/config/Zed/navigation.xml` or at ```https://github.com/spryker/[bun
 See the example of the `navigation.xml` file of the AvailabilityGui module:
 
 <details open>
-<summary>navigation.xml</summary>
+<summary markdown='span'>navigation.xml</summary>
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -178,12 +178,11 @@ To delete a role:
 This action permanently deletes the record.
 
 **Tips & tricks**
-While updating the role, you can initiate a new role creation flow.
-
-To do that:
+<br>While updating the role, you can initiate a new role creation flow.
+<br>To do that:
 1.  In the top right corner of the *Edit Role* page, click **Create role**.
     The *Create new Role* page opens.
 2. Repeat the steps described in the [Creating roles](#creating-roles) procedure.
 
 **What's next?**
-You need to create a group to assign this role to it. See the [Creating groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-groups.html#creating-groups) section in _Managing Groups_.
+<br>You need to create a group to assign this role to it. See the [Creating groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-groups.html#creating-groups) section in _Managing Groups_.

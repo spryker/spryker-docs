@@ -19,12 +19,12 @@ Follow the steps below to install the Agent Assist feature API.
 To start the feature integration, overview and install the necessary features:
 
 
-| Name | Version | Integration guide |
+| NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | master | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Customer Account Management + Agent Assist | master | [Customer Account Management + Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-agent-assist-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Customer Account Management + Agent Assist | {{page.version}} | [Customer Account Management + Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-agent-assist-feature-integration.html) |
 
-## 1) Install the required modules using composer
+## 1) Install the required modules using Composer
 
 
 Run the following command to install the required modules:
@@ -37,11 +37,9 @@ composer require spryker/agent-auth-rest-api:"^1.0.0" --update-with-dependencie
 
 Ensure that the following module has been installed:
 
-
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | AgentAuthRestApi | vendor/spryker/agent-auth-rest-api |
-
 
 {% endinfo_block %}
 
@@ -60,7 +58,7 @@ console transfer:generate
 Ensure that the following changes have been applied in the transfer objects:
 
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | RestAgentAccessTokensRequestAttributesTransfer | cell | cell | src/Generated/Shared/Transfer/RestAgentAccessTokensRequestAttributesTransfer |
 | RestAgentAccessTokensAttributesTransfer | class | created | src/Generated/Shared/Transfer/RestAgentAccessTokensAttributesTransfer |
@@ -90,7 +88,7 @@ Ensure that the following changes have been applied in the transfer objects:
 Activate the following plugins:
 
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | AgentRestUserMapperPlugin | Maps Agent data to the Rest user identifier. | None | Spryker\Glue\AgentAuthRestApi\Plugin\AuthRestApi |
 | AgentAccessTokenRestRequestValidatorPlugin | Validates the access token passed via the `X-Agent-Authorization` header. | None | Spryker\Glue\AgentAuthRestApi\Plugin\GlueApplication |
@@ -102,7 +100,7 @@ Activate the following plugins:
 
 
 <details open>
-    <summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -130,8 +128,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             new AgentCustomerSearchResourceRoutePlugin(),
         ];
     }
-    
-    
+
+
 
     /**
      * @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RestRequestValidatorPluginInterface[]
@@ -152,7 +150,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             new AgentRestUserValidatorPlugin(),
         ];
     }
-    
+
     /**
      * @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RestUserFinderPluginInterface[]
      */
@@ -164,7 +162,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
-
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -172,20 +169,18 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 Ensure that:
 
 *   Invalid agent access tokens passed in the `X-Agent-Authorization` header are rejected with the 401 error code.
-    
+
 *   The `X-Agent-Authorization` header is required for `/agent-customer-impersonation-access-tokens` and `/agent-customer-search` resources. Requests without the header return the 401 error code.
-    
+
 *   When a valid agent access token is provided via the `X-Agent-Authorization`, the `RestRequest` object in Glue controllers populates `restUser.idAgent` with the current agent identifier.
-    
-*   The following resources are available:
-    
 
-| Resource | Request to check | 
-| --- | --- | 
-| /agent-access-tokens | POST https://glue.mysprykershop.com/agent-access-tokens | 
-| /agent-customer-impersonation-access-tokens | POST https://glue.mysprykershop.com/agent-customer-impersonation-access-tokens | 
-| /agent-customer-search | GET https://glue.mysprykershop.com/agent-customer-search | 
+*   The following resources are available:   
 
+| RESOURCE | REQUEST TO CHECK |
+| --- | --- |
+| /agent-access-tokens | POST https://glue.mysprykershop.com/agent-access-tokens |
+| /agent-customer-impersonation-access-tokens | POST https://glue.mysprykershop.com/agent-customer-impersonation-access-tokens |
+| /agent-customer-search | GET https://glue.mysprykershop.com/agent-customer-search |
 
 {% endinfo_block %}
 
@@ -214,13 +209,9 @@ class AuthRestApiDependencyProvider extends SprykerAuthRestApiDependencyProvider
 }
 ```
 
-
-
 {% info_block warningBox "Verification" %}
 
-
 Ensure that, when `Authorization` and `X-Agent-Authorization` headers are sent, `RestRequest.restUser` is populated with Customer and Agent information.
-
 
 {% endinfo_block %}
 
@@ -231,8 +222,7 @@ Ensure that, when `Authorization` and `X-Agent-Authorization` headers are sent, 
 Integrate the following related features:
 
 
-| Feature | Integration guide |
+| FEATURE | INTEGRATION GUIDE |
 | --- | --- |
 | Customer account management | [Customer account management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) |
 | Customer account management + Agent assist | [Customer Account Management + Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-agent-assist-feature-integration.html) |
-

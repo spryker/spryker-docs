@@ -61,10 +61,10 @@ This action does not delete the user itself. It just deletes the association bet
 
 
 **Tips & tricks**
-To know what roles are assigned to a specific group without initiating the update flow, do the following:
+<br>To know what roles are assigned to a specific group without initiating the update flow, do the following:
 1. On the *Groups* table view page, click the hyperlinked value in the _Roles_ column.
     All roles assigned to this group are listed in the *Roles in Group* pop-up that appears.
 2. To close the pop-up window, click **Close**.
 
 **What's next?**
-The preliminary steps are performed so you can proceed and create an actual user record.
+<br>The preliminary steps are performed so you can proceed and create an actual user record.

@@ -13,16 +13,18 @@ redirect_from:
 
 ## Upgrading from Version 4.* to Version 5.*
 
-In version 5, tax calculation logic changed, tax amount for options, expenses and items are now calculated in the Tax module. 
+In version 5, tax calculation logic changed, tax amount for options, expenses and items are now calculated in the Tax module.
 The plugins: `ExpenseTaxCalculatorPlugin`, `ItemTaxCalculatorPlugin` and `TaxTotalsCalculatorPlugin` were removed, and replaced with:
 
-* `TaxAmountCalculatorPlugin` - to calculate item, item product option and expense taxes. 
+* `TaxAmountCalculatorPlugin` - to calculate item, item product option and expense taxes.
 * `TaxAmountAfterCancellationCalculatorPlugin` - to calculate tax amount after cancellation/refund happened.
 
 Corresponding plugin business classes, `ExpenseTaxCalculator`, `ItemTaxCalculator`, `TaxCalculation` were also removed and replaced with:
-* Business classes `TaxAmountCalculator` 
-* `TaxAmountAfterCancellationCalculator` 
+* Business classes `TaxAmountCalculator`
+* `TaxAmountAfterCancellationCalculator`
+
 ***
+
 ## Upgrading from Version 2.* to Version 3.*
 
 If you’re migrating the Tax module from version 2 to version 3, you need to follow the steps described below.
@@ -43,7 +45,7 @@ ALTER TABLE "spy_tax_set"
  ADD "created_at" TIMESTAMP,
  ADD "updated_at" TIMESTAMP;
  ```
- 
+
 Now you should be able edit the tax rates in Zed, under the tax section.
 To use the new tax rate calculation logic, you need to register the tax calculator plugins in `CalculationDependencyProvider::getCalculatorStack()`:
 `ItemTaxCalculatorPlugin` - used after item sum gross amounts are calculated.

@@ -33,15 +33,15 @@ This document describes how to integrate the Company Account feature API into a 
 
 To start the feature integration, overview and install the necessary features:
 
-| FEATURE OR GLUE API                                  | VERSION    | INTEGRATION GUIDE                                            |
-| ------------------------------------- | ---------- | ------------------------------------------------------------ |
-| Glue API: Spryker Core                | dev-master | [Glue API: Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Company Account                       | dev-master  | [Company account feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html) |
-| Glue API: Customer Account Management | dev-master | [Glue API: Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html) |
-| Glue API: Glue Application            | dev-master | [Glue API: Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
-| UUID Generation Console               | dev-master  |  |
-| Glue API: Shipment                    | dev-master  | [Glue API: Shipment feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shipment-feature-integration.html) |
-| Glue API: Checkout                    | dev-master | [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |
+| FEATURE OR GLUE API  | VERSION    | INTEGRATION GUIDE    |
+| ----------------- | ---------- | --------------------- |
+| Glue API: Spryker Core                | {{page.version}} | [Glue API: Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Company Account                       | {{page.version}}  | [Company account feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html) |
+| Glue API: Customer Account Management | {{page.version}} | [Glue API: Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html) |
+| Glue API: Glue Application            | {{page.version}} | [Glue API: Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
+| UUID Generation Console               | {{page.version}}  |  |
+| Glue API: Shipment                    | {{page.version}}  | [Glue API: Shipment feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shipment-feature-integration.html) |
+| Glue API: Checkout                    | {{page.version}} | [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |
 
 
 
@@ -53,10 +53,7 @@ Install the required modules:
 composer require spryker/company-user-auth-rest-api:"^2.0.0" spryker/oauth-company-user:"^2.0.0" spryker/oauth-permission:"^1.2.0" spryker/companies-rest-api:"^1.1.0" spryker/company-business-units-rest-api:"^1.2.0" spryker/company-business-unit-addresses-rest-api:"^1.1.0" spryker/company-roles-rest-api:"^1.1.0" spryker/company-users-rest-api:"^2.2.0" --update-with-dependencies
 ```
 
-
 {% info_block warningBox "Verification" %}
-
-
 
 Make sure that the following modules have been installed:
 
@@ -112,8 +109,8 @@ console transfer:generate
 
 Make sure that the following changes have occurred:
 
-| TRANSFER                                                   | TYPE     | EVENT   | PATH                                                         |
-| ---------------------------------------------------------- | -------- | ------- | ------------------------------------------------------------ |
+| TRANSFER     | TYPE     | EVENT   | PATH             |
+| -------------- | -------- | ------- | -------------------- |
 | RestCompanyAttributesTransfer                              | class    | created | src/Generated/Shared/Transfer/RestCompanyAttributesTransfer.php |
 | RestCompanyBusinessUnitAttributesTransfer                  | class    | created | src/Generated/Shared/Transfer/RestCompanyBusinessUnitAttributesTransfer.php |
 | RestCompanyBusinessUnitAddressesAttributesTransfer         | class    | created | src/Generated/Shared/Transfer/RestCompanyBusinessUnitAddressesAttributesTransfer.php |
@@ -196,6 +193,7 @@ console data:import glossary
 Make sure that in the database the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
+
 ## 5) Set up behavior
 
 Set up the following behaviors.
@@ -296,14 +294,11 @@ select count(*) from spy_company_user where uuid is NULL;
 
 ### Enable resources and relationships
 
-
-
 Activate the following plugins:
 
 
-
-| PLUGIN                                                       | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                                    |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------- | ------------------------------------------------------------ |
+| PLUGIN  | SPECIFICATION   | PREREQUISITES | NAMESPACE   |
+| ------------------ | -------------------- | ------------- | ------------------ |
 | CompaniesResourcePlugin                                      | Registers the `companies` resource.                            |               | Spryker\Glue\CompaniesRestApi\Plugin\GlueApplication\CompaniesResourcePlugin |
 | CompanyBusinessUnitsResourcePlugin                           | Registers the `company-business-units` resource.               |               | Spryker\Glue\CompanyBusinessUnitsRestApi\Plugin\GlueApplication\CompanyBusinessUnitsResourcePlugin |
 | CompanyBusinessUnitAddressesResourcePlugin                   | Registers the `company-business-unit-address` resource.        |               | Spryker\Glue\CompanyBusinessUnitAddressesRestApi\Plugin\GlueApplication\CompanyBusinessUnitAddressesResourcePlugin |
@@ -335,8 +330,6 @@ Activate the following plugins:
 | CompanyBusinessUnitAddressCheckoutDataValidatorPlugin        | Collects shipping address UUIDs from `checkoutDataTransfer.shipments`. If a company address UUID is provided for a non-company user, returns `CheckoutResponseTransfer`. |               | Spryker\Zed\CompanyBusinessUnitAddressesRestApi\Communication\Plugin\CheckoutRestApi |
 | CompanyBusinessUnitAddressQuoteMapperPlugin                  | Maps the REST request billing company business unit address information to quote. |               | Spryker\Zed\CompanyBusinessUnitAddressesRestApi\Communication\Plugin\CheckoutRestApi |
 | CompanyBusinessUnitAddressProviderStrategyPlugin             | Based on the UUID provided in`RestAddressTransfer.idCompanyBusinessUnitAddress`, finds a company business unit address. If it was found,  returns `AddressTransfer` filled with company business unit address information. |               | Spryker\Zed\CompanyBusinessUnitAddressesRestApi\Communication\Plugin\ShipmentsRestApi |
-
-
 
 
 
@@ -391,7 +384,6 @@ class AuthRestApiDependencyProvider extends SprykerAuthRestApiDependencyProvider
     }
 }
 ```
-
 
 
 **src/Pyz/Zed/OauthCompanyUser/OauthCompanyUserDependencyProvider.php**
@@ -526,7 +518,7 @@ class CustomersRestApiDependencyProvider extends SprykerCustomersRestApiDependen
 
 
 <details open>
-    <summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -626,8 +618,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
-
 </details>
+
 
 **src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php**
 
@@ -680,7 +672,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 ```
 
 <details open>
-    <summary>src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -736,7 +728,6 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
     }
 }
 ```
-
 </details>
 
 
@@ -792,6 +783,7 @@ class ShipmentsRestApiDependencyProvider extends SprykerShipmentsRestApiDependen
     }
 }
 ```
+
 
 {% info_block warningBox "Verification" %}
 

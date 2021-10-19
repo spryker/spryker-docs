@@ -12,10 +12,11 @@ redirect_from:
 ---
 
 ## Install Feature API
+
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| Name | Version | Integration guide |
+| NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
 | Search | {{page.version}} |  |
@@ -30,55 +31,63 @@ Run the following command to install the required modules:
 composer require spryker/catalog-search-rest-api:"^2.1.2" spryker/catalog-search-products-resource-relationship:"^1.1.0" --update-with-dependencies
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the following modules are installed:
+
+
+| MODULE | EXPECTED DIRECTORY |
+| --- | --- |
+| CatalogSearchRestApi | vendor/spryker/catalog-search-rest-api |
+| CatalogSearchProductsResourceRelationship | vendor/spryker/catalog-search-products-resource-relationship |
+
 {% endinfo_block %}
 
-| Module | Expected Directory |
-| --- | --- |
-| `CatalogSearchRestApi` | `vendor/spryker/catalog-search-rest-api` |
-| `CatalogSearchProductsResourceRelationship` | `vendor/spryker/catalog-search-products-resource-relationship` |
+### 2) Set up transfer objects
 
-### 2) Set up Transfer Objects
 Run the following command to generate transfer changes:
 
 ```bash
 console transfer:generate
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
 Make sure that the following changes have occurred in transfer objects:
+
+
+| TRANSFER | TYPE | EVENT | PATH |
+| --- | --- | --- | --- |
+| RestCatalogSearchAttributesTransfer | class | created | src/Generated/Shared/Transfer/RestCatalogSearchAttributesTransfer |
+| RestCatalogSearchSortTransfer | class | created | src/Generated/Shared/Transfer/RestCatalogSearchSortTransfer |
+| RestCatalogSearchPaginationTransfer | class | created | src/Generated/Shared/Transfer/RestCatalogSearchPaginationTransfer |
+| RestCatalogSearchAbstractProductsTransfer | class | created | src/Generated/Shared/Transfer/RestCatalogSearchAbstractProductsTransfer |
+| RestCatalogSearchProductImageTransfer | class | created | src/Generated/Shared/Transfer/RestCatalogSearchProductImageTransfer |
+| RestRangeSearchResultTransfer| class| created | src/Generated/Shared/Transfer/RestRangeSearchResultTransfer|
+| RestFacetSearchResultTransfer| class| created | src/Generated/Shared/Transfer/RestFacetSearchResultTransfer|
+| RestCatalogSearchSuggestionsAttributesTransfer| class	| created | src/Generated/Shared/Transfer/RestCatalogSearchSuggestionsAttributesTransfer |
+| RestCatalogSearchSuggestionAbstractProductsTransfer| class|	created | src/Generated/Shared/Transfer/RestCatalogSearchSuggestionAbstractProductsTransfer|
+| RestCatalogSearchSuggestionProductImageTransfer| class| created | src/Generated/Shared/Transfer/RestCatalogSearchSuggestionProductImageTransfer|
+| RestPriceProductTransfer | class | created | src/Generated/Shared/Transfer/RestPriceProductTransfer|
+| PriceModeConfigurationTransfer| class | created | src/Generated/Shared/Transfer/PriceModeConfigurationTransfer|
+| RestCurrencyTransfer| class| created | src/Generated/Shared/Transfer/RestCurrencyTransfer|
+| RestFacetConfigTransfer| class | created | src/Generated/Shared/Transfer/RestFacetConfigTransfer|
+
 {% endinfo_block %}
 
-| Transfer | Type | Event | Path |
-| --- | --- | --- | --- |
-| `RestCatalogSearchAttributesTransfer` | class | created | `src/Generated/Shared/Transfer/RestCatalogSearchAttributesTransfer` |
-| `RestCatalogSearchSortTransfer` | class | created | `src/Generated/Shared/Transfer/RestCatalogSearchSortTransfer` |
-| `RestCatalogSearchPaginationTransfer` | class | created | `src/Generated/Shared/Transfer/RestCatalogSearchPaginationTransfer` |
-| `RestCatalogSearchAbstractProductsTransfer` | class | created | `src/Generated/Shared/Transfer/RestCatalogSearchAbstractProductsTransfer` |
-| `RestCatalogSearchProductImageTransfer` | class | created | `src/Generated/Shared/Transfer/RestCatalogSearchProductImageTransfer` |
-| `RestRangeSearchResultTransfer`| class| created | `src/Generated/Shared/Transfer/RestRangeSearchResultTransfer`|
-| `RestFacetSearchResultTransfer`| class| created | `src/Generated/Shared/Transfer/RestFacetSearchResultTransfer`|
-| `RestCatalogSearchSuggestionsAttributesTransfer`| class	| created | `src/Generated/Shared/Transfer/RestCatalogSearchSuggestionsAttributesTransfer` |
-| `RestCatalogSearchSuggestionAbstractProductsTransfer`| class|	created | `src/Generated/Shared/Transfer/RestCatalogSearchSuggestionAbstractProductsTransfer`|
-| `RestCatalogSearchSuggestionProductImageTransfer`| class| created | `src/Generated/Shared/Transfer/RestCatalogSearchSuggestionProductImageTransfer`|
-| `RestPriceProductTransfer` | class | created | `src/Generated/Shared/Transfer/RestPriceProductTransfer`|
-| `PriceModeConfigurationTransfer`| class | created | `src/Generated/Shared/Transfer/PriceModeConfigurationTransfer`|
-| `RestCurrencyTransfer`| class| created | `src/Generated/Shared/Transfer/RestCurrencyTransfer`|
-| `RestFacetConfigTransfer`| class | created | `src/Generated/Shared/Transfer/RestFacetConfigTransfer`|
+### 3) Set up behavior
 
-### 3) Set Up Behavior
 #### Enable resources and relationships
+
 Activate the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `CatalogSearchAbstractProductsResourceRelationshipPlugin` | Adds the `abstract-products` resource relationship to search results. | None | `Spryker\Glue\CatalogSearchProductsResourceRelationship\Plugin` |
-| `CatalogSearchSuggestionsAbstractProductsResourceRelationshipPlugin` | Adds the `abstract-products` resource relationship to search suggestions results. | None | `Spryker\Glue\CatalogSearchProductsResourceRelationship\Plugin` |
-| `CatalogSearchResourceRoutePlugin` | Registers the `search` resource. | None | `Spryker\Glue\CatalogSearchRestApi\Plugin` |
-| `CatalogSearchSuggestionsResourceRoutePlugin` | Registers the `search-suggestions` resource. | None | `Spryker\Glue\CatalogSearchRestApi\Plugin` |
+| CatalogSearchAbstractProductsResourceRelationshipPlugin | Adds the `abstract-products` resource relationship to search results. | None | Spryker\Glue\CatalogSearchProductsResourceRelationship\Plugin |
+| CatalogSearchSuggestionsAbstractProductsResourceRelationshipPlugin | Adds the `abstract-products` resource relationship to search suggestions results. | None | Spryker\Glue\CatalogSearchProductsResourceRelationship\Plugin |
+| CatalogSearchResourceRoutePlugin | Registers the `search` resource. | None | Spryker\Glue\CatalogSearchRestApi\Plugin |
+| CatalogSearchSuggestionsResourceRoutePlugin | Registers the `search-suggestions` resource. | None | Spryker\Glue\CatalogSearchRestApi\Plugin |
 
-src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php
+**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
 ```php
 <?php
@@ -128,7 +137,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
 
 If `CatalogSearchResourceRoutePlugin` and `CatalogSearchSuggestionsResourceRoutePlugin` are installed correctly, the following endpoints should now be available:
 `http://glue.mysprykershop.com/catalog-search?q={% raw %}{{{% endraw %}q_term{% raw %}}}{% endraw %}`
@@ -136,7 +145,7 @@ If `CatalogSearchResourceRoutePlugin` and `CatalogSearchSuggestionsResourceRoute
 
 {% endinfo_block %}
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
 
 To make sure that `CatalogSearchAbstractProductsResourceRelationshipPlugin` and `CatalogSearchSuggestionsAbstractProductsResourceRelationshipPlugin` are functioning correctly, do the following:
 Send a request to `http://glue.mysprykershop.com/catalog-search?q={% raw %}{{{% endraw %}q_term{% raw %}}}{% endraw %}&include=abstract-products` and verify that the response includes relationships to `abstract-products` resources.

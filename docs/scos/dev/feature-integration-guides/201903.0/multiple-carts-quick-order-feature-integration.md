@@ -21,7 +21,7 @@ To start feature integration, overview and install the necessary features:
 | Quick Add To Cart | 201903.0 |
 | Spryker Core | 2018.11.0 |
 
-### 1) Set up Behavior
+### 1) Set up behavior
 
 Register the following plugin:
 
@@ -30,7 +30,7 @@ Register the following plugin:
 |  `QuickOrderQuoteNameExpanderPlugin` | Adds a default quick order name and adds it to add item request. |  |  `Spryker\Client\MultiCart\Plugin` |
 
 <details open>
-    <summary>src/Pyz/Client/PersistentCart/PersistentCartDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Client/PersistentCart/PersistentCartDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -81,7 +81,7 @@ Register the following global widget:
 |  `QuickOrderPageWidget` | Shows a cart list in the quick order page. |  `SprykerShop\Yves\MultiCartWidget\Widget` |
 
 <details open>
-<summary>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

@@ -138,34 +138,34 @@ Example: In the project, the cart needs approval when the cart total exceeds €
 Company users can perform the following actions using the CommentsQuotation process & RFQ feature on the Storefront:
 
 <details>
-<summary>Create an RFQ</summary>
+<summary markdown='span'>Create an RFQ</summary>
 
 ![create-rfq](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+%26+Process+Management/Quotation+process+and+RFQ/Quotation+Process+%26+RFQ+Feature+Overview/create-rfq.gif)
 
 </details>
 
 <details>
-<summary>Add an address and shipping method to the RFQ</summary>
+<summary markdown='span'>Add an address and shipping method to the RFQ</summary>
 
 ![add-rfq-address-and-shipping-method](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+%26+Process+Management/Quotation+process+and+RFQ/Quotation+Process+%26+RFQ+Feature+Overview/add-rfq-address-and-shipping-method.gif)
 
 </details>
 
 <details>
-<summary>Edit RFQ items</summary>
+<summary markdown='span'>Edit RFQ items</summary>
 
 ![edit-rfq-items](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+%26+Process+Management/Quotation+process+and+RFQ/Quotation+Process+%26+RFQ+Feature+Overview/edit-rfq-items.gif)
 
 
 </details>
-<details><summary>Canel an RFQ or sent ab RFQ to an agent </summary>
+<details><summary markdown='span'>Canel an RFQ or sent ab RFQ to an agent </summary>
 
 ![cancel-and-sent-rfq-to-agent](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+%26+Process+Management/Quotation+process+and+RFQ/Quotation+Process+%26+RFQ+Feature+Overview/cancel-and-sent-rfq-to-agent.gif)
 
 </details>
 
 <details>
-<summary>Convert an RFQ to cart</summary>
+<summary markdown='span'>Convert an RFQ to cart</summary>
 
 ![convert-rfq-to-cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+%26+Process+Management/Quotation+process+and+RFQ/Quotation+Process+%26+RFQ+Feature+Overview/convert-rfq-to-cart.gif)
 
@@ -174,7 +174,7 @@ Company users can perform the following actions using the CommentsQuotation proc
 Agents can perform the same actions (on company users' behalf) as company users. However, besides the actions mentioned above, agents can also do the following:
 
 <details>
-<summary>Revise an RFQ and send it back to the buyer</summary>
+<summary markdown='span'>Revise an RFQ and send it back to the buyer</summary>
 
 ![revise-rfq-and-send-to-customer](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+%26+Process+Management/Quotation+process+and+RFQ/Quotation+Process+%26+RFQ+Feature+Overview/revise-rfq-and-send-to-customer.gif)
 

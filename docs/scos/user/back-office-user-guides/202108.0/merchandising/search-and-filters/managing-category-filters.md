@@ -37,16 +37,16 @@ The *Category tree*  section is populated by the nodes nested under the selected
 To find a specific category, start entering its name in the *Search* field, and the results will be automatically highlighted in *Category tree*.
 3. After selecting a category, the *Category Filters for [Category name]* frame opens to show the current configuration.
 ![Adding a filter to a category](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/add-filter-to-category.png)
-    
-    Categories in the category tree view that have manually defined filter settings are marked with a pencil icon next to their name. 
-![Category tree view](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/category-tree-view.png) 
-    
+
+    Categories in the category tree view that have manually defined filter settings are marked with a pencil icon next to their name.
+![Category tree view](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/category-tree-view.png)
+
 4. Start typing the name of the existing filter in the *Add filter* field. As you type, the autocompleted drop-down appears, so you can select a filter there.
 5. After selecting the filter, click **Add**. The filter appears in the *Active filters* list.
 6. Once done, click **Save**.
 
 **Tips & tricks**
-Clicking **Reset to global settings** in *Category Filters for [Category name]* removes the customized filter settings.
+<br>Clicking **Reset to global settings** in *Category Filters for [Category name]* removes the customized filter settings.
 ![Reset to global settings](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/reset-to-global-settings.png)
 
 
@@ -61,12 +61,11 @@ To reorder filters, In *Active filters*, drag and drop them to the necessary pla
 You can remove either all filters from the active filters at once or just single filters.
 1. To remove all filters, in *Active filters*, click **Remove all**.
    ![Removing a filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/removing-filter.png)
-2. To remove single filters, click the **basket** icon next to the filter you want to remove. 
+2. To remove single filters, click the **basket** icon next to the filter you want to remove.
 3. Once done, click **Save**.
     The removed filters are moved to the **Inactive filters** list.
 ![Removing a single filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/remove-single-filter.gif)
 
 **Tips & tricks**
-To add the removed filters again, click on the **green plus** sign next to the filters you want to add back from *Inactive filters*.
+<br>To add the removed filters again, click on the **green plus** sign next to the filters you want to add back from *Inactive filters*.
 ![Add a removed filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/add-removed-filter.gif)
-

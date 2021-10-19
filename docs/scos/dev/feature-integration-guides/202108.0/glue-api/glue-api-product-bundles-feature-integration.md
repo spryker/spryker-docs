@@ -18,40 +18,44 @@ Follow the steps below to integrate the Glue API: Product Bundles feature.
 To start the feature integration, overview and install the necessary features:
 
 
-| Name | Version | Integration guide |
+| NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | master | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Product Bundles| master| [Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-bundles-feature-integration.html)|
-| Order Management| master| [Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html)|
+| Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Product Bundles| {{page.version}}| [Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-bundles-feature-integration.html)|
+| Order Management| {{page.version}}| [Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html)|
 
 ## 1) Install the required modules using Composer
 
 Run the following command to install the required modules:
+
 ```bash
 composer require spryker/product-bundles-rest-api:"^1.0.0" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
  Make sure that the following module has been installed:
 
-| Module |  Expected Directory  |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | ProductBundlesRestApi | vendor/spryker/product-bundles-rest-api |
- 
- 
 
 {% endinfo_block %}  
 
+
 ## 2) Set up transfer objects
+
 Set up transfer objects:
+
 ```bash
 console transfer:generate
-``` 
+```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in the transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | RestBundledProductsAttributesTransfer | class | created | src/Generated/Shared/Transfer/RestBundledProductsAttributesTransfer |
 | RestErrorMessageTransfer| class |created |src/Generated/Shared/Transfer/RestErrorMessageTransfer|
@@ -65,20 +69,19 @@ Make sure that the following changes have been applied in the transfer objec
 | ProductBundleStorageCriteriaTransfer |class |created |src/Generated/Shared/Transfer/ProductBundleStorageCriteriaTransfer|
 
 {% endinfo_block %}
+
 ## 3) Set up behavior
 
 Activate the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | BundledProductByProductConcreteSkuResourceRelationshipPlugin | Adds the `bundled-products` resource as a relationship to the `concrete-products` resource by product concrete `sku`. | None | Spryker\Glue\ProductBundlesRestApi\Plugin\GlueApplication |
 |ConcreteProductsBundledProductsResourceRoutePlugin| Provides the `bundled-products` resource route with `concrete-products` as a parent resource. |None |Spryker\Glue\ProductBundlesRestApi\Plugin\GlueApplication|
 | BundleItemRestOrderDetailsAttributesMapperPlugin |Maps the additional information from`OrderTransfer` to `RestOrderDetailsAttributesTransfer`. |None |Spryker\Glue\ProductBundlesRestApi\Plugin\OrdersRestApi|
 
-
-
- <details open>
-    <summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<details open>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -126,14 +129,13 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
-
 </details>
 
 {% info_block warningBox "Verification" %}
 
 Ensure that you have activated the plugins:
 
-| Request | Test |
+| REQUEST | TEST |
 | --- | --- |
 | `GET https://glue.mysprykershop.com/bundled-products` | Returns the list of bundled products. |
 | `GET https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/bundled-products?include=concrete-products` |In the response body, the `bundled-products` resource has a relationship to the `concrete-products` resource.|
@@ -142,6 +144,7 @@ Ensure that you have activated the plugins:
 {% endinfo_block %}
 
 **src/Pyz/Glue/OrdersRestApi/OrdersRestApiDependencyProvider.php**
+
 ```php
 <?php
 
@@ -169,27 +172,22 @@ class OrdersRestApiDependencyProvider extends SprykerOrdersRestApiDependencyProv
 Ensure that you have activated the plugins:
 
 1.  Place an order with product bundles.
-    
+
 2.  Send the request: `GET https://glue.mysprykershop.com/orders/{% raw %}{{{% endraw %}orderReference{% raw %}}}{% endraw %}`.
-    
+
 3.  Check that, in the response:
-    
+
     *   There is a `data.attributes.bundleItems` section.
-        
+
     *   The `data.attributes.items.relatedBundleItemIdentifier` attribute value of a bundled item is the same as the `data.attributes.bundleItems.bundleItemIdentifier` attribute value of the product bundle item it belongs to.
 
-
 {% endinfo_block %}
-        
+
 
 ## Related features
 
-  
 Integrate the following related features:
 
-| Feature | Required for the current feature | Integration guide |
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Products  | ✓ | [Glue API: Products feature integration - ongoing](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
-
-
-

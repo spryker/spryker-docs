@@ -40,7 +40,7 @@ Register the following plugins to enable widgets:
 |`WishlistProductAlternativeWidget`|Displays a list of alternative products on wishlist page.|None|`SprykerShop\Yves\ProductAlternativeWidget\Widget`|
 
 <details open>
-<summary>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
 
 ```php    
 <?php

@@ -13,7 +13,9 @@ redirect_from:
 ## Upgrading from version 3.* to 5.0.0
 
 {% info_block infoBox %}
+
 In order to dismantle the Horizontal Barrier and enable partial module updates on projects, a Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Please [contact us](https://spryker.com/en/support/) if you have any questions.
+
 {% endinfo_block %}
 
 ## Upgrading from Version 2.* to Version 3.*
@@ -26,15 +28,15 @@ CartsRestApiDependencyProvider.php
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\CartsRestApi;
- 
+
 use Spryker\Glue\CartsRestApi\CartsRestApiDependencyProvider as SprykerCartsRestApiDependencyProvider;
 use Spryker\Glue\CartsRestApi\Plugin\QuoteCollectionReader\CartQuoteCollectionReaderPlugin;
 use Spryker\Glue\CartsRestApi\Plugin\QuoteCreator\SingleQuoteCreatorPlugin;
 use Spryker\Glue\CartsRestApiExtension\Dependency\Plugin\QuoteCollectionReaderPluginInterface;
 use Spryker\Glue\CartsRestApiExtension\Dependency\Plugin\QuoteCreatorPluginInterface;
- 
+
 class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvider
 {
 	/**
@@ -44,7 +46,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 	{
 		return new CartQuoteCollectionReaderPlugin();
 	}
- 
+
 	/**
 	* @return \Spryker\Glue\CartsRestApiExtension\Dependency\Plugin\QuoteCreatorPluginInterface
 	*/
@@ -61,11 +63,11 @@ CustomersRestApiDependencyProvider.php
 
 ```php
 <?php
-  
+
 namespace Pyz\Glue\CustomersRestApi;
 use Spryker\Glue\CartsRestApi\Plugin\CustomersRestApi\UpdateCartCreateCustomerReferencePlugin;
 use Spryker\Glue\CustomersRestApi\CustomersRestApiDependencyProvider as SprykerCustomersRestApiDependencyProvider;
- 
+
 class CustomersRestApiDependencyProvider extends SprykerCustomersRestApiDependencyProvider
 {
 	protected function getCustomerPostCreatePlugins(): array
@@ -85,13 +87,13 @@ CartsRestApiDependencyProvider.php
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\CartsRestApi;
- 
+
 use Spryker\Zed\CartsRestApi\CartsRestApiDependencyProvider as SprykerCartsRestApiDependencyProvider;
 use Spryker\Zed\PersistentCart\Communication\Plugin\CartsRestApi\QuoteCreatorPlugin;
 use Spryker\Zed\CartsRestApiExtension\Dependency\Plugin\QuoteCreatorPluginInterface;
- 
+
 class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvider
 {
 	/**
@@ -112,14 +114,14 @@ CartsRestApiDependencyProvider.php
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Quote;
- 
+
 use Spryker\Zed\Currency\Communication\Plugin\Quote\QuoteCurrencyValidatorPlugin;
 use Spryker\Zed\Price\Communication\Plugin\Quote\QuotePriceModeValidatorPlugin;
 use Spryker\Zed\Store\Communication\Plugin\Quote\QuoteStoreValidatorPlugin;
 use Spryker\Zed\Quote\QuoteDependencyProvider as SprykerQuoteDependencyProvider;
- 
+
 class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 {
 	/**
@@ -150,7 +152,7 @@ _Estimated migration time: 1 hour_
 
 We have also added the API endpoints functionality to use `CartsRestApi` as a guest customer.
 
-To migrate to the new version, do the following:	
+To migrate to the new version, do the following:
 
 1. Find or create `CartsRestApiDependencyProvider` in a project. Make sure that it extends `\Spryker\Glue\CartsRestApi\CartsRestApiDependencyProvider`.
 2. Find the `getQuoteCollectionReaderPlugin` method and add `\Spryker\Glue\CartsRestApi\Plugin\QuoteCollectionReader\CartQuoteCollectionReaderPlugin` to the plugin stack.
@@ -162,15 +164,15 @@ CartsRestApiDependencyProvider.php
 
 ```php
 <?php
- 
+
 	namespace Pyz\Glue\CartsRestApi;
- 
+
 	use Spryker\Glue\CartsRestApi\CartsRestApiDependencyProvider as SprykerCartsRestApiDependencyProvider;
 	use Spryker\Glue\CartsRestApi\Plugin\QuoteCollectionReader\CartQuoteCollectionReaderPlugin;
 	use Spryker\Glue\CartsRestApi\Plugin\QuoteCreator\SingleQuoteCreatorPlugin;
 	use Spryker\Glue\CartsRestApiExtension\Dependency\Plugin\QuoteCollectionReaderPluginInterface;
 	use Spryker\Glue\CartsRestApiExtension\Dependency\Plugin\QuoteCreatorPluginInterface;
- 
+
 	class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvider
 	{
 		/**
@@ -180,7 +182,7 @@ CartsRestApiDependencyProvider.php
 		{
 			return new CartQuoteCollectionReaderPlugin();
 		}
- 
+
 		/**
 		* @return \Spryker\Glue\CartsRestApiExtension\Dependency\Plugin\QuoteCreatorPluginInterface
 		*/
@@ -193,17 +195,17 @@ CartsRestApiDependencyProvider.php
 
 4. Find or create `CustomersRestApiDependencyProvider` in a project. Make sure that it extends `\Spryker\Glue\CustomersRestApi\CustomersRestApiDependencyProvider`.
 5. Find the `getCustomerPostRegisterPlugins` method and add `Spryker\Glue\CartsRestApi\Plugin\CustomerPostRegister\UpdateCartCustomerReferencePlugin` to the plugin stack.
-* The file could look like this:
+   The file could look like this:
 
 CustomersRestApiDependencyProvider.php
 
 ```php
 <?php
-  
+
 	namespace Pyz\Glue\CustomersRestApi;
 	use Spryker\Glue\CartsRestApi\Plugin\CustomerPostRegister\UpdateCartCustomerReferencePlugin;
 	use Spryker\Glue\CustomersRestApi\CustomersRestApiDependencyProvider as SprykerCustomersRestApiDependencyProvider;
- 
+
 	class CustomersRestApiDependencyProvider extends SprykerCustomersRestApiDependencyProvider
 	{
 		/**
@@ -234,9 +236,9 @@ GlueApplicationDependencyProvider.php
 
 ```php
 <?php
-  
+
 	namespace Pyz\Glue\GlueApplication;
- 
+
 	use Spryker\Glue\CartItemsProductsRelationship\Plugin\CartItemsProductsRelationshipPlugin;
 	use Spryker\Glue\CartsRestApi\Plugin\ControllerBeforeAction\SetAnonymousCustomerIdControllerBeforeActionPlugin;
 	use Spryker\Glue\CartsRestApi\Plugin\ResourceRoute\CartItemsResourceRoutePlugin;
@@ -245,7 +247,7 @@ GlueApplicationDependencyProvider.php
 	use Spryker\Glue\CartsRestApi\Plugin\ResourceRoute\GuestCartsResourceRoutePlugin;
 	use Spryker\Glue\CartsRestApi\Plugin\Validator\AnonymousCustomerUniqueIdValidatorPlugin;
 	use Spryker\Glue\CustomersRestApi\CustomersRestApiDependencyProvider as SprykerCustomersRestApiDependencyProvider;
- 
+
 	class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 	{
 		/**
@@ -262,7 +264,7 @@ GlueApplicationDependencyProvider.php
 				new GuestCartItemsResourceRoutePlugin(),
 			];
 		}
- 
+
 		/**
 		* {@inheritdoc}
 		*
@@ -274,7 +276,7 @@ GlueApplicationDependencyProvider.php
 				new AnonymousCustomerUniqueIdValidatorPlugin(),
 			];
 		}
- 
+
 		/**
 		* {@inheritdoc}
 		*
@@ -286,7 +288,7 @@ GlueApplicationDependencyProvider.php
 				new SetAnonymousCustomerIdControllerBeforeActionPlugin(),
 			];
 		}
- 
+
 		/**
 		* {@inheritdoc}
 		*
@@ -301,7 +303,7 @@ GlueApplicationDependencyProvider.php
 				CartsRestApiConfig::RESOURCE_GUEST_CARTS_ITEMS,
 				new CartItemsProductsRelationshipPlugin()
 			);
- 
+
 			return $resourceRelationshipCollection;
 		}
 	}
@@ -328,7 +330,7 @@ config/Zed/cronjobs/jobs.phpjobs.php
 	];
  ```
 
- 3. Find or create `ConsoleDependencyProvider` in a project. Make sure that it extends `\Spryker\Zed\Console\ConsoleDependencyProvider`. 
+ 3. Find or create `ConsoleDependencyProvider` in a project. Make sure that it extends `\Spryker\Zed\Console\ConsoleDependencyProvider`.
 
 Find the `getConsoleCommands` method and add `Spryker\Zed\Quote\Communication\Console\DeleteExpiredGuestQuoteConsole` to the plugin stack.
 The file could look like this:
@@ -337,12 +339,12 @@ ConsoleDependencyProvider.php
 
 ```php
 <?php
-  
+
 	namespace Pyz\Glue\CustomersRestApi;
-  
+
 	use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
 	use Spryker\Zed\Quote\Communication\Console\DeleteExpiredGuestQuoteConsole;
-  
+
 	class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 	{
 		/**

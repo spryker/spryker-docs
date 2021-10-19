@@ -75,7 +75,7 @@ Search settings are defined by the front-end search configuration. In other word
 \*The fields mentioned are all attributes in the response. Type and ID are not mentioned.
 
 <details open>
-<summary>Sample empty response (no products found) </summary>
+<summary markdown='span'>Sample empty response (no products found) </summary>
 
 ```js
 {
@@ -148,7 +148,7 @@ To search for products, you need to add search filters following the q parameter
 | /catalog-search?**weight[]=132+g**&q=camera | Search for **camera** products with weight **132 g** |
 
 <details open>
-<summary>Sample response for a valid request </summary>
+<summary markdown='span'>Sample response for a valid request </summary>
 
 ```js
 {

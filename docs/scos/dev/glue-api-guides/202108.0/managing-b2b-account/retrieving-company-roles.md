@@ -63,7 +63,7 @@ To retrieve a company role, send the request:
 #### Response
 
 <details open>
-    <summary>Response sample of company roles of the current authenticated company user</summary>
+    <summary markdown='span'>Response sample of company roles of the current authenticated company user</summary>
     
 ```json
 {
@@ -89,7 +89,7 @@ To retrieve a company role, send the request:
 
 
 <details open>
-    <summary>Response sample of a particular company role</summary>
+    <summary markdown='span'>Response sample of a particular company role</summary>
 
 ```json
 {
@@ -111,7 +111,7 @@ To retrieve a company role, send the request:
    
    
 <details open>
-    <summary>Response sample with companies</summary>
+    <summary markdown='span'>Response sample with companies</summary>
     
 ```json
 {

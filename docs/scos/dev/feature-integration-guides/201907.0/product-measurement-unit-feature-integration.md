@@ -41,7 +41,7 @@ Adjust the schema definition so entity changes will trigger events.
 | `spy_product_measurement_sales_unit_store` | <ul><li>`Entity.spy_product_measurement_sales_unit_store.create`</li><li>`Entity.spy_product_measurement_sales_unit_store.update`</li><li>`Entity.spy_product_measurement_sales_unit_store.delete`</li></ul> |
 
 <details open>
-<summary>src/Pyz/Zed/ProductMeasurementUnit/Persistence/Propel/Schema/spy_product_measurement_unit.schema.xml</summary>
+<summary markdown='span'>src/Pyz/Zed/ProductMeasurementUnit/Persistence/Propel/Schema/spy_product_measurement_unit.schema.xml</summary>
 
 ```html
 <?xml version="1.0"?>
@@ -104,7 +104,7 @@ All measurement units need to have glossary entities for the configured locales.
 {% endinfo_block %}
 Infrastructural record's glossary keys:
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 measurement_units.item.name,Item,en_US
@@ -115,7 +115,7 @@ measurement_units.item.name,Stück,de_DE
 
 Demo data glossary keys:
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 measurement_units.standard.weight.kilo.name,Kilo,en_US
@@ -150,7 +150,7 @@ This step will publish tables on change (create, edit, delete) to the `spy_produ
 | `ProductMeasurementUnitStorageEventSubscriber` | Registers listeners that are responsible to publish product measurement unit storage entity changes when a related entity change event occurs. | None | `Spryker\Zed\ProductMeasurementUnitStorage\Communication\Plugin\Event\Subscriber` |
  
  <details open>
-<summary>src/Pyz/Zed/Event/EventDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Event/EventDependencyProvider.php</summary>
 
 ```php
  <?php
@@ -184,7 +184,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 | `ProductMeasurementUnitSynchronizationDataPlugin` | Allows synchronizing the whole storage table content into Storage. | None | `Spryker\Zed\ProductMeasurementUnitStorage\Communication\Plugin\Synchronization` |
 
 <details open>
-<summary>src/Pyz/Zed/EventBehavior/EventBehaviorDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/EventBehavior/EventBehaviorDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -213,7 +213,7 @@ class EventBehaviorDependencyProvider extends SprykerEventBehaviorDependencyProv
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -250,7 +250,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 | `ProductMeasurementUnitInstallerPlugin` | Installs the configured infrastructural measurement units. | None | `Spryker\Zed\ProductMeasurementUnit\Communication\Plugin\Installer` |
 
 <details open>
-<summary>src/Pyz/Zed/Installer/InstallerDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Installer/InstallerDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -292,7 +292,7 @@ The following imported entities will be used as measurement units in the Spryker
 
 Prepare your data according to your requirements using our demo data:
 <details open>
-<summary>vendor/spryker/product-measurement-unit-data-import/data/import/product_measurement_unit.csv</summary>
+<summary markdown='span'>vendor/spryker/product-measurement-unit-data-import/data/import/product_measurement_unit.csv</summary>
 
 ```yaml
 name,code,default_precision
@@ -361,7 +361,7 @@ Register the following plugin to enable data import:
 | `ProductMeasurementUnitDataImportPlugin` | Imports measurement unit data into the database. | None | `Spryker\Zed\ProductMeasurementUnitDataImport\Communication\Plugin` |
 
 <details open>
-<summary>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -399,7 +399,7 @@ Imports data that defines the base measurement unit of each product abstract.
 {% endinfo_block %}
 Prepare your data according to your requirements using our demo data:
 <details open>
-<summary>vendor/spryker/product-measurement-unit-data-import/data/import/product_measurement_base_unit.csv</summary>
+<summary markdown='span'>vendor/spryker/product-measurement-unit-data-import/data/import/product_measurement_base_unit.csv</summary>
 
 ```yaml
 code,abstract_sku
@@ -422,7 +422,7 @@ Register the following plugin to enable data import:
 |`ProductMeasurementBaseUnitDataImportPlugin` |Imports base measurement unit definitions into the database.  | <ul><li>Referred product abstracts to be imported</li><li>Referred measurement units to be imported</li></ul> |`Spryker\Zed\ProductMeasurementUnitDataImport\Communication\Plugin`  |
 
 <details open>
-<summary>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -501,7 +501,7 @@ Register the following plugin:
 | `ProductMeasurementSalesUnitDataImportPlugin` | Imports sales measurement unit definitions into the database. | <ul><li>Referred product concretes to be imported</li><li>Related product abstracts to be imported</li><li>Related product abstracts' base units to be imported</li><li>Referred measurement units to be imported</li></ul> | `Spryker\Zed\ProductMeasurementUnitDataImport\Communication\Plugin` |
 
 <details open>
-<summary>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -541,7 +541,7 @@ Contains the Store configuration for each defined sales unit.<br>Proceed with th
 
 Prepare your data according to your requirements using our demo data:
 <details open>
-<summary>vendor/spryker/product-measurement-unit-data-import/data/import/product_measurement_sales_unit_store.csv</summary>
+<summary markdown='span'>vendor/spryker/product-measurement-unit-data-import/data/import/product_measurement_sales_unit_store.csv</summary>
 
 ```yaml
 sales_unit_key,store_name
@@ -614,7 +614,7 @@ Register the following plugin:
 |`ProductMeasurementSalesUnitStoreDataImportPlugin`  |Imports sales measurement units' Store configuration into the database.  | <ul><li>Referred sales units to be imported.</li><li>Referred Stores to be imported.</li></ul> | `Spryker\Zed\ProductMeasurementUnitDataImport\Communication\Plugin` |
 
 <details open>
-<summary>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -660,7 +660,7 @@ Enable the following behaviors by registering the plugins:
 |`QuantitySalesUnitHydrateOrderPlugin`|Adds quantity sales unit information when Order is retrieved from database.|Expects sales order ID and sales order item IDs to be set.|`Spryker\Zed\ProductMeasurementUnit\Communication\Plugin\Sales`|
 
 <details open>
-<summary>src/Pyz/Client/Cart/CartDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/Cart/CartDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -687,7 +687,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -731,7 +731,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/Sales/SalesDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Sales/SalesDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -799,7 +799,7 @@ Make sure that the following modules are installed:<table><thead><tr><th>Module<
 
 Append glossary according to your configuration:
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 cart.item_quantity,Quantity,en_US
@@ -845,7 +845,7 @@ Register the following plugins to enable widgets:
 |`QuantitySalesUnitWidgetPlugin`|Displays selected sales unit information for products on the cart overview page.|None|`SprykerShop\Yves\ProductMeasurementUnitWidget\Plugin\CartPage`|
 
 <details open>
-<summary>src/Pyz/Yves/ProductDetailPage/ProductDetailPageDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ProductDetailPage/ProductDetailPageDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -872,7 +872,7 @@ class ProductDetailPageDependencyProvider extends SprykerShopProductDetailPageDe
 </details>
 
 <details open>
-<summary>src/Pyz/Yves/CartPage/CartPageDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/CartPage/CartPageDependencyProvider.php</summary>
 
 ```php
 <?php

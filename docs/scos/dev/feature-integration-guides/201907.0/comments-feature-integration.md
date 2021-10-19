@@ -38,7 +38,7 @@ Add the following configuration to your project:
 | A regular expression (See below in `config/Shared/config_default.php`) | Used to close access for not logged customers. | None |
 
 <details open>
-<summary>src/Pyz/Zed/Comment/CommentConfig.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Comment/CommentConfig.php</summary>
     
 ```php
 <?php
@@ -69,7 +69,7 @@ Make sure that when you add/remove comment tag (listed in config
 {% endinfo_block %} to comment is allowed.)
 
 <details open>
-<summary>config/Shared/config_default.php</summary>
+<summary markdown='span'>config/Shared/config_default.php</summary>
 
 ```php
 <?php
@@ -106,7 +106,7 @@ Make sure that the following changes in transfer objects:<table><thead><tr><th>T
 Append glossary according to your configuration:
 
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 comment.validation.error.comment_not_found,Comment not found.,en_US
@@ -145,7 +145,7 @@ Enable the following behaviors by registering the plugins:
 | `CommentDataImportPlugin` | Imports Comments data. | None | `Spryker\Zed\CommentDataImport\Communication\Plugin` |
 
 <details open>
-<summary>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -197,7 +197,7 @@ Make sure that the following modules were installed:<table><thead><tr><th>Module
 Append glossary according to your configuration:
 
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 comment_widget.comments_to_cart,Comments to Cart,en_US
@@ -255,7 +255,7 @@ Register controller provider(s) in the Yves application
 | `CommentWidgetControllerProvider` | `SprykerShop\Yves\CommentWidget\Plugin\Provider` |
 
 <details open>
-<summary>src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>
 
 ```php
 <?php
@@ -295,7 +295,7 @@ Register the following plugins to enable widgets:
 | `CommentThreadWidget` | Displays comments. | None | `SprykerShop\Yves\CommentWidget\Widget` |
 
 <details open>
-<summary>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

@@ -53,7 +53,7 @@ Make sure that the following modules were installed:<table><col /><col /><thead>
 ### 2) Add Translations
 Append glossary according to your configuration:
 <details open>
-<summary>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 persistent_cart_share.error.resource_is_not_available,The cart you are trying to access is not available.,en_US
@@ -101,7 +101,7 @@ Enable the following behaviors by registering the plugins:
 | PreviewCartShareOptionPlugin | Provides an external (preview) share option for the Share Cart via link widget. | None | Spryker\Client\PersistentCartShare\Plugin |
 
 <details open>
-<summary>src/Pyz/Yves/ResourceSharePage/ResourceSharePageDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ResourceSharePage/ResourceSharePageDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -128,7 +128,7 @@ class ResourceSharePageDependencyProvider extends SprykerResourceSharePageDepend
 </details>
 
 <details open>
-<summary>src/Pyz/Client/PersistentCartShare/PersistentCartShareDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Client/PersistentCartShare/PersistentCartShareDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -172,7 +172,7 @@ Register the following plugin:
 | `ShareCartByLinkWidgetControllerProvider` | `SprykerShop\Yves\PersistentCartShareWidget\Plugin\Provider` | `PersistentCartShareWidgetController` | Responsible for cart share links generation, used by `ShareCartByLinkWidget`. |
 
 <details open>
-<summary>src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>
 
 ```php
 <?php
@@ -217,7 +217,7 @@ Register the following plugins to enable widgets:
 | --- | --- | --- | --- |
 | `ShareCartByLinkWidget` | Provides an ability to share a cart for External Users (Preview). | None | SprykerShop\Yves\PersistentCartShareWidget\Widget |
 <details open>
-<summary>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

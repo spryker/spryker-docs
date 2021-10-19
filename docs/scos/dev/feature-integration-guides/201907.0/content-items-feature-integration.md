@@ -35,7 +35,7 @@ Adjust the schema definition so entity changes will trigger events:
 | `spy_content` | `Entity.spy_content.create`</br>`Entity.spy_content.update`</br>`Entity.spy_content.delete` |
 
 <details open>
-<summary>src/Pyz/Zed/Content/Persistence/Propel/Schema/spy_content.schema.xml</summary>
+<summary markdown='span'>src/Pyz/Zed/Content/Persistence/Propel/Schema/spy_content.schema.xml</summary>
     
 ```html
 <?xml version="1.0"?>
@@ -55,7 +55,7 @@ Adjust the schema definition so entity changes will trigger events:
 </details>
     
 <details open>
-<summary>src/Pyz/Zed/ContentStorage/Persistence/Propel/Schema/spy_content_storage.schema.xml</summary>
+<summary markdown='span'>src/Pyz/Zed/ContentStorage/Persistence/Propel/Schema/spy_content_storage.schema.xml</summary>
     
 ```html
 <?xml version="1.0"?>
@@ -100,7 +100,7 @@ Publish Content Items on Create, Edit or Delete to storage.
 | `ContentStorageEventSubscriber` | Registers listeners that are responsible to publish content items to storage when a related entity changes. | None | `Spryker\Zed\ContentStorage\Communication\Plugin\Event\Subscriber` |
 
 <details open>
-<summary>src/Pyz/Zed/Event/EventDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Event/EventDependencyProvider.php</summary>
     
 ```php
 <?php
@@ -125,7 +125,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 </details>
 
 <details open>
-<summary>src/Pyz/Client/RabbitMq/RabbitMqConfig.php</summary>
+<summary markdown='span'>src/Pyz/Client/RabbitMq/RabbitMqConfig.php</summary>
 
 ```php
 <?php
@@ -158,7 +158,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 | `SynchronizationStorageQueueMessageProcessorPlugin` | Configures all Content messages to sync to storage, and mark messages as failed in the event of an error. | None | `Spryker\Zed\Synchronization\Communication\Plugin\Queue` |
 
 <details open>
-<summary>src/Pyz/Zed/Queue/QueueDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Queue/QueueDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -193,7 +193,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 | `ContentStorageEventResourceRepositoryPlugin` | Can be executed to trigger events for all content entries from the database to publish them to the `spy_content_storage` table. | None | `Spryker\Zed\ContentStorage\Communication\Plugin\Event` |
 
 <details open>
-<summary>src/Pyz/Zed/EventBehavior/EventBehaviorDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/EventBehavior/EventBehaviorDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -230,7 +230,7 @@ Verify if "console event:trigger --help" has content as an available resource in
 | `ContentStorageSynchronizationDataPlugin` | Can be executed to synchronize all content entries from the database to Redis. | None | `Spryker\Zed\ContentStorage\Communication\Plugin\Synchronization` |
 
 <details open>
-<summary>src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -265,7 +265,7 @@ Make sure when content banners are exported or created, updated, deleted manuall
 {% endinfo_block %} to Redis accordingly.<table><thead><tr><th>Storage Type</th><th>Target Entity</th><th>Example Expected Data Identifier</th></tr></thead><tbody><tr><td>Redis</td><td>Content Banner</td><td><code>content:en_us:br1</code></td></tr><tr><td>Redis</td><td>Content Abstract Product List</td><td><code>content:en_us:apl2</code></td></tr><tr class="TableStyle-PatternedRows2-Body-LightRows"><td class="TableStyle-PatternedRows2-BodyE-Regular-LightRows">Redis</td><td class="TableStyle-PatternedRows2-BodyE-Regular-LightRows">Content Product Set</td><td class="TableStyle-PatternedRows2-BodyE-Regular-LightRows"><code>content:en_us:ps-1</code></td></tr><tr class="TableStyle-PatternedRows2-Body-DarkerRows"><td class="TableStyle-PatternedRows2-BodyB-Regular-DarkerRows">Redis</td><td class="TableStyle-PatternedRows2-BodyB-Regular-DarkerRows">Content File List</td><td class="TableStyle-PatternedRows2-BodyB-Regular-DarkerRows"><code>content:en_us:0d9f4722-d076-5acc-9d8e-e9daff7cd61</code></td></tr></tbody></table>)
 
 <details open>
-<summary>Content Banner: Example Expected Data Fragment</summary>
+<summary markdown='span'>Content Banner: Example Expected Data Fragment</summary>
 
 ```json
 {
@@ -283,7 +283,7 @@ Make sure when content banners are exported or created, updated, deleted manuall
 </details>
 
 <details open>
-<summary>Content Abstract Product List: Example Expected Data Fragment</summary>
+<summary markdown='span'>Content Abstract Product List: Example Expected Data Fragment</summary>
 
 ```json
 {
@@ -300,7 +300,7 @@ Make sure when content banners are exported or created, updated, deleted manuall
 </details>
 
 <details open>
-<summary>Content Product Set: Example Expected Data Fragment</summary>
+<summary markdown='span'>Content Product Set: Example Expected Data Fragment</summary>
 
 ```json
 {
@@ -314,7 +314,7 @@ Make sure when content banners are exported or created, updated, deleted manuall
 </details>
 
 <details open>
-<summary>Content File List: Example Expected Data Fragment</summary>
+<summary markdown='span'>Content File List: Example Expected Data Fragment</summary>
 
 ```json
 {
@@ -335,7 +335,7 @@ Make sure when content banners are exported or created, updated, deleted manuall
 Prepare your data according to your requirements using our demo data:
 
 <details open>
-<summary>vendor/spryker/content-banner-data-import/data/import/content_banner.csv</summary>
+<summary markdown='span'>vendor/spryker/content-banner-data-import/data/import/content_banner.csv</summary>
 
 ```yaml
 key,name,description,title.default,title.en_US,title.de_DE,subtitle.default,subtitle.en_US,subtitle.de_DE,image_url.default,image_url.en_US,image_url.de_DE,click_url.default,click_url.en_US,click_url.de_DE,alt_text.default,alt_text.en_US,alt_text.de_DE
@@ -358,7 +358,7 @@ br3,Test Banner 3,Lorem Lorem,banner title 3,,de banner title 3,banner sub-title
 | alt_text.default, alt_text.en_US, alt_text.de_DE | mandatory (at least one locale) | string | Localized banner alternative text for an image. |
 
 <details open>
-<summary>vendor/spryker/content-product-data-import/data/import/content_product_abstract_list.csv</summary>
+<summary markdown='span'>vendor/spryker/content-product-data-import/data/import/content_product_abstract_list.csv</summary>
 
 ```yaml
 key,name,description,skus.default,skus.en_US,skus.de_DE
@@ -377,7 +377,7 @@ apl3,APL Name 3,APL Description 3,"180,171","152,151",""
 | skus.default, skus.en_US, skus.de_DE | mandatory (at least one locale) | string | Localized abstract product list, one or more comma separated product SKUs. |
 
 <details open>
-<summary>vendor/spryker/content-product-set-data-import/data/import/content_product_set.csv</summary>
+<summary markdown='span'>vendor/spryker/content-product-set-data-import/data/import/content_product_set.csv</summary>
 
 ```yaml
 key,name,description,product_set_key.default,product_set_key.en_US,product_set_key.de_DE
@@ -404,7 +404,7 @@ Register the following plugin to enable Content Items data import:
 | `ContentProductSetDataImportPlugin` | Imports content product sets data into the database. | None | `Spryker\Zed\ContentProductSetDataImport\Communication\Plugin` |
 
 <details open>
-<summary>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -466,7 +466,7 @@ Enable the following behaviors by registering the plugins:
 | `TwigExpressionsToHtmlCmsGlossaryAfterFindPlugin` | Replaces twig expressions of CMS page content with a styled UI element in the WYSIWYG editor. | All twig functions registered by `ContentGuiEditorPlugins` will be replaced. | `Spryker\Zed\ContentGui\Communication\Plugin\CmsGui` |
 
 <details open>
-<summary>src/Pyz/Zed/ContentGui/ContentGuiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/ContentGui/ContentGuiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -523,7 +523,7 @@ Make sure that on the CMS Page and CMS Block edit pages you can see a **Content 
 {% endinfo_block %}
 
 <details open>
-<summary>src/Pyz/Zed/CmsBlockGui/CmsBlockGuiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/CmsBlockGui/CmsBlockGuiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -561,7 +561,7 @@ class CmsBlockGuiDependencyProvider extends SprykerCmsBlockGuiDependencyProvider
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/CmsGui/CmsGuiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/CmsGui/CmsGuiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -633,7 +633,7 @@ Enable the following behaviors by registering the plugins:
 | `ContentFileListTwigPlugin` | Adds the `content_file_list(id, template)` function to Yves and CMS blocks/page. | None | `SprykerShop\Yves\ContentFileWidget\Plugin\Twig` |
 
 <details open>
-<summary>src/Pyz/Yves/Twig/TwigDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/Twig/TwigDependencyProvider.php</summary>
 
 ```php
 <?php

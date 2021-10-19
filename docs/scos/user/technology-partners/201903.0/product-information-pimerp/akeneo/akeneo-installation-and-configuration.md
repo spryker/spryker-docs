@@ -142,7 +142,7 @@ Inside the module, implement plugins for writing data (categories, attributes, a
 Find an examplary plugin implementation below.
 
  <details open>
-<summary>ProductAbstractDataImporterPlugin.php</summary>
+<summary markdown='span'>ProductAbstractDataImporterPlugin.php</summary>
 
  ```php
  <?php
@@ -173,7 +173,7 @@ class ProductAbstractDataImporterPlugin extends AbstractPlugin implements DataIm
 Implement your own `DataImporter` for importing products to the shop database. It can be a business module inside the `AkeneoPimMiddlewareConnector` module. Example:
 
  <details open>
-<summary>AkeneoDataImporter.php</summary>
+<summary markdown='span'>AkeneoDataImporter.php</summary>
 
  ```php
  <?php
@@ -278,7 +278,7 @@ Business Factory method is used for Importer creation. Determine the data writin
 For better understanding, see the example of the `AkeneoDataImporter` creation for importing abstract products in `AkeneoPimMiddlewareConnectorBusinessFactory.`
 
 <details open>
-<summary>AkeneoPimMiddlewareConnectorBusinessFactory</summary>
+<summary markdown='span'>AkeneoPimMiddlewareConnectorBusinessFactory</summary>
 
  ```php
  ...
@@ -326,7 +326,7 @@ class AkeneoPimMiddlewareConnectorBusinessFactory extends SprykerAkeneoPimMiddle
 As you can see, in `DataSetStepBroker,` you can add your own steps for preparing data for writers. You can find ready made steps in the `DataImport` module or implement your own steps. Example:
 
  <details open>
-<summary>ProductAbstractStep</summary>
+<summary markdown='span'>ProductAbstractStep</summary>
 
  ```php
  <?php
@@ -380,7 +380,7 @@ You also need to take care of that data that is to be written to the database. T
 For attributes and categories, Spryker has implemented writer steps, so no plugins are required for that. Example:
 
  <details open>
-<summary>AkeneoPimMiddlewareConnectorBusinessFactory</summary>
+<summary markdown='span'>AkeneoPimMiddlewareConnectorBusinessFactory</summary>
 
  ```php
  /**
@@ -432,7 +432,7 @@ Product import is a more complex operation, so Spryker provides bulk insertion p
 You can use the existing plugins or create your own. The right way to add external plugins is to use dependency providers. We have two types of writer plugins: Propel plugins and PDO plugins. Check the examples for both of them below.
 
  <details open>
-<summary>AkeneoPimMiddlewareConnectorBusinessFactory</summary>
+<summary markdown='span'>AkeneoPimMiddlewareConnectorBusinessFactory</summary>
 
  ```php
  /**
@@ -452,7 +452,7 @@ public function createProductAbstractImporter()
 </details>
 
  <details open>
-<summary>AkeneoPimMiddlewareConnectorDependencyProvider</summary>
+<summary markdown='span'>AkeneoPimMiddlewareConnectorDependencyProvider</summary>
 
  ```php
  ...
@@ -487,7 +487,7 @@ When we use only `ProductAbstractPropelWriterPlugin`, `ProductStores`, `ProductP
 For example, if you want to import a product store, provide one more plugin in dependency provider.
 
  <details open>
-<summary>AkeneoPimMiddlewareConnectorDependencyProvider</summary>
+<summary markdown='span'>AkeneoPimMiddlewareConnectorDependencyProvider</summary>
 
  ```php
  /**

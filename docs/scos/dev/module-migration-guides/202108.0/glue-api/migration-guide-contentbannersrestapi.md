@@ -22,7 +22,7 @@ In `ContentBannersRestApi` version 2.0.0, we have:
 
 You can find more details about the changes on the [ContentBannersRestApi module release notes](https://github.com/spryker/content-banners-rest-api/releases/tag/2.0.0) page.
 
-**To upgrade to the new version of the module, do the following:**
+To upgrade to the new version of the module, do the following:
 
 1. Upgrade the **ContentBanner** module to version 2.0.0. See [Migration Guide - ContentBanner](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-contentbanner.html) for  details on how to upgrade.
 

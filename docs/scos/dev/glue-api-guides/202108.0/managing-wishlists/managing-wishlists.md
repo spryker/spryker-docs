@@ -56,7 +56,7 @@ Sample request: `POST https://glue.mysprykershop.com/wishlists`
 ### Response
 
 <details open>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
     
 ```json
 {
@@ -123,7 +123,7 @@ To retrieve all wishlists of a customer, send the request:
 
 
 <details open>
-    <summary>Response sample with no wishlists</summary>
+    <summary markdown='span'>Response sample with no wishlists</summary>
         
 ```json
 {
@@ -137,7 +137,7 @@ To retrieve all wishlists of a customer, send the request:
 </details>
 
 <details open>
-    <summary>Response sample with existing wishlists</summary>
+    <summary markdown='span'>Response sample with existing wishlists</summary>
         
 ```json
 {
@@ -169,7 +169,7 @@ To retrieve all wishlists of a customer, send the request:
 </details>
 
 <details open>
-    <summary>Response sample with wishlist items</summary>
+    <summary markdown='span'>Response sample with wishlist items</summary>
         
 ```json
 {
@@ -220,7 +220,7 @@ To retrieve all wishlists of a customer, send the request:
 
 
 <details open>
-    <summary>Response sample with wishlist items and respective concrete products</summary>
+    <summary markdown='span'>Response sample with wishlist items and respective concrete products</summary>
         
 ```json
 {
@@ -320,7 +320,7 @@ To retrieve all wishlists of a customer, send the request:
 </details>
 
 <details open>
-    <summary>Response sample with wishlist items, respective concrete products, and their product labels</summary>
+    <summary markdown='span'>Response sample with wishlist items, respective concrete products, and their product labels</summary>
         
 ```json
 {
@@ -490,7 +490,7 @@ To retrieve wishlist items, send the request:
 ### Response 
 
 <details open>
-    <summary>Response sample</summary>
+    <summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -513,7 +513,7 @@ To retrieve wishlist items, send the request:
 </details>
 
 <details open>
-    <summary>Response sample with wishlist items</summary>
+    <summary markdown='span'>Response sample with wishlist items</summary>
     
 ```json
 {
@@ -558,7 +558,7 @@ To retrieve wishlist items, send the request:
 </details>
 
 <details open>
-    <summary>Response sample with wishlist items and respective concrete products</summary>
+    <summary markdown='span'>Response sample with wishlist items and respective concrete products</summary>
     
 ```json
 {
@@ -651,7 +651,7 @@ To retrieve wishlist items, send the request:
 </details>
 
 <details open>
-    <summary>Response sample with wishlist items, respective concrete products, and their product labels</summary>
+    <summary markdown='span'>Response sample with wishlist items, respective concrete products, and their product labels</summary>
     
 ```json
 {

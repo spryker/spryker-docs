@@ -60,7 +60,7 @@ Make sure that the following modules are installed:
 Configure resources available only for company users
 Add the following resource to the list of resources which are accessible only for company users:
 <details open>
-<summary>src/Pyz/Glue/CompanyUsersRestApi/CompanyUsersRestApiConfig.php</summary>
+<summary markdown='span'>src/Pyz/Glue/CompanyUsersRestApi/CompanyUsersRestApiConfig.php</summary>
 
 ```
 <?php
@@ -410,7 +410,7 @@ class OauthPermissionConfig extends SprykerOauthPermissionConfig
 ```
 
 <details open>
-<summary>src/Pyz/Glue/CustomersRestApi/CustomersRestApiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/CustomersRestApi/CustomersRestApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -440,7 +440,7 @@ class CustomersRestApiDependencyProvider extends SprykerCustomersRestApiDependen
 </details>
 
 <details open>
-<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

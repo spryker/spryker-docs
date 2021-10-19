@@ -1,5 +1,5 @@
 ---
-title: Reference information- content items
+title: Reference information - content items
 description: The guide provides reference information you work with when creating, updating and viewing content items in the Back Office.
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/content-items-reference-information
@@ -18,12 +18,11 @@ related:
 
 This topic contains the reference information for working with content items in **Content Management** > **Content Items** section.
 
----
+## Content items page
 
-## Content Items Page
-In the **Content Items** section, you see the following:
+In the *Content Items* section, you see the following:
 
-| Attribute | Description |
+| ATTRIBUTE | DESCRIPTION |
 | --- | --- |
 | **Content Item Key** | A fixed value of the content item indicated in the database. |
 |**Name**  | The name of a content item. |
@@ -36,19 +35,18 @@ In the **Content Items** section, you see the following:
 By default, the latest created content item is displayed and sorted by the _Name_ column on the grid of content items.
 
 On this page, you can:
-
 * Create a new content item.
 * Sort content items by **Content Item Key**, **Name**, **Content type**, **Created**, and **Updated** dates.
 * Filter content items using the search by **Content Item Key**, **Name**, **Description**, **Content type**, **Created**, and **Updated** dates.
 * Edit a content item.
 
+## Create and edit banner content item page
 
-## Create and Edit Banner Content Item Page
 The following table describes the attributes on the pages:
 * *Create Content Item: Banner*
 * *Edit Content Item: Banner*
 
-| Attribute | Description |
+| ATTRIBUTE | DESCRIPTION |
 | --- | --- |
 | **Name** | The name of a Banner content item. |
 |**Description**  |Descriptive information on what a banner is used for.  |
@@ -58,13 +56,13 @@ The following table describes the attributes on the pages:
 | **Click URL** | A URL of the target page to which your shop visitors are redirected. |
 | **Alt-text** | Some additional text that describes the image. |
 
+## Create and edit abstract product list content item page
 
-## Create and Edit Abstract Product List Content Item Page
 The following table describes the attributes on the pages:
- * *CreateContent Item: Abstract Product List* 
+ * *CreateContent Item: Abstract Product List*
  * *Edit Content Item: Abstract Product List*
 
-| Attribute | Description |
+| ATTRIBUTE | DESCRIPTION |
 | --- | --- |
 | **Name** | The name for an Abstract Product List content item. |
 | **Description** | Descriptive information on what an Abstract Product List is used for. |
@@ -79,13 +77,13 @@ The following table describes the attributes on the pages:
 | **Status** |  Shows the status of the product: active or inactive. |
 |**Selected** | A column that contains **+ Add to list** you can click to add a product to the top table so that it can be added to the Abstract Product List content item.|
 
-## Create and Edit Product Set Content Item Page
+## Create and edit product set content item page
 
 The following table describes the attributes on the pages:
- * *CreateContent Item: Product Set* 
+ * *CreateContent Item: Product Set*
  * *Edit Content Item: Product Set*
 
-| Attribute | Description |
+| ATTRIBUTE | DESCRIPTION |
 | --- | --- |
 | **Name** | The name for a Product Set content item. |
 |  **Description**|Descriptive information on what a Product Set is used for.  |
@@ -98,12 +96,13 @@ The following table describes the attributes on the pages:
 |**Status**  | Shows the status of the product set: active or inactive. |
 |**Actions (bottom table)**  |A column that contains **+ Add** you can click to add a product set to the top table so that it can be added to the Product Set content item. |
 
-## Create and Edit File List Content Item Page
+## Create and edit file list content item page
 
 The following table describes the attributes on the pages:
- * *CreateContent Item: File List* 
+ * *CreateContent Item: File List*
  * *Edit Content Item: File List*
-| Attribute | Description |
+
+| ATTRIBUTE | DESCRIPTION |
 | --- | --- |
 | **Name** | The name for a File List content item. |
 | **Description** | Descriptive information on what a File List content item is used for. |
@@ -114,7 +113,7 @@ The following table describes the attributes on the pages:
 | **File Name** |A file name.  |
 | **Selected** | A column that contains **+ Add to list** you can click to add a file to the top table so that it can be added to the File List content item. |
 
-## Create and Edit Navigation Content Item Pages
+## Create and edit navigation content item page
 
 The following table describes the attributes on the *Create Content Item: Navigation* and *Edit Content Item: Navigation* pages:
 
@@ -123,11 +122,3 @@ The following table describes the attributes on the *Create Content Item: Naviga
 | Name | Name of the content item. |
 | Description | Description of the content item. |
 | Navigation | Field to select an existing navigation element. See [Creating a Navigation Element](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html#create-a-navigation-content-item) to learn how to create it. |
-
-
-
-
-
-
-
-

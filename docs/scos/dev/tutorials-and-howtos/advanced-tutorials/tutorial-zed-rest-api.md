@@ -191,7 +191,7 @@ And template for this action `Presentation/V1/doc.twig`:
 Now the controller should work, but will return empty values, we can start implementing the business logic. To dynamically read documentation from facade we will use `ReflectionClass` of standard PHP library, the idea is to go through public methods, extract doc-strings and parameter types and render them on the page. This will result in self-documenting API. The final version of the `ApiEntry` for this step will look like:
 
 <details open>
-<summary>Code sample:</summary>
+<summary markdown='span'>Code sample:</summary>
 
 ```php
 <?php
@@ -277,7 +277,7 @@ The resulting structure of the array is following:
 Now modify template to output the array:
 
 <details open>
-<summary>Code sample:</summary>
+<summary markdown='span'>Code sample:</summary>
 
 ```
 &lt;html&gt;

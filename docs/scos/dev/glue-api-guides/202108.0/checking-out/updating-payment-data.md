@@ -45,7 +45,7 @@ To update payment with a payload from a third-party payment provider, send the r
 | Authorization | String | Required when checking out a [cart of registered user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html). | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
 
 <details open>
-    <summary>Request sample</summary>
+    <summary markdown='span'>Request sample</summary>
 
 `POST https://glue.mysprykershop.com/order-payments`
 

@@ -1,5 +1,5 @@
 ---
-title: Migration guide- Merchant
+title: Migration guide - Merchant
 description: This guide contains instructions on migrating the Merchant module provided by Spryker to a newer version.
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-merchant
@@ -181,7 +181,7 @@ If your project code contains any changes on the project level, make sure that i
 
 {% info_block warningBox "Warning" %}
 
-The new version of this module influences other features. You need to trigger events for the related modules. 
+The new version of this module influences other features. You need to trigger events for the related modules.
 
 {% endinfo_block %}
 
@@ -258,7 +258,7 @@ class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
     {
         return [];
     }
-    
+
     /**
      * @return \Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantExpanderPluginInterface[]
      */

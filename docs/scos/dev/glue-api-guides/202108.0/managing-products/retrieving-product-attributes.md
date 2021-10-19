@@ -37,7 +37,7 @@ Request sample: `https://glue.mysprykershop.com/product-management-attributes`
 
 ### Response
 <details open>
-<summary>Response sample - retrieve all product attributes</summary>
+<summary markdown='span'>Response sample - retrieve all product attributes</summary>
 ```json
 {
     "data": [
@@ -170,7 +170,7 @@ Request sample: `https://glue.mysprykershop.com/product-management-attributes/st
 
 ### Response
 <details open>
-<summary>Response sample - retrieve a product attribute</summary>
+<summary markdown='span'>Response sample - retrieve a product attribute</summary>
 ```json
 {
     "data": {

@@ -35,7 +35,7 @@ To prepare your project to work with multi-store abstract products:
 * Override `Spryker\Zed\Store\StoreConfig::isMultiStorePerZedEnabled()` in your project to return `true`. This will enable the store management inside the Product Information Management (PIM) Zed Admin UI.
 
 <details open>
-    <summary>Example override</summary>
+    <summary markdown='span'>Example override</summary>
 
 
 ```php

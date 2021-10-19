@@ -95,7 +95,7 @@ If you included the `vouchers` resource relationship in your request URL, the re
 {% endinfo_block %}
 
 <details open>
-<summary>Sample Response<summary>
+<summary markdown='span'>Sample Response<summary markdown='span'>
     
 ```json
 {
@@ -251,7 +251,7 @@ The section also includes the voucher **ID** that can be used in the future to u
 | **discountPromotionQuantity** | Integer | Specifies the amount of the product a customer needs to purchase in order to get the discount. If the discount can be applied to any number of products, the value of the attribute is **null**. |
 
 <details open>
-<summary>Sample Response</summary>
+<summary markdown='span'>Sample Response</summary>
     
 ```json
 {

@@ -112,7 +112,7 @@ Sample request: `GET http://glue.mysprykershop.com/returnable-items/DE--1-R3`
 
 ### Response
 <details>
-<summary>Sample response</summary>
+<summary markdown='span'>Sample response</summary>
 
 ```json
 {

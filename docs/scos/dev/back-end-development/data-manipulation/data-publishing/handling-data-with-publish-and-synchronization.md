@@ -157,7 +157,7 @@ For P&S to work, the publishers need to catch the events and run the appropriate
 1. Create a writer plugin that handles the creation and changes of the `spy_hello_world_message` entity.  
 
 <details open>
-<summary>\Pyz\Zed\HelloWorldStorage\Communication\Plugin\Publisher\HelloWorldWritePublisherPlugin</summary>
+<summary markdown='span'>\Pyz\Zed\HelloWorldStorage\Communication\Plugin\Publisher\HelloWorldWritePublisherPlugin</summary>
 
 ```php
 <?php
@@ -211,7 +211,7 @@ class HelloWorldWritePublisherPlugin extends AbstractPlugin implements Publisher
 2. Create a plugin that handles the deletion of the `spy_hello_world_message` entity.
 
 <details open>
- <summary>\Pyz\Zed\HelloWorldStorage\Communication\Plugin\Publisher\HelloWorldDeletePublisherPlugin</summary>
+ <summary markdown='span'>\Pyz\Zed\HelloWorldStorage\Communication\Plugin\Publisher\HelloWorldDeletePublisherPlugin</summary>
 
 ```php
 <?php

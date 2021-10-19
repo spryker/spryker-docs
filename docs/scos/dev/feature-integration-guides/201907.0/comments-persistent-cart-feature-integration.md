@@ -26,7 +26,7 @@ Register the following plugins:
 | `CommentThreadQuoteExpanderPlugin` | Expands quote transfer with `CommentThread`. | None | `Spryker\Zed\Comment\Communication\Plugin\Quote` |
 
 <details open>
-<summary>Pyz\Zed\Quote\QuoteDependencyProvider.php</summary>
+<summary markdown='span'>Pyz\Zed\Quote\QuoteDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -73,7 +73,7 @@ Register the following plugins:
 | `CartCommentThreadAfterOperationStrategyPlugin` | Updates a session quote with the comment thread. | None | `SprykerShop\Yves\CartPage\Plugin\CommentWidget` |
 
 <details open>
-<summary>Pyz\Yves\CommentWidget\CommentWidgetDependencyProvider.php</summary>
+<summary markdown='span'>Pyz\Yves\CommentWidget\CommentWidgetDependencyProvider.php</summary>
 
 ```php
 <?php

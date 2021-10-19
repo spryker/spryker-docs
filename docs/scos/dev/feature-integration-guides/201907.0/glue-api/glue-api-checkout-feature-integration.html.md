@@ -86,7 +86,7 @@ Activate the following plugins:
 | `OrderPaymentsResourceRoutePlugin` | Registers the `order-payments` resource. | None | `Spryker\Glue\OrderPaymentsRestApi\Plugin` |
 
 <details open>
-   <summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+   <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -175,7 +175,7 @@ Mappers should be configured on the project level in order to map the data from 
 | `ShipmentQuoteMapperPlugin` | Maps shipment information to `QuoteTransfer`. | None | `Spryker\Zed\ShipmentsRestApi\Communication\Plugin\CheckoutRestApi` |
 
 <details open>
-<summary>src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
 
 ```json
 <?php
@@ -233,7 +233,7 @@ Activate the following plugin(s):
 | `ShipmentMethodCheckoutDataValidatorPlugin` | Verifies whether the specified shipment method is valid. | None | `Spryker\Zed\ShipmentsRestApi\Communication\Plugin\CheckoutRestApi` |
 
 <details open>
-<summary>src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -261,7 +261,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
 
 ```php
 <?php

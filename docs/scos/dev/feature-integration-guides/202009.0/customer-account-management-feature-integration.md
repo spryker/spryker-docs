@@ -169,7 +169,7 @@ Set up behavior as follows:
 | CustomerRegistrationConfirmationMailTypePlugin | Builds a mail for customer registration confirmation that is used when double opt in feature is enabled. | None | Spryker\Zed\Customer\Communication\Plugin\Mail |	
 
 <details open>
-    <summary>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -301,7 +301,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 
 
 <details open>
-    <summary>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -409,7 +409,7 @@ console customer:password:set
 {% endinfo_block %}
 
 <details open>
-    <summary>src/Pyz/Zed/Mail/MailDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Zed/Mail/MailDependencyProvider.php</summary>
         
 ```php
 <?php

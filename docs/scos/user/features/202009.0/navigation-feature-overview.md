@@ -114,28 +114,28 @@ A content item template defines how a content item is displayed on the Storefron
 
 
 <details open>
-    <summary>"Tree structure after the first level" template representation - Storefront</summary>
+    <summary markdown='span'>"Tree structure after the first level" template representation - Storefront</summary>
     
 ![tree-structure-after-the-first-level](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/tree-structure-after-the-first-level.png)
 
 </details>
 
 <details open>
-    <summary>"Inline navigation" template representation - Storefront</summary>
+    <summary markdown='span'>"Inline navigation" template representation - Storefront</summary>
 
 ![inline-navigation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/inline-navigation.png)
     
 </details>
 
 <details open>
-    <summary>"List navigation" template representation - Storefront</summary>
+    <summary markdown='span'>"List navigation" template representation - Storefront</summary>
     
 ![list-navigation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/list-navigation.png)
     
 </details>
 
 <details open>
-    <summary>"Tree structure" template representation - Storefront</summary>
+    <summary markdown='span'>"Tree structure" template representation - Storefront</summary>
     
 ![tree-structure](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/tree-structure.png)
     

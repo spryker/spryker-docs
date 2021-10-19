@@ -32,14 +32,14 @@ related:
 
 Order History is the page where you can check all the orders you have created in your Customer Account.
 <details open>
-<summary>B2B Shop</summary>
+<summary markdown='span'>B2B Shop</summary>
 
 ![b2b-order-history](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Customer+Account/Order+History/b2b-order-history.png) 
 </details>
 
 
 <details open>
-<summary>B2C Shop</summary>
+<summary markdown='span'>B2C Shop</summary>
 
 ![b2c-order-history](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Customer+Account/Order+History/b2c-order-history.png) 
 </details>

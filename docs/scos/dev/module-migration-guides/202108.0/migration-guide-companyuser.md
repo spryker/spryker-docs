@@ -34,11 +34,12 @@ So, once this command is executed, CompanyUser-related database classes will hav
 This command is needed to regenerate `CompanyUserTransfer` object, which will now have a new field - `isActive`.
 
 ### New facade methods
+
 Another change is that new methods for enabling and disabling company user were added.
 They both return `CompanyUserResponseTransfer` object, that can be used to determine whether the attempt was successful or not.
 
 **Code sample:**
-    
+
 ```php
 /**
  * Specification:
@@ -56,7 +57,7 @@ public function enableCompanyUser(CompanyUserTransfer $companyUserTransfer): Com
 ```
 
 **Code sample:**
-    
+
 ```php/**
  * Specification:
  * - Disables company user.
@@ -71,7 +72,7 @@ public function enableCompanyUser(CompanyUserTransfer $companyUserTransfer): Com
  */
 public function disableCompanyUser(CompanyUserTransfer $companyUserTransfer): CompanyUserResponseTransfer;
 ```
-    
+
 Disabled company users cannot see the `My Company` page, but they can make orders as customers.
 Enabled users can obviously view the `My Company` page, create new company users, company user roles and send invitations.
 A newly registered company user `is active` by default. That means, that the user can log in straight after the registration has been completed.
@@ -81,6 +82,7 @@ The methods below now have additional checks which verify if company user is act
 * `\SprykerShop\Yves\CompanyPage\Form\DataProvider\CompanyUserAccountSelectorFormDataProvider::mapCompanyUserCollectionToChoiceArray()`
 
 ### Updated Company Role Permissions Management page
+
 Previously, permissions management of specific company role required you to go to the company role deletion page.
 On that page, you needed to click `Manage permissions`. After that, you were redirected to the needed page with the list of available permissions for the company role, that you selected.
 Quite a long way, isn't it?

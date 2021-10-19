@@ -17,9 +17,9 @@ Follow the steps below to install Glue application feature API.
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| Name | Type | Version |
+| NAME | TYPE | VERSION |
 | --- | --- | --- |
-| Spryker Core | Feature | master |
+| Spryker Core | Feature | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
@@ -28,108 +28,105 @@ Run the following command(s) to install the required modules:
 composer require spryker/glue-application:"^1.0.0" spryker/entity-tags-rest-api:"^1.0.0" spryker/stores-rest-api:"^1.0.0" --update-with-dependencies
 ```
 
-{% info_block warningBox "Make sure that the following modules are installed:)
+{% info_block warningBox “Verification” %}
 
-| Module | Expected Directory |
+Make sure that the following modules are installed:
+
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-| `GlueApplication` | `vendor/spryker/glue-application` |
-| `EntityTagsRestApi` | `vendor/spryker/entity-tag-rest-api` |
-| `StoresRestApi` | `vendor/spryker/stores-rest-api` |
+| GlueApplication | vendor/spryker/glue-application |
+| EntityTagsRestApi | vendor/spryker/entity-tag-rest-api |
+| StoresRestApi | vendor/spryker/stores-rest-api |
 
-### 2) Set Up Configuration
+{% endinfo_block %}
+
+### 2) Set up configuration
 Add the necessary parameters to `config/Shared/config_default.php`:
 
-<details open>
-<summary>config/Shared/config_default.php</summary>
+**config/Shared/config_default.php**
     
 ```bash
 $config[GlueApplicationConstants::GLUE_APPLICATION_DOMAIN] = 'http://glue.mysprykershop.com';
 $config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = 'http://glue.mysprykershop.com';
 $config[GlueApplicationConstants::GLUE_APPLICATION_REST_DEBUG] = false;
 ```
-    
-</br>
-</details>
 
 #### Add Global CORS policy
 
-@(Info" %}
+{% info_block infoBox "Info" %}
+
 `GLUE_APPLICATION_CORS_ALLOW_ORIGIN` should be configured for every domain used in the project.
+
 {% endinfo_block %}
 
 Adjust `config/Shared/config_default.php`:
 
-<details open>
-<summary>config/Shared/config_default.ph</summary>
+**config/Shared/config_default.ph**
     
 ```bash
 $config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = 'http://glue.mysprykershop.com';
 ```
-    
-</br>
-</details>
 
 #### Allow CORS requests to any domain
 Adjust `config/Shared/config_default.php`:
 
-<details open>
-<summary>config/Shared/config_default.php</summary>
+**config/Shared/config_default.php**
 
 ```bash
 $config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = '*';
 ```
-    
-</br>
-</details>
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
 To make sure the CORS headers are set up correctly, send an `OPTIONS` request to any valid GLUE resource with Origin header `http://glue.mysprykershop.com/` and see the correct JSON response:<ul><li>Verify that the access-control-allow-origin header exists and is the same as set in config</li><li>Verify that the access-control-allow-methods header exists and contains all available methods</li><li>Make POST, PATCH or DELETE request (can choose any of available one
-{% endinfo_block %} and verify that response headers are the same</li></ul>)
+ and verify that response headers are the same</li></ul>
+ {% endinfo_block %}
 
 {% info_block infoBox %}
-<ul><li>When the `GlueApplicationConfig::isEagerRelationshipsLoadingEnabled(
-{% endinfo_block %}` option is set to "false", no relationship will be loaded, unless they are explicitly specified in the "included" query parameter (e.g. `/abstract-products?include=abstract-product-prices`).</li><li>When the `GlueApplicationConfig::isEagerRelationshipsLoadingEnabled()` option is set to "true", all resource relationships will be loaded by default unless you pass empty "include" query parameter (e.g. `/abstract-products?include=`). If you specify needed relationships in the "included" query parameter, only required relationships will be added to response data.</li></ul>)
+<ul><li>When the `GlueApplicationConfig::isEagerRelationshipsLoadingEnabled` option is set to "false", no relationship will be loaded, unless they are explicitly specified in the "included" query parameter (e.g. `/abstract-products?include=abstract-product-prices`).</li><li>When the `GlueApplicationConfig::isEagerRelationshipsLoadingEnabled()` option is set to "true", all resource relationships will be loaded by default unless you pass empty "include" query parameter (e.g. `/abstract-products?include=`). If you specify needed relationships in the "included" query parameter, only required relationships will be added to response data.</li></ul>
+{% endinfo_block %}
 
-### 3) Set Up Transfer Objects
+### 3) Set up transfer objects
+
 Run the following command to generate transfer objects:
 
 ```bash
 console transfer:generate
 ```
 
-{% info_block warningBox %}
-Make sure that the following changes have occurred:
-{% endinfo_block %}
+{% info_block warningBox “Verification” %}
 
-| Transfer | Type | Event | Path |
+Make sure that the following changes have occurred:
+
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
-| `RestPageOffsetsTransfer` | class | created | `src/Generated/Shared/Transfer/RestPageOffsetsTransfer.php` |
-| `RestErrorMessageTransfer` | class | created | `src/Generated/Shared/Transfer/RestErrorMessageTransfer.php` |
-| `RestErrorCollectionTransfer` | class | created | `src/Generated/Shared/Transfer/RestErrorCollectionTransfer.php` |
-| `RestVersionTransfer` | class | created | `src/Generated/Shared/Transfer/RestVersionTransfer.php` |
-| `RestUserTransfer` | class | created | `src/Generated/Shared/Transfer/RestUserTransfer.php` |
-| `StoresRestAttributesTransfer` | class | created | `src/Generated/Shared/Transfer/StoresRestAttributesTransfer.php` |
-| `StoreCountryRestAttributesTransfer` | class | created | `src/Generated/Shared/Transfer/StoreCountryRestAttributesTransfer.php` |
-| `StoreRegionRestAttributesTransfer` | class | created | `src/Generated/Shared/Transfer/StoreRegionRestAttributesTransfer.php` |
-| `StoreLocaleRestAttributesTransfer` | class | created | `src/Generated/Shared/Transfer/StoreLocaleRestAttributesTransfer.php` |
-| `StoreCurrencyRestAttributesTransfer` | class | created | `src/Generated/Shared/Transfer/StoreCurrencyRestAttributesTransfer.php` |
+| RestPageOffsetsTransfer | class | created | src/Generated/Shared/Transfer/RestPageOffsetsTransfer.php |
+| RestErrorMessageTransfer | class | created | src/Generated/Shared/Transfer/RestErrorMessageTransfer.php |
+| RestErrorCollectionTransfer | class | created | src/Generated/Shared/Transfer/RestErrorCollectionTransfer.php |
+| RestVersionTransfer | class | created | src/Generated/Shared/Transfer/RestVersionTransfer.php |
+| RestUserTransfer | class | created | src/Generated/Shared/Transfer/RestUserTransfer.php |
+| StoresRestAttributesTransfer | class | created | src/Generated/Shared/Transfer/StoresRestAttributesTransfer.php |
+| StoreCountryRestAttributesTransfer | class | created | src/Generated/Shared/Transfer/StoreCountryRestAttributesTransfer.php |
+| StoreRegionRestAttributesTransfer | class | created | src/Generated/Shared/Transfer/StoreRegionRestAttributesTransfer.php |
+| StoreLocaleRestAttributesTransfer | class | created | src/Generated/Shared/Transfer/StoreLocaleRestAttributesTransfer.php |
+| StoreCurrencyRestAttributesTransfer | class | created | src/Generated/Shared/Transfer/StoreCurrencyRestAttributesTransfer.php |
+
+{% endinfo_block %}
 
 ### 4) Set Up Behavior
 Activate the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `GlueApplicationApplicationPlugin` | Registers the resource builder service, the controller resolver and configures the debug mode in Glue Application. | None | `Spryker\Glue\GlueApplication\Plugin\Application` |
-| `SessionApplicationPlugin` | Registers session in Glue Application. | None | `Spryker\Glue\Session\Plugin\Application` |
-| `GlueRestControllerListenerEventDispatcherPlugin` | Registers the `onKernelController` event listeners in Glue Application. | None | `Spryker\Glue\GlueApplication\Plugin\Rest` |
-| `RouterApplicationPlugin` | Registers the URL matcher and router services in Glue Application. | None | `Spryker\Glue\Router\Plugin\Application` |
-| `SetStoreCurrentLocaleBeforeActionPlugin` | Sets a locale for the whole current store. | None | `Spryker\Glue\GlueApplication\Plugin\Rest\SetStoreCurrentLocaleBeforeActionPlugin` |
-| `EntityTagFormatResponseHeadersPlugin` | Adds the ETag header to response if applicable. | None | `Spryker\Glue\EntityTagsRestApi\Plugin\GlueApplication\EntityTagFormatResponseHeadersPlugin` |
-| `EntityTagRestRequestValidatorPlugin` | Verifies that the `If-Match` header is equal to entity tag. | None | `Spryker\Glue\EntityTagsRestApi\Plugin\GlueApplication\EntityTagRestRequestValidatorPlugin` |
-| `StoresResourceRoutePlugin` | Registers the `stores` resource. | None | `Spryker\Glue\StoresRestApi\Plugin` |
+| GlueApplicationApplicationPlugin | Registers the resource builder service, the controller resolver and configures the debug mode in Glue Application. | None | Spryker\Glue\GlueApplication\Plugin\Application |
+| SessionApplicationPlugin | Registers session in Glue Application. | None | Spryker\Glue\Session\Plugin\Application |
+| GlueRestControllerListenerEventDispatcherPlugin | Registers the `onKernelController` event listeners in Glue Application. | None | Spryker\Glue\GlueApplication\Plugin\Rest |
+| RouterApplicationPlugin | Registers the URL matcher and router services in Glue Application. | None | Spryker\Glue\Router\Plugin\Application |
+| SetStoreCurrentLocaleBeforeActionPlugin | Sets a locale for the whole current store. | None | Spryker\Glue\GlueApplication\Plugin\Rest\SetStoreCurrentLocaleBeforeActionPlugin |
+| EntityTagFormatResponseHeadersPlugin | Adds the ETag header to response if applicable. | None | Spryker\Glue\EntityTagsRestApi\Plugin\GlueApplication\EntityTagFormatResponseHeadersPlugin |
+| EntityTagRestRequestValidatorPlugin | Verifies that the `If-Match` header is equal to entity tag. | None | Spryker\Glue\EntityTagsRestApi\Plugin\GlueApplication\EntityTagRestRequestValidatorPlugin |
+| StoresResourceRoutePlugin | Registers the `stores` resource. | None | Spryker\Glue\StoresRestApi\Plugin |
 
-<details open>
-<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
     
 ```php
 <?php
@@ -161,13 +158,9 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</br>
-</details>
-
 Create a new entry point for Glue Application:
 
-<details open>
-<summary>public/Glue/index.php</summary>
+**public/Glue/index.php**
 
 ```php
 <?php
@@ -192,14 +185,10 @@ $bootstrap
 	->run();
 ```
 
-</br>
-</details>
-
 #### Configure web server
 Create Nginx VHOST configuration:
 
-<details open>
-<summary>/etc/nginx/sites-enabled/DE_development_glue</summary>
+**/etc/nginx/sites-enabled/DE_development_glue**
 
 ```php
 server {
@@ -224,27 +213,19 @@ server {
 }
 ```
 
-</br>
-</details>
-
 Update hosts configuration by adding the following line (replace IP with your server's IP address):
 
-<details open>
-<summary>/etc/hosts</summary>
+**/etc/hosts**
 
-```
+```bash
 ip glue.mysprykershop.com
 ```
 
-</br>
-</details>
 
-{% info_block warningBox %}
-If everything is set up correctly, you should be able to access http://glue.mysprykershop.com and get a correct JSON response as follows:
-{% endinfo_block %}
+{% info_block warningBox “Verification” %}
+If everything is set up correctly, you should be able to access `http://glue.mysprykershop.com` and get a correct JSON response as follows:
 
-<details open>
-<summary>Default JSON Response</summary>
+**Default JSON Response**
 
 ```json
 {
@@ -257,11 +238,7 @@ If everything is set up correctly, you should be able to access http://glue.mysp
 }
 ```
 
-</br>
-</details>
-
-<details open>
-<summary>\Pyz\Glue\GlueApplication\GlueApplicationDependencyProvider.php</summary>
+**\Pyz\Glue\GlueApplication\GlueApplicationDependencyProvider.php**
 
 ```php
 <?php
@@ -316,15 +293,11 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</br>
-</details>
-
 {% info_block infoBox "Hint" %}
 Use constant of resource name instead of plain string.
 {% endinfo_block %}
 
-<details open>
-<summary>src/Pyz/Glue/EntityTagsRestApi/EntityTagsRestApiConfig.php</summary>
+**src/Pyz/Glue/EntityTagsRestApi/EntityTagsRestApiConfig.php**
 
 ```php
 <?php
@@ -349,16 +322,18 @@ class EntityTagsRestApiConfig extends SprykerEntityTagsRestApiConfig
 }
 ```
 
-</br>
-</details>
-
-{% info_block warningBox %}
-If everything is set up correctly, a request to http://glue.mysprykershop.com with the header `[{"key":"Accept-Language","value":"de_DE, de;q=0.9"}]` should result in a response that contains the content-language header set to de_DE.
 {% endinfo_block %}
 
-{% info_block warningBox %}
+
+{% info_block warningBox “Verification” %}
+
+If everything is set up correctly, a request to `http://glue.mysprykershop.com` with the header `[{"key":"Accept-Language","value":"de_DE, de;q=0.9"}]` should result in a response that contains the content-language header set to de_DE.
+
+{% endinfo_block %}
+
+{% info_block warningBox “Verification” %}
+
 Send a GET request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}`. Make sure that the response contains the 'ETag' header.</br>Prepare a PATCH request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identitifer{% raw %}}}{% endraw %}`.</br>Add the 'If-Match' header with the value of ETag from the GET response header.</br>Add the request body.
-{% endinfo_block %}
 
 ```json
 {
@@ -371,13 +346,17 @@ Send a GET request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESO
 }
 ```
 
-{% info_block warningBox %}
-Send a request with the specified header and body.</br>Make sure that the returned resource contains updated 'ETag'.
 {% endinfo_block %}
 
-{% info_block warningBox %}
-Send a GET request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}`.</br>Make sure that the response contains the 'ETag' header.</br>Prepare a PATCH request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}`.</br>Add the 'If-Match' header with some random value.</br>Add a request body.
+{% info_block warningBox “Verification” %}
+
+Send a request with the specified header and body.</br>Make sure that the returned resource contains updated 'ETag'.
+
 {% endinfo_block %}
+
+{% info_block warningBox “Verification” %}
+
+Send a GET request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}`.</br>Make sure that the response contains the 'ETag' header.</br>Prepare a PATCH request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}`.</br>Add the 'If-Match' header with some random value.</br>Add a request body.
 
 ```json
 {
@@ -393,8 +372,14 @@ Send a GET request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESO
 Send a request with the specified header and body.
 
 Make sure that the response contains the ETag validation error.
+
+{% endinfo_block %}
+
+
 		
 {% info_block warningBox %}
+
 Make sure that the following endpoint is available:</br>http://mysprykershop.com/stores
+
 {% endinfo_block %}
 

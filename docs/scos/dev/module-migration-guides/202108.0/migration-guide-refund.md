@@ -12,17 +12,23 @@ redirect_from:
 ---
 
 ## Upgrading from Version 4.* to Version 5.*
+
 Version 4 of the Refund module no longer uses `SalesAggregatorFacade` , it was replaced with `SalesFacade`.
 The `RefundCalculator` business class must now replace `RefundToSalesAggregatorInterface` with the `RefundToSalesInterface` bridge.
-To learn more see [Migration Guide - Calculation](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-calculation.html). 
+To learn more see [Migration Guide - Calculation](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-calculation.html).
 
 ## Upgrading from Version 2.* to Version 3.*
+
 To migrate the Refund module from version 2 to version 3, follow these steps:
 Version 3 of the Refund module was completely rebuilt; the `SalesAggregator` is used to get a calculated `OrderTransfer` and plugins are used to change the refundable amount calculation behaviour.
-The `RefundFacade` has completely changed and exposes only two methods. 
+The `RefundFacade` has completely changed and exposes only two methods.
+
 {% info_block warningBox %}
+
 Check your code and where you make use of the `RefundFacade` change your implementation to use the new methods from the `RefundFacade`.
+
 {% endinfo_block %}
+
 These methods are:
 * `RefundFacade::calculateRefund(array $salesOrderItems`, SpySalesOrder $salesOrderEntity)`
 * `RefundFacade::saveRefund(RefundTransfer $refundTransfer)`

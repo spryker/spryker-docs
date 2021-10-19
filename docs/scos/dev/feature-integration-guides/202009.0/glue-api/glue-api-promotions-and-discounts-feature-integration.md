@@ -132,7 +132,7 @@ Add the following fields into the *Quote Fields Allowed for Saving* list:
 To do so, modify the following file:
 
 <details open>
-<summary>src/Pyz/Zed/Quote/QuoteConfig.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Quote/QuoteConfig.php</summary>
 
 ```php
 <?php
@@ -179,7 +179,7 @@ Activate the following plugin:
 | `ProductAbstractBySkuResourceRelationshipPlugin` | Adds the `abstract-products` resource as a relationship to the `promotional-items` resource. | None | `Spryker\Glue\ProductsRestApi\Plugin\GlueApplication` |
 
 <details open>
-   <summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+   <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 
@@ -270,7 +270,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 </details>
 
 <details open>
-<summary>src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
 
 ```php
 
@@ -298,7 +298,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 </details>
 
 <details open>
-<summary>src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
 
 ```php
 
@@ -357,7 +357,7 @@ To verify that ProductLabelsResourceRoutePlugin is set up correctly, make sure t
 * `http://glue.mysprykershop.com/product-labels/{% raw %}{{{% endraw %}idProductLabel{% raw %}}}{% endraw %}`
 
 <details open>
-<summary>Example response</summary>
+<summary markdown='span'>Example response</summary>
 
 ```json
 {
@@ -387,7 +387,7 @@ To verify that ProductLabelsResourceRoutePlugin is set up correctly, make sure t
 To check `ProductLabelsRelationshipByResourceIdPlugin` plugin installation, send a request to `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}?include=product-labels` with an SKU of a product with at least one product label assigned to it. Make sure that the response includes relationships to the product-labels resource(s).
 
 <details open>
-<summary>Example response</summary>
+<summary markdown='span'>Example response</summary>
 
 ```json
 {
@@ -439,7 +439,7 @@ To check `ProductLabelsRelationshipByResourceIdPlugin` plugin installation, send
 To check `ProductLabelByProductConcreteSkuResourceRelationshipPlugin` plugin installation, send a request to `http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}?include=product-labels` with an SKU of a product with at least one product label assigned to it. Make sure that the response includes relationships to the product-labels resource(s).
 
 <details open>
-<summary>Example response</summary>
+<summary markdown='span'>Example response</summary>
 
 ```json
 {
@@ -503,7 +503,7 @@ To verify installation of CartRuleByQuoteResourceRelationshipPlugin and VoucherB
 * `http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}?include=vouchers,cart-rules`
 
 <details open>
-<summary>Example response</summary>
+<summary markdown='span'>Example response</summary>
 
 ```json
 {
@@ -609,7 +609,7 @@ Make sure that the cart-rules and vouchers relationships are also available for 
 * `http://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest-cart_uuid{% raw %}}}{% endraw %}?include=vouchers,cart-rules`
 
 <details open>
-<summary>Example response</summary>
+<summary markdown='span'>Example response</summary>
 
 ```json
 {
@@ -722,7 +722,7 @@ Add items to the cart to satisfy the conditions of the discount rule:
 * `POST http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/items?include=promotional-items,abstract-product`
 
 <details open>
-<summary>Example of Request</summary>
+<summary markdown='span'>Example of Request</summary>
 
 ```json
 {
@@ -743,7 +743,7 @@ Make sure that the following relations are available:
 * `promotional-items with abstract-products`
 
 <details open>
-<summary>Example of Response</summary>
+<summary markdown='span'>Example of Response</summary>
 
 ```json
 {
@@ -898,7 +898,7 @@ Add the selected promotional product to the cart and check the cart in the respo
 * `POST http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart-uuid{% raw %}}}{% endraw %}/items?include=items,cart-rules`
 
 <details open>
-<summary>Example of Request to Add Selected Promotional Product Into The Cart</summary>
+<summary markdown='span'>Example of Request to Add Selected Promotional Product Into The Cart</summary>
 
 ```json
 {
@@ -916,7 +916,7 @@ Add the selected promotional product to the cart and check the cart in the respo
 </details>
 
 <details open>
-<summary>Example of Response</summary>
+<summary markdown='span'>Example of Response</summary>
 
 ```json
 {

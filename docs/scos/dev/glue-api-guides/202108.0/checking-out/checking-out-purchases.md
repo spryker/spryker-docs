@@ -74,7 +74,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 
 
 <details open>
-    <summary>Request sample with one shipment</summary>
+    <summary markdown='span'>Request sample with one shipment</summary>
 `POST https://glue.mysprykershop.com/checkout`
 
 ```json
@@ -139,7 +139,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 </details>
 
 <details open>
-    <summary>Request sample with a split shipment</summary>
+    <summary markdown='span'>Request sample with a split shipment</summary>
 `POST https://glue.mysprykershop.com/checkout?include=orders`
 
 ```json
@@ -226,7 +226,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 
 
 <details open>
-    <summary>Request sample with one shipment, order information, and shipment information</summary>
+    <summary markdown='span'>Request sample with one shipment, order information, and shipment information</summary>
 `POST glue.de.spryker.local/checkout?include=orders,order-shipments`
 
 ```json
@@ -294,7 +294,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 
 
 <details open>
-    <summary>Request sample with a split shipment and addresses passed as IDs</summary>
+    <summary markdown='span'>Request sample with a split shipment and addresses passed as IDs</summary>
 `POST https://glue.mysprykershop.com/checkout`
 
 ```json
@@ -405,7 +405,7 @@ To prevent fraud, the *invoice* payment method is not accepted if a cart contain
 
 
 <details>
-    <summary>Response sample with one shipment</summary>
+    <summary markdown='span'>Response sample with one shipment</summary>
 
 ```json
 {
@@ -427,7 +427,7 @@ To prevent fraud, the *invoice* payment method is not accepted if a cart contain
 </details>
 
 <details>
-    <summary>Response sample with a split shipment</summary>
+    <summary markdown='span'>Response sample with a split shipment</summary>
 
 ```json
 {
@@ -449,7 +449,7 @@ To prevent fraud, the *invoice* payment method is not accepted if a cart contain
 </details>
 
 <details open>
-    <summary>Response sample with a split shipment, order information, and shipment information</summary>
+    <summary markdown='span'>Response sample with a split shipment, order information, and shipment information</summary>
 
 ```json
 {
@@ -667,7 +667,7 @@ To prevent fraud, the *invoice* payment method is not accepted if a cart contain
 </details>
 
 <details open>
-<summary>Response sample with configurable bundles</summary>
+<summary markdown='span'>Response sample with configurable bundles</summary>
 
 ```json
 {

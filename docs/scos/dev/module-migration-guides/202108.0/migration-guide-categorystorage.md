@@ -21,28 +21,30 @@ Version `2.*` of the `CategoryStorage` module changes the storage data structu
 
 To upgrade the module from version `1.*` to `2.*`:
 
-1.  Upgrade the `CategoryStorage` module to version `2.0.0`:
-```bash 
+1. Upgrade the `CategoryStorage` module to version `2.0.0`:
+```bash
 composer require spryker/category-storage:"^2.0.0" --update-with-dependencies
-```    
-2.  On the project level in `Pyz/Zed/CategoryStorage/Persistence/Propel/Schema/spy_category_storage.schema.xml`, remove the synchronization behavior setup from the `spy_category_tree_storage` and `spy_category_node_storage` tables.
+```
     
-3.  Update the database schema and the generated data transfer classes:
+2. On the project level in `Pyz/Zed/CategoryStorage/Persistence/Propel/Schema/spy_category_storage.schema.xml`, remove the synchronization behavior setup from the `spy_category_tree_storage` and `spy_category_node_storage` tables.
+
+3. Update the database schema and the generated data transfer classes:
 ```bash    
 console propel:install
 console transfer:generate
 ```    
-4.  From `Pyz\Zed\Event\EventDependencyProvider`, remove the deprecated subscriber: `CategoryStorageEventSubscriber`.
-    
-5.  From `Pyz\EventBehavior\EventBehaviorDependencyProvider`, remove the deprecated plugins:
-    
-    *   `CategoryTreeEventResourceQueryContainerPlugin`
-        
-    *   `CategoryNodeEventResourceQueryContainerPlugin`
-        
-6.  Add the new plugins:
+4. From `Pyz\Zed\Event\EventDependencyProvider`, remove the deprecated subscriber: `CategoryStorageEventSubscriber`.
+
+5. From `Pyz\EventBehavior\EventBehaviorDependencyProvider`, remove the deprecated plugins:
+
+   - `CategoryTreeEventResourceQueryContainerPlugin`
+
+   - `CategoryNodeEventResourceQueryContainerPlugin`
+
+6. Add the new plugins:
+
 <details open>
-    <summary>Pyz\Zed\Publisher\PublisherDependencyProvider</summary>
+    <summary markdown='span'>Pyz\Zed\Publisher\PublisherDependencyProvider</summary>
 
 ```php
 <?php
@@ -99,7 +101,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             new ParentWritePublisherPlugin(),
         ];
     }
-    
+
     /**
      * @return \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherTriggerPluginInterface[]
      */
@@ -115,16 +117,15 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 </details>
 
-7.  From `Pyz\Zed\Synchronization\SynchronizationDependencyProvider`, remove the deprecated plugins:
-    
-    *   `CategoryNodeSynchronizationDataPlugin`
-        
-    *   `CategoryTreeSynchronizationDataPlugin`
-        
-8.  Add the new synchronization plugins:
+7. From `Pyz\Zed\Synchronization\SynchronizationDependencyProvider`, remove the deprecated plugins:
+   - `CategoryNodeSynchronizationDataPlugin`
+
+   - `CategoryTreeSynchronizationDataPlugin`
+
+8. Add the new synchronization plugins:
 
 <details open>
-    <summary>Pyz\Zed\Synchronization\SynchronizationDependencyProvider</summary>
+    <summary markdown='span'>Pyz\Zed\Synchronization\SynchronizationDependencyProvider</summary>
 
 ```php    
 <?php
@@ -152,35 +153,34 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 </details>
 
-9.  Refill storage:
+9. Refill storage:
 
-    1.  Truncate the `spy_category_node_storage` and `spy_category_tree_storage` database tables:
+    1. Truncate the `spy_category_node_storage` and `spy_category_tree_storage` database tables:
     ```sql    
     TRUNCATE TABLE APPROVED;
     TRUNCATE TABLE spy_category_tree_storage;
     ```
 
-    2.  Remove all the data:
+    2. Remove all the data:
     ```bash
     console sync:data category_node
     console sync:data category_tree
     ```
-    
-    3.  Trigger the events:
+
+    3. Trigger the events:
     ```bash
     console publish:trigger-events -r category_node
     console publish:trigger-events -r category_tree
     ```
-    4.  Sync all table storage data to the storage:
+
+    4. Sync all table storage data to the storage:
     ```bash
     console sync:data category_node
     console sync:data category_tree
     ```
+
 {% info_block warningBox "Verification" %}
 
 Ensure that the data in the `spy_category_node_storage` and `spy_category_tree_storage` database tables is divided by stores.
 
 {% endinfo_block %}
-
-
-

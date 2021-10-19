@@ -89,7 +89,7 @@ Activate the following plugins:
 |`WishlistRelationshipByResourceIdPlugin`|Adds the wishlists resource as a relationship to the customers resource.|None|`Spryker\Glue\WishlistsRestApi\Plugin`|
 
 <details open>
-<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

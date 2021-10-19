@@ -19,11 +19,11 @@ Follow the steps below to install Product Labels Feature API.
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| Name | Version | Required Sub-Feature |
+| NAME | VERSION | REQUIRED SUB-FEATURE |
 | --- | --- | --- |
-| Spryker Core | master | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
-| Product Management | master | [Products API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
-| Product Label | master | |
+| Spryker Core | {{page.version}} | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
+| Product Management | {{page.version}} | [Products API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
+| Product Label | {{page.version}} | |
 
 
 ## 1) Install the required modules using Composer
@@ -34,15 +34,17 @@ Run the following command to install the required modules:
 composer require spryker/product-labels-rest-api:"^1.0.1" --update-with-dependencies
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
-    Make sure that the following module is installed:
+{% info_block warningBox “Verification” %}
 
-| Module | Expected Directory |
+Make sure that the following module is installed:
+
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-| `ProductLabelsRestApi` | `vendor/spryker/product-labels-rest-api` |
-</div></section>
+| ProductLabelsRestApi | vendor/spryker/product-labels-rest-api |
 
-## 2) Set up Transfer Objects
+{% endinfo_block %}
+
+## 2) Set up transfer objects
 
 Run the following commands to generate transfer changes:
 
@@ -50,28 +52,31 @@ Run the following commands to generate transfer changes:
 console transfer:generate
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
-    Make sure that the following changes are present in transfer objects:
+{% info_block warningBox “Verification” %}
 
-| Transfer | Type | Event | Path |
+Make sure that the following changes are present in transfer objects:
+
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
-| `RestProductLabelsAttributesTransfer` | class | created | `	src/Generated/Shared/Transfer/RestProductLabelsAttributesTransfer` |
-</div></section>
+| RestProductLabelsAttributesTransfer | class | created | src/Generated/Shared/Transfer/RestProductLabelsAttributesTransfer |
 
-## 3) Set up Behavior
+{% endinfo_block %}
+
+## 3) Set up behavior
+
 Set up the following behaviors.
 
 ### Enable resources and relationships
 
 Activate the following plugin:
 
-| Plugin | Specification |Prerequisites  |Namespace  |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `ProductLabelsRelationshipByResourceIdPlugin` | Adds the product labels resource as a relationship to the abstract product resource. | None | `Spryker\Glue\ProductLabelsRestApi\Plugin\GlueApplication\ProductLabelsRelationshipByResourceIdPlugin` |
-| `ProductLabelsResourceRoutePlugin` |Registers the product labels resource.  | None | `Spryker\Glue\ProductLabelsRestApi\Plugin\GlueApplication\ProductLabelsResourceRoutePlugin` |
+| ProductLabelsRelationshipByResourceIdPlugin | Adds the product labels resource as a relationship to the abstract product resource. | None | Spryker\Glue\ProductLabelsRestApi\Plugin\GlueApplication\ProductLabelsRelationshipByResourceIdPlugin |
+| ProductLabelsResourceRoutePlugin |Registers the product labels resource.  | None | Spryker\Glue\ProductLabelsRestApi\Plugin\GlueApplication\ProductLabelsResourceRoutePlugin |
 
 <details open>
-<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -119,7 +124,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 {% info_block warningBox "Verification" %}
 
 Make sure the following endpoint is available: `http://glue.mysprykershop.com/product-labels/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}`
-
 
 Send a request to `http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}?include=product-labels `and verify if the abstract product with the given SKU has at least one assigned product label and the response includes relationships to the product-labels resources.
 

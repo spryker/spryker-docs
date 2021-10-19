@@ -42,7 +42,7 @@ To create a return for a registered user, send the Request sample:
 | limit | Maximum number of entries to return.  Works only together with `page[offset]`.  The default value is `10`. | From `1` to any. |
 | include | Adds resource relationships to the request. | <ul><li>return-items</li><li>order-itemsorder-items</li><li>merchants</li></ul> |
 
-<details><summary>Request sample: create a return</summary>
+<details><summary markdown='span'>Request sample: create a return</summary>
 
 `POST https://glue.mysprykershop.com/returns`
 ```JSON
@@ -68,7 +68,7 @@ To create a return for a registered user, send the Request sample:
 
 </details>
 
-<details><summary>Request sample: create a return with return items</summary>
+<details><summary markdown='span'>Request sample: create a return with return items</summary>
 
 `POST https://glue.mysprykershop.com/returns?include=return-items`
 ```JSON
@@ -99,7 +99,7 @@ To create a return for a registered user, send the Request sample:
 
 ### Response
 
-<details><summary>Response sample: create a return for a sales order items</summary>
+<details><summary markdown='span'>Response sample: create a return for a sales order items</summary>
 
 ```JSON
 {
@@ -125,7 +125,7 @@ To create a return for a registered user, send the Request sample:
 
 </details>
 
-<details><summary>Response sample: create a return for the merchant order item with information on return items</summary>
+<details><summary markdown='span'>Response sample: create a return for the merchant order item with information on return items</summary>
 
 ```JSON
 {
@@ -221,7 +221,7 @@ To retrieve returns, send the Request sample:
 
 ### Response
 
-<details><summary>Response sample: returns with information on return items</summary>
+<details><summary markdown='span'>Response sample: returns with information on return items</summary>
 
 ```JSON
 {
@@ -269,7 +269,7 @@ To retrieve returns, send the Request sample:
 
 </details>
 
-<details><summary>Response sample: retrieve all returns</summary>
+<details><summary markdown='span'>Response sample: retrieve all returns</summary>
 
 ```JSON
 {
@@ -441,7 +441,7 @@ To retrieve returns, send the Request sample:
 
 </details>
 
-<details><summary>Response sample: retrieve returns with the respective merchant included</summary>
+<details><summary markdown='span'>Response sample: retrieve returns with the respective merchant included</summary>
 
 ```JSON
 {
@@ -587,7 +587,7 @@ To retrieve a return, send the Request sample:
 
 ### Response
 
-<details><summary>Response sample: retrieve a return for a sales order item</summary>
+<details><summary markdown='span'>Response sample: retrieve a return for a sales order item</summary>
 
 ```JSON
 {
@@ -613,7 +613,7 @@ To retrieve a return, send the Request sample:
 
 </details>
 
-<details><summary>Response sample: retrieve a return for a merchant order item</summary>
+<details><summary markdown='span'>Response sample: retrieve a return for a merchant order item</summary>
 
 ```JSON
 {
@@ -639,7 +639,7 @@ To retrieve a return, send the Request sample:
 
 </details>
 
-<details><summary>Response sample: retrieve a return with the return items</summary>
+<details><summary markdown='span'>Response sample: retrieve a return with the return items</summary>
 
 ```JSON
 {
@@ -689,7 +689,7 @@ To retrieve a return, send the Request sample:
 
 </details>
 
-<details><summary>Response sample: retrieve a return with the details on merchants</summary>
+<details><summary markdown='span'>Response sample: retrieve a return with the details on merchants</summary>
 
 ```JSON
 {

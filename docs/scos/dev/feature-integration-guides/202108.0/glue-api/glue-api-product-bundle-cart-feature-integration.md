@@ -20,16 +20,16 @@ To start the feature integration, overview and install the necessary features:
 
 | Name | Version | Integration guide |
 | --- | --- | --- |
-| Spryker Core | master | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Product Bundles |master| [Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-bundles-feature-integration.html)|
-| Cart |master| [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)|
+| Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Product Bundles |{{page.version}}| [Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-bundles-feature-integration.html)|
+| Cart |{{page.version}}| [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)|
 
 ## 1) Install the required modules using Composer
 
 Run the following command to install the required modules:
 ```bash
 composer require spryker/product-bundle-carts-rest-api:"^1.0.0" --update-with-dependencies
-``` 
+```
 {% info_block warningBox "Verification" %}
 
 
@@ -78,7 +78,7 @@ Activate the following plugins:
 
 
 <details open>
-    <summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+    <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -133,7 +133,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
         return $resourceRelationshipCollection;
     }
 }
-``` 
+```
 
 </details>
 
@@ -150,7 +150,7 @@ Ensure that you have activated the plugins:
 | `GET https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}?include=bundle-items,bundled-items` </br> `GET https://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}?include=bundle-items,bundled-items`| The `bundle-items` resource has a relationship of the `bundled-items` resource.|
 | `GET https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}?include=bundle-items,bundled-items,concrete-products`</br> `GET https://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}?include=bundle-items,bundled-items,concrete-products` |Concrete products are returned as relationships for bundle items and bundled items.|
 
-{% endinfo_block %} 
+{% endinfo_block %}
 **src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php**
 ```php
 <?php
@@ -172,7 +172,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
         ];
     }
 }
-``` 
+```
 {% info_block warningBox "Verification" %}
 
 Ensure that you have activated the plugins:
@@ -206,24 +206,22 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
         ];
     }
 }
-``` 
+```
 {% info_block warningBox "Verification" %}
 
 Ensure that you can:
 
 *   Edit bundle item quantity: `PATCH https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}bundleItemGroupKey{% raw %}}}{% endraw %}`.
-    
+
 *   Delete a bundle from cart: `DELETE https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}bundleItemGroupKey{% raw %}}}{% endraw %}`.
-    
 
 {% endinfo_block %}
+
 ## Related features
 
 Integrate the following related features:
 
-| Feature | Required for the current feature | Integration guide |
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Products | ✓ | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
 | Product Bundles |✓ |[Glue API: Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-bundles-feature-integration.html)|
-
-

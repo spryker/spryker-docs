@@ -12,6 +12,7 @@ redirect_from:
 ---
 
 ## Upgrading from Version 1.* to Version 2.*
+
 Due to introducing the CMS Block positioning and CMS Block templates for Category, the CMS Block Category Connector module now requires Category >=4.0.
 The migration will contain the following steps:
 
@@ -21,16 +22,20 @@ The migration will contain the following steps:
 4. Data migration
 
 ### 1. New Module Installation
+
 Install a new module by adding the following into your composer.json: `"spryker/cms-block-category-connector": "^2.0.0"` and running the composer update.
 Follow the installation instructions to enable all connector plugins: CMS Block Category Connector: Installation.
 
 ### 2. Deprecations Migration
+
 Change usage of `\Spryker\Shared\CmsBlockCategoryConnector\CmsBlockCategoryConnectorConstants::RESOURCE_TYPE_CMS_BLOCK_CATEGORY_CONNECTOR` to `\Spryker\Shared\CmsBlockCategoryConnector\CmsBlockCategoryConnectorConfig::RESOURCE_TYPE_CMS_BLOCK_CATEGORY_CONNECTOR`
 
 ### 3. Database Migration
+
 Run Propel migrations.  `vendor/bin/console propel:diff`, manual review is necessary for the generated migration file. `vendor/bin/console propel:migratevendor/bin/console propel:model:build`
 
 ### 4. Data Migration
+
 Notice: You can skip this step if you don't have data in `spy_cms_block_category_connector` table.
 We prepared a migration script to migrate relations to Category.
 The script can be found in [Migration Guide - CMS Block Category Connector Console](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-cms-block-category-connector-migration-console.html).

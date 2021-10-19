@@ -110,7 +110,7 @@ The extension module offers the following interfaces:
 
 ### TwigPluginInterface
 <details open>
-<summary>Spryker\Shared\TwigExtension\Dependency\Plugin\TwigPluginInterface</summary>
+<summary markdown='span'>Spryker\Shared\TwigExtension\Dependency\Plugin\TwigPluginInterface</summary>
    
 ```
 <?php
@@ -141,7 +141,7 @@ interface TwigPluginInterface
 
 This interface gets the Twig environment and `ContainerInterface` to be able to call the extension methods provided by Twig and to get other services from `ContainerInterface` if required.
 <details open>
-<summary>TwigPluginInterface implementation example</summary>
+<summary markdown='span'>TwigPluginInterface implementation example</summary>
    
 ```
 <?php
@@ -188,7 +188,7 @@ There are many AbstractTwigExtensionPlugin classes. They are created for  Yves (
 {% endinfo_block %}, Zed, and Service applications to help you with creating the `*TwigPlugin` classes.)
 
 <details open>
-<summary>AbstractTwigExtensionPlugin implementation example</summary>
+<summary markdown='span'>AbstractTwigExtensionPlugin implementation example</summary>
    
 ```
 namespace SprykerShop\Yves\ChartWidget\Plugin\Twig;
@@ -221,7 +221,7 @@ If you need to use the Container inside of `TwigPlugin` based on `AbstractTwigEx
 
 The Twig module's `DependencyProviders` have the `getTwigPlugins()` method, which needs to be overridden on the project level. All the plugins returned from this method extend the Twig service. The example below describes how to add the `*TwigPlugin`:
 <details open>
-<summary>TwigPlugin usage</summary>
+<summary markdown='span'>TwigPlugin usage</summary>
    
 ```
 <?php
@@ -250,7 +250,7 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 
 ### TwigLoaderPluginInterface
 <details open>
-<summary>Spryker\Shared\TwigExtension\Dependency\Plugin\TwigLoaderPluginInterface</summary>
+<summary markdown='span'>Spryker\Shared\TwigExtension\Dependency\Plugin\TwigLoaderPluginInterface</summary>
    
 ```
 <?php
@@ -277,7 +277,7 @@ interface TwigLoaderPluginInterface
 
 This interface returns a filesystem loader to add additional lookup paths for Twig templates to the `twig` service.
 <details open>
-<summary>TwigLoaderPluginInterface implementation example</summary>
+<summary markdown='span'>TwigLoaderPluginInterface implementation example</summary>
    
 ```
 <?php
@@ -313,7 +313,7 @@ class WebProfilerTwigLoaderPlugin extends AbstractPlugin implements TwigLoaderPl
 The Twig module's `DependencyProviders` have the `getTwigLoaderPlugins()` method, which also needs to be overridden on the project level. The example below describes how to add the `*TwigLoaderPlugin`:
 
 <details open>
-<summary>TwigLoaderPluginInterface usage</summary>
+<summary markdown='span'>TwigLoaderPluginInterface usage</summary>
    
 ```
 <?php

@@ -4,7 +4,7 @@ description: This article provides reference information about product in the Me
 template: concept-topic-template
 ---
 
-The *Marketplace Merchant Portal Product Management* feature allows merchants to manage product in the Merchant portal.
+The *Marketplace Merchant Portal Product Management* feature allows merchants to manage product and its category, attributes, prices, tax sets, SEO settings, variants, stock and validity dates in the Merchant portal.
 
 ## Module dependency graph
 

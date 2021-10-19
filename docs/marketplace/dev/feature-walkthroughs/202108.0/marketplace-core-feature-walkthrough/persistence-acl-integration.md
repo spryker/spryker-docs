@@ -8,18 +8,27 @@ template: concept-topic-template
 ## Overview
 ![Module dependency graph](https://confluence-connect.gliffy.net/embed/image/15952dbf-4cef-49ee-b7fa-117d39c1c525.png?utm_medium=live&utm_source=custom)
 
-Merchant portal comes with a configuration for both: Acl and Persistence ACL modules.
-This ensures the security of the merchant's data and introduces the concept of "merchant data separation".
-The most sensitive merchant data is available only to users of the merchant, and users of another merchant will not be able to access them.
-You can read about its capabilities and mechanism of work at the link: [Persistence Acl :: TODO: Change the link](http://google.com)
-
-![Domain model](https://confluence-connect.gliffy.net/embed/image/401d334e-aac4-4187-9e73-1f5d2f4be8f8.png?utm_medium=live&utm_source=custom)
+Merchant Portal comes with preconfigured [Persistence Acl](../persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html) feature in order to secure sensitive data. 
+Out of the box it will create and assign set of Acl Roles for Merchant Users to restrict access to others merchant data on the system.
 
 ## Merchant and MerchantUser setup workflow
 During Merchant and MerchantUser create process, all the necessary ACL and Persistence ACL entities created.
 This ensures the correct operation of the merchant portal, and at the same time, protects key merchant data.
 
-![Merchant create data flow](https://confluence-connect.gliffy.net/embed/image/132728ea-1bad-4168-9fb2-5ef6804ddcae.png?utm_medium=live&utm_source=custom)
+### New merchant
+![New Merchant sequence diagram](https://confluence-connect.gliffy.net/embed/image/92777a40-ebc8-4566-8617-4082f263a8f1.png?utm_medium=live&utm_source=custom)
+When a new Merchant is added to the system, a merchant-specific role is automatically created..
+This role will be automatically added to all merchant users, and will allow them to operate with merchant-specific data: ProductOffer, ProductOrder, etc.
+
+### New merchant user
+![New MerchantUser sequence diagram](https://confluence-connect.gliffy.net/embed/image/54b0907f-b289-42ab-9b5c-1566959896b0.png?utm_medium=live&utm_source=custom)
+When a MerchantUser is added to the system, a MerchantUser specific role is automatically created.
+This role is needed to manage the MerchantUser specific data (profile).
+
+The following roles are automatically added to the newly created MerchantUser:
+- Merchant specific role
+- MerchantUser specific role
+- Product Viewer for Offer creation (this role is needed for create new ProductOffers)
 
 ## Configuration overview
 ![Configuration overview](https://confluence-connect.gliffy.net/embed/image/97d83074-7b22-4ef0-9d6f-92fdb1ac1b01.png?utm_medium=live&utm_source=custom)
@@ -117,5 +126,4 @@ class AclMerchantPortalConfig extends SprykerAclMerchantPortalConfig
 ```
 
 ## Module updates
-Please do not lock [spryker/acl-merchant-portal](https://github.com/spryker/acl-merchant-portal) module version and keep it updated.
-We plan to evolve this module and release its updates. 
+Important: do not lock [spryker/acl-merchant-portal](https://github.com/spryker/acl-merchant-portal) module version and keep it up to date in order to receive security patches for ACL in Merchant Portal. 

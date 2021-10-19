@@ -1038,7 +1038,7 @@ MER000006,michele@sony-experts.com
 2. Create the Step model for writing merchant user data.
 
 <details>
-**src/Pyz/Zed/DataImport/Business/Model/MerchantUser/MerchantUserWriterStep.php**
+<summary markdown='span'>src/Pyz/Zed/DataImport/Business/Model/MerchantUser/MerchantUserWriterStep.php</summary>
 
 ```php
 <?php
@@ -1175,7 +1175,8 @@ class DataImportConfig extends SprykerDataImportConfig
 
 4. Enable merchant user data import command.
 
-**src/Pyz/Zed/DataImport/Business/DataImportBusinessFactory.php**
+<details>
+<summary markdown='span'>src/Pyz/Zed/DataImport/Business/DataImportBusinessFactory.php</summary>
 
 ```php
 <?php
@@ -1234,6 +1235,7 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
     }
 }
 ```
+</details>
 
 5. Create and prepare your data import configuration files according to your requirements using our demo config template:
 

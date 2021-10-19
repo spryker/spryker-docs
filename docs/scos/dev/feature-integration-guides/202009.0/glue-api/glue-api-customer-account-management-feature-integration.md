@@ -32,7 +32,8 @@ Run the following command to install the required modules:
 composer require "spryker/customers-rest-api":"^1.12.3" "spryker/auth-rest-api":"^2.9.0" "spryker/oauth":"^1.6.0" "spryker/oauth-revoke":"^1.0.0" "spryker/oauth-customer-connector:"^1.4.0" --update-with-dependencies
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the following modules are installed:
 {% endinfo_block %}
 

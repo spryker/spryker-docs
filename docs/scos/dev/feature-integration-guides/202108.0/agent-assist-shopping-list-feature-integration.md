@@ -26,8 +26,8 @@ To start the feature integration, overview and install the necessary features:
 
 Activate the following plugins:
 
-| PLUGIN                                                       | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                       |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------- | ----------------------------------------------- |
+| PLUGIN  | SPECIFICATION | PREREQUISITES | NAMESPACE  |
+| -------------------- | ----------------- | ------------- | ------------------ |
 | SanitizeCustomerShoppingListsImpersonationSessionFinisherPlugin | Removes a customer shopping list collection from the session. | None          | Spryker\Client\ShoppingListSession\Plugin\Agent |
 
 **src/Pyz/Client/Agent/AgentDependencyProvider.php**
@@ -66,7 +66,7 @@ Ensure that, after finishing customer impersonation, the session shopping list c
 
 Integrate the following related features:
 
-| FEATURE                     | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                            |
-| --------------------------- | -------------------------------- | ------------------------------------------------------------ |
-| Agent Assist | ✓                                | [Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/agent-assist-feature-integration.html) |
-| Agent Assist + Cart |                                  | [Agent Assist + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/agent-assist-cart-feature-integration.html) |
+| FEATURE  | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| ---------- | ---------------- | ----------------- |
+| Agent Assist | ✓      | [Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/agent-assist-feature-integration.html) |
+| Agent Assist + Cart |       | [Agent Assist + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/agent-assist-cart-feature-integration.html) |

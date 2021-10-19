@@ -360,7 +360,7 @@ packaging_unit_type.pack_500.name
 <br>
 </details>
 
-| Column | Is Obligatory? |Data Type  |Data Example  |Data Explanation  |
+| Column | IS REQUIRED? |Data Type  |Data Example  |Data Explanation  |
 | --- | --- | --- | --- | --- |
 | `name` |  mandatory|string  | `packaging_unit_type.ring_500.name` |Glossary key that will be used for display. Each name needs a glossary key definition for all configured locales.  |
 
@@ -427,7 +427,7 @@ concrete_sku,is_lead_product,has_lead_product,packaging_unit_type_name,default_a
 <br>
 </details>
 
-| Column | Is Obligatory? | Data Type | Data Example | Data Explanation |
+| Column | IS REQUIRED? | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
 | `concrete_sku` | mandatory | string | 218_123 | Glossary key that will be used for display. Each name needs a glossary key definition for all configured locales. |
 | `is_lead_product` | mandatory | bool integer | 1 | Decides if the current concrete_sku is the lead concrete product of the product abstract. Exactly 1 concrete product has to be a lead product in a packaging unit-based product abstract. |

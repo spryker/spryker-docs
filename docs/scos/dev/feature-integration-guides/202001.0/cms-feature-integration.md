@@ -1577,7 +1577,8 @@ Verify the changes by adding a slot widget to a page. See [Templates & Slots Fea
 
 ### Set up SprykerCmsBlocks Content Provider Behavior
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Follow the further steps only if you are going to use the [visibility conidtions](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html#visibility-conditions) functionality with `SprykerCmsBlocks` content provider for slots.
 {% endinfo_block %}
 

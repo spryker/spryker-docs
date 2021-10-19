@@ -24,7 +24,8 @@ Run the following command to install the required modules:
 composer require spryker/glue-application:"^1.0.0" --update-with-dependencies
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the following modules are installed:
 {% endinfo_block %}
 
@@ -51,7 +52,8 @@ Run the following command to generate transfer objects:
 console transfer:generate
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the following changes are present in transfer objects:
 {% endinfo_block %}
 
@@ -185,7 +187,8 @@ Update hosts configuration by adding the following line (replace ip with your se
 ip glue.mysprykershop.com
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 If everything is set up correctly, you should be able to access `http://glue.mysprykershop.com` and get a correct JSON response as follows:
 {% endinfo_block %}
 
@@ -228,7 +231,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 </br>
 </details>
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 If everything is set up correctly, request to `http://glue.mysprykershop.com` with header `[{"key":"Accept-Language","value":"de_DE, de;q=0.9"}]` should result in a response that contains the content-language header set to de_DE.
 {% endinfo_block %}
 

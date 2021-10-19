@@ -26,7 +26,8 @@ Run the following command(s) to install the required modules:
 composer require spryker/content-banners-rest-api:"^2.1.0" spryker/content-product-abstract-lists-rest-api:"^1.0.0" --update-with-dependencies
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Ensure that the following modules have been installed in `vendor/spryker`:
 {% endinfo_block %}
 
@@ -42,7 +43,8 @@ Run the following command to generate transfer changes:
 console transfer:generate
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the following changes have been applied in transfer objects, see    `src/Generated/Shared/Transfer/` folder:
 {% endinfo_block %}
 
@@ -96,6 +98,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the following endpoints return the result with the all necessary data (for example
 {% endinfo_block %}:<ul><li>http://glue.mysprykershop.com/content-banners/{content_key}</li><li>http://glue.mysprykershop.com/content-product-abstract-lists/{content_key}/content-product-abstract</li></ul>)

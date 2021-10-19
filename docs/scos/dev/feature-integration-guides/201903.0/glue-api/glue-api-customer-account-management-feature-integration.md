@@ -28,7 +28,8 @@ Run the following command to install the required modules:
 composer require spryker/customers-rest-api:"^1.6.2" --update-with-dependencies
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the following modules are installed:
 {% endinfo_block %}
 
@@ -47,7 +48,8 @@ console propel:install
 console transfer:generate
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the following changes have occurred in the database:
 {% endinfo_block %}
 
@@ -56,7 +58,8 @@ Make sure that the following changes have occurred in the database:
 | `spy_customer_address.uuid` | column | created |
 | `spy_customer_address.spy_customer_address-unique-uuid	` | index | created |
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the following changes have occurred in transfer objects:
 {% endinfo_block %}
 
@@ -109,7 +112,8 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 </br>
 </details>
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Run the following console command:</br> `console list`</br>Make sure that `customer-addresses:uuid:generate` appears in the list.
 {% endinfo_block %}
 
@@ -125,7 +129,8 @@ Run the following command:
 console customer-addresses:uuid:generate
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the `uuid` field is filled for all records in the `spy_customer_address` table. For this purpose, run the following SQL query and make sure that the result is 0 records:</br>`SELECT COUNT(*
 {% endinfo_block %} FROM spy_customer_address WHERE uuid IS NULL;`)
 
@@ -216,7 +221,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 </br>
 </details>
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the following endpoints are available:<ul><li>http://glue.mysprykershop.com/customers</li><li>http://glue.mysprykershop.com/addresses</li><li>http://glue.mysprykershop.com/customer-password</li><li>http://glue.mysprykershop.com/customer-forgotten-password</li><li>http://glue.mysprykershop.com/customer-restore-password</li></ul>Send a request to *http://glue.mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}?include=addresses*. Make sure that the response includes relationships to the `addresses` resources.</br>*The Customer with the given ID should have at least one address*. 
 {% endinfo_block %}
 

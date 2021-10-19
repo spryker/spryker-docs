@@ -31,7 +31,8 @@ Run the following command(s) to install the required modules:
 composer require spryker/multi-carts-rest-api:"^1.0.0" --update-with-dependencies
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the following modules were installed:
 {% endinfo_block %}
 
@@ -46,7 +47,8 @@ Run the following commands to generate transfer changes:
 console transfer:generate
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the following changes have been applied in transfer objects:
 {% endinfo_block %}
 
@@ -94,11 +96,13 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 Make sure that the following endpoints are available:<ul><li>http://glue.mysprykershop.com/carts</li><li>http://glue.mysprykershop.com/guest-carts</li></ul>
 {% endinfo_block %}
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that it is possible to create more than one cart.
 {% endinfo_block %}
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that after creating several carts, a response from http://glue.mysprykershop.com/carts GET request contains data about all created carts.
 {% endinfo_block %}
 

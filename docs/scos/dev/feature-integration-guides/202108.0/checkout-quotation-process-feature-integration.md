@@ -14,22 +14,25 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/quotation-process-feature-integration.html
 ---
 
-## Install Feature Core
+## Install feature core
+
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Checkout | 202009.0 |
-| Quotation Process | 202009.0 |
+| Checkout | {{page.version}} |
+| Quotation Process | {{page.version}} |
 
-### 1) Set up Behavior
+### 1) Set up behavior
+
 Register the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `QuoteRequestPreCheckPlugin` | Prevents the checkout for quote in the quotation process. | None | `Spryker\Zed\QuoteRequest\Communication\Plugin\Checkout` |
-| `CloseQuoteRequestCheckoutPostSaveHookPlugin` | Closes a quote request after the order has been placed from it. | None | `Spryker\Zed\QuoteRequest\Communication\Plugin\Checkout` |
+| QuoteRequestPreCheckPlugin | Prevents the checkout for quote in the quotation process. | None | Spryker\Zed\QuoteRequest\Communication\Plugin\Checkout |
+| CloseQuoteRequestCheckoutPostSaveHookPlugin | Closes a quote request after the order has been placed from it. | None | Spryker\Zed\QuoteRequest\Communication\Plugin\Checkout |
 
 **Pyz\Zed\Checkout\CheckoutDependencyProvider.php**
     
@@ -72,27 +75,33 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that you can't see the **Checkout** button on the Quote request items edit page.</br>Make sure that after you placed an order form quote request, a quote request has a closed status.
+
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
+
 ### Prerequisites
+
 Please overview and install the necessary features before beginning the integration step.
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Checkout | 202009.0 |
-| Quotation Process | 202009.0 |
+| Checkout | {{page.version}} |
+| Quotation Process | {{page.version}} |
 
-### Set up Behavior
-#### Set up Quote Request Workflow
+### Set up behavior
+
+#### Set up quote request workflow
+
 Enable the following behaviors by registering the plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `QuoteRequestAgentCheckoutWorkflowStepResolverStrategyPlugin` | Modifies checkout steps for agent RFQ edit workflow. | None | `SprykerShop\Yves\QuoteRequestAgentPage\Plugin\CheckoutPage` |
-| `QuoteWithCustomShipmentPriceCheckoutWorkflowStepResolverStrategyPlugin` | Modifies checkout steps for a quote with source shipment price workflow. | None | `SprykerShop\Yves\QuoteRequestPage\Plugin\CheckoutPage` |
-| `QuoteRequestCheckoutWorkflowStepResolverStrategyPlugin` | Modifies checkout steps for buyer RFQ edit workflow. | None | `SprykerShop\Yves\QuoteRequestPage\Plugin\CheckoutPage` |
+| QuoteRequestAgentCheckoutWorkflowStepResolverStrategyPlugin | Modifies checkout steps for agent RFQ edit workflow. | None | SprykerShop\Yves\QuoteRequestAgentPage\Plugin\CheckoutPage |
+| QuoteWithCustomShipmentPriceCheckoutWorkflowStepResolverStrategyPlugin | Modifies checkout steps for a quote with source shipment price workflow. | None | SprykerShop\Yves\QuoteRequestPage\Plugin\CheckoutPage |
+| QuoteRequestCheckoutWorkflowStepResolverStrategyPlugin | Modifies checkout steps for buyer RFQ edit workflow. | None | SprykerShop\Yves\QuoteRequestPage\Plugin\CheckoutPage |
 
 **Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider.php**
 

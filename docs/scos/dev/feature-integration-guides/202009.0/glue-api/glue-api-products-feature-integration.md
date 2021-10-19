@@ -27,7 +27,8 @@ Run the following command to install the required modules:
 composer require spryker/products-rest-api:"^2.9.0" spryker/product-image-sets-rest-api:"^1.0.3" spryker/product-prices-rest-api:"^1.1.0" spryker/products-categories-resource-relationship:"^1.0.0" --update-with-dependencies
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the following modules were installed:
 {% endinfo_block %}
 

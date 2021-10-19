@@ -11,20 +11,24 @@ redirect_from:
   - /docs/en/alternative-products-inventory-management-feature-integration
 ---
 
-## Install Feature Core
+## Install feature core
+
 ### Prerequisites
 To start feature integration, review and install the necessary features:
-|Name|Version|
-|---|---|
-|Alternative Products|202009.0|
-|Inventory Management|202009.0|
 
-### 1) Set up Behavior
+| NAME | VERSION |
+|---|---|
+|Alternative Products|{{page.version}}|
+|Inventory Management|{{page.version}}|
+
+### 1) Set up behavior
+
 Enable the following behaviors by registering the plugins:
-|Plugin|Specification|Prerequisites|Namespace|
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
-|`AvailabilityCheckAlternativeProductApplicablePlugin`|Checks if product alternatives should be shown for the product.|None|`Spryker\Zed\Availability\Communication\Plugin\ProductAlternative`|
-|`AvailabilityCheckAlternativeProductApplicablePlugin`|Checks if product alternatives should be shown for the product.|Expects SKU and `IdProductAbstract` to be set for the ProductViewTransfer.|`Spryker\Client\AvailabilityStorage\Plugin\ProductAlternativeStorage`|
+|AvailabilityCheckAlternativeProductApplicablePlugin|Checks if product alternatives should be shown for the product.|None|`Spryker\Zed\Availability\Communication\Plugin\ProductAlternative|
+|AvailabilityCheckAlternativeProductApplicablePlugin|Checks if product alternatives should be shown for the product.|Expects SKU and `IdProductAbstract` to be set for the ProductViewTransfer.|Spryker\Client\AvailabilityStorage\Plugin\ProductAlternativeStorage|
 
 **src/Pyz/Client/ProductAlternativeStorage/ProductAlternativeStorageDependencyProvider.php**
 
@@ -74,6 +78,6 @@ class ProductAlternativeDependencyProvider extends SprykerProductAlternativeDepe
 }
 ```
 
-{% info_block infoBox "Verification" %}
+{% info_block warningBox “Verification” %}
 Make sure that you can see alternatives for not available products on the product detail page.
 {% endinfo_block %}

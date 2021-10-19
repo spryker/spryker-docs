@@ -84,11 +84,13 @@ class ProductsRestApiDependencyProvider extends SprykerProductsRestApiDependency
 </br>
 </details>
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the following endpoint is available:<ul><li>*http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}*</li></ul>
 {% endinfo_block %}
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the `concrete-products` resource is expanded with the discontinued properties, for example:
 {% endinfo_block %}
 

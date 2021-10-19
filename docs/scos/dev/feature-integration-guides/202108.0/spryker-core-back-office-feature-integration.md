@@ -189,7 +189,8 @@ class SecurityOauthUserConfig extends SprykerSecurityOauthUserConfig
     }
 }
 ```
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 
 Having finished the entire integration, ensure that:
 

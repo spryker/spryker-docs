@@ -117,7 +117,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 </br>
 </details>
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the following endpoints are available:<ul><li>http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/abstract-product-prices</li><li>http://mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/concrete-product-prices</li></ul>Send a request to *http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=abstract-product-prices*. Make sure that the response includes relationships to the `abstract-product-prices` resources.</br>Send a request to *http://mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}?include=concrete-product-prices*. </br>Make sure that the response includes relationships to the `concrete-product-prices` resources.
 {% endinfo_block %}
 

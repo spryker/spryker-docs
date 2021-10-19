@@ -100,7 +100,8 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
 <br>
 </details>
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the following plugins have been registered:<table><thead><tr><th>Plugin</th><th>Description</th><th>Prerequisites</th><th>Namespace</th></tr></thead><tbody><tr ><td>`UserAgentFormExpanderPlugin`</td><td>Adds "is an agent" checkbox to the Zed User form.</td><td>None</td><td>`Spryker\Zed\AgentGui\Communication\Plugin`</td></tr><tr><td>`UserAgentTableConfigExpanderPlugin`</td><td>Adds "is an agent" column to the Zed Users table.</td><td>None</td><td>`Spryker\Zed\AgentGui\Communication\Plugin`</td></tr><tr><td>`UserAgentTableDataExpanderPlugin`</td><td>Fills "is an agent" column in the Zed Users table.</td><td>None</td><td>`Spryker\Zed\AgentGui\Communication\Plugin`</td></tr></tbody></table>
 {% endinfo_block %}
 
@@ -162,7 +163,8 @@ Run the following command(s) to add the glossary keys:
 console data:import:glossary
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that in the database the configured data are added to the `spy_glossary` table.
 {% endinfo_block %}
 
@@ -200,7 +202,8 @@ class YvesBootstrap extends SprykerYvesBootstrap
 <br>
 </details>
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Verify the following changes:<br>
 Try to open the link: `http://mysprykershop.com/agent/secured`<br>
 You should be redirected to `http://mysprykershop.com/agent/login`
@@ -245,11 +248,13 @@ class YvesBootstrap extends SprykerYvesBootstrap
 <br>
 </details>
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Verify the `AgentPageControllerProvider` opening the agent login page by the link: `http://mysprykershop.com/agent/login`
 {% endinfo_block %}
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Verify the `AgentWidgetControllerProvider` searching customers from Agent control bar after Agent login.
 {% endinfo_block %}
 
@@ -292,7 +297,8 @@ In case if you have custom layout template, please place the agent widget above 
 ```html
 {% raw %}{%{% endraw %} widget 'AgentControlBarWidget' only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}
 ```
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the following widgets were registered:<table><thead><tr><th>Module</th><th>Test</th></tr></thead><tbody><tr><td>`AgentControlBarWidget`</td><td>Login as an Agent. The control bar widget should appear above the site header.</td></tr></tbody></table>
 {% endinfo_block %}
 

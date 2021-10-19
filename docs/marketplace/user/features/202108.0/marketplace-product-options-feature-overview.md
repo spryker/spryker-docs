@@ -19,7 +19,7 @@ Each product option is defined by:
 
 {% info_block infoBox "Info" %}
 
-Currently, you can create and manage general product options via the Back Office, however, you can only import merchant product options. See [Creating a product option](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html) for details on how you can create product options in the Back Office, [Managing product options](/docs/marketplace/user/back-office-user-guides/{{ page.version}}/catalog/product-options/creating-product-options.html) on how you can manage the product options in the Back Office, and [File details: merchant product option group](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-option-group.html) on how you can import merchant product options.
+Currently, you can create and manage general product options via the Back Office, however, you can only import merchant product options. See [Creating a product option](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html) for details on how you can create product options in the Back Office, [Managing product options](/docs/marketplace/user/back-office-user-guides/{{ page.version}}/catalog/product-options/creating-product-options.html) on how you can manage the product options in the Back Office, and [File details: merchant product option group](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-option-group.csv.html) on how you can import merchant product options.
 
 {% endinfo_block %}
 
@@ -31,7 +31,7 @@ Product option groups created by merchants can have the following statuses:
 * *Approved*: The product option group was approved by the Marketplace administrator. Merchants can use it for their products and offers, so if it is [active](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html#activating-a-product-option), the product option is displayed on the Storefront.
 * *Denied*: The product option was rejected by the Marketplace administrator, and Merchants cannot use it for their products and offers. If they still use it, it will not be applied and will not be displayed on the Storefront.
 
-Currently, you can only import the Marketplace options approval statuses. See [File details: merchant product option group](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-option-group.html) for details.
+Currently, you can only import the Marketplace options approval statuses. See [File details: merchant product option group](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-option-group.csv.html) for details.
 
 ## Marketplace product options in the Back Office
 In the Back Office, a Marketplace administrator can:

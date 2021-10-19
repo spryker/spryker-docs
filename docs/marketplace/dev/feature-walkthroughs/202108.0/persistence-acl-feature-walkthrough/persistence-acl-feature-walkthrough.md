@@ -5,93 +5,67 @@ template: concept-topic-template
 ---
 
 ## Overview
-Persistence ACL evolves the idea of ACL by additional extra features. 
-Using the Persistence ACL module, you can manage permission not at the http action level, but at the entity level, and even a set of entities (segments). 
-This module supports a flexible system of inheritance of rights, which simplifies the configuration of access in the system. 
-We will talk about it, as well as about other capabilities of the module below.
-As the name suggests, the Persistence ACL runs in the Persistence layer.
+With the Persistence ACL feature, you may manage authorization at the database entity level, or even within a set of entities (segments). This feature enables a flexible system of inheritance of rights, simplifying the configuration of access. 
+
+The Persistence ACL runs in the Persistence layer, as its name suggests. Next, we will discuss the peculiarities and capabilities of the module.
 
 ## Limitations
-The module based on Propel ORM (namely Propel Behavior and Propel Hooks). If you do not use PropelOrm to interact with data in your system, this module will not work.
-
-## Installation
-```bash
-composer require spryker/acl-entity
-```
-
-Add `\Spryker\Zed\AclEntity\Persistence\Propel\Behavior\AclEntityBehavior` to one or several tables in your database schema
-```xml
-<?xml version="1.0"?>
-<database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" 
-          namespace="Orm\Zed\Merchant\Persistence"
-          package="src.Orm.Zed.Merchant.Persistence">
-    <table name="spy_merchant" identifierQuoting="true">
-      <behavior name="\Spryker\Zed\AclEntity\Persistence\Propel\Behavior\AclEntityBehavior"/>
-    </table>
-</database>
-```
-
-or even to all tables
-```xml
-<?xml version="1.0"?>
-<database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
-          namespace="Orm\Zed\AclEntity\Persistence"
-          package="src.Orm.Zed.AclEntity.Persistence">
-    <behavior name="\Spryker\Zed\AclEntity\Persistence\Propel\Behavior\AclEntityBehavior"/>
-</database>
-
-```
-
-Run the command to apply attached behavior
-```bash
-console propel:install
-```
+The module is based on the Propel ORM (namely Propel Behavior and Propel Hooks). If you are not using `PropelOrm` to interact with data in your system, this module will not work.
 
 ## Module dependency graph
+
+The module dependency graph and table below list the main modules of the Persistence ACL feature and their interaction.
+
 ![Module dependency graph](https://confluence-connect.gliffy.net/embed/image/b15ac7bf-e35f-4298-90da-b7d0c8227be9.png?utm_medium=live&utm_source=custom)
 
+| MODULE | DESCRIPTION |
+|-----|-----|
+| Acl | `\Spryker\Zed\Acl\Business\AclFacade::getUserRoles()` is used to get logged in user `AclRoles`. |
+| AclExtension | `Spryker\Zed\AclExtension\Dependency\Plugin\AclRolePostSavePluginInterface` is used to save `AclEntityRules` for `AclRole`.|
+| AclEntityDataImport | `AclEntityRule` and `AclEntitySegment` are used to import data. |
+| AclEntityExtension |  In `/Spryker/Zed/AclEntityExtension/Dependency/Plugin/AclEntityDisablerPluginInterface`, `AclEntityDisablerPluginInterface` determines whether the feature is enabled. <br /> `\Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityMetadataConfigExpanderPluginInterface` is used in `\Spryker\Zed\AclEntity\Business\AclEntityFacade::getAclEntityMetadataConfig()` to expand the module configuration. |
+| PropelOrm | The module is used as a container for Propel library. |
+| User | `\Spryker\Zed\User\Business\UserFacade::hasCurrentUser()` is used to check if the user is logged in. <br /> `\Spryker\Zed\User\Business\UserFacade::getCurrentUser()` is used to determine which `AclEntityRules` should be considered during query processing. |
+
 ## Domain model
+
+The following schema illustrates the Persistence ACL domain model:
+
 ![Domain model](https://confluence-connect.gliffy.net/embed/image/4fe4c0ba-1192-4aca-97f8-d996dfccc583.png?utm_medium=live&utm_source=custom)
 
 ## How it works
+
+Persistence ACL supports permission checks both when executing queries and when performing actions on Active Record models. Upon installation and configuration, code is injected into the Active Record model and Query classes that check the user's permissions for the appropriate actions. This module uses Propel hooks.
+
 ![The module in application layers](https://confluence-connect.gliffy.net/embed/image/13f16eaa-9491-43ab-887d-0004c716eef4.png?utm_medium=live&utm_source=custom)
-Persistence ACL supports permission check for both: when executing queries and when performing actions on Active Record models.
-After installation and configuration, code injected into the Active Record model and Query classes that checks the user's permissions for appropriate actions.
-The module bases its work on Propel hooks. 
-The following hooks used during model operations:
-- preInsert
-- preUpdate
-- preDelete
-During query execution:
-- preSelectQuery
-- preUpdateQuery
-- preDeleteQuery
 
-There is an example for SELECT query:
-```php
-    /**
-     * Code to execute before every SELECT statement
-     *
-     * @param ConnectionInterface $con The connection object used by the query
-     */
-    protected function basePreSelect(ConnectionInterface $con)
-    {
-        // \Spryker\Zed\AclEntity\Persistence\Propel\Behavior\AclEntityBehavior behavior
-        /** @var \Spryker\Zed\AclEntity\Business\AclEntityFacadeInterface $aclEntityFacade */
-        $aclEntityFacade = \Spryker\Zed\Kernel\Locator::getInstance()->aclEntity()->facade();
-        if ($aclEntityFacade->isActive() && !$this->isSegmentQuery()) {
-            $aclEntityConfigTransfer = $aclEntityFacade->getAclEntityMetadataConfig();
-            if (!in_array($this->getModelName(), $aclEntityConfigTransfer->getAclEntityAllowList())) {
-                $this->getPersistenceFactory()
-                    ->createAclQueryDirector($aclEntityConfigTransfer->getAclEntityMetadataCollection())
-                    ->applyAclRuleOnSelectQuery($this);
-            }
-        }
+{% info_block warningBox "Important!" %}
 
-        return $this->preSelect($con);
-    }
-```
+If you execute queries outside of Propel API, they WILL NOT be handled by Persistence ACL.
 
-In the case of query, the query will be modified in such a way as to affect only allowed records.
-If the user tries to perform a restricted action on an Active Record model (such an update, delete or create),
-an `\Spryker\Zed\AclEntity\Persistence\Exception\OperationNotAuthorizedException will be thrown.`
+{% endinfo_block %}
+
+During model operations, the following hooks are used:
+
+- `preInsert`
+
+- `preUpdate`
+
+- `preDelete`
+
+  
+Query execution is performed using the following hooks:
+
+- `preSelectQuery`
+
+- `preUpdateQuery`
+
+- `preDeleteQuery`
+
+A query sent to the database is intercepted and modified with additional joins to limit the results of the query to only those records available to the current user. If the user attempts to perform a restricted action on an Active Record model (such as updating, deleting, or creating), an `\Spryker\Zed\AclEntity\Persistence\Exception\OperationNotAuthorizedException` is thrown.
+
+## Learn more
+
+- [Configuration](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/configuration.html)
+- [Rules and scopes](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/rules-and-scopes.html) 
+- [Execution flow](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/execution-flow.html) 

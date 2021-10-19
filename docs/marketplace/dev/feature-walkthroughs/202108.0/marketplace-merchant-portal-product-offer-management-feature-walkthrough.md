@@ -6,7 +6,13 @@ template: concept-topic-template
 
 The *Marketplace Merchant Portal Product Offer Management* feature allows merchants to manage product offers in the Merchant portal.
 
+{% info_block warningBox "User documentation" %}
+
 To learn more about the feature and to find out how end users use it, see [Marketplace Merchant Portal Product Offer Management feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-portal-product-offer-management-feature-overview.html) for business users.
+
+{% endinfo_block %}
+
+
 
 ## Related Developer articles
 

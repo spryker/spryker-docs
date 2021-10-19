@@ -30,6 +30,7 @@ You can have shop running in both modes and select net mode for business custome
 Price also has currency and store assigned to it.
 To support product offer prices  *PriceProductOffer* DB table has been added to connect *PriceProductStore* and *ProductOffer* tables.
 To store data about product offer prices has been added *ProductConcreteProductOfferPriceStorage*.
+This data uses on the Storefront to display correct prices for product offers.
 The data updated, when creating/updating/deleting/activating/deactivating concrete products and when create price product offers. 
 Also, product offers support volume prices. 
 So merchants can add volume prices for product offers and based on chosen quantity of items a customer will see the corresponding price on the Storefront.

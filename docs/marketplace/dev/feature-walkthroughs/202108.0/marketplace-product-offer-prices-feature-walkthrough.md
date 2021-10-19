@@ -56,6 +56,11 @@ To learn more about prices and volume prices, see: [Prices](https://documentatio
 | PriceProductVolume | Provides functionality to handle volume prices for products   |
 | PriceProductVolumeWidget | Provides widget to show information about volume price for product   |
 | PriceWidget | Provides functionality for price mode switcher    |
+| PriceProductOfferExtension | Provides plugin interfaces for extending PriceProductOffer module functionality    |
+| PriceProductOfferStorageExtension | Provides plugin interfaces used by Price Product Offer Storage bundle    |
+| PriceProductOfferVolumesRestApi | Provides plugin(s) to add product-offer-volume-prices to the product-offer-prices.   |
+| ProductOfferPricesRestApi | Provides Rest API endpoints to manage product offer prices   |
+| ProductOfferPricesRestApiExtension | Provides plugin interfaces for extending the ProductOfferPricesRestApi module    |
 
 ## Domain model
 ![Entity diagram](https://confluence-connect.gliffy.net/embed/image/0ad490bb-f21f-4e4a-b6eb-e0102a8c7b42.png?utm_medium=live&utm_source=confluence)

@@ -19,7 +19,7 @@ To start feature integration, integrate the required features:
 |-|-|-|
 | Spryker Core | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration)  |
 | Marketplace Product | {{page.version}} | [Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-feature-integration.html)|
-| Cart | {{page.version}} | [Cart Feature Integration](https://github.com/spryker-feature/cart) |
+| Cart | {{page.version}} | [Cart Feature Integration](https://documentation.spryker.com/docs/cart-feature-integration) |
 
 ### 1) Set up transfer objects
 

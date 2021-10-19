@@ -4,7 +4,6 @@ description: This article provides details how to build the frontend part of the
 template: concept-topic-template
 ---
 
-
 This article provides details how to build the front-end part of the Merchant Portal.
 
 ## Overview
@@ -22,17 +21,17 @@ General structure of the front-end modules in the Spryker Marketplace can be fou
 The front-end of the Merchant Portal is built using the following commands:
 
 - default build
-    ```npm
-    npm run mp:build
+    ```bash
+    yarn mp:build
     ```
  
 - build in the watch mode
-    ```npm
-    npm run mp:build:watch
+    ```bash
+    yarn mp:build:watch
     ```
 
 - production build
-    ```npm
-    npm run mp:build:production
+    ```bash
+    yarn mp:build:production
     ```
 

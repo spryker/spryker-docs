@@ -48,12 +48,12 @@ To place an order, send the request:
 `POST` **/checkout**
 ***
 
-
-
 ### Request
 
 {% info_block warningBox "Cart deletion" %}
+
 By default, if checkout is successful, the order is placed, and the cart is deleted automatically.
+
 {% endinfo_block %}
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
@@ -63,7 +63,7 @@ By default, if checkout is successful, the order is placed, and the cart is dele
 
 
 
-| Query parameter | Description | Possible values |
+| QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request.	 | orders, order-shipments |
 {% info_block infoBox "Included resources" %}

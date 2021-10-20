@@ -24,7 +24,7 @@ In terms of [Merchant concept](/docs/scos/user/features/{{page.version}}/merchan
 
 Product restrictions from a merchant to a buyer give merchants [another layer](/docs/scos/user/features/{{page.version}}/customer-access-feature-overview.html) of control over the information, a customer can see in the shop application. Based on product restrictions, you can:
 
-* Create a list of products;
+* Create a list of products.
 * Hide the product information for the products (pricing, appearance in the search/filters), and limit access to a product details page.
 
 Product Restriction feature works on the basis of whitelist/blacklist lists. That means that products that are added to whitelist are always shown to a customer while blacklisted products are hidden from the customer view.

@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/customer-access-feature-overview
 ---
 
-Customer Access allows store administrators to define if a certain information is visible to logged out users.
+_Customer Access_ allows store administrators to define if a certain information is visible to logged out users.
 
 The feature allows you to give your customers the ability to hide content from customers that are not logged-in to their shop. You can restrict access to prices, products, product availability, carts, and shopping lists.
 

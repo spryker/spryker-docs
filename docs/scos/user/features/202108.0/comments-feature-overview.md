@@ -23,6 +23,7 @@ Thus, the Comments feature enables your B2B customers to effectively communicate
 
 
 ## Comments widget
+
 Within the Comments feature, we have created the Comments widget. The widget can be placed on any entity page. In our case, it is the *Shopping Cart* page.
 
 The comment contains the following information:

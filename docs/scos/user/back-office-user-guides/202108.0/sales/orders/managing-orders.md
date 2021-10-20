@@ -25,7 +25,6 @@ You manage orders by:
 * Commenting on orders (comments can be viewed by other Sales team members)
 * Updating internal custom order reference
 
-
 ## Prerequisites
 
 To start managing orders, go to **Sales** > **Orders**.

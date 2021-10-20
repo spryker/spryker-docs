@@ -222,7 +222,7 @@ The order looks as follows:
     * Product B x 1
     * Product B x1
 
-{% info_block errorBox "packaging units are not supported" %}
+{% info_block errorBox "Packaging units are not supported" %}
 
 The product splitting logic does not support [packaging units](/docs/scos/user/features/{{page.version}}/packaging-units-feature-overview.html) with configurable bundle products.
 

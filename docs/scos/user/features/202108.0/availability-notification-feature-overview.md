@@ -34,7 +34,9 @@ Those who subscribed to the newsletter receive an email once the product is avai
 ![Product is available](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Product+is+Available+Again/product-is-available.png)
 
 {% info_block infoBox %}
+
 Each email sent as a part of the subscription contains the **unsubscribe from this list** button as shown on the screenshot above.
+
 {% endinfo_block %}
 
 Currently, a Back Office user cannot manage newsletter subscriptions.

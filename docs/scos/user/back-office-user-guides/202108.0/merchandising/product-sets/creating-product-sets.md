@@ -16,7 +16,7 @@ related:
 
 This article describes how to create a product set.
 
-You create a product set to improve the customer's shopping experience. You collect similar products into a logical chunk that can be bought with a single click. Let's say you have a pen. The logically connected items to this product can be a penci, notebook, and sticky notes. You can collect these products under a set named _Basic office supplies_. Instead of searching for each item, your customer will add this set to cart.
+You create a product set to improve the customer's shopping experience. You collect similar products into a logical chunk that can be bought with a single click. Let's say you have a pen. The logically connected items to this product can be a pencil, notebook, and sticky notes. You can collect these products under a set named _Basic office supplies_. Instead of searching for each item, your customer will add this set to cart.
 
 ## Prerequisites
 

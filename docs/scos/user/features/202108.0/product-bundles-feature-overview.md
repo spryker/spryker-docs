@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/product-bundles-feature-overview
 ---
 
-With the Product Bundles feature you can tie individual items together and sell them as a package. As opposed to a set, in which products are loosely grouped, the items in a bundle are always sold together. You can choose to create a special bundle price to make the purchase more attractive. Since each bundle's product is still handled like an individual item in the Order Management Process, bundle availability is always calculated and displayed based on the item with the smallest available stock to avoid overselling.
+With the _Product Bundles_ feature you can tie individual items together and sell them as a package. As opposed to a set, in which products are loosely grouped, the items in a bundle are always sold together. You can choose to create a special bundle price to make the purchase more attractive. Since each bundle's product is still handled like an individual item in the Order Management Process, bundle availability is always calculated and displayed based on the item with the smallest available stock to avoid overselling.
 
 A bundle represents two or more products, sold as a set; it is a distinct product that incorporates other concrete products.
 
@@ -34,15 +34,15 @@ Product bundles are two or more existing products combined into a new type of pr
 
 ### Characteristics of product bundles
 
-* The quantity of each concrete product may be more than 1
-* A product bundle has a localized name and description
-* A product bundle has a sku
-* A product bundle has a price and tax set
-* A product bundle has a virtual stock that is dependent on the stock of the bundled products
-* The stock level has a upper boundary (see Stock calculation)
-* A product bundle can have attributes with localized values
-* A product bundle can have localized SEO information
-* A product bundle can have multiple localized image sets
+* The quantity of each concrete product may be more than 1.
+* A product bundle has a localized name and description.
+* A product bundle has a sku.
+* A product bundle has a price and tax set.
+* A product bundle has a virtual stock that is dependent on the stock of the bundled products.
+* The stock level has a upper boundary (see Stock calculation).
+* A product bundle can have attributes with localized values.
+* A product bundle can have localized SEO information.
+* A product bundle can have multiple localized image setsю
 
 ## Product bundle entity relationship diagram
 
@@ -65,9 +65,7 @@ Bundle is updated when:
 
 Bundle have "dynamic stock", the stock is defined by bundled products. It cannot be imported as regular products. That means a bundle will get maximum possible stock quantity based on bundled product quantity. Stock is calculated for each warehouse separately.
 
-For example.
-
-* Bundled item 1 quantity x **2**
+For example, bundled item 1 quantity x **2**
 
 For given item stock is:
 
@@ -81,9 +79,9 @@ Then product bundle stock is:
 
 ## Product bundle structure in cart
 
-Because of changed structure, cart uses special Yves class to handle bundle operations ProductBundleAwareCartOperationHandler.
+Because of changed structure, cart uses special Yves class to handle bundle operations `ProductBundleAwareCartOperationHandler`.
 
-When bundle item added to cart there is additional ExpandBundleItemsPlugin cart expander plugin which extracts bundled items from given bundle SKU.
+When bundle item added to cart there is the additional `ExpandBundleItemsPlugin` cart expander plugin which extracts bundled items from given bundle SKU.
 
 For example:
 

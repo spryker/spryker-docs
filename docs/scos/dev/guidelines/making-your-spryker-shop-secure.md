@@ -93,7 +93,7 @@ SQL injections are happening when unsanitized user input is embedded into an SQL
 Given Spryker limits access to an SQL database only for Zed, and Yves does not have access to it, then an additional measure is to limit access to Zed for the public via VPN, IP whitelisting, etc.
 
 ### Clickjacking
-Clickjacking is a possibility to tweak the UI or craft a malicious webpage, embedding the attacked one to force the user to click on specific buttons or links. Clickjacking is prevented by setting correct headers in “X-Frame-Options” and “Content-Security-Policy” already provided by `HeadersSecurityServiceProvider`. However, make sure that the headers are not deleted by webserver configuration. For more information about clickjacking, see the [OWASP](https://www.owasp.org/index.php/Clickjacking) article.
+Clickjacking is a possibility to tweak the UI or craft a malicious webpage, embedding the attacked one to force the user to click on specific buttons or links. Clickjacking is prevented by setting correct headers in “X-Frame-Options” and “Content-Security-Policy” already provided by `HeadersSecurityServiceProvider`. However, make sure that the headers are not deleted by webserver configuration. For more information about clickjacking, see the [OWASP](https://owasp.org/www-community/attacks/Clickjacking) article.
 
 ### Obsolete or outdated dependencies
 To make sure that all the security updates are installed, keep Spryker and third-party modules up to date.

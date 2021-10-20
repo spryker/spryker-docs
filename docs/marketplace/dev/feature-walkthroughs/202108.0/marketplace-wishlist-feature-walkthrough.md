@@ -2,7 +2,7 @@
 title: Marketplace Wishlist feature walkthrough
 last_updated: Sep 29, 2021
 description: This article provides technical details on the Marketplace Wishlist feature.
-template: marketplace-wishlist-feature-walkthrough
+template: feature-walkthrough-template
 ---
 
 With the *Marketplace Wishlist* feature, the customers can track and save merchant offers and products they wish to purchase through the wishlist. The customers can create multiple wishlists and customize their names.
@@ -14,6 +14,8 @@ To learn more about the feature and to find out how end users use it, see [Marke
 {% endinfo_block %}
 
 ## Module dependency graph
+
+The following diagram illustrates the dependencies between the modules for the *Marketplace Wishlist* feature.
 
 ![Entity diagram](https://confluence-connect.gliffy.net/embed/image/e7a2ef43-7eb8-435a-870b-d8012fe8bd07.png?utm_medium=live&utm_source=confluence)
 
@@ -28,7 +30,7 @@ To learn more about the feature and to find out how end users use it, see [Marke
 
 ## Domain model
 
-The following diagram illustrates domain model of Marketplace Wishlist feature:
+The following diagram illustrates domain model of *Marketplace Wishlist* feature:
 
 ![Entity diagram](https://confluence-connect.gliffy.net/embed/image/6d5e9f9f-f841-4877-bf65-7fdd38d6d49b.png?utm_medium=live&utm_source=confluence)
 

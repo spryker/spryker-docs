@@ -12,16 +12,15 @@ Merchant Portal comes with preconfigured [Persistence Acl](../persistence-acl-fe
 Out of the box it will create and assign set of Acl Roles for Merchant Users to restrict access to others merchant data on the system.
 
 ## Merchant and MerchantUser setup workflow
+![New Merchant and MerchantUser sequence diagram](https://confluence-connect.gliffy.net/embed/image/54b0907f-b289-42ab-9b5c-1566959896b0.png?utm_medium=live&utm_source=custom)
 During Merchant and MerchantUser create process, all the necessary ACL and Persistence ACL entities created.
 This ensures the correct operation of the merchant portal, and at the same time, protects key merchant data.
 
 ### New merchant
-![New Merchant sequence diagram](https://confluence-connect.gliffy.net/embed/image/92777a40-ebc8-4566-8617-4082f263a8f1.png?utm_medium=live&utm_source=custom)
 When a new Merchant is added to the system, a merchant-specific role is automatically created..
 This role will be automatically added to all merchant users, and will allow them to operate with merchant-specific data: ProductOffer, ProductOrder, etc.
 
 ### New merchant user
-![New MerchantUser sequence diagram](https://confluence-connect.gliffy.net/embed/image/54b0907f-b289-42ab-9b5c-1566959896b0.png?utm_medium=live&utm_source=custom)
 When a MerchantUser is added to the system, a MerchantUser specific role is automatically created.
 This role is needed to manage the MerchantUser specific data (profile).
 

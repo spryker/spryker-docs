@@ -23,7 +23,7 @@ This role will be automatically added to all merchant users, and will allow them
 
 ### New merchant user
 When a `MerchantUser` is added to the system, a merchant user specific role is automatically created.
-This role is needed to manage the MerchantUser specific data (profile).
+This role is needed to manage the merchant user specific data (profile).
 
 The following roles are automatically added to the newly created MerchantUser:
 - Merchant specific role

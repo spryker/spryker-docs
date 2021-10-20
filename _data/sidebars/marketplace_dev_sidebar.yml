@@ -40,6 +40,9 @@ entries:
           - title: Marketplace Product feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-feature-walkthrough.html
 
+          - title: Marketplace Merchant Portal Product Management feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-product-management-feature-walkthrough.html
+
           - title: Marketplace Product Offer feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
             nested:
@@ -111,10 +114,10 @@ entries:
         nested:
           - title: ACL feature integration
             url: /docs/marketplace/dev/feature-integration-guides/acl-feature-integration.html
-          
+
           - title: Marketplace Dummy Payment feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-dummy-payment-feature-integration.html
-          
+
           - title: Marketplace Inventory Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-feature-integration.html
 
@@ -135,10 +138,10 @@ entries:
 
           - title: Merchant Category feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-category-feature-integration.html
-          
+
           - title: Merchant Opening Hours feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-opening-hours-feature-integration.html
-          
+
           - title: Merchant Switcher feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-feature-integration.html
 
@@ -147,7 +150,7 @@ entries:
 
           - title: Marketplace Order Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html
-          
+
           - title: Marketplace Order Management + Customer Account Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-customer-account-management-feature-integration.html
 
@@ -168,7 +171,7 @@ entries:
 
           - title: Marketplace Product Offer feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-feature-integration.html
-          
+
           - title: Marketplace Product Offer Prices feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-prices-feature-integration.html
 
@@ -230,16 +233,16 @@ entries:
 
               - title: "Glue API: Marketplace Inventory Management + Wishlist feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-inventory-management-wishlist-feature-integration.html
-              
+
               - title: "Glue API: Marketplace Merchant feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-merchant-feature-integration.html
 
               - title: "Glue API: Merchant Opening Hours feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/merchant-opening-hours-feature-integration.html
-              
+
               - title: "Glue API: Merchant Category feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/merchant-category-feature-integration.html
-              
+
               - title: "Glue API: Marketplace Product feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-feature-integration.html
 
@@ -251,22 +254,22 @@ entries:
 
               - title: "Glue API: Marketplace Product Offer + Cart feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-cart-feature-integration.html
-              
+
               - title: "Glue API: Marketplace Product Offer + Wishlist feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-wishlist-feature-integration.html
 
               - title: "Glue API: Marketplace Product Offer Prices feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-prices-feature-integration.html
-              
+
               - title: "Glue API: Marketplace Product Offer Prices + Wishlist feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-prices-wishlist-feature-integration.html
-              
+
               - title: "Glue API: Prices + Marketplace Wishlist feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/prices-marketplace-wishlist-feature-integration.html
-              
+
               - title: "Glue API: Marketplace Product Offer Volume Prices feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-volume-prices.html
-              
+
               - title: "Glue API: Marketplace Return Management feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-return-management-feature-integration.html
 

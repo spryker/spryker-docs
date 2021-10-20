@@ -95,6 +95,7 @@ console translator:generate-cache
 Prepare your data according to your requirements using our demo data:
 
 **data/import/common/common/marketplace/merchant.csv**
+
 ```php
 merchant_reference,merchant_name,registration_number,status,email,is_active,url.de_DE,url.en_US
 MER000006,Sony Experts,HYY 134306,approved,michele@sony-experts.com,1,/de/merchant/sony-experts,/en/merchant/sony-experts
@@ -117,6 +118,7 @@ MER000002,Video King,1234.4567,approved,martha@video-king.nl,1,/de/merchant/vide
 | url | optional(per locale) | string | /de/merchant/sony-experts | Unique storefront identifier for a merchant's page. |
 
 **data/import/common/common/marketplace/merchant_store.csv**
+
 ```php
 merchant_reference,store_name
 MER000001,DE
@@ -141,11 +143,12 @@ Register the following plugins to enable data import:
 | MerchantStoreDataImportPlugin | Imports merchant store assignment into the database. | MerchantDataImportPlugin | Spryker\Zed\MerchantDataImport\Communication\Plugin\MerchantStoreDataImportPlugin |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
+
 ```php
 <?php
- 
+
 namespace Pyz\Zed\DataImport;
- 
+
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use Spryker\Zed\MerchantDataImport\Communication\Plugin\MerchantDataImportPlugin;
 use Spryker\Zed\MerchantDataImport\Communication\Plugin\MerchantStoreDataImportPlugin;
@@ -163,6 +166,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 ```
 
 Import data:
+
 ```bash
 console data:import merchant
 console data:import merchant-store
@@ -183,6 +187,7 @@ Enable the following behaviors by registering the plugins:
 | StoreRelationToggleFormTypePlugin | Adds the store relation toggle form to the MerchantGui Merchant creation/editing form. |  | Spryker\Zed\Store\Communication\Plugin\Form\StoreRelationToggleFormTypePlugin |
 
 **current/src/Pyz/Zed/MerchantGui/MerchantGuiDependencyProvider.php**
+
 ```php
 <?php
 
@@ -214,4 +219,3 @@ class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
 Make sure that the merchant edit and create forms contain a *Store* toggle form that enables the ability to add a merchant to specific stores.
 
 {% endinfo_block %}
-

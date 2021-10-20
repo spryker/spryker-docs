@@ -11,41 +11,52 @@ redirect_from:
   - /docs/en/comments-order-management-feature-integration
 ---
 
-## Install Feature Core
+## Install feature core
+
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Comment | master |
-| Order Management | master |
+| Comment | {{page.version}} |
+| Order Management | {{page.version}} |
 
 ### 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
 
 ```bash
 composer require spryker/comment-sales-connector:"^1.0.0" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
-Make sure that the following modules were installed:<table><thead><tr><th>Module</th><th>Expected Directory</th></tr></thead><tbody><tr><td>`CommentSalesConnector`</td><td>`vendor/spryker/comment-sales-connector`</td></tr></tbody></table>
+
+Make sure that the following modules were installed:
+
+| MODULE | EXPECTED DIRECTORY |
+| --- | --- |
+| CommentSalesConnector | vendor/spryker/comment-sales-connector |
+
 {% endinfo_block %}
 
-### 2) Set up Configuration
+### 2) Set up configuration
+
 Add the following configuration to your project:
 
-| Configuration | Specification | Namespace |
+| CONFIURATION | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
-| `SalesConfig::getSalesDetailExternalBlocksUrls()` | Used to display a block with comments related to the order. | `Pyz\Zed\Sales` |
+| SalesConfig::getSalesDetailExternalBlocksUrls() | Used to display a block with comments related to the order. | Pyz\Zed\Sales |
 
 **Pyz\Zed\Sales\SalesConfig.php**
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Sales;
- 
+
 use Spryker\Zed\Sales\SalesConfig as SprykerSalesConfig;
- 
+
 class SalesConfig extends SprykerSalesConfig
 {
 	public function getSalesDetailExternalBlocksUrls()
@@ -53,19 +64,22 @@ class SalesConfig extends SprykerSalesConfig
 		$projectExternalBlocks = [
 			'comment' => '/comment-sales-connector/sales/list',
 		];
- 
+
 		$externalBlocks = parent::getSalesDetailExternalBlocksUrls();
- 
+
 		return array_merge($externalBlocks, $projectExternalBlocks);
 	}
 }
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that the Order detail page in Zed contains a block with comments.
+
 {% endinfo_block %}
 
-### 3) Set up Transfer Objects
+### 3) Set up transfer objects
+
 Run the following commands to generate transfer changes:
 
 ```bash
@@ -73,27 +87,37 @@ console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes have been applied in transfer objects:<table><thead><tr><th>Transfer</th><th>Type</th><th>Event</th><th>Path</th></tr></thead><tbody><tr><td>`Comment`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/Comment`</td></tr><tr><td>`CommentThread`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CommentThread`</td></tr><tr><td>`CommentFilter`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CommentFilter`</td></tr><tr><td>`CommentRequest`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CommentRequest`</td></tr></tbody></table>
+
+Make sure that the following changes have been applied in transfer objects:
+
+| TRANSFER | TYPE | EVENT | PATH |
+| --- | --- | --- | --- |
+| Comment | class | created | src/Generated/Shared/Transfer/Comment |
+| CommentThread | class | created | src/Generated/Shared/Transfer/CommentThread |
+| CommentFilter | class | created | src/Generated/Shared/Transfer/CommentFilter |
+| CommentRequest | class | created | src/Generated/Shared/Transfer/CommentRequest |
+
 {% endinfo_block %}
 
-### 4) Set up Behavior
+### 4) Set up behavior
+
 Register the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `CommentThreadOrderExpanderPlugin` | Expands `OrderTransfer` with `CommentThread`. | None | `Spryker\Zed\CommentSalesConnector\Communication\Plugin\Sales` |
-| `CommentThreadAttachedCommentOrderPostSavePlugin` | Duplicates `commentThread` from Quote to a new order. | None | `Spryker\Zed\CommentSalesConnector\Communication\Plugin\Sales` |
+| CommentThreadOrderExpanderPlugin | Expands `OrderTransfer` with `CommentThread`. | None | Spryker\Zed\CommentSalesConnector\Communication\Plugin\Sales |
+| CommentThreadAttachedCommentOrderPostSavePlugin | Duplicates `commentThread` from Quote to a new order. | None | Spryker\Zed\CommentSalesConnector\Communication\Plugin\Sales |
 
 **Pyz\Zed\Sales\SalesDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Sales;
- 
+
 use Spryker\Zed\CommentSalesConnector\Communication\Plugin\Sales\CommentThreadOrderExpanderPlugin;
 use Spryker\Zed\Sales\SalesDependencyProvider as SprykerSalesDependencyProvider;
- 
+
 class SalesDependencyProvider extends SprykerSalesDependencyProvider
 {
 	/**
@@ -109,19 +133,21 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that `OrderTransfer::commentThread` contains information about comments when you retrieve an order from the database.
+
 {% endinfo_block %}
 
 **Pyz\Zed\Sales\SalesDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Sales;
- 
+
 use Spryker\Zed\CommentSalesConnector\Communication\Plugin\Sales\CommentThreadAttachedCommentOrderPostSavePlugin;
 use Spryker\Zed\Sales\SalesDependencyProvider as SprykerSalesDependencyProvider;
- 
+
 class SalesDependencyProvider extends SprykerSalesDependencyProvider
 {
 	/**
@@ -137,5 +163,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that all comments from `QoteTransfer::commentThread` duplicate to a new order after the successful checkout.
+
 {% endinfo_block %}

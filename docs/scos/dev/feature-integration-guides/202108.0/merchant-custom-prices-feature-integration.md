@@ -11,40 +11,51 @@ redirect_from:
   - /docs/en/merchant-custom-prices-feature-integration
 ---
 
-## Install Feature Core
+## Install feature core
+
 ### Prerequisites
 
 To start feature integration, overview and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Spryker Core | master |
-| Merchant | master |
-| Merchant Contracts | master |
-| Prices | master |
-| Product | master |
+| Spryker Core | {{page.version}} |
+| Merchant | {{page.version}} |
+| Merchant Contracts | {{page.version}} |
+| Prices | {{page.version}} |
+| Product | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command to install the required modules:
 
 ```bash
-composer require spryker-feature/merchant-custom-prices:"^master" spryker/price-product-merchant-relationship-gui:"^1.0.0" --update-with-dependencies
+composer require spryker-feature/merchant-custom-prices:"{{page.version}}" spryker/price-product-merchant-relationship-gui:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following modules have been installed:<table><col  /><col  /><thead><tr><th>Module</th><th>Expected Directory</th></tr></thead><tbody><tr><td>`PriceProductMerchantRelationship`</td><td>`vendor/spryker/price-product-merchant-relationship`</td></tr><tr><td>`PriceProductMerchantRelationshipDataImport`</td><td>`vendor/spryker/price-product-merchant-relationship-data-import`</td></tr><tr><td>`PriceProductMerchantRelationshipGui`</td><td>`vendor/spryker/price-product-merchant-relationship-gui`</td></tr><tr><td>`PriceProductMerchantRelationshipStorage`</td><td>`vendor/spryker/price-product-merchant-relationship-storage`</td></tr></tbody></table>
+
+Make sure that the following modules have been installed:
+
+| MODULE | EXPECTED DIRECTORY |
+| --- | --- |
+| PriceProductMerchantRelationship | vendor/spryker/price-product-merchant-relationship |
+| PriceProductMerchantRelationshipDataImport | vendor/spryker/price-product-merchant-relationship-data-import |
+| PriceProductMerchantRelationshipGui | vendor/spryker/price-product-merchant-relationship-gui |
+| PriceProductMerchantRelationshipStorage | vendor/spryker/price-product-merchant-relationship-storage |
+
 {% endinfo_block %}
- 
-### 2) Set up Database Schema
+
+### 2) Set up database schema
+
 Adjust the schema definition so that entity changes can trigger events:
 
-| Affected Entity | Triggered Events |
+| AFFECTED ENTITY | TRIGGERED EVENTS |
 | --- | --- |
-| `spy_price_product_merchant_relationship` | `Entity.spy_price_product_merchant_relationship.create`</br>`Entity.spy_price_product_merchant_relationship.update`</br>`Entity.spy_price_product_merchant_relationship.delete` |
+| spy_price_product_merchant_relationship | Entity.spy_price_product_merchant_relationship.create</br>Entity.spy_price_product_merchant_relationship.update</br>Entity.spy_price_product_merchant_relationship.delete |
 
 **src/Pyz/Zed/PriceProductMerchantRelationship/Persistence/Propel/Schema/spy_price_product_merchant_relationship.schema.xml**
-    
-```html
+
+```xml
 <?xml version="1.0"?>
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		name="zed"
@@ -70,30 +81,52 @@ console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes in transfer objects have been applied:<table><thead><tr><th>Transfer</th><th>Type</th><th>Event</th><th>Path</th></tr></thead><tbody><tr><td>`PriceProductMerchantRelationshipStorageTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PriceProductMerchantRelationshipStorageTransfer.php`</td></tr><tr><td>`PriceProductDimensionTransfer.idMerchantRelationship`</td><td>property</td><td>added</td><td>`src/Generated/Shared/Transfer/PriceProductDimensionTransfer.php`</td></tr></tbody></table>
-{% endinfo_block %}
 
-{% info_block warningBox "Verification" %}
-Make sure that the following changes have been applied by checking your database.<table><thead><tr><th>Transfer</th><th>Type</th><th>Event</th></tr></thead><tbody><tr><td>`spy_price_product_merchant_relationship`</td><td>table</td><td>created</td></tr><tr><td>`spy_price_product_concrete_merchant_relationship_storage`</td><td>table</td><td>created</td></tr><tr><td>`spy_price_product_abstract_merchant_relationship_storage`</td><td>table</td><td>created</td></tr></tbody></table>
-{% endinfo_block %}
+Make sure that the following changes in transfer objects have been applied:
 
-{% info_block warningBox "Verification" %}
-Make sure that the changes were implemented successfully. For this purpose, trigger the following methods and check that the above events have been triggered as well:<table><thead><tr><th>Class Path</th><th>Method Name</th></tr></thead><tbody><tr><td>`src/Orm/Zed/PriceProductMerchantRelationship/Persistence/Base/SpyPriceProductMerchantRelationship.php`</td><td>`prepareSaveEventName(
-{% endinfo_block %}`</br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`</td></tr></tbody></table>)
-
-### 3) Configure Export to Redis
-{% info_block infoBox %}
-With this step, you will be able to publish prices on change (create, edit, delete
-{% endinfo_block %} to `spy_price_product_abstract_merchant_relationship_storage`, `spy_price_product_concrete_merchant_relationship_storage` and synchronize the data to Storage.)
-
-#### Set up Event Listeners
-
-| Plugin | Specification | Prerequisites | Namespace |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
-| `PriceProductMerchantRelationshipStorageEventSubscriber` | Registers listeners that are responsible for publishing merchant prices to storage when a related entity changes. | None | `Spryker\Zed\ProductListStorage\Communication\Plugin\Event\Subscriber` |
+| PriceProductMerchantRelationshipStorageTransfer | class | created | src/Generated/Shared/Transfer/PriceProductMerchantRelationshipStorageTransfer.php |
+| PriceProductDimensionTransfer.idMerchantRelationship | property | added | src/Generated/Shared/Transfer/PriceProductDimensionTransfer.php |
+
+{% endinfo_block %}
+
+{% info_block warningBox "Verification" %}
+Make sure that the following changes have been applied by checking your database.
+
+| TRANSFER | TYPE | EVENT |
+| --- | --- | --- |
+| spy_price_product_merchant_relationship | table | created |
+| spy_price_product_concrete_merchant_relationship_storage | table | created |
+| spy_price_product_abstract_merchant_relationship_storage | table | created |
+
+{% endinfo_block %}
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the changes were implemented successfully. For this purpose, trigger the following methods and check that the above events have been triggered as well:
+
+| CLASS PATH | METHOD NAME |
+| --- | --- |
+| src/Orm/Zed/PriceProductMerchantRelationship/Persistence/Base/SpyPriceProductMerchantRelationship.php | prepareSaveEventName()</br>addSaveEventToMemory()  </br>addDeleteEventToMemory()|
+
+{% endinfo_block %}
+
+### 3) Configure export to Redis
+
+{% info_block infoBox %}
+With this step, you will be able to publish prices on change (create, edit, delete to `spy_price_product_abstract_merchant_relationship_storage`, `spy_price_product_concrete_merchant_relationship_storage` and synchronize the data to Storage.
+
+ {% endinfo_block %}
+
+#### Set up event listeners
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| --- | --- | --- | --- |
+| PriceProductMerchantRelationshipStorageEventSubscriber | Registers listeners that are responsible for publishing merchant prices to storage when a related entity changes. | None | Spryker\Zed\ProductListStorage\Communication\Plugin\Event\Subscriber |
 
 **src/Pyz/Zed/Event/EventDependencyProvider.php**
-    
+
 ```php
 <?php
 
@@ -115,8 +148,15 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure when prices are exported, created, updated, or deleted manually in Zed UI, they are exported (or removed
-{% endinfo_block %} to Redis accordingly.<table><thead><tr><th>Storage Type</th><th>Target Entity</th><th>Example Expected Data Identifier</th></tr></thead><tbody><tr><td>Redis</td><td>Product Abstract Price</td><td>`kv:price_product_abstract_merchant_relationship:de:1:1`</td></tr><tr class="TableStyle-PatternedRows2-Body-DarkerRows"><td class="TableStyle-PatternedRows2-BodyB-Regular-DarkerRows">Redis</td><td class="TableStyle-PatternedRows2-BodyB-Regular-DarkerRows">Product Concrete Price</td><td class="TableStyle-PatternedRows2-BodyB-Regular-DarkerRows">`kv:price_product_concrete_merchant_relationship:de:1:1`</td></tr></tbody></table>)
+
+Make sure when prices are exported, created, updated, or deleted manually in Zed UI, they are exported (or removed to Redis accordingly.
+
+| STORAGE TYPE | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
+| --- | --- | --- |
+| Redis | Product Abstract Price | kv:price_product_abstract_merchant_relationship:de:1:1 |
+| Redis | Product Concrete Price | kv:price_product_concrete_merchant_relationship:de:1:1 |
+
+ {% endinfo_block %}
 
 **Example Expected Data Fragment: Product Abstract Price**
 
@@ -176,12 +216,12 @@ Make sure when prices are exported, created, updated, or deleted manually in Zed
 }
 ```
 
-#### Add Synchronization Plugins
+#### Add synchronization plugins
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `PriceProductAbstractMerchantRelationSynchronizationDataPlugin` | Can be executed to synchronize all `price_product_abstract_merchant_relationship` entries from the database to Redis. | None | `Spryker\Zed\PriceProductMerchantRelationshipStorage\Communication\Plugin\Synchronization` |
-| `PriceProductConcreteMerchantRelationSynchronizationDataPlugin` | Can be executed to synchronize all `price_product_concrete_merchant_relationship` entries from the database to Redis. | None | `Spryker\Zed\PriceProductMerchantRelationshipStorage\Communication\Plugin\Synchronization` |
+| PriceProductAbstractMerchantRelationSynchronizationDataPlugin | Can be executed to synchronize all `price_product_abstract_merchant_relationship` entries from the database to Redis. | None | Spryker\Zed\PriceProductMerchantRelationshipStorage\Communication\Plugin\Synchronization |
+| PriceProductConcreteMerchantRelationSynchronizationDataPlugin | Can be executed to synchronize all `price_product_concrete_merchant_relationship` entries from the database to Redis. | None | Spryker\Zed\PriceProductMerchantRelationshipStorage\Communication\Plugin\Synchronization |
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
@@ -210,13 +250,17 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 ```
 
 {% info_block warningBox "Verification" %}
+
 Verify if `console sync:data --help` has `price_product_abstract_merchant_relationship` and `price_product_concrete_merchant_relationship` as an available resource in the list.
+
 {% endinfo_block %}
 
-### 4) Import Data
-#### Import Price Product Merchant Relationships
+### 4) Import data
+
+#### Import price product merchant relationships
+
 Prepare your prices data according to your requirements using our demo data:
-		
+
 **vendor/spryker/price-product-merchant-relationship-data-import/data/import/price_product_merchant_relationship.csv**
 
 ```yaml
@@ -247,16 +291,16 @@ mr-003,,051_29567823,DEFAULT,DE,CHF,12433,13833
 mr-003,,051_30107816,DEFAULT,DE,CHF,12533,10333
 ```
 
-| Column | IS REQUIRED? | Data Type | Data Example | Data Explanation |
+| COLUMN | IS REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-|`merchant_relation_key` | mandatory | string | mr-001 | Unique identifier used to identify a merchant contract. |
-| `abstract_sku` | mandatory (optional if `concrete_sku` provided) | string(unique) | 051 | Existing abstract product SKU to assign to the product list. |
-| `concrete_sku` | mandatory (optional if `abstract_sku` provided) | string(unique) | 051_29567823 | Existing concrete product SKU to assign to the product list. |
-| `price_type` | mandatory | string | DEFAULT | Name of the price type. By default it's 'DEFAULT', but could be project specific (strike, sale, ...). |
-| `store` | mandatory | string | DE | Store name. |
-| `currency` | mandatory | string | EUR | Currency ISO code. |
-| `price_net` | optional | number | 100 | Net price in cents. |
-| `price_gross` | optional | number | 120 | Gross price in cents. |
+|merchant_relation_key | mandatory | string | mr-001 | Unique identifier used to identify a merchant contract. |
+| abstract_sku | mandatory (optional if `concrete_sku` provided) | string(unique) | 051 | Existing abstract product SKU to assign to the product list. |
+| concrete_sku | mandatory (optional if `abstract_sku` provided) | string(unique) | 051_29567823 | Existing concrete product SKU to assign to the product list. |
+| price_type | mandatory | string | DEFAULT | Name of the price type. By default it's 'DEFAULT', but could be project specific (strike, sale, ...). |
+| store | mandatory | string | DE | Store name. |
+| currency | mandatory | string | EUR | Currency ISO code. |
+| price_net | optional | number | 100 | Net price in cents. |
+| price_gross | optional | number | 120 | Gross price in cents. |
 
 Register the following plugin to enable data import:
 
@@ -291,24 +335,27 @@ Run the following console command to import data:
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that in the database the configured data is added to the `spy_price_product_merchant_relationship` table.
+
 {% endinfo_block %}
 
-### 5) Set up Behavior
-#### Set up Merchant Relationship Related Price Handling
+### 5) Set up behavior
+
+#### Set up merchant relationship-related price handling
 
 Enable the following behaviors by registering the plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `MerchantRelationshipPriceQueryCriteriaPlugin` | Extends `PriceProduct` select prices SQL query for selecting prices from merchant relationship dimension if they are requested in `PriceProductCriteriaTransfer`→`priceDimension` or `PriceProductFilterTransfer`→`priceDimension` equals `PriceProductMerchantRelationshipConfig::PRICE_DIMENSION_MERCHANT_RELATIONSHIP` or `PriceProductFilterTransfer`→`priceDimension`→`idMerchantRelationship` is provided. | None | `Spryker\Zed\PriceProductMerchantRelationship\Communication\Plugin\PriceProduct` |
-| `MerchantRelationshipPriceDimensionAbstractWriterPlugin` | Enables saving product abstract prices to the `spy_price_product_merchant_relationship` table. | Expects `PriceProductTransfer.priceDemnsion.idMerchantRelationshop`, otherwise skips element. | `Spryker\Zed\PriceProductMerchantRelationship\Communication\Plugin\PriceProduct` |
-| `MerchantRelationshipPriceDimensionConcreteWriterPlugin` | Enables saving product concrete prices to the `spy_price_product_merchant_relationship` table. | Expects `PriceProductTransfer.priceDemnsion.idMerchantRelationshop`, otherwise skips element. | `Spryker\Zed\PriceProductMerchantRelationship\Communication\Plugin\PriceProduct` |
-| `MerchantRelationshipPriceProductDimensionExpanderStrategyPlugin` | Sets `PriceProductTransfer.PriceDimension.idMerchantRelationship` and `PriceProductTransfer.PriceDimension.name`. | None | `Spryker\Zed\PriceProductMerchantRelationship\Communication\Plugin\PriceProduct` |
-| `MerchantRelationshipPriceProductFilterPlugin` | Selects min prices from the MR prices available for the current customer (company business can be assigned for multiple MRs). | None |  `Spryker\Service\PriceProductMerchantRelationship\Plugin\PriceProductExtension` |
-| `PriceProductMerchantRelationshipStorageDimensionPlugin` | Adds MR prices to the list of available prices for the current customer when they are read from Redis. | None | `Spryker\Client\PriceProductMerchantRelationshipStorage\Plugin\PriceProductStorageExtension` |
-| `MerchantRelationshipProductAbstractFormExpanderPlugin` | Adds select control to PIM (abstract products) where an admin can choose Merchant Relationship on the Prices tab to manage prices for a concrete Merchant Relationship. | None | `Spryker\Zed\PriceProductMerchantRelationshipGui\Communication\Plugin\ProductManagement` |
-| `MerchantRelationshipProductConcreteFormExpanderPlugin` | Adds select control to PIM (product variants) where an admin can choose Merchant Relationship on the Prices tab to manage prices for a concrete Merchant Relationship. | None | `Spryker\Zed\PriceProductMerchantRelationshipGui\Communication\Plugin\ProductManagement` |
+| MerchantRelationshipPriceQueryCriteriaPlugin | Extends `PriceProduct` select prices SQL query for selecting prices from merchant relationship dimension if they are requested in `PriceProductCriteriaTransfer`→`priceDimension` or `PriceProductFilterTransfer`→`priceDimension` equals `PriceProductMerchantRelationshipConfig::PRICE_DIMENSION_MERCHANT_RELATIONSHIP` or `PriceProductFilterTransfer`→`priceDimension`→`idMerchantRelationship` is provided. | None | Spryker\Zed\PriceProductMerchantRelationship\Communication\Plugin\PriceProduct |
+| MerchantRelationshipPriceDimensionAbstractWriterPlugin | Enables saving product abstract prices to the `spy_price_product_merchant_relationship` table. | Expects `PriceProductTransfer.priceDemnsion.idMerchantRelationshop`, otherwise skips element. | Spryker\Zed\PriceProductMerchantRelationship\Communication\Plugin\PriceProduct |
+| MerchantRelationshipPriceDimensionConcreteWriterPlugin | Enables saving product concrete prices to the `spy_price_product_merchant_relationship` table. | Expects `PriceProductTransfer.priceDemnsion.idMerchantRelationshop`, otherwise skips element. | Spryker\Zed\PriceProductMerchantRelationship\Communication\Plugin\PriceProduct |
+| MerchantRelationshipPriceProductDimensionExpanderStrategyPlugin | Sets `PriceProductTransfer.PriceDimension.idMerchantRelationship` and `PriceProductTransfer.PriceDimension.name`. | None | Spryker\Zed\PriceProductMerchantRelationship\Communication\Plugin\PriceProduct |
+| MerchantRelationshipPriceProductFilterPlugin | Selects min prices from the MR prices available for the current customer (company business can be assigned for multiple MRs). | None |  Spryker\Service\PriceProductMerchantRelationship\Plugin\PriceProductExtension |
+| PriceProductMerchantRelationshipStorageDimensionPlugin | Adds MR prices to the list of available prices for the current customer when they are read from Redis. | None | Spryker\Client\PriceProductMerchantRelationshipStorage\Plugin\PriceProductStorageExtension |
+| MerchantRelationshipProductAbstractFormExpanderPlugin | Adds select control to PIM (abstract products) where an admin can choose Merchant Relationship on the Prices tab to manage prices for a concrete Merchant Relationship. | None | Spryker\Zed\PriceProductMerchantRelationshipGui\Communication\Plugin\ProductManagement |
+| MerchantRelationshipProductConcreteFormExpanderPlugin | Adds select control to PIM (product variants) where an admin can choose Merchant Relationship on the Prices tab to manage prices for a concrete Merchant Relationship. | None | Spryker\Zed\PriceProductMerchantRelationshipGui\Communication\Plugin\ProductManagement |
 
 **src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php**
 
@@ -451,20 +498,26 @@ class PriceProductStorageDependencyProvider extends SprykerPriceProductStorageDe
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that there is the "Merchant Price Dimension" drop-down in the Back Office on the Product Abstract and Concrete (variants
-{% endinfo_block %} edit page (on the Price &amp; Tax tab). When you select some Merchant Relationship, the current page should be reloaded and the prices table should display prices from the selected Merchant Relationship if they exist or an empty table should be displayed when they do not exist.Make sure that when you added/changed prices for some Merchant Relationship, they appear after submitting the form and reloading the page.Make sure that Redis keys are updated/created for this product and business units are assigned to the selected MR.)
+
+Make sure that there is the "Merchant Price Dimension" drop-down in the Back Office on the Product Abstract and Concrete variants edit page (on the Price &amp; Tax tab). When you select some Merchant Relationship, the current page should be reloaded and the prices table should display prices from the selected Merchant Relationship if they exist or an empty table should be displayed when they do not exist.Make sure that when you added/changed prices for some Merchant Relationship, they appear after submitting the form and reloading the page.Make sure that Redis keys are updated/created for this product and business units are assigned to the selected MR.
+
+{% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
+
 Make sure that a logged in user, who belongs to a company business unit and that business unit is assigned to some Merchant Relationship with specified prices, sees Merchant Relationship prices on the Catalog and on the Product page.</br>Make sure that this user sees MIN price if their business unit is assigned to multiple Merchant Relationships with different prices for the same product.
 {% endinfo_block %}
 
-### Ensure Compatibility
+### Ensure compatibility
+
 Check the following compatibility issues:
 
-| Plugin | Specification | Namespace |
+| PLUGIN | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
-| `PriceFacetConfigTransferBuilderPlugin` | This plugin displays price-range filter on the catalog page. It should be removed from plugin stack to avoid wrong displaying product with merchant prices. | `Spryker\Client\CatalogPriceProductConnector\Plugin\ConfigTransferBuilder` |
+| PriceFacetConfigTransferBuilderPlugin | This plugin displays price-range filter on the catalog page. It should be removed from plugin stack to avoid wrong displaying product with merchant prices. | Spryker\Client\CatalogPriceProductConnector\Plugin\ConfigTransferBuilder |
 
 {% info_block warningBox "Verification" %}
+
 Make sure that the price range filter is not displayed on the catalog page.
+
 {% endinfo_block %}

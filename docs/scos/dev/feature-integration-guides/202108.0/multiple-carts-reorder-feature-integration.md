@@ -11,23 +11,25 @@ redirect_from:
   - /docs/en/multiple-carts-reorder-feature-integration
 ---
 
-## Install Feature Core
+## Install feature core
 
 ### Prerequisites
 
 To start feature integration, overview and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Multiple Carts | master |
-| Reorder | master |
-| Spryker Core | master |
+| Multiple Carts | {{page.version}} |
+| Reorder | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
-### 1) Set up Behavior
+### 1) Set up behavior
+
 Register the following plugins:
-| Plugin | Specification | Prerequisites | Namespace |
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-|  `ReorderPersistentCartChangeExpanderPlugin` | Adds a default reorder name and adds it to add item request. | 1 |  `Spryker\Client\MultiCart\Plugin` |
+| ReorderPersistentCartChangeExpanderPlugin | Adds a default reorder name and adds it to add item request. | 1 | Spryker\Client\MultiCart\Plugin |
 
 **src/Pyz/Client/PersistentCart/PersistentCartDependencyProvider.php**
 
@@ -54,5 +56,7 @@ class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyPr
 ```
 
 {% info_block warningBox "Verification" %}
+
 When using the reorder feature, a new customer quote must be created with the name "Cart from order {Order reference}".
+
 {% endinfo_block %}

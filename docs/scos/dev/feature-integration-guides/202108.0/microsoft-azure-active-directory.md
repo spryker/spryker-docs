@@ -31,9 +31,9 @@ To start the feature integration:
 1. Overview and install the necessary features:
 
 
-| Name | Version | Integration guide |
+| NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core Back Office | master | [Spryker Core Back Office feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-back-office-feature-integration.html) |
+| Spryker Core Back Office | {{page.version}} | [Spryker Core Back Office feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-back-office-feature-integration.html) |
 
 
 2. [Register an application with the Microsoft identity platform](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app).
@@ -41,21 +41,18 @@ To start the feature integration:
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
+
 ```bash
 composer require spryker-eco/oauth-azure:"^1.0.0" --update-with-dependencies
 ```
-{% info_block warningBox "Verification" %}
 
- 
+{% info_block warningBox "Verification" %}
 
 Ensure that the following modules have been installed:
 
-
-| Module | Expected directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | OauthAzure | /vendor/spryker-eco/oauth-azure |
-
-
 
 {% endinfo_block %}
 
@@ -64,33 +61,34 @@ Ensure that the following modules have been installed:
 Using the data from your Microsoft Azure Active Directory account, configure OAuth Azure credentials:
 
 **config/Shared/config_default.php**
-```php
-$config[KernelConstants::DOMAIN_WHITELIST][] = 'https://login.microsoftonline.com/';	
 
-// Oauth Azure	
-$config[OauthAzureConstants::CLIENT_ID] = 'YOUR CLIENT ID';	
-$config[OauthAzureConstants::CLIENT_SECRET] = 'YOUR CLIENT SECRET';	
-$config[OauthAzureConstants::REDIRECT_URI] = sprintf(	
-    'https://%s/security-oauth-user/login',	
-    getenv('SPRYKER_BE_HOST')	
-);	
-$config[OauthAzureConstants::PATH_AUTHORIZE] = '/oauth2/v2.0/authorize';	
+```php
+$config[KernelConstants::DOMAIN_WHITELIST][] = 'https://login.microsoftonline.com/';
+
+// Oauth Azure
+$config[OauthAzureConstants::CLIENT_ID] = 'YOUR CLIENT ID';
+$config[OauthAzureConstants::CLIENT_SECRET] = 'YOUR CLIENT SECRET';
+$config[OauthAzureConstants::REDIRECT_URI] = sprintf(
+    'https://%s/security-oauth-user/login',
+    getenv('SPRYKER_BE_HOST')
+);
+$config[OauthAzureConstants::PATH_AUTHORIZE] = '/oauth2/v2.0/authorize';
 $config[OauthAzureConstants::PATH_TOKEN] = '/oauth2/v2.0/token';
 ```
 
 ### 3) Set up transfer objects
 
 Generate transfer changes:
+
 ```bash
 console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
 
-
 Make sure that the following changes have been applied in the transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | OauthAuthenticationLinkTransfer | class | created | src/Generated/Shared/Transfer/OauthAuthenticationLinkTransfer |
 |ResourceOwnerTransfer| class| created| src/Generated/Shared/Transfer/ResourceOwner|
@@ -103,33 +101,35 @@ Make sure that the following changes have been applied in the transfer objec
 
 Activate the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | AzureOauthUserClientStrategyPlugin| Requests a resource owner using a specified option set. |None |SprykerEco\Zed\OauthAzure\Communication\Plugin\SecurityOauthUser|
 | AzureAuthenticationLinkPlugin| Prepares an OAuth Azure authentication link. |None| SprykerEco\Zed\OauthAzure\Communication\Plugin\SecurityGui|
 
 **src/Pyz/Zed/SecurityGui/SecurityGuiDependencyProvider.php**
+
 ```php
 <?php
 
 namespace Pyz\Zed\SecurityGui;
-	
+
 use Spryker\Zed\SecurityGui\SecurityGuiDependencyProvider as SprykerSecurityGuiDependencyProvider;
 use SprykerEco\Zed\OauthAzure\Communication\Plugin\SecurityGui\AzureAuthenticationLinkPlugin;
 
 class SecurityGuiDependencyProvider extends SprykerSecurityGuiDependencyProvider
-{	
-    /**	
-     * @return \Spryker\Zed\SecurityGuiExtension\Dependency\Plugin\AuthenticationLinkPluginInterface[]	
-     */	
-    protected function SecurityGuiDependencyProvider(): array	
-    {	
-        return [	
-            new AzureAuthenticationLinkPlugin(),	
-        ];	
-    }	
+{
+    /**
+     * @return \Spryker\Zed\SecurityGuiExtension\Dependency\Plugin\AuthenticationLinkPluginInterface[]
+     */
+    protected function SecurityGuiDependencyProvider(): array
+    {
+        return [
+            new AzureAuthenticationLinkPlugin(),
+        ];
+    }
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure you’ve activated `AzureAuthenticationLinkPlugin` by checking the **Login with Microsoft Azure** button on the Back Office login page.
@@ -142,22 +142,22 @@ Make sure you’ve activated `AzureAuthenticationLinkPlugin` by checking the **L
 <?php
 
 namespace Pyz\Zed\SecurityOauthUser;
-	
+
 use Spryker\Zed\SecurityOauthUser\SecurityOauthUserDependencyProvider as SprykerSecurityOauthUserDependencyProvider;
 use SprykerEco\Zed\OauthAzure\Communication\Plugin\SecurityOauthUser\AzureOauthUserClientStrategyPlugin;
 
 class SecurityOauthUserDependencyProvider extends SprykerSecurityOauthUserDependencyProvider
-{	
-    /**	
-     * @return \Spryker\Zed\SecurityOauthUserExtension\Dependency\Plugin\OauthUserClientStrategyPluginInterface[]	
-     */	
-    protected function getOauthUserClientStrategyPlugins(): array	
-    {	
-        return [	
-            new AzureOauthUserClientStrategyPlugin(),	
-        ];	
+{
+    /**
+     * @return \Spryker\Zed\SecurityOauthUserExtension\Dependency\Plugin\OauthUserClientStrategyPluginInterface[]
+     */
+    protected function getOauthUserClientStrategyPlugins(): array
+    {
+        return [
+            new AzureOauthUserClientStrategyPlugin(),
+        ];
     }
-}	
+}
 ```
 
 {% info_block warningBox "Verification" %}

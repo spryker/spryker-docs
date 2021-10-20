@@ -11,21 +11,24 @@ redirect_from:
   - /docs/en/comments-persistent-cart-feature-integration
 ---
 
-## Install Feature Core
+## Install feature core
+
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Comments | master |
-| Persistent Cart | master |
+| Comments | {{page.version}} |
+| Persistent Cart | {{page.version}} |
 
-### 1) Set up Behavior
+### 1) Set up behavior
+
 Register the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `CommentThreadQuoteExpanderPlugin` | Expands quote transfer with `CommentThread`. | None | `Spryker\Zed\Comment\Communication\Plugin\Quote` |
+| CommentThreadQuoteExpanderPlugin | Expands quote transfer with `CommentThread`. | None | Spryker\Zed\Comment\Communication\Plugin\Quote |
 
 **Pyz\Zed\Quote\QuoteDependencyProvider.php**
 
@@ -33,10 +36,10 @@ Register the following plugins:
 <?php
 
 namespace Pyz\Zed\Quote;
- 
+
 use Spryker\Zed\Comment\Communication\Plugin\Quote\CommentThreadQuoteExpanderPlugin;
 use Spryker\Zed\Quote\QuoteDependencyProvider as SprykerQuoteDependencyProvider;
- 
+
 class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 {
 	/**
@@ -52,35 +55,40 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that `QuoteTransfer::commentThread` contains information about comments when you retrieve a quote from the database.
+
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
+
 ### Prerequisites
+
 Please overview and install the necessary features before beginning the integration step.
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Comments | 201907.0 |
-| Cart | 201907.0 |
+| Comments | {{page.version}} |
+| Cart | {{page.version}} |
 
-### 1) Set up Behavior
+### 1) Set up behavior
+
 Register the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `CartCommentThreadAfterOperationStrategyPlugin` | Updates a session quote with the comment thread. | None | `SprykerShop\Yves\CartPage\Plugin\CommentWidget` |
+| CartCommentThreadAfterOperationStrategyPlugin | Updates a session quote with the comment thread. | None | SprykerShop\Yves\CartPage\Plugin\CommentWidget |
 
 **Pyz\Yves\CommentWidget\CommentWidgetDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\CommentWidget;
- 
+
 use SprykerShop\Yves\CartPage\Plugin\CommentWidget\CartCommentThreadAfterOperationStrategyPlugin;
 use SprykerShop\Yves\CommentWidget\CommentWidgetDependencyProvider as SprykerShopCommentDependencyProvider;
- 
+
 class CommentWidgetDependencyProvider extends SprykerShopCommentDependencyProvider
 {
 	/**
@@ -96,5 +104,7 @@ class CommentWidgetDependencyProvider extends SprykerShopCommentDependencyProvid
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that add/update/remove actions update a session quote with the latest comment thread.
+
 {% endinfo_block %}

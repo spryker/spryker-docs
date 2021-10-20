@@ -14,20 +14,22 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/product-labels-feature-integration.html
 ---
 
-## Install Feature Core
+## Install feature core
 Follow the steps below to install the feature core.
 
 
 ### Prerequisites
+
 To start feature integration, overview, and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Discontinued Products | 202009.0 |
-| Product Labels | 202009.0 |
-| Spryker Core | 202009.0 |
+| Discontinued Products | {{page.version}} |
+| Product Labels | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
-### 1) Import Data
+### 1) Import data
+
 Follow the steps to import product label data:
 
 {% info_block infoBox %}
@@ -46,10 +48,10 @@ Discontinued,1,1,0,discontinued,,,Discontinued,Abgesetzt,,3
 ```
 
 2. Run the command to import data:
-3. 
+
 ```bash
 console data:import product-label
-``` 
+```
 
 {% info_block warningBox "Verification" %}
 
@@ -57,11 +59,11 @@ Ensure that the configured data has been added to the spy_product_label  table i
 
 {% endinfo_block %}
 
-### 2) Set up Behaviour
+### 2) Set up behaviour
 
 Set up the following behavior:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | ProductDiscontinuedLabelUpdaterPlugin | Returns the list of relations of product labels to abstract products to assign or deassign product labels for. The results are used to persist product label relation changes into the database. The plugin is called by the `ProductLabelRelationUpdaterConsole` command. | None | Spryker\Zed\ProductDiscontinuedProductLabelConnector\Communication\Plugin |
 

@@ -37,22 +37,23 @@ Follow the steps below to install the Customer Account Management feature core.
 Overview and install the necessary features before beginning the integration.
 
 
-| Name | Version | Integration Guide |
+| NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- |--- |
-| Spryker Core | {% raw %}{{{% endraw %}variable.dev-master{% raw %}}}{% endraw %} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
 Run the following command to install the required modules:
 
 ```bash
-composer require spryker-feature/customer-account-management: "^dev-master" spryker/oauth-customer-connector:"^1.6.0" --update-with-dependencies
+composer require spryker-feature/customer-account-management: "{{page.version}}" spryker/oauth-customer-connector:"^1.6.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
 
 Ensure that the following modules have been installed:
-| Module | Expected Directory |
+
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | Customer | vendor/spryker/customer |
 | Oauth | vendor/spryker/oauth |
@@ -74,6 +75,7 @@ See [OAauth 2.0 Server Installation](https://oauth2.thephpleague.com/installatio
 
 
 **config/Shared/config_default.php**
+
 ```php
 $config[OauthConstants::PRIVATE_KEY_PATH] = 'file://path/to/private.key';
 $config[OauthConstants::PUBLIC_KEY_PATH] = 'file://path/to/public.key';
@@ -81,6 +83,7 @@ $config[OauthConstants::ENCRYPTION_KEY] = 'generated-encryption-key';
 $config[OauthConstants::OAUTH_CLIENT_IDENTIFIER] = 'client-identifier';
 $config[OauthConstants::OAUTH_CLIENT_SECRET] = 'client-secret';
 ```
+
 2. Optional: To enable the double opt-in for the customer registration, make `CustomerConfig::isDoubleOptInEnabled()` return `true`:
 
 ```php
@@ -111,6 +114,7 @@ Ensure that the double opt-in is enabled by registering a new customer and recei
 3. Optional: in order to control the customer account confirmation link sent in the registration confirmation email, use `CustomerConstants::REGISTRATION_CONFIRMATION_TOKEN_URL`. Note that the value has to contain the "%s" placeholder the actual customer's token value will be inserted to. You can set the configuration in the environment config:
 
 **config/Shared/config_default.php**
+
 ```php
 <?php
 
@@ -120,7 +124,9 @@ $config[CustomerConstants::REGISTRATION_CONFIRMATION_TOKEN_URL] = $config[Applic
 ```
 
 In case you do use double opt-in, you can also configure the link the customer will get in an email. This is valuable in case you use an alternative storefront. The Default link will lead to yves customer confirmation page.
+
 **config/Shared/config_default.php**
+
 ```php
 <?php
 
@@ -128,13 +134,17 @@ use Spryker\Shared\Customer\CustomerConstants;
 
 $config[CustomerConstants::REGISTRATION_CONFIRMATION_TOKEN_URL] = 'https://spa.mysprykershop.com/customer/confirm?token=%s';
 ```
+
 {% info_block warningBox "Verification" %}
 
 Ensure that email to confirm the registration uses the alternative link.
 
 {% endinfo_block %}
+
 There is a possibility to configure the password strength validation settings. You can do it in `src/Pyz/Zed/Customer/CustomerConfig.php`:
+
 **src/Pyz/Zed/Customer/CustomerConfig.php**
+
 ```php
 <?php
 
@@ -184,9 +194,10 @@ class CustomerConfig extends SprykerCustomerConfig
     }
 }
 ```
+
 Here is the description of the settings:
 
-| Setting | Meaning |
+| SETTING | MEANING |
 | --- | --- |
 | CustomerConfig::getCustomerPasswordAllowList() | Provides a list of strings that will be accepted as a password for the customer bypassing any policy validations. These will be accepted despite breaking other policies. |
 | CustomerConfig::getCustomerPasswordCharacterSet() | Provides regular expression for character set password validation. |
@@ -209,8 +220,7 @@ console propel:install
 
 Ensure that the following changes have been applied in the transfer objects:
 
-
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | CustomerCriteriaFilterTransfer | class | created | src/Generated/Shared/Transfer/CustomerCriteriaFilterTransfer.php |
 | CustomerIdentifierTransfer | class | created | src/Generated/Shared/Transfer/CustomerIdentifierTransfer.php |
@@ -233,17 +243,15 @@ Ensure that the following changes have been applied in the transfer objects:
 | RevokeRefreshTokenRequestTransfer | class |created| src/Generated/Shared/Transfer/RevokeRefreshTokenRequestTransfer.php |
 | RevokeRefreshTokenResponseTransfer | class | created|src/Generated/Shared/Transfer/RevokeRefreshTokenResponseTransfer.php |
 
-
-
-
 {% endinfo_block %}
 
 ### 4) Set up behavior
+
 Set up behavior as follows:
 
 1. Enable the following behaviors by registering the plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | CustomerOauthUserProviderPlugin | Provides a customer OAuth user. | None | Spryker\Zed\OauthCustomerConnector\Communication\Plugin |
 | CustomerOauthScopeProviderPlugin | Provides a list of customer scopes. | None | Spryker\Zed\OauthCustomerConnector\Communication\Plugin |		
@@ -261,8 +269,7 @@ Set up behavior as follows:
 | CustomerPasswordSetConsole | Sends the password reset email to all the customers with the empty password value in the database. | None | Spryker\Zed\Customer\Communication\Console |		
 | CustomerRegistrationConfirmationMailTypePlugin | Builds a mail for customer registration confirmation that is used when double opt in feature is enabled. | None | Spryker\Zed\Customer\Communication\Plugin\Mail |
 
-<details open>
-    <summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
+<details open><summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -389,12 +396,10 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
     }
 }
 ```
-
 </details>
 
 
-<details open>
-    <summary markdown='span'>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
+<details open><summary markdown='span'>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -422,12 +427,12 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     }
 }
 ```
-
 </details>
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the OAuth client has been added to the `spy_oauth_client` table by running following SQL-query. The result should contain one record. 
+Ensure that the OAuth client has been added to the `spy_oauth_client` table by running following SQL-query. The result should contain one record
+ 
 ```sql
 SELECT * FROM spy_oauth_client WHERE identifier = 'some-client-identifier';
 ```
@@ -444,6 +449,7 @@ Ensure that it is possible to obtain the customer OAuth access token with custom
 
 Ensure that `OauthRefreshTokenRemoverPlugin` is set up correctly:
 1. Run the command:
+
 ```bash
 console oauth:refresh-token:remove-expired
 ```
@@ -456,9 +462,11 @@ console oauth:refresh-token:remove-expired
 Ensure that running the `console customer:password:reset` command sends the password reset emails to all customers:
 
 1. Send the password reset email to all the customers inside the database:
+
 ```bash
 console customer:password:reset
 ```
+
 2. Open the `spy_customer.restore_password_key` table and ensure that all the customers have the password reset hash.
 
 {% endinfo_block %}
@@ -468,9 +476,11 @@ console customer:password:reset
 Ensure that running the `console customer:password:set` command sends the password reset emails to all the customers without passwords:
 
 1. Send password reset emails to all the customers without passwords:
+
 ```bash
 console customer:password:set
 ```
+
 2. Open the `spy_customer.restore_password_key` table and ensure that all the customers without passwords have the password reset hash.
 
 {% endinfo_block %}
@@ -480,6 +490,7 @@ console customer:password:set
 Ensure that running the `console customer:password:reset`command sends the password reset emails to all customers:
 
 1. Send the password reset email to all the customers inside the database:
+
 ```bash
 console customer:password:reset
 ```
@@ -500,8 +511,7 @@ console customer:password:set
 
 {% endinfo_block %}
 
-<details open>
-    <summary markdown='span'>src/Pyz/Zed/Mail/MailDependencyProvider.php</summary>
+<details open><summary markdown='span'>src/Pyz/Zed/Mail/MailDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -547,6 +557,7 @@ Ensure that customer confirmation email is sent to the newly registered customer
 2. Enable Jenkins check for finding and deleting expired refresh tokens:
 
 **config/Zed/cronjobs/jenkins.php**
+
 ```php
 <?php
 
@@ -580,12 +591,13 @@ Add infrastructural data as follows:
 
 1. Install the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | OauthClientInstallerPlugin | Populates the database with OAuth client data. | None | Spryker\Zed\Oauth\Communication\Plugin\Installer |
 | OauthCustomerScopeInstallerPlugin | Installs OAuth customer scope data. | None | Spryker\Zed\OauthCustomerConnector\Communication\Plugin\Installer |
 
 **src/Pyz/Zed/Installer/InstallerDependencyProvider.php**
+
 ```php
 <?php
 
@@ -611,6 +623,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 ```
 
 2. Run the following command to set up the OAuth client:
+
 ```bash
 console setup:init-db
 ```
@@ -627,27 +640,31 @@ Ensure that:
 
 
 ## Install feature front end
+
 Follow the steps below to install the Customer Account Management feature front end.
 
 ### Prerequisites
+
 Overview and install the necessary features before beginning the integration.
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Spryker Core | dev-master |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
+
 ```bash
-composer require spryker-feature/customer-account-management: "^dev-master" --update-with-dependencies
+composer require spryker-feature/customer-account-management: "{{page.version}}" --update-with-dependencies
 ```
 {% info_block warningBox "Verification" %}
 
 Ensure that the following modules were installed:
-| Module | Expected Directory |
+
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-| `CustomerPage` | `vendor/spryker-shop/customer-page` |
+| CustomerPage | vendor/spryker-shop/customer-page |
 
 {% endinfo_block %}
 
@@ -682,7 +699,9 @@ Ensure that double opt-in is enabled by registering a new customer and checking 
 {% endinfo_block %}
 
 By default, in Spryker, posting the login form (where SecurityBlocker will make its check and block customers who made too many failed login attempts) is local-independent. So, to be able to see error messages translated into different languages, you need to configure the locale to be added to the login path. You can do this by modifying the following configs:
+
 **src/Pyz/Yves/CustomerPage/CustomerPageConfig.php**
+
 ```php
 <?php
 
@@ -701,13 +720,17 @@ class CustomerPageConfig extends SprykerCustomerPageConfig
     }
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that when the login form for the customer is submitted, the URL it uses contains a locale code. For example, `/de/login_check` would be the default value for the customer.
 
 {% endinfo_block %}
+
 You can define the password minimum and maximum length the frontend will be using. They should be using the same as you defined for the core feature in the `CustomerConfig` above:
+
 **src/Pyz/Yves/CustomerPage/CustomerPageConfig.php**
+
 ```php
 <?php
 
@@ -758,6 +781,7 @@ customer.password.error.character_set,"Passwort muss mindestens 1 Zeichen von je
 ```
 
 2. Run the following console command to import data:
+
 ```bash
 console data:import glossary
 ```
@@ -771,14 +795,16 @@ Ensure the following:
 {% endinfo_block %}
 
 ### 4) Set up behavior
+
 Enable the following behaviors by registering the plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | RedirectUriCustomerRedirectStrategyPlugin | Redirects a customer who has just logged in to the `redirectURI` provided in parameters. | None | SprykerShop\Yves\CustomerPage\Plugin\CustomerPage |
 | CustomerConfirmationUserCheckerApplicationPlugin | Adds a service that checks if a customer confirmed the registration before authorizing them.   | None | SprykerShop\Yves\CustomerPage\Plugin\Application |
 
 **src/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php**
+
 ```php
 <?php
 
@@ -839,7 +865,7 @@ Ensure that when you try to access your account without confirming the registrat
 
 
 ## Related features
-| Name | Integration guide |
+| NAME | INTEGRATION GUIDE |
 | --- | --- |
 | Customer API	 | [Glue API: Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html) |
 | Customer Account Management + Order Management | [Customer Account Management + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-order-management-feature-integration.html)  |

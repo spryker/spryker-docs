@@ -11,18 +11,18 @@ redirect_from:
   - /docs/en/customer-account-management-order-management-feature-integration
 ---
 
-## Install Feature Core
+## Install feature core
 
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Customer Account Management | master |
-| Order Management | master |
-| Spryker Core | master |
+| Customer Account Management | {{page.version}} |
+| Order Management | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
-### 1) Set up Configuration
+### 1) Set up configuration
 To enable order search functionality, adjust config as shown below.
 
 **src/Pyz/Yves/CustomerPage/CustomerPageConfig.php**
@@ -39,13 +39,16 @@ class CustomerPageConfig extends SprykerCustomerPageConfig
     protected const IS_ORDER_HISTORY_SEARCH_ENABLED = true;
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure you see the order search form at the Order History page.
 
 {% endinfo_block %}
 
+
 ### 2) Add Translations
+
 Append glossary according to your configuration:
 
 **src/data/import/glossary.csv**
@@ -82,9 +85,11 @@ customer.order_history.reset_all,Alles zurücksetzen,de_DE
 ```
 
 Run the following console command to import data:
+
 ```bash
 console data:import glossary
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that in the database the configured data are added to the `spy_glossary` table.

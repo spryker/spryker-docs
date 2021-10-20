@@ -22,12 +22,11 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/retrieving-promotional-items.html
 ---
 
-The Promotions & Discounts feature enables product catalog managers to provide free value to their customers by discounting a percentage or a fixed sum of an order's subtotal or an item's price on predefined conditions.
+The _Promotions & Discounts_ feature enables product catalog managers to provide free value to their customers by discounting a percentage or a fixed sum of an order's subtotal or an item's price on predefined conditions.
 
 ## Discount types
 
 There are two discount types:
-
 * Voucher
 * Cart rule
 
@@ -51,7 +50,6 @@ See [Creating a Voucher](/docs/scos/user/back-office-user-guides/{{page.version}
 ## Cart rule
 
 A Cart rule is a discount that applies to cart once all the [decision rules](#decision-rule) linked to the cart rule are fulfilled.
-
 
 The cart rule is applied automatically. If the decision rules of a discount are fulfilled, the customer can see the discount upon entering cart. Unlike with [voucher](#voucher), the **Clear all** and **Remove** actions are not displayed.
 ![Cart rule](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/cart-cart-rule.png)
@@ -82,13 +80,12 @@ The decision rules from the previous example look as follows in the Query Builde
 A product catalog manager can enter the query manually as well.
 
 The same decision rules look as follows as a plain query:
-![Plain query](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/plain-query.png)
+
+`total-quantity = '3' AND day-of-week = '5'`
 
 You can switch between Query Builder and Plain query modes to see how the specified decision rules look in either of them.  
 
-
 Decision rules are combined with *AND* and *OR*  combination operators. With the AND operator, all the rules should be fulfilled for the discount to be applied. With the OR operator, at least one of them should be fulfilled for the discount to be applied.
-
 
 In the following example, for the discount to be applied, a cart should contain 3 items and the purchase should be made on Wednesday.
 ![AND operator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/and-operator.png)
@@ -115,6 +112,7 @@ With the rule groups, you can build multiple levels of rule hierarchy. When a ca
 When a cart is evaluated on a level that has a rule and a rule group, the rule group is treated as a single rule. The diagram below shows how a cart is evaluated against the rules on the previous screenshot.
 
 ### Discount threshold
+
 Threshold is a minimum number of items in cart that should fulfill all the specified decision rules for the discount to be applied.
 The default value is *1* . It means that a discount is applied if at least one item fulfills the discount's decision rules.
 
@@ -126,7 +124,6 @@ In the following example, the discount is applied if there are four items with t
 Discount application is a discount configuration option that defines the products to which a discount is applied.
 
 There are two types of discount application:
-
 * Query String
 * Promotional product
 
@@ -152,12 +149,9 @@ A product catalog manager selects the promotional product by entering an abstrac
 
 ![Collection - promotional product](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/collection-promotional-product.png)
 
-
-
 ## Discount calculation
 
 Calculation defines the value to be deducted from a product's default price. There are two types of discount calculation:
-
 * Calculator percentage
 * Calculator fixed
 
@@ -168,6 +162,7 @@ With the calculator fixed type, the currency of the respective shop is used for 
 {% endinfo_block %}
 
 See examples in the table below.
+
 | PRODUCT PRICE | CALCULATION TYPE | AMOUNT | DISCOUNT APPLIED | PRICE TO PAY |
 | --- | --- | --- | --- | --- |
 | €50 |  Calculator percentage | 10 | €5 | €45 |

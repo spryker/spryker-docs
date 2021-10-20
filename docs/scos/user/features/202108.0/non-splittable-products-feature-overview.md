@@ -25,6 +25,7 @@ In the import file, you can set three values for quantity restrictions: minimum,
 The *minimum* value defines the smallest allowable quantity of a specific item in the cart. The *maximum* quantity restricts the allowable quantity of items in the cart to a specific value. The *interval* value determines an increment value by which the quantity can be changed. For example, if you specify minimum quantity as 5, interval as 3, and maximum quantity as 14, it means that a user can put 5, 8, 11, and 14 items to the cart. If a user puts an unacceptable quantity of items to cart, they will be suggested to buy another, allowable, quantity of items.
 
 ## Current constraints
+
 Currently, the feature has the following functional constraints:
 * According to the current setup, quantity suggestions in the quantity restrictions do not work with the shopping lists. A buyer can add any quantity of the product to the shopping list. It can lead to a situation where the customer is forced to guess what amount should be added from a shopping list - because they will not see quantity suggestions on the shopping list page. However, when they add this product from a shopping list to a shopping cart, an error message will appear notifying the buyer that a selected amount cannot be added (if any quantity restrictions were set up for this product).
 * There is no UI for the product restrictions in the Back Office.

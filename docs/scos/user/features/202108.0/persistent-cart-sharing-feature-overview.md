@@ -21,12 +21,10 @@ The cart can be shared with internal users—the users of the business unit, and
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Unique+URL+per+Cart+for+Easy+Sharing/external-users-interface.png)
 
-
 By accessing the preview link, they open the HTML page with all the information about the products, like product options, groups, packaging units, items for bundle products.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Unique+URL+per+Cart+for+Easy+Sharing/cart-preview-share.png)
 
 The user can view and print the information from the preview link.
-
 
 {% info_block warningBox %}
 

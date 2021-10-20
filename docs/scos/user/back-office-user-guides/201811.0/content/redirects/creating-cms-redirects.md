@@ -30,4 +30,4 @@ On the **Add a CMS Redirect** page, you can return to the list of redirects by c
 #### What's next?
 The redirect URL has been created. However, you can either edit it or delete.
 
-* To learn how to edit and/or delete a redirect, see [Managing CMS Redirects](https://documentation.spryker.com/v1/docs/managing-cms-redirects).
+* To learn how to edit and/or delete a redirect, see [Managing CMS Redirects](/docs/scos/user/back-office-user-guides/{{page.version}}/content/redirects/managing-cms-redirects.html).

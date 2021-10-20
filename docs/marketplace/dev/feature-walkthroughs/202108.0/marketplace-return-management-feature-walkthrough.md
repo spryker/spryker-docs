@@ -15,6 +15,8 @@ To learn more about the feature and to find out how end users use it, see [Marke
 
 ## Module dependency graph
 
+The following diagram illustrates the dependencies between the modules for the *Marketplace Return Management* feature.
+
 ![Entity diagram](https://confluence-connect.gliffy.net/embed/image/e12bcdcb-8510-4ebf-80c3-0ee1c3054002.png?utm_medium=live&utm_source=confluence)
 
 | MODULE     | DESCRIPTION                |

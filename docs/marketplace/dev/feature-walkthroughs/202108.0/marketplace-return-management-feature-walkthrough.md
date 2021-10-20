@@ -2,7 +2,7 @@
 title: Marketplace Return Management feature walkthrough
 last_updated: Sep 29, 2021
 description: This article provides technical details on the Marketplace Return Management feature.
-template: marketplace-return-management-feature-walkthrough
+template: feature-walkthrough-template
 ---
 
 With the *Marketplace Return Management* feature, marketplace merchants can manage their returns.

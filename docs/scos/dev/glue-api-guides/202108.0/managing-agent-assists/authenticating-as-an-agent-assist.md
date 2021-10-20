@@ -26,16 +26,13 @@ For detailed information on the modules that provide the API functionality and r
 
 *   [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html)
 
-
-
 ## Authenticate as an agent assist
-
 
 To login as an agent, send the request:
 
-* * *
+***
 `POST` **/agent-access-tokens**
-* * *
+***
 
 ### Request
 
@@ -53,20 +50,20 @@ Request sample: `POST https://glue.mysprykershop.com/agent-access-tokens`
 }
 ```
 
-| Attribute | Type | Required | Description |
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | username | String | &check; | Username of the agent assist. |
 | password | String | &check; | Password of the agent assist. |
 
 {% info_block warningBox %}
-Note that depending on the Login feature configuration for your project, too many unsuccessful login attempts may result in the 429 error, and the user will be locked out for some time. For details, see [Storefront Login feature overview](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-login-overview.html)
-{% endinfo_block %}
 
+Note that depending on the Login feature configuration for your project, too many unsuccessful login attempts may result in the 429 error, and the user will be locked out for some time. For details, see [Storefront Login feature overview](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-login-overview.html)
+
+{% endinfo_block %}
 
 ### Response
 
-<details open>
-    <summary markdown='span'>markdown='span'>Response sample</summary>
+<details><summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -88,8 +85,7 @@ Note that depending on the Login feature configuration for your project, too man
 
 </details>
 
-
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | tokenType | String | Type of the authentication token. Set this type when sending a request with the token. |
 | expiresIn | Integer | Time in seconds in which the `accessToken` token expires. |
@@ -98,7 +94,7 @@ Note that depending on the Login feature configuration for your project, too man
 
 ## Possible errors
 
-| Code  | Reason |
+| CODE  | REASON |
 | --- | --- |
 |4101 | Failed to authenticate an agent. |
 
@@ -106,9 +102,6 @@ To view generic errors that originate from the Glue Application, see [Reference 
 
 ## Next steps
 
-
 After you’ve authenticated in as an agent assist, you can:
-
 *   [Search by customers](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/searching-by-customers-as-an-agent-assist.html#search-by-customers)
-
 *   [Impersonate a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/impersonating-customers-as-an-agent-assist.html#impersonate-a-customer)

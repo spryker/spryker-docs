@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/submitting-checkout-data
 ---
 
-This endpoint allows submitting checkout data as many times as you need. Using the endpoint, you can implement checkout steps in your Glue API client, perform verification steps and execute other operations that require multiple calls to complete. The endpoint does not allow placing an order. 
+This endpoint allows submitting checkout data as many times as you need. Using the endpoint, you can implement checkout steps in your Glue API client, perform verification steps and execute other operations that require multiple calls to complete. The endpoint does not allow placing an order.
 
 To help customers select payment and shipment methods, the endpoint allows retrieving all the available methods so that you can display them to the customers. To simplify navigation through all the available methods, you can sort them by any attribute.  
 
@@ -40,10 +40,10 @@ To submit checkout data without order confirmation, send the request:
 
 
 
-| Query parameter | Description | Possible values |
+| QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | Include | Adds resource relationships to the request.	 | payment-methods, shipments, shipment-methods, addresses, company-business-unit-addresses |
-| sort | Sorts included shipment and payment methods by an attribute. | {% raw %}{{{% endraw %}included_resource{% raw %}}}{% endraw %}.{% raw %}{{{% endraw %}attribute{% raw %}}}{% endraw %}, -{% raw %}{{{% endraw %}included_resource{% raw %}}}{% endraw %}.{% raw %}{{{% endraw %}attribute{% raw %}}}{% endraw %} |
+| sort | Sorts included shipment and payment methods by an attribute. | {% raw %}{{{% endraw %}included_resource{% raw %}}}{% endraw %}.{% raw %}{{{% endraw %}attribute{% raw %}}}{% endraw %}, {% raw %}{{{% endraw %}included_resource{% raw %}}}{% endraw %}.{% raw %}{{{% endraw %}attribute{% raw %}}}{% endraw %} |
 {% info_block infoBox "Included resources" %}
 
 To retrieve all available shipment methods, submit checkout data with one or more shipments and include `shipments` and `shipment-methods` resources.
@@ -51,7 +51,7 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 {% endinfo_block %}
 
 
-| Request | Usage |
+| REQUEST | USAGE |
 | --- | --- |
 | POST https://glue.mysprykershop.com/checkout-data | Submit checkout data. |
 | POST https://glue.mysprykershop.com/checkout-data?include=payment-methods | Submit checkout data and include all available payment methods in the response. |
@@ -63,7 +63,7 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 
 
 
-<details open>
+<details>
     <summary markdown='span'>Request sample with one shipment</summary>
 
 ```json
@@ -121,10 +121,10 @@ To retrieve all available shipment methods, submit checkout data with one or mor
     }
 }
 ```
-    
+
 </details>
 
-<details open>
+<details>
     <summary markdown='span'>Request sample with a split shipment</summary>
 
 ```json
@@ -206,7 +206,7 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 
 </details>
 
-<details open>
+<details>
     <summary markdown='span'>Request sample with a split shipment and addresses passed as IDs</summary>
 
 ```json
@@ -257,7 +257,7 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 </details>
 
 
-| Attribute                                              | Type   | Required | Description                                                  |
+| ATTRIBUTE | TYPE   | REQUIRED | DESCRIPTION  |
 | :----------------------------------------------------- | :----- | :------- | :----------------------------------------------------------- |
 | billingAddress                                         | Object |          | Customer's billing [address](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-addresses.html). |
 | billingAddress.id                                      | String | .        | A hyphenated alphanumeric value of an existing customer address. To get it, include the `addresses` resource in your request or [retrieve a customer's addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-addresses.html#retrieve-a-customer-s-addresses). If you pass this value for a billing or shipping address, do not pass the other address attributes. |
@@ -298,9 +298,9 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 ### Response
 In case of a successful update, the endpoint responds with information that can help you fill in the missing checkout data, like the customer's addresses, available payment and shipment methods.
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with one shipment</summary>
-    
+
 ```json
 {
     "data": {
@@ -333,7 +333,7 @@ In case of a successful update, the endpoint responds with information that can 
 
 
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with a split shipment</summary>
 
 ```json
@@ -462,7 +462,7 @@ In case of a successful update, the endpoint responds with information that can 
 
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with a split shipment, shipments, and shipment methods</summary>
 
 ```json
@@ -713,7 +713,7 @@ In case of a successful update, the endpoint responds with information that can 
 
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with customer addresses</summary>
 
 ```json
@@ -836,7 +836,7 @@ In case of a successful update, the endpoint responds with information that can 
 </details>
 
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with company business unit addresses</summary>
 
 ```json
@@ -908,7 +908,7 @@ In case of a successful update, the endpoint responds with information that can 
 
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with payment methods</summary>
 
 ```json
@@ -997,20 +997,20 @@ In case of a successful update, the endpoint responds with information that can 
 </details>
 
 
-| Attribute                                  | Type   | Description                                                  |      |
-| :----------------------------------------- | :----- | :----------------------------------------------------------- | :--- |
-| addresses                                  | Array  | A list of customer addresses that can be used for billing or shipping. This attribute is deprecated. To retrieve all available addresses, include the `addresses` resource in your request. |      |
-| paymentProviders                           | Array  | Payment providers that can be used for the checkout. This attribute is deprecated. To retrieve all the available payment methods, include the `payment-methods` resource in your request. |      |
-| shipmentMethods                            | Array  | A list of available shipment methods. This attribute is deprecated. To retrieve all the available shipment methods, include the `shipment-methods` resource in your request. |      |
-| selectedShipmentMethods                    | Array  | Shipment methods selected for the order. This value is returned only if you submit an order without shipments. See [Submitting checkout data in version 202009.0](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/submitting-checkout-data.html) to learn how to do that. |      |
-| selectedPaymentMethods                     | Array  | Payment methods selected for this order.                     |      |
-| selectedPaymentMethods.paymentMethodName   | String | Payment method name.                                         |      |
-| selectedPaymentMethods.paymentProviderName | String | Name of the payment provider for this payment method.        |      |
-| selectedPaymentMethods.priority            | String | Defines the order of returned payment methods in ascending order. |      |
-| selectedPaymentMethods.requiredRequestData | Array  | A list of attributes required by the given method to effectuate a purchase. The actual list depends on the specific provider. |      |
+| ATTRIBUTE | TYPE   | DESCRIPITON |
+| ----------- | ----- | ----- |
+| addresses | Array  | A list of customer addresses that can be used for billing or shipping. This attribute is deprecated. To retrieve all available addresses, include the `addresses` resource in your request. |
+| paymentProviders   | Array  | Payment providers that can be used for the checkout. This attribute is deprecated. To retrieve all the available payment methods, include the `payment-methods` resource in your request. |  
+| shipmentMethods       | Array  | A list of available shipment methods. This attribute is deprecated. To retrieve all the available shipment methods, include the `shipment-methods` resource in your request. |  
+| selectedShipmentMethods     | Array  | Shipment methods selected for the order. This value is returned only if you submit an order without shipments. See [Submitting checkout data in version 202009.0](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/submitting-checkout-data.html) to learn how to do that. |
+| selectedPaymentMethods    | Array  | Payment methods selected for this order.   |
+| selectedPaymentMethods.paymentMethodName   | String | Payment method name.  |
+| selectedPaymentMethods.paymentProviderName | String | Name of the payment provider for this payment method.        |
+| selectedPaymentMethods.priority   | String | Defines the order of returned payment methods in ascending order. |
+| selectedPaymentMethods.requiredRequestData | Array  | A list of attributes required by the given method to effectuate a purchase. The actual list depends on the specific provider. |
 
 
-| Included resource | Attribute | Type | Description |
+| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
 | payment-methods | paymentMethodName | String | Payment method name. |
 | payment-methods | paymentProviderName | String | Payment provider name. |
@@ -1082,12 +1082,11 @@ In case of a successful update, the endpoint responds with information that can 
 
 ## Possible errors
 
-| Status | Reason |
+| CODE | REASON |
 | --- | --- |
-| 400 | Bad request. This error can occur due to the following reasons:<ul><li>The POST data is incorrect;</li><li>Neither **Authorization** nor **X-Anonymous-Customer-Unique-Id** headers were provided in the request.</li></ul> |
+| 400 | Bad request. This error can occur due to the following reasons:<ul><li>The POST data is incorrect.</li><li>Neither **Authorization** nor **X-Anonymous-Customer-Unique-Id** headers were provided in the request.</li></ul> |
 | 422 | The checkout data is incorrect. |
 
 ## Next steps
 
-* [Checking out purchases](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html)
-
+[Checking out purchases](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html)

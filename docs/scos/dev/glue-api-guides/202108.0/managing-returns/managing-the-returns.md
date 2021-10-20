@@ -48,11 +48,11 @@ To create a return for a registered user, send the request:
 ### Request
 
 
-| Header key | Header value | Required | Description |
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | ✓ | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
 
-| Query parameter | Description | Possible values |
+| QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | offset | Ofset of the order at which to begin the response. </br> Works only together with `page[limit]`. </br> To work correctly, the value should be devisable by the value of `page[limit]`. </br> The default value is `0`.  | From `0` to any. |
 | limit | Maximum number of entries to return. </br> Works only together with `page[offset]`. </br> The default value is `10`. | From `1` to any. |
@@ -81,7 +81,7 @@ Request sample: `POST https://glue.mysprykershop.com/returns`
 }
 ```
 
-| Attribute | Type | Required | Description |
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | store | String | ✓ | Store in which the order has been placed. |
 | returnItems | cell | ✓ | Set of return items. |
@@ -204,7 +204,7 @@ Request sample: `POST https://glue.mysprykershop.com/returns`
 
 </details>
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | returnReference | String | Unique identifier of the return in the system. You can get it when creating the return. |
 | store | String | Store for which the return was created. |
@@ -264,11 +264,11 @@ To retrieve returns, send the request:
 
 ### Request
 
-| Header key | Header value | Required | Description |
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | ✓ | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
 
-| Query parameter | Description | Possible values |
+| QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | offset | Ofset of the order at which to begin the response. </br> Works only together with `page[limit]`. </br> To work correctly, the value should be devisable by the value of `page[limit]`. </br> The default value is `0`.  | From `0` to any. |
 | limit | Maximum number of entries to return. </br> Works only together with `page[offset]`. </br> The default value is `10`. | From `1` to any. |
@@ -277,7 +277,7 @@ Request sample: `GET https://glue.mysprykershop.com/returns`
 
 ### Response
 
-<details open>
+<details>
     <summary markdown='span'>Response sample</summary>
 
 ```json
@@ -340,7 +340,7 @@ Request sample: `GET https://glue.mysprykershop.com/returns`
 
 </details>
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | returnReference | String | Unique identifier of the return in the system. You can get it when creating the return. |
 | store | String | Store for which the return was created. |
@@ -357,17 +357,17 @@ To retrieve a return, send the request:
 `GET` **/returns/*{% raw %}{{{% endraw %}returnID{% raw %}}}{% endraw %}***
 ***
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}returnID{% raw %}}}{% endraw %}*** | Unique identifier of a return to retrieve. |
 
 ### Request
 
-| Header key | Header value | Required | Description |
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | ✓ | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
 
-| Query parameter | Description | Possible values |
+| QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | offset | Ofset of the order at which to begin the response. </br> Works only together with `page[limit]`. </br> To work correctly, the value should be devisable by the value of `page[limit]`. </br> The default value is `0`.  | From `0` to any. |
 | limit | Maximum number of entries to return. </br> Works only together with `page[offset]`. </br> The default value is `10`. | From `1` to any. |
@@ -490,7 +490,7 @@ Sample request: `GET http://glue.mysprykershop.com/returns/DE--1-R3`
 
 </details>
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | returnReference | String | Unique identifier of the return in the system. You can get it when creating the return. |
 | store | String | Store for which the return was created. |
@@ -540,7 +540,7 @@ Sample request: `GET http://glue.mysprykershop.com/returns/DE--1-R3`
 
 ## Possible Errors
 
-| Code | Reason |
+| CODE | REASON |
 | --- | --- |
 | 3601 | Return can't be created. |
 

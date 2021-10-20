@@ -31,34 +31,27 @@ For detailed information on the modules that provide the API functionality and r
 
 ## Retrieve a company business unit
 
-
 To retrieve a business unit, send the request:
 
 ***
 `GET` **/company-business-units/*{% raw %}{{{% endraw %}business_unit_id{% raw %}}}{% endraw %}***
 ***
 
-
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}business_unit_id{% raw %}}}{% endraw %}*** | Unique identifier of a business unit to retireve information for. Enter `mine` to retireve information on the business unit of the current authenticated company user.  |
 
-
-
 ### Request
 
-| Header key | Type | Required | Description |
+| HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | &check; | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
-| Query parameter | Description | Possible values |
+| QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | Include | Adds resource relationships to the request. | companies, company-business-unit-addresses |
 
-
-
-
-| Request | Usage |
+| REQUEST | USAGE |
 | --- | --- |
 | GET http://glue.mysprykershop.com/company-business-units/mine | Retrive business units of the current authenticated company user. |
 | GET http://glue.mysprykershop.com/company-business-units/b8a06475-73f5-575a-b1e9-1954de7a49ef | Retrieve the business unit with the unique identifier `b8a06475-73f5-575a-b1e9-1954de7a49ef`. |
@@ -67,10 +60,9 @@ To retrieve a business unit, send the request:
 
 #### Response
 
+<details>
+<summary markdown='span'>Response sample</summary>
 
-<details open>
-    <summary markdown='span'>Response sample</summary>
-    
 ```json
 {
     "data": [
@@ -96,12 +88,10 @@ To retrieve a business unit, send the request:
     }
 }
 ```
-    
+
 </details>
 
-
-<details open>
-    <summary markdown='span'>Response sample with business units of a company user</summary>
+<details><summary markdown='span'>Response sample with business units of a company user</summary>
 
 ```json
 {
@@ -123,12 +113,11 @@ To retrieve a business unit, send the request:
     }
 }
 ```
-    
+
 </details>
 
 
-<details open>
-    <summary markdown='span'>Response sample with companies</summary>
+<details><summary markdown='span'>Response sample with companies</summary>
 
 ```json
 {
@@ -164,11 +153,11 @@ To retrieve a business unit, send the request:
     ]
 }
 ```
-    
+
 </details>
 
-<details open>
-    <summary markdown='span'>Response sample with company business unit addresses</summary>
+<details>
+<summary markdown='span'>Response sample with company business unit addresses</summary>
 
 ```json
 {
@@ -209,13 +198,10 @@ To retrieve a business unit, send the request:
     ]
 }
 ```
-    
+
 </details>
 
-
-
-
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | id | String | Specifies a unique identifier of the business unit. You can use the identifier to access the unit in the future. |
 | name | String | Specifies the name of the business unit. |
@@ -226,7 +212,7 @@ To retrieve a business unit, send the request:
 | iban | String | Specifies the International Bank Account Number of the business unit. |
 | defaultBillingAddress | String | Specifies the ID of the business unit default billing address. For details on how to retrieve the actual address, see the *Retrieving Business Unit Addresses* section. |
 
-| Included resource | Attribute | Type | Description |
+| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
 | companies | name | String | Specifies the company name. |
 | companies | isActive | Boolean | Indicates whether the company is active. |
@@ -239,11 +225,10 @@ To retrieve a business unit, send the request:
 | company-business-unit-addresses | phone | String | Specifies the phone number of the business unit. |
 | company-business-unit-addresses | iso2Code | String | Specifies an ISO 2 country code to use. |
 | company-business-unit-addresses | comment  | String | Specifies an optional comment to the business unit. |
-  
 
 ## Possible errors
 
-| Status | Reason |
+| CODE | REASON |
 | --- | --- |
 | 001 | Access token is invalid. |
 | 002 | Access token is missing. |
@@ -251,7 +236,6 @@ To retrieve a business unit, send the request:
 | 1901 | Specified business unit was not found or the user does not have access to it. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
-
 
 ##  Next steps
 

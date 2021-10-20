@@ -31,7 +31,7 @@ To retrieve measurement unit information by product measurement unit code, send 
 
 
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}product_measurement_unit_code{% raw %}}}{% endraw %}*** | Code of a measurement unit to get information for. |
 
@@ -61,7 +61,7 @@ Response sample:
 
 <a name="measurement-units-response-attributes"></a>
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | name | string | Name of the product measurement unit. |
 | defaultPrecision | integer | Default ratio between a sales unit and a base unit. It is used when precision for a related sales unit is not specified. |

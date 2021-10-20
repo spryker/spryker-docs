@@ -34,7 +34,7 @@ To retrieve general information about a concrete product, send the request:
 
 ---
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}*** | SKU of a concrete product to get information for. |
 
@@ -264,7 +264,7 @@ To retrieve general information about a concrete product, send the request:
 
  </details>
  
- <details open>
+ <details>
     <summary markdown='span'>Response sample with product image sets</summary>
     
 ```json
@@ -344,7 +344,7 @@ To retrieve general information about a concrete product, send the request:
     
 </details>
 
- <details open>
+ <details>
     <summary markdown='span'>Response sample with product availability</summary>
     
 ```json
@@ -607,7 +607,7 @@ To retrieve general information about a concrete product, send the request:
 
 </details>
 
- <details open>
+ <details>
     <summary markdown='span'>Response sample with product options</summary>
     
 ```json
@@ -699,7 +699,7 @@ To retrieve general information about a concrete product, send the request:
     
 </details>
 
- <details open>
+ <details>
     <summary markdown='span'>Response sample with reviews</summary>
     
 ```json
@@ -806,7 +806,7 @@ To retrieve general information about a concrete product, send the request:
     
 </details>
 
- <details open>
+ <details>
     <summary markdown='span'>Response sample with bundled products</summary>
     
 ```json
@@ -1019,7 +1019,7 @@ To retrieve general information about a concrete product, send the request:
 </details>
 
 
-<details open>
+<details>
     <summary markdown='span'>Response sample with bundled products, concrete products, and abstract products</summary>
     
 ```json

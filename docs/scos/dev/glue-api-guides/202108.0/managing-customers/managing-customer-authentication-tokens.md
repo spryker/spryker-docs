@@ -32,7 +32,7 @@ To refresh an authentication token, send the request:
 ### Request
 
 
-<details open>
+<details>
     <summary markdown='span'>Request sample: POST http://glue.mysprykershop.com/refresh-tokens</summary>
     
 ```json
@@ -54,7 +54,7 @@ To refresh an authentication token, send the request:
 
 ### Response
 
-<details open><summary markdown='span'>Response sample</summary>
+<details><summary markdown='span'>Response sample</summary>
 
 ```json
 {

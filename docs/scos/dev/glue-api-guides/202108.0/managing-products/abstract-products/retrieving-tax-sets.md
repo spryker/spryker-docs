@@ -27,7 +27,7 @@ To retrieve tax sets of a product, send the request:
 
 ---
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}*** | SKU of an abstract product to get the tax sets of. |
 
@@ -37,7 +37,7 @@ Request sample: `GET http://glue.mysprykershop.com/abstract-products/209/product
 
 ### Response
 
-<details open>
+<details>
     <summary markdown='span'>Response sample</summary>
     
 ```json

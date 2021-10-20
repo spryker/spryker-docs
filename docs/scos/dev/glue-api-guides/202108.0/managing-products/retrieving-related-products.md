@@ -42,7 +42,7 @@ To get related items of an abstract product, send the request:
 `GET` **/abstract-products/*{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}*/related-products**
 ***
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}*** | SKU of an abstract product to retrieve related products of. | 
 
@@ -53,7 +53,7 @@ To get related items of an abstract product, send the request:
 
 
 
-| Request | Usage |
+| REQUEST | USAGE |
 | --- | --- |
 | `GET http://glue.mysprykershop.com/abstract-products/122/related-products` | Retrieve related products of the specified product. |
 | `GET http://glue.mysprykershop.com/abstract-products/122/related-products?include=product-labels` | Retrieve related products of the specified product. Product labels assigned to the related products are included. |
@@ -63,7 +63,7 @@ To get related items of an abstract product, send the request:
 
 ### Response
 
-<details open>
+<details>
 <summary markdown='span'>Response sample</summary>
 
 ```json
@@ -305,7 +305,7 @@ To get related items of an abstract product, send the request:
 
 
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with included product labels</summary>
 
 ```json
@@ -600,7 +600,7 @@ To get related items of an abstract product, send the request:
 
 <a name="related-product-attributes"></a>
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | sku | String | SKU of the abstract product |
 | name | String | Name of the abstract product |
@@ -616,7 +616,7 @@ To get related items of an abstract product, send the request:
 |metaDescription|String|Meta description of the product.|
 |attributeNames | Object | All non-super attribute/value combinations for the abstract product. |
 
-| Included resource | Attribute | Type | Description |
+| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
 | product labels | name | String | Specifies the label name. |
 | product labels | isExclusive | Boolean | Indicates whether the label is `exclusive`.</br>If the attribute is set to true, the current label takes precedence over other labels the product might have. This means that only the current label should be displayed for the product, and all other possible labels should be hidden. |
@@ -636,7 +636,7 @@ To get upselling items for all products in a cart of a registered customer, send
 ---
 
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}}*** | ID of a cart to get upselling items of. [Retrieve all carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-all-carts) to get it. | 
 
@@ -646,7 +646,7 @@ To get upselling items for all products in a cart of a registered customer, send
 | include | Adds resource relationships to the request. | product-labels |
 
 
-| Request | Usage |
+| REQUEST | USAGE |
 | --- | --- |
 | `GET GET http://mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/up-selling-products` | Retrieve upselling products of the specified cart. |
 | `GET http://glue.mysprykershop.com/carts/f9a3f045-02c2-5d47-b397-8ac1f5c63e27/up-selling-products?include=product-labels` | Retrieve upselling products of the specified cart. Product labels assigned to the upselling products are included. |
@@ -655,7 +655,7 @@ To get upselling items for all products in a cart of a registered customer, send
 
 ### Response
 
-<details open>
+<details>
 <summary markdown='span'>Response sample</summary>
 
 ```json
@@ -906,7 +906,7 @@ To get upselling items for all products in a cart of a registered customer, send
 
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with product labels</summary>
 
 ```json
@@ -1015,7 +1015,7 @@ To retrieve upselling products of a guest cart, send the request:
 `GET` **/guest-carts/*{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*/up-selling-products**
 ***
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}}*** | Unique identifier of a guest cart to get upselling items of.  | 
 
@@ -1034,7 +1034,7 @@ To retrieve upselling products of a guest cart, send the request:
 | include | Adds resource relationships to the request. | product-labels |
 
 
-| Request | Usage |
+| REQUEST | USAGE |
 | --- | --- |
 | `GET http://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/up-selling-products` | Retrieve upselling products of the specified cart. |
 | `GET http://glue.mysprykershop.com/guest-carts/f9a3f045-02c2-5d47-b397-8ac1f5c63e27/up-selling-products?include=product-labels` | Retrieve upselling products of the specified cart. Product labels assigned to the upselling products are included. |
@@ -1043,7 +1043,7 @@ To retrieve upselling products of a guest cart, send the request:
 
 ### Response
 
-<details open>
+<details>
 <summary markdown='span'>Response sample</summary>
 
 ```json
@@ -1246,7 +1246,7 @@ To retrieve upselling products of a guest cart, send the request:
 </details>
 
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with product labels</summary>
     
 ```json
@@ -1352,7 +1352,7 @@ See [Retrieving Related Items of an Abstract Product](#related-product-attribute
 
 
 ## Possible errors
-| Code | Reason |
+| CODE | REASON |
 | --- | --- |
 | 101 | Сart with the specified ID was not found. |
 | 104 | Cart ID is missing. |

@@ -28,7 +28,7 @@ For detailed information on the modules that provide the API functionality and r
 
 ---
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}*** | SKU of a concrete product to get abailability for. |
 
@@ -41,7 +41,7 @@ To view generic errors that originate from the Glue Application, see [Reference 
 ### Response
 
 
-<details open>
+<details>
     <summary markdown='span'>Response sample</summary>
 
 ```json

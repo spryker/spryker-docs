@@ -48,12 +48,12 @@ To place an order, send the request:
 `POST` **/checkout**
 ***
 
-
-
 ### Request
 
 {% info_block warningBox "Cart deletion" %}
+
 By default, if checkout is successful, the order is placed, and the cart is deleted automatically.
+
 {% endinfo_block %}
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
@@ -63,7 +63,7 @@ By default, if checkout is successful, the order is placed, and the cart is dele
 
 
 
-| Query parameter | Description | Possible values |
+| QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request.	 | orders, order-shipments |
 {% info_block infoBox "Included resources" %}
@@ -73,7 +73,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 {% endinfo_block %}
 
 
-<details open>
+<details>
     <summary markdown='span'>Request sample with one shipment</summary>
 `POST https://glue.mysprykershop.com/checkout`
 
@@ -138,7 +138,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 
 </details>
 
-<details open>
+<details>
     <summary markdown='span'>Request sample with a split shipment</summary>
 `POST https://glue.mysprykershop.com/checkout?include=orders`
 
@@ -225,7 +225,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 </details>
 
 
-<details open>
+<details>
     <summary markdown='span'>Request sample with one shipment, order information, and shipment information</summary>
 `POST glue.de.spryker.local/checkout?include=orders,order-shipments`
 
@@ -293,7 +293,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 </details>
 
 
-<details open>
+<details>
     <summary markdown='span'>Request sample with a split shipment and addresses passed as IDs</summary>
 `POST https://glue.mysprykershop.com/checkout`
 
@@ -448,7 +448,7 @@ To prevent fraud, the *invoice* payment method is not accepted if a cart contain
 
 </details>
 
-<details open>
+<details>
     <summary markdown='span'>Response sample with a split shipment, order information, and shipment information</summary>
 
 ```json
@@ -666,7 +666,7 @@ To prevent fraud, the *invoice* payment method is not accepted if a cart contain
 
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with configurable bundles</summary>
 
 ```json
@@ -1260,7 +1260,7 @@ To prevent fraud, the *invoice* payment method is not accepted if a cart contain
 
 
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | orderReference | String | Unique identifier of the order. |
 | redirectUrl | String | The URL to perform the payment verification requested by the selected payment method. After completing verification, ensure to [update payment data](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/updating-payment-data.html#update-payment-data). If the value is `null` or empty, no additional verification is reuiqred. |
@@ -1294,16 +1294,9 @@ To prevent fraud, the *invoice* payment method is not accepted if a cart contain
 
 For the attributes of other included resources, see [Retrieve an order](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html#retrieve-an-order)
 
-
-
-
-
-
-
-
 ## Possible errors
 
-| Status | Reason |
+| STATUS | REASONS |
 | --- | --- |
 | 400 | Bad request. This error can occur due to the following reasons:<ul><li>The POST data is incorrect;</li><li>Neither **Authorization** nor **X-Anonymous-Customer-Unique-Id** headers were provided in the request.</li></ul> |
 | 404 | Order not found. |

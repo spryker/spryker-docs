@@ -33,7 +33,7 @@ To retrieve a search suggestion, send the request:
 ### Request
 
 
-| String parameter | Description | Possible values |
+| STRING PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | q | Adds a search query to the request | You can enter any search query. | 
 
@@ -51,8 +51,8 @@ To retrieve a search suggestion, send the request:
 
 ### Response
 
-<details open>
-    <summary markdown='span'>markdown='span'>Response sample</summary>
+<details>
+    <summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -222,7 +222,7 @@ To retrieve a search suggestion, send the request:
 </details>
 
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | completion | Array | Autocomplete suggestions for the search query. </br> Each item in the array is a string. |
 | categories | Array | Categories that match the search query. </br> Each item in the array is an object representing a single category. |

@@ -30,7 +30,7 @@ To retrieve a product label, send the request:
 
 ---
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}product_label_id{% raw %}}}{% endraw %}*** | ID of a product label to retrieve. You can check it in the Back Office > **Products** > **Product Labels** |
 
@@ -42,7 +42,7 @@ Request sample: `GET http://glue.mysprykershop.com/product-labels/3`
 
 ### Response
 
-<details open>
+<details>
     <summary markdown='span'>Response sample</summary>
 
 ```json
@@ -66,7 +66,7 @@ Request sample: `GET http://glue.mysprykershop.com/product-labels/3`
 </details>
 
 <a name="product-labels-response-attributes"></a>
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | name | String | Specifies the label name. |
 | isExclusive | Boolean | Indicates whether the label is `exclusive`.</br>If the attribute is set to true, the current label takes precedence over other labels the product might have. This means that only the current label should be displayed for the product, and all other possible labels should be hidden. |
@@ -87,7 +87,7 @@ Apart from using this dedicated endpoint, you can retrieve product lables as an 
 
 
 ## Possible errors
-| Code | Reason |
+| CODE | REASON |
 | --- | --- |
 | 1201 | A label with the specified ID does not exist. |
 | 1202 | Product label ID is not specified. |

@@ -14,9 +14,11 @@ To learn more about the feature and to find out how end users use it, see [Marke
 
 ## Module dependency graph
 
+The following diagram illustrates the dependencies between the modules for the *Marketplace Product Options* feature.
+
 ![Module Dependency Graph](https://confluence-connect.gliffy.net/embed/image/d8882366-b2dd-4d6c-b401-01db47a00481.png?utm_medium=live&utm_source=custom)
 
-| NAME | DESCRIPTION | 
+| NAME | DESCRIPTION |
 | --- | --- |
 | [MerchantProductOption](https://github.com/spryker/merchant-product-option) | Provides merchant product option main business logic and persistence. |
 | [MerchantProductOptionDataImport](https://github.com/spryker/merchant-product-option-data-import) | Provides data import functionality for merchant product options. |
@@ -27,6 +29,8 @@ To learn more about the feature and to find out how end users use it, see [Marke
 | [Shop.ProductOptionWidget](https://github.com/spryker-shop/product-option-widget) | Provides widgets for displaying product options. |
 
 ## Domain model
+
+The following schema illustrates the Marketplace Product Options domain model:
 
 ![Domain Model](https://confluence-connect.gliffy.net/embed/image/90a0e5bc-a0d9-4cb2-a215-c5d08a786115.png?utm_medium=live&utm_source=custom)
 

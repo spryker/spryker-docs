@@ -12,7 +12,7 @@ To start integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration)  |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration)  |
 | Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html)  |
 | Marketplace Product Offer Prices | {{page.version}} | [Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-prices-feature-integration.html)  |
 | Marketplace Inventory Management | {{page.version}} | [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-feature-integration.html)  |
@@ -25,9 +25,9 @@ No core feature installation required.
 
 {% endinfo_block %}
 
-### 1. Create project level implementation
+### 1) Create project level implementation
 
-- Merchant Product Offer
+#### Merchant Product Offer
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/MerchantProductOfferDataImport/Business/MerchantProductOfferDataImportBusinessFactory.php</summary>
@@ -662,7 +662,7 @@ class MerchantProductOfferDataImportDependencyProvider extends SprykerMerchantPr
 
 </details>
 
-- Price Product Offer
+#### Price Product Offer
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/PriceProductOfferDataImport/Business/Model/Condition/CombinedPriceProductOfferMandatoryColumnCondition.php</summary>
@@ -869,26 +869,6 @@ class CombinedProductOfferToIdProductStep extends ProductOfferToIdProductStep
 
 </details>
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/PriceProductOfferDataImport/Business/Model/Step/CombinedStoreToIdStoreStep.php</summary>
-
-```php
-
-<?php
-
-namespace Pyz\Zed\PriceProductOfferDataImport\Business\Model\Step;
-
-use Pyz\Zed\PriceProductOfferDataImport\Business\Model\DataSet\CombinedPriceProductOfferDataSetInterface;
-use Spryker\Zed\PriceProductOfferDataImport\Business\Step\StoreToIdStoreStep;
-
-class CombinedStoreToIdStoreStep extends StoreToIdStoreStep
-{
-    protected const STORE = CombinedPriceProductOfferDataSetInterface::STORE;
-}
-
-```
-
-</details>
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/PriceProductOfferDataImport/Business/Model/Step/CombinedStoreToIdStoreStep.php</summary>
@@ -1239,7 +1219,7 @@ class PriceProductOfferDataImportDependencyProvider extends SprykerPriceProductO
 </details>
 
 
-- Product Offer Stock
+#### Product Offer Stock
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/ProductOfferStockDataImport/Business/Model/Condition/CombinedProductOfferStockMandatoryColumnCondition.php</summary>
@@ -1485,6 +1465,35 @@ class ProductOfferStockDataImportBusinessFactory extends SprykerProductOfferStoc
 
 
 <details>
+<summary markdown='span'>src/Pyz/Zed/ProductOfferStockDataImport/Business/ProductOfferStockDataImportFacadeInterface.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\ProductOfferStockDataImport\Business;
+
+use Generated\Shared\Transfer\DataImporterConfigurationTransfer;
+use Generated\Shared\Transfer\DataImporterReportTransfer;
+use Spryker\Zed\ProductOfferStockDataImport\Business\ProductOfferStockDataImportFacadeInterface as SprykerProductOfferStockDataImportFacadeInterface;
+
+interface ProductOfferStockDataImportFacadeInterface extends SprykerProductOfferStockDataImportFacadeInterface
+{
+    /**
+     * @param \Generated\Shared\Transfer\DataImporterConfigurationTransfer|null $dataImporterConfigurationTransfer
+     *
+     * @return \Generated\Shared\Transfer\DataImporterReportTransfer
+     */
+    public function importCombinedProductOfferStock(
+        ?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer
+    ): DataImporterReportTransfer;
+}
+
+```
+
+</details>
+
+
+<details>
 <summary markdown='span'>src/Pyz/Zed/ProductOfferStockDataImport/Business/ProductOfferStockDataImportFacade.php</summary>
 
 ```php
@@ -1527,11 +1536,6 @@ class ProductOfferStockDataImportFacade extends SprykerProductOfferStockDataImpo
 ```php
 
 <?php
-
-/**
- * This file is part of the Spryker Commerce OS.
- * For full license information, please view the LICENSE file that was distributed with this source code.
- */
 
 namespace Pyz\Zed\ProductOfferStockDataImport\Communication\Plugin;
 
@@ -1579,11 +1583,6 @@ class CombinedProductOfferStockDataImportPlugin extends AbstractPlugin implement
 
 <?php
 
-/**
- * This file is part of the Spryker Commerce OS.
- * For full license information, please view the LICENSE file that was distributed with this source code.
- */
-
 namespace Pyz\Zed\ProductOfferStockDataImport;
 
 use Generated\Shared\Transfer\DataImporterConfigurationTransfer;
@@ -1617,7 +1616,7 @@ class ProductOfferStockDataImportConfig extends SprykerProductOfferStockDataImpo
 
 ```php
 
-z<?php
+<?php
 
 namespace Pyz\Zed\ProductOfferStockDataImport;
 
@@ -1631,7 +1630,7 @@ class ProductOfferStockDataImportDependencyProvider extends SprykerProductOfferS
 
 </details>
 
-- Product Offer Validity
+#### Product Offer Validity
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/ProductOfferValidityDataImport/Business/Model/Condition/CombinedProductOfferValidityMandatoryColumnCondition.php</summary>
@@ -1986,7 +1985,6 @@ class ProductOfferValidityDataImportConfig extends SprykerProductOfferValidityDa
 
 <?php
 
-
 namespace Pyz\Zed\ProductOfferValidityDataImport;
 
 use Spryker\Zed\ProductOfferValidityDataImport\ProductOfferValidityDataImportDependencyProvider as SprykerProductOfferValidityDataImportDependencyProvider;
@@ -1999,8 +1997,9 @@ class ProductOfferValidityDataImportDependencyProvider extends SprykerProductOff
 
 </details>
 
-### Update DataImporterConditional::setDataSetCondition().
-- Method should return $this instead of void.
+#### DataImport
+
+Update `DataImporterConditional::setDataSetCondition()` method should return `$this` instead of `void`.
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/DataImport/Business/Model/DataImporterConditional.php</summary>
@@ -2018,10 +2017,10 @@ class DataImporterConditional extends DataImporter
      * @var \Pyz\Zed\DataImport\Business\Model\DataSet\DataSetConditionInterface
      */
     protected $dataSetCondition;
+
     /**
      * @param \Pyz\Zed\DataImport\Business\Model\DataSet\DataSetConditionInterface $dataSetCondition
      *
-     * @return void
      * @return $this
      */
     public function setDataSetCondition(DataSetConditionInterface $dataSetCondition)

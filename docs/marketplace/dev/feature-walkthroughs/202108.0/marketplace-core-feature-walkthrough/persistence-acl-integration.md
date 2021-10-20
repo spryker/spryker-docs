@@ -13,6 +13,7 @@ Out of the box it will create and assign set of Acl Roles for merchant users to 
 
 ## Merchant and MerchantUser setup workflow
 ![New Merchant and MerchantUser sequence diagram](https://confluence-connect.gliffy.net/embed/image/54b0907f-b289-42ab-9b5c-1566959896b0.png?utm_medium=live&utm_source=custom)
+
 During `Merchant` and `MerchantUser` create process, all the necessary ACL and Persistence ACL entities created.
 This ensures the correct operation of the merchant portal, and at the same time, protects key merchant data.
 
@@ -31,6 +32,7 @@ The following roles are automatically added to the newly created MerchantUser:
 
 ## Configuration overview
 ![Configuration overview](https://confluence-connect.gliffy.net/embed/image/97d83074-7b22-4ef0-9d6f-92fdb1ac1b01.png?utm_medium=live&utm_source=custom)
+
 This diagram simplified and does not represent the entire configuration.
 It only reflects basic concepts.
 From the diagram, you can see that the configuration represented by 3 main composite objects:
@@ -59,7 +61,9 @@ it is enough to override methods such as
 
 ### An example of the configuration of a new system object
 Let's consider an example of a configuration for a new system entity `\Foo\Bar\MerchantSubscriber`.
+
 ![Configuration for new entity](https://confluence-connect.gliffy.net/embed/image/dd5b7b6e-2f65-47d8-a641-c52824b0f209.png?utm_medium=live&utm_source=custom)
+
 It is logical to inherit this entity from the merchant and give the merchant users the right to manage data.
 This will allow you to restrict access to data in such a way that only the merchant user will have access to them.
 

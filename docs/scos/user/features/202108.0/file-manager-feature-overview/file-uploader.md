@@ -62,9 +62,11 @@ A Back Office user cannot upload an empty text file.
 
 {% endinfo_block %}
 * Add translations for the File Name for every locale, if necessary.
+
 ![Add translations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/add-file+menu.png)
 
 4. After the file is uploaded it is available in the Files list section in the directory:
+5. 
 ![Files list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/files-list.png)
 
 ## File List

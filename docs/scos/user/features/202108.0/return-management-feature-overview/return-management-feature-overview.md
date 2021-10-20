@@ -110,7 +110,7 @@ To define the most suitable return management process for your project, to learn
 ## Video tutorial
 
 Check out this video to get more details on how Return Management works:
-{% wistia eiw5ev4gv2 960 720 %}/16tp4thofv" title="Return management" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>
+{% wistia eiw5ev4gv2 960 720 %}
 
 ## Current constraints
 

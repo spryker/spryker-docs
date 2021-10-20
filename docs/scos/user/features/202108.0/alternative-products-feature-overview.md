@@ -33,7 +33,8 @@ Alternative products can be attached to any product, but will be displayed only 
 
 ## Product replacement
 
-On the product details page of a product that's a product alternaive for another product, you can see a *Replacement for*. This section displayes that products to which the current product is added as an alternative.
+On the product details page of a product that's a product alternative for another product, you can see a *Replacement for*. This section displays that products to which the current product is added as an alternative.
+
 ![Replacement for](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Alternative+Products/Alternative+Products+Feature+Overview/replacement-for.png)
 
 ## Related Business User articles

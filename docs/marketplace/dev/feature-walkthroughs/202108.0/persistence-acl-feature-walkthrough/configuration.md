@@ -115,7 +115,7 @@ Examples of ACL configuration are provided in this section.
 
 ### Basic inheritance configuration
 
-This section shows how you can inherit the `SpyProduct` from `SpyStora` by using the `SpyProductAbstract` and the `SpyProductAbstractStore`.
+This section shows how you can inherit the `SpyProduct` from `SpyStore` by using the `SpyProductAbstract` and the `SpyProductAbstractStore`.
 
 This configuration is necessary to use the functionality of the [Inherited scope](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/inherited-scope.html) rules and [Composite entity](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/composite-entity.html).
 

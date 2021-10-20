@@ -50,7 +50,8 @@ To create a product relation:
 * If you want a product relation to be displayed on the *Product details* page or the *Cart* page, define at least one **Store relation**.
 * Filter the products in the *Select product* table by entering a product name or SKU in the **Search** field.
 * You can delete a rule or group by clicking **Delete** for a specific entry.
-* Go back to the *Product Relation* page by clicking **List of product relations** in the top right corner. 
+* Go back to the *Product Relation* page by clicking **List of product relations** in the top right corner.
+
 {% info_block warningBox "Saving changes" %}
 
 Make sure to click **Save** before clicking **List of product relations** or going to any other Back Office section. Otherwise, the changes are discarded.  
@@ -61,5 +62,4 @@ For reference information, see [Reference information: Creating, editing, and vi
 
 **What's next?**
 
-* To learn more about how to edit, view, or delete a product relation, see [Managing product relations](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/managing-product-relations.html).
-
+To learn more about how to edit, view, or delete a product relation, see [Managing product relations](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/managing-product-relations.html).

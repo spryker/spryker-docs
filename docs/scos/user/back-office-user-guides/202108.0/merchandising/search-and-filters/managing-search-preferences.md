@@ -22,9 +22,9 @@ This topic describes how to manage search preferences.
 
 To start working with search preferences, go to **Merchandising** > **Search Preferences** section.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
-
 When adding a search preference, the **Attribute Key** value is taken from the **Product Attributes > Specific Attribute** entity. Make sure that you are populating the field with an existing attribute key of an attribute assigned to a product; otherwise, the search result will be blank in the online store.
+
+Review the reference information before you start, or just look up the necessary information as you go through the process.
 
 ## Creating new attributes to search
 

@@ -1465,35 +1465,6 @@ class ProductOfferStockDataImportBusinessFactory extends SprykerProductOfferStoc
 
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/ProductOfferStockDataImport/Business/ProductOfferStockDataImportFacadeInterface.php</summary>
-
-```php
-<?php
-
-namespace Pyz\Zed\ProductOfferStockDataImport\Business;
-
-use Generated\Shared\Transfer\DataImporterConfigurationTransfer;
-use Generated\Shared\Transfer\DataImporterReportTransfer;
-use Spryker\Zed\ProductOfferStockDataImport\Business\ProductOfferStockDataImportFacadeInterface as SprykerProductOfferStockDataImportFacadeInterface;
-
-interface ProductOfferStockDataImportFacadeInterface extends SprykerProductOfferStockDataImportFacadeInterface
-{
-    /**
-     * @param \Generated\Shared\Transfer\DataImporterConfigurationTransfer|null $dataImporterConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\DataImporterReportTransfer
-     */
-    public function importCombinedProductOfferStock(
-        ?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer
-    ): DataImporterReportTransfer;
-}
-
-```
-
-</details>
-
-
-<details>
 <summary markdown='span'>src/Pyz/Zed/ProductOfferStockDataImport/Business/ProductOfferStockDataImportFacade.php</summary>
 
 ```php
@@ -1523,6 +1494,35 @@ class ProductOfferStockDataImportFacade extends SprykerProductOfferStockDataImpo
             ->getCombinedProductOfferStockDataImporter()
             ->import($dataImporterConfigurationTransfer);
     }
+}
+
+```
+
+</details>
+
+
+<details>
+<summary markdown='span'>src/Pyz/Zed/ProductOfferStockDataImport/Business/ProductOfferStockDataImportFacadeInterface.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\ProductOfferStockDataImport\Business;
+
+use Generated\Shared\Transfer\DataImporterConfigurationTransfer;
+use Generated\Shared\Transfer\DataImporterReportTransfer;
+use Spryker\Zed\ProductOfferStockDataImport\Business\ProductOfferStockDataImportFacadeInterface as SprykerProductOfferStockDataImportFacadeInterface;
+
+interface ProductOfferStockDataImportFacadeInterface extends SprykerProductOfferStockDataImportFacadeInterface
+{
+    /**
+     * @param \Generated\Shared\Transfer\DataImporterConfigurationTransfer|null $dataImporterConfigurationTransfer
+     *
+     * @return \Generated\Shared\Transfer\DataImporterReportTransfer
+     */
+    public function importCombinedProductOfferStock(
+        ?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer
+    ): DataImporterReportTransfer;
 }
 
 ```
@@ -1999,7 +1999,7 @@ class ProductOfferValidityDataImportDependencyProvider extends SprykerProductOff
 
 #### DataImport
 
-Update `DataImporterConditional::setDataSetCondition()` method should return `$this` instead of `void`.
+Update `DataImporterConditional::setDataSetCondition()` method to return `$this` instead of `void`.
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/DataImport/Business/Model/DataImporterConditional.php</summary>

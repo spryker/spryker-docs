@@ -11,38 +11,40 @@ redirect_from:
   - /docs/en/custom-order-reference-feature-integration
 ---
 
-## Install Feature Core
+## Install feature core
 
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Spryker Core | 202009.0 |
-| Order Management | 202009.0 |
-| Persistent Cart | 202009.0 |
+| Spryker Core | {{page.version}} |
+| Order Management | {{page.version}} |
+| Persistent Cart | {{page.version}} |
 
 ### 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/custom-order-reference: "202009.0" --update-with-dependencies
+composer require spryker-feature/custom-order-reference: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules were installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-| `OrderCustomReference` | `vendor/spryker/order-custom-reference` |
-| `OrderCustomReferenceGui` | `vendor/spryker/order-custom-reference-gui` |
-
+| OrderCustomReference | vendor/spryker/order-custom-reference |
+| OrderCustomReferenceGui | vendor/spryker/order-custom-reference-gui |
 
 {% endinfo_block %}
 
-### 2) Set up Database Schema and Transfer Objects
-Run the following commands to apply database changes and to generate entity and transfer changes: 
+### 2) Set up database schema and transfer objects
+
+Run the following commands to apply database changes and to generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -55,10 +57,9 @@ console frontend:zed:build
 
 Make sure that the following changes have occurred by checking your database:
 
-| Database entity | Type | Event |
+| DATABASE ENTITY | TYPE | EVENT |
 | --- | --- | --- |
-| `spy_sales_order.order_custom_reference` | column | created |
-
+| spy_sales_order.order_custom_reference | column | created |
 
 {% endinfo_block %}
 
@@ -66,17 +67,17 @@ Make sure that the following changes have occurred by checking your database:
 
 Make sure that the following changes have occurred in transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
-| `OrderCustomReferenceResponse` | class | created | `Generated/Shared/Transfer/OrderCustomReferenceResponseTransfer` |
-| `Quote.orderCustomReference` | property | created | `Generated/Shared/Transfer/QuoteTransfer` |
-| `QuoteUpdateRequestAttributes.orderCustomReference` | property | created | `Generated/Shared/Transfer/QuoteUpdateRequestAttributesTransfer` |
-| `Order.orderCustomReference` | property | created | `Generated/Shared/Transfer/OrderTransfer` |
-
+| OrderCustomReferenceResponse | class | created | Generated/Shared/Transfer/OrderCustomReferenceResponseTransfer |
+| Quote.orderCustomReference | property | created | Generated/Shared/Transfer/QuoteTransfer |
+| QuoteUpdateRequestAttributes.orderCustomReference | property | created | `Generated/Shared/Transfer/QuoteUpdateRequestAttributesTransfer |
+| Order.orderCustomReference | property | created | Generated/Shared/Transfer/OrderTransfer |
 
 {% endinfo_block %}
 
-### 3) Add Translations
+### 3) Add translations
+
 Append glossary according to your configuration:
 
 **src/data/import/glossary.csv**
@@ -108,15 +109,16 @@ Make sure that in the database the configured data has been added to the **spy_g
 
 {% endinfo_block %}
 
-### 4) Set up Behavior
+### 4) Set up behavior
 
-#### Setup Custom Order Reference Workflow
+#### Set up custom order reference workflow
+
 Enable the following behaviors by registering the plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `OrderCustomReferenceQuoteFieldsAllowedForSavingProviderPlugin` | Returns the **QuoteTransfer** fields related to a custom order reference. | None | `Spryker\Zed\OrderCustomReference\Communication\Plugin\Quote` |
-| `OrderCustomReferenceOrderPostSavePlugin` | <ul><li>Gets executed after the order is saved to Persistence.</li><li>Persists `orderCustomReference` in the `spy_sales_order` schema.</li></ul> | None | `Spryker\Zed\OrderCustomReference\Communication\Plugin\Sales\` |
+| OrderCustomReferenceQuoteFieldsAllowedForSavingProviderPlugin | Returns the **QuoteTransfer** fields related to a custom order reference. | None | Spryker\Zed\OrderCustomReference\Communication\Plugin\Quote |
+| OrderCustomReferenceOrderPostSavePlugin | <ul><li>Gets executed after the order is saved to Persistence.</li><li>Persists `orderCustomReference` in the `spy_sales_order` schema.</li></ul> | None | Spryker\Zed\OrderCustomReference\Communication\Plugin\Sales\ |
 
 **src/Pyz/Zed/Sales/SalesDependencyProvider.php**
 
@@ -172,41 +174,44 @@ Make sure that if you are logged in, you can see the *Custom Order Reference* se
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
+
 Please overview and install the necessary features before beginning the integration step.
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Spryker Core | 202009.0 |
-| Cart | 202009.0 |
-| Checkout | 202009.0 |
-| Customer Account Management | 202009.0 |
+| Spryker Core | {{page.version}} |
+| Cart | {{page.version}} |
+| Checkout | {{page.version}} |
+| Customer Account Management | {{page.version}} |
 
 ### 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/custom-order-reference: "202009.0" --update-with-dependencies
+composer require spryker-feature/custom-order-reference: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules were installed:
 
-| Module | Expected DIrectory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-| `OrderCustomReferenceWidget` | `vendor/spryker-shop/order-custom-reference-widget` |
+| OrderCustomReferenceWidget | vendor/spryker-shop/order-custom-reference-widget |
 
 {% endinfo_block %}
 
-### 2) Enable a Route Provider Plugin
+### 2) Enable a route provider plugin
+
 Register route provider(s) in the Yves application:
 
-| Provider | Namespace |
+| PROVIDER | NAMESPACE |
 | --- | --- |
-| `OrderCustomReferenceWidgetRouteProviderPlugin` | `SprykerShop\Yves\OrderCustomReferenceWidget\Plugin\Router` |
+| OrderCustomReferenceWidgetRouteProviderPlugin | SprykerShop\Yves\OrderCustomReferenceWidget\Plugin\Router |
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
 
@@ -232,12 +237,13 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 }
 ```
 
-### 3) Set up Widgets
+### 3) Set up widgets
+
 Register the following plugin to enable widgets:
 
-| Plugin | Description | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `OrderCustomReferenceWidget` | Edits and shows a custom order reference in Yves. | None | `SprykerShop\Yves\OrderCustomReferenceWidget\Widget` |
+| OrderCustomReferenceWidget | Edits and shows a custom order reference in Yves. | None | SprykerShop\Yves\OrderCustomReferenceWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -276,8 +282,8 @@ console frontend:yves:build
 
 Make sure that the following widget was registered:
 
-| Module | Test |
+| MODULE | TEST |
 | --- | --- |
-| `OrderCustomReferenceWidget` | Log in, open the **Cart** page and see the **Custom order reference** form. |
+| OrderCustomReferenceWidget | Log in, open the **Cart** page and see the **Custom order reference** form. |
 
 {% endinfo_block %}

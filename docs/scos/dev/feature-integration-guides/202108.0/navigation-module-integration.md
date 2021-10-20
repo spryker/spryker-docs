@@ -18,7 +18,7 @@ To prepare your project to work with Navigation:
 2. Install the new database tables By running `vendor/bin/console propel:diff`. Propel will generate a migration file with the changes.
 3. Apply the database changes by running `vendor/bin/console propel:migrate`.
 4. Generate ORM models by running `vendor/bin/console propel:model:build`.
-5. After running this command you’ll find some new classes in your project under `\Orm\Zed\Navigation\Persistence` namespace. 
+5. After running this command you’ll find some new classes in your project under `\Orm\Zed\Navigation\Persistence` namespace.
 
     It’s important to make sure that they extend the base classes from the Spryker core, e.g.:
 
@@ -54,22 +54,25 @@ class CollectorDependencyProvider extends SprykerCollectorDependencyProvider
     public function provideBusinessLayerDependencies(Container $container)
     {
         // ...
-       
+
         $container[self::STORAGE_PLUGINS] = function (Container $container) {
             return [
                 // ...
                 NavigationConfig::RESOURCE_TYPE_NAVIGATION_MENU => new NavigationMenuCollectorStoragePlugin(),
             ];
         };
-        
+
         // ...
     }
 }
 ```
+
 ### Data Setup
+
 You should now be able to manage navigation menus from Zed UI, and the collectors should also be able to export the navigation menus to the KV storage. This is a good time to implement an installer in your project to install a selection of frequently used navigation menus. <!--Check out our Demoshop implementation for examples and ideas.-->
 
 ### Usage in Yves
+
 The KV storage should by now have some navigation menus we can display in our frontend.
 
 The `Navigation` module ships with a twig extension that provides the `spyNavigation()` twig function which renders a navigation menu.
@@ -109,6 +112,7 @@ Example of rendering navigation in an Yves twig template:
 ```
 
 ### Rendering Navigation Templates
+
 The templates used to render a navigation menu use the `navigationTree` template variable to traverse the navigation tree. The variable contains an instance of `\Generated\Shared\Transfer\NavigationTreeTransfer` with only one localized attribute per node for the current locale.
 
 The following code examples show the Demoshop implementation of how to render `MAIN_NAVIGATION` which is a multi-level navigation menu. For styling we used the [Menu](https://foundation.zurb.com/sites/docs/menu.html) and [Dropdown](https://foundation.zurb.com/sites/docs/dropdown.html) components from Foundation framework.
@@ -116,7 +120,7 @@ The following code examples show the Demoshop implementation of how to render `M
 In `Pyz/Yves/Application/Theme/default/layout/navigation/main.twig` we traverse the root navigation nodes of the navigation tree and for each root node we render their children nodes as well.
 
 **Code sample:**
-    
+
 ```html
 <div class="callout show-for-large">
     <div class="row">
@@ -168,7 +172,7 @@ In `Pyz/Yves/Application/Theme/default/layout/navigation/main.twig` we traverse 
 The children nodes are rendered recursively by `Pyz/Yves/Application/Theme/default/layout/navigation/_partials/nodes.twig`.
 
 **Code sample:**
-    
+
 ```html
 <ul class="vertical menu {% raw %}{%{% endraw %} if nested|default(false) {% raw %}%}{% endraw %}nested{% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}">
     {% raw %}{%{% endraw %} for node in nodes {% raw %}%}{% endraw %}
@@ -208,7 +212,7 @@ To prevent code duplication we implemented the `Pyz/Yves/Application/Theme/defau
 This is also the place where we take the visibility controller parameters into account : `valid_from`, `valid_to`, and `is_active`.
 
 **Code sample:**
-    
+
 ```php
 {% raw %}{%{% endraw %} set class = node.navigationNode.navigationNodeLocalizedAttributes[0].cssClass {% raw %}%}{% endraw %}
 {% raw %}{%{% endraw %} set url = node.navigationNode.navigationNodeLocalizedAttributes[0].url {% raw %}%}{% endraw %}

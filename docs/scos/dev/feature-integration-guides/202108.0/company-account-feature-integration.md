@@ -17,41 +17,54 @@ related:
 ---
 
 {% info_block errorBox %}
+
 The following feature integration guide expects the basic feature to be in place. The current feature integration guide only adds the **Business on Behalf**, **Company Account Storage**, and **Company Account OAuth functionality**.
+
 {% endinfo_block %}
 
-## Install Feature Core
+## Install feature core
+
 Follow the steps below to install feature core.
 
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Spryker Core | master |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/company-account: "^master" --update-with-dependencies
+composer require spryker-feature/company-account: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following modules were installed:<table><thead><tr><th>Module</th><th>Expected Directory</th></tr></thead><tbody><tr><td>`BusinessOnBehalf`</td><td>`vendor/spryker/business-on-behalf`</td></tr><tr><td>`BusinessOnBehalfDataImport`</td><td>`vendor/spryker/business-on-behalf-data-import`</td></tr><tr><td>`CompanyUserStorage`</td><td>`vendor/spryker/company-user-storage`</td></tr></tbody></table>
+
+Make sure that the following modules were installed:
+
+| MODULE | EXPECTED DIRECTORY |
+| --- | --- |
+| BusinessOnBehalf | vendor/spryker/business-on-behalf |
+| BusinessOnBehalfDataImport | vendor/spryker/business-on-behalf-data-import |
+| CompanyUserStorage | vendor/spryker/company-user-storage |
+
 {% endinfo_block %}
 
-### 2) Set up Database Schema and Transfer objects
+### 2) Set up database schema and transfer objects
 Adjust the schema definition so entity changes will trigger events.
 
-| Affected Entity | Triggered Events |
+| AFFECTED ENTITY | TRIGGERED EVENTS |
 | --- | --- |
-| `spy_company` | `Entity.spy_company.update`</br>`Entity.spy_company.delete` |
-| `spy_company_user` | `Entity.spy_company_user.`</br>`Entity.spy_company_user.update`</br>`Entity.spy_company_user.delete` |
+| spy_company | Entity.spy_company.update</br>Entity.spy_company.delete |
+| spy_company_user | Entity.spy_company_user.create</br>Entity.spy_company_user.update</br>Entity.spy_company_user.delete |
 
 **src/Pyz/Zed/CompanyUser/Persistence/Propel/Schema/spy_company_user.schema.xml**
 
-```html
+```xml
 <?xml version="1.0"?>
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed"
 	   xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd"
@@ -68,7 +81,7 @@ Adjust the schema definition so entity changes will trigger events.
 
 **src/Pyz/Zed/Company/Persistence/Propel/Schema/spy_company.schema.xml**
 
-```html
+```xml
 <?xml version="1.0"?>
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed"
 	   xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd"
@@ -93,28 +106,60 @@ console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes have been applied by checking your database:<table><thead><tr><th>Database Entity</th><th>Type</th><th>Event</th></tr></thead><tbody><tr><td>`spy_company_user.is_default`</td><td>column</td><td>created</td></tr></tbody></table>
+
+Make sure that the following changes have been applied by checking your database:
+
+| DATABASE ENTITY | TYPE | EVENT |
+| --- | --- | --- |
+| spy_company_user.is_default | column | created |
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes in transfer objects:<table><thead><tr><th>Transfer</th><th>Type</th><th>Event</th><th>Path</th></tr></thead><tbody><tr><td>`CompanyUser.isDefault`</td><td>property</td><td>created</td><td>`src/Generated/Shared/Transfer/CompanyUserTransfer`</td></tr><tr><td>`Customer.isOnBehalf`</td><td>property</td><td>created</td><td>`src/Generated/Shared/Transfer/CustomerTransfer`</td></tr><tr><td>`CompanyUserAccessTokenRequestclass`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CompanyUserAccessTokenRequestTransfer`</td></tr><tr><td>`CompanyUserStorage`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CompanyUserStorageTransfer`</td></tr></tbody></table>
+
+Make sure that the following changes in transfer objects:
+
+| TRANSFER | TYPE | EVENT | PATH |
+| --- | --- | --- | --- |
+| CompanyUser.isDefault | property | created | src/Generated/Shared/Transfer/CompanyUserTransfer |
+| Customer.isOnBehalf | property | created | src/Generated/Shared/Transfer/CustomerTransfer |
+| CompanyUserAccessTokenRequestclass | class | created | src/Generated/Shared/Transfer/CompanyUserAccessTokenRequestTransfer |
+| CompanyUserStorage | class | created | src/Generated/Shared/Transfer/CompanyUserStorageTransfer |
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that propel entities have been generated successfully by checking their existence. Also, change the generated entity classes to extend from Spryker core classes.<table><col  /><col  /><thead><tr><th>Class Path</th><th>Extends</th></tr></thead><tbody><tr><td>`src/Orm/Zed/CompanyUserStorage/Persistence/SpyCompanyUserStorage.php`</td><td>`Spryker\Zed\CompanyUserStorage\Persistence\Propel\AbstractSpyCompanyUserStorage`</td></tr><tr><td>`src/Orm/Zed/CompanyUserStorage/Persistence/SpyCompanyUserStorageQuery.php`</td><td>`Spryker\Zed\CompanyUserStorage\Persistence\Propel\AbstractSpyCompanyUserStorageQuery`</td></tr></tbody></table>
+
+Make sure that propel entities have been generated successfully by checking their existence. Also, change the generated entity classes to extend from Spryker core classes.
+
+| CLASS PATH | EXTENDS |
+| --- | --- |
+| src/Orm/Zed/CompanyUserStorage/Persistence/SpyCompanyUserStorage.php | Spryker\\Zed\\CompanyUserStorage\\Persistence\\Propel\\AbstractSpyCompanyUserStorage |
+| src/Orm/Zed/CompanyUserStorage/Persistence/SpyCompanyUserStorageQuery.php | Spryker\\Zed\\CompanyUserStorage\\Persistence\\Propel\\AbstractSpyCompanyUserStorageQuery |
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that the changes have been implemented successfully. For this purpose, trigger the following methods and make sure that the above events have been triggered:<table><thead><tr><th>Path</th><th>Method Name</th></tr></thead><tbody><tr><td>`src/Orm/Zed/CompanyUser/Persistence/Base/SpyCompanyUser.php`</td><td>`prepareSaveEventName(
-{% endinfo_block %}`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`</td></tr><tr><td>`src/Orm/Zed/Company/Persistence/Base/SpyCompany.php`</td><td>`prepareSaveEventName()`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`</td></tr><tr><td>`src/Orm/Zed/CompanyUserStorage/Persistence/Base/SpyCompanyUserStorage.php`</td><td>`sendToQueue()`</td></tr></tbody></table>)
 
-### 3) Configure Export to Redis
-#### Set up Event Listeners
+Make sure that the changes have been implemented successfully. For this purpose, trigger the following methods and make sure that the above events have been triggered:
+
+| PATH | METHOD NAME |
+| --- | --- |
+| src/Orm/Zed/CompanyUser/Persistence/Base/SpyCompanyUser.php | prepareSaveEventName(  <br>addSaveEventToMemory()<br>addDeleteEventToMemory() |
+| src/Orm/Zed/Company/Persistence/Base/SpyCompany.php | prepareSaveEventName()<br>addSaveEventToMemory()<br>addDeleteEventToMemory() |
+| src/Orm/Zed/CompanyUserStorage/Persistence/Base/SpyCompanyUserStorage.php | sendToQueue() |
+
+{% endinfo_block %}
+
+### 3) Configure export to Redis
+
+#### Set up event listeners
+
 With this step, you will be able to publish tables on change (create, edit, delete) to the `spy_company`, `spy_company_user` and synchronize the data to Storage.
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `CompanyUserStorageEventSubscriber` | Registers listeners that are responsible for publishing company user storage entity changes when a related entity change event occurs. | None | `NoneSpryker\Zed\CompanyUserStorage\Communication\Plugin\Event\Subscriber` |
+| CompanyUserStorageEventSubscriber | Registers listeners that are responsible for publishing company user storage entity changes when a related entity change event occurs. | None | Spryker\Zed\CompanyUserStorage\Communication\Plugin\Event\Subscriber |
 
 **src/Pyz/Zed/Event/EventDependencyProvider.php**
 
@@ -159,11 +204,11 @@ class CompanyUserStorageConfig extends SprykerCompanyUserStorageConfig
 }
 ```
 
-#### Set up Re-Generate and Re-Sync Features
+#### Set up re-generate and re-sync features
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `CompanyUserSynchronizationDataPlugin` | Allows synchronizing the whole storage table content into Storage. | None | `Spryker\Zed\CompanyUserStorage\Communication\Plugin\Synchronization` |
+| CompanyUserSynchronizationDataPlugin | Allows synchronizing the whole storage table content into Storage. | None | Spryker\Zed\CompanyUserStorage\Communication\Plugin\Synchronization |
 
 **src/Pyz/Zed/CompanyUserStorage/CompanyUserStorageConfig.php**
 
@@ -212,8 +257,14 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that when a company user is created, updated or deleted, when company's status changes or company is activated/deactivated the corresponding company users' records are exported (or removed
-{% endinfo_block %} to Redis.<table><thead><tr><th>Storage Type</th><th>Target Entity</th><th>Example Expected Data Identifier</th></tr></thead><tbody><tr><td>Redis</td><td>Company User</td><td>`kv:company_user:1`</td></tr></tbody></table>)
+
+Make sure that when a company user is created, updated or deleted, when company's status changes or company is activated/deactivated the corresponding company users' records are exported (or removed from Redis.
+
+| STORAGE TYPE | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
+| --- | --- | --- |
+| Redis | Company User | kv:company_user:1 |
+
+{% endinfo_block %}
 
 **Example Expected Data Fragment**
 
@@ -226,12 +277,15 @@ Make sure that when a company user is created, updated or deleted, when company'
 }
 ```
 
-### 4) Import Data
-#### Import Business On Behalf
+### 4) Import data
+
+#### Import business on behalf
 
 {% info_block infoBox "Info" %}
-The following imported entities will be used as data for **Business on Behalf Company Users** (b2b extension for Company User module
-{% endinfo_block %} in Spryker OS.)
+
+The following imported entities will be used as data for **Business on Behalf Company Users** (b2b extension for Company User module in the Spryker OS.)
+
+{% endinfo_block %}
 
 Prepare your data according to your requirements using our demo data:
 
@@ -248,18 +302,18 @@ DE--7,BoB-Hotel-Kudamm,business-unit-kudamm-1,0
 DE--7,spryker_systems,spryker_systems_HQ,0
 ```
 
-| Column | IS REQUIRED? | Data Type | Data Example | Data Explanation |
+| COLUMN | IS REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| `customer_reference` | mandatory | string | DE--6 | The key that will identify the Customer to add data to. |
-| `company_key` | mandatory | string | BoB-Hotel-Mitte | The key that will identify the Company to add data to. |
-| `business_unit_key` | mandatory | string | business-unit-mitte-1 | The key that will identify the Company Business Unit to add data to. |
-| `default` | mandatory | bool integer | 0 | Decides if there will be some pre-selected Company Business Unit for BoB User. |
+| customer_reference | mandatory | string | DE--6 | The key that will identify the Customer to add data to. |
+| company_key | mandatory | string | BoB-Hotel-Mitte | The key that will identify the Company to add data to. |
+| business_unit_key | mandatory | string | business-unit-mitte-1 | The key that will identify the Company Business Unit to add data to. |
+| default | mandatory | bool integer | 0 | Decides if there will be some pre-selected Company Business Unit for BoB User. |
 
 Register the following plugins to enable data import:
 
 | Plugin | Specification | Prerequisites | Namespace |
 | --- | --- | --- | --- |
-| `BusinessOnBehalfCompanyUserDataImportPlugin` | Imports Business on Behalf Company Users. | <ul><li>Assumes that the Customer keys exist in the database.</li><li>Assumes that the Company keys exist in the database</li><li>Assumes that the Company Business Unit keys exist in the database.</li></ul> | `Spryker\Zed\BusinessOnBehalfDataImport\Communication\Plugin\DataImport` |
+| BusinessOnBehalfCompanyUserDataImportPlugin | Imports Business on Behalf Company Users. | <ul><li>Assumes that the Customer keys exist in the database.</li><li>Assumes that the Company keys exist in the database</li><li>Assumes that the Company Business Unit keys exist in the database.</li></ul> | Spryker\Zed\BusinessOnBehalfDataImport\Communication\Plugin\DataImport |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -289,25 +343,28 @@ console data:import company-user-on-behalf
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that the configured data are added to the `spy_company_user` table in the database.
+
 {% endinfo_block %}
 
-### 5) Set up Behavior
+### 5) Set up behavior
+
 Enable the following behaviors by registering the plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `DefaultCompanyUserCustomerTransferExpanderPlugin` | Sets default Company User for a Business on Behalf customer if no Company User has been selected yet. | None | `Spryker\Zed\BusinessOnBehalf\Communication\Plugin\Customer` |
-| `IsOnBehalfCustomerTransferExpanderPlugin` | Sets the `CustomerTransfer.IsOnBehalf` property so that other features can determine if the selected Company User is a Business on Behalf Company User. | None | `Spryker\Zed\BusinessOnBehalf\Communication\Plugin\Customer` |
-| `CompanyUserAccessTokenAuthenticationHandlerPlugin` | Provides functionality to log in customer by access token. | None | `Spryker\Client\OauthCompanyUser\Plugin\Customer` |
-| `CompanyUserReloadCustomerTransferExpanderPlugin` | Reloads company user if it is already set in `CustomerTransfer`. | None | `Spryker\Zed\CompanyUser\Communication\Plugin\Customer` |
-| `CompanyUserAccessTokenOauthUserProviderPlugin` | Provides user transfer by company user id. | None | `Spryker\Zed\OauthCompanyUser\Communication\Plugin\Oauth` |
-| `CompanyUserAccessTokenOauthGrantTypeConfigurationProviderPlugin` | Provides configuration of `CompanyUser` `GrantType`. | None | `Spryker\Zed\OauthCompanyUser\Communication\Plugin\Oauth` |
-| `OauthCompanyUserInstallerPlugin`| Creates new OAuth scope (Adds `company_user scope` to the `spy_oauth_scope` table.) | None | `Spryker\Zed\OauthCompanyUser\Communication\Plugin\Installer` |
-| `CompanyUserOauthScopeProviderPlugin` | Associates the `company_user` scope with the password Oauth GrandType. | None | `Spryker\Zed\OauthCompanyUser\Communication\Plugin\Oauth` |
-| `CompanyUserOauthUserProviderPlugin` | Associates the `company_user` scope with `idCompanyUser` Oauth GrandType. | None | `Spryker\Zed\OauthCompanyUser\Communication\Plugin\Oauth` |
-| `IdCompanyUserOauthGrantTypeConfigurationProviderPlugin` | Provides new `IdCompanyUser` Oauth GrandType. | None | `Spryker\Zed\OauthCompanyUser\Communication\Plugin\Oauth` |
-| `CompanyBusinessUnitCompanyUserStorageExpanderPlugin` | Expands the `CompanyUserStorageTransfer` with the company business unit id. | None | `Spryker\Zed\CompanyBusinessUnitStorage\Communication\Plugin` |
+| DefaultCompanyUserCustomerTransferExpanderPlugin | Sets default Company User for a Business on Behalf customer if no Company User has been selected yet. | None | Spryker\Zed\BusinessOnBehalf\Communication\Plugin\Customer |
+| IsOnBehalfCustomerTransferExpanderPlugin | Sets the `CustomerTransfer.IsOnBehalf` property so that other features can determine if the selected Company User is a Business on Behalf Company User. | None | Spryker\Zed\BusinessOnBehalf\Communication\Plugin\Customer |
+| CompanyUserAccessTokenAuthenticationHandlerPlugin | Provides functionality to log in customer by access token. | None | Spryker\Client\OauthCompanyUser\Plugin\Customer |
+| CompanyUserReloadCustomerTransferExpanderPlugin | Reloads company user if it is already set in `CustomerTransfer`. | None | Spryker\Zed\CompanyUser\Communication\Plugin\Customer |
+| CompanyUserAccessTokenOauthUserProviderPlugin | Provides user transfer by company user id. | None | Spryker\Zed\OauthCompanyUser\Communication\Plugin\Oauth |
+| CompanyUserAccessTokenOauthGrantTypeConfigurationProviderPlugin | Provides configuration of `CompanyUser` `GrantType`. | None | Spryker\Zed\OauthCompanyUser\Communication\Plugin\Oauth |
+| OauthCompanyUserInstallerPlugin| Creates new OAuth scope (Adds `company_user scope` to the `spy_oauth_scope` table.) | None | Spryker\Zed\OauthCompanyUser\Communication\Plugin\Installer |
+| CompanyUserOauthScopeProviderPlugin | Associates the `company_user` scope with the password Oauth GrandType. | None | Spryker\Zed\OauthCompanyUser\Communication\Plugin\Oauth |
+| CompanyUserOauthUserProviderPlugin | Associates the `company_user` scope with `idCompanyUser` Oauth GrandType. | None | Spryker\Zed\OauthCompanyUser\Communication\Plugin\Oauth |
+| IdCompanyUserOauthGrantTypeConfigurationProviderPlugin | Provides new `IdCompanyUser` Oauth GrandType. | None | Spryker\Zed\OauthCompanyUser\Communication\Plugin\Oauth |
+| CompanyBusinessUnitCompanyUserStorageExpanderPlugin | Expands the `CompanyUserStorageTransfer` with the company business unit id. | None | Spryker\Zed\CompanyBusinessUnitStorage\Communication\Plugin |
 
 **src/Pyz/Zed/Customer/CustomerDependencyProvider.php**
 
@@ -479,39 +536,55 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
+
 Log in with a customer who has multiple Company Users and a default one. Check in the session if the default Company User was assigned to the Customer. Check in the session if the `IsOnBehalf` property is set correctly for the Customer.
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
+
 Make sure that token generation for a company user works. For more information, see [HowTo: Generate a Token for Login](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-generate-a-token-for-login.html).
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
+
 To make sure the `CompanyBusinessUnitCompanyUserStorageExpanderPlugin` was set up correctly, you need to check the data exported to the key-value storage key `kv:company_user:1` for the `id_company_business_unit:id`. `id_company_business_unit` needs to be set up to a correct foreign key of the business unit the company user is assigned to.
+
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
+
 ### Prerequisites
+
 Overview and install the necessary features before beginning the integration step.
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Spryker Core |master |
-| Customer Account Management | master |
-| Company Account | master |
+| Spryker Core | {{page.version}} |
+| Customer Account Management | {{page.version}} |
+| Company Account | {{page.version}} |
 
 ### 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/company-account: "^master" --update-with-dependencies
+composer require spryker-feature/company-account: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following modules were installed:<table><col  /><col  /><thead><tr><th>Module</th><th>Expected Directory</th></tr></thead><tbody><tr><td>`BusinessOnBehalfWidget`></td><td>`vendor/spryker-shop/business-on-behalf-widget`</td></tr></tbody></table>
+
+Make sure that the following modules were installed:
+
+| MODULE | EXPECTED DIRECTORY |
+| --- | --- |
+| BusinessOnBehalfWidget | vendor/spryker-shop/business-on-behalf-widget |
+
 {% endinfo_block %}
 
-### 2) Add Translations
+### 2) Add translations
+
 Append glossary according to your configuration:
 
 **src/data/import/glossary.csv**
@@ -538,15 +611,18 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that in the database the configured data is added to the `spy_glossary` table.
+
 {% endinfo_block %}
 
-### 3) Set up Widgets
+### 3) Set up widgets
+
 Register the following plugins to enable widgets:
 
-| Plugin | Description | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `BusinessOnBehalfStatusWidget` | Displays the selected Company Users and allows for Business on Behalf customers to change it through a link. | None | `SprykerShop\Yves\BusinessOnBehalfWidget\Widget` |
+| BusinessOnBehalfStatusWidget | Displays the selected Company Users and allows for Business on Behalf customers to change it through a link. | None | SprykerShop\Yves\BusinessOnBehalfWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -579,5 +655,7 @@ console frontend:yves:build
 ```
 
 {% info_block warningBox "Verification" %}
+
 Log in with a Business on Behalf customer and see the selected Company User status widget in the top menu.
+
 {% endinfo_block %}

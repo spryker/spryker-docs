@@ -22,36 +22,39 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/product-images-configurable-bundle-feature-integration.html
 ---
 
-## Install Feature Core
+## Install feature core
+
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Spryker Core |master  |
-| Product Lists | master |
-| Merchant | master |
+| Spryker Core | {{page.version}}  |
+| Product Lists | {{page.version}} |
+| Merchant | {{page.version}} |
 
 ### 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/merchant-product-restrictions:"^master" --update-with-dependencies
+composer require spryker-feature/merchant-product-restrictions:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed: 
+Make sure that the following modules were installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-| `MerchantRelationshipProductList` | `vendor/spryker/merchant-relationship-product-list` |
-| `MerchantRelationshipProductListDataImport` | `vendor/spryker/merchant-relationship-product-list-data-import` |
-| `MerchantRelationshipProductListGui` | `vendor/spryker/merchant-relationship-product-list-gui` |
+| MerchantRelationshipProductList | vendor/spryker/merchant-relationship-product-list |
+| MerchantRelationshipProductListDataImport | `vendor/spryker/merchant-relationship-product-list-data-import |
+| MerchantRelationshipProductListGui | vendor/spryker/merchant-relationship-product-list-gui |
 
 {% endinfo_block %}
 
-### 2) Set up Database Schema
+### 2) Set up database schema
+
 Run the following commands to apply database changes, as well as generate entity and transfer changes:
 
 ```bash
@@ -63,9 +66,9 @@ console transfer:generate
 
 Make sure that the following changes by checking your database:
 
-| Database Entity | Type | Event |
+| DATABASE ENTITY | TYPE | EVENT |
 | --- | --- | --- |
-| `spy_product_list.fk_merchant_relationship` | column | created |
+| spy_product_list.fk_merchant_relationship | column | created |
 
 {% endinfo_block %}
 
@@ -73,15 +76,17 @@ Make sure that the following changes by checking your database:
 
 Make sure that the following changes have been applied in transfer objects:
 
-| Transfer | Type | Event | Type |
+| TRANSFER | TYPE | EVENT | TYPE |
 | --- | --- | --- | --- |
-| `MerchantRelationshipFilter` | class | created | `src/Generated/Shared/Transfer/MerchantRelationshipFilterTransfer` |
+| MerchantRelationshipFilter | class | created | src/Generated/Shared/Transfer/MerchantRelationshipFilterTransfer |
 
 {% endinfo_block %}
 
 
-### 3) Import Data
-#### Import Merchant Relationship to Product Lists
+### 3) Import data
+
+#### Import merchant relationship to product lists
+
 Prepare your data according to your requirements using our demo data:
 
 ```yaml
@@ -96,27 +101,27 @@ mr-011,pl-007
 mr-011,pl-008
 ```
 
-| Column | IS REQUIRED? | Data Type | Data Example | Data Explanation |
+| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-|`merchant_relation_key`  | mandatory | string | mr-008 | Identifier of merchant relations. The merchant relations must exist already. |
-| `product_list_key` |mandatory  | string | pl-001 | Identifier of product lists. The product lists must exist already. |
-		
+|merchant_relation_key  | mandatory | string | mr-008 | Identifier of merchant relations. The merchant relations must exist already. |
+| product_list_key |mandatory  | string | pl-001 | Identifier of product lists. The product lists must exist already. |
+
 Register the following plugin to enable data import:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `MerchantRelationshipProductListDataImportPlugin` | Imports basic product list data into the database. | <ul><li>Merchant relations must be imported first.</li><li>Product lists must be imported first.</li></ul> | `Spryker\Zed\MerchantRelationshipProductListDataImport\Communication\Plugin` |
+| MerchantRelationshipProductListDataImportPlugin | Imports basic product list data into the database. | <ul><li>Merchant relations must be imported first.</li><li>Product lists must be imported first.</li></ul> | Spryker\Zed\MerchantRelationshipProductListDataImport\Communication\Plugin |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
-    
+
 ```php
 <?php
-   
+
 namespace Pyz\Zed\DataImport;
-   
+
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use Spryker\Zed\MerchantRelationshipProductListDataImport\Communication\Plugin\MerchantRelationshipProductListDataImportPlugin;
-   
+
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
     /**
@@ -128,7 +133,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
             new MerchantRelationshipProductListDataImportPlugin(),
         ];
     }
-} 
+}
 ```
 
 Run the following console command to import data:
@@ -138,25 +143,27 @@ console data:import merchant-relationship-product-list
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that the configured data are added to the `spy_product_list` table in the database.
+
 {% endinfo_block %}
 
-### 4) Set up Behavior
+### 4) Set up behavior
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-|`ProductListCustomerTransferExpanderPlugin`  | <ul><li>Expands the customer transfer object with their assigned product lists.</li><li>The product list information is based on the customer's merchant relationship.</li></ul> | None |  `Spryker\Zed\MerchantRelationshipProductList\Communication\Plugin\Customer` |
+|ProductListCustomerTransferExpanderPlugin | <ul><li>Expands the customer transfer object with their assigned product lists.</li><li>The product list information is based on the customer's merchant relationship.</li></ul> | None |  Spryker\Zed\MerchantRelationshipProductList\Communication\Plugin\Customer |
 
 **src/Pyz/Zed/Customer/CustomerDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Customer;
- 
+
 use Spryker\Zed\Customer\CustomerDependencyProvider as SprykerCustomerDependencyProvider;
 use Spryker\Zed\MerchantRelationshipProductList\Communication\Plugin\Customer\ProductListCustomerTransferExpanderPlugin;
- 
+
 class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 {
     /**
@@ -177,26 +184,26 @@ Make sure, that when a customer (with an assigned merchant relationship that has
 
 {% endinfo_block %}
 
-#### Register Post-create and Post-update Plugins for MerchantRelationship Module
+#### Register post-create and post-update plugins for MerchantRelationship module
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-|`ProductListMerchantRelationshipPostCreatePlugin`  | Assigns Product Lists to Merchant Relationship after its creation. | None |  `Spryker\Zed\MerchantRelationshipProductList\Communication\Plugin\MerchantRelationship` |
-|`ProductListMerchantRelationshipPostUpdatePlugin`  | Assigns/unassigns Product Lists to Merchant Relationship after its update. | None |  `Spryker\Zed\MerchantRelationshipProductList\Communication\Plugin\MerchantRelationship` |
-|`ProductListRelationshipMerchantRelationshipPreDeletePlugin`  | Cleanups relations to merchant from product list on merchant relationship removing. | None |  `Spryker\Zed\MerchantRelationshipProductList\Communication\Plugin\MerchantRelationship` |
+|ProductListMerchantRelationshipPostCreatePlugin | Assigns Product Lists to Merchant Relationship after its creation. | None |  Spryker\Zed\MerchantRelationshipProductList\Communication\Plugin\MerchantRelationship |
+|ProductListMerchantRelationshipPostUpdatePlugin | Assigns/unassigns Product Lists to Merchant Relationship after its update. | None |  Spryker\Zed\MerchantRelationshipProductList\Communication\Plugin\MerchantRelationship |
+|ProductListRelationshipMerchantRelationshipPreDeletePlugin  | Cleanups relations to merchant from product list on merchant relationship removing. | None |  Spryker\Zed\MerchantRelationshipProductList\Communication\Plugin\MerchantRelationship |
 
 **src/Pyz/Zed/MerchantRelationship/MerchantRelationshipDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\MerchantRelationship;
- 
+
 use Spryker\Zed\MerchantRelationship\MerchantRelationshipDependencyProvider as SprykerMerchantRelationshipDependencyProvider;
 use Spryker\Zed\MerchantRelationshipProductList\Communication\Plugin\MerchantRelationship\ProductListMerchantRelationshipPostCreatePlugin;
 use Spryker\Zed\MerchantRelationshipProductList\Communication\Plugin\MerchantRelationship\ProductListMerchantRelationshipPostUpdatePlugin;
 use Spryker\Zed\MerchantRelationshipProductList\Communication\Plugin\MerchantRelationship\ProductListRelationshipMerchantRelationshipPreDeletePlugin;
- 
+
 class MerchantRelationshipDependencyProvider extends SprykerMerchantRelationshipDependencyProvider
 {
     /**
@@ -217,7 +224,7 @@ class MerchantRelationshipDependencyProvider extends SprykerMerchantRelationship
             new ProductListMerchantRelationshipPostCreatePlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\MerchantRelationshipExtension\Dependency\Plugin\MerchantRelationshipPostUpdatePluginInterface[]
      */
@@ -238,22 +245,22 @@ Make sure that `fk_merchant_relationship` field of the `spy_product_list` will b
 
 {% endinfo_block %}
 
-#### Register Delete Pre-check Plugins for the ProductList Module
+#### Register delete pre-check plugins for the ProductList module
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `MerchantRelationshipProductListDeletePreCheckPlugin` | Finds merchant relationships that use given Product List. Disallows Product List deleting if any usage cases found. | None | `Spryker\Zed\MerchantRelationshipProductList\Communication\Plugin\ProductList` |
+| MerchantRelationshipProductListDeletePreCheckPlugin | Finds merchant relationships that use given Product List. Disallows Product List deleting if any usage cases found. | None | Spryker\Zed\MerchantRelationshipProductList\Communication\Plugin\ProductList |
 
 **src/Pyz/Zed/ProductList/ProductListDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\ProductList;
- 
+
 use Spryker\Zed\MerchantRelationshipProductList\Communication\Plugin\ProductList\MerchantRelationshipProductListDeletePreCheckPlugin;
 use Spryker\Zed\ProductList\ProductListDependencyProvider as SprykerProductListDependencyProvider;
- 
+
 class ProductListDependencyProvider extends SprykerProductListDependencyProvider
 {
     /**
@@ -275,35 +282,38 @@ Make sure that it's impossible to delete a Product List if it's used by Merchant
 {% endinfo_block %}
 
 ### 8) Configure Zed UI
-#### Register Form Expander Plugins for the MerchantRelationshipGui Module
-| Plugin | Specification | Prerequisites | Namespace |
+
+#### Register Form Expander Plugins for the MerchantRelationshipGui module
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `ProductListMerchantRelationshipCreateFormExpanderPlugin` | Adds Product List multi-select field to merchant relationship create form. | None | `Spryker\Zed\MerchantRelationshipProductListGui\Communication\Plugin\MerchantRelationshipGui` |
-| `ProductListMerchantRelationshipEditFormExpanderPlugin` | Adds Product List multi-select field to merchant relationship create form. | None | `Spryker\Zed\MerchantRelationshipProductListGui\Communication\Plugin\MerchantRelationshipGui` |
+| ProductListMerchantRelationshipCreateFormExpanderPlugin | Adds Product List multi-select field to merchant relationship create form. | None | Spryker\Zed\MerchantRelationshipProductListGui\Communication\Plugin\MerchantRelationshipGui |
+| ProductListMerchantRelationshipEditFormExpanderPlugin | Adds Product List multi-select field to merchant relationship create form. | None | Spryker\Zed\MerchantRelationshipProductListGui\Communication\Plugin\MerchantRelationshipGui |
+|   |   |   |   |
 {% info_block warningBox "Verification" %}
 
 Make sure that additional field **Assigned Product Lists** is present at **Merchant Relationship create/edit** pages.
 
 {% endinfo_block %}
 
-#### Register Plugins for the ProductListGui Module
+#### Register plugins for the ProductListGui module
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `MerchantRelationListProductListTopButtonsExpanderPlugin` | Expands buttons list with Merchant Relations list page button. | cell | `Spryker\Zed\MerchantRelationshipProductListGui\Communication\Plugin\ProductListGui`|
-| `MerchantRelationshipProductListUsedByTableExpanderPlugin` | Expands table data with Merchant Relationships which use Product List. | cell | `Spryker\Zed\MerchantRelationshipProductListGui\Communication\Plugin\ProductListGui` |
+| MerchantRelationListProductListTopButtonsExpanderPlugin | Expands buttons list with Merchant Relations list page button. |  | Spryker\Zed\MerchantRelationshipProductListGui\Communication\Plugin\ProductListGui|
+| MerchantRelationshipProductListUsedByTableExpanderPlugin | Expands table data with Merchant Relationships which use Product List. |  | Spryker\Zed\MerchantRelationshipProductListGui\Communication\Plugin\ProductListGui |
 
 **src/Pyz/Zed/ProductListGui/ProductListGuiDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\ProductListGui;
- 
+
 use Spryker\Zed\MerchantRelationshipProductListGui\Communication\Plugin\ProductListGui\MerchantRelationListProductListTopButtonsExpanderPlugin;
 use Spryker\Zed\MerchantRelationshipProductListGui\Communication\Plugin\ProductListGui\MerchantRelationshipProductListUsedByTableExpanderPlugin;
 use Spryker\Zed\ProductListGui\ProductListGuiDependencyProvider as SprykerProductListGuiDependencyProvider;
- 
+
 class ProductListGuiDependencyProvider extends SprykerProductListGuiDependencyProvider
 {
     /**
@@ -315,7 +325,7 @@ class ProductListGuiDependencyProvider extends SprykerProductListGuiDependencyPr
             new MerchantRelationListProductListTopButtonsExpanderPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\ProductListGuiExtension\Dependency\Plugin\ProductListUsedByTableExpanderPluginInterface[]
      */

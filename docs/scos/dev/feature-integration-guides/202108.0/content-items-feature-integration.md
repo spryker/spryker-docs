@@ -21,34 +21,24 @@ Follow the steps below to install the Content Items feature core.
 
 To start the feature integration, review and install the necessary features:
 
-
-
-
-
 | NAME         | VERSION |
-| :----------- | :------ |
-| Spryker Core | master  |
+| ----------- | ------ |
+| Spryker Core | {{page.version}}  |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/content-item:"dev-master" --update-with-dependencies
+composer require spryker-feature/content-item:"{{page.version}}" --update-with-dependencies
 ```
 
-
-
-
-
 {% info_block warningBox "Verification" %}
-
-
 
 Ensure that the following modules have been installed in `vendor/spryker`:
 
 | MODULE                      | EXPECTED DIRECTORY                             |
-| :-------------------------- | :--------------------------------------------- |
+| -------------------------- | --------------------------------------------- |
 | Content                     | vendor/spryker/content                         |
 | ContentStorage              | vendor/spryker/content-storage                 |
 | ContentGui                  | vendor/spryker/content-gui                     |
@@ -73,11 +63,8 @@ Ensure that the following modules have been installed in `vendor/spryker`:
 1. Adjust the schema definition so entity changes trigger events:
 
 | AFFECTED ENTITY | TRIGGERED EVENTS                                             |
-| :-------------- | :----------------------------------------------------------- |
-| spy_content     | Entity.spy_content.create </br> Entity.spy_content.update </br> Entity.spy_content.delete </br> |
-
-
-
+| -------------- | ----------------------------------------------------------- |
+| spy_content     | Entity.spy_content.create</br>Entity.spy_content.update</br> Entity.spy_content.delete</br> |
 
 
 **src/Pyz/Zed/Content/Persistence/Propel/Schema/spy_content.schema.xml**
@@ -96,10 +83,6 @@ Ensure that the following modules have been installed in `vendor/spryker`:
     </table>
 </database>
 ```
-
-
-
-
 
 **src/Pyz/Zed/ContentStorage/Persistence/Propel/Schema/spy_content_storage.schema.xml**
 
@@ -123,24 +106,20 @@ Ensure that the following modules have been installed in `vendor/spryker`:
 ```bash
 console transfer:generate
 console propel:install
-console transfer:generate 
+console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
 
-
 Ensure the following changes have been applied to the database:
 
 | DATABASE ENTITY       | TYPE  | EVENT   |
-| :-------------------- | :---- | :------ |
+| -------------------- | ---- | ----- |
 | spy_content           | table | created |
 | spy_content_localized | table | created |
 | spy_content_storage   | table | created |
 
 {% endinfo_block %}
-
-
-
 
 
 {% info_block warningBox "Verification" %}
@@ -149,7 +128,7 @@ Ensure the following changes have been applied to the database:
 Make sure that the following changes have been applied in transfer objects by checking `src/Generated/Shared/Transfer/`:
 
 | TRANSFER                               | TYPE  | EVENT   |
-| :------------------------------------- | :---- | :------ |
+| ------------------------------------- | ---- | ----- |
 | ContentTransfer                        | class | created |
 | ContentStorageTransfer                 | class | created |
 | ContentTypeContextTransfer             | class | created |
@@ -175,38 +154,32 @@ The following plugins are responsible for publishing the content item to storage
 
 Set up the following plugin
 
-| PLUGIN                        | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                                    |
-| :---------------------------- | :----------------------------------------------------------- | :------------ | :----------------------------------------------------------- |
+| PLUGIN | SPECIFICATION  | PREREQUISITES | NAMESPACE  |
+| -------------- | --------------- | ---------- | ------------------- |
 | ContentStorageEventSubscriber | Registers the listeners that publish content items to the storage when a related entity changes. |               | Spryker\Zed\ContentStorage\Communication\Plugin\Event\Subscriber |
-
-
-
 
 
 **src/Pyz/Zed/Event/EventDependencyProvider.php**
 
 ```php
 <?php
-  
+
 NAMESPACE Pyz\Zed\Event;
-  
+
 use Spryker\Zed\Event\EventDependencyProvider as SprykerEventDependencyProvider;
 use Spryker\Zed\ContentStorage\Communication\Plugin\Event\Subscriber\ContentStorageEventSubscriber;
-  
+
 class EventDependencyProvider extends SprykerEventDependencyProvider
 {
     public function getEventSubscriberCollection()
     {
         $eventSubscriberCollection = parent::getEventSubscriberCollection();
         $eventSubscriberCollection->add(new ContentStorageEventSubscriber());
-  
+
         return $eventSubscriberCollection;
     }
 }
 ```
-
-
-
 
 
 **src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
@@ -233,20 +206,13 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-
-
-
-
 #### Configure message processors
 
 Set up the following plugin:
 
-| PLUGIN                                            | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                              |
-| :------------------------------------------------ | :----------------------------------------------------------- | :------------ | :----------------------------------------------------- |
+| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE   |
+| ---------------- | ------------------- | ----------- | ---------------- |
 | SynchronizationStorageQueueMessageProcessorPlugin | Configures all content messages to sync to the storage. If an error is returned, marks the messages as failed. |               | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
-
-
-
 
 
 **src/Pyz/Zed/Queue/QueueDependencyProvider.php**
@@ -279,12 +245,9 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 Set up the following plugin:
 
-| PLUGIN                                      | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                             |
-| :------------------------------------------ | :----------------------------------------------------------- | :------------ | :---------------------------------------------------- |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| -------------- | -------------- | ----------- | -------- |
 | ContentStorageEventResourceRepositoryPlugin | Triggers events for all the content entries from the database to be published to the `spy_content_storage` table. |               | Spryker\Zed\ContentStorage\Communication\Plugin\Event |
-
-
-
 
 
 **src/Pyz/Zed/EventBehavior/EventBehaviorDependencyProvider.php**
@@ -312,11 +275,7 @@ class EventBehaviorDependencyProvider extends SprykerEventBehaviorDependencyProv
 ```
 
 
-
-
-
 {% info_block warningBox "Verification" %}
-
 
 1. Run `console event:trigger --help`
 2. Make sure that `content` is returned as an available resource.
@@ -325,12 +284,9 @@ class EventBehaviorDependencyProvider extends SprykerEventBehaviorDependencyProv
 
 #### Add synchronization plugins
 
-| PLUGIN                                  | SPECIFICATION                                             | PREREQUISITES | NAMESPACE                                                    |
-| :-------------------------------------- | :-------------------------------------------------------- | :------------ | :----------------------------------------------------------- |
+| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE   |
+| ---------------- | ------------------- | ---------- | -------------------- |
 | ContentStorageSynchronizationDataPlugin | Syncs all the content entries from the database to Redis. |               | Spryker\Zed\ContentStorage\Communication\Plugin\Synchronization |
-
-
-
 
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
@@ -359,10 +315,6 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 ```
 
-
-
-
-
 {% info_block warningBox "Verification" %}
 
 
@@ -372,27 +324,22 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 {% endinfo_block %}
 
 
-
-
 {% info_block warningBox "Verification" %}
-
-
 
 Make sure that, when content banners are exported or created, updated, deleted in the Back Office, they are exported or removed from Redis accordingly.
 
-| STORAG TYPE | TARGET ENTITY                 | EXAMPLE EXPECTED DATA IDENTIFIER                  | 
-| :---------- | :---------------------------- | :------------------------------------------------ | 
-| Redis       | Content Banner                | content:en_us:br1                                 | 
-| Redis       | Content Abstract Product List | content:en_us:apl2                                | 
-| Redis       | Content Product Set           | content:en_us:ps-1                                | 
-| Redis       | Content File List             | content:en_us:0d9f4722-d076-5acc-9d8e-e9daff7cd61 | 
+| STORAG TYPE | TARGET ENTITY    | EXAMPLE EXPECTED DATA IDENTIFIER        |
+| ---------- | ---------------------------- | ---------------------------------------------- |
+| Redis       | Content Banner                | content:en_us:br1                                 |
+| Redis       | Content Abstract Product List | content:en_us:apl2                                |
+| Redis       | Content Product Set           | content:en_us:ps-1                                |
+| Redis       | Content File List             | content:en_us:0d9f4722-d076-5acc-9d8e-e9daff7cd61 |
 
 {% endinfo_block %}
 
-<details open>
-    <summary markdown='span'>EXAMPLE EXPECTED DATA FRAGMENT: content:en_us:br1</summary>
+<details open><summary markdown='span'>EXAMPLE EXPECTED DATA FRAGMENT: content:en_us:br1</summary>
 
-```text
+```json
 {
   "term": "Banner",
   "parameters": {
@@ -404,13 +351,11 @@ Make sure that, when content banners are exported or created, updated, deleted i
   }
 }
 ```
-
 </details>
 
-<details open>
-    <summary markdown='span'>EXAMPLE EXPECTED DATA FRAGMENT: content:en_us:apl2</summary>
-    
-```text
+<details open><summary markdown='span'>EXAMPLE EXPECTED DATA FRAGMENT: content:en_us:apl2</summary>
+
+```json
 {
   "term": "Abstract Product List",
   "parameters": {
@@ -421,13 +366,11 @@ Make sure that, when content banners are exported or created, updated, deleted i
   }
 }
 ```
-
 </details>
 
-<details open>
-    <summary markdown='span'>EXAMPLE EXPECTED DATA FRAGMENT: content:en_us:ps-1</summary>
-    
-```text
+<details open><summary markdown='span'>EXAMPLE EXPECTED DATA FRAGMENT: content:en_us:ps-1</summary>
+
+```json
 {
   "term": "Product Set",
   "parameters": {
@@ -435,13 +378,11 @@ Make sure that, when content banners are exported or created, updated, deleted i
   }
 }
 ```
-
 </details>
 
-<details open>
-    <summary markdown='span'>EXAMPLE EXPECTED DATA FRAGMENT: content:en_us:0d9f4722-d076-5acc-9d8e-e9daff7cd61</summary>
-    
-```text
+<details open><summary markdown='span'>EXAMPLE EXPECTED DATA FRAGMENT: content:en_us:0d9f4722-d076-5acc-9d8e-e9daff7cd61</summary>
+
+```json
 {
   "term": "File List",
   "parameters": {
@@ -452,7 +393,6 @@ Make sure that, when content banners are exported or created, updated, deleted i
   }
 }
 ```
-
 </details>
 
 
@@ -460,12 +400,9 @@ Make sure that, when content banners are exported or created, updated, deleted i
 
 To be able to get the information on content items in the storage, set up the following plugin:
 
-| PLUGIN                        | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                                    |
-| :---------------------------- | :----------------------------------------------------------- | :------------ | :----------------------------------------------------------- |
+| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE  |
+| --------------- | ------------------ | ---------- | ------------------- |
 | CmsContentItemKeyMapperPlugin | Maps given content item keys to corresponding persistent item keys. |               | Spryker\Zed\CmsContentWidgetContentConnector\Communication\Plugin\Cms |
-
-
-
 
 
 **src/Pyz/Zed/CmsContentWidget/CmsContentWidgetDependencyProvider.php**
@@ -503,14 +440,10 @@ class CmsContentWidgetDependencyProvider extends SprykerCmsContentWidgetDependen
 
 Make sure the `cms_page` storage record contains the information on the added content banners and content product lists.
 
-
-
 {% endinfo_block %}
 
 
-
 ### 4) Import data
-
 
 1. Importing content items into Zed:
 
@@ -525,12 +458,8 @@ br2,Test Banner 2,Ipsum Ipsum,banner title 2,us banner title 2,,banner sub-title
 br3,Test Banner 3,Lorem Lorem,banner title 3,,de banner title 3,banner sub-title 3,,banner sub-title 3de,http://example.com/en/canon-powershot-n-035,,http://www.demo-spryker.local/en/canon-powershot-n-035,banner image 3,,banner image 3
 ```
 
-
-
-
-
-| COLUMN                                              | REQUIRED            | DATA TYPE       | DATA EXPLANATION                                |
-| :-------------------------------------------------- | :------------------ | :-------------- | :---------------------------------------------- |
+| COLUMN  | REQUIRED  | DATA TYPE   | DATA EXPLANATION   |
+| ------------------- | ----------- | ------------- | ---------------- |
 | key                                                 | ✓                   | string (unique) | A reference used for banner updates.            |
 | name                                                | ✓                   | string          | Content Item name.                              |
 | description                                         | ✓                   | string          | Content Item description.                       |
@@ -539,9 +468,6 @@ br3,Test Banner 3,Lorem Lorem,banner title 3,,de banner title 3,banner sub-title
 | image_url.default, image_url.en_US, image_url.de_DE | At least one locale | string          | Localized banner image URL.                     |
 | click_url.default, click_url.en_US, click_url.de_DE | At least one locale | string          | Localized banner click URL.                     |
 | alt_text.default, alt_text.en_US, alt_text.de_DE    | At least one locale | string          | Localized banner alternative text for an image. |
-
-
-
 
 
 **vendor/spryker/content-product-data-import/data/import/content_product_abstract_list.csv**
@@ -553,19 +479,12 @@ apl2,APL Name 2,APL Description 2,"191,190","","156,154"
 apl3,APL Name 3,APL Description 3,"180,171","152,151",""
 ```
 
-
-
-
-
-| COLUMN                               | REQUIRED            | DATA TYPE       | DATA EXPLANATION                                             |
-| :----------------------------------- | :------------------ | :-------------- | :----------------------------------------------------------- |
+| COLUMN  | REQUIRED  | DATA TYPE   | DATA EXPLANATION    |
+| -------------- | ----------- | ------------- | ----------------------- |
 | key                                  | ✓                   | string (unique) | A reference used for banner updates.                         |
 | name                                 | ✓                   | string          | Content Item name.                                           |
 | description                          | ✓                   | string          | Content Item description.                                    |
 | skus.default, skus.en_US, skus.de_DE | At least one locale | string          | Localized abstract product list, one or more comma-separated product SKUs. |
-
-
-
 
 
 **vendor/spryker/content-product-set-data-import/data/import/content_product_set.csv**
@@ -578,30 +497,20 @@ PS-3,PS Name 3,PS Description 3,3_tomtom_runner_set,2_sony_set,
 ```
 
 
-
-
-
-| COLUMN                                                       | REQUIRED            | DATA TYPE       | DATA EXPLANATION                     |
-| :----------------------------------------------------------- | :------------------ | :-------------- | :----------------------------------- |
+| COLUMN  | REQUIRED  | DATA TYPE  | DATA EXPLANATION  |
+| -------------------------- | -------- | ------- | ----------- |
 | key                                                          | ✓                   | string (unique) | A reference used for banner updates. |
 | name                                                         | ✓                   | string          | Content Item name.                   |
 | description                                                  | ✓                   | string          | Content Item description.            |
 | product_set_key.default, product_set_key.en_US, product_set_key.de_DE | At least one locale | string          | Localized product set key            |
 
-
-
-
-
 2. Register the following plugin to enable the content items data import:
 
-| Plugin                                     | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                                    |
-| :----------------------------------------- | :----------------------------------------------------------- | :------------ | :----------------------------------------------------------- |
+| PLUGIN    | SPECIFICATION   | PREREQUISITES | NAMESPACE   |
+| -------------------- | ----------------- | ------------ | ----------------------- |
 | ContentBannerDataImportPlugin              | Imports content banners data into the database.              |               | Spryker\Zed\ContentBannerDataImport\Communication\Plugin     |
 | ContentProductAbstractListDataImportPlugin | Imports content abstract product lists data into the database. |               | Spryker\Zed\ContentProductDataImport\Communication\Plugin    |
 | ContentProductSetDataImportPlugin          | Imports content product sets data into the database.         |               | Spryker\Zed\ContentProductSetDataImport\Communication\Plugin |
-
-
-
 
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
@@ -635,19 +544,13 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 3. Import data:
 
 ```bash
-1console data:import content-banner 2console data:import content-product-abstract-list 3console data:import content-product-set 
+1console data:import content-banner 2console data:import content-product-abstract-list 3console data:import content-product-set
 ```
-
-
-
 
 
 {% info_block warningBox "Verification" %}
 
-
 Make sure the data has been added to the `spy_content` and `spy_content_localized` tables.
-
-
 
 {% endinfo_block %}
 
@@ -658,11 +561,8 @@ Make sure the data has been added to the `spy_content` and `spy_content_localize
 Enable the following behaviors by registering the plugins:
 
 
-
-
-
-| Plugin                                                | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                                    |
-| :---------------------------------------------------- | :----------------------------------------------------------- | :------------ | :----------------------------------------------------------- |
+| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE   |
+| ----------------- | ------------------ | ----------- | ------------------- |
 | ContentBannerFormPlugin                               | Adds the form for editing the banner content item in the Back Office. |               | Spryker\Zed\ContentBannerGui\Communication\Plugin\ContentGui |
 | ContentBannerContentGuiEditorPlugin                   | Adds a **Banner** item to the **Content Item** drop-down menu in the WYSIWYG editor for CMS pages and blocks. |               | Spryker\Zed\ContentBannerGui\Communication\Plugin\ContentGui |
 | ProductAbstractListFormPlugin                         | Adds the form for editing the abstract product list content item in the Back Office. |               | Spryker\Zed\ContentProductGui\Communication\Plugin\ContentGui |
@@ -677,9 +577,7 @@ Enable the following behaviors by registering the plugins:
 | TwigExpressionsToHtmlCmsGlossaryAfterFindPlugin       | Replaces Twig expressions of CMS page content with styled UI elements in the WYSIWYG editor. Replaces all the Twig functions registered by the plugins suffixed with `ContentGuiEditorPlugin`. |               | Spryker\Zed\ContentGui\Communication\Plugin\CmsGui           |
 
 
-
-<details open>
-    <summary markdown='span'>src/Pyz/Zed/ContentGui/ContentGuiDependencyProvider.php</summary>
+<details open><summary markdown='span'>src/Pyz/Zed/ContentGui/ContentGuiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -723,16 +621,11 @@ class ContentGuiDependencyProvider extends SprykerContentGuiDependencyProvider
         ];
     }
 }
-
-
 ```
-
 </details>
 
 
-
 {% info_block warningBox "Verification" %}
-
 
 Make sure that in the Back Office > **Content** > **Content Items**, you can see the following:
 
@@ -744,6 +637,7 @@ Make sure that in the Back Office > **Content** > **Content Items**, you can see
 - **Edit** button next to all types of content items in the list.
 
 {% endinfo_block %}
+
 {% info_block warningBox "Verification" %}
 
 Make sure that, when editing CMS pages and blocks in the WYSIWYG editor, in the toolbar, you can see a **Content Item** drop-down menu button with the following items:
@@ -753,15 +647,10 @@ Make sure that, when editing CMS pages and blocks in the WYSIWYG editor, in the 
 - **Product Set**
 - **File List**
 
-
 {% endinfo_block %}
 
 
-
-
-
-<details open>
-    <summary markdown='span'>src/Pyz/Zed/CmsBlockGui/CmsBlockGuiDependencyProvider.php</summary>
+<details open><summary markdown='span'>src/Pyz/Zed/CmsBlockGui/CmsBlockGuiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -794,14 +683,11 @@ class CmsBlockGuiDependencyProvider extends SprykerCmsBlockGuiDependencyProvider
         ];
     }
 }
-
 ```
-
 </details>
 
 
-<details open>
-    <summary markdown='span'>src/Pyz/Zed/CmsGui/CmsGuiDependencyProvider.php</summary>
+<details open><summary markdown='span'>src/Pyz/Zed/CmsGui/CmsGuiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -836,17 +722,13 @@ class CmsGuiDependencyProvider extends SprykerCmsGuiDependencyProvider
 }
 
 ```
-
 </details>
-
 
 
 
 {% info_block warningBox "Verification" %}
 
 Make sure that, when editing CMS pages and blocks in the WYSIWYG editor, you can add any content item using the **Content Item** drop-down menu.
-
-
 
 {% endinfo_block %}
 
@@ -860,17 +742,9 @@ Follow the steps below to install the Content Item feature front end.
 
 To start the feature integration, review and install the necessary features:
 
-
-
-
-
 | NAME         | VERSION    |
-| :----------- | :--------- |
-| Spryker Core | dev-master |
-
-
-
-
+| ---------- | -------- |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
@@ -880,17 +754,12 @@ Install the required modules:
 1composer require spryker-feature/content-item:"^dev-master" --update-with-dependencies
 ```
 
-
-
-
-
 {% info_block warningBox "Verification" %}
-
 
 Ensure the following modules have been installed in `vendor/spryker-shop`:
 
 | MODULE                  | EXPECTED DIRECTORY                             |
-| :---------------------- | :--------------------------------------------- |
+| --------------------- | ------------------------------------------ |
 | ContentBannerWidget     | vendor/spryker-shop/content-banner-widget      |
 | ContentProductWidget    | vendor/spryker-shop/content-product-widget     |
 | ContentProductSetWidget | vendor/spryker-shop/content-product-set-widget |
@@ -902,19 +771,12 @@ Ensure the following modules have been installed in `vendor/spryker-shop`:
 
 Enable the following behaviors by registering the plugins:
 
-
-
-
-
-| Plugin                               | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                            |
-| :----------------------------------- | :----------------------------------------------------------- | :------------ | :--------------------------------------------------- |
+| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE  |
+| ------------- | --------------- | ----------- | -------- |
 | ContentBannerTwigPlugin              | Adds the `content_banner(id, template)` function to Yves and CMS blocks pages. |               | SprykerShop\Yves\ContentBannerWidget\Plugin\Twig     |
 | ContentProductAbstractListTwigPlugin | Adds the `content_product_abstract_list(id, template)` function to Yves and CMS blocks pages. |               | SprykerShop\Yves\ContentProductWidget\Plugin\Twig    |
 | ContentProductSetTwigPlugin          | Adds the `content_product_set(id, template)` function to Yves and CMS blocks  pages. |               | SprykerShop\Yves\ContentProductSetWidget\Plugin\Twig |
 | ContentFileListTwigPlugin            | Adds the `content_file_list(id, template)` function to Yves and CMS blocks  pages. |               | SprykerShop\Yves\ContentFileWidget\Plugin\Twig       |
-
-
-
 
 
 **src/Pyz/Yves/Twig/TwigDependencyProvider.php**
@@ -948,11 +810,7 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 ```
 
 
-
-
-
 {% info_block warningBox "Verification" %}
-
 
 Make sure that you’ve configured the content items:
 
@@ -960,6 +818,6 @@ Make sure that you’ve configured the content items:
 
 2. Configure the CMS block or page to be displayed on the Storefront.
 
-3. Check that the content item is displayed on the Storefront. 
+3. Check that the content item is displayed on the Storefront.
 
 {% endinfo_block %}

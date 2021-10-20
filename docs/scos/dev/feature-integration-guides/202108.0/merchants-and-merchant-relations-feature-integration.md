@@ -12,7 +12,7 @@ redirect_from:
 
 The Merchants and Merchant Relations feature is shipped with following modules:
 
-| Module | Description |
+| MODULE | DESCRIPTION |
 | --- | --- |
 | [Merchant](https://github.com/spryker/spryker/tree/master/Bundles/Merchant) | Implements logic of Merchants (adding, editing, removal). |
 | [MerchantGui](https://github.com/spryker/spryker/tree/master/Bundles/MerchantGui) | Provides table with merchants along with the Create and Edit merchants pages in the Administration Interface. |
@@ -44,10 +44,10 @@ navigation:build-cache
 
 3. Add plugins to Zed `DataImportDependencyProvider`:
 
-| Module | Plugin | Description | Method in Dependency Provider |
+| MODULE | PLUGIN | DESCRIPTION | METHOD IN DEPENDENCY PROVIDER |
 | --- | --- | --- | --- |
-| `DataImport` | `MerchantDataImportPlugin` | Imports merchants. | `getDataImporterPlugins` |
-| `DataImport` | `MerchantRelationshipDataImportPlugin` | Imports merchant relations. | `getDataImporterPlugins` |
+| DataImport | MerchantDataImportPlugin | Imports merchants. | getDataImporterPlugins |
+| DataImport | MerchantRelationshipDataImportPlugin | Imports merchant relations. | getDataImporterPlugins |
 
 **src\Pyz\Zed\DataImport\DataImportDependencyProvider.php**
 
@@ -66,7 +66,3 @@ protected function getDataImporterPlugins(): array
     ];
 }
 ```
-
-_Last reivew date: Jul 9, 2018_
-
-[//]: # (by Valeriy Pravoslavny)

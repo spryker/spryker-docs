@@ -32,7 +32,7 @@ Request sample : `GET https://glue.mysprykershop.com/stores`
 
 ### Response
 
-<details open>
+<details>
     <summary markdown='span'>Response sample</summary>
 ```json
 {
@@ -96,7 +96,7 @@ Request sample : `GET https://glue.mysprykershop.com/stores`
 </details>
 
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | timeZone | String | Name of the time zone of the selected store. |
 | defaultCurrency | String | Default currency of the store. |

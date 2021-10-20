@@ -76,7 +76,7 @@ Response sample: `POST https://glue.mysprykershop.com/carts/8ef901fe-fe47-5569-9
 }
 ```
 
-| Attribute | Type | Required | Description |
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | code | String | ✓ | Code of the gift card sent to the specified email address after the gift card was purchased. |
 ### Response
@@ -144,7 +144,7 @@ Response sample:
 ```
 For the attributes of the registered user's carts, see [Creating carts of registered users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#creating-carts).
 
-| Included resource | Attribute | Type | Description |
+| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
 | gift-cards | code | String | Code of the gift card sent to the specified email address after the gift card was purchased. |
 | gift-cards | name | String | Name of the gift card. |
@@ -179,7 +179,7 @@ If the item is deleted successfully, the endpoint will respond with a `204 No Co
 
 ## Possible errors
 
-| Code  | Reason |
+| CODE  | REASON |
 | --- | --- |
 | 001| Access token is incorrect. |
 | 003| Access token is missing. |

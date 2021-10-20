@@ -44,7 +44,7 @@ To update payment with a payload from a third-party payment provider, send the r
 | X-Anonymous-Customer-Unique-Id | String | Required when checking out a [guest cart](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/guest-carts/managing-guest-carts.html). | A guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
 | Authorization | String | Required when checking out a [cart of registered user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html). | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
 
-<details open>
+<details>
     <summary markdown='span'>Request sample</summary>
 
 `POST https://glue.mysprykershop.com/order-payments`
@@ -115,7 +115,7 @@ To update payment with a payload from a third-party payment provider, send the r
 
 ## Possible errors
 
-| STATUS | REASON |
+| CODE | REASON |
 | --- | --- |
 | 400	Bad request.  | <ul><li>POST data is incorrect</li><li>Neither Authorization nor X-Anonymous-Customer-Unique-Id headers were provided in the request.</li></ul> |
 |<ul><li>404	Order not found.</li><li>422	Order payment is not updated.</li></ul>|  Checkout data is incorrect. |

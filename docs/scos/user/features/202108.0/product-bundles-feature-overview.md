@@ -42,7 +42,7 @@ Product bundles are two or more existing products combined into a new type of pr
 * The stock level has a upper boundary (see Stock calculation).
 * A product bundle can have attributes with localized values.
 * A product bundle can have localized SEO information.
-* A product bundle can have multiple localized image setsю
+* A product bundle can have multiple localized image sets.
 
 ## Product bundle entity relationship diagram
 

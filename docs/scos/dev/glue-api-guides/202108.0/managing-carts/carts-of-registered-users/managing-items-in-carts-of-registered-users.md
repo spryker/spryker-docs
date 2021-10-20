@@ -40,7 +40,7 @@ To add items to a cart, send the request:
 `POST` **carts/*{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*/items**
 ***
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart. [Create a cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html)) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
 
@@ -49,7 +49,7 @@ To add items to a cart, send the request:
 
 ### Request
 
-| Header key | Header value | Required | Description |
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
 
@@ -62,7 +62,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 
 {% endinfo_block %}
 
-<details open>
+<details>
 <summary markdown='span'>Request sample</summary>
 
 `POST http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items`
@@ -81,7 +81,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 </details>
 
 
-<details open>
+<details>
 <summary markdown='span'>Request sample with product measurement units and sales units</summary>
 
 `POST http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items?include=sales-units,product-measurement-units`
@@ -103,7 +103,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 ```
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>Request sample with cart rules</summary>
 
 `POST http://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830/items?include=cart-rules`
@@ -122,7 +122,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>Request sample with vouchers</summary>
 
 `POST http://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830/items?include=vouchers`
@@ -141,7 +141,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>Request sample with a promotional item and cart rules</summary>
 
 {% info_block infoBox "Cart rules" %}
@@ -167,7 +167,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 ```
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>Request sample with concrete products and product options</summary>
 
 `POST http://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398/items?include=concrete-products,product-options`
@@ -193,7 +193,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 ```
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>Request sample with bundle items</summary>
 
 `POST https://glue.mysprykershop.com/carts/bd873e3f-4670-523d-b5db-3492d2c0bee3/items?include=bundle-items` - retrieve the cart with the `bd873e3f-4670-523d-b5db-3492d2c0bee3` ID and the product bundles inside it.
@@ -212,7 +212,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>Request sample with bundle items and bundled items</summary>
 
 `POST https://glue.mysprykershop.com/carts/bd873e3f-4670-523d-b5db-3492d2c0bee3/items?include=bundle-items,bundled-items` - retrieve the cart with the `bd873e3f-4670-523d-b5db-3492d2c0bee3` ID, the product bundles inside it, and the products of the product bundles.
@@ -231,7 +231,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>Request sample with bundle items, bundled items, concrete products, and abstract products</summary>
 
 `POST https://glue.mysprykershop.com/carts/bd873e3f-4670-523d-b5db-3492d2c0bee3/items?include=bundle-items,bundled-items,concrete-products,abstract-products` - retrieve the cart with the `bd873e3f-4670-523d-b5db-3492d2c0bee3` ID. Retrieve the product bundles inside it, the products of the product bundles, and respective abstract and concrete products.
@@ -251,7 +251,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 </details>
 
 
-| Attribute | Type | Required | Description |
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | sku | String | &check; | Specifies the SKU of the concrete product to add to the cart. |
 | quantity | String | &check; | Specifies the number of items to place on the guest cart. If you add a promotional item and the number of products exceeds the number of promotions, the exceeding items will be added without promotional benefits. |
@@ -276,7 +276,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 ### Response
 
-<details open>
+<details>
 <summary markdown='span'>Response sample</summary>
 
 ```json
@@ -311,7 +311,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with items, product measurement units, and sales units</summary>
 
 ```json
@@ -452,7 +452,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with cart rules</summary>
 
 ```json
@@ -555,7 +555,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with vouchers</summary>
 
 ```json
@@ -698,7 +698,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>Response sample: adding a promotional item without cart-rules relationship</summary>
 
 ```json
@@ -741,7 +741,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 
-<details open>
+<details>
 <summary markdown='span'>Response sample: adding a promotional item with cart-rules relationship</summary>
 
 ```json
@@ -1257,7 +1257,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with bundle items</summary>
 
 ```json
@@ -1347,7 +1347,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with bundle items and bundled items</summary>
 
 ```json
@@ -1572,7 +1572,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with bundle items, bundled items, concrete products, and abstract products</summary>
 
 ```json
@@ -2325,7 +2325,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 <a name="add-an-item-to-a-registered-users-cart-response-attributes"></a>
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | sku | String | Product SKU. |
 | quantity | Integer | Quantity of the given product in the cart. |
@@ -2361,7 +2361,7 @@ It is the responsibility of the API Client to track whether the selected items a
 | selectedProductOptions.price | Integer | Product option price in cents. |
 | selectedProductOptions.currencyIsoCode | String | ISO 4217 code of the currency in which the product option price is specified. |
 
-| Included resource | Attribute | TYPE | DESCRIPTION |
+| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
 |items, bundle-items, bundled-items| sku |String| Unique identifier of the product that was added to the cart.|
 |items, bundle-items, bundled-items| quantity |Integer| Quantity of the product that was added to the cart.|
@@ -2448,7 +2448,7 @@ Request sample: `POST https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1
 
 ### Response
 
-<details open>
+<details>
 <summary markdown='span'>Response sample: add a configurable bundle</summary>
 
 ```json
@@ -2627,7 +2627,7 @@ To change the number of items in a cart, send the request:
 ***
 
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***cart_uuid*** | Unique identifier of a cart. [Create a cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
 | ***{% raw %}{{{% endraw %}itemgroupkey{% raw %}}}{% endraw %}*** | Group key of the item. Usually, it is equal to the item’s SKU. |
@@ -2638,7 +2638,7 @@ To change the number of items in a cart, send the request:
 ### Request
 
 
-| Header key | Header value | Required | Description |
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
 
@@ -2663,7 +2663,7 @@ Request sample:
 
 ### Response
 
-<details open>
+<details>
 <summary markdown='span'>Response sample</summary>
 
 ```json
@@ -2832,7 +2832,7 @@ Request sample:
 
 ### Response
 
-<details open>
+<details>
 <summary markdown='span'>Response sample</summary>
 
 ```json
@@ -3110,7 +3110,7 @@ To remove an item from a registered user's cart, send the request:
 `DELETE` **/carts/*{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*/items/*{% raw %}{{{% endraw %}item_group_key{% raw %}}}{% endraw %}***
 ***
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
 | ***{% raw %}{{{% endraw %}itemgroupkey{% raw %}}}{% endraw %}*** | Group key of the item. Usually, it is equal to the item’s SKU. |
@@ -3118,7 +3118,7 @@ To remove an item from a registered user's cart, send the request:
 
 ### Request
 
-| Header key | Header value | Required | Description |
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
 
@@ -3136,7 +3136,7 @@ To remove a configurable bundle from a registered user’s cart, send the reques
 `DELETE` ***/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/configured-bundles/{% raw %}{{{% endraw %}bundle_group_key{% raw %}}}{% endraw %}***
 ***
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart. [Create a cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-carts) to get it. |
 | ***{% raw %}{{{% endraw %}bundle_group_key{% raw %}}}{% endraw %}*** | Group key of the configurable bundle. The value is generated based on the configurable bundle template and items selected in the slot. You can get it when [adding the configurable bundle to a registered user’s cart](#add-a-configurable-bundle-to-a-registered-user’s-cart). |
@@ -3144,7 +3144,7 @@ To remove a configurable bundle from a registered user’s cart, send the reques
 
 ### Request
 
-| Header key | Header value | Required | Description |
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
 
@@ -3156,7 +3156,7 @@ If the item is deleted successfully, the endpoint returns the “204 No Content�
 ## Possible errors
 
 
-| Code | Reason |
+| CODE | REASON |
 | --- | --- |
 | 101 | Cart with given uuid not found. |
 | 102 | Failed to add an item to a cart. |

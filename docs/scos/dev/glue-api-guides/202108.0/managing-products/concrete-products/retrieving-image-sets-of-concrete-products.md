@@ -30,7 +30,7 @@ To retrieve image sets of a concrete product, send the request:
 
 ---
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}*** | SKU of a concrete product to get the image sets of. |
 
@@ -40,7 +40,7 @@ Request sample : `GET http://glue.mysprykershop.com/concrete-products/001_259040
 
 ### Response
 
-<details open>
+<details>
     <summary markdown='span'>Response sample</summary>
 
 ```json

@@ -22,23 +22,17 @@ This endpoint allows to refresh an agent assist access token or revoke a refresh
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-
 *   [Glue API: Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-agent-assist-feature-integration.html)
-    
 *   [Customer Account Management + Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-agent-assist-feature-integration.html)
-    
 *   [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html)
-    
 
 ## Refresh an agent assist authentication token
 
-
-
 To refresh an agent assist authentication token, send the request:
 
-* * *
+***
 `POST` **/refresh-tokens**
-* * *
+***
 
 ### Request
 
@@ -55,17 +49,13 @@ Request sample: `POST https://glue.mysprykershop.com/refresh-tokens`
 }
 ```
 
-
-| Attribute | Type | Required | Description |
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | refreshToken | String | &check; | Authentication token used to refresh `accessToken`. You can get it by [authenticating as an agent assist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/authenticating-as-an-agent-assist.html#authenticate-as-an-agent-assist) . |
 
-
-
 ### Response
 
-<details open>
-    <summary markdown='span'>markdown='span'>Response sample</summary>
+<details><summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -83,23 +73,19 @@ Request sample: `POST https://glue.mysprykershop.com/refresh-tokens`
         }
     }
 }
-    
+
 ```
 
 </details>
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | tokenType | String | Type of the authentication token. Set this type when sending a request with the token. |
 | expiresIn | Integer | Time in seconds in which the `accessToken` token expires. |
 | accessToken | String | Authentication token used to send requests to the protected resources available for this agent assist. |
 | refreshToken | String | Authentication token used to refresh the `accessToken`. |
 
-
-
-
 ## Revoke an agent assist refresh token
-
 
 To revoke an agent assist refresh token, send the request:
 
@@ -107,21 +93,20 @@ To revoke an agent assist refresh token, send the request:
 `DELETE` **/refresh-tokens/*{% raw %}{{{% endraw %}refresh_token{% raw %}}}{% endraw %}***
 ***
 
-
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}refresh_token{% raw %}}}{% endraw %}*** | Defines the refresh token to revoke. Enter `mine` to revoke all the refresh tokens of the authenticated agent assist. |
 
 
 ### Request
 
-| Header key | Type | Required | Description |
+| HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | X-Agent-Authorization | string | &check; | Only required when revoking all the refresh token of an agent assist. String containing digits, letters, and symbols that authorize the agent assist. [Authenticate as an agent assist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/authenticating-as-an-agent-assist.html#authenticate-as-an-agent-assist) to get the value.  |
 
 
 
-| Request | Usage |
+| REQUEST | USAGE |
 | --- | --- |
 | `DELETE https://glue.mysprykershop.com/refresh-tokens/mine` | Revoke all the refresh tokens of the authenticated agent assist. |
 | `DELETE https://glue.mysprykershop.com/refresh-tokens/def50200f6acb9e125f08a4104889acfc507e41213d6de3f79b9c6ee3c54bc8d0d0333a63a261c752ed71e70a853e29a16c95c7f02e4194203dd6d1be72790618aaa5db2219173a46a9e1417b051daa8b5dd4fee7250236237267fe015ca2eb65d060b1d0ae789c971734904f7258f212155723814102abeb60004fd574c1ca157790cccbc71a156cddbf458493a55bdad7eb45c5fb4a0a328712d35a18859332074c100568d1cd1cbab915385bd353692fbf5ef4d18d570a70d13c2939427039b2cec70802365e7327a806a7121f9c5ae66816ffe912b78e41c98bc04d7341ac482422612afaffcf6bb5642a55d314df62e2472bab69e6e1fd1bb8146405b4544dc9d881df5312e38291873477ecedec4f20425fcdfdee88643d977f01130c6f8766b476475219640ce478513461e589d72ccbd704672f16cdc87906ceea15242548cedf6ec9a6486be0a5d1789fa3245199802b464ccae018f0ad61703aea97a4eb75705087249327392b8d37ec8fc7a6e1b12cafa9d0a904fd249c87b355dd2ce31f297275548851d3472525f59178ac29c69d4342b24bb7a9726dc949e1ddff283ecd64594802033fc7c2b5c248ae522317f1e9a492d37f3e3e63621dc2bc76c622e258baf71f70850cad14667f58b27dacd8de90f3672bd4449f9a8fe` | Revoke the following refresh token: `def50200f6acb9e125f08a4104889acfc507e41213d6de3f79b9c6ee3c54bc8d0d0333a63a261c752ed71e70a853e29a16c95c7f02e4194203dd6d1be72790618aaa5db2219173a46a9e1417b051daa8b5dd4fee7250236237267fe015ca2eb65d060b1d0ae789c971734904f7258f212155723814102abeb60004fd574c1ca157790cccbc71a156cddbf458493a55bdad7eb45c5fb4a0a328712d35a18859332074c100568d1cd1cbab915385bd353692fbf5ef4d18d570a70d13c2939427039b2cec70802365e7327a806a7121f9c5ae66816ffe912b78e41c98bc04d7341ac482422612afaffcf6bb5642a55d314df62e2472bab69e6e1fd1bb8146405b4544dc9d881df5312e38291873477ecedec4f20425fcdfdee88643d977f01130c6f8766b476475219640ce478513461e589d72ccbd704672f16cdc87906ceea15242548cedf6ec9a6486be0a5d1789fa3245199802b464ccae018f0ad61703aea97a4eb75705087249327392b8d37ec8fc7a6e1b12cafa9d0a904fd249c87b355dd2ce31f297275548851d3472525f59178ac29c69d4342b24bb7a9726dc949e1ddff283ecd64594802033fc7c2b5c248ae522317f1e9a492d37f3e3e63621dc2bc76c622e258baf71f70850cad14667f58b27dacd8de90f3672bd4449f9a8fe` |
@@ -135,7 +120,7 @@ The tokens are marked as expired on the date and time of the request. You can co
 
 ## Possible errors
 
-| Code  | Reason |
+| CODE  | REASON |
 | --- | --- |
 |001 | Access token is invalid.  |
 |002 |Access token is missing. |

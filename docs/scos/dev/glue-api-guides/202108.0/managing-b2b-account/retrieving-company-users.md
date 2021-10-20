@@ -23,6 +23,7 @@ related:
 This endpoint allows retrieving information about company users.
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html).
 
 ## Retrieve company users
@@ -35,19 +36,17 @@ To retrieve all the company users that belong to the company of the authenticate
 
 ### Request
 
-| Header key | Required | Description |
+| HEADER KEY | REQUIRED | DESCRIPTION |
 | --- | --- | --- |
 | Authorization | &check; | Alphanumeric string that authorizes the company user to send requests to protected resources. Get it by [authenticating as a company user](https://documentation.spryker.com/authenticating-as-a-company-user).  |
 
 Sample request: `GET https://glue.mysprykershop.com/company-users`
 
-
 ### Response
 
-
-<details open>
+<details>
 <summary markdown='span'>Sample Response</summary>
-    
+
 ```json
 {
     "data": [
@@ -104,12 +103,10 @@ Sample request: `GET https://glue.mysprykershop.com/company-users`
 
 </details>
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | isActive | Boolean | Defines if the company user is active. |
 | isDefault | Boolean | Defines if the company user is default for the authenticated company user. |
-
-
 
 ## Retrieve a company user
 
@@ -119,37 +116,30 @@ To retrieve information about a company user, send the request:
 `GET` **/company-users/*{% raw %}{{{% endraw %}company_user_id{% raw %}}}{% endraw %}***
 ***
 
-
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}company_user_id{% raw %}}}{% endraw %}***  | Unique identifier of a company user to retrieve information for. To get it, [retrieve company users](#retrieve-company-users). Enter `mine` to retrieve information on the company user available to the current authenticated company user. |
 
-
 ### Request
 
-
-| Header key | Required | Description |
+| HEADER KEY | REQUIRED | DESCRIPTION |
 | --- | --- | --- |
 | Authorization | &check; | Alphanumeric string that authorizes the company user to send requests to protected resources. Get it by [authenticating as a company user](https://documentation.spryker.com/authenticating-as-a-company-user).  |
 
-
-| Query parameter | Description | Possible values |
+| QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | Include | Adds resource relationships to the request. | companies, company-business-units, company-roles |
 
-
-| Request | Usage |
+| REQUEST | USAGE |
 | --- | --- |
 | GET https://glue.mysprykershop.com/company-users/e1019900-88c4-5582-af83-2c1ea8775ac5 | Retrieve the company user with unique identifier `e1019900-88c4-5582-af83-2c1ea8775ac5`. |
 | GET https://glue.mysprykershop.com/company-users/min?include=companies,company-business-units,company-roles | Retrieve copmany users and related companies, business units, and roles. |
 
-
 ### Response
 
-
-<details open>
+<details>
 <summary markdown='span'>Response sample</summary>
-    
+
 ```json
 {
     "data": {
@@ -165,12 +155,12 @@ To retrieve information about a company user, send the request:
     }
 }
 ```
-    
+
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with companies, company business units and company roles</summary>
-    
+
 ```json
 {
     "data": [
@@ -336,19 +326,15 @@ To retrieve information about a company user, send the request:
     ]
 }
 ```
-    
+
 </details>
 
-
-
-
-
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | isActive | Boolean | Defines if the company user is active. |
 | isDefault | Boolean | Defines if the company user is default for the authenticated company user. |
 
-| Included resource | Attribute | Type | Description |
+| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
 | companies | name | String | Specifies the name of the company. |
 | companies | isActive | Boolean | Indicates whether the company is active. |
@@ -363,11 +349,9 @@ To retrieve information about a company user, send the request:
 | company-business-units | iban | String | Specifies the International bank account number of the business unit. |
 | company-business-units | defaultBillingAddress | String | Specifies the default billing address of the business unit. |
 
-
-
 ## Possible errors
 
-| Status | Reason |
+| CODE | REASON |
 | --- | --- |
 | 001 | Access token is invalid. |
 | 002 | Access token is missing.|

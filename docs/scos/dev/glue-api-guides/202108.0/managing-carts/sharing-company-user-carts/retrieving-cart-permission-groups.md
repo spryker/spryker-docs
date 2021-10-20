@@ -26,7 +26,7 @@ To retrieve cart permission groups, send the request:
 
 ### Request
 
-| Header key | Type | Required | Description |
+| HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
@@ -34,7 +34,7 @@ Request sample : `GET http://glue.mysprykershop.com/cart-permission-groups`
 
 ### Response
 
-<details open>
+<details>
     <summary markdown='span'>Response sample</summary>
 
 ```json
@@ -71,7 +71,7 @@ Request sample : `GET http://glue.mysprykershop.com/cart-permission-groups`
 
 </details>
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | id | String | A unique identifier that is used to define permissions with this permission group. |
 | name | String | Permission group name. For example, `READ_ONLY` or `FULL_ACCESS`. |
@@ -87,13 +87,13 @@ To retrieve a cart permission group, send the request:
 ***
 
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}permission_group_id{% raw %}}}{% endraw %}*** | Unique identifier of a cart permission group to retrieve. |
 
 ### Request
 
-| Header key | Type | Required | Description |
+| HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
@@ -125,7 +125,7 @@ Sample request: `GET http://glue.mysprykershop.com/cart-permission-groups/1`
 }
 ```
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | id | String | A unique identifier that is used to assign permissions with this permission group. |
 | name | String | Permission group name. For example, `READ_ONLY` or `FULL_ACCESS`. |
@@ -134,7 +134,7 @@ Sample request: `GET http://glue.mysprykershop.com/cart-permission-groups/1`
 
 ## Possible errors
 
-| Status | Reason |
+| CODE | REASON |
 | --- | --- |
 | 001 | The access token is invalid. |
 | 002 | The access token is missing. |

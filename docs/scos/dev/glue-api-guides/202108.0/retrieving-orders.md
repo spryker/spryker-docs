@@ -44,17 +44,17 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 ### Request
 
-| Header key | Header value | Required | Description |
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
 
-| String parameter | Description | Possible values |
+| STRING PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | offset | Ofset of the order at which to begin the response. </br> Works only together with `page[limit]`. </br> To work correctly, the value should be devisable by the value of `page[limit]`. </br> The default value is `0`.  | From `0` to any. |
 | limit | Maximum number of entries to return. </br> Works only together with `page[offset]`. </br> The default value is `10`. | From `1` to any. |
 
 
-| Request | Usage |
+| REQUEST | USAGE |
 | --- | --- |
 | GET https://glue.mysprykershop.com/orders | Retrieve all orders. |
 | GET https://glue.mysprykershop.com/orders?page[limit]=10 | Retrieve 10 orders. |
@@ -67,8 +67,8 @@ To retrieve a list of all orders made by a registered customer, send the request
 ### Response
 
 
-<details open>
-<summary markdown='span'>markdown='span'>Response sample with one order</summary>
+<details>
+<summary markdown='span'>Response sample with one order</summary>
 
 ```
 {
@@ -103,7 +103,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 </details>
 
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | createdAt | String | Date and time when the order was created. |
 | currencyIsoCode | String | ISO 4217 code of the currency that was selected when placing the order. |
@@ -148,8 +148,8 @@ To retrieve detailed information on an order, send the request:
 
 ### Response
 
-<details open>
-    <summary markdown='span'>markdown='span'>Response sample</summary>
+<details>
+    <summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -367,8 +367,8 @@ To retrieve detailed information on an order, send the request:
 
 </details>
 
-<details open>
-<summary markdown='span'>markdown='span'>Response sample with order shipments</summary>
+<details>
+<summary markdown='span'>Response sample with order shipments</summary>
 
 ```json
 {
@@ -663,8 +663,8 @@ To retrieve detailed information on an order, send the request:
 
 </details>
 
-<details open>
-<summary markdown='span'>markdown='span'>Response sample with a configurable bundle</summary>
+<details>
+<summary markdown='span'>Response sample with a configurable bundle</summary>
 
 ```json
 {
@@ -1327,7 +1327,7 @@ To retrieve detailed information on an order, send the request:
 | items.metadata.image                    | String  | Product image URL.                                           |
 
 **Measurement unit calculations**
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | salesUnit | Object | List of attributes defining the sales unit to be used for item amount calculation. |
 | conversion | integer | Factor to convert a value from sales to base unit. If it is "null", the information is taken from the global conversions. |
@@ -1436,7 +1436,7 @@ To retrieve detailed information on an order, send the request:
 
 ## Possible errors
 
-| Code  | Reason |
+| CODE  | REASON |
 | --- | --- |
 |001| Access token is invalid. |
 |002| Access token is missing.  |

@@ -60,7 +60,7 @@ To redeem a gift card, send the request:
 
 
 
-<details open>
+<details>
 <summary markdown='span'>Request sample</summary>
 
 `https://glue.mysprykershop.com/guest-carts/f8782b6c-848d-595e-b3f7-57374f1ff6d7/cart-codes?include=vouchers,gift-cards`
@@ -77,7 +77,7 @@ To redeem a gift card, send the request:
 ```    
 </details>
 
-| Attribute | Type | Required | Description |
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | code | String | ✓ | Code of the gift card sent to the specified email address after the gift card was purchased. |
 
@@ -146,7 +146,7 @@ Response sample:
 ```
 For the guest cart attributes, see [Creating Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#creating-a-guest-cart).
 
-| Included resource | Attribute | Type | Description |
+| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
 | gift-cards | code | String | Code of the gift card sent to the specified email address after the gift card was purchased. |
 | gift-cards | name | String | Name of the gift card. |
@@ -181,7 +181,7 @@ If the item is deleted successfully, the endpoint will respond with a `204 No C
 
 ## Possible errors
 
-| Code  | Reason |
+| CODE  | REASON |
 | --- | --- |
 | 3301| Cart code not found in cart. |
 | 3302| Cart code can't be added. |

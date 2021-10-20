@@ -31,7 +31,7 @@ To retrieve a navigation tree, send the request:
 
 ---
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}navigation_key{% raw %}}}{% endraw %}*** | Unique identifier of a navigation tree to get information for. It is always case sensitive. | 
 
@@ -56,8 +56,8 @@ If a navigation tree has a category child node, include the `category-nodes` res
 ### Response
 
 
-<details open>
-    <summary markdown='span'>markdown='span'>Response sample</summary>
+<details>
+    <summary markdown='span'>Response sample</summary>
     
 ```json
 {
@@ -120,8 +120,8 @@ If a navigation tree has a category child node, include the `category-nodes` res
 
 </details>
 
-<details open>
-<summary markdown='span'>markdown='span'>Response sample with category nodes</summary>
+<details>
+<summary markdown='span'>Response sample with category nodes</summary>
     
 ```json
 {
@@ -1118,7 +1118,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
 | children | Array | Specifies an array of node elements that are nested within the current element. |
 
 
-| Included resource | Attribute | Type | Description |
+| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
 | category-nodes | nodeId | String | Category node ID. |
 | category-nodes | name | String | Name of the category associated with the node. |
@@ -1133,7 +1133,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
 
 ### Possible errors
 
-| Status | Reason |
+| CODE | REASON |
 | --- | --- |
 | 1601 | Navigation not found. |
 | 1602 | Navigation ID is not specified. |

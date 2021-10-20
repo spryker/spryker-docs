@@ -58,6 +58,6 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that merchant product option information is displayed in the checkout.
+Make sure that validation works correctly for merchants product options with not approved status and checkout process does not go to next step.
 
 {% endinfo_block %}

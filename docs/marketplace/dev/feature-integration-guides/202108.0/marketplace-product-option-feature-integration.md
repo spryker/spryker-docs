@@ -18,8 +18,9 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | LINK |
 | --------------- | ------- | ---------- |
-| Spryker Core         | {{page.version}}      | [Spryker Core Feature Integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Marketplace Merchant | {{page.version}}      | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
+| Spryker Core         | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Product Options      | {{page.version}} | Product Options feature integration <!---LINK--> |
+| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
 
 
 ### 1) Install the required modules using Composer
@@ -47,9 +48,9 @@ Make sure the following modules have been installed:
 
 ### 2) Set up the database schema and transfer objects
 
-Adjust the schema definition so that entity changes will trigger events:
+Adjust the schema definition to guarantee unique identifier for each option group:
 
-**src/Pyz/Zed/PriceProductOffer/Persistence/Propel/Schema/spy_price_product_offer.schema.xml**
+**src/Pyz/Zed/DataImport/Persistence/Propel/Schema/spy_product_option.schema.xml**
 ```xml
 <?xml version="1.0"?>
 <database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\ProductOption\Persistence" package="src.Orm.Zed.ProductOption.Persistence">

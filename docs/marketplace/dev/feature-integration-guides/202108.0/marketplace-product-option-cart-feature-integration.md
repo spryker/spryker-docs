@@ -58,6 +58,6 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure approved merchants product options are displayed in a cart without any errors.
+Make sure that validation works correctly with merchants product options in the cart and displays an error in case if any is not approved.
 
 {% endinfo_block %}

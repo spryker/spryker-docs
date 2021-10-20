@@ -41,7 +41,8 @@ Run the following command to install the required modules:
 composer require spryker/company-user-auth-rest-api:"^2.0.0" spryker/oauth-company-user:"^2.0.0" spryker/oauth-permission:"^1.1.0" spryker/companies-rest-api:"^1.1.0" spryker/company-business-units-rest-api:"^1.2.0" spryker/company-business-unit-addresses-rest-api:"^1.0.0" spryker/company-roles-rest-api:"^1.1.0" spryker/company-users-rest-api:"^2.1.0" --update-with-dependencies
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 
 Make sure that the following modules are installed:
 | Module | Expected Directory |
@@ -66,7 +67,8 @@ console propel:install
 console transfer:generate
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 
 Make sure that the following changes have occurred:
 
@@ -105,7 +107,8 @@ Make sure that the following changes have occurred:
 
 {% endinfo_block %}
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 
 Verify that the following changes have occurred in the database:
 
@@ -127,7 +130,8 @@ Run the following command:
 ```bash
 console uuid:generate Company spy_company
 ```
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 
 Make sure that the UUID field is populated for all records in the `spy_company table`. To do so, run the following SQL query and make sure that the result contains **0** records:
 ```sql
@@ -143,7 +147,8 @@ Run the following command:
 ```bash
 console uuid:generate CompanyBusinessUnit spy_company_business_unit
 ```
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 
 Make sure that the UUID field is populated for all records in the `spy_company_business_unit` table. To do so, run the following SQL query and make sure that the result contains **0** records:
 
@@ -160,7 +165,8 @@ Run the following command:
 ```bash
 console uuid:generate CompanyRole spy_company_role
 ```
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 
 Make sure that the UUID field is populated for all records in the `spy_company_role` table. To do so, run the following SQL query and make sure that the result contains **0** records:
 
@@ -177,7 +183,8 @@ Run the following command:
 ```bash
 console uuid:generate CompanyUnitAddress spy_company_unit_address
 ```
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 
 Make sure that the UUID field is populated for all records in the `spy_company_unit_address` table. To do so, run the following SQL query and make sure that the result contains **0** records:
 
@@ -194,7 +201,8 @@ Run the following command:
 ```bash
 console uuid:generate CompanyUser spy_company_user
 ```
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 
 Make sure that the UUID field is populated for all records in the `spy_company_user` table. To do so, run the following SQL query and make sure that the result contains **0** records:
 ```sql
@@ -473,7 +481,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 </br>
 </details>
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 
 To verify that everything is set up correctly, first, you need to authenticate as a regular customer. Then, to get the ID of the Company Users you can impersonate as, send a `GET` request to `http://glue.mysprykershop.com/company-users/mine`.
 
@@ -534,7 +543,8 @@ To verify that all the required data is provided in the access token, go to [jwt
 
 {% endinfo_block %}
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 
 Make sure that the permission data is filtered out based on the record in the `spy_oauth_access_token` table. For this purpose, you can run the following SQL query and make sure that the result doesn't have any permissions-related data from the `user_identifier` column.
 
@@ -544,7 +554,8 @@ SELECT * FROM spy_oauth_access_token WHERE user_identifier LIKE '%{"id_company_u
 
 {% endinfo_block %}
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 
 Send a `GET` request to `http://glue.mysprykershop.com/companies/mine`. Make sure that the response contains a collection of resources with the companies that your current Company User belongs to.
 
@@ -552,7 +563,8 @@ Send a `GET` request to `http://glue.mysprykershop.com/companies/{% raw %}{{{% e
 
 {% endinfo_block %}
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 
 Send a `GET` request to `http://glue.mysprykershop.com/company-business-units/mine?include=companies,company-business-unit-addresses`. Make sure that the response contains a collection of resources with the company business units that your current Company User belongs to. Make sure that the `companies` and `addresses` relationships are present.
 
@@ -560,13 +572,15 @@ Send a `GET` request to `http://glue.mysprykershop.com/company-business-units/{%
 
 {% endinfo_block %}
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 
 Send a `GET` request to `http://glue.mysprykershop.com/company-business-unit-addresses/{% raw %}{{{% endraw %}company_business_unit_address_uuid{% raw %}}}{% endraw %}`. Make sure that response contains a single company business unit address resource that your current company has.
 
 {% endinfo_block %}
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 
 Send a `GET` request to `http://glue.mysprykershop.com/company-roles/mine?include=companies`. Make sure that the response contains the collection of resources with all company roles that your current Company User has. Make sure that the `companies` relationship is present.
 
@@ -574,7 +588,8 @@ Send a `GET` request to `http://glue.mysprykershop.com/company-roles/{% raw %}{{
 
 {% endinfo_block %}
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 
 Send a `GET` request to `http://glue.mysprykershop.com/company-users?include=company-roles,companies,company-business-units,customers`. Make sure that the response contains a collection of resources with all the Company Users in your current company. Make sure that the `company-roles`, `companies`, `company-business-units` and `customers` relationships are present.
 

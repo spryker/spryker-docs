@@ -96,7 +96,8 @@ console transfer:generate
 Make sure that the following changes have been applied by checking your database.<table><thead><tr><th>Database Entity</th><th>Type</th><th>Event</th></tr></thead><tbody><tr><td>`spy_category_image_set`</td><td>table</td><td>created</td></tr><tr><td>`spy_category_image`</td><td>table</td><td>created</td></tr><tr><td>`spy_category_image_set_to_category_image`</td><td>table</td><td>created</td></tr><tr><td>`spy_category_image_storage`</td><td>table</td><td>created</td></tr></tbody></table>
 {% endinfo_block %}
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that propel entities have been generated successfully by checking their existence. Also, change the generated entity classes to extend from Spryker core classes.<table><thead><tr><th>Class path</th><th>Extends</th></tr></thead><tbody><tr><td>`src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImage.php`</td><td>`Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImage`</td></tr><tr><td>`src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageQuery.php`</td><td>`Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImageQuery`</td></tr><tr><td>`src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageSet.php`</td><td>`Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImageSet`</td></tr><tr><td>`src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageSetQuery.php`</td><td>`Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImageSetQuery`</td></tr><tr><td>`src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageSetToCategoryImage.php`</td><td>`Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImageSetToCategoryImage`</td></tr><tr><td>`src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageSetToCategoryImageQuery.php`</td><td>`Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImageSetToCategoryImageQuery`</td></tr><tr><td>`src/Orm/Zed/CategoryImageStorage/Persistence/Base/SpyCategoryImageStorage.php`</td><td>`Spryker\Zed\CategoryImageStorage\Persistence\Propel\AbstractSpyCategoryImageStorage`</td></tr><tr><td>`src/Orm/Zed/CategoryImageStorage/Persistence/Base/SpyCategoryImageStorageQuery.php`</td><td>`Spryker\Zed\CategoryImageStorage\Persistence\Propel\AbstractSpyCategoryImageStorageQuery`</td></tr></tbody></table>
 {% endinfo_block %}
 
@@ -191,7 +192,8 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 }
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that when a category image is created, updated or deleted, it is exported (or removed
 {% endinfo_block %} to Redis accordingly.)
 
@@ -245,7 +247,8 @@ Run the following console command to import data:
 console data:import:category-template
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that in the database the configured data is added to the `spy_category_template` table.
 {% endinfo_block %}
 
@@ -346,7 +349,8 @@ class CategoryDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that category image handling is integrated successfully by going to Zed and creating, editing, and deleting categories with images.
 {% endinfo_block %}
 

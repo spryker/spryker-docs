@@ -90,7 +90,7 @@ abstract_sku,concrete_sku,price_type,store,currency,value_net,value_gross,price_
  <br>   
 </details>
 
-| Column | Is Obligatory? | Data Type | Data Example | Data Explanation |
+| Column | IS REQUIRED? | Data Type | Data Example | Data Explanation |
 |---|---|---|---|---|
 |  `abstract_sku` | optional | string | 193 | Either `abstract_sku` or `concrete_sku` should be present to attach the given prices to the correct product |
 |  `concrete_sku` | optional | string | 117_29890338 | Either `abstract_sku` or `concrete_sku` should be present to attach the given prices to the correct product |

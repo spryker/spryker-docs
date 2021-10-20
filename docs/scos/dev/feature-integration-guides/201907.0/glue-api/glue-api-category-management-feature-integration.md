@@ -28,7 +28,8 @@ Run the following command to install the required modules:
 composer require spryker/categories-rest-api:"^1.1.3" --update-with-dependencies
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the following module is installed:
 {% endinfo_block %}
 
@@ -43,7 +44,8 @@ Run the following command to generate transfer changes:
 console transfer:generate
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the following changes have occurred:
 {% endinfo_block %}
 
@@ -92,7 +94,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 </br>
 </details>
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure the following endpoints are available:<ul><li>http://glue.mysprykershop.com/category-trees</li><li>http://glue.mysprykershop.com/category-nodes/{% raw %}{{{% endraw %}category_node_id{% raw %}}}{% endraw %}</li></ul>
 {% endinfo_block %}
 

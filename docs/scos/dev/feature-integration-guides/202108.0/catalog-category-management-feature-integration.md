@@ -18,22 +18,22 @@ To start the feature integration, overview and install the necessary features:
 
 | NAME                | VERSION | INTEGRATION GUIDE                                            |
 | ------------------- | ------- | ------------------------------------------------------------ |
-| Spryker Core        | master  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Catalog             | master  |  |
-| Category Management | master  | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |
+| Spryker Core        | {{page.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Catalog             | {{page.version}}  |  |
+| Category Management | {{page.version}}  | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |
 
 ## 1) Set up behavior
 
 Activate the following plugins:
 
-| PLUGIN                                            | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                                    |
-| ------------------------------------------------- | ------------------------------------------------------------ | ------------- | ------------------------------------------------------------ |
+| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE  |
+| -------------- | --------------- | ------------- | ---------------- |
 | CategoryTreeFilterPageSearchResultFormatterPlugin | Populates the `categoryTreeFilter` aggregation with category nodes which have the `docCount` relevant for the result set. |               | Spryker\Client\CategoryStorage\Plugin\Elasticsearch\ResultFormatter |
 | SortedCategoryQueryExpanderPlugin                 | Adds category sorting to the base query.                     |               | Spryker\Client\SearchElasticsearch\Plugin\QueryExpander      |
 
 **src/Pyz/Client/Catalog/CatalogDependencyProvider.php**
 
-```
+```php
 <?php
 
 namespace Pyz\Client\Catalog;
@@ -59,7 +59,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 
 **src/Pyz/Client/Catalog/CatalogDependencyProvider.php**
 
-```
+```php
 <?php
 
 namespace Pyz\Client\Catalog;
@@ -81,6 +81,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
     }
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 - Make sure that `CatalogClient::catalogSearch()` returns category nodes under the `categoryTreeFilter` index.
@@ -99,8 +100,8 @@ Make sure that you can find categories using the global search on the Storefront
 Integrate the following related features:
  
 
-| FEATURE             | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                            |
-| ------------------- | -------------------------------- | ------------------------------------------------------------ |
-| Catalog             |                 ✓                 | |
-| Category Management |                    ✓              | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |
+| FEATURE  | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE     |
+| ------------- | ---------------- | -------------------- |
+| Catalog             |      ✓     | |
+| Category Management |      ✓     | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |
 

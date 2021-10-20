@@ -32,7 +32,8 @@ Run the following command to install the required modules:
 composer require spryker/customers-rest-api:"^1.10.1" "spryker/auth-rest-api":"^2.2.2" "spryker/oauth":"^1.5.1" "spryker/oauth-customer-connector:"^1.4.0" --update-with-dependencies
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the following modules are installed:
 {% endinfo_block %}
 
@@ -70,7 +71,8 @@ console propel:install
 console transfer:generate
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the following changes have occurred in the database:
 {% endinfo_block %}
 
@@ -79,7 +81,8 @@ Make sure that the following changes have occurred in the database:
 | `spy_customer_address.uuid` | column | created |
 | `spy_customer_address.spy_customer_address-unique-uuid` | index | created |
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the following changes have occurred in transfer objects:
 {% endinfo_block %}
 
@@ -122,7 +125,8 @@ Run the following command:
 console uuid:generate Customer spy_customer_address
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the `UUID` field is populated for all records in the `spy_customer_address` table. For this purpose, run the following SQL query and make sure that the result is 0 records:
 {% endinfo_block %}
 
@@ -331,7 +335,8 @@ Run the following command to set up OAuth client:
 console setup:init-db
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the OAuth client is added to the spy_oauth_client table. You can run the following SQL-query for it and make sure that the result is 1 record.
 {% endinfo_block %}
 
@@ -339,15 +344,18 @@ Make sure that the OAuth client is added to the spy_oauth_client table. You can 
 SELECT * FROM spy_oauth_client WHERE identifier = 'some-client-identifier';
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Make sure that the following endpoints are available:<ul><li>http://mysprykershop.com/customers</li><li>http://mysprykershop.com/addresses</li><li>http://mysprykershop.com/customer-password</li><li>http://mysprykershop.com/customer-forgotten-password</li><li>http://mysprykershop.com/customer-restore-password</li><li>http://glue.mysprykershop.com/refresh-tokens</li><li>http://glue.mysprykershop.com/access-tokens</li></ul>
 {% endinfo_block %}
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 Send a request to *http://mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}?include=addresses*. Make sure that the response includes relationships to the addresses resources.</br>The Customer with the given ID should have at least one address.
 {% endinfo_block %}
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 To verify `AccessTokenRestRequestValidatorPlugin` is set up correctly, you'll need to send a request to `/refresh-tokens` without "Authorization: Bearer {token}" (or with the outdated or wrong token). If you get one of the following errors, the plugin is installed:
 {% endinfo_block %}
 
@@ -387,10 +395,12 @@ To verify `AccessTokenRestRequestValidatorPlugin` is set up correctly, you'll ne
 </br>
 </details>
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 To make sure that `FormatAuthenticationErrorResponseHeadersPlugin` has been set up correctly, get an access token for any user, and then check that the endpoints that require validation are accessible when accessed with this token.
 {% endinfo_block %}
 
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 To make sure that `RestUserFinderByAccessTokenPlugin` has been set up correctly, get an access token for any user, and then check that the endpoints that require data of the current customer (e.g. `/carts`, `/customer/:customerReference`
 {% endinfo_block %} are accessible and make sure that the system detects the current customer correctly (data endpoints return is the same the customer can see in Yves).)

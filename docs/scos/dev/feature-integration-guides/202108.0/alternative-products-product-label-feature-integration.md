@@ -11,34 +11,46 @@ redirect_from:
   - /docs/en/alternative-products-product-labels-feature-integration
 ---
 
-## Install Feature Core
+## Install feature core
+
 ### Prerequisites
+
 Please review and install the necessary features before beginning the integration.
-|Name|Version|
+
+| NAME | VERSION |
 |---|---|
-|Alternative Products|202009.0|
-|Product Label|202009.0|
+|Alternative Products| {{page.version}} |
+|Product Label| {{page.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command to install the required modules:
+
 ```yaml
 composer require spryker/product-alternative-product-label-connector:"^1.0.0" --update-with-dependencies
 ```
 {% info_block warningBox "Verification" %}
-Make sure that the following modules have been installed:<table><thead><tr><th>Module</th><th>Expected Directory</th></tr></thead><tbody><tr><td>`ProductAlternativeProductLabelConnector`</td><td>`vendor/spryker/product-alternative-product-label-connector`</td></tr></tbody></table>
+
+Make sure that the following modules have been installed:
+
+| MODULE | EXPECTED DIRECTORY |
+| --- | --- |
+| ProductAlternativeProductLabelConnector | vendor/spryker/product-alternative-product-label-connector |
+
 {% endinfo_block %}
 
-### 2) Import Data
-#### Add Infrastructural Data
-|Plugin|Specification|Prerequisites|Namespace|
+### 2) Import data
+
+#### Add infrastructural data
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
-|`ProductAlternativeProductLabelConnectorInstallerPlugin`|Installs the configured infrastructural alternative product labels.|None|`Spryker\Zed\ProductAlternativeProductLabelConnector\Communication\Plugin\Installer`|
+|ProductAlternativeProductLabelConnectorInstallerPlugin|Installs the configured infrastructural alternative product labels.|None|Spryker\Zed\ProductAlternativeProductLabelConnector\Communication\Plugin\Installer|
 
 Add the following to your project:
 
 **src/Pyz/Zed/Installer/InstallerDependencyProvider.php**
     
- ```php   
+```php   
 <?php
  
 namespace Pyz\Zed\Installer;
@@ -68,17 +80,22 @@ Run the following console command to:
 console setup:init-db
 ```
 {% info_block warningBox "Verification" %}
+
 Make sure that the configured infrastructural alternative product label has been added to the `spy_product_label` table in the database.
+
 {% endinfo_block %}
 
-### 3) Set up Behavior
-#### Setup Alternative Products Labels Workflow
+### 3) Set up behavior
+
+#### Setup alternative products labels workflow
+
 Enable the following behavior types by registering the plugins:
-|Plugin|Specification|Prerequisites|Namespace|
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
-|`PostProductAlternativeCreatePlugin`|After the product alternative is created, adds product alternatives availability label to the abstract product.|None|`Spryker\Zed\ProductAlternativeProductLabelConnector\Communication\Plugin`|
-|`PostProductAlternativeDeletePlugin`|After the product alternative is deleted, removes product alternatives availability label from the abstract product.|None|`Spryker\Zed\ProductAlternativeProductLabelConnector\Communication\Plugin`|
-|`ProductAlternativeLabelUpdaterPlugin`|Used to persist alternative product label relation changes into the database. </br>The plugin is called when the `ProductLabelRelationUpdaterConsole` command is executed.|None|`Spryker\Zed\ProductAlternativeProductLabelConnector\Communication\Plugin`|
+|PostProductAlternativeCreatePlugin|After the product alternative is created, adds product alternatives availability label to the abstract product.|None|Spryker\Zed\ProductAlternativeProductLabelConnector\Communication\Plugin|
+|PostProductAlternativeDeletePlugin|After the product alternative is deleted, removes product alternatives availability label from the abstract product.|None|Spryker\Zed\ProductAlternativeProductLabelConnector\Communication\Plugin|
+|ProductAlternativeLabelUpdaterPlugin|Used to persist alternative product label relation changes into the database. </br>The plugin is called when the `ProductLabelRelationUpdaterConsole` command is executed.|None|Spryker\Zed\ProductAlternativeProductLabelConnector\Communication\Plugin|
 
 **src/Pyz/Zed/ProductAlternative/ProductAlternativeDependencyProvider.php**
 
@@ -140,5 +157,10 @@ class ProductLabelDependencyProvider extends SprykerProductLabelDependencyProvid
 ```
 
 {% info_block warningBox "Verification" %}
-**Make sure that**:</br>When you add product alternatives, it adds the corresponding label to the product.</br>When you remove product alternatives, it removes the corresponding label from the product.
+
+Make sure that:
+
+- When you add product alternatives, it adds the corresponding label to the product.
+- When you remove product alternatives, it removes the corresponding label from the product.
+
 {% endinfo_block %}

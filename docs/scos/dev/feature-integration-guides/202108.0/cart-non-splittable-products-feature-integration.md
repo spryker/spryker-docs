@@ -11,22 +11,26 @@ redirect_from:
   - /docs/en/cart-non-splittable-products-feature-integration
 ---
 
-## Install Feature Core
+## Install feature core
+
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Cart | 202009.0 |
-| Non-splittable Products |202009.0 |
+| Cart | {{page.version}} |
+| Non-splittable Products |{{page.version}} |
 
-### 1) Set up Behavior
-#### Adjust Concrete Product Quantity
+### 1) Set up behavior
+
+#### Adjust concrete product quantity
+
 Add the following plugins to your project:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `CartChangeTransferQuantityNormalizerPlugin` | The plugin is responsible for adjusting concrete products quantity and adding notification messages about that. | The `ProductQuantity` and `ProductQuantityStorage` modules should be installed. | `Spryker\Zed\ProductQuantity\Communication\Plugin\Cart` |
+| CartChangeTransferQuantityNormalizerPlugin | The plugin is responsible for adjusting concrete products quantity and adding notification messages about that. | The `ProductQuantity` and `ProductQuantityStorage` modules should be installed. | Spryker\Zed\ProductQuantity\Communication\Plugin\Cart |
 
 **src/Pyz/Zed/Cart/CartDependencyProvider.php**
 
@@ -56,5 +60,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
-Once you are done with this step, add any Product with the quantity restrictions (Min Qty, Max Qty, Qty Interval
-{% endinfo_block %} to the Cart and try choosing its quantity outside the min-max range or such a quantity that does not correspond to Qty Interval. Then make sure the quantity you have chosen has been adjusted according to its restriction, and the corresponding message has been displayed.)
+
+Once you are done with this step, add any Product with the quantity restrictions (Min Qty, Max Qty, Qty Interval to the Cart and try choosing its quantity outside the min-max range or such a quantity that does not correspond to Qty Interval. Then make sure the quantity you have chosen has been adjusted according to its restriction, and the corresponding message has been displayed.)
+
+{% endinfo_block %}

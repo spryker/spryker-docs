@@ -377,7 +377,8 @@ Make sure that the response contains the ETag validation error.
 
 
 		
-{% info_block warningBox %}
+{% info_block warningBox “Verification” %}
+
 
 Make sure that the following endpoint is available:</br>http://mysprykershop.com/stores
 

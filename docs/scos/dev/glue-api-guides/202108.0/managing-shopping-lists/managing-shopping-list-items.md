@@ -35,7 +35,7 @@ To add items to a shopping list, send the request:
 
 ### Request
 
-| Header key | Type | Required | DESCRIPTION |
+| HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
@@ -60,7 +60,7 @@ To add items to a shopping list, send the request:
 }
 ```
 
-| Attribute | Type | Required | DESCRIPTION |
+| ATTRIBUTE | TYPE | Required | DESCRIPTION |
 | --- | --- | --- | --- |
 | quantity | Ingeger | ✓ | Quantity of the product to add. |
 | sku | String | ✓ | SKU of the product to add. Only [concrete products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) are allowed. |
@@ -69,8 +69,8 @@ To add items to a shopping list, send the request:
 
 
 ### Response
-<details open>
-<summary markdown='span'>markdown='span'>Response sample</summary>
+<details>
+<summary markdown='span'>Response sample</summary>
    
 ```json
   {
@@ -90,8 +90,8 @@ To add items to a shopping list, send the request:
 <br>
 </details>
 
-<details open>
-<summary markdown='span'>markdown='span'>Response sample with concrete products</summary>
+<details>
+<summary markdown='span'>Response sample with concrete products</summary>
 
 ```json
     {
@@ -186,7 +186,7 @@ To change item quantity in a shopping list, send the request:
 
 ### Request
 
-| Header key | Type | Required | DESCRIPTION |
+| HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
@@ -212,14 +212,14 @@ To change item quantity in a shopping list, send the request:
 }
 ```
 
-| Attribute | Type | Required | DESCRIPTION|
+| ATTRIBUTE | TYPE | Required | DESCRIPTION|
 | --- | --- | --- |--- |
 | sku | String | ✓ | SKU of the product you want to change the quantity of. Only [concrete products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) are allowed. |
 | quantity | Integer | ✓ | New quantity of the product. |
 
 ### Response
-<details open>
-<summary markdown='span'>markdown='span'>Response sample</summary>
+<details>
+<summary markdown='span'>Response sample</summary>
 
 ```json
     {
@@ -239,8 +239,8 @@ To change item quantity in a shopping list, send the request:
 <br>
 </details>     
 
-<details open>
-<summary markdown='span'>markdown='span'>Response sample with information on concrete products</summary>
+<details>
+<summary markdown='span'>Response sample with information on concrete products</summary>
 
 ```json
 {
@@ -323,7 +323,7 @@ To remove an item from a shopping list, send the request:
 | ***{% raw %}{{{% endraw %}shopping_list_item_id{% raw %}}}{% endraw %}*** | Unique identifier of a shopping list item to remove. To get it, [Retrieve shopping lists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-shopping-lists/managing-shopping-lists.html#retrieve-shopping-lists), or [Retrieve a shopping list](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-shopping-lists/managing-shopping-lists.html#retrieve-a-shopping-list) with the `shopping-list-items` included. |
 
 ### Request
-| Header key | Type | Required | DESCRIPTION |
+| HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 

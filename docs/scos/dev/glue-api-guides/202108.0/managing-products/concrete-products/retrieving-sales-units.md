@@ -33,7 +33,7 @@ To retrieve sales units of a concrete product, send the request:
 ---
 
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 |***{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}*** | SKU of a concrete product to get sales units for. |
 
@@ -43,8 +43,8 @@ Request sample: `GET http://glue.mysprykershop.com/concrete-products/cable-vga-1
 
 ### Response
 
-<details open>
-    <summary markdown='span'>markdown='span'>Response sample</summary>
+<details>
+    <summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -88,22 +88,21 @@ Request sample: `GET http://glue.mysprykershop.com/concrete-products/cable-vga-1
 
 <a name="sales-units-response-attributes"></a>
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | conversion | integer | Factor to convert a value from sales to base unit. If it is "null", the information is taken from the global conversions. |
 | precision | integer | Ratio between a sales unit and a base unit. |
 | is displayed | boolean | Defines if the sales unit is displayed on the product details page. |
 | is default | boolean | Defines if the sales unit is selected by default on the product details page. |
-| measurementUnitCode | string | Code of the measurement unit. | 
+| measurementUnitCode | string | Code of the measurement unit. |
 
 
 See [Retrieving Measurement Units](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html) for more information on managing the sales units.
 
 ## Possible errors
 
-| Code  | Reason |
+| CODE  | REASON |
 | --- | --- |
 |302| Concrete product is not found. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
-

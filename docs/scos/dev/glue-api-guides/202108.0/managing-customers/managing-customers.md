@@ -35,7 +35,7 @@ To create a customer, send the request:
 
 ### Request
 
-<details open><summary markdown='span'>Request sample: POST http://glue.mysprykershop.com/customers</summary>
+<details><summary markdown='span'>Request sample: POST http://glue.mysprykershop.com/customers</summary>
 
 ```json
 {
@@ -70,8 +70,8 @@ To create a customer, send the request:
 
 ### Response
 
-<details open><summary markdown='span'>Response sample</summary>
-    
+<details><summary markdown='span'>Response sample</summary>
+
 ```json
 {
 	"data": {
@@ -92,11 +92,11 @@ To create a customer, send the request:
 	}
 }
 ```
-    
+
 </details>
 
 <a name="create-a-customer-response-attributes"></a>
-         
+
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | firstName | String | Customer's first name. |
@@ -119,7 +119,7 @@ To retrieve customers, send the request:
 `GET` **/customers/**
 ***
 
-### Request 
+### Request
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
@@ -127,10 +127,10 @@ To retrieve customers, send the request:
 
 Request sample: `GET https://glue.mysprykershop.com/customers`
 
-### Response 
+### Response
 
-<details open><summary markdown='span'>Response sample</summary>
-    
+<details><summary markdown='span'>Response sample</summary>
+
 ```json
 {
     "data": [
@@ -186,8 +186,8 @@ Request sample: `GET http://glue.mysprykershop.com/customers/DE-25`
 
 ### Response
 
-<details open><summary markdown='span'>Response sample</summary>
-    
+<details><summary markdown='span'>Response sample</summary>
+
 ```json
 {
 		"data": {
@@ -208,7 +208,7 @@ Request sample: `GET http://glue.mysprykershop.com/customers/DE-25`
 		}
 	}
 ```
-    
+
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -257,13 +257,13 @@ Request sample: `PATCH http://glue.mysprykershop.com/customers/DE-25`
 				}
 		}
 	}
-	
+
 ```
 
 ### Response
 
-<details open><summary markdown='span'>Response sample</summary>
-    
+<details><summary markdown='span'>Response sample</summary>
+
 ```json
 {
 		"data": {
@@ -281,7 +281,7 @@ Request sample: `PATCH http://glue.mysprykershop.com/customers/DE-25`
 		}
 	}
 ```
-    
+
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -298,7 +298,7 @@ Request sample: `PATCH http://glue.mysprykershop.com/customers/DE-25`
 
 ## Anonymize a customer
 
-To anonymize a customer, send the request: 
+To anonymize a customer, send the request:
 
 ---
 `DELETE` **/customers/*{% raw %}{{{% endraw %}customerReference{% raw %}}}{% endraw %}***
@@ -348,8 +348,8 @@ Request sample: `GET https://glue.mysprykershop.com/customers/DE--21/availabilit
 
 ### Response
 
-<details open><summary markdown='span'>Response sample</summary>
-    
+<details><summary markdown='span'>Response sample</summary>
+
 ```json
 {
     "data": [
@@ -385,7 +385,7 @@ There is an alternative way to retrieve existing subscriptions, for details see 
 
 ## Possible errors
 
-| Code | Reason |
+| CODE | REASON |
 | --- | --- |
 | 001 | Access token is invalid. |
 | 002 | Access token is missing. |
@@ -403,6 +403,3 @@ To view generic errors that originate from the Glue Application, see [Reference 
 
 * [Authenticate as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-passwords.html)
 * [Manage customer passwords](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-passwords.html)
-
-
-

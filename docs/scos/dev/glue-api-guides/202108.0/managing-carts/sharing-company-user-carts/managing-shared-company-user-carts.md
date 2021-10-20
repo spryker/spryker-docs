@@ -33,13 +33,13 @@ To change permissions for a shared cart, send the request:
 ***
 
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}shared-cart-uuid{% raw %}}}{% endraw %}*** | Unique identifier of a shared cart to change the permissions of. |
 
 ### Request
 
-| Header key | Type | Required | Description |
+| HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
@@ -56,7 +56,7 @@ Request sample: `PATCH http://glue.mysprykershop.com/shared-carts/4c677a6b-2f65-
 }
 ```
 
-| Attribute | Type | Required | Description |
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | idCartPermissionGroup | Integer | ✓ | Unique identifier of the cart permission group that describes the permissions granted to the users with whom the cart is shared. |
 
@@ -84,7 +84,7 @@ Response sample:
 }
 ```
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | idCompanyUser | String | Name of the company user the cart is shared with. |
 | idCartPermissionGroup | Integer | Unique identifier of the cart permission group that describes the permissions granted to the user. |
@@ -98,13 +98,13 @@ To stop sharing a cart, send the request:
 `DELETE` **/shared-carts/*{% raw %}{{{% endraw %}shared-cart-uuid{% raw %}}}{% endraw %}***
 ***
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}shared-cart-uuid{% raw %}}}{% endraw %}*** | Unique identifier of a shared cart to stop sharing. |
 
 ### Request
 
-| Header key | Type | Required | Description |
+| HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
@@ -118,7 +118,7 @@ If the request is successful, the endpoint returns  `204 No Content` status code
 
 ## Possible errors
 
-| Status | Reason |
+| CODE | REASON |
 | --- | --- |
 | 401 | The access token is invalid. |
 | 403 | The access token is missing. |

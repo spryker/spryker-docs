@@ -18,7 +18,9 @@ A Gift Card is a prepaid certificate entitling its owner to purchase products fo
 When paying for orders with a gift card, the gift cards are considered as an additional payment method. You can use the full balance  or part of the total gift card's value. In the latter case, the remaining value is stored as leftover balance on the original code. You can also use additional gift cards to pay for products. However, gift cards can only be applied for products in the same currency they have been bought.
 
 {% info_block warningBox %}
+
 Gift cards are sensitive data and can be used to pay orders, therefore please keep in mind that they should be protected just like real money.
+
 {% endinfo_block %}
 
 In a Spryker-based shop, the gift cards follow the same rules and bought as products and can even be bundles. However, they are purely virtual and do not require shipping. A gift card can be applied as a voucher and redeemed to pay an order. Therefore, the gift cards have two characteristics: a product characteristic and a voucher (+payment method) characteristic. When a gift card is bought, it is treated like a product. When it is applied, it’s a *voucher* that can be used as a payment method.
@@ -43,6 +45,7 @@ When buying a gift card, the shipment method selection step is skipped on Yves. 
 When customer buys a gift card, you can use the default OMS states for the GiftCardSubprocess to be displayed on the Storefront, or set custom state names so they would make more sense for the Storefront users. For details on how toset the custom state names on the Storefront for refunded orders, see [HowTo - Display custom names for order item states on the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html).
 
 ## Buying with gift cards
+
 With a gift card code in place, users get an alternative payment method to pay for their orders. The payment workflow with the gift card would be as follows:
 1. A user puts products into cart, and, assume they have discounts for the products and also apply a voucher.
 2. **Order subtotal** is calculated: General products’ prices without discounts etc.
@@ -58,9 +61,11 @@ In the Back Office, a Back Office user can see if an order was paid with a gift 
 ![Gift card payment method](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Gift+Cards/Gift+Cards+Purchase+and+Redeeming/gift_card_payment_method.png)
 
 ## Gift card value checking strategies
+
 Gift card value checking strategy means the way the gift cards are checked for the value they represent. There are two strategies that can be followed: Replacement and Balance. Out of the box, Replacement strategy is applied for the gift cards in a Spryker shop. However, which strategy to use can be defined on a project level, by installing a respective module and enabling a plugin.
 
 ### Replacement strategy
+
 Replacement means that if after using a gift card it has some remaining balance, a new gift card with the value equal to the remaining balance is issued for the gift card owner. For example, a user has a gift card for 100 Euro, but spends just 60 Euro to pay the order. In this case, a new 40 Euro gift card with a new code will be sent to the user. The old gift card code would not be valid anymore.
 
 For this strategy, gift cards have a pattern for codes generation. For each gift card code generation, a pattern from the previous gift card is used. For example, if the code X-GC-{number} is used for gift cards generation, where {number} is the pattern, the 100 Euro gift card code generated for customers would be X-GC-1, and the code generated for the remaining 40 Euro would be X-GC-2 etc.
@@ -68,6 +73,7 @@ For this strategy, gift cards have a pattern for codes generation. For each gift
 The main advantage of this strategy is that one and the same gift card code can not be used twice if the gift card has some remaining balance after a purchase has been made. This might be especially useful, for example, in case when a customer wants another customer to use a part of the value from their gift card. In this case, the initial gift card owner would get an e-mail with the new code for the remaining gift card value.
 
 ### Balance strategy
+
 In the case of the Balance strategy, gift card purchase history and gift card balance information are checked. If after paying an order a gift card has some remaining balance, then, in contrast to the Replacement strategy, the user does not get a new gift card code with the new gift card value, but the old gift card code is used instead. The remaining gift card value is calculated by the following formula: GC Value - Value of all orders where it is used.
 
 With this strategy, a Back Office user will see gift card balance information: a date when the gift card was used, a customer who used it, a gift card code and spent value.

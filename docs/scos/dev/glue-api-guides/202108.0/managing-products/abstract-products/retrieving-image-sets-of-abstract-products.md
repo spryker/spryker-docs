@@ -29,7 +29,7 @@ To retrieve image sets of an abstract product, send the request:
 
 ---
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}*** | SKU of an abstract product to get the image sets of. |
 
@@ -40,8 +40,8 @@ Request sample: `GET http://glue.mysprykershop.com/abstract-products/001/abstrac
 
 ### Response
 
-<details open>
-    <summary markdown='span'>markdown='span'>Response sample</summary>
+<details>
+    <summary markdown='span'>Response sample</summary>
     
 ```json
 {

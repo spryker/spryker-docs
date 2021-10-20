@@ -46,12 +46,14 @@ The RFQ can have the following statuses:
 * _Closed_—appears when the customer has placed the order from the RFQ.
 
 ## RFQ workflows
+
 The process of requesting the quote includes two workflows depending on the role the user has. A workflow is defined as the sequence of steps the user can go through to complete the process successfully. These are:
 
 * [Buyer workflow](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html#buyer-workflow)
 * [Sales representative workflow](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html#sales-representative-workflow)
 
 ### Buyer workflow
+
 A buyer can create a quote request the product prices from a shopping cart.
 
 To view how to create and mange RFQs, see [Quotation process & RFQ on the Storefront](#quotation-process-and-rfq-on-the-storefront).
@@ -59,7 +61,6 @@ To view how to create and mange RFQs, see [Quotation process & RFQ on the Storef
 After submitting the request, RFQ gets to the status **Draft**.
 
 For the Draft RFQ, a buyer can:
-
 * Add one or multiple delivery addresses.
 * Select shipment methods to quote request items.
 * Check the version information.
@@ -82,6 +83,7 @@ A sales representative can create an RFQ using two working procedures:
 * On behalf of a company user.
 
 #### Via an agent account
+
 Being logged in to an Agent account, a sales representative has access to the list of all the RFQs within the company. The RFQs are sorted by date and are displayed in all the statuses. A sales representative can revise the requests that are in the **Waiting** status. For the revising RFQ, a sales representative can:
 
 * Change the meta-information.
@@ -93,6 +95,7 @@ Being logged in to an Agent account, a sales representative has access to the li
 RFQ Life Time restricts the buyer by date and time until which the RFQ is considered valid. If the buyer hasn't placed the order using the RFQ with Life Time, the RFQ automatically obtains the status **Closed**.
 
 Upon revising the RFQ, a new RFQ version is created. When the sales representative sends the RFQ back to the buyer, the buyer receives the RFQ with the status **Ready**.
+
 {% info_block infoBox "Info" %}
 
 A sales representative can quickly access the RFQs via a Quote Request Widget that displays the latest five requests for quotes that were updated except for those that are in the status Closed. You can configure the statuses for the RFQ you would like to check in the widget on the project level. In the widget, the sales representative can check all the basic information for the RFQs.
@@ -100,6 +103,7 @@ A sales representative can quickly access the RFQs via a Quote Request Widget th
 {% endinfo_block %}
 
 #### On behalf of a company user
+
 A sales representative can create an RFQ on behalf of any company user, then process it and even complete checkout. This option is especially convenient when, for example, a company user is busy or doesn't have access to an account.
 
 
@@ -109,6 +113,7 @@ The workflow with statuses for a sales representative is presented in the schema
 When a sales representative creates an RFQ, it has the **Show the latest version to customer** checkbox empty by default. It means that the buyer cannot see the latest updated version of the RFQ (for example, with the changed prices) until the **Show the latest version to customer** checkbox is selected.  The buyer can see the **In Progress** status for the RFQ.
 
 ## RFQ versioning
+
 Versioning implies management of multiple variants of the same RFQ, all of which have same general details but include the customized data (for example, prices for the same products in the different versions of the RFQ can vary). Every RFQ receives specific identifiers, such as DE--1-Y-X, where:
 
 * DE--1—customer reference
@@ -117,7 +122,6 @@ Versioning implies management of multiple variants of the same RFQ, all of which
 ![RFQ versions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Quotation+process+and+RFQ/Quotation+Process+&+RFQ+Feature+Overview/rfq-versions.png)
 
 The RFQ version is updated when:
-
 * The RFQ is created for the 1st time (for example, the version is DE-21-8-1).
 * The RFQ is revised and negotiated by the buyer.
 * The RFQ is revised by a sales representative.
@@ -133,6 +137,7 @@ The buyers can utilize the blocked cart irrespective of the RFQ updates by unblo
 ![Locked cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Quotation+process+and+RFQ/Quotation+Process+&+RFQ+Feature+Overview/locked-cart.png)
 
 ## Interaction of the RFQ with the approval process
+
 Mixing several workflows adds complexity to the process and increases the steps a buyer should perform to submit the order. This can be true for projects where the [Approval Process](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) and RFQ are integrated. In such a scenario, every RFQ that hits the limit will need to be approved by a manager. Let's check an example:
 
 {% info_block infoBox "Example" %}
@@ -140,6 +145,7 @@ Example: In the project, the cart needs approval when the cart total exceeds €
 {% endinfo_block %}
 
 ## Quotation Process and RFQ on the Storefront
+
 Company users can perform the following actions using the CommentsQuotation process & RFQ feature on the Storefront:
 
 <details>
@@ -163,14 +169,14 @@ Company users can perform the following actions using the CommentsQuotation proc
 
 
 </details>
-<details><summary markdown='span'>Canel an RFQ or sent ab RFQ to an agent </summary>
+
+<details><summary markdown='span'>Cancel an RFQ or sent ab RFQ to an agent </summary>
 
 ![cancel-and-sent-rfq-to-agent](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+%26+Process+Management/Quotation+process+and+RFQ/Quotation+Process+%26+RFQ+Feature+Overview/cancel-and-sent-rfq-to-agent.gif)
 
 </details>
 
-<details>
-<summary markdown='span'>Convert an RFQ to cart</summary>
+<details><summary markdown='span'>Convert an RFQ to cart</summary>
 
 ![convert-rfq-to-cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+%26+Process+Management/Quotation+process+and+RFQ/Quotation+Process+%26+RFQ+Feature+Overview/convert-rfq-to-cart.gif)
 
@@ -178,8 +184,7 @@ Company users can perform the following actions using the CommentsQuotation proc
 
 Agents can perform the same actions (on company users' behalf) as company users. However, besides the actions mentioned above, agents can also do the following:
 
-<details>
-<summary markdown='span'>Revise an RFQ and send it back to the buyer</summary>
+<details><summary markdown='span'>Revise an RFQ and send it back to the buyer</summary>
 
 ![revise-rfq-and-send-to-customer](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+%26+Process+Management/Quotation+process+and+RFQ/Quotation+Process+%26+RFQ+Feature+Overview/revise-rfq-and-send-to-customer.gif)
 

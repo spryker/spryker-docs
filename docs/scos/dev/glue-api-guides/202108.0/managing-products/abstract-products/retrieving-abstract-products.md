@@ -37,7 +37,7 @@ To retrieve general information about an abstract product, send the request:
 ---
 
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}*** | SKU of an abstract product to get information for. |
 
@@ -63,7 +63,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 {% endinfo_block %}
 
 
-| Request | Usage |
+| REQUEST | USAGE |
 | --- | --- |
 | `GET http://glue.mysprykershop.com/abstract-products/001` | Retrieve information about the abstract product with SKU `001`. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-image-sets` | Retrieve information about the abstract product with SKU `001` with its image sets. |
@@ -87,8 +87,8 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
 ### Response
 
-<details open>
-    <summary markdown='span'>markdown='span'>Response sample</summary>
+<details>
+    <summary markdown='span'>Response sample</summary>
     
 ```json
 {
@@ -150,8 +150,8 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
  </details>
  
- <details open>
-    <summary markdown='span'>markdown='span'>Response sample with image sets</summary>
+ <details>
+    <summary markdown='span'>Response sample with image sets</summary>
     
 ```json
 {
@@ -246,8 +246,8 @@ To include `bundled products`, include `concrete-products` and `bundled-products
  </details>
  
  
- <details open>
-    <summary markdown='span'>markdown='span'>Response sample with product availability</summary>
+ <details>
+    <summary markdown='span'>Response sample with product availability</summary>
     
 ```json
 {
@@ -332,7 +332,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
  </details>
 
-<details> <summary markdown='span'>markdown='span'>Response sample with default product prices</summary>
+<details> <summary markdown='span'>Response sample with default product prices</summary>
 
 ```php
 {
@@ -438,7 +438,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
 </details>
 
-<details> <summary markdown='span'>markdown='span'>Response sample with volume prices</summary>
+<details> <summary markdown='span'>Response sample with volume prices</summary>
 
 ```json
 {
@@ -553,8 +553,8 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
 </details>
 
-<details open>
-    <summary markdown='span'>markdown='span'>Response sample with category nodes</summary>
+<details>
+    <summary markdown='span'>Response sample with category nodes</summary>
     
 ```json
 {
@@ -735,8 +735,8 @@ To include `bundled products`, include `concrete-products` and `bundled-products
  </details>
 
 
-<details open>
-    <summary markdown='span'>markdown='span'>Response sample with tax rates</summary>
+<details>
+    <summary markdown='span'>Response sample with tax rates</summary>
     
 ```json
 {
@@ -898,8 +898,8 @@ To include `bundled products`, include `concrete-products` and `bundled-products
  </details>
 
 
-<details open>
-    <summary markdown='span'>markdown='span'>Response sample with product labels</summary>
+<details>
+    <summary markdown='span'>Response sample with product labels</summary>
     
 ```json
 {
@@ -957,8 +957,8 @@ To include `bundled products`, include `concrete-products` and `bundled-products
  </details>
 
 
-<details open>
-    <summary markdown='span'>markdown='span'>Response sample with concrete products</summary>
+<details>
+    <summary markdown='span'>Response sample with concrete products</summary>
     
 ```json
 {
@@ -1071,8 +1071,8 @@ To include `bundled products`, include `concrete-products` and `bundled-products
  </details>
 
 
-<details open>
-    <summary markdown='span'>markdown='span'>Response sample with product options</summary>
+<details>
+    <summary markdown='span'>Response sample with product options</summary>
     
 ```json
 {
@@ -1180,8 +1180,8 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
  
 
-<details open>
-    <summary markdown='span'>markdown='span'>Response sample with product reviews</summary>
+<details>
+    <summary markdown='span'>Response sample with product reviews</summary>
     
 ```json
 {
@@ -1304,8 +1304,8 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
 
 
-<details open>
-    <summary markdown='span'>markdown='span'>Response sample with concrete product bundle, bundled products and corresponding abstact products</summary>
+<details>
+    <summary markdown='span'>Response sample with concrete product bundle, bundled products and corresponding abstact products</summary>
     
 ```json
 {

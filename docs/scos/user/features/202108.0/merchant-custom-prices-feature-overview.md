@@ -33,7 +33,9 @@ Currently we have the following price dimensions:
 All prices in Spryker OS are stored in *spy_price_product_store*, however connections to price dimensions are stored to different tables.
 
 {% info_block infoBox %}
+
 For example spy_price_product_default contains only connections to prices, which were imported during store installation or created using Zed UI, and connections to prices pertain to merchant relations, would reside in spy_price_product_merchant_relationship. So the spy_price_product_default table poses a set of relations between spy_price_product_default and fk_price_product_store table and related entities.
+
 {% endinfo_block %}
 
 The **Merchant Custom Prices** feature relates specifically to prices set for individual merchant relations. This feature implies that customers see only prices applying to them, based on their merchant relation, or default prices if merchant relation doesn't have prices for some products.
@@ -42,16 +44,16 @@ The specific prices apply only to merchant relation assignee (business units, as
 
 
 **Default prices in the web-shop**
+
 ![Default prices in the web-shop](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Prices+per+Merchant+Relations/Prices+per+Merchant+Relation+Feature+Overview/default_prices.png)
 
 **Prices for merchant referring to a specific relation**
+
 ![Prices for merchant referring to a specific relation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Prices+per+Merchant+Relations/Prices+per+Merchant+Relation+Feature+Overview/merchant_prices.png)
 
 Besides setting specific prices for individual merchant relations products manually, the prices can also be added in bulk by importing them from a .csv file. The .csv file for import must contain populated `merchant_relation_key`, `abstract_sku and/or concrete_sku`, `price_type`, `store,currency`, `price_net`, `price_gross` fields.
 
 To import the specific prices for merchant relations from the .csv file residing in `data/import` inside the module `PriceProductMerchantRelationshipDataImport`, run
-
-
 
 ```bash
 console data:import product-price-merchant-relationship
@@ -62,12 +64,12 @@ Or, if you want to import merchant from your file, indicate a path to it:
 console data:import product-price-merchant-relationship [-f [path_to_csv_file]
 ```
 
-
 To remove all imported merchant relation prices you can run:
 
 ```bash
 console price-product-merchant-relationship:delete
 ```
+
 Or, you can remove merchant relation prices referring to specific merchant relations by specifying their IDs:
 
 ```bash

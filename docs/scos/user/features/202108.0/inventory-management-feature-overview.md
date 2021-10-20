@@ -26,6 +26,7 @@ You can [create warehouses in the Back Office](/docs/scos/user/back-office-user-
 A warehouse can be assigned to a single store or shared between several stores. See [Managing stocks in a multi-store environment: Best practices](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/managing-stocks-in-a-multi-store-environment-best-practices.html) for the warehouse and stock management scenarios you can set up for your project. You can manage relations between stores and warehouses in the Back Office or by importing the warehouse and store data. See [Managing warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/managing-warehouses.html) for details on how you can manage warehouses and stores in the back office and [File details: warehouse_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html) on how you can import the warehouse and store data.
 
 ### Defining a warehouse address
+
 You can define the warehouse address that will be used as the shipping origin address by importing the warehouse address data. See [File details: warehouse_address.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html) for details about the import file.
 
 ### Warehouse assignment to order items (with Avalara integration only)

@@ -13,8 +13,6 @@ redirect_from:
 
 In this section, you can view the data that is being transmitted during the cart transfer in the Punch Out protocol.
 
----
 ## Viewing the transactions log
+
 To view the transaction log, in the *Actions* coulumn of *List of Transactions Log*, click **View**.
-
-

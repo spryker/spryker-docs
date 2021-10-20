@@ -44,7 +44,7 @@ Guest users have one guest cart by default. If you already have a guest cart, yo
 
 `GET` **/guest-carts/*{% raw %}{{{% endraw %}guestCartId{% raw %}}}{% endraw %}***
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}guestCartId{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart. To get it, [retrieve a guest cart](#retrieve-a-guest-cart). |
 
@@ -74,7 +74,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 {% endinfo_block %}
 
-| Request | Usage |
+| REQUEST | USAGE |
 | --- | --- |
 | `GET https://glue.mysprykershop.com/guest-carts` | Retrieve a guest cart. |
 | `GET https://glue.mysprykershop.com/guest-carts?include=guest-cart-items` | Retrieve information about a guest cart with the concrete products included. |
@@ -89,7 +89,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 ### Response
 
-<details open>
+<details>
 <summary markdown='span'>Response sample</summary>
 
 ```json
@@ -133,7 +133,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 </details>
 
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with guest cart items</summary>
 
 ```json
@@ -228,7 +228,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 </details>
    
     
-<details open>
+<details>
 <summary markdown='span'>Response sample with cart rules</summary>
 
 ```json
@@ -302,7 +302,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with gift cards</summary>
 
 ```json
@@ -372,7 +372,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 ```
 </details>
 
-<details open>
+<details>
     <summary markdown='span'>Sample response with guest cart items, concrete products, and product options</summary>
 
 ```json
@@ -629,7 +629,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
     
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with guest cart items, sales units, and product measurement units</summary>
 
 ```json
@@ -758,7 +758,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 </details>
 
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with a cart rule and a discount voucher</summary>
     
 ```json
@@ -828,7 +828,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with product labels</summary>
     
 ```json
@@ -979,7 +979,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 **General Cart Information**
 
-| Attribute | TYPE | DESCRIPTION |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | priceMode | String | Price mode that was active when the cart was created. |
 | currency | String | Currency that was selected when the cart was created. |
@@ -989,7 +989,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 **Totals Information**
 
-| Attribute | TYPE | DESCRIPTION |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | expenseTotal | String | Total amount of expenses (including e.g. shipping costs). |
 | discountTotal | Integer | Total amount of discounts applied to the cart. |
@@ -999,14 +999,14 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 **Discount Information**
 
-| Attribute | TYPE | DESCRIPTION |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | displayName | String | Discount name. |
 | code | String | Discount code applied to the cart. |
 | amount | Integer | Discount amount applied to the cart. |
 
 
-| Included resource | Attribute | TYPE | DESCRIPTION |
+| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
 | product-options | optionGroupName | String | Name of the group to which the option belongs. |
 | product-options | sku | String | SKU of the product option. |
@@ -1120,7 +1120,7 @@ Request sample: `POST https://glue.myspsrykershop.com/access-tokens`
 
 Request sample: `GET https://glue.myspsrykershop.com/carts`
 
-| Header key | Header value | Required | Description |
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | v | Alphanumeric string that authenticates the customer you want to change the password of. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
 
@@ -1178,7 +1178,7 @@ In a **single cart** environment, items from the guest cart have been added to
 ## Possible errors
 
 
-| Code | Reason |
+| CODE | REASON |
 | --- | --- |
 | 101 | Cart with given uuid not found. |
 | 102 | Failed to add an item to cart. |

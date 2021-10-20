@@ -29,12 +29,12 @@ For detailed information on the modules that provide the API functionality and r
 
 To retrieve bundled products, send the request:
 
-* * *
+***
 `GET` **/concrete-products/*{% raw %}{{{% endraw %}product_bundle_sku{% raw %}}}{% endraw %}*/bundled-products**
-* * *
+***
 
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}product_bundle_sku{% raw %}}}{% endraw %}*** | Unique identifier of the product bundle to retrieve bundled products of. |
 
@@ -62,7 +62,7 @@ To retrieve related abstract products, include both `concrete-products` and `abs
 
 ### Response
 
-<details open>
+<details>
     <summary markdown='span'>Response sample</summary>
 
 ```json
@@ -110,7 +110,7 @@ To retrieve related abstract products, include both `concrete-products` and `abs
 
 </details>
 
-<details open>
+<details>
     <summary markdown='span'>Response sample with concrete products</summary>
    
 ```json
@@ -310,7 +310,7 @@ To retrieve related abstract products, include both `concrete-products` and `abs
 
 </details>
 
-<details open>
+<details>
     <summary markdown='span'>Response sample with concrete and abstract products</summary>
 
 ```json
@@ -796,7 +796,7 @@ To retrieve related abstract products, include both `concrete-products` and `abs
 
 <a name="bundled-products-response-attributes"></a>
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | sku | String | Unique identifier of the product in the bundle. |
 |quantity |Integer| Quantity of the product in the bundle.|

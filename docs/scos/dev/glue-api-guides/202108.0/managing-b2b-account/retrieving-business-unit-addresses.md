@@ -22,13 +22,13 @@ To retrieve a business unit address, send the request:
 ***
 
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}business_unit_address_id{% raw %}}}{% endraw %}*** | Unique identifier of a business unit address to retrieve.  |
 
 ### Request
 
-| Header key | Type | Required | Description |
+| HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | &check; | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
@@ -38,7 +38,7 @@ Request sample: `GET http://glue.mysprykershop.com/company-business-unit-address
 ### Response
 
 
-<details open>
+<details>
     <summary markdown='span'>Response sample</summary>
     
 ```json
@@ -65,7 +65,7 @@ Request sample: `GET http://glue.mysprykershop.com/company-business-unit-address
 
 </details>
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | address1 | String | 1st line of the business unit address. |
 | address2 | String | 2nd line of the business unit address. |
@@ -78,7 +78,7 @@ Request sample: `GET http://glue.mysprykershop.com/company-business-unit-address
 
 ## Possible errors
 
-| Status | Reason |
+| CODE | REASON |
 | --- | --- |
 | 001 | Access token is invalid. |
 | 002 | Access token is missing. |

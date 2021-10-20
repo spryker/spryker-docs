@@ -81,15 +81,14 @@ The content item design on Storefront depends on the template you select for the
 
 You can select a template when inserting a content item widget into a CMS block. Below, you can see the difference between the default templates for the Abstract product list content item:
 * *Product Slider for store/landing pages*:
-<details open>
-    <summary markdown='span'>Content item widget template—the Back Office</summary>
+
+<details open><summary markdown='span'>Content item widget template—the Back Office</summary>
 
 ![image]( https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/product-slider-content-item-widget-template-the-back-office.png )
 
 </details>
 
-<details open>
-    <summary markdown='span'>Content item widget template—Storefront</summary>
+<details open><summary markdown='span'>Content item widget template—Storefront</summary>
 
 ![image]( https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/product-slider-content-item-widget-template-storefront.png )
 
@@ -113,8 +112,6 @@ You can select a template when inserting a content item widget into a CMS block.
 
 A developer can create and customize templates. See [Adding a Template for a Content Item Widget](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#content-item-widget-template) for more details.
 
-
-
 ## Content Database Schema
 CMS content is an item that can contain different content based on its type (banner, products, product set, file). Content items can be added to blocks and pages with a Twig function.
 
@@ -123,15 +120,15 @@ CMS content is an item that can contain different content based on its type (ban
 
 Structure:
 
-*     CMS Content has the following:
-    *         Key—a unique content item identifier.
-    *         Content type and content term to identify its content type.
-    *         Came and description.
-*     CMS Content Item can be toggled per Locale.
-*     Localized Content Item is used to separate content by locales:
-    *         fk_content is a content item identifier.
-    *         fk_locale is a locale identifier.
-*         Parameters are settings or data for a content item.
+* CMS Content has the following:
+  - Key—a unique content item identifier.
+  - Content type and content term to identify its content type.
+  - Came and description.
+* CMS Content Item can be toggled per Locale.
+* Localized Content Item is used to separate content by locales:
+  - fk_content is a content item identifier.
+  - fk_locale is a locale identifier.
+* Parameters are settings or data for a content item.
 
 ## Related Business User articles
 

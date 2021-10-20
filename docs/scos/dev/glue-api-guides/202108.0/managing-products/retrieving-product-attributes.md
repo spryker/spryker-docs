@@ -36,7 +36,7 @@ To retrieve all product attributes, send the request:
 Request sample: `https://glue.mysprykershop.com/product-management-attributes`
 
 ### Response
-<details open>
+<details>
 <summary markdown='span'>Response sample - retrieve all product attributes</summary>
 ```json
 {
@@ -169,7 +169,7 @@ To retrieve a product attribute, send the request:
 Request sample: `https://glue.mysprykershop.com/product-management-attributes/storage_capacity`
 
 ### Response
-<details open>
+<details>
 <summary markdown='span'>Response sample - retrieve a product attribute</summary>
 ```json
 {

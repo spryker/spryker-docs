@@ -35,7 +35,7 @@ To create a shopping list for a registered user, send the request:
 ---
 ### Request
 
-| Header key | Type | Required | DESCRIPTION |
+| HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
@@ -52,14 +52,14 @@ Request sample: `POST http://glue.mysprykershop.com/shopping-lists`
 }
 ```
 
-| Attribute | Type | Required | DESCRIPTION |
+| ATTRIBUTE | TYPE | Required | DESCRIPTION |
 | --- | --- | --- | --- |
 | name | string | ✓ | Name of the shopping list to create. |
 
 ### Response
 
-<details open>
-<summary markdown='span'>markdown='span'>Response sample</summary>
+<details>
+<summary markdown='span'>Response sample</summary>
    
 ```json
 {
@@ -83,7 +83,7 @@ Request sample: `POST http://glue.mysprykershop.com/shopping-lists`
 </details>
 
 
-| Attribute | Type | DESCRIPTION |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | owner | String | First and last names of the shopping list owner. |
 | name | String |Shopping list name. |
@@ -107,7 +107,7 @@ To retrieve shopping lists, send the request:
 ### Request
 
 
-| Header key | Type | Required | DESCRIPTION |
+| HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
@@ -128,8 +128,8 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 
 
 ### Response
-<details open>
-<summary markdown='span'>markdown='span'>Response sample with no shopping lists</summary>
+<details>
+<summary markdown='span'>Response sample with no shopping lists</summary>
    
 ```json
   {
@@ -142,8 +142,8 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
  <br>
 </details>    
 
-<details open>
-<summary markdown='span'>markdown='span'>Response sample with own and shared shopping lists</summary>
+<details>
+<summary markdown='span'>Response sample with own and shared shopping lists</summary>
    
 ```json
 {
@@ -199,8 +199,8 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
  <br>
 </details>
 
-<details open>
-<summary markdown='span'>markdown='span'>Response sample with shopping list items and concrete products</summary>
+<details>
+<summary markdown='span'>Response sample with shopping list items and concrete products</summary>
    
 ```json
 {
@@ -362,7 +362,7 @@ To retrieve a shopping list, send the request:
 
 ### Request
 
-| Header key | Type | Required | DESCRIPTION |
+| HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
@@ -390,8 +390,8 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 
 
 ### Response
-<details open>
-<summary markdown='span'>markdown='span'>Response sample</summary>
+<details>
+<summary markdown='span'>Response sample</summary>
    
 ```json
 {
@@ -415,8 +415,8 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 </details>   
 
 
-<details open>
-<summary markdown='span'>markdown='span'>Response sample with shopping list items</summary>
+<details>
+<summary markdown='span'>Response sample with shopping list items</summary>
    
 ```json
 {
@@ -469,8 +469,8 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
  <br>
 </details>
 
-<details open>
-<summary markdown='span'>markdown='span'>Response sample with shopping list items and concrete products</summary>
+<details>
+<summary markdown='span'>Response sample with shopping list items and concrete products</summary>
    
 ```json
 {
@@ -630,7 +630,7 @@ To edit a shopping list, send the request:
 
 ### Request
 
-| Header key | Type | Required | DESCRIPTION |
+| HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
@@ -662,13 +662,13 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 }
 ```
 
-| Attribute | Type | Required | DESCRIPTION|
+| ATTRIBUTE | TYPE | Required | DESCRIPTION|
 | --- | --- | --- |--- |
 | name | String | ✓ | New name of the shopping list. |
 
 ### Response
-<details open>
-<summary markdown='span'>markdown='span'>Response sample</summary>
+<details>
+<summary markdown='span'>Response sample</summary>
    
 ```json
 {
@@ -691,8 +691,8 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
  <br>
 </details> 
 
-<details open>
-<summary markdown='span'>markdown='span'>Response sample with shopping list items and information on concrete products</summary>
+<details>
+<summary markdown='span'>Response sample with shopping list items and information on concrete products</summary>
    
 ```json
 "data": {

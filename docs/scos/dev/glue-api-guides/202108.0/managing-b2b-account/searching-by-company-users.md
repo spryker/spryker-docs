@@ -24,9 +24,10 @@ related:
     link: docs/scos/user/features/page.version/customer-account-management-feature-overview/password-management-overview.html
 ---
 
-This endpoint allows [authenticated customers](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html#authenticate-as-a-customer) to search by the company users available to them. Usually, authenticated customers search for a company user which they want to authenticate as. 
+This endpoint allows [authenticated customers](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html#authenticate-as-a-customer) to search by the company users available to them. Usually, authenticated customers search for a company user which they want to authenticate as.
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html).
 
 ## Retrieve available company users
@@ -39,27 +40,24 @@ To retrieve company users of the current authenticated customer, send the reques
 
 ### Request
 
-| Header key | Required | Description |
+| HEADER KEY | REQUIRED | DESCRIPTION |
 | --- | --- | --- |
 | Authorization | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
 
-
-| Query parameter | Description | Possible values |
+| QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | Include | Adds resource relationships to the request. | companies, company-business-units, company-roles |
 
-
-| Request | Usage |
+| REQUEST | USAGE |
 | --- | --- |
 | GET https://glue.mysprykershop.com/company-users/mine | Retrieve all the copmany users the current authenticated customer can authenticate as. |
 | GET https://glue.mysprykershop.com/company-users/mine?include=companies,company-business-units,company-roles | Retrieve all the copmany users the current authenticated customer can authenticate as. Include information about the company and business unit each company user belongs to. Include information about the roles of each company user. |
 
-
 ### Response
 
-<details open>
+<details>
     <summary markdown='span'>Response sample</summary>
-    
+
 ```json
 {
     "data": [
@@ -105,9 +103,9 @@ To retrieve company users of the current authenticated customer, send the reques
 
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with companies, company business units and company roles</summary>
-    
+
 ```json
 {
     "data": [
@@ -273,26 +271,22 @@ To retrieve company users of the current authenticated customer, send the reques
     ]
 }
 ```
-    
+
 </details>
 
-
-
-
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | id | String | Unique identifier of a company user. |
 | isActive | Boolean | Defines if the company user is active. |
 | isDefault | Boolean | Defines if this company user is default for the authenticated customer. |
 
-
-| Included resource | Attribute | Type | Description |
+| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
 | companies | name | String | Company name. |
 | companies | isActive | Boolean | Indicates if the company is active. |
 | companies | status | String | Company status. Possible values are: *Pending*, *Approved* or *Denied*. |
 | company-roles | name | String | Company role name. |
-| company-roles | isDefault | Boolean | Indicates if the company role is default role for the company. | 
+| company-roles | isDefault | Boolean | Indicates if the company role is default role for the company. |
 | company-business-units | name | String | Business unit name. |
 | company-business-units | email | String | Email address of the business unit. |
 | company-business-units | phone | String | Telephone number of the business unit. |
@@ -301,12 +295,9 @@ To retrieve company users of the current authenticated customer, send the reques
 | company-business-units | iban | String | Specifies the International Bank Account Number of the Business Unit. |
 | company-business-units | defaultBillingAddress | String | Specifies the default billing address of the Business Unit. |
 
-
-
-
 ## Possible errors
 
-| Code | Reason |
+| CODE | REASON |
 | --- | --- |
 | 001 | The access token is invalid. |
 | 002 | The access token is missing. |

@@ -49,7 +49,7 @@ To retrieve abstract alternative products, send the request:
 
 ---
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}*** | SKU of a concrete product to get abstract alternative products of. |
 
@@ -61,7 +61,7 @@ To retrieve abstract alternative products, send the request:
 | include | Adds resource relationships to the request. | product-labels |
 
 
-| Request | Usage |
+| REQUEST | USAGE |
 | --- | --- |
 | `GET http://glue.mysprykershop.com/concrete-products/cable-vga-1-1/abstract-alternative-products` | Retrieve abstract product alternatives of the product with SKU `145_29885470`. |
 | `GET http://glue.mysprykershop.com/concrete-products/cable-vga-1-1/abstract-alternative-products?include=product-labels` | Retrieve general information about the abstract product with its assigned product lables included. |
@@ -231,7 +231,7 @@ To retrieve concrete alternative products, send the request:
 
 ---
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}*** | SKU of a concrete product to get concrete alternative products of. |
 
@@ -242,7 +242,7 @@ To retrieve concrete alternative products, send the request:
 | include | Adds resource relationships to the request. | product-labels |
 
 
-| Request | Usage |
+| REQUEST | USAGE |
 | --- | --- |
 | `GET http://glue.mysprykershop.com/concrete-products/cable-vga-1-1/concrete-alternative-products` | Retrieve abstract product alternatives of the product with SKU `145_29885470`. |
 | `GET http://glue.mysprykershop.com/concrete-products/cable-vga-1-1/concrete-alternative-products?include=product-labels` | Retrieve general information about the abstract product with its assigned product lables included. |
@@ -364,7 +364,7 @@ To retrieve concrete alternative products, send the request:
 
 ## Possible errors
 
-| Code | Reason |
+| CODE | REASON |
 | --- | --- |
 | 302 | Concrete product is not found. |
 | 312 | Concrete product is ID not specified. |

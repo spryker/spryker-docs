@@ -39,7 +39,7 @@ To add an address to a customer, send the request:
 ---
 
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}*** | Unique identifier of the customer to add the address to. To get it, [Retrieve customers](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#retrieve-customers) or [Create a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer). |
 
@@ -48,7 +48,7 @@ To add an address to a customer, send the request:
 
 Request sample: `POST http://glue.mysprykershop.com/customers/DE--1/addresses`
 
-<details open>
+<details>
     <summary markdown='span'>Request sample body</summary>
     
 ```json
@@ -77,7 +77,7 @@ Request sample: `POST http://glue.mysprykershop.com/customers/DE--1/addresses`
     
 </details>
 
-| Attribute | Type | Required | Description |
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | customer_reference | String | &check; | Unique identifier of the customer to add the address to. To get it, [Retrieve customers](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#retrieve-customers) or [Create a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer) |
 | salutation | String | &check; | Salutation to use when addressing the customer. |
@@ -99,7 +99,7 @@ Request sample: `POST http://glue.mysprykershop.com/customers/DE--1/addresses`
 
 ### Response
     
-<details open>
+<details>
     <summary markdown='span'>Response sample</summary>
     
 ```json
@@ -134,7 +134,7 @@ Request sample: `POST http://glue.mysprykershop.com/customers/DE--1/addresses`
 
 
 <a name="add-an-address-response-attributes"></a>
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | salutation | String | Salutation to use when addressing to the customer. |
 | firstName | String | Customer's first name. |
@@ -164,7 +164,7 @@ To edit an address, send the request:
 
 
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}*** | Unique identifier of the customer to edit the address of. [Create a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer) to get it. |
 | ***{% raw %}{{{% endraw %}address_id{% raw %}}}{% endraw %}*** | Unique identifier of the address to edit. [Add an address](#add-an-address) to get it.  |
@@ -173,13 +173,13 @@ To edit an address, send the request:
 
 Request sample: `PATCH` **http://glue.mysprykershop.com/customers/DE-25/addresses/3a6ee102-007f-5245-aaec-af5b6e05685b**
 
-<details open>
+<details>
     <summary markdown='span'>Request sample body</summary>
     
 </details>
 
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | salutation | String | Salutation to use when addressing the customer. |
 | firstName | String | Customer's first name. |
@@ -198,7 +198,7 @@ Request sample: `PATCH` **http://glue.mysprykershop.com/customers/DE-25/addresse
 
 ### Response
     
-<details open>
+<details>
     <summary markdown='span'>Response sample</summary>
 
 ```json
@@ -243,7 +243,7 @@ To retrieve a list of customer's addresses, send the request:
 
 ---
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}*** | Unique identifier of the customer to retrieve the list of. [Create a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer) to get this id. |
 
@@ -254,7 +254,7 @@ Sample request: `GET http://glue.mysprykershop.com/customers/DE-25/addresses`
 
 ### Response
 
-<details open>
+<details>
     <summary markdown='span'>Response sample</summary>
     
 ```json
@@ -315,7 +315,7 @@ Sample request: `GET http://glue.mysprykershop.com/customers/DE-25/addresses`
 
 </details>
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | salutation | String | Salutation to use when addressing the customer. |
 | firstName | String | Customer's first name. |
@@ -342,7 +342,7 @@ To retrieve an address, send the request:
 
 ---
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}*** | Unique identifier of the customer to retrieve the address of. [Create a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer) to get it. |
 | ***{% raw %}{{{% endraw %}address_id{% raw %}}}{% endraw %}*** | Unique identifier of the address to retrieve. [Add an address](#add-an-address) to get it.  |
@@ -356,12 +356,12 @@ Request sample : `GET http://glue.mysprykershop.com/customers/DE-25/addresses/3a
 
 ### Response
 
-<details open>
+<details>
     <summary markdown='span'>Response sample</summary>
 
 </details>
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | salutation | String | Salutation to use when addressing the customer |
 | firstName | String | Customer's first name |
@@ -392,7 +392,7 @@ To delete an address, send the request:
 ---
 
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}*** | Unique identifier of the customer to delete the address of. [Create a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer) to get it. |
 | ***{% raw %}{{{% endraw %}address_id{% raw %}}}{% endraw %}*** | Unique identifier of the address to delete. [Add an address](#add-an-address) to get it.  |
@@ -407,7 +407,7 @@ Request sample: `DELETE http://glue.mysprykershop.com/customers/DE-25/addresses/
 If the address is deleted successfully, the endpoint returns the `204 No Content` status code.
 
 ## Possible errors
-| Code | Reason |
+| CODE | REASON |
 | --- | --- |
 | 402 | Customer with the specified ID was not found. |
 | 404 | Specified address could not be found. |

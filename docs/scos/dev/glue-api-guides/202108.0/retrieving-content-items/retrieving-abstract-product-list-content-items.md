@@ -56,9 +56,9 @@ To retrieve information about an abstract product list content item, send the re
 | `GET https://glue.mysprykershop.com/content-product-abstract-lists/apl-1?include=abstract-products` | Retrieve information about the abstract product list with id `apl-1`. Include information about its abstact products. |
 .
 
-<details open>
-<summary markdown='span'>markdown='span'>Response sample: Abstract Product List content item</summary>
-    
+<details>
+<summary markdown='span'>Response sample: Abstract Product List content item</summary>
+
 ```json
 {
     "data": {
@@ -73,9 +73,9 @@ To retrieve information about an abstract product list content item, send the re
 
 </details>
 
-<details open>
-    <summary markdown='span'>markdown='span'>Response sample: Abstract Product List content item and its abstract products</summary>
-    
+<details>
+    <summary markdown='span'>Response sample: Abstract Product List content item and its abstract products</summary>
+
 ```json
 {
     "data": {
@@ -237,9 +237,9 @@ Request sample: ` GET https://mysprykershop.com/content-product-abstract-lists/a
 
 ### Response
 
-<details open>
-    <summary markdown='span'>markdown='span'>Response sample: Abstract Product List content item and its abstract products</summary>
-    
+<details>
+    <summary markdown='span'>Response sample: Abstract Product List content item and its abstract products</summary>
+
 ```json
 {
     "data": [
@@ -360,7 +360,7 @@ Request sample: ` GET https://mysprykershop.com/content-product-abstract-lists/a
 
 ## Possible errors
 
-| Code | Reason |
+| CODE | REASON |
 | --- | --- |
 | 2201 | Content item is not found. |
 | 2202 | Content key is missing. |

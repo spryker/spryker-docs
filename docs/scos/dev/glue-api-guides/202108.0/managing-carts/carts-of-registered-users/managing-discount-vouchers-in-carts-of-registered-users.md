@@ -31,7 +31,7 @@ To apply a discount voucher to a cart of a registered user, send the request:
 ***
 
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}*** | Unique identifier of the cart to apply the discount voucher to. To get it, [Create a cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-carts).  |
 
@@ -41,11 +41,11 @@ To apply a discount voucher to a cart of a registered user, send the request:
 | --- | --- | --- | --- |
 | Authorization | String | &check; | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
 
-| Query parameter | Description | Possible values |
+| QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | Include | Adds resource relationships to the request.	 | vouchers |
 
-<details open>
+<details>
     <summary markdown='span'>Request sample</summary>
     
 `POST https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers`
@@ -63,7 +63,7 @@ To apply a discount voucher to a cart of a registered user, send the request:
 
 </details>
 
-<details open>
+<details>
     <summary markdown='span'>Request sample with discount voucher information</summary>
     
 `POST https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers?include=vouchers`
@@ -82,14 +82,14 @@ To apply a discount voucher to a cart of a registered user, send the request:
 </details>
 
 
-| Attribute | Type | Required | Description |
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | code | String | yes | Unique identifier of a discount voucher to apply.  |
 
 
 ### Response
 
-<details open>
+<details>
     <summary markdown='span'>Response sample</summary>
     
 ```json
@@ -127,7 +127,7 @@ To apply a discount voucher to a cart of a registered user, send the request:
 </details>
 
 
-<details open>
+<details>
     <summary markdown='span'>Response sample with discount voucher information</summary>
     
 ```json
@@ -191,7 +191,7 @@ To apply a discount voucher to a cart of a registered user, send the request:
 
 </details>
 
-| Included resource | Attribute | TYPE | DESCRIPTION |
+| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
 | vouchers | displayName | String | Discount name displayed on the Storefront. |
 | vouchers | amount | Integer | Amount of the provided discount. |
@@ -211,7 +211,7 @@ To remove a discount voucher, send the request:
 `DELETE`**/carts/*{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}*/vouchers/*{% raw %}{{{% endraw %}voucher_id{% raw %}}}{% endraw %}***
 ***
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}*** | Unique identifier of the registered user's cart to remove the discount voucher from. To get it, [Retrieve a registered user's cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-carts).  |
 | ***{% raw %}{{{% endraw %}voucher_id{% raw %}}}{% endraw %}*** | Unique identifier of the voucher to remove. To get it, [Retrieve a registered user's cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-cart) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-carts) with the `vouchers` resource included.  |
@@ -235,7 +235,7 @@ If the voucher is deleted successfully, the endpoints returns the `204 No Data` 
 
 ## Possible Errors
 
-| Status | Reason |
+| CODE | REASON |
 | --- | --- |
 | 001 | Access token is incorrect. |
 | 002 | Access token is missing. |

@@ -17,6 +17,7 @@ related:
 Sometimes customers need more than one shopping cart, for example, one for daily purchases, the other one for monthly expenses. The *Multiple Carts* feature allows you to create and manage multiple shopping carts in one customer account.
 
 ## Creating and managing multiple shopping carts
+
 There are two ways to create a shopping cart:
 
 * Through a shopping cart widget in the header of shop.
@@ -27,7 +28,9 @@ New items are added to the shopping cart by clicking **Add to Cart** on the prod
 Customers can create not just one but multiple shopping carts to be used for different needs.
 
 {% info_block infoBox %}
+
 These could be, for instance, a shopping cart for daily purchases or a shopping cart for goods that you purchase once in a month.
+
 {% endinfo_block %}
 
 After a shopping cart has been created, it appears in the shopping carts table on the *Shopping Cart* page in *My Account*.

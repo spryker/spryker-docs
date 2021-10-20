@@ -22,8 +22,6 @@ After a [return](/docs/scos/user/features/{{page.version}}/return-management-fea
 * Set the return statuses
 * Print the return slip
 
----
-
 ## Prerequisites
 
 To start managing returns, navigate to **Sales** > **Returns**.
@@ -35,6 +33,7 @@ To start managing returns, navigate to **Sales** > **Returns**.
 Returns of the registered and guest users have different return references. See [the Returns section](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html#returns-section) for details on the return references.
 
 {% endinfo_block %}
+
 To view details on a return, in the *Actions* column of the return, click **View**. This takes you to the *Return Overview [Return Reference]* page, where you can view the return details, set the return statuses and print the return slip as described below.
 
 ### Reference information: Viewing returns

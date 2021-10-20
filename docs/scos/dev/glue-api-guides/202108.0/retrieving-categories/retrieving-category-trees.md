@@ -34,7 +34,7 @@ Sample request: `GET http://glue.mysprykershop.com/category-trees`
 
 
 ### Reponse 
-<details open>
+<details>
 <summary markdown='span'>Response sample </summary>
 
 ```json
@@ -163,7 +163,7 @@ Sample request: `GET http://glue.mysprykershop.com/category-trees`
 <br>
 </details>
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | nodeId | String | Category node ID |
 | order | Integer | Digits between 1 and 100, with 100 ranking the highest (on one level under the parent node) |

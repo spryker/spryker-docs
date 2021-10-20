@@ -23,7 +23,7 @@ To learn more about the feature and to find out how end users use it, see [Marke
 | -------------------- | ---------- |
 | [Merchant](https://github.com/spryker/merchant) | This module has DB structure and facade methods to save/update/remove Merchants. |
 | [MerchantProfile](https://github.com/spryker/merchant-profile) | MerchantProfile module provides data structure, facade methods and plugins for extending merchant by merchant profile data. |
-| [MerchantProfileDataImport](https://github.com/spryker/merchant-profile-data-import) | Importer for MerchantProfile data. |
+| [MerchantProfileDataImport](https://github.com/spryker/merchant-profile-data-import) | Imports for MerchantProfile data. |
 | [MerchantProfileGui](https://github.com/spryker/merchant-profile-gui) | MerchantProfileGui module provides Zed UI interface for merchant profile management. |
 | [MerchantSearch](https://github.com/spryker/merchant-search) | The module manages Elasticsearch documents for merchant entities. |
 | [MerchantSearchExtension](https://github.com/spryker/merchant-search-extension) | Provides plugin interfaces to extend MerchantSearch module from the other modules. |

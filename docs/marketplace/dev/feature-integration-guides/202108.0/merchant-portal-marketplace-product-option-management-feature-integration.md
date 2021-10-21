@@ -80,6 +80,6 @@ class SalesMerchantPortalGuiDependencyProvider extends SprykerSalesMerchantPorta
 
 {% info_block warningBox "Verification" %}
 
-Make sure that order item table has product option column settings and display correct data. 
+Make sure that order item table has product option column settings and display correct data in the `http://mp.mysprykershop.com/sales-merchant-portal-gui/item-list` 
 
 {% endinfo_block %}

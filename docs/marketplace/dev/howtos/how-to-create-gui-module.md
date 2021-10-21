@@ -54,6 +54,33 @@ class ExampleController extends AbstractController
 
 Adjust ``Spryker\Zed\AclMerchantPortal\AclMerchantPortalConfig::getMerchantAclRoleRules()`` - add a newly introduced module to allowed bundles list.
 
+```php
+    public function getMerchantAclRoleRules(): array
+    {
+        $bundleNames = [
+            'dashboard-merchant-portal-gui',
+            'merchant-profile-merchant-portal-gui',
+            'product-offer-merchant-portal-gui',
+            'product-merchant-portal-gui',
+            'sales-merchant-portal-gui',
+            'dummy-merchant-portal-gui',
+            'example-merchant-portal-gui',
+        ];
+
+        $ruleTransfers = [];
+
+        foreach ($bundleNames as $bundleName) {
+            $ruleTransfers[] = (new RuleTransfer())
+                ->setBundle($bundleName)
+                ->setController(static::RULE_VALIDATOR_WILDCARD)
+                ->setAction(static::RULE_VALIDATOR_WILDCARD)
+                ->setType(static::RULE_TYPE_ALLOW);
+        }
+
+        return $ruleTransfers;
+    }
+```
+
 Add a new merchant to ``merchant.csv`` data import file and run:
 
 ```bash
@@ -68,6 +95,43 @@ Check ``spy_acl_rule`` DB table and make sure that ACL rules for ``example-merch
 
 Adjust ``Pyz\Zed\Acl\AclConfig::getInstallerRules()`` to disallow ``example-merchant-portal-gui`` bundle in order to 
 deny access for Back-office users.
+
+```php
+    public function getInstallerRules()
+    {
+        $installerRules = parent::getInstallerRules();
+        $installerRules = $this->addMerchantPortalInstallerRules($installerRules);
+
+        return $installerRules;
+    }
+
+    protected function addMerchantPortalInstallerRules(array $installerRules): array
+    {
+        $bundleNames = [
+            'dashboard-merchant-portal-gui',
+            'merchant-profile-merchant-portal-gui',
+            'product-merchant-portal-gui',
+            'product-offer-merchant-portal-gui',
+            'security-merchant-portal-gui',
+            'sales-merchant-portal-gui',
+            'user-merchant-portal-gui',
+            'dummy-merchant-portal-gui',
+            'example-merchant-portal-gui',
+        ];
+
+        foreach ($bundleNames as $bundleName) {
+            $installerRules[] = [
+                'bundle' => $bundleName,
+                'controller' => AclConstants::VALIDATOR_WILDCARD,
+                'action' => AclConstants::VALIDATOR_WILDCARD,
+                'type' => static::RULE_TYPE_DENY,
+                'role' => AclConstants::ROOT_ROLE,
+            ];
+        }
+
+        return $installerRules;
+    }
+```
 
 ## 3) Navigation
 

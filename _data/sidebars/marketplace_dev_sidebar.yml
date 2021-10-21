@@ -683,7 +683,7 @@ entries:
             url: /docs/marketplace/dev/howtos/how-to-extend-gui-table.html
 
           - title: "How-To: Create a new Gui table column type"
-            url: /docs/marketplace/dev/howtos/how-to-add-new-column-type.html
+            url: /docs/marketplace/dev/howtos/how-to-add-new-guitable-column-type.html
 
           - title: "How-To: Create a new Gui table filter type"
-            url: /docs/marketplace/dev/howtos/how-to-add-new-filter-type.html
+            url: /docs/marketplace/dev/howtos/how-to-add-new-guitable-filter-type.html

@@ -1,31 +1,28 @@
 ---
 title: Merchant User concept
-description: Short overview of Merchant User in Merchant portal.
+description: Merchant User in Merchant portal.
 template: feature-walkthrough-template
 ---
 
-This articles provides a short overview of Merchant User concept in Merchant portal.
+This article provides a short overview of Merchant User.
 
 ## Merchant User structure
 
-The main concept to use own entry point for managing users in Merchant Portal. 
-All modules of Merchant Portal can reach out fo users by `MerchantUser` module which contains all needed for it:
-
+`MerchantUser` module is the source of users for Merchant Portal. All the operations on users should be performed using `MerchantUserFacade`, including but not limited to:
 - Create/Update/Delete/Disable Merchant Users.
-- Getting data about existing users.
+- Getting data about existing Merchant Users.
 - Getting data about current logged in Merchant User.
 - Authentication Merchant Users.
-- Password manipulation(reset, validation).
+- Password manipulation (reset, validation).
 
-Any Merchant User can't be added to the system without Merchant.
-So for syncing status of user with merchant status, has been implemented `SyncMerchantUsersStatusMerchantPostUpdatePlugin`.
-This plugin updates the status of user based on data about merchant, after updating it.
+Merchant Users are activated and deactivated when their Merchant is activated and deactivated respectively. The `SyncMerchantUsersStatusMerchantPostUpdatePlugin` takes cate about it.
+
 
 ## Merchant User Relations
 
 {% info_block errorBox %}
 
-Please never use UserFacade directly in Merchant Portal modules.
+Never use UserFacade directly in Merchant Portal modules in order to avoid technical debt in the future
 
 {% endinfo_block %}
 

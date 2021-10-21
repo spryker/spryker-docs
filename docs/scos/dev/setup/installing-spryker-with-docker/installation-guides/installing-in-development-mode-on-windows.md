@@ -71,16 +71,6 @@ image: spryker/php:7.3-alpine3.12
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker
 ```
 
-{% info_block warningBox "Verification" %}
-
-Make sure `docker 18.09.1+` and `docker-compose 1.23+` are installed:
-
-```bash
-$ docker version
-$ docker-compose --version
-```
-
-{% endinfo_block %}
 
 8. In `{shop_name}/docker/context/php/debug/etc/php/debug.conf.d/69-xdebug.ini`, set `xdebug.remote_host` and `xdebug.client_host` to `host.docker.internal`:
 

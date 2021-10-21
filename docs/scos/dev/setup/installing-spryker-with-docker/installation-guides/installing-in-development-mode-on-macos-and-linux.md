@@ -71,17 +71,6 @@ image: spryker/php:7.3-alpine3.12
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker
 ```
 
-{% info_block warningBox "Verification" %}
-
-Make sure `docker 18.09.1+` and `docker-compose 1.23+` are installed:
-
-```bash
-$ docker version
-$ docker-compose --version
-```
-
-{% endinfo_block %}
-
 7. Bootstrap local docker setup:
 ```bash
 docker/sdk bootstrap deploy.dev.yml

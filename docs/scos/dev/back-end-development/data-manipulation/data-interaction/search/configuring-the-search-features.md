@@ -60,6 +60,7 @@ class CatalogSearchConfigBuilderPlugin extends AbstractPlugin implements SearchC
 
 }
 ```
+
 </details>
 
 First, add the code that configures your facet filters.

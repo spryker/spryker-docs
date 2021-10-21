@@ -84,16 +84,6 @@ Follow the steps to install the Docker SDK:
 ```bash
 git clone https://github.com/spryker/docker-sdk.git ./docker
 ```
-{% info_block warningBox "Verification" %}
-
-Make sure `docker 18.09.1+` and `docker-compose 1.23+` are installed:
-
-```bash
-$ docker version
-$ docker-compose --version
-```
-
-{% endinfo_block %}
 
 2. Initialize docker setup:
  ```bash

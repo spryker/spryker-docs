@@ -148,6 +148,7 @@ $items = $cartTransfer->getItems();
 ```
 
 ## Checking the required fields
+
 {% info_block warningBox %}
 *Require* methods have been deprecated in version 3.25.0 of the Transfer module and replaced by the [get-or-fail](#get-or-fail
 {% endinfo_block %} methods.)
@@ -193,8 +194,8 @@ Therefore, you can find the XML definition, for example, for the `CustomerGroup`
 If you have third-party modules using our transfer objects, you can easily add additional source directories in your projects. To do so, extend `Spryker\Zed\Transfer\TransferConfig` and return all additional *glob* patterns from `getAdditionalSourceDirectoryGlobPatterns()`.
 
 {% info_block warningBox "Glob patterns" %}
-The Transfer module uses PHP's `glob(
-{% endinfo_block %}` function to resolve paths.</br>For more information, see [PHP documentation](https://php.net/manual/en/function.glob.php).)
+The Transfer module uses PHP's `glob()` function to resolve paths.</br>For more information, see [PHP documentation](https://php.net/manual/en/function.glob.php).
+{% endinfo_block %}
 
 Let’s say you have a custom extension package called `my-vendor/my-package` that uses transfer objects. Using Composer, by default, this package will be installed under `vendor/my-vendor/my-package`.
 If you want your transfer objects to be created from definitions stored under `vendor/my-vendor/my-package/src/Transfer`, provide the necessary *glob* pattern like this:
@@ -320,12 +321,15 @@ If you extend the existing transfer object, don't copy over all fields, but only
 Starting from version 3.28.0 of the [Transfer](https://github.com/spryker/transfer) module, you can validate transfer XML definition files against a configurable XSD schema. This validation is run as part of the general transfer validation process triggered by the `transfer:validate` command. You can enable or disable the validation by overriding the `\Spryker\Zed\Transfer\TransferConfig::isTransferXmlValidationEnabled()` method. Spyker provides default XSD schema for validation that can be found in `vendor/transfer/data/definition/transfer-01.xsd`. You can change this schema by overriding `\Spryker\Zed\Transfer\TransferConfig::getXsdSchemaFilePath()`.
 
 Under the hood, the validation tool uses regular `\DOMDocument::schemaValidate()` to validate the transfer definition file against the provided schema, so see the documentation for this method to find out more about possible validation errors in case there are any.
+
 {% info_block warningBox "The attribute value of the *root* element" %}
 
 The only valid attribute value of the root `<transfers></transfers>` element is `spryker:transfer-01 http://static.spryker.com/transfer-01.xsd`, even though now the validation also allows `spryker:transfer-01 https://static.spryker.com/transfer-01.xsd` (`https` vs. `http`). This is done for backward compatibility reasons. Pay attention to this when creating transfer definition files and always use the valid value.
 
 {% endinfo_block %}
+
 ## Related Spryks
+
 You can use the following definitions to generate the related code:
 
 * Add shared transfer schema.

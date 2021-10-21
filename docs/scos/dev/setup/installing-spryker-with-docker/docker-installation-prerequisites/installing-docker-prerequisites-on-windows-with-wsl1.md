@@ -5,30 +5,32 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/docker-installation-prerequisites-windows
 ---
 
+This document describes the prerequisites for installing Spryker in Docker on Windows.
 
-This article describes Docker installation prerequisites for Windows.
-
-{% info_block warningBox %}
-When running commands described in this document, use absolute paths. For example: `mkdir /d/spryker && cd $_` or `mkdir /c/Users/spryker && cd $_`.
-{% endinfo_block %}
 
 ## Minimum system requirements
 
-Review the minimum system requirements in the table:
+Review the system and software requirements in the table.
 
-| System Requirement | Additional Details |
-| --- | --- |
-| Windows 10 64bit | Pro, Enterprise, or Education (1607 Anniversary Update, Build 14393 or later). |
-| BIOS Virtualization is enabled | Typically, virtualization is enabled by default. Note that having the virtualization enabled is different from having Hyper-V enabled. This setting can be checked in the **Task Manager** → **Performance** tab.  For more details, see [Virtualization must be enabled](https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization-must-be-enabled). |
-| CPU SLAT-capable feature | SLAT is CPU related feature. It is called Rapid Virtualization Indexing (RVI). |
-| RAM: 4GB | This is a minimum requirement. The value can be higher than 4GB. A lower value is not sufficient for installation purposes. |
-| vCPU: 2 | This is a minimum requirement. The value can be higher than 2. A lower value is not sufficient for running the application. |
+| Requirement | Value or version | Additional details |
+| --- | --- | --- |
+| Windows | 10 64bit | Pro, Enterprise, or Education (1607 Anniversary Update, Build 14393 or later). |
+| BIOS Virtualization | Enabled | Typically, virtualization is enabled by default. Note that having the virtualization enabled is different from having Hyper-V enabled. This setting can be checked in the **Task Manager** → **Performance** tab.  For more details, see [Virtualization must be enabled](https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization-must-be-enabled). |
+| CPU SLAT-capable feature | Enabled |SLAT is CPU related feature. It is called Rapid Virtualization Indexing (RVI). |
+| Docker | 18.09.1 or higher |
+| Docker Compose | 1.28 or 1.29 |  
+| RAM  | 4GB or more |
+| Swap  | 2GB or more |
 
 ## Install and configure the required software with WSL1
 Follow the steps below to install and configure the required software with WSL1.
 
 {% info_block errorBox "Outdated software" %}
 WSL1 is outdated, so we highly recommend [installing and configuring the required software with WSL2](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl2.html). Use it only if you can't use WSL2.
+{% endinfo_block %}
+
+{% info_block warningBox %}
+When running commands described in this document, use absolute paths. For example: `mkdir /d/spryker && cd $_` or `mkdir /c/Users/spryker && cd $_`.
 {% endinfo_block %}
 
 ### Install Docker Desktop    

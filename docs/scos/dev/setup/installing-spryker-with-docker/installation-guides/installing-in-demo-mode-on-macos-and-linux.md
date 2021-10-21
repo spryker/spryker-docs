@@ -65,17 +65,6 @@ Make sure that you are in the correct folder by running the `pwd` command.
 ```shell
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker
 ```
-{% info_block warningBox "Verification" %}
-
-Make sure `docker 18.09.1+` and `docker-compose 1.23+` are installed:
-
-```bash
-$ docker version
-$ docker-compose --version
-```
-
-{% endinfo_block %}
-
 
 
 6. Bootstrap the local Docker setup for demo:

@@ -21,6 +21,9 @@ The following diagram illustrates the dependencies between the modules for the *
 | MerchantSwitcher | Provides functionality for switching merchant in a quote and in quote items   |
 | MerchantSwitcherWidget | Allows to select a merchant from an active merchants list and store the selected merchant data   |
 | ShopContextExtension | Provides an interfaces of plugins to extend ShopContext module from the other modules   |
+| WishlistExtension | Provides plugin interfaces for extending Wishlist module functionality   |
+| CartExtension | Provides plugin interfaces used by Cart module   |
+| CheckoutExtension | Provides plugin interfaces used by Checkout module   |
 
 ## Related Developer articles
 

@@ -1,6 +1,5 @@
 ---
 title: Marketplace Wishlist feature walkthrough
-last_updated: Sep 29, 2021
 description: This article provides technical details on the Marketplace Wishlist feature.
 template: feature-walkthrough-template
 ---
@@ -23,10 +22,9 @@ The following diagram illustrates the dependencies between the modules for the *
 |------------|----------------------------|
 | MerchantProductWishlist | Provides ability to work with merchant product in wishlist |
 | MerchantProductOfferWishlist | Provides ability to work with product offers in wishlist |
-| Wishlist | Provides infrastructure and functionality to handle multiple wishlists for a customer account |
-| WishlistPage | Provides enduser wishlist management functionality |
-| WishlistWidget | Provides wishlist rendering functionality integration to other modules |
 | MerchantProductOfferWishlistRestApi | Provides ability to manage product offers for wishlist Rest API |
+| Wishlist | Provides infrastructure and functionality to handle multiple wishlists for a customer account |
+| WishlistExtension | Provides plugin interfaces for extending Wishlist module functionality |
 
 ## Domain model
 

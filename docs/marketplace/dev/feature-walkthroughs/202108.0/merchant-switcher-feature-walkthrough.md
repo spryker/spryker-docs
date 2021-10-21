@@ -1,6 +1,5 @@
 ---
 title: Merchant Switcher feature walkthrough
-last_updated: Sep 29, 2021
 description: This article provides technical details on the Merchant Switcher feature.
 template: feature-walkthrough-template
 ---

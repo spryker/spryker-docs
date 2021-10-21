@@ -122,6 +122,7 @@ Besides other products, a user with *Full access* rights is allowed to see alter
 7. **Deleting a shopping list**
 
 8. **Deleting items in a shopping list**: The shopping list items can be deleted on the **Edit Shopping list** page.
+   
 ![Shared full access](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/shared-full-access.png)
 
 It is possible to grant different access rights on a shopping list to a business unit and users belonging to it. For example, a shopping list can be shared with *Read only* permissions to a business unit, but some of its users might be granted *Full access* permissions. In this case, these users will have *Full access* to the shopping list, whereas the rest of the business unit members will be entitled to *Read only* access.
@@ -137,6 +138,7 @@ Without the Search widget, you will not be able to search for products. Therefor
 ## Subtotal for a shopping list
 
 Starting from v.201907.0, every shopping list has Subtotal for all the items added to the shopping list according to the selected Price Mode and Currency.
+
 ![Subtotal for shopping list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/subtotal-for-shopping-list.png)
 
 

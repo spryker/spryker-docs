@@ -21,5 +21,4 @@ To learn more about the feature and to find out how end users use it, see [Marke
 | MODULE     | DESCRIPTION                |
 |------------|----------------------------|
 | [CartNote](https://github.com/spryker/cart-note) | This module provides functionality to add notes to cart and cart items, push notes from cart to order and than show them on order detail page in zed. |
-| [CartNoteExtension](https://github.com/spryker/cart-note-extension) | This module provides module provides plugin interfaces used by CartNote module. |
 | [CartNoteMerchantSalesOrderGui](https://github.com/spryker/cart-note-merchant-sales-order-gui) | CartNoteMerchantSalesOrderGui provides Zed UI interface for merchant cart note management. |

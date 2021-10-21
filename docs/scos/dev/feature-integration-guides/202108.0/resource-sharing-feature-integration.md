@@ -10,35 +10,35 @@ redirect_from:
   - /docs/en/resource-sharing-feature-integration
 ---
 
-## Install Feature Core
+## Install feature core
+
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Spryker Core | master |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/resource-sharing: "^master" --update-with-dependencies
+composer require spryker-feature/resource-sharing: "{{page.version}}" --update-with-dependencies
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
-    
-**Verification**
+{% info_block warningBox “Verification” %}
+
 Make sure that the following modules were installed:
-    
-| Module | Expected Directory |
+
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-| `ResourceShare` | `vendor/spryker/resource-share` |
-| `ResourceShareExtension` | `vendor/spryker/resource-share-extension` |
+| ResourceShare | vendor/spryker/resource-share |
+| ResourceShareExtension | vendor/spryker/resource-share-extension |
 
-</div></section>
+{% endinfo_block %}
 
-### 2) Set up Database Schema and Transfer Objects
+### 2) Set up database schema and transfer objects
 
 Run the following commands to apply database changes and generate entity and transfer changes:
 
@@ -48,65 +48,64 @@ console propel:install
 console transfer:generate
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
-    
-**Verification**
+{% info_block warningBox “Verification” %}
+
 Make sure that the following changes applied by checking your database:
-    
-| Database Entity | Type | Event |
+
+| DATABASE ENTITY | TYPE | EVENT |
 | --- | --- | --- |
-| `spy_resource_share` | table | created |
+| spy_resource_share | table | created |
 
- </div></section>
- 
-<section contenteditable="false" class="warningBox"><div class="content">
-    
-**Verification**
+{% endinfo_block %}
+
+{% info_block warningBox “Verification” %}
+
 Make sure that the following changes in transfer objects have been applied:
-    
-| Transfer | Type | Event | Path |
-| --- | --- | --- | --- |
-| `SpyResourceShareEntityTransfer` | class | created | `src/Generated/Shared/Transfer/SpyResourceShareEntityTransfer` |
-| `ResourceShare` | class | created | `src/Generated/Shared/Transfer/ResourceShareTransfer` |
-| `ResourceShareData` | class | created | `src/Generated/Shared/Transfer/ResourceShareDataTransfer` |
-| `ResourceShareRequest` | class | created | `src/Generated/Shared/Transfer/ResourceShareRequestTransfer` |
-| `ResourceShareResponse` | class | created | `src/Generated/Shared/Transfer/ResourceShareResponseTransfer` |
 
-</div></section>
- 
-## Install Feature Frontend
+| TRANSFER | TYPE | EVENT | PATH |
+| --- | --- | --- | --- |
+| SpyResourceShareEntityTransfer | class | created | src/Generated/Shared/Transfer/SpyResourceShareEntityTransfer |
+| ResourceShare | class | created | src/Generated/Shared/Transfer/ResourceShareTransfer |
+| ResourceShareData | class | created | src/Generated/Shared/Transfer/ResourceShareDataTransfer |
+| ResourceShareRequest | class | created | src/Generated/Shared/Transfer/ResourceShareRequestTransfer |
+| ResourceShareResponse | class | created | src/Generated/Shared/Transfer/ResourceShareResponseTransfer |
+
+{% endinfo_block %}
+
+## Install feature frontend
+
 ### Prerequisites
 
 Please overview and install the necessary features before beginning the integration step.
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Spryker Core | master |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/resource-sharing: "^master" --update-with-dependencies
+composer require spryker-feature/resource-sharing: "{{page.version}}" --update-with-dependencies
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
-    
-**Verification**
+{% info_block warningBox “Verification” %}
+
 Make sure that the following modules were installed:
-    
-| Module | Expected Directory |
+
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-| `ResourceSharePage` | `vendor/spryker-shop/resource-share-page` |
-| `ResourceSharePageExtension` | `vendor/spryker-shop/resource-share-page-extension` |
+| ResourceSharePage | vendor/spryker-shop/resource-share-page |
+| ResourceSharePageExtension | vendor/spryker-shop/resource-share-page-extension |
 
-</div></section>
+{% endinfo_block %}
 
-### 2) Add Translations
+### 2) Add translations
+
 Append glossary according to your configuration:
 
-src/data/import/glossary.csv
+**src/data/import/glossary.csv**
 
 ```yaml
 resource_share.activator.error.strategy_expects_logged_in_customer,Please login to access requested shared resource.,en_US
@@ -130,17 +129,20 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that in the database the configured data are added to the `spy_glossary` table.
+
 {% endinfo_block %}
 
-### 3) Enable Controllers
-#### Route List
+### 3) Enable controllers
+
+#### Route list
 
 Register the following route provider plugins:
 
-| Provider | Namespace |
-| --- | --- | 
-| `ResourceSharePageRouteProviderPlugin` | `SprykerShop\Yves\ResourceSharePage\Plugin\Router` |
+| PROVIDER | NAMESPACE |
+| --- | --- |
+| ResourceSharePageRouteProviderPlugin | SprykerShop\Yves\ResourceSharePage\Plugin\Router |
 
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
@@ -174,5 +176,7 @@ console frontend:yves:build
 ```
 
 {% info_block warningBox "Verification" %}
+
 Go to `http://mysprykershop.com/resource-share/link/uuid` and make sure you see a non-existing resource error message displayed.
+
 {% endinfo_block %}

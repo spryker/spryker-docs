@@ -11,33 +11,37 @@ redirect_from:
   - /docs/en/quick-order-packaging-units-feature-integration
 ---
 
-## Install Feature Frontend
-### Prerequisites
-To start feature integration, overview and install the necessary features:
-|Name|Version|
-|---|---|
-|Quick Order|master|
-|Packaging Units|master|
+## Install feature frontend
 
-### 1) Set up Behavior
-#### Set up the Additional Functionality
+### Prerequisites
+
+To start feature integration, overview and install the necessary features:
+
+| NAME | VERSION |
+|---|---|
+|Quick Order| {{page.version}} |
+|Packaging Units| {{page.version}} |
+
+### 1) Set up behavior
+
+#### Set up the additional functionality
 
 Enable the following behaviors by registering the plugins:
 
-|Plugin|Specification|Prerequisites|Namespace|
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
-|`QuickOrderItemDefaultPackagingUnitExpanderPlugin`|Expands `ItemTransfer` with packaging unit data if available.|None|`SprykerShop\Yves\ProductPackagingUnitWidget\Plugin\QuickOrder`|
+|QuickOrderItemDefaultPackagingUnitExpanderPlugin|Expands `ItemTransfer` with packaging unit data if available.|None|SprykerShop\Yves\ProductPackagingUnitWidget\Plugin\QuickOrder|
 
 **src/Pyz/Yves/QuickOrderPage/QuickOrderPageDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\QuickOrderPage;
- 
+
 use SprykerShop\Yves\ProductPackagingUnitWidget\Plugin\QuickOrder\QuickOrderItemDefaultPackagingUnitExpanderPlugin;
 use SprykerShop\Yves\QuickOrderPage\QuickOrderPageDependencyProvider as SprykerQuickOrderPageDependencyProvider;
- 
+
 class QuickOrderPageDependencyProvider extends SprykerQuickOrderPageDependencyProvider
 {
 	/**
@@ -53,5 +57,7 @@ class QuickOrderPageDependencyProvider extends SprykerQuickOrderPageDependencyPr
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make the following checks at `https://mysprykershop.com/quick-order`: `QuickOrderItemDefaultPackagingUnitExpanderPlugin` sets default configuration for a product with packaging units:<ol><li>Select a product with packaging units on the **Quick Add To Cart** page and add it to the cart. </li><li>Check `ItemTransfer` in Cart if it has `amount`, `amountSalesUnit`, `amountLeadProduct`, and `productPackagingUnit` properties set.</li></ol>
+
 {% endinfo_block %}

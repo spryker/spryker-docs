@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/product-group-product-rating-reviews-feature-integration
 ---
 
-## Install Feature Core
+## Install feature core
 
 Follow the steps below to install Product group + Product rating & review feature core.
 
@@ -20,20 +20,18 @@ Follow the steps below to install Product group + Product rating & review featur
 To start feature integration, overview and install the necessary features:
 
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Product Group | master |
-| Product Rating & Reviews | master |
+| Product Group | {{page.version}} |
+| Product Rating & Reviews | {{page.version}} |
 
 
-
-
-### Set up Behavior
+### Set up behavior
 
 Register the following plugin:
 
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | ProductReviewSummaryProductViewExpanderPlugin | Expands `ProductViewTransfer` with the product review summary data (average rating). | None | SprykerShop\Yves\ProductReviewWidget\Plugin\ProductGroupWidget |
 
@@ -65,4 +63,3 @@ class ProductGroupWidgetDependencyProvider extends SprykerShopProductGroupWidget
 Make sure that the product rating on a product abstract card changes correctly after hovering over a color selector.
 
 {% endinfo_block %}
-

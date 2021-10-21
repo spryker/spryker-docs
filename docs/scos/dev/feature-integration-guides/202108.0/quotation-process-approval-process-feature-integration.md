@@ -11,33 +11,36 @@ redirect_from:
   - /docs/en/quotation-process-approval-process-feature-integration
 ---
 
-## Install Feature Core
+## Install feature core
+
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Quotation Process | 202009.0 |
-| Approval Process | 202009.0 |
+| Quotation Process | {{page.version}} |
+| Approval Process | {{page.version}} |
 
-### 1) Set up Behavior
+### 1) Set up behavior
+
 Register the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `QuoteApprovalQuoteRequestQuoteCheckPlugin` | Checks if the "Request For Quote" button should be shown on the cart page or not. | None | `Spryker\Client\QuoteApproval\Plugin\QuoteRequest` |
-| `QuoteRequestQuoteApprovalUnlockPreCheckPlugin` | Prevents quote unlock  by approval process when it is in quotation process. | None | `Spryker\Zed\QuoteRequest\Communication\Plugin\QuoteApproval` |
+| QuoteApprovalQuoteRequestQuoteCheckPlugin | Checks if the "Request For Quote" button should be shown on the cart page or not. | None | Spryker\Client\QuoteApproval\Plugin\QuoteRequest |
+| QuoteRequestQuoteApprovalUnlockPreCheckPlugin | Prevents quote unlock  by approval process when it is in quotation process. | None | Spryker\Zed\QuoteRequest\Communication\Plugin\QuoteApproval |
 
 **src/Pyz/Client/QuoteRequest/QuoteRequestDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\QuoteRequest;
- 
+
 use Spryker\Client\QuoteApproval\Plugin\QuoteRequest\QuoteApprovalQuoteRequestQuoteCheckPlugin;
 use Spryker\Client\QuoteRequest\QuoteRequestDependencyProvider as SprykerQuoteRequestDependencyProvider;
- 
+
 class QuoteRequestDependencyProvider extends SprykerQuoteRequestDependencyProvider
 {
     /**
@@ -56,12 +59,12 @@ class QuoteRequestDependencyProvider extends SprykerQuoteRequestDependencyProvid
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\QuoteApproval;
- 
+
 use Spryker\Zed\QuoteApproval\QuoteApprovalDependencyProvider as SprykerQuoteApprovalDependencyProvider;
 use Spryker\Zed\QuoteRequest\Communication\Plugin\QuoteApproval\QuoteRequestQuoteApprovalUnlockPreCheckPlugin;
- 
+
 class QuoteApprovalDependencyProvider extends SprykerQuoteApprovalDependencyProvider
 {
     /**
@@ -77,9 +80,13 @@ class QuoteApprovalDependencyProvider extends SprykerQuoteApprovalDependencyProv
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that the **Request For Quote** button is not available on the cart page when the quote is in status "Waiting".
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
+
 Make sure that when you have locked cart after quotation process and request approval for this cart, the cart should stay locked even if approver declined it.
+
 {% endinfo_block %}

@@ -16,24 +16,26 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/promotions-and-discounts-feature-integration.html
 ---
 
-## Install Feature Core
+## Install feature core
+
 Follow the steps below to install the feature core.
 
-
 ### Prerequisites
+
 To start feature integration, overview, and install the necessary features:
 
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Promotions & Discounts | 202009.0 |
-| Product Labels | 202009.0 |
-| Spryker Core | 202009.0 |
+| Promotions & Discounts | {{page.version}} |
+| Product Labels | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
-### 1) Set up Behavior
+### 1) Set up behavior
+
 Set up the following behavirors:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | ProductLabelCollectorPlugin | Collects the cart items with product labels to which a discount should be applied. | None | Spryker\Zed\ProductLabelDiscountConnector\Communication\Plugin\Collector |
 | ProductLabelDecisionRulePlugin | Defines if a discount can be applied to a cart item with a product label. | None | Spryker\Zed\ProductLabelDiscountConnector\Communication\Plugin\DecisionRule |
@@ -71,6 +73,7 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
     }
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 Ensure that the plugins work correctly:
@@ -78,6 +81,5 @@ Ensure that the plugins work correctly:
 1. [Create a discount](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html) and define its condition as a query string with a *product-label* field.
 2. Add a product with the defined product label to cart.
 3. The discount should be applied to the cart.
-
 
 {% endinfo_block %}

@@ -14,7 +14,7 @@ redirect_from:
 The Price per Merchant Relation feature is shipped with the following modules:
 
 
-| Module | Description |
+| MODULE | DESCRIPTION |
 | --- | --- |
 | [PriceProductMerchantRelationship](https://github.com/spryker/price-product-merchant-relationship) | Bears the logic for setting specific product prices per merchant relationship. |
 | [PriceProductExtension](https://github.com/spryker/price-product-extension) | Provides plugin interfaces to extend the `PriceProduct` module. |
@@ -41,9 +41,9 @@ spryker/price-product-merchant-relationship-storage:"^1.0.0" spryker/price-produ
 2. Add a plugin to Client's `PriceProductStorageDependencyProvider`:
 
 
-| Module | Plugin | Description | Method in Dependency Provider |
+| MODULE | PLUGIN | DESCRIPTION | METHOD IN DEPENDENCY PROVIDER |
 | --- | --- | --- | --- |
-| `PriceProductStorage` | `PriceProductMerchantRelationshipStorageDimensionPlugin` | Reads prices for merchant relations from Redis to show them in catalog. | `getPriceDimensionPlugins` |
+| PriceProductStorage | PriceProductMerchantRelationshipStorageDimensionPlugin | Reads prices for merchant relations from Redis to show them in catalog. | getPriceDimensionPlugins |
 
 **src/Pyz/Client/PriceProductStorage/PriceProductStorageDependencyProvider.php**
 
@@ -81,6 +81,7 @@ class PriceProductStorageDependencyProvider extends SprykerPriceProductStorageDe
     }
 }
 ```
+
 3. Add a plugin to Client's `CustomerDependencyProvider`:
 
 

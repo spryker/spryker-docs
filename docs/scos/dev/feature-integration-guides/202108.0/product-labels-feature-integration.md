@@ -22,27 +22,32 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/product-labels-promotions-and-discounts-feature-integration.html
 ---
 
-## Install Feature Core
+## Install feature core
+
 Follow the steps below to install the feature core.
 
-
 ### Prerequisites
+
 To start feature integration, overview, and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Spryker Core | 202009.0 |
-| cell | 202009.0 |
+| Spryker Core | {{page.version}} |
+| cell | {{page.version}} |
 
-### 1) Install Required Modules Using Composer
+### 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
+
 ```bash
-composer require spryker-feature/product-labels:"202009.0" --update-with-dependencies
+composer require spryker-feature/product-labels:"{{page.version}}" --update-with-dependencies
 ```
+
+{% info_block warningBox “Verification” %}
+
 Ensure that the following modules have been installed:
 
-
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | ProductLabel | vendor/spryker/product-label |
 | ProductLabelDataImport | vendor/spryker/product-label-data-import |
@@ -50,13 +55,16 @@ Ensure that the following modules have been installed:
 | ProductLabelSearch | vendor/spryker/product-label-search |
 | ProductLabelStorage | vendor/spryker/product-label-storage |
 
-### 2) Set up Database Schema and Transfer Objects
+{% endinfo_block %}
+
+### 2) Set up database schema and transfer objects
 
 Set up database schema and transfer objects as follows:
 
-1. For entity changes to trigger events, adjust the schema definition: 
+1. For entity changes to trigger events, adjust the schema definition:
 
 **src/Pyz/Zed/ProductLabel/Persistence/Propel/Schema/spy_product_label.schema.xml**
+
 ```xml
 <?xml version="1.0"?>
 <database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
@@ -95,6 +103,7 @@ Set up database schema and transfer objects as follows:
 ```
 
 **src/Pyz/Zed/ProductLabel/Persistence/Propel/Schema/spy_product_label_product_abstract.schema.xml**
+
 ```xml
 <?xml version="1.0"?>
 <database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
@@ -110,7 +119,7 @@ Set up database schema and transfer objects as follows:
 ```
 
 
-| Affected Entity | Triggered events |
+| AFFECTED ENTITY | TRIGGERED EVENTS |
 | --- | --- |
 | spy_product_label | <ul><li>Entity.spy_product_label.create</li><li>Entity.spy_product_label.update</li><li>Entity.spy_product_label.delete</li></ul> |
 | spy_product_label_store | <ul><li>Entity.spy_product_label_store.create</li><li>Entity.spy_product_label_store.update</li><li>Entity.spy_product_label_store.delete</li></ul>|
@@ -120,6 +129,7 @@ Set up database schema and transfer objects as follows:
 2. To synchronize the entities without store relations among stores, set up synchronization queue pools:
 
 **src/Pyz/Zed/ProductLabelStorage/Persistence/Propel/Schema/spy_product_label_storage.schema.xml**
+
 ```xml
 <?xml version="1.0"?>
 <database xmlns="spryker:schema-01"
@@ -150,7 +160,7 @@ console transfer:generate
 
 Ensure that the following changes have been applied by checking your database:
 
-| Database Entity | Type | Event |
+| DATABASE ENTITY | TYPE | EVENT |
 | --- | --- | --- |
 | spy_product_label | table | created |
 | spy_product_label_store | table | created |
@@ -165,7 +175,7 @@ Ensure that the following changes have been applied by checking your database:
 
 Ensure that the following changes have been triggered in transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | ProductLabel | class | created | src/Generated/Shared/Transfer/ProductLabelTransfer |
 | ProductLabelCriteria | class | created | src/Generated/Shared/Transfer/ProductLabelCriteriaTransfer |
@@ -196,13 +206,13 @@ Ensure that the following changes have been triggered in transfer objects:
 
 {% endinfo_block %}
 
-### 3) Set up Behavior
+### 3) Set up behavior
+
 Set up the following behaviors:
 
-1. Set up Publishers:
+1. Set up publishers:
 
-
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | ProductLabelWritePublisherPlugin | Updates the label data of the product page search when triggered by the provided product label events. | None | Spryker\Zed\ProductLabelSearch\Communication\Plugin\Publisher\ProductLabel |
 | ProductLabelProductAbstractWritePublisherPlugin | Updates the label data of the product page search when triggered by the provided product label product abstract relation events. | None | Spryker\Zed\ProductLabelSearch\Communication\Plugin\Publisher\ProductLabelProductAbstract |
@@ -240,7 +250,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             $this->getProductLabelStoragePlugins(),
         );
     }
-    
+
     /**
      * @return \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface[]
      */
@@ -278,10 +288,9 @@ After assigning a product label to a product, the corresponding product record c
 
 {% endinfo_block %}
 
-2. Setup Re-Generate and Re-Sync features by setting up the following plugins:
+2. Setup re-generate and re-sync features by setting up the following plugins:
 
-
-| Plugin | Sprcification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | ProductAbstractLabelPublisherTriggerPlugin | Triggers publish events for the product label data. | None | Spryker\Zed\ProductLabelStorage\Communication\Plugin\Publisher |
 | ProductLabelDictionaryPublisherTriggerPlugin | Triggers publish events for the product label dictionary data. | None | Spryker\Zed\ProductLabelStorage\Communication\Plugin\Publisher |
@@ -335,7 +344,7 @@ class ProductLabelStorageConfig extends SprykerProductLabelStorageConfig
     {
         return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;
     }
-    
+
     /**
      * @return string|null
      */
@@ -343,7 +352,7 @@ class ProductLabelStorageConfig extends SprykerProductLabelStorageConfig
     {
         return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;
     }
-    
+
     /**
      * @return string|null
      */
@@ -415,17 +424,18 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 Ensure that the product label trigger plugin works correctly:
 
 1. Fill `spy_product_label` table with some data.
-2. Run `console publish:trigger-events -r product_label_dictionary` command. 
+2. Run `console publish:trigger-events -r product_label_dictionary` command.
 3. Ensure that the `spy_product_label_dictionary_storage` table is filled with respective data.
 4. Ensure that the storage entries appear in your system with the `kv:product_label_dictionary:store:locale` mask.
 
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-your content goes hereEnsure that the product label synchronization plugin works correctly:
 
-1. Fill `spy_product_label_product_abstract` table with some data. 
-2. Run the `console publish:trigger-events -r product_abstract_label` command. 
+Ensure that the product label synchronization plugin works correctly:
+
+1. Fill `spy_product_label_product_abstract` table with some data.
+2. Run the `console publish:trigger-events -r product_abstract_label` command.
 3. Ensure that the `spy_product_abstract_label_storage` table is filled with respective data.
 4. Ensure that storage entries appear in your system with the `kv:product_abstract_label:id_product_abstract` mask.
 {% endinfo_block %}
@@ -455,13 +465,16 @@ class ProductLabelDependencyProvider extends SprykerProductLabelDependencyProvid
 ```
 
 {% info_block warningBox "Verification" %}
+
 Ensure that the product label new works:
 
 1. Create a product and enter `new_from` and `new_to` fields, so that the current date is between the entered ones.
 2. Check that, on the Storefront, the product is displayed with the new product label.
+
 {% endinfo_block %}
 
-### 4) Import Data
+### 4) Import data
+
 Follow the steps to import product label data:
 
 {% info_block infoBox "Info" %}
@@ -469,7 +482,6 @@ Follow the steps to import product label data:
 The following imported entities will be used as product labels in Spryker.
 
 {% endinfo_block %}
-
 
 1. Prepare data according to your requirements using the following demo data:
 
@@ -483,8 +495,7 @@ Label 3,1,1,0,highlight,,,Label 3,,3
 NEW,1,1,0,template:tag,,,New,Neu,,2
 ```
 
-
-| Column | Is Mandatory? | Data Type | Data Example | Data Explanation |
+| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | name | Yes | string | Label 1 | Unique product label identifier. |
 | is_active | Yes | integer | 1 | Defines if the product label is available. |
@@ -507,15 +518,14 @@ Label 2,US
 Label 3,DE
 ```
 
-| Column | Is Mandatory? | Data Type | Data Example | Data Explanation |
+| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | name | Yes | string | Label 1 | Unique product label identifier. |
 | store_name | Yes | string | US | Name of the store to assign the label to. |
 
 2. Register the following data import plugins:
 
-
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | ProductLabelDataImportPlugin | Imports product label data into the database. | None | Spryker\Zed\ProductLabelDataImport\Communication\Plugin |
 | ProductLabelStoreDataImportPlugin | Imports product label store data into the database. | None | Spryker\Zed\ProductLabelDataImport\Communication\Plugin |
@@ -547,6 +557,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 ```
 
 3. Import data:
+
 ```bash
 console data:import product-label
 console data:import product-label-store
@@ -559,40 +570,42 @@ Ensure that the configured data has been added to the `spy_product_label` and  `
 {% endinfo_block %}
 
 
+## Install feature frontend
 
-## Install Feature Front End
 Follow the steps below to install the feature front end.
 
-
 ### Prerequisites
+
 Overview and install the necessary features before beginning the integration step.
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Spryker Core | 202009.0 |
-| cell | 202009.0 |
+| Spryker Core | {{page.version}} |
+| Product | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require "spryker-feature/product-labels:"202009.0" --update-with-dependencies
+composer require "spryker-feature/product-labels:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
+
 Ensure that the following modules have been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | ProductLabelWidget | vendor/spryker-shop/product-label-widget |
 {% endinfo_block %}
 
-### 2) Set up Widgets
+### 2) Set up widgets
+
 Set up widgets as follows:
 
 1. Register the following plugins to enable widgets:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | ProductAbstractLabelWidget | Displays the product label assigned to a product. | None | SprykerShop\Yves\ProductLabelWidget\Widget |
 
@@ -624,13 +637,14 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 Ensure that the following widget has been registered:
 
-| Module | Test |
+| MODULE | TEST |
 | --- | --- |
 | ProductLabelWidget | Add the following to a Twig template: `{% raw %}{%{% endraw %} widget 'ProductAbstractLabelWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` |
 
 {% endinfo_block %}
 
 2. Enable Javascript and CSS changes:
+
 ```bash
 console frontend:yves:build
 ```
@@ -640,6 +654,3 @@ console frontend:yves:build
 Ensure that product labels are displayed on the product details page and catalog page.
 
 {% endinfo_block %}
-
-
-

@@ -11,48 +11,89 @@ redirect_from:
   - /docs/en/persistent-cart-sharing-feature-integration
 ---
 
-## Install Feature Core
+## Install feature core
+
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Spryker Core | 202009.0 |
-| Resource Sharing | 202009.0 |
+| Spryker Core | {{page.version}} |
+| Resource Sharing | {{page.version}} |
+|   |   |
 ### 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
+
 ```bash
-composer require spryker-feature/persistent-cart-sharing: "^201907.0" --update-with-dependencies
+composer require spryker-feature/persistent-cart-sharing: "{{page.version}}" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
-Make sure that the following modules were installed:<table><thead><tr><td>Module</td><td>Expected Directory</td></tr></thead><tbody><tr><td>`PersistentCartShare`</td><td>`vendor/spryker/persistent-cart-share`</td></tr><tr><td>`PersistentCartShareExtension`</td><td>`vendor/spryker/persistent-cart-share-extension`</td></tr></tbody></table>
+
+Make sure that the following modules were installed:
+
+| MODULE | EXPECTED DIRECTORY |
+| --- | --- |
+| PersistentCartShare | vendor/spryker/persistent-cart-share |
+| PersistentCartShareExtension | vendor/spryker/persistent-cart-share-extension |
+
 {% endinfo_block %}
-### 2) Set up Transfer Objects
+
+### 2) Set up transfer objects
+
 Run the following commands to generate transfer changes:
+
 ```bash
 console transfer:generate
 ```
+
 {% info_block warningBox "Verification" %}
-Make sure that the following changes in transfer objects:<table><col /><col  /><col  /><col /><thead><tr><td>Transfer</td><td>Type</td><td>Event</td><td>Path</td></tr></thead><tbody><tr><td>`ResourceShareData.idQuote`</td><td>property</td><td>added</td><td>`src/Generated/Shared/Transfer/ResourceShareDataTransfer`</td></tr><tr><td>`ResourceShareData.ownerCompanyUserId`</td><td>property</td><td>added</td><td>`src/Generated/Shared/Transfer/ResourceShareDataTransfer`</td></tr><tr><td>`ResourceShareData.ownerCompanyBusinessUnitId`</td><td>property</td><td>added</td><td>`src/Generated/Shared/Transfer/ResourceShareDataTransfer`</td></tr></tbody></table>
+
+Make sure that the following changes in transfer objects:
+
+| Transfer | Type | Event | Path |
+| --- | --- | --- | --- |
+| ResourceShareData.idQuote | property | added | src/Generated/Shared/Transfer/ResourceShareDataTransfer |
+| ResourceShareData.ownerCompanyUserId | property | added | src/Generated/Shared/Transfer/ResourceShareDataTransfer |
+| ResourceShareData.ownerCompanyBusinessUnitId | property | added | src/Generated/Shared/Transfer/ResourceShareDataTransfer |
+
 {% endinfo_block %}
-## Install Feature Frontend
+
+## Install feature frontend
+
 ### Prerequisites
+
 Please overview and install the necessary features before beginning the integration step.
 
-|Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Spryker Core | 201907.0 |
-| Resource Sharing | 201907.0 |
-| Customer Account Management | 201907.0 |
+| Spryker Core | {{page.version}} |
+| Resource Sharing | {{page.version}} |
+| Customer Account Management | {{page.version}} |
+|   |   |
 ### 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
+
 ```bash
-composer require spryker-feature/persistent-cart-sharing: "^201907.0" --update-with-dependencies
+composer require spryker-feature/persistent-cart-sharing: "{{page.version}}" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
-Make sure that the following modules were installed:<table><col /><col /><thead><tr><td>Module</td><td>Expected Directory</td></tr></thead><tbody><tr><td>`PersistentCartSharePage`</td><td>`vendor/spryker-shop/persistent-cart-share-page`</td></tr><tr><td>`PersistentCartShareWidget`</td><td>`vendor/spryker-shop/persistent-cart-share-widget`</td></tr></tbody></table>
+
+Make sure that the following modules were installed:
+
+| MODULE | EXPECTED DIRECTORY |
+| --- | --- |
+| PersistentCartSharePage | vendor/spryker-shop/persistent-cart-share-page |
+| PersistentCartShareWidget | vendor/spryker-shop/persistent-cart-share-widget |
+
 {% endinfo_block %}
-### 2) Add Translations
+
+### 2) Add translations
+
 Append glossary according to your configuration:
 
 data/import/common/common/glossary.csv
@@ -83,33 +124,38 @@ clipboard.copy.error,Das Kopieren in die Zwischenablage wird von Ihrem Browser n
 persistent_cart_share_page.preview,Preview: %title%,en_US
 persistent_cart_share_page.preview,Vorschau: %title%,de_DE
 ```
-    
+
 Run the following console command to import data:
+
 ```bash
 console data:import glossary
 ```
+
 {% info_block warningBox "Verification" %}
+
 Make sure that in the database the configured data are added to the `spy_glossary` table.
+
 {% endinfo_block %}
 
-### 3) Set up Behavior
+### 3) Set up behavior
+
 Enable the following behaviors by registering the plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | CartPreviewRouterStrategyPlugin | Redirects company user to the Cart Preview page if a cart was shared with Preview access. | None | SprykerShop\Yves\PersistentCartSharePage\Plugin |
 | PreviewCartShareOptionPlugin | Provides an external (preview) share option for the Share Cart via link widget. | None | Spryker\Client\PersistentCartShare\Plugin |
 
-src/Pyz/Yves/ResourceSharePage/ResourceSharePageDependencyProvider.php
+**src/Pyz/Yves/ResourceSharePage/ResourceSharePageDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\ResourceSharePage;
- 
+
 use SprykerShop\Yves\PersistentCartSharePage\Plugin\CartPreviewRouterStrategyPlugin;
 use SprykerShop\Yves\ResourceSharePage\ResourceSharePageDependencyProvider as SprykerResourceSharePageDependencyProvider;
- 
+
 class ResourceSharePageDependencyProvider extends SprykerResourceSharePageDependencyProvider
 {
     /**
@@ -124,16 +170,16 @@ class ResourceSharePageDependencyProvider extends SprykerResourceSharePageDepend
 }
 ```
 
-src/Pyz/Client/PersistentCartShare/PersistentCartShareDependencyProvider.php
+**src/Pyz/Client/PersistentCartShare/PersistentCartShareDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\PersistentCartShare;
- 
+
 use Spryker\Client\PersistentCartShare\PersistentCartShareDependencyProvider as SprykerPersistentCartShareDependencyProvider;
 use Spryker\Client\PersistentCartShare\Plugin\PersistentCartShare\PreviewCartShareOptionPlugin;
- 
+
 class PersistentCartShareDependencyProvider extends SprykerPersistentCartShareDependencyProvider
 {
     /**
@@ -149,22 +195,27 @@ class PersistentCartShareDependencyProvider extends SprykerPersistentCartShareDe
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that when you followed cart share link with Preview access, you're redirected to the Cart Preview page.
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
+
 Make sure, that you are able to share a cart with "Preview" access to external users from the cart page.
+
 {% endinfo_block %}
 
-### 4) Enable Controllers
-#### Route List
+### 4) Enable controllers
+
+#### Route list
 
 Register the following route provider plugins:
 
-| Provider | Namespace |
-| --- | --- | 
-| `PersistentCartSharePageRouteProviderPlugin` | `SprykerShop\Yves\PersistentCartSharePage\Plugin\Router` |
-| `PersistentCartShareWidgetRouteProviderPlugin` | `SprykerShop\Yves\PersistentCartShareWidget\Plugin\Router` |
+| PROVIDER | NAMESPACE |
+| --- | --- |
+| PersistentCartSharePageRouteProviderPlugin | SprykerShop\Yves\PersistentCartSharePage\Plugin\Router |
+| PersistentCartShareWidgetRouteProviderPlugin` | SprykerShop\Yves\PersistentCartShareWidget\Plugin\Router |
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
 
@@ -193,30 +244,33 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure, that when you proceed with `https://mysprykershop.com/cart/preview/xxx` link, you're redirected to the "404" page with "Resource is not found by provided UUID." error message.
+
 {% endinfo_block %}
 
-{% info_block warningBox "Verification" %}
-Make sure, that when you're on a cart page, you can see the "Share Cart via Link" widget with an "External Users" radio button (if you logged in as company user
-{% endinfo_block %} and when you click on it - the cart share link is generated successfully and placed in the appeared text box (requires `ShareCartByLinkWidget` to be enabled).)
+Make sure, that when you're on a cart page, you can see the "Share Cart via Link" widget with an "External Users" radio button (if you logged in as company user and when you click on it - the cart share link is generated successfully and placed in the appeared text box (requires `ShareCartByLinkWidget` to be enabled).
 
-### 5) Set up Widgets
+{% endinfo_block %}
+
+### 5) Set up widgets
+
 Register the following plugins to enable widgets:
 
-| Plugin | Descripton | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `ShareCartByLinkWidget` | Provides an ability to share a cart for External Users (Preview). | None | SprykerShop\Yves\PersistentCartShareWidget\Widget |
+| ShareCartByLinkWidget | Provides an ability to share a cart for External Users (Preview). | None | SprykerShop\Yves\PersistentCartShareWidget\Widget |
 
-src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php
+**src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\ShopApplication;
- 
+
 use SprykerShop\Yves\PersistentCartShareWidget\Widget\ShareCartByLinkWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
- 
+
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
@@ -232,12 +286,19 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 ```
 
 Run the following command to enable Javascript and CSS changes:
+
 ```bash
 console frontend:yves:build
 ```
+
 {% info_block warningBox "Verification" %}
+
 Make sure, that when you're on a cart page, you can see the "Share Cart via Link" widget with an "External Users" radio button (if you logged in as company user).
+
 {% endinfo_block %}
+
 {% info_block warningBox "Verification" %}
+
 Login to Yves as Company User, add some product to the cart and go to the cart page.<br>Make sure, that you can see the "Share Cart via Link" widget on a cart page.<br>Make sure you can see an "External Users" radio button. Click on it.<br>Make sure, that you can see the generated link for Preview access.<br>Make sure, that you can see a "Copy" button near the link. Click on it.<br>Make sure, that the link was copied to the clipboard (or a message that it's impossible due to some browser limitations).<br>Copy the Cart Preview link and proceed with it. Make sure, that you are redirected to the Cart Preview page.
+
 {% endinfo_block %}

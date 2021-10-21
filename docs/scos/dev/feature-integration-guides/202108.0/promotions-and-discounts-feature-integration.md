@@ -15,7 +15,7 @@ To start using the Discount Promotion feature, you have to do some configuration
 
 ## Prerequisites
 
-1. First make sure you have the latest `DiscountPromotion` module. 
+1. First make sure you have the latest `DiscountPromotion` module.
 Usecthe `composer require spryker/discount-promotion` command to install it.
 2. You also need at least  `"spryker/discount": "^4.5.0"` for the discount module.
 * Run `vendor/bin/console transfer:generate` to generate the latest transfer object.
@@ -23,14 +23,14 @@ Usecthe `composer require spryker/discount-promotion` command to install it.
 * Run `vendor/bin/console propel:migrate` to migrate the latest generate migration file.
 * Run `vendor/bin/console propel:model:build` to generate new propel Entities and Query classes.
 
-## Enabling Discount Promotions
+## Enabling discount promotions
 
 To enable Discount promotions, you have to add a number of plugins to the `Discount` module so that `DiscountPromotion` can  extend it.
 Below there is the example of the `DiscountDependencyProvider` class.
 
 ```php
 <?php
-            
+
 namespace Pyz\Zed\Discount;
 
 use Spryker\Zed\Discount\DiscountDependencyProvider as SprykerDiscountDependencyProvider;
@@ -183,9 +183,10 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 ```
 
 ## Usage in Yves
+
 To be able to see promotion products, you have to change how cart items are rendered in Yves:
 1. Take the `Pyz\Yves\DiscountPromotion` module from demoshop and place it somewhere in your project.
-2. Change the `CartOperationHandler::add` method to include promotion item flag. 
+2. Change the `CartOperationHandler::add` method to include promotion item flag.
 Like `$itemTransfer->setIsPromotion((bool)$this->request->request->get('isPromo'));`
 3. Inject `ProductPromotionMapperPlugin` to Cart Module:
 

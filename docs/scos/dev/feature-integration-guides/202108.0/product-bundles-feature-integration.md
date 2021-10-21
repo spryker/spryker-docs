@@ -18,27 +18,27 @@ This integration guide expects the basic feature to be in place. It adds only th
 To start feature integration, overview and install the necessary features:
 
 
-| Name | Version | Integration guide |
+| NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {% raw %}{{{% endraw %}variable.master{% raw %}}}{% endraw %} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Product |{% raw %}{{{% endraw %}variable.master{% raw %}}}{% endraw %} |[Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)|
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Product | {{page.version}} |[Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)|
 
 ## 1) Install required modules using Composer
 
 Run the following command to install the required modules:
+
 ```bash
 composer require spryker-feature/product-bundles --update-with-dependencies
-``` 
-{% info_block warningBox "Verification" %}
+```
 
+{% info_block warningBox "Verification" %}
 
 Ensure that the following modules have been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | ProductBundle | vendor/spryker/product-bundle |
 | ProductBundleStorage |vendor/spryker/product-bundle-storage|
-
 
 {% endinfo_block %}
 
@@ -48,12 +48,13 @@ Set up database schema and transfer objects:
 
 1. Adjust the schema definition for entity changes to trigger events:
 
-| Affected Entity | Triggered events |
+| AFFECTED ENTITY | TRIGGERED EVENTS |
 | --- | --- |
 | spy_product_bundle | Entity.spy_product_bundle.create  </br> Entity.spy_product_bundle.update  </br> Entity.spy_product_bundle.delete |
 | spy_product_bundle_storage |Entity.spy_product_bundle_storage.create  </br> Entity.spy_product_bundle_storage.update </br> Entity.spy_product_bundle_storage.delete |
 
 **src/Pyz/Zed/ProductBundle/Persistence/Propel/Schema/spy_product_bundle.schema.xml**
+
 ```xml
 <?xml version="1.0"?>
 <database xmlns="spryker:schema-01"
@@ -73,6 +74,7 @@ Set up database schema and transfer objects:
 ```
 
 **src/Pyz/Zed/ProductBundleStorage/Persistence/Propel/Schema/spy_product_bundle_storage.schema.xml**
+
 ```xml
 <?xml version="1.0"?>
 <database xmlns="spryker:schema-01"
@@ -91,6 +93,7 @@ Set up database schema and transfer objects:
 ```
 
 2. Apply database changes and generate entity and transfer changes:
+
 ```bash
 console transfer:generate
 console propel:install
@@ -99,11 +102,9 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-
-
 Ensure that the following changes have been applied in transfer objects:
 
-| Transfer | Type | Event | Path |
+ TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | ProductBundleStorageTransfer | class | created | src/Generated/Shared/Transfer/ProductBundleStorageTransfer |
 | ProductForProductBundleStorageTransfer| class| created |src/Generated/Shared/Transfer/ProductForProductBundleStorageTransfer|
@@ -116,11 +117,12 @@ Ensure that the following changes have been applied in transfer objects:
 | ProductForBundleTransfer| class |created| src/Generated/Shared/Transfer/ProductForBundleTransfer|
 
 {% endinfo_block %}
+
 {% info_block warningBox "Verification" %}
 
 Ensure that the following changes have been applied by checking your database:
 
-| Database entity | Type | Event |
+| DATABASE ENTITY | TYPE | EVENT |
 | --- | --- | --- |
 | spy_product_bundle_storage | table | created |
 
@@ -134,7 +136,7 @@ Ensure that propel entities have been generated successfully by checking their e
 
 3. Change the generated entity classes `SpyProductBundleStorage` and `SpyProductBundleStorageQuery` to extend from Spryker core classes as shown in the table below:
 
-| Class path | Extends |
+| CLASS PATH | EXTENDS |
 | --- | --- |
 | src/Orm/Zed/ProductBundleStorage/Persistence/Base/SpyProductBundleStorage.php | Spryker\Zed\ProductBundleStorage\Persistence\Propel\AbstractSpyProductBundleStorage |
 | src/Orm/Zed/ProductBundleStorage/Persistence/Base/SpyProductBundleStorageQuery.php | Spryker\Zed\ProductBundleStorage\Persistence\Propel\AbstractSpyProductBundleStorageQuery |
@@ -143,12 +145,13 @@ Ensure that propel entities have been generated successfully by checking their e
 
 Ensure that the changes have been implemented successfully by triggering the following methods and checking that the respective events are triggered:
 
-| Path | Method name | Event |
+| PATH | METHOD NAME | EVENT |
 | --- | --- | --- |
 | src/Orm/Zed/ProductBundle/Persistence/Base/SpyProductBundle.php | prepareSaveEventName() </br> addSaveEventToMemory()</br>  addDeleteEventToMemory() | Entity.spy_product_bundle.create  </br> Entity.spy_product_bundle.update</br>    Entity.spy_product_bundle.delete |
 | src/Orm/Zed/ProductBundleStorage/Persistence/Base/SpyProductBundleStorage.php |sendToQueue() |Entity.spy_product_bundle_storage.create </br>   Entity.spy_product_bundle_storage.update   </br> Entity.spy_product_bundle_storage.delete|
 
 {% endinfo_block %}
+
 ## 3) Configure export to Redis and Elasticsearch
 
 To configure export to Redis and Elasticsearch, follow the steps below:
@@ -157,7 +160,7 @@ To configure export to Redis and Elasticsearch, follow the steps below:
 
 Set up tables to be published to the `spy_product_bundle_storage` on change (create, edit, delete) and synchronization of the data to Storage.
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | ProductBundlePublishWritePublisherPlugin | Publishes product bundle data when the publish product bundle event is triggered. | None | Spryker\Zed\ProductBundleStorage\Communication\Plugin\Publisher\ProductBundle |
 | ProductBundleWritePublisherPlugin |Publishes product bundle data when product bundle create, update and delete events fire. | None |Spryker\Zed\ProductBundleStorage\Communication\Plugin\Publisher\ProductBundle|
@@ -165,8 +168,8 @@ Set up tables to be published to the `spy_product_bundle_storage` on change (c
 | ProductBundleSynchronizationDataBulkRepositoryPlugin| Synchronizes product bundle data to the storage. | None | Spryker\Zed\ProductBundleStorage\Communication\Plugin\Synchronization |
 
 
-
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
+
 ```php
 <?php
 
@@ -191,8 +194,10 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
         ];
     }
 }
-``` 
+```
+
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
+
 ```php
 <?php
 
@@ -213,20 +218,19 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
         ];
     }
 }
-``` 
+```
 
 {% info_block warningBox "Verification" %}
 
-
 Ensure that, when a product bundle is created, updated, or deleted, it is exported to or removed from Redis.
-
 
 Storage type: Redis
 Target entity: Product Bundle
 
-Example expected data identifier: `kv:product_bundle:1` 
+Example expected data identifier: `kv:product_bundle:1`
 
-Example expected data fragment: 
+Example expected data fragment:
+
 ```json
 {
     "id_product_concrete_bundle": 1,
@@ -254,6 +258,7 @@ To import product bundles:
 1. Adjust the concrete product import process to trigger product bundle publishing:
 
 **src/Pyz/Zed/DataImport/Business/Model/ProductConcrete/Writer/ProductConcretePropelDataSetWriter.php**
+
 ```php
 <?php
 
@@ -281,22 +286,24 @@ class ProductConcretePropelDataSetWriter implements DataSetWriterInterface
         DataImporterPublisher::addEvent(static::PRODUCT_BUNDLE_PUBLISH, $idProduct);
     }
 }
-``` 
+```
 
 2. Run the following console command to import data:
+
 ```bash
 console data:import product-concrete
-``` 
+```
+
 {% info_block warningBox "Verification" %}
 
 Ensure that, in the database, the configured data has been added to the `spy_product_bundle` table and the `product_bundle` publishing has been triggered.
 
 {% endinfo_block %}
+
 ## Related features
+
 Integrate the following related features:
 
-| Feature | Required for the current feature | Integration guide |
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Product Bundles + Punchout GUI |  | [Eco: Punchout Catalogs + Product Bundles feature integration](/docs/scos/user/technology-partners/{{page.version}}/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html) |
-
-

@@ -36,7 +36,7 @@ Follow feature integration guides from the table that provides functionality for
 | [Marketplace Merchant Portal Core](/docs/marketplace/dev/feature-integration-guides/202108.0/marketplace-merchant-portal-core-feature-integration.html) | Marketplace MerchantPortal Core enables server configuration and the basic functionality of the Merchant Portal such as security login. |
 | [Marketplace Merchant Portal Product Management](/docs/marketplace/dev/feature-integration-guides/202108.0/merchant-portal-marketplace-product-feature-integration.html) | Merchants can manage their products in Merchant Portal. |
 | [Marketplace Merchant Portal Product Offer Management](/docs/marketplace/dev/feature-integration-guides/202108.0/marketplace-merchant-portal-product-offer-management-feature-integration.html) | Merchants can manage their product offers in Merchant Portal. |
-| [Marketplace Merchant Portal Product Option Management](https://github.com/spryker/product-option-merchant-portal-gui) | Allows to merchants manage their product options in Merchant Portal. |
+| [Marketplace Merchant Portal Product Option Management](/docs/marketplace/dev/feature-integration-guides/202108.0/merchant-portal-marketplace-product-option-management-feature-integration.html) | Extends the order items with related product options in Merchant Portal. |
 | [Marketplace Merchant Portal Order Management](/docs/marketplace/dev/feature-integration-guides/202108.0/merchant-portal-marketplace-order-management-feature-integration.html) | Allows to merchants manage their orders in Merchant Portal. |
 | [ACL](/docs/marketplace/dev/feature-integration-guides/202108.0/acl-feature-integration.html) | Allows to manage access to HTTP endpoints and Persistance Entities. |
 

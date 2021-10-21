@@ -1,10 +1,10 @@
 ---
 title: Actions
-description: This article provides details about the Actions service in the Components Library.
+description: This document provides details about the Actions service in the Components Library.
 template: concept-topic-template
 ---
 
-This article provides details about the Actions service in the Components Library.
+This document explains the Actions service in the Components Library.
 
 ## Overview
 
@@ -15,11 +15,10 @@ The context within which Actions are handled is defined by the invoker of the Ac
 
 ```html
 <spy-button-action
-  [action]="{ 
-    type: 'close-drawer' 
-  }"
+    [action]="{ 
+        type: 'close-drawer' 
+    }"
 >
-  ...
 </spy-button-action>
 ```
 
@@ -27,7 +26,7 @@ The context within which Actions are handled is defined by the invoker of the Ac
 
 Actions is an Angular Service that implements a specific interface (`ActionHandler`) and is registered in the Action Module via `ActionModule.withActions()`. 
 The main service injects all registered types from the `ActionTypesToken`.
-Trigger method finds specific service from the `ActionTypesToken` by the `config.type` (from the argument) and returns observable with data by `ActionHandler.handleAction`.
+`trigger()` method finds specific service from the `ActionTypesToken` by the `config.type` (from the argument) and returns observable with data by `ActionHandler.handleAction()`.
 
 ## Action Handler
 
@@ -39,36 +38,36 @@ Action Handler encapsulates the algorithm of how the data is loaded into the Com
 import { ActionConfig } from '@spryker/actions';
 
 declare module '@spryker/actions' {
-  interface ActionsRegistry {
-    custom: CustomActionHandlerService;
-  }
+    interface ActionsRegistry {
+        custom: CustomActionHandlerService;
+    }
 }
 
 export interface CustomActionConfig extends ActionConfig {
-  data: unknown;
-  ...;
+    data: unknown;
+    ...
 }
 
 // Service implementation
 @Injectable({
-  providedIn: 'root',
+    providedIn: 'root',
 })
 export class CustomActionHandlerService implements ActionHandler<unknown, void> {
-  handleAction(
-    injector: Injector,
-    config: CustomActionConfig,
-    context: unknown,
-  ): Observable<void> {
-    ...
-  }
+    handleAction(
+        injector: Injector,
+        config: CustomActionConfig,
+        context: unknown,
+    ): Observable<void> {
+        ...
+    }
 }
 
 @NgModule({
-  imports: [
-    ActionsModule.withActions({
-      custom: CustomActionHandlerService,
-    }),
-  ],
+    imports: [
+        ActionsModule.withActions({
+            custom: CustomActionHandlerService,
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -81,18 +80,19 @@ Below you can find interfaces for the Actions configuration and Action type:
 
 ```ts
 export interface ActionConfig {
-  type: ActionType;
-  // Reserved for types that may have extra configuration
-  [k: string]: unknown;
+    type: ActionType;
+
+    // Reserved for types that may have extra configuration
+    [k: string]: unknown;
 }
 
 export interface ActionHandler<C = unknown, R = unknown>
-  extends Generics<[C, R]> {
-  handleAction(
-    injector: Injector,
-    config: ActionConfig,
-    context: C,
-  ): Observable<R>;
+    extends Generics<[C, R]> {
+    handleAction(
+        injector: Injector,
+        config: ActionConfig,
+        context: C,
+    ): Observable<R>;
 }
 ```
 
@@ -100,11 +100,11 @@ export interface ActionHandler<C = unknown, R = unknown>
 
 There are a few common Actions that are available in UI library as separate packages:
 
-- [drawer](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-drawer.html) - opens component in the Drawer.
-- [close-drawer](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-close-drawer.html) - closes the first Drawer in the current context.  
-- [redirect](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-redirect.html) - performs the hard redirect to the URL.  
-- [refresh-drawer](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-drawer.html) - refreshes/rerenders opened Drawer in current context.  
-- [refresh-table](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-table.html) - refreshes data of the Table in current context.  
-- [refresh-parent-table](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-parent-table.html) - refreshes data of the parent Table of a Table in current context.  
-- [http](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-http.html) - renders content via html request.  
-- [notification](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-notification.html) - renders notification box.  
+- [Close-drawer](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-close-drawer.html) - closes the first Drawer in the current context.
+- [Drawer](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-drawer.html) - opens component in the Drawer.
+- [HTTP](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-http.html) - renders content via html request.
+- [Notification](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-notification.html) - renders notification box.
+- [Redirect](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-redirect.html) - performs the hard redirect to the URL.  
+- [Refresh-drawer](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-drawer.html) - refreshes/rerenders opened Drawer in current context.  
+- [Refresh-parent-table](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-parent-table.html) - refreshes data of the parent Table of a Table in current context.
+- [Refresh-table](/docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-table.html) - refreshes data of the Table in current context.  

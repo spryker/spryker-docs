@@ -21,14 +21,16 @@ related:
 This document describes how to integrate the [Product Sets feature](/docs/scos/user/features/{{page.version}}/product-sets-feature-overview.html) into a Spryker project.
 
 ## Prerequisites
+
 To prepare your project to work with Product Sets:
-1. Require the Product Set modules in your `composer.json`: 
+1. Require the Product Set modules in your `composer.json`:
 
 ```bash
 composer require spryker/product-set spryker/product-set-collector spryker/product-set-gui
 ```
 
 2. If you want to enable the Product Sets search powered by Elasticsearch, install the `spryker/search-elasticsearch` module:
+3.
 ```bash
 composer require spryker/search-elasticsearch
 ```
@@ -40,20 +42,20 @@ vendor/bin/console propel:diff
 ```
 Propel should generate a migration file with the changes.
 
-4. Apply the database changes: 
+4. Apply the database changes:
+
 ```bash
 vendor/bin/console propel:migrate
 ```
 
-5. Generate ORM models: 
+5. Generate ORM models:
+
 ```bash
 vendor/bin/console propel:model:build
 ```
 
-
 {% info_block warningBox "Verification" %}
 
-   
 Make sure that:
 * New classes have been added to `\Orm\Zed\ProductSet\Persistence`.
 * They extend the base classes from the Spryker core. For example:
@@ -114,14 +116,14 @@ class CollectorDependencyProvider extends SprykerCollectorDependencyProvider
 				ProductSetConfig::RESOURCE_TYPE_PRODUCT_SET => new ProductSetCollectorSearchPlugin(),
 			];
 		});
-       
+
 		$container->set(static::STORAGE_PLUGINS, function (Container $container) {
 			return [
 				// ...
 				ProductSetConfig::RESOURCE_TYPE_PRODUCT_SET => new ProductSetCollectorStoragePlugin(),
 			];
 		});
-        
+
 		// ...
 	}
 }
@@ -132,12 +134,13 @@ class CollectorDependencyProvider extends SprykerCollectorDependencyProvider
 Implement an installer in your project to put products together in sets representing how you want them to be displayed in your shop frontend. Find implementation examples in the [Demoshop](https://github.com/spryker/demoshop).
 
 ### Listing products sets on the Storefront
+
 The KV storage and Elasticsearch should by now contain some product sets you can display on the Storefront. By default, the exported documents in Search do not support the configurable search features as products: full-text search, faceted navigation, sorting, and pagination. However, since their data structure is the same, it is possible to implement the same features with a custom implementation.
 
 For a simple listing, the `ProductSet` module provides a Client API to list product sets from Elasticsearch. By calling the `ProductSetClient::getProductSetList()` method, a limited set of documents can be listed on the Storefront. The results are sorted in descending order based on the product sets' weight attributes.
 
-The executed search query works the same way as described in Search Query. 
-If you need to extend the query, for example, by filtering current store and locale, add the desired query expander plugins, like in the example below. To format a raw response from Elasticsearch, provide a result formatter plugin that is also provided by the `ProductSet` module. 
+The executed search query works the same way as described in Search Query.
+If you need to extend the query, for example, by filtering current store and locale, add the desired query expander plugins, like in the example below. To format a raw response from Elasticsearch, provide a result formatter plugin that is also provided by the `ProductSet` module.
 
 ```php
 <?php
@@ -184,8 +187,7 @@ You can reorder product sets in the Back Office. See [Reordering product sets](/
 {% endinfo_block %}
 
 
-<!--
-### Next Steps
+<!--### Next Steps
 Integrating the Product Set feature in Yves is completely up to your project’s requirements. The following points summarize how we integrated this feature into our Demoshop:
 
 1. Added controller (`\Pyz\Yves\ProductSet\Controller\ListController`) and template to list Product Sets on a specific URL (provided by `\Pyz\Yves\ProductSet\Plugin\Provider\ProductSetControllerProvider`). This controller uses the predefined `ProductSetClient::getProductSetList()` client method, as described Listing Products Sets in Yves. The URL of the list page was added to the main navigation demo data.
@@ -194,5 +196,4 @@ Integrating the Product Set feature in Yves is completely up to your project’s
 4. On the Product Set Detail Page we had to ensure that it’s possible to select variants of the abstract products in the Set. The variant selection logic is part of the resource creating process.
 5. We’ve added “Add to cart” buttons per each product and also “Add all to cart” when all variants are selected. To handle adding multiple items to cart at once, we’ve added a custom cart controller action (`\Pyz\Yves\Cart\Controller\CartController::addItemsAction()`).
 
-Check out our [Demoshop](https://github.com/spryker/demoshop) for more detailed examples and ideas regarding the complete Yves integration.
--->
+Check out our [Demoshop](https://github.com/spryker/demoshop) for more detailed examples and ideas regarding the complete Yves integration.-->

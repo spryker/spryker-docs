@@ -16,18 +16,19 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/shipment-feature-integration.html
 ---
 
-## Install Feature Core
+## Install feature core
 
 ### Prerequisites
 
 To start feature integration, overview and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Shipment | master |
-| Approval Process | master |
+| Shipment | {{page.version}} |
+| Approval Process | {{page.version}} |
 
 ### 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
 
 ```bash
@@ -37,13 +38,13 @@ composer require spryker/quote-approval-shipment-connector:"^1.0.0" --update-wit
 
 Make sure that the following modules were installed:
 
-|Module|Expected Directory|
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-| `QuoteApprovalShipmentConnector` | `vendor/spryker/quote-approval-shipment-connector` |
+| QuoteApprovalShipmentConnector | vendor/spryker/quote-approval-shipment-connector |
 
 {% endinfo_block %}
 
-### 2) Set up Configuration
+### 2) Set up configuration
 
 Add the following configuration to your project:
 
@@ -51,12 +52,12 @@ Add the following configuration to your project:
 
 ```php
 <?php
- 
+
 namespace Pyz\Shared\QuoteApproval;
- 
+
 use Generated\Shared\Transfer\QuoteTransfer;
 use Spryker\Shared\QuoteApproval\QuoteApprovalConfig as SprykerQuoteApprovalConfig;
- 
+
 class QuoteApprovalConfig extends SprykerQuoteApprovalConfig
 {
     /**
@@ -75,27 +76,27 @@ Make sure that shipment is calculated in the sum of the quote for a buyer sendin
 
 {% endinfo_block %}
 
-### 3) Set up Behavior
+### 3) Set up behavior
 
-#### Set up Shipment Cost Behavior
+#### Set up shipment cost behavior
 
 Register the following plugins:
 
-|Plugin |Specification |Prerequisites |Namespace|
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `ShipmentApplicableForQuoteApprovalCheckPlugin` | Checks if quote has all parameters required for shipment calculation. | None | `Spryker\Client\QuoteApprovalShipmentConnector\Plugin\QuoteApproval` |
-| `QuoteApprovalShipmentQuoteFieldsAllowedForSavingProviderPlugin` | Gets the required shipment quote fields from the configuration if approval request is not canceled on a single shipment case. | None | `Spryker\Zed\QuoteApprovalShipmentConnector\Communication\Plugin\Quote` |
+| ShipmentApplicableForQuoteApprovalCheckPlugin | Checks if quote has all parameters required for shipment calculation. | None | Spryker\Client\QuoteApprovalShipmentConnector\Plugin\QuoteApproval |
+| QuoteApprovalShipmentQuoteFieldsAllowedForSavingProviderPlugin | Gets the required shipment quote fields from the configuration if approval request is not canceled on a single shipment case. | None | Spryker\Zed\QuoteApprovalShipmentConnector\Communication\Plugin\Quote |
 
 **src/Pyz/Client/QuoteApproval/QuoteApprovalDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\QuoteApproval;
- 
+
 use Spryker\Client\QuoteApproval\QuoteApprovalDependencyProvider as SprykerQuoteApprovalDependencyProvider;
 use Spryker\Client\QuoteApprovalShipmentConnector\Plugin\QuoteApproval\ShipmentApplicableForQuoteApprovalCheckPlugin;
- 
+
 class QuoteApprovalDependencyProvider extends SprykerQuoteApprovalDependencyProvider
 {
     /**
@@ -114,12 +115,12 @@ class QuoteApprovalDependencyProvider extends SprykerQuoteApprovalDependencyProv
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Quote;
- 
+
 use Spryker\Zed\Quote\QuoteDependencyProvider as SprykerQuoteDependencyProvider;
 use Spryker\Zed\QuoteApprovalShipmentConnector\Communication\Plugin\Quote\QuoteApprovalShipmentQuoteFieldsAllowedForSavingProviderPlugin;
- 
+
 class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 {
     /**
@@ -142,36 +143,36 @@ Make sure that shipment is saved with the quote in the `spy_quote` table after s
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 
 To start feature integration, overview and install the necessary features:
 
-|Name|Version |
+| NAME | VERSION |
 | --- | --- |
-| `CheckoutPage` | master |
+| CheckoutPage | {{page.version}} |
 
-### 1) Set up Behavior
+### 1) Set up behavior
 
-#### Set up Shipment Cost Behavior
+#### Set up shipment cost behavior
 
 Register the following plugins:
 
-|Plugin |Specification |Prerequisites |Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `QuoteApprovalCheckerCheckoutShipmentStepEnterPreCheckPlugin` | Checks if the quote approval status is approved or waiting on the shipment step of the checkout. |None | `SprykerShop\Yves\QuoteApprovalWidget\Plugin\CheckoutPage` |
+|QuoteApprovalCheckerCheckoutShipmentStepEnterPreCheckPlugin| Checks if the quote approval status is approved or waiting on the shipment step of the checkout. |None | SprykerShop\Yves\QuoteApprovalWidget\Plugin\CheckoutPage|
 
 **src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php**
 
 ```php
 <?php
-  
+
 namespace Pyz\Yves\CheckoutPage;
- 
+
 use SprykerShop\Yves\CheckoutPage\CheckoutPageDependencyProvider as SprykerShopCheckoutPageDependencyProvider;
 use SprykerShop\Yves\QuoteApprovalWidget\Plugin\CheckoutPage\QuoteApprovalCheckerCheckoutShipmentStepEnterPreCheckPlugin;
- 
+
 /**
  * @method \Pyz\Yves\CheckoutPage\CheckoutPageConfig getConfig()
  */

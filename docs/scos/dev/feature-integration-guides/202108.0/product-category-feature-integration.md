@@ -20,40 +20,38 @@ Follow the steps below to install the Product + Category feature core.
 
 To start feature integration, overview and install the necessary features:
 
-|NAME | VERSION | 
-|--- | --- | 
-|Spryker Core | master | 
-|Category Management | master | 
-|Product | master|
+|NAME | VERSION |
+|--- | --- |
+|Spryker Core | {{page.version}} |
+|Category Management | {{page.version}} |
+|Product | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
+
 ```bash
-composer require spryker-feature/product:"^dev-master" --update-with-dependencies
+composer require spryker-feature/product:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
 
-
 Make sure the following modules have been installed:
 
-|MODULE| EXPECTED DIRECTORY| 
-|--- | --- | 
-|ProductCategory| vendor/spryker/product-category| 
-|ProductCategorySearch| vendor/spryker/product-category-search| 
-|ProductCategoryStorage| vendor/spryker/product-category-storage| 
+|MODULE| EXPECTED DIRECTORY|
+|--- | --- |
+|ProductCategory| vendor/spryker/product-category|
+|ProductCategorySearch| vendor/spryker/product-category-search|
+|ProductCategoryStorage| vendor/spryker/product-category-storage|
 |ProductCategoryFilterStorage| vendor/spryker/product-category-filter-storage|
 
-
 {% endinfo_block %}
+
 ### 2) Set up configuration
 
 Set up the following configuration:
 
-
-<details open>
-    <summary markdown='span'>src/Pyz/Zed/ProductCategoryStorage/ProductCategoryStorageConfig.php</summary>
+**src/Pyz/Zed/ProductCategoryStorage/ProductCategoryStorageConfig.php**
 
 ```php
 <?php
@@ -84,9 +82,7 @@ class ProductCategoryStorageConfig extends SprykerProductCategoryStorageConfig
 }
 ```
 
-</details>
-<details open>
-    <summary markdown='span'>src/Pyz/Zed/ProductCategoryFilterStorage/ProductCategoryFilterStorageConfig.php</summary>
+**src/Pyz/Zed/ProductCategoryFilterStorage/ProductCategoryFilterStorageConfig.php**
 
 ```php
 <?php
@@ -117,14 +113,13 @@ class ProductCategoryFilterStorageConfig extends SprykerProductCategoryFilterSto
 }
 ```
 
-</details>
 
 ### 3) Set up database schema and transfer objects 
 
 1.  Set up synchronization queue pools so the entities without store relations are synchronized among stores:
-    
 
 **src/Pyz/Zed/ProductCategoryFilterStorage/Persistence/Propel/Schema/spy_product_category_filter_storage.schema.xml**
+
 ```
 <?xml version="1.0"?>
 <database
@@ -142,48 +137,45 @@ class ProductCategoryFilterStorageConfig extends SprykerProductCategoryFilterSto
         </behavior>
     </table>
 </database>
-
 ```
-    
+
 2. Apply database changes and generate entity and transfer changes:
+
 ```bash
 console transfer:generate
 console propel:install
 console transfer:generate
 ```
-    
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in the database.
 
 {% endinfo_block %}
-    
+
 ### 4) Configure export to Redis
 
 Configure tables to be published to the `spy_product_abstract_category_storage`, `spy_product_category_filter_storage` and synchronized to the Storage on create, edit, and delete changes:
 
 1.  Set up publisher plugins:
-    
 
-| PLUGIN | SPECIFICATION | PRERQUISITES | NAMESPACE | 
-| --- | --- | --- | --- | 
-| CategoryIsActiveAndCategoryKeyWritePublisherPlugin | Publishes product category data by the `SpyCategory` entity events with modified columns. | | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\Category | 
-| CategoryStoreDeletePublisherPlugin | Publishes product category data by the `CategoryStore` un-publish event. | | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\Category | 
-| CategoryStoreWriteForPublishingPublisherPlugin | Publishes product category data by the `CategoryStore` publish event. | | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\Category | 
+| PLUGIN | SPECIFICATION | PRERQUISITES | NAMESPACE |
+| --- | --- | --- | --- |
+| CategoryIsActiveAndCategoryKeyWritePublisherPlugin | Publishes product category data by the `SpyCategory` entity events with modified columns. | | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\Category |
+| CategoryStoreDeletePublisherPlugin | Publishes product category data by the `CategoryStore` un-publish event. | | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\Category |
+| CategoryStoreWriteForPublishingPublisherPlugin | Publishes product category data by the `CategoryStore` publish event. | | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\Category |
 | CategoryStoreWritePublisherPlugin | Publishes product category data by the`SpyCategoryStore` entity events. | | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\Category |
-| CategoryWritePublisherPlugin | Publishes product category data by the `SpyCategory` entity events. ||  Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\Category| 
-| CategoryAttributeNameWritePublisherPlugin | Publishes product category data by the`SpyCategoryAttribute` entity events. ||  Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\CategoryAttribute| 
-| CategoryAttributeWritePublisherPlugin | Publishes product category data by the`SpyCategoryAttribute` entity events. | | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\CategoryAttribute | 
-| CategoryNodeWritePublisherPlugin | Publishes product category data by the `SpyCategoryNode` entity events with modified columns. ||  Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\CategoryNode | 
-| CategoryUrlAndResourceCategorynodeWritePublisherPlugin | Publishes product category data by the `SpyUrl` entity events. ||Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\CategoryUrl | 
-| CategoryUrlWritePublisherPlugin | Publishes product category data by the `SpyUrl` entity events. | |Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\CategoryUrl| 
+| CategoryWritePublisherPlugin | Publishes product category data by the `SpyCategory` entity events. ||  Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\Category|
+| CategoryAttributeNameWritePublisherPlugin | Publishes product category data by the`SpyCategoryAttribute` entity events. ||  Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\CategoryAttribute|
+| CategoryAttributeWritePublisherPlugin | Publishes product category data by the`SpyCategoryAttribute` entity events. | | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\CategoryAttribute |
+| CategoryNodeWritePublisherPlugin | Publishes product category data by the `SpyCategoryNode` entity events with modified columns. ||  Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\CategoryNode |
+| CategoryUrlAndResourceCategorynodeWritePublisherPlugin | Publishes product category data by the `SpyUrl` entity events. ||Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\CategoryUrl |
+| CategoryUrlWritePublisherPlugin | Publishes product category data by the `SpyUrl` entity events. | |Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\CategoryUrl|
 | ProductCategoryWriteForPublishingPublisherPlugin | Publishes product category data by the `ProductCategory` publishing events. ||  Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\ProductCategory |
-| ProductCategoryWritePublisherPlugin | Publishes product category data by the`SpyProductCategory` entity events. ||  Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\ProductCategory | 
+| ProductCategoryWritePublisherPlugin | Publishes product category data by the`SpyProductCategory` entity events. ||  Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\ProductCategory |
 
 
-
-<details open>
-    <summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
+**src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
 ```php
 <?php
@@ -237,18 +229,16 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
         ];
     }
 }
-
 ```
-
-</details>
 
 2. Set up event listeners:
 
-| PLUGIN | SPECIFICATION | PRERQUISITES | NAMESPACE | 
-| --- | --- | --- | --- | 
-|ProductCategoryFilterStorageEventSubscriber | Registers listeners that publish category information to the storage when a related entity changes. | | Spryker\Zed\ProductCategoryFilterStorage\Communication\Plugin\Event\Subscriber | 
+| PLUGIN | SPECIFICATION | PRERQUISITES | NAMESPACE |
+| --- | --- | --- | --- |
+|ProductCategoryFilterStorageEventSubscriber | Registers listeners that publish category information to the storage when a related entity changes. | | Spryker\Zed\ProductCategoryFilterStorage\Communication\Plugin\Event\Subscriber |
 
 **src/Pyz/Zed/Event/EventDependencyProvider.php**
+
 ```php
 <?php
 
@@ -270,16 +260,16 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
         return $eventSubscriberCollection;
     }
 }
-
 ```
 
 3. Set up trigger plugins:
 
-| PLUGIN | SPECIFICATION | PRERQUISITES | NAMESPACE | 
-| --- | --- | --- | --- | 
+| PLUGIN | SPECIFICATION | PRERQUISITES | NAMESPACE |
+| --- | --- | --- | --- |
 |ProductCategoryPublisherTriggerPlugin |Retrieves product categories based on the provided limit and offset.| |Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher |
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
+
 ```php
 <?php
 
@@ -300,17 +290,17 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
         ];
     }
 }
-
 ```
 
 4. Set up synchronization plugins:
 
-| PLUGIN | SPECIFICATION | PRERQUISITES | NAMESPACE | 
-| --- | --- | --- | --- | 
+| PLUGIN | SPECIFICATION | PRERQUISITES | NAMESPACE |
+| --- | --- | --- | --- |
 |ProductCategorySynchronizationDataBulkRepositoryPlugin | Retrieves a product abstract category storage collection according to the provided offset, limit, and IDs. | |Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Synchronization |
 |ProductCategoryFilterSynchronizationDataPlugin | Retrieves a product category filter storage collection according to the provided offset, limit, and IDs. | |Spryker\Zed\ProductCategoryFilterStorage\Communication\Plugin\Synchronization |
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
+
 ```php
 <?php
 
@@ -337,11 +327,12 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 5. Set up re-generate and re-sync Features
 
-| PLUGIN | SPECIFICATION | PRERQUISITES | NAMESPACE | 
-| --- | --- | --- | --- | 
+| PLUGIN | SPECIFICATION | PRERQUISITES | NAMESPACE |
+| --- | --- | --- | --- |
 |ProductCategoryFilterEventResourceQueryContainerPlugin |Allows populating an empty search table with data.| |Spryker\Zed\ProductCategoryFilterStorage\Communication\Plugin\Event |
 
 **src/Pyz/Zed/EventBehavior/EventBehaviorDependencyProvider.php**
+
 ```php
 <?php
 
@@ -374,9 +365,7 @@ Make sure that, when a category product assignment is changed through ORM, it is
 |Redis|ProductCategoryFilter|product_category_filter:8|
 
 
-
-<details open>
-    <summary markdown='span'>EXAMPLE EXPECTED DATA GRAGMENT: product_abstract_category:de:de_de:1</summary>
+**EXAMPLE EXPECTED DATA GRAGMENT: product_abstract_category:de:de_de:1**
 
 ```json
 {
@@ -399,11 +388,7 @@ Make sure that, when a category product assignment is changed through ORM, it is
 }
 ```
 
-</details>
-
-
-<details open>
-    <summary markdown='span'>EXAMPLE EXPECTED DATA GRAGMENT: product_category_filter:8</summary>
+**EXAMPLE EXPECTED DATA GRAGMENT: product_category_filter:8**
 
 ```json
 {
@@ -464,12 +449,7 @@ Make sure that, when a category product assignment is changed through ORM, it is
    }
 }
 ```
-
 </details>
-
-
-
-
 
 {% endinfo_block %}
 
@@ -478,18 +458,16 @@ Make sure that, when a category product assignment is changed through ORM, it is
 
 Add the following plugins to your project:
 
-| PLUGIN | SPECIFICATION | PRERQUISITES | NAMESPACE | 
-| --- | --- | --- | --- | 
+| PLUGIN | SPECIFICATION | PRERQUISITES | NAMESPACE |
+| --- | --- | --- | --- |
 |ProductCategoryMapExpanderPlugin |Expands PageMapTransfer with category map data. | | Spryker\Zed\ProductCategorySearch\Communication\Plugin\ProductPageSearch\Elasticsearch |
 | ProductCategoryPageDataExpanderPlugin |Expands `ProductPageSearchTransfer` with category related data. | | Spryker\Zed\ProductCategorySearch\Communication\Plugin\ProductPageSearch |
 | ProductCategoryPageDataLoaderPlugin |Expands `ProductPayloadTransfer.categories` with product category entities. | | Spryker\Zed\ProductCategorySearch\Communication\Plugin\ProductPageSearch |
 | ProductCategoryRelationReadPlugin |Gets localized products abstract names by category. | | Spryker\Zed\ProductCategory\Communication\Plugin\CategoryGui |
 | RemoveProductCategoryRelationPlugin |Removes relations between category and products. | |Spryker\Zed\ProductCategory\Communication\Plugin |
-| UpdateProductCategoryRelationPlugin |Updates relations between category and products. | | Spryker\Zed\ProductCategory\Communication\Plugin | 
+| UpdateProductCategoryRelationPlugin |Updates relations between category and products. | | Spryker\Zed\ProductCategory\Communication\Plugin |
 
-
-<details open>
-    <summary markdown='span'>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
+**src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php**
 
 ```php
 <?php
@@ -512,7 +490,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
             new ProductCategoryMapExpanderPlugin(),
         ];
     }
-    
+
     /**
      * @return \Spryker\Zed\ProductPageSearch\Dependency\Plugin\ProductPageDataExpanderInterface[]
      */
@@ -523,7 +501,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 
         return $dataExpanderPlugins;
     }
-    
+
     /**
      * @return \Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductPageDataLoaderPluginInterface[]
      */
@@ -536,14 +514,12 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 }
 ```
 
-</details>
 
 {% info_block warningBox "Verification" %}
 
 Make sure that the product abstract contains the category property in Elasticsearch:
 
-<details open>
-    <summary markdown='span'>Data fragment</summary>
+**Data fragment**
 
 ```json
 {
@@ -575,12 +551,10 @@ Make sure that the product abstract contains the category property in Elasticsea
 }
 ```
 
-</details>
-
-
 {% endinfo_block %}
 
 **src/Pyz/Zed/CategoryGui/CategoryGuiDependencyProvider.php**
+
 ```php
 <?php
 
@@ -606,11 +580,12 @@ class CategoryGuiDependencyProvider extends SpykerCategoryGuiDependencyProvider
 }
 
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that, on the *Delete Category* in the Back Office, the *Products to be de-assigned* column is displayed.
-<details open>
-    <summary markdown='span'>src/Pyz/Zed/Category/CategoryDependencyProvider.php</summary>
+
+**src/Pyz/Zed/Category/CategoryDependencyProvider.php**
 
 ```php
 <?php
@@ -653,10 +628,6 @@ class CategoryDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-</details>
-
-
-
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
@@ -674,27 +645,29 @@ To install the Category Management feature front end, follow the steps below.
 
 Overview and install the following features.
 
-|NAME | VERSION | 
-|--- | --- | 
-|Spryker Core | master | 
-|Category | master | Product | master|
+|NAME | VERSION |
+|--- | --- |
+|Spryker Core | {{page.version}} |
+|Category | master | Product | {{page.version}}|
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
+
 ```bash
-composer require spryker-feature/product:"^dev-master" --update-with-dependencies
+composer require spryker-feature/product:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
-|MODULE | EXPECTED DIRECTORY | 
-|--- | --- | 
+|MODULE | EXPECTED DIRECTORY |
+|--- | --- |
 |ProductCategoryWidget | vendor/spryker-shop/product-category-widget|
 
 {% endinfo_block %}
+
 ### 2) Set up widgets
 
 Register the following global widgets:
@@ -704,15 +677,16 @@ Register the following global widgets:
 |ProductBreadcrumbsWithCategoriesWidget |Displays category breadcrumbs on the *Product Details* page. |SprykerShop\Yves\ProductCategoryWidget\Widget|
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
+
 ```php
 <?php   
 
 namespace Pyz\Yves\ShopApplication;   
 
-use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider; 
+use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 use SprykerShop\Yves\ProductBundleWidget\Widget\ProductBundleItemsMultiCartItemsListWidget;
 
-class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider 
+class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {     
 	/**      
 	* @return string[]      
@@ -722,7 +696,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 		return [             
 			ProductBreadcrumbsWithCategoriesWidget::class,         
 		];     
-	} 
+	}
 }
 ```
 
@@ -731,15 +705,15 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 Make sure that category breadcrumbs are displayed on the *Product Details* page.
 
 {% endinfo_block %}
+
 ## Related features
 
 Integrate the following related features:
 
-|FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE | 
+|FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 |--- | --- | --- |
-| Category Management Feature | ✓ | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) | 
-| Product Management Feature | ✓ | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html) | 
-| Glue API: Category Management |  |[Glue API: Category management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-category-management-feature-integration.html) | 
+| Category Management Feature | ✓ | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |
+| Product Management Feature | ✓ | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html) |
+| Glue API: Category Management |  |[Glue API: Category management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-category-management-feature-integration.html) |
 | Catalog + Category Management |  |[Catalog + Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/catalog-category-management-feature-integration.html) |
 | CMS + Category Management  | | [CMS + Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cms-category-management-feature-integration.html) |
-

@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/product-group-product-labels-feature-integration
 ---
 
-## Install Feature Core
+## Install feature core
 
 Follow the steps below to install Product group + Product labels feature core.
 
@@ -19,28 +19,22 @@ Follow the steps below to install Product group + Product labels feature core.
 
 To start feature integration, overview and install the necessary features:
 
-
-
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Product Group | master |
-| Product Labels | master |
+| Product Group | {{page.version}} |
+| Product Labels | {{page.version}} |
 
 
-
-
-### Set up Behavior
+### Set up behavior
 
 Register the following plugin:
 
-
-
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | ProductLabelProductViewExpanderPlugin | Expands `ProductViewTransfer` with labels. | None | SprykerShop\Yves\ProductLabelWidget\Plugin\ProductGroupWidget |
 
 
-```php	
+```php
 <?php
 
 namespace Pyz\Yves\ProductGroupWidget;
@@ -64,8 +58,6 @@ class ProductGroupWidgetDependencyProvider extends SprykerShopProductGroupWidget
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the product label on a product abstract card changes correctly after hovering over a color selector. 
+Make sure that the product label on a product abstract card changes correctly after hovering over a color selector.
 
 {% endinfo_block %}
-
-

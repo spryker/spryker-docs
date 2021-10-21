@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/product-groups-feature-integration
 ---
 
-## Install Feature Core
+## Install feature core
 
 Follow the steps below to install Product group feature core.
 
@@ -19,39 +19,37 @@ Follow the steps below to install Product group feature core.
 
 To start feature integration, overview and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Product | 202009.0 |
-| Spryker Core | 202009.0 |
+| Product | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
+
 ```bash
-composer require spryker-feature/product-groups: "202009.0" --update-with-dependencies
+composer require spryker-feature/product-groups: "{{page.version}}" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
-
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | spryker/product-group | vendor/spryker/product-group |
 | spryker/product-group-storage | vendor/spryker/product-group-storage |
-	
 
 {% endinfo_block %}
 
-## 2) Set up Database Schema and Transfer Objects
+## 2) Set up database schema and transfer objects
 
 1. Adjust the schema definition so entity changes will trigger events.
 
-
-| Affected Entity | Triggered Events |
+| AFFECTED ENTITY | TRIGGERED EVENTS |
 | --- | --- |
 | spy_product_abstract_group | Entity.spy_product_abstract_group.create </br> Entity.spy_product_abstract_group.update</br> Entity.spy_product_abstract_group.delete |
-
 
 
 **src/Pyz/Zed/ProductGroup/Persistence/Propel/Schema/spy_product_group.schema.xml**
@@ -108,8 +106,7 @@ console transfer:generate
 
 Make sure that the following changes have been applied by checking your database:
 
-
-| Database entity | Type | Event |
+| DATABASE ENTITY | TYPE | EVENT |
 | --- | --- | --- |
 | spy_product_group | table | created |
 | spy_product_abstract_group | table | created |
@@ -117,13 +114,12 @@ Make sure that the following changes have been applied by checking your databa
 
 {% endinfo_block %}
 
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following changes took place in transfer objects:
 
-
-
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | ProductGroup | class | created | src/Generated/Shared/Transfer/ProductGroupTransfer |
 | ProductAbstractGroups | class | created | src/Generated/Shared/Transfer/ProductAbstractGroupsTransfer |
@@ -131,16 +127,14 @@ Make sure that the following changes took place in transfer objects:
 
 {% endinfo_block %}
 
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the changes have been implemented successfully. To do it, trigger the following methods and make sure that the above events have been triggered:
 
-
-| Path | Method Name |
+| PATH | METHOD NAME |
 | --- | --- |
 | src/Orm/Zed/ProductGroup/Persistence/Base/SpyProductAbstractGroup.php | prepareSaveEventName() </br> addSaveEventToMemory() </br> addDeleteEventToMemory() |
-
-
 
 {% endinfo_block %}
 
@@ -158,7 +152,6 @@ Set up the following plugin(s):
 | ProductGroupStorageEventSubscriber | Registers listeners that are responsible to publish product abstract group storage entity changes when a related entity change event occurs. | None | Spryker\Zed\ProductGroupStorage\Communication\Plugin\Event\Subscriber |
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\Event;
@@ -178,12 +171,11 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 }
 ```
 
-
-#### Setup Re-Generate and Re-Sync Features
+#### Setup re-generate and re-sync features
 
 Set up the following plugin(s):
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | ProductGroupSynchronizationDataPlugin | Allows synchronizing the whole storage table content into Storage. | None | Spryker\Zed\ProductGroupStorage\Communication\Plugin\Synchronization |
 
@@ -230,7 +222,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 ```
 
 
-### 4) Import Data
+### 4) Import data
 
 Follow the steps to import product group data:
 
@@ -243,6 +235,7 @@ The following imported entities will be used as a product group in Spryker OS.
 1. Prepare data according to your requirements using the following demo data:
 
 **data/import/product_group.csv**
+
 ```csv
 group_key,abstract_sku,position
 group_key_1,001,0
@@ -253,13 +246,13 @@ group_key_2,005,1
 ```
 
 
-| Column | Mandatory | Data Type | Data Example | Data Explanation |
+| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | group_key | Yes | string | group_key_1 | Unique product group identifier. |
 | abstract_sku | Yes | string  | 001 | SKU of an abstract product. |
 | position | Yes | integer | 0 | The position of a product in the group. |
 
-	
+
 2. Run the following console commands to import data:
 
 ```bash
@@ -272,46 +265,44 @@ Make sure that the configured data has been added to the `spy_product_group` and
 
 {% endinfo_block %}
 
-## Install Feature Front end
+## Install feature front end
+
 Follow the steps below to install Product group feature front end.
 
 ### Prerequisites
 
 Overview and install the necessary features before beginning the integration step.
 
-
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Product | 202009.0 |
-| Spryker Core | 202009.0 |
+| Product | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
+
 ```bash
-composer require spryker-feature/product-groups: "202009.0" --update-with-dependencies
+composer require spryker-feature/product-groups: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
 
-
 Make sure that the following modules have been installed:
 
-
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | spryker-shop/product-group-widget | vendor/spryker-shop/product-group-widget |
 
 {% endinfo_block %}
 
 
-### 2) Set up Widgets
+### 2) Set up widgets
 
 1. Register the following plugins to enable widgets:
 
-
-| Plugin | Description | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | ProductGroupWidget | Displays product group. | None | SprykerShop\Yves\ProductGroupWidget\Widget |
 | ProductGroupColorWidget | Displays product group with color selector. | None | SprykerShop\Yves\ProductGroupWidget\Widget |
@@ -351,29 +342,27 @@ console frontend:yves:build
 
 Make sure that `ProductGroupWidget` has been registered:
 
-1.     Open `http://mysprykershop.com/en/product-sets`. 
-2.     Pick one of the product sets with more than one abstract product in it. 
+1.     Open `http://mysprykershop.com/en/product-sets`.
+2.     Pick one of the product sets with more than one abstract product in it.
 3.     You can see the product card of every product in the product set.
 
 {% endinfo_block %}
+
 {% info_block warningBox "Verification" %}
 
 Make sure that `ProductGroupColorWidget` has been registered:
 
 1.     Open `http://mysprykershop.com/`.
-2.     Product cards on the homepage have circles showing the available colors. 
+2.     Product cards on the homepage have circles showing the available colors.
 3.     Hovering over a color circle changes the abstract product image, title, rating, label, and the price.
 
 {% endinfo_block %}
 
- 
-## Related Features
 
+## Related features
 
-| Feature | feature integration guide |
+| FEATURE | FEATURE INTEGRATION GUIDE |
 | --- | --- |
 | Product Group + Product Labels | [Product Group + Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-group-product-labels-feature-integration.html) |
 | Product Group + Product Rating & Reviews | [Product Group + Product Rating & Reviews feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-group-product-rating-and-reviews-feature-integration.html) |
 | Product Group + Cart | [Product Group + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-group-cart-feature-integration.html)  |
-
-

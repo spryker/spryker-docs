@@ -346,7 +346,7 @@ br3,Test Banner 3,Lorem Lorem,banner title 3,,de banner title 3,banner sub-title
 <br>
 </details>
 
-| Column | IS REQUIRED? | Data Type | Data Explanation |
+| Column | REQUIRED? | Data Type | Data Explanation |
 | --- | --- | --- | --- |
 | key | mandatory | string (unique) | Reference used for banner updates. |
 | name | mandatory | string | Content Item name. |
@@ -369,7 +369,7 @@ apl3,APL Name 3,APL Description 3,"180,171","152,151",""
 <br>
 </details>
 
-| Column | IS REQUIRED? | Data Type | Data Explanation |
+| Column | REQUIRED? | Data Type | Data Explanation |
 | --- | --- | --- | --- |
 | key | mandatory | string (unique) | Reference used for banner updates. |
 | name | mandatory | string | Content Item name. |
@@ -388,7 +388,7 @@ PS-3,PS Name 3,PS Description 3,3_tomtom_runner_set,2_sony_set,
 <br>
 </details>
 
-| Column | IS REQUIRED? | Data Type | Data Explanation |
+| Column | REQUIRED? | Data Type | Data Explanation |
 | --- | --- | --- | --- |
 | key | mandatory | string (unique) | Reference used for banner updates. |
 | name | mandatory | string | Content Item name. |

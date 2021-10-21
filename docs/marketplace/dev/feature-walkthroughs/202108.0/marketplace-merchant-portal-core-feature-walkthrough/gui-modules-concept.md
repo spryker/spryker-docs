@@ -1,5 +1,5 @@
 ---
-title: GUI modules concept
+title: Merchant Portal GUI modules concept
 description: Short overview of GUI modules in Merchant portal.
 template: feature-walkthrough-template
 ---
@@ -21,8 +21,7 @@ The typical GUI module can consist of:
 - Other GUI related logic.
 
 GUI modules should not contain any business logic which should be provided by responsible modules 
-(Example: ``ProductOfferMerchantPortalGui`` module uses ``ProductOffer`` module to save product offer data). 
-Note: repositories for getting data from DB are allowed. 
+(Example: ``ProductOfferMerchantPortalGui`` module uses ``ProductOffer`` module to save product offer data).
 
 ![GUI module relations](https://confluence-connect.gliffy.net/embed/image/58cb446e-2bd7-4e34-a9fd-6eb401917d31.png?utm_medium=live&utm_source=custom)
 

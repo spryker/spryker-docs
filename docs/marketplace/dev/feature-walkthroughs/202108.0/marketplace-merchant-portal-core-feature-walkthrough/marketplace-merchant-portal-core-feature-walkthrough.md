@@ -4,19 +4,19 @@ description: Marketplace MerchantPortal Core enables server configuration and th
 template: feature-walkthrough-template
 ---
 
-Marketplace MerchantPortal Core enables server configuration and the basic functionality of the Merchant Portal application 
+Marketplace Merchant Portal Core enables server configuration and the basic functionality of the Merchant Portal application 
 such as security login, GUI tables, dashboard etc. Merchant Portal and Back-office are different applications with 
 different entry points, bootstraps, and possibility to register application plugins, configuring of application 
 base URLs, debugging etc.
 
-Possibility to login and logout in Merchant Portal is provided by ``SecurityMerchantPortalGui`` module which provides 
-``MerchantUserSecurityPlugin`` extending security service with Merchant Portal firewall. 
+{% info_block warningBox "User documentation" %}
 
-GuiTable is a part of Spryker infrastructure to support projects with rendering GuiTable frontend component which allows
-to display data as tables as well as searching by table items, filtering, sorting, various interaction with table rows. 
-GuiTables are widely used in Marketplace Merchant Portal for displaying of Orders, Offers, Products etc. 
-Based on the provided configuration GuiTable frontend component knows how to draw the table itself, 
-where to go for the data and how to interpret the provided data.
+To learn more about Marketplace Application, see [Marketplace Application Composition](/docs/marketplace/dev/architecture-overview/marketplace-application-composition.html).
+
+{% endinfo_block %}
+
+Possibility to login and logout in Merchant Portal is provided by ``SecurityMerchantPortalGui`` module which provides 
+``MerchantUserSecurityPlugin`` extending security service with Merchant Portal firewall.
 
 ## Module dependency graph
 
@@ -51,6 +51,20 @@ where to go for the data and how to interpret the provided data.
 ## Domain model
 
 ![Domain model](https://confluence-connect.gliffy.net/embed/image/2f5bae0d-8b37-45f5-ad08-06ca5c0c562d.png?utm_medium=live&utm_source=custom)
+
+## Gui Table
+
+GuiTable is a part of Spryker infrastructure to support projects with rendering GuiTable frontend component which allows
+to display data as tables as well as searching by table items, filtering, sorting, various interaction with table rows.
+GuiTables are widely used in Marketplace Merchant Portal for displaying of Orders, Offers, Products etc.
+Based on the provided configuration GuiTable frontend component knows how to draw the table itself,
+where to go for the data and how to interpret the provided data.
+
+{% info_block warningBox "User documentation" %}
+
+To learn more about Table design, see [Table design](/docs/marketplace/dev/front-end/table-design/).
+
+{% endinfo_block %}
 
 ## Related Developer articles
 

@@ -1,45 +1,33 @@
 ---
-title: Catalog
-description: This section is designed to manage products from product creation to stock and product reviews, options, labels, relations, lists, etc in the Back Office.
-template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/v5/docs/catalog
-originalArticleId: 3404db73-d840-49ca-8ba7-13b8a028c3eb
+title: Catalog feature overview
+description: Catalogs are used to clearly build and organize your products to meet you and your customer's demands.
+template: concept-topic-template
+originalLink: https://documentation.spryker.com/v5/docs/catalog-management
+originalArticleId: 75116043-3fa7-40c8-8f08-5dc2e83e2522
 redirect_from:
-  - /v5/docs/catalog
-  - /v5/docs/en/catalog
-related:
-  - title: Managing Products Availability
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/availability/managing-products-availability.html
-  - title: Abstract and Concrete Products
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-and-concrete-products.html
-  - title: Attributes
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/attributes/attributes.html
-  - title: Viewing Product Barcodes
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/product-barcodes/viewing-product-barcodes.html
-  - title: Product Labels
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-labels/product-labels.html
-  - title: Product Lists
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/product-lists/product-lists.html
-  - title: Product Options
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/product-options/product-options.html
-  - title: Product Relations
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-relations/product-relations.html
-  - title: Product Reviews
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/product-reviews/product-reviews.html
-  - title: Product Sets feature overview
-    link: docs/scos/user/features/page.version/product-sets-feature-overview.html
-  - title: Configurable Bundle Templates
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/configurable-bundle-templates/configurable-bundle-templates.html
+  - /v5/docs/catalog-management
+  - /v5/docs/en/catalog-management
 ---
 
-The **Catalog** section in the Back Office is mostly used by the team members involved in Product Management.
-It is used by:
-* Product Catalog Manager in the **Products**, **Category**, **Attributes**, **Availability**, **Product Options**, **Product Lists**, **Product Barcodes**, and **Scheduled Prices** sections in the Back Office.
-* Customer Service in the **Product Reviews** section in the Back Office.
+Catalogs are used to clearly build and organize your products to meet your and your customer's demands, primarily to make sure everyone can quickly find what they are looking for.
+Product catalogs are built by assigning attributes (defining characteristics) to products and organizing them into custom category trees. In the tree structure, you can create categories that nest sub-categories in them.
 
+For example, Electronics is a category that can encompass all the electronics you sell. You can also group different types of electronics under that category into smaller logical groups such as TVs, Cameras, Mobile Phones, etc. This approach allows you to structure the information logically.
 
+With this information, we can build navigation and display product pages that dynamically list products based on a selected category.
+Catalogs have full translation and SEO support in addition to other necessary dimensions such as stock level management and pricing.
 
-***
-**What's next?**
-* To start working with your catalog, see [Abstract and Concrete Products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-and-concrete-products.html).
+Building a custom category strategy allows you to leverage your product information to create and manage product-based content in your store: stock levels and pricing. You can dynamically create category pages and include category filters. This will help you to display all your products on a page by category that lists all electronics in one place (with details and images). An advanced filter will provide customers with the option to further drill-down by one of the following:
 
+* Sub-categories (TVs, Cameras, Mobile Phones for the electronics category)
+* Attributes (such as size, color and capacity)
+
+To keep your catalog dynamic, you can include auto-generated pages based on categories and create templates for these dynamic pages. This allows you to flexibly support the growth of your product range while maintaining an up-to-date catalog.
+
+The main benefits of working with the catalog are to pave the way for a smooth shopping journey with well-organized categories that organize and extend your catalog to match your business needs.
+
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Catalog feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/catalog-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}

@@ -7,6 +7,8 @@ originalArticleId: a30ba237-1363-4620-81cb-453d37333705
 redirect_from:
   - /v5/docs/category
   - /v5/docs/en/category
+  - /v5/docs/catalog
+  - /v5/docs/en/catalog
 related:
   - title: Category Management feature overview
     link: docs/scos/user/features/page.version/category-management-feature-overview.html

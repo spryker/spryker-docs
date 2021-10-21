@@ -1,6 +1,5 @@
 ---
 title: Marketplace Return Management feature walkthrough
-last_updated: Sep 29, 2021
 description: This article provides technical details on the Marketplace Return Management feature.
 template: feature-walkthrough-template
 ---
@@ -25,11 +24,9 @@ The following diagram illustrates the dependencies between the modules for the *
 | MerchantSalesReturnGui | Provides Backoffice UI for merchant sales returns  |
 | MerchantSalesReturnMerchantUserGui | Provides Backoffice UI for merchant user sales return management   |
 | MerchantSalesReturnWidget | Provides merchant information for sales returns on Yves   |
-| SalesReturn | Handles order returns  |
-| SalesReturnDataImport | Imports data about returns   |
-| SalesReturnPage | Provides functionality to manage order returns  |
-| SalesReturnSearch | Manages Search documents for Return entities   |
 | MerchantSalesReturnsRestApi | Provides REST API endpoints to manage merchant sales returns   |
+| SalesReturn | Handles order returns  |
+| SalesReturnExtension | Provides an interfaces of plugins to extend SalesReturn module from the other modules  |
 
 ## Domain model
 

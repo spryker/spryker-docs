@@ -927,6 +927,13 @@ entries:
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-alternative-products-api-feature-integration.html
         include_versions:
         - "202001.0"
+      - title: Glue API - Cart feature integration
+        url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-cart-feature-integration.html
+        include_versions:
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
       - title: Glue API - Company Account feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-company-account-feature-integration.html
         include_versions:
@@ -1139,12 +1146,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-      - title: Glue API - Cart feature integration
-        url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-cart-feature-integration.html
-        include_versions:
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
       - title: Glue API - Shopping Lists feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-shopping-lists-feature-integration.html
         include_versions:
@@ -1334,13 +1335,6 @@ entries:
       - "201907.0"
       - "202001.0"
       - "202005.0"
-      - "202009.0"
-      - "202108.0"
-    - title: Glue API - Cart feature integration
-      url: /docs/scos/dev/feature-integration-guides/cart-feature-integration.html
-      include_versions:
-      - "201907.0"
-      - "202001.0"
       - "202009.0"
       - "202108.0"
     - title: Checkout Workflow Integration Guide
@@ -1791,6 +1785,12 @@ entries:
     - title: Product + Category feature integration
       url: /docs/scos/dev/feature-integration-guides/product-category-feature-integration.html
       include_versions:
+      - "202108.0"
+    - title: Cart feature integration
+      url: /docs/scos/dev/feature-integration-guides/cart-feature-integration.html
+      include_versions:
+      - "201907.0"
+      - "202009.0"
       - "202108.0"
     - title: Microsoft Azure Active Directory
       url: /docs/scos/dev/feature-integration-guides/microsoft-azure-active-directory.html
@@ -3096,13 +3096,20 @@ entries:
       - "202001.0"
     - title: Managing customers
       include_versions:
-      - "201811.0"
-      - "201903.0"
       - "202001.0"
       - "202005.0"
-      - "202108.0"
       - "202009.0"
+      - "202108.0"
+      - "201811.0"
+      - "201903.0"
       nested:
+      - title: Authentication and Authorization
+        url: /docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html
+        include_versions:
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
       - title: Managing Customers
         url: /docs/scos/dev/glue-api-guides/managing-customers/managing-customers.html
       - title: Retrieving Customer's Order History
@@ -3120,11 +3127,6 @@ entries:
       - title: Confirming customer registration
         url: /docs/scos/dev/glue-api-guides/managing-customers/confirming-customer-registration.html
         include_versions:
-        - "202108.0"
-      - title: Authenticating as a customer
-        url: /docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html
-        include_versions:
-        - "202009.0"
         - "202108.0"
       - title: Managing customer authentication tokens
         url: /docs/scos/dev/glue-api-guides/managing-customers/managing-customer-authentication-tokens.html
@@ -3524,6 +3526,12 @@ entries:
         - "202108.0"
     - title: Authentication and Authorization
       url: /docs/scos/dev/glue-api-guides/authentication-and-authorization.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202009.0"
+      - "202108.0"
     - title: Checking out
       include_versions:
       - "201903.0"
@@ -4699,8 +4707,6 @@ entries:
         - "201907.0"
         - "202001.0"
         - "202005.0"
-      - title: Back Office Translations overview
-        url: /docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/back-office-translations-overview.html
       - title: Spryker Core Back Office feature walkthrough
         url: /docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html
     - title: Product Rating & Reviews feature walkthrough

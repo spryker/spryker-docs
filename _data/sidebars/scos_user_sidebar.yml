@@ -141,6 +141,16 @@ entries:
         url: /docs/scos/user/shop-user-guides/shop-guide-quotation-process-and-rfq/shop-guide-managing-requests-for-quotes-for-a-buyer.html
         include_versions:
         - "202001.0"
+    - title: Shop Guide - Configurator
+      include_versions:
+      - "202001.0"
+      - "202005.0"
+      nested:
+      - title: Shop Guide - Managing Configurable Bundles
+        url: /docs/scos/user/shop-user-guides/shop-guide-configurator/shop-guide-managing-configurable-bundles.html
+        include_versions:
+        - "202001.0"
+        - "202005.0"
     - title: Shop Guide - Shopping Lists
       url: /docs/scos/user/shop-user-guides/shop-guide-shopping-lists.html
       include_versions:
@@ -469,23 +479,9 @@ entries:
       url: /docs/scos/user/features/tax-feature-overview.html
     - title: Spryker Core Back Office feature overview
       url: /docs/scos/user/features/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.html
-      include_versions:
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
       nested:
       - title: Back Office Translations Feature Overview
         url: /docs/scos/user/features/spryker-core-back-office-feature-overview/back-office-translations-overview.html
-        include_versions:
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
     - title: Payments feature overview
       url: /docs/scos/user/features/payments-feature-overview.html
     - title: Refunds feature overview
@@ -2597,27 +2593,6 @@ entries:
             - "202009.0"
         - title: Managing Product Sets
           url: /docs/scos/user/back-office-user-guides/merchandising/product-sets/managing-product-sets.html
-    - title: Shop User Guide
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
-      nested:
-      - title: Shop Guide - Configurator
-        include_versions:
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-        nested:
-        - title: Shop Guide - Managing Configurable Bundles
-          url: /docs/scos/user/back-office-user-guides/shop-user-guide/shop-guide-configurator/shop-guide-managing-configurable-bundles.html
-          include_versions:
-          - "202001.0"
-          - "202005.0"
-          - "202009.0"
-          - "202108.0"
     - title: Maintenance
       nested: []
     - title: Administration

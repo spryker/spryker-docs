@@ -72,7 +72,7 @@ Please overview and install the necessary features before beginning the integrat
 | Spryker Core | {{page.version}} |
 | Resource Sharing | {{page.version}} |
 | Customer Account Management | {{page.version}} |
-|   |   |
+
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
@@ -200,11 +200,13 @@ Make sure that when you followed cart share link with Preview access, you're red
 
 {% endinfo_block %}
 
+
 {% info_block warningBox "Verification" %}
 
 Make sure, that you are able to share a cart with "Preview" access to external users from the cart page.
 
 {% endinfo_block %}
+
 
 ### 4) Enable controllers
 
@@ -248,6 +250,8 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 Make sure, that when you proceed with `https://mysprykershop.com/cart/preview/xxx` link, you're redirected to the "404" page with "Resource is not found by provided UUID." error message.
 
 {% endinfo_block %}
+
+{% info_block warningBox "Verification" %}
 
 Make sure, that when you're on a cart page, you can see the "Share Cart via Link" widget with an "External Users" radio button (if you logged in as company user and when you click on it - the cart share link is generated successfully and placed in the appeared text box (requires `ShareCartByLinkWidget` to be enabled).
 

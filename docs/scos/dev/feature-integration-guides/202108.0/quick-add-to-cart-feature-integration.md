@@ -294,7 +294,7 @@ Make sure that the following URLs are available on Yves:
 
 ... and for all other configured languages.
 
-% endinfo_block %}
+{% endinfo_block %}
 
 ### 4) Set up behavior
 

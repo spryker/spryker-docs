@@ -26,9 +26,9 @@ For detailed information on the modules that provide the API functionality and r
 ## Managing Promotional Items
 You can do the following actions on the promotional items via API:
 
-*     Retrieve promotional items available for a cart.
-*     Add applicable promotional items to cart.
-*     Remove the added promotional items from cart.
+* Retrieve promotional items available for a cart.
+* Add applicable promotional items to cart.
+* Remove the added promotional items from cart.
 
 ## Retrieving Promotional Items Available for a Cart
 For customers to be able to benefit from promotional offers, first, they need to know about them. For this purpose, you can fetch the promotions available for products in a cart and display the possible benefits to the customer. To do so, you can query the cart information and include the `promotional-items` resource relationship. The response provides the abstract SKU of the promoted product and how many of the promotional items customers can add. To present detailed information on promotional products to the customer, you can include the `abstract-products` and `concrete-products` resource relationships.

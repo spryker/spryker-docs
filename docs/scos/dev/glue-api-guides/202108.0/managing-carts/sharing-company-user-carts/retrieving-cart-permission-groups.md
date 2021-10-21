@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/retrieving-cart-permission-groups
 ---
 
-Company users can share their carts with others so that multiple representatives of the same company can work together on the same order. In addition to that, users can choose what type of access they want to grant to different users. This endoint allows retrieving cart permission groups of a company. 
+Company users can share their carts with others so that multiple representatives of the same company can work together on the same order. In addition to that, users can choose what type of access they want to grant to different users. This endoint allows retrieving cart permission groups of a company.
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Shared Carts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shared-carts-feature-integration.html).
@@ -35,7 +35,7 @@ Request sample : `GET http://glue.mysprykershop.com/cart-permission-groups`
 ### Response
 
 <details>
-    <summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -86,7 +86,6 @@ To retrieve a cart permission group, send the request:
 `GET`**/cart-permission-groups/*{% raw %}{{{% endraw %}permission_group_id{% raw %}}}{% endraw %}***
 ***
 
-
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}permission_group_id{% raw %}}}{% endraw %}*** | Unique identifier of a cart permission group to retrieve. |
@@ -99,16 +98,11 @@ To retrieve a cart permission group, send the request:
 
 Sample request: `GET http://glue.mysprykershop.com/cart-permission-groups/1`
 
-
-
 ### Response
 
-
-
-
  Response sample:
-  
-  
+
+
 ```json
 {
     "data": {
@@ -131,7 +125,6 @@ Sample request: `GET http://glue.mysprykershop.com/cart-permission-groups/1`
 | name | String | Permission group name. For example, `READ_ONLY` or `FULL_ACCESS`. |
 | isDefault | Boolean | Defines if the permission group is applied to shared carts by default. |
 
-
 ## Possible errors
 
 | CODE | REASON |
@@ -142,5 +135,4 @@ Sample request: `GET http://glue.mysprykershop.com/cart-permission-groups/1`
 
 ## Next steps
 
-
-* [Sharing company user carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html)
+[Sharing company user carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html)

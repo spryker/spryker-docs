@@ -17,6 +17,7 @@ related:
 This endpoint allows retrieving image sets of concrete products.
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Glue API: Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html).
 
@@ -37,14 +38,12 @@ To retrieve image sets of a concrete product, send the request:
 ### Request
 Request sample : `GET http://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-image-sets`
 
-
 ### Response
 
 <details>
-    <summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
-Sample response
 {
     "data": [
         {
@@ -73,21 +72,20 @@ Sample response
     }
 }
 ```
-    
+
 </details>
 
 <a name="concrete-image-sets-response-attributes"></a>
-         
-| Attribute | Description |
+
+| ATTRIBUTE | DESCRIPTION |
 | --- | --- |
 | name | Image set name. |
 | externalUrlLarge | URLs to the image per image set per image. |
 | externalUrlSmall | URLs to the image per image set per image. |
 
-
 ## Possible errors
 
-| Code | Meaning |
+| CODE | REASON |
 | --- | --- |
 | 304 | Can't find concrete product image sets. |
 

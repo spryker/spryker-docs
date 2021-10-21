@@ -76,7 +76,7 @@ To search by products, send the request:
 | `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=name_desc` | Set sorting order descending.   |
 | `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=rating` | Sort found products by rating.   |
 | `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=price_asc` | Sort found products by price ascending.   |
-| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=popularity` | Sort found products by popularity. <br>**Note: This is valid for Master Suite only and has not been integrated into B2B/B2C Suites yet.**   |
+| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=popularity` | Sort found products by popularity. <br>**Note: This is valid for Master Suite only and has not been integrated into B2B/B2C Suites yet.** |
 | `GET https://glue.mysprykershop.com/catalog-search?q=Sony&page=3` | Set a page to retrieve the search results from. |
 | `GET https://glue.mysprykershop.com/catalog-search?q=Sony&ipp=24` | Set number of products per page.   |
 | `GET https://glue.mysprykershop.com/catalog-search?merchant_name=Spryker` | Filter the results by Merchant name. <br>**Note: This option is available only if you have upgraded your shop to the Marketplace provided by Spryker.** |

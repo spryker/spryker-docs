@@ -41,7 +41,7 @@ To retrieve a navigation tree, send the request:
 Sample request: `GET http://glue.mysprykershop.com/navigations/SOCIAL_LINKS`
 
 
-| String parameter | Description | Exemplary values |
+| STRING PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | category-nodes |
 
@@ -57,7 +57,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
 
 
 <details>
-    <summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
     
 ```json
 {
@@ -1102,7 +1102,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
 
 
 
-| Field | Type | Description |
+| FIELD | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | name | String | Specifies the tree name. |
 | isActive | Boolean | Specifies whether the tree is active.</br>If the value of the field is *true*, the tree should be displayed to the customer. Otherwise, the tree should be hidden. |

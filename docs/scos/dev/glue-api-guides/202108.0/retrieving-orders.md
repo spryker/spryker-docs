@@ -46,7 +46,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 | STRING PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
@@ -133,7 +133,7 @@ To retrieve detailed information on an order, send the request:
 
 | HEADER KEY    | HEADER VALUE | REQUIRED | DESCRIPTION                                                  |
 | ------------- | ------------ | -------- | ------------------------------------------------------------ |
-| Authorization | string       | ✓        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer). |
+| Authorization | string       | ✓        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
 | String parameter | Description                                 | Possible values                                       |
 | ---------------- | ------------------------------------------- | ----------------------------------------------------- |
@@ -149,7 +149,7 @@ To retrieve detailed information on an order, send the request:
 ### Response
 
 <details>
-    <summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -1408,7 +1408,7 @@ To retrieve detailed information on an order, send the request:
 | -------- | ----- | ----------------------- |
 | shipments | object | Information about the shipments used in this order. This value is returned only if you submit an order without split delivery. To learn how to do that, see [Checking out purchases](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html). To see all the attributes that are returned when retrieving orders without split delivery, see [Retrieving orders](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html). To retrieve shipment details, include the order-shipments resource in the request. |
 
-| **Included resource** | **Attribute**              | **Type** |
+| **Included resource** | **Attribute**        | **Type** |
 | :-------------------- | :------------------------- | :------- |
 | order-shipments       | itemUuids                  | String   |
 | order-shipments       | methodName                 | String   |

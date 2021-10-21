@@ -59,7 +59,7 @@ By default, if checkout is successful, the order is placed, and the cart is dele
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | X-Anonymous-Customer-Unique-Id | String | Required when checking out a [guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html). | A guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
-| Authorization | String | Required when checking out a [cart of registered user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html). | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | String | Required when checking out a [cart of registered user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html). | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 
 
@@ -74,7 +74,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 
 
 <details>
-    <summary markdown='span'>Request sample with one shipment</summary>
+<summary markdown='span'>Request sample with one shipment</summary>
 `POST https://glue.mysprykershop.com/checkout`
 
 ```json
@@ -139,7 +139,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 </details>
 
 <details>
-    <summary markdown='span'>Request sample with a split shipment</summary>
+<summary markdown='span'>Request sample with a split shipment</summary>
 `POST https://glue.mysprykershop.com/checkout?include=orders`
 
 ```json
@@ -226,7 +226,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 
 
 <details>
-    <summary markdown='span'>Request sample with one shipment, order information, and shipment information</summary>
+<summary markdown='span'>Request sample with one shipment, order information, and shipment information</summary>
 `POST glue.de.spryker.local/checkout?include=orders,order-shipments`
 
 ```json
@@ -294,7 +294,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 
 
 <details>
-    <summary markdown='span'>Request sample with a split shipment and addresses passed as IDs</summary>
+<summary markdown='span'>Request sample with a split shipment and addresses passed as IDs</summary>
 `POST https://glue.mysprykershop.com/checkout`
 
 ```json
@@ -405,7 +405,7 @@ To prevent fraud, the *invoice* payment method is not accepted if a cart contain
 
 
 <details>
-    <summary markdown='span'>Response sample with one shipment</summary>
+<summary markdown='span'>Response sample with one shipment</summary>
 
 ```json
 {
@@ -427,7 +427,7 @@ To prevent fraud, the *invoice* payment method is not accepted if a cart contain
 </details>
 
 <details>
-    <summary markdown='span'>Response sample with a split shipment</summary>
+<summary markdown='span'>Response sample with a split shipment</summary>
 
 ```json
 {
@@ -449,7 +449,7 @@ To prevent fraud, the *invoice* payment method is not accepted if a cart contain
 </details>
 
 <details>
-    <summary markdown='span'>Response sample with a split shipment, order information, and shipment information</summary>
+<summary markdown='span'>Response sample with a split shipment, order information, and shipment information</summary>
 
 ```json
 {

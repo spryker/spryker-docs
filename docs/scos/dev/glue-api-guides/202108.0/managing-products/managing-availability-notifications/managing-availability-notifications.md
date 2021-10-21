@@ -15,10 +15,12 @@ redirect_from:
 
 This endpoint allows managing availability notifications of registered and guest customers.
 
-## Installation 
+## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue: Availability Notification feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-availability-notification-feature-integration.html).
 
 ## Subscribe to availability notifications
+
 To subscribe to availability notifications for an out-of-stock product, send the request:
 
 ---
@@ -26,7 +28,7 @@ To subscribe to availability notifications for an out-of-stock product, send the
 
 ---
 
-### Request 
+### Request
 
 <details><summary markdown='span'>Request sample: POST https://glue.mysprykershop.com/availability-notifications</summary>
 
@@ -49,6 +51,7 @@ To subscribe to availability notifications for an out-of-stock product, send the
 | email | string | &check; | Customer email where product availability notifications will be sent to. |
 
 ### Response
+
 <details><summary markdown='span'>Response sample</summary>
 
 ```json
@@ -77,6 +80,7 @@ To subscribe to availability notifications for an out-of-stock product, send the
 | sku | string | SKU of the product the customer recieves notifications about. |
 
 ## Unsubscribe from availability notifications
+
 To unsubscribe from availability notifications for a product, send the request:
 
 ---
@@ -89,9 +93,11 @@ To unsubscribe from availability notifications for a product, send the request:
 | ***{% raw %}{{{% endraw %}subscriptionKey{% raw %}}}{% endraw %}*** | Subscription id that is assigned when the subscription is created. To get it as an `id` attribute, subscribe to product availability email notifications or retrieve existing subscriptions. Exampe: `"id": "d634981b8d1930f7db6e2780b7d5600a"`. <br>Note that anyone who has a subscription id can delete the subscription the id is assigned to. |
 
 ### Request
+
 Request sample: `DELETE https://glue.mysprykershop.com/availability-notifications/05f2004950e01a056537384a405ec9a0`
 
 ### Response
+
 If a customer’s subscription is deleted successfully, the endpoint returns the `204 No Content` status code.
 
 | CODE | REASON |

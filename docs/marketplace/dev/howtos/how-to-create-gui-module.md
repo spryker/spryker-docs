@@ -4,16 +4,19 @@ description: This articles provides details how to create a new GUI module
 template: howto-guide-template
 ---
 
-This articles provides details how to create a new GUI module and add it to navigation
+This article describes how to create a new GUI module and add it to navigation.
 
-Follow the [Marketplace Merchant Portal Core feature integration guide](/docs/marketplace/dev/feature-integration-guides/202108.0/marketplace-merchant-portal-core-feature-integration.html) 
-to install the Marketplace Merchant Portal Core feature providing ``ZedUi``, ``Navigation`` and ACL related modules.
+## Prerequisites
+
+Follow the [Marketplace Merchant Portal Core feature integration guide](/docs/marketplace/dev/feature-integration-guides/202108.0/marketplace-merchant-portal-core-feature-integration.html)
+to install the Marketplace Merchant Portal Core feature providing the `ZedUi`, `Navigation` and ACL related modules.
 
 ## 1) Create a new module
 
-Create a new folder ``Pyz\Zed\ExampleMerchantPortalGui`` with a controller and corresponding Twig template:
+Create a new folder `Pyz\Zed\ExampleMerchantPortalGui` with a controller and corresponding Twig template:
 
 **src/Pyz/Zed/ExampleMerchantPortalGui/Communication/Controller/ExampleController.php**
+
 ```php
 <?php
 
@@ -34,6 +37,7 @@ class ExampleController extends AbstractController
 ```
 
 **src/Pyz/Zed/ExampleMerchantPortalGui/Presentation/Test/index.twig**
+
 {% raw %}
 ```twig
 {% extends '@ZedUi/Layout/merchant-layout-main.twig' %}
@@ -50,9 +54,9 @@ class ExampleController extends AbstractController
 ```
 {% endraw %}
 
-## 2) ACL rules
+## 2) Set up ACL rules
 
-Adjust ``Spryker\Zed\AclMerchantPortal\AclMerchantPortalConfig::getMerchantAclRoleRules()`` - add a newly introduced module to allowed bundles list.
+Adjust `Spryker\Zed\AclMerchantPortal\AclMerchantPortalConfig::getMerchantAclRoleRules()` - add a newly introduced module to the allowed bundles list.
 
 ```php
     public function getMerchantAclRoleRules(): array
@@ -81,7 +85,7 @@ Adjust ``Spryker\Zed\AclMerchantPortal\AclMerchantPortalConfig::getMerchantAclRo
     }
 ```
 
-Add a new merchant to ``merchant.csv`` data import file and run:
+Add a new merchant to the `merchant.csv` data import file and run:
 
 ```bash
 console data:import merchant
@@ -89,12 +93,11 @@ console data:import merchant
 
 {% info_block warningBox "Verification" %}
 
-Check ``spy_acl_rule`` DB table and make sure that ACL rules for ``example-merchant-portal-gui`` bundle are introduced for a new merchant.
+Check the `spy_acl_rule` database table and make sure that ACL rules for `example-merchant-portal-gui` bundle are introduced for a new merchant.
 
 {% endinfo_block %}
 
-Adjust ``Pyz\Zed\Acl\AclConfig::getInstallerRules()`` to disallow ``example-merchant-portal-gui`` bundle in order to 
-deny access for Back-office users.
+To deny access to Back Office users, adjust `Pyz/Zed/Acl/AclConfig::getInstallerRules()`` to disallow `example-merchant-portal-gui` bundle.
 
 ```php
     public function getInstallerRules()
@@ -135,9 +138,10 @@ deny access for Back-office users.
 
 ## 3) Navigation
 
-Adjust ``config/Zed/navigation.xml`` with a link for a new page:
+Adjust `config/Zed/navigation.xml with a link for a new page:
 
 **config/Zed/navigation.xml**
+
 ```xml
 <config>
 
@@ -149,7 +153,7 @@ Adjust ``config/Zed/navigation.xml`` with a link for a new page:
         <action>index</action>
         <icon>fa-chart-area</icon>
     </example>
-    
+
 </config>
 ```
 
@@ -161,7 +165,7 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Login as a new merchant, go to any Merchant portal page, make sure a new navigation item is presented and leads to a newly introduced page.
+Login as a new merchant, go to any Merchant Portal page, make sure a new navigation item is presented and leads to a newly introduced page.
 
 {% endinfo_block %}
 

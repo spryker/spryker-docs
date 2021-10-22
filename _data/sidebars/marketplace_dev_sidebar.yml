@@ -425,6 +425,9 @@ entries:
           - title: "File details: merchant-product-offer.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-product-offer.csv.html
 
+          - title: "File details: merchant_user.csv"
+            url: /docs/marketplace/dev/data-import/202108.0/file-details-merchant-user.csv.csv
+
           - title: "File details: price-product-offer.csv"
             url: /docs/marketplace/dev/data-import/file-details-price-product-offer.csv.html
 
@@ -448,9 +451,6 @@ entries:
 
           - title: "File details: product-option-group.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-product-option-group.csv.html
-
-          - title: "File details: merchant_user.csv"
-            url: /docs/marketplace/dev/data-import/file-details-merchant-user.csv
 
       - title: Front-end
         nested:

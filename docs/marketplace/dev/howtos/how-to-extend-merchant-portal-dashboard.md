@@ -4,11 +4,11 @@ description: This articles provides details how to create new module with applic
 template: howto-guide-template
 ---
 
-This articles provides details how to extend Merchant portal dashboard.
+This article describes how to extend the Merchant Portal dashboard.
 
 ## 1) Create a plugin
 
-Introduce a new plugin which implements ``Spryker\Zed\DashboardMerchantPortalGuiExtension\Dependency\Plugin\MerchantDashboardCardPluginInterface``, see example:
+Introduce a new plugin which implements `Spryker\Zed\DashboardMerchantPortalGuiExtension\Dependency\Plugin\MerchantDashboardCardPluginInterface`, for example:
 
 ```php
 <?php
@@ -37,7 +37,7 @@ class ExampleMerchantDashboardCardPlugin extends AbstractPlugin implements Merch
 
 ## 2) Register a plugin
 
-Add a newly introduced plugin to ``Pyz\Zed\DashboardMerchantPortalGui\DashboardMerchantPortalGuiDependencyProvider``:
+Add a newly introduced plugin to `Pyz\Zed\DashboardMerchantPortalGui\DashboardMerchantPortalGuiDependencyProvider`:
 
 ```php
 <?php
@@ -63,6 +63,6 @@ class DashboardMerchantPortalGuiDependencyProvider extends SprykerDashboardMerch
 
 {% info_block warningBox "Verification" %}
 
-Go to ``/dashboard-merchant-portal-gui/dashboard`` in Merchant Portal, make sure a new card is presented.
+Go to `/dashboard-merchant-portal-gui/dashboard` in the Merchant Portal, make sure a new card is presented.
 
 {% endinfo_block %}

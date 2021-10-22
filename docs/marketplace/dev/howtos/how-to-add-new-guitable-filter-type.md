@@ -4,16 +4,16 @@ description: This articles provides details how to create a new Gui table filter
 template: howto-guide-template
 ---
 
-This articles provides details how to create a new Gui table filter type.
+This article describes how to create a new Gui table filter type.
 
-Follow the [Marketplace Merchant Portal Core feature integration guide](/docs/marketplace/dev/feature-integration-guides/202108.0/marketplace-merchant-portal-core-feature-integration.html) 
-to install the Marketplace Merchant Portal Core feature providing ``GuiTable`` module.
+## Prerequisites
+
+Follow the [Marketplace Merchant Portal Core feature integration guide](/docs/marketplace/dev/feature-integration-guides/202108.0/marketplace-merchant-portal-core-feature-integration.html)
+to install the Marketplace Merchant Portal Core feature providing the `GuiTable` module.
 
 ## Adjust GuiTableConfigurationBuilder
 
-Add a new addFilter***() method to ``Spryker\Shared\GuiTable\Configuration\Builder\GuiTableConfigurationBuilder``, where 
-pass all the required data for a new filter configuration. Define a structure as it will be used by frontend component 
-(the data will be transformed to array and then passed to a fronted component as JSON).
+Add a new addFilter***() method to `Spryker\Shared\GuiTable\Configuration\Builder\GuiTableConfigurationBuilder`, where you pass all the required data for a new filter configuration. Define a structure as it will be used by the frontend component (the data will be transformed to arrays and then passed to a frontend as JSON).
 
 ```php
     /**
@@ -50,7 +50,7 @@ pass all the required data for a new filter configuration. Define a structure as
     }
 ```
 
-See [Table Filter extension](/docs/marketplace/dev/front-end/table-design/table-filters) to learn more about the Table Filters feature.
+See the [Table Filter extension](/docs/marketplace/dev/front-end/table-design/table-filters) to learn more about the Table Filters feature.
 
 ## See also
 

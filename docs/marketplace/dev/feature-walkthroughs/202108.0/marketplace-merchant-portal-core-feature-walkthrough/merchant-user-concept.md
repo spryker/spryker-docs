@@ -4,27 +4,29 @@ description: Merchant User in Merchant portal.
 template: feature-walkthrough-template
 ---
 
-This article provides a short overview of Merchant User.
+This article provides a short overview of Merchant User concept in the Spryker Marketplace.
 
 ## Merchant User structure
 
-`MerchantUser` module is the source of users for Merchant Portal. All the operations on users should be performed using `MerchantUserFacade`, including but not limited to:
-- Create/Update/Delete/Disable Merchant Users.
-- Getting data about existing Merchant Users.
-- Getting data about current logged in Merchant User.
-- Authentication Merchant Users.
-- Password manipulation (reset, validation).
+`MerchantUser` module is the source of users for the Merchant Portal. `MerchantUserFacade` should be used to perform all operations on users, including but not limited to:
+- Create, update, delete, and disable merchant users.
+- Obtaining information about existing merchant users.
+- Obtaining data about the current logged in merchant user.
+- Authentication of merchant users.
+- Manipulation of passwords (reset, validation).
 
-Merchant Users are activated and deactivated when their Merchant is activated and deactivated respectively. The `SyncMerchantUsersStatusMerchantPostUpdatePlugin` takes cate about it.
+Merchant users are activated and deactivated when their Merchant is activated or deactivated. `SyncMerchantUsersStatusMerchantPostUpdatePlugin` takes care of it.
 
 
-## Merchant User Relations
+## Merchant User relations
 
 {% info_block errorBox %}
 
-Never use UserFacade directly in Merchant Portal modules in order to avoid technical debt in the future
+To avoid technical debt in the future, never use `UserFacade` directly in Merchant Portal modules.
 
 {% endinfo_block %}
+
+The diagram below illustrates merchant user relations:
 
 ![Merchant User relations](https://confluence-connect.gliffy.net/embed/image/6a8b09b8-f7a0-4f92-8728-6bcd056c1f2e.png?utm_medium=live&utm_source=confluence)
 

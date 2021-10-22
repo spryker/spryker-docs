@@ -4,11 +4,13 @@ description: This articles provides details how to create a new Gui table
 template: howto-guide-template
 ---
 
-This articles provides details how to create a new Gui table in Merchant portal. 
-Following this step by step instructions you will create a new Gui table  with filters, search, sorting and ``http`` data source type from scratch.
+This article describes how to create a new Gui table in Merchant Portal.
+With this step by step instructions you will create a new Gui table with filters, search, sorting and an `http` data source type from scratch.
 
-Follow the [Marketplace Merchant Portal Core feature integration guide](/docs/marketplace/dev/feature-integration-guides/202108.0/marketplace-merchant-portal-core-feature-integration.html) 
-to install the Marketplace Merchant Portal Core feature providing ``GuiTable`` module.
+## Prerequisites
+
+Follow the [Marketplace Merchant Portal Core feature integration guide](/docs/marketplace/dev/feature-integration-guides/202108.0/marketplace-merchant-portal-core-feature-integration.html)
+to install the Marketplace Merchant Portal Core feature providing the `GuiTable` module.
 
 ## 1) Add GuiTable services to dependencies
 
@@ -98,8 +100,8 @@ class ProductMerchantPortalGuiCommunicationFactory extends AbstractCommunication
 
 ## 3) Create a configuration provider
 
-Create ``GuiTableConfigurationBuilder`` calling ``GuiTableFactoryInterface::createConfigurationBuilder()`` (``gui_table_factory`` service)
-and then create ``GuiTableConfigurationTransfer`` by calling ``GuiTableConfigurationBuilder::createConfiguration()``.
+Create `GuiTableConfigurationBuilder` calling `GuiTableFactoryInterface::createConfigurationBuilder()` (`gui_table_factory` service)
+and then create `GuiTableConfigurationTransfer` by calling `GuiTableConfigurationBuilder::createConfiguration()`.
 
 ```php
 class ProductAbstractGuiTableConfigurationProvider
@@ -121,7 +123,7 @@ class ProductAbstractGuiTableConfigurationProvider
     /**
      * @param \Spryker\Shared\GuiTable\GuiTableFactoryInterface $guiTableFactory
      */
-    public function __construct(GuiTableFactoryInterface $guiTableFactory) 
+    public function __construct(GuiTableFactoryInterface $guiTableFactory)
     {
         $this->guiTableFactory = $guiTableFactory;
     }
@@ -208,7 +210,7 @@ class ProductAbstractGuiTableConfigurationProvider
 ```xml
 <?xml version="1.0"?>
 <transfers xmlns="spryker:transfer-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
-    
+
     <transfer name="MerchantProductTableCriteria">
         <property name="searchTerm" type="string"/>
         <property name="page" type="int"/>
@@ -217,17 +219,15 @@ class ProductAbstractGuiTableConfigurationProvider
         <property name="orderDirection" type="string"/>
         <property name="filterIsVisible" type="bool"/>
     </transfer>
-    
+
 </transfers>
 ```
 
 ## 5) Create a table data provider
 
-Create a table data provider extending ``Spryker\Shared\GuiTable\DataProvider\AbstractGuiTableDataProvider``. 
-Create and return an instance of ``MerchantProductTableCriteriaTransfer`` in ``createCriteria()`` method. The properties 
-will be filled and should be used for pagination, search, sorting and filtering. Return ``GuiTableDataResponseTransfer`` 
-with table data in ``fetchData()`` method using newly introduced transfer properties from $criteriaTransfer 
-(``MerchantProductTableCriteriaTransfer`` introduced in ``AbstractGuiTableDataProvider::createCriteria()``).
+Create a table data provider extending `Spryker\Shared\GuiTable\DataProvider\AbstractGuiTableDataProvider`.
+Create and return an instance of `MerchantProductTableCriteriaTransfer` in the `createCriteria()` method. The properties will be filled and should be used for pagination, search, sorting and filtering. Return `GuiTableDataResponseTransfer` with table data in `fetchData()` method using the newly introduced transfer properties from $criteriaTransfer
+(`MerchantProductTableCriteriaTransfer` introduced in `AbstractGuiTableDataProvider::createCriteria()`).
 
 ```php
     /**
@@ -240,7 +240,7 @@ with table data in ``fetchData()`` method using newly introduced transfer proper
         $productAbstractCollectionTransfer = $this->productMerchantPortalGuiRepository
             ->getProductAbstractTableData($criteriaTransfer);
         $guiTableDataResponseTransfer = new GuiTableDataResponseTransfer();
-     
+
         foreach ($productAbstractCollectionTransfer->getProductAbstracts() as $productAbstractTransfer) {
             $responseData = [
                 ProductAbstractGuiTableConfigurationProvider::COL_KEY_SKU => $productAbstractTransfer->getSku(),
@@ -252,16 +252,16 @@ with table data in ``fetchData()`` method using newly introduced transfer proper
                 ProductAbstractGuiTableConfigurationProvider::COL_KEY_STORES => $productAbstractTransfer->getStoreNames(),
                 ProductAbstractGuiTableConfigurationProvider::COL_KEY_VISIBILITY => $this->getVisibilityColumnData($productAbstractTransfer),
             ];
-    
+
             $guiTableDataResponseTransfer->addRow((new GuiTableRowDataResponseTransfer())->setResponseData($responseData));
         }
-    
+
         $paginationTransfer = $productAbstractCollectionTransfer->getPagination();
-    
+
         if (!$paginationTransfer) {
             return $guiTableDataResponseTransfer;
         }
-    
+
         return $guiTableDataResponseTransfer
             ->setPage($paginationTransfer->getPage())
             ->setPageSize($paginationTransfer->getMaxPerPage())
@@ -271,8 +271,7 @@ with table data in ``fetchData()`` method using newly introduced transfer proper
 
 ## 6) Create a page with a table
 
-Create a Controller with an action to display a table, use newly created configuration provider to pass table configuration
-to Twig template:
+Create a controller that displays a table, make use of the newly created configuration provider to pass table configuration to the Twig template:
 
 ```php
 namespace Spryker\Zed\ProductMerchantPortalGui\Communication\Controller;
@@ -299,14 +298,13 @@ class ProductsController extends AbstractController
 
 Create a corresponding Twig template, pass configuration to frontend component.
 
-
 See [Table Design](/docs/marketplace/dev/front-end/table-design) to learn more about table components.
 
 ## 7) Data source
 
-Add a new action for data fetching (according to URL set to ``GuiTableConfigurationBuilder::setDataSourceUrl()``), 
-pass newly introduced data provider and configuration to ``GuiTableHttpDataRequestExecutor::execute()`` as well as Request
-to create a Response with table data.
+Add a new action for fetching data (based on the URL set in `GuiTableConfigurationBuilder::setDataSourceUrl()`),
+pass newly introduced data provider and configuration to `GuiTableHttpDataRequestExecutor::execute()` and request
+to create a response with the table data.
 
 ```php
     /**

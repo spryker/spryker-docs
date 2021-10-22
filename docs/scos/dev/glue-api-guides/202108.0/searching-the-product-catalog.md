@@ -55,7 +55,7 @@ To search by products, send the request:
 | page | Sets the number of the search results page from which the results are retrieved | {% raw %}{{{% endraw %}page_number{% raw %}}}{% endraw %} |
 | ipp | Sets the number of products per page | {% raw %}{{{% endraw %}number_of_products{% raw %}}}{% endraw %} |
 
-| REQUEST   | USAGE     |
+| REQUEST   | USAGE |
 | --------------- | -------------- |
 | `GET https://glue.mysprykershop.com/catalog-search?q=`       | Search for all available products.   |
 | `GET https://glue.mysprykershop.com/catalog-search?q=058`       | Search for an abstract product by SKU *058*.   |
@@ -6704,5 +6704,3 @@ For other abstract product attributes, see:
 | 503      | Invalid type (non-integer) of one of the request parameters:<ul><li>rating</li><li>rating.min</li><li>rating.max</li><li>page.limit</li><li>page.offset</li><li>category</li></ul> |
 
 For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
-
-

@@ -32,12 +32,9 @@ To retrieve a search suggestion, send the request:
 
 ### Request
 
-
 | STRING PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | q | Adds a search query to the request | You can enter any search query. |
-
-
 
 | Request | Description |
 | --- | --- |
@@ -221,7 +218,6 @@ To retrieve a search suggestion, send the request:
 
 </details>
 
-
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | completion | Array | Autocomplete suggestions for the search query. </br> Each item in the array is a string. |
@@ -245,6 +241,5 @@ To retrieve a search suggestion, send the request:
 The `url` attribute of categories and abstract products exposes a SEO-friendly URL of the resource that represents the respective category or product. For information on how to resolve such a URL and retrieve the corresponding resource, see [Resolving search engine friendly URLs](/docs/scos/dev/glue-api-guides/{{page.version}}/resolving-search-engine-friendly-urls.html).
 
 {% endinfo_block %}
-
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

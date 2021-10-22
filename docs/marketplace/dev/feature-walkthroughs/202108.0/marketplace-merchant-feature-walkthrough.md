@@ -22,21 +22,21 @@ The following diagram illustrates the dependencies between the modules for the *
 
 | MODULE | DESCRIPTION |
 | -------------------- | ---------- |
-| [MerchantProfile](https://github.com/spryker/merchant-profile) | MerchantProfile module provides data structure, facade methods and plugins for extending merchant by merchant profile data |
+| [MerchantProfile](https://github.com/spryker/merchant-profile) | Provides data structure, facade methods and plugins for extending merchant by merchant profile data |
 | [MerchantProfileDataImport](https://github.com/spryker/merchant-profile-data-import) | Importer for MerchantProfile data |
-| [MerchantProfileGui](https://github.com/spryker/merchant-profile-gui) | MerchantProfileGui module provides Zed UI interface for merchant profile management |
-| [MerchantSearch](https://github.com/spryker/merchant-search) | The module manages Elasticsearch documents for merchant entities |
+| [MerchantProfileGui](https://github.com/spryker/merchant-profile-gui) | Provides Zed UI interface for merchant profile management |
+| [MerchantSearch](https://github.com/spryker/merchant-search) | Manages Elasticsearch documents for merchant entities |
 | [MerchantSearchExtension](https://github.com/spryker/merchant-search-extension) | Provides plugin interfaces to extend MerchantSearch module from the other modules |
-| [MerchantStorage](https://github.com/spryker/merchant-storage) | The module manages storage for merchant entities |
-| [MerchantUserGui](https://github.com/spryker/merchant-user-gui) | Merchant User Gui Module provides Zed UI interface for merchant users management |
-| [MerchantPage](https://github.com/spryker-shop/merchant-page) | This module contains the merchant page for the shop and its components |
-| [MerchantProfileWidget](https://github.com/spryker-shop/merchant-profile-widget) | This module provides a merchant-profile molecule for for introducing merchant profile information |
-| [MerchantWidget](https://github.com/spryker-shop/merchant-widget) | This module provides widget to display merchant information |
-| [MerchantProfileMerchantPortalGui](https://github.com/spryker/merchant-profile-merchant-portal-gui) | This module provides Zed UI interface for merchant profile management for the Merchant portal |
-| [MerchantRestApi](https://github.com/spryker/merchants-rest-api) | MerchantsRestApi module provides REST API endpoints to manage merchants |
+| [MerchantStorage](https://github.com/spryker/merchant-storage) | Manages storage for merchant entities |
+| [MerchantUserGui](https://github.com/spryker/merchant-user-gui) | Provides Zed UI interface for merchant users management |
+| [MerchantPage](https://github.com/spryker-shop/merchant-page) | Contains the merchant page for the shop and its components |
+| [MerchantProfileWidget](https://github.com/spryker-shop/merchant-profile-widget) | Provides a merchant-profile molecule for for introducing merchant profile information |
+| [MerchantWidget](https://github.com/spryker-shop/merchant-widget) | Provides widget to display merchant information |
+| [MerchantProfileMerchantPortalGui](https://github.com/spryker/merchant-profile-merchant-portal-gui) | Provides Zed UI interface for merchant profile management for the Merchant portal |
+| [MerchantRestApi](https://github.com/spryker/merchants-rest-api) | Provides REST API endpoints to manage merchants |
 | [MerchantRestApiExtension](https://github.com/spryker/merchants-rest-api-extension) | Provides plugin interfaces to extend MerchantsRestApi module from the other modules |
-| [Merchant](https://github.com/spryker/merchant) | This module has DB structure and facade methods to save/update/remove Merchants |
-| [MerchantUser](https://github.com/spryker/merchant-user) | Merchant user module provides data structure, facade methods and plugins for user relation to merchant |
+| [Merchant](https://github.com/spryker/merchant) | Provides DB structure and facade methods to save/update/remove Merchants |
+| [MerchantUser](https://github.com/spryker/merchant-user) | Provides data structure, facade methods and plugins for user relation to merchant |
 
 
 ## Domain model

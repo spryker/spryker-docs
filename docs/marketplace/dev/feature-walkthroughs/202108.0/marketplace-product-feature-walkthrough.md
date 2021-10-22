@@ -4,8 +4,6 @@ description: A Marketplace Product feature adds merchant information to the prod
 template: feature-walkthrough-template
 ---
 
-<!--- Feature summary. Short and precise explanation of what the feature brings in terms of functionality.
--->
 
 Product is a central entity of a shop. The Product feature allows shop administrators to create a rich product catalog. Product configuration is highly customizable, so they can create different types of products.
 A Marketplace Product feature adds merchant information to the product that a Merchant sells. Product Restrictions from Merchant to Buyer give merchants another layer of control over the information, a customer can see in the shop application. Based on product restrictions, you can:
@@ -14,7 +12,6 @@ There are two options for the Merchants to start selling in Marketplace: Either 
 A Merchant can assign attributes and custom labels to products, add product attributes, use limited offers and pricing.
 Customers can filter products and offers by Merchants right in the catalog or find them through the search function.
 
-<!--- Feel free to drop the following part if the User doc is not yet published-->
 {% info_block warningBox "User documentation" %}
 
 To learn more about the feature and to find out how end users use it, see [Marketplace Product feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-product-feature-overview.html) feature overview for business users.
@@ -23,17 +20,6 @@ To learn more about the feature and to find out how end users use it, see [Marke
 ## Module dependency graph
 
 ![Module Dependency Graph](https://confluence-connect.gliffy.net/embed/image/15402fef-7a49-4ff6-bdc7-9e82f2f92011.png?utm_medium=live&utm_source=confluence)
-<!--
-Diagram content:
-    -The module dependency graph SHOULD contain all the modules that are specified in the feature  (don't confuse with the module in the epic)
-    - The module dependency graph MAY contain other module that might be useful or required to show
-Diagram styles:
-    - The diagram SHOULD be drown with the same style as the example in this doc
-    - Use the same distance between boxes, the same colors, the same size of the boxes
-Table content:
-    - The table that goes after diagram SHOULD contain all the modules that are present on the diagram
-    - The table should provide the role each module plays in this feature
--->
 
 | MODULE     | DESCRIPTION                |
 |------------|----------------------------|
@@ -41,7 +27,16 @@ Table content:
 | MerchantProductDataImport | Imports relations between products and merchants from .csv file.  |
 | ProductMerchantPortalGui | Provides components for merchant products management.  |
 | ProductMerchantPortalGuiExtension | Provides extension interfaces for ProductMerchantPortalGui module.  |
-| MerchantProductSearch | Manages Elasticsearch documents for merchant product entities.  |
+| MerchantProductStorage | Manages storage for merchant product abstract.  |
+| MerchantProductWidget | Provides merchant product abstract information.  |
+| Product | Provides base infrastructure and CRUD operations to handle abstract product and concrete products.  |
+| ProductAttribute | Managing product attributes defined in the JSON fields as well as attribute meta information.  |
+| ProductPageSearch | Manages Elasticsearch documents for product entities.  |
+| ProductSearch | Handles all the functionality needed to dynamically handle product attribute search and filter preferences.  |
+| ProductStorage | Manages storage for products.   |
+| ProductValidity | Provides validity dates for product concretes.  |
+| MerchantProductsRestApi | Provides REST API endpoints to manage merchant products.  |
+| CartsRestApiExtension | Provides plugin interfaces used by CartsRestApi module.  |
 
 ## Domain model
 <!--

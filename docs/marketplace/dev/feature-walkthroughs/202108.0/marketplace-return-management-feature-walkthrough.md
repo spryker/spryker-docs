@@ -20,15 +20,17 @@ The following diagram illustrates the dependencies between the modules for the *
 
 | MODULE     | DESCRIPTION                |
 |------------|----------------------------|
-| MerchantSalesReturn | Provides functionality to link merchant to sales returns   |
-| MerchantSalesReturnGui | Provides Backoffice UI for merchant sales returns  |
-| MerchantSalesReturnMerchantUserGui | Provides Backoffice UI for merchant user sales return management   |
-| MerchantSalesReturnWidget | Provides merchant information for sales returns on Yves   |
-| MerchantSalesReturnsRestApi | Provides REST API endpoints to manage merchant sales returns   |
-| SalesReturn | Handles order returns  |
-| SalesReturnExtension | Provides an interfaces of plugins to extend SalesReturn module from the other modules  |
+| MerchantSalesReturn | Provides functionality to link merchant to the sales returns.  |
+| MerchantSalesReturnGui | Provides Backoffice UI for the merchant sales returns.  |
+| MerchantSalesReturnMerchantUserGui | Provides Backoffice UI for managing merchant user sales returns.  |
+| MerchantSalesReturnWidget | Provides merchant information for the sales returns on the Storefront.   |
+| MerchantSalesReturnsRestApi | Provides REST API endpoints to manage merchant sales returns.   |
+| SalesReturn | Handles order returns. |
+| SalesReturnExtension | Provides interfaces of plugins to extend `SalesReturn` module from other modules.  |
 
 ## Domain model
+
+The following schema illustrates the Marketplace Return Management domain model:
 
 ![Entity diagram](https://confluence-connect.gliffy.net/embed/image/9f01ed2f-2be0-4e59-afa3-e56fd8390b51.png?utm_medium=live&utm_source=confluence)
 

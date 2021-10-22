@@ -20,6 +20,9 @@ entries:
           - title: System requirements
             url: /docs/marketplace/dev/setup/system-requirements.html
 
+          - title: Infrastructure requirements
+            url: /docs/marketplace/dev/setup/infrastructure-requirements.html
+
           - title: Installation
             url: /docs/marketplace/dev/setup/installation.html
 
@@ -39,6 +42,9 @@ entries:
 
           - title: Marketplace Product feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-feature-walkthrough.html
+
+          - title: Marketplace Merchant Portal Product Management feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-product-management-feature-walkthrough.html
 
           - title: Marketplace Product Offer feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
@@ -109,6 +115,9 @@ entries:
           - title: ACL feature integration
             url: /docs/marketplace/dev/feature-integration-guides/acl-feature-integration.html
 
+          - title: Combined Product Offer Import integration
+            url: /docs/marketplace/dev/feature-integration-guides/combined-product-offer-import-integration.html
+
           - title: Marketplace Dummy Payment feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-dummy-payment-feature-integration.html
 
@@ -177,6 +186,15 @@ entries:
 
           - title: Marketplace Promotions & Discounts feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-promotions-discounts-feature-integration.html
+
+          - title: Marketplace Product Option feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-option-feature-integration.html
+
+          - title: Marketplace Product Option + Cart feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-option-cart-feature-integration.html
+
+          - title: Marketplace Product Option + Checkout feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-option-checkout-feature-integration.html
 
           - title: Marketplace Return Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-return-management-feature-integration.html

@@ -29,7 +29,7 @@ In the following code snippet only SpyMerchant entity is configured to be handle
 ## Connect Persistence ACL feature to all database tables
 
 All entities in the system will be handled by ACL in the following example.
-When configuring ACLs in such a way, be sure to use the allowed entity list (#allow-list-configuration) to exclude entities that are needed in order to function properly.
+When configuring ACLs in such a way, be sure to use the [Allowed entity list](#allow-list-configuration) to exclude entities that are needed in order to function properly.
 Provide the list of entities that are needed:
 
 - `SpyUser`
@@ -56,7 +56,7 @@ Provide the list of entities that are needed:
 
 ## Feature configuration
 
-The configuration, unlike the rule, is common to the entire system. The main configuration object for the module is `\Generated\Shared\Transfer\AclEntityMetadataConfigTransfer`. Through the plugin system, it can be extended. You just need to create a plugin and implement `\Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityMetadataConfigExpanderPluginInterface`.
+The configuration, unlike the rule, is common to the entire system. The main configuration object for the feature is `\Generated\Shared\Transfer\AclEntityMetadataConfigTransfer`. Through the plugin system, it can be extended. You just need to create a plugin and implement `\Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityMetadataConfigExpanderPluginInterface`.
 
 ![Configuration entity relation diagram](https://confluence-connect.gliffy.net/embed/image/f2309504-8638-419d-abf9-783bc45c8792.png?utm_medium=live&utm_source=custom)
 
@@ -67,7 +67,7 @@ The properties of the `AclEntityMetadataConfigTransfer` are described in the tab
 | PROPERTY | TYPE | DESCRIPTION |
 |-----|-----|-----|
 | aclEntityMetadataCollection | AclEntityMetadataCollectionTransfer | The collection of configurations for different entities.|
-| aclEntityAllowList | string[] | The set of fully qualified classes that this module does not apply to (even if the user has rules for an entity that is in the allow list). |
+| aclEntityAllowList | string[] | The set of fully qualified classes that this feature does not apply to (even if the user has rules for an entity that is in the allow list). |
 
 ### AclEntityMetadataCollectionTransfer
 
@@ -115,7 +115,9 @@ Examples of ACL configuration are provided in this section.
 
 ### Basic inheritance configuration
 
-Below you can find an example of the basic inheritance configuration:
+This section shows how you can inherit the `SpyProduct` from `SpyStore` by using the `SpyProductAbstract` and the `SpyProductAbstractStore`.
+
+This configuration is necessary to use the functionality of the [Inherited scope](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/inherited-scope.html) rules and [Composite entity](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/composite-entity.html).
 
 ```php
     /**
@@ -164,7 +166,9 @@ Below you can find an example of the basic inheritance configuration:
 
 ### The inheritance through the reference column
 
-Below you can find an example of the inheritance configuration through the reference column:
+In some databases, data is linked not by foreign keys but by "reference columns".
+Below is an example of inheriting `SpyAvailability` from `SpyProduct` through a reference column (*sku* in this example).
+Pay attention to the [AclEntityParentConnectionMetadataTransfer](#aclentityparentconnectionmetadatatransfer) property.
 
 ```php
     /**
@@ -199,7 +203,11 @@ Below you can find an example of the inheritance configuration through the refer
 
 ### Composite entity
 
-Below you can find an example of the composite entity configuration:
+Below you can find an example of a [Composite entity](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/composite-entity.html) `SpyMerchant`, which consists of:
+- `SpyMerchant`
+- `SpyMerchantProfile`
+- `SpyMerchantUser`
+- `SpyMerchantStore`
 
 ```php
     /**
@@ -250,7 +258,7 @@ Below you can find an example of the composite entity configuration:
 
 ### Data segmentation support
 
-Below you can find an example of the data segmentation:
+The following is an example of the data segmentation for the `SpyMerchant`. Data segmentation is required for the [Segment scope](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/segment-scope.html) rules. 
 
 ```php
     /**
@@ -273,7 +281,7 @@ Below you can find an example of the data segmentation:
 
 ### Default operation mask
 
-Below you can find an example of the default operation mask:
+The example below sets the default `Read` permissions for the `SpyCountry` and `Create + Read` permissions for the `SpyResetPassword`.
 
 ```php
     /**
@@ -304,7 +312,7 @@ Below you can find an example of the default operation mask:
 
 ### Allow list configuration
 
-A sample allowing list configuration is shown below:
+The following example adds all the entities required for the Persistence Acl to function correctly:
 
 ```php
     /**
@@ -315,8 +323,15 @@ A sample allowing list configuration is shown below:
     public function expand(AclEntityMetadataConfigTransfer $aclEntityMetadataConfigTransfer): AclEntityMetadataConfigTransfer 
     {
         $aclEntityMetadataConfigTransfer
+            ->addAclEntityAllowListItem(SpyUser::class)
+            ->addAclEntityAllowListItem(SpyAclRole::class)
+            ->addAclEntityAllowListItem(SpyAclGroup::class)
+            ->addAclEntityAllowListItem(SpyAclRule::class)
             ->addAclEntityAllowListItem(SpyAclEntityRule::class)
-            ->addAclEntityAllowListItem(SpyRole::class);
+            ->addAclEntityAllowListItem(SpyUrl::class)
+            ->addAclEntityAllowListItem(SpyAclEntitySegment::class)
+            ->addAclEntityAllowListItem(SpyAclGroupsHasRoles::class)
+            ->addAclEntityAllowListItem(SpyAclUserHasGroup::class);
 
         return $aclEntityMetadataConfigTransfer;
     }

@@ -45,6 +45,7 @@ Enable the following behaviors by registering the plugins:
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | MerchantProductCartPreCheckPlugin | Validates that merchant references in the cart items match existing merchant products. |  | Spryker\Zed\MerchantProduct\Communication\Plugin\Cart |
+| MerchantProductPreAddToCartPlugin | Sets merchant reference to item transfer on add to cart. |  | SprykerShop\Yves\MerchantProductWidget\Plugin\CartPage |
 
 **src/Pyz/Zed/Merchant/MerchantDependencyProvider.php**
 
@@ -55,7 +56,7 @@ namespace Pyz\Zed\Cart;
 
 use Spryker\Zed\Cart\CartDependencyProvider as SprykerCartDependencyProvider;
 use Spryker\Zed\Kernel\Container;
-use Spryker\Zed\Merchant\Communication\Plugin\Cart\MerchantCartPreCheckPlugin;
+use Spryker\Zed\MerchantProduct\Communication\Plugin\Cart\MerchantProductCartPreCheckPlugin;
 
 class CartDependencyProvider extends SprykerCartDependencyProvider
 {
@@ -76,5 +77,35 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Make sure that you can’t add an item with `merchantReference` and `sku` that do not belong to the same `MerchantProduct`(see `spy_merchant_product_abstract`).
+
+{% endinfo_block %}
+
+**src/Pyz/Yves/CartPage/CartPageDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\CartPage;
+
+use SprykerShop\Yves\CartPage\CartPageDependencyProvider as SprykerCartPageDependencyProvider;
+use SprykerShop\Yves\MerchantProductWidget\Plugin\CartPage\MerchantProductPreAddToCartPlugin;
+
+class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
+{
+    /**
+     * @return \SprykerShop\Yves\CartPageExtension\Dependency\Plugin\PreAddToCartPluginInterface[]
+     */
+    protected function getPreAddToCartPlugins(): array
+    {
+        return [
+            new MerchantProductPreAddToCartPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure when you add a merchant product to cart, it has `merchantReference` set. (Can be checked in the `spy_quote` table).
 
 {% endinfo_block %}

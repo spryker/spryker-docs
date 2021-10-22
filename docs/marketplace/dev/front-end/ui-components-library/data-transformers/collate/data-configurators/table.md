@@ -4,27 +4,58 @@ description: This document provides details about the Data Transformer Collate C
 template: concept-topic-template
 ---
 
-This document provides details about the Data Transformer Collate Configurator Table service in the Components Library.
+This document explains the Data Transformer Collate Configurator Table service in the Components Library.
 
 ## Overview
 
 Data Transformer Collate Configurator Table is an Angular Service that re-populates of data to a format suitable for filtering (`DataTransformerConfiguratorConfigT`).
 
-Below is an example of the Data Transformer Collate Configurator Table in the `@spryker/table` configuration:
+Check out an example usage of the Data Transformer Collate Configurator Table in the `@spryker/table` config:
 
 ```html
 <spy-table
-  [config]="{
-    datasource: {
-      ...                                                   
-      transform: {
-        type: 'collate',
-        configurator: {
-          type: 'table',
+    [config]="{
+        datasource: {
+            ...,                                                   
+            transform: {
+                type: 'collate',
+                configurator: {
+                    type: 'table',
+                },
+                ...,  
+            },
         },
-        ...  
-      },
-    },
-  }"
-></spy-table>
+    }"
+>
+</spy-table>
+```
+
+## Service registration
+
+Register the service:
+
+```ts
+@NgModule({
+    imports: [
+        DataTransformerModule.withTransformers({
+            collate: CollateDataTransformerService,
+        }),
+        CollateDataTransformer.withFilters({
+            table: TableDataTransformerConfiguratorService,
+        }),
+    ],
+})
+export class RootModule {}
+```
+
+## Interfaces
+
+Below you can find interfaces for the Data Transformer Collate Configurator Table:
+
+```ts
+declare module '@spryker/data-transformer.collate' {
+    interface DataTransformerConfiguratorRegistry {
+        table: TableDataTransformerConfiguratorService;
+    }
+}
 ```

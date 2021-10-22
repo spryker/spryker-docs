@@ -5,7 +5,6 @@ description: This document provides details about the Data Transformers service 
 template: concept-topic-template
 ---
 
-
 This document explains the Data Transformers service in the Components Library.
 
 ## Overview
@@ -17,56 +16,57 @@ Anyone may use the Data Transformer Service to modify data by configuring a spec
 
 ```html
 <spy-select
-  [datasource]="{
-    type: 'http',
-    transform: {
-      type: 'chain',
-      transformers: [
-        {
-          type: 'array-map',
-          mapItems: {
-            type: 'object-map',
-            mapProps: {
-              colId: {
-                type: 'date-parse',
-              },
-            },
-          },
-        },
-        {
-          type: 'collate',
-          configurator: {
-            type: 'table',
-          },
-        },
-        {
-          type: 'lens',
-          path: 'data',
-          transformer: {
-            type: 'array-map',
-            mapItems: {
-              type: 'object-map',
-              mapProps: {
-                colId: {
-                  type: 'date-serialize',
+    [datasource]="{
+        type: 'http',
+        transform: {
+            type: 'chain',
+            transformers: [
+                {
+                    type: 'array-map',
+                    mapItems: {
+                        type: 'object-map',
+                        mapProps: {
+                            colId: {
+                                type: 'date-parse',
+                            },
+                        },
+                    },
                 },
-              },
-            },
-          },
+                {
+                    type: 'collate',
+                    configurator: {
+                        type: 'table',
+                    },
+                },
+                {
+                    type: 'lens',
+                    path: 'data',
+                    transformer: {
+                        type: 'array-map',
+                        mapItems: {
+                            type: 'object-map',
+                            mapProps: {
+                                colId: {
+                                    type: 'date-serialize',
+                                },
+                            },
+                        },
+                    },
+                },
+            ],
         },
-      ],
-    },
-  }"
-></spy-select>
+    }"
+>
+</spy-select>
 ```
 
 ## Main Service
 
-With the main module, you can register any data transformer by key via the static method `withTransformers`. This method assigns the data transformer object to the `DataTransformerTypesToken`.
+With the main module, you can register any data transformer by key via the static method `withTransformers()`. This method assigns the data transformer object to the `DataTransformerTypesToken`.
 
 The main service injects all registered types from the `DataTransformerTypesToken`.
 
-Transform method finds the specific service from the `DataTransformerTypesToken` by `config.type` (from the argument) and returns an observable with data by `DataTransformer.transform`.
+`transform()` method finds the specific service from the `DataTransformerTypesToken` by `config.type` (from the argument) and returns an observable with data by `DataTransformer.transform()`.
 
 ## Data Transformer
 
@@ -75,43 +75,43 @@ Data Transformer is an Angular Service that encapsulates the algorithm of how th
 Data Transformer must implement a specific interface (`DataTransformer`) and then be registered to the Data Transformer Module via `DataTransformerModule.withTransformers()`,
 
 ```ts
-///// Module augmentation
+// Module augmentation
 import { DataTransformerConfig } from '@spryker/data-transformer';
 
 declare module '@spryker/data-transformer' {
-  interface DataTransformerRegistry {
-    'custom': CustomDataTransformerConfig;
-  }
+    interface DataTransformerRegistry {
+        'custom': CustomDataTransformerConfig;
+    }
 }
 
 export type CustomDataTransformerData = object;
 export type CustomDataTransformerDataT = unknown;
 
 export interface CustomDataTransformerConfig extends DataTransformerConfig {
-  property: unknown;
-  ...
+    property: unknown;
+    ...
 }
 
-//// Services implementation
+// Service implementation
 @Injectable({
-  providedIn: 'root',
+    providedIn: 'root',
 })
 export class CustomDataTransformerService implements 
-  DataTransformer<CustomDataTransformerData, CustomDataTransformerDataT> {
-  transform(
-    data: CustomDataTransformerData,
-    config: CustomDataTransformerConfig,
-  ): Observable<CustomDataTransformerDataT> {
-    ...
-  }
+    DataTransformer<CustomDataTransformerData, CustomDataTransformerDataT> {
+    transform(
+        data: CustomDataTransformerData,
+        config: CustomDataTransformerConfig,
+    ): Observable<CustomDataTransformerDataT> {
+        ...
+    }
 }
 
 @NgModule({
-  imports: [
-    DataTransformerModule.withTransformers({
-      custom: CustomDataTransformerService,
-    }),
-  ],
+    imports: [
+        DataTransformerModule.withTransformers({
+            custom: CustomDataTransformerService,
+        }),
+    ],
 })
 export class RootModule {}
 ```
@@ -120,25 +120,26 @@ The context in which the Data Transformer operates is determined by the local in
 
 ## Interfaces
 
-Below you can find interfaces for the Data Transformer service configuration and Data Transformer type.
+Below you can find interfaces for the Data Transformer service configuration and Data Transformer type:
 
 ```ts
 interface DataTransformerService {
-  transform(data: unknown, config: DataTransformerConfig): Observable<unknown>;
+    transform(data: unknown, config: DataTransformerConfig): Observable<unknown>;
 }
 
 interface DataTransformerConfig {
-  type: DataTransformerType;
-  // Reserved for types that may have extra configuration
-  [extraConfig: string]: unknown;
+    type: DataTransformerType;
+
+    // Reserved for types that may have extra configuration
+    [extraConfig: string]: unknown;
 }
 
 interface DataTransformer<D, DT> {
-  transform(
-    data: D,
-    config: DataTransformerConfig,
-    injector?: Injector,
-  ): Observable<DT>;
+    transform(
+        data: D,
+        config: DataTransformerConfig,
+        injector?: Injector,
+    ): Observable<DT>;
 }
 ```
 
@@ -146,17 +147,13 @@ interface DataTransformer<D, DT> {
 
 There are a few common Data Transformers that are available in the UI library as separate packages:
 
-- [pluck](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/pluck.html) - selects and returns a nested object by path via configuration.
-- [lens](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/lens.html) - updates the nested object by path using another Data Transformer set up with a configuration object.
-- [array-map](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/array-map.html) - executes another Data Transformer from the config for every object in the array.
-- [object-map](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/object-map.html) - executes another Data Transformer from the config for each object in the object.
-- [chain](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/chain.html) - executes another Data Transformer in sequence via configuration.
-- [date-parse](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-parse.html) - parses the string value as a Date ISO into the JS Date Object.
-- [date-serialize](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-serialize.html) - serializes JS Date Object into a Date ISO string.
-- [collate](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/) - sorts, filters, and paginates data based on configuration. It has extra extension points:
-  - [Filters](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/) - are services that extend the filtering. You need to register them via `CollateDataTransformer.withFilters()`. There are a few common Collate Filters that are available:
-    - [`equals`](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/equals.html)—filters values that are strictly equal.
-    - [`range`](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/range.html)—filters values that are within a number range.
-    - [`text`](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/text.html)—filters values that match a string.
-  - [Data Configurators](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/data-configurators/) - are services that allow configuring re-population data (sorting, pagination, filtering). These services are registered via `CollateDataTransformer.withConfigurators()`. There are a few common Collate Data Configurators that are available:
-    - [`table`](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/data-configurators/table.html)—integrates Table into Collate to re-populate the data.
+- [Collate](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/) - sorts, filters, and paginates data based on configuration. It has extra extension points:
+    - [Data Configurators](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/data-configurators/) - are services that allow configuring re-population data (sorting, pagination, filtering). These services are registered via `CollateDataTransformer.withConfigurators()`. There are a few common Collate Data Configurators that are available:
+    - [Filters](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/) - are services that extend the filtering. You need to register them via `CollateDataTransformer.withFilters()`. There are a few common Collate Filters that are available:
+- [Array-map](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/array-map.html) - executes another Data Transformer from the config for every object in the array.
+- [Chain](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/chain.html) - executes another Data Transformer in sequence via configuration.
+- [Date-parse](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-parse.html) - parses the string value as a Date ISO into the JS Date Object.
+- [Date-serialize](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-serialize.html) - serializes JS Date Object into a Date ISO string.
+- [Lens](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/lens.html) - updates the nested object by path using another Data Transformer set up with a configuration object.
+- [Object-map](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/object-map.html) - executes another Data Transformer from the config for each object in the object.
+- [Pluck](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/pluck.html) - selects and returns a nested object by path via configuration.

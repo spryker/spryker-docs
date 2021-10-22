@@ -75,7 +75,7 @@ entries:
     - title: Redis Configuration
       url: /docs/scos/dev/setup/redis-configuration.html
     - title: Install module structure and configuration
-      url: /docs/scos/dev/setup/install-module-structure-and-configuration.htm
+      url: /docs/scos/dev/setup/install-module-structure-and-configuration.html
   - title: Feature walkthroughs
     nested:
     - title: Category Management feature walkthrough

@@ -10,7 +10,7 @@ redirect_from:
 related:
   - title: Customer Account Management + Order Management feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/customer-account-management-order-management-feature-integration.html
-  - title: Glue API- Customer Account Management feature integration
+  - title: Glue API - Customer Account Management feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-customer-account-management-feature-integration.html
 ---
 

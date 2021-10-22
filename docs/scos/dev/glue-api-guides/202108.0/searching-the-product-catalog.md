@@ -12,7 +12,7 @@ redirect_from:
 related:
   - title: Catalog feature overview
     link: docs/scos/user/features/page.version/catalog-feature-overview.html
-  - title: Glue API- Catalog feature integration
+  - title: Glue API - Catalog feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-catalog-feature-integration.html
 ---
 

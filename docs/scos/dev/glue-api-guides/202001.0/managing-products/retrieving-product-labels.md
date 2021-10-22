@@ -10,7 +10,7 @@ redirect_from:
 related:
   - title: Product Labels
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-labels/product-labels.html
-  - title: Glue API- Promotions & Discounts feature integration
+  - title: Glue API - Promotions & Discounts feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-promotions-and-discounts-feature-integration.html
 ---
 

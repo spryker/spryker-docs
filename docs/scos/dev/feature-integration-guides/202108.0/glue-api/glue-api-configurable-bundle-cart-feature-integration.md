@@ -1,6 +1,6 @@
 ---
 title: Glue API - Configurable Bundle + Cart feature integration
-description: Learn how to integrate the Glue API- Configurable Bundle + Cart feature into a Spryker project.
+description: Learn how to integrate the Glue API - Configurable Bundle + Cart feature into a Spryker project.
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-configurable-bundle-cart-feature-integration
 originalArticleId: 684a7c95-fc8c-4d74-9214-5c5a30dec4a3
@@ -23,7 +23,7 @@ To start the feature integration, overview and install the necessary features:
 | FEATURE | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Configurable Bundle | {{page.version}} | [Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/configurable-bundle-feature-integration.html) | 
+| Configurable Bundle | {{page.version}} | [Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/configurable-bundle-feature-integration.html) |
 |Cart |  {{page.version}} | [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
@@ -88,8 +88,8 @@ Make sure that the following changes have been applied in the transfer objec
 | CustomerTransfer | class | created | src/Generated/Shared/Transfer/CustomerTransfer |
 | ConfiguredBundleTransfer | class | created | src/Generated/Shared/Transfer/ConfiguredBundleTransfer |
 | ConfiguredBundleItemTransfer | class | created | src/Generated/Shared/Transfer/ConfiguredBundleItemTransfer |
-| ConfigurableBundleTemplateTransfer | class | created | src/Generated/Shared/Transfer/ConfigurableBundleTemplateTransfer | 
-| ConfigurableBundleTemplateSlotTransfer | class | created | src/Generated/Shared/Transfer/ConfigurableBundleTemplateSlotTransfer| 
+| ConfigurableBundleTemplateTransfer | class | created | src/Generated/Shared/Transfer/ConfigurableBundleTemplateTransfer |
+| ConfigurableBundleTemplateSlotTransfer | class | created | src/Generated/Shared/Transfer/ConfigurableBundleTemplateSlotTransfer|
 | RestItemsAttributesTransfer | class | created | src/Generated/Shared/Transfer/RestItemsAttributesTransfer |
 | RestConfiguredBundleTransfer | class | created | src/Generated/Shared/Transfer/RestConfiguredBundleTransfer |
 | RestConfiguredBundleItemTransfer | class | created | src/Generated/Shared/Transfer/RestConfiguredBundleItemTransfer |
@@ -106,8 +106,8 @@ Make sure that the following changes have been applied in the transfer objec
 | CompanyUserTransfer | class | created | src/Generated/Shared/Transfer/CompanyUserTransfer |
 | QuoteCriteriaFilterTransfer | class | created | src/Generated/Shared/Transfer/QuoteCriteriaFilterTransfer |
 | QuoteCollectionTransfer | class | created | src/Generated/Shared/Transfer/QuoteCollectionTransfer |
-| CurrencyTransfer | class | created | src/Generated/Shared/Transfer/CurrencyTransfer | 
-| StoreTransfer | class | created | src/Generated/Shared/Transfer/StoreTransfer| 
+| CurrencyTransfer | class | created | src/Generated/Shared/Transfer/CurrencyTransfer |
+| StoreTransfer | class | created | src/Generated/Shared/Transfer/StoreTransfer|
 
 
 {% endinfo_block %}
@@ -121,7 +121,7 @@ Activate the following plugins:
 | --- | --- | --- | --- |
 | ConfiguredBundlesResourceRoutePlugin | Provides the `configured-bundles` resource route. | None | Spryker\Glue\ConfigurableBundleCartsRestApi\Plugin\GlueApplication |
 | GuestConfiguredBundlesResourceRoutePlugin |Provides the `guest-configured-bundles` resource route. | None | Spryker\Glue\ConfigurableBundleCartsRestApi\Plugin\GlueApplication |
-| ConfiguredBundleItemsAttributesMapperPlugin | Maps the additional information from `ItemTransfer` to `RestItemsAttributesTransfer`. | None | Spryker\Glue\ConfigurableBundleCartsRestApi\Plugin\CartsRestApi | 
+| ConfiguredBundleItemsAttributesMapperPlugin | Maps the additional information from `ItemTransfer` to `RestItemsAttributesTransfer`. | None | Spryker\Glue\ConfigurableBundleCartsRestApi\Plugin\CartsRestApi |
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
@@ -186,12 +186,12 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 {% info_block warningBox "Verification" %}
 
 1.  Create a guest cart with a configurable bundle.
-    
+
 2.  Retrieve the guest cart with the items included by sending the request: `https://glue.mysprykershop.com/guest-carts/:uuid?include=guest-cart-items`.  
     Make sure that the endpoint returns the sections: `data.attributes.items.configuredBundle` and `data.attributes.items.configuredBundleItem`.
-    
+
 3.  Create a cart with a configurable bundle.
-    
+
 4.  Retrieve the guest cart with the items included by sending the request: `https://glue.mysprykershop.com/carts/:uuid?include=items`.  
     Make sure that the endpoint returns the sections: `data.attributes.items.configuredBundle` and `data.attributes.items.configuredBundleItem`.
 
@@ -207,5 +207,3 @@ Integrate the following related features:
 | --- | --- | --- |
 | Glue API: Configurable Bundle Feature | ✓ | [Glue API: Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-feature-integration.html) |
 | Glue API: Configurable Bundle + Product Feature | ✓ |  [Glue API: Configurable Bundle + Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-product-feature-integration.html) |
-
-

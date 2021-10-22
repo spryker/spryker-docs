@@ -20,15 +20,15 @@ The following diagram illustrates the dependencies between the modules for the *
 
 | MODULE     | DESCRIPTION                |
 |------------|----------------------------|
-| MerchantProductWishlist | Provides ability to work with merchant product in wishlist |
-| MerchantProductOfferWishlist | Provides ability to work with product offers in wishlist |
-| MerchantProductOfferWishlistRestApi | Provides ability to manage product offers for wishlist Rest API |
-| Wishlist | Provides infrastructure and functionality to handle multiple wishlists for a customer account |
-| WishlistExtension | Provides plugin interfaces for extending Wishlist module functionality |
+| MerchantProductWishlist | Provides ability to work with merchant product in the wishlist. |
+| MerchantProductOfferWishlist | Provides ability to work with the product offers in the wishlist. |
+| MerchantProductOfferWishlistRestApi | Provides ability to manage product offers for wishlist Rest API. |
+| Wishlist | Provides infrastructure and functionality to handle multiple wishlists for customer account. |
+| WishlistExtension | Provides plugin interfaces for extending Wishlist module functionality. |
 
 ## Domain model
 
-The following diagram illustrates domain model of *Marketplace Wishlist* feature:
+The following diagram illustrates the domain model of the *Marketplace Wishlist* feature:
 
 ![Entity diagram](https://confluence-connect.gliffy.net/embed/image/6d5e9f9f-f841-4877-bf65-7fdd38d6d49b.png?utm_medium=live&utm_source=confluence)
 

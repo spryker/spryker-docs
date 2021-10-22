@@ -121,7 +121,7 @@ PHPStan has been updated with config file inheritance. From now on, only new or 
 ### Spryk: Code Generation Tool
 With this release, Spryker introduces a new code generator called Spryk. It helps with the generation of required boilerplate code. Spryk works for new and existing code and supports multiple scenarios or definitions. Some scenarios are complex and implemented as independent Spryk definitions linked together, allowing a developer to run code generation for the whole scenario or only for a part of it.
 
-**Documentation**: [Spryk](/docs/scos/dev/sdk/201903.0/spryk-code-generator.html).
+**Documentation**: [Spryk](/docs/scos/dev/sdk/201903.0/development-tools/spryk-code-generator.html).
 
 ## Spryker Glue REST API
 ### Product Relations

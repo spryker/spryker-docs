@@ -31,7 +31,7 @@ Make sure that the following modules have been installed:
 
 | MODULE  | EXPECTED DIRECTORY  |
 | ------------- | --------------- |
-| ProductOfferMerchantPortalGui | spryker/product-offer-merchant-portal-gui |
+| ProductOfferMerchantPortalGui | vendor/spryker/product-offer-merchant-portal-gui |
 
 {% endinfo_block %}
 
@@ -66,8 +66,7 @@ Make sure that the following changes have been applied in transfer objects:
 | ProductOfferCollection.pagination | property | Created | src/Generated/Shared/Transfer/ProductOfferCollectionTransfer |
 | ProductOfferCriteria.merchantIds | property | Created | src/Generated/Shared/Transfer/ProductOfferTransfer |
 | ProductOfferTableCriteria | class | Created | src/Generated/Shared/Transfer/ProductOfferTableCriteriaTransfer |
-| ProductTableCriteria.filterHasOffers | property | Created | src/Generated/Shared/Transfer/ProductTableCriteriaTransfer |
-| ProductTableCriteria.merchantReference | property | Created | src/Generated/Shared/Transfer/ProductTableCriteriaTransfer |
+| ProductTableCriteria | class | Created | src/Generated/Shared/Transfer/ProductTableCriteriaTransfer |
 | Item.merchantSku | property | Created | src/Generated/Shared/Transfer/ItemTransfer |
 
 {% endinfo_block %}

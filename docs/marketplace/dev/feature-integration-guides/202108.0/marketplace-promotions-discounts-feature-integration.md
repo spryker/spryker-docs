@@ -1,6 +1,6 @@
 ---
 title: Marketplace Promotions & Discounts feature integration
-last_updated: Jan 04, 2021
+last_updated: Sep 09, 2021
 description: This document describes the process how to integrate the Marketplace Promotions & Discounts feature into a Spryker project.
 template: feature-integration-guide-template
 ---
@@ -26,7 +26,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-promotions-discounts --update-with-dependencies
+composer require spryker-feature/marketplace-promotions-discounts:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -35,44 +35,18 @@ Make sure that the following modules were installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | - | - |
-| DiscountMerchantSalesOrder    | spryker/discount-merchant-sales-order     |
-| DiscountMerchantSalesOrderGui | spryker/discount-merchant-sales-order-gui |
+| DiscountMerchantSalesOrder    | vendor/spryker/discount-merchant-sales-order     |
+| DiscountMerchantSalesOrderGui | vendor/spryker/discount-merchant-sales-order-gui |
 
 {% endinfo_block %}
 
-### 2) Set up the transfer objects
+### 2) Set up configuration
 
-Generate transfer changes:
-
-```bash
-console transfer:generate
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that the following changes were applied in transfer objects:
-
-| TRANSFER  | TYPE  | EVENT | PATH |
-| - | - | - | - |
-| MerchantOrder.merchantOrderItems | attribute | created | src/Generated/Shared/Transfer/MerchantOrderTransfer |
-
-{% endinfo_block %}
-
-### 3) Zed translations
-
-Generate a new translation cache for Zed:
-
-```bash
-console translator:generate-cache
-```
-
-### 4) Set up configuration
-
-Change the following the configuration to enable the feature:
+Add the following configuration:
 
 | CONFIGURATION | SPECIFICATION | NAMESPACE |
-| - | - | - |
-| MerchantSalesOrderMerchantUserGuiConfig   ::getMerchantSalesOrderDetailExternalBlocksUrls | Adds Merchant discount separation while viewing Merchant Order. | \Pyz\Zed\MerchantSalesOrderMerchantUserGui\MerchantSalesOrderMerchantUserGuiConfig |
+| ------------- | ------------- | --------- |
+| MerchantSalesOrderMerchantUserGuiConfig::getMerchantSalesOrderDetailExternalBlocksUrls()  | Introduces list of urls of order detail page configuration. | src/Pyz/Zed/MerchantSalesOrderMerchantUserGui/MerchantSalesOrderMerchantUserGuiConfig.php |
 
 **src/Pyz/Zed/MerchantSalesOrderMerchantUserGui/MerchantSalesOrderMerchantUserGuiConfig.php**
 
@@ -95,6 +69,32 @@ class MerchantSalesOrderMerchantUserGuiConfig extends SprykerMerchantSalesOrderM
         ];
     }
 }
+```
+
+### 3) Set up the transfer objects
+
+Generate transfer changes:
+
+```bash
+console transfer:generate
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the following changes were applied in transfer objects:
+
+| TRANSFER  | TYPE  | EVENT | PATH |
+| - | - | - | - |
+| CalculatedDiscount.fkSalesOrderItem | property | created | src/Generated/Shared/Transfer/CalculatedDiscountTransfer |
+
+{% endinfo_block %}
+
+### 4) Add translations
+
+Generate a new translation cache for Zed:
+
+```bash
+console translator:generate-cache
 ```
 
 ### 5) Set up behavior

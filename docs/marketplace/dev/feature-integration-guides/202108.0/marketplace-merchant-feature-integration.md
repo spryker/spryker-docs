@@ -485,7 +485,7 @@ This step publishes tables on change (create, edit) to `spy_merchant_search` and
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
 ```php
-   <?php
+<?php
 
 namespace Pyz\Zed\Publisher;
 
@@ -1043,15 +1043,20 @@ composer require spryker-feature/marketplace-merchant: "{{page.version}}" --upda
 | MODULE | EXPECTED DIRECTORY |
 |-|-|
 | MerchantProfileWidget | vendor/spryker-shop/merchant-profile-widget |
+| MerchantWidget | vendor/spryker-shop/merchant-widget |
 | MerchantPage | vendor/spryker-shop/merchant-page |
 
-### 2) Add Yves translations
+### 2) Add translations
+
 Add Yves translations:
 
 1. Append glossary according to your configuration:
 
 **data/import/common/common/glossary.csv**
+
 ```
+merchant.sold_by,Sold by,en_US
+merchant.sold_by,Verkauft durch,de_DE
 merchant_profile.email,Email Address,en_US
 merchant_profile.email,Email,de_DE
 merchant_profile.address,Address,en_US
@@ -1082,7 +1087,56 @@ Make sure that the configured data has been added to the `spy_glossary` table in
 
 {% endinfo_block %}
 
-### 3) Set up behavior
+### 3) Set up widgets
+
+Register the following plugins to enable widgets:
+
+| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
+| -------------- | --------------- | ------ | ---------------- |
+| SoldByMerchantWidget      | Shows the list of the offers with their prices for a concrete product. |           | SprykerShop\Yves\MerchantWidget\Widget |
+
+**src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\ShopApplication;
+
+use SprykerShop\Yves\MerchantWidget\Widget\SoldByMerchantWidget;
+use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
+
+class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
+{
+    /**
+     * @return string[]
+     */
+    protected function getGlobalWidgets(): array
+    {
+        return [
+            SoldByMerchantWidget::class,
+        ];
+    }
+}
+```
+
+Enable Javascript and CSS changes:
+
+```bash
+console frontend:yves:build
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the following widgets were registered:
+
+| MODULE | TEST |
+| ----------------- | ----------------- |
+| SoldByMerchantWidget | Go through the checkout process with an offer, and you will see the sold by text and merchant data throughout the checkout process. |
+
+{% endinfo_block %}
+
+### 4) Set up behavior
+
 To set up behavior:
 
 1. Enable the following behaviors by registering the plugins:

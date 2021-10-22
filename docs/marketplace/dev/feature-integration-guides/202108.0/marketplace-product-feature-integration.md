@@ -152,7 +152,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             new MerchantUpdatePublisherPlugin(),
             new MerchantMerchantProductSearchWritePublisherPlugin(),
             new MerchantProductSearchWritePublisherPlugin(),
-        ]
+        ];
     }
 }
 ```
@@ -283,7 +283,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 
         return $dataExpanderPlugins;
     }
-    
+
     /**
      * @return \Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductAbstractMapExpanderPluginInterface[]
      */
@@ -546,7 +546,7 @@ Register the following plugins to enable widgets:
 | PLUGIN  | DESCRIPTION | Prerequisites | NAMESPACE |
 | ----------- | ----------- | ---------- | --------- |
 | MerchantProductWidget | Displays alternative product. |  | SprykerShop\Yves\MerchantProductWidget\Widget |
-| ProductSoldByMerchantWidget | Displays list of products for replacement. |  | SprykerShop\Yves\MerchantProductWidget\Widget |
+| ProductSoldByMerchantWidget | Displays merchant product. |  | SprykerShop\Yves\MerchantProductWidget\Widget |
 
 ```php
 <?php
@@ -554,7 +554,7 @@ Register the following plugins to enable widgets:
 namespace Pyz\Yves\ShopApplication;
 
 use SprykerShop\Yves\MerchantProductWidget\Widget\MerchantProductWidget;
-use SprykerShop\Yves\MerchantWidget\Widget\SoldByMerchantWidget;
+use SprykerShop\Yves\MerchantProductWidget\Widget\ProductSoldByMerchantWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
@@ -565,8 +565,8 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     protected function getGlobalWidgets(): array
     {
         return [
-            SoldByMerchantWidget::class,
             MerchantProductWidget::class,
+            ProductSoldByMerchantWidget::class,
         ];
     }
 }
@@ -619,7 +619,6 @@ Enable the following behaviors by registering the plugins:
 | ----------------- | ---------------------- | ------------ | -------------------- |
 | MerchantProductMerchantNameSearchConfigExpanderPlugin | Expands facet configuration with merchant name filter.       |           | Spryker\Client\MerchantProductSearch\Plugin\Search          |
 | ProductViewMerchantProductExpanderPlugin              | Expands ProductView transfer object with merchant reference. |           | Spryker\Client\MerchantProductStorage\Plugin\ProductStorage |
-| MerchantProductPreAddToCartPlugin                     | Sets merchant reference to item transfer on add to cart.     |           | SprykerShop\Yves\MerchantProductWidget\Plugin\CartPage      |
 
 **src/Pyz/Client/Search/SearchDependencyProvider.php**
 
@@ -713,37 +712,6 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 Make sure that the merchant product is selected on the product details page by default.
 
 {% endinfo_block %}
-
-**src/Pyz/Yves/CartPage/CartPageDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Yves\CartPage;
-
-use SprykerShop\Yves\CartPage\CartPageDependencyProvider as SprykerCartPageDependencyProvider;
-use SprykerShop\Yves\MerchantProductWidget\Plugin\CartPage\MerchantProductPreAddToCartPlugin;
-
-class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
-{
-    /**
-     * @return \SprykerShop\Yves\CartPageExtension\Dependency\Plugin\PreAddToCartPluginInterface[]
-     */
-    protected function getPreAddToCartPlugins(): array
-    {
-        return [
-            new MerchantProductPreAddToCartPlugin(),
-        ];
-    }
-}
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure when you add merchant product to cart, it has `merchantReference` set. (It can be checked in the `spy_quote` table).
-
-{% endinfo_block %}
-
 
 ## Related features
 

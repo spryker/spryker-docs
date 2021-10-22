@@ -1,15 +1,18 @@
 ---
 title: Actions HTTP
-description: This article provides details about the Actions HTTP service in the Components Library.
+description: This document provides details about the Actions HTTP service in the Components Library.
 template: concept-topic-template
 ---
 
-This article provides details about the Actions HTTP service in the Components Library.
+This document explains the Actions HTTP service in the Components Library.
 
 ## Overview
 
 Actions HTTP is an Angular Service that renders content via the HTML request.
-Check out this example below to see how to use Actions HTTP service.
+
+Check out an example usage of the Actions HTTP.
+
+Service configuration:
 
 - `type` - an action type.  
 - `url` - an action request URL.  
@@ -17,37 +20,41 @@ Check out this example below to see how to use Actions HTTP service.
 
 ```html
 <spy-button-action
-  [action]="{
-    type: 'http',
-    url: '/html-request',
-    method: 'GET',
-  }"
+    [action]="{
+        type: 'http',
+        url: '/html-request',
+        method: 'GET',
+    }"
 >
-  ...
 </spy-button-action>
+```
+
+## Service registration
+
+Register the service:
+
+```ts
+@NgModule({
+    imports: [
+        ActionsModule.withActions({
+            http: HttpActionHandlerService,
+        }),
+    ],
+})
+export class RootModule {}
 ```
 
 ## Interfaces
 
-Below you can find interfaces for the Actions HTTP.
+Below you can find interfaces for the Actions HTTP:
 
 ```ts
 export interface HttpActionConfig extends ActionConfig {
-  url: string;
-  method?: string;
+    url: string;
+    method?: string;
 }
 
 export interface HttpActionResponse {
-  actions?: ActionConfig[];
+    actions?: ActionConfig[];
 }
-
-// Service registration
-@NgModule({
-  imports: [
-    ActionsModule.withActions({
-      http: HttpActionHandlerService,
-    }),
-  ],
-})
-export class RootModule {}
 ```

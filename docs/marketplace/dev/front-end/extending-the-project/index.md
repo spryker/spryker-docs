@@ -1,6 +1,6 @@
 ---
 title: Extending the project
-description: This articles provides details how to create new module with application
+description: This document provides details on how to extend the new project.
 template: howto-guide-template
 ---
 
@@ -33,20 +33,20 @@ To extend/customize or override the default configuration, you must add a module
 ```ts
 @NgModule({
     imports: [
-      BrowserModule,
-      BrowserAnimationsModule,
-      HttpClientModule,
-      DefaultMerchantPortalConfigModule,
+        BrowserModule,
+        BrowserAnimationsModule,
+        HttpClientModule,
+        DefaultMerchantPortalConfigModule,
 
-      /// Extend module on the project level
-      TableModule.withActions({
-          action_name: SpecificActionService,
-      })
+        // Extend module on the project level
+        TableModule.withActions({
+            action_name: SpecificActionService,
+        })
 
-      /// Customize module on the project level
-      TableModule.withActions({
-          already_used_action_name: ToOverrideActionService,
-      })
+        // Customize module on the project level
+        TableModule.withActions({
+            already_used_action_name: ToOverrideActionService,
+        })
     ],
     providers: [appBootstrapProvider()],
 })
@@ -78,17 +78,17 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
-  imports: [
-    WebComponentsModule.withComponents([
-      DashboardComponent,
-      DashboardCardComponent,
-      ChipsComponent,
-    ]),
-    ChipsModule,
-    DashboardModule,
-    DashboardCardModule,
-  ],
-  providers: [],
+    imports: [
+        WebComponentsModule.withComponents([
+            DashboardComponent,
+            DashboardCardComponent,
+            ChipsComponent,
+        ]),
+        ChipsModule,
+        DashboardModule,
+        DashboardCardModule,
+    ],
+    providers: [],
 })
 export class ComponentsModule {}
 ```
@@ -101,8 +101,8 @@ import { ChipsComponent, ChipsModule } from '@spryker/chips';
 import { WebComponentsModule } from '@spryker/web-components';
 // Import from vendor
 import {
-  DashboardComponent,
-  DashboardModule,
+    DashboardComponent,
+    DashboardModule,
 } from '@mp/dashboard-merchant-portal-gui';
 
 import { OverridedDashboardCardComponent } from './overrided-dashboard-card/overrided-dashboard-card.component';
@@ -112,24 +112,24 @@ import { NewComponent } from './new-component/new-component.component';
 import { NewModule } from './new-module/new-module.module';
 
 @NgModule({
-  imports: [
-    WebComponentsModule.withComponents([
-      DashboardComponent,
-      ChipsComponent,
+    imports: [
+        WebComponentsModule.withComponents([
+            DashboardComponent,
+            ChipsComponent,
 
-      // Project
-      OverridedDashboardCardComponent,
-      NewComponent,
-    ]),
+            // Project
+            OverridedDashboardCardComponent,
+            NewComponent,
+        ]),
 
-    ChipsModule,
-    DashboardModule,
+        ChipsModule,
+        DashboardModule,
 
-    // Project
-    OverridedDashboardCardModule,
-    NewModule,
-  ],
-  providers: [],
+        // Project
+        OverridedDashboardCardModule,
+        NewModule,
+    ],
+    providers: [],
 })
 export class ComponentsModule {}
 ```
@@ -147,13 +147,13 @@ import { NewComponent } from './new-component/new-component.component';
 import { NewModule } from './new-module/new-module.module';
 
 @NgModule({
-  imports: [
-    CoreComponentsModule,
-    WebComponentsModule.withComponents([NewComponent]),
+    imports: [
+        CoreComponentsModule,
+        WebComponentsModule.withComponents([NewComponent]),
 
-    NewModule,
-  ],
-  providers: [],
+        NewModule,
+    ],
+    providers: [],
 })
 export class ComponentsModule {}
 ```
@@ -174,7 +174,7 @@ It is also possible to extend the vendor twig blocks. You need to extend the ven
     {{ 'Title' | trans }}
 {% endblock %}
 
-any other content
+// Any other content
 {% endraw %}
 ```
 

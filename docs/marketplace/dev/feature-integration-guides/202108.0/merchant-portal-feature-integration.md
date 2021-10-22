@@ -39,12 +39,12 @@ $ yarn mp:build:production
 
 ## Installing back end
 
-Start Merchant Portal integration from integrating the basic features:
+Install the needed packages for the Merchant Portal with dependencies, see the available list [here](https://github.com/spryker/?q=merchant-portal-gui)
 
 | NAME | VERSION | LINK |
 | --------- | ----- | ---------- |
-| Spryker Core         | dev-master | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Marketplace Merchant Portal Core | master      | [Marketplace Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-merchant-portal-core-feature-integration.html) |
+| Spryker Core         | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Marketplace Merchant Portal Core | {{page.version}}  | [Marketplace Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-merchant-portal-core-feature-integration.html) |
 
 ### Merchant Portal users.
 
@@ -116,7 +116,7 @@ Run the following commands to import data:
 
 ```bash
 console data:import merchant
-console data:import:merchant-user
+console data:import merchant-user
 ```
 
 ### 3) ACL adjustments.
@@ -325,7 +325,7 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that all configured items are present in Merchant Portal Sidebar and routes you accordingly. 
+Make sure that all configured items are present in Merchant Portal Sidebar and route you accordingly. 
 
 {% endinfo_block %}
 

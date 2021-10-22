@@ -31,7 +31,7 @@ To apply a discount voucher to a guest cart, send the request:
 `POST`**/guest-carts/*{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}*/vouchers**
 ***
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart to apply the discount voucher to. To get it, [Create a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart) or [Retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart).  |
 
@@ -42,14 +42,14 @@ To apply a discount voucher to a guest cart, send the request:
 | X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | Guest user's unique identifier. The value should correspond to the value used when [creating the guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart). |
 
 
-| Query parameter | Description | Possible values |
+| QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | Include | Adds resource relationships to the request.	 | vouchers |
 
 
-<details open>
+<details>
     <summary markdown='span'>Request sample</summary>
-    
+
 `POST https://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers`
 
 ```json
@@ -65,9 +65,9 @@ To apply a discount voucher to a guest cart, send the request:
 
 </details>
 
-<details open>
+<details>
     <summary markdown='span'>Request sample with discount voucher information</summary>
-    
+
 `POST https://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers?include=vouchers`
 
 ```json
@@ -83,16 +83,16 @@ To apply a discount voucher to a guest cart, send the request:
 
 </details>
 
-| Attribute | Type | Required | Description |
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | code | String | yes | Unique identifier of a discount voucher to apply.  |
 
 
 ### Response
 
-<details open>
+<details>
     <summary markdown='span'>Response sample</summary>
-    
+
 ```json
 {
     "data": {
@@ -127,9 +127,9 @@ To apply a discount voucher to a guest cart, send the request:
 
 </details>
 
-<details open>
+<details>
     <summary markdown='span'>Response sample with discount voucher information</summary>
-    
+
 ```json
 {
     "data": {
@@ -190,10 +190,10 @@ To apply a discount voucher to a guest cart, send the request:
 ```
 
 </details>
-    
 
 
-| Included resource | Attribute | TYPE | DESCRIPTION |
+
+| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
 | vouchers | displayName | String | Discount name displayed on the Storefront. |
 | vouchers | amount | Integer | Amount of the provided discount. |
@@ -213,7 +213,7 @@ To remove a discount voucher, send the request:
 `DELETE`**/guest-carts/*{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}*/vouchers/*{% raw %}{{{% endraw %}voucher_id{% raw %}}}{% endraw %}***
 ***
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart to remove the discount voucher from. To get it, [Retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart).  |
 | ***{% raw %}{{{% endraw %}voucher_id{% raw %}}}{% endraw %}*** | Unique identifier of the voucher to remove. To get it, [Retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart) with the `vouchers` resource included.  |
@@ -235,13 +235,11 @@ If the voucher is deleted successfully, the endpoints returns the `204 No Data` 
 
 ## Possible Errors
 
-| Status | Reason |
+| CODE | REASON |
 | --- | --- |
 | 101 | Cart with the specified ID is not found. |
 | 109 | `X-Anonymous-Customer-Unique-Id` header is empty. |
 | 3301 | Voucher with the specified ID was not found. |
-| 3302 | Incorrect voucher code or the voucher could not be applied.| 
+| 3302 | Incorrect voucher code or the voucher could not be applied.|
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
-
-

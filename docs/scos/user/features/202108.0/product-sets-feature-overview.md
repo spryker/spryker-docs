@@ -23,24 +23,21 @@ When browsing a product set, a Storefront user can select variants per product i
 
 ![product-set-actions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Sets/product-set-actions.png)
 
-
 A Back Office user can define the following:
 * The order of products in a set displayed on the Storefront.
 * The order of products sets displayed on the Storefront. It's relevant if you have multiple product sets on the same page.
 * The unique product set URL.
 
-
 A Back Office user can add a product sets to any page by [creating a product set content item](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html) and [adding it to CMS pages and blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).
 
 
 For more details on product sets, check the video:
-<iframe src="https://spryker.wistia.com/medias/9co7uw35a9" title="Product Set" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>
 
-
+{% wistia 9co7uw35a9 720 480 %}
 
 ### Current constraints
-Currently, the feature has the following functional constraints which are going to be resolved in the future:
 
+Currently, the feature has the following functional constraints which are going to be resolved in the future:
 * Product sets are shared across all the stores of a project.
 * You cannot restrict availability of a product set to a store.
 

@@ -10,51 +10,55 @@ redirect_from:
   - /docs/en/search-widget-for-concrete-products-integration
 ---
 
-## Install Feature Core
+## Install feature core
+
 ### Prerequisites
+
 To start the feature integration, overview and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Cart | master |
-| Product | master |
-| Non-splittable Products (optional) | master |
+| Cart | {{page.version}} |
+| Product | {{page.version}} |
+| Non-splittable Products (optional) | {{page.version}} |
 
-### 1) Check the Installed Modules
+### 1) Check the installed modules
 
-<section contenteditable="false" class="warningBox"><div class="content">
+{% info_block warningBox “Verification” %}
 
-**Verification**    
 Make sure that the following modules were installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-| `Cart` | `vendor/spryker/cart` |
-| `Product` | `vendor/spryker/product` |
-| `ProductQuantity` (optional) | `vendor/spryker/product-quantity` |
-| `ProductSearchWidget` | `vendor/spryker-shop/product-search-widget` |
-</div></section>
+| Cart | vendor/spryker/cart |
+| Product | vendor/spryker/product |
+| ProductQuantity (optional) | vendor/spryker/product-quantity |
+| ProductSearchWidget | vendor/spryker-shop/product-search-widget |
 
-### 2) Set up Transfer Objects
+{% endinfo_block %}
+
+### 2) Set up transfer objects
+
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
 console transfer:generate
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
+{% info_block warningBox “Verification” %}
 
-**Verification**
 Make sure that the following changes are present in the transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
-| `CartChangeTransfer` | class | created | `src/Generated/Shared/Transfer/CartChangeTransfer` |
-| `ItemTransfer` | class | created |`src/Generated/Shared/Transfer/ItemTransfer`  |
-| `MessageTransfer` | class | created | `src/Generated/Shared/Transfer/MessageTransfer` |
-</div></section>
+| CartChangeTransfer | class | created | src/Generated/Shared/Transfer/CartChangeTransfer |
+| ItemTransfer | class | created |src/Generated/Shared/Transfer/ItemTransfer |
+| MessageTransfer | class | created | src/Generated/Shared/Transfer/MessageTransfer |
 
-### 3) Add Translations
+{% endinfo_block %}
+
+### 3) Add translations
+
 Append glossary according to your language configuration:
 
 **src/data/import/glossary.csv**
@@ -81,7 +85,7 @@ product-quantity.notification.quantity.max.failed,Die bestellte Anzahl erfüllt 
 product-quantity.notification.quantity.interval.failed,The ordered quantity was adjusted to the next possible quantity for the article because quantity step is %step%.,en_US
 product-quantity.notification.quantity.interval.failed,Die bestellte Anzahl erfüllt nicht die Anforderungen für dieses Produkt. Intervallgröße ist %step%.,de_DE
 ```
-    
+
 Run the following console command to import data:
 
 ```bash
@@ -89,15 +93,18 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that in the database the configured data are added to the `spy_glossary` table.
+
 {% endinfo_block %}
 
-### 4) Set up Widgets
+### 4) Set up widgets
+
 Enable global widgets:
 
-| Widget | Description | Namespace |
+| WIDGET | DESCRIPTION | NAMESPACE |
 | --- | --- | --- |
-| `ProductConcreteAddWidget` | Provides a form with the product concrete search and quantity inputs to add the concrete products to cart. | `SprykerShop\Yves\ProductSearchWidget\Widget` |
+| ProductConcreteAddWidget | Provides a form with the product concrete search and quantity inputs to add the concrete products to cart. | SprykerShop\Yves\ProductSearchWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -123,23 +130,25 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-<section contenteditable="false" class="..."><div class="content">
-    
-**Verification**
+{% info_block warningBox “Verification” %}
+
 Make sure that the following widgets were registered:
 
-| Module | Test |
+| MODULE | TEST |
 | --- | --- |
-| `ProductConcreteAddWidget` | Go to a cart page. You should see the form with the product search widget, quantity input, and add button. |
-</div></section>
+| ProductConcreteAddWidget | Go to a cart page. You should see the form with the product search widget, quantity input, and add button. |
 
-### 5) Set up Behavior
-#### Adjust Concrete Product Quantity
+{% endinfo_block %}
+
+### 5) Set up behavior
+
+#### Adjust concrete product quantity
+
 Add the following plugins to your project:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `CartChangeTransferQuantityNormalizerPlugin` | The plugin is responsible for adjusting concrete products quantity and adding notification messages about that. | `ProductQuantity` and `ProductQuantityStorage` modules should be installed. | `Spryker\Zed\ProductQuantity\Communication\Plugin\Cart\CartChangeTransferQuantityNormalizerPlugin` |
+| CartChangeTransferQuantityNormalizerPlugin | The plugin is responsible for adjusting concrete products quantity and adding notification messages about that. | `ProductQuantity` and `ProductQuantityStorage` modules should be installed. | Spryker\Zed\ProductQuantity\Communication\Plugin\Cart\CartChangeTransferQuantityNormalizerPlugin |
 
 **src/Pyz/Zed/Cart/CartDependencyProvider.php**
 

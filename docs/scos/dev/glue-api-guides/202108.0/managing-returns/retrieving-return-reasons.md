@@ -34,7 +34,7 @@ Request sample :  `GET https://glue.mysprykershop.com/return-reasons`
 ## Response
 
 
-<details open>
+<details>
     <summary markdown='span'>Response sample</summary>
     
 ```json
@@ -79,7 +79,7 @@ Request sample :  `GET https://glue.mysprykershop.com/return-reasons`
     
 </details>
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | reason | String | Predefined return reason. |
 

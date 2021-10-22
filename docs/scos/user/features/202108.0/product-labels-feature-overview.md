@@ -19,8 +19,7 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-labels/managing-product-labels.html
 ---
 
-The Product Label feature enables product catalog managers to highlight the desired products by adding a special type of information - product labels.
-
+The _Product Label_ feature enables product catalog managers to highlight the desired products by adding a special type of information—product labels.
 
 ## Product label
 
@@ -28,16 +27,13 @@ A *product label* is a sales-related piece of information conveying a message ab
 
 The product labels are applied to products to be displayed on their product cards and product details pages.
 
-<details open>
-
-<summary markdown='span'>Product label on a product card—Storefront</summary>
+<details><summary markdown='span'>Product label on a product card—Storefront</summary>
 
 ![product label on product card](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/product-label-on-product-card.png)
 
 </details>
 
- <details open>
-<summary markdown='span'>Product label on a product details page - Storefront</summary>
+<details><summary markdown='span'>Product label on a product details page - Storefront</summary>
 
 ![product label on product details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/product-label-on-product-details-page.png)
 
@@ -49,19 +45,21 @@ A developer can create [dynamic product labels](#dynamic-product-label).
 
 
 ## Dynamic product label
-*Dynamic product label* is a product label that follows the condition rules defined on a code level. Unlike the regular product label, the dynamic product label is automatically applied to the product that fulfils the condition rules. A developer can edit the rules or create new dynamic product lablels.
 
+*Dynamic product label* is a product label that follows the condition rules defined on a code level. Unlike the regular product label, the dynamic product label is automatically applied to the product that fulfils the condition rules. A developer can edit the rules or create new dynamic product lablels.
 The following dynamic product labels are shipped by default:
+
 * *Discontinued*
-The *Discontinued* product label is added when you discontinue a product. The label is active until the product becomes inactive. See [Discontinuing a product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/discontinuing-products.html) to learn more.
+<br>The *Discontinued* product label is added when you discontinue a product. The label is active until the product becomes inactive. See [Discontinuing a product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/discontinuing-products.html) to learn more.
 
 * *Alternatives available*
-The *Alternatives available* product label goes along with the *Discontinued* product label. It is added when you discontinue a product that has existing [alternative products](/docs/scos/user/features/{{page.version}}/alternative-products-feature-overview.html). The label is active until the product becomes inactive. See [Adding product alternatives](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/adding-product-alternatives.html) to learn more.
+<br>The *Alternatives available* product label goes along with the *Discontinued* product label. It is added when you discontinue a product that has existing [alternative products](/docs/scos/user/features/{{page.version}}/alternative-products-feature-overview.html). The label is active until the product becomes inactive. See [Adding product alternatives](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/adding-product-alternatives.html) to learn more.
 
 * *NEW*
-The *NEW* label is added when you create a product. It is active for the time period defined inclusively in the **New from** and **New to** fields. See [Creating an Abstract Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html) to learn more.
+<br>The *NEW* label is added when you create a product. It is active for the time period defined inclusively in the **New from** and **New to** fields. See [Creating an Abstract Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html) to learn more.
+
 * *SALE*
-The *SALE* product label is added to a product automatically when the product’s original price is superior to the default price. See [Creating an abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html) to learn more.
+<br>The *SALE* product label is added to a product automatically when the product’s original price is superior to the default price. See [Creating an abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html) to learn more.
 
 {% info_block infoBox "Prices" %}
 
@@ -71,44 +69,36 @@ An original price is displayed as a strikethrough to identify that the value of 
 
 {% endinfo_block %}
 
-
 ## Product label design
+
 A Back Office user can select the design and the position of the product label on a product card. The following label designs are shipped by default:
 
- <details open>
-<summary markdown='span'>alternative</summary>
+<details>
+<summary markdown='span'>Alternative</summary>
 
 ![alternative product label design](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/alternatives-available-product-label-design.png)
 
 </details>
 
-
- <details open>
-<summary markdown='span'>discontinued</summary>
+<details><summary markdown='span'>Discontinued</summary>
 
 ![discontinued product label design](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/discontinued-product-label-design.png)
 
 </details>
 
-
- <details open>
-<summary markdown='span'>top</summary>
+<details><summary markdown='span'>Top</summary>
 
 ![top product label design](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/top-product-label-design.png)
 
 </details>
 
-
-
- <details open>
-<summary markdown='span'>new</summary>
+<details><summary markdown='span'>New</summary>
 
 ![new product label design](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/new-product-label-design.png)
 
 </details>
 
- <details open>
-<summary markdown='span'>sale</summary>
+<details><summary markdown='span'>Sale</summary>
 
 ![sale product label design](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/sale-product-label-design.png)
 
@@ -117,7 +107,6 @@ A Back Office user can select the design and the position of the product label o
 When creating a product label, a Back Office user selects a design by entering its name as a **Front-end Reference**. See [Creating product labels](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/creating-product-labels.html) to learn more.
 
 If the product label designs shipped by default are not sufficient for your project, a developer can create new HTML classes to use as a Front-end Reference.
-
 
 ## Product label priority
 
@@ -145,7 +134,6 @@ A developer can also [import store relations for product labels](/docs/scos/dev/
 ## Product label statuses
 
 A product label can have the following statuses:
-
 * Active
 * Inactive
 

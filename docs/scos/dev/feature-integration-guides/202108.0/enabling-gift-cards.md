@@ -35,7 +35,7 @@ spryker/product-management:"^0.12.0"
 3. Enable necessary plugins. See the table below for information on available plugins, where to install them and value checking strategies they are used for.
 
 
-| Plugin | Description | Where to Install | Strategy |
+| PLUGIN | DESCRIPTION | WHERE TO INSTALL | STRATEGY |
 | --- | --- | --- | --- |
 | `GiftCardCalculatorPlugin`  | Splits applicable and non-applicable Gift Cards. Creates payment methods for applicable Gift Cards. |`CalculationDependencyProvider::getQuoteCalculatorPluginStack`  |  - |
 | `GiftCardCurrencyMatchDecisionRulePlugin` |Doesn’t allow using a Gift Card with a different currency rather than the one the customer has used while performing the payment.  | `GiftCardDependencyProvider::getDecisionRulePlugins` | - |

@@ -32,12 +32,10 @@ A *navigation element* is a page section that contains links to shop resources, 
 
 See [Creating a Navigation Element](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/managing-navigation-elements.html#creating-a-navigation-element) to learn how a Back Office user can create a navigation element.
 
-
 ### Navigation element duplication
 
 If you have a configured navigation element in a shop and you want to use it as a basis for another navigation element, you can duplicate it. This is especially useful in a multi-shop scenario.
 See [Duplicating a Navigation Element](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/managing-navigation-elements.html#duplicating-a-navigation-element) to learn how a Back Office user can do that.
-
 
 ## Navigation tree
 
@@ -45,8 +43,6 @@ A *navigation tree* is a navigation element consisting of [navigation nodes](#na
 In the Back Office, navigation elements are displayed as navigation trees.
 
 ![navigation-tree](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/navigation-tree.png)
-
-
 
 However, when publishing a navigation element as a content item on the Storefront, you can select a different [navigation template](#navigation-content-item-templates)
 
@@ -68,18 +64,12 @@ In the context of a navigation tree, there can be *child nodes* and *parent node
 
 A navigation node can be both of the parent type and the child type. For example, the parent navigation node *Writing Materials* from the previous screenshot can be represented as a child node as follows.
 
-
-
-
-
 ![child-parent-navigation-node](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/child-parent-navigation-node.png)
-
-
 
 See [Creating a Navigation Node](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/managing-navigation-elements.html#creating-a-navigation-node) to learn how a Back Office user can create navigation nodes.
 
-
 ### Navigation node design
+
 You can define the design for each navigation node separately by entering a Custom CSS class in the Back Office.
 The only class you can use by default is *label*. This class capitalizes the navigation node name.
 
@@ -117,38 +107,33 @@ A content item template defines how a content item is displayed on the Storefron
 * *Tree structure*—all the levels of navigation nodes are displayed as a list.
 
 
-<details open>
-    <summary markdown='span'>"Tree structure after the first level" template representation*—Storefront</summary>
+<details open><summary markdown='span'>"Tree structure after the first level" template representation*—Storefront</summary>
 
 ![tree-structure-after-the-first-level](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/tree-structure-after-the-first-level.png)
 
 </details>
 
-<details open>
-    <summary markdown='span'>"Inline navigation" template representation*—Storefront</summary>
+<details open><summary markdown='span'>"Inline navigation" template representation*—Storefront</summary>
 
 ![inline-navigation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/inline-navigation.png)
 
 </details>
 
-<details open>
-    <summary markdown='span'>"List navigation" template representation*—Storefront</summary>
+<details open><summary markdown='span'>"List navigation" template representation*—Storefront</summary>
 
 ![list-navigation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/list-navigation.png)
 
 </details>
 
-<details open>
-    <summary markdown='span'>"Tree structure" template representation*—Storefront</summary>
+<details open><summary markdown='span'>"Tree structure" template representation*—Storefront</summary>
 
 ![tree-structure](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/tree-structure.png)
 
 </details>
 
-
-
 For more details on navigation, check the video:
-<iframe src="https://spryker.wistia.com/medias/anlwttuexm" title="Navigation" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>
+
+{% wistia anlwttuexm 720 480 %}
 
 ## Related Business User articles
 

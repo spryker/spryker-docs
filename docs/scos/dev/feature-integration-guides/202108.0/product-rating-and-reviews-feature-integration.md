@@ -15,6 +15,7 @@ related:
 ---
 
 ## Prerequisites
+
 To prepare your project to work with Product Reviews:
 1. Require the Product Review modules in your composer by running
     * `composer require spryker/product-review`
@@ -29,8 +30,7 @@ This command will generate some new classes in your project under `\Orm\Zed\Prod
 5. Run `vendor/bin/console transfer:generate` to generate the new transfer objects.
 6.  Activate the product review collectors by adding the `ProductReviewCollectorSearchPlugin` and the `ProductAbstractReviewCollectorStoragePlugin` to the Storage and Search Collector plugin stack.
 
-<details open>
-<summary markdown='span'>Example: collector plugin list extension</summary>
+**Example: collector plugin list extension**
 
 ```php
 <?php
@@ -73,8 +73,7 @@ This command will generate some new classes in your project under `\Orm\Zed\Prod
         }
     }
 ```
- </br>
- </details>
+</details>
 
 
 7. Run `vendor/bin/console setup:search` to set up Search before you run Search collectors.
@@ -84,11 +83,15 @@ This command will generate some new classes in your project under `\Orm\Zed\Prod
 You should now be able to use the Zed API of Product Reviews to approve, reject and delete reviews, and the collectors should also be able to push approved reviews and ratings into Storage and Search. Check out our [Demoshop implementation](https://github.com/spryker/demoshop) for frontend implementation example and idea.
 
 ## Usage in Yves
+
 ### Submitting a Product Review
+
 To store an already validated product review, populate a `\Generated\Shared\Transfer\ProductReviewTransfer` transfer object and send it to Zed by calling the `\Spryker\Client\ProductReview\ProductReviewClientInterface::submitCustomerReview` method.
 This action will create a new pending product review in your persistent storage. The saved product review will be exported to Search and Storage after it was approved on Zed UI.
 Make sure that the provided rating value does not exceed [the configured maximum rating](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-configure-the-product-reviews.html#configuring-the-maximum-rating) limit.
+
 Example of how to store a validated customer review:
+
 ```php
 <?php
 
@@ -119,6 +122,7 @@ Example of how to store a validated customer review:
 ```
 
 ### Displaying an Average Rating
+
 To display the average rating stored in Storage, you will need to use `spyProductAbstractReview` and `spyProductAbstractReviewMaximumRating` twig extensions shipped by `ProductReview` module.
 
 * `spyProductAbstractReview` twig extension takes product abstract ID as first argument and injects the corresponding `ProductAbstractReviewTransfer` transfer object into the twig template provided as the second argument.
@@ -128,6 +132,7 @@ To display the average rating stored in Storage, you will need to use `spyProduc
 To register these plugins, you need to add `ProductAbstractReviewTwigServiceProvider` service provider to your` \Pyz\Yves\Application\YvesBootstrap.php`.
 
 Example of how to register twig extensions:
+
 ```php
 <?php
     namespace Pyz\Yves\Application;
@@ -168,6 +173,7 @@ Below is the example average-rating.twig implementation.
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 ### Displaying Reviews and Rating Summary
+
 To display previously posted and already approved reviews from Search, you will need to call `\Spryker\Client\ProductReview\ProductReviewClientInterface::findProductReviewsInSearch` method.
 
 To alter the retrieved number of product reviews per page, change the Client configuration.
@@ -208,6 +214,3 @@ class IndexController extends AbstractController
 
 }
 ```
-
-
-<!-- Last review date: Aug 28, 2017 by  Karoly Gerner-->

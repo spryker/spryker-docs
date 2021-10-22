@@ -11,24 +11,26 @@ redirect_from:
   - /docs/en/configurable-bundle-order-management-feature-integration
 ---
 
-## Install Feature Core
+## Install feature core
 
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
-| Feature | Version |
+| NAME | VERSION |
 | --- | --- |
-| Configurable Bundle | 202009.0 |
-| Order Management | 202009.0 |
-| Spryker Core | 202009.0 |
+| Configurable Bundle | {{page.version}} |
+| Order Management | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
-### 1) Set up Behaviour
+### 1) Set up behaviour
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `ConfiguredBundleOrderItemExpanderPlugin` | Expands order items with sales order configured bundles. | None | `Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\Sales` |
+| ConfiguredBundleOrderItemExpanderPlugin | Expands order items with sales order configured bundles. | None | Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\Sales |
 
 **src/Pyz/Zed/Sales/SalesDependencyProvider.php**
+
 ```php
 <?php
 
@@ -50,10 +52,9 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
     }
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that every order item from `SalesFacade::getOrderItems()` results, contains sales order configured bundles data if the order contains configurable bundle.
 
 {% endinfo_block %}
-
-

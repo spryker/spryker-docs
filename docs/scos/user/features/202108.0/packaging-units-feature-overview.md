@@ -12,10 +12,24 @@ redirect_from:
 ---
 
 {% info_block infoBox "Terminology used throughout the article" %}
-<table><thead><tr><td><b>Definition</b></td><td><b>Description</b></td></tr></thead><tbody><tr><td>Packaging unit</td><td>Unit of measure that that is used to pack product items into one packaged product.</td></tr><tr><td>Leading product</td><td>Product of a packaging unit that shares its stock to another product.</td></tr><tr><td>Non-leading product</td><td>Product with which stock is shared.</td></tr><tr><td>Product packaging unit group</td><td>Group of products in a packaging unit that has a leading product.</td></tr><tr><td>Quantity</td><td>Number of times a product/package is added in the cart.</td></tr><tr><td>Amount</td><td>Stock unit included in the packaged product.</td></tr><tr><tr><td>Base unit</td><td>Basic unit of measure for a product, relative to which all conversions are made.</td></tr><tr><td>Sales unit</td><td>Alternate unit of measure used besides the default base unit.</td></tr><tr><td>Sales order</td><td>Placed order.</td></tr><tr><td>Sales order item</td><td>Ordered product included in a sales order.</td></tr><tr><td>Sales unit amount</td><td>Amount of items in a sales unit.</td></tr></tbody></table>
+
+| DEFINITION | DESCRIPTION |
+|---|---|
+| Packaging unit | Unit of measure that that is used to pack product items into one packaged product. |
+| Leading product | Product of a packaging unit that shares its stock to another product. |
+| Non-leading product | Product with which stock is shared. |
+| Product packaging unit group | Group of products in a packaging unit that has a leading product. |
+| Quantity | Number of times a product/package is added in the cart. |
+| Amount | Stock unit included in the packaged product. |
+| Base unit | Basic unit of measure for a product, relative to which all conversions are made. |
+| Sales unit | Alternate unit of measure used besides the default base unit. |
+| Sales order | Placed order. |
+| Sales order item | Ordered product included in a sales order. |
+| Sales unit amount | Amount of items in a sales unit. |
+
 {% endinfo_block %}
 
-The Packaging Unit feature introduces a **packaging unit** that is a unit of measure used as packaging for a product. It allows including the amount of stock into a product a customer wants to buy. A shop owner can sell the same product in different packaging units, for example, apples can be sold as an "Item", a "Bag" of apples or a "Pallet" of apples. The "bag", "pallet", "box" etc. are referred to as *packaging unit types*.
+The _Packaging Unit_ feature introduces a **packaging unit** that is a unit of measure used as packaging for a product. It allows including the amount of stock into a product a customer wants to buy. A shop owner can sell the same product in different packaging units, for example, apples can be sold as an "Item", a "Bag" of apples or a "Pallet" of apples. The "bag", "pallet", "box" etc. are referred to as *packaging unit types*.
 
 Each packaging unit is defined on an abstract product level and is represented by one product variant, for example:
 
@@ -35,9 +49,9 @@ Basically, when a packaging unit does not use the leading product, it means that
 
 {% info_block infoBox "Info" %}
 
-For example, if there is a leading product in the product abstract with 3 packagings, where 1 of the packages "has no lead product", it means that the 2 other packages actually consume the same product when you buy them. But the 3rd packaging (which does not use the leading product
+For example, if there is a leading product in the product abstract with 3 packagings, where 1 of the packages "has no lead product", it means that the 2 other packages actually consume the same product when you buy them. But the 3rd packaging (which does not use the leading product is completely independent from a stock perspective, it only depends on its own stock.
 
-{% endinfo_block %} is completely independent from a stock perspective, it only depends on its own stock.)
+{% endinfo_block %}
 
 To reflect the availability of a leading product for a packaging unit and to define which concrete product SKU is the leading one, the `lead_product_sku` attribute is used.
 

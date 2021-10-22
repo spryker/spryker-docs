@@ -11,43 +11,51 @@ redirect_from:
   - /docs/en/comments-feature-integration
 ---
 
-## Install Feature Core
+## Install feature core
+
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Spryker Core | master |
-| Customer Account Management | master |
+| Spryker Core | {{page.version}} |
+| Customer Account Management | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/comments: "^201907.0" --update-with-dependencies
+composer require spryker-feature/comments: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following modules were installed:<table><thead><tr><th>Module</th><th>Expected Directory</th></tr></thead><tbody><tr ><td>`Comment`</td><td>`vendor/spryker/comment`</td></tr><tr><td>`CommentDataImport`</td><td>`vendor/spryker/comment-data-import`</td></tr></tbody></table>
+
+Make sure that the following modules were installed:
+
+| MODULE | EXPECTED DIRECTORY |
+| --- | --- |
+| Comment | vendor/spryker/comment |
+| CommentDataImport | vendor/spryker/comment-data-import |
+
 {% endinfo_block %}
 
-### 2) Set up Configuration
+### 2) Set up configuration
 Add the following configuration to your project:
 
-| Configuration | Specification | Namespace |
+| CONFIGURATION | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
-| `CommentConfig::getAvailableCommentTags()` | Used to allow saving comment tags to the database. | `Pyz\Shared\Comment` |
+| CommentConfig::getAvailableCommentTags() | Used to allow saving comment tags to the database. | Pyz\Shared\Comment |
 | A regular expression (See below in `config/Shared/config_default.php`) | Used to close access for not logged customers. | None |
 
 **src/Pyz/Zed/Comment/CommentConfig.php**
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Shared\Comment;
- 
+
 use Spryker\Shared\Comment\CommentConfig as SprykerCommentConfig;
- 
+
 class CommentConfig extends SprykerCommentConfig
 {
 	/**
@@ -64,23 +72,27 @@ class CommentConfig extends SprykerCommentConfig
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that when you add/remove comment tag (listed in config
-{% endinfo_block %} to comment is allowed.)
+
+Make sure that when you add/remove comment tag (listed in config to comment is allowed.)
+
+{% endinfo_block %}
 
 **config/Shared/config_default.php**
 
 ```php
 <?php
- 
+
 $config[CustomerConstants::CUSTOMER_SECURED_PATTERN] = '(^(/en|/de)?/comment($|/))';
 
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that `mysprykershop.com/comment` with a guest user redirects to login page.
+
 {% endinfo_block %}
 
-### 3) Set up Database Schema and Transfer Objects
+### 3) Set up database schema and transfer objects
 
 Run the following commands to apply database changes and generate entity and transfer changes:
 
@@ -91,14 +103,39 @@ console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes were applied by checking your database:<table><thead><tr><th>Database Entity</th><th>Type</th><th>Event</th></tr></thead><tbody><tr><td>`spy_comment`</td><td>table</td><td>created</td></tr><tr><td>`spy_comment_tag`</td><td>table</td><td>created</td></tr><tr><td>`spy_comment_thread`</td><td>table</td><td>created</td></tr><tr><td>`spy_comment_to_comment_tag`</td><td>table</td><td>created</td></tr></tbody></table>
+
+Make sure that the following changes were applied by checking your database:
+
+| DATABASE ENTITY | TYPE | EVENT |
+| --- | --- | --- |
+| spy_comment | table | created |
+| spy_comment_tag | table | created |
+| spy_comment_thread | table | created |
+| spy_comment_to_comment_tag | table | created |
+|   |   |   |
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes in transfer objects:<table><thead><tr><th>Transfer</th><th>Type</th><th>Event</th><th>Path</th></tr></thead><tbody><tr><td>`SpyCommentEntityTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCommentEntityTransfer`</td></tr><tr><td>`SpyCommentTagEntityTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCommentTagEntityTransfer`</td></tr><tr><td>`SpyCommentThreadEntityTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCommentThreadEntityTransfer`</td></tr><tr><td>`SpyCommentToCommentTagEntityTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCommentToCommentTagEntityTransfer`</td></tr><tr><td>`Comment`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/Comment`</td></tr><tr><td>`CommentThread`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CommentThread`</td></tr><tr><td>`CommentTag`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CommentTag`</td></tr><tr><td>`CommentFilter`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CommentFilter`</td></tr><tr><td>`CommentRequest`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CommentRequest`</td></tr><tr><td>`CommentTagRequest`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CommentTagRequest`</td></tr><tr><td>`CommentThreadResponse`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CommentThreadResponse`</td></tr></tbody></table>
+
+Make sure that the following changes in transfer objects:
+
+| TRANSFER | TYPE | EVENT | PATH |
+| --- | --- | --- | --- |
+| SpyCommentEntityTransfer | class | created | src/Generated/Shared/Transfer/SpyCommentEntityTransfer |
+| SpyCommentTagEntityTransfer | class | created | src/Generated/Shared/Transfer/SpyCommentTagEntityTransfer |
+| SpyCommentThreadEntityTransfer | class | created | src/Generated/Shared/Transfer/SpyCommentThreadEntityTransfer |
+| SpyCommentToCommentTagEntityTransfer | class | created | src/Generated/Shared/Transfer/SpyCommentToCommentTagEntityTransfer |
+| Comment | class | created | src/Generated/Shared/Transfer/Comment |
+| CommentThread | class | created | src/Generated/Shared/Transfer/CommentThread |
+| CommentTag | class | created | src/Generated/Shared/Transfer/CommentTag |
+| CommentFilter | class | created | src/Generated/Shared/Transfer/CommentFilter |
+| CommentRequest | class | created | src/Generated/Shared/Transfer/CommentRequest |
+| CommentTagRequest | class | created | src/Generated/Shared/Transfer/CommentTagRequest |
+| CommentThreadResponse | class | created | src/Generated/Shared/Transfer/CommentThreadResponse |
+
 {% endinfo_block %}
 
-### 4) Add Translations
+### 4) Add translations
 Append glossary according to your configuration:
 
 **src/data/import/glossary.csv**
@@ -125,28 +162,31 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that in the database the configured data are added to the `spy_glossary` table.
+
 {% endinfo_block %}
 
-### 5) Set up Behavior
+### 5) Set up behavior
 
-#### Set up Comment Workflow
+#### Set up comment workflow
+
 Enable the following behaviors by registering the plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `CommentDataImportPlugin` | Imports Comments data. | None | `Spryker\Zed\CommentDataImport\Communication\Plugin` |
+| CommentDataImportPlugin | Imports Comments data. | None | Spryker\Zed\CommentDataImport\Communication\Plugin |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\DataImport;
- 
+
 use Spryker\Zed\CommentDataImport\Communication\Plugin\CommentDataImportPlugin;
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
- 
+
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
 	/**
@@ -161,29 +201,42 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that `spy_comment`, `spy_comment_thread`, and `spy_comment_to_comment_tag` are not empty.
+
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
+
 ### Prerequisites
+
 Please overview and install the necessary features before beginning the integration step.
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Spryker Core | 201907.0 |
-| Customer Account Management | 201907.0 |
+| Spryker Core | {{page.version}} |
+| Customer Account Management | {{page.version}} |
 
 ### 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
 
 ```bash
 composer require spryker-feature/comments: "^201907.0" --update-with-dependencies
 ```
 {% info_block warningBox "Verification" %}
-Make sure that the following modules were installed:<table><thead><tr><th>Module</th><th>Expected Directory</th></tr></thead><tbody><tr><td>`CommentWidget`</td><td>`vendor/spryker-shop/comment-widget`</td></tr><tr><td>`CommentWidgetExtension`</td><td>`vendor/spryker-shop/comment-widget-extension`</td></tr></tbody></table>
+
+Make sure that the following modules were installed:
+
+| MODULE | EXPECTED DIRECTORY |
+| --- | --- |
+| CommentWidget | vendor/spryker-shop/comment-widget |
+| CommentWidgetExtension | vendor/spryker-shop/comment-widget-extension |
+
 {% endinfo_block %}
 
-### 2) Add Translations
+### 2) Add translations
+
 Append glossary according to your configuration:
 
 **src/data/import/glossary.csv**
@@ -230,17 +283,20 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that in the database the configured data are added to the `spy_glossary` table.
+
 {% endinfo_block %}
 
-### 3) Enable Controllers
+### 3) Enable controllers
+
 #### Route List
 
 Register the following route provider plugins:
 
-| Provider | Namespace |
-| --- | --- | 
-| `CommentWidgetRouteProviderPlugin` | `SprykerShop\Yves\CommentWidget\Plugin\Router` |
+| PROVIDER | NAMESPACE |
+| --- | --- |
+| CommentWidgetRouteProviderPlugin | SprykerShop\Yves\CommentWidget\Plugin\Router |
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
 
@@ -267,26 +323,29 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
+
 Verify the `CommentWidgetRouteProviderPlugin`, log in as a customer and open the link: `mysprykershop.com/comment/0adafdf4-cb26-477d-850d-b26412fbd382/tag/add?returnUrl=/cart`</br>Make sure that the error flash message was shown.
+
 {% endinfo_block %}
 
-### 4) Set up Widgets
+### 4) Set up widgets
+
 Register the following plugins to enable widgets:
 
-| Plugin | Description | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `CommentThreadWidget` | Displays comments. | None | `SprykerShop\Yves\CommentWidget\Widget` |
+| CommentThreadWidget | Displays comments. | None | SprykerShop\Yves\CommentWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\ShopApplication;
- 
+
 use SprykerShop\Yves\CommentWidget\Widget\CommentThreadWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
- 
+
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
 	/**
@@ -308,5 +367,11 @@ console frontend:yves:build
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following widget was registered:<table><thead><tr><th>Module</th><th>Test</th></tr></thead><tbody><tr><td>`CommentThreadWidget`</td><td>You can check availability in twig `{% raw %}{%{% endraw %} widget 'CommentThreadWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}`</td></tr></tbody></table>
+
+Make sure that the following widget was registered:
+
+| MODULE | TEST |
+| --- | --- |
+| CommentThreadWidget | You can check availability in twig `{% raw %}{%{% endraw %} widget 'CommentThreadWidget' args \[...\] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` |
+
 {% endinfo_block %}

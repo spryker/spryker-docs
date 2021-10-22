@@ -16,7 +16,7 @@ related:
 
 To prepare your project to work with multi-store CMS Blocks, the following minimum module versions are required:
 
-| Module| Version |
+| NAME | VERSION |
 | --- | --- |
 | `spryker/cms-block` | 2.0.0 |
 | `spryker/cms-block-collector` | 2.0.0 |
@@ -26,7 +26,7 @@ To prepare your project to work with multi-store CMS Blocks, the following minim
 | `spryker/collector` | 6.0.0 |
 | `spryker/touch` | 4.0.0 |
 
-To enable multi-store management within the CMS Block Zed Admin UI, override `Spryker\Zed\Store\StoreConfig::isMultiStorePerZedEnabled()` in your project to return `true`. 
+To enable multi-store management within the CMS Block Zed Admin UI, override `Spryker\Zed\Store\StoreConfig::isMultiStorePerZedEnabled()` in your project to return `true`.
 This will enable the store management inside the CMS Block Zed Admin UI.
 
 **Example override**

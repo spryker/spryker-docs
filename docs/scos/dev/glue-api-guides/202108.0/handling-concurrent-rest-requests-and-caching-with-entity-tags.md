@@ -82,7 +82,7 @@ The following resource support concurrent requests with ETag headers by default
 ## Possible errors
 The following error responses can be returned by the server when a resource supporting ETags is updated:
 
-| Status | Reason |
+| CODE | REASON |
 | --- | --- |
 | 412 | Pre-condition failed.</br>The `If-Match` header value is invalid or outdated. </br>Request the current state of the resource using a `GET` request to obtain a valid tag value. |
 | 428 | Pre-condition required.</br>The `If-Match` header is missing. |

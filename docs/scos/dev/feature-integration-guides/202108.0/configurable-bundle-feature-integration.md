@@ -24,41 +24,47 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/product-images-configurable-bundle-feature-integration.html
 ---
 
-## Install Feature Core
+## Install feature core
+
 ### Prerequisites
+
 To start feature integration, overview, and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Spryker Core	 | master |
-| Cart | master |
-| Product | master |
-| Product Lists	 | master |
+| Spryker Core	 | {{page.version}} |
+| Cart | {{page.version}} |
+| Product | {{page.version}} |
+| Product Lists	 | {{page.version}} |
 
 ### 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
+
 ```bash
 composer require spryker-feature/configurable-bundle:"^{{page.version}}" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules were installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-| `ConfigurableBundle` | `spryker/configurable-bundle` |
-| `ConfigurableBundleGui` | `spryker/configurable-bundle-gui` |
-| `ConfigurableBundleGuiExtension` | `spryker/configurable-bundle-gui-extension` |
-| `ConfigurableBundleDataImport` | `spryker/configurable-bundle-data-import` |
-| `ConfigurableBundleStorage` | `spryker/configurable-bundle-storage` |
-| `ConfigurableBundlePageSearch` | `spryker/configurable-bundle-page-search` |
-| `SalesConfigurableBundle` | `spryker/sales-configurable-bundle` |
-| `ConfigurableBundleCart` | `spryker/configurable-bundle-cart` |
-| `ConfigurableBundlePage` | `spryker-shop/configurable-bundle-page` |
+| ConfigurableBundle | spryker/configurable-bundle |
+| ConfigurableBundleGui | spryker/configurable-bundle-gui |
+| ConfigurableBundleGuiExtension | spryker/configurable-bundle-gui-extension |
+| ConfigurableBundleDataImport | spryker/configurable-bundle-data-import |
+| ConfigurableBundleStorage | spryker/configurable-bundle-storage |
+| ConfigurableBundlePageSearch | spryker/configurable-bundle-page-search |
+| SalesConfigurableBundle | spryker/sales-configurable-bundle |
+| ConfigurableBundleCart | spryker/configurable-bundle-cart |
+| ConfigurableBundlePage | spryker-shop/configurable-bundle-page |
 
 {% endinfo_block %}
 
-### 2) Set up Database Schema and Transfer Objects
+### 2) Set up database schema and transfer objects
+
 Adjust the schema definition so that entity changes will trigger the events:
 
 **src/Pyz/Zed/ConfigurableBundle/Persistence/Propel/Schema/spy_configurable_bundle.schema.xml**
@@ -70,19 +76,19 @@ Adjust the schema definition so that entity changes will trigger the events:
           xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
           namespace="Orm\Zed\ConfigurableBundle\Persistence"
           package="src.Orm.Zed.ConfigurableBundle.Persistence">
- 
+
     <table name="spy_configurable_bundle_template">
         <behavior name="event">
             <parameter name="spy_configurable_bundle_template_all" column="*"/>
         </behavior>
     </table>
- 
+
     <table name="spy_configurable_bundle_template_slot">
         <behavior name="event">
             <parameter name="spy_configurable_bundle_template_slot_all" column="*"/>
         </behavior>
     </table>
- 
+
 </database>
 ```
 
@@ -95,13 +101,13 @@ Adjust the schema definition so that entity changes will trigger the events:
           xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
           namespace="Orm\Zed\ConfigurableBundleStorage\Persistence"
           package="src.Orm.Zed.ConfigurableBundleStorage.Persistence">
- 
+
     <table name="spy_configurable_bundle_template_storage">
         <behavior name="synchronization">
             <parameter name="queue_pool" value="synchronizationPool" />
         </behavior>
     </table>
- 
+
 </database>
 ```
 
@@ -112,13 +118,13 @@ Adjust the schema definition so that entity changes will trigger the events:
 <database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
           namespace="Orm\Zed\ConfigurableBundlePageSearch\Persistence"
           package="src.Orm.Zed.ConfigurableBundlePageSearch.Persistence">
- 
+
     <table name="spy_configurable_bundle_template_page_search">
         <behavior name="synchronization">
             <parameter name="queue_pool" value="synchronizationPool"/>
         </behavior>
     </table>
- 
+
 </database>
 ```
 
@@ -134,14 +140,14 @@ console transfer:generate
 
 Make sure that the following changes have been applied by checking your database:
 
-| Database Entity | Type | Event |
+| DATABASE ENTITY | TYPE | EVENT |
 | --- | --- | --- |
-| `spy_configurable_bundle_template` | table | created |
-| `spy_configurable_bundle_template_slot` | table | created |
-| `spy_sales_order_configured_bundle` | table | created |
-| `spy_sales_order_configured_bundle_item` | table | created |
-| `spy_configurable_bundle_template_storage` | table | created |
-| `spy_configurable_bundle_template_page_search` | table | created |
+| spy_configurable_bundle_template | table | created |
+| spy_configurable_bundle_template_slot | table | created |
+| spy_sales_order_configured_bundle | table | created |
+| spy_sales_order_configured_bundle_item | table | created |
+| spy_configurable_bundle_template_storage | table | created |
+| spy_configurable_bundle_template_page_search | table | created |
 
 {% endinfo_block %}
 
@@ -149,57 +155,58 @@ Make sure that the following changes have been applied by checking your database
 
 Make sure that the following changes have been applied in transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
-| `SpyConfigurableBundleTemplateEntity` | class | created | `src/Generated/Shared/Transfer/SpyConfigurableBundleTemplateEntityTransfer` |
-| `SpyConfigurableBundleTemplateSlotEntity` | class | created | `src/Generated/Shared/Transfer/SpyConfigurableBundleTemplateSlotEntityTransfer` |
-| `SpySalesOrderConfiguredBundleEntity` | class | created | `src/Generated/Shared/Transfer/SpySalesOrderConfiguredBundleEntityTransfer` |
-| `SpySalesOrderConfiguredBundleItemEntity` | class | created | `src/Generated/Shared/Transfer/SpySalesOrderConfiguredBundleItemEntityTransfer` |
-| `SpyConfigurableBundleTemplateStorageEntity` | class | created | `src/Generated/Shared/Transfer/SpyConfigurableBundleTemplateStorageEntityTransfer` |
-| `UpdateConfiguredBundleRequest` | class | created | `src/Generated/Shared/Transfer/UpdateConfiguredBundleRequestTransfer` |
-| `SalesOrderConfiguredBundleTranslation` | class | created | `src/Generated/Shared/Transfer/SalesOrderConfiguredBundleTranslationTransfer` |
-| `ConfiguredBundle` | class | created | `src/Generated/Shared/Transfer/ConfiguredBundleTransfer` |
-| `ConfiguredBundleItem` | class | created | `src/Generated/Shared/Transfer/ConfiguredBundleItemTransfer` |
-| `ConfigurableBundleTemplate` | class | created |`src/Generated/Shared/Transfer/ConfigurableBundleTemplateTransfer` |
-| `ConfigurableBundleTemplateSlot` | class | created | `src/Generated/Shared/Transfer/ConfigurableBundleTemplateSlotTransfer` |
-| `ConfigurableBundleTemplateTranslation` | class | created | `src/Generated/Shared/Transfer/ConfigurableBundleTemplateTranslationTransfer` |
-| `ConfigurableBundleTemplateSlotTranslation` | class | created | `src/Generated/Shared/Transfer/ConfigurableBundleTemplateSlotTranslationTransfer` |
-| `ConfigurableBundleTemplateFilter` | class | created | `src/Generated/Shared/Transfer/ConfigurableBundleTemplateFilterTransfer` |
-| `ConfigurableBundleTemplateSlotFilter` | class | created | `src/Generated/Shared/Transfer/ConfigurableBundleTemplateSlotFilterTransfer` |
-| `ConfigurableBundleTemplateCollection` | class | created | `src/Generated/Shared/Transfer/ConfigurableBundleTemplateCollectionTransfer` |
-| `ConfigurableBundleTemplateSlotCollection` | class | created | `src/Generated/Shared/Transfer/ConfigurableBundleTemplateSlotCollectionTransfer` |
-| `ConfigurableBundleTemplateResponse` | class | created | `src/Generated/Shared/Transfer/ConfigurableBundleTemplateResponseTransfer` |
-| `ConfigurableBundleTemplateSlotResponse` | class | created | `src/Generated/Shared/Transfer/ConfigurableBundleTemplateSlotResponseTransfer` |
-| `ConfigurableBundleTemplateSlotEditForm` | class | created | `src/Generated/Shared/Transfer/ConfigurableBundleTemplateSlotEditFormTransfer` |
-| `ConfigurableBundleTemplateStorage` | class | created | `src/Generated/Shared/Transfer/ConfigurableBundleTemplateStorageTransfer` |
-| `ConfigurableBundleTemplateSlotStorage` | class | created | `src/Generated/Shared/Transfer/ConfigurableBundleTemplateSlotStorageTransfer` |
-| `ConfigurableBundleTemplatePageSearch` | class | created | `src/Generated/Shared/Transfer/ConfigurableBundleTemplatePageSearchTransfer` |
-| `ConfigurableBundleTemplatePageSearchCollection` | class | created | `src/Generated/Shared/Transfer/ConfigurableBundleTemplatePageSearchCollectionTransfer` |
-| `ConfigurableBundleTemplatePageSearchFilter` | class | created | `src/Generated/Shared/Transfer/ConfigurableBundleTemplatePageSearchFilterTransfer` |
-| `ConfigurableBundleTemplatePageSearchRequest` | class | created | `src/Generated/Shared/Transfer/ConfigurableBundleTemplatePageSearchRequestTransfer` |
-| `ProductListUsedByTable` | class | created | `src/Generated/Shared/Transfer/ProductListUsedByTableTransfer` |
-| `ProductListUsedByTableRow` | class | created | `src/Generated/Shared/Transfer/ProductListUsedByTableRowTransfer` |
-| `ButtonCollection` | class | created | `src/Generated/Shared/Transfer/ButtonCollectionTransfer` |
-| `SalesOrderConfiguredBundleFilter` | class | created | `src/Generated/Shared/Transfer/SalesOrderConfiguredBundleFilterTransfer` |
-| `SalesOrderConfiguredBundleCollection` | class | created | `src/Generated/Shared/Transfer/SalesOrderConfiguredBundleCollectionTransfer` |
-| `SalesOrderConfiguredBundle` | class | created | `src/Generated/Shared/Transfer/SalesOrderConfiguredBundleTransfer` |
-| `SalesOrderConfiguredBundleItem`|class|created| `src/Generated/Shared/Transfer/SalesOrderConfiguredBundleItemTransfer` |
+| SpyConfigurableBundleTemplateEntity | class | created | src/Generated/Shared/Transfer/SpyConfigurableBundleTemplateEntityTransfer |
+| SpyConfigurableBundleTemplateSlotEntity | class | created | src/Generated/Shared/Transfer/SpyConfigurableBundleTemplateSlotEntityTransfer |
+| SpySalesOrderConfiguredBundleEntity | class | created | src/Generated/Shared/Transfer/SpySalesOrderConfiguredBundleEntityTransfer |
+| SpySalesOrderConfiguredBundleItemEntity | class | created | src/Generated/Shared/Transfer/SpySalesOrderConfiguredBundleItemEntityTransfer |
+| SpyConfigurableBundleTemplateStorageEntity | class | created | src/Generated/Shared/Transfer/SpyConfigurableBundleTemplateStorageEntityTransfer |
+| UpdateConfiguredBundleRequest` | class | created | src/Generated/Shared/Transfer/UpdateConfiguredBundleRequestTransfer |
+| SalesOrderConfiguredBundleTranslation | class | created | src/Generated/Shared/Transfer/SalesOrderConfiguredBundleTranslationTransfer |
+| ConfiguredBundle | class | created | src/Generated/Shared/Transfer/ConfiguredBundleTransfer |
+| ConfiguredBundleItem | class | created | src/Generated/Shared/Transfer/ConfiguredBundleItemTransfer |
+| ConfigurableBundleTemplate | class | created |src/Generated/Shared/Transfer/ConfigurableBundleTemplateTransfer |
+| ConfigurableBundleTemplateSlot | class | created | src/Generated/Shared/Transfer/ConfigurableBundleTemplateSlotTransfer |
+| ConfigurableBundleTemplateTranslation | class | created | src/Generated/Shared/Transfer/ConfigurableBundleTemplateTranslationTransfer |
+| ConfigurableBundleTemplateSlotTranslation | class | created | src/Generated/Shared/Transfer/ConfigurableBundleTemplateSlotTranslationTransfer |
+| ConfigurableBundleTemplateFilter | class | created | src/Generated/Shared/Transfer/ConfigurableBundleTemplateFilterTransfer |
+| ConfigurableBundleTemplateSlotFilter | class | created | src/Generated/Shared/Transfer/ConfigurableBundleTemplateSlotFilterTransfer |
+| ConfigurableBundleTemplateCollection | class | created | src/Generated/Shared/Transfer/ConfigurableBundleTemplateCollectionTransfer |
+| ConfigurableBundleTemplateSlotCollection | class | created | src/Generated/Shared/Transfer/ConfigurableBundleTemplateSlotCollectionTransfer |
+| ConfigurableBundleTemplateResponse | class | created | src/Generated/Shared/Transfer/ConfigurableBundleTemplateResponseTransfer |
+| ConfigurableBundleTemplateSlotResponse | class | created | src/Generated/Shared/Transfer/ConfigurableBundleTemplateSlotResponseTransfer |
+| ConfigurableBundleTemplateSlotEditForm | class | created | src/Generated/Shared/Transfer/ConfigurableBundleTemplateSlotEditFormTransfer |
+| ConfigurableBundleTemplateStorage | class | created | src/Generated/Shared/Transfer/ConfigurableBundleTemplateStorageTransfer |
+| ConfigurableBundleTemplateSlotStorage | class | created | src/Generated/Shared/Transfer/ConfigurableBundleTemplateSlotStorageTransfer |
+| ConfigurableBundleTemplatePageSearch | class | created | src/Generated/Shared/Transfer/ConfigurableBundleTemplatePageSearchTransfer |
+| ConfigurableBundleTemplatePageSearchCollection | class | created | src/Generated/Shared/Transfer/ConfigurableBundleTemplatePageSearchCollectionTransfer |
+| ConfigurableBundleTemplatePageSearchFilter | class | created | src/Generated/Shared/Transfer/ConfigurableBundleTemplatePageSearchFilterTransfer |
+| ConfigurableBundleTemplatePageSearchRequest | class | created | src/Generated/Shared/Transfer/ConfigurableBundleTemplatePageSearchRequestTransfer |
+| ProductListUsedByTable` | class | created | src/Generated/Shared/Transfer/ProductListUsedByTableTransfer |
+| ProductListUsedByTableRow | class | created | src/Generated/Shared/Transfer/ProductListUsedByTableRowTransfer |
+| ButtonCollection | class | created | src/Generated/Shared/Transfer/ButtonCollectionTransfer |
+| SalesOrderConfiguredBundleFilter | class | created | src/Generated/Shared/Transfer/SalesOrderConfiguredBundleFilterTransfer |
+| SalesOrderConfiguredBundleCollection | class | created | src/Generated/Shared/Transfer/SalesOrderConfiguredBundleCollectionTransfer |
+| SalesOrderConfiguredBundle | class | created | src/Generated/Shared/Transfer/SalesOrderConfiguredBundleTransfer` |
+| SalesOrderConfiguredBundleItem|class|created| src/Generated/Shared/Transfer/SalesOrderConfiguredBundleItemTransfer |
 
 {% endinfo_block %}
 
-### 3) Add Translations
+### 3) Add translations
 
-#### Yves Translations
+#### Yves translations
 
 {% info_block infoBox %}
 
-Each configurable bundle template name needs to have Yves translations. Names are translated directly from `spy_configurable_bundle_template.name` field, e.g.: `configurable_bundle.templates.my-bundle.name`. 
+Each configurable bundle template name needs to have Yves translations. Names are translated directly from `spy_configurable_bundle_template.name` field, e.g.: `configurable_bundle.templates.my-bundle.name`.
 
 Same rule is applied for configurable bundle template slots: `spy_configurable_bundle_template_slot.name` → `spy_configurable_bundle.template_slots.my-slot.name`
 
 Name is represented by a slugified version of a name for default locale, e.g.: Configurable Bundle "All In" → `configurable-bundle-all-in`.
 
 {% endinfo_block %}
+
 Append glossary according to your configuration:
 
 <details open>
@@ -279,7 +286,6 @@ configurable_bundle_page.configurator.slot_became_unavailable,Configured slot wi
 configurable_bundle_page.configurator.product_became_unavailable,Product with SKU '%sku%' configured for slot with ID '%id%' became unavailable.,en_US
 configurable_bundle_page.configurator.product_became_unavailable,Product with SKU '%sku%' configured for slot with ID '%id%' became unavailable.,de_DE
 ```
-<br>
 </details>
 
 Please note, that if you have any configurable bundle entities already present or coming from data import, then you'll also need to provide translations for templates and slots as given in example below.
@@ -317,7 +323,8 @@ Make sure that in the database, the configured data are added to the `spy_glossa
 
 {% endinfo_block %}
 
-#### Zed Translations
+#### Zed translations
+
 Run the following command to generate a new translation cache for Zed:
 
 ```bash
@@ -330,23 +337,24 @@ Make sure that when you make an order from a cart with a configured bundles, bun
 
 {% endinfo_block %}
 
-### 4) Set up Search
+### 4) Set up search
+
 Add the page map plugin for the *configurable bundle template* entity.
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `ConfigurableBundleTemplatePageMapPlugin` | Builds page map for configurable bundle template entity | None | `Spryker\Zed\ConfigurableBundlePageSearch\Communication\Plugin\Search` |
+| ConfigurableBundleTemplatePageMapPlugin | Builds page map for configurable bundle template entity | None | Spryker\Zed\ConfigurableBundlePageSearch\Communication\Plugin\Search |
 
 **src/Pyz/Zed/Search/SearchDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Search;
- 
+
 use Spryker\Zed\ConfigurableBundlePageSearch\Communication\Plugin\Search\ConfigurableBundleTemplatePageMapPlugin;
 use Spryker\Zed\Search\SearchDependencyProvider as SprykerSearchDependencyProvider;
- 
+
 class SearchDependencyProvider extends SprykerSearchDependencyProvider
 {
     /**
@@ -363,22 +371,22 @@ class SearchDependencyProvider extends SprykerSearchDependencyProvider
 
 Add query expander and result-formatter plugins for the *configurable bundle template* entity.
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `ConfigurableBundleTemplatePageSearchResultFormatterPlugin` | Maps raw search results from Elasticsearch to a transfer and returns the formatted result. | None | `Spryker\Client\ConfigurableBundlePageSearch\Plugin\Elasticsearch\ResultFormatter` |
-|`LocalizedQueryExpanderPlugin`|Adds filtering by locale to search query.|None|`Spryker\Client\Search\Plugin\Elasticsearch\QueryExpander`|
+| ConfigurableBundleTemplatePageSearchResultFormatterPlugin | Maps raw search results from Elasticsearch to a transfer and returns the formatted result. | None | Spryker\Client\ConfigurableBundlePageSearch\Plugin\Elasticsearch\ResultFormatter |
+|LocalizedQueryExpanderPlugin|Adds filtering by locale to search query.|None|Spryker\Client\Search\Plugin\Elasticsearch\QueryExpander|
 
 **src/Pyz/Client/ConfigurableBundlePageSearch/ConfigurableBundlePageSearchDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\ConfigurableBundlePageSearch;
- 
+
 use Spryker\Client\ConfigurableBundlePageSearch\ConfigurableBundlePageSearchDependencyProvider as SprykerConfigurableBundlePageSearchDependencyProvider;
 use Spryker\Client\ConfigurableBundlePageSearch\Plugin\Elasticsearch\ResultFormatter\ConfigurableBundleTemplatePageSearchResultFormatterPlugin;
 use Spryker\Client\Search\Plugin\Elasticsearch\QueryExpander\LocalizedQueryExpanderPlugin;
- 
+
 class ConfigurableBundlePageSearchDependencyProvider extends SprykerConfigurableBundlePageSearchDependencyProvider
 {
     /**
@@ -390,7 +398,7 @@ class ConfigurableBundlePageSearchDependencyProvider extends SprykerConfigurable
             new ConfigurableBundleTemplatePageSearchResultFormatterPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Client\Search\Dependency\Plugin\QueryExpanderPluginInterface[]
      */
@@ -403,23 +411,24 @@ class ConfigurableBundlePageSearchDependencyProvider extends SprykerConfigurable
 }
 ```
 
-### 5) Configure Export to Redis and Elasticsearch
+### 5) Configure export to Redis and Elasticsearch
+
 This step will publish tables on change (create, edit) to the spy_configurable_bundle_template_storage and synchronize the data to Storage.
 
-#### Set up Event Listeners
+#### Set up event listeners
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `ConfigurableBundleStorageEventSubscriber` | Registers listeners that are responsible for publishing configurable bundle storage template entity changes when a related entity change event occurs. | None | `Spryker\Zed\ConfigurableBundleStorage\Communication\Plugin\Event\Subscriber` |
-| `ConfigurableBundleTemplatePageSearchEventSubscriber` | Registers listeners that are responsible for publishing configurable bundle storage template entity changes to search when a related entity change event occurs. | None | `Spryker\Zed\ConfigurableBundlePageSearch\Communication\Plugin\Event\Subscriber` |
+| ConfigurableBundleStorageEventSubscriber | Registers listeners that are responsible for publishing configurable bundle storage template entity changes when a related entity change event occurs. | None | Spryker\Zed\ConfigurableBundleStorage\Communication\Plugin\Event\Subscriber |
+| ConfigurableBundleTemplatePageSearchEventSubscriber | Registers listeners that are responsible for publishing configurable bundle storage template entity changes to search when a related entity change event occurs. | None | Spryker\Zed\ConfigurableBundlePageSearch\Communication\Plugin\Event\Subscriber |
 
 **src/Pyz/Zed/Event/EventDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Event;
- 
+
 use Spryker\Zed\ConfigurableBundlePageSearch\Communication\Plugin\Event\Subscriber\ConfigurableBundleTemplatePageSearchEventSubscriber;
 use Spryker\Zed\Event\EventDependencyProvider as SprykerEventDependencyProvider;
 use Spryker\Zed\ConfigurableBundleStorage\Communication\Plugin\Event\Subscriber\ConfigurableBundleStorageEventSubscriber;
@@ -437,25 +446,26 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
         $eventSubscriberCollection = parent::getEventSubscriberCollection();
         $eventSubscriberCollection->add(new ConfigurableBundleStorageEventSubscriber());
         $eventSubscriberCollection->add(new ConfigurableBundleTemplatePageSearchEventSubscriber());
- 
+
         return $eventSubscriberCollection;
     }
 }
 ```
 
-#### Register the Synchronization Queue and Synchronization Error Queue
+#### Register the synchronization queue and synchronization error queue
+
 **src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\RabbitMq;
- 
+
 use ArrayObject;
 use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
 use Spryker\Shared\ConfigurableBundlePageSearch\ConfigurableBundlePageSearchConfig;
 use Spryker\Shared\ConfigurableBundleStorage\ConfigurableBundleStorageConfig;
- 
+
 class RabbitMqConfig extends SprykerRabbitMqConfig
 {
     /**
@@ -466,28 +476,28 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
         $queueOptionCollection = new ArrayObject();
         $queueOptionCollection->append($this->createQueueOption(ConfigurableBundleStorageConfig::CONFIGURABLE_BUNDLE_SYNC_STORAGE_QUEUE, ConfigurableBundleStorageConfig::CONFIGURABLE_BUNDLE_SYNC_STORAGE_ERROR_QUEUE));
         $queueOptionCollection->append($this->createQueueOption(ConfigurableBundlePageSearchConfig::CONFIGURABLE_BUNDLE_SEARCH_QUEUE, ConfigurableBundlePageSearchConfig::CONFIGURABLE_BUNDLE_SEARCH_ERROR_QUEUE));
- 
+
         return $queueOptionCollection;
     }
 }
 ```
 
-#### Configure Message Processors
+#### Configure message processors
 
 **src/Pyz/Zed/Queue/QueueDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Queue;
- 
+
 use Spryker\Shared\ConfigurableBundlePageSearch\ConfigurableBundlePageSearchConfig;
 use Spryker\Shared\ConfigurableBundleStorage\ConfigurableBundleStorageConfig;
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Queue\QueueDependencyProvider as SprykerDependencyProvider;
 use Spryker\Zed\Synchronization\Communication\Plugin\Queue\SynchronizationSearchQueueMessageProcessorPlugin;
 use Spryker\Zed\Synchronization\Communication\Plugin\Queue\SynchronizationStorageQueueMessageProcessorPlugin;
- 
+
 class QueueDependencyProvider extends SprykerDependencyProvider
 {
     /**
@@ -505,26 +515,26 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-#### Set up Re-Generate and Re-Sync Features
+#### Set up re-generate and re-sync features
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `ConfigurableBundleTemplateEventResourceBulkRepositoryPlugin` | Allows populating empty storage table with data. | None | `Spryker\Zed\ConfigurableBundleStorage\Communication\Plugin\Event` |
-| `ConfigurableBundleTemplatePageSearchEventResourceBulkRepositoryPlugin` | Allows populating empty search table with data. | None | `Spryker\Zed\ConfigurableBundleStorage\Communication\Plugin\Event` |
-| `ConfigurableBundleTemplateSynchronizationDataBulkPlugin` | Allows synchronizing the entire storage table content into Storage. | None | `Spryker\Zed\ConfigurableBundleStorage\Communication\Plugin\Synchronization` |
-| `ConfigurableBundleTemplatePageSynchronizationDataBulkPlugin` | Allows synchronizing all of the content into Search. | None | `Spryker\Zed\ConfigurableBundlePageSearch\Communication\Plugin\Synchronization` |
+| ConfigurableBundleTemplateEventResourceBulkRepositoryPlugin | Allows populating empty storage table with data. | None | Spryker\Zed\ConfigurableBundleStorage\Communication\Plugin\Event |
+| ConfigurableBundleTemplatePageSearchEventResourceBulkRepositoryPlugin | Allows populating empty search table with data. | None | Spryker\Zed\ConfigurableBundleStorage\Communication\Plugin\Event |
+| ConfigurableBundleTemplateSynchronizationDataBulkPlugin | Allows synchronizing the entire storage table content into Storage. | None | Spryker\Zed\ConfigurableBundleStorage\Communication\Plugin\Synchronization |
+| ConfigurableBundleTemplatePageSynchronizationDataBulkPlugin | Allows synchronizing all of the content into Search. | None | Spryker\Zed\ConfigurableBundlePageSearch\Communication\Plugin\Synchronization |
 
 **src/Pyz/Zed/EventBehavior/EventBehaviorDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\EventBehavior;
- 
+
 use Spryker\Zed\ConfigurableBundlePageSearch\Communication\Plugin\Event\ConfigurableBundleTemplatePageSearchEventResourceBulkRepositoryPlugin;
 use Spryker\Zed\ConfigurableBundleStorage\Communication\Plugin\Event\ConfigurableBundleTemplateEventResourceBulkRepositoryPlugin;
 use Spryker\Zed\EventBehavior\EventBehaviorDependencyProvider as SprykerEventBehaviorDependencyProvider;
- 
+
 class EventBehaviorDependencyProvider extends SprykerEventBehaviorDependencyProvider
 {
     /**
@@ -544,13 +554,13 @@ class EventBehaviorDependencyProvider extends SprykerEventBehaviorDependencyProv
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Synchronization;
- 
+
 use Spryker\Zed\ConfigurableBundleStorage\Communication\Plugin\Synchronization\ConfigurableBundleTemplateSynchronizationDataBulkPlugin;
 use Spryker\Zed\ConfigurableBundlePageSearch\Communication\Plugin\Synchronization\ConfigurableBundleTemplatePageSynchronizationDataBulkPlugin;
 use Spryker\Zed\Synchronization\SynchronizationDependencyProvider as SprykerSynchronizationDependencyProvider;
- 
+
 class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
 {
     /**
@@ -566,18 +576,18 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 }
 ```
 
-#### Configure Synchronization Pool Name 
+#### Configure synchronization pool name
 
 **src/Pyz/Zed/ConfigurableBundleStorage/ConfigurableBundleStorageConfig.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\ConfigurableBundleStorage;
- 
+
 use Pyz\Zed\Synchronization\SynchronizationConfig;
 use Spryker\Zed\ConfigurableBundleStorage\ConfigurableBundleStorageConfig as SprykerConfigurableBundleStorageConfig;
- 
+
 class ConfigurableBundleStorageConfig extends SprykerConfigurableBundleStorageConfig
 {
     /**
@@ -594,9 +604,9 @@ class ConfigurableBundleStorageConfig extends SprykerConfigurableBundleStorageCo
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\ConfigurableBundlePageSearch;
- 
+
 use Pyz\Zed\Synchronization\SynchronizationConfig;
 use Spryker\Zed\ConfigurableBundlePageSearch\ConfigurableBundlePageSearchConfig as SprykerConfigurableBundlePageSearch;
 class ConfigurableBundlePageSearchConfig extends SprykerConfigurableBundlePageSearch
@@ -613,7 +623,7 @@ class ConfigurableBundlePageSearchConfig extends SprykerConfigurableBundlePageSe
 
 {% info_block warningBox "Verification" %}
 
-1. Make sure that when you added some data to tables `spy_configurable_bundle_template` or `spy_configurable_bundle_template_slot` and run `console trigger:event -r configurable_bundle_template` command, the changes reflect in `spy_configurable_bundle_template_storage`  and  `spy_configurable_bundle_template_page_search` tables. 
+1. Make sure that when you added some data to tables `spy_configurable_bundle_template` or `spy_configurable_bundle_template_slot` and run `console trigger:event -r configurable_bundle_template` command, the changes reflect in `spy_configurable_bundle_template_storage`  and  `spy_configurable_bundle_template_page_search` tables.
 
 2. Make sure that after step #1 or after command `console sync:data configurable_bundle_template` execution data is exported:
 
@@ -622,15 +632,15 @@ class ConfigurableBundlePageSearchConfig extends SprykerConfigurableBundlePageSe
 
 3. Make sure that when a configurable bundle template (or template slot) created or edited through ORM, it is exported to Redis or Elasticsearch accordingly.
 
-| header | header | header |
+| STORAGE TYPE | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
 | --- | --- | --- |
-| Redis | `ConfigurableBundleTemplate` | `kv:configurable_bundle_template:1` |
-| Elasticsearch | `ConfigurableBundleTemplate` | `configurable_bundle_template:en_us:1` |
+| Redis | ConfigurableBundleTemplate | kv:configurable_bundle_template:1 |
+| Elasticsearch | ConfigurableBundleTemplate | configurable_bundle_template:en_us:1 |
 
 **Example expected data fragment for Redis**
 
 ```xml
-{ 
+{
      "id_configurable_bundle_template": 2,
      "uuid": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de",
      "name": "configurable_bundle_templates.my-bundle.name",
@@ -647,17 +657,17 @@ class ConfigurableBundlePageSearchConfig extends SprykerConfigurableBundlePageSe
             "name": "configurable_bundle.template_slots.slot-7.name",
             "id_product_list": 14
         ]
-    ] 
+    ]
 }
 ```
 
 **Example expected data fragment for Elasticsearch**
 
 ```xml
-{ 
+{
    "locale":"en_US",
    "type":"configurable_bundle_template",
-   "search-result-data":{ 
+   "search-result-data":{
       "idConfigurableBundleTemplate":1,
       "uuid":"8d8510d8-59fe-5289-8a65-19f0c35a0089",
       "name":"configurable_bundle.templates.configurable-bundle-all-in.nam"
@@ -665,11 +675,12 @@ class ConfigurableBundlePageSearchConfig extends SprykerConfigurableBundlePageSe
 }
 ```
 
-
 {% endinfo_block %}
 
-### 6) Import Data
-#### Import Configurable Bundles Data
+### 6) Import data
+
+#### Import configurable bundles data
+
 Prepare your data according to your requirements using our demo data:
 
 **vendor/spryker/spryker/Bundles/ConfigurableBundleDataImport/data/import/configurable_bundle_template.csv**
@@ -680,12 +691,12 @@ t000001,8d8510d8-59fe-5289-8a65-19f0c35a0089,configurable_bundle.templates.confi
 t000002,c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de,configurable_bundle.templates.smartstation.name,1
 ```
 
-| Column | IS REQUIRED? | Data Type | Daa Example | Data Explanation |
+| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| `configurable_bundle_template_key` | mandatory | string | `t000001` | Internal data import identifier for the configurable bundle template. |
-| `configurable_bundle_template_uuid` | optional | string | `8d8510d8-59fe-5289-8a65-19f0c35a0089` | Unique identifier for the configurable bundle. |
-| `configurable_bundle_template_name` | mandatory | string | `configurable_bundle.templates.smartstation.name` | Glossary key for the configurable bundle name. |
-| `configurable_bundle_template_is_active` | mandatory | bool | `1` | `IsActive` flag for the configurable bundle name. |
+| configurable_bundle_template_key | mandatory | string | t000001 | Internal data import identifier for the configurable bundle template. |
+| configurable_bundle_template_uuid | optional | string | 8d8510d8-59fe-5289-8a65-19f0c35a0089 | Unique identifier for the configurable bundle. |
+| configurable_bundle_template_name | mandatory | string | configurable_bundle.templates.smartstation.name | Glossary key for the configurable bundle name. |
+| configurable_bundle_template_is_active | mandatory | bool | 1 | `IsActive` flag for the configurable bundle name. |
 
 **vendor/spryker/spryker/Bundles/ConfigurableBundleDataImport/data/import/configurable_bundle_template_slot.csv**
 
@@ -699,32 +710,32 @@ s000005,configurable_bundle.template_slots.slot-5.name,9626de80-6caa-57a9-a683-2
 s000006,configurable_bundle.template_slots.slot-6.name,2a5e55b1-993a-5510-864c-a4a18558aa75,t000002,pl-014
 ```
 
-| Column | IS REQUIRED? | Data Type | Daa Example | Data Explanation |
+| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| `configurable_bundle_template_slot_key` | mandatory | string | `s000001` | Internal data import identifier for the configurable bundle template slot. |
-| `configurable_bundle_template_slot_name` | mandatory | string | `configurable_bundle.template_slots.slot-1.name` |Name (glossary key) for the configurable bundle template slot.  |
-| `configurable_bundle_template_slot_uuid` | optional | string | `332b40ac-a789-57ce-bec0-23d8dddd71eb` |Unique identifier for the configurable bundle template slot.  |
-| `configurable_bundle_template_key` | mandatory | string | `t000001` | Internal data import identifier for the configurable bundle template. |
-| `product_list_key` | mandatory | string | `pl-009` | The ID of the product list for allowed products of the slot. |
+| configurable_bundle_template_slot_key | mandatory | string | s000001 | Internal data import identifier for the configurable bundle template slot. |
+| configurable_bundle_template_slot_name | mandatory | string | configurable_bundle.template_slots.slot-1.name |Name (glossary key) for the configurable bundle template slot.  |
+| configurable_bundle_template_slot_uuid | optional | string | 332b40ac-a789-57ce-bec0-23d8dddd71eb |Unique identifier for the configurable bundle template slot.  |
+| configurable_bundle_template_key | mandatory | string | t000001 | Internal data import identifier for the configurable bundle template. |
+| product_list_key | mandatory | string | pl-009 | The ID of the product list for allowed products of the slot. |
 
 Register the following plugins to enable data import:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `ConfigurableBundleTemplateDataImportPlugin` | Imports configurable bundle template data into the database. | None | `Spryker\Zed\ConfigurableBundleDataImport\Communication\Plugin` |
-| `ConfigurableBundleTemplateSlotDataImportPlugin` | Imports configurable bundle template slot data into the database. | None | `Spryker\Zed\ConfigurableBundleDataImport\Communication\Plugin` |
+| ConfigurableBundleTemplateDataImportPlugin | Imports configurable bundle template data into the database. | None | Spryker\Zed\ConfigurableBundleDataImport\Communication\Plugin |
+| ConfigurableBundleTemplateSlotDataImportPlugin | Imports configurable bundle template slot data into the database. | None | Spryker\Zed\ConfigurableBundleDataImport\Communication\Plugin |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
 ```php
 <?php
-  
+
 namespace Pyz\Zed\DataImport;
-  
+
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use Spryker\Zed\ConfigurableBundleDataImport\Communication\Plugin\ConfigurableBundleTemplateDataImportPlugin;
 use Spryker\Zed\ConfigurableBundleDataImport\Communication\Plugin\ConfigurableBundleTemplateSlotDataImportPlugin;
- 
+
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
     protected function getDataImporterPlugins(): array
@@ -777,26 +788,28 @@ Navigate to your shop and make sure you can see a new item in the navigation men
 
 {% endinfo_block %}
 
-### 7) Set up Behavior
-#### Set up Configurable Bundles Workflow
+### 7) Set up behavior
+
+#### Set up configurable bundles workflow
+
 Enable the following behaviors by registering the plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `ConfiguredBundleOrderExpanderPlugin` | Expands sales order by configured bundles. Expands ItemTransfer by configured bundle item. | None |`Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\Sales`|
-|`ConfiguredBundlesOrderPostSavePlugin`| Persists configured bundles from `ItemTransfer` in Quote to `sales_order` configured bundle tables. |None|`Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\Sales` |
+| ConfiguredBundleOrderExpanderPlugin | Expands sales order by configured bundles. Expands ItemTransfer by configured bundle item. | None |Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\Sales|
+|ConfiguredBundlesOrderPostSavePlugin| Persists configured bundles from `ItemTransfer` in Quote to `sales_order` configured bundle tables. |None|Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\Sales |
 
 **src/Pyz/Zed/Sales/SalesDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Sales;
- 
+
 use Spryker\Zed\Sales\SalesDependencyProvider as SprykerSalesDependencyProvider;
 use Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\Sales\ConfiguredBundleOrderExpanderPlugin;
 use Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\Sales\ConfiguredBundlesOrderPostSavePlugin;
- 
+
 class SalesDependencyProvider extends SprykerSalesDependencyProvider
 {
     /**
@@ -808,7 +821,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
             new ConfiguredBundleOrderExpanderPlugin(),
         ];
     }
-     
+
     /**
      * @return \Spryker\Zed\SalesExtension\Dependency\Plugin\OrderPostSavePluginInterface[]
      */
@@ -832,23 +845,23 @@ Make sure that when you place an order with a configured bundle:
 
 #### Register Pre-load, Pre-check and Expander Plugins for the Cart Module
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `CartConfigurableBundlePreReloadPlugin` | Removes items from the QuoteTransfer if its configurable bundle template was removed or became inactive. | None |`Spryker\Zed\ConfigurableBundle\Communication\Plugin\Cart` |
-| `ConfiguredBundleQuantityPostSavePlugin` | Applies to items that have configurable properties. Updates configured bundle quantity. | None | `Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart` |
-| `ConfiguredBundleQuantityPerSlotPreReloadItemsPlugin` | Applies to items that have configurable properties. Updates configured bundle quantity per slot. | None | `Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart` |
-| `ConfiguredBundleQuantityCartTerminationPlugin` | Terminates add/remove product to the cart process if configured bundle quantity is not proportional to product quantity. | None | `Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart` |
-| `ConfiguredBundleTemplateSlotCombinationPreCheckPlugin` | Checks configurable bundle template/slot combinations. Adds error message if wrong combinations found. | None | `Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart` |
-| `ConfiguredBundleQuantityPerSlotItemExpanderPlugin` | Expands configured bundle items with the quantity per slot. | None | `Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart` |
-| `ConfiguredBundleGroupKeyItemExpanderPlugin` | Expands items with configured bundle property with the group key. | None | `Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart` |
+| CartConfigurableBundlePreReloadPlugin | Removes items from the QuoteTransfer if its configurable bundle template was removed or became inactive. | None |Spryker\Zed\ConfigurableBundle\Communication\Plugin\Cart |
+| ConfiguredBundleQuantityPostSavePlugin | Applies to items that have configurable properties. Updates configured bundle quantity. | None | Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart |
+| ConfiguredBundleQuantityPerSlotPreReloadItemsPlugin | Applies to items that have configurable properties. Updates configured bundle quantity per slot. | None | Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart |
+| ConfiguredBundleQuantityCartTerminationPlugin | Terminates add/remove product to the cart process if configured bundle quantity is not proportional to product quantity. | None | Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart |
+| ConfiguredBundleTemplateSlotCombinationPreCheckPlugin | Checks configurable bundle template/slot combinations. Adds error message if wrong combinations found. | None | Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart |
+| ConfiguredBundleQuantityPerSlotItemExpanderPlugin | Expands configured bundle items with the quantity per slot. | None | Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart |
+| ConfiguredBundleGroupKeyItemExpanderPlugin | Expands items with configured bundle property with the group key. | None | Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart |
 
 **src/Pyz/Zed/Cart/CartDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Cart;
- 
+
 use Spryker\Zed\Cart\CartDependencyProvider as SprykerCartDependencyProvider;
 use Spryker\Zed\ConfigurableBundle\Communication\Plugin\Cart\CartConfigurableBundlePreReloadPlugin;
 use Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart\ConfiguredBundleGroupKeyItemExpanderPlugin;
@@ -857,9 +870,9 @@ use Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart\ConfiguredBundl
 use Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart\ConfiguredBundleQuantityCartTerminationPlugin;
 use Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart\ConfiguredBundleQuantityPerSlotPreReloadItemsPlugin;
 use Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart\ConfiguredBundleQuantityPostSavePlugin;
- 
+
 use Spryker\Zed\Kernel\Container;
- 
+
 class CartDependencyProvider extends SprykerCartDependencyProvider
 {
     /**
@@ -874,7 +887,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
             new ConfiguredBundleQuantityPerSlotPreReloadItemsPlugin(),
         ];
     }
- 
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -888,7 +901,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
             new ConfiguredBundleGroupKeyItemExpanderPlugin(),
         ];
     }
- 
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -900,7 +913,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
             new ConfiguredBundleTemplateSlotCombinationPreCheckPlugin(),
         ];
     }
- 
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -912,7 +925,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
             new ConfiguredBundleQuantityPostSavePlugin(),
         ];
     }
- 
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -959,20 +972,20 @@ Make sure after updating the configured bundle quantity on cart page:
 
 #### Register Delete Pre-Check Plugins for the ProductList Module
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `ConfigurableBundleTemplateSlotProductListDeletePreCheckPlugin` | Finds configurable bundle template slots that use a given Product List. Disallows Product List deleting if any usage cases found. | None | `Spryker\Zed\ConfigurableBundle\Communication\Plugin\ProductList` |
+| ConfigurableBundleTemplateSlotProductListDeletePreCheckPlugin | Finds configurable bundle template slots that use a given Product List. Disallows Product List deleting if any usage cases found. | None | Spryker\Zed\ConfigurableBundle\Communication\Plugin\ProductList |
 
 **src/Pyz/Zed/ProductList/ProductListDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\ProductList;
- 
+
 use Spryker\Zed\ConfigurableBundle\Communication\Plugin\ProductList\ConfigurableBundleTemplateSlotProductListDeletePreCheckPlugin;
 use Spryker\Zed\ProductList\ProductListDependencyProvider as SprykerProductListDependencyProvider;
- 
+
 class ProductListDependencyProvider extends SprykerProductListDependencyProvider
 {
     /**
@@ -994,16 +1007,17 @@ Make sure an error occurs while deleting a product list that was assigned to a s
 {% endinfo_block %}
 
 ### 8) Configure Zed UI
-#### Register Plugins for the ConfigurableBundleGui Module
 
-| Plugin | Specification | Prerequisites | Namespace |
+#### Register plugins for the ConfigurableBundleGui module
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `ProductListManagementConfigurableBundleTemplateSlotEditTabsExpanderPlugin` | Expands **Slot Edit** page tabs with additional product list management tabs. | None | `Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui` |
-| `ProductListManagementConfigurableBundleTemplateSlotEditFormExpanderPlugin` | Expands **Slot Edit** form with Product List assignment subforms.  | None | `Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui` |
-| `ProductListManagementConfigurableBundleTemplateSlotEditFormDataProviderExpanderPlugin` | Expands options for **Slot Edit** form with Product List management data. | None | `Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui` |
-| `ProductConcreteRelationCsvConfigurableBundleTemplateSlotEditFormFileUploadHandlerPlugin` | Handles Product Concrete Relation CSV file upload. | None | `Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui` |
-| `ProductConcreteRelationConfigurableBundleTemplateSlotEditSubTabsProviderPlugin` | Provides subtabs for the Assign Products tab. | None | `Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui` |
-| `ProductConcreteRelationConfigurableBundleTemplateSlotEditTablesProviderPlugin` | Provides tables for the Assign Products tab. | None | `Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui` |
+| ProductListManagementConfigurableBundleTemplateSlotEditTabsExpanderPlugin | Expands **Slot Edit** page tabs with additional product list management tabs. | None | Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui |
+| ProductListManagementConfigurableBundleTemplateSlotEditFormExpanderPlugin | Expands **Slot Edit** form with Product List assignment subforms.  | None | Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui |
+| ProductListManagementConfigurableBundleTemplateSlotEditFormDataProviderExpanderPlugin | Expands options for **Slot Edit** form with Product List management data. | None | Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui |
+| ProductConcreteRelationCsvConfigurableBundleTemplateSlotEditFormFileUploadHandlerPlugin | Handles Product Concrete Relation CSV file upload. | None | Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui |
+| ProductConcreteRelationConfigurableBundleTemplateSlotEditSubTabsProviderPlugin | Provides subtabs for the Assign Products tab. | None | Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui |
+| ProductConcreteRelationConfigurableBundleTemplateSlotEditTablesProviderPlugin | Provides tables for the Assign Products tab. | None | Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui |
 
 
 <details open>
@@ -1011,9 +1025,9 @@ Make sure an error occurs while deleting a product list that was assigned to a s
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\ConfigurableBundleGui;
- 
+
 use Spryker\Zed\ConfigurableBundleGui\ConfigurableBundleGuiDependencyProvider as SprykerConfigurableBundleGuiDependencyProvider;
 use Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui\ProductConcreteRelationConfigurableBundleTemplateSlotEditSubTabsProviderPlugin;
 use Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui\ProductConcreteRelationConfigurableBundleTemplateSlotEditTablesProviderPlugin;
@@ -1021,7 +1035,7 @@ use Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui\Produc
 use Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui\ProductListManagementConfigurableBundleTemplateSlotEditFormDataProviderExpanderPlugin;
 use Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui\ProductListManagementConfigurableBundleTemplateSlotEditFormExpanderPlugin;
 use Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui\ProductListManagementConfigurableBundleTemplateSlotEditTabsExpanderPlugin;
- 
+
 class ConfigurableBundleGuiDependencyProvider extends SprykerConfigurableBundleGuiDependencyProvider
 {
     /**
@@ -1033,7 +1047,7 @@ class ConfigurableBundleGuiDependencyProvider extends SprykerConfigurableBundleG
             new ProductListManagementConfigurableBundleTemplateSlotEditTabsExpanderPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\ConfigurableBundleGuiExtension\Dependency\Plugin\ConfigurableBundleTemplateSlotEditFormExpanderPluginInterface[]
      */
@@ -1043,7 +1057,7 @@ class ConfigurableBundleGuiDependencyProvider extends SprykerConfigurableBundleG
             new ProductListManagementConfigurableBundleTemplateSlotEditFormExpanderPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\ConfigurableBundleGuiExtension\Dependency\Plugin\ConfigurableBundleTemplateSlotEditFormDataProviderExpanderPluginInterface[]
      */
@@ -1053,7 +1067,7 @@ class ConfigurableBundleGuiDependencyProvider extends SprykerConfigurableBundleG
             new ProductListManagementConfigurableBundleTemplateSlotEditFormDataProviderExpanderPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\ConfigurableBundleGuiExtension\Dependency\Plugin\ConfigurableBundleTemplateSlotEditFormFileUploadHandlerPluginInterface[]
      */
@@ -1063,7 +1077,7 @@ class ConfigurableBundleGuiDependencyProvider extends SprykerConfigurableBundleG
             new ProductConcreteRelationCsvConfigurableBundleTemplateSlotEditFormFileUploadHandlerPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\ConfigurableBundleGuiExtension\Dependency\Plugin\ConfigurableBundleTemplateSlotEditSubTabsProviderPluginInterface[]
      */
@@ -1073,7 +1087,7 @@ class ConfigurableBundleGuiDependencyProvider extends SprykerConfigurableBundleG
             new ProductConcreteRelationConfigurableBundleTemplateSlotEditSubTabsProviderPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\ConfigurableBundleGuiExtension\Dependency\Plugin\ConfigurableBundleTemplateSlotEditTablesProviderPluginInterface[]
      */
@@ -1085,7 +1099,6 @@ class ConfigurableBundleGuiDependencyProvider extends SprykerConfigurableBundleG
     }
 }
 ```
-<br>
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -1097,24 +1110,24 @@ Make sure that on configurable bundle template slot edit page (`http://zed.myspr
 
 {% endinfo_block %}
 
-#### Register Plugins for the ProductListGui Module
+#### Register plugins for the ProductListGui module
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `ConfigurableBundleTemplateListProductListTopButtonsExpanderPlugin` | Expands buttons list with button leads to a Configurable Bundle Template list page. | None | `Spryker\Zed\ConfigurableBundleGui\Communication\Plugin\ProductListGui` |
-| `ConfigurableBundleTemplateProductListUsedByTableExpanderPlugin` | Expands table data with Configurable Bundle Templates and Slots which use Product List. | None | `Spryker\Zed\ConfigurableBundleGui\Communication\Plugin\ProductListGui` |
+| ConfigurableBundleTemplateListProductListTopButtonsExpanderPlugin | Expands buttons list with button leads to a Configurable Bundle Template list page. | None | Spryker\Zed\ConfigurableBundleGui\Communication\Plugin\ProductListGui |
+| ConfigurableBundleTemplateProductListUsedByTableExpanderPlugin | Expands table data with Configurable Bundle Templates and Slots which use Product List. | None | Spryker\Zed\ConfigurableBundleGui\Communication\Plugin\ProductListGui |
 
 **src/Pyz/Zed/ProductListGui/ProductListGuiDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\ProductListGui;
- 
+
 use Spryker\Zed\ConfigurableBundleGui\Communication\Plugin\ProductListGui\ConfigurableBundleTemplateListProductListTopButtonsExpanderPlugin;
 use Spryker\Zed\ConfigurableBundleGui\Communication\Plugin\ProductListGui\ConfigurableBundleTemplateProductListUsedByTableExpanderPlugin;
 use Spryker\Zed\ProductListGui\ProductListGuiDependencyProvider as SprykerProductListGuiDependencyProvider;
- 
+
 class ProductListGuiDependencyProvider extends SprykerProductListGuiDependencyProvider
 {
     /**
@@ -1126,7 +1139,7 @@ class ProductListGuiDependencyProvider extends SprykerProductListGuiDependencyPr
             new ConfigurableBundleTemplateListProductListTopButtonsExpanderPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\ProductListGuiExtension\Dependency\Plugin\ProductListUsedByTableExpanderPluginInterface[]
      */
@@ -1147,15 +1160,18 @@ Make sure that **Used by** table is populated by configurable bundle template sl
 
 {% endinfo_block %}
 
-### 9) Build Zed UI Frontend
+### 9) Build Zed UI frontend
+
 Run the following command to enable Javascript and CSS changes for Zed:
 
 ```bash
 console frontend:zed:build
 ```
 
-## Install Feature Frontend
+## Install feature frontend
+
 ### Prerequisites
+
 Please overview and install the necessary features before beginning the integration step.
 
 | Feature | Version |
@@ -1166,6 +1182,7 @@ Please overview and install the necessary features before beginning the integrat
 | Prices | {{page.version}} |
 
 ### 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
 
 ```bash
@@ -1176,33 +1193,35 @@ composer require spryker-feature/configurable-bundle: "^{{page.version}}" --upda
 
 Make sure that the following modules were installed:
 
-| Feature | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-| `ConfigurableBundleWidget` | `spryker-shop/configurable-bundle-widget` |
-| `SalesConfigurableBundleWidget` | `spryker-shop/sales-configurable-bundle-widget` |
+| ConfigurableBundleWidget | spryker-shop/configurable-bundle-widget |
+| SalesConfigurableBundleWidget | spryker-shop/sales-configurable-bundle-widget |
 
 {% endinfo_block %}
 
-### 2) Enable Controllers
+### 2) Enable controllers
+
 #### Router List
+
 Register router plugins:
 
-| Provider | Namespace |
+| PROVIDER | NAMESPACE |
 | --- | --- |
-| `ConfigurableBundleWidgetRouteProviderPlugin` | `SprykerShop\Yves\ConfigurableBundleWidget\Plugin\Router` |
-| `ConfigurableBundlePageRouteProviderPlugin` | `SprykerShop\Yves\ConfigurableBundlePage\Plugin\Router` |
+|ConfigurableBundleWidgetRouteProviderPlugin |SprykerShop\Yves\ConfigurableBundleWidget\Plugin\Router |
+| ConfigurableBundlePageRouteProviderPlugin | SprykerShop\Yves\ConfigurableBundlePage\Plugin\Router |
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\Router;
- 
+
 use Spryker\Yves\Router\RouterDependencyProvider as SprykerRouterDependencyProvider;
 use SprykerShop\Yves\ConfigurableBundlePage\Plugin\Router\ConfigurableBundlePageRouteProviderPlugin;
 use SprykerShop\Yves\ConfigurableBundleWidget\Plugin\Router\ConfigurableBundleWidgetRouteProviderPlugin;
- 
+
 class RouterDependencyProvider extends SprykerRouterDependencyProvider
 {
     /**
@@ -1226,24 +1245,26 @@ Verify the `ConfigurableBundlePageRouteProviderPlugin`, make sure that you can n
 
 {% endinfo_block %}
 
-### 3) Set up Widgets
+### 3) Set up widgets
+
 Register the following plugins to enable widgets:
-| Plugin | Specification | Prerequisites | Namespace |
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `QuoteConfiguredBundleWidget` | Displays configured bundles on a cart page. | None | `SprykerShop\Yves\ConfigurableBundleWidget\Widget` |
-| `OrderConfiguredBundleWidget` | Displays configured bundles on the order details page. | None | `SprykerShop\Yves\SalesConfigurableBundleWidget\Widget` |
+| QuoteConfiguredBundleWidget | Displays configured bundles on a cart page. | None | SprykerShop\Yves\ConfigurableBundleWidget\Widget |
+| OrderConfiguredBundleWidget | Displays configured bundles on the order details page. | None | SprykerShop\Yves\SalesConfigurableBundleWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\ShopApplication;
- 
+
 use SprykerShop\Yves\ConfigurableBundleWidget\Widget\QuoteConfiguredBundleWidget;
 use SprykerShop\Yves\SalesConfigurableBundleWidget\Widget\OrderConfiguredBundleWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
- 
+
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
@@ -1269,29 +1290,30 @@ console frontend:yves:build
 
 Make sure that the following widgets were registered:
 
-| Module | Test |
+| MODULE | TEST |
 | --- | --- |
-| `QuoteConfiguredBundleWidget` | Go to the cart (`http://mysprykershop.com/cart`) with a configured bundle, make sure that you see items grouped by the configured bundle. |
-| `OrderConfiguredBundleWidget` | Go to the order that was made from a cart with a configured bundle, make sure that you see items grouped by the configured bundle. |
+| QuoteConfiguredBundleWidget | Go to the cart (`http://mysprykershop.com/cart`) with a configured bundle, make sure that you see items grouped by the configured bundle. |
+| OrderConfiguredBundleWidget | Go to the order that was made from a cart with a configured bundle, make sure that you see items grouped by the configured bundle. |
 
 {% endinfo_block %}
 
-### 4) Set up Configuration
+### 4) Set up configuration
+
 Add the following configuration to your project:
 
-| Configuration | Specification | Namespace |
+| CONFIGURATION | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
-| `ConfigurableBundleWidgetConfig::isQuantityChangeable()` | Used to display block with quantity input form. | `Pyz\Yves\ConfigurableBundleWidget` |
+| ConfigurableBundleWidgetConfig::isQuantityChangeable() | Used to display block with quantity input form. | Pyz\Yves\ConfigurableBundleWidget |
 
 **src/Pyz/Yves/ConfigurableBundleWidget/ConfigurableBundleWidgetConfig.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\ConfigurableBundleWidget;
- 
+
 use SprykerShop\Yves\ConfigurableBundleWidget\ConfigurableBundleWidgetConfig as SprykerShopConfigurableBundleWidgetConfig;
- 
+
 class ConfigurableBundleWidgetConfig extends SprykerShopConfigurableBundleWidgetConfig
 {
     /**

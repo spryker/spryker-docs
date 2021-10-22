@@ -1,5 +1,5 @@
 ---
-title: Scheduled prices feature overview
+title: Scheduled Prices feature overview
 description: The article describes the Scheduled Prices feature, price types, time zones, and the way scheduled prices can be created.
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/scheduled-prices-feature-overview
@@ -11,19 +11,15 @@ redirect_from:
   - /docs/en/scheduled-prices-feature-overview
 ---
 
-
-
-The Scheduled prices feature enables shop administrators to schedule price changes, which are to happen in the future for multiple products simultaneously.
+The _Scheduled Prices_ feature enables shop administrators to schedule price changes, which are to happen in the future for multiple products simultaneously.
 
 Instead of changing prices manually, you can prepare a list of prices with time frames which are to be applied automatically. For example, you might want to increase prices of the products that are of great demand on a certain date before the Christmas eve and decrease them on a certain date afterward. The Scheduled Prices feature enables you to specify the prices and the dates beforehand.
 
 An in-built cron-job will switch the prices on the specified dates for all the specified products automatically. Apart from major events, you can use this feature to update prices across the shop without having to do it manually for each product, since the feature allows you to do it from one place in bulk.
 
-
 ## Price types
 
 Currently, the feature only works with the following price types:
-
 * default
 * original
 
@@ -71,13 +67,11 @@ Unlike imported price schedules, the price schedules added, deleted or edited fr
 ## Scheduled price application logic
 
 You can schedule multiple prices on overlapping dates. For example, you define that:
-
 * Scheduled price #1 takes effect between <b>01.01</b> and <b>31.07</b>.
 * Scheduled price #2 takes effect between <b>25.02</b> and <b>08.06</b>.
 * Scheduled price #3 takes effect between <b>01.03</b> and <b>01.04</b>.
 
 In this case:
-
 * Scheduled price #1 is applied on <b>01.01</b> and remains active till scheduled price #2 gets applied on <b>25.02</b>.
 * Scheduled price #2 remains active till the scheduled price #3 gets applied on <b>01.03</b>.
 * When active period of scheduled price #3 ends on <b>01.04</b>, price reverts back to scheduled price #2.

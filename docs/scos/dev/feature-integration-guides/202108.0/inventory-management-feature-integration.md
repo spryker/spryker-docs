@@ -40,14 +40,14 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | master |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command to install the required modules:
 
 ```bash
-composer require spryker-feature/inventory-management dev-master --update-with-dependencies
+composer require spryker-feature/inventory-management:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -73,6 +73,7 @@ Set up database schema and transfer objects:
 
 
 **src/Pyz/Zed/Availability/Persistence/Propel/Schema/spy\_availability.schema.xml**
+
 ```xml
 <?xml version="1.0"?>
 <database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\Availability\Persistence" package="src.Orm.Zed.Availability.Persistence">
@@ -96,6 +97,7 @@ Set up database schema and transfer objects:
 2. Configure the full import list:
 
 **Zed/DataImport/DataImportConfig.php**
+
 ```php
 <?php
 
@@ -124,6 +126,7 @@ class DataImportConfig extends SprykerDataImportConfig
 ```
 
 3. Generate transfer changes:
+
 ```bash
 console transfer:generate
 console propel:install
@@ -134,7 +137,7 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | StockTransfer| class| added| src/Generated/Shared/Transfer/StockTransfer.php
 | StockCriteriaFilterTransfer| class| added| src/Generated/Shared/Transfer/StockCriteriaFilterTransfer.php|
@@ -147,7 +150,8 @@ Make sure that the following changes have been applied in transfer objects:
 
 
 Make sure that the following changes have been applied in the database:
-| Database entity| Type| Event|
+
+| DATABASE ENTITY | TYPE | EVENT |
 | --- | --- | --- |
 |spy_stock_store| table| added|
 |spy_stock.is_active| column| added|
@@ -159,11 +163,10 @@ Make sure that the following changes have been applied in the database:
 
 Make sure that propel entities have been generated:
 
-| File path | Extends |
+| FILE PATH | EXTENDS |
 | --- | --- |
 | src/Orm/Zed/StockAddress/Persistence/Base/SpyStockAddress.php | Spryker/Zed/StockAddress/Persistence/Propel/AbstractSpyStockAddress.php |
 | src/Orm/Zed/StockAddress/Persistence/Base/SpyStockAddressQuery.php | Spryker/Zed/StockAddress/Persistence/Propel/AbstractSpyStockAddressQuery.php |
-
 
 {% endinfo_block %}
 
@@ -185,7 +188,7 @@ This section is only related to the integration of the *Add to cart from catalog
 
 Install the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | AvailabilityProductAbstractAddToCartPlugin | Filters out the products that are not available. |  | Spryker\Zed\Availability\Communication\Plugin\ProductPageSearch |
 
@@ -226,6 +229,7 @@ Import warehouses and warehouse address data:
 1.  Prepare your data according to your requirements using our demo data:
 
 **vendor/spryker/spryker/Bundles/StockDataImport/data/import/warehouse.csv**
+
 ```csv
 name,is_active
 Warehouse1,1
@@ -237,34 +241,32 @@ Spryker MER000001 Warehouse 1,1
 Video King MER000002 Warehouse 1,1
 Budget Cameras MER000005 Warehouse 1,1
 Sony Experts MER000006 Warehouse 1,1
-
-
 ```
 
 
-| Column | IS REQUIRED? | Data Type | Data Example | Data Explanation |
+| Column | REQUIRED? | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
 | name | mandatory | string | Warehouse1 | Name of the warehouse. |
  |is_active |mandatory |bool |1 |Defines if the warehouse is active. |
 
 **vendor/spryker/spryker/Bundles/StockDataImport/data/import/warehouse_store.csv**
+
 ```csv
 warehouse_name,store_name
 Warehouse1,DE
 Warehouse2,DE
 Warehouse2,AT
 Warehouse2,US
-
-
 ```
 
 
-| Column | IS REQUIRED? | Data Type | Data Example | Data Explanation |
+| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | warehouse_name | mandatory | string | Warehouse1 | Name of the warehouse. |
 | store_name | mandatory | string | DE | Name of the store the warehouse will be available in. |
 
 **data/import/common/common/warehouse_address.csv**
+
 ```csv
 warehouse_name,address1,address2,address3,zip_code,city,region_name,country_iso2_code,phone,comment
 Warehouse1,Hallesches Ufer 71,,,73271,Holzmaden,,DE,+49 7023 87 33 18,
@@ -274,11 +276,9 @@ Spryker MER000001 Warehouse 1,Lietzenburger Strasse 73,,,52391,Vettweiß,,DE,+49
 Video King MER000002 Warehouse 1,Los-Angeles-Platz 12,,,22826,Norderstedt,,DE,+49 40 44 63 66,
 Budget Cameras MER000005 Warehouse 1,Kurfuerstendamm 96,,,89077,Ulm Weststadt,,DE,+49 73 52 52 98,
 Sony Experts MER000006 Warehouse 1,Wallstrasse 58,,,53507,Dernau,,DE,+49 2643 48 41 25,
-
-
 ```
 
-| Column | IS REQUIRED? | Data Type | Data Example | Data Explanation |
+| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | warehouse_name | mandatory | string | Warehouse1 | Warehouse name. |
 | address1 | mandatory | string | Hallesches Ufer 71 | The first line of the warehouse address. |
@@ -292,14 +292,12 @@ Sony Experts MER000006 Warehouse 1,Wallstrasse 58,,,53507,Dernau,,DE,+49 2643 48
 |comment | optional | string | | Any related comment. |
 
 
-{% info_block errorBox %}
+{% info_block warningBox “Verification” %}
 
 Make sure that:
 
 1.  The .csv files have an empty line in the end.
-
 2.  For each `warehouse_name` entry in `warehouse_address.csv`, there is a respective `name` entry in the `warehouse.csv`.
-
 
 {% endinfo_block %}
 
@@ -312,6 +310,7 @@ Make sure that:
   - data_entity: stock-address
     source: data/import/common/common/warehouse_address.csv
 ```
+
 {% info_block infoBox %}
 
 Replace `{SPRYKER_STORE}` in the file paths with the desired stores. For example, `EU`, `US`, or `AT`.
@@ -323,15 +322,14 @@ Replace `{SPRYKER_STORE}` in the file paths with the desired stores. For example
 
 Add these plugins to the end of the plugins list but before the `ProductOfferStockDataImportPlugin`.
 
-
-
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | StockDataImportPlugin | Imports warehouse data into the database. | None | \Spryker\Zed\StockDataImport\Communication\Plugin |
 | StockStoreDataImportPlugin | Imports data about the relationship between warehouses and stores into the database. | None | \Spryker\Zed\StockDataImport\Communication\Plugin |
 | StockAddressDataImportPlugin | Imports warehouse addresses. | None | Spryker\Zed\StockAddressDataImport\Communication\Plugin\DataImport |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
+
 ```php
 <?php
 
@@ -361,6 +359,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 4. In `Pyz\Zed\DataImport\Business\DataImportBusinessFactory::getImporter()`, move the existing product stock importer after the call of the `addDataImporterPlugins()`:
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
+
 ```php
 <?php
 
@@ -391,6 +390,7 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
 5. Enable behaviors by registering the console commands:
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
+
 ```php
 <?php
 
@@ -423,6 +423,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 ```
 
 6. Import data:
+
 ```bash
 console data:import stock
 console data:import stock-store
@@ -448,12 +449,13 @@ vendor/bin/console navigation:build-cache
 2. Configure the stock GUI module with a store form plugin.
 
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | StoreRelationToggleFormTypePlugin | Store relation checklist form based on the existing stores. |  | Spryker\Zed\Store\Communication\Plugin\Form |
 
 
 **src/Pyz/Zed/StockGui/StockGuiDependencyProvider.php**
+
 ```php
 <?php
 
@@ -477,21 +479,20 @@ class StockGuiDependencyProvider extends SprykerStockGuiDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the navigation for Stock GUI has been successfully generated. Check that, in the navigation menu of the Back office, the **Administration** menu with the **Warehouses** submenu is displayed**.**
+Make sure that the navigation for Stock GUI has been successfully generated. Check that, in the navigation menu of the Back office, the **Administration** menu with the **Warehouses** submenu is displayed.
 
 {% endinfo_block %}
 
 
 Register the following plugins for warehouse address management:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | StockAddressStockPostCreatePlugin | Creates a warehouse address if it's attached to a warehouse create request. |  | Spryker\Zed\StockAddress\Communication\Plugin\Stock |
 | StockAddressStockPostUpdatePlugin | Creates a warehouse address if it's attached to a warehouse update request. </br> Removes an existing warehouse address if it's not attached to a warehouse update request. |  | Spryker\Zed\StockAddress\Communication\Plugin\Stock |
 | StockAddressStockCollectionExpanderPlugin | Expands a warehouse collection with related addresses. |  | Spryker\Zed\StockAddress\Communication\Plugin\Stock |
 
-<details open>
-    <summary markdown='span'>Zed/Stock/StockDependencyProvider.php</summary>
+<details open><summary markdown='span'>Zed/Stock/StockDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -535,7 +536,6 @@ class StockDependencyProvider extends SprykerStockDependencyProvider
     }
 }
 ```
-
 </details>
 
 
@@ -548,7 +548,6 @@ Make sure that the warehouse address management works:
 *   Import a warehouse address using a data import functionality.
 
 *   Check if the imported warehouse address exists in the `spy_stock_address` database table.
-
 
 {% endinfo_block %}
 

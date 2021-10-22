@@ -40,8 +40,8 @@ Request sample : `GET http://glue.mysprykershop.com/category-nodes/5`
 
 ### Response
 
-<details open>
-<summary markdown='span'>markdown='span'>Response sample</summary>
+<details>
+<summary markdown='span'>Response sample</summary>
     
 ```js
 {
@@ -120,7 +120,7 @@ Request sample : `GET http://glue.mysprykershop.com/category-nodes/5`
 
 
 <a name="category-nodes-response-attributes"></a>
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | nodeId | String | Category node ID. |
 | name | String | Name of category associated with the node. |

@@ -14,7 +14,7 @@ related:
     link: docs/scos/dev/sdk/page.version/data-import.html
 ---
 
-## Install Feature Core
+## Install feature core
 
 ### 1)  Install the required modules using Composer
 
@@ -23,18 +23,20 @@ Run the following command to install the required modules:
 ```bash
 composer require spryker/data-import:"1.5.0" spryker/data-import-extension:"1.1.0" --update-with-dependencies`
 ```
-<section contenteditable="false" class="warningBox"><div class="content">
 
-**Verification**
+{% info_block warningBox “Verification” %}
+
 Make sure that the following modules have been installed:
 
-| Module |Expected Directory  |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-|`DataImport`  | `vendor/spryker/data-import` |
-|  `DataImportExtension`| `vendor/spryker/data-import-extension` |
-</div></section>
+|DataImport |vendor/spryker/data-import|
+|DataImportExtension| vendor/spryker/data-import-extension|
 
-### 2) Set up Transfer Objects
+{% endinfo_block %}
+
+
+### 2) Set up transfer objects
 
 Run the following command to generate transfer changes:
 
@@ -42,15 +44,15 @@ Run the following command to generate transfer changes:
 console transfer:generate`
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
+{% info_block warningBox “Verification” %}
 
-**Verification**    
 Make sure that the following changes have been applied in the transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
-| `DataSetItem` | class | created | `src/Generated/Shared/Transfer/DataSetItemTransfer.php` |
-| `QueueWriterConfiguration` | class | created | `src/Generated/Shared/Transfer/QueueWriterConfigurationTransfer.php` |
-| `DataImporterQueueDataImporterConfiguration` | class | created | `src/Generated/Shared/Transfer/DataImporterQueueDataImporterConfigurationTransfer.php` |
-| `DataImporterQueueReaderConfiguration` | class | created | `src/Generated/Shared/Transfer/DataImporterQueueReaderConfigurationTransfer.php` |
-</div></section>
+| DataSetItem | class | created | src/Generated/Shared/Transfer/DataSetItemTransfer.php |
+| QueueWriterConfiguration | class | created | src/Generated/Shared/Transfer/QueueWriterConfigurationTransfer.php |
+| DataImporterQueueDataImporterConfiguration | class | created | src/Generated/Shared/Transfer/DataImporterQueueDataImporterConfigurationTransfer.php |
+| DataImporterQueueReaderConfiguration | class | created | src/Generated/Shared/Transfer/DataImporterQueueReaderConfigurationTransfer.php |
+
+{% endinfo_block %}

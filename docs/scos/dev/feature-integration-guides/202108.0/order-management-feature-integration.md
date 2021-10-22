@@ -20,10 +20,7 @@ related:
   - title: Customer Account Management + Order Management feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/customer-account-management-order-management-feature-integration.html
 ---
-
-
 This document describes how to integrate the Order Management feature into a Spryker project.
-
 
 {% info_block warningBox "Included features" %}
 
@@ -37,7 +34,6 @@ The following feature integration guide expects the basic feature to be in place
 {% endinfo_block %}
 
 
-
 ## Install feature core
 
 Follow the steps below to install the Order Management feature core.
@@ -47,28 +43,26 @@ Follow the steps below to install the Order Management feature core.
 To start feature integration, overview and install the necessary features:
 
 | NAME                    | VERSION    |
-| :---------------------- | :--------- |
-| Spryker Core            | dev-master |
-| Mailing & Notifications | dev-master |
-| Order Management        | dev-master |
-| Persistent Cart         | dev-master |
+| ---------------------- | --------- |
+| Spryker Core            | {{page.version}} |
+| Mailing & Notifications | {{page.version}} |
+| Order Management        | {{page.version}} |
+| Persistent Cart         | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/order-management: "dev-master" --update-with-dependencies
+composer require spryker-feature/order-management: "{{page.version}}r" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
 
-
-
 Make sure that the following modules have been installed:
 
 | MODULE                  | EXPECTED DIRECTORY                        |
-| :---------------------- | :---------------------------------------- |
+| --------------------- | --------------------------------------- |
 | OrderCustomReference    | vendor/spryker/order-custom-reference     |
 | OrderCustomReferenceGui | vendor/spryker/order-custom-reference-gui |
 
@@ -85,29 +79,23 @@ console transfer:entity:generate
 console frontend:zed:build
 ```
 
-
-
-
 {% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in the database:
 
 | DATABASE ENTITY                        | TYPE   | EVENT   |
-| :------------------------------------- | :----- | :------ |
+| ----------------------------------- | ----- | ----- |
 | spy_sales_order_invoice                | table  | created |
 | spy_sales_order.order_custom_reference | column | created |
 
-
-
  {% endinfo_block %}
-
 
 {% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in transfer objects:
 
-| TRANSFER                                          | TYPE     | EVENT   | PATH                                                         |
-| :------------------------------------------------ | :------- | :------ | :----------------------------------------------------------- |
+| TRANSFER  | TYPE     | EVENT   | PATH  |
+| --------------------- | ------- | ------ | ---------------- |
 | OrderInvoice                                      | class    | created | src/Generated/Shared/Transfer/OrderInvoiceTransfer           |
 | OrderInvoiceSendRequest                           | class    | created | src/Generated/Shared/Transfer/OrderInvoiceSendRequestTransfer |
 | OrderInvoiceSendResponse                          | class    | created | src/Generated/Shared/Transfer/OrderInvoiceSendResponseTransfer |
@@ -120,9 +108,7 @@ Make sure that the following changes have been applied in transfer objects:
 | QuoteUpdateRequestAttributes.orderCustomReference | property | created | Generated/Shared/Transfer/QuoteUpdateRequestAttributesTransfer |
 | Order.orderCustomReference                        | property | created | Generated/Shared/Transfer/OrderTransfer                      |
 
-
-
- {% endinfo_block %}
+{% endinfo_block %}
 
 ### 3) Set up configuration
 
@@ -130,17 +116,15 @@ Set up the following configuration.
 
 #### 3.1) Configure OMS
 
-
 {% info_block infoBox %}
 - The `cancellable` flag allows proceeding to the `order cancel` process.
 - The `display` attribute allows attaching the `display name` attribute to specific order item states.
 - The `DummyInvoice` sub-process allows triggering `invoice-generate` events.
 {% endinfo_block %}
 
-
 1. Create the OMS sub-process file:
 
-<dertails>
+<details>
     <summary markdown='span'>config/Zed/oms/DummySubprocess/DummyInvoice01.xml</summary>
 
 ```xml
@@ -177,7 +161,6 @@ Set up the following configuration.
 
 </statemachine>
 ```
-
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -188,11 +171,7 @@ Verify the invoice state machine configuration in the next step.
 
 2. Using the following process as an example, adjust your OMS state-machine configuration according to your project’s requirements.
 
-
-
-
-<dertails>
-    <summary markdown='span'>config/Zed/oms/DummyPayment01.xml</summary>
+<details><summary markdown='span'>config/Zed/oms/DummyPayment01.xml</summary>
 
 ```xml
 <?xml version="1.0"?>
@@ -343,13 +322,9 @@ Verify the invoice state machine configuration in the next step.
 
 </statemachine>
 ```
-
 </details>
 
-
-
 {% info_block warningBox "Verification" %}
-
 
 Ensure that you’ve configured OMS:
 
@@ -366,7 +341,8 @@ Ensure that you’ve configured OMS:
 
 Adjust configuration according to your project’s requirements:
 
- **src/Pyz/Zed/Oms/OmsConfig.php**                          
+**src/Pyz/Zed/Oms/OmsConfig.php**
+
 ```php
 <?php
 
@@ -394,6 +370,7 @@ class OmsConfig extends SprykerOmsConfig
 1. Adjust the configuration according to your project’s requirements:
 
 **src/Pyz/Zed/SalesInvoice/SalesInvoiceConfig.php**
+
 ```php
 <?php
 
@@ -417,9 +394,7 @@ class SalesInvoiceConfig extends SprykerSalesInvoiceConfig
 
 2. Using the example below,  add an order invoice Twig template according to your project’s requirements:
 
-
-<dertails>
-    <summary markdown='span'>src/Pyz/Zed/SalesInvoice/Presentation/Invoice/Invoice.twig</summary>
+<details><summary markdown='span'>src/Pyz/Zed/SalesInvoice/Presentation/Invoice/Invoice.twig</summary>
 
 ```twig
 {%- raw -%}
@@ -644,11 +619,12 @@ class SalesInvoiceConfig extends SprykerSalesInvoiceConfig
 </html>
 {% endraw %}
 ```
-
 </details>
 
 {% info_block warningBox "Verification" %}
+
 You will be able to verify the invoice template configuration in a later step.
+
 {% endinfo_block %}
 
 
@@ -661,6 +637,7 @@ An `oms.state.` prefixed translation key is a combination of the `OmsConfig::get
 
 {% endinfo_block %}
 
+
 {% info_block infoBox "Normalized state machine names" %}
 
 By default, in state machine names, the following applies:
@@ -671,10 +648,9 @@ By default, in state machine names, the following applies:
 {% endinfo_block %}
 
 1. Append glossary according to your configuration:
-<dertails>
-    <summary markdown='span'>src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php</summary>
+<details><summary markdown='span'>src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php</summary>
 
- **src/data/import/glossary.csv**                             
+**src/data/import/glossary.csv**                             
 ```csv
 sales.error.customer_order_not_found,Customer Order not found.,en_US
 sales.error.customer_order_not_found,Die Bestellung wurde nicht gefunden.,de_DE
@@ -717,7 +693,6 @@ order_custom_reference.form.placeholder,Ihre Bestellreferenz hinzufügen,de_DE
 order_custom_reference.save,Save,en_US
 order_custom_reference.save,Speichern,de_DE
 ```
-
 </details>
 
  2. Import data:
@@ -725,8 +700,6 @@ order_custom_reference.save,Speichern,de_DE
 ```bash
 console data:import:glossary
 ```
-
-
 
 {% info_block warningBox "Verification" %}
 
@@ -740,16 +713,15 @@ Set up the following behaviors.
 
 #### 5.1) Set up Order Item Display Name
 
-| PLUGIN                                            | SPECIFICATION                                  | PREREQUISITES | NAMESPACE                                    |
-| :------------------------------------------------ | :--------------------------------------------- | :------------ | :------------------------------------------- |
+| PLUGIN  | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| ------------------ | ------------------ | ------------ | ------------ |
 | CurrencyIsoCodeOrderItemExpanderPlugin            | Expands order items with currency codes (ISO). |               | Spryker\Zed\Sales\Communication\Plugin\Sales |
 | StateHistoryOrderItemExpanderPlugin               | Expands order items with history states.       |               | Spryker\Zed\Oms\Communication\Plugin\Sales   |
 | ItemStateOrderItemExpanderPlugin                  | Expands order items with its item states.      |               | Spryker\Zed\Oms\Communication\Plugin\Sales   |
 | OrderAggregatedItemStateSearchOrderExpanderPlugin | Expands orders with aggregated item states.    |               | Spryker\Zed\Oms\Communication\Plugin\Sales   |
 
 
-<dertails>
-    <summary markdown='span'>src/Pyz/Zed/Sales/SalesDependencyProvider.php</summary>
+<details><summary markdown='span'>src/Pyz/Zed/Sales/SalesDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -787,13 +759,9 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
     }
 }
 ```
-
- </details>
-
-
+</details>
 
 {% info_block warningBox "Verification" %}
-
 
 - Make sure that every order item from the `SalesFacade::getOrderItems()` result contains the following:
   - Currency ISO code
@@ -805,14 +773,13 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 
 ### 5.2) Set up order cancellation behavior
 
-| PLUGIN                                 | SPECIFICATION                                       | PREREQUISITES | NAMESPACE                                    |
-| :------------------------------------- | :-------------------------------------------------- | :------------ | :------------------------------------------- |
+| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE  |
+| -------------- | -------------------- | ---------- | --------------- |
 | IsCancellableOrderExpanderPlugin       | Checks if each order item has the cancellable flag. |               | Spryker\Zed\Sales\Communication\Plugin\Sales |
 | IsCancellableSearchOrderExpanderPlugin | Checks if each order item has the cancellable flag. |               | Spryker\Zed\Oms\Communication\Plugin\Sales   |
 
 
-<dertails>
-    <summary markdown='span'>src/Pyz/Zed/Sales/SalesDependencyProvider.php</summary>
+<details><summary markdown='span'>src/Pyz/Zed/Sales/SalesDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -846,9 +813,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
     }
 }
 ```
-
- </details>
-
+</details>
 
 {% info_block warningBox "Verification" %}
 
@@ -860,7 +825,7 @@ Ensure that, on the following pages, each order contains the `isCancellable` fla
 - The Back Office:
   - *Overview of Orders*
 
-  {% endinfo_block %}
+{% endinfo_block %}
 
 ### 5.3) Set up order invoice generation behavior
 
@@ -870,13 +835,12 @@ Set up the following order invoice generation behaviors.
 
 Set up the following plugin:
 
-| PLUGIN                     | SPECIFICATION                                           | PREREQUISITES | NAMESPACE                                          |
-| :------------------------- | :------------------------------------------------------ | :------------ | :------------------------------------------------- |
+| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE |
+| ----------- | --------------- | ----------- | ----------------- |
 | OrderInvoiceMailTypePlugin | Email type that prepares an invoice email for an order. |               | Spryker\Zed\SalesInvoice\Communication\Plugin\Mail |
 
 
-<dertails>
-    <summary markdown='span'>src/Pyz/Zed/Mail/MailDependencyProvider.php</summary>
+<details><summary markdown='span'>src/Pyz/Zed/Mail/MailDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -911,7 +875,6 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
     }
 }
 ```
-
 </details>
 
 
@@ -919,13 +882,12 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 
 Set up the following plugin:
 
-| PLUGIN                            | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                         |
-| :-------------------------------- | :----------------------------------------------------------- | :------------ | :------------------------------------------------ |
+| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE  |
+| -------------- | ---------------- | ------------ | -------------- |
 | GenerateOrderInvoiceCommandPlugin | A command in the OMS state machine that generates an invoice for an order. |               | Spryker\Zed\SalesInvoice\Communication\Plugin\Oms |
 
 
-<dertails>
-    <summary markdown='span'>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
+<details><summary markdown='span'>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -955,15 +917,14 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
     }
 }
 ```
-
- </details>
+</details>
 
 #### 5.3.3) Set up an order invoice OMS command
 
 1. Set up the following plugin:
 
-| PLUGIN                  | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                      |
-| :---------------------- | :----------------------------------------------------------- | :------------ | :--------------------------------------------- |
+| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE  |
+| ---------- | -------------- | ------------ | ----------------- |
 | OrderInvoiceSendConsole | A console command that sends not-yet-sent order invoices via email. |               | Spryker\Zed\SalesInvoice\Communication\Console |
 
 **src/Pyz/Zed/Oms/OmsDependencyProvider.php**
@@ -993,10 +954,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
         return $commands;
     }
 }
-
 ```
-
-
 
 2. Adjust the scheduler project configuration:
 
@@ -1013,8 +971,6 @@ $jobs[] = [
 ];
 ```
 
-
-
 3. Apply the scheduler configuration update:
 
 ```bash
@@ -1022,7 +978,6 @@ vendor/bin/console scheduler:suspend
 vendor/bin/console scheduler:setup
 vendor/bin/console scheduler:resume
 ```
-
 
 {% info_block warningBox "Verification" %}
 
@@ -1041,12 +996,13 @@ Place an order with an invoice and make sure that you receive an invoice within 
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                                       | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                                    |
-| :----------------------------------------------------------- | :----------------------------------------------------------- | :------------ | :----------------------------------------------------------- |
+| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE |
+| ------------------- | ------------------ | ------------ | ----------------- |
 | OrderCustomReferenceOrderPostSavePlugin                      | After an order is saved, persists `orderCustomReference` in the `spy_sales_order` schema. |               | Spryker\Zed\OrderCustomReference\Communication\Plugin\Sales\ |
 | OrderCustomReferenceQuoteFieldsAllowedForSavingProviderPlugin | Returns the `QuoteTransfer` fields related to a custom order reference. |               | Spryker\Zed\OrderCustomReference\Communication\Plugin\Quote  |
 
-**src/Pyz/Zed/Sales/SalesDependencyProvider.php**            
+**src/Pyz/Zed/Sales/SalesDependencyProvider.php**
+
 ```php
 <?php
 
@@ -1069,7 +1025,8 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 }
 ```
 
- **src/Pyz/Zed/Quote/QuoteDependencyProvider.php**     
+**src/Pyz/Zed/Quote/QuoteDependencyProvider.php**
+
 ```php
 <?php
 
@@ -1092,9 +1049,8 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 }
 ```
 
-
-
 {% info_block warningBox "Verification" %}
+
 Log in and make sure that, at `zed.mysprykershop.com/sales/detail`, you can see the *Custom Order Reference* section with the **Edit Reference** button in the order details.
 
 {% endinfo_block %}
@@ -1103,16 +1059,15 @@ Log in and make sure that, at `zed.mysprykershop.com/sales/detail`, you can see 
 
 Set up the following plugins:
 
-| PLUGIN                        | SPECIFICATION                                    | PREREQUISITES | NAMESPACE                                          |
-| :---------------------------- | :----------------------------------------------- | :------------ | :------------------------------------------------- |
+| PLUGIN | SPECIFICATION  | PREREQUISITES | NAMESPACE |
+| ---------- | ------------- | ----------- | ----------------- |
 | OrderSaverPlugin              | Saves an order.                                  |               | Spryker\Zed\Sales\Communication\Plugin\Checkout    |
 | OrderTotalsSaverPlugin        | Saves order totals.                              |               | Spryker\Zed\Sales\Communication\Plugin\Checkout    |
 | SalesOrderShipmentSaverPlugin | Saves an order shipment. Adds shipment expenses. |               | Spryker\Zed\Shipment\Communication\Plugin\Checkout |
 | OrderItemsSaverPlugin         | Saves order items.                               |               | Spryker\Zed\Sales\Communication\Plugin\Checkout    |
 
 
-<dertails>
-    <summary markdown='span'>src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php</summary>
+<details><summary markdown='span'>src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1146,11 +1101,11 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
     }
 }
 ```
-
 </details>
 
 
 {% info_block warningBox "Verification" %}
+
 Make sure that, on the following Storefront pages, even if the `display` property is not set in the process definition, the item states are displayed correctly:
 
 - *Customer overview*
@@ -1170,27 +1125,26 @@ Follow the steps below to install the Order Management feature front end.
 To start the feature integration, overview and install the necessary features.
 
 | NAME                        | VERSION    |
-| :-------------------------- | :--------- |
-| Spryker Core                | dev-master |
-| Cart                        | dev-master |
-| Checkout                    | dev-master |
-| Customer Account Management | dev-master |
+| ---------------------- | ------- |
+| Spryker Core                | {{page.version}} |
+| Cart                        | {{page.version}} |
+| Checkout                    | {{page.version}} |
+| Customer Account Management | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/order-management: "dev-master" --update-with-dependencies
+composer require spryker-feature/order-management: "{{page.version}}" --update-with-dependencies
 ```
-
 
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
 | MODULE                     | EXPECTED DIRECTORY                                |
-| :------------------------- | :------------------------------------------------ |
+| ------------------------- | ------------------------------------------------ |
 | OrderCustomReferenceWidget | vendor/spryker-shop/order-custom-reference-widget |
 
 {% endinfo_block %}
@@ -1224,7 +1178,7 @@ Ensure that, in the database, the configured data has been added to the `spy_glo
 Register the following route provider on the Storefront:
 
 | PROVIDER                             | NAMESPACE                                        |
-| :----------------------------------- | :----------------------------------------------- |
+| ----------------------------------- | ----------------------------------------------- |
 | OrderCancelWidgetRouteProviderPlugin | SprykerShop\Yves\OrderCancelWidget\Plugin\Router |
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
@@ -1252,9 +1206,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 ```
 
 
-
 {% info_block warningBox "Verification" %}
-
 
 Ensure that the `yves.mysprykershop.com/order/cancel` route is available for POST requests.
 
@@ -1268,8 +1220,8 @@ Set up the following behaviors.
 
 Set up the following plugin:
 
-| PLUGIN                  | SPECIFICATION                                | PREREQUISITES | NAMESPACE                                 |
-| :---------------------- | :------------------------------------------- | :------------ | :---------------------------------------- |
+| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE  |
+| ------------- | ------------ | ------------ | ---------------- |
 | OrderCancelButtonWidget | Shows a **Cancel** button on the Storefront. |               | SprykerShop\Yves\OrderCancelWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
@@ -1296,7 +1248,6 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-
 {% info_block warningBox "Verification" %}
 
 Ensure the following:
@@ -1313,8 +1264,8 @@ Ensure the following:
 
 Register the route provider in the Yves application:
 
-| PROVIDER                                      | NAMESPACE                                                 |
-| :-------------------------------------------- | :-------------------------------------------------------- |
+| PROVIDER   | NAMESPACE  |
+| ---------- | ---------------- |
 | OrderCustomReferenceWidgetRouteProviderPlugin | SprykerShop\Yves\OrderCustomReferenceWidget\Plugin\Router |
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
@@ -1341,14 +1292,12 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 }
 ```
 
-
-
 ### 5) Set up widgets
 
 1. Register the following plugin to enable widgets:
 
-| PLUGIN                     | DESCRIPTION                                                 | PREREQUISITES | NAMESPACE                                          |
-| :------------------------- | :---------------------------------------------------------- | :------------ | :------------------------------------------------- |
+| PLUGIN  | DESCRIPTION  | PREREQUISITES | NAMESPACE  |
+| ----------- | -------------- | ----------- | --------------- |
 | OrderCustomReferenceWidget | Edits and shows a custom order reference on the Storefront. |               | SprykerShop\Yves\OrderCustomReferenceWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
@@ -1378,20 +1327,15 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-
-
 2. Run the following command to enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build
 ```
 
-
-
 {% info_block warningBox "Verification" %}
+
 To make sure that you’ve registered the widget, log in as a customer on the Storefront and check that the **Custom order reference** form is present on the order view page.
-
-
 
 {% endinfo_block %}
 
@@ -1399,8 +1343,8 @@ To make sure that you’ve registered the widget, log in as a customer on the St
 
 Integrate the following related features:
 
-| FEATURE                                                      | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                            |
-| :----------------------------------------------------------- | :------------------------------- | :----------------------------------------------------------- |
+| FEATURE    | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE   |
+| ---------------------- | ------------- | ---------------- |
 | Comments + Order Management feature integration              |                                  | [Comments + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/comments-order-management-feature-integration.html) |
 | Glue API: Order Management feature integration               |                                  | [Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html) |
 | Company Account + Order Management feature integration       |                                  | [Company Account + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-order-management-feature-integration.html) |

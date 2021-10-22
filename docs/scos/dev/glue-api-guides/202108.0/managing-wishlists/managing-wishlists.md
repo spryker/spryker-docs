@@ -30,7 +30,7 @@ To create a wishlist, send the request:
 
 ### Request
 
-| Header key | Header value | Required | Description |
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
 
@@ -47,7 +47,7 @@ Sample request: `POST https://glue.mysprykershop.com/wishlists`
 	}
 ```
 
-| Attribute | Type | Required | Description |
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | name | string | &check; | Name of the wishlist to create. |
 
@@ -55,7 +55,7 @@ Sample request: `POST https://glue.mysprykershop.com/wishlists`
 
 ### Response
 
-<details open>
+<details>
     <summary markdown='span'>Response sample</summary>
     
 ```json
@@ -78,7 +78,7 @@ Sample request: `POST https://glue.mysprykershop.com/wishlists`
     
 </details>
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | name | String | Name of the wishlist. |
 | numberOfItems | Integer | Number of items in the wishlist. |
@@ -112,7 +112,7 @@ To retrieve all wishlists of a customer, send the request:
 | GET https://glue.mysprykershop.com/wishlists?include=wishlist-items,concrete-products,product-labels | Retrieve all the wishlists of a customer with wishlist items, respective concrete products, and their product labels.  |
 
 
-| Header key | Header value | Required | Description |
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
 
@@ -122,7 +122,7 @@ To retrieve all wishlists of a customer, send the request:
 ### Response
 
 
-<details open>
+<details>
     <summary markdown='span'>Response sample with no wishlists</summary>
         
 ```json
@@ -136,7 +136,7 @@ To retrieve all wishlists of a customer, send the request:
     
 </details>
 
-<details open>
+<details>
     <summary markdown='span'>Response sample with existing wishlists</summary>
         
 ```json
@@ -168,7 +168,7 @@ To retrieve all wishlists of a customer, send the request:
     
 </details>
 
-<details open>
+<details>
     <summary markdown='span'>Response sample with wishlist items</summary>
         
 ```json
@@ -219,7 +219,7 @@ To retrieve all wishlists of a customer, send the request:
 </details>
 
 
-<details open>
+<details>
     <summary markdown='span'>Response sample with wishlist items and respective concrete products</summary>
         
 ```json
@@ -319,7 +319,7 @@ To retrieve all wishlists of a customer, send the request:
 
 </details>
 
-<details open>
+<details>
     <summary markdown='span'>Response sample with wishlist items, respective concrete products, and their product labels</summary>
         
 ```json
@@ -442,7 +442,7 @@ To retrieve all wishlists of a customer, send the request:
 
 
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | name | String | Name of the wishlist. |
 | numberOfItems | Integer | Number of items in the wishlist. |
@@ -463,7 +463,7 @@ To retrieve wishlist items, send the request:
 
 ---
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}*** | Unique identifier of the wishlist to retrieve the items of. [Create a wishlist](#create-a-wishlist) or [retrieve all wishlists](#retrieve-wishlists) to get it. |
 
@@ -481,7 +481,7 @@ To retrieve wishlist items, send the request:
 | GET https://glue.mysprykershop.com/wishlists/246591f8-4f30-55ce-8b17-8482859b4ac1?include=wishlist-items,concrete-products | Retrieve the wishlist with the `246591f8-4f30-55ce-8b17-8482859b4ac1` identifier. Include wishlist items and respective concrete products into the response. |
 | GET https://glue.mysprykershop.com/wishlists/246591f8-4f30-55ce-8b17-8482859b4ac1?include=wishlist-items,concrete-products,product-labels | Retrieve the wishlist with the `246591f8-4f30-55ce-8b17-8482859b4ac1` identifier. Include wishlist items, respective concrete products and their product labels into the response. |
 
-| Header key | Header value | Required | Description |
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
 
@@ -489,7 +489,7 @@ To retrieve wishlist items, send the request:
 
 ### Response 
 
-<details open>
+<details>
     <summary markdown='span'>Response sample</summary>
 
 ```json
@@ -512,7 +512,7 @@ To retrieve wishlist items, send the request:
 
 </details>
 
-<details open>
+<details>
     <summary markdown='span'>Response sample with wishlist items</summary>
     
 ```json
@@ -557,7 +557,7 @@ To retrieve wishlist items, send the request:
 
 </details>
 
-<details open>
+<details>
     <summary markdown='span'>Response sample with wishlist items and respective concrete products</summary>
     
 ```json
@@ -650,7 +650,7 @@ To retrieve wishlist items, send the request:
 
 </details>
 
-<details open>
+<details>
     <summary markdown='span'>Response sample with wishlist items, respective concrete products, and their product labels</summary>
     
 ```json
@@ -766,7 +766,7 @@ To retrieve wishlist items, send the request:
 
 </details>
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | name | String | Name of the wishlist. |
 | numberOfItems | Integer | Number of items in the wishlist. |
@@ -793,7 +793,7 @@ To edit a wishlist, send the request:
 
 ### Request
 
-| Header key | Header value | Required | Description |
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
 
@@ -815,7 +815,7 @@ The following sample changes the name of a wishlist.
 ```
 
 
-| Attribute | Type | Required | Description |
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | id | string | &check; | Unique identifier of the wishlist to update the name of. [Create a wishlist](#create-a-wishlist) or [retrieve all wishlists](#retrieve-wishlists) to get it. |
 | name | string | &check; | New name of the wishlist. |
@@ -823,7 +823,7 @@ The following sample changes the name of a wishlist.
 ### Response 
 
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | name | String | Name of the wishlist. |
 | numberOfItems | Integer | Number of items in the wishlist. |
@@ -845,13 +845,13 @@ To delete a wishlist, send the request:
 
 ---
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}*** | Unique identifier of the wishlist to delete. [Create a wishlist](#create-a-wishlist) or [retrieve all wishlists](#retrieve-wishlists) to get it. |
 
 ### Request
 
-| Header key | Header value | Required | Description |
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
 
@@ -864,7 +864,7 @@ If the wishlist is deleted successfully, the endpoint returns the `204 No Conten
 
 
 ## Possible errors
-| Code | Reason |
+| CODE | REASON |
 | --- | --- |
 | 201 | Cannot find the wishlist. |
 | 202 | A wishlist with the same name already exists. |

@@ -50,8 +50,8 @@ Request sample: `GET http://glue.mysprykershop.com/abstract-products/035/product
 
 
 
-<details open>
-    <summary markdown='span'>markdown='span'>Response sample</summary>
+<details>
+    <summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -193,7 +193,7 @@ Also, all the endpoints that accept `abstract-products` and `concrete-products` 
 
 ## Possible errors
 
-| STATUS | REASON |
+| CODE | REASON |
 | --- | --- |
 | 001 | Access token is invalid. |
 | 002 | Access token is missing. |

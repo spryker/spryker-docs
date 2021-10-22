@@ -70,7 +70,7 @@ Response sample:
 ```
 
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | resourceTypes | String[] | Contains a `string` array, where each element is a resource type that is protected from unauthorized access. |
 

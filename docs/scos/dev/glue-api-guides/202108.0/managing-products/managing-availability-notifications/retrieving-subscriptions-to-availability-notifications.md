@@ -32,7 +32,7 @@ Request sample: `GET https://glue.mysprykershop.com/my-availability-notification
 
 ### Response
 
-<details open><summary markdown='span'>Response sample</summary>
+<details><summary markdown='span'>Response sample</summary>
 
 ```json
 Response

@@ -38,7 +38,7 @@ To change a customer's password, send the request:
 
 ### Request
 
-| Header key | Header value | Required | Description |
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authenticates the customer you want to change the password of. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer). |
 
@@ -59,7 +59,7 @@ Request sample: `PATCH http://glue.mysprykershop.com/customer-password/DE--21`
 }
 ```
 
-| Attribute | Type | Required | Description |
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | password | String | &check; | Specifies old password of a customer. |
 | newPassword | String | &check; | Specifies the new password. |
@@ -140,7 +140,7 @@ Request sample: `PATCH https://glue.mysprykershop.com/customer-restore-password/
 ```
 
 
-| Attribute | Type | Required | Description |
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | restorePasswordKey | String | &check; | Unique  the Password Reset Key provided in the email sent to the customer. |
 | password | String | &check; | Specifies the password to set. |
@@ -152,7 +152,7 @@ Request sample: `PATCH https://glue.mysprykershop.com/customer-restore-password/
 If the password reset is successful, the endpoint returns the `204 No Content` status code.
 
 ## Possible errors
-| Code | Reason |
+| CODE | REASON |
 | --- | --- |
 | 406 | New password and password confirmation do not match. |
 | 407 | Password change failed. |

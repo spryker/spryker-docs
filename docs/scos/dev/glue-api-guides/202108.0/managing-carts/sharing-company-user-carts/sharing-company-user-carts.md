@@ -27,13 +27,13 @@ To share a cart, send the request:
 ***
 
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}cart-uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart to share. |
 
 ### Request
 
-| Header key | Type | Required | Description |
+| HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
@@ -51,7 +51,7 @@ Request sample: `POST http://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aef
 }
 ```
 
-| Attribute | Type | Required | Description |
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | idCompanyUser | String | ✓ | Unique identifier of a company user to share the cart with.</br>The user must belong to the same company as the cart owner. |
 | idCartPermissionGroup | Integer | ✓ | Unique identifier of a cart permission group that defines the permissions of the company user for the cart. To get the full list of cart permission groups, [retrieve permission groups](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/sharing-company-user-carts/retrieving-cart-permission-groups.html#retrieve-cart-permission-groups). |
@@ -78,7 +78,7 @@ Response sample:
 }
 ```
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | id | String | Unique identifier used for sharing the cart. |
 | idCompanyUser | String | Unique identifier of the company user the cart is shared with. |
@@ -87,7 +87,7 @@ Response sample:
 
 ## Possible errors
 
-| Status | Reason |
+| CODE | REASON |
 | --- | --- |
 | 401 | The access token is invalid. |
 | 403 | The access token is missing. |

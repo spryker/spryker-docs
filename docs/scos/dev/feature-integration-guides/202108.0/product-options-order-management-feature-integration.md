@@ -11,23 +11,25 @@ redirect_from:
   - /docs/en/product-options-order-management-feature-integration
 ---
 
-## Install Feature Core
+## Install feature core
 
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Product Options | 202009.0 |
-| Order Management | 202009.0 |
-| Spryker Core | 202009.0 |
+| Product Options | {{page.version}} |
+| Order Management | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
-### 1) Set up Behavior
-| Plugin | Specification | Prerequisites | Namespace |
+### 1) Set up behavior
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `ProductOptionsOrderItemExpanderPlugin` | Expands order items with product options. | None | `Spryker\Zed\ProductOption\Communication\Plugin\Sales` |
+| ProductOptionsOrderItemExpanderPlugin | Expands order items with product options. | None | Spryker\Zed\ProductOption\Communication\Plugin\Sales |
 
-** src/Pyz/Zed/Sales/SalesDependencyProvider.php**
+**src/Pyz/Zed/Sales/SalesDependencyProvider.php**
 
 ```php
 <?php

@@ -11,25 +11,25 @@ redirect_from:
   - /docs/en/multiple-carts-quick-order-integration
 ---
 
-## Install Feature Core
+## Install feature core
 
 ### Prerequisites
 
 To start feature integration, overview and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Multiple Carts | master |
-| Quick Add To Cart | master |
-| Spryker Core |master |
+| Multiple Carts | {{page.version}} |
+| Quick Add To Cart | {{page.version}} |
+| Spryker Core |{{page.version}} |
 
-### 1) Set up Behavior
+### 1) Set up behavior
 
 Register the following plugin:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-|  `QuickOrderQuoteNameExpanderPlugin` | Adds a default quick order name and adds it to add item request. |  |  `Spryker\Client\MultiCart\Plugin` |
+| QuickOrderQuoteNameExpanderPlugin | Adds a default quick order name and adds it to add item request. |  | Spryker\Client\MultiCart\Plugin |
 
 **src/Pyz/Client/PersistentCart/PersistentCartDependencyProvider.php**
 
@@ -52,32 +52,34 @@ class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyPr
                                             new QuickOrderQuoteNameExpanderPlugin(),
              ];
      }
-} 
+}
 ```
 
 {% info_block warningBox "Verification" %}
+
 If items have been added to the cart with parameter `createOrder`, a new customer cart must be created with the name "Quick order {date of creation}".
+
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 
 Please overview and install the necessary features before beginning the integration step.
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Multiple Carts | master |
-| Quick Add To Cart | master |
-| Spryker Core | master |
+| Multiple Carts | {{page.version}} |
+| Quick Add To Cart | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
-### 1) Set up Widgets
+### 1) Set up widgets
 
 Register the following global widget:
 
-| Widget | Description | Namespace |
+| WIDGET | DESCRIPTION | NAMESPACE |
 | --- | --- | --- |
-|  `QuickOrderPageWidget` | Shows a cart list in the quick order page. |  `SprykerShop\Yves\MultiCartWidget\Widget` |
+| QuickOrderPageWidget | Shows a cart list in the quick order page. |  SprykerShop\Yves\MultiCartWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -100,7 +102,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
  QuickOrderPageWidget::class,
  ];
  }
-} 
+}
 ```
 
 Run the following command to enable Javascript and CSS changes:
@@ -110,5 +112,11 @@ console frontend:yves:build
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following widgets have been registered:<table><thead><tr><th>Module</th><th>Test</th></tr></thead><tbody><tr><td>`QuickOrderPageWidget`</td><td>Go to the **Quick Order** page. A shopping cart list should be added to the **Add to cart** form.</td></tr></tbody></table>
+
+Make sure that the following widgets have been registered:
+
+| MODULE | TEST |
+| --- | --- |
+| QuickOrderPageWidget | Go to the **Quick Order** page. A shopping cart list should be added to the **Add to cart** form. |
+
 {% endinfo_block %}

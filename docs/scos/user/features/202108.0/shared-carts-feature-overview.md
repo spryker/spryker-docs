@@ -25,24 +25,28 @@ New items are added to the shopping cart by clicking on **Add to Cart** on the p
 To share a shopping cart, a user needs to click **Share cart** in the *Actions* column (on the *Shopping Cart* page, in *My Account* menu) for a cart they would like to share. See the [Shared Cart on the Storefront](#shared-cart-on-the-storefront) section.
 
 ## Permissions management for shared shopping carts
+
 A shopping cart can be shared with the users of the current business unit. The Share cart `<SHOPPING CART NAME>` page consists of the users within the business unit to share the shopping cart with.
 
 ![Shared cart page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Shared+Cart+Feature+Overview/share-cart-page.png)
 
 There are 3 types of access rights that can be granted on shopping carts:
-
 * No access
 * Read-only
 * Full access
 
 ### No access
+
 _**No access**_ means that shopping cart is not shared and therefore can not be seen by a user.
 
 {% info_block warningBox "Note" %}
+
  ***No access*** is applied automatically to a newly-created cart.
+
 {% endinfo_block %}
 
 ### Read-only
+
 The _**Read-only**_ permission allows:
 
 **_Reading shopping cart_**. On the *Shopping cart* page, the user sees shopping cart name, access level (Read only), as well as the table of items with the following information:
@@ -123,7 +127,9 @@ By default, the user who has created the cart has Owner access permission. Owner
 If user does not need a cart, that has been shared with them, it is possible to remove it from their shopping carts and thus cancel sharing. To do so, the user clicks Dismiss on the *Shopping Cart* page in *Actions* next to the respective shared shopping cart. It is possible to dismiss sharing shopping carts with both Read only and Full access rights. Own shopping carts cannot be dismissed.
 
 {% info_block errorBox "Important!" %}
+
 If the shared cart has been dismissed individually by the user, this user will not be able to see it in case this cart is shared next time.
+
 {% endinfo_block %}
 
 ## Current constraints
@@ -131,8 +137,8 @@ If the shared cart has been dismissed individually by the user, this user will n
 With the current functionality, the shopping cart cannot be shared outside of a [business unit](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/business-units-overview.html) where the owner belongs.
 
 ## Shared Cart on the Storefront
-
 <a id=shared-cart-on-the-storefront></a>
+
 On the storefront, company users can share a cart with other users within the same business unit:
 
 ![Shopping Cart Actions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Shared+Cart+Feature+Overview/share-a-shopping-cart.gif)

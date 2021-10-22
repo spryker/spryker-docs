@@ -11,23 +11,26 @@ redirect_from:
   - /docs/en/product-bundles-return-management-feature-integration
 ---
 
-## Install Feature Core
+## Install feature core
 
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Product Bundles | 202009.0 |
-| Return Management | 202009.0 |
-| Spryker Core | 202009.0 |
+| Product Bundles | {{page.version}} |
+| Return Management | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
-### 1) Set up Behavior
-| Plugin | Specification | Prerequisites | Namespace |
+### 1) Set up behavior
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `ProductBundleReturnCreateFormHandlerPlugin` | Expands `ReturnCreateForm` data with product bundles subforms. Handles form submit. | None | `Spryker\Zed\ProductBundle\Communication\Plugin\SalesReturnGui` |
+| ProductBundleReturnCreateFormHandlerPlugin | Expands `ReturnCreateForm` data with product bundles subforms. Handles form submit. | None | Spryker\Zed\ProductBundle\Communication\Plugin\SalesReturnGui |
 
 **src/Pyz/Zed/SalesReturnGui/SalesReturnGuiDependencyProvider.php**
+
 ```php
 <?php
 
@@ -55,4 +58,3 @@ class SalesReturnGuiDependencyProvider extends SprykerSalesReturnGuiDependencyPr
 Make sure that on return creation page in the Back Office UI, you are able to create returns for orders which have product bundles.
 
 {% endinfo_block %}
-

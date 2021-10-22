@@ -68,7 +68,7 @@ Note that depending on the Login feature configuration for your project, too man
 
 ### Response
 
-<details open>
+<details>
     <summary markdown='span'>Response sample</summary>
     
 ```json

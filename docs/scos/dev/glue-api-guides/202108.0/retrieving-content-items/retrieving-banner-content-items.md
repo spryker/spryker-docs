@@ -29,13 +29,13 @@ To retrieve information about a banner content item, send the request:
 `GET` **/content-banners/*{% raw %}{{{% endraw %}content_item_key{% raw %}}}{% endraw %}***
 ***
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}content_item_key{% raw %}}}{% endraw %}*** | Unique identifier of the content item to retrieve. |
 
 ### Request
 
-| Header key | Required | Description |
+| HEADER KEY | REQUIRED | DESCRIPTION |
 | --- | --- | --- |
 | locale |  | Defines the locale to retreive the content item information for. If not specified, the endpoint returns the information for the *default* locale.  |
 
@@ -65,7 +65,7 @@ Response sample:
 }
 ```
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | title |  string| Heading of the banner. |
 |subtitle|string  | Secondary message that clarifies a title to shop visitors. |
@@ -75,7 +75,7 @@ Response sample:
 
 ## Possible errors
 
-| Code | Reason |
+| CODE | REASON |
 | --- | --- |
 | 2201 | Content not found. |
 |2202  | Content key is missing. |

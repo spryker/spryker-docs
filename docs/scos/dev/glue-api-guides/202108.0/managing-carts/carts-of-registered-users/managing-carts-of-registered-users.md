@@ -21,10 +21,12 @@ related:
 This endpoint allows managing carts by creating, retrieving, and deleting them.
 
 ## Multiple carts
+
 Unlike guest carts, carts of registered users have an unlimited lifetime. Also, if the Multiple Carts feature is [integrated into your project](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-feature-integration.html), and Glue is [enabled for multi-cart operations](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-feature-integration.html), registered users can have an unlimited number of carts.
 
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)
 * [Glue API: Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-labels-feature-integration.html)
@@ -79,11 +81,11 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
 ### Response
 
 
-<details open>
+<details>
     <summary markdown='span'>Response sample</summary>
-    
+
 ```json
-"data": 
+"data":
         {
             "type": "carts",
             "id": "f23f5cfa-7fde-5706-aefb-ac6c6bbadeab",
@@ -108,7 +110,7 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
         }
 }
 ```
-    
+
 </details>
 
 **General cart information**
@@ -183,9 +185,9 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 | `GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-labels` | Retrieve all carts of a user with information about concrete products and the product labels assigned to the products in the carts. |
 
 
-### Response 
+### Response
 
-<details open>
+<details>
 <summary markdown='span'>Response sample: no carts</summary>
 
 ```json
@@ -198,9 +200,9 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 ```    
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>Response sample: multiple carts</summary>
- 
+
 ```json
 {
     "data": [
@@ -265,7 +267,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 
 
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with items</summary>
 
 ```json
@@ -559,7 +561,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 </details>
 
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with cart permission groups</summary>
 
 ```json
@@ -696,7 +698,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 </details>
 
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with shared carts</summary>
 
 ```json
@@ -832,7 +834,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 ```    
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with shared carts and company users they are shared with</summary>
 
 ```json
@@ -937,7 +939,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with cart rules</summary>
 
 ```json
@@ -1068,7 +1070,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 ```    
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with vouchers</summary>
 
 ```json
@@ -1139,7 +1141,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with a promotional item</summary>
 
 ```json
@@ -1205,7 +1207,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 ```    
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with gift cards applied</summary>
 
 ```json
@@ -1275,7 +1277,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 ```    
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with items, concrete products, and product options</summary>
 
 ```json
@@ -1528,7 +1530,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 ```    
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with product labels</summary>
 
 ```json
@@ -1692,6 +1694,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 <a name="retrieve-a-registered-users-carts-response-attributes"></a>
 
 **General Cart Information**
+
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | priceMode | String | Price mode that was active when the cart was created. |
@@ -1701,6 +1704,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 | isDefault | Boolean | Specifies whether the cart is the default one for the customer.</br>The field is available in multi-cart environments only.  |
 
 **Discount Information**
+
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | displayName | String | Discount name. |
@@ -1708,6 +1712,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 | code | String | Discount code applied to the cart. |
 
 **Totals**
+
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | expenseTotal | String | Total amount of expenses (including, e.g., shipping costs). |
@@ -1796,7 +1801,7 @@ To retrieve a particular cart, send the request:
 
 ### Response
 
-<details open>
+<details>
 <summary markdown='span'>Response sample</summary>
 
 ```json
@@ -1833,7 +1838,7 @@ To retrieve a particular cart, send the request:
 </details>
 
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with items</summary>
 
 ```json
@@ -1961,7 +1966,7 @@ To retrieve a particular cart, send the request:
 </details>
 
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with cart permission groups</summary>
 
 ```json
@@ -2023,7 +2028,7 @@ To retrieve a particular cart, send the request:
 
 
 
-<details open>
+<details>
 <summary markdown='span'>Sample response with details on shared carts</summary>
 
 ```json
@@ -2083,7 +2088,7 @@ To retrieve a particular cart, send the request:
 ```    
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with shared carts and company users they are shared with</summary>
 
 ```json
@@ -2161,7 +2166,7 @@ To retrieve a particular cart, send the request:
 </summary>
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with cart rules</summary>
 
 ```json
@@ -2229,7 +2234,7 @@ To retrieve a particular cart, send the request:
 
 
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with a promotional item</summary>
 
 ```json
@@ -2290,7 +2295,7 @@ To retrieve a particular cart, send the request:
 </details>
 
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with with details on gift cards</summary>
 
 ```json
@@ -2355,7 +2360,7 @@ To retrieve a particular cart, send the request:
 ```    
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with items, respective concrete products, and their product options</summary>
 
 ```json
@@ -2603,9 +2608,9 @@ To retrieve a particular cart, send the request:
 ```    
 </details>
 
-<details open>
+<details>
     <summary markdown='span'>Response sample with vouchers</summary>
-    
+
 ```json
 {
     "data": {
@@ -2674,9 +2679,9 @@ To retrieve a particular cart, send the request:
 
 </details>
 
-<details open>
+<details>
     <summary markdown='span'>Response sample with product labels</summary>
-    
+
 ```json
 {
     "data": {
@@ -2939,7 +2944,7 @@ To delete a cart, send the request:
 
 ---
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***cart_uuid*** | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](#retrieve-a-registered-users-carts) to get it. |
 

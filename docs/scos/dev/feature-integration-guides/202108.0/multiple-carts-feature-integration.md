@@ -14,56 +14,83 @@ related:
     link: docs/scos/user/features/page.version/multiple-carts-feature-overview.html
 ---
 
-## Install Feature Core
+## Install feature core
 
 ### Prerequisites
 
 To start feature integration, overview and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Cart | master |
-| Persistent Cart | master |
-| Spryker Core | master |
+| Cart | {{page.version}} |
+| Persistent Cart | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/multiple-carts: "^master" --update-with-dependencies 
+composer require spryker-feature/multiple-carts: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following modules have been installed:<table><thead><tr><th>Module</th><th>Expected Directory</th></tr></thead><tbody><tr><td>`MultiCart`</td><td>`vendor/spryker/multi-cart`</td></tr><tr><td>`MultiCartDataImport`</td><td>`vendor/spryker/multi-cart-data-import`</td></tr></tbody></table>
+
+Make sure that the following modules have been installed:
+
+| MODULE | EXPECTED DIRECTORY |
+| --- | --- |
+| MultiCart | vendor/spryker/multi-cart |
+| MultiCartDataImport | vendor/spryker/multi-cart-data-import |
+
 {% endinfo_block %}
 
-### 2) Set up Database Schema and Transfer Objects
+### 2) Set up database schema and transfer objects
 
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
 console transfer:generate
 console propel:install
-console transfer:generate 
+console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes have been applied by checking your database:<table><thead><tr><th>Database Entity</th><th>Type</th><th>Event</th></tr></thead><tbody><tr><td>`spy_quote.name`</td><td>column</td><td>created</td></tr><tr><td>`spy_quote.is_default`</td><td>column</td><td>created</td></tr><tr><td>`spy_quote.key`</td><td>column</td><td>created</td></tr><tr><td>`spy_quote-unique-name-customer_reference`</td><td>index</td><td>created</td></tr></tbody></table>
+Make sure that the following changes have been applied by checking your database:
+
+| DATABASE ENTITY | TYPE | EVENT |
+| --- | --- | --- |
+| spy_quote.name | column | created |
+| spy_quote.is_default | column | created |
+| spy_quote.key | column | created |
+| spy_quote-unique-name-customer_reference | index | created |
+
 {% endinfo_block %}
 
-| Database Entity | Type | Event |
+| DATABASE ENTITY | TYPE | EVENT |
 | --- | --- | --- |
-|  `spy_quote.name` | column | created |
-|  `spy_quote.is_default` | column | created |
-|  `spy_quote.key` | column | created |
-|  `spy_quote-unique-name-customer_reference` | index | created |
+| spy_quote.name | column | created |
+| spy_quote.is_default | column | created |
+| spy_quote.key | column | created |
+| spy_quote-unique-name-customer_reference | index | created |
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes in transfer objects have been applied:<table><thead><tr class="TableStyle-PatternedRows2-Head-Header1"><th class="TableStyle-PatternedRows2-HeadE-Regular-Header1">Transfer</th><th class="TableStyle-PatternedRows2-HeadE-Regular-Header1">Type</th><th class="TableStyle-PatternedRows2-HeadE-Regular-Header1">Event</th><th class="TableStyle-PatternedRows2-HeadD-Regular-Header1">Path</th></tr></thead><tbody><tr class="TableStyle-PatternedRows2-Body-LightRows"><td class="TableStyle-PatternedRows2-BodyE-Regular-LightRows">`QuoteTransfer.name`</td><td class="TableStyle-PatternedRows2-BodyE-Regular-LightRows">column</td><td class="TableStyle-PatternedRows2-BodyE-Regular-LightRows">created</td><td class="TableStyle-PatternedRows2-BodyD-Regular-LightRows">`src/Generated/Shared/Transfer/QuoteTransfer`</td></tr><tr class="TableStyle-PatternedRows2-Body-DarkerRows"><td class="TableStyle-PatternedRows2-BodyE-Regular-DarkerRows">`QuoteTransfer.isDefault`</td><td class="TableStyle-PatternedRows2-BodyE-Regular-DarkerRows">column</td><td class="TableStyle-PatternedRows2-BodyE-Regular-DarkerRows">created</td><td class="TableStyle-PatternedRows2-BodyD-Regular-DarkerRows">`src/Generated/Shared/Transfer/QuoteTransfer`</td></tr><tr class="TableStyle-PatternedRows2-Body-LightRows"><td class="TableStyle-PatternedRows2-BodyE-Regular-LightRows">`QuoteTransfer.key`</td><td class="TableStyle-PatternedRows2-BodyE-Regular-LightRows">column</td><td class="TableStyle-PatternedRows2-BodyE-Regular-LightRows">created</td><td class="TableStyle-PatternedRows2-BodyD-Regular-LightRows">`src/Generated/Shared/Transfer/QuoteTransfer`</td></tr><tr class="TableStyle-PatternedRows2-Body-DarkerRows"><td class="TableStyle-PatternedRows2-BodyE-Regular-DarkerRows">`QuoteResponseTransfer.customQuotes`</td><td class="TableStyle-PatternedRows2-BodyE-Regular-DarkerRows">column</td><td class="TableStyle-PatternedRows2-BodyE-Regular-DarkerRows">created</td><td class="TableStyle-PatternedRows2-BodyD-Regular-DarkerRows">`src/Generated/Shared/Transfer/QuoteResponseTransfer`</td></tr><tr class="TableStyle-PatternedRows2-Body-LightRows"><td class="TableStyle-PatternedRows2-BodyE-Regular-LightRows">`QuoteUpdateRequestAttributesTransfer.name`.</td><td class="TableStyle-PatternedRows2-BodyE-Regular-LightRows">column</td><td class="TableStyle-PatternedRows2-BodyE-Regular-LightRows">created</td><td class="TableStyle-PatternedRows2-BodyD-Regular-LightRows">`src/Generated/Shared/Transfer/QuoteUpdateRequestAttributesTransfer`</td></tr><tr class="TableStyle-PatternedRows2-Body-DarkerRows"><td class="TableStyle-PatternedRows2-BodyE-Regular-DarkerRows">`QuoteUpdateRequestAttributesTransfer.totals`</td><td class="TableStyle-PatternedRows2-BodyE-Regular-DarkerRows">column</td><td class="TableStyle-PatternedRows2-BodyE-Regular-DarkerRows">created</td><td class="TableStyle-PatternedRows2-BodyD-Regular-DarkerRows">`src/Generated/Shared/Transfer/QuoteUpdateRequestAttributesTransfer`</td></tr><tr class="TableStyle-PatternedRows2-Body-LightRows"><td class="TableStyle-PatternedRows2-BodyB-Regular-LightRows">`QuoteActivationRequestTransfer`</td><td class="TableStyle-PatternedRows2-BodyB-Regular-LightRows">class</td><td class="TableStyle-PatternedRows2-BodyB-Regular-LightRows">created</td><td class="TableStyle-PatternedRows2-BodyA-Regular-LightRows">`src/Generated/Shared/Transfer/QuoteActivationRequestTransfer`</td></tr></tbody></table>
+
+Make sure that the following changes in transfer objects have been applied:
+
+| TRANSFER | TYPE | EVENT | PATH |
+| --- | --- | --- | --- |
+| QuoteTransfer.name | column | created | src/Generated/Shared/Transfer/QuoteTransfer |
+| QuoteTransfer.isDefault | column | created | src/Generated/Shared/Transfer/QuoteTransfer |
+| QuoteTransfer.key | column | created | src/Generated/Shared/Transfer/QuoteTransfer |
+| QuoteResponseTransfer.customQuotes | column | created | src/Generated/Shared/Transfer/QuoteResponseTransfer |
+| QuoteUpdateRequestAttributesTransfer.name | column | created | src/Generated/Shared/Transfer/QuoteUpdateRequestAttributesTransfer |
+| QuoteUpdateRequestAttributesTransfer.totals | column | created | src/Generated/Shared/Transfer/QuoteUpdateRequestAttributesTransfer |
+| QuoteActivationRequestTransfer | class | created | src/Generated/Shared/Transfer/QuoteActivationRequestTransfer |
+
 {% endinfo_block %}
 
-### 3) Add Translations
+### 3) Add translations
 
 Append glossary for the feature:
 
@@ -71,30 +98,36 @@ Append glossary for the feature:
 
 ```yaml
 multi_cart.cart.set_default.success,"Cart '%quote%' was successfully set as active.",en_US
-multi_cart.cart.set_default.success,"Warenkorb '%quote%' wurde erfolgreich auf aktiv gesetzt.",de_DE 
+multi_cart.cart.set_default.success,"Warenkorb '%quote%' wurde erfolgreich auf aktiv gesetzt.",de_DE
 ```
 
 Run the following console command to import data:
+
 ```bash
-console data:import glossary 
+console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that  the configured data has been added to the `spy_glossary` table in the database.
+
 {% endinfo_block %}
 
-### 4) Import Data
-#### Import Multicarts
+### 4) Import data
+
+#### Import multicarts
 
 {% info_block infoBox "Info" %}
+
 The following imported entities will be used as carts in Spryker OS.
+
 {% endinfo_block %}
 Prepare your data according to your requirements using our demo data:
 
 **vendor/spryker/spryker/multi-cart-data-import/data/import/multi_cart.csv**
 
 ```yaml
- key,name,customer_reference,store,is_default,quote_data
+key,name,customer_reference,store,is_default,quote_data
 quote-1,My Cart,DE--1,DE,1,"{""currency"":{""code"":""EUR"",""name"":""Euro"",""symbol"":""\u20ac"",""isDefault"":true,""fractionDigits"":2},""priceMode"":""GROSS_MODE""}"
 quote-2,My Cart,DE--2,DE,1,"{""currency"":{""code"":""EUR"",""name"":""Euro"",""symbol"":""\u20ac"",""isDefault"":true,""fractionDigits"":2},""priceMode"":""GROSS_MODE""}"
 quote-3,My Cart,DE--3,DE,1,"{""currency"":{""code"":""EUR"",""name"":""Euro"",""symbol"":""\u20ac"",""isDefault"":true,""fractionDigits"":2},""priceMode"":""GROSS_MODE""}"
@@ -115,22 +148,23 @@ quote-17,My Cart,DE--17,DE,1,"{""currency"":{""code"":""EUR"",""name"":""Euro"",
 quote-18,My Cart,DE--18,DE,1,"{""currency"":{""code"":""EUR"",""name"":""Euro"",""symbol"":""\u20ac"",""isDefault"":true,""fractionDigits"":2},""priceMode"":""GROSS_MODE""}"
 quote-19,My Cart,DE--19,DE,1,"{""currency"":{""code"":""EUR"",""name"":""Euro"",""symbol"":""\u20ac"",""isDefault"":true,""fractionDigits"":2},""priceMode"":""GROSS_MODE""}"
 quote-20,My Cart,DE--20,DE,1,"{""currency"":{""code"":""EUR"",""name"":""Euro"",""symbol"":""\u20ac"",""isDefault"":true,""fractionDigits"":2},""priceMode"":""GROSS_MODE""}"
-quote-21,My Cart,DE--21,DE,1,"{""currency"":{""code"":""EUR"",""name"":""Euro"",""symbol"":""\u20ac"",""isDefault"":true,""fractionDigits"":2},""priceMode"":""GROSS_MODE""}" 
+quote-21,My Cart,DE--21,DE,1,"{""currency"":{""code"":""EUR"",""name"":""Euro"",""symbol"":""\u20ac"",""isDefault"":true,""fractionDigits"":2},""priceMode"":""GROSS_MODE""}"
 ```
 
-|Column|Is Obligatory|Data Type|Data Example|Data Explanation|
+| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |---|---|---|---|---|
-`key`|mandatory|string|quote-19|Key that will identify the quote to be referred in future imports.|
-|`name`|mandatory|string|>My Cart|Name of the quote.|
-|`customer_reference`|mandatory|string|DE--21|Customer reference of the quote owner.|
-|`store`|mandatory|string|DE|Store name that the quote relates to.|
-|`is_default`|mandatory|int|1|Flag to show that the quote is default for the customer.|
-|`quote_data`|mandatory|string|{""currency"":{""code"":""EUR"",""name"":""Euro"",""symbol"":""\u20ac"",""isDefault"":true,""fractionDigits"":2},""priceMode"":""GROSS_MODE""}|Quote data params serialized as json.|
+|key|mandatory|string|quote-19|Key that will identify the quote to be referred in future imports.|
+|name|mandatory|string|>My Cart|Name of the quote.|
+|customer_reference|mandatory|string|DE--21|Customer reference of the quote owner.|
+|store|mandatory|string|DE|Store name that the quote relates to.|
+|is_default|mandatory|int|1|Flag to show that the quote is default for the customer.|
+|quote_data|mandatory|string|{""currency"":{""code"":""EUR"",""name"":""Euro"",""symbol"":""\u20ac"",""isDefault"":true,""fractionDigits"":2},""priceMode"":""GROSS_MODE""}|Quote data params serialized as json.|
 
 Register the following plugin to enable data import:
-| Plugin | Specification | Prerequisites | Namespace |
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `MultiCartDataImportPlugin` | Imports customer's quotes to database. | Make sure that customers have been imported. | `Spryker\Zed\MultiCartDataImport\Communication\Plugin` |
+| MultiCartDataImportPlugin | Imports customer's quotes to database. | Make sure that customers have been imported. | Spryker\Zed\MultiCartDataImport\Communication\Plugin |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -154,29 +188,37 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 ```
 
 Run the following console command to import data:
+
 ```bash
-console data:import multi-cart 
+console data:import multi-cart
 ```
+
 {% info_block warningBox "Verification" %}
+
 Open `spy_quote` and make sure that all data has been imported.
+
 {% endinfo_block %}
 
-### 5) Set up Behavior
+### 5) Set up behavior
 
 {% info_block infoBox "Info" %}
+
 This feature requires a database storage strategy enabled in the quote module.
+
 {% endinfo_block %}
 
-#### Setup Quote Integration
+#### Set up quote integration
+
 Register the following plugins:
-| Plugin | Specification | Prerequisites | Namespace |
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `AddSuccessMessageAfterQuoteCreatedPlugin` | Adds success message to messenger afterward. |  | `Spryker\Zed\MultiCart\Communication\Plugin` |
-| `AddDefaultNameBeforeQuoteSavePlugin` | Sets default quote name if quote does not have name. |  | `Spryker\Zed\MultiCart\Communication\Plugin` |
-| `ResolveQuoteNameBeforeQuoteCreatePlugin` | Resolves quote name to make it unique for customer before the quote is saved. | If `AddDefaultNameBeforeQuoteSavePlugin` is used, it should be added afterward. | `Spryker\Zed\MultiCart\Communication\Plugin` |
-| `DeactivateQuotesBeforeQuoteSavePlugin` | Mark quote as default. Makes SQL request to mark all customers' quotes as not default.  |  | `Spryker\Zed\MultiCart\Communication\Plugin` |
-| `InitDefaultQuoteCustomerQuoteDeleteAfterPlugin` | Activates any customer quote, if an active customer quote has been removed. |  | `Spryker\Zed\MultiCart\Communication\Plugin` |
-| `NameQuoteTransferExpanderPlugin` | Sets default quote name if quote does not have a name. Default guest quote name is used for guest customer quotes. |  | Spryker\Client\MultiCart\Plugin |
+| AddSuccessMessageAfterQuoteCreatedPlugin | Adds success message to messenger afterward. |  | Spryker\Zed\MultiCart\Communication\Plugin |
+| AddDefaultNameBeforeQuoteSavePlugin | Sets default quote name if quote does not have name. |  | Spryker\Zed\MultiCart\Communication\Plugin |
+| ResolveQuoteNameBeforeQuoteCreatePlugin | Resolves quote name to make it unique for customer before the quote is saved. | If `AddDefaultNameBeforeQuoteSavePlugin` is used, it should be added afterward. | Spryker\Zed\MultiCart\Communication\Plugin |
+| DeactivateQuotesBeforeQuoteSavePlugin | Mark quote as default. Makes SQL request to mark all customers' quotes as not default.  |  | Spryker\Zed\MultiCart\Communication\Plugin |
+| InitDefaultQuoteCustomerQuoteDeleteAfterPlugin | Activates any customer quote, if an active customer quote has been removed. |  | Spryker\Zed\MultiCart\Communication\Plugin |
+| NameQuoteTransferExpanderPlugin | Sets default quote name if quote does not have a name. Default guest quote name is used for guest customer quotes. |  | Spryker\Client\MultiCart\Plugin |
 
 **src/Pyz/Zed/Quote/QuoteDependencyProvider.php**
 
@@ -237,13 +279,12 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 			new InitDefaultQuoteCustomerQuoteDeleteAfterPlugin(),
 		];
 	}
-} 
+}
 ```
 
 **src/Pyz/Client/Quote/QuoteDependencyProvider.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Client\Quote;
@@ -265,28 +306,37 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 			new NameQuoteTransferExpanderPlugin(),
 		];
 	}
-} 
+}
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that customer carts have unique names. If a customer creates a cart with a name that has already been used in another cart of the customer, the cart name will be extended with an iterative suffix.
-{% endinfo_block %}
-{% info_block infoBox "Info" %}
-For example:<br>If the name 'Shopping cart' already exists, it will be changed to the following:<br>Shopping cart → Shopping cart 1<br>Shopping cart → Shopping cart 2
-{% endinfo_block %}
-{% info_block warningBox "Verification" %}
-Make sure that the customer has only one active cart at once. If the customer updates an inactive cart it becomes active, while the previous active cart becomes inactive.
+
 {% endinfo_block %}
 
-#### Set up Persistent Cart Integration
+{% info_block infoBox "Info" %}
+
+For example:<br>If the name 'Shopping cart' already exists, it will be changed to the following:<br>Shopping cart → Shopping cart 1<br>Shopping cart → Shopping cart 2
+
+{% endinfo_block %}
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the customer has only one active cart at once. If the customer updates an inactive cart it becomes active, while the previous active cart becomes inactive.
+
+{% endinfo_block %}
+
+#### Set up persistent cart integration
 
 Register the following plugins:
-| Plugin | Specification | Prerequisites | Namespace |
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `CustomerCartQuoteResponseExpanderPlugin` | Adds customer quote collection to quote response transfer after cart operation handling. Replaces quote with active quote if it exist. |  |`Spryker\Zed\Spryker\Zed\MultiCart\Communication\Plugin`  |
-| `SaveCustomerQuotesQuoteUpdatePlugin` | Extracts Customer Quote Collection from quote response object and saves it to customer session. |  | `Spryker\Client\MultiCart\Plugin` |
-| `DefaultQuoteUpdatePlugin` | Finds Customer Default Quote in customer quote collection and saves it to customer session. |  | `Spryker\Client\MultiCart\Plugin` |
-| `QuoteSelectorPersistentCartChangeExpanderPlugin` | Takes quote ID form parameters and replaces it in quote change request. |  | `Spryker\Client\MultiCart\Plugin` |
+| CustomerCartQuoteResponseExpanderPlugin | Adds customer quote collection to quote response transfer after cart operation handling. Replaces quote with active quote if it exist. |  |Spryker\Zed\Spryker\Zed\MultiCart\Communication\Plugin |
+| SaveCustomerQuotesQuoteUpdatePlugin | Extracts Customer Quote Collection from quote response object and saves it to customer session. |  | Spryker\Client\MultiCart\Plugin |
+| DefaultQuoteUpdatePlugin | Finds Customer Default Quote in customer quote collection and saves it to customer session. |  | Spryker\Client\MultiCart\Plugin |
+| QuoteSelectorPersistentCartChangeExpanderPlugin | Takes quote ID form parameters and replaces it in quote change request. |  | Spryker\Client\MultiCart\Plugin |
 
 **src/Pyz/Client/PersistentCart/PersistentCartDependencyProvider.php**
 
@@ -322,7 +372,7 @@ class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyPr
 			new QuoteSelectorPersistentCartChangeExpanderPlugin(),
 		];
 	}
-} 
+}
 ```
 
 **src/Pyz/Zed/PersistentCart/PersistentCartDependencyProvider.php**
@@ -350,15 +400,18 @@ class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyPr
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that adding items to the cart will update the customer's cart list in the multi-cart session.
+
 {% endinfo_block %}
 
-#### Set up Customer Integration
+#### Set up customer integration
 
 Register the following plugins:
-|Plugin|Specification|Prerequisites|Namespace|
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
-|`GuestCartSaveCustomerSessionSetPlugin`|Executed after the customer has been added to the session. Saves a guest customer quote to the database if it is not empty.Takes an actual customer quote from the database if the guest cart is empty.|Should be added before `GuestCartUpdateCustomerSessionSetPlugin`.|`Spryker\Client\MultiCart\Plugin`|
+|GuestCartSaveCustomerSessionSetPlugin|Executed after the customer has been added to the session. Saves a guest customer quote to the database if it is not empty.Takes an actual customer quote from the database if the guest cart is empty.|Should be added before `GuestCartUpdateCustomerSessionSetPlugin`.|Spryker\Client\MultiCart\Plugin|
 
 **src/Pyz/Client/Customer/CustomerDependencyProvider.php**
 
@@ -385,35 +438,48 @@ class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that no  empty guest cart will be saved to the database in customer login.
+
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
+
 ### Prerequisites
 
 Please overview and install the necessary features before beginning the integration step.
- Name | Version |
+
+| NAME | VERSION |
 | --- | --- |
-|Product| master | 
-| Cart | master |
-| Persistent Cart | master |
-| Customer Account Management | master |
+| Product | {{page.version}} |
+| Cart | {{page.version}} |
+| Persistent Cart | {{page.version}} |
+| Customer Account Management | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
+
 ```bash
-composer require spryker-feature/multiple-carts: "^master" --update-with-dependencies
+composer require spryker-feature/multiple-carts: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following modules have been installed:<table><thead><tr><th>Module</th><th>Expected directory</th></tr></thead><tbody><tr><td>`MultiCartPage`</td><td>`vendor/spryker-shop/multi-cart-page`</td></tr><tr><td>`MultiCartWidget`</td><td>`vendor/spryker-shop/multi-cart-widget`</td></tr></tbody></table>
+
+Make sure that the following modules have been installed:
+
+| MODULE | EXPECTED DIRECTORY |
+| --- | --- |
+| MultiCartPage | vendor/spryker-shop/multi-cart-page |
+| MultiCartWidget | vendor/spryker-shop/multi-cart-widget |
+
 {% endinfo_block %}       
 
-### 2) Add Translations
+### 2) Add translations
+
 Append glossary according to your configuration:
-<details open>
-<summary markdown='span'>src/data/import/glossary.csv</summary>
+
+<details open><summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 page.multi_cart.shopping_cart.list.title,Shopping cart,en_US
@@ -515,29 +581,30 @@ multi_cart_widget.cart.created.success,"Warenkorb '%quoteName%' wurde erfolgreic
 multi_cart_widget.cart.updated.success,"Cart updated successfully",en_US
 multi_cart_widget.cart.updated.success,"Einkaufswagen wurde erfolgreich aktualisiert",de_DE
 multi_cart_widget.cart.was-deleted-before,Dieser Warenkorb wurde bereits gelöscht,de_DE
-multi_cart_widget.cart.was-deleted-before,This cart was already deleted,en_US 
+multi_cart_widget.cart.was-deleted-before,This cart was already deleted,en_US
 ```
-<br>
 </details>
 
 Run the following console command to import data:
 ```bash
-console data:import glossary 
+console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that in the database the configured data are added to the `spy_glossary` table.
+
 {% endinfo_block %}
 
-### 3) Enable Controllers
+### 3) Enable controllers
 
-#### Router List
+#### Router list
 
 Register the following route provider plugins:
 
-| Provider | Namespace |
-| --- | --- | 
-| `MultiCartPageRouteProviderPlugin` | `SprykerShop\Yves\MultiCartPage\Plugin\Router` |
+| PROVIDER | NAMESPACE |
+| --- | --- |
+| MultiCartPageRouteProviderPlugin | SprykerShop\Yves\MultiCartPage\Plugin\Router |
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
 
@@ -564,18 +631,21 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
+
 Verify the changes by opening the customer cart list page with a logged in customer on, for example, `http://mysprykershop.com/multi-cart/`
+
 {% endinfo_block %}
 
-### 4) Set up Widgets
+### 4) Set up widgets
 
 Register the following global widgets:
-| Widget | Description | Namespace |
+
+| WIDGET | DESCRIPTION | NAMESPACE |
 | --- | --- | --- |
-| `AddToMultiCartWidget` | Shows cart list for adding to cart functionality. | `SprykerShop\Yves\MultiCartWidget\Widget` |
-| `CartOperationsWidget` | Shows multi-cart functionalities in cart page. | `SprykerShop\Yves\MultiCartWidget\Widget` |
-| `MiniCartWidget` | Shows mini-cart in header. | `SprykerShop\Yves\MultiCartWidget\Widget` |
-| `MultiCartMenuItemWidget` | Shows link to cart list page in customer account navigation. | `SprykerShop\Yves\MultiCartWidget\Widget` |
+| AddToMultiCartWidget | Shows cart list for adding to cart functionality. | SprykerShop\Yves\MultiCartWidget\Widget |
+| CartOperationsWidget | Shows multi-cart functionalities in cart page. | SprykerShop\Yves\MultiCartWidget\Widget |
+| MiniCartWidget | Shows mini-cart in header. | SprykerShop\Yves\MultiCartWidget\Widget |
+| MultiCartMenuItemWidget | Shows link to cart list page in customer account navigation. | SprykerShop\Yves\MultiCartWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -604,14 +674,24 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 			MultiCartMenuItemWidget::class,
 		];
 	}
-} 
+}
 ```
 
 Run the following command to enable Javascript and CSS changes:
-```bash
-console frontend:yves:build 
-```
-{% info_block warningBox "Verification" %}
-Make sure that the following widgets have been registered:<table><thead><tr class="TableStyle-PatternedRows2-Head-Header1"><th class="TableStyle-PatternedRows2-HeadE-Regular-Header1">Module</th><th class="TableStyle-PatternedRows2-HeadD-Regular-Header1">Test</th></tr></thead><tbody><tr class="TableStyle-PatternedRows2-Body-LightRows"><td class="TableStyle-PatternedRows2-BodyE-Regular-LightRows">`AddToMultiCartWidget`</td><td class="TableStyle-PatternedRows2-BodyD-Regular-LightRows">Go to the product detail page. A shopping cart list should be added to the cart form.</td></tr><tr class="TableStyle-PatternedRows2-Body-DarkerRows"><td class="TableStyle-PatternedRows2-BodyE-Regular-DarkerRows">`CartOperationsWidget`</td><td class="TableStyle-PatternedRows2-BodyD-Regular-DarkerRows">Go to the cart overview page and see a title with the cart name and the Clear all button.</td></tr><tr class="TableStyle-PatternedRows2-Body-LightRows"><td class="TableStyle-PatternedRows2-BodyE-Regular-LightRows">`MiniCartWidget`</td><td class="TableStyle-PatternedRows2-BodyD-Regular-LightRows">Mini-cart with all customer's carts should be in the header.</td></tr><tr class="TableStyle-PatternedRows2-Body-DarkerRows"><td class="TableStyle-PatternedRows2-BodyB-Regular-DarkerRows">`MultiCartMenuItemWidget`</td><td class="TableStyle-PatternedRows2-BodyA-Regular-DarkerRows">Go to the customer account overview page. A shopping cart link should be in the customer navigation links.</td></tr></tbody></table>
-{% endinfo_block %}
 
+```bash
+console frontend:yves:build
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the following widgets have been registered:
+
+| MODULE | TEST |
+| --- | --- |
+| AddToMultiCartWidget | Go to the product detail page. A shopping cart list should be added to the cart form. |
+| CartOperationsWidget | Go to the cart overview page and see a title with the cart name and the Clear all button. |
+| MiniCartWidget | Mini-cart with all customer's carts should be in the header. |
+| MultiCartMenuItemWidget | Go to the customer account overview page. A shopping cart link should be in the customer navigation links. |
+
+{% endinfo_block %}

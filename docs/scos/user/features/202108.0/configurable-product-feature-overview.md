@@ -23,6 +23,7 @@ related:
 This is the Beta version of the feature and is therefore subject to changes.
 
 {% endinfo_block %}
+
 The *Configurable Product* feature introduces a new type of product that can be customized by customers — a configurable product.
 
 The feature allows you to sell complex products with modular designs or services. For example, if you sell clothes, you can allow your customers to define the material, color, and add their name to the product. Or, if you are selling a service, you can allow them to select a preferred date and time of the service delivery.
@@ -48,7 +49,6 @@ After adding a configurable product to cart, a customer can configure the produc
 Configurable products are created in two steps:
 
 1.  A Back Office user creates regular products or a developer imports them. See [Creating an abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html) to learn how they create products in the Back Office or [File details: product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html) to learn about the file they import.
-
 2.  A developer converts regular products into configurable products by importing configuration parameters. See [File details: product_concrete_pre_configuration.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html) to learn about the file they import.
 
 

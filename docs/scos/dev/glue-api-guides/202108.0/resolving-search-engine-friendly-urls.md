@@ -59,7 +59,7 @@ To resolve a SEF URL into a Glue API URL, send the request:
 
 ### Response
 
-<details open>
+<details>
 <summary markdown='span'>Response sample of a product URL</summary>
 
 ```json
@@ -84,7 +84,7 @@ To resolve a SEF URL into a Glue API URL, send the request:
 ```    
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>Response sample of a category node URL</summary>
 
 ```json
@@ -109,7 +109,7 @@ To resolve a SEF URL into a Glue API URL, send the request:
 ```
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>Response sample of a CMS page URL</summary>
 
 ```json
@@ -134,7 +134,7 @@ To resolve a SEF URL into a Glue API URL, send the request:
 ```
 </details>
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | entityType | String | Resource type, like `abstract-products` or `category-nodes`, `cms-pages`. |
 | entityId | String | Unique resource identifier. |
@@ -146,7 +146,7 @@ Using the information from the response and the Glue server name, you can constr
 
 ## Possible errors
 
-| Status | Reason |
+| CODE | REASON |
 | --- | --- |
 | 404 | The provided URL does not exist. |
 | 422 | The `url` parameter is missing. |

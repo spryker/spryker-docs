@@ -11,33 +11,40 @@ redirect_from:
   - /docs/en/product-order-management-feature-integration
 ---
 
-## Install Feature Core
+## Install feature core
 
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
-| Feature | Version |
+| NAME | VERSION |
 | --- | --- |
-| Product | 202009.0 |
-| Order Management | 202009.0 |
-| Spryker Core | 202009.0 |
+| Product | {{page.version}} |
+| Order Management | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
-Run the following command(s) to install the required modules
+
+Run the following command(s) to install the required modules:
+
 ```bash
 composer require spryker/sales-product-connector:"^1.4.0" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-| `SalesProductConnector` | `vendor/spryker/sales-product-connector` |
+| SalesProductConnector | vendor/spryker/sales-product-connector |
 
 {% endinfo_block %}
-### 2) Set up Transfer Objects
+
+### 2) Set up transfer objects
+
 Run the following command to generate transfer changes:
+
 ```bash
 console transfer:generate
 ```
@@ -45,22 +52,25 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| Transfer| Type| Event| Path|
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
-| `Order.idSalesOrder` | property | Created |`src/Generated/Shared/Transfer/OrderTransfer` |
-| `Item.fkSalesOrder` | property | Created | `src/Generated/Shared/Transfer/ItemTransfer` |
+| Order.idSalesOrder | property | Created |src/Generated/Shared/Transfer/OrderTransfer |
+| Item.fkSalesOrder | property | Created | src/Generated/Shared/Transfer/ItemTransfer |
 
 {% endinfo_block %}
 
-### 3) Set up Behavior
+### 3) Set up behavior
+
 Register the following plugins:
-| Plugin | Specification | Prerequisites | Namespace |
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `ItemMetadataSearchOrderExpanderPlugin` | Expands items of each order with metadata information. | None | `Spryker\Zed\SalesProductConnector\Communication\Plugin\Sales` |
-| `MetadataOrderItemExpanderPlugin` | Expands order items with metadata information. | None | `Spryker\Zed\SalesProductConnector\Communication\Plugin\Sales` |
-| `ProductIdOrderItemExpanderPlugin` | Expands order items with abstract and concrete product ids. | None | `Spryker\Zed\SalesProductConnector\Communication\Plugin\Sales`
+| ItemMetadataSearchOrderExpanderPlugin | Expands items of each order with metadata information. | None | Spryker\Zed\SalesProductConnector\Communication\Plugin\Sales |
+| MetadataOrderItemExpanderPlugin | Expands order items with metadata information. | None | Spryker\Zed\SalesProductConnector\Communication\Plugin\Sales |
+| ProductIdOrderItemExpanderPlugin | Expands order items with abstract and concrete product ids. | None | Spryker\Zed\SalesProductConnector\Communication\Plugin\Sales
 
 **/src/Pyz/Zed/Sales/SalesDependencyProvider.php**
+
 ```php
 <?php
 
@@ -82,7 +92,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
             new ItemMetadataSearchOrderExpanderPlugin(),
         ];
     }
-    
+
     /**
      * @return \Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemExpanderPluginInterface[]
      */
@@ -95,6 +105,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
     }
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that every order item from `SalesFacade::searchOrders()` results contain metadata information.
@@ -107,4 +118,3 @@ Make sure that every order item from `SalesFacade::getOrderItems()` results cont
 Make sure that every order item from `SalesFacade::getOrderItems()` results contain metadata information.
 
 {% endinfo_block %}
-

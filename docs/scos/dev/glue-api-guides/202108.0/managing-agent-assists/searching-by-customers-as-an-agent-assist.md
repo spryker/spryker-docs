@@ -19,14 +19,9 @@ Search by customers to find out information about them. This endpoint is mostly 
 
 ## Installation
 
-
-
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-
 *   [Glue API: Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-agent-assist-feature-integration.html)
-    
 *   [Customer Account Management + Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-agent-assist-feature-integration.html)
-    
 *   [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html)
 
 ## Search by customers
@@ -34,35 +29,25 @@ For detailed information on the modules that provide the API functionality and r
 
 To search by customers, send the request:
 
-* * *
+***
 `GET` **/agent-customer-search**
-* * *
+***
 
 ### Request
 
-| Header key | Type | Required | Description |
+| HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | X-Agent-Authorization | string | ✓ |  String containing digits, letters, and symbols that authorize the agent assist. [Authenticate as an agent assist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/authenticating-as-an-agent-assist.html#authenticate-as-an-agent-assist) to get the value.  |
 
 
 
-| String parameter | Description | Possible values |
+| STRING PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | q | The value to search for in the list of customers. If you enter a part of an email address, first name, or last name, the endpoint returns all the customer entries partially matching the search query. To search by a customer reference, enter full customer reference. | {% raw %}{{{% endraw %}customerEmail{% raw %}}}{% endraw %}, {% raw %}{{{% endraw %}firstName{% raw %}}}{% endraw %}, {% raw %}{{{% endraw %}customerReference{% raw %}}}{% endraw %}, {% raw %}{{{% endraw %}lastName{% raw %}}}{% endraw %} |
 | page[offset] | The offset of the item at which to begin the response. </br> Works only together with `page[limit]`. </br> To work correctly, the value should be devisable by the value of `page[limit]`. </br> The default value is `0`.  | From `0` to any. |
 | page[limit] | The maximum number of entries to return. </br> Works only together with `page[offset]`. </br> The default value is `10`. | From `1` to any. |
 
-
-
-
-
-
-
-
-
-
-
-| Request | Usage |
+| REQUEST | USAGE |
 | --- | --- |
 | `GET http://glue.mysprykershop.com/agent-customer-search` | Return the list of all customers. |
 | `GET http://glue.mysprykershop.com/agent-customer-search?page[limit]=5&page[offset]=5` | Return a list of 5 customer entires starting from the 6th entry. |
@@ -70,17 +55,9 @@ To search by customers, send the request:
 | `GET http://glue.mysprykershop.com/agent-customer-search?q=spencor` | Search for the customer with the `spencor` name. |
 | `GET http://glue.mysprykershop.com/agent-customer-search?q=DE--5` | Search for the customer with the `DE--5` customer reference. |
 
-
-
-
-
-
-
-
 ### Response
 
-<details open>
-    <summary markdown='span'>markdown='span'>Response sample</summary>
+<details><summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -164,14 +141,13 @@ To search by customers, send the request:
         "next": "http://glue.mysprykershop.com/agent-customer-search?page[offset]=10&page[limit]=10"
     }
 }
-    
+
 ```
 
 </details>
 
-<details open>
-    <summary markdown='span'>markdown='span'>Response sample of search with page limit and page offset</summary>
-    
+<details><summary markdown='span'>Response sample of search with page limit and page offset</summary>
+
 ```json
 {
     "data": [
@@ -224,14 +200,13 @@ To search by customers, send the request:
         "prev": "http://glue.mysprykershop.com/agent-customer-search?page[offset]=0&page[limit]=5",
         "next": "http://glue.mysprykershop.com/agent-customer-search?page[offset]=10&page[limit]=5"
     }
-} 
+}
 ```
-    
+
 </details>
 
-<details open>
-    <summary markdown='span'>markdown='span'>Response sample of search by email address</summary>
-    
+<details><summary markdown='span'>Response sample of search by email address</summary>
+
 ```json
 {
     "data": [
@@ -260,12 +235,11 @@ To search by customers, send the request:
     }
 }    
 ```
-    
+
 </details>
 
-<details open>
-    <summary markdown='span'>markdown='span'>Response sample of search by name</summary>
-    
+<details><summary markdown='span'>Response sample of search by name</summary>
+
 ```json
  {
     "data": [
@@ -294,12 +268,11 @@ To search by customers, send the request:
     }
 }   
 ```
-    
+
 </details>
 
-<details open>
-    <summary markdown='span'>markdown='span'>Response sample of search by customer reference</summary>
-    
+<details><summary markdown='span'>Response sample of search by customer reference</summary>
+
 ```json
 {
     "data": [
@@ -328,12 +301,10 @@ To search by customers, send the request:
     }
 }    
 ```
-    
+
 </details>
 
-
-
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | customerReference | string | Unique customer identifier. |
 | email | string | Email address of the customer. |
@@ -342,7 +313,7 @@ To search by customers, send the request:
 
 ## Possible errors
 
-| Code  | Reason |
+| CODE  | REASON |
 | --- | --- |
 | 001| Access token is invalid.|
 | 4103| Agent access token is missing.|
@@ -351,6 +322,4 @@ To view generic errors that originate from the Glue Application, see [Reference 
 
 ## Next steps
 
-
 After you’ve found the reference of the customer you want to assist, impersonate the customer to perform any actions available to them. See [ Impersonating customers as an agent assist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/impersonating-customers-as-an-agent-assist.html) for details.
-

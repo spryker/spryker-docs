@@ -1,5 +1,5 @@
 ---
-title: Combined Product Offer Import Integration
+title: Combined Product Offer Import integration
 last_updated: Oct 12, 2021
 description: This document describes the process how to integrate combined product offer import functionality.
 draft: true
@@ -20,20 +20,21 @@ To start integration, integrate the required features:
 
 {% info_block infoBox "Info" %}
 
-It's project level implementation applied on top on existing features.
-No core feature installation required.
+The project level implementation is applied on top of the existing features.
+There is no need to install core features.
 
 {% endinfo_block %}
 
-### 1) Create project level implementation
+### 1) Create the project level implementation
 
-#### Merchant Product Offer
+#### Merchant product offer
+
+Adjust the following files:
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/MerchantProductOfferDataImport/Business/MerchantProductOfferDataImportBusinessFactory.php</summary>
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\MerchantProductOfferDataImport\Business;
@@ -196,15 +197,11 @@ class MerchantProductOfferDataImportBusinessFactory extends SprykerMerchantProdu
     }
 }
 ```
-
 </details>
 
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantProductOfferDataImport/Business/MerchantProductOfferDataImportFacade.php</summary>
+**src/Pyz/Zed/MerchantProductOfferDataImport/Business/MerchantProductOfferDataImportFacade.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\MerchantProductOfferDataImport\Business;
@@ -246,13 +243,9 @@ class MerchantProductOfferDataImportFacade extends SprykerMerchantProductOfferDa
 }
 ```
 
-</details>
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantProductOfferDataImport/Business/MerchantProductOfferDataImportFacadeInterface.php</summary>
+**src/Pyz/Zed/MerchantProductOfferDataImport/Business/MerchantProductOfferDataImportFacadeInterface.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\MerchantProductOfferDataImport\Business;
@@ -283,14 +276,9 @@ interface MerchantProductOfferDataImportFacadeInterface extends SprykerMerchantP
 }
 ```
 
-</details>
-
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantProductOfferDataImport/Business/Model/Condition/CombinedMerchantProductOfferMandatoryColumnCondition.php</summary>
+**src/Pyz/Zed/MerchantProductOfferDataImport/Business/Model/Condition/CombinedMerchantProductOfferMandatoryColumnCondition.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\MerchantProductOfferDataImport\Business\Model\Condition;
@@ -317,14 +305,9 @@ class CombinedMerchantProductOfferMandatoryColumnCondition extends CombinedProdu
 
 ```
 
-</details>
-
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantProductOfferDataImport/Business/Model/Condition/CombinedMerchantProductOfferStoreMandatoryColumnCondition.php</summary>
+**src/Pyz/Zed/MerchantProductOfferDataImport/Business/Model/Condition/CombinedMerchantProductOfferStoreMandatoryColumnCondition.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\MerchantProductOfferDataImport\Business\Model\Condition;
@@ -347,14 +330,9 @@ class CombinedMerchantProductOfferStoreMandatoryColumnCondition extends Combined
 
 ```
 
-</details>
-
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantProductOfferDataImport/Business/Model/DataSet/CombinedMerchantProductOfferDataSetInterface.php</summary>
+**src/Pyz/Zed/MerchantProductOfferDataImport/Business/Model/DataSet/CombinedMerchantProductOfferDataSetInterface.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\MerchantProductOfferDataImport\Business\Model\DataSet;
@@ -371,14 +349,9 @@ interface CombinedMerchantProductOfferDataSetInterface
 }
 
 ```
-
-</details>
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantProductOfferDataImport/Business/Model/Step/CombinedApprovalStatusValidationStep.php</summary>
+**src/Pyz/Zed/MerchantProductOfferDataImport/Business/Model/Step/CombinedApprovalStatusValidationStep.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\MerchantProductOfferDataImport\Business\Model\Step;
@@ -393,13 +366,9 @@ class CombinedApprovalStatusValidationStep extends ApprovalStatusValidationStep
 
 ```
 
-</details>
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantProductOfferDataImport/Business/Model/Step/CombinedConcreteSkuValidationStep.php</summary>
+**src/Pyz/Zed/MerchantProductOfferDataImport/Business/Model/Step/CombinedConcreteSkuValidationStep.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\MerchantProductOfferDataImport\Business\Model\Step;
@@ -414,13 +383,10 @@ class CombinedConcreteSkuValidationStep extends ConcreteSkuValidationStep
 
 ```
 
-</details>
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantProductOfferDataImport/Business/Model/Step/CombinedMerchantProductOfferWriterStep.php</summary>
+**src/Pyz/Zed/MerchantProductOfferDataImport/Business/Model/Step/CombinedMerchantProductOfferWriterStep.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\MerchantProductOfferDataImport\Business\Model\Step;
@@ -440,13 +406,9 @@ class CombinedMerchantProductOfferWriterStep extends MerchantProductOfferWriterS
 
 ```
 
-</details>
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantProductOfferDataImport/Business/Model/Step/CombinedMerchantReferenceToIdMerchantStep.php</summary>
+**src/Pyz/Zed/MerchantProductOfferDataImport/Business/Model/Step/CombinedMerchantReferenceToIdMerchantStep.php**
 
 ```php
-
 <?php
 
 
@@ -461,13 +423,10 @@ class CombinedMerchantReferenceToIdMerchantStep extends MerchantReferenceToIdMer
 }
 ```
 
-</details>
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantProductOfferDataImport/Business/Model/Step/CombinedMerchantSkuValidationStep.php</summary>
+**src/Pyz/Zed/MerchantProductOfferDataImport/Business/Model/Step/CombinedMerchantSkuValidationStep.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\MerchantProductOfferDataImport\Business\Model\Step;
@@ -482,13 +441,9 @@ class CombinedMerchantSkuValidationStep extends MerchantSkuValidationStep
 }
 ```
 
-</details>
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantProductOfferDataImport/Business/Model/Step/CombinedStoreNameToIdStoreStep.php</summary>
+**src/Pyz/Zed/MerchantProductOfferDataImport/Business/Model/Step/CombinedStoreNameToIdStoreStep.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\MerchantProductOfferDataImport\Business\Model\Step;
@@ -502,13 +457,9 @@ class CombinedStoreNameToIdStoreStep extends StoreNameToIdStoreStep
 }
 ```
 
-</details>
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantProductOfferDataImport/Communication/Plugin/CombinedMerchantProductOfferDataImportPlugin.php</summary>
+**src/Pyz/Zed/MerchantProductOfferDataImport/Communication/Plugin/CombinedMerchantProductOfferDataImportPlugin.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\MerchantProductOfferDataImport\Communication\Plugin;
@@ -545,13 +496,10 @@ class CombinedMerchantProductOfferDataImportPlugin extends AbstractPlugin implem
 }
 ```
 
-</details>
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantProductOfferDataImport/Communication/Plugin/CombinedMerchantProductOfferStoreDataImportPlugin.php</summary>
+**src/Pyz/Zed/MerchantProductOfferDataImport/Communication/Plugin/CombinedMerchantProductOfferStoreDataImportPlugin.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\MerchantProductOfferDataImport\Communication\Plugin;
@@ -588,13 +536,9 @@ class CombinedMerchantProductOfferStoreDataImportPlugin extends AbstractPlugin i
 }
 ```
 
-</details>
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantProductOfferDataImport/MerchantProductOfferDataImportConfig.php</summary>
+**src/Pyz/Zed/MerchantProductOfferDataImport/MerchantProductOfferDataImportConfig.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\MerchantProductOfferDataImport;
@@ -641,10 +585,7 @@ class MerchantProductOfferDataImportConfig extends SprykerMerchantProductOfferDa
 }
 ```
 
-</details>
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantProductOfferDataImport/MerchantProductOfferDataImportDependencyProvider.php</summary>
+**src/Pyz/Zed/MerchantProductOfferDataImport/MerchantProductOfferDataImportDependencyProvider.php**
 
 ```php
 
@@ -657,19 +598,17 @@ use Spryker\Zed\MerchantProductOfferDataImport\MerchantProductOfferDataImportDep
 class MerchantProductOfferDataImportDependencyProvider extends SprykerMerchantProductOfferDataImportDependencyProvider
 {
 }
-
 ```
 
-</details>
 
-#### Price Product Offer
+#### Price product offer
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/PriceProductOfferDataImport/Business/Model/Condition/CombinedPriceProductOfferMandatoryColumnCondition.php</summary>
+Adjust the following files:
+
+**src/Pyz/Zed/PriceProductOfferDataImport/Business/Model/Condition/CombinedPriceProductOfferMandatoryColumnCondition.php**
 
 
 ```php
-
 <?php
 
 
@@ -694,16 +633,11 @@ class CombinedPriceProductOfferMandatoryColumnCondition extends CombinedProductM
         ];
     }
 }
-
 ```
 
-</details>
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/PriceProductOfferDataImport/Business/Model/DataSet/CombinedPriceProductOfferDataSetInterface.php</summary>
+**src/Pyz/Zed/PriceProductOfferDataImport/Business/Model/DataSet/CombinedPriceProductOfferDataSetInterface.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\PriceProductOfferDataImport\Business\Model\DataSet;
@@ -719,16 +653,11 @@ interface CombinedPriceProductOfferDataSetInterface
     public const VALUE_GROSS = 'price_product_offer.value_gross';
     public const PRICE_DATA_VOLUME_PRICES = 'price_product_offer.price_data.volume_prices';
 }
-
 ```
 
-</details>
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/PriceProductOfferDataImport/Business/Model/Step/CombinedCurrencyToIdCurrencyStep.php</summary>
+**src/Pyz/Zed/PriceProductOfferDataImport/Business/Model/Step/CombinedCurrencyToIdCurrencyStep.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\PriceProductOfferDataImport\Business\Model\Step;
@@ -740,17 +669,11 @@ class CombinedCurrencyToIdCurrencyStep extends CurrencyToIdCurrencyStep
 {
     protected const CURRENCY = CombinedPriceProductOfferDataSetInterface::CURRENCY;
 }
-
 ```
 
-</details>
-
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/PriceProductOfferDataImport/Business/Model/Step/CombinedPreparePriceDataStep.php</summary>
+**src/Pyz/Zed/PriceProductOfferDataImport/Business/Model/Step/CombinedPreparePriceDataStep.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\PriceProductOfferDataImport\Business\Model\Step;
@@ -762,16 +685,11 @@ class CombinedPreparePriceDataStep extends PreparePriceDataStep
 {
     protected const PRICE_DATA_VOLUME_PRICES = CombinedPriceProductOfferDataSetInterface::PRICE_DATA_VOLUME_PRICES;
 }
-
 ```
 
-</details>
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/PriceProductOfferDataImport/Business/Model/Step/CombinedPriceProductStoreWriterStep.php</summary>
+**src/Pyz/Zed/PriceProductOfferDataImport/Business/Model/Step/CombinedPriceProductStoreWriterStep.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\PriceProductOfferDataImport\Business\Model\Step;
@@ -784,16 +702,11 @@ class CombinedPriceProductStoreWriterStep extends PriceProductStoreWriterStep
     protected const VALUE_NET = CombinedPriceProductOfferDataSetInterface::VALUE_NET;
     protected const VALUE_GROSS = CombinedPriceProductOfferDataSetInterface::VALUE_GROSS;
 }
-
 ```
 
-</details>
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/PriceProductOfferDataImport/Business/Model/Step/CombinedPriceProductWriterStep.php</summary>
+**src/Pyz/Zed/PriceProductOfferDataImport/Business/Model/Step/CombinedPriceProductWriterStep.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\PriceProductOfferDataImport\Business\Model\Step;
@@ -803,16 +716,11 @@ use Spryker\Zed\PriceProductOfferDataImport\Business\Step\PriceProductWriterStep
 class CombinedPriceProductWriterStep extends PriceProductWriterStep
 {
 }
-
 ```
 
-</details>
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/PriceProductOfferDataImport/Business/Model/Step/CombinedPriceTypeToIdPriceTypeStep.php</summary>
+**src/Pyz/Zed/PriceProductOfferDataImport/Business/Model/Step/CombinedPriceTypeToIdPriceTypeStep.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\PriceProductOfferDataImport\Business\Model\Step;
@@ -824,16 +732,11 @@ class CombinedPriceTypeToIdPriceTypeStep extends PriceTypeToIdPriceTypeStep
 {
     protected const PRICE_TYPE = CombinedPriceProductOfferDataSetInterface::PRICE_TYPE;
 }
-
 ```
 
-</details>
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/PriceProductOfferDataImport/Business/Model/Step/CombinedProductOfferReferenceToProductOfferDataStep.php</summary>
+**src/Pyz/Zed/PriceProductOfferDataImport/Business/Model/Step/CombinedProductOfferReferenceToProductOfferDataStep.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\PriceProductOfferDataImport\Business\Model\Step;
@@ -845,16 +748,11 @@ class CombinedProductOfferReferenceToProductOfferDataStep extends ProductOfferRe
 {
     protected const PRODUCT_OFFER_REFERENCE = CombinedPriceProductOfferDataSetInterface::PRODUCT_OFFER_REFERENCE;
 }
-
 ```
 
-</details>
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/PriceProductOfferDataImport/Business/Model/Step/CombinedProductOfferToIdProductStep.php</summary>
+**src/Pyz/Zed/PriceProductOfferDataImport/Business/Model/Step/CombinedProductOfferToIdProductStep.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\PriceProductOfferDataImport\Business\Model\Step;
@@ -864,17 +762,11 @@ use Spryker\Zed\PriceProductOfferDataImport\Business\Step\ProductOfferToIdProduc
 class CombinedProductOfferToIdProductStep extends ProductOfferToIdProductStep
 {
 }
-
 ```
 
-</details>
-
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/PriceProductOfferDataImport/Business/Model/Step/CombinedStoreToIdStoreStep.php</summary>
+**src/Pyz/Zed/PriceProductOfferDataImport/Business/Model/Step/CombinedStoreToIdStoreStep.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\PriceProductOfferDataImport\Business\Model\Step;
@@ -886,16 +778,12 @@ class CombinedStoreToIdStoreStep extends StoreToIdStoreStep
 {
     protected const STORE = CombinedPriceProductOfferDataSetInterface::STORE;
 }
-
 ```
-
-</details>
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/PriceProductOfferDataImport/Business/PriceProductOfferDataImportBusinessFactory.php</summary>
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\PriceProductOfferDataImport\Business;
@@ -1048,16 +936,12 @@ class PriceProductOfferDataImportBusinessFactory extends SprykerPriceProductOffe
         return new CombinedPriceProductOfferMandatoryColumnCondition();
     }
 }
-
 ```
-
 </details>
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/PriceProductOfferDataImport/Business/PriceProductOfferDataImportFacade.php</summary>
+**src/Pyz/Zed/PriceProductOfferDataImport/Business/PriceProductOfferDataImportFacade.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\PriceProductOfferDataImport\Business;
@@ -1084,17 +968,12 @@ class PriceProductOfferDataImportFacade extends SprykerPriceProductOfferDataImpo
             ->import($dataImporterConfigurationTransfer);
     }
 }
-
 ```
 
-</details>
 
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/PriceProductOfferDataImport/Business/PriceProductOfferDataImportFacadeInterface.php</summary>
+**src/Pyz/Zed/PriceProductOfferDataImport/Business/PriceProductOfferDataImportFacadeInterface.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\PriceProductOfferDataImport\Business;
@@ -1114,17 +993,12 @@ interface PriceProductOfferDataImportFacadeInterface extends SprykerPriceProduct
         ?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer = null
     ): DataImporterReportTransfer;
 }
-
 ```
 
-</details>
 
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/PriceProductOfferDataImport/Communication/Plugin/CombinedPriceProductOfferDataImportPlugin.php</summary>
+**src/Pyz/Zed/PriceProductOfferDataImport/Communication/Plugin/CombinedPriceProductOfferDataImportPlugin.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\PriceProductOfferDataImport\Communication\Plugin;
@@ -1159,17 +1033,11 @@ class CombinedPriceProductOfferDataImportPlugin extends AbstractPlugin implement
         return $this->getFacade()->importCombinedPriceProductOfferData($dataImporterConfigurationTransfer);
     }
 }
-
 ```
 
-</details>
-
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/PriceProductOfferDataImport/PriceProductOfferDataImportConfig.php</summary>
+**src/Pyz/Zed/PriceProductOfferDataImport/PriceProductOfferDataImportConfig.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\PriceProductOfferDataImport;
@@ -1194,16 +1062,11 @@ class PriceProductOfferDataImportConfig extends SprykerPriceProductOfferDataImpo
         );
     }
 }
-
 ```
 
-</details>
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/PriceProductOfferDataImport/PriceProductOfferDataImportDependencyProvider.php</summary>
+**src/Pyz/Zed/PriceProductOfferDataImport/PriceProductOfferDataImportDependencyProvider.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\PriceProductOfferDataImport;
@@ -1213,16 +1076,13 @@ use Spryker\Zed\PriceProductOfferDataImport\PriceProductOfferDataImportDependenc
 class PriceProductOfferDataImportDependencyProvider extends SprykerPriceProductOfferDataImportDependencyProvider
 {
 }
-
 ```
 
-</details>
+#### Product offer stock
 
+Adjust the following files:
 
-#### Product Offer Stock
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/ProductOfferStockDataImport/Business/Model/Condition/CombinedProductOfferStockMandatoryColumnCondition.php</summary>
+**src/Pyz/Zed/ProductOfferStockDataImport/Business/Model/Condition/CombinedProductOfferStockMandatoryColumnCondition.php**
 
 ```php
 
@@ -1247,17 +1107,12 @@ class CombinedProductOfferStockMandatoryColumnCondition extends CombinedProductM
         ];
     }
 }
-
 ```
 
-</details>
 
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/ProductOfferStockDataImport/Business/Model/DataSet/CombinedProductOfferStockDataSetInterface.php</summary>
+**src/Pyz/Zed/ProductOfferStockDataImport/Business/Model/DataSet/CombinedProductOfferStockDataSetInterface.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\ProductOfferStockDataImport\Business\Model\DataSet;
@@ -1270,17 +1125,11 @@ interface CombinedProductOfferStockDataSetInterface
     public const IS_NEVER_OUT_OF_STOCK = 'product_offer_stock.is_never_out_of_stock';
     public const STORE_NAME = 'merchant_product_offer_store.store_name';
 }
-
 ```
 
-</details>
-
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/ProductOfferStockDataImport/Business/Model/Step/CombinedProductOfferReferenceToIdProductOfferStep.php</summary>
+**src/Pyz/Zed/ProductOfferStockDataImport/Business/Model/Step/CombinedProductOfferReferenceToIdProductOfferStep.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\ProductOfferStockDataImport\Business\Model\Step;
@@ -1292,16 +1141,12 @@ class CombinedProductOfferReferenceToIdProductOfferStep extends ProductOfferRefe
 {
     protected const PRODUCT_OFFER_REFERENCE = CombinedProductOfferStockDataSetInterface::PRODUCT_OFFER_REFERENCE;
 }
-
 ```
 
-</details>
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/ProductOfferStockDataImport/Business/Model/Step/CombinedProductOfferStockWriterStep.php</summary>
+**src/Pyz/Zed/ProductOfferStockDataImport/Business/Model/Step/CombinedProductOfferStockWriterStep.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\ProductOfferStockDataImport\Business\Model\Step;
@@ -1321,17 +1166,11 @@ class CombinedProductOfferStockWriterStep extends ProductOfferStockWriterStep
         self::IS_NEVER_OUT_OF_STOCK,
     ];
 }
-
 ```
 
-</details>
-
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/ProductOfferStockDataImport/Business/Model/Step/CombinedStockNameToIdStockStep.php</summary>
+**src/Pyz/Zed/ProductOfferStockDataImport/Business/Model/Step/CombinedStockNameToIdStockStep.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\ProductOfferStockDataImport\Business\Model\Step;
@@ -1344,17 +1183,13 @@ class CombinedStockNameToIdStockStep extends StockNameToIdStockStep
     protected const PRODUCT_STOCK_NAME = CombinedProductOfferStockDataSetInterface::STOCK_NAME;
     protected const STORE_NAME = CombinedProductOfferStockDataSetInterface::STORE_NAME;
 }
-
 ```
-
-</details>
 
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/ProductOfferStockDataImport/Business/ProductOfferStockDataImportBusinessFactory.php</summary>
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\ProductOfferStockDataImport\Business;
@@ -1458,17 +1293,12 @@ class ProductOfferStockDataImportBusinessFactory extends SprykerProductOfferStoc
         return new CombinedProductOfferStockMandatoryColumnCondition();
     }
 }
-
 ```
-
 </details>
 
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/ProductOfferStockDataImport/Business/ProductOfferStockDataImportFacade.php</summary>
+**src/Pyz/Zed/ProductOfferStockDataImport/Business/ProductOfferStockDataImportFacade.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\ProductOfferStockDataImport\Business;
@@ -1495,14 +1325,9 @@ class ProductOfferStockDataImportFacade extends SprykerProductOfferStockDataImpo
             ->import($dataImporterConfigurationTransfer);
     }
 }
-
 ```
 
-</details>
-
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/ProductOfferStockDataImport/Business/ProductOfferStockDataImportFacadeInterface.php</summary>
+**src/Pyz/Zed/ProductOfferStockDataImport/Business/ProductOfferStockDataImportFacadeInterface.php**
 
 ```php
 <?php
@@ -1524,17 +1349,11 @@ interface ProductOfferStockDataImportFacadeInterface extends SprykerProductOffer
         ?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer
     ): DataImporterReportTransfer;
 }
-
 ```
 
-</details>
-
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/ProductOfferStockDataImport/Communication/Plugin/CombinedProductOfferStockDataImportPlugin.php</summary>
+**src/Pyz/Zed/ProductOfferStockDataImport/Communication/Plugin/CombinedProductOfferStockDataImportPlugin.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\ProductOfferStockDataImport\Communication\Plugin;
@@ -1570,17 +1389,12 @@ class CombinedProductOfferStockDataImportPlugin extends AbstractPlugin implement
         return $this->getFacade()->importCombinedProductOfferStock($dataImporterConfigurationTransfer);
     }
 }
-
 ```
 
-</details>
 
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/ProductOfferStockDataImport/ProductOfferStockDataImportConfig.php</summary>
+**src/Pyz/Zed/ProductOfferStockDataImport/ProductOfferStockDataImportConfig.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\ProductOfferStockDataImport;
@@ -1605,17 +1419,11 @@ class ProductOfferStockDataImportConfig extends SprykerProductOfferStockDataImpo
         );
     }
 }
-
 ```
 
-</details>
-
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/ProductOfferStockDataImport/ProductOfferStockDataImportDependencyProvider.php</summary>
+**src/Pyz/Zed/ProductOfferStockDataImport/ProductOfferStockDataImportDependencyProvider.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\ProductOfferStockDataImport;
@@ -1625,18 +1433,16 @@ use Spryker\Zed\ProductOfferStockDataImport\ProductOfferStockDataImportDependenc
 class ProductOfferStockDataImportDependencyProvider extends SprykerProductOfferStockDataImportDependencyProvider
 {
 }
-
 ```
 
-</details>
 
-#### Product Offer Validity
+#### Product offer validity
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/ProductOfferValidityDataImport/Business/Model/Condition/CombinedProductOfferValidityMandatoryColumnCondition.php</summary>
+Adjust the following files:
+
+**src/Pyz/Zed/ProductOfferValidityDataImport/Business/Model/Condition/CombinedProductOfferValidityMandatoryColumnCondition.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\ProductOfferValidityDataImport\Business\Model\Condition;
@@ -1657,17 +1463,11 @@ class CombinedProductOfferValidityMandatoryColumnCondition extends CombinedProdu
         ];
     }
 }
-
 ```
 
-</details>
-
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/ProductOfferValidityDataImport/Business/Model/DataSet/CombinedProductOfferValidityDataSetInterface.php</summary>
+**src/Pyz/Zed/ProductOfferValidityDataImport/Business/Model/DataSet/CombinedProductOfferValidityDataSetInterface.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\ProductOfferValidityDataImport\Business\Model\DataSet;
@@ -1678,17 +1478,11 @@ interface CombinedProductOfferValidityDataSetInterface
     public const VALID_FROM = 'product_offer_validity.valid_from';
     public const VALID_TO = 'product_offer_validity.valid_to';
 }
-
 ```
 
-</details>
-
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/ProductOfferValidityDataImport/Business/Model/Step/CombinedProductOfferReferenceToIdProductOfferStep.php</summary>
+**src/Pyz/Zed/ProductOfferValidityDataImport/Business/Model/Step/CombinedProductOfferReferenceToIdProductOfferStep.php**
 
 ```php
-
 <?php
 
 
@@ -1701,16 +1495,12 @@ class CombinedProductOfferReferenceToIdProductOfferStep extends ProductOfferRefe
 {
     protected const PRODUCT_OFFER_REFERENCE = CombinedProductOfferValidityDataSetInterface::PRODUCT_OFFER_REFERENCE;
 }
-
 ```
 
-</details>
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/ProductOfferValidityDataImport/Business/Model/Step/CombinedProductOfferValidityWriterStep.php</summary>
+**src/Pyz/Zed/ProductOfferValidityDataImport/Business/Model/Step/CombinedProductOfferValidityWriterStep.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\ProductOfferValidityDataImport\Business\Model\Step;
@@ -1725,13 +1515,10 @@ class CombinedProductOfferValidityWriterStep extends ProductOfferValidityWriterS
 }
 ```
 
-</details>
-
 <details>
 <summary markdown='span'>src/Pyz/Zed/ProductOfferValidityDataImport/Business/ProductOfferValidityDataImportBusinessFactory.php</summary>
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\ProductOfferValidityDataImport\Business;
@@ -1826,15 +1613,12 @@ class ProductOfferValidityDataImportBusinessFactory extends SprykerProductOfferV
     }
 }
 ```
-
 </details>
 
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/ProductOfferValidityDataImport/Business/ProductOfferValidityDataImportFacade.php</summary>
+**src/Pyz/Zed/ProductOfferValidityDataImport/Business/ProductOfferValidityDataImportFacade.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\ProductOfferValidityDataImport\Business;
@@ -1861,17 +1645,12 @@ class ProductOfferValidityDataImportFacade extends SprykerProductOfferValidityDa
             ->import($dataImporterConfigurationTransfer);
     }
 }
-
 ```
 
-</details>
 
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/ProductOfferValidityDataImport/Business/ProductOfferValidityDataImportFacadeInterface.php</summary>
+**src/Pyz/Zed/ProductOfferValidityDataImport/Business/ProductOfferValidityDataImportFacadeInterface.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\ProductOfferValidityDataImport\Business;
@@ -1891,17 +1670,12 @@ interface ProductOfferValidityDataImportFacadeInterface extends SprykerProductOf
         ?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer = null
     ): DataImporterReportTransfer;
 }
-
-
 ```
 
-</details>
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/ProductOfferValidityDataImport/Communication/Plugin/CombinedProductOfferValidityDataImportPlugin.php</summary>
+**src/Pyz/Zed/ProductOfferValidityDataImport/Communication/Plugin/CombinedProductOfferValidityDataImportPlugin.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\ProductOfferValidityDataImport\Communication\Plugin;
@@ -1937,17 +1711,11 @@ class CombinedProductOfferValidityDataImportPlugin extends AbstractPlugin implem
         return $this->getFacade()->importCombinedProductOfferValidity($dataImporterConfigurationTransfer);
     }
 }
-
 ```
 
-</details>
-
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/ProductOfferValidityDataImport/ProductOfferValidityDataImportConfig.php</summary>
+**src/Pyz/Zed/ProductOfferValidityDataImport/ProductOfferValidityDataImportConfig.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\ProductOfferValidityDataImport;
@@ -1972,17 +1740,11 @@ class ProductOfferValidityDataImportConfig extends SprykerProductOfferValidityDa
         );
     }
 }
-
 ```
 
-</details>
-
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/ProductOfferValidityDataImport/ProductOfferValidityDataImportDependencyProvider.php</summary>
+**src/Pyz/Zed/ProductOfferValidityDataImport/ProductOfferValidityDataImportDependencyProvider.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\ProductOfferValidityDataImport;
@@ -1992,21 +1754,18 @@ use Spryker\Zed\ProductOfferValidityDataImport\ProductOfferValidityDataImportDep
 class ProductOfferValidityDataImportDependencyProvider extends SprykerProductOfferValidityDataImportDependencyProvider
 {
 }
-
 ```
 
-</details>
 
 #### DataImport
 
-Update `DataImporterConditional::setDataSetCondition()` method to return `$this` instead of `void`.
+Update `DataImporterConditional::setDataSetCondition()` method to return `$this` instead of the  `void`.
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/DataImport/Business/Model/DataImporterConditional.php</summary>
+**src/Pyz/Zed/DataImport/Business/Model/DataImporterConditional.php**
 
 ```php
-
 <?php
+
 namespace Pyz\Zed\DataImport\Business\Model;
 use Pyz\Zed\DataImport\Business\Model\DataSet\DataSetConditionInterface;
 use Spryker\Zed\DataImport\Business\Model\DataImporter;
@@ -2033,16 +1792,13 @@ class DataImporterConditional extends DataImporter
 
 ```
 
-</details>
-
 ### 2) Import data
 
 To import data:
 
 1. Prepare combined product offer data according to your requirements using the demo data:
 
-<details>
-<summary markdown='span'>data/import/common/DE/combined_merchant_product_offer.csv</summary>
+**data/import/common/DE/combined_merchant_product_offer.csv**
 
 ```csv
 product_offer_reference,merchant_product_offer.concrete_sku,merchant_product_offer.merchant_reference,merchant_product_offer.merchant_sku,merchant_product_offer.is_active,merchant_product_offer.approval_status,merchant_product_offer_store.store_name,product_offer_stock.stock_name,product_offer_stock.quantity,product_offer_stock.is_never_out_of_stock,price_product_offer.price_type,price_product_offer.store,price_product_offer.currency,price_product_offer.value_net,price_product_offer.value_gross,price_product_offer.price_data.volume_prices,product_offer_validity.valid_from,product_offer_validity.valid_to
@@ -2055,11 +1811,8 @@ offer1001,090_24495844,MER000006,SE1001-01,1,approved,DE,Sony Experts MER000006 
 offer1001,,,,,,,,,,DEFAULT,DE,CHF,260,280,,,
 ```
 
-</details>
 
-
-<details>
-<summary markdown='span'>data/import/common/US/combined_merchant_product_offer.csv</summary>
+**data/import/common/US/combined_merchant_product_offer.csv**
 
 ```csv
 product_offer_reference,merchant_product_offer.concrete_sku,merchant_product_offer.merchant_reference,merchant_product_offer.merchant_sku,merchant_product_offer.is_active,merchant_product_offer.approval_status,merchant_product_offer_store.store_name,product_offer_stock.stock_name,product_offer_stock.quantity,product_offer_stock.is_never_out_of_stock,price_product_offer.price_type,price_product_offer.store,price_product_offer.currency,price_product_offer.value_net,price_product_offer.value_gross,price_product_offer.price_data.volume_prices,product_offer_validity.valid_from,product_offer_validity.valid_to
@@ -2072,12 +1825,10 @@ offer1001,090_24495844,MER000006,SE1001-01,1,approved,DE,Sony Experts MER000006 
 offer1001,,,,,,,,,,DEFAULT,DE,CHF,260,280,,,
 ```
 
-</details>
 
-2. Create combined data importer configuration
+2. Create combined data importer configuration.
 
-<details>
-<summary markdown='span'>data/import/common/combined_merchant_product_offer_import_config_EU.yml</summary>
+**data/import/common/combined_merchant_product_offer_import_config_EU.yml**
 
 ```csv
 # Example of demo shop 'combined merchant product offer' data import.
@@ -2096,10 +1847,8 @@ actions:
       source: data/import/common/DE/combined_merchant_product_offer.csv
 ```
 
-</details>
 
-<details>
-<summary markdown='span'>data/import/common/combined_merchant_product_offer_import_config_US.yml</summary>
+**data/import/common/combined_merchant_product_offer_import_config_US.yml**
 
 ```csv
 # Example of demo shop 'combined merchant product offer' data import.
@@ -2118,7 +1867,6 @@ actions:
       source: data/import/common/US/combined_merchant_product_offer.csv
 ```
 
-</details>
 
 3. Register the following plugins to enable data import:
 
@@ -2130,11 +1878,9 @@ actions:
 | CombinedProductOfferValidityDataImportPlugin | Imports merchant profile address data into the database. |   | Pyz\Zed\ProductOfferStockDataImport\Communication |
 | CombinedProductOfferStockDataImportPlugin | Imports merchant profile address data into the database. |   | Pyz\Zed\ProductOfferValidityDataImport\Communication\Plugin |
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
+**src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Zed\DataImport;
@@ -2163,12 +1909,11 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-</details>
 
 4. Import data:
 
 Run the following command (do not forget to replace {store} param with the store name)
- 
+
 ```bash
 console data:import --config data/import/common/combined_merchant_product_offer_import_config_{store}.yml
 ```
@@ -2176,9 +1921,9 @@ console data:import --config data/import/common/combined_merchant_product_offer_
 {% info_block warningBox "Verification" %}
 
 Make sure that:
-1. New Product offer is created at spy_product_offer table.
-2. New Product offer price is created at spy_price_product_offer table.
-3. New Product offer stock is created at spy_product_offer_stock table.
-4. New Product offer validity is created at spy_product_offer_validity table.
+1. New Product offer is created in the `spy_product_offer` table.
+2. New Product offer price is created in the `spy_price_product_offer` table.
+3. New Product offer stock is created in the `spy_product_offer_stock` table.
+4. New Product offer validity is created in the `spy_product_offer_validity` table.
 
 {% endinfo_block %}

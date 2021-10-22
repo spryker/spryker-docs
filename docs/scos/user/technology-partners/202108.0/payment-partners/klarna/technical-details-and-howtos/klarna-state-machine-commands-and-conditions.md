@@ -59,7 +59,7 @@ related:
 
 ## Conditions
 
-| Name | Description | Plugin |
+| NAME| DESCRIPTION | PLUGIN |
 | --- | --- | --- |
 | `IsOrderStatusApproved` | Checks if order payment status is pending accepted | `IsOrderStatusApprovedPlugin` |
 | `IfHasCapture` | Checks if the capture response is successful | `IfHasCapturePlugin` |

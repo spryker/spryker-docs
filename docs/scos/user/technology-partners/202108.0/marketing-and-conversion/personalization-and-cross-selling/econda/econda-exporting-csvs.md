@@ -20,7 +20,7 @@ related:
     link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/personalization-and-cross-selling/econda/econda-cross-sell.html
 ---
 
-To implement Econda plugin you should be familiar with the concept of [extending Spryker](/docs/scos/dev/back-end-development/extending-spryker/extending-a-core-module-that-is-used-by-another.html) and [plugins.](/docs/scos/dev/back-end-development/plugins/plugins.html)
+To implement Econda plugin you should be familiar with the concept of [extending Spryker](/docs/scos/dev/back-end-development/extending-spryker/extending-a-core-module-that-is-used-by-another.html) and [plugins](/docs/scos/dev/back-end-development/plugins/plugins.html).
 
 ## Zed Output Folder
 
@@ -55,6 +55,7 @@ use SprykerEco\Zed\Econda\Communication\Console\EcondaFileExportConsole;
  ```
 
 ## Queries
+
 In order to export data to CSV we need to define the queries that will be executed against database.
 
 To register the query in the Econda module, extend the `AbstractPdoEcondaQuery` in your project.
@@ -217,9 +218,11 @@ class EcondaConfig extends SprykerEcondaConfig
 ```
 
 ## How is my query mapped to CSV output ?
+
 If you need to modify the CSV column mapping for any reason you will have to extend the `EcondaProductCollector` and `EcondaCategoryCollector` from the Econda module and implement your own `collectData` and `collectItem` methods.
 
 ## Console
+
 To export the products and categories,  we must register the Collectors we have just created in the Console.  The Econda module already has everything in place and the only thing you need to do is add `EcondaFileExportConsole` to `Pyz\Zed\Console\ConsoleDependencyProvider` as bellow:
 
 ```php
@@ -244,10 +247,12 @@ public function getConsoleCommands(Container $container)
 ```
 
 ## Checking Your Setup
+
  If all the steps are  followed correctly, you should be able to see the` econda:file:export` command in Econda section when you run `vendor/bin/console` from the project's root folder.
 Running `vendor/bin/console econda:file:export` will create several CSV files in the folder you have specified in `$config[EcondaConstants::ECONDA_CSV_FOLDER_PATH]`.
 
 ## Exporting Data to Econda
+
 Econda supports [several ways to export data](https://support.econda.de/display/CSDE/Produktdatenimport). With the Econda module you can expose your ZED URL `/econda/index/category and /econda/index/product` by adding Econda as ignorable to your `AuthConfig`.
 
 ```php
@@ -290,7 +295,9 @@ $config[AclConstants::ACL_DEFAULT_RULES] = [
 
 ```
 {% info_block errorBox "Warning" %}
+
 ZED should never be accessible from public network. You should make a firewall exception to allow econda to connect to your ZED.
+
 {% endinfo_block %}
 
 ## Testing your Setup
@@ -332,5 +339,6 @@ Tracking
 ```
 
 ### Multi-Language support
+
 If you have multi-language setup, you should provide locale as GET parameter to retrieve the proper version of a CSV file: `curl  http://mysprykershop.com/econda/index/product?locale=en_US`
 You can check `stores.php` file in your project to see what locales you have enabled.

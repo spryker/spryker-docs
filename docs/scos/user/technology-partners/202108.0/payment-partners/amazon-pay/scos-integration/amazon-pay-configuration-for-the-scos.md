@@ -27,7 +27,9 @@ There is currently an issue when using giftcards with Amazon Pay. Our team is de
 {% endinfo_block %}
 
 {% info_block infoBox "Note" %}
+
 Please refer to `config/Shared/config.dist.php` for the module configuration example.
+
 {% endinfo_block %}
 
 
@@ -66,7 +68,6 @@ $config[AmazonPayConstants::SANDBOX] = true;
 The `ERROR_REPORT_LEVEL` parameter is used for internal purposes and specifies the log verbosity level.
 
 There are three options:
-
 1. Log all API responses.
 2. Log errors only.
 3. Disable logging.

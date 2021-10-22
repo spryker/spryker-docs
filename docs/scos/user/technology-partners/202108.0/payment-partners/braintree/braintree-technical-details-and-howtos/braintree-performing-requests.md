@@ -20,9 +20,7 @@ related:
 
 In order to perform the necessary requests in the project based on Spryker Commerce OS or SCOS, you can easily use the implemented state machine commands and conditions. The next section gives a summary of them. You can also use the facade methods directly which, however, are invoked by the state machine.
 
-## Braintree State Machine Commands and Conditions
-
-### Commands
+## Braintree State Machine Commands
 
 <b>Authorize</b>
 
@@ -54,9 +52,9 @@ In order to perform the necessary requests in the project based on Spryker Comme
   - Declined: Previous capture to far in the past, request format error, or internal
 * Plugin: `RefundPlugin`
 
-### Conditions
+## Braintree State Machine Conditions
 
-|Name  |Description  |Plugin  |
+| NAME  | DESCRIPTION  | PLUGIN  |
 | --- | --- | --- |
 |  `IsAuthorizationApproved` | Checks transaction status log for successful authorization response |  `IsAuthorizationApprovedPlugin` |
 |  `IsReversalApproved` | Checks transaction status log for successful reversal response |  `IsReversalApprovedPlugin` |
@@ -65,7 +63,7 @@ In order to perform the necessary requests in the project based on Spryker Comme
 
 ## Braintree Facade
 
-|Facade Method  | Parameter | Return | Description |
+| FACADE METHOD | PARAMETER | RETURN | DESCRIPTION |
 | --- | --- | --- | --- |
 |  `saveOrderPayment` | `QuoteTransfer``CheckoutResponseTransfer` | void | Saves order payment method data according to quote and checkout response transfer data. |
 |  `preCheckPayment` |  `QuoteTransfer` |  `BraintreeTransactionResponseTransfer` | Sends pre-authorize payment request to Braintree gateway to retrieve transaction data. Checks that form data matches transaction response data. |

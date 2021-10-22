@@ -29,9 +29,10 @@ As addresses differ by country, the delivery method selection must be implemente
 Amazon provides two widgets for choosing shipment and payment information, they can be placed together on the same page or separately.
 
 The code for both widgets is:
+
 ```html
 <!-- Place this code in your HTML where you would like the address widget to appear. -->
-<div id="addressBookWidgetDiv"> </div> 
+<div id="addressBookWidgetDiv"> </div>
 
 <!-- Place this code in your HTML where you would like the wallet widget to appear. -->
 <div id="walletWidgetDiv"> </div>
@@ -48,23 +49,23 @@ window.onAmazonPaymentsReady = function() {
 		},
 		onAddressSelect: function(orderReference) {
 		  // Replace the following code with the action that you want
-		  // to perform after the address is selected. The 
-		  // amazonOrderReferenceId can be used to retrieve the address 
-		  // details by calling the GetOrderReferenceDetails operation. 
+		  // to perform after the address is selected. The
+		  // amazonOrderReferenceId can be used to retrieve the address
+		  // details by calling the GetOrderReferenceDetails operation.
 
 		  // If rendering the AddressBook and Wallet widgets
 		  // on the same page, you do not have to provide any additional
 		  // logic to load the Wallet widget after the AddressBook widget.
-		  // The Wallet widget will re-render itself on all subsequent 
-		  // onAddressSelect events, without any action from you. 
+		  // The Wallet widget will re-render itself on all subsequent
+		  // onAddressSelect events, without any action from you.
 		  // It is not recommended that you explicitly refresh it.
 		},
 		design: {
 		  designMode: 'responsive'
 		},
 		onReady: function(orderReference) {
-		  // Enter code here you want to be executed 
-		  // when the address widget has been rendered. 
+		  // Enter code here you want to be executed
+		  // when the address widget has been rendered.
 		},
 		onError: function(error) {
 		  // Your error handling code.
@@ -98,10 +99,11 @@ window.onAmazonPaymentsReady = function() {
 };
 </script>
 
-<script async="async" 
+<script async="async"
 	src='https://static-eu.payments-amazon.com/OffAmazonPayments/gbp/sandbox/lpa/js/Widgets.js'>
 </script>
 ```
+
 Both widgets are similar to the pay button widget that we described earlier.
 
 All necessary credentials have to be specified the same way and in order to retrieve the selected information, Amazon provides JavaScript callbacks.

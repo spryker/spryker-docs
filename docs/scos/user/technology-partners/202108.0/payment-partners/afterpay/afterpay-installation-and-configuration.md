@@ -38,7 +38,6 @@ The `API_ENDPOINT_BASE_URL` parameter should be a link: you should get it from A
 You should also get `API_CREDENTIALS_AUTH_KEY` and `PAYMENT_INVOICE_CHANNEL_ID` from your AfterPay account.
 
 You can use different Checkout Services; to select one, set up `$config[AfterPayConstants::AFTERPAY_AUTHORIZE_WORKFLOW]`:
-
 * One-Step Authorization → `AFTERPAY_AUTHORIZE_WORKFLOW_ONE_STEP`
 * Two-Step Authorization → `AFTERPAY_AUTHORIZE_WORKFLOW_TWO_STEPS`
 
@@ -220,4 +219,3 @@ $container->extend(self::CONDITION_PLUGINS, function (ConditionCollectionInterfa
  return $conditionCollection;
 });
 ```
-

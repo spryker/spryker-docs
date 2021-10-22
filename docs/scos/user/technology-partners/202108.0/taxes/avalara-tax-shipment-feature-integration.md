@@ -30,7 +30,7 @@ Follow the steps below to install the feature core.
 To start the feature integration, overview and install the necessary features:
 
 
-| Name | Version | Integration guide |
+| NAME | VERSION | Integration guide |
 | Shipment | master | [Shipment feature integration guide](/docs/scos/dev/feature-integration-guides/{{page.version}}/shipment-feature-integration.html) |
 | Avalara Tax | master | [Avalara Tax integration](/docs/scos/user/technology-partners/{{page.version}}/taxes/avalara-tax-integration.html) |
 
@@ -47,7 +47,7 @@ composer require spryker-eco/avalara-tax-shipment:"^0.1.0" --update-with-depende
 
 Make sure that the following modules have been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 |---|---|
 | AvalaraTaxShipment |vendor/spryker-eco/avalara-tax-shipment|
 
@@ -65,7 +65,7 @@ console transfer:generate
 
 Make sure that the following changes have been applied by checking your database:
 
-| Database Entity | Type | Event |
+| DATABASE ENTITY | TYPE | EVENT |
 |---|---|---|
 | spy_shipment_method.avalara_tax_code | column | created |
 
@@ -75,7 +75,7 @@ Make sure that the following changes have been applied by checking your databa
 1.  Activate the following plugins:
 
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | AvalaraShipmentCreateTransactionRequestExpanderPlugin | Expands `AvalaraCreateTransactionRequestTransfer` with shipments. | None | SprykerEco\Zed\AvalaraTaxShipment\Communication\Plugin\AvalaraTax |
 |AvalaraShipmentCreateTransactionRequestAfterPlugin | Calculates taxes for shipment methods based on `AvalaraCreateTransactionResponseTransfer`. | None | SprykerEco\Zed\AvalaraTaxShipment\Communication\Plugin\AvalaraTax |

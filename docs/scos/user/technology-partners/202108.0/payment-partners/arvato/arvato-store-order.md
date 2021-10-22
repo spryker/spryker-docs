@@ -23,7 +23,7 @@ All the operations over the communication token are processed by project.
 
 <b>Data, which is sent to Arvato RSS and must be present in quote:</b>
 
-|Name  | Description |
+| NAME | DESCRIPTION |
 | --- | --- |
 | `RegisteredOrder` | Shows if order is placed with registered customer or not. |
 | `OrderNumber` | OrderReference is set here. |
@@ -37,6 +37,4 @@ All the operations over the communication token are processed by project.
 | `UnitPrice` | Value of units incl. VAT. |
 | `UnitCount` | Quantity of units (maximum value 99999999). |
 
-You can check the result codes, returned by Arvato in the attachment.
-
-@(Embed)(https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Arvato/arvato-rss-result-codes.xlsx)
+You can check the result codes, returned by Arvato in the [attachment](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Arvato/arvato-rss-result-codes.xlsx).

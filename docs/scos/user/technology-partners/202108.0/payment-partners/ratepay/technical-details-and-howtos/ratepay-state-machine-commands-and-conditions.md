@@ -64,7 +64,7 @@ related:
 
 ## Conditions
 
-| Name | Description | Plugin |
+| NAME| DESCRIPTION | PLUGIN |
 | --- | --- | --- |
 | `IsRefunded` | Checks transaction status for successful order items refund response | `IsRefundedPlugin` |
 | `IsPaymentConfirmed` | Checks transaction status for successful order items payment response | `IsPaymentConfirmedPlugin` |

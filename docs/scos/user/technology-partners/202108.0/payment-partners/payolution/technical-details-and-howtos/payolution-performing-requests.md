@@ -74,7 +74,7 @@ To perform the needed requests, you can easily use the implemented state machine
 
 ## Conditions
 
-| Name | Description | Plugin |
+| NAME| DESCRIPTION | PLUGIN |
 | --- | --- | --- |
 | `IsPreAuthorizationApproved` | Checks transaction status log for successful pre-authorization response | `IsPreAuthorizationApprovedPlugin` |
 | `IsReAuthorizationApproved` | Checks transaction status log for successful re-authorization response | `IsReAuthorizationApprovedPlugin` |

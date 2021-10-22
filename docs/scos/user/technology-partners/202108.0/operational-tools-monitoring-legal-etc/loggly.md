@@ -19,6 +19,7 @@ The [Loggly](https://github.com/spryker-eco/loggly) module provides a plugin to 
 To start using Loggly, you need to do some configuration, as described below.
 
 ## 1. Adjusting the config_default.php file
+
 First of all, add necessary data to the *config_default.php* file:
 
 ```php
@@ -102,7 +103,7 @@ class QueueConfig extends SprykerQueueConfig
 
         return $queueOptionTransfer;
     }
-    
+
     // ...
 }
 ```
@@ -138,11 +139,9 @@ class QueueDependencyProvider extends SprykerDependencyProvider
             Config::get(LogglyConstants::QUEUE_NAME) => new LogglyLoggerQueueMessageProcessorPlugin(),
         ];
     }
-    
+
     // ...
 }
 ```
 
 For further information on this partner and integration into Spryker, please [contact us](https://spryker.force.com/support/s/).
-
-

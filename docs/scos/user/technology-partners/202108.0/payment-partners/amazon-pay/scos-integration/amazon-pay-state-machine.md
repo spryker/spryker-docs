@@ -23,16 +23,18 @@ related:
 The state machine is different for synchronous and asynchronous flow. Although from status "capture completed" it is the same and in the state machine, it's presented as a sub-process.
 
 The state machine for the synchronous flow:
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Amazon+Pay/sync.png) 
+
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Amazon+Pay/sync.png)
 
 The state machine for the asynchronous flow:
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Amazon+Pay/async.png) 
+
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Amazon+Pay/async.png)
 
 ## OMS Commands
 
 Here is a list of commands and conditions to support processing of OMS:
-<details open>
- <summary markdown='span'>Click here for example of injection</summary>
+<details>
+<summary markdown='span'>Click here for example of injection</summary>
 
  ```php
  <script>

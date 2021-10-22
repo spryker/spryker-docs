@@ -45,7 +45,7 @@ $config[OmsConstants::ACTIVE_PROCESSES] = [
 ```
 4. Create Merchant state machines (To learn more about state machine creation, see [Tutorial - OMS and State Machines](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1018855468/Tutorial+-+OMS+and+State+Machines+-+Spryker+Commerce+OS+-review))
 
-`MainMerchantStateMachine.xml`
+`config/Zed/StateMachine/Merchant/MainMerchantStateMachine.xmlM`
 ```xml
 <?xml version="1.0"?>
 <statemachine
@@ -57,55 +57,14 @@ $config[OmsConstants::ACTIVE_PROCESSES] = [
     <process name="MainMerchantStateMachine" main="true">
 
         <states>
-            <state name="created"/>
             <state name="new"/>
-            <state name="canceled"/>
-            <state name="left the merchant location"/>
-            <state name="arrived at distribution center"/>
             <state name="shipped"/>
             <state name="delivered"/>
-            <state name="closed"/>
         </states>
 
         <transitions>
             <transition happy="true">
-                <source>created</source>
-                <target>new</target>
-                <event>initiate</event>
-            </transition>
-
-            <transition>
                 <source>new</source>
-                <target>closed</target>
-                <event>close</event>
-            </transition>
-
-            <transition>
-                <source>new</source>
-                <target>canceled</target>
-                <event>cancel</event>
-            </transition>
-
-            <transition>
-                <source>canceled</source>
-                <target>closed</target>
-                <event>close</event>
-            </transition>
-
-            <transition happy="true">
-                <source>new</source>
-                <target>left the merchant location</target>
-                <event>send to distribution</event>
-            </transition>
-
-            <transition happy="true">
-                <source>left the merchant location</source>
-                <target>arrived at distribution center</target>
-                <event>confirm at center</event>
-            </transition>
-
-            <transition happy="true">
-                <source>arrived at distribution center</source>
                 <target>shipped</target>
                 <event>ship</event>
             </transition>
@@ -116,136 +75,13 @@ $config[OmsConstants::ACTIVE_PROCESSES] = [
                 <event>deliver</event>
             </transition>
 
-            <transition happy="true">
-                <source>delivered</source>
-                <target>closed</target>
-                <event>close</event>
-            </transition>
         </transitions>
 
         <events>
-            <event name="initiate" onEnter="true"/>
-            <event name="send to distribution" manual="true"/>
-            <event name="confirm at center" manual="true"/>
-            <event name="ship" manual="true" command="MarketplaceOrder/ShipOrderItem"/>
-            <event name="deliver" manual="true" command="MarketplaceOrder/DeliverOrderItem"/>
-            <event name="close"/>
-            <event name="cancel" manual="true" command="MarketplaceOrder/CancelOrderItem"/>
-        </events>
-
-        <subprocesses>
-            <process>MerchantReturn</process>
-            <process>MerchantRefund</process>
-        </subprocesses>
-
-    </process>
-
-    <process name="MerchantReturn" file="Subprocess/MerchantReturn"/>
-    <process name="MerchantRefund" file="Subprocess/MerchantRefund"/>
-
-</statemachine>
-
-```
-5. And subprocesses:
-MerchantRefund.xml
-```xml
-<?xml version="1.0"?>
-<statemachine
-    xmlns="spryker:oms-01"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd"
->
-
-    <process name="MerchantRefund">
-        <states>
-            <state name="refunded"/>
-        </states>
-
-        <transitions>
-            <transition>
-                <source>delivered</source>
-                <target>refunded</target>
-                <event>refund</event>
-            </transition>
-
-            <transition>
-                <source>returned</source>
-                <target>refunded</target>
-                <event>refund</event>
-            </transition>
-        </transitions>
-
-        <events>
-            <event name="refund" manual="true" command="MarketplaceOrder/Refund"/>
+            <event name="deliver" manual="true"/>
+            <event name="ship" manual="true"/>  
         </events>
     </process>
-
-</statemachine>
-```
-MerchantReturn.xml
-```xml
-<?xml version="1.0"?>
-<statemachine
-    xmlns="spryker:oms-01"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd"
->
-
-    <process name="MerchantReturn">
-        <states>
-            <state name="waiting for return"/>
-            <state name="returned"/>
-            <state name="return canceled"/>
-            <state name="shipped to customer"/>
-        </states>
-
-        <transitions>
-            <transition>
-                <source>shipped</source>
-                <target>waiting for return</target>
-                <event>start-return</event>
-            </transition>
-
-            <transition>
-                <source>delivered</source>
-                <target>waiting for return</target>
-                <event>start-return</event>
-            </transition>
-
-            <transition>
-                <source>waiting for return</source>
-                <target>returned</target>
-                <event>execute-return</event>
-            </transition>
-
-            <transition>
-                <source>waiting for return</source>
-                <target>return canceled</target>
-                <event>cancel-return</event>
-            </transition>
-
-            <transition>
-                <source>return canceled</source>
-                <target>shipped to customer</target>
-                <event>ship-return</event>
-            </transition>
-
-            <transition>
-                <source>shipped to customer</source>
-                <target>delivered</target>
-                <event>deliver-return</event>
-            </transition>
-        </transitions>
-
-        <events>
-            <event name="start-return"/>
-            <event name="execute-return" command="MarketplaceReturn/ExecuteReturnForOrderItem" manual="true"/>
-            <event name="cancel-return" command="MarketplaceReturn/CancelReturnForOrderItem" manual="true"/>
-            <event name="ship-return" command="MarketplaceReturn/ShipReturnForOrderItem" manual="true"/>
-            <event name="deliver-return" command="MarketplaceReturn/DeliverReturnForOrderItem" manual="true"/>
-        </events>
-    </process>
-
 </statemachine>
 ```
 

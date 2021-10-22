@@ -4,13 +4,19 @@ description: The Marketplace Order Management feature allows Marketplace custome
 template: feature-walkthrough-template
 ---
 
-<!--- Feature summary. Short and precise explanation of what the feature brings in terms of functionality.
--->
+ 
 
-With the *Marketplace Order Management* feature, default orders that contain additional information about the merchants are called Marketplace orders.
-Every Order is linked with Merchant Order and Merchant so that an Order can consist of different Merchant Orders, every Merchant Order belongs to one merchant only.
+*Marketplace Order Management* enables splitting Orders into Merchant Orders and allows Product Offers to be bought from a store front app.
+Plain Orders are desgined to be used by the Marketplace operator, while Merchant Orders are always connected to a Merchant.
 
-Every merchant can view and manage only the orders that are related to their items only.
+{% info_block warningBox “Warning” %}
+
+Don't built Merchant functionality around Order, rather you should build it around Merchant Orders.
+Never let Merchants modify Order directly. 
+ 
+{% endinfo_block %}
+ 
+A Merchant can view and manage the order items that are related to their Merchant Order only.
 
 The information in merchant portal is limited and includes^
 - customer
@@ -29,7 +35,7 @@ Merchant Order uses its own Totals, based on Order Totals, restricted with Merch
 
 *Merchant Order total* is the sum of the totals making up the merchant order. The *Merchant Order total* is in one to one relation to the *Merchant Order*. The *Merchant Order total* is in many to one relation to the *Marketplace/Sales Order total*. The sum of all the merchant order totals and Marketplace-assigned expenses equals the *Marketplace order total*. *Merchant Order total* is calculated by the Calculation module when Merchant Order collection is created.
 
-<!--- Feel free to drop the following part if the User doc is not yet published-->
+ 
 {% info_block warningBox "User documentation" %}
 
 Merchant Order is created by Merchant State Machine in MerchantStateMachineHandlerPlugin, it requires StateMachineItem and MerchantOrderItem

@@ -485,7 +485,7 @@ This step publishes tables on change (create, edit) to `spy_merchant_search` and
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
 ```php
-   <?php
+<?php
 
 namespace Pyz\Zed\Publisher;
 

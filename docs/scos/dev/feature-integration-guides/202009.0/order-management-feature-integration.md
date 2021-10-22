@@ -9,7 +9,7 @@ redirect_from:
 related:
   - title: Comments + Order Management feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/comments-order-management-feature-integration.html
-  - title: Glue API- Order Management feature integration
+  - title: Glue API - Order Management feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-order-management-feature-integration.html
   - title: Company Account + Order Management feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/company-account-order-management-feature-integration.html

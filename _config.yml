@@ -171,6 +171,10 @@ versioned_categories:
       - glue-api-guides
       - technology-partner-integration-guides
       - the-docker-sdk
+      - migration-and-integration
+      - legacy-demoshop
+      - sdk
+      - technology-partner-guides
 
 # these are defaults used for the frontmatter for these file types
 

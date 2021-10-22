@@ -9,7 +9,7 @@ redirect_from:
   - /docs/managing-shopping-lists
   - /docs/en/managing-shopping-lists
 related:
-  - title: Glue API- Shopping Lists feature integration
+  - title: Glue API - Shopping Lists feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-shopping-lists-feature-integration.html
   - title: Managing shopping list items
     link: docs/scos/dev/glue-api-guides/page.version/managing-shopping-lists/managing-shopping-list-items.html

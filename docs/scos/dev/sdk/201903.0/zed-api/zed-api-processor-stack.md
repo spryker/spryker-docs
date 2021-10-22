@@ -1,16 +1,16 @@
 ---
 title: Processor Stack - Zed API
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v3/docs/zed-api-processor-stack
-originalArticleId: 23ec236c-1f30-4b8d-801e-93fb44435655
+originalLink: https://documentation.spryker.com/v2/docs/zed-api-processor-stack
+originalArticleId: 497b96b6-78d3-482a-9027-1924375f51c9
 redirect_from:
-  - /v3/docs/zed-api-processor-stack
-  - /v3/docs/en/zed-api-processor-stack
+  - /v2/docs/zed-api-processor-stack
+  - /v2/docs/en/zed-api-processor-stack
 ---
 
 ## Request and Pre Processing
 
-We now need to decide further on the URL format. Should this be extension driven, which is easier to browse, or HTTP header driven, for example? What kind of URL query string transformation do we need, what kind of header parsing is required?
+We now need to decide further on the URL format. Should this be extension driven, which is easier to browse, or HTTP header driven, for example? What kind of URL query string transformation do we need, what kind of header parsing REQUIRED?
 
 In order to keep this flexible for our customers, we provide a basic pre and post stack for prcessing the incoming request and the outgoing response.
 

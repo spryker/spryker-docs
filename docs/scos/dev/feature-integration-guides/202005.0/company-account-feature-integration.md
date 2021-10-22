@@ -8,7 +8,7 @@ redirect_from:
   - /v5/docs/company-account-integration
   - /v5/docs/en/company-account-integration
 related:
-  - title: Glue API- Company Account feature integration
+  - title: Glue API - Company Account feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-company-account-feature-integration.html
   - title: Company Account + Order Management feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/company-account-order-management-feature-integration.html
@@ -246,7 +246,7 @@ DE--7,BoB-Hotel-Kudamm,business-unit-kudamm-1,0
 DE--7,spryker_systems,spryker_systems_HQ,0
 ```
 
-| Column | IS REQUIRED? | Data Type | Data Example | Data Explanation |
+| Column | REQUIRED? | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
 | `customer_reference` | mandatory | string | DE--6 | The key that will identify the Customer to add data to. |
 | `company_key` | mandatory | string | BoB-Hotel-Mitte | The key that will identify the Company to add data to. |

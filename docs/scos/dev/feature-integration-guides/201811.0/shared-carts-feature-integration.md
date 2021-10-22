@@ -83,7 +83,7 @@ Register the following plugins:
 
 | Plugin |Specification|Prerequisites|Namespace |
 | --- | --- |--- |--- |
-|`SharedCartPermissionInstallerPlugin`  |Installs the registered infrastructural quote permissions. |None|`Spryker\Zed\SharedCart\Communication\Plugin`| 
+|`SharedCartPermissionInstallerPlugin`  |Installs the registered infrastructural quote permissions. |None|`Spryker\Zed\SharedCart\Communication\Plugin`|
 | `ReadSharedCartPermissionPlugin` | Quote permission to check read shared cart permissions in client layer. |None |`Spryker\Client\SharedCart\Plugin`|
 |`WriteSharedCartPermissionPlugin`| Quote permission to check write shared cart permissions in client layer. |None |`Spryker\Client\SharedCart\Plugin`|
 |`ReadSharedCartPermissionPlugin`| Quote permission to check read shared cart permissions in zed layer. |None |`Spryker\Zed\SharedCart\Communication\Plugin`|
@@ -91,7 +91,7 @@ Register the following plugins:
 
 <details open>
 <summary markdown='span'>src/Pyz/Zed/Installer/InstallerDependencyProvider.php</summary>
-    
+
 ```php
 <?php
 
@@ -208,7 +208,7 @@ quote-23,Spryker--5,READ_ONLY
 <br>
 </details>
 
-| Column |IS REQUIRED? | Data Type |Data Example  |Data explanation  |
+| Column |REQUIRED? | Data Type |Data Example  |Data explanation  |
 | --- | --- | --- | --- | --- |
 | `quote_key` |mandatory |  string|quote-22  | Key that will identify the quote to add data to. |
 | `company_user_key` | mandatory |  string| Spryker--1|Key that will identify the company user that the quote is shared with.  |
@@ -260,13 +260,13 @@ This feature requires database storage strategy enabled in the quote module.
 Register the following plugins:
 
 | Plugin |Specification  |Prerequisites  | Namespace |  
-| --- | --- | --- | --- | 
+| --- | --- | --- | --- |
 |`CleanQuoteShareBeforeQuoteCreatePlugin`| Cleans up the cart shared details before the quote has been created. | None | `Spryker\Zed\SharedCart\Communication\Plugin` |  
 |`DeactivateSharedQuotesBeforeQuoteSavePlugin `| Deactivates all shared carts for the current customer if the current cart in marked as active before the cart has been created or updated. |None |  `Spryker\Zed\SharedCart\Communication\Plugin`|  
 |`MarkAsDefaultQuoteAfterSavePlugin` | Updates the is active flag for the current shared cart based the active flag for the sharing relation.<br> It is executed after the cart has been created or updated. | None | `Spryker\Zed\SharedCart\Communication\Plugin` |  
 | `RemoveSharedQuoteBeforeQuoteDeletePlugin` | Removes the sharing relation for the current cart before the cart has been removed. | None |`Spryker\Zed\SharedCart\Communication\Plugin `|  
 | `UpdateShareDetailsQuoteAfterSavePlugin`| Updates the cart sharing relations after the cart has been created or updated. |None  |`Spryker\Zed\SharedCart\Communication\Plugin `|  
-| `SharedQuoteSetDefaultBeforeQuoteSavePlugin `| Marks the cart sharing relation for the current customer as active if the quote has been marked as active. |None  |`Spryker\Zed\SharedCart\Communication\Plugin` | 
+| `SharedQuoteSetDefaultBeforeQuoteSavePlugin `| Marks the cart sharing relation for the current customer as active if the quote has been marked as active. |None  |`Spryker\Zed\SharedCart\Communication\Plugin` |
 
 {% info_block infoBox "Info" %}
 All shared cart plugins must be added after multicart plugins have been registered.

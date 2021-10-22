@@ -8,7 +8,7 @@ redirect_from:
   - /v6/docs/resolving-search-engine-friendly-urls
   - /v6/docs/en/resolving-search-engine-friendly-urls
 related:
-  - title: Glue API- Spryker Core feature integration
+  - title: Glue API - Spryker Core feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-spryker-core-feature-integration.html
 ---
 

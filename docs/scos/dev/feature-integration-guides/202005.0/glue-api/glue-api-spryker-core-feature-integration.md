@@ -1,5 +1,5 @@
 ---
-title: Glue API- Spryker Core feature integration
+title: Glue API - Spryker Core feature integration
 description: Use the guide to install the Spryker Core feature in your project.
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/glue-api-spryker-core-feature-integration

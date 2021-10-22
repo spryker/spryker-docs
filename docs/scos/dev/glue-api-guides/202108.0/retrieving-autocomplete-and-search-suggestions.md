@@ -20,7 +20,7 @@ In your development, this resource can help you to enhance the customer experien
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Catalog feature integration](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-api/glue-api-catalog-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Catalog feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-catalog-feature-integration.html).
 
 ## Retrieve a search suggestion
 
@@ -40,11 +40,11 @@ To retrieve a search suggestion, send the request:
 | --- | --- |
 | `GET https://glue.mysprykershop.com/catalog-search-suggestions` | Retrieve suggestions for an empty search string. |
 | `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=` | Retrieve suggestions for an empty search string |
-| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**c**` | Retreive suggestions for one letter. |
-| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**co**` | Retreive suggestions for two letters. |
-| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**com**` | Retreive suggestions for three letters |
-| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**computer**` | Retreive suggestions for the word `computer`. |
-| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**telecom+%26+navigation**` | Retreive suggestions for the phrase `telecom&navigation`. |
+| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**c**` | Retrieve suggestions for one letter. |
+| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**co**` | Retrieve suggestions for two letters. |
+| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**com**` | Retrieve suggestions for three letters |
+| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**computer**` | Retrieve suggestions for the word `computer`. |
+| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**telecom+%26+navigation**` | Retrieve suggestions for the phrase `telecom&navigation`. |
 
 ### Response
 

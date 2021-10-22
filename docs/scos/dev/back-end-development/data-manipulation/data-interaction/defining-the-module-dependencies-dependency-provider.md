@@ -33,8 +33,8 @@ Each module ships with a `DependencyProvider` class which explicitly defines ser
 As you can see in the example, these required classes are wrapped into a closure to enable lazy loading. Inside of the closure you get a `$container` variable which gives you access to a so-called [service locator](https://en.wikipedia.org/wiki/Service_locator_pattern) to retrieve the required classes like this: `$container->getLocator()->glossary()->facade()`.
 
 {% info_block warningBox %}
-You can use any module name instead of `->glossary(
-{% endinfo_block %}`. The structure is always the same, so you can copy and adapt it for your use case.)
+You can use any module name instead of `->glossary()`. The structure is always the same, so you can copy and adapt it for your use case.
+{% endinfo_block %}
 
 ```php
 <?php

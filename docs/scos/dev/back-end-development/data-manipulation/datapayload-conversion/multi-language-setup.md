@@ -198,6 +198,7 @@ The XML file structure for loading static pages is similar to the one for import
 ```
 
 **Localized URLs**
+
 The `spy_url` table stores the URLs that correspond to:
 
 * Category pages

@@ -393,7 +393,7 @@ class IndexController extends AbstractController
 Ensure that the event has been created:
 1. Open the RabbitMQ management GUI at `http(s)://{host_name}:15672/#/queues`
 2. You should see an event in the `publish.hello_world` queue:
-![rabbitmq-event](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Publishing/Handling+data+with+Publish+and+Synchronization/rabbitmq-event.png) 
+![rabbitmq-event](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Publishing/Handling+data+with+Publish+and+Synchronization/rabbitmq-event.png)
 
 {% endinfo_block %}
 
@@ -426,17 +426,17 @@ Ensure that the triggered event has the correct structure:
 
 2. Verify the data required for the publisher to process it:
 
-- Event name: `Entity.spy_hello_spryker_message.create`
+* Event name: `Entity.spy_hello_spryker_message.create`
 
-- Listener: `HelloWorldWritePublisherPlugin`
+* Listener: `HelloWorldWritePublisherPlugin`
 
-- Table name: `spy_hello_spryker_message`
+* Table name: `spy_hello_spryker_message`
 
-- Modified columns: `spy_hello_spryker_message.name`, `spy_hello_spryker_message.message`
+* Modified columns: `spy_hello_spryker_message.name`, `spy_hello_spryker_message.message`
 
-- ID: the primary key of the record
+* ID: the primary key of the record
 
-- ForeignKey: the key to backtrack the updated Propel entities
+* ForeignKey: the key to backtrack the updated Propel entities
 
 {% endinfo_block %}
 
@@ -488,7 +488,7 @@ Ensure that the event has been processed correctly:
 - You can see a message from the publisher in the event.
 
 - The `publish.hello_world` queue is empty:
-![empty-rabbitmq-queue](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Publishing/Handling+data+with+Publish+and+Synchronization/empty-rabbitmq-queue.png) 
+![empty-rabbitmq-queue](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Publishing/Handling+data+with+Publish+and+Synchronization/empty-rabbitmq-queue.png)
 
 {% endinfo_block %}
 
@@ -561,6 +561,7 @@ An *incremental sync* is a sync that only processes the data records that have
 {% endinfo_block %}
 
 **Key Generation Strategy**
+
 | Resource | Store | Locale | Key Suffix Column | Redis key |
 | --- | --- | --- | --- | --- |
 | message | x | x | -  | `message` |
@@ -901,7 +902,7 @@ The Publish process is complete.
 
 Ensure that the data has been exported to a secondary queue for the Synchronize process. The `sync.storage.hello` queue should have at least one message:
 
-![separate-sync-queue](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Publishing/Handling+data+with+Publish+and+Synchronization/separate-sync-queue.jpeg) 
+![separate-sync-queue](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Publishing/Handling+data+with+Publish+and+Synchronization/separate-sync-queue.jpeg)
 
 {% endinfo_block %}
 
@@ -930,7 +931,7 @@ Follow the steps to check the data in Redis:
 
 1. Connect to Redis Desktop Manager at `http(s)://{host}:10009`.
 2. Сheck if the data is structured correctly:   
-![data-structure](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Publishing/Handling+data+with+Publish+and+Synchronization/data-structure.jpeg) 
+![data-structure](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Publishing/Handling+data+with+Publish+and+Synchronization/data-structure.jpeg)
 
 ## 10. Client
 

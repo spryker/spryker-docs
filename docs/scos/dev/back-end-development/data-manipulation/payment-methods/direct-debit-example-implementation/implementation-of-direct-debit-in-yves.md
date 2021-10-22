@@ -426,7 +426,11 @@ To create the Direct Debit twig template, do the following:
 {% info_block errorBox %}
 Don’t forget to add the factory and the dependency provider for this new  module in Yves.
 {% endinfo_block %}
+
+
 ***
+
+
 **What's next?**
 
 After the form has been created and the payment handler has been set up, you need to [integrate them into the Checkout module](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/integrate-direct-debit-into-checkout.html).

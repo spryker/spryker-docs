@@ -46,7 +46,7 @@ Using a data provider is the only way to pass any external data to the form and 
 Each data provider is passed when `FormCollection` is created. Then, when the handle method is being called, FormCollection handler creates all form types and passes the data from data providers to them.
 
 ### Checkout Quote Transfer Lifetime
-![Quote_transfer_lifetime.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Checkout/Multi-Step+Checkout/Checkout+Process/quote-transfer-lifetime.png) 
+![Quote_transfer_lifetime.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Checkout/Multi-Step+Checkout/Checkout+Process/quote-transfer-lifetime.png)
 
 When a process is being called on `StepProcess`, it tries to get the current valid step by walking through the step stack and calling the `postCondition()` for each, starting from the first in the stack. If `postCondition()` is being called on `StepProcess`, it tries to get the current valid step by walking through the step stack and calling the `postCondition()` for each, starting from the first in the stack. If `postCondition()` failed, then this step is used for later processing. After that, the view variables with `QuoteTransfer` and form are passed to Twig, and the HTML is rendered.
 
@@ -92,7 +92,8 @@ Sometimes it’s needed to redirect the customer to an external URL (outside app
 {% info_block errorBox %}
 Each step must implement StepInterface.
 {% endinfo_block %}
-![Step_flow.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Checkout/Multi-Step+Checkout/Checkout+Process/step-flow.png) 
+
+![Step_flow.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Checkout/Multi-Step+Checkout/Checkout+Process/step-flow.png)
 
 ### Placing the Order
 After the customer clicks the submit button during the `SummaryStep`, the `PlaceOrderStep` is started. This step takes the `QuoteTransfer` and starts the checkout workflow to store the order into the system. Zed Checkout module contains some plugins where you can add additional behavior, check preconditions, save or execute post condition check.

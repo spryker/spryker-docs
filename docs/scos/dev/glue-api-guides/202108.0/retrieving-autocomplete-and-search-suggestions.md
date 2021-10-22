@@ -20,7 +20,7 @@ In your development, this resource can help you to enhance the customer experien
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Catalog feature integration](https://documentation.spryker.com/2021080/docs/glue-api-catalog-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Catalog feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-catalog-feature-integration.html).
 
 ## Retrieve a search suggestion
 
@@ -32,27 +32,24 @@ To retrieve a search suggestion, send the request:
 
 ### Request
 
-
 | STRING PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
-| q | Adds a search query to the request | You can enter any search query. | 
-
-
+| q | Adds a search query to the request | You can enter any search query. |
 
 | Request | Description |
 | --- | --- |
 | `GET https://glue.mysprykershop.com/catalog-search-suggestions` | Retrieve suggestions for an empty search string. |
 | `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=` | Retrieve suggestions for an empty search string |
-| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**c**` | Retreive suggestions for one letter. |
-| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**co**` | Retreive suggestions for two letters. |
-| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**com**` | Retreive suggestions for three letters |
-| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**computer**` | Retreive suggestions for the word `computer`. |
-| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**telecom+%26+navigation**` | Retreive suggestions for the phrase `telecom&navigation`. |
+| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**c**` | Retrieve suggestions for one letter. |
+| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**co**` | Retrieve suggestions for two letters. |
+| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**com**` | Retrieve suggestions for three letters |
+| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**computer**` | Retrieve suggestions for the word `computer`. |
+| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**telecom+%26+navigation**` | Retrieve suggestions for the phrase `telecom&navigation`. |
 
 ### Response
 
 <details>
-    <summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -221,7 +218,6 @@ To retrieve a search suggestion, send the request:
 
 </details>
 
-
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | completion | Array | Autocomplete suggestions for the search query. </br> Each item in the array is a string. |
@@ -237,7 +233,7 @@ To retrieve a search suggestion, send the request:
 | abstractProducts.abstractSku | String | Product SKU. |
 | abstractProducts.url | String | URL of the product's product details page. |
 | abstractProducts.images | Object | URLs of the product's images. |
-| abstractProducts.images.externalUrlSmall | String | URL of the product's preview image. | 
+| abstractProducts.images.externalUrlSmall | String | URL of the product's preview image. |
 | abstractProducts.images.externalUrlLarg | String | URL of the product's large image. |
 
 {% info_block infoBox "SEO-friendly URLs" %}
@@ -246,7 +242,4 @@ The `url` attribute of categories and abstract products exposes a SEO-friendly 
 
 {% endinfo_block %}
 
-
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
-
-

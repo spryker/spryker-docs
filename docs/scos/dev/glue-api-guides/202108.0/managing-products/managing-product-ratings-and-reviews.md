@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/managing-product-ratings-and-reviews
 ---
 
-[Ratings and reviews](https://documentation.spryker.com/docs/product-rating-reviews) allow customers to share their opinions and experiences about purchases. This enables customers to take meaningful decisions about purchases and increases their trust with the shop.
+[Ratings and reviews](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews-feature-overview.html) allow customers to share their opinions and experiences about purchases. This enables customers to take meaningful decisions about purchases and increases their trust with the shop.
 
 Products and ratings API helps you to:
 
@@ -20,6 +20,7 @@ Products and ratings API helps you to:
 * Allow customers to review and rate products.
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Product rating & reviews feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-rating-and-reviews-feature-integration.html)
 
 ## Retrieve product ratings and reviews
@@ -31,27 +32,23 @@ To retrieve ratings and reviews, send the request:
 
 ---
 
-
-| Path parameter | DESCRIPTION |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}*** | Unique identifier of a product to retrieve product reviews for. |
 
-
 ### Request
 
-| String parameter | DESCRIPTION | Possible values | 
+| String parameter | DESCRIPTION | Possible values |
 | --- | --- | --- | --- |
-| page[offset] | Offset of the item at which to begin the response.  | From `0` to any. | 
-| page[limit] | Maximum number of entries to return. | From `1` to any. | 
+| page[offset] | Offset of the item at which to begin the response.  | From `0` to any. |
+| page[limit] | Maximum number of entries to return. | From `1` to any. |
 
 Request sample: `GET http://glue.mysprykershop.com/abstract-products/035/product-reviews`
 
 ### Response
 
-
-
 <details>
-    <summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -93,7 +90,7 @@ Request sample: `GET http://glue.mysprykershop.com/abstract-products/035/product
 ```
 
 </details>
-    
+
 <a name="product-ratings-and-reviews-response-attributes"></a>
 
 | ATTRIBUTE | TYPE | DESCRIPTIONS |
@@ -103,16 +100,13 @@ Request sample: `GET http://glue.mysprykershop.com/abstract-products/035/product
 | summary | String | Review summary. |
 | description | String | Full review. |
 
-
-
-
 ## Provide a rating and a review of a products
+
 To provide a rating and a review of a products, send the request:
 
 ***
 `POST`**/abstract-products/*{% raw %}{{{% endraw %}product_sku{% raw %}}}{% endraw %}*/product-reviews**
 ***
-
 
 | PATH PARAMETER | HEADER |
 | --- | --- |
@@ -140,15 +134,12 @@ Sample request: `POST http://glue.mysprykershop.com/abstract-products/139/produc
 }
 ```
 
-| ATTRIBUTE | TYPE | Required | DESCRIPTION |
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | nickname | String | yes | The name under which the review is to be displayed. |
 | rating | Integer | yes | Rating given to the product by the customer. |
 | summary | String | yes | Review summary. |
 | description | String | no | Full review. |
-
-
-
 
 ### Response
 
@@ -180,16 +171,13 @@ Response sample:
 | summary | String | Review summary. |
 | description | String | Full review. |
 
-
-
-
 ## Other management options
 
 You can retrieve the average rating of a product by:
 * [Retrieving an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html#retrieve-an-abstract-product)
 * [Retrieving a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
 
-Also, all the endpoints that accept `abstract-products` and `concrete-products` resources as included resources in requests, return the average product rating. 
+Also, all the endpoints that accept `abstract-products` and `concrete-products` resources as included resources in requests, return the average product rating.
 
 ## Possible errors
 

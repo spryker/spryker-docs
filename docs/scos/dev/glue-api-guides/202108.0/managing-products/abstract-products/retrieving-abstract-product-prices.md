@@ -14,9 +14,7 @@ redirect_from:
 This endpoint allows retrieving detailed information about the prices of abstract products.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
-* [Glue API: Product price feature integration](https://documentation.spryker.com/docs/glue-api-prices-api-feature-integration)
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
 
 ## Retrieve prices of an abstract product
 
@@ -209,7 +207,7 @@ Response sample with default prices and volume prices for an abstract product
 
 ## Possible errors
 
-| CODE | MEANING |
+| CODE | REASON |
 | --- | --- |
 | 307 | Abstract product price is not found (for example, because of the wrong abstract product SKU. |
 | 311 | Abstract product SKU is not specified. |

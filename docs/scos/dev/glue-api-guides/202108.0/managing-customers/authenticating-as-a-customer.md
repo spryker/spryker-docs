@@ -19,20 +19,22 @@ related:
 This endpoint allows authenticating as a customer. As an authenticated customer, you can send requests to [protected resources](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html#protected-resources).
 
 {% info_block warningBox %}
+
 This endpoint does not comply with OAuth 2.0. If your project requires such compliance, use the `/token`endpoint. For details about the `/token`endpoint, see [Managing customer authentication tokens via OAuth 2.0](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html).
+
 {% endinfo_block %}
 
 ## Installation
+
 For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html).
 
 ## Authenticate as a customer
 
 To authenticate as a customer, send the request:
 
----
+***
 `POST` **/access-tokens**
-
----
+***
 
 ### Request
 
@@ -50,7 +52,6 @@ Request sample: `POST https://mysprykershop.com/access-tokens`
 }
 ```
 
-
 | ATTRIBUTE | TYPE | REQUIRED  |DESCRIPTION |
 | --- | --- | --- | --- |
 | username | string | &check; | Customer's username. You define it when [creating a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer). |
@@ -62,15 +63,17 @@ If you are authenticating as a newly created customer, make sure to verify your 
 
 {% endinfo_block %}
 
-{% info_block warningBox %} 
-Note that depending on the Login feature configuration for your project, too many unsuccessful login attempts may result in the 429 error, and the user will be locked out for some time. For details, see [Storefront Login feature overview](https://documentation.spryker.com/2021080/docs/storefront-login-feature-overview).
+{% info_block warningBox %}
+
+Note that depending on the Login feature configuration for your project, too many unsuccessful login attempts may result in the 429 error, and the user will be locked out for some time. For details, see [Customer Login feature overview](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-login-overview.html).
+
 {% endinfo_block %}
 
 ### Response
 
 <details>
-    <summary markdown='span'>Response sample</summary>
-    
+<summary markdown='span'>Response sample</summary>
+
 ```json
 {
     "data": {
@@ -89,7 +92,7 @@ Note that depending on the Login feature configuration for your project, too man
     }
 }
 ```
-    
+
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |

@@ -20,7 +20,6 @@ This endpoint allows retrieving category nodes.
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Category API Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html).
 
-
 ## Retrieve a category node
 
 To retrieve a category node, send the request:
@@ -30,19 +29,19 @@ To retrieve a category node, send the request:
 
 ---
 
-|Path parameter| Description |
+|PATH PARAMETER | DESCRIPTION |
 |---|---|
 | ***node_id*** | ID of a node to get information for. [Retrieve a category tree](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-trees.html#retrieve-a-category-tree) to get a full list of node IDs. |
 
-
 ### Request
+
 Request sample : `GET http://glue.mysprykershop.com/category-nodes/5`
 
 ### Response
 
 <details>
 <summary markdown='span'>Response sample</summary>
-    
+
 ```js
 {
     "data": {
@@ -118,8 +117,8 @@ Request sample : `GET http://glue.mysprykershop.com/category-nodes/5`
 ```
 </details>
 
-
 <a name="category-nodes-response-attributes"></a>
+
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | nodeId | String | Category node ID. |
@@ -130,10 +129,9 @@ Request sample : `GET http://glue.mysprykershop.com/category-nodes/5`
 | isActive | Boolean | Boolean to see, if the category is active. |
 | order | Integer | Digits between 1 and 100, with 100 ranking the highest (on one level under the parent node). |
 
-
-
 ## Possible errors
-| Code | Description |
+
+| CODE | REASON |
 | --- | --- |
 | 701 | Node ID not specified or invalid. |
 | 703 | Node with the specified ID was not found. |

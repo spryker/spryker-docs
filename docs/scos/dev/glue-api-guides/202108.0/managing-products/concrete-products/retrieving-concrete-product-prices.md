@@ -21,6 +21,7 @@ For detailed information on the modules that provide the API functionality and r
 * [Glue API: Prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-price-feature-integration.html)
 
 ## Retrieve prices of a concrete product
+
 To retrieve prices of a concrete product, send the request:
 
 ---
@@ -209,7 +210,7 @@ To retrieve prices of a concrete product, send the request:
 
 ## Possible errors
 
-| CODE | MEANING |
+| CODE | REASON |
 |-|-|
 | 308 | Can't find concrete product prices. |
 | 312 | Concrete product sku is not specified. |

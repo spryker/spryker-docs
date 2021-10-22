@@ -22,8 +22,6 @@ related:
 
 This endpoint allows managing shared company user carts.
 
-
-
 ## Change permissions
 
 To change permissions for a shared cart, send the request:
@@ -31,7 +29,6 @@ To change permissions for a shared cart, send the request:
 ***
 `PATCH` **/shared-carts/*{% raw %}{{{% endraw %}shared-cart-uuid{% raw %}}}{% endraw %}***
 ***
-
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
@@ -60,14 +57,10 @@ Request sample: `PATCH http://glue.mysprykershop.com/shared-carts/4c677a6b-2f65-
 | --- | --- | --- | --- |
 | idCartPermissionGroup | Integer | ✓ | Unique identifier of the cart permission group that describes the permissions granted to the users with whom the cart is shared. |
 
-
-
-
 ### Response
 
-
 Response sample:
-    
+
 ```json
 {
     "data": {
@@ -89,9 +82,8 @@ Response sample:
 | idCompanyUser | String | Name of the company user the cart is shared with. |
 | idCartPermissionGroup | Integer | Unique identifier of the cart permission group that describes the permissions granted to the user. |
 
-
-
 ## Stop sharing a cart
+
 To stop sharing a cart, send the request:
 
 ***
@@ -110,11 +102,9 @@ To stop sharing a cart, send the request:
 
 Sample request: `DELETE http://glue.mysprykershop.com/shared-carts/4c677a6b-2f65-5645-9bf8-0ef3532bbbccaa`
 
-
 ### Response
+
 If the request is successful, the endpoint returns  `204 No Content` status code.
-
-
 
 ## Possible errors
 
@@ -124,5 +114,3 @@ If the request is successful, the endpoint returns  `204 No Content` status code
 | 403 | The access token is missing. |
 | 404 | Cart not found. |
 | 422 | Failed to share a cart. |
-
-

@@ -17,6 +17,7 @@ related:
 By means of the category API, you are able to retrieve the exact structure of your category tree with its hierarchical characteristics.
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Category API Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html).
 
 ## Retrieve a category tree
@@ -32,8 +33,8 @@ To retrieve a full category tree, containing all available nodes and their child
 
 Sample request: `GET http://glue.mysprykershop.com/category-trees`
 
+### Reponse
 
-### Reponse 
 <details>
 <summary markdown='span'>Response sample </summary>
 
@@ -160,7 +161,7 @@ Sample request: `GET http://glue.mysprykershop.com/category-trees`
     }
 }
 ```
-<br>
+
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -173,5 +174,4 @@ To view generic errors that originate from the Glue Application, see [Reference 
 
 ## Next steps
 
-* [Retrieve a category node](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-nodes.html)
-
+[Retrieve a category node](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-nodes.html)

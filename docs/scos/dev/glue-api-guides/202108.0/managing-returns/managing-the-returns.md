@@ -14,30 +14,22 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-returns/retrieving-return-reasons.html
 ---
 
-The Return Management API allows developers to retrieve return information and create returns. The list of retrievable information includes: 
-
+The Return Management API allows developers to retrieve return information and create returns. The list of retrievable information includes:
 * Sales order items that a customer can return.
 * Returns per customer.
 * Predefined reasons stored in the database.
 
 In your development, the API can help you:
-
 * View order details, including returnable or non-returnable items.
 * Create returns for the returnable items.
 * View return details of a specific customer.
 * Specify reasons for returning the sales order items.
 
- 
-
-
-
 ## Installation
+
 For details on the modules that provide the API functionality and how to install them, see [Glue API: Return Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-return-management-feature-integration.html)
 
-
-
 ## Create a return
-
 
 To create a return for a registered user, send the request:
 
@@ -47,16 +39,14 @@ To create a return for a registered user, send the request:
 
 ### Request
 
-
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | string | ✓ | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | offset | Ofset of the order at which to begin the response. </br> Works only together with `page[limit]`. </br> To work correctly, the value should be devisable by the value of `page[limit]`. </br> The default value is `0`.  | From `0` to any. |
 | limit | Maximum number of entries to return. </br> Works only together with `page[offset]`. </br> The default value is `10`. | From `1` to any. |
-
 
 Request sample: `POST https://glue.mysprykershop.com/returns`
 
@@ -250,10 +240,6 @@ Request sample: `POST https://glue.mysprykershop.com/returns`
 | calculatedDiscounts | Array | Specifies the list of calculated discounts. |
 | productOptions | Array | Set of product options applied to the product. |
 
-
-
-
-
 ## Retrieve returns
 
 To retrieve returns, send the request:
@@ -266,7 +252,7 @@ To retrieve returns, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | string | ✓ | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
@@ -278,7 +264,7 @@ Request sample: `GET https://glue.mysprykershop.com/returns`
 ### Response
 
 <details>
-    <summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -349,8 +335,8 @@ Request sample: `GET https://glue.mysprykershop.com/returns`
 | refundTotal | Integer | Total sum of refunds. |
 | remunerationTotal | Integer | Total sum of remuneration. |
 
-
 ## Retrieve a return
+
 To retrieve a return, send the request:
 
 ***
@@ -365,7 +351,7 @@ To retrieve a return, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | string | ✓ | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
@@ -536,11 +522,8 @@ Sample request: `GET http://glue.mysprykershop.com/returns/DE--1-R3`
 | calculatedDiscounts | Array | Specifies the list of calculated discounts. |
 | productOptions | Array | Set of product options applied to the product. |
 
-
-
-## Possible Errors
+## Possible errors
 
 | CODE | REASON |
 | --- | --- |
 | 3601 | Return can't be created. |
-

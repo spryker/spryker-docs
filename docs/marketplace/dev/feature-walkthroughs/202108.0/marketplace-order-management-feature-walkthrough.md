@@ -48,22 +48,28 @@ To learn more about the feature and to find out how end users use it, see [Marke
 Merchant Order
 ![Module Dependency Graph](https://confluence-connect.gliffy.net/embed/image/901b201a-030b-4824-a136-ef06d258a41b.png?utm_medium=live&utm_source=confluence)
 
-<!--
-Diagram content:
-    -The module dependency graph SHOULD contain all the modules that are specified in the feature  (don't confuse with the module in the epic)
-    - The module dependency graph MAY contain other module that might be useful or required to show
-Diagram styles:
-    - The diagram SHOULD be drown with the same style as the example in this doc
-    - Use the same distance between boxes, the same colors, the same size of the boxes
-Table content:
-    - The table that goes after diagram SHOULD contain all the modules that are present on the diagram
-    - The table should provide the role each module plays in this feature
--->
 | MODULE     | DESCRIPTION                |
 |------------|----------------------------|
-| MerchantOrderTotal | Provides a sum calculation for a merchant order|
-| MerchantOrder | Provides Merchant related information for Order |
-| MerchantOrderItem | Provides Merchant related information for Order Item |
+| Merchant | Provides functionality to save/update/remove Merchants |
+| MerchantOms | Provides order management system functionality for merchant orders |
+| MerchantOmsDataImport | Data importer for MerchantOms |
+| MerchantOmsGui | Provides Backoffice UI interface for Merchant Oms management |
+| MerchantSalesOrder | Provides functionality to link merchant to sales orders |
+| MerchantSalesOrderDataExport | Provides possibility to export data related to merchant orders |
+| MerchantSalesOrderMerchantUserGui | Provides Backoffice UI interface for merchant sales order management |
+| MerchantSalesOrderWidget | Provides merchant sales order information |
+| Oms | Order management system for implementing complex process flows using state machines |
+| OmsProductOfferReservation | Provides functionality for save/update/remove reservations for product offers |
+| OrderCancelWidget | Widget module is responsible for displaying an order cancelation functionality |
+| ProductOfferReservationGui | Backoffice Administrative Interface component for managing reservations for product offers |
+| ProductOfferSales | Provides product offer functionality to Sales module |
+| Sales | Provides the order management functionality |
+| SalesOms | Provides ability to manipulate order item states |
+| MerchantSalesOrderExtension | Provides plugin interfaces for MerchantSalesOrder module |
+| MerchantSalesOrderThresholdGui | Provides Zed UI interface for merchant sales order threshold management |
+| ProductOfferSalesRestApi | Provides REST API endpoints to manage product offer sales |
+| SalesMerchantPortalGui | Provides components for merchant orders management |
+| SalesMerchantPortalGuiExtension | Provides extension interfaces for SalesMerchantPortalGui module |
 
 
 ## Domain model

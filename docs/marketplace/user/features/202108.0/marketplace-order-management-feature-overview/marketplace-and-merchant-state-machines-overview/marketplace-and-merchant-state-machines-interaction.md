@@ -7,7 +7,7 @@ template: concept-topic-template
 When viewed independently of each other, the Marketplace and Merchant State Machines workflows look like this:
 
 Marketplace State Machine workflow:
-![Marketplace state machine workflow](https://confluence-connect.gliffy.net/embed/image/f0eb1f48-ae89-47ca-8f48-42e37c63f4ba.png?utm_medium=live&utm_source=custom)
+![Marketplace state machine workflow](https://confluence-connect.gliffy.net/embed/image/f0eb1f48-ae89-47ca-8f48-42e37c63f4ba.png)
 
 Merchant State Machine workflow:
 ![Merchant state machine workflow](https://confluence-connect.gliffy.net/embed/image/b938441d-1a4a-4fe3-903d-580965b1bfea.png?utm_medium=live&utm_source=custom)

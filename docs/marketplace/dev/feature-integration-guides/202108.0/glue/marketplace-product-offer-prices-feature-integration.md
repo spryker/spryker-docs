@@ -121,3 +121,13 @@ Make sure that the `ProductOfferPricesResourceRoutePlugin` plugin is set up by s
 Make sure that the `ProductOfferPriceByProductOfferReferenceResourceRelationshipPlugin` plugin is set up by sending the request `GET http://glue.mysprykershop.com/product-offers/{% raw %}{{offerReference}}{% endraw %}?include=product-offer-prices`. You should get `product-offers` with all product offer’s `product-offer-prices` as relationships.
 
 {% endinfo_block %}
+
+
+## Related features
+
+Integrate the following related features:
+
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+|---|---|---|
+| Marketplace Product Offer Prices + Wishlist Glue API | &check;  |  [Glue API: Marketplace Product Offer Prices + Wishlist feature integration ](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-prices-wishlist-feature-integration.html) |
+

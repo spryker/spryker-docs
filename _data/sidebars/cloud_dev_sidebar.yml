@@ -4,6 +4,8 @@ entries:
     nested:
       - title: Getting started with the Spryker Cloud Commerce OS
         url: /docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html
+      - title: Environments overview
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/environments-overview.html
       - title: Connecting Docker SDK
         url: /docs/cloud/dev/spryker-cloud-commerce-os/connecting-docker-sdk.html
       - title: Access
@@ -60,6 +62,10 @@ entries:
         url: /docs/cloud/dev/spryker-cloud-commerce-os/managing-parameters-in-the-parameter-store.html
       - title: Verifying email addresses
         url: /docs/cloud/dev/spryker-cloud-commerce-os/verifying-email-addresses.html
+      - title: Peformance testing
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/performance-testing.html
+      - title: Monitoring issues and informing about alerts
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/monitoring-issues-and-informing-about-alerts.html
       - title: Troubleshooting
         url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting.html
       - title: Release notes

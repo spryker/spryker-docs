@@ -17,8 +17,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-| - |
-| Marketplace Product Offer Prices | dev-master | [Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-prices-feature-integration.html) |
-| Marketplace Product Offer Volume Prices | dev-master | Marketplace Product Offer Volume Prices feature integration |
+| Marketplace Product Offer Prices | {{page.version}} | [Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-prices-feature-integration.html) |
+| Marketplace Product Offer Volume Prices | {{page.version}} | Marketplace Product Offer Volume Prices feature integration <!---LINK--> |
 
 ### 1) Install the required modules using Composer
 

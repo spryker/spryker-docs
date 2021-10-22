@@ -17,8 +17,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------------- | ---------- | --------|
-| Spryker Core | 202001.0   | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Marketplace Product Offer | dev-master | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html) |
+| Spryker Core | {{page.version}}   | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html) |
 
 ###  1) Install the required modules using Composer
 
@@ -66,7 +66,7 @@ To start feature integration, overview, and install the necessary features:
 
 | NAME | VERSION |
 | ------------ | -------- |
-| Spryker Core | 202001.0 |
+| Spryker Core | {{page.version}} |
 
 ###  1) Install the required modules using Composer
 
@@ -104,7 +104,7 @@ Make sure that the following changes were applied in transfer objects:
 
 {% endinfo_block %}
 
-### 2) Add Yves translations
+### 2) Add translations
 
 Append glossary according to your configuration:
 
@@ -113,8 +113,23 @@ Append glossary according to your configuration:
 ```yaml
 merchant_switcher.message,Switch from %currentMerchant% to %newMerchant%? Due to different availability, not all products may be added to your shopping cart.,en_US
 merchant_switcher.message,Wechseln von %currentMerchant% zu %newMerchant%? Aufgrund unterschiedlicher Verfügbarkeit können ggf. nicht alle Produkte in Warenkorb übernommen werden.,de_DE
+merchant_switcher.message.product_is_not_available,"Product %product_name% (SKU %sku%) is not available from the selected merchant. Please remove it in order to proceed or switch the merchant.",en_US
+merchant_switcher.message.product_is_not_available,"Produkt %product_name% (SKU %sku%) ist beim ausgewählten Händler nicht erhältlich. Bitte diesen Artikel entfernen, um fortzufahren oder den Händler zu wechseln.",de_DE
 merchant_switcher.label,My Merchant,en_US
 merchant_switcher.label,Mein Händler,de_DE
+```
+
+2. Import data:
+
+```bash
+console data:import glossary
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the configured data has been added to the `spy_glossary` table in the database.
+
+{% endinfo_block %}
 ```
 
 Import data:
@@ -297,6 +312,6 @@ Make sure that the following widgets were registered:
 
 ## Related features
 
-| FEATURE | INTEGRATION GUIDE |
-| - | - |
-| Merchant Switcher Feature + Customer Account Management | [Marketplace Order Management + Customer Account Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-customer-account-management-feature-integration.html) |
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE |INTEGRATION GUIDE |
+| --- | --- | --- |
+|  Merchant Switcher + Wishlist | | [ Merchant Switcher + Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-switcher-wishlist-feature-integration.html) |

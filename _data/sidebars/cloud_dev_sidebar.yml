@@ -1,0 +1,72 @@
+title: Spryker Cloud engineer guides
+entries:
+  - product: CLOUD
+    nested:
+      - title: Getting started with the Spryker Cloud Commerce OS
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html
+      - title: Environments overview
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/environments-overview.html
+      - title: Connecting Docker SDK
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/connecting-docker-sdk.html
+      - title: Access
+        nested:
+          - title: Accessing AWS Management Console
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/access/accessing-aws-management-console.html
+          - title: Locating service credentials
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/access/locating-service-credentials.html
+          - title: Connecting to services via SSH
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/access/connecting-to-services-via-ssh.html
+      - title: Connecting code repository
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/connecting-code-repository.html
+      - title: Deploying in a staging environment
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-staging-environment.html
+      - title: Debugging
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/debugging.html
+      - title: Working with logs
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/working-with-logs.html
+      - title: Preparation for going live
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/preparation-for-going-live.html
+      - title: Setting up a custom domain name
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-domain-name/setting-up-a-custom-domain-name.html
+        nested:
+          - title: Setting up a custom domain name with Route 53
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-domain-name/setting-up-a-custom-domain-name-with-route-53.html
+          - title: Setting up a custom domain name with a third-party DNS zone provider
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-domain-name/setting-up-a-custom-domain-name-with-a-third-party-dns-zone-provider.html
+      - title: Setting up a custom SSL certificate
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-ssl-certificate.html
+      - title: Deploying in a production environment
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html
+      - title: Security
+        nested:
+          - title: Checking ECR image scan results
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/security/checking-ecr-image-scan-results.html
+          - title: Generating access keys
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/security/generating-access-keys.html
+      - title: Deployment pipelines
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/deployment-pipelines.html
+        nested:
+          - title: Customizing deployment pipelines
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/customizing-deployment-pipelines.html
+          - title: Configuring Azure Pipelines
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/configuring-azure-pipelines.html
+          - title: Configuring GitHub Actions
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/configuring-github-actions.html
+          - title: Configuring GitLab pipelines
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/configuring-gitlab-pipelines.html
+          - title: Configuring Bitbucket Pipelines
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/configuring-bitbucket-pipelines.html
+      - title: Customizing AWS CloudWatch dashboards
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/customizing-aws-cloudwatch-dashboards.html      
+      - title: Managing parameters in the Parameter Store
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/managing-parameters-in-the-parameter-store.html
+      - title: Verifying email addresses
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/verifying-email-addresses.html
+      - title: Peformance testing
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/performance-testing.html
+      - title: Monitoring issues and informing about alerts
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/monitoring-issues-and-informing-about-alerts.html
+      - title: Troubleshooting
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting.html
+      - title: Release notes
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/release-notes.html

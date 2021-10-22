@@ -115,6 +115,9 @@ entries:
           - title: ACL feature integration
             url: /docs/marketplace/dev/feature-integration-guides/acl-feature-integration.html
 
+          - title: Combined Product Offer Import integration
+            url: /docs/marketplace/dev/feature-integration-guides/combined-product-offer-import-integration.html
+
           - title: Marketplace Dummy Payment feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-dummy-payment-feature-integration.html
 

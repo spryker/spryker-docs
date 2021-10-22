@@ -27,7 +27,7 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| MerchantProductOptionCartPreCheckPlugin | Checks the approval status for merchant product options. | None | Spryker\Zed\MerchantProductOption\Communication\Plugin\Cart |
+| MerchantProductOptionCartPreCheckPlugin | Checks the approval status for the merchant product options. | None | Spryker\Zed\MerchantProductOption\Communication\Plugin\Cart |
 
 
 **src/Pyz/Zed/Cart/CartDependencyProvider.php**

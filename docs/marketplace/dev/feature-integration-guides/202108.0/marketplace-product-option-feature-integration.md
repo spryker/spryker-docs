@@ -28,7 +28,7 @@ To start feature integration, integrate the required features:
 1) Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-product-options:"202108.0" --update-with-dependencies
+composer require spryker-feature/marketplace-product-options:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -51,6 +51,7 @@ Make sure the following modules have been installed:
 Adjust the schema definition to guarantee unique identifier for each option group:
 
 **src/Pyz/Zed/DataImport/Persistence/Propel/Schema/spy_product_option.schema.xml**
+
 ```xml
 <?xml version="1.0"?>
 <database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\ProductOption\Persistence" package="src.Orm.Zed.ProductOption.Persistence">
@@ -122,19 +123,17 @@ Make sure that the configured data is added to the `spy_glossary` table in the d
 
 Prepare your data according to your requirements using the demo data:
 
-<details><summary>data/import/common/common/marketplace/merchant_product_option_group.csv</summary>
+**data/import/common/common/marketplace/merchant_product_option_group.csv**
 
 ```csv
 product_option_group_key,merchant_reference,approval_status,merchant_sku
 insurance,MER000001,approved,spr-425453
 ```
 
-</details>
-
 
 #### Register data importer:
 
-<details><summary>data/import/local/full_EU.yml</summary>
+**data/import/local/full_EU.yml**
 
 ```yml
 version: 0
@@ -144,9 +143,8 @@ actions:
       source: data/import/common/common/marketplace/merchant_product_option_group.csv
 ```
 
-</details>
 
-<details><summary>data/import/local/full_US.yml</summary>
+**data/import/local/full_US.yml**
 
 ```yml
 version: 0
@@ -156,13 +154,12 @@ actions:
       source: data/import/common/common/marketplace/merchant_product_option_group.csv
 ```
 
-</details>
 
-Register the following plugin to enable data import:
+Register the following plugin to enable the data import:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| MerchantProductOptionGroupDataImportPlugin | Validates Merchant reference and inserts merchant product option groups into DB. | None | Spryker\Zed\MerchantProductOptionDataImport\Communication\Plugin\DataImport |
+| MerchantProductOptionGroupDataImportPlugin | Validates Merchant reference and inserts merchant product option groups into the datanbase. | None | Spryker\Zed\MerchantProductOptionDataImport\Communication\Plugin\DataImport |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -206,11 +203,11 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| MerchantProductOptionListActionViewDataExpanderPlugin | Expands data with merchant collection. | None | Spryker\Zed\MerchantGui\Communication\Plugin\ProductOptionGui |
-| MerchantProductOptionListTableQueryCriteriaExpanderPlugin | Expands `QueryCriteriaTransfer` with merchant product option group criteria for expanding default query running in `ProductOptionListTable`. | None | Spryker\Zed\MerchantProductOptionGui\Communication\Plugin\ProductOptionGui |
-| MerchantProductOptionGroupExpanderPlugin | Expands a product option group data with related merchant. | None | Spryker\Zed\MerchantProductOption\Communication\Plugin\ProductOption |
-| MerchantProductOptionCollectionFilterPlugin | Filters merchant product option group transfers by approval status and excludes product options with not approved merchant groups. | None | Spryker\Zed\MerchantProductOptionStorage\Communication\Plugin\ProductOptionStorage |
-| MerchantProductOptionGroupWritePublisherPlugin | Retrieves all abstract product ids using merchant product option group ids from event transfers. | None | Spryker\Zed\MerchantProductOptionStorage\Communication\Plugin\Publisher\MerchantProductOption |
+| MerchantProductOptionListActionViewDataExpanderPlugin | Expands data with the merchant collection. | None | Spryker\Zed\MerchantGui\Communication\Plugin\ProductOptionGui |
+| MerchantProductOptionListTableQueryCriteriaExpanderPlugin | Extends `QueryCriteriaTransfer` with the merchant product option group criteria for expanding default query running in `ProductOptionListTable`. | None | Spryker\Zed\MerchantProductOptionGui\Communication\Plugin\ProductOptionGui |
+| MerchantProductOptionGroupExpanderPlugin | Expands a product option group data with the related merchant. | None | Spryker\Zed\MerchantProductOption\Communication\Plugin\ProductOption |
+| MerchantProductOptionCollectionFilterPlugin | Filters merchant product option group transfers by approval status and excludes the product options with the not approved merchant groups. | None | Spryker\Zed\MerchantProductOptionStorage\Communication\Plugin\ProductOptionStorage |
+| MerchantProductOptionGroupWritePublisherPlugin | Retrieves all abstract product IDs using the  merchant product option group IDs from the event transfers. | None | Spryker\Zed\MerchantProductOptionStorage\Communication\Plugin\Publisher\MerchantProductOption |
 
 
 **src/Pyz/Zed/ProductOption/ProductOptionDependencyProvider.php**
@@ -304,7 +301,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             $this->getMerchantProductOptionStoragePlugins(),
         ];
     }
-    
+
     /**
      * @return \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface[]
      */
@@ -319,10 +316,10 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure merchants can create product option groups and values in the merchant portal.
+Make sure merchants can create product option groups and values in the Merchant Portal.
 Make sure that merchant product option information is shown on product details page, when it is approved and active.
 Make sure that merchant product option information is displayed in the cart, checkout and in the user account.
-Make sure that merchant product options are part of a marketplace/merchant order and all totals are calculated correctly.
+Make sure that merchant product options are a part of the marketplace/merchant order and all totals are calculated correctly.
 
 {% endinfo_block %}
 

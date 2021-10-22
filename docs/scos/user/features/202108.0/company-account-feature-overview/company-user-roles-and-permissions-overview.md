@@ -102,7 +102,7 @@ Some of the Permissions can be configured for specific roles, for example, “al
 Permission can also be **Yves-side** and **Zed-side**.
 
 * **Yves permissions** do not need to get any data from the database. They refer to key-value storage, or to search to check the right for actions.
-*
+
 {% info_block infoBox %}
 
 For example, the permission to view a product, a page, or permission to place an order, permission to place an order with grand total less X, would be Yves-side permissions.

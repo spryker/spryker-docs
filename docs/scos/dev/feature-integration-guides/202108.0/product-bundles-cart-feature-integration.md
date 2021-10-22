@@ -11,22 +11,27 @@ redirect_from:
   - /docs/en/product-bundles-cart-feature-integration
 ---
 
-## Install Feature Core
+## Install feature core
 
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
-| Module | Expected Directory |
-| --- | --- |
-| Product Bundles | 202009.0 |
-| Cart | 202009.0 |
-| Spryker Core | 202009.0 |
 
-### 1) Set up Behavior
-| Plugin | Specification | Prerequisites | Namespace |
+To start feature integration, overview and install the necessary features:
+
+| MODULE | EXPECTED DIRECTORY |
+| --- | --- |
+| Product Bundles | {{page.version}} |
+| Cart | {{page.version}} |
+| Spryker Core | {{page.version}} |
+
+### 1) Set up behavior
+
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `ProductBundleItemCountQuantityPlugin` | Returns combined quantity of all items in cart. | None | `Spryker\Client\ProductBundle\Plugin\Cart` |
+| ProductBundleItemCountQuantityPlugin | Returns combined quantity of all items in cart. | None | Spryker\Client\ProductBundle\Plugin\Cart |
 
 **src/Pyz/Client/Cart/CartDependencyProvider.php**
+
 ```php
 <?php
 
@@ -46,10 +51,10 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     }
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 Add several regular products and product bundles to cart.
 Make sure that item counter at cart widget shows correct number (bundled items should not be counted as separate items).
 
 {% endinfo_block %}
-

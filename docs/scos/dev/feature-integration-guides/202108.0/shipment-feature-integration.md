@@ -17,29 +17,42 @@ related:
 ---
 
 {% info_block errorBox %}
+
 The following feature integration guide expects the basic feature to be in place.</br>The current feature integration guide only adds the following functionalities:<ul><li>Shipment Back Office UI;</li><li>Delivery method per store;</li><li>Shipment data import.</li></ul>
+
 {% endinfo_block %}
 
-## Install Feature Core
+## Install feature core
+
 ### Prerequisites
+
 To start the feature integration, overview and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Spryker Core | 202009.0 |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/shipment:"202009.0" --update-with-dependencies
+composer require spryker-feature/shipment:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following modules have been installed:<table><thead><tr><td>Module</td><td>Expected Directory</td></tr></thead><tbody><tr><td>`ShipmentDataImport`</td><td>`vendor/spryker/shipment-data-import`</td></tr><tr><td>`ShipmentGui`</td><td>`vendor/spryker/ShipmentGui`</td></tr></tbody></table>
+
+Make sure that the following modules have been installed:
+
+| MODULE | EXPECTED DIRECTORY |
+| --- | --- |
+| ShipmentDataImport | vendor/spryker/shipment-data-import |
+| ShipmentGui | vendor/spryker/ShipmentGui |
+
 {% endinfo_block %}
 
-### 2) Set up Database Schema and Transfer Objects
+### 2) Set up database schema and transfer objects
+
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
@@ -49,24 +62,45 @@ console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes have been applied by checking your database:<table><thead><tr><td>Database Entity</td><td>Type</td><td>Event</td></tr></thead><tbody><tr><td>`spy_shipment_method_store`</td><td>table</td><td>created</td></tr></tbody></table>
+
+Make sure that the following changes have been applied by checking your database:
+
+| DATABASE ENTITY | TYPE | EVENT |
+| --- | --- | --- |
+| spy_shipment_method_store | table | created |
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes have been applied in transfer objects:<table><thead><tr><td>Transfer</td><td>Type</td><td>Event</td><td>Path</td></tr></thead><tbody><tr><td>`ShipmentTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ShipmentTransfer`</td></tr><tr><td>`StoreTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/StoreTransfer`</td></tr><tr><td>`DataImporterConfigurationTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/DataImporterConfigurationTransfer`</td></tr><tr><td>`DataImporterReaderConfigurationTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/DataImporterReaderConfigurationTransfer`</td></tr><tr><td>`DataImporterReportTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/DataImporterReportTransfer`</td></tr><tr><td>`DataImporterReportMessageTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/DataImporterReportMessageTransfer`</td></tr><tr><td>`TotalsTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/TotalsTransfer`</td></tr></tbody></table>
+
+Make sure that the following changes have been applied in transfer objects:
+
+| Transfer | Type | Event | Path |
+| --- | --- | --- | --- |
+| ShipmentTransfer | class | created | src/Generated/Shared/Transfer/ShipmentTransfer |
+| StoreTransfer | class | created | src/Generated/Shared/Transfer/StoreTransfer |
+| DataImporterConfigurationTransfer | class | created | src/Generated/Shared/Transfer/DataImporterConfigurationTransfer |
+| DataImporterReaderConfigurationTransfer | class | created | src/Generated/Shared/Transfer/DataImporterReaderConfigurationTransfer |
+| DataImporterReportTransfer | class | created | src/Generated/Shared/Transfer/DataImporterReportTransfer |
+| DataImporterReportMessageTransfer | class | created | src/Generated/Shared/Transfer/DataImporterReportMessageTransfer |
+| TotalsTransfer | class | created | src/Generated/Shared/Transfer/TotalsTransfer |
+
 {% endinfo_block %}
 
-### 3) Import Data
-#### Import Shipment Methods
+### 3) Import data
+
+#### Import shipment methods
 
 {% info_block infoBox "Info" %}
+
 The following imported entities will be used as shipment methods in Spryker OS.
+
 {% endinfo_block %}
 
 Prepare your data according to your requirements using our demo data:
 
 **vendor/spryker/spryker/Bundles/ShipmentDataImport/data/import**
-    
+
 ```yaml
 shipment_method_key,store
 spryker_dummy_shipment-standard,AT
@@ -89,30 +123,31 @@ spryker_no_shipment,DE
 spryker_no_shipment,US
 ```
 
-| Column | IS REQUIRED? | Data Type | Data Example | Data Explanation |
+| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| `shipment_method_key` | mandatory | string | spryker_dummy_shipment-standard | Key of an existing shipping method. |
-| `store` | mandatory | string | DE | Name of an existing store. |
+| shipment_method_key | mandatory | string | spryker_dummy_shipment-standard | Key of an existing shipping method. |
+| store | mandatory | string | DE | Name of an existing store. |
 
 Register the following data import plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `ShipmentDataImportPlugin` | Imports shipment method data into the database. | None | `\Spryker\Zed\ShipmentDataImport\Communication\Plugin` |
-| `ShipmentMethodPriceDataImportPlugin` | Imports shipment method price data into the database. | None | `\Spryker\Zed\ShipmentDataImport\Communication\Plugin` |
-| `ShipmentMethodStoreDataImportPlugin` | Imports shipment method store data into the database. | None | `\Spryker\Zed\ShipmentDataImport\Communication\Plugin` |
+| ShipmentDataImportPlugin | Imports shipment method data into the database. | None | \Spryker\Zed\ShipmentDataImport\Communication\Plugin |
+| ShipmentMethodPriceDataImportPlugin | Imports shipment method price data into the database. | None | \Spryker\Zed\ShipmentDataImport\Communication\Plugin |
+| ShipmentMethodStoreDataImportPlugin | Imports shipment method store data into the database. | None | \Spryker\Zed\ShipmentDataImport\Communication\Plugin |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
+
 ```php
 <?php
- 
+
 namespace Pyz\Zed\DataImport;
- 
+
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use Spryker\Zed\ShipmentDataImport\Communication\Plugin\ShipmentDataImportPlugin;
 use Spryker\Zed\ShipmentDataImport\Communication\Plugin\ShipmentMethodPriceDataImportPlugin;
 use Spryker\Zed\ShipmentDataImport\Communication\Plugin\ShipmentMethodStoreDataImportPlugin;
- 
+
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
     /**
@@ -132,16 +167,17 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 Enable the behaviors by registering the console commands:
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
+
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Console;
- 
+
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
 use Spryker\Zed\DataImport\Communication\Console\DataImportConsole;
 use Spryker\Zed\ShipmentDataImport\ShipmentDataImportConfig;
- 
+
 class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {
     /**
@@ -156,7 +192,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . ':' . ShipmentDataImportConfig::IMPORT_TYPE_SHIPMENT_PRICE),
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . ':' . ShipmentDataImportConfig::IMPORT_TYPE_SHIPMENT_METHOD_STORE),
         ];
- 
+
         return $commands;
     }
 }
@@ -171,22 +207,25 @@ console data:import:shipment-method-store
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that the configured data has been added to the `spy_shipment_method`, `spy_shipment_method_price`, and `spy_shipment_method_store` tables in the database.
+
 {% endinfo_block %}
 
-### 4) Set up Behavior
+### 4) Set up behavior
+
 Configure the data import to use your data on the project level.
 
 **src/Pyz/Zed/ShipmentDataImport/ShipmentDataImportConfig**
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Zed\ShipmentDataImport;
- 
+
 use Generated\Shared\Transfer\DataImporterConfigurationTransfer;
 use Spryker\Zed\ShipmentDataImport\ShipmentDataImportConfig as SprykerShipmentDataImportConfig;
- 
+
 class ShipmentDataImportConfig extends SprykerShipmentDataImportConfig
 {
     /**
@@ -196,7 +235,7 @@ class ShipmentDataImportConfig extends SprykerShipmentDataImportConfig
     {
         return $this->buildImporterConfiguration('shipment.csv', static::IMPORT_TYPE_SHIPMENT);
     }
- 
+
     /**
      * @return \Generated\Shared\Transfer\DataImporterConfigurationTransfer
      */
@@ -209,25 +248,25 @@ class ShipmentDataImportConfig extends SprykerShipmentDataImportConfig
 
 Configure shipment GUI module with money and store plugins.
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `MoneyCollectionFormTypePlugin` | Represents the money collection fields based on stores, currencies, and price types defined in the system. | None | `Spryker\Zed\Money\Communication\Plugin\Form` |
-| `StoreRelationToggleFormTypePlugin` | Represents a store relation toggle form based on stores registered in the system. | None | `Spryker\Zed\Store\Communication\Plugin\Form` |
-|`ShipmentTotalCalculatorPlugin`|Calculates shipment total using expenses.|None|`Spryker\Zed\Shipment\Communication\Plugin\Calculation`|
+| MoneyCollectionFormTypePlugin | Represents the money collection fields based on stores, currencies, and price types defined in the system. | None | Spryker\Zed\Money\Communication\Plugin\Form|
+| StoreRelationToggleFormTypePlugin | Represents a store relation toggle form based on stores registered in the system. | None | Spryker\Zed\Store\Communication\Plugin\Form |
+|ShipmentTotalCalculatorPlugin|Calculates shipment total using expenses.|None|Spryker\Zed\Shipment\Communication\Plugin\Calculation|
 
 **src/Pyz/Zed/ShipmentGui/ShipmentGuiDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\ShipmentGui;
- 
+
 use Spryker\Zed\Kernel\Communication\Form\FormTypeInterface;
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Money\Communication\Plugin\Form\MoneyCollectionFormTypePlugin;
 use Spryker\Zed\ShipmentGui\ShipmentGuiDependencyProvider as SprykerShipmentGuiDependencyProvider;
 use Spryker\Zed\Store\Communication\Plugin\Form\StoreRelationToggleFormTypePlugin;
- 
+
 class ShipmentGuiDependencyProvider extends SprykerShipmentGuiDependencyProvider
 {
     /**
@@ -239,7 +278,7 @@ class ShipmentGuiDependencyProvider extends SprykerShipmentGuiDependencyProvider
     {
         return new MoneyCollectionFormTypePlugin();
     }
- 
+
     /**
      * @return \Spryker\Zed\Kernel\Communication\Form\FormTypeInterface
      */
@@ -251,19 +290,21 @@ class ShipmentGuiDependencyProvider extends SprykerShipmentGuiDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that:<ul><li>You can see the list of shipment methods in the **Back Office > Administration >  Shipments > Delivery Methods** section.</li><li>You can see information about the shipment method in the **Back Office > Administration >  Shipments > Delivery Methods > View** section.</li><li>You can create the shipment method in the **Back Office > Administration >  Shipments > Delivery Methods > Create** section.</li><li>You can edit the shipment method in the **Back Office > Administration >  Shipments > Delivery Methods > Edit** section.</li><li>You can delete the shipment method in the **Back Office > Administration > Shipments > Delivery Methods > Delete** section.</li></ul>
+
 {% endinfo_block %}
 
 **src/Pyz/Zed/Calculation/CalculationDependencyProvider.php**
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Calculation;
- 
+
 use Spryker\Zed\Calculation\CalculationDependencyProvider as SprykerCalculationDependencyProvider;
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Shipment\Communication\Plugin\Calculation\ShipmentTotalCalculatorPlugin;
- 
+
 class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
 {
     protected function getQuoteCalculatorPluginStack(Container $container)
@@ -274,4 +315,3 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
     }
 }
 ```
-

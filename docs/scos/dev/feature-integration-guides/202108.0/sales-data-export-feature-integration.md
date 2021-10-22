@@ -14,11 +14,14 @@ related:
     link: docs/scos/dev/sdk/page.version/data-export.html
 ---
 
-## Install Feature Core
+## Install feature core
+
 Follow the steps below to install feature core.
 
-### 1) Install Required Modules Using Composer
+### 1) Install the required modules using Composer
+
 Run the following command to install the required modules:
+
 ```bash
 composer require spryker/data-export:"^0.1.0" spryker/data-export-extension:"^0.1.0" spryker/sales-data-export:"^0.1.0" --update-with-dependencies
 ```
@@ -27,7 +30,7 @@ composer require spryker/data-export:"^0.1.0" spryker/data-export-extension:"^0.
 
 Make sure that the following modules have been installed:
 
-| Module | Expected directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | DataExport | vendor/spryker/data-export |
 | DataExportExtension | vendor/spryker/data-export-extension |
@@ -35,7 +38,7 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up Transfer Objects
+### 2) Set up transfer objects
 
 1. Run the following command to generate transfer changes:
 
@@ -47,8 +50,7 @@ vendor/bin/console transfer:generate
 
 Make sure that the following changes are present in transfer objects::
 
-
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | DataExportBatch | class | created | src/Generated/Shared/Transfer/DataExportBatchTransfer.php |
 | DataExportConfiguration | class | created |src/Generated/Shared/Transfer/DataExportConfigurationTransfer.php |
@@ -62,14 +64,16 @@ Make sure that the following changes are present in transfer objects::
 
 {% endinfo_block %}
 
-### 3) Set up Behavior
+### 3) Set up behavior
+
 1. Register the console command in `ConsoleDependencyProvider`
 
-| Command | Specification | Prerequisites | Namespace |
+| COMMAND | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | DataExportConsole | Runs data export. | None | Spryker\Zed\DataExport\Communication\Console |
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
+
 ```php
 <?php
 
@@ -102,7 +106,9 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 Run `vendor/bin/console list` and make sure that data:export command is on the list of the available commands.
 
 {% endinfo_block %}
+
 2. Add the data export configuration .yml file to the `data/export/config` folder:
+
 ```yml
 version: 1
 
@@ -147,15 +153,17 @@ actions:
           <<: *default_filter_criteria
           store_name: [AT]
  ```
+
  3. Activate the following plugins:
- 
-| Plugin | Specification | Prerequisites | Namespace |
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | OrderDataEntityExporterPlugin | Adds the `order` data exporter. | None | Spryker\Zed\SalesDataExport\Communication\Plugin\DataExport |
 | OrderExpenseDataEntityExporterPlugin | Adds the `order-expense` data exporter. | None | Spryker\Zed\SalesDataExport\Communication\Plugin\DataExport |
 | OrderItemDataEntityExporterPlugin | Adds the `order-item` data exporter. | None | Spryker\Zed\SalesDataExport\Communication\Plugin\DataExport |
 
 **src/Pyz/Zed/DataExport/DataExportDependencyProvider.php**
+
 ```php
 <?php
 
@@ -181,6 +189,7 @@ class DataExportDependencyProvider extends SprykerDataExportDependencyProvider
     }
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 To verify that plugins are activated, run console command `vendor/bin/console data:export -c order_export_config.yml` and check that files with the exported data were created in the `data/export` folder.

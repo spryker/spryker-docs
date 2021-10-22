@@ -22,17 +22,18 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/merchant-product-restrictions-feature-integration.html
 ---
 
-## Install Feature Core
+## Install feature core
+
 ### Prerequisites
 
 To start feature integration, overview and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Configurable Bundle  | master |
-| Product Images | master |
+| Configurable Bundle  | {{page.version}} |
+| Product Images | {{page.version}} |
 
-### 1) Set up Database Schema and Transfer Objects
+### 1) Set up database schema and transfer objects
 
 Adjust the schema definition so that entity changes will trigger the events:
 
@@ -67,9 +68,9 @@ console transfer:generate
 
 Make sure that the following changes have been applied by checking your database:
 
-| Database Entity | Type | Event |
+| DATABASE ENTITY | TYPE | EVENT |
 | --- | --- | --- |
-| `spy_configurable_bundle_template_image_storage` | table | created |
+| spy_configurable_bundle_template_image_storage | table | created |
 
 {% endinfo_block %}
 
@@ -77,19 +78,20 @@ Make sure that the following changes have been applied by checking your database
 
 Make sure that the following changes have been applied in transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | `SpyConfigurableBundleTemplateImageStorageEntity` | class | created | `src/Generated/Shared/Transfer/SpyConfigurableBundleTemplateImageStorageEntityTransfer` |
 
 {% endinfo_block %}
 
-### 2) Configure Export to Redis and Elasticsearch
+### 2) Configure export to Redis and Elasticsearch
+
 This step will publish tables on change (create, edit) to the `spy_configurable_bundle_template_image_storage` and synchronize the data to Storage.
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `ConfigurableBundleTemplateImagePageSearchEventSubscriber` | Registers listeners that are responsible for publishing configurable bundle template image entity changes to search when a related entity change event occurs. | None | `Spryker\Zed\ConfigurableBundlePageSearch\Communication\Plugin\Event\Subscriber` |
-| `ConfigurableBundleTemplateImagePageSearchEventSubscriber` | Registers listeners that are responsible for publishing configurable bundle template image entity changes to search when a related entity change event occurs. | None | `Spryker\Zed\ConfigurableBundlePageSearch\Communication\Plugin\Event\Subscriber` |
+| ConfigurableBundleTemplateImagePageSearchEventSubscriber | Registers listeners that are responsible for publishing configurable bundle template image entity changes to search when a related entity change event occurs. | None | Spryker\Zed\ConfigurableBundlePageSearch\Communication\Plugin\Event\Subscriber |
+| ConfigurableBundleTemplateImagePageSearchEventSubscriber | Registers listeners that are responsible for publishing configurable bundle template image entity changes to search when a related entity change event occurs. | None | Spryker\Zed\ConfigurableBundlePageSearch\Communication\Plugin\Event\Subscriber |
 
 **src/Pyz/Zed/Event/EventDependencyProvider.php**
 
@@ -115,12 +117,12 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 }
 ```
 
-#### Set up Re-Generate and Re-Sync Features
+#### Set up re-generate and re-sync features
 
-| Plugin | Specification | header | header |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `ConfigurableBundleTemplateImageEventResourceBulkRepositoryPlugin` | Allows populating empty storage table with data. | None | `Spryker\Zed\ConfigurableBundleStorage\Communication\Plugin\Event` |
-| `ConfigurableBundleTemplateImageSynchronizationDataBulkPlugin` | Allows synchronizing the entire storage table content into Storage. | None | `Spryker\Zed\ConfigurableBundlePageSearch\Communication\Plugin\Event\Subscriber` |
+| ConfigurableBundleTemplateImageEventResourceBulkRepositoryPlugin | Allows populating empty storage table with data. | None | Spryker\Zed\ConfigurableBundleStorage\Communication\Plugin\Event |
+| ConfigurableBundleTemplateImageSynchronizationDataBulkPlugin | Allows synchronizing the entire storage table content into Storage. | None | Spryker\Zed\ConfigurableBundlePageSearch\Communication\Plugin\Event\Subscriber |
 
 **src/Pyz/Zed/EventBehavior/EventBehaviorDependencyProvider.php**
 
@@ -172,15 +174,14 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 {% info_block warningBox "Verification" %}
 
-
-1. Make sure that when you added some data to tables `spy_product_image_set`, `spy_product_image_set_to_product_image`, `spy_product_image` with `fk_resource_configurable_bundle_template` and run `console trigger:event -r configurable_bundle_template_image` command, the changes are reflected in the `spy_configurable_bundle_template_image_storage` table. 
-2. Make sure that after step #4  or after `console sync:data configurable_bundle_template_image` command execution, the data s added to the `spy_configurable_bundle_template_image_storage` table and Redis. 
+1. Make sure that when you added some data to tables `spy_product_image_set`, `spy_product_image_set_to_product_image`, `spy_product_image` with `fk_resource_configurable_bundle_template` and run `console trigger:event -r configurable_bundle_template_image` command, the changes are reflected in the `spy_configurable_bundle_template_image_storage` table.
+2. Make sure that after step #4  or after `console sync:data configurable_bundle_template_image` command execution, the data s added to the `spy_configurable_bundle_template_image_storage` table and Redis.
 3. Make sure that when a product image set with the `fk_resource_configurable_bundle_template` is created or edited through ORM, it is exported to Redis accordingly.
 4. Ensure that Elasticsearch document has been expanded by images property.
 
 {% endinfo_block %}
 
-| Storage Type | Target Entity | Example Expected Data Identifier |
+| STORAGE TYPE | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
 | --- | --- | --- |
 | Elasticsearch | `ConfigurableBundleTemplate` | `configurable_bundle_template:en_us:1` |
 | Redis | `ConfigurableBundleTemplateImage` | `kv:configurable_bundle_template_image:1` |
@@ -188,15 +189,15 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 **Example expected data fragment for Elasticsearch**
 
 ```xml
-{ 
+{
    "locale":"en_US",
    "type":"configurable_bundle_template",
-   "search-result-data":{ 
+   "search-result-data":{
       "idConfigurableBundleTemplate":1,
       "uuid":"8d8510d8-59fe-5289-8a65-19f0c35a0089",
       "name":"configurable_bundle.templates.configurable-bundle-all-in.nam",
-      "images":[ 
-         { 
+      "images":[
+         {
             "idmage":1084,
             "idProductImageSetToProductImage":1084,
             "sortOrder":0,
@@ -211,7 +212,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 **Example expected data fragment for Redis**
 
 ```xml
-{ 
+{
      "id_configurable_bundle_template": 1,
       "image_sets": [
         {
@@ -230,7 +231,8 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 ### 3) Import Data
 
-#### Import Configurable Bundle Images Data
+#### Import configurable bundle images data
+
 Expand `spy_product_image_set` table:
 
 **src/Pyz/Zed/DataImport/Persistence/Propel/Schema/spy_product_image.schema.xml**
@@ -250,7 +252,7 @@ Expand `spy_product_image_set` table:
 </database>
 ```
 
-Expand ProductImageSetTransfer transfer:
+Expand `ProductImageSetTransfer` transfer:
 
 **src/Pyz/Shared/ProductImage/Transfer/product_image.transfer.xml**
 
@@ -267,7 +269,7 @@ Expand ProductImageSetTransfer transfer:
 </transfers>
 ```
 
-Run the following commands to apply database changes and generate entity and transfer 
+Run the following commands to apply database changes and generate entity and transfer
 changes:
 
 ```bash
@@ -288,10 +290,10 @@ t000002,product_image_set_3
 t000002,product_image_set_4
 ```
 
-| Column | IS REQUIRED? | Data Type | Data Example | Data Explanation |
+| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| `configurable_bundle_template_key` | mandatory | string | `t000001` | Internal data import identifier for the configurable bundle template. |
-| `product_image_set_key` | mandatory | string | `product_image_set_1` | Internal data import identifier for the product image set. |
+| configurable_bundle_template_key | mandatory | string | t000001 | Internal data import identifier for the configurable bundle template. |
+| product_image_set_key | mandatory | string | product_image_set_1 | Internal data import identifier for the product image set. |
 
 {% info_block warningBox "Verification" %}
 
@@ -313,17 +315,17 @@ Expand your data import steps for product image sets:
 
 Register the following plugins to enable data import:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `ConfigurableBundleTemplateImageDataImportPlugin` | Links configurable bundle templates with product image sets. | None | `Spryker\Zed\ConfigurableBundleDataImport\Communication\Plugin` |
+| ConfigurableBundleTemplateImageDataImportPlugin | Links configurable bundle templates with product image sets. | None | Spryker\Zed\ConfigurableBundleDataImport\Communication\Plugin |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\DataImport;
- 
+
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use Spryker\Zed\ConfigurableBundleDataImport\Communication\Plugin\ConfigurableBundleTemplateImageDataImportPlugin;
 
@@ -350,6 +352,6 @@ Make sure that `the spy_product_image`, `spy_product_image_set`, `spy_product_im
 
 Make sure that data is synced to the `spy_configurable_bundle_template_image_storage` table.
 
-Make sure that the latest data is present at Elasticsearch and Redis documents for configurable bundle templates. 
+Make sure that the latest data is present at Elasticsearch and Redis documents for configurable bundle templates.
 
 {% endinfo_block %}

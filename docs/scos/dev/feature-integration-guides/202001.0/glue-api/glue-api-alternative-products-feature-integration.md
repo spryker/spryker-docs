@@ -1,12 +1,12 @@
 ---
-title: Alternative Products API feature integration
+title: Glue API - Alternative products feature integration
 description: This guide will navigate you through the process of installing and configuring the Alternative Products API feature in Spryker OS.
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/v3/docs/alternative-products-api-feature-integration-201907
-originalArticleId: 2e07a869-a881-4bec-82d9-beb5c555c177
+originalLink: https://documentation.spryker.com/v4/docs/alternative-products-api-feature-integration-201907
+originalArticleId: fba9f24d-9bdf-416c-84aa-7628a9b76d6a
 redirect_from:
-  - /v3/docs/alternative-products-api-feature-integration-201907
-  - /v3/docs/en/alternative-products-api-feature-integration-201907
+  - /v4/docs/alternative-products-api-feature-integration-201907
+  - /v4/docs/en/alternative-products-api-feature-integration-201907
 related:
   - title: Retrieving Alternative Products
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/retrieving-alternative-products.html
@@ -18,9 +18,9 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Required Sub-Feature |
 | --- | --- | --- |
-| Spryker Core | 201907.0 | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
+| Glue Application | 201907.0 | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
 | Alternative Products | 201907.0 | |
-| Products | 201907.0 | [Product API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/products-feature-integration.html) |
+| Glue API: Products | 201907.0 | [Product API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/products-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
 
@@ -47,7 +47,7 @@ Activate the following plugins:
 | `AbstractAlternativeProductsResourceRoutePlugin` | Registers the abstract alternative products resource. | None | `Spryker\Glue\AlternativeProductsRestApi\Plugin\GlueApplication` |
 | `ConcreteAlternativeProductsResourceRoutePlugin` | Registers the concrete alternative products resource. | None | `Spryker\Glue\AlternativeProductsRestApi\Plugin\GlueApplication` |
 
-<details open> <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php
 
 ```php
 <?php
@@ -72,9 +72,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
-
-</br>
-</details>
 
 <section contenteditable="false" class="warningBox"><div class="content">
 Make sure that the following endpoints are available:

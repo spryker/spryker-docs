@@ -14,7 +14,7 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/checking-out-purchases-and-getting-checkout-data.html
   - title: Multiple Carts feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/multiple-carts-feature-integration.html
-  - title: Glue API- Cart feature integration
+  - title: Glue API - Cart feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-cart-feature-integration.html
   - title: Shopping Cart Widget Feature Overview
     link: docs/scos/user/features/page.version/cart-feature-overview/cart-widget-overview.html

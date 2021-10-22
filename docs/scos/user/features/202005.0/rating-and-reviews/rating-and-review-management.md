@@ -8,7 +8,7 @@ redirect_from:
   - /v5/docs/rating-revew-management
   - /v5/docs/en/rating-revew-management
 related:
-  - title: Glue API- Product Rating & Reviews feature integration
+  - title: Glue API - Product Rating & Reviews feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-rating-and-reviews-feature-integration.html
   - title: Product Group + Product Rating & Reviews feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-group-product-rating-and-reviews-feature-integration.html

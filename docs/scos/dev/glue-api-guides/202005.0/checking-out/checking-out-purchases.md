@@ -10,7 +10,7 @@ redirect_from:
 related:
   - title: Managing Carts
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/managing-carts.html
-  - title: Glue API- Checkout feature integration
+  - title: Glue API - Checkout feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-checkout-feature-integration.html
   - title: Checkout
     link: docs/scos/user/features/page.version/checkout-feature-overview/checkout-feature-overview.html

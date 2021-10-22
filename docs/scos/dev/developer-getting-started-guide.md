@@ -21,6 +21,22 @@ redirect_from:
   - /v2/docs/en/dev-getting-started
   - /v1/docs/dev-getting-started
   - /v1/docs/en/dev-getting-started
+  - /2021080/docs/about-the-development-guide
+  - /2021080/docs/en/about-the-development-guide
+  - /docs/about-the-development-guide
+  - /docs/en/about-the-development-guide
+  - /v6/docs/about-the-development-guide
+  - /v6/docs/en/about-the-development-guide
+  - /v5/docs/about-the-development-guide
+  - /v5/docs/en/about-the-development-guide
+  - /v4/docs/about-the-development-guide
+  - /v4/docs/en/about-the-development-guide
+  - /v3/docs/about-the-development-guide
+  - /v3/docs/en/about-the-development-guide
+  - /v2/docs/about-the-development-guide
+  - /v2/docs/en/about-the-development-guide
+  - /v1/docs/about-the-development-guide
+  - /v1/docs/en/about-the-development-guide
 ---
 
 Welcome to the Spryker Commerce OS getting started guide.
@@ -131,18 +147,3 @@ Get to know the parts of the Spryker Development Virtual Machine with which we s
 * What is the Spryker DevVM (Development Virtual Machine) and why do we need it?
 * Main Structure
 * Technology Stack: Linux distribution, PHP, Postgres, MySQL, ES, Redis, Queue, Jenkins-->
-
-
-
-## Next steps
-
-Select one of the topics below depending on what you want to do next:
-
-* [About Spryker](/docs/scos/user/intro-to-spryker/about-spryker.html): general information about Spryker, news, and release notes.
-* [Features](/docs/scos/user/features/{{site.version}}/overview-of-the-feature-guides.html): general information about the Spryker features.
-* [Glue REST API](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-rest-api.html): Spryker Glue REST API overview, reference, and guides.
-* [User guides](/docs/scos/user/back-office-user-guides/{{site.version}}/about-back-office-user-guides.html): step-by-step Backoffice and Storefront user guides.
-* [Developer guides](/docs/scos/dev/overview-of-the-developer-guides.html): technical information and guides for developers.
-* [Technology partners](/docs/scos/user/technology-partners/{{site.version}}/technology-partner-integration.html): Spryker technology partners information and integration guides.
-* [Migration and integration](/docs/scos/dev/migration-and-integration/{{site.version}}/about-migration-and-integration-guides.html): instructions on how to migrate to newer versions of modules and features.
-* [Tutorials](/docs/scos/dev/tutorials-and-howtos/tutorials-and-howtos.html): tutorials and HowTos.

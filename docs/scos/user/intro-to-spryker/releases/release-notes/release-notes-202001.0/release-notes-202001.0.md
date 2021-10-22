@@ -1,5 +1,5 @@
 ---
-title: Release Notes {{page.version}}
+title: Release Notes 202001.0
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes-2020010
 originalArticleId: 8e561ae0-5d15-45d1-934d-94a7c36d4be8
@@ -15,7 +15,7 @@ redirect_from:
   - /v6/docs/release-notes-2020010
   - /v6/docs/en/release-notes-2020010
 related:
-  - title: DevOps Migration Guide {{page.version}}
+  - title: DevOps Migration Guide 202001.0
     link: docs/scos/dev/migration-and-integration/page.version/devops-migration-guide-202001.0.html
 ---
 

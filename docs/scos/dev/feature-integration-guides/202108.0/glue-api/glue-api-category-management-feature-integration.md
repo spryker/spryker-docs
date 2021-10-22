@@ -1,5 +1,5 @@
 ---
-title: Glue API - Category management feature integration
+title: Glue API - Category Management feature integration
 description: This guide will navigate you through the process of installing and configuring the Category API feature in Spryker OS.
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-category-management-feature-integration
@@ -24,9 +24,9 @@ To start feature integration, overview and install the necessary features:
 |FEATURE  |VERSION |REQUIRED SUB-FEATURE |
 |---  |--- |--- |
 | Spryker Core |dev-master |[Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Category Management |dev-master| | 
+| Category Management |dev-master| |
 
-  
+
 
 ## 1) Install the required modules using Composer
 
@@ -34,11 +34,11 @@ Run the following command to install the required modules:
 ```
 composer require spryker/categories-rest-api:"^1.1.3" --update-with-dependencies
 ```
-  
+
 {% info_block warningBox "Verification" %}
 
 
-Make sure that the following module has been installed: 
+Make sure that the following module has been installed:
 
 | MODULE |EXPECTED DIRECTORY |
 | --- | --- |
@@ -76,7 +76,7 @@ class NavigationsRestApiConfig extends SprykerNavigationsRestApiConfig
     }
 }
 ```
-  
+
 
 ## 3) Set up transfer objects
 
@@ -85,7 +85,7 @@ Generate transfer changes:
 ```bash
 console transfer:generate
 ```
-  
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following changes have occurred:
@@ -101,13 +101,13 @@ Make sure that the following changes have occurred:
 ## 4) Enable resources and relationships
 
 Activate the following plugins:
-  
-|PLUGIN| SPECIFICATION| PREREQUISITES| NAMESPACE| 
+
+|PLUGIN| SPECIFICATION| PREREQUISITES| NAMESPACE|
 |--- |--- |--- |--- |
-|CategoriesResourceRoutePlugin| Registers the `category-tree` resource.| | Spryker\Glue\CategoriesRestApi\Plugin| 
-|CategoryResourceRoutePlugin| Registers the `category-nodes` resource.| | Spryker\Glue\CategoriesRestApi\Plugin | 
+|CategoriesResourceRoutePlugin| Registers the `category-tree` resource.| | Spryker\Glue\CategoriesRestApi\Plugin|
+|CategoryResourceRoutePlugin| Registers the `category-nodes` resource.| | Spryker\Glue\CategoriesRestApi\Plugin |
 |CategoryNodeRestUrlResolverAttributesTransferProviderPlugin| Maps the data for `RestUrlResolverAttributesTransfer` from `UrlStorageTransfer`.| | Spryker\Glue\CategoriesRestApi\Plugin\UrlsRestApi|
-  
+
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
@@ -134,7 +134,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
-  
+
 
 **src/Pyz/Glue/UrlsRestApi/UrlsRestApiDependencyProvider.php**
 
@@ -159,17 +159,16 @@ class UrlsRestApiDependencyProvider extends SprykerUrlsRestApiDependencyProvider
     }
 }
 ```
-  
+
 
 {% info_block warningBox "Verification" %}
- 
+
 
 Make sure that the following endpoints are available:
 
 *   `http://glue.mysprykershop.com/category-trees`
-    
+
 *   `http://glue.mysprykershop.com/category-nodes/{% raw %}{{{% endraw %}category_node_id{% raw %}}}{% endraw %}`
-    
+
 
 {% endinfo_block %}
-  

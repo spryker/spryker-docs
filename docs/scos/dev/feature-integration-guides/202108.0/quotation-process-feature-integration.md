@@ -18,39 +18,50 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/checkout-quotation-process-feature-integration.html
 ---
 
-## Install Feature Core
+## Install feature core
+
 ### Prerequisites
 
 To start feature integration, overview and install the necessary features:
 
-| Name |Version  |
+| NAME | VERSION |
 | --- | --- |
-|Spryker Core  |202009.0  |
-| Cart | 202009.0 |
-|Company Account  | 202009.0 |
-|Prices  |202009.0  |
-| Persistent Cart |202009.0  |
-| Agent Assist | 202009.0 |
+|Spryker Core  | {{page.version}} |
+| Cart | {{page.version}} |
+|Company Account  | {{page.version}} |
+|Prices  | {{page.version}} |
+| Persistent Cart | {{page.version}} |
+| Agent Assist | {{page.version}} |
 
-### 1) Install Required Modules using Composer
+### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
+
 ```bash
-composer require spryker-feature/quotation-process: "202009.0" --update-with-dependencies
+composer require spryker-feature/quotation-process: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following modules were installed:<table><thead><tr><td>Module</td><td>Expected Directory</td></tr></thead><tbody><tr><td>`QuoteRequest`</td><td>`vendor/spryker/quote-request`</td></tr><tr><td>`QuoteRequestExtension`</td><td>`vendor/spryker/quote-request-extension`</td></tr><tr><td>`QuoteRequestAgent`</td><td>`vendor/spryker/quote-request-agent`</td></tr><tr><td>`QuoteRequestDataImport`</td><td>`vendor/spryker/quote-request-data-import`</td></tr></tbody></table>
+
+Make sure that the following modules were installed:
+
+| MODULE | EXPECTED DIRECTORY |
+| --- | --- |
+| QuoteRequest | vendor/spryker/quote-request |
+| QuoteRequestExtension | vendor/spryker/quote-request-extension |
+| QuoteRequestAgent | vendor/spryker/quote-request-agent |
+| QuoteRequestDataImport | vendor/spryker/quote-request-data-import |
+
 {% endinfo_block %}
 
-### 2) Set up Configuration
+### 2) Set up configuration
 
 Add the following configuration to your project:
 
-|Configuration  | Specification |Namespace  |
+| CONFIGURATION  | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
-|`QuoteConfig::getQuoteFieldsAllowedForSaving`  | Used to allow saving quote request related fields of the quote to the database. |`Pyz\Zed\Quote`  |
-|`QuoteRequestConfig::getQuoteFieldsAllowedForSaving ` |Used to define which quota data should be saved in the database during the request for quote process.  |`Pyz\Zed\QuoteRequest`  |
+|QuoteConfig::getQuoteFieldsAllowedForSaving  | Used to allow saving quote request related fields of the quote to the database. |Pyz\Zed\Quote  |
+|QuoteRequestConfig::getQuoteFieldsAllowedForSaving |Used to define which quota data should be saved in the database during the request for quote process.  |Pyz\Zed\QuoteRequest |
 |Outdated quote request closing cronjob (See below in `config/Zed/cronjobs/jobs.php`)  | Add cronjob that closes outdated quote requests. | - |
 |Customer login access control regular expression (See below in `config/Shared/config_default.php`) | Used to close access for not logged in customers. | - |
 
@@ -58,12 +69,12 @@ Add the following configuration to your project:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Quote;
- 
+
 use Generated\Shared\Transfer\QuoteTransfer;
 use Spryker\Zed\Quote\QuoteConfig as SprykerQuoteConfig;
- 
+
 class QuoteConfig extends SprykerQuoteConfig
 {
     /**
@@ -79,18 +90,22 @@ class QuoteConfig extends SprykerQuoteConfig
 }
 ```
 
-@(Waring)(Verification)(Make sure that when you converted quote request to quote, JSON data in the database column `spy_quote.quote_data` of the corresponding quote contains `quoteRequestVersionReference`.)
+{% info_block warningBox “Verification” %}
+
+Make sure that when you converted quote request to quote, JSON data in the database column `spy_quote.quote_data` of the corresponding quote contains `quoteRequestVersionReference`.
+
+{% endinfo_block %}
 
 **src/Pyz/Zed/QuoteRequest/QuoteRequestConfig.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\QuoteRequest;
- 
+
 use Generated\Shared\Transfer\QuoteTransfer;
 use Spryker\Zed\QuoteRequest\QuoteRequestConfig as SprykerQuoteRequestConfig;
- 
+
 class QuoteRequestConfig extends SprykerQuoteRequestConfig
 {
     /**
@@ -119,16 +134,18 @@ class QuoteRequestConfig extends SprykerQuoteRequestConfig
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that,  when you created quote request, JSON data in the database column `spy_quote_request_version.quote` of the corresponding quote request contains `customerReference`.
+
 {% endinfo_block %}
 
 **config/Zed/cronjobs/jobs.php**
 
 ```php
 <?php
- 
+
 $stores = require(APPLICATION_ROOT_DIR . '/config/Shared/stores.php');
- 
+
 $allStores = array_keys($stores);
 /* QuoteRequest */
 $jobs[] = [
@@ -142,22 +159,26 @@ $jobs[] = [
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that quote request with outdated **Valid Until** changes its status to closed within one hour.
+
 {% endinfo_block %}
 
 **config/Shared/config_default.php**
 
 ```php
 <?php
- 
+
 $config[CustomerConstants::CUSTOMER_SECURED_PATTERN] = '(^/login_check$|^(/en|/de)?/customer($|/)|^(/en|/de)?/wishlist($|/)|^(/en|/de)?/shopping-list($|/)|^(/en|/de)?/quote-request($|/)|^(/en|/de)?/company(?!/register)($|/)|^(/en|/de)?/multi-cart($|/)|^(/en|/de)?/shared-cart($|/)|^(/en|/de)?/cart(?!/add)($|/)|^(/en|/de)?/checkout($|/))';
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that `http://mysprykershop.com/quote-request` with not authenticated user redirects to the login page.
+
 {% endinfo_block %}
 
-### 2) Set up the Database Schema and Transfer Objects
+### 2) Set up the database schema and transfer objects
 
 Run the following commands to apply database changes and generate entity and transfer changes:
 
@@ -168,14 +189,36 @@ console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes applied by checking your database:<table><thead><tr><td>Database Entity</td> <td>Type</td><td>Event</td></tr></thead><tbody><tr><td>`spy_quote_request`</td><td>table</td><td>created</td></tr><tr><td>`spy_quote_request_version`</td><td>table</td><td>created</td></tr></tbody></table>
+
+Make sure that the following changes applied by checking your database:
+
+| DATABASE ENTITY | TYPE | EVENT |
+| --- | --- | --- |
+| spy_quote_request | table | created |
+| spy_quote_request_version | table | created |
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes in transfer objects:<table><thead><tr><td>Transfer</td><td>Type</td><td>Event</td><td>Path</td></tr></thead><tbody><tr><td>`SpyQuoteRequestEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyQuoteRequestEntityTransfer`</td></tr><tr><td>`SpyQuoteRequestVersionEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyQuoteRequestVersionEntityTransfer`</td></tr><tr><td>`CompanyUserCriteria`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CompanyUserCriteria`</td></tr><tr><td>`QuoteRequestFilter`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/QuoteRequestFilter`</td></tr><tr><td>`QuoteRequestResponse`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/QuoteRequestResponse`</td></tr><tr><td>`QuoteRequestCollection`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/QuoteRequestCollection`</td></tr><tr><td>`QuoteRequestVersionCollection`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/QuoteRequestVersionCollection`</td></tr><tr><td>`QuoteRequest`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/QuoteRequest`</td></tr><tr><td>`QuoteRequestVersion`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/QuoteRequestVersion`</td></tr><tr><td>`QuoteRequestVersionFilter`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/QuoteRequestVersionFilter`</td></tr></tbody></table>
+
+Make sure that the following changes in transfer objects:
+
+| TRANSFER | TYPE | EVENT | PATH |
+| --- | --- | --- | --- |
+| SpyQuoteRequestEntity | class | created | src/Generated/Shared/Transfer/SpyQuoteRequestEntityTransfer |
+| SpyQuoteRequestVersionEntity | class | created | src/Generated/Shared/Transfer/SpyQuoteRequestVersionEntityTransfer |
+| CompanyUserCriteria | class | created | src/Generated/Shared/Transfer/CompanyUserCriteria |
+| QuoteRequestFilter | class | created | src/Generated/Shared/Transfer/QuoteRequestFilter |
+| QuoteRequestResponse | class | created | src/Generated/Shared/Transfer/QuoteRequestResponse |
+| QuoteRequestCollection | class | created | src/Generated/Shared/Transfer/QuoteRequestCollection |
+| QuoteRequestVersionCollection | class | created | src/Generated/Shared/Transfer/QuoteRequestVersionCollection |
+| QuoteRequest | class | created | src/Generated/Shared/Transfer/QuoteRequest |
+| QuoteRequestVersion | class | created | src/Generated/Shared/Transfer/QuoteRequestVersion |
+| QuoteRequestVersionFilter | class | created | src/Generated/Shared/Transfer/QuoteRequestVersionFilter |
+
 {% endinfo_block %}
 
-### 4) Add Translations
+### 4) Add translations
 
 Append glossary according to your configuration:
 
@@ -229,32 +272,35 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that in the database the configured data are added to the `spy_glossary` table.
+
 {% endinfo_block %}
 
-### 5) Set up Behavior
-#### Set up Quote Request Workflow
+### 5) Set up behavior
+
+#### Set up quote request workflow
 
 Enable the following behaviors by registering the plugins:
 
-| Plugin | Specification | Prerequisites| Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `QuoteRequestDatabaseStrategyPreCheckPlugin` | Disallows database strategy when editing quote items. | None | `Spryker\Client\QuoteRequest\Plugin\Quote` |
-| `PersistentCartQuotePersistPlugin` | Makes full replacement of the customer quote. | None | `Spryker\Client\PersistentCart\Plugin` |
-| `CloseOutdatedQuoteRequestConsole` | Registers console command for closing outdated quote requests. | None | `Spryker\Zed\QuoteRequest\Communication\Console` |
-| `SanitizeQuoteRequestQuoteLockPreResetPlugin` | Sanitizes data related to the request for a quote in the quote. | None | `Spryker\Zed\QuoteRequest\Communication\Plugin\Cart` |
-| `SanitizeSourcePricesQuoteLockPreResetPlugin` | Sanitizes source prices in quote items. | None | `Spryker\Zed\PriceCartConnector\Communication\Plugin\Cart` |
+| QuoteRequestDatabaseStrategyPreCheckPlugin | Disallows database strategy when editing quote items. | None | Spryker\Client\QuoteRequest\Plugin\Quote |
+| PersistentCartQuotePersistPlugin | Makes full replacement of the customer quote. | None | Spryker\Client\PersistentCart\Plugin |
+| CloseOutdatedQuoteRequestConsole | Registers console command for closing outdated quote requests. | None | Spryker\Zed\QuoteRequest\Communication\Console |
+| SanitizeQuoteRequestQuoteLockPreResetPlugin | Sanitizes data related to the request for a quote in the quote. | None | Spryker\Zed\QuoteRequest\Communication\Plugin\Cart |
+| SanitizeSourcePricesQuoteLockPreResetPlugin| Sanitizes source prices in quote items. | None | Spryker\Zed\PriceCartConnector\Communication\Plugin\Cart |
 
 **Pyz\Client\Quote\QuoteDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\Quote;
- 
+
 use Spryker\Client\Quote\QuoteDependencyProvider as BaseQuoteDependencyProvider;
 use Spryker\Client\QuoteRequest\Plugin\Quote\QuoteRequestDatabaseStrategyPreCheckPlugin;
- 
+
 class QuoteDependencyProvider extends BaseQuoteDependencyProvider
 {
     /**
@@ -268,22 +314,24 @@ class QuoteDependencyProvider extends BaseQuoteDependencyProvider
     }
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure editing quote request items does not trigger new quote creation in persistence.
 
 {% endinfo_block %}
+
 **Pyz\Client\PersistentCart\PersistentCartDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\PersistentCart;
- 
+
 use Spryker\Client\PersistentCart\PersistentCartDependencyProvider as SprykerPersistentCartDependencyProvider;
 use Spryker\Client\PersistentCartExtension\Dependency\Plugin\QuotePersistPluginInterface;
 use Spryker\Client\PersistentCart\Plugin\PersistentCartQuotePersistPlugin;
- 
+
 class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyProvider
 {
     /**
@@ -295,22 +343,25 @@ class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyPr
     }
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that you can edit quote request items.
 
 {% endinfo_block %}
+
 **Pyz\Zed\Console\ConsoleDependencyProvider.php**
+
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Console;
- 
+
 use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\QuoteRequest\Communication\Console\CloseOutdatedQuoteRequestConsole;
- 
- 
+
+
 class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {
     /**
@@ -323,28 +374,31 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
         $commands = [
             new CloseOutdatedQuoteRequestConsole(),
         ];
- 
- 
+
+
         return $commands;
     }
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that status of quote request with outdated Valid Until changes to closed after you run `console quote-request:close-outdated` command.
 
 {% endinfo_block %}
+
 **Pyz/Client/Cart/CartDependencyProvider.php**
+
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Cart;
- 
+
 use Spryker\Zed\Cart\CartDependencyProvider as SprykerCartDependencyProvider;
 use Spryker\Zed\PriceCartConnector\Communication\Plugin\Cart\SanitizeSourcePricesQuotePreUnlockPlugin;
 use Spryker\Zed\QuoteApproval\Communication\Plugin\Cart\SanitizeQuoteApprovalPreQuoteUnlockPlugin;
 use Spryker\Zed\QuoteRequest\Communication\Plugin\Cart\SanitizeQuoteRequestPreQuoteUnlockPlugin;
- 
+
 class CartDependencyProvider extends SprykerCartDependencyProvider
 {
     /**
@@ -359,50 +413,53 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     }
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that when you make lock reset for a cart, quote request associated with it removed.
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+
+## Install feature frontend
+
 ### Prerequisites
 
 To start feature integration, overview and install the necessary features:
 
-| Name |Version  |
+| NAME | VERSION |
 | --- | --- |
-|Spryker Core  |202009.0  |
-| Cart | 202009.0 |
-| Company Account | 202009.0 |
-|Prices  |202009.0  |
-| Persistent Cart |202009.0  |
-|Agent Assist  | 202009.0 |
+|Spryker Core  | {{page.version}} |
+| Cart | {{page.version}} |
+| Company Account | {{page.version}} |
+|Prices  | {{page.version}} |
+| Persistent Cart | {{page.version}} |
+|Agent Assist  | {{page.version}} |
 
-### 1) Install Require Modules using Composer
+### 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/quotation-process: "202009.0" --update-with-dependencies
+composer require spryker-feature/quotation-process: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules were installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-| `ConfigurableBundleWidget` | `spryker-shop/configurable-bundle-widget` |
-| `SalesConfigurableBundleWidget` | `spryker-shop/sales-configurable-bundle-widget` |
+| ConfigurableBundleWidget | spryker-shop/configurable-bundle-widget|
+| SalesConfigurableBundleWidget | spryker-shop/sales-configurable-bundle-widget |
 
 {% endinfo_block %}
 
-### 2) Add Translations
+### 2) Add translations
 
 Append glossary according to your configuration:
 
-<details open>
-<summary markdown='span'>src/data/import/glossary.csv</summary>
+<details open><summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 quote_request_widget.request_for_quote,Request for Quote,en_US
@@ -578,7 +635,6 @@ quote_request_page.quote_request.cta_edit_shipment_method,Versandart bearbeiten,
 quote_request_page.quote_request.item,%count% item(s),en_US
 quote_request_page.quote_request.item,%count% artikel,de_DE
 ```
-<br>
 </details>
 
 Run the following console command to import data:
@@ -588,35 +644,38 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that in the database the configured data are added to the `spy_glossary` table.
+
 {% endinfo_block %}
 
-### 3) Set up Behavior
-#### Set up Quote Request Workflow
+### 3) Set up behavior
+
+#### Set up quote request workflow
 
 Enable the following behaviors by registering the plugins:
 
-| Plugin | Specification | Prerequisites| Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-|`PurchaseOrderNumberMetadataFieldPlugin`|Adds purchase order number to metadata for `QuoteRequest` form.|None|`SprykerShop\Yves\QuoteRequestPage\Plugin\QuoteRequestPage`|
-|`DeliveryDateMetadataFieldPlugin`|Adds delivery date to metadata for `QuoteRequest` form.|None|`SprykerShop\Yves\QuoteRequestPage\Plugin\QuoteRequestPage`|
-|`NoteMetadataFieldPlugin`|Adds note to metadata for `QuoteRequestAgent` form.|None|`SprykerShop\Yves\QuoteRequestPage\Plugin\QuoteRequestPage`|
-|`PurchaseOrderNumberMetadataFieldPlugin`|Adds purchase order number to metadata for `QuoteRequestAgent` form.|None|`SprykerShop\Yves\QuoteRequestAgentPage\Plugin\QuoteRequestAgentPage`|
-|`DeliveryDateMetadataFieldPlugin`|Adds delivery date to metadata for `QuoteRequestAgent` form.|None|`SprykerShop\Yves\QuoteRequestAgentPage\Plugin\QuoteRequestAgentPage`|
-|`NoteMetadataFieldPlugin`|Adds note to metadata for `QuoteRequestAgent` form.|None|`SprykerShop\Yves\QuoteRequestAgentPage\Plugin\QuoteRequestAgentPage`|
+|PurchaseOrderNumberMetadataFieldPlugin|Adds purchase order number to metadata for `QuoteRequest` form.|None|SprykerShop\Yves\QuoteRequestPage\Plugin\QuoteRequestPage|
+|DeliveryDateMetadataFieldPlugin|Adds delivery date to metadata for `QuoteRequest` form.|None|SprykerShop\Yves\QuoteRequestPage\Plugin\QuoteRequestPage|
+|NoteMetadataFieldPlugin|Adds note to metadata for `QuoteRequestAgent` form.|None|SprykerShop\Yves\QuoteRequestPage\Plugin\QuoteRequestPage|
+|PurchaseOrderNumberMetadataFieldPlugin|Adds purchase order number to metadata for `QuoteRequestAgent` form.|None|SprykerShop\Yves\QuoteRequestAgentPage\Plugin\QuoteRequestAgentPage|
+|DeliveryDateMetadataFieldPlugin|Adds delivery date to metadata for `QuoteRequestAgent` form.|None|SprykerShop\Yves\QuoteRequestAgentPage\Plugin\QuoteRequestAgentPage|
+|NoteMetadataFieldPlugin|Adds note to metadata for `QuoteRequestAgent` form.|None|SprykerShop\Yves\QuoteRequestAgentPage\Plugin\QuoteRequestAgentPage|
 
 **Pyz\Yves\QuoteRequestPage\QuoteRequestPageDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\QuoteRequestPage;
- 
+
 use SprykerShop\Yves\QuoteRequestPage\Plugin\QuoteRequestPage\DeliveryDateMetadataFieldPlugin;
 use SprykerShop\Yves\QuoteRequestPage\Plugin\QuoteRequestPage\NoteMetadataFieldPlugin;
 use SprykerShop\Yves\QuoteRequestPage\Plugin\QuoteRequestPage\PurchaseOrderNumberMetadataFieldPlugin;
 use SprykerShop\Yves\QuoteRequestPage\QuoteRequestPageDependencyProvider as SprykerQuoteRequestPageDependencyProvider;
- 
+
 class QuoteRequestPageDependencyProvider extends SprykerQuoteRequestPageDependencyProvider
 {
     /**
@@ -634,21 +693,23 @@ class QuoteRequestPageDependencyProvider extends SprykerQuoteRequestPageDependen
 ```
 
 {% info_block warningBox "Verification" %}
+
 Verify that, as a customer, on quote request edit page, you can edit following fields **Purchase Order Number**, **DeliveryDate**, **Note**.
+
 {% endinfo_block %}
 
 **Pyz\Yves\QuoteRequestAgentPage\QuoteRequestAgentPageDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\QuoteRequestAgentPage;
- 
+
 use SprykerShop\Yves\QuoteRequestAgentPage\Plugin\QuoteRequestAgentPage\DeliveryDateMetadataFieldPlugin;
 use SprykerShop\Yves\QuoteRequestAgentPage\Plugin\QuoteRequestAgentPage\NoteMetadataFieldPlugin;
 use SprykerShop\Yves\QuoteRequestAgentPage\Plugin\QuoteRequestAgentPage\PurchaseOrderNumberMetadataFieldPlugin;
 use SprykerShop\Yves\QuoteRequestAgentPage\QuoteRequestAgentPageDependencyProvider as SprykerQuoteRequestAgentPageDependencyProvider;
- 
+
 class QuoteRequestAgentPageDependencyProvider extends SprykerQuoteRequestAgentPageDependencyProvider
 {
     /**
@@ -666,20 +727,23 @@ class QuoteRequestAgentPageDependencyProvider extends SprykerQuoteRequestAgentPa
 ```
 
 {% info_block warningBox "Verification" %}
+
 Verify that, as an agent, on quote request edit page, you can edit following fields **Purchase Order Number**, **DeliveryDate**, **Note**.
+
 {% endinfo_block %}
 
-### 4) Enable Controllers
-#### Route List
+### 4) Enable controllers
+
+#### Route list
 
 Register the following route provider plugins:
 
-| Provider | Namespace |
-| --- | --- | 
-| `QuoteRequestPageRouteProviderPlugin` | `SprykerShop\Yves\QuoteRequestPage\Plugin\Router` |
-| `QuoteRequestAgentPageRouteProviderPlugin` | `SprykerShop\Yves\QuoteRequestAgentPage\Plugin\Router` |
-| `QuoteRequestAgentWidgetRouteProviderPlugin` | `SprykerShop\Yves\QuoteRequestAgentWidget\Plugin\Router` |
-| `QuoteRequestWidgetRouteProviderPlugin` | `SprykerShop\Yves\QuoteRequestWidget\Plugin\Router` |
+| PROVIDER | NAMESPACE |
+| --- | --- |
+| QuoteRequestPageRouteProviderPlugin | SprykerShop\Yves\QuoteRequestPage\Plugin\Router |
+| QuoteRequestAgentPageRouteProviderPlugin | SprykerShop\Yves\QuoteRequestAgentPage\Plugin\Router |
+| QuoteRequestAgentWidgetRouteProviderPlugin | SprykerShop\Yves\QuoteRequestAgentWidget\Plugin\Router |
+| QuoteRequestWidgetRouteProviderPlugin | SprykerShop\Yves\QuoteRequestWidget\Plugin\Router |
 
 **src/Pyz/Yves/ShopApplication/YvesBootstrap.php**
 
@@ -712,41 +776,50 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
+
 Verify `QuoteRequestPageRouteProviderPlugin`, log in as company user and open quote request list page by the link: `http://mysprykershop.com/en/quote-request`
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
+
 Verify  `QuoteRequestAgentPageRouteProviderPlugin`, log in as agent and open quote request list page by the link: `http://mysprykershop.com/agent/quote-request`
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
+
 Verify  `QuoteRequestAgentWidgetRouteProviderPlugin`, log in as agent, go to  `http://mysprykershop.com/agent/quote-request/create` type three first letters from any company user email into the "Select customer" input and make sure that autocomplete works.
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
+
 Verify `QuoteRequestWidgetRouteProviderPlugin`, log in as a company user, create quote request, go to Edit items page, ensure that you see the **Save** button in the right sidebar, click on it. Verify that changes that you've done for quote items saved.
+
 {% endinfo_block %}
 
-### 5) Set up Widgets
+### 5) Set up widgets
+
 Register the following plugins to enable widgets:
 
-| Plugin |Description  |Prerequisites  |Namespace  |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- |--- |
-|`QuoteRequestMenuItemWidget`  |Displays quote request list link in the customer menu.  |None  |`SprykerShop\Yves\QuoteRequestWidget\Widget` |
-|`QuoteRequestCreateWidget`  |Displays create quote request button on a cart page.  |None  |`SprykerShop\Yves\QuoteRequestWidget\Widget`  |
-|`QuoteRequestCartWidget`  | Displays action buttons on cart page when editing quote request items. |None  | `SprykerShop\Yves\QuoteRequestWidget\Widget` |
-|`QuoteRequestCancelWidget`  |Displays cancel button on a quote request list page.  |None  | `SprykerShop\Yves\QuoteRequestWidget\Widget` |
-|`QuoteRequestAgentOverviewWidget`  |Displays functionality for quote request manipulation for agent.  |None  |`SprykerShop\Yves\QuoteRequestAgentWidget\Widget ` |
-|`QuoteRequestAgentCancelWidget`  |Displays cancel quote request button on agent quote request list page.  | None | `SprykerShop\Yves\QuoteRequestAgentPage\Widget `|
-|`QuoteRequestActionsWidget`  |Displays action buttons on checkout steps.  | None | `SprykerShop\Yves\QuoteRequestWidget\Widget `|
+|QuoteRequestMenuItemWidget|Displays quote request list link in the customer menu.  |None  |SprykerShop\Yves\QuoteRequestWidget\Widget |
+|QuoteRequestCreateWidget |Displays create quote request button on a cart page.  |None  |SprykerShop\Yves\QuoteRequestWidget\Widget |
+|QuoteRequestCartWidget | Displays action buttons on cart page when editing quote request items. |None  | SprykerShop\Yves\QuoteRequestWidget\Widget|
+|QuoteRequestCancelWidget |Displays cancel button on a quote request list page.  |None  | SprykerShop\Yves\QuoteRequestWidget\Widget |
+|QuoteRequestAgentOverviewWidget |Displays functionality for quote request manipulation for agent.  |None  |SprykerShop\Yves\QuoteRequestAgentWidget\Widget|
+|QuoteRequestAgentCancelWidget|Displays cancel quote request button on agent quote request list page.  | None | SprykerShop\Yves\QuoteRequestAgentPage\Widget|
+|QuoteRequestActionsWidget|Displays action buttons on checkout steps.  | None | SprykerShop\Yves\QuoteRequestWidget\Widget|
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\ShopApplication;
- 
+
 use SprykerShop\Yves\QuoteRequestWidget\Widget\QuoteRequestMenuItemWidget;
 use SprykerShop\Yves\QuoteRequestWidget\Widget\QuoteRequestCreateWidget;
 use SprykerShop\Yves\QuoteRequestWidget\Widget\QuoteRequestCartWidget;
@@ -754,7 +827,7 @@ use SprykerShop\Yves\QuoteRequestWidget\Widget\QuoteRequestCancelWidget;
 use SprykerShop\Yves\QuoteRequestAgentWidget\Widget\QuoteRequestAgentOverviewWidget;
 use SprykerShop\Yves\QuoteRequestAgentPage\Widget\QuoteRequestAgentCancelWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
- 
+
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
@@ -782,5 +855,17 @@ console frontend:yves:build
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following widgets were registered:<table><thead><tr><td>Module</td><td>Test</td></tr></thead><tbody><tr><td>`QuoteRequestMenuItemWidget`</td><td>Log in as a company user, go to **My Account** page, make sure that you see "Requests for Quote" link.</td></tr><tr><td>`QuoteRequestCreateWidget`</td><td>Log in as a company user, go to **Quote** page, make sure that you have some products in the cart. Make sure that you see **Request For Quote** button.</td></tr><tr><td>`QuoteRequestCartWidget`</td><td>After you've pressed the **Edit Items** button on request for a quote, make sure that you see "Save" and **Send To Agent** buttons on a cart page.</td></tr><tr><td>`QuoteRequestCancelWidget`</td><td>Make sure that you see the **Cancel** button on the quote request page.</td></tr><tr><td>`QuoteRequestAgentOverviewWidget`</td><td>When you logged in as an agent make sure that you see a list of quote requests.</td></tr><tr><td>`QuoteRequestAgentCancelWidget`</td><td>Make sure that when you logged in as an agent you can see the **Cancel** button for each quote request.</td></tr><tr><td>`QuoteRequestActionsWidget`</td><td>Make sure that when you edit RFQ shipping data as a buyer, you can see **Cancel**, **Save**, and **Back** buttons on the shipment method page and **Back** button on the shipping address page.</td></tr></tbody></table>
+
+Make sure that the following widgets were registered:
+
+| MODULE | TEST |
+| --- | --- |
+| QuoteRequestMenuItemWidget | Log in as a company user, go to **My Account** page, make sure that you see "Requests for Quote" link. |
+| QuoteRequestCreateWidget| Log in as a company user, go to **Quote** page, make sure that you have some products in the cart. Make sure that you see **Request For Quote** button. |
+QuoteRequestCartWidget | After you've pressed the **Edit Items** button on request for a quote, make sure that you see "Save" and **Send To Agent** buttons on a cart page. |
+| QuoteRequestCancelWidget | Make sure that you see the **Cancel** button on the quote request page. |
+| QuoteRequestAgentOverviewWidget | When you logged in as an agent make sure that you see a list of quote requests. |
+| QuoteRequestAgentCancelWidget | Make sure that when you logged in as an agent you can see the **Cancel** button for each quote request. |
+| QuoteRequestActionsWidget | Make sure that when you edit RFQ shipping data as a buyer, you can see **Cancel**, **Save**, and **Back** buttons on the shipment method page and **Back** button on the shipping address page. |
+|
 {% endinfo_block %}

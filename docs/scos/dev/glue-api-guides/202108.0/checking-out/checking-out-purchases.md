@@ -10,7 +10,7 @@ redirect_from:
   - /docs/checking-out-purchases
   - /docs/en/checking-out-purchases
 related:
-  - title: Glue API- Checkout feature integration
+  - title: Glue API - Checkout feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-checkout-feature-integration.html
   - title: Checkout
     link: docs/scos/user/features/page.version/checkout-feature-overview/checkout-feature-overview.html

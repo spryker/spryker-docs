@@ -426,7 +426,7 @@ entries:
             url: /docs/marketplace/dev/data-import/file-details-merchant-product-offer.csv.html
 
           - title: "File details: merchant_user.csv"
-            url: /docs/marketplace/dev/data-import/file-details-merchant-user.csv.csv
+            url: /docs/marketplace/dev/data-import/file-details-merchant-user.csv.html
 
           - title: "File details: price-product-offer.csv"
             url: /docs/marketplace/dev/data-import/file-details-price-product-offer.csv.html

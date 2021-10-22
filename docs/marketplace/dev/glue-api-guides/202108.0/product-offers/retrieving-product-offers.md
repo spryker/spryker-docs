@@ -13,7 +13,7 @@ In your development, product offers API can help you to retrieve relevant extend
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [GLUE API: Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-feature-integration.html)
 * [Glue API: Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-prices-feature-integration.html)
-* [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/glue-api-marketplace-product-offer-volume-prices.html)
+* [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-volume-prices.html)
 
 ## Retrieve a product offer
 
@@ -35,7 +35,6 @@ To retrieve the product offers, send the request:
 | QUERY PARAMETER | DESCRIPTION      | EXEMPLARY VALUES       |
 | -------------------- | ----------------- | ---------------- |
 | include          | Adds resource relationships to the request. | <ul><li>product-offer-availabilities</li><li>product-offer-prices</li><li>merchants</li> |
-
 
 | REQUEST | USAGE     |
 | ---------- | ----------- |

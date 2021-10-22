@@ -1,7 +1,10 @@
 ---
-title: Merchant Portal GUI modules concept
+title: GUI modules concept
 description: Short overview of GUI modules in Merchant portal.
 template: feature-walkthrough-template
+related:
+  - title: How to create a new GUI module
+    link: docs/marketplace/dev/howtos/how-to-create-gui-module.html
 ---
 
 This articles provides a short overview of the GUI (graphical user interface) modules in the Merchant Portal.
@@ -41,7 +44,3 @@ Merchant Portal GUI modules can be mapped to a feature in two different ways, de
 ([Marketplace Inventory Management feature](https://github.com/spryker-feature/marketplace-inventory-management): AvailabilityMerchantPortalGui module.
 
 {% endinfo_block %}
-
-## Learn more
-
-- [How to create a new GUI module](/docs/marketplace/dev/howtos/how-to-create-gui-module.html)

@@ -2,6 +2,13 @@
 title: "How-To: Create a new Gui table filter type"
 description: This articles provides details how to create a new Gui table filter type
 template: howto-guide-template
+related:
+  - title: How to create a new Gui table
+    link: docs/marketplace/dev/howtos/how-to-create-gui-table.html
+  - title: How to extend an existing Gui table
+    link: docs/marketplace/dev/howtos/how-to-extend-gui-table.html
+  - title: How to create a new Gui table column type
+    link: docs/marketplace/dev/howtos/how-to-add-new-guitable-column-type.html
 ---
 
 This article describes how to create a new Gui table filter type.
@@ -51,9 +58,3 @@ Add a new addFilter***() method to `Spryker\Shared\GuiTable\Configuration\Builde
 ```
 
 See the [Table Filter extension](/docs/marketplace/dev/front-end/table-design/table-filters) to learn more about the Table Filters feature.
-
-## See also
-
-- [How to create a new Gui table](/docs/marketplace/dev/howtos/how-to-create-gui-table.html)
-- [How to extend an existing Gui table](/docs/marketplace/dev/howtos/how-to-extend-gui-table.html)
-- [How to create a new Gui table column type](/docs/marketplace/dev/howtos/how-to-add-new-column-type.html)

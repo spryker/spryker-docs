@@ -2,6 +2,13 @@
 title: "How-To: Extend an existing Gui table"
 description: This articles provides details how to extend an existing Gui table
 template: howto-guide-template
+related:
+  - title: How to add a new Gui table
+    link: docs/marketplace/dev/howtos/how-to-create-gui-table.html
+  - title: How to create a new Gui table column type
+    link: docs/marketplace/dev/howtos/how-to-add-new-guitable-column-type.html
+  - title: How to create a new Gui table filter type
+    link: docs/marketplace/dev/howtos/how-to-add-new-guitable-filter-type.html
 ---
 
 This article describes how to extend an existing Gui table in the Merchant Portal.
@@ -99,9 +106,3 @@ public function getConfiguration(): GuiTableConfigurationTransfer
 ```
 
 Adjust the data provider `fetchData()` method to filter the data by `ProductTableCriteria.filterExampleFilter` value.
-
-## See also
-
-- [How to add a new Gui table](/docs/marketplace/dev/howtos/how-to-create-gui-table.html)
-- [How to create a new Gui table column type](/docs/marketplace/dev/howtos/how-to-add-new-column-type.html)
-- [How to create a new Gui table filter type](/docs/marketplace/dev/howtos/how-to-add-new-filter-type.html)

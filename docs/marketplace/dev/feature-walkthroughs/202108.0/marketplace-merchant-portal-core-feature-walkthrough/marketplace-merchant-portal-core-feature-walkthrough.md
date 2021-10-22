@@ -6,7 +6,7 @@ template: feature-walkthrough-template
 
 The Marketplace Merchant Portal Core enables server configuration and basic functions of the Merchant Portal application, such as security login, GUI tables, dashboards, etc. Merchant Portal and Back Office are separate applications with different entry points, bootstraps, and possibilities to register application plugins, configure application base URLs, debug, etc.
 
-{% info_block warningBox "User documentation" %}
+{% info_block warningBox "Note" %}
 
 To learn more about the Marketplace Application, see [Marketplace Application Composition](/docs/marketplace/dev/architecture-overview/marketplace-application-composition.html).
 
@@ -77,4 +77,4 @@ To learn more about Table design, see [Table design](/docs/marketplace/dev/front
 |        |          |          | [How to create a new Gui table](/docs/marketplace/dev/howtos/how-to-create-gui-table.html)  |
 |        |          |          | [How to extend an existing Gui table](/docs/marketplace/dev/howtos/how-to-extend-gui-table.html)  |
 |        |          |          | [How to create a new Gui table filter type](/docs/marketplace/dev/howtos/how-to-add-new-filter-type.html)  |
-|        |          |          | [How to extend Merchant portal dashboard?](/docs/marketplace/dev/howtos/how-to-extend-merchant-portal-dashboard.html)  |
+|        |          |          | [How to extend Merchant portal dashboard](/docs/marketplace/dev/howtos/how-to-extend-merchant-portal-dashboard.html)  |

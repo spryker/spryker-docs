@@ -2,6 +2,13 @@
 title: "How-To: Create a new Gui table column type"
 description: This articles provides details how to create a new Gui table column type
 template: howto-guide-template
+related:
+  - title: How to create a new Gui table
+    link: docs/marketplace/dev/howtos/how-to-create-gui-table.html
+  - title: How to extend an existing Gui table
+    link: docs/marketplace/dev/howtos/how-to-extend-gui-table.html
+  - title: How to create a new Gui table filter type
+    link: docs/marketplace/dev/howtos/how-to-add-new-guitable-filter-type.html
 ---
 
 This article describes how to add new column types to a Gui table.
@@ -46,9 +53,3 @@ Add a new addColumn***() method to `Spryker\Shared\GuiTable\Configuration\Builde
 ```
 
 See the [Table Column Type Extension](/docs/marketplace/dev/front-end/table-design/table-column-types) to learn more about Column Type frontend components.
-
-## See also
-
-- [How to create a new Gui table](/docs/marketplace/dev/howtos/how-to-create-gui-table.html)
-- [How to extend an existing Gui table](/docs/marketplace/dev/howtos/how-to-extend-gui-table.html)
-- [How to create a new Gui table filter type](/docs/marketplace/dev/howtos/how-to-add-new-filter-type.html)

@@ -2,6 +2,13 @@
 title: "How-To: Create a new Gui table"
 description: This articles provides details how to create a new Gui table
 template: howto-guide-template
+related:
+  - title: How to extend an existing Gui table
+    link: docs/marketplace/dev/howtos/how-to-extend-gui-table.html
+  - title: How to create a new Gui table column type
+    link: docs/marketplace/dev/howtos/how-to-add-new-guitable-column-type.html
+  - title: How to create a new Gui table filter type
+    link: docs/marketplace/dev/howtos/how-to-add-new-guitable-filter-type.html
 ---
 
 This article describes how to create a new Gui table in Merchant Portal.
@@ -321,9 +328,3 @@ to create a response with the table data.
         );
     }
 ```
-
-## See also
-
-- [How to extend an existing Gui table](/docs/marketplace/dev/howtos/how-to-extend-gui-table.html)
-- [How to create a new Gui table column type](/docs/marketplace/dev/howtos/how-to-add-new-column-type.html)
-- [How to create a new Gui table filter type](/docs/marketplace/dev/howtos/how-to-add-new-filter-type.html)

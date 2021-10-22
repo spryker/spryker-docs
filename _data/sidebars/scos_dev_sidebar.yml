@@ -632,15 +632,10 @@ entries:
         - "202108.0"
       - title: Glue API - Category Management feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-category-management-feature-integration.html
-        include_versions:
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
       - title: Glue API - Checkout feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-checkout-feature-integration.html
         include_versions:
+        - "201907.0"
         - "202001.0"
         - "202005.0"
         - "202009.0"
@@ -652,6 +647,7 @@ entries:
       - title: Glue API - Content Items API feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-content-items-api-feature-integration.html
         include_versions:
+        - "201907.0"
         - "202001.0"
         - "202005.0"
         - "202009.0"
@@ -687,6 +683,8 @@ entries:
       - title: Glue API - Inventory Management feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-inventory-management-feature-integration.html
         include_versions:
+        - "201903.0"
+        - "201907.0"
         - "202009.0"
         - "202108.0"
       - title: Glue API - Availability Notification feature integration
@@ -702,6 +700,8 @@ entries:
       - title: Glue API - Navigation feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-navigation-feature-integration.html
         include_versions:
+        - "201903.0"
+        - "201907.0"
         - "202001.0"
         - "202005.0"
         - "202009.0"
@@ -715,6 +715,8 @@ entries:
       - title: Glue API - Payments feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-payments-feature-integration.html
         include_versions:
+        - "201903.0"
+        - "201907.0"
         - "202001.0"
         - "202005.0"
         - "202009.0"
@@ -763,6 +765,8 @@ entries:
       - title: Glue API - Product Relations feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-relations-feature-integration.html
         include_versions:
+        - "201903.0"
+        - "201907.0"
         - "202001.0"
         - "202005.0"
         - "202009.0"
@@ -770,6 +774,7 @@ entries:
       - title: Glue API - Promotions and Discounts feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-promotions-and-discounts-feature-integration.html
         include_versions:
+        - "201907.0"
         - "202001.0"
         - "202005.0"
         - "202009.0"
@@ -819,11 +824,6 @@ entries:
         include_versions:
         - "201811.0"
         - "201903.0"
-      - title: Category API feature integration
-        url: /docs/scos/dev/feature-integration-guides/glue-api/category-api-feature-integration.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
       - title: Tax API feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/tax-api-feature-integration.html
         include_versions:
@@ -839,27 +839,10 @@ entries:
         include_versions:
         - "201903.0"
         - "201907.0"
-      - title: Inventory Management feature integration
-        url: /docs/scos/dev/feature-integration-guides/glue-api/inventory-management-feature-integration.html
-        include_versions:
-        - "201903.0"
-        - "201907.0"
-      - title: Content Items API feature integration
-        url: /docs/scos/dev/feature-integration-guides/glue-api/content-items-apifeature-integration.html
-        include_versions:
-        - "201907.0"
       - title: Store API feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/store-api-feature-integration.html
         include_versions:
         - "201903.0"
-        - "201907.0"
-      - title: Glue- Payments feature integration
-        url: /docs/scos/dev/feature-integration-guides/glue-api/glue-payments-feature-integration.html
-        include_versions:
-        - "201907.0"
-      - title: GLUE- Promotions & Discounts feature integration
-        url: /docs/scos/dev/feature-integration-guides/glue-api/glue-promotions-and-discounts-feature-integration.html
-        include_versions:
         - "201907.0"
       - title: Product Category Relationship feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/product-category-relationship-feature-integration.html
@@ -870,28 +853,10 @@ entries:
         url: /docs/scos/dev/feature-integration-guides/glue-api/multiple-carts-api-feature-integration.html
         include_versions:
         - "201907.0"
-      - title: Product Relations API feature integration
-        url: /docs/scos/dev/feature-integration-guides/glue-api/product-relations-api-feature-integration.html
-        include_versions:
-        - "201903.0"
-        - "201907.0"
       - title: Shared Carts feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/shared-carts-feature-integration.html
         include_versions:
         - "201907.0"
-      - title: Checkout feature integration
-        url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-checkout-feature-integration.html.html
-        include_versions:
-        - "201907.0"
-      - title: Navigation API feature integration
-        url: /docs/scos/dev/feature-integration-guides/glue-api/navigation-api-feature-integration.html
-        include_versions:
-        - "201903.0"
-        - "201907.0"
-      - title: Payments API feature integration
-        url: /docs/scos/dev/feature-integration-guides/glue-api/payments-api-feature-integration.html
-        include_versions:
-        - "201903.0"
     - title: Shipment + Approval Process feature integration
       url: /docs/scos/dev/feature-integration-guides/shipment-approval-process-feature-integration.html
       include_versions:
@@ -2372,6 +2337,7 @@ entries:
         - title: Router Zed
           url: /docs/scos/dev/migration-concepts/silex-replacement/router/router-zed.html
   - title: The Docker SDK
+    url: /docs/scos/dev/the-docker-sdk/the-docker-sdk.html
     include_versions:
     - "201907.0"
     - "202001.0"
@@ -2389,16 +2355,12 @@ entries:
       include_versions:
       - "202001.0"
       - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Deploy File Reference - 1.0
       url: /docs/scos/dev/the-docker-sdk/deploy-file-reference-1.0.html
       include_versions:
       - "201907.0"
       - "202001.0"
       - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Services
       url: /docs/scos/dev/the-docker-sdk/services.html
       include_versions:
@@ -2411,15 +2373,8 @@ entries:
       - "202001.0"
       - "202005.0"
       - "202009.0"
-      - "202108.0"
-    - title: Configuring debugging in Docker
-      url: /docs/scos/dev/the-docker-sdk/configuring-debugging-in-docker.html
-      include_versions:
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
-    - title: Configuring a mount mode
-      url: /docs/scos/dev/the-docker-sdk/configuring-a-mount-mode.html
+    - title: Choosing a Docker SDK version
+      url: /docs/scos/dev/the-docker-sdk/choosing-a-docker-sdk-version.html
       include_versions:
       - "202009.0"
       - "202108.0"
@@ -2428,8 +2383,13 @@ entries:
       include_versions:
       - "202009.0"
       - "202108.0"
-    - title: Docker SDK configuration reference
-      url: /docs/scos/dev/the-docker-sdk/docker-sdk-configuration-reference.html
+    - title: Choosing a mount mode
+      url: /docs/scos/dev/the-docker-sdk/choosing-a-mount-mode.html
+      include_versions:
+      - "202009.0"
+      - "202108.0"
+    - title: Configuring a mount mode
+      url: /docs/scos/dev/the-docker-sdk/configuring-a-mount-mode.html
       include_versions:
       - "202009.0"
       - "202108.0"
@@ -2438,23 +2398,34 @@ entries:
       include_versions:
       - "202009.0"
       - "202108.0"
-    - title: Choosing a mount mode
-      url: /docs/scos/dev/the-docker-sdk/choosing-a-mount-mode.html
+    - title: Configuring services
+      url: /docs/scos/dev/the-docker-sdk/configuring-services.html
       include_versions:
       - "202009.0"
       - "202108.0"
-    - title: Choosing a Docker SDK version
-      url: /docs/scos/dev/the-docker-sdk/choosing-a-docker-sdk-version.html
+    - title: Docker SDK configuration reference
+      url: /docs/scos/dev/the-docker-sdk/docker-sdk-configuration-reference.html
       include_versions:
+      - "202009.0"
+      - "202108.0"
+    - title: Deploy file reference - 1.0
+      url: /docs/scos/dev/the-docker-sdk/deploy-file-reference-1.0.html
+      include_versions:
+      - "202009.0"
+      - "202108.0"
+    - title: Docker environment infrastructure
+      url: /docs/scos/dev/the-docker-sdk/docker-environment-infrastructure.html
+      include_versions:
+      - "202009.0"
+      - "202108.0"
+    - title: Configuring debugging in Docker
+      url: /docs/scos/dev/the-docker-sdk/configuring-debugging-in-docker.html
+      include_versions:
+      - "202005.0"
       - "202009.0"
       - "202108.0"
     - title: Running tests with the Docker SDK
       url: /docs/scos/dev/the-docker-sdk/running-tests-with-the-docker-sdk.html
-      include_versions:
-      - "202009.0"
-      - "202108.0"
-    - title: Configuring services
-      url: /docs/scos/dev/the-docker-sdk/configuring-services.html
       include_versions:
       - "202009.0"
       - "202108.0"
@@ -3447,13 +3418,12 @@ entries:
         - title: Vendor folder synchronization error
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/vendor-folder-synchronization-error.html
   - title: Architecture
+    url: /docs/scos/dev/architecture/architecture.html
     nested:
-    - title: About the Architecture Guide
-      url: /docs/scos/dev/architecture/architecture.html
-    - title: Code buckets
-      url: /docs/scos/dev/architecture/code-buckets.html
     - title: Technology stack
       url: /docs/scos/dev/architecture/technology-stack.html
+    - title: Conceptual overview
+      url: /docs/scos/dev/architecture/conceptual-overview.html
     - title: Modules and layers
       url: /docs/scos/dev/architecture/modules-and-layers.html
     - title: Module API
@@ -3466,10 +3436,10 @@ entries:
         url: /docs/scos/dev/architecture/module-api/definition-of-module-api.html
       - title: Semantic Versioning- Major vs. Minor vs. Patch Release
         url: /docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html
+    - title: Code buckets
+      url: /docs/scos/dev/architecture/code-buckets.html
     - title: Programming concepts
       url: /docs/scos/dev/architecture/programming-concepts.html
-    - title: Conceptual overview
-      url: /docs/scos/dev/architecture/conceptual-overview.html
   - title: Glue API Guides
     nested:
     - title: Getting Suggestions for Auto-Completion and Search

@@ -21,4 +21,4 @@ The following diagram illustrates the dependencies between the modules for the *
 
 |INTEGRATION GUIDES  |
 |---------|
-|[Marketplace Merchant Portal Product Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-feature-integration.html) |
+|[Merchant Portal - Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-feature-integration.html) |

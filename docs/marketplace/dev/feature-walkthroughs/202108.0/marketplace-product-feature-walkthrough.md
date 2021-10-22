@@ -4,13 +4,12 @@ description: A Marketplace Product feature adds merchant information to the prod
 template: feature-walkthrough-template
 ---
 
-
-Product is a central entity of a shop. The Product feature allows shop administrators to create a rich product catalog. Product configuration is highly customizable, so they can create different types of products.
-A Marketplace Product feature adds merchant information to the product that a Merchant sells. Product Restrictions from Merchant to Buyer give merchants another layer of control over the information, a customer can see in the shop application. Based on product restrictions, you can:
-create a list of products, hide the product information for the products (pricing, appearance in the search/filters), and limit access to a product details page.
-There are two options for the Merchants to start selling in Marketplace: Either through creation of a completely new product to sell them without offers, or complement marketplace products with new offer. 
-A Merchant can assign attributes and custom labels to products, add product attributes, use limited offers and pricing.
-Customers can filter products and offers by Merchants right in the catalog or find them through the search function.
+The *Merchant Product* feature provides relation between Products and Merchants. 
+To store data about relations has been created database table `MerchantProductAbstract`.
+All the Product features are remain working as before. 
+The additional plugins and widgets have been implemented to support relations between Products and Merchants, on the Storefront.
+Products are extended with Merchant Data and when purchased are assigned to appropriate MerchantOrder.
+For managing products in Merchant Portal has been introduced special feature, more details about you can find here [Marketplace Merchant Portal Product Management](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-merchant-portal-product-management-feature-walkthrough.html).
 
 {% info_block warningBox "User documentation" %}
 
@@ -39,11 +38,6 @@ To learn more about the feature and to find out how end users use it, see [Marke
 | CartsRestApiExtension | Provides plugin interfaces used by CartsRestApi module.  |
 
 ## Domain model
-<!--
-- Domain model SHOULD contain all the entities that were adjusted or introduced by the feature.
-- All the new connections SHOULD also be shown and highlighted properly 
-- Make sure to follow the same style as in the example
--->
 ![Domain Model](https://confluence-connect.gliffy.net/embed/image/80809f75-1f94-4f19-9cfd-e39235026e89.png?utm_medium=live&utm_source=confluence)
 
 ## Related Developer articles

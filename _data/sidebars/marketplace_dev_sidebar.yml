@@ -167,9 +167,6 @@ entries:
           - title: Marketplace Order Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html
 
-          - title: Marketplace Order Management + Cart feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-cart-feature-integration.html
-
           - title: Marketplace Order Management + Customer Account Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-customer-account-management-feature-integration.html
 

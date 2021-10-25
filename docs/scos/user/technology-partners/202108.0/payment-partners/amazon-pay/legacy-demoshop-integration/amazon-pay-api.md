@@ -123,8 +123,8 @@ If it is open, then the order must be canceled with a `CancelOrderTransaction` c
 The rest of decline flow includes logic determining where to redirect a buyer. In sandbox mode, for each test account, Amazon provides fake payment methods for emulating error API responses.
 
 {% info_block errorBox "Important" %}
-Even if a response has status code 200 it still may contain Constraint(s
-{% endinfo_block %} in the response body.)
+Even if a response has status code 200 it still may contain Constraint(s) in the response body.
+{% endinfo_block %}
 
 There is one special constraint related to selected payment method `PaymentMethodNotAllowed`. If it occurs (rarely) the buyer should be redirected to the same page with address and payment widgets and be able to choose a different payment method and all other order parameters as well.
 

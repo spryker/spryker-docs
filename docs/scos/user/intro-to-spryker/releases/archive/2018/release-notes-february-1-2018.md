@@ -11,8 +11,8 @@ redirect_from:
 ---
 
 {% info_block warningBox %}
-Please note that we do not have [Toran Proxy](https://toranproxy.com/
-{% endinfo_block %} anymore, it has been shut down completely. Please use [Packagist](https://packagist.org/) from now on.)
+Please note that we do not have [Toran Proxy](https://toranproxy.com/) anymore, it has been shut down completely. Please use [Packagist](https://packagist.org/) from now on.
+{% endinfo_block %}
 
 ## Features
 ### Product Search Widget

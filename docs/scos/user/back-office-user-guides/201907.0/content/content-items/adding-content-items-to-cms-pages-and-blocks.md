@@ -57,8 +57,8 @@ Templates are project-specific and are usually created by a developer and a busi
 6. Click **Save**. A new content item widget will be added to the page.
 
 {% info_block infoBox %}
-You can preview the page to see how the content item widget will be displayed on the website or publish it. See  [Managing CMS Pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/managing-cms-pages.html
-{% endinfo_block %} to learn how to preview and publish the page.)
+You can preview the page to see how the content item widget will be displayed on the website or publish it. See  [Managing CMS Pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/managing-cms-pages.html) to learn how to preview and publish the page.
+{% endinfo_block %}
 ***
 ## Adding Content Item Widgets to Blocks
 To add a content item widget to a block:

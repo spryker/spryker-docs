@@ -1917,8 +1917,8 @@ redis-cli --latency -h {% raw %}{{{% endraw %}ELASTICACHE_ENDPOINT{% raw %}}}{% 
 ```
 
 {% info_block infoBox "Benchmark result examples:" %}
-avg: 0.48 (20038 samples
-{% endinfo_block %} - cache.t2.micro </br>avg: 0.31 (20047 samples) - cache.t2.medium)
+avg: 0.48 (20038 samples) - cache.t2.micro </br>avg: 0.31 (20047 samples) - cache.t2.medium
+{% endinfo_block %}
 
 ## List of Connections
 The following diagramm illustrates the connections:

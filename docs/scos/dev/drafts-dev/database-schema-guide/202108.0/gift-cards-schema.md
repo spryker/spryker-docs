@@ -16,7 +16,7 @@ redirect_from:
 
 {% info_block infoBox %}
 Enable your customers to buy gift cards with flexible amounts of money and to give it to friends as a gift. They can apply it like a voucher code during checkout and pay their whole orders or a part of it.
-{% endinfo_block %})
+{% endinfo_block %}
 
 {% info_block errorBox %}
 Gift cards are not Discounts!

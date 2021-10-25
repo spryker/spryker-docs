@@ -23,8 +23,8 @@ redirect_from:
 The following guide provides step-by-step instructions on how to implement a REST API resource in your project.
 
 {% info_block warningBox "Before you begin" %}
-Consider studying the following documents before you begin:<ul><li>[JSON API Specification](https://jsonapi.org/format/
-{% endinfo_block %} implemented in Spryker;</li><li>[Swagger Tools Reference](https://swagger.io/) to know how to document your API;</li><li>[REST API Modelling Reference](https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling).</li></ul>)
+Consider studying the following documents before you begin:<ul><li>[JSON API Specification](https://jsonapi.org/format/) implemented in Spryker;</li><li>[Swagger Tools Reference](https://swagger.io/) to know how to document your API;</li><li>[REST API Modelling Reference](https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling).</li></ul>
+{% endinfo_block %}
 
 ## 1. Create a Glue Resource Module
 The first step is to create an empty Glue Resource Module. For naming convention, all the resource module names have to consist of the feature name in plural followed by the **RestApi** suffix. For example, the `WishlistsRestApi` module represents a resource for managing the wishlists feature.

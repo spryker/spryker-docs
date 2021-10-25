@@ -151,8 +151,8 @@ class IndexController extends AbstractController
 ```
 
 {% info_block infoBox %}
-For now, the Yves part is done. You can now go to [http://www.de.suite.local/personalized-product/12](http://www.de.suite.local/personalized-product/12
-{% endinfo_block %} and get the personalized products page.</br>Now try [http://www.de.suite.local/personalized-product/not-positive-integer](http://www.de.suite.local/personalized-product/not-positive-integer), this should result in an 404 error as the rout in not defined.</br>The next set of steps is for work on the client. By performing those, you will connect your module to Elasticsearch. First, you need a client for that in order to connect Yves to Elasticsearch.)
+For now, the Yves part is done. You can now go to [http://www.de.suite.local/personalized-product/12](http://www.de.suite.local/personalized-product/12) and get the personalized products page.</br>Now try [http://www.de.suite.local/personalized-product/not-positive-integer](http://www.de.suite.local/personalized-product/not-positive-integer), this should result in an 404 error as the rout in not defined.</br>The next set of steps is for work on the client. By performing those, you will connect your module to Elasticsearch. First, you need a client for that in order to connect Yves to Elasticsearch.
+{% endinfo_block %}
 
 5. Create the PersonalizedProduct's client directory in `src/Pyz/Client` and call it `PersonalizedProduct` and add the client class and interface.
 
@@ -446,8 +446,8 @@ class IndexController extends AbstractController
 ```
 
 {% info_block infoBox %}
-That's it for getting the personalized products. </br>To demonstrate having different personalized products for different customers. Go to [http://www.de.suite.local/personalized-product/12](http://www.de.suite.local/personalized-product/12
-{% endinfo_block %} and check out the products. Refresh the page, you should see the same products as you still have the same session ID.</br> Now, remove the Spryker cookie so the session ID is different and refresh the page, you should see different products. This different customers with different sessions IDs get different personalized products.)
+That's it for getting the personalized products. </br>To demonstrate having different personalized products for different customers. Go to [http://www.de.suite.local/personalized-product/12](http://www.de.suite.local/personalized-product/12) and check out the products. Refresh the page, you should see the same products as you still have the same session ID.</br> Now, remove the Spryker cookie so the session ID is different and refresh the page, you should see different products. This different customers with different sessions IDs get different personalized products.
+{% endinfo_block %}
 
 ### 3. Put the personalized products in the CMS page
 

@@ -52,8 +52,8 @@ yarn add @spryker/oryx --dev
 ```
 
 {% info_block warningBox %}
-Oryx comes with a peer dependency - webpack version >= 2.x (needed when you build assets using Oryx api
-{% endinfo_block %})
+Oryx comes with a peer dependency - webpack version >= 2.x (needed when you build assets using Oryx api)
+{% endinfo_block %}
 
 ## Usage
 

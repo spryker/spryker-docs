@@ -181,8 +181,8 @@ class DebugTwigPlugin implements TwigPluginInterface
 ```
    
 {% info_block infoBox %}
-There are many AbstractTwigExtensionPlugin classes. They are created for  Yves (one for `spryker/spryker` and the other for `spryker/spryker-shop`
-{% endinfo_block %}, Zed, and Service applications to help you with creating the `*TwigPlugin` classes.)
+There are many AbstractTwigExtensionPlugin classes. They are created for  Yves (one for `spryker/spryker` and the other for `spryker/spryker-shop`), Zed, and Service applications to help you with creating the `*TwigPlugin` classes.
+{% endinfo_block %}
 
 **AbstractTwigExtensionPlugin implementation example**
    

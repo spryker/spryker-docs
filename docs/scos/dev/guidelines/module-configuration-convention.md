@@ -106,5 +106,7 @@ class ModuleNameConfig extends AbstractBundleConfig
 ```
 
 {% info_block warningBox %}
-Storage unchangeable constants (like queue name, error queue name, resource name
-{% endinfo_block %} should also follow the unchangeable module constant implementation, and not the events.)
+
+Storage unchangeable constants (like queue name, error queue name, resource name) should also follow the unchangeable module constant implementation, and not the events.
+
+{% endinfo_block %}

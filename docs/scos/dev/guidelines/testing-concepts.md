@@ -84,7 +84,7 @@ Is the capability of a system to prevent malicious or accidental actions outside
 
 Usability defines how well the application meets user requirements. We are looking for an application that is intuitive and provides a good overall user experience. Even if you do not have a QA team you can still run usability testing. "Still" because as mentioned above, developers tend to think positively of their code. Usually a developer only wants to check that the scenarios written in the requirements are passed. But it is important to look at your software from the outside. To imagine you are not the creator but the user. Try to identify what irritates you when using the software. It is very common for us to get frustrated by bad usability and want to fix it ourselves, but we can only report bugs to the creators and wait for the fix. Here you have the opportunity to fix everything yourself in the way you see it the best!
 
-Naturally, there are many more quality attributes and there are lots of articles and resources online that you can use to further research and tailor your own list [<https://msdn.microsoft.com/en-us/library/ee658094.aspx>]. However, for us, our top priority is to focus on performance, security and usability.
+Naturally, there are many more quality attributes and there are lots of articles and resources online that you can use to further research and tailor your own list, like (Chapter 16: Quality Attributes)[https://msdn.microsoft.com/en-us/library/ee658094.aspx]. However, for us, our top priority is to focus on performance, security and usability.
 
 ## Development/Testing Process and TDD
 
@@ -104,12 +104,12 @@ Here are the steps you should follow:
 * By our estimate, testing a module such as the Product Category module with some positive and some negative cases takes 30 - 40 minutes for an experienced tester. An inexperienced person would probably take an hour. Use these estimates to help calculate the time you need for testing in your plans. Planning projects with development time and test time together, helps to create a more realistic timeline. It will also help you to be able to predict your launch date a bit better as a well-tested project is likely to have less surprises towards the end.
 
 The following diagram illustrates what a test process looks like without a QA team.
-![Testing concepts without QA](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Guidelines/Testing+Concepts/testing-concepts-noqa.png) 
+![Testing concepts without QA](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Guidelines/Testing+Concepts/testing-concepts-noqa.png)
 
 ### Testing with a Full-Time QA Engineer or Team:
 
 A QA Engineer or team will probably lead the process and define their own process allowing developers and product owners to do their own job instead of QA. In this case there will be dedicated time for writing test scenarios, testing and retesting things. All in all the process should look more or less like this:
-![Testing concepts with QA](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Guidelines/Testing+Concepts/testing-concepts-qa.png) 
+![Testing concepts with QA](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Guidelines/Testing+Concepts/testing-concepts-qa.png)
 
 You will still need to adhere to the steps listed above and plan time for testing, but the overall time will still be reduced as far as development staff are not involved in time consuming acceptance testing and can continue with implementing the next feature. Also, the test quality will be much better.
 

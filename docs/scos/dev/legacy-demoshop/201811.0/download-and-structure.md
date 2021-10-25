@@ -26,8 +26,10 @@ redirect_from:
 Here you will find out how to download external dependencies and where to place them, together with your own asset files.
 
 {% info_block warningBox %}
-This page contains references to the following tools: [Webpack](https://webpack.js.org/
-{% endinfo_block %}, [Oryx](/docs/scos/dev/front-end-development/zed/oryx-builder-overview-and-setup.html) (Our frontend helper tool)and Oryx for Zed (Zed's frontend full automation tool). Make sure you are familiar with these tools before continuing.)
+
+This page contains references to the following tools: [Webpack](https://webpack.js.org/), [Oryx](/docs/scos/dev/front-end-development/zed/oryx-builder-overview-and-setup.html) (Our frontend helper tool)and Oryx for Zed (Zed's frontend full automation tool). Make sure you are familiar with these tools before continuing.
+
+{% endinfo_block %}
 
 ## Yves
 Yves UI must be implemented on project level.

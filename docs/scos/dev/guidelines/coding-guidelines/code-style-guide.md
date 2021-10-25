@@ -193,8 +193,7 @@ Bottom line: use `void` if nothing is expected to be returned, use `null` otherw
 
 ### Avoid "no-op" methods
 
-```php
-foo()`, which does not do any operation at all.
+`foo()`, which does not do any operation at all.
 
 So semantically, this makes no sense. In this case, no default value may be used, and a first argument is actually required for the first *if* statement to make sense (`$this-&gt;foo($requiredArgument)`). You can still pass `null`, of course, to break out early. Default values may only be used if they still make this method do an operation (apart from returning `early`).
 
@@ -206,8 +205,9 @@ Always use UTC Datetimes when you are storing and processing them. The only plac
 
 When you deprecate a method, class, or alike, it is recommended to add a short sentence on what to use instead, so all people know what to do without having to investigate deeper.
 
-```php
-$userEntityCollection  | Collection of transfer objects of the Propel user entity |
+|DEPRECATION | MESSAGE |
+|---|---|
+| $userEntityCollection  | Collection of transfer objects of the Propel user entity |
 | $email | Scalar (string or int) |
 | $idUser | User ID (int) |
 | $userIds | plural for user IDs (int[ ]) |

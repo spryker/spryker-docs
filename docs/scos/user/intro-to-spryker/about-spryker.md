@@ -39,7 +39,7 @@ We establish a unique advantage for our customers by creating a commerce operati
 
 ### Modular architecture
 Modular architecture, or modularity of the Spryker Commerce OS, means that the system is composed of small parts called modules. The Spryker Commerce OS consists of over 750 modules. Some of them are mandatory and required by the OS to run, but many are optional and designed to provide certain functionality or connectivity to either internal or external systems.
-The modules combine to create [features](/docs/scos/user/features/{{site.version}}/overview-of-the-feature-guides.html) and have limited dependencies. The limited dependencies imply less development effort, increasing your return on investment and lowering the total cost of ownership.
+The modules combine to create [features](/docs/scos/user/features/{{site.version}}/features.html) and have limited dependencies. The limited dependencies imply less development effort, increasing your return on investment and lowering the total cost of ownership.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker/modularity_transparent.png)
 
 #### Benefits of the Spryker modular architecture:
@@ -92,7 +92,7 @@ This documentation site contains lots of information on Spryker Commerce OS. Sel
 
 * [What's new](/docs/scos/user/intro-to-spryker/whats-new/whats-new.html): general information about Spryker, news, and release notes.
 * [Spryker Installation Guides](/docs/scos/dev/setup/about-the-installation-guides.html): installation of Spryker.
-* [Features](/docs/scos/user/features/{{site.version}}/overview-of-the-feature-guides.html): the Spryker features.
+* [Features](/docs/scos/user/features/{{site.version}}/features.html): the Spryker features.
 * [Glue REST API](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-rest-api.html): Spryker Glue REST API overview, reference, and features.
 * [User Guides](/docs/scos/user/back-office-user-guides/{{site.version}}/about-back-office-user-guides.html): step-by-step Backoffice and Storefront user guides.
 * [Developer Guides](/docs/scos/dev/developer-getting-started-guide.html): technical information and guides for developers.

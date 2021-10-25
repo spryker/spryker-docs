@@ -3,467 +3,31 @@ title: SCOS User Guides
 entries:
 - product: SCOS
   nested:
-  - title: Shop User Guides
-    include_versions:
-    - "201811.0"
-    - "201903.0"
-    - "201907.0"
-    - "202001.0"
-    - "202005.0"
-    nested:
-    - title: Shop Guide - Company Account
-      url: /docs/scos/user/shop-user-guides/shop-guide-company-account.html
-      include_versions:
-      - "201811.0"
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-    - title: Shop Guide - Agent Account
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-      nested:
-      - title: Shop Guide - Managing Agent Account
-        url: /docs/scos/user/shop-user-guides/shop-guide-agent-account/shop-guide-managing-agent-account.html
-        include_versions:
-        - "202001.0"
-        - "202005.0"
-    - title: Shop Guide - Quick Order
-      url: /docs/scos/user/shop-user-guides/shop-guide-quick-order.html
-      include_versions:
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-    - title: Shop Guide - Managing Products
-      url: /docs/scos/user/shop-user-guides/shop-guide-managing-products.html
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-    - title: Shop Guide - Searching within CMS Pages
-      url: /docs/scos/user/shop-user-guides/shop-guide-searching-within-cms-pages.html
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-    - title: About Shop User Guide
-      url: /docs/scos/user/shop-user-guides/about-shop-user-guide.html
-      include_versions:
-      - "201811.0"
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-    - title: Shop Guide - Business on Behalf
-      url: /docs/scos/user/shop-user-guides/shop-guide-business-on-behalf.html
-      include_versions:
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-    - title: Shop Guide - Company Roles
-      url: /docs/scos/user/shop-user-guides/shop-guide-company-roles.html
-      include_versions:
-      - "201811.0"
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-    - title: Shop Guide - Company Users
-      url: /docs/scos/user/shop-user-guides/shop-guide-company-users.html
-      include_versions:
-      - "201811.0"
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-    - title: Shop Guide - Approval Process
-      url: /docs/scos/user/shop-user-guides/shop-guide-approval-process.html
-      include_versions:
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-    - title: Shop Guide - Wishlists
-      url: /docs/scos/user/shop-user-guides/shop-guide-wishlists.html
-      include_versions:
-      - "202001.0"
-    - title: Shop Guide - Shopping Carts
-      include_versions:
-      - "202001.0"
-      nested:
-      - title: Shopping Carts
-        url: /docs/scos/user/shop-user-guides/shop-guide-shopping-carts/shopping-carts.html
-        include_versions:
-        - "202001.0"
-      - title: Shopping Carts- Reference Information
-        url: /docs/scos/user/shop-user-guides/shop-guide-shopping-carts/shopping-carts-reference-information.html
-        include_versions:
-        - "202001.0"
-      - title: Shop Guide - Creating a Shopping Cart
-        url: /docs/scos/user/shop-user-guides/shop-guide-shopping-carts/shop-guide-creating-a-shopping-cart.html
-        include_versions:
-        - "202001.0"
-      - title: Shop Guide - Managing Shopping Carts
-        url: /docs/scos/user/shop-user-guides/shop-guide-shopping-carts/shop-guide-managing-shopping-carts.html
-        include_versions:
-        - "202001.0"
-    - title: Shop Guide - Comments
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-      nested:
-      - title: Shop Guide - Managing Comments
-        url: /docs/scos/user/shop-user-guides/shop-guide-comments/shop-guide-managing-comments.html
-        include_versions:
-        - "202001.0"
-        - "202005.0"
-    - title: Shop Guide -  Quotation Process & RFQ
-      include_versions:
-      - "202001.0"
-      nested:
-      - title: Shop Guide - Request for Quote
-        url: /docs/scos/user/shop-user-guides/shop-guide-quotation-process-and-rfq/shop-guide-request-for-quote.html
-        include_versions:
-        - "202001.0"
-      - title: Shop Guide - Creating a Request for Quote
-        url: /docs/scos/user/shop-user-guides/shop-guide-quotation-process-and-rfq/shop-guide-creating-a-request-for-quote.html
-        include_versions:
-        - "202001.0"
-      - title: Shop Guide - Request for Quote- Reference Information
-        url: /docs/scos/user/shop-user-guides/shop-guide-quotation-process-and-rfq/shop-guide-request-for-quote-reference-information.html
-        include_versions:
-        - "202001.0"
-      - title: Shop Guide - Managing Requests for Quotes for a Sales Representative
-        url: /docs/scos/user/shop-user-guides/shop-guide-quotation-process-and-rfq/shop-guide-managing-requests-for-quotes-for-a-sales-representative.html
-        include_versions:
-        - "202001.0"
-      - title: Shop Guide - Managing Requests for Quotes for a Buyer
-        url: /docs/scos/user/shop-user-guides/shop-guide-quotation-process-and-rfq/shop-guide-managing-requests-for-quotes-for-a-buyer.html
-        include_versions:
-        - "202001.0"
-    - title: Shop Guide - Configurator
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-      nested:
-      - title: Shop Guide - Managing Configurable Bundles
-        url: /docs/scos/user/shop-user-guides/shop-guide-configurator/shop-guide-managing-configurable-bundles.html
-        include_versions:
-        - "202001.0"
-        - "202005.0"
-    - title: Shop Guide - Shopping Lists
-      url: /docs/scos/user/shop-user-guides/shop-guide-shopping-lists.html
-      include_versions:
-      - "201811.0"
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-    - title: Shop Guide - Checkout
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-      nested:
-      - title: Shop Guide - Shipment Step
-        url: /docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-shipment-step.html
-        include_versions:
-        - "202001.0"
-        - "202005.0"
-      - title: Shop Guide - Payment Step
-        url: /docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-payment-step.html
-        include_versions:
-        - "202001.0"
-        - "202005.0"
-      - title: Shop Guide - Summary Step
-        url: /docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-summary-step.html
-        include_versions:
-        - "202001.0"
-        - "202005.0"
-      - title: Shop Guide - Address Step
-        url: /docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-address-step.html
-        include_versions:
-        - "202001.0"
-        - "202005.0"
-      - title: Shop Guide - Login Step
-        url: /docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-login-step.html
-        include_versions:
-        - "202005.0"
-    - title: Shop Application Guide
-      include_versions:
-      - "201811.0"
-      - "201903.0"
-      - "201907.0"
-      nested:
-      - title: Cart
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-        nested:
-        - title: Minimum Order Value Feature Overview
-          url: /docs/scos/user/shop-user-guides/shop-application-guide/cart/minimum-order-value-feature-overview.html
-          include_versions:
-          - "201811.0"
-          - "201903.0"
-          - "201907.0"
-        - title: Shared Cart Feature Overview
-          url: /docs/scos/user/shop-user-guides/shop-application-guide/cart/shared-cart-feature-overview.html
-          include_versions:
-          - "201811.0"
-          - "201903.0"
-          - "201907.0"
-        - title: Multiple Carts per User Feature Overview
-          url: /docs/scos/user/shop-user-guides/shop-application-guide/cart/multiple-carts-per-user-feature-overview.html
-          include_versions:
-          - "201811.0"
-          - "201903.0"
-          - "201907.0"
-        - title: Shopping Cart Widget Feature Overview
-          url: /docs/scos/user/shop-user-guides/shop-application-guide/cart/shopping-cart-widget-feature-overview.html
-          include_versions:
-          - "201811.0"
-          - "201903.0"
-          - "201907.0"
-    - title: Checkout
-      include_versions:
-      - "201811.0"
-      - "201903.0"
-      - "201907.0"
-      nested:
-      - title: Shop Guide - Shipment Step
-        url: /docs/scos/user/shop-user-guides/checkout/shop-guide-shipment-step.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-      - title: Shop Guide - Payment Step
-        url: /docs/scos/user/shop-user-guides/checkout/shop-guide-payment-step.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-      - title: Shop Guide - Summary Step
-        url: /docs/scos/user/shop-user-guides/checkout/shop-guide-summary-step.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-      - title: Shop Guide - Address Step
-        url: /docs/scos/user/shop-user-guides/checkout/shop-guide-address-step.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-      - title: Shop Guide - Checkout
-        url: /docs/scos/user/shop-user-guides/checkout/shop-guide-checkout.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-    - title: Shop Guide - Customer Account
-      include_versions:
-      - "202005.0"
-      nested:
-      - title: References
-        include_versions:
-        - "202005.0"
-        nested:
-        - title: Request for Quote- Reference Information
-          url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/references/request-for-quote-reference-information.html
-          include_versions:
-          - "202005.0"
-        - title: Shopping Carts- Reference Information
-          url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/references/shopping-carts-reference-information.html
-          include_versions:
-          - "202005.0"
-        - title: Addresses- Reference Information
-          url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/references/addresses-reference-information.html
-          include_versions:
-          - "202005.0"
-        - title: Order History- Reference Information
-          url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/references/order-history-reference-information.html
-          include_versions:
-          - "202005.0"
-        - title: Return Details- Reference Information
-          url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/references/return-details-reference-information.html
-          include_versions:
-          - "202005.0"
-      - title: Shop Guide - Newsletter
-        url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-newsletter.html
-        include_versions:
-        - "202005.0"
-      - title: Shop Guide - Customer Addresses
-        url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-customer-addresses.html
-        include_versions:
-        - "202005.0"
-      - title: Shop Guide - Customer Profile
-        url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-customer-profile.html
-        include_versions:
-        - "202005.0"
-      - title: Shop Guide - Wishlists
-        url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-wishlists.html
-        include_versions:
-        - "202005.0"
-      - title: Shop Guide - Shopping Carts
-        include_versions:
-        - "202005.0"
-        nested:
-        - title: Shop Guide - Managing a Shopping Cart
-          url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-managing-a-shopping-cart.html
-          include_versions:
-          - "202005.0"
-        - title: Shopping Carts
-          url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-shopping-carts/shopping-carts.html
-          include_versions:
-          - "202005.0"
-        - title: Shop Guide - Creating a Shopping Cart
-          url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-creating-a-shopping-cart.html
-          include_versions:
-          - "202005.0"
-        - title: Shop Guide - Managing Multiple Shopping Carts
-          url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-managing-multiple-shopping-carts.html
-          include_versions:
-          - "202005.0"
-      - title: Shop Guide - Customer Account Overview
-        url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-customer-account-overview.html
-        include_versions:
-        - "202005.0"
-      - title: Shop Guide -  Quote Requests
-        include_versions:
-        - "202005.0"
-        nested:
-        - title: Shop Guide - Request for Quote
-          url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-request-for-quote.html
-          include_versions:
-          - "202005.0"
-        - title: Shop Guide - Creating a Request for Quote
-          url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-creating-a-request-for-quote.html
-          include_versions:
-          - "202005.0"
-        - title: Shop Guide - Managing Requests for Quotes for a Sales Representative
-          url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-managing-requests-for-quotes-for-a-sales-representative.html
-          include_versions:
-          - "202005.0"
-        - title: Shop Guide - Managing Requests for Quotes for a Buyer
-          url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-managing-requests-for-quotes-for-a-buyer.html
-          include_versions:
-          - "202005.0"
-      - title: Shop Guide - Order History
-        url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-order-history.html
-        include_versions:
-        - "202005.0"
-      - title: Shop Guide - Shopping Lists
-        url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-shopping-lists.html
-        include_versions:
-        - "202005.0"
-      - title: Shop Guide - Returns Management
-        include_versions:
-        - "202005.0"
-        nested:
-        - title: Shop Guide - Creating a Return
-          url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-returns-management/shop-guide-creating-a-return.html
-          include_versions:
-          - "202005.0"
-        - title: Shop Guide - Printing a Return Slip
-          url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-returns-management/shop-guide-printing-a-return-slip.html
-          include_versions:
-          - "202005.0"
-    - title: Shop Guide - Cancelling Orders
-      url: /docs/scos/user/shop-user-guides/shop-guide-cancelling-orders.html
-      include_versions:
-      - "202005.0"
-    - title: Shop Guide - Company Roles
-      include_versions:
-      - "202005.0"
-      nested:
-      - title: References
-        include_versions:
-        - "202005.0"
-        nested:
-        - title: Company Roles- Reference Information
-          url: /docs/scos/user/shop-user-guides/shop-guide-company-roles/references/company-roles-reference-information.html
-          include_versions:
-          - "202005.0"
-      - title: Shop Guide - Managing Company Roles
-        url: /docs/scos/user/shop-user-guides/shop-guide-company-roles/shop-guide-managing-company-roles.html
-        include_versions:
-        - "202005.0"
-      - title: Shop Guide - Creating a New Company Role
-        url: /docs/scos/user/shop-user-guides/shop-guide-company-roles/shop-guide-creating-a-new-company-role.html
-        include_versions:
-        - "202005.0"
-    - title: Comments
-      include_versions:
-      - "201907.0"
-      nested:
-      - title: Shop Guide - Managing Comments
-        url: /docs/scos/user/shop-user-guides/comments/shop-guide-managing-comments.html
-        include_versions:
-        - "201907.0"
-      - title: Shop Guide - Comments
-        url: /docs/scos/user/shop-user-guides/comments/shop-guide-comments.html
-        include_versions:
-        - "201907.0"
-    - title: Quotation Process & RFQ
-      include_versions:
-      - "201907.0"
-      nested:
-      - title: Shop Guide - Request for Quote
-        url: /docs/scos/user/shop-user-guides/quotation-proces-and-rfq/shop-guide-request-for-quote.html
-        include_versions:
-        - "201907.0"
-      - title: Shop Guide - Creating a Request for Quote
-        url: /docs/scos/user/shop-user-guides/quotation-proces-and-rfq/shop-guide-creating-a-request-for-quote.html
-        include_versions:
-        - "201907.0"
-      - title: Shop Guide - Request for Quote- Reference Information
-        url: /docs/scos/user/shop-user-guides/quotation-proces-and-rfq/shop-guide-request-for-quote-reference-information.html
-        include_versions:
-        - "201907.0"
-      - title: Shop Guide - Managing Requests for Quotes for a Sales Representative
-        url: /docs/scos/user/shop-user-guides/quotation-proces-and-rfq/shop-guide-managing-requests-for-quotes-for-a-sales-representative.html
-        include_versions:
-        - "201907.0"
-      - title: Shop Guide - Managing Requests for Quotes for a Buyer
-        url: /docs/scos/user/shop-user-guides/quotation-proces-and-rfq/shop-guide-managing-requests-for-quotes-for-a-buyer.html
-        include_versions:
-        - "201907.0"
-    - title: Agent Account
-      include_versions:
-      - "201907.0"
-      nested:
-      - title: Shop Guide - Managing Agent Account
-        url: /docs/scos/user/shop-user-guides/agent-account/shop-guide-managing-agent-account.html
-        include_versions:
-        - "201907.0"
-      - title: Shop Guide - Agent Account
-        url: /docs/scos/user/shop-user-guides/agent-account/shop-guide-agent-account.html
-        include_versions:
-        - "201907.0"
-    - title: Searching within CMS Pages
-      url: /docs/scos/user/shop-user-guides/searching-within-cms-pages.html
-      include_versions:
-      - "201903.0"
-      - "201907.0"
-    - title: Shopping Carts
-      include_versions:
-      - "201907.0"
-      nested:
-      - title: Creating a Shopping Cart
-        url: /docs/scos/user/shop-user-guides/shopping-carts/creating-a-shopping-cart.html
-        include_versions:
-        - "201907.0"
-      - title: Shopping Carts- Reference Information
-        url: /docs/scos/user/shop-user-guides/shopping-carts/shopping-carts-reference-information.html
-        include_versions:
-        - "201907.0"
-      - title: Managing Shopping Carts
-        url: /docs/scos/user/shop-user-guides/shopping-carts/managing-shopping-carts.html
-        include_versions:
-        - "201907.0"
   - title: Features
+    url: /docs/scos/user/features/features.html  
     nested:
-    - title: Measurement Units Feature Overview
-      url: /docs/scos/user/features/measurement-units-feature-overview.html
+    - title: Agent Assist Feature Overview
+      url: /docs/scos/user/features/agent-assist-feature-overview.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+    - title: Category Management feature overview
+      url: /docs/scos/user/features/category-management-feature-overview.html
+    - title: Alternative Products Feature Overview
+      url: /docs/scos/user/features/alternative-products-feature-overview.html
+    - title: Approval Process Feature Overview
+      url: /docs/scos/user/features/approval-process-feature-overview.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Availability  Notification feature overview
       url: /docs/scos/user/features/availability-notification-feature-overview.html
       include_versions:
@@ -473,6 +37,20 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
+    - title: Cart fature overview
+      url: /docs/scos/user/features/cart-feature-overview/cart-feature-overview.html
+      nested:
+      - title: Cart Notes overview
+        url: /docs/scos/user/features/cart-feature-overview/cart-notes-overview.html
+      - title: Shopping Cart Widget overview
+        url: /docs/scos/user/features/cart-feature-overview/cart-widget-overview.html
+      - title: Quick Order from the Catalog Page overview
+        url: /docs/scos/user/features/cart-feature-overview/quick-order-from-the-catalog-page-overview.html
+        include_versions:
+        - "202009.0"
+        - "202108.0"        
+    - title: Measurement Units Feature Overview
+      url: /docs/scos/user/features/measurement-units-feature-overview.html
     - title: Hide Content from Logged out Users Overview
       url: /docs/scos/user/features/customer-access-feature-overview.html
     - title: Tax feature overview
@@ -590,12 +168,6 @@ entries:
         url: /docs/scos/user/features/search-feature-overview/filters-and-search-by-category.html
         include_versions:
         - "201903.0"
-    - title: Overview of the feature guides
-      url: /docs/scos/user/features/overview-of-the-feature-guides.html
-      include_versions:
-      - "202001.0"
-      - "202009.0"
-      - "202108.0"
     - title: Rating and Reviews
       include_versions:
       - "201903.0"
@@ -704,15 +276,6 @@ entries:
       url: /docs/scos/user/features/product-labels-feature-overview.html
     - title: Product Options feature overview
       url: /docs/scos/user/features/product-options-feature-overview.html
-    - title: Approval Process Feature Overview
-      url: /docs/scos/user/features/approval-process-feature-overview.html
-      include_versions:
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Product Lists feature overview
       url: /docs/scos/user/features/product-lists-feature-overview.html
     - title: Comments feature overview
@@ -727,8 +290,6 @@ entries:
       url: /docs/scos/user/features/inventory-management-feature-overview.html
     - title: Shared Cart Feature Overview
       url: /docs/scos/user/features/shared-carts-feature-overview.html
-    - title: Alternative Products Feature Overview
-      url: /docs/scos/user/features/alternative-products-feature-overview.html
     - title: Prices per Merchant Relation Feature Overview
       url: /docs/scos/user/features/merchant-custom-prices-feature-overview.html
     - title: Barcode Generator Feature Overview
@@ -807,31 +368,6 @@ entries:
           url: /docs/scos/user/features/product-information-management/product-relations/product-relations-module-relations.html
           include_versions:
           - "202005.0"
-    - title: Cart feature overview
-      include_versions:
-      - "202009.0"
-      - "202108.0"
-      nested:
-      - title: Cart Notes Feature Overview
-        url: /docs/scos/user/features/cart-feature-overview/cart-notes-overview.html
-      - title: Shopping Cart
-        url: /docs/scos/user/features/cart-feature-overview/cart-feature-overview.html
-      - title: Shopping Cart Widget Feature Overview
-        url: /docs/scos/user/features/cart-feature-overview/cart-widget-overview.html
-      - title: Quick Order from the Catalog Page overview
-        url: /docs/scos/user/features/cart-feature-overview/quick-order-from-the-catalog-page-overview.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-    - title: Agent Assist Feature Overview
-      url: /docs/scos/user/features/agent-assist-feature-overview.html
-      include_versions:
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Gift Cards feature overview
       url: /docs/scos/user/features/gift-cards-feature-overview.html
     - title: Product feature overview
@@ -1107,8 +643,6 @@ entries:
       url: /docs/scos/user/features/product-sets-feature-overview.html
     - title: Catalog feature overview
       url: /docs/scos/user/features/catalog-feature-overview.html
-    - title: Category Management feature overview
-      url: /docs/scos/user/features/category-management-feature-overview.html
     - title: Company Account feature overview
       include_versions:
       - "201907.0"
@@ -1151,10 +685,6 @@ entries:
       - "201907.0"
       - "202009.0"
       - "202108.0"
-    - title: About Features
-      url: /docs/scos/user/features/about-features.html
-      include_versions:
-      - "202005.0"
     - title: Return Management Feature Overview
       include_versions:
       - "202009.0"
@@ -3722,4 +3252,461 @@ entries:
         url: /docs/scos/user/technology-partners/taxes/avalara-tax-shipment-feature-integration.html
         include_versions:
         - "202108.0"
+  - title: Shop User Guides
+    include_versions:
+    - "201811.0"
+    - "201903.0"
+    - "201907.0"
+    - "202001.0"
+    - "202005.0"
+    nested:
+    - title: Shop Guide - Company Account
+      url: /docs/scos/user/shop-user-guides/shop-guide-company-account.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+    - title: Shop Guide - Agent Account
+      include_versions:
+      - "202001.0"
+      - "202005.0"
+      nested:
+      - title: Shop Guide - Managing Agent Account
+        url: /docs/scos/user/shop-user-guides/shop-guide-agent-account/shop-guide-managing-agent-account.html
+        include_versions:
+        - "202001.0"
+        - "202005.0"
+    - title: Shop Guide - Quick Order
+      url: /docs/scos/user/shop-user-guides/shop-guide-quick-order.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+    - title: Shop Guide - Managing Products
+      url: /docs/scos/user/shop-user-guides/shop-guide-managing-products.html
+      include_versions:
+      - "202001.0"
+      - "202005.0"
+    - title: Shop Guide - Searching within CMS Pages
+      url: /docs/scos/user/shop-user-guides/shop-guide-searching-within-cms-pages.html
+      include_versions:
+      - "202001.0"
+      - "202005.0"
+    - title: About Shop User Guide
+      url: /docs/scos/user/shop-user-guides/about-shop-user-guide.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+    - title: Shop Guide - Business on Behalf
+      url: /docs/scos/user/shop-user-guides/shop-guide-business-on-behalf.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+    - title: Shop Guide - Company Roles
+      url: /docs/scos/user/shop-user-guides/shop-guide-company-roles.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+    - title: Shop Guide - Company Users
+      url: /docs/scos/user/shop-user-guides/shop-guide-company-users.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+    - title: Shop Guide - Approval Process
+      url: /docs/scos/user/shop-user-guides/shop-guide-approval-process.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+    - title: Shop Guide - Wishlists
+      url: /docs/scos/user/shop-user-guides/shop-guide-wishlists.html
+      include_versions:
+      - "202001.0"
+    - title: Shop Guide - Shopping Carts
+      include_versions:
+      - "202001.0"
+      nested:
+      - title: Shopping Carts
+        url: /docs/scos/user/shop-user-guides/shop-guide-shopping-carts/shopping-carts.html
+        include_versions:
+        - "202001.0"
+      - title: Shopping Carts- Reference Information
+        url: /docs/scos/user/shop-user-guides/shop-guide-shopping-carts/shopping-carts-reference-information.html
+        include_versions:
+        - "202001.0"
+      - title: Shop Guide - Creating a Shopping Cart
+        url: /docs/scos/user/shop-user-guides/shop-guide-shopping-carts/shop-guide-creating-a-shopping-cart.html
+        include_versions:
+        - "202001.0"
+      - title: Shop Guide - Managing Shopping Carts
+        url: /docs/scos/user/shop-user-guides/shop-guide-shopping-carts/shop-guide-managing-shopping-carts.html
+        include_versions:
+        - "202001.0"
+    - title: Shop Guide - Comments
+      include_versions:
+      - "202001.0"
+      - "202005.0"
+      nested:
+      - title: Shop Guide - Managing Comments
+        url: /docs/scos/user/shop-user-guides/shop-guide-comments/shop-guide-managing-comments.html
+        include_versions:
+        - "202001.0"
+        - "202005.0"
+    - title: Shop Guide -  Quotation Process & RFQ
+      include_versions:
+      - "202001.0"
+      nested:
+      - title: Shop Guide - Request for Quote
+        url: /docs/scos/user/shop-user-guides/shop-guide-quotation-process-and-rfq/shop-guide-request-for-quote.html
+        include_versions:
+        - "202001.0"
+      - title: Shop Guide - Creating a Request for Quote
+        url: /docs/scos/user/shop-user-guides/shop-guide-quotation-process-and-rfq/shop-guide-creating-a-request-for-quote.html
+        include_versions:
+        - "202001.0"
+      - title: Shop Guide - Request for Quote- Reference Information
+        url: /docs/scos/user/shop-user-guides/shop-guide-quotation-process-and-rfq/shop-guide-request-for-quote-reference-information.html
+        include_versions:
+        - "202001.0"
+      - title: Shop Guide - Managing Requests for Quotes for a Sales Representative
+        url: /docs/scos/user/shop-user-guides/shop-guide-quotation-process-and-rfq/shop-guide-managing-requests-for-quotes-for-a-sales-representative.html
+        include_versions:
+        - "202001.0"
+      - title: Shop Guide - Managing Requests for Quotes for a Buyer
+        url: /docs/scos/user/shop-user-guides/shop-guide-quotation-process-and-rfq/shop-guide-managing-requests-for-quotes-for-a-buyer.html
+        include_versions:
+        - "202001.0"
+    - title: Shop Guide - Configurator
+      include_versions:
+      - "202001.0"
+      - "202005.0"
+      nested:
+      - title: Shop Guide - Managing Configurable Bundles
+        url: /docs/scos/user/shop-user-guides/shop-guide-configurator/shop-guide-managing-configurable-bundles.html
+        include_versions:
+        - "202001.0"
+        - "202005.0"
+    - title: Shop Guide - Shopping Lists
+      url: /docs/scos/user/shop-user-guides/shop-guide-shopping-lists.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+    - title: Shop Guide - Checkout
+      include_versions:
+      - "202001.0"
+      - "202005.0"
+      nested:
+      - title: Shop Guide - Shipment Step
+        url: /docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-shipment-step.html
+        include_versions:
+        - "202001.0"
+        - "202005.0"
+      - title: Shop Guide - Payment Step
+        url: /docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-payment-step.html
+        include_versions:
+        - "202001.0"
+        - "202005.0"
+      - title: Shop Guide - Summary Step
+        url: /docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-summary-step.html
+        include_versions:
+        - "202001.0"
+        - "202005.0"
+      - title: Shop Guide - Address Step
+        url: /docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-address-step.html
+        include_versions:
+        - "202001.0"
+        - "202005.0"
+      - title: Shop Guide - Login Step
+        url: /docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-login-step.html
+        include_versions:
+        - "202005.0"
+    - title: Shop Application Guide
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      nested:
+      - title: Cart
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        nested:
+        - title: Minimum Order Value Feature Overview
+          url: /docs/scos/user/shop-user-guides/shop-application-guide/cart/minimum-order-value-feature-overview.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+        - title: Shared Cart Feature Overview
+          url: /docs/scos/user/shop-user-guides/shop-application-guide/cart/shared-cart-feature-overview.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+        - title: Multiple Carts per User Feature Overview
+          url: /docs/scos/user/shop-user-guides/shop-application-guide/cart/multiple-carts-per-user-feature-overview.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+        - title: Shopping Cart Widget Feature Overview
+          url: /docs/scos/user/shop-user-guides/shop-application-guide/cart/shopping-cart-widget-feature-overview.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+    - title: Checkout
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      nested:
+      - title: Shop Guide - Shipment Step
+        url: /docs/scos/user/shop-user-guides/checkout/shop-guide-shipment-step.html
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+      - title: Shop Guide - Payment Step
+        url: /docs/scos/user/shop-user-guides/checkout/shop-guide-payment-step.html
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+      - title: Shop Guide - Summary Step
+        url: /docs/scos/user/shop-user-guides/checkout/shop-guide-summary-step.html
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+      - title: Shop Guide - Address Step
+        url: /docs/scos/user/shop-user-guides/checkout/shop-guide-address-step.html
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+      - title: Shop Guide - Checkout
+        url: /docs/scos/user/shop-user-guides/checkout/shop-guide-checkout.html
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+    - title: Shop Guide - Customer Account
+      include_versions:
+      - "202005.0"
+      nested:
+      - title: References
+        include_versions:
+        - "202005.0"
+        nested:
+        - title: Request for Quote- Reference Information
+          url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/references/request-for-quote-reference-information.html
+          include_versions:
+          - "202005.0"
+        - title: Shopping Carts- Reference Information
+          url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/references/shopping-carts-reference-information.html
+          include_versions:
+          - "202005.0"
+        - title: Addresses- Reference Information
+          url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/references/addresses-reference-information.html
+          include_versions:
+          - "202005.0"
+        - title: Order History- Reference Information
+          url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/references/order-history-reference-information.html
+          include_versions:
+          - "202005.0"
+        - title: Return Details- Reference Information
+          url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/references/return-details-reference-information.html
+          include_versions:
+          - "202005.0"
+      - title: Shop Guide - Newsletter
+        url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-newsletter.html
+        include_versions:
+        - "202005.0"
+      - title: Shop Guide - Customer Addresses
+        url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-customer-addresses.html
+        include_versions:
+        - "202005.0"
+      - title: Shop Guide - Customer Profile
+        url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-customer-profile.html
+        include_versions:
+        - "202005.0"
+      - title: Shop Guide - Wishlists
+        url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-wishlists.html
+        include_versions:
+        - "202005.0"
+      - title: Shop Guide - Shopping Carts
+        include_versions:
+        - "202005.0"
+        nested:
+        - title: Shop Guide - Managing a Shopping Cart
+          url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-managing-a-shopping-cart.html
+          include_versions:
+          - "202005.0"
+        - title: Shopping Carts
+          url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-shopping-carts/shopping-carts.html
+          include_versions:
+          - "202005.0"
+        - title: Shop Guide - Creating a Shopping Cart
+          url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-creating-a-shopping-cart.html
+          include_versions:
+          - "202005.0"
+        - title: Shop Guide - Managing Multiple Shopping Carts
+          url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-managing-multiple-shopping-carts.html
+          include_versions:
+          - "202005.0"
+      - title: Shop Guide - Customer Account Overview
+        url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-customer-account-overview.html
+        include_versions:
+        - "202005.0"
+      - title: Shop Guide -  Quote Requests
+        include_versions:
+        - "202005.0"
+        nested:
+        - title: Shop Guide - Request for Quote
+          url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-request-for-quote.html
+          include_versions:
+          - "202005.0"
+        - title: Shop Guide - Creating a Request for Quote
+          url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-creating-a-request-for-quote.html
+          include_versions:
+          - "202005.0"
+        - title: Shop Guide - Managing Requests for Quotes for a Sales Representative
+          url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-managing-requests-for-quotes-for-a-sales-representative.html
+          include_versions:
+          - "202005.0"
+        - title: Shop Guide - Managing Requests for Quotes for a Buyer
+          url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-managing-requests-for-quotes-for-a-buyer.html
+          include_versions:
+          - "202005.0"
+      - title: Shop Guide - Order History
+        url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-order-history.html
+        include_versions:
+        - "202005.0"
+      - title: Shop Guide - Shopping Lists
+        url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-shopping-lists.html
+        include_versions:
+        - "202005.0"
+      - title: Shop Guide - Returns Management
+        include_versions:
+        - "202005.0"
+        nested:
+        - title: Shop Guide - Creating a Return
+          url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-returns-management/shop-guide-creating-a-return.html
+          include_versions:
+          - "202005.0"
+        - title: Shop Guide - Printing a Return Slip
+          url: /docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-returns-management/shop-guide-printing-a-return-slip.html
+          include_versions:
+          - "202005.0"
+    - title: Shop Guide - Cancelling Orders
+      url: /docs/scos/user/shop-user-guides/shop-guide-cancelling-orders.html
+      include_versions:
+      - "202005.0"
+    - title: Shop Guide - Company Roles
+      include_versions:
+      - "202005.0"
+      nested:
+      - title: References
+        include_versions:
+        - "202005.0"
+        nested:
+        - title: Company Roles- Reference Information
+          url: /docs/scos/user/shop-user-guides/shop-guide-company-roles/references/company-roles-reference-information.html
+          include_versions:
+          - "202005.0"
+      - title: Shop Guide - Managing Company Roles
+        url: /docs/scos/user/shop-user-guides/shop-guide-company-roles/shop-guide-managing-company-roles.html
+        include_versions:
+        - "202005.0"
+      - title: Shop Guide - Creating a New Company Role
+        url: /docs/scos/user/shop-user-guides/shop-guide-company-roles/shop-guide-creating-a-new-company-role.html
+        include_versions:
+        - "202005.0"
+    - title: Comments
+      include_versions:
+      - "201907.0"
+      nested:
+      - title: Shop Guide - Managing Comments
+        url: /docs/scos/user/shop-user-guides/comments/shop-guide-managing-comments.html
+        include_versions:
+        - "201907.0"
+      - title: Shop Guide - Comments
+        url: /docs/scos/user/shop-user-guides/comments/shop-guide-comments.html
+        include_versions:
+        - "201907.0"
+    - title: Quotation Process & RFQ
+      include_versions:
+      - "201907.0"
+      nested:
+      - title: Shop Guide - Request for Quote
+        url: /docs/scos/user/shop-user-guides/quotation-proces-and-rfq/shop-guide-request-for-quote.html
+        include_versions:
+        - "201907.0"
+      - title: Shop Guide - Creating a Request for Quote
+        url: /docs/scos/user/shop-user-guides/quotation-proces-and-rfq/shop-guide-creating-a-request-for-quote.html
+        include_versions:
+        - "201907.0"
+      - title: Shop Guide - Request for Quote- Reference Information
+        url: /docs/scos/user/shop-user-guides/quotation-proces-and-rfq/shop-guide-request-for-quote-reference-information.html
+        include_versions:
+        - "201907.0"
+      - title: Shop Guide - Managing Requests for Quotes for a Sales Representative
+        url: /docs/scos/user/shop-user-guides/quotation-proces-and-rfq/shop-guide-managing-requests-for-quotes-for-a-sales-representative.html
+        include_versions:
+        - "201907.0"
+      - title: Shop Guide - Managing Requests for Quotes for a Buyer
+        url: /docs/scos/user/shop-user-guides/quotation-proces-and-rfq/shop-guide-managing-requests-for-quotes-for-a-buyer.html
+        include_versions:
+        - "201907.0"
+    - title: Agent Account
+      include_versions:
+      - "201907.0"
+      nested:
+      - title: Shop Guide - Managing Agent Account
+        url: /docs/scos/user/shop-user-guides/agent-account/shop-guide-managing-agent-account.html
+        include_versions:
+        - "201907.0"
+      - title: Shop Guide - Agent Account
+        url: /docs/scos/user/shop-user-guides/agent-account/shop-guide-agent-account.html
+        include_versions:
+        - "201907.0"
+    - title: Searching within CMS Pages
+      url: /docs/scos/user/shop-user-guides/searching-within-cms-pages.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+    - title: Shopping Carts
+      include_versions:
+      - "201907.0"
+      nested:
+      - title: Creating a Shopping Cart
+        url: /docs/scos/user/shop-user-guides/shopping-carts/creating-a-shopping-cart.html
+        include_versions:
+        - "201907.0"
+      - title: Shopping Carts- Reference Information
+        url: /docs/scos/user/shop-user-guides/shopping-carts/shopping-carts-reference-information.html
+        include_versions:
+        - "201907.0"
+      - title: Managing Shopping Carts
+        url: /docs/scos/user/shop-user-guides/shopping-carts/managing-shopping-carts.html
+        include_versions:
+        - "201907.0"
 ...

@@ -30,6 +30,6 @@ The documentation in the *Features* section provides reference information that 
 Or, you can go directly to the following guides:
 
 * [Back Office user guide](/docs/scos/user/back-office-user-guides/{{page.version}}/about-back-office-user-guides.html): for step-by-step guides on how to work with the features in the Back Office.
-* [Feature integration guides](/docs/scos/dev/feature-integration-guides/{{page.version}}/about-integration-guides.html): for developer guides on how to integrate a feature into a Spryker project.
+* [Feature integration guides](/docs/scos/dev/feature-integration-guides/{{page.version}}/feature-integration-guides.html): for developer guides on how to integrate a feature into a Spryker project.
 
 {% endinfo_block %}

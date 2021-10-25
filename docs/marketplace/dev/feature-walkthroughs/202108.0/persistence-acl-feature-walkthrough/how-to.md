@@ -1,5 +1,5 @@
 ---
-title: How to
+title: How to split Products by Stores
 last_updated: Осt 13, 2021
 template: concept-topic-template
 ---

@@ -113,8 +113,8 @@ class HelloSprykerBusinessFactory extends AbstractBusinessFactory
 ```
 And thirdly, add your model folder inside the business layer and add class to handle reversing the string. Call the method as `reverseString()`.
 {% info_block infoBox "Info" %}
-To reverse the string, you can simply use method `strrev(
-{% endinfo_block %}`.)
+To reverse the string, you can simply use method `strrev()`.
+{% endinfo_block %}
 It's time to hook things together.
 1. Instantiate an object from your class in the factory and let a facade method use the new factory method in order to get the needed object. Then call the `reverseString()` method from the object.
     Your facade method should look like this:
@@ -397,9 +397,9 @@ Any client that calls Zed from Yves uses the **ZedRequest** module. This module 
 	    );
     }
     ```										
-    {% info_block infoBox "Info" %}
-This method will call the Zed module **HelloSpryker**.</br>The first parameter in the `call(
-{% endinfo_block %}` method is the endpoint of the request which is divided into three main sections: `moduleName/controllerName/ActionName`. Here, we are calling the module **HelloSpryker**, the `GatewayController`, and the `ReverseStringAction`.</br>By convention, clients send requests to `GatewayControllers`. The second parameter is the payload of the request which is always a transfer object, any transfer object.)
+{% info_block infoBox "Info" %}
+This method will call the Zed module **HelloSpryker**.</br>The first parameter in the `call()` method is the endpoint of the request which is divided into three main sections: `moduleName/controllerName/ActionName`. Here, we are calling the module **HelloSpryker**, the `GatewayController`, and the `ReverseStringAction`.</br>By convention, clients send requests to `GatewayControllers`. The second parameter is the payload of the request which is always a transfer object, any transfer object.
+{% endinfo_block %}
 5. Add a client method in the `HelloSprykerClient` to call the `reverseString()` method in the stub.
     ```php
     /**

@@ -126,8 +126,8 @@ public function createUrlForMyEntity($url, $idMyEntity, $idLocale)
 ```
 
 {% info_block infoBox %}
-The `\Spryker\Zed\Url\Business\UrlFacade::createUrl(
-{% endinfo_block %}` method persists a new URL in the database and also makes sure it will be collected to the key-value storage the next time the URL collector runs.)
+The `\Spryker\Zed\Url\Business\UrlFacade::createUrl()` method persists a new URL in the database and also makes sure it will be collected to the key-value storage the next time the URL collector runs.
+{% endinfo_block %}
 
 ## Setting up the Frontend
 To setup the frontend, you need to create a Controller class in Yves and make sure it is discoverable to the responsible router.

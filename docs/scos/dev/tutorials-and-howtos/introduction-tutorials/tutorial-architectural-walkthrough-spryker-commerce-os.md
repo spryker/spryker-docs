@@ -22,8 +22,8 @@ redirect_from:
 ---
 
 {% info_block infoBox %}
-This tutorial is also available on the Spryker Training web-site. For more information and hands-on exercises, visit the [Spryker Training](https://training.spryker.com/courses/developer-bootcamp
-{% endinfo_block %} web-site.)
+This tutorial is also available on the Spryker Training web-site. For more information and hands-on exercises, visit the [Spryker Training](https://training.spryker.com/courses/developer-bootcamp) web-site.
+{% endinfo_block %}
 The main idea of this task is to understand the Spryker architecture and how things work all together.
 
 We will implement a very simple functionality in the back-end application to reverse a string. Then we will let the front-end application connect to the back-end one in order to use this functionality and show the result on a webpage in the shop.
@@ -42,7 +42,7 @@ This means building a dependency from the HelloSpryker module to the StringForma
 
 ### 1. Build the HelloSpryker module in Zed to reverse the string
 1. To add a new module in Zed, go to `/src/Pyz/Zed` and add a new folder called **HelloSpryker**.
-    {% info_block infoBox %}
+{% info_block infoBox %}
 A new module is simply a new folder.
 {% endinfo_block %}
 2. The communication layer in a module is its entry point, so we will add it first and check if your module responds:
@@ -57,15 +57,15 @@ A new module is simply a new folder.
 
     class IndexController extends AbstractController
     {
-	    /**
-	    * @param Request $request
-	    *
-	    * @return array
-	    */
-	    public function indexAction(Request $request)
-	    {
-	    return ['string' => 'Hello Spryker!'];
-	    }
+        /**
+        * @param Request $request
+        *
+        * @return array
+        */
+        public function indexAction(Request $request)
+        {
+        return ['string' => 'Hello Spryker!'];
+        }
     }						
     ```
 3. To render the text in the Zed UI template, add the presentation layer with the twig file that loads as the action's response.
@@ -75,7 +75,7 @@ A new module is simply a new folder.
     ```xml
     {% raw %}{%{% endraw %} extends '@Gui/Layout/layout.twig' {% raw %}%}{% endraw %}
     {% raw %}{%{% endraw %} block content {% raw %}%}{% endraw %}
-	    {% raw %}{{{% endraw %} string {% raw %}}}{% endraw %}
+        {% raw %}{{{% endraw %} string {% raw %}}}{% endraw %}
     {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
     ```
 4. To see **"Hello Spryker!"**, go to `https://zed.mysprykershop.com/hello-spryker`.

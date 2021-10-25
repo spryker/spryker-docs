@@ -95,5 +95,5 @@ class CheckoutDependencyInjector implements DependencyInjectorInterface
 </details>
 
 {% info_block errorBox %}
-If you re-created this example in Demoshop, you’ll need to do some adjustments on the selectPayment(
-{% endinfo_block %} from `checkout.js`.)
+If you re-created this example in Demoshop, you’ll need to do some adjustments on the selectPayment() from `checkout.js`.
+{% endinfo_block %}

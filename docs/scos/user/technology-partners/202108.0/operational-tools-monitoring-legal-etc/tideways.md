@@ -28,8 +28,8 @@ YOUR ADVANTAGES
 * automated recognition of errors with precise and detailed leads to causes and bugfixing tips
 
 {% info_block errorBox "Attention!" %}
-[Register](https://app.tideways.io/login
-{% endinfo_block %} with Tideways now!)
+[Register](https://app.tideways.io/login) with Tideways now!
+{% endinfo_block %}
 
 ### General information
 

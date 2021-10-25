@@ -37,14 +37,14 @@ The script handles sessions as follows:
 3. When a page is loaded, java-script timeout function is used for refreshing the session. Timeout is calculated by the following formula:
 
 {% info_block warningBox %}
-timeout = ((current_timestamp - session_started_at
-{% endinfo_block %} - (session_lifetime - refresh_before_session_end)) * -1)
+timeout = ((current_timestamp - session_started_at) - (session_lifetime - refresh_before_session_end)) * -1)
+{% endinfo_block %}
 
 For example:
 
 {% info_block infoBox %}
-current time: 10:00 (1543399200
-{% endinfo_block %}<br>session lifetime: 30m (18000)<br>session started at: 9:35 (1543397700)<br>session refresh before end: 5m (300)<br>((1543399200 - 1543397700) - (1800-300))*-1 = 0)
+current time: 10:00 (1543399200)<br>session lifetime: 30m (18000)<br>session started at: 9:35 (1543397700)<br>session refresh before end: 5m (300)<br>((1543399200 - 1543397700) - (1800-300))*-1 = 0)
+{% endinfo_block %}
 
 4. When time is out, sends Ajax request to PHP controller to extend session lifetime.
 5. Refreshes data in browser storage after Ajax request is complete.

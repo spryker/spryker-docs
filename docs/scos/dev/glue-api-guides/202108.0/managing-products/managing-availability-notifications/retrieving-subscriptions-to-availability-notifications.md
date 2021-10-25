@@ -14,6 +14,7 @@ redirect_from:
 This endpoint allows retrieving subscriptions to availability notifications of a registered customer.
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue: Availability Notification feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-availability-notification-feature-integration.html).
 
 ## Retrieve subscriptions to availability notifications
@@ -72,6 +73,7 @@ Response
 </details>
 
 ## Other management options
+
 There is an alternative way to retrieve subscriptions to availability notifications of a registered customer. For details, see [Managing customers](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer).
 
 ## Possible errors
@@ -82,14 +84,3 @@ There is an alternative way to retrieve subscriptions to availability notificati
 | 002 | Access token is missing. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
-
-
-
-
-
-
-
-
-
-
-

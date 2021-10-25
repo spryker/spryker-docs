@@ -16,11 +16,12 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/retrieving-categories/retrieving-category-trees.html
 ---
 
-The Navigation <!-- add link to feature overview later --> feature enables back-end developers to create navigtaion elements for Storefront. The navigation elements help shop users to navigate the shop and locate the necessary products and other content. Navigation elements can be linked to CMS pages, categories, as well as internal and external links. 
-        
+The Navigation <!-- add link to feature overview later --> feature enables back-end developers to create navigtaion elements for Storefront. The navigation elements help shop users to navigate the shop and locate the necessary products and other content. Navigation elements can be linked to CMS pages, categories, as well as internal and external links.
+
 A navigation element with its child nodes forms a navigation tree. You can only retrieve the entire navigation tree but not a navigation element.
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Navigation](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-navigation-feature-integration.html).
 
 ## Retrieving a navigation tree
@@ -33,18 +34,16 @@ To retrieve a navigation tree, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}navigation_key{% raw %}}}{% endraw %}*** | Unique identifier of a navigation tree to get information for. It is always case sensitive. | 
-
+| ***{% raw %}{{{% endraw %}navigation_key{% raw %}}}{% endraw %}*** | Unique identifier of a navigation tree to get information for. It is always case sensitive. |
 
 ### Request
 
 Sample request: `GET http://glue.mysprykershop.com/navigations/SOCIAL_LINKS`
 
 
-| String parameter | Description | Exemplary values |
+| STRING PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | category-nodes |
-
 
 {% info_block infoBox "Performance" %}
 
@@ -52,13 +51,11 @@ If a navigation tree has a category child node, include the `category-nodes` res
 
 {% endinfo_block %}
 
-
 ### Response
 
-
 <details>
-    <summary markdown='span'>Response sample</summary>
-    
+<summary markdown='span'>Response sample</summary>
+
 ```json
 {
     "data": {
@@ -122,7 +119,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
 
 <details>
 <summary markdown='span'>Response sample with category nodes</summary>
-    
+
 ```json
 {
   "data": {
@@ -572,7 +569,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
       "attributes": {
         "nodeId": 14,
         "name": "Variant Showcase",
-        "metaTitle": "Variant Showcase",
+        "metaTitle": "Variant Showcase"w,
         "metaKeywords": "Variant Showcase",
         "metaDescription": "These are products that have more than 1 variant.",
         "isActive": true,
@@ -1094,15 +1091,11 @@ If a navigation tree has a category child node, include the `category-nodes` res
   ]
 }
 ```
-    
+
 </br>
 </details>
 
-
-
-
-
-| Field | Type | Description |
+| FIELD | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | name | String | Specifies the tree name. |
 | isActive | Boolean | Specifies whether the tree is active.</br>If the value of the field is *true*, the tree should be displayed to the customer. Otherwise, the tree should be hidden. |
@@ -1117,7 +1110,6 @@ If a navigation tree has a category child node, include the `category-nodes` res
 | validTo | String | Specifies a date that the node is valid to. |
 | children | Array | Specifies an array of node elements that are nested within the current element. |
 
-
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
 | category-nodes | nodeId | String | Category node ID. |
@@ -1129,7 +1121,6 @@ If a navigation tree has a category child node, include the `category-nodes` res
 | category-nodes | order | Integer | Category rank.</br>Allowed range: 1–100, where 100 is the highest rank (located on the same level as the parent node). |
 | category-nodes | children | Array | Specifies an array of node elements that are nested within the current category. |
 | category-nodes | parents | Array | Specifies an array of node elements that are parents for the current category. |
-
 
 ### Possible errors
 

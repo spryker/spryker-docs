@@ -35,7 +35,7 @@ With the search widget, a customer can always find the items that are available 
 
 {% info_block infoBox %}
 You can find more examples of product restriction use cases on the [Restricted Products Behavior](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-product-restrictions-feature-walkthrough/restricted-products-behavior.html) page.
-{% endinfo_block %} 
+{% endinfo_block %}
 
 ## Shopping List page
 

@@ -34,8 +34,8 @@ Make sure that the following modules were installed:<table><thead><tr><th>Module
 
 ### 2) Set up Configuration
 {% info_block errorBox "Attention" %}
-The following configuration creates a Zed access-point (for ERPs
-{% endinfo_block %} without authentication. Make sure that your Zed is only accessible through a secured channel and only for the trusted clients (ERPs).)
+The following configuration creates a Zed access-point (for ERPs) without authentication. Make sure that your Zed is only accessible through a secured channel and only for the trusted clients (ERPs).
+{% endinfo_block %}
 
 Add the following configuration to your project:
 

@@ -76,8 +76,8 @@ Choose an installation guide that suits your needs best:
 Alternatively, you can install Spryker on an operating system that fulfills Spryker [System requirements](/docs/scos/dev/setup/system-requirements.html) without the virtual machine or Docker images. See [B2B or B2C Demo Shop installation: without Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-without-development-virtual-machine.html) for details.
 
 {% info_block warningBox %}
-After installing, make sure to have a look at [Post-Installation steps and additional info](/docs/scos/dev/setup/post-installation-steps-and-additional-info.html
-{% endinfo_block %} for tips on fine-tuning Spryker.)
+After installing, make sure to have a look at [Post-Installation steps and additional info](/docs/scos/dev/setup/post-installation-steps-and-additional-info.html) for tips on fine-tuning Spryker.
+{% endinfo_block %}
 
 ## 2. Manage your modules
 

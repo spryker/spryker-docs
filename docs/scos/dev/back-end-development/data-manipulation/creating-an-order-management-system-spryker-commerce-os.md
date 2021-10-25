@@ -24,8 +24,8 @@ redirect_from:
 ---
 
 {% info_block infoBox %}
-This tutorial is also available on the Spryker Training website. For more information and hands-on exercises, visit the [Spryker Training](https://training.spryker.com/courses/developer-bootcamp
-{% endinfo_block %} website.)
+This tutorial is also available on the Spryker Training website. For more information and hands-on exercises, visit the [Spryker Training](https://training.spryker.com/courses/developer-bootcamp) website.
+{% endinfo_block %}
 
 ## Challenge description
 In this task, you will create a full order management process (OMS) using the Spryker state machine and then use it in your shop.

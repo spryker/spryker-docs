@@ -18,18 +18,18 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html
 ---
 
-This endpoint allows to manage discount vouchers in carts of registered users.
+This endpoint allows managing discount vouchers in carts of registered users.
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html).
 
 ## Apply a discount voucher to a cart of a registered user
+
 To apply a discount voucher to a cart of a registered user, send the request:
 
 ***
 `POST`**/carts/*{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}*/vouchers**
 ***
-
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
@@ -39,15 +39,15 @@ To apply a discount voucher to a cart of a registered user, send the request:
 
 | HEADER KEY | HEADER TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | String | &check; | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | String | &check; | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | Include | Adds resource relationships to the request.	 | vouchers |
 
 <details>
-    <summary markdown='span'>Request sample</summary>
-    
+<summary markdown='span'>Request sample</summary>
+
 `POST https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers`
 
 ```json
@@ -64,8 +64,8 @@ To apply a discount voucher to a cart of a registered user, send the request:
 </details>
 
 <details>
-    <summary markdown='span'>Request sample with discount voucher information</summary>
-    
+<summary markdown='span'>Request sample with discount voucher information</summary>
+
 `POST https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers?include=vouchers`
 
 ```json
@@ -81,17 +81,15 @@ To apply a discount voucher to a cart of a registered user, send the request:
 
 </details>
 
-
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | code | String | yes | Unique identifier of a discount voucher to apply.  |
 
-
 ### Response
 
 <details>
-    <summary markdown='span'>Response sample</summary>
-    
+<summary markdown='span'>Response sample</summary>
+
 ```json
 {
     "data": {
@@ -126,10 +124,9 @@ To apply a discount voucher to a cart of a registered user, send the request:
 
 </details>
 
-
 <details>
-    <summary markdown='span'>Response sample with discount voucher information</summary>
-    
+<summary markdown='span'>Response sample with discount voucher information</summary>
+
 ```json
 {
     "data": {
@@ -202,7 +199,6 @@ To apply a discount voucher to a cart of a registered user, send the request:
 | vouchers | discountPromotionAbstractSku | String | SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
 | vouchers | discountPromotionQuantity | Integer | Specifies the amount of the product required to be able to apply the discount. If the minimum number is `0`, the value is `null`. |
 
-
 ## Remove a discount voucher from a registered user's cart
 
 To remove a discount voucher, send the request:
@@ -220,20 +216,15 @@ To remove a discount voucher, send the request:
 
 | HEADER KEY | HEADER TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | String | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
-
-
+| Authorization | String | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 Request sample: `DELETE https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers/mydiscount-we3ca`
-
 
 ### Response
 
 If the voucher is deleted successfully, the endpoints returns the `204 No Data` status code.
 
-
-
-## Possible Errors
+## Possible errors
 
 | CODE | REASON |
 | --- | --- |
@@ -243,4 +234,3 @@ If the voucher is deleted successfully, the endpoints returns the `204 No Data` 
 | 3302 | Incorrect voucher code or the voucher could not be applied. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
-

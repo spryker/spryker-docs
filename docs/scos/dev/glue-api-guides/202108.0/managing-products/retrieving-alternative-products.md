@@ -19,22 +19,22 @@ related:
 The _Alternative Products_ feature allows customers to find a substitute for a product that runs out of stock or is no longer available for other reasons. The feature is particularly useful when a certain product becomes discontinued. In this case, customers usually look for an up-to-date generation of the same product, and suggesting possible alternatives is crucial. For more details, see [Alternative Products](/docs/scos/user/features/{{page.version}}/alternative-products-feature-overview.html) and [Discontinued Products](/docs/scos/user/features/{{page.version}}/product-feature-overview/discontinued-products-overview.html).
 
 The Product Alternatives API provides access to alternative products via REST API requests. In particular, you can:
-
 * Find out whether a concrete product is discontinued.
 * Retrieve a list of alternative products of a product.
 
 In your development, the endpoints help to:
-
 * Provide alternatives for a product that runs out or unavailable, for example, due to local restrictions.
 * Provide alternatives if a product is discontinued.
 * Make alternative products available to customers in their shopping list or suggestions area to make searching and comparing similar products easier.
 
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Alternative products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-alternative-products-feature-integration.html).
 
 
 ## Check if a product is discontinued
+
 Before suggesting an alternative product, check if a product is discontinued by [retrieving a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product).
 
 {% info_block infoBox %}
@@ -42,6 +42,7 @@ It is the responsibility of the client to identify if a product is unavailable a
 {% endinfo_block %}
 
 ## Retrieve abstract alternative products
+
 To retrieve abstract alternative products, send the request:
 
 ---
@@ -56,7 +57,7 @@ To retrieve abstract alternative products, send the request:
 
 ### Request
 
-| String parameter | Description | Exemplary values |
+| STRING PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | product-labels |
 
@@ -66,10 +67,10 @@ To retrieve abstract alternative products, send the request:
 | `GET http://glue.mysprykershop.com/concrete-products/cable-vga-1-1/abstract-alternative-products` | Retrieve abstract product alternatives of the product with SKU `145_29885470`. |
 | `GET http://glue.mysprykershop.com/concrete-products/cable-vga-1-1/abstract-alternative-products?include=product-labels` | Retrieve general information about the abstract product with its assigned product lables included. |
 
-### Response 
+### Response
 
 <details>
-    <summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -132,9 +133,9 @@ To retrieve abstract alternative products, send the request:
 
 </details>
 
-    
+
 <details>
-    <summary markdown='span'>Response sample with product labels</summary>
+<summary markdown='span'>Response sample with product labels</summary>
 
 ```json
 {
@@ -237,7 +238,7 @@ To retrieve concrete alternative products, send the request:
 
 ### Request
 
-| String parameter | Description | Exemplary values |
+| STRING PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | product-labels |
 
@@ -247,10 +248,10 @@ To retrieve concrete alternative products, send the request:
 | `GET http://glue.mysprykershop.com/concrete-products/cable-vga-1-1/concrete-alternative-products` | Retrieve abstract product alternatives of the product with SKU `145_29885470`. |
 | `GET http://glue.mysprykershop.com/concrete-products/cable-vga-1-1/concrete-alternative-products?include=product-labels` | Retrieve general information about the abstract product with its assigned product lables included. |
 
-### Response 
+### Response
 
 <details>
-    <summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -292,9 +293,9 @@ To retrieve concrete alternative products, send the request:
 
 </details>
 
-    
+
 <details>
-    <summary markdown='span'>Response sample with product labels</summary>
+<summary markdown='span'>Response sample with product labels</summary>
 
 ```json
 {

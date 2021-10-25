@@ -22,6 +22,7 @@ In your development, these resources can help you:
 * Enrich customer profiles with additional data such as addresses.
 
 ## Installation
+
 For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html).
 
 ## Create a customer
@@ -35,7 +36,7 @@ To create a customer, send the request:
 
 ### Request
 
-<details><summary markdown='span'>Request sample: POST http://glue.mysprykershop.com/customers</summary>
+Request sample: `POST http://glue.mysprykershop.com/customers`
 
 ```json
 {
@@ -54,7 +55,6 @@ To create a customer, send the request:
 }
 ```
 
-</details>
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
@@ -123,7 +123,7 @@ To retrieve customers, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 Request sample: `GET https://glue.mysprykershop.com/customers`
 
@@ -179,7 +179,7 @@ To retrieve information about a customer, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 Request sample: `GET http://glue.mysprykershop.com/customers/DE-25`
 
@@ -222,9 +222,6 @@ Request sample: `GET http://glue.mysprykershop.com/customers/DE-25`
 | createdAt | String | Account creation date. |
 | updatedAt | String | Date of the last update. |
 
-
-
-
 ## Edit a customer
 
 To edit a customer account, send the request:
@@ -238,12 +235,11 @@ To edit a customer account, send the request:
 | --- | --- |
 | ***{% raw %}{{{% endraw %}customerReference{% raw %}}}{% endraw %}*** | Unique identifier of the customer to edit. This parameter is returned as the `id` attribute when [creating a customer](#create-a-customer). If you've already created a customer, [retrieve customers](#retrieve-customers) to get it.  |
 
-
 ### Request
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer which you want to edit. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer which you want to edit. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 Request sample: `PATCH http://glue.mysprykershop.com/customers/DE-25`
 
@@ -313,7 +309,7 @@ To anonymize a customer, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer which you want to anonymize. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer which you want to anonymize. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 Sample request: `DELETE http://mysprykershop.com/customers/DE-25`
 
@@ -381,7 +377,8 @@ Request sample: `GET https://glue.mysprykershop.com/customers/DE--21/availabilit
 | sku | string | SKU of the product the user receives notifications about. |
 
 ## Other management options
-There is an alternative way to retrieve existing subscriptions, for details see [Retrieving subscriptions to availability notifications]().
+
+There is an alternative way to retrieve existing subscriptions, for details see [Retrieving subscriptions to availability notifications](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html).
 
 ## Possible errors
 

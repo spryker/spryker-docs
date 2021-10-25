@@ -24,7 +24,8 @@ When exposing information via Spryker Glue API and integrating with third-party 
 
 The authorization mechanism provided by the Glue is flexible and allows you to define which endpoints specifically require authentication. Usually, protected endpoints include customer wish lists, carts, personal data and the like. Also, you may want to protect additional areas as required by your project. In addition to endpoints, you may require authorization to use specific REST verbs. For example, a certain endpoint can allow retrieving information, but not modifying it. In this case, the GET verb can be allowed for usage without authentication, while the PUT, PATCH and DELETE verbs will require user authentication to use.
 
-## How Authentication Works
+## How authentication works
+
 To authenticate a user, the client must send an authentication request, containing the username and password. If the provided credentials match a valid Spryker user, the API responds with a 201 response code and a message containing an access token, also known as a bearer token. The token can then be used to access protected API resources. Schematically, the authentication and authorization scheme of Spryker REST API can be represented as follows:
 
 ![auth-scheme.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Developer+Guides/Security+and+Authentication/auth-scheme.png)
@@ -34,12 +35,13 @@ Access tokens issued by the API have a limited lifetime. When a token is issued,
 If an invalid or expired token is passed when accessing a protected resource, or no token is passed at all, the API will respond with a 401 Unauthorized response code. This response code will also be issued if a user is not authorized to access that particular resource. The response body will contain a detailed error message. It is, therefore, the client's responsibility to handle the 401 response code and error messages correctly.
 
 Authentication workflow:
-![authentication-workflow.PNG](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Developer+Guides/Security+and+Authentication/authentication-workflow.png) 
+![authentication-workflow.PNG](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Developer+Guides/Security+and+Authentication/authentication-workflow.png)
 
 ## Modules
+
 Authentication and authorization are provided by the following modules:
 
-| Name | Purpose |
+| NAME | PURPOSE |
 | --- | --- |
 | league/oauth2-server | Third-party OAuth server, PhpLeague Oauth Server, integrated into Spryker |
 | Oauth <!-- link to https://documentation.spryker.com/module_guide/spryker/oauth.htm -->| Integrates PhpLeague Oauth Server with Spryker and also provides the necessary extension points. |
@@ -47,11 +49,14 @@ Authentication and authorization are provided by the following modules:
 | OauthCustomerConnector <!-- link module_guide/spryker/oauth-customer-connector--> | Provides authentication plugins for OAuth modules necessary to validate user credentials and scopes. |
 | AuthRestApi <!-- link module_guide/spryker/auth-rest-api--> | Provides authentication resources to the REST API. |
 
-## User Scopes
+## User scopes
+
 The API has scopes defined for different groups of users. A scope defines, which resources specifically users can access.
 
 {% info_block warningBox "Note" %}
+
 By default, all Spryker customers are assigned to the customer scope.
+
 {% endinfo_block %}
 
 To identify, which user has made a request, you can use the `getRestUser()` function of `RestRequestInterface`, for example:
@@ -76,7 +81,8 @@ $restRequest->getRestUser()->getSurrogateIdentifier();
 $restRequest->getRestUser()->getNaturalIdentifier();
 ```
 
-### Company User Scope
+### Company user scope
+
 In the B2B scenario, a user can be associated with an additional scope, `company_user`. This scope is added in the following cases:
 
 * the user has impersonated as a Company User via the `/company-user-access-tokens` endpoint;
@@ -92,16 +98,20 @@ $restRequest->getRestUser()->getIdCompany();
 ```
 
 {% info_block infoBox "Info" %}
+
 B2B functionality is available in Spryker Glue API since version 201907.0.
+
 {% endinfo_block %}
 
-## Endpoint Protection
+## Endpoint protection
+
 In addition to user scopes, each endpoint can be secured individually. For this purpose, you need to configure the routing of your Resource Feature Module. The Route Plugins of each module define which verbs are supported by the corresponding endpoint. This is done via the config function of the plugin class. The verbs are passed to it as a set of functions that should be called when the corresponding verb is passed.
 
 {% info_block infoBox %}
-For details, see [Resource Routing](/docs/scos/dev/concepts/glue-api/glue-infrastructure.html#resource-routing).
-{% endinfo_block %}
 
+For details, see [Resource Routing](/docs/scos/dev/concepts/glue-api/glue-infrastructure.html#resource-routing).
+
+{% endinfo_block %}
 
 For each function in the set, the second parameter determines, whether the corresponding verb requires authentication to use (the parameter value is true) or not (the value is false). If the parameter is not passed, the verb requires authentication.
 
@@ -119,10 +129,11 @@ class MyResourceRoutePlugin extends AbstractPlugin implements ResourceRoutePlugi
         ...
 ```
 
-## Database and Extension Points
+## Database and extension points
+
 All data related to API authentication functionality is stored in the following tables:
 
-|Table|	Purpose|
+|TABLE|	PURPOSE|
 | --- | --- |
 | spy_oauth_access_token| Stores all issued tokens.<br>The table is not used for token verification, it is added for audit purposes only.  |
 |  spy_oauth_client|Contains a list of clients that are currently using OAuth, one record for each frontend customer. The `is_confidental` field identifies whether a specific client must provide a password.  |
@@ -130,7 +141,7 @@ All data related to API authentication functionality is stored in the following 
 
 The `OAuth` and `OAuthExtension` modules also provides the following extension points:
 
-|Extension Point	|Method|	Interface|
+|EXTENSION POINT	| METHOD | INTERFACE |
 | --- | --- | --- |
 |User provider plugins|`getUserProviderPlugins()`|`\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthUserProviderPluginInterface`|
 |Scope provider plugins|`getScopeProviderPlugins()`|`\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthScopeProviderPluginInterface`|

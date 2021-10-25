@@ -56,7 +56,7 @@ Request sample: `POST https://glue.mysprykershop.com/refresh-tokens`
 ### Response
 
 <details>
-    <summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {

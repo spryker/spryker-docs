@@ -73,8 +73,8 @@ Any product can have any Attributes. The data is stored as pairs of keys / value
 
 
 {% info_block warningBox %}
-Synchronisation: Modifying the search and filter preferences are executing an expensive SQL query (full-text search in attributes
-{% endinfo_block %} that checks all products that have the related attributes, so we've decided back then to collect all changes and "publish" them at once. The sync field is responsible for determining which attributes need to be published.)
+Synchronisation: Modifying the search and filter preferences are executing an expensive SQL query (full-text search in attributes) that checks all products that have the related attributes, so we've decided back then to collect all changes and "publish" them at once. The sync field is responsible for determining which attributes need to be published.
+{% endinfo_block %}
 
 ### Multi-Store Products
 

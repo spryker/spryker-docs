@@ -155,8 +155,8 @@ console code:generate:module:shared MyModuleStorage
 ```
 
 {% info_block infoBox %}
-As a naming convention, names of modules that publish data to Redis end with Storage (e.g. *MyModule**Storage***
-{% endinfo_block %}, and names of modules that publish to Elasticsearch end with Search (e.g. *MyModule**Search***).)
+As a naming convention, names of modules that publish data to Redis end with Storage (e.g. *MyModule**Storage***), and names of modules that publish to Elasticsearch end with Search (e.g. *MyModule**Search***).
+{% endinfo_block %}
 
 ## 5. Listen to Publish Events
 To implement the *Publish* step, first, you need is to consume the *Publish Events*. For this purpose, you need to create an event listener. A listener is a plugin class to your storage or search module. Sample implementation can be found in the *ProductStorage* Module.

@@ -26,8 +26,8 @@ redirect_from:
 This article provides general information about the Client part of the Yves applications layer and describes how to use it. 
 
 {% info_block infoBox %}
-See [Conceptual Overview](/docs/scos/dev/architecture/conceptual-overview.html
-{% endinfo_block %} to learn more about the Spryker applications and their layers.)
+See [Conceptual Overview](/docs/scos/dev/architecture/conceptual-overview.html) to learn more about the Spryker applications and their layers.
+{% endinfo_block %}
 
 ## General Information
 End customers interact only with the front-end application. The front-end application needs to get data from the storage, send search requests to the search engine, and send the customer requests to the Commerce OS whenever needed, like adding to the cart, as the Commerce OS performs all the business logic.

@@ -13,8 +13,8 @@ redirect_from:
 ### Overview
 
 {% info_block infoBox %}
-Discounts are applied during the checkout either manually by the customer via Voucher code or automatically as Cart Rule. In both cases, the discount can have a fixed or a percentage value which is applied for all items or a subset that can be defined with a query string (e.g. only products with a specific attribute
-{% endinfo_block %}. Discounts can be toggled per store.)
+Discounts are applied during the checkout either manually by the customer via Voucher code or automatically as Cart Rule. In both cases, the discount can have a fixed or a percentage value which is applied for all items or a subset that can be defined with a query string (e.g. only products with a specific attribute). Discounts can be toggled per store.
+{% endinfo_block %}
 
 The main process works like this:
 | | | |

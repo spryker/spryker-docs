@@ -17,16 +17,17 @@ redirect_from:
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* Content Items feature ingegration
-* Glue API: CMS feature integration
+* [Content Items feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/content-items-feature-integration.html)
+* [Glue API: CMS feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cms-feature-integration.html)
 
 <a name="all-cms-pages"></a>
 
-## Retrieve all CMS Pages
+## Retrieve all CMS pages
+
 To retrieve all active CMS pages, send the request:
 
 ***
-`{GET}` **/cms-pages**
+`GET` **/cms-pages**
 ***
 {% info_block infoBox %}
 
@@ -44,13 +45,11 @@ You have less than 12 active CMS pages. In this case, all of them are returned.
 You have more than 12 CMS pages but less than its multiple. For example, if you have 14 pages, you can set the `limit` to 24 - this returns all 14 pages.
 You set the `offset` value, which equals the difference by which the actual number of active CMS pages is greater than a multiple of 12. For example, if you have 14 pages and set the `offset` to 12 and `limit` to 12, this returns 2 results - 13th and 14th CMS pages, so the ones you would not see when the `limit` is 12.
 
-
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | offset | 	Specifies the number of results to skip | numeric |
 | limit | Specifies the number of results per single request | numeric |
 | include | Adds resource relationships to the request | content-product-abstract-lists, content-banners <section contenteditable="false" class="errorBox"><div class="content"> To retrieve abstract products for the `content-product-abstract-lists` relationship, include the `abstract-products` relationship as well.</div></section>|
-
 
 | REQUEST SAMPLE | USAGE |
 | --- | --- |
@@ -62,6 +61,7 @@ You set the `offset` value, which equals the difference by which the actual numb
 | `GET https://glue.mysprykershop.com/cms-pages?include=content-banners` | Retrieve information about [Banner](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-item-widgets-types.html#banner-content-item-widget) content item for CMS pages. |
 
 ### Response
+
 <details>
 <summary markdown='span'>Response sample: All CMS pages</summary>
 
@@ -578,22 +578,20 @@ When paging is enabled, the links section of the response contains links for the
 For the attributes of the included resource, see [Retrieving abstract products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html#response).
 
 ## Retrieve a CMS page
+
 To retrieve a specific CMS page, send the request:
 
 ***
-`{GET}` **/cms-pages/{cms-page-uuid}**
+`GET` **/cms-pages/{cms-page-uuid}**
 ***
-
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | cms-page-uuid | Unique identifier of the CMS page. You can get this in the response when [retrieving all CMS pages](#all-cms-pages). |
 
-
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | content-product-abstract-lists,content-banners <section contenteditable="false" class="errorBox"><div class="content"> To retrieve abstract products for the `content-product-abstract-lists` relationship, include the `abstract-products` relationship as well.</div></section> |
-
 
 | REQUEST SAMPLE | USAGE |
 | --- | --- |

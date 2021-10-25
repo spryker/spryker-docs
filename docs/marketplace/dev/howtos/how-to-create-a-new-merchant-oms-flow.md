@@ -249,13 +249,25 @@ MerchantReturn.xml
 </statemachine>
 ```
 
-6. Use the State Machine for Your Orders
-   The final step is to use the state machine by hooking it into the checkout.
+6. Use the state machine by hooking it into the checkout.
 To do so, open the configuration file `config/Shared/config_default.php`(`config_default-docker.php` if you use docker) and make the invoice payment method use the `MarketplacePayment01` process.
 ```php
 $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
     DummyPaymentConfig::PAYMENT_METHOD_INVOICE => 'MarketplacePayment01',
 ];	
+```
+
+7. To assign the `MerchantOms` flow to a `Merchant`, you can use the `MerchantOmsDataImport` module.
+Fill in `merchant_oms_process.csv` as shown in the example below:
+
+```php
+merchant_reference,merchant_oms_process_name
+MER000001,MainMerchantStateMachine
+
+```
+and run the following command: 
+```bash
+data:import merchant-oms-process
 ```
 
 <!---In a precise, step-by-step approach, walk your reader through the process. Make sure your reader can reproduce your intended result by following your exact steps. Make the learning process efficient by supplying code samples and/or configuration details as necessary.-->

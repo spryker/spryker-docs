@@ -20,7 +20,7 @@ As a web analysis pioneer with 18 years of experience, Mindlab Solutions is one 
 
 {% info_block infoBox "Info" %}
 
-This integration is built and supported by our technology partner [Mindlab Solutions](http://www.mindlab.de/).
+This integration is built and supported by our technology partner Mindlab Solutions.
 
 {% endinfo_block %}
 

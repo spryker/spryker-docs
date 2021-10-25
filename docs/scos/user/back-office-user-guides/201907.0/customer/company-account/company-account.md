@@ -41,8 +41,8 @@ The Company Account section consists of the sections that are logically connecte
 Let's say that you have received contract details according to which you need to set up the company infrastructure. 
 
 {% info_block infoBox %}
-Some setup that you do now (creating a company record
-{% endinfo_block %} is going to be used when creating Merchant relations.)
+Some setup that you do now (creating a company record) is going to be used when creating Merchant relations.
+{% endinfo_block %}
 
 So you need to know how the company infrastructure is being set up.
 See the following articles and follow the procedures described there to set up a company account:

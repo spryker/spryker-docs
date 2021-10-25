@@ -177,8 +177,10 @@ class IndexController extends AbstractController
 ```
 
 {% info_block warningBox %}
-The `tableAction(
-{% endinfo_block %}` will be called by a jQuery Plugin ([Datatables](https://datatables.net/)) that renders the actual data as a table.)
+
+The `tableAction()` will be called by a jQuery Plugin ([Datatables](https://datatables.net/)) that renders the actual data as a table.
+
+{% endinfo_block %}
 
 ## Creating the Twig Template
 Add the products variable to `Pyz/Zed/HelloWorld/Presentation/Index/index.twig` to render the table containing the list of products.

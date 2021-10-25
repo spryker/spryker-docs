@@ -11,8 +11,8 @@ redirect_from:
 ---
 
 {% info_block warningBox %}
-Please note, that we do not have [Toran Proxy](https://toranproxy.com/
-{% endinfo_block %} anymore. We recommend to download all Spryker modules from public [Packagist](https://packagist.org/) from now on.)
+Please note, that we do not have [Toran Proxy](https://toranproxy.com/) anymore. We recommend to download all Spryker modules from public [Packagist](https://packagist.org/) from now on.
+{% endinfo_block %}
 
 ## Features
 ### Multi-Currency Product Options

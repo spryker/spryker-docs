@@ -28,8 +28,8 @@ The following information pertains to security related issues that were discover
 Issues are listed by description and affected modules.
 
 {% info_block infoBox %}
-If you need any additional support with this content please contact [support@spryker.com](mailto:support@spryker.com
-{% endinfo_block %})
+If you need any additional support with this content please contact [support@spryker.com](mailto:support@spryker.com).
+{% endinfo_block %}
 
 ## Use of unserialize()
 Issue with the debugging tool: Transfer Repeater was fixed to prevent running the tool in production where it might cause a security vulnerability.

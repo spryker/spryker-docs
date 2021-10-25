@@ -91,14 +91,12 @@ defaults:
       path: "docs/marketplace/dev"
     values:
       sidebar: "marketplace_dev_sidebar"
-      product-type: 'marketplace/dev'
       role: "dev"
   -
     scope:
       path: "docs/marketplace/user"
     values:
       sidebar: "marketplace_user_sidebar"
-      product-type: 'marketplace/user'
       role: "user"
   -
     scope:
@@ -110,14 +108,12 @@ defaults:
       path: "docs/scos/dev"
     values:
       sidebar: "scos_dev_sidebar"
-      product-type: 'scos/dev'
       role: "dev"
   -
     scope:
       path: "docs/scos/user"
     values:
       sidebar: "scos_user_sidebar"
-      product-type: 'scos/user'
       role: "user"
   -
     scope:
@@ -129,7 +125,6 @@ defaults:
       path: "docs/cloud/dev"
     values:
       sidebar: "cloud_dev_sidebar"
-      product-type: 'cloud/dev'
       role: "dev"
 
 versions:
@@ -201,6 +196,10 @@ algolia:
   application_id: 'IBBSSFT6M1'
   search_only_api_key: '296ac9c40fa95441b2d89d1fd8395bb4'
   indices:
+    - name: 'scos_user'
+      title: 'SCOS User'
+    - name: 'scos_dev'
+      title: 'SCOS Developer'
     - name: 'marketplace_user'
       title: 'Marketplace User'
     - name: 'marketplace_dev'

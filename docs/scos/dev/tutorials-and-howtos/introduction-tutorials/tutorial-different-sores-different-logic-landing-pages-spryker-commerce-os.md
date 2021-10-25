@@ -22,8 +22,8 @@ redirect_from:
 ---
 
 {% info_block infoBox %}
-This tutorial is also available on the Spryker Training web-site. For more information and hands-on exercises, visit the [Spryker Training](https://training.spryker.com/courses/developer-bootcamp
-{% endinfo_block %} web-site.)
+This tutorial is also available on the Spryker Training web-site. For more information and hands-on exercises, visit the [Spryker Training](https://training.spryker.com/courses/developer-bootcamp) web-site.
+{% endinfo_block %}
 
 ## Challenge Description
 Spryker supports a possibility of having multi-stores. Not just that, it also supports having different logic for different stores in a very elegant and simple way.

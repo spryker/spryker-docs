@@ -91,8 +91,8 @@ All verification steps for plugins mentioned above require feature frontend step
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure, that you're able to share a cart with the "Internal Access" links (both Read-only and Full Acess
-{% endinfo_block %} to other company users from the same business unit.<br>Make sure, that after you shared a cart with Read-only access to another company user and he followed a "Full Access" link - his cart access was updated to "Full Access".)
+Make sure, that you're able to share a cart with the "Internal Access" links (both Read-only and Full Acess) to other company users from the same business unit.<br>Make sure, that after you shared a cart with Read-only access to another company user and he followed a "Full Access" link - his cart access was updated to "Full Access".
+{% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 Make sure, that when you have a cart share link with Read-only or Full Access and you're not logged in - you can see the "Please login to access requested shared resource." error message.

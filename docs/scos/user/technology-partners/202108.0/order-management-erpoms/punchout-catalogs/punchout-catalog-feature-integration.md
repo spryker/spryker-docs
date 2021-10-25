@@ -45,7 +45,7 @@ Make sure that the following modules were installed:
 
 {% info_block errorBox "Attention" %}
 
-The following configuration creates a Zed access-point (for ERPs without authentication. Make sure that your Zed is only accessible through a secured channel and only for the trusted clients (ERPs).)
+The following configuration creates a Zed access-point (for ERPs without authentication). Make sure that your Zed is only accessible through a secured channel and only for the trusted clients (ERPs).
 
 {% endinfo_block %}
 
@@ -220,7 +220,7 @@ Make sure that the following changes in transfer objects:
 
 Append glossary according to your configuration:
 
-<details open>
+<details>
 <summary markdown='span'>data/import/glossary.csv</summary>
 
 ```html
@@ -310,7 +310,7 @@ Make sure that in the database the configured data are added to the `spy_glossar
 
 Prepare your data according to your requirements using our demo data:
 
-<details open>
+<details>
 <summary markdown='span'>vendor/punchout-catalogs/punchout-catalog-spryker/data/import/punchout_catalog_connection.csv</summary>
 
 ```html
@@ -476,7 +476,7 @@ business-unit-mitte-1,user_30,user_30_pass,,1,setup_request,oci,Client 3 - Oci -
 }
 ```
 
-<details open>
+<details>
 <summary markdown='span'>vendor/punchout-catalogs/punchout-catalog-spryker/data/import/punchout_catalog_connection_cart.csv</summary>
 
 ```html
@@ -931,7 +931,7 @@ Client 3 - Oci - User 3,spryker_sup_5,,composite,line,,{}
 }
 ```
 
-<details open>
+<details>
 <summary markdown='span'>vendor/punchout-catalogs/punchout-catalog-spryker/data/import/punchout_catalog_connection_setup.csv</summary>
 
 ```php

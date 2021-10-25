@@ -42,7 +42,7 @@ Amazon provides two widgets for choosing shipment and payment information, they 
 
 Configuration would be used from your current settings profile.
 
-<b>Place order</b> button should look like this:
+**Place order** button should look like this:
 
 ```xml
 <a href="{% raw %}{{{% endraw %} path('amazonpay_confirm_purchase') {% raw %}}}{% endraw %}" disabled="true" id="amazonpayPlaceOrderLink" class="button expanded __no-margin-bottom">Place order</a>

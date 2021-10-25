@@ -63,7 +63,7 @@ There's only one related key in glossary: `amazonpay.payment.failed`. It defines
 
 ## Modifications of the Project Code
 
-The module provides not only Facade with all functionality behind but also controllers, templates, javascripts for rendering amazonpay widgets. It is usually very different from one shop to another but on early stage it could be usefull to use what bundle provides.
+The module provides not only Facade with all functionality behind but also controllers, templates, javascripts for rendering amazonpay widgets. It is usually very different from one shop to another but on early stage it could be useful to use what bundle provides.
 
 First of all, AmazonpayControllerProvider must be added to YvesBootstrap. Modify `src/Pyz/Yves/Application/YvesBootstrap.php` as follows:
 

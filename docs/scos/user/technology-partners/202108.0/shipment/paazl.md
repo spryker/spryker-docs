@@ -15,7 +15,9 @@ related:
 ---
 
 ## Partner Information
+
 [ABOUT PAAZL](https://paazl.com/)
+
 When Shipping gets serious.
 
 Paazl is a multi-carrier platform on a mission to change the world of e-commerce delivery. The Paazl technology connects e-commerce brands and retailers to a wide range of global, national and inner-city delivery carriers.

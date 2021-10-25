@@ -22,19 +22,19 @@ Available since 2017, AfterPay provides invoice solutions as an unitary brand in
 
 YOUR ADVANTAGES:
 
-<b>Make your brand stand out</b>
+**Make your brand stand out**
 Extend the branded customer journey beyond checkout. AfterPay keeps your brand in the spotlight and strengthens your customer relationships.
 * Unique hero images in every invoice strengthen your brand and campaign messaging
 * Add product images that remind your customers of the great deal they got and the joy it gives them
 * The entire payment process becomes a way of extending your brand, both in the MyAfterPay portal and emails
 
-<b>Keep the joy of shopping alive</b>
+**Keep the joy of shopping alive**
 Happy customers buy more. AfterPay hands them control of their payments, giving them an overview of their purchases and the security to spend more.
 * Customers have a complete overview of their entire purchase history at their fingertips, with all the information they need
 * Knowing what you have bought and from whom makes paying easier and reduces the need to call customer service
 * The ability to control when and how to pay lets customers balance payments with their finances
 
-<b>Use your payment data to drive sales</b>
+**Use your payment data to drive sales**
 Unlike other pay-after-delivery providers we keep you informed of your customers' payment behaviour, providing you with insights and intelligence that fit your digital ecosystem.
 * AfterPay is integrated with Google Analytics, allowing you to use your insights into payment behaviour in your digital marketing and sales analysis
 * Segment and retarget your best customers based on their payment behaviour

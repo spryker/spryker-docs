@@ -41,17 +41,18 @@ To display SEPA mandate text on summary page of checkout, add the following refe
 ```
 
 To display a link to the SEPA mandate in PDF format on checkout success page, add the following reference into `src/<project_name>/Yves/Checkout/Theme/<custom_theme_name>/checkout/success.twig`
+
 ```php
 {% raw %}{%{% endraw %} include '@payone/checkout/partials/success-payment-details.twig' {% raw %}%}{% endraw %}
 ```
 
 To display link to SEPA mandate in PDF format on order details page in customer cabinet, add the following reference into `src/<project_name>/Yves/Customer/Theme/<custom_theme_name>/order/details.twig`
+
 ```php
 {% raw %}{%{% endraw %} include '@payone/order/partials/details-payment-data.twig' {% raw %}%}{% endraw %}
 ```
 
 To adjust frontend appearance, provide following templates in your theme directory:
-
 * `src/<project_name>/Yves/Payone/Theme/<custom_theme_name>/direct_debit.twig`
 * `src/<project_name>/Yves/Payone/Theme/<custom_theme_name>/index/get-file.twig`
 * `src/<project_name>/Yves/Payone/Theme/<custom_theme_name>/checkout/partials/summary-payment-details.twig`

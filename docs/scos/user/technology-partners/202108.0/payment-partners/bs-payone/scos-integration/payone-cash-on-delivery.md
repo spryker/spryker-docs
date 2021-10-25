@@ -24,10 +24,9 @@ related:
     link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-online-transfer-payment.html
 ---
 
-## Frontend Integration
+## Frontend Integration: Extending Checkout Page
 
-### Extending Checkout Page
-src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php
+**src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php**
 
  ```php
  <?php
@@ -77,11 +76,9 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 }
 ```
 
-## State Machine Integration
+## State Machine Integration: Extending the State Machine
 
-### Extending the State Machine
-
-config/Shared/config_default.php
+**config/Shared/config_default.php**
 
  ```php
  <?php

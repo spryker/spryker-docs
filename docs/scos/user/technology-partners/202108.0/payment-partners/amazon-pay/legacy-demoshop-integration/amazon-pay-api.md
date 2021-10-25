@@ -40,10 +40,10 @@ Each API call involves similar classes from the module:
 
 Since it is a standard Spryker OS practice, an entry point is a public method of the Facade, so the flow for a typical transaction includes the following steps:
 1. Logically grouping the affected order items, based on the transaction type:
-  * for authorize & capture - by AuthorizationReferenceId.
-  * for refund & capture status update - by AmazonCaptureId.
-  * no grouping is required for close and cancel since operations are performed for the whole order.
-2. The following steps are executed for each group separately
+  * For authorize & capture - by AuthorizationReferenceId.
+  * For refund & capture status update - by AmazonCaptureId.
+  * No grouping is required for close and cancel since operations are performed for the whole order.
+2. The following steps are executed for each group separately:
   * Calling Facade method.
   * Facade creates a related transaction handler or a collection of transaction handlers.
   * The transaction handler has execute method expecting an AmazonCallTransfer object as a parameter.

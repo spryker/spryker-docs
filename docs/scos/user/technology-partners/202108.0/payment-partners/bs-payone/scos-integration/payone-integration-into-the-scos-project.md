@@ -383,6 +383,7 @@ $this->createSummaryForm(),
 ];
 }
 ```
+
 11. Handle shipment form data, when summary form is submitted. Inject two dependencies into `src/Pyz/Yves/CheckoutPage/Process/Steps/SummaryStep.php`:
 
 ```php

@@ -36,6 +36,7 @@ $config[LogglyConstants::QUEUE_CHUNK_SIZE] = $chunkSize;
 ```
 
 ## 2. Setting up a log queue
+
 Next, you have to set up a log queue. On project level, add the name of a log queue to an array returned by `\Pyz\Client\RabbitMq\RabbitMqConfig::getQueueConfiguration()` method:
 
 **Pyz\Client\RabbitMqRabbitMqConfig**
@@ -61,6 +62,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 ```
 
 ## 3. Configuring a queue consumer
+
 Configure a queue consumer in `Pyz\Zed\Queue\QueueConfig`:
 
 **Pyz\Zed\Queue\QueueConfig**

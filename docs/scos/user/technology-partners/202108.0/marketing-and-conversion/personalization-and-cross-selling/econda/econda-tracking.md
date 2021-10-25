@@ -265,7 +265,7 @@ Remember to build your frontend  by running antelope build yves from your projec
 
 {% endinfo_block %}
 
-In your project you will probably want to customize the tracking to fit the business requirements either by writing your own partial template or by overriding and extending the existing one, see [Best Practices - Twig Templates](/docs/scos/dev/legacy-demoshop/twig-templates/best-practices-twig-templates.html).
+<!--- In your project you will probably want to customize the tracking to fit the business requirements either by writing your own partial template or by overriding and extending the existing one, see [Best Practices - Twig Templates](/docs/scos/dev/legacy-demoshop/twig-templates/best-practices-twig-templates.html). --->
 
 ### Checking Your Setup
 

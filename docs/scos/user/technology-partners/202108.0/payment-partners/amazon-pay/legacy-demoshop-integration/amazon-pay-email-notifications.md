@@ -32,13 +32,13 @@ Since Amazon Pay requires some emails being sent in specific situations, please 
 
 ### UpdateOrderAuthorizationStatusTransaction
 
-Once the order authorization state is <b>Suspended</b>, the customer should receive an email stating that the order requires customer's interaction.
+Once the order authorization state is **Suspended**, the customer should receive an email stating that the order requires customer's interaction.
 
-Suggested email template for <b>Suspended</b> status is:
+Suggested email template for **Suspended** status is:
 
-<b>Theme:</b> Please update your payment information
+**Theme:** Please update your payment information
 
-<b>Content:</b>
+**Content:**
 
 ```xml
 Valued customer,
@@ -54,13 +54,13 @@ confirmation email.
 Kind regards
 ```
 
-Once the order authorization is <b>Declined</b>, the customer should receive an email stating that the order requires customer's interaction.
+Once the order authorization is **Declined**, the customer should receive an email stating that the order requires customer's interaction.
 
-Suggested email template for <b>Declined</b> status is:
+Suggested email template for **Declined** status is:
 
-<b>Theme:</b> Please contact us regarding your order
+**Theme:** Please contact us regarding your order
 
-<b>Content:</b>
+**Content:**
 
 ```xml
 Valued customer,

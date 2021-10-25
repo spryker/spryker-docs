@@ -40,7 +40,7 @@ If correct, Amazon creates an order reference and passes it to the shop.
 
 Using this reference and Amazon Pay credentials it is possible to run Amazon Pay API queries.
 
-**To insert the Amazon Pay button in your shop, add the following widget on your page:**:
+**To insert the Amazon Pay button in your shop, add the following widget on your page:**
 
 ```xml
 {% raw %}{{{% endraw %} render(path('amazonpay_paybutton')) {% raw %}}}{% endraw %}

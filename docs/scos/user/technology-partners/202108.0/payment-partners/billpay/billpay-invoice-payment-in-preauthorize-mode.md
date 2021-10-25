@@ -18,7 +18,7 @@ Refer to [Billpay payment information](https://www.billpay.de/en/business-client
 The identity and credit check are checked within a single "pre-authorize" call after summary page was submitted.
 This may lead to the "rejection" of the order.
 
-To switch to the authorize mode, <b>switch Billpay configuration variables</b> to "pre-authorize" set of configuration variables:
+To switch to the authorize mode, **switch Billpay configuration variables** to "pre-authorize" set of configuration variables:
 
 ```php
 <?php
@@ -43,7 +43,7 @@ Using the "prescore" scoring model, the identity and credit check is performed b
 
 ### Configuration
 
-To switch to the authorize mode, <b>switch Billpay configuration variables</b> to "pre-score" set of the configuration variables:
+To switch to the authorize mode, **switch Billpay configuration variables** to "pre-score" set of the configuration variables:
 
 ```php
 <?php

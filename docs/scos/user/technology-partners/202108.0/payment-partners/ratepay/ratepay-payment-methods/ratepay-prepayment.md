@@ -30,19 +30,21 @@ related:
     link: docs/scos/user/technology-partners/page.version/payment-partners/ratepay/ratepay-payment-methods/ratepay-direct-debit.html
 ---
 
-## Workflow Scenarios
+## Payment Flow Scenarios
 
-### Payment Flow
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Ratepay/ratepay_prepayment_payment_flow.png) 
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Ratepay/ratepay_prepayment_payment_flow.png)
 
-### Cancellation Flow
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Ratepay/ratepay_prepayment_cancellation_flow.png) 
+## Cancellation Flow Scenarios
 
-### Partial Cancellation Flow
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Ratepay/ratepay_prepayment_payment_flow.png) 
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Ratepay/ratepay_prepayment_cancellation_flow.png)
 
-### Refund Flow
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Ratepay/payolution_installment_partialrefund_case.png) 
+## Partial Cancellation Flow Scenarios
+
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Ratepay/ratepay_prepayment_payment_flow.png)
+
+## Refund Flow Scenarios
+
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Ratepay/payolution_installment_partialrefund_case.png)
 
 ## Integrating RatePay Prepayment Payment
 
@@ -51,7 +53,6 @@ To integrate prepayment payment: set RatePAY prepayment payment configuration an
 ### Set RatePay Prepayment Configuration
 
 The configuration to integrate prepayment payments using RatePAY is:
-
 * `PROFILE_ID`: merchant's login (required).
 * `SECURITY_CODE`: merchant's password (required).
 * `SHOP_ID`: shop identifier (required).

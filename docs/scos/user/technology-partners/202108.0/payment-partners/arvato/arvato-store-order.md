@@ -16,12 +16,12 @@ related:
 
  As soon as the order is activated in the eShop it has to be directly delivered by the service call StoreOrder in risk solution services. Based on the transmitted data a limit check is processed again. The result and action codes returned by `StoreOrder` should be analyzed and the order process should be stopped if applicable.
 
-The store order call can be added to OMS. ArvatoRss module provides a <b>command</b> `(SprykerEco\Zed\ArvatoRss\Communication\Plugin\Oms\Command\StoreOrderPlugin)` to invoke store order call and a <b>condition</b> `(SprykerEco\Zed\ArvatoRss\Communication\Plugin\Oms\Command\IsStoreOrderSuccessfulPlugin)` which checks whether the call has been successful or not.
+The store order call can be added to OMS. ArvatoRss module provides a **command** `(SprykerEco\Zed\ArvatoRss\Communication\Plugin\Oms\Command\StoreOrderPlugin)` to invoke store order call and a **condition** `(SprykerEco\Zed\ArvatoRss\Communication\Plugin\Oms\Command\IsStoreOrderSuccessfulPlugin)` which checks whether the call has been successful or not.
 
 In case of obtaining the success result with `RiskCheck` call, `CommunicationToken` will be present in response. And need to be stored to quote and provided to store order call by developer.
 All the operations over the communication token are processed by project.
 
-<b>Data, which is sent to Arvato RSS and must be present in quote:</b>
+**Data, which is sent to Arvato RSS and must be present in quote:**
 
 | NAME | DESCRIPTION |
 | --- | --- |

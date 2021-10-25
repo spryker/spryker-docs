@@ -33,6 +33,7 @@ The state machine for the asynchronous flow:
 ## OMS Commands
 
 Here is a list of commands and conditions to support processing of OMS:
+
 <details>
 <summary markdown='span'>Click here for example of injection</summary>
 
@@ -102,5 +103,5 @@ Here is a list of commands and conditions to support processing of OMS:
  }
  </script>
  ```
-<br>
+ 
 </details>

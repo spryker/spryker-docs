@@ -21,15 +21,19 @@ related:
 ---
 
 ## Payment Workflow Scenarios
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Klarna/invoice_paymentworkflow.png) 
+
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Klarna/invoice_paymentworkflow.png)
 
 ## Cancel Workflow Scenarios
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Klarna/invoice_cancelworkflow.png) 
+
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Klarna/invoice_cancelworkflow.png)
 
 ## Refund Workflow Scenarios
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Klarna/flexible_refundworkflow.png) 
+
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Klarna/flexible_refundworkflow.png)
 
 ## Integrating Klarna Part Payment
+
 The configuration to integrate Part payment using Klarna is:
 
 `SHARED_SECRET`: shared token.

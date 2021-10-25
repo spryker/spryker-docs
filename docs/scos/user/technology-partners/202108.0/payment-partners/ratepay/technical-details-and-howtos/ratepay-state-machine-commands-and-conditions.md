@@ -28,9 +28,9 @@ related:
     link: docs/scos/user/technology-partners/page.version/payment-partners/ratepay/ratepay-payment-methods/ratepay-direct-debit.html
 ---
 
-## Commands
 
-### ConfirmDelivery
+
+## ConfirmDelivery command
 
 * Send delivery confirmation data to RatePAY
 * Response:
@@ -38,7 +38,7 @@ related:
   - Declined: Request format error or delivery confirmation error
 * Plugin: `ConfirmDeliveryPlugin`
 
-### ConfirmPayment
+## ConfirmPayment command
 
 * Send payment confirmation data to RatePAY
 * Response:
@@ -46,7 +46,7 @@ related:
   - Declined: Request format error or payment confirmation error
 * Plugin: `ConfirmPaymentPlugin`
 
-### CancelPayment
+## CancelPayment command
 
 * Send order items cancellation data to RatePAY
 * Response:
@@ -54,7 +54,7 @@ related:
   - Declined: Request format error or order items cancellation error
 * Plugin: `CancelPaymentPlugin`
 
-### RefundPayment
+## RefundPayment command
 
 * Send refund order items data to RatePAY
 * Response:
@@ -70,4 +70,3 @@ related:
 | `IsPaymentConfirmed` | Checks transaction status for successful order items payment response | `IsPaymentConfirmedPlugin` |
 | `IsDeliveryConfirmed` | Checks transaction status for successful order items delivery response | `IsDeliveryConfirmedPlugin` |
 | `IsCancellationConfirmed` | Checks transaction status for successful order items cancellation response | `IsCancellationConfirmedPlugin` |
-

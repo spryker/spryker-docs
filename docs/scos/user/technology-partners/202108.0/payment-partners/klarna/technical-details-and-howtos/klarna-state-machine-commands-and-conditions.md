@@ -22,13 +22,13 @@ related:
 
 ## Commands
 
-<b>Check</b>
+**Check**
 
 * Checks order Status
 * Update order status
 * Plugin: `CheckPlugin`
 
-<b>Capture</b>
+**Capture**
 
 * Activates the reservation that corresponds to the given reference number
 * Response:
@@ -36,7 +36,7 @@ related:
   - Declined: capture failed. Need to update order
 * Plugin: `CapturePlugin`
 
-<b>Update</b>
+**Update**
 
 * Updates a reservation
 * Response:
@@ -44,12 +44,12 @@ related:
 * Declined: Some error occurred
 * Plugin: `UpdatePlugin`
 
-<b>Cancel</b>
+**Cancel**
 
 * Cancels a reservation
 * Plugin: `CancelPlugin`
 
-<b>Refund</b>
+**Refund**
 
 * Performs a partial refund
 * Response:
@@ -67,7 +67,7 @@ related:
 
 ## KlarnaFacade
 
-| Facade Method | Param | Return | Description |
+| FACADE METHOD | PARAMETER | RETURN | description |
 | --- | --- | --- | --- |
 | `saveOrderPayment` | `QuoteTransfer`, `CheckoutResponseTransfer` | void | Saves the payment for the submitted order |
 | `reserveAmount` | `QuoteTransfer` | `KlarnaReserveAmountResponseTransfer` | Reserves the amount of the purchase |

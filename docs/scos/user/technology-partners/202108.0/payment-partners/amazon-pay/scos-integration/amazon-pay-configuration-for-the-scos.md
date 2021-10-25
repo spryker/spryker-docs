@@ -205,13 +205,13 @@ To make Spryker Eco themes usable, add the following line into the function `add
 $paths[] = APPLICATION_VENDOR_DIR . '/spryker-eco/%1$s/src/SprykerEco/Yves/%1$s/Theme/' . $themeName;
 ```
 
-In the section <b>include</b> of `tsconfig.json`, add the following:
+In the section **include** of `tsconfig.json`, add the following:
 
 ```php
 "./vendor/spryker-eco/**/*",
 ```
 
-In the section <b>paths</b> of `frontend/settings.js`, add the following:
+In the section **paths** of `frontend/settings.js`, add the following:
 
 ```php
 // eco folders
@@ -221,13 +221,13 @@ eco: {
 },
 ```
 
-In the section <b>module.exports</b> property <b>dirs</b> of `frontend/settings.js` add the following:
+In the section **module.exports** property **dirs** of `frontend/settings.js` add the following:
 
 ```php
 path.join(context, paths.eco.modules),
 ```
 
-No matter how many <b>SprykerEco</b> modules you are using, these changes are required to be made only once.
+No matter how many **SprykerEco** modules you are using, these changes are required to be made only once.
 
 Make sure to rebuild front-end script by running `npm run yves`.
 

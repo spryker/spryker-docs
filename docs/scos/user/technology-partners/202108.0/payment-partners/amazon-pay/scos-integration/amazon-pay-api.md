@@ -73,9 +73,9 @@ Once shipment options are updated a buyer can choose one. Usually, the shipment 
 Once all necessary information is selected, an order is ready to be placed.
 First, call all related API calls and then persist an order in the database.
 All API related jobs are covered by only one Facade method confirmPurchase() which encapsulates three Amazon Pay API calls to be executed one by one:
-1. `SetOrderReferenceDetails` for specifying order total amount
-2.  `ConfirmOrderReference` for confirming the order
-3.  `GetOrderReferenceDetails` for retrieving information about buyer (like name and shipping address)
+1. `SetOrderReferenceDetails` for specifying order total amount.
+2.  `ConfirmOrderReference` for confirming the order.
+3.  `GetOrderReferenceDetails` for retrieving information about buyer (like name and shipping address).
 
 ```php
 /**
@@ -96,6 +96,7 @@ public function execute(QuoteTransfer $quoteTransfer)
  return $quoteTransfer;
 }
 ```
+
 Once a transaction finishes, we pass the updated quote transfer to the next transaction. If the transaction fails, we return the current one and it contains all information about an error and it can be retrieved and analyzed.
 
 See the `AmazonpayResponseHeaderTransfer` object which can be retrieved from Quote transfer with `$quoteTransfer->getAmazonpayPayment()->getResponseHeader()`

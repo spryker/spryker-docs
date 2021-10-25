@@ -24,9 +24,7 @@ related:
 
 To perform the needed requests, you can easily use the implemented state machine commands and conditions. This article gives a summary of them. You can also use the facade methods directly, which, however, are invoked by the state machine.
 
-## Payolution State Machine Commands and Conditions
-
-### Commands
+## Payolution State Machine Commands
 
 **PreAuthorize**
 
@@ -57,7 +55,7 @@ To perform the needed requests, you can easily use the implemented state machine
 **Capture**
 
 * Capture of previous (p)re-authorization call
-* Full and partial capture possible.  Captured amount cannot exceed the authorized amount. 
+* Full and partial capture possible.  Captured amount cannot exceed the authorized amount.
 * Response:
   - Success: Previous (p)re-authorization still valid and accepted
   - Declined: Previous (p)re- authorization expired, request format error, or internal error
@@ -72,7 +70,7 @@ To perform the needed requests, you can easily use the implemented state machine
   - Declined: Previous capture to far in the past, request format error, or internal
 * Plugin: `RefundPlugin`
 
-## Conditions
+## Payolution State Machine Conditions
 
 | NAME| DESCRIPTION | PLUGIN |
 | --- | --- | --- |
@@ -84,7 +82,7 @@ To perform the needed requests, you can easily use the implemented state machine
 
 ## Payolution Facade
 
-| Facade Method | Param | Return | Description |
+| FACADE METHOD | PARAMETER | RETURN | DESCRIPTION |
 | --- | --- | --- | --- |
 | `saveOrderPayment` | `QuoteTransfer``CheckoutResponseTransfer` | void | Saves the payment for the coming order |
 | `preCheckPayment` | `QuoteTransfer` | `PayolutionTransactionResponseTransfer` | Performs the Pre-check request |
@@ -103,4 +101,4 @@ To perform the needed requests, you can easily use the implemented state machine
 ## Core Module Structure Diagram
 
 The Payolution core module uses the following class and flow and structure:
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Payolution/payolution-core-bundle-structure.png) 
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Payolution/payolution-core-bundle-structure.png)

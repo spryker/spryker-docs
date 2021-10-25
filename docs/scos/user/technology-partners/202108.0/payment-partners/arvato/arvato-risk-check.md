@@ -40,7 +40,7 @@ The transfer can have all fields empty if error occurred during request.
 
 {% endinfo_block %}
 
-<b>Data, that is sent to Arvato RSS and must be present in quote:</b>
+**Data, that is sent to Arvato RSS and must be present in quote:**
 
 | NAME | NOTES |
 | --- | --- |

@@ -22,7 +22,7 @@ In order to perform the necessary requests in the project based on Spryker Comme
 
 ## Braintree State Machine Commands
 
-<b>Authorize</b>
+**Authorize**
 
 * Authorize the payment by validating the given payment data
 * Response:
@@ -30,20 +30,20 @@ In order to perform the necessary requests in the project based on Spryker Comme
   - Declined: Request format error, payment details not accepted
 * Plugin: `AuthorizePlugin`
 
-<b>Revert</b>
+**Revert**
 
 * Revert a previous pre-authorization call
 * Always reverts the complete pre-check or authorization
 * Plugin: `RevertPlugin`
 
-<b>Capture</b>
+**Capture**
 
 * Capture of previous (p)re-authorization call Response:
   - Success: Previous (p)re-authorization still valid and accepted
   - Declined: Previous (p)re- authorization expired, request format error, or internal error
 * Plugin: `CapturePlugin`
 
-<b>Refund</b>
+**Refund**
 
 * Refund previous captured amount
 * Full and partial refunds possible

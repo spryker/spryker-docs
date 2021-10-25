@@ -23,7 +23,6 @@ related:
 ---
 
 Both [invoice](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/payolution/payolution-payment-methods/payolution-invoice-payment.html) and [installment](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/payolution/payolution-payment-methods/payolution-installment-payment.html) payemnt methods utilize the same request flow. It basically consists of the following requests:
-
 * Calculation (for installment only): to calculate the installment amounts, dues, and durations.
 * Pre-check (optional): to check the user information in order to make sure that all the needed information is correct before doing the actual pre-authorization.
 * Pre-authorize: to perform a payment risk check which is a mandatory step before every payment. The payment is basically considered accepted when it is authorized.

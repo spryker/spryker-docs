@@ -12,22 +12,22 @@ redirect_from:
 
 ## Features
 ### Attribute Management for A High Number of Attributes
-To  manage a high number of product attributes, we moved them to a separate module supported with a UI. 
+To  manage a high number of product attributes, we moved them to a separate module supported with a UI.
 
 Now stores with more than 100k of product attributes, have a convenient and easy "process content management" interface.
-![Attribute management](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+September+-+1+2017/RN_attribute_management_for_high_number_of_attributes.png) 
+![Attribute management](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+September+-+1+2017/RN_attribute_management_for_high_number_of_attributes.png)
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | <ul><li>[ProductAttribute 1.0.0](https://github.com/spryker/product-attribute/releases/tag/1.0.0)</li><li>[ProductAttributeGui 1.0.0](https://github.com/spryker/product-attribute-gui/releases/tag/1.0.0)</li></ul> |[ProductManagement 0.8.0](https://github.com/spryker/product-management/releases/tag/0.8.0)  | n/a |
 
 **Documentation**
-For detailed migration guides, see [ProductManagement Module Migration Guide from Version 0.7. to 0.8.](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-productmanagement.html##upgrading-from-version-07-to-version-08)
+<br>For detailed migration guides, see [ProductManagement Module Migration Guide from Version 0.7. to 0.8.](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-productmanagement.html##upgrading-from-version-07-to-version-08)
 
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -51,12 +51,12 @@ To use this new plugin:
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 |[PaymentCartConnector 1.0.0](https://github.com/spryker/payment-cart-connector/releases/tag/1.0.0)  | n/a | n/a |
 
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -76,7 +76,7 @@ Previously, it was possible to create a CMS block with a template that did not e
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [CmsBlock 1.3.0](https://github.com/spryker/cms-block/releases/tag/1.3.0) | [CmsBlockGui 1.1.3](https://github.com/spryker/cms-block-gui/releases/tag/1.1.3) |
 
@@ -85,7 +85,7 @@ Previously, the countries list was unordered. We have added sorting to the `Spry
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 |n/a  | n/a | [Country 3.1.1](https://github.com/spryker/Country/releases/tag/3.1.1) |
 
@@ -94,7 +94,7 @@ The obsolete exception catch block in the `DataImporter` was removed. This chang
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [DataImport 1.0.1](https://github.com/spryker/data-import/releases/tag/1.0.1) |
 
@@ -103,7 +103,7 @@ Previously, when creating a customer group, if there were many customers the bro
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 |n/a  | [CustomerGroup 2.2.0](https://github.com/spryker/customer-group/releases/tag/2.2.0) | n/a |
 
@@ -112,7 +112,7 @@ To improve navigation performance, we added a cache to the `Navigation` module.
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Navigation 1.0.2](https://github.com/spryker/Navigation/releases/tag/1.0.2) |
 
@@ -122,7 +122,7 @@ Previously, the availability of concrete products with numerical SKUs was incorr
 
 **Affected Modules**
 
-| Major | Minor| Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [CartVariant 1.0.1](https://github.com/spryker/cart-variant/releases/tag/1.0.1) |
 
@@ -131,7 +131,7 @@ When a category is deleted, the deleted category's children are moved under the 
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [Category 4.1.0](https://github.com/spryker/Category/releases/tag/4.1.0) | n/a |
 
@@ -140,7 +140,7 @@ In certain cases, removing products assigned to bundle were not behaving as expe
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [ProductManagement 0.7.8](https://github.com/spryker/product-management/releases/tag/0.7.8) |
 
@@ -149,7 +149,7 @@ Previously, the ACL installer crashed on run for several users and one group. Th
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Acl 3.0.2](https://github.com/spryker/Acl/releases/tag/3.0.2) |
 
@@ -158,7 +158,7 @@ Previously, you could not sort the table of assignable or already assigned produ
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [ProductCategory 4.3.1](https://github.com/spryker/product-category/releases/tag/4.3.1) |
 
@@ -167,7 +167,7 @@ Spryker core features now work with MySQL again, not just PostgreSQL. Specifical
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | <ul><li>[CmsBlockCategoryConnector 2.0.3](https://github.com/spryker/cms-block-category-connector/releases/tag/2.0.3)</li><li>[CmsBlockCollector 1.1.1](https://github.com/spryker/CmsBlockCollector/releases/tag/1.1.1)</li><li>[Collector 5.3.1](https://github.com/spryker/Collector/releases/tag/5.3.1)</li><li>[Discount 4.4.4](https://github.com/spryker/Discount/releases/tag/4.4.4)</li><li>[Navigation 1.0.1](https://github.com/spryker/Navigation/releases/tag/1.0.1)</li><li>[NavigationCollector 1.0.1](https://github.com/spryker/navigation-collector/releases/tag/1.0.1)</li><li>[ProductLabel 2.1.1](https://github.com/spryker/product-label/releases/tag/2.1.1)</li><li>[ProductRelation 1.0.9](https://github.com/spryker/product-relation/releases/tag/1.0.9)</li><li>[ProductSearch 5.1.2](https://github.com/spryker/ProductSearch/releases/tag/5.1.2)</li><li>[Sales 7.1.5](https://github.com/spryker/Sales/releases/tag/7.1.5)</li><li>[Stock 4.0.5](https://github.com/spryker/Stock/releases/tag/4.0.5)</li><li>[Touch 3.1.2](https://github.com/spryker/Touch/releases/tag/3.1.2)</li></ul> |
 
@@ -185,7 +185,7 @@ This release fixed the exceptions caused by the previous patch when trying to re
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 |n/a  |n/a  |[Development 3.2.3](https://github.com/spryker/Development/releases/tag/3.2.3) |
 
@@ -194,7 +194,7 @@ There was a collector exception when changing a product URL back to a former URL
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [Collector 5.4.0](https://github.com/spryker/Collector/releases/tag/5.4.0) | n/a |
 
@@ -203,7 +203,7 @@ There was a bug when using typed arrays as a type in the transfer schema files. 
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Transfer 3.3.4](https://github.com/spryker/transfer/releases/tag/3.3.4) |
 
@@ -212,7 +212,7 @@ There was an issue with availability/stock calculation. When all items were remo
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [ProductBundle 3.2.1](https://github.com/spryker/product-bundle/releases/tag/3.2.1) |
 
@@ -221,7 +221,7 @@ Previously, when a state machine process was not added as an Active Process (it 
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 |n/a  |n/a  | [Oms 7.0.4](https://github.com/spryker/Oms/releases/tag/7.0.4) |
 
@@ -230,6 +230,6 @@ Previously, adding a non-existing product to the cart would cause a 500 error. W
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [ProductCartConnector 4.2.0](https://github.com/spryker/product-cart-connector/releases/tag/4.2.0) | [Cart 4.0.2](https://github.com/spryker/Cart/releases/tag/4.0.2) |

@@ -32,15 +32,15 @@ new ProductOptionGroupIdHydratorPlugin(),
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | <ul><li>[Sales 7.0.0](https://github.com/spryker/Sales/releases/tag/7.0.0)</li><li>[SalesProductConnector 1.0.0](https://github.com/spryker/sales-product-connector/releases/tag/1.0.0)</li></ul> | <ul><li>[Customer 6.1.0](https://github.com/spryker/Customer/releases/tag/6.1.0)</li><li>[ProductBundle 3.2.0](https://github.com/spryker/product-bundle/releases/tag/3.2.0)</li><li>[ProductCartConnector 4.1.0](https://github.com/spryker/product-cart-connector/releases/tag/4.1.0)</li><li>[ProductOption 5.1.0](https://github.com/spryker/product-option/releases/tag/5.1.0)</li></ul> | <ul><li>[Braintree 0.5.4](https://github.com/spryker/Braintree/releases/tag/0.5.4)</li><li>[Discount 4.3.2](https://github.com/spryker/Discount/releases/tag/4.3.2)</li><li>[DummyPayment 2.0.4](https://github.com/spryker/dummy-payment/releases/tag/2.0.4)</li><li>[Nopayment 3.0.2](https://github.com/spryker/Nopayment/releases/tag/3.0.2)</li><li>[Oms 7.0.1](https://github.com/spryker/Oms/releases/tag/7.0.1)</li><li>[Payolution 4.0.4](https://github.com/spryker/Payolution/releases/tag/4.0.4)</li><li>[Payone 4.0.3](https://github.com/spryker/Payone/releases/tag/4.0.3)</li><li>[Ratepay 0.6.2](https://github.com/spryker/Ratepay/releases/tag/0.6.2)</li><li>[Refund 5.0.1](https://github.com/spryker/Refund/releases/tag/5.0.1)</li><li>[SalesSplit 3.0.2](https://github.com/spryker/sales-split/releases/tag/3.0.2)</li><li>[Shipment 5.0.1](https://github.com/spryker/Shipment/releases/tag/5.0.1)</li></ul> |
 
 **Documentation**
-For detailed migration guides, see [Sales Module Guide from Version 6.* to 7.*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-sales.html#upgrading-from-version-6-to-version-7).
+<br><br>For detailed migration guides, see [Sales Module Guide from Version 6.* to 7.*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-sales.html#upgrading-from-version-6-to-version-7).
 
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -60,7 +60,7 @@ With this release, we enable the `isSearchable` checkbox in CMS page Zed Admin U
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [CmsGui 4.2.3](https://github.com/spryker/cms-gui/releases/tag/4.2.3) |
 
@@ -71,7 +71,7 @@ To enable this change, please adjust `\Pyz\Zed\Calculation\CalculationDependency
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [Calculation 4.1.0](https://github.com/spryker/Calculation/releases/tag/4.1.0) | n/a |
 
@@ -80,7 +80,7 @@ We have added a constraint to validate price in Zed Admin UI. Price gets validat
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [ProductManagement 0.7.7](https://github.com/spryker/product-management/releases/tag/0.7.7) |
 
@@ -89,7 +89,7 @@ In Zed, we have a few pages with similar UI for assigning product abstracts. To 
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | <ul><li>[ProductCategory 4.3.0](https://github.com/spryker/product-category/releases/tag/4.3.0)</li><li>[ProductOption 5.3.0](https://github.com/spryker/product-option/releases/tag/5.3.0)</li><li>[ProductSetGui 1.1.0](https://github.com/spryker/product-set-gui/releases/tag/1.1.0)</li></ul> | n/a |
 
@@ -98,7 +98,7 @@ Voucher codes have been disconnected from a discount if the discount changes its
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Discount 4.4.3](https://github.com/spryker/Discount/releases/tag/4.4.3) |
 
@@ -107,7 +107,7 @@ With this release, we are consolidating the business logic of restore password l
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Customer 6.2.3](https://github.com/spryker/Customer/releases/tag/6.2.3) |
 
@@ -116,7 +116,7 @@ To prevent confusion of being able to create carriers with the same name, we've 
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a |  [Shipment 5.1.1](https://github.com/spryker/Shipment/releases/tag/5.1.1) |
 
@@ -126,7 +126,7 @@ Formerly saving glossary translation in code view was not being persisted correc
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | <ul><li>[CmsBlockGui 1.1.2](https://github.com/spryker/cms-block-gui/releases/tag/1.1.2)</li><li>[CmsGui 4.2.4](https://github.com/spryker/cms-gui/releases/tag/4.2.4)</li><li>[Glossary 3.1.6](https://github.com/spryker/Glossary/releases/tag/3.1.6)</li></ul> |
 
@@ -135,7 +135,7 @@ We had a bug in product relations when a user would try to "View in Shop" from Z
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [ProductRelation 1.0.7](https://github.com/spryker/product-relation/releases/tag/1.0.7) |
 
@@ -144,7 +144,7 @@ We had an issue with the Zed UI Glossary table when sorting of the ID column was
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Glossary 3.1.7](https://github.com/spryker/Glossary/releases/tag/3.1.7) |
 
@@ -153,7 +153,7 @@ When an order item entity state change was incorrectly registered as â€œchangedâ
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Sales 7.1.3](https://github.com/spryker/Sales/releases/tag/7.1.3) |
 
@@ -162,7 +162,7 @@ Previously, a guest checkout was throwing an exception with an active cart rule 
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [CustomerGroupDiscountConnector 2.0.1](https://github.com/spryker/customer-group-discount-connector/releases/tag/2.0.1) |
 
@@ -171,7 +171,7 @@ We had an issue for rule result display in product relations. When a rule was ad
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [ProductRelation 1.0.8](https://github.com/spryker/product-relation/releases/tag/1.0.8) |
 
@@ -185,7 +185,7 @@ Since the "Description" field is not mandatory, the indicator has been removed. 
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 |  n/a| n/a | [Discount 4.4.2](https://github.com/spryker/Discount/releases/tag/4.4.2) |
 
@@ -198,7 +198,7 @@ With this release, we are fixing three issues regarding Customer User Interface:
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Customer 6.2.4](https://github.com/spryker/Customer/releases/tag/6.2.4) |
 
@@ -207,7 +207,7 @@ Tax sets are strongly related to tax rates and the related field was marked as r
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Tax 5.1.2](https://github.com/spryker/tax/releases/tag/5.1.2) |
 
@@ -216,7 +216,7 @@ Previously, there was a bug when displaying a date in different time zone, it wa
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [UtilDateTime 1.0.1](https://github.com/spryker/util-date-time/releases/tag/1.0.1) |
 
@@ -225,7 +225,7 @@ When the `getStateDisplayName()` facade method was called on a state which is in
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Oms 7.0.3](https://github.com/spryker/Oms/releases/tag/7.0.3) |
 
@@ -243,7 +243,7 @@ $wishlistItemTransfer = $this->getClient()->addItem($wishlistItemTransfer);
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Wishlist 4.1.3](https://github.com/spryker/Wishlist/releases/tag/4.1.3) |
 

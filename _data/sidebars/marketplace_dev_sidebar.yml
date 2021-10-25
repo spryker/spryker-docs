@@ -74,7 +74,10 @@ entries:
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-inventory-management-feature-walkthrough.html
 
           - title: Marketplace Order Management feature walkthrough
-            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough.html
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html
+            nested:
+              - title: Merchant Oms
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough/merchant-oms.html
 
           - title: Marketplace Return Management feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-return-management-feature-walkthrough.html

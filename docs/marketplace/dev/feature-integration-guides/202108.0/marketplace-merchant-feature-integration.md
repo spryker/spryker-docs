@@ -147,7 +147,7 @@ Enable the following behaviors by registering the plugins:
 | MerchantUserTabMerchantFormTabExpanderPlugin | Adds an extra tab to merchant edit and create forms for editing and creating merchant user information. |   | Spryker\Zed\MerchantUserGui\Communication\Plugin\MerchantGui |
 | MerchantUserViewMerchantUpdateFormViewExpanderPlugin | Expands merchant `FormView` with the data for the merchant user tab. |   | Spryker\Zed\MerchantUserGui\Communication\Plugin\MerchantGui |
 
-<details><summary markdown='span'>src/Pyz/Zed/marketplace-merchant/marketplace-merchantDependencyProvider.php</summary>
+<details><summary markdown='span'>src/Pyz/Zed/Merchant/MerchantDependencyProvider</summary>
 
 ```php
 <?php

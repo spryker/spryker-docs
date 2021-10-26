@@ -52,7 +52,7 @@ When creating a return, a Customer can see all the relevant return information s
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image14.png)
 
 #### Documentation
-[Filter and Search in Order Archive](https://documentation.spryker.com/2021080/docs/customer-account-feature-overview#customer-account-on-the-storefront)
+[Filter and Search in Order Archive](/docs/scos/user/features/{{site.version}}/customer-account-management-feature-overview/customer-accounts-overview.html#customer-account-on-the-storefront)
 
 ### Adding shipment cost to RFQ
 **Adding shipment cost for RFQ** is a new step in the Quotation Process at Spryker. Previously, it was not possible to create a quote with a shipment cost. Now, the quote contains the full cost of the purchase, including shipping.

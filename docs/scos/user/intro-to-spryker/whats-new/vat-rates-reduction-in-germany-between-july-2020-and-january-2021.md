@@ -16,8 +16,8 @@ redirect_from:
 
 On 3 June 2020, the German parliament proposed to temporarily reduce the VAT rates from 1 July 2020 until 31 December 2020.
 
-*     Standard rate is to be reduced from 19% to 16%.
-*     Reduced rate is to be reduced from 7% to 5%
+* Standard rate is to be reduced from 19% to 16%.
+* Reduced rate is to be reduced from 7% to 5%.
 
 If you need to adjust the VAT rate for your project accordingly, follow the guides:
 

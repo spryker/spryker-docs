@@ -20,7 +20,7 @@ An escalation is a situation that usually involves a partner or customer having 
 Example for a situation leading up to an escalation:
 Customer A discovers a problem with Spryker that has a significant impact on their plans to launch a new feature next week. They open a support case with Spryker. The support representative dealing with the case informs the customer that they have verified that the bug is indeed a bug and a report was filed with development to fix the bug. The mention that the bug will most likely be fixed within 3-4 weeks. This will conflict with the customer's feature release.
 
-While support will always try to accommodate the plans of customers and partners, this might not always be possible. Naturally, this leads to frustration and Company A might feel the need to reach out to their Account Manager/Partner Manager/Customer Success Manager, or even a member of Spryker leadership to "force" or at least expedite problem resolution that way. 
+While support will always try to accommodate the plans of customers and partners, this might not always be possible. Naturally, this leads to frustration and Company A might feel the need to reach out to their Account Manager/Partner Manager/Customer Success Manager, or even a member of Spryker leadership to "force" or at least expedite problem resolution that way.
 
 While this strategy might feel like the right thing to do (we need to do something right?) it produces suboptimal results, at it consumes resources, nerves, and time. It also puts a strain on the relationship with the customer/partner and often introduces a great deal of emotions that can stand in the way of orderly resolution.
 
@@ -31,14 +31,14 @@ In Support, we acknowledge that we cannot always produce a satisfying result. We
 3. The stakeholders align quickly to find a feasible strategy going forward.
 
 ### How can I initiate an escalation?
-Creating an [Emergency Case](https://documentation.spryker.com/docs/how-to-use-the-support-portal#emergencies) always start an escalation. You will receive an Email notifying you that an Escalation was started.
+Creating an [Emergency Case](/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html#emergencies) always start an escalation. You will receive an Email notifying you that an Escalation was started.
 
 ### Process
 The escalation process is designed in a way to create visibility for the right audience and is built in a robust way to ensure quality standards. Facing a problem with significant business impact is stressful and we tried to build a streamlined process that is easy to follow for partners and customers and easy to operate for our support reps. An escalation has 7 statuses. The customer and partner will receive notifications via email on status changes.
 
-**STARTED** - A customer or partner has created an emergency case. Internal stakeholders are informed an evaluate the information provided. In cases where the Emergency Case option was misused, the Escalation will be cancelled, and the requester will be informed about it. 
+**STARTED** - A customer or partner has created an emergency case. Internal stakeholders are informed an evaluate the information provided. In cases where the Emergency Case option was misused, the Escalation will be cancelled, and the requester will be informed about it.
 
-**ACKNOWLEDGED** - If the escalation is valid, it will be acknowledged by the support rep that will take care of the case. They will not inform internal stakeholders and see to it that a solution is developed. They will also make sure to update the customer and partner in regular intervals on their progress. 
+**ACKNOWLEDGED** - If the escalation is valid, it will be acknowledged by the support rep that will take care of the case. They will not inform internal stakeholders and see to it that a solution is developed. They will also make sure to update the customer and partner in regular intervals on their progress.
 
 **SOLUTION PROPOSED** - Once the team has found a solution that will either fix the problem outright, or at least mitigate its impact, they will propose a solution and the partner and customer will be asked to accept or reject the solution proposel.
 

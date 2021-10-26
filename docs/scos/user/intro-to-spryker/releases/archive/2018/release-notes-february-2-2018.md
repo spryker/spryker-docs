@@ -13,7 +13,8 @@ redirect_from:
 ## Features
 ### CMS Blocks Per Store
 We continue progressing towards full enablement of the multi-store concept. With this release, we are introducing a new multi-store CMS Blocks feature. It enables you to manage CMS blocks display per stores through a store toggle element on CMS Block management pages in the Administration Interface. To define which store(s) a CMS block should be visible in, just select the respective store(s) under "Store relation".
-![CMS blocks per store](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+February+-+2+2018/cms_block_store_relation.png) 
+
+![CMS blocks per store](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+February+-+2+2018/cms_block_store_relation.png)
 
 **Affected Modules**
 
@@ -22,7 +23,7 @@ We continue progressing towards full enablement of the multi-store concept. With
 | <ul><li>[CmsBlock 2.0.0](https://github.com/spryker/cms-block/releases/tag/2.0.0)</li><li>[CmsBlockCollector 2.0.0](https://github.com/spryker/cms-block-collector/releases/tag/2.0.0)</li><li>[CmsBlockGui 2.0.](https://github.com/spryker/cms-block-gui/releases/tag/2.0.0)</li></ul> | n/a | <ul><li>[CmsBlockCategoryConnector 2.1.4](https://github.com/spryker/cms-block-category-connector/releases/tag/2.1.4)</li><li>[CmsBlockCategoryStorage 0.1.2](https://github.com/spryker/cms-block-category-storage/releases/tag/0.1.2)</li><li>[CmsBlockProductConnector 1.1.3](https://github.com/spryker/cms-block-product-connector/releases/tag/1.1.3)</li><li>[CmsBlockProductStorage 0.1.2](https://github.com/spryker/cms-block-product-storage/releases/tag/0.1.2)</li><li>[CmsBlockStorage 0.1.3](https://github.com/spryker/cms-block-storage/releases/tag/0.1.3)</li><li>[ProductManagement 0.11.3](https://github.com/spryker/product-management/releases/tag/0.11.3)</li></ul> |
 
 <!-- Documentation
-<br>For module documentation see: 
+<br>For module documentation see:
 For detailed migration guides see:
 For store administration guide see:-->
 
@@ -43,7 +44,7 @@ composer require spryker/cms-block:"^2.0.0" spryker/cms-block-collector:"^2.0.0"
 
 ### Discounts Per Store
 As a part of the multi-store concept, the Discount per Store feature has been implemented in this release. It allows managing discounts per stores, which enables a shop owner to deliver an even better shopping experience for customers by creating targeted offers with discounts for specific countries.
-![Discounts per store](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+February+-+2+2018/discount_multistore.png) 
+![Discounts per store](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+February+-+2+2018/discount_multistore.png)
 
 **Affected Modules**
 
@@ -71,7 +72,7 @@ composer require spryker/discount:"^6.0.0"
 
 ### Time To Live For Products
 With this release, we are introducing a new feature that enables the shop administrator to set validity dates for products. With the Time To Live (TTL) For Products feature, you can easily define from and till when your product(s) will be visible and available for purchase by your customers without having to manage the inventory manually. This feature is extremely useful if you sell products with an expiry date, seasonal products or products that are valid for a certain period of time (e.g. tickets), or if for promotional reasons, you temporally sell some products within a limited time frame, or if you want to start selling some products (e.g. a collection) from a specific date and/or time. The product validity time can be set to up-to-the minute accuracy.
-![Time to live for products](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+February+-+2+2018/ttl.png) 
+![Time to live for products](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+February+-+2+2018/ttl.png)
 
 **Affected Modules**
 
@@ -87,6 +88,7 @@ With this release, we are introducing a new feature that enables the shop admini
 ```bash
 composer update "spryker/*"
 ```
+
 * Once that is done, upgrade to the new module major and its dependencies:
 ```bash
 composer require spryker/product-management:"^0.11.0" spryker/product-validity:"^1.0.0"

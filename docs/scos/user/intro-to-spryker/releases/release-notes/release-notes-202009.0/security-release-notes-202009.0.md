@@ -14,6 +14,7 @@ redirect_from:
 ---
 
 The following information pertains to security-related issues that have been recently resolved. Issues are listed by description and affected modules.
+
 {% info_block warningBox "Note" %}
 
  If you need any additional support with this content, please contact  [support@spryker.com](mailto:support@spryker.com). If you found a new security vulnerability, please inform us via [security@spryker.com](mailto:security@spryker.com).
@@ -25,7 +26,7 @@ The issue comes from the incomplete validation of the Domain Whitelist functiona
 
 To fix that, we did the following:
 
-* Adjusted `AbstractController::redirectResponseExternal()` to properly validate the URL domain. 
+* Adjusted `AbstractController::redirectResponseExternal()` to properly validate the URL domain.
 * Introduced `RedirectUrlValidationEventDispatcherPlugin` to validate if the redirect domain is allowed.
 
 **Affected modules:**
@@ -41,20 +42,20 @@ composer update spryker/kernel
 * Add the newly introduced plugin `RedirectUrlValidationEventDispatcherPlugin` into the `EventDispatcherDependencyProvider::getEventDispatcherPlugins()` stack of plugins on a project level.
 
 
-## CSRF token was ignored in the login form 
+## CSRF token was ignored in the login form
 After submitting the login form, CSRF token was ignored and not checked.
 
 To fix the issue, we adjusted `SecurityApplicationPlugin` to get the correct `CsrfManager` service from the container.
 
 **Affected modules:**
 
-* Security  (1.2.0) 
+* Security  (1.2.0)
 
 **How to get the fix:**
 
 * Update the modules:
 ```bash
-composer update spryker/security 
+composer update spryker/security
 ```
 ## Add to Cart action and other forms for cart manipulation had no CSRF protection
 CSRF validation for Symfony forms used in the cart-related actions was missing. Thus, it was possible to update and manipulate the user's cart externally by tricking the user into visiting an attacker website while browsing the Spryker shop.
@@ -75,7 +76,7 @@ These templates were adjusted to incorporate the new  `AddItemsFormWidget` and `
 * ProductDetailPage (3.7.0)
 * ProductSetWidget (1.6.0)
 
- 
+
 **How to get the fix:**
 
 * Update the modules:
@@ -106,7 +107,7 @@ To solve this problem, the following has been done:
 
 **Affected modules:**
 
-* Heidelpay  (2.4.0) 
+* Heidelpay  (2.4.0)
 
 **How to get the fix:**
 
@@ -166,7 +167,7 @@ After revealing and fixing several occurrences of the missing CSRF validations, 
 
 **How to get the fix:**
 
-* Update the modules: 
+* Update the modules:
 
 ```bash
 composer update spryker/acl spryker/business-on-behalf-gui spryker/cms spryker/cms-block-gui spryker/cms-gui spryker/cms-slot-gui spryker/company-business-unit-gui spryker/company-gui spryker/company-role-gui spryker/company-user-gui spryker/configurable-bundle-gui spryker/configurable-bundle-gui spryker/discount spryker/file-manager-gui spryker/gui spryker/merchant-gui spryker/merchant-relationship-gui spryker/navigation-gui spryker/product-list-gui spryker/product-option spryker/product-packaging-unit-gui spryker/product-review-gui spryker/product-search spryker/product-set-gui spryker/tax spryker/user spryker-shop/cart-code-widget spryker-shop/cart-page spryker-shop/company-page spryker-shop/configurable-bundle-page spryker-shop/configurable-bundle-page spryker-shop/configurable-bundle-widget spryker-shop/customer-page spryker-shop/discount-widget spryker-shop/gift-card-widget spryker-shop/merchant-switcher-widget spryker-shop/multi-cart-page spryker-shop/product-alternative-widget spryker-shop/shared-cart-page spryker-shop/shared-cart-widget spryker-shop/shop-ui spryker-shop/shopping-list-page spryker-shop/wishlist-page spryker-shop/wishlist-widget
@@ -196,7 +197,7 @@ A regex in the form of `/[x-\ud800]/u` causes the parser to enter an infinite lo
 The string is not valid UTF16, which usually results in it being sanitized before reaching the parser.
 If an application processes untrusted input and passes it directly to acorn,
 attackers may leverage the vulnerability leading to Denial of Service.
- 
+
 **Affected modules:**
 
 * Chart (1.3.1)
@@ -207,4 +208,3 @@ attackers may leverage the vulnerability leading to Denial of Service.
 ```bash
 composer update spryker/chart
 ```
-

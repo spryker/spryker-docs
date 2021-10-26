@@ -20,8 +20,7 @@ Since we began to communicate the status of bug tickets on our Support Portal fo
 ### Bug tickets
 Please note that usually, a bug ticket will not go through all of these stages. You might see a ticket status not listed here in special cases, but the below will cover the majority of ticket cases very well.
 
-
-| Status | Explanation |
+| STATUS | EXPLANATION |
 | --- | --- |
 | New | The case was reported and is being analyzed |
 | In Progress | A strategy to resolve the issue was developed, and a developer is working on resolving the issue |
@@ -34,7 +33,8 @@ Please note that usually, a bug ticket will not go through all of these stages. 
 
 ### Cloud tickets
 Our DevOps team usually uses the following status to indicate progress on tickets assigned to them.
-|Status|Explanation|
+
+| STATUS | EXPLANATION |
 | --- | --- |
 |Requirements Clarification|The DevOps team is currently gathering info on the task at hand to determine what team member should work on this ticket|
 |Selected for Development|The task was assigned to an engineer|
@@ -50,4 +50,3 @@ For Cloud tickets, we are currently starting a Beta Test where we communicate ET
 
 ## How are bug tickets prioritized?
 In general, bugs that impact many customers and have an impact on business and security will receive the highest priority and regularly will be put on the top of the queue. But even if things are not clear-cut, we take the prioritization of bug tickets very seriously. We have a team comprised of members of various teams, such as Customer Success, Support, and Engineering, meeting weekly to make sure prioritization is evaluated regularly and from different perspectives.
-

@@ -13,6 +13,7 @@ redirect_from:
 ---
 
 ![image.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/image%28132%29.png)
+
 *Photo by [@snapwire](https://www.pexels.com/@snapwire)*
 
 Very easy: Use our [Support Portal ](https://support.spryker.com)

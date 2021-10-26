@@ -27,7 +27,9 @@ The following information pertains to security-related issues that were discover
 Issues are listed by description and affected modules.
 
 {% info_block infoBox %}
+
 If you need any additional support with this content, please contact [support@spryker.com](mailto:support@spryker.com). If you found a new security vulnerability, please inform us via  [security@spryker.com](mailto:security@spryker.com).
+
 {% endinfo_block %}
 
 ## OMS and StateMachine Module Vulnerability
@@ -58,7 +60,7 @@ This issue is not a security vulnerability itself but may prevent mistakes. Curr
 
 **How to get the fix:**
 
-* Update the modules with 
+* Update the modules with
     ```
     composer update spryker/product-attribute-gui
     ```
@@ -83,7 +85,7 @@ Initially, neither *Referrer-Policy* nor *Feature-Policy*  headers were used in 
 
 **How to get the fix:**
 
-1. Update the modules with 
+1. Update the modules with
 
 ```bash
 composer update spryker/application
@@ -101,7 +103,7 @@ Previously, all form data providers in `ManualOrderEntryGui` module had `csrf_pr
 ManualOrderEntryGui (0.7.1) <!-- add link https://documentation.spryker.com/module_guide/spryker/manual-order-entry-gui.htm-->
 
 **How to get the fix:**
-Update the modules with 
+Update the modules with
 
 ```bash
 composer update spryker/manual-order-entry-gui
@@ -125,12 +127,12 @@ composer update spryker/manual-order-entry-gui
 * Gui (3.23.0)
 
 **How to get the fix:**
-1. Update the modules with 
+1. Update the modules with
 
 ```bash
 composer update spryker/chart spryker/discount spryker/product-relation spryker/gui
 ```
-2. Run 
+2. Run
 
 ```bash
 console frontend:zed:install-dependencies

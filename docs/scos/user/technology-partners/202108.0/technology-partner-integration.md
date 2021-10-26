@@ -9,6 +9,10 @@ redirect_from:
   - /2021080/docs/en/technology-partner-integration
   - /docs/technology-partner-integration
   - /docs/en/technology-partner-integration
+  - /2021080/docs/payment-provider-integration-guide
+  - /2021080/docs/en/payment-provider-integration-guide
+  - /docs/payment-provider-integration-guide
+  - /docs/en/payment-provider-integration-guide
 ---
 
 In this section you will find information about our Technology Partner Integration solutions.

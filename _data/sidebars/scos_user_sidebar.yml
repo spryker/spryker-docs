@@ -395,6 +395,7 @@ entries:
       - "202009.0"
       - "202108.0"
     - title: Return Management Feature Overview
+      url: /docs/scos/user/features/return-management-feature-overview/return-management-feature-overview.html
       include_versions:
       - "202009.0"
       - "202108.0"

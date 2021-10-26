@@ -1,6 +1,7 @@
 ---
 title: Code buckets
 description: Code buckets enable projects to define, implement, and execute different business logics based on different HTTP or console requests.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/code-buckets
 originalArticleId: 8c24a5f6-f45a-4ff5-838f-b25712309bd0

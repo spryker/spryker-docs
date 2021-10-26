@@ -1,6 +1,7 @@
 ---
 title: Wishlist feature overview
 description: Help your customers track and save items for later purchase through multiple Wish Lists, which are connected to the users' accounts.
+last_updated: Apr 14, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/wishlist-feature-overview
 originalArticleId: 25c1bb12-0698-4c02-a2b7-04b0827920a8

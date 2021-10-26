@@ -1,5 +1,6 @@
 ---
 title: Project Implementation - Zed API
+last_updated: Nov 22, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/zed-api-project-implementation
 originalArticleId: 36e829af-c008-46a9-9066-b855f6d94cfb

@@ -1,5 +1,6 @@
 ---
 title: Tutorial - Internationalization
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-internationalization
 originalArticleId: ab5fb80c-57d6-44a7-a85f-41034cb5c3be

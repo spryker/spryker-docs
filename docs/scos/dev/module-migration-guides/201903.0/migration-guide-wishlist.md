@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Wishlist
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/mg-wishlist
 originalArticleId: 8cbd7993-6902-4d7b-807c-fe0a6d01b0c4

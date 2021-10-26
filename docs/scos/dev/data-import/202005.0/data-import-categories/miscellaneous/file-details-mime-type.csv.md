@@ -1,5 +1,6 @@
 ---
 title: File details- mime_type.csv
+last_updated: May 25, 2020
 template: data-import-template
 originalLink: https://documentation.spryker.com/v5/docs/file-details-mime-typecsv
 originalArticleId: 9e8f470c-153e-4792-95db-28889f514520

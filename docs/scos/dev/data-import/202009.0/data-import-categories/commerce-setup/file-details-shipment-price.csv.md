@@ -1,5 +1,6 @@
 ---
 title: File details- shipment_price.csv
+last_updated: Aug 27, 2020
 template: data-import-template
 originalLink: https://documentation.spryker.com/v6/docs/file-details-shipment-pricecsv
 originalArticleId: 59d40c42-a29f-40f0-8823-2f128b1c575b

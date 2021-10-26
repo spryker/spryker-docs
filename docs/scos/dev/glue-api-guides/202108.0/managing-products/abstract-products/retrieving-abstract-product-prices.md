@@ -1,6 +1,7 @@
 ---
 title: Retrieving abstract product prices
 description: Retrieve details information about prices of abstract products.
+last_updated: Jun 21, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-abstract-product-prices
 originalArticleId: 903570fe-6ca4-4165-b0d3-6764e0262308

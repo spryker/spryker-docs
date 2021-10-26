@@ -1,6 +1,7 @@
 ---
 title: Checkout + Quotation Process feature integration
 description: The guide describes the process of installing the Checkout + Quotation process feature into your project.
+last_updated: Dec 24, 2019
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/checkout-quotation-process-feature-integration
 originalArticleId: 773f4e1c-9578-4f25-b304-9606285336d0

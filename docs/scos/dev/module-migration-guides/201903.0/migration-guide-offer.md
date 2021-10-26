@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Offer
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/mg-offer
 originalArticleId: 0f753349-c607-4f92-ad1b-ef130fca2466

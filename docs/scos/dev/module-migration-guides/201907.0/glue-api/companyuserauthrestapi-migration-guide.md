@@ -1,5 +1,6 @@
 ---
 title: CompanyUserAuthRestApi Migration Guide
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/companyuserauthrestapi-migration-guide
 originalArticleId: 6da475d7-e595-467f-a2e4-6f3fa5858dc4

@@ -1,6 +1,7 @@
 ---
 title: Adyen - Filtering Payment Methods
 description: Enable filtering available payment methods depending on the result of /paymentMethods API call in the Spryker Commerce OS.
+last_updated: May 14, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/adyen-filter-payment-methods
 originalArticleId: 49464b8f-9788-4edf-a44c-992245d22862

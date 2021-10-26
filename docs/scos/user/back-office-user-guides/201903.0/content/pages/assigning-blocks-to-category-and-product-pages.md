@@ -1,6 +1,7 @@
 ---
 title: Assigning Blocks to Category and Product Pages
 description: The guide provides instructions on how to assign blocks to category and product detail pages, and add CMS blocks to a CMS page in the Back Office.
+last_updated: Jan 13, 2020
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/assigning-blocks-to-category-and-product-pages
 originalArticleId: 8ed8a8d2-b7f2-4edb-b2ec-09c53af56e92

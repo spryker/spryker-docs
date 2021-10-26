@@ -1,6 +1,7 @@
 ---
 title: Available test helpers
 description: Get a list and descriptions of test helpers to assist you in testing your project.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/available-test-helpers
 originalArticleId: 04ad76c7-5d63-4db8-aa96-7446cd8c0541

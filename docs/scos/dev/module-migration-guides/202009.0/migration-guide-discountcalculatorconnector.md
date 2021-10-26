@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - DiscountCalculatorConnector
 description: Use the guide to migrate to a newer version of the DiscountCalculatorConnector module.
+last_updated: Aug 27, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/mg-discount-calculator-connector
 originalArticleId: 7536cb36-4da7-4956-aea4-3dea128d51ae

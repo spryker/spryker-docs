@@ -1,6 +1,7 @@
 ---
 title: Managing shared company user carts
 description: Managed shared company user carts via Glue API.
+last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-shared-company-user-carts
 originalArticleId: 87aea51a-e7f0-43a3-a820-b72537b8395b

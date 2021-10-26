@@ -1,6 +1,7 @@
 ---
 title: Sales
 description: The article introduces for shop owners a quick overview of the Sales section, such as Refunds, Orders, Order Matrix, and Reclamations in the Back Office.
+last_updated: Jul 15, 2020
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/sales-management
 originalArticleId: f6b449f7-e6c3-4122-9794-f5d038925ba3

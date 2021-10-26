@@ -1,6 +1,7 @@
 ---
 title: Multi-theme
 description: The feature allows creating different themes for multiple stores on various occasions to attract customers' attention.
+last_updated: Nov 18, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/multi-theme
 originalArticleId: 697a69ef-254d-441b-a82a-32fbc917e8dc

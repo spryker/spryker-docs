@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - SalesSplit
 description: Use the guide to learn how to update the SalesSplit module.
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/mg-sales-split
 originalArticleId: 28e67876-f58c-450f-bd35-bdeda7d45641

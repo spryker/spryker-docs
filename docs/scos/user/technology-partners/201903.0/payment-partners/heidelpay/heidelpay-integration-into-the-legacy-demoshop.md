@@ -1,6 +1,7 @@
 ---
 title: Heidelpay - Integration into the Legacy Demoshop
 description: This article contains information on integrating the Heidelpay module for the Spryker Commerce OS.
+last_updated: Nov 22, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/heidelpay-integration
 originalArticleId: 92778df4-daa3-43d6-9af3-fe08f445bae6

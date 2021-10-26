@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Checkout
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-checkout
 originalArticleId: a928a30d-46ed-4419-8239-4bac11a4bf18

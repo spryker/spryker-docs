@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Collector
+last_updated: Jul 31, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/mg-collector
 originalArticleId: c680a0c5-2257-4f45-81ce-8ceeb41b3a4b

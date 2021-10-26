@@ -1,6 +1,7 @@
 ---
 title: Managing Customer Access
 description: The guide provides a procedure on how a shop owner can define restrictions for actions for non-logged in users.
+last_updated: Nov 22, 2019
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/managing-customer-access
 originalArticleId: b21c4e04-3792-43d6-a594-e46bcc949ede

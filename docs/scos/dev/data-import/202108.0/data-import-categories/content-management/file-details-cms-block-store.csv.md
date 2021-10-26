@@ -1,5 +1,6 @@
 ---
 title: File details- cms_block_store.csv
+last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-block-storecsv
 originalArticleId: eb3af5d2-ec2b-4452-8a11-d392431ab8d2

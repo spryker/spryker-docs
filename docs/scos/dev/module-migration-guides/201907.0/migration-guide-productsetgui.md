@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Product Set GUI
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-product-set-gui
 originalArticleId: 906f52a4-ad2d-4be1-a53a-907fb19ff060

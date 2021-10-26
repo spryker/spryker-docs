@@ -1,6 +1,7 @@
 ---
 title: Business On Behalf Feature Overview
 description: The feature allows having multiple company users per customer account with a possibility to select one company user to be a default user.
+last_updated: Nov 22, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/business-on-behalf-feature-overview-201903
 originalArticleId: db5f7c50-6122-4f20-9e0c-07b313b8ca55

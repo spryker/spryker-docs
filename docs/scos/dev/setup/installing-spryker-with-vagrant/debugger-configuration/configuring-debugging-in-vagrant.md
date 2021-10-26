@@ -1,6 +1,7 @@
 ---
 title: Configuring debugging in Vagrant
 description: This article describes how to setup debugging in your development environment.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/configuring-debugging-in-vagrant
 originalArticleId: ce2a45b3-ef13-494b-a774-3be1c46caf17

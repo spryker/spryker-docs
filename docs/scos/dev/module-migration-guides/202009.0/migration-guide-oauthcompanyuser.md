@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - OauthCompanyUser
+last_updated: Aug 27, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/mg-oauthcompanyuser
 originalArticleId: 9939f611-d542-48eb-a7e2-50dc608980f2

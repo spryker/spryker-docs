@@ -1,5 +1,6 @@
 ---
 title: Shop Guide - Managing a Shopping Cart
+last_updated: Sep 14, 2020
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/shop-guide-managing-a-shopping-cart
 originalArticleId: 964ec032-2a62-446f-93d4-ee77247d597f

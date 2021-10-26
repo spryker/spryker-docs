@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Touch
 description: Use the guide to learn how to update the Touch module to a newer version.
+last_updated: Apr 3, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/mg-touch
 originalArticleId: 5937d736-8ebf-453f-847c-dd93799ebde9

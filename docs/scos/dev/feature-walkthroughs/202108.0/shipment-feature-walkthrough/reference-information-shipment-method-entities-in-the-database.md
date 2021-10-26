@@ -1,5 +1,6 @@
 ---
 title: Reference information- Shipment method entities in the database
+last_updated: Jun 16, 2021
 template: feature-walkthrough-template
 originalLink: https://documentation.spryker.com/docs/reference-information-shipment-method-entities-in-the-database
 originalArticleId: 727c3313-3581-40a6-a567-1ea1f7bda3cc

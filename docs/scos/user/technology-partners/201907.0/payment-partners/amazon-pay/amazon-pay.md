@@ -1,6 +1,7 @@
 ---
 title: Amazon Pay
 description: Amazon Pay is a solution that allows buyers to make purchases from Spryker-based shops via their Amazon accounts.
+last_updated: Nov 22, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/amazon-pay
 originalArticleId: 7456e189-562b-48ae-9c62-844484fdcc96

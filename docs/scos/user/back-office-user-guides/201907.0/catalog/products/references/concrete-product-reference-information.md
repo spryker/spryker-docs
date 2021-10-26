@@ -1,6 +1,7 @@
 ---
 title: Concrete Product- Reference Information
 description: Use this section to learn more about the attributes you use when creating or updating product variants in the Back Office.
+last_updated: Nov 22, 2019
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/concrete-product-reference-information
 originalArticleId: 82f9e8ed-2d4a-4745-9654-a22a1d10365f

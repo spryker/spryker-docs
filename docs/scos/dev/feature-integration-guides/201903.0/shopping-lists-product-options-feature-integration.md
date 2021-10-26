@@ -1,5 +1,6 @@
 ---
 title: Shopping Lists- Product Options feature integration
+last_updated: Apr 24, 2020
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/shopping-lists-product-options-feature-integration
 originalArticleId: 5d613c3c-d9ff-4d6e-99d4-91298961207d

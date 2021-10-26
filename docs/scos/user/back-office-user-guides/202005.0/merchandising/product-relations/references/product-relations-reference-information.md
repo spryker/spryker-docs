@@ -1,6 +1,7 @@
 ---
 title: Product Relations- Reference Information
 description: This section provides reference information for the values you enter when creating, updating, or viewing product relations in the Back Office.
+last_updated: Jul 7, 2020
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/product-relations-reference-information
 originalArticleId: 1d377dda-f91e-4387-8f24-3640b5392e21

@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Quote
 description: Use the guide to learn how to update the Quote module to a newer version.
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/mg-quote
 originalArticleId: e42d09e8-72a0-4efa-8d62-e1de6d224d00

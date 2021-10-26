@@ -1,6 +1,7 @@
 ---
 title: Installing Spryker with Docker
 description: Spryker provides an easy way to bootstrap applications and prepare development and production environments for running Spryker OS in Docker.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/installing-spryker-with-docker
 originalArticleId: 41fb5887-0351-4678-8e21-9c37ce898925

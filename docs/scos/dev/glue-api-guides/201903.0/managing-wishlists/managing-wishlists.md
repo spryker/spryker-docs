@@ -1,5 +1,6 @@
 ---
 title: Managing Wishlists
+last_updated: Jul 31, 2020
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/managing-wishlists
 originalArticleId: 1045e309-59a4-4ab6-bca5-9a06c75925f1

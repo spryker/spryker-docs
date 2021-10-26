@@ -1,6 +1,7 @@
 ---
 title: What's new
 description: This article contains information about what’s new and changed in the Spryker Commerce OS.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/whats-new
 originalArticleId: 630e2d18-944a-4623-95ac-761984d1eedb

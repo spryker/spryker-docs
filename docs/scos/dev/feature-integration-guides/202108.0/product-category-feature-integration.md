@@ -1,5 +1,6 @@
 ---
 title: Product + Category feature integration
+last_updated: Jun 29, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-category-feature-integration
 originalArticleId: 9362908d-1cd0-4db9-91c1-fe11df43060c

@@ -1,4 +1,5 @@
----
+---last_updated: Nov 22, 2019
+
 title: URL Schema
 originalLink: https://documentation.spryker.com/v2/docs/db-schema-url
 originalArticleId: 8e56386c-94ba-4c5a-a3ff-9bbd70ee5fdc

@@ -1,6 +1,7 @@
 ---
 title: Managing CMS Redirects
 description: The guide provides procedures on how to update or delete URL redirects in the Back Office.
+last_updated: May 19, 2020
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/editing-cms-redirects
 originalArticleId: 1efd68ee-90cb-426a-a461-690eeb2cd01d

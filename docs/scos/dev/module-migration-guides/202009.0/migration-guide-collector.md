@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Collector
 description: Use the guide to update versions to the newer ones of the Collector module.
+last_updated: Aug 27, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/mg-collector
 originalArticleId: 173f0022-48e9-4a80-9e23-8488604303f5

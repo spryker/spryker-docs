@@ -1,5 +1,6 @@
 ---
 title: Security and Authentication
+last_updated: May 19, 2020
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/security-and-authentication
 originalArticleId: 90e8843b-0ce2-48a1-b952-990827eff3d2

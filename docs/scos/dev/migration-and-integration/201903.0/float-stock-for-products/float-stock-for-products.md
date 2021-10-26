@@ -1,5 +1,6 @@
 ---
 title: Float Stock for Products
+last_updated: Nov 22, 2019
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/float-stock-for-products
 originalArticleId: 4ef914c4-d990-47be-b538-1d5119ec22f8

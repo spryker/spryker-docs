@@ -1,6 +1,7 @@
 ---
 title: Upgrading to the latest version of Node.js inside devwm
 description: Learn how to upgrade to the latest version of Node.js if your devvm vesion is lower than 3.1.0
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/upgrading-to-the-latest-version-of-nodejs-inside-devwm
 originalArticleId: 576e8f43-51b9-4cfc-aa89-4b39e37c118e

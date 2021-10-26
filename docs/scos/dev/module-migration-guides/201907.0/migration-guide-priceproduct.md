@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - PriceProduct
+last_updated: Jan 30, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-priceproduct
 originalArticleId: 9f351920-1c3e-4fbe-baa0-eb276d589281

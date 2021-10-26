@@ -1,5 +1,6 @@
 ---
 title: Release Notes - December - 2017
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes-december-2017
 originalArticleId: 7251b552-8e8d-4453-a48c-5834563c6410

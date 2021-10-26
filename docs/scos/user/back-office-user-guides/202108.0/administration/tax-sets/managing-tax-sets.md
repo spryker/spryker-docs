@@ -1,5 +1,6 @@
 ---
 title: Managing tax sets
+last_updated: Aug 9, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-tax-sets
 originalArticleId: b8a16bed-2e8b-4a25-b092-d41004fe0119

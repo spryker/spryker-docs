@@ -1,5 +1,6 @@
 ---
 title: Managing customer access to Glue API resources
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-access-to-glue-api-resources
 originalArticleId: 8811d81a-5a7a-4c30-a73f-d1ae53494e9e

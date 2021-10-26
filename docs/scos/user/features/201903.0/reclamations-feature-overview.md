@@ -1,6 +1,7 @@
 ---
 title: Reclamations Feature Overview
 description: With the reclamations in place, you can do three things- create a new connected order, return money paid for the order, or close the reclamation.
+last_updated: Jul 31, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/reclamations-feature-overview
 originalArticleId: 0fd5002a-60f3-4b3c-b0bc-935444e6704a

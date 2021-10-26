@@ -1,6 +1,7 @@
 ---
 title: File details- content_navigation.csv
 description: Description of the import file of the navigation content item.
+last_updated: Aug 27, 2020
 template: data-import-template
 originalLink: https://documentation.spryker.com/v6/docs/file-details-content-navigationcsv
 originalArticleId: b9e1496a-6764-4abb-bdde-3de1d05df3c1

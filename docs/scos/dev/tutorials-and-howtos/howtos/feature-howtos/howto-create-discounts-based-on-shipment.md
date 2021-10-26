@@ -1,6 +1,7 @@
 ---
 title: HowTo - Create Discounts Based on Shipment
 description: Use the guide to activate a discount rule based on a shipment carrier and add a shipment pre-check plugin to checkout.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-activate-a-discount-rule-based-on-a-shipment-carrier
 originalArticleId: 98408c10-05d0-4d84-a0a8-e01ba2cbdfea

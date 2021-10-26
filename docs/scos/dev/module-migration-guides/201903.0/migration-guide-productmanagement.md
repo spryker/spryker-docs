@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - ProductManagement
+last_updated: Jul 31, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/mg-product-management
 originalArticleId: 5854f797-0789-4aea-a1c0-37a2253ecf45

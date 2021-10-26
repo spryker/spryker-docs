@@ -1,6 +1,7 @@
 ---
 title: Implementing Prepayment in Back End
 description: This article describes how to implement prepayment in the back end.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-prepayment-be
 originalArticleId: 2ee681bb-c2b1-4a78-93c7-2c6914fc6c64

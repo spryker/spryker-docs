@@ -1,6 +1,7 @@
 ---
 title: Prices per Merchant Relation Feature Overview
 description: This feature relates to prices set for individual merchant relations. Customers see only prices applying to them, based on their merchant relation.
+last_updated: Oct 28, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/price-per-merchant-relation-feature-overview
 originalArticleId: 717776ce-6677-4ef9-8c2a-1218a3120c73

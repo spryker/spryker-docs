@@ -1,6 +1,7 @@
 ---
 title: Retrieving image sets of concrete products
 description: Retrieve image sets of concrete products.
+last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-image-sets-of-concrete-products
 originalArticleId: 77585058-128f-4e20-a4c8-633b62dfabec

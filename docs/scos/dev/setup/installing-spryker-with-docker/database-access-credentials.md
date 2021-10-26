@@ -1,6 +1,7 @@
 ---
 title: Database access credentials
 description: Database access credentials for MariaDB, MySQL, and PostgreSQL.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/database-access-credentials
 originalArticleId: 1e227c7f-f4f2-4c7e-b5c4-5ed1d9174ec7

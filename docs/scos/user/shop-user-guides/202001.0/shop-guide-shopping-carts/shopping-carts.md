@@ -1,6 +1,7 @@
 ---
 title: Shopping Carts
 description: The section can be used to create and manage shopping carts in the customer account.
+last_updated: Nov 22, 2019
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/shop-guide-shopping-carts
 originalArticleId: 3ab226ff-8b6b-44cd-862f-dee6e27d8290

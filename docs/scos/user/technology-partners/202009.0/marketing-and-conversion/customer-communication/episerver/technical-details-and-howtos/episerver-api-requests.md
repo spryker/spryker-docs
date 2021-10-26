@@ -1,6 +1,7 @@
 ---
 title: Episerver - API Requests
 description: Learn about the API requests for Episerver in Spryker.
+last_updated: Nov 6, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/episerver-api-requests
 originalArticleId: 5eb69571-319c-4335-ba5f-c365a60b7dc6

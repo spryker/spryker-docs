@@ -1,6 +1,7 @@
 ---
 title: Spryker videos
 description: This page provides video presentations for Spryker features.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/spryker-videos
 originalArticleId: e1db0ef0-24d3-4862-b493-c4bf8a4adad7

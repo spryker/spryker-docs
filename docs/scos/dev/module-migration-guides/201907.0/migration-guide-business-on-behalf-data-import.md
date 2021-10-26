@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Business On Behalf Data Import
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-business-on-behalf-data-import
 originalArticleId: 9b700e4b-2d53-42e7-9c64-01aaf84e9728

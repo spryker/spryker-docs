@@ -1,6 +1,7 @@
 ---
 title: Viewing the order matrix
 description: The guide provides reference information you see when working with the ordered items in the Back Office.
+last_updated: Aug 10, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/viewing-the-order-matrix
 originalArticleId: 6a462604-88f0-4b1d-8332-ccd73bd74b6b

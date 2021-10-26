@@ -1,6 +1,7 @@
 ---
 title: Payolution - Workflow
 description: This article describes the request flow for Payolution.
+last_updated: Aug 13, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/payolution-workflow
 originalArticleId: a3db2fee-770d-4a79-bb28-f21ed66d1500

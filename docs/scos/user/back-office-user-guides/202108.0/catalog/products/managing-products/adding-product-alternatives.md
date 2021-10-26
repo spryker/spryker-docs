@@ -1,6 +1,7 @@
 ---
 title: Adding product alternatives
 description: The guide describes a procedure on how to add or remove alternatives to the products in the Back Office.
+last_updated: Aug 11, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/adding-product-alternatives
 originalArticleId: 556eb518-e027-478e-a8cc-152d8e4b8dcb

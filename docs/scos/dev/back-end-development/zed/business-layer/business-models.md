@@ -1,6 +1,7 @@
 ---
 title: Business Models
 description: Business models are classes where you program the business logic of your system.
+last_updated: Sep 27, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/business-models
 originalArticleId: 951be56f-357e-46ac-895c-5171bbc5dc63

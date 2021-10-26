@@ -1,5 +1,6 @@
 ---
 title: Catalog feature integration
+last_updated: Dec 27, 2019
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/catalog-api-feature-integration
 originalArticleId: 03b96930-118b-41bb-971e-64858ce4017d

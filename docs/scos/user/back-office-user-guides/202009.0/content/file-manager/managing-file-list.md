@@ -1,6 +1,7 @@
 ---
 title: Managing file list
 description: Use the procedures to view, edit, and delete files from the system in the Back Office.
+last_updated: Aug 27, 2020
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/managing-file-list
 originalArticleId: 2ed629ec-abca-41e6-8781-e5d870d65195

@@ -1,6 +1,7 @@
 ---
 title: Computop - CRIF
 description: In this article, you can find information on the CRIF process for Spryker Commerce OS.
+last_updated: Mar 5, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/computop-crif
 originalArticleId: 5cf30d25-45d4-4bea-91d3-65c9a2bf08a4

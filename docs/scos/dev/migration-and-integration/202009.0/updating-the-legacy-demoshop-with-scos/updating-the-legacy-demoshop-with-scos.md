@@ -1,6 +1,7 @@
 ---
 title: Updating the Legacy Demoshop with SCOS
 description: The set of articles provides information on how to extend the project with Modular Frontend (Yves), Atomic Frontent (JS/CSS) and Publish&Sync.
+last_updated: Jun 15, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/about-updating
 originalArticleId: cc12c96d-4515-45ac-aa0d-a29bc321311f

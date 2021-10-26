@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Content and Search - Personalized Catalog Pages - Spryker Commerce OS
 description: Use the tutorial to create a new CMS page with the personalized product catalog based on the user's session ID.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-content-search-personalized-catalog-page
 originalArticleId: 1a07bff6-3655-4d94-97d9-58d0b8df106d

@@ -1,6 +1,7 @@
 ---
 title: Retrieving abstract product availability
 description: Retrieve information about availability of abstract products.
+last_updated: Feb 2, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/retrieving-abstract-product-availability
 originalArticleId: 4c61d644-4814-4638-a8f0-8bcac5066e71

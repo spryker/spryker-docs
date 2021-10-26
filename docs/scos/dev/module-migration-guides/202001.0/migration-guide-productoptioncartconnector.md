@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductOptionCartConnector
 description: Use the guide to learn how to update the ProductOptionCartConnector module to a newer version.
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/mg-product-option-cart-connector
 originalArticleId: 476997fd-e715-4b00-93e2-dce899ba3826

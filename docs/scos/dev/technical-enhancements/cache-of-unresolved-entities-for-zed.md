@@ -1,6 +1,7 @@
 ---
 title: Cache of Unresolved Entities for Zed
 description: The article provides general description and integration instructions of the Cache of Unresolved Entities for Zed feature
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/cache-of-unresolved-entities-for-zed
 originalArticleId: 1ea10e01-93fd-471a-aa18-824dd055c140

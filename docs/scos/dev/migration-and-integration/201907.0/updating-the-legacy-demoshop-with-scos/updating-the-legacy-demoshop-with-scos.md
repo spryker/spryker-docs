@@ -1,5 +1,6 @@
 ---
 title: Updating the Legacy Demoshop with SCOS
+last_updated: Nov 22, 2019
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/about-updating
 originalArticleId: a632379b-a801-4bec-9ec5-e22bb86aceb1

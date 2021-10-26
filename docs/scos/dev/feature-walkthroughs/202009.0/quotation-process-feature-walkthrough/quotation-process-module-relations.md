@@ -1,6 +1,7 @@
 ---
 title: Quotation Process module relations
 description: The article describes the Quotation Process feature, its statuses, and workflow (by a customer, sales representative, agent account and interaction with approval process.
+last_updated: Mar 24, 2021
 template: feature-walkthrough-template
 originalLink: https://documentation.spryker.com/v6/docs/quotation-process-module-relations
 originalArticleId: ac631ac7-189d-46e7-beb7-f4d0ff03de12

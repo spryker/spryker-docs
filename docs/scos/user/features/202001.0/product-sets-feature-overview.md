@@ -1,6 +1,7 @@
 ---
 title: Product Sets feature overview
 description: Learn about the modules that build up the Product Set feature
+last_updated: Mar 17, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/product-set
 originalArticleId: 62308ccc-8e49-4d0b-ab6a-578de492bb51

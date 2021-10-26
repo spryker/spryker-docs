@@ -1,5 +1,6 @@
 ---
 title: File details- product_attribute_key.csv
+last_updated: Jul 7, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-attribute-keycsv
 originalArticleId: 141aa68e-c752-4021-b6cb-df6fa4803d72

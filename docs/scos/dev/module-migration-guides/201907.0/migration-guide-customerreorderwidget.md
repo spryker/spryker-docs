@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - CustomerReorderWidget
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-customer-reorder-widget
 originalArticleId: 8938d6b0-8694-42c1-a16c-2c4041e34950

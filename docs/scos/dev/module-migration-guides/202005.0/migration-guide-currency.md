@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Currency
 description: Use the guide to update versions to the newer ones of the Currency module.
+last_updated: Apr 3, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/mg-currency
 originalArticleId: 40361373-effc-4463-a5c9-d693a0ea3a51

@@ -1,6 +1,7 @@
 ---
 title: B2C API React Example Installation
 description: This article describes installation of B2C API Demo Shop to experience the use of Spryker Glue REST API.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/b2c-api-react-example-installation
 originalArticleId: 6d6a1bec-4ae4-4f93-b406-2d0d24bd8988

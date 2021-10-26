@@ -1,5 +1,6 @@
 ---
 title: Customer Registration overview
+last_updated: Jul 15, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-registration-overview
 originalArticleId: b13eea5d-0524-4858-a94a-c993b12606ea

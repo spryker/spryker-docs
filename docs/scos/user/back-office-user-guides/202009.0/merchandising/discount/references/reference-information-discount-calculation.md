@@ -1,6 +1,7 @@
 ---
 title: Reference information- discount calculation
 description: The guide provides additional information on the values you use when working with discount calculations in the Back Office.
+last_updated: Aug 27, 2020
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/discount-calculation-reference-information
 originalArticleId: 8a55c5d9-4522-4058-8cd4-28022a93e7d5

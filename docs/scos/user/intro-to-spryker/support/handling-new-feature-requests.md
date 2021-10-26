@@ -1,6 +1,7 @@
 ---
 title: Handling new feature requests
 description: In this article, we describe how we handle requests for the new features and improvements from our customers.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/handling-new-feature-requests
 originalArticleId: 9ddd4988-0e91-4825-9ac0-89a6d230dc61

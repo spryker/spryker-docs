@@ -1,5 +1,6 @@
 ---
 title: HowTo - Import Warehouse Data
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-import-warehouse-data
 originalArticleId: 3adb5dc2-398b-4d48-adad-5ee97de1df9d

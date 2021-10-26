@@ -1,6 +1,7 @@
 ---
 title: Release Notes 2018.11.0
 description: This document contains a business level description of major new features and enhancements released in November of 2018.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes-2018-11-0
 originalArticleId: 32076dc8-dd8a-438c-8029-cbf2eb7cf2e3

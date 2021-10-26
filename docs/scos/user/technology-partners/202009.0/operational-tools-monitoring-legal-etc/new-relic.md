@@ -1,6 +1,7 @@
 ---
 title: New Relic
 description: Monitor the performance and health of your application by integrating New Relic into the Spryker Commerce OS.
+last_updated: Sep 15, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/new-relic
 originalArticleId: 85c78292-8986-4348-b778-04898a8014d4

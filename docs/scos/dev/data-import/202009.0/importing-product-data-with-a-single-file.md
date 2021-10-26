@@ -1,6 +1,7 @@
 ---
 title: Importing Product Data With a Single File
 description: Learn how to import all main product data with a single file
+last_updated: Nov 18, 2020
 template: data-import-template
 originalLink: https://documentation.spryker.com/v6/docs/importing-product-data-with-a-single-file
 originalArticleId: d4be24b0-a8ca-41ab-b3e4-bf9298914e82

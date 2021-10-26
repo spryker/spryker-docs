@@ -1,6 +1,7 @@
 ---
 title: Managing Product Reviews
 description: Use this guide to check the reviews, change their status, and delete inappropriate ones in the Back Office.
+last_updated: Nov 22, 2019
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/managing-product-reviews
 originalArticleId: d335929a-8649-4465-a772-70c677d3fa47

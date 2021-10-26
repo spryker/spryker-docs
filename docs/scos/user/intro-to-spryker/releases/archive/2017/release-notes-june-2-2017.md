@@ -1,5 +1,6 @@
 ---
 title: Release Notes - June - 2 2017
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes-june-2-2017
 originalArticleId: c9f459c9-cec6-44da-a6f6-1d43bfc5f110

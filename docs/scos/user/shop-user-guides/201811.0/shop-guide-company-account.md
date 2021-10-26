@@ -1,6 +1,7 @@
 ---
 title: Shop Guide - Company Account
 description: Use the procedures to create and manage a company from the company account in the storefront.
+last_updated: Jul 29, 2020
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/company-account-shop-guide
 originalArticleId: 584b51ca-bbae-456d-91ee-118e5a7e3d9c

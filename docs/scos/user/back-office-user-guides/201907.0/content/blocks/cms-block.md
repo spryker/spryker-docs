@@ -1,6 +1,7 @@
 ---
 title: CMS Block
 description: The subsection is designed to create, view and update CMS block content in the editor from the Back Office to display it later in the online store.
+last_updated: Feb 4, 2020
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/cms-block-guide
 originalArticleId: b9760b2c-0f15-4466-9a6d-ee27ae17839d

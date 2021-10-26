@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - PriceProduct
 description: Use the guide to migrate to a newer version of the PriceProduct module.
+last_updated: Oct 9, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/mg-priceproduct
 originalArticleId: 8bbe2c33-1598-47af-b9cd-635e29c223d3

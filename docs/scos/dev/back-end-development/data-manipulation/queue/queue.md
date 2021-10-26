@@ -1,6 +1,7 @@
 ---
 title: Queue
 description: The article explains the Spryker Queue System- its work, benefits and configuration
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/queue
 originalArticleId: c9916ed4-acec-43d0-8a68-0e9805ce8c15

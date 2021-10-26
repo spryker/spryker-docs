@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductValidity
 description: Use the guide to learn how to update the ProductValidity module to a newer version.
+last_updated: Apr 3, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/mg-product-validity
 originalArticleId: 861ac412-9de3-4daf-9cdc-adf5468ea34b

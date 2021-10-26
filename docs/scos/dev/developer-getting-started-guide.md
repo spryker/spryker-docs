@@ -1,6 +1,7 @@
 ---
 title: Developer getting started guide
 description: This is a step-by-step checklist that you can follow  through all the stages of working with Spryker.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/dev-getting-started
 originalArticleId: 79b50d48-6f09-45b0-9e4a-f372e274d462

@@ -1,6 +1,7 @@
 ---
 title: Nginx welcome page
 description: Learn how to fix the issue when you get Nginx welcome page upon opening an application in browser
+last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/nginx-welcome-page
 originalArticleId: 27e0d295-8262-41c9-affb-f2339556ef1c

@@ -1,5 +1,6 @@
 ---
 title: Company Account Management
+last_updated: Nov 18, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/company-account-management
 originalArticleId: 651daa19-81f1-4754-8483-97311e931720

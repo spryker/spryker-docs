@@ -1,6 +1,7 @@
 ---
 title: Docker SDK configuration reference
 description: Instructions for the most common configuration cases of the Docker SDK.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/docker-sdk-configuration-reference
 originalArticleId: 624e91c2-a207-41b4-957f-98de2a96f90b

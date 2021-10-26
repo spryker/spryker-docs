@@ -1,5 +1,6 @@
 ---
 title: Agent Assist + Cart feature integration
+last_updated: Jul 6, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/agent-assist-cart-feature-integration
 originalArticleId: 98b85b04-aa2a-4eca-b968-413c6fb65726

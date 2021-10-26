@@ -1,6 +1,7 @@
 ---
 title: Navigation feature integration
 description: This guide provides step-by-step instructions on integrating Navigation feature into your project.
+last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/navigation-feature-integration
 originalArticleId: 08d33ccb-6cb3-42a0-b74d-db3302c1e32b

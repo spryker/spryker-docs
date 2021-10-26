@@ -1,6 +1,7 @@
 ---
 title: Tax Sets Reference Information
 description: The guide provides additional information on the values you use when managing tax rates and tax sets in the Back Office.
+last_updated: Jun 9, 2020
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/taxes-reference-information
 originalArticleId: 1fdf18f1-ca07-42df-b181-8232f113b2ab

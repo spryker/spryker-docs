@@ -1,6 +1,7 @@
 ---
 title: Release Notes 201907.0
 description: This document contains a business level description of major new features and enhancements released in August of 2019.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes-201907-0
 originalArticleId: a627c232-fc5c-4935-8a09-f56c8bd7d622

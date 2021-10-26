@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - ProductLabelStorage
+last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-productlabelstorage
 originalArticleId: 2ef8ed0a-3efe-4244-9724-1addccd72226

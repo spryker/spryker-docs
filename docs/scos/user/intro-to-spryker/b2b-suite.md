@@ -1,6 +1,7 @@
 ---
 title: B2B Suite
 description: The Spryker B2B Suite is a showcase that demonstrates ready-to-use B2B-specific Spryker features in a live implementation.
+last_updated: Oct 8, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/b2b-suite
 originalArticleId: 8007db6c-8e30-4de3-ade0-990e6cea9d36

@@ -1,6 +1,7 @@
 ---
 title: Managing agent assist authentication tokens
 description: Refresh an agent assist token and revoke an agent assist refresh token.
+last_updated: Feb 8, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/managing-agent-assist-authentication-tokens
 originalArticleId: 437ed78f-b437-4fb5-8186-f7286e1207f1

@@ -1,6 +1,7 @@
 ---
 title: Reference information- return item states
 description: This guide provides reference information on  return item states.
+last_updated: Aug 27, 2020
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/return-item-states-reference-information
 originalArticleId: 8155623f-8fa8-4f3c-aa5d-a5e5ebbafbfd

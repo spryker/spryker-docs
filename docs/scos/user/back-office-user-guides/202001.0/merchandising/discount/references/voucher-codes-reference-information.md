@@ -1,6 +1,7 @@
 ---
 title: Voucher Codes- Reference Information
 description: This guide provides reference information when working with voucher codes in the Back Office.
+last_updated: Nov 22, 2019
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/voucher-codes-reference-information
 originalArticleId: 434eadae-2ab8-49bc-86f9-6a100b1f4917

@@ -1,5 +1,6 @@
 ---
 title: Quotation Process + Multiple Carts feature integration
+last_updated: May 12, 2020
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/quotation-process-multiple-carts-feature-integration
 originalArticleId: 968034d5-40af-4cac-925e-6a7372eadf73

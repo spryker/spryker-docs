@@ -1,6 +1,7 @@
 ---
 title: Frontend assets building and loading
 description: Spryker assets are split into critical and non-critical CSS chunks. Their main purpose is to provide loading of the critical CSS at the start of the page loading and load the non-critical CSS only after the full page is loaded.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/frontend-assets-building-and-loading
 originalArticleId: d9f739fa-6b6a-45d7-8d3e-4ba793809910

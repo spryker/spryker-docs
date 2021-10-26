@@ -1,6 +1,7 @@
 ---
 title: Sales
 description: The module provides order management functionality obtained through the ZED UI that renders orders with details and the Client API to get customer orders
+last_updated: Oct 15, 2019
 template: feature-walkthrough-template
 originalLink: https://documentation.spryker.com/v1/docs/sales
 originalArticleId: d171c13d-461d-42f3-962c-cfea4b6cd566

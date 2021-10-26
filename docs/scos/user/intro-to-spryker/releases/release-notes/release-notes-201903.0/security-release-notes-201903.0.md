@@ -1,6 +1,7 @@
 ---
 title: Security Release Notes 201903.0
 description: The following information pertains to security-related issues that were discovered and resolved during the 201903.0 release.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/security-release-notes-201903-0
 originalArticleId: 11ab0ed2-762f-485e-b145-316cf52922f1

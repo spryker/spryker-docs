@@ -1,5 +1,6 @@
 ---
 title: Configurable Product data import
+last_updated: Jun 17, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/configurable-product-data-import
 originalArticleId: e1cc3272-ceca-4b4c-863a-b1cd79a84d7c

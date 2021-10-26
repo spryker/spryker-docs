@@ -1,6 +1,7 @@
 ---
 title: Managing Product Sets
 description: Use these procedures to view, update or change the order of product sets, as well as activate/deactivate and/or delete them in the Back Office.
+last_updated: Nov 22, 2019
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/managing-product-sets
 originalArticleId: 02a02a64-ecb5-476b-8a9f-96651d47d99f

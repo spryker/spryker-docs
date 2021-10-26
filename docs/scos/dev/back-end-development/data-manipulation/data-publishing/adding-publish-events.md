@@ -1,6 +1,7 @@
 ---
 title: Adding publish events
 description: Learn how to add publish events for Publish and Synchronization.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/adding-publish-events
 originalArticleId: 6254b4c6-f147-4463-bc61-e9b3f7bf7e28

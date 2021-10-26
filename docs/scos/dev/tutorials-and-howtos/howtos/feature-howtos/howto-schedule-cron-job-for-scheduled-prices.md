@@ -1,5 +1,6 @@
 ---
 title: HowTo - Schedule Cron Job for Scheduled Prices
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-schedule-cron-job-for-scheduled-prices-201907
 originalArticleId: 612d102b-f61a-4c7b-adec-9a2697ed6349

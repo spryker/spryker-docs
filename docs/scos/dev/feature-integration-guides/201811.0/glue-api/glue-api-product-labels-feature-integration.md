@@ -1,6 +1,7 @@
 ---
 title: Product Labels API feature integration
 description: This guide will navigate you through the process of installing and configuring the Product Labels API feature in Spryker OS.
+last_updated: Nov 4, 2019
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/product-labels-api-feature-integration
 originalArticleId: 327e406f-7874-49c7-ba1a-fd20d76120e0

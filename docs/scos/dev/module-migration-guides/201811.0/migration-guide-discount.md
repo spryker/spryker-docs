@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Discount
+last_updated: Nov 4, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/mg-discount
 originalArticleId: 8f9a5e0a-6f5a-439b-97b4-4776e9decea5

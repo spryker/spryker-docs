@@ -1,5 +1,6 @@
 ---
 title: About Integration
+last_updated: Nov 22, 2019
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/about-integration
 originalArticleId: 555a9672-4682-44bb-b05f-7ffbcdad7b8d

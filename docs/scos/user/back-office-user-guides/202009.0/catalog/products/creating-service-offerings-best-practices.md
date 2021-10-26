@@ -1,5 +1,6 @@
 ---
 title: Creating service offerings- best practices
+last_updated: Sep 21, 2020
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/creating-service-offerings
 originalArticleId: deea048b-24ee-42e0-ae7c-2fe51e78f065

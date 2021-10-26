@@ -1,6 +1,7 @@
 ---
 title: Managing shopping list items
 description: Learn how to manage shopping list items via Glue API.
+last_updated: Mar 2, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/managing-shopping-list-items
 originalArticleId: 0e86ec2e-286c-4906-a02f-8f0a1df5d35c

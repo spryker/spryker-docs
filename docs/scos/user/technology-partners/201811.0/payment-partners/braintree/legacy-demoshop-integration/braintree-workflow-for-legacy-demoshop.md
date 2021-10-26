@@ -1,6 +1,7 @@
 ---
 title: Braintree - Workflow for Legacy Demoshop
 description: This article describes the request flow for the Braintree module in the Spryker Legacy Demoshop.
+last_updated: Oct 22, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/braintree-workflow-legacy-demoshop
 originalArticleId: 4844884b-6bbe-4036-bb2d-77815bd30c9a

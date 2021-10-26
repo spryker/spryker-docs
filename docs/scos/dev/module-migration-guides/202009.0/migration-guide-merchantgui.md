@@ -1,6 +1,7 @@
 ---
 title: Migration guide - MerchantGui
 description: This guide contains instructions on migrating the MerchantGui module provided by Spryker to a newer version.
+last_updated: Jan 28, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/migration-guide-merchantgui
 originalArticleId: 65c33911-9e93-41fd-8496-0077eaf315ff

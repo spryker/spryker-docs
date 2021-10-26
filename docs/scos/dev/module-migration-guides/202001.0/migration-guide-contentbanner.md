@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - ContentBanner
+last_updated: Aug 13, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/mg-contentbanner-201907
 originalArticleId: c8b7e4f4-a661-41af-a8a6-92a0b9ffa8ea

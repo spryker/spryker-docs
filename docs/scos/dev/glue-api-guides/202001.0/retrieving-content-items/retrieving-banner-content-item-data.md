@@ -1,6 +1,7 @@
 ---
 title: Retrieving Banner Content Item Data
 description: Banner API implements REST API endpoint that can retrieve banner content item data available in the storage for all or a specific locale
+last_updated: Mar 20, 2020
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/retrieving-banner-content-item-data-201907
 originalArticleId: a00c3421-8611-4832-9d46-0e722305d7f5

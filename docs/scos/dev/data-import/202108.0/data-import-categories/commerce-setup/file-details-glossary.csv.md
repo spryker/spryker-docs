@@ -1,5 +1,6 @@
 ---
 title: File details- glossary.csv
+last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-glossarycsv
 originalArticleId: 8933e30e-35fd-4c8b-be0c-78c4b38054f8

@@ -48,11 +48,372 @@ entries:
         url: /docs/scos/user/features/cart-feature-overview/quick-order-from-the-catalog-page-overview.html
         include_versions:
         - "202009.0"
-        - "202108.0"        
-    - title: Measurement Units Feature Overview
-      url: /docs/scos/user/features/measurement-units-feature-overview.html
-    - title: Hide Content from Logged out Users Overview
+        - "202108.0"
+    - title: Catalog feature overview
+      url: /docs/scos/user/features/catalog-feature-overview.html
+    - title: Checkout feature overview
+      url: /docs/scos/user/features/checkout-feature-overview/checkout-feature-overview.html
+      nested:
+      - title: Multi-step checkout overview
+        url: /docs/scos/user/features/checkout-feature-overview/multi-step-checkout-overview.html
+        include_versions:
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+      - title: Order thresholds overview
+        url: /docs/scos/user/features/checkout-feature-overview/order-thresholds-overview.html
+        include_versions:
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+      - title: Define Payment and Shipment Methods
+        url: /docs/scos/user/features/checkout-feature-overview/define-payment-and-shipment-methods.html
+        include_versions:
+        - "201811.0"
+    - title: Company Account feature overview
+      url: /docs/scos/user/features/company-account-feature-overview/company-account-feature-overview.html
+      nested:
+      - title: Company accounts overview
+        url: /docs/scos/user/features/company-account-feature-overview/company-accounts-overview.html
+      - title: Business units overview
+        url: /docs/scos/user/features/company-account-feature-overview/business-units-overview.html
+      - title: Company user roles and permissions overview
+        url: /docs/scos/user/features/company-account-feature-overview/company-user-roles-and-permissions-overview.html
+      - title: Customer login by token overview
+        url: /docs/scos/user/features/company-account-feature-overview/customer-login-by-token-overview.html
+        include_versions:
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+      - title: Business on behalf overview
+        url: /docs/scos/user/features/company-account-feature-overview/business-on-behalf-overview.html
+        include_versions:
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+    - title: Comments feature overview
+      url: /docs/scos/user/features/comments-feature-overview.html
+      include_versions:
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+    - title: Configurable Bundle feature overview
+      url: /docs/scos/user/features/configurable-bundle-feature-overview.html
+      include_versions:
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+    - title: CMS feature overview
+      url: /docs/scos/user/features/cms-feature-overview/cms-feature-overview.html
+      nested:
+      - title: CMS pages overview
+        url: /docs/scos/user/features/cms-feature-overview/cms-pages-overview.html
+      - title: CMS blocks overview
+        url: /docs/scos/user/features/cms-feature-overview/cms-blocks-overview.html
+      - title: CMS pages in search results overview
+        url: /docs/scos/user/features/cms-feature-overview/cms-pages-in-search-results-overview.html
+        include_versions:
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+      - title: Templates and slots overview
+        url: /docs/scos/user/features/cms-feature-overview/templates-and-slots-overview.html
+        include_versions:
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+      - title: Email as a CMS block overview
+        url: /docs/scos/user/features/cms-feature-overview/email-as-a-cms-block-overview.html
+        include_versions:
+        - "202009.0"
+        - "202108.0"
+      - title: CMS Page Drafts and Previews
+        url: /docs/scos/user/features/cms-feature-overview/cms-page-drafts-and-previews.html
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+      - title: Publish to Live
+        url: /docs/scos/user/features/cms-feature-overview/publish-to-live.html
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+      - title: Time Restricted Content Page Publishing
+        url: /docs/scos/user/features/cms-feature-overview/time-restricted-content-page-publishing.html
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0" 
+    - title: Content Items Feature Overview
+      url: /docs/scos/user/features/content-items-feature-overview.html
+      include_versions:
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+    - title: Customer Access feature overview
       url: /docs/scos/user/features/customer-access-feature-overview.html
+    - title: Customer Account Management feature overview
+      url: /docs/scos/user/features/customer-account-management-feature-overview/customer-account-management-feature-overview.html
+      nested:
+      - title: Customer Accounts overview
+        url: /docs/scos/user/features/customer-account-management-feature-overview/customer-accounts-overview.html
+        include_versions:
+        - "202009.0"
+        - "202108.0"
+      - title: Customer registration overview
+        url: /docs/scos/user/features/customer-account-management-feature-overview/customer-registration-overview.html
+        include_versions:
+        - "202009.0"
+        - "202108.0"
+      - title: Customer login overview
+        url: /docs/scos/user/features/customer-account-management-feature-overview/customer-login-overview.html
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202108.0"
+      - title: Password management overview
+        url: /docs/scos/user/features/customer-account-management-feature-overview/password-management-overview.html
+      - title: Customer groups overview
+        url: /docs/scos/user/features/customer-account-management-feature-overview/customer-groups-overview.html
+    - title: Configurable Product feature overview
+      url: /docs/scos/user/features/configurable-product-feature-overview.html
+      include_versions:
+      - "202108.0"
+    - title: File Manager feature overview
+      nested:
+      - title: Media Management
+        url: /docs/scos/user/features/file-manager-feature-overview/file-manager-feature-overview.html
+      - title: Asset Management
+        url: /docs/scos/user/features/file-manager-feature-overview/asset-management.html
+      - title: File Uploader
+        url: /docs/scos/user/features/file-manager-feature-overview/file-uploader.html
+    - title: Gift Cards feature overview
+      url: /docs/scos/user/features/gift-cards-feature-overview.html
+    - title: Inventory Management feature overview
+      url: /docs/scos/user/features/inventory-management-feature-overview.html
+    - title: Mailing and Notifications feature overview
+      url: /docs/scos/user/features/mailing-and-notifications-feature-overview.html
+    - title: Measurement Units feature overview
+      url: /docs/scos/user/features/measurement-units-feature-overview.html
+    - title: Merchant B2B Contracts feature overview
+      url: /docs/scos/user/features/merchant-b2b-contracts-feature-overview.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+    - title: Merchant Custom Prices feature Overview
+      url: /docs/scos/user/features/merchant-custom-prices-feature-overview.html
+    - title: Merchant Product Restrictions feature overview
+      url: /docs/scos/user/features/merchant-product-restrictions-feature-overview.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+    - title: Multiple Carts feature overview
+      url: /docs/scos/user/features/multiple-carts-feature-overview.html
+    - title: Navigation feature overview
+      url: /docs/scos/user/features/navigation-feature-overview.html
+    - title: Non-splittable products feature overview
+      url: /docs/scos/user/features/non-splittable-products-feature-overview.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202009.0"
+      - "202108.0"
+    - title: Order Management feature overview
+      url: /docs/scos/user/features/order-management-feature-overview/order-management-feature-overview.html
+      nested:
+      - title: Invoice gneration overview
+        url: /docs/scos/user/features/order-management-feature-overview/invoice-generation-overview.html
+        include_versions:
+        - "202009.0"
+        - "202108.0"
+      - title: Order cancellation overview
+        url: /docs/scos/user/features/order-management-feature-overview/order-cancellation-overview.html
+        include_versions:
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+      - title: Splittable order items overview
+        url: /docs/scos/user/features/order-management-feature-overview/splittable-order-items-overview.html
+      - title: Split delivery Overview
+        url: /docs/scos/user/features/order-management-feature-overview/split-delivery-overview.html
+        include_versions:
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+      - title: Custom order reference overview
+        url: /docs/scos/user/features/order-management-feature-overview/custom-order-reference-overview.html
+        include_versions:
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+    - title: Packaging Units feature overview
+      url: /docs/scos/user/features/packaging-units-feature-overview.html
+    - title: Payments feature overview
+      url: /docs/scos/user/features/payments-feature-overview.html
+    - title: Persistent Cart Sharing feature overview
+      url: /docs/scos/user/features/persistent-cart-sharing-feature-overview.html
+      include_versions:
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+    - title: Prices feature overview
+      url: /docs/scos/user/features/prices-feature-overview/prices-feature-overview.html
+      include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202108.0"
+      nested:
+      - title: Volume Prices overview
+        url: /docs/scos/user/features/prices-feature-overview/volume-prices-overview.html
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202108.0"
+    - title: Product feature overview
+      url: /docs/scos/user/features/product-feature-overview/product-feature-overview.html
+      nested:
+      - title: Product attributes overview
+        url: /docs/scos/user/features/product-feature-overview/product-attributes-overview.html
+      - title: Discontinued products overview
+        url: /docs/scos/user/features/product-feature-overview/discontinued-products-overview.html
+      - title: Search widget for concrete products overview
+        url: /docs/scos/user/features/product-feature-overview/search-widget-for-concrete-products-overview.html
+        include_versions:
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+      - title: Timed product availability overview
+        url: /docs/scos/user/features/product-feature-overview/timed-product-availability-overview.html
+      - title: Product image management
+        url: /docs/scos/user/features/product-feature-overview/product-images-overview.html
+        include_versions:
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+    - title: Product Barcode feature Overview
+      url: /docs/scos/user/features/product-barcode-feature-overview.html
+    - title: Product Bundles feature overview
+      url: /docs/scos/user/features/product-bundles-feature-overview.html
+    - title: Product Groups feature overview
+      url: /docs/scos/user/features/product-groups-feature-overview.html
+    - title: Product Labels feature overview
+      url: /docs/scos/user/features/product-labels-feature-overview.html
+    - title: Product Lists feature overview
+      url: /docs/scos/user/features/product-lists-feature-overview.html
+    - title: Product Options feature overview
+      url: /docs/scos/user/features/product-options-feature-overview.html
+    - title: Product Rating and Reviews feature overview
+      url: /docs/scos/user/features/product-rating-and-reviews-feature-overview.html
+    - title: Product Relations feature overview
+      url: /docs/scos/user/features/product-relations-feature-overview.html
+    - title: Product Sets feature overview
+      url: /docs/scos/user/features/product-sets-feature-overview.html
+    - title: Promotions and Discounts feature overview
+      url: /docs/scos/user/features/promotions-discounts-feature-overview.html
+    - title: Quick Add to Cart feature overview
+      url: /docs/scos/user/features/quick-add-to-cart-feature-overview.html
+    - title: Quotation Process feature overview
+      url: /docs/scos/user/features/quotation-process-feature-overview.html
+      include_versions:
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+    - title: Reclamations feature overview
+      url: /docs/scos/user/features/reclamations-feature-overview.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+    - title: Refunds feature overview
+      url: /docs/scos/user/features/refunds-feature-overview.html
+    - title: Reorder feature overview
+      url: /docs/scos/user/features/reorder-feature-overview.html
+    - title: Resource Sharing feature overview
+      url: /docs/scos/user/features/resource-sharing-feature-overview.html
+      include_versions:
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+    - title: Return Management Feature Overview
+      include_versions:
+      - "202009.0"
+      - "202108.0"
+      nested:
+      - title: Building a return management process- Best practices
+        url: /docs/scos/user/features/return-management-feature-overview/building-a-return-management-process-best-practices.html
+        include_versions:
+        - "202009.0"
+        - "202108.0"
+    - title: Scheduled Prices Feature Overview
+      url: /docs/scos/user/features/scheduled-prices-feature-overview.html
+      include_versions:
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+    - title: Shipment feature overview
+      url: /docs/scos/user/features/shipment-feature-overview.html
     - title: Tax feature overview
       url: /docs/scos/user/features/tax-feature-overview.html
     - title: Spryker Core Back Office feature overview
@@ -60,10 +421,6 @@ entries:
       nested:
       - title: Back Office Translations Feature Overview
         url: /docs/scos/user/features/spryker-core-back-office-feature-overview/back-office-translations-overview.html
-    - title: Payments feature overview
-      url: /docs/scos/user/features/payments-feature-overview.html
-    - title: Refunds feature overview
-      url: /docs/scos/user/features/refunds-feature-overview.html
     - title: Sample Suite and Custom Suite
       include_versions:
       - "201811.0"
@@ -98,16 +455,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-    - title: Product Groups feature overview
-      url: /docs/scos/user/features/product-groups-feature-overview.html
-    - title: Content Items Feature Overview
-      url: /docs/scos/user/features/content-items-feature-overview.html
-      include_versions:
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Search feature overview
       url: /docs/scos/user/features/search-feature-overview/search-feature-overview.html
       nested:
@@ -168,155 +515,8 @@ entries:
         url: /docs/scos/user/features/search-feature-overview/filters-and-search-by-category.html
         include_versions:
         - "201903.0"
-    - title: Rating and Reviews
-      include_versions:
-      - "201903.0"
-      - "202001.0"
-      - "202005.0"
-      nested:
-      - title: Rating and Review Management
-        url: /docs/scos/user/features/rating-and-reviews/rating-and-review-management.html
-        include_versions:
-        - "201903.0"
-        - "202001.0"
-        - "202005.0"
-    - title: Product Relations Feature Overview
-      url: /docs/scos/user/features/product-relations-feature-overview.html
-    - title: Prices feature overview
-      include_versions:
-      - "201811.0"
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202108.0"
-      nested:
-      - title: Volume Prices Feature Overview
-        url: /docs/scos/user/features/prices-feature-overview/volume-prices-overview.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202108.0"
-      - title: Price Functionality
-        url: /docs/scos/user/features/prices-feature-overview/prices-feature-overview.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202108.0"
-    - title: Packaging Units feature overview
-      url: /docs/scos/user/features/packaging-units-feature-overview.html
-    - title: Resource Sharing feature overview
-      url: /docs/scos/user/features/resource-sharing-feature-overview.html
-      include_versions:
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
-    - title: CMS feature overview
-      nested:
-      - title: CMS Page Drafts and Previews
-        url: /docs/scos/user/features/cms-feature-overview/cms-page-drafts-and-previews.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-      - title: Templates & Slots Feature Overview
-        url: /docs/scos/user/features/cms-feature-overview/templates-and-slots-overview.html
-        include_versions:
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-      - title: CMS pages in search results overview
-        url: /docs/scos/user/features/cms-feature-overview/cms-pages-in-search-results-overview.html
-        include_versions:
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-      - title: Publish to Live
-        url: /docs/scos/user/features/cms-feature-overview/publish-to-live.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-      - title: CMS Block
-        url: /docs/scos/user/features/cms-feature-overview/cms-blocks-overview.html
-      - title: CMS
-        url: /docs/scos/user/features/cms-feature-overview/cms-feature-overview.html
-      - title: Time Restricted Content Page Publishing
-        url: /docs/scos/user/features/cms-feature-overview/time-restricted-content-page-publishing.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-      - title: CMS Page
-        url: /docs/scos/user/features/cms-feature-overview/cms-pages-overview.html
-      - title: Email as a CMS block overview
-        url: /docs/scos/user/features/cms-feature-overview/email-as-a-cms-block-overview.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-    - title: Product Labels feature overview
-      url: /docs/scos/user/features/product-labels-feature-overview.html
-    - title: Product Options feature overview
-      url: /docs/scos/user/features/product-options-feature-overview.html
-    - title: Product Lists feature overview
-      url: /docs/scos/user/features/product-lists-feature-overview.html
-    - title: Comments feature overview
-      url: /docs/scos/user/features/comments-feature-overview.html
-      include_versions:
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
-    - title: Inventory Management feature overview
-      url: /docs/scos/user/features/inventory-management-feature-overview.html
     - title: Shared Cart Feature Overview
       url: /docs/scos/user/features/shared-carts-feature-overview.html
-    - title: Prices per Merchant Relation Feature Overview
-      url: /docs/scos/user/features/merchant-custom-prices-feature-overview.html
-    - title: Barcode Generator Feature Overview
-      url: /docs/scos/user/features/product-barcode-feature-overview.html
-    - title: Navigation feature overview
-      url: /docs/scos/user/features/navigation-feature-overview.html
-    - title: File Manager feature overview
-      nested:
-      - title: Media Management
-        url: /docs/scos/user/features/file-manager-feature-overview/file-manager-feature-overview.html
-      - title: Asset Management
-        url: /docs/scos/user/features/file-manager-feature-overview/asset-management.html
-      - title: File Uploader
-        url: /docs/scos/user/features/file-manager-feature-overview/file-uploader.html
-    - title: Promotions & Discounts feature overview
-      url: /docs/scos/user/features/promotions-discounts-feature-overview.html
-    - title: Product Restrictions from Merchant to Buyer Overview
-      url: /docs/scos/user/features/merchant-product-restrictions-feature-overview.html
-      include_versions:
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
-    - title: Product Bundles feature overview
-      url: /docs/scos/user/features/product-bundles-feature-overview.html
     - title: Product Information Management
       include_versions:
       - "202001.0"
@@ -345,117 +545,11 @@ entries:
           url: /docs/scos/user/features/product-information-management/product-quantity-restrictions/product-quantity-restrictions-overview.html
           include_versions:
           - "202005.0"
-      - title: Configurable Bundle
-        include_versions:
-        - "202001.0"
-        - "202005.0"
-        nested:
-        - title: Configurable Bundle- Module Relations
-          url: /docs/scos/user/features/product-information-management/configurable-bundle/configurable-bundle-module-relations.html
-          include_versions:
-          - "202001.0"
-          - "202005.0"
       - title: Feature Configuration - Product Reviews
         url: /docs/scos/user/features/product-information-management/feature-configuration-product-reviews.html
         include_versions:
         - "202001.0"
         - "202005.0"
-      - title: Product Relations
-        include_versions:
-        - "202005.0"
-        nested:
-        - title: Product Relations - Module Relations
-          url: /docs/scos/user/features/product-information-management/product-relations/product-relations-module-relations.html
-          include_versions:
-          - "202005.0"
-    - title: Gift Cards feature overview
-      url: /docs/scos/user/features/gift-cards-feature-overview.html
-    - title: Product feature overview
-      url: /docs/scos/user/features/product-feature-overview/product-feature-overview.html
-      include_versions:
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
-      nested:
-      - title: Product Attributes
-        url: /docs/scos/user/features/product-feature-overview/product-attributes-overview.html
-      - title: Discontinued Products Feature Overview
-        url: /docs/scos/user/features/product-feature-overview/discontinued-products-overview.html
-      - title: Search Widget for Concrete Products Overview
-        url: /docs/scos/user/features/product-feature-overview/search-widget-for-concrete-products-overview.html
-        include_versions:
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-      - title: Timed Product Availability Feature Overview
-        url: /docs/scos/user/features/product-feature-overview/timed-product-availability-overview.html
-      - title: Product Image Management
-        url: /docs/scos/user/features/product-feature-overview/product-images-overview.html
-        include_versions:
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-    - title: Shipment feature overview
-      url: /docs/scos/user/features/shipment-feature-overview.html
-    - title: Reclamations Feature Overview
-      url: /docs/scos/user/features/reclamations-feature-overview.html
-      include_versions:
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
-    - title: Merchants and Merchant Relations Feature Overview
-      url: /docs/scos/user/features/merchant-b2b-contracts-feature-overview.html
-      include_versions:
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
-    - title: Reorder feature overview
-      url: /docs/scos/user/features/reorder-feature-overview.html
-    - title: Customer Account Management feature overview
-      nested:
-      - title: Customer Groups
-        url: /docs/scos/user/features/customer-account-management-feature-overview/customer-groups-overview.html
-      - title: Login & Registration Forms
-        url: /docs/scos/user/features/customer-account-management-feature-overview/customer-login-overview.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202108.0"
-      - title: Customer Accounts
-        url: /docs/scos/user/features/customer-account-management-feature-overview/customer-account-management-feature-overview.html
-      - title: Password Management
-        url: /docs/scos/user/features/customer-account-management-feature-overview/password-management-overview.html
-      - title: Customer Registration overview
-        url: /docs/scos/user/features/customer-account-management-feature-overview/customer-registration-overview.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-      - title: Customer Accounts overview
-        url: /docs/scos/user/features/customer-account-management-feature-overview/customer-accounts-overview.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-      - title: Customer Module Overview
-        url: /docs/scos/user/features/customer-account-management-feature-overview/reference-information-customer-module-overview.html
-        include_versions:
-        - "201907.0"
     - title: Shopping Lists feature overview
       nested:
       - title: Shopping list widget overview
@@ -466,8 +560,6 @@ entries:
         url: /docs/scos/user/features/shopping-lists-feature-overview/shopping-list-printing-overview.html
       - title: Shopping List Notes overview
         url: /docs/scos/user/features/shopping-lists-feature-overview/shopping-list-notes-overview.html
-    - title: Product Rating & Reviews feature overview
-      url: /docs/scos/user/features/product-rating-and-reviews-feature-overview.html
     - title: Technology Partner Integrations
       include_versions:
       - "201907.0"
@@ -500,78 +592,8 @@ entries:
         url: /docs/scos/user/features/technology-partner-integrations/integrating-technology-partners.html
         include_versions:
         - "202009.0"
-    - title: Scheduled Prices Feature Overview
-      url: /docs/scos/user/features/scheduled-prices-feature-overview.html
-      include_versions:
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
-    - title: Multiple Carts per User Feature Overview
+    - title: Multiple Carts feature Overview
       url: /docs/scos/user/features/multiple-carts-feature-overview.html
-    - title: Configurable Bundle Feature Overview
-      url: /docs/scos/user/features/configurable-bundle-feature-overview.html
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
-    - title: Quotation Process feature overview
-      url: /docs/scos/user/features/quotation-process-feature-overview.html
-      include_versions:
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
-    - title: Order Management feature overview
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
-      nested:
-      - title: Splittable Order Items Feature Overview
-        url: /docs/scos/user/features/order-management-feature-overview/splittable-order-items-overview.html
-      - title: Split Delivery Overview
-        url: /docs/scos/user/features/order-management-feature-overview/split-delivery-overview.html
-        include_versions:
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-      - title: OMS (Order Management System) Matrix
-        url: /docs/scos/user/features/order-management-feature-overview/oms-order-management-system-matrix.html
-      - title: Order Management
-        url: /docs/scos/user/features/order-management-feature-overview/order-management-feature-overview.html
-      - title: Custom order Reference Feature Overview
-        url: /docs/scos/user/features/order-management-feature-overview/custom-order-reference-overview.html
-        include_versions:
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-      - title: Order Cancellation Feature Overview
-        url: /docs/scos/user/features/order-management-feature-overview/order-cancellation-overview.html
-        include_versions:
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-      - title: Invoice Generation overview
-        url: /docs/scos/user/features/order-management-feature-overview/invoice-generation-overview.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-    - title: Mailing & Notifications feature overview
-      url: /docs/scos/user/features/mailing-and-notifications-feature-overview.html
-    - title: Persistent Cart Sharing feature overview
-      url: /docs/scos/user/features/persistent-cart-sharing-feature-overview.html
-      include_versions:
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Multi-Channel
       include_versions:
       - "201811.0"
@@ -611,96 +633,6 @@ entries:
         - "201907.0"
         - "202001.0"
         - "202005.0"
-    - title: Quick Add to Cart feature overview
-      url: /docs/scos/user/features/quick-add-to-cart-feature-overview.html
-    - title: Checkout feature overview
-      nested:
-      - title: Checkout
-        url: /docs/scos/user/features/checkout-feature-overview/checkout-feature-overview.html
-      - title: Multi-Step Checkout
-        url: /docs/scos/user/features/checkout-feature-overview/multi-step-checkout-overview.html
-        include_versions:
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-      - title: Minimum Order Value Feature Overview
-        url: /docs/scos/user/features/checkout-feature-overview/order-thresholds-overview.html
-        include_versions:
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-      - title: Define Payment & Shipment Methods
-        url: /docs/scos/user/features/checkout-feature-overview/define-payment-and-shipment-methods.html
-        include_versions:
-        - "201811.0"
-    - title: Product Sets feature overview
-      url: /docs/scos/user/features/product-sets-feature-overview.html
-    - title: Catalog feature overview
-      url: /docs/scos/user/features/catalog-feature-overview.html
-    - title: Company Account feature overview
-      include_versions:
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
-      - "201903.0"
-      nested:
-      - title: Company Account Management
-        url: /docs/scos/user/features/company-account-feature-overview/company-account-feature-overview.html
-      - title: Business Units Management Feature Overview
-        url: /docs/scos/user/features/company-account-feature-overview/business-units-overview.html
-      - title: Company Account and General Organizational Structure
-        url: /docs/scos/user/features/company-account-feature-overview/company-accounts-overview.html
-      - title: Company User Roles and Permissions Feature Overview
-        url: /docs/scos/user/features/company-account-feature-overview/company-user-roles-and-permissions-overview.html
-      - title: Customer Login by Token
-        url: /docs/scos/user/features/company-account-feature-overview/customer-login-by-token-overview.html
-        include_versions:
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-      - title: Business On Behalf Feature Overview
-        url: /docs/scos/user/features/company-account-feature-overview/business-on-behalf-overview.html
-        include_versions:
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-    - title: Product Quantity Restrictions Feature Overview
-      url: /docs/scos/user/features/non-splittable-products-feature-overview.html
-      include_versions:
-      - "201811.0"
-      - "201903.0"
-      - "201907.0"
-      - "202009.0"
-      - "202108.0"
-    - title: Return Management Feature Overview
-      include_versions:
-      - "202009.0"
-      - "202108.0"
-      nested:
-      - title: Building a return management process- Best practices
-        url: /docs/scos/user/features/return-management-feature-overview/building-a-return-management-process-best-practices.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-    - title: Configurable Product feature overview
-      url: /docs/scos/user/features/configurable-product-feature-overview.html
-      include_versions:
-      - "202108.0"
-    - title: Non-splittable Products
-      nested: []
   - title: Intro to Spryker
     nested:
     - title: Spryker videos

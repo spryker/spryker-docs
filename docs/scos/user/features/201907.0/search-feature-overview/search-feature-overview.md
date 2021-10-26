@@ -1,5 +1,6 @@
 ---
 title: Search feature overview
+last_updated: Nov 22, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/search
 originalArticleId: 9b285f62-62cf-4fb3-be3b-469e86c21875

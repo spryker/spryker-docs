@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Offer
 description: Use the guide to learn how to update the Offer module.
+last_updated: Apr 3, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/mg-offer
 originalArticleId: 4ab18f37-6bbe-4679-8c35-908014273758

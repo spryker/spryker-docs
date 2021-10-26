@@ -1,6 +1,7 @@
 ---
 title: Retrieving product labels
 description: Learn how to retrieve product labels via Glue API.
+last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-product-labels
 originalArticleId: 70d36a7a-e701-427d-ae2a-e78ebde56ebe

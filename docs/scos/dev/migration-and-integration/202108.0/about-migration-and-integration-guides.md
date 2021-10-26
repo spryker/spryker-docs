@@ -1,6 +1,7 @@
 ---
 title: About migration and integration guides
 description: The section provides guides on how to update modules, install features in the project and enhance the Legacy Demoshop.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/about-migration-integration
 originalArticleId: 3bd455c3-bdf8-4e29-a5f9-bf5388c9e080

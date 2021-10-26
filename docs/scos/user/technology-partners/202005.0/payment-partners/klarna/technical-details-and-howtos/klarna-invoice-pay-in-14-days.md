@@ -1,6 +1,7 @@
 ---
 title: Klarna - Invoice Pay in 14 days
 description: In this article, you will find invoice pay scenarios for the payment process with Klarna.
+last_updated: Sep 15, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/klarna-invoice-pay-in-14-days
 originalArticleId: 24200b80-af7f-4333-8673-9f38e8469b9e

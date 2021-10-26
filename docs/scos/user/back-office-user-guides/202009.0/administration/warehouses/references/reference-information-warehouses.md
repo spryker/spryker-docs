@@ -1,6 +1,7 @@
 ---
 title: Reference information- Warehouses
 description: The guide provides additional information on the values you enter when creating and updating warehouses in the Back Office.
+last_updated: Aug 27, 2020
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/warehouses-reference-information
 originalArticleId: ef4d4c96-8916-4ee2-abc1-3d799786cced

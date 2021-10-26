@@ -1,6 +1,7 @@
 ---
 title: Multiple publish queue structure
 description: The single event queue is replaced by multiple publish queues.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/multiple-publish-queue-structure
 originalArticleId: 52874a77-9a3a-425d-8bc5-2abac8bc9beb

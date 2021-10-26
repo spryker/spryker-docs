@@ -1,5 +1,6 @@
 ---
 title: File details- discount.csv
+last_updated: Aug 27, 2020
 template: data-import-template
 originalLink: https://documentation.spryker.com/v6/docs/file-details-discountcsv
 originalArticleId: 5f246ed8-ce78-4c7e-a428-0ef26f116c5f

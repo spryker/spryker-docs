@@ -1,5 +1,6 @@
 ---
 title: Case Escalation
+last_updated: Sep 6, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/docs/scos/user/intro-to-spryker/support/understanding-ticket-status.html#how-are-bug-tickets-prioritized
 originalArticleId: af927b8c-2fc0-46ab-a54d-4ae83d18ca89

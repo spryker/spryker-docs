@@ -1,6 +1,7 @@
 ---
 title: RatePay - State Machine Commands and Conditions
 description: This article includes the state machine commands and conditions provided by Ratepay.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/ratepay-state-machine
 originalArticleId: 25cb68aa-9d2c-42d2-8ae3-bd8f3ea572f3

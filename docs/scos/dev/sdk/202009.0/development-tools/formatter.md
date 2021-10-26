@@ -1,6 +1,7 @@
 ---
 title: Formatter
 description: Learn about the Formatter tool that allows you to find and fix mistakes in the code style.
+last_updated: Feb 14, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/formatter
 originalArticleId: 776ba318-4023-458b-b79f-c0a769d20c4e

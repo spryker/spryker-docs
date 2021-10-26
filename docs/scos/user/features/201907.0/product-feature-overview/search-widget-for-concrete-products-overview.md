@@ -1,6 +1,7 @@
 ---
 title: Search Widget for Concrete Products Overview
 description: Search widget adds allows users to easily search and add concrete products directly from shopping cart/list pages.
+last_updated: Nov 22, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/search-widget-for-concrete-products-overview
 originalArticleId: 53e3bac8-fbfc-4e0f-8b28-5cc0e9634330

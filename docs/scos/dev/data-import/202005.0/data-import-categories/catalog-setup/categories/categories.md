@@ -1,5 +1,6 @@
 ---
 title: Categories
+last_updated: Sep 14, 2020
 template: data-import-template
 originalLink: https://documentation.spryker.com/v5/docs/categories
 originalArticleId: 3f7676b3-1279-45df-9799-392a1401af0b

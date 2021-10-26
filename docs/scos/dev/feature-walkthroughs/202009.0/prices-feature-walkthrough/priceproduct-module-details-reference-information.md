@@ -1,6 +1,7 @@
 ---
 title: PriceProduct module details- reference information
 description: Learn the technical details of the PriceProduct module and price dimensions
+last_updated: Feb 11, 2021
 template: feature-walkthrough-template
 originalLink: https://documentation.spryker.com/v6/docs/priceproduct-module-details-reference-information
 originalArticleId: e39c6eb9-5ae1-490f-8149-65989285c496

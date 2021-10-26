@@ -1,5 +1,6 @@
 ---
 title: Escalations
+last_updated: Oct 25, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/case-escalation
 originalArticleId: 42b43d4c-fb40-4663-a210-1bdea01b4b22

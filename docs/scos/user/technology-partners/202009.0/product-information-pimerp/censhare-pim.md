@@ -1,5 +1,6 @@
 ---
 title: Censhare PIM
+last_updated: Aug 27, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/censhare-pim
 originalArticleId: 7b24ab99-a223-44c1-b81e-18f5402e05fd

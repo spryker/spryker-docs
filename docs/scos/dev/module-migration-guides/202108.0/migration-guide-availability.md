@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Availability
 description: Use the guide to migrate to the new version of the Availability module.
+last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-availability
 originalArticleId: 53009fca-6f6b-4583-8946-eb521e6f8235

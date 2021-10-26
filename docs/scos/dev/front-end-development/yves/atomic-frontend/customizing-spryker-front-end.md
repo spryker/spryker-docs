@@ -1,5 +1,6 @@
 ---
 title: Customizing Spryker front end
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/customizing-spryker-front-end
 originalArticleId: 55fa7cff-928c-4fb4-ad8e-3acb63774bc3

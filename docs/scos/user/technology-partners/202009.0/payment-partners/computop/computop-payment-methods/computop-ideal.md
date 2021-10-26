@@ -1,6 +1,7 @@
 ---
 title: Computop - iDeal
 description: Integrate iDeal payment through Computop into the Spryker-based shop.
+last_updated: Aug 27, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/computop-ideal
 originalArticleId: a478ac01-d435-4b7f-a1a6-eb842c2fdfd2

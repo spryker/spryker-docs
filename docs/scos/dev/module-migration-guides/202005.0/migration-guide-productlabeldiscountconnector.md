@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductLabelDiscountConnector
 description: Use the guide to learn how to update the ProductLabelDiscountConnector module.
+last_updated: Apr 3, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/mg-product-label-discount-connector
 originalArticleId: 82bac258-5dc2-4ea5-ac89-eb82ce807d58

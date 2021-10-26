@@ -1,5 +1,6 @@
 ---
 title: Making the Legacy Demoshop Compatible with the Modular Frontend
+last_updated: Nov 22, 2019
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/demoshop-with-modular-frontend
 originalArticleId: c303fd7b-aaa2-4d8d-ad9a-beec609787d7

@@ -1,6 +1,7 @@
 ---
 title: Invoice Generation overview
 description: In this article, you will get the details about the Invoice Generation article provided by Spryker Commerce OS.
+last_updated: Jun 2, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/invoice-generation-overview
 originalArticleId: acef0937-3260-4ae0-ba8d-459cc72665dd

@@ -1,6 +1,7 @@
 ---
 title: Yves Bootstrapping
 description: Yves and Zed are both built upon the Silex micro-framework. So most concepts about modern web frameworks apply here as well.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-yves-bootstrap
 originalArticleId: cc0ab207-b4ba-4537-96af-079e1524bd2b

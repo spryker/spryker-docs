@@ -1,6 +1,7 @@
 ---
 title: Creating product sets
 description: Learn how to create product sets in the Back Office.
+last_updated: Jul 30, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-product-sets
 originalArticleId: 20263bb8-2952-4db2-bde6-1a17a8e76017

@@ -1,6 +1,7 @@
 ---
 title: Creating a Data Importer
 description: The following article describes how to build your own DataImport for a specific type. All steps in this article are built on real life example for importing product images.
+last_updated: Sep 14, 2020
 template: data-import-template
 originalLink: https://documentation.spryker.com/v5/docs/ht-data-import
 originalArticleId: 9f55c735-9168-4d40-9519-bad08890870e

@@ -1,6 +1,7 @@
 ---
 title: Episerver - Integration into a project
 description: Integrate Episerver in the Spryker Commerce OS
+last_updated: Nov 6, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/episerver-integration-into-project
 originalArticleId: 92aefb7c-6db4-4777-bd2f-7d18bddd53fb

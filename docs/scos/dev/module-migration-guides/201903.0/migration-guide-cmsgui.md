@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - CMSGui
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/mg-cms-gui
 originalArticleId: c71d5d32-6fd7-42ed-9970-1fc6513121fb

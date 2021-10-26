@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Transfer
 description: Use the guide to learn how to update the Transfer module to a newer version.
+last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-transfer
 originalArticleId: 49dc6ee6-a3da-465f-96e7-281db0d4575a

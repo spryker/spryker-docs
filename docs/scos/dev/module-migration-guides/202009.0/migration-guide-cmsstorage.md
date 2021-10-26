@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - CmsStorage
+last_updated: Aug 27, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/mg-cmsstorage
 originalArticleId: 95aafaf5-f648-4cea-9cf4-07f6df36014b

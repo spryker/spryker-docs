@@ -1,6 +1,7 @@
 ---
 title: SCSS linter integration guide
 description: Learn how to integrate the SCSS linter into your project
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/scss-linter-integration-guide
 originalArticleId: 45333d65-56d9-4b44-855a-e26ce42a1e4a

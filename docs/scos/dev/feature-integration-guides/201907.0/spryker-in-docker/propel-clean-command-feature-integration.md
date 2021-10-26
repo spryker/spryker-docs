@@ -1,6 +1,7 @@
 ---
 title: Propel Clean Command feature integration
 description: Learn how to integrate  Propel clean command into your project.
+last_updated: Dec 23, 2019
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/propel-clean-command-feature-integration-201907
 originalArticleId: ac979165-1948-4ab9-b125-ba2d93423012

@@ -1,6 +1,7 @@
 ---
 title: Product Relations Feature Overview
 description: Product relations helps shop owners to promote the related goods as well as to point the customers' attention on the goods that they may also want to see.
+last_updated: Jul 31, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/product-relations-feature-overview
 originalArticleId: 6f812e4a-1551-4c5b-97b1-0bf6d70b2485

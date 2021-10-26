@@ -1,6 +1,7 @@
 ---
 title: Symfony 5 integration
 description: Learn about the main changes in the new Symfony version 5, and how you can make your project compatible with it
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/symfony-5-integration
 originalArticleId: d5e96c3b-3ed6-49ed-982c-aa641e09b558

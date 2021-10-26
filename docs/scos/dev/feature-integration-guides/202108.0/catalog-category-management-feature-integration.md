@@ -1,5 +1,6 @@
 ---
 title: Catalog + Category Management feature integration
+last_updated: Jul 6, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/catalog-category-management-feature-integration
 originalArticleId: c0523c5a-4440-4d20-9a92-6d446b613a37

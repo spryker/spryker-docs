@@ -1,5 +1,6 @@
 ---
 title: Zed API (Beta)
+last_updated: Jun 29, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/zed-api-beta
 originalArticleId: 6c7e6d4d-8616-47e7-a67a-99f05e5c26e9

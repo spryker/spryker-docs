@@ -1,6 +1,7 @@
 ---
 title: Creating Product Sets
 description: Use the procedure to create a product set with the entered required values in the Back Office.
+last_updated: Jul 31, 2020
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/creating-a-product-set
 originalArticleId: 395b2294-ccfc-41a4-aca0-30fbe2e7c80e

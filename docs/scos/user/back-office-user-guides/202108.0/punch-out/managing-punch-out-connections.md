@@ -1,6 +1,7 @@
 ---
 title: Managing punch out connections
 description: The Managing Punch out Connections guide lists steps on how to create, edit, view, activate and deactivate Punch out connections.
+last_updated: Aug 10, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-punch-out-connections
 originalArticleId: 0b4bb49b-1757-49b3-88e4-1a37a7552eb7

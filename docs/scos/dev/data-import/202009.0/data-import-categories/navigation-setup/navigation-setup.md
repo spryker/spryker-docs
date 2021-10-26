@@ -1,5 +1,6 @@
 ---
 title: Navigation Setup
+last_updated: Aug 27, 2020
 template: data-import-template
 originalLink: https://documentation.spryker.com/v6/docs/navigation-setup
 originalArticleId: 7842616b-b106-46cd-9af6-9aca23388601

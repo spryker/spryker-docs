@@ -1,6 +1,7 @@
 ---
 title: Navigation Node Types
 description: The guide provides the navigation node types and additional node-related information.
+last_updated: Nov 22, 2019
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/navigation-node-types
 originalArticleId: 44944977-8c8b-4be6-8b08-29f1c6ffccff

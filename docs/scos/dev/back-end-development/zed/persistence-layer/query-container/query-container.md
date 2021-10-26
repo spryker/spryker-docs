@@ -1,6 +1,7 @@
 ---
 title: About the Query Container
 description: A query container holds all the database queries of the current module.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/query-container
 originalArticleId: 04a14116-3380-4712-a840-3464a4177c84

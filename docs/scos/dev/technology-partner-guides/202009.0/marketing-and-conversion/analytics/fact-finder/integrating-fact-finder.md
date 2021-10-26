@@ -1,6 +1,7 @@
 ---
 title: Integrating FACT-Finder
 description: This article provides details on how to integrate Fact Finder modules into the Spryker project.
+last_updated: Nov 6, 2020
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/fact-finder-integration-into-project
 originalArticleId: 0cff0406-249d-4a0e-bb1e-d4ef9e4dfa1a

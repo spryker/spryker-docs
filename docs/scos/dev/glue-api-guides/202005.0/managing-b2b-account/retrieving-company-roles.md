@@ -1,6 +1,7 @@
 ---
 title: Retrieving Company Role Information
 description: The article describes how to use Spryker Glue API to retrieve company roles.
+last_updated: Sep 15, 2020
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/retrieving-company-role-information-201907
 originalArticleId: 722b3bc5-1ec4-4b5a-aa11-9b26373bdfa0

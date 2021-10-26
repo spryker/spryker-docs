@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - CMSBlockStorage
 description: The set of procedures required to perform to migrate from one version of the CMS Block Storage module to another.
+last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-cmsblockstorage
 originalArticleId: 524d14d3-1a4a-4050-a087-e5f3ceb61534

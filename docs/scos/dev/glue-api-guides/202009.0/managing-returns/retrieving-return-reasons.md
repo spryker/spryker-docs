@@ -1,6 +1,7 @@
 ---
 title: Retrieving return reasons
 description: In this article, you will find details on how to retrieve the return reasons via the Spryker Glue API.
+last_updated: Feb 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/retrieving-return-reasons
 originalArticleId: cc2ec9a6-530f-4c21-9271-24df3d0bbbc7

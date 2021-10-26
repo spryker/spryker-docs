@@ -1,5 +1,6 @@
 ---
 title: Cart
+last_updated: Jun 2, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/cart
 originalArticleId: bb555f78-4e02-4db8-9c81-af2e6e9425a4

@@ -1,5 +1,6 @@
 ---
 title: Retrieving Product Information
+last_updated: Jul 31, 2020
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/retrieving-product-information
 originalArticleId: 524aee31-372d-4739-a028-2ecc32f0f106

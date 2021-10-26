@@ -1,5 +1,6 @@
 ---
 title: Development Virtual Machine, Docker Containers & Console
+last_updated: Nov 22, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/devvm
 originalArticleId: d266b0f4-6fdd-43e5-a6a0-f6fea5dd7cea

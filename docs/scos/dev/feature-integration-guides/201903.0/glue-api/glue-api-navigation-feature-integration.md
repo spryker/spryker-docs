@@ -1,6 +1,7 @@
 ---
 title: Navigation API feature integration
 description: This guide will navigate you through the process of installing and configuring the Navigation feature in Spryker OS.
+last_updated: Nov 22, 2019
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/navigation-api-feature-integration
 originalArticleId: d5da7ef9-22df-40f3-ab79-dfe832c1f403

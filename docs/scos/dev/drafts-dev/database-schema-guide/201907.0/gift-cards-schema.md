@@ -1,4 +1,5 @@
----
+---last_updated: Nov 22, 2019
+
 title: Gift Cards Schema
 originalLink: https://documentation.spryker.com/v3/docs/db-schema-gift-cards
 originalArticleId: 768a8cae-46fb-4f57-a52f-ded61c8c80b6

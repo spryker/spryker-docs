@@ -1,6 +1,7 @@
 ---
 title: Code sniffer
 description: With the tool, you can keep your code clean, find issues and fix them automatically.
+last_updated: Sep 11, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/code-sniffer
 originalArticleId: 0d867a8a-b5ec-42a8-b899-110b47373b92

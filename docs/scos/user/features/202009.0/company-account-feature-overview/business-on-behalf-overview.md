@@ -1,6 +1,7 @@
 ---
 title: Business on behalf
 description: Business on behalf allows having multiple company users per customer account with a possibility to select one company user to be a default user.
+last_updated: Jun 2, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/business-on-behalf
 originalArticleId: e9c3f423-90eb-40c1-985e-5dc817746523

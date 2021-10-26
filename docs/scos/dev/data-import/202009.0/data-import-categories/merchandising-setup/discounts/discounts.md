@@ -1,5 +1,6 @@
 ---
 title: Discounts
+last_updated: Aug 27, 2020
 template: data-import-template
 originalLink: https://documentation.spryker.com/v6/docs/discounts
 originalArticleId: e6947e32-768b-4ea9-942a-21595f0ea812

@@ -1,6 +1,7 @@
 ---
 title: Managing wishlist items
 description: Add and delete items from wishlists via Glue API.
+last_updated: Feb 24, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/managing-wishlist-items
 originalArticleId: 021104f9-5b55-46d8-a4c4-73d4b27840ff

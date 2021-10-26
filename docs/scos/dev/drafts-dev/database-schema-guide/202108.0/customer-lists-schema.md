@@ -1,4 +1,5 @@
----
+---last_updated: Jun 16, 2021
+
 title: Customer Lists Schema
 originalLink: https://documentation.spryker.com/2021080/docs/db-schema-customer-lists
 originalArticleId: 3262a559-2320-4c96-90f5-a88d73c4b2fd

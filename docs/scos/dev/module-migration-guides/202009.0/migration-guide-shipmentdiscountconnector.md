@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ShipmentDiscountConnector
 description: Use the guide to learn how to update the ShipmentDiscountConnector module to a newer version.
+last_updated: Aug 27, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/mg-shipment-discount-connector
 originalArticleId: a9cf10f8-df06-46f3-a520-2258eb8ae7eb

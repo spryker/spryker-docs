@@ -1,4 +1,5 @@
----
+---last_updated: Nov 22, 2019
+
 title: CMS Schema
 originalLink: https://documentation.spryker.com/v2/docs/db-schema-cms
 originalArticleId: 7e3fe516-3c26-4bd3-9da9-3d6762b5399e

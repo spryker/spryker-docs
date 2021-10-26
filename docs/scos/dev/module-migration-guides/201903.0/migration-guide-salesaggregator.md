@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - SalesAggregator
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/mg-sales-aggregator
 originalArticleId: fc01af8d-2eba-44af-9080-b600df9592f5

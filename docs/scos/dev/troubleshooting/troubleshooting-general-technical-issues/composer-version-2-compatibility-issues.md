@@ -1,6 +1,7 @@
 ---
 title: Composer version 2 compatibility issues
 description: Learn how to solve Composer version 2 compatibility issues.
+last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/composer-version-2-compatibility-issues
 originalArticleId: b110284a-a19f-4c7b-a8fd-769b3dff6ed2

@@ -1,5 +1,6 @@
 ---
 title: Release Notes - April - 2018
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes-april-2018
 originalArticleId: 14f48749-eedf-473a-8f88-7baa45f428f2

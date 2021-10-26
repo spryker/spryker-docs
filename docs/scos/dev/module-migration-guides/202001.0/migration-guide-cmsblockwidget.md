@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - CmsBlockWidget
 description: Learn how to upgrade the CmsBlockWidget module to a certain version.
+last_updated: Jan 15, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/migration-guide-cmsblockwidget
 originalArticleId: 4974b75b-0c8e-4d64-aade-2f1087926904

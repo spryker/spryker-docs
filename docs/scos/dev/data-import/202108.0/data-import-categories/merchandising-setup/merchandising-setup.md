@@ -1,5 +1,6 @@
 ---
 title: Merchandising Setup
+last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/merchandising-setup
 originalArticleId: 2e90589e-0267-458c-ac00-46550978ed76

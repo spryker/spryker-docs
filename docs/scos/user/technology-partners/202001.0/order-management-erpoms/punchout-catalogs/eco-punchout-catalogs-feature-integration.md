@@ -1,6 +1,7 @@
 ---
 title: Eco- Punchout Catalogs Feature Integration
 description: Integrate Eco- Punchout Catalogs Feature into the Spryker Commerce OS.
+last_updated: Apr 15, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/eco-punchout-catalogs-feature-integration
 originalArticleId: 57969b58-9ac1-40e5-b10a-a44db4522894

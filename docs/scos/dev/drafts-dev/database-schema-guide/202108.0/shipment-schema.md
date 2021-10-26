@@ -1,4 +1,5 @@
----
+---last_updated: Jun 16, 2021
+
 title: Shipment Schema
 originalLink: https://documentation.spryker.com/2021080/docs/db-schema-shipment
 originalArticleId: 5b25ae11-ce24-4e95-a520-a96ad8bf2927

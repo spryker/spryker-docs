@@ -1,6 +1,7 @@
 ---
 title: Test framework
 description: Spryker uses Codeception framework for running tests. Learn how to configure and use it in your project.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/test-framework
 originalArticleId: e48e759c-0e27-4cfa-82f7-e34f82b2b6ad

@@ -1,5 +1,6 @@
 ---
 title: Feature HowTos
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/about-feature-howtos
 originalArticleId: a1f53999-6f2a-4770-bb7a-8ae84a04da65

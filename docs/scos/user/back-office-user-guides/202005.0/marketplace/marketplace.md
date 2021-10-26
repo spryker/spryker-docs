@@ -1,6 +1,7 @@
 ---
 title: Marketplace
 description: The section can be used to set up merchant relations and create merchants based on the contract conditions in the Back Office.
+last_updated: Sep 14, 2020
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/marketplace
 originalArticleId: 428a6445-3961-4857-b5fd-fac486682ff7

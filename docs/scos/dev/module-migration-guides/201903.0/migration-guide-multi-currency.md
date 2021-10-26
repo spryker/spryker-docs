@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Multi-Currency
+last_updated: Jul 31, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/mg-multi-currency
 originalArticleId: 54d49278-7ad4-4a5b-b5bc-ef9d087a436b

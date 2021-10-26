@@ -1,6 +1,7 @@
 ---
 title: Episerver
 description: Create a standout experience for customers that unifies digital content, commerce, and marketing in one platform, including omnichannel solutions for smart personalization and intelligent campaigns by integrating Episerver into Spryker Commerce OS.
+last_updated: Apr 3, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/episerver
 originalArticleId: d85db6b9-5928-48eb-b3c1-0e78a8c9e890

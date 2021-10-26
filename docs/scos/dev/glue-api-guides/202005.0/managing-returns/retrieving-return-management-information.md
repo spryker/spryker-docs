@@ -1,6 +1,7 @@
 ---
 title: Retrieving Return Management Information
 description: In this article, you will find details on how to retrieve Return Management information via the Spryker Glue API.
+last_updated: Aug 11, 2020
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/retrieving-return-management-information
 originalArticleId: 3c3cb4b5-714d-44a4-95b6-8a0c5abb43b7

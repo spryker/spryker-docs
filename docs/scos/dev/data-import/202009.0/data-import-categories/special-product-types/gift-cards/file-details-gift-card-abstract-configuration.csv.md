@@ -1,5 +1,6 @@
 ---
 title: File details- gift_card_abstract_configuration.csv
+last_updated: Jun 15, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/v6/docs/file-details-gift-card-abstract-configurationcsv
 originalArticleId: fb50d1ff-0db9-460c-a382-85d13cf52d0c

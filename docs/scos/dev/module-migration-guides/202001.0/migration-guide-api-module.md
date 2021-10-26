@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - API Module
+last_updated: Mar 6, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/mg-api-module
 originalArticleId: 014e1eac-aec2-4b10-8ad0-d37c9320a0ca

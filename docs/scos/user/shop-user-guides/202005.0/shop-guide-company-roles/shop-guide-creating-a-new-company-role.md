@@ -1,6 +1,7 @@
 ---
 title: Shop Guide - Creating a New Company Role
 description: In this guide, you will get a step-by-step- instruction on how to create a new company role in Spryker Commerce OS.
+last_updated: Sep 14, 2020
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/shop-guide-creating-a-new-company-role
 originalArticleId: d717777d-b2cc-48a0-82f4-ee8a66ab2b9b

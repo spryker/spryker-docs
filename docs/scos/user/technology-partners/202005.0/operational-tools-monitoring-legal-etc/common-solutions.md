@@ -1,5 +1,6 @@
 ---
 title: common solutions
+last_updated: Apr 3, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/common-solutions
 originalArticleId: deed8520-986d-4b5d-8639-130d2147802c

@@ -1,6 +1,7 @@
 ---
 title: Reference information- navigation
 description: Reference information for managing navigation elements in the Back Office.
+last_updated: Aug 27, 2020
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/navigation-reference-information
 originalArticleId: 322e5db0-1f41-4a6e-915c-9c7b72b5affc

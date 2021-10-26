@@ -1,5 +1,6 @@
 ---
 title: Understand SLAs
+last_updated: Sep 6, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/understand-slas
 originalArticleId: 8cc87de0-43f6-4d9c-b65b-3ec9cad7a38b

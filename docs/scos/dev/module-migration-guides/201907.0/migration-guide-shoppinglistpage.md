@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - ShoppingListPage
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-shopping-list-page
 originalArticleId: f0b28d01-6df4-4903-9a3a-d8dbb0796e52

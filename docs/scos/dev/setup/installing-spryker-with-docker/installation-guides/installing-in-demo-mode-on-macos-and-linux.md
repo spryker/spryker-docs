@@ -1,6 +1,7 @@
 ---
 title: Installing in Demo mode on MacOS and Linux
 description: Learn how to install Spryker in Demo mode on MacOS and Linux.
+last_updated: Oct 21, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/installing-in-demo-mode-on-macos-and-linux
 originalArticleId: 3b78ae4c-d2a3-4dfa-87e1-7d0c4096ee22

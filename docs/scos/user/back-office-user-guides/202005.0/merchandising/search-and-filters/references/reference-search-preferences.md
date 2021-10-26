@@ -1,6 +1,7 @@
 ---
 title: Reference- Search Preferences
 description: This guide provides an additional procedure to synchronize search preferences in the Back Office.
+last_updated: Jun 9, 2020
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/reference-search-preferences
 originalArticleId: f17ffbec-aab7-4b8b-8db5-202d8a249380

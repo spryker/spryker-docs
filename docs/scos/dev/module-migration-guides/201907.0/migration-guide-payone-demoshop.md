@@ -1,5 +1,6 @@
 ---
 title: Migration guide - Payone Demoshop
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-payonedemoshop
 originalArticleId: 6ec59d5e-2506-4cf3-85e7-aed68e29bbbb

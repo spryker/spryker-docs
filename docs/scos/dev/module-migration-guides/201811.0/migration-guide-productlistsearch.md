@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - ProductListSearch
+last_updated: Oct 10, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/mg-product-list-search
 originalArticleId: 73b3188e-e49e-4f5d-be7d-3944e45fb46b

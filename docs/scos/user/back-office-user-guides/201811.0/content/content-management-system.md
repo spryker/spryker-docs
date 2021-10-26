@@ -1,6 +1,7 @@
 ---
 title: Content Management System
 description: The section is designed to create and manage the content of your shop in the Back Office.
+last_updated: Jan 13, 2020
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/cms-guide
 originalArticleId: bcca5467-1c3e-4fd0-8023-6500fbfd927b

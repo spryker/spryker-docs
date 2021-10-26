@@ -1,6 +1,7 @@
 ---
 title: CMS feature integration Guide
 description: The guide describes how to integrate the CMS feature into your project.
+last_updated: Oct 2, 2020
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/cms-feature-integration-guide
 originalArticleId: 0fada52f-57ee-4243-b752-b0dd81b062bb

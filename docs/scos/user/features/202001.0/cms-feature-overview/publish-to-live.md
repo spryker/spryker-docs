@@ -1,6 +1,7 @@
 ---
 title: Publish to Live
 description: Once your CMS Page or Block content is final you can publish it to your shop website with a single click.
+last_updated: Mar 25, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/publish-to-live
 originalArticleId: 99b33c6d-d2b2-474b-a76b-ff94c2dd80a1

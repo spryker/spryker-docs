@@ -1,6 +1,7 @@
 ---
 title: About HowTos
 description: Use this section to perform tasks related to Spryker Glue Rest API and Spryker features
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/how-tos
 originalArticleId: e48d2c32-082b-4183-8d99-4e4b74c207b3

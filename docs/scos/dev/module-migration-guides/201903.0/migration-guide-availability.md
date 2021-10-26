@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Availability
+last_updated: Jul 31, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/mg-availability
 originalArticleId: afeca7f2-6931-435a-ae60-4a42e63099a2

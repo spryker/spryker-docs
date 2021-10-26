@@ -1,6 +1,7 @@
 ---
 title: Avalara Tax integration
 description: Integrate Avalara to automatically calculate taxes.
+last_updated: Jun 18, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/avalara-tax-integration
 originalArticleId: 3531e0eb-65ae-4c97-8703-78ceaae45c2a

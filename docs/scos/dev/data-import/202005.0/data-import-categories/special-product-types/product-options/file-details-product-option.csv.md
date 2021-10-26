@@ -1,5 +1,6 @@
 ---
 title: File details- product_option.csv
+last_updated: Sep 14, 2020
 template: data-import-template
 originalLink: https://documentation.spryker.com/v5/docs/file-details-product-optioncsv
 originalArticleId: 62f8c37d-175d-40ea-a4da-7e9b28013cf5

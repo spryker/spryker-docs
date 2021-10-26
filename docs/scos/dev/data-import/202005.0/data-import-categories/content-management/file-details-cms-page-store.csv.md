@@ -1,5 +1,6 @@
 ---
 title: File details- cms_page_store.csv
+last_updated: Sep 14, 2020
 template: data-import-template
 originalLink: https://documentation.spryker.com/v5/docs/file-details-cms-page-storecsv
 originalArticleId: 22886315-a1c1-4d6b-8c3e-e96577adf8cc

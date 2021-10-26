@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Console
 description: Use the guide to update versions to the newer ones of the Console module.
+last_updated: Aug 27, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/mg-console
 originalArticleId: 7ce46d18-6174-4878-80f1-aa909260fe6d

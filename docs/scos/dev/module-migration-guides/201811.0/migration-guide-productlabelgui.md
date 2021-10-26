@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Product Label GUI
+last_updated: May 19, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/mg-product-label-gui
 originalArticleId: 5c3c268e-180f-4de4-8ec6-a53a41752fe6

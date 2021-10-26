@@ -1,5 +1,6 @@
 ---
 title: Cronjob Scheduling
+last_updated: Nov 22, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/cronjob-scheduling
 originalArticleId: 2c24ee92-415a-4f15-8661-7587e2c9747c

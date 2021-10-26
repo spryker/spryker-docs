@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Tax
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-tax
 originalArticleId: 8558dd55-d3ac-44d7-b3cd-6cbbc3acab72

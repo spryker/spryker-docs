@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - ProductNew
+last_updated: Aug 27, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/migration-guide-productnew
 originalArticleId: facabeba-734c-4c94-9106-2874e30e771c

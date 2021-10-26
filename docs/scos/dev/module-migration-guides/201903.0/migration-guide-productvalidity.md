@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Product Validity
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/mg-product-validity
 originalArticleId: 21cd66fa-4678-4d1e-bc4a-63e357286b89

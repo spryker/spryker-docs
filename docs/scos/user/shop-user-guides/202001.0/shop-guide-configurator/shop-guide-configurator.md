@@ -1,5 +1,6 @@
 ---
 title: Shop Guide - Configurator
+last_updated: Jan 9, 2020
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/shop-guide-configurator
 originalArticleId: 696ccc44-e5e7-49db-8df8-8f932bd7cb1f

@@ -1,5 +1,6 @@
 ---
 title: Setting up ShopUiCompatibility Module in the Legacy Demoshop
+last_updated: Jul 29, 2020
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/setting-up-shopuicompatibility
 originalArticleId: 3c6a7d28-d9dd-4ade-a65b-92df6ac2bec8

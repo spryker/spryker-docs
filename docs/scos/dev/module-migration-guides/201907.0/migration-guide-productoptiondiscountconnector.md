@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - ProductOptionDiscountConnector
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-product-option-discount-connector
 originalArticleId: 5d2030f7-d734-4ba3-ab73-9342f3d0fa8d

@@ -1,6 +1,7 @@
 ---
 title: Shopping List Notes overview
 description: With the feature, you can leave and manage notes for each item in the order.
+last_updated: May 19, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/shopping-list-notes
 originalArticleId: e3ade7f9-36e2-4c8b-9155-f3a168321d54

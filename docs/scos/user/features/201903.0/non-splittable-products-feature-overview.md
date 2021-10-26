@@ -1,6 +1,7 @@
 ---
 title: Product Quantity Restrictions Feature Overview
 description: The article describes the concept of product quantity restrictions-  its types and how they can be set
+last_updated: Nov 22, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/product-quantity-restrictions-overview
 originalArticleId: 22bdc25e-e2f4-4477-b53d-72f31810947f

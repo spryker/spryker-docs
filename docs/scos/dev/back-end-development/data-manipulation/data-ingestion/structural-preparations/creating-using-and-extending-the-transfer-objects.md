@@ -1,6 +1,7 @@
 ---
 title: Creating, using, and extending the transfer objects
 description: The article provides information on creation and usage of the Transfer objects.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-use-transfer-objects
 originalArticleId: f3c1c5d9-348c-4d02-9d4b-f0cede048566

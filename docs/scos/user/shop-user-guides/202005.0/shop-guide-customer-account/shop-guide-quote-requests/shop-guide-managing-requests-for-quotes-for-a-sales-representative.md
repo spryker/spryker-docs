@@ -1,6 +1,7 @@
 ---
 title: Shop Guide - Managing Requests for Quotes for a Sales Representative
 description: The guide provides the procedures on how a sales representative can view, edit, suggest another price, and create an RFQ for a customer in the storefront.
+last_updated: Sep 14, 2020
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/managing-rfqs-sales-rep-shop-guide
 originalArticleId: 8adce809-98b4-44e8-bdda-6201a3940942

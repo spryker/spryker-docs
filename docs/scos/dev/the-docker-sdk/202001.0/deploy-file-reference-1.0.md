@@ -1,6 +1,7 @@
 ---
 title: Deploy File Reference - 1.0
 description: Use this reference to create a deploy file for building environment for Spryker in Docker.
+last_updated: Aug 13, 2020
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/deploy-file-reference-10
 originalArticleId: 759044a2-1e3c-4c1c-8aa9-42854822f11a

@@ -1,6 +1,7 @@
 ---
 title: Retrieving subscriptions to availability notifications
 description: Retrieve subscriptions to notifications on product availability via Glue API
+last_updated: Jun 22, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-subscriptions-to-availability-notifications
 originalArticleId: 59346a4d-f331-461f-a6b1-486500ae0d9c

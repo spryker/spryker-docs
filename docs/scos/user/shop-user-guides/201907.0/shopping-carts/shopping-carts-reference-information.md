@@ -1,6 +1,7 @@
 ---
 title: Shopping Carts- Reference Information
 description: The guide provides additional information you see when managing shopping carts in the storefront.
+last_updated: Nov 22, 2019
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/shop-guide-shopping-carts-reference-information
 originalArticleId: cf3c4445-b339-4548-bc87-2e388bbb5eb8

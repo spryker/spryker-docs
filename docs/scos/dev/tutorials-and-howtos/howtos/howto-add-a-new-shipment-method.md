@@ -1,5 +1,6 @@
 ---
 title: HowTo - Add a New Shipment Method
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-add-new-shipment-method
 originalArticleId: acc1e4a3-0d2e-459e-b57b-8a2eb20e4fd8

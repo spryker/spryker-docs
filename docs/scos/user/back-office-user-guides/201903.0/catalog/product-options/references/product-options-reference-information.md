@@ -1,6 +1,7 @@
 ---
 title: Product Options- Reference Information
 description: This guide describes the values you use and enter when creating or updating product options in the Back Office.
+last_updated: Nov 22, 2019
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/product-options-reference-information
 originalArticleId: 19281fab-cd4e-4e9c-a5dd-09efa1f89e60

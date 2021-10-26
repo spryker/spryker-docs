@@ -1,5 +1,6 @@
 ---
 title: Processor Stack - Zed API
+last_updated: Nov 22, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/zed-api-processor-stack
 originalArticleId: 497b96b6-78d3-482a-9027-1924375f51c9

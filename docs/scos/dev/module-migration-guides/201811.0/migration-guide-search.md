@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Search
+last_updated: May 19, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/mg-search
 originalArticleId: 6dae8f78-0c7d-42f0-9ae1-0b11c418cb8f

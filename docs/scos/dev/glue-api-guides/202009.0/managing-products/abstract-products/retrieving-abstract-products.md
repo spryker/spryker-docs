@@ -1,6 +1,7 @@
 ---
 title: Retrieving abstract products
 description: Retrieve general information about abstract products and related resources.
+last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/retrieving-abstract-products
 originalArticleId: 0c7b28da-e935-4c00-a7c4-bd403ce8b5a7

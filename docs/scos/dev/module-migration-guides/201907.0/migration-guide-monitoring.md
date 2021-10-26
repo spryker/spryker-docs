@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Monitoring
+last_updated: Jan 30, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-monitoring
 originalArticleId: cf15ba1e-aa20-4af9-bab8-1345ee9e2fa4

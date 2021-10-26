@@ -1,6 +1,7 @@
 ---
 title: Reference information- product attributes
 description: Use this section to check the values you add, edit, or view when managing attributes in the Back Office.
+last_updated: Apr 22, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/reference-information-product-attributes
 originalArticleId: 93341bd1-3fd9-4ef4-bfdf-20986238256c

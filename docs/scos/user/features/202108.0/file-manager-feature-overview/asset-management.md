@@ -1,6 +1,7 @@
 ---
 title: Asset management
 description: Learn about the assets in Spryker and how you can manage them.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/asset-management
 originalArticleId: c1432b06-7f49-411d-9730-d4f52c4875d3

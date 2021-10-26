@@ -1,4 +1,5 @@
----
+---last_updated: Nov 22, 2019
+
 title: Customer Schema
 originalLink: https://documentation.spryker.com/v4/docs/db-schema-customer
 originalArticleId: 80c9991f-4d43-4093-8d50-a240cf8dbaec

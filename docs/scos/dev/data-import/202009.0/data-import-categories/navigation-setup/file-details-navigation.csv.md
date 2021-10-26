@@ -1,5 +1,6 @@
 ---
 title: File details- navigation.csv
+last_updated: Aug 27, 2020
 template: data-import-template
 originalLink: https://documentation.spryker.com/v6/docs/file-details-navigationcsv
 originalArticleId: eefd7da7-711a-46c6-b858-a4dada20c835

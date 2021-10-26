@@ -1,6 +1,7 @@
 ---
 title: Managing customers
 description: Learn how to manage customers via Glue API.
+last_updated: Apr 22, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/managing-customers-via-glue-api
 originalArticleId: dc80d08b-f25f-44b7-b71f-298fcba9e28c

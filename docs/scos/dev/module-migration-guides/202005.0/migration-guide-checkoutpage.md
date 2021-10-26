@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - CheckoutPage
+last_updated: Sep 14, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/migration-guide-checkoutpage
 originalArticleId: a1da4cb6-b476-4c02-979c-8ea5265380c3

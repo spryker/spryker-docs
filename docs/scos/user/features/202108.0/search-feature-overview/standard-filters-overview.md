@@ -1,5 +1,6 @@
 ---
 title: Standard filters overview
+last_updated: Jul 8, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/standard-filters-overview
 originalArticleId: 0b675c4c-6163-4402-82a5-8a9198260fda

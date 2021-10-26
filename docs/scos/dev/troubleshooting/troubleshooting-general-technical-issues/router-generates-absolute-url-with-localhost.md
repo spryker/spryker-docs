@@ -1,6 +1,7 @@
 ---
 title: Router generates absolute URL with localhost
 description: Learn how to fix the issue when router generates URLs with an absolute path instead of a relative one
+last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/router-generates-absolute-url-with-localhost
 originalArticleId: d9195e61-e421-4623-88bf-343a48b2d707

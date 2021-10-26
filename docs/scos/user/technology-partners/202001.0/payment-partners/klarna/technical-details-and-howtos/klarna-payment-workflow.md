@@ -1,6 +1,7 @@
 ---
 title: Klarna - Payment Workflow
 description: In this article, you will find part payment request flow with Klarna.
+last_updated: Nov 22, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/klarna-payment-workflow
 originalArticleId: c6db9ec4-75d0-469f-8e64-cda0ece7ded5

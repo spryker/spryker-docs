@@ -1,6 +1,7 @@
 ---
 title: Akeneo - Console commands
 description: This guide provides the console commands for the Akeneo module.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/akeneo-console-commands
 originalArticleId: a332d6b7-14fa-4d8b-849b-f503d3de13ac

@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Hello World - Spryker Commerce OS
 description: The tutorial describes how to display a text string on the page in the browser by adding a new Yves module.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/tutorial-hello-world-scos
 originalArticleId: ae140622-175b-44ee-8ff3-b6a57a20c814

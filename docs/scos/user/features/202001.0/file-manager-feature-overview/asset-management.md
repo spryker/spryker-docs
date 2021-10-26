@@ -1,6 +1,7 @@
 ---
 title: Asset Management
 description: Apart from images, you can also add a great variety of other assets to your shop, like presentations, pdf documents, graphics, banners and many more.
+last_updated: Mar 17, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/asset-management
 originalArticleId: 58e21dcb-bb0f-473f-a78f-d8056a2be8cb

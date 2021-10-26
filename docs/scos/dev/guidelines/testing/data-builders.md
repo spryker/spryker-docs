@@ -1,6 +1,7 @@
 ---
 title: Data Builders
 description: Learn how to configure data builders for creating transfer objects for your tests.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/data-builders
 originalArticleId: 3737769e-2b8e-4756-857f-343009e09251

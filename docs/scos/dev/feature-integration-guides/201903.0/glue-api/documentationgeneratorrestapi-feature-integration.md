@@ -1,6 +1,7 @@
 ---
 title: DocumentationGeneratorRestApi feature integration
 description: This guide will navigate you through the process of installing and configuring the DocumentationGeneratorRestApi feature in Spryker OS.
+last_updated: Nov 22, 2019
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/documentationgeneratorrestapi-feature-integration
 originalArticleId: d1c7988c-1605-4792-9339-dc6d3425526b

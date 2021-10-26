@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - ProductAvailabilitiesRestApi
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/productavailabilitiesrestapi-migration-guide
 originalArticleId: e4905387-2151-474d-805f-956a1ab3c50f

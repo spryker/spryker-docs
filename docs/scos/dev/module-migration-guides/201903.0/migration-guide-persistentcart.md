@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - PersistentCart
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/mg-persistent-cart
 originalArticleId: 80db03b6-450e-40bd-9ae3-537aae697638

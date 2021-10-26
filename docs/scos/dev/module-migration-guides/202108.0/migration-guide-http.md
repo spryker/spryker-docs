@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - HTTP
 description: Use the guide to perform the HTTP part of the Silex Migration Effort.
+last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-http
 originalArticleId: e306c206-0b5d-46e3-bba0-e6a827f9aaa3

@@ -1,5 +1,6 @@
 ---
 title: Billpay - Invoice Payment in Preauthorize Mode
+last_updated: Nov 22, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/billpay-payment-methods
 originalArticleId: b46eba2f-0efb-4b86-a176-e8187c323371

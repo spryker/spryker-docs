@@ -1,6 +1,7 @@
 ---
 title: Multiple and Shared Shopping Lists overview
 description: A general overview of the Multiple and shared shopping lists feature.
+last_updated: Dec 23, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/multiple-shared-shopping-lists-overview
 originalArticleId: cb83bad6-92b9-42ad-89ab-f5bc3a5ba76d

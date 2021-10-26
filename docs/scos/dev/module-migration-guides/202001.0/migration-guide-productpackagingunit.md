@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductPackagingUnit
 description: Use the guide to learn how to update the ProductPackagingUnit module to a newer version.
+last_updated: Jan 30, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/mg-product-packaging-unit
 originalArticleId: adaa3fe5-e78f-467a-b1a5-dd0146daad25

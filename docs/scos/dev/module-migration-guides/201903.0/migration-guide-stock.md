@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Stock
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/mg-stock
 originalArticleId: 71baa1f2-8da9-475e-8926-e472cde27e26

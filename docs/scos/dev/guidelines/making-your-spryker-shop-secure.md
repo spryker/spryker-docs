@@ -1,5 +1,6 @@
 ---
 title: Making Your Spryker Shop Secure
+last_updated: Sep 29, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/making-your-spryker-shop-secure
 originalArticleId: 892e11f7-ef46-47ed-aba2-7efc2ea83c60

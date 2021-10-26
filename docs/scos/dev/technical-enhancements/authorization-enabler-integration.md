@@ -1,6 +1,7 @@
 ---
 title: Authorization Enabler integration
 description: Learn how to enable the Authorization Enabler
+last_updated: Sep 2, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/authorization-enabler-integration
 originalArticleId: 809afa43-2beb-47d6-acaa-ae58efa62470

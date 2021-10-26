@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Navigation
 description: Use the guide to migrate to a newer version of the Navigation module.
+last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-navigation
 originalArticleId: 735f2654-395b-4da6-9b9d-fa878924105a

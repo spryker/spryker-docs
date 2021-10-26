@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - ProductReviewSearch
+last_updated: Aug 27, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/migration-guide-productreviewsearch
 originalArticleId: 61c89ac8-28ea-427f-b8ca-330e18826be7

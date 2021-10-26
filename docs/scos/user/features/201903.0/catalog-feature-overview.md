@@ -1,6 +1,7 @@
 ---
 title: Catalog feature overview
 description: Catalogs are used to clearly build and organize your products to meet you and your customer's demands.
+last_updated: Nov 22, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/product-catalog-management
 originalArticleId: d4c8baa0-7ee9-42e7-8563-48730f382fc2

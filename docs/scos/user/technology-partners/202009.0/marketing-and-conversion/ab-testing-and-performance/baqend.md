@@ -1,5 +1,6 @@
 ---
 title: Baqend
+last_updated: Aug 27, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/baqend
 originalArticleId: 6541b10a-8f10-4f52-bc6b-b9f866ad1ece

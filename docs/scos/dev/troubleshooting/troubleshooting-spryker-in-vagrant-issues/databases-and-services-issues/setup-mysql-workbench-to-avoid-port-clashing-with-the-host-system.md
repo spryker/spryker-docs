@@ -1,6 +1,7 @@
 ---
 title: Setup MySQL Workbench to avoid port clashing with the host system
 description: Learn how to set up MySQL Workbench to avoid port clashing with the host system
+last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/setup-mysql-workbench-to-avoid-port-clashing-with-the-host-system
 originalArticleId: 800cac27-89a1-463b-a7e0-3e863717c363

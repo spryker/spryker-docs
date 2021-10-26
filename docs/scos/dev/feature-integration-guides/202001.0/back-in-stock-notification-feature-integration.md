@@ -1,6 +1,7 @@
 ---
 title: Back in Stock Notification feature integration
 description: The guide walks you through the process of installing the Product is Available Again feature into the project.
+last_updated: Mar 5, 2020
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/product-is-available-again-feature-integration
 originalArticleId: 4d91529a-4c70-40cf-8e6b-0f8b55dc0018

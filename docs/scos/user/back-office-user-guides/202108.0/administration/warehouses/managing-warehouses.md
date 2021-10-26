@@ -1,6 +1,7 @@
 ---
 title: Managing warehouses
 description: Use the procedures to view and update warehouses in the Back Office.
+last_updated: Aug 9, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-warehouses
 originalArticleId: 0158ceb8-801b-45ed-bfc1-b34dc098253e

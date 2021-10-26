@@ -1,6 +1,7 @@
 ---
 title: Availability Notification feature integration
 description: The guide walks you through the process of installing the Product is Available Again feature into the project.
+last_updated: May 12, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/availability-notification-feature-integration
 originalArticleId: 06334346-e3af-4871-a48e-ba8b6ec5bac9

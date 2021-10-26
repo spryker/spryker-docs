@@ -1,5 +1,6 @@
 ---
 title: Miscellaneous
+last_updated: Sep 14, 2020
 template: data-import-template
 originalLink: https://documentation.spryker.com/v5/docs/miscellaneous
 originalArticleId: 21cd7d59-300f-4c76-9f9a-6ff25fc7cc64

@@ -1,5 +1,6 @@
 ---
 title: Search Preferences
+last_updated: Apr 3, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/search-preferences
 originalArticleId: 45507905-eaa0-4217-ad65-47f936f91f68

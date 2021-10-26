@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductDetailPage
 description: Use the guide to learn how to update the ProductDetailPage module.
+last_updated: Apr 3, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/mg-product-details-page
 originalArticleId: cc2f8506-04a5-4747-91c5-3f66c0087d64

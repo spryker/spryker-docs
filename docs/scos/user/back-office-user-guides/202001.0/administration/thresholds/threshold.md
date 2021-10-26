@@ -1,6 +1,7 @@
 ---
 title: Threshold
 description: The section can be used to set up merchant relationships and global thresholds in the Back Office.
+last_updated: Nov 26, 2019
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/threshold
 originalArticleId: 4dbaa8a6-3f77-46f4-be4b-629b9aed2331

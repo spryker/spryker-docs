@@ -1,6 +1,7 @@
 ---
 title: Testing the Invoice Payment Implementation
 description: This article describes how to test the invoice payment.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-invoice-payment-test
 originalArticleId: ee732160-e91a-496e-abe3-a260aceb8e1d

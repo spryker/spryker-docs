@@ -1,6 +1,7 @@
 ---
 title: Implementing synchronization plugins
 description: Learn how to implement synchronization plugins.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/implementing-synchronization-plugins
 originalArticleId: e825266c-5435-4a02-adc7-3ef6cd60cb3f

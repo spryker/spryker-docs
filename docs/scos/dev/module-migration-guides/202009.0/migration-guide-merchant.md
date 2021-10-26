@@ -1,6 +1,7 @@
 ---
 title: Migration guide - Merchant
 description: This guide contains instructions on migrating the Merchant module provided by Spryker to a newer version.
+last_updated: Jan 28, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/migration-guide-merchant
 originalArticleId: d23a17a8-47fc-439f-a937-029b4990f2c4

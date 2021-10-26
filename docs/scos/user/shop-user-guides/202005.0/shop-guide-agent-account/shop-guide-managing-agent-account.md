@@ -1,6 +1,7 @@
 ---
 title: Shop Guide - Managing Agent Account
 description: Use the procedures to work on Agent-related tasks in the Storefront.
+last_updated: Apr 3, 2020
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/shop-guide-managing-agent-account
 originalArticleId: 6ae7d37c-7a1f-40e4-ad17-9b800f59bbfe

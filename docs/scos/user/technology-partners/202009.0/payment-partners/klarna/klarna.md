@@ -1,6 +1,7 @@
 ---
 title: Klarna
 description: Make paying as simple, safe and above all, smooth as possible by integrating the Klarna payment into the Spryker Commerce OS.
+last_updated: Aug 27, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/klarna
 originalArticleId: 7cb822db-895b-4a30-ba04-8500ef6eccb3

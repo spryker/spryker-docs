@@ -1,6 +1,7 @@
 ---
 title: Scheduled Prices feature integration
 description: Learn how to integrate the Scheduled prices feature into your project.
+last_updated: Nov 22, 2019
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/scheduled-prices-feature-integration-201907
 originalArticleId: ae10b89a-c59e-4950-a5e6-e494d8b1f1af

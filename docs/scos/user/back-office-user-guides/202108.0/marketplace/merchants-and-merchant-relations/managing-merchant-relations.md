@@ -1,6 +1,7 @@
 ---
 title: Managing merchant relations
 description: Use the procedures to create, edit, and delete merchant relations, or sort them by the company for which the merchant relation has been created.
+last_updated: Jun 16, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-merchant-relations
 originalArticleId: caba074b-6e6c-4db0-bf93-0ecec4e10ba7

@@ -1,5 +1,6 @@
 ---
 title: Glue API Developer Guides
+last_updated: Nov 22, 2019
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/glue-api-developer-guides
 originalArticleId: c7a9e4b8-54a4-4cc1-8307-e2a6611b4620

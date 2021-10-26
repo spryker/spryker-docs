@@ -1,6 +1,7 @@
 ---
 title: Implementing Invoice Payment
 description: In this set of articles, we will add a new module called PaymentMethods.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-implement-invoice-payment
 originalArticleId: 405e39cb-b21e-48a5-9e15-4376d8f196b4

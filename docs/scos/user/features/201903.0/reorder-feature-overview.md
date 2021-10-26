@@ -1,6 +1,7 @@
 ---
 title: Reorder feature overview
 description: The Reorder feature simplifies the order placement process for your customers- it allows them to reorder their previous orders in just one click.
+last_updated: Nov 22, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/reorder
 originalArticleId: cec01d06-c337-4a32-a442-cb17abd5e674

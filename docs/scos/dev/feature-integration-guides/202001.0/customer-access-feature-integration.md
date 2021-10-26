@@ -1,6 +1,7 @@
 ---
 title: Customer Access feature integration
 description: The guide walks you through the process of installing the Customer Access feature in the project.
+last_updated: Mar 6, 2020
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/customer-access-feature-integration
 originalArticleId: 8b6cc8a0-6f4e-4f8e-9fc3-a3e99800cccf

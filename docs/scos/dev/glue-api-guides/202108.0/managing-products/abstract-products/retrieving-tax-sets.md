@@ -1,6 +1,7 @@
 ---
 title: Retrieving tax sets
 description: Retrieve details information about tax sets of abstract products.
+last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-tax-sets
 originalArticleId: 9b8f60f0-3815-4d5b-94df-64deb0771117

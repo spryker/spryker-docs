@@ -1,5 +1,6 @@
 ---
 title: Glue API Tutorials
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-tutorials
 originalArticleId: f5006887-1f4e-4fb0-a8ca-485d96f1aba9

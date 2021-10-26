@@ -1,5 +1,6 @@
 ---
 title: Reclamations feature integration
+last_updated: Mar 6, 2020
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/reclamations-feature-integration
 originalArticleId: da07c7a0-b0a5-4955-9ec5-a4d03434a5d2

@@ -1,6 +1,7 @@
 ---
 title: Installing in Development mode on MacOS and Linux
 description: Learn how to install Spryker in Development mode on MacOS and Linux.
+last_updated: Oct 21, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/installing-in-development-mode-on-macos-and-linux
 originalArticleId: 3a4af86a-3fb7-4fb2-b47e-4f1eb703fae6

@@ -1,4 +1,5 @@
----
+---last_updated: Nov 22, 2019
+
 title: Zed Administration Schema
 originalLink: https://documentation.spryker.com/v2/docs/db-schema-zed-administration
 originalArticleId: 4df0fbb9-d97f-45fe-ad20-90a771ac0e82

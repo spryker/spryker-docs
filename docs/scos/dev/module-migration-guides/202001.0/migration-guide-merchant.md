@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Merchant
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/mg-merchant
 originalArticleId: 059a331a-91b6-4a52-890d-6fa3a1177317

@@ -1,6 +1,7 @@
 ---
 title: Product Set feature integration
 description: The Product Sets feature allows you to put together multiple products for the purpose of emphasizing that the set of products can be bought together.
+last_updated: Nov 22, 2019
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/product-set-feature-integration
 originalArticleId: 8f583819-df35-4f12-85ad-ec2eebb93f0d

@@ -1,6 +1,7 @@
 ---
 title: Heidelpay - iDeal
 description: Integrate iDeal payment through Heidelpay into the Spryker-based shop.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/heidelpay-ideal
 originalArticleId: 66b61a72-36ed-450c-9b80-4495efa619cc

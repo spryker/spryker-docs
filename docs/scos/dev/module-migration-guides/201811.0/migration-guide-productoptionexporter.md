@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - ProductOptionExporter
+last_updated: May 19, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/mg-product-option-exporter
 originalArticleId: ffaa394f-f3b6-451e-bf1b-c626c73f8e1f

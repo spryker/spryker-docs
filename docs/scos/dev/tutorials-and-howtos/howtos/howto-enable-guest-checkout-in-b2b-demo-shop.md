@@ -1,6 +1,7 @@
 ---
 title: HowTo - Enable guest checkout in B2B Demo Shop
 description: Learn how to enable guest checkout in B2B Demo Shop.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-enable-guest-checkout-in-b2b-demo-shop
 originalArticleId: 669e5e5c-f26a-484c-ab68-4588c701aa99

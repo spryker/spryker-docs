@@ -1,6 +1,7 @@
 ---
 title: Publish and Synchronization testing
 description: Learn how you can test Publish and Synchronization
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/publish-and-synchronization-testing
 originalArticleId: 5691dcf2-a612-4cf9-bdff-8609f299ffec

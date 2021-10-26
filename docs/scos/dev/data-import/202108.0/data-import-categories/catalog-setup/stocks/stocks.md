@@ -1,5 +1,6 @@
 ---
 title: Stocks
+last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/stocks
 originalArticleId: 1499aa73-9a7d-47f1-bdb5-f0a984b79fcc

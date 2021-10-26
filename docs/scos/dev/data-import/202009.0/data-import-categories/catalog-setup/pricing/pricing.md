@@ -1,5 +1,6 @@
 ---
 title: Pricing
+last_updated: Aug 27, 2020
 template: data-import-template
 originalLink: https://documentation.spryker.com/v6/docs/pricing
 originalArticleId: 8482cf1f-2a74-430f-9360-e25e23a7b520

@@ -1,6 +1,7 @@
 ---
 title: Creating Configurable Bundle Templates
 description: On this page, you will find instructions on creating Configurable Bundle Templates in the Spryker Back Office.
+last_updated: Sep 15, 2020
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/creating-configurable-bundle-templates
 originalArticleId: 0fa0908e-875c-40af-9720-f30d23873d86

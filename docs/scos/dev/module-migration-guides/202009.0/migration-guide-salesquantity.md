@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - SalesQuantity
 description: Use the guide to learn how to update the SalesQuantity module.
+last_updated: Aug 27, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/mg-sales-quantity
 originalArticleId: fab27243-776d-40dc-adf8-534f5b7aeb99

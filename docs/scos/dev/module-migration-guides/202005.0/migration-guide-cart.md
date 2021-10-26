@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Cart
 description: Use the guide to update versions to the newer ones of the Cart module.
+last_updated: Apr 3, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/mg-cart
 originalArticleId: 4f81f399-c89b-4b80-bc43-bd5649932f10

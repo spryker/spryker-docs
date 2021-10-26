@@ -1,6 +1,7 @@
 ---
 title: Retrieving alternative products
 description: Learn how to find alternatives for discontinued products with Glue API.
+last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-alternative-products
 originalArticleId: b910a3a3-e499-4047-bb32-b96e00b94bcb

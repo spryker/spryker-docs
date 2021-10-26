@@ -1,6 +1,7 @@
 ---
 title: Product Groups feature overview
 description: Product Groups feature allows product catalog managers to group products by attributes.
+last_updated: Nov 22, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/product-group
 originalArticleId: f8b6e701-1145-42bb-8b2b-1446c2e63823

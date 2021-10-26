@@ -1,6 +1,7 @@
 ---
 title: Inventory Management feature integration
 description: The guide guides you through the process of installing the Warehouse Management functionality into your project.
+last_updated: Mar 6, 2020
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/inventory-management-feature-integration
 originalArticleId: 39a8ab05-27bd-4501-87c5-3dd191610dea

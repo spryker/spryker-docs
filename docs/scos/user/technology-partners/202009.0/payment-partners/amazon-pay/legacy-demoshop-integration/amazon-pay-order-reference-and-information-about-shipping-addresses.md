@@ -1,6 +1,7 @@
 ---
 title: Amazon Pay - Order Reference and Information about Shipping Addresses
 description: This article contains information about order reference and shipping address information in the Spryker Legacy Demoshop.
+last_updated: Aug 27, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/amazon-pay-order-ref-info-demoshop
 originalArticleId: daa93e41-08e2-43ff-9f81-2d009db904cd

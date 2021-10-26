@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - ProductPackagingUnitStorage
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-product-packaging-unit-storage
 originalArticleId: bc56180a-3072-435a-ab75-b7767f698782

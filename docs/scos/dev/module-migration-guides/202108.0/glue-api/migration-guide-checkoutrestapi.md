@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - CheckoutRestApi
+last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-checkoutrestapi
 originalArticleId: 0a30ad48-d4c1-4d82-8958-980065e9358b

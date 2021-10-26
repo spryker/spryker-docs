@@ -1,6 +1,7 @@
 ---
 title: Reference information- scheduled prices
 description: The guide provides additional information about the values you use when working with scheduled prices in the Back Office.
+last_updated: Aug 27, 2020
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/scheduled-prices-reference-information
 originalArticleId: 76145297-8367-4a1b-957b-54633f4dbe10

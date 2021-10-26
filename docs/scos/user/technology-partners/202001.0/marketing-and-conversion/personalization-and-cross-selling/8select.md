@@ -1,5 +1,6 @@
 ---
 title: 8Select
+last_updated: Jan 25, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/8select
 originalArticleId: eb2bf6c6-c38d-41c2-a02a-5104920c3954

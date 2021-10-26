@@ -1,6 +1,7 @@
 ---
 title: Using FACT-Finder search
 description: FACT-Finder suggests error-tolerant on-site search. FACT-Finder delivers relevant results even when spelling errors and typos occur.
+last_updated: Apr 3, 2020
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/search-factfinder-search
 originalArticleId: cf3c0d6c-617a-4d0f-ba73-ad99b2c0770f

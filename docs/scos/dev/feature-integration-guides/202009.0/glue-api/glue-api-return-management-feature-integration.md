@@ -1,6 +1,7 @@
 ---
 title: Glue API - Return management feature integration
 description: This integration guide provides step-by-step instructions on integrating Glue API - Return Management feature into your project.
+last_updated: Sep 8, 2020
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/glue-api-return-management-feature-integration
 originalArticleId: fc4b461d-f76e-4873-9bef-1c2d0c0c7934

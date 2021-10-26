@@ -1,6 +1,7 @@
 ---
 title: Computop - Sofort
 description: Integrate Sofort payment through Computop into the Spryker-based shop.
+last_updated: Dec 26, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/computop-sofort
 originalArticleId: 36a8f687-ea98-454d-9737-8a125484a752

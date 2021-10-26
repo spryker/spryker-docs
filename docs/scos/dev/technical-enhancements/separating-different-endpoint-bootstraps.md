@@ -1,5 +1,6 @@
 ---
 title: Separating different endpoint bootstraps
+last_updated: Jul 23, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/separating-different-endpoint-bootstraps
 originalArticleId: 9f42f274-0278-4632-8a9f-0279c3ed4675

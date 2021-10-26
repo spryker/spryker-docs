@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductSearch
 description: Use the guide to learn how to update the ProductSearch module to a newer version.
+last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-product-search
 originalArticleId: 7baf769a-321d-4fee-a1fc-9a16b6a5f8a8

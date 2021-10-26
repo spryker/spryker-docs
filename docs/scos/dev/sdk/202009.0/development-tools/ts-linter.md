@@ -1,6 +1,7 @@
 ---
 title: TS linter
 description: Learn about the SCSS linter tool that allows you to find and fix mistakes in the code style.
+last_updated: Feb 14, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/ts-linter
 originalArticleId: 488d89c2-8889-477e-9ad9-00e1c66e1e42

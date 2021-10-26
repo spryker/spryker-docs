@@ -1,6 +1,7 @@
 ---
 title: Gift Cards feature overview
 description: This article describes general concepts of gift cards, gift card’s purchase and redeeming process, as well as the various use case scenarios.
+last_updated: Sep 29, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/gift-cards-feature-overview
 originalArticleId: e57fffc2-d137-4f13-b28b-2f796aaa8af2

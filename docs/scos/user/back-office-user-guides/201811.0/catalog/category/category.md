@@ -1,6 +1,7 @@
 ---
 title: Category
 description: The section is designed to manage products under the category according to a specific criterion, including search and filter them in the online store.
+last_updated: Jan 13, 2020
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/category
 originalArticleId: 4f228fdc-8d7d-40e0-876f-f2c8e4622c60

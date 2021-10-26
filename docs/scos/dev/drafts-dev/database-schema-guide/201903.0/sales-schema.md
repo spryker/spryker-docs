@@ -1,4 +1,5 @@
----
+---last_updated: Jul 31, 2020
+
 title: Sales Schema
 originalLink: https://documentation.spryker.com/v2/docs/db-schema-sales
 originalArticleId: ae8f83ec-b379-42ec-9c18-7b32253e4d0b

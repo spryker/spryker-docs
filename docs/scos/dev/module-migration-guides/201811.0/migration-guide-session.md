@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Session
+last_updated: Oct 11, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/mg-session
 originalArticleId: 31660338-68c4-4efb-ad66-f26c8f44b434

@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - CartExtension
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-cart-extension
 originalArticleId: ef4c2325-e757-4e4f-9692-a15ea59c0af6

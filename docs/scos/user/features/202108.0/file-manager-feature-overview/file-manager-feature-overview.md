@@ -1,6 +1,7 @@
 ---
 title: File Manager feature overview
 description: Reduce your bounce rate and create an enhanced shopping experience by providing impactful visuals while simultaneously maintaining fast response times.
+last_updated: Sep 2, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/media-management
 originalArticleId: 55cbe64d-f656-4d8d-a3d5-c32998acb947

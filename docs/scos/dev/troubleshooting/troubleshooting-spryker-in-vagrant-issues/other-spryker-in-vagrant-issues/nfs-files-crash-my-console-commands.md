@@ -1,6 +1,7 @@
 ---
 title: .NFS files crash my console commands
 description: Learn how to fix the issue when .NFS files crash the console commands
+last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/nfs-files-crash-my-console-commands
 originalArticleId: 70361f23-5559-4d46-87bd-408d3b704061

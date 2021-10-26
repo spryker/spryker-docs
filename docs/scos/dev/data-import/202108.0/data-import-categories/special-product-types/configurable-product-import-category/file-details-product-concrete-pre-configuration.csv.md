@@ -1,6 +1,7 @@
 ---
 title: File details- product_concrete_pre_configuration.csv
 description: Description of the `product_concrete_pre_configuration.csv` import file.
+last_updated: Jun 25, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-concrete-pre-configurationcsv
 originalArticleId: 81e75f7f-b1bd-4707-870a-dbea4a001273

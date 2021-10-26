@@ -1,5 +1,6 @@
 ---
 title: File details- product_search_attribute.csv
+last_updated: Aug 27, 2020
 template: data-import-template
 originalLink: https://documentation.spryker.com/v6/docs/file-details-product-search-attributecsv
 originalArticleId: 159341c0-8126-4f19-93ee-5e51777d12b0

@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Product Bundle
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-product-bundle
 originalArticleId: 10aa76a7-dd87-4d4a-afff-c5ff48c88a31

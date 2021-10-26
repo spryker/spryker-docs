@@ -1,6 +1,7 @@
 ---
 title: Updating payment data
 description: Learn how to update payment data with the payload from a third-party payment provider via Glue API.
+last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/updating-payment-data
 originalArticleId: d2870fab-7811-4b18-9bfa-dafd43791d00

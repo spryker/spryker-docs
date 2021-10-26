@@ -1,6 +1,7 @@
 ---
 title: Company User Roles and Permissions Feature Overview
 description: Usually employees within a company have different roles (purchasing, administration, supervision, etc.). These roles are referred to as Company Roles.
+last_updated: Nov 22, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/company-roles-permissions-overview
 originalArticleId: fdbe8fd8-3ca9-408f-85e0-8fbdc0e4182b

@@ -1,6 +1,7 @@
 ---
 title: Arvato - Risk Solution Services Integration
 description: Provide complete and comprehensive risk management for the eCommerce/mail-order industry, contributing to a high level of modularization and automation.
+last_updated: Sep 15, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/arvato-2-0
 originalArticleId: fedbe73d-a0db-4f5a-af99-bd186c95a76c

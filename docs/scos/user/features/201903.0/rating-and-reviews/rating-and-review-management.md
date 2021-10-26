@@ -1,6 +1,7 @@
 ---
 title: Rating and Review Management
 description: Boost sales and gain your customer's trust by including the Ratings and Reviews feature.
+last_updated: Nov 22, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/rating-revew-management
 originalArticleId: 45a646a2-a2d1-4ca6-b98f-14c7a1d5510f

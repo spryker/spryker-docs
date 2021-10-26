@@ -1,5 +1,6 @@
 ---
 title: Running production
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/running-production-mode
 originalArticleId: 73489708-d2d7-4b44-a353-f8972ac45ede

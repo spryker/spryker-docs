@@ -1,5 +1,6 @@
 ---
 title: Product Merchandising
+last_updated: Sep 16, 2020
 template: data-import-template
 originalLink: https://documentation.spryker.com/v6/docs/product-merchandising
 originalArticleId: 9186d387-4615-49c0-b27d-57e1bf857455

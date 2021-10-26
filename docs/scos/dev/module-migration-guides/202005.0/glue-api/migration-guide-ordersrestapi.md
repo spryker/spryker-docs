@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - OrdersRestApi
+last_updated: Sep 14, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/mg-ordersrestapi
 originalArticleId: 74b03c31-a9f0-4046-a496-4067d3a6f032

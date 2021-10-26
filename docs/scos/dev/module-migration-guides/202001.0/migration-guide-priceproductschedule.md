@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - PriceProductSchedule
 description: Use the guide to update the PriceProductSchedule module to a newer version.
+last_updated: Nov 27, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/mg-price-product-schedule
 originalArticleId: 1257a624-0eaf-4813-9493-651fbc758f66

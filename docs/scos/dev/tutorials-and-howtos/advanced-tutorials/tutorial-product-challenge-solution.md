@@ -1,5 +1,6 @@
 ---
 title: Tutorial- Product Challenge Solution
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-product-challenge-solution
 originalArticleId: c41461a3-c784-43f0-ba0e-d38ed2cfa5e1

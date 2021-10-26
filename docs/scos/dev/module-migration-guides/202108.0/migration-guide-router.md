@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Router
 description: Use the guide to perform the Router part of the Silex Migration Effort.
+last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-router
 originalArticleId: 0a56c9e5-47a3-4c02-a9a0-a4e8d4d15e87

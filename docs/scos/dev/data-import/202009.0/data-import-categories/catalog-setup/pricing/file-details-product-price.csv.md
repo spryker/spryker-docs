@@ -1,5 +1,6 @@
 ---
 title: File details- product_price.csv
+last_updated: Aug 27, 2020
 template: data-import-template
 originalLink: https://documentation.spryker.com/v6/docs/file-details-product-pricecsv
 originalArticleId: 5a23dccd-e882-462b-a7e4-3a86cf637ee2

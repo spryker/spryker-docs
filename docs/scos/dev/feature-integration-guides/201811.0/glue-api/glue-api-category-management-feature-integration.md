@@ -1,6 +1,7 @@
 ---
 title: Category API feature integration
 description: This guide will navigate you through the process of installing and configuring the Category API feature in Spryker OS.
+last_updated: Apr 22, 2019
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/category-api-feature-integration
 originalArticleId: 9c887081-9dd6-4bd1-8491-83b615c14f1a

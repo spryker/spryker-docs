@@ -1,5 +1,6 @@
 ---
 title: HowTo - Build Your Own Product Relation Type
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-build-product-relation
 originalArticleId: f5527274-f1f1-427c-8155-1c7b26b2c098

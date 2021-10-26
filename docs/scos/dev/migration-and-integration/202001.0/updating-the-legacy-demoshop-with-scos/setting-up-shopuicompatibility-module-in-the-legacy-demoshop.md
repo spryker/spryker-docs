@@ -1,6 +1,7 @@
 ---
 title: Setting up ShopUiCompatibility Module in the Legacy Demoshop
 description: Use the guide to learn how to install the ShopUICompatibility module for the Atomic Frontend in the Legacy Demoshop.
+last_updated: Oct 26, 2020
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/setting-up-shopuicompatibility
 originalArticleId: 3e0b1fcc-3f92-40f6-91e0-9e43dd97fc2c

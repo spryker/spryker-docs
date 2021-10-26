@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - ProductQuantity
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-product-quantity
 originalArticleId: 3a432c26-6310-4ae5-b860-01ab08730f93

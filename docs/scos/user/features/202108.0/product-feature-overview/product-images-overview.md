@@ -1,6 +1,7 @@
 ---
 title: Product Images overview
 description: Group several images into sets and link them to products. One product can have several named and localized sets of images.
+last_updated: Jul 7, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-images-overview
 originalArticleId: 04873187-c654-4119-a80e-e8b607521c79

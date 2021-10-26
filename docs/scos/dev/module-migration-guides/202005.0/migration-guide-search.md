@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Search
 description: Use the guide to learn how to update the Search module to a newer version.
+last_updated: Sep 14, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/mg-search
 originalArticleId: b2fe9aac-0892-4fb1-a11b-d97a4d96a9c7

@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Currency
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-currency
 originalArticleId: 1297fc3e-6ac7-494b-9e0c-f184515570df

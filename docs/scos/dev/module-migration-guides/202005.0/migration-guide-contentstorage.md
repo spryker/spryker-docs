@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - ContentStorage
+last_updated: Sep 15, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/mg-contentstorage-201907
 originalArticleId: 7f07c942-a5e0-4f2e-aafa-8fcd5743aa87

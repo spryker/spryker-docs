@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Quote
+last_updated: Oct 11, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/mg-quote
 originalArticleId: a071bce7-5799-4b91-999c-d0df68f23d42

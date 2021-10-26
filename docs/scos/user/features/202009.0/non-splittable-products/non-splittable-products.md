@@ -1,6 +1,7 @@
 ---
 title: Non-splittable Products
 description: The feature enables you to restrict the amount of products your customers are allowed to put to cart (by specifying minimum, maximum, and interval values).
+last_updated: Mar 10, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/non-splittable-products
 originalArticleId: 7d667090-4b46-4da2-a965-516261e0d7f1

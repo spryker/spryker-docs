@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Environment Configuration
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-environment-config
 originalArticleId: e1504716-57c3-4e1d-b773-b995d996114b

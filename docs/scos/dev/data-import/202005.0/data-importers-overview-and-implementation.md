@@ -1,6 +1,7 @@
 ---
 title: Data Importers Overview and Implementation
 description: This article includes the list of data importers provided in Spryker Commerce OS.
+last_updated: Sep 14, 2020
 template: data-import-template
 originalLink: https://documentation.spryker.com/v5/docs/data-importers-review-implementation
 originalArticleId: 00193c8f-de9c-4a7d-9447-d6abdce54dac

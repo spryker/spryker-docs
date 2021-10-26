@@ -1,6 +1,7 @@
 ---
 title: Product Price API feature integration
 description: This guide will navigate you through the process of installing and configuring the Product Price API feature in Spryker OS.
+last_updated: May 2, 2019
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/product-price-api-feature-integration
 originalArticleId: 734dc840-f523-469c-b986-2e0b2a5ec83f

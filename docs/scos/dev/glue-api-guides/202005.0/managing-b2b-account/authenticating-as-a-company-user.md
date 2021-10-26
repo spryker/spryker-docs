@@ -1,6 +1,7 @@
 ---
 title: Logging In as Company User
 description: The article provides information on how to access private B2B resources using Spryker Glue API.
+last_updated: Sep 15, 2020
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/authenticating-as-a-company-user-201907
 originalArticleId: 6b2183ab-7d17-45cf-9a53-e2f3bb48e579

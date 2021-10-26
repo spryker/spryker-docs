@@ -1,6 +1,7 @@
 ---
 title: Managing Company Units
 description: Use the procedures to create, edit, and delete company units in the Back Office after a company has been created.
+last_updated: Jul 31, 2020
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/managing-company-units
 originalArticleId: 3244b9f6-3894-4fa3-bf94-dafcdcf08cf4

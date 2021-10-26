@@ -1,5 +1,6 @@
 ---
 title: Twig and TwigExtension
+last_updated: Nov 22, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/twig-and-twig-extension
 originalArticleId: a889c42f-d5c4-4c33-ad5b-87cc8b992072

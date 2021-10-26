@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - CategoryPageSearch
+last_updated: Sep 15, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/migration-guide-categorypagesearch
 originalArticleId: 1a3c0593-1aac-48cb-ad9c-9df11a7e59c2

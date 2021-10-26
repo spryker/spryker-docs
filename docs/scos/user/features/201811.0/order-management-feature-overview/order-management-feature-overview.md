@@ -1,6 +1,7 @@
 ---
 title: Order Management
 description: Efficiently keep track of the order processing and ensure quick fulfillment. With the Order Management, you can keep your order processing running smoothly.
+last_updated: May 19, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/order-management
 originalArticleId: e3a5a9ad-1a94-41c9-ae61-130ce211295c

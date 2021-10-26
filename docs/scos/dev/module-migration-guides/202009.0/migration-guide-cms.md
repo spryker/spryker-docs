@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - CMS
 description: Use the guide to update versions to the newer ones of the CMS module.
+last_updated: Aug 27, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/mg-cms
 originalArticleId: 834091c4-451d-4ee1-9431-6958909c73d9

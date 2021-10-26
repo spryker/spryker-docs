@@ -1,6 +1,7 @@
 ---
 title: Non-splittable Products feature overview
 description: The article describes the concept of product quantity restrictions-  its types and how they can be imported
+last_updated: Aug 2, 2021
 template: concept-topic-template
 originalLink: /docs/scos/user/features/{{page.version}}/non-splittable-products-feature-overview.html-overview
 originalArticleId: 7db585a7-80d6-4584-a662-e00d42f27cf4

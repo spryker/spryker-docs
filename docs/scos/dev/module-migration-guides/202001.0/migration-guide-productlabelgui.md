@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductLabelGUI
 description: Use the guide to learn how to update the ProductLabelGui module to a newer version.
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/mg-product-label-gui
 originalArticleId: 411c0f26-abab-4401-ab32-fdaea032871e

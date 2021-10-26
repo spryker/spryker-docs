@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - CmsBlock
 description: Use the guide to update versions to the newer ones of the CMS Block module.
+last_updated: Sep 14, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/mg-cms-block
 originalArticleId: ee9557a2-f9be-4d77-a6c1-90a6e6bbff2c

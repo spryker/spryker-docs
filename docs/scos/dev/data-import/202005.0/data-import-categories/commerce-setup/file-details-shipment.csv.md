@@ -1,5 +1,6 @@
 ---
 title: File details- shipment.csv
+last_updated: Sep 14, 2020
 template: data-import-template
 originalLink: https://documentation.spryker.com/v5/docs/file-details-shipmentcsv
 originalArticleId: fb880466-9902-4424-b390-5083fbcad371

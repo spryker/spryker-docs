@@ -1,6 +1,7 @@
 ---
 title: Shop Guide - Creating a Return
 description: This article describes how to create a return in the Spryker Storefront.
+last_updated: Sep 14, 2020
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/shop-guide-creating-a-return
 originalArticleId: 2912886c-7abc-48df-a373-85c7c946ed20

@@ -1,6 +1,7 @@
 ---
 title: Tax feature overview
 description: With the Tax feature you can define taxes for the items you sell.
+last_updated: Jun 25, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/tax-feature-overview
 originalArticleId: 2ca980d2-d08b-4511-b26c-4cafa8624283

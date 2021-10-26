@@ -1,6 +1,7 @@
 ---
 title: Econda - Exporting CSVs
 description: Export Econda data via CSVs.
+last_updated: Aug 27, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/econda-export-csvs
 originalArticleId: 94bac366-707b-4ee7-9fba-3d01f3138b6d

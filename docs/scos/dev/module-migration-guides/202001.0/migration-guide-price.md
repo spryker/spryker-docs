@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Price
 description: Use the guide to migrate to a newer version of the Price module.
+last_updated: Jan 30, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/mg-price
 originalArticleId: aeaaeae7-8ce9-4bc7-bb82-e4aac76bc443

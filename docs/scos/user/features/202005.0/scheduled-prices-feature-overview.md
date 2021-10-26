@@ -1,6 +1,7 @@
 ---
 title: Scheduled Prices Feature Overview
 description: The article describes the Scheduled Prices feature, price types, time zones, and the way scheduled prices can be created.
+last_updated: Sep 14, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/scheduled-prices-feature-overview
 originalArticleId: 7ede61fb-6e0f-4ef8-8211-6d1f80bdc421

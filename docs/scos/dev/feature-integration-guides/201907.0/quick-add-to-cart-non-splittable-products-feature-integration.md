@@ -1,6 +1,7 @@
 ---
 title: Quick Order- Non-splittable Products feature integration
 description: Install the Quick Add to Cart and Non-splittable Products features in your project.
+last_updated: Dec 24, 2019
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/quick-order-non-splittable-products-feature-integration
 originalArticleId: 7521953a-3771-4580-b46c-a74826bb0ea1

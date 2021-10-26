@@ -1,6 +1,7 @@
 ---
 title: Creating Product Bundles
 description: Use the guide to assign product variants to a bundle, set its price, add SEO data and images in the Back Office.
+last_updated: Nov 22, 2019
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/creating-and-managing-product-bundles
 originalArticleId: 057fbf19-a8ff-457f-8735-39b3c65ac5f6

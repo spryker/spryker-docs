@@ -1,5 +1,6 @@
 ---
 title: Payolution - Integration into a project
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/payolution-integration-into-project
 originalArticleId: d071cda2-3ca2-41b2-afbb-a9cdcdb09b5e

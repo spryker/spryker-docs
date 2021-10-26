@@ -1,5 +1,6 @@
 ---
 title: Content Management
+last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/content-management
 originalArticleId: 07c058ac-4c85-4746-83f2-ae4115aca6f6

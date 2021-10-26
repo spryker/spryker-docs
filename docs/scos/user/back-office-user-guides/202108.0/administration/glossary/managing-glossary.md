@@ -1,6 +1,7 @@
 ---
 title: Managing glossary
 description: he guide provides instructions for shop owners to learn how to create and handle information in different languages in the Back Office.
+last_updated: Jun 16, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-glossary
 originalArticleId: a485b9af-b90b-4847-904c-3f87891de5c9

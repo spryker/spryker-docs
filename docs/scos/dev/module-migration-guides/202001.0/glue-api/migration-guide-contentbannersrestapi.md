@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - ContentBannersRestApi
+last_updated: Aug 13, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/mg-contentbannersrestapi-201907
 originalArticleId: 0e7ff55a-655b-43b1-afc3-4d06ab9f54ea

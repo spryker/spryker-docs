@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductBundle
 description: Use the guide to migrate to a new version of the ProductBundle module.
+last_updated: Sep 14, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/mg-product-bundle
 originalArticleId: 7cde1852-eeaf-4301-9315-43f15b9e522c

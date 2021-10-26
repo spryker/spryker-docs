@@ -1,5 +1,6 @@
 ---
 title: Code Sniffer
+last_updated: Nov 22, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/code-sniffer
 originalArticleId: 7e615a56-cfb2-4e47-887b-cd27e1dff0b8

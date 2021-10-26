@@ -1,6 +1,7 @@
 ---
 title: Mutagen error
 description: Learn how to fix the Mutagen error
+last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mutagen-error
 originalArticleId: b1896a64-b124-48a9-9fc5-33c950a620ad

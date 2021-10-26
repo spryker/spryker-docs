@@ -1,6 +1,7 @@
 ---
 title: Stores
 description: The guide provides additional information you use when working with stores in the Back Office.
+last_updated: Aug 27, 2020
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/stores-reference-information-201911
 originalArticleId: e5eaef7f-b1e8-44f3-a326-0ce6030c70aa

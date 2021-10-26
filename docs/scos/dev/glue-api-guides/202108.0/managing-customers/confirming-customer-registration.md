@@ -1,6 +1,7 @@
 ---
 title: Confirming customer registration
 description: Confirm customer registration via API
+last_updated: Jun 21, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/confirming-customer-registration
 originalArticleId: ce75d090-7be3-4d28-98a2-4ea49eb0d00c

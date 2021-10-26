@@ -1,6 +1,7 @@
 ---
 title: B2B or B2C Demo Shop installation- Mac OS or Linux, with Development Virtual Machine
 description: This article provides step-by-step instructions on the B2B or B2C Demo Shop installation on Mac OS or Linux with Development Virtual Machine.
+last_updated: Oct 18, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/b2b-b2c-demo-shop-installation-mac-os-or-linux-with-devvm
 originalArticleId: 1d644ef6-acab-4d55-afa8-24628043bae7

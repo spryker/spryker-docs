@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - AvailabilityOfferConnector
 description: Use the guide to migrate to a new version of the AvailabilityOfferConnector module.
+last_updated: Aug 27, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/mg-availability-offer-connector
 originalArticleId: 8144f671-5b00-47e2-93df-733d454e1d71

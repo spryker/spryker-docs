@@ -1,5 +1,6 @@
 ---
 title: Overview of the feature guides
+last_updated: Feb 9, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/overview-of-the-feature-guides
 originalArticleId: 206d7de6-d600-40c8-abd0-3dd01ecd82ad

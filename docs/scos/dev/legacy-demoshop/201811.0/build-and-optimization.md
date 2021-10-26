@@ -1,6 +1,7 @@
 ---
 title: Build and Optimization
 description: We use Webpack and Oryx for transpiling/building the assets and to optimize the resulting output.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/build-optimization
 originalArticleId: fddbda3d-9fa6-41a2-adde-968a03a1c6b4

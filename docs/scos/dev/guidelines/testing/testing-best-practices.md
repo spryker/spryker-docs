@@ -1,6 +1,7 @@
 ---
 title: Testing Best Practices
 description: The article describes how to write and organize your tests efficiently.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/testing-best-practices
 originalArticleId: 3bee0606-3660-4935-b990-33cc4adb6d0a

@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - CompanyUser
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/mg-companyuser
 originalArticleId: b85ee231-b284-4299-baba-de952a387ef6

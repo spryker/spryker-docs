@@ -1,5 +1,6 @@
 ---
 title: How to use the Support Portal
+last_updated: Sep 28, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/how-to-use-the-support-portal
 originalArticleId: b215730b-98ee-4661-8281-c45104e51044

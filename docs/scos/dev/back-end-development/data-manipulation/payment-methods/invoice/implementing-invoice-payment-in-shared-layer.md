@@ -1,6 +1,7 @@
 ---
 title: Implementing Invoice Payment in Shared Layer
 description: This procedure will help us to identify the new payment type through some unique constants.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-invoice-payment-fe-be-shared
 originalArticleId: ddb4c3f0-4ea8-4cda-82a2-0ffd4fecac99

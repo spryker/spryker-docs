@@ -1,6 +1,7 @@
 ---
 title: Controllers and Actions
 description: Controllers are placed inside the Controllers folder in Yves; they provide an entry point to the system for requests submitted by the front-end users.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/yves-controllers-actions
 originalArticleId: 807eb310-336a-46d8-8cfc-bcafe4d3a324

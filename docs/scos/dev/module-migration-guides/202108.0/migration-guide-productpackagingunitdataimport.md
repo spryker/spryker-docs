@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductPackagingUnitDataImport
 description: Use the guide to migrate to a new version of the ProductPackagingUnitDataImport module.
+last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-product-packaging-unit-data-import
 originalArticleId: 73392c2e-2e31-4eb2-9b72-9e464ebb5af0

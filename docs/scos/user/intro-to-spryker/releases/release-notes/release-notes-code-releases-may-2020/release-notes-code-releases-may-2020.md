@@ -1,5 +1,6 @@
 ---
 title: Release Notes- Code Releases May, 2020
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes-code-releases-may-2020
 originalArticleId: b4b00976-8ca0-4d78-b966-1a4bf1e93738

@@ -1,6 +1,7 @@
 ---
 title: Merchant Custom Prices feature overview
 description: This feature relates to prices set for individual merchant relations. Customers see only prices applying to them, based on their merchant relation.
+last_updated: Jul 22, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/merchant-custom-prices-feature-overview
 originalArticleId: 903b5851-5d21-4823-9ca4-695a55355b02

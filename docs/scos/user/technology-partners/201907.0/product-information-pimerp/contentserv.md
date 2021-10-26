@@ -1,5 +1,6 @@
 ---
 title: Contentserv
+last_updated: Nov 22, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/contentserv
 originalArticleId: c289305a-5359-49f3-a373-039a07d0c51e

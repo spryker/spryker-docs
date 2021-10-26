@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - QuoteRequestWidget
+last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-quoterequestwidget
 originalArticleId: ce9c0b14-5b78-455d-99a6-8b239aca416b

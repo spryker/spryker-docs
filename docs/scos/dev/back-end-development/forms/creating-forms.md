@@ -1,6 +1,7 @@
 ---
 title: Creating Forms
 description: Spryker uses Symfony forms; this tutorial will help you get started on working with forms.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-working-forms
 originalArticleId: 8dba4520-ed55-4904-a84f-bc46c7ac3cfd

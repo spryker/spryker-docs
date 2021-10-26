@@ -1,6 +1,7 @@
 ---
 title: Redirects
 description: The Redirects section is designed to set up URL redirects to a different URL, as well as add a status code in the Back Office.
+last_updated: Jan 13, 2020
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/redirects
 originalArticleId: b18c4188-8954-483b-9898-9066eaf02bc5

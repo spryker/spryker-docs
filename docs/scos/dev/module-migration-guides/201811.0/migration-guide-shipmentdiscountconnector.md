@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - ShipmentDiscountConnector
+last_updated: Jul 29, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/mg-shipment-discount-connector
 originalArticleId: fbb3ba66-aecc-4fb4-8f5f-215a6b1c33fa

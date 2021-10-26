@@ -1,5 +1,6 @@
 ---
 title: Censhare
+last_updated: Jan 28, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/censhare
 originalArticleId: 96e1c298-1426-4f7f-a076-c25b49648fd1

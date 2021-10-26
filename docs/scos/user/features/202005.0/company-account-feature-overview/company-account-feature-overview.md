@@ -1,6 +1,7 @@
 ---
 title: Company Account Management
 description: With the feature, you can easily manage the company structure and set roles, users, and permissions.
+last_updated: Nov 18, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/company-account-management
 originalArticleId: 35a321f0-8bcc-493a-bed1-bc269572a830

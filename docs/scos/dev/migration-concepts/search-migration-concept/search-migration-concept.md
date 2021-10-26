@@ -1,5 +1,6 @@
 ---
 title: Search migration concept
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/search-migration-concept
 originalArticleId: 9338954f-a18a-4214-8566-5100e8462ca7

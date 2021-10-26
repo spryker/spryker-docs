@@ -1,6 +1,7 @@
 ---
 title: Product Tax Sets API feature integration
 description: This guide will guide you through the process of installing and configuring the Product Tax Sets API feature in your project.
+last_updated: Nov 22, 2019
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/product-tax-sets-api-feature-integration-201903
 originalArticleId: abdf52c7-aadd-4d9e-84fa-1f7bd1790ed5

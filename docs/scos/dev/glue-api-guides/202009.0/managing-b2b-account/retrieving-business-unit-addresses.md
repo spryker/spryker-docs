@@ -1,6 +1,7 @@
 ---
 title: Retrieving business unit addresses
 description: Learn how to retrieve business unit addresses via Glue API.
+last_updated: Feb 9, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/retrieving-business-unit-addresses
 originalArticleId: 5f54981f-acb6-4de1-88dc-dbd13e8d60f7

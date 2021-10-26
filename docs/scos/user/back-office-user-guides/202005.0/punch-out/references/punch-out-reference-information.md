@@ -1,6 +1,7 @@
 ---
 title: Punch Out- Reference Information
 description: The article provides information about attributes you add, view, and edit when creating and updating a connection.
+last_updated: Jul 7, 2020
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/punch-out-reference-information
 originalArticleId: 59018f13-538e-479e-a012-624d347708ab

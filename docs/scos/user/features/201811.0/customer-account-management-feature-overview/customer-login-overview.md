@@ -1,6 +1,7 @@
 ---
 title: Login & Registration Forms
 description: Tailor customer registration to your needs. A customer can register with an email address and a password, or you can choose to ask for more details.
+last_updated: Oct 28, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/login-registration-forms
 originalArticleId: 90a16f1f-b4a1-44b0-8a72-d2c9673e8491

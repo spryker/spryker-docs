@@ -1,6 +1,7 @@
 ---
 title: DevOps Migration Guide {{page.version}}
 description: All the DevOps details you need to know to keep your project up to date with the latest release.
+last_updated: Sep 14, 2020
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/devops-migration-guide
 originalArticleId: 5a4e1123-6d1a-4e02-995b-a07c2f231fe8

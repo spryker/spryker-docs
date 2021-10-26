@@ -1,6 +1,7 @@
 ---
 title: Shop Guide - Shipment Step
 description: Use the procedure to select the shipment method and delivery date for the order in the Storefront.
+last_updated: Nov 22, 2019
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/shipment-step-shop-guide-201911
 originalArticleId: 1e92d908-eca1-409d-bec9-f777b18a5c31

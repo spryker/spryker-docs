@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - ProductLabelSearch
+last_updated: Aug 31, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/migration-guide-productlabelsearch
 originalArticleId: e839271f-e4eb-4ddc-9024-84a7cf3b8038

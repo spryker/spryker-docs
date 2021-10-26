@@ -1,6 +1,7 @@
 ---
 title: Billie
 description: Provide various payment options from Billie.
+last_updated: Aug 27, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/billie
 originalArticleId: 2a26033a-9201-46e7-9c2c-c4fabf84fc72

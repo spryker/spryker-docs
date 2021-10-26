@@ -1,6 +1,7 @@
 ---
 title: HowTo - Import Packaging Units
 description: Use this guide to learn how to import packaging unit information and its types using a .CSV file.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-import-packaging-units
 originalArticleId: 8e89de6b-7170-414c-b0ad-3e44a9c8a169

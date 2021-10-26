@@ -1,4 +1,5 @@
----
+---last_updated: Jun 16, 2021
+
 title: Catalog Schema
 originalLink: https://documentation.spryker.com/2021080/docs/db-schema-catalog
 originalArticleId: ae7d31b5-76e1-4184-9c2c-eaf0b41744be

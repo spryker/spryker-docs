@@ -1,6 +1,7 @@
 ---
 title: Installing in Development mode on Windows
 description: Learn how to install Spryker in Development mode on Windows.
+last_updated: Oct 21, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/installing-in-development-mode-on-windows
 originalArticleId: 14368b32-4d9e-4451-9a46-ecab32966d88

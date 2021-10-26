@@ -1,6 +1,7 @@
 ---
 title: Navigation feature overview
 description: The navigation is built in a tree structure to support multiple levels of linking, e.g. to categories, external links, search results and CMS pages.
+last_updated: Mar 17, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/hierarchical-navigation
 originalArticleId: 775fa773-2f07-4b99-978e-8e742ce24c8f

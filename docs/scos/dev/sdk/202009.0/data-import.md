@@ -1,6 +1,7 @@
 ---
 title: Data import
 description: Easily import your business logic and data, such as Product Information, Customer Base, Categories and many more into the Spryker Commerce OS.
+last_updated: Feb 11, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/importer
 originalArticleId: a1d197eb-94ef-424f-a26a-a9f598ee51db

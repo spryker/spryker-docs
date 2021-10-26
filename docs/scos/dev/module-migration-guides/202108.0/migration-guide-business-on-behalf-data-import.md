@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Business On Behalf Data Import
 description: Use the guide to update versions to the newer ones of the Business on Behalf Data Import module.
+last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-business-on-behalf-data-import
 originalArticleId: 0013bcfa-469e-40c9-9beb-87838ad1519d

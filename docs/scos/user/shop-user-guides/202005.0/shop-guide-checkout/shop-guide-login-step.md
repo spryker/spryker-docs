@@ -1,5 +1,6 @@
 ---
 title: Shop Guide - Login Step
+last_updated: Sep 14, 2020
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/shop-guide-login-step
 originalArticleId: e367704a-ab8e-4819-8344-65bed5e19131

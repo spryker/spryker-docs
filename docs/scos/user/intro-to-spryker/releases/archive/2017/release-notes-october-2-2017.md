@@ -1,5 +1,6 @@
 ---
 title: Release Notes - October - 2 2017
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes-october-2-2017
 originalArticleId: dccf512e-816f-4c27-b100-56a3adb16b14

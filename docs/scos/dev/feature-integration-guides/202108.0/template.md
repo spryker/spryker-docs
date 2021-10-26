@@ -1,5 +1,6 @@
 ---
 title: Template
+last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/template
 originalArticleId: 839e4f71-1204-450f-900e-241915c9a17b

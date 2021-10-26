@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductRelation
 description: Use the guide to learn how to update the ProductRelation module to a newer version.
+last_updated: Aug 27, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/migration-guide-productrelation
 originalArticleId: 283bfc23-a536-4e39-b584-05cdfdf8723e

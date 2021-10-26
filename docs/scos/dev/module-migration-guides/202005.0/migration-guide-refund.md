@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Refund
 description: Use the guide to learn how to update the Refund module to a newer version.
+last_updated: Apr 3, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/mg-refund
 originalArticleId: 379ac096-a874-4af8-894c-43e6ddd8eab4

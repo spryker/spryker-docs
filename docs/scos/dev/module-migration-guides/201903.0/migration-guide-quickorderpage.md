@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - QuickOrderPage
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/mg-quick-order-page
 originalArticleId: 3346a87f-9d48-4e41-98a5-0d4d76d8a6be

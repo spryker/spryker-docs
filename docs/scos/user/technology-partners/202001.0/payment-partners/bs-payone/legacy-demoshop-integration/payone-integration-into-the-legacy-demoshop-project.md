@@ -1,6 +1,7 @@
 ---
 title: PayOne - Integration into the Legacy Demoshop Project
 description: Integrate Payone into the Spryker Legacy Demoshop by following the instructions from this article.
+last_updated: Dec 8, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/payone-integration-with-project-example
 originalArticleId: de30702d-5a59-46d8-ada4-54cd2a9a55f4

@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - MerchantRelationshipProductListGui
 description: This guide provides migration steps to upgrade  MerchantRelationshipProductListGui to the newer major version.
+last_updated: Dec 23, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/migration-guide-merchantrelationshipproductlistgui
 originalArticleId: 78ebeda2-a62a-4613-a86d-8a946c6978ab

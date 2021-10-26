@@ -1,6 +1,7 @@
 ---
 title: Persistent Cart Sharing feature overview
 description: With the feature, company users can generate the URL to share the cart with different levels of access.
+last_updated: Jul 28, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/persistent-cart-sharing-feature-overview
 originalArticleId: a80f4aab-aec5-4e7f-ad69-e5112178f27d

@@ -1,6 +1,7 @@
 ---
 title: Category Management feature overview
 description: The feature allows keeping your product catalog organized and comprehensible for the customers who can easily navigate the storefront and search products quicker
+last_updated: Nov 18, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/catalog-management
 originalArticleId: 5e9364e6-5a35-4fba-9b4c-bdc0f76bfdd5

@@ -1,5 +1,6 @@
 ---
 title: Tutorial - Zed Rest API
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-zed-rest-api
 originalArticleId: 26d10b63-ffce-4945-9aa0-cd15ecddb4d7

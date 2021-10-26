@@ -1,6 +1,7 @@
 ---
 title: Merchant Contracts feature integration
 description: The guide walks you through the process of installing the Merchant Contracts feature into the project.
+last_updated: Apr 30, 2020
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/merchant-contracts-feature-integration
 originalArticleId: 43271ecc-dba4-4780-addb-2551fcace447

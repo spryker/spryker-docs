@@ -1,6 +1,7 @@
 ---
 title: Punchout Catalogs
 description: Connect your platform using cXML or OCI protocol with the buyer's ERP by integrating Punchout Catalogs into the Spryker Commerce OS.
+last_updated: Sep 15, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/punchout-catalogs
 originalArticleId: 76e12fcd-e649-4b89-ae0b-72618c692f9d

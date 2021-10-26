@@ -1,5 +1,6 @@
 ---
 title: Event
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/event
 originalArticleId: 3652cdfc-3b74-45bf-b9cf-307307bc9481

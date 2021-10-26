@@ -1,6 +1,7 @@
 ---
 title: Customer Account Management + Agent Assist feature integration
 description: Integrate the Customer Account Management + Agent Assist feature into your project.
+last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-account-management-agent-assist-feature-integration
 originalArticleId: ac6402fe-4140-479f-a08a-76c03b263afa

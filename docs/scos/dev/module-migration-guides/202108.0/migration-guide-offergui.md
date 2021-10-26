@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - OfferGui
 description: Use the guide to learn how to update the OfferGui module.
+last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-offer-gui
 originalArticleId: a1ebc096-e9a6-462b-a150-678344c8a7c9

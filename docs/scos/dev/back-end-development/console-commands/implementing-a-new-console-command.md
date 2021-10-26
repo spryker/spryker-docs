@@ -1,6 +1,7 @@
 ---
 title: Implementing a new Console Command
 description: This article describes how you can implement a new console command.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/console-commands
 originalArticleId: d43d3867-747d-4323-978a-57b61082bef8

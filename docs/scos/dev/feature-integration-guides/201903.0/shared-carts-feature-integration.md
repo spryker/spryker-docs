@@ -1,6 +1,7 @@
 ---
 title: Shared Carts feature integration
 description: The Shared Carts Feature allows sharing shopping carts within an entire business unit. The guide describes how to integrate the feature into your project.
+last_updated: Nov 22, 2019
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/shared-carts-feature-integration-201903
 originalArticleId: 9ba9aa3c-23a7-4089-ba25-8a968242a437

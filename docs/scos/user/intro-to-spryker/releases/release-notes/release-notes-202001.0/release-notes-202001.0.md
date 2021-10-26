@@ -1,5 +1,6 @@
 ---
 title: Release Notes 202001.0
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes-2020010
 originalArticleId: 8e561ae0-5d15-45d1-934d-94a7c36d4be8

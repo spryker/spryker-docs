@@ -1,5 +1,6 @@
 ---
 title: Econda - Installation and configuration
+last_updated: Nov 6, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/econda-installation-and-configuration
 originalArticleId: e5c8d8f9-e810-4c74-bc1f-c1358e07b653

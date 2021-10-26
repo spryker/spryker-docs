@@ -1,6 +1,7 @@
 ---
 title: Configurable Bundle Templates
 description: This guide contains details on working with the Configurable Bundle Templates in the Back Office.
+last_updated: Dec 24, 2019
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/configurable-bundle-templates
 originalArticleId: 81a607c3-f0b8-496f-970e-be63f58d989b

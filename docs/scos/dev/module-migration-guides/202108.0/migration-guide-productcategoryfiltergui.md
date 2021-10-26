@@ -1,6 +1,7 @@
 ---
 title: Migration guide - ProductCategoryFilterGui
 description: Learn how to update the ProductCategoryFilterGui module.
+last_updated: Jun 18, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-productcategoryfiltergui
 originalArticleId: e44c11a0-7aa0-4d52-88bb-ad5b5065aaf2

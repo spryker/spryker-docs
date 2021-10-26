@@ -1,5 +1,6 @@
 ---
 title: Importing Demo Shop data
+last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/importing-demo-shop-data
 originalArticleId: a1968540-004c-4768-ba59-aee8ff73e8a7

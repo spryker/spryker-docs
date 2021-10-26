@@ -1,6 +1,7 @@
 ---
 title: Best Practices - Twig Templates
 description: In this article, you get an overview of the best practices used in twig templates.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/twig-best-practices
 originalArticleId: 7a2dfb30-156f-4d93-89eb-edfa015ad440

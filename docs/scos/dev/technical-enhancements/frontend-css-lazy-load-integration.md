@@ -1,6 +1,7 @@
 ---
 title: Frontend CSS Lazy Load integration
 description: This guide provides step-by-step instruction on how to use the frontend CSS lazy load feature.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/frontend-css-lazy-load
 originalArticleId: 050361ae-ad26-41b9-8fe8-297f665ad93f

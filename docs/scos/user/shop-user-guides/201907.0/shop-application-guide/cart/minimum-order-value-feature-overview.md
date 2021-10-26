@@ -1,5 +1,6 @@
 ---
 title: Minimum Order Value Feature Overview
+last_updated: Nov 22, 2019
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/minimum-order-value-feature-overview
 originalArticleId: dab0e91e-aeb9-4ab1-90c1-cdbe1520c35e

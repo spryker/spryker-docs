@@ -1,5 +1,6 @@
 ---
 title: File details- product_set.csv
+last_updated: Aug 27, 2020
 template: data-import-template
 originalLink: https://documentation.spryker.com/v6/docs/file-details-product-setcsv
 originalArticleId: fb5b9383-eb32-4af5-984a-8d9fbc4b93d6

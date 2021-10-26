@@ -1,6 +1,7 @@
 ---
 title: Discount Conditions- Reference Information
 description: The guide provides additional information you use when working with discount calculations in the Back Office.
+last_updated: Jul 31, 2020
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/discount-conditions-reference-information
 originalArticleId: 47ed6b30-16bb-45f1-9777-d533dbbfe2d1

@@ -1,6 +1,7 @@
 ---
 title: Braintree
 description: Braintree provides credit card and PayPal payment methods for Spryker Commerce OS.
+last_updated: Nov 22, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/braintree
 originalArticleId: 786f7628-28fb-46d3-a114-3a17f6d9f3ee

@@ -1,6 +1,7 @@
 ---
 title: Product feature overview
 description: Detailed overview of the Product feature.
+last_updated: Jul 9, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/products-overview
 originalArticleId: d12e5fdb-b74a-4d9b-91d9-866f330b46df

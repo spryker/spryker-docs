@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Customer
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-customer
 originalArticleId: 98ed4bd3-153b-49a2-bd27-3b02ed37f8c8

@@ -1,6 +1,7 @@
 ---
 title: Shop Guide - Company Users
 description: Use the procedures to create, edit, enable/disable or delete company users, and invite new users using a .CSV file on the Company Users page.
+last_updated: Jul 31, 2020
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/company-users-shop-guide
 originalArticleId: 49a9b84d-c4c5-458f-bac6-aaf20e9abc3e

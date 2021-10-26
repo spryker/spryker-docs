@@ -1,6 +1,7 @@
 ---
 title: Inventory Management feature integration
 description: This guide will guide you through the process of installing and configuring the Inventory Management feature for your project.
+last_updated: Nov 22, 2019
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/inventory-management-feature-integration-201903
 originalArticleId: 7986ca0c-a023-4e8c-a015-c6bd20661400

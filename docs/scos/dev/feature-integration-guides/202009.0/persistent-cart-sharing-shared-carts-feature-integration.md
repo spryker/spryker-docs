@@ -1,6 +1,7 @@
 ---
 title: Persistent cart sharing + shared carts feature integration
 description: The guide walks you through the process of installing the Shared Carts and Persistent Cart Sharing features in the project.
+last_updated: Aug 27, 2020
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/persisitent-cart-sharing-shared-carts-integration
 originalArticleId: c9c42554-665a-4b76-afd1-0eaaa3d77a87

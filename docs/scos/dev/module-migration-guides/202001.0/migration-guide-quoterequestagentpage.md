@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - QuoteRequestAgentPage
+last_updated: Dec 23, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/mg-quoterequestagentpage
 originalArticleId: 4d7512b1-ccfa-4ecd-9848-8778e3133543

@@ -1,5 +1,6 @@
 ---
 title: HowTo - Replace key-value storage with database
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-replace-key-value-storage-with-database
 originalArticleId: 76d0dff6-6837-4f27-a64b-d3eacf7134c7

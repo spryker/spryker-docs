@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - CartExtension
 description: Use the guide to update versions to the newer ones of the CartExtension module.
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/mg-cart-extension
 originalArticleId: b670f26a-1ee2-48df-a842-79fb46c583e4

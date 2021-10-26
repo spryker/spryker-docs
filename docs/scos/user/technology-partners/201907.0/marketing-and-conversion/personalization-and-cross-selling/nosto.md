@@ -1,6 +1,7 @@
 ---
 title: Nosto
 description: Empower retailers to build, launch and optimize 1-1 omnichannel marketing campaigns and digital experiences without the need for dedicated IT resources or a lengthy implementation process by integrating Nosto into the Spryker Commerce OS.
+last_updated: Jan 17, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/nosto
 originalArticleId: 39d0d878-fd8f-4450-bede-5ca52b6dc240

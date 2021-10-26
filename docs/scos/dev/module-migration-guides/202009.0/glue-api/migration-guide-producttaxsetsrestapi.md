@@ -1,5 +1,6 @@
 ---
 title: Migration guide - ProductTaxSetsRestApi
+last_updated: Aug 27, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/producttaxsetsrestapi-migration-guide
 originalArticleId: 12928669-60e0-4931-ac90-ee0e35aaeb73

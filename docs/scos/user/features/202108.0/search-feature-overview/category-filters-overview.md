@@ -1,6 +1,7 @@
 ---
 title: Category filters overview
 description: You can add, rearrange and define filters for any given parameter in the category tree, such as price or brand.
+last_updated: Jul 8, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/category-filters-overview
 originalArticleId: 086380e2-881f-48f1-b23a-88c4380b66c8

@@ -1,6 +1,7 @@
 ---
 title: Development
 description: Create a reliable base for your OS that ensures security and high performance.
+last_updated: Sep 11, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/development
 originalArticleId: 7c222685-bb92-42bf-acc3-059f96350005

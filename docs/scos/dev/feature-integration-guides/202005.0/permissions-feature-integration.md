@@ -1,6 +1,7 @@
 ---
 title: Permissions feature integration
 description: The guide provides a step-by-step procedure to install the Permissions feature into your project.
+last_updated: Apr 3, 2020
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/permissions-feature-integration
 originalArticleId: 6a940285-646b-412f-b42e-c32420ae0ac8

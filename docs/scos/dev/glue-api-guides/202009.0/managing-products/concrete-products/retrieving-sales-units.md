@@ -1,6 +1,7 @@
 ---
 title: Retrieving sales units
 description: Retrieve sales units of concrete products.
+last_updated: Feb 9, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/retrieving-sales-units
 originalArticleId: f42aee00-c114-496f-a098-c2eb0461da06

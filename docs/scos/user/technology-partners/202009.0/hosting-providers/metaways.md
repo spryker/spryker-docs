@@ -1,6 +1,7 @@
 ---
 title: Metaways
 description: Integrate Metaways hosting solution to host Spryker-based project.
+last_updated: Aug 27, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/metaways
 originalArticleId: 8f182d22-9358-47ea-9925-840243d7ffca

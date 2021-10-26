@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Tax
 description: Use the guide to learn how to update the Tax module to a newer version.
+last_updated: Aug 27, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/mg-tax
 originalArticleId: 8c417abf-8016-48b7-84e7-218a3516ae4e

@@ -1,6 +1,7 @@
 ---
 title: HowTo - Install Spryker in AWS Environment
 description: Learn how to configure native AWS services to prepare infrastructure for successful Spryker installation in AWS environment and about the installation itself.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-install-spryker-in-aws-environment
 originalArticleId: 31502e1a-61ca-4559-a7bb-c915e5966cf2

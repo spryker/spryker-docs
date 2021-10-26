@@ -1,5 +1,6 @@
 ---
 title: CSS Class Customization
+last_updated: May 24, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/css-class-customization
 originalArticleId: 26861dbe-df38-46e9-803e-7fce71a02bee

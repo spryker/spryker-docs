@@ -1,6 +1,7 @@
 ---
 title: CRUD Scheduled Prices migration concept
 description: The article provides instructions on how to install CRUD Scheduled Prices on all modules affected in bulk and them individually.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/updating-a-spryker-based-project
 originalArticleId: 864ebca6-3170-4057-9a6b-df4affad73a7

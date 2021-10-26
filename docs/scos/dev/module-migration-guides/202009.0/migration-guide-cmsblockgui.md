@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - CmsBlockGui
 description: Use the guide to update versions to the newer ones of the CMS Block GUI module.
+last_updated: Aug 27, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/mg-cms-block-gui
 originalArticleId: 98cece91-4246-4a08-9bdf-951217a45880

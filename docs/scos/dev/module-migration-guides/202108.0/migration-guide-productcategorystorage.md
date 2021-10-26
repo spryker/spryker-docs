@@ -1,6 +1,7 @@
 ---
 title: Migration guide - ProductCategoryStorage
 description: Learn how to update the ProductCategoryStorage module.
+last_updated: Jun 23, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-productcategorystorage
 originalArticleId: c3c6404f-d1ac-45d4-873d-2975b7ac5e36

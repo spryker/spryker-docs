@@ -1,6 +1,7 @@
 ---
 title: PHPStan
 description: Use the article to learn how to install and use PHPStan
+last_updated: Nov 22, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/phpstan
 originalArticleId: a4e8af5b-ecff-45c0-b349-9b65d41d6e57

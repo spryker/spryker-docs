@@ -1,6 +1,7 @@
 ---
 title: Managing Carts
 description: This section contains information on managing Spryker's shopping cart functionality for both registered and guest customers.
+last_updated: Dec 27, 2019
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/managing-carts
 originalArticleId: e57e6eee-1d0f-4cb2-980d-d5d7a42f302d

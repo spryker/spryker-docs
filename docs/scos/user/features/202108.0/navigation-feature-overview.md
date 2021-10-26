@@ -1,6 +1,7 @@
 ---
 title: Navigation feature overview
 description: Build and manage an intuitive navigation for your Spryker shop.
+last_updated: Jul 23, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/navigation-feature-overview
 originalArticleId: 6d0a1210-9c3e-44b2-b6c9-aa0cf7780cba

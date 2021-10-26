@@ -1,5 +1,6 @@
 ---
 title: Integrating RabbitMQ Headers in Queue Messages
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/rabbitmq-headers-in-queue-messages
 originalArticleId: d07ebbe0-edea-4194-8875-d20c4cf39cc8

@@ -1,6 +1,7 @@
 ---
 title: Glue API Installation and Configuration
 description: This article describes the process of installing and enabling the GLUE API infrastructure and explains the details of integrating the REST API resources.
+last_updated: Feb 13, 2020
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/glue-api-installation-and-configuration
 originalArticleId: bb84f1b7-5e4b-4aaf-8bcd-d9d5dc38032a

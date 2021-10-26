@@ -1,6 +1,7 @@
 ---
 title: Executing Tests
 description: Lean what commands you can use to execute your tests.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/executing-tests
 originalArticleId: 640291c8-48bc-4684-8725-0c16b79c2589

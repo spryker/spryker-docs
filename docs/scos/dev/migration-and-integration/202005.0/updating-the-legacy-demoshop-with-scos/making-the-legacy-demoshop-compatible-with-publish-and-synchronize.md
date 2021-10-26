@@ -1,6 +1,7 @@
 ---
 title: Making the Legacy Demoshop Compatible with Publish & Synchronize
 description: This guide provides step-by-step instructions on how to make the Legacy Demoshop compatible with Publish&Syncronize
+last_updated: Sep 14, 2020
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/demoshop-with-publish-and-sync
 originalArticleId: cae24c28-bd8c-4519-bdbd-5246038d5df5

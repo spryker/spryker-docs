@@ -1,5 +1,6 @@
 ---
 title: Product Options
+last_updated: Sep 14, 2020
 template: data-import-template
 originalLink: https://documentation.spryker.com/v5/docs/product-options-import
 originalArticleId: f9c5dc22-3cb6-47a9-a89f-0b7fc4fbf18c

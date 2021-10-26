@@ -1,6 +1,7 @@
 ---
 title: HowTo - Create a Visibility Condition for CMS Blocks
 description: Visibility condition is a tool used to define particular pages in which the content of CMS block is displayed.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-create-a-visibility-condition-for-cms-blocks
 originalArticleId: 0e3aef82-ebd1-4c7a-bb05-d0bf5cd54bd7

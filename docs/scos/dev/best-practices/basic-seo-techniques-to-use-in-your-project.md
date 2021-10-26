@@ -1,6 +1,7 @@
 ---
 title: Basic SEO techniques to use in your project
 description: Learn how you can effectively use headings and mircodata to improve SEO for your project
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/basic-seo-techniques-to-use-in-your-project
 originalArticleId: 56e34beb-79e3-44b0-a7b9-06489c78e9ac

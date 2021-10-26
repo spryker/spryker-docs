@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Console
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/mg-console
 originalArticleId: 63288ed5-2496-44d0-8241-24a977f1e360

@@ -1,5 +1,6 @@
 ---
 title: Understanding ticket status
+last_updated: Oct 8, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/understanding-ticket-status
 originalArticleId: ca538168-f995-48b4-8caf-d295647d2701

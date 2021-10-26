@@ -1,5 +1,6 @@
 ---
 title: File details- cms_block_category_postion.csv
+last_updated: Jun 1, 2020
 template: data-import-template
 originalLink: https://documentation.spryker.com/v5/docs/file-details-cms-block-category-postioncsv
 originalArticleId: 50b3e68a-6e3c-481c-8047-73783e3eabfe

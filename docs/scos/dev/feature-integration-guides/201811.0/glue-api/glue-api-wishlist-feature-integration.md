@@ -1,6 +1,7 @@
 ---
 title: Wishlist API feature integration
 description: This guide will navigate you through the process of installing and configuring the Wishlist API feature in Spryker OS.
+last_updated: May 19, 2020
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/wishlist-api-feature-integration
 originalArticleId: bb8921e2-a8cd-4fe7-97f5-cdbd3a990f0d

@@ -29,8 +29,6 @@ related:
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-easy-credit.html
 ---
 
----
-
 ## Copyright and Disclaimer
 
 See [Disclaimer](https://github.com/spryker/spryker-documentation).

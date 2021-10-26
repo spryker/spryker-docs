@@ -42,7 +42,7 @@ To integrate Heidelpay, follow the steps below:
 
 1. Add sub form plugins and payment method handlers:
 
-Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider
+**Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider**
 
 ```php
  protected function addSubFormPluginCollection(Container $container): Container
@@ -82,7 +82,7 @@ protected function addPaymentMethodHandlerPluginCollection(Container $container)
 
 2. Add controller provider:
 
-\Pyz\Yves\ShopApplication\YvesBootstrap
+**\Pyz\Yves\ShopApplication\YvesBootstrap**
 
 ```php
  protected function getControllerProviderStack($isSsl)
@@ -93,10 +93,10 @@ protected function addPaymentMethodHandlerPluginCollection(Container $container)
 	];>
 }
 ```
-    
+
 3. Add checkout plugins:
- 
-\Pyz\Zed\Checkout\CheckoutDependencyProvider
+
+**\Pyz\Zed\Checkout\CheckoutDependencyProvider**
 
 ```php
  protected function getCheckoutOrderSavers(Container $container)
@@ -120,7 +120,7 @@ protected function getCheckoutPostHooks(Container $container)
 
 4. Add OMS commands and conditions:
 
-\Pyz\Zed\Oms\OmsDependencyProvider
+**\Pyz\Zed\Oms\OmsDependencyProvider**
 
 ```php
 public function provideBusinessLayerDependencies(Container $container)
@@ -166,8 +166,8 @@ protected function addCommandPlugins(Container $container): Container
 
 To make Heidelpay module work with your project, it's necessary to extend the frontend part:
 
-tsconfig.json
- 
+**tsconfig.json**
+
 ```json
  "include": [
  "./vendor/spryker/spryker-shop/**/*",
@@ -176,7 +176,7 @@ tsconfig.json
 ],
 ```
 
-frontend/settings.js
+**frontend/settings.js**
 
 ```bash
  // eco folders
@@ -194,7 +194,7 @@ eco: {
  ],
  ```
 
-src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig
+**src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig**
 
 ```twig
  ...
@@ -280,7 +280,7 @@ src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 
-src/Pyz/Yves/Twig/TwigConfig.php
+**src/Pyz/Yves/Twig/TwigConfig.php**
 
 ```twig
  protected function addCoreTemplatePaths(array $paths)

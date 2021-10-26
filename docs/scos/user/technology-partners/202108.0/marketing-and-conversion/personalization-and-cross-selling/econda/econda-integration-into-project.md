@@ -37,13 +37,12 @@ Details on how to work with Javascript and templates in Spryker can be found in 
 
 Econda module uses collectors to [export data to CSV](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/econda/econda-exporting-csvs.html). Please read more about Collectors.
 
-
-
 ### Econda JS Library and SDK
 
 Download a personalized JavaScript library from the Econda Analytics Configuration menu by following instructions at [https://support.econda.de/display/MONDE/Tracking-Bibliothek+herunterladen](https://support.econda.de/display/MONDE/Tracking-Bibliothek+herunterladen) and Econda JS SDK from [http://downloads.econda.de/support/releases/js-sdk/current/econda-recommendations.php](http://downloads.econda.de/support/releases/js-sdk/current/econda-recommendations.php)
 
 ## Include Econda Libraries and Scripts for Tracking and Cross-sell
+
 Econda scripts are recommended to be connected at all the shop pages. To implement that:
 
 1. Place Econda libraries into `project/frontend/assets/scripts` folder.
@@ -65,7 +64,7 @@ CopyWebpackPlugin([
 3. Extend `page-layout-main.twig` scripts block.
 
 **page-layout-main.twig**
-    
+
 ```xml
 {% raw %}{%{% endraw %} block footerScripts {% raw %}%}{% endraw %}
         {% raw %}{{{% endraw %} parent() {% raw %}}}{% endraw %}
@@ -83,14 +82,14 @@ Extend `ProductController` on the project level.
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\ProductDetailPage\Controller;
- 
+
 use Spryker\Shared\Config\Config;
 use SprykerEco\Shared\Econda\EcondaConstants;
 use SprykerShop\Yves\ProductDetailPage\Controller\ProductController as SprykerProductController;
 use Symfony\Component\HttpFoundation\Request;
- 
+
 class ProductController extends SprykerProductController
 {
 	/**
@@ -104,9 +103,9 @@ class ProductController extends SprykerProductController
 		$productViewTransfer = $this->getFactory()
 			->getProductStorageClient()
 			->mapProductStorageData($productData, $this->getLocale(), $this->getSelectedAttributes($request));
- 
+
 		$this->assertProductRestrictions($productViewTransfer);
- 
+
 		return [
 			'product' => $productViewTransfer,
 			'productUrl' => $this->getProductUrl($productViewTransfer),
@@ -125,8 +124,8 @@ Add a new field `econdaAccountId` to the `pdp.twig` file on the project level an
 	econdaAccountId: _view.econdaAccountId,
 	...
 } {% raw %}%}{% endraw %}
- 
- 
+
+
 {% raw %}{%{% endraw %} include molecule('product-detail', 'ProductDetailPage') with {
 	class: 'box',
 	data: {
@@ -150,7 +149,7 @@ To add Cross Sell Widget you should include Econda Cross-sell-widget molecule to
 	category: {name: 'test'}
 	...
 } {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} include molecule('econda-cross-sell-widget', 'Econda') with {
 	data: {
 		product: data.product,
@@ -161,6 +160,7 @@ To add Cross Sell Widget you should include Econda Cross-sell-widget molecule to
 ```
 
 ## Econda Analytics
+
 As Econda analytic script `emos2.js` is connected, it will automatically send default statistic (visits, activity). To specify statistics:
 
 Include `econda-tracker.twig` molecule to the page you need to track and pass specific data to send to analytics. For example product views analytic on product detail page:

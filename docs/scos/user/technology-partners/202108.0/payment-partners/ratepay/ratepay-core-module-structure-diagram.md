@@ -29,4 +29,5 @@ related:
 ---
 
 The RatePay core module uses the following class structure and flow.
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Ratepay/ratepay_core_module_structure.png) 
+
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Ratepay/ratepay_core_module_structure.png)

@@ -21,8 +21,10 @@ related:
 There is currently an issue when using giftcards with Arvato. Our team is developing a fix for it.
 
 {% endinfo_block %}
+
 The purpose of developing the risk solution services is to provide a complete and comprehensive risk management for the eCommerce/mail-order industry, contributing to a high level of modularization and automation. Besides the use of pre-configured service modules for risk management, risk solution services comprise process support up to the  outsourcing of the entire operative risk management. All risk management processes are supported by a business intelligence component.
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Arvato/arvato-rss-overview.png) 
+
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Arvato/arvato-rss-overview.png)
 
 ## Prerequisites
 
@@ -31,7 +33,7 @@ The authorization data is transferred in the SOAP header and shows the following
 
 In order to send requests, you are supposed to have the following credentials, provided by Arvato:
 
-| Parameter Name | Description |
+| PARAMETER NAME | DESCRIPTION |
 | --- | --- |
 | `ARVATORSS_URL` | Arvato RSS gateway. |
 | `ClientID` | Unique client number in the risk solution services. Will be communicated to the client before the integration |
@@ -39,6 +41,7 @@ In order to send requests, you are supposed to have the following credentials, p
 | `ARVATORSS_PAYMENT_TYPE_MAPPING` | A map of payment names to ArvatoRss specific payment type codes. |
 
 The following information (also present in `config.dist.php`) should be specified in configuration:
+
 ```php
  ArvatoRssConstants::ARVATORSS_URL =& '';
  ArvatoRssConstants::ARVATORSS_CLIENTID = '';
@@ -51,7 +54,7 @@ The following information (also present in `config.dist.php`) should be specifie
 
 API URLs:
 
-| Name | URL |
+| NAME | URL |
 | --- | --- |
 | Production URL | `https://customer.risk-solution-services.de/rss-services/risk-solution-services.v2.1` |
 | Sandbox URL | `https://integration.risk-solution-services.de/rss-services/risk-solution-services.v2.1` |
@@ -60,7 +63,7 @@ Services:
 * [Risk Check](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/arvato/arvato-risk-check.html)
 * [Store Order](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/arvato/arvato-store-order.html)
 
-To implement Arvato RSS you should be familiar with concept of extending the
+To implement Arvato RSS you should be familiar with concept of extending the Spryker Commerce OS. See [Extending Spryker](/docs/scos/dev/back-end-development/extending-spryker/extending-a-core-module-that-is-used-by-another.html) for more details.
 
 ## Installation
 

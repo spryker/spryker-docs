@@ -29,18 +29,19 @@ related:
 To integrate CrefoPay into your project, first you need to install and configure the CrefoPay module. This topic describes how to do that.
 
 ## Installation
+
 To install the CrefoPay module, run:
 
 ```
 composer require spryker-eco/crefo-pay
 ```
 
-## Configuration
-### General Configuration
+## General Configuration
+
 The table below describes all general configuration keys and their values.
 All necessary configurations can be found in `vendor/spryker-eco/crefo-pay/config/config.dist.php`.
 
-|Configuration Key	 |Type  |  Description|
+|CONFIGURATION KEY | TYPE  |  DESCRIPTION|
 | --- | --- | --- |
 | `$config [CrefoPayConstants::MERCHANT_ID]`| int | Merchant ID assigned by CrefoPay. |
 |` $config [CrefoPayConstants::STORE_ID]` |string  |Store ID of the merchant assigned by CrefoPay as a merchant can have more than one store.|
@@ -60,9 +61,8 @@ All necessary configurations can be found in `vendor/spryker-eco/crefo-pay/confi
 | `$config [CrefoPayApiConstants::PUBLIC_KEY]`  | string  | Integration public key. Provided by CrefoPay.  |
 
 ### Specific Configuration
-Add necessary payment methods to State Machine (OMS) configuration in the following file:
 
-inconfig_default.php
+Add necessary payment methods to State Machine (OMS) configuration in inconfig_default.php:
 
 ```php
 $config[OmsConstants::PROCESS_LOCATION] = [
@@ -96,4 +96,5 @@ CrefoPayConfig::CREFO_PAY_PAYMENT_METHOD_BILL => 'CrefoPayBill01',
 See [CrefoPay - Provided Payment Methods](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/crefopay/crefopay-provided-payment-methods.html) for more information on the payment methods provided by CrefoPay.
 
 ## What's next?
+
 Once you are done with the installation and configuration of the CrefoPay module, [integrate CrefoPay into your project](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/crefopay/crefopay-integration-into-a-project.html).

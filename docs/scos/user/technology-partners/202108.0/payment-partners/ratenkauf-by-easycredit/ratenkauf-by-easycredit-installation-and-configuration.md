@@ -19,6 +19,7 @@ related:
 ## Installation
 
 To install Easycredit, run the following command in  console:
+
 ```bash
 composer require spryker-eco/easycredit
 ```
@@ -27,7 +28,7 @@ After installation, run the `propel:install` command or check the following migr
 
 ```php
 CREATE SEQUENCE "spy_payment_easycredit_api_log_pk_seq";
- 
+
 CREATE TABLE "spy_payment_easycredit_api_log"
 (
     "id_payment_easycredit_api_log" INTEGER NOT NULL,
@@ -42,9 +43,9 @@ CREATE TABLE "spy_payment_easycredit_api_log"
     "updated_at" TIMESTAMP,
     PRIMARY KEY ("id_payment_easycredit_api_log")
 );
- 
+
 CREATE SEQUENCE "spy_payment_easycredit_order_identifier_pk_seq";
- 
+
 CREATE TABLE "spy_payment_easycredit_order_identifier"
 (
     "id_payment_easycredit_order_identifier" INTEGER NOT NULL,
@@ -57,6 +58,7 @@ CREATE TABLE "spy_payment_easycredit_order_identifier"
 
 
 ## Configuration
+
 Perform the initial configuration of Easycredit:
 
 ```php
@@ -65,19 +67,19 @@ Perform the initial configuration of Easycredit:
 use SprykerEco\Shared\Easycredit\EasycreditConstants;
 use Spryker\Shared\Oms\OmsConstants;
 use Spryker\Shared\Sales\SalesConstants;
- 
+
 ...
- 
+
 $config[OmsConstants::ACTIVE_PROCESSES] = [
     ...
     'Easycredit01',
 ];
- 
+
 $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
     ...
     'easycredit' => 'Easycredit01',
 ];
- 
+
 ...
 $config[EasycreditConstants::SHOP_IDENTIFIER] = 'Your shop identifier';
 $config[EasycreditConstants::SHOP_TOKEN] = 'Your shop token';
@@ -86,4 +88,3 @@ $config[EasycreditConstants::SUCCESS_URL] = $config[ApplicationConstants::BASE_U
 $config[EasycreditConstants::CANCELLED_URL] = $config[ApplicationConstants::BASE_URL_YVES] . '/checkout/payment';
 $config[EasycreditConstants::DENIED_URL] = $config[ApplicationConstants::BASE_URL_YVES] . '/checkout/payment';
 ```
-

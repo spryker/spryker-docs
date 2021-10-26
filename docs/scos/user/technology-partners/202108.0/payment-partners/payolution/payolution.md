@@ -27,10 +27,10 @@ related:
 ## Partner Information
 
 [ABOUT PAYOLUTION](https://www.payolution.com/)
-Payolution offers white label solutions for the payment options — invoice, instalment, monthly invoice, and direct debit — available in Austria, Germany, Switzerland, the Netherlands, and the United Kingdom. As a mid-sized merchant or a global brand, you will benefit from Payolution's expertise in a seamless omni-channel integration of these payment options. Payolution offers a 100% payment guarantee — they pay you regardless when or if your customer pays you. Payolution's white label approach focuses on you as a merchant, your brand, your conversion and a fair customer support. 
+
+Payolution offers white label solutions for the payment options — invoice, instalment, monthly invoice, and direct debit — available in Austria, Germany, Switzerland, the Netherlands, and the United Kingdom. As a mid-sized merchant or a global brand, you will benefit from Payolution's expertise in a seamless omni-channel integration of these payment options. Payolution offers a 100% payment guarantee — they pay you regardless when or if your customer pays you. Payolution's white label approach focuses on you as a merchant, your brand, your conversion and a fair customer support.
 
 Payolution provides two methods of payment:
-
 * [Invoice](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/payolution/payolution-payment-methods/payolution-invoice-payment.html)
 * [Installment](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/payolution/payolution-payment-methods/payolution-installment-payment.html)
 

@@ -17,14 +17,14 @@ The feature we have all been waiting for has arrived - gift cards! It goes witho
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | <ul><li>[GiftCard 1.0.0](https://github.com/spryker/gift-card/releases/tag/1.0.0)</li><li>[GiftCardBalance 1.0.0](https://github.com/spryker/gift-card-balance/releases/tag/1.0.0)</li><li>[GiftCardMailConnector 1.0.0](https://github.com/spryker/gift-card-mail-connector/releases/tag/1.0.0)</li><li>[Nopayment 4.0.0](https://github.com/spryker/nopayment/releases/tag/4.0.0)</li></ul> | <ul><li>[Checkout 4.1.0](https://github.com/spryker/checkout/releases/tag/4.1.0)</li><li>[Discount 6.1.0](https://github.com/spryker/discount/releases/tag/6.1.0)</li><li>[Payment 4.3.0](https://github.com/spryker/payment/releases/tag/4.3.0)</li><li>[ProductManagement 0.12.0](https://github.com/spryker/product-management/releases/tag/0.12.0)</li><li>[Sales 8.6.0](https://github.com/spryker/sales/releases/tag/8.6.0)</li><li>[Shipment 6.3.0](https://github.com/spryker/shipment/releases/tag/6.3.0)</li></ul> | <ul><li>[CategoryStorage 0.2.2](https://github.com/spryker/category-storage/releases/tag/0.2.2)</li><li>[ProductLabelGui 2.0.6](https://github.com/spryker/product-label-gui/releases/tag/2.0.6)</li><li>[StepEngine 3.1.4](https://github.com/spryker/step-engine/releases/tag/3.1.4)</li></ul> |
 
 <!-- Documentation
 For feature documentation see: 
 Migration Guides --> 
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -44,7 +44,7 @@ Previously, the users of the Administration Interface could create passwords for
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [User 3.2.0](https://github.com/spryker/user/releases/tag/3.2.0) | n/a |
 
@@ -56,16 +56,16 @@ We continue to work hard on the multi-store concept and in this release we are h
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | <ul><li>[Availability 6.0.0](https://github.com/spryker/availability/releases/tag/6.0.0)</li><li>[AvailabilityGui 3.0.0](https://github.com/spryker/availability-gui/releases/tag/3.0.0)</li><li>[Oms 8.0.0](https://github.com/spryker/oms/releases/tag/8.0.0)</li><li>[Stock 5.0.0](https://github.com/spryker/stock/releases/tag/5.0.0)</li></ul> | <ul><li>[AvailabilityCartConnector 4.1.0](https://github.com/spryker/availability-cart-connector/releases/tag/4.1.0)</li><li>[Kernel 3.18.0](https://github.com/spryker/kernel/releases/tag/3.18.0)</li><li>[ProductBundle 4.2.0](https://github.com/spryker/product-bundle/releases/tag/4.2.0)</li><li>[ProductManagement 0.13.0](https://github.com/spryker/product-management/releases/tag/0.13.0)</li><li>[Store 1.5.0](https://github.com/spryker/store/releases/tag/1.5.0)</li></ul> | <ul><li>[AvailabilityDataFeed 0.1.3](https://github.com/spryker/availability-data-feed/releases/tag/0.1.3)</li><li>[AvailabilityStorage 0.2.2](https://github.com/spryker/availability-storage/releases/tag/0.2.2)</li><li>[Braintree 0.5.8](https://github.com/spryker/braintree/releases/tag/0.5.8)</li><li>[CartVariant 1.0.4](https://github.com/spryker/cart-variant/releases/tag/1.0.4)</li><li>[Checkout 4.1.1](https://github.com/spryker/checkout/releases/tag/4.1.1)</li><li>[DiscountPromotion 1.0.10](https://github.com/spryker/discount-promotion/releases/tag/1.0.10)</li><li>[DummyPayment 2.2.3](https://github.com/spryker/dummy-payment/releases/tag/2.2.3)</li><li>[Nopayment 4.0.1](https://github.com/spryker/nopayment/releases/tag/4.0.1)</li><li>[Payolution 4.0.9](https://github.com/spryker/payolution/releases/tag/4.0.9)</li><li>[ProductAbstractDataFeed 0.2.2](https://github.com/spryker/product-abstract-data-feed/releases/tag/0.2.2)</li><li>[ProductLabelGui 2.0.7](https://github.com/spryker/product-label-gui/releases/tag/2.0.7)</li><li>[Ratepay 0.6.8](https://github.com/spryker/ratepay/releases/tag/0.6.8)</li><li>[Sales 8.6.1](https://github.com/spryker/sales/releases/tag/8.6.1)</li><li>[StockSalesConnector 3.0.1](https://github.com/spryker/stock-sales-connector/releases/tag/3.0.1)</li><li>[Wishlist 5.1.2](https://github.com/spryker/wishlist/releases/tag/5.1.2)</li></ul> |
 
 <!--**Documentation**
-For module documentation see: 
+<br>For module documentation see: 
 For detailed migration guides see: -->
 
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -85,7 +85,7 @@ With this release, we have added an ability to enable or disable touch cleanup f
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Collector 6.1.1](https://github.com/spryker/collector/releases/tag/6.1.1) |
 
@@ -94,7 +94,7 @@ With this release, the Spryker's search has been upgraded to use Elasticsearch 5
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | <ul><li>[Elastica 4.0.0](https://github.com/spryker/elastica/releases/tag/4.0.0)</li><li>[ProductReview 2.0.0](https://github.com/spryker/product-review/releases/tag/2.0.0)</li><li>[Search 8.0.0](https://github.com/spryker/search/releases/tag/8.0.0)</li></ul> |[Catalog 5.3.0](https://github.com/spryker/catalog/releases/tag/5.3.0) | <ul><li>[CategoryPageSearch 0.2.3](https://github.com/spryker/category-page-search/releases/tag/0.2.3)</li><li>[CmsCollector 2.0.3](https://github.com/spryker/cms-collector/releases/tag/2.0.3)</li><li>[CmsContentWidgetProductSearchConnector 1.0.1](https://github.com/spryker/cms-content-widget-product-search-connector/releases/tag/1.0.1)</li><li>[CmsPageSearch 0.1.2](https://github.com/spryker/cms-page-search/releases/tag/0.1.2)</li><li>[Collector 6.1.4](https://github.com/spryker/collector/releases/tag/6.1.4)</li><li>[CollectorSearchConnector 1.0.3](https://github.com/spryker/collector-search-connector/releases/tag/1.0.3)</li><li>[Heartbeat 3.2.1](https://github.com/spryker/heartbeat/releases/tag/3.2.1)</li><li>[ProductCategoryFilterGui 1.1.4](https://github.com/spryker/product-category-filter-gui/releases/tag/1.1.4)</li><li>[ProductCustomerPermission 1.0.1](https://github.com/spryker/product-customer-permission/releases/tag/1.0.1)</li><li>[ProductNew 1.1.2](https://github.com/spryker/product-new/releases/tag/1.1.2)</li><li>[ProductPageSearch 0.1.3](https://github.com/spryker/product-page-search/releases/tag/0.1.3)</li><li>[ProductReviewCollector 1.0.3](https://github.com/spryker/product-review-collector/releases/tag/1.0.3)</li><li>[ProductReviewGui 1.0.3](https://github.com/spryker/product-review-gui/releases/tag/1.0.3)</li><li>[ProductReviewSearch 0.1.2](https://github.com/spryker/product-review-search/releases/tag/0.1.2)</li><li>[ProductReviewStorage 0.1.1](https://github.com/spryker/product-review-storage/releases/tag/0.1.1)</li><li>[ProductSearch 5.4.5](https://github.com/spryker/product-search/releases/tag/5.4.5)</li><li>[ProductSet 1.3.2](https://github.com/spryker/product-set/releases/tag/1.3.2)</li><li>[ProductSetCollector 1.0.3](https://github.com/spryker/product-set-collector/releases/tag/1.0.3)</li><li>[ProductSetPageSearch 0.1.2](https://github.com/spryker/product-set-page-search/releases/tag/0.1.2)</li><li>[Setup 4.0.2](https://github.com/spryker/setup/releases/tag/4.0.2)</li><li>[Synchronization 0.2.1](https://github.com/spryker/synchronization/releases/tag/0.2.1)</li></ul> |
 
@@ -102,7 +102,7 @@ With this release, the Spryker's search has been upgraded to use Elasticsearch 5
 For detailed migration guides see: .-->
 
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -122,7 +122,7 @@ Previously, we had an issue with catalog sorting configuration: it was built inc
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Search 7.2.1](https://github.com/spryker/search/releases/tag/7.2.1) |
 
@@ -131,7 +131,7 @@ Previously, we had the following issue: when a bundle product was available, and
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [ProductBundle 4.3.0](https://github.com/spryker/product-bundle/releases/tag/4.3.0) |  [AvailabilityGui 3.0.1](https://github.com/spryker/availability-gui/releases/tag/3.0.1) |
 
@@ -140,7 +140,7 @@ Previously, when setting an incorrect ID in URL on the CMS Block Edit page in th
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [CmsBlockGui 2.0.1](https://github.com/spryker/cms-block-gui/releases/tag/2.0.1) |
 
@@ -149,7 +149,7 @@ Previously, when trying to delete a children document, Elasticsearch returned an
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Collector 6.1.3](https://github.com/spryker/collector/releases/tag/6.1.3) |
 
@@ -158,7 +158,7 @@ Previously, there was an issue with the existing tax rates in the Administration
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Tax 5.1.7](https://github.com/spryker/tax/releases/tag/5.1.7) |
 

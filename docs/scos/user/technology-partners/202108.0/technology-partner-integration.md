@@ -17,7 +17,7 @@ redirect_from:
 
 In this section you will find information about our Technology Partner Integration solutions.
 
- Visit [Technology Partners](https://spryker.com/en/technology-partners/) for a complete list of our partners.
+Visit [Technology Partners](https://spryker.com/en/technology-partners/) for a complete list of our partners.
 
 ##  Hosting Providers
 
@@ -47,13 +47,12 @@ In this section you will find information about our Technology Partner Integrati
 * [CollectAI](/docs/scos/user/technology-partners/{{page.version}}/finance-and-accounting/collectai.html)
 * [Nitrobox](/docs/scos/user/technology-partners/{{page.version}}/finance-and-accounting/nitrobox.html)
 
-## Marketing & Conversion
-### A/B Testing & Performance
+## A/B Testing & Performance
 
 * [AB Tasty](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/ab-testing-and-performance/ab-tasty.html)
 <!--* [Baqend](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/ab-testing-and-performance/baqend.html)-->
 
-### Analytics
+## Analytics
 
 * [ChannelPilot Analytics](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/analytics/channelpilot-analytics.html)
 * [FactFinder](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/analytics/fact-finder.html)
@@ -61,19 +60,19 @@ In this section you will find information about our Technology Partner Integrati
 * [Mindlab](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/analytics/mindlab.html)
 * [Minubo](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/analytics/minubo.html)
 
-### Customer Communication
+## Customer Communication
 
 * [Dotdigital](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/dotdigital.html)
 * [Episerver](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/episerver/episerver.html)
 * [Inxmail](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/inxmail.html)
 
-### Customer Retention & Loyalty
+## Customer Retention & Loyalty
 
-* [Namogoo](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-retention-and-loyalty/namogoo.html) 
+* [Namogoo](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-retention-and-loyalty/namogoo.html)
 * [Trustpilot](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-retention-and-loyalty/trustpilot.html)
 * [Zenloop](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-retention-and-loyalty/zenloop.html)
 
-### Personalization & Cross-Selling
+## Personalization & Cross-Selling
 
 <!--* [8Select](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/8select.html)-->
 <!--* [Contentserv](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/contentserv.html)-->
@@ -104,7 +103,6 @@ In this section you will find information about our Technology Partner Integrati
 <!--* [Mindcurv](/docs/scos/user/technology-partners/{{page.version}}/operational-tools-monitoring-legal-etc/mindcurv.html)-->
 <!--* [Shopmacher](/docs/scos/user/technology-partners/{{page.version}}/operational-tools-monitoring-legal-etc/shopmacher.html)-->
 
-
 ## Payment Partners
 
 * [Adyen](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen.html)
@@ -112,7 +110,7 @@ In this section you will find information about our Technology Partner Integrati
 * [AfterPay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/afterpay/afterpay.html)
 * [Arvato](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/arvato/arvato.html)
 * [Billie](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/billie.html)
-* [Billpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/billpay/billpay.html) 
+* [Billpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/billpay/billpay.html)
 * [Braintree](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/braintree/braintree.html)
 * [BS Payone](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/bs-payone.html)
 * [Computop](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop.html)
@@ -135,7 +133,7 @@ In this section you will find information about our Technology Partner Integrati
 
  ## Shipment
 
-* [Paazl](/docs/scos/user/technology-partners/{{page.version}}/shipment/paazl.html) 
+* [Paazl](/docs/scos/user/technology-partners/{{page.version}}/shipment/paazl.html)
 * [Paqato](/docs/scos/user/technology-partners/{{page.version}}/shipment/paqato.html)
 * [Seven Senders](/docs/scos/user/technology-partners/{{page.version}}/shipment/seven-senders.html)
 

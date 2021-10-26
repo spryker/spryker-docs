@@ -30,9 +30,7 @@ To be able to use the `\SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExt
 composer require spryker-eco/new-relic
 ```
 
-## New Relic Logs Configuration
-
-### Request Logging
+## Request Logging
 
 Every request is automatically logged by New Relic. The name of the requests will be the name of the used route for Yves and the `[module]/[controller]/[action]` for Zed. Also, URL request and the host are stored as custom parameters for each request.
 
@@ -48,4 +46,4 @@ To enable the New Relic monitoring extension, add it to the `MonitoringDependenc
 Therefore, it will be possible to use the record deployment functionality built-in in the console commands, as follows:
 
 ```
-$ vendor/bin/console newrelic:record-deployment 
+$ vendor/bin/console newrelic:record-deployment

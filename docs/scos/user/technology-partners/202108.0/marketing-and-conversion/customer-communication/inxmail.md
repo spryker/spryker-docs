@@ -15,10 +15,12 @@ related:
 ---
 
 ## Partner Information
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Marketing+%26+Conversion/inxmail_logo.png) 
+
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Marketing+%26+Conversion/inxmail_logo.png)
 
 [ABOUT INXMAIL](https://www.inxmail.com)
-With nearly 20 years of experience, we are a pioneer in software development for email marketing. We support our customers and partners with fantastic service and grow their potential in a targeted way. In doing so, we draw upon a broad range of technology and services.Our solutions are influenced by our strong relationships with customers. We flexibly adapt our solutions to meet specific customer needs. Expertise that pays off: We have been implementing successful email marketing and multichannel campaigns for over 2,000 customers in more than 20 countries since 1999. 
+
+With nearly 20 years of experience, we are a pioneer in software development for email marketing. We support our customers and partners with fantastic service and grow their potential in a targeted way. In doing so, we draw upon a broad range of technology and services.Our solutions are influenced by our strong relationships with customers. We flexibly adapt our solutions to meet specific customer needs. Expertise that pays off: We have been implementing successful email marketing and multichannel campaigns for over 2,000 customers in more than 20 countries since 1999.
 
 YOUR ADVANTAGES:
 
@@ -30,7 +32,7 @@ YOUR ADVANTAGES:
 * DSGVO-compliant e-mail marketing
 * Co-founder and member of the Certified Senders Alliance (CSA)
 * Award Winning: Competent, Fast and Reliable Customer Service and Support
-* Personal advice and contact person 
+* Personal advice and contact person
 
 ## Installation
 
@@ -43,9 +45,10 @@ To install Inxmail run the command in the console:
 
 {% info_block infoBox %}
 
-The module supports only a subset of Inxmail REST API—transactional emails (events). 
+The module supports only a subset of Inxmail REST API—transactional emails (events).
 
 {% endinfo_block %}
+
 To set up the Inxmail initial configuration, use the credentials you received from your Inxmail server. Key ID and secret you can get from Settings → API keys panel on Inxmail server:
 ```php
  $config[InxmailConstants::API_EVENT_URL] = '';
@@ -199,4 +202,3 @@ See [Disclaimer](https://github.com/spryker/spryker-documentation).
 For further information on this partner and integration into Spryker, please contact us.
 
 <div class="hubspot-form js-hubspot-form" data-portal-id="2770802" data-form-id="163e11fb-e833-4638-86ae-a2ca4b929a41" id="hubspot-1"></div>
-

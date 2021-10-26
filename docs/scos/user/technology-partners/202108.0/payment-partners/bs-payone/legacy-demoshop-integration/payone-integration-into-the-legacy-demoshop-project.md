@@ -224,7 +224,7 @@ Move `form_start` expression to the top of a content section and `form_end` to t
       {% raw %}{%{% endraw %} include '@checkout/checkout/partials/shipment.twig' {% raw %}%}{% endraw %}
       ...
 ```
-10. Add shipment form data provider and remove voucher form from summary form collection(It is just an example, if you need voucher form, you need to adjust summary page on your own).            In `src/Pyz/Yves/Checkout/Form/FormFactory.php`:
+10. Add shipment form data provider and remove voucher form from summary form collection (it is just an example, if you need voucher form, you need to adjust summary page on your own). In `src/Pyz/Yves/Checkout/Form/FormFactory.php`:
 
 ```php
 /**

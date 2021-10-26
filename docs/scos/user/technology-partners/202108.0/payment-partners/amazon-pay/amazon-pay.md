@@ -32,7 +32,8 @@ related:
 
 ## Partner Information
 
-[ABOUT AMAZONPAY](https://pay.amazon.com/de) 
+[ABOUT AMAZONPAY](https://pay.amazon.com/de)
+
 Amazon pay is a solution which allows buyers to make purchases via their Amazon accounts. Basically it consists of client side tools (widget, javascripts etc) and Amazon API with SDKs written for different programming languages (PHP, Python, Ruby, Java, C#).
 
 Client side tools are used for displaying GUI elements on some common pages of an internet shop and it includes a "Pay with Amazon" button on the cart page and widgets for selecting checkout options such as delivery address and payment method.

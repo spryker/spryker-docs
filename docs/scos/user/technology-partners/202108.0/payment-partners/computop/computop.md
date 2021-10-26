@@ -43,10 +43,11 @@ Paygate is scalable and favoured by merchants in the travel, gaming, gambling, d
 Founded in 1997, Computop is a global player for the 21st century. Headquartered in Bamberg, Germany, the company has sales operations in New York, London, and Shanghai. Computop is trusted by the largest global brands worldwide including Samsung, The Otto Group, C&A, Fossil, Metro Cash & Carry, and Swarovski.
 
 ## General Information
+
 The [SprykerEco.Computop](https://github.com/spryker-eco/computop) bundle provides integration of the Computop industry partner with Spryker Commerce OS. It requires the [SprykerEco.ComputopApi](https://github.com/spryker-eco/computop-api) bundle that provides the REST Client for making API calls to the Computop Payment Provider.
 
 The `SprykerEco.Computop` module includes the integrations:
-* Checkout process - payment forms with all the necessary fields that are required to make payment requests, save order information and so on. 
+* Checkout process - payment forms with all the necessary fields that are required to make payment requests, save order information and so on.
 * OMS (Order Management System) - state machines, all necessary commands for making modification requests and conditions for changing order statuses accordingly.
 
 
@@ -62,7 +63,9 @@ The `SprykerEco.Computop` module provides the following payment methods:
 * [SofortÜberweisung](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-sofort.html)
 
 ### PSD2 compatibility
+
 Computop PSP integration supports PSD2. For CreditCard and PayNow payment methods, customer address and additional information is sent to Computop to prevent fraud actions.
 
 ### Notifications
+
 Push notifications speed up order placement process for customers. They allow to place orders regardless of the authorization of cards or money transfer for payment methods such as Sofortüberweisung or IDeal. After a customer places an order, they are redirected to the checkout success page. When authorization or money transfer is complete, Computop notifies the shop via a push notification. Order status is updated according to the push notification and the order moves forward in the state machine.

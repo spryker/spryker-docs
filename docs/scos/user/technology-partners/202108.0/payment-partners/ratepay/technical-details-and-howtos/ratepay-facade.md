@@ -28,7 +28,7 @@ related:
     link: docs/scos/user/technology-partners/page.version/payment-partners/ratepay/technical-details-and-howtos/ratepay-state-machine-commands-and-conditions.html
 ---
 
-| Facade Method | Param | Return | Description |
+| FACADE METHOD | PARAMETER | RETURN | DESCRIPTION |
 | --- | --- | --- | --- |
 | `saveOrderPayment` | `QuoteTransfer`, `CheckoutResponseTransfer` | void | Saves RatePAY payment method data according to quote and checkout response transfer data. |
 | `initPayment` | `QuoteTransfer` | `RatepayResponseTransfer` | Performs the init payment request to RatePAY Gateway to retrieve transaction data. |

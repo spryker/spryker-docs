@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/payone-facade
 ---
 
-|Facade Method |Param |Return |Description |
+|FACEDE METHOD |PARAMETER | RETURN |DESCRIPTION |
 | --- | --- | --- | --- |
 | `saveOrder` | `QuoteTransfer`, `CheckoutResponseTransfer` | void | Saves Payone payment method data according to quote and checkout response transfer data. |
 | `authorizePayment` | `OrderTransfer` | `AuthorizationResponseContainer` | Performs payment authorization request to Payone API. |

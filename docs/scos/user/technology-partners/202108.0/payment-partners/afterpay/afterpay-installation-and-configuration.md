@@ -25,6 +25,7 @@ The following guide describes how to install and configure AfterPay in your proj
 ## Installation
 
 To install AfterPay, run the command in the console:
+
 ```php
 composer require spryker-eco/after-pay
 ```
@@ -38,13 +39,13 @@ The `API_ENDPOINT_BASE_URL` parameter should be a link: you should get it from A
 You should also get `API_CREDENTIALS_AUTH_KEY` and `PAYMENT_INVOICE_CHANNEL_ID` from your AfterPay account.
 
 You can use different Checkout Services; to select one, set up `$config[AfterPayConstants::AFTERPAY_AUTHORIZE_WORKFLOW]`:
-
 * One-Step Authorization → `AFTERPAY_AUTHORIZE_WORKFLOW_ONE_STEP`
 * Two-Step Authorization → `AFTERPAY_AUTHORIZE_WORKFLOW_TWO_STEPS`
 
 If you want to use Two-Step Authorization, in the Pyz layer, create the `Pyz\Yves\CheckoutPage\Process\Steps\PaymentStep.php` class and extend `SprykerShop\Yves\CheckoutPage\Process\Steps\PaymentStep.php` if `Pyz\Yves\CheckoutPage\Process\Steps\PaymentStep.php` does not exist. After that, you use `AfterPayClient`, call `getAvailablePaymentMethods()`, and handle the request for your specific logic.
 
 Add the new code to `config/Shared/config_default.php`:
+
 ```php
 ...
 use SprykerEco\Shared\AfterPay\AfterPayConfig;
@@ -65,11 +66,13 @@ $config[AfterPayConstants::AFTERPAY_RISK_CHECK_CONFIGURATION] = [
 ```
 
 Replace this line in `config/Shared/config_default.php`:
+
 ```php
 $ENVIRONMENT_PREFIX = '';
 ```
 
 with this:
+
 ```php
 $ENVIRONMENT_PREFIX = 'AfterPay-local';
 ```
@@ -190,7 +193,7 @@ use SprykerEco\Zed\AfterPay\Communication\Plugin\Oms\Condition\IsRefundCompleted
  }
  ```
 
-In the `src/Pyz/Zed/Oms/OmsDependencyProvider.php` in `provideBusinessLayerDependencies()` method replace
+In the `src/Pyz/Zed/Oms/OmsDependencyProvider.php` in `provideBusinessLayerDependencies()` method replace this:
 
 ```php
 $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
@@ -200,7 +203,7 @@ $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $
 });
 ```
 
-with:
+with this:
 ```php
 $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
  $commandCollection->add(new SendOrderConfirmationPlugin(), 'Oms/SendOrderConfirmation');
@@ -220,4 +223,3 @@ $container->extend(self::CONDITION_PLUGINS, function (ConditionCollectionInterfa
  return $conditionCollection;
 });
 ```
-

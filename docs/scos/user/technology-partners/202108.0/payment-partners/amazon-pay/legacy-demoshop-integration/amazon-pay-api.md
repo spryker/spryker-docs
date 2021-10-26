@@ -33,29 +33,28 @@ So far we discussed the client side implementation provided by Amazon Pay. On th
 Another part of the implementation is the Amazon Pay API function wrapper, implemented as a Facade.
 
 Each API call involves similar classes from the module:
-
-* An adapter for adapting Amazon SDK that makes the rest of the module independent of the external library;
-* A converter from Amazon responses to Spryker OS transfer objects;
-* A logger for logging information about API calls;
+* An adapter for adapting Amazon SDK that makes the rest of the module independent of the external library.
+* A converter from Amazon responses to Spryker OS transfer objects.
+* A logger for logging information about API calls.
 * A transaction for updating transfer objects.
 
 Since it is a standard Spryker OS practice, an entry point is a public method of the Facade, so the flow for a typical transaction includes the following steps:
-
 1. Logically grouping the affected order items, based on the transaction type:
-* for authorize & capture - by AuthorizationReferenceId
-* for refund & capture status update - by AmazonCaptureId
-* no grouping is required for close and cancel since operations are performed for the whole order.
-2. The following steps are executed for each group separately
-* Calling Facade method.
-* Facade creates a related transaction handler or a collection of transaction handlers.
-* The transaction handler has execute method expecting an AmazonCallTransfer object as a parameter.
-* The transaction handler passes a transfer object to the adapter which is responsible for direct communication with the Amazon Pay API. Using the provided SDK it converts API responses into transfer objects using converters. Apart from adapters and converters, the rest of the code does not know anything about Amazon Pay API details and only works with Spryker OS transfer objects.
-* If not all order items, belonging to a logical group, where requested for the update, a new group is created for affected order items.
-* The transaction handler returns a modified transfer object. All information related to Amazon Pay is stored into AmazonpayPaymentTransfer transfer object and into the database.
+  * For authorize & capture - by AuthorizationReferenceId.
+  * For refund & capture status update - by AmazonCaptureId.
+  * No grouping is required for close and cancel since operations are performed for the whole order.
+2. The following steps are executed for each group separately:
+  * Calling Facade method.
+  * Facade creates a related transaction handler or a collection of transaction handlers.
+  * The transaction handler has execute method expecting an AmazonCallTransfer object as a parameter.
+  * The transaction handler passes a transfer object to the adapter which is responsible for direct communication with the Amazon Pay API. Using the provided SDK it converts API responses into transfer objects using converters. Apart from adapters and converters, the rest of the code does not know anything about Amazon Pay API details and only works with Spryker OS transfer objects.
+  * If not all order items, belonging to a logical group, where requested for the update, a new group is created for affected order items.
+  * The transaction handler returns a modified transfer object. All information related to Amazon Pay is stored into AmazonpayPaymentTransfer transfer object and into the database.
 
-## Additional Information
-### Initializing Quote Transfer Objects
+## Initializing Quote Transfer Objects
+
 After a user signs in via Amazon Pay, we can make API calls against the order. The first step is to initialize order data and store it to a quote transfer object using the Quote updater classes. These classes work in a similar way to transaction handlers. However, they only retrieve information from Amazon (if necessary) and then save it to a Quote.
+
 **There are three steps for initializing a new order:**
 1. Retrieve and update buyer information.
 2. Create payment transfer objects.
@@ -67,7 +66,8 @@ The updater class for retrieving buyer data is called `GuestCustomerDataQuoteUpd
 We have this call instead of taking current user data to create a separation between Spryker and Amazon accounts and enable the ability to make an order without a Spryker account.
 If a logged in user places an order, the order would be still assigned to him and visible in the Customer area.
 
-### Updating Shipment Address and Method
+## Updating Shipment Address and Method
+
 Once a buyer chooses a shipment address from the Address widget, a Javascript callback is triggered.
 We notify the server side that the user has changed their shipping address.
 Then we use the Facade method `addSelectedAddressToQuote` to return the updated quote object and save the updated quote.
@@ -75,14 +75,14 @@ Now the quote contains updated address information and it's possible to retrieve
 The Spryker OS provides a Shipment module and uses method `getAvailableMethods()` to retrieve the shipment methods list and send it back to the customer.
 Once shipping options are updated a buyer can choose one. Usually, shipment methods affect the total price of the order and it must be recalculated using the Calculation module.
 
-### Placing an Order 
+## Placing an Order
+
 Once all necessary information is saved into Quote, an order is ready to be placed.
 First, perform all related API calls and then persist an order in the database.
-All API related jobs are covered by only one Facade method confirmPurchase() which encapsulates five Amazon Pay API calls to be executed one after another:
-
-1. `SetOrderReferenceDetails` for specifying order total amount
-2. `ConfirmOrderReference` for confirming the order
-3. `GetOrderReferenceDetails` for retrieving information about buyer (like name and shipping address)
+All API related jobs are covered by only one Facade method `confirmPurchase()` which encapsulates five Amazon Pay API calls to be executed one after another:
+1. `SetOrderReferenceDetails` for specifying order total amount.
+2. `ConfirmOrderReference` for confirming the order.
+3. `GetOrderReferenceDetails` for retrieving information about buyer (like name and shipping address).
 4. `AuthorizeOrderTransaction` for authorizing and capturing a payment and decline handling if something goes wrong.
 5. `CancelPreOrderTransaction` for canceling the order. It should be done in some cases of declined authorization.
 
@@ -101,9 +101,11 @@ foreach ($this->transactionHandlers as $transactionHandler) {
 
 return $amazonpayCallTransfer;
 ```
+
 Once a transaction is finished successfully, we pass the updated quote transfer to the next transaction. If the transaction fails, we return the current one and it contains all information about an error.
 
-### Authorization in Asynchronous and Synchronous Modes. CaptureNow Setting
+## Authorization in Asynchronous and Synchronous Modes. CaptureNow Setting
+
 The authorization API call is configurable and it reflects the whole payment process.
 
 The first important setting is the `transaction_timeout` that defines the maximum number of minutes allocated for the Authorize operation call to be processed, after which the authorization is automatically declined and you cannot capture funds against the authorization.
@@ -112,7 +114,8 @@ Zero value means that authorization result has to be returned immediately and it
 
 Another important setting is `CaptureNow`. It can only be true or false and if set to true then both requests - Authorization and Capture will be done in one step, within Authorize API call.
 
-### Handling Declined payments - Synchronous Workflow
+## Handling Declined payments - Synchronous Workflow
+
 Amazon Pay documentation defines a workflow which has to be implemented on a merchant side.
 <!-- (Image) -->
 In some cases, declined payment involves additional API calls. This is why there is an additional transaction collection called `HandleDeclinedOrderTransaction`. This call goes after the Authorization step and encapsulates two transaction objects:
@@ -123,16 +126,18 @@ If it is open, then the order must be canceled with a `CancelOrderTransaction` c
 The rest of decline flow includes logic determining where to redirect a buyer. In sandbox mode, for each test account, Amazon provides fake payment methods for emulating error API responses.
 
 {% info_block errorBox "Important" %}
+
 Even if a response has status code 200 it still may contain Constraint(s) in the response body.
+
 {% endinfo_block %}
 
 There is one special constraint related to selected payment method `PaymentMethodNotAllowed`. If it occurs (rarely) the buyer should be redirected to the same page with address and payment widgets and be able to choose a different payment method and all other order parameters as well.
 
-### Handling Declined Payments - Asynchronous Workflow
+## Handling Declined Payments - Asynchronous Workflow
+
 Unlike synchronous authorization it is impossible to get the result of authorization in the response. Authorization objects stay in Pending state until authorized. Capture and Refund requests can also be processed in the same way and Amazon provides Internet Payment Notification (IPN) in order to notify the shop about the new status of any asynchronous request. IPN message is an HTTP request with some special Amazon-related headers and the body which is an XML string containing all data. The merchant has to specify URL for receiving and processing IPN messages.
 
 The module provides two Facade's methods:
-
 * `convertAmazonPayIpnRequest` (array `$headers`, `$body`) for converting an Amazon request (which is HTTP headers and body) to the transfer object. For each type of IPN request, we provide a related transfer object and method. `convertAmazonPayIpnRequest()` returns one of them.
 
 * `handleAmazonPayIpnRequest` (`AbstractTransfer` `$ipnRequestTransfer`) should be called. It has `AbstractTransfer` type for its argument and it works with all types of IPN related transfer objects. A typical flow of a successful flow usually involves pending statuses of authorization and capture requests.

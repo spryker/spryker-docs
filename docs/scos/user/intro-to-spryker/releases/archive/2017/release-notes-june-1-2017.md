@@ -16,7 +16,7 @@ Previously, Yves and Zed` SessionServiceProvider` contained a switch statement t
 
 **Affected modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a |  [Session 3.2.0](https://github.com/spryker/Session/releases/tag/3.2.0) | [Testify 3.2.4](https://github.com/spryker/Testify/releases/tag/3.2.4) |
 
@@ -25,7 +25,7 @@ The autoload entry for deprecated Testify\Module\Environment Codeception Helper 
 
 **Affected (Undefined variable: General.Bundle/Module)s**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Testify 3.2.5](https://github.com/spryker/Testify/releases/tag/3.2.5) |
 
@@ -38,7 +38,7 @@ This release is backward compatible, so if you have your own image collector fun
 
 **Affected modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | <ul><li>[ProductImage 3.2.0](https://github.com/spryker/product-image/releases/tag/3.2.0)</li><li>[ProductManagement 0.5.0](https://github.com/spryker/product-management/releases/tag/0.5.0)</li></ul> | n/a |
 
@@ -47,7 +47,7 @@ Previously, it was not possible to get the config of the module inside of the `D
 
 **Affected modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a |  [Kernel 3.3.0](https://github.com/spryker/Kernel/releases/tag/3.3.0)| n/a |
 
@@ -56,7 +56,7 @@ For performance reasons, we have moved `glob()` from `ZedNavigationConfig` to `Z
 
 **Affected modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | <ul><li>[Twig 3.1.3](https://github.com/spryker/Twig/releases/tag/3.1.3)</li><li>[ZedNavigation 1.0.6](https://github.com/spryker/zed-navigation/releases/tag/1.0.6)</li></ul> |
 
@@ -68,7 +68,7 @@ We have now extended the touch handling to touch the entire tree branch from the
 
 **Affected modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | <ul><li>[Category 3.2.0](https://github.com/spryker/Category/releases/tag/3.2.0)</li><li>[ProductCategory 4.2.0](https://github.com/spryker/product-category/releases/tag/4.2.0)</li></ul> | n/a |
 
@@ -77,7 +77,7 @@ We had an issue with multiple vouchers coming from the same pool. Propel’s `Ob
 
 **Affected modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Discount 4.0.2](https://github.com/spryker/Discount/releases/tag/4.0.2) |
 
@@ -86,6 +86,6 @@ There was an error because of conversion from int to `dec` and dec to `int`. The
 
 **Affected modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [Currency 2.1.0](https://github.com/spryker/Currency/releases/tag/2.1.0) | <ul><li>[ProductManagement 0.6.0](https://github.com/spryker/product-management/releases/tag/0.6.0)</li><li>[ProductManagement 0.6.1](https://github.com/spryker/product-management/releases/tag/0.6.1)</li></ul> |

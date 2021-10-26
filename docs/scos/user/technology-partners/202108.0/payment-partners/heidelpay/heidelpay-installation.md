@@ -43,6 +43,7 @@ To install Heidelpay, if necessary, add  the Heidelpay repo to your repositories
  ```
 
 and run the following console command:
+
 ```php
 composer require spryker-eco/heidelpay
 ```

@@ -29,10 +29,12 @@ Prepayment method is a safe alternative to payments involving credit cards or de
 The payment status is transmitted to the shop via a notification from the payment provider(Payone).
 
 ## Front-end Integration
+
 To adjust the frontend appearance, provide the following templates in your theme directory:
 `src/<project_name>/Yves/Payone/Theme/<custom_theme_name>/prepayment.twig`
 
 ## State Machine Integration
+
 Payone module provides a demo state machine for Prepayment payment method which implements Preauthorization/Capture flow.
 
 To enable the demo state machine, extend the configuration with the following values:

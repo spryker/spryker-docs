@@ -17,9 +17,10 @@ related:
 ## Partner Information
 
 [ABOUT SEVEN SENDERS](https://www.sevensenders.com/)
-SEVEN SENDERS optimizes international cross-border shipments by serving as Europe's Leading Delivery Platform. We unite online retailers of all sizes with local premium carriers abroad, thereby achieving faster and cheaper delivery for customers worldwide. In addition, we offer the SaaS-based solution SENDWISE, that brings full transparency into the international parcel flow, offers seamless tracking and a proactive communication with the end customer to provide a unique shopping experience. 
 
-YOUR ADVANTAGES: 
+SEVEN SENDERS optimizes international cross-border shipments by serving as Europe's Leading Delivery Platform. We unite online retailers of all sizes with local premium carriers abroad, thereby achieving faster and cheaper delivery for customers worldwide. In addition, we offer the SaaS-based solution SENDWISE, that brings full transparency into the international parcel flow, offers seamless tracking and a proactive communication with the end customer to provide a unique shopping experience.
+
+YOUR ADVANTAGES:
 
 * Seamless integration into the services offered by SEVEN SENDERS
 * Full control over the customer experience during the delivery process
@@ -30,7 +31,7 @@ YOUR ADVANTAGES:
 * Harmonization of shipment data including all shipping providers and warehouse locations
 * Access to all premium parcel delivery providers through one platform
 * Multi-carrier solution: the optimal carrier for each parcel
-* Straightforward connection to the own online shop through our APIs and partner plugins 
+* Straightforward connection to the own online shop through our APIs and partner plugins
 
 ## Installation
 

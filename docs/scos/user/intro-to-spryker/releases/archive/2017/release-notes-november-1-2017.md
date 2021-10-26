@@ -22,18 +22,18 @@ This release focuses on enabling multi-currency for shipments. It allows you to 
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | [Shipment 6.0.0](https://github.com/spryker/Shipment/releases/tag/6.0.0) | <ul><li>[Kernel 3.13.0](https://github.com/spryker/Kernel/releases/tag/3.13.0)</li><li>[Money 2.3.0](https://github.com/spryker/Money/releases/tag/2.3.0)</li></ul> |[ShipmentDiscountConnector 1.1.1](https://github.com/spryker/shipment-discount-connector/releases/tag/1.1.1)  |
 
 **Documentation**
-For module documentation, see Shipment Module Guide<!--/module_guide/spryker/shipment.htm)-->.
-For detailed migration guides, see [Shipment Module Migration Guide from Version 5. to 6](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-shipment.html#upgrading-from-version-5-to-version-6).
+<br>For module documentation, see Shipment Module Guide<!--/module_guide/spryker/shipment.htm)-->.
+<br>For detailed migration guides, see [Shipment Module Migration Guide from Version 5. to 6](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-shipment.html#upgrading-from-version-5-to-version-6).
 For store administration guides, see Shipment Store Administration Guide<!--/administration_interface_guide/shipment.htm)-->
 For other related documentation, see [HowTo - Add New Shipment Method](/docs/scos/dev/tutorials-and-howtos/howtos/howto-add-a-new-shipment-method-2.0.html)
 
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -52,15 +52,15 @@ This release provides the required infrastructure for Publish &amp; Synchronisat
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | <ul><li>[Event 2.0.0](https://github.com/spryker/Event/releases/tag/2.0.0)</li><li>[Queue 1.0.0](https://github.com/spryker/Queue/releases/tag/1.0.0)</li><li>[RabbitMq 1.0.0](https://github.com/spryker/rabbit-mq/releases/tag/1.0.0)</li></ul> | <ul><li>[Availability 5.2.0](https://github.com/spryker/Availability/releases/tag/5.2.0)</li><li>[Category 4.2.0](https://github.com/spryker/Category/releases/tag/4.2.0)</li><li>[Cms 6.3.0](https://github.com/spryker/Cms/releases/tag/6.3.0)</li><li>[CmsBlock 1.4.0](https://github.com/spryker/cms-block/releases/tag/1.4.0)</li><li>[Console 3.2.0](https://github.com/spryker/Console/releases/tag/3.2.0)</li><li>[EventBehavior 0.1.0](https://github.com/spryker/event-behavior/releases/tag/0.1.0)</li><li>[Glossary 3.2.0](https://github.com/spryker/Glossary/releases/tag/3.2.0)</li><li>[Kernel 3.12.0](https://github.com/spryker/Kernel/releases/tag/3.12.0)</li><li>[Navigation 2.1.0](https://github.com/spryker/Navigation/releases/tag/2.1.0)</li><li>[Price 4.3.0](https://github.com/spryker/Price/releases/tag/4.3.0)</li><li>[Product 5.3.0](https://github.com/spryker/Product/releases/tag/5.3.0)</li><li>[ProductCategory 4.4.0](https://github.com/spryker/product-category/releases/tag/4.4.0)</li><li>[ProductGroup 1.1.0](https://github.com/spryker/product-group/releases/tag/1.1.0)</li><li>[ProductImage 3.4.0](https://github.com/spryker/product-image/releases/tag/3.4.0)</li><li>[ProductLabel 2.2.0](https://github.com/spryker/product-label/releases/tag/2.2.0)</li><li>[ProductOption 5.4.0](https://github.com/spryker/product-option/releases/tag/5.4.0)</li><li>[ProductRelation 1.1.0](https://github.com/spryker/product-relation/releases/tag/1.1.0)</li><li>[ProductSearch 5.2.0](https://github.com/spryker/product-search/releases/tag/5.2.0)</li><li>[ProductSet 1.2.0](https://github.com/spryker/product-set/releases/tag/1.2.0)</li><li>[PropelOrm 1.3.0](https://github.com/spryker/propel-orm/releases/tag/1.3.0)</li><li>[Search 6.8.0](https://github.com/spryker/Search/releases/tag/6.8.0)</li><li>[Synchronization 0.1.0](https://github.com/spryker/Synchronization/releases/tag/0.1.0)</li><li>[SynchronizationBehavior 0.1.0](https://github.com/spryker/synchronization-behavior/releases/tag/0.1.0)</li><li>[Transfer 3.5.0](https://github.com/spryker/transfer/releases/tag/3.5.0)</li><li>[Url 3.2.0](https://github.com/spryker/Url/releases/tag/3.2.0)</li><li>[UtilSanitize 2.1.0](https://github.com/spryker/util-sanitize/releases/tag/2.1.0)</li></ul> | n/a |
 
 **Documentation**
-For detailed migration guides, see [RabbitMQ Module Migration Guide from Version 0. to 1](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-rabbitmq.html#upgrading-from-version-0-to-version-1).
+<br>For detailed migration guides, see [RabbitMQ Module Migration Guide from Version 0. to 1](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-rabbitmq.html#upgrading-from-version-0-to-version-1).
 
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -80,7 +80,7 @@ A sub-processes in Spryker state machine allows you to simplify workflows. Each 
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [StateMachine 2.1.0](https://github.com/spryker/state-machine/releases/tag/2.1.0) | n/a |
 
@@ -89,7 +89,7 @@ Previously, we had an issue when reading the number of reserved items to calcula
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [Oms 7.2.0](https://github.com/spryker/Oms/releases/tag/7.2.0) | [Availability 5.2.1](https://github.com/spryker/Availability/releases/tag/5.2.1) |
 
@@ -98,7 +98,7 @@ Previously, there was only one Log configuration which was used by Yves and Zed.
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [Log 3.2.0](https://github.com/spryker/Log/releases/tag/3.2.0) | [Queue 1.0.1](https://github.com/spryker/Queue/releases/tag/1.0.1) |
 
@@ -109,7 +109,7 @@ If you are using `CmsContentWidget` with `Cms` and/or `CmsBlockGui`, and you wan
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | <ul><li>[Cms 6.3.1](https://github.com/spryker/Cms/releases/tag/6.3.1)</li><li>[CmsBlockGui 1.1.4](https://github.com/spryker/cms-block-gui/releases/tag/1.1.4)</li><li>[CmsContentWidget 1.1.1](https://github.com/spryker/cms-content-widget/releases/tag/1.1.1)</li></ul> |
 
@@ -119,7 +119,7 @@ Previously, there was a twig error in Zed order details page when displaying ord
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Sales 8.0.4](https://github.com/spryker/Sales/releases/tag/8.0.4) |
 
@@ -128,7 +128,7 @@ Previously, dependency violation finder ignored Service files during dependency 
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | <ul><li>[Development 3.3.3](https://github.com/spryker/Development/releases/tag/3.3.3)</li><li>[FileSystem 1.0.2](https://github.com/spryker/file-system/releases/tag/1.0.2)</li><li>[Flysystem 1.0.1](https://github.com/spryker/Flysystem/releases/tag/1.0.1)</li><li>[FlysystemAws3v3FileSystem 1.0.1](https://github.com/spryker/flysystem-aws3v3-file-system/releases/tag/1.0.1)</li><li>[FlysystemFtpFileSystem 1.0.1](https://github.com/spryker/flysystem-ftp-file-system/releases/tag/1.0.1)</li><li>[FlysystemLocalFileSystem 1.0.1](https://github.com/spryker/flysystem-local-file-system/releases/tag/1.0.1)</li><li>[UtilDataReader 1.2.1](https://github.com/spryker/util-data-reader/releases/tag/1.2.1)</li><li>[UtilDateTime 1.0.2](https://github.com/spryker/util-date-time/releases/tag/1.0.2)</li><li>[UtilEncoding 2.0.3](https://github.com/spryker/util-encoding/releases/tag/2.0.3)</li><li>[UtilNetwork 1.1.1](https://github.com/spryker/util-network/releases/tag/1.1.1)</li><li>[UtilSanitize 2.1.1](https://github.com/spryker/util-sanitize/releases/tag/2.1.1)</li><li>[UtilText 1.2.1](https://github.com/spryker/util-text/releases/tag/1.2.1)</li></ul> |
 
@@ -137,7 +137,7 @@ Since the [Multi-currency for Discounts](/docs/scos/user/intro-to-spryker/releas
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [DiscountPromotion 1.0.3](https://github.com/spryker/discount-promotion/releases/tag/1.0.3) |
 
@@ -146,7 +146,7 @@ Previously, `InsertSqlConsole` used a wrong path configuration. Executing this c
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Propel 3.2.2](https://github.com/spryker/Propel/releases/tag/3.2.2) |
 
@@ -155,7 +155,7 @@ Our recent Calculation 4.2.0 release introduced a BC breaking issue in Calculati
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Calculation 4.2.1](https://github.com/spryker/Calculation/releases/tag/4.2.1) |
 

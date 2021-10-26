@@ -263,7 +263,7 @@ A complete list of all Spryker features can be found in the [Features](/docs/sco
 
 {% endinfo_block %}
 
-To install a new feature or update an existing one, follow the instructions of the [Integration Guide](/docs/scos/dev/feature-integration-guides/{{site.version}}/about-integration-guides.html) for the feature you want to install/update.
+To install a new feature or update an existing one, follow the instructions of the [Integration Guide](/docs/scos/dev/feature-integration-guides/{{site.version}}/feature-integration-guides.html) for the feature you want to install/update.
 
 {% info_block warningBox "Warning" %}
 

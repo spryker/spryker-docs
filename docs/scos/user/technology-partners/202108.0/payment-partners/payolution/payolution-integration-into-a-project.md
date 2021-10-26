@@ -28,9 +28,11 @@ There is currently an issue when using giftcards with Payolution. Our team is de
 {% endinfo_block %}
 
 ## Prerequisites
+
 Before proceeding with the integration, make sure you have [installed and configured](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/payolution/payolution-installation-and-configuration.html) the Payolution module.
 
 ## Frontend Integration
+
 To show Payolution on Frontend, extend the payment view:
 
 **src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig**

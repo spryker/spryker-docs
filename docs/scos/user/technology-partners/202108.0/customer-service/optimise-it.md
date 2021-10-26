@@ -15,7 +15,9 @@ related:
 ---
 
 ## Partner Information
+
 [ABOUT OPTIMIZE IT](https://www.optimise-it.de/de/)
+
 We ❤ Conversations!
 
 As one of the leading chat service providers in Europe, optimise-it focuses primarily on a custom tailored chat solution, which can include integrations of messengers (WhatsApp, Facebook, Apple Business Chat), chatbots, video-chat, co-browsing, screen sharing, and more. With their inhouse chat lab, they provide experienced and performance driven chat agents for their full service customers. optimise-it’s customers include leading companies like BASF, Migros, Eurowings, Deutsche Bahn and 1&1.
@@ -37,4 +39,3 @@ See [Disclaimer](https://github.com/spryker/spryker-documentation).
 For further information on this partner and integration into Spryker, please contact us.
 
 <div class="hubspot-form js-hubspot-form" data-portal-id="2770802" data-form-id="163e11fb-e833-4638-86ae-a2ca4b929a41" id="hubspot-1"></div>
-

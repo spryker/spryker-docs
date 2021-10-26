@@ -21,6 +21,7 @@ related:
 ## Installation
 
 To install Episerver, run the command in the console:
+
 ```php
 composer require spryker-eco/episerver
 ```
@@ -37,7 +38,7 @@ To get `ORDER_LIST_AUTHORIZATION_CODE` or `CUSTOMER_LIST_AUTHORIZATION_CODE`, go
 
 To get any `...MAILING_ID`, go to:
 
-<b>Menu → Transactional mails → ID</b>
+Menu → Transactional mails → ID
 
 ```php
 $config[EpiserverConstants::REQUEST_BASE_URL] = 'https://api.campaign.episerver.net/';

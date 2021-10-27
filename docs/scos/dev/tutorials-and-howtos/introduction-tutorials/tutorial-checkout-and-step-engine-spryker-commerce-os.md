@@ -22,8 +22,10 @@ redirect_from:
 ---
 
 {% info_block infoBox %}
-This tutorial is also available on the Spryker Training web-site. For more information and hands-on exercises, visit the [Spryker Training](https://training.spryker.com/courses/developer-bootcamp
-{% endinfo_block %} web-site.)
+
+This tutorial is also available on the Spryker Training web-site. For more information and hands-on exercises, visit the [Spryker Training](https://training.spryker.com/courses/developer-bootcamp) web-site.
+
+{% endinfo_block %}
 
 ## Challenge Description
 This task helps you to learn how to:
@@ -102,7 +104,9 @@ class CheckoutPageRouteProviderPlugin extends SprykerShopCheckoutPageRouteProvid
 4. Next, add the voucher step class inside `src/Pyz/Yves/CheckoutPage/Process/Steps` and call it **VoucherStep**.
 
 {% info_block infoBox "Info" %}
+
 `VoucherStep` should extend the `AbstractBaseStep` class from core.<br>As you may notice, `CalculationClient` is injected into the class. We will use this client later when we apply the discount, as we need to recalculate the grand total with the applied voucher code.
+
 {% endinfo_block %}
 
 ```php
@@ -481,8 +485,11 @@ Add the twig template for the voucher form in `src/Pyz/Yves/CheckoutPage/Theme/d
 5. Next, let’s bind the form to the transfer object.
 
 {% info_block infoBox %}
+
 In the `VoucherForm` form class, we have already added the `property_path` to the text field with the value 'voucher'.
+
 {% endinfo_block %}
+
 
 To finish the binding, you need to extend `QuoteTransfer` in `src/Pyz/Shared/Checkout/Transfer` and call it **checkout.transfer.xml**.
 
@@ -536,8 +543,10 @@ public function voucherAction(Request $request)
 ```
 
 {% info_block infoBox "Info" %}
-The step has a form now and receives the voucher code value from the customer. Go to the [shop](http://www.de.suite.local/
-{% endinfo_block %} and try it out.)
+
+The step has a form now and receives the voucher code value from the customer. Go to the [shop](http://www.de.suite.local/) and try it out.
+
+{% endinfo_block %}
 
 ## 3. Apply the Voucher in the Step Execution
 
@@ -548,9 +557,7 @@ The step has a form now and receives the voucher code value from the customer. G
     3. Add the rule Sku equals to *, so the voucher code is applied on all products in the shop.
     4. Save and then go the **Voucher codes** tab and generate the codes.
 
-2. Now, you need to implement the `execute()` method in `VoucherStep`to calculate the new grand total after applying the discount.
-
-To do so, use the `CalculationClient`:
+2. Now, you need to implement the `execute()` method in `VoucherStep`to calculate the new grand total after applying the discount. To do so, use the `CalculationClient`:
 
     1. Add the voucher code which you from the form into a discount transfer object.
     2. The **CalculationClient** in the checkout works only with the quoteTransfer, thus you need to add the discount transfer back to the `quoteTransfer` using the method `$quoteTransfer→addVoucherDiscount()`.

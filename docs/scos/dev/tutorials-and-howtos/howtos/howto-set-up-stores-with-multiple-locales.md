@@ -184,11 +184,16 @@ The `spy_url` table stores the URLs that correspond to:
 For each category there is a distinct URL for each configured locale. Similar for product details pages. These URLs are automatically created and stored in the database when importing products and categories through the `Importer`.
 
 {% info_block infoBox "Info" %}
+
 `/en/computers` and `/de/computers` are the URL’s for the same category but for different locales.
+
 {% endinfo_block %}
 
 The URLs assigned for each imported CMS static page are distinct for each defined locale.
 
 {% info_block infoBox "Info" %}
-`/en/privacy` and `/de/datenschutz` point to the same template; when rendered, they’ll be loaded with the glossary values that correspond to the associated locale.
+
+`/en/privacy` and `/de/datenschutz` point to the same template; when rendered, they’ll be loaded with the glossary values that correspond to the associated
+locale.
+
 {% endinfo_block %}

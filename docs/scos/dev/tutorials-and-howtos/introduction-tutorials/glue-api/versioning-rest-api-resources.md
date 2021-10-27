@@ -26,8 +26,10 @@ related:
 In the course of development of your REST APIs, you may need to change the data contracts of API resources. However, you can also have clients that rely on the existing contracts. To preserve backward compatibility for such clients, we recommend implementing a versioning system for REST API resources. In this case, each resource version has its own contract in terms of data, and various clients can request the exact resource versions they are designed for.
 
 {% info_block infoBox %}
-Resources provided by Spryker out of the box do not have a version. When developing resources, only new resources, attributes etc are added without removing anything, which ensures backward compatibility for all clients. </br>If necessary, you can implement versioning for built-in resources as well by [extending](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/extending-a-rest-api-resource.html
-{% endinfo_block %} the corresponding resource module on your project level.)
+
+Resources provided by Spryker out of the box do not have a version. When developing resources, only new resources, attributes etc are added without removing anything, which ensures backward compatibility for all clients. </br>If necessary, you can implement versioning for built-in resources as well by [extending](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/extending-a-rest-api-resource.html) the corresponding resource module on your project level.
+
+{% endinfo_block %}
 
 To implement versioning for a REST API resource, you need to do the following:
 
@@ -36,8 +38,10 @@ To implement versioning for a REST API resource, you need to do the following:
 To add versioning to a resource, the route plugin of the resource module needs to implement not only `ResourceRoutePluginInterface`, but also `\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceVersionableInterface`. The latter exposes a method called `getVersion` that allows you to set the resource version.
 
 {% info_block warningBox %}
-For more information on route plugins, see the [Resource Routing](/docs/scos/dev/back-end-development/glue-api/glue-infrastructure.html#resource-routing
-{% endinfo_block %} section in **Glue Infrastructure**.)
+
+For more information on route plugins, see the [Resource Routing](/docs/scos/dev/back-end-development/glue-api/glue-infrastructure.html#resource-routing) section in **Glue Infrastructure**.
+
+{% endinfo_block %}
 
 Let us consider the following implementation of a route plugin:
 

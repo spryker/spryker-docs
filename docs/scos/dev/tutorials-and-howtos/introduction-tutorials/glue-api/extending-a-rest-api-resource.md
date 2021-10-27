@@ -27,9 +27,11 @@ related:
 
 Spryker Glue REST API comes with a set of predefined APIs out of the box. You have the possibility to extend and customize them to your own project needs. For this purpose, you need to extend the Glue API modules that provide the relevant functionality on your project level.
 
-{% info_block infoBox "Before You Begin" %}
-The following guide relies on your knowledge of the structure of a Glue REST API resource module and the behavior of its constituents. For more details, see the [Resource Modules](/docs/scos/dev/back-end-development/glue-api/glue-infrastructure.html#resource-modules
-{% endinfo_block %} section in **Glue Infrastructure**.)
+{% info_block infoBox %}
+
+The following guide relies on your knowledge of the structure of a Glue REST API resource module and the behavior of its constituents. For more details, see the [Resource Modules](/docs/scos/dev/back-end-development/glue-api/glue-infrastructure.html#resource-modules) section in **Glue Infrastructure**.
+
+{% endinfo_block %}
 
 ## Prerequisites:
 To complete this tutorial, you need to comply with the following prerequisites:
@@ -39,14 +41,18 @@ To complete this tutorial, you need to comply with the following prerequisites:
 * [Integrate Products API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html).
 
 {% info_block infoBox %}
-If you have a development virtual machine with the [B2C Demo Shop](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2bb2c-demo-shops
-{% endinfo_block %} installed, all the required components will be available out of the box.)
+
+If you have a development virtual machine with the [B2C Demo Shop](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2bb2c-demo-shops) installed, all the required components will be available out of the box.
+
+{% endinfo_block %}
 
 Also, let us assume that you modified the product storage data to match your product requirements. For example, let's assume that you added the `manufacturerCountry` field to the product data not as an attribute, but as another field in the database.
 
 {% info_block warningBox %}
-For more details, see [Database schema for product attributes](/docs/scos/user/features/product-feature-overview/product-attributes-overview.html#database-schema-for-product-attributes)
-{% endinfo_block %} and [Extending the Database Schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html).)
+
+For more details, see [Database schema for product attributes](/docs/scos/user/features/product-feature-overview/product-attributes-overview.html#database-schema-for-product-attributes) and [Extending the Database Schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html).
+
+{% endinfo_block %}
 
 Now, let us add this field to responses of the _Products API_ endpoints:
 
@@ -56,7 +62,9 @@ First of all, we need to extend the existing Glue Transfers that describe Glue a
 * Create file `src/Pyz/Shared/ProductsRestApi/Transfer/products_rest_api.transfer.xml` that will extend the transfer on the project level
 
 {% info_block warningBox %}
+
 All transfer file names end with `.transfer.xml`.
+
 {% endinfo_block %}
 
 * In the newly created file, define only the field(s) you want to add, in our case, `manufacturerCountry`:

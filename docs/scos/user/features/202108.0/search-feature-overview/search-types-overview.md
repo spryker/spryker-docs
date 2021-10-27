@@ -1,5 +1,6 @@
 ---
 title: Search types overview
+last_updated: Jul 8, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/search-types-overview
 originalArticleId: 39ea357f-d75f-47e9-ac77-0c4073b7d0ad

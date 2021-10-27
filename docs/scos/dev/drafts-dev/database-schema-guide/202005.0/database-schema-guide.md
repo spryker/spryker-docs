@@ -1,4 +1,5 @@
----
+---last_updated: Sep 15, 2020
+
 title: Database Schema Guide
 originalLink: https://documentation.spryker.com/v5/docs/database-schema-guide
 originalArticleId: 4b1b3a11-b44e-42f0-994b-787012b0f02f

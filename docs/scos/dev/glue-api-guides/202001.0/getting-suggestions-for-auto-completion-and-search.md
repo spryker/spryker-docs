@@ -1,6 +1,7 @@
 ---
 title: Getting Suggestions for Auto-Completion and Search
 description: This article provides information on which endpoints to use to get search and auto-completion suggestions for your products, categories, and CMS fields.
+last_updated: Aug 13, 2020
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/retrieving-suggestions-for-auto-completion-and-search
 originalArticleId: aafe0de5-a866-40dd-834b-9f7eeb26f723

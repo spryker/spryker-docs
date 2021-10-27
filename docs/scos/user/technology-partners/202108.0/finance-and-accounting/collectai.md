@@ -1,6 +1,7 @@
 ---
 title: CollectAI
 description: Integrate Collect AI into Spryker Commerce OS  to have digitized, AI-based payments and collection services to manage account receivables.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/collect-ai
 originalArticleId: a2a855d2-1680-44e9-9e69-b11a59936f78
@@ -15,7 +16,9 @@ related:
 ---
 
 ## Partner Information
+
 [ABOUT COLLECTAI](https://www.collect.ai/de/)
+
 Digital accounts receivable management based on AI collection services
 
 collectAI is a software platform providing digitised, AI-based payments and collection services to manage accounts receivables. Covering the end-to-end process from e-invoicing and payment reminder to debt collection it flexibly optimises the goals of collection rates, costs and customer retention. In addition, the company offers payment links as well as business process outsourcing services. It uses digital communication channels and payment solutions for a frictionless checkout process. With its proprietary technology, collectAI fundamentally improves the customer experience, putting the needs and behaviour of the end consumer to the centre of the service. collectAI, founded in 2016, is part of Germany’s largest e-commerce retailer, the Otto Group.

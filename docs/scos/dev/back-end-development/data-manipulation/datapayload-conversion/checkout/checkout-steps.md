@@ -1,6 +1,7 @@
 ---
 title: Checkout Steps
 description: This topic provides information about all checkout steps available for the customers.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/checkout-steps
 originalArticleId: aaea28ee-4c66-4e4d-8a2f-e74a6ead5e6b

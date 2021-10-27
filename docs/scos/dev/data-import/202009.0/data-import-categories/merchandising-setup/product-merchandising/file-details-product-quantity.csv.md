@@ -1,5 +1,6 @@
 ---
 title: File details- product_quantity.csv
+last_updated: May 12, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/v6/docs/file-details-product-quantitycsv
 originalArticleId: 50080142-12df-4c6c-9f6e-9eb35aa63723

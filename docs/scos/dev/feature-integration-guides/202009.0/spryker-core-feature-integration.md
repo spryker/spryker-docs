@@ -1,6 +1,7 @@
 ---
 title: Spryker core feature integration
 description: The procedure to integrate Spryker Core feature into your project.
+last_updated: Apr 14, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/spryker-core-feature-integration
 originalArticleId: 7a5377da-7175-493a-ba61-4c396acf0d3d

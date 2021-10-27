@@ -1,6 +1,7 @@
 ---
 title: Eco- Punchout Catalogs + Product Bundles feature integration
 description: Integrate Eco- Punchout Catalogs + Product Bundles Feature into the Spryker Commerce OS.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/eco-punchout-catalogs-product-bundles-feature-integration
 originalArticleId: f531698b-bacc-4a88-874a-9773a439c598
@@ -12,23 +13,26 @@ redirect_from:
 ---
 
 ## Install Feature Core
+
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
 | Product Bundles | 202009.0 |
 To start feature integration, overview and install the necessary packages:
 
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
 | Eco: Punchout Catalogs | 1.0.0 |
 
 ### 1) Set up Behavior
+
 Enable the following behaviors by registering the plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | `BundleModePunchoutCatalogSetupRequestFormExtensionPlugin` | Expands punchout catalog connection form with Bundle Mode field. | None |`SprykerEco\Zed\PunchoutCatalogs\Communication\Plugin\PunchoutCatalogs` |
 
@@ -36,12 +40,12 @@ Enable the following behaviors by registering the plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\PunchoutCatalogs;
- 
+
 use SprykerEco\Zed\PunchoutCatalogs\Communication\Plugin\PunchoutCatalogs\BundleModePunchoutCatalogSetupRequestFormExtensionPlugin;
 use SprykerEco\Zed\PunchoutCatalogs\PunchoutCatalogsDependencyProvider as SprykerPunchoutCatalogsDependencyProvider;
- 
+
 class PunchoutCatalogsDependencyProvider extends SprykerPunchoutCatalogsDependencyProvider
 {
     /**
@@ -57,5 +61,7 @@ class PunchoutCatalogsDependencyProvider extends SprykerPunchoutCatalogsDependen
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that, when you create new punchout catalog connection, the form contains Bundle Mode field.
+
 {% endinfo_block %}

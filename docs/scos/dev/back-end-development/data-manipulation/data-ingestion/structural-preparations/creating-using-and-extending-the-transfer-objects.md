@@ -1,6 +1,7 @@
 ---
 title: Creating, using, and extending the transfer objects
 description: The article provides information on creation and usage of the Transfer objects.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-use-transfer-objects
 originalArticleId: f3c1c5d9-348c-4d02-9d4b-f0cede048566
@@ -150,8 +151,8 @@ $items = $cartTransfer->getItems();
 ## Checking the required fields
 
 {% info_block warningBox %}
-*Require* methods have been deprecated in version 3.25.0 of the Transfer module and replaced by the [get-or-fail](#get-or-fail
-{% endinfo_block %} methods.)
+*Require* methods have been deprecated in version 3.25.0 of the Transfer module and replaced by the [get-or-fail](#get-or-fail) methods.
+{% endinfo_block %}
 In general, a transfer object must not know which fields are required, as it can be used for different use cases. However, when you use a transfer object, you always expect the existence of specific parameters. This can be checked with a special require-method for each property:
 
 ```php

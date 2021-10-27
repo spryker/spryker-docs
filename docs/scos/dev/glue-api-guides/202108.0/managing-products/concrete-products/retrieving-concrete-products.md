@@ -1,6 +1,7 @@
 ---
 title: Retrieving concrete products
 description: Retrieve general information about concrete products.
+last_updated: Jun 21, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-concrete-products
 originalArticleId: 4f36b42a-e2a2-46a1-be84-ae9f3b2a1a25
@@ -14,7 +15,7 @@ related:
     link: docs/scos/user/features/page.version/product-options-feature-overview.html
 ---
 
-This endpoint allows to retrieve general information about concrete products.
+This endpoint allows retrieving general information about concrete products.
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
@@ -23,10 +24,11 @@ For detailed information on the modules that provide the API functionality and r
 * [Glue API: Product Options Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html)
 * [Glue API: Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-labels-feature-integration.html)
 * [Glue API: Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-bundles-feature-integration.html)
-* [Glue API: Prices feature integration - ongoing](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-price-feature-integration.html) 
+* [Glue API: Prices feature integration - ongoing](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-price-feature-integration.html)
 
 
-## Retrieve a concrete product 
+## Retrieve a concrete product
+
 To retrieve general information about a concrete product, send the request:
 
 ---
@@ -38,11 +40,11 @@ To retrieve general information about a concrete product, send the request:
 | --- | --- |
 | ***{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}*** | SKU of a concrete product to get information for. |
 
-### Request 
+### Request
 
-| String parameter | Description | Exemplary values |
+| STRING PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
-| include | Adds resource relationships to the request. | concrete-product-image-sets, concrete-product-availabilities, product-options, product-reviews, product-offers, concrete-product-prices, product-measurement-units, sales-units, product-labels, bundled-products | 
+| include | Adds resource relationships to the request. | concrete-product-image-sets, concrete-product-availabilities, product-options, product-reviews, product-offers, concrete-product-prices, product-measurement-units, sales-units, product-labels, bundled-products |
 | fields | 	Filters out the fields to be retrieved.  | name, image, description |
 
 {% info_block warningBox "Performance" %}
@@ -51,11 +53,9 @@ To retrieve general information about a concrete product, send the request:
 
 * If you include more resources, you can still use the `fields` string parameter to return only the needed fields. For example, `GET http://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units&fields[concrete-products]=name,description&fields[sales-units]=conversion,precision`.
 
-
 {% endinfo_block %}   
 
-
-| Request  | Usage |
+| REQUEST  | USAGE |
 | --- | --- |
 | `GET http://glue.mysprykershop.com/concrete-products/001_25904006` | Get information about the `001_25904006` product.  |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-image-sets` | Get information about the `001_25904006` product with its image sets.  |
@@ -70,13 +70,10 @@ To retrieve general information about a concrete product, send the request:
 | `GET https://glue.mysprykershop.com/concrete-products/214_123?included=bundled-products` | Retrieve the concrete product with SKU `214_123`. If it is a product bundle, retrieve the bundled products. |
 | `GET https://glue.mysprykershop.com/concrete-products/214_123?included=bundled-products,concrete-products,abstract-products` | Retrieve the concrete product with SKU `214_123`. If it is a product bundle, retrieve the bundled products. Retrieve all the related concrete products and the abstract products owning them. |
 
-
-
-
 ### Response
 
 <details>
-    <summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -124,7 +121,7 @@ To retrieve general information about a concrete product, send the request:
  </details>
 
 <details>
-    <summary markdown='span'>Response sample with sales units and product measurement units</summary>
+<summary markdown='span'>Response sample with sales units and product measurement units</summary>
 
 ```json
 {
@@ -215,9 +212,9 @@ To retrieve general information about a concrete product, send the request:
 ```
 
  </details>
- 
+
  <details>
-    <summary markdown='span'>Response sample with product labels</summary>
+<summary markdown='span'>Response sample with product labels</summary>
 
 ```json
 {
@@ -263,10 +260,10 @@ To retrieve general information about a concrete product, send the request:
 ```
 
  </details>
- 
+
  <details>
-    <summary markdown='span'>Response sample with product image sets</summary>
-    
+<summary markdown='span'>Response sample with product image sets</summary>
+
 ```json
 {
     "data": {
@@ -341,12 +338,12 @@ To retrieve general information about a concrete product, send the request:
     ]
 }
 ```
-    
+
 </details>
 
- <details>
-    <summary markdown='span'>Response sample with product availability</summary>
-    
+<details>
+<summary markdown='span'>Response sample with product availability</summary>
+
 ```json
 {
     "data": {
@@ -413,7 +410,7 @@ To retrieve general information about a concrete product, send the request:
     ]
 }
 ```
-    
+
 </details>
 
  <details><summary markdown='span'>Response sample - retrieve concrete product with default product prices</summary>
@@ -607,9 +604,9 @@ To retrieve general information about a concrete product, send the request:
 
 </details>
 
- <details>
-    <summary markdown='span'>Response sample with product options</summary>
-    
+<details>
+<summary markdown='span'>Response sample with product options</summary>
+
 ```json
 {
     "data": {
@@ -696,12 +693,12 @@ To retrieve general information about a concrete product, send the request:
     ]
 }
 ```
-    
+
 </details>
 
- <details>
-    <summary markdown='span'>Response sample with reviews</summary>
-    
+<details>
+<summary markdown='span'>Response sample with reviews</summary>
+
 ```json
 {
     "data": {
@@ -803,12 +800,12 @@ To retrieve general information about a concrete product, send the request:
     ]
 }
 ```
-    
+
 </details>
 
  <details>
-    <summary markdown='span'>Response sample with bundled products</summary>
-    
+<summary markdown='span'>Response sample with bundled products</summary>
+
 ```json
 {
     "data": {
@@ -1020,8 +1017,8 @@ To retrieve general information about a concrete product, send the request:
 
 
 <details>
-    <summary markdown='span'>Response sample with bundled products, concrete products, and abstract products</summary>
-    
+<summary markdown='span'>Response sample with bundled products, concrete products, and abstract products</summary>
+
 ```json
 {
     "data": {
@@ -1632,7 +1629,7 @@ To retrieve general information about a concrete product, send the request:
 | name | String | Name of the concrete product. |
 | description | String | Description of the concrete product. |
 | attributes | Object | List of attribute keys and their values for the product. |
-| superAttributeDefinition | String[] | List of attributes that are flagged as super attributes. |
+| superAttributeDefinition | String | List of attributes that are flagged as super attributes. |
 | metaTitle | String | Meta title of the product. |
 | metaKeywords | String | Meta keywords of the product. |
 | metaDescription | String | Meta description of the product. |
@@ -1649,18 +1646,18 @@ To retrieve general information about a concrete product, send the request:
 
 For other attributes of the included resources, see:
 
-*     [Retrieve sales units of a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-sales-units.html#sales-units-response-attributes)
-*     [Retrieve a measurement unit](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html#measurement-units-response-attributes)
-*     [Retrieve image sets of a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html#concrete-image-sets-response-attributes)
-*     [Retrieve availability of a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-product-availability.html#concrete-product-availability-response-attributes)
-*     [Retrieve prices of a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-product-prices.html#concrete-product-prices-response-attributes)
-*     [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
-*     [Retrieve product ratings and reviews](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/managing-product-ratings-and-reviews.html#product-ratings-and-reviews-response-attributes)
+* [Retrieve sales units of a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-sales-units.html#sales-units-response-attributes)
+* [Retrieve a measurement unit](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html#measurement-units-response-attributes)
+* [Retrieve image sets of a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html#concrete-image-sets-response-attributes)
+* [Retrieve availability of a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-product-availability.html#concrete-product-availability-response-attributes)
+* [Retrieve prices of a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-product-prices.html#concrete-product-prices-response-attributes)
+* [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
+* [Retrieve product ratings and reviews](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/managing-product-ratings-and-reviews.html#product-ratings-and-reviews-response-attributes)
 
 
 ## Possible errors
 
-| Code | Meaning |
+| CODE | REASON |
 | --- | --- |
 | 302 | Concrete product is not found. |
 

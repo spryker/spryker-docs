@@ -1,6 +1,7 @@
 ---
 title: Search widget for concrete products overview
 description: Search widget adds allows users to easily search and add concrete products directly from shopping cart/list pages.
+last_updated: Jul 5, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/search-widget-for-concrete-products-overview
 originalArticleId: f3839683-f449-4000-b5cc-616d01453120
@@ -35,7 +36,7 @@ With the search widget, a customer can always find the items that are available 
 
 {% info_block infoBox %}
 You can find more examples of product restriction use cases on the [Restricted Products Behavior](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-product-restrictions-feature-walkthrough/restricted-products-behavior.html) page.
-{% endinfo_block %} 
+{% endinfo_block %}
 
 ## Shopping List page
 

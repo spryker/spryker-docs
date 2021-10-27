@@ -1,6 +1,7 @@
 ---
 title: Computop - PayNow
 description: Integrate PayNow payment through Computop into the Spryker-based shop.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/computop-paynow
 originalArticleId: 5b27c38c-8d44-4a1d-9bdf-fb542362df8d
@@ -32,8 +33,9 @@ related:
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-credit-card.html
 ---
 
- Example State Machine
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Computop/computop_paynow.png) 
+Example State Machine
+
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Computop/computop_paynow.png)
 
 ## Front-end Integration
 
@@ -57,9 +59,10 @@ $config[OmsConstants::ACTIVE_PROCESSES] = [
  ];
  ```
 
- ### Checkout Integration
+### Checkout Integration
 
-Add the following lines to `Yves\Checkout\CheckoutDependencyProvider.php`
+Add the following lines to `Yves\Checkout\CheckoutDependencyProvider.php`:
+
 ```php
 $container[static::PAYMENT_METHOD_HANDLER] = function () {
  $paymentMethodHandler = new StepHandlerPluginCollection();
@@ -92,8 +95,8 @@ protected function provideClients(Container $container)
 ```
 
 Computop PayNow payment method also provides a new Checkout Step for filling the Credit Card data and sending it to the Computop paygate. You have to create `Yves/Checkout/Process/Steps/PayNowStep.php` class with the following content:
-<details open>
- <summary markdown='span'>Click here to expand the code sample</summary>
+<details>
+<summary markdown='span'>Click here to expand the code sample</summary>
 
  ```php
  <?php
@@ -244,8 +247,8 @@ protected function defineControllers(Application $app)
 
 The final step is to create a template for rendering `PayNow` step in `Yves/Checkout/Theme/default/checkout/paynow.twig`
 
-<details open>
- <summary markdown='span'>Click here to expand the code sample</summary>
+<details>
+<summary markdown='span'>Click here to expand the code sample</summary>
 
  ```xml
 {% raw %}{%{% endraw %} extends "@checkout/layout.twig" {% raw %}%}{% endraw %}
@@ -350,14 +353,14 @@ protected function createPlaceOrderStep()
 
 ## PayNow Payment Flow
 
-1. There is a radio button on <b>Payment</b> step. After submitting the order, the customer is redirected to the to PayNow checkout step. The step contains Credit Card form with the following fields:
-  - Credit Card brand choice;
-  - Credit Card number;
-  - Credit Card expires date (in the format `YYYYMM`, e.g. 201807);
-  - Credit Card security code (CVV);
-  - Data (hidden field, encrypted parameters, e.g. currency, amount, description);
-  - Length (hidden field, length of `data` parameter);
-  - Merchant id (hidden field, assigned by Computop).
+1. There is a radio button on **Payment** step. After submitting the order, the customer is redirected to the to PayNow checkout step. The step contains Credit Card form with the following fields:
+  - Credit Card brand choice
+  - Credit Card number
+  - Credit Card expires date (in the format `YYYYMM`, e.g. 201807)
+  - Credit Card security code (CVV)
+  - Data (hidden field, encrypted parameters, e.g. currency, amount, description)
+  - Length (hidden field, length of `data` parameter)
+  - Merchant id (hidden field, assigned by Computop)
 
 Form posts directly to Computop paygate. After the process is requested, Computop redirects the customer to success or failure URL.
 

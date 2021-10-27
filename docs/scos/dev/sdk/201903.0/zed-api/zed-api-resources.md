@@ -1,5 +1,6 @@
 ---
 title: Zed API Resources
+last_updated: Nov 22, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/zed-api-resources
 originalArticleId: 7819bea0-00f3-42a8-94af-32c17d8632e5

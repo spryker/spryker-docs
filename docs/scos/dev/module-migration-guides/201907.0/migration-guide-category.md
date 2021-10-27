@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Category
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-category
 originalArticleId: b27268ab-51b7-46eb-b2c9-5f66d6854173

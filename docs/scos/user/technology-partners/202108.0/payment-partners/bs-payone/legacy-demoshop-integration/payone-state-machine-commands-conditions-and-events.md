@@ -1,6 +1,7 @@
 ---
 title: PayOne - State Machine Commands, Conditions and Events
 description: This article includes the state machine commands and conditions provided by Payone.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/payone-state-machine-cmd-cond-evnt
 originalArticleId: 807aa919-3bf4-44c1-8a0b-60305df0434b
@@ -24,9 +25,9 @@ related:
     link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-security-invoice-payment.html
 ---
 
-| Operation | Type | Description |
+| OPERATION | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| `Payone/PreAuthorize` | command | PreAuthorize allows to block money without capturing it directly. Possible responses are Approved, Redirect (in case of 3d secure for Credit Card, also for all Online Transfer and EWallet payments) and Error. Payment data is verified and stored. The amount is reserved on the customers account. |
+| `Payone/PreAuthorize` | command | PreAuthorize allows blocking money without capturing it directly. Possible responses are Approved, Redirect (in case of 3d secure for Credit Card, also for all Online Transfer and EWallet payments) and Error. Payment data is verified and stored. The amount is reserved on the customers account. |
 | `Payone/PreAuthorizationIsApprovedPlugin` | condition | Checks if the preauthorization was successful |
 | `Payone/PreAuthorizationIsErrorPlugin` | condition | Checks if the preauthorization had an error |
 | `Payone/PreAuthorizationIsRedirectPlugin` | condition | Checks if the preauthorization send a redirect |
@@ -50,4 +51,3 @@ related:
 | `Payone/RefundIsPossiblePlugin` | condition | `RefundIsPossiblePlugin` checks if IBAN/BIC is available in payment details |
 | `Payone/PaymentIsRefund` | condition | Checks if refund suceeded |
 | `Payone/Cancel` | command | Cancels pre-authorized amount. Could be called instead of Capture on order cancellation. |
-

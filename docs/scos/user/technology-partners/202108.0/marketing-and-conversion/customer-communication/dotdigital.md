@@ -1,6 +1,7 @@
 ---
 title: Dotdigital
 description: Connect customer data, surface powerful insights, and automate intelligent messages across email, SMS, social, and more by integrating Dotdigital into Spryker Commerce OS.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/dotdigital
 originalArticleId: 809fe6a6-5656-415a-bd26-0646c6ee72e4
@@ -15,6 +16,7 @@ related:
 ---
 
 ## Partner Information
+
 [ABOUT DOTDIGITAL](https://spryker.com/industry-partner/dotdigital/)
 
 Acquire smarter. Convert faster. Deliver big.
@@ -45,4 +47,3 @@ See [Disclaimer](https://github.com/spryker/spryker-documentation).
 For further information on this partner and integration into Spryker, please contact us.
 
 <div class="hubspot-form js-hubspot-form" data-portal-id="2770802" data-form-id="163e11fb-e833-4638-86ae-a2ca4b929a41" id="hubspot-1"></div>
-

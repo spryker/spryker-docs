@@ -1,6 +1,7 @@
 ---
 title: Retrieving image sets of abstract products
 description: Retrieve image sets of abstract products.
+last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-image-sets-of-abstract-products
 originalArticleId: 823ef04b-e614-4022-a30f-6e2130d280d8
@@ -14,14 +15,16 @@ related:
     link: docs/scos/user/features/page.version/product-feature-overview/product-images-overview.html
 ---
 
-This endpoint allows to retrieve image sets of abstract products.
+This endpoint allows retrieving image sets of abstract products.
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Glue API: Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html).
 
 
 ## Retrieve image sets of an abstract product
+
 To retrieve image sets of an abstract product, send the request:
 
 ---
@@ -37,12 +40,11 @@ To retrieve image sets of an abstract product, send the request:
 
 Request sample: `GET http://glue.mysprykershop.com/abstract-products/001/abstract-product-image-sets`
 
-
 ### Response
 
 <details>
-    <summary markdown='span'>Response sample</summary>
-    
+<summary markdown='span'>Response sample</summary>
+
 ```json
 {
     "data": [
@@ -72,12 +74,12 @@ Request sample: `GET http://glue.mysprykershop.com/abstract-products/001/abstrac
     }
 }
 ```
-    
+
 </details>
 
 <a name="abstract-product-sets-response-attributes"></a>
 
-| Attribute | Description |
+| ATTRIBUTE | DESCRIPTION |
 | --- | --- |
 | name | Image set name |
 | externalUrlLarge | URLs to the image per image set per image |
@@ -86,7 +88,7 @@ Request sample: `GET http://glue.mysprykershop.com/abstract-products/001/abstrac
 
 ## Possible errors
 
-| Code | Meaning |
+| CODE | REASON |
 | --- | --- |
 | 303 | Can't find abstract product image sets. |
 | 311 | Abstract product SKU is not specified. |

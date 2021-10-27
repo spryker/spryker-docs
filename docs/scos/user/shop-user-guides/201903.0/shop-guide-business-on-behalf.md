@@ -1,6 +1,7 @@
 ---
 title: Shop Guide - Business on Behalf
 description: Use the procedures to select another company user to log in on behalf in the Storefront.
+last_updated: Nov 22, 2019
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/business-on-behalf-shop-guide
 originalArticleId: 558c99c7-f7a1-4c1c-9983-4dcd42bbae83

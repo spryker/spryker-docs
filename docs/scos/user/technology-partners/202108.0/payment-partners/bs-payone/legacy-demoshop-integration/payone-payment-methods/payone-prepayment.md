@@ -1,6 +1,7 @@
 ---
 title: PayOne - Prepayment
 description: Integrate prepayment through Payone into the Spryker-based shop.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/payone-prepayment
 originalArticleId: f5e8ebb9-0fd4-4048-88e2-2d8a45bb4c06
@@ -29,10 +30,12 @@ Prepayment method is a safe alternative to payments involving credit cards or de
 The payment status is transmitted to the shop via a notification from the payment provider(Payone).
 
 ## Front-end Integration
+
 To adjust the frontend appearance, provide the following templates in your theme directory:
 `src/<project_name>/Yves/Payone/Theme/<custom_theme_name>/prepayment.twig`
 
 ## State Machine Integration
+
 Payone module provides a demo state machine for Prepayment payment method which implements Preauthorization/Capture flow.
 
 To enable the demo state machine, extend the configuration with the following values:

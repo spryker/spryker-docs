@@ -1,5 +1,6 @@
 ---
 title: Managing customer authentication tokens
+last_updated: Jun 21, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-authentication-tokens
 originalArticleId: a0374f0f-170f-446e-aadd-32dbe7c1526a
@@ -13,10 +14,13 @@ redirect_from:
 This endpoint allows refreshing customer authentication tokens and revoking customer refresh tokens. You may want to refresh an authentication token when it expires. Revocation is useful when an authentication token is compromised.
 
 {% info_block warningBox %}
+
 This endpoint does not comply with OAuth 2.0. If your project requires such compliance, use the `/token`endpoint. For details about the `/token`endpoint, see [Manging customer authentication tokens via OAuth 2.0](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html).
+
 {% endinfo_block %}
 
 ## Installation
+
 For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html).
 
 ## Refresh an authentication token
@@ -28,13 +32,11 @@ To refresh an authentication token, send the request:
 
 ---
 
-
 ### Request
 
-
 <details>
-    <summary markdown='span'>Request sample: POST http://glue.mysprykershop.com/refresh-tokens</summary>
-    
+<summary markdown='span'>Request sample: POST http://glue.mysprykershop.com/refresh-tokens</summary>
+
 ```json
 {
   "data": {
@@ -50,7 +52,7 @@ To refresh an authentication token, send the request:
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| refreshToken | string | &check; | Authentication token to refresh the `accessToken`. You can get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer). |
+| refreshToken | string | &check; | Authentication token to refresh the `accessToken`. You can get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
 ### Response
 
@@ -92,7 +94,6 @@ To revoke a refresh token, send the request:
 
 ---
 
-
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}refresh_token{% raw %}}}{% endraw %}*** | Defines the refresh token to revoke. Enter `mine` to revoke all the refresh tokens of the authenticated customer.  |
@@ -100,26 +101,20 @@ To revoke a refresh token, send the request:
 
 ### Request
 
-
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
-
-
-
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 | REQUEST | USAGE |
 | --- | --- |
 | `DELETE https://glue.mysprykershop.com/mine` | Revoke all the refresh tokens of the authenticated customer. |
 | `DELETE https://glue.mysprykershop.com/def502001118037ed23cbcdf0c4c05f144ae24c6c1727f88db444adbde61988fa240b527e4ca30ce83f12e1f1efeabc7befcdddbddbd5b39219f789751e5113cbd651a601ed43a130ae26e395266f456bbe95c17695cf04184d5e7dbbeb1100613da0060fc8fbe45c423921d526ab4eeeef1c54b30bf16fdabdd2acb64299752241e15c0077c7e6646a3ef62060c63bf01ff217960c3972bda14593032849242818cc982eb20e9fd997cd758b89727e5f1b89216ebe32325d3be5806369b81563407eeef1c1ffb672f2f6f10193eebc602a0222f96929d25befd99fbf819eb1eeee23faff0fdb663c1531b2356ef76e8d040dbb5f2dd76756867621adc1464302bb2ed94d5adc1b58c6d303b88b815259b6881666223d3e179d2ff21873c7deaed9d1cfb0007e26ec998d31986e9a1390b592e8719a62ad5746913602e7ecd6e3c4d9b11e3b2241937aa538c2f725ea77c99fcbf885d3058ee793ed984aeca522b356ddd85b7d40c19bfb7c4c1bb310be16d9d8a3c79730c2de139e44d91bcb69eb7d86780f4965d99cc3bbb8e66e383297c94340b4a5984cd48c8e7ad4f8a74917d9e5116b1a92919d6e22c247dc7d4d4e35fc9ae7d3175ff781981b5032a1d0865223a7ba47e59a323628112504fb4d9e02366c27dea909765e95ca8013446953ce980cc2571daca5207b61cb22ca82d69445315cdcbd9410f0875b9de274399d5b88ee5d74d8f3e92514dccb41d6ae7faa651dae6f19de32326f04c0eefa6ee65c9eae5bf588042da23da0855b7e80de9d6e2f5ee0f1785092f2deda2f19060197a3a5046e4f8de7f172e9b705c577ec257b5c3cce0f1324d0068c953559ab2384a95093eaf312be217738bb1475ee6fce8e2c498cfd5617ce2b09e4ac1241d5938688831c9647870ccbfd8f45a25b65feae2831e32d6eb7d85a26a469677c9234f36338de6d4bb3e732fbc29235fb56d6b4d4f8adf794458385f7de6f6de21ef017cd5429c9df22e25819cb4c65993f100ad4a4d3dd8fb02fd38ce5563ce05b6a0d4b109f6644adb420f74db131691351ec469e6a354e402c842a64086a2bf18ee88e02abd9ca7fda45b3d9d3df53ef23b23f7f6948fcac018921f5d04a1c5a2a239c4df916389f343ad6a64fd323e6d73df4eb182f586b075597cd21c6afa4316dd0381ab3984f1f3e9f658b137083edb9bd80566d8fd2c40cc9d041133d3e88436851bf6f9d915d654f93d3547f9d97b264d6e3d2e80fb4c692cdd2429923177363d0c806d0cf3b39e64e3ba750cef0a5fa7ce14f6907d47d423864c9577465a9ff0ec7e3547ef50881ffaea2c0dfeed730adfb9373cdddb0acd53fe844e044e670eeb57ae31ed0a01dad46ffae3b316293d270c30b9ccbf1be4744ae5dbdb0980d9b13764c1fa9f4be3c3a058b9799a9838105378ef6578f79f04215fb98531f317131287a9b51c060b60fc5649cf4bd2b3a002d45f4d9dabe25d3acf289e900d5ae907b2c3f85243579e93d1674979a32ec52c1e1e4ac76d1ed6d60d5315eb449e9a48278de48311f76739b2da830927f29a578815044c1cf52308fe662a4ec79fb31d17f11da8635ebbf8af2c80d480a0d4759875604e4d23afd8bed26d185183944e35c983f3debc3d4aacc544c29316206c82f26d2b99c80159b1d2e918c63afa089fcc28f4c35118e223577705bed354064f81627514e2be4b88bd218dc0163e7f7d576d2f8565c11fca5e99dc469c0125f972c3164b45beeeb21f29f1be33932030d84e9b5569fbb885cd342234e283a73637ca35f8284a1ace51439dd93a0e9bfcc825a11ccf7e403088b77919ecf178ec6de7e008e13c76bb3bc494920b3f8fbaa48dd56d8f3af51b890a8183f5d437a241d5201742e5dc7a85334e69a6850adbbb5648b5b15107c477c57160c837b7a48cdebeea24271ecce5893b95ddbcb9ad13f6d8256cd9098af9d8800ca77509bb885059f5ded5d13b20c14ca041eaff5ff920901e753f4391040e2ad3ac24003d2e684eb30e2ba650f8ab8b95c235241f96c614c68478faf874018cd3d642e287c5269a4a1eca8af411a2f91f` | Revoke the following refresh token: def502001118037ed23cbcdf0c4c05f144ae24c6c1727f88db444adbde61988fa240b527e4ca30ce83f12e1f1efeabc7befcdddbddbd5b39219f789751e5113cbd651a601ed43a130ae26e395266f456bbe95c17695cf04184d5e7dbbeb1100613da0060fc8fbe45c423921d526ab4eeeef1c54b30bf16fdabdd2acb64299752241e15c0077c7e6646a3ef62060c63bf01ff217960c3972bda14593032849242818cc982eb20e9fd997cd758b89727e5f1b89216ebe32325d3be5806369b81563407eeef1c1ffb672f2f6f10193eebc602a0222f96929d25befd99fbf819eb1eeee23faff0fdb663c1531b2356ef76e8d040dbb5f2dd76756867621adc1464302bb2ed94d5adc1b58c6d303b88b815259b6881666223d3e179d2ff21873c7deaed9d1cfb0007e26ec998d31986e9a1390b592e8719a62ad5746913602e7ecd6e3c4d9b11e3b2241937aa538c2f725ea77c99fcbf885d3058ee793ed984aeca522b356ddd85b7d40c19bfb7c4c1bb310be16d9d8a3c79730c2de139e44d91bcb69eb7d86780f4965d99cc3bbb8e66e383297c94340b4a5984cd48c8e7ad4f8a74917d9e5116b1a92919d6e22c247dc7d4d4e35fc9ae7d3175ff781981b5032a1d0865223a7ba47e59a323628112504fb4d9e02366c27dea909765e95ca8013446953ce980cc2571daca5207b61cb22ca82d69445315cdcbd9410f0875b9de274399d5b88ee5d74d8f3e92514dccb41d6ae7faa651dae6f19de32326f04c0eefa6ee65c9eae5bf588042da23da0855b7e80de9d6e2f5ee0f1785092f2deda2f19060197a3a5046e4f8de7f172e9b705c577ec257b5c3cce0f1324d0068c953559ab2384a95093eaf312be217738bb1475ee6fce8e2c498cfd5617ce2b09e4ac1241d5938688831c9647870ccbfd8f45a25b65feae2831e32d6eb7d85a26a469677c9234f36338de6d4bb3e732fbc29235fb56d6b4d4f8adf794458385f7de6f6de21ef017cd5429c9df22e25819cb4c65993f100ad4a4d3dd8fb02fd38ce5563ce05b6a0d4b109f6644adb420f74db131691351ec469e6a354e402c842a64086a2bf18ee88e02abd9ca7fda45b3d9d3df53ef23b23f7f6948fcac018921f5d04a1c5a2a239c4df916389f343ad6a64fd323e6d73df4eb182f586b075597cd21c6afa4316dd0381ab3984f1f3e9f658b137083edb9bd80566d8fd2c40cc9d041133d3e88436851bf6f9d915d654f93d3547f9d97b264d6e3d2e80fb4c692cdd2429923177363d0c806d0cf3b39e64e3ba750cef0a5fa7ce14f6907d47d423864c9577465a9ff0ec7e3547ef50881ffaea2c0dfeed730adfb9373cdddb0acd53fe844e044e670eeb57ae31ed0a01dad46ffae3b316293d270c30b9ccbf1be4744ae5dbdb0980d9b13764c1fa9f4be3c3a058b9799a9838105378ef6578f79f04215fb98531f317131287a9b51c060b60fc5649cf4bd2b3a002d45f4d9dabe25d3acf289e900d5ae907b2c3f85243579e93d1674979a32ec52c1e1e4ac76d1ed6d60d5315eb449e9a48278de48311f76739b2da830927f29a578815044c1cf52308fe662a4ec79fb31d17f11da8635ebbf8af2c80d480a0d4759875604e4d23afd8bed26d185183944e35c983f3debc3d4aacc544c29316206c82f26d2b99c80159b1d2e918c63afa089fcc28f4c35118e223577705bed354064f81627514e2be4b88bd218dc0163e7f7d576d2f8565c11fca5e99dc469c0125f972c3164b45beeeb21f29f1be33932030d84e9b5569fbb885cd342234e283a73637ca35f8284a1ace51439dd93a0e9bfcc825a11ccf7e403088b77919ecf178ec6de7e008e13c76bb3bc494920b3f8fbaa48dd56d8f3af51b890a8183f5d437a241d5201742e5dc7a85334e69a6850adbbb5648b5b15107c477c57160c837b7a48cdebeea24271ecce5893b95ddbcb9ad13f6d8256cd9098af9d8800ca77509bb885059f5ded5d13b20c14ca041eaff5ff920901e753f4391040e2ad3ac24003d2e684eb30e2ba650f8ab8b95c235241f96c614c68478faf874018cd3d642e287c5269a4a1eca8af411a2f91f |
 
-
 ### Response
 
-For security purposes, the endpoint always returns the `204 No Content` status code, regardless of any refresh tokens being revoked. 
+For security purposes, the endpoint always returns the `204 No Content` status code, regardless of any refresh tokens being revoked.
 
-The tokens are marked as expired on the date and time of the request. You can configure expired tokens to be automatically deleted from the database by setting the lifetime of expired tokens. 
-
+The tokens are marked as expired on the date and time of the request. You can configure expired tokens to be automatically deleted from the database by setting the lifetime of expired tokens.
 
 ## Possible errors
 
@@ -132,10 +127,3 @@ To view generic errors that originate from the Glue Application, see [Reference 
 
 * [Authenticate as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-passwords.html)
 * [Manage customer passwords](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-passwords.html)
-
-
-
-
-
-
-

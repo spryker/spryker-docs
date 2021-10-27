@@ -1,6 +1,7 @@
 ---
 title: HowTo - Define the maximum size of content fields
 description: Use the guide to customize the content field size in the CMS module.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-define-the-maxiumum-size-of-content-fields
 originalArticleId: 42fb6510-84dc-425f-902d-e5fd7436cd3a

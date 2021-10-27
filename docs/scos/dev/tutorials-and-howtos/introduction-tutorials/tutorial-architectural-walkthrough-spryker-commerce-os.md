@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Architectural Walkthrough - Spryker Commerce OS
 description: The tutorial describes Spryker architecture and explains on the example of how its components work together to provide the result in the shop application.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/tutorial-architecture-walkthrough-scos
 originalArticleId: 8a582525-be21-49b8-9b48-ca3420302cab
@@ -67,15 +68,15 @@ A new module is simply a new folder.
 
     class IndexController extends AbstractController
     {
-	    /**
-	    * @param Request $request
-	    *
-	    * @return array
-	    */
-	    public function indexAction(Request $request)
-	    {
-	    return ['string' => 'Hello Spryker!'];
-	    }
+        /**
+        * @param Request $request
+        *
+        * @return array
+        */
+        public function indexAction(Request $request)
+        {
+        return ['string' => 'Hello Spryker!'];
+        }
     }						
     ```
 3. To render the text in the Zed UI template, add the presentation layer with the twig file that loads as the action's response.
@@ -85,7 +86,7 @@ A new module is simply a new folder.
     ```xml
     {% raw %}{%{% endraw %} extends '@Gui/Layout/layout.twig' {% raw %}%}{% endraw %}
     {% raw %}{%{% endraw %} block content {% raw %}%}{% endraw %}
-	    {% raw %}{{{% endraw %} string {% raw %}}}{% endraw %}
+        {% raw %}{{{% endraw %} string {% raw %}}}{% endraw %}
     {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
     ```
 4. To see **"Hello Spryker!"**, go to `https://zed.mysprykershop.com/hello-spryker`.
@@ -107,8 +108,7 @@ class HelloSprykerFacade extends AbstractFacade implements HelloSprykerFacadeInt
 {
 	// Your code goes here
 }
-```						
-
+```
 Second, add the factory:
 ```php
 namespace Pyz\Zed\HelloSpryker\Business;
@@ -308,7 +308,7 @@ You should still get **"!rekyrpS olleH"** when accessing `https://zed.mysprykers
 To build the communication between Yves and Zed, we need the **Client**. Building a client for **HelloSpryker** is similar to building a module in Zed or Yves.
 1. Add a new folder under `/src/Pyz/Client` and call it *HelloSpryker*.
 2. The Client structure consists also of three main classes:
-    * Client to function as the main API to the clilent
+    * Client to function as the main API to the client
     * Factory  to instantiate the needed objects and inject their dependencies
     * Stub to do the actual call to Zed with the right payload.
 

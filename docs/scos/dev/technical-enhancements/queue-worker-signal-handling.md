@@ -1,6 +1,7 @@
 ---
 title: Queue worker signal handling
 description: Configure a graceful shutdown of queue worker.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/queue-worker-signal-handling
 originalArticleId: 832df2ee-dad1-40ac-bf54-1f9aa1bb1a48

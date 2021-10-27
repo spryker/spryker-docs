@@ -1,6 +1,7 @@
 ---
 title: Managing customer addresses
 description: Create, retrieve and delete customer addresses via Glue API.
+last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-addresses-via-glue-api
 originalArticleId: 83f855ab-83ed-4a69-a087-196f88c0007b
@@ -22,12 +23,11 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
 ---
 
-This endpoints allows to retrieve and edit customer addresses. 
+This endpoints allows retrieving and edit customer addresses.
 
 ## Installation
+
 For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html).
-
-
 
 ## Add an address
 
@@ -38,19 +38,17 @@ To add an address to a customer, send the request:
 
 ---
 
-
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}*** | Unique identifier of the customer to add the address to. To get it, [Retrieve customers](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#retrieve-customers) or [Create a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer). |
-
 
 ### Request
 
 Request sample: `POST http://glue.mysprykershop.com/customers/DE--1/addresses`
 
 <details>
-    <summary markdown='span'>Request sample body</summary>
-    
+<summary markdown='span'>Request sample body</summary>
+
 ```json
 {
   "data" : {
@@ -74,7 +72,7 @@ Request sample: `POST http://glue.mysprykershop.com/customers/DE--1/addresses`
     }
 }
 ```
-    
+
 </details>
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
@@ -95,13 +93,11 @@ Request sample: `POST http://glue.mysprykershop.com/customers/DE--1/addresses`
 | isDefaultShipping | Boolean | &check; | Specifies whether the address should be used as the default shipping address of the customer. If the parameter is not set, the default value is true. |
 | isDefaultBilling | Boolean | &check; | Specifies whether the address should be used as the default billing address of the customer. If the parameter is not set, the default value is true. |
 
-
-
 ### Response
-    
+
 <details>
-    <summary markdown='span'>Response sample</summary>
-    
+<summary markdown='span'>Response sample</summary>
+
 ```json
 {
     "data": {
@@ -132,8 +128,8 @@ Request sample: `POST http://glue.mysprykershop.com/customers/DE--1/addresses`
 
 </details>
 
-
 <a name="add-an-address-response-attributes"></a>
+
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | salutation | String | Salutation to use when addressing to the customer. |
@@ -151,8 +147,6 @@ Request sample: `POST http://glue.mysprykershop.com/customers/DE--1/addresses`
 | isDefaultShipping | String | Specifies whether the address should be used as the default shipping address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
 | isDefaultBilling | String | Specifies whether the address should be used as the default billing address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
 
-
-
 ## Edit an address
 
 To edit an address, send the request:
@@ -161,8 +155,6 @@ To edit an address, send the request:
 `PATCH` **/customers/*{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}*/addresses/*{% raw %}{{{% endraw %}address_id{% raw %}}}{% endraw %}***
 
 ---
-
-
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
@@ -174,10 +166,9 @@ To edit an address, send the request:
 Request sample: `PATCH` **http://glue.mysprykershop.com/customers/DE-25/addresses/3a6ee102-007f-5245-aaec-af5b6e05685b**
 
 <details>
-    <summary markdown='span'>Request sample body</summary>
-    
-</details>
+<summary markdown='span'>Request sample body</summary>
 
+</details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
@@ -197,9 +188,9 @@ Request sample: `PATCH` **http://glue.mysprykershop.com/customers/DE-25/addresse
 | isDefaultBilling | String | Specifies whether the address should be used as the default billing address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
 
 ### Response
-    
+
 <details>
-    <summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -233,7 +224,6 @@ Request sample: `PATCH` **http://glue.mysprykershop.com/customers/DE-25/addresse
 
 For response attributes, see [Add an address](#add-an-address-response-attributes).
 
-
 ## Retrieve a customer's addresses
 
 To retrieve a list of customer's addresses, send the request:
@@ -255,8 +245,8 @@ Sample request: `GET http://glue.mysprykershop.com/customers/DE-25/addresses`
 ### Response
 
 <details>
-    <summary markdown='span'>Response sample</summary>
-    
+<summary markdown='span'>Response sample</summary>
+
 ```json
 {
 			"data": [
@@ -332,7 +322,6 @@ Sample request: `GET http://glue.mysprykershop.com/customers/DE-25/addresses`
 | isDefaultShipping | String | Specifies whether the address should be used as the default shipping address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
 | isDefaultBilling | String | Specifies whether the address should be used as the default billing address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
 
-
 ## Retrieve an address
 
 To retrieve an address, send the request:
@@ -347,17 +336,14 @@ To retrieve an address, send the request:
 | ***{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}*** | Unique identifier of the customer to retrieve the address of. [Create a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer) to get it. |
 | ***{% raw %}{{{% endraw %}address_id{% raw %}}}{% endraw %}*** | Unique identifier of the address to retrieve. [Add an address](#add-an-address) to get it.  |
 
-
 ### Request
 
-
 Request sample : `GET http://glue.mysprykershop.com/customers/DE-25/addresses/3a6ee102-007f-5245-aaec-af5b6e05685b`
-
 
 ### Response
 
 <details>
-    <summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 </details>
 
@@ -378,8 +364,6 @@ Request sample : `GET http://glue.mysprykershop.com/customers/DE-25/addresses/3a
 | isDefaultShipping | String | Specifies whether the address should be used as the default shipping address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
 | isDefaultBilling | String | Specifies whether the address should be used as the default billing address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
 
-
-
 If the request is successful, the endpoint returns **RestAddressesResponse** with the requested address.
 
 ## Delete an address
@@ -391,12 +375,10 @@ To delete an address, send the request:
 
 ---
 
-
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}*** | Unique identifier of the customer to delete the address of. [Create a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer) to get it. |
 | ***{% raw %}{{{% endraw %}address_id{% raw %}}}{% endraw %}*** | Unique identifier of the address to delete. [Add an address](#add-an-address) to get it.  |
-
 
 ### Request
 
@@ -407,6 +389,7 @@ Request sample: `DELETE http://glue.mysprykershop.com/customers/DE-25/addresses/
 If the address is deleted successfully, the endpoint returns the `204 No Content` status code.
 
 ## Possible errors
+
 | CODE | REASON |
 | --- | --- |
 | 402 | Customer with the specified ID was not found. |
@@ -427,4 +410,3 @@ To view generic errors that originate from the Glue Application, see [Reference 
 * [Manage orders](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html)
 * [Manage customer authentication tokens](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-authentication-tokens.html)
 * [Manage customer passwords](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-passwords.html)
-

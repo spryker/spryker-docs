@@ -1,6 +1,7 @@
 ---
 title: Managing wishlist items
 description: Add and delete items from wishlists via Glue API.
+last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-wishlist-items
 originalArticleId: 2ce23129-3ad7-4053-9e9d-8f5bf697aa87
@@ -16,14 +17,13 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
 ---
 
-This endpoint allows to add and remove items from wishlists. 
+This endpoint allows to add and remove items from wishlists.
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Wishlist API Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-wishlist-feature-integration.html).
 
-
 ## Add an item to a wishlist
-
 
 To add an item to a wishlist, send the request:
 
@@ -51,11 +51,9 @@ Request sample: `POST https://glue.mysprykershop.com/wishlists/09264b7f-1894-58e
 	}
 ```
 
-
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | sku | String | SKU of a concrete product to add. |
-
 
 ### Response
 
@@ -75,11 +73,10 @@ Request sample: `POST https://glue.mysprykershop.com/wishlists/09264b7f-1894-58e
 ```
 
 <a name="wishlishlist-items-response-attributes"></a>
+
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | sku | String | SKU of the concrete product in the wishlist. |
-
-
 
 ## Delete a wishlist item
 
@@ -99,11 +96,9 @@ To delete wishlist item, send the request:
 
 Request sample: `DELETE https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items/064_18404924`
 
-
 ### Response
 
 If the item is removed successfully, the endpoint returns the `204 No Content` status code.
-
 
 ## Possible errors
 

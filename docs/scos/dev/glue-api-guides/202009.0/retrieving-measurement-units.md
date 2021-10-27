@@ -1,6 +1,7 @@
 ---
 title: Retrieving measurement units
 description: Retrieve details about measurement units and learn what else you can do with the resource.
+last_updated: Feb 8, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/retrieving-measurement-units
 originalArticleId: d993a230-04c4-4530-a35f-8efcf696b60e

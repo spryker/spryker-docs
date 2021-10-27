@@ -1,6 +1,7 @@
 ---
 title: About migration and integration guides
 description: The section provides guides on how to update modules, install features in the project and enhance the Legacy Demoshop.
+last_updated: Nov 9, 2020
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/about-migration-integration
 originalArticleId: 0de9f3a4-e874-4278-a983-9a4bd0f8af87
@@ -11,7 +12,7 @@ redirect_from:
 
 This section of the documentation is dedicated to content describing all the migration and integration tasks you can possibly have.
 
-[Feature integration guides](/docs/scos/dev/feature-integration-guides/{{page.version}}/about-integration-guides.html) will guide you through the steps of enabling individual features in your project.
+[Feature integration guides](/docs/scos/dev/feature-integration-guides/{{page.version}}/feature-integration-guides.html) will guide you through the steps of enabling individual features in your project.
 
 [Module migration guides](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/about-migration-guides.html) explain how to update a module that has structural changes, such as to the database.
 

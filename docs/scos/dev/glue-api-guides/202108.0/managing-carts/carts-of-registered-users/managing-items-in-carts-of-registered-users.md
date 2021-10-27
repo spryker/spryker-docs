@@ -1,6 +1,7 @@
 ---
 title: Managing items in carts of registered users
 description: Retrieve details about the items of the registered users' carts, and learn what else you can do with the resource.
+last_updated: Jun 29, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-items-in-carts-of-registered-users
 originalArticleId: 8dbe18a1-adef-48a8-9ea0-b496f13c5630
@@ -18,8 +19,8 @@ related:
 
 This endpoint allows managing items in carts of registered users by adding, changing, and deleting them.
 
-
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)
 * [Glue API: Measurement Units feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-measurement-units-feature-integration.html)
@@ -34,6 +35,7 @@ For detailed information on the modules that provide the API functionality and r
 
 
 ## Add an item to a registered user's cart
+
 To add items to a cart, send the request:
 
 ***
@@ -44,14 +46,11 @@ To add items to a cart, send the request:
 | --- | --- |
 | ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart. [Create a cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html)) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
 
-
-
-
 ### Request
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 | Query parameter | Description | Possible value |
 | --- | --- | --- |
@@ -309,8 +308,6 @@ It is the responsibility of the API Client to track whether the selected items a
 
 </details>
 
-
-
 <details>
 <summary markdown='span'>Response sample with items, product measurement units, and sales units</summary>
 
@@ -451,7 +448,6 @@ It is the responsibility of the API Client to track whether the selected items a
 ```    
 </details>
 
-
 <details>
 <summary markdown='span'>Response sample with cart rules</summary>
 
@@ -553,7 +549,6 @@ It is the responsibility of the API Client to track whether the selected items a
 ```
 
 </details>
-
 
 <details>
 <summary markdown='span'>Response sample with vouchers</summary>
@@ -739,7 +734,6 @@ It is the responsibility of the API Client to track whether the selected items a
 }
 ```    
 </details>
-
 
 <details>
 <summary markdown='span'>Response sample: adding a promotional item with cart-rules relationship</summary>
@@ -1019,7 +1013,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details>
-    <summary markdown='span'>Response sample with concrete products and product options</summary>
+<summary markdown='span'>Response sample with concrete products and product options</summary>
 
 ```json
     {
@@ -2381,9 +2375,6 @@ It is the responsibility of the API Client to track whether the selected items a
 | vouchers, cart-rules | discountPromotionAbstractSku | String | SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
 | vouchers, cart-rules | discountPromotionQuantity | Integer | Specifies the amount of the product required to be able to apply the discount. If the minimum number is `0`, the value is `null`. |
 
-
-
-
 For the attributes of the included resources, see:
 * [Retrieving Measurement Units](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html)
 * [Create a cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart)
@@ -2391,12 +2382,11 @@ For the attributes of the included resources, see:
 * [Retrieve an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html#abstract-products-response-attributes)
 
 ## Add a configurable bundle to a registered user’s cart
+
 To add a configurable bundle to a registered user’s cart, send the request:
 
 ***
-
 `POST` **/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/configured-bundles**
-
 ***
 
 
@@ -2409,7 +2399,7 @@ To add a configurable bundle to a registered user’s cart, send the request:
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string |&check; | 	
-An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer). |
+An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
 Request sample: `POST https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/configured-bundles`
 
@@ -2606,9 +2596,8 @@ Request sample: `POST https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1
 For the attributes of the response sample, see [Add an item a to a registered user's cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart).
 
 
-| header | header | header | header |
-| --- | --- | --- | --- |
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
+| --- | --- | --- | --- |
 | configuredBundle | template | Object | Information about the template used for the configurable bundle. |
 | configuredBundleItem | slot | Object | Information about the slot of the configurable bundle. |
 | configuredBundle | name | String | Name of the configurable bundle. |
@@ -2626,21 +2615,16 @@ To change the number of items in a cart, send the request:
 `PATCH` **/carts/*{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*/items/*{% raw %}{{{% endraw %}item_group_key{% raw %}}}{% endraw %}***
 ***
 
-
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***cart_uuid*** | Unique identifier of a cart. [Create a cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
 | ***{% raw %}{{{% endraw %}itemgroupkey{% raw %}}}{% endraw %}*** | Group key of the item. Usually, it is equal to the item’s SKU. |
 
-
-
-
 ### Request
-
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 
 Request sample:
@@ -2806,9 +2790,9 @@ To change quantity of configurable bundles in a registered user’s cart, send t
 
 ### Request
 
-| header | header | header | header |
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | String | &check; | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer). |
+| Authorization | String | &check; | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
 Request sample:
 
@@ -3106,6 +3090,7 @@ For the attribute descriptions, see [Add a configurable bundle to a registered u
 ## Remove items from a registered user's cart
 
 To remove an item from a registered user's cart, send the request:
+
 ***
 `DELETE` **/carts/*{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*/items/*{% raw %}{{{% endraw %}item_group_key{% raw %}}}{% endraw %}***
 ***
@@ -3120,7 +3105,7 @@ To remove an item from a registered user's cart, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 Sample request: `DELETE http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054/items/177_25913296`
 
@@ -3141,20 +3126,19 @@ To remove a configurable bundle from a registered user’s cart, send the reques
 | ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart. [Create a cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-carts) to get it. |
 | ***{% raw %}{{{% endraw %}bundle_group_key{% raw %}}}{% endraw %}*** | Group key of the configurable bundle. The value is generated based on the configurable bundle template and items selected in the slot. You can get it when [adding the configurable bundle to a registered user’s cart](#add-a-configurable-bundle-to-a-registered-user’s-cart). |
 
-
 ### Request
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 Sample request: `DELETE https://mysprykershop.com/carts/e68db76b-1c9b-5fb8-88db-6cbaf8faed76/configured-bundles/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5ff33dfe3418f6.24909526`
 
 ### Response
+
 If the item is deleted successfully, the endpoint returns the “204 No Content” status code.
 
 ## Possible errors
-
 
 | CODE | REASON |
 | --- | --- |

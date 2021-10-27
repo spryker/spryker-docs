@@ -1,5 +1,6 @@
 ---
 title: Release Notes - April - 2018
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes-april-2018
 originalArticleId: 14f48749-eedf-473a-8f88-7baa45f428f2
@@ -28,12 +29,12 @@ At one point or another, a shop owner / administrator might want to get a list o
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | <ul><li>[Customer 7.6.0](https://github.com/spryker/customer/releases/tag/7.6.0)</li><li> [Sales 8.7.0](https://github.com/spryker/sales/releases/tag/8.7.0)</li></ul> | n/a |
 
 <!--**Documentation**
-For module documentation see: 
+<br>For module documentation see: 
 For store administration guides see: -->
 
 ## Improvements
@@ -42,7 +43,7 @@ There can be a situation when a customer places an order, selects a shipment met
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 |[ShipmentCheckoutConnector 1.0.0](https://github.com/spryker/shipment-checkout-connector/releases/tag/1.0.0)  | [Shipment 6.4.0](https://github.com/spryker/shipment/releases/tag/6.4.0) | n/a |
 
@@ -50,7 +51,7 @@ There can be a situation when a customer places an order, selects a shipment met
 For plugin documentation see: -->
 
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -69,7 +70,7 @@ With this release, we have added Country to the _Addresses_ section on the **Vie
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a |  [Sales 8.8.0](https://github.com/spryker/sales/releases/tag/8.8.0)|  n/a|
 
@@ -78,7 +79,7 @@ With this release, we have implemented a post activate / deactivate hook for CMS
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | <ul><li>[CategoryNavigationConnector 1.0.0](https://github.com/spryker/category-navigation-connector/releases/tag/1.0.0)</li><li>[CmsNavigationConnector 1.0.0](https://github.com/spryker/cms-navigation-connector/releases/tag/1.0.0)</li></ul> | <ul><li>[Category 4.4.0](https://github.com/spryker/category/releases/tag/4.4.0)</li><li>[Cms 6.5.0](https://github.com/spryker/cms/releases/tag/6.5.0)</li><li>[Navigation 2.3.0](https://github.com/spryker/navigation/releases/tag/2.3.0)</li></ul> | n/a |
 
@@ -86,7 +87,7 @@ With this release, we have implemented a post activate / deactivate hook for CMS
 For plugin documentation see: -->
 
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -106,7 +107,7 @@ Previously, we had an issue with orders count for guest users: _All orders of th
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Sales 8.8.1](https://github.com/spryker/sales/releases/tag/8.8.1) |
 
@@ -119,7 +120,7 @@ In this release, we have fixed the following issues with SKU generation:
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | <ul><li>[Product 6.0.1](https://github.com/spryker/product/releases/tag/6.0.1)</li><li>[ProductManagement 0.13.2](https://github.com/spryker/product-management/releases/tag/0.13.2)</li></ul> |
 

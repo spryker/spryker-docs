@@ -1,5 +1,6 @@
 ---
 title: Multi-Theme Feature Overview
+last_updated: Nov 22, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/multi-theme-feature-overview
 originalArticleId: 4db9d065-7938-4980-8e26-3763b2d0d34b

@@ -1,6 +1,7 @@
 ---
 title: Nosto
 description: Empower retailers to build, launch and optimize 1-1 omnichannel marketing campaigns and digital experiences without the need for dedicated IT resources or a lengthy implementation process by integrating Nosto into the Spryker Commerce OS.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/nosto
 originalArticleId: e7d00914-ce24-46dc-a139-0ec2e038ccf9
@@ -15,6 +16,7 @@ related:
 ---
 
 ## Partner Information
+
 [ABOUT NOSTO](https://www.nosto.com/)
 
 Powerful Personalization. Made Easy.
@@ -45,4 +47,3 @@ See [Disclaimer](https://github.com/spryker/spryker-documentation).
 For further information on this partner and integration into Spryker, please contact us.
 
 <div class="hubspot-form js-hubspot-form" data-portal-id="2770802" data-form-id="163e11fb-e833-4638-86ae-a2ca4b929a41" id="hubspot-1"></div>
-

@@ -1,5 +1,6 @@
 ---
 title: Order Management feature integration
+last_updated: Aug 7, 2020
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/order-management-feature-integration
 originalArticleId: 8a0c6b6c-ced3-4974-bc79-c258f936a655

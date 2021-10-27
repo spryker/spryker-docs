@@ -1,5 +1,6 @@
 ---
 title: Billpay - Integration
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/billpay-integration
 originalArticleId: 3d4bf922-652c-45c7-b130-951015ff3b65
@@ -25,7 +26,7 @@ See [Configuration Management](http://documentation.spryker.com/v4/docs/configur
 
 ### Configuration Options:
 
-| Name | Description |
+| NAME | DESCRIPTION |
 | --- | --- |
 | `GATEWAY_URL` | url to Billpay API |
 | `BILLPAY_MERCHANT_ID` | Merchant ID that Billpay will provide to you |
@@ -37,6 +38,7 @@ See [Configuration Management](http://documentation.spryker.com/v4/docs/configur
 | `USE_PRESCORE` | In if it is necessary to show all Billpay payment methods despite of Billpay prescore response, you can set this option to 0. It should be set to 1 by default. |
 
 When you add options above to your project configuration, it should look somewhat like this:
+
 ```php
 <?php
 $config[BillpayConstants::GATEWAY_URL] = 'https://test-api.billpay.de/xml/offline';
@@ -52,6 +54,7 @@ $config[BillpayConstants::USE_PRESCORE] = 1;
 ## Additional Configuration Options
 
 Payone module provides dependency injectors to extend checkout and order processing. Please add or extend with the corresponding keys:
+
 ```php
 <?php
 $config[KernelConstants::DEPENDENCY_INJECTOR_YVES] = [
@@ -71,6 +74,7 @@ $config[KernelConstants::DEPENDENCY_INJECTOR_ZED] = [
 ```
 
 In order to use the Billpay module state machines,  add the location path to configuration:
+
 ```php
 <?php
 $config[OmsConstants::PROCESS_LOCATION] = [
@@ -84,10 +88,10 @@ $config[OmsConstants::ACTIVE_PROCESSES] = [
 ```
 
 We link the OMS state machine with payment method as shown bellow:
+
 ```php
 <?php
 $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
  BillpayConstants::PAYMENT_METHOD_INVOICE => 'BillpayInvoice01',
 ];
 ```
-

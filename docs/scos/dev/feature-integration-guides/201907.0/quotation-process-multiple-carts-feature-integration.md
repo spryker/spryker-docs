@@ -1,6 +1,7 @@
 ---
 title: Quotation Process + Multiple Carts feature integration
 description: The guide describes how to install the Quotation Process and Multiple Carts features in your project.
+last_updated: Nov 22, 2019
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/quotation-process-multiple-carts-feature-integration
 originalArticleId: af15aaa5-f925-4664-b148-4cdc93aef935

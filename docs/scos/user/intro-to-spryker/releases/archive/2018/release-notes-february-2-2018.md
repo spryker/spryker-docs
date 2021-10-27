@@ -1,5 +1,6 @@
 ---
 title: Release Notes - February - 2 2018
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes-february-2-2018
 originalArticleId: 148ecbbb-4c1b-47b6-8d0f-59085912f147
@@ -17,17 +18,17 @@ We continue progressing towards full enablement of the multi-store concept. With
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | <ul><li>[CmsBlock 2.0.0](https://github.com/spryker/cms-block/releases/tag/2.0.0)</li><li>[CmsBlockCollector 2.0.0](https://github.com/spryker/cms-block-collector/releases/tag/2.0.0)</li><li>[CmsBlockGui 2.0.](https://github.com/spryker/cms-block-gui/releases/tag/2.0.0)</li></ul> | n/a | <ul><li>[CmsBlockCategoryConnector 2.1.4](https://github.com/spryker/cms-block-category-connector/releases/tag/2.1.4)</li><li>[CmsBlockCategoryStorage 0.1.2](https://github.com/spryker/cms-block-category-storage/releases/tag/0.1.2)</li><li>[CmsBlockProductConnector 1.1.3](https://github.com/spryker/cms-block-product-connector/releases/tag/1.1.3)</li><li>[CmsBlockProductStorage 0.1.2](https://github.com/spryker/cms-block-product-storage/releases/tag/0.1.2)</li><li>[CmsBlockStorage 0.1.3](https://github.com/spryker/cms-block-storage/releases/tag/0.1.3)</li><li>[ProductManagement 0.11.3](https://github.com/spryker/product-management/releases/tag/0.11.3)</li></ul> |
 
 <!-- Documentation
-For module documentation see: 
+<br>For module documentation see: 
 For detailed migration guides see:
 For store administration guide see:-->
 
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -47,7 +48,7 @@ As a part of the multi-store concept, the Discount per Store feature has been im
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 |[Discount 6.0.0](https://github.com/spryker/discount/releases/tag/6.0.0) | <ul><li>[Quote 1.2.0](https://github.com/spryker/quote/releases/tag/1.2.0)</li><li>[Store 1.4.0](https://github.com/spryker/store/releases/tag/1.4.0)</li></ul> | <ul><li>[CustomerGroupDiscountConnector 2.0.3](https://github.com/spryker/customer-group-discount-connector/releases/tag/2.0.3)</li><li>[DiscountCalculationConnector 5.0.2](https://github.com/spryker/discount-calculation-connector/releases/tag/5.0.2)</li><li>[DiscountPromotion 1.0.8](https://github.com/spryker/discount-promotion/releases/tag/1.0.8)</li><li>[OmsDiscountConnector 3.0.2](https://github.com/spryker/oms-discount-connector/releases/tag/3.0.2)</li><li>[ProductDiscountConnector 3.2.2](https://github.com/spryker/product-discount-connector/releases/tag/3.2.2)</li><li>[ProductLabelDiscountConnector 1.2.1](https://github.com/spryker/product-label-discount-connector/releases/tag/1.2.1)</li><li>[ShipmentDiscountConnector 1.1.2](https://github.com/spryker/shipment-discount-connector/releases/tag/1.1.2)</li></ul> |
 
@@ -55,7 +56,7 @@ As a part of the multi-store concept, the Discount per Store feature has been im
 For detailed migration guides see:-->
 
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -75,12 +76,12 @@ With this release, we are introducing a new feature that enables the shop admini
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | [ProductValidity 1.0.0](https://github.com/spryker/product-validity/releases/tag/1.0.0) | [ProductManagement 0.11.0](https://github.com/spryker/product-management/releases/tag/0.11.0) |  [ProductLabelGui 2.0.5](https://github.com/spryker/product-label-gui/releases/tag/2.0.5)|
 
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -98,7 +99,7 @@ Previously, it was not possible to configure the `cookie_path` for the session c
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Session 3.2.4](https://github.com/spryker/session/releases/tag/3.2.4) |
 
@@ -107,7 +108,7 @@ We continue making Spryker components compatible with new versions of Symfony. W
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | <ul><li>[Auth 3.0.2](https://github.com/spryker/auth/releases/tag/3.0.2)</li><li>[AvailabilityGui 2.0.8](https://github.com/spryker/availability-gui/releases/tag/2.0.8)</li><li>[Category 4.3.3](https://github.com/spryker/category/releases/tag/4.3.3)</li><li>[Cms 6.4.3](https://github.com/spryker/cms/releases/tag/6.4.3)</li><li>[CmsBlockCategoryConnector 2.1.3](https://github.com/spryker/cms-block-category-connector/releases/tag/2.1.3)</li><li>[CmsBlockGui 1.1.9](https://github.com/spryker/cms-block-gui/releases/tag/1.1.9)</li><li>[CmsGui 4.3.6](https://github.com/spryker/cms-gui/releases/tag/4.3.6)</li><li>[Customer 7.4.3](https://github.com/spryker/customer/releases/tag/7.4.3)</li><li>[CustomerGroup 2.2.6](https://github.com/spryker/customer-group/releases/tag/2.2.6)</li><li>[Development 3.6.3](https://github.com/spryker/development/releases/tag/3.6.3)</li><li>[Discount 5.2.3](https://github.com/spryker/discount/releases/tag/5.2.3)</li><li>[Glossary 3.3.3](https://github.com/spryker/glossary/releases/tag/3.3.3)</li><li>[NavigationGui 2.1.2](https://github.com/spryker/navigation-gui/releases/tag/2.1.2)</li><li>[ProductCategory 4.5.3](https://github.com/spryker/product-category/releases/tag/4.5.3)</li><li>[ProductCategoryFilterGui 1.1.2](https://github.com/spryker/product-category-filter-gui/releases/tag/1.1.2)</li><li>[ProductManagement 0.11.2](https://github.com/spryker/product-management/releases/tag/0.11.2)</li><li>[ProductOption 6.1.4](https://github.com/spryker/product-option/releases/tag/6.1.4)</li><li>[ProductRelation 2.1.3](https://github.com/spryker/product-relation/releases/tag/2.1.3)</li><li>[ProductSearch 5.4.4](https://github.com/spryker/product-search/releases/tag/5.4.4)</li><li>[ProductSetGui 2.0.3](https://github.com/spryker/product-set-gui/releases/tag/2.0.3)</li><li>[Sales 8.5.3](https://github.com/spryker/sales/releases/tag/8.5.3)</li><li>[SalesSplit 3.0.5](https://github.com/spryker/sales-split/releases/tag/3.0.5)</li><li>[Shipment 6.2.2](https://github.com/spryker/shipment/releases/tag/6.2.2)</li><li>[StepEngine 3.1.3](https://github.com/spryker/step-engine/releases/tag/3.1.3)</li><li>[Store 1.3.2](https://github.com/spryker/store/releases/tag/1.3.2)</li><li>[Symfony 3.1.4](https://github.com/spryker/symfony/releases/tag/3.1.4)</li><li>[Tax 5.1.6](https://github.com/spryker/tax/releases/tag/5.1.6)</li><li>[User 3.1.5](https://github.com/spryker/user/releases/tag/3.1.5)</li></ul> |
 
@@ -116,7 +117,7 @@ With this release, we have made Spryker OS compatible with PHP 7.2.
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | <ul><li>[Customer 7.4.2](https://github.com/spryker/customer/releases/tag/7.4.2)</li><li>[Money 2.4.2](https://github.com/spryker/money/releases/tag/2.4.2)</li><li>[ProductManagement 0.11.1](https://github.com/spryker/product-management/releases/tag/0.11.1)</li><li>[PropelOrm 1.5.1](https://github.com/spryker/propel-orm/releases/tag/1.5.1)</li><li>[Store 1.3.1](https://github.com/spryker/store/releases/tag/1.3.1)</li><li>[Testify 3.4.3](https://github.com/spryker/testify/releases/tag/3.4.3)</li><li>[UtilSanitize 2.1.2](https://github.com/spryker/util-sanitize/releases/tag/2.1.2)</li></ul> |
 
@@ -127,7 +128,7 @@ Previously, when trying to save a user role without making any changes to it in 
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Acl 3.0.7](https://github.com/spryker/acl/releases/tag/3.0.7) |
 
@@ -136,7 +137,7 @@ Previously, we had the following issue: when trying to save a CMS page with empt
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [CmsGui 4.3.7](https://github.com/spryker/cms-gui/releases/tag/4.3.7) |
 
@@ -145,7 +146,7 @@ Previously, there was an issue with mail text layout - when sending an email in 
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Mail 4.0.2](https://github.com/spryker/mail/releases/tag/4.0.2) |
 
@@ -155,7 +156,7 @@ Please make sure you are not using any project implementation that relies on the
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [PropelOrm 1.5.2](https://github.com/spryker/propel-orm/releases/tag/1.5.2) |
 
@@ -164,7 +165,7 @@ Previously, we had an issue with filters and category tree display on Yves: when
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [ProductCategoryFilter 1.2.1](https://github.com/spryker/product-category-filter/releases/tag/1.2.1) |
 
@@ -173,7 +174,7 @@ Earlier, there was an issue with saving customer details twice: after editing a 
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Customer 7.5.1](https://github.com/spryker/customer/releases/tag/7.5.1) |
 
@@ -182,7 +183,7 @@ Previously, we had an issue when trying to add an existing attribute key to a ca
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 |n/a  | n/a | [ProductCategoryFilterGui 1.1.3](https://github.com/spryker/product-category-filter-gui/releases/tag/1.1.3) |
 
@@ -191,7 +192,7 @@ There was an issue with the customer name of a deleted account: it was used to b
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a |[Sales 8.5.2](https://github.com/spryker/sales/releases/tag/8.5.2) |
 
@@ -200,7 +201,7 @@ Previously, we had the following issue: when adding promotional products with se
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [DiscountPromotion 1.0.7](https://github.com/spryker/discount-promotion/releases/tag/1.0.7) |
 

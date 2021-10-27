@@ -1,6 +1,7 @@
 ---
 title: PayOne - Integration into the Legacy Demoshop Project
 description: Integrate Payone into the Spryker Legacy Demoshop by following the instructions from this article.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/payone-integration-with-project-example
 originalArticleId: 33e511b2-b8d3-489c-bf70-2581e86105a5
@@ -224,7 +225,7 @@ Move `form_start` expression to the top of a content section and `form_end` to t
       {% raw %}{%{% endraw %} include '@checkout/checkout/partials/shipment.twig' {% raw %}%}{% endraw %}
       ...
 ```
-10. Add shipment form data provider and remove voucher form from summary form collection(It is just an example, if you need voucher form, you need to adjust summary page on your own).            In `src/Pyz/Yves/Checkout/Form/FormFactory.php`:
+10. Add shipment form data provider and remove voucher form from summary form collection (it is just an example, if you need voucher form, you need to adjust summary page on your own). In `src/Pyz/Yves/Checkout/Form/FormFactory.php`:
 
 ```php
 /**

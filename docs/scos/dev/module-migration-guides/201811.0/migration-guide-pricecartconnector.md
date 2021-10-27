@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Price Cart Connector
+last_updated: Jul 29, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/mg-price-cart-connector
 originalArticleId: 53131d17-d5a6-4e10-9bb7-d6e1b0ff48c5

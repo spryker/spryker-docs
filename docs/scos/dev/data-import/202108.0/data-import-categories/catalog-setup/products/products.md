@@ -1,5 +1,6 @@
 ---
 title: Products
+last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/products-import
 originalArticleId: a2aeed1c-8613-43f2-9141-abb20c9aedb1

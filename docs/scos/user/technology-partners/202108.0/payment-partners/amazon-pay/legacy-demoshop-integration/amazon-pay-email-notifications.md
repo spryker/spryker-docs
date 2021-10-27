@@ -1,6 +1,7 @@
 ---
 title: Amazon Pay - Email Notifications
 description: You can find the details for authorization status update logic in the Spryker Legacy Demoshop.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/amazon-pay-email-notification-demoshop
 originalArticleId: 66796b86-547a-43d9-a154-059398639191
@@ -32,13 +33,13 @@ Since Amazon Pay requires some emails being sent in specific situations, please 
 
 ### UpdateOrderAuthorizationStatusTransaction
 
-Once the order authorization state is <b>Suspended</b>, the customer should receive an email stating that the order requires customer's interaction.
+Once the order authorization state is **Suspended**, the customer should receive an email stating that the order requires customer's interaction.
 
-Suggested email template for <b>Suspended</b> status is:
+Suggested email template for **Suspended** status is:
 
-<b>Theme:</b> Please update your payment information
+**Theme:** Please update your payment information
 
-<b>Content:</b>
+**Content:**
 
 ```xml
 Valued customer,
@@ -54,13 +55,13 @@ confirmation email.
 Kind regards
 ```
 
-Once the order authorization is <b>Declined</b>, the customer should receive an email stating that the order requires customer's interaction.
+Once the order authorization is **Declined**, the customer should receive an email stating that the order requires customer's interaction.
 
-Suggested email template for <b>Declined</b> status is:
+Suggested email template for **Declined** status is:
 
-<b>Theme:</b> Please contact us regarding your order
+**Theme:** Please contact us regarding your order
 
-<b>Content:</b>
+**Content:**
 
 ```xml
 Valued customer,

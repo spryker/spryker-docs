@@ -1,5 +1,6 @@
 ---
 title: Tutorial - Handling New Types of Entity URLs - Legacy Demoshop
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/url-handling-new-entity
 originalArticleId: a604a955-5745-46bf-9b12-b775ca853b8d
@@ -126,8 +127,8 @@ public function createUrlForMyEntity($url, $idMyEntity, $idLocale)
 ```
 
 {% info_block infoBox %}
-The `\Spryker\Zed\Url\Business\UrlFacade::createUrl(
-{% endinfo_block %}` method persists a new URL in the database and also makes sure it will be collected to the key-value storage the next time the URL collector runs.)
+The `\Spryker\Zed\Url\Business\UrlFacade::createUrl()` method persists a new URL in the database and also makes sure it will be collected to the key-value storage the next time the URL collector runs.
+{% endinfo_block %}
 
 ## Setting up the Frontend
 To setup the frontend, you need to create a Controller class in Yves and make sure it is discoverable to the responsible router.

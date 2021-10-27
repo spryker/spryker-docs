@@ -1,5 +1,6 @@
 ---
 title: Release Notes - January - 2018
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes-january-2018
 originalArticleId: 9e3cd388-4fc6-4b2a-921e-3bd6d7cf1144
@@ -11,8 +12,8 @@ redirect_from:
 ---
 
 {% info_block warningBox %}
-Please note, that we do not have [Toran Proxy](https://toranproxy.com/
-{% endinfo_block %} anymore. We recommend to download all Spryker modules from public [Packagist](https://packagist.org/) from now on.)
+Please note, that we do not have [Toran Proxy](https://toranproxy.com/) anymore. We recommend to download all Spryker modules from public [Packagist](https://packagist.org/) from now on.
+{% endinfo_block %}
 
 ## Features
 ### Multi-Currency Product Options
@@ -23,12 +24,12 @@ Shop visitors in their turn can select a currency/price mode using a switcher on
 
 ![Multi-currency product options in Yves](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+January+-+2018/multicurrency_yves.png) 
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | <ul><li>[CatalogPriceProductConnector 1.0.0](https://github.com/spryker/CatalogPriceProductConnector/releases/tag/1.0.0)</li><li>[Price 5.0.0](https://github.com/spryker/Price/releases/tag/5.0.0)</li><li>[PriceCartConnector 4.0.0](https://github.com/spryker/price-cart-connector/releases/tag/4.0.0)</li><li>[PriceProduct 1.0.0](https://github.com/spryker/price-product/releases/tag/1.0.0)</li><li>[ProductBundle 4.0.0](https://github.com/spryker/ProductBundle/releases/tag/4.0.0)</li><li>[ProductLabelGui 2.0.0](https://github.com/spryker/product-label-gui/releases/tag/2.0.0)</li><li>[ProductOption 6.0.0](https://github.com/spryker/product-option/releases/tag/6.0.0)</li><li>[ProductOptionCartConnector 5.0.0](https://github.com/spryker/product-option-cart-connector/releases/tag/5.0.0)</li><li>[ProductRelation 2.0.0](https://github.com/spryker/product-relation/releases/tag/2.0.0)</li><li>[ProductRelationCollector 2.0.0](https://github.com/spryker/product-relation-collector/releases/tag/2.0.0)</li><li>[ProductSetGui 2.0.0](https://github.com/spryker/product-set-gui/releases/tag/2.0.0)</li><li>[Search 7.0.0](https://github.com/spryker/Search/releases/tag/7.0.0)</li><li>[ShipmentCartConnector 1.0.0](https://github.com/spryker/shipment-cart-connector/releases/tag/1.0.0)</li><li>[Wishlist 5.0.0](https://github.com/spryker/Wishlist/releases/tag/5.0.0)</li></ul> | <ul><li> [Cart 4.2.0](https://github.com/spryker/Cart/releases/tag/4.2.0)</li><li>[Currency 3.2.0](https://github.com/spryker/Currency/releases/tag/3.2.0)</li><li>[Kernel 3.15.0](https://github.com/spryker/Kernel/releases/tag/3.15.0)</li><li>[Messenger 3.1.0](https://github.com/spryker/Messenger/releases/tag/3.1.0)</li><li>[Money 2.4.0](https://github.com/spryker/Money/releases/tag/2.4.0)</li><li>[PriceDataFeed 0.2.0](https://github.com/spryker/price-data-feed/releases/tag/0.2.0)</li><li>[ProductManagement 0.9.0](https://github.com/spryker/ProductManagement/releases/tag/0.9.0)</li><li>[Shipment 6.2.0](https://github.com/spryker/Shipment/releases/tag/6.2.0)</li><li>[Store 1.2.0](https://github.com/spryker/Store/releases/tag/1.2.0)</li></ul> | <ul><li>[AvailabilityGui 2.0.5](https://github.com/spryker/AvailabilityGui/releases/tag/2.0.5)</li><li>[CartCurrencyConnector 1.0.1](https://github.com/spryker/CartCurrencyConnector/releases/tag/1.0.1)</li><li>[Catalog 5.1.1](https://github.com/spryker/Catalog/releases/tag/5.1.1)</li><li>[CmsCollector 2.0.1](https://github.com/spryker/CmsCollector/releases/tag/2.0.1)</li><li>[CmsContentWidgetProductSetConnector 1.0.1](https://github.com/spryker/cms-content-widget-product-set-connector/releases/tag/1.0.1)</li><li>[Collector 5.5.2](https://github.com/spryker/Collector/releases/tag/5.5.2)</li><li>[CollectorSearchConnector 1.0.1](https://github.com/spryker/CollectorSearchConnector/releases/tag/1.0.1)</li><li>[ProductCategoryFilterGui 1.0.1](https://github.com/spryker/ProductCategoryFilterGui/releases/tag/1.0.1)</li><li>[ProductReview 1.0.1](https://github.com/spryker/product-review/releases/tag/1.0.1)</li><li>[ProductReviewCollector 1.0.1](https://github.com/spryker/product-review-collector/releases/tag/1.0.1)</li><li>[ProductSearch 5.3.1](https://github.com/spryker/ProductSearch/releases/tag/5.3.1)</li><li>[ProductSet 1.2.2](https://github.com/spryker/product-set/releases/tag/1.2.2)</li><li>[ProductSetCollector 1.0.1](https://github.com/spryker/ProductSetCollector/releases/tag/1.0.1)</li><li>[Setup 4.0.1](https://github.com/spryker/Setup/releases/tag/4.0.1)</li><li>[Synchronization 0.1.1](https://github.com/spryker/Synchronization/releases/tag/0.1.1)</li></ul> |
 
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -49,15 +50,15 @@ With this release, we are introducing a new category filters functionality which
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | <ul><li>[ProductCategoryFilter 1.0.0](https://github.com/spryker/product-category-filter/releases/tag/1.0.0)</li><li>[ProductCategoryFilterCollector 1.0.0](https://github.com/spryker/product-category-filter-collector/releases/tag/1.0.0)</li><li>[ProductCategoryFilterGui 1.0.0](https://github.com/spryker/ProductCategoryFilterGui/releases/tag/1.0.0)</li></ul> | <ul><li>[Product 5.4.0](https://github.com/spryker/Product/releases/tag/5.4.0)</li><li>[ProductSearch 5.3.0](https://github.com/spryker/product-search/releases/tag/5.3.0)</li><li>[Search 6.10.0](https://github.com/spryker/Search/releases/tag/6.10.0)</li></ul> | n/a |
 
 <!--Documentation
-For module documentation see: 
+<br>For module documentation see: 
 For store administration guides see:-->
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -78,7 +79,7 @@ With this release, we have added a possibility to add more than one item to the 
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [Availability 5.3.0](https://github.com/spryker/Availability/releases/tag/5.3.0) | n/a |
 
@@ -90,7 +91,7 @@ For an end user the logging functionality result doesn't change. The logs can st
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | <ul><li>[Log 3.4.0](https://github.com/spryker/Log/releases/tag/3.4.0)</li><li>[Propel 3.5.0](https://github.com/spryker/Propel/releases/tag/3.5.0)</li></ul> | [Application 3.8.3](https://github.com/spryker/Application/releases/tag/3.8.3) |
 
@@ -99,7 +100,7 @@ Previously, a method with a misleading name was used in `SalesOrderQueryContaine
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a |  [Sales 8.4.0](https://github.com/spryker/Sales/releases/tag/8.4.0) | n/a |
 
@@ -108,12 +109,12 @@ As a part of this release, we have cleaned up the order placment process to make
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 |[Checkout 4.0.0](https://github.com/spryker/Checkout/releases/tag/4.0.0)  | <ul><li>[Customer 7.2.0](https://github.com/spryker/Customer/releases/tag/7.2.0)</li><li>[Discount 5.2.0](https://github.com/spryker/Discount/releases/tag/5.2.0)</li><li>[Payment 4.2.0](https://github.com/spryker/Payment/releases/tag/4.2.0)</li><li>[ProductBundle 3.3.0](https://github.com/spryker/product-bundle/releases/tag/3.3.0)</li><li>[ProductOption 5.6.0](https://github.com/spryker/product-option/releases/tag/5.6.0)</li><li>[Sales 8.3.0](https://github.com/spryker/Sales/releases/tag/8.3.0)</li><li>[SalesProductConnector 1.1.0](https://github.com/spryker/sales-product-connector/releases/tag/1.1.0)</li><li>[Shipment 6.1.0](https://github.com/spryker/Shipment/releases/tag/6.1.0)</li></ul> | <ul><li>[Availability 5.2.2](https://github.com/spryker/Availability/releases/tag/5.2.2)</li><li>[Braintree 0.5.7](https://github.com/spryker/Braintree/releases/tag/0.5.7)</li><li>[Calculation 4.2.2](https://github.com/spryker/Calculation/releases/tag/4.2.2)</li><li>[DummyPayment 2.1.4](https://github.com/spryker/dummy-payment/releases/tag/2.1.4)</li><li>[Oms 7.3.1](https://github.com/spryker/Oms/releases/tag/7.3.1)</li><li>[Payolution 4.0.7](https://github.com/spryker/Payolution/releases/tag/4.0.7)</li><li>[Ratepay 0.6.6](https://github.com/spryker/Ratepay/releases/tag/0.6.6)</li></ul> |
 
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -133,7 +134,7 @@ We have also added a new validation tool to ensure that no accidental attribute 
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [Propel 3.4.0](https://github.com/spryker/Propel/releases/tag/3.4.0) | [ProductRelation 1.1.3](https://github.com/spryker/product-relation/releases/tag/1.1.3) |
 
@@ -145,7 +146,7 @@ The third argument of `ZedRequestClientInterface::call()` now also accepts an ar
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [ZedRequest 3.3.0](https://github.com/spryker/zed-request/releases/tag/3.3.0) | n/a |
 
@@ -155,7 +156,7 @@ Previously, an exception was thrown when trying to delete a customer account ass
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [CustomerGroup 2.2.4](https://github.com/spryker/CustomerGroup/releases/tag/2.2.4) |
 
@@ -166,7 +167,7 @@ This problem has now been fixed. The SKUs and IDs are no more mixed up upon prom
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [DiscountPromotion 1.0.4](https://github.com/spryker/discount-promotion/releases/tag/1.0.4) |
 
@@ -177,7 +178,7 @@ Running `queue-worker` is now possible both in normal and verbosity modes.
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Queue 1.0.2](https://github.com/spryker/Queue/releases/tag/1.0.2) |
 
@@ -190,7 +191,7 @@ This release also includes fix for the Product Attribute module. We had an inter
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | <ul><li>[Acl 3.0.5](https://github.com/spryker/Acl/releases/tag/3.0.5)</li><li>[Cms 6.3.4](https://github.com/spryker/Cms/releases/tag/6.3.4)</li><li>[CmsBlockGui 1.1.6](https://github.com/spryker/cms-block-gui/releases/tag/1.1.6)</li><li>[CmsGui 4.3.3](https://github.com/spryker/cms-gui/releases/tag/4.3.3)</li><li>[Customer 7.1.1](https://github.com/spryker/Customer/releases/tag/7.1.1)</li><li>[CustomerGroup 2.2.3](https://github.com/spryker/customer-group/releases/tag/2.2.3)</li><li>[Glossary 3.2.2](https://github.com/spryker/Glossary/releases/tag/3.2.2)</li><li>[ProductAttributeGui 1.0.4](https://github.com/spryker/product-attribute-gui/releases/tag/1.0.4)</li><li>[ProductSearch 5.2.2](https://github.com/spryker/product-search/releases/tag/5.2.2)</li><li>[Shipment 6.0.3](https://github.com/spryker/Shipment/releases/tag/6.0.3)</li><li>[User 3.1.3](https://github.com/spryker/User/releases/tag/3.1.3)</li></ul> |
 
@@ -201,7 +202,7 @@ In this release, we return support of old interfaces in order to keep full BC wi
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | <ul><li>[Checkout 4.0.1](https://github.com/spryker/Checkout/releases/tag/4.0.1)</li><li>[Sales 8.4.1](https://github.com/spryker/Sales/releases/tag/8.4.1)</li></ul> |
 
@@ -210,7 +211,7 @@ Previously, we had an issue with the native datepicker in the Firefox browser: w
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | <ul><li>[Gui 3.13.0](https://github.com/spryker/Gui/releases/tag/3.13.0)</li><li>[NavigationGui 2.1.0](https://github.com/spryker/NavigationGui/releases/tag/2.1.0)</li></ul> | <ul><li>[CmsBlockGui 1.1.7](https://github.com/spryker/cms-block-gui/releases/tag/1.1.7)</li><li>[CmsGui 4.3.4](https://github.com/spryker/CmsGui/releases/tag/4.3.4)</li><li>[Discount 5.2.1](https://github.com/spryker/Discount/releases/tag/5.2.1)</li><li>[ProductLabelGui 2.0.2](https://github.com/spryker/product-label-gui/releases/tag/2.0.2)</li><li>[ProductManagement 0.9.2](https://github.com/spryker/product-management/releases/tag/0.9.2)</li></ul> |
 
@@ -219,7 +220,7 @@ After Log minor 3.4.0, a project could get unexpected behavior if methods were e
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Log 3.4.1](https://github.com/spryker/Log/releases/tag/3.4.1) |
 

@@ -1,6 +1,7 @@
 ---
 title: Computop - Easy Credit
 description: Integrate Easy Credit payment through  Computop into the Spryker-based shop.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/computop-easy-credit
 originalArticleId: cdbe2101-cd6a-4a31-bfec-4d922c5e221f
@@ -33,13 +34,15 @@ related:
 ---
 
 Example State Machine
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Computop/computop-easy-credit-flow-example.png) 
+
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Computop/computop-easy-credit-flow-example.png)
 
 ## Front-end Integration
 To adjust the frontend appearance, provide the following templates in your theme directory:
 `src/<project_name>/Yves/Computop/Theme/<custom_theme_name>/easy_credit.twig`
 
 ## State Machine Integration
+
 The Computop provides a demo state machine for Easy Credit payment method which implements Authorization/Capture flow.
 
 To enable the demo state machine, extend the configuration with the following values:
@@ -63,9 +66,9 @@ $config[OmsConstants::ACTIVE_PROCESSES] = [
       There is a radio button on "Payment" step.
       After submitting the order the customer will be redirected to the Computop (Paygate form implementation).
       The GET consists of 3 parameters:
-  - data (encrypted parameters, e.g. currency, amount, description);
-  - length (length of 'data' parameter);
-  - merchant id (assigned by Computop);
+  - Data (encrypted parameters, e.g. currency, amount, description)
+  - Length (length of 'data' parameter)
+  - Merchant id (assigned by Computop)
         Customer sets up all data just after the redirect to Computop.
         Init action: "Order".
 2. By default, on success the customer  will be redirected to "Success" step. The response contains `payId`. On error, the customer  will be redirected to "Payment" step with the error message by default. Response data is stored in the DB.

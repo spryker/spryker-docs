@@ -1,6 +1,7 @@
 ---
 title: Product Groups feature integration
 description: The guide describes the process of installing the Product Group feature in your project.
+last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-groups-feature-integration
 originalArticleId: 98619d19-9d48-41bc-be88-64ba15de9c2e

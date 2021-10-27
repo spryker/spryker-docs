@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Product
 description: Use the guide to update the Product module to a newer version.
+last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-product
 originalArticleId: 8558602e-6af8-40d2-8ae1-e15fe59ed6e4

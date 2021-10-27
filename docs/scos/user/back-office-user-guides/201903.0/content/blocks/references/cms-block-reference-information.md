@@ -1,6 +1,7 @@
 ---
 title: CMS Block- Reference Information
 description: The guide provides reference information you need when managing CMS blocks in the Back Office.
+last_updated: Nov 22, 2019
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/cms-block-reference-information
 originalArticleId: 8639cdcd-0b70-420c-8980-436a6a044da4

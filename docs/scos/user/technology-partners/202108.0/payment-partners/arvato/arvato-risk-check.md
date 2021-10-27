@@ -1,6 +1,7 @@
 ---
 title: Arvato - Risk Check
 description: Arvato Risk Check evaluates the probability of payment default for the customer orders.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/arvato-risk-check
 originalArticleId: 41dea1fe-a5d6-4641-b29a-7dc2091129fe
@@ -21,7 +22,7 @@ Accounted for by external credit agency data and internal existing customer- and
 The returned decision codes (`Result` – `ActionCode` – `ResultCode`) manage the definition of the eShop's payment methods.
 If a payment method is not permitted, the decision code provides information about alternate payment methods available for the customer.
 
- Additional validation of billing and shipping addresses is performed on Arvato RSS side. Please refer to Arvato documentation for return code bit pattern and explanation of bits.
+Additional validation of billing and shipping addresses is performed on Arvato RSS side. Please refer to Arvato documentation for return code bit pattern and explanation of bits.
 
 The main entry point to risk check functionality is `performRiskCheck` method inside `ArvatoRssFacade` class.
 
@@ -29,16 +30,20 @@ Developer is supposed to call `performRiskCheck` method providing actual `QuoteT
 In the response `QuoteTransfer` is returned with `ArvatoRssRiskCheckResponse` transfer inside. It contains `Result`, `ResultCode`, `ActionCode`, `ResultText`, `billingAddressValidation`, `deliveryAddressValidation`.
 
 Response can be taken with:
+
 ```php
  $quoteTransfer->getArvatoRssQuoteData()->getArvatoRssRiskCheckResponse();
  ```
+
 {% info_block warningBox "Note" %}
+
 The transfer can have all fields empty if error occurred during request.
+
 {% endinfo_block %}
 
-<b>Data, that is sent to Arvato RSS and must be present in quote:</b>
+**Data, that is sent to Arvato RSS and must be present in quote:**
 
-| Name | Notes |
+| NAME | NOTES |
 | --- | --- |
 |  `Country` | Is taken from `BillingAddress` and `ShippingAddress` |
 |  `City` | Is taken from `BillingAddress` and `ShippingAddress` |
@@ -56,6 +61,4 @@ The transfer can have all fields empty if error occurred during request.
 |  `UnitPrice` | Value of units incl. VAT. It is taken from `ItemTransfer`. |
 |  `UnitCount` | Quantity of units (maximum value 99999999). It is taken from `ItemTransfer` |
 
-You can check the result codes, returned by Arvato in the attachment.
-
-@(Embed)(https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Arvato/arvato-rss-result-codes.xlsx)
+You can check the result codes, returned by Arvato in the [attachment](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Arvato/arvato-rss-result-codes.xlsx).

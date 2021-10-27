@@ -1,6 +1,7 @@
 ---
 title: Amazon Pay - Email Notifications
 description: You can find the details for authorization status update logic in the Spryker Legacy Demoshop.
+last_updated: Apr 3, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/amazon-pay-email-notification-demoshop
 originalArticleId: 22ea4e2f-4796-46f4-9e40-7cf7176bc4a8

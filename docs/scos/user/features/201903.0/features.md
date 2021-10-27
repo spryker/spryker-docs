@@ -1,5 +1,6 @@
 ---
 title: Features
+last_updated: Nov 27, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/about-features
 originalArticleId: fe022c2a-32f1-467c-a443-c492964f58e7

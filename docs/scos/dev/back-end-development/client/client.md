@@ -1,6 +1,7 @@
 ---
 title: Client
 description: This article provides general information about the Client part of the Yves applications layer and describes how to use it.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/client
 originalArticleId: a959a1bf-affd-4959-8ed9-811583b5562f

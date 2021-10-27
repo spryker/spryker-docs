@@ -1,6 +1,7 @@
 ---
 title: Security Release Notes 2018.11.0
 description: The following information pertains to security-related issues that were discovered and resolved during 2018.11.0 release.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/security-release-notes-2018-11-0
 originalArticleId: bf1c212d-678b-4494-b427-c8c5b7303d65
@@ -28,8 +29,8 @@ The following information pertains to security related issues that were discover
 Issues are listed by description and affected modules.
 
 {% info_block infoBox %}
-If you need any additional support with this content please contact [support@spryker.com](mailto:support@spryker.com
-{% endinfo_block %})
+If you need any additional support with this content please contact [support@spryker.com](mailto:support@spryker.com).
+{% endinfo_block %}
 
 ## Use of unserialize()
 Issue with the debugging tool: Transfer Repeater was fixed to prevent running the tool in production where it might cause a security vulnerability.

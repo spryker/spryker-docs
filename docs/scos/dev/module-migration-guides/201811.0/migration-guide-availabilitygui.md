@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - AvailabilityGui
+last_updated: Nov 26, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/mg-availability-gui
 originalArticleId: a942bffc-3dd3-4362-9ec7-464396de1dd9

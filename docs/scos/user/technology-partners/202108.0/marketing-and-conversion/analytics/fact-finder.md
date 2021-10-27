@@ -1,6 +1,7 @@
 ---
 title: FACT-Finder
 description: Integrate FACT-Finder for on-site search, navigation, merchandising, personalization and product recommendations in Spryker Commerce OS.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/factfinder
 originalArticleId: e0ad7780-edb5-4c15-bdc0-c4e6f30d7938
@@ -33,6 +34,7 @@ related:
 ## Partner Information
 
 [ABOUT FACT-FINDER](http://www.fact-finder.de/)
+
 FACT-Finder is a software for online shops. We provide on-site search, navigation, merchandising, personalisation and product recommendations – with a measurable impact: A/B tests have proven that merchants experience a conversion uplift of 10-33 %. More than 1600 online shops use FACT-Finder, among them are brands like Media Markt, Distrelec, MyTheresa, Misterspex and Bergfreunde.
 
 ## FACT-Finder User Management

@@ -1,6 +1,7 @@
 ---
 title: CMS Page Drafts and Previews
 description: With the CMS draft feature, a Back Office user can create drafts of CMS pages without affecting the current live version of the page.
+last_updated: Feb 8, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/page-draft-preview
 originalArticleId: 21f417cd-dcfd-4923-b266-70c1388637a2

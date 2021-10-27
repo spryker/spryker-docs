@@ -1,5 +1,6 @@
 ---
 title: Versioning REST API Resources
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/versioning-rest-api-resources
 originalArticleId: 725aceb9-a222-49e3-9d4a-7cefa91e0907

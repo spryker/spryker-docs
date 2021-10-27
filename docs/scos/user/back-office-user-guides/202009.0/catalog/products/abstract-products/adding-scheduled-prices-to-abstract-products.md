@@ -1,6 +1,7 @@
 ---
 title: Adding scheduled prices to abstract products
 description: Learn how to add scheduled prices to abstract products in the Back Office.
+last_updated: Jun 3, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/adding-scheduled-prices-to-abstract-products
 originalArticleId: a1deae50-ab49-453c-a626-3fa7a7a63871

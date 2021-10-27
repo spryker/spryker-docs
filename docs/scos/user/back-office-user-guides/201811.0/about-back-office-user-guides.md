@@ -1,6 +1,7 @@
 ---
 title: About the Administration Interface Guide
 description: The Spryker Back Office user guide provides shop owners with procedures on how to manage the online store in the Back Office using Spryker Commerce OS.
+last_updated: Jan 13, 2020
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/about-the-back-office-user-guide
 originalArticleId: 8b57dc93-092a-4e67-8701-b4d80fc78225

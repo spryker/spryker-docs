@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductOptionExporter
 description: Use the guide to learn how to update the ProductOptionExporter module to a newer version.
+last_updated: Sep 14, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/mg-product-option-exporter
 originalArticleId: 296482b9-b6e3-47c9-b34e-93adc43223b9

@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductAvailabilitiesRestApi
 description: Use the guide to migrate to a new version of the ProductAvailabilitiesRestApi module.
+last_updated: Sep 21, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/productavailabilitiesrestapi-migration-guide
 originalArticleId: 1f73a683-d403-4f81-912d-2b98c90c6959

@@ -1,5 +1,6 @@
 ---
 title: HowTo - Generate a Token for Login
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-generate-a-token-for-login
 originalArticleId: d8eb9816-18d8-4da0-b856-1d3989a07932

@@ -1,6 +1,7 @@
 ---
 title: HowTo - Create and Register a Mail Provider
 description: Use the guide to create and register a mail provider in the Mail module.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-create-register-provider-plugin
 originalArticleId: 423f4609-d088-428a-bbe9-6718a7e235ed

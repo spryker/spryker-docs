@@ -1,6 +1,7 @@
 ---
 title: Retrieving category nodes
 description: Retrieve information about category nodes.
+last_updated: Feb 1, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/retrieving-category-nodes
 originalArticleId: 4b5a4e8f-5998-4f3d-bd43-e230eb7a5c22

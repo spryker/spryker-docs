@@ -1,5 +1,6 @@
 ---
 title: Payment Provider Integration
+last_updated: Oct 4, 2019
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/payment-provider-integration-guide
 originalArticleId: eed77b9e-8585-4399-974d-3054ad0cb239

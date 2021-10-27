@@ -1,6 +1,7 @@
 ---
 title: Managing gift cards of guest users
 description: Retrieve details about gift cards of the guest users, and learn what else you can do with the resource.
+last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-gift-cards-of-guest-users
 originalArticleId: 59818732-fa5a-43df-acd9-3d4ea91ee1ac
@@ -22,18 +23,17 @@ In your development, Gift Cards API provides resources for purchasing and redeem
 
 This endpoint allows managing gift cards of guest users.
 
-
 To manage the gift cards of the registered users, see [Managing gift cards of registered users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html).
 
-## Installation 
-For detailed information on the modules that provide the API functionality and related installation instructions, see Gift Cards API Integration.
+## Installation
 
+For detailed information on the modules that provide the API functionality and related installation instructions, see Gift Cards API Integration.
 
 ## Purchasing a gift card
 
 You can purchase a gift card as a regular product. To do that:
 
-1. Add a gift card to a guest cart. See [Add an item to a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-cart-items.html#add-items-to-a-guest-cart) for more details. 
+1. Add a gift card to a guest cart. See [Add an item to a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-cart-items.html#add-items-to-a-guest-cart) for more details.
 2. [Submit the checkout data](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/submitting-checkout-data.html#submit-checkout-data).
 3. [Place the order](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html#place-an-order).
 
@@ -48,7 +48,7 @@ To redeem a gift card, send the request:
 `POST` **/guest-carts/*{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}*/cart-codes?include=vouchers,gift-cards**
 ***
 
-| Path Parameter | DESCRIPTION |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart to redeem the gift card in. To get it, [create](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart) or [retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#retrieveaguestcart). |
 
@@ -158,6 +158,7 @@ For the guest cart attributes, see [Creating Guest Carts](/docs/scos/dev/glue-ap
 ## Removing gift card code
 
 To remove the gift card code from the cart, send the request:
+
 ***
 `DELETE` **/guest-carts/_{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}_/cart-codes/_{% raw %}{{{% endraw %}gift_card_code{% raw %}}}{% endraw %}_**
 ***
@@ -188,4 +189,3 @@ If the item is deleted successfully, the endpoint will respond with a `204 No C
 | 3303| Cart code can't be removed. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
-

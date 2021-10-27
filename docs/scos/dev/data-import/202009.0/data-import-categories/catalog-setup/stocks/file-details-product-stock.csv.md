@@ -1,5 +1,6 @@
 ---
 title: File details- product_stock.csv
+last_updated: Apr 19, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/v6/docs/file-details-product-stockcsv
 originalArticleId: 81b6e4b9-5f36-46f2-85ec-c65f184b3e5d

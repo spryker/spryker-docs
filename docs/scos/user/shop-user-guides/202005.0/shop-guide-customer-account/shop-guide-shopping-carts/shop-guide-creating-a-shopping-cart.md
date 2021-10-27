@@ -1,6 +1,7 @@
 ---
 title: Shop Guide - Creating a Shopping Cart
 description: Use the procedure to create a shopping cart in your customer account or via a shopping cart widget.
+last_updated: Sep 15, 2020
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/creating-shopping-cart
 originalArticleId: ae99abba-ee78-4218-af03-531803787d3a

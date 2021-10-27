@@ -1,6 +1,7 @@
 ---
 title: Managing guest carts
 description: Retrieve details about guest carts and learn what else you can do with the resource.
+last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-guest-carts
 originalArticleId: 70f8ca95-9dc9-4083-8056-4acd342e0054
@@ -19,6 +20,7 @@ related:
 This endpoint allows to manage guest carts.
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)
 * [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
@@ -37,7 +39,7 @@ To retrieve a guest cart, send the request:
 `GET` **/guest-carts**
 ***
 
-{% info_block infoBox "**Guest cart ID**" %}
+{% info_block infoBox "Guest cart ID" %}
 
 
 Guest users have one guest cart by default. If you already have a guest cart, you can optionally specify its ID when adding items. To do that, use the following endpoint. The information in this section is valid for both of the endpoints.
@@ -226,8 +228,8 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 }
 ```
 </details>
-   
-    
+
+
 <details>
 <summary markdown='span'>Response sample with cart rules</summary>
 
@@ -373,7 +375,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 </details>
 
 <details>
-    <summary markdown='span'>Sample response with guest cart items, concrete products, and product options</summary>
+<summary markdown='span'>Sample response with guest cart items, concrete products, and product options</summary>
 
 ```json
 {
@@ -626,7 +628,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
     ]
 }
 ```
-    
+
 </details>
 
 <details>
@@ -760,7 +762,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 <details>
 <summary markdown='span'>Response sample with a cart rule and a discount voucher</summary>
-    
+
 ```json
 {
     "data": {
@@ -830,7 +832,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 <details>
 <summary markdown='span'>Response sample with product labels</summary>
-    
+
 ```json
 {
     "data": [
@@ -1043,7 +1045,7 @@ Upon login, the behavior depends on whether your project is a single cart or [m
 * In a **multiple cart** environment, the guest cart is converted to a regular user cart and added to the list of the customers' own carts.
 
 The workflow is displayed in the diagram below:
-![Assign cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Storefront+Guides/Managing+Carts/Managing+Guest+Carts/assigning-guest-cart-to-registered-user.png) 
+![Assign cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Storefront+Guides/Managing+Carts/Managing+Guest+Carts/assigning-guest-cart-to-registered-user.png)
 
 Below, you can see an exemplary workflow for converting a guest cart into a regular cart:
 
@@ -1122,7 +1124,7 @@ Request sample: `GET https://glue.myspsrykershop.com/carts`
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | v | Alphanumeric string that authenticates the customer you want to change the password of. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | string | v | Alphanumeric string that authenticates the customer you want to change the password of. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 In the **multi-cart** environment, the guest cart has been converted to a regular cart. You can see it in the list of carts with the id `9183f604-9b2c-53d9-acbf-cf59b9b2ff9f`.
 
@@ -1176,7 +1178,6 @@ In a **single cart** environment, items from the guest cart have been added to
 ```
 
 ## Possible errors
-
 
 | CODE | REASON |
 | --- | --- |

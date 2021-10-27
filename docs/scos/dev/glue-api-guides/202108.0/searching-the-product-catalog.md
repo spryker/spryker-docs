@@ -1,6 +1,7 @@
 ---
 title: Searching the product catalog
 description: This article provides a bunch of sample requests to be used to achieve the implementation of search options and gives explanations of request values.
+last_updated: Jul 29, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/searching-the-product-catalog
 originalArticleId: d8d530bf-7cb2-473f-a7cb-0db96957700e
@@ -55,7 +56,7 @@ To search by products, send the request:
 | page | Sets the number of the search results page from which the results are retrieved | {% raw %}{{{% endraw %}page_number{% raw %}}}{% endraw %} |
 | ipp | Sets the number of products per page | {% raw %}{{{% endraw %}number_of_products{% raw %}}}{% endraw %} |
 
-| REQUEST   | USAGE     |
+| REQUEST   | USAGE |
 | --------------- | -------------- |
 | `GET https://glue.mysprykershop.com/catalog-search?q=`       | Search for all available products.   |
 | `GET https://glue.mysprykershop.com/catalog-search?q=058`       | Search for an abstract product by SKU *058*.   |
@@ -76,7 +77,7 @@ To search by products, send the request:
 | `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=name_desc` | Set sorting order descending.   |
 | `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=rating` | Sort found products by rating.   |
 | `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=price_asc` | Sort found products by price ascending.   |
-| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=popularity` | Sort found products by popularity. <br>**Note: This is valid for Master Suite only and has not been integrated into B2B/B2C Suites yet.**   |
+| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=popularity` | Sort found products by popularity. <br>**Note: This is valid for Master Suite only and has not been integrated into B2B/B2C Suites yet.** |
 | `GET https://glue.mysprykershop.com/catalog-search?q=Sony&page=3` | Set a page to retrieve the search results from. |
 | `GET https://glue.mysprykershop.com/catalog-search?q=Sony&ipp=24` | Set number of products per page.   |
 | `GET https://glue.mysprykershop.com/catalog-search?merchant_name=Spryker` | Filter the results by Merchant name. <br>**Note: This option is available only if you have upgraded your shop to the Marketplace provided by Spryker.** |
@@ -6704,5 +6705,3 @@ For other abstract product attributes, see:
 | 503      | Invalid type (non-integer) of one of the request parameters:<ul><li>rating</li><li>rating.min</li><li>rating.max</li><li>page.limit</li><li>page.offset</li><li>category</li></ul> |
 
 For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
-
-

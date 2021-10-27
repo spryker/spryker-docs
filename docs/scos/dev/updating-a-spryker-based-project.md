@@ -1,6 +1,7 @@
 ---
 title: Updating a Spryker-based project
 description: The article describes how to update a Spryker-based project, make the Spryker update process smoother, easier, and update efforts predictable
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/updating-a-spryker-based-project
 originalArticleId: 0aac9b81-7db9-4a7e-87f8-35c2ac6efe1d
@@ -259,11 +260,11 @@ At some point, you will need to add new or update the existing features for your
 {% info_block infoBox "Info" %}
 
 You can learn about a new Spryker feature from the [Release Notes](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html). We recommend [subscribing to our release mail](/docs/scos/user/intro-to-spryker/releases/releases.html) in order not to miss a new release announcement.
-A complete list of all Spryker features can be found in the [Features](/docs/scos/user/features/{{site.version}}/overview-of-the-feature-guides.html) section. This section contains general descriptions of the features and links to their [Integration Guides](/docs/scos/dev/feature-integration-guides/{{site.version}}/about-integration-guides.html) that you will use to install or update the features.  
+A complete list of all Spryker features can be found in the [Features](/docs/scos/user/features/{{site.version}}/overview-of-the-feature-guides.html) section. This section contains general descriptions of the features and links to their [Integration Guides](/docs/scos/dev/feature-integration-guides/{{site.version}}/feature-integration-guides.html) that you will use to install or update the features.  
 
 {% endinfo_block %}
 
-To install a new feature or update an existing one, follow the instructions of the [Integration Guide](/docs/scos/dev/feature-integration-guides/{{site.version}}/about-integration-guides.html) for the feature you want to install/update.
+To install a new feature or update an existing one, follow the instructions of the [Integration Guide](/docs/scos/dev/feature-integration-guides/{{site.version}}/feature-integration-guides.html) for the feature you want to install/update.
 
 {% info_block warningBox "Warning" %}
 

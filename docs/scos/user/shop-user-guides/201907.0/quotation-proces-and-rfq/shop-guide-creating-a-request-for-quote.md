@@ -1,6 +1,7 @@
 ---
 title: Shop Guide - Creating a Request for Quote
 description: The guide provides the procedure to create a Request for Quote in the cart.
+last_updated: Dec 23, 2019
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/creating-rfq-shop-guide
 originalArticleId: 94b35e65-4e4d-4cc4-9a29-eb840d1b225a

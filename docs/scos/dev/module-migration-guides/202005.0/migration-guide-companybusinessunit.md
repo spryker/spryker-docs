@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - CompanyBusinessUnit
+last_updated: Jun 1, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/migration-guide-companybusinessunit
 originalArticleId: a74e1aab-f0a7-4ab8-b063-d72a25b7071d

@@ -1,5 +1,6 @@
 ---
 title: Managing shopping lists
+last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-shopping-lists
 originalArticleId: 23652c0f-92b4-45c1-9053-905389353411
@@ -21,18 +22,21 @@ With the help of the [Shopping Lists](/docs/scos/user/features/{{page.version}}/
 In your development, the resources can help you to enable the shopping list functionality in your application.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see: 
+
+For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Glue API: Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shopping-lists-feature-integration.html)
 * [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
 
 
 ## Create a shopping list
+
 To create a shopping list for a registered user, send the request:
 
 ---
 `POST` **/shopping-lists**
 
 ---
+
 ### Request
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
@@ -52,7 +56,7 @@ Request sample: `POST http://glue.mysprykershop.com/shopping-lists`
 }
 ```
 
-| ATTRIBUTE | TYPE | Required | DESCRIPTION |
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | name | string | ✓ | Name of the shopping list to create. |
 
@@ -60,7 +64,7 @@ Request sample: `POST http://glue.mysprykershop.com/shopping-lists`
 
 <details>
 <summary markdown='span'>Response sample</summary>
-   
+
 ```json
 {
     "data": {
@@ -82,7 +86,6 @@ Request sample: `POST http://glue.mysprykershop.com/shopping-lists`
  <br>
 </details>
 
-
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | owner | String | First and last names of the shopping list owner. |
@@ -91,21 +94,15 @@ Request sample: `POST http://glue.mysprykershop.com/shopping-lists`
 | updatedAt | String | Date when the shopping list was last updated. |
 | createdAt | String | Date when the shopping list was created. |
 
-
-
-
-
 ## Retrieve shopping lists
 
 To retrieve shopping lists, send the request:
 
 ***
 `GET` **/shopping-lists**
-*** 
-
+***
 
 ### Request
-
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
@@ -123,14 +120,14 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 
 | REQUEST SAMPLE | USAGE |
 | --- | --- |
-| GET http://glue.mysprykershop.com/shopping-lists | Retrieve all shopping lists. |
-| GET http://glue.mysprykershop.com/shopping-lists?include=shopping-list-items,concrete-products | Retrieve all shopping lists with its items and respective concrete products. |
-
+| `GET http://glue.mysprykershop.com/shopping-lists` | Retrieve all shopping lists. |
+| `GET http://glue.mysprykershop.com/shopping-lists?include=shopping-list-items,concrete-products` | Retrieve all shopping lists with its items and respective concrete products. |
 
 ### Response
+
 <details>
 <summary markdown='span'>Response sample with no shopping lists</summary>
-   
+
 ```json
   {
     "data": [],
@@ -139,12 +136,12 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
     }
 }  
 ```
- <br>
+
 </details>    
 
 <details>
 <summary markdown='span'>Response sample with own and shared shopping lists</summary>
-   
+
 ```json
 {
     "data": [
@@ -196,12 +193,12 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
     }
 }
 ```
- <br>
+
 </details>
 
 <details>
 <summary markdown='span'>Response sample with shopping list items and concrete products</summary>
-   
+
 ```json
 {
     "data": {
@@ -354,7 +351,6 @@ To retrieve a shopping list, send the request:
 `GET` **/shopping-lists/*{% raw %}{{{% endraw %}shopping_list_id{% raw %}}}{% endraw %}***
 ***
 
-
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}shopping_list_id{% raw %}}}{% endraw %}*** | Unique identifier of a shopping list to retrieve. |
@@ -366,7 +362,6 @@ To retrieve a shopping list, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
-
 | QUERY PARAMETER | DESCRIPTION | EXAMPLARY VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | shopping-list-items, concrete-products|
@@ -377,22 +372,17 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 
 {% endinfo_block %}
 
-
-
 | REQUEST SAMPLE | USAGE |
 | --- | --- |
-| GET http://glue.mysprykershop.com/shopping-lists/sdb17f85-953f-565a-a4ce-e5cb02405f83 | Retrieve the shopping list with the id `sdb17f85-953f-565a-a4ce-e5cb02405f83`. |
-| GET http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a?include=shopping-list-items | Retrieve the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a` with its items. |
-| GET http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a?include=shopping-list-items,concrete-products | Retrieve the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a` with its items and respective concrete products. |
-
-
-
-
+| `GET http://glue.mysprykershop.com/shopping-lists/sdb17f85-953f-565a-a4ce-e5cb02405f83` | Retrieve the shopping list with the id `sdb17f85-953f-565a-a4ce-e5cb02405f83`. |
+| `GET http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a?include=shopping-list-items` | Retrieve the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a` with its items. |
+| `GET http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a?include=shopping-list-items,concrete-products` | Retrieve the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a` with its items and respective concrete products. |
 
 ### Response
+
 <details>
 <summary markdown='span'>Response sample</summary>
-   
+
 ```json
 {
     "data": {
@@ -411,13 +401,12 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
     }
 }
 ```
- <br>
-</details>   
 
+</details>   
 
 <details>
 <summary markdown='span'>Response sample with shopping list items</summary>
-   
+
 ```json
 {
     "data": {
@@ -466,12 +455,12 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
     ]
 }
 ```
- <br>
+
 </details>
 
 <details>
 <summary markdown='span'>Response sample with shopping list items and concrete products</summary>
-   
+
 ```json
 {
     "data": {
@@ -607,9 +596,8 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
     ]
 }
 ```
-<br>
-</details>    
 
+</details>    
 
 For response attributes, see [Create a shopping list](#create-a-shopping-list).
 
@@ -618,6 +606,7 @@ For the attributes of included resources, see:
 * [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 
 ## Edit a shopping list
+
 To edit a shopping list, send the request:
 
 ***
@@ -634,7 +623,6 @@ To edit a shopping list, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
-
 | QUERY PARAMETER | DESCRIPTION | EXAMPLARY VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | shopping-list-items, concrete-products|
@@ -648,8 +636,8 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 
 | REQUEST SAMPLE | USAGE |
 | --- | --- |
-| PATCH http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a | Edit the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a`. |
-| PATCH http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a?include=shopping-list-items,concrete-products | Edit the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a` and include its items and respective concrete products into the response. |
+| `PATCH http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a` | Edit the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a`. |
+| `PATCH http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a?include=shopping-list-items,concrete-products` | Edit the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a` and include its items and respective concrete products into the response. |
 
 ```json
 {
@@ -662,14 +650,14 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 }
 ```
 
-| ATTRIBUTE | TYPE | Required | DESCRIPTION|
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION|
 | --- | --- | --- |--- |
 | name | String | ✓ | New name of the shopping list. |
 
 ### Response
 <details>
 <summary markdown='span'>Response sample</summary>
-   
+
 ```json
 {
     "data": {
@@ -689,11 +677,11 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 }
 ```
  <br>
-</details> 
+</details>
 
 <details>
 <summary markdown='span'>Response sample with shopping list items and information on concrete products</summary>
-   
+
 ```json
 "data": {
         "type": "shopping-lists",
@@ -825,8 +813,8 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
     ]
 }
 ```
- <br>
-</details> 
+
+</details>
 
 For response attributes, see [Create a shopping list](#create-a-shopping-list).
 
@@ -842,7 +830,6 @@ To delete a shopping list, send the request:
 `DELETE` **shopping-lists/*{% raw %}{{{% endraw %}shopping_list_id{% raw %}}}{% endraw %}***
 ***
 
-
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}shopping_list_id{% raw %}}}{% endraw %}*** | Unique identifier of a shopping list to delete. To get it, [Retrieve shopping lists](#retrieve-shopping-lists). |
@@ -852,11 +839,12 @@ To delete a shopping list, send the request:
 Request sample: `DELETE http://glue.mysprykershop.com/shopping-lists/sdb17f85-953f-565a-a4ce-e5cb02405f83` — Delete the shopping list with the id `sdb17f85-953f-565a-a4ce-e5cb02405f83`.
 
 ### Response
+
 If the shopping list is deleted successfully, the endpoint retruns the `204 No Content` status code.
 
 ## Possible errors
 
-| Status code | Reason |
+| CODE | REASON |
 | --- | --- |
 | 001 | Access token is incorrect. |
 | 002 | Access token is missing. |
@@ -865,7 +853,5 @@ If the shopping list is deleted successfully, the endpoint retruns the `204 No C
 | 1501 | Shopping list ID or item is not specified. |
 | 1503 |  Specified shopping list is not found. |
 | 1506 | Shopping list with given name already exists. |
-
-
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

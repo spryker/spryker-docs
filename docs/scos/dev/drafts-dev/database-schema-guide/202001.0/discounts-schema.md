@@ -1,4 +1,5 @@
----
+---last_updated: Nov 22, 2019
+
 title: Discounts Schema
 originalLink: https://documentation.spryker.com/v4/docs/db-schema-discounts
 originalArticleId: b9f52a53-14bb-44a2-80a5-3a87147ce882

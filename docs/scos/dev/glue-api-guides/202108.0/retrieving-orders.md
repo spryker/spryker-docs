@@ -1,6 +1,7 @@
 ---
 title: Retrieving orders
 description: Retrieve all orders of a customer or a particular order via Glue API.
+last_updated: Jul 13, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-orders
 originalArticleId: 5774ec3a-945c-46f1-a51c-475e6e1d9df9
@@ -24,7 +25,9 @@ In your development, this resource can help you to:
 * Make order details available to enable reordering functionality
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
+
 * [Glue API: Shipment feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shipment-feature-integration.html)
 * [Glue API: Order Management Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html)
 * [Glue API: Measurement Units Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-measurement-units-feature-integration.html)
@@ -46,7 +49,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 | STRING PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
@@ -61,11 +64,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 | GET https://glue.mysprykershop.com/orders?page[offset]=10&page[limit]=10 | Retrieve 10 orders starting from the eleventh order. |
 | GET https://glue.mysprykershop.com/orders?page[offset]=20 | Retrieve all orders starting from the twenty first order. |
 
-
-
-
 ### Response
-
 
 <details>
 <summary markdown='span'>Response sample with one order</summary>
@@ -102,7 +101,6 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 </details>
 
-
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | createdAt | String | Date and time when the order was created. |
@@ -116,8 +114,8 @@ To retrieve a list of all orders made by a registered customer, send the request
 | canceledTotal | Integer | Total canceled amount. |
 | remunerationTotal | Integer | Total sum of remuneration. |
 
-
 ## Retrieve an order
+
 To retrieve detailed information on an order, send the request:
 
 ---
@@ -133,7 +131,7 @@ To retrieve detailed information on an order, send the request:
 
 | HEADER KEY    | HEADER VALUE | REQUIRED | DESCRIPTION                                                  |
 | ------------- | ------------ | -------- | ------------------------------------------------------------ |
-| Authorization | string       | ✓        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer). |
+| Authorization | string       | ✓        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
 | String parameter | Description                                 | Possible values                                       |
 | ---------------- | ------------------------------------------- | ----------------------------------------------------- |
@@ -144,12 +142,10 @@ To retrieve detailed information on an order, send the request:
 | GET https://glue.mysprykershop.com/orders/DE--1              | Retrieve information about the order with the id `DE--6`.      |
 | GET https://glue.mysprykershop.com/orders/DE--6?include=order-shipments | Retrieve information about the order with the id `DE--6` with order shipments included. |
 
-
-
 ### Response
 
 <details>
-    <summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -1275,7 +1271,7 @@ To retrieve detailed information on an order, send the request:
 
 
 
-| Attribute                               | Type    | Description                                                  |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --------------------------------------- | ------- | ------------------------------------------------------------ |
 | items                                   | array   | Items in the order.                                          |
 | items.state                             | String  | Defines the state of the order in the state machine.         |
@@ -1337,6 +1333,7 @@ To retrieve detailed information on an order, send the request:
 | code | String | Code of the measurement unit. |
 
 **Calculated discounts for items**
+
 | ATTRIBUTE                             | TYPE    | DESCRIPTION                                                  |
 | :------------------------------------ | :------ | :----------------------------------------------------------- |
 | items.calculatedDiscounts             | Array   | List of attributes describing the discount calculated for this item. |
@@ -1348,6 +1345,7 @@ To retrieve detailed information on an order, send the request:
 | items.calculatedDiscounts.quantity    | String  | Number of discounts applied to the product.                  |
 
 **Product options**
+
 | ATTRIBUTE                            | TYPE    | DESCRIPTION                                            |
 | :----------------------------------- | :------ | :----------------------------------------------------- |
 | items.productOptions                 | Array   | Lst of product options ordered with this item.         |
@@ -1357,6 +1355,7 @@ To retrieve detailed information on an order, send the request:
 | items.productOptions.price           | Integer | Price of the product option.                           |
 
 **Calculated discounts**
+
 | ATTRIBUTE                       | TYPE    | DESCRIPTION                                                  |
 | :------------------------------ | :------ | :----------------------------------------------------------- |
 | calculatedDiscounts             | Array   | Discounts applied to this order item.                        |
@@ -1367,9 +1366,8 @@ To retrieve detailed information on an order, send the request:
 | calculatedDiscounts.voucherCode | String  | Voucher code applied, if any.                                |
 | calculatedDiscounts.quantity    | String  | Number of times the discount was applied.                    |
 
-
-
 **Expenses**
+
 | ATTRIBUTE               | TYPE    | DESCRIPTION                       |
 | :---------------------- | :------ | :-------------------------------- |
 | expenses                | array   | Additional expenses of the order. |
@@ -1392,10 +1390,8 @@ To retrieve detailed information on an order, send the request:
 | expenses.idShipment                             | Integer | Unique identifier of the shipment to which this expense belongs. To retrieve all the shipments of the order, include the order-shipments resource in the request. |
 | expenses.idSalesExpense                         | Integer | Unique identifier of the expense.                            |
 
-
-
-
 **Payments**
+
 | ATTRIBUTE   | TYPE    |DESCRIPTION   |
 | ------------ | ------ | --------------------------- |
 | payments        | Array   | A list of payments used in this order.                       |
@@ -1404,11 +1400,12 @@ To retrieve detailed information on an order, send the request:
 | paymentMethod   | String  | Name of the payment method.                                  |
 
 **Shipments**
+
 | ATTRIBUTE | TYPE   | DESCRIPTION      |
 | -------- | ----- | ----------------------- |
 | shipments | object | Information about the shipments used in this order. This value is returned only if you submit an order without split delivery. To learn how to do that, see [Checking out purchases](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html). To see all the attributes that are returned when retrieving orders without split delivery, see [Retrieving orders](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html). To retrieve shipment details, include the order-shipments resource in the request. |
 
-| **Included resource** | **Attribute**              | **Type** |
+| INCLUDED resource | ATTRIBUTE | TYPE |
 | :-------------------- | :------------------------- | :------- |
 | order-shipments       | itemUuids                  | String   |
 | order-shipments       | methodName                 | String   |

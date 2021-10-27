@@ -1,6 +1,7 @@
 ---
 title: Managing File Tree
 description: Use the procedures to create or delete a file directory, upload media files, change the order for file directories in the Back Office.
+last_updated: May 19, 2020
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/managing-file-tree
 originalArticleId: a17723bb-035a-4ab3-885e-6717258db21f

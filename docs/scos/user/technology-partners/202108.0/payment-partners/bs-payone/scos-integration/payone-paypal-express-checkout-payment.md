@@ -1,6 +1,7 @@
 ---
 title: PayOne - PayPal Express Checkout payment
 description: Integrate PayPal Express Checkout payment through Payone into the Spryker-based shop.
+last_updated: Jun 29, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/payone-paypal-express-checkout-scos
 originalArticleId: 77d504fd-b731-4eb8-86a0-5435630900f8
@@ -16,6 +17,7 @@ The payment using PayPal requires a redirect to the PayPal website. When custome
 A concern regarding payment flows that require redirection to third-party website pages is that you lose control over the customer's action (the customer can close the browser before accepting or canceling the transaction). If this is the case, PayPal sends an instant payment notification (IPN) to Payone, then Payone notifies Spryker.
 
 ## Front-End integration
+
 To adjust the frontend appearance, add the following templates in your theme directory:
 
 `src/<project_name>/Yves/CartPage/Theme/default/components/molecules/cart-summary/cart-summary.twig`
@@ -58,7 +60,11 @@ $config[OmsConstants::ACTIVE_PROCESSES] = [
 ];
  ```
 
-Note: You can find all needed configuration parameters in `config.dist.php` file inside Payone module.
+{% info_block infoBox "Note" %}
+
+You can find all needed configuration parameters in `config.dist.php` file inside Payone module.
+
+{% endinfo_block %}
 
 ## Configuration parameters description:
 
@@ -91,6 +97,7 @@ $config[PayoneConstants::PAYONE][PayoneConstants::PAYONE_EXPRESS_CHECKOUT_BACK_U
 ```
 
 ## Extra configuration:
+
 To add a possibility to skip standard checkout steps for a guest customer, the customer step should be extended:
 Open `Yves/CheckoutPage/Process/Steps/CustomerStep.php` file in your project and add the following code to the `postCondition` and `requireInput` methods:
 
@@ -104,7 +111,7 @@ Open `Yves/CheckoutPage/Process/Steps/CustomerStep.php` file in your project and
  return true;
  }
  ```
- 
+
  ```php
  public function postCondition(AbstractTransfer $quoteTransfer)
  {

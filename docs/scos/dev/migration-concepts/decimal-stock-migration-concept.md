@@ -1,6 +1,7 @@
 ---
 title: Decimal Stock migration concept
 description: The article provides instructions on how to install Decimal Stock on all modules affected in bulk and then individually.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/decimal-stock-concept
 originalArticleId: da336e52-e8e8-4849-9be3-e208cd42e273

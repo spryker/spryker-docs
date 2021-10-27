@@ -1,5 +1,6 @@
 ---
 title: HowTo - Notify About Unsupported Browsers
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-notify-about-unsupported-browsers
 originalArticleId: 96206081-8c2e-4086-80d6-94c8e5877ef4

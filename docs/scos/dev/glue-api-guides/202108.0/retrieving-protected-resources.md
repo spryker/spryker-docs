@@ -1,6 +1,7 @@
 ---
 title: Retrieving protected resources
 description: The article describes how to retrieve a list of resources protected from unauthorized access.
+last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-protected-resources
 originalArticleId: 549c4614-f8b4-4fa5-9609-c92b6cbc0e89
@@ -18,7 +19,7 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
 ---
 
-Since shop owners can define which resources are protected, the list is different in each shop. That's why, before sending any requests, you might need to check which resources are protected and [authenticate](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html). 
+Since shop owners can define which resources are protected, the list is different in each shop. That's why, before sending any requests, you might need to check which resources are protected and [authenticate](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
 
 In your development, the Customer Access API helps you to protect resources from guest access and perform pre-flight checks to avoid sending requests to protected resources without authentication.
 
@@ -72,6 +73,6 @@ Response sample:
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| resourceTypes | String[] | Contains a `string` array, where each element is a resource type that is protected from unauthorized access. |
+| resourceTypes | String | Contains a `string` array, where each element is a resource type that is protected from unauthorized access. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

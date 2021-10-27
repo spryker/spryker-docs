@@ -1,6 +1,7 @@
 ---
 title: Payolution - Invoice Payment
 description: Integrate invoice payment through Payolution into the Spryker-based shop.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/payolution-invoice
 originalArticleId: 77f3e81c-18a1-46e0-b4f6-492681bf66da
@@ -75,12 +76,14 @@ Payments from Payolution to Merchant are not included in the sequence diagrams s
         </tbody>
     </table>
 ```
+
 ## Integrating Payolution Invoice Payment
+
 To integrate invoice payments, two simple steps are needed: setting Payolution invoice payment configuration and calling the facade functions.
 
 ### Setting Payolution Invoice Configuration
-The configuration to integrate invoice payments using Payolution is:
 
+The configuration to integrate invoice payments using Payolution is:
 * `TRANSACTION_GATEWAY_URL`: the gateway URL to connect with Payolution services (required).
 * `TRANSACTION_SECURITY_SENDER `: the sender id (required).
 * `TRANSACTION_USER_LOGIN`: the sender username (required).
@@ -93,4 +96,5 @@ The configuration to integrate invoice payments using Payolution is:
 * `PAYOLUTION_BCC_EMAIL_ADDRESS`: Payolution email address to send copies of payment details to Payolution.
 
 ### Performing Requests
+
 In order to perform the needed requests, you can easily use the implemented state machine commands and conditions. See [Payolution — Performing Requests](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/payolution/technical-details-and-howtos/payolution-performing-requests.html) for a summary. You can also use the facade methods directly which, however, are invoked by the state machine.

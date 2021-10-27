@@ -1,6 +1,7 @@
 ---
 title: Troubleshooting Spryker in Vagrant installation issues
 description: Troubleshoot issues that you might encounter issues when installing Spryker with Vagrant
+last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/troubleshooting-spryker-in-vagrant-installation-issues
 originalArticleId: 9cc16114-a7df-4d7b-80aa-1418ec0c46c9

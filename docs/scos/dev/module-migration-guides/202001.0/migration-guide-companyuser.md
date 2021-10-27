@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - CompanyUser
 description: Use the guide to update versions to the newer ones of the CompanyUser module.
+last_updated: Mar 6, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/mg-companyuser
 originalArticleId: dfe325b3-a305-42a0-9cd4-3cb36aa89027

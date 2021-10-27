@@ -1,6 +1,7 @@
 ---
 title: CrefoPay - Integration into a project
 description: This article provides instructions on integrating CrefoPay into the Spryker Commerce OS.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/crefopay-integration
 originalArticleId: ce1c7803-e0a5-493f-94a6-0f602616e987
@@ -35,15 +36,17 @@ There is currently an issue when using giftcards with CrefoPay. Our team is deve
 This article provides step-by-step instructions on integrating the CrefoPay system into your project.
 
 ## Prerequisites
+
 Prior to integrating CrefoPay into your project, make sure you [installed and configured the CrefoPay module](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/crefopay/crefopay-installation-and-configuration.html).
 
 ## Integrating CrefoPay into Your Project
+
 To integrate CrefoPay, do the following:
 
 1. Add shipment step plugin, payment subform plugins and payment method handlers:
 
-<details open>
-    <summary markdown='span'>\Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider</summary>
+<details>
+<summary markdown='span'>\Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider</summary>
 
 ```php
 <?php
@@ -162,12 +165,12 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
     }
 }
 ```
-<br>
+
 </details>
 
 2. Extend `ShipmentStep` to add payment methods filtering logic:
 
-\Pyz\Yves\CheckoutPage\Process\Steps\ShipmentStep
+**\Pyz\Yves\CheckoutPage\Process\Steps\ShipmentStep**
 
 ```php
 <?php
@@ -200,7 +203,7 @@ class ShipmentStep extends SprykerShopShipmentStep
 
 3. Extend `StepFactory` for the project-level `ShipmentStep` usage:
 
-\Pyz\Yves\CheckoutPage\Process\StepFactory
+**\Pyz\Yves\CheckoutPage\Process\StepFactory**
 
 ```php
 <?php
@@ -258,7 +261,7 @@ class StepFactory extends SprykerShopStepFactory
 
 4. Extend `CheckoutPageFactory` for the project-level `StepFactory` usage:
 
-\Pyz\Yves\CheckoutPage\CheckoutPageFactory
+**\Pyz\Yves\CheckoutPage\CheckoutPageFactory**
 
 ```php
 <?php
@@ -287,7 +290,7 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 
 5. Extend checkout page layout to add `jQuery`:
 
-Pyz/Yves/CheckoutPage/Theme/default/templates/page-layout-checkout/page-layout-checkout.twig
+**Pyz/Yves/CheckoutPage/Theme/default/templates/page-layout-checkout/page-layout-checkout.twig**
 
 ```php
 {% raw %}{%{% endraw %} extends template('page-layout-main') {% raw %}%}{% endraw %}
@@ -326,7 +329,7 @@ Pyz/Yves/CheckoutPage/Theme/default/templates/page-layout-checkout/page-layout-c
 
 6. Extend payment twig to add CrefoPay payment methods:
 
-Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig
+**Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig**
 
 ```php
 {% raw %}{%{% endraw %} extends template('page-layout-checkout', 'CheckoutPage') {% raw %}%}{% endraw %}
@@ -443,7 +446,7 @@ Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig
 
 7. Add controller provider:
 
-\Pyz\Yves\ShopApplication\YvesBootstrap
+**\Pyz\Yves\ShopApplication\YvesBootstrap**
 
 ```php
 <?php
@@ -471,7 +474,7 @@ class YvesBootstrap extends SprykerYvesBootstrap
 
 8. Add checkout plugins:
 
-\Pyz\Zed\Checkout\CheckoutDependencyProvider
+**\Pyz\Zed\Checkout\CheckoutDependencyProvider**
 
 
 ```php
@@ -518,8 +521,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 
 9. Add OMS commands and conditions:
 
-\Pyz\Zed\Oms\OmsDependencyProvider
-
+**\Pyz\Zed\Oms\OmsDependencyProvider**
 
 ```php
 <?php
@@ -614,7 +616,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 
 10. Extend `PaymentDependencyProvider` to add payment method filter plugin:
 
-\Pyz\Zed\Payment\PaymentDependencyProvider
+**\Pyz\Zed\Payment\PaymentDependencyProvider**
 
 ```php
 <?php
@@ -638,4 +640,3 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
     }
 }
 ```
-

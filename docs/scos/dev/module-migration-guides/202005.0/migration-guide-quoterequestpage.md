@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - QuoteRequestPage
+last_updated: Sep 14, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/mg-quoterequestpage
 originalArticleId: 6dd15b9a-303c-4f1b-9135-cd2695e15470

@@ -1,5 +1,6 @@
 ---
 title: File details- warehouse.csv
+last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-warehousecsv
 originalArticleId: 143a064c-e725-4451-b6a5-2324feaf163f

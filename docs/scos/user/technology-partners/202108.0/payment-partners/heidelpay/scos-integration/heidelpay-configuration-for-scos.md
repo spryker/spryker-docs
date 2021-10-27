@@ -1,6 +1,7 @@
 ---
 title: Heidelpay - Configuration for SCOS
 description: This article contains information on configuring the Heidelpay module for the Spryker Commerce OS.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/heidelpay-configuration-scos
 originalArticleId: f14d7560-eea6-4f96-8ced-cb8fcdda46c1
@@ -32,7 +33,7 @@ related:
 
 Base settings are located in `config/Shared/config_default.php`
 
-|Configuration Key  |Type  |Description |
+| CONFIGURATION KEY | TYPE | DESCRIPTION |
 | --- | --- | --- |
 |  `HeidelpayConstants::CONFIG_HEIDELPAY_SECURITY_SENDER` | string | Security sender merchant config value, got from Heidelpay. |
 |  `HeidelpayConstants::CONFIG_HEIDELPAY_USER_LOGIN` | string | User login merchant config value, got from Heidelpay. |
@@ -50,7 +51,7 @@ Base settings are located in `config/Shared/config_default.php`
 
 Store sensitive settings (DE, AT etc) can be found in `config/Shared/config_default_DE.php`
 
-|Configuration Key  |Type  |Description |
+| CONFIGURATION KEY | TYPE | DESCRIPTION |
 | --- | --- | --- |
 |  `HeidelpayConstants::CONFIG_HEIDELPAY_LANGUAGE_CODE` | string | Language code for iframe and so on, DE for example. |
 |  `HeidelpayConstants::CONFIG_YVES_URL` | string | Must be the same as `ApplicationConstants::BASE_URL_YVES` |
@@ -63,6 +64,7 @@ Store sensitive settings (DE, AT etc) can be found in `config/Shared/config_defa
 |  `HeidelpayConstants::CONFIG_YVES_CHECKOUT_REGISTRATION_SUCCESS_URL` | string | URL to finish success registration of Credit Card. |
 
 Also, you have to add payment methods to State Machine (OMS) configuration:
+
 ```php
 $config[OmsConstants::PROCESS_LOCATION] = [
  ...
@@ -85,4 +87,3 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
  HeidelpayConfig::PAYMENT_METHOD_IDEAL => 'HeidelpayIdeal01',
 ];
 ```
-

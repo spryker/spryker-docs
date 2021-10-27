@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Sales
 description: Use the guide to learn how to update the Sales module to a newer version.
+last_updated: Sep 15, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/mg-sales
 originalArticleId: 749c817f-8a4b-4afb-ad87-ff501d168d85

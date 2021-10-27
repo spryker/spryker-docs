@@ -1,4 +1,5 @@
----
+---last_updated: Aug 27, 2020
+
 title: Catalog Schema
 originalLink: https://documentation.spryker.com/v6/docs/db-schema-catalog
 originalArticleId: 68f095dd-0bf3-4172-98f5-57e6a84c9626
@@ -73,8 +74,8 @@ Any product can have any Attributes. The data is stored as pairs of keys / value
 
 
 {% info_block warningBox %}
-Synchronisation: Modifying the search and filter preferences are executing an expensive SQL query (full-text search in attributes
-{% endinfo_block %} that checks all products that have the related attributes, so we've decided back then to collect all changes and "publish" them at once. The sync field is responsible for determining which attributes need to be published.)
+Synchronisation: Modifying the search and filter preferences are executing an expensive SQL query (full-text search in attributes) that checks all products that have the related attributes, so we've decided back then to collect all changes and "publish" them at once. The sync field is responsible for determining which attributes need to be published.
+{% endinfo_block %}
 
 ### Multi-Store Products
 

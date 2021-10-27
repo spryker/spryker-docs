@@ -1,4 +1,5 @@
----
+---last_updated: Nov 22, 2019
+
 title: Catalog Schema
 originalLink: https://documentation.spryker.com/v3/docs/db-schema-catalog
 originalArticleId: 3741c61a-a158-4def-9b92-49f2709dcd74
@@ -24,8 +25,8 @@ Spryker's product catalog is divided into Abstract Products that contain all com
 ### Product Attributes
 
 {% info_block infoBox %}
-Attribute keys and values are saved in JSON array to the products and their variants. This means you don't need to predefine a static schema and you don't require clean product data. Any information can be imported and then later enriched by meta data (like pre-defined values
-{% endinfo_block %}, used for facet filters and full-text search. Localizable Attribute values can be translated while keys are saved without translation.)
+Attribute keys and values are saved in JSON array to the products and their variants. This means you don't need to predefine a static schema and you don't require clean product data. Any information can be imported and then later enriched by meta data (like pre-defined values), used for facet filters and full-text search. Localizable Attribute values can be translated while keys are saved without translation.
+{% endinfo_block %}
 ![Product attributes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/product-attributes.png)
 
 **Structure:**

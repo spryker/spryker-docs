@@ -1,6 +1,7 @@
 ---
 title: Managing Reclamations
 description: The guide provides instructions for shop owners to learn how to handle all order claims made by their customers and make refunds if needed in the Back Office.
+last_updated: Jul 31, 2020
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/managing-reclamations
 originalArticleId: 973b01cc-c062-4b75-a014-11535ea45858

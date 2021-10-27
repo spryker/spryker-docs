@@ -1,6 +1,7 @@
 ---
 title: Code Coverage
 description: Learn how to generate the code coverage report.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/code-coverage
 originalArticleId: 630a5773-8205-4f00-a6ee-d1876e76d975

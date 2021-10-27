@@ -1,6 +1,7 @@
 ---
 title: Punchout Catalogs overview
 description: The Punch Out feature allows connecting a buyer's procurement software with a seller's e-commerce shop, Spryker Commerce OS.
+last_updated: Jul 5, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/punchout-catalogs-overview
 originalArticleId: 2a85c1c3-9794-466c-a603-ddbaca93827d
@@ -11,9 +12,9 @@ redirect_from:
   - /docs/en/punchout-catalogs-overview
 ---
 
-A *Punchout* is a technology that connects a buyer's e-procurement software with an e-commerce shops, in our case - with the Spryker Commerce OS. 
+A *Punchout* is a technology that connects a buyer's e-procurement software with an e-commerce shops, in our case - with the Spryker Commerce OS.
 
-An *E-procurement system* is a business management software used to manage the purchase lifecycle, budget, etc. 
+An *E-procurement system* is a business management software used to manage the purchase lifecycle, budget, etc.
 
 How does Punchout work? A customer starts in their ERP system and then "punches out" to a Spryker e-commerce website to shop the catalog by adding the products into a shopping cart. Once they have what they need, their shopping cart is transferred back to their e-procurement system, and the customer finishes buying items in their system.
 
@@ -22,28 +23,38 @@ How does Punchout work? A customer starts in their ERP system and then "punches 
 Punchout has been developed together with the partner [PunchOut Catalogs](https://www.punchoutcatalogs.com/). In terms of Spryker Commerce OS, Punchout feature provides user interface in the Back Office where you can configure the ability to log in to a Spryker-based store from within your e-procurement application, add products to cart, and transfer this cart to your ERP system. [PunchOut Catalogs](https://www.punchoutcatalogs.com/), in turn, handle the ERP-side communication and set up the workflow for Spryker.
 
 ## Punchout workflow
+
 From the B2B buyer perspective, the Punchout process typically involves the following steps:
 
 1. The buyer logs in to their e-procurement system and clicks a link to connect to the supplier's Spryker store.
+
 ![Suppliers](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Technology+Partner+Integrations/Punch+Out/Punch+Out+Feature+Overview/erp-suppliers.png)
 
 2. The buyer gets immediately forwarded to the supplier's e-commerce store (Spryker web shop) within the buyer's e-procurement system. A Punchout session is initiated.
+
 ![Supplier store](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Technology+Partner+Integrations/Punch+Out/Punch+Out+Feature+Overview/supplier-store.png)
 
 3. Authentication is handled with the help of the [Customer login by token](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/customer-login-by-token-overview.html) feature. So, the buyer doesn't need to enter any login details to get to the customer account. The [Vault for Tokens](/docs/scos/user/features/{{page.version}}/spryker-core-feature-overview/vault-for-tokens-overview.html) feature allows securely keeping the sensitive data (username and password) and retrieving it on request.
 4. The buyer browses the store and adds items to their shopping cart.
+
 ![Shopping cart supplier](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Technology+Partner+Integrations/Punch+Out/Punch+Out+Feature+Overview/shopping-cart-supplier.png)
 
-5. When the buyer is finished, they punch out the cart - the cart gets transferred to the e-procurement platform in the cXML/OCI format. After that, the buyer passes through the necessary workflow steps in their ERP. 
+5. When the buyer is finished, they punch out the cart - the cart gets transferred to the e-procurement platform in the cXML/OCI format. After that, the buyer passes through the necessary workflow steps in their ERP.
+
 ![Punch out cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Technology+Partner+Integrations/Punch+Out/Punch+Out+Feature+Overview/cart-punch-out.png)
 
 ## Punchout formats
-The cart from Spryker Commerce OS is transferred to the client's ERP using [cXML](https://en.wikipedia.org/wiki/CXML) or [OCI](https://en.wikipedia.org/wiki/Open_Catalog_Interface) formats. The standards provide similar functionality. 
+
+The cart from Spryker Commerce OS is transferred to the client's ERP using [cXML](https://en.wikipedia.org/wiki/CXML) or [OCI](https://en.wikipedia.org/wiki/Open_Catalog_Interface) formats. The standards provide similar functionality.
+
 {% info_block warningBox "Note" %}
+
 Spyker provides the Back Office user interface for managing the connections between Spryker Commerce OS and an EPR. The ERP-related workflows and logics are managed by our partner [PunchoutCatalogs](https://www.punchoutcatalogs.com/).
+
 {% endinfo_block %}
 
 ### cXML
+
 cXML is the most popular and supported standard based on the XML format. It allows to modify and validate cart data without prior knowledge of their form and included fields. Mose e-procurement use this standard.
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -60,6 +71,7 @@ cXML is the most popular and supported standard based on the XML format. It allo
 </cXML>
 ```
 ### OCI
+
 OCI is an Open Catalog Interface standard that is used to integrate with the ERP applications that do not support cXML. Example OCI response:
 ```html
 <html>
@@ -71,16 +83,19 @@ OCI is an Open Catalog Interface standard that is used to integrate with the ERP
 ```
 In case a company user transfers the cart in the Net Prices mode, every part of the cart (discounts, taxes, additional prices and fees) is added in a separate field in the transfer request. For Gross Mode, taxes are already included in the item price, so they will not have a separate field.
 
-## Punchout architecture and database relations 
+## Punchout architecture and database relations
+
 A high-level overview of the Punchout architecture is schematically represented below:
+
 ![Punch out architecture and database relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Technology+Partner+Integrations/Punch+Out/Punch+Out+Feature+Overview/2.png)
 
 Database relations are represented in the following schema:
+
 ![Schema of database relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Technology+Partner+Integrations/Punch+Out/Punch+Out+Feature+Overview/module-schema-punch-out.png)
 
 The following table provides more details on the database structure:
 
-|Table | Field | Constraints | Description |
+|TABLE | FIELD | CONSTRAINTS | DESCRIPTION |
 | --- | --- | --- | --- |
 | `pwg_punchout_catalog_connection` |  |  |  |
 |  | `username` |  | Username of the connection authentication. |
@@ -108,5 +123,3 @@ The following table provides more details on the database structure:
 |  | `connection_session_id` |  | UUID, based on available data before Connection Authentication. |
 |  | `raw_data` |  | JSON |
 |  | `error_message` |  | General error message during the process. |
-
-

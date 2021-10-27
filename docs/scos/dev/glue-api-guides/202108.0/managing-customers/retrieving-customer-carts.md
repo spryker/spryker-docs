@@ -1,6 +1,7 @@
 ---
 title: Retrieving customer carts
 description: Retrieve customer's carts via Glue API
+last_updated: Jul 20, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-customer-carts
 originalArticleId: a09a087b-5fca-483c-a2c2-f8441681b43e
@@ -17,9 +18,11 @@ related:
 This endpoint allows retrieving a customer’s carts.
 
 ## Installation
+
 For details on the modules that provide the API functionality and how to install them, see [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html).
 
 ## Retrieve a customer’s carts
+
 To retrieve a customer’s carts, send the following request:
 
 `GET` **/customers/*{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}*/carts**
@@ -39,14 +42,13 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 |-|-|-|-|
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer). |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
 | QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 |-|-|-|
 | include | Adds resource relationships to the request. | items cart-permission-groups shared-carts company-users cart-rules promotional-items vouchers gift-cards concrete-products product-options product-labels |
 
 {% info_block infoBox "Includes resources" %}
-
 
 To retrieve all the product options of the item in a cart, include items, concrete-products, and product-options.
 To retrieve information about the company user a cart is shared with, include shared-carts and company-users.
@@ -82,7 +84,6 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 ```
 
 </details>
-
 
 <details><summary markdown='span'>Response sample: multiple carts</summary>
 
@@ -144,14 +145,6 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
         "self": "https://glue.mysprykershop.com/carts"
     }
 }
-```
-
-</details>
-
-<details><summary markdown='span'>Response sample</summary>
-
-```json
-
 ```
 
 </details>
@@ -1648,4 +1641,3 @@ For the attributes of the included resources, see:
 | 802 | Request is unauthorized. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
-

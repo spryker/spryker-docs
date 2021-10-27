@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - CustomerPage
 description: Use the guide to update versions to the newer ones of the CustomerPage module.
+last_updated: Nov 27, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/mg-customerpage
 originalArticleId: 9a3bba42-cf4b-4927-9d9b-28193b985ff1

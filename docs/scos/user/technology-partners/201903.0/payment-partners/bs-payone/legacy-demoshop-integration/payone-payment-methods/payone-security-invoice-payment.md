@@ -1,6 +1,7 @@
 ---
 title: PayOne - Security Invoice Payment
 description: Integrate security invoice payment through Payone into the Spryker-based shop.
+last_updated: Nov 22, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/payone-security-invoice
 originalArticleId: 65093dc1-f8ed-49be-a544-0288deb399e1

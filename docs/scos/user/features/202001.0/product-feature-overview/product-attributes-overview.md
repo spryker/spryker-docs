@@ -1,6 +1,7 @@
 ---
 title: Product Attributes
 description: Creating and managing product attributes is the first step in enriching the product data. It is a part of maintaining and improving the online shop.
+last_updated: Nov 22, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/product-attributes
 originalArticleId: d39e0265-9231-4c91-85fe-5db177d526bb

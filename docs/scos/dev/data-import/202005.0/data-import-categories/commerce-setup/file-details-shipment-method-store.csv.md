@@ -1,5 +1,6 @@
 ---
 title: File details- shipment_method_store.csv
+last_updated: Sep 14, 2020
 template: data-import-template
 originalLink: https://documentation.spryker.com/v5/docs/file-details-shipment-method-storecsv
 originalArticleId: e8ad47a1-4e94-4211-9564-dda73b7b0e4c

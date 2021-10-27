@@ -1,6 +1,7 @@
 ---
 title: Glossary
 description: The section is used to create translations for a new locale or update the existing ones in the Back Office.
+last_updated: Sep 15, 2020
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/glossary
 originalArticleId: 1436e1c5-438c-4168-9e21-3f6f8c37ae2e

@@ -1,6 +1,7 @@
 ---
 title: Integrate Direct Debit into Checkout
 description: This article provides instructions on how to integrate the Direct Debit payment form and handler into Checkout.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/dd-checkout-implementation
 originalArticleId: 5a6dc963-80e4-4aca-b307-7752adbbc8e6
@@ -97,8 +98,8 @@ class CheckoutPageDependencyInjector implements DependencyInjectorInterface
 </details>
 
 <!--{% info_block errorBox %}
-If you re-created this example in Demoshop, perform some adjustments on the `selectPayment(
-{% endinfo_block %}` from `checkout.js`.)-->
+If you re-created this example in Demoshop, perform some adjustments on the `selectPayment()` from `checkout.js`.
+{% endinfo_block %}-->
 ***
 **What's next?**
 

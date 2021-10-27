@@ -1,6 +1,7 @@
 ---
 title: Managing shopping list items
 description: Learn how to manage shopping list items via Glue API.
+last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-shopping-list-items
 originalArticleId: 9800fd79-ab57-4778-a68e-50b23236a3cc
@@ -17,17 +18,18 @@ related:
 This endpoint allows managing shopping list items
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see: 
+
+For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Glue API: Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shopping-lists-feature-integration.html)
 * [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
 
 ## Add items to a shopping list
+
 To add items to a shopping list, send the request:
 
 ***
 `POST` **/shopping-lists/*{% raw %}{{{% endraw %}shopping_list_id{% raw %}}}{% endraw %}*/shopping-list-items**
 ***
-
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
@@ -45,8 +47,8 @@ To add items to a shopping list, send the request:
 
 | REQUEST SAMPLE | USAGE |
 | --- | --- |
-| POST http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items | Add items to the shopping list with the `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a` unique identifier. |
-| POST http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items?include=concrete-products | Add items to the shopping list with the `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a` unique identifier. Include information about the concrete products in the shopping list into the response. |
+| `POST http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items` | Add items to the shopping list with the `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a` unique identifier. |
+| `POST http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items?include=concrete-products` | Add items to the shopping list with the `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a` unique identifier. Include information about the concrete products in the shopping list into the response. |
 
 ```json
 {
@@ -60,18 +62,16 @@ To add items to a shopping list, send the request:
 }
 ```
 
-| ATTRIBUTE | TYPE | Required | DESCRIPTION |
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | quantity | Ingeger | ✓ | Quantity of the product to add. |
 | sku | String | ✓ | SKU of the product to add. Only [concrete products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) are allowed. |
 
-
-
-
 ### Response
+
 <details>
 <summary markdown='span'>Response sample</summary>
-   
+
 ```json
   {
     "data": {
@@ -163,6 +163,7 @@ To add items to a shopping list, send the request:
 </details>
 
 <a name="shopping-list-items-response-attributes"></a>
+
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | cell | cell | cell |
@@ -194,11 +195,10 @@ To change item quantity in a shopping list, send the request:
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | concrete-products|
 
-
 | REQUEST SAMPLE | USAGE |
 | --- | --- |
-| PATCH http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08 | In the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a`, change quantity of the item with the id `00fed212-3dc9-569f-885f-3ddca41dea08`. |
-| PATCH http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08?include=concrete-products | In the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a`, change quantity of the item with the id `00fed212-3dc9-569f-885f-3ddca41dea08`. Include information about the respective concrete product into the response. |
+| `PATCH http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08` | In the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a`, change quantity of the item with the id `00fed212-3dc9-569f-885f-3ddca41dea08`. |
+| `PATCH http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08?include=concrete-products` | In the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a`, change quantity of the item with the id `00fed212-3dc9-569f-885f-3ddca41dea08`. Include information about the respective concrete product into the response. |
 
 ```json
 {
@@ -212,12 +212,13 @@ To change item quantity in a shopping list, send the request:
 }
 ```
 
-| ATTRIBUTE | TYPE | Required | DESCRIPTION|
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- |--- |
 | sku | String | ✓ | SKU of the product you want to change the quantity of. Only [concrete products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) are allowed. |
 | quantity | Integer | ✓ | New quantity of the product. |
 
 ### Response
+
 <details>
 <summary markdown='span'>Response sample</summary>
 
@@ -236,7 +237,7 @@ To change item quantity in a shopping list, send the request:
     }
 }
 ```
-<br>
+
 </details>     
 
 <details>
@@ -311,7 +312,8 @@ For response attributes, see [Add items to a shopping list](#shopping-list-items
 For the attributes of included resources, see [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes).
 
 ## Remove an item from a shopping list
-To remove an item from a shopping list, send the request: 
+
+To remove an item from a shopping list, send the request:
 
 ***
 `DELETE` **/shopping-lists/*{% raw %}{{{% endraw %}shopping_list_id{% raw %}}}{% endraw %}*/shopping-list-items/*{% raw %}{{{% endraw %}shopping_list_item_id{% raw %}}}{% endraw %}***
@@ -323,21 +325,21 @@ To remove an item from a shopping list, send the request:
 | ***{% raw %}{{{% endraw %}shopping_list_item_id{% raw %}}}{% endraw %}*** | Unique identifier of a shopping list item to remove. To get it, [Retrieve shopping lists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-shopping-lists/managing-shopping-lists.html#retrieve-shopping-lists), or [Retrieve a shopping list](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-shopping-lists/managing-shopping-lists.html#retrieve-a-shopping-list) with the `shopping-list-items` included. |
 
 ### Request
+
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
-
-Request sample: 
+Request sample:
 `DELETE http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08` — From the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a`, remove the item with the id `00fed212-3dc9-569f-885f-3ddca41dea08`.
 
 ### Response
-If the item is removed successfully, the endpoint returns the `204 No Content` status code.
 
+If the item is removed successfully, the endpoint returns the `204 No Content` status code.
 
 ## Possible errors
 
-| Status code | Reason |
+| CODE | REASON |
 | --- | --- |
 | 001 | Access token is incorrect. |
 | 002 | Access token is missing. |
@@ -347,7 +349,5 @@ If the item is removed successfully, the endpoint returns the `204 No Content` s
 | 1503 |  Specified shopping list is not found. |
 | 1504 |  Specified shopping list item is not found. |
 | 1508 | Concrete product is not found. |
-
-
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

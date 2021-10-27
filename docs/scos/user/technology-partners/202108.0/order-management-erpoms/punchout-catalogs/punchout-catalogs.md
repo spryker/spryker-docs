@@ -1,6 +1,7 @@
 ---
 title: Punchout Catalogs
 description: Connect your platform using cXML or OCI protocol with the buyer's ERP by integrating Punchout Catalogs into the Spryker Commerce OS.
+last_updated: Jul 5, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/punchout-catalogs
 originalArticleId: 931ad11a-a77a-46a2-8878-73327caee2d3
@@ -27,19 +28,19 @@ Check out this video to get more details on how Punchout works:
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/punchout-catalogs-overview" class="mr-link">Get a general idea of the Punchout Catalogs partner integration</a></li>
+                <li><a href="/docs/scos/user/technology-partners/202108.0/order-management-erpoms/punchout-catalogs/punchout-catalogs-overview.html" class="mr-link">Get a general idea of the Punchout Catalogs partner integration</a></li>
                 <li>Integrate Punchout Catalogs into your project:</li>
-                <li><a href="https://documentation.spryker.com/docs/punchout-catalog-feature-integration" class="mr-link">Integrate the Punchout Catalog feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/eco-punchout-catalogs-feature-integration" class="mr-link">Integrate Eco: Punchout Catalogs feature</a></li>
-                  <li><a href="https://documentation.spryker.com/docs/eco-punchout-catalogs-product-bundles-feature-integration" class="mr-link">Integrate the Eco: Punchout Catalogs + Product Bundles feature</a></li>
+                <li><a href="/docs/scos/user/technology-partners/202108.0/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html" class="mr-link">Integrate the Punchout Catalog feature</a></li>
+                <li><a href="/docs/scos/user/technology-partners/202108.0/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-feature-integration.html" class="mr-link">Integrate Eco: Punchout Catalogs feature</a></li>
+                  <li><a href="/docs/scos/user/technology-partners/202108.0/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html" class="mr-link">Integrate the Eco: Punchout Catalogs + Product Bundles feature</a></li>
             </ul>
         </div>
          <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/managing-punchout-connections" class="mr-link">Manage punchout connections</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-transactions-log" class="mr-link">Manage transactions logs</a></li>
+                <li><a href="/docs/scos/user/back-office-user-guides/202108.0/punch-out/managing-punch-out-connections.html" class="mr-link">Manage punchout connections</a></li>
+                <li><a href="/docs/scos/user/back-office-user-guides/202108.0/punch-out/managing-transactions-log.html" class="mr-link">Manage transactions logs</a></li>
             </ul>
         </div>
          </div>

@@ -1,5 +1,6 @@
 ---
 title: File details- customer.csv
+last_updated: Sep 14, 2020
 template: data-import-template
 originalLink: https://documentation.spryker.com/v5/docs/file-details-customercsv
 originalArticleId: d789860c-5ce2-41b9-ba3b-e0714e3cb4eb

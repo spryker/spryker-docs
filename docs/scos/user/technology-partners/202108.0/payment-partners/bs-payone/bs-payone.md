@@ -1,6 +1,7 @@
 ---
 title: BS Payone
 description: Provide full-service payment service and payment transaction services by integrating BS Payone into your Spryker-based shop.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/payone-v1-1
 originalArticleId: ffd53037-46a0-410e-941c-eb9cd4c3ff22
@@ -30,26 +31,25 @@ related:
 
 ## Partner Information
 
-[ABOUT BS PAYONE](https://www.payone.com/) 
-BS PAYONE GmbH is headquartered in Frankfurt am Main and is one of the leading omnichannel-payment providers in Europe. In addition to providing customer support to numerous Savings Banks (Sparkasse) the full-service payment service provider also provides cashless payment transaction services to more than 255,000 customers from stationary trade to the automated and holistic processing of e-commerce and mobile payments. 
+[ABOUT BS PAYONE](https://www.payone.com/)
 
-YOUR ADVANTAGES: 
+BS PAYONE GmbH is headquartered in Frankfurt am Main and is one of the leading omnichannel-payment providers in Europe. In addition to providing customer support to numerous Savings Banks (Sparkasse) the full-service payment service provider also provides cashless payment transaction services to more than 255,000 customers from stationary trade to the automated and holistic processing of e-commerce and mobile payments.
 
-* <b>One solution, one partner, one contract</b>
+YOUR ADVANTAGES:
+* **One solution, one partner, one contract**
 Simple & efficient. Technical processing and financial services from a single source.
-* <b>International payment processing</b>
+* **International payment processing**
 Access to international and local payment methods.
-* <b>Automatic debtor management</b>
+* **Automatic debtor management**
 Effective accounting support through transaction allocation and reconciliation.
-* <b>Credit entries independent of payment type</b>
+* **Credit entries independent of payment type**
 Fast returns management. With automated refunds.
-* <b>Short time to market thanks to plug'n pay</b>
-1-click checkout and seamless integration. For an increasing conversion rate. 
+* **Short time to market thanks to plug'n pay**
+1-click checkout and seamless integration. For an increasing conversion rate.
 
 We integrate with a wide range of payment methods that can be configured according to your needs and convenience. Payment method flows are configured using state machines.
 
 Payone provides the following methods of payment:
-
 * [Credit Card](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-credit-card-payment.html)
 * [Direct Debit](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-direct-debit-payment.html)
 * [Online Transfer](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-online-transfer-payment.html)
@@ -79,7 +79,6 @@ You can use the same state machines or build new ones. The state machine command
 You can copy over configs to your config from the Payone module's `config.dist.php` file.
 
 The configuration to integrate payments using Payone is:
-
 * `PAYONE_CREDENTIALS_KEY`: payment portal key (required).
 * `PAYONE_CREDENTIALS_MID`: merchant id (required).
 * `PAYONE_CREDENTIALS_AID`: sub-account id (required).
@@ -102,6 +101,7 @@ The configuration to integrate payments using Payone is:
 Project (demoshop) level `\Pyz\Yves\Checkout\CheckoutDependencyProvider` method `provideDependencies` container has to be extended with the `static::PAYMENT_SUB_FORMS` and `static::PAYMENT_METHOD_HANDLER` keys which have to contain information about PSP payment methods SubForms and SubForms Handlers accordingly.
 
 Add the keys to `\Pyz\Yves\Checkout\CheckoutDependencyProvider::provideDependencies`:
+
 ```php
 <?php
 $container[static::PAYMENT_METHOD_HANDLER] = function () {
@@ -152,8 +152,7 @@ $container->extend(static::CHECKOUT_PLUGINS, function (CheckoutPluginCollection 
 
 ## Integration with OMS module (OmsDependencyProvider)
 
-    Project (demoshop) level `\Pyz\Zed\Oms\OmsDependencyProvider` method `provideBusinessLayerDependencies` container has to be extended with the static::CONDITION_PLUGINS
-    and static::COMMAND_PLUGINS keys which have to contain information about PSP OMS State Machine conditions and commands plugins.
+Project (demoshop) level `\Pyz\Zed\Oms\OmsDependencyProvider` method `provideBusinessLayerDependencies` container has to be extended with the `static::CONDITION_PLUGINS` and `static::COMMAND_PLUGINS` keys which have to contain information about PSP OMS State Machine conditions and commands plugins.
 
 Add the keys to `\Pyz\Zed\Oms\OmsDependencyProvider`:
 ```php<?php
@@ -188,7 +187,7 @@ $container->extend(static::CONDITION_PLUGINS, function (ConditionCollectionInter
  return $commandCollection;
  });
 ```
-In order to use the state machines provided by Payone module, make sure to add the location path to configuration:
+In order to use the state machines provided by the Payone module, make sure to add the location path to configuration:
 
 ```php
 <?php
@@ -215,7 +214,6 @@ use Spryker\Yves\Payone\Plugin\Provider\PayoneControllerProvider;
 Optionally configure security firewall for `/payone` route to accept `TransactionStatus` requests.
 Excerpt from PAYONE Platform Channel Server API document:
 
-    <br>
 According to the configuration of your payment portal you will receive the data and the status for each payment processed via the URL you have submitted. The data transfer is based on simple HTTP-POST request (key/value pairs). The `TransactionStatus` is sent from the following IP addresses: 185.60.20.0/24 (i.e. 185.60.20.1 to 185.60.20.254). Please configure your firewall to allow incoming packets from these IP addresses.
 
 To provide payment details for rendering on frontend, add Payone client to the Checkout and to the Customer module:
@@ -240,6 +238,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 ```
 
 in `src//Yves/Customer/CustomerDependencyProvider.php`:
+
 ```php
 <?php
 ...
@@ -261,9 +260,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 
 To add payment details on success step of checkout:
 
-Add quote and payment details to template variables in `src/<project_name>/Yves/Checkout/Process/Steps/SuccessStep.php`
-
- Click to expand the code sample
+Add quote and payment details to template variables in `src/<project_name>/Yves/Checkout/Process/Steps/SuccessStep.php`:
 
  ```php
  <?php
@@ -321,7 +318,8 @@ class SuccessStep extends AbstractBaseStep
  }
 ```
 
-Inject Payone client into the step factory `src/<project_name>/Yves/Checkout/Process/StepFactory.php`
+Inject Payone client into the step factory `src/<project_name>/Yves/Checkout/Process/StepFactory.php`:
+
 ```php
 <?php
 ...

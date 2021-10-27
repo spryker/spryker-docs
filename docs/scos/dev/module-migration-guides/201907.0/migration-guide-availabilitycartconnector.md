@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - AvailabilityCartConnector
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-availability-cart-connector
 originalArticleId: 2cfae419-e124-48b6-bde6-dce6011b8585

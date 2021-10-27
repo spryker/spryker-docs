@@ -1,6 +1,7 @@
 ---
 title: Managing discount vouchers in guest carts
 description: Learn how to manage discount vouchers in guest carts via Glue API.
+last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-discount-vouchers-in-guest-carts
 originalArticleId: ba8ecd12-244b-4dc4-bf64-b52977347916
@@ -21,6 +22,7 @@ related:
 This endpoint allows to manage discount vouchers in guest carts.
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html).
 
 ## Apply a discount voucher to a guest cart
@@ -48,7 +50,7 @@ To apply a discount voucher to a guest cart, send the request:
 
 
 <details>
-    <summary markdown='span'>Request sample</summary>
+<summary markdown='span'>Request sample</summary>
 
 `POST https://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers`
 
@@ -66,7 +68,7 @@ To apply a discount voucher to a guest cart, send the request:
 </details>
 
 <details>
-    <summary markdown='span'>Request sample with discount voucher information</summary>
+<summary markdown='span'>Request sample with discount voucher information</summary>
 
 `POST https://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers?include=vouchers`
 
@@ -91,7 +93,7 @@ To apply a discount voucher to a guest cart, send the request:
 ### Response
 
 <details>
-    <summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -128,7 +130,7 @@ To apply a discount voucher to a guest cart, send the request:
 </details>
 
 <details>
-    <summary markdown='span'>Response sample with discount voucher information</summary>
+<summary markdown='span'>Response sample with discount voucher information</summary>
 
 ```json
 {
@@ -191,8 +193,6 @@ To apply a discount voucher to a guest cart, send the request:
 
 </details>
 
-
-
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
 | vouchers | displayName | String | Discount name displayed on the Storefront. |
@@ -225,15 +225,13 @@ To remove a discount voucher, send the request:
 | X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | Guest user's unique identifier. The value should correspond to the value used when [creating the guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart). |
 
 
-
 Request sample: `DELETE http://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers/mydiscount-we3ca`
 
 ### Response
 
 If the voucher is deleted successfully, the endpoints returns the `204 No Data` status code.
 
-
-## Possible Errors
+## Possible errors
 
 | CODE | REASON |
 | --- | --- |

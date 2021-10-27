@@ -1,5 +1,6 @@
 ---
 title: Heidelpay -  OMS Workflow
+last_updated: Nov 4, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/heidelpay-oms-workflow
 originalArticleId: b9196cba-b79b-404e-b2f7-426d83e42fdc

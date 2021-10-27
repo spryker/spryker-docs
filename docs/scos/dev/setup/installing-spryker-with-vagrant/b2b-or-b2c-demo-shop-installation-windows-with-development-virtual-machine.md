@@ -1,6 +1,7 @@
 ---
 title: B2B or B2C Demo Shop installation- Windows, with Development Virtual Machine
 description: Learn how to install a B2B or a B2C Demo Shop B2B or B2C Demo Shop on Windows, with Development Virtual Machine
+last_updated: Oct 18, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/b2b-b2c-demo-shop-installation-windows-with-development-virtual-machine
 originalArticleId: ecc0e603-220e-4f66-b22a-73f339b97ebf

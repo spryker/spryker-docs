@@ -1,6 +1,7 @@
 ---
 title: Ratenkauf by Easycredit
 description: Offer a simple and standardized solution for e-commerce and for the point of sale by integrating Ratenkauf by Easycredit into the Spryker Commerce OS.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/ratenkauf-by-easycredit
 originalArticleId: 86cf0b54-43b8-4585-adef-0245c01e702a
@@ -17,19 +18,18 @@ related:
 ---
 
 ## Partner Information
-[ABOUT RATENKAUF](https://www.easycredit-ratenkauf.de/)
-Germany’s easiest installment purchase solution
 
-ratenkauf by easyCredit is the first payment option to offer a simple and standardized solution for e-commerce and for the point of sale.
+[ABOUT RATENKAUF](https://www.easycredit-ratenkauf.de/)
+
+Germany’s easiest installment purchase solution ratenkauf by easyCredit is the first payment option to offer a simple and standardized solution for e-commerce and for the point of sale.
 
 TeamBank, with its easyCredit product family, is the liquidity management specialist in the Volksbanken Raiffeisenbanken cooperative financial network. Its ‘ratenkauf by easyCredit’ product is the first installment purchase solution that combines a simple and uniformly designed installment purchase function both for e-commerce and for a physical point of sale. Customers can make their ratenkauf by easyCredit installment purchase in just three steps. No paperwork, immediate approval, and complete flexibility throughout. Simple. Fair.
 
 YOUR ADVANTAGES:
-
-* Revenue booster: more revenue due to higher purchase amounts
-* Profitable: fewer purchase cancellations thanks to the immediate credit check and approval
-* Safe: no payment defaults as TeamBank assumes the credit risk
-* Fair: excellent easyCredit processes offer transparency and flexibility for customers
+* Revenue booster: more revenue due to higher purchase amounts.
+* Profitable: fewer purchase cancellations thanks to the immediate credit check and approval.
+* Safe: no payment defaults as TeamBank assumes the credit risk.
+* Fair: excellent easyCredit processes offer transparency and flexibility for customers.
 
 ---
 

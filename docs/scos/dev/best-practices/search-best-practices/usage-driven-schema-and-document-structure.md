@@ -1,6 +1,7 @@
 ---
 title: Usage-Driven Schema & Document Structure
 description: Both the schema and the query generator should not need to know that there is such a thing as as the weight of a hammer.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/usage-driven-schema-structure
 originalArticleId: 1931ede8-c28d-4c12-b196-7990d672920f

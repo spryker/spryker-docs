@@ -1,6 +1,7 @@
 ---
 title: About Tutorials
 description: The section provides instructions you can use to perform all tasks with Spryker Commerce OS.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/about-tutorials
 originalArticleId: 7828dd36-2099-4bb1-888e-76c8e56a3957

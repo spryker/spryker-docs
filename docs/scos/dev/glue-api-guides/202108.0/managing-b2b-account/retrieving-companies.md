@@ -1,6 +1,7 @@
 ---
 title: Retrieving companies
 description: Learn how to retrieve company information via Glue API.
+last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-companies
 originalArticleId: 238c375f-b541-445c-ad9c-ab1b4afb036f
@@ -57,7 +58,7 @@ To retrieve information about a company, send the request:
 #### Response
 
 <details>
-    <summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {

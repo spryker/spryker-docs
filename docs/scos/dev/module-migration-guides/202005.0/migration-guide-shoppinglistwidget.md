@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ShoppingListWidget
 description: Use the guide to learn how to update the ShoppingListWidget module.
+last_updated: Apr 3, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/mg-shopping-list-widget
 originalArticleId: 2a8d5dfd-2217-4778-886b-2b87f8fb357e

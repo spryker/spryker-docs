@@ -1,6 +1,7 @@
 ---
 title: Heidelpay - Paypal Debit Workflow
 description: Integrate Paypal debit workflow payment through Heidelpay into the Spryker-based shop.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/heidelpay-paypal-debit
 originalArticleId: c13ad379-3ad5-477f-bcec-8b0f00d3572a
@@ -53,15 +54,16 @@ No extra actions needed, quote being filled with payment method selection as def
 
 ### Workflow
 
-#### Summary Review and Order Submit
+#### Summary Review and Order Submitting
 
-<u>On "save order" event</u> - save Heidelpay payment
-    per order and items, as usual.
+**On "save order" event** - save Heidelpay payment per order and items, as usual.
 
-<u>When state machine is initialized</u>, an event "send debit request" will trigger debit request. In case of success, payment system will return a redirect url for customer, where the payment can be completed. Request and response will be fully persisted in the database (`spy_payment_heidelpay_transaction_log`). 
+**When state machine is initialized**, an event "send debit request" will trigger debit request. In case of success, payment system will return a redirect url for customer, where the payment can be completed. Request and response will be fully persisted in the database (`spy_payment_heidelpay_transaction_log`). 
 
-<u>On "post save hook" event</u>, we check in transaction log table if the debit request was sent successfully and if so, we set external redirect response (URL is obtained from the previous step) and redirect customer to the Paypal website where the customer confirms the payment. <br>
+**On "post save hook" event**, we check in transaction log table if the debit request was sent successfully and if so, we set external redirect response (URL is obtained from the previous step) and redirect customer to the Paypal website where the customer confirms the payment.
+
 Below is the code sample from `HeidelpayPostSavePlugin`:
+
 ```php/**
  * @method \SprykerEco\Zed\Heidelpay\Business\HeidelpayFacadeInterface getFacade()
  * @method \SprykerEco\Zed\Heidelpay\Business\HeidelpayBusinessFactory getFactory()
@@ -80,8 +82,8 @@ class HeidelpayPostSavePlugin extends BaseAbstractPlugin implements CheckoutPost
    }
 }
 ```
-<u>On payment confirmation</u> response is sent to the Heidelpay and Heidelpay makes an asynchronous POST request to the shop's `CONFIG_HEIDELPAY_PAYMENT_RESPONSE_URL`
-    URL (Yves), with the result of payment (see `HeidelpayController::paymentAction()` ). This is called "external response transaction", the result will be persisted in `spy_payment_heidelpay_transaction_log` as usual.
+
+**On payment confirmation** response is sent to the Heidelpay and Heidelpay makes an asynchronous POST request to the shop's `CONFIG_HEIDELPAY_PAYMENT_RESPONSE_URL` URL (Yves), with the result of payment (see `HeidelpayController::paymentAction()` ). This is called "external response transaction", the result will be persisted in `spy_payment_heidelpay_transaction_log` as usual.
 
  The most important data here is the payment reference ID which can be used for further transactions like capture/cancel/etc. 
 

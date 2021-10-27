@@ -1,6 +1,7 @@
 ---
 title: Code contribution guide
 description: Contribute into Spryker Commerce OS.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/code-contribution-guide
 originalArticleId: d5ded6f2-5bb9-4288-bc96-3fabf7e32c8f

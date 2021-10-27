@@ -1,6 +1,7 @@
 ---
 title: Klarna - State Machine Commands and Conditions
 description: This article includes the state machine commands and conditions provided by Klarna.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/klarna-state-machine-commands-and-conditions
 originalArticleId: 38a8ca62-b931-49c9-8764-fbfa47add05b
@@ -22,13 +23,13 @@ related:
 
 ## Commands
 
-<b>Check</b>
+**Check**
 
 * Checks order Status
 * Update order status
 * Plugin: `CheckPlugin`
 
-<b>Capture</b>
+**Capture**
 
 * Activates the reservation that corresponds to the given reference number
 * Response:
@@ -36,7 +37,7 @@ related:
   - Declined: capture failed. Need to update order
 * Plugin: `CapturePlugin`
 
-<b>Update</b>
+**Update**
 
 * Updates a reservation
 * Response:
@@ -44,12 +45,12 @@ related:
 * Declined: Some error occurred
 * Plugin: `UpdatePlugin`
 
-<b>Cancel</b>
+**Cancel**
 
 * Cancels a reservation
 * Plugin: `CancelPlugin`
 
-<b>Refund</b>
+**Refund**
 
 * Performs a partial refund
 * Response:
@@ -59,7 +60,7 @@ related:
 
 ## Conditions
 
-| Name | Description | Plugin |
+| NAME| DESCRIPTION | PLUGIN |
 | --- | --- | --- |
 | `IsOrderStatusApproved` | Checks if order payment status is pending accepted | `IsOrderStatusApprovedPlugin` |
 | `IfHasCapture` | Checks if the capture response is successful | `IfHasCapturePlugin` |
@@ -67,7 +68,7 @@ related:
 
 ## KlarnaFacade
 
-| Facade Method | Param | Return | Description |
+| FACADE METHOD | PARAMETER | RETURN | description |
 | --- | --- | --- | --- |
 | `saveOrderPayment` | `QuoteTransfer`, `CheckoutResponseTransfer` | void | Saves the payment for the submitted order |
 | `reserveAmount` | `QuoteTransfer` | `KlarnaReserveAmountResponseTransfer` | Reserves the amount of the purchase |

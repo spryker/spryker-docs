@@ -1,6 +1,7 @@
 ---
 title: Resolving search engine friendly URLs
 description: Learn how to resolve search engine friendly URLs via Glue API.
+last_updated: Jun 22, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/resolving-search-engine-friendly-urls
 originalArticleId: 41034f7a-96b3-47d8-80ab-6ef8c62b8a4b
@@ -23,7 +24,6 @@ For SEO purposes, Spryker automatically generates SEF URLs for products and cate
 * [Retrieve a CMS page](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-cms-pages.html)
 
 In your development, the endpoints can help you to:
-
 * significantly boost the SEO presence of your product store
 * increase search engine ranking of your online store
 
@@ -31,6 +31,7 @@ To facilitate their usage, Spryker Glue provides an endpoint that allows resolvi
 
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html).
 
 ## Resolve a SEF URL into a Glue API URL
@@ -38,20 +39,20 @@ For detailed information on the modules that provide the API functionality and r
 To resolve a SEF URL into a Glue API URL, send the request:
 
 ***
-`GET` **/url-resolver?url=*{% raw %}{{{{% endraw %}SEF URL{% raw %}}}{% endraw %}}*****
+`GET` **/url-resolver?url={% raw %}*{{{% endraw %}SEF URL{% raw %}}}*{% endraw %}**
 ***
 
-| Path parameter  | Description       |
+| PATH PARAMETER  | DESCRIPTION |
 | --------------- | ---------------- |
-| ***{% raw %}{{{{% endraw %}SEF URL{% raw %}}}{% endraw %}}*** | SEF URL you want to resolve. You can get it when:<ul><li>[retrieving abstract products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html)</li><li>[retrieving category nodes](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-nodes.html)</li><li>[retrieving cms pages](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-cms-pages.html)</li></ul>|
+| ***{% raw %}{{{% endraw %}SEF URL{% raw %}}}{% endraw %}*** | SEF URL you want to resolve. You can get it when:<ul><li>[retrieving abstract products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html)</li><li>[retrieving category nodes](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-nodes.html)</li><li>[retrieving cms pages](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-cms-pages.html)</li></ul>|
 
 ### Request
 
-| Header key  | Header value | Required | Description    |
+| HEADER KEY  | HEADER VALUE | REQUIRED | DESCRIPTION    |
 | -------------- | ------------ | ------------ | -------------- |
 | Accept-Language | de          | ✓      | Specifies the locale. |
 
-| Request sample | Usage |
+| REQUEST SAMPLE | USAGE |
 | --- | --- |
 | `GET https://glue.mysprykershop.com/url-resolver?url=/de/acer-aspire-s7-134` | Resolve the following URL of a product: `https://mysprykershop.com/de/acer-aspire-s7-134` |
 | `GET https://glue.mysprykershop.com/url-resolver?url=/en/computer` | Resolve the following URL of a category node: `https://mysprykershop.com/en/computer` |

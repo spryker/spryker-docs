@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - ProductDetailPage
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/mg-product-details-page
 originalArticleId: c04ee6d1-9109-42f0-8c5c-38c10464103a

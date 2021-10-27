@@ -1,6 +1,7 @@
 ---
 title: Retrieving Company Information
 description: The article describes how to leverage endpoints provided by Spryker Glue API to retrieve company information.
+last_updated: Feb 8, 2020
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/retrieving-company-information-201907
 originalArticleId: 97d79556-4638-4876-8d70-e3abe7a75d70

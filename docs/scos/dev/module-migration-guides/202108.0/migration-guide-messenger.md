@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Messenger
 description: Use the guide to perform the Messenger part of the Silex Migration Effort.
+last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-messenger
 originalArticleId: f29de7bd-4c9c-422a-9e91-89db100698ba

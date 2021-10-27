@@ -1,6 +1,7 @@
 ---
 title: Integrating Episerver
 description: Integrate Episerver in the Spryker Commerce OS
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/episerver-integration-into-project
 originalArticleId: 8852bd2c-599e-4f4b-9342-2cac18579da0
@@ -21,6 +22,7 @@ related:
 This article provides step-by-step instructions on integrating the Episerver module into your project.
 
 ## Prerequisites
+
 Prior to integrating Episerver into your project, make sure you [installed and configured](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html) the Episerver module.
 
 ## Customer Registration / Reset Password / Reset Rassword Confirm Event
@@ -499,7 +501,3 @@ $container->extend(self::MAIL_PROVIDER_COLLECTION, function (MailProviderCollect
     return $mailProviderCollection;
 });
 ```
-
-
-
-## API Requests

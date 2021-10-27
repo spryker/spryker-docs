@@ -1,6 +1,7 @@
 ---
 title: PayOne - Facade
 description: This article includes facade methods provided by Payone.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/payone-facade
 originalArticleId: 51e2f043-2b63-4984-9b06-06f312882fb3
@@ -11,7 +12,7 @@ redirect_from:
   - /docs/en/payone-facade
 ---
 
-|Facade Method |Param |Return |Description |
+|FACEDE METHOD |PARAMETER | RETURN |DESCRIPTION |
 | --- | --- | --- | --- |
 | `saveOrder` | `QuoteTransfer`, `CheckoutResponseTransfer` | void | Saves Payone payment method data according to quote and checkout response transfer data. |
 | `authorizePayment` | `OrderTransfer` | `AuthorizationResponseContainer` | Performs payment authorization request to Payone API. |

@@ -1,6 +1,7 @@
 ---
 title: Templates and slots
 description: Templates with slots is a powerful way to manage the content of your shop.
+last_updated: May 26, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/templates-and-slots
 originalArticleId: 802ac6fd-5034-4e5a-ba7f-22d8afcf257c

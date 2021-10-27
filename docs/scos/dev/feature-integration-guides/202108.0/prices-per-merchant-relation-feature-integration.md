@@ -1,6 +1,7 @@
 ---
 title: Prices per merchant relation feature integration
 description: The guide walks you through the process of installing the Prices per Merchant feature in your project.
+last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/prices-per-merchant-relation-integration
 originalArticleId: 936f75d0-f0ab-4af8-9c10-a150334e4feb
@@ -379,5 +380,5 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
 ```
 
 {% info_block infoBox %}
-See  [Migration Guide - PriceProduct](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-priceproduct.html
-{% endinfo_block %} for information on how to migrate to a newer version of the `PriceProduct` module with price dimensions support.)
+See  [Migration Guide - PriceProduct](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-priceproduct.html) for information on how to migrate to a newer version of the `PriceProduct` module with price dimensions support.
+{% endinfo_block %}

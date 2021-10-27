@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - CMS Block Category Connector
 description: Use the guide to update versions to the newer ones of the CMS Block Category Connector module.
+last_updated: Aug 27, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/mg-cms-block-category-connector
 originalArticleId: 8ec3eb69-128e-4178-9720-296866e7fe4f

@@ -1,6 +1,7 @@
 ---
 title: PayOne - Cash on Delivery
 description: Integrate  Cash on Delivery payment through Payone into the Spryker-based shop.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/payone-cash-on-delivery
 originalArticleId: e68a44fe-8cfe-4199-a3d0-537c04107688
@@ -24,10 +25,9 @@ related:
     link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-online-transfer-payment.html
 ---
 
-## Frontend Integration
+## Frontend Integration: Extending Checkout Page
 
-### Extending Checkout Page
-src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php
+**src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php**
 
  ```php
  <?php
@@ -77,11 +77,9 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 }
 ```
 
-## State Machine Integration
+## State Machine Integration: Extending the State Machine
 
-### Extending the State Machine
-
-config/Shared/config_default.php
+**config/Shared/config_default.php**
 
  ```php
  <?php

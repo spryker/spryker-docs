@@ -1,6 +1,7 @@
 ---
 title: Tax feature overview
 description: With the Tax feature you can define taxes for the items you sell.
+last_updated: Apr 3, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/international-tax-rates-sets-1
 originalArticleId: 8154d4a6-f229-4f15-bc05-22f1356e7c75

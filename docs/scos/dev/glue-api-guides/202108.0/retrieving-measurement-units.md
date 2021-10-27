@@ -1,6 +1,7 @@
 ---
 title: Retrieving measurement units
 description: Retrieve details about measurement units and learn what else you can do with the resource.
+last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-measurement-units
 originalArticleId: 21b908ed-07a9-44fa-b3a8-614401d4deab
@@ -29,8 +30,6 @@ To retrieve measurement unit information by product measurement unit code, send 
 
 ---
 
-
-
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}product_measurement_unit_code{% raw %}}}{% endraw %}*** | Code of a measurement unit to get information for. |
@@ -40,6 +39,7 @@ To retrieve measurement unit information by product measurement unit code, send 
 Sample request: `GET http://glue.mysprykershop.com/product-measurement-unit/METR`
 
 ### Response
+
 Response sample:
 
 ```json
@@ -58,7 +58,6 @@ Response sample:
 }
 ```
 
-
 <a name="measurement-units-response-attributes"></a>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -66,7 +65,6 @@ Response sample:
 | name | string | Name of the product measurement unit. |
 | defaultPrecision | integer | Default ratio between a sales unit and a base unit. It is used when precision for a related sales unit is not specified. |
 | measurementUnitCode | string | Code of the measurement unit. |
-
 
 ## Other management options
 
@@ -78,12 +76,9 @@ You can use the measurement units resource as follows:
 * Add items to guest carts and retrieve information about them with the amount of cart items defined in product measurement units—[Managing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html).
 * Retrieve information about items in an order with the amount of order items defined in product measurement units—[Retrieving an Order](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html#retrieving-an-order).
 
-
-
 ## Possible errors
 
-
-|Status  |Description  |
+| CODE | REASON |
 | --- | --- |
 | 3401 | No product measurement unit code was specified. |
 | 3402 | Product measurement unit with the specified code was not found. |

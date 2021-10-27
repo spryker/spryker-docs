@@ -1,6 +1,7 @@
 ---
 title: Managing carts of registered users
 description: Retrieve details about the carts of the registered users and learn what else you can do with the resource.
+last_updated: Jun 22, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-carts-of-registered-users
 originalArticleId: ac357bc6-db9b-43a5-a65a-ef55259cd379
@@ -82,7 +83,7 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
 
 
 <details>
-    <summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 "data":
@@ -124,6 +125,7 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
 | isDefault | Boolean | Specifies whether the cart is the default one for the customer.</br>The field is available in multi-cart environments only.  |
 
 **Discount Information**
+
 | ATTRIBUTE | TYPE  | DESCRIPTION |
 | --- | --- | --- |
 | displayName | String | Discount name. |
@@ -131,6 +133,7 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
 | code | String | Discount code applied to the cart. |
 
 **Totals**
+
 | ATTRIBUTE | TYPE  | DESCRIPTION |
 | --- | --- | --- |
 | expenseTotal | String | Total amount of expenses (including e.g. shipping costs). |
@@ -161,8 +164,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 | QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. |<ul><li>items</li><li>cart-permission-groups</li><li>shared-carts</li><li>company-users</li><li>cart-rules</li><li>promotional-items</li><li>vouchers</li><li>gift-cards</li><li>concrete-products</li><li>product-options</li><li>product-labels</li></ul> |
-{% info_block infoBox "Included resources" %}
 
+{% info_block infoBox "Included resources" %}
 
 * To retrieve all the product options of the item in a cart, include `items`, `concrete-products`, and `product-options`.
 * To retrieve information about the company user a cart is shared with, include `shared-carts` and `company-users`.
@@ -183,7 +186,6 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 | `GET https://glue.mysprykershop.com/carts?include=gift-cards` | Retrieve all carts of a user with applied gift cards. |
 | `GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-options` | Retrieve all carts of a user with items, respective concrete product, and their product options. |
 | `GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-labels` | Retrieve all carts of a user with information about concrete products and the product labels assigned to the products in the carts. |
-
 
 ### Response
 
@@ -1762,7 +1764,6 @@ To retrieve a particular cart, send the request:
 `GET` **/carts/*{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}***
 ***
 
-
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](#retrieve-a-registered-users-carts) to get it. |
@@ -1776,13 +1777,13 @@ To retrieve a particular cart, send the request:
 | QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | <ul><li>items</li><li>cart-permission-groups</li><li>shared-carts</li><li>company-users</li><li>cart-rules</li><li>promotional-items</li><li>vouchers</li><li>gift-cards</li><li>concrete-products</li><li>product-options</li><li>product-labels</li></ul> |
+
 {% info_block infoBox "Included resources" %}
 
 * To retrieve all the product options of the item in a cart, include `items`, `concrete-products`, and `product-options`.
 * To retrieve product labels of the products in a cart, include `items`, `concrete-products`, and `product-labels`.
 
 {% endinfo_block %}
-
 
 | REQUEST | USAGE |
 | --- | --- |
@@ -2609,7 +2610,7 @@ To retrieve a particular cart, send the request:
 </details>
 
 <details>
-    <summary markdown='span'>Response sample with vouchers</summary>
+<summary markdown='span'>Response sample with vouchers</summary>
 
 ```json
 {
@@ -2680,7 +2681,7 @@ To retrieve a particular cart, send the request:
 </details>
 
 <details>
-    <summary markdown='span'>Response sample with product labels</summary>
+<summary markdown='span'>Response sample with product labels</summary>
 
 ```json
 {
@@ -2858,10 +2859,7 @@ You can edit the name of the cart, change the currency and price mode. To do tha
 | --- | --- |
 | ***cart_uuid*** | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](#retrieve-a-registered-users-carts) to get it. |
 
-
-
 {% info_block infoBox "Info" %}
-
 
 * You can change the price mode of an empty cart but not the one that has items in it.
 * Currency and store can be changed for an empty cart and for a cart with items anytime.
@@ -2869,9 +2867,6 @@ You can edit the name of the cart, change the currency and price mode. To do tha
 {% endinfo_block %}
 
 ### Request
-
-
-
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
@@ -2948,8 +2943,6 @@ To delete a cart, send the request:
 | --- | --- |
 | ***cart_uuid*** | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](#retrieve-a-registered-users-carts) to get it. |
 
-
-
 {% info_block infoBox "Deleting carts" %}
 
 You cannot delete a cart if it is the customer's only cart. If you attempt to delete a customer's last cart, the endpoint responds with the **422 Unprocessable Entry** status code. If you delete the default cart of a customer, another cart will be assigned as default automatically.
@@ -2961,8 +2954,6 @@ You cannot delete a cart if it is the customer's only cart. If you attempt to de
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html#authenticate-as-a-customer) or [authenticating as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user).  |
-
-
 
 Request sample: `DELETE https://glue.mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054`
 

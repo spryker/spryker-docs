@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Touch
+last_updated: Oct 11, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/mg-touch
 originalArticleId: 4680454e-b2b5-44bd-a001-787dadc746e2

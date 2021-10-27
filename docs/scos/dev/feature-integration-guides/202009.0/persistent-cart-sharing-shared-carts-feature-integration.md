@@ -1,6 +1,7 @@
 ---
 title: Persistent cart sharing + shared carts feature integration
 description: The guide walks you through the process of installing the Shared Carts and Persistent Cart Sharing features in the project.
+last_updated: Aug 27, 2020
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/persisitent-cart-sharing-shared-carts-integration
 originalArticleId: c9c42554-665a-4b76-afd1-0eaaa3d77a87
@@ -91,8 +92,8 @@ All verification steps for plugins mentioned above require feature frontend step
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure, that you're able to share a cart with the "Internal Access" links (both Read-only and Full Acess
-{% endinfo_block %} to other company users from the same business unit.<br>Make sure, that after you shared a cart with Read-only access to another company user and he followed a "Full Access" link - his cart access was updated to "Full Access".)
+Make sure, that you're able to share a cart with the "Internal Access" links (both Read-only and Full Acess) to other company users from the same business unit.<br>Make sure, that after you shared a cart with Read-only access to another company user and he followed a "Full Access" link - his cart access was updated to "Full Access".
+{% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 Make sure, that when you have a cart share link with Read-only or Full Access and you're not logged in - you can see the "Please login to access requested shared resource." error message.

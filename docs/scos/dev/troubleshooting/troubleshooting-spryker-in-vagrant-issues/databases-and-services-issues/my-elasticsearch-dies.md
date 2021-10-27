@@ -1,6 +1,7 @@
 ---
 title: My Elasticsearch dies
 description: Learn how to fix the issue if Elasticsearch dies
+last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/my-elasticsearch-dies
 originalArticleId: dd22c506-5f5e-46e6-9df6-b555bca17a29

@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - QuickOrder
 description: Use the guide to learn how to update the QuickOrder module.
+last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-quick-order
 originalArticleId: 96f6b931-8148-4cd6-ac56-e51271fd04f7

@@ -1,6 +1,7 @@
 ---
 title: Managing gift cards of registered users
 description: Retrieve details about gift cards of the registered users, and learn what else you can do with the resource.
+last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-gift-cards-of-registered-users
 originalArticleId: 8f557adb-ea3b-498c-872e-b2177d6202ed
@@ -28,10 +29,12 @@ To manage the gift cards of the unregistered users, see [Managing Gift Cards of 
 
 {% endinfo_block %}
 
-## Installation 
+## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see Gift Cards API Integration.
 
 ## Purchasing a gift card
+
 Gift Card is available in the Spryker shop as an abstract product with its variants (concrete products). To purchase the gift card:
 
 1. Add a Gift Card to a guest shopping cart. See [Adding Items to Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-user-s-cart) for more details.
@@ -43,15 +46,18 @@ Gift Card is available in the Spryker shop as an abstract product with its varia
 To prevent fraud, the payment method _invoice_ is not accepted if a cart contains a gift card.
 
 {% endinfo_block %}
+
 After placing the order, you will receive the gift card code to the email address specified in the checkout. You can redeem this code to pay for the products.
 
 ## Redeem the gift card code
+
 To redeem the gift card code, send the request:
+
 ***
 `POST` **/carts/*{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*/cart-codes?include=vouchers,gift-cards**
 ***
 
-| Path parameter | DESCRIPTION |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | cart_uuid | Unique identifier of a cart to remove products from. You can get this in the response when [creating carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#creating-carts) or [retrieving all carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieving-all-carts). |
 
@@ -159,10 +165,10 @@ To remove the gift card code from the cart, send the request:
 `DELETE` **/carts/**{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}**/cart-codes/_{% raw %}{{{% endraw %}gift_card_code{% raw %}}}{% endraw %}_**
 ***
 
-| Path parameter | DESCRIPTION |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | cart_uuid | Unique identifier of a cart to remove products from. You can get this in the response when [creating carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#creating-carts) or [retrieving all carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieving-all-carts). |
-| gift_card_code | Code that you have received after purchasing the gift card. | 
+| gift_card_code | Code that you have received after purchasing the gift card. |
 
 {% info_block infoBox "Authentication" %}
 
@@ -171,10 +177,11 @@ To use this endpoint, customers need to authenticate. For details, see [Authenti
 {% endinfo_block %}
 
 ### Request
+
 Sample request: `DELETE https://glue.mysprykershop.com/carts/8ef901fe-fe47-5569-9668-2db890dbee6d/cart-codes/GC-I6UB6O56-20`
 
-
 ### Response
+
 If the item is deleted successfully, the endpoint will respond with a `204 No Content` status code.
 
 ## Possible errors
@@ -189,5 +196,3 @@ If the item is deleted successfully, the endpoint will respond with a `204 No Co
 | 3303| Cart code can't be removed. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
-
-

@@ -1,6 +1,7 @@
 ---
 title: Reference information- reclamations
 description: The article provides additional reference information you see when managing Reclamations in the Back Office.
+last_updated: Aug 27, 2020
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/reclamations-reference-information
 originalArticleId: b6a8e4eb-0c04-424a-9520-920d9f7cf78a

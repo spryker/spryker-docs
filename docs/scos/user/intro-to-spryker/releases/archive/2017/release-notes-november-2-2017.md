@@ -1,5 +1,6 @@
 ---
 title: Release Notes - November - 2 2017
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes-november-2-2017
 originalArticleId: d2b19933-8cf8-4812-847d-f36c5d6253be
@@ -23,7 +24,7 @@ In order to take the latest changes introduced by this version,
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 |n/a | [Gui 3.11.0](https://github.com/spryker/Gui/releases/tag/3.11.0) | <ul><li>[NavigationGui 2.0.2](https://github.com/spryker/navigation-gui/releases/tag/2.0.2)</li><li>[ProductSetGui 1.1.3](https://github.com/spryker/product-set-gui/releases/tag/1.1.3)</li></ul> |
 
@@ -34,7 +35,7 @@ With this release, we now filter those orders in the Yves customer account. Now,
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | <ul><li>[Oms 7.3.0](https://github.com/spryker/Oms/releases/tag/7.3.0)</li><li>[Sales 8.2.0](https://github.com/spryker/Sales/releases/tag/8.2.0)</li></ul> | [DummyPayment 2.1.3](https://github.com/spryker/dummy-payment/releases/tag/2.1.3) |
 
@@ -45,7 +46,7 @@ With this release, we are introducing limits for sequence numbers. Sequence limi
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [SequenceNumber 3.1.0](https://github.com/spryker/sequence-number/releases/tag/3.1.0) | n/a |
 
@@ -58,7 +59,7 @@ In this release, a Twig function `submit_button` has been added. It provides a b
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | <ul><li>[Discount 5.1.0](https://github.com/spryker/Discount/releases/tag/5.1.0)</li><li>[Gui 3.12.0](https://github.com/spryker/Gui/releases/tag/3.12.0)</li><li>[ProductOption 5.5.0](https://github.com/spryker/product-option/releases/tag/5.5.0)</li><li>[Sales 8.1.0](https://github.com/spryker/Sales/releases/tag/8.1.0)</li></ul> |<ul><li>[Acl 3.0.4](https://github.com/spryker/Acl/releases/tag/3.0.4)</li><li>[AvailabilityGui 2.0.4](https://github.com/spryker/availability-gui/releases/tag/2.0.4)</li><li>[Category 4.2.2](https://github.com/spryker/Category/releases/tag/4.2.2)</li><li>[Cms 6.3.3](https://github.com/spryker/Cms/releases/tag/6.3.3)</li><li>[CmsBlockGui 1.1.5](https://github.com/spryker/cms-block-gui/releases/tag/1.1.5)</li><li>[CmsGui 4.3.2](https://github.com/spryker/cms-gui/releases/tag/4.3.2)</li><li>[Customer 6.3.3](https://github.com/spryker/Customer/releases/tag/6.3.3)</li><li>[CustomerGroup 2.2.1](https://github.com/spryker/customer-group/releases/tag/2.2.1)</li><li>[Glossary 3.2.1](https://github.com/spryker/Glossary/releases/tag/3.2.1)</li><li>[NavigationGui 2.0.3](https://github.com/spryker/navigation-gui/releases/tag/2.0.3)</li><li>[ProductAttributeGui 1.0.3](https://github.com/spryker/product-attribute-gui/releases/tag/1.0.3)</li><li>[ProductCategory 4.4.2](https://github.com/spryker/product-category/releases/tag/4.4.2)</li><li>[ProductLabelGui 1.1.2](https://github.com/spryker/product-label-gui/releases/tag/1.1.2)</li><li>[ProductManagement 0.8.3](https://github.com/spryker/product-management/releases/tag/0.8.3)</li><li>[ProductRelation 1.1.1](https://github.com/spryker/product-relation/releases/tag/1.1.1)</li><li>[ProductSearch 5.2.1](https://github.com/spryker/product-search/releases/tag/5.2.1)</li><li>[ProductSetGui 1.1.4](https://github.com/spryker/product-set-gui/releases/tag/1.1.4)</li><li>[Shipment 6.0.2](https://github.com/spryker/Shipment/releases/tag/6.0.2)</li><li>[Tax 5.1.4](https://github.com/spryker/tax/releases/tag/5.1.4)</li><li>[User 3.1.1](https://github.com/spryker/User/releases/tag/3.1.1)</li></ul> |
 
@@ -67,7 +68,7 @@ Previously, the `NewRelic` response code was too strict, only 200 were allowed. 
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [NewRelic 3.1.1](https://github.com/spryker/new-relic/releases/tag/3.1.1) |
 
@@ -79,16 +80,16 @@ This change does not require database changes but it does require Propel model r
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | [Customer 7.0.0](https://github.com/spryker/Customer/releases/tag/7.0.0) | [PropelOrm 1.5.0](https://github.com/spryker/propel-orm/releases/tag/1.5.0) | <ul><li>[CustomerApi 0.1.3](https://github.com/spryker/customer-api/releases/tag/0.1.3)</li><li>[CustomerGroup 2.2.2](https://github.com/spryker/customer-group/releases/tag/2.2.2)</li><li>[CustomerUserConnector 1.0.1](https://github.com/spryker/customer-user-connector/releases/tag/1.0.1)</li><li>[CustomerUserConnectorGui 1.0.1](https://github.com/spryker/customer-user-connector-gui/releases/tag/1.0.1)</li><li>[Newsletter 4.1.5](https://github.com/spryker/Newsletter/releases/tag/4.1.5)</li><li>[ProductReviewGui 1.0.1](https://github.com/spryker/product-review-gui/releases/tag/1.0.1)</li><li>[Sales 8.2.1](https://github.com/spryker/Sales/releases/tag/8.2.1)</li><li>[Wishlist 4.2.1](https://github.com/spryker/Wishlist/releases/tag/4.2.1)</li></ul> |
 
 **Documentation**
-For module documentation, see Customer Module Guide<!--/capabilities/crm/customer-module-overview.htm)-->.
-For detailed migration guides, see [Customer Module Migration Guide from Version 6. to 7](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-customer.html#upgrading-from-version-6-to-version-70).
+<br>For module documentation, see Customer Module Guide<!--/capabilities/crm/customer-module-overview.htm)-->.
+<br>For detailed migration guides, see [Customer Module Migration Guide from Version 6. to 7](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-customer.html#upgrading-from-version-6-to-version-70).
 
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -122,7 +123,7 @@ Please make sure to
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a| [PropelOrm 1.4.0](https://github.com/spryker/propel-orm/releases/tag/1.4.0) | <ul><li>[Propel 3.2.4](https://github.com/spryker/Propel/releases/tag/3.2.4)</li><li>[SequenceNumber 3.0.1](https://github.com/spryker/sequence-number/releases/tag/3.0.1)</li></ul> |
 
@@ -131,7 +132,7 @@ Previously, we had an issue with the table headers in Zed Administration Interfa
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a |  [Gui 3.10.2](https://github.com/spryker/Gui/releases/tag/3.10.2) |
 
@@ -140,7 +141,7 @@ Previously, breadcrumbs were missing for the product attribute translation manag
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [ProductAttributeGui 1.0.2](https://github.com/spryker/product-attribute-gui/releases/tag/1.0.2) |
 

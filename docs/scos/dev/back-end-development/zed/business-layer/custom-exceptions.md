@@ -1,6 +1,7 @@
 ---
 title: Custom Exceptions
 description: When you need to throw an exception, you should define your own type of exception.
+last_updated: Sep 27, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/custom-exceptions
 originalArticleId: 1da05e1b-f198-45da-aa47-898835725a2d

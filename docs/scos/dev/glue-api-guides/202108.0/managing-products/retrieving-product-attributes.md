@@ -1,6 +1,7 @@
 ---
 title: Retrieving product attributes
 description: The article explains how you can retrieve product attributes via the API
+last_updated: Jun 22, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-product-attributes
 originalArticleId: 11708dbe-4c10-47db-8e40-d5cf23a8c3eb
@@ -19,7 +20,8 @@ Only preset attributes are retrieved. So if an attribute allows custom input ( `
 
 {% endinfo_block %}
 
-## Installation 
+## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html).
 
 <a name="{all-attributes}"></a>
@@ -36,8 +38,10 @@ To retrieve all product attributes, send the request:
 Request sample: `https://glue.mysprykershop.com/product-management-attributes`
 
 ### Response
+
 <details>
 <summary markdown='span'>Response sample - retrieve all product attributes</summary>
+
 ```json
 {
     "data": [
@@ -139,6 +143,7 @@ Request sample: `https://glue.mysprykershop.com/product-management-attributes`
     }
 }
 ```
+
 </details>
 
 
@@ -154,21 +159,23 @@ Request sample: `https://glue.mysprykershop.com/product-management-attributes`
 | translation | String | Translation for the locale. |
 
 ## Retrieve a product attribute
+
 To retrieve a product attribute, send the request:
 
 ***
 `GET` **/product-management-attributes/{% raw %}{{{% endraw %}attribute_id{% raw %}}}{% endraw %}**
 ***
 
-
 | PATH PARAMETER | 	DESCRIPTION |
 | --- | --- |
-| {% raw %}{{{% endraw %}attribute_id{% raw %}}}{% endraw %} | A unique identifier of an attribute. [Retrieve product attributes](#retrieve-all-product-attributes) to get it. | 
+| {% raw %}{{{% endraw %}attribute_id{% raw %}}}{% endraw %} | A unique identifier of an attribute. [Retrieve product attributes](#retrieve-all-product-attributes) to get it. |
 
 ### Request
+
 Request sample: `https://glue.mysprykershop.com/product-management-attributes/storage_capacity`
 
 ### Response
+
 <details>
 <summary markdown='span'>Response sample - retrieve a product attribute</summary>
 ```json

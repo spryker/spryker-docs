@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Product Relation Collector
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-product-relation-collector
 originalArticleId: 267e23f9-4fbd-4d66-af62-1778c4aaa7e6

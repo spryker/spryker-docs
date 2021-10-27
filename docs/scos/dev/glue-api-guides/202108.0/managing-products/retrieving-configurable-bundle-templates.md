@@ -1,6 +1,7 @@
 ---
 title: Retrieving configurable bundle templates
 description: Retrieve configurable bundle templates via Glue API
+last_updated: Jul 19, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-configurable-bundle-templates
 originalArticleId: 7d42fcee-0edb-4f80-826c-988162b30119
@@ -11,13 +12,13 @@ redirect_from:
   - /docs/en/retrieving-configurable-bundle-templates
 ---
 
-This endpoint allows retrieving information about the configurable bundle templates and their slots. 
+This endpoint allows retrieving information about the configurable bundle templates and their slots.
 
 A configurable bundle doesn’t have any SKU but contains an identifier to distinguish from other elements in the system.
 
 In your development, this resource can help you to let the customers set up the product the way they want and increase the diversity of the products sold.
 
-## Installation 
+## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
 * [Glue API: Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-feature-integration.html)
@@ -34,9 +35,11 @@ To retrieve all configurable bundle templates, send the request:
 ***
 
 ### Request
+
 Request sample: `GET https://glue.mysprykershop.com/configurable-bundle-templates`
 
 ### Response
+
 Response sample:
 
 ```json
@@ -68,7 +71,6 @@ Response sample:
     }
 }
 ```
-
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
@@ -122,7 +124,7 @@ To retrieve information about a specific Configurable Bundle template, send the 
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve informatio abjout a specific configurable bundle including configurable bundle template slots, concrete products per slot, cocrete product prices, and image sets</summary>
+<summary markdown='span'>Response sample: retrieve informatio about a specific configurable bundle including configurable bundle template slots, concrete products per slot, cocrete product prices, and image sets</summary>
 
 ```json
 {
@@ -413,7 +415,7 @@ To retrieve information about a specific Configurable Bundle template, send the 
                             "type": "concrete-products",
                             "id": "129_30706500"
                         },
-                        
+
                         ...
 
                         {
@@ -524,9 +526,9 @@ To retrieve information about a specific Configurable Bundle template, send the 
                 }
             }
         },
-        
+
         ...
-        
+
         {
             "type": "concrete-product-image-sets",
             "id": "111_12295890",
@@ -643,7 +645,7 @@ To retrieve information about a specific Configurable Bundle template, send the 
                             "type": "concrete-products",
                             "id": "096_30856274"
                         },
-                        
+
                         ...
 
                         {
@@ -746,5 +748,3 @@ You can use the configurable bundle resource in the following way:
 * [Remove a configurable bundle from a registered user’s cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#remove-a-configurable-bundle-from-a-registered-users-cart)
 * [Checking our purchases with configurable bundles](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html)
 * [Retrieving orders with configurable bundles](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html)
-
-

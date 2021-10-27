@@ -1,6 +1,7 @@
 ---
 title: Basic SEO techniques integration guide
 description: Learn how you can apply the basic SEO techniques such as improved headings structure and use of microddata
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/basic-seo-techniques-integration-guide
 originalArticleId: 2b638a56-a0ee-4b48-9a0f-d7ae7d2bfd14

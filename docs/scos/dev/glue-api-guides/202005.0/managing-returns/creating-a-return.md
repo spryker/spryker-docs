@@ -1,6 +1,7 @@
 ---
 title: Creating a Return
 description: In this article, you will find information on creating a return via the Spryker Glue API
+last_updated: Sep 14, 2020
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/creating-a-return
 originalArticleId: a8b3f4ad-1427-4497-ad15-a78fc1b11b15

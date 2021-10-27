@@ -1,5 +1,6 @@
 ---
 title: Payolution - Integration into a project
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/payolution-integration-into-project
 originalArticleId: d071cda2-3ca2-41b2-afbb-a9cdcdb09b5e
@@ -28,9 +29,11 @@ There is currently an issue when using giftcards with Payolution. Our team is de
 {% endinfo_block %}
 
 ## Prerequisites
+
 Before proceeding with the integration, make sure you have [installed and configured](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/payolution/payolution-installation-and-configuration.html) the Payolution module.
 
 ## Frontend Integration
+
 To show Payolution on Frontend, extend the payment view:
 
 **src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig**

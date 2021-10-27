@@ -1,5 +1,6 @@
 ---
 title: Release Notes - December - 2017
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes-december-2017
 originalArticleId: 7251b552-8e8d-4453-a48c-5834563c6410
@@ -16,7 +17,7 @@ From now on, we support integration with Heidelpay payment service provider. Hei
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | [heidelpay 1.0.0](https://github.com/spryker-eco/heidelpay/releases/tag/1.0.0) | n/a | n/a |
 
@@ -24,7 +25,7 @@ From now on, we support integration with Heidelpay payment service provider. Hei
 For more information on Heidelpay integration, see [Payment Integration - Heidelpay](/docs/scos/user/technology-partners/{{site.version}}/payment-partners/heidelpay/heidelpay.html).
 
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -45,7 +46,7 @@ As a part of this release, we have also made some improvements. Earlier only bil
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | [ArvatoRss 2.0.0](https://github.com/spryker-eco/arvato-rss/releases/tag/2.0.0) | n/a | n/a |
 
@@ -53,7 +54,7 @@ As a part of this release, we have also made some improvements. Earlier only bil
 For more information,  see the [Risk Solution Services Integration - Arvato](/docs/scos/user/technology-partners/{{site.version}}/payment-partners/arvato/arvato.html) documentation.
 
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -75,14 +76,14 @@ To fully enable you with the new install tool instead of the former shell script
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [Install 0.1.0](https://github.com/spryker/install/releases/tag/0.1.0) | n/a |
 
 <!--**Documentation**
 For documentation please see: . -->
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -101,7 +102,7 @@ We have encountered that when discounts have a high number of criteria in the di
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Discount 5.1.2](https://github.com/spryker/Discount/releases/tag/5.1.2) |
 
@@ -110,7 +111,7 @@ In some cases, it is needed to have a shared configuration between applications 
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [Kernel 3.14.0](https://github.com/spryker/Kernel/releases/tag/3.14.0) | [Kernel 3.14.1](https://github.com/spryker/Kernel/releases/tag/3.14.1) |
 
@@ -119,7 +120,7 @@ With this release, we have added the option to change the number of products dis
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [Catalog 5.1.0](https://github.com/spryker/Catalog/releases/tag/5.1.0) | n/a |
 
@@ -128,14 +129,14 @@ Previously, the `Console` module had a dependency to the `Propel` module, which 
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | [Console 4.0.0](https://github.com/spryker/Console/releases/tag/4.0.0) | n/a | <ul><li>[EventBehavior 0.1.1](https://github.com/spryker/event-behavior/releases/tag/0.1.1)</li><li>[Kernel 3.14.2](https://github.com/spryker/Kernel/releases/tag/3.14.2)</li><li>[StepEngine 3.1.1](https://github.com/spryker/step-engine/releases/tag/3.1.1)</li></ul> |
 
 <!--**Documentation**
 For detailed migration guides see: .-->
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -155,7 +156,7 @@ Previously, we had an issue when moving a bundle product from wishlist to cart. 
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Wishlist 4.2.2](https://github.com/spryker/Wishlist/releases/tag/4.2.2) |
 
@@ -164,7 +165,7 @@ Previously, when searching for products on the Products Relations interface in Z
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [ProductRelation 1.1.2](https://github.com/spryker/product-relation/releases/tag/1.1.2) |
 
@@ -173,7 +174,7 @@ Previously, each execution of the `propel:diff`command was generating identical 
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [CustomerUserConnector 1.0.2](https://github.com/spryker/customer-user-connector/releases/tag/1.0.2) |
 
@@ -182,7 +183,7 @@ Previously, the `CmsBlock` module provided a duplicated index for the template p
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [CmsBlock 1.4.2](https://github.com/spryker/cms-block/releases/tag/1.4.2) |
 
@@ -191,7 +192,7 @@ Previously, some `ServiceProviders` used setters to inject dependencies. Now, `S
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [Application 3.7.0](https://github.com/spryker/Application/releases/tag/3.7.0) | <ul><li>[Api 0.1.3](https://github.com/spryker/Api/releases/tag/0.1.3)</li><li>[Session 3.2.1](https://github.com/spryker/Session/releases/tag/3.2.1)</li><li>[Testify 3.4.2](https://github.com/spryker/Testify/releases/tag/3.4.2)</li><li>[User 3.1.2](https://github.com/spryker/User/releases/tag/3.1.2)</li><li>[ZedRequest 3.2.1](https://github.com/spryker/zed-request/releases/tag/3.2.1)</li></ul> |
 
@@ -200,7 +201,7 @@ Previously, when deactivating a product label in Zed, its ID was still displayed
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [ProductLabel 2.3.0](https://github.com/spryker/product-label/releases/tag/2.3.0) | [ProductLabelCollector 1.1.1](https://github.com/spryker/product-label-collector/releases/tag/1.1.1) |
 
@@ -209,7 +210,7 @@ With this release, we have adjusted our Architecture Sniffer command to work wit
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Development 3.4.1](https://github.com/spryker/Development/releases/tag/3.4.1) |
 
@@ -218,7 +219,7 @@ Previously, we raised versions of Syfmony components to 3.x. But for some instan
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | <ul><li>[SetupFrontend 1.0.1](https://github.com/spryker/setup-frontend/releases/tag/1.0.1)</li><li>[Symfony 3.1.2](https://github.com/spryker/Symfony/releases/tag/3.1.2)</li></ul> |
 
@@ -227,12 +228,12 @@ State machine console commands deprecate state machine name option. Provided inv
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [StateMachine 2.2.0](https://github.com/spryker/StateMachine/releases/tag/2.2.0) | n/a |
 
 <!-- Documentation
-For module documentation see: .
+<br>For module documentation see: .
 -->
 
 ### Translation Key Validation Upon Options Creation
@@ -240,7 +241,7 @@ Previously, we had an issue with option group keys. When entering an option grou
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [ProductOption 5.5.1](https://github.com/spryker/ProductOption/releases/tag/5.5.1) |
 
@@ -249,7 +250,7 @@ We had the issue when images of product bundles were not displayed in the cart l
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [ProductBundle 3.2.4](https://github.com/spryker/product-bundle/releases/tag/3.2.4) |
 
@@ -260,7 +261,7 @@ To use a new infrastructure, please make sure you moved your `Pyz` test into `Py
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 |n/a  | n/a | <ul><li>[Application 3.8.1](https://github.com/spryker/Application/releases/tag/3.8.1)</li><li>[Kernel 3.14.3](https://github.com/spryker/Kernel/releases/tag/3.14.3)</li></ul> |
 

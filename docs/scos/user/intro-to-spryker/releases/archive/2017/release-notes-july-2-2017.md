@@ -1,5 +1,6 @@
 ---
 title: Release Notes - July - 2 2017
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes-july-2-2017
 originalArticleId: e125a926-7b69-45b1-a378-d569e9c7dfa5
@@ -17,16 +18,16 @@ We've changed product label touch logic in order to be able to export label IDs 
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 |[ProductLabel 2.0.0](https://github.com/spryker/product-label/releases/tag/2.0.0)  | n/a | n/a |
 
 **Documentation**
-For module documentation, see [Product Label Module Guide](/docs/scos/user/features/{{site.version}}/product-labels-feature-overview.html)
-For detailed migration guides, see [Product Label Migration Guide](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-productlabel.html).
+<br>For module documentation, see [Product Label Module Guide](/docs/scos/user/features/{{site.version}}/product-labels-feature-overview.html)
+<br>For detailed migration guides, see [Product Label Migration Guide](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-productlabel.html).
 
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -45,15 +46,15 @@ With this release, we are introducing a new `DataImport` module. This module is 
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | [DataImport 1.0.0](https://github.com/spryker/data-import/releases/tag/1.0.0) | [ErrorHandler 2.1.0](https://github.com/spryker/error-handler/releases/tag/2.1.0) | <ul><li>[Category 3.2.1](https://github.com/spryker/Category/releases/tag/3.2.1)</li><li>[CategoryExporter 3.0.1](https://github.com/spryker/category-exporter/releases/tag/3.0.1)</li><li>[Glossary 3.1.3](https://github.com/spryker/Glossary/releases/tag/3.1.3)</li><li>[Stock 4.0.2](https://github.com/spryker/Stock/releases/tag/4.0.2)</li><li>[Testify 3.2.6](https://github.com/spryker/Testify/releases/tag/3.2.6)</li></ul> |
 
 **Documentation**
-For module documentation, see [HowTo - Import Data](/docs/scos/dev/data-import/{{site.version}}/creating-a-data-importer.html).
+<br>For module documentation, see [HowTo - Import Data](/docs/scos/dev/data-import/{{site.version}}/creating-a-data-importer.html).
 
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -72,12 +73,12 @@ We've added support for dynamic product labels. Labels now can be assigned to pr
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | [ProductNew 1.0.0](https://github.com/spryker/product-new/releases/tag/1.0.0) | <ul><li>[ProductLabel 2.1.0](https://github.com/spryker/product-label/releases/tag/2.1.0)</li><li>[ProductLabelCollector 1.1.0](https://github.com/spryker/product-label-collector/releases/tag/1.1.0)</li><li>[ProductLabelGui 1.1.0](https://github.com/spryker/product-label-gui/releases/tag/1.1.0)</li><li>[Search 6.4.0](https://github.com/spryker/Search/releases/tag/6.4.0)</li></ul> | [ProductManagement 0.7.5](https://github.com/spryker/product-management/releases/tag/0.7.5) |
 
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -103,12 +104,12 @@ CMS block positioning can be used for placing a block in certain places in your 
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | <ul><li>[Category 4.0.0](https://github.com/spryker/Category/releases/tag/4.0.0)</li><li>[CmsBlockCategoryConnector 2.0.0](https://github.com/spryker/cms-block-category-connector/releases/tag/2.0.0)</li></ul> | <ul><li>[CmsBlock 1.2.0](https://github.com/spryker/cms-block/releases/tag/1.2.0)</li><li>[Gui 3.6.0](https://github.com/spryker/Gui/releases/tag/3.6.0)</li></ul>  | <ul><li>[CategoryDataFeed 0.2.1](https://github.com/spryker/category-data-feed/releases/tag/0.2.1)</li><li>[CategoryExporter 3.0.2](https://github.com/spryker/category-exporter/releases/tag/3.0.2)</li><li>[Cms 6.1.1](https://github.com/spryker/Cms/releases/tag/6.1.1)</li><li>[CmsBlockProductConnector 1.0.2](https://github.com/spryker/cms-block-product-connector/releases/tag/1.0.2)</li><li>[NavigationGui 1.0.4](https://github.com/spryker/navigation-gui/releases/tag/1.0.4)</li><li>[ProductCategory 4.2.1](https://github.com/spryker/product-category/releases/tag/4.2.1)</li><li>[ProductLabelGui 1.0.3](https://github.com/spryker/product-label-gui/releases/tag/1.0.3)</li><li>[ProductManagement 0.7.4](https://github.com/spryker/product-management/releases/tag/0.7.4)</li><li>[ProductRelation 1.0.5](https://github.com/spryker/product-relation/releases/tag/1.0.5)</li><li>[Transfer 3.3.3](https://github.com/spryker/transfer/releases/tag/3.3.3)</li></ul> |
 
 **Documentation**
-For module documentation, see:
+<br>For module documentation, see:
 
 * CMS Block Category Connector Module Guide<!-- link -->
 * Content Management Module Guide<!-- link -->
@@ -121,7 +122,7 @@ For migration guides, see:
 * [CMS Block Category Connector Migration Console](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cms-block-category-connector-migration-console.html)
 
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -141,7 +142,7 @@ We have added a possibility to add `ServiceProvider` to `ConsoleBootstrap`. You 
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [Console 3.1.0](https://github.com/spryker/Console/releases/tag/3.1.0) | n/a |
 
@@ -150,7 +151,7 @@ With this release, we make sure that CORS headers are now fully compliant with t
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Api 0.1.2](https://github.com/spryker/Api/releases/tag/0.1.2) |
 
@@ -169,7 +170,7 @@ We also added a method to manage cache strategies where every controller can spe
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [Storage 3.1.0](https://github.com/spryker/Storage/releases/tag/3.1.0) | n/a |
 
@@ -183,7 +184,7 @@ We had an issue with ES, where inactive CMS pages were searchable. To fix this i
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | <ul><li>[CmsCollector 1.1.0](https://github.com/spryker/cms-collector/releases/tag/1.1.0)</li><li>[Search 6.2.0](https://github.com/spryker/Search/releases/tag/6.2.0)</li></ul> | n/a |
 
@@ -192,7 +193,7 @@ The filters for discounts are applied after discount calculation. Because of tha
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Discount 4.3.1](https://github.com/spryker/Discount/releases/tag/4.3.1) |
 
@@ -201,7 +202,7 @@ With a recent fix, we had introduced a bug: when trying to save existing categor
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Category 3.2.4](https://github.com/spryker/Category/releases/tag/3.2.4) |
 
@@ -210,7 +211,7 @@ When providing a custom path for project sniffing, that path wasn't normalized a
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Development 3.1.3](https://github.com/spryker/Development/releases/tag/3.1.3) |
 
@@ -219,7 +220,7 @@ The Step Engine selects the current step that needs to be processed based on pos
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [StepEngine 3.0.1](https://github.com/spryker/step-engine/releases/tag/3.0.1) |
 
@@ -228,7 +229,7 @@ Previously, the `Customer` module was sending a registration email even on faile
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Customer 6.1.1](https://github.com/spryker/Customer/releases/tag/6.1.1) |
 
@@ -237,7 +238,7 @@ One of CMS block related indices was duplicated and had the same name as a forei
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [CmsBlock 1.2.1](https://github.com/spryker/cms-block/releases/tag/1.2.1) |
 
@@ -246,7 +247,7 @@ Previously, it was required to add an `*` (asterisk) into labels when a form fie
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | <ul><li>[CmsGui 4.2.0](https://github.com/spryker/cms-gui/releases/tag/4.2.0)</li><li>[Discount 4.4.0](https://github.com/spryker/Discount/releases/tag/4.4.0)</li><li>[Gui 3.7.0](https://github.com/spryker/Gui/releases/tag/3.7.0)</li><li>[NavigationGui 1.1.0](https://github.com/spryker/navigation-gui/releases/tag/1.1.0)</li><li>[ProductOption 5.2.0](https://github.com/spryker/product-option/releases/tag/5.2.0)</li><li>[ProductSearch 5.1.0](https://github.com/spryker/product-search/releases/tag/5.1.0)</li><li>[Sales 7.1.0](https://github.com/spryker/Sales/releases/tag/7.1.0)</li><li>[Tax 5.1.0](https://github.com/spryker/tax/releases/tag/5.1.0)</li></ul> | n/a |
 
@@ -255,7 +256,7 @@ So far the generated `.pathCache` file for the Twig cache used a wrong order of 
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Twig 3.2.1](https://github.com/spryker/Twig/releases/tag/3.2.1) |
 
@@ -264,6 +265,6 @@ Previously, we were showing the breadcrumbs in Zed UI when the navigation entry 
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [ZedNavigation 1.1.0](https://github.com/spryker/zed-navigation/releases/tag/1.1.0) | n/a |

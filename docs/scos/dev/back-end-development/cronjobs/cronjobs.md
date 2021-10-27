@@ -1,6 +1,7 @@
 ---
 title: Cronjob Scheduling
 description: Spryker applications demand performing repetitive background operation - jobs. Such operations are necessary for synchronizing denormalized data into Search engine, key-value store, etc.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/cronjob-scheduling-guide
 originalArticleId: 2027e1e4-d579-4ec6-aa6e-aff40955d76c

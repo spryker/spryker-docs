@@ -1,5 +1,6 @@
 ---
 title: File details- product_discontinued.csv
+last_updated: Sep 14, 2020
 template: data-import-template
 originalLink: https://documentation.spryker.com/v5/docs/file-details-product-discontinuedcsv
 originalArticleId: 141cd600-707d-4c78-a009-feec3b900725

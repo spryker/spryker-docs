@@ -1,6 +1,7 @@
 ---
 title: MVP project structuring
 description: This article helps with the project planning stage.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/mvp-project-structuring
 originalArticleId: 2a0c62a9-d1e4-43e0-8b10-b44f200a1bb0
@@ -96,8 +97,8 @@ Initially, to define your MVP try not to match features one by one. Instead, rem
 To create a lean MVP, the first step is to evaluate the importance of features by the added value they provide. A mapping matrix can help with the evaluation process. 
 
 {% info_block infoBox %}
-The image below is an example of how to map functionality to asses the value added and effort.![MVP feature mapping](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker/MVP+Project+Structuring/mvp_feature_mapping.png
-{% endinfo_block %})
+The image below is an example of how to map functionality to asses the value added and effort.![MVP feature mapping](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker/MVP+Project+Structuring/mvp_feature_mapping.png)
+{% endinfo_block %}
 
 Once functionality has been mapped, it is easier to asses the scope, importance and cost of each feature. 
 

@@ -1,6 +1,7 @@
 ---
 title: Implementing event trigger publisher plugins
 description: Learn how to implement event trigger publisher plugins.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-implement-event-trigger-publisher-plugins
 originalArticleId: 217a59d0-03ed-4b5b-9be2-01ed9878c9eb

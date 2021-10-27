@@ -1,5 +1,6 @@
 ---
 title: Release Notes - October - 2 2017
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes-october-2-2017
 originalArticleId: dccf512e-816f-4c27-b100-56a3adb16b14
@@ -18,16 +19,16 @@ This release focuses on enabling multi-currency for discounts. It allows you to 
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | <ul><li>[CartCurrencyConnector 1.0.0](https://github.com/spryker/cart-currency-connector/releases/tag/1.0.0)</li><li>[Discount 5.0.0](https://github.com/spryker/Discount/releases/tag/5.0.0)</li></ul> | <ul><li>[Calculation 4.2.0](https://github.com/spryker/Calculation/releases/tag/4.2.0)</li><li>[Cart 4.1.0](https://github.com/spryker/Cart/releases/tag/4.1.0)</li><li>[Currency 3.1.0](https://github.com/spryker/Currency/releases/tag/3.1.0)</li><li>[Kernel 3.11.0](https://github.com/spryker/Kernel/releases/tag/3.11.0)</li><li>[Money 2.2.0](https://github.com/spryker/Money/releases/tag/2.2.0)</li><li>[ProductDiscountConnector 3.2.0](https://github.com/spryker/product-discount-connector/releases/tag/3.2.0)</li><li>[ProductLabelDiscountConnector 1.2.0](https://github.com/spryker/product-label-discount-connector/releases/tag/1.2.0)</li><li>[ShipmentDiscountConnector 1.1.0](https://github.com/spryker/shipment-discount-connector/releases/tag/1.1.0)</li><li>[Store 1.1.0](https://github.com/spryker/Store/releases/tag/1.1.0)</li></ul> | <ul><li>[CustomerGroupDiscountConnector 2.0.2](https://github.com/spryker/customer-group-discount-connector/releases/tag/2.0.2)</li><li>[DiscountCalculationConnector 5.0.1](https://github.com/spryker/DiscountCalculationConnector/releases/tag/5.0.1)</li><li>[DiscountPromotion 1.0.2](https://github.com/spryker/discount-promotion/releases/tag/1.0.2)</li><li>[OmsDiscountConnector 3.0.1](https://github.com/spryker/oms-discount-connector/releases/tag/3.0.1)</li></ul> |
 
 **Documentation**
-For module documentation, see Module Guide - Discount<!--/module_guide/spryker/discount.htm)-->, Module Guide - Currency<!--/module_guide/spryker/currency.htm)-->, Module Guide - Money<!--/module_guide/spryker/money.htm)-->.
-For detailed migration guides, see [Discount Module Migration Guide from Version 4. to 5](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-discount.html#upgrading-from-version-4-to-version-5), Migration Guide - Discount Amounts Migration Console Command.
+<br>For module documentation, see Module Guide - Discount<!--/module_guide/spryker/discount.htm)-->, Module Guide - Currency<!--/module_guide/spryker/currency.htm)-->, Module Guide - Money<!--/module_guide/spryker/money.htm)-->.
+<br>For detailed migration guides, see [Discount Module Migration Guide from Version 4. to 5](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-discount.html#upgrading-from-version-4-to-version-5), Migration Guide - Discount Amounts Migration Console Command.
 
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -47,7 +48,7 @@ With this release, we are introducing performance optimizations for a transfer o
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Kernel 3.11.1](https://github.com/spryker/Kernel/releases/tag/3.11.1) |
 
@@ -56,7 +57,7 @@ With this release, we now allow the code sniffer to run in module specific folde
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [Development 3.3.1](https://github.com/spryker/Development/releases/tag/3.3.1) | n/a |
 
@@ -65,7 +66,7 @@ With this release, the architecture sniffer supports custom paths for project an
 
 **Affected Modules**
 
-| Major | Minor| Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Development 3.3.2](https://github.com/spryker/Development/releases/tag/3.3.2) |
 
@@ -80,7 +81,7 @@ In order to prevent performance issues and switch off the Propel logging in your
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Propel 3.2.1](https://github.com/spryker/Propel/releases/tag/3.2.1) |
 
@@ -89,7 +90,7 @@ UrlFacade offers backward compatibility over `UrlFacadeInterface::createUrl()`, 
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | <ul><li>[Category 4.1.2](https://github.com/spryker/Category/releases/tag/4.1.2)</li><li>[Cms 6.2.1](https://github.com/spryker/Cms/releases/tag/6.2.1)</li><li>[CmsGui 4.3.1](https://github.com/spryker/cms-gui/releases/tag/4.3.1)</li><li>[Product 5.2.2](https://github.com/spryker/Product/releases/tag/5.2.2)</li><li>[ProductSet 1.1.1](https://github.com/spryker/product-set/releases/tag/1.1.1)</li><li>[ProductSetGui 1.1.2](https://github.com/spryker/product-set-gui/releases/tag/1.1.2)</li><li>[Url 3.2.1](https://github.com/spryker/Url/releases/tag/3.2.1)</li></ul> |
 
@@ -98,7 +99,7 @@ With one of our recent releases, in order to implement cache for getMulti, a BC 
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Storage 3.3.2](https://github.com/spryker/Storage/releases/tag/3.3.2) |
 
@@ -107,7 +108,7 @@ In Zed Administration Interface for the Navigation UI, the child node frame heig
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [NavigationGui 2.0.1](https://github.com/spryker/navigation-gui/releases/tag/2.0.1) |
 

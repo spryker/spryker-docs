@@ -1,5 +1,6 @@
 ---
 title: Overview of the feature guides
+last_updated: Feb 9, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/overview-of-the-feature-guides
 originalArticleId: 206d7de6-d600-40c8-abd0-3dd01ecd82ad
@@ -27,6 +28,6 @@ This documentation is meant for reference purposes only and does not contain ste
 Or, you can go directly to the following guides to search for the necessary information:
 
 * [Back Office user guide](https://documentation.spryker.com/v4/docs/overview-of-the-back-office-user-guide): for step-by-step guides on how to work with the features in the Back Office.
-* [Feature integration guides](/docs/scos/dev/feature-integration-guides/{{page.version}}/about-integration-guides.html): for developer guides on how to integrate a feature into a Spryker project.
+* [Feature integration guides](/docs/scos/dev/feature-integration-guides/{{page.version}}/feature-integration-guides.html): for developer guides on how to integrate a feature into a Spryker project.
 
 {% endinfo_block %}

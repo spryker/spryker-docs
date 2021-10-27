@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Session
 description: Use the guide to learn how to update the Session module to a newer version.
+last_updated: Mar 10, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/mg-session
 originalArticleId: 5e71c6b1-52d9-43bb-a767-3b1152f096a1

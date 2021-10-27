@@ -1,5 +1,6 @@
 ---
 title: HowTo - Product Data from Import to Front-End View
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-product-data-import-frontend
 originalArticleId: 7f644291-3453-4725-a3a3-5a37c38fc567

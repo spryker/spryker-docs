@@ -1,6 +1,7 @@
 ---
 title: Heidelpay - Easy Credit
 description: Integrate easy credit payment through Heidelpay into the Spryker-based shop.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/heidelpay-easy-credit
 originalArticleId: 83746ef1-fe16-4a17-bd70-98519e4418fa
@@ -36,7 +37,7 @@ The following configuration should be implemented after Heidelpay has been [inst
 
 ## Configuration
 
-| Configuration Key | Type | Description |
+| CONFIGURATION KEY | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | `HeidelpayConstants::CONFIG_HEIDELPAY_EASYCREDIT_CRITERIA_REJECTED_DELIVERY_ADDRESS`	 | string | Criteria to reject by delivery address (for example 'Packstation') |
 | `HeidelpayConstants::CONFIG_HEIDELPAY_EASYCREDIT_CRITERIA_GRAND_TOTAL_LESS_THAN`	 | int | Criteria to reject if grand total less than (for example 200) |
@@ -64,13 +65,13 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 
 2. Add Easycredit checkout steps to `StepFactory`.
 
-\Pyz\Yves\CheckoutPage\Process\StepFactory
+**\Pyz\Yves\CheckoutPage\Process\StepFactory**
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\CheckoutPage\Process;
- 
+
 use Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider;
 use Pyz\Yves\CheckoutPage\Plugin\Provider\CheckoutPageControllerProvider;
 use Spryker\Yves\StepEngine\Process\StepCollection;
@@ -79,7 +80,7 @@ use SprykerEco\Yves\Heidelpay\CheckoutPage\Process\Steps\HeidelpayEasycreditInit
 use SprykerEco\Yves\Heidelpay\CheckoutPage\Process\Steps\HeidelpayEasycreditStep;
 use SprykerShop\Yves\CheckoutPage\Process\StepFactory as BaseStepFactory;
 use SprykerShop\Yves\HomePage\Plugin\Provider\HomePageControllerProvider;
- 
+
 /**
  * @method \SprykerShop\Yves\CheckoutPage\CheckoutPageConfig getConfig()
  */
@@ -94,7 +95,7 @@ class StepFactory extends BaseStepFactory
 			$this->getUrlGenerator(),
 			CheckoutPageControllerProvider::CHECKOUT_ERROR
 		);
- 
+
 		$stepCollection
 			->addStep($this->createEntryStep())
 			->addStep($this->createCustomerStep())
@@ -106,10 +107,10 @@ class StepFactory extends BaseStepFactory
 			->addStep($this->createSummaryStep())
 			->addStep($this->createPlaceOrderStep())
 			->addStep($this->createSuccessStep());
- 
+
 		return $stepCollection;
 	}
- 
+
 	/**
 	 * @return \SprykerEco\Yves\Heidelpay\CheckoutPage\Process\Steps\HeidelpayEasycreditInitializeStep
 	 */
@@ -121,7 +122,7 @@ class StepFactory extends BaseStepFactory
 			$this->getHeidelpayClient()
 		);
 	}
- 
+
 	/**
 	 * @return \SprykerEco\Yves\Heidelpay\CheckoutPage\Process\Steps\HeidelpayEasycreditStep
 	 */
@@ -132,7 +133,7 @@ class StepFactory extends BaseStepFactory
 			HomePageControllerProvider::ROUTE_HOME
 		);
 	}
- 
+
 	/**
 	 * @return \SprykerEco\Client\Heidelpay\HeidelpayClientInterface
 	 */
@@ -145,16 +146,16 @@ class StepFactory extends BaseStepFactory
 
 3. Extend `CheckoutPageFactory` to change step factory creation:
 
-\Pyz\Yves\CheckoutPage\CheckoutPageFactory
+**\Pyz\Yves\CheckoutPage\CheckoutPageFactory**
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\CheckoutPage;
- 
+
 use Pyz\Yves\CheckoutPage\Process\StepFactory;
 use SprykerShop\Yves\CheckoutPage\CheckoutPageFactory as SprykerShopCheckoutPageFactory;
- 
+
 class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 {
 	/**
@@ -169,16 +170,16 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 
 4. Extend `CheckoutController` to add `Easycredit` step action:
 
-\Pyz\Yves\CheckoutPage\Controller\CheckoutController
+**\Pyz\Yves\CheckoutPage\Controller\CheckoutController**
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\CheckoutPage\Controller;
- 
+
 use SprykerShop\Yves\CheckoutPage\Controller\CheckoutController as BaseCheckoutController;
 use Symfony\Component\HttpFoundation\Request;
- 
+
 /**
  * @method \SprykerShop\Yves\CheckoutPage\CheckoutPageFactory getFactory()
  */
@@ -198,21 +199,21 @@ class CheckoutController extends BaseCheckoutController
 
 5. Extend `CheckoutPageRouteProviderPlugin` to add `Easycredit` actions:
 
-\Pyz\Yves\CheckoutPage\Plugin\Router\CheckoutPageControllerProvider
+**\Pyz\Yves\CheckoutPage\Plugin\Router\CheckoutPageControllerProvider**
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\CheckoutPage\Plugin\Provider;
- 
+
 use Spryker\Yves\Router\Route\RouteCollection;
 use SprykerShop\Yves\CheckoutPage\Plugin\Router\CheckoutPageRouteProviderPlugin as SprykerShopCheckoutPageRouteProviderPlugin;
- 
+
 class CheckoutPageRouteProviderPlugin extends SprykerShopCheckoutPageRouteProviderPlugin
 {
     public const ROUTE_NAME_CHECKOUT_EASYCREDIT = 'checkout-easycredit';
     public const ROUTE_NAME_CHECKOUT_EASYCREDIT_INITIALIZE = 'checkout-easycredit-initialize';
- 
+
     /**
      * Specification:
      * - Adds Routes to the RouteCollection.
@@ -227,7 +228,7 @@ class CheckoutPageRouteProviderPlugin extends SprykerShopCheckoutPageRouteProvid
     {
 	$route = $this->buildRoute('/checkout/easycredit', 'CheckoutPage', 'Checkout', 'easyCreditAction');
         $routeCollection->add(static::ROUTE_NAME_CHECKOUT_EASYCREDIT, $route);
-	
+
 	$route = $this->buildRoute('/checkout/easycredit-initialize', 'CheckoutPage', 'Checkout', 'easyCreditAction');
         $routeCollection->add(static::ROUTE_NAME_CHECKOUT_EASYCREDIT_INITIALIZE, $route);
 
@@ -238,21 +239,21 @@ class CheckoutPageRouteProviderPlugin extends SprykerShopCheckoutPageRouteProvid
 
 6. Update `CheckoutPageDependencyProvider` with `Easycredit` related modifications:
 
-\Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider
+**\Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider**
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\CheckoutPage;
- 
+
 ...
 use SprykerEco\Yves\Heidelpay\Plugin\Subform\HeidelpayEasyCreditSubFormPlugin;
 ...
- 
+
 class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyProvider
 {
 	public const CLIENT_HEIDELPAY = 'CLIENT_HEIDELPAY';
- 
+
 	/**
 	 * @param \Spryker\Yves\Kernel\Container $container
 	 *
@@ -262,10 +263,10 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 	{
 		$container = parent::provideDependencies($container);
 		$container = $this->addHeidelpayClient($container);
- 
+
 		return $container;
 	}
- 
+
 	/**
 	 * @param \Spryker\Yves\Kernel\Container $container
 	 *
@@ -277,13 +278,13 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 			$subFormPluginCollection = new SubFormPluginCollection();
 			...
 			$subFormPluginCollection->add(new HeidelpayEasyCreditSubFormPlugin());
- 
+
 			return $subFormPluginCollection;
 		};
- 
+
 		return $container;
 	}
- 
+
 	/**
 	 * @param \Spryker\Yves\Kernel\Container $container
 	 *
@@ -295,13 +296,13 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 			$stepHandlerPluginCollection = new StepHandlerPluginCollection();
 			...
 			$stepHandlerPluginCollection->add(new HeidelpayHandlerPlugin(), PaymentTransfer::HEIDELPAY_EASY_CREDIT);
- 
+
 			return $stepHandlerPluginCollection;
 		};
- 
+
 		return $container;
 	}
- 
+
 	/**
 	 * @param \Spryker\Yves\Kernel\Container $container
 	 *
@@ -312,7 +313,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 		$container[static::CLIENT_HEIDELPAY] = function () use ($container) {
 			return $container->getLocator()->heidelpay()->client();
 		};
- 
+
 		return $container;
 	}
 }
@@ -320,36 +321,36 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 
 7. Update `payment.twig` template with `Easycredit` payment method:
 
-src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig
+**src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig**
 
 ```html
 {% raw %}{%{% endraw %} extends template('page-layout-checkout', 'CheckoutPage') {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} define data = {
 	backUrl: _view.previousStepUrl,
 	forms: {
 		payment: _view.paymentForm
 	},
- 
+
 	title: 'checkout.step.payment.title' | trans,
 	customForms: {
 		...
 		'heidelpay/easy-credit': ['easy-credit', 'heidelpay'],
 	}
 } {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} block content {% raw %}%}{% endraw %}
 	...
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 
 8. Update `summary.twig` to template to display `Easycredit` related fees:
-<details open>
+<details>
 <summary markdown='span'>src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig</summary>
 
 ```html
 {% raw %}{%{% endraw %} extends template('page-layout-checkout', 'CheckoutPage') {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} define data = {
 	backUrl: _view.previousStepUrl,
 	transfer: _view.quoteTransfer,
@@ -359,17 +360,17 @@ src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig
 	shipmentMethod: _view.quoteTransfer.shipment.method.name,
 	paymentMethod: _view.quoteTransfer.payment.paymentMethod,
 	heidelpayEasyCredit: _view.quoteTransfer.payment.heidelpayEasyCredit | default(null),
- 
+
 	forms: {
 		summary: _view.summaryForm
 	},
- 
+
 	overview: {
 		shipmentMethod: _view.quoteTransfer.shipment.method.name,
 		expenses: _view.quoteTransfer.expenses,
 		voucherDiscounts: _view.quoteTransfer.voucherDiscounts,
 		cartRuleDiscounts: _view.quoteTransfer.cartRuleDiscounts,
- 
+
 		prices: {
 			subTotal: _view.quoteTransfer.totals.subtotal,
 			storeCurrency: _view.quoteTransfer.shipment.method.storeCurrencyPrice,
@@ -378,10 +379,10 @@ src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig
 			discountTotal: _view.quoteTransfer.totals.discounttotal | default
 		}
 	},
- 
+
 	title: 'checkout.step.summary.title' | trans
 } {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} block content {% raw %}%}{% endraw %}
 	<div class="grid">
 		<div class="col col--sm-12 col--lg-4">
@@ -406,7 +407,7 @@ src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig
 					</div>
 				{% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 				<hr/>
- 
+
 				{% raw %}{%{% endraw %} include molecule('display-address') with {
 					class: 'text-small',
 					data: {
@@ -414,12 +415,12 @@ src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig
 					}
 				} only {% raw %}%}{% endraw %}
 			</div>
- 
+
 			<div class="box">
 				<span class="float-right">{% raw %}{{{% endraw %} 'checkout.step.summary.with_method' | trans {% raw %}}}{% endraw %} <strong>{% raw %}{{{% endraw %} data.shipmentMethod {% raw %}}}{% endraw %}</strong></span>
 				<h6>{% raw %}{{{% endraw %} 'checkout.step.summary.shipping' | trans {% raw %}}}{% endraw %}</h6>
 				<hr/>
- 
+
 				{% raw %}{%{% endraw %} include molecule('display-address') with {
 					class: 'text-small',
 					data: {
@@ -428,7 +429,7 @@ src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig
 				} only {% raw %}%}{% endraw %}
 			</div>
 		</div>
- 
+
 		<div class="col col--sm-12 col--lg-8">
 			<div class="box">
 				{% raw %}{%{% endraw %} for item in data.cartItems {% raw %}%}{% endraw %}
@@ -468,7 +469,7 @@ src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig
 					{% raw %}{%{% endraw %} endembed {% raw %}%}{% endraw %}
 				{% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
 			</div>
- 
+
 			{% raw %}{%{% endraw %} if data.transfer.cartNote is not empty {% raw %}%}{% endraw %}
 				{% raw %}{%{% endraw %} if widgetExists('CartNoteQuoteNoteWidgetPlugin') {% raw %}%}{% endraw %}
 					<div class="box">
@@ -485,13 +486,13 @@ src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig
 					</div>
 				{% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 			{% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
- 
+
 			<div class="box">
 				{% raw %}{%{% endraw %} widget 'CheckoutVoucherFormWidget' args [data.transfer] only {% raw %}%}{% endraw %}
 				{% raw %}{%{% endraw %} elsewidget 'CheckoutVoucherFormWidgetPlugin' args [data.transfer] only {% raw %}%}{% endraw %} {# @deprecated Use CheckoutVoucherFormWidget instead. #}
 				{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}
 			</div>
- 
+
 			{% raw %}{%{% endraw %} embed molecule('form') with {
 				class: 'box',
 				data: {
@@ -514,7 +515,7 @@ src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig
 					{% raw %}{%{% endraw %} include molecule('summary-overview', 'CheckoutPage') with {
 						data: embed.overview
 					} only {% raw %}%}{% endraw %}
- 
+
 					<hr />
 					{% raw %}{{{% endraw %}parent(){% raw %}}}{% endraw %}
 				{% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
@@ -527,21 +528,23 @@ src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig
 </details>
 
 ## Checkout Payment Step Display
+
 Displays payment method name with a radio button. No extra input fields are required.
 
 ## Payment Step Submitting
+
 No further actions are needed, the quote being filled with payment method selection as default. After selecting Easy Credit as a payment method "HP.IN" request will be sent. In the response, Heidelpay returns an URL string which defines where the customer has to be redirected. If everything was ok, the user would be redirected to the Easy Credit Externally.
 
 ## Summary Review and Order Submitting
+
 Once the customer is redirected back to us, the response from Easy Credit is sent to the Heidelpay, and Heidelpay makes a synchronous POST request to the shop's `CONFIG_HEIDELPAY_PAYMENT_RESPONSE_URL URL` (Yves), with the result of payment (see `EasyCreditController::paymentAction()`). It is called "external response transaction," the result will be persisted in `spy_payment_heidelpay_transaction_log` as usual. The most important data here - is the payment reference ID which can be used for further transactions like `finalize/reserve/etc`.
 
 After that, the customer can see the order summary page, where they can review all related data.
 
 There the user will see:
-
-* rate plan (`CRITERION.EASYCREDIT_AMORTISATIONTEXT`)
-* interest fees (`CRITERION_EASYCREDIT_ACCRUINGINTEREST`)
-* total sum including the interest fees (`CRITERION.EASYCREDIT_TOTALAMOUNT`)
+* Rate plan (`CRITERION.EASYCREDIT_AMORTISATIONTEXT`)
+* Interest fees (`CRITERION_EASYCREDIT_ACCRUINGINTEREST`)
+* Total sum including the interest fees (`CRITERION.EASYCREDIT_TOTALAMOUNT`)
 
 If the customer has not yet completed the HP.IN they must do that again.
 
@@ -550,4 +553,3 @@ If the customer has not yet completed the HP.IN they must do that again.
 **When the state machine is initialized**, an event "send authorize on registration request" will trigger the authorize on registration request. In case of success, the state will be changed.
 
 Finalize - later on, when the item is shipped to the customer, it is time to call "finalize" command of the state machine. This will send HP.FI request to the Payment API. This is done in FinalizePlugin of the OMS command.
-

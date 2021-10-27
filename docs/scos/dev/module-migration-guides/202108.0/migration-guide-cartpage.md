@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - CartPage
 description: Use the guide to update versions to the newer ones of the CartPage module.
+last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-cart-page
 originalArticleId: 41a50114-b4ba-4e84-a62d-940a2a44ecc0

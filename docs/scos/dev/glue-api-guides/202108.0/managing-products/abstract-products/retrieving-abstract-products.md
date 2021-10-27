@@ -1,6 +1,7 @@
 ---
 title: Retrieving abstract products
 description: Retrieve general information about abstract products and related resources.
+last_updated: Jun 21, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-abstract-products
 originalArticleId: 6ba1a21c-bbbe-4442-b7ce-81e921924b26
@@ -14,7 +15,7 @@ related:
     link: docs/scos/user/features/page.version/product-feature-overview/product-feature-overview.html
 ---
 
-This endpoint allows to retrieve general information about abstract products.
+This endpoint allows retrieving general information about abstract products.
 
 ## Installation
 
@@ -43,7 +44,7 @@ To retrieve general information about an abstract product, send the request:
 
 ### Request
 
-| String parameter | Description | Exemplary values |
+| STRING PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | abstract-product-prices, concrete-products, product-labels, abstract-product-image-sets, abstract-product-availabilities, category-nodes, product-tax-sets, product-options, product-reviews, bundled-products |
 | fields | 	Filters out the fields to be retrieved.  | name, image, description |
@@ -76,7 +77,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=concrete-products` | Retrieve information about the abstract product with SKU `001` with its concrete products. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=product-options`| Retrieve information about the abstract product with SKU `001` with its product options. |
 | `GET https://glue.mysprykershop.com/abstract-products/035?include=product-reviews` | Retrieve information about the abstract product with SKU `001` with its product reviews. |
-| `GET http://glue.mysprykershop.com/abstract-products/214?included=bundled-products,concrete-products,abstract-products` | Retrieve the abstract product with `SKU 214`, its concrete product bundle and the bundled products inside. Retrieve the abstract products that own the concrete product bundle and the concrete bundled products inside it. | 
+| `GET http://glue.mysprykershop.com/abstract-products/214?included=bundled-products,concrete-products,abstract-products` | Retrieve the abstract product with `SKU 214`, its concrete product bundle and the bundled products inside. Retrieve the abstract products that own the concrete product bundle and the concrete bundled products inside it. |
 
 
 
@@ -88,8 +89,8 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 ### Response
 
 <details>
-    <summary markdown='span'>Response sample</summary>
-    
+<summary markdown='span'>Response sample</summary>
+
 ```json
 {
     "data": {
@@ -149,10 +150,10 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 ```
 
  </details>
- 
+
  <details>
-    <summary markdown='span'>Response sample with image sets</summary>
-    
+<summary markdown='span'>Response sample with image sets</summary>
+
 ```json
 {
     "data": {
@@ -244,11 +245,11 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 ```
 
  </details>
- 
- 
+
+
  <details>
-    <summary markdown='span'>Response sample with product availability</summary>
-    
+<summary markdown='span'>Response sample with product availability</summary>
+
 ```json
 {
     "data": {
@@ -554,8 +555,8 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 </details>
 
 <details>
-    <summary markdown='span'>Response sample with category nodes</summary>
-    
+<summary markdown='span'>Response sample with category nodes</summary>
+
 ```json
 {
     "data": {
@@ -736,8 +737,8 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
 
 <details>
-    <summary markdown='span'>Response sample with tax rates</summary>
-    
+<summary markdown='span'>Response sample with tax rates</summary>
+
 ```json
 {
     "data": {
@@ -899,8 +900,8 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
 
 <details>
-    <summary markdown='span'>Response sample with product labels</summary>
-    
+<summary markdown='span'>Response sample with product labels</summary>
+
 ```json
 {
     "data": {
@@ -958,8 +959,8 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
 
 <details>
-    <summary markdown='span'>Response sample with concrete products</summary>
-    
+<summary markdown='span'>Response sample with concrete products</summary>
+
 ```json
 {
     "data": {
@@ -1072,8 +1073,8 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
 
 <details>
-    <summary markdown='span'>Response sample with product options</summary>
-    
+<summary markdown='span'>Response sample with product options</summary>
+
 ```json
 {
     "data": {
@@ -1178,11 +1179,11 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
  </details>
 
- 
+
 
 <details>
-    <summary markdown='span'>Response sample with product reviews</summary>
-    
+<summary markdown='span'>Response sample with product reviews</summary>
+
 ```json
 {
     "data": {
@@ -1305,8 +1306,8 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
 
 <details>
-    <summary markdown='span'>Response sample with concrete product bundle, bundled products and corresponding abstact products</summary>
-    
+<summary markdown='span'>Response sample with concrete product bundle, bundled products and corresponding abstact products</summary>
+
 ```json
 {
     "data": {
@@ -1942,11 +1943,11 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 | name | String | Name of the abstract product. |
 | description | String | Description of the abstract product. |
 | attributes | Object | List of attributes and their values. |
-| superAttributeDefinition | String[] | Attributes flagged as super attributes that are, however, not relevant to distinguish between the product variants. |
+| superAttributeDefinition | String | Attributes flagged as super attributes that are, however, not relevant to distinguish between the product variants. |
 | attributeMap | Object | Each super attribute / value combination and the corresponding concrete product IDs are listed here. |
 | attributeMap.super_attributes | Object | Applicable super attribute and its values for the product variants. |
 | attributeMap.attribute_variants | Object | List of super attributes with the list of values. |
-| attributeMap.product_concrete_ids | String[] | Product IDs of the product variants. |
+| attributeMap.product_concrete_ids | String | Product IDs of the product variants. |
 | metaTitle | String | Meta title of the product. |
 | metaKeywords | String | Meta keywords of the product. |
 | metaDescription | String | Meta description of the product. |
@@ -1973,7 +1974,7 @@ For the attributes of other included resources, see:
 
 ## Possible errors
 
-| CODE | MEANING |
+| CODE | REASON |
 |-|-|
 | 301 | Abstract product is not found. |
 | 311 | Abstract product SKU is not specified. |

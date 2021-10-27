@@ -1,6 +1,7 @@
 ---
 title: Adyen - Installation and Configuration
 description: Install and configure Adyen module to work in the Spryker Commerce OS.
+last_updated: Oct 13, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/adyen-configuration
 originalArticleId: 2966816e-71e5-4460-8366-ce775e0712a9
@@ -21,18 +22,18 @@ related:
 This topic describes how to install and configure the Adyen module to integrate Adyen into your project.
 
 ## Installation
+
 To install the Adyen module, run the command:
 ```
 composer require spryker-eco/adyen
 ```
-
 
 ## General Configuration
 
 You can find all necessary configurations in `vendor/spryker-eco/adyen/config/config.dist.php`.
 The table below describes all general configuration keys and their values.
 
-|Configuration Key|Type|Description|
+| CONFIGURATION KEY | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | `AdyenConstants::MERCHANT_ACCOUNT` | string | Name of merchant account. |
 | `AdyenConstants::REQUEST_CHANNEL` | string | Name of channel communication with Adyen. It has to be "Web". |
@@ -67,6 +68,7 @@ The table below describes all general configuration keys and their values.
 | `AdyenApiConstants::ADJUST_AUTHORIZATION_ACTION_URL` | string | URL for the API call to adjust the authorized amount. |
 
 ## Specific Configuration
+
 Also, you have to add payment methods to the State Machine (OMS), Domain Whitelist and Session Frontend configuration:
 
 ```php
@@ -123,4 +125,3 @@ The link to accept notifications from Adyen looks like https://mysprykershop.com
 You can get your credentials by following the [instruction](https://docs.adyen.com/online-payments/classic-integrations/api-integration-ecommerce).
 
 You can get JS SDK url and generate your origin key by following this [instruction](https://docs.adyen.com/online-payments/classic-integrations/api-integration-ecommerce) from.
-

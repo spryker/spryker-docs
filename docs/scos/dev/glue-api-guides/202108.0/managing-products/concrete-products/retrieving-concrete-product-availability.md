@@ -1,6 +1,7 @@
 ---
 title: Retrieving concrete product availability
 description: Retrieve availability of concrete products.
+last_updated: Jul 12, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-concrete-product-availability
 originalArticleId: 0c67acf3-3c48-484e-8a9a-3889189c7f56
@@ -11,7 +12,7 @@ redirect_from:
   - /docs/en/retrieving-concrete-product-availability
 ---
 
-This endpoint allows to retrieve availability of concrete products.
+This endpoint allows retrieving availability of concrete products.
 
 
 ## Installation
@@ -42,7 +43,7 @@ To view generic errors that originate from the Glue Application, see [Reference 
 
 
 <details>
-    <summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -68,7 +69,7 @@ To view generic errors that originate from the Glue Application, see [Reference 
 
 <a name="concrete-product-availability-response-attributes"></a>
 
-| Field | Type | Description |
+| FIELD | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | availability | Boolean | Boolean to inform about the availability. |
 | quantity|Integer|Available stock (all warehouses aggregated). |
@@ -77,7 +78,7 @@ To view generic errors that originate from the Glue Application, see [Reference 
 
 ## Possible errors
 
-| Code | Meaning |
+| CODE | REASON |
 | --- | --- |
 | 306 | Availability is not found. |
 

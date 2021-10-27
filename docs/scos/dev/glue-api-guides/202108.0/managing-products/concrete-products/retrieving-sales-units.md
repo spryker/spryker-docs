@@ -1,6 +1,7 @@
 ---
 title: Retrieving sales units
 description: Retrieve sales units of concrete products.
+last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-sales-units
 originalArticleId: 4150363f-4c47-4e7c-b7e6-d1430ce864ba
@@ -14,14 +15,12 @@ related:
     link: docs/scos/user/features/page.version/measurement-units-feature-overview.html
 ---
 
-This endpoint allows to retrieve sales units of concrete products.
+This endpoint allows retrieving sales units of concrete products.
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Glue API: Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html).
 * [Glue API: Measurement Units Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-measurement-units-feature-integration.html).
-
-
 
 ## Retrieve sales units
 
@@ -31,7 +30,6 @@ To retrieve sales units of a concrete product, send the request:
 `GET` **/concrete-products/*{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}*/sales-units**
 
 ---
-
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
@@ -44,7 +42,7 @@ Request sample: `GET http://glue.mysprykershop.com/concrete-products/cable-vga-1
 ### Response
 
 <details>
-    <summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -95,7 +93,6 @@ Request sample: `GET http://glue.mysprykershop.com/concrete-products/cable-vga-1
 | is displayed | boolean | Defines if the sales unit is displayed on the product details page. |
 | is default | boolean | Defines if the sales unit is selected by default on the product details page. |
 | measurementUnitCode | string | Code of the measurement unit. |
-
 
 See [Retrieving Measurement Units](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html) for more information on managing the sales units.
 

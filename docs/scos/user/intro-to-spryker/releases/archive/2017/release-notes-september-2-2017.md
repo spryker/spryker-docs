@@ -1,5 +1,6 @@
 ---
 title: Release Notes - September - 2 2017
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes-september-2-2017
 originalArticleId: 216fee41-bd0d-4b87-9b92-aa1844e4df0c
@@ -19,15 +20,15 @@ For marketing reasons you, a shop owner, might sometimes give away free or disco
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | [DiscountPromotion 1.0.0](https://github.com/spryker/discount-promotion/releases/tag/1.0.0) | [Discount 4.5.0](https://github.com/spryker/Discount/releases/tag/4.5.0) | <ul><li>[Availability 5.0.3](https://github.com/spryker/Availability/releases/tag/5.0.3)</li><li>[DiscountPromotion 1.0.1](https://github.com/spryker/discount-promotion/releases/tag/1.0.1)</li></ul> |
 
 **Documentation**
-For module documentation, see [Promotions & Discounts](/docs/scos/user/features/{{site.version}}/promotions-discounts-feature-overview.html).
+<br>For module documentation, see [Promotions & Discounts](/docs/scos/user/features/{{site.version}}/promotions-discounts-feature-overview.html).
 
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -49,17 +50,17 @@ With this release, we are introducing product reviews and ratings. Reviews are a
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | <ul><li>[ProductReview 1.0.0](https://github.com/spryker/product-review/releases/tag/1.0.0)</li><li>[ProductReviewCollector 1.0.0](https://github.com/spryker/product-review-collector/releases/tag/1.0.0)</li><li>[ProductReviewGui 1.0.0](https://github.com/spryker/product-review-gui/releases/tag/1.0.0)</li></ul> | <ul><li>[Collector 5.5.0](https://github.com/spryker/Collector/releases/tag/5.5.0)</li><li>[Gui 3.9.0](https://github.com/spryker/Gui/releases/tag/3.9.0)</li></ul> | n/a |
 
 **Documentation**
-For documentation, see Under the Hood - Product Reviews <!-- link -->, Product Reviews Feature Configuration, Filter and Sort by Average Rating<!-- link -->
+<br>For documentation, see Under the Hood - Product Reviews <!-- link -->, Product Reviews Feature Configuration, Filter and Sort by Average Rating<!-- link -->
 
 For feature integration, see [Feature Integration - Product Reviews](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-rating-and-reviews-feature-integration.html).
 
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -78,15 +79,15 @@ We are currently working on full enablement of multi-store and multi-currency co
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 |<ul><li>[Currency 3.0.0](https://github.com/spryker/Currency/releases/tag/3.0.0)</li><li>[Store 1.0.0](https://github.com/spryker/Store/releases/tag/1.0.0)</li></ul> | <ul><li>[Kernel 3.7.0](https://github.com/spryker/Kernel/releases/tag/3.7.0)</li><li>[Money 2.1.0](https://github.com/spryker/Money/releases/tag/2.1.0)</li><li>[ZedRequest 3.2.0](https://github.com/spryker/zed-request/releases/tag/3.2.0)</li></ul> | <ul><li>[Braintree 0.5.5](https://github.com/spryker/Braintree/releases/tag/0.5.5)</li><li>[ProductManagement 0.8.2](https://github.com/spryker/product-management/releases/tag/0.8.2)</li><li>[Kernel 3.7.2](https://github.com/spryker/Kernel/releases/tag/3.7.2)</li></ul> |
 
 **Documentation**
-For detailed migration guides, see [Currency Module Migration Guide from Version 2. to 3](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-currency.html#upgrading-from-version-2-to-version-3).
+<br>For detailed migration guides, see [Currency Module Migration Guide from Version 2. to 3](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-currency.html#upgrading-from-version-2-to-version-3).
 
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -109,7 +110,7 @@ The command is auto-added to `ConsoleDependencyProvider` when pulling this new m
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [Propel 3.2.0](https://github.com/spryker/Propel/releases/tag/3.2.0) | n/a |
 
@@ -118,7 +119,7 @@ We have added a new WebProfiler Panel which shows all used Spryker configuration
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [Config 3.1.0](https://github.com/spryker/Config/releases/tag/3.1.0) | [Twig 3.2.2](https://github.com/spryker/Twig/releases/tag/3.2.2) |
 
@@ -128,7 +129,7 @@ This release adds a new method to Availability Client which returns the product 
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [Availability 5.1.0](https://github.com/spryker/Availability/releases/tag/5.1.0) | n/a |
 
@@ -137,7 +138,7 @@ Previously, it was only possible to add touch items active during  `DataImport`.
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [DataImport 1.2.0](https://github.com/spryker/data-import/releases/tag/1.2.0) | n/a |
 
@@ -146,7 +147,7 @@ We have adjusted `TransferValidator` to take new simple array definitions into a
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | <ul><li>[CmsBlockCategoryConnector 2.0.4](https://github.com/spryker/cms-block-category-connector/releases/tag/2.0.4)</li><li>[CmsBlockProductConnector 1.0.3](https://github.com/spryker/CmsBlockProductConnector/releases/tag/1.0.3)</li><li>[ProductOptionCartConnector 4.1.2](https://github.com/spryker/product-option-cart-connector/releases/tag/4.1.2)</li><li>[Ratepay 0.6.3](https://github.com/spryker/Ratepay/releases/tag/0.6.3)</li><li>[Transfer 3.3.5](https://github.com/spryker/transfer/releases/tag/3.3.5)</li></ul> |
 
@@ -155,7 +156,7 @@ The Redis entry for Main Navigation contained unneeded data for all navigation n
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [NavigationCollector 1.0.2](https://github.com/spryker/navigation-collector/releases/tag/1.0.2) |
 
@@ -164,7 +165,7 @@ Previously, each call to `canResolve()` was building a possible class name and c
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | <ul><li>[Kernel 3.6.0](https://github.com/spryker/Kernel/releases/tag/3.6.0)</li><li>[Testify 3.3.0](https://github.com/spryker/Testify/releases/tag/3.3.0)</li></ul> | n/a |
 
@@ -173,7 +174,7 @@ The Concrete product collector has been slow because of a missing index. A missi
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Stock 4.0.6](https://github.com/spryker/Stock/releases/tag/4.0.6) |
 
@@ -182,7 +183,7 @@ To improve price check query performance, we have removed the count to make a qu
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 |n/a | n/a | [Price 4.2.2](https://github.com/spryker/Price/releases/tag/4.2.2) |
 
@@ -191,7 +192,7 @@ With this release, we are introducing output time taken in `data:import` command
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [DataImport 1.1.0](https://github.com/spryker/data-import/releases/tag/1.1.0) | n/a |
 
@@ -200,7 +201,7 @@ With this release, we are introducing output time taken in `data:import` command
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [Storage 3.3.0](https://github.com/spryker/Storage/releases/tag/3.3.0) | n/a |
 
@@ -210,7 +211,7 @@ Previously, for a property with type `array`, it was not possible to reset it wi
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Transfer 3.3.6](https://github.com/spryker/transfer/releases/tag/3.3.6) |
 
@@ -219,7 +220,7 @@ Previously, the "translation key exists" check considered all translation keys r
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a |  [Glossary 3.1.8](https://github.com/spryker/Glossary/releases/tag/3.1.8)|
 
@@ -228,7 +229,7 @@ Previously, when something wrong was entered in the image set key, the search co
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [ProductSetGui 1.1.1](https://github.com/spryker/product-set-gui/releases/tag/1.1.1) |
 
@@ -237,7 +238,7 @@ By default in projects, a command for Propel adjustments for PostgreSQL was runn
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [Propel 3.1.0](https://github.com/spryker/Propel/releases/tag/3.1.0) | n/a |
 
@@ -246,6 +247,6 @@ The previous release broke `DependencyInjectorResolver`. This release is to fix 
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Kernel 3.7.1](https://github.com/spryker/Kernel/releases/tag/3.7.1) |

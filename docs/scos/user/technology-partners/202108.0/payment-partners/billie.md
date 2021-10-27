@@ -1,6 +1,7 @@
 ---
 title: Billie
 description: Provide various payment options from Billie.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/billie
 originalArticleId: 5274b1b6-4f70-425b-99a9-d8a266193110
@@ -12,6 +13,7 @@ redirect_from:
 ---
 
 ## Partner Information
+
 [ABOUT BILLIE](https://www.billie.io/)
 
 B2B-PayAfterDelivery for the 21st century
@@ -25,7 +27,6 @@ Focus fully on your core business — Billie takes care of your debtor managemen
 Offer your business customers their preferred payment option, fully integrated into your online store’s checkout process: easily integrate our B2B-PayAfterDelivery module and experience dramatically improved conversion rates by allowing your customers to pay by invoice. Experience reliable payouts to your bank account on the next business day.
 
 YOUR ADVANTAGES:
-
 * Fully automated PayAfterDelivery module for your B2B-eCommerce store
 * Credit checks and decisions in real time
 * Improved conversion rates during checkout by providing the most preferred B2B-payment method

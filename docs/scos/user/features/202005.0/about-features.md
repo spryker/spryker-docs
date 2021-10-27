@@ -1,5 +1,6 @@
 ---
 title: About Features
+last_updated: Oct 26, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/about-features
 originalArticleId: b8658ad1-2234-4ab6-9b7c-8ffa40df4fb4
@@ -31,7 +32,7 @@ This documentation is meant for reference purposes only and does not contain ste
 Or, you can go directly to the following guides to search for the necessary information:
 
 * [Back Office User Guide](https://documentation.spryker.com/v5/docs/en/overview-of-the-back-office-user-guide): for step-by-step guides on how to work with the features in the Back Office.
-* [Feature integration guides](/docs/scos/dev/feature-integration-guides/{{page.version}}/about-integration-guides.html): for developer guides on how to integrate a feature into a Spryker project.
+* [Feature integration guides](/docs/scos/dev/feature-integration-guides/{{page.version}}/feature-integration-guides.html): for developer guides on how to integrate a feature into a Spryker project.
 * [Module guides](/docs/scos/dev/module-migration-guides/{{page.version}}/about-migration-guides.html): for developer guides on how to upgrade individual feature modules.
 
 

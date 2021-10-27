@@ -1,5 +1,6 @@
 ---
 title: Adding Events
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/event-adding
 originalArticleId: 9136cc31-4264-4a7e-b7d8-2f1c966afa51

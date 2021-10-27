@@ -1,6 +1,7 @@
 ---
 title: PayOne - Integration into the SCOS Project
 description: Integrate Payone into the Spryker Commerce OS by following the instructions from this article.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/payone-integration-with-project-scos
 originalArticleId: a86017aa-d5ce-44cf-b568-6cda73261766
@@ -383,6 +384,7 @@ $this->createSummaryForm(),
 ];
 }
 ```
+
 11. Handle shipment form data, when summary form is submitted. Inject two dependencies into `src/Pyz/Yves/CheckoutPage/Process/Steps/SummaryStep.php`:
 
 ```php

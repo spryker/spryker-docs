@@ -1,6 +1,7 @@
 ---
 title: Shop Guide - Request for Quote- Reference Information
 description: The guide provides additional information on the UI elements you see on the Quote Requests pages.
+last_updated: Nov 22, 2019
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/rfq-reference-information-shop-guide
 originalArticleId: 1d583599-83b0-4fb2-905a-68742ac19fe3

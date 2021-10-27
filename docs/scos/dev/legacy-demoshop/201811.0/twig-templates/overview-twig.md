@@ -1,6 +1,7 @@
 ---
 title: Overview - Twig
 description: Given that we are working on a web application, we need a proper way to generate HTML dynamically. The most common approach relies on templates and for this we decided to go with Twig Template Engine.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/twig-overview
 originalArticleId: 1a1c22b7-2b3b-45fe-a51b-638ff5614114

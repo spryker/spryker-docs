@@ -1,6 +1,7 @@
 ---
 title: Flysystem
 description: The Flysystem module integrates Spryker with the thephpleague flysystem vendor package
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/flysystem
 originalArticleId: b68c1798-4db1-4a2b-87bf-b54d4052a741

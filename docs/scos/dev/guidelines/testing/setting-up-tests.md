@@ -1,6 +1,7 @@
 ---
 title: Setting up Tests
 description: Learn how to set up an efficient organization for your tests.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/setting-up-tests
 originalArticleId: c8894db9-1871-41a4-a1fc-2c57d8de84c2

@@ -1,5 +1,6 @@
 ---
 title: File details- product_group.csv
+last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-groupcsv
 originalArticleId: dafbf02b-ad3c-4a49-b6f4-4f7448b61fca

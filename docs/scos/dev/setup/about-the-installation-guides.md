@@ -1,6 +1,7 @@
 ---
 title: About the Installation Guides
 description: In the Installation Guides, you will find all the information you need to install the Spryker Commerce OS according to your needs.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/about-installation
 originalArticleId: d3a6621f-68f6-44fd-a1f2-3701cf67c518

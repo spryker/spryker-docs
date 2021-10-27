@@ -1,6 +1,7 @@
 ---
 title: Adding Content Items to CMS Pages and Blocks
 description: The guide provides instructions for shop owners on how to add content items to blocks and pages using content item widgets in the Back Office
+last_updated: Sep 15, 2020
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/adding-content-items-to-cms-pages-and-blocks
 originalArticleId: ad66ebbd-edf5-4fa1-850e-5b2d6d964dd6

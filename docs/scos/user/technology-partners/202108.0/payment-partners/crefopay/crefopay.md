@@ -1,5 +1,6 @@
 ---
 title: CrefoPay
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/crefopay
 originalArticleId: 136e996b-06c7-46f2-a417-b66a45c84726
@@ -39,8 +40,8 @@ The `SprykerEco.CrefoPay` module provides the following payment methods:
 * [SofortÜberweisung](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/crefopay/crefopay-provided-payment-methods.html#sofortberweisung)
 
 ## What's next?
-To integrate CrefoPay into your system the see following articles:
 
+To integrate CrefoPay into your system the see following articles:
 * [CrefoPay - Installation and Configuration](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/crefopay/crefopay-installation-and-configuration.html)
 * [CrefoPay - Integration](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/crefopay/crefopay-integration-into-a-project.html)
 

@@ -1,4 +1,5 @@
----
+---last_updated: Jun 16, 2021
+
 title: Gift Cards Schema
 originalLink: https://documentation.spryker.com/2021080/docs/db-schema-gift-cards
 originalArticleId: 886a34ca-8da6-44e9-ab24-3c6e2849c2fd
@@ -16,7 +17,7 @@ redirect_from:
 
 {% info_block infoBox %}
 Enable your customers to buy gift cards with flexible amounts of money and to give it to friends as a gift. They can apply it like a voucher code during checkout and pay their whole orders or a part of it.
-{% endinfo_block %})
+{% endinfo_block %}
 
 {% info_block errorBox %}
 Gift cards are not Discounts!

@@ -1,5 +1,6 @@
 ---
 title: Product Packaging Unit feature integration
+last_updated: Mar 6, 2020
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/product-packaging-unit-feature-integration
 originalArticleId: dcd0a7a6-9ef3-4a67-8fd8-4bfb978fcee0

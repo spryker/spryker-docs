@@ -1,6 +1,7 @@
 ---
 title: Roadmap
 description: Spryker Roadmap defines a goal or desired outcome and includes the milestones Spryker needs to reach it.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/roadmap
 originalArticleId: 6404e6b1-0d5c-48c1-bb64-cbdc1b343114

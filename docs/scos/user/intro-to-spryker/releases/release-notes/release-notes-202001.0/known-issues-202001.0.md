@@ -1,5 +1,6 @@
 ---
 title: Known Issues 202001.0
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/known-issues-2020010
 originalArticleId: c8ec2dc3-e0b7-4066-9afb-a6049f4093ef

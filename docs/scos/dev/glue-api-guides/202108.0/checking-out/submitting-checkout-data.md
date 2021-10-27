@@ -1,6 +1,7 @@
 ---
 title: Submitting checkout data
 description: Submit checkout data and retrieve information needed for completing checkout.
+last_updated: Jul 13, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/submitting-checkout-data
 originalArticleId: 86d07f3a-6ef0-4dfe-87e0-322cc4cf42a7
@@ -35,7 +36,7 @@ To submit checkout data without order confirmation, send the request:
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | X-Anonymous-Customer-Unique-Id | String | Required when submitting data of a [guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html). | A guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
-| Authorization | String | Required when submitting data of a [registered user's cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html). | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | String | Required when submitting data of a [registered user's cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html). | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 
 
@@ -64,7 +65,7 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 
 
 <details>
-    <summary markdown='span'>Request sample with one shipment</summary>
+<summary markdown='span'>Request sample with one shipment</summary>
 
 ```json
 {
@@ -125,7 +126,7 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 </details>
 
 <details>
-    <summary markdown='span'>Request sample with a split shipment</summary>
+<summary markdown='span'>Request sample with a split shipment</summary>
 
 ```json
 {
@@ -207,7 +208,7 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 </details>
 
 <details>
-    <summary markdown='span'>Request sample with a split shipment and addresses passed as IDs</summary>
+<summary markdown='span'>Request sample with a split shipment and addresses passed as IDs</summary>
 
 ```json
 {

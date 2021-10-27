@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Content
+last_updated: Apr 3, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/mg-content-201907
 originalArticleId: 8e9f3f9b-9327-44bb-affa-d0879c6fbb93

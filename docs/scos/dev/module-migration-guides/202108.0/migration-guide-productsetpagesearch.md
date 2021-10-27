@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - ProductSetPageSearch
+last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-productsetpagesearch
 originalArticleId: 21dee07e-945c-4458-a466-047ed864eb6c

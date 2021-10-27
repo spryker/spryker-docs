@@ -1,5 +1,6 @@
 ---
 title: Product Label feature integration
+last_updated: Nov 22, 2019
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/product-label-feature-integration
 originalArticleId: 51e1eaf7-4779-48c2-b57c-ee5d9ca511f9

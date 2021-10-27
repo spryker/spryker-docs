@@ -1,5 +1,6 @@
 ---
 title: Integrating JQuery into Atomic Frontend
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-integrate-jquery
 originalArticleId: 8cd14f0a-a0e9-4036-b90b-a1ac4e5f3560

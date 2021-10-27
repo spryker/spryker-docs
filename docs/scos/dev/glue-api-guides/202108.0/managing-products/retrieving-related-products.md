@@ -1,6 +1,7 @@
 ---
 title: Retrieving related products
 description: The article demonstrates how to find alternatives for discontinued products with the help of Glue API endpoints.
+last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-related-products
 originalArticleId: db6deab2-f115-4802-a989-c594cebc6120
@@ -18,24 +19,22 @@ related:
 
 Using the [Product Relations](/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html) feature, sellers can define a list of comparable or additional items for each product. You can display such items, also called related products, in search and in the cart together with the products selected by customers.
 
-Only [abstract](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) products support product relations. For more details, see [Product Relations feature overview](/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html).)
+Only [abstract](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) products support product relations. For more details, see [Product Relations feature overview](/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html).
 
 The Product Relations API provides REST endpoints to retrieve the related products. Using it, you can:
-
 * Retrieve related products of an abstract product.
 * Retrieve related products of the items in guest carts and carts of registered users.
 
 In your development, the endpoints can help you to:
-
 * Provide comparable products on the product details pages and in search results to make it easier for customers to compare.
-* Provide additional product items in a customer's cart to offer upscale variations, accessories, and other additional items for products in the cart. 
-
-
+* Provide additional product items in a customer's cart to offer upscale variations, accessories, and other additional items for products in the cart.
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Product Relations feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-relations-feature-integration.html).
 
 ## Retrieve related items of an abstract product
+
 To get related items of an abstract product, send the request:
 
 ***
@@ -44,22 +43,18 @@ To get related items of an abstract product, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}*** | SKU of an abstract product to retrieve related products of. | 
+| ***{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}*** | SKU of an abstract product to retrieve related products of. |
 
-### Request 
-| Query parameter | Description | Exemplary values |
+### Request
+
+| QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | product-labels |
-
-
 
 | REQUEST | USAGE |
 | --- | --- |
 | `GET http://glue.mysprykershop.com/abstract-products/122/related-products` | Retrieve related products of the specified product. |
 | `GET http://glue.mysprykershop.com/abstract-products/122/related-products?include=product-labels` | Retrieve related products of the specified product. Product labels assigned to the related products are included. |
-
-
-
 
 ### Response
 
@@ -298,12 +293,6 @@ To get related items of an abstract product, send the request:
 }
 ```
 </details>
-
-
-
-
-
-
 
 <details>
 <summary markdown='span'>Response sample with included product labels</summary>
@@ -593,11 +582,6 @@ To get related items of an abstract product, send the request:
 
 </details>
 
-
-
-
-
-
 <a name="related-product-attributes"></a>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -623,11 +607,8 @@ To get related items of an abstract product, send the request:
 | product labels | position | Integer | Indicates the label priority.</br>Labels should be indicated on the frontend according to their priority, from the highest (**1**) to the lowest, unless a product has a label with the `isExclusive` attribute set.|
 | product labels | frontEndReference | String |Specifies the label custom label type (CSS class).</br>If the attribute is an empty string, the label should be displayed using the default CSS style. |
 
-
-
-
-
 ## Retrieve upselling products of a registered user's cart
+
 To get upselling items for all products in a cart of a registered customer, send the request:
 
 ---
@@ -635,23 +616,20 @@ To get upselling items for all products in a cart of a registered customer, send
 
 ---
 
-
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}}*** | ID of a cart to get upselling items of. [Retrieve all carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-all-carts) to get it. | 
+| ***{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}}*** | ID of a cart to get upselling items of. [Retrieve all carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-all-carts) to get it. |
 
 ### Request
-| Query parameter | Description | Exemplary values |
+
+| QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | product-labels |
-
 
 | REQUEST | USAGE |
 | --- | --- |
 | `GET GET http://mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/up-selling-products` | Retrieve upselling products of the specified cart. |
 | `GET http://glue.mysprykershop.com/carts/f9a3f045-02c2-5d47-b397-8ac1f5c63e27/up-selling-products?include=product-labels` | Retrieve upselling products of the specified cart. Product labels assigned to the upselling products are included. |
-
-
 
 ### Response
 
@@ -999,13 +977,8 @@ To get upselling items for all products in a cart of a registered customer, send
 ```
 </details>
 
-
-
 For response attributes, see [Retrieving related items of an abstract product](#related-product-attributes) for the list of response attributes.
 For the attributes of the included resources, see [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
-
-
-
 
 ## Retrieve upselling products of a guest cart
 
@@ -1017,29 +990,22 @@ To retrieve upselling products of a guest cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}}*** | Unique identifier of a guest cart to get upselling items of.  | 
-
+| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}}*** | Unique identifier of a guest cart to get upselling items of.  |
 
 ### Request
-| Header key | Header value example | Required | Description | 
+
+| HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
 |---|---|---|---|
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | ✓ | Guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. | 
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | ✓ | Guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
 
-
-
-
-
-| Query parameter | Description | Exemplary values |
+| QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | product-labels |
-
 
 | REQUEST | USAGE |
 | --- | --- |
 | `GET http://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/up-selling-products` | Retrieve upselling products of the specified cart. |
 | `GET http://glue.mysprykershop.com/guest-carts/f9a3f045-02c2-5d47-b397-8ac1f5c63e27/up-selling-products?include=product-labels` | Retrieve upselling products of the specified cart. Product labels assigned to the upselling products are included. |
-
-
 
 ### Response
 
@@ -1245,10 +1211,9 @@ To retrieve upselling products of a guest cart, send the request:
 
 </details>
 
-
 <details>
 <summary markdown='span'>Response sample with product labels</summary>
-    
+
 ```json
 {
     "data": [
@@ -1347,11 +1312,10 @@ To retrieve upselling products of a guest cart, send the request:
 
 </details>
 
-
 See [Retrieving Related Items of an Abstract Product](#related-product-attributes) for the list of response attributes.
 
-
 ## Possible errors
+
 | CODE | REASON |
 | --- | --- |
 | 101 | Сart with the specified ID was not found. |
@@ -1360,6 +1324,4 @@ See [Retrieving Related Items of an Abstract Product](#related-product-attribute
 | 301 | Abstract product not found. |
 | 311 | Abstract product ID not specified. |
 
-
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
-

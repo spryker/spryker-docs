@@ -1,6 +1,7 @@
 ---
 title: The spy_oms_transition_log table takes up too much space
 description: Configure transition logs to be removed automatically.
+last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/the-spy-oms-transition-log-table-takes-up-too-much-space
 originalArticleId: 5c025e16-bfc2-4dcf-ba35-137044daa486

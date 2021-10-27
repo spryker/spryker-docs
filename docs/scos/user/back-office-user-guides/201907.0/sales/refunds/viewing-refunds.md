@@ -1,6 +1,7 @@
 ---
 title: Refunds- Reference Information
 description: The article provides reference information about attributes Back Office users see when viewing the list of refunds.
+last_updated: Nov 22, 2019
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/refunds-reference-information
 originalArticleId: 27b2eb6f-8601-4e9b-bc71-4a73d6f997b3

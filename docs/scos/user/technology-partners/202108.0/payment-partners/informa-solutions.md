@@ -1,5 +1,6 @@
 ---
 title: informa solutions
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/informa-solutions
 originalArticleId: 3d1cf908-5661-4e42-8e54-99fd770c6795
@@ -27,8 +28,6 @@ related:
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/technical-details-and-howtos/heidelpay-workflow-for-errors.html
   - title: Heidelpay - Easy Credit
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-easy-credit.html
----
-
 ---
 
 ## Copyright and Disclaimer

@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - SalesQuantity
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/mg-sales-quantity
 originalArticleId: 1d5e7511-eef5-49b5-b6af-8bd61f835395

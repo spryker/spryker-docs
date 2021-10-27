@@ -1,5 +1,6 @@
 ---
 title: Glue REST API
+last_updated: Jan 15, 2020
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/glue-rest-api
 originalArticleId: 94db11a9-0874-4a38-8a94-d198444b18bd

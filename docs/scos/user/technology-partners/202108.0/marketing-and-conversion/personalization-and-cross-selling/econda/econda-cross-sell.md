@@ -1,6 +1,7 @@
 ---
 title: Econda - Cross Sell
 description: Cross Sell takes the online behavior of your visitors, along with current product and website interactions and comes up with intelligent, dynamic, relevant recommendations for your visitors.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/econda-cross-sell
 originalArticleId: 66c188de-e8fa-4643-872c-98dc97d37c27
@@ -23,6 +24,7 @@ related:
 Cross sell is highly customizable and it depends on your setup. Please refer to [Econda offical documentation](https://support.econda.de/display/CSDE/Control+Panel).
 
 All necessary JS files are already integrated into the module, the only thing you need to do is to add your API key inside the `econda_crosssell.twig` template:
+
 ```php
 <input type="hidden" name="econda_aid" value="ADD_YOUR_API_KEY_HERE">
 ```
@@ -132,6 +134,7 @@ Please refer to Econda visual widget [documentation.](https://www.econda.de/en/t
 ## Adding the Cross Sell Widget to Twig
 
 To include this snippet in your project, you need to include this code in your twig template:
+
 ```php
 {% raw %}{%{% endraw %} include "@econda/partials/econda_crosssell.twig" with {
  product: product,
@@ -141,7 +144,7 @@ To include this snippet in your project, you need to include this code in your t
 
 List of accepted template variables:
 
-| Name | Description |
+| NAME | DESCRIPTION |
 | --- | --- |
 | product | Associative array representing product data. Accepted keys: `abstractSku` |
 | category | Associative array representing category. Accepted keys: `name` |

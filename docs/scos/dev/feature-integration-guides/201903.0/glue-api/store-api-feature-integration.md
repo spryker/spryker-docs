@@ -1,5 +1,6 @@
 ---
 title: Store API feature integration
+last_updated: Nov 22, 2019
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/store-api-feature-integration
 originalArticleId: 642a3a1b-5bb9-443d-b7be-7f209503d2cf

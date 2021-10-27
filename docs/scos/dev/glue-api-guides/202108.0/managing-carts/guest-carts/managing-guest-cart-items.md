@@ -1,6 +1,7 @@
 ---
 title: Managing guest cart items
 description: Retrieve details about guest cart items and learn what else you can do with the resource.
+last_updated: Jun 29, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-guest-cart-items
 originalArticleId: 55c07d5d-006b-4f81-99b1-92c6a8124688
@@ -40,15 +41,14 @@ To add items to a guest cart, send the request:
 `POST` **/guest-cart-items**
 ***
 
-{% info_block infoBox "**Creating a guest cart**" %}
-
+{% info_block infoBox "Creating a guest cart" %}
 
 * If a guest cart does not exist for the current user, and you send a request to add items, the guest cart is created automatically. Otherwise, the items are added to the existing guest cart.
 * Guest users have one cart by default. You can optionally specify its ID by using the following endpoint. The information in this section is valid for both endpoints.
 
 `POST` **/guest-carts/*{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*/guest-cart-items**
 
-| Path Parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart. To get it, [retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart). |
 
@@ -60,7 +60,7 @@ To add items to a guest cart, send the request:
 | --- | --- | --- | --- |
 | X-Anonymous-Customer-Unique-Id | 164b-5708-8530 |&check; | A guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
 
-| QUERY PARAMETER | DESCRIPTION | Possible values |
+| QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | <ul><li>guest-cart-items</li><li>concrete-products</li><li>sales-units</li><li>cart-rules</li><li>vouchers</li><li>product-options</li><li>sales-units</li><li>product-measurement-units</li><li>bundle-items</li><li>bundled-items</li><li>abstract-products</li></ul> |
 {% info_block infoBox "Included resources" %}
@@ -90,7 +90,8 @@ To add items to a guest cart, send the request:
 
 <details>
 <summary markdown='span'>Request sample: adding a promotional item with the cart-rules relationship</summary>
-{% info_block infoBox "**Cart rules**" %}
+
+{% info_block infoBox "Cart rules" %}
 
 
 To add the promotional product to cart, make sure that the cart fulfills the cart rules for the promotional item.
@@ -221,7 +222,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 </details>
 
 <details>
-    <summary markdown='span'>Request sample with bundle items</summary>
+<summary markdown='span'>Request sample with bundle items</summary>
 
 
 `POST https://glue.mysprykershop.com/guest-carts/bd873e3f-4670-523d-b5db-3492d2c0bee3/guest-cart-items?include=bundle-items` - Add items to the guest cart with the `bd873e3f-4670-523d-b5db-3492d2c0bee3` ID. Include information about the product bundles in the guest cart into the response.
@@ -241,7 +242,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 </details>
 
 <details>
-    <summary markdown='span'>Request sample with bundle items and bundled items</summary>
+<summary markdown='span'>Request sample with bundle items and bundled items</summary>
 
 
 `POST https://glue.mysprykershop.com/guest-carts/bd873e3f-4670-523d-b5db-3492d2c0bee3/guest-cart-items?include=bundle-items,bundled-items` - Add items to the guest cart with the `bd873e3f-4670-523d-b5db-3492d2c0bee3` ID. Include information about the following into the response: product bundle items in the cart and the products belonging to them.
@@ -261,7 +262,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 </details>
 
 <details>
-    <summary markdown='span'>Request sample with bundle items, bundled items, concrete products, and abstract products</summary>
+<summary markdown='span'>Request sample with bundle items, bundled items, concrete products, and abstract products</summary>
 
 `POST https://glue.mysprykershop.com/guest-carts/bd873e3f-4670-523d-b5db-3492d2c0bee3/guest-cart-items?include=bundle-items,bundled-items,concrete-products,abstract-products` - Add items to the guest cart with the `bd873e3f-4670-523d-b5db-3492d2c0bee3` ID. Include information about the following into the response: product bundle items in the cart, the products belonging to them, respective abstract and concrete products.
 
@@ -279,7 +280,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 
 </details>
 
-| Attribute | TYPE | REQUIRED | DESCRIPTION |
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | sku | String | &check; | Specifies the SKU part number of the item to place on the new guest cart. To use promotions, specify the SKU of one of a product being promoted. Concrete product SKU required. |
 | quantity | Integer | &check; | Specifies the number of items to place on the guest cart. If you add a promotional item and the number of products exceeds the number of promotions, the exceeding items will be added without promotional benefits. |
@@ -290,9 +291,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 | productOptions | Array |  | List of attributes defining the product option to add to the cart. |
 | productOptions.sku | String |  | Unique identifier of the product option to add to the cart.  |
 
-
 {% info_block infoBox "Conversion" %}
-
 
 When defining product amount in sales units, make sure that the correlation between amount and quantity corresponds to the conversion of the defined sales unit. See [Measurement Units Feature Overview](/docs/scos/user/features/{{page.version}}/measurement-units-feature-overview.html) to learn more.
 
@@ -383,7 +382,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details>
-    <summary markdown='span'>Response sample: adding a promotional item without the cart-rules relationship</summary>
+<summary markdown='span'>Response sample: adding a promotional item without the cart-rules relationship</summary>
 
 ```json
 {
@@ -424,8 +423,6 @@ It is the responsibility of the API Client to track whether the selected items a
 ```
 
 </details>
-
-
 
 <details>
 <summary markdown='span'>Response sample: adding a promotional item with the cart-rules relationship</summary>
@@ -704,8 +701,6 @@ It is the responsibility of the API Client to track whether the selected items a
 ```
 </details>
 
-
-
 <details>
 <summary markdown='span'>Response sample: adding a gift cart</summary>
 
@@ -824,9 +819,8 @@ It is the responsibility of the API Client to track whether the selected items a
 ```
 </details>
 
-
 <details>
-    <summary markdown='span'>Response sample with concrete products and product options</summary>
+<summary markdown='span'>Response sample with concrete products and product options</summary>
 
 ```json
 {
@@ -1196,7 +1190,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details>
-    <summary markdown='span'>Response sample with cart rules</summary>
+<summary markdown='span'>Response sample with cart rules</summary>
 
 ```json
 {
@@ -1298,7 +1292,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details>
-    <summary markdown='span'>Response sample with vouchers</summary>
+<summary markdown='span'>Response sample with vouchers</summary>
 
 ```json
 {
@@ -1442,7 +1436,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 
 <details>
-    <summary markdown='span'>Response sample with bundle items</summary>
+<summary markdown='span'>Response sample with bundle items</summary>
 
 ```json
 {
@@ -1531,9 +1525,8 @@ It is the responsibility of the API Client to track whether the selected items a
 
 </details>
 
-
 <details>
-    <summary markdown='span'>Response sample with bundle items and bundled items</summary>
+<summary markdown='span'>Response sample with bundle items and bundled items</summary>
 
 ```json
 {
@@ -1757,11 +1750,8 @@ It is the responsibility of the API Client to track whether the selected items a
 
 </details>
 
-
-
-
 <details>
-    <summary markdown='span'>Response sample with bundle items, bundled items, concrete products, and abstract products</summary>
+<summary markdown='span'>Response sample with bundle items, bundled items, concrete products, and abstract products</summary>
 
 ```json
 {
@@ -2511,8 +2501,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 </details>
 
-
-| Included resource | ATTRIBUTE | TYPE | Type |
+| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
 | guest-cart-items, bundle-items, bundled-items | sku | String | SKU of the product. |
 | guest-cart-items, bundle-items, bundled-items | quantity | Integer | Quantity of the given product in the cart. |
@@ -2841,12 +2830,10 @@ To change item quantity, send the request:
 ```
 </details>
 
-
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | sku | String |  | SKU of the item to be updated. |
 | quantity | String | &check; | Quantity of the item to be set. |
-
 
 For more request body examples, see [Add items to a guest cart](#add-items-to-a-guest-cart)
 
@@ -2861,7 +2848,6 @@ To change the quantity of the configurable bundles in a guest cart, send the req
 ***
 `PATCH` **/guest-carts/{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}/guest-configured-bundles/{% raw %}{{{% endraw %}bundle_group_key{% raw %}}}{% endraw %}?include=items**
 ***
-
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
@@ -2884,7 +2870,6 @@ Request sample: `PATCH https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-
     }
 }
 ```
-
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
@@ -3205,10 +3190,10 @@ To remove a configurable bundle from a guest cart, send the request:
 Request sample: `DELETE https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-5d40-9da1-db5289f216fa/guest-configured-bundles/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-60118379365c56.34709530?include=items`
 
 ### Response
+
 If the item is deleted successfully, the endpoint returns the “204 No Content” status code.
 
 ## Possible errors
-
 
 | CODE | REASON |
 | --- | --- |

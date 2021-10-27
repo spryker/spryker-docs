@@ -1,6 +1,7 @@
 ---
 title: Retrieving Returnable Items
 description: In this article, you will find details on retrieving returnable items via the Spryker Glue API.
+last_updated: Sep 14, 2020
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/retrieving-returnable-items
 originalArticleId: 2ede8cf4-3a79-43ab-8da1-f5b75655a463

@@ -1,5 +1,6 @@
 ---
 title: Integrating React into Atomic Frontend
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/integrating-react-into-atomic-frontend
 originalArticleId: c15f25d7-9cb8-421a-87aa-6dcccf79b633

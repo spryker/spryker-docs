@@ -1,5 +1,6 @@
 ---
 title: Tooling config file
+last_updated: Nov 22, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/tooling-config-file
 originalArticleId: bb7c6781-1bdb-437b-94db-fc00df35d565

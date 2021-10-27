@@ -1,6 +1,7 @@
 ---
 title: Payolution - Installation and Configuration
 description: This article contains information on configuring the Payolution module for the Spryker Commerce OS.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/payolution-configuration
 originalArticleId: 85e8b401-18c3-4cb3-8616-cd73c9c7817e
@@ -25,14 +26,19 @@ related:
 To integrate Payolution into your project, first you need to install and configure the Payolution module. This topic describes how to do that.
 
 ## Installation
+
 To install the Payolution module, run:
+
 ```Bash
 composer require spryker-eco/payolution
 ```
+
 ## Configuration
+
 Please refer to `config/config.dist.php` for example of module configuration.
 
 To set up the initial Payolution configuration, use the credentials you received after registering your Payolution merchant account:
+
 ```php
 $config[PayolutionConstants::TRANSACTION_GATEWAY_URL] = '';
 $config[PayolutionConstants::CALCULATION_GATEWAY_URL] = '';
@@ -49,6 +55,7 @@ $config[PayolutionConstants::CALCULATION_CHANNEL] = '';
 ```
 
 Next, specify modes and order limits:
+
 ```php
 $config[PayolutionConstants::TRANSACTION_MODE] = 'CONNECTOR_TEST';
 $config[PayolutionConstants::CALCULATION_MODE] = 'TEST';
@@ -61,6 +68,7 @@ $config[PayolutionConstants::MAX_ORDER_GRAND_TOTAL_INSTALLMENT] = '500000';
 ### Checkout Configuration
 
 To use Payolution in frontend, add Payolution payment method handlers and subform to `Pyz/Yves/Checkout/CheckoutDependencyProvider.php`
+
 ```php
  $container[static::PAYMENT_METHOD_HANDLER] = function () {
  $paymentHandlerPlugins = new StepHandlerPluginCollection();
@@ -86,6 +94,7 @@ All subform and handler plugins are located in `SprykerEco\Yves\Payolution\Plugi
 ### OMS Configuration
 
 Activate the following Payolution process:
+
 ```php
 $config[OmsConstants::ACTIVE_PROCESSES][] ='PayolutionInstalmentPayment01',
 $config[OmsConstants::ACTIVE_PROCESSES][] ='PayolutionInvoicePayment01',
@@ -95,6 +104,7 @@ $config[OmsConstants::ACTIVE_PROCESSES][] ='PayolutionInvoicePayment01',
 Default implementation for commands and options should be added to `Pyz/Zed/Oms/OmsDependencyProvider.php`
 
 Commands:
+
 ```php
 $container->extend(OmsDependencyProvider::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
     $commandCollection
@@ -111,6 +121,7 @@ $container->extend(OmsDependencyProvider::COMMAND_PLUGINS, function (CommandColl
 Plugins `PreAuthorizePlugin`, `ReAuthorizePlugin`, `RevertPlugin`, `CapturePlugin` still can be used but they cannot execute partial operations
 
 Conditions:
+
 ```php
 $container->extend(OmsDependencyProvider::CONDITION_PLUGINS, function (ConditionCollectionInterface $conditionCollection) {
     $conditionCollection
@@ -129,6 +140,7 @@ All commands and conditions are located in `SprykerEco\Zed\Payolution\Communicat
 ### Payment Configuration
 
 Default implementation for checkout payment plugins should be added to `Pyz/Zed/Payment/PaymentDependencyProvider.php`
+
 ```php
  $container->extend(static::CHECKOUT_PLUGINS, function (CheckoutPluginCollection $pluginCollection) {
  $pluginCollection

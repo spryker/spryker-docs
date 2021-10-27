@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - CMS Block
+last_updated: Jul 31, 2020
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/mg-cms-block
 originalArticleId: ea300268-b89a-4552-ad72-c3446002707f

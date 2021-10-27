@@ -1,6 +1,7 @@
 ---
 title: Installing and configuring Episerver
 description: Install and configure Episerver into Spryker Commerce OS
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/episerver-installation-and-configuration
 originalArticleId: b958e572-8aa3-48a1-9586-b3614abef99e
@@ -21,6 +22,7 @@ related:
 ## Installation
 
 To install Episerver, run the command in the console:
+
 ```php
 composer require spryker-eco/episerver
 ```
@@ -37,7 +39,7 @@ To get `ORDER_LIST_AUTHORIZATION_CODE` or `CUSTOMER_LIST_AUTHORIZATION_CODE`, go
 
 To get any `...MAILING_ID`, go to:
 
-<b>Menu → Transactional mails → ID</b>
+Menu → Transactional mails → ID
 
 ```php
 $config[EpiserverConstants::REQUEST_BASE_URL] = 'https://api.campaign.episerver.net/';

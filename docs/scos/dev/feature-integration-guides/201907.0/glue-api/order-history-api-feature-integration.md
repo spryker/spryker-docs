@@ -1,6 +1,7 @@
 ---
 title: Order History API feature integration
 description: This guide will navigate through the process of installing and configuring of the Order History API feature used in Spryker OS.
+last_updated: Nov 22, 2019
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/order-history-api-feature-integration-201907
 originalArticleId: 5209bb2d-06ad-4e0c-b3bd-d8b32219a019

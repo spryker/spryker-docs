@@ -1,6 +1,7 @@
 ---
 title: Configurable Product feature overview
 description: All the details about the Configurable Product feature of Spryker.
+last_updated: Aug 2, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/configurable-product-feature-overview
 originalArticleId: 331ffea1-510d-4edc-b059-f3c146549fc9

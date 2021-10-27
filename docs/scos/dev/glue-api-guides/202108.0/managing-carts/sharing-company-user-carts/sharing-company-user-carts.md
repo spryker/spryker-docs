@@ -1,6 +1,7 @@
 ---
 title: Sharing company user carts
 description: Share company user carts via Glue API.
+last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/sharing-company-user-carts
 originalArticleId: a200e568-906d-4ae4-b50a-8ad5433d4399
@@ -38,7 +39,7 @@ To share a cart, send the request:
 | Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 Request sample: `POST http://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aefb-ac6c6bbadeab/shared-carts`
-    
+
 ```json
 {
     "data": {
@@ -58,10 +59,8 @@ Request sample: `POST http://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aef
 
 ### Response
 
-
-
 Response sample:
-    
+
 ```json
 {
     "data": {
@@ -84,7 +83,6 @@ Response sample:
 | idCompanyUser | String | Unique identifier of the company user the cart is shared with. |
 | idCartPermissionGroup | Integer | Unique identifier of the cart permission group that describes the permissions granted to the user the cart is shared with. |
 
-
 ## Possible errors
 
 | CODE | REASON |
@@ -97,4 +95,3 @@ Response sample:
 ## Next steps
 
 * [Manage shared company user carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/sharing-company-user-carts/managing-shared-company-user-carts.html)
-

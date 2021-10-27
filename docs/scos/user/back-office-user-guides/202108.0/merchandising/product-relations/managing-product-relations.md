@@ -1,6 +1,7 @@
 ---
 title: Managing product relations
 description: Use these procedures to view, update, activate or deactivate, and/or delete a product relation in the Back Office.
+last_updated: Jul 30, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-product-relations
 originalArticleId: c5cd0d87-e1ea-41b5-8022-1b913c92acea

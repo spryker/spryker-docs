@@ -1,6 +1,7 @@
 ---
 title: HowTo - Integrate and Use Precise Decimal Numbers
 description: Use the guide to install and work with precise decimal numbers in arithmetic, casting, rounding, comparing operations. Learn how they work with transfer objects
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-integrate-and-use-precise-decimal-numbers
 originalArticleId: 05e89c8e-a944-46ff-b202-760c7c4d5f87

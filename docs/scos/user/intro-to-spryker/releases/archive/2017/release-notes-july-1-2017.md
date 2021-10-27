@@ -1,5 +1,6 @@
 ---
 title: Release Notes - July - 1 2017
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes-july-1-2017
 originalArticleId: 82f4ce3a-c450-47b0-86c0-5d297815473c
@@ -18,15 +19,15 @@ With this release we are bringing the variant selection functionality to the car
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | <ul><li>[CartVariant 1.0.0](https://github.com/spryker/cart-variant/releases/tag/1.0.0)</li><li>[ProductImageCartConnector 1.0.0](https://github.com/spryker/product-image-cart-connector/releases/tag/1.0.0)</li></ul> | n/a | n/a |
 
 **Documentation**
-For integration guides, see [Cart Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/cart-integration.html).
+<br>For integration guides, see [Cart Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/cart-integration.html).
 
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -58,17 +59,17 @@ In addition, we are introducing a set of new features for CMS blocks:
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | <ul><li>[Cms 6.0.0](https://github.com/spryker/Cms/releases/tag/6.0.0)</li><li>[CmsBlock 1.0.0](https://github.com/spryker/cms-block/releases/tag/1.0.0)</li><li>[CmsBlockCategoryConnector 1.0.0](https://github.com/spryker/cms-block-category-connector/releases/tag/1.0.0)</li><li>[CmsBlockCollector 1.0.0](https://github.com/spryker/cms-block-collector/releases/tag/1.0.0)</li><li>[CmsBlockGui 1.0.0](https://github.com/spryker/CmsBlockGui/releases/tag/1.0.0)</li><li>[CmsBlockProductConnector 1.0.0](https://github.com/spryker/cms-block-product-connector/releases/tag/1.0.0)</li><li>[CmsGui 4.0.0](https://github.com/spryker/cms-gui/releases/tag/4.0.0)</li></ul> | <ul><li>[Product 5.2.0](https://github.com/spryker/Product/releases/tag/5.2.0)</li><li>[ProductManagement 0.7.0](https://github.com/spryker/product-management/releases/tag/0.7.0)</li><li>[Twig 3.2.0](https://github.com/spryker/Twig/releases/tag/3.2.0)</li></ul> | <ul><li>[CmsCollector 1.0.1](https://github.com/spryker/cms-collector/releases/tag/1.0.1)</li><li>[CmsUserConnector 1.0.1](https://github.com/spryker/cms-user-connector/releases/tag/1.0.1)</li><li>[Glossary 3.1.4](https://github.com/spryker/Glossary/releases/tag/3.1.4)</li><li>[NavigationGui 1.0.3](https://github.com/spryker/navigation-gui/releases/tag/1.0.3)</li><li>[ProductRelationCollector 1.1.1](https://github.com/spryker/product-relation-collector/releases/tag/1.1.1)</li></ul> |
 
 **Documentation**
 For relevant documentation, see [CMS Block](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-blocks-overview.html).
 
-For detailed migration guides, see [CMS Migration Guide](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cms.html), [CMS Block Migration Console](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cms-block-category-connector-migration-console.html)
+<br>For detailed migration guides, see [CMS Migration Guide](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cms.html), [CMS Block Migration Console](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cms-block-category-connector-migration-console.html)
 
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -87,7 +88,7 @@ FileSystem module provides abstraction for a file system. It uses the same inter
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | <ul><li>[FileSystem 1.0.0](https://github.com/spryker/file-system/releases/tag/1.0.0)</li><li>[Flysystem 1.0.0](https://github.com/spryker/Flysystem/releases/tag/1.0.0)</li><li>[FlysystemAws3v3FileSystem 1.0.0](https://github.com/spryker/flysystem-aws3v3-file-system/releases/tag/1.0.0)</li><li>[FlysystemFtpFileSystem 1.0.0](https://github.com/spryker/FlysystemFtpFileSystem/releases/tag/1.0.0)</li><li>[FlysystemLocalFileSystem 1.0.0](https://github.com/spryker/flysystem-local-file-system/releases/tag/1.0.0)</li></ul> | [Kernel 3.5.0](https://github.com/spryker/Kernel/releases/tag/3.5.0) | n/a |
 
@@ -95,7 +96,7 @@ FileSystem module provides abstraction for a file system. It uses the same inter
 For relevant documentation, see File System File Manager Module Guide <!-- link -->, Flysystem Module Guide<!-- liknk-->.
 
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -116,7 +117,7 @@ We've enhanced the management of products with multiple price types. You can now
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 |n/a  |<ul><li>[Price 4.2.0](https://github.com/spryker/Price/releases/tag/4.2.0)</li><li>[ProductRelationCollector 1.2.0](https://github.com/spryker/product-relation-collector/releases/tag/1.2.0)</li></ul>  | [ProductManagement 0.7.2](https://github.com/spryker/product-management/releases/tag/0.7.2) |
 
@@ -127,7 +128,7 @@ With this release, we are now introducing a new connector module to handle disco
 
 **Affected Module**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | [ProductLabelDiscountConnector 1.0.0](https://github.com/spryker/product-label-discount-connector/releases/tag/1.0.0) | <ul><li>[Discount 4.2.0](https://github.com/spryker/Discount/releases/tag/4.2.0)</li><li>[ProductLabel 1.1.0](https://github.com/spryker/product-label/releases/tag/1.1.0)</li></ul> | [Discount 4.2.1](https://github.com/spryker/Discount/releases/tag/4.2.1) |
 
@@ -135,7 +136,7 @@ With this release, we are now introducing a new connector module to handle disco
 For relevant documentation, see [Product Label Module Guide](/docs/scos/user/features/{{site.version}}/product-labels-feature-overview.html), [Discount Module Guide](/docs/scos/user/features/{{site.version}}/promotions-discounts-feature-overview.html)
 
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -153,16 +154,16 @@ composer require spryker/product-label-discount-connector:"^1.0.0"
 Previously, our schema allowed only one payment per sales-order. However, there is a certain use case where it should be possible to calculate and save multiple payment methods for a given order (e.g. order with gift cards). With this release, we enable multiple payment methods per checkout. We also make sure that payment information is persisted with store reference when order is placed. New payment hydration plugins will allow you to extend the order transfer with payment related data.
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | [Payment 4.0.0](https://github.com/spryker/Payment/releases/tag/4.0.0) | n/a | <ul><li>[Braintree 0.5.3](https://github.com/spryker/Braintree/releases/tag/0.5.3)</li><li>[DummyPayment 2.0.3](https://github.com/spryker/dummy-payment/releases/tag/2.0.3)</li><li>[Payolution 4.0.3](https://github.com/spryker/Payolution/releases/tag/4.0.3)</li><li>[Ratepay 0.6.1](https://github.com/spryker/Ratepay/releases/tag/0.6.1)</li><li>[Transfer 3.3.2](https://github.com/spryker/transfer/releases/tag/3.3.2)</li></ul> |
 
 **Documentation**
-For module documentation, see [Payment Module Guide](/docs/scos/user/features/{{site.version}}/payments-feature-overview.html)
-For detailed migration guides, see [Payment Migration Guide](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-payment.html)
+<br>For module documentation, see [Payment Module Guide](/docs/scos/user/features/{{site.version}}/payments-feature-overview.html)
+<br>For detailed migration guides, see [Payment Migration Guide](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-payment.html)
 
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -181,15 +182,15 @@ With CMS content widgets, we are bringing more power to CMS pages and blocks. No
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | <ul><li>[CmsContentWidget 1.0.0](https://github.com/spryker/cms-content-widget/releases/tag/1.0.0)</li><li>[CmsContentWidgetProductConnector 1.0.0](https://github.com/spryker/CmsContentWidgetProductConnector/releases/tag/1.0.0)</li><li>[CmsContentWidgetProductGroupConnector 1.0.0](https://github.com/spryker/cms-content-widget-product-group-connector/releases/tag/1.0.0)</li><li>[CmsContentWidgetProductSetConnector 1.0.0](https://github.com/spryker/cms-content-widget-product-set-connector/releases/tag/1.0.0)</li></ul> | <ul><li>[Cms 6.1.0](https://github.com/spryker/Cms/releases/tag/6.1.0)</li><li>[CmsBlock 1.1.0](https://github.com/spryker/cms-block/releases/tag/1.1.0)</li><li>[CmsBlockCollector 1.1.0](https://github.com/spryker/cms-block-collector/releases/tag/1.1.0)</li><li>[CmsBlockGui 1.1.0](https://github.com/spryker/cms-block-gui/releases/tag/1.1.0)</li><li>[CmsCollector 1.2.0](https://github.com/spryker/cms-collector/releases/tag/1.2.0)</li><li>[CmsGui 4.1.0](https://github.com/spryker/cms-gui/releases/tag/4.1.0)</li><li>[ProductSet 1.1.0](https://github.com/spryker/product-set/releases/tag/1.1.0)</li></ul> | n/a |
 
 **Documentation**
-For module documentation, see CMSWidget Module Guide <!--add a link-->.
+<br>For module documentation, see CMSWidget Module Guide <!--add a link-->.
 
 **Migration Guides**
-To upgrade, follow the steps described below:
+<br>To upgrade, follow the steps described below:
 
 * Apply every minor and patch:
 
@@ -209,7 +210,7 @@ Super attribute values cannot be random, as the variant matrix depends on those 
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [ProductManagement 0.7.1](https://github.com/spryker/product-management/releases/tag/0.7.1) |
 
@@ -218,7 +219,7 @@ We've reduced the selectable options of countries for customer addresses in Zed 
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Customer 6.0.3](https://github.com/spryker/Customer/releases/tag/6.0.3) |
 
@@ -227,7 +228,7 @@ To make placeholder management clear and easy, the configuration for CMS placeho
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | <ul><li>[Cms 6.0.3](https://github.com/spryker/Cms/releases/tag/6.0.3)</li><li>[CmsBlockGui 1.0.2](https://github.com/spryker/cms-block-gui/releases/tag/1.0.2)</li><li>[CmsGui 4.0.1](https://github.com/spryker/cms-gui/releases/tag/4.0.1)</li></ul> |
 
@@ -240,7 +241,7 @@ In addition, the `Newsletter` module had a bug when a customer tried to unsubscr
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [NewRelic 3.1.0](https://github.com/spryker/new-relic/releases/tag/3.1.0) | [Newsletter 4.1.3](https://github.com/spryker/Newsletter/releases/tag/4.1.3) |
 
@@ -249,7 +250,7 @@ Previously, open-ended range queries for integer and price facet filters were no
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [Search 6.3.0](https://github.com/spryker/Search/releases/tag/6.3.0) | n/a |
 
@@ -258,7 +259,7 @@ Previously, the `ProductManagement` module didn't show all stock types in View a
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | <ul><li>[AvailabilityGui 2.0.2](https://github.com/spryker/availability-gui/releases/tag/2.0.2)</li><li>[Stock 4.0.3](https://github.com/spryker/Stock/releases/tag/4.0.3)</li></ul> |
 
@@ -267,7 +268,7 @@ We had a strong coupling to one of the business model classes without an interfa
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Newsletter 4.1.4](https://github.com/spryker/Newsletter/releases/tag/4.1.4) |
 
@@ -276,7 +277,7 @@ We have added a new filter plugin extension point to the `Discount` module. This
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | <ul><li>[Discount 4.3.0](https://github.com/spryker/Discount/releases/tag/4.3.0)</li><li>[ProductDiscountConnector 3.1.0](https://github.com/spryker/product-discount-connector/releases/tag/3.1.0)</li><li>[ProductLabelDiscountConnector 1.1.0](https://github.com/spryker/product-label-discount-connector/releases/tag/1.1.0)</li></ul> | n/a |
 
@@ -285,7 +286,7 @@ Some REST clients need an HTTP OPTIONS pre-flight request prior to the actual re
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Api 0.1.1](https://github.com/spryker/Api/releases/tag/0.1.1) |
 
@@ -295,7 +296,7 @@ Previously, StateMachine didn't allow entering the same state twice. This was es
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [StateMachine 2.0.2](https://github.com/spryker/state-machine/releases/tag/2.0.2) |
 
@@ -304,7 +305,7 @@ We had a missing transfer property (`ProductOptionTransfer::unitNetPrice`) which
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [ProductOptionCartConnector 4.1.1](https://github.com/spryker/product-option-cart-connector/releases/tag/4.1.1) |
 
@@ -313,7 +314,7 @@ Zed provides a way to position abstract products on category catalog pages. Prev
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | [Search 6.1.0](https://github.com/spryker/Search/releases/tag/6.1.0) | n/a |
 
@@ -322,7 +323,7 @@ There was an issue with managing navigation nodes, for example when typing a cat
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [NavigationGui 1.0.2](https://github.com/spryker/navigation-gui/releases/tag/1.0.2) |
 
@@ -331,7 +332,7 @@ Previously, it was not possible to change `ErrorRenderer` from `WebExceptionErro
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [ErrorHandler 2.1.1](https://github.com/spryker/error-handler/releases/tag/2.1.1) |
 
@@ -340,7 +341,7 @@ Previously, due to missing validation in `AddressForm` in Zed customer address m
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Customer 6.0.2](https://github.com/spryker/Customer/releases/tag/6.0.2) |
 
@@ -349,7 +350,7 @@ We had a bug in the CMS Block template path, because of which only templates fro
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [CmsBlockGui 1.0.1](https://github.com/spryker/cms-block-gui/releases/tag/1.0.1) |
 
@@ -358,7 +359,7 @@ A `CmsBlock` template change action had a bug, which did not allow  removing the
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [CmsBlock 1.0.2](https://github.com/spryker/cms-block/releases/tag/1.0.2) |
 
@@ -367,7 +368,7 @@ After full setup, the touch table was containing the same item twice for CMS pag
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Cms 6.0.2](https://github.com/spryker/Cms/releases/tag/6.0.2) |
 
@@ -376,7 +377,7 @@ We had a bug in dropping timestamps from storage. Previously, it was not possibl
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | <ul><li>[Collector 5.1.4](https://github.com/spryker/Collector/releases/tag/5.1.4)</li><li>[CollectorStorageConnector 1.0.1](https://github.com/spryker/collector-storage-connector/releases/tag/1.0.1)</li></ul> |
 
@@ -385,7 +386,7 @@ When adding or updating a category with an already used `category_key` there was
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Category 3.2.2](https://github.com/spryker/Category/releases/tag/3.2.2) |
 
@@ -394,7 +395,7 @@ The `Discount` module had an issue with a discount amount storage. It was not ab
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | [Discount 4.2.2](https://github.com/spryker/Discount/releases/tag/4.2.2) |
 
@@ -403,6 +404,6 @@ There was an issue when `ProductFacade` was trying to save concrete products wit
 
 **Affected Modules**
 
-| Major | Minor | Patch |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | n/a | <ul><li>[ProductManagement 0.7.3](https://github.com/spryker/product-management/releases/tag/0.7.3)</li><li>[Stock 4.0.4](https://github.com/spryker/Stock/releases/tag/4.0.4)</li></ul> |

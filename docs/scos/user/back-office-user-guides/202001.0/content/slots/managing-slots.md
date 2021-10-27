@@ -1,6 +1,7 @@
 ---
 title: Managing Slots
 description: Learn about slot management in the Back Office.
+last_updated: Aug 13, 2020
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/managing-slots
 originalArticleId: d4ee05e0-c564-4c66-94ff-d83290b28758

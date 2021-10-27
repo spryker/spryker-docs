@@ -1,4 +1,5 @@
----
+---last_updated: Jun 16, 2021
+
 title: Catalog Schema
 originalLink: https://documentation.spryker.com/2021080/docs/db-schema-catalog
 originalArticleId: ae7d31b5-76e1-4184-9c2c-eaf0b41744be
@@ -26,8 +27,8 @@ Spryker's product catalog is divided into Abstract Products that contain all com
 ### Product Attributes
 
 {% info_block infoBox %}
-Attribute keys and values are saved in JSON array to the products and their variants. This means you don't need to predefine a static schema and you don't require clean product data. Any information can be imported and then later enriched by meta data (like pre-defined values
-{% endinfo_block %}, used for facet filters and full-text search. Localizable Attribute values can be translated while keys are saved without translation.)
+Attribute keys and values are saved in JSON array to the products and their variants. This means you don't need to predefine a static schema and you don't require clean product data. Any information can be imported and then later enriched by meta data (like pre-defined values), used for facet filters and full-text search. Localizable Attribute values can be translated while keys are saved without translation.
+{% endinfo_block %}
 ![Product attributes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/product-attributes.png)
 
 **Structure:**
@@ -430,8 +431,8 @@ The table `spy_price_product_store` has a bad name. When it was introduced we on
 ### Stock
 
 {% info_block infoBox %}
-The Stock of a product represents the physical amount of products in the warehouse. This information should be imported from a WMS (warehouse management system
-{% endinfo_block %} and is never changed by Spryker directly.)
+The Stock of a product represents the physical amount of products in the warehouse. This information should be imported from a WMS (warehouse management system) and is never changed by Spryker directly.
+{% endinfo_block %}
 
 {% info_block warningBox %}
 Stocks are not directly related to Stores but there is a Store-to-Warehouse Mapping that be configured in code (see `StockConfig`). Stocks can be dedicated or shared among Stores.

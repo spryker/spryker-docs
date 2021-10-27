@@ -1,6 +1,7 @@
 ---
 title: Shopping Cart Widget Feature Overview
 description: Many B2B customers use multiple shopping carts. Shopping cart widget allows them to access shopping carts from any place in the online shop in one click.
+last_updated: Nov 22, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/cart-widget-overview
 originalArticleId: 4009988f-04d3-41f5-b2d8-71eeb955afb9

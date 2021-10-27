@@ -1,5 +1,6 @@
 ---
 title: Migration Guide - Product Validity
+last_updated: Nov 22, 2019
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/mg-product-validity
 originalArticleId: 21cd66fa-4678-4d1e-bc4a-63e357286b89
@@ -31,8 +32,8 @@ We have added a new console command `product:check-validity`.
 The command checks validity by date ranges and active status for products. Then it updates (for demoshop it will be `touch`) the ones for which the activity state changes.
 To enable it, add `ProductValidityConsole` to `ConsoleDependencyProvider`. 
 {% info_block infoBox "Info" %}
-Check out our [Demoshop implementation](https://github.com/spryker/demoshop/commit/4fff838#diff-e854f9b396bdaa07ca6276f168aaa76a
-{% endinfo_block %} for implementation example and idea.)
+Check out our [Demoshop implementation](https://github.com/spryker/demoshop/commit/4fff838#diff-e854f9b396bdaa07ca6276f168aaa76a) for implementation example and idea.
+{% endinfo_block %}
 
 #### 2. Enable the cronjob 
 Add the following job to `config/Zed/cronjobs/jobs.php` file:

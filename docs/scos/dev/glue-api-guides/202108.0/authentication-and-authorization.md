@@ -1,6 +1,7 @@
 ---
 title: Authentication and authorization
 description: Information about Glue API authentication and authorization.
+last_updated: Jun 22, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/authentication-and-authorization
 originalArticleId: fb5a9256-1188-427e-a4d1-2c2d8c60a5e3
@@ -32,15 +33,15 @@ There is also a *refresh token* in the response. When your access token expires,
 
 The default lifetime of the access tokens is 8 hours (28800 seconds) and 1 month (2628000 seconds) of the refresh tokens.
 
-For security purposes, when you finish sending requests as a user, or if a token gets compromised, we recommend revoking the refresh token. Revoked tokens are marked as expired on the date and time of the request and can no longer be exchanged for access tokens. 
+For security purposes, when you finish sending requests as a user, or if a token gets compromised, we recommend revoking the refresh token. Revoked tokens are marked as expired on the date and time of the request and can no longer be exchanged for access tokens.
 
 Expired tokens are stored in the database, and you can configure them to be deleted.
 
 ## Protected resources
 
-Below, you can find a list of the default protected resources. As Glue API is highly customizable, a shop is likely to have its own list of protected resources. To avoid extra calls, we recommend [retrieving protected resources](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-protected-resources.html) of the shop before you start working with the API or setting up a flow. 
+Below, you can find a list of the default protected resources. As Glue API is highly customizable, a shop is likely to have its own list of protected resources. To avoid extra calls, we recommend [retrieving protected resources](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-protected-resources.html) of the shop before you start working with the API or setting up a flow.
 
-| Action | Method | Endpoints |
+| ACTION | METHOD | ENDPOINTS|
 | --- | --- | --- |
 | Customer - Retrieve a customer | GET | /customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %} |
 | Customers - Update customer address | PATCH | /customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}/addresses/{% raw %}{{{% endraw %}address_id{% raw %}}}{% endraw %} |
@@ -59,7 +60,7 @@ Below, you can find a list of the default protected resources. As Glue API is hi
 | Carts - Retrieve list of all customer's carts | GET | /carts |
 | Carts - Create cart | POST | /carts |
 | Items - Add item to cart | POST | /carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/items |
-| Items - Update cart item quantity | PATCH | /carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}itemId{% raw %}}}{% endraw %} | 
+| Items - Update cart item quantity | PATCH | /carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}itemId{% raw %}}}{% endraw %} |
 | Items - Remove item from cart | DELETE | /carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}itemId{% raw %}}}{% endraw %} |
 | Companies - Retrieve company by id | GET | /companies/{% raw %}{{{% endraw %}companyId{% raw %}}}{% endraw %} |
 | Companies - Retrieve company collection | GET | /companies |
@@ -111,7 +112,7 @@ Authorization: Bearer eyJ0...
 Cache-Control: no-cache
 ```
 
-If authorization is successful, the API performs the requested operation. If authorization fails, the `401 Unathorized` error is returned. The response contains an error code explaining the cause of the error. 
+If authorization is successful, the API performs the requested operation. If authorization fails, the `401 Unathorized` error is returned. The response contains an error code explaining the cause of the error.
 
 Response sample with an error:
 
@@ -136,9 +137,4 @@ Different endpoints require the client to be authenticated as different users. B
 
 ## Next steps
 
-* [Retrieve protected resources](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-protected-resources.html)
-
-
-
-
-
+[Retrieve protected resources](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-protected-resources.html)

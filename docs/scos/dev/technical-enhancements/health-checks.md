@@ -1,6 +1,7 @@
 ---
 title: Health Checks
 description: Health checks allow to determine whether application services are working properly and, when automated, detect issues right when they appear.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/health-checks
 originalArticleId: 6436e19e-66bf-45a6-a935-889c88531bc2

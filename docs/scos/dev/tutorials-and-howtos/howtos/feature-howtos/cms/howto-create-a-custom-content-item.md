@@ -1,6 +1,7 @@
 ---
 title: HowTo - create a custom content item
 description: If the content items shipped with Spryker do not fulfill your needs, the article will help you to create a new one.
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-create-a-custom-content-item
 originalArticleId: 82c46d06-3f67-4bad-8142-b83624c79197

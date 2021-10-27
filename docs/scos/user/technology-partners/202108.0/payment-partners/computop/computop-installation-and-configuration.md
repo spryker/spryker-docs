@@ -1,5 +1,6 @@
 ---
 title: Computop - Installation and configuration
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/computop-installation-and-configuration
 originalArticleId: 7d6fd0b4-0e5e-41ac-9788-0361d3252a58
@@ -25,9 +26,9 @@ You can check all the necessary configurations in `vendor/spryker-eco/computop/c
 
 Find an example of the Computop module configuration below:
 
-<details open>
+<details>
 <summary markdown='span'>config/Shared/config_default.php</summary>
-    
+
 ```php
 // Spryker security configuration
 $config[KernelConstants::DOMAIN_WHITELIST] = [
@@ -36,7 +37,7 @@ $config[KernelConstants::DOMAIN_WHITELIST] = [
 ];
 $config[SessionConstants::YVES_SESSION_COOKIE_SAMESITE] = 'none'; //Allows redirect customer via POST from Computop back to the shop.
 
-// Credantials 
+// Credantials
 $config[ComputopApiConstants::MERCHANT_ID] = 'Computop merchant identifier';
 $config[ComputopApiConstants::BLOWFISH_PASSWORD] = 'Password for blowfish hashing';
 $config[ComputopApiConstants::HMAC_PASSWORD] = 'Password for hmac hashing';
@@ -116,7 +117,7 @@ $config[ComputopConstants::CRIF_RED_AVAILABLE_PAYMENT_METHODS] = [
 
 </details>
 
-| Configuration Key | Type | Description |
+| CONFIGURATION KEY | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | `$config[ComputopApiConstants::MERCHANT_ID]` | string | Computop merchant identifier. |
 | `$config[ComputopApiConstants::BLOWFISH_PASSWORD]` | string | Password for blowfish hashing. |

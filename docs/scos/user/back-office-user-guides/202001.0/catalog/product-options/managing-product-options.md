@@ -1,6 +1,7 @@
 ---
 title: Managing Product Options
 description: Use this section to view the product option details in the Back Office.
+last_updated: Nov 22, 2019
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/managing-product-options
 originalArticleId: 66d6178b-91f3-41f1-911b-e5aba108f7ce

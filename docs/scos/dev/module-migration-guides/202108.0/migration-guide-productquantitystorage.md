@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductQuantityStorage
 description: Use the guide to learn how to update the ProductQuantityStorage module.
+last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-product-quantity-storage
 originalArticleId: 41d929cb-b16c-4552-9284-9fb89f1c478e

@@ -1,6 +1,7 @@
 ---
 title: Amazon Pay - Order Reference and Information about Shipping Addresses
 description: This article contains information about order reference and shipping address information in the Spryker Legacy Demoshop.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/amazon-pay-order-ref-info-demoshop
 originalArticleId: 7e4f2617-2b5c-4c80-b681-bf1cf66d5a1f
@@ -42,7 +43,8 @@ Amazon provides two widgets for choosing shipment and payment information, they 
 
 Configuration would be used from your current settings profile.
 
-<b>Place order</b> button should look like this:
+**Place order** button should look like this:
+
 ```xml
 <a href="{% raw %}{{{% endraw %} path('amazonpay_confirm_purchase') {% raw %}}}{% endraw %}" disabled="true" id="amazonpayPlaceOrderLink" class="button expanded __no-margin-bottom">Place order</a>
 ```
@@ -75,7 +77,7 @@ Create template on project level `AmazonPay/Theme/default/payment/patials/checko
  ```
 
 Extend `AmazonPay/Controller/PaymentController` and add the following method:
-```php 
+```php
 /**
  * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
  *
@@ -91,7 +93,7 @@ Extend `AmazonPay/Controller/PaymentController` and add the following method:
  ```
 
 Add corresponding method to `AmazonPayFactory`:
-```php 
+```php
 /**
  * @return \Spryker\Yves\ProductBundle\Grouper\ProductBundleGrouperInterface
  */

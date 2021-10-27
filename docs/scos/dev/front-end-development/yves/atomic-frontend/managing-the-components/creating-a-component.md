@@ -1,5 +1,6 @@
 ---
 title: Creating a Component
+last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-create-component
 originalArticleId: ab0fbc97-d449-45e6-8bab-d70d14183aaf
@@ -163,8 +164,8 @@ Open file `new-component-counter.scss` file and add the following code:
 ```
 
 {% info_block infoBox %}
-As shown in the example, you can use global variables, functions and mixins in your styles, for example `$setting-color-alt` or `$setting-color-dark`. They can be found in the `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/styles` folder. For more details, see the [SASS Layer](/docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html#sass-layer
-{% endinfo_block %} section in _Atomic Frontend_.)
+As shown in the example, you can use global variables, functions and mixins in your styles, for example `$setting-color-alt` or `$setting-color-dark`. They can be found in the `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/styles` folder. For more details, see the [SASS Layer](/docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html#sass-layer) section in _Atomic Frontend_.
+{% endinfo_block %}
 
 Also, the styles must be locatable by Webpack. For this purpose, we need to add them to the entry point of the component. Open the `index.ts` file and add the following line:
 

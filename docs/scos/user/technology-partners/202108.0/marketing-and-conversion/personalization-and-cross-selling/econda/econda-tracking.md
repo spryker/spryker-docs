@@ -1,6 +1,7 @@
 ---
 title: Econda - Tracking
 description: Add the Econda tracking code into Spryker Commerce OS.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/econda-tracking
 originalArticleId: ba36652b-9c03-415e-ad71-0d862a751642
@@ -27,6 +28,7 @@ Now that we have integrated Econda to the website we can start adding the tracki
 To add tracking, you should also be familiar with [Twig.](/docs/scos/dev/legacy-demoshop/201811.0/twig-templates/overview-twig.html)
 
 To enable Econda tracking for your application, you need to add `econda_tracker.twig` to the proper page template, for example:
+
 ```php
 {% raw %}{%{% endraw %} include
 "@econda/partials/econda_tracker.twig" with {
@@ -166,15 +168,16 @@ module.exports = {
 };
 ```
 
-Now you need to register your tracking module in econda.js by adding 
+Now you need to register your tracking module in econda.js by adding
 
 ``` php
 var econdaTracking = require('./econda-tracking');
 econdaTracking.init();
 ```
 to `econda.js`.
-        
+
 ### Adding a Tracking Code to Twig
+
 The econda module comes with a partial twig template `econda_tracker.twig` that you can use as an example in your project.
 
 **Twig Template**
@@ -242,7 +245,7 @@ The econda module comes with a partial twig template `econda_tracker.twig` that 
 
 List of the accepted template variables:
 
-|Name |Description |Notes |
+| NAME | DESCRIPTION | NOTES |
 | --- | --- | --- |
 | content |Path of the current page, as displayed in econda Monitor. Use slashes (“/”) to separate path components for drill-down analysis.  | Translated into CONTENTLABEL parameter |
 |query  |Search query (could be passed to the search results page template)  | Translated into QUERY parameter |
@@ -256,12 +259,15 @@ List of the accepted template variables:
 |orderProcess  |Checkout step name  |Translated into STEPNAME parameter |
 |items |Associative array representing cart items (can be passed to the checkout success template) |Link |
 |flash.vars |Associative array representing intermittent data. Accepted keys: `register`, `login`, `newsletter.subscription` | |
+
 {% info_block infoBox "Tip" %}
-Remember to build your frontend  by running antelope build yves from your project root folder
+
+Remember to build your frontend  by running antelope build yves from your project root folder.
+
 {% endinfo_block %}
-In your project you will probably want to customize the tracking to fit the business requirements either by writing your own partial template or by overriding and extending the existing one, see [Best Practices - Twig Templates](/docs/scos/dev/legacy-demoshop/twig-templates/best-practices-twig-templates.html).
+
+In your project you will probably want to customize the tracking to fit the business requirements either by writing your own partial template or by overriding and extending the existing one.
 
 ### Checking Your Setup
 
 If your setup is correct you should see outgoing request going to Econda in browser developer tools when you navigate to a page that has tracing code included.
-

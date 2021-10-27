@@ -1,6 +1,7 @@
 ---
 title: Managing Categories
 description: The guide provides instructions on how to set an order for products in categories, as well as view, update and delete categories.
+last_updated: May 19, 2020
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/managing-categories
 originalArticleId: 1d195072-06f7-4a21-8bfc-3f61ab623fb5

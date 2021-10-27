@@ -1,6 +1,7 @@
 ---
 title: Amazon Pay
 description: Amazon Pay is a solution that allows buyers to make purchases from Spryker-based shops via their Amazon accounts.
+last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/amazon-pay
 originalArticleId: 0636967e-995e-4f57-b980-eac1b4bcda3e
@@ -32,7 +33,8 @@ related:
 
 ## Partner Information
 
-[ABOUT AMAZONPAY](https://pay.amazon.com/de) 
+[ABOUT AMAZONPAY](https://pay.amazon.com/de)
+
 Amazon pay is a solution which allows buyers to make purchases via their Amazon accounts. Basically it consists of client side tools (widget, javascripts etc) and Amazon API with SDKs written for different programming languages (PHP, Python, Ruby, Java, C#).
 
 Client side tools are used for displaying GUI elements on some common pages of an internet shop and it includes a "Pay with Amazon" button on the cart page and widgets for selecting checkout options such as delivery address and payment method.

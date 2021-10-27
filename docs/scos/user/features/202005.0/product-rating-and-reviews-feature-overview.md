@@ -8,6 +8,10 @@ originalArticleId: e7d22bab-45ab-46af-b0c9-c2801f962c13
 redirect_from:
   - /v5/docs/product-reviews
   - /v5/docs/en/product-reviews
+  - /v5/docs/rating-revew-management
+  - /v5/docs/en/rating-revew-management
+  - /v5/docs/rating-reviews
+  - /v5/docs/en/rating-reviews
 related:
   - title: Product Reviews feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-reviews-feature-integration.html

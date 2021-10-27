@@ -10,9 +10,6 @@ redirect_from:
   - /v5/docs/en/alternative-products-overview
   - /v5/docs/alternative-products
   - /v5/docs/en/alternative-products
-related:
-  - title: Adding Product Alternatives
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/adding-product-alternatives.html
 ---
 
 Suggesting product alternatives and substitutes is a great way to ease the user’s product finding process. Instead of forcing the user to hunt around product lists until they find just the right product, product alternatives let the user to jump from one product page to the next until they find a relevant item. It is an effective way to keep users on product pages.

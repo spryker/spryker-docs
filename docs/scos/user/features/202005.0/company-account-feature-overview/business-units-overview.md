@@ -10,11 +10,6 @@ redirect_from:
   - /v5/docs/en/business-unit-management-feature-overview
   - /v5/docs/business-unit-management
   - /v5/docs/en/business-unit-management
-related:
-  - title: Managing Company Unit Addresses
-    link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/managing-company-unit-addresses.html
-  - title: Managing Company Units
-    link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/managing-company-units.html
 ---
 
 Once a company administrator has created a company which has been activated and approved in the Administrator Interface, they can start building the organizational structure of their company in _My Company_ section of the web-shop.

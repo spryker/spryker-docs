@@ -14,9 +14,6 @@ redirect_from:
   - /2021080/docs/en/prices
   - /docs/prices
   - /docs/en/prices
-related:
-  - title: Migration Guide - Price
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-price.html
 ---
 
 A price can be attached to an abstract product as well as to a concrete product. The price is stored as an integer, in the smallest unit of the currency (e.g. for Euro that would be cents).

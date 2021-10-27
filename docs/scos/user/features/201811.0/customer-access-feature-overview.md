@@ -10,9 +10,6 @@ redirect_from:
   - /v1/docs/en/hide-content-from-logged-out-users-overview
   - /v1/docs/hide-content-from-logged-out-users
   - /v1/docs/en/hide-content-from-logged-out-users
-related:
-  - title: Managing Customer Access
-    link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/managing-customer-access.html
 ---
 
 Hide Content from Logged out Users allows Store Administrators to decide whether a certain information is visible to logged out users or not.

@@ -8,13 +8,6 @@ originalArticleId: ff3e1484-6639-499b-a5e5-2ea0d524b740
 redirect_from:
   - /v5/docs/templates-slots-feature-overview
   - /v5/docs/en/templates-slots-feature-overview
-related:
-  - title: Coremedia with Templates & Slots
-    link: docs/scos/user/technology-partners/page.version/content-management/coremedia/coremedia-with-templates-and-slots.html
-  - title: Managing Slots
-    link: docs/scos/user/back-office-user-guides/page.version/content/slots/managing-slots.html
-  - title: Adding Content to Storefront Pages Using Templates & Slots
-    link: docs/scos/user/back-office-user-guides/page.version/content/adding-content-to-storefront-pages-using-templates-and-slots-best-practices.html
 ---
 
 The Templates & Slots Feature enables content managers to effectively and coherently interact with content using a dedicated template in Spryker - a template with slots. In the Back Office, a content manager has access to all the Storefront pages and can easily embed content into them. The embedded content is rendered by the [Slot Widget](#slot-widget). 

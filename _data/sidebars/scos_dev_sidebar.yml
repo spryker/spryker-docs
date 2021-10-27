@@ -78,11 +78,11 @@ entries:
       url: /docs/scos/dev/setup/install-module-structure-and-configuration.html
   - title: Feature walkthroughs
     nested:
-    - title: Category Management feature walkthrough
+    - title: Category Management
       url: /docs/scos/dev/feature-walkthroughs/category-management-feature-walkthrough.html
-    - title: Payments feature walkthrough
+    - title: Payments
       url: /docs/scos/dev/feature-walkthroughs/payments-feature-walkthrough.html
-    - title: Approval Process feature walkthrough
+    - title: Approval Process
       url: /docs/scos/dev/feature-walkthroughs/approval-process-feature-walkthrough.html
       include_versions:
       - "201907.0"
@@ -90,9 +90,9 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-    - title: Shared Carts feature walkthrough
+    - title: Shared Carts
       url: /docs/scos/dev/feature-walkthroughs/shared-carts-feature-walkthrough.html
-    - title: Reclamations feature walkthrough
+    - title: Reclamations
       url: /docs/scos/dev/feature-walkthroughs/reclamations-feature-walkthrough.html
       include_versions:
       - "201903.0"
@@ -101,18 +101,18 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-    - title: Refunds feature walkthrough
+    - title: Refunds
       url: /docs/scos/dev/feature-walkthroughs/refunds-feature-walkthrough.html
       include_versions:
       - "202001.0"
       - "202005.0"
       - "202009.0"
       - "202108.0"
-    - title: Shopping Lists feature walkthrough
+    - title: Shopping Lists
       url: /docs/scos/dev/feature-walkthroughs/shopping-lists-feature-walkthrough.html
-    - title: Inventory Management Feature Walkthrough
+    - title: Inventory Management
       nested:
-      - title: Inventory Management feature walkthrough
+      - title: Inventory Management
         url: /docs/scos/dev/feature-walkthroughs/inventory-management-feature-walkthrough/inventory-management-feature-walkthrough.html
         include_versions:
         - "201811.0"
@@ -132,25 +132,25 @@ entries:
         include_versions:
         - "202009.0"
         - "202108.0"
-    - title: Gift Cards feature walkthrough
+    - title: Gift Cards
       url: /docs/scos/dev/feature-walkthroughs/gift-cards-feature-walkthrough.html
-    - title: Company Account Feature Walkthrough
+    - title: Company Account
       nested:
       - title: Company account- module relations
         url: /docs/scos/dev/feature-walkthroughs/company-account-feature-walkthrough/company-account-module-relations.html
       - title: Customer Login by Token reference information
         url: /docs/scos/dev/feature-walkthroughs/company-account-feature-walkthrough/customer-login-by-token-reference-information.html
-      - title: Company Account feature walkthrough
+      - title: Company Account
         url: /docs/scos/dev/feature-walkthroughs/company-account-feature-walkthrough/company-account-feature-walkthrough.html
-    - title: Product Options feature walkthrough
+    - title: Product Options
       url: /docs/scos/dev/feature-walkthroughs/product-options-feature-walkthrough.html
-    - title: Tax Feature Walkthrough
+    - title: Tax
       nested:
       - title: '"Reference information: Tax module"'
         url: /docs/scos/dev/feature-walkthroughs/tax-feature-walkthrough/reference-information-tax-module.html
-      - title: Tax feature walkthrough
+      - title: Tax
         url: /docs/scos/dev/feature-walkthroughs/tax-feature-walkthrough/tax-feature-walkthrough.html
-    - title: Cart Feature Walkthrough
+    - title: Cart
       nested:
       - title: Calculation 3.0
         url: /docs/scos/dev/feature-walkthroughs/cart-feature-walkthrough/calculation-3-0.html
@@ -161,7 +161,7 @@ entries:
         - "202108.0"
       - title: Calculator plugins
         url: /docs/scos/dev/feature-walkthroughs/cart-feature-walkthrough/calculator-plugins.html
-      - title: Cart feature walkthrough
+      - title: Cart
         url: /docs/scos/dev/feature-walkthroughs/cart-feature-walkthrough/cart-feature-walkthrough.html
       - title: Calculation data structure
         url: /docs/scos/dev/feature-walkthroughs/cart-feature-walkthrough/calculation-data-structure.html
@@ -188,11 +188,11 @@ entries:
         include_versions:
         - "202009.0"
         - "202108.0"
-      - title: Resource Sharing feature walkthrough
+      - title: Resource Sharing
         url: /docs/scos/dev/feature-walkthroughs/cart-feature-walkthrough/resource-sharing-feature-walkthrough.html
         include_versions:
         - "202108.0"
-    - title: Spryker Core Back Office Feature Walkthrough
+    - title: Spryker Core Back Office
       include_versions:
       - "201811.0"
       - "201903.0"
@@ -208,11 +208,11 @@ entries:
         - "201907.0"
         - "202001.0"
         - "202005.0"
-      - title: Spryker Core Back Office feature walkthrough
+      - title: Spryker Core Back Office
         url: /docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html
-    - title: Product Rating & Reviews feature walkthrough
+    - title: Product Rating & Reviews
       url: /docs/scos/dev/feature-walkthroughs/product-rating-reviews-feature-walkthrough.html
-    - title: Content Items Feature Walkthrough
+    - title: Content Items
       include_versions:
       - "201907.0"
       - "202001.0"
@@ -220,7 +220,7 @@ entries:
       - "202108.0"
       - "202009.0"
       nested:
-      - title: Content Items feature walkthrough
+      - title: Content Items
         url: /docs/scos/dev/feature-walkthroughs/content-items-feature-walkthrough/content-items-feature-walkthrough.html
         include_versions:
         - "201907.0"
@@ -235,7 +235,7 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-    - title: Resource Sharing feature walkthrough
+    - title: Resource Sharing
       url: /docs/scos/dev/feature-walkthroughs/resource-sharing-feature-walkthrough.html
       include_versions:
       - "201907.0"
@@ -243,12 +243,12 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-    - title: Spryker Core Feature Walkthrough
+    - title: Spryker Core
       include_versions:
       - "201811.0"
       - "201903.0"
       nested:
-      - title: Spryker Core feature walkthrough
+      - title: Spryker Core
         url: /docs/scos/dev/feature-walkthroughs/spryker-core-feature-walkthrough/spryker-core-feature-walkthrough.html
       - title: How translations are managed
         url: /docs/scos/dev/feature-walkthroughs/spryker-core-feature-walkthrough/how-translations-are-managed.html
@@ -259,7 +259,7 @@ entries:
         include_versions:
         - "201811.0"
         - "201903.0"
-    - title: Order Management Feature Walkthrough
+    - title: Order Management
       include_versions:
       - "202005.0"
       - "202009.0"
@@ -267,7 +267,7 @@ entries:
       nested:
       - title: Sales
         url: /docs/scos/dev/feature-walkthroughs/order-management-feature-walkthrough/sales-module-reference-information.html
-      - title: Order Management feature walkthrough
+      - title: Order Management
         url: /docs/scos/dev/feature-walkthroughs/order-management-feature-walkthrough/order-management-feature-wakthrough.html
       - title: Custom Order Reference- Module Relations
         url: /docs/scos/dev/feature-walkthroughs/order-management-feature-walkthrough/custom-order-reference-module-relations.html
@@ -275,11 +275,11 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-    - title: Mailing & Notifications feature walkthrough
+    - title: Mailing & Notifications
       url: /docs/scos/dev/feature-walkthroughs/mailing-and-notifications-feature-walkthrough.html
-    - title: Product Lists feature walkthrough
+    - title: Product Lists
       url: /docs/scos/dev/feature-walkthroughs/product-lists-feature-walkthrough.html
-    - title: Availability Notification feature walkthrough
+    - title: Availability Notification
       url: /docs/scos/dev/feature-walkthroughs/availability-notification-feature-walkthrough.html
       include_versions:
       - "201903.0"
@@ -288,9 +288,9 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-    - title: Packaging Unit feature walkthrough
+    - title: Packaging Unit
       url: /docs/scos/dev/feature-walkthroughs/packaging-units-feature-walkthrough.html
-    - title: Quotation Process Feature Walkthrough
+    - title: Quotation Process
       include_versions:
       - "201907.0"
       - "202001.0"
@@ -298,7 +298,7 @@ entries:
       - "202009.0"
       - "202108.0"
       nested:
-      - title: Quotation Process feature walkthrough
+      - title: Quotation Process
         url: /docs/scos/dev/feature-walkthroughs/quotation-process-feature-walkthrough/quotation-process-feature-walkthrough.html
         include_versions:
         - "201907.0"
@@ -314,9 +314,9 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-    - title: Wishlist feature walkthrough
+    - title: Wishlist
       url: /docs/scos/dev/feature-walkthroughs/wishlist-feature-walkthrough.html
-    - title: Persistent Cart Sharing Feature Walkthrough
+    - title: Persistent Cart Sharing
       include_versions:
       - "201907.0"
       - "202001.0"
@@ -324,7 +324,7 @@ entries:
       - "202009.0"
       - "202108.0"
       nested:
-      - title: Persistent Cart Sharing feature walkthrough
+      - title: Persistent Cart Sharing
         url: /docs/scos/dev/feature-walkthroughs/persistent-cart-sharing-feature-walkthrough/persistent-cart-sharing-feature-walkthrough.html
         include_versions:
         - "201907.0"
@@ -340,19 +340,19 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-    - title: Product Groups feature walkthrough
+    - title: Product Groups
       url: /docs/scos/dev/feature-walkthroughs/product-groups-feature-walkthrough.html
-    - title: Multiple Carts feature walkthrough
+    - title: Multiple Carts
       url: /docs/scos/dev/feature-walkthroughs/multiple-carts-feature-walkthrough.html
-    - title: Product Sets Feature Walkthrough
+    - title: Product Sets
       nested:
       - title: Product Sets- module relations
         url: /docs/scos/dev/feature-walkthroughs/product-sets-feature-walkthrough/product-sets-module-relations.html
-      - title: Product Sets feature walkthrough
+      - title: Product Sets
         url: /docs/scos/dev/feature-walkthroughs/product-sets-feature-walkthrough/product-sets-feature-walkthrough.html
-    - title: Quick Add to Cart feature walkthrough
+    - title: Quick Add to Cart
       url: /docs/scos/dev/feature-walkthroughs/quick-add-to-cart-feature-walkthrough.html
-    - title: Scheduled Prices feature walkthrough
+    - title: Scheduled Prices
       url: /docs/scos/dev/feature-walkthroughs/scheduled-prices-feature-walkthrough.html
       include_versions:
       - "201907.0"
@@ -360,11 +360,11 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-    - title: Catalog feature walkthrough
+    - title: Catalog
       url: /docs/scos/dev/feature-walkthroughs/catalog-feature-walkthrough.html
-    - title: Product Labels feature walkthrough
+    - title: Product Labels
       url: /docs/scos/dev/feature-walkthroughs/product-labels-feature-walkthrough.html
-    - title: Comments feature walkthrough
+    - title: Comments
       url: /docs/scos/dev/feature-walkthroughs/comments-feature-walkthrough.html
       include_versions:
       - "201907.0"
@@ -372,16 +372,16 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-    - title: Product Relations feature walkthrough
+    - title: Product Relations
       url: /docs/scos/dev/feature-walkthroughs/product-relations-feature-walkthrough.html
       include_versions:
       - "201811.0"
       - "201903.0"
       - "201907.0"
       - "202001.0"
-    - title: Product Barcode feature walkthrough
+    - title: Product Barcode
       url: /docs/scos/dev/feature-walkthroughs/product-barcode-feature-walkthrough.html
-    - title: Navigation Feature Walkthrough
+    - title: Navigation
       nested:
       - title: Navigation Module
         url: /docs/scos/dev/feature-walkthroughs/navigation-feature-walkthrough/navigation-module.html
@@ -390,7 +390,7 @@ entries:
         - "201903.0"
         - "201907.0"
         - "202001.0"
-      - title: Navigation feature walkthrough
+      - title: Navigation
         url: /docs/scos/dev/feature-walkthroughs/navigation-feature-walkthrough/navigation-feature-walkthrough.html
       - title: Navigation module- reference information
         url: /docs/scos/dev/feature-walkthroughs/navigation-feature-walkthrough/navigation-module-reference-information.html
@@ -398,19 +398,19 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-    - title: Customer Account Management Feature Walkthrough
+    - title: Customer Account Management
       nested:
       - title: Customer Module Overview
         url: /docs/scos/dev/feature-walkthroughs/customer-account-management-feature-walkthrough/reference-information-customer-module-overview.html
-      - title: Customer Account Management feature walkthrough
+      - title: Customer Account Management
         url: /docs/scos/dev/feature-walkthroughs/customer-account-management-feature-walkthrough/customer-account-management-feature-walkthrough.html
       - title: User and Rights Management
         url: /docs/scos/dev/feature-walkthroughs/customer-account-management-feature-walkthrough/user-and-rights-overview.html
-    - title: Promotions & Discounts feature walkthrough
+    - title: Promotions & Discounts
       url: /docs/scos/dev/feature-walkthroughs/promotions-discounts-feature-walkthrough.html
-    - title: Product Bundles feature walkthrough
+    - title: Product Bundles
       url: /docs/scos/dev/feature-walkthroughs/product-bundles-feature-walkthrough.html
-    - title: Merchant Product Restrictions Feature Walkthrough
+    - title: Merchant Product Restrictions
       include_versions:
       - "201903.0"
       - "201907.0"
@@ -419,7 +419,7 @@ entries:
       - "202009.0"
       - "202108.0"
       nested:
-      - title: Merchant Product Restrictions feature walkthrough
+      - title: Merchant Product Restrictions
         url: /docs/scos/dev/feature-walkthroughs/merchant-product-restrictions-feature-walkthrough/merchant-product-restrictions-feature-walkthrough.html
         include_versions:
         - "201903.0"
@@ -437,14 +437,14 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-    - title: Reorder feature walkthrough
+    - title: Reorder
       url: /docs/scos/dev/feature-walkthroughs/reorder-feature-walkthrough.html
-    - title: Prices Feature Walkthrough
+    - title: Prices
       include_versions:
       - "202009.0"
       - "202108.0"
       nested:
-      - title: Prices feature walkthrough
+      - title: Prices
         url: /docs/scos/dev/feature-walkthroughs/prices-feature-walkthrough/prices-feature-walkthrough.html
       - title: Money
         url: /docs/scos/dev/feature-walkthroughs/prices-feature-walkthrough/money-module-reference-information.html
@@ -453,14 +453,14 @@ entries:
         include_versions:
         - "202009.0"
         - "202108.0"
-    - title: Shipment Feature Walkthrough
+    - title: Shipment
       include_versions:
       - "201811.0"
       - "202005.0"
       - "202009.0"
       - "202108.0"
       nested:
-      - title: Shipment feature walkthrough
+      - title: Shipment
         url: /docs/scos/dev/feature-walkthroughs/shipment-feature-walkthrough/shipment-feature-walkthrough.html
       - title: '"Reference information: Shipment method plugins"'
         url: /docs/scos/dev/feature-walkthroughs/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html
@@ -474,13 +474,13 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-    - title: Refunds Feature Walkthrough
+    - title: Refunds
       include_versions:
       - "201811.0"
       - "201903.0"
       - "201907.0"
       nested:
-      - title: Refunds feature walkthrough
+      - title: Refunds
         url: /docs/scos/dev/feature-walkthroughs/refunds-feature-walkthrough/refunds-feature-walkthrough.html
         include_versions:
         - "201811.0"
@@ -492,7 +492,7 @@ entries:
         - "201811.0"
         - "201903.0"
         - "201907.0"
-    - title: Cms Feature Walkthrough
+    - title: Cms
       include_versions:
       - "201811.0"
       - "202009.0"
@@ -505,14 +505,14 @@ entries:
         - "201811.0"
         - "202009.0"
         - "202108.0"
-      - title: CMS feature walkthrough
+      - title: CMS
         url: /docs/scos/dev/feature-walkthroughs/cms-feature-walkthrough/cms-feature-walkthrough.html
         include_versions:
         - "201811.0"
         - "202005.0"
         - "202009.0"
         - "202108.0"
-    - title: Product Relations Feature Walkthrough
+    - title: Product Relations
       include_versions:
       - "202005.0"
       - "202009.0"
@@ -524,67 +524,67 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-      - title: Product Relations feature walkthrough
+      - title: Product Relations
         url: /docs/scos/dev/feature-walkthroughs/product-relations-feature-walkthrough/product-relations-feature-walkthrough.html
         include_versions:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-    - title: Configurable Product feature walkthrough
+    - title: Configurable Product
       url: /docs/scos/dev/feature-walkthroughs/configurable-product-feature-walkthrough.html
       include_versions:
       - "202108.0"
       - "202200.0"
-    - title: Checkout feature walkthrough
+    - title: Checkout
       url: /docs/scos/dev/feature-walkthroughs/checkout-feature-walkthrough.html
       include_versions:
       - "202108.0"
-    - title: Configurable Bundle feature walkthrough
+    - title: Configurable Bundle
       url: /docs/scos/dev/feature-walkthroughs/configurable-bundle-feature-walkthrough.html
       include_versions:
       - "202009.0"
       - "202108.0"
-    - title: Merchant Custom Prices feature walkthrough
+    - title: Merchant Custom Prices
       url: /docs/scos/dev/feature-walkthroughs/merchant-custom-prices-feature-walkthrough.html
       include_versions:
       - "202108.0"
-    - title: Merchant B2B Contracts feature walkthrough
+    - title: Merchant B2B Contracts
       url: /docs/scos/dev/feature-walkthroughs/merchant-b2b-contracts-feature-walkthrpugh.html
       include_versions:
       - "202108.0"
-    - title: Product feature walkthrough
+    - title: Product
       url: /docs/scos/dev/feature-walkthroughs/product-feature-walkthrough.html
       include_versions:
       - "202108.0"
-    - title: File Manager feature walkthrough
+    - title: File Manager
       url: /docs/scos/dev/feature-walkthroughs/file-manager-feature-walkthrough.html
       include_versions:
       - "202108.0"
-    - title: Return Management feature walkthrough
+    - title: Return Management
       url: /docs/scos/dev/feature-walkthroughs/return-management-feature-walkthrough.html
       include_versions:
       - "202108.0"
-    - title: Measurement Units feature walkthrough
+    - title: Measurement Units
       url: /docs/scos/dev/feature-walkthroughs/measurement-units-feature-walkthrough.html
       include_versions:
       - "202108.0"
-    - title: Search feature walkthrough
+    - title: Search
       url: /docs/scos/dev/feature-walkthroughs/search-feature-walkthrough.html
       include_versions:
       - "202108.0"
-    - title: Agent Assist feature walkthrough
+    - title: Agent Assist
       url: /docs/scos/dev/feature-walkthroughs/agent-assist-feature-walkthrough.html
       include_versions:
       - "202108.0"
-    - title: Customer Access feature walkthrough
+    - title: Customer Access
       url: /docs/scos/dev/feature-walkthroughs/customer-access-feature-walkthrough.html
       include_versions:
       - "202108.0"
-    - title: Alternative Products feature walkthrough
+    - title: Alternative Products
       url: /docs/scos/dev/feature-walkthroughs/alternative-products-feature-walkthrough.html
       include_versions:
       - "202108.0"
-    - title: Non-splittable Products feature walkthrough
+    - title: Non-splittable Products
       url: /docs/scos/dev/feature-walkthroughs/non-splittable-products-feature-walkthrough.html
       include_versions:
       - "202108.0"

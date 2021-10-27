@@ -19,25 +19,24 @@ To learn more about the feature and to find out how end users use it, see [Marke
 ## Module dependency graph
 
 ![Module Dependency Graph](https://confluence-connect.gliffy.net/embed/image/15402fef-7a49-4ff6-bdc7-9e82f2f92011.png?utm_medium=live&utm_source=confluence)
+<div class="width-100">
 
 | MODULE     | DESCRIPTION                |
 |------------|----------------------------|
-| MerchantProduct | Provides the connection between product entities and merchant entities.  |
-| MerchantProductDataImport | Imports relations between products and merchants from .csv file.  |
-| ProductMerchantPortalGui | Provides components for merchant products management.  |
-| ProductMerchantPortalGuiExtension | Provides extension interfaces for ProductMerchantPortalGui module.  |
-| MerchantProductStorage | Manages storage for merchant product abstract.  |
-| MerchantProductWidget | Provides merchant product abstract information.  |
-| Product | Provides base infrastructure and CRUD operations to handle abstract product and concrete products.  |
-| ProductAttribute | Managing product attributes defined in the JSON fields as well as attribute meta information.  |
-| ProductPageSearch | Manages Elasticsearch documents for product entities.  |
-| ProductSearch | Handles all the functionality needed to dynamically handle product attribute search and filter preferences.  |
-| ProductStorage | Manages storage for products.   |
-| ProductValidity | Provides validity dates for product concretes.  |
-| MerchantProductsRestApi | Provides REST API endpoints to manage merchant products.  |
-| CartsRestApiExtension | Provides plugin interfaces used by CartsRestApi module.  |
+| [MerchantProduct](https://github.com/spryker/merchant-product) | Provides the connection between product entities and merchant entities.  |
+| [MerchantProductDataImport](https://github.com/spryker/merchant-product-data-import) | Imports relations between products and merchants from .csv file.  |
+| [ProductMerchantPortalGui](https://github.com/spryker/product-merchant-portal-gui) | Provides components for merchant products management.  |
+| [ProductMerchantPortalGuiExtension](https://github.com/spryker/product-merchant-portal-gui-extension) | Provides extension interfaces for ProductMerchantPortalGui module.  |
+| [MerchantProductStorage](https://github.com/spryker/merchant-product-storage) | Manages storage for merchant product abstract.  |
+| [MerchantProductWidget](https://github.com/spryker/merchant-product-widget) | Provides merchant product abstract information.  |
+| [Product](https://github.com/spryker/product) | Provides base infrastructure and CRUD operations to handle abstract product and concrete products.  |
+| [MerchantProductsRestApi](https://github.com/spryker/merchant-product-rest-api) | Provides REST API endpoints to manage merchant products.  |
+| [CartsRestApiExtension](https://github.com/spryker/carts-rest-api-extension) | Provides plugin interfaces used by CartsRestApi module.  |
+
+</div>
 
 ## Domain model
+
 ![Domain Model](https://confluence-connect.gliffy.net/embed/image/80809f75-1f94-4f19-9cfd-e39235026e89.png?utm_medium=live&utm_source=confluence)
 
 ## Related Developer articles

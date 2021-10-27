@@ -887,7 +887,7 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-    - title: Alternative Products- Product Label feature integration
+    - title: Alternative Products + Product Label feature integration
       url: /docs/scos/dev/feature-integration-guides/alternative-products-product-label-feature-integration.html
       include_versions:
       - "201903.0"
@@ -896,7 +896,7 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-    - title: Alternative Products- Discontinued Products feature integration
+    - title: Alternative Products + Discontinued Products feature integration
       url: /docs/scos/dev/feature-integration-guides/alternative-products-discontinued-products-feature-integration.html
       include_versions:
       - "201903.0"
@@ -905,7 +905,7 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-    - title: Alternative Products - Inventory Management feature integration
+    - title: Alternative Products + Inventory Management feature integration
       url: /docs/scos/dev/feature-integration-guides/alternative-products-inventory-management-feature-integration.html
       include_versions:
       - "201903.0"
@@ -914,7 +914,7 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-    - title: Alternative Products- Wishlist feature integration
+    - title: Alternative Products + Wishlist feature integration
       url: /docs/scos/dev/feature-integration-guides/alternative-products-wishlist-feature-integration.html
       include_versions:
       - "201903.0"
@@ -1156,9 +1156,9 @@ entries:
       - "202108.0"
     - title: Multiple Carts feature integration
       url: /docs/scos/dev/feature-integration-guides/multiple-carts-feature-integration.html
-    - title: Multiple Carts - Reorder feature integration
+    - title: Multiple Carts + Reorder feature integration
       url: /docs/scos/dev/feature-integration-guides/multiple-carts-reorder-feature-integration.html
-    - title: Multiple Carts - Quick Order feature integration
+    - title: Multiple Carts + Quick Order feature integration
       url: /docs/scos/dev/feature-integration-guides/multiple-carts-quick-order-feature-integration.html
     - title: Multi-Store Products feature integration
       url: /docs/scos/dev/feature-integration-guides/multi-store-products-feature-integration.html

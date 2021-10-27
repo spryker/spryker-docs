@@ -10,13 +10,6 @@ redirect_from:
   - /v6/docs/en/merchant-product-restrictions-feature-overview
   - /v6/docs/merchant-product-restrictions
   - /v6/docs/en/merchant-product-restrictions
-related:
-  - title: Managing Product Lists
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/product-lists/managing-product-lists.html
-  - title: Creating Product Lists
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/product-lists/creating-product-lists.html
-  - title: Merchant Product Restrictions feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/merchant-product-restrictions-feature-integration.html
 ---
 
 At its core, the _Product Restrictions_ feature allows merchants to define the products that are available to each of their B2B customers.

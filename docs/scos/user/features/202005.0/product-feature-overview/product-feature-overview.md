@@ -12,11 +12,6 @@ redirect_from:
   - /v5/docs/en/product-abstraction
   - /v5/docs/product-information-management
   - /v5/docs/en/product-information-management
-related:
-  - title: Managing Products
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
-  - title: Product Attributes
-    link: docs/scos/user/features/page.version/product-feature-overview/product-attributes-overview.html
 ---
 
 Product is the central entity of a shop. Establishing the product data allows you to build and maintain a catalog representing your commercial offerings. The products are created and managed in the [ Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/general-back-office-overview.html). 

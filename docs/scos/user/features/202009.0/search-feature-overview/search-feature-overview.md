@@ -9,9 +9,6 @@ redirect_from:
   - /v6/docs/en/search
   - /v6/docs/search-filter
   - /v6/docs/en/search-filter
-related:
-  - title: Managing search preferences
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/managing-search-preferences.html
 ---
 
 Spryker provides a fully functional solution to integrate Elasticsearch as a search engine. You can extend this solution or customize it to fit your needs. 

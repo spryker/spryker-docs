@@ -11,15 +11,6 @@ redirect_from:
   - /v5/docs/en/shopping-list
 last_updated: Sep 15, 2020
 template: concept-topic-template
-related:
-  - title: Shopping list printing overview
-    link: docs/scos/user/features/page.version/shopping-lists-feature-overview/shopping-list-printing-overview.html
-  - title: Shopping List Notes overview
-    link: docs/scos/user/features/page.version/shopping-lists-feature-overview/shopping-list-notes-overview.html
-  - title: Shopping Lists feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/shopping-lists-feature-integration.html
-  - title: Managing Shopping Lists
-    link: docs/scos/dev/glue-api-guides/page.version/managing-shopping-lists/managing-shopping-lists.html
 ---
 
 A shopping list is a list of the items that shoppers buy or plan to buy frequently or regularly. For example, a consumer can compile a shopping list of the products they purchase every week. Shopping lists allow a buyer to have a quick overview of the products they are planning to buy and the sum of money they are going to spend.

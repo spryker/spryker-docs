@@ -14,13 +14,6 @@ redirect_from:
   - /2021080/docs/en/promotions-discounts
   - /docs/promotions-discounts
   - /docs/en/promotions-discounts
-related:
-  - title: Managing Discounts
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/managing-discounts.html
-  - title: Migration Guide - Discount
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-discount.html
-  - title: Retrieving Promotional Items
-    link: docs/scos/dev/glue-api-guides/page.version/retrieving-promotional-items.html
 ---
 
 The _Promotions & Discounts_ feature enables product catalog managers to provide free value to their customers by discounting a percentage or a fixed sum of an order's subtotal or an item's price on predefined conditions.

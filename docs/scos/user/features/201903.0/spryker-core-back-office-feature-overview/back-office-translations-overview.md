@@ -7,9 +7,6 @@ originalArticleId: f77458e7-da0f-47e8-bebf-8d3a57acbbbf
 redirect_from:
   - /v2/docs/back-office-translations-overview
   - /v2/docs/en/back-office-translations-overview
-related:
-  - title: Managing Users
-    link: docs/scos/user/back-office-user-guides/page.version/users/roles-groups-and-users/managing-users.html
 ---
 
 ---

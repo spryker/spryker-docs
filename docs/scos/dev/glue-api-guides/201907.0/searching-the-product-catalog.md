@@ -1,16 +1,12 @@
 ---
-title: Catalog Search
-description: This article provides a bunch of sample requests to be used to achieve the implementation of search options and gives explanations of request values.
-last_updated: Jan 24, 2020
+title: Searching the Product Catalog
+last_updated: Jan 16, 2020
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/v4/docs/catalog-search
-originalArticleId: 5c66b9db-fe87-4ce3-b841-c56aa12f817c
+originalLink: https://documentation.spryker.com/v3/docs/catalog-search
+originalArticleId: 5480b135-7345-42d1-8c8f-78c0e636d931
 redirect_from:
-  - /v4/docs/catalog-search
-  - /v4/docs/en/catalog-search
-related:
-  - title: Catalog feature overview
-    link: docs/scos/user/features/page.version/catalog-feature-overview.html
+  - /v3/docs/catalog-search
+  - /v3/docs/en/catalog-search
 ---
 
 The implementation of the search API offers you the same search experience as in the Spryker demo shops. The search engine used is Elasticsearch and search results go beyond the simple listing of products in the results section. The list of search results is paginated according to your configuration and spelling suggestions are offered when needed. In addition, sorting and facets are supported to narrow down the search results.
@@ -21,7 +17,7 @@ In your development, this endpoint can help you to:
 * Retrieve a list of products to be displayed anywhere you want.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Catalog Search API Feature Integration]().
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Catalog Search API Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/catalog-search-api-feature-integration.html).
 
 ## Searching for Products
 To search for products, send GET requests to the following endpoint:
@@ -532,7 +528,7 @@ To optimize network and resource utilization, you can also paginate the search r
 				}
 			}
 		},
- 
+
 		"links": {
 			"self": "http://mysprykershop.com/catalog-search?q=canon&include=&page[offset]=12&page[limit]=12",
 			"last": "http://mysprykershop.com/catalog-search?q=canon&include=&page[offset]=24&page[limit]=12",
@@ -556,5 +552,3 @@ In the following table, you can find some sample requests that use pagination:
 {% info_block warningBox %}
 Pagination settings are defined by the front-end search configuration. In other words, the REST API uses pagination settings of Spryker Shop Application.
 {% endinfo_block %}
-
-

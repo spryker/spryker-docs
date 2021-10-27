@@ -31,7 +31,9 @@ To enable CORS support in Glue, follow the Installation Guide.
 CORS is configured in Spryker Glue via environment variables. There are 2 levels where CORS can be configured: global and per-domain. On the global level, CORS is configured for the whole Glue Application. On the **per-domain** level, you can configure CORS behavior for each domain configured in Glue Application separately. For example, you can configure different lists of allowed origins for the `http://glue.de.mysprykershop.com` and `http://glue.at.mysprykershop.com` domains.
 
 {% info_block warningBox %}
+
 _Per-domain_ configuration always prevails over the global one. For this reason, the recommended practice is to configure CORS behavior for each domain separately.
+
 {% endinfo_block %}
 
 Configuration can be found in the following files:
@@ -45,21 +47,21 @@ To configure CORS behavior:
 2. Modify the value of the `GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN` variable. You can set its value as follows:
     * `<null>` - CORS is disabled. Example:
 
-```php
-$config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = '';
-```
+    ```php
+    $config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = '';
+    ```
 
     *  `*` - allow CORS requests from any domain. Example:
 
-```php
-$config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = '*';
-```
+    ```php
+    $config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = '*';
+    ```
 
     * `http://www.example1.com` - allow CORS requests only from the specified origin. Example:
 
-```php
-$config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = 'http://www.example1.com';
-```
+    ```php
+    $config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = 'http://www.example1.com';
+    ```
 
 3. Save the file.
 

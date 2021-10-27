@@ -88,8 +88,8 @@ A content manager can apply this template when [creating a CMS page](/docs/scos/
 
 Templates with slots are universal. In the Back Office, a content manager can:
 
-*     apply this template when [creating a CMS page](/docs/scos/user/back-office-user-guides/{{site.version}}/content/pages/creating-cms-pages.html).
-*     apply this template when [creating a category](/docs/scos/user/back-office-user-guides/{{site.version}}catalog/category/creating-categories.html).
+* apply this template when [creating a CMS page](/docs/scos/user/back-office-user-guides/{{site.version}}/content/pages/creating-cms-pages.html).
+* apply this template when [creating a category](/docs/scos/user/back-office-user-guides/{{site.version}}catalog/category/creating-categories.html).
 
 {% info_block warningBox %}
 
@@ -132,10 +132,10 @@ By default, two content item widget templates are shipped per each content item:
 
 Depending on the content item widget you create the template for, make sure to install the respective Content Item Widget module:
 
-*     [ContentBannerWidget](https://github.com/spryker-shop/content-banner-widget)
-*     [ContentProductWidget](https://github.com/spryker-shop/content-product-widget)
-*     [ContentProductSetWidget](https://github.com/spryker-shop/content-product-set-widget)
-*     [ContentFileWidget](https://github.com/spryker-shop/content-file-widget)
+* [ContentBannerWidget](https://github.com/spryker-shop/content-banner-widget)
+* [ContentProductWidget](https://github.com/spryker-shop/content-product-widget)
+* [ContentProductSetWidget](https://github.com/spryker-shop/content-product-set-widget)
+* [ContentFileWidget](https://github.com/spryker-shop/content-file-widget)
 
 
 {% endinfo_block %}
@@ -156,7 +156,9 @@ The default templates located on the core level of each module can be used as ex
 * Add the template identifier.
 * Based on the template identifier, add a path to the template.
 {% info_block infoBox %}
+
 `{ModuleWidgetTwigFunction}.php` should extend from the corresponding file in `SprykerShop/Yves/{ModuleWidget}/Twig/`.
+
 {% endinfo_block %}
 
 Pyz/Yves/{ModuleWidget}/Twig/{ModuleWidgetTwigFunction}.php

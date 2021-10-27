@@ -48,7 +48,7 @@ Signup for Docker Hub is not required.
 
 4. Update Memory and Swap Limits:
 
-    1. Go to![whale](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Docker+Install+Prerequisites+-+MacOS/whale-x.png) > **Preferences**  > **Resources** > **ADVANCED**.
+    1. Go to ![whale](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Docker+Install+Prerequisites+-+MacOS/whale-x.png) > **Preferences**  > **Resources** > **ADVANCED**.
     2. Set **CPUs:** to "4" or higher.
     3. Set **Memory:** to "4.00 GB" or higher.
     4. Set **Swap:** to "2.00 GB" or higher.
@@ -57,7 +57,9 @@ Signup for Docker Hub is not required.
     7. Click **Apply & Restart**.
 
 {% info_block warningBox %}
+
 You can set lower **Memory:** and **Swap:** limit values. However, the default limits won't be sufficient to run the application, so make sure to increase them.
+
 {% endinfo_block %}
 
 5. [Development mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode): Install Mutagen:

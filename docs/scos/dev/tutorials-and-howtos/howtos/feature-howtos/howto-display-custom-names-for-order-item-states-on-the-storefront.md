@@ -62,7 +62,7 @@ b. Enter translations for the available locales and click **Save**. You are take
 
 That’s it! Now, on the *Order Overview* and *Order History* pages on the Storefront, customers see the states that correspond to the values of the `display` parameter you set in .XML files of the respective payment methods and sub-processes.
 
-{% info_block infoBox "your title goes here" %}
+{% info_block infoBox "" %}
 
 If you delete the `display` parameter with its value, the OMS state, that is, the one specified in the `state name` parameter, is displayed on the Storefront.
 

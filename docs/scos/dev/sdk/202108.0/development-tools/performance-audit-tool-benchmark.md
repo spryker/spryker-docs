@@ -32,8 +32,8 @@ composer require --dev spryker-sdk/benchmark
 ```
 3. Add the new console command `\SprykerSdk\Zed\Benchmark\Communication\Console\BenchmarkRunConsole` to `\Pyz\Zed\Console\ConsoleDependencyProvider`:
 <details open>
-<summary markdown='span'>markdown='span'>Pyz\Zed\Console</summary>
-    
+<summary markdown='span'>Pyz\Zed\Console</summary>
+
 ```PHP
 <?php
 
@@ -94,7 +94,7 @@ require_once APPLICATION_ROOT_DIR . '/vendor/autoload.php';
 
 Environment::initialize();
 ```
-6. Add bootstrap files for each application `tests\Benchmark\Yves|Zed|Glue\bootstrap.php`: 
+6. Add bootstrap files for each application `tests\Benchmark\Yves|Zed|Glue\bootstrap.php`:
 
 ```PHP
 <?php

@@ -32,14 +32,13 @@ Follow the steps to install Spryker in Development mode:
 2. Open a terminal.
 3. Create a new folder and navigate into it.
 4. Depending on the desired [Demo Shop](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2bb2c-demo-shops):
-
-    a. Clone the B2C repository:
+    * Clone the B2C repository:
 
     ```bash
     git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202009.0-p1 --single-branch ./b2c-demo-shop
     ```
 
-    b. Clone the B2B repository:
+    * Clone the B2B repository:
 
     ```bash
     git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202009.0-p1 --single-branch ./b2b-demo-shop
@@ -107,11 +106,13 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
     7. In the **File name** line, enter `hosts` and select **Open**.
     The hosts file opens in the drop-down.
     8. Follow the installation instructions in the white box from the `docker/sdk bootstrap` command execution results to prepare the environment.
+
     {% info_block infoBox %}
 
     You can run `docker/sdk install` after `bootstrap` to get the list of the instructions.
 
-{% endinfo_block %}
+    {% endinfo_block %}
+
     9. Select **File** > **Save**.
     10. Close the file.
 

@@ -25,10 +25,10 @@ To improve debugging of failures and slow events in Spryker, we introduced a new
 
 
 **Diagram of the single publish queue structure**
-![single-publish-queue-structure](https://confluence-connect.gliffy.net/embed/image/cc624c10-1d44-4922-8637-55a913ca8b19.png?utm_medium=live&utm_source=custom) 
+![single-publish-queue-structure](https://confluence-connect.gliffy.net/embed/image/cc624c10-1d44-4922-8637-55a913ca8b19.png?utm_medium=live&utm_source=custom)
 
 **Diagram of the multiple publish queue structure**
-![multiple-publish-queue-structure](https://confluence-connect.gliffy.net/embed/image/69563548-7606-424a-944c-f78b2d67382e.png?utm_medium=live&utm_source=custom) 
+![multiple-publish-queue-structure](https://confluence-connect.gliffy.net/embed/image/69563548-7606-424a-944c-f78b2d67382e.png?utm_medium=live&utm_source=custom)
 
 ## Set up multiple publish queue structure
 
@@ -291,6 +291,8 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 }
 ```
 
+</details>
+
 ### Publish events using the default publish queue
 
 To publish events using the default `publish` queue, register the publisher plugins which process glossary events:
@@ -365,3 +367,5 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 }
 
 ```
+
+</details>

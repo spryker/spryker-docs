@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/separating-different-endpoint-bootstraps
 ---
 
-Gateway and ZedRestApi requests require a different stack of plugins to be processed with. Separation of the application bootstrapping into individual endpoints reduces the number of wired plugins which improves the performance of request processing. 
+Gateway and ZedRestApi requests require a different stack of plugins to be processed with. Separation of the application bootstrapping into individual endpoints reduces the number of wired plugins which improves the performance of request processing.
 
 To separate application bootstrapping into individual endpoints, follow the steps below.
 
@@ -106,7 +106,7 @@ $bootstrap
 ```
 
 <details open>
-    <summary markdown='span'>markdown='span'>public/Backoffice/index.php</summary>
+    <summary markdown='span'>public/Backoffice/index.php</summary>
 
 ```php
 <?php
@@ -141,7 +141,7 @@ $bootstrap
 
 <details open>
     <summary markdown='span'>markdown='span'>public/Backoffice/errorpage/4xx.html</summary>
-    
+
 ```html
 <!DOCTYPE html>
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
@@ -188,7 +188,7 @@ $bootstrap
 
 <details open>
     <summary markdown='span'>markdown='span'>public/Backoffice/errorpage/5xx.html</summary>
-    
+
 ```html
 <!DOCTYPE html>
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
@@ -237,46 +237,46 @@ $bootstrap
     1. Add the maintenance page:
 
     <details open>
-    <summary markdown='span'>markdown='span'>public/Backoffice/maintenance/index.html</summary>
-    
-        ```html
-        <!DOCTYPE html>
-        <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
-            <head>
-                <title>Spryker Zed - Maintenance</title>
-                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-                <meta name="description" content="" />
-                <meta name="keywords" content="" />
-                <link href="http://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet" type="text/css" />
-            </head>
-            <style>
-                body {
-                    font-family: 'PT Mono', sans-serif;
-                }
-                #so-doc {
-                    margin: 0 auto;
-                    width: 960px;
-                }
-            </style>
-            <body>
-                <div id="so-doc">
-                    <div>
-                        <pre>
-                        PAGE UNDER CONSTRUCTION!
+        <summary markdown='span'>markdown='span'>public/Backoffice/maintenance/index.html</summary>
 
-                        Come back in a few minutes...
-                        </pre>
-                    </div>
+    ```html
+    <!DOCTYPE html>
+    <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+        <head>
+            <title>Spryker Zed - Maintenance</title>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <meta name="description" content="" />
+            <meta name="keywords" content="" />
+            <link href="http://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet" type="text/css" />
+        </head>
+        <style>
+            body {
+                font-family: 'PT Mono', sans-serif;
+            }
+            #so-doc {
+                margin: 0 auto;
+                width: 960px;
+            }
+        </style>
+        <body>
+            <div id="so-doc">
+                <div>
+                    <pre>
+                    PAGE UNDER CONSTRUCTION!
+
+                    Come back in a few minutes...
+                    </pre>
                 </div>
-            </body>
-        </html>
-        ```
-        
+            </div>
+        </body>
+    </html>
+    ```
+
     </details>
 
-    2. Configure the page you’ve added in step 1 to be displayed when the error `503` occurs: 
+    2. Configure the page you’ve added in step 1 to be displayed when the error `503` occurs:
 
-    **public/Backoffice/maintenance/maintenance.php** 
+    **public/Backoffice/maintenance/maintenance.php**
     ```php
     <?php
 
@@ -294,9 +294,9 @@ $bootstrap
 
 ### 4) Separate application plugin stacks
 
-1. Replace `ApplicationDependencyProvider::getApplicationPlugins();` with separate plugin stacks per endpoint: 
+1. Replace `ApplicationDependencyProvider::getApplicationPlugins();` with separate plugin stacks per endpoint:
 
--  `ApplicationDependencyProvider::getBackofficeApplicationPlugins()` 
+-  `ApplicationDependencyProvider::getBackofficeApplicationPlugins()`
 - `ApplicationDependencyProvider::getBackendGatewayApplicationPlugins()`
 - `ApplicationDependencyProvider::getBackendApiApplicationPlugins()`
 
@@ -335,7 +335,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 
       return $plugins;
   }
-  
+
   /**
     * @return \Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface[]
     */
@@ -384,7 +384,7 @@ Update `src/Pyz/Zed/EventDispatcher/EventDispatcherDependencyProvider.php` with 
 
 <details open>
     <summary markdown='span'>markdown='span'>src/Pyz/Zed/EventDispatcher/EventDispatcherDependencyProvider.php</summary>
-    
+
 ```php
 class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependencyProvider
 {
@@ -427,9 +427,9 @@ Replace `RouterDependencyProvider::getRouterPlugins();`  with two new methods:
 
 <details open>
     <summary markdown='span'>markdown='span'>src/Pyz/Zed/Router/RouterDependencyProvider.php</summary>
-    
+
 ```php
-// 
+//
 
 class RouterDependencyProvider extends SprykerRouterDependencyProvider
 {
@@ -464,7 +464,7 @@ Configure the following console commands with a router cache warmup per endpoint
 
 <details open>
     <summary markdown='span'>markdown='span'>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
-    
+
 ```php
 //src/Pyz/Zed/Console/ConsoleDependencyProvider.php
 
@@ -485,7 +485,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
         ...
         ];
     }
-    
+
   return $commands;
 }    
 ```
@@ -499,7 +499,7 @@ You’ve added the following commands:
 
 ### 8) Configure the application
 
-1. Configure the Back Office error page, default port, and the ACL rule for the rest endpoint: 
+1. Configure the Back Office error page, default port, and the ACL rule for the rest endpoint:
 
 <details open>
     <summary markdown='span'>markdown='span'>config/Shared/config_default.php</summary>
@@ -561,13 +561,13 @@ $config[AclConstants::ACL_DEFAULT_RULES] = [
 class SecurityGuiConfig extends SprykerSecurityGuiConfig
 {
     protected const IGNORABLE_ROUTE_PATTERN = '^/(security-gui|health-check|_profiler/wdt|api/rest/.+)';
-} 
+}
 ```
 
-3. Adjust the server configuration of the application according to the added endpoints. 
+3. Adjust the server configuration of the application according to the added endpoints.
 
 ### 9) Update the Docker SDK
 
-1. Update the Docker SDK to version `1.36.1` or higher. 
+1. Update the Docker SDK to version `1.36.1` or higher.
 
-2. [Development environment](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode): Update the hosts file by running the `docker/sdk boot {deploy_file}` command and following the instructions in the output. 
+2. [Development environment](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode): Update the hosts file by running the `docker/sdk boot {deploy_file}` command and following the instructions in the output.

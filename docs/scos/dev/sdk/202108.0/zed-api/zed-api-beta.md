@@ -15,8 +15,10 @@ The Spryker OS offers a flexible REST API for Zed. It maps basic REST functional
 By default, the API accepts and returns JSON as format. But it can be extended to work with any format. As for JSON, the API specification is close to JSON API standard 1.0, with a few small differences, mainly where the Spryker API is a bit more allowing.
 
 {% info_block infoBox "BETA version " %}
-This module is still in development. For questions and inquiries please contact [academy@spryker.com](academy@spryker.com
-{% endinfo_block %})
+
+This module is still in development. For questions and inquiries please contact [academy@spryker.com](academy@spryker.com)
+
+{% endinfo_block %}
 
 ## Meta Information
 Links as part of the meta information will be part of the response on the same level as the data:
@@ -57,7 +59,7 @@ The override header is only accepted on POST requests. GET requests should never
 The Spryker UtilEncoding module provides a service and by default ships with the following flags enabled:
 
 ```
-JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_AMP | JSON_HEX_QUOT | 
+JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_AMP | JSON_HEX_QUOT |
 JSON_PARTIAL_OUTPUT_ON_ERROR | JSON_PRETTY_PRINT
 ```
 

@@ -22,18 +22,21 @@ related:
 To install PHPStan, run the following command:
 
 ```bash
-composer require --dev phpstan/phpstan`
+composer require --dev phpstan/phpstan
 ```
 
 ## Usage
+
 1. Run the following command to generate autocompletion and prevent any error messages that might occur due to the incomplete classes:
 `vendor/bin/console dev:ide:generate-auto-completion`
 2. Run this command to start analyzing:
 `php -d memory_limit=2048M vendor/bin/phpstan analyze -c vendor/spryker/spryker/phpstan.neon vendor/<spryker | spryker-eco | spryker-middleware>/<MODULE>/ -l 2`
 
 {% info_block errorBox %}
-Note that running this command with the level 2 key (**-l 2**
-{% endinfo_block %} and having no errors is obligatory, and having no errors with level 5 (**-l 5**) is highly recommended.)
+
+Note that running this command with the level 2 key (**-l 2**) and having no errors is obligatory, and having no errors with level 5 (**-l 5**) is highly recommended.
+
+{% endinfo_block %}
 
 ## Additional Functionality
 **Main Configuration File Inheritance**
@@ -46,9 +49,9 @@ parameters:
     excludes_analyse:
         - %rootDir%/../../../src/Generated/*
         - %rootDir%/../../../src/Orm/*
- 
+
 bootstrap: %rootDir%/../../../phpstan-bootstrap.php
- 
+
 services:
     -
         class: PhpStan\DynamicType\FacadeDynamicTypeExtension

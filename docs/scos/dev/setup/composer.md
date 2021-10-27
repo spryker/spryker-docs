@@ -131,8 +131,11 @@ Just for the modules that have been extended (factory and classes have been over
 To speed up the composer update process, use the [Prestissimo Composer tool](https://github.com/hirak/prestissimo). It will speed up the execution of the composer update and or composer install commands both for local development and in server deployments.
 
 {% info_block infoBox %}
-`composer install command will install the defined dependencies for your project.`
+
+`composer install` command will install the defined dependencies for your project.
+
 {% endinfo_block %}
+
 
 To install the tool, run:
 
@@ -166,8 +169,11 @@ For each module that you want to add:
   Running composer update will remove all mentions of the module (for example: `refund`) and replace it with your module (for example: `replace_refund`).
 
 {% info_block infoBox %}
+
 For more information on using the composer replace command see  [Composer website](https://getcomposer.org/doc/04-schema.md#replace).
+
 {% endinfo_block %}
+
 
 ```php
 {

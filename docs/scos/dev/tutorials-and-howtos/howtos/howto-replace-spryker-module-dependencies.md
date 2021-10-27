@@ -45,7 +45,9 @@ For each module that you want to add:
 2. Execute composer update with the replace module name: composer update `“replace_<the name of the module you are replacing>”`. Running composer update will remove all mentions of the module (for example: refund) and replace it with your module (for example: replace_refund’).
 
 {% info_block warningBox %}
+
 For more information on using the composer replace command click [here](https://getcomposer.org/doc/04-schema.md#replace).
+
 {% endinfo_block %}
 
 ## Composer Configuration Information

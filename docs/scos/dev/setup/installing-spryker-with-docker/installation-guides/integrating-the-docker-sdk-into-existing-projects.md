@@ -96,6 +96,7 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
 * Deploy file update
 
 {% endinfo_block %}
+
 3. Build and run Spryker applications:
 ```bash
 docker/sdk up

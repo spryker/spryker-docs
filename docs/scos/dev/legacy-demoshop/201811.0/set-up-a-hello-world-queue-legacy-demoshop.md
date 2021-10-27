@@ -63,7 +63,11 @@ getLocator()-&gt;rabbitMq()-&gt;client()-&gt;createQueueAdapter(),
 ## Creating a Simple Queue
 Before sending our messages to the `hello` queue, we need to first configure the Queue Adapter and then add queue configuration to RabbitMQ.
 
-{% info_block infoBox "Note" %}You can skip this part if you want to use the default queue adapter: `$config[QueueConstants::QUEUE_ADAPTER_CONFIGURATION_DEFAULT]`{% endinfo_block %}
+{% info_block infoBox "Note" %}
+
+You can skip this part if you want to use the default queue adapter: `$config[QueueConstants::QUEUE_ADAPTER_CONFIGURATION_DEFAULT]`
+
+{% endinfo_block %}
 
 ### Defining the Queue Adapter
 As mentioned, we can have different queue adapters for different queues. In this example, we will configure our hello queue to work with the RabbitMQ adapter.

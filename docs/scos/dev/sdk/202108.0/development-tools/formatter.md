@@ -39,13 +39,13 @@ npm run formatter:fix
 
 The default file types for formatting are:
 
-*     *.scss
-*     *.css
-*     *.less
-*     *.js
-*     *.ts
-*     *.json
-*     *.html
+* *.scss
+* *.css
+* *.less
+* *.js
+* *.ts
+* *.json
+* *.html
 
 To change the list of file extensions, adjust `/frontend/settings.js`:
 
@@ -60,9 +60,10 @@ formatter: [
 Twig is **not validated** by Prettier. The existing [twig plugin](https://github.com/trivago/prettier-plugin-twig-melody) can't work with widgets and attributes.
 
 {% endinfo_block %}
+
 ## Formatter config
 
-The config for Prettier resides in the[ @spryker/frontend-config.prettier](https://www.npmjs.com/package/@spryker/frontend-config.prettier) module.
+The config for Prettier resides in the [@spryker/frontend-config.prettier](https://www.npmjs.com/package/@spryker/frontend-config.prettier) module.
 
 To redefine the path for the config file, adjust `/frontend/libs/formatter.js`  and use other [options](https://prettier.io/docs/en/options.html) for Prettier:
 
@@ -98,5 +99,3 @@ If you commit without the pre-commit hooks, you should run the formatter manuall
 Pre-commit hooks weren’t integrated into [B2B](https://github.com/spryker-shop/b2b-demo-shop) and [B2C](https://github.com/spryker-shop/b2c-demo-shop) demo shops, only in the [Shop Suite](https://github.com/spryker-shop/suite).
 
 {% endinfo_block %}
-
-

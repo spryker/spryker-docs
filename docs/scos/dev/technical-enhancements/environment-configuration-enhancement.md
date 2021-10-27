@@ -21,10 +21,10 @@ redirect_from:
 
 Previously, the behavior of Spryker applications depended on the environment name and there was no other way to manage that.  This limited the number of possible names you could use to the four hardcoded ones:
 
-*     `production`
-*     `staging`
-*     `development`
-*     `devtest`
+* `production`
+* `staging`
+* `development`
+* `devtest`
 
 To be able to use any environment name and manage application behavior more efficiently, the environment name settings are replaced with explicit configuration.
 
@@ -49,7 +49,7 @@ composer require spryker/api:"^0.2.2" spryker/application:"^3.16.0" spryker/conf
 
 {% info_block warningBox "Verification" %}
 
-    Make sure that the following modules have been installed:
+Make sure that the following modules have been installed:
 
 | Module | Expected Directory |
 | --- | --- |
@@ -70,7 +70,9 @@ composer require spryker/api:"^0.2.2" spryker/application:"^3.16.0" spryker/conf
 ### 2) Clean up Code
 
 {% info_block infoBox %}
+
 `Spryker\Shared\Config\Environment` is deprecated.
+
 {% endinfo_block %}
 
 Delete the  `Spryker\* Zed || Yves *\Application\Communication\Plugin\
@@ -78,7 +80,7 @@ Provider\AssertUrlConfigurationServiceProvider ` dependency:
 
 src/Pyz/Zed/Application/ApplicationDependencyProvider.php
 
-```PHP
+```php
 use Spryker\Zed\Application\Communication\Plugin\ServiceProvider\AssertUrlConfigurationServiceProvider;
 
 ...
@@ -91,7 +93,7 @@ if (Environment::isDevelopment()) {
 
 src/Pyz/Yves/ShopApplication/YvesBootstrap.php
 
-```PHP
+```php
 use Spryker\Yves\Application\Communication\Plugin\ServiceProvider\AssertUrlConfigurationServiceProvider;
 
 ...

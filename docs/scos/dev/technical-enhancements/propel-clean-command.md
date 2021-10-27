@@ -62,7 +62,9 @@ Clean up codeception configuration by deleting  `SetupHelper ` from all codecept
 ```
 
 {% info_block infoBox %}
+
 Use  `SprykerTest\Shared\Testify\Helper\DataCleanupHelper ` instead to clean up data after each test that can intersect with other tests.
+
 {% endinfo_block %}
 
 Enable the  `DatabaseDropTablesConsole ` console command in  `Pyz\Zed\Console\ConsoleDependencyProvider `:
@@ -87,10 +89,11 @@ src/Pyz/Zed/Console/ConsoleDependencyProvider.php
 ```
 
 {% info_block infoBox %}
+
 * Spryker\Zed\Propel\Communication\Console\DatabaseExportConsole is deprecated.
-{% endinfo_block %}
-{% info_block infoBox %}
+
 * Spryker\Zed\Propel\Communication\Console\DatabaseImportConsole is deprecated.
+
 {% endinfo_block %}
 
 Run  `vendor/bin/console ` and make sure the  `propel:tables:drop ` command is in the list.

@@ -19,7 +19,7 @@ To be able to use the [FE CSS Lazy Load](/docs/scos/dev/front-end-development/yv
 COMPOSER_MEMORY_LIMIT=-1 composer update spryker-shop/shop-application spryker-shop/shop-ui spryker-shop/catalog-page spryker-shop/home-page spryker-shop/product-detail-page --with-dependencies
 ```
 2. Add `"@jsdevtools/file-path-filter": "~3.0.2"`, into the `package.json` file to the `devDependencies` section and run
-```Bash
+```bash
 npm install
 ```
 
@@ -91,143 +91,153 @@ const criticalPatterns = [
 ```
 4. Update the `frontend/libs/finder.js` file with the following cod:
 
-   4.1. Add `mergeEntryPoints` function:
-```js
-...
-// merge entry points
-const mergeEntryPoints = async files => Object.values(files.reduce((map, file) => {
-        const dir = path.dirname(file);
-        const name = path.basename(dir);
-        const type = path.basename(path.dirname(dir));
-        map[`${type}/${name}`] = file;
-        return map;
-    }, {}));
-...
-```
+    1. Add `mergeEntryPoints` function:
 
-    4.2. Update `findEntryPoints` function using the `mergeEntryPoints` as described above:
-```js
-...
-// find entry points
-const findEntryPoints = async settings => {
-    const files = await find(settings.dirs, settings.patterns,  settings.fallbackPatterns, settings.globSettings);
-    return mergeEntryPoints(files);
-};
-...
-```
+    ```js
+    ...
+    // merge entry points
+    const mergeEntryPoints = async files => Object.values(files.reduce((map, file) => {
+            const dir = path.dirname(file);
+            const name = path.basename(dir);
+            const type = path.basename(path.dirname(dir));
+            map[`${type}/${name}`] = file;
+            return map;
+        }, {}));
+    ...
+    ```
 
-    4.3. Add the `findStyleEntryPoints` function:
- ```js
-...
-// find style entry points
-const findStyleEntryPoints = async settings => {
-    const coreFiles = await find(settings.core.dirs, settings.core.patterns,  [], settings.globSettings);
-    const nonCoreFiles = await find(settings.nonCore.dirs, settings.nonCore.patterns,  [], settings.globSettings);
-    const files = [...coreFiles, ...nonCoreFiles];
-    return mergeEntryPoints(files);
-};
-...
-```
+    2. Update `findEntryPoints` function using the `mergeEntryPoints` as described above:
 
-    4.4. Pass the `findStyleEntryPoints` function to the exported module:
+    ```js
+    ...
+    // find entry points
+    const findEntryPoints = async settings => {
+        const files = await find(settings.dirs, settings.patterns,  settings.fallbackPatterns, settings.globSettings);
+        return mergeEntryPoints(files);
+    };
+    ...
+    ```
 
-```js
-...
-module.exports = {
-    findComponentEntryPoints,
-    findStyleEntryPoints,
-    findComponentStyles,
-    findAppEntryPoint,
-};
-```
+    3. Add the `findStyleEntryPoints` function:
+
+    ```js
+    ...
+    // find style entry points
+    const findStyleEntryPoints = async settings => {
+        const coreFiles = await find(settings.core.dirs, settings.core.patterns,  [], settings.globSettings);
+        const nonCoreFiles = await find(settings.nonCore.dirs, settings.nonCore.patterns,  [], settings.globSettings);
+        const files = [...coreFiles, ...nonCoreFiles];
+        return mergeEntryPoints(files);
+    };
+    ...
+    ```
+
+    4. Pass the `findStyleEntryPoints` function to the exported module:
+
+    ```js
+    ...
+    module.exports = {
+        findComponentEntryPoints,
+        findStyleEntryPoints,
+        findComponentStyles,
+        findAppEntryPoint,
+    };
+    ```
+
 5. Adjust the `frontend/configs/development.js` file:
 
-    5.1. Add the `filePathFilter` to the imported stuff at the top of the file:
-```js
-const filePathFilter = require("@jsdevtools/file-path-filter");
-```
+    1. Add the `filePathFilter` to the imported stuff at the top of the file:
 
-    5.2. Add the `findStyleEntryPoints` to the import from the Finder module:
-```js
-...
-const { findComponentEntryPoints, findStyleEntryPoints, findComponentStyles, findAppEntryPoint } = require('../libs/finder');
-...
-```
+    ```js
+    const filePathFilter = require("@jsdevtools/file-path-filter");
+    ```
 
-    5.3. Add the new local variable `styleEntryPointsPromise` to the `getConfiguration` function:
-```js
-...
-const styleEntryPointsPromise = findStyleEntryPoints(appSettings.find.stylesEntryPoints);
-...
-```
+    2. Add the `findStyleEntryPoints` to the import from the Finder module:
 
-    5.4. Extend the destructuring assignment with the following changes:
+    ```js
+    ...
+    const { findComponentEntryPoints, findStyleEntryPoints, findComponentStyles, findAppEntryPoint } = require('../libs/finder');
+    ...
+    ```
 
-From:
-```js
-const [componentEntryPoints, styles] = await Promise.all([componentEntryPointsPromise, stylesPromise]);
-```
-To:
-```js
-const [componentEntryPoints, styleEntryPoints, styles] = await Promise.all([componentEntryPointsPromise, styleEntryPointsPromise, stylesPromise]);
-```
+    3. Add the new local variable `styleEntryPointsPromise` to the `getConfiguration` function:
 
-    5.5. Add new local variables `criticalEntryPoints` and `nonCriticalEntryPoints` to the `getConfiguration` function:
-```js
-...
-const criticalEntryPoints = styleEntryPoints.filter(filePathFilter({
-    include: appSettings.criticalPatterns,
-}));
+    ```js
+    ...
+    const styleEntryPointsPromise = findStyleEntryPoints(appSettings.find.stylesEntryPoints);
+    ...
+    ```
 
-const nonCriticalEntryPoints = styleEntryPoints.filter(filePathFilter({
-    exclude: appSettings.criticalPatterns,
-}));
-...
-```
+    4. Extend the destructuring assignment with the following changes:
 
-    5.6. Extend the `entry` section of the returned Webpack config object into the `getConfiguration` function with the new `critical`, `non-critical`, and `util` points:
+    From:
+    ```js
+    const [componentEntryPoints, styles] = await Promise.all([componentEntryPointsPromise, stylesPromise]);
+    ```
+    To:
+    ```js
+    const [componentEntryPoints, styleEntryPoints, styles] = await Promise.all([componentEntryPointsPromise, styleEntryPointsPromise, stylesPromise]);
+    ```
 
-```js
-...
-entry: {
-    'vendor': vendorTs,
-    'es6-polyfill': es6PolyfillTs,
-    'app': [
-        appTs,
-        ...componentEntryPoints,
-    ],
-    'critical': [
-        basicScss,
-        ...criticalEntryPoints,
-    ],
-    'non-critical': [
-        ...nonCriticalEntryPoints,
-        utilScss,
-    ],
-    'util': utilScss,
-},
-...
-```
+    5. Add new local variables `criticalEntryPoints` and `nonCriticalEntryPoints` to the `getConfiguration` function:
+    ```js
+    ...
+    const criticalEntryPoints = styleEntryPoints.filter(filePathFilter({
+        include: appSettings.criticalPatterns,
+    }));
+
+    const nonCriticalEntryPoints = styleEntryPoints.filter(filePathFilter({
+        exclude: appSettings.criticalPatterns,
+    }));
+    ...
+    ```
+
+    6. Extend the `entry` section of the returned Webpack config object into the `getConfiguration` function with the new `critical`, `non-critical`, and `util` points:
+
+    ```js
+    ...
+    entry: {
+        'vendor': vendorTs,
+        'es6-polyfill': es6PolyfillTs,
+        'app': [
+            appTs,
+            ...componentEntryPoints,
+        ],
+        'critical': [
+            basicScss,
+            ...criticalEntryPoints,
+        ],
+        'non-critical': [
+            ...nonCriticalEntryPoints,
+            utilScss,
+        ],
+        'util': utilScss,
+    },
+    ...
+    ```
+
 6. Update `src/Pyz/Yves/EventDispatcher/EventDispatcherDependencyProvider.php` on the project level:
 
- 6.1. Add `LastVisitCookieEventDispatcherPlugin` to using section:
-```js
-...
-use SprykerShop\Yves\ShopApplication\Plugin\EventDispatcher\LastVisitCookieEventDispatcherPlugin;
-...
-```
+    1. Add `LastVisitCookieEventDispatcherPlugin` to using section:
 
-    6.2. Add this plugin to the returned collection of the `getEventDispatcherPlugins` function:
-```js
-protected function getEventDispatcherPlugins(): array
-{
-    return [
-        ...
-        new LastVisitCookieEventDispatcherPlugin(),
-        ...
-    ];
-}
-```
+    ```js
+    ...
+    use SprykerShop\Yves\ShopApplication\Plugin\EventDispatcher\LastVisitCookieEventDispatcherPlugin;
+    ...
+    ```
+
+    2. Add this plugin to the returned collection of the `getEventDispatcherPlugins` function:
+
+    ```js
+    protected function getEventDispatcherPlugins(): array
+    {
+        return [
+            ...
+            new LastVisitCookieEventDispatcherPlugin(),
+            ...
+        ];
+    }
+    ```
 
 7. Update the `page-blank.twig` layout on the project level in `src/Pyz/Yves/ShopUi/Theme/default/templates/page-blank/page-blank.twig` by adding the new `isCssLazyLoadSupported` twig variable:
 ```html
@@ -253,4 +263,5 @@ Make sure your styles from `node_modules` included in `.scss` files (not in `ind
 ```
 
 {% endinfo_block %}
+
 8. Run `npm run yves` to rebuild the frontend with the new settings.

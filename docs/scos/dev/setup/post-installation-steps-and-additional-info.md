@@ -108,7 +108,9 @@ Endpoint is a point of access to a Spryker Application or Service.
 Individual endpoints and ports are set in `deploy.*.yml` file.
 
 {% info_block warningBox %}
+
 Key format: `domain[:port]`. By default, the port for HTTP endpoints is 80. A port is mandatory for TCP endpoints.
+
 {% endinfo_block %}
 
 ### How to apply changes

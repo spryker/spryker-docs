@@ -44,7 +44,9 @@ The container implements the [PSR-11 interface](https://github.com/php-fig/fig-s
 | `remove()` | Removes added services. |
 
 {% info_block warningBox %}
+
 We added the `ArrayAccess` interface for backward compatibility and do not recommend using it.
+
 {% endinfo_block %}
 
 ### Add a service

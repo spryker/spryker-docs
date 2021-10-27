@@ -29,14 +29,13 @@ Follow the steps to install Spryker in Demo Mode:
 2. Open a terminal.
 3. Create a new folder and navigate into it.
 4. Depending on the desired [Demo Shop](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2bb2c-demo-shops):
-
-    a. Clone the B2C repository:
+    * Clone the B2C repository:
 
     ```shell
     git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202009.0-p1 --single-branch ./b2c-demo-shop
     ```
 
-    b. Clone the B2B repository:
+    * Clone the B2B repository:
 
     ```shell
     git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202009.0-p1 --single-branch ./b2b-demo-shop
@@ -81,10 +80,13 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
 * Deploy file update.
 
 {% endinfo_block %}
+
 9. Once the job finishes, build and start the instance:
+
 ```shell
 docker/sdk up
 ```
+
 10. Update the `hosts` file:
     1. Open the Start menu.
     2. In the search field, enter `Notepad`.
@@ -99,8 +101,11 @@ docker/sdk up
     127.0.0.1   zed.de.spryker.local glue.de.spryker.local yves.de.spryker.local scheduler.spryker.local mail.spryker.local queue.spryker.local
     ```
     {% info_block infoBox %}
-If needed, add corresponding entries for other stores. For example, if you are going to have a US store, add the following entries: `zed.us.spryker.local glue.us.spryker.local yves.us.spryker.local`
-{% endinfo_block %}
+
+    If needed, add corresponding entries for other stores. For example, if you are going to have a US store, add the following entries: `zed.us.spryker.local glue.us.spryker.local yves.us.spryker.local`
+
+    {% endinfo_block %}
+
     9. Select **File** > **Save**.
     10. Close the file.
 

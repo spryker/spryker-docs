@@ -34,14 +34,13 @@ Follow the steps to install Spryker in Demo Mode:
 1. Open a terminal.
 2. Create a new folder and navigate into it.
 3. Depending on the desired [Demo Shop](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2bb2c-demo-shops):
-
-    a. Clone the B2C repository:
+    * Clone the B2C repository:
 
     ```shell
     git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202009.0-p1 --single-branch ./b2c-demo-shop
     ```
 
-    b. Clone the B2B repository:
+    * Clone the B2B repository:
 
     ```shell
     git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202009.0-p1 --single-branch ./b2b-demo-shop
@@ -81,20 +80,27 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
 
 {% endinfo_block %}
 7. Once the job finishes, build and start the instance:
+
 ```shell
 docker/sdk up
 ```
+
 8. Update the `hosts` file:
 
 ```bash
 echo "127.0.0.1 zed.de.spryker.local yves.de.spryker.local glue.de.spryker.local zed.at.spryker.local yves.at.spryker.local glue.at.spryker.local zed.us.spryker.local yves.us.spryker.local glue.us.spryker.local mail.spryker.local scheduler.spryker.local queue.spryker.local" | sudo tee -a /etc/hosts
 ```
+
 {% info_block infoBox %}
+
 If needed, add corresponding entries for other stores. For example, if you are going to have a US store, add the following entries: `zed.us.spryker.local glue.us.spryker.local yves.us.spryker.local`
+
 {% endinfo_block %}
 
 {% info_block warningBox %}
+
 Depending on the hardware performance, the first project launch can take up to 20 minutes.
+
 {% endinfo_block %}
 
 ## Endpoints

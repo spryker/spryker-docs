@@ -31,7 +31,9 @@ Open `\Pyz\Zed\ContentGui\ContentGuiDependencyProvider::getContentPlugins()` to 
 Such plugins implement `\Spryker\Zed\ContentGuiExtension\Dependency\Plugin\ContentPluginInterface`.
 
 {% endinfo_block %}
+
 ***
+
 To create a new content form plugin:
 1. Create a module for the new content type, e. g. `src/Zed/ContentFooGui` with a plugin inside. Find the description of plugin methods below:
 
@@ -163,6 +165,7 @@ class ContentFooTermForm extends AbstractType
     }
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 After enabling the plugin, make sure there is the new content item in Back Office > **Content Management** > **Content Items** > **Add Content Item** drop-down menu.

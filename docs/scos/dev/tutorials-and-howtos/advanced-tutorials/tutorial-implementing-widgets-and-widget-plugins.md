@@ -101,7 +101,9 @@ src/Pyz/Yves/FooModule/Theme/default/views/foo-bar-widget/foo-bar-widget.twig
 In the template of the widget, the parameters are accessible through the `_widget` twig variable. This way in twig template it's easy to determine where a parameter is coming from.
 
 {% info_block infoBox %}
+
 When you see `_widget.foo`, it means that the `foo` parameter is coming from the widget directly.
+
 {% endinfo_block %}
 
 ### Step 3 - Activate Your Widget
@@ -109,7 +111,9 @@ When you see `_widget.foo`, it means that the `foo` parameter is coming from the
 You can activate Widgets by adding them to the  `\Pyz\Yves\ShopApplication\ShopApplicationDependencyProvider::getGlobalWidgets()` method. Widgets are instantiated in the background when they are called in twig templates. To activate a widget, use their **FQCNs** (Fully Qualified Class Names).
 
 {% info_block infoBox %}
+
 A widget with a given set of parameters, called multiple times, in the same `http` request is instantiated only once and cached in the memory for performance reasons. This also means that when there is a widget which has a bit heavier initialization logic, it will be executed only once even when used several times in twig templates. When the same widget is called with different parameters, it will still be a new instance and run its initialization separately.
+
 {% endinfo_block %}
 
 ```php
@@ -210,7 +214,9 @@ Widgets are placed and rendered in twig templates. The following examples show s
 <a href="#how-to-implement-a-widget-plugin"></a>
 
 {% info_block infoBox %}
+
 This section is valid only for projects which are running module `spryker/kernel` up to version **3.24.0**, exclusively. In version 3.24.0 of the `Kernel` module, the widget plugins were deprecated. In case you are running version 3.24.0 or later, refer to the previous section.
+
 {% endinfo_block %}
 
  Follow the steps below to implement a widget.
@@ -400,8 +406,10 @@ class FooController extends AbstractController
 ```
 
 {% info_block infoBox "Info" %}
+
 When a controller action returns a View object, in the rendered twig template by default the data passed from the controller (view data) is accessible through the `_view` twig variable. This way in twig template it's easy to determine where a parameter is coming from. When you see `_view.foo`, it means that the `foo` parameter is coming from the controller directly.
 If you would like to access the parameters directly without the _view variable in twig, set the `ShopApplicationConfig::useViewParametersToRenderTwig()` module configuration method to return `true` instead of the default `false`.
+
 {% endinfo_block %}
 
 ```php

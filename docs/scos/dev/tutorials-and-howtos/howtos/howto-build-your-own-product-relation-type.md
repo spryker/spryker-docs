@@ -31,7 +31,9 @@ To modify Zed, do the following:
 1. Create new relation type in `\Spryker\Shared\ProductRelation\ProductRelationTypes` as a new constant type.
 
 {% info_block infoBox "For example:" %}
+
 `TYPE_RELATION_NEW`
+
 {% endinfo_block %}
 
 2. Include this relation type to `getAvailableRelationTypes` returned array.
@@ -82,5 +84,7 @@ It accepts the following arguments:
 Each type has a data provider. This data provider reads data from redis and sends it to the template.
 
 {% info_block warningBox %}
+
 You can use `RelatedProductsDataProvider` or `UpSellingDataProvider` as sample implementations.
+
 {% endinfo_block %}

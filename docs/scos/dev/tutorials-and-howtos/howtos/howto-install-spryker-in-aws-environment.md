@@ -44,15 +44,15 @@ To create a security group, do the following:
 
 1. Open EC2 console.
 
-![EC2 console](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/ec2-console.png) 
+![EC2 console](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/ec2-console.png)
 
 2. Click **Create Security Group**.
 
-![Create security group](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/create-security-group.png) 
+![Create security group](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/create-security-group.png)
 
 3. Fill out the outlined fields and click **Create**.
 
-![Choose security group](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/choose-security-group.png) 
+![Choose security group](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/choose-security-group.png)
 
 See [Creating a Security Group](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html#creating-security-group) and [Adding Rules to a Security Group](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html#creating-security-group) for more information on how to create and configure the security group.
 
@@ -67,15 +67,15 @@ You need to choose the security group for all services/instances that you will c
 To create and configure RDS, do the following:
 
 1. Open RDS console.
-![RDS console](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/rds-console.png) 
+![RDS console](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/rds-console.png)
 
 2. Click **Create database**.
 
-![Create database](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/create-database.png) 
+![Create database](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/create-database.png)
 
 3. Select **PostgreSQL**.
 
-![Choose PostgreSQL](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/choose-postgresql.png) 
+![Choose PostgreSQL](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/choose-postgresql.png)
 
 4. Choose a use case
 {% info_block infoBox %}
@@ -84,21 +84,21 @@ For production purposes, we recommend choosing Multi-AZ Deployment.
 
 {% endinfo_block %}
 
-![Choose usecase](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/choose-use-case.png) 
+![Choose usecase](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/choose-use-case.png)
 
 5. Fill out all the outlined fields.
 
-![Choose database details](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/choose-db-details.png) 
+![Choose database details](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/choose-db-details.png)
 
-![Database login details](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/db-login-details.png) 
+![Database login details](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/db-login-details.png)
 
-![Network and security](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/network-and-security.png) 
+![Network and security](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/network-and-security.png)
 
-![Database options](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/db-options.png) 
+![Database options](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/db-options.png)
 
 6. Get **DB Name**, **Endpoint** and **port**.
 
-![Get database name endpoint](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/get-db-name-endpoint.png) 
+![Get database name endpoint](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/get-db-name-endpoint.png)
 
 See [Database creation manual](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Tutorials.WebServerDB.CreateDBInstance.html) for more details on how to create the database.
 
@@ -107,11 +107,11 @@ To create and configure Elasticsearch service console, do the following:
 
 1. Open Elasticsearch service console.
 
-![Elasticsearch console](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/elastic-search-console.png) 
+![Elasticsearch console](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/elastic-search-console.png)
 
 2. Click **Create a new domain**.
 
-![Create new domain](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/create-new-domain.png) 
+![Create new domain](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/create-new-domain.png)
 
 3. Fill out all the outlined fields.
 
@@ -124,17 +124,17 @@ For production purposes, we recommend choosing the Production deployment type.
 {% endinfo_block %}
 
 
-![Deployment type](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/deployment-type.png) 
+![Deployment type](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/deployment-type.png)
 
-![Define domain](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/define-domain.v2.png) 
+![Define domain](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/define-domain.v2.png)
 
-![VPC access](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/vpc-access.png) 
+![VPC access](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/vpc-access.png)
 
-![Domain access policy](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/domain-access-policy.png) 
+![Domain access policy](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/domain-access-policy.png)
 
 5. Get **VPC endpoint**.
 
-![Get VPS endpoint](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/get-vpc-endpoint.png) 
+![Get VPS endpoint](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/get-vpc-endpoint.png)
 
 See [Elasticseacrh service creation manual](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomains) for more details on how to create an Elasticsearch service domain.
 
@@ -144,20 +144,20 @@ To configure ElastiCache, do the following:
 
 1. Open ElastiCache console.
 
-![ElastiCache console](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/elasticache-console.png) 
+![ElastiCache console](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/elasticache-console.png)
 
 2. Click **Get Started Now**.
 
-![Elastisearch - Get started now](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/elastisearch-start.png) 
+![Elastisearch - Get started now](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/elastisearch-start.png)
 
 3. Fill out all the outlined fields.
 
-![Elastisearch config](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/elastisearch-config.png) 
+![Elastisearch config](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/elastisearch-config.png)
 
 
 4. Get **Primary Endpoint**.
 
-![Primary endpoint](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/get-primary-endpoint.png) 
+![Primary endpoint](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/get-primary-endpoint.png)
 
 See [ElastiCache creation manual](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/GettingStarted.CreateCluster.html) for more details.
 
@@ -180,57 +180,57 @@ To launch the instance, do the following:
 
 1. Open EC2 console.
 
-![EC2 console](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/ec2-console.png) 
+![EC2 console](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/ec2-console.png)
 
 2. Click **Launch instance**.
 
-![Launch instance](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/launch-instance.png) 
+![Launch instance](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/launch-instance.png)
 
 3. Select the Ubuntu server with the **64-bit (x86)** configuration.
 
-![Choose OS](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/choose-os.png) 
+![Choose OS](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/choose-os.png)
 
 4. Choose the instance type and click **Next: Configure Instance Details**.
 
-![Choose instance](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/choose-instance.png) 
+![Choose instance](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/choose-instance.png)
 
 5. Leave default configuration and click  **Next: Add Storage**.
 6. Add storage and click **Next: Add Tags**.
 
-![Add storage](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/add-storage.png) 
+![Add storage](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/add-storage.png)
 
 7. Add a Name tag and click **Next: Configure Security Group**.
 
-![Add tags](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/add-tags.png) 
+![Add tags](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/add-tags.png)
 
 8. Choose the security group which you have previously created and click **Review and Launch**.
 9. Choose the ssh key you have previously created, download it, and click **Launch Instances**.
 
-![Select SHH keys](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/select-ssh-key.png) 
+![Select SHH keys](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/select-ssh-key.png)
 
 ### Elastic IP
 To configure Elastic IP, do the following:
 
 1. Open EC2 console.
 
-![EC2 console](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/ec2-console.png) 
+![EC2 console](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/ec2-console.png)
 
 2. Click **Allocate new address**.
 
-![Allocate new address](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/allocate-new-address.png) 
+![Allocate new address](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/allocate-new-address.png)
 
 3. Leave the default setup and click **Allocate**.
 
-![Allocate](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/allocate.png) 
+![Allocate](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/allocate.png)
 
 4. Click **Actions** > **Associate address**.
 
-![Associate address](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/associate-address.png) 
+![Associate address](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/associate-address.png)
 
 5. Choose Spryker instance and click **Associate**.
 
 
-![Choose Spryker instance](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/choose-spryker-instance.png) 
+![Choose Spryker instance](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/choose-spryker-instance.png)
 
 See [Allocating an Elastic IP Address](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html#using-instance-addressing-eips-allocating) and [Associating an Elastic IP Address with a Running Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html#using-instance-addressing-eips-associating) for more details on configuring the Elastic IP Address.
 
@@ -240,11 +240,11 @@ To connect to the instance, do the following:
 
 1. Click **Actions** > **Connect**.
 
-![Connect action](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/actions-connect.png) 
+![Connect action](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/actions-connect.png)
 
 2. Connect to the Spryker instance using the provided details.
 
-![Connection instructions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/connection-instructions.png) 
+![Connection instructions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/connection-instructions.png)
 
 ## Installing Additional Software
 
@@ -340,7 +340,7 @@ memory_limit = 1024M
 [mail function]
 sendmail_path = /usr/sbin/sendmail -t -i
 ```
-    <br>
+
 </details>
 
 
@@ -381,7 +381,7 @@ php_admin_value[error_log] = /dev/stderr
 </details>
 
 <details open>
-<summary markdown='span'>/etc/php/7.2/fpm/pool.d/zed.conf</summary>/
+<summary markdown='span'>/etc/php/7.2/fpm/pool.d/zed.conf</summary>
 
 ```
 [zed]
@@ -478,7 +478,7 @@ opcache.revalidate_freq=2
 ; https://bugs.php.net/bug.php?id=76029
 opcache.optimization_level=0
 ```
-    <br>
+
 </details>  
 
 ### Postfix Installation
@@ -839,7 +839,7 @@ sudo rabbitmqctl add_vhost /DE_spryker_zed
 sudo rabbitmqctl set_user_tags admin administrator
 sudo rabbitmqctl set_permissions -p /DE_spryker_zed admin ".*" ".*" ".*"
 ```
-Repeat for '/AT_spryker_zed', '/US_spryker_zed' virtual hosts.
+Repeat for `/AT_spryker_zed`, `/US_spryker_zed` virtual hosts.
 
 *  Spryker user configuration.
 
@@ -848,7 +848,7 @@ sudo rabbitmqctl add_user spryker password
 sudo rabbitmqctl set_user_tags spryker administrator
 sudo rabbitmqctl set_permissions -p /DE_spryker_zed spryker ".*" ".*" ".*"
 ```
-Repeat for '/AT_spryker_zed', '/US_spryker_zed' virtual hosts.
+Repeat for `/AT_spryker_zed`, `/US_spryker_zed` virtual hosts.
 
 ### Jenkins Installation
 To install Jenkins, do the following:
@@ -1843,9 +1843,11 @@ sudo chown -R www-data:www-data /data
 Make sure to provide secure configuration of Zed service. Sufficient security is not provided by "Basic AUTH" based on web server configuration, IP address restriction or direct VPN connection to the server.
 {% endinfo_block %}
 
-**Requirements**
+### Requirements
 
-| RDS (Managed relational database service)  |
+RDS (Managed relational database service):
+
+| Requirement | Value |
 | --- | --- |
 | Instance type |  >= db.t2.micro|
 | Database type: |  |
@@ -1853,25 +1855,33 @@ Make sure to provide secure configuration of Zed service. Sufficient security is
 | MySQL | >= 5.7 |
 | Public accessibility | no |
 
-| Elasticsearch Service   |
+Elasticsearch Service:
+
+| Requirement | Value |
 | --- | --- |
 | Instance type | >= t2.small.elasticsearch |
 | Elasticsearch version | 5.6 |
 | Volume size | >= 10 GB |
 | Endpoint | VPC |
 
-| EC2  |
+EC2:
+
+| Requirement | Value |
 | --- | --- |
 | Instance type | >= t2.medium |
 | Storage size | >= 20Gb |
 | OS | Ubuntu 18.04|
 
-| Security Groups |
+Security groups:
+
+| Requirement | Value |
 | --- | --- |
 | Incoming ports | 22, 80, 443 |
 
 
-|  List of Connections  |
+List of connections:  
+
+| Requirement | Value |
 | --- | --- |
 | Nginx | TCP: 80, 443 (Any) |
 | Yves, Glue, Zed | TCP: 9000 ( Nginx ) |
@@ -1918,10 +1928,12 @@ redis-cli --latency -h {% raw %}{{{% endraw %}ELASTICACHE_ENDPOINT{% raw %}}}{% 
 ```
 
 {% info_block infoBox "Benchmark result examples:" %}
-avg: 0.48 (20038 samples) - cache.t2.micro </br>avg: 0.31 (20047 samples) - cache.t2.medium
+
+avg: 0.48 (20038 samples) - cache.t2.micro </br>avg: 0.31 (20047 samples) - cache.t2.medium)
+
 {% endinfo_block %}
 
 ## List of Connections
 The following diagramm illustrates the connections:
 
-![List of connections](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/connections-list.jpg) 
+![List of connections](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/connections-list.jpg)

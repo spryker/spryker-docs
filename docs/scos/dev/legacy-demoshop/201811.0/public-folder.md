@@ -51,5 +51,7 @@ Due to strict nginx configuration, only the content that already exists is publi
 These folders can contain any file that needs to be accessed and loaded by the browser. Contents can be addressed by using the `/assets/<path>/<filename>.<ext>` path. Assets must be placed here.
 
 {% info_block infoBox "Yves Themes Folders" %}
-To avoid conflicts and incorrect behaviour in Yves UI, create a subfolder (`@project/public/Yves/assets/<theme>`
-{% endinfo_block %} for each theme you have in your project, and place the related files there.)
+
+To avoid conflicts and incorrect behaviour in Yves UI, create a subfolder (`@project/public/Yves/assets/<theme>`) for each theme you have in your project, and place the related files there.
+
+{% endinfo_block %}

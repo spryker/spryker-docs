@@ -24,13 +24,13 @@ related:
 ---
 
 Product blocks are blocks that can be embedded in the product template, for which we can specify on which specific product we want them to be rendered.
-		
+
 To install the Product CMS Block in your project, follow the steps described in this procedure:
 
 1. Install the CMS Block Product Connector module with composer: 
 
 ```bash
-"spryker/cms-block-product-connector": "^1.0.0"
+composer require spryker/cms-block-product-connector:"^1.0.0"
 ```
 
 2. Register the form plugin by adding `CmsBlockProductFormPlugin` to the CMS Block GUI dependency provider `\Pyz\Zed\CmsBlockGui\CmsBlockGuiDependencyProvider`.
@@ -98,7 +98,7 @@ class CollectorDependencyProvider extends SprykerCollectorDependencyProvider
 }
 ```
 
-5. Register the product list plugin (optional). 
+5. Register the product list plugin (optional).
 To show which product abstracts are assigned to a block on a block view page, add `CmsBlockProductAbstractListViewPlugin` to the CMS Block GUI dependency provider.
 
 ```php
@@ -164,7 +164,7 @@ Create a new Twig template under the `src/Pyz/Yves/CmsBlock/Theme/default/templa
 #### To configure the block:
 
 1. In Zed, go to the CMS section and navigate to the blocks section.
-2. Click **Create CMS Block**, to create a new block. 
+2. Click **Create CMS Block**, to create a new block.
 3. From the template drop-down, select the new added template and name the new block.
 4. Set a product or a list of products in the `ProductField` field. While typing, the product search will offer suggestions from the product list.
 5. Set the block active if you need to use it straight away.

@@ -114,8 +114,10 @@ Spryker Commerce OS uses Symfony forms which are defined in PHP classes; in the 
 ```
 
 {% info_block errorBox %}
-We strongly recommend defining the form action buttons (like submit
-{% endinfo_block %} in twig templates and not in the php form classes. Doing this, it’s much easier to extend the forms and to include forms in other forms.)
+
+We strongly recommend defining the form action buttons (like submit) in twig templates and not in the php form classes. Doing this, it’s much easier to extend the forms and to include forms in other forms.
+
+{% endinfo_block %}
 
 ## How to Add Tables Using DataTables
 The first step to display tables in a template is to add one line of code inside a widget element (``):
@@ -261,8 +263,10 @@ And for CSS
 ```
 
 {% info_block warningBox %}
-Always add `{% raw %}{{{% endraw %} parent(
-{% endinfo_block %} {% raw %}}}{% endraw %}` inside CSS and Javascript extended blocks to keep the block content from the parent’s layout.)
+
+Always add `{% raw %}{{{% endraw %} parent() {% raw %}}}{% endraw %}` inside CSS and Javascript extended blocks to keep the block content from the parent’s layout.)
+
+{% endinfo_block %}
 
 {% info_block warningBox %}
 Not using parent will replace the content of the blocks instead of appending.

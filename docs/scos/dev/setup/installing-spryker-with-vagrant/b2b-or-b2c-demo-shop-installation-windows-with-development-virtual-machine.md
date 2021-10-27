@@ -48,7 +48,7 @@ To install the VM, you need to run the following commands. For this purpose, use
 * Start typing "Git Bash".
 
 * In the search results, right-click **Git Bash** and select **Run as administrator**.
-![Run git bash as administrator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/B2B+Demo+Shop+Installation+Guide/run-git-bash-as-administrator.png) 
+![Run git bash as administrator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/B2B+Demo+Shop+Installation+Guide/run-git-bash-as-administrator.png)
 
 2. **Create the folder in which you want the source code to be placed:**
 
@@ -81,9 +81,13 @@ awk '/^end/{print "  config.hostmanager.enabled = true\n  config.hostmanager.man
 ```
 
 5. **Build and start the virtual machine**:
+
 {% info_block warningBox %}
+
 This step creates the VM without cloning the actual codebase. It will be done in the **step 3.8**.
+
 {% endinfo_block %}
+
 * For a B2B Demo Shop:
 ```bash
 VM_SKIP_SF="1" VM_PROJECT=b2b-demo-shop SPRYKER_REPOSITORY="https://github.com/spryker-shop/b2b-demo-shop.git" vagrant up
@@ -146,9 +150,9 @@ sudo chmod og+rwx .
        net use s: \\spryker-vagrant\project\current /persistent:yes
        ```
 
-        {% info_block infoBox %}
-The share will be mounted as the s: drive.
-{% endinfo_block %}
+    {% info_block infoBox %}
+    The share will be mounted as the s: drive.
+    {% endinfo_block %}
 
 8. **Copy the codebase to the VM:**
 
@@ -198,7 +202,9 @@ Make sure that the codebase has been copied completely.
           ```
 
 {% info_block warningBox %}
-If you are using a devvm version lower than 2.2.0, run the *ulimit -n 65535* command first.
+
+If you are using a devvm version lower than 2.2.0, run the `ulimit -n 65535` command first.
+
 {% endinfo_block %}
 
 Executing these steps will install all required dependencies, and run the installation process. Also, this will install the demo data and export it to `Redis` and `Elasticsearch`.

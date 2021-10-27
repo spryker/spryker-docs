@@ -39,8 +39,6 @@ sudo -i apt-get install php5-xdebug
 
 1. **Make sure that Xdebug is enabled in your php.ini file**
 
-In your virtual machine, navigate to `/etc/php5/mods-available/xdebug.ini` and set:
-=======
 2. Enable Xdebug by updating `/etc/php5/mods-available/xdebug.ini` with the following:
 
 ```text
@@ -56,7 +54,7 @@ In your virtual machine, navigate to `/etc/php5/mods-available/xdebug.ini` and s
  export XDEBUG_CONFIG='idekey=PHPSTORM'
 ```
 
-3. Restart PHP:
+4. Restart PHP:
 
 ```php
 sudo /etc/init.d/php5-fpm restart
@@ -67,6 +65,7 @@ If the restart is successful, you should get the following message: `[ ok ] Rest
 ## Configuring servers
 
 Define servers in PhpStorm:
+
 1. In PhpStorm, go to **Preferences** > **Languages & Frameworks** > **PHP** > **Servers**.
 2. Add a new server:
     1. Select **+**.
@@ -74,7 +73,8 @@ Define servers in PhpStorm:
     3. For **Host**, enter *zed.mysprykershop.com*.
     4. Select **Use path mappings**.
     5. Set **Absolute path on server** to `/data/shop/development/current`.
-![Define servers in PHPStorm](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Debugging/Debugging+Setup+for+VM+Prior+Version+91/define-Servers-Php-Storm.png) 
+
+![Define servers in PHPStorm](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Debugging/Debugging+Setup+for+VM+Prior+Version+91/define-Servers-Php-Storm.png)
 
 3. For Yves, add another server. Copy the settings from the previous step, but, for **Name** and **Host**, enter.
 
@@ -128,6 +128,6 @@ To manage debugging sessions directly in a browser, configure browser bookmarkle
 2. Bookmark the generated links.
 
 
-As a Chrome user, you can install the “Xdebug helper” extension. Under options set the IDE Key to “PhpStorm”. Everybody else can thengenerate bookmarklets with IDE key set to “PhpStorm” ([Debugger bookmarklets generator for PhpStorm](http://www.jetbrains.com/phpstorm/marklets/)).
-=======
+As a Chrome user, you can install the “Xdebug helper” extension. Under options set the IDE Key to “PhpStorm”. Everybody else can then generate bookmarklets with IDE key set to “PhpStorm” ([Debugger bookmarklets generator for PhpStorm](http://www.jetbrains.com/phpstorm/marklets/)).
+
 Now you can manage debugging sessions using the bookmarks you've created.

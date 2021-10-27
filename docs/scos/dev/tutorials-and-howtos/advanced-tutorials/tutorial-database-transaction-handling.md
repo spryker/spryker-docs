@@ -27,7 +27,9 @@ redirect_from:
 <!--Used to be: http://spryker.github.io/tutorials/zed/database-transaction-handling/-->
 
 {% info_block warningBox %}
+
 To reduce boilerplate code and properly handle database transactions you can use `Spryker\Zed\Kernel\Persistence\EntityManager\TransactionTrait`.
+
 {% endinfo_block %}
 
 ## Usage

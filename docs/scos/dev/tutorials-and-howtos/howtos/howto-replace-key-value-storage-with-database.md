@@ -106,6 +106,7 @@ class SynchronizationBehaviorConfig extends SprykerSynchronizationBehaviorConfig
 }
 ```
 {% info_block infoBox %}
+
 By changing `isSynchronizationEnabled` to false you disable the synchronization for all modules (storage and search). To keep the search synchronization (essential for the search functionality), go through all installed `Search modules and modify the schema.xml` file, for example:
 
 spy_product_page_search.schema.xml
@@ -267,5 +268,7 @@ class StorageDatabaseDependencyProvider extends SprykerStorageDatabaseDependency
 ```
 
 {% info_block infoBox %}
+
 To use MySQL or MariaDB, replace `Spryker\Client\StorageDatabase\Plugin\PostgreSqlStorageReaderProviderPlugin` with `Spryker\Client\StorageDatabase\Plugin\MySqlStorageReaderPlugin`.
+
 {% endinfo_block %}

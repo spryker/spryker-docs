@@ -27,7 +27,9 @@ redirect_from:
 This article describes how to configure debugging in your development environment.
 
 {% info_block warningBox %}
+
 To configure debugging for the VM below version 91, see [Configuring debugging in Vagrant with VM below version 91](https://documentation.spryker.com/configuring-debugging-in-vagrant-with-vm-below-version-91).
+
 {% endinfo_block %}
 
 ## Installing the Xdebug module
@@ -85,14 +87,14 @@ sudo -i bash -c "phpdismod xdebug && systemctl restart php7.4-fpm.service"
 ## Configuring servers
 
 Define servers in PhpStorm:
-    1. In PhpStorm, go to **Preferences** > **Languages & Frameworks** > **PHP** > **Servers**.
-    2. Add a new server:
-        1. Select **+**.
-        2. Enter a **Name**. For example, `zed.mysprykershop.com` (it is used in CLI below).
-        3. For **Host**, enter `~^zed\.de\..+\.local$`.
-        4. Select **Use path mappings**.
-        5. For **Absolute path on server**, select `/data/shop/development/current`.
-    3. Add another server for Yves. Copy the settings from the previous step, but, for **Host**, enter `~^www\.de\..+\.local$`.
+1. In PhpStorm, go to **Preferences** > **Languages & Frameworks** > **PHP** > **Servers**.
+2. Add a new server:
+    1. Select **+**.
+    2. Enter a **Name**. For example, `zed.mysprykershop.com` (it is used in CLI below).
+    3. For **Host**, enter `~^zed\.de\..+\.local$`.
+    4. Select **Use path mappings**.
+    5. For **Absolute path on server**, select `/data/shop/development/current`.
+3. Add another server for Yves. Copy the settings from the previous step, but, for **Host**, enter `~^www\.de\..+\.local$`.
 
 
 ## Configuring debugger

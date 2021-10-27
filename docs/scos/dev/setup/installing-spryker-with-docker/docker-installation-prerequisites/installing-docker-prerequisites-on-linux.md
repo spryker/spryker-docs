@@ -20,17 +20,20 @@ redirect_from:
   - /v3/docs/en/docker-install-prerequisites-linux-201907
 ---
 
-This article describes Docker installation prerequisites for Linux.
+This document describes the prerequisites for installing Spryker in Docker on Linux.
+
 
 ## Minimum system requirements
 
-Review the minimum system requirements in the table:
+Review the system and software requirements in the table.
 
-| System Requirement | Additional Details |
+| Requirement | Value or version |
 | --- | --- |
-| vCPU: 2 | This is a minimum requirement. The value can be higher than 2. A lower value is not sufficient for running the application. |
-| RAM: 4GB | This is a minimum requirement. The value can be higher than 4GB. A lower value is not sufficient for installation purposes. |
-| Swap: 2GB | This is a minimum requirement. The value can be higher than 2GB. A lower value is not sufficient for installation purposes. |
+| Docker | 18.09.1 or higher |
+| Docker Compose | 1.28 or 1.29 |  
+| vCPU | 2 or more |
+| RAM  | 4GB or more |
+| Swap  | 2GB or more |
 
 ## Installing and configuring required software
 Follow the steps to install and configure the required software:
@@ -57,7 +60,7 @@ Signup for Docker Hub is not required.
 
 5. Install Docker-compose:
 ```shell
-sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 ```
 6. Apply executable permissions to the binary:
 ```shell

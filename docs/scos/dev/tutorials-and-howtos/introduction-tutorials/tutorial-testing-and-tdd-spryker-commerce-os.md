@@ -23,7 +23,9 @@ redirect_from:
 ---
 
 {% info_block infoBox %}
+
 This tutorial is also available on the Spryker Training web-site. For more information and hands-on exercises, visit the [Spryker Training](https://training.spryker.com/courses/developer-bootcamp) web-site.
+
 {% endinfo_block %}
 
 ## Challenge Description
@@ -37,7 +39,9 @@ Using TDD, you will write the test first, see it fails, and then write the strin
 As everything in Spryker is modular, tests are also modular. To build a new test, you simply add a new module inside your tests.
 
 {% info_block warningBox %}
+
 Spryker introduces a new namespace for testing in your project called **PyzTest**.
+
 {% endinfo_block %}
 
 As you are going to work with Zed, the test module will be for Zed:
@@ -185,7 +189,9 @@ A test in Spryker consists of three main blocks:
 * **Act** - to act on the data.
 
 {% info_block infoBox %}
+
 In the case described in this tutorial, **Act** will be calling the facade method.
+
 {% endinfo_block %}
 
 * **Assert** - to check the results.
@@ -226,7 +232,9 @@ Now you can write the actual logic (feature) to reverse a string and make the te
 2. Add the facade and the needed logic to reverse the string in a model. Your Zed module should have a `StringReverserConfig` and a `StringReverserDependencyProvider` so that the class locator can work with you test.
 
 {% info_block warningBox %}
+
 Use the code generators to generate the module in Zed console `code:generate:module:zed StringReverser`.
+
 {% endinfo_block %}
 
 **Code sample**

@@ -36,16 +36,16 @@ Zed integration:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Application;
- 
+
 use Spryker\Zed\Application\ApplicationDependencyProvider as SprykerApplicationDependencyProvider;
 use Spryker\Zed\Twig\Communication\Plugin\Application\TwigApplicationPlugin;
- 
+
 class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 {
     // ...
- 
+
     /**
      * @return \Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface[]
      */
@@ -57,23 +57,23 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
             // ...
         ];
     }
- 
+
     // ...
 ```
 Yves integration:
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\Application;
- 
+
 use Spryker\Yves\Application\ApplicationDependencyProvider as SprykerApplicationDependencyProvider;
 use Spryker\Yves\Twig\Plugin\Application\TwigApplicationPlugin;
- 
+
 class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 {
     // ...
- 
+
     /**
      * @return \Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface[]
      */
@@ -85,7 +85,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
             // ...
         ];
     }
- 
+
     // ...
 }
 ```
@@ -114,15 +114,15 @@ The extension module offers the following interfaces:
 
 ### TwigPluginInterface
 Spryker\Shared\TwigExtension\Dependency\Plugin\TwigPluginInterface
-   
+
 ```php
 <?php
- 
+
 namespace Spryker\Shared\TwigExtension\Dependency\Plugin;
- 
+
 use Spryker\Service\Container\ContainerInterface;
 use Twig\Environment;
- 
+
 interface TwigPluginInterface
 {
     /**
@@ -143,21 +143,21 @@ interface TwigPluginInterface
 This interface gets the Twig environment and `ContainerInterface` to be able to call the extension methods provided by Twig and to get other services from `ContainerInterface` if required.
 
 **TwigPluginInterface implementation example**
-   
+
 ```php
 <?php
- 
+
 namespace Spryker\Shared\Twig\Plugin;
- 
+
 use Spryker\Service\Container\ContainerInterface;
 use Spryker\Shared\TwigExtension\Dependency\Plugin\TwigPluginInterface;
 use Twig\Environment;
 use Twig\Extension\DebugExtension;
- 
+
 class DebugTwigPlugin implements TwigPluginInterface
 {
     protected const SERVICE_DEBUG = 'debug';
- 
+
     /**
      * {@inheritdoc}
      *
@@ -173,25 +173,27 @@ class DebugTwigPlugin implements TwigPluginInterface
         if ($container->has(static::SERVICE_DEBUG) === false || $container->get(static::SERVICE_DEBUG) === false) {
             return $twig;
         }
- 
+
         $twig->addExtension(new DebugExtension());
- 
+
         return $twig;
     }
 }
 ```
-   
+
 {% info_block infoBox %}
+
 There are many AbstractTwigExtensionPlugin classes. They are created for  Yves (one for `spryker/spryker` and the other for `spryker/spryker-shop`), Zed, and Service applications to help you with creating the `*TwigPlugin` classes.
+
 {% endinfo_block %}
 
 **AbstractTwigExtensionPlugin implementation example**
-   
+
 ```php
 namespace SprykerShop\Yves\ChartWidget\Plugin\Twig;
- 
+
 use SprykerShop\Yves\ShopApplication\Plugin\AbstractTwigExtensionPlugin;
- 
+
 /**
  * @method \SprykerShop\Yves\ChartWidget\ChartWidgetFactory getFactory()
  */
@@ -206,7 +208,7 @@ class ChartTwigPlugin extends AbstractTwigExtensionPlugin
         foreach ($this->getFactory()->getTwigChartFunctionPlugins() as $twigFunctionPlugin) {
             $functions = array_merge($functions, $twigFunctionPlugin->getChartFunctions());
         }
- 
+
         return $functions;
     }
 }
@@ -217,14 +219,14 @@ If you need to use the Container inside of `TwigPlugin` based on `AbstractTwigEx
 The Twig module's `DependencyProviders` have the `getTwigPlugins()` method, which needs to be overridden on the project level. All the plugins returned from this method extend the Twig service. The example below describes how to add the `*TwigPlugin`:
 
 **TwigPlugin usage**
-   
+
 ```php
 <?php
- 
+
 namespace Pyz\Yves\Twig;
- 
+
 use SprykerShop\Yves\CartPage\Plugin\Twig\CartTwigPlugin;
- 
+
 class TwigDependencyProvider extends SprykerTwigDependencyProvider
 {
     /**
@@ -243,14 +245,14 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 
 ### TwigLoaderPluginInterface
 Spryker\Shared\TwigExtension\Dependency\Plugin\TwigLoaderPluginInterface
-   
+
 ```php
 <?php
- 
+
 namespace Spryker\Shared\TwigExtension\Dependency\Plugin;
- 
+
 use Spryker\Shared\Twig\Loader\FilesystemLoaderInterface;
- 
+
 interface TwigLoaderPluginInterface
 {
     /**
@@ -268,16 +270,16 @@ interface TwigLoaderPluginInterface
 This interface returns a filesystem loader to add additional lookup paths for Twig templates to the `twig` service.
 
 **TwigLoaderPluginInterface implementation example**
-   
+
 ```php
 <?php
- 
+
 namespace Spryker\Zed\WebProfiler\Communication\Plugin\Twig;
- 
+
 use Spryker\Shared\Twig\Loader\FilesystemLoaderInterface;
 use Spryker\Shared\TwigExtension\Dependency\Plugin\TwigLoaderPluginInterface;
 use Spryker\Zed\Kernel\Communication\AbstractPlugin;
- 
+
 /**
  * @method \Spryker\Zed\WebProfiler\Communication\WebProfilerCommunicationFactory getFactory()
  * @method \Spryker\Zed\WebProfiler\WebProfilerConfig getConfig()
@@ -301,14 +303,14 @@ class WebProfilerTwigLoaderPlugin extends AbstractPlugin implements TwigLoaderPl
 The Twig module's `DependencyProviders` have the `getTwigLoaderPlugins()` method, which also needs to be overridden on the project level. The example below describes how to add the `*TwigLoaderPlugin`:
 
 **TwigLoaderPluginInterface usage**
-   
+
 ```php
 <?php
- 
+
 namespace Pyz\Yves\Twig;
- 
+
 use Spryker\Yves\Twig\Plugin\FilesystemTwigLoaderPlugin;
- 
+
 class TwigDependencyProvider extends SprykerTwigDependencyProvider
 {
     /**

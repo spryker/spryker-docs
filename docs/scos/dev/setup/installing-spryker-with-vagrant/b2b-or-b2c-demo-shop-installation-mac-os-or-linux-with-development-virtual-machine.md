@@ -112,7 +112,9 @@ vendor/bin/install
 ```
 
 {% info_block warningBox %}
-If you are using a devvm version lower than 2.2.0, run the *ulimit -n 65535* command first.
+
+If you are using a devvm version lower than 2.2.0, run the `ulimit -n 65535` command first.
+
 {% endinfo_block %}
 
 Executing these steps will install all required dependencies, and run the installation process. Also, this will install the demo data and export it to `Redis` and `Elasticsearch`.

@@ -26,8 +26,8 @@ If the configuration changed, it was necessary to run the command again for Prop
 
 To avoid running the command each time the configuration changes, we introduce a dynamic propel configuration that is:
 
-*     real-time available;
-*     fetched from the current environment configuration without running any commands.
+* real-time available;
+* fetched from the current environment configuration without running any commands.
 
 ## Integration
 
@@ -71,7 +71,9 @@ propel-config:
 ```
 
 {% info_block infoBox %}
+
 `Spryker\Zed\Propel\Communication\Console\ConvertConfigConsole ` is deprecated.
+
 {% endinfo_block %}
 
 ### 3) Delete Related JSON Files
@@ -84,7 +86,7 @@ To run Propel commands directly, set up a runtime configuration by creating the 
 
 src/Orm/Propel/propel.php
 
-```PHP
+```php
 <?php
 
 use Spryker\Shared\Config\Application\Environment;

@@ -64,7 +64,9 @@ $config[StorageConstants::STORAGE_PREDIS_CLIENT_OPTIONS] = [
 ```
 
 {% info_block infoBox %}
+
 For this configuration, one of the Redis servers should be identified as master using the parameter `alias`.
+
 {% endinfo_block %}
 
 Configuration setup for Redis Sentinel would look like this:

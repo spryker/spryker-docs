@@ -24,62 +24,65 @@ To install and configure Minubo, do the following:
 composer require spryker-eco/minubo
 ```
 2. Copy over the content from `config/config.dist.php` to `config_default.php` and add the values:
-```php...
-	use Spryker\Service\FlysystemAws3v3FileSystem\Plugin\Flysystem\Aws3v3FilesystemBuilderPlugin;
-	use Spryker\Shared\FileSystem\FileSystemConstants;
-	use SprykerEco\Shared\Minubo\MinuboConstants;
-	...
-	$config[FileSystemConstants::FILESYSTEM_SERVICE] = [
-	'minubo' => [
-	'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
-	'root' => '/minubo/',
-	'path' => 'data/',
-	'key' => '..',
-	'secret' => '..',
-	'bucket' => '..',
-	'version' => 'latest',
-	'region' => '..',
-	],
-	];
+```php
+...
+use Spryker\Service\FlysystemAws3v3FileSystem\Plugin\Flysystem\Aws3v3FilesystemBuilderPlugin;
+use Spryker\Shared\FileSystem\FileSystemConstants;
+use SprykerEco\Shared\Minubo\MinuboConstants;
+...
+$config[FileSystemConstants::FILESYSTEM_SERVICE] = [
+'minubo' => [
+'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
+'root' => '/minubo/',
+'path' => 'data/',
+'key' => '..',
+'secret' => '..',
+'bucket' => '..',
+'version' => 'latest',
+'region' => '..',
+],
+];
 
-	$config[MinuboConstants::MINUBO_FILE_SYSTEM_NAME] = 'minubo';
-	$config[MinuboConstants::MINUBO_BUCKET_DIRECTORY] = '/minubo/data/';
-	$config[MinuboConstants::MINUBO_CUSTOMER_SECURE_FIELDS] = [
-	'password',
-	'restore_password_date',
-	'restore_password_key',
-	'registration_key',
-	];
-	...
+$config[MinuboConstants::MINUBO_FILE_SYSTEM_NAME] = 'minubo';
+$config[MinuboConstants::MINUBO_BUCKET_DIRECTORY] = '/minubo/data/';
+$config[MinuboConstants::MINUBO_CUSTOMER_SECURE_FIELDS] = [
+'password',
+'restore_password_date',
+'restore_password_key',
+'registration_key',
+];
+...
 ```
 3. Copy over the content from `config/jobs.dist.php` to` jobs.php`:
-```php...
-	$jobs[] = [
-	'name' => 'minubo-export',
-	'command' => '$PHP_BIN vendor/bin/console minubo:export:data',
-	'schedule' => '*/15 * * * *',
-	'enable' => true,
-	'run_on_non_production' => false,
-	'stores' => ['DE'],
-	];
-	...
+```php
+...
+$jobs[] = [
+'name' => 'minubo-export',
+'command' => '$PHP_BIN vendor/bin/console minubo:export:data',
+'schedule' => '*/15 * * * *',
+'enable' => true,
+'run_on_non_production' => false,
+'stores' => ['DE'],
+];
+...
 ```
 4. Add Minubo console to `ConsoleDependencyProder`:
-```php...
-	use SprykerEco\Zed\Minubo\Communication\Console\MinuboConsole;
+```php
+...
+use SprykerEco\Zed\Minubo\Communication\Console\MinuboConsole;
 
-	class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
-	{
-	protected function getConsoleCommands(Container $container)
-	{
-	$commands = [
-	...
-	new MinuboConsole(),
-	];
-	...
-	return $commands;
-	}
-	...
+class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
+{
+protected function getConsoleCommands(Container $container)
+{
+$commands = [
+...
+new MinuboConsole(),
+];
+...
+return $commands;
+}
+...
 ```
 5. Add or update `FlysystemDependencyProvider` to project Service Layer:
 ```php

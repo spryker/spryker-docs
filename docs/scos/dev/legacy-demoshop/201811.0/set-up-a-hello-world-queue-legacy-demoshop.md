@@ -19,7 +19,7 @@ related:
     link: docs/scos/dev/module-migration-guides/page.version/migration-guide-rabbitmq.html
 ---
 
-This Tutorial demonstrates a simple `Hello, World` queue use case. We will create a `hello` queue and send/receive our messages to/from this queue with `Hello, World` content. 
+This Tutorial demonstrates a simple `Hello, World` queue use case. We will create a `hello` queue and send/receive our messages to/from this queue with `Hello, World` content.
 
 For this purpose, we will be using our default queue engine RabbitMQ.
 
@@ -38,9 +38,9 @@ The management UI is used for managing queues in the RabbitMQ UI therefore, we n
 3. From `Virtual Host` select `/DE_development_zed` (for other stores it might be different).
 4. Click `Set permission`.
 5. You will now see the new permission in the table.
-![Add Admin Permissions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Set+up+Hello+World+Queue/rabbitmq_admin.png){height="" width=""}
+![Add Admin Permissions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Set+up+Hello+World+Queue/rabbitmq_admin.png)
 
-![Permissions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Set+up+Hello+World+Queue/rabbitmq_permission.png){height="" width=""}
+![Permissions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Set+up+Hello+World+Queue/rabbitmq_permission.png)
 
 
 {% info_block infoBox "Note" %} If you are working with different virtual hosts, you need to add them as well.{% endinfo_block %}
@@ -64,7 +64,11 @@ getLocator()-&gt;rabbitMq()-&gt;client()-&gt;createQueueAdapter(),
 ## Creating a Simple Queue
 Before sending our messages to the `hello` queue, we need to first configure the Queue Adapter and then add queue configuration to RabbitMQ.
 
-{% info_block infoBox "Note" %}You can skip this part if you want to use the default queue adapter: `$config[QueueConstants::QUEUE_ADAPTER_CONFIGURATION_DEFAULT]`{% endinfo_block %}
+{% info_block infoBox "Note" %}
+
+You can skip this part if you want to use the default queue adapter: `$config[QueueConstants::QUEUE_ADAPTER_CONFIGURATION_DEFAULT]`
+
+{% endinfo_block %}
 
 ### Defining the Queue Adapter
 As mentioned, we can have different queue adapters for different queues. In this example, we will configure our hello queue to work with the RabbitMQ adapter.
@@ -85,7 +89,7 @@ Adding Queue Configuration to RabbitMQ
 The next step is to extend `RabbitMqConfig.php` in our project and then pass our configuration to `getQueueOptions()`:
 
 **Code sample**
-    
+
 ```php
 append($this-&gt;createQueueOption('hello', 'hello.error'));
 
@@ -93,31 +97,39 @@ append($this-&gt;createQueueOption('hello', 'hello.error'));
     }
 ?&gt;
 ```
- 
- {% info_block infoBox "Note" %} Exchanges and why do I need them? In RabbitMQ messages are sent to Exchanges, which have different types of routing. Exchanges route messages to appropriate queue or multiple queues (zero or more). {% endinfo_block %}
- 
- The following image shows how the RabbitMQ exchange and queue work together. 
+
+ {% info_block infoBox "Note" %}
+
+ Exchanges and why do I need them? In RabbitMQ messages are sent to Exchanges, which have different types of routing. Exchanges route messages to appropriate queue or multiple queues (zero or more).
+
+ {% endinfo_block %}
+
+ The following image shows how the RabbitMQ exchange and queue work together.
 ![RabbitMQ exchange](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Set+up+Hello+World+Queue/rabbitmq_exchange.png)
- 
+
  You can find more information about Exchange and Routing at:&nbsp;https://www.rabbitmq.com/tutorials/tutorial-four-php.html
- 
+
 {% info_block infoBox "Note" %} ur queue configuration is ready, once we send our first message the queue will be created. {% endinfo_block %}
 
 ## Sending Messages
 We are almost done with all queue preparation and configuration, it’s time to see some actions. Here we want to send one message to our queue and check if this message is there.
 
-@(Warning)(Using clients)(We assume that you already know how to use a client in the Controller classes, but you can also check our other tutorials or the Demoshop codebase.)
+{% info_block infoBox "Using clients" %}
+
+We assume that you already know how to use a client in the Controller classes, but you can also check our other tutorials or the Demoshop codebase.
+
+{% endinfo_block %}
 
 **To send a message to a queue:**
 
 Place a trigger to the queue API by creating a simple `controller/action` in the Demoshop.
 
-This code creates a `QueueSendMessageTransfer` and sets `Hello, World` into the body of message. 
+This code creates a `QueueSendMessageTransfer` and sets `Hello, World` into the body of message.
 
 The final step is to call `QueueClient::sendMessage()` and the trigger will be set.
 
 **Code sample**
-    
+
 ```php
 setBody('Hello, World!');
 
@@ -140,7 +152,7 @@ Next, we call the action.
 1. Open a browser and call the following url `https://mysprykershop.com/queue/send`.
 2. Check the RabbitMQ management UI `http://zed.de.project.local:15672/#/queues` to see if the hello queue is created and there is a message in there.
 
-![RabbitMQ creation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Set+up+Hello+World+Queue/rabbitmq_creation.png){height="" width=""}
+![RabbitMQ creation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Set+up+Hello+World+Queue/rabbitmq_creation.png)
 
 **Result**: You successfully created the hello queue and sent one message with `Hello, World!` inside.
 
@@ -150,7 +162,7 @@ To receive messages, you need to create another action for receiving messages fr
 To create another action for receiving a message from the `hello` queue:
 
 **Code sample**
-    
+
 ```php
 getFactory()-&gt;getQueueClient();
 
@@ -174,13 +186,13 @@ getFactory()-&gt;getQueueClient();
             'rabbitmq' =&gt; $rabbitmqReceiveOptionTransfer
         ];
     }
-    
+
 ?&gt;
 ```
 
-Result: you should be able to see this: 
+Result: you should be able to see this:
 
-![Receiving messages](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Set+up+Hello+World+Queue/rabbitmq_receive.png){height="" width=""}
+![Receiving messages](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Set+up+Hello+World+Queue/rabbitmq_receive.png)
 
 Now, open a browser and call the following url `https://mysprykershop.com/queue/receive`.
 
@@ -191,4 +203,4 @@ Until now we demonstrated working with a simple queue and performing simple send
 The `Queue` module provides specific commands for listening to queues, fetching messages and triggering registered processors. Running this command allows you to see what messages the queue is going to consume and pass to the plugins. The command syntax is as follows:
 
 ```bash
-/vendor/bin/console queue:task:start 
+/vendor/bin/console queue:task:start

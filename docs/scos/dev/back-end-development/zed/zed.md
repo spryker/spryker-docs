@@ -40,10 +40,12 @@ redirect_from:
   - /v1/docs/en/zed
 ---
 
-Zed is one of the application layers of the Spryker Commerce OS, providing the backoffice/backend functionality. 
+Zed is one of the application layers of the Spryker Commerce OS, providing the backoffice/backend functionality.
 
 {% info_block infoBox %}
+
 See [Conceptual Overview](/docs/scos/dev/architecture/conceptual-overview.html) to learn more about the Spryker applications and their layers.
+
 {% endinfo_block %}
 
 Zed is divided into three parts:

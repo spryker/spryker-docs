@@ -431,6 +431,7 @@ services:
       mail.spryker.local:
  ```
 {% info_block warningBox %}
+
 After changing a service version, make sure to re-import demo data:
 1. Remove all Spryker volumes:
 ```shell
@@ -441,7 +442,9 @@ docker/sdk clean-data
 ```shell
 docker/sdk demo-data
 ```
+
 {% endinfo_block %}
+
 You can extend service settings on other levels for specific contexts. See [regions: services:](#regions), [regions: stores: services:](#regions) and [groups: applications: endpoints: services:](#groups-applications-endpoints) to learn more.
 
 ***
@@ -619,20 +622,20 @@ If a service has a dedicated configuration, it is configured and run when the cu
 
 The following services are supported:
 
-*     blackfire
-*     broker
-*     dashboard
-*     database
-*     key_value_store
-*     kibana
-*     mail_catcher
-*     redis-gui
-*     scheduler
-*     search
-*     session
-*     swagger
-*     tideways
-*     webdriver
+* blackfire
+* broker
+* dashboard
+* database
+* key_value_store
+* kibana
+* mail_catcher
+* redis-gui
+* scheduler
+* search
+* session
+* swagger
+* tideways
+* webdriver
 
 ***
 ### blackfire:

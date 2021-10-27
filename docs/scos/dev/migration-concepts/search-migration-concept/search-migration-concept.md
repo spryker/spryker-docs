@@ -32,9 +32,9 @@ This article describes the changes made to add support of Elasticsearch 6 and cr
 
 The central place of the Spryker’s search sub-system is the *Search* module. This module provides APIs for:
 
-*     installing the infrastructure for search (creating/updating Elasticsearch indexes)
-*     searching for data
-*     storing the data for search (indexing documents in Elasticsearch)
+* installing the infrastructure for search (creating/updating Elasticsearch indexes)
+* searching for data
+* storing the data for search (indexing documents in Elasticsearch)
 
 Old versions of the Search module were highly coupled to Elasticsearch 5 as the search provider.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Migration+Concepts/Current+Search+state+Copy.png)

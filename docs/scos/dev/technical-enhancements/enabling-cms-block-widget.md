@@ -42,6 +42,7 @@ composer require spryker/cms-content-widget-cms-block-connector:"^1.0.0" --updat
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
+
 |Module| Expected Directory|
 |---|---|
 | CmsContentWidgetCmsBlockConnector| vendor/spryker/cms-content-widget-cms-block-connector|

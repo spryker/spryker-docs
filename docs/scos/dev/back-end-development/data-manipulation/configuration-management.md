@@ -28,10 +28,10 @@ A configuration file is a set of key-value pairs, properties, and methods that d
 
 The directory includes the following subfolders with configuration files:
 
-*     install
-*     Shared
-*     Yves
-*     Zed
+* install
+* Shared
+* Yves
+* Zed
 
 These configuration files are used only for the global environment configuration, like database credentials, URLs, or the search engine ports. For settings that are used inside a specific module, use the module configuration instead.
 

@@ -124,6 +124,7 @@ YVES_HOST_PROTOCOL="https://"
 ZED_HOST="spryker-zed.herokuapp.com"
 ZED_HOST_PROTOCOL="https://"
 ```
+
 Configuration for Data application (development environment only):
 ```php
 APPLICATION_ENV="development-heroku"
@@ -148,8 +149,6 @@ Depending on your infrastructure, you might want to configure `GITHUB_AUTH_TOKEN
 ### HEROKU NGINX Configuration and Procfile
 
 Copy `deploy/heroku/conf/Procfile` to the root folder of your project. You can customize it according to your needs.
-
-##
 
 The general idea is that the Heroku specific configuration is read from the environment variables, which are configured in Heroku Config variables.
 

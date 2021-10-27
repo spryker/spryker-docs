@@ -30,7 +30,7 @@ This article helps you start working with tables.
 
 ## 1. Creating a new table
 
-To start defining a new table, under the `/Communication/Table/` folder that extends the `AbstractTable` class, create a new class in your module. 
+To start defining a new table, under the `/Communication/Table/` folder that extends the `AbstractTable` class, create a new class in your module.
 
 **Example:**
 
@@ -50,7 +50,9 @@ The query used for fetching the data must be injected into the constructor.
 {% info_block warningBox "Note" %}
 
 The table class must implement the following methods:
+
 * `function configure (TableConfiguration $configuration)`: here, set up the captions for the tables header, the searchable and sortable fields, and specify the raw fields.
+
 * `function prepareData (TableConfiguration $configuration)`: here, prepare the data retrieved by the query in the way you want it to be shown in the table.
 
 {% endinfo_block %}
@@ -73,7 +75,7 @@ The configuration of the table must be done with the following methods:
 * Set up raw fields—for fields containing HTML markup that should not be escaped (`addRawColumn`)
 
 **Code sample:**
-    
+
 ```php
 <?php
 
@@ -232,7 +234,7 @@ To prepare the CSV file, implement the following methods in the `Table` class:
 
 #### Implementing GetCsvHeaders
 
-This method defines the order and displayed header of the columns. 
+This method defines the order and displayed header of the columns.
 
 Return an array that has the column name of the table as the key and the displayed header as value. The values are translated.
 
@@ -295,7 +297,7 @@ protected function formatCsvRow(ActiveRecordInterface $entity): array
 
     $moduleRow[static::COL_A] = $this->utilDateTimeService->formatDateTime($entity->getCreatedAt());
     $moduleRow[static::COL_B] = $entity->getRegistered() ? 'Verified' : 'Unverified';
-    
+
     ...
 
     return $moduleRow;

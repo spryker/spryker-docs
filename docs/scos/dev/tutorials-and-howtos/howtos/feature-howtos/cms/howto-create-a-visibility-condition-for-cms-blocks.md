@@ -224,7 +224,7 @@ In our case the created form has 5 elements:
 
 4. Add or choose one CMS block in the List of Blocks for {name} Slot.
 
-   {% info_block infoBox %}
+{% info_block infoBox %}
 You should be able to see a rendered form of the customer visibility condition.
 {% endinfo_block %}
 
@@ -234,7 +234,7 @@ You should be able to see a rendered form of the customer visibility condition.
 
 7. In database, check the last added rows in `spy_cms_slot_block.conditions` and `spy_cms_slot_block_storage.data` columns.
 
-    {% info_block infoBox %}
+{% info_block infoBox %}
 They should contain the customer condition data you have set in the Back Office.
 {% endinfo_block %}
 

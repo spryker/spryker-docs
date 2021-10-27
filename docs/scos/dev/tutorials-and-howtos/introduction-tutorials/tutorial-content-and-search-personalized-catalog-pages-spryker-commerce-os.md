@@ -23,7 +23,9 @@ redirect_from:
 ---
 
 {% info_block infoBox %}
+
 This tutorial is also available on the Spryker Training web-site. For more information and hands-on exercises, visit the [Spryker Training](https://training.spryker.com/courses/developer-bootcamp) web-site.
+
 {% endinfo_block %}
 
 ## Challenge Description
@@ -116,8 +118,10 @@ class PersonalizedProductRouteProviderPlugin extends AbstractRouteProviderPlugin
 ```
 
 {% info_block infoBox %}
-The `value(
-{% endinfo_block %}` method gives a default value in case the limit value is not passed from the URL.</br>The `assert()` method checks if the limit value is a positive integer.)
+
+The `value()` method gives a default value in case the limit value is not passed from the URL.</br>The `assert()` method checks if the limit value is a positive integer.
+
+{% endinfo_block %}
 
 3. Register the `PersonalizedProductRouteProviderPlugin` to the `\Pyz\Yves\Router\RouterDependencyProvider::getRouteProvider()`method.
 
@@ -152,7 +156,10 @@ class IndexController extends AbstractController
 ```
 
 {% info_block infoBox %}
-For now, the Yves part is done. You can now go to [http://www.de.suite.local/personalized-product/12](http://www.de.suite.local/personalized-product/12) and get the personalized products page.</br>Now try [http://www.de.suite.local/personalized-product/not-positive-integer](http://www.de.suite.local/personalized-product/not-positive-integer), this should result in an 404 error as the rout in not defined.</br>The next set of steps is for work on the client. By performing those, you will connect your module to Elasticsearch. First, you need a client for that in order to connect Yves to Elasticsearch.
+
+For now, the Yves part is done. You can now go to [http://www.de.suite.local/personalized-product/12](http://www.de.suite.local/personalized-product/12) and get the personalized products page.</br>Now try [http://www.de.suite.local/personalized-product/not-positive-integer](http://www.de.suite.local/personalized-product/not-positive-integer), this should result in an 404 error as the rout in not defined.</br>The next set of steps is for work on the client. By performing those, you will connect your module to Elasticsearch.
+
+First, you need a client for that in order to connect Yves to Elasticsearch.
 {% endinfo_block %}
 
 5. Create the PersonalizedProduct's client directory in `src/Pyz/Client` and call it `PersonalizedProduct` and add the client class and interface.
@@ -253,8 +260,10 @@ class PersonalizedProductQueryPlugin implements QueryInterface
 ```
 
 {% info_block infoBox %}
-As you notice, we have the limit passed in the constructor of the query plugin. Also, the seed value is the `session_id(
-{% endinfo_block %}` of the customer and it is used with the random score from Elasticsearch. Again, you can change these values according to your needs.)
+
+As you notice, we have the limit passed in the constructor of the query plugin. Also, the seed value is the `session_id()` of the customer and it is used with the random score from Elasticsearch. Again, you can change these values according to your needs.
+
+{% endinfo_block %}
 
 7. Both the formatters and the `SearchClient` are and external dependency to our `PersonalizedProductClient`, therefore we need to use the dependency provider to get them and inject them inside our client. Create the `PersonalizedProductDependencyProvider` in `src/Pyz/Client` and get both the formatters array and the SearchClient.
 
@@ -447,7 +456,9 @@ class IndexController extends AbstractController
 ```
 
 {% info_block infoBox %}
+
 That's it for getting the personalized products. </br>To demonstrate having different personalized products for different customers. Go to [http://www.de.suite.local/personalized-product/12](http://www.de.suite.local/personalized-product/12) and check out the products. Refresh the page, you should see the same products as you still have the same session ID.</br> Now, remove the Spryker cookie so the session ID is different and refresh the page, you should see different products. This different customers with different sessions IDs get different personalized products.
+
 {% endinfo_block %}
 
 ### 3. Put the personalized products in the CMS page

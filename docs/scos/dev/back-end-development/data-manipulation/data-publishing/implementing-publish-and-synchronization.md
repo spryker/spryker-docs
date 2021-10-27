@@ -74,8 +74,7 @@ We implemented 2 message processor plugins for synchronizing data to the fronten
 You need to map your new queue to one of the plugins depending on which storage you want to use it for. The queues must be mapped in `QueueDependencyProvider::getProcessorMessagePlugins()`. For details, see section **Queue Message Processor Plugin** in the *Set Up a "Hello World" Queue* document.
 
 {% info_block infoBox %}
-It is also good practice to create an error queue for your publication queue, where errors will be posted. The error queue must be registered in `RabbitMqConfig::getQueueOptions(
-{% endinfo_block %}`. For example:)
+It is also good practice to create an error queue for your publication queue, where errors will be posted. The error queue must be registered in `RabbitMqConfig::getQueueOptions()`. For example:
 
 ```php
 protected function getQueueOptions()
@@ -86,6 +85,8 @@ protected function getQueueOptions()
     $queueOptionCollection->append($this->createQueueOption(UrlStorageConstants::URL_SYNC_STORAGE_QUEUE, UrlStorageConstants::URL_SYNC_STORAGE_ERROR_QUEUE));
     ...
 ```
+
+{% endinfo_block %}
 
 ## 3. Create Publication Table
 The next step is to create a database table that will be used as a mirror for the corresponding *Redis* or *Elasticsearch* store. For details, see [Extending the Database Schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html).
@@ -156,7 +157,7 @@ console code:generate:module:shared MyModuleStorage
 ```
 
 {% info_block infoBox %}
-As a naming convention, names of modules that publish data to Redis end with Storage (e.g. *MyModule**Storage***), and names of modules that publish to Elasticsearch end with Search (e.g. *MyModule**Search***).
+As a naming convention, names of modules that publish data to Redis end with Storage (e.g. *MyModule**Storage***, and names of modules that publish to Elasticsearch end with Search (e.g. *MyModule**Search***).
 {% endinfo_block %}
 
 ## 5. Listen to Publish Events
@@ -370,7 +371,7 @@ foreach ($productAbstracts as $productAbstract) {
 ## Additional Tasks
 ### View Event Mapping
 To see all listeners mapped for a certain event, Ctrl+Click it in PhpStorm. The following example shows that the *SPY_URL_CREATE* event has **6** listeners mapped to it, which means that there will be **6** messages for this event in the **event** queue.
-![Lookup listener](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Resources+and+Developer+Tools/Publish+and+Synchronization+Reference/lookup-listener.png) 
+![Lookup listener](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Resources+and+Developer+Tools/Publish+and+Synchronization+Reference/lookup-listener.png)
 
 ### Debug Publish and Synchronize
 To debug Publish and Synchronize:

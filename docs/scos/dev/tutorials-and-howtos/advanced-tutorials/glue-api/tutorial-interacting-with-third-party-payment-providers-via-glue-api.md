@@ -17,7 +17,7 @@ redirect_from:
   - /v4/docs/en/t-interacting-with-third-party-payment-providers-via-glue-api
   - /v3/docs/t-interacting-with-third-party-payment-providers-via-glue-api
   - /v3/docs/en/t-interacting-with-third-party-payment-providers-via-glue-api
-  
+
 related:
   - title: Technology Partner Integration
     link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
@@ -34,8 +34,8 @@ In this tutorial, you will find out how to invoke third parties in the API payme
 ## 1. Create New Module
 To implement third party interactions, first, you need to create a new module or extend an existing one. Let us create one on the Project level. The module needs to interact with 2 layers of Spryker Commerce OS: **Glue** (API) and **Zed** (backend). Thus, you need to create the following folders for module *MyModule*:
 
-*     `src/Pyz/Glue/MyModule`
-*     `src/Pyz/Zed/MyModule`
+* `src/Pyz/Glue/MyModule`
+* `src/Pyz/Zed/MyModule`
 
 The module needs to implement 2 plugins:
 1. A plugin that maps the response of the `/checkout` API endpoint and fills it with the necessary attributes.
@@ -46,7 +46,8 @@ The `redirectUrl` and `isExternalRedirect` attributes are auto-mapped out of the
 {% endinfo_block %}
 2. A plugin to process the response of the payment service provider.
 The overall interaction diagram between Glue API, the API Client, and the third party is as follows:
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Advanced/Glue+API/Tutorial+Interacting+with+Third+Party+Payment+Providers+via+Glue+API/multi-step-checkout-glue-infrastructure.png) 
+
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Advanced/Glue+API/Tutorial+Interacting+with+Third+Party+Payment+Providers+via+Glue+API/multi-step-checkout-glue-infrastructure.png)
 
 ## 2. Implement Checkout Response Mapper Plugin
 First, we need to implement a plugin that maps the checkout response and fills it with the necessary redirect URL and other attributes that are mapped. To do so, create a plugin file on the **Glue** layer: `src/Pyz/Glue/MyModule/Plugin/CheckoutRestApi/CheckoutResponseMapperPlugin.php`.
@@ -96,8 +97,8 @@ To process the data, we need to implement another plugin on the Zed layer. The p
 
 The plugin must extend the OrderPaymentUpdaterPluginInterface and implement the following two functions:
 
-*     `isAppplicable` - this function determines whether a specific payment is processed by the plugin. The function must return true if the payment should be processed, otherwise it must return false.
-*     `updateOrderPayment` - this function should update the payment data in the database.
+* `isAppplicable` - this function determines whether a specific payment is processed by the plugin. The function must return true if the payment should be processed, otherwise it must return false.
+* `updateOrderPayment` - this function should update the payment data in the database.
 
 To help you understand which payments need to be processed, you can use the optional **paymentIdentifier** field in POST requests to the `/order-payments` endpoint. To make sure it is always present in a request, you may require the API client to set the field to a specific value to invoke your payment plugin. The value of the field can be retrieved using the `getPaymentIdentifier` helper function.
 

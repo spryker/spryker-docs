@@ -16,12 +16,12 @@ redirect_from:
 
 [Spryker Jarvis](https://github.com/spryker/jarvis) is the command-line tool that allows you to analyze your Spryker-based project and eventually migrate it to the most up-to-date version of Spryker. The tool helps you to quickly get answers to the following questions:
 
-*     How outdated is your project compared to the latest Spryker product release?
-*     What features does your project already use, and what are the other features it could use?
-*     What should you do to update your project to the latest Spryker product release?
-*     How did the new Spryker module version affect your project?
-*     How far are your modules behind the latest Spryker minor and major module versions?
-*     What features are compatible with your current project version?
+* How outdated is your project compared to the latest Spryker product release?
+* What features does your project already use, and what are the other features it could use?
+* What should you do to update your project to the latest Spryker product release?
+* How did the new Spryker module version affect your project?
+* How far are your modules behind the latest Spryker minor and major module versions?
+* What features are compatible with your current project version?
 
 Spryker Jarvis is meant mostly for developers working on the Spryker projects who want to get a clear view of what it takes to update their project to the latest product release version of Spryker. The tools can also be useful for project managers, as it answers the question “How outdated is the project?“ and helps to estimate efforts to update the project.
 
@@ -75,7 +75,7 @@ To see this view, run `node jarvis.js <path to your spryker project folder>` in 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Migrating+Your+Project+to+the+Latest+Spryker+Version+with+Spryker+Jarvis/Screenshot+2020-08-04a+at+13.58.50.png)
 
 It can be that a dependency has been upgraded, but no migration is needed. In this case, we will highlight it:
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Migrating+Your+Project+to+the+Latest+Spryker+Version+with+Spryker+Jarvis/Screenshot+2020-08-04+at+14.00.13.png){height="428" width="312"}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Migrating+Your+Project+to+the+Latest+Spryker+Version+with+Spryker+Jarvis/Screenshot+2020-08-04+at+14.00.13.png)
 
 In this view, under the list of features to upgrade and the dependencies, you can also check the features you don’t use but might be interested in. The recently released features are marked as *New feature*:
 

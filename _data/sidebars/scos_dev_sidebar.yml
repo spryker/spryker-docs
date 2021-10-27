@@ -67,7 +67,7 @@ entries:
       - title: Upgrading to the latest version of Node.js inside devwm
         url: /docs/scos/dev/setup/installing-spryker-with-vagrant/upgrading-to-the-latest-version-of-node.js-inside-devwm.html
     - title: Post-Installation Steps and Additional Info
-      url: /docs/scos/dev/setup/post-installation-steps-and-additional-info.html    
+      url: /docs/scos/dev/setup/post-installation-steps-and-additional-info.html
     - title: Composer
       url: /docs/scos/dev/setup/composer.html
     - title: Configuring the database server
@@ -723,7 +723,7 @@ entries:
         - "202009.0"
         - "202108.0"
       - title: Glue API - Product feature integration
-        url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-feature-integration.html      
+        url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-feature-integration.html
       - title: Glue API - Product Labels feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-labels-feature-integration.html
         include_versions:
@@ -762,7 +762,7 @@ entries:
       - title: Glue API - Product Image Sets feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-image-sets-feature-integration.html
       - title: Glue API - Product price feature integration
-        url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-price-feature-integration.html       
+        url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-price-feature-integration.html
       - title: Glue API - Product Relations feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-relations-feature-integration.html
       - title: Glue API - Promotions and Discounts feature integration
@@ -850,7 +850,7 @@ entries:
       - title: Shared Carts feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/shared-carts-feature-integration.html
         include_versions:
-        - "201907.0"    
+        - "201907.0"
     - title: Agent Assist feature integration
       url: /docs/scos/dev/feature-integration-guides/agent-assist-feature-integration.html
     - title: Agent Assist + Cart feature integration
@@ -2218,7 +2218,7 @@ entries:
       url: /docs/scos/dev/data-import/importing-product-data-with-a-single-file.html
       include_versions:
       - "202009.0"
-      - "202108.0"  
+      - "202108.0"
   - title: Migration Concepts
     nested:
     - title: Decimal Stock migration concept
@@ -2390,7 +2390,7 @@ entries:
       url: /docs/scos/dev/legacy-demoshop/development.html
       include_versions:
       - "201811.0"
-  - title: Technical Enhancements
+  - title: Technical enhancements
     nested:
     - title: Separating different endpoint bootstraps
       url: /docs/scos/dev/technical-enhancements/separating-different-endpoint-bootstraps.html
@@ -4097,12 +4097,6 @@ entries:
         - "202108.0"
     - title: Twig and TwigExtension
       url: /docs/scos/dev/sdk/twig-and-twigextension.html
-    - title: Development
-      url: /docs/scos/dev/sdk/development.html
-      include_versions:
-      - "202001.0"
-      - "202009.0"
-      - "202108.0"
     - title: Code Generator
       url: /docs/scos/dev/sdk/code-generator.html
       include_versions:
@@ -4120,7 +4114,6 @@ entries:
   - title: Tutorials and HowTos
     nested:
     - title: Introduction Tutorials
-      url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/introduction-tutorials.html
       nested:
       - title: Tutorial - Checkout and Step Engine - Spryker Commerce OS
         url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-checkout-and-step-engine-spryker-commerce-os.html
@@ -4896,7 +4889,7 @@ entries:
       - title: State machine cookbook - part I - state machine fundamentals
         url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-part-i-state-machine-fundamentals.html
   - title: Updating a Spryker-based project
-    url: /docs/scos/dev/updating-a-spryker-based-project.html    
+    url: /docs/scos/dev/updating-a-spryker-based-project.html
   - title: Analyzing and upgrading your project with Spryker Jarvis
     url: /docs/scos/dev/analyzing-and-upgrading-your-project-with-spryker-jarvis.html
   - title: Code contribution guide

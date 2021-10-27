@@ -50,9 +50,11 @@ Inside `QueryInterface`, create an instance of `\Elastica\Query`, configure it t
 
 This is the point where configuring the query is completely up to you. Use Elastica to alter the query to your needs, add filters, aggregations, boosts, sorting, pagination, or anything else you like and Elasticsearch allows you.
 {% info_block infoBox %}
-The `QueryInterface` instance is a stateful class; sometimes, the `getSearchQuery(
-{% endinfo_block %}` method is called multiple times and alters the original query (see [Expanding queries](#expanding)), so make sure that it returns the same instance. This can be achieved by creating the `\Elastica\Query` instance at construction time and returning it in the `getSearchQuery()` method.)
+The `QueryInterface` instance is a stateful class; sometimes, the `getSearchQuery()` method is called multiple times and alters the original query (see [Expanding queries](#expanding)), so make sure that it returns the same instance. This can be achieved by creating the `\Elastica\Query` instance at construction time and returning it in the `getSearchQuery()` method.
+{% endinfo_block %}
+
 Besides, this new `QueryInterface ` instance has to implement `Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextAwareQueryInterface`. To be compliant with this interface, implementations for the `::setSearchContext()` and `::getSearchContext()` methods must be provided. This is needed for setting and maintaining a search context that would later be used during the search process, particularly for resolving the correct Elasticsearch index for search. For more information, see [Search migration concept](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html).
+
 
 <details open>
 <summary markdown='span'>Query</summary>
@@ -298,7 +300,9 @@ Autocompletion adds the functionality to predict the rest of the word or search 
 `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\CompletionQueryExpanderPlugin` provides top completion terms for full-text search queries. Typical usage for this plugin is autocompleting the input of users with the top result when they type something in the full-text search field and providing more suggestions as they type. The suggestions are collected from the `completion_terms` field of the `page` index map. Hence, make sure to store only the information inside the field that you’d like to use for this purpose. The necessary result formatter for this plugin is `\Spryker\Client\SearchElasticsearch\Plugin\ResultFormatter\CompletionResultFormatterPlugin`.
 
 {% info_block infoBox "Autocompletion preparations" %}
+
 To enable autocompletion when the user types, add some analyzers to the full-text search fields. Without this, the standard analyzer of Elasticsearch only provides suggestions after each completed word. The solution to providing mid-word suggestions is to add an [edge ngram filter](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-edgengram-tokenfilter.html) to the fields in which you are searching. To add this behavior to the `page` index, add the following settings to your `src/Pyz/Shared/Search/Schema/page.json` file. Keep in mind that for existing indexes, changing the analyzers is not possible, so you need to set it up from the ground.
+
 {% endinfo_block %}
 
 <details open>

@@ -24,7 +24,7 @@ redirect_from:
   - /v1/docs/en/client
 ---
 
-This article provides general information about the Client part of the Yves applications layer and describes how to use it. 
+This article provides general information about the Client part of the Yves applications layer and describes how to use it.
 
 {% info_block infoBox %}
 See [Conceptual Overview](/docs/scos/dev/architecture/conceptual-overview.html) to learn more about the Spryker applications and their layers.
@@ -51,7 +51,7 @@ The ClientClient’s purpose is to encapsulate the logic that runs the shop inde
 `getClient()` method in Yves
 
 Spryker provides several clients. For instance there is a cart client which contains methods like `addItem()` or `removeItem()`. And there is a catalog client that handles query strings. In each module, you can access the related Client with the `getClient()` method, which is available in controllers and plugins.
-![Yves Get Client](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Yves/Client/yves-getclient.png) 
+![Yves Get Client](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Yves/Client/yves-getclient.png)
 
 The following example shows how the cart Client is used inside the `CartController.` As you can see, the Client uses [transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html) as an input parameter.
 
@@ -87,7 +87,7 @@ class CartController extends AbstractController
         $itemTransfer = new ItemTransfer();
         $itemTransfer->setId($sku);
         $itemTransfer->setQuantity($quantity);
-        
+
         // Add the item:
         //  Behind this there is a request to Zed.
         //  The response is stored in the session.
@@ -117,4 +117,3 @@ The request from Yves to Zed involves two important classes:
 
 ## What’s next?
 To implement a Client for your project, see [Implementing a Client](/docs/scos/dev/back-end-development/client/implementing-a-client.html).
-

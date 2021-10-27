@@ -87,22 +87,28 @@ curl -XDELETE 'http://localhost:9200/_all'
 
 In this step, DE_development_zed database will be dropped if it already exists.
 
+```shell
 CURRENT_STORE=`php -r "echo require 'config/Shared/default_store.php';"` sudo dropdb --if-exists "${CURRENT_STORE}_development_zed"
+```
 
 3. **Clear Redis:**
 
+```shell
 redis-cli -p 10009 flushdb
-
-4. **Install dependencies Install composer dependencies**:
-
-```bash
-php composer.phar install
 ```
 
-Install npm dependencies:
-```bash
-npm install -d
-```
+4. **Install dependencies:**
+
+    1. Install composer dependencies:
+
+    ```bash
+    php composer.phar install
+    ```
+
+    2. Install npm dependencies:
+    ```bash
+    npm install -d
+    ```
 
 5. **Install application:**
 

@@ -65,8 +65,8 @@ You can find the default schema configuration file for the main index called `pa
 {% endinfo_block %}
 
 {% info_block warningBox %}
-If you want to disable the default mapping installation, you need to override the core configuration defined in `Spryker\Zed\SearchElasticsearch\SearchElasticsearchConfig::getJsonIndexDefinitionDirectories(
-{% endinfo_block %}` by implementing it on the project level (for example, `Pyz\Zed\Search\SearchConfig`).)
+If you want to disable the default mapping installation, you need to override the core configuration defined in `Spryker\Zed\SearchElasticsearch\SearchElasticsearchConfig::getJsonIndexDefinitionDirectories()` by implementing it on the project level (for example, `Pyz\Zed\Search\SearchConfig`).
+{% endinfo_block %}
 
 Each configured store has its index installed automatically. The name of the indexes is composed of the store name + underscore + configuration file name (for example, `de_page`).
 

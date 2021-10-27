@@ -26,5 +26,8 @@ The `XMLHttpRequest` method `setRequestHeader()` sets the value of an HTTP reque
 To update `ajax-provider.ts` for adding custom headers, add `this.headers.forEach((value: string, key: string) => this.xhr.setRequestHeader(key, value));` into Promise of the`fetch` method.
 
 {% info_block infoBox "Usage example:" %}
-this.ajaxProvider.headers.set('Accept', 'application/json');
+
+this.ajaxProvider.headers.set('Accept', 'application/json'
+);.
+
 {% endinfo_block %}

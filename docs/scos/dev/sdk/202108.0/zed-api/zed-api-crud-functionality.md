@@ -156,7 +156,9 @@ Validation errors will abort the persisting and instead return a 422 error respo
 Validators can have query container access if needed. For example, “isUnique rules might need that.
 
 {% info_block warningBox %}
+
 As per specification the members data and errors **MUST NOT** coexist in the same document.
+
 {% endinfo_block %}
 
 ### Deleting
@@ -166,4 +168,3 @@ A successful delete request returns an empty body and a 204 response code.
 The Spryker default behavior is to not fail on no-op delete. If you want to be stricter, you can customize your post processor to only allow a true delete and to throw 404 if not found (anymore). Use a post processor and check the content returned then by “remove” action. It will be an empty array if no record was found to delete.
 
 If a body is supposed to be returned, e.g. including meta data, use a 202 response code.
-

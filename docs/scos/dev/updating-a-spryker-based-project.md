@@ -207,9 +207,9 @@ Once you've completed the update, it's necessary to make sure that everything st
 
 ### 1. Run automated tests
 Automoted tests are must-have for every project in general and are very helpful in case of updates. We recommend to run the following tests:
-*     Acceptance tests - cover the most critical e-commerce functionality of your shop
-*     Functional tests - cover your Facade methods in Zed
-*     Unit tests - cover classes with complex business logic and tricky algorithms
+* Acceptance tests - cover the most critical e-commerce functionality of your shop
+* Functional tests - cover your Facade methods in Zed
+* Unit tests - cover classes with complex business logic and tricky algorithms
 
 See the [Testing](/docs/scos/dev/guidelines/testing/test-framework.html) section for information on what Spryker has to offer in terms of testing your project's code.
 
@@ -218,6 +218,7 @@ See the [Testing](/docs/scos/dev/guidelines/testing/test-framework.html) section
 The goal of the automoted tests in case of updates is not to have a 100% code coverage, but rather qualitative coverage of your critical functionality.
 
 {% endinfo_block %}
+
 ### 2. Run code analysis tools
 We find the following static code analysis tools the most helpful for running after the update and strongly recommend that you use them:
 

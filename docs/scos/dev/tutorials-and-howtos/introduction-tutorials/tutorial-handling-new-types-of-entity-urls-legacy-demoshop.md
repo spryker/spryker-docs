@@ -42,7 +42,9 @@ To begin, do the following:
 1. Extend the `spy_url` table with a new foreign-key to our entity table. Following the existing naming convention for such columns, and prefix the name with `fk_resource_`, then end with the name of the new entity.
 
 {% info_block infoBox %}
+
 For example: `fk_resource_my_entity`
+
 {% endinfo_block %}
 
 2. The propel schema XML file should appear as follows:
@@ -71,8 +73,11 @@ Pyz/Zed/MyBundle/Persistence/Propel/Schema/spy_url.schema.xml
 ## Preparing URL Transfer Object
 Define a new property for `UrlTransfer`.
 
+
 {% info_block infoBox %}
+
 The name of the new property should match the name of the newly added database column's name but must be `CamelCase` formatted.
+
 {% endinfo_block %}
 
 The transfer definition xml should appear as follows:
@@ -126,8 +131,11 @@ public function createUrlForMyEntity($url, $idMyEntity, $idLocale)
 }
 ```
 
+
 {% info_block infoBox %}
+
 The `\Spryker\Zed\Url\Business\UrlFacade::createUrl()` method persists a new URL in the database and also makes sure it will be collected to the key-value storage the next time the URL collector runs.
+
 {% endinfo_block %}
 
 ## Setting up the Frontend
@@ -138,7 +146,9 @@ In the Spryker Legacy Demoshop, a basic infrastructure is provided that automati
 This router gets a stack of `\Pyz\Yves\Collector\Creator\ResourceCreatorInterface` which handles the URL resource linked to the matching URLs.
 
 {% info_block infoBox %}
+
 This means that, if a `URL /foo` is linked to a `my_entity` record, then there must be a `ResourceCreator` for this URL that handle a `my_entity` type of resources and forwards the right information about the Controller to the Router that handles the request. </br> If there is no `ResourceCreator` registered for the `my_entity` resource type, a 404 page not found will be issued.
+
 {% endinfo_block %}
 
 To create an instance of `ResourceCreatorInterface` that provides information to a controller to handles URLs for your custom entity and register the `ResourceCreator` in the `StorageRouter`, follow the example below:

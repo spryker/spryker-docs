@@ -21,19 +21,19 @@ related:
 
 This document describes configuration options of the services shipped with Spryker in Docker by default.  Find the list of the services below:
 
-*     Database
-*     ElasticSearch
-*     Kibana UI
-*     RabbitMQ
-*     Swagger UI
-*     Redis
-*     Redis GUI
-*     MailHog
-*     Blackfire
-*     New Relic
-*     WebDriver
-*     Dashboard
-*     Tideways
+* Database
+* ElasticSearch
+* Kibana UI
+* RabbitMQ
+* Swagger UI
+* Redis
+* Redis GUI
+* MailHog
+* Blackfire
+* New Relic
+* WebDriver
+* Dashboard
+* Tideways
 
 
 {% info_block infoBox %}
@@ -298,6 +298,7 @@ By default the following applies:
 * Login is not required
 
 {% endinfo_block %}
+
 ### Configuration
 Adjust `deploy.*.yml` in the `services:` section to specify a custom endpoint:
 ```yaml

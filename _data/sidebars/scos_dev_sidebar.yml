@@ -2390,8 +2390,23 @@ entries:
       url: /docs/scos/dev/legacy-demoshop/development.html
       include_versions:
       - "201811.0"
-  - title: Technical Enhancements
+  - title: Technical enhancements
     nested:
+    - title: Updating the legacy demoshop with SCOS
+      url: /docs/scos/dev/technical-enhancements/updating-the-legacy-demoshop-with-scos/updating-the-legacy-demoshop-with-scos.html
+      nested:
+      - title: Integrating modular front end into legacy demoshop
+        url: /docs/scos/dev/technical-enhancements/updating-the-legacy-demoshop-with-scos/integrating-modular-frontend-into-legacy-demoshop.html
+      - title: Making the Legacy Demoshop Compatible with Publish & Synchronize
+        url: /docs/scos/dev/technical-enhancements/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-publish-and-synchronize.html
+      - title: Making the Legacy Demoshop Compatible with the Atomic Frontend
+        url: /docs/scos/dev/technical-enhancements/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-atomic-frontend.html
+      - title: Making the Legacy Demoshop Compatible with the Modular Frontend
+        url: /docs/scos/dev/technical-enhancements/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-modular-frontend.html
+      - title: Setting up ShopUiCompatibility Module in the Legacy Demoshop
+        url: /docs/scos/dev/technical-enhancements/updating-the-legacy-demoshop-with-scos/setting-up-shopuicompatibility-module-in-the-legacy-demoshop.html
+      - title: Twig Compatibility- Legacy Demoshop vs SCOS
+        url: /docs/scos/dev/technical-enhancements/updating-the-legacy-demoshop-with-scos/twig-compatibility-legacy-demoshop-vs-scos.html
     - title: Separating different endpoint bootstraps
       url: /docs/scos/dev/technical-enhancements/separating-different-endpoint-bootstraps.html
     - title: Multiple publish queue structure

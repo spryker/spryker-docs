@@ -14,13 +14,6 @@ redirect_from:
   - /2021080/docs/en/return-details-reference-information
   - /docs/return-details-reference-information
   - /docs/en/return-details-reference-information
-related:
-  - title: Building a return management process- Best practices
-    link: docs/scos/user/features/page.version/return-management-feature-overview/building-a-return-management-process-best-practices.html
-  - title: Managing Returns
-    link: docs/scos/user/back-office-user-guides/page.version/sales/returns/managing-returns.html
-  - title: Managing Orders
-    link: docs/scos/user/back-office-user-guides/page.version/sales/orders/managing-orders.html
 ---
 
 The *Return Management* feature allows you to create and manage returns for a sales order.

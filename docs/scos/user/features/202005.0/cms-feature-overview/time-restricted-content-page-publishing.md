@@ -8,11 +8,6 @@ originalArticleId: ef0733d4-ff3a-46f2-ac05-4637e860c58d
 redirect_from:
   - /v5/docs/time-restricted-page-publishing
   - /v5/docs/en/time-restricted-page-publishing
-related:
-  - title: Creating CMS Pages
-    link: docs/scos/user/back-office-user-guides/page.version/content/pages/creating-cms-pages.html
-  - title: Managing CMS Pages
-    link: docs/scos/user/back-office-user-guides/page.version/content/pages/managing-cms-pages.html
 ---
 
 {% info_block infoBox %}

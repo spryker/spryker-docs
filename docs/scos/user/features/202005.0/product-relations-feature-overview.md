@@ -10,15 +10,6 @@ redirect_from:
   - /v5/docs/en/product-relations-feature-overview
   - /v5/docs/cross-sell-upsell
   - /v5/docs/en/cross-sell-upsell
-related:
-  - title: Creating Product Relations
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-relations/creating-product-relations.html
-  - title: Managing Product Relations
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-relations/managing-product-relations.html
-  - title: Shop Guide - Managing Products
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-managing-products.html
-  - title: Product Relations- module relations
-    link: docs/scos/dev/feature-walkthroughs/page.version/product-relations-feature-walkthrough/product-relations-module-relations.html
 ---
 
 The Product Relations feature enables product catalog managers to create logical relations between products based on their actual properties. Product relations are displayed on the Storefront to achieve multiple purposes.

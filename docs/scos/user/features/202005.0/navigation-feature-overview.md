@@ -12,13 +12,6 @@ redirect_from:
   - /v5/docs/en/navigation-feature-summary
   - /v5/docs/navigation
   - /v5/docs/en/navigation
-related:
-  - title: Content Items Feature Overview
-    link: docs/scos/user/features/page.version/content-items-feature-overview.html
-  - title: Navigation
-    link: docs/scos/user/back-office-user-guides/page.version/content/navigation/navigation.html
-  - title: Adding Content to Storefront Pages Using Templates & Slots
-    link: docs/scos/user/back-office-user-guides/page.version/content/adding-content-to-storefront-pages-using-templates-and-slots-best-practices.html
 ---
 
 The *Navigation* feature enables product catalog managers to create intuitive navigation elements and display them on the Storefront.

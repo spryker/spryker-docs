@@ -20,11 +20,6 @@ redirect_from:
   - /v2/docs/en/multiple-currency-shipment
   - /v2/docs/shipment-calculation-rules
   - /v2/docs/en/shipment-calculation-rules
-related:
-  - title: "Reference information: Shipment method plugins"
-    link: docs/scos/dev/feature-walkthroughs/page.version/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html
-  - title: Migration Guide - Shipment
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-shipment.html
 ---
 
 The *Shipment* feature allows you to create and manage carrier companies and assign multiple delivery methods associated with specific stores, which your customers can select during the checkout. With the feature in place, you can define delivery price and expected delivery time, tax sets, and availability of the delivery method per store.

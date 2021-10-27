@@ -52,7 +52,7 @@ You can choose from the following options:
 
 * [B2B Demo Shop](/docs/scos/user/intro-to-spryker//b2b-suite.html) - a boilerplate for B2B commerce projects.
 * [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html) - a starting point for B2C implementations.
-* Separate [Features](/docs/scos/user/features/{{site.version}}/overview-of-the-feature-guides.html) and modules - you can also expand both Demo Shops with separate features and modules.
+* Separate [Features](/docs/scos/user/features/{{site.version}}/features.html) and modules - you can also expand both Demo Shops with separate features and modules.
 
 ### Installing Spryker with Docker
 We recommend starting with a Docker SDK environment. This option includes Docker and related tools to build images and run containers that match your requirements.

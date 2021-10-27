@@ -10,9 +10,6 @@ redirect_from:
   - /2021080/docs/en/discontinued-product-overview
   - /docs/discontinued-product-overview
   - /docs/en/discontinued-product-overview
-related:
-  - title: Discontinuing Products
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/discontinuing-products.html
 ---
 
 If a concrete product runs out of stock, it is tagged as out of stock and cannot be added to cart:

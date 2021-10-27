@@ -10,9 +10,6 @@ redirect_from:
   - /v1/docs/en/cart-widget-overview
   - /v1/docs/cart-widget
   - /v1/docs/en/cart-widget
-related:
-  - title: Shared Cart Feature Overview
-    link: docs/scos/user/features/page.version/shared-carts-feature-overview.html
 ---
 
 Shopping Cart is a part of the online shop where the record of the items a buyer has ‘picked up’ from the online store is kept. The shopping cart enables consumers to select products, review what they selected, make modifications or add extra items if needed, and purchase the products. Many B2B customers use multiple shopping carts to cover different purchasing purposes. With Shopping cart widget they can access their shopping carts from any place in the online shop just in one click.

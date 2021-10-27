@@ -9,9 +9,6 @@ redirect_from:
   - /2021080/docs/en/search-summary
   - /docs/search-summary
   - /docs/en/search-summary
-related:
-  - title: Managing search preferences
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/managing-search-preferences.html
 ---
 
 Spryker is shipped with Elasticsearch as the default search solution. Elasticsearch provides all the basic search functionalities. You can extend or customize it to fit your needs.

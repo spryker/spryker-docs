@@ -10,6 +10,10 @@ redirect_from:
   - /v2/docs/en/product-reviews
   - /v2/docs/product-review-feature-configuration
   - /v2/docs/en/product-review-feature-configuration
+  - /v2/docs/rating-revew-management
+  - /v2/docs/en/rating-revew-management
+  - /v2/docs/rating-reviews
+  - /v2/docs/en/rating-reviews
 related:
   - title: Product Reviews feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-reviews-feature-integration.html

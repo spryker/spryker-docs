@@ -23,7 +23,9 @@ redirect_from:
 ---
 
 {% info_block infoBox %}
+
 This tutorial is also available on the Spryker Training web-site. For more information and hands-on exercises, visit the [Spryker Training](https://training.spryker.com/courses/developer-bootcamp) web-site.
+
 {% endinfo_block %}
 
 ## Challenge Description
@@ -74,13 +76,17 @@ $stores['DEMO'] = $stores['DE'];
 3. Add a new Zed module to `src/Pyz/Zed` and call it **ApplicationDEMO**. This naming is a convention in Spryker.
 
 {% info_block infoBox %}
+
 To extend the logic for a specific shop, the module name should be `$moduleName$shopName`.
+
 {% endinfo_block %}
 4. Inside the new module, add a **Communication** layer directory and a **Controller** directory inside.
 5. Then, add a new `IndexController` for the DEMO store.
 
 {% info_block infoBox %}
+
 The main difference between the `IndexController` in step 1 and this controller is the namespace, and of course the output.
+
 {% endinfo_block %}
 
 ```php

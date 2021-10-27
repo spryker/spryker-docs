@@ -3,6 +3,182 @@ title: SCOS User Guides
 entries:
 - product: SCOS
   nested:
+  - title: Intro to Spryker
+    url: /docs/scos/user/intro-to-spryker/about-spryker.html
+    nested:
+    - title: Releases
+      url: /docs/scos/user/intro-to-spryker/releases/releases.html
+      nested:
+      - title: Release Notes
+        url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html
+        nested:
+        - title: Release notes 202108.0
+          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202108.0/release-notes-202108.0.html
+          nested:
+          - title: Security release notes 202108.0
+            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202108.0/security-release-notes-202108.0.html
+        - title: Release notes 202009.0
+          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202009.0/release-notes-202009.0.html
+          nested:
+          - title: Security release notes- 202009.0
+            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202009.0/security-release-notes-202009.0.html
+        - title: Release Notes 202102.0
+          nested:
+          - title: Security release notes- 202102.0 SEC
+            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202102.0/performance-release-notes-202102.0.html
+          - title: Security release notes- 202102.0 SEC
+            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202102.0/security-release-notes-202102.0-sec.html
+        - title: Release Notes Code Releases May, 2020
+          nested:
+          - title: Security Release Notes- Code Releases May, 2020
+            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-code-releases-may-2020/security-release-notes-code-releases-may-2020.html
+          - title: Release Notes- Code Releases May, 2020
+            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-code-releases-may-2020/release-notes-code-releases-may-2020.html
+        - title: Release Notes 202001.0
+          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202001.0/release-notes-202001.0.html
+          nested:
+          - title: Security Release Notes 202001.0
+            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202001.0/security-release-notes-202001.0.html
+          - title: Known Issues 202001.0
+            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202001.0/known-issues-202001.0.html
+        - title: Release Notes 201907.0
+          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-201907.0/release-notes-201907.0.html
+          nested:
+          - title: Security Release Notes 201907.0
+            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-201907.0/security-release-notes-201907.0.html
+        - title: Release Notes 201903.0
+          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-201903.0/release-notes-201903.0.html
+          nested:
+          - title: Security Release Notes 201903.0
+            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-201903.0/security-release-notes-201903.0.html
+        - title: Release Notes 2018.12.0
+          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-2018.12.0.html
+        - title: Release Notes 2018.11.0
+          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-2018.11.0/release-notes-2018.11.0.html
+          nested:
+          - title: Security Release Notes 2018.11.0
+            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-2018.11.0/security-release-notes-2018.11.0.html      
+      - title: Releases archive
+        url: /docs/scos/user/intro-to-spryker/releases/releases-archive.html
+        nested:
+        - title: 2017
+          nested:
+          - title: Release Notes - August - 2 2017
+            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-august-2-2017.html
+          - title: Release Notes - June - 2 2017
+            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-june-2-2017.html
+          - title: Release Notes - October - 2 2017
+            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-october-2-2017.html
+          - title: Release Notes - August - 1 2017
+            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-august-1-2017.html
+          - title: Release Notes - October - 1 2017
+            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-october-1-2017.html
+          - title: Release Notes - June - 1 2017
+            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-june-1-2017.html
+          - title: Release Notes - April - 2 2017
+            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-april-2-2017.html
+          - title: Release Notes - December - 2017
+            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-december-2017.html
+          - title: Release Notes - July - 1 2017
+            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-july-1-2017.html
+          - title: Release Notes - May - 2 2017
+            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-may-2-2017.html
+          - title: Release Notes - November - 1 2017
+            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-november-1-2017.html
+          - title: Release Notes - September - 1 2017
+            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-september-1-2017.html
+          - title: Release Notes - July - 2 2017
+            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-july-2-2017.html
+          - title: Release Notes - April - 1 2017
+            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-april-1-2017.html
+          - title: Release Notes - November - 2 2017
+            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-november-2-2017.html
+          - title: Release Notes - September - 2 2017
+            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-september-2-2017.html
+          - title: Release Notes - May - 1 2017
+            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-may-1-2017.html
+        - title: 2018
+          nested:
+          - title: Release Notes - February - 1 2018
+            url: /docs/scos/user/intro-to-spryker/releases/archive/2018/release-notes-february-1-2018.html
+          - title: Release Notes - February - 2 2018
+            url: /docs/scos/user/intro-to-spryker/releases/archive/2018/release-notes-february-2-2018.html
+          - title: Release Notes - March - 2018
+            url: /docs/scos/user/intro-to-spryker/releases/archive/2018/release-notes-march-2018.html
+          - title: Release Notes - January - 2018
+            url: /docs/scos/user/intro-to-spryker/releases/archive/2018/release-notes-january-2018.html
+          - title: Release Notes - April - 2018
+            url: /docs/scos/user/intro-to-spryker/releases/archive/2018/release-notes-april-2018.html
+    - title: Spryker videos
+      url: /docs/scos/user/intro-to-spryker/spryker-videos.html
+    - title: What's New
+      nested:
+      - title: Upcoming major module releases
+        url: /docs/scos/user/intro-to-spryker/whats-new/upcoming-major-module-releases.html
+      - title: Security updates
+        url: /docs/scos/user/intro-to-spryker/whats-new/security-updates.html
+      - title: Documentation updates
+        url: /docs/scos/user/intro-to-spryker/whats-new/documentation-updates.html
+      - title: What's new
+        url: /docs/scos/user/intro-to-spryker/whats-new/whats-new.html
+      - title: Roadmap
+        url: /docs/scos/user/intro-to-spryker/whats-new/roadmap.html
+      - title: Security audit reports
+        nested:
+        - title: "2019.11 \u2014 Security audit by SektionEins"
+          url: /docs/scos/user/intro-to-spryker/whats-new/security-audit-reports/2019.11-security-audit-by-sektioneins.html
+        - title: "2020.11 \u2014 Penetration test by Port Zero (executive summary)"
+          url: /docs/scos/user/intro-to-spryker/whats-new/security-audit-reports/2020.11-penetration-test-by-port-zero-executive-summary.html
+      - title: VAT rates reduction in Germany between July 2020 and January 2021
+        url: /docs/scos/user/intro-to-spryker/whats-new/vat-rates-reduction-in-germany-between-july-2020-and-january-2021.html
+      - title: Supported versions of PHP
+        url: /docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html
+    - title: Spryker release process
+      url: /docs/scos/user/intro-to-spryker/spryker-release-process.html
+    - title: MVP project structuring
+      url: /docs/scos/user/intro-to-spryker/mvp-project-structuring.html
+    - title: FAQ
+      url: /docs/scos/user/intro-to-spryker/faq.html
+    - title: Support
+      nested:
+      - title: How Spryker Support works
+        url: /docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html
+      - title: Handling new feature requests
+        url: /docs/scos/user/intro-to-spryker/support/handling-new-feature-requests.html
+      - title: Case Escalation
+        url: /docs/scos/user/intro-to-spryker/support/business-impact-and-case-priorities.html
+      - title: Getting support
+        url: /docs/scos/user/intro-to-spryker/support/getting-support.html
+      - title: Special- Prepare for a busy season
+        url: /docs/scos/user/intro-to-spryker/support/special-prepare-for-a-busy-season.html
+      - title: How to use the Support Portal
+        url: /docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html
+      - title: How to share secrets with the Spryker Support Team
+        url: /docs/scos/user/intro-to-spryker/support/how-to-share-secrets-with-the-spryker-support-team.html
+      - title: Understanding ticket status
+        url: /docs/scos/user/intro-to-spryker/support/understanding-ticket-status.html
+      - title: Handling security issues
+        url: /docs/scos/user/intro-to-spryker/support/handling-security-issues.html
+      - title: Guidelines for new GDPR rules
+        url: /docs/scos/user/intro-to-spryker/support/guidelines-for-new-gdpr-rules.html
+      - title: How to get the most out of Spryker Support
+        url: /docs/scos/user/intro-to-spryker/support/how-to-get-the-most-out-of-spryker-support.html
+      - title: Understand SLAs
+        url: /docs/scos/user/intro-to-spryker/support/understand-slas.html
+      - title: Escalations
+        url: /docs/scos/user/intro-to-spryker/support/escalations.html
+      - title: How to contact Spryker Support
+        url: /docs/scos/user/intro-to-spryker/support/how-to-contact-spryker-support.html
+      - title: Understanding Project and Core Level Fixes
+        url: /docs/scos/user/intro-to-spryker/support/understanding-project-and-core-level-fixes.html
+    - title: B2C Suite
+      url: /docs/scos/user/intro-to-spryker/b2c-suite.html
+    - title: B2B Suite
+      url: /docs/scos/user/intro-to-spryker/b2b-suite.html
+    - title: Master Suite
+      url: /docs/scos/user/intro-to-spryker/master-suite.html
+    - title: About Spryker documentation
+      url: /docs/scos/user/intro-to-spryker/about-spryker-documentation.html
   - title: Features
     url: /docs/scos/user/features/features.html  
     nested:
@@ -49,6 +225,8 @@ entries:
         include_versions:
         - "202009.0"
         - "202108.0"
+    - title: Multiple Carts feature Overview
+      url: /docs/scos/user/features/multiple-carts-feature-overview.html
     - title: Catalog feature overview
       url: /docs/scos/user/features/catalog-feature-overview.html
     - title: Checkout feature overview
@@ -413,49 +591,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-    - title: Shipment feature overview
-      url: /docs/scos/user/features/shipment-feature-overview.html
-    - title: Tax feature overview
-      url: /docs/scos/user/features/tax-feature-overview.html
-    - title: Spryker Core Back Office feature overview
-      url: /docs/scos/user/features/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.html
-      nested:
-      - title: Back Office Translations Feature Overview
-        url: /docs/scos/user/features/spryker-core-back-office-feature-overview/back-office-translations-overview.html
-    - title: Sample Suite and Custom Suite
-      include_versions:
-      - "201811.0"
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      nested:
-      - title: Choosing the Right Suite for You
-        url: /docs/scos/user/features/sample-suite-and-custom-suite/choosing-the-right-suite-for-you.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-    - title: Wishlist feature overview
-      url: /docs/scos/user/features/wishlist-feature-overview.html
-    - title: Spryker Core feature overview
-      include_versions:
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
-      nested:
-      - title: Vault for Tokens Feature Overview
-        url: /docs/scos/user/features/spryker-core-feature-overview/vault-for-tokens-overview.html
-        include_versions:
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
     - title: Search feature overview
       url: /docs/scos/user/features/search-feature-overview/search-feature-overview.html
       nested:
@@ -518,6 +653,58 @@ entries:
         - "201903.0"
     - title: Shared Cart Feature Overview
       url: /docs/scos/user/features/shared-carts-feature-overview.html
+    - title: Shipment feature overview
+      url: /docs/scos/user/features/shipment-feature-overview.html
+    - title: Shopping Lists feature overview
+      url: /docs/scos/user/features/shopping-lists-feature-overview/shopping-lists-feature-overview.html
+      nested:
+      - title: Shopping list widget overview
+        url: /docs/scos/user/features/shopping-lists-feature-overview/shopping-list-widget-overview.html
+      - title: Shopping list printing overview
+        url: /docs/scos/user/features/shopping-lists-feature-overview/shopping-list-printing-overview.html
+      - title: Shopping List Notes overview
+        url: /docs/scos/user/features/shopping-lists-feature-overview/shopping-list-notes-overview.html
+    - title: Spryker Core feature overview
+      url: /docs/scos/user/features/spryker-core-feature-overview/spryker-core-feature-overview.html
+      include_versions:
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      nested:
+      - title: Vault for Tokens Feature Overview
+        url: /docs/scos/user/features/spryker-core-feature-overview/vault-for-tokens-overview.html
+        include_versions:
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+    - title: Spryker Core Back Office feature overview
+      url: /docs/scos/user/features/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.html
+      nested:
+      - title: Back Office Translations Feature Overview
+        url: /docs/scos/user/features/spryker-core-back-office-feature-overview/back-office-translations-overview.html
+    - title: Tax feature overview
+      url: /docs/scos/user/features/tax-feature-overview.html
+    - title: Wishlist feature overview
+      url: /docs/scos/user/features/wishlist-feature-overview.html
+    - title: Sample Suite and Custom Suite
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      nested:
+      - title: Choosing the Right Suite for You
+        url: /docs/scos/user/features/sample-suite-and-custom-suite/choosing-the-right-suite-for-you.html
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
     - title: Product Information Management
       include_versions:
       - "202001.0"
@@ -528,7 +715,7 @@ entries:
         include_versions:
         - "202001.0"
         - "202005.0"
-      - title: Filter &amp; Sort by Average Rating - Product Reviews
+      - title: Filter and Sort by Average Rating - Product Reviews
         url: /docs/scos/user/features/product-information-management/filter-andamp-sort-by-average-rating-product-reviews.html
         include_versions:
         - "202001.0"
@@ -551,16 +738,6 @@ entries:
         include_versions:
         - "202001.0"
         - "202005.0"
-    - title: Shopping Lists feature overview
-      nested:
-      - title: Shopping list widget overview
-        url: /docs/scos/user/features/shopping-lists-feature-overview/shopping-list-widget-overview.html
-      - title: Multiple and Shared Shopping Lists overview
-        url: /docs/scos/user/features/shopping-lists-feature-overview/shopping-lists-feature-overview.html
-      - title: Shopping list printing overview
-        url: /docs/scos/user/features/shopping-lists-feature-overview/shopping-list-printing-overview.html
-      - title: Shopping List Notes overview
-        url: /docs/scos/user/features/shopping-lists-feature-overview/shopping-list-notes-overview.html
     - title: Technology Partner Integrations
       include_versions:
       - "201907.0"
@@ -593,8 +770,6 @@ entries:
         url: /docs/scos/user/features/technology-partner-integrations/integrating-technology-partners.html
         include_versions:
         - "202009.0"
-    - title: Multiple Carts feature Overview
-      url: /docs/scos/user/features/multiple-carts-feature-overview.html
     - title: Multi-Channel
       include_versions:
       - "201811.0"
@@ -634,184 +809,6 @@ entries:
         - "201907.0"
         - "202001.0"
         - "202005.0"
-  - title: Intro to Spryker
-    nested:
-    - title: Spryker videos
-      url: /docs/scos/user/intro-to-spryker/spryker-videos.html
-    - title: What's New
-      nested:
-      - title: Upcoming major module releases
-        url: /docs/scos/user/intro-to-spryker/whats-new/upcoming-major-module-releases.html
-      - title: Security updates
-        url: /docs/scos/user/intro-to-spryker/whats-new/security-updates.html
-      - title: Documentation updates
-        url: /docs/scos/user/intro-to-spryker/whats-new/documentation-updates.html
-      - title: What's new
-        url: /docs/scos/user/intro-to-spryker/whats-new/whats-new.html
-      - title: Roadmap
-        url: /docs/scos/user/intro-to-spryker/whats-new/roadmap.html
-      - title: Security audit reports
-        nested:
-        - title: "2019.11 \u2014 Security audit by SektionEins"
-          url: /docs/scos/user/intro-to-spryker/whats-new/security-audit-reports/2019.11-security-audit-by-sektioneins.html
-        - title: "2020.11 \u2014 Penetration test by Port Zero (executive summary)"
-          url: /docs/scos/user/intro-to-spryker/whats-new/security-audit-reports/2020.11-penetration-test-by-port-zero-executive-summary.html
-      - title: VAT rates reduction in Germany between July 2020 and January 2021
-        url: /docs/scos/user/intro-to-spryker/whats-new/vat-rates-reduction-in-germany-between-july-2020-and-january-2021.html
-      - title: Supported versions of PHP
-        url: /docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html
-    - title: Releases
-      url: /docs/scos/user/intro-to-spryker/releases/releases.html
-      nested:
-      - title: Archive
-        nested:
-        - title: 2017
-          nested:
-          - title: Release Notes - August - 2 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-august-2-2017.html
-          - title: Release Notes - June - 2 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-june-2-2017.html
-          - title: Release Notes - October - 2 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-october-2-2017.html
-          - title: Release Notes - August - 1 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-august-1-2017.html
-          - title: Release Notes - October - 1 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-october-1-2017.html
-          - title: Release Notes - June - 1 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-june-1-2017.html
-          - title: Release Notes - April - 2 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-april-2-2017.html
-          - title: Release Notes - December - 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-december-2017.html
-          - title: Release Notes - July - 1 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-july-1-2017.html
-          - title: Release Notes - May - 2 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-may-2-2017.html
-          - title: Release Notes - November - 1 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-november-1-2017.html
-          - title: Release Notes - September - 1 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-september-1-2017.html
-          - title: Release Notes - July - 2 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-july-2-2017.html
-          - title: Release Notes - April - 1 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-april-1-2017.html
-          - title: Release Notes - November - 2 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-november-2-2017.html
-          - title: Release Notes - September - 2 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-september-2-2017.html
-          - title: Release Notes - May - 1 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-may-1-2017.html
-        - title: 2018
-          nested:
-          - title: Release Notes - February - 1 2018
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2018/release-notes-february-1-2018.html
-          - title: Release Notes - February - 2 2018
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2018/release-notes-february-2-2018.html
-          - title: Release Notes - March - 2018
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2018/release-notes-march-2018.html
-          - title: Release Notes - January - 2018
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2018/release-notes-january-2018.html
-          - title: Release Notes - April - 2018
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2018/release-notes-april-2018.html
-      - title: Release Notes
-        url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html
-        nested:
-        - title: Release Notes 201903.0
-          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-201903.0/release-notes-201903.0.html
-          nested:
-          - title: Security Release Notes 201903.0
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-201903.0/security-release-notes-201903.0.html
-        - title: Release Notes 201907.0
-          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-201907.0/release-notes-201907.0.html
-          nested:
-          - title: Security Release Notes 201907.0
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-201907.0/security-release-notes-201907.0.html
-        - title: Release Notes 2018.12.0
-          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-2018.12.0.html
-        - title: Release notes 202009.0
-          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202009.0/release-notes-202009.0.html
-          nested:
-          - title: Security release notes- 202009.0
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202009.0/security-release-notes-202009.0.html
-        - title: Release notes 202108.0
-          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202108.0/release-notes-202108.0.html
-          nested:
-          - title: Security release notes 202108.0
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202108.0/security-release-notes-202108.0.html
-        - title: Release Notes 202102.0
-          nested:
-          - title: Security release notes- 202102.0 SEC
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202102.0/performance-release-notes-202102.0.html
-          - title: Security release notes- 202102.0 SEC
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202102.0/security-release-notes-202102.0-sec.html
-        - title: Release Notes 2018.11.0
-          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-2018.11.0/release-notes-2018.11.0.html
-          nested:
-          - title: Security Release Notes 2018.11.0
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-2018.11.0/security-release-notes-2018.11.0.html
-        - title: Release Notes Code Releases May, 2020
-          nested:
-          - title: Security Release Notes- Code Releases May, 2020
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-code-releases-may-2020/security-release-notes-code-releases-may-2020.html
-          - title: Release Notes- Code Releases May, 2020
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-code-releases-may-2020/release-notes-code-releases-may-2020.html
-        - title: Release Notes 202001.0
-          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202001.0/release-notes-202001.0.html
-          nested:
-          - title: Security Release Notes 202001.0
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202001.0/security-release-notes-202001.0.html
-          - title: Known Issues 202001.0
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202001.0/known-issues-202001.0.html
-      - title: Releases archive
-        url: /docs/scos/user/intro-to-spryker/releases/releases-archive.html
-    - title: Spryker release process
-      url: /docs/scos/user/intro-to-spryker/spryker-release-process.html
-    - title: MVP project structuring
-      url: /docs/scos/user/intro-to-spryker/mvp-project-structuring.html
-    - title: FAQ
-      url: /docs/scos/user/intro-to-spryker/faq.html
-    - title: Support
-      nested:
-      - title: How Spryker Support works
-        url: /docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html
-      - title: Handling new feature requests
-        url: /docs/scos/user/intro-to-spryker/support/handling-new-feature-requests.html
-      - title: Case Escalation
-        url: /docs/scos/user/intro-to-spryker/support/business-impact-and-case-priorities.html
-      - title: Getting support
-        url: /docs/scos/user/intro-to-spryker/support/getting-support.html
-      - title: Special- Prepare for a busy season
-        url: /docs/scos/user/intro-to-spryker/support/special-prepare-for-a-busy-season.html
-      - title: How to use the Support Portal
-        url: /docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html
-      - title: How to share secrets with the Spryker Support Team
-        url: /docs/scos/user/intro-to-spryker/support/how-to-share-secrets-with-the-spryker-support-team.html
-      - title: Understanding ticket status
-        url: /docs/scos/user/intro-to-spryker/support/understanding-ticket-status.html
-      - title: Handling security issues
-        url: /docs/scos/user/intro-to-spryker/support/handling-security-issues.html
-      - title: Guidelines for new GDPR rules
-        url: /docs/scos/user/intro-to-spryker/support/guidelines-for-new-gdpr-rules.html
-      - title: How to get the most out of Spryker Support
-        url: /docs/scos/user/intro-to-spryker/support/how-to-get-the-most-out-of-spryker-support.html
-      - title: Understand SLAs
-        url: /docs/scos/user/intro-to-spryker/support/understand-slas.html
-      - title: Escalations
-        url: /docs/scos/user/intro-to-spryker/support/escalations.html
-      - title: How to contact Spryker Support
-        url: /docs/scos/user/intro-to-spryker/support/how-to-contact-spryker-support.html
-      - title: Understanding Project and Core Level Fixes
-        url: /docs/scos/user/intro-to-spryker/support/understanding-project-and-core-level-fixes.html
-    - title: B2C Suite
-      url: /docs/scos/user/intro-to-spryker/b2c-suite.html
-    - title: B2B Suite
-      url: /docs/scos/user/intro-to-spryker/b2b-suite.html
-    - title: Master Suite
-      url: /docs/scos/user/intro-to-spryker/master-suite.html
-    - title: About Spryker documentation
-      url: /docs/scos/user/intro-to-spryker/about-spryker-documentation.html
-    - title: About Spryker
-      url: /docs/scos/user/intro-to-spryker/about-spryker.html
   - title: Back Office User Guides
     nested:
     - title: General Back Office Overview

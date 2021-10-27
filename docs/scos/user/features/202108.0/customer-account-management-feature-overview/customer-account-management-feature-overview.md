@@ -10,9 +10,6 @@ redirect_from:
   - /2021080/docs/en/customer-account-management
   - /docs/customer-account-management
   - /docs/en/customer-account-management
-related:
-  - title: User and Rights Management
-    link: docs/scos/dev/feature-walkthroughs/page.version/customer-account-management-feature-walkthrough/user-and-rights-overview.html
 ---
 
 The *Customer Account Management* feature enables a wide range of management options for customer accounts, as well as additional functionalities.

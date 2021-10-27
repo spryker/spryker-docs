@@ -14,11 +14,6 @@ redirect_from:
   - /2021080/docs/en/product-options
   - /docs/product-options
   - /docs/en/product-options
-related:
-  - title: Creating Product Options
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/product-options/creating-product-options.html
-  - title: Migration Guide - Product Option
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-productoption.html
 ---
 
 The *Product Options* feature allows a Back Office user to create and assign product options to abstract products. Product options are product additions that a customer can select on the product detail page before adding the product to the cart. For example, the product options can be gift wrappings for products, insurance, warranty, etc. Product options do not have stock, but a SKU linked to product abstracts. Thus, you cannot purchase them without buying a corresponding product.

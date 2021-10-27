@@ -10,11 +10,6 @@ redirect_from:
   - /v2/docs/en/quick-order-overview
   - /v2/docs/quick-order
   - /v2/docs/en/quick-order
-related:
-  - title: Migration Guide - QuickOrder
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-quickorder.html
-  - title: Quick Order feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/quick-add-to-cart-feature-integration.html
 ---
 
 The *Quick Order* feature allows placing bulk orders for wholesale and returning customers.

@@ -8,9 +8,6 @@ originalArticleId: 6066f94b-0eea-4450-9071-a41b2cfa39e5
 redirect_from:
   - /v1/docs/discontinued-products-overview
   - /v1/docs/en/discontinued-products-overview
-related:
-  - title: Discontinuing Products
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/discontinuing-products.html
 ---
 
 ## Out of Stock vs. Discontinued Products

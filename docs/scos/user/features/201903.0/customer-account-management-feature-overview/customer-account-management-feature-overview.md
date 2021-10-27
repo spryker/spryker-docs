@@ -10,11 +10,6 @@ redirect_from:
   - /v2/docs/en/customer-accounts
   - /v2/docs/crm
   - /v2/docs/en/crm
-related:
-  - title: Customer Module Overview
-    link: docs/scos/dev/feature-walkthroughs/page.version/customer-account-management-feature-walkthrough/reference-information-customer-module-overview.html
-  - title: User and Rights Management
-    link: docs/scos/dev/feature-walkthroughs/page.version/customer-account-management-feature-walkthrough/user-and-rights-overview.html
 ---
 
 Let your customers create an Account to save their personal details.

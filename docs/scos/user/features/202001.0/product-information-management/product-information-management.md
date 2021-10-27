@@ -8,11 +8,6 @@ originalArticleId: c43fd57c-638d-4a65-98f3-729583c59a36
 redirect_from:
   - /v4/docs/product-information-management
   - /v4/docs/en/product-information-management
-related:
-  - title: Akeneo
-    link: docs/scos/user/technology-partners/page.version/product-information-pimerp/akeneo/akeneo.html
-  - title: Censhare
-    link: docs/scos/user/technology-partners/page.version/content-management/censhare.html
 ---
 
 <div class='feature-text'>

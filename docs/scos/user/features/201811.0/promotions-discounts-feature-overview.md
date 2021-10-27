@@ -14,21 +14,6 @@ redirect_from:
   - /v1/docs/en/promotions-discount
   - /v1/docs/cart-rules-discounts
   - /v1/docs/en/cart-rules-discounts
-related:
-  - title: Discount
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/discount.html
-  - title: Discount Promotion feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/discount-promotion-feature-integration.html
-  - title: Discount- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/references/discount-reference-information.html
-  - title: Discount Calculation- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/references/discount-calculation-reference-information.html
-  - title: Discount Conditions- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/references/discount-conditions-reference-information.html
-  - title: Managing Discounts
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/managing-discounts.html
-  - title: Migration Guide - Discount
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-discount.html
 ---
 
 The Promotions & Discounts feature enables product catalog managers to provide free value to their customers by discounting a percentage or a fixed sum of an order's subtotal or an item's price on predefined conditions.

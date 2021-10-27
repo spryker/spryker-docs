@@ -10,9 +10,6 @@ redirect_from:
   - /2021080/docs/en/reclamations-feature-overview
   - /docs/reclamations-feature-overview
   - /docs/en/reclamations-feature-overview
-related:
-  - title: Managing Orders
-    link: docs/scos/user/back-office-user-guides/page.version/sales/orders/managing-orders.html
 ---
 
 Handling order claims are the reality of doing business for most e-commerce sites. A customer might have bought an item and then discovered, that it does not fit, or they might have stumbled upon another item and want to order it instead of the order already placed, or an item is faulty, or additional parts are needed etc.

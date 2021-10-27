@@ -8,11 +8,6 @@ originalArticleId: 534d1a3b-041f-4e44-b7ec-fe1bdd161500
 redirect_from:
   - /v3/docs/page-draft-preview
   - /v3/docs/en/page-draft-preview
-related:
-  - title: CMS Pages
-    link: docs/scos/user/back-office-user-guides/page.version/content/pages/cms-pages.html
-  - title: Migration Guide - CMS
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-cms.html
 ---
 
 With the CMS draft feature the Back Office user can create drafts of CMS pages without affecting the current live version of the page. It is possible to preview draft version of content before publishing it to see how the page will look like when it is live. This article will tell you how to enable the preview draft page feature.

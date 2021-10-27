@@ -2386,6 +2386,10 @@ entries:
       url: /docs/scos/dev/legacy-demoshop/public-folder.html
       include_versions:
       - "201811.0"
+    - title: Development
+      url: /docs/scos/dev/legacy-demoshop/development.html
+      include_versions:
+      - "201811.0"
   - title: Technical Enhancements
     nested:
     - title: Separating different endpoint bootstraps
@@ -4093,12 +4097,6 @@ entries:
         - "202108.0"
     - title: Twig and TwigExtension
       url: /docs/scos/dev/sdk/twig-and-twigextension.html
-    - title: Development
-      url: /docs/scos/dev/sdk/development.html
-      include_versions:
-      - "202001.0"
-      - "202009.0"
-      - "202108.0"
     - title: Code Generator
       url: /docs/scos/dev/sdk/code-generator.html
       include_versions:

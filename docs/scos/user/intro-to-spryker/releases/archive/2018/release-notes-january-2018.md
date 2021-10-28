@@ -12,7 +12,9 @@ redirect_from:
 ---
 
 {% info_block warningBox %}
+
 Please note, that we do not have [Toran Proxy](https://toranproxy.com/) anymore. We recommend to download all Spryker modules from public [Packagist](https://packagist.org/) from now on.
+
 {% endinfo_block %}
 
 ## Features
@@ -20,9 +22,9 @@ Please note, that we do not have [Toran Proxy](https://toranproxy.com/) anymore.
 With this release, we are introducing a new functionality which enables shop owners to manage prices in the shop per currency and price mode (net/gross) for products, bundle products, product option, and shipment methods. A shop administrator can provide prices for the gross and net price mode per currency through the Administration Interface.
 
 Shop visitors in their turn can select a currency/price mode using a switcher on Yves and all prices in the shop will be at once displayed according to the selection. The customer can than place orders using the selected currency.
-![Multi-currency product options in Zed](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+January+-+2018/multicurrency_zed.png) 
+![Multi-currency product options in Zed](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+January+-+2018/multicurrency_zed.png)
 
-![Multi-currency product options in Yves](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+January+-+2018/multicurrency_yves.png) 
+![Multi-currency product options in Yves](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+January+-+2018/multicurrency_yves.png)
 
 | MAJOR | MINOR | PATCH |
 | --- | --- | --- |
@@ -45,8 +47,8 @@ composer require spryker/catalog-price-product-connector:"^1.0.0" spryker/price:
 ### Category Filters
 Finding products quickly and efficiently on Yves is critical to many customers. This is pretty easy if a category is relatively small. However, in case of larger categories, if customers have to scroll through a long list of filters, that might negatively influence their user experience and even their buying behavior.
 
-With this release, we are introducing a new category filters functionality which gives you full control over filters appearing on the catalog page in Yves per category. The filters available in the catalog page in Yves per category are definable in Zed Administration Interface. It is possible either to apply general filter settings or to do specific settings by re-ordering, adding and removing filters manually. 
-![Category filters](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+January+-+2018/Category+Filters.gif) 
+With this release, we are introducing a new category filters functionality which gives you full control over filters appearing on the catalog page in Yves per category. The filters available in the catalog page in Yves per category are definable in Zed Administration Interface. It is possible either to apply general filter settings or to do specific settings by re-ordering, adding and removing filters manually.
+![Category filters](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+January+-+2018/Category+Filters.gif)
 
 **Affected Modules**
 
@@ -55,7 +57,7 @@ With this release, we are introducing a new category filters functionality which
 | <ul><li>[ProductCategoryFilter 1.0.0](https://github.com/spryker/product-category-filter/releases/tag/1.0.0)</li><li>[ProductCategoryFilterCollector 1.0.0](https://github.com/spryker/product-category-filter-collector/releases/tag/1.0.0)</li><li>[ProductCategoryFilterGui 1.0.0](https://github.com/spryker/ProductCategoryFilterGui/releases/tag/1.0.0)</li></ul> | <ul><li>[Product 5.4.0](https://github.com/spryker/Product/releases/tag/5.4.0)</li><li>[ProductSearch 5.3.0](https://github.com/spryker/product-search/releases/tag/5.3.0)</li><li>[Search 6.10.0](https://github.com/spryker/Search/releases/tag/6.10.0)</li></ul> | n/a |
 
 <!--Documentation
-<br>For module documentation see: 
+<br>For module documentation see:
 For store administration guides see:-->
 **Migration Guides**
 <br>To upgrade, follow the steps described below:
@@ -75,7 +77,7 @@ composer require spryker/product-category-filter:"^1.0.0" spryker/product-catego
 Customers often prefer to add multiple products to the cart at once rather than editing the quantity of products in the cart.
 
 With this release, we have added a possibility to add more than one item to the cart directly from the product details page. Now, a customer simply selects the desired quantity of items on the product details page and moves all these items to cart with just one click. This simplifies the process of shopping for customers and improves their shopping experience.
-![Adding multiple products to cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+January+-+2018/multiple_quantity.png) 
+![Adding multiple products to cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+January+-+2018/multiple_quantity.png)
 
 **Affected Modules**
 
@@ -161,7 +163,7 @@ Previously, an exception was thrown when trying to delete a customer account ass
 | n/a | n/a | [CustomerGroup 2.2.4](https://github.com/spryker/CustomerGroup/releases/tag/2.2.4) |
 
 ### SKU Is Taken for ID Upon Discount Promotion Availability Check
-Previously, when checking availability of promotional products, the product SKU provided in discount details, was regarded by the system as the product ID, which led to exception in Yves and the availability could be calculated incorrectly. 
+Previously, when checking availability of promotional products, the product SKU provided in discount details, was regarded by the system as the product ID, which led to exception in Yves and the availability could be calculated incorrectly.
 
 This problem has now been fixed. The SKUs and IDs are no more mixed up upon promotional product availability checks. No errors occur when adding promotional products to cart.
 
@@ -172,7 +174,7 @@ This problem has now been fixed. The SKUs and IDs are no more mixed up upon prom
 | n/a | n/a | [DiscountPromotion 1.0.4](https://github.com/spryker/discount-promotion/releases/tag/1.0.4) |
 
 ### Queue Worker Failure Without Verbosity Option
-Previously, when the `queue-worker` command was running without verbosity flag (`-v/vv/vvv` options), it failed. This issue has now been fixed by performing class property cleanup. 
+Previously, when the `queue-worker` command was running without verbosity flag (`-v/vv/vvv` options), it failed. This issue has now been fixed by performing class property cleanup.
 
 Running `queue-worker` is now possible both in normal and verbosity modes.
 
@@ -183,9 +185,9 @@ Running `queue-worker` is now possible both in normal and verbosity modes.
 | n/a | n/a | [Queue 1.0.2](https://github.com/spryker/Queue/releases/tag/1.0.2) |
 
 ### Success Messages for Portlets
-We are trying to make our Administration Interface generic and follow the conventions in naming elements, showing messages and structuring pages. 
+We are trying to make our Administration Interface generic and follow the conventions in naming elements, showing messages and structuring pages.
 
-Zed administration panel provides a wide list of notification messages during the working process. Some of these messages were not following these conventions and have now been adjusted. 
+Zed administration panel provides a wide list of notification messages during the working process. Some of these messages were not following these conventions and have now been adjusted.
 
 This release also includes fix for the Product Attribute module. We had an interface issue, which could cause sending wrong attribute translation data, so when a shop administrator was trying to create a product attribute and clicked on the Save button when adding translations, an error occurred in Zed. Now, this problem has been fixed and adding product attributes is done without errors.
 

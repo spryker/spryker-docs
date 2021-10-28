@@ -20,7 +20,7 @@ Fulfilling SLA is a two-way street, and we cannot achieve good results without y
 
 ### Keeping Spryker environments up-to-date
 We generally expect our customers to keep their Spryker environment up to date. The reason for this is has multiple layers.
-We release updates to introduce new features, performance improvements and security enhancements. Especially the last ones you do not want to miss. We want our customers to have fast, responsive and more secure shops. 
+We release updates to introduce new features, performance improvements and security enhancements. Especially the last ones you do not want to miss. We want our customers to have fast, responsive and more secure shops.
 Up to date code generally means more stability, better support and compatibility for 3rd party applications. If you use the latest versions, it means that you are using the best and most up-to-date version of code we have to offer. Looking at the motivations to keep up-to-.date listed above, this is not only good for you, it is good for us too. Working with project that have recent code means that we have an easier time understanding what is going on. This reduces case resolution time and makes communication between you, Spryker Support and Development much easier.
 
 ### Keep it in English
@@ -36,8 +36,8 @@ Please ensure that every case you open with us includes the information we need 
 To make sure that we resolve the right cases first, we need to triage and prioritize. You can help us to this better if you assess and specify the business impact of your problem appropriately. For a more detailed explanation on what Business Impact is and how priorities work have a look into this [article](/docs/scos/user/intro-to-spryker/support/understanding-ticket-status.html#how-are-bug-tickets-prioritized).
 
 ## What you can expect from us
-In our SLAs, we guarantee certain [First Response Times](https://documentation.spryker.com/docs/how-spryker-support-works-1#first-response-time)
-you can expect us to react to your cases within the time that is specified in your SLA. While we work to resolve high priority issues as fast as possible, we do not and cannot guarantee resolution times for the issues you open with us because of the breadth of cases we offer to work on. Guaranteeing resolution times would make it necessary for us to make the definition of the cases we accept stricter which ultimately will make it harder and more bureaucratic for you to work with us. 
+In our SLAs, we guarantee certain [First Response Times](/docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html#first-response-time)
+you can expect us to react to your cases within the time that is specified in your SLA. While we work to resolve high priority issues as fast as possible, we do not and cannot guarantee resolution times for the issues you open with us because of the breadth of cases we offer to work on. Guaranteeing resolution times would make it necessary for us to make the definition of the cases we accept stricter which ultimately will make it harder and more bureaucratic for you to work with us.
 
 ### Infrastructure Support
 For Spryker Customers using our PaaS we can also support with infrastructure related issues, like fault correction and recovery. Because of the critical nature of infrastructure issues, we generally offer a faster response time on these issues and have build robust processes that ensure that these matters are resolved timely and that we proactively update the customer along the way.

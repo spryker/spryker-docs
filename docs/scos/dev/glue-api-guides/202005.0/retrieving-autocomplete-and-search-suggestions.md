@@ -1,13 +1,13 @@
 ---
 title: Getting Suggestions for Auto-Completion and Search
 description: This article provides information on which endpoints to use to get search and auto-completion suggestions for your products, categories, and CMS fields.
-last_updated: Aug 13, 2020
+last_updated: Sep 14, 2020
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/v4/docs/retrieving-suggestions-for-auto-completion-and-search
-originalArticleId: aafe0de5-a866-40dd-834b-9f7eeb26f723
+originalLink: https://documentation.spryker.com/v5/docs/retrieving-suggestions-for-auto-completion-and-search
+originalArticleId: 5a31882d-7e51-446d-ad7a-8b3826bb0437
 redirect_from:
-  - /v4/docs/retrieving-suggestions-for-auto-completion-and-search
-  - /v4/docs/en/retrieving-suggestions-for-auto-completion-and-search
+  - /v5/docs/retrieving-suggestions-for-auto-completion-and-search
+  - /v5/docs/en/retrieving-suggestions-for-auto-completion-and-search
 related:
   - title: Catalog Search
     link: docs/scos/dev/glue-api-guides/page.version/catalog-search.html
@@ -92,7 +92,7 @@ The following attributes are provided for each product in the response:
 | **price** | Integer | Specifies the product price. |
 | **images** | Object | Provides URLs of the product images.<br/>The object consists of **2** items:<ul><li>**externalUrlSmall** - specifies the URL of the product preview image;</li><li> **externalUrlLarge** - specifies the URL of the large product image.</li></ul> |
 
-The `url` attribute of categories and abstract products exposes a Search Engine Friendly (SEF) URL of the resource that represents the respective category or product. For information on how to resolve such a URL and retrieve the corresponding resource, see [Using Search Engine Friendly URLs](/docs/scos/dev/glue-api-guides/{{page.version}}/using-search-engine-friendly-urls.html).
+The `url` attribute of categories and abstract products exposes a Search Engine Friendly (SEF) URL of the resource that represents the respective category or product. For information on how to resolve such a URL and retrieve the corresponding resource, see [Using Search Engine Friendly URLs](/docs/scos/dev/glue-api-guides/{{page.version}}/resolving-search-engine-friendly-urls.html).
 
 {% info_block warningBox %}
 
@@ -269,4 +269,3 @@ Although CMS pages also expose the `url` parameter, resolving of CMS page SEF UR
 ```
 
 </details>
-

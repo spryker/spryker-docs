@@ -136,7 +136,7 @@ All protected resources can return the following generic errors:
 | 003 | Failed to log in the user |
 | 004 | Failed to refresh a token |
 
-Also, some resources can be protected by shop owners from unauthorized access explicitly. If a resource is protected, any unauthorized attempt to access it will result in a **403 Forbidden error**. To facilitate the development of custom storefronts with such resources and avoid extra calls to them, Glue REST API provides the possibility to retrieve a list of such resources. It is, therefore, the responsibility of the API client to retrieve the list as a pre-flight check. For more details, see [Getting the List of Protected Resources](/docs/scos/dev/glue-api-guides/{{page.version}}/getting-the-list-of-protected-resources.html).
+Also, some resources can be protected by shop owners from unauthorized access explicitly. If a resource is protected, any unauthorized attempt to access it will result in a **403 Forbidden error**. To facilitate the development of custom storefronts with such resources and avoid extra calls to them, Glue REST API provides the possibility to retrieve a list of such resources. It is, therefore, the responsibility of the API client to retrieve the list as a pre-flight check. For more details, see [Getting the List of Protected Resources](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-protected-resources.html).
 
 ## Refreshing Tokens
 To refresh an access token, send a request to the following endpoint and pass the corresponding refresh token:

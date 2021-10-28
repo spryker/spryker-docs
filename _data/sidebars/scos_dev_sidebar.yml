@@ -887,7 +887,7 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-    - title: Alternative Products + Product Label feature integration
+    - title: Alternative Products- Product Label feature integration
       url: /docs/scos/dev/feature-integration-guides/alternative-products-product-label-feature-integration.html
       include_versions:
       - "201903.0"
@@ -896,7 +896,7 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-    - title: Alternative Products + Discontinued Products feature integration
+    - title: Alternative Products- Discontinued Products feature integration
       url: /docs/scos/dev/feature-integration-guides/alternative-products-discontinued-products-feature-integration.html
       include_versions:
       - "201903.0"
@@ -905,7 +905,7 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-    - title: Alternative Products + Inventory Management feature integration
+    - title: Alternative Products - Inventory Management feature integration
       url: /docs/scos/dev/feature-integration-guides/alternative-products-inventory-management-feature-integration.html
       include_versions:
       - "201903.0"
@@ -914,7 +914,7 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-    - title: Alternative Products + Wishlist feature integration
+    - title: Alternative Products- Wishlist feature integration
       url: /docs/scos/dev/feature-integration-guides/alternative-products-wishlist-feature-integration.html
       include_versions:
       - "201903.0"
@@ -1156,9 +1156,9 @@ entries:
       - "202108.0"
     - title: Multiple Carts feature integration
       url: /docs/scos/dev/feature-integration-guides/multiple-carts-feature-integration.html
-    - title: Multiple Carts + Reorder feature integration
+    - title: Multiple Carts - Reorder feature integration
       url: /docs/scos/dev/feature-integration-guides/multiple-carts-reorder-feature-integration.html
-    - title: Multiple Carts + Quick Order feature integration
+    - title: Multiple Carts - Quick Order feature integration
       url: /docs/scos/dev/feature-integration-guides/multiple-carts-quick-order-feature-integration.html
     - title: Multi-Store Products feature integration
       url: /docs/scos/dev/feature-integration-guides/multi-store-products-feature-integration.html
@@ -3355,51 +3355,51 @@ entries:
       url: /docs/scos/dev/architecture/programming-concepts.html
   - title: Glue API Guides
     nested:
-    - title: Getting Suggestions for Auto-Completion and Search
-      url: /docs/scos/dev/glue-api-guides/getting-suggestions-for-auto-completion-and-search.html
+    - title: Glue REST API
+      url: /docs/scos/dev/glue-api-guides/glue-rest-api.html
+    - title: Managing customers
       include_versions:
       - "201811.0"
       - "201903.0"
       - "201907.0"
       - "202001.0"
       - "202005.0"
-    - title: Managing wishlists
-      include_versions:
       - "202009.0"
       - "202108.0"
       nested:
-      - title: Managing Wishlists
-        url: /docs/scos/dev/glue-api-guides/managing-wishlists/managing-wishlists.html
-      - title: Managing wishlist items
-        url: /docs/scos/dev/glue-api-guides/managing-wishlists/managing-wishlist-items.html
+      - title: Managing Customers
+        url: /docs/scos/dev/glue-api-guides/managing-customers/managing-customers.html
+      - title: Confirming customer registration
+        url: /docs/scos/dev/glue-api-guides/managing-customers/confirming-customer-registration.html
         include_versions:
-        - "202009.0"
         - "202108.0"
-    - title: Glue REST API
-      url: /docs/scos/dev/glue-api-guides/glue-rest-api.html
-    - title: Discounts and Promotions
-      url: /docs/scos/dev/glue-api-guides/discounts-and-promotions.html
-      include_versions:
-      - "202001.0"
-    - title: Managing customers
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
-      - "201811.0"
-      - "201903.0"
-      nested:
-      - title: Authentication and Authorization
+      - title: Authenticating as a customer
         url: /docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html
         include_versions:
         - "202001.0"
         - "202005.0"
         - "202009.0"
         - "202108.0"
-      - title: Managing Customers
-        url: /docs/scos/dev/glue-api-guides/managing-customers/managing-customers.html
-      - title: Retrieving Customer's Order History
+      - title: Managing customer passwords
+        url: /docs/scos/dev/glue-api-guides/managing-customers/managing-customer-passwords.html
+        include_versions:
+        - "202108.0"
+        - "202009.0"
+      - title: Managing customer addresses
+        url: /docs/scos/dev/glue-api-guides/managing-customers/managing-customer-addresses.html
+        include_versions:
+        - "202009.0"
+        - "202108.0"
+      - title: Managing customer authentication tokens
+        url: /docs/scos/dev/glue-api-guides/managing-customers/managing-customer-authentication-tokens.html
+        include_versions:
+        - "202009.0"
+        - "202108.0"
+      - title: Managing customer authentication tokens via OAuth 2.0
+        url: /docs/scos/dev/glue-api-guides/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html
+        include_versions:
+        - "202108.0"
+      - title: Retrieving customer orders
         url: /docs/scos/dev/glue-api-guides/managing-customers/retrieving-customer-orders.html
         include_versions:
         - "201811.0"
@@ -3411,536 +3411,8 @@ entries:
         url: /docs/scos/dev/glue-api-guides/managing-customers/retrieving-customer-carts.html
         include_versions:
         - "202108.0"
-      - title: Confirming customer registration
-        url: /docs/scos/dev/glue-api-guides/managing-customers/confirming-customer-registration.html
-        include_versions:
-        - "202108.0"
-      - title: Managing customer authentication tokens
-        url: /docs/scos/dev/glue-api-guides/managing-customers/managing-customer-authentication-tokens.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-      - title: Managing customer authentication tokens via OAuth 2.0
-        url: /docs/scos/dev/glue-api-guides/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html
-        include_versions:
-        - "202108.0"
-      - title: Managing customer passwords
-        url: /docs/scos/dev/glue-api-guides/managing-customers/managing-customer-passwords.html
-        include_versions:
-        - "202108.0"
-      - title: Managing customer addresses
-        url: /docs/scos/dev/glue-api-guides/managing-customers/managing-customer-addresses.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-      - title: Customer password
-        url: /docs/scos/dev/glue-api-guides/managing-customers/manage-customer-password.html
-        include_versions:
-        - "202009.0"
-    - title: Managing Carts
-      include_versions:
-      - "202009.0"
-      - "202108.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      nested:
-      - title: Carts of registered users
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-        nested:
-        - title: Managing Carts of Registered Users
-          url: /docs/scos/dev/glue-api-guides/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
-        - title: Managing items in carts of registered users
-          url: /docs/scos/dev/glue-api-guides/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html
-          include_versions:
-          - "202009.0"
-          - "202108.0"
-        - title: Managing gift cards of registered users
-          url: /docs/scos/dev/glue-api-guides/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html
-          include_versions:
-          - "202009.0"
-          - "202108.0"
-        - title: Managing discount vouchers in carts of registered users
-          url: /docs/scos/dev/glue-api-guides/managing-carts/carts-of-registered-users/managing-discount-vouchers-in-carts-of-registered-users.html
-          include_versions:
-          - "202009.0"
-          - "202108.0"
-      - title: Guest carts
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-        nested:
-        - title: Managing Guest Carts
-          url: /docs/scos/dev/glue-api-guides/managing-carts/guest-carts/managing-guest-carts.html
-        - title: Managing gift cards of guest users
-          url: /docs/scos/dev/glue-api-guides/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html
-          include_versions:
-          - "202009.0"
-          - "202108.0"
-        - title: Managing guest cart items
-          url: /docs/scos/dev/glue-api-guides/managing-carts/guest-carts/managing-guest-cart-items.html
-          include_versions:
-          - "202009.0"
-          - "202108.0"
-        - title: Managing discount vouchers in guest carts
-          url: /docs/scos/dev/glue-api-guides/managing-carts/guest-carts/managing-discount-vouchers-in-guest-carts.html
-          include_versions:
-          - "202009.0"
-          - "202108.0"
-      - title: Sharing company user carts
-        include_versions:
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-        nested:
-        - title: Sharing Company User Carts
-          url: /docs/scos/dev/glue-api-guides/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html
-          include_versions:
-          - "201907.0"
-          - "202001.0"
-          - "202005.0"
-          - "202009.0"
-          - "202108.0"
-        - title: Managing shared company user carts
-          url: /docs/scos/dev/glue-api-guides/managing-carts/sharing-company-user-carts/managing-shared-company-user-carts.html
-          include_versions:
-          - "202009.0"
-          - "202108.0"
-        - title: Retrieving cart permission groups
-          url: /docs/scos/dev/glue-api-guides/managing-carts/sharing-company-user-carts/retrieving-cart-permission-groups.html
-          include_versions:
-          - "202009.0"
-          - "202108.0"
-    - title: Security and Authentication
-      url: /docs/scos/dev/glue-api-guides/security-and-authentication.html
-    - title: Retrieving Store Configuration
-      url: /docs/scos/dev/glue-api-guides/retrieving-store-configuration.html
-    - title: Getting the List of Protected Resources
-      url: /docs/scos/dev/glue-api-guides/getting-the-list-of-protected-resources.html
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-    - title: Handling Concurrent REST Requests and Caching with Etags
-      url: /docs/scos/dev/glue-api-guides/handling-concurrent-rest-requests-and-caching-with-etags.html
-      include_versions:
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-    - title: Retrieving content items
-      include_versions:
-      - "202001.0"
-      - "201907.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
-      nested:
-      - title: Retrieving Banner Content Item Data
-        url: /docs/scos/dev/glue-api-guides/retrieving-content-items/retrieving-banner-content-item-data.html
-        include_versions:
-        - "202001.0"
-      - title: Getting Abstract Product List Content Item Data
-        url: /docs/scos/dev/glue-api-guides/retrieving-content-items/retrieving-abstract-product-list-content-items.html
-        include_versions:
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-      - title: Retrieving Content Item Data
-        url: /docs/scos/dev/glue-api-guides/retrieving-content-items/retrieving-banner-content-items.html
-        include_versions:
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-      - title: Retrieving Content Item Data
-        url: /docs/scos/dev/glue-api-guides/retrieving-content-items/retrieving-content-item-data.html
-        include_versions:
-        - "201907.0"
-        - "202005.0"
-    - title: Catalog Search
-      url: /docs/scos/dev/glue-api-guides/catalog-search.html
-      include_versions:
-      - "201811.0"
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-    - title: Retrieving Navigation Trees
-      url: /docs/scos/dev/glue-api-guides/retrieving-navigation-trees.html
-      include_versions:
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
-    - title: Retrieving Ratings and Reviews
-      url: /docs/scos/dev/glue-api-guides/retrieving-ratings-and-reviews.html
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-    - title: Glue Spryks
-      url: /docs/scos/dev/glue-api-guides/glue-spryks.html
-    - title: Retrieving categories
-      include_versions:
-      - "202009.0"
-      - "202108.0"
-      nested:
-      - title: Browsing a Category Tree
-        url: /docs/scos/dev/glue-api-guides/retrieving-categories/retrieving-category-trees.html
-      - title: Retrieving category nodes
-        url: /docs/scos/dev/glue-api-guides/retrieving-categories/retrieving-category-nodes.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-    - title: REST API Reference
+    - title: REST API reference
       url: /docs/scos/dev/glue-api-guides/rest-api-reference.html
-    - title: Managing Products
-      nested:
-      - title: Retrieving Related Products
-        url: /docs/scos/dev/glue-api-guides/managing-products/retrieving-related-products.html
-        include_versions:
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-      - title: Retrieving Product Information
-        url: /docs/scos/dev/glue-api-guides/managing-products/retrieving-product-information.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-      - title: Accessing Product Labels
-        url: /docs/scos/dev/glue-api-guides/managing-products/retrieving-product-labels.html
-      - title: Retrieving Alternative Products
-        url: /docs/scos/dev/glue-api-guides/managing-products/retrieving-alternative-products.html
-        include_versions:
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-      - title: Retrieving and Applying Product Options
-        url: /docs/scos/dev/glue-api-guides/managing-products/retrieving-and-applying-product-options.html
-        include_versions:
-        - "202001.0"
-        - "202005.0"
-      - title: Retrieving configurable bundle templates
-        url: /docs/scos/dev/glue-api-guides/managing-products/retrieving-configurable-bundle-templates.html
-        include_versions:
-        - "202108.0"
-      - title: Managing product ratings and reviews
-        url: /docs/scos/dev/glue-api-guides/managing-products/managing-product-ratings-and-reviews.html
-      - title: Retrieving bundled products
-        url: /docs/scos/dev/glue-api-guides/managing-products/retrieving-bundled-products.html
-        include_versions:
-        - "202108.0"
-      - title: Retrieving product attributes
-        url: /docs/scos/dev/glue-api-guides/managing-products/retrieving-product-attributes.html
-        include_versions:
-        - "202108.0"
-      - title: Concrete Products
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-        nested:
-        - title: Retrieving concrete product prices
-          url: /docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-concrete-product-prices.html
-          include_versions:
-          - "202009.0"
-          - "202108.0"
-        - title: Retrieving image sets of concrete products
-          url: /docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html
-          include_versions:
-          - "202009.0"
-          - "202108.0"
-        - title: Retrieving concrete product availability
-          url: /docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-concrete-product-availability.html
-          include_versions:
-          - "202009.0"
-          - "202108.0"
-        - title: Retrieving concrete products
-          url: /docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-concrete-products.html
-          include_versions:
-          - "202009.0"
-          - "202108.0"
-        - title: Retrieving sales units
-          url: /docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-sales-units.html
-          include_versions:
-          - "202009.0"
-          - "202108.0"
-      - title: Managing availability notifications
-        include_versions:
-        - "202108.0"
-        nested:
-        - title: Retrieving subscriptions to availability notifications
-          url: /docs/scos/dev/glue-api-guides/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html
-          include_versions:
-          - "202108.0"
-      - title: Abstract Products
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-        nested:
-        - title: Retrieving abstract product prices
-          url: /docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-abstract-product-prices.html
-          include_versions:
-          - "202009.0"
-          - "202108.0"
-        - title: Retrieving tax sets
-          url: /docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-tax-sets.html
-          include_versions:
-          - "202009.0"
-          - "202108.0"
-        - title: Retrieving abstract product availability
-          url: /docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-abstract-product-availability.html
-          include_versions:
-          - "202009.0"
-          - "202108.0"
-        - title: Retrieving image sets of abstract products
-          url: /docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html
-          include_versions:
-          - "202009.0"
-          - "202108.0"
-        - title: Retrieving abstract products
-          url: /docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-abstract-products.html
-          include_versions:
-          - "202009.0"
-          - "202108.0"
-    - title: Glue API Developer Guides
-      url: /docs/scos/dev/glue-api-guides/glue-api-developer-guides.html
-      include_versions:
-      - "201811.0"
-      - "201907.0"
-      - "202001.0"
-    - title: Checking Out Purchases and Getting Checkout Data
-      url: /docs/scos/dev/glue-api-guides/checking-out-purchases-and-getting-checkout-data.html
-      include_versions:
-      - "201811.0"
-      - "202001.0"
-    - title: Glue Infrastructure
-      url: /docs/scos/dev/glue-api-guides/glue-infrastructure.html
-    - title: Using Search Engine Friendly URLs
-      url: /docs/scos/dev/glue-api-guides/using-search-engine-friendly-urls.html
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-    - title: Managing B2B account
-      include_versions:
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
-      nested:
-      - title: Retrieving Company Information
-        url: /docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-companies.html
-        include_versions:
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-      - title: B2B Account Management
-        url: /docs/scos/dev/glue-api-guides/managing-b2b-account/b2b-account-management.html
-        include_versions:
-        - "202001.0"
-        - "202005.0"
-      - title: Logging In as Company User
-        url: /docs/scos/dev/glue-api-guides/managing-b2b-account/authenticating-as-a-company-user.html
-        include_versions:
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-      - title: Retrieving Business Unit Information
-        url: /docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-business-unit-information.html
-        include_versions:
-        - "202001.0"
-        - "202005.0"
-      - title: Retrieving Company Role Information
-        url: /docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-company-roles.html
-        include_versions:
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-      - title: Retrieving Company User Information
-        url: /docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-company-users.html
-        include_versions:
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-      - title: Retrieving business unit addresses
-        url: /docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-business-unit-addresses.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-      - title: Retrieving business units
-        url: /docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-business-units.html
-        include_versions:
-        - "201907.0"
-        - "202009.0"
-        - "202108.0"
-      - title: Managing company user authentication tokens
-        url: /docs/scos/dev/glue-api-guides/managing-b2b-account/managing-company-user-authentication-tokens.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-      - title: Searching by company users
-        url: /docs/scos/dev/glue-api-guides/managing-b2b-account/searching-by-company-users.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-    - title: Authentication and Authorization
-      url: /docs/scos/dev/glue-api-guides/authentication-and-authorization.html
-      include_versions:
-      - "201811.0"
-      - "201903.0"
-      - "201907.0"
-      - "202009.0"
-      - "202108.0"
-    - title: Checking out
-      include_versions:
-      - "201903.0"
-      - "201907.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
-      nested:
-      - title: Checking Out Purchases and Getting Checkout Data
-        url: /docs/scos/dev/glue-api-guides/checking-out/checking-out-purchases.html
-        include_versions:
-        - "201903.0"
-        - "201907.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-      - title: Submitting checkout data
-        url: /docs/scos/dev/glue-api-guides/checking-out/submitting-checkout-data.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-      - title: Checkout workflow
-        url: /docs/scos/dev/glue-api-guides/checking-out/checkout-workflow.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-      - title: Updating payment data
-        url: /docs/scos/dev/glue-api-guides/checking-out/updating-payment-data.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-    - title: Managing shopping lists
-      include_versions:
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
-      nested:
-      - title: Managing Shopping Lists
-        url: /docs/scos/dev/glue-api-guides/managing-shopping-lists/managing-shopping-lists.html
-        include_versions:
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-      - title: Managing shopping list items
-        url: /docs/scos/dev/glue-api-guides/managing-shopping-lists/managing-shopping-list-items.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-    - title: Retrieving Measurement Units
-      url: /docs/scos/dev/glue-api-guides/retrieving-measurement-units.html
-      include_versions:
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
-    - title: Managing returns
-      include_versions:
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
-      nested:
-      - title: Retrieving Returnable Items
-        url: /docs/scos/dev/glue-api-guides/managing-returns/retrieving-returnable-items.html
-        include_versions:
-        - "202005.0"
-      - title: Retrieving the Return Reasons
-        url: /docs/scos/dev/glue-api-guides/managing-returns/retrieving-return-reasons.html
-        include_versions:
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-      - title: Retrieving the Returned Items
-        url: /docs/scos/dev/glue-api-guides/managing-returns/retrieving-the-returned-items.html
-        include_versions:
-        - "202005.0"
-      - title: Retrieving Return Management Information
-        url: /docs/scos/dev/glue-api-guides/managing-returns/retrieving-return-management-information.html
-        include_versions:
-        - "202005.0"
-      - title: Creating a Return
-        url: /docs/scos/dev/glue-api-guides/managing-returns/creating-a-return.html
-        include_versions:
-        - "202005.0"
-      - title: Managing the returns
-        url: /docs/scos/dev/glue-api-guides/managing-returns/managing-the-returns.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-    - title: Configuring Outdated Refresh Token Life Time
-      url: /docs/scos/dev/glue-api-guides/configuring-outdated-refresh-token-life-time.html
-      include_versions:
-      - "202005.0"
-    - title: Retrieving Discounts
-      url: /docs/scos/dev/glue-api-guides/retrieving-discounts.html
-      include_versions:
-      - "202005.0"
-    - title: Retrieving Promotional Items
-      url: /docs/scos/dev/glue-api-guides/retrieving-promotional-items.html
-      include_versions:
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
-    - title: Deleting expired refresh tokens
-      url: /docs/scos/dev/glue-api-guides/deleting-expired-refresh-tokens.html
-      include_versions:
-      - "202009.0"
-      - "202108.0"
-    - title: Resolving search engine friendly URLs
-      url: /docs/scos/dev/glue-api-guides/resolving-search-engine-friendly-urls.html
-      include_versions:
-      - "202009.0"
-      - "202108.0"
-    - title: Retrieving protected resources
-      url: /docs/scos/dev/glue-api-guides/retrieving-protected-resources.html
-      include_versions:
-      - "202009.0"
-      - "202108.0"
-    - title: Retrieving autocomplete and search suggestions
-      url: /docs/scos/dev/glue-api-guides/retrieving-autocomplete-and-search-suggestions.html
-      include_versions:
-      - "202108.0"
-    - title: Reference information- GlueApplication errors
-      url: /docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html
-      include_versions:
-      - "202009.0"
-      - "202108.0"
     - title: Managing agent assists
       include_versions:
       - "202009.0"
@@ -3966,32 +3438,487 @@ entries:
         include_versions:
         - "202009.0"
         - "202108.0"
-    - title: Retrieving CMS pages
-      url: /docs/scos/dev/glue-api-guides/retrieving-cms-pages.html
+    - title: Authentication and Authorization
+      url: /docs/scos/dev/glue-api-guides/authentication-and-authorization.html
       include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202009.0"
       - "202108.0"
-    - title: Retrieving orders
-      url: /docs/scos/dev/glue-api-guides/retrieving-orders.html
+    - title: Managing B2B account
+      include_versions:
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      nested:
+      - title: Searching by company users
+        url: /docs/scos/dev/glue-api-guides/managing-b2b-account/searching-by-company-users.html
+        include_versions:
+        - "202009.0"
+        - "202108.0"
+      - title: Authenticating as a company user
+        url: /docs/scos/dev/glue-api-guides/managing-b2b-account/authenticating-as-a-company-user.html
+        include_versions:
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+      - title: Retrieving company users
+        url: /docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-company-users.html
+        include_versions:
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+      - title: Retrieving companies
+        url: /docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-companies.html
+        include_versions:
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+      - title: Retrieving business units
+        url: /docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-business-units.html
+        include_versions:
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+      - title: Retrieving company roles
+        url: /docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-company-roles.html
+        include_versions:
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+      - title: Retrieving business unit addresses
+        url: /docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-business-unit-addresses.html
+        include_versions:
+        - "202009.0"
+        - "202108.0"
+      - title: Managing company user authentication tokens
+        url: /docs/scos/dev/glue-api-guides/managing-b2b-account/managing-company-user-authentication-tokens.html
+        include_versions:
+        - "202009.0"
+        - "202108.0"
+      - title: B2B account management
+        url: /docs/scos/dev/glue-api-guides/managing-b2b-account/b2b-account-management.html
+        include_versions:
+        - "202001.0"
+        - "202005.0"
+    - title: Retrieving protected resources
+      url: /docs/scos/dev/glue-api-guides/retrieving-protected-resources.html
       include_versions:
       - "202009.0"
       - "202108.0"
+      - "202001.0"
+      - "202005.0"
+    - title: Managing products
+      nested:
+      - title: Abstract products
+        include_versions:
+        - "202009.0"
+        - "202108.0"
+        nested:
+        - title: Retrieving abstract products
+          url: /docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-abstract-products.html
+          include_versions:
+          - "202009.0"
+          - "202108.0"
+        - title: Retrieving abstract product availability
+          url: /docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-abstract-product-availability.html
+          include_versions:
+          - "202009.0"
+          - "202108.0"
+        - title: Retrieving abstract product prices
+          url: /docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-abstract-product-prices.html
+          include_versions:
+          - "202009.0"
+          - "202108.0"
+        - title: Retrieving tax sets
+          url: /docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-tax-sets.html
+          include_versions:
+          - "202009.0"
+          - "202108.0"
+        - title: Retrieving image sets of abstract products
+          url: /docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html
+          include_versions:
+          - "202009.0"
+          - "202108.0"
+      - title: Concrete products
+        include_versions:
+        - "202009.0"
+        - "202108.0"
+        nested:
+        - title: Retrieving concrete products
+          url: /docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-concrete-products.html
+          include_versions:
+          - "202009.0"
+          - "202108.0"
+        - title: Retrieving concrete product availability
+          url: /docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-concrete-product-availability.html
+          include_versions:
+          - "202009.0"
+          - "202108.0"
+        - title: Retrieving concrete product prices
+          url: /docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-concrete-product-prices.html
+          include_versions:
+          - "202009.0"
+          - "202108.0"
+        - title: Retrieving image sets of concrete products
+          url: /docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html
+          include_versions:
+          - "202009.0"
+          - "202108.0"
+        - title: Retrieving sales units
+          url: /docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-sales-units.html
+          include_versions:
+          - "202009.0"
+          - "202108.0"
+      - title: Retrieving product labels
+        url: /docs/scos/dev/glue-api-guides/managing-products/retrieving-product-labels.html
+      - title: Managing product ratings and reviews
+        url: /docs/scos/dev/glue-api-guides/managing-products/managing-product-ratings-and-reviews.html
+        include_versions:
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+      - title: Retrieving related products
+        url: /docs/scos/dev/glue-api-guides/managing-products/retrieving-related-products.html
+        include_versions:
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+      - title: Retrieving alternative products
+        url: /docs/scos/dev/glue-api-guides/managing-products/retrieving-alternative-products.html
+        include_versions:
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+      - title: Retrieving configurable bundle templates
+        url: /docs/scos/dev/glue-api-guides/managing-products/retrieving-configurable-bundle-templates.html
+        include_versions:
+        - "202108.0"
+      - title: Managing availability notifications
+        include_versions:
+        - "202108.0"
+        nested:
+        - title: Managing availability notifications
+          url: /docs/scos/dev/glue-api-guides/managing-products/managing-availability-notifications/managing-availability-notifications.html
+          include_versions:
+          - "202108.0"
+        - title: Retrieving subscriptions to availability notifications
+          url: /docs/scos/dev/glue-api-guides/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html
+          include_versions:
+          - "202108.0"
+      - title: Retrieving bundled products
+        url: /docs/scos/dev/glue-api-guides/managing-products/retrieving-bundled-products.html
+        include_versions:
+        - "202108.0"
+      - title: Retrieving product attributes
+        url: /docs/scos/dev/glue-api-guides/managing-products/retrieving-product-attributes.html
+        include_versions:
+        - "202108.0"
+      - title: Retrieving product information
+        url: /docs/scos/dev/glue-api-guides/managing-products/retrieving-product-information.html
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+      - title: Retrieving and applying product options
+        url: /docs/scos/dev/glue-api-guides/managing-products/retrieving-and-applying-product-options.html
+        include_versions:
+        - "202001.0"
+        - "202005.0"
     - title: Handling concurrent REST requests and caching with entity tags
       url: /docs/scos/dev/glue-api-guides/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
       include_versions:
       - "202009.0"
       - "202108.0"
-    - title: Searching the product catalog
-      url: /docs/scos/dev/glue-api-guides/searching-the-product-catalog.html
-      include_versions:
-      - "202108.0"
-    - title: Retrieving suggestions for auto-completion and search
-      url: /docs/scos/dev/glue-api-guides/retrieving-suggestions-for-auto-completion-and-search.html
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+    - title: Managing carts
       include_versions:
       - "202009.0"
-    - title: Retrieving Customer's Order History
-      url: /docs/scos/dev/glue-api-guides/retrieving-customers-order-history.html
-      include_versions:
+      - "202108.0"
       - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      nested:
+      - title: Guest carts
+        nested:
+        - title: Managing guest carts
+          url: /docs/scos/dev/glue-api-guides/managing-carts/guest-carts/managing-guest-carts.html
+        - title: Managing guest cart items
+          url: /docs/scos/dev/glue-api-guides/managing-carts/guest-carts/managing-guest-cart-items.html
+          include_versions:
+          - "202009.0"
+          - "202108.0"
+        - title: Managing gift cards of guest users
+          url: /docs/scos/dev/glue-api-guides/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html
+          include_versions:
+          - "202009.0"
+          - "202108.0"
+        - title: Managing discount vouchers in guest carts
+          url: /docs/scos/dev/glue-api-guides/managing-carts/guest-carts/managing-discount-vouchers-in-guest-carts.html
+          include_versions:
+          - "202009.0"
+          - "202108.0"
+      - title: Carts of registered users
+        include_versions:
+        - "202009.0"
+        - "202108.0"
+        nested:
+        - title: Managing carts of registered users
+          url: /docs/scos/dev/glue-api-guides/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
+        - title: Managing items in carts of registered users
+          url: /docs/scos/dev/glue-api-guides/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html
+          include_versions:
+          - "202009.0"
+          - "202108.0"
+        - title: Managing gift cards of registered users
+          url: /docs/scos/dev/glue-api-guides/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html
+          include_versions:
+          - "202009.0"
+          - "202108.0"
+        - title: Managing discount vouchers in carts of registered users
+          url: /docs/scos/dev/glue-api-guides/managing-carts/carts-of-registered-users/managing-discount-vouchers-in-carts-of-registered-users.html
+          include_versions:
+          - "202009.0"
+          - "202108.0"
+      - title: Sharing company user carts
+        include_versions:
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+        nested:
+        - title: Retrieving cart permission groups
+          url: /docs/scos/dev/glue-api-guides/managing-carts/sharing-company-user-carts/retrieving-cart-permission-groups.html
+          include_versions:
+          - "202009.0"
+          - "202108.0"
+        - title: Sharing company user carts
+          url: /docs/scos/dev/glue-api-guides/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html
+          include_versions:
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+        - title: Managing shared company user carts
+          url: /docs/scos/dev/glue-api-guides/managing-carts/sharing-company-user-carts/managing-shared-company-user-carts.html
+          include_versions:
+          - "202009.0"
+          - "202108.0"
+    - title: Deleting expired refresh tokens
+      url: /docs/scos/dev/glue-api-guides/deleting-expired-refresh-tokens.html
+      include_versions:
+      - "202009.0"
+      - "202108.0"
+    - title: Retrieving content items
+      include_versions:
+      - "202001.0"
+      - "201907.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      nested:
+      - title: Retrieving banner content items
+        url: /docs/scos/dev/glue-api-guides/retrieving-content-items/retrieving-banner-content-items.html
+        include_versions:
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+      - title: Retrieving abstract product list content items
+        url: /docs/scos/dev/glue-api-guides/retrieving-content-items/retrieving-abstract-product-list-content-items.html
+        include_versions:
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+    - title: Resolving search engine friendly URLs
+      url: /docs/scos/dev/glue-api-guides/resolving-search-engine-friendly-urls.html
+      include_versions:
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+    - title: Managing returns
+      include_versions:
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      nested:
+      - title: Managing the returns
+        url: /docs/scos/dev/glue-api-guides/managing-returns/managing-the-returns.html
+        include_versions:
+        - "202009.0"
+        - "202108.0"
+      - title: Retrieving return reasons
+        url: /docs/scos/dev/glue-api-guides/managing-returns/retrieving-return-reasons.html
+        include_versions:
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+      - title: Retrieving Returnable Items
+        url: /docs/scos/dev/glue-api-guides/managing-returns/retrieving-returnable-items.html
+        include_versions:
+        - "202005.0"
+      - title: Retrieving the Returned Items
+        url: /docs/scos/dev/glue-api-guides/managing-returns/retrieving-the-returned-items.html
+        include_versions:
+        - "202005.0"
+      - title: Retrieving Return Management Information
+        url: /docs/scos/dev/glue-api-guides/managing-returns/retrieving-return-management-information.html
+        include_versions:
+        - "202005.0"
+      - title: Creating a Return
+        url: /docs/scos/dev/glue-api-guides/managing-returns/creating-a-return.html
+        include_versions:
+        - "202005.0"
+    - title: Retrieving categories
+      nested:
+      - title: Retrieving category trees
+        url: /docs/scos/dev/glue-api-guides/retrieving-categories/retrieving-category-trees.html
+      - title: Retrieving category nodes
+        url: /docs/scos/dev/glue-api-guides/retrieving-categories/retrieving-category-nodes.html
+        include_versions:
+        - "202009.0"
+        - "202108.0"
+    - title: Managing shopping lists
+      include_versions:
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      nested:
+      - title: Managing shopping lists
+        url: /docs/scos/dev/glue-api-guides/managing-shopping-lists/managing-shopping-lists.html
+        include_versions:
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+      - title: Managing shopping list items
+        url: /docs/scos/dev/glue-api-guides/managing-shopping-lists/managing-shopping-list-items.html
+        include_versions:
+        - "202009.0"
+        - "202108.0"
+    - title: Managing wishlists
+      nested:
+      - title: Managing wishlists
+        url: /docs/scos/dev/glue-api-guides/managing-wishlists/managing-wishlists.html
+      - title: Managing wishlist items
+        url: /docs/scos/dev/glue-api-guides/managing-wishlists/managing-wishlist-items.html
+        include_versions:
+        - "202009.0"
+        - "202108.0"
+    - title: Checking out
+      nested:
+      - title: Checkout workflow
+        url: /docs/scos/dev/glue-api-guides/checking-out/checkout-workflow.html
+        include_versions:
+        - "202009.0"
+        - "202108.0"
+      - title: Submitting checkout data
+        url: /docs/scos/dev/glue-api-guides/checking-out/submitting-checkout-data.html
+        include_versions:
+        - "202009.0"
+        - "202108.0"
+      - title: Checking out purchases
+        url: /docs/scos/dev/glue-api-guides/checking-out/checking-out-purchases.html
+      - title: Updating payment data
+        url: /docs/scos/dev/glue-api-guides/checking-out/updating-payment-data.html
+        include_versions:
+        - "202009.0"
+        - "202108.0"
+    - title: Retrieving CMS pages
+      url: /docs/scos/dev/glue-api-guides/retrieving-cms-pages.html
+      include_versions:
+      - "202108.0"
+    - title: Retrieving store configuration
+      url: /docs/scos/dev/glue-api-guides/retrieving-store-configuration.html
+    - title: Retrieving measurement units
+      url: /docs/scos/dev/glue-api-guides/retrieving-measurement-units.html
+      include_versions:
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+    - title: Retrieving navigation trees
+      url: /docs/scos/dev/glue-api-guides/retrieving-navigation-trees.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+    - title: Retrieving promotional items
+      url: /docs/scos/dev/glue-api-guides/retrieving-promotional-items.html
+      include_versions:
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+    - title: Searching the product catalog
+      url: /docs/scos/dev/glue-api-guides/searching-the-product-catalog.html
+    - title: Retrieving autocomplete and search suggestions
+      url: /docs/scos/dev/glue-api-guides/retrieving-autocomplete-and-search-suggestions.html
+    - title: Retrieving orders
+      url: /docs/scos/dev/glue-api-guides/retrieving-orders.html
+      include_versions:
+      - "202009.0"
+      - "201907.0"
+      - "202108.0"
+    - title: "Reference information: GlueApplication errors"
+      url: /docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html
+      include_versions:
+      - "202009.0"
+      - "202108.0"
+    - title: Glue Spryks
+      url: /docs/scos/dev/glue-api-guides/glue-spryks.html
+    - title: Security and Authentication
+      url: /docs/scos/dev/glue-api-guides/security-and-authentication.html
+    - title: Glue Infrastructure
+      url: /docs/scos/dev/glue-api-guides/glue-infrastructure.html
+    - title: Glue API Developer Guides
+      url: /docs/scos/dev/glue-api-guides/glue-api-developer-guides.html
+      include_versions:
+      - "201811.0"
+      - "201907.0"
+      - "202001.0"
+    - title: Configuring Outdated Refresh Token Life Time
+      url: /docs/scos/dev/glue-api-guides/configuring-outdated-refresh-token-life-time.html
+      include_versions:
+      - "202005.0"
+    - title: Discounts and Promotions
+      url: /docs/scos/dev/glue-api-guides/discounts-and-promotions.html
+      include_versions:
+      - "202001.0"
+    - title: Retrieving Discounts
+      url: /docs/scos/dev/glue-api-guides/retrieving-discounts.html
+      include_versions:
+      - "202005.0"
   - title: SDK
     nested:
     - title: Development Virtual Machine, Docker Containers & Console

@@ -36,17 +36,17 @@ Please do not use public AHA Ideas, public Slack channels, or other public chann
 2. We determine and discuss with the reporter the severity and impact of the issue.
 3. To protect our customers, we are not going to disclose the issue until we develop a fix and be ready to make it publicly available.
 4. We develop a fix and publish relevant details:
-    * Spryker Core (under `vendor/spryker*`)
-        * If applicable, we prepare a code snippet, that allows to fix the vulnerability on the project level immediately 
-        * We prepare a code release
-    *    We verify the fix with the reporter
-    *    The security code release is not marked in any special way in the module release notes
-        * We contact our customers and inform them about the update available via the security newsletter
-        * After at least 7 working days we are publishing the same information on our documentation website
-    * Spryker Demo Shops (spryker-shop/suite, spryker-shop/b2b-demo-shop, spryker-shop/b2c-demo-shop)
-        * We prepare a code snippet, that allows to fix the vulnerability on the project level immediately
-        * We verify the fix with the reporter
-    *    We contact our customers and inform them about the patch available via the security newsletter
-        * After 7 working days we release the fix in public Demo Shops
-        * After at least 7 working days we are publishing the information about the issue on our documentation website
+   - Spryker Core (under `vendor/spryker*`)
+     - If applicable, we prepare a code snippet, that allows to fix the vulnerability on the project level immediately
+     - We prepare a code release
+   - We verify the fix with the reporter
+   - The security code release is not marked in any special way in the module release notes
+     - We contact our customers and inform them about the update available via the security newsletter
+     - After at least 7 working days we are publishing the same information on our documentation website
+   - Spryker Demo Shops (spryker-shop/suite, spryker-shop/b2b-demo-shop, spryker-shop/b2c-demo-shop)
+     - We prepare a code snippet, that allows to fix the vulnerability on the project level immediately
+     - We verify the fix with the reporter
+   - We contact our customers and inform them about the patch available via the security newsletter
+     - After 7 working days we release the fix in public Demo Shops
+     - After at least 7 working days we are publishing the information about the issue on our documentation website
 5. We will not send any of the above notifications on Friday, Saturday or Sunday to allow subscribers to have at least 1 working day to react.

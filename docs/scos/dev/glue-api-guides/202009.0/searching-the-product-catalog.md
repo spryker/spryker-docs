@@ -1,12 +1,18 @@
 ---
-title: Catalog Search
-last_updated: Jan 16, 2020
+title: Searching the product catalog
+description: This article provides a bunch of sample requests to be used to achieve the implementation of search options and gives explanations of request values.
+last_updated: Feb 19, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/v2/docs/catalog-search
-originalArticleId: 3b73442c-1db2-401f-aa10-37fa915c64b7
+originalLink: https://documentation.spryker.com/v6/docs/catalog-search
+originalArticleId: dde4d14c-50d2-4bad-9de1-d767ffc82236
 redirect_from:
-  - /v2/docs/catalog-search
-  - /v2/docs/en/catalog-search
+  - /v6/docs/catalog-search
+  - /v6/docs/en/catalog-search
+related:
+  - title: Catalog feature overview
+    link: docs/scos/user/features/page.version/catalog-feature-overview.html
+  - title: Glue API - Catalog feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-catalog-feature-integration.html
 ---
 
 The implementation of the search API offers you the same search experience as in the Spryker demo shops. The search engine used is Elasticsearch and search results go beyond the simple listing of products in the results section. The list of search results is paginated according to your configuration and spelling suggestions are offered when needed. In addition, sorting and facets are supported to narrow down the search results.
@@ -17,7 +23,7 @@ In your development, this endpoint can help you to:
 * Retrieve a list of products to be displayed anywhere you want.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Catalog Search API Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/catalog-search-api-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Catalog feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-catalog-feature-integration.html).
 
 ## Searching for Products
 To search for products, send GET requests to the following endpoint:
@@ -72,7 +78,7 @@ Search settings are defined by the front-end search configuration. In other word
 \*The fields mentioned are all attributes in the response. Type and ID are not mentioned.
 
 <details open>
-<summary markdown='span'>markdown='span'>Sample empty response (no products found) </summary>
+<summary markdown='span'>Sample empty response (no products found) </summary>
 
 ```js
 {
@@ -145,7 +151,7 @@ To search for products, you need to add search filters following the q parameter
 | /catalog-search?**weight[]=132+g**&q=camera | Search for **camera** products with weight **132 g** |
 
 <details open>
-<summary markdown='span'>markdown='span'>Sample response for a valid request </summary>
+<summary markdown='span'>Sample response for a valid request </summary>
 
 ```js
 {
@@ -528,7 +534,7 @@ To optimize network and resource utilization, you can also paginate the search r
 				}
 			}
 		},
- 
+
 		"links": {
 			"self": "http://mysprykershop.com/catalog-search?q=canon&include=&page[offset]=12&page[limit]=12",
 			"last": "http://mysprykershop.com/catalog-search?q=canon&include=&page[offset]=24&page[limit]=12",
@@ -552,4 +558,3 @@ In the following table, you can find some sample requests that use pagination:
 {% info_block warningBox %}
 Pagination settings are defined by the front-end search configuration. In other words, the REST API uses pagination settings of Spryker Shop Application.
 {% endinfo_block %}
-

@@ -20,11 +20,13 @@ redirect_from:
 The following information pertains to security-related issues that have been recently resolved. Issues are listed by description and affected modules.
 
 {% info_block infoBox %}
+
 If you need any additional support with this content, please contact [support@spryker.com](mailto:support@spryker.com). If you found a new security vulnerability, please inform us via  [security@spryker.com](mailto:security@spryker.com).
+
 {% endinfo_block %}
 
 ## Enhanced Regular Expressions to be Stricter
-Regular expressions are used to restrict the set of allowed values. However, some regular expressions are missing boundary characters (^ or $) or use wildcards (.*) that potentially allow bypassing this filter. 
+Regular expressions are used to restrict the set of allowed values. However, some regular expressions are missing boundary characters (^ or $) or use wildcards (.*) that potentially allow bypassing this filter.
 
 To improve that:
 * `RequestServiceProvider::parseCliRequestData()` had been adjusted to make the regular expression validating CLI arguments stricter.
@@ -36,10 +38,10 @@ To improve that:
 * ProductManagement (0.19.1)
 * Transfer  (3.19.0)
 
-**How to get the fix:** 
+**How to get the fix:**
 Just update the modules with `composer update spryker/application spryker/product-management spryker/transfer`.
 
-## Changing Password led to Infinite Loop When “Agent Assist” Feature was Deactivated 
+## Changing Password led to Infinite Loop When “Agent Assist” Feature was Deactivated
 This issue might have happened when modifying  `YvesBootstrap` in the code base and deactivating the security provider of the Agent Assist feature by commenting out or removing a line with the following code:
 `$this->application->register(new AgentPageSecurityServiceProvider()); # AgentFeature`
 
@@ -48,10 +50,10 @@ If, after that, one went to the **My Profile** page and tried to change the pass
 To fix this behavior, the `ProfileController::processPasswordUpdate()` controller method was adjusted, and now after changing the password the customer is re-authenticated using the new one.
 
 **Affected modules:**
-* `CustomerPage`  (2.5.1) 
+* `CustomerPage`  (2.5.1)
 
-**How to get the fix:** 
-Just update modules with composer update `spryker/customer-page`. 
+**How to get the fix:**
+Just update modules with composer update `spryker/customer-page`.
 
 ## No Altering of the Database Through the GET HTTP Method Requests
 The `StateMachine` module exposes a set of controller actions allowing to trigger state machine events from Zed interface. Those actions trigger changes to the database, which usually should not happen when a GET HTTP method is invoked.
@@ -62,11 +64,11 @@ In this release, we have fixed this behavior by requiring the POST method. To ma
 * Oms  (11.0.1)
 * StateMachine  (2.7.0)
 
-**How to get the fix:** 
+**How to get the fix:**
 * Update the modules with `composer update spryker/oms spryker/state-machine`.
-* In case if you have custom state machines in your project which are implemented based on `ExampleStateMachine`, make sure that you use correct endpoints such as `/state-machine/render-form/event-item` and `/state-machine/render-form/event` in your StateMachine’s twig files. 
+* In case if you have custom state machines in your project which are implemented based on `ExampleStateMachine`, make sure that you use correct endpoints such as `/state-machine/render-form/event-item` and `/state-machine/render-form/event` in your StateMachine’s twig files.
 
-For example, in `src/Pyz/Zed/ExampleStateMachine/Presentation/Test/list.twig 
+For example, in `src/Pyz/Zed/ExampleStateMachine/Presentation/Test/list.twig
 render(controller('/state-machine/render-form/event-item', {__your custom args here__ })){% raw %}}}{% endraw %}`.
 
 * Consider external integrations if these endpoints have been exposed to integrations with external systems.
@@ -79,23 +81,23 @@ From now on, the binary representation of pseudo-random bytes is used to initial
 To make this possible, the `UtilEncryptionService::generateByteStringOpenSslEncryptInitVector()` service method has been introduced to generate a random byte vector for the provided OpenSSL encryption algorithm as well as the `UtilTextService::generateRandomByteString()` service method that generates a random byte string of the required length. Also, `VaultConfig::useByteStringForEncryptionInitializationVector()` has been created to switch between strategies of generating the initialization vector used for encrypting.
 
 **Affected modules:**
-* UtilEncryption  (1.1.0) 
+* UtilEncryption  (1.1.0)
 * UtilText (1.3.0)
 * Vault (1.2.0)
 
-**How to get the fix:** 
+**How to get the fix:**
 * Update the modules with `composer update spryker/util-encryption spryker/util-text spryker/vault`.
 * Extend `Spryker\Zed\Vault\VaultConfig\VaultConfig` on a project level and redefine constant  `VaultConfig::USE_BYTE_STRING_FOR_ENCRYPTION_INITIALIZATION_VECTOR = true`.
 
 ## HTML Tags in Product Attribute Values Will be Encoded After Saving
-Previously, when there were products having HTML tags in the attribute values (`<p>some html text</p>`), and you tried to edit these values in Zed interface, the entities were double-encoded, and their values sometimes became non-renderable in Yves. Even though the value was not modified by the administrator. However, saving unmodified values should keep their values unchanged, so HTML tags should not be double-encoded, and at the same time, XSS protection must work. 
+Previously, when there were products having HTML tags in the attribute values (`<p>some html text</p>`), and you tried to edit these values in Zed interface, the entities were double-encoded, and their values sometimes became non-renderable in Yves. Even though the value was not modified by the administrator. However, saving unmodified values should keep their values unchanged, so HTML tags should not be double-encoded, and at the same time, XSS protection must work.
 
 To fix the wrong behavior, the `ProductAttributeFacade::saveConcreteAttributes()` and `ProductAttributeFacade::saveAbstractAttributes()` facade methods have been adjusted so they sanitize strings from XSS injections but leave the markup elements unchanged.
 
 **Affected modules:**
 * ProductAttribute (1.4.0)
 
-**How to get the fix:** 
+**How to get the fix:**
 * Just update the modules with `composer update spryker/product-attribute`.
 * In case of the rare HTML value in attributes, double-check that those are handled as expected by the new sanitizing tools.
 
@@ -105,14 +107,14 @@ Previously, it was possible to control authentication in RPC calls between Yves 
 To solve the issue `HttpClient::getHeaders()` has been adjusted in order to set the `Auth` header for every request. Also, several service provider stacks such as `ApplicationDependencyProvider::getInternalCallServiceProvider()` and `ApplicationDependencyProvider::getInternalCallServiceProvidersWithAuthentication()` were deprecated, as well as constants `AuthConstants::AUTH_ZED_ENABLED` and `ZedRequestConstants::AUTH_ZED_ENABLED`.
 
 **Affected modules:**
-* Application (3.20.0) 
-* Auth  (3.4.0) 
-* ZedRequest (3.9.0) 
+* Application (3.20.0)
+* Auth  (3.4.0)
+* ZedRequest (3.9.0)
 
-**How to get the fix:** 
+**How to get the fix:**
 * Just update the modules with `composer update spryker/application spryker/auth spryker/zed-request`
-* It’s not related to the fix itself, but to clean up deprecated constants, do the following: 
-    * Remove usage of `AuthConstants::AUTH_ZED_ENABLED` and `ZedRequestConstants::AUTH_ZED_ENABLED` in `config/Shared/config_default.php` (and other config files if applicable). 
+* It’s not related to the fix itself, but to clean up deprecated constants, do the following:
+    * Remove usage of `AuthConstants::AUTH_ZED_ENABLED` and `ZedRequestConstants::AUTH_ZED_ENABLED` in `config/Shared/config_default.php` (and other config files if applicable).
     * `Pyz\Zed\Application\Communication\ZedBootstrap::isAuthenticationEnabled()` can also be removed.
 
 ## Possible Vulnerabilities in 3-rd Party Dependencies
@@ -121,8 +123,8 @@ Package Dot of v1.1.2 is known to have a vulnerability. Moreover, this dependenc
 To solve the problem, we removed vulnerable v1.1.2 Dot dependency from the `Discount` and `ProductRelation` modules and added the dependency ^1.1.3 to jQuery QueryBuilder.
 
 **Affected modules:**
-* Discount (9.7.2) 
-* ProductRelation  (2.4.1) 
+* Discount (9.7.2)
+* ProductRelation  (2.4.1)
 
 **How to get the fix:**
 * Just update the modules with `composer update spryker/discount spryker/product-relation`.

@@ -14,13 +14,13 @@ redirect_from:
 ## Features
 ### Reorder
 One of the biggest factors that influences customer loyalty and persuades them to repeatedly buy from your shop, is shopping convenience. In this release, we are introducing another feature that will make your customers' (and your) life easier: **reorder**. This feature allows customers to reorder their previous orders in one click. All your customers would need to do is go to  _Order History_ in their **Customer Account** and reorder either the entire order or individual items from it.
-![Reorder](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+April+-+2018/reorder_view_orders.png) 
- 
-![Reorder - View details](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+April+-+2018/reorder_order_details.png) 
+![Reorder](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+April+-+2018/reorder_view_orders.png)
+
+![Reorder - View details](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+April+-+2018/reorder_order_details.png)
 
 **Affected Modules**
 
-| Major | Minor |  |
+| MAJOR | MINOR | PATCH |
 | --- | --- | --- |
 | n/a | <ul><li>[Cart 4.6.0](https://github.com/spryker/cart/releases/tag/4.6.0)</li><li>[ProductBundle 4.4.0](https://github.com/spryker/product-bundle/releases/tag/4.4.0)</li><li>[ZedRequest 3.4.0](https://github.com/spryker/zed-request/releases/tag/3.4.0)</li></ul> | <ul><li>[AvailabilityCartConnector 4.1.1](https://github.com/spryker/availability-cart-connector/releases/tag/4.1.1)</li><li>[Customer 7.7.1](https://github.com/spryker/customer/releases/tag/7.7.1)</li><li>[ProductOption 6.1.5](https://github.com/spryker/product-option/releases/tag/6.1.5)</li><li>[Sales 8.9.1](https://github.com/spryker/sales/releases/tag/8.9.1)</li><li>[Shipment 6.4.1](https://github.com/spryker/shipment/releases/tag/6.4.1)</li></ul> |
 
@@ -34,7 +34,7 @@ At one point or another, a shop owner / administrator might want to get a list o
 | n/a | <ul><li>[Customer 7.6.0](https://github.com/spryker/customer/releases/tag/7.6.0)</li><li> [Sales 8.7.0](https://github.com/spryker/sales/releases/tag/8.7.0)</li></ul> | n/a |
 
 <!--**Documentation**
-<br>For module documentation see: 
+<br>For module documentation see:
 For store administration guides see: -->
 
 ## Improvements
@@ -113,10 +113,9 @@ Previously, we had an issue with orders count for guest users: _All orders of th
 
 ### SKU Fixes
 In this release, we have fixed the following issues with SKU generation:
-
-* it is now possible to create SKUs like `FOO.BAR-BAZ_QUX`;
-* editing a product causes generation of a new SKU no longer ;
-* fixed the error message displayed when using unacceptable characters in an SKU.
+* It is now possible to create SKUs like `FOO.BAR-BAZ_QUX`.
+* Editing a product causes generation of a new SKU no longer.
+* Fixed the error message displayed when using unacceptable characters in an SKU.
 
 **Affected Modules**
 

@@ -16,7 +16,9 @@ redirect_from:
 We believe that you can only deliver great support when you are on the same page as your customers. Being transparent about our performance metrics and processes is a necessary step towards that.
 
 ## Our Performance Metrics
+
 ![image.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/image%28130%29.png)
+
 *picture by [@goumbik](https://www.pexels.com/@goumbik)*
 
 
@@ -51,20 +53,21 @@ Because your time is valuable, include only two questions. For these questions w
 If you rate us low, we would like to ask you in a comment, why. Depending on your comment, our teamlead might contact you for a follow up. The feedback we receive will be discussed openly in our weekly team meetings.
 
 ## Our Processes
+
 ![image.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/image%28131%29.png)
 
 
-Our internal processes are designed with speed and reliability in mind. We use a state of the art case management system wired up directly with our internal communication tool to provide the best possible visibility to incoming communication. 
+Our internal processes are designed with speed and reliability in mind. We use a state of the art case management system wired up directly with our internal communication tool to provide the best possible visibility to incoming communication.
 
 From an organization point of few, we are part of the Customer Success Team. This ensures that we know all the details necessary to help you achieve your goals and knowing what matters to you most.
 
-We are also wired up directly with Software Development and DevOps in Spryker. This direct link ensures that we can escalate things quickly to subject matter experts and react to emergencies without long and complex signal paths. 
+We are also wired up directly with Software Development and DevOps in Spryker. This direct link ensures that we can escalate things quickly to subject matter experts and react to emergencies without long and complex signal paths.
 
 ### Case Status
 When you open a case with us, you will receive notification emails that tell you what the status of your case is.
 This table lists these stages that Spryker Support Cases go through and gives an explanation of what happens with your case on each of them.
 
-| Status | Explanation |
+| STATUS | EXPLANATION |
 | --- | --- |
 | Received | Your case was successfully created in our case system. Spryker Support Personnel can now pick up your case |
 | Diagnosis | Spryker Support Agent has taken over your case and is evaluating your input. It is common that Support Agents get in contact with you on this stage to clarify open questions. |

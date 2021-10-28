@@ -1,5 +1,5 @@
 ---
-title: Catalog Search
+title: Searching the Product Catalog
 last_updated: May 19, 2020
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/catalog-search
@@ -26,10 +26,13 @@ Sample request: `GET http://mysprykershop.com/catalog-search?q=`
 The above request is the same as searching with an empty search field in Spryker front-end (no search parameters provided). By executing such a test search request, you can get search settings, such as sorting and pagination options, a default number of items per page etc.
 
 {% info_block warningBox %}
+
 Search settings are defined by the front-end search configuration. In other words, the REST API uses search settings of Spryker Shop Application.
+
 {% endinfo_block %}
 
 ## Sorting Parameters
+
 | Field* | Type | Description |
 | --- | --- | --- |
 | sortParamNames | String | List of possible sorting parameters such as "name_asc" or "price_desc" |
@@ -40,6 +43,7 @@ Search settings are defined by the front-end search configuration. In other word
 \*The fields mentioned are all attributes in the response. Type and ID are not mentioned.
 
 **Pagination**
+
 | Field* | Type | Description |
 | --- | --- | --- |
 | numFound | String | Number of search results |
@@ -52,6 +56,7 @@ Search settings are defined by the front-end search configuration. In other word
 \*The fields mentioned are all attributes in the response. Type and ID are not mentioned.
 
 ## Abstract Product Information
+
 | Field* | Type | Description |
 | --- | --- | --- |
 | externalUrlSmall | String | URLs to the image per image set per image |
@@ -63,6 +68,7 @@ Search settings are defined by the front-end search configuration. In other word
 \*The fields mentioned are all attributes in the response. Type and ID are not mentioned.
 
 ## Abstract Product Price Information
+
 | Field* | Type | Description |
 | --- | --- | --- |
 | code | String | Currency code |
@@ -135,6 +141,7 @@ Search settings are defined by the front-end search configuration. In other word
 </details>
 
 To search for products, you need to add search filters following the q parameter. Below are examples of the most common filters you can use:
+
 | Request | Description |
 | --- | --- |
 | /catalog-search?q=**camera** | Search for any **camera** products |
@@ -479,6 +486,7 @@ You can also define how products are sorted. By default, when you send a search 
 ```
 
 You can use the sort options to specify how to output search results in a search response:
+
 | Request | Description |
 | --- | --- |
 | /catalog-search?sort=**rating**&q=cameras | Sort cameras by **product ratings**. |
@@ -488,10 +496,13 @@ You can use the sort options to specify how to output search results in a search
 | /catalog-search?sort=**price_desc**&q=cameras | Sort cameras by **price descending**. |
 
 {% info_block warningBox %}
+
 Sort settings are defined by the front-end search configuration. In other words, the REST API uses sort settings of Spryker Shop Application.
+
 {% endinfo_block %}
 
 ## Pagination
+
 To optimize network and resource utilization, you can also paginate the search results. Pagination options can also be retrieved from a search response. They are located in **data/attributes/pagination**.
 
 | Field* | Type | Description |
@@ -528,7 +539,7 @@ To optimize network and resource utilization, you can also paginate the search r
 				}
 			}
 		},
- 
+
 		"links": {
 			"self": "http://mysprykershop.com/catalog-search?q=canon&include=&page[offset]=12&page[limit]=12",
 			"last": "http://mysprykershop.com/catalog-search?q=canon&include=&page[offset]=24&page[limit]=12",
@@ -550,7 +561,7 @@ In the following table, you can find some sample requests that use pagination:
 | /catalog-search?q=canon&**page[offset]=48**&page[limit]=24 | Show **24** items per page and page number **3**. |
 
 {% info_block warningBox %}
+
 Pagination settings are defined by the front-end search configuration. In other words, the REST API uses pagination settings of Spryker Shop Application.
+
 {% endinfo_block %}
-
-

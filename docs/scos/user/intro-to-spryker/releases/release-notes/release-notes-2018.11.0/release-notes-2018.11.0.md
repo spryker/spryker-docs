@@ -34,7 +34,9 @@ related:
  The Spryker Commerce OS is an end-to-end solution for e-commerce. This document contains a business level description of major new features and enhancements released in November of 2018.
 
 {% info_block infoBox %}
+
 For information about installing the Spryker Commerce OS, see [Getting Started Guide](/docs/scos/dev/developer-getting-started-guide.html).
+
 {% endinfo_block %}
 
 ## Demo Shops
@@ -158,7 +160,7 @@ Offer your customers individual agreements and customize the prices per business
 The shop owner can set up a price per merchant/business unit combination.
 ![Customer-specific price per merchant unit combination](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.11.0/image10.png)
 
-**Documentation**: [Prices per Merchant Relations](https://documentation.spryker.com/2021080/docs/merchant-custom-prices)
+**Documentation**: [Prices per Merchant Relations](/docs/scos/user/features/{{site.version}}/merchant-custom-prices-feature-overview.html)
 
 ### Agent Assist
 With the Agent Assist feature, you may enable your employees to help your customers with true efficiency, all while operating the same storefront interface. No more confusing backend UI. Agent Assist allows your employees to log-in to the storefront using a particular URL, search for a customer to assist and pick them up to do business on their behalf. A feature flag in the session allows for versatile customizations of the storefront functionality during an agent assist session. This feature may also be used as a point of sale solution in physical retail stores.

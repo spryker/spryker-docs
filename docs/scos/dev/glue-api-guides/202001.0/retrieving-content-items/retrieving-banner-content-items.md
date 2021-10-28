@@ -9,9 +9,9 @@ redirect_from:
   - /v4/docs/en/retrieving-content-item-data-201907
 ---
 
-This section provides guides that can help you access and manage relevant data of content items. You can retrieve information on each content item based on its content item key for all or a specific locale. 
+This section provides guides that can help you access and manage relevant data of content items. You can retrieve information on each content item based on its content item key for all or a specific locale.
 
 See the following guides for more details:
 
-* [Retrieving Banner Content Item Data](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-content-item-data/retrieving-banner-content-item-data.html)
+* [Retrieving banner content items](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-content-item-data/retrieving-banner-content-items.html)
 * [Getting Abstract Product List Content Item Data](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-content-item-data/retrieving-abstract-product-list-content-items.html)

@@ -37,8 +37,8 @@ The state machines provided below are examples of PSP provider flow.
 
 {% endinfo_block %}
 
+1. Copy the state machines below on the project level and adjust them according to your requirements.
 
-1. Copy the state machines below on the project level and adjust them according to your requirements.  
 **config/Shared/config_default.php**
 
 ```php
@@ -174,6 +174,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 To display the payment methods on the Storefront, import them for each store:
 
 **data/import/common/common/payment_method.csv**
+
 ```yaml
 payment_method_key,payment_method_name,payment_provider_key,payment_provider_name,is_active
 computopCreditCard,Computop Credit Card,Computop,Computop,1
@@ -190,6 +191,7 @@ computopPayuCeeSingle,Computop PayU CEE Single,Computop,Computop,1
 
 
 **data/import/common/DE/payment_method_store.csv**
+
 ```yaml
 payment_method_key,store
 computopCreditCard,DE
@@ -231,6 +233,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
         ];
     }
 }
+
 ```
 
 ### Checkout configuration
@@ -396,9 +399,9 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 **src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig**
 
 ```twig
-{% extends template('page-layout-checkout', 'CheckoutPage') %}
+{% raw %}{%{% endraw %} extends template('page-layout-checkout', 'CheckoutPage') {% raw %}%}{% endraw %}
 
-{% define data = {
+{% raw %}{%{% endraw %} define data = {
     backUrl: _view.previousStepUrl,
     forms: {
         payment: _view.paymentForm
@@ -415,7 +418,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
         'Computop/sofort': ['sofort', 'computop']
         'Computop/payu-cee-single': ['payu-cee-single', 'computop'],
     }
-} %}
+} {% raw %}%}{% endraw %}
 ```
 
 4. Add payment filter plugin `ComputopCurrencyPaymentMethodFilterPlugin`:
@@ -829,7 +832,6 @@ class CheckoutPageRouteProviderPlugin extends SprykerShopCheckoutPageRouteProvid
 
 5. Adjust `RouterDependencyProvider` to use `CheckoutPageRouteProviderPlugin` from the project level:
 
-
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
 
 ```php
@@ -854,8 +856,6 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
     }
 }
 ```
-
-</details>
 
 6. Only for PayNow payment method: To set the Computop payment transfer with necessary data in `QuoteTransfer`, adjust `PlaceOrderStep`:
 
@@ -1043,7 +1043,6 @@ class PaymentStep extends SprykerShopPaymentStep
 ```
 </details>
 
-
 9. Only for PayPalExpress payment method: adjust the `ShipmentStep` with default shipment method check:
 
 <details>
@@ -1211,49 +1210,49 @@ class ComputopDependencyProvider extends SprykerComputopDependencyProvider
 <summary>src\Pyz\Yves\CartPage\Theme\default\components\molecules\cart-summary\cart-summary.twig</summary>
 
 ```twig
-{% extends model('component') %}
+{% raw %}{%{% endraw %} extends model('component') {% raw %}%}{% endraw %}
 
-{% define config = {
+{% raw %}{%{% endraw %} define config = {
     name: 'cart-summary',
 } %}
 
-{% define data = {
+{% raw %}{%{% endraw %} define data = {
     cart: required,
     isQuoteValid: required,
     isQuoteEditable: required,
     cartQuantity: cartQuantity is defined ? cartQuantity : app['cart.quantity'] | default,
-} %}
+} {% raw %}%}{% endraw %}
 
-{% set canProceedToCheckout = data.cart.items is not empty
+{% raw %}{%{% endraw %} set canProceedToCheckout = data.cart.items is not empty
     and data.isQuoteValid
     and (not is_granted('ROLE_USER') or can('WriteSharedCartPermissionPlugin', data.cart.idQuote))
-%}
+{% raw %}%}{% endraw %}
 
-{% block body %}
-    {% block cartQuantity %}
-        <h6 class="text-secondary float-right">{{ data.cartQuantity }} {{ 'item' | trans }}</h6>
-        <h6>{{ 'cart.your-order' | trans }}</h6>
+{% raw %}{%{% endraw %} block body {% raw %}%}{% endraw %}
+    {% raw %}{%{% endraw %} block cartQuantity {% raw %}%}{% endraw %}
+        <h6 class="text-secondary float-right">{% raw %}{{{% endraw %} data.cartQuantity {% raw %}}}{% endraw %} {% raw %}{{{% endraw %} 'item' | trans {% raw %}}}{% endraw %}</h6>
+        <h6>{% raw %}{{{% endraw %} 'cart.your-order' | trans {% raw %}}}{% endraw %}</h6>
         <hr>
-    {% endblock %}
+    {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 
-    {% set quoteApprovalWidget = findWidget('QuoteApprovalWidget', [data.cart]) %}
-    {% if quoteApprovalWidget and quoteApprovalWidget.isVisible and not canProceedToCheckout %}
-        {% set canProceedToCheckout = true %}
-    {% endif %}
+    {% raw %}{%{% endraw %} set quoteApprovalWidget = findWidget('QuoteApprovalWidget', [data.cart]) {% raw %}%}{% endraw %}
+    {% raw %}{%{% endraw %} if quoteApprovalWidget and quoteApprovalWidget.isVisible and not canProceedToCheckout {% raw %}%}{% endraw %}
+        {% raw %}{%{% endraw %} set canProceedToCheckout = true {% raw %}%}{% endraw %}
+    {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 
-    {% if quoteApprovalWidget %}  {# @deprecated - This widget is moved to summary page of checkout. #}
-        {% widget quoteApprovalWidget only %}{% endwidget %}
-    {% endif %}
+    {% raw %}{%{% endraw %} if quoteApprovalWidget {% raw %}%}{% endraw %}  {# @deprecated - This widget is moved to summary page of checkout. #}
+        {% raw %}{%{% endraw %} widget quoteApprovalWidget only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}
+    {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 
 
-    {% block cartSummaryContent %}
-        {% if can('SeePricePermissionPlugin') %}
-            {% if widgetExists('DiscountSummaryWidgetPlugin') %}
+    {% raw %}{%{% endraw %} block cartSummaryContent {% raw %}%}{% endraw %}
+        {% raw %}{%{% endraw %} if can('SeePricePermissionPlugin') {% raw %}%}{% endraw %}
+            {% raw %}{%{% endraw %} if widgetExists('DiscountSummaryWidgetPlugin') {% raw %}%}{% endraw %}
                 <ul class="list spacing-y">
-                    {{ widget('DiscountSummaryWidgetPlugin', data.cart) }} {# @deprecated Use molecule('cart-discount-summary', 'DiscountWidget') instead. #}
+                    {% raw %}{{{% endraw %} widget('DiscountSummaryWidgetPlugin', data.cart) {% raw %}}}{% endraw %} {# @deprecated Use molecule('cart-discount-summary', 'DiscountWidget') instead. #}
                 </ul>
-            {% else %}
-                {% include molecule('cart-discount-summary', 'DiscountWidget') ignore missing with {
+            {% raw %}{%{% endraw %} else {% raw %}%}{% endraw %}
+                {% raw %}{%{% endraw %} include molecule('cart-discount-summary', 'DiscountWidget') ignore missing with {
                     class: 'list spacing-y',
                     data: {
                         voucherDiscounts: data.cart.voucherDiscounts,
@@ -1262,118 +1261,118 @@ class ComputopDependencyProvider extends SprykerComputopDependencyProvider
                         isQuoteEditable: data.isQuoteEditable,
                         currencyIsoCode: data.cart.currency.code,
                     },
-                } only %}
-            {% endif %}
+                } only {% raw %}%}{% endraw %}
+            {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 
             <ul class="list spacing-y">
-                {% block cartShipment %}
-                    {% if data.cart.shipment is not empty and data.cart.shipment.method is not empty %}
-                        {% set shipmentTotalPrice = data.cart.totals.shipmentTotal is defined ? data.cart.totals.shipmentTotal : data.cart.shipment.method.storeCurrencyPrice %}
+                {% raw %}{%{% endraw %} block cartShipment {% raw %}%}{% endraw %}
+                    {% raw %}{%{% endraw %} if data.cart.shipment is not empty and data.cart.shipment.method is not empty {% raw %}%}{% endraw %}
+                        {% raw %}{%{% endraw %} set shipmentTotalPrice = data.cart.totals.shipmentTotal is defined ? data.cart.totals.shipmentTotal : data.cart.shipment.method.storeCurrencyPrice {% raw %}%}{% endraw %}
                         <li class="list__item spacing-y">
-                            <strong>{{ 'cart.shipping' | trans }}</strong>
+                            <strong>{% raw %}{{{% endraw %} 'cart.shipping' | trans {% raw %}}}{% endraw %}</strong>
                             <br>
-                            {{ data.cart.shipment.method.name }}
-                            <span class="float-right">{{ shipmentTotalPrice | money(true, data.cart.currency.code) }}</span>
+                            {% raw %}{{{% endraw %} data.cart.shipment.method.name {% raw %}}}{% endraw %}
+                            <span class="float-right">{% raw %}{{{% endraw %} shipmentTotalPrice | money(true, data.cart.currency.code) {% raw %}}}{% endraw %}</span>
                             <hr>
                         </li>
-                    {% endif %}
-                {% endblock %}
+                    {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
+                {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 
-                {% widget 'SalesOrderThresholdWidget' args [data.cart.expenses] only %}
-                    {% block body %}
+                {% raw %}{%{% endraw %} widget 'SalesOrderThresholdWidget' args [data.cart.expenses] only {% raw %}%}{% endraw %}
+                    {% raw %}{%{% endraw %} block body {% raw %}%}{% endraw %}
                         <li class="list__item spacing-y">
-                            {{ parent() }}
+                            {% raw %}{{{% endraw %} parent() {% raw %}}}{% endraw %}
                             <hr>
                         </li>
-                    {% endblock %}
-                {% elsewidget 'SalesOrderThresholdWidgetPlugin' args [data.cart.expenses] only %} {# @deprecated Use SalesOrderThresholdWidget instead. #}
-                    {% block body %}
+                    {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
+                {% raw %}{%{% endraw %} elsewidget 'SalesOrderThresholdWidgetPlugin' args [data.cart.expenses] only {% raw %}%}{% endraw %} {# @deprecated Use SalesOrderThresholdWidget instead. #}
+                    {% raw %}{%{% endraw %} block body {% raw %}%}{% endraw %}
                         <li class="list__item spacing-y">
-                            {{ parent() }}
+                            {% raw %}{{{% endraw %} parent() {% raw %}}}{% endraw %}
                         </li>
                         <hr>
-                    {% endblock %}
-                {% endwidget %}
+                    {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
+                {% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}
 
-                {% block cartPrice %}
+                {% raw %}{%{% endraw %} block cartPrice {% raw %}%}{% endraw %}
                     <li class="list__item spacing-y">
-                        {{ 'cart.price.subtotal' | trans }}
-                        <span class="float-right">{{ data.cart.totals.subtotal | money(true, data.cart.currency.code) }}</span>
+                        {% raw %}{{{% endraw %} 'cart.price.subtotal' | trans {% raw %}}}{% endraw %}
+                        <span class="float-right">{% raw %}{{{% endraw %} data.cart.totals.subtotal | money(true, data.cart.currency.code) {% raw %}}}{% endraw %}</span>
                     </li>
 
                     <li class="list__item spacing-y">
-                        {{ 'cart.total.tax_total' | trans }}
-                        <span class="float-right">{{ data.cart.totals.taxTotal.amount | money(true, data.cart.currency.code) }}</span>
+                        {% raw %}{{{% endraw %} 'cart.total.tax_total' | trans {% raw %}}}{% endraw %}
+                        <span class="float-right">{% raw %}{{{% endraw %} data.cart.totals.taxTotal.amount | money(true, data.cart.currency.code) {% raw %}}}{% endraw %}</span>
                     </li>
                     <li class="list__item spacing-y">
-                        {{ 'cart.price.grand.total' | trans }}
-                        <strong class="float-right">{{ data.cart.totals.grandTotal | money(true, data.cart.currency.code) }}</strong>
+                        {% raw %}{{{% endraw %} 'cart.price.grand.total' | trans {% raw %}}}{% endraw %}
+                        <strong class="float-right">{% raw %}{{{% endraw %} data.cart.totals.grandTotal | money(true, data.cart.currency.code) {% raw %}}}{% endraw %}</strong>
                     </li>
-                {% endblock %}
+                {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
             </ul>
 
-            {% include molecule('gift-card-payment-summary', 'GiftCardWidget') ignore missing with {
+            {% raw %}{%{% endraw %} include molecule('gift-card-payment-summary', 'GiftCardWidget') ignore missing with {
                 class: 'list spacing-y',
                 data: {
                     cart: data.cart,
                     isQuoteEditable: data.isQuoteEditable,
                 },
-            } only %}
-        {% else %}
-            {{ 'customer.access.cannot_see_price' | trans }}
-        {% endif %}
-    {% endblock %}
+            } only {% raw %}%}{% endraw %}
+        {% raw %}{%{% endraw %} else {% raw %}%}{% endraw %}
+            {% raw %}{{{% endraw %} 'customer.access.cannot_see_price' | trans {% raw %}}}{% endraw %}
+        {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
+    {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 
-    {% if data.isQuoteValid %}
-        {% widget 'QuoteApproveRequestWidget' args [data.cart] only %} {# @deprecated - This widget is moved to summary page of checkout. #}
-            {% block body %}
+    {% raw %}{%{% endraw %} if data.isQuoteValid {% raw %}%}{% endraw %}
+        {% raw %}{%{% endraw %} widget 'QuoteApproveRequestWidget' args [data.cart] only {% raw %}%}{% endraw %} {# @deprecated - This widget is moved to summary page of checkout. #}
+            {% raw %}{%{% endraw %} block body {% raw %}%}{% endraw %}
                 <hr>
-                {{ parent() }}
-            {% endblock %}
-        {% endwidget %}
-    {% endif %}
+                {% raw %}{{{% endraw %} parent() {% raw %}}}{% endraw %}
+            {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
+        {% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}
+    {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 
-    {% set productConfigurationWidget = findWidget('ProductConfigurationQuoteValidatorWidget', [data.cart]) %}
-    {% set canProceedQuoteCheckout = productConfigurationWidget.isQuoteProductConfigurationValid %}
+    {% raw %}{%{% endraw %} set productConfigurationWidget = findWidget('ProductConfigurationQuoteValidatorWidget', [data.cart]) {% raw %}%}{% endraw %}
+    {% raw %}{%{% endraw %} set canProceedQuoteCheckout = productConfigurationWidget.isQuoteProductConfigurationValid {% raw %}%}{% endraw %}
 
-    {% widget 'ProductConfigurationQuoteValidatorWidget' args [data.cart] only %}{% endwidget %}
+    {% raw %}{%{% endraw %} widget 'ProductConfigurationQuoteValidatorWidget' args [data.cart] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}
 
-    {% if canProceedToCheckout %}
-        {% widget 'ProceedToCheckoutButtonWidget' args [data.cart] with {
+    {% raw %}{%{% endraw %} if canProceedToCheckout {% raw %}%}{% endraw %}
+        {% raw %}{%{% endraw %} widget 'ProceedToCheckoutButtonWidget' args [data.cart] with {
             data: {
                 canProceedCheckout: canProceedQuoteCheckout,
                 currencyIsoCode: data.cart.currency.code
             },
-        } only %}
-            {% block body %}
+        } only {% raw %}%}{% endraw %}
+            {% raw %}{%{% endraw %} block body {% raw %}%}{% endraw %}
                 <hr>
-                {{ parent() }}
-            {% endblock %}
-        {% nowidget %}
-            {% set checkoutButtonText =  'cart.checkout' | trans %}
-            {% set disableButton = not canProceedQuoteCheckout ? 'button--disabled' %}
+                {% raw %}{{{% endraw %} parent() {% raw %}}}{% endraw %}
+            {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
+        {% raw %}{%{% endraw %} nowidget {% raw %}%}{% endraw %}
+            {% raw %}{%{% endraw %} set checkoutButtonText =  'cart.checkout' | trans {% raw %}%}{% endraw %}
+            {% raw %}{%{% endraw %} set disableButton = not canProceedQuoteCheckout ? 'button--disabled' {% raw %}%}{% endraw %}
 
-            <a href="{{ url('checkout-index') }}" class="button button--expand button--success {{ disableButton }}" data-init-single-click {{ qa('cart-go-to-checkout') }}>
-                {{ checkoutButtonText }}
+            <a href="{% raw %}{{{% endraw %} url('checkout-index') {% raw %}}}{% endraw %}" class="button button--expand button--success {% raw %}{{{% endraw %} disableButton {% raw %}}}{% endraw %}" data-init-single-click {% raw %}{{{% endraw %} qa('cart-go-to-checkout') {% raw %}}}{% endraw %}>
+                {% raw %}{{{% endraw %} checkoutButtonText {% raw %}}}{% endraw %}
             </a>
-        {% endwidget %}
+        {% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}
 
-    {% endif %}
+    {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 
-    {% if is_granted('ROLE_USER') %}
-        {% widget 'QuoteRequestCreateWidget' args [data.cart] with {
+    {% raw %}{%{% endraw %} if is_granted('ROLE_USER') {% raw %}%}{% endraw %}
+        {% raw %}{%{% endraw %} widget 'QuoteRequestCreateWidget' args [data.cart] with {
             data: {
                 canProceedCheckout: canProceedQuoteCheckout,
             },
-        } only %}
-            {% block body %}
+        } only {% raw %}%}{% endraw %}
+            {% raw %}{%{% endraw %} block body {% raw %}%}{% endraw %}
                 <hr>
-                {{ parent() }}
-            {% endblock %}
-        {% endwidget %}
-        {% widget 'QuoteRequestCartWidget' args [data.cart] only %}{% endwidget %}
-    {% endif %}
-{% endblock %}
+                {% raw %}{{{% endraw %} parent() {% raw %}}}{% endraw %}
+            {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
+        {% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}
+        {% raw %}{%{% endraw %} widget 'QuoteRequestCartWidget' args [data.cart] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}
+    {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
+{% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 </details>
 
@@ -1476,43 +1475,42 @@ namespace Pyz\Yves\ShopApplication;
 - use SprykerShop\Yves\CheckoutWidget\Widget\ProceedToCheckoutButtonWidget;
 ...
 ```
-</details>
 
 16. For PayPal Express payment method only: Extend `proceed-to-checkout-button` twig template PayPal Express checkout button:
 
 **src\Pyz\Yves\CheckoutWidget\Theme\default\views\proceed-to-checkout-button\proceed-to-checkout-button.twig**
 
 ```twig
-{% extends template('widget') %}
+{% raw %}{%{% endraw %} extends template('widget') {% raw %}%}{% endraw %}
 
-{% define data = {
+{% raw %}{%{% endraw %} define data = {
     isVisible: _widget.isVisible,
     canProceedCheckout: true,
     clientId: _widget.clientId,
     currencyIsoCode: required,
-} %}
+} {% raw %}%}{% endraw %}
 
-{% block template %}
-    {% if data.isVisible %}
-        {{ parent() }}
-    {% endif %}
-{% endblock %}
+{% raw %}{%{% endraw %} block template {% raw %}%}{% endraw %}
+    {% raw %}{%{% endraw %} if data.isVisible {% raw %}%}{% endraw %}
+        {% raw %}{{{% endraw %} parent() {% raw %}}}{% endraw %}
+    {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
+{% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 
-{% block body %}
-    {% set disableButton = not data.canProceedCheckout ? 'button--disabled' %}
+{% raw %}{%{% endraw %} block body {% raw %}%}{% endraw %}
+    {% raw %}{%{% endraw %} set disableButton = not data.canProceedCheckout ? 'button--disabled' {% raw %}%}{% endraw %}
 
-    <a class="button button--expand button--success {{ disableButton }}" href="{{ url('checkout-index') }}" {{ qa('cart-go-to-checkout') }}>
-        {{ 'cart.checkout' | trans }}
+    <a class="button button--expand button--success {% raw %}{{{% endraw %} disableButton {% raw %}}}{% endraw %}" href="{% raw %}{{{% endraw %} url('checkout-index') {% raw %}}}{% endraw %}" {% raw %}{{{% endraw %} qa('cart-go-to-checkout') {% raw %}}}{% endraw %}>
+        {% raw %}{{{% endraw %} 'cart.checkout' | trans {% raw %}}}{% endraw %}
     </a>
     <hr>
 
-    {% include molecule('paypal-buttons', 'Computop') with {
+    {% raw %}{%{% endraw %} include molecule('paypal-buttons', 'Computop') with {
         data: {
             clientId: data.clientId,
             currency: data.currencyIsoCode,
         }
-    } only %}
-{% endblock %}
+    } only {% raw %}%}{% endraw %}
+{% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 
 ### CRIF configuration  
@@ -1545,7 +1543,6 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
     }
 }
 ```
-
 
 2. Adjust `ShipmentStep` to perform the API call of CRIF risk check:
 

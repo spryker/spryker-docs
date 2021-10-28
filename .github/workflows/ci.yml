@@ -23,9 +23,16 @@ jobs:
           ruby-version: 2.6
           bundler-cache: true
 
+      - name: Cache HTMLProofer
+        id: cache-htmlproofer
+        uses: actions/cache@v2
+        with:
+          path: tmp/.htmlproofer
+          key: ${{ runner.os }}-htmlproofer
+
       - run: bundle exec jekyll build --config=_config.yml,_config_production.yml
 
-      - run: bundle exec htmlproofer ./_site --allow-hash-href --url-ignore="/glue.mysprykershop.com\/[\.\w\-\/\?]+/,/github.com\/[\.\w\-\/]+\.md/"
+      - run: bundle exec rake check
 
   page_validation:
     name: Page validation
@@ -40,7 +47,6 @@ jobs:
           ruby-version: 2.6
           bundler-cache: true
 
-      - run: bundle exec jekyll build --config=_config.yml,_config_production.yml
       - run: bundle exec jekyll validate
 
   algolia_search:
@@ -65,5 +71,11 @@ jobs:
         env: # Or as an environment variable
           ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
       - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_cloud_dev.yml
+        env: # Or as an environment variable
+          ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
+      - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_scos_dev.yml
+        env: # Or as an environment variable
+          ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
+      - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_scos_user.yml
         env: # Or as an environment variable
           ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}

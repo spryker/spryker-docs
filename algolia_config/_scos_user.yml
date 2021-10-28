@@ -1,5 +1,5 @@
 algolia:
-  index_name: 'marketplace_user'
+  index_name: 'scos_user'
   files_to_exclude:
     - index.md
     - 404.md

@@ -26,5 +26,5 @@ The following diagram shows the relations of the entities in the order threshold
 
 |INTEGRATION GUIDES  | MIGRATION GUIDES | DATA IMPORT |
 |---------|---------|---------|
-| [Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-feature-integration.html) | Checkout migration guide  | [File details: sales_order_threshold.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-sales-order-threshold.csv.html)  |
-| [Merchant feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-feature-integration.html) | CheckoutPage migration guide |   |
+| [Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-feature-integration.html) | [Checkout migration guide](/docs/scos/dev/module-migration-guides/202108.0/migration-guide-checkout.html)  | [File details: sales_order_threshold.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-sales-order-threshold.csv.html)  |
+| [Merchant feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-feature-integration.html) | [CheckoutPage migration guide](/docs/scos/dev/module-migration-guides/202108.0/migration-guide-checkoutpage.html) |   |

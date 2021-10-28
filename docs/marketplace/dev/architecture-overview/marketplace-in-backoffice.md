@@ -8,31 +8,25 @@ related:
 ---
 This document explains how Marketplace functionality is presented in Backoffice. 
 
-Marketplace in Backoffice is presented as a marketplace owner-oriented application or admin-centric application. 
-Here the operator of the Marketplace manages the whole Marketplace, including global Product list, Merchant management, Category management, and others.
-Backoffice also has some facilities oriented to Operator-As-A-Merchant case such as Offers and Orders management.
+{% info_block infoBox%}
+
 The base Backoffice functionality is provided by [Spryker Core Back Office feature](https://github.com/spryker-feature/spryker-core-back-office)
-which is a prerequisite of Backoffice related features.
-
-Marketplace related UI is provided by specific GUI (graphical user interface) modules which usually work in the same way as 
-Core GUI modules which can be identified by the suffix GUI (`MerchantProfileGui`, `MerchantProductGui`) and provide new user interfaces 
-for management of related entities or extend existing ones. 
-GUI modules should not contain any business logic, which should be handled by modules responsible for it. 
-
-{% info_block infoBox "Example" %}
-
-`MerchantProductGui` module uses `MerchantProduct` module to obtain merchant related products and then to show them in the corresponding place).
-
+which is a prerequisite of Backoffice related features in Marketplace.
 {% endinfo_block %}
 
-Marketplace related GUI modules are usually mapped to Marketplace feature as a required module listed in feature’s composer.json, that means the module must be installed.
+Marketplace provides two types of Gui modules for Backoffice:
+- {DomainName}Gui - this type of modules provides UI for marketplace operator to manage global Marketplace domain objects such as Orders, Products, Merchants, and others.
+ For example [MerchantProfileGui](https://github.com/spryker/merchant-profile-gui) serves as an admin panel for managing Merchants on the whole system.
+- {DomainName}MerchantUserGui -  this type of modules provides UI for marketplace operator to manage its own domain objects such as MerchantOrders, Offers, Products, and others.
+ For example, [MerchantSalesOrderMerchantUserGui](https://github.com/spryker/merchant-sales-order-merchant-user-gui) serves as a UI for managing marketplace operator MerchantOrders. These type of modules will requires presence of the connection between User and Merchant.
+ In case a User does not have this connection, the page will not work for such a User at all.
 
-{% info_block infoBox "Example" %}
 
-[Marketplace Product feature](https://github.com/spryker-feature/marketplace-product): `MerchantProductGui` module.
+{% info_block warningBox  %}
 
+Keep your Gui modules clean by not placing any business logic into them.
+The business logic should always reside in a principal module (e.g. for `ProductGui` the principal module is `Product`)
 {% endinfo_block %}
 
-The following diagram illustrates the possible GUI module dependencies.
 
-![GUI module relations](https://confluence-connect.gliffy.net/embed/image/7bc2ccf2-c85a-4bd2-842e-d8a5f9768d29.png?utm_medium=live&utm_source=custom)
+

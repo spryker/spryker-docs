@@ -9,7 +9,7 @@ redirect_from:
   - /v6/docs/en/computop-installation-and-configuration
 ---
 
-To integrate Adyen into your project, first you need to install and configure the Computop module. This topic describes how to do that.
+To integrate Computop into your project, first you need to install and configure the Computop module. This topic describes how to do that.
 
 ## Installation
 To install the Computop module, run the command:
@@ -25,8 +25,8 @@ You can check all the necessary configurations in `vendor/spryker-eco/computop/c
 Find an example of the Computop module configuration below:
 
 <details open>
-<summary markdown='span'>config/Shared/config_default.php</summary>
-    
+<summary>config/Shared/config_default.php</summary>
+
 ```php
 // Spryker security configuration
 $config[KernelConstants::DOMAIN_WHITELIST] = [
@@ -35,8 +35,8 @@ $config[KernelConstants::DOMAIN_WHITELIST] = [
 ];
 $config[SessionConstants::YVES_SESSION_COOKIE_SAMESITE] = 'none'; //Allows redirect customer via POST from Computop back to the shop.
 
-// Credantials 
-$config[ComputopApiConstants::MERCHANT_ID] = 'Computop merchant identifier';
+// Credantials
+$config[ComputopApiConstants::MERCHANT_ID] = 'Computop merchant identifier';
 $config[ComputopApiConstants::BLOWFISH_PASSWORD] = 'Password for blowfish hashing';
 $config[ComputopApiConstants::HMAC_PASSWORD] = 'Password for hmac hashing';
 $config[ComputopConstants::IDEAL_ISSUER_ID] = 'IDeal issuer identifier';
@@ -51,8 +51,11 @@ $config[ComputopConstants::SOFORT_INIT_ACTION] = 'https://www.computop-paygate.c
 $config[ComputopConstants::PAYDIREKT_INIT_ACTION] = 'https://www.computop-paygate.com/paydirekt.aspx';
 $config[ComputopConstants::IDEAL_INIT_ACTION] = 'https://www.computop-paygate.com/ideal.aspx';
 $config[ComputopConstants::EASY_CREDIT_INIT_ACTION] = 'https://www.computop-paygate.com/easyCredit.aspx';
+$config[ComputopConstants::PAYU_CEE_SINGLE_INIT_ACTION] = 'https://www.computop-paygate.com/payu.aspx';
 
 // Post order place API calls endpoints
+$config[ComputopApiConstants::PAYPAL_EXPRESS_PREPARE_ACTION] = 'https://www.computop-paygate.com/ExternalServices/paypalorders.aspx';
+$config[ComputopApiConstants::PAYPAL_EXPRESS_COMPLETE_ACTION] = 'https://www.computop-paygate.com/paypalComplete.aspx';
 $config[ComputopApiConstants::EASY_CREDIT_STATUS_ACTION] = 'https://www.computop-paygate.com/easyCreditDirect.aspx';
 $config[ComputopApiConstants::EASY_CREDIT_AUTHORIZE_ACTION] = 'https://www.computop-paygate.com/easyCreditDirect.aspx';
 $config[ComputopApiConstants::AUTHORIZE_ACTION] = 'https://www.computop-paygate.com/authorize.aspx';
@@ -69,6 +72,7 @@ $config[ComputopConstants::CREDIT_CARD_TEMPLATE_ENABLED] = false;
 $config[ComputopConstants::CREDIT_CARD_TX_TYPE] = '';
 $config[ComputopConstants::PAY_NOW_TX_TYPE] = '';
 $config[ComputopConstants::PAY_PAL_TX_TYPE] = ComputopConfig::TX_TYPE_AUTH;
+$config[ComputopConstants::PAY_PAL_EXPRESS_PAYPAL_METHOD] = '';
 $config[ComputopConstants::PAYMENT_METHODS_WITHOUT_ORDER_CALL] = [
     ComputopConfig::PAYMENT_METHOD_SOFORT,
     ComputopConfig::PAYMENT_METHOD_PAYDIREKT,
@@ -76,15 +80,19 @@ $config[ComputopConstants::PAYMENT_METHODS_WITHOUT_ORDER_CALL] = [
     ComputopConfig::PAYMENT_METHOD_CREDIT_CARD,
     ComputopConfig::PAYMENT_METHOD_PAY_NOW,
     ComputopConfig::PAYMENT_METHOD_PAY_PAL,
+    ComputopConfig::PAYMENT_METHOD_PAY_PAL_EXPRESS,
     ComputopConfig::PAYMENT_METHOD_DIRECT_DEBIT,
     ComputopConfig::PAYMENT_METHOD_EASY_CREDIT,
+    ComputopConfig::PAYMENT_METHOD_PAYU_CEE_SINGLE,
 ];
 $config[ComputopApiConstants::PAYMENT_METHODS_CAPTURE_TYPES] = [
     ComputopApiConfig::PAYMENT_METHOD_PAYDIREKT => ComputopApiConfig::CAPTURE_TYPE_MANUAL,
     ComputopApiConfig::PAYMENT_METHOD_CREDIT_CARD => ComputopApiConfig::CAPTURE_TYPE_MANUAL,
     ComputopApiConfig::PAYMENT_METHOD_PAY_NOW => ComputopApiConfig::CAPTURE_TYPE_MANUAL,
     ComputopApiConfig::PAYMENT_METHOD_PAY_PAL => ComputopApiConfig::CAPTURE_TYPE_MANUAL,
+    ComputopApiConfig::PAYMENT_METHOD_PAY_PAL_EXPRESS => ComputopApiConfig::CAPTURE_TYPE_MANUAL,
     ComputopApiConfig::PAYMENT_METHOD_DIRECT_DEBIT => ComputopApiConfig::CAPTURE_TYPE_MANUAL,
+    ComputopApiConfig::PAYMENT_METHOD_PAYU_CEE_SINGLE => ComputopApiConfig::CAPTURE_TYPE_MANUAL,
 ];
 
 // CRIF (formerly Deltavista) configuration
@@ -99,18 +107,22 @@ $config[ComputopConstants::CRIF_GREEN_AVAILABLE_PAYMENT_METHODS] = [
     ComputopConfig::PAYMENT_METHOD_CREDIT_CARD,
     ComputopConfig::PAYMENT_METHOD_PAY_NOW,
     ComputopConfig::PAYMENT_METHOD_PAY_PAL,
+    ComputopConfig::PAYMENT_METHOD_PAY_PAL_EXPRESS,
     ComputopConfig::PAYMENT_METHOD_DIRECT_DEBIT,
     ComputopConfig::PAYMENT_METHOD_EASY_CREDIT,
+    ComputopConfig::PAYMENT_METHOD_PAYU_CEE_SINGLE,
 ];
 $config[ComputopConstants::CRIF_YELLOW_AVAILABLE_PAYMENT_METHODS] = [
     ComputopConfig::PAYMENT_METHOD_CREDIT_CARD,
     ComputopConfig::PAYMENT_METHOD_PAY_NOW,
     ComputopConfig::PAYMENT_METHOD_PAY_PAL,
+    ComputopConfig::PAYMENT_METHOD_PAY_PAL_EXPRESS,
 ];
 $config[ComputopConstants::CRIF_RED_AVAILABLE_PAYMENT_METHODS] = [
     ComputopConfig::PAYMENT_METHOD_CREDIT_CARD,
     ComputopConfig::PAYMENT_METHOD_EASY_CREDIT,
 ];
+$config[ComputopShipmentConstants::PAYPAL_EXPRESS_DEFAULT_SHIPMENT_METHOD_KEY] = 'spryker_dummy_shipment-standard';
 ```
 
 </details>
@@ -130,6 +142,9 @@ $config[ComputopConstants::CRIF_RED_AVAILABLE_PAYMENT_METHODS] = [
 | `$config[ComputopConstants::PAYDIREKT_INIT_ACTION]`  |string   | Init API call endpoint for Paydirect payment method.  |
 | `$config[ComputopConstants::IDEAL_INIT_ACTION]`  | string  | Init API call endpoint for Ideal payment method.  |
 | `$config[ComputopConstants::EASY_CREDIT_INIT_ACTION]`  | string  | Init API call endpoint for Easy Credit payment method.  |
+| `$config[ComputopConstants::PAYU_CEE_SINGLE_INIT_ACTION]` | string | Init API call endpoint for PayU CEE Single payment method. |
+| `$config[ComputopApiConstants::PAYPAL_EXPRESS_PREPARE_ACTION]` | string | Prepare API call endpoint for PayPal Express payment method. |
+| `$config[ComputopApiConstants::PAYPAL_EXPRESS_COMPLETE_ACTION]` | string | Complete API call endpoint for PayPal Express payment method. |
 | `$config[ComputopApiConstants::EASY_CREDIT_STATUS_ACTION]`  | string  | Status API call endpoint for Easy Credit payment method.  |
 | `$config[ComputopApiConstants::EASY_CREDIT_AUTHORIZE_ACTION]` | string  | Authorize API call endpoint for Easy Credit payment method.  |
 | `$config[ComputopApiConstants::AUTHORIZE_ACTION]`  | string  | Authorize API call endpoint.  |
@@ -142,6 +157,7 @@ $config[ComputopConstants::CRIF_RED_AVAILABLE_PAYMENT_METHODS] = [
 | `$config[ComputopConstants::CREDIT_CARD_TX_TYPE]`  | string  | TX TYPE for Credit Card payment method (empty string).  |
 | `$config[ComputopConstants::PAY_NOW_TX_TYPE]`  | string  | TX TYPE for PayNow payment method (empty string).  |
 | `$config[ComputopConstants::PAY_PAL_TX_TYPE]`  | string  |  TX TYPE for PayPal payment method (Auth). |
+| `$config[ComputopConstants::PAY_PAL_EXPRESS_PAYPAL_METHOD]` | string | Using method for PayPal Express payment method. |
 | `$config[ComputopConstants::PAYMENT_METHODS_WITHOUT_ORDER_CALL]`  | array  | Array of payment methods without order call.  |
 | `$config[ComputopApiConstants::PAYMENT_METHODS_CAPTURE_TYPES]`  | array  | Array with mapping payment methods and their capture types (MANUAL or AUTO).  |
 | `$config[ComputopConstants::CRIF_ENABLED]`  | bool  | Is CRIF risk check enabled.  |

@@ -13,7 +13,7 @@ redirect_from:
 The second version of the CompanyBusinessUnit module added the parent Company Business Units functionality.
 CompanyBusinessUnit v2.0.0 major version adds a new `fk_parent_company_business_unit`to the `spy_company_business_unit` database table:
 
-```XML
+```xml
 <?xml version="1.0"?>
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\CompanyBusinessUnit\Persistence" package="src.Orm.Zed.CompanyBusinessUnit.Persistence">
  
@@ -33,7 +33,7 @@ This change allowed company business units to have parent company business units
 
 ### 1. Update modules
     1. Update `spryker/company-business-unit` module version in your `composer.json`:
- ```Bash
+ ```bash
    {
   "require": {
     "spryker/company-business-unit": "^2.0.0"
@@ -57,7 +57,7 @@ ALTER TABLE "spy_company_business_unit" ADD CONSTRAINT "spy_company_business_uni
 COMMIT;
 ```
 2. Execute the following commands to build Propel models:
-```BASH
+```bash
 console propel:diff;
 console propel:migrate;
 console propel:model:build;

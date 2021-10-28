@@ -56,7 +56,7 @@ The plugin must implement the **CheckoutResponseMapperPluginInterface**. Using t
 
 **Sample implementation**
 
-```PHP
+```php
 <?php
 
 namespace Pyz\Glue\MyModule\Plugin\CheckoutRestApi;
@@ -110,7 +110,7 @@ For details, see [Updating Payment Data](/docs/scos/dev/glue-api-guides/{{site.v
 
 **Sample implementation**
 
-```PHP
+```php
 <?php
 
 namespace Pyz\Zed\MyModule\Communication\Plugin\OrderPaymentsRestApi;
@@ -158,7 +158,7 @@ class OrderPaymentUpdaterPlugin extends AbstractPlugin implements OrderPaymentUp
 
 Now, you need to wire the plugins so that they could be invoked during checkout. The Checkout *Response Mapper Plugin* needs to be registered in `\Pyz\Glue\CheckoutRestApi\CheckoutRestApiDependencyProvider::getCheckoutResponseMapperPlugins()`:
 
-```PHP
+```php
 ...
     /**
      * @return \Spryker\Glue\CheckoutRestApiExtension\Dependency\Plugin\CheckoutResponseMapperPluginInterface[]
@@ -175,7 +175,7 @@ Now, you need to wire the plugins so that they could be invoked during checkout.
 
 The *Payment Processor Plugin* is registered in `\Spryker\Zed\OrderPaymentsRestApi\OrderPaymentsRestApiDependencyProvider::getOrderPaymentUpdaterPlugins()`
 
-```PHP
+```php
 ...
     /**
      * @return \Spryker\Zed\OrderPaymentsRestApiExtension\Dependency\Plugin\OrderPaymentUpdaterPluginInterface[]

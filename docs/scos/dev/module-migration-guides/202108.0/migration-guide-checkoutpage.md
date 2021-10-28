@@ -23,12 +23,12 @@ This release is a part of the **Split delivery** concept migration. When you upg
 To upgrade to the new version of the module, do the following:
 
 1. Upgrade the CheckoutPage module to the new version:
-```Bash
+```bash
 composer require spryker-shop/checkout-page: "^3.0.0" --update-with-dependencies
 ```
 
 2. Generate the transfer objects:
-```Bash
+```bash
 console transfer:generate
 ```
 *Estimated migration time: 5 min*
@@ -48,19 +48,19 @@ To upgrade to the new version of the module, do the following:
 
 1. Upgrade CheckoutPage module to version 2.0.0:
 
-```Bash
+```bash
 composer require spryker-shop/checkout-page: "^2.0.0" --update-with-dependencies
 ```
 
 2. Generate transfer objects:
 
-```Bash
+```bash
 console transfer:generate
 ```
 
 3. Extend your project with the following configuration:
 
-```PHP
+```php
 <?php
 
 use Spryker\Shared\Kernel\KernelConstants;

@@ -208,19 +208,19 @@ To speed up the overall page load, there are two features: resolvable class name
 
 ### Resolvable class names cache
 The resolvable class names cache is disabled by default. Activate it by adding the following configuration to your `config_*` files:
-```PHP
+```php
 $config[KernelConstants::RESOLVABLE_CLASS_NAMES_CACHE_ENABLED] = true;
 ```
 Additionally, you need to build the cache file during your deployment. Add `\Spryker\Zed\Kernel\Communication\Console\ResolvableClassCacheConsole` to your `ConsoleDependencyProvider` if you don't have it, and run
 
-```Bash
+```bash
 vendor/bin/console cache:class-resolver:build
 ```
 This builds a cache file that will be used by the ClassResolver.
 
 ### Resolved instance cache
 On top of the resolvable class names cache, you can turn on an instance cache for the resolved classes by adding the following configuration to your `config_*` files:
-```PHP
+```php
 $config[KernelConstants::RESOLVED_INSTANCE_CACHE_ENABLED] = true;
 ```
 This allows reusing an already resolved class instance during a request.

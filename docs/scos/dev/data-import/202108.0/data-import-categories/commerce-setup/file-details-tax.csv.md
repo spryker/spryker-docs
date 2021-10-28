@@ -15,7 +15,7 @@ This article contains content of the **tax.csv** file to configure [tax](/docs/s
 
 To import the data, run
 
-```Bash
+```bash
 data:import:tax
 ```
 

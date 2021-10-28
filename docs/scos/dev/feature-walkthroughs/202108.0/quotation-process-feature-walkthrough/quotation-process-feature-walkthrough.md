@@ -26,8 +26,8 @@ The following schema illustrates the module relations of the Quotation Process f
 
 | INTEGRATION GUIDES | MIGRATION GUIDES |
 |---|---|
-| [Quotation Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-quotation-process-feature-integration.html) | QuoteRequestAgent migration guide |
-| [Approval Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/approval-process-feature-integration.html) | QuoteRequestPage migration guide |
+| [Quotation Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-quotation-process-feature-integration.html) | [QuoteRequestAgent migration guide](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-quoterequestagent.html) |
+| [Approval Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/approval-process-feature-integration.html) | [QuoteRequestPage migration guide](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-quoterequestpage.html) |
 | [Checkout + Quotation process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-quotation-process-feature-integration.html) |  |
 | [Quotation Process + Approval Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quotation-process-approval-process-feature-integration.html) |  |
 | [Quotation Process + Multiple Carts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quotation-process-multiple-carts-feature-integration.html) |  |

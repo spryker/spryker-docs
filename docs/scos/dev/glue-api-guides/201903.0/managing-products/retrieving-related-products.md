@@ -61,7 +61,7 @@ If the request was successful, the resource responds with an array of **RestAbst
 For a detailed list of the fields included in the response for each product, see [General Product Information](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-information.html#general-product-information).
 
 <details open>
-<summary markdown='span'>markdown='span'>Sample Response </summary>
+<summary markdown='span'>Sample Response </summary>
 
 ```js
     {
@@ -324,7 +324,7 @@ If the request was successful, the resource responds with an array of **RestAbst
 For a detailed list of the fields included in the response for each product, see [General Product Information](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-information.html#general-product-information).
 
 <details open>
-<summary markdown='span'>markdown='span'> Sample Response</summary>
+<summary markdown='span'> Sample Response</summary>
 
 ```js
 {
@@ -1414,7 +1414,7 @@ If the request was successful, the resource responds with an array of **RestAbst
 For a detailed list of the fields included in the response for each product, see [General Product Information](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-information.html#general-product-information).
 
 <details open>
-<summary markdown='span'>markdown='span'>Sample Response </summary>
+<summary markdown='span'>Sample Response </summary>
 
 ```js
 {

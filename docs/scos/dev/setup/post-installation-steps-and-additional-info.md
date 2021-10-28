@@ -86,7 +86,7 @@ Configuration can be defined on different levels: project-wide, region-wide, sto
 
 Below, you can find an example of the service declaration that represents type and configuration of the `broker` service.
 
-```PHP
+```php
 ...
 services:
     // Defines the service name
@@ -118,7 +118,7 @@ Key format: `domain[:port]`. By default, the port for HTTP endpoints is 80. A po
 
 1. Apply the necessary changes in `deploy.*.yml`.
 
-```PHP
+```php
 ...
 groups:
     EU:

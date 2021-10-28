@@ -40,7 +40,7 @@ Out of the box, the `StorageDatabase` module can work with two RDBS vendors - My
 
 ## Installation
 Install the required modules by running
-```Bash
+```bash
 composer require spryker/storage:3.8.0 spryker/storage-database
 ```
 
@@ -50,7 +50,7 @@ composer require spryker/storage:3.8.0 spryker/storage-database
 
 config/Shared/config_default.php
 
-```PHP
+```php
 <?php
 use Spryker\Shared\StorageDatabase\StorageDatabaseConfig;
 use Spryker\Shared\StorageDatabase\StorageDatabaseConstants;

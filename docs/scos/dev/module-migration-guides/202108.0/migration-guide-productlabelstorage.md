@@ -17,14 +17,14 @@ Version 2.* of the ProductLabelStorage module changes the storage data structure
 
 To upgrade to the new version of the module, do the following:
 1. Upgrade the ProductLabelStorage module to a new version:
-```Bash
+```bash
 composer require spryker/product-label-storage:"^2.0.0" --update-with-dependencies
 ```
 2. Prepare the project for changes:
     2.1. Remove synchronization behavior setup from the `spy_product_label_dictionary_storage` table on the project level in `src/Pyz/Zed/ProductLabelStorage/Persistence/Propel/Schema/spy_product_label_storage.schema.xml`
     2.2. Add the configuration on the project level in `src/Pyz/Zed/ProductLabelStorage/ProductLabelStorageConfig.php`:
 
-```PHP
+```php
  <?php
 
 namespace Pyz\Zed\ProductLabelStorage;
@@ -69,32 +69,32 @@ class ProductLabelStorageConfig extends SprykerProductLabelStorageConfig
 }
 ```
     2.3. Update the database schema and the generated data transfer classes:
-```Bash
+```bash
 console propel:install
 console transfer:generate
 ```
     2.4. Stop the scheduler:
-```Bash
+```bash
 console scheduler:suspend
 ```
 3. Remove the deprecated plugins from:
    a `Pyz\Zed\Event\EventDependencyProvider`
-```PHP
+```php
 Spryker\Zed\ProductLabelStorage\Communication\Plugin\Event\Subscriber\ProductLabelStorageEventSubscriber
 ```
    b. `Pyz\Zed\EventBehavior\EventBehaviorDependencyProvider`
-```PHP
+```php
  Spryker\Zed\ProductLabelStorage\Communication\Plugin\Event\ProductAbstractLabelEventResourceQueryContainerPlugin
 Spryker\Zed\ProductLabelStorage\Communication\Plugin\Event\ProductLabelDictionaryEventResourceQueryContainerPlugin
 ```
    c. `Pyz/Zed/Synchronization/SynchronizationDependencyProvider`
-```PHP
+```php
 Spryker\Zed\ProductLabelStorage\Communication\Plugin\Synchronization\ProductAbstractLabelSynchronizationDataPlugin
 Spryker\Zed\ProductLabelStorage\Communication\Plugin\Synchronization\ProductLabelDictionarySynchronizationDataPlugin
 ```
 4. Add the new plugins to:
     a. `Pyz\Zed\Publisher\PublisherDependencyProvider`
- ```PHP
+ ```php
 <?php
 
 namespace Pyz\Zed\Publisher;
@@ -151,7 +151,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 }
 ```
 b. `Pyz\Zed\Synchronization\SynchronizationDependencyProvider`
-```PHP
+```php
 <?php
 
 namespace Pyz\Zed\Synchronization;
@@ -184,22 +184,22 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 TRUNCATE TABLE spy_product_label_dictionary_storage;
 ```
     5.2. Start the scheduler:
- ```Bash
+ ```bash
 console scheduler:resume
 ```
     5.3. Remove all the stored data:
 
-```Bash
+```bash
 console sync:data product_label_dictionary
  ```
 
 5.4. Trigger the product label events to create new dictionary data:
 
-```Bash
+```bash
 console publish:trigger-events -r product_label_dictionary -i=all
 ```
 5.5. Sync all the dictionary data to the storage:
-```Bash
+```bash
 console sync:data product_label_dictionary
 ```
 

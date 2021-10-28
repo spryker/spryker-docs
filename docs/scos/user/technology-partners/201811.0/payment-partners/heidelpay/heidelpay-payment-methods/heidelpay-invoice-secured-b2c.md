@@ -62,7 +62,7 @@ All global integration parts of Heidelpay module should be done before the follo
 
 1. Adjust `CheckoutPageDependencyProvider` on project level to add `InvoiceSecuredB2c` subform and payment method handler.
 <details open>
-<summary markdown='span'>markdown='span'>\Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider</summary>
+<summary markdown='span'>\Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider</summary>
     
 ```php
 <?php
@@ -135,7 +135,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 
 2. Adjust define data section in the template of the Checkout Payment step to include `InvoiceSecuredB2c` payment method template.
 <details open>
-<summary markdown='span'>markdown='span'>src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig</summary>
+<summary markdown='span'>src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig</summary>
 
 ```php
 ...
@@ -159,7 +159,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 3. Adjust `OmsDependencyProvider` to add conditions that represent notification receiving.
 
 <details open>
-<summary markdown='span'>markdown='span'>\Pyz\Zed\Oms\OmsDependencyProvider</summary>
+<summary markdown='span'>\Pyz\Zed\Oms\OmsDependencyProvider</summary>
 
 ```php
 <?php

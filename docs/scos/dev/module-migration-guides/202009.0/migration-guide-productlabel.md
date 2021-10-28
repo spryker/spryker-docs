@@ -24,16 +24,16 @@ Version 3.* of the ProductLabel module adds the possibility to assign stores to 
 To migrate to the new module version, execute the following preparation steps:
 
 1. Update the ProductLabelDataImport module:
-```Bash
+```bash
 composer update spryker/product-label-data-import --update-with-dependencies
 ```
 2. Update the database schema and the generated classes:
-```Bash
+```bash
 console propel:install
 console transfer:generate
 ```
 3. Register data import plugins and add them to the full import list:
-```PHP
+```php
 <?php
 
 namespace Pyz\Zed\DataImport;
@@ -65,7 +65,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 4. Register the data import console commands:
-```PHP
+```php
 <?php
 
 namespace Pyz\Zed\Console;
@@ -100,18 +100,18 @@ NEW,DE
 NEW,US
 ```
 6. Import the product label and store relationships:
-```Bash
+```bash
 console data:import:product-label-store
 ```
 ### Upgrading to the new Module Version
 To upgrade to the new version of the ProductLabel module, do the following:
 
 1. Upgrade the ProductLabel module to the new version:
-```Bash
+```bash
 composer require spryker/product-label:"^3.0.0" --update-with-dependencies
 ```
 2. Add an event behavior to `spy_product_label_store`:
-```XML
+```xml
 <table name="spy_product_label_store">
       <behavior name="event">
           <parameter name="spy_product_label_store_all" column="*"/>

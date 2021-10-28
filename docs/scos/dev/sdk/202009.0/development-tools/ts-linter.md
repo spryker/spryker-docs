@@ -22,16 +22,16 @@ For details on how to install the TS linter for your project, see the [TS linter
 To execute the TS linter, do the following:
 
 1. Install the Node modules:
-```Bash
+```bash
 npm ci
 ```
 2. Execute the TS linter in:
 * validation mode:
-```Bash
+```bash
 npm run yves:tslint
 ```
 * fix mode:
-```Bash
+```bash
 npm run yves:tslint:fix
 ```
 ## TS linter config

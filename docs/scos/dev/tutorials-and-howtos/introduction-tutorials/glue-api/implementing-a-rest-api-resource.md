@@ -50,7 +50,7 @@ To create a module:
 {% info_block infoBox %}
 
 You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) to create a basic structure. Run the following command:
-```Bash
+```bash
 console spryk:run AddGlueBasicStructure --mode=project --module=ResourcesRestApi --organization=Pyz --resourceType=resources
 ```
 You'll need to agree to all the default values when prompted.
@@ -62,7 +62,7 @@ You'll need to agree to all the default values when prompted.
 {% info_block infoBox %}
 
 You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) to add a transfer file. Run the following command:  
-```Bash
+```bash
 console spryk:run AddSharedRestAttributesTransfer --mode=project --module=ResourcesRestApi --organization=Pyz --name=RestResourcesAttributes
 ```
 {% endinfo_block %}
@@ -229,7 +229,7 @@ class WishlistsResourceController extends AbstractController
 {% info_block infoBox %}
 
 You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) to create a resource controller. Run the following command:  
-```Bash
+```bash
 console AddGlueController  --mode=project --module=ResourcesRestApi --organization=Pyz --controller=ResourcesController
 ```
 
@@ -268,7 +268,7 @@ To generate the respective transfer objects, run `vendor/bin/console transfer:ge
 {% info_block infoBox %}
 
 You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) to describe fields for post and patch calls. Run the following command:
-```Bash
+```bash
 console spryk:run AddSharedRestAttributesTransfer --mode=project --module=ResourcesRestApi --organization=Pyz --name=RestResourcesAttributes
 ```
 
@@ -450,7 +450,7 @@ class WishlistsResourceRoutePlugin extends AbstractPlugin implements ResourceRou
 {% info_block infoBox %}
 
 You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) to route requests to your controller. Run the following command:
-```Bash
+```bash
 console spryk:run AddGlueResourceRoute --mode=project --module=ResourcesRestApi --organization=Pyz --resourceType=resources --resourceRouteMethod=get
 ```
 

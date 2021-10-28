@@ -111,7 +111,7 @@ if (Environment::isDevelopment()) {
 
 1. Init the new constant -  `Pyz\Shared\Console\ConsoleConstants::ENABLE_DEVELOPMENT_CONSOLE_COMMANDS `:
 
-```PHP
+```php
 <?php
  /**
  * This file is part of the Spryker Suite.
@@ -133,7 +133,7 @@ if (Environment::isDevelopment()) {
 ```
 2. Introduce the new method -  `Pyz\Zed\Console\ConsoleConfig::isDevelopmentConsoleCommandsEnabled() `:
 
-```PHP
+```php
 ...
 /**
  * @return bool
@@ -146,7 +146,7 @@ public function isDevelopmentConsoleCommandsEnabled(): bool
 ```
 3. Adjust  `Pyz\Zed\Console\ConsoleDependencyProvider::getConsoleCommands() ` by replacing  `Environment::isDevelopment() || Environment::isTesting() ` with  `$this->getConfig()->isDevelopmentConsoleCommandsEnabled() `:
 
-```PHP
+```php
 ...
 /**
  * @return bool
@@ -164,7 +164,7 @@ Adjust the following files:
 
 config/Shared/config_default.php
 
-```PHP
+```php
 use Spryker\Shared\Api\ApiConstants;
 use SprykerShop\Shared\CalculationPage\CalculationPageConstants;
 use SprykerShop\Shared\ErrorPage\ErrorPageConstants;
@@ -188,7 +188,7 @@ $config[ApplicationConstants::TWIG_ENVIRONMENT_NAME]
 
 config/Shared/config_default-development.php
 
-```PHP
+```php
 ...
 use Pyz\Shared\Console\ConsoleConstants;
 use Spryker\Shared\Api\ApiConstants;
@@ -211,7 +211,7 @@ $config[ConsoleConstants::ENABLE_DEVELOPMENT_CONSOLE_COMMANDS] = true;
 
 config/Shared/config_default-devtest.php
 
-```PHP
+```php
 ...
 use Pyz\Shared\Console\ConsoleConstants;
 

@@ -18,16 +18,16 @@ Follow the steps below to integrate [TS linter](/docs/scos/dev/sdk/{{page.versio
 
 To install the dependencies:
 1. Install Tslint:
-```Bash
+```bash
 npm install tslint@5.20.x --save-dev
 ```
 2. Install config for Tslint:
-```Bash
+```bash
 npm install @spryker/frontend-config.tslint --save-dev
 ```
 
 3. Install the CLI parser:
-```Bash
+```bash
 npm install commander@4.0.x --save-dev
 ```
 ## 2. Update the scripts

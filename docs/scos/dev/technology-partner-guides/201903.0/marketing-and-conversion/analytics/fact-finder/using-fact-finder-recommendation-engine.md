@@ -38,7 +38,7 @@ To add recommendations widget to product page, insert the following code into `s
 To add recommendations widget to cart page, modify cart controller  (`src/Pyz/Yves/Cart/Controller/CartController.php`) to add array of product ids into template variables:
 
 <details open>
-<summary markdown='span'>markdown='span'>Click here to expand the code sample</summary>
+<summary markdown='span'>Click here to expand the code sample</summary>
 
 ```php
 <?php

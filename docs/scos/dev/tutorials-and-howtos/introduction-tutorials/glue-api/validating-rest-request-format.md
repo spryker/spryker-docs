@@ -143,7 +143,7 @@ vendor/bin/console rest-api:build-request-validation-cache
 {% info_block infoBox %}
 
 Alternatively, use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) for validation. Run the following command:
-```Bash
+```bash
 cconsole spryk:run AddGlueValidation --mode=project --module=ResourcesRestApi --organization=Pyz --resourceType=resources
 ```
 This command places the default `validation.yaml` file into the specified module. You need to add attributes manually.

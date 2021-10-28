@@ -20,7 +20,7 @@ There are many ways to execute the [tests](/docs/scos/dev/guidelines/testing/tes
 
 ## Executing all Tests
 To run all tests, use this command:
-```Bash
+```bash
 vendor/bin/codecept run
 ```
 
@@ -46,26 +46,26 @@ Basically, each part of the namespace is added as `@group` annotation.
 The groups are useful for tests, as you can run them for a specific group.
 
 To execute a test for a group, run
-```Bash
+```bash
 vendor/bin/codecept run -g {group}
 ```
 where `{group}` is the name of your group.
 
 For example, running
-```Bash
+```bash
 vendor/bin/codecept run -g Zed
 ```
 will execute tests with the `@group Zed` annotation.
 
 ### Executing a Test Suite
 To execute a specific test suite, run:
-```Bash
+```bash
 vendor/bin/codecept run -c {test_suite}
 ```
 where `{test_suite}` is the path to the test suite you want to run.
 
 For example, running
-```Bash
+```bash
 vendor/bin/codecept run -c tests/PyzTest/Zed/Acl
 ```
 will execute only the tests for the Acl module of the Zed application.
@@ -73,13 +73,13 @@ will execute only the tests for the Acl module of the Zed application.
 
 ### Executing a Single Test Class
 To execute a specific test class, run
-```Bash
+```bash
 vendor/bin/codecept run -c {test_suite} -g {test_class}
 ```
 where `{test_suite}` is the path to the test suite  and `{test_class}` is the test class you want to run.
 
 For example, running
-```Bash
+```bash
 vendor/bin/codecept run -c tests/PyzTest/Zed/Acl -g RoleControllerCest
 ```
  will only execute `RoleControllerCest` from the Acl module of the Zed application.

@@ -108,7 +108,7 @@ A request should contain:
 The basic response will provide you with an **order reference** that can be used to access checkout data. Moreover, the relevant order resource will be included as well. The response type is **RestCheckoutResponse**.
 
 <details open>
-<summary markdown='span'>markdown='span'>Sample Response </summary>
+<summary markdown='span'>Sample Response </summary>
 
 ```js
 {

@@ -23,13 +23,13 @@ Follow the steps below to integrate Cache of Unresolved Entities for Zed into yo
 
 ### 1) Install the Required Modules Using Composer
 Run the following command to install the required module:
-```Bash
+```bash
 composer update spryker/kernel
 ```
 ### 2) Set Up Behavior
 Add `Spryker\Zed\Kernel\Communication\Plugin\AutoloaderCacheEventDispatcherPlugin` to `Pyz\Zed\EventDispatcher\EventDispatcherDependencyProvider`:
 
-```PHP
+```php
 <?php
 
 namespace Pyz\Zed\EventDispatcher;

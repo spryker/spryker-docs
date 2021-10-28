@@ -18,7 +18,7 @@ During the [Publish and Synchronization](/docs/scos/dev/back-end-development/dat
 
  Let’s take abstract products as an example. A typical key, with which abstract product data is saved to the storage, would look something like this:
 
- ```PHP
+ ```php
  kv:product_abstract:de:de_de:123
  ```
  where *123* is the product ID from the database. Now, we can get that product's data straight away by querying storage for this particular key. But what if we don’t know ID of a product, but know its SKU? What if we don’t want to expose database IDs to the outer world? In these cases, we could make some heavy changes to the Publish & Synchronize mechanism on the project level, or we could use *mappings*.
@@ -35,7 +35,7 @@ To illustrate the process, we’ll stick to our example abstract product and cre
 
 Suppose we have an abstract product with ID *123* and SKU *xyz*. To create a mapping between SKU and ID for abstract products, we must add an extra parameter called **mappings** to the **synchronization** behavior of the resource schema definition:
 
-```XML
+```xml
 <table name="spy_product_abstract_storage">
   <behavior name="synchronization">
       <parameter name="mappings" value="sku:id_product_abstract"/>
@@ -47,11 +47,11 @@ The value of this parameter is a string composer of the source (SKU in our examp
 
 After rebuilding the abstract product Propel entity class and synchronizing data to storage, a new storage record is created:
 
-```PHP
+```php
 {"id":123,"_timestamp":1599741494.2676899}
 ```
 The key with which this record is stored, looks like this:
-```PHP
+```php
 kv:product_abstract:de:de_de:sku:xyz
 ```
 where *xyz* is the SKU of the particular product.
@@ -73,7 +73,7 @@ However, overall, this is pretty reasonable and doesn’t bring any notable perf
 ## Multiple mappings
 Because of the way Propel schema files are parsed and merged, previously it was not possible to define several mappings for the same resource. Now it is possible. For this, multiple source-destination pairs have to be defined as a value of the same `mappings` parameter, separated by a configurable delimiter (`;` by default):
 
-```XML
+```xml
 <table name="spy_product_abstract_storage">
 <behavior name="synchronization">
     <parameter name="mappings" value="sku:id_product_abstract;foo:bar"/>

@@ -18,7 +18,7 @@ By default, the API accepts and returns JSON as format. But it can be extended t
 ## Meta Information
 Links as part of the meta information will be part of the response on the same level as the data:
 
-```JS
+```js
 {
     "data": ...,
     "links": [

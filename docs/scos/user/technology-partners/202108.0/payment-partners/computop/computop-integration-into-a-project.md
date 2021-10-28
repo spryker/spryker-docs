@@ -1717,7 +1717,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 
 ## Integration into a project
 
-To integrate the computop module, make sure you [installed](http://#installation) and [configured](http://#configuration) it.
+To integrate the computop module, make sure you [installed and configured it](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop-installation-and-configuration.html).
 
 ## Test mode
 
@@ -1725,4 +1725,4 @@ Computop provides a test mode to test payment methods without making real transa
 
 To enable the test mode, in `\SprykerEco\Service\ComputopApi\Mapper\ComputopApiMapper::getDescriptionValue()`, add `Test:0000` to the beginning of the transaction description.
 
-You can find Computop test cards at [Test Cards EN](https://developer.computop.com/display/public/DOCCT/Test+Cards+EN).
+You can find Computop test cards at [Test Cards](https://developer.computop.com/display/EN/Test+Cards).

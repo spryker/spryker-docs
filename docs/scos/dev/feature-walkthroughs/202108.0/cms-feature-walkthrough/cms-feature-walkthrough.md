@@ -25,9 +25,9 @@ To learn more about the feature and to find out how end users use it, see [CMS](
 |   | [CMS Block Category Connector Migration Console migration guide](/docs/scos/dev/module-migration-guides/202108.0/migration-guide-cms-block-category-connector-migration-console.html)|   |  [File details: content_navigation.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-content-navigation.csv.html) |   |   |   |
 |   | [CMS Block Collector migration guide](/docs/scos/dev/module-migration-guides/202108.0/migration-guide-cms-block-collector.html) |   | [File details: content_banner.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-content-banner.csv.html)   |   |   |   |
 |   | [CmsBlockGui migration guide](/docs/scos/dev/module-migration-guides/202108.0/migration-guide-cmsblockgui.html) |   | [File details: content_product_set.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-content-product-set.csv.html)   |   |   |   |
-|   | CMSBlockStorage migration guide  |   | [File details: content_product_abstract_list.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-content-product-abstract-list.csv.html)  |   |   |   |
-|   | CmsBlockWidget migration guide  |   |   |   |   |   |
-|   | ContentBannerGui migration guide   |   |   |   |   |   |
-|   | ContentBanner migration guide  |   |   |   |   |   |
-|   | ContentStorage migration guide  |   |   |   |   |   |
-|   | Content migration guide  |   |   |   |   |   |
+|   | [CMSBlockStorage migration guide](/docs/scos/dev/module-migration-guides/202108.0/migration-guide-cmsblockstorage.html)  |   | [File details: content_product_abstract_list.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-content-product-abstract-list.csv.html)  |   |   |   |
+|   | [CmsBlockWidget migration guide](/docs/scos/dev/module-migration-guides/202108.0/migration-guide-cmsblockwidget.html)  |   |   |   |   |   |
+|   | [ContentBannerGui migration guide](/docs/scos/dev/module-migration-guides/202108.0/migration-guide-contentbannergui.html)   |   |   |   |   |   |
+|   | [ContentBanner migration guide](/docs/scos/dev/module-migration-guides/202108.0/migration-guide-contentbanner.html)  |   |   |   |   |   |
+|   | [ContentStorage migration guide](/docs/scos/dev/module-migration-guides/202108.0/migration-guide-contentstorage.html)  |   |   |   |   |   |
+|   | [Content migration guide](/docs/scos/dev/module-migration-guides/202108.0/migration-guide-content.html)  |   |   |   |   |   |

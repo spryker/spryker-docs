@@ -33,13 +33,13 @@ In version 5 of the `symfony/translation` component, some interfaces were extrac
 ## Integration
 To make your project compatible with Symfony 5, update the [Symfony](https://github.com/spryker/symfony) module and all modules that use it:
 
-```Bash
+```bash
 composer require spryker/symfony:"^3.5.0"
 ```
 
 If you can’t install the required version, run the following command to see what else you need to update:
 
-```Bash
+```bash
 composer why-not spryker/symfony:3.5.0
 ```
 
@@ -54,12 +54,12 @@ Before you manually start to migrate your project code, consider using [Rector](
 
 Once Rector is installed, run it on your codebase using the following command:
 
-```Bash
+```bash
 vendor/bin/rector process path/to/files -c path/to/configuration
 ```
 We have refactored our code with two configurations. The first one uses some default sets provided by Rector:
 
-```PHP
+```php
 <?php
 
 /**
@@ -91,7 +91,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 ```
 The second configuration we have added:
 
-```PHP
+```php
 <?php
 
 /**

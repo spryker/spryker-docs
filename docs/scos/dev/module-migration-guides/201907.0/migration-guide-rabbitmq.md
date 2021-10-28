@@ -22,7 +22,7 @@ The configuration codes have moved from `RabbitMqDependencyProvider` to `RabbitM
 `routingKey` property with string type has changed to routingKeys with array type.
 
 <details open>
-<summary markdown='span'>markdown='span'>Sample configuration code in RabbitMqConfiguration:</summary>
+<summary markdown='span'>Sample configuration code in RabbitMqConfiguration:</summary>
 
 ```php
 namespace Pyz\Client\RabbitMq;

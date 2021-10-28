@@ -19,11 +19,11 @@ The Benchmark tool allows you to profile requests to an application and see how 
 To install the Benchmark tool, follow the steps below.
 
 1. Install the package via composer. You might want to add it to the `composer dev` section if you don’t want to use it on the production environment:
-```Bash
+```bash
 composer require --dev spryker-sdk/benchmark
 ```
 2. Update composer `autoload-dev` section to autoload your tests:
-```PHP
+```php
 "autoload-dev": {
     "psr-4": {
       ...
@@ -35,7 +35,7 @@ composer require --dev spryker-sdk/benchmark
 <details open>
 <summary markdown='span'>Pyz\Zed\Console</summary>
 
-```PHP
+```php
 <?php
 
 namespace Pyz\Zed\Console;
@@ -83,7 +83,7 @@ To have the same code on production and development environments, we recommend a
 5. Add the bootstrap file to `tests\Benchmark\bootstrap.php`. The bootstrap file is a .php file that should be almost the same as your public index.php file (e.g., `public/Zed/index.php`). The Benchmark tool has default bootstrap files out-of-the-box, but it’s recommended to add one on the project level, as shown below.
 
 **tests\Benchmark\bootstrap.php**
-```PHP
+```php
 <?php
 
 use Spryker\Shared\Config\Application\Environment;
@@ -97,7 +97,7 @@ Environment::initialize();
 ```
 6. Add bootstrap files for each application `tests\Benchmark\Yves|Zed|Glue\bootstrap.php`:
 
-```PHP
+```php
 <?php
 
 require_once __DIR__ . '/../bootstrap.php';
@@ -108,15 +108,15 @@ That’s it. You now have the Benchmark tool installed.
 
 To run the tests, execute the following command:
 
-```Bash
+```bash
 vendor/bin/console benchmark:run
 ```
 By default, all tests from the `tests/Benchmark/*/*` folders are run. However, you can use the optional argument `path` to run tests from a different application or folder.
 
-```Bash
+```bash
 vendor/bin/console benchmark:run --path=tests/Benchmark/(Yves|Zed|Glue)
 ```
-```Bash
+```bash
 vendor/bin/console benchmark:run --path=tests/Benchmark/Zed/HomePage
 ```
 ## Writing the tests
@@ -149,7 +149,7 @@ Use the factories from the application that you write the test for.
 ## Example of a benchmark
 
 Here is an example of a benchmark:
-```PHP
+```php
 <?php
 
 namespace Benchmark\Yves\Cart;

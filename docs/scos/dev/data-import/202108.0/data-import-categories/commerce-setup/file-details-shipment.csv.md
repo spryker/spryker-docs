@@ -15,7 +15,7 @@ This article contains content of the **shipment.csv** file to configure [shipmen
 
 To import the file, run
 
-```Bash
+```bash
 data:import:shipment
 ```
 

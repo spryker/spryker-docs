@@ -229,11 +229,11 @@ This migration guide is a part of the [Search migration effort](/docs/scos/dev/m
 To upgrade the module, do the following:
 
 1. Update the modules with composer:
-```Bash
+```bash
 composer update spryker/category-page-search
 ```
 
 2. Remove deprecated plugin usages listed below (in case it is used) from `Pyz\Zed\Search\SearchDependencyProvider`:
-```Bash
+```bash
 Spryker\Zed\CategoryPageSearch\Communication\Plugin\Search\CategoryNodeDataPageMapBuilder
 ```

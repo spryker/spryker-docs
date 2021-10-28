@@ -46,7 +46,7 @@ This only works if the Queue module is installed on the current server.
 {% endinfo_block %}
 
 <details open>
-<summary markdown='span'>markdown='span'>src/Pyz/Zed/Queue/QueueDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Queue/QueueDependencyProvider.php</summary>
     
 ```php
 namespace Pyz\Zed\Queue;
@@ -71,7 +71,7 @@ protected function getProcessorMessagePlugins(Container $container)
 Add the following jobs to `jobs.php`:
 
 <details open>
-<summary markdown='span'>markdown='span'>config/Zed/cronjobs/jobs.php</summary>
+<summary markdown='span'>config/Zed/cronjobs/jobs.php</summary>
     
 ```php
 $jobs[] = [
@@ -113,7 +113,7 @@ We need to enable event behavior in config_default.php
 Add `EventBehaviorServiceProvider` to all the `ServiceProviders` methods in `ApplicationDependencyProvider.php`:
 
 <details open>
-<summary markdown='span'>markdown='span'>src/Pyz/Zed/Application/ApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Application/ApplicationDependencyProvider.php</summary>
     
 ```php
 namespace Pyz\Zed\Application;
@@ -140,7 +140,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 Add `EventBehaviorPostHookPlugin` to the `getConsolePostRunHookPlugins()` method in `ConsoleDependencyProvider.php`:
 
 <details open>
-<summary markdown='span'>markdown='span'>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
     
 ```php
 namespace Pyz\Zed\Console;
@@ -171,7 +171,7 @@ Add `DataImportPublisherPlugin` and `DataImportEventBehaviorPlugin` to `Pyz\Zed\
 
 
 <details open>
-<summary markdown='span'>markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
 
 ```php
 use Spryker\Zed\DataImport\Communication\Plugin\DataImportEventBehaviorPlugin;
@@ -184,7 +184,7 @@ use Spryker\Zed\DataImport\Communication\Plugin\DataImportPublisherPlugin;
 Overwrite the core methods:
 
 <details open>
-<summary markdown='span'>markdown='span'>Code sample:</summary>
+<summary markdown='span'>Code sample:</summary>
     
 ```php
 /**

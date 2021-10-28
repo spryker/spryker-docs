@@ -25,7 +25,7 @@ To integrate Payolution into your project, first you need to install and configu
 
 ## Installation
 To install the Payolution module, run:
-```Bash
+```bash
 composer require spryker-eco/payolution
 ```
 ## Configuration

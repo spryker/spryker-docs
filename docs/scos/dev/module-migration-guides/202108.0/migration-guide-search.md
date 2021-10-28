@@ -22,12 +22,12 @@ This migration guide is a part of the [Search migration effort](/docs/scos/dev/m
 
 To upgrade the module, do the following:
 1. Install and/or update the modules with composer:
-```Bash
+```bash
 composer update spryker/search --with-dependencies
 composer require spryker/search-elasticsearch
 ```
 2. Regenerate transfer classes:
-```Bash
+```bash
 console transfer:generate
 ```
 3. Adjust all project-level implementations of `Spryker\Client\Search\Dependency\Plugin\QueryInterface`. First, change `Spryker\Client\Search\Dependency\Plugin\QueryInterface` to `Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface`. This does not require changing any implementation details. After that implement `\Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextAwareQueryInterface` as described in the [Search Migration Concept](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html#searching-for-data).

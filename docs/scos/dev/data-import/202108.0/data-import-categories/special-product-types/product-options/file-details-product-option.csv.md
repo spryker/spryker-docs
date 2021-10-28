@@ -15,7 +15,7 @@ This article contains content of the **product_option.csv** file to configure [p
 
 To import the file, run
 
-```Bash
+```bash
 data:import:product-option
 ```
 

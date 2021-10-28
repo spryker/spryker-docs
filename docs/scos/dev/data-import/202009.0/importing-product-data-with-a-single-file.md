@@ -99,7 +99,7 @@ The .yml configuration file for product data import allows to sequentially run i
 
 The `data_entity` names in the .yml file match the prefixes (text before `.` ) in the combined product data import .csv file, with `combined-` added before them:
 
-```JSON
+```json
 ..
 actions:
     - data_entity: combined-product-abstract

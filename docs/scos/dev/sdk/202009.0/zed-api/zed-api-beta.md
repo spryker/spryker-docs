@@ -20,7 +20,7 @@ This module is still in development. For questions and inquiries please contact 
 ## Meta Information
 Links as part of the meta information will be part of the response on the same level as the data:
 
-```JS
+```js
 {
     "data": ...,
     "links": [

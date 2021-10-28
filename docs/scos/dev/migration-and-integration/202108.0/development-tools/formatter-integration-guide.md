@@ -19,11 +19,11 @@ Follow the steps below to integrate [Formatter](/docs/scos/dev/sdk/{{page.versio
 To install the dependencies:
 
 1. Install Prettier:
-```Bash
+```bash
 npm install prettier@2.0.x --save-dev
 ```
 2. Install config for Prettier:
-```Bash
+```bash
 npm install @spryker/frontend-config.prettier --save-dev
 ```
 3. Install the CLI parser:

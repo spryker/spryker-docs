@@ -23,7 +23,7 @@ This article describes how to change the default behavior of the cron job shippe
 
 By default, the cron job runs every day at 00:06:00-00:00. You can change the frequency, date and time of running the cron job by modifying the `'schedule'`  key in `config/Zed/cronjobs/jobs.php`:
 
-```PHP
+```php
 ...
 /* PriceProductSchedule */
 $jobs[] = [

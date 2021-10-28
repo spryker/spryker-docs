@@ -24,14 +24,14 @@ In our example, the component checks `userAgent` for Internet Explorer browsers 
 
 The component can also be changed to detect a feature, for example:
 
-```PHP
+```php
 var hasNativeCustomElements = !!window.customElements;
 ```
 ## Usage
 To make use of the `unsupported-browser-popup` component, add it to the molecules of the **ShopUi** module and include in the current `page-blank` template in the `body` tag before script bundles. By default, the script bundles reside in the `footerScripts` block.
 
 Example:
-```PHP
+```php
 {% raw %}{%{% endraw %} include molecule('unsupported-browser-popup') only {% raw %}%}{% endraw %}
 ```
 {% info_block infoBox %}

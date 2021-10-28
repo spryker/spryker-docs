@@ -15,7 +15,7 @@ This article contains content of the **product_abstract.csv** file to configure 
 
 To import the file, run
 
-```Bash
+```bash
 data:import:product-abstract
 ```
 

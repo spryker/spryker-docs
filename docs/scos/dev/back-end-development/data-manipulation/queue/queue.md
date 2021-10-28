@@ -69,7 +69,7 @@ For information on how to work with RabbitMQ, see [Rabbit MQ tutorial](https://w
 ## Set up RabbitMQ connection
 
 You can override the default connection settings by specifying this config:
-```PHP
+```php
 $config[RabbitMqEnv::RABBITMQ_CONNECTIONS] = [
     'DE' => [
         RabbitMqEnv::RABBITMQ_CONNECTION_NAME => 'DE-connection',
@@ -85,7 +85,7 @@ $config[RabbitMqEnv::RABBITMQ_CONNECTIONS] = [
 ```
 To setup secured connection with RabbitMQ, use RABBITMQ_STREAM_CONTEXT_OPTIONS constant:
 
-```PHP
+```php
 use Spryker\Shared\RabbitMq\RabbitMqEnv;
 
 $config[RabbitMqEnv::RABBITMQ_CONNECTIONS] = [
@@ -162,7 +162,7 @@ class QueueDependencyProvider extends SprykerQueueDependencyProvider
 The Queue module provides a specific command for listening to the queues, fetching messages and triggering registered processors. By running this command, you will see the messages to be consumed and passed to the plugins.
 
 The command syntax is as follows:
-```Bash
+```bash
 ./vendor/bin/console queue:task:start <queue-name>
 ```
 
@@ -173,7 +173,7 @@ Queue `Worker` is another useful command that sends the `Task`  to a background 
 
 **Command syntax:**
 
-```Bash
+```bash
 ./vendor/bin/console queue:worker:start -vvv
 ```
 

@@ -35,7 +35,7 @@ This command will generate some new classes in your project under `\Orm\Zed\Prod
 10. Register `MoneyCollectionFormTypePlugin` in product option dependency provider to support multi-currency price configuration in the Back Office.
 
 <details open>
-<summary markdown='span'>markdown='span'>Example of plugin registration:</summary>
+<summary markdown='span'>Example of plugin registration:</summary>
 
 ```php
 <?php
@@ -65,7 +65,7 @@ class ProductOptionDependencyProvider extends SprykerProductOptionDependencyProv
 11. Migrate prices from `spy_product_option_value.price` field to `spy_product_option_value_price` table. Each `spy_product_option_value` row must have at least 1 `spy_product_option_value_price` row connected. A `ProductOptionValue` entity can have multiple `ProductOptionValuePrices` connected. You can define different gross/net price per currency per store by populating the `fk_currency` and `fk_store` fields accordingly. When either `gross_price` or `net_price` database field is left as `null`, that option will not be available for customers in that exact currency, store, price mode trio. If you set a price field as 0, the option is available for customers and it means it is free of charge.
 
 <details open>
-<summary markdown='span'>markdown='span'>Example of migration:</summary>
+<summary markdown='span'>Example of migration:</summary>
 
 ```php
 <?php
@@ -349,7 +349,7 @@ class MigrateProductOptionValuePricesConsole extends Console
 A new API call was added to get the store specific prices back: `ProductOptionFacadeInterface::getProductOptionValueStorePrices()`.
 
 <details open>
-<summary markdown='span'>markdown='span'>Example of collector upgrade:</summary>
+<summary markdown='span'>Example of collector upgrade:</summary>
 
 ```php
 <?php

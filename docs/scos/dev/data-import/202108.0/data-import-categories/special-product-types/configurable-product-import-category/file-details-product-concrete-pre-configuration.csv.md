@@ -16,7 +16,7 @@ This document describes the `product_concrete_pre_configuration.csv` file to c
 
 To import the file, run
 
-```Bash
+```bash
 data:import product-configuration
 ```
 

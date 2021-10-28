@@ -163,7 +163,7 @@ server {
 {% info_block infoBox %}
 If everything has been set up correctly, you should be able to access http://glue.mysprykershop.com/ and see the correct JSON response:
 {% endinfo_block %}
-```JSON
+```json
 {
     "errors": [
         {

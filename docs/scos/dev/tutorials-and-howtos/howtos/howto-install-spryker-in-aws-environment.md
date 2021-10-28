@@ -1544,7 +1544,7 @@ $config[KernelConstants::DOMAIN_WHITELIST] = [
 </details>
 
 Run the following commands:
-```Shell
+```shell
 composer global require hirak/prestissimo
 composer install
 composer require --no-update aws/aws-sdk-php

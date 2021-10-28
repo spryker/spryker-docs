@@ -20,7 +20,7 @@ Starting from [version 4.4.0](https://symfony.com/doc/4.4/components/console.htm
 
 ## Yves CLI Entry Point
 Commands that should run in the context of Yves, can be executed with the following CLI entry point:
-```Bash
+```bash
 vendor/bin/yves
 ```
 This gives you a list of all available console commands for Yves.

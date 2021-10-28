@@ -44,7 +44,7 @@ you have to merge the latest changes with the core. Especially this is important
 The `UrlGenerator` was incorrectly setting the request parameters, therefore now it is necessary to change processFacetSearchResultTransfer and processRangeSearchResultTransfer as shown in the code sample below.
 
 <details open>
-<summary markdown='span'>markdown='span'>Code sample:</summary>
+<summary markdown='span'>Code sample:</summary>
 
 ```php
 namespace Pyz\Yves\Catalog\ActiveSearchFilter;

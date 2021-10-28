@@ -33,7 +33,7 @@ Jobs are defined in `config/Zed/cronjobs/jobs.php`
 
 This file contains an array which defines the jobs.
 
-```PHP
+```php
 // Send emails every 10 minutes
 $jobs[] = [
     'name'                  => 'send-mails',

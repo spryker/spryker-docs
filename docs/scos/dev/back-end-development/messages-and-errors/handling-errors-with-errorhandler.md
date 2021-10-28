@@ -130,7 +130,7 @@ cp phpstorm-url-handler /usr/local/bin/phpstorm-url-handler
 
 Make this available on your local machine by running
 
-```Bash
+```bash
 phpstorm-url-handler
 ```
 

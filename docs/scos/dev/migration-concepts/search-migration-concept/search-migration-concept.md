@@ -161,7 +161,7 @@ For the full list of changes,check [Elasticsearch 7.0.0 release notes](https://e
 ### Migrating from Elasticsearch 6.x to Elasticsearch 7.x
 
 to migrate from Elasticsearch 6 to Elasticsearch 7, update the necessary modules by running:
-```Bash
+```bash
 composer update spryker/elastica spryker/product-review spryker/search spryker/search-elasticsearch spryker/synchronization spryker/collector --with-dependencies
 ```
 

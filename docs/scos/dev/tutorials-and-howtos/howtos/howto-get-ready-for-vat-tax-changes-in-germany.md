@@ -58,7 +58,7 @@ Standard Taxes,Germany,Germany Standard,19
 Reduced Taxes,Germany,Germany Reduced,7
 ```
 3. Update `config/Zed/cronjobs/jenkins.php` by adding two more jobs:
-```PHP
+```php
 /* Reduce tax rate */
 $jobs[] = [
     'name' => 'reduce-tax-rate',

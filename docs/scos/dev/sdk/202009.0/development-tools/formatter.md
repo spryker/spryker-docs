@@ -22,16 +22,16 @@ For details on how to install Formatter for your project, see [Formatter integra
 To execute the formatter, do the following:
 
 1. Install the Node modules:
-```Bash
+```bash
 npm ci
 ```
 2. Execute the formatter in:
 * validation mode:
-```Bash
+```bash
 npm run formatter
 ```
 * fix mode
-```Bash
+```bash
 npm run formatter:fix
 ```
 ## File types

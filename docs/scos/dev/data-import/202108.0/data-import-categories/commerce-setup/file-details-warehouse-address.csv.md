@@ -16,7 +16,7 @@ This document describes the `warehourse_address.csv` file to configure [warehous
 
 To import the file, run
 
-```Bash
+```bash
 data:import stock-address
 ```
 

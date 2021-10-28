@@ -97,7 +97,7 @@ All transfer file names end with `.transfer.xml`.
 {% info_block infoBox %}
 
 You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) to extend Glue transfers. Run the following command:  
-```Bash
+```bash
 console spryk:run AddSharedRestAttributesTransfer --mode=project --module=ResourcesRestApi --organization=Pyz --name=RestResourcesAttributes
 ```
 
@@ -144,7 +144,7 @@ As you can see from the code, the mapper that you implemented extends the origin
 {% info_block infoBox %}
 
 You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) to put data. Run the following command:  
-```Bash
+```bash
 console spryk:run AddGlueResourceMapper --mode=project --module=ResourcesRestApi --organization=Pyz  --subDirectory=Mapper --className=Resource
 ```
 This will create a mapper and add it to the factory on the project level. You will need to extend the mapper from the original feature.
@@ -185,7 +185,7 @@ The same as the mapper, `ProductsRestApiFactory` extends the core factory and on
 {% info_block infoBox %}
 
 You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) to override mapper initialization. Run the following command:  
-```Bash
+```bash
 console spryk:run AddGlueMapperFactoryMethod --mode=project --module=ResourcesRestApi --organization=Pyz --subDirectory=Mapper --className=Resource
 ```
 This will add mapper initialization to the project level factory.

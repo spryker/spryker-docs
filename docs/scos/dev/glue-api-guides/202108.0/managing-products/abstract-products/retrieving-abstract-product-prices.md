@@ -44,7 +44,7 @@ To retrieve prices of an abstract product, send the request:
 ### Response
 <details><summary markdown='span'>Response sample with default abstract product prices</summary>
 
-```JSON
+```json
 {
     "data": [
         {
@@ -93,7 +93,7 @@ To retrieve prices of an abstract product, send the request:
 Response sample with default prices and volume prices for an abstract product
 </summary>
 
-```JSON    
+```json    
 {
     "data": [
         {
@@ -147,7 +147,7 @@ Response sample with default prices and volume prices for an abstract product
 
 <details><summary markdown='span'>Response sample with a gross price in Swiss Franc for an abstract product</summary>
 
- ```JSON
+ ```json
     {
     "data": [
         {

@@ -182,7 +182,7 @@ Activate the following plugins:
 <details open>
 <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
-```PHP
+```php
 <?php
 
 namespace Pyz\Glue\GlueApplication;
@@ -265,7 +265,7 @@ To verify the plugin integration:
 <details open>
 <summary markdown='span'>src/Pyz/Glue/CustomersRestApi/CustomersRestApiDependencyProvider.php</summary>
 
-```PHP
+```php
 <?php
 
 namespace Pyz\Glue\CustomersRestApi;
@@ -300,7 +300,7 @@ To verify that `UpdateCartCreateCustomerReferencePlugin` is installed correctly,
 <details open>
 <summary markdown='span'>src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
 
-```PHP
+```php
 <?php
 
 namespace Pyz\Zed\CartsRestApi;

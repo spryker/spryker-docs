@@ -24,15 +24,15 @@ Version 3.* of the ProductLabelGui module adds the possibility to assign stores 
  To upgrade to the new version of the module, do the following:
 
 1. Upgrade the ProductLabelStorage module to the new version:
-```Bash
+```bash
 composer require spryker/product-label-gui:"^3.0.0" --update-with-dependencies
 ```
 2. Regenerate data transfer object:
-```Bash
+```bash
 console transfer:generate
 ```
 3. Add the `StoreRelationToggleFormTypePlugin` to`\Pyz\Zed\ProductLabelGui\ProductLabelGuiDependencyProvider`:
-```PHP
+```php
 <?php
 
 namespace Pyz\Zed\ProductLabelGui;

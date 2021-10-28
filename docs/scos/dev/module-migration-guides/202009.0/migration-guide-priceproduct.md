@@ -28,7 +28,7 @@ To migrate the changes to the module, do the following:
 
 1. Upgrade your database structure by running
 
-```Bash
+```bash
 console propel:install
 ```
 
@@ -37,7 +37,7 @@ console propel:install
     1. Remove project level `PriceProductDataImport` (`Pyz\Zed\DataImport\Business\Model\ProductPrice\ProductPriceWriterStep`) from `\Pyz\Zed\DataImport\Business\DataImportBusinessFactory`;
     2. Install the new importer module:
 
-```Bash
+```bash
 composer install spryker/price-product-data-import
 ```
     3. Enable the module by adding
@@ -68,7 +68,7 @@ protected function savePriceProductDefault(string $idPriceProductStore): void
 
 3. Update PriceProductStorage by running
 
-```Bash
+```bash
 composer require spryker/price-product-storage:"^2.0.0"
 ```
 

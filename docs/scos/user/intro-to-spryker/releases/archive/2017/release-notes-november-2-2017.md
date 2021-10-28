@@ -112,7 +112,7 @@ Please make sure to
 
 * adjust the namespaces in your `config_*.php` files
 
-```PHP
+```php
 //use Spryker\Zed\Propel\Business\Builder\ObjectBuilder; (remove)
                         //use Spryker\Zed\Propel\Business\Builder\QueryBuilder; (remove)
                         use Spryker\Zed\PropelOrm\Business\Builder\ObjectBuilder;

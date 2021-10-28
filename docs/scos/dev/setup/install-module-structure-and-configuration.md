@@ -23,7 +23,7 @@ The [Install module](https://github.com/spryker/install) has some layers that ar
 ### Business layer
 All of the models of the Install module reside in the *Business* layer. The Business layer facade consists of one method:
 
-```PHP
+```php
   /**
   * @param \Symfony\Component\Console\Input\InputInterface $input
   * @param \Symfony\Component\Console\Output\OutputInterface $output
@@ -47,7 +47,7 @@ The fully extensible `\Spryker\Zed\Install\InstallConfig` class exposes two meth
 ## Running the install script
 Installation is triggered by the *install* script. As before version 1.0.0 of the Install module, the *install* script accepts one argument - the name of the store, however, in version 1.0.0, you can override some environment variables while running the script. These variables include: `APPLICATION_ENV`, `APPLICATION_CODE_BUCKET`, `APPLICATION_ROOT_DIR`, `APPLICATION_SOURCE_DIR`, `APPLICATION_VENDOR_DIR`, `APPLICATION_STATIC_DIR`. For example, to override `APPLICATION_ROOT_DIR`, one needs to run the *install* script like this:
 
-```Bash
+```bash
 APPLICATION_ROOT_DIR=./some_directory vendor/bin/install
 ```
 

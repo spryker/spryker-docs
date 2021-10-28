@@ -18,15 +18,15 @@ Follow the steps below to integrate the [SCSS linter ](/docs/scos/dev/sdk/{{page
 
 To install the dependencies:
 1. Install Stylelint:
-```Bash
+```bash
 npm install stylelint@13.7.x --save-dev
 ```
 2. Install config for Stylelint:
-```Bash
+```bash
 npm install @spryker/frontend-config.stylelint --save-dev
 ```
 3. Install the CLI parser:
-```Bash
+```bash
 npm install commander@4.0.x --save-dev
 ```
 

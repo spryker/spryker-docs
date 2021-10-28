@@ -54,7 +54,7 @@ Then you create a query model, for example, `FactFinderQuery`. The basic version
 <details open>
 <summary markdown='span'>Code sample</summary>
 
-```PHP
+```php
 class FactFinderQuery implements QueryInterface, SearchContextAwareQueryInterface
 {
     /**
@@ -106,7 +106,7 @@ class FactFinderQuery implements QueryInterface, SearchContextAwareQueryInterfac
 
 This being done, you extend `Spryker\Client\Catalog\CatalogClient`, in particular `catalogSearch` and `catalogSuggestSearch`:
 
-```PHP
+```php
 public function catalogSuggestSearch($searchString, array $requestParameters = [])
     {
         $searchQuery = $this->buildFFSearchQuery($searchString, $requestParams);
@@ -135,7 +135,7 @@ Template for this model is:
 <details open>
 <summary markdown='span'>Code sample</summary>
 
-```PHP
+```php
 class FFSearchAdapterPlugin implements SearchAdapterPluginInterface
 {
     const FACT_FINDER = 'FACT_FINDER';
@@ -211,7 +211,7 @@ class FFSearchAdapterPlugin implements SearchAdapterPluginInterface
 
 You have to make sure that all events affecting FACT-Finder-related product data are triggered with this type. For this purpose, the following change is required in `Pyz/Zed/ProductPageSearch/Persistence/Propel/Schema/spy_product_page_search.schema.xml`:   
 
-```XML
+```xml
 <?xml version="1.0"?>
 <database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
           namespace="Orm\Zed\ProductPageSearch\Persistence"
@@ -333,7 +333,7 @@ To handle search update events, you have to implement the following methods of t
 Since Spryker stores not only product data in Elasticsearch, but also CMS pages, categories, etc., you have to make sure that only product data is handled by the FACT-Finder adapter.
 
 To achieve this, change schema for the search documents in `spy_product_page_search.schema.xml`. Make sure to use the same source identifier as used in the adapter class.
-```XML
+```xml
 <?xml version="1.0"?>
 <database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
           namespace="Orm\Zed\ProductPageSearch\Persistence"

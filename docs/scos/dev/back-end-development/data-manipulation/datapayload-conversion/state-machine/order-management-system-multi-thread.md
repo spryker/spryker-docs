@@ -24,12 +24,12 @@ Out of the box, both of these commands process their respective entities sequent
 ## How OMS multi-thread works
 Each order is assigned a randomly generated positive number called *processor identifier*. This number is saved in spy_sales_order table. During the order management processing, both of the commands mentioned above are triggered with the new command option `processor-identifier` (`p`). The value of this option must match a processor identifier from `spy_sales_table`. The commands would then process only those timeouts and conditions that are related to the orders with the matching processor identifier. This way, one could, for example, trigger the `oms:check-timeout` command several times simultaneously, each time providing different processor identifiers, thus creating several PHP processes for managing a large number of orders in parallel. With the new option in place, a command would look like this:
 
-```Bash
+```bash
 console oms:check-timeout -p 5
 ```
 Instead of providing a single value as the `processor-identifier` option value, one could provide several values separated by a comma.
 
-```Bash
+```bash
 console oms:check-timeout -p 1,2,3
 ```
 {% info_block warningBox %}
@@ -43,17 +43,17 @@ To enable the OMS multi-thread, do the following:
 
 1. Install the `spryker/oms-multi-thread` module and update `spryker/sales`:
 
-```Bash
+```bash
 composer require spryker/oms-multi-thread
 ```
 
 2. Apply the database changes:
-```Bash
+```bash
 console propel:install
 ```
 3. Configure the maximum number of OMS process workers in `config/Shared/config_default.php`:
 
-```PHP
+```php
 ...
 use Spryker\Shared\OmsMultiThread\OmsMultiThreadConstants;
 ...
@@ -66,7 +66,7 @@ This value will serve as the upper boundary for a generated processor identifier
 <details>
 <summary markdown='span'>config/Zed/cronjobs/jenkins.php</summary>
 
-```PHP
+```php
 /* STATE MACHINE */
 $jobs[] = [
     'name'     => 'check-statemachine-conditions',

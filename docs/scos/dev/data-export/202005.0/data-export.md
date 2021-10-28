@@ -38,7 +38,7 @@ To export the order data, you need to:
 
 1. Make sure you have the[ Sales Data Export feature installed](/docs/scos/dev/feature-integration-guides/{{page.version}}/sales-data-export-feature-integration.html) for your project..
 2. Specify necessary configurations in the .yml export configuration file residing in `./data/export/config/`. See [.yml Export Configuration File](#yml-export-configuration-file) for details on the .yml export config file structure and configuration options.
-3. Run `console data:export --config file-name.yml`, where `file-name.yml` is the name of the .yml export configuration file. The command creates export .csv files in `./data/export/`folder for each *data_entity* of the .yml file. For each store specified in the .yml file, a separate file is created. See [Structure of the .yml Export Configuration File](/docs/scos/dev/data-export/{{page.version}}/exporting-data.html#structure) for an example of how the export works.
+3. Run `console data:export --config file-name.yml`, where `file-name.yml` is the name of the .yml export configuration file. The command creates export .csv files in `./data/export/`folder for each *data_entity* of the .yml file. For each store specified in the .yml file, a separate file is created. See [Structure of the .yml Export Configuration File](/docs/scos/dev/data-export/{{page.version}}/data-export.html#structure) for an example of how the export works.
 
 {% info_block infoBox "Multi-store support" %}
 
@@ -55,7 +55,7 @@ The .yml export configuration file allows you to define what orders you want to 
 * order-item
 * order-expense
 
-By default, the .yml export configuration file resides in `./data/export/config/`.  You can adjust your .yml export configuration file, but when doing so, stick to its [structure](/docs/scos/dev/data-export/{{page.version}}/exporting-data.html#structure) and take the possible [data filtering options](/docs/scos/dev/data-export/{{page.version}}/exporting-data.html#filter) into account.
+By default, the .yml export configuration file resides in `./data/export/config/`.  You can adjust your .yml export configuration file, but when doing so, stick to its [structure](/docs/scos/dev/data-export/{{page.version}}/data-export.html#structure) and take the possible [data filtering options](/docs/scos/dev/data-export/{{page.version}}/data-export.html#filter) into account.
 
 {% info_block warningBox "Note" %}
 
@@ -105,7 +105,7 @@ actions:
           <<: *default_filter_criteria
           store_name: [<store_name_value_1>]
 ```
-Type of content to export is defined in section *actions* by *data_entity* and must be *order*, *order-item* and *order-expense* . You can define what stores you want to run export for, and specify order dates you want to export data for. See [Setting the Filter Criteria](/docs/scos/dev/data-export/{{page.version}}/exporting-data.html#filter) in a .yml File for details on how to export order data for specific stores and time period.
+Type of content to export is defined in section *actions* by *data_entity* and must be *order*, *order-item* and *order-expense* . You can define what stores you want to run export for, and specify order dates you want to export data for. See [Setting the Filter Criteria](/docs/scos/dev/data-export/{{page.version}}/data-export.html#filter) in a .yml File for details on how to export order data for specific stores and time period.
 
 Check out the default .yml export configuration file [order_export_config.yml](https://github.com/spryker-shop/suite/blob/master/data/export/production/order_export_config.yml) for example. It’s configuration presupposes batch export of the three data entities: *order*, *order-item*, *order-expense.*
 

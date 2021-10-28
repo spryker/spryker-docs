@@ -1,12 +1,26 @@
 ---
 title: Float Stock for Products
-last_updated: Nov 22, 2019
+last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/v2/docs/float-stock-for-products
-originalArticleId: 4ef914c4-d990-47be-b538-1d5119ec22f8
+originalLink: https://documentation.spryker.com/2021080/docs/float-stock-for-products
+originalArticleId: 741857cb-b4b4-4132-afbf-1aa5171cf35d
 redirect_from:
+  - /2021080/docs/float-stock-for-products
+  - /2021080/docs/en/float-stock-for-products
+  - /docs/float-stock-for-products
+  - /docs/en/float-stock-for-products
+  - /v6/docs/float-stock-for-products
+  - /v6/docs/en/float-stock-for-products
+  - /v5/docs/float-stock-for-products
+  - /v5/docs/en/float-stock-for-products
+  - /v4/docs/float-stock-for-products
+  - /v4/docs/en/float-stock-for-products
+  - /v3/docs/float-stock-for-products
+  - /v3/docs/en/float-stock-for-products
   - /v2/docs/float-stock-for-products
   - /v2/docs/en/float-stock-for-products
+  - /v1/docs/float-stock-for-products
+  - /v1/docs/en/float-stock-for-products
 ---
 
 ## Float stock migration
@@ -54,7 +68,7 @@ console transfer:generate
 | spryker/availability-cart-connector | 5.0.0 | [Migration Guide - AvailabilityCartConnector](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-availabilitycartconnector.html) |
 | spryker/availability-gui | 4.0.0 | [Migration Guide - AvailabilityGui](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-availabilitygui.html) |
 | spryker/availability-offer-connector | 2.0.0 | [Migration Guide - AvailabilityOfferConnector](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-availabilityofferconnector.html) |
-| spryker/cart | 6.0.0 | [Migration Guide - Cart](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-cart.html/{{page.version}}/migration-guide-cart.html) |
+| spryker/cart | 6.0.0 | [Migration Guide - Cart](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-cart.html) |
 | spryker/cart-extension | 3.0.0 | [Migration Guide - CartExtension](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-cartextension.html) |
 | spryker/carts-rest-api | 4.0.0 | [Migration Guide - CartsRestApi](/docs/scos/dev/module-migration-guides/{{page.version}}/glue-api/cartsrestapi-migration-guide.html) |
 | spryker/checkout | 5.0.0 | [Migration Guide - Checkout](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-checkout.html) |
@@ -67,10 +81,10 @@ console transfer:generate
 | spryker/orders-rest-api | 2.0.0 | [Migration Guide - OrdersRestApi](/docs/scos/dev/module-migration-guides/{{page.version}}/glue-api/migration-guide-ordersrestapi.html) |
 | spryker/persistent-cart | 2.0.0 | [Migration Guide - PersistentCart](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-persistentcart.html) |
 | spryker/price-cart-connector | 5.0.0 | [Migration Guide - PriceCartConnector](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-pricecartconnector.html) |
-| spryker/price-product | 3.0.0 | [Migration Guide - PriceProduct](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-priceproduct.html) |
+| spryker/price-product | 3.0.0 | [Migration Guide - PriceProduct](/docs/scos/dev/module-migration-guides/202108.0/migration-guide-priceproduct.html) |
 | spryker/price-product-storage | 3.0.0 | [Migration Guide - PriceProductStorage](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-priceproductstorage.html) |
 | spryker/price-product-volume | 2.0.0 | [Migration Guide - PriceProductVolume](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-priceproductvolume.html) |
-| spryker/price-product-volume-gui | 2.0.0 | [Migration Guide - PriceProductVolumeGui](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-priceproductvolumegui.htmlgration-guide-priceproductvolumegui.html) |
+| spryker/price-product-volume-gui | 2.0.0 | [Migration Guide - PriceProductVolumeGui](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-priceproductvolumegui.html) |
 | spryker/product-availabilities-rest-api | 2.0.0 | [Migration Guide - ProductAvailabilitiesRestApi](/docs/scos/dev/module-migration-guides/{{page.version}}/glue-api/migration-guide-productavailabilitiesrestapi.html) |
 | spryker/product-bundle | 5.0.0 | [Migration Guide - ProductBundle](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-productbundle.html) |
 | spryker/product-discount-connector | 4.0.0 | [Migration Guide - ProductDiscountConnector](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-productdiscountconnector.html) |
@@ -88,12 +102,12 @@ console transfer:generate
 | spryker/sales | 9.0.0 | [Migration Guide - Sales](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-sales.html) |
 | spryker/sales-quantity | 2.0.0 | [Migration Guide - SalesQuantity](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-salesquantity.html) |
 | spryker/sales-split | 4.0.0 | [Migration Guide - SalesSplit](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-salessplit.html) |
-| spryker/shipment-discount-connector | 2.0.0 | [Migration Guide - ShipmentDiscountConnector](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-shipmentdiscountconnector.htmltion-guide-shipmentdiscountconnector.html) |
-| spryker/shopping-list | 3.0.0 | [Migration Guide - ShoppingList](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-shoppinglistwidget.htmlersion}}/migration-guide-shoppinglistwidget.html) |
+| spryker/shipment-discount-connector | 2.0.0 | [Migration Guide - ShipmentDiscountConnector](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-shipmentdiscountconnector.html) |
+| spryker/shopping-list | 3.0.0 | [Migration Guide - ShoppingList](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-shoppinglistwidget.html) |
 | spryker/stock | 6.0.0 | [Migration Guide - Stock](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-stock.html) |
-| spryker/stock-sales-connector | 4.0.0 | [Migration Guide - StockSalesConnector](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-stocksalesconnector.html/migration-guide-stocksalesconnector.html) |
-| spryker/wishlist | 7.0.0 | [Migration Guide - WishList](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-wishlist.htmlage.version}}/migration-guide-wishlist.html) |
-| spryker-shop/cart-page | 2.0.0 | [Migration Guide - CartPage](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-cartpage.htmlge.version}}/migration-guide-cartpage.html) |
+| spryker/stock-sales-connector | 4.0.0 | [Migration Guide - StockSalesConnector](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-stocksalesconnector.html) |
+| spryker/wishlist | 7.0.0 | [Migration Guide - WishList](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-wishlist.html) |
+| spryker-shop/cart-page | 2.0.0 | [Migration Guide - CartPage](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-cartpage.html) |
 | spryker-shop/customer-reorder-widget | 5.0.0 | [Migration Guide - CustomerReorderWidget](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-customerreorderwidget.html) |
 | spryker-shop/discount-promotion-widget | 2.0.0 | [Migration Guide - DiscountPromotionWidget](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-discountpromotionwidget.html) |
 | spryker-shop/product-detail-page | 2.0.0 | [Migration Guide - ProductDetailPage](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-productdetailpage.html) |
@@ -102,6 +116,6 @@ console transfer:generate
 | spryker-shop/product-search-widget | 2.0.0 | [Migration Guide - ProductSearchWidget](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-productsearchwidget.html) |
 | spryker-shop/quick-order-page | 3.0.0 | [Migration Guide - QuickOrderPage](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-quickorderpage.html) |
 | spryker-shop/shopping-list-page | 0.7.0 | [Migration Guide - ShoppingListPage](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-shoppinglistpage.html) |
-| spryker-shop/shopping-list-widget | 0.5.0 | [Migration Guide - ShoppingListWidget](/docs/scos/dev/module-migration-guides/202108.0/migration-guide-shoppinglistwidget.htmlion-guide-shoppinglistwidget.html) |
+| spryker-shop/shopping-list-widget | 0.5.0 | [Migration Guide - ShoppingListWidget](/docs/scos/dev/module-migration-guides/202108.0/migration-guide-shoppinglistwidget.html) |
     
  </details>   

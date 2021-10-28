@@ -13,27 +13,21 @@ This document provides an overview of REST API endpoints provided by Spryker by 
 
 <div id="swagger-ui"></div>
 
-<div class="script-link-loader" data-tag-type = "link" data-src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.22.1/swagger-ui.css"></div>
-<div class="script-link-loader" data-tag-type = "script" data-src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.22.1/swagger-ui-standalone-preset.js"></div> 
-<div class="script-link-loader" data-tag-type = "script" data-src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.22.1/swagger-ui-bundle.js" ></div>
-
-
-<div class="script-embed" data-code="window.onload = function() {
-                console.log('start');
-				const ui = SwaggerUIBundle({
-					url: 'https://borjomi.herokuapp.com/schema',
-					dom_id: '#swagger-ui',
-					deepLinking: true,
-					presets: [
-						SwaggerUIBundle.presets.apis,
-						SwaggerUIStandalonePreset
-					],
-					layout: 'BaseLayout',
-                    supportedSubmitMethods: []
-				})
-                console.log(ui);
-				window.ui = ui
-			}">
-</div>
-
-
+{% raw %}
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.22.1/swagger-ui.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.22.1/swagger-ui-standalone-preset.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.22.1/swagger-ui-bundle.js"></script>
+<script>
+const swaggerContainer = document.getElementById('swagger-ui');
+if(swaggerContainer) { 
+    console.log('start'); const ui = SwaggerUIBundle({
+        url: 'https://borjomi.herokuapp.com/schema',
+        dom_id: '#swagger-ui', deepLinking: true, presets: [
+            SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset
+        ], 
+        enableCORS: false, layout: 'BaseLayout', supportedSubmitMethods: []
+    });
+    console.log(ui); window.ui = ui 
+}
+</script>
+{% endraw %}

@@ -38,7 +38,7 @@ Spryker Commerce OS consists of a number of independent components. Each of them
 "description": "Cart module",
 "license": "proprietary",
 "require": {
-"php": ">=7.2",
+"php": ">=7.4",
 "spryker/calculation": "^4.0.0",
 "spryker/cart-extension": "^1.1.0",
 "spryker/kernel": "^3.19.0",

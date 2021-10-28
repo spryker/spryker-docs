@@ -53,9 +53,11 @@ $config[OmsConstants::ACTIVE_PROCESSES] = [
     'ComputopDirectDebit01',
     'ComputopPaydirekt01',
     'ComputopPayPal01',
+    'ComputopPayPalExpress01',
     'ComputopSofort01',
     'ComputopIdeal01',
     'ComputopEasyCredit01',
+    'ComputopPayuCeeSingle01',
 ];
 $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
     ...
@@ -64,16 +66,18 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
     ComputopConfig::PAYMENT_METHOD_DIRECT_DEBIT => 'ComputopDirectDebit01',
     ComputopConfig::PAYMENT_METHOD_PAYDIREKT => 'ComputopPaydirekt01',
     ComputopConfig::PAYMENT_METHOD_PAY_PAL => 'ComputopPayPal01',
+    ComputopConfig::PAYMENT_METHOD_PAY_PAL_EXPRESS => 'ComputopPayPalExpress01',
     ComputopConfig::PAYMENT_METHOD_SOFORT => 'ComputopSofort01',
     ComputopConfig::PAYMENT_METHOD_IDEAL => 'ComputopIdeal01',
     ComputopConfig::PAYMENT_METHOD_EASY_CREDIT => 'ComputopEasyCredit01',
+    ComputopConfig::PAYMENT_METHOD_PAYU_CEE_SINGLE => 'ComputopPayuCeeSingle01',
 ];
 ```
 
 2. In the `OmsDependencyProvider`, add OMS command and condition plugins:
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -90,6 +94,7 @@ use SprykerEco\Zed\Computop\Communication\Plugin\Oms\Command\CapturePlugin;
 use SprykerEco\Zed\Computop\Communication\Plugin\Oms\Command\EasyCreditAuthorizePlugin;
 use SprykerEco\Zed\Computop\Communication\Plugin\Oms\Command\RefundPlugin;
 use SprykerEco\Zed\Computop\Communication\Plugin\Oms\Condition\IsAuthorizedPlugin;
+use SprykerEco\Zed\Computop\Communication\Plugin\Oms\Condition\IsAuthorizeRequestConditionPlugin;
 use SprykerEco\Zed\Computop\Communication\Plugin\Oms\Condition\IsCancelledPlugin;
 use SprykerEco\Zed\Computop\Communication\Plugin\Oms\Condition\IsCapturedPlugin;
 use SprykerEco\Zed\Computop\Communication\Plugin\Oms\Condition\IsInitializedPlugin;
@@ -148,6 +153,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 
             // ----- Computop
             $conditionCollection->add(new IsPaymentConfirmedPlugin(), 'Computop/IsPaymentConfirmed');
+            $conditionCollection->add(new IsAuthorizeRequestConditionPlugin(), 'Computop/IsAuthorizeRequest');
             $conditionCollection->add(new IsAuthorizedPlugin(), 'Computop/IsAuthorized');
             $conditionCollection->add(new IsCancelledPlugin(), 'Computop/IsCancelled');
             $conditionCollection->add(new IsCapturedPlugin(), 'Computop/IsCaptured');
@@ -168,7 +174,6 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 To display the payment methods on the Storefront, import them for each store:
 
 **data/import/common/common/payment_method.csv**
-
 ```yaml
 payment_method_key,payment_method_name,payment_provider_key,payment_provider_name,is_active
 computopCreditCard,Computop Credit Card,Computop,Computop,1
@@ -178,7 +183,9 @@ computopIdeal,Computop Ideal,Computop,Computop,1
 computopPaydirect,Computop Paydirect,Computop,Computop,1
 computopPayNow,Computop PayNow,Computop,Computop,1
 computopPayPal,Computop PayPal,Computop,Computop,1
+computopPayPalExpress,Computop PayPalExpress,Computop,Computop,1
 computopSofort,Computop Sofort,Computop,Computop,1
+computopPayuCeeSingle,Computop PayU CEE Single,Computop,Computop,1
 ```
 
 
@@ -192,14 +199,16 @@ computopIdeal,DE
 computopPaydirect,DE
 computopPayNow,DE
 computopPayPal,DE
+computopPayPalExpress,DE
 computopSofort,DE
+computopPayuCeeSingle,DE
 ```
+
 ### Router configuration
 
 To configure router, add `ComputopRouterProviderPlugin` to `RouterDependencyProvider`:
 
-
-**src/Pyz/Yves/Router/RouterDependencyProvider.php**
+**src/Pyz/Yves/Router/RouterDependencyProvider.php</summary>**
 
 ```php
 <?php
@@ -232,7 +241,7 @@ To configure checkout:
 
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -284,7 +293,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 2. Add the subforms of the desired payment methods to `CheckoutPageDependencyProvider`:
 
 <details>
-<summary markdown='span'>src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php</summary>
+<summary>src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -295,6 +304,7 @@ use Spryker\Yves\Kernel\Container;
 use Spryker\Yves\StepEngine\Dependency\Plugin\Form\SubFormPluginCollection;
 use Spryker\Yves\StepEngine\Dependency\Plugin\Handler\StepHandlerPluginCollection;
 use SprykerEco\Shared\Computop\ComputopConfig;
+use SprykerEco\Yves\Computop\Plugin\CheckoutPage\PayuCeeSingleSubFormPlugin;
 use SprykerEco\Yves\Computop\Plugin\ComputopPaymentHandlerPlugin;
 use SprykerEco\Yves\Computop\Plugin\CreditCardSubFormPlugin;
 use SprykerEco\Yves\Computop\Plugin\DirectDebitSubFormPlugin;
@@ -307,7 +317,7 @@ use SprykerEco\Yves\Computop\Plugin\SofortSubFormPlugin;
 use SprykerShop\Yves\CheckoutPage\CheckoutPageDependencyProvider as SprykerShopCheckoutPageDependencyProvider;
 
 class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyProvider
-{
+{    
     /**
      * @param \Spryker\Yves\Kernel\Container $container
      *
@@ -340,7 +350,9 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
             $paymentMethodHandler->add(new ComputopPaymentHandlerPlugin(), ComputopConfig::PAYMENT_METHOD_PAYDIREKT);
             $paymentMethodHandler->add(new ComputopPaymentHandlerPlugin(), ComputopConfig::PAYMENT_METHOD_PAY_NOW);
             $paymentMethodHandler->add(new ComputopPaymentHandlerPlugin(), ComputopConfig::PAYMENT_METHOD_PAY_PAL);
+            $paymentMethodHandler->add(new ComputopPaymentHandlerPlugin(), ComputopConfig::PAYMENT_METHOD_PAY_PAL_EXPRESS);
             $paymentMethodHandler->add(new ComputopPaymentHandlerPlugin(), ComputopConfig::PAYMENT_METHOD_SOFORT);
+            $paymentMethodHandler->add(new ComputopPaymentHandlerPlugin(), ComputopConfig::PAYMENT_METHOD_PAYU_CEE_SINGLE);
 
             return $paymentMethodHandler;
         });
@@ -367,6 +379,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
             $paymentSubFormPluginCollection->add(new PayNowSubFormPlugin());
             $paymentSubFormPluginCollection->add(new PayPalSubFormPlugin());
             $paymentSubFormPluginCollection->add(new SofortSubFormPlugin());
+            $paymentSubFormPluginCollection->add(new PayuCeeSingleSubFormPlugin());
 
             return $paymentSubFormPluginCollection;
         });
@@ -383,9 +396,9 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 **src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig**
 
 ```twig
-{% raw %}{%{% endraw %} extends template('page-layout-checkout', 'CheckoutPage') {% raw %}%}{% endraw %}
+{% extends template('page-layout-checkout', 'CheckoutPage') %}
 
-{% raw %}{%{% endraw %} define data = {
+{% define data = {
     backUrl: _view.previousStepUrl,
     forms: {
         payment: _view.paymentForm
@@ -399,32 +412,58 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
         'Computop/paydirekt': ['paydirekt', 'computop'],
         'Computop/paynow': ['paynow', 'computop'],
         'Computop/paypal': ['paypal', 'computop'],
-        'Computop/sofort': ['sofort', 'computop'],
+        'Computop/sofort': ['sofort', 'computop']
+        'Computop/payu-cee-single': ['payu-cee-single', 'computop'],
     }
-} {% raw %}%}{% endraw %}
+} %}
 ```
 
-#### CheckoutStepEngine configuration
+4. Add payment filter plugin `ComputopCurrencyPaymentMethodFilterPlugin`:
+
+**src\Pyz\Zed\Payment\PaymentDependencyProvider.php**
+
+```php
+use SprykerEco\Zed\Computop\Communication\Plugin\Payment\ComputopCurrencyPaymentMethodFilterPlugin;
+
+    /**
+     * @return array<\Spryker\Zed\PaymentExtension\Dependency\Plugin\PaymentMethodFilterPluginInterface>
+     */
+    protected function getPaymentMethodFilterPlugins(): array
+    {
+        return [
+            ...
+            new ComputopCurrencyPaymentMethodFilterPlugin(),
+        ];
+    }
+```
+
+### CheckoutStepEngine configuration
 
 Payment methods like CreditCard, PayNow, EasyCredit require adjustments in the `CheckoutStepEngine` flow. To adjust the flow:
 
-1. To create Computop specific steps and replace placeOrder and Summary steps with the project-level ones, adjust `StepFactory`:
+1. To create Computop specific steps and replace placeOrder and Summary steps with the project-level ones, adjust `StepFactory`:
 
 <details>
-<summary markdown='span'>src/Pyz/Yves/CheckoutPage/Process/StepFactory.php</summary>
+<summary>src/Pyz/Yves/CheckoutPage/Process/StepFactory.php</summary>
 
 ```php
 <?php
 
 namespace Pyz\Yves\CheckoutPage\Process;
 
+use Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider;
 use Pyz\Yves\CheckoutPage\Plugin\Router\CheckoutPageRouteProviderPlugin;
+use Pyz\Yves\CheckoutPage\Process\Steps\PaymentStep;
 use Pyz\Yves\CheckoutPage\Process\Steps\PlaceOrderStep;
+use Pyz\Yves\CheckoutPage\Process\Steps\ShipmentStep;
 use Pyz\Yves\CheckoutPage\Process\Steps\SummaryStep;
 use Spryker\Yves\StepEngine\Dependency\Step\StepInterface;
+use SprykerEco\Client\Computop\ComputopClientInterface;
 use SprykerEco\Yves\Computop\CheckoutPage\Process\Steps\ComputopCreditCardInitStep;
 use SprykerEco\Yves\Computop\CheckoutPage\Process\Steps\ComputopEasyCreditInitStep;
 use SprykerEco\Yves\Computop\CheckoutPage\Process\Steps\ComputopPayNowInitStep;
+use SprykerEco\Yves\Computop\CheckoutPage\Process\Steps\ComputopPayPalExpressCompleteStep;
+use SprykerShop\Yves\CheckoutPage\Plugin\Router\CheckoutPageRouteProviderPlugin as SprykerShopCheckoutPageRouteProviderPlugin;
 use SprykerShop\Yves\CheckoutPage\Process\StepFactory as SprykerStepFactory;
 
 /**
@@ -436,6 +475,13 @@ class StepFactory extends SprykerStepFactory
      * @uses \SprykerShop\Yves\HomePage\Plugin\Router\HomePageRouteProviderPlugin::ROUTE_NAME_HOME
      */
     protected const ROUTE_NAME_HOME = 'home';
+
+     /**
+     * @uses \SprykerEco\Yves\Computop\Plugin\Router\ComputopRouteProviderPlugin::ROUTE_NAME_PAY_PAL_EXPRESS_COMPLETE
+     *
+     * @var string
+     */
+    protected const ROUTE_NAME_COMPUTOP_PAYPAL_EXPRESS_COMPLETE = 'computop-pay-pal-express-complete';
 
     /**
      * @return \Spryker\Yves\StepEngine\Dependency\Step\StepInterface[]
@@ -475,6 +521,22 @@ class StepFactory extends SprykerStepFactory
                 'payment failed' => CheckoutPageRouteProviderPlugin::ROUTE_NAME_CHECKOUT_PAYMENT,
                 'shipment failed' => CheckoutPageRouteProviderPlugin::ROUTE_NAME_CHECKOUT_SHIPMENT,
             ]
+        );
+    }
+
+    /**
+     * @return \SprykerShop\Yves\CheckoutPage\Process\Steps\PaymentStep
+     */
+    public function createPaymentStep(): StepInterface
+    {
+        return new PaymentStep(
+            $this->getPaymentClient(),
+            $this->getPaymentMethodHandler(),
+            SprykerShopCheckoutPageRouteProviderPlugin::ROUTE_NAME_CHECKOUT_PAYMENT,
+            $this->getConfig()->getEscapeRoute(),
+            $this->getFlashMessenger(),
+            $this->getCalculationClient(),
+            $this->getCheckoutPaymentStepEnterPreCheckPlugins()
         );
     }
 
@@ -525,12 +587,31 @@ class StepFactory extends SprykerStepFactory
             static::ROUTE_NAME_HOME
         );
     }
+
+    /**
+     * @return \SprykerEco\Client\Computop\ComputopClientInterface
+     */
+    public function getComputopClient(): ComputopClientInterface
+    {
+        return $this->getProvidedDependency(CheckoutPageDependencyProvider::CLIENT_COMPUTOP);
+    }
+
+    /**
+     * @return \SprykerEco\Yves\Computop\CheckoutPage\Process\Steps\ComputopPayPalExpressCompleteStep
+     */
+    public function createComputopPayPalExpressCompleteStep(): ComputopPayPalExpressCompleteStep
+    {
+        return new ComputopPayPalExpressCompleteStep(
+            static::ROUTE_NAME_COMPUTOP_PAYPAL_EXPRESS_COMPLETE,
+            static::ROUTE_NAME_HOME
+        );
+    }
 }
 ```
 
 </details>
 
-2. To use the project-level `StepFactory`, adjust `CheckoutPageFactory`:
+2. To use the project-level `StepFactory`, adjust `CheckoutPageFactory`:
 
 **src/Pyz/Yves/CheckoutPage/CheckoutPageFactory.php**
 
@@ -560,10 +641,10 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 3. Adjust `CheckoutController` with the step actions of the desired payment methods:
 
 <details>
-<summary markdown='span'>src/Pyz/Yves/CheckoutPage/Controller/CheckoutController.php</summary>
+<summary>src/Pyz/Yves/CheckoutPage/Controller/CheckoutController.php</summary>
 
 ```php
-<?php=
+<?php
 
 namespace Pyz\Yves\CheckoutPage\Controller;
 
@@ -648,9 +729,8 @@ class CheckoutController extends SprykerShopCheckoutController
 
 4. To register additional checkout step routes, adjust `CheckoutPageRouteProviderPlugin`:
 
-
 <details>
-<summary markdown='span'>src/Pyz/Yves/CheckoutPage/Plugin/Router/CheckoutPageRouteProviderPlugin.php</summary>
+<summary>src/Pyz/Yves/CheckoutPage/Plugin/Router/CheckoutPageRouteProviderPlugin.php</summary>
 
 ```php
 <?php
@@ -747,7 +827,8 @@ class CheckoutPageRouteProviderPlugin extends SprykerShopCheckoutPageRouteProvid
 
 </details>
 
-5. Adjust `RouterDependencyProvider` to use `CheckoutPageRouteProviderPlugin` from the project level:
+5. Adjust `RouterDependencyProvider` to use `CheckoutPageRouteProviderPlugin` from the project level:
+
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
 
@@ -774,10 +855,12 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 }
 ```
 
+</details>
+
 6. Only for PayNow payment method: To set the Computop payment transfer with necessary data in `QuoteTransfer`, adjust `PlaceOrderStep`:
 
 <details>
-<summary markdown='span'>src/Pyz/Yves/CheckoutPage/Process/Steps/PlaceOrderStep.php</summary>
+<summary>src/Pyz/Yves/CheckoutPage/Process/Steps/PlaceOrderStep.php</summary>
 
 ```php
 <?php
@@ -821,7 +904,7 @@ class PlaceOrderStep extends SprykerShopPlaceOrderStep
 7. Only for EasyCredit payment method: adjust the SummaryStep with EasyCredit installment information by adding the `easy-credit-summary` molecule to `summary.twig`.
 
 <details>
-<summary markdown='span'>src/Pyz/Yves/CheckoutPage/Process/Steps/SummaryStep.php</summary>
+<summary>src/Pyz/Yves/CheckoutPage/Process/Steps/SummaryStep.php</summary>
 
 ```php
 <?php
@@ -900,12 +983,543 @@ class SummaryStep extends SprykerShopSummaryStep
 
 </details>
 
+8. Only for PayPalExpress payment method: adjust the PaymentStep with ComputopPayPalExpress check:
+
+<details>
+<summary>src/Pyz/Yves/CheckoutPage/Process/Steps/PaymentStep.php</summary>
+
+```php
+<?php
+
+/**
+ * This file is part of the Spryker Suite.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
+
+namespace Pyz\Yves\CheckoutPage\Process\Steps;
+
+use Generated\Shared\Transfer\QuoteTransfer;
+use Spryker\Shared\Kernel\Transfer\AbstractTransfer;
+use SprykerShop\Yves\CheckoutPage\Process\Steps\PaymentStep as SprykerShopPaymentStep;
+
+class PaymentStep extends SprykerShopPaymentStep
+{
+    /**
+     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
+     *
+     * @return bool
+     */
+    public function isBreadcrumbItemHidden(AbstractTransfer $quoteTransfer): bool
+    {
+        /** @var \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer */
+        return $this->isQuoteContainsPayPalExpressPayment($quoteTransfer);
+    }
+
+    /**
+     * @param \Spryker\Shared\Kernel\Transfer\AbstractTransfer $quoteTransfer
+     *
+     * @return bool
+     */
+    public function requireInput(AbstractTransfer $quoteTransfer)
+    {
+        /** @var \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer */
+        if ($this->isQuoteContainsPayPalExpressPayment($quoteTransfer)) {
+            return false;
+        }
+
+        return parent::requireInput($quoteTransfer);
+    }
+
+    /**
+     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
+     *
+     * @return bool
+     */
+    protected function isQuoteContainsPayPalExpressPayment(QuoteTransfer $quoteTransfer): bool
+    {
+        return $quoteTransfer->getPayment() !== null && $quoteTransfer->getPaymentOrFail()->getComputopPayPalExpress() !== null;
+    }
+}
+```
+</details>
+
+
+9. Only for PayPalExpress payment method: adjust the `ShipmentStep` with default shipment method check:
+
+<details>
+<summary>src/Pyz/Yves/CheckoutPage/Process/Steps/ShipmentStep.php</summary>
+
+```php
+<?php
+
+/**
+ * This file is part of the Spryker Suite.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
+
+namespace Pyz\Yves\CheckoutPage\Process\Steps;
+
+use Generated\Shared\Transfer\QuoteTransfer;
+use Spryker\Shared\Kernel\Transfer\AbstractTransfer;
+use Spryker\Yves\StepEngine\Dependency\Plugin\Handler\StepHandlerPluginCollection;
+use SprykerEco\Client\Computop\ComputopClientInterface;
+use SprykerShop\Yves\CheckoutPage\Dependency\Client\CheckoutPageToCalculationClientInterface;
+use SprykerShop\Yves\CheckoutPage\GiftCard\GiftCardItemsCheckerInterface;
+use SprykerShop\Yves\CheckoutPage\Process\Steps\PostConditionCheckerInterface;
+use SprykerShop\Yves\CheckoutPage\Process\Steps\ShipmentStep as SprykerShipmentStep;
+use Symfony\Component\HttpFoundation\Request;
+
+class ShipmentStep extends SprykerShipmentStep
+{
+    /**
+     * @var \SprykerEco\Client\Computop\ComputopClientInterface
+     */
+    protected $computopClient;
+
+    /**
+     * @param \SprykerShop\Yves\CheckoutPage\Dependency\Client\CheckoutPageToCalculationClientInterface $calculationClient
+     * @param \Spryker\Yves\StepEngine\Dependency\Plugin\Handler\StepHandlerPluginCollection $shipmentPlugins
+     * @param \SprykerShop\Yves\CheckoutPage\Process\Steps\PostConditionCheckerInterface $postConditionChecker
+     * @param \SprykerShop\Yves\CheckoutPage\GiftCard\GiftCardItemsCheckerInterface $giftCardItemsChecker
+     * @param string $stepRoute
+     * @param string|null $escapeRoute
+     * @param \SprykerShop\Yves\CheckoutPageExtension\Dependency\Plugin\CheckoutShipmentStepEnterPreCheckPluginInterface[] $checkoutShipmentStepEnterPreCheckPlugins
+     * @param \SprykerEco\Client\Computop\ComputopClientInterface $computopClient
+     */
+    public function __construct(
+        CheckoutPageToCalculationClientInterface $calculationClient,
+        StepHandlerPluginCollection $shipmentPlugins,
+        PostConditionCheckerInterface $postConditionChecker,
+        GiftCardItemsCheckerInterface $giftCardItemsChecker,
+        $stepRoute,
+        $escapeRoute,
+        array $checkoutShipmentStepEnterPreCheckPlugins,
+        ComputopClientInterface $computopClient
+    ) {
+        parent::__construct(
+            $calculationClient,
+            $shipmentPlugins,
+            $postConditionChecker,
+            $giftCardItemsChecker,
+            $stepRoute,
+            $escapeRoute,
+            $checkoutShipmentStepEnterPreCheckPlugins
+        );
+
+        $this->computopClient = $computopClient;
+    }
+
+    /**
+     * @param \Spryker\Shared\Kernel\Transfer\AbstractTransfer $quoteTransfer
+     *
+     * @return bool
+     */
+    public function isBreadcrumbItemEnabled(AbstractTransfer $quoteTransfer): bool
+    {
+        /** @var \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer */
+        return !$quoteTransfer->getDefaultShipmentSelected();
+    }
+
+    /**
+     * @param \Symfony\Component\HttpFoundation\Request $request
+     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
+     *
+     * @return \Generated\Shared\Transfer\QuoteTransfer
+     */
+    public function execute(Request $request, AbstractTransfer $quoteTransfer): QuoteTransfer
+    {
+        $quoteTransfer = parent::execute($request, $quoteTransfer);
+        /** @var \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer */
+        $quoteTransfer->setDefaultShipmentSelected(false);
+
+        return $this->computopClient->performCrifApiCall($quoteTransfer);
+    }
+}
+```
+</details>
+
+10. For PayPal Express payment method only: Extend `QuoteDependencyProvider` with `DefaultShippingMethodQuoteTransferExpanderPlugin`:
+
+**src\Pyz\Client\Quote\QuoteDependencyProvider.php**
+
+```php
+<?php
+
+/**
+ * This file is part of the Spryker Suite.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
+
+namespace Pyz\Client\Quote;
+
+use Spryker\Client\Kernel\Container;
+use Spryker\Client\Quote\QuoteDependencyProvider as BaseQuoteDependencyProvider;
+use SprykerEco\Client\ComputopShipment\Quote\Dependency\Plugin\DefaultShippingMethodQuoteTransferExpanderPlugin;
+
+class QuoteDependencyProvider extends BaseQuoteDependencyProvider
+{
+    /**
+     * @param \Spryker\Client\Kernel\Container $container
+     *
+     * @return array<\Spryker\Client\Quote\Dependency\Plugin\QuoteTransferExpanderPluginInterface>
+     */
+    protected function getQuoteTransferExpanderPlugins(Container $container)
+    {
+        return [
+           ...
+            new DefaultShippingMethodQuoteTransferExpanderPlugin(),
+        ];
+    }
+    ...
+}
+```
+
+11. For PayPal Express payment method only: Extend `ComputopDependencyProvider` with `ExpandShipmentPayPalExpressInitPlugin`:
+
+**src\Pyz\Yves\Computop\ComputopDependencyProvider**
+
+```php
+<?php
+
+/**
+ * This file is part of the Spryker Suite.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
+
+namespace Pyz\Yves\Computop;
+
+use SprykerEco\Yves\Computop\ComputopDependencyProvider as SprykerComputopDependencyProvider;
+use SprykerEco\Yves\ComputopShipment\Plugin\Computop\ExpandShipmentPayPalExpressInitPlugin;
+
+class ComputopDependencyProvider extends SprykerComputopDependencyProvider
+{
+    /**
+     * @return array<ExpandShipmentPayPalExpressInitPlugin>
+     */
+    public function getPayPalExpressInitPlugins(): array
+    {
+        return [
+            new ExpandShipmentPayPalExpressInitPlugin(),
+        ];
+    }
+}
+```
+
+12. For PayPal Express payment method only: Extend cart-summary twig template with shipment information:
+
+<details>
+<summary>src\Pyz\Yves\CartPage\Theme\default\components\molecules\cart-summary\cart-summary.twig</summary>
+
+```twig
+{% extends model('component') %}
+
+{% define config = {
+    name: 'cart-summary',
+} %}
+
+{% define data = {
+    cart: required,
+    isQuoteValid: required,
+    isQuoteEditable: required,
+    cartQuantity: cartQuantity is defined ? cartQuantity : app['cart.quantity'] | default,
+} %}
+
+{% set canProceedToCheckout = data.cart.items is not empty
+    and data.isQuoteValid
+    and (not is_granted('ROLE_USER') or can('WriteSharedCartPermissionPlugin', data.cart.idQuote))
+%}
+
+{% block body %}
+    {% block cartQuantity %}
+        <h6 class="text-secondary float-right">{{ data.cartQuantity }} {{ 'item' | trans }}</h6>
+        <h6>{{ 'cart.your-order' | trans }}</h6>
+        <hr>
+    {% endblock %}
+
+    {% set quoteApprovalWidget = findWidget('QuoteApprovalWidget', [data.cart]) %}
+    {% if quoteApprovalWidget and quoteApprovalWidget.isVisible and not canProceedToCheckout %}
+        {% set canProceedToCheckout = true %}
+    {% endif %}
+
+    {% if quoteApprovalWidget %}  {# @deprecated - This widget is moved to summary page of checkout. #}
+        {% widget quoteApprovalWidget only %}{% endwidget %}
+    {% endif %}
+
+
+    {% block cartSummaryContent %}
+        {% if can('SeePricePermissionPlugin') %}
+            {% if widgetExists('DiscountSummaryWidgetPlugin') %}
+                <ul class="list spacing-y">
+                    {{ widget('DiscountSummaryWidgetPlugin', data.cart) }} {# @deprecated Use molecule('cart-discount-summary', 'DiscountWidget') instead. #}
+                </ul>
+            {% else %}
+                {% include molecule('cart-discount-summary', 'DiscountWidget') ignore missing with {
+                    class: 'list spacing-y',
+                    data: {
+                        voucherDiscounts: data.cart.voucherDiscounts,
+                        ruleDiscounts: data.cart.cartRuleDiscounts,
+                        discountTotal: data.cart.totals.discounttotal,
+                        isQuoteEditable: data.isQuoteEditable,
+                        currencyIsoCode: data.cart.currency.code,
+                    },
+                } only %}
+            {% endif %}
+
+            <ul class="list spacing-y">
+                {% block cartShipment %}
+                    {% if data.cart.shipment is not empty and data.cart.shipment.method is not empty %}
+                        {% set shipmentTotalPrice = data.cart.totals.shipmentTotal is defined ? data.cart.totals.shipmentTotal : data.cart.shipment.method.storeCurrencyPrice %}
+                        <li class="list__item spacing-y">
+                            <strong>{{ 'cart.shipping' | trans }}</strong>
+                            <br>
+                            {{ data.cart.shipment.method.name }}
+                            <span class="float-right">{{ shipmentTotalPrice | money(true, data.cart.currency.code) }}</span>
+                            <hr>
+                        </li>
+                    {% endif %}
+                {% endblock %}
+
+                {% widget 'SalesOrderThresholdWidget' args [data.cart.expenses] only %}
+                    {% block body %}
+                        <li class="list__item spacing-y">
+                            {{ parent() }}
+                            <hr>
+                        </li>
+                    {% endblock %}
+                {% elsewidget 'SalesOrderThresholdWidgetPlugin' args [data.cart.expenses] only %} {# @deprecated Use SalesOrderThresholdWidget instead. #}
+                    {% block body %}
+                        <li class="list__item spacing-y">
+                            {{ parent() }}
+                        </li>
+                        <hr>
+                    {% endblock %}
+                {% endwidget %}
+
+                {% block cartPrice %}
+                    <li class="list__item spacing-y">
+                        {{ 'cart.price.subtotal' | trans }}
+                        <span class="float-right">{{ data.cart.totals.subtotal | money(true, data.cart.currency.code) }}</span>
+                    </li>
+
+                    <li class="list__item spacing-y">
+                        {{ 'cart.total.tax_total' | trans }}
+                        <span class="float-right">{{ data.cart.totals.taxTotal.amount | money(true, data.cart.currency.code) }}</span>
+                    </li>
+                    <li class="list__item spacing-y">
+                        {{ 'cart.price.grand.total' | trans }}
+                        <strong class="float-right">{{ data.cart.totals.grandTotal | money(true, data.cart.currency.code) }}</strong>
+                    </li>
+                {% endblock %}
+            </ul>
+
+            {% include molecule('gift-card-payment-summary', 'GiftCardWidget') ignore missing with {
+                class: 'list spacing-y',
+                data: {
+                    cart: data.cart,
+                    isQuoteEditable: data.isQuoteEditable,
+                },
+            } only %}
+        {% else %}
+            {{ 'customer.access.cannot_see_price' | trans }}
+        {% endif %}
+    {% endblock %}
+
+    {% if data.isQuoteValid %}
+        {% widget 'QuoteApproveRequestWidget' args [data.cart] only %} {# @deprecated - This widget is moved to summary page of checkout. #}
+            {% block body %}
+                <hr>
+                {{ parent() }}
+            {% endblock %}
+        {% endwidget %}
+    {% endif %}
+
+    {% set productConfigurationWidget = findWidget('ProductConfigurationQuoteValidatorWidget', [data.cart]) %}
+    {% set canProceedQuoteCheckout = productConfigurationWidget.isQuoteProductConfigurationValid %}
+
+    {% widget 'ProductConfigurationQuoteValidatorWidget' args [data.cart] only %}{% endwidget %}
+
+    {% if canProceedToCheckout %}
+        {% widget 'ProceedToCheckoutButtonWidget' args [data.cart] with {
+            data: {
+                canProceedCheckout: canProceedQuoteCheckout,
+                currencyIsoCode: data.cart.currency.code
+            },
+        } only %}
+            {% block body %}
+                <hr>
+                {{ parent() }}
+            {% endblock %}
+        {% nowidget %}
+            {% set checkoutButtonText =  'cart.checkout' | trans %}
+            {% set disableButton = not canProceedQuoteCheckout ? 'button--disabled' %}
+
+            <a href="{{ url('checkout-index') }}" class="button button--expand button--success {{ disableButton }}" data-init-single-click {{ qa('cart-go-to-checkout') }}>
+                {{ checkoutButtonText }}
+            </a>
+        {% endwidget %}
+
+    {% endif %}
+
+    {% if is_granted('ROLE_USER') %}
+        {% widget 'QuoteRequestCreateWidget' args [data.cart] with {
+            data: {
+                canProceedCheckout: canProceedQuoteCheckout,
+            },
+        } only %}
+            {% block body %}
+                <hr>
+                {{ parent() }}
+            {% endblock %}
+        {% endwidget %}
+        {% widget 'QuoteRequestCartWidget' args [data.cart] only %}{% endwidget %}
+    {% endif %}
+{% endblock %}
+```
+</details>
+
+13. For PayPal Express payment method only: Extend `ProceedToCheckoutButtonWidget` and add checkout button:
+
+<details>
+<summary>src\Pyz\Yves\CheckoutWidget\Widget\ProceedToCheckoutButtonWidget.php</summary>
+
+```php
+<?php
+
+/**
+ * This file is part of the Spryker Suite.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
+
+namespace Pyz\Yves\CheckoutWidget\Widget;
+
+use Generated\Shared\Transfer\QuoteTransfer;
+use SprykerShop\Yves\CheckoutWidget\Widget\ProceedToCheckoutButtonWidget as SprykerProceedToCheckoutButtonWidget;
+
+/**
+ * @method \Pyz\Yves\CheckoutWidget\CheckoutWidgetFactory getFactory()
+ */
+class ProceedToCheckoutButtonWidget extends SprykerProceedToCheckoutButtonWidget
+{
+    /**
+     * @var string
+     */
+    protected const PARAMETER_CLIENT_ID = 'clientId';
+
+    /**
+     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
+     */
+    public function __construct(QuoteTransfer $quoteTransfer)
+    {
+        parent::__construct($quoteTransfer);
+        $this->addClientId();
+    }
+
+    /**
+     * @return void
+     */
+    protected function addClientId(): void
+    {
+        $this->addParameter(
+            static::PARAMETER_CLIENT_ID,
+            $this->getFactory()->getComputopClient()->getPayPalExpressClientId()
+        );
+    }
+}
+```
+</details>
+
+14. For PayPal Express payment method only: Extend `CheckoutWidgetFactory`:
+
+**src\Pyz\Yves\CheckoutWidget\CheckoutWidgetFactory.php**
+
+```php
+<?php
+
+/**
+ * This file is part of the Spryker Suite.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
+
+namespace Pyz\Yves\CheckoutWidget;
+
+use SprykerEco\Client\Computop\ComputopClientInterface;
+use SprykerShop\Yves\CheckoutWidget\CheckoutWidgetFactory as SprykerCheckoutWidgetFactory;
+
+class CheckoutWidgetFactory extends SprykerCheckoutWidgetFactory
+{
+    /**
+     * @return \SprykerEco\Client\Computop\ComputopClientInterface
+     */
+    public function getComputopClient(): ComputopClientInterface
+    {
+        return $this->getProvidedDependency(CheckoutWidgetDependencyProvider::CLIENT_COMPUTOP);
+    }
+}
+
+```
+
+15. For PayPal Express payment method only: Extend `ShopApplicationDependencyProvider` with created `ProceedToCheckoutButtonWidget`:
+
+**src\Pyz\Yves\ShopApplication\ShopApplicationDependencyProvider.php**
+
+```php
+<?php
+
+/**
+ * This file is part of the Spryker Suite.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
+
+namespace Pyz\Yves\ShopApplication;
+
++ use Pyz\Yves\CheckoutWidget\Widget\ProceedToCheckoutButtonWidget;
+- use SprykerShop\Yves\CheckoutWidget\Widget\ProceedToCheckoutButtonWidget;
+...
+```
+</details>
+
+16. For PayPal Express payment method only: Extend `proceed-to-checkout-button` twig template PayPal Express checkout button:
+
+**src\Pyz\Yves\CheckoutWidget\Theme\default\views\proceed-to-checkout-button\proceed-to-checkout-button.twig**
+
+```twig
+{% extends template('widget') %}
+
+{% define data = {
+    isVisible: _widget.isVisible,
+    canProceedCheckout: true,
+    clientId: _widget.clientId,
+    currencyIsoCode: required,
+} %}
+
+{% block template %}
+    {% if data.isVisible %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+    {% set disableButton = not data.canProceedCheckout ? 'button--disabled' %}
+
+    <a class="button button--expand button--success {{ disableButton }}" href="{{ url('checkout-index') }}" {{ qa('cart-go-to-checkout') }}>
+        {{ 'cart.checkout' | trans }}
+    </a>
+    <hr>
+
+    {% include molecule('paypal-buttons', 'Computop') with {
+        data: {
+            clientId: data.clientId,
+            currency: data.currencyIsoCode,
+        }
+    } only %}
+{% endblock %}
+```
 
 ### CRIF configuration  
 
-To configure [CRIF](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-crif.html):
+To configure [CRIF](https://documentation.spryker.com/docs/computop-crif):
 
-1\. Adjust `PaymentDependencyProvider` to use `ComputopPaymentMethodFilterPlugin`:  
+1. Adjust `PaymentDependencyProvider` to use `ComputopPaymentMethodFilterPlugin`:  
 
 **\Pyz\Zed\Payment\PaymentDependencyProvider**
 
@@ -932,10 +1546,11 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
 }
 ```
 
-2. Adjust `ShipmentStep` to perform the API call of CRIF risk check:
+
+2. Adjust `ShipmentStep` to perform the API call of CRIF risk check:
 
 <details>
-<summary markdown='span'>\Pyz\Yves\CheckoutPage\Process\Steps\ShipmentStep</summary>
+<summary>\Pyz\Yves\CheckoutPage\Process\Steps\ShipmentStep</summary>
 
 ```php
 <?php
@@ -1006,10 +1621,10 @@ class ShipmentStep extends SprykerShipmentStep
 
 </details>
 
-3. To use the project-level `ShipmentStep`, adjust `StepFactory`:
+3. To use the project-level `ShipmentStep`, adjust `StepFactory`:
 
 <details>
-<summary markdown='span'>src/Pyz/Yves/CheckoutPage/Process/StepFactory.php</summary>
+<summary>src/Pyz/Yves/CheckoutPage/Process/StepFactory.php</summary>
 
 ```php
 <?php
@@ -1056,10 +1671,10 @@ class StepFactory extends SprykerStepFactory
 
 </details>
 
-4. To add `ComputopClient` to dependencies, adjust `CheckoutPageDependencyProvider`:
+4. To add `ComputopClient` to dependencies, adjust `CheckoutPageDependencyProvider`:
 
 <details>
-<summary markdown='span'>src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php</summary>
+<summary>src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1105,12 +1720,12 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 
 ## Integration into a project
 
-To integrate the computop module, make sure you installed and configured it. See [Computop - Installation and configuration](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop-installation-and-configuration.html) for details.
+To integrate the computop module, make sure you [installed](http://#installation) and [configured](http://#configuration) it.
 
 ## Test mode
 
 Computop provides a test mode to test payment methods without making real transactions.
 
-To enable the test mode, in `\SprykerEco\Service\ComputopApi\Mapper\ComputopApiMapper::getDescriptionValue()`, add `Test:0000` to the beginning of the transaction description. 
+To enable the test mode, in `\SprykerEco\Service\ComputopApi\Mapper\ComputopApiMapper::getDescriptionValue()`, add `Test:0000` to the beginning of the transaction description.
 
-You can find Computop test cards at [Test Cards EN](https://developer.computop.com/display/EN/Test+Cards).
+You can find Computop test cards at [Test Cards EN](https://developer.computop.com/display/public/DOCCT/Test+Cards+EN).

@@ -19,7 +19,9 @@ In your development, this resource can help you to:
 The **Order History API** allows you to retrieve all orders made by a registered customer.
 
 {% info_block warningBox "Authentication" %}
+
 Since order history is available for registered users only, the endpoints provided by the API cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token in your REST requests. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization]().
+
 {% endinfo_block %}
 
 ## Installation
@@ -44,7 +46,7 @@ Sample request: `GET http://mysprykershop.com/orders`
 | priceMode | String | Price mode that was active when placing the order. |
 
 \*The fields mentioned are all attributes in the response. Type and ID are not mentioned.
- 
+
 
 The endpoint responds with a RestOrdersResponse. The following is an example of a response for a customer that has placed 1 order:
 
@@ -82,6 +84,7 @@ In the response, each order will have an ID specified in the **id** attribute th
 
 ## Paging Through Orders
 By default, the above request will return all orders placed by a customer. However, you can also enable paging and receive results in pages of a limited size. For this purpose, use the **limit** and **offset** parameters in your request:
+
 | URL | Description |
 | --- | --- |
 | /orders | Returns all orders made by a customer. |
@@ -132,6 +135,7 @@ Sample request: `GET http://mysprykershop.com/orders/DE--1`
 where `DE--1` is the ID of the order you want to retrieve.
 **Sample Response:**
 **General Order Information**
+
 | Field* | Type | Description |
 | --- | --- | --- |
 | createdAt | String | Date and time when the order was created. |
@@ -147,6 +151,7 @@ where `DE--1` is the ID of the order you want to retrieve.
 \*The fields mentioned are all attributes in the response. Type and ID are not mentioned.
 
 **Order Item Information**
+
 | Field* | Type | Description |
 | --- | --- | --- |
 | name | String | Name of the product. |
@@ -160,6 +165,7 @@ where `DE--1` is the ID of the order you want to retrieve.
 \*The fields mentioned are all attributes in the response. Type and ID are not mentioned.
 
 **Calculated discounts for items**
+
 | Field* | Type | Description |
 | --- | --- | --- |
 | unitAmount | Integer | Discount value applied to each order item of the corresponding product. |
@@ -172,6 +178,7 @@ where `DE--1` is the ID of the order you want to retrieve.
 \*The fields mentioned are all attributes in the response. Type and ID are not mentioned.
 
 **Item Calculation**
+
 | Field* | Type | Description |
 | --- | --- | --- |
 | unitGrossPrice | Integer | Single item gross price. |
@@ -202,6 +209,7 @@ where `DE--1` is the ID of the order you want to retrieve.
 \*The fields mentioned are all attributes in the response. Type and ID are not mentioned.
 
 **Expenses**
+
 | Field* | Type | Description |
 | --- | --- | --- |
 | sumPrice | Integer | Sum of items' price calculated. |
@@ -222,6 +230,7 @@ where `DE--1` is the ID of the order you want to retrieve.
 \*The fields mentioned are all attributes in the response. Type and ID are not mentioned.
 
 **Billing and Shipping Addresses**
+
 | Field* | Type | Description |
 | --- | --- | --- |
 | salutation | String | Salutation to use when addressing the customer. |
@@ -242,6 +251,7 @@ where `DE--1` is the ID of the order you want to retrieve.
 \*The fields mentioned are all attributes in the response. Type and ID are not mentioned.
 
 **Payments**
+
 | Field* | Type | Description |
 | --- | --- | --- |
 | amount | Integer | Amount paid via the corresponding payment provider in cents. |
@@ -253,6 +263,7 @@ where `DE--1` is the ID of the order you want to retrieve.
 If the specified order exists, the endpoint will respond with a **RestOrdersResponse** containing detailed order information, including the items ordered.
 
 **Sample response**
+
 ```js
 {
 		"data": {

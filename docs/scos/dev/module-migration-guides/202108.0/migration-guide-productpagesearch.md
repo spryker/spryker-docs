@@ -69,23 +69,23 @@ ProductPageSearch 3.0.0 got separate search index for Concrete Products. It incl
 To perform the migration, follow the steps:
 
 1. Run the database migration:
-```Bash
+```bash
 vendor/bin/console propel:install
 ```
 2. Generate transfers:
-```Bash:
+```bash:
 vendor/bin/console transfer:generate
 ```
 3. Install search:
-```Bash:
+```bash:
 vendor/bin/console search:setup
 ```
 4. Sync concrete products data with ElasticSearch:
-```Bash:
+```bash:
 vendor/bin/console data:import:product-concrete
 ```
 or
-```Bash
+```bash
 vendor/bin/console event:trigger -r product_concrete
 ```
 

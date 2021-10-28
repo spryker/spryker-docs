@@ -1,5 +1,5 @@
 ---
-title: Retrieving suggestions for auto-completion and search
+title: Retrieving autocomplete and search suggestions
 description: This article provides information on which endpoints to use to get search and auto-completion suggestions for your products, categories, and CMS fields.
 last_updated: Feb 9, 2021
 template: glue-api-storefront-guide-template
@@ -37,7 +37,7 @@ To retrieve a search suggestion, send the request:
 
 | String parameter | Description | Possible values |
 | --- | --- | --- |
-| q | Adds a search query to the request | You can enter any search query | 
+| q | Adds a search query to the request | You can enter any search query |
 
 
 
@@ -262,5 +262,3 @@ Although CMS pages also expose the `url` parameter, resolving of CMS page SEF UR
 {% endinfo_block %}
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
-
-

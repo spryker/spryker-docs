@@ -2163,7 +2163,7 @@ entries:
     nested:
     - title: Glue API
       url: /docs/scos/dev/module-migration-guides/glue-api/about-glue-api-migration-guides.html
-      nested:        
+      nested:
       - title: CatalogSearchRestApi Migration Guide
         url: /docs/scos/dev/module-migration-guides/glue-api/catalogsearchrestapi-migration-guide.html
       - title: Migration Guide - NavigationsRestApi
@@ -3509,7 +3509,7 @@ entries:
       - title: Implementing URL routing in Yves
         url: /docs/scos/dev/back-end-development/yves/implementing-url-routing-in-yves.html
       - title: Yves bootstrapping
-        url: /docs/scos/dev/back-end-development/yves/yves-bootstrapping.html        
+        url: /docs/scos/dev/back-end-development/yves/yves-bootstrapping.html
       - title: Yves routes
         url: /docs/scos/dev/back-end-development/yves/yves-routes.html
     - title: Zed
@@ -3517,8 +3517,8 @@ entries:
       nested:
       - title: Business layer
         url: /docs/scos/dev/back-end-development/zed/business-layer/business-layer.html
-        nested:          
-        - title: Facade        
+        nested:
+        - title: Facade
           url: /docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html
           nested:
           - title: Using a facade
@@ -3535,7 +3535,7 @@ entries:
         url: /docs/scos/dev/back-end-development/zed/communication-layer/communication-layer.html
         nested:
         - title: Adding indexes to foreign key columns- index generator
-          url: /docs/scos/dev/back-end-development/zed/communication-layer/adding-indexes-to-foreign-key-columns-index-generator.html        
+          url: /docs/scos/dev/back-end-development/zed/communication-layer/adding-indexes-to-foreign-key-columns-index-generator.html
       - title: Persistence layer
         url: /docs/scos/dev/back-end-development/zed/persistence-layer/persistence-layer.html
         nested:
@@ -3953,6 +3953,16 @@ entries:
     - title: Running tests with the Docker SDK
       url: /docs/scos/dev/the-docker-sdk/running-tests-with-the-docker-sdk.html
       include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+    - title: Retrieving promotional items
+      url: /docs/scos/dev/glue-api-guides/retrieving-promotional-items.html
+      include_versions:
+      - "202005.0"
       - "202009.0"
       - "202108.0"
   - title: Legacy Demoshop
@@ -4044,7 +4054,7 @@ entries:
     - title: Custom Location for Static Assets
       url: /docs/scos/dev/technical-enhancements/custom-location-for-static-assets.html
     - title: Chromium browser for tests
-      url: /docs/scos/dev/technical-enhancements/chromium-browser-for-tests.html  
+      url: /docs/scos/dev/technical-enhancements/chromium-browser-for-tests.html
   - title: SDK
     nested:
     - title: Development Virtual Machine, Docker Containers & Console

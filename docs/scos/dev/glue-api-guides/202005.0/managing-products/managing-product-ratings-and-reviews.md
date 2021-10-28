@@ -1,5 +1,5 @@
 ---
-title: Retrieving Ratings and Reviews
+title: Managing Product Ratings and Reviews
 last_updated: Sep 15, 2020
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/retrieving-ratings-and-reviews
@@ -81,7 +81,7 @@ Specifies the full text of a review. |
 * The attributes mentioned are all attributes in the response. Type and ID are not mentioned.
 
 **Sample Response - Abstract Product Reviews**
-    
+
 ```json
 {
     "data": [
@@ -120,9 +120,9 @@ Specifies the full text of a review. |
     }
 }
 ```
-    
+
 **Sample Response - Abstract Product Reviews as Relationship**
-    
+
 ```json
 {
     "data": {
@@ -175,9 +175,9 @@ Specifies the full text of a review. |
     ]
 }
 ```
-    
+
 **Sample Response - Concrete Product Reviews**
-    
+
 ```json
 {
     "data": {

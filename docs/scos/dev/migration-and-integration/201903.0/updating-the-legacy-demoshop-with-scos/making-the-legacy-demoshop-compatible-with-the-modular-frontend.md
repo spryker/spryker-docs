@@ -84,7 +84,7 @@ To let the Kernel find your files within the SprykerShop Organization namespace,
 To make all the features available from the newly added Modules, add the following lines to `Pyz\Yves\Application\YvesBootstrap::registerServiceProviders()` between the registration of the `TwigServiceProvider` and the `SprykerTwigServiceProvider`.
 
 <details open>
-<summary markdown='span'>markdown='span'>src/Pyz/Yves/Application/YvesBootstrap.php</summary>
+<summary markdown='span'>src/Pyz/Yves/Application/YvesBootstrap.php</summary>
     
 ```php
 ...
@@ -126,7 +126,7 @@ class YvesBootstrap
 You need to inherit YvesBootstrap from `SprykerShop\Yves\ShopApplication\YvesBootstrap`
 
 <details open>
-<summary markdown='span'>markdown='span'>src/Pyz/Yves/Application/YvesBootstrap.php</summary>
+<summary markdown='span'>src/Pyz/Yves/Application/YvesBootstrap.php</summary>
     
 ```php
 use SprykerShop\Yves\ShopApplication\YvesBootstrap as SprykerYvesBootstrap;

@@ -28,17 +28,18 @@ Quick response and resolution times are not worth much if our messages cannot re
 If you are not sure how you can whitelist these email addresses, forward this request to your IT department or help desk. They will know how it can be done.
 
 ![image.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/image%28136%29.png)
+
 *Photo by [@Startup-Stock-Photos](https://www.pexels.com/@startup-stock-photos)*
 
 ## Include all the intel
 
 The goal of every ambitious support team is to increase the number of tickets that can be solved with the first engagement. The ideal support case is opened with all the information needed to assess, reproduce, and solve the problem. The first response can then already include the solution to the problem.
 
-For a product as complex as Spryker and our Eco-System this is tremendously difficult to achieve for any but the most basic questions or known issues. Nevertheless, we strive to reduce the interactions necessary to solve a case. We do this, to avoid taking to much or your time writing emails back and forth. To be successful in reducing the interactions necessary to solve a case, we need your help. 
+For a product as complex as Spryker and our Eco-System this is tremendously difficult to achieve for any but the most basic questions or known issues. Nevertheless, we strive to reduce the interactions necessary to solve a case. We do this, to avoid taking to much or your time writing emails back and forth. To be successful in reducing the interactions necessary to solve a case, we need your help.
 
 When you include all the information, we regularly need to assess a case, we are on to a good start. Here are the most important pieces of information that should go into any ticket you open with us.
 
-| Information | Questions that help you | Explanation |
+| INFORMATION | QUESTIONS THAT HELP YOU | EXPLANATION |
 | --- | --- | --- |
 | Prerequisites and steps to reproduce | What prerequisites must be met, so they can see the problem occure? Am i using Spryker Suite/B2B/B2C Demoshop? I am I using Spryker hosting? What project level adjustments have been made that might have an influence on the problem? What do they need to do, step by step, to arrive at the same point as me and see the error? | For a new issue, one of the first steps we do is trying to reproduce it in our latest version of Spryker. In order to do so quick and targeted, we need clear, step by step instructions. Occasionally, we will ask you to provide your composer.lock file. This file also contains all the version information for all the components and models you are using and is very helpful to diagnose more complex problems. It might seem tedious, but providing a good description how we can reproduce your problem is the single biggest time saver.|
 | Expected Behaviour | What did i expect would happen if i execute the actions described above? | Sometimes it is just not obvious enough the outcome is you expected and telling us helps us avoid misdiagnosing an issue or research in the wrong direction.  |
@@ -52,9 +53,9 @@ If you include all of the above your chances of getting a fast resolution of you
 
 ## Avoid out-of-band communication
 
-We know the temptation and we mostly have done the same from time to time. If you have a pressing measure the temptation is great to reach out to several people at the same time, over different channels, to make sure that your message is heard. 
+We know the temptation and we mostly have done the same from time to time. If you have a pressing measure the temptation is great to reach out to several people at the same time, over different channels, to make sure that your message is heard.
 
-The bad news is, that much more often than not, this will achieve quite the opposite of what you are going for. The undoubtedly engaged, highly motivated people you messaged will scramble and try to get things done for you without clear coordination. Things will be done multiple times wasting time and energy and creating confusion. 
+The bad news is, that much more often than not, this will achieve quite the opposite of what you are going for. The undoubtedly engaged, highly motivated people you messaged will scramble and try to get things done for you without clear coordination. Things will be done multiple times wasting time and energy and creating confusion.
 
 With Spryker Support it is not necessary to send a message to multiple people via various channels, as we will do that for you. We have clearly defined escalation rules (for an overview, look here) that make sure that every important stakeholder is informed. Raising a case with us also ensures SLA coverage, orderly tracking of all communication in a central, audited, and secure place. By only using our official points of contact to raise cases with us, you are doing us and yourself a big favor.
 
@@ -62,6 +63,6 @@ With Spryker Support it is not necessary to send a message to multiple people vi
 ![image.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/image%28135%29.png)
 *Photo by [athree23](https://pixabay.com/de/users/athree23-6195572/)*
 
-We want to measure ourselves to your high standards and exceed expectations. One important step towards our goal of providing the best support experience in the industry is receiving feedback. When we close a with you, the notification email will include a link to a short survey. Please provide honest, stern feedback. Tell us how satisfied you were with our service and how easy or hard it was to work together with us. You have additional comments? Great! The survey also includes a comment field so you can include your feedback there. 
+We want to measure ourselves to your high standards and exceed expectations. One important step towards our goal of providing the best support experience in the industry is receiving feedback. When we close a with you, the notification email will include a link to a short survey. Please provide honest, stern feedback. Tell us how satisfied you were with our service and how easy or hard it was to work together with us. You have additional comments? Great! The survey also includes a comment field so you can include your feedback there.
 
 We take your feedback very seriously. Our Support Lead will read and follow up on your feedback.

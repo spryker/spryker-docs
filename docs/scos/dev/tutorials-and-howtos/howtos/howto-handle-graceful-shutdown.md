@@ -20,7 +20,7 @@ Whenever you need to make sure that a process is shut down gracefully, you can u
 
 Example:
 
-```PHP
+```php
 public function import(Collection $collection): void
 {
     $this->gracefulRunnerFacade->run(
@@ -48,7 +48,7 @@ To learn more about the Generators, see the Generators documentation.
 ## Handling exceptions
 Sometimes, you need to throw an exception into the Generator code. For such cases, you can use the second argument of the `GracefulRunnerFacadeInterface::run()` method. It’s the class name that should be thrown into the Generator when a signal was handled. The following example explains it in more details:
 
-```PHP
+```php
 public function import(Collection $collection): void
 {
     $this->gracefulRunnerFacade->run(

@@ -20,7 +20,7 @@ Version 1.1.2 boosts the overall Zed and Glue performance by introducing a [cach
 
 For Glue:
 
-```PHP
+```php
 <?php
 
 namespace Pyz\Glue\EventDispatcher;
@@ -49,7 +49,7 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 ```
 
 For Zed:
-```PHP
+```php
 <?php
 
 namespace Pyz\Zed\EventDispatcher;

@@ -27,7 +27,7 @@ To make a helper available for your tests, you need to enable it in the `codecep
 
 Example:
 `tests/OrganizationTest/Application/Module/codeception.yml`
-```PHP
+```php
 suites:
     SuiteName:
         path: path/to/tests
@@ -62,13 +62,13 @@ When you have code blocks that are re-usable in other modules as well, consider 
 Every public method in your helper will be generated into the tester class, and can be executed from within your test after you run `vendor/bin/codecept build`.
 
 In your test, you can use the public methods with:
-```PHP
+```php
 $this->tester->myPublicHelperMethod();
 ```
 
 ## Creating Your own Helper
 It is very easy to create your own re-usable helper - you just need to create one in your test suite. For example:
-```PHP
+```php
 namespace OrganizationTest\Module\Application\Helper;
 
 use Codeception\Module;

@@ -38,7 +38,7 @@ To integrate CrefoPay, do the following:
 <details open>
     <summary markdown='span'>\Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider</summary>
 
-```PHP
+```php
 <?php
 
 namespace Pyz\Yves\CheckoutPage;
@@ -163,7 +163,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 <details open>
 <summary markdown='span'>\Pyz\Yves\CheckoutPage\Process\Steps\ShipmentStep</summary>
 
-```PHP
+```php
 <?php
 
 namespace Pyz\Yves\CheckoutPage\Process\Steps;
@@ -199,7 +199,7 @@ class ShipmentStep extends SprykerShopShipmentStep
 <details open>
 <summary markdown='span'>\Pyz\Yves\CheckoutPage\Process\StepFactory</summary>
 
-```PHP
+```php
 <?php
 
 namespace Pyz\Yves\CheckoutPage\Process;
@@ -260,7 +260,7 @@ class StepFactory extends SprykerShopStepFactory
 <details open>
 <summary markdown='span'>\Pyz\Yves\CheckoutPage\CheckoutPageFactory</summary>
 
-```PHP
+```php
 <?php
 
 /**
@@ -292,7 +292,7 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 <details open>
 <summary markdown='span'>Pyz/Yves/CheckoutPage/Theme/default/templates/page-layout-checkout/page-layout-checkout.twig</summary>
 
-```PHP
+```php
 {% raw %}{%{% endraw %} extends template('page-layout-main') {% raw %}%}{% endraw %}
 
 {% raw %}{%{% endraw %} define data = {
@@ -334,7 +334,7 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 <details open>
 <summary markdown='span'>Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig</summary>
 
-```PHP
+```php
 {% raw %}{%{% endraw %} extends template('page-layout-checkout', 'CheckoutPage') {% raw %}%}{% endraw %}
 
 {% raw %}{%{% endraw %} define data = {
@@ -454,7 +454,7 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 
 <summary markdown='span'>\Pyz\Yves\ShopApplication\YvesBootstrap</summary>
 
-```PHP
+```php
 <?php
 
 namespace Pyz\Yves\ShopApplication;
@@ -487,7 +487,7 @@ class YvesBootstrap extends SprykerYvesBootstrap
 <summary markdown='span'>\Pyz\Zed\Checkout\CheckoutDependencyProvider</summary>
 
 
-```PHP
+```php
 <?php
 
 namespace Pyz\Zed\Checkout;
@@ -538,7 +538,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 <summary markdown='span'>\Pyz\Zed\Oms\OmsDependencyProvider</summary>
 
 
-```PHP
+```php
 <?php
 
 namespace Pyz\Zed\Oms;
@@ -636,7 +636,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 <details open>
 <summary markdown='span'>\Pyz\Zed\Payment\PaymentDependencyProvider</summary>
 
-```PHP
+```php
 <?php
 
 namespace Pyz\Zed\Payment;

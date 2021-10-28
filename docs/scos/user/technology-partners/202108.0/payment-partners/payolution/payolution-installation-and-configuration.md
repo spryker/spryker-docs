@@ -29,7 +29,7 @@ To integrate Payolution into your project, first you need to install and configu
 
 To install the Payolution module, run:
 
-```Bash
+```bash
 composer require spryker-eco/payolution
 ```
 

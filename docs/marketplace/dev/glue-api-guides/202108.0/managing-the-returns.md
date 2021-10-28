@@ -45,7 +45,7 @@ To create a return for a registered user, send the Request sample:
 <details><summary markdown='span'>Request sample: create a return</summary>
 
 `POST https://glue.mysprykershop.com/returns`
-```JSON
+```json
 {
     "data": {
         "type": "returns",
@@ -71,7 +71,7 @@ To create a return for a registered user, send the Request sample:
 <details><summary markdown='span'>Request sample: create a return with return items</summary>
 
 `POST https://glue.mysprykershop.com/returns?include=return-items`
-```JSON
+```json
 {
     "data": {
         "type": "returns",
@@ -101,7 +101,7 @@ To create a return for a registered user, send the Request sample:
 
 <details><summary markdown='span'>Response sample: create a return for a sales order items</summary>
 
-```JSON
+```json
 {
     "data": {
         "type": "returns",
@@ -127,7 +127,7 @@ To create a return for a registered user, send the Request sample:
 
 <details><summary markdown='span'>Response sample: create a return for the merchant order item with information on return items</summary>
 
-```JSON
+```json
 {
     "data": {
         "type": "returns",
@@ -223,7 +223,7 @@ To retrieve returns, send the Request sample:
 
 <details><summary markdown='span'>Response sample: returns with information on return items</summary>
 
-```JSON
+```json
 {
     "data": [
         {
@@ -271,7 +271,7 @@ To retrieve returns, send the Request sample:
 
 <details><summary markdown='span'>Response sample: retrieve all returns</summary>
 
-```JSON
+```json
 {
     "data": [
         {
@@ -443,7 +443,7 @@ To retrieve returns, send the Request sample:
 
 <details><summary markdown='span'>Response sample: retrieve returns with the respective merchant included</summary>
 
-```JSON
+```json
 {
     "data": [
         {
@@ -589,7 +589,7 @@ To retrieve a return, send the Request sample:
 
 <details><summary markdown='span'>Response sample: retrieve a return for a sales order item</summary>
 
-```JSON
+```json
 {
     "data": {
         "type": "returns",
@@ -615,7 +615,7 @@ To retrieve a return, send the Request sample:
 
 <details><summary markdown='span'>Response sample: retrieve a return for a merchant order item</summary>
 
-```JSON
+```json
 {
     "data": {
         "type": "returns",
@@ -641,7 +641,7 @@ To retrieve a return, send the Request sample:
 
 <details><summary markdown='span'>Response sample: retrieve a return with the return items</summary>
 
-```JSON
+```json
 {
     "data": {
         "type": "returns",
@@ -691,7 +691,7 @@ To retrieve a return, send the Request sample:
 
 <details><summary markdown='span'>Response sample: retrieve a return with the details on merchants</summary>
 
-```JSON
+```json
 {
     "data": {
         "type": "returns",

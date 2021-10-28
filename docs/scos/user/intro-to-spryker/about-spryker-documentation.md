@@ -158,6 +158,7 @@ We use the following tags:
 * **B2C Shop**: Stands for [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html) features / topics.
 * **Glue API**: Signifies that feature is also available in the [Spryker Glue API](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-rest-api.html).
 * **Versions** (201811.0, 201903.0, 201907.0 etc.):  Indicate what [product version\(s\)](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html) the feature described in the document relates to.
+
 {% info_block infoBox %}
 
 You can filter out the documents by specific product versions. For this, select the version in the top right green dropdown.
@@ -177,8 +178,11 @@ Your feedback is very important and much valued! Let us know what you think by c
 ## Contributing to the Documentation
 
 We at Spryker aim to constantly improve the content we provide our customers and partners with. You can get involved in improving the Spryker documentation by reporting issues and editing documentation via pull requests on GitHub.
+
 {% info_block infoBox %}
+
 To report issues and fix documentation, you need a [GitHub account](https://github.com/join). Make sure you are logged in to proceed with issue reports and pull requests.
+
 {% endinfo_block %}
 
 ### Reporting Issues
@@ -195,18 +199,22 @@ To edit a page directly on GitHub:
 2.	Open the article you want to edit.
 3.	On the article page, click **Edit or Report** under the title of the article.
 4.	Fork the repository to suggest changes.
+
 {% info_block infoBox %}
 
 You need to fork the repository only the first time you edit the Spryker documentation.
 
 {% endinfo_block %}
+
 3.	Click **Edit this file** in the top right menu and make the changes.  
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker+Documentation/edit+button.png)
+
 {% info_block infoBox %}
 
 Spryker documentation is written using Markdown. If you don’t know Markdown yet, check the [GitHub Markdown Guide](https://guides.github.com/features/mastering-markdown/).
 
 {% endinfo_block %}
+
 4.	Once done, write a message explaining what you changed and click  **Propose file change**. You will see a a diff of your changes compared to the current version of the master branch.
 5.	Click **Create pull request**.
 6.	Click **Create pull request** again to confirm the creation.

@@ -44,7 +44,7 @@ require('@webcomponents/webcomponentsjs/webcomponents-bundle');
 3. Update `package.json` by replacing the following sections with the lines specified below:
 
 <details open>
-<summary markdown='span'>markdown='span'>scripts</summary>
+<summary markdown='span'>scripts</summary>
 
 ```js
 "scripts": {
@@ -61,7 +61,7 @@ require('@webcomponents/webcomponentsjs/webcomponents-bundle');
 </details>
     
 <details open>
-<summary markdown='span'>markdown='span'>engines</summary>
+<summary markdown='span'>engines</summary>
     
 ```php
 "engines": {
@@ -74,7 +74,7 @@ require('@webcomponents/webcomponentsjs/webcomponents-bundle');
 </details>
     
 <details open>
-<summary markdown='span'>markdown='span'>dependencies</summary>
+<summary markdown='span'>dependencies</summary>
     
 ```php
 "dependencies": {
@@ -94,7 +94,7 @@ require('@webcomponents/webcomponentsjs/webcomponents-bundle');
 </details>
 
 <details open>
-<summary markdown='span'>markdown='span'>devDependencies</summary>
+<summary markdown='span'>devDependencies</summary>
     
 ```php
 "devDependencies": {

@@ -20,7 +20,7 @@ Additionally we moved some constants from the `SessionConstants` file to the `Se
 You need to update your `config_*` files and use as values for the session configuration the ones which come from the `SessionConfig` file now.
 
 <details open>
-<summary markdown='span'>markdown='span'>Example:</summary>
+<summary markdown='span'>Example:</summary>
 
 You need to change all:
 `$config[SessionConstants::CONFIG_KEY] = SessionConstants::CONFIG_VALUE;`

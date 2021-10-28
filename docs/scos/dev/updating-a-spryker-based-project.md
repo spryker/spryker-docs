@@ -90,7 +90,7 @@ If you need to update at the module level, you might want to extract individual 
 
 ### Spryker feature structure
 If you have started with the Spryker features, you should see something like this in your *composer.json*:
-```PHP
+```php
 "ext-readline": "*",
 "ext-redis": "*",
 "spryker-eco/loggly": "^0.1.0",
@@ -104,7 +104,7 @@ If you have started with the Spryker features, you should see something like thi
 Every Spryker feature is nothing more than a standalone module with a *composer.json* file that contains a list of individual Spryker modules as dependencies. A feature contains no functional code; the entire code is kept in modules.
 Let's take the `spryker-feature/agent-assist` feature from the example above and check [its composer.json file](https://github.com/spryker-feature/product-sets/blob/master/composer.json):
 
-```PHP
+```php
 {
   "name": "spryker-feature/product-sets",
   "description": "Product Sets [feature]",
@@ -150,7 +150,7 @@ First of all, check how big your update is going to be by following the steps be
 
 ### 1. Check all outdated packages
 To check for the outdated packages, run
-```Bash
+```bash
 php -d memory_limit=-1 composer.phar outdated | grep spryker
 ```
 The command returns a list of the outdated Spryker packages. It gives you a clear picture of what is outdated, how many majors/minors/bugfixes you have, and allows you to kind of estimate the effort for the update. See [Semantic Versioning: Major vs. Minor vs. Patch Release](/docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html) for information on the module release types.
@@ -172,7 +172,7 @@ To make your update process as smooth as possible, we recommend following the be
 
 ### Bugfix and minor version updates
 For **bugfix** and **minor** module version updates, run the update for modules from your update iteration, for example:
-```Bash
+```bash
 composer update spryker/propel spryker/oms spryker/currency spryker/money spryker/glossary spryker/mail spryker/customer-extension spryker/calculation spryker/price-product …
 ```
 The list of modules to be updated might change if composer warns you about dependencies on other modules. Keep adding them to the list, but make sure your update iteration does not get blown up too much. Otherwise, split the iteration into several ones.
@@ -189,7 +189,7 @@ For the **minor** module updates, where you have lots of customizations, it woul
 
 1. Require a new module:
 
-```Bash
+```bash
 php -d memory_limit=-1 composer.phar require "spryker/sales:^8.0.0"
 ```
 If no extra dependencies are found, *composer.json* will be updated, respectively. Otherwise, see the [Troubleshooting](#troubleshooting) section at the end of the article, *In case when update is not possible* part.
@@ -300,7 +300,7 @@ In some projects, all Spryker sniffs might be included automatically.
 
 To exclude / include sniff rules, adjust the following section in `ruleset.xml` file:
 
-```PHP
+```php
 <rule ref=“vendor/spryker/code-sniffer/Spryker/Sniffs”>
     <exclude name=“vendor/spryker/code-sniffer/Spryker/Sniffs/Factory/NoPrivateMethodsSniff.php”/>
     ....
@@ -311,7 +311,7 @@ There can be several cases when the update is not possible:
 
 #### 1. Update is "ignored" by composer
 There may be situations when you know there is a new version, but composer returns the following message:
-```Bash
+```bash
 ...
 Updating dependencies (including require-dev)
 Nothing to install or update....
@@ -319,12 +319,12 @@ Nothing to install or update....
 Most likely, this means that the update requires some other dependencies that currently can not be satisfied in the project.
 One of the ways to check what’s missing is to use `composer why-not` command like this:
 
-```Bash
+```bash
 php -d memory_limit=-1 composer.phar why-not "spryker/symfony:^3.2.0"
 ```
 
 Composer will return what exactly is needed:
-```Bash
+```bash
 spryker/symfony 3.2.0 requires symfony/stopwatch (^4.0.0)
 myProject/platform dev-develop does not require symfony/stopwatch (but v2.8.34 is installed)
 ```
@@ -332,7 +332,7 @@ Make sure to first update the packages that are required first, and then try upd
 
 #### 2. Dependencies prevent package from updating
 You might see a message like this one:
-```Bash
+```bash
 Updating dependencies (including require-dev)
 Your requirements could not be resolved to an installable set of packages.
 Problem 1

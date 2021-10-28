@@ -46,13 +46,13 @@ This only works if the Queue module is installed on the current server.
 {% endinfo_block %}
 
 <details open>
-<summary markdown='span'>markdown='span'>src/Pyz/Zed/Queue/QueueDependencyProvider.php</summary>
-    
+<summary markdown='span'>src/Pyz/Zed/Queue/QueueDependencyProvider.php</summary>
+
 ```php
 namespace Pyz\Zed\Queue;
- 
+
 ...
- 
+
 class QueueDependencyProvider extends SprykerDependencyProvider
 {
 protected function getProcessorMessagePlugins(Container $container)
@@ -63,7 +63,7 @@ protected function getProcessorMessagePlugins(Container $container)
 }
 }
 ```
-    
+
 </br>
 </details>
 
@@ -71,8 +71,8 @@ protected function getProcessorMessagePlugins(Container $container)
 Add the following jobs to `jobs.php`:
 
 <details open>
-<summary markdown='span'>markdown='span'>config/Zed/cronjobs/jobs.php</summary>
-    
+<summary markdown='span'>config/Zed/cronjobs/jobs.php</summary>
+
 ```php
 $jobs[] = [
 'name' => 'queue-worker-start',
@@ -82,7 +82,7 @@ $jobs[] = [
 'run_on_non_production' => true,
 'stores' => $allStores,
 ];
- 
+
 $jobs[] = [
 'name' => 'event-trigger-timeout',
 'command' => '$PHP_BIN vendor/bin/console event:trigger:timeout -vvv',
@@ -113,13 +113,13 @@ We need to enable event behavior in config_default.php
 Add `EventBehaviorServiceProvider` to all the `ServiceProviders` methods in `ApplicationDependencyProvider.php`:
 
 <details open>
-<summary markdown='span'>markdown='span'>src/Pyz/Zed/Application/ApplicationDependencyProvider.php</summary>
-    
+<summary markdown='span'>src/Pyz/Zed/Application/ApplicationDependencyProvider.php</summary>
+
 ```php
 namespace Pyz\Zed\Application;
- 
+
 use Spryker\Zed\EventBehavior\Communication\Plugin\ServiceProvider\EventBehaviorServiceProvider;
- 
+
 class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 {
 			protected function getServiceProviders(Container $container)
@@ -132,7 +132,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 			];
 ...
 ```
-    
+
 </br>
 </details>
 
@@ -140,16 +140,16 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 Add `EventBehaviorPostHookPlugin` to the `getConsolePostRunHookPlugins()` method in `ConsoleDependencyProvider.php`:
 
 <details open>
-<summary markdown='span'>markdown='span'>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
-    
+<summary markdown='span'>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
+
 ```php
 namespace Pyz\Zed\Console;
- 
+
 use Spryker\Zed\EventBehavior\Communication\Plugin\Console\EventBehaviorPostHookPlugin;
- 
+
 class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {
- 
+
 		/**
 		* @param \Spryker\Zed\Kernel\Container $container
 		*
@@ -162,7 +162,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 						];
 		}
 ```
-    
+
 </br>
 </details>
 
@@ -171,21 +171,21 @@ Add `DataImportPublisherPlugin` and `DataImportEventBehaviorPlugin` to `Pyz\Zed\
 
 
 <details open>
-<summary markdown='span'>markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
 
 ```php
 use Spryker\Zed\DataImport\Communication\Plugin\DataImportEventBehaviorPlugin;
 use Spryker\Zed\DataImport\Communication\Plugin\DataImportPublisherPlugin;
 ```
-    
+
 </br>
 </details>
 
 Overwrite the core methods:
 
 <details open>
-<summary markdown='span'>markdown='span'>Code sample:</summary>
-    
+<summary markdown='span'>Code sample:</summary>
+
 ```php
 /**
 * @return array
@@ -196,7 +196,7 @@ protected function getDataImportBeforeImportHookPlugins(): array
 				new DataImportEventBehaviorPlugin(),
 		];
 }
- 
+
 /**
 * @return array
 */
@@ -208,7 +208,7 @@ protected function getDataImportAfterImportHookPlugins(): array
 		];
 }
 ```
-    
+
 </br>
 </details>
 

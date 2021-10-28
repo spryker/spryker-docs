@@ -1,12 +1,12 @@
 ---
-title: Using Search Engine Friendly URLs
-last_updated: Mar 4, 2020
+title: Resolving Search Engine Friendly URLs
+last_updated: Sep 15, 2020
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/v4/docs/using-search-engine-friendly-urls
-originalArticleId: a0679496-e71d-49b0-9789-d23e67dd14b0
+originalLink: https://documentation.spryker.com/v5/docs/using-search-engine-friendly-urls
+originalArticleId: fde85b1f-cc09-46d7-a990-3e52367db1f2
 redirect_from:
-  - /v4/docs/using-search-engine-friendly-urls
-  - /v4/docs/en/using-search-engine-friendly-urls
+  - /v5/docs/using-search-engine-friendly-urls
+  - /v5/docs/en/using-search-engine-friendly-urls
 related:
   - title: Glue API - Spryker Core feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-spryker-core-feature-integration.html
@@ -15,7 +15,7 @@ related:
 For SEO purposes, Spryker automatically generates Search Engine Friendly (SEF) URLs for products and categories. Such URLs are included in the URL attribute of responses of all endpoints related to abstract products and product categories, for example:
 
 **/abstract-products endpoint response**
-    
+
 ```json
 {
     "data": {
@@ -39,9 +39,9 @@ For SEO purposes, Spryker automatically generates Search Engine Friendly (SEF) U
     }
 }
 ```
-    
+
 **/category-trees endpoint response**
-    
+
 ```json
 {
     "data": [
@@ -100,9 +100,9 @@ For SEO purposes, Spryker automatically generates Search Engine Friendly (SEF) U
     "links": {...}
 }
 ```
-    
+
 **/category-nodes endpoint response**
-    
+
 ```json
 {
     "data": {
@@ -216,7 +216,3 @@ Using the information of the above sample response and the Glue server name, you
 | --- | --- |
 | 404 | The provided URL does not exist. |
 | 422 | The url parameter is missing. |
-
-{% info_block warningBox "Other Documents to change:" %}
-We need to add the url attribute to descriptions of the following endpoint responses:<ul><li>/abstract-products/{sku}</li><li>/category-nodes/{id}</li><li>/category-trees</li></ul>
-{% endinfo_block %}

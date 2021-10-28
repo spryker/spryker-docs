@@ -109,7 +109,7 @@ The events can be fired as follows:
 * By setting the `manual` attribute to `true`: This adds a button in the **Back Office → View Order [Order ID**] page that allows you to manually trigger the corresponding transition by clicking the button. For example, `<event name="cancel" manual="true"/>` means that the OMS state canceled can only be triggered by clicking the **cancel** button for the order state.
 * Via an API call: The `triggerEvent`method allows triggering an event for a given process instance. For example, if a message from the payment provider is received that the capture was successful, the corresponding process instance can be triggered via the API call.
 * By a timeout: Events are triggered after the defined time has passed. For example, `<event name="close" manual="true" timeout="1 hour"/>` means that the OMS state closed will be triggered in 1 hour, if not triggered manually from the Back Office earlier. Now let’s assume we are trying to define the prepayment process, in which if after 15 days no payment is received, `reminder sent` is fired due to the timeout. How is the reminder then technically sent? This can be implemented through a command attached to the `sendFirstReminder` event. The command attribute references a PHP class that implements a specific interface. Every time the event is fired (automatically, after the timeout), Zed makes sure the associated command is executed. If an exception occurs in the command coding, the order/order item stays in the source state.
-```XML
+```xml
 <transition command="Oms/sendFirstReminder">
     <source>payment pending</source>
     <target>first reminder sent</target>
@@ -131,7 +131,7 @@ Timeout processor is designed to set a custom timeout for an OMS event.
 Let’s imagine today is Monday, and your shop plans to ship orders only on Friday. In this case, you can not specify the exact timeout (in days, hours, etc.) to start the shipping process. Even if you specify just the timeout, say, four days, for example, `<event name="ship" manual="" timeout="96 hour"/>`, the scheduler will be regularly checking if the event happened. This creates an unnecessary load on the OMS and is bad for your shop’s performance, especially if you have many orders. For this specific case, it would be enough to start running the check in four days. This is when a timeout processor comes in handy: you use it to specify from when the timeout should be calculated.
 
 Here is an example of a timeout processor in an event definition:
-```XML
+```xml
 <events>
     <event name="pay" timeout="1 hour" timeoutProcessor="OmsTimeout/Initiation" command="DummyPayment/Pay"/>
 </events>
@@ -144,7 +144,7 @@ In the default implementation for Master Suite, the timeout processor in [OmsTim
 
 <summary markdown='span'>src/Pyz/Zed/Oms/Communication/Plugin/Oms/InitiationTimeoutProcessorPlugin.php</summary>
 
-```PHP
+```php
 <?php
 
 namespace Pyz\Zed\Oms\Communication\Plugin\Oms;
@@ -217,7 +217,7 @@ If you need to start the timeout, say, on November 15, 2021, the plugin should b
 
 <summary markdown='span'>src/Pyz/Zed/Oms/Communication/Plugin/Oms/InitiationTimeoutProcessorPlugin.php</summary>
 
-```PHP
+```php
 <?php
 
 namespace Pyz\Zed\Oms\Communication\Plugin\Oms;use Generated\Shared\Transfer\OmsEventTransfer;

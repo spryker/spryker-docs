@@ -693,4 +693,3 @@ The following checkout data is included in the response:
 | deliveryTime | String | Estimated delivery time information |
 
 \*The fields mentioned are all attributes in the response. Type and ID are not mentioned.
-

@@ -44,7 +44,7 @@ To subscribe to our release notes and security updates, see the following articl
 To check our previous release notes, go to the [Releases Archive](/docs/scos/user/intro-to-spryker/releases/releases-archive.html) section.
 
 <!--
-<details open>
+<details>
 <summary markdown='span'>April 2018 Release</summary>
     
 [Release Notes - April - 2018](https://documentation.spryker.com/about_spryker/releases/archive/2018/release-notes-april-1-2018.htm)
@@ -59,7 +59,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 </br>
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>March 2018 Release</summary>
     
 [Release Notes - March - 2018](https://documentation.spryker.com/about_spryker/releases/archive/2018/release-notes-march-1-2018.htm)
@@ -74,7 +74,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 </br>
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>February 2018 - Release #2</summary>
     
 [Release Notes - February - 2 2018](https://documentation.spryker.com/about_spryker/releases/archive/2018/release-notes-february-2-2018.htm)
@@ -90,7 +90,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 </br>
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>February 2018 - Release #1</summary>
     
 [Release Notes - February - 1 2018](https://documentation.spryker.com/about_spryker/releases/archive/2018/release-notes-february-2018.htm)
@@ -105,7 +105,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 </br>
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>January 2018 Release</summary>
     
 [Release Notes - January - 2018](https://documentation.spryker.com/about_spryker/releases/archive/2018/release-notes-january-2018.htm)
@@ -123,7 +123,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 </br>
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>December 2017 Release</summary>
     
 [Release Notes - December - 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-december-2017.htm)
@@ -141,7 +141,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 </br>
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>November 2017 - Release #2</summary>
     
 [Release Notes - November - 2 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-november-2-2017.htm)
@@ -155,7 +155,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 </br>
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>November 2017 - Release #1</summary>
     
 [Release Notes - November - 1 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-november-1-2017.htm)
@@ -170,7 +170,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 </br>
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>October 2017 - Release #2</summary>
     
 [Release Notes - October - 2 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-october-2-2017.htm)
@@ -183,7 +183,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 </br>
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>October 2017 - Release #1</summary>
     
 [Release Notes - October - 1 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-october-1-2017.html)
@@ -207,7 +207,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 </br>
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>September 2017 - Release #2</summary>
     
 [Release Notes - September - 2 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-september-2-2017.htm)
@@ -230,7 +230,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 </br>
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>September 2017 - Release #1</summary>
 
 [Release Notes - September - 1 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-september-1-2017.htm)
@@ -246,7 +246,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 </br>
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>August 2017 - Release #2</summary>
 
 [Release Notes - August - 2 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-august-2-2017.htm)
@@ -263,7 +263,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 </br>
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>August 2017 - Release #1</summary>
 
 [Release Notes - August - 1 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-august-1-2017.htm)
@@ -286,7 +286,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 </br>
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>July 2017 - Release #2</summary>
 
 [Release Notes - July - 2 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-july-2-2017.htm)
@@ -302,7 +302,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 </br>
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>July 2017 - Release #1</summary>
 
 [Release Notes - July - 1 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-july-1-2017.htm)
@@ -327,7 +327,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 </br>
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>June 2017 - Release #2</summary>
 
 [Release Notes - June - 2 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-june-2-2017.htm)
@@ -342,7 +342,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 </br>
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>June 2017 - Release #1</summary>
 
 [Release Notes - June - 1 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-june-1-2017.htm)
@@ -356,7 +356,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 </br>
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>May 2017 - Release #2</summary>
 
 [Release Notes - May - 2 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-may-2-2017.htm)
@@ -372,7 +372,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 </br>
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>May 2017 - Release #1</summary>
 
 [Release Notes - May - 1 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-may-1-2017.htm)
@@ -384,7 +384,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 </br>
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>April 2017 - Release #2</summary>
 
 [Release Notes - April - 2 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-april-2-2017.htm)
@@ -399,7 +399,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 </br>
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>April 2017 - Release #1</summary>
 
 [Release Notes - April - 1 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-april-1-2017.htm)

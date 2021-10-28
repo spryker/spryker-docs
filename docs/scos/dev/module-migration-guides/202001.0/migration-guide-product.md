@@ -202,7 +202,7 @@ Remove the following Propel classes (from all namespaces) which were deleted fro
 Add product reader, creator and updater plugins in `Pyz\Zed\Product\ProductDependencyProvider`. The example below comes from the Spryker Demoshop and the used plugins are responsible for stock, price and image handling of the products. To hook in any of the read, create or update processes of abstract and concrete products you should use these extension points if the future.
 
 <details open>
-<summary markdown='span'>markdown='span'>Code sample:</summary>
+<summary markdown='span'>Code sample:</summary>
 
 ```php
 <?php

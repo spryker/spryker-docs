@@ -26,7 +26,7 @@ The 6th version of the Elastica module installs version 7 of the `ruflin/elastic
 
 To upgrade the module, install or update it through composer:
 
-```Bash
+```bash
 composer require "spryker/elastica:6.0.0" --update-with-dependencies
 ```
 
@@ -36,7 +36,7 @@ This version of the Elastica module installs version 6 of the `ruflin/elastica` 
 
 To upgrade the module, install or update it through composer::
 
-```Bash
+```bash
 composer require "spryker/elastica:5.0.0" --update-with-dependencies
 ```
 

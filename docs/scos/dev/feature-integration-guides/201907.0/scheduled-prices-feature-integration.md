@@ -111,7 +111,7 @@ Register the following plugin to enable data import:
 <details open>
     <summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
 
-```PHP
+```php
 <?php
 
 namespace Pyz\Zed\DataImport;
@@ -161,7 +161,7 @@ Enable the following behaviors by registering the console commands, view and tab
 <details open>
 <summary markdown='span'> src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
 
-```PHP
+```php
 <?php
 
 namespace Pyz\Zed\Console;
@@ -197,7 +197,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 <details open>
 <summary markdown='span'> src/Pyz/Zed/PriceProductScheduleDataImport/PriceProductScheduleDataImportConfig.php</summary>
 
-```PHP
+```php
 <?php
 
 namespace Pyz\Zed\PriceProductScheduleDataImport;

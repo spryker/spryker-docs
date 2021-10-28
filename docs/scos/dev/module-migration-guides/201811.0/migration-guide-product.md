@@ -69,7 +69,7 @@ The modification should not affect the number of found rows, but add information
  
 
  <details open>
-<summary markdown='span'>markdown='span'>Example implementation:</summary>
+<summary markdown='span'>Example implementation:</summary>
     
 ```php
 <?php
@@ -114,7 +114,7 @@ The current store ID can be set through a new `storeTransfer` class property whi
 2. Amend your Search and Storage collectors to make a decision on the newly created column if the abstract product should be stored or not. The `AbstractCollector::isStorable()` should return `true` when the abstract product is available in the current store and `false` when the abstract product is not available in the current store.
 
 <details open>
-<summary markdown='span'>markdown='span'>Example of implementation:</summary>
+<summary markdown='span'>Example of implementation:</summary>
 
 ```php
 <?php
@@ -210,7 +210,7 @@ Remove the following Propel classes (from all namespaces) which were deleted fro
 Add product reader, creator and updater plugins in `Pyz\Zed\Product\ProductDependencyProvider`. The example below comes from the Spryker Demoshop and the used plugins are responsible for stock, price and image handling of the products. To hook in any of the read, create or update processes of abstract and concrete products you should use these extension points if the future.
 
 <details open>
-<summary markdown='span'>markdown='span'>Code sample:</summary>
+<summary markdown='span'>Code sample:</summary>
 
 ```php
 <?php

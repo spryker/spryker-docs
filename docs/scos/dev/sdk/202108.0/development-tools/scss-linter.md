@@ -24,17 +24,17 @@ For details on how to install the SCSS linter for your project, see the [SCSS li
 To execute the SCSS linter, do the following:
 1. Install the Node modules:
 
-```Bash
+```bash
 npm ci
 ```
 2. Execute the SCSS linter in:
 * validation mode:
 
-```Bash
+```bash
 npm run yves:stylelint
 ```
 *  fix mode:
-```Bash
+```bash
 npm run yves:stylelint:fix
 ```
 ## SCSS linter config

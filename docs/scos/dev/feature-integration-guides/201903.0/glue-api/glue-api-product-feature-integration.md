@@ -75,7 +75,7 @@ Activate the following plugin:
 |`AbstractProductsResourceRoutePlugin`|Registers an abstract product resource.|None|`Spryker\Glue\ProductsRestApi\Plugin`|`ConcreteProductsResourceRoutePlugin`|Registers an concrete product resource.| None| `Spryker\Glue\ProductsRestApi\Plugin`|
 
 <details open>   
-<summary markdown='span'>markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
  
 ```php
 <?php

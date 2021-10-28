@@ -21,8 +21,8 @@ redirect_from:
   - /v1/docs/security-release-notes-201903-0
   - /v1/docs/en/security-release-notes-201903-0
   - /v6/docs/security-release-notes-201903-0
-  - /v6/docs/en/security-release-notes-201903-0 
- 
+  - /v6/docs/en/security-release-notes-201903-0
+
 ---
 
 The following information pertains to security-related issues that were discovered and resolved.
@@ -30,7 +30,9 @@ The following information pertains to security-related issues that were discover
 Issues are listed by description and affected modules.
 
 {% info_block infoBox %}
+
 If you need any additional support with this content, please contact [support@spryker.com](mailto:support@spryker.com).
+
 {% endinfo_block %}
 
 First, two potential vulnerabilities require direct Zed access to be exploitable; it is advised to always secure Zed, review users having access and put Zed into demilitarized zones in your infrastructure perimeter.
@@ -43,7 +45,7 @@ An admin user was able to save raw HTML in product attributes, glossary and user
 * ProductAttribute <!--/module_guide/spryker/product-attribute.htm -->  (1.1.2)
 * ProductAttributeGui <!--(https://documentation.spryker.com/module_guide/spryker/product-attribute-gui.htm) -->  (1.2.1)
 * Glossary <!-- (https://documentation.spryker.com/module_guide/spryker/glossary.htm) --> (3.5.2)
-* Acl <!--(https://documentation.spryker.com/module_guide/spryker/acl.htm) -->(3.1.2) 
+* Acl <!--(https://documentation.spryker.com/module_guide/spryker/acl.htm) -->(3.1.2)
 
 **How to get the fix:** Just update modules with'
 
@@ -55,10 +57,9 @@ composer update spryker/acl spryker/glossary spryker/product-attribute-gui spryk
 Product attribute forms were missing CSRF form tokens.
 
 **Affected module:**
+<br>ProductAttributeGui <!--(https://documentation.spryker.com/module_guide/spryker/product-attribute-gui.htm)--> (1.1.0)
 
-* ProductAttributeGui <!--(https://documentation.spryker.com/module_guide/spryker/product-attribute-gui.htm)--> (1.1.0)
-
-**How to get the fix:** Just update modules with 
+**How to get the fix:** Just update modules with
 
 ```
 composer update spryker/product-attribute-gui
@@ -68,10 +69,9 @@ composer update spryker/product-attribute-gui
 The additional header Content-Security-Policy has been added by default.
 
 **Affected module:**
+<br>Application <!--(https://documentation.spryker.com/module_guide/spryker/application.htm)--> (3.14.0)
 
-* Application <!--(https://documentation.spryker.com/module_guide/spryker/application.htm)--> (3.14.0)
-
-**How to get the fix:** Just update modules with 
+**How to get the fix:** Just update modules with
 
 ```
 composer update spryker/application
@@ -81,5 +81,4 @@ composer update spryker/application
 This one is not a security vulnerability, but to prevent fatal mistakes, the default value of APPLICATION_ENV, when it is not passed from the system environment, has been set to production in the `Install` module.
 
 **Affected module:**
-
-* Install <!--(https://documentation.spryker.com/module_guide/spryker/install.htm) -->(0.5.1)
+<br>Install <!--(https://documentation.spryker.com/module_guide/spryker/install.htm) -->(0.5.1)

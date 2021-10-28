@@ -1,13 +1,13 @@
 ---
-title: Retrieving Business Unit Information
+title: Retrieving Business Units
 description: The article describes how to use Spryker Glue API to retrieve business unit information.
-last_updated: Aug 13, 2020
+last_updated: Sep 15, 2020
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/v4/docs/retrieving-business-unit-information-201907
-originalArticleId: afc22012-3e1a-4d60-af8e-e7ba7544aebf
+originalLink: https://documentation.spryker.com/v5/docs/retrieving-business-unit-information-201907
+originalArticleId: 1325e7e7-044d-4272-9587-fafc8a9cb928
 redirect_from:
-  - /v4/docs/retrieving-business-unit-information-201907
-  - /v4/docs/en/retrieving-business-unit-information-201907
+  - /v5/docs/retrieving-business-unit-information-201907
+  - /v5/docs/en/retrieving-business-unit-information-201907
 related:
   - title: Logging In as Company User
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/authenticating-as-a-company-user.html
@@ -65,7 +65,7 @@ The endpoint responds with a collection of **RestCompanyBusinessUnitResponse**, 
 *The attributes mentioned are all attributes in the response. Type is not mentioned.
 
 **Sample Response**
-    
+
 ```json
 {
     "data": [
@@ -126,7 +126,7 @@ The endpoint returns a **RestCompanyBusinessUnitResponse** containing informatio
 *The attributes mentioned are all attributes in the response. Type and ID are not mentioned.
 
 **Sample Response**
-    
+
 ```json
 {
     "data": {
@@ -164,7 +164,7 @@ The response will include the following additional attributes:
 *The attributes mentioned are all attributes in the response. Type and ID are not mentioned.
 
 **Sample Response**
-    
+
 ```json
 {
     "data": {
@@ -218,7 +218,7 @@ The response will include the following additional attributes:
 *The attributes mentioned are all attributes in the response. Type and ID are not mentioned.
 
 **Sample Response**
-    
+
 ```json
 {
     "data": {
@@ -298,7 +298,7 @@ The endpoint responds with a **RestCompanyBusinessUnitAddressResponse** that con
 *The attributes mentioned are all attributes in the response. Type and ID are not mentioned.
 
 **Sample Response**
-    
+
 ```json
 {
     "data": {

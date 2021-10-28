@@ -39,7 +39,7 @@ Due to the changes in the Category module, all related modules have to be update
 Execute the following SQL statement to create the table `spy_category_template` and modify the `spy_category` one:
 
 <details open>
-<summary markdown='span'>markdown='span'>Code sample:</summary>
+<summary markdown='span'>Code sample:</summary>
      
 ```sql
 CREATE SEQUENCE "spy_category_template_pk_seq";
@@ -81,7 +81,7 @@ Also, `is_clickable` form field was removed because this functionality is obsole
 The following migration script is designed to add the category template selection functionality to your project. If necessary, adjust the script to cover your category implementation
 
 <details open>
-<summary markdown='span'>markdown='span'>CategoryTemplateMigration.php</summary>
+<summary markdown='span'>CategoryTemplateMigration.php</summary>
 
 ```php
 <?php
@@ -188,7 +188,7 @@ class CategoryTemplateMigration extends Console
 7. Register it in `Pyz\Zed\Console\ConsoleDependencyProvider`:
 
 <details open>
-<summary markdown='span'>markdown='span'>Code sample:</summary>
+<summary markdown='span'>Code sample:</summary>
 
 ```php
 <?php

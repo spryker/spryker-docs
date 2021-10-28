@@ -15,4 +15,4 @@ To learn more about the feature and to find out how end users use it, see [Reord
 
 |INTEGRATION GUIDES  | MIGRATION GUIDES |
 |---------|---------|
-| [Multiple Carts + Reorder feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-reorder-feature-integration.html) | CustomerReorderWidget migration guide](/docs/scos/dev/module-migration-guides/202108.0/  |
+| [Multiple Carts + Reorder feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-reorder-feature-integration.html) | CustomerReorderWidget migration guide](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-customerreorderwidget.html)  |

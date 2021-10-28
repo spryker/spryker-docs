@@ -23,7 +23,7 @@ Find or create `RabbitMqConfig` in a project.
 Find the `getQueueOptions` method and change it.
 
 <details open>
-<summary markdown='span'>markdown='span'>RabbitMqConfig.php</summary>
+<summary markdown='span'>RabbitMqConfig.php</summary>
 
 ```php
 <?php
@@ -57,7 +57,7 @@ Find or create `GlueApplicationDependencyProvider` in a project.
 Find the `getResourceRelationshipPlugins` method and change it.
 
 <details open>
-<summary markdown='span'>markdown='span'>GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -94,7 +94,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 Find and change `TaxWriterStep` in a project.
 
 <details open>
-<summary markdown='span'>markdown='span'>TaxWriterStep.php</summary>
+<summary markdown='span'>TaxWriterStep.php</summary>
 
 ```php
 <?php
@@ -123,7 +123,7 @@ Find or create `EventDependencyProvider` in a project.
 Find the `getEventSubscriberCollection` method and change it.
 
 <details open>
-<summary markdown='span'>markdown='span'>EventDependencyProvider.php</summary>
+<summary markdown='span'>EventDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -157,7 +157,7 @@ Find or create `QueueDependencyProvider` in a project.
 Find the `getProcessorMessagePlugins` method and change it.
 
 <details open>
-<summary markdown='span'>markdown='span'>QueueDependencyProvider.php</summary>
+<summary markdown='span'>QueueDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -194,7 +194,7 @@ Find or create `QueueDependencyProvider` in a project.
 Find the `getProcessorMessagePlugins` method and change it.
 
 <details open>
-<summary markdown='span'>markdown='span'>QueueDependencyProvider.php</summary>
+<summary markdown='span'>QueueDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -231,7 +231,7 @@ Find or create `SynchronizationDependencyProvider` in a project.
 Find the `getProcessorMessagePlugins` method and change it.
 
 <details open>
-<summary markdown='span'>markdown='span'>SynchronizationDependencyProvider.php</summary>
+<summary markdown='span'>SynchronizationDependencyProvider.php</summary>
 
 ```php
 <?php

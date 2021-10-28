@@ -70,7 +70,7 @@ Also, keep in mind that a doc block with non-existing methods was removed from `
 The event behavior needs to be applied to all `SpyCmsPageStore columns`.
 
 <details open>
-<summary markdown='span'>markdown='span'>src/Pyz/Zed/Cms/Persistence/Propel/Schema/spy_cms.schema.xml</summary>
+<summary markdown='span'>src/Pyz/Zed/Cms/Persistence/Propel/Schema/spy_cms.schema.xml</summary>
 
 ```xml
 <?xml version="1.0"?>
@@ -112,7 +112,7 @@ For quick and smooth migration, we have prepared an example migration script. Th
 This script will only migrate pages to stores where persistence is shared.
 
 <details>
-<summary markdown='span'>markdown='span'>Pyz\Zed\Cms\Communication\Console\CmsStoreToPageDataMigration.php</summary>
+<summary markdown='span'>Pyz\Zed\Cms\Communication\Console\CmsStoreToPageDataMigration.php</summary>
 
 ```php
 <?php
@@ -256,7 +256,7 @@ Move CMS Block templates to the `src/Pyz/Shared/CmsBlock/Theme/default/template/
 For quick and smooth migration, we have prepared a migration script. You can find it below.
 
 <details>
-<summary markdown='span'>markdown='span'>Click here to expand the code sample</summary>
+<summary markdown='span'>Click here to expand the code sample</summary>
 
 ```php
 <?php
@@ -511,7 +511,7 @@ You can find it here: `src/Pyz/Yves/Cms/Plugin/TwigCms.php`.
 To push new CMS version data to the frontend storage and search, add it to the `src/Pyz/Zed/Collector/CollectorDependencyProvider.php` plugin stack:
 
 <details>
-<summary markdown='span'>markdown='span'>Code sample:</summary>
+<summary markdown='span'>Code sample:</summary>
 
 ```php
 <?php
@@ -553,7 +553,7 @@ When a CMS page is published, we also store/show user information for this actio
 Add them here: `src/Pyz/Zed/Cms/CmsDependencyProvider.php`
 
 <details>
-<summary markdown='span'>markdown='span'>Code sample:</summary>
+<summary markdown='span'>Code sample:</summary>
 
 ```php
 <?php
@@ -591,7 +591,7 @@ class CmsDependencyProvider extends SprykerCmsDependencyProvider
 To publish pages after importing, add this to your CMS Importer class:
 
 <details>
-<summary markdown='span'>markdown='span'>Code sample:</summary>
+<summary markdown='span'>Code sample:</summary>
 
 ```php
 <?php

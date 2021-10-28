@@ -64,7 +64,7 @@ All general integration parts of Heidelpay module should be done before the foll
 1. Adjust `CheckoutPageDependencyProvider` on project level to add Direct Debit subform and payment method handler. Also, add `HeidelpayClient` into dependencies. It's used in specific `DirectDebitRegistration` checkout step.
 
 <details open>
-<summary markdown='span'>markdown='span'>\Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider</summary>
+<summary markdown='span'>\Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider</summary>
 
 ```php
 <?php
@@ -155,7 +155,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 2. Extend `StepFactory` on project level to add specific `DirectDebitRegistration` checkout step. This step should be included right before the Payment step.
 
 <details open>
-<summary markdown='span'>markdown='span'>\Pyz\Yves\CheckoutPage\Process\StepFactory</summary>
+<summary markdown='span'>\Pyz\Yves\CheckoutPage\Process\StepFactory</summary>
 
 ```php
 <?php
@@ -227,7 +227,7 @@ class StepFactory extends BaseStepFactory
 3. Extend Yves Factory to create `StepFactory` from project level instead of Spryker Core.
 
 <details open>
-<summary markdown='span'>markdown='span'>\Pyz\Yves\CheckoutPage\CheckoutPageFactory</summary>
+<summary markdown='span'>\Pyz\Yves\CheckoutPage\CheckoutPageFactory</summary>
 
 ```php
 <?php
@@ -254,7 +254,7 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 4. Extend `CheckoutController` on the project level to add an action for direct debit registration step.
 
 <details open>
-<summary markdown='span'>markdown='span'>\Pyz\Yves\CheckoutPage\Controller\CheckoutController</summary>
+<summary markdown='span'>\Pyz\Yves\CheckoutPage\Controller\CheckoutController</summary>
 
 ```php
 <?php
@@ -281,7 +281,7 @@ class CheckoutController extends BaseCheckoutController
 5. Extend `CheckoutPageControllerProvider` to register controller action described above.
 
 <details open>
-<summary markdown='span'>markdown='span'>\Pyz\Yves\CheckoutPage\Controller\CheckoutController</summary>
+<summary markdown='span'>\Pyz\Yves\CheckoutPage\Controller\CheckoutController</summary>
 
 ```php
 <?php
@@ -333,7 +333,7 @@ class CheckoutPageControllerProvider extends BaseCheckoutPageControllerProvider
 6. Adjust define data section in the template of Checkout Payment step to include DirectDebit payment method template.
 
 <details open>
-<summary markdown='span'>markdown='span'>src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig</summary>
+<summary markdown='span'>src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig</summary>
 
 ```twig
 ...
@@ -357,7 +357,7 @@ class CheckoutPageControllerProvider extends BaseCheckoutPageControllerProvider
 7. Adjust `OmsDependencyProvider` to add debit on registration and refund OMS commands and conditions related to it.
 
 <details open>
-<summary markdown='span'>markdown='span'>\Pyz\Zed\Oms\OmsDependencyProvider</summary>
+<summary markdown='span'>\Pyz\Zed\Oms\OmsDependencyProvider</summary>
 
 ```php
 <?php

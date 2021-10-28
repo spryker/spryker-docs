@@ -15,5 +15,5 @@ To learn more about the feature and to find out how end users use it, see [Merch
 
 |INTEGRATION GUIDES | MIGRATION GUIDES |
 |---------|---------|
-| [Merchant custom prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-custom-prices-feature-integration.html)  | PriceProduct migration guide](/docs/scos/dev/module-migration-guides/202108.0/migration-guide-priceproduct.html) |
+| [Merchant custom prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-custom-prices-feature-integration.html)  | PriceProduct migration guide](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-priceproduct.html) |
 | [Merchant feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-feature-integration.html) |   |

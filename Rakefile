@@ -24,7 +24,7 @@ commonOptions = {
     :ssl_verifyhost => 0
   },
   :disable_external => false,
-  :check_html => false,
+  :check_html => true,
   :empty_alt_ignore => true,
   :only_4xx => true,
   :http_status_ignore => [429],

@@ -281,9 +281,8 @@ Create a new Twig template under the `src/Pyz/Yves/CmsBlock/Theme/default/templa
 	<footer>
 		{% raw %}{{{% endraw %} spyCmsBlockPlaceholder('saleInterval') | raw {% raw %}}}{% endraw %}
 	</footer>
-</blockquote>
+</blockquote>-->
 ```
--->
 
 
 **To configure the block:**

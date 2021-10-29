@@ -32,7 +32,7 @@ commonOptions = {
   :cache => { :timeframe => '2w' }
 }
 
-task :checkCloud do
+task :check_Cloud do
   options = commonOptions.dup
   options[:file_ignore] = [
     /docs\/scos\/.+/,
@@ -40,7 +40,7 @@ task :checkCloud do
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
-task :checkMPDev do
+task :check_MP_Dev do
   options = commonOptions.dup
   options[:file_ignore] = [
     /docs\/scos\/.+/,
@@ -49,7 +49,7 @@ task :checkMPDev do
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
-task :checkMPUser do
+task :check_MP_User do
   options = commonOptions.dup
   options[:file_ignore] = [
     /docs\/scos\/.+/,
@@ -58,7 +58,7 @@ task :checkMPUser do
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
-task :checkSCOSDev do
+task :check_SCOS_Dev do
   options = commonOptions.dup
   options[:file_ignore] = [
     /docs\/marketplace\/.+/,
@@ -74,7 +74,7 @@ task :checkSCOSDev do
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
-task :checkSCOSUser do
+task :check_SCOS_User do
   options = commonOptions.dup
   options[:file_ignore] = [
     /docs\/scos\/.+/,

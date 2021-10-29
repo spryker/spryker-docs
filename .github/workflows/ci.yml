@@ -33,13 +33,13 @@ jobs:
           path: result.tar.gz
 
   link_validation:
-    name: Links validation for CLOUD
+    name: Links validation for
     needs: jekyll_build
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        check: [ checkCloud, checkMPDev ]
+        check: [ check_Cloud, check_MP_Dev, check_MP_User, check_SCOS_Dev, check_SCOS_User ]
 
     steps:
       - uses: actions/checkout@v2

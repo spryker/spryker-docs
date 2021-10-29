@@ -1592,7 +1592,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 |-|-|-|
 | expenseTotal | String | Total amount of expenses (including, e.g., shipping costs). |
 | discountTotal | Integer | Total amount of discounts applied to the cart. |
-| taxTotal | String | Total amount of taxes to be paid. |
+| taxTotal | Integer | Total amount of taxes to be paid. |
 | subTotal | Integer | Subtotal of the cart. |
 | grandTotal | Integer | Grand total of the cart. |
 | priceToPay | Integer | Total price of the cart to pay after discounts. |

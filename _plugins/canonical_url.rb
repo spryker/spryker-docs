@@ -30,6 +30,9 @@ Jekyll::Hooks.register :pages, :pre_render do |page, config|
     next page if versioned_urls.size === 1
 
     latest_page_version_url = get_page_latest_version_url versioned_urls
+
+    next page unless latest_page_version_url != page.url
+
     config['page']['canonical_url'] = latest_page_version_url if page.data['canonical_url'].nil? and not
         latest_page_version_url.nil?
     config['page']['latest_version'] = config['page']['all_versions'].first

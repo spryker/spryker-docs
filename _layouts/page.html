@@ -75,7 +75,7 @@ layout: default
         <section class="info-block info-block--error">
             <i class="info-block__icon icon-error"></i>
             <div class="info-block__content">
-                You are browsing a previous version of the document. The latest version is <a href="{{ page.canonical_url }}">{{ page.latest_version.version }}</a>.
+                You are browsing a previous version of the document. The latest version is <a href="{{ page.canonical_url }}">{{ site.versions[page.latest_version.version] | default: 'undefined' }}</a>.
             </div>
         </section>
         {% endif %}

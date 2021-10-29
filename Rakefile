@@ -18,15 +18,7 @@ commonOptions = {
     /xentral.com\/[\.\w\-\/\?]+/,
     /github.com\/[\.\w\-\/]+\.md/
   ],
-  :file_ignore => [
-    /docs\/scos\/\w+\/[\w-]+\/201811\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/201903\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/201907\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202001\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202005\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202009\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202200\.0\/.+/
-  ],
+  :file_ignore => [],
   :typhoeus => {
     :ssl_verifypeer => false,
     :ssl_verifyhost => 0
@@ -42,7 +34,7 @@ commonOptions = {
 
 task :checkCloud do
   options = commonOptions.dup
-  options.file_ignore = [
+  options[:file_ignore] = [
     /docs\/scos\/.+/,
     /docs\/marketplace\/.+/,
   ]
@@ -50,7 +42,7 @@ task :checkCloud do
 end
 task :checkMPDev do
   options = commonOptions.dup
-  options.file_ignore = [
+  options[:file_ignore] = [
     /docs\/scos\/.+/,
     /docs\/cloud\/.+/,
     /docs\/marketplace\/user\/.+/,
@@ -59,7 +51,7 @@ task :checkMPDev do
 end
 task :checkMPUser do
   options = commonOptions.dup
-  options.file_ignore = [
+  options[:file_ignore] = [
     /docs\/scos\/.+/,
     /docs\/cloud\/.+/,
     /docs\/marketplace\/dev\/.+/,
@@ -68,7 +60,7 @@ task :checkMPUser do
 end
 task :checkSCOSDev do
   options = commonOptions.dup
-  options.file_ignore = [
+  options[:file_ignore] = [
     /docs\/marketplace\/.+/,
     /docs\/cloud\/.+/,
     /docs\/scos\/user\/.+/,
@@ -84,7 +76,7 @@ task :checkSCOSDev do
 end
 task :checkSCOSUser do
   options = commonOptions.dup
-  options.file_ignore = [
+  options[:file_ignore] = [
     /docs\/scos\/.+/,
     /docs\/cloud\/.+/,
     /docs\/scos\/dev\/.+/,

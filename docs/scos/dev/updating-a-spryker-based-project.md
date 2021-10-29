@@ -93,7 +93,7 @@ If you need to update at the module level, you might want to extract individual 
 
 If you have started with the Spryker features, you should see something like this in your *composer.json*:
 
-```JSON
+```json
 "ext-readline": "*",
 "ext-redis": "*",
 "spryker-eco/loggly": "^0.1.0",
@@ -108,7 +108,7 @@ If you have started with the Spryker features, you should see something like thi
 Every Spryker feature is nothing more than a standalone module with a *composer.json* file that contains a list of individual Spryker modules as dependencies. A feature contains no functional code; the entire code is kept in modules.
 Let's take the `spryker-feature/agent-assist` feature from the example above and check [its composer.json file](https://github.com/spryker-feature/product-sets/blob/master/composer.json):
 
-```JSON
+```json
 {
   "name": "spryker-feature/product-sets",
   "description": "Product Sets [feature]",
@@ -299,10 +299,10 @@ Make sure you use the integration guide for the feature version you need. To sel
 Keep in mind, that if the selected feature version is newer than that of the installed features, you need to replace the feature with its modules in your composer.json. For example, `spryker-feature/gift-cards":"^201907.0"`
 should be replaced with
 
-```JSON
-    "spryker-shop/cart-code-widget": "^1.0.0",
-    "spryker-shop/gift-card-widget": "^1.1.0",`
-    ...
+```json
+"spryker-shop/cart-code-widget": "^1.0.0",
+"spryker-shop/gift-card-widget": "^1.1.0",`
+...
 ```
 
 {% info_block infoBox "Info" %}
@@ -328,7 +328,7 @@ In some projects, all Spryker sniffs might be included automatically.
 
 To exclude / include sniff rules, adjust the following section in `ruleset.xml` file:
 
-```XML
+```xml
 <rule ref="vendor/spryker/code-sniffer/Spryker/ruleset.xml">
 	<exclude name="Spryker.Factory.NoPrivateMethods"/>
   ...

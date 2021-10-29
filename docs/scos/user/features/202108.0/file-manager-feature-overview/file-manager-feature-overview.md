@@ -18,10 +18,10 @@ A Back Office user can upload files and add them to CMS pages and blocks to disp
 
 Apart from images, you can add a great variety of different types of assets to your project, including but not limited by the following:
 
-*     Presentations
-*     pdf documents
-*     Graphics
-*     Banners
+* Presentations
+* PDF documents
+* Graphics
+* Banners
 
 This enables content managers to create rich, compelling and attractive content for your customers, as well as gives the chance to offer your customers additional information they might be interested in, like user manuals or instructions.
 

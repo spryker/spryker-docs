@@ -19,7 +19,7 @@ These are the header fields to be included in the .csv file:
 
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |
 | --- | --- | --- | --- | --- |
-| **product_abstract_sku** | Yes (unique) | String |N/A* | SKU identifier of the abstract product. |
+| **abstract_sku** | Yes (unique) | String |N/A* | SKU identifier of the abstract product. |
 | **store_name** | Yes | String |N/A | Name of the store that has this product. |
 *N/A: Not applicable.
 

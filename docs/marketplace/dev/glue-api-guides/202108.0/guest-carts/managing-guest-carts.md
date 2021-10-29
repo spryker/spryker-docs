@@ -1887,7 +1887,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 | --- | --- | --- |
 | expenseTotal | String | Total amount of expenses (including, e.g., shipping costs). |
 | discountTotal | Integer | Total amount of discounts applied to the cart. |
-| taxTotal | String | Total amount of taxes to be paid. |
+| taxTotal | Integer | Total amount of taxes to be paid. |
 | subTotal | Integer | Subtotal of the cart. |
 | grandTotal | Integer | Grand total of the cart. |
 

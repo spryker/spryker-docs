@@ -10,9 +10,36 @@ on:
     - cron: "0 0 * * *"
 
 jobs:
+  jekyll_build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
+        with:
+          ruby-version: 2.6
+          bundler-cache: true
+
+      - run: bundle exec jekyll build --config=_config.yml,_config_production.yml -t
+
+      - run: tar -czf result.tar.gz _site
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: build-result
+          path: result.tar.gz
+
   link_validation:
     name: Links validation
+    needs: jekyll_build
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        check: [ check_cloud, check_mp_dev, check_mp_user, check_scos_dev, check_scos_user ]
 
     steps:
       - uses: actions/checkout@v2
@@ -28,11 +55,13 @@ jobs:
         uses: actions/cache@v2
         with:
           path: tmp/.htmlproofer
-          key: ${{ runner.os }}-htmlproofer
+          key: ${{ runner.os }}-${{ matrix.check }}-htmlproofer
 
-      - run: bundle exec jekyll build --config=_config.yml,_config_production.yml
+      - uses: actions/download-artifact@v2
 
-      - run: bundle exec rake check
+      - run: tar -xf build-result/result.tar.gz
+
+      - run: bundle exec rake ${{ matrix.check }}
 
   page_validation:
     name: Page validation
@@ -63,7 +92,6 @@ jobs:
           ruby-version: 2.6
           bundler-cache: true
 
-      - run: bundle exec jekyll build --config=_config.yml,_config_production.yml
       - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_marketplace_dev.yml
         env: # Or as an environment variable
           ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}

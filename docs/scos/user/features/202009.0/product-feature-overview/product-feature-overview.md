@@ -61,7 +61,7 @@ Information of a concrete product on the Storefront is a combination of the info
 The information of a concrete product always overwrites the information of its abstract product. For example, if the abstract product name is *VGA cable*, and the concrete product name is *VGA cable(1.5m)*, the latter is displayed.
 If some information is not specified for a concrete product, it inherits the information from its abstract product. For example, if no price is specified for a concrete product, the price of its abstract product is displayed.
 
-Check the use cases below to better understand how abstract and concrete porducts are processed in a shop.
+Check the use cases below to better understand how abstract and concrete products are processed in a shop.
 
 #### Case 1: Selling books
 

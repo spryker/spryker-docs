@@ -306,4 +306,68 @@ return $quoteTransfer;
 }
 ```
 
+13. Add Payone checkout plugins in `Pyz\Zed\Checkout\CheckoutDependencyProvider`:
+
+```php
+<?php
+
+/**
+ * This file is part of the Spryker Suite.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
+
+namespace Pyz\Zed\Checkout;
+
+//...
+use SprykerEco\Zed\Payone\Communication\Plugin\Checkout\PayoneCheckoutDoSaveOrderPlugin;
+use SprykerEco\Zed\Payone\Communication\Plugin\Checkout\PayoneCheckoutPostSavePlugin;
+use SprykerEco\Zed\Payone\Communication\Plugin\Checkout\PayoneCheckoutPreConditionPlugin;
+
+class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return \Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutPreConditionPluginInterface[]
+     */
+    protected function getCheckoutPreConditions(Container $container)
+    {
+        return [
+            //...
+            new PayoneCheckoutPreConditionPlugin(),
+            //...
+        ];
+    }
+
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return \Spryker\Zed\Checkout\Dependency\Plugin\CheckoutSaveOrderInterface[]|\Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutDoSaveOrderInterface[]
+     */
+    protected function getCheckoutOrderSavers(Container $container)
+    {
+        return [
+            //...
+            new PayoneCheckoutDoSaveOrderPlugin(),
+            //...
+        ];
+    }
+
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return \Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutPostSaveInterface[]
+     */
+    protected function getCheckoutPostHooks(Container $container)
+    {
+        return [
+            //...
+            new PayoneCheckoutPostSavePlugin(),
+            //...
+        ];
+    }
+    //...
+}
+```
+
 Now, go to checkout and try placing an order with Paypal express checkout.

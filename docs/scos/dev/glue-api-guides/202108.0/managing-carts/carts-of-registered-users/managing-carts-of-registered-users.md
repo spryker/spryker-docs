@@ -1717,7 +1717,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| expenseTotal | String | Total amount of expenses (including, e.g., shipping costs). |
+| expenseTotal | Integer | Total amount of expenses (including, e.g., shipping costs). |
 | discountTotal | Integer | Total amount of discounts applied to the cart.  |
 | taxTotal | Integer | Total amount of taxes to be paid. |
 | subTotal | Integer | Subtotal of the cart.  |

@@ -27,10 +27,10 @@ You can check all the necessary configurations in `vendor/spryker-eco/computop/c
 
 Find an example of the Computop module configuration below:
 
-<details>
-<summary markdown='span'>config/Shared/config_default.php</summary>
+<details open>
+<summary>config/Shared/config_default.php</summary>
 
-```php
+```PHP
 // Spryker security configuration
 $config[KernelConstants::DOMAIN_WHITELIST] = [
 	...
@@ -39,7 +39,7 @@ $config[KernelConstants::DOMAIN_WHITELIST] = [
 $config[SessionConstants::YVES_SESSION_COOKIE_SAMESITE] = 'none'; // Allows to redirect customers from Computop back to the shop via a `POST` request.
 
 // Credantials
-$config[ComputopApiConstants::MERCHANT_ID] = 'Computop merchant identifier';
+$config[ComputopApiConstants::MERCHANT_ID] = 'Computop merchant identifier';
 $config[ComputopApiConstants::BLOWFISH_PASSWORD] = 'Password for blowfish hashing';
 $config[ComputopApiConstants::HMAC_PASSWORD] = 'Password for hmac hashing';
 $config[ComputopConstants::IDEAL_ISSUER_ID] = 'IDeal issuer identifier';

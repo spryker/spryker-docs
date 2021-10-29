@@ -23,7 +23,7 @@ In the feature documentation, you will find the following information:
 * A short feature summary with guidelines designed for different [personas](/docs/scos/user/intro-to-spryker/about-spryker-documentation.html#personass).
 * A detailed feature overview, workflows, database structure, and more.
 
-{% info_block infoBox "Reference documenatation" %}
+{% info_block infoBox "Reference documentation" %}
 
 The documentation in the *Features* section provides reference information that should not be used as guidelines. If you want to learn how to use or install a feature, you can find all the guides related to a feature on its summary page, like [Content items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html).
 

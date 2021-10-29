@@ -20,7 +20,7 @@ The Merchants and Merchant Relations feature is shipped with following modules:
 | [MerchantRelationship](https://github.com/spryker/merchant-relationship) | Implements logic of merchant relations. |
 | [MerchantRelationshipGui](https://github.com/spryker/merchant-relationship-gui) | Provides a table with merchant relations along with the Create and Edit merchant relations pages in the Administration Interface. |
 | [MerchantDataImport](https://github.com/spryker/merchant-data-import) | Implements an importer for merchants. |
-| [MerchantRelationshipDataImport](https://github.com/spryker/merchant-relationship-data-tmport) | Implements an importer for merchant relations. |
+| [MerchantRelationshipDataImport](https://github.com/spryker/merchant-relationship-data-import) | Implements an importer for merchant relations. |
 
 To install the Merchants and Merchant relations feature, follow the steps below:
 

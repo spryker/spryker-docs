@@ -32,7 +32,7 @@ commonOptions = {
   :cache => { :timeframe => '2w' }
 }
 
-task :check_Cloud do
+task :check_cloud do
   options = commonOptions.dup
   options[:file_ignore] = [
     /docs\/scos\/.+/,
@@ -40,7 +40,8 @@ task :check_Cloud do
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
-task :check_MP_Dev do
+
+task :check_mp_dev do
   options = commonOptions.dup
   options[:file_ignore] = [
     /docs\/scos\/.+/,
@@ -49,7 +50,8 @@ task :check_MP_Dev do
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
-task :check_MP_User do
+
+task :check_mp_user do
   options = commonOptions.dup
   options[:file_ignore] = [
     /docs\/scos\/.+/,
@@ -58,7 +60,8 @@ task :check_MP_User do
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
-task :check_SCOS_Dev do
+
+task :check_scos_dev do
   options = commonOptions.dup
   options[:file_ignore] = [
     /docs\/marketplace\/.+/,
@@ -70,11 +73,49 @@ task :check_SCOS_Dev do
     /docs\/scos\/\w+\/[\w-]+\/202001\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202005\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202009\.0\/.+/,
+    /docs\/scos\/\w+\/(?!feature-integration-guides|module-migration-guides)\/202108\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202200\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
-task :check_SCOS_User do
+
+task :check_scos_dev_feature do
+  options = commonOptions.dup
+  options[:file_ignore] = [
+    /docs\/marketplace\/.+/,
+    /docs\/cloud\/.+/,
+    /docs\/scos\/user\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/201811\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/201903\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/201907\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/202001\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/202005\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/202009\.0\/.+/,
+    /docs\/scos\/\w+\/feature-integration-guides\/202108\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/202200\.0\/.+/
+  ]
+  HTMLProofer.check_directory("./_site", options).run
+end
+
+task :check_scos_dev_migration do
+  options = commonOptions.dup
+  options[:file_ignore] = [
+    /docs\/marketplace\/.+/,
+    /docs\/cloud\/.+/,
+    /docs\/scos\/user\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/201811\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/201903\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/201907\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/202001\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/202005\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/202009\.0\/.+/,
+    /docs\/scos\/\w+\/module-migration-guides\/202108\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/202200\.0\/.+/
+  ]
+  HTMLProofer.check_directory("./_site", options).run
+end
+
+task :check_scos_user do
   options = commonOptions.dup
   options[:file_ignore] = [
     /docs\/scos\/.+/,

@@ -73,7 +73,7 @@ task :check_scos_dev do
     /docs\/scos\/\w+\/[\w-]+\/202001\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202005\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202009\.0\/.+/,
-    /docs\/scos\/\w+\/(?!feature-integration-guides|module-migration-guides)\/202108\.0\/.+/,
+    /docs\/scos\/\w+\/(feature-integration-guides|module-migration-guides|feature-walkthroughs|glue-api-guides)\/202108\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202200\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
@@ -91,13 +91,13 @@ task :check_scos_dev_feature do
     /docs\/scos\/\w+\/[\w-]+\/202001\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202005\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202009\.0\/.+/,
-    /docs\/scos\/\w+\/feature-integration-guides\/202108\.0\/.+/,
+    /docs\/scos\/\w+\/(?!feature-integration-guides|feature-walkthroughs)\/202108\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202200\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
 
-task :check_scos_dev_migration do
+task :check_scos_dev_guides do
   options = commonOptions.dup
   options[:file_ignore] = [
     /docs\/marketplace\/.+/,
@@ -109,7 +109,7 @@ task :check_scos_dev_migration do
     /docs\/scos\/\w+\/[\w-]+\/202001\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202005\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202009\.0\/.+/,
-    /docs\/scos\/\w+\/module-migration-guides\/202108\.0\/.+/,
+    /docs\/scos\/\w+\/(?!module-migration-guides|glue-api-guides)\/202108\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202200\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run

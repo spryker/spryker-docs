@@ -33,7 +33,7 @@ jobs:
           path: result.tar.gz
 
   link_validation:
-    name: Links validation for
+    name: Links validation
     needs: jekyll_build
     runs-on: ubuntu-latest
 

@@ -70,6 +70,16 @@ layout: default
             <div class="summary">{{page.summary}}</div>
         {% endif %}
 
+
+        {% if page.canonical_url != nil %}
+        <section class="info-block info-block--error">
+            <i class="info-block__icon icon-error"></i>
+            <div class="info-block__content">
+                You are browsing a previous version of the document. The latest version is <a href="{{ page.canonical_url }}">{{ page.latest_version.version }}</a>.
+            </div>
+        </section>
+        {% endif %}
+
         {{content}}
 
         {% if page.tags != null %}

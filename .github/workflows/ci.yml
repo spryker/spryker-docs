@@ -10,8 +10,29 @@ on:
     - cron: "0 0 * * *"
 
 jobs:
-  link_validation:
-    name: Links validation
+  jekyll_build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
+        with:
+          ruby-version: 2.6
+          bundler-cache: true
+
+      - run: bundle exec jekyll build --config=_config.yml,_config_production.yml
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: build-result
+          path: _site/
+
+  cloud_link_validation:
+    name: Links validation for CLOUD
+    needs: jekyll_build
     runs-on: ubuntu-latest
 
     steps:
@@ -28,11 +49,36 @@ jobs:
         uses: actions/cache@v2
         with:
           path: tmp/.htmlproofer
-          key: ${{ runner.os }}-htmlproofer
+          key: ${{ runner.os }}-cloud-htmlproofer
 
-      - run: bundle exec jekyll build --config=_config.yml,_config_production.yml
+      - uses: actions/download-artifact@v2
 
-      - run: bundle exec rake check
+      - run: bundle exec rake checkCloud
+
+  mp_dev_link_validation:
+    name: Links validation for Marketpace dev
+    needs: jekyll_build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
+        with:
+          ruby-version: 2.6
+          bundler-cache: true
+
+      - name: Cache HTMLProofer
+        id: cache-htmlproofer
+        uses: actions/cache@v2
+        with:
+          path: tmp/.htmlproofer
+          key: ${{ runner.os }}-mp-dev-htmlproofer
+
+      - uses: actions/download-artifact@v2
+
+      - run: bundle exec rake checkMPDev
 
   page_validation:
     name: Page validation
@@ -63,7 +109,6 @@ jobs:
           ruby-version: 2.6
           bundler-cache: true
 
-      - run: bundle exec jekyll build --config=_config.yml,_config_production.yml
       - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_marketplace_dev.yml
         env: # Or as an environment variable
           ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}

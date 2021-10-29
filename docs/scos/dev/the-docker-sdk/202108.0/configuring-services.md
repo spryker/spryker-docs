@@ -325,7 +325,7 @@ Follow the steps to enable Blackfire:
 
 ```yaml
 image:
-    tag: spryker/php:7.3 # Use the same tag you had in `image:`
+    tag: spryker/php:7.4 # Use the same tag you had in `image:`
     php:
         ...
         enabled-extensions:
@@ -355,7 +355,7 @@ Follow the steps to enable Blackfire:
 
 ```yaml
 image:
-    tag: spryker/php:7.3 # Use the same tag you had in `image:`
+    tag: spryker/php:7.4 # Use the same tag you had in `image:`
     php:
         ...
         enabled-extensions:
@@ -412,7 +412,7 @@ docker:
 
 ```yaml
 image:
-    tag: spryker/php:7.3 # the image tag that has been previously used in `image:`
+    tag: spryker/php:7.4 # the image tag that has been previously used in `image:`
     php:
         ...
         enabled-extensions:
@@ -437,7 +437,7 @@ docker:
 
 ```yaml
 image:
-    tag: spryker/php:7.3 # the image tag was previously used in `image:`
+    tag: spryker/php:7.4 # the image tag was previously used in `image:`
     php:
         ...
         enabled-extensions:
@@ -536,7 +536,7 @@ services:
 
 ```yaml
 image:
-    tag: spryker/php:7.3 # the image tag was previously used in `image:`
+    tag: spryker/php:7.4 # the image tag was previously used in `image:`
     php:
         ...
         enabled-extensions:

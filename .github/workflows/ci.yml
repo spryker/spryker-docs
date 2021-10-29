@@ -25,40 +25,21 @@ jobs:
 
       - run: bundle exec jekyll build --config=_config.yml,_config_production.yml -t
 
+      - run: tar -czf result.tar.gz _site
+
       - uses: actions/upload-artifact@v2
         with:
           name: build-result
-          path: _site/
+          path: result.tar.gz
 
-  cloud_link_validation:
+  link_validation:
     name: Links validation for CLOUD
     needs: jekyll_build
     runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
-        with:
-          ruby-version: 2.6
-          bundler-cache: true
-
-      - name: Cache HTMLProofer
-        id: cache-htmlproofer
-        uses: actions/cache@v2
-        with:
-          path: tmp/.htmlproofer
-          key: ${{ runner.os }}-cloud-htmlproofer
-
-      - uses: actions/download-artifact@v2
-
-      - run: bundle exec rake checkCloud
-
-  mp_dev_link_validation:
-    name: Links validation for Marketpace dev
-    needs: jekyll_build
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        check: [ checkCloud, checkMPDev ]
 
     steps:
       - uses: actions/checkout@v2
@@ -74,11 +55,13 @@ jobs:
         uses: actions/cache@v2
         with:
           path: tmp/.htmlproofer
-          key: ${{ runner.os }}-mp-dev-htmlproofer
+          key: ${{ runner.os }}-${{ matrix.check }}-htmlproofer
 
       - uses: actions/download-artifact@v2
 
-      - run: bundle exec rake checkMPDev
+      - run: tar –tzf result.tar.gz
+
+      - run: bundle exec rake ${{ matrix.check }}
 
   page_validation:
     name: Page validation

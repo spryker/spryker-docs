@@ -72,6 +72,13 @@ task :checkSCOSDev do
     /docs\/marketplace\/.+/,
     /docs\/cloud\/.+/,
     /docs\/scos\/user\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/201811\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/201903\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/201907\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/202001\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/202005\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/202009\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/202200\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
@@ -81,6 +88,13 @@ task :checkSCOSUser do
     /docs\/scos\/.+/,
     /docs\/cloud\/.+/,
     /docs\/scos\/dev\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/201811\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/201903\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/201907\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/202001\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/202005\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/202009\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/202200\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end

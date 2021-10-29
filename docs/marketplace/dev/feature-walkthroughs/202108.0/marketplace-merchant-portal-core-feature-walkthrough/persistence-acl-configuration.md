@@ -1,7 +1,7 @@
 ---
 title: Persistence ACL configuration
 last_updated: Oct 20, 2021
-description:
+description: Learn how to you can configure Persistence ACL
 template: concept-topic-template
 ---
 

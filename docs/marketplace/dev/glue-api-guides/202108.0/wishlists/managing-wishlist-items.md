@@ -30,7 +30,7 @@ To add an item to a wishlist, send the request:
 
  `POST https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items`
 
-```JSON
+```json
 {
 		"data": {
 			"type": "wishlist-items",

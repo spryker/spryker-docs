@@ -23,7 +23,7 @@ jobs:
           ruby-version: 2.6
           bundler-cache: true
 
-      - run: bundle exec jekyll build --config=_config.yml,_config_production.yml -t
+      - run: bundle exec jekyll build --config=_config.yml,_config_production.yml -t --page-limit=10
 
       - run: tar -czf result.tar.gz _site
 
@@ -59,7 +59,7 @@ jobs:
 
       - uses: actions/download-artifact@v2
 
-      - run: tar -xf result.tar.gz
+      - run: tar -xf build-result/result.tar.gz
 
       - run: bundle exec rake ${{ matrix.check }}
 

@@ -15,12 +15,12 @@ The Merchants and Merchant Relations feature is shipped with following modules:
 
 | MODULE | DESCRIPTION |
 | --- | --- |
-| [Merchant](https://github.com/spryker/spryker/tree/master/Bundles/Merchant) | Implements logic of Merchants (adding, editing, removal). |
-| [MerchantGui](https://github.com/spryker/spryker/tree/master/Bundles/MerchantGui) | Provides table with merchants along with the Create and Edit merchants pages in the Administration Interface. |
-| [MerchantRelationship](https://github.com/spryker/spryker/tree/master/Bundles/MerchantRelationship) | Implements logic of merchant relations. |
-| [MerchantRelationshipGui](https://github.com/spryker/spryker/tree/master/Bundles/MerchantRelationshipGui) | Provides a table with merchant relations along with the Create and Edit merchant relations pages in the Administration Interface. |
-| [MerchantDataImport](https://github.com/spryker/spryker/tree/master/Bundles/MerchantDataImport) | Implements an importer for merchants. |
-| [MerchantRelationshipDataImport](https://github.com/spryker/spryker/tree/master/Bundles/MerchantRelationshipDataImport) | Implements an importer for merchant relations. |
+| [Merchant](https://github.com/spryker/merchant) | Implements logic of Merchants (adding, editing, removal). |
+| [MerchantGui](https://github.com/spryker/merchant-gui) | Provides table with merchants along with the Create and Edit merchants pages in the Administration Interface. |
+| [MerchantRelationship](https://github.com/spryker/merchant-relationship) | Implements logic of merchant relations. |
+| [MerchantRelationshipGui](https://github.com/spryker/merchant-relationship-gui) | Provides a table with merchant relations along with the Create and Edit merchant relations pages in the Administration Interface. |
+| [MerchantDataImport](https://github.com/spryker/merchant-data-import) | Implements an importer for merchants. |
+| [MerchantRelationshipDataImport](https://github.com/spryker/merchant-relationship-data-tmport) | Implements an importer for merchant relations. |
 
 To install the Merchants and Merchant relations feature, follow the steps below:
 

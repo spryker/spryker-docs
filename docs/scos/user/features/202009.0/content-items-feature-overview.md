@@ -54,7 +54,7 @@ In the WYSIWYG editor, the inserted content item widget will not be displayed as
 
 </details>
 
-After inserting the CMS block with the cotnent item widget into a published page, the content item widget will render the content item on Storefront:
+After inserting the CMS block with the content item widget into a published page, the content item widget will render the content item on Storefront:
 
 <details open>
     <summary markdown='span'>Content item representation - Storefront</summary>

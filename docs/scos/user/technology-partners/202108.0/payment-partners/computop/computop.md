@@ -53,7 +53,6 @@ The `SprykerEco.Computop` module includes the integrations:
 
 
 The `SprykerEco.Computop` module provides the following payment methods:
-
 * [Credit Card](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-credit-card.html)
 * [Direct Debit](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-direct-debit.html)
 * [EasyCredit](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-easy-credit.html)
@@ -62,6 +61,8 @@ The `SprykerEco.Computop` module provides the following payment methods:
 * [PayNow](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-paynow.html)
 * [PayPal](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-paypal.html)
 * [SofortÜberweisung](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-sofort.html)
+* PayU CEE Single
+* PayPal Express
 
 ### PSD2 compatibility
 

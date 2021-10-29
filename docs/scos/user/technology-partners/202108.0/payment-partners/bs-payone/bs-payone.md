@@ -37,15 +37,15 @@ BS PAYONE GmbH is headquartered in Frankfurt am Main and is one of the leading o
 
 YOUR ADVANTAGES:
 * **One solution, one partner, one contract**
-Simple & efficient. Technical processing and financial services from a single source.
+<br>Simple & efficient. Technical processing and financial services from a single source.
 * **International payment processing**
-Access to international and local payment methods.
+<br>Access to international and local payment methods.
 * **Automatic debtor management**
-Effective accounting support through transaction allocation and reconciliation.
+<br>Effective accounting support through transaction allocation and reconciliation.
 * **Credit entries independent of payment type**
-Fast returns management. With automated refunds.
+<br>Fast returns management. With automated refunds.
 * **Short time to market thanks to plug'n pay**
-1-click checkout and seamless integration. For an increasing conversion rate.
+<br>1-click checkout and seamless integration. For an increasing conversion rate.
 
 We integrate with a wide range of payment methods that can be configured according to your needs and convenience. Payment method flows are configured using state machines.
 

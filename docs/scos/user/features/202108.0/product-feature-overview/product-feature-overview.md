@@ -58,12 +58,12 @@ In this example, a T-shirt, which is an abstract product, is available in sizes 
 
 ### Product information inheritance
 
-Information of a concreete product on the Storefront is a combination of the information of the concrete product and its abstract  product.  
+Information of a concrete product on the Storefront is a combination of the information of the concrete product and its abstract  product.  
 
 The information of a concrete product always overwrites the information of its abstract product. For example, if the abstract product name is *VGA cable*, and the concrete product name is *VGA cable(1.5m)*, the latter is displayed.
 If some information is not specified for a concrete product, it inherits the information from its abstract product. For example, if no price is specified for a concrete product, the price of its abstract product is displayed.
 
-Check the use cases below to better understand how abstract and concrete porducts are processed in a shop.
+Check the use cases below to better understand how abstract and concrete products are processed in a shop.
 
 #### Case 1: Selling books
 
@@ -78,11 +78,11 @@ Suppose the green variant is more expensive than the blue one. In this case, you
 The product information is structured as follows:
 * The abstract product contains all the information about the product.
 * The concrete products contain the following information:
-    * The blue variant holds the stock information and the super attribute: `color = blue`.
-    * The green variant holds:
-        *  The stock information.
-        *  The super attribute: `color = green`,
-        *  The price, which is different from the abstract product's price.
+  - The blue variant holds the stock information and the super attribute: `color = blue`.
+  - The green variant holds:
+    - The stock information.
+    - The super attribute: `color = green`,
+    - The price, which is different from the abstract product's price.
 
 #### Case 3: Selling a product in five colors, four sizes, and three materials
 
@@ -94,6 +94,7 @@ The abstract products contain all the information about the product. The product
 
 
 ## Managing product information in a third-party product information management system
+
 Besides the Back Office, you can maintain product information in an external Product Information Management (PIM) system. The data from the PIM systems can be exported to Spryker. An import interface transforms the incoming product data into a Spryker specific data structure and persists it. After that, the data is exported to Redis and Elasticsearch. This way, the Storefront can access the relevant product data very fast. After the import was finished, you can access the products in the Spryker Back Office.
 
 ![Product information management](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product/product_information_management.png)

@@ -73,7 +73,7 @@ To edit the product stock:
 
 {% info_block infoBox %}
 
-Product stock the DECIMAL(20,10) value, which means that your product stock can be 20 digits long and have a maximum of 10 digits after the comma. For example, *1234567890.0987654321*.
+Product stock the DECIMAL(20,10) value, which means that your product stock can be 20 digits long and have a maximum of 10 digits after the decimal separator. For example, *1234567890.0987654321*.
 
 {% endinfo_block %}
 

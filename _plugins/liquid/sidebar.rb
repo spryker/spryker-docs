@@ -53,7 +53,7 @@ module Jekyll
 EOF
             elsif !sub_items.nil? and sidebar_item_url == @page_url then
                 sidebar_string += <<-EOF
-<li class="active-page-item">
+<li class="active-page-item active">
     <a href="#" class="sidebar-nav__opener sidebar-nav__link">
         <i class="icon-arrow-right"></i>
         <strong class="sidebar-nav__title">#{sidebar_item_title}</strong>

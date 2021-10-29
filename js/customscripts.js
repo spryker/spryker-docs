@@ -32,7 +32,38 @@ $( document ).ready(function() {
     initPageScrolling();
 
     initPostAnchor();
+
+    initHubspotForm();
 });
+
+function initHubspotForm() {
+    let formContainer = $('.js-hubspot-form');
+
+    if (!formContainer.length) return;
+
+    let hubspotPopup = $('.hubspot-submitted').popup({
+        animSpeed: 500,
+        box: '.hubspot-submitted__popup',
+        close: '.hubspot-submitted__close',
+        overlay: '.hubspot-submitted__popup-overlay',
+        preventScroll: true,
+    });
+
+    hbspt.forms.create({
+        portalId: formContainer.data('portalId'),
+        formId: formContainer.data('formId'),
+        submitButtonClass: 'button button--red hubspot-form__submit',
+        target: '#' + formContainer.attr('id'),
+        onFormReady: function() {},
+        onFormSubmitted: function(){
+            hubspotPopup.open();
+
+            setTimeout(function(){
+                hubspotPopup.close();
+            }, 5000);
+        },
+    });
+}
 
 function initAnchors() {
     anchors.add('.post-content h2:not([data-toc-skip]),.post-content h3:not([data-toc-skip]),.post-content h4:not([data-toc-skip]),.post-content h5:not([data-toc-skip])');
@@ -211,71 +242,71 @@ $.fn.popup = function (options) {
         options
     );
 
+    let page = jQuery(window),
+        holder = $(this),
+        body = $('body'),
+        popup = holder.find(options.box),
+        opener = holder.find(options.opener),
+        close = holder.find(options.close),
+        overlay = holder.find(options.overlay),
+        links = options.anchorLinks,
+        bodyClass = options.bodyClass,
+        menuIsOpened = false,
+        menuIsAnimated = false,
+        preventScroll = false;
+
+    function toggleMenu() {
+        menuIsAnimated = !menuIsAnimated;
+
+        if (!menuIsAnimated) {
+            return;
+        }
+
+        if (menuIsOpened) {
+            opener.removeClass('expanded');
+
+            if (options.preventScroll) {
+                body.removeClass(bodyClass);
+            }
+
+            popup.fadeOut(300, function () {
+                switchMenuState();
+            });
+
+            if (options.overlay) {
+                overlay.fadeOut(300);
+            }
+
+            if (typeof options.hidePopup === 'function') {
+                options.hidePopup();
+            }
+        } else {
+            opener.addClass('expanded');
+
+            if (options.preventScroll) {
+                body.addClass(bodyClass);
+            }
+
+            popup.fadeIn(300, function () {
+                switchMenuState();
+            });
+
+            if (options.overlay) {
+                overlay.fadeIn(300);
+            }
+
+            if (typeof options.showPopup === 'function') {
+                options.showPopup();
+            }
+        }
+    }
+
+    function switchMenuState() {
+        menuIsOpened = !menuIsOpened;
+        menuIsAnimated = !menuIsAnimated;
+    }
+
     let popupFunc = function () {
-        let page = jQuery(window),
-            holder = $(this),
-            body = $('body'),
-            popup = holder.find(options.box),
-            opener = holder.find(options.opener),
-            close = holder.find(options.close),
-            overlay = holder.find(options.overlay),
-            links = options.anchorLinks,
-            bodyClass = options.bodyClass,
-            menuIsOpened = false,
-            menuIsAnimated = false,
-            preventScroll = false;
-
-        function toggleMenu() {
-            menuIsAnimated = !menuIsAnimated;
-
-            if (!menuIsAnimated) {
-                return;
-            }
-
-            if (menuIsOpened) {
-                opener.removeClass('expanded');
-
-                if (options.preventScroll) {
-                    body.removeClass(bodyClass);
-                }
-
-                popup.fadeOut(300, function () {
-                    switchMenuState();
-                });
-
-                if (options.overlay) {
-                    overlay.fadeOut(300);
-                }
-
-                if (typeof options.hidePopup === 'function') {
-                    options.hidePopup();
-                }
-            } else {
-                opener.addClass('expanded');
-
-                if (options.preventScroll) {
-                    body.addClass(bodyClass);
-                }
-
-                popup.fadeIn(300, function () {
-                    switchMenuState();
-                });
-
-                if (options.overlay) {
-                    overlay.fadeIn(300);
-                }
-
-                if (typeof options.showPopup === 'function') {
-                    options.showPopup();
-                }
-            }
-        }
-
-        function switchMenuState() {
-            menuIsOpened = !menuIsOpened;
-            menuIsAnimated = !menuIsAnimated;
-        }
-
         if (links) {
             popup.on('click', function (e) {
                 if ( e.target.classList.contains(links) && window.innerWidth < 1280 && !menuIsAnimated) {
@@ -299,6 +330,20 @@ $.fn.popup = function (options) {
             toggleMenu();
         });
     };
+
+    console.log(this);
+    console.log(this.options);
+
+    this.close = function() {
+        console.log('popup close');
+        menuIsOpened = true;
+        toggleMenu();
+    }
+
+    this.open = function() {
+        console.log('popup open');
+        toggleMenu();
+    }
 
     return this.each(popupFunc);
 };

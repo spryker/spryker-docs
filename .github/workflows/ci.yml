@@ -59,7 +59,7 @@ jobs:
 
       - uses: actions/download-artifact@v2
 
-      - run: tar –tzf result.tar.gz
+      - run: tar -xf result.tar.gz
 
       - run: bundle exec rake ${{ matrix.check }}
 

@@ -17,12 +17,12 @@ To learn more about the feature and to find out how end users use it, see [Merch
 
 ![Module Dependency Graph](https://confluence-connect.gliffy.net/embed/image/19aac040-a607-4a20-8edf-a81473e293e9.png?utm_medium=live&utm_source=custom)
 
-| MODULE     | DESCRIPTION                |
-|------------|----------------------------|
-| [Category](https://github.com/spryker/category) | The Category module helps you to build a product organisation structure. Categories are modelled in an hierarchical structure, a tree.  |
-| [MerchantCategory](https://github.com/spryker/merchant-category) | This module provides a connection between category and merchant entities. |
-| [MerchantCategoryDataImport](https://github.com/spryker/merchant-category-data-import) | This module imports relations between categories and merchants from .csv file. |
-| [MerchantCategorySearch](https://github.com/spryker/merchant-category-search) | Provides plugins to extend MerchantSearch with categories. |
+| MODULE     | DESCRIPTION |
+|---|---|
+| [Category](https://github.com/spryker/category) | Helps you build a product organisation structure. Categories are modelled in an hierarchical structure, a tree.  |
+| [MerchantCategory](https://github.com/spryker/merchant-category) | Provides a connection between category and merchant entities. |
+| [MerchantCategoryDataImport](https://github.com/spryker/merchant-category-data-import) | Imports relations between categories and merchants from .csv file. |
+| [MerchantCategorySearch](https://github.com/spryker/merchant-category-search) | Provides plugins to extend `MerchantSearch` with categories. |
 
 ## Domain model
 
@@ -31,8 +31,7 @@ To learn more about the feature and to find out how end users use it, see [Merch
 
 ## Related Developer articles
 
-
-|INTEGRATION GUIDES  |DATA IMPORT  |
-|---------|---------|
+| INTEGRATION GUIDES | DATA IMPORT |
+|---|---|
 | [Merchant Category feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-category-feature-integration.html)    |[File details: merchant_category.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-category.csv.html)  |
 | [Glue API: Merchant Category integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/merchant-category-feature-integration.html) |  |  

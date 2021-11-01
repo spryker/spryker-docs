@@ -27,7 +27,6 @@ commonOptions = {
   :check_html => true,
   :validation => {
     :report_eof_tags => true,
-    :report_mismatched_tags => true,
   },
   :empty_alt_ignore => true,
   :only_4xx => true,

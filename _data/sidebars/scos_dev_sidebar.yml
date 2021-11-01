@@ -2893,6 +2893,14 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-productconfigurationsrestapi.html
       include_versions:
       - "202200.0"
+  - title: DevOps migration guides
+    include_versions:
+    - "202001.0"
+    nested:
+    - title: DevOps Migration Guide 202001.0
+      url: /docs/scos/dev/devops-migration-guides/devops-migration-guide-202001.0.html
+      include_versions:
+      - "202001.0"
   - title: Data import
     include_versions:
     - "202005.0"
@@ -4452,13 +4460,6 @@ entries:
       url: /docs/scos/dev/architecture/programming-concepts.html
   - title: Migration and integration
     nested:
-    - title: DevOps Migration Guide 20201.0
-      url: /docs/scos/dev/migration-and-integration/devops-migration-guide-202001.0.html
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: About Migration and Integration Guides
       url: /docs/scos/dev/migration-and-integration/about-migration-and-integration-guides.html
     - title: Development Tools

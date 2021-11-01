@@ -1459,7 +1459,7 @@ To retrieve general information about an abstract product, send the request:
 | sku | String | SKU of the abstract product |
 | merchantReference | String | Unique identifier of the merchant in the system.|
 | averageRating | String | Average rating of the product based on customer rating. |
-| reviewCount | String | Number of reviews left by customer for this abstract product. |
+| reviewCount | Integer | Number of reviews left by customer for this abstract product. |
 | name | String | Name of the abstract product |
 | description | String | Description of the abstract product |
 | attributes | Object | List of attributes and their values |

@@ -1,6 +1,7 @@
 ---
 title: Migrating to Jenkins
 description: Learn how to migrate to the Jenkins scheduler.
+template: howto-guide-template
 last_updated: Nov 1, 2021
 ---
 

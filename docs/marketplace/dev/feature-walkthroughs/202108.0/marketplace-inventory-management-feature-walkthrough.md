@@ -8,7 +8,7 @@ The _Marketplace Inventory Management_ implies stock & availability management a
 
 {% info_block warningBox "User documentation" %}
 
-To learn more about the feature and to find out how end users use it, see [Marketplace Inventory Management feature overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-inventory-management-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Marketplace Inventory Management feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-inventory-management-feature-overview.html) for business users.
 
 {% endinfo_block %}
 
@@ -28,7 +28,7 @@ To learn more about the feature and to find out how end users use it, see [Marke
 | ProductOfferAvailability | Provides the core functionality for product offer availability features. |
 | ProductOfferAvailabilityStorage | Manages storage for product offer availability data. |
 | ProductOfferStock | Allows connecting product offers and their stocks. |
-| ProductOfferStockDataImport | Data importer for ProductOfferStock. |
+| ProductOfferStockDataImport | Data importer for `ProductOfferStock`. |
 | ProductOfferStockGui | Zed Administrative Interface component for managing stocks for product offers. |
 | Stock | Manages products stocks. It is possible to define several storage locations in which products are stored. A product can have multiple stock entries associated with it, and each of these is associated to a storage location. Stocks can be attached only to concrete products. It is also possible to define a product as never out of stock by using a corresponding flag. |
 | StockDataImport | This module has demo data and importer for stock. |

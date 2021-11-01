@@ -109,8 +109,8 @@ entries:
                     url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/rules-and-scopes/composite-entity.html
               - title: Execution flow
                 url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/execution-flow.html
-              - title: How to split Products by Stores 
-                url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/how-to.html
+              - title: How to split Products by Stores
+                url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/how-to-split-products-by-stores.html
 
       - title: Feature integration guides
         nested:

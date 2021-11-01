@@ -1,7 +1,7 @@
 ---
 title: How to split Products by Stores
-last_updated: Осt 13, 2021
-template: concept-topic-template
+description: This document provides details on how to split products by stores.
+template: howto-guide-template
 ---
 Let's overview an example when our shop has 2 stores: DE and AT, and for each store we want to create a _Product Manager_ role:
 - DE product manager
@@ -10,8 +10,11 @@ Let's overview an example when our shop has 2 stores: DE and AT, and for each st
 The roles must be configured in such a way that the _DE Product Manager_ has access only to those Products that belong to the DE store.
 Accordingly, the _AT Product Manager_ should only have access to AT store Products.
 
+## Prerequisites
 This example is convenient to consider using the example of [b2c-demo-shop](https://github.com/spryker-shop/b2c-demo-shop).
 Please follow the [installation guide](https://github.com/spryker-shop/b2c-demo-shop#docker-installation) to set up the shop.
+
+## Including AclEntity package
 After installing the shop, you need to add the [spryker/acl-entity](https://github.com/spryker/acl-entity) package:
 ```shell
 composer require spryker/acl-entity

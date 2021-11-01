@@ -6,27 +6,23 @@ template: feature-walkthrough-template
 
 With the *Marketplace Product Offer Prices* feature, the Marketplace merchants can define custom prices for [product offers](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html).
 
-Product offer prices can be defined for each product offer by merchants. 
-If price for product offer is not defined, a price from concrete product will be used which is tied to the product offer by default.
-Each price is assigned to a price type ( e.g. gross price, net price ) and for a price type there can be one to n product prices defined. 
-Price type entity is used to differentiate between use cases: for example we have DEFAULT and ORIGINAL type where we use it for sale pricing.
-You can add own price types and use it in your app. 
-New price type can be added by price data import. 
-Price type mentioned in csv file will be added or updated.
+Merchants can define the prices for each product offer. If no price for the product offer is specified, a default price from the concrete product is used.
 
-To learn more details about prices import file, see: [File details: product_price.csv](https://documentation.spryker.com/docs/file-details-product-pricecsv) 
+Price types (e.g. gross price, net price) are assigned to each price, and for each price type, there can be from *one* to *n* product prices. Price type entities are used to differentiate between use cases: for example, we have DEFAULT and ORIGINAL prices which are used for sale pricing. You can add your own price types and use them in your app.
 
-The price can have gross or net value which can be used based on a price mode selected by customer in Storefront. 
-You can have shop running in both modes and select net mode for business customer, for example. 
-Price also has currency and store assigned to it.
-To support product offer prices  *PriceProductOffer* DB table has been added to connect *PriceProductStore* and *ProductOffer* tables.
-To store the data about product offer prices to be synchronized to Storage *ProductConcreteProductOfferPriceStorage* DB table has been added.
-This data is used on the Storefront to display correct prices for product offers. 
-Also, product offers support volume prices. 
-So merchants can add volume prices for product offers and based on chosen quantity of items a customer will see the corresponding price on the Storefront.
-Volume prices for product offers work the same as for products.
+A new price type can be added by importing price data. The price type in the CSV file will be added or updated.
 
-To learn more about prices and volume prices, see: [Prices](https://documentation.spryker.com/docs/prices-overview), [Volume Prices](https://documentation.spryker.com/docs/volume-prices-overview)
+To learn more details about prices import file, see: [File details: product_price.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/pricing/file-details-product-price.csv.html)
+
+Depending on the price mode selected by a customer in Storefront, the price can have gross or net value. You can run your shop in both modes as well as select net mode for business customers, for example.
+
+A price is also associated with a currency and a store.
+
+To support product offer prices, a *PriceProductOffer* database table has been added to connect *PriceProductStore* and *ProductOffer* tables. In order to store the information about product offer prices that will be synchronized to Storage, the *ProductConcreteProductOfferPriceStorage* database table has been added. On the Storefront, this data is used to display correct prices for product offers.
+
+In addition, product offers support volume prices. Merchants can now enter volume prices for product offers, and customers will see the corresponding price on their Storefront based on the quantity they have chosen. The volume prices for product offers work the same as the volume prices for products.
+
+To learn more about prices and volume prices, see: [Prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html), [Volume Prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html)
 
 {% info_block warningBox "User documentation" %}
 
@@ -42,22 +38,22 @@ The following diagram illustrates the dependencies between the modules for the *
 
 | MODULE     | DESCRIPTION                |
 |------------|----------------------------|
-| PriceProductOffer | Provides product offer price related functionality, price persistence, current price resolvers per currency/price mode    |
-| PriceProductOfferDataImport | Imports data for product offer prices    |
-| PriceProductOfferGui | Backoffice UI Interface for managing prices for product offers    |
-| PriceProductOfferStorage | Provides functionality to store data about product offer prices in the storage   |
-| PriceProductOfferVolume | Provides functionality to handle volume prices for product offers    |
-| PriceProductOfferVolumeGui | Backoffice UI Interface for managing volume prices for product offers    |
-| PriceProductOfferExtension | Provides plugin interfaces for extending PriceProductOffer module functionality    |
-| PriceProductOfferStorageExtension | Provides plugin interfaces used by Price Product Offer Storage bundle    |
+| PriceProductOffer | Provides product offer price-related functionality, price persistence, current price resolvers per currency/price mode.   |
+| PriceProductOfferDataImport | Imports data for product offer prices.    |
+| PriceProductOfferGui | Backoffice UI Interface for managing prices for product offers.    |
+| PriceProductOfferStorage | Provides functionality to store data about product offer prices in the storage.   |
+| PriceProductOfferVolume | Provides functionality to handle volume prices for product offers.    |
+| PriceProductOfferVolumeGui | Backoffice UI Interface for managing volume prices for product offers.    |
+| PriceProductOfferExtension | Provides plugin interfaces for extending `PriceProductOffer` module functionality.   |
+| PriceProductOfferStorageExtension | Provides plugin interfaces used by Price Product Offer Storage bundle.    |
 | PriceProductOfferVolumesRestApi | Provides plugin(s) to add product-offer-volume-prices to the product-offer-prices.   |
-| ProductOfferPricesRestApi | Provides Rest API endpoints to manage product offer prices   |
-| ProductOfferPricesRestApiExtension | Provides plugin interfaces for extending the ProductOfferPricesRestApi module    |
-| Price | Handles product pricing and provides plugins for products to populate prices   |
-| PriceProduct | Provides product price related functionality, price persistence, current price resolvers per currency/price mode    |
-| PriceProductStorage | Provides functionality to store data about product prices in the storage    |
-| PriceProductVolume | Provides functionality to handle volume prices for products   |
-| ProductOffer | Provides the core functionality for product offer features   |
+| ProductOfferPricesRestApi | Provides Rest API endpoints to manage product offer prices.   |
+| ProductOfferPricesRestApiExtension | Provides plugin interfaces for extending the `ProductOfferPricesRestApi` module.    |
+| Price | Handles product pricing and provides plugins for products to populate prices.  |
+| PriceProduct | Provides product price-related functionality, price persistence, current price resolvers per currency/price mode.    |
+| PriceProductStorage | Provides functionality to store data about product prices in the storage.    |
+| PriceProductVolume | Provides functionality to handle volume prices for products.  |
+| ProductOffer | Provides the core functionality for product offer features.   |
 
 ## Domain model
 ![Entity diagram](https://confluence-connect.gliffy.net/embed/image/0ad490bb-f21f-4e4a-b6eb-e0102a8c7b42.png?utm_medium=live&utm_source=confluence)

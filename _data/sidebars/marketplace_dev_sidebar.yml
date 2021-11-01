@@ -28,7 +28,7 @@ entries:
 
       - title: Feature walkthroughs
         nested:
-          - title: Marketplace MerchantPortal Core feature walkthrough
+          - title: Marketplace Merchant Portal Core feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-core-feature-walkthrough/marketplace-merchant-portal-core-feature-walkthrough.html
             nested:
 
@@ -37,6 +37,9 @@ entries:
 
               - title: Merchant User concept
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-core-feature-walkthrough/merchant-user-concept.html
+
+              - title: Persistence ACL configuration
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-core-feature-walkthrough/persistence-acl-configuration.html
 
           - title: Merchant feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/merchant.html

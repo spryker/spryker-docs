@@ -1,6 +1,6 @@
 ---
 title: Error response from daemon- OCI runtime create failed- .... \\\"no such file or directory\\\"\""- unknown
-description: The solution to the `Error response from daemon- OCI runtime create failed- .... \\\"no such file or directory\\\"\""- unknown.` error
+description: The solution to the `Error response from daemon- OCI runtime create failed- .... no such file or directory - unknown.` error
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/error-response-from-daemon-oci-runtime-create-failed-no-such-file-or-directory-unknown

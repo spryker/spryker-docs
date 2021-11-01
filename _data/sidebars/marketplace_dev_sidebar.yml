@@ -101,8 +101,8 @@ entries:
           - title: Marketplace Product Options feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-options-feature-walkthrough.html
 
-          - title: Marketplace Cart Notes feature walkthrough
-            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-cart-notes-feature-walkthrough.html
+          - title: Marketplace Cart feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-cart-feature-walkthrough.html
 
           - title: Marketplace Wishlist feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-wishlist-feature-walkthrough.html

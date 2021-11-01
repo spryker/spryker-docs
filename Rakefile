@@ -25,6 +25,11 @@ commonOptions = {
   },
   :disable_external => false,
   :check_html => true,
+  :validation => {
+    :report_eof_tags => true,
+    :report_invalid_tags => true,
+    :report_mismatched_tags => true,
+  },
   :empty_alt_ignore => true,
   :only_4xx => true,
   :http_status_ignore => [429],

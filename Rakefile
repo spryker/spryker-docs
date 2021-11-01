@@ -72,7 +72,6 @@ task :check_scos_dev do
     /docs\/scos\/\w+\/[\w-]+\/201907\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202001\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202005\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202009\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202200\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
@@ -89,7 +88,6 @@ task :check_scos_user do
     /docs\/scos\/\w+\/[\w-]+\/201907\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202001\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202005\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202009\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202200\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run

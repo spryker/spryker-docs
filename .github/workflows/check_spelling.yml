@@ -1,0 +1,12 @@
+name: Spellcheck
+on:
+  pull_request:
+    paths:
+      - 'docs/**.md'
+jobs:
+  spelling:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Check Spelling
+        uses: rojopolis/spellcheck-github-actions@v0.18.0

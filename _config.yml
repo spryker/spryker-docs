@@ -47,6 +47,9 @@ exclude:
   - package-lock.json
   - gulpfile.js
   - redirect.html
+  - docs/scos/dev/drafts-dev/
+  - docs/scos/dev/developers-corner/
+
 # these are the files and directories that jekyll will exclude from the build
 
 highlighter: rouge
@@ -55,7 +58,7 @@ highlighter: rouge
 markdown: CommonMarkGhPages
 commonmark:
   options: ["SMART", "FOOTNOTES"]
-  extensions: ["strikethrough", "autolink", "table", "tagfilter"]
+  extensions: ["strikethrough", "autolink", "table"]
 
 plugins:
   - jekyll-last-modified-at
@@ -88,14 +91,12 @@ defaults:
       path: "docs/marketplace/dev"
     values:
       sidebar: "marketplace_dev_sidebar"
-      product-type: 'marketplace/dev'
       role: "dev"
   -
     scope:
       path: "docs/marketplace/user"
     values:
       sidebar: "marketplace_user_sidebar"
-      product-type: 'marketplace/user'
       role: "user"
   -
     scope:
@@ -107,14 +108,12 @@ defaults:
       path: "docs/scos/dev"
     values:
       sidebar: "scos_dev_sidebar"
-      product-type: 'scos/dev'
       role: "dev"
   -
     scope:
       path: "docs/scos/user"
     values:
       sidebar: "scos_user_sidebar"
-      product-type: 'scos/user'
       role: "user"
   -
     scope:
@@ -126,7 +125,6 @@ defaults:
       path: "docs/cloud/dev"
     values:
       sidebar: "cloud_dev_sidebar"
-      product-type: 'cloud/dev'
       role: "dev"
 
 versions:
@@ -137,6 +135,7 @@ versions:
   '202005.0': 'Code releases 05.20'
   '202009.0': '202009.0'
   '202108.0': '202108.0'
+  '202200.0': 'Upcoming'
 
 # versioned categories - these must match corresponding directories
 versioned_categories:
@@ -151,6 +150,26 @@ versioned_categories:
       - glue-api-guides
       - data-import
       - data-export
+      - legacy-demoshop
+  scos:
+    user:
+      - features
+      - back-office-user-guides
+      - technology-partners
+      - shop-user-guides
+    dev:
+      - feature-walkthroughs
+      - feature-integration-guides
+      - module-migration-guides
+      - data-import
+      - data-export
+      - glue-api-guides
+      - technology-partner-integration-guides
+      - the-docker-sdk
+      - migration-and-integration
+      - legacy-demoshop
+      - sdk
+      - technology-partner-guides
 
 # these are defaults used for the frontmatter for these file types
 
@@ -158,6 +177,8 @@ sidebars:
   - marketplace_dev_sidebar
   - marketplace_user_sidebar
   - cloud_dev_sidebar
+  - scos_dev_sidebar
+  - scos_user_sidebar
 
 description: "Spryker documentation center."
 # the description is used in the feed.xml file
@@ -175,6 +196,10 @@ algolia:
   application_id: 'IBBSSFT6M1'
   search_only_api_key: '296ac9c40fa95441b2d89d1fd8395bb4'
   indices:
+    - name: 'scos_user'
+      title: 'SCOS User'
+    - name: 'scos_dev'
+      title: 'SCOS Developer'
     - name: 'marketplace_user'
       title: 'Marketplace User'
     - name: 'marketplace_dev'

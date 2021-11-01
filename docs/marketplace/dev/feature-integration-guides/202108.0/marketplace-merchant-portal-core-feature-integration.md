@@ -17,8 +17,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | -------------------- | ---------- | ---------|
-| Spryker Core         | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Spryker Core BO      | {{page.version}}r | [Spryker Core Back Office feature integration](https://documentation.spryker.com/docs/spryker-core-back-office-feature-integration) | 
+| Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Spryker Core BO      | {{page.version}} | [Spryker Core Back Office feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-back-office-feature-integration.html) |
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
 | Acl | {{page.version}} | [ACL feature integration](/docs/marketplace/dev/feature-integration-guides/acl-feature-integration.html) |
 
@@ -266,9 +266,9 @@ class AclDependencyProvider extends SprykerAclDependencyProvider
 }
 ```
 
-#### 2. Enable Merchant Portal infrastructural plugins. 
+#### 2. Enable Merchant Portal infrastructural plugins.
 
-<details><summary markdown='span'>src/Pyz/Zed/Acl/AclDependencyProvider.php</summary>
+**src/Pyz/Zed/Acl/AclDependencyProvider.php**
 
 ```php
 <?php
@@ -321,7 +321,6 @@ class MerchantPortalApplicationDependencyProvider extends SprykerMerchantPortalA
     }
 }
 ```
-</details>
 
 Open access to the *Merchant Portal* login page by default:
 
@@ -644,7 +643,7 @@ If you want to configure deployment configuration to automatically install and b
 
  yves-isntall-dependencies and yves-isntall-dependencies
 
-- Update project install dependencies command dependencies-install command to: 
+- Update project install dependencies command dependencies-install command to:
 
 ```bash
 vendor/bin/console frontend:mp:install-dependencies -vvv

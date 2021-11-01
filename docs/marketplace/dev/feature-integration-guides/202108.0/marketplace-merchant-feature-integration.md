@@ -950,21 +950,18 @@ Budget Cameras bietet eine große Auswahl an Digitalkameras mit den niedrigsten 
 
 2. Prepare merchant profile address data according to your requirements using the demo data:
 
-<details>
-  <summary markdown='span'>/data/import/common/common/marketplace/merchant_profile_address.csv</summary>
+**/data/import/common/common/marketplace/merchant_profile_address.csv**
 
-  ```csv
-    merchant_reference,country_iso2_code,country_iso3_code,address1,address2,address3,city,zip_code,longitude,latitude
-    MER000001,DE,DEU,Julie-Wolfthorn-Straße,1,,Berlin,10115,52.534105,13.384458
-    MER000002,NL,,Gilzeweg,24,,Bavel,4854SG,51.558107,4.838470
-    MER000006,DE,DEU,Matthias-Pschorr-Straße,1,,München,80336,48.131058,11.547788
-    MER000005,DE,DEU,Spitalerstraße,3,,Berlin,10115,,
-    MER000004,DE,DEU,Caroline-Michaelis-Straße,8,,Hamburg,20095,,
-    MER000003,DE,DEU,Caroline-Michaelis-Straße,8,,Berlin,10115,,
-    MER000007,DE,DEU,Caroline-Michaelis-Straße,8,,Berlin,10115,53.552463,10.004663
-  ```
-
-</details>
+```csv
+merchant_reference,country_iso2_code,country_iso3_code,address1,address2,address3,city,zip_code,longitude,latitude
+MER000001,DE,DEU,Julie-Wolfthorn-Straße,1,,Berlin,10115,52.534105,13.384458
+MER000002,NL,,Gilzeweg,24,,Bavel,4854SG,51.558107,4.838470
+MER000006,DE,DEU,Matthias-Pschorr-Straße,1,,München,80336,48.131058,11.547788
+MER000005,DE,DEU,Spitalerstraße,3,,Berlin,10115,,
+MER000004,DE,DEU,Caroline-Michaelis-Straße,8,,Hamburg,20095,,
+MER000003,DE,DEU,Caroline-Michaelis-Straße,8,,Berlin,10115,,
+MER000007,DE,DEU,Caroline-Michaelis-Straße,8,,Berlin,10115,53.552463,10.004663
+```
 
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
@@ -987,6 +984,7 @@ Budget Cameras bietet eine große Auswahl an Digitalkameras mit den niedrigsten 
 | MerchantProfileAddressDataImportPlugin | Imports merchant profile address data into the database. |   | Spryker\Zed\MerchantProfileDataImport\Communication\Plugin |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
+
 ```php
 <?php
 
@@ -1016,18 +1014,16 @@ console data:import merchant-profile-address
 ```
 
 
-In order to import merchant user data perform the following steps:
+To import merchant user data, perform the following steps:
 
 1. Prepare merchant user data according to your requirements using the demo data:
 
-<details>
-<summary markdown='span'>/data/import/common/common/marketplace/merchant_user.csv</summary>
+**/data/import/common/common/marketplace/merchant_user.csv**
 
 ```csv
 merchant_reference,username
 MER000006,michele@sony-experts.com
 ```
-</details>
 
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
@@ -1160,7 +1156,7 @@ use Spryker\Zed\DataImport\DataImportConfig as SprykerDataImportConfig;
 class DataImportConfig extends SprykerDataImportConfig
 {
     public const IMPORT_TYPE_MERCHANT_USER = 'merchant-user';
-    
+
     /**
      * @return string[]
      */
@@ -1169,14 +1165,13 @@ class DataImportConfig extends SprykerDataImportConfig
         return [
             static::IMPORT_TYPE_MERCHANT_USER,
         ];
-    } 
+    }
 }
 ```
 
 4. Enable merchant user data import command.
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/DataImport/Business/DataImportBusinessFactory.php</summary>
+**src/Pyz/Zed/DataImport/Business/DataImportBusinessFactory.php**
 
 ```php
 <?php
@@ -1212,7 +1207,7 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
                 return null;
         }
     }
-    
+
     /**
      * @param \Generated\Shared\Transfer\DataImportConfigurationActionTransfer $dataImportConfigurationActionTransfer
      *
@@ -1235,12 +1230,10 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
     }
 }
 ```
-</details>
 
 5. Create and prepare your data import configuration files according to your requirements using our demo config template:
 
-<details>
-<summary markdown='span'>data/import/common/marketplace_import_config_EU.yml</summary>
+**data/import/common/marketplace_import_config_EU.yml**
 
 ```yml
 version: 0
@@ -1249,7 +1242,6 @@ actions:
   - data_entity: merchant-user
     source: data/import/common/common/merchant_user.csv
  ```
-</details>
 
 6. Import data.
 

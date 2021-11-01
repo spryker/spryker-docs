@@ -6,7 +6,12 @@ draft: true
 template: feature-integration-guide-template
 ---
 
+{% info_block infoBox "Info" %}
+
 See [Marketplace Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-core-feature-integration.html).
+
+{% endinfo_block %}
+
 
 ## Environment requirements
 
@@ -46,11 +51,11 @@ Install the needed packages for the Merchant Portal with dependencies, see the a
 | Spryker Core         | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
 | Marketplace Merchant Portal Core | {{page.version}}  | [Marketplace Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-merchant-portal-core-feature-integration.html) |
 
-### Merchant Portal users.
+### Merchant Portal users
 
-### 1) Create users.
+### 1) Create users
 
-Create users for merchant portal using Zed UI (Backoffice), or if you need them out of the box, add them into `\Pyz\Zed\User\UserConfig::getInstallerUsers()`, for example:
+Create users for the Merchant Portal using Zed UI (Backoffice), or if you need them out of the box, add them into `\Pyz\Zed\User\UserConfig::getInstallerUsers()`, for example:
 
 **src/Pyz/Zed/User/UserConfig.php**
 
@@ -80,37 +85,26 @@ class UserConfig extends SprykerUserConfig
 }
 ```
 
-### 2) Connect users and merchants.
+### 2) Connect users and merchants
 
 Connect users and merchants using Zed UI (Backoffice) or using the next data import.
 
 **data/import/common/common/marketplace/merchant.csv**
-
-<details>
-
-<summary markdown='span'>Prepare your data according to your requirements using the demo data:</summary>
 
 ```csv
  merchant_key,merchant_reference,merchant_name,registration_number,status,email,is_active,url.de_DE,url.en_US
  sony-experts,MER000006,Sony Experts,HYY 134306,approved,michele@sony-experts.com,1,/de/merchant/sony-experts,/en/merchant/sony-experts
 ```
 
-</details>
+In case you don't have merchant user data import been integrated, you can find how to do it in the [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) guide.
 
-In case you don't have merchant user data import been integrated, you can find how to do it in [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html)
 
 **data/import/common/common/marketplace/merchant_user.csv**
-
-<details>
-
-<summary markdown='span'>Prepare your data according to your requirements using the demo data:</summary>
 
 ```csv
 merchant_key,username
 sony-experts,michele@sony-experts.com
 ```
-
-</details>
 
 Run the following commands to import data:
 
@@ -127,7 +121,7 @@ Adjust `AclConfig` up to your needs in order to allow Merchant Portal pages (*-m
 
 You can check the available list of packages for the Merchant Portal here https://github.com/spryker/?q=merchant-portal-gui
 
-<details><summary markdown='span'>src/Pyz/Zed/Acl/AclConfig.php</summary>
+**src/Pyz/Zed/Acl/AclConfig.php**
 
 ```php
 <?php
@@ -145,7 +139,7 @@ class AclConfig extends SprykerAclConfig
      * @var string
      */
     protected const RULE_TYPE_DENY = 'deny';
-    
+
     /**
      * @return array
      */
@@ -156,7 +150,7 @@ class AclConfig extends SprykerAclConfig
 
         return $installerRules;
     }
-    
+
      /**
      * @param string[][] $installerRules
      *
@@ -187,7 +181,7 @@ class AclConfig extends SprykerAclConfig
 
         return $installerRules;
     }
-    
+
     /**
      * @return array
      */
@@ -200,7 +194,6 @@ class AclConfig extends SprykerAclConfig
     }
 }
 ```
-</details>
 
 Run the following command to create users with ACL rules :
 
@@ -242,14 +235,11 @@ Use `\Spryker\Zed\AclEntityDummyProduct\Communication\DummyProductAclEntityMetad
 ```
 
 
-### 4) Merchant Portal Navigation Links in Sidebar
+### 4) Merchant Portal Navigation Links in the Sidebar
 
-To configure the Merchant Portal Sidebar add installed MP gui modules into `config/Zed/navigation.xml`.
+To configure the Merchant Portal Sidebar add installed MP GUI modules into `config/Zed/navigation.xml`.
 
 **config/Zed/navigation.xml**
-
-<details>
-<summary markdown='span'>Prepare your configuration according to your requirements using the demo configuration:</summary>
 
 ```xml
 <?xml version="1.0"?>
@@ -315,8 +305,6 @@ To configure the Merchant Portal Sidebar add installed MP gui modules into `conf
 </config>
 ```
 
-</details>
-
 Run the following command to build navigation cache:
 
 ```bash
@@ -325,9 +313,7 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that all configured items are present in Merchant Portal Sidebar and route you accordingly. 
-
-{% endinfo_block %}
+Make sure that all configured items are present in the Merchant Portal Sidebar and route you accordingly.
 
 Make sure that you have enabled `\Spryker\Zed\Acl\Communication\Plugin\Navigation\AclNavigationItemCollectionFilterPlugin` in `\Pyz\Zed\ZedNavigation\ZedNavigationDependencyProvider`.
 
@@ -352,7 +338,7 @@ class ZedNavigationDependencyProvider extends SprykerZedNavigationDependencyProv
     }
 }
 ```
-
+{% endinfo_block %}
 
 ### 5) Separate Login feature setup (security firewalls).
 
@@ -390,7 +376,7 @@ The Merchant Portal should look like on the picture:
 
 ![Merchant Portal login](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Feature+Integration+Guides/Marketplace/Merchant+Portal+feature+integration/mp-login.png)
 
-After login, you should be redirected to the Dashboard. The Sidebar contents will depend on installed features and configuration.
+After login, you should be redirected to the Dashboard. The contents of the Sidebar will depend on the  installed features and their configuration.
 
 ![Merchant Portal dashboard](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Feature+Integration+Guides/Marketplace/Merchant+Portal+feature+integration/mp-dashboard.png)
 

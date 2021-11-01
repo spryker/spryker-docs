@@ -3535,13 +3535,14 @@ entries:
         - title: Query objects - creation and usage
           url: /docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html
     - title: Cronjobs
+      url: /docs/scos/dev/back-end-development/cronjobs/cronjobs.html
       nested:
-      - title: Adding and configuring a cronjob
-        url: /docs/scos/dev/back-end-development/cronjobs/adding-and-configuring-a-cronjob.html
-      - title: Cronjob scheduling
-        url: /docs/scos/dev/back-end-development/cronjobs/cronjobs.html
-      - title: Creating a new custom scheduler
-        url: /docs/scos/dev/back-end-development/cronjobs/creating-a-new-custom-scheduler.html
+      - title: Adding and configuring cronjobs
+        url: /docs/scos/dev/back-end-development/cronjobs/adding-and-configuring-cronjobs.html
+      - title: Creating a custom scheduler
+        url: /docs/scos/dev/back-end-development/cronjobs/creating-a-custom-scheduler.html
+      - title: Migrating to Jenkins
+        url: /docs/scos/dev/back-end-development/cronjobs/migrating-to-jenkins.html
     - title: Forms
       url: /docs/scos/dev/back-end-development/forms/forms.html
       nested:

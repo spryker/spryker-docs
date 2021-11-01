@@ -34,7 +34,7 @@ The table below lists the main modules of the Marketplace Product Offer feature.
 
 ## Entity diagram
 
-The following schema illustrates relations in the Marketplace Product Offer entity:
+The following schema illustrates the relations in the Marketplace Product Offer entity:
 
 ![Entity diagram](https://confluence-connect.gliffy.net/embed/image/6a64677b-090a-4dbf-86a5-8e9d8afa1a68.png?utm_medium=live&utm_source=custom)
 

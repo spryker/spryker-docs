@@ -33,9 +33,6 @@ def can_be_versioned(page)
     role = page['role']
     versioned_categories = page.site.config['versioned_categories']
 
-    # TODO: add proper SCOS categories
-    return true if product == 'scos'
-
     return false if versioned_categories[product] == nil or
         versioned_categories[product][role] == nil
 

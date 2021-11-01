@@ -6,3 +6,5 @@ algolia:
     - search.md
     - docs/marketplace/dev/**/*.md
     - docs/cloud/dev/**/*.md
+    - docs/scos/user/**/*.md
+    - docs/scos/dev/**/*.md

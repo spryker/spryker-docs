@@ -39,7 +39,7 @@ jobs:
 
     strategy:
       matrix:
-        check: [ check_cloud, check_mp_dev, check_mp_user, check_scos_dev, check_scos_user ]
+        check: [ check_cloud, check_mp_dev, check_mp_user, check_scos_dev, check_scos_dev_2020090, check_scos_user ]
 
     steps:
       - uses: actions/checkout@v2

@@ -16,8 +16,8 @@ To learn more about the feature and to find out how end users use it, see [Marke
 
 ![Module Dependency Graph](https://confluence-connect.gliffy.net/embed/image/72767452-8b31-46fd-9c23-8d5416fd02e6.png?utm_medium=live&utm_source=confluence)
 
-| MODULE     | DESCRIPTION                |
-|------------|----------------------------|
+| MODULE     | DESCRIPTION |
+|---|---|
 | Availability |  Product availability is calculated based on the current stock and amount of reserved items (items in the current open orders). The `Availability` module calculates the `ProductAbstract` and `ProductConcrete` availability, and the calculated availability is persisted. This calculations is crucial to prevent overselling.|
 | AvailabilityGui | User interface module to manage the stock and availability information in the Zed Administration Interface. |
 | AvailabilityStorage | Manages storage for merchant product offer. |
@@ -40,10 +40,10 @@ To learn more about the feature and to find out how end users use it, see [Marke
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES |DATA IMPORT  | REFERENCES  |
-|---------|---------|--------|
-| [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-inventory-management-feature-integration.html) | [File details: merchant_stock.csv](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-stock.csv.html) |
-| [Glue API: Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-inventory-management-feature-integration.html)  | [File details: product_offer_stock.csv](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-product-offer-stock.csv.html) |
-| [Marketplace Inventory Management + Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-inventory-management-order-management-feature-integration.html) | [File details: combined_merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-combined-merchant-product-offer.csv.html) |
-| [Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-product-inventory-management-feature-integration.html) ||
-| [Marketplace Inventory Management + Packaging Units feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-inventory-management-packaging-units-feature-integration.html) ||
+|INTEGRATION GUIDES |DATA IMPORT |
+|---------|---------|
+| [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-feature-integration.html) | [File details: merchant_stock.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-stock.csv.html) |
+| [Glue API: Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-inventory-management-feature-integration.html)  | [File details: product_offer_stock.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-product-offer-stock.csv.html) |
+| [Marketplace Inventory Management + Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-order-management-feature-integration.html) | [File details: combined_merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-combined-merchant-product-offer.csv.html) |
+| [Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-inventory-management-feature-integration.html) ||
+| [Marketplace Inventory Management + Packaging Units feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-packaging-units-feature-integration.html) ||

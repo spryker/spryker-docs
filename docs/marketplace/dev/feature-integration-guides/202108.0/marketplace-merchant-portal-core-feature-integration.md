@@ -20,7 +20,7 @@ To start feature integration, integrate the required features:
 | Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 | Spryker Core BO      | {{page.version}} | [Spryker Core Back Office feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-back-office-feature-integration.html) |
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
-| Acl | {{page.version}} | [ACL feature integration](/docs/marketplace/dev/feature-integration-guides/acl-feature-integration.html) |
+| Acl | {{page.version}} | [ACL feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/acl-feature-integration.html) |
 
 ###  1) Install the required modules using Composer
 
@@ -447,6 +447,7 @@ Make sure that the following changes have been applied in transfer objects:
 ### 3) Build navigation cache.
 
 Execute the following command:
+
 ```bash
 console navigation:build-cache
 ```

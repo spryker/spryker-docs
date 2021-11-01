@@ -3,36 +3,42 @@ title: How to split Products by Stores
 description: This document provides details on how to split products by stores.
 template: howto-guide-template
 ---
-Let's overview an example when our shop has 2 stores: DE and AT, and for each store we want to create a _Product Manager_ role:
+This article explains how you can set up products by stores. For more clarity, we consider an example of a shop with two stores: DE and AT. For each store, we want to create separate _Product Manager_ roles:
+
 - DE product manager
 - AT product manager
 
-The roles must be configured in such a way that the _DE Product Manager_ has access only to those Products that belong to the DE store.
-Accordingly, the _AT Product Manager_ should only have access to AT store Products.
+The roles must be configured in such a way that the _DE Product Manager_ has access only to products that belong to the DE store.
+Accordingly, the _AT Product Manager_ should only have access to the AT store products.
+
+To separate products by stores, follow the steps below.
 
 ## Prerequisites
-This example is convenient to consider using the example of [b2c-demo-shop](https://github.com/spryker-shop/b2c-demo-shop).
-Please follow the [installation guide](https://github.com/spryker-shop/b2c-demo-shop#docker-installation) to set up the shop.
+This example is convenient to consider using the example of the [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html).
+Follow the [installation guide](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-macos-and-linux.html) to set it up.
 
-## Including AclEntity package
-After installing the shop, you need to add the [spryker/acl-entity](https://github.com/spryker/acl-entity) package:
+## 1. Include the AclEntity package
+After installing the B2C shop, do the following:
+1. Add the [spryker/acl-entity](https://github.com/spryker/acl-entity) package:
+
 ```shell
 composer require spryker/acl-entity
 ```
 
-Regenerate the transfer objects in order to have `AclEntity` related transfer objects in the system:
+2. Regenerate the transfer objects to have `AclEntity` related transfer objects in the system:
+
 ```shell
 console transfer:generate
 ```
 
-Here the structure of the database tables that relate to our use case.
+The database tables structure below relates to our use case:
 
 ![Product Store ERD](https://confluence-connect.gliffy.net/embed/image/cf459fd8-0710-4906-8cc8-f8a0cbaff18d.png?utm_medium=live&utm_source=custom)
 
-## System configuration
-Since we want to restrict access to the `Product`, first let's hook up the `AclEntityBehavior` to all related tables.
+## 2. System configuration
+Since we want to restrict access to the `Product` entity, first we have to hook up `AclEntityBehavior` to all the related tables:
 
-`.src/Pyz/Zed/Product/Persistence/Propel/Schema/spy_product.schema.xml`
+**.src/Pyz/Zed/Product/Persistence/Propel/Schema/spy_product.schema.xml**
 ```xml
 <?xml version="1.0"?>
 <database 
@@ -55,7 +61,7 @@ Since we want to restrict access to the `Product`, first let's hook up the `AclE
 </database>
 ```
 
-`.src/Pyz/Zed/Store/Persistence/Propel/Schema/spy_store.schema.xml`
+**.src/Pyz/Zed/Store/Persistence/Propel/Schema/spy_store.schema.xml**
 ```xml
 <?xml version="1.0"?>
 <database xmlns="spryker:schema-01" 
@@ -73,8 +79,8 @@ Since we want to restrict access to the `Product`, first let's hook up the `AclE
 
 ```
 
-Next, we should extend the main configuration object of the Persistence Acl feature, and set the necessary configuration.
-Let's use an [Basic inheritance configuration](./configuration.html#basic-inheritance-configuration) example and adopt it for the case.
+1. Extend the main configuration object of the Persistence Acl feature and set the necessary configuration.
+In our case, we use the [basic inheritance configuration](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/configuration.html) example and adopt it:
 
 `.src/Pyz/Zed/Product/Communication/Plugin/ProductAclEntityMetadataConfigExpanderPlugin.php`
 ```php
@@ -141,14 +147,15 @@ class ProductAclEntityMetadataConfigExpanderPlugin extends AbstractPlugin implem
     }
 }
 ```
-From the code above we can see:
+The code above shows:
+
 - The inheritance model of `Product` from `Store`.
 - The segmentation support for `Store`.
-- Default access mask with `Read` permission for `Store` (this is required for the login process). 
+- Default access mask with `Read` permission for `Store`, which is required for the login process. 
 
-Next add the plugin to the `AclEntityDependencyProvider`:
+3. Add the plugin to `AclEntityDependencyProvider`:
 
-`./src/Pyz/Zed/AclEntity/AclEntityDependencyProvider.php`
+**./src/Pyz/Zed/AclEntity/AclEntityDependencyProvider.php**
 ```php
 <?php
 
@@ -182,25 +189,29 @@ class AclEntityDependencyProvider extends SprykerAclEntityDependencyProvider
 }
 ```
 
-## Configure data importers
-After completing the above steps, our system is configured to support the desired case.
-Next we need to fill the system with required data.
+## 3. Configure data importers
+After completing the above steps, our system is configured to support the desired case. Next, we need to fill the system with the required data as explained below.
 
-### Install data importers
-There are two data importer packages required: [spryker/acl-data-import](https://github.com/spryker/acl-data-import) and [spryker/acl-entity-data-import](https://github.com/spryker/acl-entity-data-import).
-Run the command to install both of them:
+### 1. Install data importers
+Two data importer packages are required: [spryker/acl-data-import](https://github.com/spryker/acl-data-import) and [spryker/acl-entity-data-import](https://github.com/spryker/acl-entity-data-import).
+
+To install both of them, run:
+
 ```shell
 composer require spryker/acl-data-import spryker/acl-entity-data-import
 ```
-Run the command to align the database schema and active record models:
+Align the database schema and active record models:
+
 ```shell
 console propel:install
 ```
 
 
-### Configure data importers
-Extend `DataImportConfig`:
-`.src/Pyz/Zed/DataImport/DataImportConfig.php`
+### 2. Configure the data importers
+
+1. Extend `DataImportConfig`:
+   
+**.src/Pyz/Zed/DataImport/DataImportConfig.php**
 ```php
 <?php
 
@@ -238,8 +249,9 @@ class DataImportConfig extends SprykerDataImportConfig
 }
 ```
 
-Extend `ConsoleDependencyProvider`:
-`./src/Pyz/Zed/DataImport/DataImportConfig.php`
+2. Extend `ConsoleDependencyProvider`:
+
+**./src/Pyz/Zed/DataImport/DataImportConfig.php**
 ```php
 <?php
 
@@ -285,9 +297,9 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
         return $commands;
 ```
 
-Add new data importer plugins to the `DataImportDependencyProvider`:
-`./src/Pyz/Zed/DataImport/DataImportDependencyProvider.php`
+3. Add the new data importer plugins to `DataImportDependencyProvider`:
 
+**./src/Pyz/Zed/DataImport/DataImportDependencyProvider.php`**
 ```php
 <?php
 
@@ -325,8 +337,9 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
     }
 ```
 
-Extend the data importer yaml config:
-`./data/import/local/full_EU.yml`
+4. Extend the data importer yaml config:
+
+**/data/import/local/full_EU.yml**
 
 ```yaml
 # ...
@@ -348,30 +361,32 @@ Extend the data importer yaml config:
   source: data/import/common/common/acl_entity_segment_connector.csv
 ```
 
-## Add required data 
-Next we need to create the appropriate `AclRoles`, `AclGroups`, `AclEntityRules` and `AclEntitySegments`.
+## 4. Add the required data 
+Next, you should create the appropriate `AclRoles`, `AclGroups`, `AclEntityRules`, and `AclEntitySegments` entities by following the instructions below.
 
-### Add AclRoles
-Let's create required `AclRoles`.
-Create or edit `acl_role.csv`:
+### 1. Add AclRoles
+Create the required `AclRoles`. To do this:
 
-`./data/import/common/common/acl_role.csv`
+1. Create or edit the `acl_role.csv` import file:
+
+**./data/import/common/common/acl_role.csv**
 ```csv
 name,reference
 DE product manager,de_product_manager
 AT product manager,at_product_manager
 ```
-Run the command to start data import for `AclRoles`:
+2. Run the command to start data import for `AclRoles`:
 ```shell
 console data:import:acl-role
 ```
-After the command execution the system will have the following `AclRoles`:
+After the command execution the the following `AclRoles` appear in the system:
 - DE product manager
 - US product manager
 
-### Add AclGroups
-As an example of `AclRole` we should create `AclGroup`s as well:
-Prepare `acl_group.csv`:
+### 2. Add AclGroups
+As an example of `AclRole`, you should create `AclGroup`s as well. To do so:
+
+1. Prepare the `acl_group.csv` import file:
 
 `./data/import/common/common/acl_group.csv`
 ```csv
@@ -380,32 +395,34 @@ DE product manager,de_product_manager
 AT product manager,at_product_manager
 ```
 
-Run the command:
+2. Run the command:
 ```shell
 console data:import:acl-group
 ```
 
-### Connect AclRole and AclGroup
-On this step we should set up relation between `AclGroups` and `AclRoles`:
-Prepare `acl_group_role.csv`:
+### 3. Connect AclRole and AclGroup
+At this step, set up the relation between `AclGroups` and `AclRoles`. To do so:
 
-`./data/import/common/common/acl_group_role.csv`
+1. Prepare the `acl_group_role.csv` import file:
+
+**./data/import/common/common/acl_group_role.csv**
+
 ```csv
 group_reference,role_reference
 de_product_manager,de_product_manager
 at_product_manager,at_product_manager
 ```
 
-Run the command:
+2. Run the command:
 ```shell
 console data:import:acl-group-role
 ```
 
-### Add AclEntitySegments
-Next we should create 2 segments for Store's: US and AT
-Segments are needed in order to be able to delimit access to data.
-Read [Segment scope documentation](./rules-and-scopes/segment-scope.html) to get more information about data segmentation.
-Prepare `acl_entity_segment.csv`:
+### 4. Add AclEntitySegments
+Next, you should create two segments for the US and AT stores. You need the segments to be able to delimit access to data.
+See [Segment scope documentation](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/segment-scope.html) for more information about the data segmentation.
+
+1. Prepare the `acl_entity_segment.csv` import file:
 
 `./data/import/common/common/acl_entity_segment.csv`
 ```csv
@@ -413,38 +430,51 @@ name,reference
 Store DE,store_de
 Store AT,store_at
 ```
-Run the command:
+2. Run the command:
 ```shell
 console data:import:acl-entity-segment
 ```
 
-### Add AclEntitySegmentStore
-Next, we need to link the segment data that we created above with US and AT `Store`.
-Let's find out the DE and AT `Store`s identifiers:
+### 5. Add AclEntitySegmentStore
+
+Next, you need to link the segment data created in the previous step, with US and AT `Store`. To do so:
+
+1. Find out the DE and AT `Store`s identifiers:
+   
 ```sql
 SELECT id_store, name FROM spy_store;
 ```
-From the result of the query we can see that DE `Store` identifier is `1` and AT `Store` identifier is `2`.
-This data is enough to prepare the next import file: `acl_entity_segment_connector.csv`
+From the result of the query, in our case, the DE store's identifier is `1` and the AT store's identifier is `2`.
 
-`./data/import/common/common/acl_entity_segment_connector.csv`
+2. Prepare the `acl_entity_segment_connector.csv` import file:
+
+**./data/import/common/common/acl_entity_segment_connector.csv**
+
 ```csv
 data_entity,reference_field,entity_reference,acl_entity_segment_reference
 Orm\Zed\Store\Persistence\SpyStore,id_store,1,store_de
 Orm\Zed\Store\Persistence\SpyStore,id_store,2,store_at
 ```
-Rnn the command to link `AclEntitySegment` and `Store`:
+3. To link `AclEntitySegment` and `Store`, run:
+   
 ```shell
 console data:import:acl-entity-segment-connector
 ```
 
-### Add AclEntityRules
-The final stage of data creation is creating the corresponding `AclEntityRules`.
-Read more about `AclEntityRule` in the  [Rules and Scopes documentation](./rules-and-scopes/rules-and-scopes.html).
-Each of the new `AclRole` (_DE product manager_ and _AT product manager_) should have the corresponding set of `AclEntityRules`.
-Prepare `acl_entity_rule.csv` for the import:
+### 6. Add AclEntityRules
+The final stage of the data creation is creating the corresponding `AclEntityRules`.
+See [Rules and Scopes](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/rules-and-scopes.html) for more information about the `AclEntityRule`.
 
-`./data/import/common/common/acl_entity_rule.csv`
+{% info_block infoBox "Info" %}
+
+Each of the new `AclRole` (_DE product manager_ and _AT product manager_) should have the corresponding set of `AclEntityRules`.
+
+{% endinfo_block %}
+
+1. Prepare the `acl_entity_rule.csv` import file:
+
+**./data/import/common/common/acl_entity_rule.csv**
+
 ```csv
 acl_role_reference,entity,scope,permission_mask,segment_reference
 de_product_manager,Orm\Zed\Product\Persistence\SpyProduct,inherited,CRUD,
@@ -459,15 +489,16 @@ at_product_manager,Orm\Zed\Product\Persistence\SpyProductAbstractStore,inherited
 at_product_manager,Orm\Zed\Store\Persistence\SpyStore,segment,R,store_at
 ```
 
-Run the command:
+2. Run the command:
 ```shell
 console data:import:acl-entity-rule
 ```
 
-## Configure AclEntityFacade
-Next we need to configure `\Spryker\Zed\AclEntity\Business\AclEntityFacade` to activate the feature.
-It can be done through the application plugins system: just add `AclEntityApplicationPlugin` to the `ApplicationDependencyProvider`:
-`./src/Pyz/Zed/Application/ApplicationDependencyProvider.php`
+## 5. Configure AclEntityFacade
+Next, configure `\Spryker\Zed\AclEntity\Business\AclEntityFacade` to activate the feature.
+You can do that through the application plugins system by adding `AclEntityApplicationPlugin` to `ApplicationDependencyProvider`:
+`./src/Pyz/Zed/Application/ApplicationDependencyProvider.php`:
+
 ```php
 <?php
 
@@ -502,10 +533,10 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
     // ...
 }
 ```
-## Setup users
-Finaly Persistence Acl feature is installed and configured to support the desired case.
-The only thing is left is to add appropriate group (_DE product manager_ and/or _AT product manager_) to the required user.
-This operation can be performed through the Zed UI. Don't forget to assign corresponding `AclRule` to the roles as well.
+## 6. Set up users
+At this stage, the Persistence Acl feature is installed and configured to support the desired case.
+The only thing left is to add an appropriate group (_DE product manager_ and/or _AT product manager_) to the required user.
+You can do this through the Back Office. See [Managing groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-groups.html) for details on how you can do that. Make sure to [assign corresponding `AclRule`](/docs/scos/dev/feature-walkthroughs/{{page.version}}/customer-account-management-feature-walkthrough/user-and-rights-overview.html) to the roles as well.
 
-When you add the _DE product manager_ group to a user, only `Products` related to DE store will be available to the user.
-If the user needs access to both the DE and AT store, you need to add 2 groups (_DE product manager_, _AT product manager_) at once.
+When you add the _DE product manager_ group to a user, only `Products` related to the DE store will be available to that user.
+If the user needs access to both DE and AT stores, you need to add 2 groups (_DE product manager_, _AT product manager_) at once.

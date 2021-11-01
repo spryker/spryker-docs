@@ -3120,33 +3120,47 @@ entries:
       - title: Special product types
         url: /docs/scos/dev/data-import/data-import-categories/special-product-types/special-product-types-import-category.html
         include_versions:
-        - "202108.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         nested:
         - title: Gift cards
           url: /docs/scos/dev/data-import/data-import-categories/special-product-types/gift-cards/gift-cards.html
           include_versions:
+          - "202005.0"
+          - "202009.0"
           - "202108.0"
           nested:
           - title: File details - gift_card_concrete_configuration.csv
             url: /docs/scos/dev/data-import/data-import-categories/special-product-types/gift-cards/file-details-gift-card-concrete-configuration.csv.html
             include_versions:
+            - "202005.0"
+            - "202009.0"
             - "202108.0"
           - title: File details - gift_card_abstract_configuration.csv
             url: /docs/scos/dev/data-import/data-import-categories/special-product-types/gift-cards/file-details-gift-card-abstract-configuration.csv.html
             include_versions:
+            - "202005.0"
+            - "202009.0"
             - "202108.0"
         - title: Product options
           url: /docs/scos/dev/data-import/data-import-categories/special-product-types/product-options/product-options.html
           include_versions:
+          - "202005.0"
+          - "202009.0"
           - "202108.0"
           nested:
           - title: File details - product_option.csv
             url: /docs/scos/dev/data-import/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html
             include_versions:
+            - "202005.0"
+            - "202009.0"
             - "202108.0"
           - title: File details - product_option_price.csv
             url: /docs/scos/dev/data-import/data-import-categories/special-product-types/product-options/file-details-product-option-price.csv.html
             include_versions:
+            - "202005.0"
+            - "202009.0"
             - "202108.0"
         - title: Configurable Product import category
           include_versions:
@@ -3160,43 +3174,6 @@ entries:
             url: /docs/scos/dev/data-import/data-import-categories/special-product-types/configurable-product-import-category/configurable-product-data-import.html
             include_versions:
             - "202108.0"
-      - title: Special product types
-        include_versions:
-          - "202005.0"
-          - "202009.0"
-        nested:
-          - title: Gift cards
-            url: /docs/scos/dev/data-import/data-import-categories/special-product-types/gift-cards/gift-cards.html
-            include_versions:
-              - "202005.0"
-              - "202009.0"
-            nested:
-              - title: File details - gift_card_concrete_configuration.csv
-                url: /docs/scos/dev/data-import/data-import-categories/special-product-types/gift-cards/file-details-gift-card-concrete-configuration.csv.html
-                include_versions:
-                  - "202005.0"
-                  - "202009.0"
-              - title: File details - gift_card_abstract_configuration.csv
-                url: /docs/scos/dev/data-import/data-import-categories/special-product-types/gift-cards/file-details-gift-card-abstract-configuration.csv.html
-                include_versions:
-                  - "202005.0"
-                  - "202009.0"
-          - title: Product options
-            url: /docs/scos/dev/data-import/data-import-categories/special-product-types/product-options/product-options.html
-            include_versions:
-              - "202005.0"
-              - "202009.0"
-            nested:
-              - title: File details - product_option.csv
-                url: /docs/scos/dev/data-import/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html
-                include_versions:
-                  - "202005.0"
-                  - "202009.0"
-              - title: File details - product_option_price.csv
-                url: /docs/scos/dev/data-import/data-import-categories/special-product-types/product-options/file-details-product-option-price.csv.html
-                include_versions:
-                  - "202005.0"
-                  - "202009.0"
       - title: Merchandising setup
         url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/merchandising-setup.html
         include_versions:

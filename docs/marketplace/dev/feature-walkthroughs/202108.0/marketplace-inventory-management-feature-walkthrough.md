@@ -4,10 +4,12 @@ description: Merchants are product and service sellers in the Marketplace.
 template: feature-walkthrough-template
 ---
 
-The Marketplace Inventory Management implies Stock & Availability Management as well as Multiple Warehouse Stock Management for product offers and merchant products.
+The _Marketplace Inventory Management_ implies stock & availability management as well as multiple warehouse stock management for product offers and merchant products.
 
 {% info_block warningBox "User documentation" %}
-    To learn more about the feature and to find out how end users use it, see [Marketplace Inventory Management feature overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-inventory-management-feature-overview.html) for business users.
+
+To learn more about the feature and to find out how end users use it, see [Marketplace Inventory Management feature overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-inventory-management-feature-overview.html) for business users.
+
 {% endinfo_block %}
 
 ## Module dependency graph
@@ -16,21 +18,21 @@ The Marketplace Inventory Management implies Stock & Availability Management as 
 
 | MODULE     | DESCRIPTION                |
 |------------|----------------------------|
-| Availability |  Product availability is calculated based on the current stock and amount of reserved items (items in the current open orders). Availability module calculates the ProductAbstract and ProductConcrete availability, and the calculated availability is persisted. This calculations is crucial to prevent overselling.|
-| AvailabilityGui | AvailabilityGui is a user interface module to manage the stock and availability information in the Zed Administration Interface. |
+| Availability |  Product availability is calculated based on the current stock and amount of reserved items (items in the current open orders). The `Availability` module calculates the `ProductAbstract` and `ProductConcrete` availability, and the calculated availability is persisted. This calculations is crucial to prevent overselling.|
+| AvailabilityGui | User interface module to manage the stock and availability information in the Zed Administration Interface. |
 | AvailabilityStorage | Manages storage for merchant product offer. |
-| AvailabilityWidget | This module provides widgets that can determine a product's availability status.|
-| MerchantStock | MerchantStock module provides data structure, facade methods and plugins for extending merchant by merchant stock data. |
-| MerchantStockDataImport | Data importer for MerchantStock. |
-| MerchantStockGui | MerchantStockGuiModule provides Zed UI interface for merchant stock management. |
-| ProductOfferAvailability | This module provides the core functionality for product offer availability features. |
+| AvailabilityWidget | Provides widgets that can determine a product's availability status.|
+| MerchantStock | Provides data structure, facade methods and plugins for extending merchant by merchant stock data. |
+| MerchantStockDataImport | Data importer for `MerchantStock`. |
+| MerchantStockGui | Provides Zed UI interface for merchant stock management. |
+| ProductOfferAvailability | Provides the core functionality for product offer availability features. |
 | ProductOfferAvailabilityStorage | Manages storage for product offer availability data. |
-| ProductOfferStock | This module allows connecting product offers and their stocks. |
+| ProductOfferStock | Allows connecting product offers and their stocks. |
 | ProductOfferStockDataImport | Data importer for ProductOfferStock. |
-| ProductOfferStockGui | ProductOfferStockGui is the Zed Administrative Interface component for managing stocks for product offers. |
-| Stock | Stock manages products stocks. It is possible to define several storage locations in which the products are stored. A product can have multiple stock entries associated with it, and each of these is associated to a storage location. Stocks can be attached only to concrete products. It is also possible to define a product as never out of stock by using a corresponding flag. |
+| ProductOfferStockGui | Zed Administrative Interface component for managing stocks for product offers. |
+| Stock | Manages products stocks. It is possible to define several storage locations in which products are stored. A product can have multiple stock entries associated with it, and each of these is associated to a storage location. Stocks can be attached only to concrete products. It is also possible to define a product as never out of stock by using a corresponding flag. |
 | StockDataImport | This module has demo data and importer for stock. |
-| StockGui | Zed Gui for Stock module. |
+| StockGui | Zed Gui for the `Stock` module. |
 
 ## Domain model
 

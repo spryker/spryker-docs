@@ -1,9 +1,12 @@
 ---
-title: How to split Products by Stores
+title: 'HowTo: Split products by stores'
 description: This document provides details on how to split products by stores.
 template: howto-guide-template
+related: 
+    - title: Persistence ACL feature walkthrough
+      link: docs/marketplace/dev/feature-walkthroughs/page.version/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html
 ---
-This article explains how you can set up products by stores. For more clarity, we consider an example of a shop with two stores: DE and AT. For each store, we want to create separate _Product Manager_ roles:
+This article explains how you can split products by stores. For more clarity, we consider an example of a shop with two stores: DE and AT. For each store, we want to create separate _Product Manager_ roles:
 
 - DE product manager
 - AT product manager
@@ -14,10 +17,10 @@ Accordingly, the _AT Product Manager_ should only have access to the AT store pr
 To separate products by stores, follow the steps below.
 
 ## Prerequisites
-This example is convenient to consider using the example of the [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html).
+This example is convenient to consider on the basis of the [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html).
 Follow the [installation guide](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-macos-and-linux.html) to set it up.
 
-## 1. Include the AclEntity package
+## 1. Add the AclEntity package to the system
 After installing the B2C shop, do the following:
 1. Add the [spryker/acl-entity](https://github.com/spryker/acl-entity) package:
 
@@ -36,7 +39,7 @@ The database tables structure below relates to our use case:
 ![Product Store ERD](https://confluence-connect.gliffy.net/embed/image/cf459fd8-0710-4906-8cc8-f8a0cbaff18d.png?utm_medium=live&utm_source=custom)
 
 ## 2. System configuration
-Since we want to restrict access to the `Product` entity, first we have to hook up `AclEntityBehavior` to all the related tables:
+1. To restrict access to the `Product` entity, first hook up `AclEntityBehavior` to all the related tables:
 
 **.src/Pyz/Zed/Product/Persistence/Propel/Schema/spy_product.schema.xml**
 ```xml
@@ -79,10 +82,10 @@ Since we want to restrict access to the `Product` entity, first we have to hook 
 
 ```
 
-1. Extend the main configuration object of the Persistence Acl feature and set the necessary configuration.
+2. Extend the main configuration object of the Persistence Acl feature and configure as necessary.
 In our case, we use the [basic inheritance configuration](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/configuration.html) example and adopt it:
 
-`.src/Pyz/Zed/Product/Communication/Plugin/ProductAclEntityMetadataConfigExpanderPlugin.php`
+**.src/Pyz/Zed/Product/Communication/Plugin/ProductAclEntityMetadataConfigExpanderPlugin.php**
 ```php
 <?php
 
@@ -190,12 +193,10 @@ class AclEntityDependencyProvider extends SprykerAclEntityDependencyProvider
 ```
 
 ## 3. Configure data importers
-After completing the above steps, our system is configured to support the desired case. Next, we need to fill the system with the required data as explained below.
+After completing the above steps, the system is configured to support the desired case. Next, you need to fill the system with the required data, as explained below.
 
 ### 1. Install data importers
-Two data importer packages are required: [spryker/acl-data-import](https://github.com/spryker/acl-data-import) and [spryker/acl-entity-data-import](https://github.com/spryker/acl-entity-data-import).
-
-To install both of them, run:
+Two data importer packages are required: [spryker/acl-data-import](https://github.com/spryker/acl-data-import) and [spryker/acl-entity-data-import](https://github.com/spryker/acl-entity-data-import). To install both of them, run:
 
 ```shell
 composer require spryker/acl-data-import spryker/acl-entity-data-import
@@ -375,11 +376,11 @@ name,reference
 DE product manager,de_product_manager
 AT product manager,at_product_manager
 ```
-2. Run the command to start data import for `AclRoles`:
+2. To start data import for `AclRoles`, run:
 ```shell
 console data:import:acl-role
 ```
-After the command execution the the following `AclRoles` appear in the system:
+After the command execution, the following `AclRoles` appear in the system:
 - DE product manager
 - US product manager
 
@@ -388,7 +389,7 @@ As an example of `AclRole`, you should create `AclGroup`s as well. To do so:
 
 1. Prepare the `acl_group.csv` import file:
 
-`./data/import/common/common/acl_group.csv`
+**./data/import/common/common/acl_group.csv**
 ```csv
 name,reference
 DE product manager,de_product_manager
@@ -463,7 +464,7 @@ console data:import:acl-entity-segment-connector
 
 ### 6. Add AclEntityRules
 The final stage of the data creation is creating the corresponding `AclEntityRules`.
-See [Rules and Scopes](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/rules-and-scopes.html) for more information about the `AclEntityRule`.
+See [Rules and Scopes](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/rules-and-scopes.html) for more information about `AclEntityRule`.
 
 {% info_block infoBox "Info" %}
 
@@ -535,8 +536,8 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 ```
 ## 6. Set up users
 At this stage, the Persistence Acl feature is installed and configured to support the desired case.
-The only thing left is to add an appropriate group (_DE product manager_ and/or _AT product manager_) to the required user.
+The only thing left is to add an appropriate group (_DE product manager_ or _AT product manager_) to the required user.
 You can do this through the Back Office. See [Managing groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-groups.html) for details on how you can do that. Make sure to [assign corresponding `AclRule`](/docs/scos/dev/feature-walkthroughs/{{page.version}}/customer-account-management-feature-walkthrough/user-and-rights-overview.html) to the roles as well.
 
-When you add the _DE product manager_ group to a user, only `Products` related to the DE store will be available to that user.
-If the user needs access to both DE and AT stores, you need to add 2 groups (_DE product manager_, _AT product manager_) at once.
+When you add the _DE product manager_ group to a user, only `Products` related to the DE store become available to that user.
+If the user needs access to both DE and AT stores, add two groups,_DE product manager_ and _AT product manager_, at once.

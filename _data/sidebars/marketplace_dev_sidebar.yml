@@ -94,8 +94,8 @@ entries:
           - title: Persistence ACL feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html
             nested:
-              - title: Configuration
-                url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/configuration.html
+              - title: Persistence ACL feature configuration
+                url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/persistence-acl-feature-configuration.html
               - title: Rules and scopes
                 url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/rules-and-scopes/rules-and-scopes.html
                 nested:
@@ -656,5 +656,7 @@ entries:
       - title: HowTos
         nested:
 
-          - title: "How-To: Create a new module with application"
+          - title: "HowTo: Create a new module with application"
             url: /docs/marketplace/dev/howtos/how-to-create-a-new-module-with-application.html
+          - title: 'HowTo: Split products by stores'
+            url: /docs/marketplace/dev/howtos/how-to-split-products-by-stores.html

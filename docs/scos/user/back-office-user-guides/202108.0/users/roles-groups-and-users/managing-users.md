@@ -97,7 +97,7 @@ The following table describes the attributes used when creating or updating a us
 | Assigned Groups |List of all groups that are currently available in the system. You can select from one to many values by selecting the appropriate checkboxes. |
 | Agent | Identifies if this is a user agent. See the _Agent User_ section above. |
 | Interface Language |List of the available languages. This defines in what language the user will see the Back Office interface. Once the account language is changed, the respective user will see that their interface is translated into the corresponding language upon their next login.|
-| Status |**Available on the Edit User page only**</br>Identifies if this user is in active status. All records are **Active** upon creation by default. The available values are: **active** (meaning able to log in to Back Office), **blocked** (the user is not able to log in), **deleted** (the user is not able to log in)|
+| Status |**Available on the Edit User page only**<br>Identifies if this user is in active status. All records are **Active** upon creation by default. The available values are: **active** (meaning able to log in to Back Office), **blocked** (the user is not able to log in), **deleted** (the user is not able to log in)|
 
 ## Assigning customers to users
 

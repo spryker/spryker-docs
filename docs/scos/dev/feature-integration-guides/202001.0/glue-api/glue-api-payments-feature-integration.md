@@ -82,7 +82,7 @@ class PaymentsRestApiConfig extends SprykerPaymentsRestApiConfig
 }
 ```
 
-</br>
+<br>
 </details>
 
 <section contenteditable="false" class="warningBox"><div class="content">
@@ -114,7 +114,7 @@ In order to have payment methods available for the checkout, you need to extend 
 </transfers>
 ```
     
-</br>
+<br>
 </details>
 
 <p>Run the following command to generate transfer changes:
@@ -173,7 +173,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox “Verification” %}

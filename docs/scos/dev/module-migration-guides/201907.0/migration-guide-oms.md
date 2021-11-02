@@ -104,7 +104,7 @@ CREATE TABLE "spy_oms_product_reservation_last_exported_version"
      "updated_at" TIMESTAMP 
   ); 
 ```
-</br>
+<br>
 </details>
 
 ## Upgrading from Version 6.* to Version 7.*

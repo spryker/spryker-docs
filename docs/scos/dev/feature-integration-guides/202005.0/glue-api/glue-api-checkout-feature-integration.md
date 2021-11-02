@@ -10,7 +10,7 @@ redirect_from:
 ---
 
 {% info_block errorBox %}
-The following feature integration Guide expects the basic feature to be in place.</br>The current guide only adds the **Checkout API** functionality.
+The following feature integration Guide expects the basic feature to be in place.<br>The current guide only adds the **Checkout API** functionality.
 {% endinfo_block %}
 
 Follow the steps below to install Checkout feature API.
@@ -446,7 +446,7 @@ Activate the following plugin(s):
 
 | Plugin | Specification | Prerequisites | Namespace |
 | --- | --- | --- | --- |
-| `SinglePaymentCheckoutRequestAttributesValidatorPlugin` | Used for checkout request data validation.</br>The plugin ensures that a request contains one payment method only. | None | `Spryker\Glue\CheckoutRestApi\Plugin` |
+| `SinglePaymentCheckoutRequestAttributesValidatorPlugin` | Used for checkout request data validation.<br>The plugin ensures that a request contains one payment method only. | None | `Spryker\Glue\CheckoutRestApi\Plugin` |
 
 
 src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiDependencyProvider.php

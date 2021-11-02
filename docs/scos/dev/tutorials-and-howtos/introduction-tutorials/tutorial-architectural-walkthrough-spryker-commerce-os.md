@@ -352,7 +352,7 @@ To build the communication between Yves and Zed, we need the **Client**. Buildin
 
 {% info_block infoBox "Info" %}
 
-Any client that calls Zed from Yves uses the **ZedRequest** module. This module is responsible, as the name suggest, for the request to Zed from Yves, and uses its own client to do so. The client name is **ZedRequest** Client.</br>Following the modular approach in Spryker, all other modules need to use the `ZedRequest Client` whenever a request is to be sent to Zed from Yves.</br>As **ZedRequest** is a separated module, a dependency is needed between the calling module, **HelloSpryker** in our case, and **ZedRequest** module.An architectural concept in Spryker called `DependencyProvider` is used to inject these dependencies between different modules.
+Any client that calls Zed from Yves uses the **ZedRequest** module. This module is responsible, as the name suggest, for the request to Zed from Yves, and uses its own client to do so. The client name is **ZedRequest** Client.<br>Following the modular approach in Spryker, all other modules need to use the `ZedRequest Client` whenever a request is to be sent to Zed from Yves.<br>As **ZedRequest** is a separated module, a dependency is needed between the calling module, **HelloSpryker** in our case, and **ZedRequest** module.An architectural concept in Spryker called `DependencyProvider` is used to inject these dependencies between different modules.
 
 {% endinfo_block %}
 
@@ -434,7 +434,7 @@ public function reverseString(HelloSprykerTransfer $helloSprykerTransfer)
 
 {% info_block infoBox "Info" %}
 
-This method will call the Zed module **HelloSpryker**.</br>The first parameter in the `call()` method is the endpoint of the request which is divided into three main sections: `moduleName/controllerName/ActionName`. Here, we are calling the module **HelloSpryker**, the `GatewayController`, and the `ReverseStringAction`.</br>By convention, clients send requests to `GatewayControllers`. The second parameter is the payload of the request which is always a transfer object, any transfer object.
+This method will call the Zed module **HelloSpryker**.<br>The first parameter in the `call()` method is the endpoint of the request which is divided into three main sections: `moduleName/controllerName/ActionName`. Here, we are calling the module **HelloSpryker**, the `GatewayController`, and the `ReverseStringAction`.<br>By convention, clients send requests to `GatewayControllers`. The second parameter is the payload of the request which is always a transfer object, any transfer object.
 
 {% endinfo_block %}
 

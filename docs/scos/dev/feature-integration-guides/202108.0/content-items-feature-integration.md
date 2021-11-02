@@ -65,7 +65,7 @@ Ensure that the following modules have been installed in `vendor/spryker`:
 
 | AFFECTED ENTITY | TRIGGERED EVENTS                                             |
 | -------------- | ----------------------------------------------------------- |
-| spy_content     | Entity.spy_content.create</br>Entity.spy_content.update</br> Entity.spy_content.delete</br> |
+| spy_content     | Entity.spy_content.create<br>Entity.spy_content.update<br> Entity.spy_content.delete<br> |
 
 
 **src/Pyz/Zed/Content/Persistence/Propel/Schema/spy_content.schema.xml**

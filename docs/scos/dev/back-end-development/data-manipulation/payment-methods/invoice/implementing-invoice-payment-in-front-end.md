@@ -271,7 +271,7 @@ Add the Twig template that will be rendered when invoice payment method is selec
 </div>
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block errorBox %}

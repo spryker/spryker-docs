@@ -115,7 +115,7 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 
@@ -198,7 +198,7 @@ class ShoppingListPageDependencyProvider extends SprykerShoppingListPageDependen
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 {% info_block infoBox "Verification" %}

@@ -110,12 +110,12 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox “Verification” %}
 
-Run the following console command:</br> `console list`</br>Make sure that `customer-addresses:uuid:generate` appears in the list.
+Run the following console command:<br> `console list`<br>Make sure that `customer-addresses:uuid:generate` appears in the list.
 {% endinfo_block %}
 
 #### Migrate data in the database
@@ -132,7 +132,7 @@ console customer-addresses:uuid:generate
 
 {% info_block warningBox “Verification” %}
 
-Make sure that the `uuid` field is filled for all records in the `spy_customer_address` table. For this purpose, run the following SQL query and make sure that the result is 0 records:</br>`SELECT COUNT(*
+Make sure that the `uuid` field is filled for all records in the `spy_customer_address` table. For this purpose, run the following SQL query and make sure that the result is 0 records:<br>`SELECT COUNT(*
 {% endinfo_block %} FROM spy_customer_address WHERE uuid IS NULL;`)
 
 #### Enable resources and relationships
@@ -219,12 +219,12 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox “Verification” %}
 
-Make sure that the following endpoints are available:<ul><li>http://glue.mysprykershop.com/customers</li><li>http://glue.mysprykershop.com/addresses</li><li>http://glue.mysprykershop.com/customer-password</li><li>http://glue.mysprykershop.com/customer-forgotten-password</li><li>http://glue.mysprykershop.com/customer-restore-password</li></ul>Send a request to *http://glue.mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}?include=addresses*. Make sure that the response includes relationships to the `addresses` resources.</br>*The Customer with the given ID should have at least one address*. 
+Make sure that the following endpoints are available:<ul><li>http://glue.mysprykershop.com/customers</li><li>http://glue.mysprykershop.com/addresses</li><li>http://glue.mysprykershop.com/customer-password</li><li>http://glue.mysprykershop.com/customer-forgotten-password</li><li>http://glue.mysprykershop.com/customer-restore-password</li></ul>Send a request to *http://glue.mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}?include=addresses*. Make sure that the response includes relationships to the `addresses` resources.<br>*The Customer with the given ID should have at least one address*. 
 {% endinfo_block %}
 
 *Last review date: Apr 11, 2019*

@@ -33,7 +33,7 @@ Adjust the schema definition so entity changes will trigger events:
 
 | Affected entity | Triggered Events |
 | --- | --- |
-| `spy_content` | `Entity.spy_content.create`</br>`Entity.spy_content.update`</br>`Entity.spy_content.delete` |
+| `spy_content` | `Entity.spy_content.create`<br>`Entity.spy_content.update`<br>`Entity.spy_content.delete` |
 
 src/Pyz/Zed/Content/Persistence/Propel/Schema/spy_content.schema.xml
     
@@ -352,7 +352,7 @@ PS-3,PS Name 3,PS Description 3,3_tomtom_runner_set,2_sony_set,
 | key | mandatory | string (unique) | Reference used for banner updates. |
 | name | mandatory | string | Content Item name. |
 | description | mandatory | string | Content Item description. |
-| product_set_key.default,</br>product_set_key.en_US,</br> product_set_key.de_DE | mandatory (at least one locale) | string | Localized product set key. |
+| product_set_key.default,<br>product_set_key.en_US,<br> product_set_key.de_DE | mandatory (at least one locale) | string | Localized product set key. |
 
 Register the following plugin to enable Content Items data import:
 

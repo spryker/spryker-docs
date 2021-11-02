@@ -72,8 +72,8 @@ Adjust the schema definition, so entity changes can trigger events.
 
 | AFFECTED ENTITY | TRIGGERED EVENTS |
 | --- | --- |
-| spy_product_packaging_unit | Entity.spy_product_packaging_unit.create</br>Entity.spy_product_packaging_unit.update</br>Entity.spy_product_packaging_unit.delete |
-| spy_product_packaging_unit_type | Entity.spy_product_packaging_unit_type.create</br>Entity.spy_product_packaging_unit_type.update</br>Entity.spy_product_packaging_unit_type.delete |
+| spy_product_packaging_unit | Entity.spy_product_packaging_unit.create<br>Entity.spy_product_packaging_unit.update<br>Entity.spy_product_packaging_unit.delete |
+| spy_product_packaging_unit_type | Entity.spy_product_packaging_unit_type.create<br>Entity.spy_product_packaging_unit_type.update<br>Entity.spy_product_packaging_unit_type.delete |
 
 
 **src/Pyz/Zed/ProductPackagingUnit/Persistence/Propel/Schema/spy_product_packaging_unit.schema.xml**
@@ -142,6 +142,9 @@ Make sure that the following changes have been applied by checking your database
 {% info_block warningBox "Verification" %}
 
 Make sure that the following changes in transfer objects have been applied:
+
+| TRANSFER | TYPE | EVENT | PATH |
+| --- | --- | --- | --- |
 | ProductPackagingUnitTransfer | class | created | src/Generated/Shared/Transfer/ProductPackagingUnitTransfer |
 | ProductPackagingUnitAmountTransfer | class | created | src/Generated/Shared/Transfer/ProductPackagingUnitAmountTransfer |
 | ProductPackagingUnitStorageTransfer | class | created | src/Generated/Shared/Transfer/ProductPackagingUnitStorageTransfer |
@@ -162,7 +165,7 @@ Make sure that the changes have been implemented successfully. To do it, trigger
 
 | PATH | METHOD NAME |
 | --- | --- |
-| src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingUnit.php | prepareSaveEventName()</br>addSaveEventToMemory()</br>addDeleteEventToMemory() |
+| src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingUnit.php | prepareSaveEventName()<br>addSaveEventToMemory()<br>addDeleteEventToMemory() |
 | src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingUnitType.php | prepareSaveEventName()<br>addSaveEventToMemory()<br>addDeleteEventToMemory() |
 | src/Orm/Zed/ProductPackagingUnitStorage/Persistence/Base/SpyProductPackagingUnitStorage.php | prepareSaveEventName()<br>addSaveEventToMemory()<br>addDeleteEventToMemory() |
 | src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingUnitType.php | sendToQueue() |
@@ -870,7 +873,16 @@ Add an item with packaging units to cart.
 
 {% info_block warningBox "Verification" %}
 
-Go through the checkout workflow and make an order.<br><ul><li>Check if the stock is modified respectfully according to your lead product's and packaging unit's configuration.</li><li>Check if the following fields in the `spy_sales_order_item` table are saved:<br><ul><li>`amount`</li><li>`amount_sku`</li><li>`amount_measurement_unit_name`</li><li>`amount_measurement_unit_code`</li><li>`amount_measurement_unit_precision`</li><li>`amount_measurement_unit_conversion`</li><li>`amount_base_measurement_unit_name`</li></ul></li></ul>
+Go through the checkout workflow and make an order>.
+* Check if the stock is modified respectfully according to your lead product's and packaging unit's configuration.
+* Check if the following fields in the `spy_sales_order_item` table are saved:
+  * `amount`
+  * `amount_sku`
+  * `amount_measurement_unit_name`
+  * `amount_measurement_unit_code`
+  * `amount_measurement_unit_precision`
+  * `amount_measurement_unit_conversion`
+  * `amount_base_measurement_unit_name`
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
@@ -1004,10 +1016,10 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-{% info_block infoBox "Info" %}
-
-`ProductPackagingUnitWidget` uses Javascript for some functionality:<br><table><th>Functionality</th><th>Path</th><tr><td><ul><li>Controls base unit =&gt; sales unit calculations</li><li>Applies product quantity and amount restrictions on sales unit level</li><li>Offers recommendation when invalid quantity or amount is selected</li><li>Maintains stock-based quantity, amount and sales unit information for posting</li></ul></td><td>`vendor/spryker-shop/product-packaging-unit-widget/src/SprykerShop/Yves/ProductPackagingUnitWidget/Theme/default/components/molecules/packaging-unit-quantity-selector/packaging-unit-quantity-selector.ts`</td></tr></table>
-{% endinfo_block %}
+`ProductPackagingUnitWidget` uses Javascript for some functionality:
+<div>
+<table><tr><th>Functionality</th><th>Path</th></tr><tr><td><ul><li>Controls base unit =&gt; sales unit calculations</li><li>Applies product quantity and amount restrictions on sales unit level</li><li>Offers recommendation when invalid quantity or amount is selected</li><li>Maintains stock-based quantity, amount and sales unit information for posting</li></ul></td><td>`vendor/spryker-shop/product-packaging-unit-widget/src/SprykerShop/Yves/ProductPackagingUnitWidget/Theme/default/components/molecules/packaging-unit-quantity-selector/packaging-unit-quantity-selector.ts`</td></tr></table>
+</div>
 
 Run the following command to enable Javascript and CSS changes:
 

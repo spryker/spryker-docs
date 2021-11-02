@@ -41,7 +41,7 @@ class CmsDependencyProvider extends SprykerCmsDependencyProvider
 }
 ```
 
-</br>
+<br>
 </details>
 
 * Optionally, upgrade the `spryker/cms-gui` module to at least 4.3 version if you want to have access to the Yves [preview pages from the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/managing-cms-pages.html#previewing-cms-pages).
@@ -72,7 +72,7 @@ class CmsDependencyProvider extends SprykerCmsDependencyProvider
     }
 ```
 
-</br>
+<br>
 </details>
 
 3. The retrieved CMS data structure should match the Storage's data structure at this point.
@@ -95,7 +95,7 @@ class CmsDependencyProvider extends SprykerCmsDependencyProvider
     ...
 ```
 
-</br>
+<br>
 </details>
 
 2. Optionally add the **Preview** button group item to the "List of CMS pages" in the Back Office by registering the `CmsPageTableExpanderPlugin` plugin to access the preview page.
@@ -124,7 +124,7 @@ class CmsGuiDependencyProvider extends SprykerCmsGuiDependencyProvider
 }
 ```
 
-</br>
+<br>
 </details>
 
 3. Optionally add the **Preview** action button to the **Edit Placeholders** in the Back Office by registering the `CreateGlossaryExpanderPlugin` plugin to access the preview page.
@@ -153,7 +153,7 @@ class CmsGuiDependencyProvider extends SprykerCmsGuiDependencyProvider
 }
 ```
 
-</br>
+<br>
 </details>
 
 ## Restricting Access to Preview Page

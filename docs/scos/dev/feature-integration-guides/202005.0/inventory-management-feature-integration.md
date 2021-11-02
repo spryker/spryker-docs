@@ -14,7 +14,7 @@ related:
 ---
 
 {% info_block errorBox %}
-The following feature integration guide expects the basic feature to be in place.</br>The current feature integration guide only adds the **Warehouse Management** functionality.
+The following feature integration guide expects the basic feature to be in place.<br>The current feature integration guide only adds the **Warehouse Management** functionality.
 {% endinfo_block %}
 
 ## Install Feature Core

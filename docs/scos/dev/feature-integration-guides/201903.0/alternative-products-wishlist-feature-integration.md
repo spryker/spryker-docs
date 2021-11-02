@@ -64,7 +64,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 Run the following command to enable Javascript and CSS changes:

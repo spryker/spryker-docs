@@ -163,7 +163,7 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
 }
 ```
 
-</br>
+<br>
 </details>
 
 **Changing Displayed Calculated Values**

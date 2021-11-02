@@ -376,7 +376,7 @@ To see all listeners mapped for a certain event, Ctrl+Click it in PhpStorm. The 
 ### Debug Publish and Synchronize
 To debug Publish and Synchronize:
 
-1. Turn off [Jenkins](/docs/scos/dev/sdk/{{site.version}}/cronjob-scheduling.html) to stop processing all queues. This can be done using the following command:
+1. Turn off [Jenkins](/docs/scos/dev/sdk/cronjob-scheduling.html) to stop processing all queues. This can be done using the following command:
 
    ```bash
    console setup:jenkins:disable

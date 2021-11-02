@@ -246,6 +246,9 @@ entries:
           - title: Merchant Portal - Marketplace Product feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-feature-integration.html
 
+          - title: Merchant Portal - Marketplace Product Option Management feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-option-management-feature-integration.html
+
           - title: Merchant Portal - Marketplace Merchant Portal Product Offer Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-portal-product-offer-management-feature-integration.html
 
@@ -687,6 +690,9 @@ entries:
 
       - title: HowTos
         nested:
+
+          - title: "How-To: Upgrade Spryker instance to the Marketplace"
+            url: /docs/marketplace/dev/howtos/how-to-upgrade-spryker-instance-to-marketplace.html
 
           - title: "How-To: Create a new module with application"
             url: /docs/marketplace/dev/howtos/how-to-create-a-new-module-with-application.html

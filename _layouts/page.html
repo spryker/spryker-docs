@@ -70,6 +70,15 @@ layout: default
             <div class="summary">{{page.summary}}</div>
         {% endif %}
 
+
+        {% if page.canonical_url != nil and page.latest_version != nil %}
+        {% info_block errorBox %}
+
+        You are browsing a previous version of the document. The latest version is <a href="{{ page.canonical_url }}">{{ site.versions[page.latest_version.version] | default: 'undefined' }}</a>.
+
+        {% endinfo_block %}
+        {% endif %}
+
         {{content}}
 
         {% if page.tags != null %}

@@ -394,7 +394,7 @@ Make sure that when the following entities get updated via the ORM, the correspo
 
 Prepare your data according to your requirements using the demo data:
 
-<details><summary>data/import/common/common/marketplace/price_product_offer.csv</summary>
+<details><summary markdown='span'>data/import/common/common/marketplace/price_product_offer.csv</summary>
 
 ```csv
 product_offer_reference,price_type,store,currency,value_net,value_gross,price_data.volume_prices

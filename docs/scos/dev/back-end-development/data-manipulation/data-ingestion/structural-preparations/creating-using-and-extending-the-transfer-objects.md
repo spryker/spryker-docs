@@ -63,7 +63,7 @@ As for the types, you can use PHP native types: `int`, `string`, `bool`, and `ar
 
 The transfer object associative property attribute allows working with associative arrays and collections. An *associative array* is an array with a string index where instead of linear storage, each value can be assigned a specific key.
 
-The associative attribute can be used with all PHP native data types or collections. As of [202108.0 release](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202108.0/release-notes-202108.0.md), we recommend creating strict transfer objects.
+The associative attribute can be used with all PHP native data types or collections. As of [202108.0 release](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202108.0/release-notes-202108.0.html), we recommend creating strict transfer objects.
 
 Schema generation example:
 

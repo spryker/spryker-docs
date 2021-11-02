@@ -1437,7 +1437,7 @@ Make sure that the configured data is added to the `spy_glossary` table in the d
 
 {% endinfo_block %}
 
-### 3) Set up widgets
+### 2) Set up widgets
 
 Register the following plugins to enable widgets:
 

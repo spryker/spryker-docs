@@ -128,9 +128,9 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
 **Totals**
 | Attribute | Type | Description |
 | --- | --- | --- |
-| expenseTotal | String | Total amount of expenses (including e.g. shipping costs). |
+| expenseTotal | Integer | Total amount of expenses (including e.g. shipping costs). |
 | discountTotal | Integer | Total amount of discounts applied to the cart.  |
-| taxTotal | String | Total amount of taxes to be paid. |
+| taxTotal | Integer | Total amount of taxes to be paid. |
 | subTotal | Integer | Subtotal of the cart.  |
 | grandTotal | Integer | Grand total of the cart.  |
 
@@ -1706,7 +1706,7 @@ To retrieve all carts, send the request:
 | --- | --- | --- |
 | expenseTotal | String | Total amount of expenses (including, e.g., shipping costs). |
 | discountTotal | Integer | Total amount of discounts applied to the cart.  |
-| taxTotal | String | Total amount of taxes to be paid. |
+| taxTotal | Integer | Total amount of taxes to be paid. |
 | subTotal | Integer | Subtotal of the cart.  |
 | grandTotal | Integer | Grand total of the cart.  |
 | selectedProductOptions | array | List of attributes describing the product options that were added to cart with the product. |

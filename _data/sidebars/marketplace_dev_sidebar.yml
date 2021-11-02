@@ -706,5 +706,5 @@ entries:
           - title: "How-To: Create a new Gui table filter type"
             url: /docs/marketplace/dev/howtos/how-to-add-new-guitable-filter-type.html
 
-          - title: "How-To: Create a new MerchantOms flow"
+          - title: "How-To: Creating of a new MerchantOms flow "
             url: /docs/marketplace/dev/howtos/how-to-create-a-new-merchant-oms-flow.html

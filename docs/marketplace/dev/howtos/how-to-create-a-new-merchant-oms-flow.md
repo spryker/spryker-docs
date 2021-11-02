@@ -1,21 +1,16 @@
 ---
-title: "How-To: Create a new MerchantOms flow"
+title: "How-To: Creating of a new MerchantOms flow"
 description: This articles provides details how to create new MerchantOms flow
 template: howto-guide-template
 ---
 
-#Creating of a new MerchantOms flow <!---in -ing form, e.g. Creating CMS pages)-->
+This article provides the details on how to create a new MerchantOms flow.
 
-This article provides the details of how to create new MerchantOms flow
-
-<!---Help the readers to determine quickly if the HowTo matches their interests or needs. In a few sentences, summarize the main points of your HowTo. Make sure to include any critical definitions which will help readers evaluate the utility of your HowTo.-->
-
-<!---State the purpose of your HowTo. Explain how the reader will benefit from reading it. Give your reader an incentive or two to continue.-->
- 
-<!---Inform your readers about any required knowledge, configuration, or resources they may need before stepping through your HowTo. Give links to resources that will be useful to fulfill the prerequisites.-->
+To create a new MerchantOms flow, follow the steps:
 
 1. Create a new XML file `config/Zed/oms/MarketplacePayment01.xml`
-2. Add the Demo01 state machine process schema as following:
+2. Add the Demo01 state machine process schema as follows:
+
 ```xml
 <?xml version="1.0"?>
 <statemachine
@@ -36,16 +31,19 @@ This article provides the details of how to create new MerchantOms flow
 	</process>
 </statemachine>		
 ```
-3. Activate the OMS process in config_default.php in config/shared by adding the name of the process `MarketplacePayment01` to the key [OmsConstants::ACTIVE_PROCESSES].
+
+3. Activate the OMS process in the `config_default.php` in config/shared folder by adding the name of the process `MarketplacePayment01` to the key `[OmsConstants::ACTIVE_PROCESSES]`.
 
 ```php
 $config[OmsConstants::ACTIVE_PROCESSES] = [
 	'MarketplacePayment01'
 ];
 ```
-4. Create Merchant state machines (To learn more about state machine creation, see [Tutorial - OMS and State Machines](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1018855468/Tutorial+-+OMS+and+State+Machines+-+Spryker+Commerce+OS+-review))
 
-`config/Zed/StateMachine/Merchant/MainMerchantStateMachine.xmlM`
+4. Create Merchant state machines. To learn more about state machine creation, see [Tutorial - OMS and State Machines](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1018855468/Tutorial+-+OMS+and+State+Machines+-+Spryker+Commerce+OS+-review).
+
+**config/Zed/StateMachine/Merchant/MainMerchantStateMachine.xml**
+
 ```xml
 <?xml version="1.0"?>
 <statemachine
@@ -85,8 +83,9 @@ $config[OmsConstants::ACTIVE_PROCESSES] = [
 </statemachine>
 ```
 
-6. Use the state machine by hooking it into the checkout.
-To do so, open the configuration file `config/Shared/config_default.php`(`config_default-docker.php` if you use docker) and make the invoice payment method use the `MarketplacePayment01` process.
+6. Hook the state machine into the checkout.
+Open the configuration file `config/Shared/config_default.php`(`config_default-docker.php` if you are using Docker) and make the invoice payment method use the `MarketplacePayment01` process.
+
 ```php
 $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
     DummyPaymentConfig::PAYMENT_METHOD_INVOICE => 'MarketplacePayment01',
@@ -94,24 +93,14 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 ```
 
 7. To assign the `MerchantOms` flow to a `Merchant`, you can use the `MerchantOmsDataImport` module.
-Fill in `merchant_oms_process.csv` as shown in the example below:
+Fill in the `merchant_oms_process.csv` as shown in the example below:
 
 ```php
 merchant_reference,merchant_oms_process_name
 MER000001,MainMerchantStateMachine
-
 ```
 and run the following command: 
+
 ```bash
 data:import merchant-oms-process
 ```
-
-<!---In a precise, step-by-step approach, walk your reader through the process. Make sure your reader can reproduce your intended result by following your exact steps. Make the learning process efficient by supplying code samples and/or configuration details as necessary.-->
-
-<!---In a few sentences, summarize what the reader has just learned. Describe the end result they should obtain after executing the instructions of your HowTo.-->
-
-<!---If your HowTo consists of several interdependent guides, add the "What's Next" section where you guide the reader to the next step. For example: *Now that the SprykerModule is installed*, <u>integrate it to your project</u> (this would be a link to the next HowTo explaining how to integrate the module).-->
-
-<!---Provide links to external resources that will help the reader better understand the described topic or execute the guidelines more efficiently.-->
-
-<!---Add topics from our documentation website that are related to the topic of your HowTo or that logically continues or supplements it.-->

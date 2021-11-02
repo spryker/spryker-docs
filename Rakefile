@@ -89,7 +89,7 @@ end
 task :check_scos_user do
   options = commonOptions.dup
   options[:file_ignore] = [
-    /docs\/scos\/.+/,
+    /docs\/marketplace\/.+/,
     /docs\/cloud\/.+/,
     /docs\/scos\/dev\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/201811\.0\/.+/,

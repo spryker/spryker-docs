@@ -25,7 +25,7 @@ The following guide provides step-by-step instructions on how to implement a RES
 
 {% info_block warningBox %}
 
-<div>Consider studying the following documents before you begin:<ul><li>[JSON API Specification](https://jsonapi.org/format/) implemented in Spryker;</li><li>[Swagger Tools Reference](https://swagger.io/) to know how to document your API;</li><li>[REST API Modelling Reference](https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling).</li></ul></div>
+Consider studying the following documents before you begin:<ul><li>[JSON API Specification](https://jsonapi.org/format/) implemented in Spryker;</li><li>[Swagger Tools Reference](https://swagger.io/) to know how to document your API;</li><li>[REST API Modelling Reference](https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling).</li></ul>
 
 {% endinfo_block %}
 

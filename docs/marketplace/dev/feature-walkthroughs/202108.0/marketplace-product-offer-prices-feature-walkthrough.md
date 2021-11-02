@@ -56,6 +56,9 @@ The following diagram illustrates the dependencies between the modules for the *
 | ProductOffer | Provides the core functionality for product offer features.   |
 
 ## Domain model
+
+The following schema illustrates the Marketplace Product Offer Prices domain model:
+
 ![Entity diagram](https://confluence-connect.gliffy.net/embed/image/0ad490bb-f21f-4e4a-b6eb-e0102a8c7b42.png?utm_medium=live&utm_source=confluence)
 
 ## Related Developer articles

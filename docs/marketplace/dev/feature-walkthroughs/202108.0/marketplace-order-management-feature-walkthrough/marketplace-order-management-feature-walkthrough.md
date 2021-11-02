@@ -33,7 +33,7 @@ The following diagram illustrates the dependencies between the modules for the *
 | [MerchantSalesOrderMerchantUserGui](https://github.com/spryker/merchant-sales-order-merchant-user-gui) | Backoffice UI for managing merchant sales orders for the Marketplace operator. |
 | [MerchantSalesOrderWidget](https://github.com/spryker-shop/merchant-sales-order-widget) | Provides Merchant Order information for Yves. |
 | [Oms](https://github.com/spryker/oms) | Order management system for implementing complex process flows using the state machines. |
-| [OmsProductOfferReservation](https://github.com/spryker/oms-product-offet-reservation) | Provides functionality for save/update/remove reservations for the product offers. |
+| [OmsProductOfferReservation](https://github.com/spryker/oms-product-offer-reservation) | Provides functionality for save/update/remove reservations for the product offers. |
 | [ProductOfferReservationGui](https://github.com/spryker/product-offer-reservation-gui) | Backoffice UI component for managing reservations for product offers. |
 | [ProductOfferSales](https://github.com/spryker/product-offer-sales) | Connects product offer and sales entities. |
 | [Sales](https://github.com/spryker/sales) | Provides the order management core functionality. |

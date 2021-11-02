@@ -582,7 +582,5 @@ public function execute(Request $request, AbstractTransfer $quoteTransfer)
 ```
 
 {% info_block infoBox "Info" %}
-
 Done and ready for testing! <ol><li>Go to the shop.</li><li>Add any product to cart.</li><li>Go the checkout and enter any of the available voucher codes.</li></ol><br>You should receive a discount on your order.
-
 {% endinfo_block %}

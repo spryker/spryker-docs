@@ -730,6 +730,7 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
+<div>
 Make sure that the following plugin has been registered:<br>Open Yves and log in with customer.
 
 | MODULE | TEST |
@@ -737,6 +738,7 @@ Make sure that the following plugin has been registered:<br>Open Yves and log in
 | SharedCartPermissionGroupWidget | Hover over the multicart list in the header: it should contain the access column. |
 | CartListPermissionGroupWidget | Open `https://mysprykershop.com/multi-cart/` - the page should contain the access column and share cart link |
 | CartDeleteCompanyUsersListWidget | Open `https://mysprykershop.com/multi-cart/`. Click on the share cart link.  <br>Share the cart and click on the delete link.  <br>The list of customers whom this cart is shared with should appear on the delete confirmation page. |
+</div>
 
 {% endinfo_block %}
 
@@ -776,6 +778,6 @@ class YvesBootstrap extends SprykerYvesBootstrap
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following plugin has been registered:<ol><li> Open Yves and log in with customer.</li><li>Open `https://mysprykershop.com/multi-cart/` - the page should contain all customer's quotes.</li><li>Click on the share link. The share cart page should open.</li></ol>
+<div>Make sure that the following plugin has been registered:<ol><li> Open Yves and log in with customer.</li><li>Open `https://mysprykershop.com/multi-cart/` - the page should contain all customer's quotes.</li><li>Click on the share link. The share cart page should open.</li></ol></div>
 
 {% endinfo_block %}

@@ -148,7 +148,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-
+<div>
 Make sure that `ValidateRestRequestAttributesPlugin` has been activated:
 1. Make sure that there is a Glue API feature that uses validation configuration in your project.
 2. Create validation configuration:
@@ -208,6 +208,6 @@ You should get a validation error similar to the following response sample:
         }
     ]
 }
-
+</div>
 
 {% endinfo_block %}

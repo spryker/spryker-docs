@@ -149,7 +149,6 @@ class PaymentDependencyInjector extends AbstractDependencyInjector
 ```
 
 <br>
-</details>
 
 3. Link the prepayment state machine to process the orders submitted with the payment method we’re implementing.
 

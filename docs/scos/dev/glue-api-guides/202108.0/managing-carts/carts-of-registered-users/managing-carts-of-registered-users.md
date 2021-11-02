@@ -2164,7 +2164,6 @@ To retrieve a particular cart, send the request:
 }
 ```
 
-</summary>
 </details>
 
 <details>

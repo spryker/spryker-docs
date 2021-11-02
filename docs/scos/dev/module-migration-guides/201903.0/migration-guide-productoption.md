@@ -59,7 +59,7 @@ class ProductOptionDependencyProvider extends SprykerProductOptionDependencyProv
 }
 ```
 
-</br>
+<br>
 </details>
 
 11. Migrate prices from `spy_product_option_value.price` field to `spy_product_option_value_price` table. Each `spy_product_option_value` row must have at least 1 `spy_product_option_value_price` row connected. A `ProductOptionValue` entity can have multiple `ProductOptionValuePrices` connected. You can define different gross/net price per currency per store by populating the `fk_currency` and `fk_store` fields accordingly. When either `gross_price` or `net_price` database field is left as `null`, that option will not be available for customers in that exact currency, store, price mode trio. If you set a price field as 0, the option is available for customers and it means it is free of charge.
@@ -316,7 +316,7 @@ class MigrateProductOptionValuePricesConsole extends Console
 }
 ```
 
-</br>
+<br>
 </details>
 
 12. The product option collector has to be amended to support multi-currency prices on product option values. The Storage has to save all product option value prices within a given store using the new Storage data structure:
@@ -425,7 +425,7 @@ class ProductOptionCollector extends Spryker\Zed\Collector\Business\Collector\St
 }
 ```
 
-</br>
+<br>
 </details>
 
 13. Transfer objects were amended to support multi-currency price storage. Check your customized codes for the following fields to apply the new behavior:

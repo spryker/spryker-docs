@@ -33,7 +33,7 @@ The following table describes the attributes you enter when creating, viewing or
 | Attribute | Description |
 | --- | --- |
 | Name | Name of the warehouse. |
-| Is this warehouse available? | *Yes* - the warehouse is active.</br>*No* - the warehouse is inactive. |
+| Is this warehouse available? | *Yes* - the warehouse is active.<br>*No* - the warehouse is inactive. |
 | Store relation | Store(s) in which the warehouse is available. |
 
 <!-- Last review date: Nov 12, 2019 by Yuliia Boiko -->

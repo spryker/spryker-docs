@@ -52,7 +52,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 }
 ```
 
-</br>
+<br>
 </details>
 
 You should be able now to see the "abstract product-store" relations in the Product Information Management (PIM) Back Office, however you will not able to manage / change anything yet. If you would like to enable the entire multi-store product behavior, see [Multi-Store Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/multi-store-products-feature-integration.html).

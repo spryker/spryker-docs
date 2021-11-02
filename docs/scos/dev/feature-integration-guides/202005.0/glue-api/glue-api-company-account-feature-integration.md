@@ -21,7 +21,7 @@ related:
 ---
 
 {% info_block errorBox %}
-The following feature integration guide expects the basic feature to be in place.</br>The current feature integration Guide only adds the Company Account REST API functionality.
+The following feature integration guide expects the basic feature to be in place.<br>The current feature integration Guide only adds the Company Account REST API functionality.
 {% endinfo_block %}
 
 Follow the steps below to install Company Account feature API.
@@ -447,7 +447,7 @@ class CustomersRestApiDependencyProvider extends SprykerCustomersRestApiDependen
 }
 ```
 
-</br>
+<br>
 </details>
 
 <details open>

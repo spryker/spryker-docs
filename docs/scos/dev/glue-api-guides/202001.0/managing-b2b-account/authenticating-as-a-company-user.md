@@ -73,7 +73,7 @@ The endpoint responds with a `RestCompanyUserCollectionResponse` that contains
 
 | Attribute* | Type | Description |
 | --- | --- | --- |
-| id | String | Specifies the Company User ID.</br>You can use the ID to impersonate as the Company User via the `/company-user-access-tokens` endpoint. |
+| id | String | Specifies the Company User ID.<br>You can use the ID to impersonate as the Company User via the `/company-user-access-tokens` endpoint. |
 | isActive | Boolean | Indicates whether the Company User is active. |
 | isDefault | Boolean | Indicates whether the Company User is the default one for the logged in customer. |
 
@@ -320,7 +320,7 @@ In this case, the following additional attributes will be added to the response:
 }
 ```
     
-</br>
+<br>
 </details>
 
 ### Possible Errors
@@ -345,7 +345,7 @@ To access the endpoint, you need to authenticate customers as regular users firs
 
 | Attribute | Type | Description |
 | --- | --- | --- |
-| idCompanyUser | String | Specifies the ID of the Company User to impersonate.</br>Company User IDs can be retrieved using the **/company-users/mine** endpoint. |
+| idCompanyUser | String | Specifies the ID of the Company User to impersonate.<br>Company User IDs can be retrieved using the **/company-users/mine** endpoint. |
 
 **Sample Request:**
     

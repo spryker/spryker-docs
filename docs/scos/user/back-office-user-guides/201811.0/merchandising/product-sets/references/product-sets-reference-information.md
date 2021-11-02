@@ -47,7 +47,7 @@ The following tables describe the attributes that you enter and select while cre
 | Attribute | Description |
 | --- | --- |
 | **Image Set Name** |A name of your image set. No spaces are allowed, please use an underscore or dash. |
-| **Small Image URL**</br>**Large Image URL** | Allows adding images via a URL. Please make sure the image you are adding is available from a public URL. This means any images in a private Dropbox or Google folder will not work. |
+| **Small Image URL**<br>**Large Image URL** | Allows adding images via a URL. Please make sure the image you are adding is available from a public URL. This means any images in a private Dropbox or Google folder will not work. |
 | **Sort Order**|If you add several images to an active image set, specify the order in which they are to be shown in the front end and back end using Sort Order fields. The order of images is defined by the order of entered numbers where the image set with sort order "0" is the first to be shown. |  
 
 ## Product Set Example

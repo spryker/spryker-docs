@@ -206,5 +206,5 @@ class ProductListGuiDependencyProvider extends SprykerProductListGuiDependencyPr
 </details>
 
 {% info_block warningBox "Verification" %}
-Make sure that when creating or editing a product list in Zed, you can select the merchant relationship as an owner type and see the selected value in the list of product lists.</br></br>Also, make sure that when a customer (with an assigned merchant relationship that has assigned product lists
+Make sure that when creating or editing a product list in Zed, you can select the merchant relationship as an owner type and see the selected value in the list of product lists.<br><br>Also, make sure that when a customer (with an assigned merchant relationship that has assigned product lists
 {% endinfo_block %} logs in, they see products only according to their product list restrictions.)

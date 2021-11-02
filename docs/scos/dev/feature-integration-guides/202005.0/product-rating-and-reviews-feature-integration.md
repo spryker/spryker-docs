@@ -69,7 +69,7 @@ This command will generate some new classes in your project under `\Orm\Zed\Prod
         }
     }
 ```
- </br>
+ <br>
  </details>
 
 

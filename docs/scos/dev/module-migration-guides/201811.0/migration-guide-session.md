@@ -27,7 +27,7 @@ You need to change all:
 **to:**
 `$config[SessionConstants::CONFIG_KEY] = SessionConfig::CONFIG_VALUE;`
 
-</br>
+<br>
 </details>
 
 <!-- Last review date: Nov 22, 2018*  by René Klatt , Oksana Karasyova-->

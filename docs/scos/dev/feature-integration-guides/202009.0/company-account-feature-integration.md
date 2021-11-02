@@ -45,8 +45,8 @@ Adjust the schema definition so entity changes will trigger events.
 
 | Affected Entity | Triggered Events |
 | --- | --- |
-| `spy_company` | `Entity.spy_company.update`</br>`Entity.spy_company.delete` |
-| `spy_company_user` | `Entity.spy_company_user.`</br>`Entity.spy_company_user.update`</br>`Entity.spy_company_user.delete` |
+| `spy_company` | `Entity.spy_company.update`<br>`Entity.spy_company.delete` |
+| `spy_company_user` | `Entity.spy_company_user.`<br>`Entity.spy_company_user.update`<br>`Entity.spy_company_user.delete` |
 
 **src/Pyz/Zed/CompanyUser/Persistence/Propel/Schema/spy_company_user.schema.xml**
 

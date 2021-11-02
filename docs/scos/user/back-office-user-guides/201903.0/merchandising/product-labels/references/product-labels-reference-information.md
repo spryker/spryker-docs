@@ -27,6 +27,6 @@ In the table of the **Overview of Product Labels** page, you see the following i
 | **Name** | The name of the product label, e.g. Discounts Available. |
 | **Is Active** | A checkbox that, if selected, activates the product label. |
 | **Is Exclusive** | A checkbox that defines the product label exclusivity. If you want a specific label to be the only one displayed for a product, you select this checkbox. Even if you have other labels assigned, only the exclusive one will be displayed. |
-| **Valid From**</br>**Valid To** | The period for which the label will be displayed for a product. If no dates are specified, the label will always be displayed. |
+| **Valid From**<br>**Valid To** | The period for which the label will be displayed for a product. If no dates are specified, the label will always be displayed. |
 | **Front-end Reference** | Defines the location and the view of a product label. |
 | Translations: **Name** | The name of the product label translated to a respective language. |

@@ -44,11 +44,11 @@ Templates are project-specific and are usually created by a developer and a busi
 **Tips & Tricks**
 
 * Keep in mind that by default, store relation is enabled for all stores. To hide your page per specific locale(s), clear checkboxes per that(those) locale(s).
-</br>
+<br>
 * Please consider the following cases:
     * If **Is searchable** is selected, but **store relation** is turned off for all stores, the CMS page will not be displayed and will not be searchable.
     * If **Is searchable** is not selected, but **store relation** is turned on, the CMS page will be shown but will not be searchable.
- </br>
+ <br>
  * If you want to create **different** versions of the page per locale, add the general information to the section in the corresponding language.
 
 ***

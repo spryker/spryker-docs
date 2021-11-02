@@ -114,7 +114,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 }
 ```
 
-</br>
+<br>
  </details>
  
 <details open>
@@ -143,7 +143,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 	}
 }
 ```
-</br>
+<br>
 </details>
  
 <details open>
@@ -173,7 +173,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 }
 ```
 
-</br>
+<br>
  </details>
 
 Run the following console command to execute registered installer plugins and install infrastructural data:
@@ -183,7 +183,7 @@ console setup:init-db
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that:</br>1. Records with the keys `ReadSharedCartPermissionPlugin` and `WriteSharedCartPermissionPlugin` have been added to the `spy_permission` table.</br>2. In the database the configured infrastructural quote permission groups have been added to the `spy_quote_permission_group` and `spy_quote_permission_group_to_permission` tables.
+Make sure that:<br>1. Records with the keys `ReadSharedCartPermissionPlugin` and `WriteSharedCartPermissionPlugin` have been added to the `spy_permission` table.<br>2. In the database the configured infrastructural quote permission groups have been added to the `spy_quote_permission_group` and `spy_quote_permission_group_to_permission` tables.
 {% endinfo_block %}
 
 #### Import Carts Sharing
@@ -207,7 +207,7 @@ quote-23,Spryker--6,FULL_ACCESS
 quote-23,Spryker--4,READ_ONLY
 quote-23,Spryker--5,READ_ONLY
 ```
-</br>
+<br>
 </details>
 
 |Column|REQUIRED?|Data Type|Data Example|Data Explanation|
@@ -220,7 +220,7 @@ Register the following plugin to enable data import:
 
 |Plugin|Specification|Prerequisites |Namespace|
 |---|---|---|---|
-|SharedCartDataImportPlugin|Imports customer's quotes sharing to database.|Make sure that customers have been already imported.</br>Make sure that company users have been already imported.</br>Make sure that a cart has been already imported.|Spryker\Zed\SharedCartDataImport\Communication\Plugin|
+|SharedCartDataImportPlugin|Imports customer's quotes sharing to database.|Make sure that customers have been already imported.<br>Make sure that company users have been already imported.<br>Make sure that a cart has been already imported.|Spryker\Zed\SharedCartDataImport\Communication\Plugin|
 
 <details open>
 <summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
@@ -243,7 +243,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 Run the following console command to import data:
@@ -269,7 +269,7 @@ Register the following plugins:
 |---|---|---|---|
 |`CleanQuoteShareBeforeQuoteCreatePlugin`|Cleans up the cart shared details before the quote has been created.|None|`Spryker\Zed\SharedCart\Communication\Plugin`|
 |`DeactivateSharedQuotesBeforeQuoteSavePlugin`|Deactivates all shared carts for the current customer if the current cart in marked as active before the cart has been created or updated. |None|`Spryker\Zed\SharedCart\Communication\Plugin`|
-|`MarkAsDefaultQuoteAfterSavePlugin`|Updates the is active flag for the current shared cart based the active flag for the sharing relation.</br>It is executed after the cart has been created or updated.|None|`Spryker\Zed\SharedCart\Communication\Plugin`|
+|`MarkAsDefaultQuoteAfterSavePlugin`|Updates the is active flag for the current shared cart based the active flag for the sharing relation.<br>It is executed after the cart has been created or updated.|None|`Spryker\Zed\SharedCart\Communication\Plugin`|
 |`RemoveSharedQuoteBeforeQuoteDeletePlugin`|Removes the sharing relation for the current cart before the cart has been removed.|None|`Spryker\Zed\SharedCart\Communication\Plugin`|
 |`UpdateShareDetailsQuoteAfterSavePlugin`|Updates the cart sharing relations after the cart has been created or updated.|None|`Spryker\Zed\SharedCart\Communication\Plugin`|
 |`SharedQuoteSetDefaultBeforeQuoteSavePlugin`|Marks the cart sharing relation for the current customer as active if the quote has been marked as active.|None|`Spryker\Zed\SharedCart\Communication\Plugin`|
@@ -344,7 +344,7 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 </details>
 
 {% info_block infoBox "Additional Details" %}
-A shared quote can be marked as default for a customer that has access. The `is_default` field in the `spy_quote_company_user` BD table must be set to true in the corresponding record.</br>A new record will be added to `spy_quote_company_user` if the sharing quote functionality is used.
+A shared quote can be marked as default for a customer that has access. The `is_default` field in the `spy_quote_company_user` BD table must be set to true in the corresponding record.<br>A new record will be added to `spy_quote_company_user` if the sharing quote functionality is used.
 {% endinfo_block %}
 
 #### Persistent Cart Integration
@@ -352,10 +352,10 @@ A shared quote can be marked as default for a customer that has access. The `is_
 Register the following plugins:
 |Plugin|Specification|Prerequisites|Namespace|
 |---|---|---|---|
-|`SharedCartsUpdateQuoteUpdatePlugin`|Adds shared cart list to multi-cart collection.</br>Sorts the collection by name.</br>Saves the multi-cart collection in the session. |`SharedCartQuoteResponseExpanderPlugin` should be included. It should be executed after `\Spryker\Client\MultiCart\Plugin\SaveCustomerQuotesQuoteUpdatePlugin` has been registered and before `\Spryker\Client\MultiCart\Plugin\DefaultQuoteUpdatePlugin` has been registered.|`Spryker\Client\SharedCart\Plugin`|
+|`SharedCartsUpdateQuoteUpdatePlugin`|Adds shared cart list to multi-cart collection.<br>Sorts the collection by name.<br>Saves the multi-cart collection in the session. |`SharedCartQuoteResponseExpanderPlugin` should be included. It should be executed after `\Spryker\Client\MultiCart\Plugin\SaveCustomerQuotesQuoteUpdatePlugin` has been registered and before `\Spryker\Client\MultiCart\Plugin\DefaultQuoteUpdatePlugin` has been registered.|`Spryker\Client\SharedCart\Plugin`|
 |`ProductSeparatePersistentCartChangeExpanderPlugin`|Allows adding a product as a separate item if the product with the same SKU already exists in the cart.|1|`Spryker\Client\SharedCart\Plugin`|
 |`PermissionUpdateQuoteUpdatePlugin`|Takes a permission list from `QuoteResponseTransfer` and updates a customer from the session.|`SharedCartQuoteResponseExpanderPlugin` should be included.|`Spryker\Client\SharedCart\Plugin`|
-|`SharedCartQuoteResponseExpanderPlugin`|Expands `QuoteResponseTransfer` with the following shared cart related data:</br>1) Carts shared with the customer.</br>2) Customer permission list.</br>3) Expands a customer cart with the sharing data.|1|`Spryker\Zed\SharedCart\Communication\Plugin`|
+|`SharedCartQuoteResponseExpanderPlugin`|Expands `QuoteResponseTransfer` with the following shared cart related data:<br>1) Carts shared with the customer.<br>2) Customer permission list.<br>3) Expands a customer cart with the sharing data.|1|`Spryker\Zed\SharedCart\Communication\Plugin`|
 
 <details open>
 <summary markdown='span'>src/Pyz/Client/PersistentCart/PersistentCartDependencyProvider.php</summary>
@@ -394,7 +394,7 @@ class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyPr
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 <details open>
@@ -426,7 +426,7 @@ class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyPr
 
 {% info_block warningBox "Verification" %}
 After adding items to the cart, the following things must be done: 
-{% endinfo_block %}(</br>1) Quotes shared with the current customer must be added to the multi-cart session.</br>2) `CustomerTransfer::$permissions` must contain permissions and be updated in the customer session.)
+{% endinfo_block %}(<br>1) Quotes shared with the current customer must be added to the multi-cart session.<br>2) `CustomerTransfer::$permissions` must contain permissions and be updated in the customer session.)
 
 #### Set up Permission Integration
 
@@ -705,7 +705,7 @@ Make sure that the following plugin has been registered:<br>Open Yves and log in
 |---|---|
 |`SharedCartPermissionGroupWidget`|Hover over the multicart list in the header: it should contain the access column.|
 |`CartListPermissionGroupWidget`|Open https://mysprykershop.com/multi-cart/ - the page should contain the access column and share cart link.|
-|`CartDeleteCompanyUsersListWidget`|1) Open https://mysprykershop.com/multi-cart/.</br>2) Click on the share cart link.</br>3) Share the cart and click on the delete link.</br>The list of customers whom this cart is shared with should appear on the delete confirmation page. |
+|`CartDeleteCompanyUsersListWidget`|1) Open https://mysprykershop.com/multi-cart/.<br>2) Click on the share cart link.<br>3) Share the cart and click on the delete link.<br>The list of customers whom this cart is shared with should appear on the delete confirmation page. |
 </div></section>
 
 ### 4) Enable Controllers
@@ -742,7 +742,7 @@ class YvesBootstrap extends SprykerYvesBootstrap
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Verification" %}

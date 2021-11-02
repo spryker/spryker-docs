@@ -152,10 +152,10 @@ The *Addresses* section:
 
 |ATTRIBUTE| DESCRIPTION|
 |---|---|
-|Salutation</br>First Name</br>Last Name|Customer's salutation. If the other person is the point of contact for this address, you need to populate the fields with the respective data. If the customer is the same, populate the fields with the same values.|
-|Address</br>Address (2nd line)</br>Address(3rd line)|Fields with the address information except for the city, zip code, and country.|
+|Salutation<br>First Name<br>Last Name|Customer's salutation. If the other person is the point of contact for this address, you need to populate the fields with the respective data. If the customer is the same, populate the fields with the same values.|
+|Address<br>Address (2nd line)<br>Address(3rd line)|Fields with the address information except for the city, zip code, and country.|
 |Company|Customer's company.|
-|Zip Code</br>City</br>Country| City, zip code, and country of the customer.|
+|Zip Code<br>City<br>Country| City, zip code, and country of the customer.|
 |Actions| Allows you to edit customer addresses. In this field, you can click the *Edit* button next to the address you want to edit. |
 
 The *Orders* section:

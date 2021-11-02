@@ -159,7 +159,7 @@ Now, it is possible to verify that the configuration of NavigationsRestApiConfig
 {% endinfo_block %} 
 
 {% info_block warningBox “Verification” %}
-Send a request to *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?include=category-nodes*.</br>Make sure that the response contains `category-nodes` as a relationship and `category-nodes` data included.
+Send a request to *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?include=category-nodes*.<br>Make sure that the response contains `category-nodes` as a relationship and `category-nodes` data included.
 
 <details open>
 <summary markdown='span'>http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?include=category-nodes</summary>

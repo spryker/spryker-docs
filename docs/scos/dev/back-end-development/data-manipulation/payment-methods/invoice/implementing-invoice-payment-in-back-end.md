@@ -66,7 +66,7 @@ class InvoicePreCheckPlugin extends AbstractPlugin implements CheckoutPreCheckPl
 }
 ```
 
-</br>
+<br>
 </details>
 
 <details open>
@@ -101,7 +101,7 @@ class InvoiceSaveOrderPlugin extends AbstractPlugin implements CheckoutSaveOrder
 }
 ```
 
-</br>
+<br>
 </details>
 
 2. Next, inject these 2 plugins in the `Payment` module by creating a `PaymentDependencyInjector` under `Dependency/Injector/` folder:
@@ -156,7 +156,7 @@ class PaymentDependencyInjector extends AbstractDependencyInjector
 }
 ```
 
-</br>
+<br>
 </details>
 
 ## State Machine
@@ -294,7 +294,7 @@ Once the preceding procedures are completed, we’ll need to design a state mach
 
 ```
 
- </br>
+ <br>
  </details>
 
  2. Add this new state machine to `OmsConfig`:
@@ -319,7 +319,7 @@ Once the preceding procedures are completed, we’ll need to design a state mach
     }
 ```
 
-</br>
+<br>
 </details>
 
 3. Link the invoice state machine to process the orders submitted with the payment method we’re implementing.

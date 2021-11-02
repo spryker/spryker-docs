@@ -72,8 +72,8 @@ Adjust the schema definition, so entity changes can trigger events.
 
 | AFFECTED ENTITY | TRIGGERED EVENTS |
 | --- | --- |
-| spy_product_packaging_unit | Entity.spy_product_packaging_unit.create</br>Entity.spy_product_packaging_unit.update</br>Entity.spy_product_packaging_unit.delete |
-| spy_product_packaging_unit_type | Entity.spy_product_packaging_unit_type.create</br>Entity.spy_product_packaging_unit_type.update</br>Entity.spy_product_packaging_unit_type.delete |
+| spy_product_packaging_unit | Entity.spy_product_packaging_unit.create<br>Entity.spy_product_packaging_unit.update<br>Entity.spy_product_packaging_unit.delete |
+| spy_product_packaging_unit_type | Entity.spy_product_packaging_unit_type.create<br>Entity.spy_product_packaging_unit_type.update<br>Entity.spy_product_packaging_unit_type.delete |
 
 
 **src/Pyz/Zed/ProductPackagingUnit/Persistence/Propel/Schema/spy_product_packaging_unit.schema.xml**
@@ -162,7 +162,7 @@ Make sure that the changes have been implemented successfully. To do it, trigger
 
 | PATH | METHOD NAME |
 | --- | --- |
-| src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingUnit.php | prepareSaveEventName()</br>addSaveEventToMemory()</br>addDeleteEventToMemory() |
+| src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingUnit.php | prepareSaveEventName()<br>addSaveEventToMemory()<br>addDeleteEventToMemory() |
 | src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingUnitType.php | prepareSaveEventName()<br>addSaveEventToMemory()<br>addDeleteEventToMemory() |
 | src/Orm/Zed/ProductPackagingUnitStorage/Persistence/Base/SpyProductPackagingUnitStorage.php | prepareSaveEventName()<br>addSaveEventToMemory()<br>addDeleteEventToMemory() |
 | src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingUnitType.php | sendToQueue() |

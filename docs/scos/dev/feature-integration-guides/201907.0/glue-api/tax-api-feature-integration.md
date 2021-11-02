@@ -76,7 +76,7 @@ console uuid:generate Tex spy_tax_set
 
 {% info_block warningBox “Verification” %}
 
-Make sure that the `uuid` field is populated for all records in the `spy_tax_set` table. You can run the following SQL query for it and make sure that the result is 0 records.</br>`SELECT COUNT(*
+Make sure that the `uuid` field is populated for all records in the `spy_tax_set` table. You can run the following SQL query for it and make sure that the result is 0 records.<br>`SELECT COUNT(*
 {% endinfo_block %} FROM spy_tax_set WHERE uuid IS NULL;`)
 
 #### Enable resource and relationship
@@ -131,12 +131,12 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox “Verification” %}
 
-Make sure that the following endpoint is available:</br>`http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-tax-sets`</br>Send a request to `http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=product-tax-sets`. Make sure that the response includes relationships to the `product-tax-sets` resources.
+Make sure that the following endpoint is available:<br>`http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-tax-sets`<br>Send a request to `http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=product-tax-sets`. Make sure that the response includes relationships to the `product-tax-sets` resources.
 {% endinfo_block %}
 
 **See also:**

@@ -160,13 +160,13 @@ There are 3 entrypoints that will be loaded in the DOM in the following order:
 * **app**:
     `src/Pyz/Yves/ShopUi/Theme/default/app.ts`
     Contains the initialization logic for the project and the bootstrap code for the shop application.
-    </br>
+    <br>
     `src/Pyz/Yves/ShopUi/Theme/default/styles/basic.scss`
     Contains basic styles.
-    </br>
+    <br>
     `Components`
      When basic styles are loaded, behavior logic and styles of every component is loaded. This ensures that styles of each component override the basic styles.
- </br>
+ <br>
  `src/Pyz/Yves/ShopUi/Theme/default/styles/util.scss`
  Contains util styles for the project. It is loaded at the very end as the styles defined in it must override all styles, even the styles defined in components.
 
@@ -262,7 +262,7 @@ A typical component folder consists of the following files:
 
 * **index.ts**: Specifies the component entry point for Webpack. This file is necessary to locate the component styles and Typescript code.
 * **component-name.ts**: Specifies the behavior for the component in Typescript.
-* **component-name.scss**: Contains the SCSS style for the component, wrapped into a mixin.</br>Note: If a component contains the `style.scss` file, this file only declares a mixin.
+* **component-name.scss**: Contains the SCSS style for the component, wrapped into a mixin.<br>Note: If a component contains the `style.scss` file, this file only declares a mixin.
 * **style.scss**: Imports the style when `component-name.scss`contains only mixin declaration.
 * **component-name.twig**: Defines a template for the component layout.
 

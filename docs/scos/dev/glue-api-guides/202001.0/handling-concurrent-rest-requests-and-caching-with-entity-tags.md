@@ -69,8 +69,8 @@ The following error responses can be returned by the server when a resource supp
 
 | Status | Reason |
 | --- | --- |
-| 412 | Pre-condition failed.</br>The If-Match header value is invalid or outdated. </br>Request the current state of the resource using a GET request to obtain a valid tag value. |
-| 428 | Pre-condition required.</br>The If-Match header is missing. |
+| 412 | Pre-condition failed.<br>The If-Match header value is invalid or outdated. <br>Request the current state of the resource using a GET request to obtain a valid tag value. |
+| 428 | Pre-condition required.<br>The If-Match header is missing. |
 
 ## Workflow Diagram
 The workflow of resources that support concurrent requests is presented in the diagram below:

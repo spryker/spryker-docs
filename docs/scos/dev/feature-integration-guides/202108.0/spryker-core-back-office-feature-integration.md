@@ -220,7 +220,7 @@ Set up admin user login to the Back Office:
 |UserSessionHandlerSecurityPlugin |Sets an authenticated user to the session. |None| Spryker\Zed\User\Communication\Plugin\Securiy|
 | UserSecurityPlugin |Sets security firewalls, such as rules and handlers, for the Back Office users. |None |Spryker\Zed\SecurityGui\Communication\Plugin\Security|
 | UserPasswordResetMailTypePlugin |Adds a new email type, which is used by `MailUserPasswordResetRequestHandlerPlugin`. |None |Spryker\Zed\UserPasswordResetMail\Communication\Plugin\Mail|
-| MailUserPasswordResetRequestHandlerPlugin| Sends a password reset email on a user request. | Mail module must be configured. </br>`UserPasswordResetMailTypePlugin` is enabled.| Spryker\Zed\UserPasswordResetMail\Communication\Plugin\UserPasswordReset|
+| MailUserPasswordResetRequestHandlerPlugin| Sends a password reset email on a user request. | Mail module must be configured. <br>`UserPasswordResetMailTypePlugin` is enabled.| Spryker\Zed\UserPasswordResetMail\Communication\Plugin\UserPasswordReset|
 | OauthUserSecurityPlugin |Sets security firewalls, such as rules and handlers, for Oauth users. |None |\Spryker\Zed\SecurityOauthUser\Communication\Plugin\Security|
 
 

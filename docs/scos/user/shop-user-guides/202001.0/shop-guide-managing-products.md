@@ -65,7 +65,7 @@ On the product detail page, you can view some general product information that i
 | 11 | **Product description** | Detailed description of the product that allows customers to see product features and benefits they may get using the product. |
 | 12 | **Product attributes** | List of product characteristics that make it distinct from other products, such as a brand, a size, etc. |
 
-</br>
+<br>
 </details>
 
 If a shop owner offers some additional items (product options), you can add them to the cart together with the product you are going to purchase, for example, warranty, insurance or gift wrapping, or leave your feedback regarding the product in the **Ratings & Reviews** section.

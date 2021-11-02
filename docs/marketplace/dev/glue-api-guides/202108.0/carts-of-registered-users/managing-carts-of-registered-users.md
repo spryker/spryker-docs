@@ -62,7 +62,7 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| name | String | &check; | Sets the cart name.</br>You can pass this field only with the Multiple Carts feature integrated. If you are operating in a single-cart environment, an attempt to set the value returns the `422 Unprocessable Entry` error. |
+| name | String | &check; | Sets the cart name.<br>You can pass this field only with the Multiple Carts feature integrated. If you are operating in a single-cart environment, an attempt to set the value returns the `422 Unprocessable Entry` error. |
 | priceMode | Enum | &check; | Sets the price mode for the cart. Possible values:<ul><li>GROSS_MODE: prices after tax</li><li>NET_MODE: prices before tax</li></ul>For details, see [Net &amp; gross prices management](https://documentation.spryker.com/docs/net-gross-prices-management). |
 | currency | String | &check; | Sets the cart currency. |
 | store | String | &check; | Sets the name of the store where to create the cart. |
@@ -109,8 +109,8 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
 | priceMode | String | Price mode of the cart. |
 | currency | String | Currency of the cart. |
 | store | String | Store in which the cart is created. |
-| name | String | Cart name.</br>The field is available only in multi-cart environments. |
-| isDefault | Boolean | Specifies if the cart is the default one for the customer.</br>The field is available only in multi-cart environments.  |
+| name | String | Cart name.<br>The field is available only in multi-cart environments. |
+| isDefault | Boolean | Specifies if the cart is the default one for the customer.<br>The field is available only in multi-cart environments.  |
 
 **Discount information**
 
@@ -2387,8 +2387,8 @@ To retrieve all carts, send the request:
 | priceMode | String | Price mode that was active when the cart was created. |
 | currency | String | Currency that was selected when the cart was created. |
 | store | String | Store for which the cart was created. |
-| name | String | Specifies a cart name.</br>The field is available in multi-cart environments only. |
-| isDefault | Boolean | Specifies whether the cart is the default one for the customer.</br>The field is available in multi-cart environments only.  |
+| name | String | Specifies a cart name.<br>The field is available in multi-cart environments only. |
+| isDefault | Boolean | Specifies whether the cart is the default one for the customer.<br>The field is available in multi-cart environments only.  |
 
 **Discount information**
 

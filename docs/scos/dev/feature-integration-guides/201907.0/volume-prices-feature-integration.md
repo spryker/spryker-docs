@@ -77,7 +77,7 @@ abstract_sku,concrete_sku,price_type,store,currency,value_net,value_gross,price_
 194,,DEFAULT,AT,EUR,20780,23089,"[{""quantity"":5,""net_price"":265,""gross_price"":295}, {""quantity"":10,""net_price"":275,""gross_price"":310}, {""quantity"":20,""net_price"":285,""gross_price"":320}]"
 ```
 
-</br>
+<br>
 </details>
   
 |  Column| Is obligatory? | Data type | Data example | Data explanation |
@@ -119,7 +119,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-</br>
+<br>
 </details>
 
 Run the following console command to import data:
@@ -166,7 +166,7 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
 }
 ```
 
-</br>
+<br>
 </details>
 
 <details open>
@@ -194,7 +194,7 @@ class PriceProductStorageDependencyProvider extends SprykerPriceProductStorageDe
 }
 ```
 
-</br>
+<br>
 </details>
 
 <details open>
@@ -229,7 +229,7 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
 }
 ```
 
-</br>
+<br>
 </details>
 
 ## Install Feature Frontend

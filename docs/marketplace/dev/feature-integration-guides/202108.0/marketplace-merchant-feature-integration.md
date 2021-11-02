@@ -1,6 +1,6 @@
 ---
 title: Marketplace Merchant feature integration
-last_updated: Sep 7, 2021
+last_updated: Oct 19, 2021
 description: This integration guide provides steps on how to integrate the Merchants feature into a Spryker project.
 template: feature-integration-guide-template
 ---
@@ -45,15 +45,16 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up database schema
+### 2) Set up database schema and transfer objects
 
 Set up database schema:
+
 1. Adjust the schema definition so entity changes trigger events:
 
 **src/Pyz/Zed/MerchantSearch/Persistence/Propel/Schema/spy_merchant_search.schema.xml**
 
 ```xml
-  <?xml version="1.0"?>
+<?xml version="1.0"?>
   <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd" name="zed"
             namespace="Orm\Zed\MerchantSearch\Persistence"
@@ -77,7 +78,6 @@ console propel:install
 console transfer:generate
 ```
 
-
 {% info_block warningBox "Verification" %}
 
 Make sure that the following changes have occurred in the database:
@@ -91,8 +91,6 @@ Make sure that the following changes have occurred in the database:
 
 {% endinfo_block %}
 
-### 3) Set up transfer objects
-
 Generate transfer changes:
 
 ```bash
@@ -105,33 +103,34 @@ Make sure that the following changes have occurred in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 |---|---|---|---|
-| MerchantProfileAddress | object | Created | src/Generated/Shared/Transfer/MerchantProfileAddressTransfer |
-| MerchantProfileCollection | object | Created | src/Generated/Shared/Transfer/MerchantProfileCollectionTransfer|
-| MerchantProfileCriteriaFilter | object | Created | src/Generated/Shared/Transfer/MerchantProfileCriteriaFilterTransfer |
-| MerchantProfileGlossaryAttributeValues | object | Created | src/Generated/Shared/Transfer/MerchantProfileGlossaryAttributeValuesTransfer |
-| MerchantProfileLocalizedGlossaryAttributes | object | Created | src/Generated/Shared/Transfer/MerchantProfileLocalizedGlossaryAttributesTransfer |
-| MerchantSearch | object | Created | src/Generated/Shared/Transfer/MerchantSearchTransfer |
-| MerchantSearchCollection | object | Created | src/Generated/Shared/Transfer/MerchantSearchCollectionTransfer |
-| MerchantUser | object | Created | src/Generated/Shared/Transfer/MerchantUserTransfer |
-| MerchantUserCriteria | object | Created | src/Generated/Shared/Transfer/MerchantUserCriteriaTransfer |
-| MerchantUserResponse | object | Created | src/Generated/Shared/Transfer/MerchantUserResponseTransfer |
-| SpyMerchantProfileEntity | object | Created | src/Generated/Shared/Transfer/SpyMerchantProfileEntityTransfer |
-| SpyMerchantSearchEntity | object | Created | src/Generated/Shared/Transfer/SpyMerchantSearchEntityTransfer |
-| SpyMerchantStorageEntity |  object | Created | src/Generated/Shared/Transfer/SpyMerchantStorageEntityTransfer |
-| SpyMerchantUserEntity | object | Created |src/Generated/Shared/Transfer/SpyMerchantUserEntityTransfer |
+| MerchantProfileAddress | class | Created | src/Generated/Shared/Transfer/MerchantProfileAddressTransfer |
+| MerchantProfileCollection | class | Created | src/Generated/Shared/Transfer/MerchantProfileCollectionTransfer|
+| MerchantProfileCriteriaFilter | class | Created | src/Generated/Shared/Transfer/MerchantProfileCriteriaFilterTransfer |
+| MerchantProfileGlossaryAttributeValues | class | Created | src/Generated/Shared/Transfer/MerchantProfileGlossaryAttributeValuesTransfer |
+| MerchantProfileLocalizedGlossaryAttributes | class | Created | src/Generated/Shared/Transfer/MerchantProfileLocalizedGlossaryAttributesTransfer |
+| MerchantSearch | class | Created | src/Generated/Shared/Transfer/MerchantSearchTransfer |
+| MerchantSearchCollection | class | Created | src/Generated/Shared/Transfer/MerchantSearchCollectionTransfer |
+| MerchantUser | class | Created | src/Generated/Shared/Transfer/MerchantUserTransfer |
+| MerchantUserCriteria | class | Created | src/Generated/Shared/Transfer/MerchantUserCriteriaTransfer |
+| MerchantUserResponse | class | Created | src/Generated/Shared/Transfer/MerchantUserResponseTransfer |
+| SpyMerchantProfileEntity | class | Created | src/Generated/Shared/Transfer/SpyMerchantProfileEntityTransfer |
+| SpyMerchantSearchEntity | class | Created | src/Generated/Shared/Transfer/SpyMerchantSearchEntityTransfer |
+| SpyMerchantStorageEntity |  class | Created | src/Generated/Shared/Transfer/SpyMerchantStorageEntityTransfer |
+| SpyMerchantUserEntity | class | Created |src/Generated/Shared/Transfer/SpyMerchantUserEntityTransfer |
+| UrlStorage.fkResourceMerchant | property | Created |src/Generated/Shared/Transfer/UrlStorageTransfer |
 
 {% endinfo_block %}
 
 
-### 4) Add Zed translations
+### 3) Add Zed translations
 
-Generate a new translation cache for Zed:
+Generate new translation cache for Zed:
 
 ```bash
 console translator:generate-cache
 ```
 
-### 5) Set up behavior
+### 4) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
@@ -148,7 +147,7 @@ Enable the following behaviors by registering the plugins:
 | MerchantUserTabMerchantFormTabExpanderPlugin | Adds an extra tab to merchant edit and create forms for editing and creating merchant user information. |   | Spryker\Zed\MerchantUserGui\Communication\Plugin\MerchantGui |
 | MerchantUserViewMerchantUpdateFormViewExpanderPlugin | Expands merchant `FormView` with the data for the merchant user tab. |   | Spryker\Zed\MerchantUserGui\Communication\Plugin\MerchantGui |
 
-<details><summary markdown='span'>src/Pyz/Zed/marketplace-merchant/marketplace-merchantDependencyProvider.php</summary>
+<details><summary markdown='span'>src/Pyz/Zed/Merchant/MerchantDependencyProvider</summary>
 
 ```php
 <?php
@@ -200,7 +199,8 @@ class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following:
+Make sure that:
+
 * When you create a merchant using `MerchantFacade::updateMerchant()`, its profile also gets created.
 * When you update a merchant using `MerchantFacade::updateMerchant()`, its profile also gets updated.
 * When you fetch a merchant using `MerchantFacade::findOne()`, its profile data also gets fetched.
@@ -266,11 +266,11 @@ class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you edit a merchant in the Merchants section of the Back Office, you can see merchant profile related tabs: Contact Person, Merchant Profile, Legal Information, Merchant User.
+Make sure that when you edit a merchant in the *Merchants* section of the Back Office, you can see merchant profile related tabs: Contact Person, Merchant Profile, Legal Information, Merchant User.
 
 {% endinfo_block %}
 
-### 6) Configure navigation
+### 5) Configure navigation
 
 Add marketplace section to `navigation.xml`:
 
@@ -303,15 +303,15 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, in the navigation menu of the Back Office, you can see the **Marketplace** button.
+Make sure that you can see the **Marketplace** button in the navigation menu of the Back Office.
 
 {% endinfo_block %}
 
-### 7) Configure export to Redis
+### 6) Configure export to Redis and Elasticsearch
 
-This step publishes tables on change (create, edit) to `spy_merchant_profile_storage` and synchronizes the data to Storage.
+This step publishes tables on change (create, edit) to `spy_merchant_profile_storage` and synchronizes data to Storage.
 
-Configure export to Redis:
+#### Configure export to Redis
 
 1. Set up event listeners and publishers:
 
@@ -476,17 +476,16 @@ Make sure that when merchant profile entities are created or updated through ORM
 
 {% endinfo_block %}
 
-### 8) Configure export to Elastica
+
+##### Configure export to Elastica
 
 This step publishes tables on change (create, edit) to `spy_merchant_search` and synchronizes the data to Search.
-
-Configure export to Elastica:
 
 1. Setup event listeners and publishers by registering the plugins:
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
 ```php
-   <?php
+<?php
 
 namespace Pyz\Zed\Publisher;
 
@@ -509,7 +508,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 }
 ```
 
-2. Register a synchronization queue:
+2. Register synchronization queue:
 **src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
 
 ```php
@@ -821,7 +820,7 @@ Make sure that when merchant entities are created or updated through ORM, they a
  ```
  </details>
 
-1. Set up result formatters:
+6. Set up result formatters:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
@@ -879,7 +878,7 @@ class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyPr
     }
 }
 ```
-8. Add the `merchant` resource to supported search sources:
+8. Add the `merchant` resource to the supported search sources:
 
 ```php
 <?php
@@ -896,11 +895,11 @@ class SearchElasticsearchConfig extends SprykerSearchElasticsearchConfig
 }
 ```
 
-### 9) Import data
+### 7) Import data
 
 To import data:
-1. Prepare merchant profile data according to your requirements using the demo data:
 
+1. Prepare merchant profile data according to your requirements using the demo data:
 
 <details>
 <summary markdown='span'>/data/import/common/common/marketplace/merchant_profile.csv</summary>
@@ -919,7 +918,6 @@ MER000005,Merchandise Manager,Mr,Jason,Weidmann,030/123456789,https://d2s0ynfc62
 Budget Cameras is offering a great selection of digital cameras with the lowest prices.","DSLR- und spiegellose Kameras sind bei Filmemachern mit knappem Budget bei weitem am beliebtesten, wenn sie sich bestimmte Spezialkameras nicht leisten können.
 Budget Cameras bietet eine große Auswahl an Digitalkameras mit den niedrigsten Preisen.",https://d2s0ynfc62ej12.cloudfront.net/merchant/budgetcameras-banner.png,https://d2s0ynfc62ej12.cloudfront.net/merchant/budgetcameras-banner.png,2-4 days,2-4 Tage,"<p><span style=""font-weight: bold;"">General Terms</span><br><br>(1) This privacy policy has been compiled to better serve those who are concerned with how their 'Personally identifiable information' (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website. <br><br>(2) We do not collect information from visitors of our site or other details to help you with your experience.<br><br><span style=""font-weight: bold;"">Using your Information</span><br><br>We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways: <br><br>To personalize user's experience and to allow us to deliver the type of content and product offerings in which you are most interested.<br><br><span style=""font-weight: bold;"">Protecting visitor information</span><br><br>Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your visit to our site as safe as possible. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.</p>","<p><span style=""font-weight: bold;"">§ 1 Geltungsbereich &amp; Abwehrklausel</span><br><br>(1) Für die über diesen Internet-Shop begründeten Rechtsbeziehungen zwischen dem Betreiber des Shops (nachfolgend „Anbieter“) und seinen Kunden gelten ausschließlich die folgenden Allgemeinen Geschäftsbedingungen in der jeweiligen Fassung zum Zeitpunkt der Bestellung. <br><br>(2) Abweichende Allgemeine Geschäftsbedingungen des Kunden werden zurückgewiesen.<br><br><span style=""font-weight: bold;"">§ 2 Zustandekommen des Vertrages</span><br><br>(1) Die Präsentation der Waren im Internet-Shop stellt kein bindendes Angebot des Anbieters auf Abschluss eines Kaufvertrages dar. Der Kunde wird hierdurch lediglich aufgefordert, durch eine Bestellung ein Angebot abzugeben. <br><br>(2) Durch das Absenden der Bestellung im Internet-Shop gibt der Kunde ein verbindliches Angebot gerichtet auf den Abschluss eines Kaufvertrages über die im Warenkorb enthaltenen Waren ab. Mit dem Absenden der Bestellung erkennt der Kunde auch diese Geschäftsbedingungen als für das Rechtsverhältnis mit dem Anbieter allein maßgeblich an. <br><br>(3) Der Anbieter bestätigt den Eingang der Bestellung des Kunden durch Versendung einer Bestätigungs-Email. Diese Bestellbestätigung stellt noch nicht die Annahme des Vertragsangebotes durch den Anbieter dar. Sie dient lediglich der Information des Kunden, dass die Bestellung beim Anbieter eingegangen ist. Die Erklärung der Annahme des Vertragsangebotes erfolgt durch die Auslieferung der Ware oder eine ausdrückliche Annahmeerklärung.<br><br><span style=""font-weight: bold;"">§ 3 Eigentumsvorbehalt</span><br><br>Die gelieferte Ware verbleibt bis zur vollständigen Bezahlung im Eigentum des Anbieters.<br><br><span style=""font-weight: bold;"">§ 4 Fälligkeit</span><br><br>Die Zahlung des Kaufpreises ist mit Vertragsschluss fällig.</p>","You have the right to withdraw from this contract within 14 days without giving any reason. The withdrawal period will expire after 14 days from the day on which you acquire, or a third party other than the carrier and indicated by you acquires, physical possession of the last good. You may use the attached model withdrawal form, but it is not obligatory. To meet the withdrawal deadline, it is sufficient for you to send your communication concerning your exercise of the right of withdrawal before the withdrawal period has expired.","Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen. Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag, an dem Sie oder ein von Ihnen benannter Dritter, der nicht der Beförderer ist, die letzte Ware in Besitz genommen hat. Sie können dafür das beigefügte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist. Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.",<p>Budget Cameras<br><br>Spitalerstraße 3<br>20095 Hamburg<br>DE<br><br>Phone: 030 1234567<br>Email: support@budgetcamerasonline.com<br><br>Represented by<br>Managing Director: Max Mustermann<br>Register Court: Hamburg<br>Register Number: HXX 134305<br></p>,<p>Budget Cameras<br><br>Spitalerstraße 3<br>20095 Hamburg<br>DE<br><br>Phone: 030 1234567<br>Email: support@budgetcamerasonline.com<br><br>Vertreten durch<br>Geschäftsführer: Max Mustermann<br>Registergericht: Hamburg<br>Registernummer: HXX 134305<br></p>,Budget Cameras values the privacy of your personal data.,Für die Abwicklung ihrer Bestellung gelten auch die Datenschutzbestimmungen von Budget Cameras.,1,+49 30 234567500
 ```
-
 </details>
 
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
@@ -952,21 +950,18 @@ Budget Cameras bietet eine große Auswahl an Digitalkameras mit den niedrigsten 
 
 2. Prepare merchant profile address data according to your requirements using the demo data:
 
-<details>
-  <summary markdown='span'>/data/import/common/common/marketplace/merchant_profile_address.csv</summary>
+**/data/import/common/common/marketplace/merchant_profile_address.csv**
 
-  ```csv
-    merchant_reference,country_iso2_code,country_iso3_code,address1,address2,address3,city,zip_code,longitude,latitude
-    MER000001,DE,DEU,Julie-Wolfthorn-Straße,1,,Berlin,10115,52.534105,13.384458
-    MER000002,NL,,Gilzeweg,24,,Bavel,4854SG,51.558107,4.838470
-    MER000006,DE,DEU,Matthias-Pschorr-Straße,1,,München,80336,48.131058,11.547788
-    MER000005,DE,DEU,Spitalerstraße,3,,Berlin,10115,,
-    MER000004,DE,DEU,Caroline-Michaelis-Straße,8,,Hamburg,20095,,
-    MER000003,DE,DEU,Caroline-Michaelis-Straße,8,,Berlin,10115,,
-    MER000007,DE,DEU,Caroline-Michaelis-Straße,8,,Berlin,10115,53.552463,10.004663
-  ```
-
-</details>
+```csv
+merchant_reference,country_iso2_code,country_iso3_code,address1,address2,address3,city,zip_code,longitude,latitude
+MER000001,DE,DEU,Julie-Wolfthorn-Straße,1,,Berlin,10115,52.534105,13.384458
+MER000002,NL,,Gilzeweg,24,,Bavel,4854SG,51.558107,4.838470
+MER000006,DE,DEU,Matthias-Pschorr-Straße,1,,München,80336,48.131058,11.547788
+MER000005,DE,DEU,Spitalerstraße,3,,Berlin,10115,,
+MER000004,DE,DEU,Caroline-Michaelis-Straße,8,,Hamburg,20095,,
+MER000003,DE,DEU,Caroline-Michaelis-Straße,8,,Berlin,10115,,
+MER000007,DE,DEU,Caroline-Michaelis-Straße,8,,Berlin,10115,53.552463,10.004663
+```
 
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
@@ -989,6 +984,7 @@ Budget Cameras bietet eine große Auswahl an Digitalkameras mit den niedrigsten 
 | MerchantProfileAddressDataImportPlugin | Imports merchant profile address data into the database. |   | Spryker\Zed\MerchantProfileDataImport\Communication\Plugin |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
+
 ```php
 <?php
 
@@ -1017,9 +1013,245 @@ console data:import merchant-profile
 console data:import merchant-profile-address
 ```
 
+
+To import merchant user data, perform the following steps:
+
+1. Prepare merchant user data according to your requirements using the demo data:
+
+**/data/import/common/common/marketplace/merchant_user.csv**
+
+```csv
+merchant_reference,username
+MER000006,michele@sony-experts.com
+```
+
+| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+|-|-|-|-|-|
+| merchant_reference | &check; | String | MER000006  | Identifier of the merchant in the system. Have to be unique. |
+| username | &check; | String | `michele@sony-experts.com`  | Username of the merchant user. It is an email address that is used for logging into the Merchant Portal as a merchant user.  |
+
+
+2. Create the Step model for writing merchant user data.
+
+<details>
+<summary markdown='span'>src/Pyz/Zed/DataImport/Business/Model/MerchantUser/MerchantUserWriterStep.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\DataImport\Business\Model\MerchantUser;
+
+use Generated\Shared\Transfer\MerchantUserCriteriaTransfer;
+use Generated\Shared\Transfer\MerchantUserTransfer;
+use Generated\Shared\Transfer\UserCriteriaTransfer;
+use Orm\Zed\Merchant\Persistence\SpyMerchantQuery;
+use Orm\Zed\User\Persistence\SpyUserQuery;
+use Pyz\Zed\DataImport\Business\Exception\EntityNotFoundException;
+use Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface;
+use Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface;
+use Spryker\Zed\MerchantUser\Business\MerchantUserFacadeInterface;
+
+class MerchantUserWriterStep implements DataImportStepInterface
+{
+    /**
+     * @var \Spryker\Zed\MerchantUser\Business\MerchantUserFacadeInterface
+     */
+    protected $merchantUserFacade;
+
+    /**
+     * @param \Spryker\Zed\MerchantUser\Business\MerchantUserFacadeInterface $merchantUserFacade
+     */
+    public function __construct(MerchantUserFacadeInterface $merchantUserFacade)
+    {
+        $this->merchantUserFacade = $merchantUserFacade;
+    }
+
+    protected const MERCHANT_REFERENCE = 'merchant_reference';
+    protected const USERNAME = 'username';
+
+    /**
+     * @inheritDoc
+     */
+    public function execute(DataSetInterface $dataSet): void
+    {
+        $idMerchant = $this->getIdMerchantByReference($dataSet[static::MERCHANT_REFERENCE]);
+        $idUser = $this->getIdUserByUsername($dataSet[static::USERNAME]);
+
+        $merchantUserTransfer = $this->merchantUserFacade->findMerchantUser(
+            (new MerchantUserCriteriaTransfer())
+                ->setIdUser($idUser)
+                ->setIdMerchant($idMerchant)
+        );
+
+        if (!$merchantUserTransfer) {
+            $userTransfer = $this->merchantUserFacade->findUser(
+                (new UserCriteriaTransfer())->setIdUser($idUser)
+            );
+
+            $this->merchantUserFacade->createMerchantUser(
+                (new MerchantUserTransfer())
+                    ->setIdMerchant($idMerchant)
+                    ->setUser($userTransfer)
+            );
+        }
+    }
+
+    /**
+     * @param string $merchantReference
+     *
+     * @throws \Pyz\Zed\DataImport\Business\Exception\EntityNotFoundException
+     *
+     * @return int
+     */
+    protected function getIdMerchantByReference(string $merchantReference): int
+    {
+        $merchantEntity = SpyMerchantQuery::create()
+            ->findOneByMerchantReference($merchantReference);
+
+        if (!$merchantEntity) {
+            throw new EntityNotFoundException(sprintf('Merchant with reference "%s" is not found.', $merchantReference));
+        }
+
+        return $merchantEntity->getIdMerchant();
+    }
+
+    /**
+     * @param string $username
+     *
+     * @throws \Pyz\Zed\DataImport\Business\Exception\EntityNotFoundException
+     *
+     * @return int
+     */
+    protected function getIdUserByUsername(string $username): int
+    {
+        $userEntity = SpyUserQuery::create()
+            ->findOneByUsername($username);
+
+        if (!$userEntity) {
+            throw new EntityNotFoundException(sprintf('User with username "%s" is not found.', $username));
+        }
+
+        return $userEntity->getIdUser();
+    }
+}
+```
+</details>
+
+3. Add the merchant user import type to full import (if needed).
+
+**src/Pyz/Zed/DataImport/DataImportConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\DataImport;
+
+use Spryker\Zed\DataImport\DataImportConfig as SprykerDataImportConfig;
+
+/**
+ * @SuppressWarnings(PHPMD.ExcessiveClassComplexity)
+ * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
+ * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
+ */
+class DataImportConfig extends SprykerDataImportConfig
+{
+    public const IMPORT_TYPE_MERCHANT_USER = 'merchant-user';
+
+    /**
+     * @return string[]
+     */
+    public function getFullImportTypes(): array
+    {
+        return [
+            static::IMPORT_TYPE_MERCHANT_USER,
+        ];
+    }
+}
+```
+
+4. Enable merchant user data import command.
+
+**src/Pyz/Zed/DataImport/Business/DataImportBusinessFactory.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\DataImport\Business;
+
+use Generated\Shared\Transfer\DataImportConfigurationActionTransfer;
+use Generated\Shared\Transfer\DataImporterConfigurationTransfer;
+use Spryker\Zed\DataImport\Business\DataImportBusinessFactory as SprykerDataImportBusinessFactory;
+use Spryker\Zed\DataImport\Business\Model\DataImporterInterface;
+use Pyz\Zed\DataImport\Business\Model\MerchantUser\MerchantUserWriterStep;
+use Pyz\Zed\DataImport\DataImportConfig;
+
+/**
+ * @method \Pyz\Zed\DataImport\DataImportConfig getConfig()
+ * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+ * @SuppressWarnings(PHPMD.ExcessiveClassComplexity)
+ * @SuppressWarnings(PHPMD.ExcessiveClassLength)
+ */
+class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
+{
+    /**
+     * @param \Generated\Shared\Transfer\DataImportConfigurationActionTransfer $dataImportConfigurationActionTransfer
+     *
+     * @return \Spryker\Zed\DataImport\Business\Model\DataImporterInterface|null
+     */
+    public function getDataImporterByType(DataImportConfigurationActionTransfer $dataImportConfigurationActionTransfer): ?DataImporterInterface
+    {
+        switch ($dataImportConfigurationActionTransfer->getDataEntity()) {
+            case DataImportConfig::IMPORT_TYPE_MERCHANT_USER:
+                return $this->createMerchantUserImporter($dataImportConfigurationActionTransfer);
+            default:
+                return null;
+        }
+    }
+
+    /**
+     * @param \Generated\Shared\Transfer\DataImportConfigurationActionTransfer $dataImportConfigurationActionTransfer
+     *
+     * @return \Spryker\Zed\DataImport\Business\Model\DataImporterInterface
+     */
+    public function createMerchantUserImporter(DataImportConfigurationActionTransfer $dataImportConfigurationActionTransfer)
+    {
+        $dataImporter = $this->getCsvDataImporterFromConfig(
+            $this->getConfig()->buildImporterConfigurationByDataImportConfigAction($dataImportConfigurationActionTransfer)
+        );
+
+        $dataSetStepBroker = $this->createTransactionAwareDataSetStepBroker();
+        $dataSetStepBroker->addStep(new MerchantUserWriterStep(
+            $this->getMerchantUserFacade()
+        ));
+
+        $dataImporter->addDataSetStepBroker($dataSetStepBroker);
+
+        return $dataImporter;
+    }
+}
+```
+
+5. Create and prepare your data import configuration files according to your requirements using our demo config template:
+
+**data/import/common/marketplace_import_config_EU.yml**
+
+```yml
+version: 0
+
+actions:
+  - data_entity: merchant-user
+    source: data/import/common/common/merchant_user.csv
+ ```
+
+6. Import data.
+
+```bash
+console data:import merchant-user
+```
+
 {% info_block warningBox "Verification" %}
 
-Make sure that the imported data has been added to the `spy_merchant_profile` and `spy_merchant_profile_address` tables.
+Make sure that the imported data has been added to the `spy_merchant_profile`, `spy_merchant_profile_address` and `spy_merchant_user` tables.
 
 {% endinfo_block %}
 
@@ -1045,15 +1277,20 @@ composer require spryker-feature/marketplace-merchant: "{{page.version}}" --upda
 | MODULE | EXPECTED DIRECTORY |
 |-|-|
 | MerchantProfileWidget | vendor/spryker-shop/merchant-profile-widget |
+| MerchantWidget | vendor/spryker-shop/merchant-widget |
 | MerchantPage | vendor/spryker-shop/merchant-page |
 
-### 2) Add Yves translations
+### 2) Add translations
+
 Add Yves translations:
 
 1. Append glossary according to your configuration:
 
 **data/import/common/common/glossary.csv**
+
 ```
+merchant.sold_by,Sold by,en_US
+merchant.sold_by,Verkauft durch,de_DE
 merchant_profile.email,Email Address,en_US
 merchant_profile.email,Email,de_DE
 merchant_profile.address,Address,en_US
@@ -1084,7 +1321,56 @@ Make sure that the configured data has been added to the `spy_glossary` table in
 
 {% endinfo_block %}
 
-### 3) Set up behavior
+### 3) Set up widgets
+
+Register the following plugins to enable widgets:
+
+| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
+| -------------- | --------------- | ------ | ---------------- |
+| SoldByMerchantWidget      | Shows the list of the offers with their prices for a concrete product. |           | SprykerShop\Yves\MerchantWidget\Widget |
+
+**src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\ShopApplication;
+
+use SprykerShop\Yves\MerchantWidget\Widget\SoldByMerchantWidget;
+use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
+
+class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
+{
+    /**
+     * @return string[]
+     */
+    protected function getGlobalWidgets(): array
+    {
+        return [
+            SoldByMerchantWidget::class,
+        ];
+    }
+}
+```
+
+Enable Javascript and CSS changes:
+
+```bash
+console frontend:yves:build
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the following widgets were registered:
+
+| MODULE | TEST |
+| ----------------- | ----------------- |
+| SoldByMerchantWidget | Go through the checkout process with an offer, and you will see the sold by text and merchant data throughout the checkout process. |
+
+{% endinfo_block %}
+
+### 4) Set up behavior
+
 To set up behavior:
 
 1. Enable the following behaviors by registering the plugins:

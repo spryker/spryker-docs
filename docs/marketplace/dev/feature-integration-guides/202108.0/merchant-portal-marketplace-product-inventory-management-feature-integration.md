@@ -17,7 +17,7 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Merchant Portal Marketplace Product | master | [Merchant Portal Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-feature-integration.html) |
+| Merchant Portal Marketplace Product | master | [Merchant Portal - Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-feature-integration.html) |
 | Marketplace Inventory Management | master | [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-inventory-management-feature-integration.html)  |
 
 ### 1) Install the required modules using Composer
@@ -44,7 +44,7 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| TotalProductAvailabilityProductConcreteTableExpanderPlugin | Expands ProductConcreteTable with Available stock column data. | None | Spryker\Zed\MerchantProduct\Communication\Plugin\Product |
+| TotalProductAvailabilityProductConcreteTableExpanderPlugin | Expands `ProductConcreteTable` with `Available stock` column data. | None | Spryker\Zed\MerchantProduct\Communication\Plugin\Product |
 
 **src/Pyz/Zed/ProductMerchantPortalGui/ProductMerchantPortalGuiDependencyProvider.php**
 

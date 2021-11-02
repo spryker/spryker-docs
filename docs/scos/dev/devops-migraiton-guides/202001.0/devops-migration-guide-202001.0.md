@@ -15,7 +15,7 @@ This document covers all the maintenance related details that a DevOps engineer 
 The {{page.version}} release introduces the following updates:
 
 *     Elasticsearch version
-*     PHP version 
+*     PHP version
 *     health checks
 *     Routing
 *     console commands
@@ -36,12 +36,12 @@ console search:setup:sources
 console search:setup:source-map
 ```
 
-The first command creates empty indexes that follow the new index structure - an index per each old mapping type. The second one generates index map classes for the new indexes. 
+The first command creates empty indexes that follow the new index structure - an index per each old mapping type. The second one generates index map classes for the new indexes.
 
 
 {% info_block infoBox %}
 
-These commands do not remove the existing indexes suffixed with `_search`. The search data contained in the existing indexes is migrated to the new ones in the next step. 
+These commands do not remove the existing indexes suffixed with `_search`. The search data contained in the existing indexes is migrated to the new ones in the next step.
 
 {% endinfo_block %}
 
@@ -114,7 +114,7 @@ POST _reindex
 }
 ```
 
-In the example, the data belonging to `page` and `product-review` mapping types of the old `de_search` index is migrated to the two new dedicated indexes - `de_page` and `de_product-review` respectively. Do the same for all the other indexes/mapping types in your project. 
+In the example, the data belonging to `page` and `product-review` mapping types of the old `de_search` index is migrated to the two new dedicated indexes - `de_page` and `de_product-review` respectively. Do the same for all the other indexes/mapping types in your project.
 {% info_block warningBox %}
 
 Only after you make sure that all the search data is migrated, you can remove the old indexes.
@@ -122,7 +122,7 @@ Only after you make sure that all the search data is migrated, you can remove th
 {% endinfo_block %}
 
 
-## PHP 7.1 
+## PHP 7.1
 
 PHP 7.1 is no longer supported. Update PHP version to 7.2 or higher.
 
@@ -162,4 +162,3 @@ Find the new paths to Twig cache directories below:
 The new path to Zed translation cache directory is `%s/data/%s/cache/Zed/translation`.
 
 <!-- Last review date: Jan 31, 2020 by Serhii Chepela, Andrii Tserkovnyi -->
-

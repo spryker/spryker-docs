@@ -43,7 +43,7 @@ The status of the Marketplace order is an aggregated state of the Marketplace or
 
 <details>
 
-<summary>Marketplace state machine flow</summary>
+<summary markdown='span'>Marketplace state machine flow</summary>
 
 ![Merchant state machine](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Marketplace+and+Merchant+orders/Marketplace+and+Merchant+State+Machines+feature+overview/marketplace-state-machine.png)
 
@@ -73,7 +73,7 @@ Our exemplary merchant state machine provides the following states:
 
 <details>
 
-<summary>Merchant State Machine flow</summary>
+<summary markdown='span'>Merchant State Machine flow</summary>
 
 ![Merchant state machine](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Marketplace+and+Merchant+orders/Marketplace+and+Merchant+State+Machines+feature+overview/merchant-state-machine.png)
 

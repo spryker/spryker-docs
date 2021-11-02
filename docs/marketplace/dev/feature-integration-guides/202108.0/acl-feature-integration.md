@@ -74,7 +74,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 | TRANSFER  | TYPE | EVENT | PATH  |
 | ----------------- | ----- | ------ | -------------------------- |
-|  Group  | object | Created | src/Generated/Shared/Transfer/GroupTransfer |
+|   Group  | object | Created | src/Generated/Shared/Transfer/GroupTransfer |
 |   AclEntityRule | object | Created | src/Generated/Shared/Transfer/AclEntityRuleTransfer |
 |   AclEntitySegment | object | Created | src/Generated/Shared/Transfer/AclEntitySegmentTransfer |
 |   AclEntitySegmentRequest | object | Created | src/Generated/Shared/Transfer/AclEntitySegmentRequestTransfer |
@@ -131,6 +131,7 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
             new AccessControlEventDispatcherPlugin(),
         ];
     }
+}
 ```
 
 **src/Pyz/Zed/ZedNavigation/ZedNavigationDependencyProvider.php**

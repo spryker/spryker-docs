@@ -870,7 +870,16 @@ Add an item with packaging units to cart.
 
 {% info_block warningBox "Verification" %}
 
-Go through the checkout workflow and make an order>.<br><ul><li>Check if the stock is modified respectfully according to your lead product's and packaging unit's configuration.</li><li>Check if the following fields in the `spy_sales_order_item` table are saved:<br><ul><li>`amount`</li><li>`amount_sku`</li><li>`amount_measurement_unit_name`</li><li>`amount_measurement_unit_code`</li><li>`amount_measurement_unit_precision`</li><li>`amount_measurement_unit_conversion`</li><li>`amount_base_measurement_unit_name`</li></ul></li></ul>
+Go through the checkout workflow and make an order>.
+* Check if the stock is modified respectfully according to your lead product's and packaging unit's configuration.
+* Check if the following fields in the `spy_sales_order_item` table are saved:
+  * `amount`
+  * `amount_sku`
+  * `amount_measurement_unit_name`
+  * `amount_measurement_unit_code`
+  * `amount_measurement_unit_precision`
+  * `amount_measurement_unit_conversion`
+  * `amount_base_measurement_unit_name`
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
@@ -1004,11 +1013,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-{% info_block infoBox "Info" %}
-
 `ProductPackagingUnitWidget` uses Javascript for some functionality:<br><table><tr><th>Functionality</th><th>Path</th></tr><tr><td><ul><li>Controls base unit =&gt; sales unit calculations</li><li>Applies product quantity and amount restrictions on sales unit level</li><li>Offers recommendation when invalid quantity or amount is selected</li><li>Maintains stock-based quantity, amount and sales unit information for posting</li></ul></td><td>`vendor/spryker-shop/product-packaging-unit-widget/src/SprykerShop/Yves/ProductPackagingUnitWidget/Theme/default/components/molecules/packaging-unit-quantity-selector/packaging-unit-quantity-selector.ts`</td></tr></table>
-
-{% endinfo_block %}
 
 Run the following command to enable Javascript and CSS changes:
 

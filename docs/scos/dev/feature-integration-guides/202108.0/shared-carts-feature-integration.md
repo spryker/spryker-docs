@@ -776,6 +776,9 @@ class YvesBootstrap extends SprykerYvesBootstrap
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following plugin has been registered:<ol><li> Open Yves and log in with customer.</li><li>Open `https://mysprykershop.com/multi-cart/` - the page should contain all customer's quotes.</li><li>Click on the share link. The share cart page should open.</li></ol>
+Make sure that the following plugin has been registered: 
+* Open Yves and log in with customer.
+* Open `https://mysprykershop.com/multi-cart/` - the page should contain all customer's quotes.
+* Click on the share link. The share cart page should open.
 
 {% endinfo_block %}

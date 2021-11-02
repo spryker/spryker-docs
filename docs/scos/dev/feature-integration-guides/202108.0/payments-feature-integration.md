@@ -17,7 +17,10 @@ related:
 
 {% info_block errorBox %}
 
-The following feature integration guide expects the basic feature to be in place.<br>The current feature integration guide only adds the following functionalities:<ul><li>Payment Back Office UI;</li><li>Payment method per store;</li><li>Payment data import.</li></ul>
+The following feature integration guide expects the basic feature to be in place.<br>The current feature integration guide only adds the following functionalities:
+* Payment Back Office UI;
+* Payment method per store;
+* Payment data import.
 
 {% endinfo_block %}
 
@@ -276,7 +279,10 @@ class PaymentGuiDependencyProvider extends SprykerPaymentGuiDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that:<ul><li>You can see the list of payment methods in the **Back Office > Administration >  Payment Management > Payment Methods** section.</li><li>You can see information about the payment method in the **Back Office > Administration >  Payment Management > Payment Methods > View** section.</li><li>You can edit the payment method in the **Back Office > Administration >  Payment Management > Payment Methods > Edit** section.</li></ul>
+Make sure that:
+* You can see the list of payment methods in the **Back Office > Administration >  Payment Management > Payment Methods** section.
+* You can see information about the payment method in the **Back Office > Administration >  Payment Management > Payment Methods > View** section.
+* You can edit the payment method in the **Back Office > Administration >  Payment Management > Payment Methods > Edit** section.
 
 {% endinfo_block %}
 

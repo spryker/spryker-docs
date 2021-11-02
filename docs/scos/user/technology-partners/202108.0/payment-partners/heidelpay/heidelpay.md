@@ -42,7 +42,7 @@ Heidelpay is an internationally operating payment institution, authorized and re
 To integrate Hidelpay in your project, follow these steps:
 
 1. [Install](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/heidelpay/heidelpay-installation.html) Heidelpay.
-2. [Integrate](https://documentation.spryker.com/2021080/docs/heidelpay-integration) Heidelpay into your Legacy Demoshop project or [integrate](https://documentation.spryker.com/2021080/docs/heidelpay-integration-scos)  Heidelpay into your Spryker Commerce OS project.
+2. [Integrate](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/heidelpay/scos-integration/heidelpay-integration-into-scos.html)Heidelpay into your Spryker Commerce OS project.
 3. Configure selected payment methods:
   - Paypal ([Paypal Authorize](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-paypal-authorize.html),[Payal Debit](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-paypal-debit-workflow.html))
   - [Credit Card](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-credit-card-secure.html)

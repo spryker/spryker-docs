@@ -10,6 +10,10 @@ redirect_from:
   - /2021080/docs/en/spryker-core-back-office-feature-integration
   - /docs/spryker-core-back-office-feature-integration
   - /docs/en/spryker-core-back-office-feature-integration
+  - /2021080/docs/back-office-feature-integration
+  - /2021080/docs/en/back-office-feature-integration
+  - /docs/back-office-feature-integration
+  - /docs/en/back-office-feature-integration
 ---
 
 {% info_block errorBox %}
@@ -34,8 +38,8 @@ The current feature integration guide adds the following functionalities:
 Ensure that the related features are installed:
 
 | NAME | VERSION |
-| --- | --- | --- |
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| --- | --- |
+| [Spryker Core](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) | {{page.version}} |
 
 
 ## 1) Install the required modules using Composer

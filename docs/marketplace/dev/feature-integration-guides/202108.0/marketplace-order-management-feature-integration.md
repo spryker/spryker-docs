@@ -1,6 +1,6 @@
 ---
 title: Marketplace Order Management feature integration
-last_updated: Sep 08, 2021
+last_updated: Oct 19, 2021
 description: This document describes how to integrate the Marketplace Order Management feature into a Spryker project.
 template: feature-integration-guide-template
 ---
@@ -587,7 +587,7 @@ Export data as follows:
 <details>
 <summary markdown='span'>data/export/config/merchant_order_export_config.yml</summary>
 
-```xml
+```yaml
 version: 1
 
 defaults:

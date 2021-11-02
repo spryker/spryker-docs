@@ -29,12 +29,16 @@
                                         <a href="/" class="main-nav__opener {% if page.layout == 'home' %}main-nav__opener--grey{% endif %} nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <span class="main-nav__opener-label">Select Product</span>
                                             <span class="main-nav__opener-text">
-                                                {% if page.product-type == 'marketplace/dev' %}
+                                                {% if page.product == 'marketplace' and page.role == 'dev' %}
                                                 Marketplace developer guide
-                                                {% elsif page.product-type == 'marketplace/user' %}
+                                                {% elsif page.product == 'marketplace' and page.role == 'user' %}
                                                 Marketplace users guide
-                                                {% elsif page.product-type == 'cloud/dev' %}
+                                                {% elsif page.product == 'cloud' and page.role == 'dev' %}
                                                 Spryker Cloud Commerce OS
+                                                {% elsif page.product == 'scos' and page.role == 'dev' %}
+                                                SCOS developer guide
+                                                {% elsif page.product == 'scos' and page.role == 'user' %}
+                                                SCOS users guide
                                                 {% else %}
                                                 Select Product
                                                 {% endif %}
@@ -42,10 +46,31 @@
                                             <i class="main-nav__opener-icon icon-arrow-down"></i>
                                         </a>
                                         <ul class="main-nav__drop main-nav__drop--mob-static dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                            <li>
-                                                <a href="https://documentation.spryker.com" class="main-nav__drop-link">
-                                                Spryker Commerce OS
+                                            <li class="dropdown">
+                                                <a href="/" class="main-nav__drop-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Spryker Commerce OS
+                                                    <i class="main-nav__drop-link-arrow icon-arrow-right"></i>
                                                 </a>
+                                                <ul class="main-nav__drop dropdown-menu">
+                                                    <li>
+                                                        <a href="/docs/scos/dev/developer-getting-started-guide.html" class="main-nav__drop-link">
+                                                            <span class="main-nav__drop-link-title">
+                                                                <i class="icon-developer"></i>
+                                                                Developer
+                                                            </span>
+                                                            <span class="main-nav__drop-link-subtitle">SCOS developer guide</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/docs/scos/user/intro-to-spryker/about-spryker.html" class="main-nav__drop-link">
+                                                            <span class="main-nav__drop-link-title">
+                                                                <i class="icon-business"></i>
+                                                                Business User
+                                                            </span>
+                                                            <span class="main-nav__drop-link-subtitle">SCOS users guide</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
                                             </li>
                                             <li class="dropdown">
                                                 <a href="/" class="main-nav__drop-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

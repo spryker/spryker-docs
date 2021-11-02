@@ -98,4 +98,4 @@ On the *Merchant Profile* page, customers can find the following merchant-specif
 
 Customers can only access the profile pages of [active](/docs/marketplace/user/features/{{site.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#active-merchants) merchants.
 
-For an example, see the [Spryker merchant profile](https://www.de.marketplace.demo-spryker.com/en/merchant/spryker) in our Marketplace Demo Shop.
+For an example, see the [Spryker merchant profile](https://www.de.b2c-marketplace.demo-spryker.com/en/merchant/spryker) in our Marketplace Demo Shop.

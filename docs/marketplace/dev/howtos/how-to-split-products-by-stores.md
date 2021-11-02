@@ -1,5 +1,5 @@
 ---
-title: 'HowTo: Split products by stores'
+title: 'How-To: Split products by stores'
 description: This document provides details on how to split products by stores.
 template: howto-guide-template
 related: 

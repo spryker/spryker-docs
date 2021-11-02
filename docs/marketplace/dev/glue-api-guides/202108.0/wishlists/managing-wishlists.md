@@ -112,6 +112,8 @@ To retrieve all wishlists of a customer, send the request:
 	}
 ```
 
+</details>
+
 <details>
 <summary markdown='span'>Response sample with existing wishlists</summary>
 
@@ -464,7 +466,8 @@ To retrieve a specific wishlist, send the request:
 <details>
 <summary markdown='span'>Response sample: retrieving a wishlist</summary>
 
-```json{
+```json
+{
     "data": {
         "type": "wishlists",
         "id": "246591f8-4f30-55ce-8b17-8482859b4ac1",

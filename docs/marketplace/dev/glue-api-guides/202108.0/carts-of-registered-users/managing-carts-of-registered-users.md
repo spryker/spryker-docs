@@ -74,29 +74,29 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
 <summary markdown='span'>Response sample</summary>
 
 ```json
-"data":
-        {
-            "type": "carts",
-            "id": "f23f5cfa-7fde-5706-aefb-ac6c6bbadeab",
-            "attributes": {
-                "priceMode": "GROSS_MODE",
-                "currency": "EUR",
-                "store": "DE",
-                "discounts": [],
-                "totals": {
-                    "expenseTotal": null,
-                    "discountTotal": null,
-                    "taxTotal": null,
-                    "subtotal": null,
-                    "grandTotal": null
-                },
-                "name": "My Cart",
-                "isDefault": true
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aefb-ac6c6bbadeab"
-            }
-        }
+{
+  "data": {
+    "type": "carts",
+    "id": "f23f5cfa-7fde-5706-aefb-ac6c6bbadeab",
+    "attributes": {
+      "priceMode": "GROSS_MODE",
+      "currency": "EUR",
+      "store": "DE",
+      "discounts": [],
+      "totals": {
+        "expenseTotal": null,
+        "discountTotal": null,
+        "taxTotal": null,
+        "subtotal": null,
+        "grandTotal": null
+      },
+      "name": "My Cart",
+      "isDefault": true
+    },
+    "links": {
+      "self": "https://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aefb-ac6c6bbadeab"
+    }
+  }
 }
 ```
 
@@ -2047,39 +2047,39 @@ To retrieve all carts, send the request:
 
 ```json
 {
-            "type": "carts",
-            "id": "bef3732e-bc7a-5c07-a40c-f38caf1c40ff",
-            "attributes": {
-                "priceMode": "GROSS_MODE",
-                "currency": "EUR",
-                "store": "DE",
-                "name": "newcart",
-                "isDefault": true,
-                "totals": {
-                    "expenseTotal": 0,
-                    "discountTotal": 0,
-                    "taxTotal": 4972,
-                    "subtotal": 31140,
-                    "grandTotal": 31140,
-                    "priceToPay": 31140
-                },
-                "discounts": []
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/carts/bef3732e-bc7a-5c07-a40c-f38caf1c40ff"
-            },
-            "relationships": {
-                "items": {
-                    "data": [
-                        {
-                            "type": "items",
-                            "id": "041_25904691"
-                        }
-                    ]
-                }
-            }
+    "data": {
+        "type": "carts",
+        "id": "bef3732e-bc7a-5c07-a40c-f38caf1c40ff",
+        "attributes": {
+          "priceMode": "GROSS_MODE",
+          "currency": "EUR",
+          "store": "DE",
+          "name": "newcart",
+          "isDefault": true,
+          "totals": {
+            "expenseTotal": 0,
+            "discountTotal": 0,
+            "taxTotal": 4972,
+            "subtotal": 31140,
+            "grandTotal": 31140,
+            "priceToPay": 31140
+          },
+          "discounts": []
+        },
+        "links": {
+          "self": "https://glue.mysprykershop.com/carts/bef3732e-bc7a-5c07-a40c-f38caf1c40ff"
+        },
+        "relationships": {
+          "items": {
+            "data": [
+              {
+                "type": "items",
+                "id": "041_25904691"
+              }
+            ]
+          }
         }
-    ],
+    },
     "links": {
         "self": "https://glue.mysprykershop.com/items?include=items,concrete-products,product-offers,product-offer-prices"
     },
@@ -2876,7 +2876,6 @@ To retrieve a registered user's cart, send the request:
 }
 ```
 
-</summary>
 </details>
 
 <details>
@@ -4210,7 +4209,8 @@ To retrieve a registered user's cart, send the request:
 }
 
 ```
-details
+
+</details>
 
 <details>
 <summary markdown='span'>Response sample with merchant products</summary>
@@ -4337,6 +4337,7 @@ details
     ]
 }
 ```
+
 </details>
 
 For the attributes of carts of registered users and included resources, see [Retrieve a registered user's carts](#retrieve-registered-users-carts-response-attributes).

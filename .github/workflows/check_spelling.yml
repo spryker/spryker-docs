@@ -9,4 +9,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Check Spelling
-        uses: rojopolis/spellcheck-github-actions@v0.18.0
+        uses: rojopolis/spellcheck-github-actions@latest

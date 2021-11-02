@@ -1,16 +1,17 @@
 ---
-title: Configuration
+title: Persistence ACL feature configuration
 last_updated: Sep 14, 2021
 template: concept-topic-template
 ---
+This article describes how you can configure the [Persistence ACL feature](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html).
 
-Persistence ACL functionality is based on the Propel behavior. You can enable the feature in two different ways:
+The Persistence ACL functionality is based on the Propel behavior. You can enable the feature in two different ways:
 - [Create a connection with one or more database tables](#connect-persistence-acl-feature-to-one-or-more-database-tables).
 - [Connect the feature to all database tables](#connect-persistence-acl-feature-to-all-database-tables).
 
 ## Connect Persistence ACL feature to one or more database tables
 
-In the following code snippet only SpyMerchant entity is configured to be handled by ACL.
+In the following code snippet, only SpyMerchant entity is configured to be handled by ACL.
 
 ```xml
 <?xml version="1.0"?>
@@ -28,8 +29,8 @@ In the following code snippet only SpyMerchant entity is configured to be handle
 
 ## Connect Persistence ACL feature to all database tables
 
-All entities in the system will be handled by ACL in the following example.
-When configuring ACLs in such a way, be sure to use the [Allowed entity list](#allow-list-configuration) to exclude entities that are needed in order to function properly.
+ACL handles all entities in the system in the following example.
+When configuring ACLs in such a way, be sure to use the [Allowed entity list](#allow-list-configuration) to exclude entities that are needed to function properly.
 Provide the list of entities that are needed:
 
 - `SpyUser`
@@ -54,7 +55,7 @@ Provide the list of entities that are needed:
 </database>
 ```
 
-## Feature configuration
+## Persistence ACL feature configuration
 
 The configuration, unlike the rule, is common to the entire system. The main configuration object for the feature is `\Generated\Shared\Transfer\AclEntityMetadataConfigTransfer`. Through the plugin system, it can be extended. You just need to create a plugin and implement `\Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityMetadataConfigExpanderPluginInterface`.
 
@@ -111,7 +112,7 @@ Sometimes, foreign keys are not used to link the child and parent tables, but ra
 
 ## Examples of configuration
 
-Examples of ACL configuration are provided in this section.
+This section provides examples of ACL configuration.
 
 ### Basic inheritance configuration
 

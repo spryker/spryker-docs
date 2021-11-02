@@ -142,6 +142,9 @@ Make sure that the following changes have been applied by checking your database
 {% info_block warningBox "Verification" %}
 
 Make sure that the following changes in transfer objects have been applied:
+
+| TRANSFER | TYPE | EVENT | PATH |
+| --- | --- | --- | --- |
 | ProductPackagingUnitTransfer | class | created | src/Generated/Shared/Transfer/ProductPackagingUnitTransfer |
 | ProductPackagingUnitAmountTransfer | class | created | src/Generated/Shared/Transfer/ProductPackagingUnitAmountTransfer |
 | ProductPackagingUnitStorageTransfer | class | created | src/Generated/Shared/Transfer/ProductPackagingUnitStorageTransfer |

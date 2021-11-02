@@ -148,14 +148,11 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-<div>
 Make sure that `ValidateRestRequestAttributesPlugin` has been activated:
 1. Make sure that there is a Glue API feature that uses validation configuration in your project.
 2. Create validation configuration:
     a. Create `src/Pyz/Glue/YourModuleRestApi/Validation/{module}.validation.yaml`.
-
     b. In the file, describe validation rules for endpoints. See see [Validating REST Request Format](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/validating-rest-request-format.html) for more details. Example:
-
     ```yaml
     access-tokens:
       post:
@@ -165,18 +162,12 @@ Make sure that `ValidateRestRequestAttributesPlugin` has been activated:
         password:
           - NotBlank
     ```
-
-
     c. Collect the validation cache:
-
     ```bash
     console glue:rest:build-request-validation-cache
     ```
-
-2. Make a call to the endpoint you described in the validation file with invalid data. Request sample:
-
+3. Make a call to the endpoint you described in the validation file with invalid data. Request sample:
 `POST http://example.org/access-tokens`
-
 ```json
 {
     "data":
@@ -190,9 +181,7 @@ Make sure that `ValidateRestRequestAttributesPlugin` has been activated:
         }
 }
 ```
-
 You should get a validation error similar to the following response sample:
-
 ```json
 {
     "errors": [
@@ -208,6 +197,6 @@ You should get a validation error similar to the following response sample:
         }
     ]
 }
-</div>
+```
 
 {% endinfo_block %}

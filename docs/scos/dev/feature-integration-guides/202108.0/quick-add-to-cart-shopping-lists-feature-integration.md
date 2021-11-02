@@ -57,7 +57,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-<div>Make sure that the following elements are available on the **Quick Order** page for logged-in customers `https://mysprykershop.com/quick-order`:<ul><li>**Submit** button under the form called *Add to shopping list*</li><li>**Drop-down box** containing shopping list names.</li></ul></div>
+Make sure that the following elements are available on the **Quick Order** page for logged-in customers `https://mysprykershop.com/quick-order`:<ul><li>**Submit** button under the form called *Add to shopping list*</li><li>**Drop-down box** containing shopping list names.</li></ul>
 
 {% endinfo_block %}
 

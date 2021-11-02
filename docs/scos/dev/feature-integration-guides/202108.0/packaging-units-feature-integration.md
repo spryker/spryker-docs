@@ -873,16 +873,16 @@ Add an item with packaging units to cart.
 
 {% info_block warningBox "Verification" %}
 
-<div>Go through the checkout workflow and make an order.<br><ul><li>Check if the stock is modified respectfully according to your lead product's and packaging unit's configuration.</li><li>Check if the following fields in the `spy_sales_order_item` table are saved:<br><ul><li>`amount`</li><li>`amount_sku`</li><li>`amount_measurement_unit_name`</li><li>`amount_measurement_unit_code`</li><li>`amount_measurement_unit_precision`</li><li>`amount_measurement_unit_conversion`</li><li>`amount_base_measurement_unit_name`</li></ul></li></ul></div>
+Go through the checkout workflow and make an order>.<br><ul><li>Check if the stock is modified respectfully according to your lead product's and packaging unit's configuration.</li><li>Check if the following fields in the `spy_sales_order_item` table are saved:<br><ul><li>`amount`</li><li>`amount_sku`</li><li>`amount_measurement_unit_name`</li><li>`amount_measurement_unit_code`</li><li>`amount_measurement_unit_precision`</li><li>`amount_measurement_unit_conversion`</li><li>`amount_base_measurement_unit_name`</li></ul></li></ul>
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-<div>Go to the Zed UI Sales overview and check the order.<br><ul><li>Verify if the correct sales unit is displayed.</li><li>Verify if the correct amount is displayed per sales order item.</li></ul></div>
+Go to the Zed UI Sales overview and check the order.<br><ul><li>Verify if the correct sales unit is displayed.</li><li>Verify if the correct amount is displayed per sales order item.</li></ul>
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
-<div>Make sure that abstract products which have packaging units available don’t have `add_to_cart_sku` field at Elasticsearch document.</div>
+Make sure that abstract products which have packaging units available don’t have `add_to_cart_sku` field at Elasticsearch document.
 
 {% endinfo_block %}
 
@@ -1009,7 +1009,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% info_block infoBox "Info" %}
 
-<div>`ProductPackagingUnitWidget` uses Javascript for some functionality:<br><table><tr><th>Functionality</th><th>Path</th></tr><tr><td><ul><li>Controls base unit =&gt; sales unit calculations</li><li>Applies product quantity and amount restrictions on sales unit level</li><li>Offers recommendation when invalid quantity or amount is selected</li><li>Maintains stock-based quantity, amount and sales unit information for posting</li></ul></td><td>`vendor/spryker-shop/product-packaging-unit-widget/src/SprykerShop/Yves/ProductPackagingUnitWidget/Theme/default/components/molecules/packaging-unit-quantity-selector/packaging-unit-quantity-selector.ts`</td></tr></table></div>
+`ProductPackagingUnitWidget` uses Javascript for some functionality:<br><table><tr><th>Functionality</th><th>Path</th></tr><tr><td><ul><li>Controls base unit =&gt; sales unit calculations</li><li>Applies product quantity and amount restrictions on sales unit level</li><li>Offers recommendation when invalid quantity or amount is selected</li><li>Maintains stock-based quantity, amount and sales unit information for posting</li></ul></td><td>`vendor/spryker-shop/product-packaging-unit-widget/src/SprykerShop/Yves/ProductPackagingUnitWidget/Theme/default/components/molecules/packaging-unit-quantity-selector/packaging-unit-quantity-selector.ts`</td></tr></table>
 
 {% endinfo_block %}
 

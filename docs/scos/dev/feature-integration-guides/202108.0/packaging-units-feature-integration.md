@@ -1016,7 +1016,10 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-`ProductPackagingUnitWidget` uses Javascript for some functionality:<br><table><tr><th>Functionality</th><th>Path</th></tr><tr><td><ul><li>Controls base unit =&gt; sales unit calculations</li><li>Applies product quantity and amount restrictions on sales unit level</li><li>Offers recommendation when invalid quantity or amount is selected</li><li>Maintains stock-based quantity, amount and sales unit information for posting</li></ul></td><td>`vendor/spryker-shop/product-packaging-unit-widget/src/SprykerShop/Yves/ProductPackagingUnitWidget/Theme/default/components/molecules/packaging-unit-quantity-selector/packaging-unit-quantity-selector.ts`</td></tr></table>
+`ProductPackagingUnitWidget` uses Javascript for some functionality:
+<div>
+<table><tr><th>Functionality</th><th>Path</th></tr><tr><td><ul><li>Controls base unit =&gt; sales unit calculations</li><li>Applies product quantity and amount restrictions on sales unit level</li><li>Offers recommendation when invalid quantity or amount is selected</li><li>Maintains stock-based quantity, amount and sales unit information for posting</li></ul></td><td>`vendor/spryker-shop/product-packaging-unit-widget/src/SprykerShop/Yves/ProductPackagingUnitWidget/Theme/default/components/molecules/packaging-unit-quantity-selector/packaging-unit-quantity-selector.ts`</td></tr></table>
+</div>
 
 Run the following command to enable Javascript and CSS changes:
 

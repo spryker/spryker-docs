@@ -10,6 +10,18 @@ redirect_from:
   - /2021080/docs/en/architecture-sniffer
   - /docs/architecture-sniffer
   - /docs/en/architecture-sniffer
+  - /v6/docs/architecture-sniffer
+  - /v6/docs/en/architecture-sniffer
+  - /v5/docs/architecture-sniffer
+  - /v5/docs/en/architecture-sniffer
+  - /v4/docs/architecture-sniffer
+  - /v4/docs/en/architecture-sniffer
+  - /v3/docs/architecture-sniffer
+  - /v3/docs/en/architecture-sniffer
+  - /v2/docs/architecture-sniffer
+  - /v2/docs/en/architecture-sniffer
+  - /v1/docs/architecture-sniffer
+  - /v1/docs/en/architecture-sniffer
 related:
   - title: Code Sniffer
     link: docs/scos/dev/sdk/page.version/development-tools/code-sniffer.html

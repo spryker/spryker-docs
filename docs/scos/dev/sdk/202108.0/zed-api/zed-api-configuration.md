@@ -10,6 +10,18 @@ redirect_from:
   - /2021080/docs/en/zed-api-config
   - /docs/zed-api-config
   - /docs/en/zed-api-config
+  - /v6/docs/zed-api-config
+  - /v6/docs/en/zed-api-config
+  - /v5/docs/zed-api-config
+  - /v5/docs/en/zed-api-config
+  - /v4/docs/zed-api-config
+  - /v4/docs/en/zed-api-config
+  - /v3/docs/zed-api-config
+  - /v3/docs/en/zed-api-config
+  - /v2/docs/zed-api-config
+  - /v2/docs/en/zed-api-config
+  - /v1/docs/zed-api-config
+  - /v1/docs/en/zed-api-config
 ---
 
 First of all we need to decide on the resources being exposed. Those will be mapped inside the `ApiDependencyProvider`:
@@ -42,4 +54,3 @@ class ApiDependencyProvider extends SprykerApiDependencyProvider
 Each resource plugin contains a `getResourceName()` which will map to the resource name of the URL. Those can also be versioned or customized if necessary.
 
 Example: If you create a `CustomerApiResourcePlugin` containing `customer-groups` as a resource name, the API resource URL is then API prefix (/api/rest/) + resource name, in this case `/api/rest/customer-groups`.
-

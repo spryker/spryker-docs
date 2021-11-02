@@ -10,6 +10,18 @@ redirect_from:
   - /2021080/docs/en/importer
   - /docs/importer
   - /docs/en/importer
+  - /v6/docs/importer
+  - /v6/docs/en/importer
+  - /v5/docs/importer
+  - /v5/docs/en/importer
+  - /v4/docs/importer
+  - /v4/docs/en/importer
+  - /v3/docs/importer
+  - /v3/docs/en/importer
+  - /v2/docs/importer
+  - /v2/docs/en/importer
+  - /v1/docs/importer
+  - /v1/docs/en/importer
 related:
   - title: About Demo Shop Data Import
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/importing-demo-shop-data.html
@@ -43,5 +55,3 @@ The main benefits of the Data Import feature are:
 * To create your own data importer, see [Creating a data importer](/docs/scos/dev/data-import/{{page.version}}/creating-a-data-importer.html).
 * To import the Demo Shop data, see [Importing Demo Shop data](/docs/scos/dev/data-import/{{page.version}}/demo-shop-data-import/importing-demo-shop-data.html) and[ About data import categories](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/about-data-import-categories.html).
 * To import data with a YAML configuration file, see [Importing data with a configuration file](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html).
-
-

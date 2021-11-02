@@ -10,6 +10,18 @@ redirect_from:
   - /2021080/docs/en/zed-api-crud-functionality
   - /docs/zed-api-crud-functionality
   - /docs/en/zed-api-crud-functionality
+  - /v6/docs/zed-api-crud-functionality
+  - /v6/docs/en/zed-api-crud-functionality
+  - /v5/docs/zed-api-crud-functionality
+  - /v5/docs/en/zed-api-crud-functionality
+  - /v4/docs/zed-api-crud-functionality
+  - /v4/docs/en/zed-api-crud-functionality
+  - /v3/docs/zed-api-crud-functionality
+  - /v3/docs/en/zed-api-crud-functionality
+  - /v2/docs/zed-api-crud-functionality
+  - /v2/docs/en/zed-api-crud-functionality
+  - /v1/docs/zed-api-crud-functionality
+  - /v1/docs/en/zed-api-crud-functionality
 ---
 
 ## Filtering

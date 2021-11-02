@@ -10,6 +10,18 @@ redirect_from:
   - /2021080/docs/en/zed-api-project-implementation
   - /docs/zed-api-project-implementation
   - /docs/en/zed-api-project-implementation
+  - /v6/docs/zed-api-project-implementation
+  - /v6/docs/en/zed-api-project-implementation
+  - /v5/docs/zed-api-project-implementation
+  - /v5/docs/en/zed-api-project-implementation
+  - /v4/docs/zed-api-project-implementation
+  - /v4/docs/en/zed-api-project-implementation
+  - /v3/docs/zed-api-project-implementation
+  - /v3/docs/en/zed-api-project-implementation
+  - /v2/docs/zed-api-project-implementation
+  - /v2/docs/en/zed-api-project-implementation
+  - /v1/docs/zed-api-project-implementation
+  - /v1/docs/en/zed-api-project-implementation
 ---
 
 For the API and the API bundles to get activated we need to configure our own service provider stack in the Zed `ApplicationDependencyProvider` class:
@@ -26,7 +38,7 @@ For the API and the API bundles to get activated we need to configure our own se
         $providers = [
             // Add Security/CORS service providers
             // Add Auth service providers
-            
+
             new RequestServiceProvider(),
             new SslServiceProvider(),
             new ServiceControllerServiceProvider(),

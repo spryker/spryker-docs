@@ -10,6 +10,19 @@ redirect_from:
   - /2021080/docs/en/code-sniffer
   - /docs/code-sniffer
   - /docs/en/code-sniffer
+  - /v6/docs/code-sniffer
+  - /v6/docs/en/code-sniffer
+  - /v5/docs/code-sniffer
+  - /v5/docs/en/code-sniffer
+  - /v4/docs/code-sniffer
+  - /v4/docs/en/code-sniffer
+  - /v3/docs/code-sniffer
+  - /v3/docs/en/code-sniffer
+  - /v2/docs/code-sniffer
+  - /v2/docs/en/code-sniffer
+  - /v1/docs/code-sniffer
+  - /v1/docs/en/code-sniffer
+
 related:
   - title: Architecture Sniffer
     link: docs/scos/dev/sdk/page.version/development-tools/architecture-sniffer.html
@@ -21,7 +34,7 @@ Code Sniffer is a very powerful tool that helps to keep the code clean and preve
 
 ```php
 $ vendor/bin/console code:sniff:style
- 
+
 	// Fix fixable errors instead of just reporting
 	$ vendor/bin/console code:sniff:style -f
 
@@ -30,7 +43,7 @@ $ vendor/bin/console code:sniff:style
 
 	// Sniff a specific subfolder of your project
 	$ vendor/bin/console code:sniff:style src/Pyz/Zed
- 
+
 	// Run a specific sniff only
 	$ vendor/bin/console code:sniff:style ... -s Spryker.Commenting.FullyQualifiedClassNameInDocBlock
 ```

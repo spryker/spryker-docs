@@ -10,6 +10,18 @@ redirect_from:
   - /2021080/docs/en/cronjob-scheduling
   - /docs/cronjob-scheduling
   - /docs/en/cronjob-scheduling
+  - /v6/docs/cronjob-scheduling
+  - /v6/docs/en/cronjob-scheduling
+  - /v5/docs/cronjob-scheduling
+  - /v5/docs/en/cronjob-scheduling
+  - /v4/docs/cronjob-scheduling
+  - /v4/docs/en/cronjob-scheduling
+  - /v3/docs/cronjob-scheduling
+  - /v3/docs/en/cronjob-scheduling
+  - /v2/docs/cronjob-scheduling
+  - /v2/docs/en/cronjob-scheduling
+  - /v1/docs/cronjob-scheduling
+  - /v1/docs/en/cronjob-scheduling
 ---
 
 To enable your system to process all requests effortlessly, the Spryker Commerce OS is equipped with a Cronjob Scheduling feature. All jobs can be scheduled and executed automatically or manually. Jobs are versioned and can easily be changed by your own developers.

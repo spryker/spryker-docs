@@ -9,6 +9,18 @@ redirect_from:
   - /2021080/docs/en/devvm
   - /docs/devvm
   - /docs/en/devvm
+  - /v6/docs/devvm
+  - /v6/docs/en/devvm
+  - /v5/docs/devvm
+  - /v5/docs/en/devvm
+  - /v4/docs/devvm
+  - /v4/docs/en/devvm
+  - /v3/docs/devvm
+  - /v3/docs/en/devvm
+  - /v2/docs/devvm
+  - /v2/docs/en/devvm
+  - /v1/docs/devvm
+  - /v1/docs/en/devvm
 ---
 
 Spryker Commerce OS is shipped with an all-inclusive and fully pre-provisioned development environment on a virtual machine, based on Vagrant and VirtualBox. A Docker container-based environment is provided for development as an alternative to the virtual machine.

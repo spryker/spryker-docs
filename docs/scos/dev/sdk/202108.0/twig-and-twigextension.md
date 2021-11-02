@@ -10,6 +10,18 @@ redirect_from:
   - /2021080/docs/en/twig-and-twig-extension
   - /docs/twig-and-twig-extension
   - /docs/en/twig-and-twig-extension
+  - /v6/docs/twig-and-twig-extension
+  - /v6/docs/en/twig-and-twig-extension
+  - /v5/docs/twig-and-twig-extension
+  - /v5/docs/en/twig-and-twig-extension
+  - /v4/docs/twig-and-twig-extension
+  - /v4/docs/en/twig-and-twig-extension
+  - /v3/docs/twig-and-twig-extension
+  - /v3/docs/en/twig-and-twig-extension
+  - /v2/docs/twig-and-twig-extension
+  - /v2/docs/en/twig-and-twig-extension
+  - /v1/docs/twig-and-twig-extension
+  - /v1/docs/en/twig-and-twig-extension
 ---
 
 ## Twig

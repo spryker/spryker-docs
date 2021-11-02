@@ -10,6 +10,18 @@ redirect_from:
   - /2021080/docs/en/zed-api-processor-stack
   - /docs/zed-api-processor-stack
   - /docs/en/zed-api-processor-stack
+  - /v6/docs/zed-api-processor-stack
+  - /v6/docs/en/zed-api-processor-stack
+  - /v5/docs/zed-api-processor-stack
+  - /v5/docs/en/zed-api-processor-stack
+  - /v4/docs/zed-api-processor-stack
+  - /v4/docs/en/zed-api-processor-stack
+  - /v3/docs/zed-api-processor-stack
+  - /v3/docs/en/zed-api-processor-stack
+  - /v2/docs/zed-api-processor-stack
+  - /v2/docs/en/zed-api-processor-stack
+  - /v1/docs/zed-api-processor-stack
+  - /v1/docs/en/zed-api-processor-stack
 ---
 
 ## Request and Pre Processing
@@ -29,7 +41,7 @@ Let’s start with the request and pre-processing. Inside the Api module’s `Ap
     {
         $stack = parent::getPreProcessorStack();
         // Add your own or customize completely
-        
+
         return $stack;
     }
 
@@ -60,7 +72,7 @@ Similarly, the post processing stack can further hydrate the `ApiResponseTransfe
     {
         $stack = parent::getPostProcessorStack();
         // Add your own or customize completely
-                
+
         return $stack;
     }
 ```
@@ -103,4 +115,3 @@ public function getHttpMethodsForItem(array $params): array {
 ```
 
 You can omit the HTTP method OPTIONS as this will be auto-appended to the stack of methods.
-

@@ -9,6 +9,8 @@ redirect_from:
   - /2021080/docs/en/zed-api-beta
   - /docs/zed-api-beta
   - /docs/en/zed-api-beta
+  - /v6/docs/zed-api-beta
+  - /v6/docs/en/zed-api-beta
 ---
 
 The Spryker OS offers a flexible REST API for Zed. It maps basic REST functionality to the persistence layer of the Spryker backend.

@@ -9,6 +9,18 @@ redirect_from:
   - /2021080/docs/en/zed-api-resources
   - /docs/zed-api-resources
   - /docs/en/zed-api-resources
+  - /v6/docs/zed-api-resources
+  - /v6/docs/en/zed-api-resources
+  - /v5/docs/zed-api-resources
+  - /v5/docs/en/zed-api-resources
+  - /v4/docs/zed-api-resources
+  - /v4/docs/en/zed-api-resources
+  - /v3/docs/zed-api-resources
+  - /v3/docs/en/zed-api-resources
+  - /v2/docs/zed-api-resources
+  - /v2/docs/en/zed-api-resources
+  - /v1/docs/zed-api-resources
+  - /v1/docs/en/zed-api-resources
 ---
 
 Each module can have a “{module}Api” module(e.g. CustomerApi for Customer). Such an API module exposes CRUD facade methods (find, get, add, update, remove) that can be mapped to a URL via REST `resource/action` resolution.
@@ -95,4 +107,3 @@ The “get”, “add” and “update” actions return a single item:
     ...
 }
 ```
-

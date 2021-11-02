@@ -10,6 +10,10 @@ redirect_from:
   - /2021080/docs/en/data-export
   - /docs/data-export
   - /docs/en/data-export
+  - /v6/docs/data-export
+  - /v6/docs/en/data-export
+  - /v5/docs/data-export
+  - /v5/docs/en/data-export
 ---
 
 {% info_block warningBox "BETA version" %}

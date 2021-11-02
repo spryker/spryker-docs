@@ -1,5 +1,5 @@
 ---
-title: Enabling the category CMS blocks
+title: Integrating category CMS blocks
 description: The guide describes the process of installing the Category CMS Block in your project.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -15,19 +15,19 @@ related:
     link: docs/scos/dev/module-migration-guides/page.version/migration-guide-cmsblock.html
 ---
 
-This document describes how to enable category CMS blocks in a Spryker project. 
+This document describes how to enable category CMS blocks in a Spryker project.
 
-A category block is a CMS block that can be embedded into a category template. 
+A category block is a CMS block that can be embedded into a category template.
 
 To enable the Category CMS Block in your project, do the following:
-1. Install the CmsBlockCategoryConnector module using Composer: 
+1. Install the CmsBlockCategoryConnector module using Composer:
 
 ```bash
 "spryker/cms-block-category-connector": "^2.0.0"
 ```
 
 2. Register the CMS block form plugin.
-3. Add `CmsBlockCategoryFormPlugin` to the CMS Block GUI dependency provider: 
+3. Add `CmsBlockCategoryFormPlugin` to the CMS Block GUI dependency provider:
 
 **\Pyz\Zed\CmsBlockGui\CmsBlockGuiDependencyProvider**
 ```php
@@ -51,7 +51,7 @@ class CmsBlockGuiDependencyProvider extends CmsBlockGuiCmsBlockGuiDependencyProv
 ```
 
 4. Register the CMS block form handler plugin.
-5. Add `CmsBlockCategoryConnectorUpdatePlugin` to the CMS Block dependency provider: 
+5. Add `CmsBlockCategoryConnectorUpdatePlugin` to the CMS Block dependency provider:
 
 **Pyz\Zed\CmsBlock\CmsBlockDependencyProvider**
 ```php
@@ -72,7 +72,7 @@ class CmsBlockDependencyProvider extends CmsBlockCmsBlockDependencyProvider
 }
 ```
 
-6. Register a collector plugin: add `CmsBlockCategoryConnectorCollectorPlugin` to the Collector dependency provider: 
+6. Register a collector plugin: add `CmsBlockCategoryConnectorCollectorPlugin` to the Collector dependency provider:
 
 **\Pyz\Zed\Collector\CollectorDependencyProvider**
 ```php
@@ -158,7 +158,7 @@ class CmsBlockGuiDependencyProvider extends CmsBlockGuiCmsBlockGuiDependencyProv
 ```
 
 9. Register the CMS block form handler plugin.
-10. Add `CmsBlockCategoryConnectorUpdatePlugin` to the CMS Block dependency provider: 
+10. Add `CmsBlockCategoryConnectorUpdatePlugin` to the CMS Block dependency provider:
 
 **Pyz\Zed\CmsBlock\CmsBlockDependencyProvider**
 ```php
@@ -267,16 +267,16 @@ class CmsBlockGuiDependencyProvider extends CmsBlockGuiCmsBlockGuiDependencyProv
 
 **To configure the block:**
 1. In the Zed UI, go to the CMS section  and navigate to the blocks section.
-2. Click Create CMS Block to create a new block. 
+2. Click Create CMS Block to create a new block.
 3. From the template drop-down, select the new template and  name the new block.
 4. Set the "Category" and enter the category URL in the Category field. While typing, the product  search will offer suggestions from the product list.
 5. View on a CMS Block edit page.
 
 6. View on a Category edit page.
-       
+
 
 7. Set the block to active to use it straight away.
-8. After clicking **Save**, you will be prompted to provide glossary keys for the placeholders  included in the Twig template. 
+8. After clicking **Save**, you will be prompted to provide glossary keys for the placeholders  included in the Twig template.
 9. Embed the block into the category page by adding the following code in the `catalog.twig` template:
 
 ```php
@@ -293,9 +293,9 @@ vendor/bin/console collector:storage:export
 
 **To configure block positions**
 Usually you don't want to change Twig templates for each block assignment, but still be able to manage CMS Blocks from Zed GUI. In this case we recommend to use positioning.
-        
+
 CMS Block positioning means that you can predefine some of the useful places in your Twig templates once and then manage your CMS Blocks based on relations to categories and position. For example, you could define "header", "body", "footer" positions to manage your CMS Blocks in those places independently.
-        
+
  By default we provide the following positions: "Top", "Middle", "Bottom", but you can easily change them in the module configuration on a project level (put your extension of `CmsBlockCategoryConnectorConfig` with the replaced method `getCmsBlockCategoryPositionList` to `Pyz\Zed\CmsBlockCategoryConnector\CmsBlockCategoryConnectorConfig` as in the example below).
 
 ```php
@@ -329,7 +329,7 @@ class CmsBlockCategoryConnectorConfig extends SprykerCmsBlockCategoryConnectorCo
 Run position sync:
 
 To update a list of positions for CMS Blocks on a category page, execute at least once the `Spryker\Zed\CmsBlockCategoryConnector\Business\CmsBlockCategoryConnectorFacade::syncCmsBlockCategoryPosition()` (e.g. on CMS Block Category importer)).
-        
+
 Now, you can use the block with the specified position:
 
 ```bash

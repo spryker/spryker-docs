@@ -1,5 +1,5 @@
 ---
-title: Search Initialization Improvement
+title: Integrating search initialization enhancement
 description: Search initialization improvement introduces two separate commands for the build and data initialization processes.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -29,6 +29,7 @@ Previously, the `vendor/bin/console setup:search` command invoked the `build` an
 >Generates IndexMap PHP files that are used by the whole application.
 
 ## Integration
+
 ### 1) Install the Required Modules Using Composer
 
 Run the following command to install the required modules:

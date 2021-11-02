@@ -1,5 +1,5 @@
 ---
-title: Web Profiler for Zed
+title: Integrating Web Profiler for Zed
 description: This guide describes how to integrate and use the Web Profiler toolbar available in Zed for development purposes.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -10,9 +10,14 @@ redirect_from:
   - /2021080/docs/en/web-profiler
   - /docs/web-profiler
   - /docs/en/web-profiler
+  - /v6/docs/en/web-profiler
+  - /v5/docs/web-profiler
+  - /v5/docs/en/web-profiler
+  - /v4/docs/web-profiler
+  - /v4/docs/en/web-profiler
 related:
   - title: Web Profiler Widget for Yves
-    link: docs/scos/dev/migration-and-integration/page.version/development-tools/web-profiler-widget-for-yves.html
+    link: docs/scos/dev/migration-and-integration/page.version/development-tools/web-profiler-for-yves.html
 ---
 
 {% info_block errorBox %}
@@ -29,7 +34,7 @@ Spryker Profiler is based on _Symfony Profiler_. For details, see [Profiler doc
 
 The following modules provide the profiler functionality:
 
-*   **WebProfilerWidget** -`spryker/web-profiler-widget`
+*   **WebProfilerWidget** -`spryker/web-profiler`
 *   **WebProfilerExtension** -`spryker/web-profiler-extension`
 
 ## Installation
@@ -41,7 +46,7 @@ composer require spryker/web-profiler --dev
 
 ## Integration
 
-To be able to use _Web Profiler_, add  `\Spryker\Zed\WebProfiler\Communication\Plugin\Application\WebProfilerApplicationPlugin`of the`spryker-shop/web-profiler-widget`module to `\Pyz\Zed\Application\ApplicationDependencyProvider::getApplicationPlugins()`.
+To be able to use _Web Profiler_, add  `\Spryker\Zed\WebProfiler\Communication\Plugin\Application\WebProfilerApplicationPlugin`of the`spryker-shop/web-profiler`module to `\Pyz\Zed\Application\ApplicationDependencyProvider::getApplicationPlugins()`.
 
 ## Configure the Web Profiler per Environment
 

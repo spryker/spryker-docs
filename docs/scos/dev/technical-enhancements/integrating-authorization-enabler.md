@@ -1,5 +1,5 @@
 ---
-title: Authorization Enabler integration
+title: Integrating Authorization Enabler
 description: Learn how to enable the Authorization Enabler
 last_updated: Sep 2, 2021
 template: howto-guide-template

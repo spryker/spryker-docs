@@ -230,7 +230,7 @@ From now on, Silex components become optional, with a clear migration path. A pr
 The Heartbeat functionality is replaced with health checks. There is a new set of endpoints you can use to run health checks for your application services. The endpoints are closed by default for security purposes.
 
 #### Documentation:
-[Health Checks](/docs/scos/dev/technical-enhancements/health-checks.html)
+[Health Checks](/docs/scos/dev/technical-enhancements/integrating-health-checks.html)
 
 ### Queue Manager Optimization
 The **Queue manager** functionality is extended with the command that makes queue worker exit right after processing a queue. If the queue is empty, the queue worker exits instead of waiting for the configured execution time to pass.
@@ -245,7 +245,7 @@ To improve usability, the `vendor/bin/console setup:search` command which has be
     * `console search:setup:index-map`
 
 #### Documentation
-[Search Initialization Improvement](/docs/scos/dev/technical-enhancements/search-initialization-improvement.html)
+[Search Initialization Improvement](/docs/scos/dev/technical-enhancements/integrating-search-initialization-improvement.html)
 
 ### PHP Update
 PHP continuously develops and gets more exciting features. Also, old versions get deprecated, such as PHP7.1, which lost support by the end of 2019. From now on, Spryker modules will require **>=PHP7.2**. Please make sure your project doesn’t rely on deprecated technology and applies required infrastructural upgrades.

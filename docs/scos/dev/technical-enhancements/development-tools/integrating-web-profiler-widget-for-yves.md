@@ -1,5 +1,5 @@
 ---
-title: Web Profiler Widget for Yves
+title: Integrating Web Profiler Widget for Yves
 description: This guide describes how to integrate and use the Web Profiler Widget available in Yves for development purposes.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -10,9 +10,14 @@ redirect_from:
   - /2021080/docs/en/web-profiler-widget
   - /docs/web-profiler-widget
   - /docs/en/web-profiler-widget
+  - /v6/docs/en/web-profiler-widget
+  - /v5/docs/web-profiler-widget
+  - /v5/docs/en/web-profiler-widget
+  - /v4/docs/web-profiler-widget
+  - /v4/docs/en/web-profiler-widget
 related:
   - title: Web Profiler for Zed
-    link: docs/scos/dev/migration-and-integration/page.version/development-tools/web-profiler-for-zed.html
+    link: docs/scos/dev/technical-enhancements/development-tools/integrating-web-profiler-for-zed.html
 ---
 
 {% info_block errorBox %}
@@ -58,10 +63,9 @@ Individual _Data Collectors_ can be added to `\Pyz\Yves\WebProfilerWidget\WebPr
 Spryker provides a lot of build-in collectors. You can locate them in `WebProfilerWidget/src/SprykerShop/Yves/WebProfilerWidget/Plugin/WebProfiler/`.
 
 ### Additional collectors
-Starting from version 3.17.0, the `spryker/zed-request` module allows you to collect data about all the requests to Zed sent from Yves. 
+Starting from version 3.17.0, the `spryker/zed-request` module allows you to collect data about all the requests to Zed sent from Yves.
 To enable the data collection, add `\Spryker\Yves\ZedRequest\Plugin\WebProfiler\WebProfilerZedRequestDataCollectorPlugin` to the stack returned by `\Pyz\Yves\WebProfilerWidget\WebProfilerWidgetDependencyProvider::getDataCollectorPlugins()`.
 
 If you are using Redis as storage, you can track the calls to it as well. Starting from the `redis` version 2.4.0, the new data collector plugin `\Spryker\Yves\Redis\Plugin\WebProfiler\WebProfilerRedisDataCollectorPlugin` is available for that matter. To track calls to Redis, add this plugin to  `\Pyz\Yves\WebProfilerWidget\WebProfilerWidgetDependencyProvider::getDataCollectorPlugins()`.
 
 Same goes for Elasticsearch. Make sure your version of `spryker/search-elasticsearch` is 1.8.0 and add `\Spryker\Yves\SearchElasticsearch\Plugin\WebProfiler\WebProfilerElasticsearchDataCollectorPlugin` to  `\Pyz\Yves\WebProfilerWidget\WebProfilerWidgetDependencyProvider::getDataCollectorPlugins()` to track calls to Elasticsearch.
-

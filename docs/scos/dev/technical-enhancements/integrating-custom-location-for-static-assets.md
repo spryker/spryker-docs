@@ -1,5 +1,5 @@
 ---
-title: Custom Location for Static Assets
+title: Integrating custom location for static assets
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/custom-location-for-static-assets

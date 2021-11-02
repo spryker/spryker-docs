@@ -113,7 +113,7 @@ The Docker SDK supports accessing private repositories via SSH agent. Private re
 Worker processes support `SIGTERM` and `SIGSTOP` signal handling and gracefully shut down active tasks. It helps to address data consistency during autoscaling: a process can be killed to save resources or to be started in a different environment. This functionality is shipped by default with our Demo Shops.
 
 #### Documentation
-[Queue worker signal handling](/docs/scos/dev/technical-enhancements/queue-worker-signal-handling.html)
+[Queue worker signal handling](/docs/scos/dev/technical-enhancements/configuring-queue-worker-signal-handling.html)
 
 ### ECR image scanning
 [Amazon ECR image scanning](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html) is enabled in all environments and for all customers. ECR Image scanning scans each Docker image prepared during a CD pipeline execution and provides security findings you can analyze to improve security.
@@ -248,7 +248,7 @@ We have done a complete revamp of the Spryker external libraries where we are de
 #### Documentation
 
 * [Symfony 5 integration](/docs/scos/dev/technical-enhancements/symfony-5-integration.html)
-* [Chromium browser for tests](/docs/scos/dev/technical-enhancements/chromium-browser-for-tests.html)
+* [Chromium browser for tests](/docs/scos/dev/technical-enhancements/integrating-chromium-browser-for-tests.html)
 * [Test framework](/docs/scos/dev/guidelines/testing/test-framework.html)
 * [Migrating from Twig v1 to Twig v3](/docs/scos/dev/migration-concepts/migrating-from-twig-v1-to-twig-v3.html#migrating-from-twig-v1-to-twig-v3)
 * [Supported versions of PHP](/docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html)
@@ -258,7 +258,7 @@ We have done a complete revamp of the Spryker external libraries where we are de
 We have chosen **Maria DB as the default database** for Spryker installations. Therefore, we have adjusted our tests, environments, and checks to this. Spryker will continue to be compatible with other engines, but expect the best performance and reliability from this new setup.
 
 #### Documentation
-[MariaDB database engine](/docs/scos/dev/technical-enhancements/mariadb-database-engine.html)
+[MariaDB database engine](/docs/scos/dev/technical-enhancements/integrating-mariadb-database-engine.html)
 
 ### P&S Testing Infrastructure
 We are making available a **testing infrastructure** specifically for the Publish and Synchronize architecture. Now, we can run independent tests in our CI pipeline as well as constant Heartbeat tests that ensure the system is working properly.
@@ -279,5 +279,5 @@ Yves has also got its fresh features: the structured information is now generate
 
 #### Documentation
 
-* [Web Profiler Widget for Yves](/docs/scos/dev/migration-and-integration/{{site.version}}/development-tools/web-profiler-widget-for-yves.html)
+* [Web Profiler Widget for Yves](/docs/scos/dev/technical-enhancements/development-tools/integrating-web-profiler-widget-for-yves.html)
 * [Basic SEO techniques to use in your project](/docs/scos/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html)

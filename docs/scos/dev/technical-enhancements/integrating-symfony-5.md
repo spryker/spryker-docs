@@ -1,5 +1,5 @@
 ---
-title: Symfony 5 integration
+title: Integrating Symfony 5
 description: Learn about the main changes in the new Symfony version 5, and how you can make your project compatible with it
 last_updated: Jun 16, 2021
 template: howto-guide-template

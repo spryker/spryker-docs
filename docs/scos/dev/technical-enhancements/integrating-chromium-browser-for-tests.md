@@ -1,5 +1,5 @@
 ---
-title: Chromium browser for tests
+title: Integrating Chromium browser for tests
 description: Integrate Chromium with ChromeDriver into your project for acceptance and functional test.
 last_updated: Jun 16, 2021
 template: howto-guide-template

@@ -1,5 +1,5 @@
 ---
-title: Multiple publish queue structure
+title: Integrating multi-queue publish structure
 description: The single event queue is replaced by multiple publish queues.
 last_updated: Jun 16, 2021
 template: howto-guide-template

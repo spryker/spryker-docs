@@ -24,9 +24,9 @@ redirect_from:
   - /v1/docs/en/performance-guidelines
 related:
   - title: Web Profiler Widget for Yves
-    link: docs/scos/dev/migration-and-integration/page.version/development-tools/web-profiler-widget-for-yves.html
+    link: docs/scos/dev/technical-enhancements/development-tools/integrating-web-profiler-widget-for-yves.html
   - title: Web Profiler for Zed
-    link: docs/scos/dev/migration-and-integration/page.version/development-tools/web-profiler-for-zed.html
+    link: docs/scos/dev/technical-enhancements/development-tools/integrating-web-profiler-for-zed.html
 ---
 
 Spryker is a fast application by design. These guidelines explain how to optimize the server-side execution time.
@@ -190,7 +190,7 @@ You need to remove the cache files for each project deployment.
 
 See [EventDispatcher module migration guide](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-eventdispatcher.html) for information on how to upgrade to a newer version of the EventDispatcher module.
 
-See [Cache of Unresolved Entities for Zed](/docs/scos/dev/technical-enhancements/cache-of-unresolved-entities-for-zed.html) for information on how to integrate the Cache of Unresolved Entities for Zed feature into your project.
+See [Cache of Unresolved Entities for Zed](/docs/scos/dev/technical-enhancements/integrating-cache-of-unresolved-entities-for-zed.html) for information on how to integrate the Cache of Unresolved Entities for Zed feature into your project.
 
 
 ## Redis Mget cache

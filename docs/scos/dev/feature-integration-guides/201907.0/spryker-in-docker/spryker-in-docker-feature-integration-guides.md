@@ -14,6 +14,6 @@ Spryker in Docker feature integration guides section provides instructions on in
 
 You will find the following integration guides in this section:
 
-* [Define the Current Environment in Configuration feature integration](/docs/scos/dev/technical-enhancements/environment-configuration-enhancement.html)
+* [Define the Current Environment in Configuration feature integration](/docs/scos/dev/technical-enhancements/integrating-environment-configuration-enhancement.html)
 * [Propel Clean Command feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-in-docker/propel-clean-command-feature-integration.html)
-* [Propel Dynamic Configuration feature integration](/docs/scos/dev/technical-enhancements/dynamic-propel-configuration.html)
+* [Propel Dynamic Configuration feature integration](/docs/scos/dev/technical-enhancements/integrating-dynamic-propel-configuration.html)

@@ -1,5 +1,5 @@
 ---
-title: SCSS linter integration guide
+title: Integrating SCSS linter
 description: Learn how to integrate the SCSS linter into your project
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -10,6 +10,8 @@ redirect_from:
   - /2021080/docs/en/scss-linter-integration-guide
   - /docs/scss-linter-integration-guide
   - /docs/en/scss-linter-integration-guide
+  - /v6/docs/scss-linter-integration-guide
+  - /v6/docs/en/scss-linter-integration-guide
 ---
 
 Follow the steps below to integrate the [SCSS linter ](/docs/scos/dev/sdk/{{page.version}}/development-tools/scss-linter.html)into your project.

@@ -1,5 +1,5 @@
 ---
-title: Health Checks
+title: Integrating health checks
 description: Health checks allow to determine whether application services are working properly and, when automated, detect issues right when they appear.
 last_updated: Jun 16, 2021
 template: howto-guide-template

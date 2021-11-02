@@ -1,5 +1,5 @@
 ---
-title: TS linter integration guide
+title: Integrating TS linter
 description: Learn how to integrate the SCSS linter into your project
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -10,9 +10,11 @@ redirect_from:
   - /2021080/docs/en/ts-linter-integration-guide
   - /docs/ts-linter-integration-guide
   - /docs/en/ts-linter-integration-guide
+  - /v6/docs/ts-linter-integration-guide
+  - /v6/docs/en/ts-linter-integration-guide
 ---
 
-Follow the steps below to integrate [TS linter](/docs/scos/dev/sdk/{{page.version}}/development-tools/ts-linter.html) into your project. 
+Follow the steps below to integrate [TS linter](/docs/scos/dev/sdk/{{page.version}}/development-tools/ts-linter.html) into your project.
 
 ## 1. Install the dependencies
 
@@ -122,4 +124,3 @@ Check [here](https://github.com/spryker-shop/suite/blob/master/frontend/libs/tsl
     }
 }
 ```
-

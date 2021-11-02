@@ -1,5 +1,5 @@
 ---
-title: Propel Clean Command
+title: Integrating propel clean command
 description: Learn how to integrate the Propel clean command into your project.
 last_updated: Jun 16, 2021
 template: howto-guide-template

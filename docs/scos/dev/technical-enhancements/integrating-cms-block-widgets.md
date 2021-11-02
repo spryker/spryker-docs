@@ -1,5 +1,5 @@
 ---
-title: Enabling CMS block widget
+title: Integrating CMS block widgets
 description: Learn how to enable CMS block widget in a Spryker project.
 last_updated: Jun 16, 2021
 template: howto-guide-template

@@ -16,4 +16,4 @@ To learn more about the feature and to find out how end users use it, see [File 
 
 | TECHNICAL ENHANCEMENTS |
 |---------|
-|[Custom location for static assets](/docs/scos/dev/technical-enhancements/custom-location-for-static-assets.html) |
+|[Custom location for static assets](/docs/scos/dev/technical-enhancements/integrating-custom-location-for-static-assets.html) |

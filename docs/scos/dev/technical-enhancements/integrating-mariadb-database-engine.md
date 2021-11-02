@@ -1,5 +1,5 @@
 ---
-title: MariaDB database engine
+title: Integrating MariaDB database engine
 description: Learn how to switch database engine to MariaDB.
 last_updated: Jun 16, 2021
 template: howto-guide-template

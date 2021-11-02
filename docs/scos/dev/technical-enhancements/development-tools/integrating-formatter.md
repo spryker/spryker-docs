@@ -1,5 +1,5 @@
 ---
-title: Formatter integration guide
+title: Integrating Formatter
 description: Learn how to integrate Formatter into your project
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -10,9 +10,11 @@ redirect_from:
   - /2021080/docs/en/formatter-integration-guide
   - /docs/formatter-integration-guide
   - /docs/en/formatter-integration-guide
+  - /v6/docs/formatter-integration-guide
+  - /v6/docs/en/formatter-integration-guide
 ---
 
-Follow the steps below to integrate [Formatter](/docs/scos/dev/sdk/{{page.version}}/development-tools/formatter.html) intor your project. 
+Follow the steps below to integrate [Formatter](/docs/scos/dev/sdk/development-tools/formatter.html) into your project.
 
 ## 1. Install the dependencies
 
@@ -37,7 +39,7 @@ To update the scripts:
 1. Add formatting file extensions to the global settings `/frontend/settings.js`:
 ```const globalSettings = {
     ....
-    
+
     formatter: [
         `**/*.(scss|css|less|js|ts|json|html)`,
     ],
@@ -67,8 +69,8 @@ spawn(
 );
 ```
  Check [here](https://github.com/spryker-shop/suite/blob/master/frontend/libs/formatter.js) for the example file.
- 
-3. Adjust the `/package.json` scripts: 
+
+3. Adjust the `/package.json` scripts:
 ```
 "scripts": {
     ....
@@ -91,5 +93,3 @@ spawn(
 /composer.json
 /package-lock.json
 ```
-
-

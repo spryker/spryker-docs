@@ -1,5 +1,5 @@
 ---
-title: Enabling the product CMS block
+title: Integrating product CMS blocks
 description: The guide describes the process of installing the Product CMS Block into your project.
 last_updated: Jun 16, 2021
 template: howto-guide-template

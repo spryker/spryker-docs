@@ -35,7 +35,7 @@ Then `h2` and `h3` subheadings  are used to introduce different sections. Those 
 
 Check out the headings structure on a catalog page in the Spryker Demo Shop:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Applying+basic+SEO+approaches+to+your+project/catalog-page.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Applying+basic+SEO+approaches+to+your+project/catalog-page.png)
 
 To keep the initial Spryker design, we use the service CSS classes title with modifiers h1 - h6 . At the same time, headings in CMS blocks are div elements, as these blocks can be injected anywhere and potentially could break the common heading structure.
 
@@ -64,30 +64,30 @@ The `itemscope` element in an HTML tag encloses information about the item. The 
 <details open>
 <summary markdown='span'>Name, image, and product wrapper</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Applying+basic+SEO+approaches+to+your+project/name-image-product-wrapper.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Applying+basic+SEO+approaches+to+your+project/name-image-product-wrapper.png)
 
  </details>
 
 <details open>
  <summary markdown='span'>Brand,  SKU, offer, and price</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Applying+basic+SEO+approaches+to+your+project/brand-sku-offer-price.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Applying+basic+SEO+approaches+to+your+project/brand-sku-offer-price.png)
 
 </details>
 
 <details open>
 <summary markdown='span'>Description, product details, ratings</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Applying+basic+SEO+approaches+to+your+project/description-product-details-ratings.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Applying+basic+SEO+approaches+to+your+project/description-product-details-ratings.png)
 
  </details>
 
 <details open>
  <summary markdown='span'>Review</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Applying+basic+SEO+approaches+to+your+project/review.png.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Applying+basic+SEO+approaches+to+your+project/review.png.png)
 
  </details>
 
 ## Applying the basic SEO techniques in your project
-For details on how to apply the basic SEO techniques in your project, see [Basic SEO techniques integration guide](/docs/scos/dev/technical-enhancements/basic-seo-techniques-integration-guide.html).
+For details on how to apply the basic SEO techniques in your project, see [Basic SEO techniques integration guide](/docs/scos/dev/technical-enhancements/integrating-basic-seo-techniques.html).

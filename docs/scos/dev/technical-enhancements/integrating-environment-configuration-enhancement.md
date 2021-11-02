@@ -1,5 +1,5 @@
 ---
-title: Environment Configuration Enhancement
+title: Integrating environment configuration enhancement
 description: Learn how to replace the environment name settings with explicit configuration.
 last_updated: Jun 16, 2021
 template: howto-guide-template

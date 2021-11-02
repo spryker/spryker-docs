@@ -4005,39 +4005,39 @@ entries:
     - title: Multiple publish queue structure
       url: /docs/scos/dev/technical-enhancements/multiple-publish-queue-structure.html
     - title: Enabling the category CMS blocks
-      url: /docs/scos/dev/technical-enhancements/enabling-the-category-cms-blocks.html
+      url: /docs/scos/dev/technical-enhancements/integrating-category-cms-blocks.html
     - title: Propel Clean Command
       url: /docs/scos/dev/technical-enhancements/propel-clean-command.html
     - title: Frontend CSS Lazy Load integration
-      url: /docs/scos/dev/technical-enhancements/frontend-css-lazy-load-integration.html
+      url: /docs/scos/dev/technical-enhancements/integrating-css-lazy-loading-for-front-end.html.html
     - title: Basic SEO techniques integration guide
       url: /docs/scos/dev/technical-enhancements/basic-seo-techniques-integration-guide.html
     - title: Environment Configuration Enhancement
-      url: /docs/scos/dev/technical-enhancements/environment-configuration-enhancement.html
+      url: /docs/scos/dev/technical-enhancements/integrating-environment-configuration-enhancement.html
     - title: Configuring dynamic Yves-Zed tokens
       url: /docs/scos/dev/technical-enhancements/configuring-dynamic-yves-zed-tokens.html
     - title: Dynamic Propel Configuration
-      url: /docs/scos/dev/technical-enhancements/dynamic-propel-configuration.html
+      url: /docs/scos/dev/technical-enhancements/integrating-dynamic-propel-configuration.html
     - title: Enabling the product CMS block
-      url: /docs/scos/dev/technical-enhancements/enabling-the-product-cms-block.html
+      url: /docs/scos/dev/technical-enhancements/integrating-product-cms-blocks.html
     - title: MariaDB database engine
-      url: /docs/scos/dev/technical-enhancements/mariadb-database-engine.html
+      url: /docs/scos/dev/technical-enhancements/integrating-mariadb-database-engine.html
     - title: Enabling CMS block widget
-      url: /docs/scos/dev/technical-enhancements/enabling-cms-block-widget.html
+      url: /docs/scos/dev/technical-enhancements/integrating-cms-block-widgets.html
     - title: Queue worker signal handling
-      url: /docs/scos/dev/technical-enhancements/queue-worker-signal-handling.html
+      url: /docs/scos/dev/technical-enhancements/configuring-queue-worker-signal-handling.html
     - title: Symfony 5 integration
       url: /docs/scos/dev/technical-enhancements/symfony-5-integration.html
     - title: Cache of Unresolved Entities for Zed
       url: /docs/scos/dev/technical-enhancements/cache-of-unresolved-entities-for-zed.html
     - title: Search Initialization Improvement
-      url: /docs/scos/dev/technical-enhancements/search-initialization-improvement.html
+      url: /docs/scos/dev/technical-enhancements/integrating-search-initialization-improvement.html
     - title: Health Checks
-      url: /docs/scos/dev/technical-enhancements/health-checks.html
+      url: /docs/scos/dev/technical-enhancements/integrating-health-checks.html
     - title: Authorization Enabler integration
       url: /docs/scos/dev/technical-enhancements/authorization-enabler-integration.html
     - title: Custom Location for Static Assets
-      url: /docs/scos/dev/technical-enhancements/custom-location-for-static-assets.html
+      url: /docs/scos/dev/technical-enhancements/integrating-custom-location-for-static-assets.html
     - title: Chromium browser for tests
       url: /docs/scos/dev/technical-enhancements/chromium-browser-for-tests.html
   - title: SDK

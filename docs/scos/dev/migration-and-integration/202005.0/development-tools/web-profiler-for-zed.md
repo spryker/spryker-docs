@@ -10,7 +10,7 @@ redirect_from:
   - /v5/docs/en/web-profiler
 related:
   - title: Web Profiler Widget for Yves
-    link: docs/scos/dev/migration-and-integration/page.version/development-tools/web-profiler-widget-for-yves.html
+    link: docs/scos/dev/technical-enhancements/development-tools/integrating-web-profiler-widget-for-yves.html
 ---
 
 {% info_block errorBox %}

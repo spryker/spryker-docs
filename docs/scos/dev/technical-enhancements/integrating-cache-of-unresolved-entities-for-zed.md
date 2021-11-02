@@ -1,5 +1,5 @@
 ---
-title: Cache of Unresolved Entities for Zed
+title: Integrating Cache of unresolved entities for Zed
 description: The article provides general description and integration instructions of the Cache of Unresolved Entities for Zed feature
 last_updated: Jun 16, 2021
 template: howto-guide-template

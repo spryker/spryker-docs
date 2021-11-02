@@ -4,9 +4,8 @@ description: The Marketplace Order Management feature allows Marketplace custome
 template: feature-walkthrough-template
 ---
 
- 
 
-*Marketplace Order Management* enables splitting Orders into Merchant Orders and allows Product Offers to be bought from a store front app.
+*Marketplace Order Management* enables splitting Orders into Merchant Orders and allows Product Offers to be bought from a the Storefront application.
 The Orders are designed to be used by the Marketplace operator, while the Merchant Orders are always connected to a Merchant (Learn more about [Core Marketplace domain objects here](/docs/marketplace/dev/architecture-overview/marketplace-domain-model.html)).
 
 It's up to the project to decide when to create Merchant Orders out of an Order by using `MerchantSalesOrderFacade::createMerchantOrderCollection()`. Out of the box it is created by `CreateMerchantOrdersCommandPlugin`.

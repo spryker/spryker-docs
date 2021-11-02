@@ -15,9 +15,6 @@ module Jekyll
         end
 
         def shouldBeVersioned(product, role, category)
-            # TODO: add proper SCOS categories later
-            return true if product == 'scos'
-
             versioned_categories = @context.registers[:site].config['versioned_categories']
 
             versioned_categories[product] != nil and

@@ -1,11 +1,10 @@
 ---
 title: Setting up the Merchant Portal
-description: This article provides details about setting up Spryker Marketplace project.
+description: This document provides details about setting up Spryker Marketplace project.
 template: howto-guide-templat
 ---
 
-
-This article provides details on how to set up the Spryker Merchant Portal.
+This document provides details on how to set up the Spryker Merchant Portal.
 
 ## Prerequisites
 To start using Merchant Portal, install Spryker demo-shop:
@@ -21,7 +20,7 @@ To start using Merchant Portal, install Spryker demo-shop:
 ## Requirements
 To build Merchant Portal, install or update the following tools:  
 - [Node.js](https://nodejs.org/en/download/) - minimum version is v12.
-- [Yarn](https://classic.yarnpkg.com/en/docs/install/) - minimum version is v2.
+- [Yarn](https://classic.yarnpkg.com/en/docs/install/) - minimum version is 2.0.0 and maximum is 2.3.x.
 
 ## Overview
 The main environmental differences between the existing front-ends (Yves, Zed) and Merchant Portal are:  
@@ -33,11 +32,11 @@ Using a "unified" approach, all front-end dependencies must be installed in one 
 
 ## Install dependencies and build Merchant Portal
 
-```yarn
+```bash
 yarn install
 ```
 
-```yarn
+```bash
 yarn mp:build
 ```
 

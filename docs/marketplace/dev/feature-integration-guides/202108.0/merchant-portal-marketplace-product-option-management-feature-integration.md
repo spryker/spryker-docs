@@ -4,7 +4,7 @@ description: This document describes the process how to integrate the Merchant P
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the Merchant Portal - Marketplace Product Option Management feature into a Spryker project.
+In this document, you will learn how to integrate the Merchant Portal - Marketplace Product Option Management feature into a Spryker project.
 
 ## Install feature core
 
@@ -51,7 +51,7 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
-| ProductOptionMerchantOrderItemTableExpanderPlugin | Expands MerchantOrderItemTable with Product options column settings and data. | None | \Spryker\Zed\ProductOptionMerchantPortalGui\Communication\Plugin\SalesMerchantPortalGui |
+| ProductOptionMerchantOrderItemTableExpanderPlugin | Expands `MerchantOrderItemTable` with Product options column settings and data. | None | \Spryker\Zed\ProductOptionMerchantPortalGui\Communication\Plugin\SalesMerchantPortalGui |
 
 **src/Pyz/Zed/SalesMerchantPortalGui/SalesMerchantPortalGuiDependencyProvider.php**
 
@@ -80,6 +80,6 @@ class SalesMerchantPortalGuiDependencyProvider extends SprykerSalesMerchantPorta
 
 {% info_block warningBox "Verification" %}
 
-Make sure that order item table has product option column settings and display correct data in the `http://mp.mysprykershop.com/sales-merchant-portal-gui/item-list` 
+Make sure that the order item table has product option column settings and displays the correct data in the `http://mp.mysprykershop.com/sales-merchant-portal-gui/item-list` 
 
 {% endinfo_block %}

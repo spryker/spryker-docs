@@ -687,7 +687,7 @@ entries:
       - title: HowTos
         nested:
 
-          - title: "How-To: Upgrade Spryker instance to Marketplace"
+          - title: "How-To: Upgrade Spryker instance to the Marketplace"
             url: /docs/marketplace/dev/howtos/how-to-upgrade-spryker-instance-to-marketplace.html
 
           - title: "How-To: Create a new module with application"

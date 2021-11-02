@@ -83,7 +83,7 @@ The database tables structure below relates to our use case:
 ```
 
 2. Extend the main configuration object of the Persistence Acl feature and configure as necessary.
-In our case, we use the [basic inheritance configuration](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/configuration.html) example and adopt it:
+In our case, we use the [basic inheritance configuration](/docs/marketplace/dev/feature-walkthroughs/{{site.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-configuration.html) example and adopt it:
 
 **.src/Pyz/Zed/Product/Communication/Plugin/ProductAclEntityMetadataConfigExpanderPlugin.php**
 ```php
@@ -421,7 +421,7 @@ console data:import:acl-group-role
 
 ### 4. Add AclEntitySegments
 Next, you should create two segments for the US and AT stores. You need the segments to be able to delimit access to data.
-See [Segment scope documentation](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/segment-scope.html) for more information about the data segmentation.
+See [Segment scope documentation](/docs/marketplace/dev/feature-walkthroughs/{{site.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/segment-scope.html) for more information about the data segmentation.
 
 1. Prepare the `acl_entity_segment.csv` import file:
 
@@ -464,7 +464,7 @@ console data:import:acl-entity-segment-connector
 
 ### 6. Add AclEntityRules
 The final stage of the data creation is creating the corresponding `AclEntityRules`.
-See [Rules and Scopes](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/rules-and-scopes.html) for more information about `AclEntityRule`.
+See [Rules and Scopes](/docs/marketplace/dev/feature-walkthroughs/{{site.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/rules-and-scopes.html) for more information about `AclEntityRule`.
 
 {% info_block infoBox "Info" %}
 
@@ -537,7 +537,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 ## 6. Set up users
 At this stage, the Persistence Acl feature is installed and configured to support the desired case.
 The only thing left is to add an appropriate group (_DE product manager_ or _AT product manager_) to the required user.
-You can do this through the Back Office. See [Managing groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-groups.html) for details on how you can do that. Make sure to [assign corresponding `AclRule`](/docs/scos/dev/feature-walkthroughs/{{page.version}}/customer-account-management-feature-walkthrough/user-and-rights-overview.html) to the roles as well.
+You can do this through the Back Office. See [Managing groups](/docs/scos/user/back-office-user-guides/{{site.version}}/users/roles-groups-and-users/managing-groups.html) for details on how you can do that. Make sure to [assign corresponding `AclRule`](/docs/scos/dev/feature-walkthroughs/{{site.version}}/customer-account-management-feature-walkthrough/user-and-rights-overview.html) to the roles as well.
 
 When you add the _DE product manager_ group to a user, only `Products` related to the DE store become available to that user.
 If the user needs access to both DE and AT stores, add two groups,_DE product manager_ and _AT product manager_, at once.

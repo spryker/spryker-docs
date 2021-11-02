@@ -14,7 +14,7 @@ related:
 ---
 
 The Navigation section of Spryker Back Office is mostly used by Backend Developers in cooperation with Product Catalog Managers to build the online store navigation.
-</br>**Standardized flow of actions for a Backend Developer**
+<br>**Standardized flow of actions for a Backend Developer**
 ![IT - Site Administrator - Navigation](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Navigation/navigation-section.png) 
 
 {% info_block infoBox %}

@@ -19,7 +19,7 @@ related:
 ---
 
 {% info_block errorBox %}
-The following feature integration guide expects the basic feature to be in place.</br>The current feature integration Guide only adds the Company Account REST API functionality.
+The following feature integration guide expects the basic feature to be in place.<br>The current feature integration Guide only adds the Company Account REST API functionality.
 {% endinfo_block %}
 
 ## Install Feature API
@@ -270,7 +270,7 @@ class OauthCustomerConnectorDependencyProvider extends SprykerOauthCustomerConne
 }
 ```
 
-</br>
+<br>
 </details>
 
 <details open>
@@ -298,7 +298,7 @@ class AuthRestApiDependencyProvider extends SprykerAuthRestApiDependencyProvider
 }
 ```
 
-</br>
+<br>
 </details>
 
 <details open>
@@ -326,7 +326,7 @@ class OauthCompanyUserDependencyProvider extends SprykerOauthCompanyUserDependen
 }
 ```
 
-</br>
+<br>
 </details>
 
 <details open>
@@ -354,7 +354,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 }
 ```
 
-</br>
+<br>
 </details>
 
 <details open>
@@ -382,7 +382,7 @@ class OauthPermissionConfig extends SprykerOauthPermissionConfig
 }
 ```
 
-</br>
+<br>
 </details>
 
 <details open>
@@ -412,7 +412,7 @@ class CustomersRestApiDependencyProvider extends SprykerCustomersRestApiDependen
 }
 ```
 
-</br>
+<br>
 </details>
 
 <details open>
@@ -501,7 +501,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox “Verification” %}
@@ -527,7 +527,7 @@ To verify that everything is set up correctly, first, you need to authenticate a
 }
 ```
 
-</br>
+<br>
 </details>
 <br />
 
@@ -546,7 +546,7 @@ To log in as a Company User, send a `POST` request to `http://glue.mysprykershop
 }
 ```
 
-</br>
+<br>
 </details>
 <details open>
 <summary markdown='span'>http://mysprykershop.com/company-user-access-tokens response</summary>
@@ -569,9 +569,9 @@ To log in as a Company User, send a `POST` request to `http://glue.mysprykershop
 }
 ```
 
-</br>
+<br>
 </details>
-</br>
+<br>
 
 To verify that all the required data is provided in the access token, go to [jwt.io](https://jwt.io/) to decode the token and check that the required `customer_reference`, `id_customer`, `id_company_user` and permissions are present in the `sub` property of the payload data.
 

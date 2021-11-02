@@ -372,14 +372,14 @@ The API is provided by the following modules:
 
  |Module |DescriptionEndpoints Provided|
  |---|---|---|
-|[ProductsRestApi](https://github.com/spryker/products-rest-api)|Provides REST access to products.|/`abstract-products`</br>/`concrete-products`|
-|[ProductAvailabilitiesRestApi](https://github.com/spryker/product-availabilities-rest-api)|Provides API endpoints to get abstract and concrete product availability.|`/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/abstract-product-availabilities`</br>/`concrete-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/concrete-product-availabilities`|
+|[ProductsRestApi](https://github.com/spryker/products-rest-api)|Provides REST access to products.|/`abstract-products`<br>/`concrete-products`|
+|[ProductAvailabilitiesRestApi](https://github.com/spryker/product-availabilities-rest-api)|Provides API endpoints to get abstract and concrete product availability.|`/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/abstract-product-availabilities`<br>/`concrete-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/concrete-product-availabilities`|
 |[ProductsProductAvailabilitiesResourceRelationship](https://github.com/spryker/products-product-availabilities-resource-relationship)|Provides relationship between products (abstract and concrete) and product availabilities resources.|-|
-|[ProductPricesRestApi](https://github.com/spryker/product-prices-rest-api)|Provides API endpoints to retrieve abstract and concrete product prices.|`/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/abstract-product-prices`</br>/`concrete-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/concrete-product-prices`|
+|[ProductPricesRestApi](https://github.com/spryker/product-prices-rest-api)|Provides API endpoints to retrieve abstract and concrete product prices.|`/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/abstract-product-prices`<br>/`concrete-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/concrete-product-prices`|
 |[ProductsProductPricesResourceRelationship](https://github.com/spryker/products-product-prices-resource-relationship)|Provides relationship between products (abstract and concrete) and product prices resources.|-|
 |[ProductTaxSetsRestApi](https://github.com/spryker/product-tax-sets-rest-api)|Provides API endpoints to retrieve product tax sets.|`/abstract-products/{% raw %}{{{% endraw %}SKU{% raw %}}}{% endraw %}/product-tax-sets`|
 |[ProductsProductTaxSetsResourceRelationship](https://github.com/spryker/products-product-tax-sets-resource-relationship)|Provides relationship between abstract products and tax sets resources.|-|
-|[ProductImageSetsRestApi](https://github.com/spryker/product-prices-rest-api)|Provides API endpoints to retrieve product image sets.|`/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/abstract-product-image-sets`</br>`/concrete-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/concrete-product-image-sets`|
+|[ProductImageSetsRestApi](https://github.com/spryker/product-prices-rest-api)|Provides API endpoints to retrieve product image sets.|`/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/abstract-product-image-sets`<br>`/concrete-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/concrete-product-image-sets`|
 
 You can chose whether to install all modules of the API to retrieve full Products API functionality, or install any of the modules individually to get only the endpoints you need.
 {% info_block infoBox "Relationship Modules" %}
@@ -690,7 +690,7 @@ Provides the possibility to retrieve product labels.
 The API is provided by the following module:
 |Modules|Description|Endpoints Provided|
 |---|---|---|
-|CustomersRestApi|Provides endpoints that allow you to manage customers.|/customers</br>/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}</br>/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}/addresses</br>/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}/addresses/{% raw %}{{{% endraw %}address_id{% raw %}}}{% endraw %}|
+|CustomersRestApi|Provides endpoints that allow you to manage customers.|/customers<br>/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}<br>/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}/addresses<br>/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}/addresses/{% raw %}{{{% endraw %}address_id{% raw %}}}{% endraw %}|
 Installation steps:
 1. Install the module using Composer:
 ```yaml

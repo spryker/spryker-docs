@@ -31,7 +31,7 @@ On the **Edit Content Item Type: Content Item Key** page, you can:
 Clicking **Back to Content Items** in the top right corner of the page can trigger different actions:
 
 * Selecting this option **prior to** saving the changes will discard all the changes and then take you to the _List of Content Items_ page.
-</br>
+<br>
 * Selecting this option **after** the changes have been saved will redirect you to the _List of Content Items_ page.
 ***
 **What's next?**

@@ -74,7 +74,6 @@ This command will generate some new classes in your project under `\Orm\Zed\Prod
         }
     }
 ```
-</details>
 
 
 7. Run `vendor/bin/console setup:search` to set up Search before you run Search collectors.

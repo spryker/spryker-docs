@@ -329,7 +329,7 @@ If we add relationships to the `wishlist-items` and `concrete-products` resource
 }
 ```
 
-</br>
+<br>
 </details>
     
 #### Possible Implementations

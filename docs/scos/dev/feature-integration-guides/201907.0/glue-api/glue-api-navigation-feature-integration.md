@@ -88,7 +88,7 @@ class NavigationsRestApiConfig extends SprykerNavigationsRestApiConfig
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox “Verification” %}
@@ -146,7 +146,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox “Verification” %}
@@ -160,7 +160,7 @@ Now, it is possible to verify that the configuration of NavigationsRestApiConfig
 {% endinfo_block %} "resourceId" is filled with the valid foreign key.)
 
 {% info_block warningBox "your title goes here" %}
-Send a request to *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?include=category-nodes*.</br>Make sure that the response contains `category-nodes` as a relationship and `category-nodes` data included.
+Send a request to *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?include=category-nodes*.<br>Make sure that the response contains `category-nodes` as a relationship and `category-nodes` data included.
 {% endinfo_block %}
 
 <details open>
@@ -444,7 +444,7 @@ Send a request to *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?inc
 }
 ```
 
-</br>
+<br>
 </details>
 
 *Last review date: Aug 02, 2019*

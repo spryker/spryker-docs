@@ -37,7 +37,7 @@ On the *Edit Content Item Type: Content Item Key* page, you can clear all the fi
 Clicking **Back to Content Items** in the top right corner of the page can trigger different actions:
 
 * Selecting this option *prior to* saving the changes will discard all the changes and then take you to the _List of Content Items_ page.
-</br>
+<br>
 * Selecting this option *after* the changes have been saved will redirect you to the _List of Content Items_ page.
 
 ### Reference information: Editing a content item
@@ -116,7 +116,7 @@ The following table describes the attributes on the *Edit Content Item Product S
 | Actions (top table) | Column that contains **Delete** you can click to remove the product set from the list. |
 | Available Product Sets |  Bottom table that displays product sets available in the database.|
 | ID  | Sequence number. |
-|  Name </br>(in the top table) | Name of the product set. |
+|  Name <br>(in the top table) | Name of the product set. |
 | # of Products | Displays the number of products available in the product set. |
 |Status  | Shows the status of the product set: active or inactive. |
 |Actions (the bottom table)  | Column that contains **+ Add** you can click to add a product set to the top table so that it can be added to the product set content item. |

@@ -31,7 +31,7 @@ Version 2.0.0 of the CmsStorage module introduces the [multi-store functionality
 </behavior>
 ```
     
-</br>
+<br>
 </details>
     
 {% info_block infoBox %}
@@ -54,7 +54,7 @@ class CmsStorageDependencyProvider extends SprykerCmsStorageDependencyProvider
 	{
 ```
 
-</br>
+<br>
 </details>
     
 4. Apply the database change:

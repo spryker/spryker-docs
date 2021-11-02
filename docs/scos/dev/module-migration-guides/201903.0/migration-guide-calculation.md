@@ -43,7 +43,7 @@ new ItemsWithProductOptionsAndDiscountsTaxCalculatorPlugin(),
 new ExpenseTaxCalculatorPlugin(),
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block errorBox %}
@@ -168,7 +168,7 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
 }
 ```
 
-</br>
+<br>
 </details>
 
 **Changing Displayed Calculated Values**
@@ -208,7 +208,7 @@ protected function setQuotePriceMode(QuoteTransfer $quoteTransfer)
 ?>
 ```
     
-</br>
+<br>
 </details>
 
 ### Migrating Sales to the New Calculator Logic
@@ -315,7 +315,7 @@ REFERENCES "spy_sales_order" ("id_sales_order");
 COMMIT;
 ```
 
-</br>
+<br>
 </details>
 
 3. Run console commands:
@@ -365,7 +365,7 @@ Include two new hydrator plugins:
 ?>    
 ```
     
-</br>
+<br>
 </details>
 
 After this, when you read an order using `SalesFacade::getOrderByIdSalesOrder()`, the above mentioned plugins will be called to populate the order with additional data,  in this case `ProductOptions` and `Discounts`.
@@ -406,10 +406,10 @@ This plugin expands quote items so each item has a single quantity, then runs or
     }
 ```
 
-</br>
+<br>
 </details>
 
-</br>
+<br>
 </details>
 
 ## Old Order Migration
@@ -445,7 +445,7 @@ use Spryker\Zed\SalesAggregator\Communication\Plugin\OrderAmountAggregator\Order
 ?>
 ```
 
-</br>
+<br>
 </details>
 
 If you want to receive future patches for the related plugins, it's recommended that you update all your used statements to point to the `SalesAggregator` module.
@@ -483,7 +483,7 @@ Register the following console command: `\Pyz\Zed\SalesAggregator\Communication\
 ?>
 ```
     
-</br>
+<br>
 </details>
 
 {% info_block errorBox %}

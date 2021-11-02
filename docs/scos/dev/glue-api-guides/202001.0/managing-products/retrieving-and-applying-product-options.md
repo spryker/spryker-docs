@@ -168,7 +168,7 @@ Each product option is represented by a related resource with the following attr
 }
 ```
     
-</br>
+<br>
 </details>
 
 ## Retrieving Product Options for Cart Items
@@ -380,7 +380,7 @@ Each product option available for every product in the cart is represented by a 
 }
 ```
     
-</br>
+<br>
 </details>
 
 <details open>
@@ -525,7 +525,7 @@ Each product option available for every product in the cart is represented by a 
 }
 ```
     
-</br>
+<br>
 </details>
 
 ### Applying Product Options to Cart Items
@@ -625,7 +625,7 @@ No matter which type of cart is created or modified, the following attributes sh
 | --- | --- | --- | --- |
 | **sku** | String | yes | Specifies the SKU of the product to add to the cart or to modify. |
 | **quantity** | Integer | yes | Specifies the number of products to be available in the cart. |
-| **productOptions** | Array of **product-option** | no | Specifies the product options to apply to the product.</br></br>Each option must be represented by a JSON object containing only 1 attribute: **sku**. It specifies the SKU of the option to apply.</br></br>**Note**: It is the responsibility of the API Client to track whether the selected items are compatible. For example, the client should not allow a **2**-year and a **4**-year warranty service to be applied to the same product. The API endpoints allow any combination of items, no matter whether they are compatible or not. |
+| **productOptions** | Array of **product-option** | no | Specifies the product options to apply to the product.<br><br>Each option must be represented by a JSON object containing only 1 attribute: **sku**. It specifies the SKU of the option to apply.<br><br>**Note**: It is the responsibility of the API Client to track whether the selected items are compatible. For example, the client should not allow a **2**-year and a **4**-year warranty service to be applied to the same product. The API endpoints allow any combination of items, no matter whether they are compatible or not. |
 
 You can specify a certain product several times with different options. In this case, the product will be added as multiple cart items.
 

@@ -1777,7 +1777,7 @@ To retrieve a search suggestion, send the request:
 
 | ATTRIBUTE| TYPE | DESCRIPTION |
 | ---------------- | -------- | ---------- |
-| completion | Array | Autocomplete suggestions for the search query. </br> Each item in the array is a string. |
+| completion | Array | Autocomplete suggestions for the search query. <br> Each item in the array is a string. |
 | categories         | Array    | Categories that match the search query. The matching categories are now returned as the `categoryCollection` attribute. |
 | cmsPages           | Array    | CMS pages that match the search query. This attribute is deprecated and will be removed soon. The matching CMS pages are now returned as the `cmsPageCollection` attribute. |
 | abstractProducts   | Array    | Abstract products matching the search query. Each item in the array is an *Object* representing a product. |

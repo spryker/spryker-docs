@@ -11,7 +11,7 @@ redirect_from:
 ---
 
 The File Manager section in Spryker Back Office is mostly used by the Marketing Content Manager to download different types of files that are going to be used in the **Content Management > Content Items** section to create **File List** content items.
-</br>**Standardized flow of actions for a Marketing Content Manager**
+<br>**Standardized flow of actions for a Marketing Content Manager**
 ![File Manager - Marketing Content Manager](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/File+Manager/file-manager-section.png)
 
 {% info_block infoBox %}

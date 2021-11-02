@@ -49,7 +49,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-</br>
+<br>
 </details>
 
 Find or create `GlueApplicationDependencyProvider` in a project.
@@ -88,7 +88,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</br>
+<br>
 </details>
 
 Find and change `TaxWriterStep` in a project.
@@ -115,7 +115,7 @@ Find and change `TaxWriterStep` in a project.
  }
 ```
 
-</br>
+<br>
 </details>
 
 Find or create `EventDependencyProvider` in a project.
@@ -149,7 +149,7 @@ Find the `getEventSubscriberCollection` method and change it.
  }
 ```
 
-</br>
+<br>
 </details>
 
 Find or create `QueueDependencyProvider` in a project.
@@ -186,7 +186,7 @@ Find the `getProcessorMessagePlugins` method and change it.
 }
 ```
 
-</br>
+<br>
 </details>
 
 Find or create `QueueDependencyProvider` in a project.
@@ -223,7 +223,7 @@ Find the `getProcessorMessagePlugins` method and change it.
 }
 ```
 
-</br>
+<br>
 </details>
 
 Find or create `SynchronizationDependencyProvider` in a project.
@@ -260,7 +260,7 @@ Find the `getProcessorMessagePlugins` method and change it.
 }
 ```
 
-</br>
+<br>
 </details>
 
 _Estimated migration time: 0.5 hour_

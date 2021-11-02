@@ -41,10 +41,10 @@ Adjust the schema definition so that entity changes will trigger events.
 
 | Affected Entity |Triggered Events  |
 | --- | --- |
-|  `spy_shopping_list`| `Entity.spy_shopping_list.create`</br>`Entity.spy_shopping_list.update`</br>`Entity.spy_shopping_list.delete` |
-| `spy_shopping_list_item` | `Entity.spy_shopping_list_item.create`</br>`Entity.spy_shopping_list_item.update`</br>`Entity.spy_shopping_list_item.delete` |
-| `spy_shopping_list_company_user` | `Entity.spy_shopping_list_company_user.create`</br>`Entity.spy_shopping_list_company_user.update`</br>`Entity.spy_shopping_list_company_user.delete` |
-|`spy_shopping_list_company_business_unit `|`Entity.spy_shopping_list_company_business_unit.create`</br>`Entity.spy_shopping_list_company_business_unit.update`</br>`Entity.spy_shopping_list_company_business_unit.delete` |
+|  `spy_shopping_list`| `Entity.spy_shopping_list.create`<br>`Entity.spy_shopping_list.update`<br>`Entity.spy_shopping_list.delete` |
+| `spy_shopping_list_item` | `Entity.spy_shopping_list_item.create`<br>`Entity.spy_shopping_list_item.update`<br>`Entity.spy_shopping_list_item.delete` |
+| `spy_shopping_list_company_user` | `Entity.spy_shopping_list_company_user.create`<br>`Entity.spy_shopping_list_company_user.update`<br>`Entity.spy_shopping_list_company_user.delete` |
+|`spy_shopping_list_company_business_unit `|`Entity.spy_shopping_list_company_business_unit.create`<br>`Entity.spy_shopping_list_company_business_unit.update`<br>`Entity.spy_shopping_list_company_business_unit.delete` |
 
 <details open>
 <summary markdown='span'>src/Pyz/Zed/ShoppingList/Persistence/Propel/Schema/spy_shopping_list.schema.xml</summary>
@@ -155,10 +155,10 @@ Make sure that the changes were implemented successfully. For this purpose, trig
 
 |Path|Method Name|
 |--- |--- |
-|`src/Orm/Zed/ShoppingList/Persistence/Base/SpyShoppingList.php`|`prepareSaveEventName()`</br>`addSaveEventToMemory()`</br>`addDeleteEventToMemory()`|
-|`src/Orm/Zed/ShoppingList/Persistence/Base/SpyShoppingListItem.php`|`prepareSaveEventName()`</br>`addSaveEventToMemory()`</br>`addDeleteEventToMemory()`|
-|`src/Orm/Zed/ShoppingList/Persistence/Base/SpyShoppingListCompanyUser.php`|`prepareSaveEventName()`</br>`addSaveEventToMemory()`</br> `addDeleteEventToMemory()`|
-|`src/Orm/Zed/ShoppingList/Persistence/Base/SpyShoppingList.php`|`prepareSaveEventName()`</br>`addSaveEventToMemory()`</br>`addDeleteEventToMemory()`|
+|`src/Orm/Zed/ShoppingList/Persistence/Base/SpyShoppingList.php`|`prepareSaveEventName()`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`|
+|`src/Orm/Zed/ShoppingList/Persistence/Base/SpyShoppingListItem.php`|`prepareSaveEventName()`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`|
+|`src/Orm/Zed/ShoppingList/Persistence/Base/SpyShoppingListCompanyUser.php`|`prepareSaveEventName()`<br>`addSaveEventToMemory()`<br> `addDeleteEventToMemory()`|
+|`src/Orm/Zed/ShoppingList/Persistence/Base/SpyShoppingList.php`|`prepareSaveEventName()`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`|
 
 {% endinfo_block %}
 
@@ -258,7 +258,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 ### 5) Import Data
@@ -292,7 +292,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 Run the following console command to execute registered installer plugins and install infrastructural data:
@@ -324,7 +324,7 @@ Laptops,Laptops,DE--21
 Cameras,Cameras,DE--21
 Workstations,Workstations,DE--21
 ```
-</br>
+<br>
 </details>
 
 
@@ -362,7 +362,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-</br>
+<br>
 </details>
 
 Run the following console command to import the data:
@@ -424,7 +424,7 @@ Workstations,117_30585828,1
 Workstations,129_30706500,1
 ```
 
-</br>
+<br>
 </details>
 
 | Column |Is obligatory?  |Data Type  |Data Example  |Data Explanation  |
@@ -460,7 +460,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 Run the following console command to import the data
@@ -496,7 +496,7 @@ Workstations,Spryker--2,READ_ONLY
 Workstations,Spryker--3,READ_ONLY
 Workstations,Spryker--6,READ_ONL
 ```
-</br>
+<br>
 </details>
 
 
@@ -533,7 +533,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 Run the following console command to import the data:
@@ -565,7 +565,7 @@ Laptops,spryker_systems_HR,FULL_ACCESS
 Cameras,spryker_systems_Zurich,FULL_ACCESS
 Workstations,spryker_systems_Berlin,READ_ONLY
 ```
-</br>
+<br>
 </details>
 
 
@@ -602,7 +602,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 Run the following console command to import the data
@@ -662,7 +662,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 <details open>
@@ -702,7 +702,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 <details open>
@@ -729,7 +729,7 @@ class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 <details open>
@@ -756,7 +756,7 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 <details open>
@@ -816,7 +816,7 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -1067,7 +1067,7 @@ shopping_list.no_lists_created,Du hast noch keine Einkaufslisten.,de_DE
 shopping_list.create_new_list,Create new list,en_US
 shopping_list.create_new_list,Erstelle eine neue Liste,de_DE
 ```
-</br>
+<br>
 </details>
 
 Run the following console command to import data:
@@ -1123,7 +1123,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 

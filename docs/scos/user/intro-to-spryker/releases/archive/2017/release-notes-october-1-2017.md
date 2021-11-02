@@ -26,7 +26,7 @@ The CMS Page Preview has an option to view draft CMS pages before publishing. To
 
 <!--
 **Documentation**
-<br>For module documentation, see CMS - Preview Draft Page<!--/capabilities/cms/page-draft-preview.htm), Under the Hood - Customer User Connector.-->
+<br>For module documentation, see CMS - Preview Draft Page /capabilities/cms/page-draft-preview.htm), Under the Hood - Customer User Connector.-->
 For feature integration, see Feature Integration - Customer User Connector.
 <br>For detailed migration guides, see [CMS Collector Module Migration Guide from Version 1. to 2.](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cmscollector.html#upgrading-from-version-1-to-version-2)
 

@@ -82,7 +82,7 @@ class ProductsRestApiDependencyProvider extends SprykerProductsRestApiDependency
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox “Verification” %}
@@ -143,7 +143,7 @@ Make sure that the `concrete-products` resource is expanded with the discontinue
 }
 ```
 
-</br>
+<br>
 </details>
 
 <!-- Last review date: Aug 02, 2019 by Eugenia Poidenko, Yuliia Boiko -->

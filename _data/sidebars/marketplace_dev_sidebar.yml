@@ -47,18 +47,6 @@ entries:
           - title: Marketplace Merchant feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-feature-walkthrough.html
 
-          - title: Merchant Category feature walkthrough
-            url: /docs/marketplace/dev/feature-walkthroughs/merchant-category-feature-walkthrough.html
-
-          - title: Merchant Opening Hours feature walkthrough
-            url: /docs/marketplace/dev/feature-walkthroughs/merchant-opening-hours-feature-walkthrough.html
-
-          - title: Marketplace Product feature walkthrough
-            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-feature-walkthrough.html
-
-          - title: Marketplace Merchant Portal Product Management feature walkthrough
-            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-product-management-feature-walkthrough.html
-
           - title: Marketplace Product Offer feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
             nested:
@@ -77,17 +65,18 @@ entries:
               - title: Product Offer validity dates
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/product-offer-validity-dates.html
 
-          - title: Marketplace Merchant Portal Product Offer Management feature walkthrough
-            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-product-offer-management-feature-walkthrough.html
+          - title: Marketplace Product feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-feature-walkthrough.html
 
-          - title: Marketplace Product Offer Prices feature walkthrough
-            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-prices-feature-walkthrough.html
+          - title: Marketplace Order Management feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough.html
 
           - title: Marketplace Inventory Management feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-inventory-management-feature-walkthrough.html
 
-          - title: Marketplace Order Management feature walkthrough
-            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough.html
+
+          - title: Marketplace Product Offer Prices feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-prices-feature-walkthrough.html
 
           - title: Marketplace Return Management feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-return-management-feature-walkthrough.html
@@ -125,6 +114,19 @@ entries:
                     url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/rules-and-scopes/composite-entity.html
               - title: Execution flow
                 url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/execution-flow.html
+
+          - title: Merchant Category feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/merchant-category-feature-walkthrough.html
+
+          - title: Merchant Opening Hours feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/merchant-opening-hours-feature-walkthrough.html
+
+          - title: Merchant Portal
+            nested:
+              - title: Marketplace Merchant Portal Product Management feature walkthrough
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-product-management-feature-walkthrough.html
+              - title: Marketplace Merchant Portal Product Offer Management feature walkthrough
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-product-offer-management-feature-walkthrough.html
 
       - title: Feature integration guides
         nested:

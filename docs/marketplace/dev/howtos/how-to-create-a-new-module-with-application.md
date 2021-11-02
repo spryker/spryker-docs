@@ -1,5 +1,5 @@
 ---
-title: "How-To: Create a new module with application"
+title: "HowTo: Create a new module with application"
 description: This document provides details how to create new module with application
 template: howto-guide-template
 ---

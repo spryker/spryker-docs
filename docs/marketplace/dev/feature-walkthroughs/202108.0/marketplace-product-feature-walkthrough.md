@@ -31,7 +31,7 @@ The following diagram illustrates the dependencies between the modules for the *
 | [MerchantProductStorage](https://github.com/spryker/merchant-product-storage) | Manages the storage for the merchant product abstract.  |
 | [MerchantProductWidget](https://github.com/spryker/merchant-product-widget) | Provides the merchant product abstract information.  |
 | [Product](https://github.com/spryker/product) | Provides the base infrastructure and CRUD operations to handle the abstract and concrete products.  |
-| [MerchantProductsRestApi](https://github.com/spryker/merchant-product-rest-api) | Provides REST API endpoints to manage the merchant products.  |
+| [MerchantProductsRestApi](https://github.com/spryker/merchant-products-rest-api) | Provides REST API endpoints to manage the merchant products.  |
 | [CartsRestApiExtension](https://github.com/spryker/carts-rest-api-extension) | Provides plugin interfaces used by the `CartsRestApi` module.  |
 
 </div>

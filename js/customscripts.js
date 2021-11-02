@@ -331,17 +331,12 @@ $.fn.popup = function (options) {
         });
     };
 
-    console.log(this);
-    console.log(this.options);
-
     this.close = function() {
-        console.log('popup close');
         menuIsOpened = true;
         toggleMenu();
     }
 
     this.open = function() {
-        console.log('popup open');
         toggleMenu();
     }
 

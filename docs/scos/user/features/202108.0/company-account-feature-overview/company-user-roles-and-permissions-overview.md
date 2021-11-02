@@ -58,9 +58,12 @@ Company roles and permissions and their relation to the organizational structure
 ## Permission types
 Permissions can be simple and complex.
 <table>
-	<th>Permission Type</th>
-	<th>Description</th>
-	<th>Example</th>
+    <thead>
+        <th>Permission Type</th>
+        <th>Description</th>
+        <th>Example</th>
+    </thead>
+    <tbody>
 	<tr>
         <td><b>Simple</b></td>
 		<td>	Simple permissions are those that do not have any logic behind them and answer the question “Does the customer have a permission?”. Simple permissions implement only PermissionPluginInterface (Shared).</td>
@@ -71,7 +74,7 @@ Permissions can be simple and complex.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/simple_permissions.png)
 
 
-</td>
+        </td>
 	</tr>
 	<tr>
         <td><b>Complex</b></td>
@@ -89,6 +92,7 @@ Permissions can be simple and complex.
            <p> Read shared cart, which is managed by the Shared Carts feature.</p>
        </td>
 	</tr>
+    </tbody>
 </table>
 
 {% info_block infoBox %}

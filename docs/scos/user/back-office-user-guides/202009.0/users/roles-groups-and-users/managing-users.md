@@ -10,7 +10,7 @@ redirect_from:
   - /v6/docs/en/managing-users
 related:
   - title: User and Rights Management
-    link: docs/scos/dev/feature-walkthroughs/page.version/customer-account-management-feature-walkthrough/user-and-rights-overview.html
+    link: docs/scos/dev/feature-walkthroughs/page.version/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html
 ---
 
 This topic describes how to manage users.

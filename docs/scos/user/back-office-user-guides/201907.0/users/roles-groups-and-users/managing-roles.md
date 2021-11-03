@@ -16,7 +16,7 @@ related:
   - title: Managing Users
     link: docs/scos/user/back-office-user-guides/page.version/users/roles-groups-and-users/managing-users.html
   - title: User and Rights Management
-    link: docs/scos/dev/feature-walkthroughs/page.version/customer-account-management-feature-walkthrough/user-and-rights-overview.html
+    link: docs/scos/dev/feature-walkthroughs/page.version/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html
 ---
 
 This topic describes the procedures that you need to perform to create, edit, and delete roles.

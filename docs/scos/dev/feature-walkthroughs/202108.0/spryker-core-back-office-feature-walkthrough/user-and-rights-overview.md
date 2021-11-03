@@ -37,7 +37,7 @@ Also, you can find bundle names as well as controllers and actions in the file `
 
 ![bundles_navigation.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/bundles_navigation.png)
 
-See [Managing users](https://documentation.spryker.com/docs/managing-users) to learn how to create and manage users, groups, and roles .
+See [Managing users](/docs/scos/user/back-office-user-guides/202108.0/users/roles-groups-and-users/managing-users.html) to learn how to create and manage users, groups, and roles .
 
 <a name="add-acl"></a>
 
@@ -89,8 +89,6 @@ In the example, we grant access to the Application module resources for all user
 With the configuration provided in the example, users are granted access to these resources regardless of ACL configuration in ZED UI.
 
 {% endinfo_block %}
-
-
 
 * `AclConstants::ACL_DEFAULT_CREDENTIALS`—is used to provide additional access to Zed resources for a specific user. For example:
 

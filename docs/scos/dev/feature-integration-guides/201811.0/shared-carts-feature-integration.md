@@ -182,7 +182,7 @@ console setup:init-db
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that records with the keys `ReadSharedCartPermissionPlugin` and `WriteSharedCartPermissionPlugin` have been added to the `spy_permission` table.</br>
+Make sure that records with the keys `ReadSharedCartPermissionPlugin` and `WriteSharedCartPermissionPlugin` have been added to the `spy_permission` table.<br>
 Make sure that in the database the configured infrastructural quote permission groups have been added to the `spy_quote_permission_group` and `spy_quote_permission_group_to_permission` tables.
 {% endinfo_block %}
 
@@ -702,7 +702,7 @@ console frontend:yves:build
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following plugin has been registered: </br>Open Yves and log in with customer.
+Make sure that the following plugin has been registered: <br>Open Yves and log in with customer.
 {% endinfo_block %}
 
 | Module |Test  |

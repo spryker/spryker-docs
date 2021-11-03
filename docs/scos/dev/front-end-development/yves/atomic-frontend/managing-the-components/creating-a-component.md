@@ -70,7 +70,7 @@ If the tag name is not defined, **div** is used by default.
 * **jsName** (optional) - explicitly specifies the Javascript class name (**.js-classname**) of the component.
 
 {% info_block warningBox "Separation of Logic from Styles" %}
-To enforce separation between logic and visual styles and achieve clear understanding as to which code is responsible for what, the following convention has been put in place:</br>- code related to **styles** is always contained in `{% raw %}{{{% endraw %}config.name{% raw %}}}{% endraw %}__element` classes;</br>- code related to behavior is always contained in `{% raw %}{{{% endraw %}config.jsName{% raw %}}}{% endraw %}__element classes`;
+To enforce separation between logic and visual styles and achieve clear understanding as to which code is responsible for what, the following convention has been put in place:<br>- code related to **styles** is always contained in `{% raw %}{{{% endraw %}config.name{% raw %}}}{% endraw %}__element` classes;<br>- code related to behavior is always contained in `{% raw %}{{{% endraw %}config.jsName{% raw %}}}{% endraw %}__element classes`;
 {% endinfo_block %}
 
 The same as with files and folders, Kebab Case should be used
@@ -349,7 +349,7 @@ When done, you can include it into other components, views and templates.
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 
-</br>
+<br>
 </details>
 
 Now, open the front page of Spryker Shop. The new component will appear on the top of the page, below the header.

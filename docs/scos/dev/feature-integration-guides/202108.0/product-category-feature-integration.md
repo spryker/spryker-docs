@@ -450,7 +450,6 @@ Make sure that, when a category product assignment is changed through ORM, it is
    }
 }
 ```
-</details>
 
 {% endinfo_block %}
 

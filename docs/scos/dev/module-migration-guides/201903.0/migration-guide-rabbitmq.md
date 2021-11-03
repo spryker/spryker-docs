@@ -104,7 +104,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
     
-</br>
+<br>
 </details>
 
 ## Upgrading from Version 1.* to Version 2.*

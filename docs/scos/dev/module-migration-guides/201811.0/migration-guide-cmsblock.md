@@ -28,7 +28,7 @@ This version allows saving CMS Block-Store relation.
 
 If you have a custom CMS Block Collector, make sure that it collects CMS Blocks only when the related CMS Block has an entity in the `spy_cms_block_store` table for the desired store.
 
-</br>
+<br>
 </details>
 
 3. Run `vendor/bin/console transfer:generate` to update and generate transfer object changes.
@@ -38,7 +38,7 @@ If you have a custom CMS Block Collector, make sure that it collects CMS Blocks 
 
 `CmsBlock` transfer object has now a `StoreRelation` property which allows you to retrieve/define the stores assigned to the current CMS Block.
 
-</br>
+<br>
 </details>
 
 4. Install the database changes by running `vendor/bin/console propel:diff`. Propel should generate a migration file with the changes.
@@ -71,7 +71,7 @@ This example defines "Block_1" to be enabled in all of your stores, but restrict
 Even if you have 1 store, the associations between CMS Blocks and stores have to be defined.
 {% endinfo_block %}
 
-</br>
+<br>
 </details>
 
 <details open>
@@ -89,7 +89,7 @@ INSERT INTO spy_cms_block_store (fk_cms_block, fk_store)
   SELECT id_cms_block, id_store FROM spy_cms_block, spy_store;    
 ```
 
-</br>
+<br>
 </details>
 
 9. Additionally, the following internal classes/methods have changed. Take a look if you have customized them:

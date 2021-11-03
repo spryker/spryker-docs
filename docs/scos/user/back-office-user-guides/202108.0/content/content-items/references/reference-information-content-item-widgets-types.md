@@ -68,7 +68,7 @@ The widget allows you to insert a File List content item that will be displayed 
 
 {% info_block infoBox %}
 
-Keep in mind that you can add only files uploaded to **File Manager**. Thus, if you make any changes to files in the File Manager section, for example, remove the file, these changes will be applied in the Content Items section as well. </br>See the _File Uploader Feature Overview_ article to learn more about file types that can be uploaded to File Manager.
+Keep in mind that you can add only files uploaded to **File Manager**. Thus, if you make any changes to files in the File Manager section, for example, remove the file, these changes will be applied in the Content Items section as well. <br>See the _File Uploader Feature Overview_ article to learn more about file types that can be uploaded to File Manager.
 
 {% endinfo_block %}
 

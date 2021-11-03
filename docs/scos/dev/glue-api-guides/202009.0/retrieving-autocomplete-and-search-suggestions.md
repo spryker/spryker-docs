@@ -226,10 +226,10 @@ To retrieve a search suggestion, send the request:
 
 | Attribute | Type | Description |
 | --- | --- | --- |
-| **completion** | Array | Provides a list of **autocompletion suggestions** for the query string. </br> Each item in the array is a _String_. |
-| **categories** | Array | Contains an array of **categories** matching the search query. </br> Each item in the array is an _Object_ representing a single category. |
-| **cmsPages** | Array | Contains an array of **CMS pages** matching the search query. </br> Each item in the array is an _Object_ representing a single page. |
-| **abstractProducts** | Array | Contains an array of **abstract products** matching the search query. </br> Each item in the array is an _Object_ representing a product. |
+| **completion** | Array | Provides a list of **autocompletion suggestions** for the query string. <br> Each item in the array is a _String_. |
+| **categories** | Array | Contains an array of **categories** matching the search query. <br> Each item in the array is an _Object_ representing a single category. |
+| **cmsPages** | Array | Contains an array of **CMS pages** matching the search query. <br> Each item in the array is an _Object_ representing a single page. |
+| **abstractProducts** | Array | Contains an array of **abstract products** matching the search query. <br> Each item in the array is an _Object_ representing a product. |
 
 
 **Category attributes**
@@ -251,7 +251,7 @@ To retrieve a search suggestion, send the request:
 | **abstractSku** | String | Specifies the SKU of the product. |
 | **url** | String | Specifies the product details page. |
 | **price** | Integer | Specifies the product price. |
-| **images** | Object | Provides URLs of the product images. </br>The object consists of **2** items:<ul><li>**externalUrlSmall**—specifies the URL of the product preview image;</li><li> **externalUrlLarge**—specifies the URL of the large product image.</li></ul> |
+| **images** | Object | Provides URLs of the product images. <br>The object consists of **2** items:<ul><li>**externalUrlSmall**—specifies the URL of the product preview image;</li><li> **externalUrlLarge**—specifies the URL of the large product image.</li></ul> |
 
 The `url` attribute of categories and abstract products exposes a Search Engine Friendly URL of the resource that represents the respective category or product. For information on how to resolve such a URL and retrieve the corresponding resource, see [Using Search Engine Friendly URLs](/docs/scos/dev/glue-api-guides/{{page.version}}/resolving-search-engine-friendly-urls.html).
 

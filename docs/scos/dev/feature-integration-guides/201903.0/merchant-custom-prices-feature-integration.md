@@ -41,7 +41,7 @@ Adjust the schema definition so that entity changes can trigger events:
 
 | Affected Entity | Triggered Events |
 | --- | --- |
-|`spy_price_product_merchant_relationship`  | `Entity.spy_price_product_merchant_relationship.create`</br>`Entity.spy_price_product_merchant_relationship.update`</br>`Entity.spy_price_product_merchant_relationship.delete`|
+|`spy_price_product_merchant_relationship`  | `Entity.spy_price_product_merchant_relationship.create`<br>`Entity.spy_price_product_merchant_relationship.update`<br>`Entity.spy_price_product_merchant_relationship.delete`|
 
 <details open>
 <summary markdown='span'>src/Pyz/Zed/PriceProductMerchantRelationship/Persistence/Propel/Schema/spy_price_product_merchant_relationship.schema.xml</summary>
@@ -489,8 +489,8 @@ class PriceProductStorageDependencyProvider extends SprykerPriceProductStorageDe
 
 {% info_block warningBox "Verification" %}
 Make sure that there is the "Merchant Price Dimension" drop-down in Admin UI on the Product Abstract and Concrete (variants
-{% endinfo_block %} edit page (on the Price &amp; Tax tab). When you select some Merchant Relationship, the current page should be reloaded and the prices table should display prices from the selected Merchant Relationship if they exist or an empty table should be displayed when they do not exist.</br></br>Make sure that when you added/changed prices for some Merchant Relationship, they appear after submitting the form and reloading the page.</br></br>Make sure that Redis keys are updated/created for this product and business units are assigned to the selected MR.)
+{% endinfo_block %} edit page (on the Price &amp; Tax tab). When you select some Merchant Relationship, the current page should be reloaded and the prices table should display prices from the selected Merchant Relationship if they exist or an empty table should be displayed when they do not exist.<br><br>Make sure that when you added/changed prices for some Merchant Relationship, they appear after submitting the form and reloading the page.<br><br>Make sure that Redis keys are updated/created for this product and business units are assigned to the selected MR.)
 
 {% info_block warningBox "Verification" %}
-Make sure that a logged in user, who belongs to a company business unit and that business unit is assigned to some Merchant Relationship with specified prices, sees Merchant Relationship prices on the Catalog and on the Product page.</br></br>Make sure that this user sees MIN price if their business unit is assigned to multiple Merchant Relationships with different prices for the same product.
+Make sure that a logged in user, who belongs to a company business unit and that business unit is assigned to some Merchant Relationship with specified prices, sees Merchant Relationship prices on the Catalog and on the Product page.<br><br>Make sure that this user sees MIN price if their business unit is assigned to multiple Merchant Relationships with different prices for the same product.
 {% endinfo_block %}

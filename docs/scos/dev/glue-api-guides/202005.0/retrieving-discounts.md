@@ -156,7 +156,7 @@ If you included the `vouchers` resource relationship in your request URL, the re
     ]
 }
 ```
-</br>
+<br>
 </details>
     
 ### Possible Errors
@@ -230,7 +230,7 @@ The section also includes the voucher **ID** that can be used in the future to u
 | **displayName** | String | Specifies the voucher display name. |
 | **amount** | Integer | Specifies the amount of the discount provided by the voucher. |
 | **code** | String | Specifies the voucher code. |
-| **discountType** | String | Specifies the discount type.</br>The value of the field is always **voucher**. |
+| **discountType** | String | Specifies the discount type.<br>The value of the field is always **voucher**. |
 | **isExclusive** | Boolean | Specifies whether the voucher is exclusive. |
 | **expirationDateTime** | DateTimeUtc | Specifies the date and time on which the voucher expires. |
 | **discountPromotionAbstractSku** | String | Specifies the SKU of the product(s) to which the voucher applies. If the voucher can be applied to any product, the value of the attribute is **null**. |
@@ -319,7 +319,7 @@ The section also includes the voucher **ID** that can be used in the future to u
 }
 ```
     
-</br>
+<br>
 </details>
 
 ### Possible Errors

@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/migration-guide-productcategoryfiltergui
   - /docs/migration-guide-productcategoryfiltergui
   - /docs/en/migration-guide-productcategoryfiltergui
+  - /upcoming-release/docs/migration-guide-categorystorage#upgradingfromversion1to2
 ---
 
 This document describes how to upgrade the `ProductCategoryFilterGui` module.

@@ -46,7 +46,7 @@ The roadmap contains features and not architectural items, enhancements, technol
 |Pick and Collect application |<ul><li>Mobile application for store employees to keep track of order picking and collection</li><li>Best picking route configured per location</li><li>Order by order or “wave” picking approaches</li><li>Generating and exporting pick lists as PDF or HTML</li><li>Product substitution rules</li></ul>|
 |Multistore - channels and stores|Channels decouple *what* you sell from *how* it is presented.<br>**Channels:**<ul><li>Create separate channels for desktop and mobile</li><li>Define a separate URL, UI theme, time zone, currency, and locale</li><li>Together with the Storefront as a service, create different Storefronts without the overhead of duplicating store data in Spryker</li></ul>**Stores:**<ul><li>Define catalog, prices, and promotions</li><li>Define business logic</li><li>Define store settings</li></ul>|
 |API enhancements| <ul><li>New front-end APIs for B2C and B2B</li><li>OAuth 2.0 implementation</li><li>Back-end APIs</li></ul>|
-|Back-Office UI improvements |<ul><li>Backoffice UI optimized for productivity</li><li>Better search and filter options</li><li>Bulk actions support</li><li>Built on atomic design principals</li><li>Easy to extend and use</li>|
+|Back-Office UI improvements | <ul><li>Backoffice UI optimized for productivity</li><li>Better search and filter options</li><li>Bulk actions support</li><li>Built on atomic design principals</li><li>Easy to extend and use</li></ul> |
 
 
 ## Spryker Cloud Commerce OS
@@ -54,7 +54,7 @@ The roadmap contains features and not architectural items, enhancements, technol
 | FEATURE/ENHANCEMENT | DESCRIPTION |
 | --- | --- |
 |Improved deployment process|<ul><li>**Azure support** - more tooling and a compatible CI pipeline</li><li>**Speed** - improved deploy speed to production: less than 15 minutes</li><li>**Tools** - additional Spryker QA tools to improve your software quality, like Spryker CI integration: sniffers, checks, and compliance control</li></ul>|
-|Improved self-service capabilities|<ul><li>**Gitops** - enables managed infrastructure by configuration files in the Git repository</li><li>**Environment** - spinning up environments</li><li>**Automation** - delivery pipelines automatically rollout changes to your infrastructure</li>|
+|Improved self-service capabilities|<ul><li>**Gitops** - enables managed infrastructure by configuration files in the Git repository</li><li>**Environment** - spinning up environments</li><li>**Automation** - delivery pipelines automatically rollout changes to your infrastructure</li></ul>|
 |Data integration plattform|<ul><li>**Middleware as a Service** - allows you to connect to different applications in providing multiple standards and functions</li><li>**Resource management** - host and run your own applications and business logic</li><li>**Speed** - create integrations without having to write custom code for each new data integration.</li></ul>|
 |Upgradability|<ul><li>**Speed** - spend less time on upgrading to new modules and features.</li><li>**Dependency checks** - allow you to quickly and seamlessly apply new Spryker capabilities.</li><li>**Flexibility** - get full benefits from the Spryker flexibility and adapt to ever changing market conditions.</li></ul>|
 

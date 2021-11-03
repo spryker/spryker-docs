@@ -185,7 +185,7 @@ Make sure that the following changes have been applied in the transfer objec
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| AvalaraItemTaxRateCalculatorPlugin | Calculates taxes based on the response data received from the Avalara Tax API.  </br> Use it instead of `ProductItemTaxRateCalculatorPlugin`, `ProductOptionTaxRateCalculatorPlugin`, and `ShipmentTaxRateCalculatorPlugin`. | None | SprykerEco\Zed\AvalaraTax\Communication\Plugin\Calculation |
+| AvalaraItemTaxRateCalculatorPlugin | Calculates taxes based on the response data received from the Avalara Tax API.  <br> Use it instead of `ProductItemTaxRateCalculatorPlugin`, `ProductOptionTaxRateCalculatorPlugin`, and `ShipmentTaxRateCalculatorPlugin`. | None | SprykerEco\Zed\AvalaraTax\Communication\Plugin\Calculation |
 | AvalaraTaxCodeItemExpanderPlugin | Expands `CartChangeTransfer.items` with an Avalara tax code. | None | SprykerEco\Zed\AvalaraTax\Communication\Plugin\Cart |
 | AvalaraTaxCodeProductConcreteBeforeCreatePlugin | Expands product concrete with an Avalara tax code. | None | SprykerEco\Zed\AvalaraTax\Communication\Plugin\Product |
 | AvalaraTaxCheckoutPreConditionPlugin | Checks if a request to Avalara was successful. | None | SprykerEco\Zed\AvalaraTax\Communication\Plugin\Checkout |

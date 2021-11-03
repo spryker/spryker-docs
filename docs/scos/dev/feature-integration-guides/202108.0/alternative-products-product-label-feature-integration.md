@@ -96,7 +96,7 @@ Enable the following behavior types by registering the plugins:
 |---|---|---|---|
 |PostProductAlternativeCreatePlugin|After the product alternative is created, adds product alternatives availability label to the abstract product.|None|Spryker\Zed\ProductAlternativeProductLabelConnector\Communication\Plugin|
 |PostProductAlternativeDeletePlugin|After the product alternative is deleted, removes product alternatives availability label from the abstract product.|None|Spryker\Zed\ProductAlternativeProductLabelConnector\Communication\Plugin|
-|ProductAlternativeLabelUpdaterPlugin|Used to persist alternative product label relation changes into the database. </br>The plugin is called when the `ProductLabelRelationUpdaterConsole` command is executed.|None|Spryker\Zed\ProductAlternativeProductLabelConnector\Communication\Plugin|
+|ProductAlternativeLabelUpdaterPlugin|Used to persist alternative product label relation changes into the database. <br>The plugin is called when the `ProductLabelRelationUpdaterConsole` command is executed.|None|Spryker\Zed\ProductAlternativeProductLabelConnector\Communication\Plugin|
 
 **src/Pyz/Zed/ProductAlternative/ProductAlternativeDependencyProvider.php**
 

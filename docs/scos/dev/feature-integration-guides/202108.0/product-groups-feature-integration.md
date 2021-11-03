@@ -50,7 +50,7 @@ Make sure that the following modules have been installed:
 
 | AFFECTED ENTITY | TRIGGERED EVENTS |
 | --- | --- |
-| spy_product_abstract_group | Entity.spy_product_abstract_group.create </br> Entity.spy_product_abstract_group.update</br> Entity.spy_product_abstract_group.delete |
+| spy_product_abstract_group | Entity.spy_product_abstract_group.create <br> Entity.spy_product_abstract_group.update<br> Entity.spy_product_abstract_group.delete |
 
 
 **src/Pyz/Zed/ProductGroup/Persistence/Propel/Schema/spy_product_group.schema.xml**
@@ -135,7 +135,7 @@ Make sure that the changes have been implemented successfully. To do it, trigger
 
 | PATH | METHOD NAME |
 | --- | --- |
-| src/Orm/Zed/ProductGroup/Persistence/Base/SpyProductAbstractGroup.php | prepareSaveEventName() </br> addSaveEventToMemory() </br> addDeleteEventToMemory() |
+| src/Orm/Zed/ProductGroup/Persistence/Base/SpyProductAbstractGroup.php | prepareSaveEventName() <br> addSaveEventToMemory() <br> addDeleteEventToMemory() |
 
 {% endinfo_block %}
 

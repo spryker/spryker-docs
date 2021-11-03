@@ -268,7 +268,7 @@ We have also extended the testing framework so that you can include your tests.
 [Test framework](/docs/scos/dev/guidelines/testing/test-framework.html)
 
 ### Transfer strict mode
-We have introduced the **strict mode** and type hints for transfer objects in function arguments and return types. This allows for safer and cleaner code, raises the code legibility and the checking capacity of our validation tools. We maintain the flexibility to define assStrict, specific transfers or even fields within these transfers.
+We have introduced the **strict mode** and type hints for transfer objects in function arguments and return types. This allows for safer and cleaner code, raises the code legibility and the checking capacity of our validation tools. We maintain the flexibility to define as Strict, specific transfers or even fields within transfers.
 
 #### Documentation
 [Transfer strict types](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html#transfer-strict-types)

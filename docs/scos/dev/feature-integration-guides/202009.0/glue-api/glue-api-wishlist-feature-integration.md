@@ -78,7 +78,7 @@ Run the following command:
 console uuid:update Wishlist spy_wishlist
 ```
 
-{% info_block warningBox "(Make sure that the `uuid` field is populated for all records in the `spy_wishlist` table.</br>For this purpose, run the following SQL query and make sure that the result is 0 records:</br>`SELECT COUNT(*) FROM spy_wishlist WHERE uuid IS NULL;`)
+{% info_block warningBox "(Make sure that the `uuid` field is populated for all records in the `spy_wishlist` table.<br>For this purpose, run the following SQL query and make sure that the result is 0 records:<br>`SELECT COUNT(*) FROM spy_wishlist WHERE uuid IS NULL;`)
 
 #### Enable resources and relationships
 
@@ -139,7 +139,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</br>
+<br>
 </details>
 
 @(Warning" %}

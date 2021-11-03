@@ -1,5 +1,5 @@
 ---
-title: Creating a New Custom Scheduler
+title: Creating a custom scheduler
 description: This tutorial describes how to create a new custom scheduler.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -29,5 +29,3 @@ To create a new custom scheduler:
 
 
 <!--*Last review date: Oct 29, 2019* by Oleksandr Myrnyi, Andrii Tserkovnyi-->
-
-

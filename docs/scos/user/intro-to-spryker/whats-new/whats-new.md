@@ -56,7 +56,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 * Improved: Country on the Order Details Page in the Administrator Interface
 * Improved: Extension Points for Post (De)activation of CMS Pages and Categories Update 
 
-</br>
+<br>
 </details>
 
 <details>
@@ -71,7 +71,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 * Improved: Obsolete Touch Records Cleanup
 * Improved: Elasticsearch 5 Upgrade
 
-</br>
+<br>
 </details>
 
 <details>
@@ -87,7 +87,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 * Improved: Full Compatibility To Symfony 28 And Then 30
 * Improved: Compatibility To PHP 7.2
 
-</br>
+<br>
 </details>
 
 <details>
@@ -102,7 +102,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 * Improved: Fixing Compatibility Issues In All FormTypes
 * Improved: New Fields on Customer Account Page
 
-</br>
+<br>
 </details>
 
 <details>
@@ -120,7 +120,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 * Improved: Changing the Table Column Type From the Project Code
 * Improved: Configuring SSL Verification in Zed Request Client
 
-</br>
+<br>
 </details>
 
 <details>
@@ -138,7 +138,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 * Improved: Zed Side Email Validation on Newsletter Subscription and Guest Form
 * Improved: Preparing Console Module for Standalone Usage
 
-</br>
+<br>
 </details>
 
 <details>
@@ -152,7 +152,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 * Improved: Double Click Protection for Submit Action in Zed Administrative Interface
 * Improved: Success Codes for NewRelic Record Deployment Response
 
-</br>
+<br>
 </details>
 
 <details>
@@ -167,7 +167,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 * Improved: Dedicated Log Configuration Plugins
 * Improved: Decoupling JavaScript Dependency in CMS
 
-</br>
+<br>
 </details>
 
 <details>
@@ -180,7 +180,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 * Improved: Code Sniffer for Project Modules
 * Improved: Architecture Sniffer for Custom Paths in Project or Vendor
 
-</br>
+<br>
 </details>
 
 <details>
@@ -204,7 +204,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 * Improved: OMS Performance Due to Missing Indexes in PostgreSQL
 * Improved: Standalone Facets
 
-</br>
+<br>
 </details>
 
 <details>
@@ -227,7 +227,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 * Improved: Output Execution Time for Importers
 * Improved: Mget Cache
 
-</br>
+<br>
 </details>
 
 <details>
@@ -243,7 +243,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 * Improved: Customer Group Optimization
 * Improved: Cache for Navigation
 
-</br>
+<br>
 </details>
 
 <details>
@@ -260,7 +260,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 * Improved: Restore Password Link Generation
 * Improved: Unique Name Validation for Carriers
 
-</br>
+<br>
 </details>
 
 <details>
@@ -283,7 +283,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 * Improved: Exclusive Custom Search and Storage Client Configuration
 * Improved: Update to Allow symfony/http-kernel V2 or V3
 
-</br>
+<br>
 </details>
 
 <details>
@@ -299,7 +299,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 * Improved: CORS Headers
 * Improved: Storage Client Cache
 
-</br>
+<br>
 </details>
 
 <details>
@@ -324,7 +324,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 * Improved: Discount Filter
 * Improved: Beta: HTTP OPTIONS Pre-flight Request Support
 
-</br>
+<br>
 </details>
 
 <details>
@@ -339,7 +339,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 * Improved: Config Options to Define Ports for Yves and Zed
 * Improved: Hashing Algorithm for Zed Authentication
 
-</br>
+<br>
 </details>
 
 <details>
@@ -353,7 +353,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 * Improved: GetConfig for DependencyProvider
 * Improved: Moving Glob to Finder
 
-</br>
+<br>
 </details>
 
 <details>
@@ -369,7 +369,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 * Improved: Logging of Custom Exceptions in Yves
 * Improved: Extended Data Set for DataFeed - BETA
 
-</br>
+<br>
 </details>
 
 <details>
@@ -381,7 +381,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 * Improved: CodeStyle checker
 * Improved: PropelQueryBuilder Filtering and PropelOrm Formatting
 
-</br>
+<br>
 </details>
 
 <details>
@@ -396,7 +396,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 * Improved: Zed Navigation Fix
 
 
-</br>
+<br>
 </details>
 
 <details>
@@ -410,7 +410,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 * Improved: 3rd party integrations
 
 
-</br>
+<br>
 </details>
 
 -->

@@ -22,6 +22,10 @@ redirect_from:
   - /v2/docs/en/modularity-and-shop-suite
   - /v1/docs/modularity-and-shop-suite
   - /v1/docs/en/modularity-and-shop-suite
+  - /docs/modularity-and-shop-suite
+  - /docs/en/modularity-and-shop-suite
+  - /2021080/docs/modularity-and-shop-suite
+  - /2021080/docs/en/modularity-and-shop-suite
 ---
 
 In Spryker, we use modular programming and packaging principles for organizing functionalities into independent software packages — modules. 

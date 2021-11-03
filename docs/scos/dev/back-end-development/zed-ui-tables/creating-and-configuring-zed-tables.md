@@ -22,6 +22,8 @@ redirect_from:
   - /v2/docs/en/t-working-tables
   - /v1/docs/t-working-tables
   - /v1/docs/en/t-working-tables
+  - /docs/t-working-tables
+  - /docs/en/t-working-tables
 ---
 
 Spryker has a dedicated component to help you build tables for the Zed UI.

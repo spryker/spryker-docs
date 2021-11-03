@@ -25,8 +25,6 @@ redirect_from:
   - /v2/docs/en/about-migration-integration
   - /v1/docs/about-migration-integration
   - /v1/docs/en/about-migration-integration
-
-
   - /docs/scos/dev/migration-and-integration/about-migration-and-integration-guides.html
 ---
 

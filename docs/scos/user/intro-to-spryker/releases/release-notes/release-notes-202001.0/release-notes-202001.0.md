@@ -17,7 +17,7 @@ redirect_from:
   - /v6/docs/en/release-notes-2020010
 related:
   - title: DevOps Migration Guide 202001.0
-    link: docs/scos/dev/migration-and-integration/page.version/devops-migration-guide-202001.0.html
+    link: docs/scos/dev/devlops-migration-guides/site.version/devops-migration-guide-202001.0.html
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of major new features and enhancements released in January of 2020.
@@ -245,7 +245,7 @@ To improve usability, the `vendor/bin/console setup:search` command which has be
     * `console search:setup:index-map`
 
 #### Documentation
-[Search Initialization Improvement](/docs/scos/dev/technical-enhancement-integration-guides/integrating-search-initialization-improvement.html)
+[Search Initialization Improvement](/docs/scos/dev/technical-enhancement-integration-guides/integrating-search-initialization-enhancement.html)
 
 ### PHP Update
 PHP continuously develops and gets more exciting features. Also, old versions get deprecated, such as PHP7.1, which lost support by the end of 2019. From now on, Spryker modules will require **>=PHP7.2**. Please make sure your project doesn’t rely on deprecated technology and applies required infrastructural upgrades.

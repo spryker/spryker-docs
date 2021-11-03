@@ -279,5 +279,5 @@ Yves has also got its fresh features: the structured information is now generate
 
 #### Documentation
 
-* [Web Profiler Widget for Yves](/docs/scos/dev/technical-enhancement-integration-guides/development-tools/integrating-web-profiler-widget-for-yves.html)
+* [Web Profiler Widget for Yves](/docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-widget-for-yves.html)
 * [Basic SEO techniques to use in your project](/docs/scos/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html)

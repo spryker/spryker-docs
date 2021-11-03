@@ -1,13 +1,23 @@
 ---
-title: Setting up ShopUiCompatibility Module in the Legacy Demoshop
+title: Setting up ShopUiCompatibility module in the Legacy Demoshop
 description: Use the guide to learn how to install the ShopUICompatibility module for the Atomic Frontend in the Legacy Demoshop.
-last_updated: Oct 26, 2020
+last_updated: Aug 27, 2020
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/v4/docs/setting-up-shopuicompatibility
-originalArticleId: 3e0b1fcc-3f92-40f6-91e0-9e43dd97fc2c
+originalLink: https://documentation.spryker.com/v6/docs/setting-up-shopuicompatibility
+originalArticleId: f6d3249c-0d19-440c-9230-313043541be0
 redirect_from:
+  - /v6/docs/setting-up-shopuicompatibility
+  - /v6/docs/en/setting-up-shopuicompatibility
+  - /v5/docs/setting-up-shopuicompatibility
+  - /v5/docs/en/setting-up-shopuicompatibility
   - /v4/docs/setting-up-shopuicompatibility
   - /v4/docs/en/setting-up-shopuicompatibility
+  - /v3/docs/setting-up-shopuicompatibility
+  - /v3/docs/en/setting-up-shopuicompatibility
+  - /v2/docs/setting-up-shopuicompatibility
+  - /v2/docs/en/setting-up-shopuicompatibility
+  - /v1/docs/setting-up-shopuicompatibility
+  - /v1/docs/en/setting-up-shopuicompatibility
 related:
   - title: Making the Legacy Demoshop Compatible with the Modular Frontend
     link: docs/scos/dev/migration-and-integration/page.version/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-modular-frontend.html
@@ -17,7 +27,7 @@ related:
     link: docs/scos/dev/migration-and-integration/page.version/updating-the-legacy-demoshop-with-scos/twig-compatibility-legacy-demoshop-vs-scos.html
 ---
 
-The `ShopUiCompatibility` module is the main module necessary for the [Atomic Frontend](/docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-frontend-general-overview.html). This module is provided in SCOS by default.
+The `ShopUiCompatibility` module is the main module necessary for the [Atomic Frontend](/docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html). This module is provided in SCOS by default.
 The following guide describes how to set up the ShopUICompatibility in the Legacy Demoshop.
 
 To install `ShopUiCompatibility` module in the Legacy Demoshop, follow the instructions below:
@@ -66,14 +76,14 @@ $this->application->register(new ShopUiCompatibilityTwigServiceProvider());
 	<meta name="keywords" content="{% raw %}{{{% endraw %} page_keywords | default('') | trans {% raw %}}}{% endraw %}" />
 	<meta name="generator" content="spryker" />
 	{% raw %}{%{% endraw %} block page_meta {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
- 
+
 	<link rel="stylesheet" href="/assets/default/shopui/css/yves_default.app.css" /> <!-- add this line here, before any other style -->
 	<link rel="stylesheet" href="/assets/default/css/vendor.css" />
 	<link rel="stylesheet" href="/assets/default/css/app.css" />
 	{% raw %}{%{% endraw %} block stylesheets {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
- 
+
 	<script src="/assets/default/shopui/js/yves_default.runtime.js"></script>  <!-- add this line here, before any other script -->
-   
+
 	<title>{% raw %}{%{% endraw %} block page_title {% raw %}%}{% endraw %}{% raw %}{{{% endraw %} page_title | default('global.spryker.shop') | trans {% raw %}}}{% endraw %}{% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}</title>
 </head>
 ```

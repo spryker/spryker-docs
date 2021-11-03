@@ -3978,6 +3978,31 @@ entries:
         url: /docs/scos/dev/legacy-demoshop/twig-templates/best-practices-twig-templates.html
         include_versions:
         - "201811.0"
+    - title: Updating the legacy Demoshop with SCOS
+      url: /docs/scos/dev/legacy-demoshop/updating-the-legacy-demoshop-with-scos/updating-the-legacy-demoshop-with-scos.html
+      include_versions:
+      - "201811.0"
+      nested:
+      - title: Making the Legacy Demoshop compatible with Publish & Synchronize
+        url: /docs/scos/dev/legacy-demoshop/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-publish-and-synchronize.html
+        include_versions:
+        - "201811.0"
+      - title: Making the Legacy Demoshop compatible with the Atomic Frontend
+        url: /docs/scos/dev/legacy-demoshop/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-atomic-frontend.html
+        include_versions:
+        - "201811.0"
+      - title: Making the Legacy Demoshop compatible with the Modular Frontend
+        url: /docs/scos/dev/legacy-demoshop/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-modular-frontend.html
+        include_versions:
+        - "201811.0"
+      - title: Setting up ShopUiCompatibility module in the Legacy Demoshop
+        url: /docs/scos/dev/legacy-demoshop/updating-the-legacy-demoshop-with-scos/setting-up-shopuicompatibility-module-in-the-legacy-demoshop.html
+        include_versions:
+        - "201811.0"
+      - title: Twig Compatibility:Legacy Demoshop vs SCOS
+        url: /docs/scos/dev/legacy-demoshop/updating-the-legacy-demoshop-with-scos/twig-compatibility-legacy-demoshop-vs-scos.html
+        include_versions:
+        - "201811.0"
     - title: Tutorial - Set Up a Hello World Queue - Legacy Demoshop
       url: /docs/scos/dev/legacy-demoshop/set-up-a-hello-world-queue-legacy-demoshop.html
       include_versions:
@@ -4470,109 +4495,6 @@ entries:
       url: /docs/scos/dev/architecture/code-buckets.html
     - title: Programming concepts
       url: /docs/scos/dev/architecture/programming-concepts.html
-  - title: Migration and integration
-    nested:
-    - title: About Migration and Integration Guides
-      url: /docs/scos/dev/migration-and-integration/about-migration-and-integration-guides.html
-    - title: Development Tools
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
-      nested:
-      - title: Web Profiler for Zed
-        url: /docs/scos/dev/migration-and-integration/development-tools/web-profiler-for-zed.html
-        include_versions:
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-      - title: Web Profiler Widget for Yves
-        url: /docs/scos/dev/migration-and-integration/development-tools/web-profiler-widget-for-yves.html
-        include_versions:
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-      - title: SCSS linter integration guide
-        url: /docs/scos/dev/migration-and-integration/development-tools/scss-linter-integration-guide.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-      - title: Formatter integration guide
-        url: /docs/scos/dev/migration-and-integration/development-tools/formatter-integration-guide.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-      - title: TS linter integration guide
-        url: /docs/scos/dev/migration-and-integration/development-tools/ts-linter-integration-guide.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-    - title: Updating the Legacy Demoshop with SCOS
-      include_versions:
-      - "201811.0"
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      nested:
-      - title: Making the Legacy Demoshop Compatible with the Atomic Frontend
-        url: /docs/scos/dev/migration-and-integration/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-atomic-frontend.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-      - title: Setting up ShopUiCompatibility Module in the Legacy Demoshop
-        url: /docs/scos/dev/migration-and-integration/updating-the-legacy-demoshop-with-scos/setting-up-shopuicompatibility-module-in-the-legacy-demoshop.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-      - title: Making the Legacy Demoshop Compatible with Publish & Synchronize
-        url: /docs/scos/dev/migration-and-integration/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-publish-and-synchronize.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-      - title: Twig Compatibility- Legacy Demoshop vs SCOS
-        url: /docs/scos/dev/migration-and-integration/updating-the-legacy-demoshop-with-scos/twig-compatibility-legacy-demoshop-vs-scos.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-      - title: Integrating Modular Frontend into Legacy Demoshop
-        url: /docs/scos/dev/migration-and-integration/updating-the-legacy-demoshop-with-scos/integrating-modular-frontend-into-legacy-demoshop.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-      - title: Making the Legacy Demoshop Compatible with the Modular Frontend
-        url: /docs/scos/dev/migration-and-integration/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-modular-frontend.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
   - title: Guidelines
     nested:
     - title: Coding Guidelines

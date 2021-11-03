@@ -22,7 +22,7 @@ Spryker SDK facilitates Glue API Resource development by providing a set of code
 
 {% info_block infoBox %}
 
-For more information on _Spryks_, see [Spryk](/docs/scos/dev/sdk/{{page.version}}/development-tools/spryk-code-generator.html).
+For more information on _Spryks_, see [Spryk](/docs/scos/dev/sdk/development-tools/spryk-code-generator.html).
 
 {% endinfo_block %}
 

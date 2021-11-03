@@ -14,7 +14,7 @@ redirect_from:
   - /v6/docs/en/scss-linter-integration-guide
 ---
 
-Follow the steps below to integrate the [SCSS linter ](/docs/scos/dev/sdk/{{page.version}}/development-tools/scss-linter.html)into your project.
+Follow the steps below to integrate the [SCSS linter ](/docs/scos/dev/sdk/development-tools/scss-linter.html)into your project.
 
 ## 1. Install the dependencies
 

@@ -13,6 +13,20 @@ redirect_from:
   - /2021080/docs/en/about-migration-integration
   - /docs/about-migration-integration
   - /docs/en/about-migration-integration
+  - /v6/docs/about-migration-integration
+  - /v6/docs/en/about-migration-integration
+  - /v5/docs/about-migration-integration
+  - /v5/docs/en/about-migration-integration
+  - /v4/docs/about-migration-integration
+  - /v4/docs/en/about-migration-integration
+  - /v3/docs/about-migration-integration
+  - /v3/docs/en/about-migration-integration
+  - /v2/docs/about-migration-integration
+  - /v2/docs/en/about-migration-integration
+  - /v1/docs/about-migration-integration
+  - /v1/docs/en/about-migration-integration
+
+
   - /docs/scos/dev/migration-and-integration/about-migration-and-integration-guides.html
 ---
 

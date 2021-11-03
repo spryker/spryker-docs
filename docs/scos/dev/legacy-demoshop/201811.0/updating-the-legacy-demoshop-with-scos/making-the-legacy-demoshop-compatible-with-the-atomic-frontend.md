@@ -1,12 +1,23 @@
 ---
-title: Making the Legacy Demoshop Compatible with the Atomic Frontend
-last_updated: Nov 22, 2019
+title: Making the Legacy Demoshop compatible with the Atomic Frontend
+description: This guide provides step-by-step instructions on how to make the Legacy Demoshop compatible with the Atomic Frontend
+last_updated: Aug 27, 2020
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/v2/docs/demoshop-with-atomic-frontend
-originalArticleId: 3d973798-68b8-4f34-928f-38b644526194
+originalLink: https://documentation.spryker.com/v6/docs/demoshop-with-atomic-frontend
+originalArticleId: 820c0f4e-6678-4d99-b70d-baf98e41fdce
 redirect_from:
+  - /v6/docs/demoshop-with-atomic-frontend
+  - /v6/docs/en/demoshop-with-atomic-frontend
+  - /v5/docs/demoshop-with-atomic-frontend
+  - /v5/docs/en/demoshop-with-atomic-frontend
+  - /v4/docs/demoshop-with-atomic-frontend
+  - /v4/docs/en/demoshop-with-atomic-frontend
+  - /v3/docs/demoshop-with-atomic-frontend
+  - /v3/docs/en/demoshop-with-atomic-frontend
   - /v2/docs/demoshop-with-atomic-frontend
   - /v2/docs/en/demoshop-with-atomic-frontend
+  - /v1/docs/demoshop-with-atomic-frontend
+  - /v1/docs/en/demoshop-with-atomic-frontend
 related:
   - title: Twig Compatibility- Legacy Demoshop vs SCOS
     link: docs/scos/dev/migration-and-integration/page.version/updating-the-legacy-demoshop-with-scos/twig-compatibility-legacy-demoshop-vs-scos.html
@@ -43,8 +54,7 @@ require('@webcomponents/webcomponentsjs/webcomponents-bundle');
 
 3. Update `package.json` by replacing the following sections with the lines specified below:
 
-<details open>
-<summary markdown='span'>scripts</summary>
+**scripts**
 
 ```js
 "scripts": {
@@ -56,26 +66,18 @@ require('@webcomponents/webcomponentsjs/webcomponents-bundle');
 	"zed:prod": "node ./node_modules/@spryker/oryx-for-zed/build --prod"
 }
 ```
-    
-<br>
-</details>
-    
-<details open>
-<summary markdown='span'>engines</summary>
-    
+
+**engines**
+
 ```php
 "engines": {
     "node": ">=8.9.0",
     "npm": ">=5.6.0"
 }
 ```
-    
-<br>
-</details>
-    
-<details open>
-<summary markdown='span'>dependencies</summary>
-    
+
+**dependencies**
+
 ```php
 "dependencies": {
     "@webcomponents/webcomponentsjs": "~2.0.2",
@@ -89,13 +91,9 @@ require('@webcomponents/webcomponentsjs/webcomponents-bundle');
     "jquery-bar-rating": "^1.2.2"
 }
 ```
-    
-<br>
-</details>
 
-<details open>
-<summary markdown='span'>devDependencies</summary>
-    
+**devDependencies**
+
 ```php
 "devDependencies": {
     "@spryker/oryx-for-zed": "^2.1.0",
@@ -118,23 +116,16 @@ require('@webcomponents/webcomponentsjs/webcomponents-bundle');
     "webpack-merge": "~4.1.3"
 }
 ```
-    
-<br>
-</details>
 
 4. Update `src/Pyz/Yves/Application/Theme/default/layout/layout.twig`.
 Add <script src="/assets/default/js/runtime.js"></script> to <head>:
-    
+
 ```html
 <!-- add here -->
 <link rel="stylesheet" href="/assets/default/css/vendor.css" />
 <link rel="stylesheet" href="/assets/default/css/app.css" />
-```
+```    
 
-<br>
-</details>
-    
-    
 Add <script src="/assets/default/js/es6-polyfill.js"></script> at the very bottom of the page skeleton, before `app.js` and `vendor.js`:
 
 ```js
@@ -145,7 +136,7 @@ Add <script src="/assets/default/js/es6-polyfill.js"></script> at the very botto
 
 5. Delete the `assets/Yves/default/build/` folder.
 6. Download the [Migration Package](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/migration-Package.zip), unpack it and copy to your project following the folder structure of the package.
-7. Replace 
+7. Replace
 
 ```php
 // define relative urls to site host (/)

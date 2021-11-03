@@ -1,10 +1,21 @@
 ---
-title: Making the Legacy Demoshop Compatible with Publish & Synchronize
-last_updated: Jul 29, 2020
+title: Making the Legacy Demoshop compatible with Publish & Synchronize
+description: This guide provides step-by-step instructions on how to make the Legacy Demoshop compatible with Publish&Syncronize
+last_updated: Aug 27, 2020
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/v1/docs/demoshop-with-publish-and-sync
-originalArticleId: ef161664-9a3d-4bcd-8606-5358a3a767d7
+originalLink: https://documentation.spryker.com/v6/docs/demoshop-with-publish-and-sync
+originalArticleId: 9abbb406-181f-46f3-b4ac-a5cb59dd57bb
 redirect_from:
+  - /v6/docs/demoshop-with-publish-and-sync
+  - /v6/docs/en/demoshop-with-publish-and-sync
+  - /v5/docs/demoshop-with-publish-and-sync
+  - /v5/docs/en/demoshop-with-publish-and-sync
+  - /v4/docs/demoshop-with-publish-and-sync
+  - /v4/docs/en/demoshop-with-publish-and-sync
+  - /v3/docs/demoshop-with-publish-and-sync
+  - /v3/docs/en/demoshop-with-publish-and-sync
+  - /v2/docs/demoshop-with-publish-and-sync
+  - /v2/docs/en/demoshop-with-publish-and-sync
   - /v1/docs/demoshop-with-publish-and-sync
   - /v1/docs/en/demoshop-with-publish-and-sync
 related:
@@ -14,12 +25,12 @@ related:
     link: docs/scos/dev/migration-and-integration/page.version/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-atomic-frontend.html
 ---
 
-By following this document and adjusting all the necessary changes in the Legacy Demoshop, you will be able to set up the infrastructure for Publish &amp; Synchronize. If you need to learn more about any requirements needed and changes made to each particular feature, read their own [installation guides](/docs/scos/dev/feature-integration-guides/{{page.version}}/about-integration.html).
+By following this document and adjusting all the necessary changes in the Legacy Demoshop, you will be able to set up the infrastructure for Publish &amp; Synchronize. If you need to learn more about any requirements needed and changes made to each particular feature, read their own [installation guides](/docs/scos/dev/feature-integration-guides/{{page.version}}/feature-integration-guides.html).
 
 ### 1. Add infrastructure modules
 You need to adjust the `composer.json` to get the latest version of the Storage and Search modules. By executing this code you will be able to update the library you need for running Publish &amp; Synchronize:
 
-```yaml
+```bash
 composer update "spryker/*"
 composer remove spryker/event-behavior
 composer require spryker/availability-storage:"^1.0.0" spryker/category-page search:"^1.0.0" spryker/category-storage:"^1.0.0" spryker/cms-block-category-storage:"^1.0.0" spryker/cms-block-product-storage:"^1.0.0" spryker/cms-block-storage:"^1.0.0"
@@ -45,34 +56,29 @@ Adjust queues before you start running the cron jobs, open `QueueDependencyProvi
 This only works if the Queue module is installed on the current server.
 {% endinfo_block %}
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/Queue/QueueDependencyProvider.php</summary>
-    
+src/Pyz/Zed/Queue/QueueDependencyProvider.php
+
 ```php
 namespace Pyz\Zed\Queue;
- 
+
 ...
- 
+
 class QueueDependencyProvider extends SprykerDependencyProvider
 {
-protected function getProcessorMessagePlugins(Container $container)
-{
-			return [
-						EventConstants::EVENT_QUEUE => new EventQueueMessageProcessorPlugin(),
-			];
-}
+	protected function getProcessorMessagePlugins(Container $container)
+	{
+		return [
+			EventConstants::EVENT_QUEUE => new EventQueueMessageProcessorPlugin(),
+		];
+	}
 }
 ```
-    
-<br>
-</details>
 
 ## 3. Activate cron jobs
 Add the following jobs to `jobs.php`:
 
-<details open>
-<summary markdown='span'>config/Zed/cronjobs/jobs.php</summary>
-    
+config/Zed/cronjobs/jobs.php
+
 ```php
 $jobs[] = [
 'name' => 'queue-worker-start',
@@ -82,7 +88,7 @@ $jobs[] = [
 'run_on_non_production' => true,
 'stores' => $allStores,
 ];
- 
+
 $jobs[] = [
 'name' => 'event-trigger-timeout',
 'command' => '$PHP_BIN vendor/bin/console event:trigger:timeout -vvv',
@@ -92,8 +98,6 @@ $jobs[] = [
 'stores' => $allStores,
 ];
 ```
-<br>
-</details>
 
 Then restart Jenkins:
 
@@ -104,116 +108,98 @@ vendor/bin/console setup:jenkins:generate
 ## 4. Adjust Config
 We need to enable event behavior in config_default.php
 
-```
+```php
 // ---------- EventBehavior
-		$config[EventBehaviorConstants::EVENT_BEHAVIOR_TRIGGERING_ACTIVE] = true;
+$config[EventBehaviorConstants::EVENT_BEHAVIOR_TRIGGERING_ACTIVE] = true;
 ```
 
 ## 5. Adjust Zed
 Add `EventBehaviorServiceProvider` to all the `ServiceProviders` methods in `ApplicationDependencyProvider.php`:
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/Application/ApplicationDependencyProvider.php</summary>
-    
+src/Pyz/Zed/Application/ApplicationDependencyProvider.php
+
 ```php
 namespace Pyz\Zed\Application;
- 
+
 use Spryker\Zed\EventBehavior\Communication\Plugin\ServiceProvider\EventBehaviorServiceProvider;
- 
+
 class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 {
-			protected function getServiceProviders(Container $container)
-						{
-						...
-						$providers = [
-						// Add Auth service providers
-						...
-						new EventBehaviorServiceProvider(),
-			];
-...
+	protected function getServiceProviders(Container $container)
+	{
+		...
+		$providers = [
+			// Add Auth service providers
+			...
+			new EventBehaviorServiceProvider(),
+		];
+		...
 ```
-    
-<br>
-</details>
 
 ## 6. Adjust Console
 Add `EventBehaviorPostHookPlugin` to the `getConsolePostRunHookPlugins()` method in `ConsoleDependencyProvider.php`:
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
-    
+src/Pyz/Zed/Console/ConsoleDependencyProvider.php
+
 ```php
 namespace Pyz\Zed\Console;
- 
+
 use Spryker\Zed\EventBehavior\Communication\Plugin\Console\EventBehaviorPostHookPlugin;
- 
+
 class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {
- 
-		/**
-		* @param \Spryker\Zed\Kernel\Container $container
-		*
-		* @return array
-		*/
-		public function getConsolePostRunHookPlugins(Container $container)
-		{
-				return [
-						new EventBehaviorPostHookPlugin(),
-						];
-		}
+	/**
+	* @param \Spryker\Zed\Kernel\Container $container
+	*
+	* @return array
+	*/
+	public function getConsolePostRunHookPlugins(Container $container)
+	{
+		return [
+			new EventBehaviorPostHookPlugin(),
+		];
+	}
 ```
-    
-<br>
-</details>
 
 ## 7. Adjust DataImporter
 Add `DataImportPublisherPlugin` and `DataImportEventBehaviorPlugin` to `Pyz\Zed\DataImport\DataImportDependencyProvider`:
 
-
-<details open>
-<summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
+src/Pyz/Zed/DataImport/DataImportDependencyProvider.php
 
 ```php
 use Spryker\Zed\DataImport\Communication\Plugin\DataImportEventBehaviorPlugin;
 use Spryker\Zed\DataImport\Communication\Plugin\DataImportPublisherPlugin;
 ```
-    
-<br>
-</details>
 
 Overwrite the core methods:
 
-<details open>
-<summary markdown='span'>Code sample:</summary>
-    
+**Code sample:**
+
 ```php
 /**
 * @return array
 */
 protected function getDataImportBeforeImportHookPlugins(): array
 {
-		return [
-				new DataImportEventBehaviorPlugin(),
-		];
+	return [
+		new DataImportEventBehaviorPlugin(),
+	];
 }
- 
+
 /**
 * @return array
 */
 protected function getDataImportAfterImportHookPlugins(): array
 {
-		return [
-				new DataImportEventBehaviorPlugin(),
-				new DataImportPublisherPlugin(),
-		];
+	return [
+		new DataImportEventBehaviorPlugin(),
+		new DataImportPublisherPlugin(),
+	];
 }
 ```
-    
-<br>
-</details>
 
 You can find all the changes in the following branch:
 https://github.com/spryker/demoshop/tree/tech/compatibility-pub-sync
 
-## Using Collector data with P&amp;S features
+## Using Collector data with P&S features
 To be able to use the data structure provided by the collectors from Redis, you need to use your own module in a compatibility mode. You can simply do this by updating the `ModuleStorageConfig::isCollectorCompatibilityMode()` method of your storage module and return true.

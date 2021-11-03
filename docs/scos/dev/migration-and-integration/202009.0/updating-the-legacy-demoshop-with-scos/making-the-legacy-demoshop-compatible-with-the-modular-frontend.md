@@ -8,6 +8,16 @@ originalArticleId: 967a78e6-83d2-427a-b681-fe7c81e11b39
 redirect_from:
   - /v6/docs/demoshop-with-modular-frontend
   - /v6/docs/en/demoshop-with-modular-frontend
+  - /v5/docs/demoshop-with-modular-frontend
+  - /v5/docs/en/demoshop-with-modular-frontend
+  - /v4/docs/demoshop-with-modular-frontend
+  - /v4/docs/en/demoshop-with-modular-frontend
+  - /v3/docs/demoshop-with-modular-frontend
+  - /v3/docs/en/demoshop-with-modular-frontend
+  - /v2/docs/demoshop-with-modular-frontend
+  - /v2/docs/en/demoshop-with-modular-frontend
+  - /v1/docs/demoshop-with-modular-frontend
+  - /v1/docs/en/demoshop-with-modular-frontend
 related:
   - title: Twig Compatibility- Legacy Demoshop vs SCOS
     link: docs/scos/dev/migration-and-integration/page.version/updating-the-legacy-demoshop-with-scos/twig-compatibility-legacy-demoshop-vs-scos.html
@@ -56,7 +66,7 @@ composer require "spryker/kernel":"^3.24.0" spryker-shop/shop-router:"^1.0.0" sp
 6. Install the required modules for Publish&amp;Synchronize:
 
 ```yaml
-composer require spryker/availability-storage:"^1.0.0" spryker/category-page-search:"^1.0.0" 
+composer require spryker/availability-storage:"^1.0.0" spryker/category-page-search:"^1.0.0"
 spryker/category-storage:"^1.0.0" spryker/cms-block-category-storage:"^1.0.0"
 spryker/cms-block-product-storage:"^1.0.0" spryker/cms-block-storage:"^1.0.0"
 spryker/cms-page-search:"^1.0.0" spryker/cms-storage:"^1.0.0" spryker/glossary-storage:"^1.0.0"
@@ -74,7 +84,7 @@ spryker/url-storage:"^1.0.0"  spryker/product-quantity-storage:"^0.1.1" --update
 ```
 
 ### 2. Add namespace to configuration
-To let the Kernel find your files within the SprykerShop Organization namespace, add SprykerShop as a new namespace to `Spryker\Shared\Kernel\KernelConstants::CORE_NAMESPACES` in your `./config/Shared/config_default.php`. 
+To let the Kernel find your files within the SprykerShop Organization namespace, add SprykerShop as a new namespace to `Spryker\Shared\Kernel\KernelConstants::CORE_NAMESPACES` in your `./config/Shared/config_default.php`.
 
 {% info_block infoBox %}
 `$config[\Spryker\Shared\Kernel\KernelConstants::CORE_NAMESPACES] = [ 'SprykerEco', 'Spryker',  'SprykerShop'];`
@@ -84,7 +94,7 @@ To let the Kernel find your files within the SprykerShop Organization namespace,
 To make all the features available from the newly added Modules, add the following lines to `\Pyz\Yves\ShopApplication\ShopApplicationDependencyProvider::getApplicationPlugins()`.
 
 src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php
-    
+
 ```php
 // ...
 
@@ -92,7 +102,7 @@ use SprykerShop\Yves\ShopApplication\Plugin\Twig\ShopApplicationTwigPlugin;
 use SprykerShop\Yves\ShopApplication\Plugin\Application\ShopApplicationApplicationPlugin;
 use Spryker\Yves\Store\Plugin\Application\StoreApplicationPlugin;
 use Spryker\Yves\Locale\Plugin\Application\LocaleApplicationPlugin;
- 
+
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
@@ -115,13 +125,13 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 To make all the features available from the newly added Modules, add the following lines to `\Pyz\Yves\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`.
 
 src/Pyz/Yves/EventDispatcher/EventDispatcherDependencyProvider.php
-    
+
 ```php
 // ...
 
 use SprykerShop\Yves\ShopApplication\Plugin\EventDispatcher\ShopApplicationEventDispatcherPlugin;
 use SprykerShop\Yves\ShopApplication\Plugin\EventDispatcher\ShopApplicationFilterControllerEventDispatcherPlugin;
- 
+
 class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependencyProvider
 {
     /**
@@ -143,13 +153,13 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 To make all the features available from the newly added Modules, add the following lines to `\Pyz\Yves\Twig\TwigDependencyProvider::getTwigPlugins()`.
 
 src/Pyz/Yves/Twig/TwigDependencyProvider.php
-    
+
 ```php
 // ...
 
 use SprykerShop\Yves\ShopApplication\Plugin\Twig\WidgetTwigPlugin;
 use SprykerShop\Yves\ShopApplication\Plugin\Twig\WidgetTagTwigPlugin;
- 
+
 class TwigDependencyProvider extends SprykerShopTwigDependencyProvider
 {
     /**
@@ -171,10 +181,10 @@ class TwigDependencyProvider extends SprykerShopTwigDependencyProvider
 You need to inherit YvesBootstrap from `SprykerShop\Yves\ShopApplication\YvesBootstrap`
 
 src/Pyz/Yves/Application/YvesBootstrap.php
-    
+
 ```php
 use SprykerShop\Yves\ShopApplication\YvesBootstrap as SprykerYvesBootstrap;
- 
+
 class YvesBootstrap extends SprykerYvesBootstrap
 ```
 
@@ -194,4 +204,3 @@ Don't forget to flush the cache afterwards.
 ```bash
 console cache:empty-all
 ```
-

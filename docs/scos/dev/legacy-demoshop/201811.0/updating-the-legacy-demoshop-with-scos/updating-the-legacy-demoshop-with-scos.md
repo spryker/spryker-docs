@@ -8,6 +8,16 @@ originalArticleId: cc12c96d-4515-45ac-aa0d-a29bc321311f
 redirect_from:
   - /v6/docs/about-updating
   - /v6/docs/en/about-updating
+  - /v5/docs/about-updating
+  - /v5/docs/en/about-updating
+  - /v4/docs/about-updating
+  - /v4/docs/en/about-updating
+  - /v3/docs/about-updating
+  - /v3/docs/en/about-updating
+  - /v2/docs/about-updating
+  - /v2/docs/en/about-updating
+  - /v1/docs/about-updating
+  - /v1/docs/en/about-updating
 ---
 
 If you use Spryker Legacy Demoshop, you can enhance it with specific components of SCOS. Previously Legacy Demoshop was an example and a boilerplate while starting a project. As you already forked project codebase and started development, migration to another demo shop (Master Suite, B2B/B2C Demo Shops) is NOT required.

@@ -70,7 +70,7 @@ On the **Create Content Item: Banner** page, you can:
 Clicking **Back to Content Items** in the top right corner of the page can trigger different actions:
 
 * Selecting this option **prior to saving** the changes will discard all the changes and then take you to the **List of Content Items** page.
-</br>
+<br>
 * Selecting this option **after** the changes have been saved will redirect you to the **List of Content Items** page.
 
 ***
@@ -100,7 +100,7 @@ On the **Create Content Item: Abstract Product List** page, you can:
 Clicking **Back to Content Items** in the top right corner of the page can trigger different actions:
 
 * Selecting this option **prior to saving** the changes will discard all the changes and then take you to the **List of Content Items** page.
-</br>
+<br>
 * Selecting this option **after** the changes have been saved will redirect you to the **List of Content Items** page.
 ***
 
@@ -124,7 +124,7 @@ On the **Create Content Item: Product Set** page, you can:
 Clicking **Back to Content Items** in the top right corner of the page can trigger different actions:
 
 * Selecting this option **prior to saving** the changes will discard all the changes and then take you to the **List of Content Items** page.
-</br>
+<br>
 * Selecting this option **after** the changes have been saved will redirect you to the **List of Content Items** page.
 
 ***
@@ -154,7 +154,7 @@ On the **Create Content Item: File List** page, you can:
 Clicking **Back to Content Items** in the top right corner of the page can trigger different actions:
 
 * Selecting this option **prior to saving** the changes will discard all the changes and then take you to the **List of Content Items** page.
-</br>
+<br>
 * Selecting this option **after** the changes have been saved will redirect you to the **List of Content Items** page.
 
 ***

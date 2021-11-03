@@ -92,7 +92,7 @@ The following table describes the attributes on the pages:
 | **Actions (top table)**| A column that contains **Delete** you can click to remove the product set from the list. |
 | **Available Product Sets** |  A bottom table that displays product sets available in the database.|
 |**ID**  | A sequence number. |
-|  **Name** </br>(in the top table) |A name of the product set. |
+|  **Name** <br>(in the top table) |A name of the product set. |
 | **# of Products** | Displays the number of products available in the product set. |
 |**Status**  | Shows the status of the product set: active or inactive. |
 |**Actions (bottom table)**  |A column that contains **+ Add** you can click to add a product set to the top table so that it can be added to the Product Set content item. |

@@ -147,11 +147,12 @@ Ensure that you have activated the plugins:
 
 | Request | Test |
 | --- | --- |
-| `GET https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}?include=bundle-items`</br> `GET https://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}?include=bundle-items` | The `bundle-items` resource is returned as a relationship. |
-| `GET https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}?include=bundle-items,bundled-items` </br> `GET https://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}?include=bundle-items,bundled-items`| The `bundle-items` resource has a relationship of the `bundled-items` resource.|
-| `GET https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}?include=bundle-items,bundled-items,concrete-products`</br> `GET https://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}?include=bundle-items,bundled-items,concrete-products` |Concrete products are returned as relationships for bundle items and bundled items.|
+| `GET https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}?include=bundle-items`<br> `GET https://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}?include=bundle-items` | The `bundle-items` resource is returned as a relationship. |
+| `GET https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}?include=bundle-items,bundled-items` <br> `GET https://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}?include=bundle-items,bundled-items`| The `bundle-items` resource has a relationship of the `bundled-items` resource.|
+| `GET https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}?include=bundle-items,bundled-items,concrete-products`<br> `GET https://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}?include=bundle-items,bundled-items,concrete-products` |Concrete products are returned as relationships for bundle items and bundled items.|
 
 {% endinfo_block %}
+
 **src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php**
 ```php
 <?php
@@ -174,6 +175,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
     }
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 Ensure that you have activated the plugins:

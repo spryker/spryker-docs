@@ -60,7 +60,7 @@ File: `Pyz/Zed/ProductCountry/Persistence/Propel/Schema/pyz_product_country.sche
 &lt;/database&gt;
 ```
 
-</br>
+<br>
 </details>
 
 Next, call the console propel:install console command in order to migrate the database and create the query objects.
@@ -96,7 +96,7 @@ class ProductCountryQueryContainer extends AbstractQueryContainer implements Pro
 }
 ```
 
-</br>
+<br>
 </details>
 
 In the `ProductCountryBusinessFactory` class you need to create a new instance of the `ProductCountryManager`. The dependency to the product module facade is missing in the class. Create a new method `getProductFacade` that returns the facade from the `ProductCountryDependencyProvider`.
@@ -138,7 +138,7 @@ class ProductCountryBusinessFactory extends SprykerBusinessFactory
 }
 ```
 
-</br>
+<br>
 </details>
 
 Now, implement the logic to save a new product, within the `ProductCountryManager`.
@@ -197,7 +197,7 @@ class ProductCountryManager implements ProductCountryManagerInterface
 }
 ```
 
-</br>
+<br>
 </details>
 
 ## Collector module (Zed)
@@ -260,7 +260,7 @@ class ProductCollector extends AbstractStoragePdoCollector
 }
 ```
 
-</br>
+<br>
 </details>
 
 ## Product module (Yves)

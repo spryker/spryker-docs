@@ -55,7 +55,7 @@ class QuickOrderPageDependencyProvider extends SprykerQuickOrderPageDependencyPr
 </details>
 
 {% info_block warningBox "Verification" %}
-Make the following checks at  https://mysprykershop.com/quick-order:</br> `QuickOrderFormMeasurementUnitColumnPlugin` adds the *Measuring Unit* column to the **Quick Add To Cart** page. Check if the column is displayed on the page.
+Make the following checks at  https://mysprykershop.com/quick-order:<br> `QuickOrderFormMeasurementUnitColumnPlugin` adds the *Measuring Unit* column to the **Quick Add To Cart** page. Check if the column is displayed on the page.
 {% endinfo_block %}
 
 |Plugin|Specification|Prerequisites|Namespace|

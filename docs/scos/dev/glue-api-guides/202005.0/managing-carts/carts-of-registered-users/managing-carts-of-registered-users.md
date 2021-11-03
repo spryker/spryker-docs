@@ -106,7 +106,7 @@ Sample request: `POST http://glue.mysprykershop.com/carts`
 
 | Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
-| name | String | v | Sets the cart name.</br>This field can be set only if you are using the multiple carts feature. If you are operating in a single-cart environment, an attempt to set the value will result in an error with the **422 Unprocessable Entry** status code. |
+| name | String | v | Sets the cart name.<br>This field can be set only if you are using the multiple carts feature. If you are operating in a single-cart environment, an attempt to set the value will result in an error with the **422 Unprocessable Entry** status code. |
 | priceMode | Enum | v | Sets the price mode to be used for the cart. Possible values:<ul><li>GROSS_MODE - prices after tax;</li><li>NET_MODE - prices before tax.</li></ul>For details, see [Net &amp; Gross Prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html). |
 | currency | String | v | Sets the cart currency. |
 | store | String | v | Sets the name of the store where to create the cart. |
@@ -147,8 +147,8 @@ Response sample:
 **General Cart Information**
 | Attribute* | Type | Description |
 | --- | --- | --- |
-| name | String | Specifies a cart name.</br>The field is available in multi-cart environments only. |
-| isDefault | Boolean | Specifies whether the cart is the default one for the customer.</br>The field is available in multi-cart environments only.  |
+| name | String | Specifies a cart name.<br>The field is available in multi-cart environments only. |
+| isDefault | Boolean | Specifies whether the cart is the default one for the customer.<br>The field is available in multi-cart environments only.  |
 | priceMode | String | Price mode that was active when the cart was created. |
 | currency | String | Currency that was selected whenthe cart was created. |
 | store | String | Store for which the cart was created. |
@@ -163,9 +163,9 @@ Response sample:
 **Totals**
 | Attribute* | Type | Description |
 | --- | --- | --- |
-| expenseTotal | String | Total amount of expenses (including e.g. shipping costs). |
+| expenseTotal | Integer | Total amount of expenses (including e.g. shipping costs). |
 | discountTotal | Integer | Total amount of discounts applied to the cart.  |
-| taxTotal | String | Total amount of taxes to be paid. |
+| taxTotal | Integer | Total amount of taxes to be paid. |
 | subTotal | Integer | Subtotal of the cart.  |
 | grandTotal | Integer | Grand total of the cart.  |
 
@@ -794,8 +794,8 @@ To retrieve detailed information on promotional products in the cart, use `promo
 **General Cart Information**
 | Attribute* | Type | Description |
 | --- | --- | --- |
-| name | String | Specifies a cart name.</br>The field is available in multi-cart environments only. |
-| isDefault | Boolean | Specifies whether the cart is the default one for the customer.</br>The field is available in multi-cart environments only.  |
+| name | String | Specifies a cart name.<br>The field is available in multi-cart environments only. |
+| isDefault | Boolean | Specifies whether the cart is the default one for the customer.<br>The field is available in multi-cart environments only.  |
 | priceMode | String | Price mode that was active when the cart was created. |
 | currency | String | Currency that was selected whenthe cart was created. |
 | store | String | Store for which the cart was created. |
@@ -812,9 +812,9 @@ To retrieve detailed information on promotional products in the cart, use `promo
 **Totals**
 | Attribute* | Type | Description |
 | --- | --- | --- |
-| expenseTotal | String | Total amount of expenses (including e.g. shipping costs). |
+| expenseTotal | Integer | Total amount of expenses (including e.g. shipping costs). |
 | discountTotal | Integer | Total amount of discounts applied to the cart.  |
-| taxTotal | String | Total amount of taxes to be paid. |
+| taxTotal | Integer | Total amount of taxes to be paid. |
 | subTotal | Integer | Subtotal of the cart.  |
 | grandTotal | Integer | Grand total of the cart.  |
 

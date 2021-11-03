@@ -49,7 +49,7 @@ class NavigationsRestApiConfig extends SprykerNavigationsRestApiConfig
 }
 ```
 
-</br>
+<br>
 </details>
 
 3.  Perform database schema migration.

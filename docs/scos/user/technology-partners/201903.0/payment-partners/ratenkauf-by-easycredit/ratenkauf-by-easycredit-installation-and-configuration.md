@@ -541,7 +541,7 @@ class SummaryStep extends SprykerSummaryStep
     }
 }
 ```
-</br>
+<br>
 </details>
 
 4. To run the step process for the new Easycredit step, you should extend the default `CheckoutController` with a new action for handling the Easycredit step.
@@ -1038,6 +1038,6 @@ You might want to configure the product detail page to add some validation and s
     {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 ...
 ```
-</br>
+<br>
 </details>
 

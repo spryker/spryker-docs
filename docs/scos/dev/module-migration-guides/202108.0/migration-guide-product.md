@@ -372,7 +372,7 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
 }
 ```
 
-</br>
+<br>
 </details>
 
 ### 5. Troubleshooting

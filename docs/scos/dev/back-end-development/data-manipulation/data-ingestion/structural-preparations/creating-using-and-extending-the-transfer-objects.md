@@ -51,7 +51,7 @@ You can use any name for your transfer objects. However, make sure that the name
 As for the types, you can use PHP native types: `int`, `string`, `bool`, and `array`. To create a nested transfer object, use the name of the transfer object as the type. You can also define collections of objects with the [] symbols.
 
 ```xml
-<transfer name="MyTransfer">
+<transfer name="MyTransfer" strict="true">
     <property name="foo"    type="int" />
     <property name="bar"    type="string" />
     <property name="baz"    type="bool" />
@@ -63,7 +63,7 @@ As for the types, you can use PHP native types: `int`, `string`, `bool`, and `ar
 
 The transfer object associative property attribute allows working with associative arrays and collections. An *associative array* is an array with a string index where instead of linear storage, each value can be assigned a specific key.
 
-The associative attribute can be used with all PHP native data types or collections.
+The associative attribute can be used with all PHP native data types or collections. As of [202108.0 release](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202108.0/release-notes-202108.0.html), we recommend creating strict transfer objects.
 
 Schema generation example:
 
@@ -195,7 +195,7 @@ Therefore, you can find the XML definition, for example, for the `CustomerGroup`
 If you have third-party modules using our transfer objects, you can easily add additional source directories in your projects. To do so, extend `Spryker\Zed\Transfer\TransferConfig` and return all additional *glob* patterns from `getAdditionalSourceDirectoryGlobPatterns()`.
 
 {% info_block warningBox "Glob patterns" %}
-The Transfer module uses PHP's `glob()` function to resolve paths.</br>For more information, see [PHP documentation](https://php.net/manual/en/function.glob.php).
+The Transfer module uses PHP's `glob()` function to resolve paths.<br>For more information, see [PHP documentation](https://php.net/manual/en/function.glob.php).
 {% endinfo_block %}
 
 Let’s say you have a custom extension package called `my-vendor/my-package` that uses transfer objects. Using Composer, by default, this package will be installed under `vendor/my-vendor/my-package`.

@@ -47,7 +47,7 @@ $config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = 'http://
 $config[GlueApplicationConstants::GLUE_APPLICATION_REST_DEBUG] = false;
 ```
     
-</br>
+<br>
 </details>
 
 #### Add Global CORS policy
@@ -65,7 +65,7 @@ Adjust `config/Shared/config_default.php`:
 $config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = 'http://glue.mysprykershop.com';
 ```
     
-</br>
+<br>
 </details>
 
 #### Allow CORS requests to any domain
@@ -78,7 +78,7 @@ Adjust `config/Shared/config_default.php`:
 $config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = '*';
 ```
     
-</br>
+<br>
 </details>
 
 {% info_block warningBox “Verification” %}
@@ -162,7 +162,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</br>
+<br>
 </details>
 
 Create a new entry point for Glue Application:
@@ -193,7 +193,7 @@ $bootstrap
 	->run();
 ```
 
-</br>
+<br>
 </details>
 
 #### Configure web server
@@ -225,7 +225,7 @@ server {
 }
 ```
 
-</br>
+<br>
 </details>
 
 Update hosts configuration by adding the following line (replace IP with your server's IP address):
@@ -237,7 +237,7 @@ Update hosts configuration by adding the following line (replace IP with your se
 ip glue.mysprykershop.com
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox “Verification” %}
@@ -259,7 +259,7 @@ If everything is set up correctly, you should be able to access http://glue.mysp
 }
 ```
 
-</br>
+<br>
 </details>
 
 <details open>
@@ -318,7 +318,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block infoBox "Hint" %}
@@ -351,7 +351,7 @@ class EntityTagsRestApiConfig extends SprykerEntityTagsRestApiConfig
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox “Verification” %}
@@ -361,7 +361,7 @@ If everything is set up correctly, a request to http://glue.mysprykershop.com wi
 
 {% info_block warningBox “Verification” %}
 
-Send a GET request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}`. Make sure that the response contains the 'ETag' header.</br>Prepare a PATCH request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identitifer{% raw %}}}{% endraw %}`.</br>Add the 'If-Match' header with the value of ETag from the GET response header.</br>Add the request body.
+Send a GET request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}`. Make sure that the response contains the 'ETag' header.<br>Prepare a PATCH request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identitifer{% raw %}}}{% endraw %}`.<br>Add the 'If-Match' header with the value of ETag from the GET response header.<br>Add the request body.
 {% endinfo_block %}
 
 ```json
@@ -377,12 +377,12 @@ Send a GET request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESO
 
 {% info_block warningBox “Verification” %}
 
-Send a request with the specified header and body.</br>Make sure that the returned resource contains updated 'ETag'.
+Send a request with the specified header and body.<br>Make sure that the returned resource contains updated 'ETag'.
 {% endinfo_block %}
 
 {% info_block warningBox “Verification” %}
 
-Send a GET request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}`.</br>Make sure that the response contains the 'ETag' header.</br>Prepare a PATCH request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}`.</br>Add the 'If-Match' header with some random value.</br>Add a request body.
+Send a GET request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}`.<br>Make sure that the response contains the 'ETag' header.<br>Prepare a PATCH request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}`.<br>Add the 'If-Match' header with some random value.<br>Add a request body.
 {% endinfo_block %}
 
 ```json
@@ -402,6 +402,6 @@ Make sure that the response contains the ETag validation error.
 		
 {% info_block warningBox “Verification” %}
 
-Make sure that the following endpoint is available:</br>http://mysprykershop.com/stores
+Make sure that the following endpoint is available:<br>http://mysprykershop.com/stores
 {% endinfo_block %}
 

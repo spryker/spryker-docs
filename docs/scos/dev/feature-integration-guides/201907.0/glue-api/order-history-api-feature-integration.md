@@ -115,7 +115,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox “Verification” %}
@@ -306,7 +306,7 @@ To verify that `OrdersResourceRoutePlugin` is set up correctly, make sure that t
 }
 ```
 
-</br>
+<br>
 </details>
 
 <!-- Last review date: Jul 18, 2019 by Oleh Hladchenko, Volodymyr Volkov-->

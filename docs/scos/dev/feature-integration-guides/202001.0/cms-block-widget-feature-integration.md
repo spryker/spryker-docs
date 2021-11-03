@@ -100,5 +100,5 @@ class CmsContentWidgetDependencyProvider extends SprykerCmsContentWidgetDependen
 ```
 
 {% info_block warningBox "Verification" %}
-1. Create two new CMS blocks:</br><ul><li>BlockA - Add some text to it.</li><li>BlockB - Add a <var>cms_block(['BlockA']
-{% endinfo_block %}</var> reference to it.</li></ul></br>2. Add BlockB to a CMS Page.</br>3. Verify that the new `cms_block` option is rendered correctly in Yves when viewing the new CMS Page.)
+1. Create two new CMS blocks:<br><ul><li>BlockA - Add some text to it.</li><li>BlockB - Add a <var>cms_block(['BlockA']
+{% endinfo_block %}</var> reference to it.</li></ul><br>2. Add BlockB to a CMS Page.<br>3. Verify that the new `cms_block` option is rendered correctly in Yves when viewing the new CMS Page.)

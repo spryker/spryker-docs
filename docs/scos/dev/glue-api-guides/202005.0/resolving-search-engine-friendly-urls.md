@@ -147,7 +147,7 @@ Resolving of complete URLs, e.g. *http://mysprykershop.com/en/canon-powershot-n-
 {% endinfo_block %}
 
 {% info_block warningBox "Note" %}
-You can use the **Accept-Language** header to specify the locale.</br>Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}`]</br>where **de**, **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+You can use the **Accept-Language** header to specify the locale.<br>Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}`]<br>where **de**, **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
 {% endinfo_block %}
 
 ### Response

@@ -92,7 +92,7 @@ class CheckoutDependencyInjector implements DependencyInjectorInterface
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block errorBox %}

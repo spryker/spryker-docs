@@ -64,7 +64,7 @@ protected function getProcessorMessagePlugins(Container $container)
 }
 ```
 
-</br>
+<br>
 </details>
 
 ## 3. Activate cron jobs
@@ -92,7 +92,7 @@ $jobs[] = [
 'stores' => $allStores,
 ];
 ```
-</br>
+<br>
 </details>
 
 Then restart Jenkins:
@@ -133,7 +133,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 ...
 ```
 
-</br>
+<br>
 </details>
 
 ## 6. Adjust Console
@@ -163,7 +163,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 		}
 ```
 
-</br>
+<br>
 </details>
 
 ## 7. Adjust DataImporter
@@ -178,7 +178,7 @@ use Spryker\Zed\DataImport\Communication\Plugin\DataImportEventBehaviorPlugin;
 use Spryker\Zed\DataImport\Communication\Plugin\DataImportPublisherPlugin;
 ```
 
-</br>
+<br>
 </details>
 
 Overwrite the core methods:
@@ -209,7 +209,7 @@ protected function getDataImportAfterImportHookPlugins(): array
 }
 ```
 
-</br>
+<br>
 </details>
 
 You can find all the changes in the following branch:

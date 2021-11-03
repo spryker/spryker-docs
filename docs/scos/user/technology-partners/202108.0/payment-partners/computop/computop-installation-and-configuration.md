@@ -11,11 +11,11 @@ redirect_from:
   - /docs/en/computop-installation-and-configuration
 ---
 
-To integrate Computop into your project, first you need to install and configure the Computop module. This topic describes how to do that.
+This topic describes how to integrate Computop into a Spryker project by installing and configuring the Computop module.
 
 ## Installation
 
-To install the Computop module, run the command:
+Install the Computop module:
 
 ```bash
 composer require spryker-eco/computop
@@ -34,9 +34,9 @@ Find an example of the Computop module configuration below:
 // Spryker security configuration
 $config[KernelConstants::DOMAIN_WHITELIST] = [
 	...
-    'www.computop-paygate.com', // trusted Computop domain, required for redirects to third party services.
+    'www.computop-paygate.com', // A trusted Computop domain, required for redirects to third-party services.
 ];
-$config[SessionConstants::YVES_SESSION_COOKIE_SAMESITE] = 'none'; //Allows redirect customer via POST from Computop back to the shop.
+$config[SessionConstants::YVES_SESSION_COOKIE_SAMESITE] = 'none'; // Allows to redirect customers from Computop back to the shop via a `POST` request.
 
 // Credantials
 $config[ComputopApiConstants::MERCHANT_ID] = 'Computop merchant identifier';
@@ -130,44 +130,43 @@ $config[ComputopShipmentConstants::PAYPAL_EXPRESS_DEFAULT_SHIPMENT_METHOD_KEY] =
 
 </details>
 
-
-| CONFIGURATION KEY | TYPE | DESCRIPTION |
+| Configuration Key | Type | Description |
 | --- | --- | --- |
 | `$config[ComputopApiConstants::MERCHANT_ID]` | string | Computop merchant identifier. |
-| `$config[ComputopApiConstants::BLOWFISH_PASSWORD]` | string | Password for blowfish hashing. |
-| `$config[ComputopApiConstants::HMAC_PASSWORD]` | string | Password for hmac hashing. |
-| `$config[ComputopConstants::PAYDIREKT_SHOP_KEY]` | string | Shop key for Paydirect payment method. |
-| `$config[ComputopConstants::IDEAL_ISSUER_ID]`  | string  | Issuer ID for Ideal payment method.  |
-| `$config[ComputopConstants::PAY_NOW_INIT_ACTION]`  | string  | Init API call endpoint for PayNow payment method.  |
-| `$config[ComputopConstants::CREDIT_CARD_INIT_ACTION]`  |string | Init API call endpoint for Credit Card payment method.  |
-| `$config[ComputopConstants::PAYPAL_INIT_ACTION]`  | string  | Init API call endpoint for PayPal payment method.  |
-| `$config[ComputopConstants::DIRECT_DEBIT_INIT_ACTION]`  | string  | Init API call endpoint for Direct Debit payment method.  |
-| `$config[ComputopConstants::SOFORT_INIT_ACTION]`  | string  | Init API call endpoint for Sofort payment method.  |
-| `$config[ComputopConstants::PAYDIREKT_INIT_ACTION]`  |string   | Init API call endpoint for Paydirect payment method.  |
-| `$config[ComputopConstants::IDEAL_INIT_ACTION]`  | string  | Init API call endpoint for Ideal payment method.  |
-| `$config[ComputopConstants::EASY_CREDIT_INIT_ACTION]`  | string  | Init API call endpoint for Easy Credit payment method.  |
-| `$config[ComputopConstants::PAYU_CEE_SINGLE_INIT_ACTION]` | string | Init API call endpoint for PayU CEE Single payment method. |
-| `$config[ComputopApiConstants::PAYPAL_EXPRESS_PREPARE_ACTION]` | string | Prepare API call endpoint for PayPal Express payment method. |
-| `$config[ComputopApiConstants::PAYPAL_EXPRESS_COMPLETE_ACTION]` | string | Complete API call endpoint for PayPal Express payment method. |
-| `$config[ComputopApiConstants::EASY_CREDIT_STATUS_ACTION]`  | string  | Status API call endpoint for Easy Credit payment method.  |
-| `$config[ComputopApiConstants::EASY_CREDIT_AUTHORIZE_ACTION]` | string  | Authorize API call endpoint for Easy Credit payment method.  |
-| `$config[ComputopApiConstants::AUTHORIZE_ACTION]`  | string  | Authorize API call endpoint.  |
-| `$config[ComputopApiConstants::CAPTURE_ACTION]`  | string  | Capture API call endpoint.  |
-| `$config[ComputopApiConstants::REVERSE_ACTION]`  | string  | Reserve API call endpoint.  |
-| `$config[ComputopApiConstants::INQUIRE_ACTION]`  | string  | Inquire API call endpoint.  |
-| `$config[ComputopApiConstants::REFUND_ACTION]`  | string  | Refund API call endpoint.  |
-| `$config[ComputopApiConstants::RESPONSE_MAC_REQUIRED]`  | array  | MAC is required for methods (to check MAC on response).  |
-| `$config[ComputopConstants::CREDIT_CARD_TEMPLATE_ENABLED]`  | bool  | Is custom template enabled for Credit Card payment method.  |
-| `$config[ComputopConstants::CREDIT_CARD_TX_TYPE]`  | string  | TX TYPE for Credit Card payment method (empty string).  |
-| `$config[ComputopConstants::PAY_NOW_TX_TYPE]`  | string  | TX TYPE for PayNow payment method (empty string).  |
-| `$config[ComputopConstants::PAY_PAL_TX_TYPE]`  | string  |  TX TYPE for PayPal payment method (Auth). |
-| `$config[ComputopConstants::PAY_PAL_EXPRESS_PAYPAL_METHOD]` | string | Using method for PayPal Express payment method. |
-| `$config[ComputopConstants::PAYMENT_METHODS_WITHOUT_ORDER_CALL]`  | array  | Array of payment methods without order call.  |
-| `$config[ComputopApiConstants::PAYMENT_METHODS_CAPTURE_TYPES]`  | array  | Array with mapping payment methods and their capture types (MANUAL or AUTO).  |
-| `$config[ComputopConstants::CRIF_ENABLED]`  | bool  | Is CRIF risk check enabled.  |
+| `$config[ComputopApiConstants::BLOWFISH_PASSWORD]` | string | Password for Blowfish hashing. |
+| `$config[ComputopApiConstants::HMAC_PASSWORD]` | string | Password for HMAC hashing. |
+| `$config[ComputopConstants::PAYDIREKT_SHOP_KEY]` | string | Shop key for the Paydirect payment method. |
+| `$config[ComputopConstants::IDEAL_ISSUER_ID]`  | string  | Issuer ID for the Ideal payment method.  |
+| `$config[ComputopConstants::PAY_NOW_INIT_ACTION]`  | string  | `init` API call endpoint for the PayNow payment method.  |
+| `$config[ComputopConstants::CREDIT_CARD_INIT_ACTION]`  |string | `init` API call endpoint for the Credit Card payment method.  |
+| `$config[ComputopConstants::PAYPAL_INIT_ACTION]`  | string  | `init` API call endpoint for the PayPal payment method.  |
+| `$config[ComputopConstants::DIRECT_DEBIT_INIT_ACTION]`  | string  | `init` API call endpoint for the Direct Debit payment method.  |
+| `$config[ComputopConstants::SOFORT_INIT_ACTION]`  | string  | `init` API call endpoint for the Sofort payment method.  |
+| `$config[ComputopConstants::PAYDIREKT_INIT_ACTION]`  |string   | `init` API call endpoint for the Paydirect payment method.  |
+| `$config[ComputopConstants::IDEAL_INIT_ACTION]`  | string  | `init` API call endpoint for the Ideal payment method.  |
+| `$config[ComputopConstants::EASY_CREDIT_INIT_ACTION]`  | string  | `init` API call endpoint for the Easy Credit payment method.  |
+| `$config[ComputopConstants::PAYU_CEE_SINGLE_INIT_ACTION]` | string | `init` API call endpoint for the PayU CEE Single payment method. |
+| `$config[ComputopApiConstants::PAYPAL_EXPRESS_PREPARE_ACTION]` | string | `prepare` API call endpoint for the PayPal Express payment method. |
+| `$config[ComputopApiConstants::PAYPAL_EXPRESS_COMPLETE_ACTION]` | string | `complete` API call endpoint for the PayPal Express payment method. |
+| `$config[ComputopApiConstants::EASY_CREDIT_STATUS_ACTION]`  | string  | `status` API call endpoint for the Easy Credit payment method.  |
+| `$config[ComputopApiConstants::EASY_CREDIT_AUTHORIZE_ACTION]` | string  | `authorize` API call endpoint for the Easy Credit payment method.  |
+| `$config[ComputopApiConstants::AUTHORIZE_ACTION]`  | string  | `authorize` API call endpoint.  |
+| `$config[ComputopApiConstants::CAPTURE_ACTION]`  | string  | `capture` API call endpoint.  |
+| `$config[ComputopApiConstants::REVERSE_ACTION]`  | string  | `reserve` API call endpoint.  |
+| `$config[ComputopApiConstants::INQUIRE_ACTION]`  | string  | `inquire` API call endpoint.  |
+| `$config[ComputopApiConstants::REFUND_ACTION]`  | string  | `refund` API call endpoint.  |
+| `$config[ComputopApiConstants::RESPONSE_MAC_REQUIRED]`  | array  | MAC is checked by methods on response.  |
+| `$config[ComputopConstants::CREDIT_CARD_TEMPLATE_ENABLED]`  | bool  | Defines if a custom template is enabled for the Credit Card payment method.  |
+| `$config[ComputopConstants::CREDIT_CARD_TX_TYPE]`  | string  | TX TYPE for the Credit Card payment method (empty string).  |
+| `$config[ComputopConstants::PAY_NOW_TX_TYPE]`  | string  | TX TYPE for the PayNow payment method (empty string).  |
+| `$config[ComputopConstants::PAY_PAL_TX_TYPE]`  | string  |  TX TYPE for the PayPal payment method (Auth). |
+| `$config[ComputopConstants::PAY_PAL_EXPRESS_PAYPAL_METHOD]` | string | Using method for the PayPal Express payment method. |
+| `$config[ComputopConstants::PAYMENT_METHODS_WITHOUT_ORDER_CALL]`  | array  | Payment methods without the order call.  |
+| `$config[ComputopApiConstants::PAYMENT_METHODS_CAPTURE_TYPES]`  | array  | Mapping payment methods and their capture types: `MANUAL` or `AUTO`.  |
+| `$config[ComputopConstants::CRIF_ENABLED]`  | bool  | Defines if CRIF risk check is enabled.  |
 | `$config[ComputopApiConstants::CRIF_ACTION]`  | string  | CRIF API call endpoint.  |
 | `$config[ComputopApiConstants::CRIF_PRODUCT_NAME]`  | string  | `QuickCheckConsumer` or <br> `CreditCheckConsumer` or <br> `QuickCheckBusiness`  or  <br>`CreditCheckBusiness`  or <br>`IdentCheckConsume`.  |
-| `$config[ComputopApiConstants::CRIF_LEGAL_FORM]`  | string  | PERSON or COMPANY or UNKNOWN.  |
-| `$config[ComputopConstants::CRIF_GREEN_AVAILABLE_PAYMENT_METHODS]`  | array  | List of payment methods available with green response code.  |
-| `$config[ComputopConstants::CRIF_YELLOW_AVAILABLE_PAYMENT_METHODS] ` | array  | List of payment methods available with yellow response code.  |
-| `$config[ComputopConstants::CRIF_RED_AVAILABLE_PAYMENT_METHODS]`  | array  | List of payment methods available with red response code.  |
+| `$config[ComputopApiConstants::CRIF_LEGAL_FORM]`  | string  | `PERSON`, `COMPANY`, or `UNKNOWN`.  |
+| `$config[ComputopConstants::CRIF_GREEN_AVAILABLE_PAYMENT_METHODS]`  | array  | Payment methods available with a green response code.  |
+| `$config[ComputopConstants::CRIF_YELLOW_AVAILABLE_PAYMENT_METHODS] ` | array  | Payment methods available with a yellow response code.  |
+| `$config[ComputopConstants::CRIF_RED_AVAILABLE_PAYMENT_METHODS]`  | array  | Payment methods available with a red response code.  |

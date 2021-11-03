@@ -154,7 +154,7 @@ Both methods will result in a document listing the tasks, resources, and timelin
 
 {% info_block infoBox "Examples:" %}
 
-Data Export functionality is ideal to be tackled with the spike tickets approach as it is a single functionality with no other external dependencies that needs to be considered.</br></br>On the other hand, something like an ERP Connection that spans many processes and many edge cases, needs in-depth analysis.</br></br>So you would have a plan of attack workshops with the shop and ERP team and also with logistics and payment experts and combine the conclusions into a single plan.
+Data Export functionality is ideal to be tackled with the spike tickets approach as it is a single functionality with no other external dependencies that needs to be considered.<br><br>On the other hand, something like an ERP Connection that spans many processes and many edge cases, needs in-depth analysis.<br><br>So you would have a plan of attack workshops with the shop and ERP team and also with logistics and payment experts and combine the conclusions into a single plan.
 
 {% endinfo_block %}
 

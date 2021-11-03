@@ -55,7 +55,7 @@ After installation, open the file `src/Pyz/Zed/DocumentationGeneratorRestApi/Doc
 
 |  Variable|Description  |Default Value  |
 | --- | --- | --- |
-| `GENERATED_FILE_OUTPUT_DIRECTORY` | Sets the directory where the API specification file will be generated. | `APPLICATION_SOURCE_DIR/Generated/Glue/Specification/`</br>By default, the `APPLICATION_SOURCE_DIR` variable is substituted with `src/Pyz`. In other words, the resulting directory will be `src/Pyz/Generated/Glue/Specification/`. |
+| `GENERATED_FILE_OUTPUT_DIRECTORY` | Sets the directory where the API specification file will be generated. | `APPLICATION_SOURCE_DIR/Generated/Glue/Specification/`<br>By default, the `APPLICATION_SOURCE_DIR` variable is substituted with `src/Pyz`. In other words, the resulting directory will be `src/Pyz/Generated/Glue/Specification/`. |
 |`GENERATED_FILE_PREFIX`  | Sets the generated file name. | `spryker_rest_api.schema.yml` |
 | `REST_API_DOCUMENTATION_INFO_VERSION` | Sets the API version. For details, see [versions](https://github.com/OAI/OpenAPI-Specification/tree/master/versions). | `1.0.0` |
 | `REST_API_DOCUMENTATION_INFO_TITLE` | Sets the name of your API. | `Spryker API` |

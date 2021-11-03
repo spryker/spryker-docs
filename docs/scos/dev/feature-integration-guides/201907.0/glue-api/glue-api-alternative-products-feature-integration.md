@@ -74,7 +74,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</br>
+<br>
 </details>
 
 <section contenteditable="false" class="warningBox"><div class="content">

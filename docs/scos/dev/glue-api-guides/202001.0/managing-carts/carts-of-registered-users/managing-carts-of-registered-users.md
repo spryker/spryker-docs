@@ -137,7 +137,7 @@ Carts created via Glue API are always set as the default carts for the user.
 
 | Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
-| name | String | v | Sets the cart name.</br>This field can be set only if you are using the multiple carts feature. If you are operating in a single-cart environment, an attempt to set the value will result in an error with the **422 Unprocessable Entry** status code. |
+| name | String | v | Sets the cart name.<br>This field can be set only if you are using the multiple carts feature. If you are operating in a single-cart environment, an attempt to set the value will result in an error with the **422 Unprocessable Entry** status code. |
 | priceMode | Enum | v | Sets the price mode to be used for the cart. Possible values:<ul><li>GROSS_MODE - prices after tax;</li><li>NET_MODE - prices before tax.</li></ul>For details, see [Net &amp; Gross Prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html). |
 | currency | String | v | Sets the cart currency. |
 | store | String | v | Sets the name of the store where to create the cart. |
@@ -178,8 +178,8 @@ General Cart Information
 
 | Field* | Type | Description |
 | --- | --- | --- |
-| name | String | Specifies a cart name.</br>The field is available in multi-cart environments only. |
-| isDefault | Boolean | Specifies whether the cart is the default one for the customer.</br>The field is available in multi-cart environments only.  |
+| name | String | Specifies a cart name.<br>The field is available in multi-cart environments only. |
+| isDefault | Boolean | Specifies whether the cart is the default one for the customer.<br>The field is available in multi-cart environments only.  |
 | priceMode | String | Price mode that was active when the cart was created. |
 | currency | String | Currency that was selected whenthe cart was created. |
 | store | String | Store for which the cart was created. |
@@ -194,9 +194,9 @@ Discount Information
 Totals
 | Field* | Type | Description |
 | --- | --- | --- |
-| expenseTotal | String | Total amount of expenses (including e.g. shipping costs). |
+| expenseTotal | Integer | Total amount of expenses (including e.g. shipping costs). |
 | discountTotal | Integer | Total amount of discounts applied to the cart.  |
-| taxTotal | String | Total amount of taxes to be paid. |
+| taxTotal | Integer | Total amount of taxes to be paid. |
 | subTotal | Integer | Subtotal of the cart.  |
 | grandTotal | Integer | Grand total of the cart.  |
 
@@ -237,7 +237,7 @@ Totals
 
 | Status | Reason |
 | --- | --- |
-| 422 | Failed to create a cart.</br>In a single cart environment, this error can occur when attempting to create a cart for a customer who already has a cart.|
+| 422 | Failed to create a cart.<br>In a single cart environment, this error can occur when attempting to create a cart for a customer who already has a cart.|
 | 401 | The access token is invalid. |
 | 403 | The access token is missing. |
 
@@ -272,8 +272,8 @@ No matter which of the 2 endpoints you use, the response will consist of a singl
 General Cart Information
 | Field* | Type | Description |
 | --- | --- | --- |
-| name | String | Specifies a cart name.</br>The field is available in multi-cart environments only. |
-| isDefault | Boolean | Specifies whether the cart is the default one for the customer.</br>The field is available in multi-cart environments only.  |
+| name | String | Specifies a cart name.<br>The field is available in multi-cart environments only. |
+| isDefault | Boolean | Specifies whether the cart is the default one for the customer.<br>The field is available in multi-cart environments only.  |
 | priceMode | String | Price mode that was active when the cart was created. |
 | currency | String | Currency that was selected whenthe cart was created. |
 | store | String | Store for which the cart was created. |
@@ -288,9 +288,9 @@ Discount Information
 Totals
 | Field* | Type | Description |
 | --- | --- | --- |
-| expenseTotal | String | Total amount of expenses (including e.g. shipping costs). |
+| expenseTotal | Integer | Total amount of expenses (including e.g. shipping costs). |
 | discountTotal | Integer | Total amount of discounts applied to the cart.  |
-| taxTotal | String | Total amount of taxes to be paid. |
+| taxTotal | Integer | Total amount of taxes to be paid. |
 | subTotal | Integer | Subtotal of the cart.  |
 | grandTotal | Integer | Grand total of the cart.  |
 

@@ -45,9 +45,9 @@ The following table describes the attributes you enter and select when creating 
 The following table describes the attributes you enter and select when adding a new customer address.
 |Attribute|Description|
 |---|---|
-|**Salutation**</br>**First Name**</br>**Last Name**|Customer's salutation. If the other person is the point of contact for this new address, you need to populate the fields with the respective data. If the customer is the same, populate the fields with the same values.|
-|**Address line 1**</br>**Address line 2**</br>**Address line 3**|The fields where you enter the address information except for the city, zip code, and country.|
-|**City**</br>**Zip Code**</br>**Country**|City, zip code, and country of the customer.|
+|**Salutation**<br>**First Name**<br>**Last Name**|Customer's salutation. If the other person is the point of contact for this new address, you need to populate the fields with the respective data. If the customer is the same, populate the fields with the same values.|
+|**Address line 1**<br>**Address line 2**<br>**Address line 3**|The fields where you enter the address information except for the city, zip code, and country.|
+|**City**<br>**Zip Code**<br>**Country**|City, zip code, and country of the customer.|
 |**Phone**|Customer's phone number.|
 |**Company**|Customer's company.|
 |**Comment**|Any specific comment regarding the customer or customer address (e.g. _"This address is going to be used only if the order costs less than 900 euros."_).|

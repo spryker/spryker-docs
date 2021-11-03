@@ -14,6 +14,12 @@ redirect_from:
   - /v6/docs/en/howto-set-up-multiple-stores
 ---
 
+{% info_block warningBox "Warning" %}
+
+Please note that not all options to set up multiple stores that are currently possible with the Docker SDK will be applicable for our PaaS customers. Some options to set up multiple stores, like creating different regions, is not currently supported for our PaaS customers. Alternatives exist though and we are rolling out documentation that will explain more about this popular topic soon. In the meanwhile: Please do not hesitate to reach out to us and we will help you decide which approach is most suitable for you.
+
+{% endinfo_block %}
+
 With the Spryker Commerce OS, you can create multiple stores for different scenarios that suit your business needs. The multi-store setup is very versatile and can be customized to your needs. For example, you can:
 
 * Build one store that services multiple countries and languages or set up a different store for each region.

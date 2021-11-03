@@ -1,5 +1,5 @@
 ---
-title: Integrating CSS lazy loading for front end
+title: Integrating CSS lazy loading for the front end
 description: This guide provides step-by-step instruction on how to use the frontend CSS lazy load feature.
 last_updated: Jun 16, 2021
 template: howto-guide-template

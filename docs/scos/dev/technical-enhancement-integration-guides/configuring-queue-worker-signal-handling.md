@@ -1,5 +1,5 @@
 ---
-title: Configuring a queue worker signal handling
+title: Configuring queue worker signal handling
 description: Configure a graceful shutdown of queue worker.
 last_updated: Jun 16, 2021
 template: howto-guide-template

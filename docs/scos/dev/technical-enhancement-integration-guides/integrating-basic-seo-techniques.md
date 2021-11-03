@@ -1,5 +1,5 @@
 ---
-title: Integrating Basic SEO techniques
+title: Integrating basic SEO techniques
 description: Learn how you can apply the basic SEO techniques such as improved headings structure and use of microddata
 last_updated: Jun 16, 2021
 template: howto-guide-template

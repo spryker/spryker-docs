@@ -128,7 +128,7 @@ PHP 7.1 is no longer supported. Update PHP version to 7.2 or higher.
 
 ## Health Checks
 
-Heartbeat functionality was replaced with the [Health Сhecks](/docs/scos/dev/technical-enhancements/integrating-health-checks.html) functionality.
+Heartbeat functionality was replaced with the [Health Сhecks](/docs/scos/dev/technical-enhancement-integration-guides/integrating-health-checks.html) functionality.
 
 Enable heath checks by defining `\Spryker\Shared\HealthCheck\HealthCheckConstants::HEALTH_CHECK_ENABLED = true` in configuration.
 

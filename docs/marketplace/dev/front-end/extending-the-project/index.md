@@ -1,6 +1,6 @@
 ---
 title: Extending the project
-description: This articles provides details how to create new module with application
+description: This document provides details on how to extend the new project.
 template: howto-guide-template
 ---
 
@@ -12,15 +12,15 @@ This article can help you understand how you can extend the front-end project.
 
 Prior to starting the project extension, verify that the marketplace modules are up-to-date as follows:
 
-| Name                                      | Version |
-| ----------------------------------------- | ------- |
-| ZedUi                                   | >= 0.4.1  |
-| DashboardMerchantPortalGui (optional)   | >= 0.4.1  |
-| MerchantProfileMerchantPortalGui (optional)| >= 0.7.1  |
-| ProductMerchantPortalGui (optional)     | >= 0.6.1  |
-| ProductOfferMerchantPortalGui (optional)| >= 0.10.2 |
-| SalesMerchantPortalGui (optional)       | >= 0.8.1  |
-| SecurityMerchantPortalGui (optional)    | >= 0.4.2  |
+| Name                                        | Version   |
+| ------------------------------------------- | --------- |
+| ZedUi                                       | >= 0.4.1  |
+| DashboardMerchantPortalGui (optional)       | >= 0.4.1  |
+| MerchantProfileMerchantPortalGui (optional) | >= 0.7.1  |
+| ProductMerchantPortalGui (optional)         | >= 0.6.1  |
+| ProductOfferMerchantPortalGui (optional)    | >= 0.10.2 |
+| SalesMerchantPortalGui (optional)           | >= 0.8.1  |
+| SecurityMerchantPortalGui (optional)        | >= 0.4.2  |
 
 If not, follow the steps from the [Migration guide - Extending the project](/docs/marketplace/dev/front-end/extending-the-project/migration-guide-extending-the-project.html).
 
@@ -33,20 +33,20 @@ To extend/customize or override the default configuration, you must add a module
 ```ts
 @NgModule({
     imports: [
-      BrowserModule, 
-      BrowserAnimationsModule, 
-      HttpClientModule, 
-      DefaultMerchantPortalConfigModule,
-      
-      /// Extend module on the project level
-      TableModule.withActions({
-          action_name: SpecificActionService,
-      })
-      
-      /// Customize module on the project level
-      TableModule.withActions({
-          already_used_action_name: ToOverrideActionService,
-      })
+        BrowserModule,
+        BrowserAnimationsModule,
+        HttpClientModule,
+        DefaultMerchantPortalConfigModule,
+
+        // Extend module on the project level
+        TableModule.withActions({
+            action_name: SpecificActionService,
+        })
+
+        // Customize module on the project level
+        TableModule.withActions({
+            already_used_action_name: ToOverrideActionService,
+        })
     ],
     providers: [appBootstrapProvider()],
 })
@@ -59,7 +59,7 @@ For webpack to compile project-based modules rather than vendor-based, `entry.ts
 
 Default `entry.ts` should use the same code as vendor-level `entry.ts`.
 
-Add angular components in the app folder Angular Components.<!--add a link to Angular Components file https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1420919366/Angular+Components-->
+Add angular components in the app folder [Angular Components](/docs/marketplace/dev/front-end/angular-components.html).
 
 Add newly-created component `Module` and `Component` classes to the `components.module.ts`.
 
@@ -79,19 +79,18 @@ import { DashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
     imports: [
-      WebComponentsModule.withComponents([
-        DashboardComponent,
-        DashboardCardComponent,
-        ChipsComponent,
-      ]),
-      ChipsModule, 
-      DashboardModule, 
-      DashboardCardModule
+        WebComponentsModule.withComponents([
+            DashboardComponent,
+            DashboardCardComponent,
+            ChipsComponent,
+        ]),
+        ChipsModule,
+        DashboardModule,
+        DashboardCardModule,
     ],
     providers: [],
 })
 export class ComponentsModule {}
-
 ```
 
 **DashboardMerchantPortalGui** **- project level (any core component is overridden)**
@@ -101,7 +100,10 @@ import { NgModule } from '@angular/core';
 import { ChipsComponent, ChipsModule } from '@spryker/chips';
 import { WebComponentsModule } from '@spryker/web-components';
 // Import from vendor
-import { DashboardComponent, DashboardModule } from '@mp/dashboard-merchant-portal-gui';
+import {
+    DashboardComponent,
+    DashboardModule,
+} from '@mp/dashboard-merchant-portal-gui';
 
 import { OverridedDashboardCardComponent } from './overrided-dashboard-card/overrided-dashboard-card.component';
 import { OverridedDashboardCardModule } from './overrided-dashboard-card/overrided-dashboard-card.module';
@@ -111,57 +113,52 @@ import { NewModule } from './new-module/new-module.module';
 
 @NgModule({
     imports: [
-      WebComponentsModule.withComponents([
-        DashboardComponent,
-        ChipsComponent,
-        
+        WebComponentsModule.withComponents([
+            DashboardComponent,
+            ChipsComponent,
+
+            // Project
+            OverridedDashboardCardComponent,
+            NewComponent,
+        ]),
+
+        ChipsModule,
+        DashboardModule,
+
         // Project
-        OverridedDashboardCardComponent,
-        NewComponent,
-      ]),
-      
-      ChipsModule, 
-      DashboardModule, 
-      
-      // Project
-      OverridedDashboardCardModule,
-      NewModule,
+        OverridedDashboardCardModule,
+        NewModule,
     ],
     providers: [],
 })
 export class ComponentsModule {}
- 
 ```
 
 **DashboardMerchantPortalGui** **- project level** **(a new component to the core module is added)**
 
 ```ts
 import { NgModule } from '@angular/core';
-import { ChipsComponent, ChipsModule } from '@spryker/chips';
 import { WebComponentsModule } from '@spryker/web-components';
 // Import from vendor
-import { CoreComponentsModule } from '@mp/dashboard-merchant-portal-gui';
+import { ComponentsModule as CoreComponentsModule } from '@mp/dashboard-merchant-portal-gui';
 
 import { NewComponent } from './new-component/new-component.component';
 import { NewModule } from './new-module/new-module.module';
 
 @NgModule({
     imports: [
-      CoreComponentsModule,
-      WebComponentsModule.withComponents([
-        NewComponent,
-      ]),
+        CoreComponentsModule,
+        WebComponentsModule.withComponents([NewComponent]),
 
-      NewModule,
+        NewModule,
     ],
-    providers: [],
 })
 export class ComponentsModule {}
 ```
 
 ## Overriding twig files
 
-To use a `twig` file in your project, you must create a file with the same name and scaffolding as on the vendor level. For example,  `ZedUi/Presentation/Layout/merchant-layout-main.twig`.
+To use a `twig` file in your project, you must create a file with the same name and scaffolding as on the vendor level. For example, `ZedUi/Presentation/Layout/merchant-layout-main.twig`.
 
 All content used on the project level overrides the vendor.
 
@@ -175,7 +172,7 @@ It is also possible to extend the vendor twig blocks. You need to extend the ven
     {{ 'Title' | trans }}
 {% endblock %}
 
-any other content
+// Any other content
 {% endraw %}
 ```
 

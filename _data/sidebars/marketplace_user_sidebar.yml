@@ -61,6 +61,9 @@ entries:
           url: /docs/marketplace/user/features/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
           nested:
 
+          - title: Marketplace order overview
+            url: /docs/marketplace/user/features/marketplace-order-management-feature-overview/marketplace-order-overview.html
+
           - title: Merchant order overview
             url: /docs/marketplace/user/features/marketplace-order-management-feature-overview/merchant-order-overview.html
 

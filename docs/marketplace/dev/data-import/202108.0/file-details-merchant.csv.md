@@ -24,7 +24,7 @@ The file should have the following parameters:
 | registration_number | &check; | Integer |   |   | Number assigned to the merchant at the point of registration. |
 | status | &check; | String |   | Possible values: <ul><li>waiting-for-approval</li> <li>approved</li><li>denied</li></ul>  | The status of the merchant. |
 | email | &check; | String |   |   | Email address of the merchant. |
-| is_active | &check; | Integer |   | 1—is active</br> 0—is not active | Defines whether the merchant is active or not.  |
+| is_active | &check; | Integer |   | 1—is active<br> 0—is not active | Defines whether the merchant is active or not.  |
 | url.de_DE | &check; | String |   | Defined per locale. | Merchant page URL in the storefront for DE store. |
 
 ## Import file dependencies

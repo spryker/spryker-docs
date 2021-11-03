@@ -15,6 +15,9 @@ entries:
           - title: Merchant Portal architecture overview
             url: /docs/marketplace/dev/architecture-overview/marketplace-merchant-portal-architecture-overview.html
 
+          - title: Marketplace in the Back Office
+            url: /docs/marketplace/dev/architecture-overview/marketplace-in-back-office.html
+
       - title: Setup
         nested:
           - title: System requirements
@@ -69,11 +72,13 @@ entries:
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-feature-walkthrough.html
 
           - title: Marketplace Order Management feature walkthrough
-            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough.html
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html
+            nested:
+              - title: Merchant Oms
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough/merchant-oms.html
 
           - title: Marketplace Inventory Management feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-inventory-management-feature-walkthrough.html
-
 
           - title: Marketplace Product Offer Prices feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-prices-feature-walkthrough.html
@@ -240,6 +245,9 @@ entries:
 
           - title: Merchant Portal - Marketplace Product feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-feature-integration.html
+
+          - title: Merchant Portal - Marketplace Product Option Management feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-option-management-feature-integration.html
 
           - title: Merchant Portal - Marketplace Merchant Portal Product Offer Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-portal-product-offer-management-feature-integration.html
@@ -550,7 +558,6 @@ entries:
                 url: /docs/marketplace/dev/front-end/table-design/table-configuration.html
 
           - title: "UI components library"
-            url: /docs/marketplace/dev/front-end/ui-components-library/
             nested:
 
               - title: "Actions"
@@ -684,6 +691,9 @@ entries:
       - title: HowTos
         nested:
 
+          - title: "How-To: Upgrade Spryker instance to the Marketplace"
+            url: /docs/marketplace/dev/howtos/how-to-upgrade-spryker-instance-to-marketplace.html
+
           - title: "How-To: Create a new module with application"
             url: /docs/marketplace/dev/howtos/how-to-create-a-new-module-with-application.html
 
@@ -707,3 +717,6 @@ entries:
 
           - title: "How-To: Create a new Gui table filter type"
             url: /docs/marketplace/dev/howtos/how-to-add-new-guitable-filter-type.html
+
+          - title: "How-To: Creating of a new MerchantOms flow "
+            url: /docs/marketplace/dev/howtos/how-to-create-a-new-merchant-oms-flow.html

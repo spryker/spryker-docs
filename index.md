@@ -1,8 +1,8 @@
 ---
-title: "Spryker Marketplace Documentation"
+title: "Spryker documentation"
 product-type: none
 search: exclude
 layout: home
 permalink: index.html
-description: This is a draft version of the Spryker Marketplace documentation.
+description: Welcome to the Spryker documentation.
 ---

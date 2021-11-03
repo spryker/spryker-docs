@@ -52,7 +52,7 @@ The state of the reclamation chages from **Open** to **Closed** in the _State_ c
 <br>While viewing a reclamation, you can:
 * Navigate to the *View Order* page of the order that is claimed.
 * Navigate to the *View Product Abstract* page of the product that is in the claimed order.
-</br>
+<br>
 
 * To navigate to the *View Order* page, click the hyperlinked order reference number.
 * To open the *View Product* page, click the hyperlinked abstract product name.

@@ -57,7 +57,7 @@ interface PaymentMethodsConstants
 }
 ```
 
-</br>
+<br>
 </details>
 
 2. Enrich the `Payment` transfer file with a new property that corresponds to the new payment method. Add `Shared/PaymentMethods/Transfer/invoicepayment.transfer.xml` file with the following content:
@@ -79,7 +79,7 @@ interface PaymentMethodsConstants
     </transfers>
 ```
 
-</br>
+<br>
 </details>
 
 3. Run the `vendor/bin/console transfer:generate` command to have the `PaymentTransfer` class updated.

@@ -58,7 +58,7 @@ ALTER TABLE "spy_category" ADD "fk_category_template" INTEGER;
 ALTER TABLE "spy_category" ADD FOREIGN KEY("fk_category_template") REFERENCES spy_category_template(id_category_template);
 ```
 
-</br>
+<br>
 </details>
     
 4. Run `console propel:diff; console propel:migrate; console propel:model:build` to build propel models.
@@ -181,7 +181,7 @@ class CategoryTemplateMigration extends Console
 }
 ```
 
-</br>
+<br>
 </details>
 
 6. Copy the script to `src/Pyz/Zed/Category/Communication/Console/CategoryTemplateMigration.php`.
@@ -206,7 +206,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-</br>
+<br>
 </details>
 
 8. Run the command to add templates to your categories: `vendor/bin/console category-template:migrate`

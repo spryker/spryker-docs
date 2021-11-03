@@ -118,7 +118,7 @@ Make sure that the following changes have occurred:
 | RestVersionTransfer |  class | created | src/Generated/Shared/Transfer/RestVersionTransfer.php |
 | RestUserTransfer |  class | created | src/Generated/Shared/Transfer/RestUserTransfer.php |
 | StoresRestAttributesTransfer |  class | created | src/Generated/Shared/Transfer/StoresRestAttributesTransfer.php |
-StoreCountryRestAttributesTransfer| class | created  | src/Generated/Shared/Transfer/StoreCountryRestAttributesTransfer.php |
+| StoreCountryRestAttributesTransfer| class | created  | src/Generated/Shared/Transfer/StoreCountryRestAttributesTransfer.php |
 | StoreRegionRestAttributesTransfer |  class | created | src/Generated/Shared/Transfer/StoreRegionRestAttributesTransfer.php |
 | StoreLocaleRestAttributesTransfer |  class | created | src/Generated/Shared/Transfer/StoreLocaleRestAttributesTransfer.php |
 | StoreCurrencyRestAttributesTransfer |  class | created | src/Generated/Shared/Transfer/StoreCurrencyRestAttributesTransfer.php |
@@ -341,6 +341,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
+</details>
 
 **\Pyz\Glue\UrlsRestApi\UrlsRestApiDependencyProvider.php**
 

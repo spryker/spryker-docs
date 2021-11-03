@@ -43,6 +43,6 @@ You can see the [full version of this page](https://www.de.b2b.demo-spryker.com/
 | # | Path to SCSS |
 | --- | --- |
 | 14 | project/src/Pyz/Yves/ProductDetailPage/Theme/default/components/molecules/product-detail/product-detail.scss |
-| 15 | project/src/Pyz/Yves/ProductReviewWidget/Theme/default/components/organisms/review-summary/review-summary.scss </br> project/src/Pyz/Yves/ProductReviewWidget/Theme/default/components/molecules/rating-selector/rating-selector.scss </br> project/src/Pyz/Yves/ProductReviewWidget/Theme/default/components/molecules/review-average-display/review-average-display.scss </br> project/src/Pyz/Yves/ProductReviewWidget/Theme/default/components/molecules/review-distribution-display/review-distribution-display.scss |
+| 15 | project/src/Pyz/Yves/ProductReviewWidget/Theme/default/components/organisms/review-summary/review-summary.scss <br> project/src/Pyz/Yves/ProductReviewWidget/Theme/default/components/molecules/rating-selector/rating-selector.scss <br> project/src/Pyz/Yves/ProductReviewWidget/Theme/default/components/molecules/review-average-display/review-average-display.scss <br> project/src/Pyz/Yves/ProductReviewWidget/Theme/default/components/molecules/review-distribution-display/review-distribution-display.scss |
 | 16 | project/src/Pyz/Yves/ProductReviewWidget/Theme/default/components/molecules/review/review.scss |
 | 17 | project/src/Pyz/Yves/ShopUi/Theme/default/components/molecules/pagination/pagination.scss |

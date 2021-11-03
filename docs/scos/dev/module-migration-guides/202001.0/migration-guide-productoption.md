@@ -313,7 +313,7 @@ class MigrateProductOptionValuePricesConsole extends Console
 }
 ```
 
-</br>
+<br>
 </details>
 
 12. The product option collector has to be amended to support multi-currency prices on product option values. The Storage has to save all product option value prices within a given store using the new Storage data structure:

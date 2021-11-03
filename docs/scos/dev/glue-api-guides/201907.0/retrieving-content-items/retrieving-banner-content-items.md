@@ -59,7 +59,7 @@ If the request is successful and the Banner content item with the specified cont
 }
 ```
     
-</br>
+<br>
 </details>
 
 

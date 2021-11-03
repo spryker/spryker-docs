@@ -17,21 +17,21 @@ The set of tabs for Create and Edit pages, as well as for abstract and concrete 
 **General tab**
 | Attribute |Description | Create Abstract Product | Update Abstract Product |
 | --- | --- | --- | --- |
-|**Store relation**  | Defines the store for which the product can be available.</br>You can select multiple values. | **Yes** | **Yes** |
+|**Store relation**  | Defines the store for which the product can be available.<br>You can select multiple values. | **Yes** | **Yes** |
 | **SKU Prefix** | A number that you assign to the product will help to track unique information related to that product. | **Yes** | **Display Only** |
 | **Name** | The name of your product that will be displayed in the online store for your customers. | **Yes** |**Yes**  |
 | **Description** | The description of the product that your customer sees in the online store. | **Yes** | **Yes** |
-| **New from**</br>**New to**  | Defines the period of time for which a dynamic label **New** will be assigned to the product. Either no dates can be selected, or both. | **Yes** | **Yes** |
+| **New from**<br>**New to**  | Defines the period of time for which a dynamic label **New** will be assigned to the product. Either no dates can be selected, or both. | **Yes** | **Yes** |
 
 
 **Price & Stock tab**
 | Attribute |Description | Create Abstract Product | Update Abstract Product |
 | --- | --- | --- | --- |
-|**Merchant Price Dimension**|**B2B Only**</br>The drop-down list that allows selecting a merchant relation and set up a specific price for a specific merchant.</br>If the Default value is selected, the prices will be the same for everyone.</br>The values available for selection derive from **Merchants > Merchant Relations**.</br>Only one value can be selected.|**Yes**|**Yes**|
-| **Gross price**</br>**Net price** | The price value for gross and net mode.</br>The price you populate will be inherited by all product variants you add during abstract product creation.| **Yes** | **Yes** |
-|**Default**</br>**Original**|Default prices are prices your customers will pay, whereas original prices are the "previous price" in case you want to display promotions. If you specify only a default price, it will be displayed just like a normal product price. However, if both prices are specified, the original one will appear crossed out in the shop.|**Yes**|**Yes**|
-|**Add Product Volume Price**</br>**Edit Product Volume Price**|Once selected, the **Add volume price** (**Edit volume price**) page opens. This option allows you to define specific prices for a specific quantity of products that a customer selects. It works only in case of Default prices.</br>**Add Product Volume Price** appears only when the price for a currency was set up and saved.</br>**Edit Product Volume Price** appears only what the volume price was already set up for a currency.|**No**|**Yes**|
-|**Tax Set**|The conditions under which a product is going to be taxed.</br>The values available for selection derive from **Taxes > Tax Sets**</br>Only one value can be selected.|**Yes**|**Yes**|
+|**Merchant Price Dimension**|**B2B Only**<br>The drop-down list that allows selecting a merchant relation and set up a specific price for a specific merchant.<br>If the Default value is selected, the prices will be the same for everyone.<br>The values available for selection derive from **Merchants > Merchant Relations**.<br>Only one value can be selected.|**Yes**|**Yes**|
+| **Gross price**<br>**Net price** | The price value for gross and net mode.<br>The price you populate will be inherited by all product variants you add during abstract product creation.| **Yes** | **Yes** |
+|**Default**<br>**Original**|Default prices are prices your customers will pay, whereas original prices are the "previous price" in case you want to display promotions. If you specify only a default price, it will be displayed just like a normal product price. However, if both prices are specified, the original one will appear crossed out in the shop.|**Yes**|**Yes**|
+|**Add Product Volume Price**<br>**Edit Product Volume Price**|Once selected, the **Add volume price** (**Edit volume price**) page opens. This option allows you to define specific prices for a specific quantity of products that a customer selects. It works only in case of Default prices.<br>**Add Product Volume Price** appears only when the price for a currency was set up and saved.<br>**Edit Product Volume Price** appears only what the volume price was already set up for a currency.|**No**|**Yes**|
+|**Tax Set**|The conditions under which a product is going to be taxed.<br>The values available for selection derive from **Taxes > Tax Sets**<br>Only one value can be selected.|**Yes**|**Yes**|
 
 
 **Variants tab**

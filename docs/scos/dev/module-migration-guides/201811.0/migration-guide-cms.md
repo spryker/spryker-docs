@@ -83,7 +83,7 @@ The event behavior needs to be applied to all `SpyCmsPageStore columns`.
     </table>
     </database>
 ```
-</br>
+<br>
 </details>
 
 4. Perform database schema migration.
@@ -201,7 +201,7 @@ class CmsStoreToPageDataMigration extends Console
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox %}
@@ -451,7 +451,7 @@ class CmsToCmsBlockDataMigration extends Console
 }
 ```
 
-</br>
+<br>
 </details>
 
 Copy script to `src/Pyz/Zed/CmsBlock/Communication/Console/CmsToCmsBlockDataMigration.php` and register it in `Pyz\Zed\Console\ConsoleDependencyProvider`.
@@ -544,7 +544,7 @@ To push new CMS version data to the frontend storage and search, add it to the `
     ?>
 ```
 
-</br>
+<br>
 </details>
 
 ### CMS User Interaction
@@ -584,7 +584,7 @@ class CmsDependencyProvider extends SprykerCmsDependencyProvider
 ?>
 ```
 
-</br>
+<br>
 </details>
 
 ### CMS Data Importer
@@ -627,7 +627,7 @@ To publish pages after importing, add this to your CMS Importer class:
     ?>
 ```
 
-</br>
+<br>
 </details>
 
 ### Publishing Current Pages
@@ -646,7 +646,7 @@ To publish current pages, create a console command that calls the following meth
     ?>
 ```
 
-</br>
+<br>
 </details>
 
 ## Upgrading from Version 2.* to Version 3.*

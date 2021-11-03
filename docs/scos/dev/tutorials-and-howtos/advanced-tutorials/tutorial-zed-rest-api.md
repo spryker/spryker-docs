@@ -262,7 +262,7 @@ class ApiEntry
 }
 ```
 
-</br>
+<br>
 </details>
 
 The resulting structure of the array is following:
@@ -310,7 +310,7 @@ Now modify template to output the array:
     &lt;/table&gt;
 &lt;/html&gt;
 ```
-</br>
+<br>
 </details>
 
 Open `http://ZED_HOST/api/v1/doc?bundle=customerGroup` to see the results.

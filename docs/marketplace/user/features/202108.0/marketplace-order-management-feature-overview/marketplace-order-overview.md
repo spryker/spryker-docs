@@ -73,6 +73,6 @@ In some cases, due to rounding, the amounts of Marketplace order totals can diff
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Marketplace Order Management feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-order-management-feature-walkthrough.html) for developers.
+Are you a developer? See [Marketplace Order Management feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

@@ -139,7 +139,7 @@ Add the following fields into the *Quote Fields Allowed for Saving* list:
 
 To do so, modify the following file:
 
-**src/Pyz/Zed/Quote/QuoteConfig.php**</summary>**
+**src/Pyz/Zed/Quote/QuoteConfig.php**
 
 ```php
 <?php
@@ -271,7 +271,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 ```
 </details>
 
-**src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php**
+<details open>
+<summary markdown='span'>src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
 
 ```php
 
@@ -297,7 +298,8 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 ```
 </details>
 
-**src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php**
+<details open>
+<summary markdown='span'>src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
 
 ```php
 
@@ -327,7 +329,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 {% info_block warningBox "Verification" %}
 
 Make sure that the following endpoint is available:
-- `http://glue.mysprykershop.com/product-labels/{% raw %}{{{% endraw %}idProductLabel{% raw %}}}{% endraw %}`</li></ul>
+- `http://glue.mysprykershop.com/product-labels/{% raw %}{{ idProductLabel }}{% endraw %}`
 
 **Example response:**
 
@@ -424,7 +426,6 @@ To check `ProductLabelsRelationshipByResourceIdPlugin` plugin installation, send
     ]
 }
 ```
-</details>
 
 
 {% endinfo_block %}
@@ -474,7 +475,6 @@ To check `ProductLabelByProductConcreteSkuResourceRelationshipPlugin` plugin ins
     ]
 }
 ```
-</details>
 
 
 {% endinfo_block %}
@@ -724,7 +724,6 @@ Add items to the cart to satisfy the conditions of the discount rule:
     }
 }
 ```
-</details>
 
 Make sure that the following relations are available:
 

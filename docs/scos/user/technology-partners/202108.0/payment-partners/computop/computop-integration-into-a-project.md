@@ -210,7 +210,7 @@ computopPayuCeeSingle,DE
 
 To configure router, add `ComputopRouterProviderPlugin` to `RouterDependencyProvider`:
 
-**src/Pyz/Yves/Router/RouterDependencyProvider.php</summary>**
+**src/Pyz/Yves/Router/RouterDependencyProvider.php**
 
 ```php
 <?php

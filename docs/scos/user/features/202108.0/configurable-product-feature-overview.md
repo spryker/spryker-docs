@@ -30,7 +30,11 @@ For example, if you are selling a workstation installation service, before purch
 
 ### Configuring a configurable product
 
-To configure a product, from the *Product Details* page, a customer opens a product configurator. After selecting and saving the configuration, the customer is redirected back to the product details page. The selected configuration is displayed on the product details page, and the customer can add the configured product to the cart.
+To configure a product, from the *Product Details* page, the customer opens a product configurator by clicking the **Configure** button. After selecting and saving the configuration, the customer is redirected back to the product details page and can add the configured product to the wishlist or cart.
+
+The feature supports adding configurable products to a wishlist or cart even if their configuration is not complete. In such case, the **Configuration is not complete** notification is displayed on the product details page. The customer can complete their product configuration anytime.
+
+If the configuration is complete, the **Configuration complete!** notification is shown. By default, the notification is followed by the first 3 descriptive attributes set in the configurator. Below, the customer sees the **Show** and **Hide** buttons that allow viewing and hiding the remaining attributes respectively.
 
 ![configure-button-on-product-details-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configure-button-on-product-details-page.png)
 
@@ -42,8 +46,8 @@ After adding a configurable product to cart, a customer can configure the produc
 
 Configurable products are created in two steps:
 
-1.  A Back Office user creates regular products or a developer imports them. See [Creating an abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html) to learn how they create products in the Back Office or [File details: product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html) to learn about the file they import.
-2.  A developer converts regular products into configurable products by importing configuration parameters. See [File details: product_concrete_pre_configuration.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html) to learn about the file they import.
+1. A Back Office user creates regular products or a developer imports them. See [Creating an abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html) to learn how they create products in the Back Office or [File details: product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html) to learn about the file they import.
+2. A developer converts regular products into configurable products by importing configuration parameters. See [File details: product_concrete_pre_configuration.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html) to learn about the file they import.
 
 
 ### Managing configurable products
@@ -53,7 +57,6 @@ A Back Office user can add configurable products to pages, categories, and conte
 In the product catalog, they can see which products are configurable ones and edit them as regular products. However, they cannot change configuration parameters.
 
 ![configurable-product-entry-in-the-back-office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configurable-product-entry-in-the-back-office.png)
-
 
 In the orders, they can see which products are configurable ones. They can also see the configuration of each product, but they cannot change the selected parameters.
 

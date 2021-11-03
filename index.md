@@ -7,4 +7,5 @@ permalink: index.html
 description: Welcome to the Spryker documentation.
 redirect_from:
   - /home.htm
+  - /docs
 ---

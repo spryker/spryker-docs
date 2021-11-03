@@ -4,7 +4,7 @@ description: The Merchant Opening Hours allows you to define opening hours for a
 template: feature-walkthrough-template
 ---
 
-The *Merchant Opening Hours* feature allows merchants to have their opening hours saved in the system and be retrievable for customers. A merchant can have a weekday schedule, which is a daily schedule for every day of the week, as well as date-based exceptions where they set up different opening hours for specific dates, for example, during the holiday season.
+By using the 'Merchant Opening Hours' feature, merchants can save their opening hours in the system and make them accessible to customers. A merchant may have a weekday schedule, which is an opening schedule for every day of the week, as well as date-based exceptions, such as during the holiday season when opening hours may be different.
 
 {% info_block warningBox "User documentation" %}
 
@@ -20,22 +20,23 @@ The following diagram illustrates the dependencies between the modules for the *
 
 | MODULE     | DESCRIPTION                |
 |------------|----------------------------|
-| MerchantOpeningHours | Provides ability to configure a scheduling of opening hours for Merchant |
-| MerchantOpeningHoursDataImport | Data importer for MerchantOpeningHours |
-| MerchantOpeningHoursStorage | Manages storage for merchant opening hours entities |
-| WeekdaySchedule | Provides ability to configure a scheduling of weekdays and dates |
-| MerchantOpeningHoursWidget | Provides a widget to show merchant opening hours |
-| MerchantOpeningHoursRestApi | Provides REST API endpoints to manage merchant opening hours |
-| Merchant | Provides DB structure and facade methods to save/update/remove Merchants |
-| MerchantStorage | Manages storage for merchant entities |
+| MerchantOpeningHours | Provides merchants with the ability to schedule opening hours. |
+| MerchantOpeningHoursDataImport | Data importer for the `MerchantOpeningHours`. |
+| MerchantOpeningHoursStorage | Manages storage for merchant opening hours entities. |
+| WeekdaySchedule | Configures weekdays and dates based on your schedule. |
+| MerchantOpeningHoursWidget | Provides a widget to show merchant opening hours. |
+| MerchantOpeningHoursRestApi | Provides REST API endpoints to manage merchant opening hours. |
+| Merchant | Provides database structure and facade methods to save/update/remove merchants. |
+| MerchantStorage | Manages storage for merchant entities. |
 
 ## Domain model
+
+The following schema illustrates the Merchant Opening Hours domain model:
 
 ![Domain Model](https://confluence-connect.gliffy.net/embed/image/ad57523c-52cd-4733-bfb5-9c43666ae54c.png?utm_medium=live&utm_source=custom)
 
 
 ## Related Developer articles
-
 
 |INTEGRATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  |
 |---------|---------|---------|

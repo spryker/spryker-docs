@@ -29,7 +29,7 @@ class ApiConfig extends SprykerApiConfig
 }
 ```
 
-</br>
+<br>
 </details>
     
 2. Override `isApiEnabled`  method and return true:

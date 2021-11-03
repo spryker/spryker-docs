@@ -119,7 +119,7 @@ class YvesBootstrap
 }
 ```
 
-</br>
+<br>
 </details>
 
 ### 4. Inherit YvesBootstrap
@@ -134,7 +134,7 @@ use SprykerShop\Yves\ShopApplication\YvesBootstrap as SprykerYvesBootstrap;
 class YvesBootstrap extends SprykerYvesBootstrap
 ```
 
-</br>
+<br>
 </details>
 
 ### 5. Adopt routers in YvesBootstrap

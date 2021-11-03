@@ -286,7 +286,7 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
 }
 ```
 
-</br>Now Payone is ready for filtering Payment methods. Configuration for each score result should be defined in the config:
+<br>Now Payone is ready for filtering Payment methods. Configuration for each score result should be defined in the config:
 
 **Example of configuration for score results**
 

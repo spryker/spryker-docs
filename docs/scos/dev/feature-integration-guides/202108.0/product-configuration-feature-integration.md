@@ -119,7 +119,7 @@ Set up database schema and transfer objects as follows:
 
 | AFFECTED ENTITY | TRIGGERED EVENTS |
 | --- | --- |
-| spy_product_configuration | Entity.spy_product_configuration.create  </br> Entity.spy_product_configuration.update  </br> Entity.spy_product_configuration.delete |
+| spy_product_configuration | Entity.spy_product_configuration.create  <br> Entity.spy_product_configuration.update  <br> Entity.spy_product_configuration.delete |
 
 
 **src/Pyz/Zed/ProductConfigurationStorage/Persistence/Propel/Schema/spy_product_configuration_storage.schema.xml**

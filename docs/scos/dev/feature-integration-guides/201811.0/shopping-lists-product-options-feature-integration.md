@@ -107,7 +107,7 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
 	}
 }	
 ```
-</br>
+<br>
 </details>
 
 #### Verification
@@ -131,7 +131,7 @@ Append glossary according to your configuration:
 customer.account.shopping_list.remove_all,Remove all,en_US
 customer.account.shopping_list.remove_all,Alles entfernen,de_D
 ```
-</br>
+<br>
 </details>
 
 Run the following console command to import data:
@@ -189,7 +189,7 @@ class ShoppingListPageDependencyProvider extends SprykerShoppingListPageDependen
 	}
 }	
 ```
-</br>
+<br>
 </details>
 
 #### Verification
@@ -227,7 +227,7 @@ class ShoppingListPageDependencyProvider extends SprykerShoppingListPageDependen
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 Run the following console command to import data:

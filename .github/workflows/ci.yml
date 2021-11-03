@@ -25,7 +25,8 @@ jobs:
 
       - run: bundle exec jekyll build --config=_config.yml,_config_production.yml -t
 
-      - run: tar -czf result.tar.gz _site
+      - name: Pack artifacts
+        run: tar -czf result.tar.gz _site
 
       - uses: actions/upload-artifact@v2
         with:
@@ -59,7 +60,8 @@ jobs:
 
       - uses: actions/download-artifact@v2
 
-      - run: tar -xf build-result/result.tar.gz
+      - name: Unpack artifacts
+        run: tar -xf build-result/result.tar.gz
 
       - run: bundle exec rake ${{ matrix.check }}
 

@@ -79,7 +79,7 @@ product-quantity.warning.quantity.max.failed,Die bestellte Anzahl erfüllt nicht
 product-quantity.warning.quantity.interval.failed,The ordered quantity was adjusted to the next possible quantity for the article because quantity step is %step%.,en_US
 product-quantity.warning.quantity.interval.failed,Die bestellte Anzahl erfüllt nicht die Anforderungen für dieses Produkt. Intervallgröße ist %step%.,de_DE
 ```
-</br>
+<br>
 </details>
 
 Run the following command to import glossary changes:
@@ -126,7 +126,7 @@ class QuickOrderDependencyProvider extends SprykerQuickOrderDependencyProvider
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -236,7 +236,7 @@ quick-order.search.no_results,Das produkt konnte nicht gefunden werden.,de_DE
 quick-order.input-quantity.message.error,Die bestellte Anzahl wurde auf die nächstmögliche Anzahl für diesen Artikel angepasst.,de_DE
 quick-order.input-quantity.message.error,The ordered quantity was adjusted to the next possible quantity for the article.,en_US
 ```
-</br>
+<br>
 </details>
 
 Run the following command to import glossary changes:
@@ -283,7 +283,7 @@ class YvesBootstrap extends SprykerYvesBootstrap
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 <section contenteditable="false" class="warningBox"><div class="content">
@@ -355,7 +355,7 @@ class QuickOrderPageDependencyProvider extends SprykerQuickOrderPageDependencyPr
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 <section contenteditable="false" class="warningBox"><div class="content">

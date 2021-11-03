@@ -389,11 +389,11 @@ To use this endpoint, customers need to authenticate first.  For details, see [A
 
 | Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
-| idCompanyUser | String | v | Specifies the name of the company user you want to share the cart with.</br>The user must belong to the same company as the cart owner. |
+| idCompanyUser | String | v | Specifies the name of the company user you want to share the cart with.<br>The user must belong to the same company as the cart owner. |
 | idCartPermissionGroup | Integer | v | Specifies the ID of the **Cart Permission Group** that provides the desired permissions. |
 
 {% info_block warningBox "Note" %}
-You can also use the **Accept-Language** header to specify the locale.</br>Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+You can also use the **Accept-Language** header to specify the locale.<br>Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
 {% endinfo_block %}
 
 **Sample Request Body:**
@@ -472,7 +472,7 @@ To use this endpoint, customers need to authenticate first.  For details, see [A
 | idCartPermissionGroup | Integer | v | Specifies the ID of the Cart Permission Group that provides the desired permissions. |
 
 {% info_block warningBox "Note" %}
-You can also use the **Accept-Language** header to specify the locale.</br>Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+You can also use the **Accept-Language** header to specify the locale.<br>Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
 {% endinfo_block %}
 
 **Sample Request Body:**

@@ -87,7 +87,7 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 }    
 ```
 
-</br>
+<br>
 </details>
 
 8. To allow `Discount` in the Back Office to handle multi-store concept (even if you are using single-store), `FormTypeInterface` has to be provided through `DiscountDependencyProvider::getStoreRelationFormTypePlugin()` to handle store relation. You can use the already implemented `StoreRelationToggleFormTypePlugin`.
@@ -328,7 +328,7 @@ class MigrateDiscountsConsole extends Console
 ?>
 ```
     
-</br>
+<br>
 </details>
 
 [//]: # (Last review date: Nov 23, 2018 by Helen Kravchenko, Oksana Karasyova)

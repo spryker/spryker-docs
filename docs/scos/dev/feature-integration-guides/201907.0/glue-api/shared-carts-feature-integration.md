@@ -173,7 +173,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</br>
+<br>
 </details>
 
 <details open>
@@ -212,7 +212,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 }
 ```
 
-</br>
+<br>
 </details>
 
 <details open>
@@ -239,7 +239,7 @@ class SharedCartsRestApiDependencyProvider extends SprykerSharedCartsRestApiDepe
 }
 ```
 
-</br>
+<br>
 </details>
 
 <details open>
@@ -267,7 +267,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox “Verification” %}
@@ -277,7 +277,7 @@ Make sure that the following endpoints return carts shared with the customer by 
 
 {% info_block warningBox “Verification” %}
 
-Make a request to *http://glue.mysprykershop.com/carts/?include=cart-permission-groups* and make sure that shared carts resources will get a relationship to the correct cart-permission-groups resource.</br>Make a request to *http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/?include=cart-permission-groups*. Make sure that a single cart item (no matter owned by customers or shared with them
+Make a request to *http://glue.mysprykershop.com/carts/?include=cart-permission-groups* and make sure that shared carts resources will get a relationship to the correct cart-permission-groups resource.<br>Make a request to *http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/?include=cart-permission-groups*. Make sure that a single cart item (no matter owned by customers or shared with them
 {% endinfo_block %} is returned.)
 
 {% info_block warningBox “Verification” %}
@@ -287,12 +287,12 @@ Make sure that the following endpoints return carts shared with the customer by 
 
 {% info_block warningBox “Verification” %}
 
-Make a request to *http://glue.mysprykershop.com/carts/?include=shared-carts,cart-permission-groups,company-users* and make sure that the carts shared with the other users will get the shared-cart resource as a relationship. Each shared carts resource, in turn, will get a relationship to the cart permission group associated with the relationship and company user with whom the cart is shared.</br>Make a request to *http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/?include=shared-carts,cart-permission-groups,company-users*. Make sure that a single cart is returned with those relationships too.
+Make a request to *http://glue.mysprykershop.com/carts/?include=shared-carts,cart-permission-groups,company-users* and make sure that the carts shared with the other users will get the shared-cart resource as a relationship. Each shared carts resource, in turn, will get a relationship to the cart permission group associated with the relationship and company user with whom the cart is shared.<br>Make a request to *http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/?include=shared-carts,cart-permission-groups,company-users*. Make sure that a single cart is returned with those relationships too.
 {% endinfo_block %}
 
 {% info_block warningBox “Verification” %}
 
-To make sure that `CartPermissionGroupsResourceRoutePlugin` is installed correctly, make a call to the *http://glue.mysprykershop.com/cart-permission-groups* resource it provides. </br>The request to *http://glue.mysprykershop.com/cart-permission-groups/:uuid* should return a single `cart-permission-groups` resource.
+To make sure that `CartPermissionGroupsResourceRoutePlugin` is installed correctly, make a call to the *http://glue.mysprykershop.com/cart-permission-groups* resource it provides. <br>The request to *http://glue.mysprykershop.com/cart-permission-groups/:uuid* should return a single `cart-permission-groups` resource.
 {% endinfo_block %}
 
 {% info_block warningBox “Verification” %}
@@ -315,7 +315,7 @@ To make sure that `SharedCartsResourceRoutePlugin` is installed correctly, make 
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox “Verification” %}
@@ -337,7 +337,7 @@ The same plugin, `SharedCartsResourceRoutePlugin`, allows accepting a PATCH requ
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox “Verification” %}

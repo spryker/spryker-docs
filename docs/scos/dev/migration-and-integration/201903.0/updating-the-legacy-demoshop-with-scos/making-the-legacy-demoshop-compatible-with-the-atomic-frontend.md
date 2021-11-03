@@ -57,7 +57,7 @@ require('@webcomponents/webcomponentsjs/webcomponents-bundle');
 }
 ```
     
-</br>
+<br>
 </details>
     
 <details open>
@@ -70,7 +70,7 @@ require('@webcomponents/webcomponentsjs/webcomponents-bundle');
 }
 ```
     
-</br>
+<br>
 </details>
     
 <details open>
@@ -90,7 +90,7 @@ require('@webcomponents/webcomponentsjs/webcomponents-bundle');
 }
 ```
     
-</br>
+<br>
 </details>
 
 <details open>
@@ -119,7 +119,7 @@ require('@webcomponents/webcomponentsjs/webcomponents-bundle');
 }
 ```
     
-</br>
+<br>
 </details>
 
 4. Update `src/Pyz/Yves/Application/Theme/default/layout/layout.twig`.
@@ -131,7 +131,7 @@ Add <script src="/assets/default/js/runtime.js"></script> to <head>:
 <link rel="stylesheet" href="/assets/default/css/app.css" />
 ```
 
-</br>
+<br>
 </details>
     
     

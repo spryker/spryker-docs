@@ -202,7 +202,7 @@ Database structure is as follows:
     * `storeCurrencyPrice` transfer object property contains 1 specific price, based on the preconfigured `store + price` mode and for the requested currency.
 
     `ShipmentMethod` transfer object now contains a shipmentMethodKey property, accordingly to the new database structure.
-    </br>
+    <br>
     </details>
 
 4. Replace the usages of `ShipmentMethod.defaultPrice` transfer object property in your custom codes, depending on your requirements.
@@ -433,7 +433,7 @@ class MigrateShipmentMethodPricesConsole extends Console
 
 }                         
 ```
-</br>
+<br>
 </details>
 
 6. Register the prepared multi-currency handling `MoneyCollectFormType` form type in your project. 

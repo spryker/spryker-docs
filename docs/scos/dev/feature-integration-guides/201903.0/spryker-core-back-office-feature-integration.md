@@ -270,7 +270,7 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
 </details>
 
 {% info_block warningBox "Verification" %}
-Make sure that plugins work: </br>1. Log into back office.</br>2. Go to the *User Control>User* section.</br>3. Click **Add New User**.</br>4. Check that the **Interface language*** field is available in the *Create new Use*r page.
+Make sure that plugins work: <br>1. Log into back office.<br>2. Go to the *User Control>User* section.<br>3. Click **Add New User**.<br>4. Check that the **Interface language*** field is available in the *Create new Use*r page.
 {% endinfo_block %}
 
 #### Set Up Console Commands

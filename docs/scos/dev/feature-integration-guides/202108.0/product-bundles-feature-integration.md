@@ -51,8 +51,8 @@ Set up database schema and transfer objects:
 
 | AFFECTED ENTITY | TRIGGERED EVENTS |
 | --- | --- |
-| spy_product_bundle | Entity.spy_product_bundle.create  </br> Entity.spy_product_bundle.update  </br> Entity.spy_product_bundle.delete |
-| spy_product_bundle_storage |Entity.spy_product_bundle_storage.create  </br> Entity.spy_product_bundle_storage.update </br> Entity.spy_product_bundle_storage.delete |
+| spy_product_bundle | Entity.spy_product_bundle.create  <br> Entity.spy_product_bundle.update  <br> Entity.spy_product_bundle.delete |
+| spy_product_bundle_storage |Entity.spy_product_bundle_storage.create  <br> Entity.spy_product_bundle_storage.update <br> Entity.spy_product_bundle_storage.delete |
 
 **src/Pyz/Zed/ProductBundle/Persistence/Propel/Schema/spy_product_bundle.schema.xml**
 
@@ -148,8 +148,8 @@ Ensure that the changes have been implemented successfully by triggering the fol
 
 | PATH | METHOD NAME | EVENT |
 | --- | --- | --- |
-| src/Orm/Zed/ProductBundle/Persistence/Base/SpyProductBundle.php | prepareSaveEventName() </br> addSaveEventToMemory()</br>  addDeleteEventToMemory() | Entity.spy_product_bundle.create  </br> Entity.spy_product_bundle.update</br>    Entity.spy_product_bundle.delete |
-| src/Orm/Zed/ProductBundleStorage/Persistence/Base/SpyProductBundleStorage.php |sendToQueue() |Entity.spy_product_bundle_storage.create </br>   Entity.spy_product_bundle_storage.update   </br> Entity.spy_product_bundle_storage.delete|
+| src/Orm/Zed/ProductBundle/Persistence/Base/SpyProductBundle.php | prepareSaveEventName() <br> addSaveEventToMemory()<br>  addDeleteEventToMemory() | Entity.spy_product_bundle.create  <br> Entity.spy_product_bundle.update<br>    Entity.spy_product_bundle.delete |
+| src/Orm/Zed/ProductBundleStorage/Persistence/Base/SpyProductBundleStorage.php |sendToQueue() |Entity.spy_product_bundle_storage.create <br>   Entity.spy_product_bundle_storage.update   <br> Entity.spy_product_bundle_storage.delete|
 
 {% endinfo_block %}
 

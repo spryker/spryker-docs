@@ -132,7 +132,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -316,7 +316,7 @@ To verify that `OrderRelationshipByOrderReferencePlugin` is set up correctly, ma
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% endinfo_block %}

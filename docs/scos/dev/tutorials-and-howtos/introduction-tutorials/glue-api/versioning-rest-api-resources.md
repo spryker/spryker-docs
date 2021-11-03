@@ -28,7 +28,7 @@ In the course of development of your REST APIs, you may need to change the data 
 
 {% info_block infoBox %}
 
-Resources provided by Spryker out of the box do not have a version. When developing resources, only new resources, attributes etc are added without removing anything, which ensures backward compatibility for all clients. </br>If necessary, you can implement versioning for built-in resources as well by [extending](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/extending-a-rest-api-resource.html) the corresponding resource module on your project level.
+Resources provided by Spryker out of the box do not have a version. When developing resources, only new resources, attributes etc are added without removing anything, which ensures backward compatibility for all clients. <br>If necessary, you can implement versioning for built-in resources as well by [extending](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/extending-a-rest-api-resource.html) the corresponding resource module on your project level.
 
 {% endinfo_block %}
 

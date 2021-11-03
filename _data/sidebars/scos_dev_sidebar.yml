@@ -190,23 +190,10 @@ entries:
         include_versions:
         - "202108.0"
     - title: Spryker Core Back Office
-      include_versions:
-      - "201811.0"
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
+      url: /docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html
       nested:
       - title: Users and rights overview
-        url: /docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-      - title: Spryker Core Back Office
-        url: /docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html
+        url: /docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html       
     - title: Product Rating & Reviews
       url: /docs/scos/dev/feature-walkthroughs/product-rating-reviews-feature-walkthrough.html
     - title: Content Items
@@ -394,8 +381,6 @@ entries:
       nested:
       - title: Customer Module Overview
         url: /docs/scos/dev/feature-walkthroughs/customer-account-management-feature-walkthrough/reference-information-customer-module-overview.html
-      - title: User and Rights Management
-        url: /docs/scos/dev/feature-walkthroughs/customer-account-management-feature-walkthrough/user-and-rights-overview.html
     - title: Promotions & Discounts
       url: /docs/scos/dev/feature-walkthroughs/promotions-discounts-feature-walkthrough.html
     - title: Product Bundles
@@ -2893,6 +2878,14 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-productconfigurationsrestapi.html
       include_versions:
       - "202200.0"
+  - title: DevOps migration guides
+    include_versions:
+    - "202001.0"
+    nested:
+    - title: DevOps Migration Guide 202001.0
+      url: /docs/scos/dev/devops-migration-guides/devops-migration-guide-202001.0.html
+      include_versions:
+      - "202001.0"
   - title: Data import
     include_versions:
     - "202005.0"
@@ -3535,13 +3528,14 @@ entries:
         - title: Query objects - creation and usage
           url: /docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html
     - title: Cronjobs
+      url: /docs/scos/dev/back-end-development/cronjobs/cronjobs.html
       nested:
-      - title: Adding and configuring a cronjob
-        url: /docs/scos/dev/back-end-development/cronjobs/adding-and-configuring-a-cronjob.html
-      - title: Cronjob scheduling
-        url: /docs/scos/dev/back-end-development/cronjobs/cronjobs.html
-      - title: Creating a new custom scheduler
-        url: /docs/scos/dev/back-end-development/cronjobs/creating-a-new-custom-scheduler.html
+      - title: Adding and configuring cronjobs
+        url: /docs/scos/dev/back-end-development/cronjobs/adding-and-configuring-cronjobs.html
+      - title: Creating a custom scheduler
+        url: /docs/scos/dev/back-end-development/cronjobs/creating-a-custom-scheduler.html
+      - title: Migrating to Jenkins
+        url: /docs/scos/dev/back-end-development/cronjobs/migrating-to-jenkins.html
     - title: Forms
       url: /docs/scos/dev/back-end-development/forms/forms.html
       nested:
@@ -3771,6 +3765,7 @@ entries:
       - title: Yves multi-themes
         url: /docs/scos/dev/front-end-development/yves/yves-multi-themes.html
       - title: Atomic Frontend
+        url: /docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html
         nested:
         - title: Integrating JQuery into Atomic Frontend
           url: /docs/scos/dev/front-end-development/yves/atomic-frontend/integrating-jquery-into-atomic-frontend.html
@@ -4451,13 +4446,6 @@ entries:
       url: /docs/scos/dev/architecture/programming-concepts.html
   - title: Migration and integration
     nested:
-    - title: DevOps Migration Guide 20201.0
-      url: /docs/scos/dev/migration-and-integration/devops-migration-guide-202001.0.html
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: About Migration and Integration Guides
       url: /docs/scos/dev/migration-and-integration/about-migration-and-integration-guides.html
     - title: Development Tools

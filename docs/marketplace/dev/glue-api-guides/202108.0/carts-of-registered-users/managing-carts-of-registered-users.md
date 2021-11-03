@@ -22,7 +22,7 @@ For detailed information on the modules that provide the API functionality and r
 * [Shared Carts feature integration](https://documentation.spryker.com/docs/shared-carts-feature-integration)
 * [Glue API: Merchant Offers feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-feature-integration.html)
 * [Glue API: Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-prices-feature-integration.html)
-* [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-volume-prices.html
+* [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-volume-prices.html)
 
 ## Create a cart
 
@@ -62,7 +62,7 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| name | String | &check; | Sets the cart name.</br>You can pass this field only with the Multiple Carts feature integrated. If you are operating in a single-cart environment, an attempt to set the value returns the `422 Unprocessable Entry` error. |
+| name | String | &check; | Sets the cart name.<br>You can pass this field only with the Multiple Carts feature integrated. If you are operating in a single-cart environment, an attempt to set the value returns the `422 Unprocessable Entry` error. |
 | priceMode | Enum | &check; | Sets the price mode for the cart. Possible values:<ul><li>GROSS_MODE: prices after tax</li><li>NET_MODE: prices before tax</li></ul>For details, see [Net &amp; gross prices management](https://documentation.spryker.com/docs/net-gross-prices-management). |
 | currency | String | &check; | Sets the cart currency. |
 | store | String | &check; | Sets the name of the store where to create the cart. |
@@ -74,29 +74,29 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
 <summary markdown='span'>Response sample</summary>
 
 ```json
-"data":
-        {
-            "type": "carts",
-            "id": "f23f5cfa-7fde-5706-aefb-ac6c6bbadeab",
-            "attributes": {
-                "priceMode": "GROSS_MODE",
-                "currency": "EUR",
-                "store": "DE",
-                "discounts": [],
-                "totals": {
-                    "expenseTotal": null,
-                    "discountTotal": null,
-                    "taxTotal": null,
-                    "subtotal": null,
-                    "grandTotal": null
-                },
-                "name": "My Cart",
-                "isDefault": true
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aefb-ac6c6bbadeab"
-            }
-        }
+{
+  "data": {
+    "type": "carts",
+    "id": "f23f5cfa-7fde-5706-aefb-ac6c6bbadeab",
+    "attributes": {
+      "priceMode": "GROSS_MODE",
+      "currency": "EUR",
+      "store": "DE",
+      "discounts": [],
+      "totals": {
+        "expenseTotal": null,
+        "discountTotal": null,
+        "taxTotal": null,
+        "subtotal": null,
+        "grandTotal": null
+      },
+      "name": "My Cart",
+      "isDefault": true
+    },
+    "links": {
+      "self": "https://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aefb-ac6c6bbadeab"
+    }
+  }
 }
 ```
 
@@ -109,8 +109,8 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
 | priceMode | String | Price mode of the cart. |
 | currency | String | Currency of the cart. |
 | store | String | Store in which the cart is created. |
-| name | String | Cart name.</br>The field is available only in multi-cart environments. |
-| isDefault | Boolean | Specifies if the cart is the default one for the customer.</br>The field is available only in multi-cart environments.  |
+| name | String | Cart name.<br>The field is available only in multi-cart environments. |
+| isDefault | Boolean | Specifies if the cart is the default one for the customer.<br>The field is available only in multi-cart environments.  |
 
 **Discount information**
 
@@ -2047,39 +2047,39 @@ To retrieve all carts, send the request:
 
 ```json
 {
-            "type": "carts",
-            "id": "bef3732e-bc7a-5c07-a40c-f38caf1c40ff",
-            "attributes": {
-                "priceMode": "GROSS_MODE",
-                "currency": "EUR",
-                "store": "DE",
-                "name": "newcart",
-                "isDefault": true,
-                "totals": {
-                    "expenseTotal": 0,
-                    "discountTotal": 0,
-                    "taxTotal": 4972,
-                    "subtotal": 31140,
-                    "grandTotal": 31140,
-                    "priceToPay": 31140
-                },
-                "discounts": []
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/carts/bef3732e-bc7a-5c07-a40c-f38caf1c40ff"
-            },
-            "relationships": {
-                "items": {
-                    "data": [
-                        {
-                            "type": "items",
-                            "id": "041_25904691"
-                        }
-                    ]
-                }
-            }
+    "data": {
+        "type": "carts",
+        "id": "bef3732e-bc7a-5c07-a40c-f38caf1c40ff",
+        "attributes": {
+          "priceMode": "GROSS_MODE",
+          "currency": "EUR",
+          "store": "DE",
+          "name": "newcart",
+          "isDefault": true,
+          "totals": {
+            "expenseTotal": 0,
+            "discountTotal": 0,
+            "taxTotal": 4972,
+            "subtotal": 31140,
+            "grandTotal": 31140,
+            "priceToPay": 31140
+          },
+          "discounts": []
+        },
+        "links": {
+          "self": "https://glue.mysprykershop.com/carts/bef3732e-bc7a-5c07-a40c-f38caf1c40ff"
+        },
+        "relationships": {
+          "items": {
+            "data": [
+              {
+                "type": "items",
+                "id": "041_25904691"
+              }
+            ]
+          }
         }
-    ],
+    },
     "links": {
         "self": "https://glue.mysprykershop.com/items?include=items,concrete-products,product-offers,product-offer-prices"
     },
@@ -2387,8 +2387,8 @@ To retrieve all carts, send the request:
 | priceMode | String | Price mode that was active when the cart was created. |
 | currency | String | Currency that was selected when the cart was created. |
 | store | String | Store for which the cart was created. |
-| name | String | Specifies a cart name.</br>The field is available in multi-cart environments only. |
-| isDefault | Boolean | Specifies whether the cart is the default one for the customer.</br>The field is available in multi-cart environments only.  |
+| name | String | Specifies a cart name.<br>The field is available in multi-cart environments only. |
+| isDefault | Boolean | Specifies whether the cart is the default one for the customer.<br>The field is available in multi-cart environments only.  |
 
 **Discount information**
 
@@ -2876,7 +2876,6 @@ To retrieve a registered user's cart, send the request:
 }
 ```
 
-</summary>
 </details>
 
 <details>
@@ -4210,7 +4209,8 @@ To retrieve a registered user's cart, send the request:
 }
 
 ```
-details
+
+</details>
 
 <details>
 <summary markdown='span'>Response sample with merchant products</summary>
@@ -4337,6 +4337,7 @@ details
     ]
 }
 ```
+
 </details>
 
 For the attributes of carts of registered users and included resources, see [Retrieve a registered user's carts](#retrieve-registered-users-carts-response-attributes).

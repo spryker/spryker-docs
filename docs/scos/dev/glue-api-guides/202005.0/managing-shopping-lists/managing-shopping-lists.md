@@ -1124,8 +1124,8 @@ If the shopping list was deleted successfully, the endpoint responds with a **20
 
 | Status code | Reason |
 | --- | --- |
-| 400 | The provided access token is not an [access token of a Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html). </br>**OR** </br> The shopping list ID is not specified. |
+| 400 | The provided access token is not an [access token of a Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html). <br>**OR** <br> The shopping list ID is not specified. |
 | 401 | The access token is incorrect. |
 | 403 | The access token is missing. |
-| 422 | Could not create/update a shopping list.</br>**OR** </br>Could not add/update an item. |
+| 422 | Could not create/update a shopping list.<br>**OR** <br>Could not add/update an item. |
 | 404 | The specified shopping list or shopping list item could not be found. |

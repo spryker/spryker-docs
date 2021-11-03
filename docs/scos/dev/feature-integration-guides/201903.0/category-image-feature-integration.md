@@ -33,9 +33,9 @@ Adjust the schema definition so entity changes will trigger events.
 
 | Affected entity | Triggered events |
 | --- | --- |
-| `spy_category_image_set` | `Entity.spy_category_image_set.create`</br>`Entity.spy_category_image_set.update`</br>`Entity.spy_category_image_set.delete`|
-| `spy_category_image` | `Entity.spy_category_image.create`</br>`Entity.spy_category_image.update`</br>`Entity.spy_category_image.delet` |
-| `spy_category_image_set_to_category_image` | `Entity.spy_category_image_set_to_category_image.create`</br>`Entity.spy_category_image_set_to_category_image.update`</br>`Entity.spy_category_image_set_to_category_image.delete`</li></ul> |
+| `spy_category_image_set` | `Entity.spy_category_image_set.create`<br>`Entity.spy_category_image_set.update`<br>`Entity.spy_category_image_set.delete`|
+| `spy_category_image` | `Entity.spy_category_image.create`<br>`Entity.spy_category_image.update`<br>`Entity.spy_category_image.delet` |
+| `spy_category_image_set_to_category_image` | `Entity.spy_category_image_set_to_category_image.create`<br>`Entity.spy_category_image_set_to_category_image.update`<br>`Entity.spy_category_image_set_to_category_image.delete`</li></ul> |
 
 <details open>
 <summary markdown='span'>src/Pyz/Zed/CategoryImage/Persistence/Propel/Schema/spy_category_image.schema.xml</summary>
@@ -405,7 +405,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Verification" %}

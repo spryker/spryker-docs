@@ -35,9 +35,9 @@ Adjust the schema definition so entity changes will trigger events.
 
 | Affected entity | Triggered events |
 | --- | --- |
-| `spy_category_image_set` | `Entity.spy_category_image_set.create`</br>`Entity.spy_category_image_set.update`</br>`Entity.spy_category_image_set.delete` |
-| `spy_category_image` | `Entity.spy_category_image_set.create`</br>`Entity.spy_category_image_set.update`</br>`Entity.spy_category_image_set.delete` |
-| `spy_category_image_set_to_category_image` | `Entity.spy_category_image_set_to_category_image.create`</br>`Entity.spy_category_image_set_to_category_image.update`</br>`Entity.spy_category_image_set_to_category_image.delete` |
+| `spy_category_image_set` | `Entity.spy_category_image_set.create`<br>`Entity.spy_category_image_set.update`<br>`Entity.spy_category_image_set.delete` |
+| `spy_category_image` | `Entity.spy_category_image_set.create`<br>`Entity.spy_category_image_set.update`<br>`Entity.spy_category_image_set.delete` |
+| `spy_category_image_set_to_category_image` | `Entity.spy_category_image_set_to_category_image.create`<br>`Entity.spy_category_image_set_to_category_image.update`<br>`Entity.spy_category_image_set_to_category_image.delete` |
 
 <details open>
    <summary markdown='span'>src/Pyz/Zed/CategoryImage/Persistence/Propel/Schema/spy_category_image.schema.xml</summary>
@@ -66,7 +66,7 @@ Adjust the schema definition so entity changes will trigger events.
     </database>
 ```
     
-</br>
+<br>
 </details>
 
 Set up synchronization queue pools so non-multistore entities (not store specific entities) are synchronized among stores:
@@ -90,7 +90,7 @@ Set up synchronization queue pools so non-multistore entities (not store specifi
     </database>
 ```
     
-</br>
+<br>
 </details>
 
 Run the following commands to apply database changes and generate entity and transfer changes:
@@ -372,7 +372,7 @@ class CategoryDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox “Verification” %}

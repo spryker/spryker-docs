@@ -80,7 +80,7 @@ The endpoint responds with a collection of **RestCompanyRoleResponse**, each con
 }
 ```
     
-</br>
+<br>
 </details>
 
 ### Specific Role
@@ -130,7 +130,7 @@ The endpoint responds with a **RestCompanyRoleResponse** that contains informati
 }
 ```
     
-</br>
+<br>
 </details>
 
 ### Fetching Additional Information
@@ -186,7 +186,7 @@ The response will include the following additional attributes:
 }
 ```
     
-</br>
+<br>
 </details>
 
 ### Possible Errors
@@ -194,7 +194,7 @@ The response will include the following additional attributes:
 | Code | Reason |
 | --- | --- |
 | 401 | The access token is invalid. |
-| 403 | The access token is missing.</br>- OR -</br>The current Company Account is not set.</br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](https://documentation.spryker.com/v3/docs/logging-in-as-company-user-201907). |
+| 403 | The access token is missing.<br>- OR -<br>The current Company Account is not set.<br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](https://documentation.spryker.com/v3/docs/logging-in-as-company-user-201907). |
 | 404 | The specified role was not found or the user does not have access to it. |
 
 <!-- add to related articles:

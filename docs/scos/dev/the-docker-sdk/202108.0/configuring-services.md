@@ -59,7 +59,7 @@ git clone https://github.com/spryker/docker-sdk.git ./docker
 
 {% endinfo_block %}
 
-## Database
+## Database services
 [MariaDB](https://mariadb.org/) is provided as a service by default, but you can switch to MySQL or PostgreSQL as described below.
 
 ### MariaDB
@@ -73,7 +73,7 @@ MariaDB is provided as a service by default. You may only need to use this confi
 
 {% endinfo_block %}
 
-#### Configuration
+#### Configuring MariaDB
 Follow the steps below to switch the database service to MariaDB:
 
 1. Adjust `deploy.*.yml` in the `services:` section:
@@ -102,7 +102,7 @@ docker/sdk up --build --data
 
 See [MySQL documentation](https://dev.mysql.com/doc/) for more details.
 
-#### Configuration
+#### Configuring MySQL
 Follow the steps below to switch database engine to MySQL:
 1. Adjust `deploy.*.yaml` in the `services:` section:
 ```yaml
@@ -115,6 +115,7 @@ services:
             localhost:3306:
 ...
 ```
+
 2. Bootstrap the docker setup, regenerate demo data, and rebuild the application:
 ```bash
 docker/sdk boot deploy.*.yml
@@ -128,7 +129,7 @@ docker/sdk up --build --data
 
 See [PostgreSQL documentation](https://www.postgresql.org/docs/) for more details.
 
-#### Configuration
+#### Configuring PostgreSQL
 Follow the steps below to switch database engine to PostgreSQL:
 1. Adjust `deploy.*.yml` in the `services:` section:
 ```yaml
@@ -141,6 +142,7 @@ services:
             localhost:5432:
 ...
 ```
+
 2. Bootstrap the docker setup, regenerate demo data, and rebuild the application:
 ```bash
 docker/sdk boot deploy.*.yml
@@ -156,7 +158,7 @@ See:
 * [Configuring Elasticsearch](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-elasticsearch.html) to learn more about Elastcisearch configuration in Spryker.
 * [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html) for more information on Elasticsearch.
 
-### Configuration
+### Configuring ElasticSearch
 
 Adjust `deploy.*.yml` in the `services:` section to open the port used for accessing ElasticSearch:
 ```yaml
@@ -176,7 +178,7 @@ See [Kibana documentation](https://www.elastic.co/guide/en/kibana/current/index.
 
 In Docker SDK, Kibana UI is provided as a service by default.
 
-### Configuration
+### Configuring Kibana UI
 Follow the steps to configure an endpoint for Kibana UI:
 1. Adjust `deploy.*.yml` in the `services:` section:
 ```yaml
@@ -187,7 +189,8 @@ services:
         endpoints:
             {custom_endpoint}:
 ```
-2. Adjust host file:
+
+2. Add the endpoint to the hosts file:
 ```bash
 echo "127.0.0.1 {custom_endpoint}" | sudo tee -a /etc/hosts
 ```
@@ -196,7 +199,7 @@ echo "127.0.0.1 {custom_endpoint}" | sudo tee -a /etc/hosts
 
 [RabbitMQ](https://www.rabbitmq.com/) is a messaging broker - an intermediary for messaging. It gives your applications a common platform to send and receive messages, and your messages a safe place to live until received.
 
-### Configuration
+### Configuring RabbitMQ
 
 Adjust `deploy.*.yml` in the `services:` section to open the port used for accessing RabbitMQ:
 ```yaml
@@ -209,6 +212,7 @@ services:
                 protocol: tcp
             api.queue.spryker.local:
 ```
+
 ## Swagger UI
 
 [Swagger UI](https://swagger.io/tools/swagger-ui/) allows anyone — be it your development team or your end consumers — to visualize and interact with the API’s resources without having any of the implementation logic in place. It’s automatically generated from your OpenAPI (formerly known as Swagger) Specification, with the visual documentation making it easy for back end implementation and client-side consumption.
@@ -221,7 +225,7 @@ In Docker SDK, Swagger UI is provided as a service by default.
 
 Spryker provides the basic functionality to generate [OpenApi schema specification](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md) for REST API endpoints. This document provides an overview of REST API endpoints. For each endpoint, you will find the URL, REST request parameters as well as the appropriate request and response data formats.
 
-### Configuration
+### Configuring Swagger UI
 Follow the steps to configure an endpoint for Swagger UI:
 1. Adjust `deploy.*.yml` in the `services:` section:
 ```yaml
@@ -233,7 +237,7 @@ services:
             {custom_endpoint}:
 ```
 
-2. Adjust the `host` file:
+2. Add the endpoint to the hosts file:
 ```bash
 echo "127.0.0.1 {custom_endpoint}" | sudo tee -a /etc/hosts
 ```
@@ -244,7 +248,7 @@ echo "127.0.0.1 {custom_endpoint}" | sudo tee -a /etc/hosts
 
 See [Redis documentation](https://redis.io/documentation) for more details.
 
-### Configuration
+### Configuring Redis
 
 Adjust `deploy.*.yml` in the `services:` section to open the port used for accessing Redis:
 ```yaml
@@ -260,7 +264,7 @@ services:
 ## Redis GUI
 [Redis Commander](http://joeferner.github.io/redis-commander/) is a web management tool that provides a graphical user interface to access Redis databases and perform basic operations like view keys as a tree, view CRUD keys or import/export databases.
 
-### Configuration
+### Configuring Redis GUI
 Follow the steps to configure an endpoint for Redis Commander:
 
 1. Adjust `deploy.*.yml` in the `services:` section:
@@ -299,7 +303,7 @@ By default the following applies:
 
 {% endinfo_block %}
 
-### Configuration
+### Configuring MailHog
 Adjust `deploy.*.yml` in the `services:` section to specify a custom endpoint:
 ```yaml
 services:
@@ -313,7 +317,7 @@ services:
 ## Blackfire
 [Blackfire](https://blackfire.io/) is a tool used to profile, test, debug, and optimize performance of PHP applications. It gathers data about consumed server resources like memory, CPU time, and I/O operations. The data and configuration can be checked via Blackfire web interface.
 
-### Configuration
+### Configuring Blackfire
 
 Follow the steps to enable Blackfire:
 
@@ -321,7 +325,7 @@ Follow the steps to enable Blackfire:
 
 ```yaml
 image:
-    tag: spryker/php:7.3 # Use the same tag you had in `image:`
+    tag: spryker/php:7.4 # Use the same tag you had in `image:`
     php:
         ...
         enabled-extensions:
@@ -341,7 +345,7 @@ services:
         client-token: {client-token}
 ```
 
-### Alternative Configuration
+#### Alternative configuration
 
 Use the following configuration if you are going to change server or client details often, or if you don’t want to define them in your deploy file.
 
@@ -351,14 +355,14 @@ Follow the steps to enable Blackfire:
 
 ```yaml
 image:
-    tag: spryker/php:7.3 # Use the same tag you had in `image:`
+    tag: spryker/php:7.4 # Use the same tag you had in `image:`
     php:
         ...
         enabled-extensions:
             - blackfire
 ```
 
-2. Adjust `deploy.*.yml` in the `services:` section to enable Blackfire service:
+2. Adjust `deploy.*.yml` in the `services:` section to enable the Blackfire service:
 
 ```yaml
 services:
@@ -392,7 +396,7 @@ It is not obligatory to pass all the details as environment variables or define 
 
 The solution consists of a client and a server. The client is used to collect the data about applications in an environment and send it to the server for further analysis and presentation. The server is used to aggregate, analyse and present the data.
 
-### Configuration
+### Configuring New Relic
 
 Follow the steps to enable New Relic:
 
@@ -408,14 +412,15 @@ docker:
 
 ```yaml
 image:
-    tag: spryker/php:7.3 # the image tag that has been previously used in `image:`
+    tag: spryker/php:7.4 # the image tag that has been previously used in `image:`
     php:
         ...
         enabled-extensions:
+            ...
             - newrelic
 ```
 
-### Alternative Configuration
+#### Alternative configuration
 
 Use this configuration if you are going to change New Relic license often or don’t want to define it in the deploy file.
 
@@ -432,7 +437,7 @@ docker:
 
 ```yaml
 image:
-    tag: spryker/php:7.3 # the image tag that has been previously used in `image:`
+    tag: spryker/php:7.4 # the image tag was previously used in `image:`
     php:
         ...
         enabled-extensions:
@@ -465,7 +470,7 @@ Chromedriver is provided as a service by default. You may only need to use this 
 
 {% endinfo_block %}
 
-#### Configuration
+#### Configuring ChromeDriver
 To enable Chromedriver, adjust `deploy.*.yml` as follows:
 
 ```yaml
@@ -479,7 +484,7 @@ services:
 
 [PhantomJS](https://phantomjs.org/) is a headless browser for automating web page interaction. It ships with a WebDriver based on [Selenium](https://www.selenium.dev/).
 
-#### Configuration
+#### Configuring PhantomJS
 
 To enable PhantomJS, adjust `deploy.*.yml` as follows:
 
@@ -495,15 +500,16 @@ services:
 Dashboard is a tool that helps to monitor logs in real time. You can monitor logs in all or a particular container.
 
 
-### Configuration
+### Configuring Dashboard
 
-To configure Вashboard, adjust your `deploy.*.yml` as follows:
+To configure Dashboard, adjust `deploy.*.yml` in the `services:` section:
 
 ```yaml
-dashboard:
-        engine: dashboard
-        endpoints:
-            {custom_endpoint}:
+services:
+    dashboard:
+            engine: dashboard
+            endpoints:
+                {custom_endpoint}:
 ```
 
 ## Tideways
@@ -511,12 +517,28 @@ dashboard:
 [Tideways](https://tideways.com/) is an application profiler used for testing and debugging. Its main functions are profiling, monitoring, and exception tracking.
 
 
-### Configuration
-To configure Tideways, adjust your `deploy.*.yml` as follows:
+### Configuring Tideways
+
+To configure Tideways, do the following:
+
+1. Adjust `deploy.*.yml` in the `services:` section:
 
 ```yaml
-tideways:
-    apikey: {tideways_api_key}
-    environment-name: {tideways_environment_name}
-    cli-enabled: {true|false}
+services:
+    tideways:
+        apikey: {tideways_api_key}
+        engine: tideways
+        environment-name: {tideways_environment_name}
+        cli-enabled: {true|false}
+```
+
+2. Add Tideways to the list of enabled extensions in the `image:` section of `deploy.*.yml`:
+
+```yaml
+image:
+    tag: spryker/php:7.4 # the image tag was previously used in `image:`
+    php:
+        ...
+        enabled-extensions:
+            - tideways
 ```

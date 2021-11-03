@@ -42,7 +42,7 @@ Product stock the DECIMAL(20,10) value, which means that your product stock can 
 
 {% endinfo_block %}
 
-</br>**To edit** the bundled product stock:
+<br>**To edit** the bundled product stock:
 1. Navigate to the **Product Availability** page of a bundle whose bundled product variant availability you would like to change.
 2. Click **View bundled products** in the **Variant availability** table.
 3. In the **Bundled products** table that opens, click **Edit Stock** for the corresponding variant.

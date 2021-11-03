@@ -221,14 +221,14 @@ To retrieve a search suggestion, send the request:
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| completion | Array | Autocomplete suggestions for the search query. </br> Each item in the array is a string. |
-| categories | Array | Categories that match the search query. </br> Each item in the array is an object representing a single category. |
+| completion | Array | Autocomplete suggestions for the search query. <br> Each item in the array is a string. |
+| categories | Array | Categories that match the search query. <br> Each item in the array is an object representing a single category. |
 | categories.name | String | Category name. |
 | categories.url | String | Category URL. |
-| cmsPages | Array | CMS pages that match the search query. </br> Each item in the array is an object representing a single page. |
+| cmsPages | Array | CMS pages that match the search query. <br> Each item in the array is an object representing a single page. |
 | cmsPages.name | String | Page title. |
 | cmsPages.url | String | Page URL. |
-| abstractProducts | Array | Abstract products that match the search query. </br> Each item in the array is an object representing a product. |
+| abstractProducts | Array | Abstract products that match the search query. <br> Each item in the array is an object representing a product. |
 | abstractProducts.price | Integer | Product price. |
 | abstractProducts.abstractName | String | Product name. |
 | abstractProducts.abstractSku | String | Product SKU. |

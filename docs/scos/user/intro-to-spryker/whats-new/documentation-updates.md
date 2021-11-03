@@ -267,9 +267,6 @@ Below you will find the list of the new/updated documentation released as part o
 </details>
 
 
-
-</details>
-
 * [Ratings and Reviews API](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/managing-product-ratings-and-reviews.html)
 
 <details>

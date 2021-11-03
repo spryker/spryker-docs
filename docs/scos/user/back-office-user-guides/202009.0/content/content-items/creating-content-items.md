@@ -270,7 +270,7 @@ The following table describes the attributes on the *CreateContent Item: Product
 | Actions (top table) | Column that contains **Delete** you can click to remove the product set from the list. |
 | Available Product Sets |  Bottom table that displays product sets available in the database.|
 | ID  | Sequence number. |
-|  Name </br>(in the top table) | Name of the product set. |
+|  Name <br>(in the top table) | Name of the product set. |
 | # of Products | Displays the number of products available in the product set. |
 |Status  | Shows the status of the product set: active or inactive. |
 |Actions (the bottom table)  | Column that contains **+ Add** you can click to add a product set to the top table so that it can be added to the product set content item. |

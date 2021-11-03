@@ -98,12 +98,12 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     }
 }
 ```
-</br>
+<br>
 </details>
 
 {% info_block warningBox “Verification” %}
 
-Run the following console command:</br>`console list`</br>Make sure that `wishlists:uuid:update` appears in the list.
+Run the following console command:<br>`console list`<br>Make sure that `wishlists:uuid:update` appears in the list.
 {% endinfo_block %}
 
 #### Migrate data in the database
@@ -118,7 +118,7 @@ Run the following command:
 console wishlists:uuid:update
 ```
 
-{% info_block warningBox "(Make sure that the uuid field is filled for all records in the `spy_wishlist` table.</br>For this purpose, run the following SQL query and make sure that the result is 0 records:</br>`SELECT COUNT(*) FROM spy_wishlist WHERE uuid IS NULL;`)
+{% info_block warningBox "(Make sure that the uuid field is filled for all records in the `spy_wishlist` table.<br>For this purpose, run the following SQL query and make sure that the result is 0 records:<br>`SELECT COUNT(*) FROM spy_wishlist WHERE uuid IS NULL;`)
 
 #### Enable resources and relationships
 
@@ -182,17 +182,17 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
-</br>
+<br>
 </details>
 
 
 @(Warning" %}
 
-{% endinfo_block %}(Make sure that the following endpoints are available:</br>http:///glue.mysprykershop.com/wishlists</br>http:///glue.mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}/wishlists-items</br>Make a request to http://glue.mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}/wishlists-items?include=concrete-products and make sure that the given wishlist has at least one product added.</br>Make sure that the response includes relationships to the concrete-products resources.)
+{% endinfo_block %}(Make sure that the following endpoints are available:<br>http:///glue.mysprykershop.com/wishlists<br>http:///glue.mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}/wishlists-items<br>Make a request to http://glue.mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}/wishlists-items?include=concrete-products and make sure that the given wishlist has at least one product added.<br>Make sure that the response includes relationships to the concrete-products resources.)
 
 {% info_block warningBox “Verification” %}
 
-Make a request to http://glue.mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}?include=wishlists and make sure that the given customer has at least one wishlist.</br>Make sure that the response includes relationships to the wishlists resources.
+Make a request to http://glue.mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}?include=wishlists and make sure that the given customer has at least one wishlist.<br>Make sure that the response includes relationships to the wishlists resources.
 {% endinfo_block %}
 
 **See also:**

@@ -136,8 +136,6 @@ $bootstrap
 
 </details>
 
-</details>
-
 2. Add the following error pages:
 
 <details open>

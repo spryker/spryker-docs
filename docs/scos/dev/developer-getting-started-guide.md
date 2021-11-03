@@ -38,6 +38,10 @@ redirect_from:
   - /v2/docs/en/about-the-development-guide
   - /v1/docs/about-the-development-guide
   - /v1/docs/en/about-the-development-guide
+  - /v4/docs/installation-guide-b2c
+  - /v4/docs/en/installation-guide-b2c
+  - /v4/docs/installation-guide-b2b
+  - /v4/docs/en/installation-guide-b2b
 ---
 
 Welcome to the Spryker Commerce OS getting started guide.
@@ -95,11 +99,13 @@ We use [Composer](/docs/scos/dev/setup/composer.html) to install and manage modu
 Run the following Composer commands depending on what you want to do:
 * To install the dependencies you listed in the `composer.json` file of the project: `composer install`.
 *  To update all the modules for your project: `composer update "spryker/*"`.
+
 {% info_block infoBox %}
 
 We recommend running this command weekly to assert you have the latest fixes. We also recommend [subscribing to our release notes newsletter](https://now.spryker.com/release-notes) to stay up-to-date with the improvements.
 
 {% endinfo_block %}
+
 *  To update a particular module: `composer update "spryker/module-name"`. You can easily keep track of new module versions using the [composer-versions-check](https://github.com/Soullivaneuh/composer-versions-check) addon for your local Composer tool.
 *  To add a new module to your project: `composer require "spryker/module-name"`
 

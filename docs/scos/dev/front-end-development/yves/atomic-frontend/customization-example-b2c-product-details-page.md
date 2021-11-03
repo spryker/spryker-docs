@@ -32,7 +32,7 @@ You can see the [full version of this page](https://www.de.b2c.demo-spryker.com/
 | 6 | project/src/Pyz/Yves/PriceProductVolumeWidget/Theme/default/components/molecules/volume-price/volume-price.scss |
 | 7 | project/src/Pyz/Yves/ProductDetailPage/Theme/default/components/molecules/variant-resetter/variant-resetter.scss |
 | 8 | project/src/Pyz/Yves/ShopUi/Theme/default/components/molecules/custom-select/custom-select.scss |
-| 9 | project/src/Pyz/Yves/ShopUi/Theme/default/components/molecules/toggler-item/toggler-item.scss </br> project/src/Pyz/Yves/ShopUi/Theme/default/components/atoms/title/title.scss|
+| 9 | project/src/Pyz/Yves/ShopUi/Theme/default/components/molecules/toggler-item/toggler-item.scss <br> project/src/Pyz/Yves/ShopUi/Theme/default/components/atoms/title/title.scss|
 | 10 | project/src/Pyz/Yves/ShopUi/Theme/default/components/molecules/quantity-counter/quantity-counter.scss |
 | 11 | project/src/Pyz/Yves/ShopUi/Theme/default/components/atoms/button/button.scss |
 
@@ -53,4 +53,4 @@ You can see the [full version of this page](https://www.de.b2c.demo-spryker.com/
 | --- | --- |
 | 15 | project/src/Pyz/Yves/ShopUi/Theme/default/components/molecules/product-slider-title/product-slider-title.scss |
 | 16 | project/src/Pyz/Yves/ShopUi/Theme/default/components/atoms/title/title.scss |
-| 17 | project/src/Pyz/Yves/ProductReviewWidget/Theme/default/components/molecules/review-average-display/review-average-display.scss </br> project/src/Pyz/Yves/ProductReviewWidget/Theme/default/components/molecules/review-distribution-display/review-distribution-display.scss </br> project/src/Pyz/Yves/ProductReviewWidget/Theme/default/components/molecules/review-distribution-display/review-distribution-display.scss </br> project/src/Pyz/Yves/ProductReviewWidget/Theme/default/components/molecules/rating-selector/rating-selector.scss |
+| 17 | project/src/Pyz/Yves/ProductReviewWidget/Theme/default/components/molecules/review-average-display/review-average-display.scss <br> project/src/Pyz/Yves/ProductReviewWidget/Theme/default/components/molecules/review-distribution-display/review-distribution-display.scss <br> project/src/Pyz/Yves/ProductReviewWidget/Theme/default/components/molecules/review-distribution-display/review-distribution-display.scss <br> project/src/Pyz/Yves/ProductReviewWidget/Theme/default/components/molecules/rating-selector/rating-selector.scss |

@@ -47,7 +47,7 @@ Make sure that the following changes in transfer objects have been applied:<tabl
 #### Import Business On Behalf Company Users
 
 {% info_block infoBox "Info" %}
-Company user data import and business on behalf data import have currently very similar structure, however, both importers represent a different concept.</br>Include only business on behalf company users in the current data import step and do not mix data with company user data importer.
+Company user data import and business on behalf data import have currently very similar structure, however, both importers represent a different concept.<br>Include only business on behalf company users in the current data import step and do not mix data with company user data importer.
 {% endinfo_block %}
 
 
@@ -156,7 +156,7 @@ class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 </details>
 
 {% info_block warningBox "Verification" %}
-To check that the step has been completed correctly:</br>Log in with a customer who has multiple company users and a default company user.</br>Check in the session if the default company user was assigned to the customer.</br>Check in the session if the IsOnBehalf property is set correctly for the customer.
+To check that the step has been completed correctly:<br>Log in with a customer who has multiple company users and a default company user.<br>Check in the session if the default company user was assigned to the customer.<br>Check in the session if the IsOnBehalf property is set correctly for the customer.
 {% endinfo_block %}
 
 ## Install Feature Frontend

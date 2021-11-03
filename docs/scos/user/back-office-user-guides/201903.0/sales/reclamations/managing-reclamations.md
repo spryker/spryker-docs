@@ -31,7 +31,7 @@ Click **Close** next to the order you want to close the reclamation for. The sta
 While viewing a reclamation, you can:
 * Navigate to the **View Order** page of the order that is claimed.
 * Navigate to the **View Product Abstract** page of the product that is in the claimed order.
-</br>
+<br>
 
 **To navigate to the View Order page**, click the hyperlinked order reference number.
 **To open the View Product Page**, click the hyperlinked abstract product name.

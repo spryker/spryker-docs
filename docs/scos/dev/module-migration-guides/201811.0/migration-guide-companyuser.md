@@ -54,7 +54,7 @@ They both return `CompanyUserResponseTransfer` object, that can be used to deter
 public function enableCompanyUser(CompanyUserTransfer $companyUserTransfer): CompanyUserResponseTransfer;
 ```
 
-</br>
+<br>
 </details>
     
 <details open>
@@ -75,7 +75,7 @@ public function enableCompanyUser(CompanyUserTransfer $companyUserTransfer): Com
 public function disableCompanyUser(CompanyUserTransfer $companyUserTransfer): CompanyUserResponseTransfer;
 ```
 
-</br>
+<br>
 </details>
     
 Disabled company users cannot see the `My Company` page, but they can make orders as customers.

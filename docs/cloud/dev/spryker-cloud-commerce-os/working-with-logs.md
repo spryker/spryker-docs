@@ -18,7 +18,7 @@ To make log browsing easier, logs from the same source form a log stream. Log st
 
 | HEADER | HEADER |
 | --- | --- |
-| AWS code build pipelines | DESTRUCTIVE pipeline jobs: /aws/codebuild/danger/{environment_name} </br> NORMAL pipeline jobs: /aws/codebuild/{environment_name} |
+| AWS code build pipelines | DESTRUCTIVE pipeline jobs: /aws/codebuild/danger/{environment_name} <br> NORMAL pipeline jobs: /aws/codebuild/{environment_name} |
 | AWS Elasticsearch | /aws/elasticsearch/{environment_name} |
 | AWS RDS instances | /aws/rds/instance/{environment_name}/error |
 | AWS Certificates expiration | /aws/lambda/{environment_name}-certificate-expiration |

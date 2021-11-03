@@ -975,7 +975,7 @@ static full page,1,1,1,page_6,/de/demo-landing-page,/en/demo-landing-page,Demo L
 {% raw %}{{{% endraw %} product_set(['2_sony_set']) {% raw %}}}{% endraw %}"
 ```
 
-</br>
+<br>
 </details>
 
 | Column | Is obligatory? | Data type | Data example | Data explanation |

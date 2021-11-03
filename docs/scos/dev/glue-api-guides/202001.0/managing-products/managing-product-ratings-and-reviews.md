@@ -330,7 +330,7 @@ Ratings and reviews cannot be posted anonymously. For this reason, you always ne
 
 | Attribute* | Type | Required | Description |
 | --- | --- | --- | --- |
-| **nickname** | String | yes | Specifies the customer’s nickname.</br>This nickname should be displayed each time the review is shown. The customer’s actual username used for authentication can therefore be hidden. |
+| **nickname** | String | yes | Specifies the customer’s nickname.<br>This nickname should be displayed each time the review is shown. The customer’s actual username used for authentication can therefore be hidden. |
 | **rating** | Integer | yes | Specifies the rating given to the product by the customer. |
 | **summary** | String | yes | Specifies the review summary. |
 | **description** | String | no | Specifies the full text of a review. |

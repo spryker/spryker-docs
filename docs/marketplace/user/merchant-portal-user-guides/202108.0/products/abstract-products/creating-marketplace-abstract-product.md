@@ -36,11 +36,11 @@ To create a new abstract product:
 
    Select **Abstract product has multiple concrete products** if the abstract product you are creating will require variants.
 
-   4. Click **Next**. </br>
+   4. Click **Next**. <br>
 
-   </br>
+   <br>
 
-      If you chose **Abstract product has 1 concrete product**:</br>
+      If you chose **Abstract product has 1 concrete product**:<br>
 
 
       1. On the *Create an Abstract Product with 1 Concrete Product* drawer, enter a **Concrete Product SKU**.
@@ -53,9 +53,9 @@ To create a new abstract product:
 
 
 
-      If you chose **Abstract product has multiple concrete products**:</br>
+      If you chose **Abstract product has multiple concrete products**:<br>
 
-   </br>
+   <br>
 
       1. Select a super attribute that defines the variation of your concrete products.
       2. In the field next to the super attribute you've selected, select one or more values for each super attribute. Upon adding the super attribute values, the preview of the concrete products is displayed.

@@ -90,7 +90,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox "your title goes here" %}

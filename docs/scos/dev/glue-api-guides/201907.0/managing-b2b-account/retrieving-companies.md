@@ -82,7 +82,7 @@ The endpoint responds with a collection of **RestCompanyResponse** consisting of
 }
 ```
     
-</br>
+<br>
 </details>
 
 ### Information on a Specific Company
@@ -134,7 +134,7 @@ The endpoint responds with a **RestCompanyResponse** containing information on t
 }
 ```
     
-</br>
+<br>
 </details>
 
 ### Possible Errors
@@ -142,7 +142,7 @@ The endpoint responds with a **RestCompanyResponse** containing information on t
 | Code | Reason |
 | --- | --- |
 | 401 | The access token is invalid. |
-| 403 | The access token is missing.</br>- OR -</br>The current Company Account is not set.</br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](https://documentation.spryker.com/v3/docs/logging-in-as-company-user-201907). |
+| 403 | The access token is missing.<br>- OR -<br>The current Company Account is not set.<br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](https://documentation.spryker.com/v3/docs/logging-in-as-company-user-201907). |
 | 404 | The specified company was not found, or the user does not have access to it. |
 
 <!-- add to related articles:

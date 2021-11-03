@@ -49,7 +49,7 @@ class ProductAlternativeStorageDependencyProvider extends SprykerProductAlternat
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 <details open>
@@ -76,7 +76,7 @@ class ProductAlternativeDependencyProvider extends SprykerProductAlternativeDepe
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 {% info_block infoBox "Verification" %}

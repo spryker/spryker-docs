@@ -168,7 +168,7 @@ class ProductAbstractDataImporterPlugin extends AbstractPlugin implements DataIm
  }
 }
 ```
-</br>
+<br>
 </details>
 
 Implement your own `DataImporter` for importing products to the shop database. It can be a business module inside the `AkeneoPimMiddlewareConnector` module. Example:
@@ -251,7 +251,7 @@ class AkeneoDataImporter implements AkeneoDataImporterInterface
  }
 }
 ```
-</br>
+<br>
 </details>
 
 
@@ -321,7 +321,7 @@ class AkeneoPimMiddlewareConnectorBusinessFactory extends SprykerAkeneoPimMiddle
  }
 ...
 ```
-</br>
+<br>
 </details>
 
 As you can see, in `DataSetStepBroker,` you can add your own steps for preparing data for writers. You can find ready made steps in the `DataImport` module or implement your own steps. Example:
@@ -371,7 +371,7 @@ class ProductAbstractStep extends ProductAbstractHydratorStep
  }
 }
 ```
-</br>
+<br>
 </details>
 
 You can change default data mappers and translators for overriding keys or values. By default, Akeneo has a list of predefined mappers, translators and validators for each  import type, but it can be adjusted to meet your requirements. Check the [middleware documentation](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/spryker-middleware.html) for more details.
@@ -423,7 +423,7 @@ public function createCategoryReader(): CategoryReader
  return new CategoryReader();
 }
 ```
-</br>
+<br>
 </details>
 
 The example demonstrates how you can skip adding plugins for writing data to the database.
@@ -449,7 +449,7 @@ public function createProductAbstractImporter()
  );
 }
 ```
-</br>
+<br>
 </details>
 
  <details open>
@@ -480,7 +480,7 @@ class AkeneoPimMiddlewareConnectorDependencyProvider extends SprykerAkeneoPimMid
 ...
 }
 ```
-</br>
+<br>
 </details>
 
 When we use only `ProductAbstractPropelWriterPlugin`, `ProductStores`, `ProductPrices`, etc are not imported. If you want to import something other than products, you need to add more writer plugins.
@@ -508,7 +508,7 @@ protected function addProductAbstractPropelWriterPlugins(Container $container): 
  return $container;
 }
 ```
-</br>
+<br>
 </details>
 
 In case you add more writer plugins, you might have to add more steps to dataset step broker.

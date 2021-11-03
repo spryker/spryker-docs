@@ -2,7 +2,7 @@
 title: Overview of features
 template: concept-topic-template
 redirect_from:
-  - /capabilities/features
+  - /capabilities/features.htm
 ---
 
 As a starting point to working with the Spryker Commerce OS, we created a list of all the capabilities we have to offer that arrive out of the box. 

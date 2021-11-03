@@ -64,7 +64,7 @@ class PrepaymentPreCheckPlugin extends AbstractPlugin implements CheckoutPreChec
 }
 ```
 
-</br>
+<br>
 </details>
 
 <details open>
@@ -96,7 +96,7 @@ class PrepaymentSaveOrderPlugin extends AbstractPlugin implements CheckoutSaveOr
 }
 ```
 
-</br>
+<br>
 </details>
 
 2. Next, inject these 2 plugins in the `Payment` module by creating a `PaymentDependencyInjector` under `Dependency/Injector` folder:
@@ -148,8 +148,7 @@ class PaymentDependencyInjector extends AbstractDependencyInjector
 }
 ```
 
-</br>
-</details>
+<br>
 
 3. Link the prepayment state machine to process the orders submitted with the payment method we’re implementing.
 

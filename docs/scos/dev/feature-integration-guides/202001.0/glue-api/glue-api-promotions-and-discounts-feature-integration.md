@@ -47,7 +47,7 @@ Make sure that the following changes have occurred in transfer objects:<table><t
 
 {% info_block warningBox "Verification" %}
 Make sure that `SpyProductAbstractStorage` and `SpyProductConcreteStorage` are extended by synchronization behavior with these methods:<table><thead><tr><th>Entity</th><th>Type</th><th>Event</th><th>Path</th><th>Methods</th></tr></thead><tbody><tr><td>`SpyProductAbstractStorage`</td><td>class</td><td>extended</td><td>`src/Orm/Zed/ProductStorage/Persistence/Base/SpyProductAbstractStorage`</td><td>`syncPublishedMessageForMappings(
-{% endinfo_block %}`,</br>`syncUnpublishedMessageForMappings()`</td></tr><tr><td>`SpyProductConcreteStorage`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/RestProductLabelsAttributesTransfer`</td></tr><tr><td>`CartCodeRequestTransfer`</td><td>class</td><td>extended</td><td>`src/Orm/Zed/ProductStorage/Persistence/Base/SpyProductConcreteStorage`</td><td>`syncPublishedMessageForMappings()`,</br>`syncUnpublishedMessageForMappings()`</td></tr></tbody></table>)
+{% endinfo_block %}`,<br>`syncUnpublishedMessageForMappings()`</td></tr><tr><td>`SpyProductConcreteStorage`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/RestProductLabelsAttributesTransfer`</td></tr><tr><td>`CartCodeRequestTransfer`</td><td>class</td><td>extended</td><td>`src/Orm/Zed/ProductStorage/Persistence/Base/SpyProductConcreteStorage`</td><td>`syncPublishedMessageForMappings()`,<br>`syncUnpublishedMessageForMappings()`</td></tr></tbody></table>)
 
 ### 3) Set up Behavior
 #### Enable resources and relationships
@@ -135,7 +135,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -357,7 +357,7 @@ Make sure that the following endpoint is available:<ul><li>`http://glue.myspryke
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -459,5 +459,5 @@ Make sure that the following endpoint is available:<ul><li>`http://glue.myspryke
 }
 ```
 
-</br>
+<br>
 </details>

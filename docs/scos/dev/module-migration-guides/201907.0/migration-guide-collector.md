@@ -76,7 +76,7 @@ WHERE
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox %}

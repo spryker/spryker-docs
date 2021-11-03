@@ -416,7 +416,7 @@ business-unit-mitte-1,user_30,user_30_pass,,1,setup_request,oci,Client 3 - Oci -
 } 
 ```
 
-</br>
+<br>
 </details>
 
 <details open>
@@ -875,7 +875,7 @@ Client 3 - Oci - User 3,spryker_sup_5,,composite,line,,{}
   }
 } 
 
-</br>
+<br>
 </details>
 
 <details open>

@@ -453,7 +453,7 @@ class CmsToCmsBlockDataMigration extends Console
 }
 ```
 
-</br>
+<br>
 </details>
 
 Copy script to `src/Pyz/Zed/CmsBlock/Communication/Console/CmsToCmsBlockDataMigration.php` and register it in `Pyz\Zed\Console\ConsoleDependencyProvider`.

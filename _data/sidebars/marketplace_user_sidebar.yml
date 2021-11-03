@@ -19,6 +19,9 @@ entries:
           - title: Marketplace Storefront
             url: /docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-storefront.html
 
+          - title: Merchant Portal
+            url: /docs/marketplace/user/intro-to-the-spryker-marketplace/merchant-portal.html
+
           - title: Release notes
             nested:
 

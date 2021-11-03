@@ -13,6 +13,8 @@ redirect_from:
   - /v6/docs/en/customizing-spryker-front-end
   - /v4/docs/customizing-spryker-front-end
   - /v4/docs/en/customizing-spryker-front-end
+  - /docs/t-customize-spryker-frontend
+  - /docs/en/t-customize-spryker-frontend
 ---
 
 Spryker frontend user interface can be customized and extended to meet the needs of your business. You can change the layout, styles and behavior of existing components, as well as create components on your own.
@@ -29,7 +31,9 @@ In the following guide, we will review customizing Spryker UI on each of these l
 The visual layout of each component, be that a molecule or a whole organism, is defined using Symphony Twig. Twig is a template language for defining the HTML code of pages rendered dynamically. It is a common technology used for building web components, like the ones that comprise Spryker atomic frontend.
 
 {% info_block infoBox %}
+
 For more information on Twig basics, see [Twig Homepage](https://twig.symfony.com/).
+
 {% endinfo_block %}
 
 After you integrate Spryker Shop application in your project, all UI components shipped with Spryker will be located in `vendor/spryker-shop`. The layout of any of them can be overridden on the project level. For this purpose, you need to create a Twig file with your own layout in folder `src/Pyz/Yves`. To override the structure of any component, the Twig file name must be the same as the name of the Twig template you want to override, and also the folder structure must replicate the structure of the component you are overriding.

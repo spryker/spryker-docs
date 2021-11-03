@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/migration-guide-categorystorage
   - /docs/migration-guide-categorystorage
   - /docs/en/migration-guide-categorystorage
+  - /upcoming-release/docs/migration-guide-categorystorage
 ---
 
 This document describes how to update the `CategoryStorage` module.

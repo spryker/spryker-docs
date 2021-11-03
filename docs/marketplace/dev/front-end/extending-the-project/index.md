@@ -138,10 +138,9 @@ export class ComponentsModule {}
 
 ```ts
 import { NgModule } from '@angular/core';
-import { ChipsComponent, ChipsModule } from '@spryker/chips';
 import { WebComponentsModule } from '@spryker/web-components';
 // Import from vendor
-import { CoreComponentsModule } from '@mp/dashboard-merchant-portal-gui';
+import { ComponentsModule as CoreComponentsModule } from '@mp/dashboard-merchant-portal-gui';
 
 import { NewComponent } from './new-component/new-component.component';
 import { NewModule } from './new-module/new-module.module';
@@ -153,7 +152,6 @@ import { NewModule } from './new-module/new-module.module';
 
         NewModule,
     ],
-    providers: [],
 })
 export class ComponentsModule {}
 ```

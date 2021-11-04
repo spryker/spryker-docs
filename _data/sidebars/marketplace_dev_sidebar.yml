@@ -101,6 +101,9 @@ entries:
           - title: Marketplace Wishlist feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-wishlist-feature-walkthrough.html
 
+          - title: Merchant Switcher feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/merchant-switcher-feature-walkthrough.html
+
           - title: Persistence ACL feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html
             nested:

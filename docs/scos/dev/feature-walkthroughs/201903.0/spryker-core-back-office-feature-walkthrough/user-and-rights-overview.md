@@ -8,6 +8,7 @@ originalArticleId: b24343bc-ba1b-4dad-aa74-162a43bf923a
 redirect_from:
   - /v2/docs/permission-acl-management
   - /v2/docs/en/permission-acl-management
+- /docs/scos/dev/feature-walkthroughs/201903.0/customer-account-management-feature-walkthrough/user-and-rights-overview.html
 ---
 
 User and rights management is a general term that describes the security functionality for controlling user access to perform various roles throughout the system.

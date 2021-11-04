@@ -19,7 +19,7 @@ redirect_from:
 To format files, [Prettier](https://prettier.io/) is used.
 
 ## Installation
-For details on how to install Formatter for your project, see [Formatter integration guide](/docs/scos/dev/technical-enhancement-integration-guides/development-tools/integrating-formatter.html).
+For details on how to install Formatter for your project, see [Formatter integration guide](/docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-formatter.html).
 
 ## Using formatter
 

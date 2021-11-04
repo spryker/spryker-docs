@@ -19,7 +19,7 @@ redirect_from:
  To analyze and fixTS files, [TSLint](https://palantir.github.io/tslint/) is used.
 
 ##  Installation
-For details on how to install the TS linter for your project, see the [TS linter integration file](/docs/scos/dev/technical-enhancement-integration-guides/development-tools/integrating-ts-linter.html).
+For details on how to install the TS linter for your project, see the [TS linter integration file](/docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-ts-linter.html).
 
 ##  Using TS linter
 

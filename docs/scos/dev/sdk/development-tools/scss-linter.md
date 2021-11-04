@@ -19,7 +19,7 @@ redirect_from:
 To analyze and fix the existing SCSS files, [Stylelint](https://stylelint.io/) is used.
 
 ## Installation
-For details on how to install the SCSS linter for your project, see the [SCSS linter integration guide](/docs/scos/dev/technical-enhancement-integration-guides/development-tools/integrating-scss-linter.html).
+For details on how to install the SCSS linter for your project, see the [SCSS linter integration guide](/docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-scss-linter.html).
 
 ## Using SCSS linter
 

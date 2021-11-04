@@ -15,7 +15,7 @@ This article describes how to add new column types to a Gui table.
 
 ## Prerequisites
 
-Follow the [Marketplace Merchant Portal Core feature integration guide](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-core-feature-integration.html)
+Follow the [Marketplace Merchant Portal Core feature integration guide](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-merchant-portal-core-feature-integration.html)
 to install the Marketplace Merchant Portal Core feature providing the `GuiTable` module.
 
 ## Adjust GuiTableConfigurationBuilder

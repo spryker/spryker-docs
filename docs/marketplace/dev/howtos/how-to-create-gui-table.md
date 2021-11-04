@@ -16,7 +16,7 @@ With this step by step instructions you will create a new Gui table with filters
 
 ## Prerequisites
 
-Follow the [Marketplace Merchant Portal Core feature integration guide](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-core-feature-integration.html)
+Follow the [Marketplace Merchant Portal Core feature integration guide](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-merchant-portal-core-feature-integration.html)
 to install the Marketplace Merchant Portal Core feature providing the `GuiTable` module.
 
 ## 1) Add GuiTable services to dependencies

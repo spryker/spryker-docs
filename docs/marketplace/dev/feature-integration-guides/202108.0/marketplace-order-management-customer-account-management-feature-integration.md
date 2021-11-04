@@ -18,7 +18,7 @@ To start feature integration, integrate the required features:
 | NAME  | VERSION | INTEGRATION GUIDE |
 | ------------------ | ----------- | ----------|
 | Marketplace Order Management |  {{page.version}} | [Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-feature-integration.html) |
-| Customer Account Management  | {{page.version}}    | [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.verison}}/customer-account-management-feature-integration.html)
+| Customer Account Management  | {{page.version}}    | [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html)
 
 ### 1) Set up the transfer objects
 

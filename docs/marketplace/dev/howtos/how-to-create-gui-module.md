@@ -11,7 +11,7 @@ This article describes how to create a new GUI module and add it to navigation.
 
 ## Prerequisites
 
-Follow the [Marketplace Merchant Portal Core feature integration guide](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-core-feature-integration.html)
+Follow the [Marketplace Merchant Portal Core feature integration guide](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-merchant-portal-core-feature-integration.html)
 to install the Marketplace Merchant Portal Core feature providing the `ZedUi`, `Navigation` and ACL related modules.
 
 ## 1) Create a new module

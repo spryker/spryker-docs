@@ -34,7 +34,7 @@ To retrieve the product offers, send the request:
 
 | QUERY PARAMETER | DESCRIPTION      | EXEMPLARY VALUES       |
 | -------------------- | ----------------- | ---------------- |
-| include          | Adds resource relationships to the request. | <ul><li>product-offer-availabilities</li><li>product-offer-prices</li><li>merchants</li> |
+| include          | Adds resource relationships to the request. | <ul><li>product-offer-availabilities</li><li>product-offer-prices</li><li>merchants</li></ul> |
 
 | REQUEST | USAGE     |
 | ---------- | ----------- |
@@ -154,6 +154,7 @@ To retrieve the product offers, send the request:
                     }
                 ]
            }
+        }
     },
     "included": [
         {
@@ -191,14 +192,13 @@ To retrieve the product offers, send the request:
         "links": {
             "self": "http://glue.mysprykershop.com/product-offers/offer101?include=product-offer-prices,product-offer-availabilities,merchants"
         },
-            "merchants": {
+        "merchants": {
                 "data": [
                     {
                         "type": "merchants",
                         "id": "MER000006"
                     }
                 ]
-            }
         }
     },
     "included": [

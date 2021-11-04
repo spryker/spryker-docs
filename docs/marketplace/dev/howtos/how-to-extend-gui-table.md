@@ -16,7 +16,7 @@ With this step by step instructions you will learn how to extend a Gui table wit
 
 ## Prerequisites
 
-Follow the [Marketplace Merchant Portal Core feature integration guide](/docs/marketplace/dev/feature-integration-guides/202108.0/marketplace-merchant-portal-core-feature-integration.html)
+Follow the [Marketplace Merchant Portal Core feature integration guide](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-core-feature-integration.html)
 to install the Marketplace Merchant Portal Core feature providing the `GuiTable` module.
 
 ## 1) Add a new column

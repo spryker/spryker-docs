@@ -4081,8 +4081,6 @@ entries:
         url: /docs/scos/dev/sdk/zed-api/zed-api-resources.html
       - title: Zed API (BETA)
         url: /docs/scos/dev/sdk/zed-api/zed-api-beta.html
-    - title: CSS Class Customization
-      url: /docs/scos/dev/sdk/css-class-customization.html
     - title: Cronjob Scheduling
       url: /docs/scos/dev/sdk/cronjob-scheduling.html
     - title: Importer
@@ -4113,6 +4111,8 @@ entries:
       url: /docs/scos/dev/sdk/twig-and-twigextension.html
     - title: Code Generator
       url: /docs/scos/dev/sdk/code-generator.html
+      include_versions:
+      - "201811.0"
     - title: Data Export
       url: /docs/scos/dev/sdk/data-export.html
   - title: Tutorials and HowTos

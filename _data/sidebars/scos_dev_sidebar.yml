@@ -193,7 +193,7 @@ entries:
       url: /docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html
       nested:
       - title: Users and rights overview
-        url: /docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html       
+        url: /docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html
     - title: Product Rating & Reviews
       url: /docs/scos/dev/feature-walkthroughs/product-rating-reviews-feature-walkthrough.html
     - title: Content Items
@@ -4068,10 +4068,6 @@ entries:
     - title: Development Virtual Machine, Docker Containers & Console
       url: /docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html
     - title: Zed API
-      include_versions:
-      - "201811.0"
-      - "202009.0"
-      - "202108.0"
       nested:
       - title: Project Implementation - Zed API
         url: /docs/scos/dev/sdk/zed-api/zed-api-project-implementation.html
@@ -4085,99 +4081,40 @@ entries:
         url: /docs/scos/dev/sdk/zed-api/zed-api-resources.html
       - title: Zed API (BETA)
         url: /docs/scos/dev/sdk/zed-api/zed-api-beta.html
-        include_versions:
-        - "201811.0"
-        - "202009.0"
-        - "202108.0"
     - title: CSS Class Customization
       url: /docs/scos/dev/sdk/css-class-customization.html
-      include_versions:
-      - "201811.0"
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
     - title: Cronjob Scheduling
       url: /docs/scos/dev/sdk/cronjob-scheduling.html
     - title: Importer
       url: /docs/scos/dev/sdk/data-import.html
     - title: Development Tools
-      include_versions:
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
       nested:
       - title: Architecture Sniffer
         url: /docs/scos/dev/sdk/development-tools/architecture-sniffer.html
       - title: Spryk Code Generator
         url: /docs/scos/dev/sdk/development-tools/spryk-code-generator.html
-        include_versions:
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
       - title: Code Sniffer
         url: /docs/scos/dev/sdk/development-tools/code-sniffer.html
       - title: PHPStan
         url: /docs/scos/dev/sdk/development-tools/phpstan.html
-        include_versions:
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
       - title: Tooling config file
         url: /docs/scos/dev/sdk/development-tools/tooling-config-file.html
-        include_versions:
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
       - title: Static Security Checker
         url: /docs/scos/dev/sdk/development-tools/static-security-checker.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
       - title: TS linter
         url: /docs/scos/dev/sdk/development-tools/ts-linter.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
       - title: Formatter
         url: /docs/scos/dev/sdk/development-tools/formatter.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
       - title: SCSS linter
         url: /docs/scos/dev/sdk/development-tools/scss-linter.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
       - title: Performance audit tool- Benchmark
         url: /docs/scos/dev/sdk/development-tools/performance-audit-tool-benchmark.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
     - title: Twig and TwigExtension
       url: /docs/scos/dev/sdk/twig-and-twigextension.html
     - title: Code Generator
       url: /docs/scos/dev/sdk/code-generator.html
-      include_versions:
-      - "201811.0"
     - title: Data Export
       url: /docs/scos/dev/sdk/data-export.html
-      include_versions:
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
   - title: Tutorials and HowTos
     nested:
     - title: Introduction Tutorials

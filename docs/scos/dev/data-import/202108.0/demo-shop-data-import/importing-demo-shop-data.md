@@ -9,6 +9,8 @@ redirect_from:
   - /2021080/docs/en/importing-demo-shop-data
   - /docs/importing-demo-shop-data
   - /docs/en/importing-demo-shop-data
+  - /docs/about-demo-shop-data-import
+  - /docs/en/about-demo-shop-data-import
 ---
 
 To import data into a Spryker Demo Shop, you need to:

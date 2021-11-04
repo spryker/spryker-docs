@@ -10,7 +10,7 @@ redirect_from:
   - /v4/docs/en/users-control
 related:
   - title: User and Rights Management
-    link: docs/scos/dev/feature-walkthroughs/page.version/customer-account-management-feature-walkthrough/user-and-rights-overview.html
+    link: docs/scos/dev/feature-walkthroughs/page.version/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html
 ---
 
 The Users Control section in the Back Office is mostly used by Spryker Admins.

@@ -21,7 +21,7 @@ The attributes for Create and Edit pages, as well as for abstract and concrete p
 | SKU Prefix | Unique product identifier that helps to track unique information related to the product. | ✓ | Display only |
 | Name | The name that's displayed for the product on the Storefront. | ✓ |✓  |
 | Description | The description that's displayed for the product on the Storefront. | ✓ | ✓ |
-| New from<br>New to  | Defines the period of time for which: <br><ul><li>A [dynamic product label](/docs/scos/user/features/{{page.version}}/product-labels/product-labels-feature-overview.html) *New* is assigned to the product.</li><li>The product is assigned to the *New* [category](/docs/scos/user/features/{{page.version}}category-management-feature-overview.html)</li></ul><br> You can either select no dates or both. | ✓ | ✓ |
+| New from<br>New to  | Defines the period of time for which: <br><ul><li>A [dynamic product label](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) *New* is assigned to the product.</li><li>The product is assigned to the *New* [category](/docs/scos/user/features/{{page.version}}category-management-feature-overview.html)</li></ul><br> You can either select no dates or both. | ✓ | ✓ |
 
 
 ## Price & Stock tab

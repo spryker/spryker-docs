@@ -17,7 +17,7 @@ This topic describes how to manage CMS blocks.
 
 {% info_block infoBox "Info" %}
 
-If you want to manage a CMS block for [email](https://documentation.spryker.com/v6/docs/email-as-a-cms-block-overview), see [Managing content of emails via CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-content-of-emails-via-cms-blocks.html).
+If you want to manage a CMS block for [email](/docs/scos/user/features/{{page.version/cms-feature-overview/email-as-a-cms-block-overview.html), see [Managing content of emails via CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-content-of-emails-via-cms-blocks.html).
 
 {% endinfo_block %}
 

@@ -24,9 +24,9 @@ redirect_from:
   - /v6/docs/en/release-notes-201903-0
 related:
   - title: Code Sniffer
-    link: docs/scos/dev/sdk/page.version/development-tools/code-sniffer.html
+    link: docs/scos/dev/sdk/development-tools/code-sniffer.html
   - title: Architecture Sniffer
-    link: docs/scos/dev/sdk/page.version/development-tools/architecture-sniffer.html
+    link: docs/scos/dev/sdk/development-tools/architecture-sniffer.html
   - title: Heidelpay - Split-payment Marketplace
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-split-payment-marketplace.html
   - title: Payment Integration - Adyen

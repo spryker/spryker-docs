@@ -17,9 +17,9 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | - | - | - |
-| Spryker Core | {{page.version}}   | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Payments | {{page.version}}   | [Payments feature integration](https://documentation.spryker.com/docs/payments-feature-integration) |
-| Checkout | {{page.version}} | [Checkout feature integration](https://documentation.spryker.com/docs/checkout-feature-integration)
+| Spryker Core | {{page.version}}   | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Payments | {{page.version}}   | [Payments feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/payments-feature-integration.html) |
+| Checkout | {{page.version}} | [Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-feature-integration.html)
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html)
 | Marketplace Order Management | {{page.version}} | [Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-feature-integration.html)
 
@@ -29,7 +29,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker/dummy-marketplace-payment:^0.2.2 --update-with-dependencies 
+composer require spryker/dummy-marketplace-payment:^0.2.2 --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -167,7 +167,7 @@ dummyMarketplacePaymentInvoice,US
 | store | &check; | string | DE | Store identifier. |
 
 3. Import data:
-   
+
 ```bash
 console data:import payment-method
 console data:import payment-method-store
@@ -246,13 +246,13 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
                 new DummyMarketplacePaymentHandlerPlugin(),
                 DummyMarketplacePaymentConfig::PAYMENT_METHOD_DUMMY_MARKETPLACE_PAYMENT_INVOICE
             );
-            
+
             return $paymentMethodHandler;
         });
 
         return $container;
     }
-    
+
     /**
      * @param \Spryker\Yves\Kernel\Container $container
      *

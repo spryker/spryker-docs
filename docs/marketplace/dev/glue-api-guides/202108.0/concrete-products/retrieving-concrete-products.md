@@ -9,9 +9,9 @@ This endpoint allows retrieving general information about concrete products.
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Glue API: Products feature integration](https://documentation.spryker.com/docs/glue-api-products-feature-integration)
-* [Glue API: Measurement Units feature integration](https://documentation.spryker.com/docs/glue-api-measurement-units-feature-integration)
-* [Glue API: Product Options feature integration](https://documentation.spryker.com/docs/glue-product-options-feature-integration)
-* [Glue API: Product Labels feature integration](https://documentation.spryker.com/docs/glue-api-product-labels-feature-integration)
+* [Glue API: Measurement Units feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-measurement-units-feature-integration.html)
+* [Glue API: Product Options feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html)
+* [Glue API: Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-labels-feature-integration.html)
 * [Glue API: Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-feature-integration.html)
 * [Glue API: Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-prices-feature-integration.html)
 * [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-volume-prices.html
@@ -1125,8 +1125,8 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 
 For attributes of the other included resources, see the following:
 
-* [Retrieve sales units of a concrete product](https://documentation.spryker.com/docs/retrieving-sales-units#sales-units-response-attributes)
-* [Retrieve a measurement unit](https://documentation.spryker.com/docs/retrieving-measurement-units#measurement-units-response-attributes)
+* [Retrieve sales units of a concrete product](/docs/scos/dev/glue-api-guides/202108.0/managing-products/concrete-products/retrieving-sales-units.html)
+* [Retrieve a measurement unit](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html#measurement-units-response-attributes)
 * [Retrieve image sets of a concrete product](https://documentation.spryker.com/docs/retrieving-image-sets-of-concrete-products#concrete-image-sets-response-attributes)
 * [Retrieve availability of a concrete product](https://documentation.spryker.com/docs/retrieving-concrete-product-availability#concrete-product-availability-response-attributes)
 * [Retrieve prices of a concrete product](https://documentation.spryker.com/docs/retrieving-concrete-product-prices#concrete-product-prices-response-attributes)
@@ -1144,4 +1144,4 @@ For attributes of the other included resources, see the following:
 | --- | --- |
 | 302 | Concrete product is not found. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

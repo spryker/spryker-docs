@@ -34,15 +34,15 @@ These are the header fields to be included in the .csv file:
 
 This file has the following dependencies:
 
-- [product_abstract.csv](https://documentation.spryker.com/docs/file-details-product-abstractcsv)
-- [product_concrete.csv](https://documentation.spryker.com/docs/file-details-product-concretecsv)
+- [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
+- [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
 - *stores.php* configuration file of the Demo Shop PHP project
 
 ## Template File & Content Example
 
 A template and an example of the *product_price.csv* file can be downloaded here:
 
-| FILE     | DESCRIPTION    |
-| --------------------- | ----------------------------- |
+| FILE | DESCRIPTION |
+| --- | --- |
 | [product_price.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Pricing/Template+product_price.csv) | Product Price .csv template file (empty content, contains headers only). |
 | [product_price.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Pricing/product_price.csv) | Product Price .csv file containing a Demo Shop data sample.  |

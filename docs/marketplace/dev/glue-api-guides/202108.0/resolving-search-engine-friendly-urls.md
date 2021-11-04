@@ -23,7 +23,7 @@ To facilitate their usage, Spryker Glue provides an endpoint that allows resolvi
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Spryker Сore feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html).
 
 ## Resolve a SEF URL into a Glue API URL
 
@@ -171,4 +171,4 @@ Using the information from the response and the Glue server name, you can constr
 | 404 | The provided URL does not exist. |
 | 422 | The `url` parameter is missing. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

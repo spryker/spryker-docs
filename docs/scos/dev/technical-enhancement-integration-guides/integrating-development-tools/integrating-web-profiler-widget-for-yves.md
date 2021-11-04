@@ -17,7 +17,7 @@ redirect_from:
   - /v4/docs/en/web-profiler-widget
 related:
   - title: Web Profiler for Zed
-    link: docs/scos/dev/technical-enhancements/development-tools/integrating-web-profiler-for-zed.html
+    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-for-zed.html
 ---
 
 {% info_block errorBox %}

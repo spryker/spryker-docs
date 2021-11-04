@@ -32,9 +32,6 @@ entries:
       - title: Feature walkthroughs
         nested:
 
-          - title: Merchant 
-            url: /docs/marketplace/dev/feature-walkthroughs/merchant.html
-
           - title: Marketplace Merchant 
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-feature-walkthrough.html
 
@@ -92,7 +89,7 @@ entries:
           - title: Persistence ACL
             url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html
             nested:
-            
+
               - title: Persistence ACL feature configuration
                 url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/persistence-acl-feature-configuration.html
               

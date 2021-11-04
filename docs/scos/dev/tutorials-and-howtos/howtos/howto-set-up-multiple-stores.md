@@ -16,9 +16,9 @@ redirect_from:
   - /docs/en/multiple-stores
 ---
 
-{% info_block warningBox "Warning" %}
+{% info_block warningBox "Cloud environment restrictions" %}
 
-Please note that not all options to set up multiple stores that are currently possible with the Docker SDK will be applicable for our PaaS customers. Some options to set up multiple stores, like creating different regions, is not currently supported for our PaaS customers. Alternatives exist though and we are rolling out documentation that will explain more about this popular topic soon. In the meanwhile: Please do not hesitate to reach out to us and we will help you decide which approach is most suitable for you.
+Currently, Spryker Cloud Commerce OS does not support all the multi-store configuration options, like creation of different regions. Soon we are going to publish the documentaion on all the available configuraiton options for the cloud environment. In the meantime, if you want to set up multiple stores, [contact support](https://spryker.force.com/support/s/knowledge-center).
 
 {% endinfo_block %}
 

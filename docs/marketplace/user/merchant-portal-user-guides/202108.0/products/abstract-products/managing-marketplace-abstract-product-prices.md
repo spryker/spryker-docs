@@ -20,7 +20,7 @@ To add a new price for a marketplace abstract product:
 
 1. Next to the abstract product, where you want to add a price for, hover over the three dots, or just click the line, and then click **Manage Product**. This takes you to the *[Product name]*, *Abstract Product Details* tab.
 2. Scroll down to the *Price* pane.
-3. In the *Price* pane, click **+Add**. The empty cells appear in the table below.
+3. In the *Price* pane, click **+Add Price**. The empty cells appear in the table below.
 4. From the drop-down menu *Store*, select the store for which the price is created.
 5. From the drop-down menu *Currency*, select the currency in which the price is defined.
 6. For *NET DEFAULT* cell, enter a price. Use `.` or `,` separators.

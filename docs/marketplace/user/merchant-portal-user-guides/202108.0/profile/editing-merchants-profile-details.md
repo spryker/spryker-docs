@@ -112,7 +112,7 @@ This section describes attributes you see when editing he merchant's online prof
 | Imprint | In this field, you can specify imprint information. |   |
 | Data Privacy | In this field, you can specify the data privacy statement. |   |
 
-#### Online Status
+#### Store Status
 
 | ATTRIBUTE | DESCRIPTION | REQUIRED? |
 |-|-|-|

@@ -19,7 +19,7 @@ To add a new price for a marketplace concrete product:
 
 1. On the *Concrete Products* page, next to the concrete product you want to edit, hover over the three dots and click **Manage Product** or just click the line. This takes you to the *Concrete Product SKU, Name* page.
 2. Scroll down to the *Price* pane.
-3. In the *Price* pane, click **+Add**. The empty cells appear in the table below.
+3. In the *Price* pane, click **+Add Price**. The empty cells appear in the table below.
 4. From the drop-down menu *Store*, select the store for which the price is created.
 5. From the drop-down menu *Currency*, select the currency in which the price is defined.
 6. For *NET DEFAULT* cell, enter a price. Use `.` or `,` separators.

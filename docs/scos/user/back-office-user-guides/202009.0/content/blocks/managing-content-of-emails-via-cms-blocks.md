@@ -13,9 +13,9 @@ related:
     link: docs/scos/user/features/page.version/cms-feature-overview/email-as-a-cms-block-overview.html
 ---
 
-You can manage the content of emails you send to customers by editing [email templates via CMS Blocks](/docs/scos/user/features/{{page.version/cms-feature-overview/email-as-a-cms-block-overview.html). 
+You can manage the content of emails you send to customers by editing [email templates via CMS Blocks](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html). 
 
-There is a number of default emails that are automatically sent on different occasions like customer registration or order shipment. You can change the default emails by editing their email templates via respective CMS Blocks. See [Default Email Templates](/docs/scos/user/features/{{page.version/cms-feature-overview/email-as-a-cms-block-overview.html) for the full list of the emails with their Email CMS Blocks.
+There is a number of default emails that are automatically sent on different occasions like customer registration or order shipment. You can change the default emails by editing their email templates via respective CMS Blocks. See [Default Email Templates](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html) for the full list of the emails with their Email CMS Blocks.
 
 To start managing the content of emails, go to **Content > Blocks**.
 
@@ -26,7 +26,7 @@ If your development team has introduced a new email for your project, you have t
 
 {% info_block infoBox "Info" %}
 
-You don’t need to create new email CMS Blocks for the [default email templates](/docs/scos/user/features/{{page.version/cms-feature-overview/email-as-a-cms-block-overview.html), instead, you edit the available email CMS Blocks to adjust them to your needs.
+You don’t need to create new email CMS Blocks for the [default email templates](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html), instead, you edit the available email CMS Blocks to adjust them to your needs.
 
 {% endinfo_block %}
 

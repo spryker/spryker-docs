@@ -89,7 +89,8 @@ Activate the following plugin:
 | --- | --- | --- | --- |
 | ProductConfigurationConcreteProductsResourceExpanderPlugin | Expands the `concrete-products` resource with product configuration data. | None | Spryker\Glue\ProductConfigurationsRestApi\Plugin\ProductsRestApi |
 
-**src/Pyz/Glue/ProductsRestApi/ProductsRestApiDependencyProvider.php**
+<details>
+    <summary markdown='span'>src/Pyz/Glue/ProductsRestApi/ProductsRestApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -112,6 +113,8 @@ class ProductsRestApiDependencyProvider extends SprykerProductsRestApiDependency
     }
 }
 ```
+
+</details>
 
 {% info_block warningBox "Verification" %}
 
@@ -269,8 +272,9 @@ class ProductConfigurationsRestApiDependencyProvider extends SprykerProductConfi
 
 </details>
 
+<details>
+    <summary markdown='span'>src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
 
-**src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php**
 ```php
 <?php
 
@@ -293,7 +297,11 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 }
 ``` 
 
-**src/Pyz/Glue/OrdersRestApi/OrdersRestApiDependencyProvider.php**
+</details>
+
+<details>
+    <summary markdown='span'>src/Pyz/Glue/OrdersRestApi/OrdersRestApiDependencyProvider.php</summary>
+
 ```php
 <?php
 
@@ -316,8 +324,9 @@ class OrdersRestApiDependencyProvider extends SprykerOrdersRestApiDependencyProv
 }
 ```
 
-{% info_block warningBox "Verification" %}
+</details>
 
+{% info_block warningBox "Verification" %}
 
 Make sure that the `orders` resource is expanded with the product configuration properties. For an example, see the following response to the `GET https://glue.mysprykershop.com/orders/DE--2` request:
 
@@ -547,11 +556,14 @@ Make sure that the `orders` resource is expanded with the product configuration 
 }
 ```
 
+</details>
 
 {% endinfo_block %}
 
 
-**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
+<details>
+    <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+
 ```php
 <?php
 
@@ -573,6 +585,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
+
+</details>
 
 {% info_block warningBox "Verification" %}
 
@@ -770,7 +784,8 @@ Set up wishlist plugins:
 |ProductConfigurationRestWishlistItemsAttributesDeleteStrategyPlugin | Finds an item by product sku + product configuration instance hash in collection of `WishlistItem` transfer objects and deletes found wishlist item. | None | Spryker\Zed\ProductConfigurationWishlistsRestApi\Communication\Plugin\WishlistsRestApi | 
 |ProductConfigurationRestWishlistItemsAttributesUpdateStrategyPlugin | Finds an item by product sku + product configuration instance hash in collection of `WishlistItem` transfer objects and updates found wishlist item. | None | Spryker\Zed\ProductConfigurationWishlistsRestApi\Communication\Plugin\WishlistsRestApi | 
 
-**src/Pyz/Glue/WishlistsRestApi/WishlistsRestApiDependencyProvider.php**
+<details>
+    <summary markdown='span'>src/Pyz/Glue/WishlistsRestApi/WishlistsRestApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -805,7 +820,10 @@ class WishlistsRestApiDependencyProvider extends SprykerWishlistsRestApiDependen
 }
 ```
 
-**src/Pyz/Glue/ProductConfigurationWishlistsRestApi/ProductConfigurationWishlistsRestApiDependencyProvider.php**
+</details>
+
+<details>
+    <summary markdown='span'>src/Pyz/Glue/ProductConfigurationWishlistsRestApi/ProductConfigurationWishlistsRestApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -840,7 +858,10 @@ class ProductConfigurationWishlistsRestApiDependencyProvider extends SprykerProd
 }
 ```
 
-**src/Pyz/Zed/WishlistsRestApi/WishlistsRestApiDependencyProvider.php**
+</details>
+
+<details>
+    <summary markdown='span'>src/Pyz/Zed/WishlistsRestApi/WishlistsRestApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -874,6 +895,8 @@ class WishlistsRestApiDependencyProvider extends SprykerWishlistsRestApiDependen
     }
 }
 ```
+
+</details>
 
 {% info_block warningBox "Verification" %}
 

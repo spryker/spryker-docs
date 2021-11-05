@@ -82,5 +82,5 @@ You've set up your Spryker B2C Demo Marketplace and can access your applications
 ## Next steps
 
 - For troubleshooting, see [Troubleshooting Spryker in Docker issues](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-spryker-in-docker-issues.html) or [Troubleshooting Spryker in Vagrant installation issues](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/troubleshooting-spryker-in-vagrant-installation-issues.html).
-- Configuring debugging in [Docker](/docs/scos/dev/the-docker-sdk/{{page.version}}/configuring-debugging-in-docker.html) and in [Vagrant](/docs/scos/dev/setup/installing-spryker-with-vagrant/debugger-configuration/configuring-debugging-in-vagrant.html).
-- See Glue API reference at [REST API reference](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html).
+- Configuring debugging in [Docker](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html) and in [Vagrant](/docs/scos/dev/setup/installing-spryker-with-vagrant/debugger-configuration/configuring-debugging-in-vagrant.html).
+- See Glue API reference at [REST API reference](/docs/scos/dev/glue-api-guides/{{site.version}}/rest-api-reference.html).

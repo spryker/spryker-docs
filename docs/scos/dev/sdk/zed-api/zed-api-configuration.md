@@ -22,6 +22,13 @@ redirect_from:
   - /v2/docs/en/zed-api-config
   - /v1/docs/zed-api-config
   - /v1/docs/en/zed-api-config
+  - /docs/scos/dev/sdk/201811.0/zed-api-configuration.html
+  - /docs/scos/dev/sdk/201903.0/zed-api-configuration.html
+  - /docs/scos/dev/sdk/201907.0/zed-api-configuration.html
+  - /docs/scos/dev/sdk/202001.0/zed-api-configuration.html
+  - /docs/scos/dev/sdk/202005.0/zed-api-configuration.html
+  - /docs/scos/dev/sdk/202009.0/zed-api-configuration.html
+  - /docs/scos/dev/sdk/202108.0/zed-api-configuration.html
 ---
 
 First of all we need to decide on the resources being exposed. Those will be mapped inside the `ApiDependencyProvider`:

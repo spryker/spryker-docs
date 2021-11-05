@@ -12,6 +12,13 @@ redirect_from:
   - /docs/en/ts-linter
   - /v6/docs/ts-linter
   - /v6/docs/en/ts-linter
+  - /docs/scos/dev/sdk/201811.0/ts-linter.html
+  - /docs/scos/dev/sdk/201903.0/ts-linter.html
+  - /docs/scos/dev/sdk/201907.0/ts-linter.html
+  - /docs/scos/dev/sdk/202001.0/ts-linter.html
+  - /docs/scos/dev/sdk/202005.0/ts-linter.html
+  - /docs/scos/dev/sdk/202009.0/ts-linter.html
+  - /docs/scos/dev/sdk/202108.0/ts-linter.html
 ---
 
 *TS linter* allows you to find and fix code style mistakes. It helps a team to follow the same standards and make code more readable.

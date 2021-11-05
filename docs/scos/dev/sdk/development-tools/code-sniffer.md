@@ -22,6 +22,13 @@ redirect_from:
   - /v2/docs/en/code-sniffer
   - /v1/docs/code-sniffer
   - /v1/docs/en/code-sniffer
+  - /docs/scos/dev/sdk/201811.0/code-sniffer.html
+  - /docs/scos/dev/sdk/201903.0/code-sniffer.html
+  - /docs/scos/dev/sdk/201907.0/code-sniffer.html
+  - /docs/scos/dev/sdk/202001.0/code-sniffer.html
+  - /docs/scos/dev/sdk/202005.0/code-sniffer.html
+  - /docs/scos/dev/sdk/202009.0/code-sniffer.html
+  - /docs/scos/dev/sdk/202108.0/code-sniffer.html
 
 related:
   - title: Architecture Sniffer

@@ -22,6 +22,13 @@ redirect_from:
   - /v2/docs/en/importer
   - /v1/docs/importer
   - /v1/docs/en/importer
+  - /docs/scos/dev/sdk/201811.0/data-import.html
+  - /docs/scos/dev/sdk/201903.0/data-import.html
+  - /docs/scos/dev/sdk/201907.0/data-import.html
+  - /docs/scos/dev/sdk/202001.0/data-import.html
+  - /docs/scos/dev/sdk/202005.0/data-import.html
+  - /docs/scos/dev/sdk/202009.0/data-import.html
+  - /docs/scos/dev/sdk/202108.0/data-import.html
 related:
   - title: About Demo Shop Data Import
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/importing-demo-shop-data.html

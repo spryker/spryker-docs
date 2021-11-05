@@ -20,6 +20,13 @@ redirect_from:
   - /v3/docs/en/tooling-config-file
   - /v2/docs/tooling-config-file
   - /v2/docs/en/tooling-config-file
+  - /docs/scos/dev/sdk/201811.0/tooling-config-file.html
+  - /docs/scos/dev/sdk/201903.0/tooling-config-file.html
+  - /docs/scos/dev/sdk/201907.0/tooling-config-file.html
+  - /docs/scos/dev/sdk/202001.0/tooling-config-file.html
+  - /docs/scos/dev/sdk/202005.0/tooling-config-file.html
+  - /docs/scos/dev/sdk/202009.0/tooling-config-file.html
+  - /docs/scos/dev/sdk/202108.0/tooling-config-file.html
 related:
   - title: Code Sniffer
     link: docs/scos/dev/sdk/development-tools/code-sniffer.html

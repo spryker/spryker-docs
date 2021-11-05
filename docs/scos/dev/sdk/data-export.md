@@ -14,6 +14,13 @@ redirect_from:
   - /v6/docs/en/data-export
   - /v5/docs/data-export
   - /v5/docs/en/data-export
+  - /docs/scos/dev/sdk/201811.0/data-export.html
+  - /docs/scos/dev/sdk/201903.0/data-export.html
+  - /docs/scos/dev/sdk/201907.0/data-export.html
+  - /docs/scos/dev/sdk/202001.0/data-export.html
+  - /docs/scos/dev/sdk/202005.0/data-export.html
+  - /docs/scos/dev/sdk/202009.0/data-export.html
+  - /docs/scos/dev/sdk/202108.0/data-export.html
 ---
 
 {% info_block warningBox "BETA version" %}

@@ -21,6 +21,13 @@ redirect_from:
   - /v2/docs/en/devvm
   - /v1/docs/devvm
   - /v1/docs/en/devvm
+  - /docs/scos/dev/sdk/201811.0/development-virtual-machine-docker-containers-and-console.html
+  - /docs/scos/dev/sdk/201903.0/development-virtual-machine-docker-containers-and-console.html
+  - /docs/scos/dev/sdk/201907.0/development-virtual-machine-docker-containers-and-console.html
+  - /docs/scos/dev/sdk/202001.0/development-virtual-machine-docker-containers-and-console.html
+  - /docs/scos/dev/sdk/202005.0/development-virtual-machine-docker-containers-and-console.html
+  - /docs/scos/dev/sdk/202009.0/development-virtual-machine-docker-containers-and-console.html
+  - /docs/scos/dev/sdk/202108.0/development-virtual-machine-docker-containers-and-console.html
 ---
 
 Spryker Commerce OS is shipped with an all-inclusive and fully pre-provisioned development environment on a virtual machine, based on Vagrant and VirtualBox. A Docker container-based environment is provided for development as an alternative to the virtual machine.

@@ -1,0 +1,27 @@
+---
+title: Contributing to the Spryker documentation
+description: Find out how you can build the Spryker documentation site and contribute to docs
+template: howto-guide-template
+---
+
+We at Spryker aim to constantly improve the content we provide our customers and partners with. You can get involved in improving the Spryker documentation by reporting issues and editing documentation via pull requests on GitHub.
+
+{% info_block infoBox %}
+
+To report issues and fix documentation, you need a [GitHub account](https://github.com/join). Make sure you are logged in to proceed with issue reports and pull requests.
+
+{% endinfo_block %}
+
+We use [Markdown](https://guides.github.com/features/mastering-markdown/) to write documentation and [Jekyll](https://jekyllrb.com/) to build the documentation site.
+
+## Building the documentation site locally
+
+To build the local copy of the documentation site, follow the instructions below.
+
+### Install Jekyll
+
+Before you begin, make sure you have the following installed:
+
+* [Ruby](https://www.ruby-lang.org/en/downloads/) version 2.4.0 or higher, including all development headers. To check your Ruby version, run `ruby -v`.
+* [RubyGems](https://rubygems.org/pages/download), the latest version. To check your RubyGems version, run `gem -v`.
+* GCC and Make. To check your GCC version, run `gcc -v,g++ -v`, for Make version run `make -v`.

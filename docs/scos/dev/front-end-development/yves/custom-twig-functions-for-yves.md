@@ -20,6 +20,9 @@ redirect_from:
 
 To improve developer experience, [Twig](https://twig.symfony.com/) functionality has been extended with the new Twig functions introduced. All the Twig extension implementations are located in the `ShopUi` module and can be found in `ShopUi/src/SprykerShop/Yves/ShopUi/Twig`.
 
+
+<div>
+
 | Function Name | Description | Method Signature | Usage Example |
 | --- | --- | --- | --- |
 | `publicPath` | <ul><li>Provides a safe way to access the `public` folder where compiled assets are located. Returns a string in the following format:</br>`{publicAssetsPath}{namespaceName}{themeName}{relativeAssetPath}.` For example, `/assets/DE/default/css/yves_default.app.css.`</br>The string is used internally to resolve a component/resource location within a provided module.</li><li>Provides a safe way to access a remote folder where compiled assets are located, e.g. a CDN (Content Delivery Network) resource. See [Custom Location for Static Assets](/docs/scos/dev/technical-enhancement-integration-guides/integrating-custom-location-for-static-assets.html) for more details.</li></ul>|`function publicPath($relativePath: string): string`<ul><li>`$relativePath` - relative asset path (*required*). </li></ul>|`{% raw %}{{{% endraw %} publicPath('css/yves_default.app.css') {% raw %}}}{% endraw %}`</br>`{% raw %}{{{% endraw %} publicPath('js/yves_default.runtime.js') {% raw %}}}{% endraw %}`|
@@ -32,6 +35,8 @@ To improve developer experience, [Twig](https://twig.symfony.com/) functionality
 | `define` | This function is used for:<ul><li>creating a default object that can be changed from an incoming context;</li><li>defining tags used to pass properties and contract for a specific component.</li></ul>For more information, see [How the "define" Twig Tag is Working](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-how-the-define-twig-tag-is-working.html). | None | See **Usage Example: define** below.|
 | `qa` | Returns a string in the following format: `data-qa="qa values here".` | `function qa($qaValues: string[] = []): string` | `{% raw %}{{{% endraw %} qa('submit-button') {% raw %}}}{% endraw %}` |
 | `qa_* ` | Returns a string in the following format: `data-qa-name=“{qa values}”.` | `function qa_*($qaName: string, $qaValues: string[] = []): string`<ul><li>`$qaName` - specifies the name to add in the left side of the data structure.</li></ul> | `{% raw %}{{{% endraw %} qa_additional('value') {% raw %}}}{% endraw %}` |
+
+</div>
 
 **Usage Example: define**
 

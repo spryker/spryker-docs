@@ -505,12 +505,22 @@ entries:
       include_versions:
       - "202009.0"
       - "202108.0"
+    - title: Merchant
+      url: /docs/scos/dev/feature-walkthroughs/merchant-feature-walkthrough.html
+      include_versions:
+      - "202108.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Merchant Custom Prices
       url: /docs/scos/dev/feature-walkthroughs/merchant-custom-prices-feature-walkthrough.html
       include_versions:
       - "202108.0"
     - title: Merchant B2B Contracts
-      url: /docs/scos/dev/feature-walkthroughs/merchant-b2b-contracts-feature-walkthrpugh.html
+      url: /docs/scos/dev/feature-walkthroughs/merchant-b2b-contracts-feature-walkthrough.html
       include_versions:
       - "202108.0"
     - title: Product

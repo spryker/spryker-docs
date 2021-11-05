@@ -1,7 +1,7 @@
 ---
 title: Marketplace Merchant Portal Core feature walkthrough
 description: Marketplace MerchantPortal Core enables server configuration and the basic functionality of the Merchant Portal such as security login.
-template: feature-walkthrough-template
+template: concept-topic-template
 ---
 
 The Marketplace Merchant Portal Core enables server configuration and basic functions of the Merchant Portal application, such as security login, GUI tables, dashboards, etc. Merchant Portal and Back Office are separate applications with different entry points, bootstraps, and possibilities to register application plugins, configure application base URLs, debug, etc.

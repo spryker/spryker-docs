@@ -1,6 +1,6 @@
 ---
 title: Rendering merchant product offers on the Storefront
-last_updated: Apr 23, 2021
+last_updated: Nov 05, 2021
 description: Learn how to render the Merchant Product Offers on the Storefront.
 template: howto-guide-template
 ---
@@ -11,7 +11,7 @@ This article explains how to render the Merchant Product Offers on the Storefron
 
 The [MerchantProductOfferWidget] (https://github.com/spryker-shop/merchant-product-offer-widget) module is responsible for rendering Product Offers on the Storefront. Make sure it is installed in your project before adding the Product Offers to the Storefront.
 
-## Rendering product offers on the Product Detail page
+## Rendering product offers on the Product Details page
 
 To render the MerchantProductOfferWidget on the product detail page, add it to the `product-configurator.twig` molecule at the project and vendor levels.
 

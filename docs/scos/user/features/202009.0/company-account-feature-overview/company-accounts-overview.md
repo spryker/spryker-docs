@@ -109,7 +109,7 @@ Company users can perform the following actions on the Storefront:
                 <li><a href="https://documentation.spryker.com/docs/company-account-general-organizational-structure" class="mr-link">Get a general idea of the Company Account organizational structure</a></li>
                 <li><a href="https://documentation.spryker.com/docs/company-user-roles-and-permissions" class="mr-link">Get a general idea of company user roles and permissions</a></li>
                 <li><a href="https://documentation.spryker.com/docs/mg-companyuser#upgrading-from-version-1-0-0-to-version-2-0-0" class="mr-link">Migrate the CompanyUser module from version 1.* to version 2.*</a></li>
-                <li><a href="https://documentation.spryker.com/docs/company-account-integration-201907" class="mr-link">Enable company accounts by integrating the Company Account feature into your project</a></li>
+                <li><a href="/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html-201907" class="mr-link">Enable company accounts by integrating the Company Account feature into your project</a></li>
             <li><a href="https://documentation.spryker.com/docs/en/retrieving-company-information-201907" class="mr-link">Retrieve company information via Glue API</a></li>    
             </ul>
         </div>

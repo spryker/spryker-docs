@@ -23,7 +23,7 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html
 ---
 
-This topic describes how to create [abstract products](https://documentation.spryker.com/v6/docs/products-overview#abstract-products-and-product-variants) and [product bundles](/docs/scos/user/features/{{page.version}}/product-bundles/product-bundles-feature-overview.html).
+This topic describes how to create [abstract products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants) and [product bundles](/docs/scos/user/features/{{page.version}}/product-bundles/product-bundles-feature-overview.html).
 
 
 ## Prerequisites 
@@ -68,7 +68,7 @@ This opens the **Prices & Tax** tab.
 | SKU Prefix | Unique product identifier that will be used to track unique information related to the product. |
 | Name | The name that will be displayed for the product on the Storefront. | 
 | Description | The description that will be displayed for the product on the Storefront. | 
-| New from<br>New to  | Defines the period of time for which: <br><ul><li>A [dynamic product label](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) *New* will be assigned to the product.</li><li>The product will be assigned to the *New* [category](/docs/scos/user/features/{{page.version}}category-management-feature-overview.html)</li></ul><br> You can either select no dates or both. | 
+| New from<br>New to  | Defines the period of time for which: <br><ul><li>A [dynamic product label](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) *New* will be assigned to the product.</li><li>The product will be assigned to the *New* [category](/docs/scos/user/features/{{page.version}}/category-management-feature-overview.html)</li></ul><br> You can either select no dates or both. | 
 </div>
 
 ## Defining prices

@@ -36,7 +36,7 @@ In a Spryker shop, the shopping list widget is displayed in the header. With the
                 <li><a href="/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/cart-module-reference-information.html#cart-operations" class="mr-link">Learn about the Cart module</a></li>
                 <li><a href="/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/calculation-3-0.html" class="mr-link">Learn about the Calculation module</a></li>
                 <li><a href="/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/calculation-data-structure.html" class="mr-link">Learn about calculation data structure</a></li>
-                <li><a href="https://documentation.spryker.com/docs/calculator-plugins" class="mr-link">Learn about calculation plugins</a></li>
+                <li><a href="/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/calculator-plugins.html" class="mr-link">Learn about calculation plugins</a></li>
                 <li><a href="/docs/scos/user/features/{{page.version}}/cart-feature-overview/cart-notes-overview.html" class="mr-link">Get a general idea of cart notes</a></li>
                <li><a href="https://documentation.spryker.com/docs/en/managing-guest-carts" class="mr-link">Manage guest carts via Glue API</a></li>
                 <li><a href="https://documentation.spryker.com/docs/en/managing-carts-of-registered-users" class="mr-link">Manage carts of registered users via Glue API</a></li>

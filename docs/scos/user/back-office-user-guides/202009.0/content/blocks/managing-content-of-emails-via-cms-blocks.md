@@ -75,7 +75,7 @@ To edit an email CMS block:
 
 {% info_block warningBox "Note" %}
 
-If you updated the **name**, pass it to your development team to update the name of the respective [.twig email template](https://documentation.spryker.com/v6/docs/en/email-as-a-cms-block-overview). 
+If you updated the **name**, pass it to your development team to update the name of the respective [.twig email template](/https://docs.spryker.com/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html). 
 
 {% endinfo_block %}
 

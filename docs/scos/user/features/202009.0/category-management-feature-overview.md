@@ -73,7 +73,7 @@ Currently, the Category Management feature has the following functional constrai
 |---|
 | [Create a category](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html) |
 | [Assign products to categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html) |
-| [Manage categories](/docs.spryker.com/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/managing-categories.html) |
+| [Manage categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/managing-categories.html) |
 
 
 - Every product attribute can be used as a filter

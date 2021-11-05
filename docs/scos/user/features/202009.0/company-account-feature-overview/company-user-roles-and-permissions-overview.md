@@ -27,8 +27,11 @@ Each Company role contains a set of permissions in the form of **Permission** ke
 The Permission keys define what the users are allowed to do.
 
 {% info_block infoBox %}
+
 For example, a user can be allowed to add products to cart.
+
 {% endinfo_block %}
+
 Permissions that can be used are not limited in any way - you can create and integrate any permissions. Each of the permissions is represented as a plugin in the code.
 
 Here is another example of the connection between company roles and permissions:
@@ -51,39 +54,13 @@ Company roles and permissions and their relation to the organizational structure
 
 ## Permission types
 Permissions can be simple and complex.
-<table>
-	<th>Permission Type</th>
-	<th>Description</th>
-	<th>Example</th>
-	<tr>
-        <td><b>Simple</b></td>
-		<td>	Simple permissions are those that do not have any logic behind them and answer the question “Does the customer have a permission?”. Simple permissions implement only PermissionPluginInterface (Shared).</td>
-		<td>
-            <p>A Company User is allowed (or not allowed) to access product details page.</p>
-          
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/simple_permissions.png) 
+|Permission Type|Description|Example|
+|--- |--- |--- |
+|Simple|Simple permissions are those that do not have any logic behind them and answer the question “Does the customer have a permission?”. Simple permissions implement only PermissionPluginInterface (Shared).|A Company User is allowed (or not allowed) to access product details page. ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/simple_permissions.png)|
+|Complex|Complex permissions have some logic behind them and answer the question “Does the customer have a permission with some parameters and business logic?”. Complex permissions implement ExecutablePermissionPluginInterface (Shared).|A Company User is allowed (or not allowed) to place an order with grand total over 1000 Euro. ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/complex_permissions.png)|
+|Infrastructural|Some permissions should not be managed in the UI, but programatically. Infrastructural permissions implement InfrastructuralPermissionPluginInterface (Shared).|Read shared cart, which is managed by the Shared Carts feature.|
 
-
-</td>
-	</tr>
-	<tr>
-        <td><b>Complex</b></td>
-		<td>Complex permissions have some logic behind them and answer the question “Does the customer have a permission with some parameters and business logic?”. Complex permissions implement ExecutablePermissionPluginInterface (Shared).</td>
-		<td>
-           <p> A Company User is allowed (or not allowed) to place an order with grand total over 1000 Euro.</p>
-       
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/complex_permissions.png)
-        </td>
-	</tr>
-    <tr>
-        <td><b>Infrastructural</b></td>
-		<td>Some permissions should not be managed in the UI, but programatically. Infrastructural permissions implement InfrastructuralPermissionPluginInterface (Shared).</td>
-		<td>
-           <p> Read shared cart, which is managed by the Shared Carts feature.</p>
-       </td>
-	</tr>
-</table>
 
 {% info_block infoBox %}
 Some of the Permissions can be configured for specific roles, for example, “allow adding no more than X items to cart” for junior support engineer.<br>Or for example, some specific products are not allowed to be viewed by anyone, but Admin and Top Managers.<br>These values are referred to as **Company Role Permissions**.

@@ -33,9 +33,12 @@ To start working with product sets, go to **Merchandising** > **Product Sets** s
 3. Select **Next** to proceed to the **Products** tab, or just click on it.
     The **Product** tab is where you will select which products should be included in your product set. 
 4. To add products, simply select the checkbox next to your desired products in the **Selected** column. You can use the available search tool on the top right of the **Select Products to assign** tab on this page. You can select as many products as needed — there is no limit.
-    {% info_block errorBox "Important" %}
+{% info_block errorBox "Important" %}
+
 Any Product Set requires a minimum of two Products.
+    
 {% endinfo_block %}
+
 5. Select **Next** to proceed to the **SEO** tab, or just click on it.
     This tab is used to add a piece of friendly SEO information for your product set to improve the search.
 6. On the **SEO** tab, enter the SEO information for your product set. See [Product Sets: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-sets/references/reference-information-product-sets.html) to know more about the SEO attributes. Fill in all this information for any languages your store requires. None of the SEO descriptions or title will be shown in the online store.

@@ -2,7 +2,7 @@
 title: Marketplace Product Offer feature walkthrough
 last_updated: Apr 23, 2021
 description: Product Offer is created when merchants wants to sell products already available on Marketplace.
-template: concept-topic-template
+template: feature-walkthrough-template
 redirect_from: /docs/marketplace/dev/feature-walkthroughs/202108.0/marketplace-product-offer-feature-walkthrough/rendering-merchant-product-offers-on-the-storefront.html
 ---
 

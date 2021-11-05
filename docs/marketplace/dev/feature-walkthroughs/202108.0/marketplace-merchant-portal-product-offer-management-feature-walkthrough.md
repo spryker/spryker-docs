@@ -1,7 +1,7 @@
 ---
 title: Marketplace Merchant Portal Product Offer Management feature walkthrough
 description: This article provides reference information about product offers in the Merchant Portal.
-template: concept-topic-template
+template: feature-walkthrough-template
 ---
 
 The *Marketplace Merchant Portal Product Offer Management* feature allows merchants to manage product offers and their prices, stock, validity dates in the Merchant Portal.

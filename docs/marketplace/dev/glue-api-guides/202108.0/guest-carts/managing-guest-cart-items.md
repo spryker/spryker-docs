@@ -1806,7 +1806,6 @@ To change item quantity, send the request:
 | sku | String |  | SKU of the item to be updated. |
 | quantity | String | &check; | Quantity of the item to be set. |
 
-
 For more request body examples, see [Add items to a guest cart](#add-items-to-a-guest-cart)
 
 ### Response
@@ -1821,6 +1820,7 @@ To remove an item from a guest cart, send the request:
 `DELETE` {% raw %}**/guest-carts/*{{guest_cart_id}}*/guest-cart-items/*{{groupKey}}***{% endraw %}
 
 ***
+
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | {% raw %}***{{guest_cart_id}}***{% endraw %}| Unique identifier of the guest cart. To get it, [retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart). |
@@ -1830,7 +1830,7 @@ To remove an item from a guest cart, send the request:
 
 | HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | Hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](https://documentation.spryker.com/docs/managing-guest-carts#create-a-guest-cart). |
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | Hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart). |
 
 Request sample: `DELETE https://glue.mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802/guest-cart-items/177_25913296`
 
@@ -1839,7 +1839,6 @@ Request sample: `DELETE https://glue.mysprykershop.com/guest-carts/2506b65c-164b
 If the item is deleted successfully, the endpoint returns the "204 No Content" status code.
 
 ## Possible errors
-
 
 | CODE | REASON |
 | --- | --- |

@@ -8,7 +8,7 @@ template: back-office-user-guide-template
 ## Prerequisites
 
 To start working with products:
-1. To create product variants of abstract products, [create at least one super attribute](https://documentation.spryker.com/docs/creating-product-attributes).
+1. To create product variants of abstract products, [create at least one super attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html).
 2. Go to  **Catalog** > **Products**.
 
 Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
@@ -45,11 +45,11 @@ The following table describes the attributes you enter and select when defining 
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-| Store relation  | Defines the [stores](https://documentation.spryker.com/docs/multiple-stores) the product will be available in.<br>You can select multiple values. |
+| Store relation  | Defines the [stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) the product will be available in.<br>You can select multiple values. |
 | SKU Prefix | Unique product identifier that will be used to track unique information related to the product. |
 | Name | Name that will be displayed for the product on the Storefront. |
 | Description | Description that will be displayed for the product on the Storefront. |
-| New from<br>New to  | Defines the period of time for which: <br><ul><li>A [dynamic product label](https://documentation.spryker.com/docs/product-labels-feature-overview) *New* will be assigned to the product.</li><li>The product will be assigned to the *New* [category](https://documentation.spryker.com/docs/category-management-feature-overview)</li></ul><br> You can either select no dates or both. |
+| New from<br>New to  | Defines the period of time for which: <br><ul><li>A [dynamic product label](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) *New* will be assigned to the product.</li><li>The product will be assigned to the *New* [category](/docs/scos/user/features/{{page.version}}/category-management-feature-overview.html)</li></ul><br> You can either select no dates or both. |
 
 
 ## Defining prices
@@ -69,10 +69,10 @@ The following table describes the attributes you enter and select when defining 
 
 | ATTRIBUTE |DESCRIPTION |
 | --- | --- |
-|Merchant Price Dimension| B2B only<br>Defines the [merchant](https://documentation.spryker.com/docs/price-per-merchant-relation-feature-overview) the prices will apply to.<br>If you select **Default prices**, the prices will apply to all customers.<br>To [manage merchant relations](https://documentation.spryker.com/docs/managing-merchant-relations) go to **Marketplace** > **Merchant Relations**. |
-| Gross price<br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price  before tax.<br>If a product variant of the abstract product does not have a price, it [inherits](https://documentation.spryker.com/docs/product-feature-overview#product-information-inheritance) the price you enter here. |
+|Merchant Price Dimension| B2B only<br>Defines the [merchant](/docs/scos/user/features/{{page.version}}/merchant-custom-prices-feature-overview.html) the prices will apply to.<br>If you select **Default prices**, the prices will apply to all customers.<br>To [manage merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}marketplace/merchants-and-merchant-relations/managing-merchant-relations.html) go to **Marketplace** > **Merchant Relations**. |
+| Gross price<br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price  before tax.<br>If a product variant of the abstract product does not have a price, it [inherits](/docs/marketplace/user/features/{{page.version}}/marketplace-product-feature-overview.html) the price you enter here. |
 |Default<br>Original | Default price is the price a customer pays for the product. An original price is a price displayed as a strikethrough beside the default price on the Storefront. The original price is optional and is usually used to indicate a price change. |
-| Tax Set | Conditions under which the product will be taxed.<br>To [manage tax sets](https://documentation.spryker.com/docs/managing-tax-sets), go to **Taxes** > **Tax Sets**.|
+| Tax Set | Conditions under which the product will be taxed.<br>To [manage tax sets](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/managing-tax-sets.html), go to **Taxes** > **Tax Sets**.|
 
 ## Defining product variants
 
@@ -87,7 +87,7 @@ In the *Variants* tab, define product variants:
 
 ### Reference information: Defining product variants
 
-In the *Variants* tab, you can see all the existing [super attributes](https://documentation.spryker.com/docs/product-feature-overview#super-attributes). You can [create](https://documentation.spryker.com/docs/creating-product-attributes) or [manage](https://documentation.spryker.com/docs/managing-attributes) super attributes in **Catalog** > **Attributes**.
+In the *Variants* tab, you can see all the existing [super attributes](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html#super-attributes). You can [create](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html) or [manage](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/managing-product-attributes.html) super attributes in **Catalog** > **Attributes**.
 
 You can select as many super attributes as you need and define one or more values for them. For each product attribute value you select, a product variant will be created. After creating the abstract product, you will be able to create new product variants based on the super attributes you select when creating the abstract product.
 
@@ -146,6 +146,4 @@ The following table describes the attributes you enter and select when adding im
 
 ## Next steps
 
-* [Add volume prices](https://documentation.spryker.com/docs/adding-volume-prices-to-abstract-products)
-* [Add scheduled prices](https://documentation.spryker.com/docs/adding-scheduled-prices-to-abstract-products)
-* [Edit abstract products](https://documentation.spryker.com/docs/editing-abstract-products)
+* [Edit abstract products](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/editing-abstract-products.html)

@@ -6,15 +6,15 @@ template: concept-topic-template
 
 This article describes how to get started with the B2C Demo Marketplace.
 
-For the detailed installation instructions, see [Installing Spryker with Docker](https://documentation.spryker.com/docs/installing-spryker-with-docker) or [Installing Spryker with the Development Virtual Machine](https://documentation.spryker.com/docs/dev-getting-started#installing-spryker-with-development-virtual-machine).
+For the detailed installation instructions, see [Installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html) or [Installing Spryker with the Development Virtual Machine](/docs/scos/dev/developer-getting-started-guide.html).
 
 ## Prerequisites
 
 For the entire installation prerequisites, see one of the following:
 
-- [Installing Docker prerequisites on MacOS](https://documentation.spryker.com/docs/installing-docker-prerequisites-on-macos)
-- [Installing Docker prerequisites on Linux](https://documentation.spryker.com/docs/installing-docker-prerequisites-on-linux)
-- [Installing Docker prerequisites on Windows](https://documentation.spryker.com/docs/installing-docker-prerequisites-on-windows)
+- [Installing Docker prerequisites on MacOS](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-macos.html)
+- [Installing Docker prerequisites on Linux](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-linux.html)
+- [Installing Docker prerequisites on Windows](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl2.html)
 
 ## Requirements
 
@@ -25,7 +25,7 @@ For the recommended system requirements, see [System requirements](/docs/marketp
 To install the B2C Demo Marketplace:
 
 1. Create a project folder and clone the B2C Demo Marketplace and the Docker SDK:
-   
+
 ```bash
 mkdir spryker-b2c-marketplace && cd spryker-b2c-marketplace
 
@@ -81,6 +81,6 @@ You've set up your Spryker B2C Demo Marketplace and can access your applications
 
 ## Next steps
 
-- For troubleshooting, see [Troubleshooting Spryker in Docker issues](https://documentation.spryker.com/docs/troubleshooting-spryker-in-docker-issues) or [Troubleshooting Spryker in Vagrant installation issues](https://documentation.spryker.com/docs/troubleshooting-spryker-in-vagrant-installation-issues).
-- Configuring debugging in [Docker](https://documentation.spryker.com/docs/configuring-debugging-in-docker) and in [Vagrant](https://documentation.spryker.com/docs/configuring-debugging-in-vagrant).
-- See Glue API reference at [REST API reference](https://documentation.spryker.com/docs/rest-api-reference).
+- For troubleshooting, see [Troubleshooting Spryker in Docker issues](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-spryker-in-docker-issues.html) or [Troubleshooting Spryker in Vagrant installation issues](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/troubleshooting-spryker-in-vagrant-installation-issues.html).
+- Configuring debugging in [Docker](/docs/scos/dev/the-docker-sdk/{{page.version}}/configuring-debugging-in-docker.html) and in [Vagrant](/docs/scos/dev/setup/installing-spryker-with-vagrant/debugger-configuration/configuring-debugging-in-vagrant.html).
+- See Glue API reference at [REST API reference](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html).

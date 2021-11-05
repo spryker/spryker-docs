@@ -4,7 +4,7 @@ description: Retrieve details about wishlists and learn what else you can do wit
 template: glue-api-storefront-guide-template
 ---
 
-The Marketplace Wishlists API allows creating list and deleting [wishlists](https://documentation.spryker.com/docs/wishlist-feature-overview) in the Marketplace, as well as managing the items in them.
+The Marketplace Wishlists API allows creating list and deleting [wishlists](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html) in the Marketplace, as well as managing the items in them.
 
 ## Installation
 
@@ -422,7 +422,7 @@ For attributes of the included resources, see:
 
 - [Add an item to a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlist-items.html#add-an-item-to-a-wishlist)
 - [Retrieve a concrete product](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
-- [Retrieve a product label](https://documentation.spryker.com/docs/retrieving-product-labels#product-labels-response-attributes)
+- [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html)
 
 ## Retrieve a wishlist
 
@@ -434,7 +434,7 @@ To retrieve a specific wishlist, send the request:
 
 | PATH PARAMETER        | DESCRIPTION      |
 | ---------------- | ------------------------- |
-| {% raw %}***{{wishlist_id}}***{% endraw %} | Unique identifier of the wishlist to retrieve the items of. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](https://documentation.spryker.com/docs/managing-wishlists#retrieve-wishlists) to get it. |
+| {% raw %}***{{wishlist_id}}***{% endraw %} | Unique identifier of the wishlist to retrieve the items of. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
 
 ### Request
 
@@ -2219,15 +2219,13 @@ For the attributes of the included resources, see
 
 [Retrieving concrete products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 
-[Retrieving concrete product availabilities](https://documentation.spryker.com/docs/retrieving-concrete-product-availability)
+[Retrieving concrete product availabilities](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-product-availability.html)
 
-[Retrieving concrete product prices](https://documentation.spryker.com/docs/retrieving-concrete-product-prices)
+[Retrieving concrete product prices](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-product-prices.html)
 
 [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html)
 
 [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html#merchants-response-attributes)
-
-
 
 ## Edit a wishlist
 

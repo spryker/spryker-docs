@@ -8,7 +8,7 @@ This endpoint allows managing carts by creating, retrieving, and deleting them.
 
 ## Multiple carts
 
-Unlike guest carts, carts of registered users have an unlimited lifetime. Also, if the [Multiple Carts feature is integrated into your project](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-feature-integration.html), and [Glue API is enabled for multi-cart operations](https://documentation.spryker.com/docs/multiple-carts-feature-integration), registered users can have an unlimited number of carts.
+Unlike guest carts, carts of registered users have an unlimited lifetime. Also, if the [Multiple Carts feature is integrated into your project](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-feature-integration.html), and [Glue API is enabled for multi-cart operations](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-feature-integration.html), registered users can have an unlimited number of carts.
 
 
 ## Installation
@@ -2451,8 +2451,8 @@ To retrieve all carts, send the request:
 For the attributes of the included resources, see:
 * [Retrieve a concrete product](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
 * [Add an item to a registered user's cart](/docs/marketplace/dev/glue-api-guides/{{page.version}}/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart)
-* [Managing gift cards of registered users](https://documentation.spryker.com/docs/gift-cards-of-registered-users)
-* [Retrieving product labels](https://documentation.spryker.com/docs/en/retrieving-product-labels#product-labels-response-attributes)
+* [Managing gift cards of registered users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html)
+* [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html)
 * [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html#product-offers-response-attributes)
 * [Retrieving product offer prices](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offer-prices.html#product-offer-prices-response-attributes)
 * [Retrieving product availability](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offer-availability.html#product-offer-availability-response-attributes)

@@ -8,11 +8,11 @@ redirect_from:
   - /docs/en/setting-up-a-custom-domain-name-with-route-53
 ---
 
-This document describes how to set up a custom domain name (domain) with its DNS zone hosted by [Route53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html). 
+This document describes how to set up a custom domain name (domain) with its DNS zone hosted by [Route53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html).
 
 ## 1. Set up hosted zones
 
-To set up a hosted zone, provide the domain name via [support](https://spryker.force.com/support/s/). 
+To set up a hosted zone, provide the domain name via [support](https://spryker.force.com/support/s/).
 
 ## 2. Point domain names to Route 53
 
@@ -27,10 +27,10 @@ For a domain to start using the created hosted zone:
 7. Optional: [Set up a custom SSL certificate for the domain](/docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-ssl-certificate.html).
 
 
-
 ## 3. Define domain names
-In Spryker Cloud Commerce OS, infrastructure deployment is based on the application configuration. 
-Domains are defined in a [deploy.*.yml](https://documentation.spryker.com/docs/deploy-file-reference-10) file used by the [Docker SDK](https://documentation.spryker.com/docs/docker-sdk) tool to build applications.
+
+In Spryker Cloud Commerce OS, infrastructure deployment is based on the application configuration.
+Domains are defined in a [deploy.*.yml](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file-reference-1.0.html) file used by the [Docker SDK](/docs/scos/dev/the-docker-sdk/{{site.version}}/the-docker-sdk.html) tool to build applications.
 
 To define a custom domain, edit `deploy.{project_name}-prod.yml` for the production environment or `deploy.{project_name}-staging.yml` for the staging environment:
 
@@ -71,14 +71,14 @@ groups:
 
 See [Deploy File Reference - 1.0](https://documentation.spryker.com/docs/deploy-file-reference-10) to learn more about deploy file configuration.
 
-4. Depending on the environment you are setting up the domain for: 
+4. Depending on the environment you are setting up the domain for:
 
 * [Deploy the application in the production environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html).
 
 * [Deploy the application in the staging environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-staging-environment.html).
 
 
-5.  Let us know about the desired change via [support](https://spryker.force.com/support/s/). 
+5.  Let us know about the desired change via [support](https://spryker.force.com/support/s/).
 
 Give the DNS configuration 24-48 hours to propagate and you will be able to access your application via the domain.
 
@@ -87,4 +87,3 @@ Give the DNS configuration 24-48 hours to propagate and you will be able to acce
 ## Next step
 
 [Setting up a custom SSL certificate](/docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-ssl-certificate.html)
-

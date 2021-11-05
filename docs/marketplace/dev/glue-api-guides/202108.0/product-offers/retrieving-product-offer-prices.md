@@ -87,7 +87,7 @@ Response sample:
 | prices.currency.code   | String  | Currency code.   |
 | prices.currency.name   | String  | Currency name.  |
 | prices.currency.symbol   | String  | Currency symbol.  |
-| prices.volumePrices   | Object  |  An array of objects defining the [volume prices](https://documentation.spryker.com/docs/volume-prices-overview) of the product offer.  |
+| prices.volumePrices   | Object  |  An array of objects defining the [volume prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html) of the product offer.  |
 | prices.volumePrices.grossAmount | Integer   |  Gross volume price in cents.         |
 | prices.volumePrices.netAmount | Integer   | Net volume price in cents.          |
 | prices.volumePrices.quantity  |  Integer         | Required quantity of items in offer for the volume price to apply.  |

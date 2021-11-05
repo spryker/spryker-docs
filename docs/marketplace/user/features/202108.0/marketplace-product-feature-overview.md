@@ -61,8 +61,8 @@ Merchants create and manage their products <!---LINK--> in the Merchant Portal. 
 
 | MERCHANT PORTAL USER GUIDES  | BACK OFFICE USER GUIDES |
 | -------------------- | ----------------------- |
-| Managing merchant products <!---LINK--> | [Editing abstract products](https://documentation.spryker.com/docs/editing-abstract-products) |
-| | [Editing a product variant](https://documentation.spryker.com/docs/editing-a-product-variant) |
+| Managing merchant products <!---LINK--> | [Editing abstract products](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/editing-abstract-products.html) |
+| | [Editing a product variant](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/editing-abstract-products.html#editing-product-variants-of-an-abstract-product) |
 
 {% info_block warningBox "Developer guides" %}
 

@@ -18,7 +18,7 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | LINK |
 | --------------- | ------- | ---------- |
-| Marketplace Product Option | {{page.version}}      | [Marketplace Product Option Feature Integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-product-option-feature-integration.html) |
+| Marketplace Product Option | {{page.version}}      | [Marketplace Product Option Feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-option-feature-integration.html) |
 | Checkout | {{page.version}} | [Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-feature-integration.html) |
 
 ### 1) Set up behavior

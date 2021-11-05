@@ -5,7 +5,7 @@ description: This document describes the product_price.csv file to configure  pr
 template: import-file-template
 ---
 
-This article contains content of the **product_price.csv** file to configure [prices](https://documentation.spryker.com/docs/price) of the products/services in your Spryker Demo Shop.
+This article contains content of the **product_price.csv** file to configure [prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html) of the products/services in your Spryker Demo Shop.
 
 To import the file, run:
 

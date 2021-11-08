@@ -90,7 +90,7 @@ Activate the following plugin:
 | ProductConfigurationConcreteProductsResourceExpanderPlugin | Expands the `concrete-products` resource with product configuration data. | None | Spryker\Glue\ProductConfigurationsRestApi\Plugin\ProductsRestApi |
 
 <details>
-    <summary markdown='span'>src/Pyz/Glue/ProductsRestApi/ProductsRestApiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/ProductsRestApi/ProductsRestApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -124,7 +124,7 @@ Make sure that the `https://glue.mysprykershop.com/concrete-products/{% raw %}{{
 Make sure that the `concrete-products` resource is expanded with the product configuration properties. For an example, see the following response to the `GET https://glue.mysprykershop.com/concrete-products/093_24495843` request.
 
 <details>
-    <summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -197,7 +197,7 @@ Activate the following plugins:
 
 
 <details>
-    <summary markdown='span'>src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -235,7 +235,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 </details>
 
 <details>
-    <summary markdown='span'>src/Pyz/Glue/ProductConfigurationsRestApi/ProductConfigurationsRestApiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/ProductConfigurationsRestApi/ProductConfigurationsRestApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -273,7 +273,7 @@ class ProductConfigurationsRestApiDependencyProvider extends SprykerProductConfi
 </details>
 
 <details>
-    <summary markdown='span'>src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -300,7 +300,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 </details>
 
 <details>
-    <summary markdown='span'>src/Pyz/Glue/OrdersRestApi/OrdersRestApiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/OrdersRestApi/OrdersRestApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -331,7 +331,7 @@ class OrdersRestApiDependencyProvider extends SprykerOrdersRestApiDependencyProv
 Make sure that the `orders` resource is expanded with the product configuration properties. For an example, see the following response to the `GET https://glue.mysprykershop.com/orders/DE--2` request:
 
 <details>
-    <summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -562,7 +562,7 @@ Make sure that the `orders` resource is expanded with the product configuration 
 
 
 <details>
-    <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -594,7 +594,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 Make sure that the `items` resource is expanded with the product configuration properties. For an example, see the following response to the `POST https://glue.mysprykershop.com/carts/2f0a0b59-b988-5829-8fd3-6d636fc8ea33/items?include=items` request:
 
 <details>
-    <summary markdown='span'>Request sample</summary>
+<summary markdown='span'>Request sample</summary>
 
 ```json
 {
@@ -648,7 +648,7 @@ Make sure that the `items` resource is expanded with the product configuration p
 </details>
 
 <details>
-    <summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
     
 ```json
 {
@@ -781,11 +781,11 @@ Set up wishlist plugins:
 |ProductConfigurationWishlistItemRequestMapperPlugin | Maps the `RestWishlistItemsAttributesTransfer::productConfigurationInstance` to `WishlistItemRequestTransfer::productConfigurationInstance`. | None | Spryker\Glue\ProductConfigurationWishlistsRestApi\Plugin\WishlistsRestApi | 
 |ProductConfigurationVolumePriceProductConfigurationPriceMapperPlugin | Maps product configuration volume price data to `ProductConfigurationInstanceTransfer`. | None | Spryker\Glue\ProductConfigurationsPriceProductVolumesRestApi\Plugin\ProductConfigurationWishlistsRestApi | 
 |ProductConfigurationVolumePriceRestProductConfigurationPriceMapperPlugin | Maps product configuration volume price data to `RestProductConfigurationPriceAttributesTransfer[]`. | None | Spryker\Glue\ProductConfigurationsPriceProductVolumesRestApi\Plugin\ProductConfigurationWishlistsRestApi | 
-|ProductConfigurationRestWishlistItemsAttributesDeleteStrategyPlugin | Finds an item by product sku + product configuration instance hash in collection of `WishlistItem` transfer objects and deletes found wishlist item. | None | Spryker\Zed\ProductConfigurationWishlistsRestApi\Communication\Plugin\WishlistsRestApi | 
-|ProductConfigurationRestWishlistItemsAttributesUpdateStrategyPlugin | Finds an item by product sku + product configuration instance hash in collection of `WishlistItem` transfer objects and updates found wishlist item. | None | Spryker\Zed\ProductConfigurationWishlistsRestApi\Communication\Plugin\WishlistsRestApi | 
+|ProductConfigurationRestWishlistItemsAttributesDeleteStrategyPlugin | Finds an item by product sku + product configuration instance hash in the collection of `WishlistItem` transfer objects and deletes found wishlist item. | None | Spryker\Zed\ProductConfigurationWishlistsRestApi\Communication\Plugin\WishlistsRestApi | 
+|ProductConfigurationRestWishlistItemsAttributesUpdateStrategyPlugin | Finds an item by product sku + product configuration instance hash the in collection of `WishlistItem` transfer objects and updates found wishlist item. | None | Spryker\Zed\ProductConfigurationWishlistsRestApi\Communication\Plugin\WishlistsRestApi | 
 
 <details>
-    <summary markdown='span'>src/Pyz/Glue/WishlistsRestApi/WishlistsRestApiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/WishlistsRestApi/WishlistsRestApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -823,7 +823,7 @@ class WishlistsRestApiDependencyProvider extends SprykerWishlistsRestApiDependen
 </details>
 
 <details>
-    <summary markdown='span'>src/Pyz/Glue/ProductConfigurationWishlistsRestApi/ProductConfigurationWishlistsRestApiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/ProductConfigurationWishlistsRestApi/ProductConfigurationWishlistsRestApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -861,7 +861,7 @@ class ProductConfigurationWishlistsRestApiDependencyProvider extends SprykerProd
 </details>
 
 <details>
-    <summary markdown='span'>src/Pyz/Zed/WishlistsRestApi/WishlistsRestApiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/WishlistsRestApi/WishlistsRestApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -904,7 +904,7 @@ Ensure that wishlist item CRUD operations support configurable products.
 For an example, see the following response to the `POST https://glue.mysprykershop.com/wishlists/{{wishlist_id}}/wishlist-items` request:
 
 <details>
-    <summary markdown='span'>Request sample</summary>
+<summary markdown='span'>Request sample</summary>
 
 ```json
 {
@@ -927,7 +927,7 @@ For an example, see the following response to the `POST https://glue.mysprykersh
 </details>
 
 <details>
-    <summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {

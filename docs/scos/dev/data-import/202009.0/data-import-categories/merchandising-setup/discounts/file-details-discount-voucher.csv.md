@@ -14,6 +14,7 @@ This article contains content of the **discount_voucher.csv** file to configure 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:
 
+<div>
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |
 | --- | --- | --- | --- | --- |
 | **discount_key** | Yes | String |`discount_key` must exist in the *discounts.csv* file | Key identifier of the discount. |
@@ -23,6 +24,7 @@ These are the header fields to be included in the .csv file:
 | **max_number_of_uses** | No | Number |If empty it will be set to 0. | Maximum number of this voucher usage. |
 | **voucher_batch** | Yes | Number |`voucher_batch` must be previously created during *discount.csv* import, then the batch value must be a different number for each row in the file. | Voucher batch groups vouchers into batches. It identifies a voucher belonging to the same voucher pool. |
 | **is_active** | No | Boolean | If empty, will be set to False = 0.<ul><li>True = 1</li><li>False = 0</li>  | Indicates if discount voucher is active or not. |
+</div>
 *N/A: Not applicable.
 
 ## Dependencies

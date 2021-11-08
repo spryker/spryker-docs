@@ -14,6 +14,7 @@ This article contains content of the **payment_method.csv** file to configure [P
 ## Headers & Mandatory Fields
 These are the header fields to be included in the .csv file:
 
+<div>
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |
 | --- | --- | --- | --- | --- |
 | **payment_method_key** | Yes | String | N/A*| Identifier of the payment method. |
@@ -21,6 +22,8 @@ These are the header fields to be included in the .csv file:
 | **payment_provider_key** | Yes | String | N/A | Identifier of the payment provider. |
 | **payment_provider_name** | Yes | String | N/A| Name of the payment provider. |
 | **is_active** | No | Boolean | <ul><li>True = 1</li><li>False = 0</li><li>If empty, it will be set to 0 (false).</li> | Status indicating whether the payment method is active or not. |
+</div>
+
 *N/A: Not applicable.
 
 ## Dependencies

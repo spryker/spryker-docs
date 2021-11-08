@@ -23,7 +23,7 @@ To start feature integration, overview and install the necessary features:
 | Spryker Core | 202009.0 | [Glue Application](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
 | Cart | 202009.0 | [Cart API](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html) |
 | Customer Account Management | 202009.0 | |
-| Payments | 202009.0 | [Payments API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/payments-api-feature-integration.html) |
+| Payments | 202009.0 | [Payments API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-payments-feature-integration.html) |
 |Shipments| 202009.0 | [Shipments API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shipment-feature-integration.html) |
 
 ## 1)  Install the required modules using Composer

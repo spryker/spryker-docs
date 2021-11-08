@@ -9,11 +9,12 @@ redirect_from:
   - /v6/docs/en/file-details-cms-slotcsv
 ---
 
-This article contains content of the **cms_slot.csv** file to configure [CMS Slot](https://documentation.spryker.com/v6/docs/templates-and-slots-overview) information on your Spryker Demo Shop.
+This article contains content of the **cms_slot.csv** file to configure [CMS Slot](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:
 
+<div>
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |
 | --- | --- | --- | --- | --- |
 | **template_path** | Yes | String |Must be a valid path to a twig template. | Path to the Twig file template. |
@@ -22,6 +23,7 @@ These are the header fields to be included in the .csv file:
 | **name** | Yes | String |N/A | Alphabetical identifier of the slot. It will be shown in the Back Office. |
 | **description** | Yes | String |N/A | Description of the slot. It will be shown in the Back Office. |
 | **is_active** | No | Boolean |<ul><li>Inactive = 0</li><li>Active = 1</li><li>If empty during the import, the slots will be imported as inactive.</li> | Indicates if the slot is active or inactive.<br>If the slot is inactive, it is not rendered in the Storefront by the slot widget. |
+</div>
 
 *N/A: Not applicable.
 

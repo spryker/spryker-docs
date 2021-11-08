@@ -20,15 +20,17 @@ This file does not exist by default on the project level.  It can be created in 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:
 
+<div>
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |
 | --- | --- | --- | --- | --- |
 | **name** | Yes | String |Must be a valid MIME type. | Name of the MIME type. |
 | **is_allowed** | Yes | Boolean |<ul><li>True = 1</li><li>False = 0</li> | Indicates if the MIME type is allowed or not. |
+</div>
 *N/A: Not applicable.
 
 ## Dependencies
 
-This file hasno dependencies.
+This file has no dependencies.
 
 ## Template File & Content Example
 A template and an example of the *mime_type.csv*  file can be downloaded here:

@@ -14,17 +14,20 @@ This article contains content of the **warehouse.csv** file to configure [Wareho
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:
 
+<div>
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |
 | --- | --- | --- | --- | --- |
 | **name** | Yes | String | N/A*| Name of the warehouse. |
 | **is_active** | No | Boolean | <ul><li>True = 1</li><li>False = 0</li>If empty, it will be assumed 0 (false)</li></ul>|Status of the warehouse, specified in a boolean value: 1 (true) or 0 (false), where 1 indicates that the warehouse is available and 0 indicates that the warehouse is unavailable. By default, the warehouse is not active.|
+</div>
+
 *N/A: Not applicable.
 
 ## Dependencies
 This file has no dependencies.
 
 ## Recommendations & Other Information
-Check the [HowTo - Import Warehouse Data](/docs/scos/dev/tutorials-and-howtos/202009.0/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html).
+Check the [HowTo - Import Warehouse Data](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html).
 {% info_block infoBox "Note" %}
 
 The *warehouse.csv* file replaces *stock.csv* previously used. 

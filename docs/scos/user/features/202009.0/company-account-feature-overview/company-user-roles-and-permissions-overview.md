@@ -101,7 +101,7 @@ Every company role includes a set of permissions that can be enabled/disabled ac
   - **Buy up to grand total (Requires "Send cart for approval")** - sets a limit for the grand total of the cart. If the amount in the cart is bigger than the limit set in this permission, the user will not be able to proceed to checkout. Works with **Send cart for approval** permission. This permission is available after enabling the [Approval Process](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) feature.
   - **Approve up to grand total** - with this permission enabled, a user can approve the the cart. See [Approval Feature Overview](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) for more details.
   - **View Business Unit orders** - with this permission enabled, a user can see not only their own orders, but also the orders of their business unit.
-  - **View Company orders** - with this permission enabled, a user can see not only their own orders, orders of their business unit, but also the orders of their comapny.
+  - **View Company orders** - with this permission enabled, a user can see not only their own orders, orders of their business unit, but also the orders of their company.
   - **Send cart for approval (Requires "Buy up to grand total")** - allows a user to send the cart for approval. Works together with Buy up to grand total permission. See [Approval Feature Overview](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) for more details.
 
 ## If you are:
@@ -113,9 +113,9 @@ Every company role includes a set of permissions that can be enabled/disabled ac
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
                 <li><a href="https://documentation.spryker.com/docs/mg-companyuser#upgrading-from-version-1-0-0-to-version-2-0-0" class="mr-link">Migrate the CompanyUser module from version 1.* to version 2.*</a></li>
-                <li><a href="https://documentation.spryker.com/docs/logging-in-as-a-company-user" class="mr-link">Authenticate as company user via Glue API</a></li>
-                <li><a href="https://documentation.spryker.com/docs/retrieving-company-users" class="mr-link">Retrieve information about company users via Glue API</a></li>
-                <li><a href="https://documentation.spryker.com/docs/en/retrieving-company-roles" class="mr-link">Retrieve information about company roles via Glue API</a></li>
+                <li><a href="/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html" class="mr-link">Authenticate as company user via Glue API</a></li>
+                <li><a href="/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-company-users.html" class="mr-link">Retrieve information about company users via Glue API</a></li>
+                <li><a href="/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-company-roles.html" class="mr-link">Retrieve information about company roles via Glue API</a></li>
               </ul>
         </div>
         <!-- col2 -->

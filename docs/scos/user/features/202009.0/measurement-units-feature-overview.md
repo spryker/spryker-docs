@@ -67,6 +67,6 @@ If a global unit conversion exists between the base and sales unit, then factor 
 - We strive to shift all business logic to our backend, however, with Measurements Units, a part of the calculations (e.g. quantity restrictions) are performed on Yves.
 - On the shopping cart as well as the shopping list page, products do not have a dropdown to change the measurement units. You can select a measurement unit on the product details page only.
 - A shopper cannot reorder the items with the selected measurement units as they are not added automatically. They should be added manually on the product details page.
-- In the [Quick Order](/docs/scos/dev/features/{{page.version}}/quick-add-to-cart-feature-overview.html) form and [search widget](/docs/scos/user/features/{{page.version}}/product-feature-overview/search-widget-for-concrete-products-overview.html), the products use the default measurement units that cannot be changed.
+- In the [Quick Order](/docs/scos/user/features/{{page.version}}/quick-add-to-cart-feature-overview.html) form and [search widget](/docs/scos/user/features/{{page.version}}/product-feature-overview/search-widget-for-concrete-products-overview.html), the products use the default measurement units that cannot be changed.
 
 

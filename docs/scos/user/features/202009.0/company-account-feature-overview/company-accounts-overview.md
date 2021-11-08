@@ -106,17 +106,17 @@ Company users can perform the following actions on the Storefront:
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-user-roles-and-permissions-overview.html" class="mr-link">Get a general idea of company user roles and permissions</a></li>
+                <li><a href="/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-user-roles-and-permissions-overview.html" class="mr-link">Get a general idea of company user roles and permissions</a></li>
                 <li><a href="https://documentation.spryker.com/docs/mg-companyuser#upgrading-from-version-1-0-0-to-version-2-0-0" class="mr-link">Migrate the CompanyUser module from version 1.* to version 2.*</a></li>
                 <li><a href="/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html" class="mr-link">Enable company accounts by integrating the Company Account feature into your project</a></li>
-            <li><a href="docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-companies.html" class="mr-link">Retrieve company information via Glue API</a></li>    
+            <li><a href="/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-companies.html" class="mr-link">Retrieve company information via Glue API</a></li>    
             </ul>
         </div>
         <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-user-roles-and-permissions-overview.html" class="mr-link">Get a general idea of company user roles and permissions</a></li>
+                <li><a href="/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-user-roles-and-permissions-overview.html" class="mr-link">Get a general idea of company user roles and permissions</a></li>
                 <li><a href="https://documentation.spryker.com/docs/managing-companies" class="mr-link">Create and manage companies</a></li>
                 <li><a href="https://documentation.spryker.com/docs/managing-company-units" class="mr-link">Create and manage business units</a></li>
                 <li><a href="https://documentation.spryker.com/docs/managing-company-unit-addresses" class="mr-link">Create and manage company unit addresses</a></li>

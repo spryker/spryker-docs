@@ -66,9 +66,9 @@ However, separators should be the same for all products entered in this form at 
 {% endinfo_block %}
 
 ## Quantity restrictions for Quick Order
-Quick Order quantity rules fall under limitations set by [quantity restrictions](/docs/scos/user/features/{{page.version}}/non-splittable-products/non-splittable-products-feature-overview.html). Quantity restriction values define the number of items that customers can put into the cart.
+Quick Order quantity rules fall under limitations set by [quantity restrictions](/docs/scos/user/features/{{page.version}}/non-splittable-products-feature-overview.html). Quantity restriction values define the number of items that customers can put into the cart.
 
-When manually filling the *SKU/Name* field, the quantity selector allows a visitor to put the valid numbers based on [quantity restrictions](/docs/scos/user/features/{{page.version}}/non-splittable-products/non-splittable-products-feature-overview.html) set for that SKU. That means, for example, if a concrete product has the minimum quantity restriction for 4 units, the interval restriction to 2 units, and the maximum quantity is 12, the shopper can put 4, 6, 8, 10, and 12 items to cart.
+When manually filling the *SKU/Name* field, the quantity selector allows a visitor to put the valid numbers based on [quantity restrictions](/docs/scos/user/features/{{page.version}}/non-splittable-products-feature-overview.html) set for that SKU. That means, for example, if a concrete product has the minimum quantity restriction for 4 units, the interval restriction to 2 units, and the maximum quantity is 12, the shopper can put 4, 6, 8, 10, and 12 items to cart.
 
 The *Quantity* field in the Quick Order adheres to these quantities. Therefore, if the shopper enters an invalid number into the *Quantity* field, for instance, 5, the number will automatically change to the next higher quantity set in quantity restrictions, that is 6.
 
@@ -104,7 +104,7 @@ It is possible to upload only one file at a time.
 
 By default, only concrete SKUs are validated. On successful upload, items and quantities are extracted and filled out in the quick order form fields.
 
-In case the quantity is not valid due to [quantity restrictions](/docs/scos/user/features/{{page.version}}/non-splittable-products/non-splittable-products-feature-overview.html) setting, the quantity is changed to a valid number.
+In case the quantity is not valid due to [quantity restrictions](/docs/scos/user/features/{{page.version}}/non-splittable-products-feature-overview.html) setting, the quantity is changed to a valid number.
 
 If there are already products added to the quick order list, the products from the CSV file are added to the bottom of the quick order template.
 

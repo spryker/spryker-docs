@@ -672,6 +672,6 @@ class SalesAggregatorMigrationConsole extends Console
 ?>
 ```
     
-</br>
+<br>
 </details>
 

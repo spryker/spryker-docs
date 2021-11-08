@@ -1,6 +1,6 @@
 ---
 title: Marketplace Order Management feature integration
-last_updated: Sep 08, 2021
+last_updated: Oct 19, 2021
 description: This document describes how to integrate the Marketplace Order Management feature into a Spryker project.
 template: feature-integration-guide-template
 ---
@@ -17,8 +17,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ------ | ---------------|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Order Management | {{page.version}} | [Order Management feature integration](https://documentation.spryker.com/docs/order-management-feature-integration) |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Order Management | {{page.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html) |
 | State Machine | {{page.version}} | [State Machine feature integration](https://github.com/spryker-feature/state-machine) |
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
 | Marketplace Shipment | {{page.version}} | [Marketplace Shipment feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-feature-integration.html) |
@@ -587,7 +587,7 @@ Export data as follows:
 <details>
 <summary markdown='span'>data/export/config/merchant_order_export_config.yml</summary>
 
-```xml
+```yaml
 version: 1
 
 defaults:

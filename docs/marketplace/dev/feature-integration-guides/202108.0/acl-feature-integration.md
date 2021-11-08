@@ -17,8 +17,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE        |
 | --------------- | -------- | ------------------ |
-| Spryker Core         | {{page.version}}      | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Spryker Core Back Office | {{page.version}}      | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-back-office-feature-integration) |
+| Spryker Core         | {{page.version}}      | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Spryker Core Back Office | {{page.version}}      | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-back-office-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -74,7 +74,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 | TRANSFER  | TYPE | EVENT | PATH  |
 | ----------------- | ----- | ------ | -------------------------- |
-|  Group  | object | Created | src/Generated/Shared/Transfer/GroupTransfer |
+|   Group  | object | Created | src/Generated/Shared/Transfer/GroupTransfer |
 |   AclEntityRule | object | Created | src/Generated/Shared/Transfer/AclEntityRuleTransfer |
 |   AclEntitySegment | object | Created | src/Generated/Shared/Transfer/AclEntitySegmentTransfer |
 |   AclEntitySegmentRequest | object | Created | src/Generated/Shared/Transfer/AclEntitySegmentRequestTransfer |
@@ -131,6 +131,7 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
             new AccessControlEventDispatcherPlugin(),
         ];
     }
+}
 ```
 
 **src/Pyz/Zed/ZedNavigation/ZedNavigationDependencyProvider.php**

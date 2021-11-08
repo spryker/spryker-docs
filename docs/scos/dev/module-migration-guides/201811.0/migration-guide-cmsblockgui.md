@@ -48,7 +48,7 @@ class CmsBlockGuiDependencyProvider extends CmsBlockGuiCmsBlockGuiDependencyProv
 }
 ```
 
-</br>
+<br>
 </details>
 
 4. The following deprecated methods have been removed:

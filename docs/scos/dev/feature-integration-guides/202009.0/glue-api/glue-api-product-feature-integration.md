@@ -75,8 +75,8 @@ Make sure that `SpyProductAbstractStorage` and `SpyProductConcreteStorage` are e
 
 | Entity | Type | Event | Path | Methods |
 | --- | --- | --- | --- | --- |
-| `SpyProductAbstractStorage` | class | extended | `src/Orm/Zed/ProductStorage/Persistence/Base/SpyProductAbstractStorage` | `syncPublishedMessageForMappings()`,</br>`syncUnpublishedMessageForMappings()` |
-| `SpyProductConcreteStorage` | class | extended | `src/Orm/Zed/ProductStorage/Persistence/Base/SpyProductConcreteStorage` | `syncPublishedMessageForMappings()`,</br>`syncUnpublishedMessageForMappings()` |
+| `SpyProductAbstractStorage` | class | extended | `src/Orm/Zed/ProductStorage/Persistence/Base/SpyProductAbstractStorage` | `syncPublishedMessageForMappings()`,<br>`syncUnpublishedMessageForMappings()` |
+| `SpyProductConcreteStorage` | class | extended | `src/Orm/Zed/ProductStorage/Persistence/Base/SpyProductConcreteStorage` | `syncPublishedMessageForMappings()`,<br>`syncUnpublishedMessageForMappings()` |
 
 
 {% endinfo_block %}
@@ -134,7 +134,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -209,7 +209,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -286,7 +286,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -342,7 +342,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -405,7 +405,7 @@ Make sure that the response contains `category-nodes` as a relationship, and tha
 }
 ```
 
-</br>
+<br>
 </details>
 
 

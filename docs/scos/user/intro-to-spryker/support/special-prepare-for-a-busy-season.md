@@ -36,7 +36,7 @@ We put together this article to help you prepare for a traditionally very busy s
 
 ## Tips for Developers
 
-* Follow https://documentation.spryker.com/guidelines/performance-guidelines.htm
+* Follow /docs/scos/dev/guidelines/performance-guidelines.html
 * Disable features, that might have no big value during Black Friday but add additional overhead:
 * Persistent Cart
 * Evaluate project features for the same reason

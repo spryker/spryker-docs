@@ -44,7 +44,7 @@ class CmsGuiDependencyProvider extends SprykerCmsGuiDependencyProvider
 }
 ```
 
-</br>
+<br>
 </details>
     
 New transfers must be generated:

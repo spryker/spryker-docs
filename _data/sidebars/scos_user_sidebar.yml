@@ -812,9 +812,7 @@ entries:
       include_versions:
       - "202108.0"
     - title: Dashboard
-      nested:
-      - title: Viewing dashboard
-        url: /docs/scos/user/back-office-user-guides/dashboard/viewing-dashboard.html
+      url: /docs/scos/user/back-office-user-guides/dashboard/viewing-dashboard.html
       nested:
       - title: References
         include_versions:

@@ -103,7 +103,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox “Verification” %}
@@ -155,7 +155,7 @@ class DocumentationGeneratorRestApiDependencyProvider extends SprykerDocumentati
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox “Verification” %}

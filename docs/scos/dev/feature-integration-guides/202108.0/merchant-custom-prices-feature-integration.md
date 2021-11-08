@@ -52,7 +52,7 @@ Adjust the schema definition so that entity changes can trigger events:
 
 | AFFECTED ENTITY | TRIGGERED EVENTS |
 | --- | --- |
-| spy_price_product_merchant_relationship | Entity.spy_price_product_merchant_relationship.create</br>Entity.spy_price_product_merchant_relationship.update</br>Entity.spy_price_product_merchant_relationship.delete |
+| spy_price_product_merchant_relationship | Entity.spy_price_product_merchant_relationship.create<br>Entity.spy_price_product_merchant_relationship.update<br>Entity.spy_price_product_merchant_relationship.delete |
 
 **src/Pyz/Zed/PriceProductMerchantRelationship/Persistence/Propel/Schema/spy_price_product_merchant_relationship.schema.xml**
 
@@ -109,7 +109,7 @@ Make sure that the changes were implemented successfully. For this purpose, trig
 
 | CLASS PATH | METHOD NAME |
 | --- | --- |
-| src/Orm/Zed/PriceProductMerchantRelationship/Persistence/Base/SpyPriceProductMerchantRelationship.php | prepareSaveEventName()</br>addSaveEventToMemory()  </br>addDeleteEventToMemory()|
+| src/Orm/Zed/PriceProductMerchantRelationship/Persistence/Base/SpyPriceProductMerchantRelationship.php | prepareSaveEventName()<br>addSaveEventToMemory()  <br>addDeleteEventToMemory()|
 
 {% endinfo_block %}
 
@@ -506,7 +506,7 @@ Make sure that there is the "Merchant Price Dimension" drop-down in the Back Off
 
 {% info_block warningBox "Verification" %}
 
-Make sure that a logged in user, who belongs to a company business unit and that business unit is assigned to some Merchant Relationship with specified prices, sees Merchant Relationship prices on the Catalog and on the Product page.</br>Make sure that this user sees MIN price if their business unit is assigned to multiple Merchant Relationships with different prices for the same product.
+Make sure that a logged in user, who belongs to a company business unit and that business unit is assigned to some Merchant Relationship with specified prices, sees Merchant Relationship prices on the Catalog and on the Product page.<br>Make sure that this user sees MIN price if their business unit is assigned to multiple Merchant Relationships with different prices for the same product.
 {% endinfo_block %}
 
 ### Ensure compatibility

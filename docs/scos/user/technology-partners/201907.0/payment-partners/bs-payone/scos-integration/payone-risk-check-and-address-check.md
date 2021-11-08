@@ -83,7 +83,7 @@ class AddressStep extends SprykerAddressStep
  }
 }
 ```
-</br>
+<br>
 </details>
 
 Also, `src/Pyz/Yves/CheckoutPage/Process/StepFactory.php` should be updated on the project level.
@@ -131,7 +131,7 @@ class StepFactory extends SprykerStepFactory
  ...
 }
 ```
-</br>
+<br>
 </details>
 
 ## Consumer Score Integration
@@ -179,7 +179,7 @@ class ShipmentStep extends SprykerShipmentStep
  }
 }
 ```
-</br>
+<br>
 </details>
 
 `src/Pyz/Yves/CheckoutPage/Process/StepFactory.php` should be updated:
@@ -225,7 +225,7 @@ class ShipmentStep extends SprykerShipmentStep
  }
 }
 ```
-</br>
+<br>
 </details>
 
 `src/Pyz/Yves/CheckoutPage/Process/StepFactory.php` should be updated:
@@ -270,7 +270,7 @@ class StepFactory extends SprykerStepFactory
  ...
 }
 ```
-</br>
+<br>
 </details>
 
 `src/Pyz/Zed/Payment/PaymentDependencyProvider.php` should be updated:
@@ -301,10 +301,10 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
  ...
 }
 ```
-</br>
+<br>
 </details>
 
-</br>Now Payone is ready for filtering Payment methods. Configuration for each score result should be defined in the config:
+<br>Now Payone is ready for filtering Payment methods. Configuration for each score result should be defined in the config:
 
  <details open>
 <summary markdown='span'>Example of configuration for score results</summary>
@@ -335,6 +335,6 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
  PayoneConstants::PAYONE_CONSUMER_SCORE_TYPE => 'IH',
 ...
 ```
-</br>
+<br>
 </details>
 

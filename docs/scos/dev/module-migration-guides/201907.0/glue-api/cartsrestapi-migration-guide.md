@@ -55,7 +55,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 }
 ```
 
-</br>
+<br>
 </details>
 
 Find and update `CustomersRestApiDependencyProvider` in a project. The `getCustomerPostCreatePlugins` method should replace `getCustomerPostRegisterPlugins`.
@@ -81,7 +81,7 @@ class CustomersRestApiDependencyProvider extends SprykerCustomersRestApiDependen
 }
 ```
 
-</br>
+<br>
 </details>
 
 Find or create `CartsRestApiDependencyProvider` in a project. Make sure that it extends `\Spryker\Zed\CartsRestApi\CartsRestApiDependencyProvider`.
@@ -112,7 +112,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 }
 ```
 
-</br>
+<br>
 </details>
 
 Find or create `QuoteDependencyProvider` in a project. Make sure that it extends `\Spryker\Zed\Quote\QuoteDependencyProvider`.
@@ -148,7 +148,7 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 }
 ```
 
-</br>
+<br>
 </details>
 
 Run the following command:
@@ -207,7 +207,7 @@ The file could look like this:
 	}
 ```
 
-</br>
+<br>
 </details>
 
 4. Find or create `CustomersRestApiDependencyProvider` in a project. Make sure that it extends `\Spryker\Glue\CustomersRestApi\CustomersRestApiDependencyProvider`.
@@ -238,7 +238,7 @@ The file could look like this:
 	}
 ```
 
-</br>
+<br>
 </details>
 
 6. Find or create GlueApplicationDependencyProvider in a project. Make sure it extends `\Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider`.
@@ -330,7 +330,7 @@ The file could look like this:
 	}
 ```
 
-</br>
+<br>
 </details>
 
 To have an ability to run the console command in order to delete expired guest carts, you should:
@@ -355,7 +355,7 @@ To have an ability to run the console command in order to delete expired guest c
 	];
  ```
 
-</br>
+<br>
 </details>
 
  3. Find or create `ConsoleDependencyProvider` in a project. Make sure that it extends `\Spryker\Zed\Console\ConsoleDependencyProvider`. 
@@ -390,14 +390,14 @@ The file could look like this:
 	}
 ```
 
-</br>
+<br>
 </details>
 
 4. Run `vendor/bin/console transfer:generate`.
 
 _Estimated migration time: 1-2 hours_
 
-</br>
+<br>
 </details>
 
 <!-- Last review date: May 30, 2019-- by Oleh Hladchenko, Yuliia Boiko -->

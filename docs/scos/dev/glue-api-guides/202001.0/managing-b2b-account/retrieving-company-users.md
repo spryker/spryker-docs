@@ -114,7 +114,7 @@ The endpoint responds with a **RestCompanyUserCollectionResponse** that contains
 }
 ```
     
-</br>
+<br>
 </details>
 
 ## Retrieving Available Company Users
@@ -195,7 +195,7 @@ The company user identifier contained in the id member can be used to access the
 }
 ```
     
-</br>
+<br>
 </details>
 
 ## Retrieving Specific Company Users
@@ -244,7 +244,7 @@ If the currently logged in user does not have access to the specified Company Us
 }
 ```
     
-</br>
+<br>
 </details>
 
 ## Fetching Additional Information
@@ -440,7 +440,7 @@ In this case, the following additional attributes will be added to the response:
 }
 ```
 
-</br>
+<br>
 </details>
 
 ### Possible Errors
@@ -448,6 +448,6 @@ In this case, the following additional attributes will be added to the response:
 | Status | Reason |
 | --- | --- |
 | 401 | The access token is invalid. |
-| 403 | The access token is missing.</br>- OR -</br>The current Company Account is not set.</br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html). |
+| 403 | The access token is missing.<br>- OR -<br>The current Company Account is not set.<br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html). |
 | 404 | The specified Company User was not found or the user does not have permissions to view the account. |
 

@@ -32,11 +32,11 @@ You manage the orders by:
     This will put the next status in the flow, which is _ship_, to all the items from the order.
 3. Continue changing statuses following this procedure.
 
-</br>**To set statuses for several items in the order shipment:**
+<br>**To set statuses for several items in the order shipment:**
 1. Scroll down to the **Order Items > Shipment #** section, select the items for which the status needs to be changed by selecting the checkbox on the left of the product image.
 2. In the _Trigger all matching states of order inside this shipment_ section, click the status that needs to be assigned to those items.
 
-</br>**To set statuses for a specific item in the order:**
+<br>**To set statuses for a specific item in the order:**
 In the **Order Items** section, click the status icon in the _Trigger event_ column for a specific shipment item.
 ***
 To learn more about the order statuses, see [Orders: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/references/orders-reference-information.html).
@@ -68,16 +68,16 @@ Your message appears in the *Comments* section.
 ***
 **Tips & Tricks**
 You can send an email to the customer, review the customer details, and edit the customer addresses.
-</br>**To send an email to your customer:**
+<br>**To send an email to your customer:**
 On the **Overview of Orders** page, click the hyperlinked customer email in the _Email_ column.
 
-</br>**To view or edit the customer details** stored in the **Customers > Customers** section:
+<br>**To view or edit the customer details** stored in the **Customers > Customers** section:
 
 * On the **Overview of Orders** page, click hyperlinked customer name in the *Customer Full Name* column. 
 * On the **View Order** page, scroll down to the *Customer* section and click the hyperlinked **Order Reference**. 
  (You are redirected to the **Customers > Customers** section, **View Customer** page).
 
-</br>**To edit the Billing address**:
+<br>**To edit the Billing address**:
 1. On the **View Order** page, scroll down to the **Customer** section.
 2. Click **Edit** under the **Billing** address. The **Edit Address for Order** page opens.  
 ![Edit billing address button](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Sales/Managing+Orders/edit-billing-information.png) 

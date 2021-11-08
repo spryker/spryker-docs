@@ -87,7 +87,7 @@ class UrlGenerator implements UrlGeneratorInterface
     }
 ```
     
-</br>
+<br>
 </details>
     
 You have to change the way filters are configured in twig templates. Previously there was an incorrect setting on using a name, instead of a request parameter. The filters are under `Pyz/Yves/Catalog/Theme/default/catalog/partials/filters` directory.

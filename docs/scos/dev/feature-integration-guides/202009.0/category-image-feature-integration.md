@@ -38,9 +38,9 @@ Adjust the schema definition so entity changes will trigger events.
 
 | Affected entity | Triggered events |
 | --- | --- |
-| `spy_category_image_set` | `Entity.spy_category_image_set.create`</br>`Entity.spy_category_image_set.update`</br>`Entity.spy_category_image_set.delete` |
-| `spy_category_image` | `Entity.spy_category_image_set.create`</br>`Entity.spy_category_image_set.update`</br>`Entity.spy_category_image_set.delete` |
-| `spy_category_image_set_to_category_image` | `Entity.spy_category_image_set_to_category_image.create`</br>`Entity.spy_category_image_set_to_category_image.update`</br>`Entity.spy_category_image_set_to_category_image.delete` |
+| `spy_category_image_set` | `Entity.spy_category_image_set.create`<br>`Entity.spy_category_image_set.update`<br>`Entity.spy_category_image_set.delete` |
+| `spy_category_image` | `Entity.spy_category_image_set.create`<br>`Entity.spy_category_image_set.update`<br>`Entity.spy_category_image_set.delete` |
+| `spy_category_image_set_to_category_image` | `Entity.spy_category_image_set_to_category_image.create`<br>`Entity.spy_category_image_set_to_category_image.update`<br>`Entity.spy_category_image_set_to_category_image.delete` |
 
 **src/Pyz/Zed/CategoryImage/Persistence/Propel/Schema/spy_category_image.schema.xml**
     

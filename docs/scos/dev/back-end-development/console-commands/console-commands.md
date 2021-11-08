@@ -234,7 +234,7 @@ To use the NPM commands, you need to download and install [Node.js](https://docs
         </tbody>
     <tbody>
            <tr>
-               <td rowspan=4>Legacy Demoshop</br>Yves</td>
+               <td rowspan=4>Legacy Demoshop<br>Yves</td>
             <td >Dependencies installation (from the project level).</td>
                <td>npm install</td>
                <td>console frontend:project:install-dependencies</td>
@@ -257,7 +257,7 @@ To use the NPM commands, you need to download and install [Node.js](https://docs
          </tbody>
             <tbody>
            <tr>
-               <td rowspan=4>Legacy Demoshop</br>Zed</td>
+               <td rowspan=4>Legacy Demoshop<br>Zed</td>
             <td >Dependencies installation. Will install and package all modules from the <var>vendor/spryker</var> folder (for the <i>split</i> version) and from <var>vendor/spryker/spryker</var> folder (for the <i>nonsplit</i> version).</td>
                <td></td>
                <td>console frontend:zed:install-dependencies</td>

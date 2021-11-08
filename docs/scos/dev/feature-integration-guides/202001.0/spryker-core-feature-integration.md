@@ -101,8 +101,8 @@ $config[VaultConstants::ENCRYPTION_KEY] = "PLEASE ADJUST THIS ENCRYPTION KEY TO 
 ```
 
 {% info_block warningBox "Verification" %}
-Once you have finished the full integration of the feature, make sure that:</br>You can store and retrieve data from the vault using `VaultFacade`:</br>`$secret = "actual_secret";` </br>`$vaultFacade->store("secret_category", "secret_id", $secret
-{% endinfo_block %};`</br>`assertSame($secret, $vaultFacade->retrieve("secret_category", "secret_id"));`)
+Once you have finished the full integration of the feature, make sure that:<br>You can store and retrieve data from the vault using `VaultFacade`:<br>`$secret = "actual_secret";` <br>`$vaultFacade->store("secret_category", "secret_id", $secret
+{% endinfo_block %};`<br>`assertSame($secret, $vaultFacade->retrieve("secret_category", "secret_id"));`)
 
 #### Redis
 The following Session and Storage configuration constants were deprecated and moved into newly created dedicated modules:

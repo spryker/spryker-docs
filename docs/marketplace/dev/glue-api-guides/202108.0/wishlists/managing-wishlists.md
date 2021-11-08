@@ -4,7 +4,7 @@ description: Retrieve details about wishlists and learn what else you can do wit
 template: glue-api-storefront-guide-template
 ---
 
-The Marketplace Wishlists API allows creating list and deleting [wishlists](https://documentation.spryker.com/docs/wishlist-feature-overview) in the Marketplace, as well as managing the items in them.
+The Marketplace Wishlists API allows creating list and deleting [wishlists](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html) in the Marketplace, as well as managing the items in them.
 
 ## Installation
 
@@ -24,7 +24,7 @@ To create a wishlist, send the request:
 
 | HEADER KEY    | HEADER VALUE | REQUIRED? | DESCRIPTION |
 | ---------- | -------- | -------- | -------------- |
-| Authorization | string       | ✓         | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer). |
+| Authorization | string       | ✓         | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
 Sample request: `POST https://glue.mysprykershop.com/wishlists`
 
@@ -96,7 +96,7 @@ To retrieve all wishlists of a customer, send the request:
 
 | HEADER KEY    | HEADER VALUE | REQUIRED? | DESCRIPTION |
 | ------------ | ----------- | -------- | --------- |
-| Authorization | string       | ✓         | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer). |
+| Authorization | string       | ✓         | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
 ### Response
 
@@ -111,6 +111,8 @@ To retrieve all wishlists of a customer, send the request:
 		}
 	}
 ```
+
+</details>
 
 <details>
 <summary markdown='span'>Response sample with existing wishlists</summary>
@@ -420,7 +422,7 @@ For attributes of the included resources, see:
 
 - [Add an item to a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlist-items.html#add-an-item-to-a-wishlist)
 - [Retrieve a concrete product](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
-- [Retrieve a product label](https://documentation.spryker.com/docs/retrieving-product-labels#product-labels-response-attributes)
+- [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html)
 
 ## Retrieve a wishlist
 
@@ -432,13 +434,13 @@ To retrieve a specific wishlist, send the request:
 
 | PATH PARAMETER        | DESCRIPTION      |
 | ---------------- | ------------------------- |
-| {% raw %}***{{wishlist_id}}***{% endraw %} | Unique identifier of the wishlist to retrieve the items of. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](https://documentation.spryker.com/docs/managing-wishlists#retrieve-wishlists) to get it. |
+| {% raw %}***{{wishlist_id}}***{% endraw %} | Unique identifier of the wishlist to retrieve the items of. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
 
 ### Request
 
 | HEADER KEY    | HEADER VALUE | REQUIRED | DESCRIPTION  |
 | ------------ | ----------- | ------- | -------------- |
-| Authorization | string       | ✓        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer). |
+| Authorization | string       | ✓        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
 | QUERY PARAMETER | DESCRIPTION     | POSSIBLE VALUES |
 | ---------- | -------------------- | --------------------- |
@@ -464,7 +466,8 @@ To retrieve a specific wishlist, send the request:
 <details>
 <summary markdown='span'>Response sample: retrieving a wishlist</summary>
 
-```json{
+```json
+{
     "data": {
         "type": "wishlists",
         "id": "246591f8-4f30-55ce-8b17-8482859b4ac1",
@@ -2216,15 +2219,13 @@ For the attributes of the included resources, see
 
 [Retrieving concrete products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 
-[Retrieving concrete product availabilities](https://documentation.spryker.com/docs/retrieving-concrete-product-availability)
+[Retrieving concrete product availabilities](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-product-availability.html)
 
-[Retrieving concrete product prices](https://documentation.spryker.com/docs/retrieving-concrete-product-prices)
+[Retrieving concrete product prices](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-product-prices.html)
 
 [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html)
 
 [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html#merchants-response-attributes)
-
-
 
 ## Edit a wishlist
 
@@ -2238,7 +2239,7 @@ To edit a wishlist, send the request:
 
 | HEADER KEY    | HEADER VALUE | REQUIRED | DESCRIPTION    |
 | ------ | ------ | ------ | -------------- |
-| Authorization | string       | ✓        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer). |
+| Authorization | string       | ✓        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
 Sample request: `PATCH https://glue.mysprykershop.com/wishlists`
 
@@ -2288,7 +2289,7 @@ To delete a wishlist, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION   |
 | ---------- | -------- | ----- | ----------------- |
-| Authorization | string       | ✓        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer). |
+| Authorization | string       | ✓        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
 Request sample: `DELETE https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a`
 
@@ -2306,4 +2307,4 @@ If the wishlist is deleted successfully, the endpoint returns the `204 No Conten
 | 204  | Cannot update the wishlist.                   |
 | 205  | Cannot remove the wishlist.                   |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

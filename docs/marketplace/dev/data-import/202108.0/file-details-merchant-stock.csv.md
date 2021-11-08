@@ -27,7 +27,7 @@ The file should have the following parameters:
 The file has the following dependencies:
 
 - [merchant.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant.csv.html)
-- [warehouse.csv](https://documentation.spryker.com/docs/file-details-warehousecsv)
+- [warehouse.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/commerce-setup/file-details-warehouse.csv.html)
 
 ## Import template file and content example
 

@@ -47,7 +47,7 @@ The following table describes the attributes you see and enter when creating, vi
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
 | Name | Name of the warehouse. |
-| Is this warehouse available? | *Yes*—the warehouse is active.</br>*No*—the warehouse is inactive. |
+| Is this warehouse available? | *Yes*—the warehouse is active.<br>*No*—the warehouse is inactive. |
 | Store relation | Stores in which the warehouse is available. |
 
 ## What's next?

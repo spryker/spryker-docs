@@ -13,6 +13,8 @@ redirect_from:
   - /v6/docs/en/atomic-front-end-general-overview
   - /v4/docs/atomic-front-end-general-overview
   - /v4/docs/en/atomic-front-end-general-overview
+  - /docs/atomic-frontend
+  - /docs/en/atomic-frontend
 ---
 
 To provide each customer with the features they require, Spryker Commerce OS has been split into modules. Each customer can have a unique set of modules, and even module versions, specific to their business requirements. This fact combined with the possibility for customers to develop functionality on their own poses a big challenge for frontend developers. To ease the task, Spryker Frontend implements a design methodology called **atomic design**. Because of this, the UI layer of Spryker is called *Atomic Frontend*.
@@ -160,13 +162,13 @@ There are 3 entrypoints that will be loaded in the DOM in the following order:
 * **app**:
     `src/Pyz/Yves/ShopUi/Theme/default/app.ts`
     Contains the initialization logic for the project and the bootstrap code for the shop application.
-    </br>
+    <br>
     `src/Pyz/Yves/ShopUi/Theme/default/styles/basic.scss`
     Contains basic styles.
-    </br>
+    <br>
     `Components`
      When basic styles are loaded, behavior logic and styles of every component is loaded. This ensures that styles of each component override the basic styles.
- </br>
+ <br>
  `src/Pyz/Yves/ShopUi/Theme/default/styles/util.scss`
  Contains util styles for the project. It is loaded at the very end as the styles defined in it must override all styles, even the styles defined in components.
 
@@ -238,7 +240,7 @@ Templates are `.twig` files containing a structure of a page or widget. It defin
 
 The main templates in *ShopUi* are:
 
-* **page-blank** - defines a blank page. It does not contain any html in the <body> tag. This template defines all basic assets for the frontend, such as the <head> content (meta info, styles, high priority scripts and page title), as well as the bottom part of the <body> content (vendor and application scripts).
+* **page-blank** - defines a blank page. It does not contain any html in the `<body>` tag. This template defines all basic assets for the frontend, such as the `<head>` content (meta info, styles, high priority scripts and page title), as well as the bottom part of the `<body>` content (vendor and application scripts).
 * **page-layout-main**: extends the page-blank template and defines the main layout for every single page in Spryker Suite. This template contains the header, footer, sidebars etc, but does not predefine the content of the page. This part is left blank to be defined by specific views.
 
 ## Components
@@ -262,7 +264,7 @@ A typical component folder consists of the following files:
 
 * **index.ts**: Specifies the component entry point for Webpack. This file is necessary to locate the component styles and Typescript code.
 * **component-name.ts**: Specifies the behavior for the component in Typescript.
-* **component-name.scss**: Contains the SCSS style for the component, wrapped into a mixin.</br>Note: If a component contains the `style.scss` file, this file only declares a mixin.
+* **component-name.scss**: Contains the SCSS style for the component, wrapped into a mixin.<br>Note: If a component contains the `style.scss` file, this file only declares a mixin.
 * **style.scss**: Imports the style when `component-name.scss`contains only mixin declaration.
 * **component-name.twig**: Defines a template for the component layout.
 
@@ -277,10 +279,10 @@ When defining a component template with Twig, you need to use the following defa
 **Example:**
 
 ```php
-    % define config = {
+    {% raw %}{% define config = {
         name: 'new-component-counter',
         tag: 'new-component-counter'
-    } {% raw %}%}{% endraw %}
+    } %}{% endraw %}
 ```
 
 *Attributes*:
@@ -290,12 +292,12 @@ When defining a component template with Twig, you need to use the following defa
     * **jsName**: Javascript name of the component (optional)
     By convention, whenever Javascript behavior is added to a component, the DOM addressing for elements should be performed using dedicated classnames starting with the *-js* prefix. This prevents confusion in who-does-what: a classname starting with js- will have no style attached to it, but only Javascript behaviour. On the other hand, any classname that does not start with js- will be a pure style.
     If `jsName` is not defined explicitly, it will be created automatically by prefing js- to the component name.
-   * **tag**: specifies the HTML tag name for the component (optional)
-   Every component is defined in the DOM as an HTML class with its dedicated tag name. Therefore a tag name must be specified. You can use either a standard HTML5 tag name (for example, `p` or `td`) or have a custom element tag name in order to attach Javascript behavior. In case you want to create a component with custom behavior defined in Javascript, Web Component specification, you must specify a custom tag name.
-   If tag name is not specified, `div`is used by default.
+    * **tag**: specifies the HTML tag name for the component (optional)
+    Every component is defined in the DOM as an HTML class with its dedicated tag name. Therefore a tag name must be specified. You can use either a standard HTML5 tag name (for example, `p` or `td`) or have a custom element tag name in order to attach Javascript behavior. In case you want to create a component with custom behavior defined in Javascript, Web Component specification, you must specify a custom tag name.
+    If tag name is not specified, `div`is used by default.
 
-* `data` variable: defines the data contract for the component.
-This variable is used the data contract for the component. The contract consists of the attributes required for the component to function properly. The attributes provided by this variable can be either required or optional. Required attributes must always be defined whenever a component is used, while optional ones can be left undefined. Nevertheless, by convention, attributes cannot have their value undefined. For this reason, if you define an optional attribute in your contract, you must set a default value for it. The default value will be used if an attribute value is not set explicitly or via context.
+    * `data` variable: defines the data contract for the component.
+    This variable is used the data contract for the component. The contract consists of the attributes required for the component to function properly. The attributes provided by this variable can be either required or optional. Required attributes must always be defined whenever a component is used, while optional ones can be left undefined. Nevertheless, by convention, attributes cannot have their value undefined. For this reason, if you define an optional attribute in your contract, you must set a default value for it. The default value will be used if an attribute value is not set explicitly or via context.
 
 Whenever possible, use primitive types (e. g. strings, numbers etc). Avoid complex objects as a change in the object might lead to a broken component outside the contract itself.
 

@@ -9,18 +9,18 @@ This document provides details on how to set up the Spryker Merchant Portal.
 ## Prerequisites
 To start using Merchant Portal, install Spryker demo-shop:
 1. Use [this repository](https://github.com/spryker-shop/suite) for the Marketplace project installation.  
-2. Install the project using one of the following guides: 
-    - [Spryker installation using Docker](https://documentation.spryker.com/docs/installing-spryker-with-docker)
-    - Spryker installation using Vagrant: 
-        - [DevVM on Linux / Mac OS](https://documentation.spryker.com/docs/b2b-b2c-demo-shop-installation-mac-os-or-linux-with-devvm)
-        - [DevVM on Windows](https://documentation.spryker.com/docs/b2b-b2c-demo-shop-installation-windows-with-development-virtual-machine)
-        - [Without DevVM](https://documentation.spryker.com/docs/b2b-b2c-demo-shop-installation-without-development-virtual-machine)
- 
+2. Install the project using one of the following guides:
+    - [Spryker installation using Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html)
+    - Spryker installation using Vagrant:
+        - [DevVM on Linux / Mac OS](/docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-mac-os-or-linux-with-development-virtual-machine.html)
+        - [DevVM on Windows](/docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-windows-with-development-virtual-machine.html)
+        - [Without DevVM](/docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-without-development-virtual-machine.html)
+
 
 ## Requirements
 To build Merchant Portal, install or update the following tools:  
 - [Node.js](https://nodejs.org/en/download/) - minimum version is v12.
-- [Yarn](https://classic.yarnpkg.com/en/docs/install/) - minimum version is v2.
+- [Yarn](https://classic.yarnpkg.com/en/docs/install/) - minimum version is 2.0.0 and maximum is 2.3.x.
 
 ## Overview
 The main environmental differences between the existing front-ends (Yves, Zed) and Merchant Portal are:  

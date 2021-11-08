@@ -3,11 +3,12 @@ title: Users and rights overview
 last_updated: Aug 20, 2021
 description: User and rights management is a general term that describes the security functionality for controlling user access to perform various roles throughout the system
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v5/docs/permission-acl-management
-originalArticleId: 4be8917d-9d80-4508-8de7-57f01916d3c3
+originalLink: https://documentation.spryker.com/docs/user-and-rights-overview
+originalArticleId: 4006b24f-fd0a-480a-9589-d2b822fdbde3
 redirect_from:
-- /v5/docs/permission-acl-management
-- /v5/docs/en/permission-acl-management
+- /v5/docs/user-and-rights-management
+- /v5/docs/en/user-and-rights-management
+- /docs/scos/dev/feature-walkthroughs/202005.0/customer-account-management-feature-walkthrough/user-and-rights-overview.html
 ---
 
 User and rights management is a general term that describes the security functionality for controlling user access to perform various roles throughout the system.
@@ -113,24 +114,3 @@ In the example, we grant the user **winner@spryker.com** access to all Zed resou
 
 
 
-## If you are:
-
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/spryker-core-back-office-feature-integration" class="mr-link">Enable Users and Rights by integrating the Spryker Core Back Office feature into your project</a></li></ul>
-        </div>
-  <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/managing-roles" class="mr-link">Create and manage roles</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-groups" class="mr-link">Create and manage groups</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-users" class="mr-link">Create and manage users</a></li>
-            </ul>
-        </div>
- </div>
-</div>

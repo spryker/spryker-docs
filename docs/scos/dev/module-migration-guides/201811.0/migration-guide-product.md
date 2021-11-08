@@ -104,7 +104,7 @@ class ProductCollectorQuery extends AbstractPdoCollectorQuery
     }
 ```
 
-</br>
+<br>
 </details>
 
 It is important to have the store matching condition inside the ON section of the `LEFT JOIN` so the number of result rows is not changed.
@@ -140,7 +140,7 @@ class ProductCollector extends AbstractSearchPdoCollector
     }
 ```
 
-</br>
+<br>
 </details>
 
 Collectors should now be able to export abstract product data per store both for Storage and Search.
@@ -378,7 +378,7 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
 }
 ```
 
-</br>
+<br>
 </details>
 
 ### 5. Troubleshooting

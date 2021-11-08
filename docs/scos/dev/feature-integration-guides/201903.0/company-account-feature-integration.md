@@ -86,7 +86,7 @@ DE--7,spryker_systems,spryker_systems_HQ,0
 Register the following plugin to enable data import:
 |Plugin|Specification|Prerequisites|Namespace|
 |---|---|---|---|
-|`BusinessOnBehalfCompanyUserDataImportPlugin`|Imports Business on Behalf Company Users.|Assumes that the Customer keys exist in the database.</br>Assumes that the Company keys exist in the database.</br>Assumes that the Company Business Unit keys exist in the database.|`Spryker\Zed\BusinessOnBehalfDataImport\Communication\Plugin\DataImport`|
+|`BusinessOnBehalfCompanyUserDataImportPlugin`|Imports Business on Behalf Company Users.|Assumes that the Customer keys exist in the database.<br>Assumes that the Company keys exist in the database.<br>Assumes that the Company Business Unit keys exist in the database.|`Spryker\Zed\BusinessOnBehalfDataImport\Communication\Plugin\DataImport`|
 
 <details open>
 <summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
@@ -160,7 +160,7 @@ class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 </details>
 
 {% info_block warningBox "Verification" %}
-</br>1. Log in with a сustomer who has multiple Company Users and a default one.</br>2. Check in the session if the default Company User was assigned to the Customer.</br>3. Check in the session if the IsOnBehalf property is set correctly for the Customer.
+<br>1. Log in with a сustomer who has multiple Company Users and a default one.<br>2. Check in the session if the default Company User was assigned to the Customer.<br>3. Check in the session if the IsOnBehalf property is set correctly for the Customer.
 {% endinfo_block %}
 
 ## Install Feature Frontend

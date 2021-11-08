@@ -58,33 +58,30 @@ Company roles and permissions and their relation to the organizational structure
 ## Permission types
 Permissions can be simple and complex.
 <table>
-	<th>Permission Type</th>
-	<th>Description</th>
-	<th>Example</th>
+	<tr>
+        <th>Permission Type</th>
+        <th>Description</th>
+        <th>Example</th>
+	</tr>
 	<tr>
         <td><b>Simple</b></td>
 		<td>	Simple permissions are those that do not have any logic behind them and answer the question “Does the customer have a permission?”. Simple permissions implement only PermissionPluginInterface (Shared).</td>
 		<td>
             <p>A Company User is allowed (or not allowed) to access product details page.</p>
-
-
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/simple_permissions.png)
-
-
-</td>
+            <img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/simple_permissions.png" alt="">
+        </td>
 	</tr>
 	<tr>
         <td><b>Complex</b></td>
 		<td>Complex permissions have some logic behind them and answer the question “Does the customer have a permission with some parameters and business logic?”. Complex permissions implement ExecutablePermissionPluginInterface (Shared).</td>
 		<td>
            <p> A Company User is allowed (or not allowed) to place an order with grand total over 1000 Euro.</p>
-
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/complex_permissions.png)
+            <img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/complex_permissions.png" alt="">
         </td>
 	</tr>
     <tr>
         <td><b>Infrastructural</b></td>
-		<td>Some permissions should not be managed in the UI, but programatically. Infrastructural permissions implement InfrastructuralPermissionPluginInterface (Shared).</td>
+		<td>Some permissions should not be managed in the UI, but programmatically. Infrastructural permissions implement InfrastructuralPermissionPluginInterface (Shared).</td>
 		<td>
            <p> Read shared cart, which is managed by the Shared Carts feature.</p>
        </td>
@@ -109,8 +106,8 @@ For example, the permission to view a product, a page, or permission to place an
 
 {% info_block infoBox %}
 
-For example, the permission to add to cart up to X [order value] would be the Zed-side permission. In this case the process of permissions check would be as follows:<ul><li>After the user clicked **Add to cart**, the request comes to Zed and the pre-checks are made following the “add to cart” request.</li><li>After that, the calculations are run. The calculations apply discounts per item, and then per cart (total).
-<br>The logic behind this is simple: a user might have a discount for a specific item, and a discount for order starting from a specific order value. The order value would be calculated taken the discount per items into account, and therefore the discount per cart would be applied after all discounts per items have been calculated.</li><li>After the calculations have been made, the cart is saved.</li></ul>
+<div>For example, the permission to add to cart up to X [order value] would be the Zed-side permission. In this case the process of permissions check would be as follows:<ul><li>After the user clicked **Add to cart**, the request comes to Zed and the pre-checks are made following the “add to cart” request.</li><li>After that, the calculations are run. The calculations apply discounts per item, and then per cart (total).
+<br>The logic behind this is simple: a user might have a discount for a specific item, and a discount for order starting from a specific order value. The order value would be calculated taken the discount per items into account, and therefore the discount per cart would be applied after all discounts per items have been calculated.</li><li>After the calculations have been made, the cart is saved.</li></ul></div>
 
 {% endinfo_block %}
 

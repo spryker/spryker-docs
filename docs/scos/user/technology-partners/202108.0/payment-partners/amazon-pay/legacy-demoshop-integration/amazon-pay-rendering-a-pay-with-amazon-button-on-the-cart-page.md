@@ -1,6 +1,6 @@
 ---
 title: Amazon Pay - Rendering a “Pay with Amazon” Button on the Cart Page
-description: This article describes the way how to render the "Pay with Amazon" button on the cart page.
+description: This article describes the way how to render the Pay with Amazon button on the cart page.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/amazon-pay-rendering-pay-demoshop
@@ -43,8 +43,8 @@ Using this reference and Amazon Pay credentials it is possible to run Amazon Pay
 
 **To insert the Amazon Pay button in your shop, add the following widget on your page:**
 
-```xml
-{% raw %}{{{% endraw %} render(path('amazonpay_paybutton')) {% raw %}}}{% endraw %}
+```php
+{% raw %}{{ render(path('amazonpay_paybutton')) }}{% endraw %}
 ```
 
 Configuration is used from your current settings profile.

@@ -12,7 +12,15 @@ redirect_from:
   - /docs/en/howto-set-up-multiple-stores
   - /v6/docs/howto-set-up-multiple-stores
   - /v6/docs/en/howto-set-up-multiple-stores
+  - /docs/multiple-stores
+  - /docs/en/multiple-stores
 ---
+
+{% info_block warningBox "Cloud environment restrictions" %}
+
+Currently, Spryker Cloud Commerce OS does not support all the multi-store configuration options, like creation of different regions. Soon we are going to publish the documentaion on all the available configuraiton options for the cloud environment. In the meantime, if you want to set up multiple stores, [contact support](https://spryker.force.com/support/s/knowledge-center) to learn about available configuration options.
+
+{% endinfo_block %}
 
 With the Spryker Commerce OS, you can create multiple stores for different scenarios that suit your business needs. The multi-store setup is very versatile and can be customized to your needs. For example, you can:
 

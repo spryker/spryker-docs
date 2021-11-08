@@ -17,9 +17,9 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------------- | ------- | -------|
-| Spryker Core         | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
-| Product              | {{page.version}} | [Product feature integration](https://documentation.spryker.com/docs/product-feature-integration) |
+| Product              | {{page.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html) |
 
 ###  1) Install the required modules using Composer
 
@@ -1389,7 +1389,7 @@ To start feature integration, integrate the following features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | ---------- | ----- | --------------|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration)  |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)  |
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
@@ -1437,7 +1437,7 @@ Make sure that the configured data is added to the `spy_glossary` table in the d
 
 {% endinfo_block %}
 
-### 3) Set up widgets
+### 2) Set up widgets
 
 Register the following plugins to enable widgets:
 

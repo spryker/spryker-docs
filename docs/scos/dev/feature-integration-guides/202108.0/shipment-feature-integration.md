@@ -19,7 +19,10 @@ related:
 
 {% info_block errorBox %}
 
-The following feature integration guide expects the basic feature to be in place.</br>The current feature integration guide only adds the following functionalities:<ul><li>Shipment Back Office UI;</li><li>Delivery method per store;</li><li>Shipment data import.</li></ul>
+The following feature integration guide expects the basic feature to be in place.<br>The current feature integration guide only adds the following functionalities:
+* Shipment Back Office UI
+* Delivery method per store
+* Shipment data import
 
 {% endinfo_block %}
 
@@ -292,7 +295,12 @@ class ShipmentGuiDependencyProvider extends SprykerShipmentGuiDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that:<ul><li>You can see the list of shipment methods in the **Back Office > Administration >  Shipments > Delivery Methods** section.</li><li>You can see information about the shipment method in the **Back Office > Administration >  Shipments > Delivery Methods > View** section.</li><li>You can create the shipment method in the **Back Office > Administration >  Shipments > Delivery Methods > Create** section.</li><li>You can edit the shipment method in the **Back Office > Administration >  Shipments > Delivery Methods > Edit** section.</li><li>You can delete the shipment method in the **Back Office > Administration > Shipments > Delivery Methods > Delete** section.</li></ul>
+Make sure that:
+* You can see the list of shipment methods in the **Back Office > Administration >  Shipments > Delivery Methods** section.
+* You can see information about the shipment method in the **Back Office > Administration >  Shipments > Delivery Methods > View** section.
+* You can create the shipment method in the **Back Office > Administration >  Shipments > Delivery Methods > Create** section.
+* You can edit the shipment method in the **Back Office > Administration >  Shipments > Delivery Methods > Edit** section.
+* You can delete the shipment method in the **Back Office > Administration > Shipments > Delivery Methods > Delete** section.
 
 {% endinfo_block %}
 

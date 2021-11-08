@@ -25,7 +25,7 @@ To create a product offer:
 6. Enter a **Quantity**.
 7. Optional: To always display the product offer as available on the Storefront, select **Always in Stock**.
 8. To add prices, in the *Price* section, do the following:
-  1. select **Add Price**.
+  1. select **Add**.
   2. Select a **STORE**.
   3. Select a **CURRENCY**.
   4. Optional: Enter any of the prices:

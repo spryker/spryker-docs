@@ -112,11 +112,11 @@ This section describes attributes you see when editing he merchant's online prof
 | Imprint | In this field, you can specify imprint information. |   |
 | Data Privacy | In this field, you can specify the data privacy statement. |   |
 
-#### Store Status
+#### Shop Status
 
 | ATTRIBUTE | DESCRIPTION | REQUIRED? |
 |-|-|-|
-| Toggle | By switching the toggle on/off, you can define whether the merchant store (with the profile, merchant products and offers) will be displayed in the Marketplace Storefront or not. |   |
+| Your Store is online toggle | By switching the toggle on/off, you can define whether the merchant store (with the profile, merchant products and offers) will be displayed in the Marketplace Storefront or not. |   |
 
 ### What’s Next?
 

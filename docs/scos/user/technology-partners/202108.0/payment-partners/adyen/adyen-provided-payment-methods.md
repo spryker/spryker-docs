@@ -146,8 +146,9 @@ class AdyenExecute3DStep extends AbstractBaseStep
 
 namespace Pyz\Yves\CheckoutPage\Process;
 
-use Pyz\Yves\CheckoutPage\Plugin\Provider\CheckoutPageControllerProvider;
+use Pyz\Yves\CheckoutPage\Plugin\Router\CheckoutPageRouteProviderPlugin;
 use Pyz\Yves\CheckoutPage\Process\Steps\AdyenExecute3DStep;
+use Pyz\Yves\CheckoutPage\Process\Steps\PlaceOrderStep;
 use Spryker\Yves\StepEngine\Dependency\Step\StepInterface;
 use SprykerShop\Yves\CheckoutPage\Process\StepFactory as SprykerShopStepFactory;
 
@@ -178,10 +179,29 @@ class StepFactory extends SprykerShopStepFactory
     /**
      * @return \Spryker\Yves\StepEngine\Dependency\Step\StepInterface
      */
+    public function createPlaceOrderStep(): StepInterface
+    {
+        return new PlaceOrderStep(
+            $this->getCheckoutClient(),
+            $this->getFlashMessenger(),
+            $this->getLocaleClient()->getCurrentLocale(),
+            $this->getGlossaryStorageClient(),
+            CheckoutPageRouteProviderPlugin::ROUTE_NAME_CHECKOUT_PLACE_ORDER,
+            $this->getConfig()->getEscapeRoute(),
+            [
+                'payment failed' => CheckoutPageRouteProviderPlugin::ROUTE_NAME_CHECKOUT_PAYMENT,
+                'shipment failed' => CheckoutPageRouteProviderPlugin::ROUTE_NAME_CHECKOUT_SHIPMENT,
+            ]
+        );
+    }
+
+    /**
+     * @return \Spryker\Yves\StepEngine\Dependency\Step\StepInterface
+     */
     public function createAdyenExecute3DStep(): StepInterface
     {
         return new AdyenExecute3DStep(
-            CheckoutPageControllerProvider::CHECKOUT_ADYEN_EXECUTE_3D,
+            CheckoutPageRouteProviderPlugin::ROUTE_NAME_CHECKOUT_ADYEN_EXECUTE_3D,
             $this->getConfig()->getEscapeRoute(),
             $this->getConfig()
         );
@@ -269,8 +289,8 @@ class CheckoutPageRouteProviderPlugin extends SprykerShopCheckoutPageRouteProvid
      */
     public function addRoutes(RouteCollection $routeCollection): RouteCollection
     {
+        $routeCollection = parent::addRoutes($routeCollection);
         $routeCollection = $this->addAdyenExecute3DStepRoute($routeCollection);
-        // ...
 
         return $routeCollection;
     }

@@ -133,9 +133,8 @@ Add route provider plugin:
  
 namespace Pyz\Yves\ShopApplication;
  
-use Pyz\Yves\CheckoutPage\Plugin\Router\CheckoutPageRouteProviderPlugin;
 use Spryker\Yves\Router\RouterDependencyProvider as SprykerRouterDependencyProvider;
-~~use SprykerShop\Yves\CheckoutPage\Plugin\Router\CheckoutPageRouteProviderPlugin;~~
+use SprykerShop\Yves\CheckoutPage\Plugin\Router\CheckoutPageRouteProviderPlugin;
 use SprykerEco\Yves\Adyen\Plugin\Router\AdyenRouteProviderPlugin;
  
 class RouterDependencyProvider extends SprykerRouterDependencyProvider
@@ -154,6 +153,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
     }
 }
  ```
+Note: If you provide payment method credit card you have to overwrite CheckoutPageRouteProviderPlugin with one from project level. Please see [Adyen - Provided Payment Methods Step 7](https://docs.spryker.com/docs/scos/user/technology-partners/202108.0/payment-partners/adyen/adyen-provided-payment-methods.html#credit-card) for details.
  
  Add checkout plugins:
  

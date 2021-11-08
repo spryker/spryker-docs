@@ -13,14 +13,12 @@ This document describes how to configure continuous integration using GitHub Act
 
 ## GitHub Actions
 
-GitHub Actions help you automate your software development workflows in the same place you store code and collaborate on pull requests and issues. You can write individual tasks, called actions, and combine them to create a custom workflow. Workflows are custom automated processes that you can set up in your repository to build, test, package, release, or deploy any code project on GitHub.  
+GitHub Actions help you automate your software development workflows in the same place you store code and collaborate on pull requests and issues. You can write individual tasks, called actions, and combine them to create a custom workflow. Workflows are custom automated processes that you can set up in your repository to build, test, package, release, or deploy any code project on GitHub.
 
 For more information on GitHub Actions, see
+* [GitHub Actions](https://github.com/features/actions)
+* [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
 
-*   [GitHub Actions](https://github.com/features/actions)
-    
-*   [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
-    
 
 ## Prerequisites
 
@@ -29,15 +27,11 @@ In a GitHub repository, create the workflow configuration file: `.github/workflo
 ## Configuring basic validation with GitHub Actions
 
 Set up the job that performs the basic validation like:
+* Code style
+* Architecture
+* Security
+* Database schema
 
-*   Code style
-    
-*   Architecture
-    
-*   Security
-    
-*   Database schema
-    
 
 <details open>
     <summary>Example of .github/workflows/{project_name}.yml</summary>
@@ -188,7 +182,7 @@ jobs:
 
             - name: Run PHPStan
               run: vendor/bin/phpstan analyze -l 5 -c phpstan.neon src/
-            
+
             - name: Run Security check
               run: vendor/bin/console security:check
 ...
@@ -198,8 +192,7 @@ jobs:
 
 ## Configuring groups of tests via the Docker SDK
 
-To set up a job that runs a specific group of tests via the [Docker SDK](https://documentation.spryker.com/docs/docker-sdk):
-
+To set up a job that runs a specific group of tests via the [Docker SDK](/docs/scos/dev/the-docker-sdk/{{site.version}}/the-docker-sdk.html):
 1. After the job with the basic validation, add the following job template:
 
 ```yaml
@@ -231,8 +224,8 @@ To set up a job that runs a specific group of tests via the [Docker SDK](https:/
 ```
 
 2. Glue API tests: To fill the storage with the data used by Glue API, add the following commands to load fixtures to the `Run docker` action as shown in the code snippet:  
-    * `docker/sdk testing codecept fixtures`
-    * `docker/sdk testing console queue:worker:start --stop-when-empty`
+* `docker/sdk testing codecept fixtures`
+* `docker/sdk testing console queue:worker:start --stop-when-empty`
 ```yaml
 ...
             - name: Run docker
@@ -247,14 +240,14 @@ To set up a job that runs a specific group of tests via the [Docker SDK](https:/
 
 3. Replace the placeholders with the actual values using the following description.
 
-| PLACEHOLDER| DESCRIPTION| EXAMPLE IN THE PROPERTY NAME| EXAMPLE IN THE PROPERTY VALUE| 
+| PLACEHOLDER| DESCRIPTION| EXAMPLE IN THE PROPERTY NAME| EXAMPLE IN THE PROPERTY VALUE|
 |---|---|---|---|
-| {php_version}| PHP version on which validation is based. The version should correspond to the Docker image defined in `{image_tag}`.| 74| 7.4| 
+| {php_version}| PHP version on which validation is based. The version should correspond to the Docker image defined in `{image_tag}`.| 74| 7.4|
 |{database_type}| Database type on which validation is based.| mariadb| MariaDB|
-| {tests_type}| | The group of tests to run.| glue| Glue| 
-| {image}| Docker image on which the validation is based. The name should correspond to the Docker image defined in `{image_tag}`.| alpine| Alpine| 
-|{image_tag}| Tag of the Docker image on which the validation is based. Check all the images in the [Spryker Docker hub](https://hub.docker.com/r/spryker/php/tags?page=1&ordering=last_updated&name=-debian).| 7.4| 
-| {deployment_configuration_file}| Deploy file configured for building application suitable to run the desired group of tests. Example: [deploy.ci.functional.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/deploy.ci.functional.yml)| deploy.ci.functional.mariadb.yml| 
+| {tests_type}| | The group of tests to run.| glue| Glue|
+| {image}| Docker image on which the validation is based. The name should correspond to the Docker image defined in `{image_tag}`.| alpine| Alpine|
+|{image_tag}| Tag of the Docker image on which the validation is based. Check all the images in the [Spryker Docker hub](https://hub.docker.com/r/spryker/php/tags?page=1&ordering=last_updated&name=-debian).| 7.4|
+| {deployment_configuration_file}| Deploy file configured for building application suitable to run the desired group of tests. Example: [deploy.ci.functional.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/deploy.ci.functional.yml)| deploy.ci.functional.mariadb.yml|
 | {tests_configuration_file}| Codeception configuration files that defines the tests to run. Example: [codeception.ci.functional.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/codeception.ci.functional.yml)| codeception.functional.yml|
 
 4. Repeat steps 1 to 3 until you add all the desired jobs.
@@ -269,17 +262,16 @@ This section describes examples of running groups of tests based on different co
 
 To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3:
 
-1.  Update the desired deploy file:
-    
-    1.  Define the Docker image tag:
+1. Update the desired deploy file:
+    1. Define the Docker image tag:
         ```yaml
         ...
         image:
             tag: spryker/php:7.3-alpine3.12
         ...
         ```
-        
-    2.  Define the MySQL database engine:
+
+    2. Define the MySQL database engine:
         ```yaml
         ...
         services:
@@ -287,16 +279,17 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3:
                 engine: mysql
                 ...
         ```
-    3.  Bootstrap docker setup:
+    3. Bootstrap docker setup:
         ```bash
         docker/sdk boot {deploy_file.yml}
         ```
-    4.  Run the application with the new configuration:
+
+    4. Run the application with the new configuration:
         ```bash
         docker/sdk up
         ```
-2.  Update the desired workflow configuration file:
-    
+2. Update the desired workflow configuration file:
+
 ```yaml
   ...
     php-73-mysql-functional-alpine:
@@ -324,24 +317,22 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3:
                   docker/sdk up -t
                   docker/sdk testing codecept run -c codeception.functional.yml
 ```
-       
-    
+
+
 
 #### Example 2: Running Glue API tests on Debian with PostgreSQL and PHP 8.0
 
 To run Glue API tests on Debian with PostgreSQL and PHP 8.0:
-
-1.  Update the desired deploy file:
-    
-    1.  Define the Docker image tag:
+1. Update the desired deploy file:
+    1. Define the Docker image tag:
         ```yaml
         ...
         image:
             tag: spryker/php:8.0-debian
         ...
         ```
-        
-    2.  Define the PostgreSQL database engine:
+
+    2. Define the PostgreSQL database engine:
         ```yaml
         ...
         services:
@@ -349,16 +340,16 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0:
                 engine: postgres
                 ...
         ```
-        
-    3.  Bootstrap docker setup:
+
+    3. Bootstrap docker setup:
         ```bash
         docker/sdk boot {deploy_file.yml}
         ```
-    4.  Run the application with the new configuration:
+    4. Run the application with the new configuration:
         ```bash
         docker/sdk up
         ```
-2.  Update the desired workflow configuration file:
+2. Update the desired workflow configuration file:
 ```yaml
 ...
     php-80-postgresql-glue-debian:
@@ -393,15 +384,11 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0:
 
 {% info_block infoBox "Default configuration" %}
 
-*   Since Alpine is the default platform and we don’t need a specific version, we don’t define it in the image tag in the deploy and workflow files.
-    
-*   MariaDB is the default database engine, so we don’t need to define it in the deploy file.
+* Since Alpine is the default platform and we don’t need a specific version, we don’t define it in the image tag in the deploy and workflow files.
+* MariaDB is the default database engine, so we don’t need to define it in the deploy file.
 
 {% endinfo_block %}
 
-
-
-    
 
 To run acceptance tests on Alpine with MariaDB and PHP 7.4:
 
@@ -444,14 +431,8 @@ image:
 
 ## Related documentation
 
-*   To learn about workflow configuration, see [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions).
-    
-*   To learn how to choose the language and to create a basic template for workflow configuration files, see [Quickstart for GitHub Actions](https://help.github.com/en/actions/getting-started-with-github-actions/starting-with-preconfigured-workflow-templates)
-    
-*   To learn about encrypted secrets in a workflow on demand, see [Encrypted secrets](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets)
-    
-*   To learn about the Deploy file, see [Deploy file reference - 1.0](https://documentation.spryker.com/docs/deploy-file-reference-10#deploy-file-reference---1-0)
-    
-*   To learn about configuring services with the Docker SDK, see [Configuring services](https://documentation.spryker.com/docs/configuring-services#configuring-services)
-    
-
+* To learn about workflow configuration, see [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions).
+* To learn how to choose the language and to create a basic template for workflow configuration files, see [Quickstart for GitHub Actions](https://help.github.com/en/actions/getting-started-with-github-actions/starting-with-preconfigured-workflow-templates)
+* To learn about encrypted secrets in a workflow on demand, see [Encrypted secrets](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets)
+* To learn about the Deploy file, see [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file-reference-1.0.html)
+* To learn about configuring services with the Docker SDK, see [Configuring services](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-services.html)

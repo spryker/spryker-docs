@@ -60,10 +60,12 @@ const ENTITY_SPY_PRODUCT_ABSTRACT_DELETE = "Entity.spy_product_abstract.delete";
 The events will be posted to queue **event** in RabbitMq.
 
 ## 2. Create Publication Queue
-Now, you need to create a publication queue. It will be used to synchronize published data to the frontend. It is recommended to have a separate queue for each *Redis* or *Elasticsearch* entity. For information on how to create a queue, see [Set Up a "Hello World" Queue](https://documentation.spryker.com/2021080/docs/setup-hello-world-queue), section **Creating a Simple Queue**.
+Now, you need to create a publication queue. It will be used to synchronize published data to the frontend. It is recommended to have a separate queue for each *Redis* or *Elasticsearch* entity. For information on how to create a queue, see [Set Up a "Hello World" Queue](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html), section **Creating a Simple Queue**.
 
 {% info_block infoBox %}
+
 As a naming convention, names of queues that synchronize data to Redis start with **sync.storage**, and names of queues that synchronize data to Elasticsearch start with **sync.search**.
+
 {% endinfo_block %}
 
 We implemented 2 message processor plugins for synchronizing data to the frontend:
@@ -74,6 +76,7 @@ We implemented 2 message processor plugins for synchronizing data to the fronten
 You need to map your new queue to one of the plugins depending on which storage you want to use it for. The queues must be mapped in `QueueDependencyProvider::getProcessorMessagePlugins()`. For details, see section **Queue Message Processor Plugin** in the *Set Up a "Hello World" Queue* document.
 
 {% info_block infoBox %}
+
 It is also good practice to create an error queue for your publication queue, where errors will be posted. The error queue must be registered in `RabbitMqConfig::getQueueOptions()`. For example:
 
 ```php
@@ -92,7 +95,9 @@ protected function getQueueOptions()
 The next step is to create a database table that will be used as a mirror for the corresponding *Redis* or *Elasticsearch* store. For details, see [Extending the Database Schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html).
 
 {% info_block infoBox %}
+
 As a naming convention, it is recommended to append `_storage` to the end of the table name, if it is synchronized with Redis, and `_search`, if it is synchronized with Elasticsearch.
+
 {% endinfo_block %}
 
 All mirror tables must implement the **Synchronization** Behavior that will be used to synchronize data to *Redis* or *Elasticsearch*. Also, the table must populate foreign keys necessary to backtrack the Propel entities.
@@ -139,15 +144,15 @@ Sample Elasticsearch synchronization table (see `data/shop/development/current/s
 The *Synchronization* behavior added by the above schema files adds a column that will contain the actual data to synchronize to Redis or Elasticsearch (in JSON format). The column name is **data**.
 
 Synchronization Behavior Parameters:
-
-* **resource** - specifies the Redis or Elasticsearch namespace to synchronize with;
-* **store** - specifies whether it is necessary to specify a store for an entity;
-* **locale** - specifies whether it is necessary to specify a locale for an entity;
-* **key_suffix_column** - specifies the name of the column that will be appended to the Redis or Elasticsearch key to make the key unique. If this parameter is omitted, then all entities will be stored under the same key;
-* **queue_group** - specifies the queue group used for synchronization;
+* **resource** - specifies the Redis or Elasticsearch namespace to synchronize with.
+* **store** - specifies whether it is necessary to specify a store for an entity.
+* **locale** - specifies whether it is necessary to specify a locale for an entity.
+* **key_suffix_column** - specifies the name of the column that will be appended to the Redis or Elasticsearch key to make the key unique. If this parameter is omitted, then all entities will be stored under the same key.
+* **queue_group** - specifies the queue group used for synchronization.
 * **params** - specifies search parameters (Elasticsearch only).
 
 ## 4. Create Publish Module
+
 Now, you are ready to implement the **Publish** step. It is recommended practice to create a separate module for this purpose. To create an empty module, execute the following commands:
 
 ```
@@ -157,7 +162,9 @@ console code:generate:module:shared MyModuleStorage
 ```
 
 {% info_block infoBox %}
+
 As a naming convention, names of modules that publish data to Redis end with Storage (e.g. *MyModule**Storage***, and names of modules that publish to Elasticsearch end with Search (e.g. *MyModule**Search***).
+
 {% endinfo_block %}
 
 ## 5. Listen to Publish Events
@@ -196,7 +203,9 @@ A listener class must implement the **EventBulkHandlerInterface** and contain on
 * **$eventName** - specifies an event name.
 
 {% info_block infoBox %}
+
 For performance considerations, events are passed to the listener in bulk. Even if a single event must be handled, it is passed as an array of a single element.
+
 {% endinfo_block %}
 
 
@@ -229,6 +238,7 @@ class ProductStorageEventSubscriber extends AbstractPlugin implements EventSubsc
 ```
 
 ### Overriding Listeners
+
 If necessary, you can also override listeners already configured in Spryker. For this purpose, you need to implement a class that extends the event subscriber of the corresponding module on your project level:
 
 ```php
@@ -250,6 +260,7 @@ class AvailabilityStorageEventSubscriber extends Spryker\Zed\AvailabilityStorage
 ```
 
 ### Adding Listeners to Existing Modules
+
 To add a listener to an existing module, you also need to extend the module's event subscriber on project level:
 
 ```php
@@ -369,11 +380,14 @@ foreach ($productAbstracts as $productAbstract) {
 ```
 
 ## Additional Tasks
+
 ### View Event Mapping
+
 To see all listeners mapped for a certain event, Ctrl+Click it in PhpStorm. The following example shows that the *SPY_URL_CREATE* event has **6** listeners mapped to it, which means that there will be **6** messages for this event in the **event** queue.
 ![Lookup listener](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Resources+and+Developer+Tools/Publish+and+Synchronization+Reference/lookup-listener.png)
 
 ### Debug Publish and Synchronize
+
 To debug Publish and Synchronize:
 
 1. Turn off [Jenkins](/docs/scos/dev/sdk/cronjob-scheduling.html) to stop processing all queues. This can be done using the following command:
@@ -433,4 +447,5 @@ foreach ($productAbstracts as $productAbstract) {
 ```
 
 ### Disable Events
+
 If you want to disable all events, call `EventBehaviorConfig::disableEvent()`. To disable events of a specific entity, call `$glossaryTranslationEntity->disableEvent()`.

@@ -20,9 +20,9 @@ related:
 {% info_block errorBox %}
 
 The following feature integration guide expects the basic feature to be in place.<br>The current feature integration guide only adds the following functionalities:
-* Shipment Back Office UI;
-* Delivery method per store;
-* Shipment data import.
+* Shipment Back Office UI
+* Delivery method per store
+* Shipment data import
 
 {% endinfo_block %}
 

@@ -16,7 +16,7 @@ The **Marketplace Order Management API** allows you to retrieve all orders made 
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [**Glue API: Order Management feature integration**](https://documentation.spryker.com/docs/glue-api-order-management-feature-integration)
+For detailed information on the modules that provide the API functionality and related installation instructions, see [**Glue API: Order Management feature integration**](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html)
 
 ## Retrieve all orders
 
@@ -30,7 +30,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 | HEADER KEY  | HEADER VALUE | REQUIRED | DESCRIPTION                                                  |
 | ------------- | ------------ | -------- | -------------------------------- |
-| Authorization | string   | &check;  | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer). |
+| Authorization | string   | &check;  | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
 | QUERY PARAMETER | DESCRIPTION  | POSSIBLE VALUES |
 | ---------------- | ---------------------- | ----------------------------- |
@@ -539,13 +539,13 @@ To retrieve detailed information on an order, send the request:
 
 | PATH PARAMETER | DESCRIPTION     |
 | ------------------ | ------------------------------ |
-| {% raw %}***{{order_id}}***{% endraw %}       | Unique identifier of an order. [Retrieve all orders](https://documentation.spryker.com/docs/retrieving-customers-order-history#retrieving-all-orders) to get it. |
+| {% raw %}***{{order_id}}***{% endraw %}       | Unique identifier of an order. [Retrieve all orders](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-orders.html) to get it. |
 
 ### Request
 
 | HEADER KEY    | HEADER VALUE | REQUIRED | DESCRIPTION |
 | ------------- | ------------ | -------- | ---------------------- |
-| Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer). |
+| Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
 
 | String parameter | Description     | Possible values    |
@@ -1334,7 +1334,7 @@ To retrieve detailed information on an order, send the request:
 | ATTRIBUTE     | TYPE | DESCRIPTION     |
 | ------------------ | -------- | --------------------- |
 | merchantReferences | Array    | Unique identifier of the [merchant](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) |
-| itemStates      | Array  | Statuses of the order’s items in the [state machine](https://documentation.spryker.com/docs/order-process-modelling-state-machines). |
+| itemStates      | Array  | Statuses of the order’s items in the [state machine](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html). |
 | createdAt       | String | Date and time when the order was created.   |
 | currencyIsoCode | String | ISO 4217 code of the currency that was selected when placing the order. |
 | priceMode       | String | Price mode that was active when placing the order. Possible values:<ul><li>**NET_MODE**—prices before tax.</li><li>**GROSS_MODE**—prices after tax.</li></ul> |
@@ -1375,7 +1375,7 @@ To retrieve detailed information on an order, send the request:
 | billingAddress.email       | String | Email address to use for communication.                      |
 | billingAddress.country     | String | Specifies the country.                                       |
 | billingAddress.iso2Code    | String | ISO 2-Letter Country Code to use.                            |
-| shippingAddress            | object | Shipment address of the order. This value is returned only if you submit an order without split delivery. See [Checking out purchases in version 202009.0](https://documentation.spryker.com/v6/docs/checking-out-purchases) to learn how to do that. |
+| shippingAddress            | object | Shipment address of the order. This value is returned only if you submit an order without split delivery. See [Checking out purchases in version 202009.0](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html) to learn how to do that. |
 
 #### Order item information
 
@@ -1427,7 +1427,7 @@ To retrieve detailed information on an order, send the request:
 | items.salesUnit | String| Sales unit to be used for the item amount calculation.|
 | items.amount | String| |
 | items.metadata   | object  | Metadata of the concrete product.                            |
-| items.metadata.superAttributes   | String  | [Attributes](https://documentation.spryker.com/docs/product-attribute-overview) of the order item. |
+| items.metadata.superAttributes   | String  | [Attributes](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html) of the order item. |
 | items.metadata.image     | String  | Product image URL.   |
 
 
@@ -1503,7 +1503,7 @@ To retrieve detailed information on an order, send the request:
 
 | ATTRIBUTE     | TYPE | DESCRIPTION      |
 | ------------------ | ----------- | ------------------------ |
-| shipments | object | Information about the shipments used in this order. This value is returned only if you submit an order without split delivery. To learn how to do that, see [Checking out purchases in version 202009.0](https://documentation.spryker.com/v6/docs/checking-out-purchases). To see all the attributes that are returned when retrieving orders without split delivery, see [Retrieving orders in version 202009.0](https://documentation.spryker.com/docs/retrieving-orders). To retrieve shipment details, include the order-shipments resource in the request. |
+| shipments | object | Information about the shipments used in this order. This value is returned only if you submit an order without split delivery. To learn how to do that, see [Checking out purchases in version 202009.0](/docs/scos/dev/glue-api-guides/202009.0/checking-out/checking-out-purchases.html). To see all the attributes that are returned when retrieving orders without split delivery, see [Retrieving orders in version 202009.0](/docs/scos/dev/glue-api-guides/202009.0/retrieving-orders.html). To retrieve shipment details, include the order-shipments resource in the request. |
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE |
 | ---------------- | --------------------- | ------ |

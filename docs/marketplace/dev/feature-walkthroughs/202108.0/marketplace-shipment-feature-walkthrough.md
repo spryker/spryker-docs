@@ -9,7 +9,7 @@ The *Marketplace Shipment* feature provides the connection between Merchant and 
 
 {% info_block warningBox "User documentation" %}
 
-To learn more about the feature and to find out how end users use it, see [Marketplace Shipment feature overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-shipment-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Marketplace Shipment feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-shipment-feature-overview.html) for business users.
 {% endinfo_block %}
 
 ## Module dependency graph
@@ -41,8 +41,8 @@ The following schema illustrates the Marketplace Shipment domain model:
 
 |INTEGRATION GUIDES  |
 |---------|
-| [Marketplace Shipment feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-shipment-feature-integration.html) |  |
-| [Marketplace Shipment + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-shipment-cart-feature-integration.html) |  |
-| [Marketplace Shipment + Customer feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-shipment-customer-feature-integration.html) |   |
-| [Marketplace Shipment + Checkout feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-shipment-checkout-feature-integration.html) |  |
+| [Marketplace Shipment feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-feature-integration.html) |  |
+| [Marketplace Shipment + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-cart-feature-integration.html) |  |
+| [Marketplace Shipment + Customer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-customer-feature-integration.html) |   |
+| [Marketplace Shipment + Checkout feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-checkout-feature-integration.html) |  |
 |    |    |    |    |

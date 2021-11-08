@@ -47,7 +47,7 @@ $jobs[] = [
 
 To import this configuration to Jenkins you need to run this command in the console. In a production environment, this is part of the deployment process.
 
-`vendor/bin/console setup:jenkins:generate`
+`vendor/bin/console scheduler:setup`
 
 Now you can open Jenkins on port 10007 and watch your scripts running: [http://zed.mysprykershop.com:10007](http://zed.mysprykershop.com:10007/) (URL works for standard VM, you may use a different host name).
 

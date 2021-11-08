@@ -1,6 +1,23 @@
 .main-sidebar {
-    padding: 40px 0;
+    padding: 40px 0 0;
     transition: transform .3s linear;
+    position: relative;
+
+    @include media("<laptop") {
+        padding-top: 20px;
+    }
+
+    &:before {
+        @include media(">desktop") {
+            position: absolute;
+            content: '';
+            bottom: 100%;
+            left: 0;
+            width: 100%;
+            background: $grey-lightest;
+            height: 50px;
+        }
+    }
 
     @include media("<desktop") {
         padding: 5px 24px;
@@ -48,10 +65,35 @@
         }
     }
 
+    &__sticky {
+        position: sticky;
+        top: 94px;
+        left: 0;
+        height: calc(100vh - 94px);
+        height: calc(100vh - 134px);
+        display: flex;
+        flex-direction: column;
+
+        @include media("<laptop") {
+            top: 78px;
+            height: calc(100vh - 98px);
+        }
+
+        @include media("<desktop") {
+            position: static;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+        }
+    }
+
     &__opener {
         position: absolute;
         z-index: 3;
         top: 44px;
+        top: 5px;
         right: 0;
         margin: 0 -20px 0 0;
         padding: 7px;
@@ -99,6 +141,8 @@
         @include media(">=desktop") {
             display: block !important;
             opacity: 1 !important;
+            flex: 1 1 auto;
+            overflow: hidden;
         }
     }
 
@@ -119,6 +163,10 @@
             width: 100%;
             transition: none;
         }
+
+        @include media(">=desktop") {
+            height: 100%;
+        }
     }
 
     &__slide {
@@ -136,6 +184,28 @@
             width: 100%;
         }
 
+        @include media(">=desktop") {
+            overflow-x: auto;
+            height: 100%;
+
+            &::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background-color: $grey-lighten;
+                border-radius: 4px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                border-radius: 4px;
+                background: $grey;
+            }
+
+            scrollbar-color: $grey $grey-lighten;
+            scrollbar-width: thin;
+        }
+
         .main-sidebar__title {
             @include media("<desktop") {
                 padding: 14px 16px;
@@ -145,12 +215,14 @@
     }
 
     &--collapsed {
+        .main-sidebar__title-wrapper,
         .main-sidebar__inner {
             @include media(">=desktop") {
                 width: 40px;
             }
         }
 
+        .main-sidebar__title,
         .main-sidebar__slide {
             @include media(">=desktop") {
                 opacity: 0;
@@ -164,10 +236,13 @@
         line-height: 1.4;
         font-weight: 800;
         color: $grey-dark;
-        margin: 0 10px 25px 25px;
-        flex: 1 1 auto;
+        margin: 10px 10px 25px 25px;
+        flex: 0 0 auto;
+        width: 275px;
+        transition: transform .3s linear, opacity .3s linear;
 
         @include media("<laptop") {
+            width: 235px;
             font-size: 18px;
         }
 
@@ -177,6 +252,24 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            width: 100%;
+        }
+
+        &-wrapper {
+            flex: 0 0 auto;
+            overflow: hidden;
+            width: 310px;
+            transition: width .3s linear;
+
+            @include media("<laptop") {
+                width: 270px;
+            }
+
+            @include media("<desktop") {
+                width: auto;
+                transition: none;
+                flex: 1 1 auto;
+            }
         }
     }
 

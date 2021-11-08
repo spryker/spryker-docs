@@ -81,18 +81,18 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
      */
     protected function extendPaymentMethodHandler(Container $container): Container
     {
-        $container->extend(static::PAYMENT_METHOD_HANDLER, function (StepHandlerPluginCollection $paymentMethodHandlerCollection) {
-            $paymentMethodHandlerCollection->add(new AdyenPaymentHandlerPlugin(), AdyenConfig::ADYEN_CREDIT_CARD);
-            $paymentMethodHandlerCollection->add(new AdyenPaymentHandlerPlugin(), AdyenConfig::ADYEN_SOFORT);
-            $paymentMethodHandlerCollection->add(new AdyenPaymentHandlerPlugin(), AdyenConfig::ADYEN_DIRECT_DEBIT);
-            $paymentMethodHandlerCollection->add(new AdyenPaymentHandlerPlugin(), AdyenConfig::ADYEN_KLARNA_INVOICE);
-            $paymentMethodHandlerCollection->add(new AdyenPaymentHandlerPlugin(), AdyenConfig::ADYEN_PREPAYMENT);
-            $paymentMethodHandlerCollection->add(new AdyenPaymentHandlerPlugin(), AdyenConfig::ADYEN_IDEAL);
-            $paymentMethodHandlerCollection->add(new AdyenPaymentHandlerPlugin(), AdyenConfig::ADYEN_PAY_PAL);
-            $paymentMethodHandlerCollection->add(new AdyenPaymentHandlerPlugin(), AdyenConfig::ADYEN_ALI_PAY);
-            $paymentMethodHandlerCollection->add(new AdyenPaymentHandlerPlugin(), AdyenConfig::ADYEN_WE_CHAT_PAY);
+        $container->extend(static::PAYMENT_METHOD_HANDLER, function (StepHandlerPluginCollection $stepHandlerPluginCollection) {
+            $stepHandlerPluginCollection->add(new AdyenPaymentHandlerPlugin(), AdyenConfig::ADYEN_CREDIT_CARD);
+            $stepHandlerPluginCollection->add(new AdyenPaymentHandlerPlugin(), AdyenConfig::ADYEN_SOFORT);
+            $stepHandlerPluginCollection->add(new AdyenPaymentHandlerPlugin(), AdyenConfig::ADYEN_DIRECT_DEBIT);
+            $stepHandlerPluginCollection->add(new AdyenPaymentHandlerPlugin(), AdyenConfig::ADYEN_KLARNA_INVOICE);
+            $stepHandlerPluginCollection->add(new AdyenPaymentHandlerPlugin(), AdyenConfig::ADYEN_PREPAYMENT);
+            $stepHandlerPluginCollection->add(new AdyenPaymentHandlerPlugin(), AdyenConfig::ADYEN_IDEAL);
+            $stepHandlerPluginCollection->add(new AdyenPaymentHandlerPlugin(), AdyenConfig::ADYEN_PAY_PAL);
+            $stepHandlerPluginCollection->add(new AdyenPaymentHandlerPlugin(), AdyenConfig::ADYEN_ALI_PAY);
+            $stepHandlerPluginCollection->add(new AdyenPaymentHandlerPlugin(), AdyenConfig::ADYEN_WE_CHAT_PAY);
  
-            return $paymentMethodHandlerCollection;
+            return $stepHandlerPluginCollection;
         });
  
         return $container;
@@ -133,19 +133,24 @@ Add route provider plugin:
  
 namespace Pyz\Yves\ShopApplication;
  
+use Pyz\Yves\CheckoutPage\Plugin\Router\CheckoutPageRouteProviderPlugin;
 use Spryker\Yves\Router\RouterDependencyProvider as SprykerRouterDependencyProvider;
+~~use SprykerShop\Yves\CheckoutPage\Plugin\Router\CheckoutPageRouteProviderPlugin;~~
 use SprykerEco\Yves\Adyen\Plugin\Router\AdyenRouteProviderPlugin;
  
 class RouterDependencyProvider extends SprykerRouterDependencyProvider
 {
     /**
-     * @return \Spryker\Yves\RouterExtension\Dependency\Plugin\RouteProviderPluginInterface[]
+     * @return array<\Spryker\Yves\RouterExtension\Dependency\Plugin\RouteProviderPluginInterface>
      */
     protected function getRouteProvider(): array
     {
-        return [
+        $routeProviders = [
+            ...
             new AdyenRouteProviderPlugin(),
         ];
+        
+        ...
     }
 }
  ```
@@ -175,7 +180,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Spryker\Zed\Checkout\Dependency\Plugin\CheckoutSaveOrderInterface[]
+     * @return array<\Spryker\Zed\Checkout\Dependency\Plugin\CheckoutSaveOrderInterface>|array<\Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutDoSaveOrderInterface>
      */
     protected function getCheckoutOrderSavers(Container $container)
     {
@@ -191,7 +196,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Spryker\Zed\Checkout\Dependency\Plugin\CheckoutPostSaveHookInterface[]
+     * @return array<\Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutPostSaveInterface>
      */
     protected function getCheckoutPostHooks(Container $container)
     {
@@ -224,8 +229,8 @@ use SprykerEco\Zed\Adyen\Communication\Plugin\Oms\Command\CancelPlugin;
 use SprykerEco\Zed\Adyen\Communication\Plugin\Oms\Command\CancelOrRefundPlugin;
 use SprykerEco\Zed\Adyen\Communication\Plugin\Oms\Command\CapturePlugin;
 use SprykerEco\Zed\Adyen\Communication\Plugin\Oms\Command\RefundPlugin;
+use SprykerEco\Zed\Adyen\Communication\Plugin\Oms\Condition\IsAuthorizationFailedPlugin;
 use SprykerEco\Zed\Adyen\Communication\Plugin\Oms\Condition\IsAuthorizedPlugin;
-use SprykerEco\Zed\Adyen\Communication\Plugin\Oms\Condition\IsAuthorizedAndCapturedPlugin;
 use SprykerEco\Zed\Adyen\Communication\Plugin\Oms\Condition\IsCanceledPlugin;
 use SprykerEco\Zed\Adyen\Communication\Plugin\Oms\Condition\IsCancellationFailedPlugin;
 use SprykerEco\Zed\Adyen\Communication\Plugin\Oms\Condition\IsCancellationReceivedPlugin;
@@ -235,15 +240,18 @@ use SprykerEco\Zed\Adyen\Communication\Plugin\Oms\Condition\IsCaptureReceivedPlu
 use SprykerEco\Zed\Adyen\Communication\Plugin\Oms\Condition\IsRefundedPlugin;
 use SprykerEco\Zed\Adyen\Communication\Plugin\Oms\Condition\IsRefundFailedPlugin;
 use SprykerEco\Zed\Adyen\Communication\Plugin\Oms\Condition\IsRefundReceivedPlugin;
+use SprykerEco\Zed\Adyen\Communication\Plugin\Oms\Condition\IsRefusedPlugin;
  
 class OmsDependencyProvider extends SprykerOmsDependencyProvider
 {
+    ...
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
      * @return \Spryker\Zed\Kernel\Container
      */
-    public function provideBusinessLayerDependencies(Container $container)
+    public function provideBusinessLayerDependencies(Container $container): Container
     {
         $container = parent::provideBusinessLayerDependencies($container);
         $container = $this->extendCommandPlugins($container);
@@ -257,7 +265,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
      *
      * @return \Spryker\Zed\Kernel\Container
      */
-    protected function extendCommandPlugins(Container $container)
+    protected function extendCommandPlugins(Container $container): Container
     {
         $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
             ...
@@ -278,21 +286,22 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
      *
      * @return \Spryker\Zed\Kernel\Container
      */
-    protected function extendConditionPlugins(Container $container)
+    protected function extendConditionPlugins(Container $container): Container
     {
         $container->extend(OmsDependencyProvider::CONDITION_PLUGINS, function (ConditionCollectionInterface $conditionCollection) {
             ...
+            $conditionCollection->add(new IsAuthorizationFailedPlugin(), 'Adyen/IsAuthorizationFailed');
             $conditionCollection->add(new IsAuthorizedPlugin(), 'Adyen/IsAuthorized');
             $conditionCollection->add(new IsCanceledPlugin(), 'Adyen/IsCanceled');
-            $conditionCollection->add(new IsCancellationReceivedPlugin(), 'Adyen/IsCancellationReceived');
             $conditionCollection->add(new IsCancellationFailedPlugin(), 'Adyen/IsCancellationFailed');
+            $conditionCollection->add(new IsCancellationReceivedPlugin(), 'Adyen/IsCancellationReceived');
             $conditionCollection->add(new IsCapturedPlugin(), 'Adyen/IsCaptured');
-            $conditionCollection->add(new IsCaptureReceivedPlugin(), 'Adyen/IsCaptureReceived');
             $conditionCollection->add(new IsCaptureFailedPlugin(), 'Adyen/IsCaptureFailed');
+            $conditionCollection->add(new IsCaptureReceivedPlugin(), 'Adyen/IsCaptureReceived');
             $conditionCollection->add(new IsRefundedPlugin(), 'Adyen/IsRefunded');
-            $conditionCollection->add(new IsRefundReceivedPlugin(), 'Adyen/IsRefundReceived');
             $conditionCollection->add(new IsRefundFailedPlugin(), 'Adyen/IsRefundFailed');
-            $conditionCollection->add(new IsAuthorizationFailedPlugin(), 'Adyen/IsAuthorizationFailed');
+            $conditionCollection->add(new IsRefundReceivedPlugin(), 'Adyen/IsRefundReceived');
+            $conditionCollection->add(new IsRefusedPlugin(), 'Adyen/IsRefused');
  
             return $conditionCollection;
         });

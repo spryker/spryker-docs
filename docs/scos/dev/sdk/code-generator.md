@@ -22,7 +22,7 @@ Out of the box it provides generators for Yves, Zed, Client, Service and Shared 
 
 {% info_block errorBox %}
 
-Check out our new code generation tool [Spryk](/docs/scos/dev/sdk/202108.0/development-tools/spryk-code-generator.html).
+Check out our new code generation tool [Spryk](/docs/scos/dev/sdk/development-tools/spryk-code-generator.html).
 
 {% endinfo_block %}
 

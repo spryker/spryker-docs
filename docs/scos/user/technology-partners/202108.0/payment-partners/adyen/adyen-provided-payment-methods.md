@@ -132,7 +132,7 @@ class AdyenExecute3DStep extends AbstractBaseStep
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 
-3. Put the step between place order and success steps:
+3. Create `StepFactory` on project level and additional step:
 
 **src/Pyz/Yves/CheckoutPage/Process/StepFactory.php**
 
@@ -148,11 +148,8 @@ namespace Pyz\Yves\CheckoutPage\Process;
 
 use Pyz\Yves\CheckoutPage\Plugin\Provider\CheckoutPageControllerProvider;
 use Pyz\Yves\CheckoutPage\Process\Steps\AdyenExecute3DStep;
-use Pyz\Yves\CheckoutPage\Process\Steps\PlaceOrderStep;
 use Spryker\Yves\StepEngine\Dependency\Step\StepInterface;
-use Spryker\Yves\StepEngine\Process\StepCollection;
 use SprykerShop\Yves\CheckoutPage\Process\StepFactory as SprykerShopStepFactory;
-use SprykerShop\Yves\HomePage\Plugin\Provider\HomePageControllerProvider;
 
 /**
  * @method \Pyz\Yves\CheckoutPage\CheckoutPageConfig getConfig()
@@ -160,45 +157,15 @@ use SprykerShop\Yves\HomePage\Plugin\Provider\HomePageControllerProvider;
 class StepFactory extends SprykerShopStepFactory
 {
     /**
-     * @return \Spryker\Yves\StepEngine\Process\StepCollectionInterface
+     * @return \Spryker\Yves\StepEngine\Dependency\Step\StepInterface[]
      */
-    public function createStepCollection()
+    public function getSteps(): array
     {
-        $stepCollection = new StepCollection(
-            $this->getUrlGenerator(),
-            CheckoutPageControllerProvider::CHECKOUT_ERROR
-        );
-        $stepCollection
-            ->addStep($this->createEntryStep())
-            ->addStep($this->createCustomerStep())
-            ->addStep($this->createAddressStep())
-            ->addStep($this->createShipmentStep())
-            ->addStep($this->createPaymentStep())
-            ->addStep($this->createSummaryStep())
-            ->addStep($this->createPlaceOrderStep())
-            ->addStep($this->createAdyenExecute3DStep())
-            ->addStep($this->createSuccessStep());
-        return $stepCollection;
+        return array_merge(parent::getSteps(), [
+            $this->createAdyenExecute3DStep(),
+        ]);
     }
 
-    /**
-     * @return \Spryker\Yves\StepEngine\Dependency\Step\StepInterface
-     */
-    public function createPlaceOrderStep(): StepInterface
-    {
-        return new PlaceOrderStep(
-            $this->getCheckoutClient(),
-            $this->getFlashMessenger(),
-            $this->getStore()->getCurrentLocale(),
-            $this->getGlossaryStorageClient(),
-            CheckoutPageControllerProvider::CHECKOUT_PLACE_ORDER,
-            HomePageControllerProvider::ROUTE_HOME,
-            [
-                'payment failed' => CheckoutPageControllerProvider::CHECKOUT_PAYMENT,
-                'shipment failed' => CheckoutPageControllerProvider::CHECKOUT_SHIPMENT,
-            ]
-        );
-    }
     /**
      * @return \Spryker\Yves\StepEngine\Dependency\Step\StepInterface
      */
@@ -206,7 +173,7 @@ class StepFactory extends SprykerShopStepFactory
     {
         return new AdyenExecute3DStep(
             CheckoutPageControllerProvider::CHECKOUT_ADYEN_EXECUTE_3D,
-            HomePageControllerProvider::ROUTE_HOME,
+            $this->getConfig()->getEscapeRoute(),
             $this->getConfig()
         );
     }
@@ -276,6 +243,9 @@ use SprykerShop\Yves\CheckoutPage\Plugin\Router\CheckoutPageRouteProviderPlugin 
 
 class CheckoutPageRouteProviderPlugin extends SprykerShopCheckoutPageRouteProviderPlugin
 {
+    /**
+     * @var string
+     */
     public const ROUTE_NAME_CHECKOUT_ADYEN_EXECUTE_3D = 'checkout-adyen-execute-3d';
 
     /**
@@ -335,37 +305,27 @@ class PlaceOrderStep extends SprykerShopPlaceOrderStep
      * @param \Symfony\Component\HttpFoundation\Request $request
      * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
      *
-     * @return \Spryker\Shared\Kernel\Transfer\AbstractTransfer
+     * @return \Generated\Shared\Transfer\QuoteTransfer
      */
     public function execute(Request $request, AbstractTransfer $quoteTransfer)
     {
-        $checkoutResponseTransfer = $this->checkoutClient->placeOrder($quoteTransfer);
+        /** @var \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer */
+        $quoteTransfer = parent::execute($request, $quoteTransfer);
 
-        if ($checkoutResponseTransfer->getIsExternalRedirect()) {
-            $this->externalRedirectUrl = $checkoutResponseTransfer->getRedirectUrl();
-        }
-
-        if ($checkoutResponseTransfer->getSaveOrder() !== null) {
-            $quoteTransfer->setOrderReference($checkoutResponseTransfer->getSaveOrder()->getOrderReference());
-        }
-
-        $this->setCheckoutErrorMessages($checkoutResponseTransfer);
-        $this->checkoutResponseTransfer = $checkoutResponseTransfer;
-
-        $quoteTransfer->getPayment()->setAdyenRedirect($checkoutResponseTransfer->getAdyenRedirect());
+        $quoteTransfer->getPayment()->setAdyenRedirect($this->checkoutResponseTransfer->getAdyenRedirect());
 
         return $quoteTransfer;
     }
 }
  ```
 
-7. Move `CheckoutPageControllerProvider` from core to project level in `YvesBootstrap`:
+7. Replace `CheckoutPageRouteProviderPlugin` from core with created one from project level to make route available:
 
-**\Pyz\Yves\ShopApplication\YvesBootstrap**
+**\Pyz\Yves\Router\RouterDependencyProvider**
 
 ```php
-- use SprykerShop\Yves\CheckoutPage\Plugin\Provider\CheckoutPageControllerProvider;
-+ use Pyz\Yves\CheckoutPage\Plugin\Provider\CheckoutPageControllerProvider;
+- use SprykerShop\Yves\CheckoutPage\Plugin\Router\CheckoutPageRouteProviderPlugin;
++ use Pyz\Yves\CheckoutPage\Plugin\Router\CheckoutPageRouteProviderPlugin;
 ```
 
 8. Extend `CheckoutPageConfig` to add method for checking if 3D Secure is enabled:

@@ -49,7 +49,6 @@ vendor/bin/console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-
 Ensure that the following changes have occurred in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
@@ -84,13 +83,11 @@ Set up the following behaviors.
 
 Activate the following plugin:
 
-
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | ProductConfigurationConcreteProductsResourceExpanderPlugin | Expands the `concrete-products` resource with product configuration data. | None | Spryker\Glue\ProductConfigurationsRestApi\Plugin\ProductsRestApi |
 
-<details>
-<summary markdown='span'>src/Pyz/Glue/ProductsRestApi/ProductsRestApiDependencyProvider.php</summary>
+**src/Pyz/Glue/ProductsRestApi/ProductsRestApiDependencyProvider.php**
 
 ```php
 <?php
@@ -114,10 +111,7 @@ class ProductsRestApiDependencyProvider extends SprykerProductsRestApiDependency
 }
 ```
 
-</details>
-
 {% info_block warningBox "Verification" %}
-
 
 Make sure that the `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}` endpoint is available.
 
@@ -195,9 +189,7 @@ Activate the following plugins:
 | CartItemProductConfigurationRestRequestValidatorPlugin |Checks if resource with provided product configuration has default product configuration defined. |None| Spryker\Glue\ProductConfigurationsRestApi\Plugin\GlueApplication|
 | ProductConfigurationRestOrderItemsAttributesMapperPlugin| Maps `ItemTransfer.salesOrderItemConfiguration` to `RestOrderItemsAttributesTransfer.salesOrderItemConfiguration`. |None |Spryker\Glue\ProductConfigurationsRestApi\Plugin\OrdersRestApi|
 
-
-<details>
-<summary markdown='span'>src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
+**src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php**
 
 ```php
 <?php
@@ -232,10 +224,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 }
 ```
 
-</details>
-
-<details>
-<summary markdown='span'>src/Pyz/Glue/ProductConfigurationsRestApi/ProductConfigurationsRestApiDependencyProvider.php</summary>
+**src/Pyz/Glue/ProductConfigurationsRestApi/ProductConfigurationsRestApiDependencyProvider.php**
 
 ```php
 <?php
@@ -270,10 +259,7 @@ class ProductConfigurationsRestApiDependencyProvider extends SprykerProductConfi
 }
 ```
 
-</details>
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
+**src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php**
 
 ```php
 <?php
@@ -297,10 +283,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 }
 ``` 
 
-</details>
-
-<details>
-<summary markdown='span'>src/Pyz/Glue/OrdersRestApi/OrdersRestApiDependencyProvider.php</summary>
+**src/Pyz/Glue/OrdersRestApi/OrdersRestApiDependencyProvider.php**
 
 ```php
 <?php
@@ -323,8 +306,6 @@ class OrdersRestApiDependencyProvider extends SprykerOrdersRestApiDependencyProv
     }
 }
 ```
-
-</details>
 
 {% info_block warningBox "Verification" %}
 
@@ -556,13 +537,9 @@ Make sure that the `orders` resource is expanded with the product configuration 
 }
 ```
 
-</details>
-
 {% endinfo_block %}
 
-
-<details>
-<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
 ```php
 <?php
@@ -585,8 +562,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
-
-</details>
 
 {% info_block warningBox "Verification" %}
 
@@ -784,8 +759,7 @@ Set up wishlist plugins:
 |ProductConfigurationRestWishlistItemsAttributesDeleteStrategyPlugin | Finds an item by product sku + product configuration instance hash in the collection of `WishlistItem` transfer objects and deletes found wishlist item. | None | Spryker\Zed\ProductConfigurationWishlistsRestApi\Communication\Plugin\WishlistsRestApi | 
 |ProductConfigurationRestWishlistItemsAttributesUpdateStrategyPlugin | Finds an item by product sku + product configuration instance hash the in collection of `WishlistItem` transfer objects and updates found wishlist item. | None | Spryker\Zed\ProductConfigurationWishlistsRestApi\Communication\Plugin\WishlistsRestApi | 
 
-<details>
-<summary markdown='span'>src/Pyz/Glue/WishlistsRestApi/WishlistsRestApiDependencyProvider.php</summary>
+**src/Pyz/Glue/WishlistsRestApi/WishlistsRestApiDependencyProvider.php**
 
 ```php
 <?php
@@ -822,8 +796,7 @@ class WishlistsRestApiDependencyProvider extends SprykerWishlistsRestApiDependen
 
 </details>
 
-<details>
-<summary markdown='span'>src/Pyz/Glue/ProductConfigurationWishlistsRestApi/ProductConfigurationWishlistsRestApiDependencyProvider.php</summary>
+**src/Pyz/Glue/ProductConfigurationWishlistsRestApi/ProductConfigurationWishlistsRestApiDependencyProvider.php**
 
 ```php
 <?php
@@ -858,10 +831,7 @@ class ProductConfigurationWishlistsRestApiDependencyProvider extends SprykerProd
 }
 ```
 
-</details>
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/WishlistsRestApi/WishlistsRestApiDependencyProvider.php</summary>
+**src/Pyz/Zed/WishlistsRestApi/WishlistsRestApiDependencyProvider.php**
 
 ```php
 <?php

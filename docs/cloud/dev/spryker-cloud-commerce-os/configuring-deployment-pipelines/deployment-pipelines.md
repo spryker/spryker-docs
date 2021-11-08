@@ -152,4 +152,4 @@ Schematically, deployment in Spryker Cloud Commerce OS looks as follows.
 ## Next steps
 
 
-*   [Deploying in a staging environemnt](docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-staging-environment.html)
+*   [Deploying in a staging environemnt](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-staging-environment.html)

@@ -46,7 +46,7 @@ entries:
       - title: Configuring deployment pipelines
         nested:
           - title: Deployment pipelines
-            url: /docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/deployment-pipelines.html
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/deployment-pipelines.html
           - title: Customizing deployment pipelines
             url: /docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/customizing-deployment-pipelines.html
           - title: Configuring Azure Pipelines
@@ -57,12 +57,16 @@ entries:
             url: /docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/configuring-gitlab-pipelines.html
           - title: Configuring Bitbucket Pipelines
             url: /docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/configuring-bitbucket-pipelines.html
+      - title: Configuring data import from an S3 bucket
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/configuring-data-import-from-an-s3-bucket.html
       - title: Customizing AWS CloudWatch dashboards
         url: /docs/cloud/dev/spryker-cloud-commerce-os/customizing-aws-cloudwatch-dashboards.html
       - title: Managing parameters in the Parameter Store
         url: /docs/cloud/dev/spryker-cloud-commerce-os/managing-parameters-in-the-parameter-store.html
       - title: Verifying email addresses
         url: /docs/cloud/dev/spryker-cloud-commerce-os/verifying-email-addresses.html
+      - title: Setting up notifications for 5xx errors
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/setting-up-notifications-for-5xx-errors.html
       - title: Peformance testing
         url: /docs/cloud/dev/spryker-cloud-commerce-os/performance-testing.html
       - title: Monitoring issues and informing about alerts

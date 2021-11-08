@@ -132,7 +132,7 @@ class AdyenExecute3DStep extends AbstractBaseStep
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 
-3. Create `StepFactory` on project level and additional step:
+3. Create `StepFactory` on project level and add `AdyenExecute3DStep` between `PlaceOrderStep` / `SuccessStep`:
 
 **src/Pyz/Yves/CheckoutPage/Process/StepFactory.php**
 
@@ -161,9 +161,18 @@ class StepFactory extends SprykerShopStepFactory
      */
     public function getSteps(): array
     {
-        return array_merge(parent::getSteps(), [
+        return [
+            $this->createEntryStep(),
+            $this->createCustomerStep(),
+            $this->createAddressStep(),
+            $this->createShipmentStep(),
+            $this->createPaymentStep(),
+            $this->createSummaryStep(),
+            $this->createPlaceOrderStep(),
             $this->createAdyenExecute3DStep(),
-        ]);
+            $this->createSuccessStep(),
+            $this->createErrorStep(),
+        ];
     }
 
     /**

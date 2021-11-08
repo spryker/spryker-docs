@@ -24,11 +24,8 @@ In this step-by-step tutorial, you will learn how P&S works and how to export d
 Follow the steps below to create the following:
 
 * Data source module
-
 * Zed database table
-
 * Data publishing module
-
 
 1. Create the HelloWorld module by creating the `HelloWorld` folder in Zed. The module is the source of data for publishing:
 

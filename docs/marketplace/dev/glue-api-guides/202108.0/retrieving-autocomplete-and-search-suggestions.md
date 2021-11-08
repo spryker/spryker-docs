@@ -4,13 +4,13 @@ description: This article provides information on which endpoints to use to get 
 template: glue-api-storefront-guide-template
 ---
 
-In addition to [catalog search](https://documentation.spryker.com/docs/searching-the-product-catalog), Glue API allows you to retrieve autocomplete suggestions for products, categories, and CMS pages. The feature allows developers to predict search strings and provide customers with available options.
+In addition to [catalog search](/docs/scos/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html), Glue API allows you to retrieve autocomplete suggestions for products, categories, and CMS pages. The feature allows developers to predict search strings and provide customers with available options.
 
 In your development, this resource can help you to enhance the customer experience by providing the relevant information for search, product filters, shopping cart, checkout, order history, wishlist, and many more.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Catalog feature integration](https://documentation.spryker.com/docs/glue-api-catalog-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Catalog feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-catalog-feature-integration.html).
 
 ## Retrieve a search suggestion
 
@@ -19,7 +19,6 @@ To retrieve a search suggestion, send the request:
 ***
 `GET` **/catalog-search-suggestions**
 ***
-
 
 ### Request
 
@@ -1798,7 +1797,7 @@ To retrieve a search suggestion, send the request:
 
 {% info_block infoBox "SEO-friendly URLs" %}
 
-The `url` attribute of categories and abstract products exposes a SEO-friendly URL of the resource that represents the respective category or product. For information on how to resolve such a URL and retrieve the corresponding resource, see [Resolving search engine friendly URLs](https://documentation.spryker.com/docs/resolving-search-engine-friendly-urls).
+The `url` attribute of categories and abstract products exposes a SEO-friendly URL of the resource that represents the respective category or product. For information on how to resolve such a URL and retrieve the corresponding resource, see [Resolving search engine friendly URLs](/docs/scos/dev/glue-api-guides/{{page.version}}/resolving-search-engine-friendly-urls.html).
 
 {% endinfo_block %}
 
@@ -1808,4 +1807,4 @@ Although CMS pages also expose the `url` parameter, resolving of CMS page SEF UR
 
 {% endinfo_block %}
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

@@ -48,7 +48,7 @@ All columns with headers having arrows in *List of orders* are sortable.
 | ACTION | DESCRIPTION |
 |---|---|
 | View | Takes you to the *View Order: [Return ID]* page. Here, you can find all the information about the chosen order. |
-| Claim | Takes you to the *Create reclamation* page, where you can [create a reclamation](https://documentation.spryker.com/docs/managing-reclamations) for the order. |
+| Claim | Takes you to the *Create reclamation* page, where you can [create a reclamation]/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/orders/managing-marketplace-orders.html#claiming-marketplace-orders) for the order. |
 
 **<a id="view-order-order-id"></a>View Order: [order ID]**
 <br>The following table describes the attributes on the *View Order: [Order ID]* page when you view an order.
@@ -67,7 +67,7 @@ All columns with headers having arrows in *List of orders* are sortable.
 |   | Trigger all matching states inside this order   | Action button for changing the available states for all the items in the order. For details, see [Changing marketplace order states](#changing-marketplace-order-states). |
 | Custom Order Reference |   | Custom number that can be added to the order. |
 | Customer |   | Section with the information on the customer who has submitted the order. |
-|   | Reference | Unique reference of the customer in the system. The reference is clickable and leads to the *[View Customer](https://documentation.spryker.com/docs/managing-customers#viewing-customer-details)* page. |
+|   | Reference | Unique reference of the customer in the system. The reference is clickable and leads to the *[View Customer](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customers.html#viewing-customer-details)* page. |
 |   | Name | Name of the customer. |
 |   | Email | Customer’s email address. |
 |   | Previous orders count | Number of orders the customer has submitted. |
@@ -160,7 +160,7 @@ To be able to create a return, your marketplace state machine should have the re
 
 {% endinfo_block %}
 
-If an order item is **[returnable](https://documentation.spryker.com/docs/return-management-feature-overview)**, you can create a return for it.
+If an order item is **[returnable](/docs/marketplace/user/features/{{page.version}}/marketplace-return-management-feature-overview.html)**, you can create a return for it.
 
 To create a return:
 

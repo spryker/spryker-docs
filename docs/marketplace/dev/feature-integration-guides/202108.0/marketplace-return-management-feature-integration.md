@@ -17,8 +17,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | LINK |
 | --------------- | ------- | ---------- |
-| Spryker Core                 | master | [Spryker Core Feature Integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Return Management            | master | [Return Management Feature Integration](https://documentation.spryker.com/docs/return-management-feature-integration) |
+| Spryker Core                 | master | [Spryker Core Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Return Management            | master | [Return Management Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/return-management-feature-integration.html) |
 | Marketplace Order Management | master | [Marketplace Order Management Feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-feature-integration.html) |
 
 ### 1) Install required modules using Composer

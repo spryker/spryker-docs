@@ -1,7 +1,7 @@
 ---
 title: Marketplace Promotions and Discounts feature walkthrough
 description: This article provides technical details on the Marketplace Promotions and Discounts feature.
-template: concept-topic-template
+template: feature-walkthrough-template
 ---
 
 With the *Marketplace Promotions and Discounts* feature, the discounts are applied to the merchant orders.

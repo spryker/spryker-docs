@@ -19,9 +19,9 @@ The quote transfer object is used to store data and plugins that calculate the a
 
 There is already a list of plugins which populate quote transfer with corresponding data. Calculations are executed every time the content of the cart is updated.
 
-{% info_block infoBox "" %}
+{% info_block infoBox %}
 
-For more details, check [Cart Data Flow](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/cart-module-reference-information.html#cart-operations#cart-data-flow) in the *Cart Functionality* section.
+For more details, check [Cart Data Flow](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/cart-module-reference-information.html#cart-data-flow) in the *Cart Functionality* section.
 
 {% endinfo_block %}
 
@@ -82,7 +82,7 @@ ItemTransfer::sumGrossPriceWithProductOptions = sum(ProductOptionTransfer::sumGr
 {% info_block infoBox "Discount Calculation" %}
 
 
-Discount calculation is a separate topic and is explained in the [Discount](https://documentation.spryker.com/docs/discount) article.
+Discount calculation is a separate topic and is explained in the [Discount](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html) article.
 
 {% endinfo_block %}
 

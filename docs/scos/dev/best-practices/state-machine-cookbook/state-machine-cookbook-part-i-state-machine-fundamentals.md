@@ -123,7 +123,7 @@ protected function getConditionPlugins(Container $container)
 Another use case of using conditions is when you need to go to different target states depending on the result returned after evaluating the condition. Basically, it’s a way of implementing an **if-else** block in a state machine.
 
 Example:
-![State machine condition](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/State+Machine+Cookbook/State+Machine+Cookbook+-+Part+I+-+State+Machine+Fundamentals/state-machine-condition.png) 
+![State machine condition](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/State+Machine+Cookbook/State+Machine+Cookbook+-+Part+I+-+State+Machine+Fundamentals/state-machine-condition.png)
 
 In the example above, we have 2 transitions defined with the same source state(`Payment Pending`), the same event (`Pay`) but different target states (`Cancelled` and `Paid`). This means that when the Pay event is triggered and the state machine is in the `Payment Pending` state, we have 2 options for the next state. The condition is evaluated and if it returns true, the transition that has the condition attached gets executed(in this case, the state machine will move to the `Paid` state). If it’s evaluated to false, the other transition gets executed (the state machine moves to the `Cancelled` state).
 
@@ -178,7 +178,7 @@ The use case is when you want to wait for something. E.g. “Wait in this state 
 ```
 
 #### Transition representation:
-![Transition representation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/State+Machine+Cookbook/State+Machine+Cookbook+-+Part+I+-+State+Machine+Fundamentals/state-machine-transition-representation.png) 
+![Transition representation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/State+Machine+Cookbook/State+Machine+Cookbook+-+Part+I+-+State+Machine+Fundamentals/state-machine-transition-representation.png)
 
 For performance reasons, it is not recommended to create scenarios where a lot of items wait. This check is executed every minute and can be time-consuming.
 
@@ -207,14 +207,14 @@ This is how an event is defined:
 A special type of event is the **OnEnter** event. If this event is attached to a transition, the state machine automatically executes it when the current state is the same as the source state of the transition. By using the **OnEnter** events you can model a chain of commands that you want to get executed because the state machine always looks if there is another thing to do after any transition that gets executed.
 
 Example: after the payment is successfully submitted, we want to automatically start the export process. To achieve this, we can define a transition between the `Paid` and `Exported` states with an `OnEnter` event attached to it. This means that after the payment is registered, the order is ready to be prepared for shipping.
-![OnEnter Events](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/State+Machine+Cookbook/State+Machine+Cookbook+-+Part+I+-+State+Machine+Fundamentals/state-machine-onenter-events.png) 
+![OnEnter Events](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/State+Machine+Cookbook/State+Machine+Cookbook+-+Part+I+-+State+Machine+Fundamentals/state-machine-onenter-events.png)
 
 **Manually executable events**
 
 In order to be able to trigger an event manually you need to mark it as manually executable. This means that when an order is in the same state as the source state of a transition that has a manually executable event attached to it, in the order details page from the back-office application(Zed) we should be able to see a button that corresponds to that event. By clicking the button, we are triggering the event associated to it.
 
 In the default `Zed Order Details` page it is possible to trigger an event for a single item, a group of items or all items of the order.
-![Manually executable events](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/State+Machine+Cookbook/State+Machine+Cookbook+-+Part+I+-+State+Machine+Fundamentals/manually-executable-events.png) 
+![Manually executable events](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/State+Machine+Cookbook/State+Machine+Cookbook+-+Part+I+-+State+Machine+Fundamentals/manually-executable-events.png)
 
 <a name="timeout"></a>
 
@@ -565,4 +565,4 @@ As you can notice from the example, all changes that are BC breaking will result
 
  <!-- **See also:** article has not been moved yet
 
-* [Cron Jobs - State Machine](https://documentation.spryker.com/2021080/docs/state-machine-cronjob.htm) -->
+* [Cron Jobs - State Machine](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/state-machine-console-commands.html) -->

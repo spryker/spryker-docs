@@ -41,7 +41,11 @@ redirect_from:
   - /v4/docs/installation-guide-b2c
   - /v4/docs/en/installation-guide-b2c
   - /v4/docs/installation-guide-b2b
-  - /v4/docs/en/installation-guide-b2b
+  - /v4/docs/en/installation-guide-b2b  - 
+  - /2021080/docs/installation-guide-b2c
+  - /2021080/docs/en/installation-guide-b2c
+  - /docs/installation-guide-b2c
+  - /docs/en/installation-guide-b2c
 ---
 
 Welcome to the Spryker Commerce OS getting started guide.

@@ -380,5 +380,7 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
 ```
 
 {% info_block infoBox %}
+
 See  [Migration Guide - PriceProduct](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-priceproduct.html) for information on how to migrate to a newer version of the `PriceProduct` module with price dimensions support.
+
 {% endinfo_block %}

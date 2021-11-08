@@ -11,9 +11,12 @@ By default, data import relies on `\Spryker\Zed\DataImport\Business\Model\DataRe
 This document describes how to replace the original CsvReader with the one based on the FlysystemService abstraction. It uses streams and standard PHP functions to read files as CSV files: line-by-line, count lines, and move forward and backward.
 
 ## Prerequisites
-You have write permissions in the SCCOS repository.
 
-You have an S3 bucket with write permissions and know its credentials.
+Before you start, make sure that you have the following:
+
+* Write permissions in the SCCOS repository
+
+* An S3 bucket with write permissions
 
 ## 1. Configure a CsvReader based on Flysystem
 
@@ -37,6 +40,7 @@ interface CsvReaderConfigurationInterface extends SprykerCsvReaderConfigurationI
 
 
 2. To implement `getFileSystem()` that returns a FileSystem configuration name, extend `CsvReaderConfiguration.php` with the `CsvReaderConfigurationInterface.php` interface.
+
 ```php
 namespace Pyz\Zed\CsvReader\Business\Reader;
 
@@ -415,6 +419,7 @@ class CsvReader implements DataReaderInterface, ConfigurableDataReaderInterface,
 </details>
 
 4. Add the `addFlysystemService()` method and the `SERVICE_FLYSYSTEM` constant:
+
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 ```php
 ...
@@ -446,9 +451,9 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 
 5. In `src/Pyz/Zed/DataImport/Business/DataImportBusinessFactory.php`, do the following:
 
-Pass the dependency from the previous step to the `CsvReader` constructor.
+* Pass the dependency from the previous step to the `CsvReader` constructor.
 
-To return the class you’ve created in step 3, add the `getFlysystemService()` method and edit the `createCsvReader()` method.
+* To return the class you’ve created in step 3, add the `getFlysystemService()` method and edit the `createCsvReader()` method.
 
 ```php
 ...
@@ -484,7 +489,9 @@ use Spryker\Zed\DataImport\Business\Model\DataReader\CsvReader\CsvReaderConfigur
 ```
 
 ## 2. Configure the S3 Flysystem builder to read data as a stream
+
 To read data from AWS S3 as a stream:
+
 1.  Adjust the `AwsS3Adapter` initialization with additional parameters:
 **\Spryker\Service\FlysystemAws3v3FileSystem\Model\Builder\Adapter\Aws3v3AdapterBuilder**
 ```php
@@ -515,6 +522,7 @@ class Aws3v3AdapterBuilder extends SprykerAws3v3AdapterBuilder
 ```
 
 2. To implement the new `Aws3v3AdapterBuilder()`,  overwrite `Aws3v3FilesystemBuilder()`:
+
 ```php
 namespace Pyz\Service\FlysystemAws3v3FileSystem\Model\Builder\Filesystem;
 

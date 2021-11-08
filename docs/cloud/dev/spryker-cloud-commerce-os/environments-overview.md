@@ -28,4 +28,4 @@ Please note that it is imperative to use the same data here (in quality and quan
 Your production environment should host the code that the end-user gets to interact with directly. The code should already be tested on the staging environment for stability and performance. Please do not make changes to the production environments directly unless they have been verified on your lower environments first.
 
 ## Next step
-[Environments overview](/docs/cloud/dev/spryker-cloud-commerce-os/environments-overview.html)
+[Accessing AWS Management Console](/docs/cloud/dev/spryker-cloud-commerce-os/access/accessing-aws-management-console.html)

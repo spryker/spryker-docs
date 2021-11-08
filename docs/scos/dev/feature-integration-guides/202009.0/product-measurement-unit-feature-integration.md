@@ -95,16 +95,55 @@ console propel:install
 console transfer:generate
 ```
 {% info_block warningBox "Verification" %}
-Make sure that the following changes by checking your database: <table><thead><tr><th>Database Entity</th><th>Type</th><th>Event</th></tr></thead><tbody><tr><td>`spy_product_measurement_unit`</td><td>table</td><td>created</td></tr><tr><td>`spy_product_measurement_base_unit`</td><td>table</td><td>created</td></tr><tr><td>`spy_product_measurement_sales_unit`</td><td>table</td><td>created</td></tr><tr><td>`spy_product_measurement_sales_unit_store`</td><td>table</td><td>created</td></tr><tr><td>`spy_product_measurement_unit_storage`</td><td>table</td><td>created</td></tr><tr><td>`spy_product_concrete_measurement_unit_storage`</td><td>table</td><td>created</td></tr><tr><td>`spy_sales_order_item.quantity_base_measurement_unit_name`</td><td>column</td><td>created</td></tr><tr><td>`spy_sales_order_item.quantity_measurement_unit_name`</td><td>column</td><td>created</td></tr><tr><td>`spy_sales_order_item.quantity_measurement_unit_precision`</td><td>column</td><td>created</td></tr><tr><td>`spy_sales_order_item.quantity_measurement_unit_conversion`</td><td>column</td><td>created</td></tr></tbody></table>
+Make sure that the following changes by checking your database: 
+
+|Database Entity|Type|Event|
+|--- |--- |--- |
+|`spy_product_measurement_unit`|table|created|
+|`spy_product_measurement_base_unit`|table|created|
+|`spy_product_measurement_sales_unit`|table|created|
+|`spy_product_measurement_sales_unit_store`|table|created|
+|`spy_product_measurement_unit_storage`|table|created|
+|`spy_product_concrete_measurement_unit_storage`|table|created|
+|`spy_sales_order_item.quantity_base_measurement_unit_name`|column|created|
+|`spy_sales_order_item.quantity_measurement_unit_name`|column|created|
+|`spy_sales_order_item.quantity_measurement_unit_precision`|column|created|
+|`spy_sales_order_item.quantity_measurement_unit_conversion`|column|created|
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes in transfer objects:<table><thead><tr><th>Transfer</th><th>Type</th><th>Event</th><th>Path</th></tr></thead><tbody><tr><td>`ProductMeasurementUnit`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductMeasurementUnitTransfer`</td></tr><tr><td>`ProductMeasurementBaseUnit`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductMeasurementBaseUnitTransfer`</td></tr><tr><td>`ProductMeasurementSalesUnit`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductMeasurementSalesUnitTransfer`</td></tr><tr><td>`SpyProductMeasurementUnitEntityTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyProductMeasurementUnitEntityTransfer`</td></tr><tr><td>`SpyProductMeasurementBaseUnitEntityTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyProductMeasurementBaseUnitEntityTransfer`</td></tr><tr><td>`SpyProductMeasurementSalesUnitEntityTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyProductMeasurementSalesUnitEntityTransfer`</td></tr><tr><td>`SpyProductMeasurementSalesUnitStoreEntityTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyProductMeasurementSalesUnitStoreEntityTransfer`</td></tr><tr><td>`ProductMeasurementUnitStorage`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductMeasurementUnitStorageTransfer`</td></tr><tr><td>`ProductConcreteMeasurementBaseUnit`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductConcreteMeasurementBaseUnitTransfer`</td></tr><tr><td>`ProductConcreteMeasurementSalesUnit`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductConcreteMeasurementSalesUnitTransfer`</td></tr><tr><td>`ProductConcreteMeasurementUnitStorage`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductConcreteMeasurementUnitStorageTransfer`</td></tr><tr><td>`SpyProductMeasurementUnitStorageEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyProductMeasurementUnitStorageEntityTransfer`</td></tr><tr><td>`SpyProductConcreteMeasurementUnitStorageEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyProductConcreteMeasurementUnitStorageEntityTransfer`</td></tr></tbody></table>
+Make sure that the following changes in transfer objects:
+
+|Transfer|Type|Event|Path|
+|--- |--- |--- |--- |
+|`ProductMeasurementUnit`|class|created|`src/Generated/Shared/Transfer/ProductMeasurementUnitTransfer`|
+|`ProductMeasurementBaseUnit`|class|created|`src/Generated/Shared/Transfer/ProductMeasurementBaseUnitTransfer`|
+|`ProductMeasurementSalesUnit`|class|created|`src/Generated/Shared/Transfer/ProductMeasurementSalesUnitTransfer`|
+|`SpyProductMeasurementUnitEntityTransfer`|class|created|`src/Generated/Shared/Transfer/SpyProductMeasurementUnitEntityTransfer`|
+|`SpyProductMeasurementBaseUnitEntityTransfer`|class|created|`src/Generated/Shared/Transfer/SpyProductMeasurementBaseUnitEntityTransfer`|
+|`SpyProductMeasurementSalesUnitEntityTransfer`|class|created|`src/Generated/Shared/Transfer/SpyProductMeasurementSalesUnitEntityTransfer`|
+|`SpyProductMeasurementSalesUnitStoreEntityTransfer`|class|created|`src/Generated/Shared/Transfer/SpyProductMeasurementSalesUnitStoreEntityTransfer`|
+|`ProductMeasurementUnitStorage`|class|created|`src/Generated/Shared/Transfer/ProductMeasurementUnitStorageTransfer`|
+|`ProductConcreteMeasurementBaseUnit`|class|created|`src/Generated/Shared/Transfer/ProductConcreteMeasurementBaseUnitTransfer`|
+|`ProductConcreteMeasurementSalesUnit`|class|created|`src/Generated/Shared/Transfer/ProductConcreteMeasurementSalesUnitTransfer`|
+|`ProductConcreteMeasurementUnitStorage`|class|created|`src/Generated/Shared/Transfer/ProductConcreteMeasurementUnitStorageTransfer`|
+|`SpyProductMeasurementUnitStorageEntity`|class|created|`src/Generated/Shared/Transfer/SpyProductMeasurementUnitStorageEntityTransfer`|
+|`SpyProductConcreteMeasurementUnitStorageEntity`|class|created|`src/Generated/Shared/Transfer/SpyProductConcreteMeasurementUnitStorageEntityTransfer`|
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that the changes were implemented successfully. For this purpose, trigger the following methods and make sure that the above events have been triggered:<table><thead><tr><th>Path</th><th>Method Name</th></tr></thead><tbody><tr><td>`src/Orm/Zed/ProductMeasurementUnit/Persistence/Base/SpyProductMeasurementUnit.php`</td><td><ul><li>`prepareSaveEventName(
-{% endinfo_block %}`</li><li>`addSaveEventToMemory()`</li><li>`addDeleteEventToMemory()`</li></ul></td></tr><tr><td>`src/Orm/Zed/ProductMeasurementUnit/Persistence/Base/SpyProductMeasurementBaseUnit.php`</td><td><ul><li>`prepareSaveEventName()`</li><li>`addSaveEventToMemory()`</li><li>`addDeleteEventToMemory()`</li></ul></td></tr><tr><td>`src/Orm/Zed/ProductMeasurementUnit/Persistence/Base/SpyProductMeasurementSalesUnit.php`</td><td><ul><li>`prepareSaveEventName()`</li><li>`addSaveEventToMemory()`</li><li>`addDeleteEventToMemory()`</li></ul></td></tr><tr><td>`src/Orm/Zed/ProductMeasurementUnit/Persistence/Base/SpyProductMeasurementSalesUnitStore.php`</td><td><ul><li>`prepareSaveEventName()`</li><li>`addSaveEventToMemory()`</li><li>`addDeleteEventToMemory()`</li></ul></td></tr></tbody></table>)
+Make sure that the changes were implemented successfully. For this purpose, trigger the following methods and make sure that the above events have been triggered:
+
+|Path|Method Name|
+|--- |--- |
+|`src/Orm/Zed/ProductMeasurementUnit/Persistence/Base/SpyProductMeasurementUnit.php`|`prepareSaveEventName()`</br>`addSaveEventToMemory()`</br>`addDeleteEventToMemory()`|
+|`src/Orm/Zed/ProductMeasurementUnit/Persistence/Base/SpyProductMeasurementBaseUnit.php`|`prepareSaveEventName()`</br>`addSaveEventToMemory()`</br>`addDeleteEventToMemory()`|
+|`src/Orm/Zed/ProductMeasurementUnit/Persistence/Base/SpyProductMeasurementSalesUnit.php`|`prepareSaveEventName()`</br>`addSaveEventToMemory()`</br>`addDeleteEventToMemory()`|
+|`src/Orm/Zed/ProductMeasurementUnit/Persistence/Base/SpyProductMeasurementSalesUnitStore.php`|`prepareSaveEventName()`</br>`addSaveEventToMemory()`</br>`addDeleteEventToMemory()`|
+
+{% endinfo_block %}
 
 ### 3) Add Translations
 
@@ -787,11 +826,13 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 {% info_block warningBox "Verification" %}
 Make sure that `<add to cart>` action works with measurement units by adding an item to cart with sales unit and checking if `QuoteTransfer.items[].quantitySalesUnit` record gets populated.
 {% endinfo_block %}
+
 {% info_block warningBox "Verification" %}
 
 Make sure that checkout workflow works with measurement unit by ordering item with sales unit and checking the `spy_sales_order_item` contains `quantity_base_measurement_unit_name`, `quantity_measurement_unit_name`, `quantity_measurement_unit_code`, `quantity_measurement_unit_precision` and `quantity_measurement_unit_conversion` fields populated.
 
 {% endinfo_block %}
+
 {% info_block warningBox "Verification" %}
 Make sure that abstract products which have measurement units don’t have `add_to_cart_sku` field at Elasticsearch document.
 {% endinfo_block %}
@@ -818,7 +859,13 @@ composer require spryker-feature/measurement-units: "202009.0" --update-with-dep
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following modules are installed:<table><thead><tr><th>Module</th><th>Expected Directory</th></tr></thead><tbody><tr><td>`ProductMeasurementUnitWidget`</td><td>`vendor/spryker-shop/product-measurement-unit-widget`</td></tr></tbody></table>
+
+Make sure that the following modules are installed:
+
+|Module|Expected Directory|
+|--- |--- |
+|`ProductMeasurementUnitWidget`|`vendor/spryker-shop/product-measurement-unit-widget`|
+
 {% endinfo_block %}
 
 
@@ -931,5 +978,11 @@ console frontend:yves:build
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following widgets were registered:<table><thead><tr><th>Module</th><th>Test</th></tr></thead><tbody><tr><td>`ProductMeasurementUnitWidgetPlugin`</td><td>Go to the product detail page where the product has sales units and add a product to the cart with a sales unit.</td></tr><tr><td>`QuantitySalesUnitWidgetPlugin`</td><td>Go to the cart overview page and see if the sales unit information appears for a product.</td></tr></tbody></table>
+Make sure that the following widgets were registered:
+
+|Module|Test|
+|--- |--- |
+|`ProductMeasurementUnitWidgetPlugin`|Go to the product detail page where the product has sales units and add a product to the cart with a sales unit.|
+|`QuantitySalesUnitWidgetPlugin`|Go to the cart overview page and see if the sales unit information appears for a product.|
+
 {% endinfo_block %}

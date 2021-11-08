@@ -12,7 +12,7 @@ In the marketplace, when a buyer goes through checkout, the [Marketplace order](
 
 ## Merchant order calculation
 
-The merchant order consists of the merchant order items, which are the items (products) purchased by the customer. All the calculations for the merchant order items are performed using the product offer, merchant products price, and *merchant order totals*. These are the [initial totals](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/calculation-3-0.html#totals-transfer) that are calculated according to the product offer purchased:
+The merchant order consists of the merchant order items, which are the items (products) purchased by the customer. All the calculations for the merchant order items are performed using the product offer, merchant products price, and *merchant order totals*. These are the [initial totals](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/calculation-3-0.html) that are calculated according to the product offer purchased:
 
 | TOTAL | DESCRIPTION |
 | -------- | -------------- |

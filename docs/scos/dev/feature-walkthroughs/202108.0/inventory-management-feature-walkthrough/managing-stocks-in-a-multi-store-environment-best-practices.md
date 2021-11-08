@@ -62,12 +62,11 @@ There is a console command to export all reservations: `/Spryker/Zed/Oms/Communi
 
 {% endinfo_block %}
 
-
 ## Scenario 3: Separate warehouses but a shared database
 
 {% info_block infoBox "" %}
 
-This is the default scenario implemented in the [Spryker Demo Shops](https://documentation.spryker.com/docs/about-spryker#spryker-b2bb2c-demo-shops).
+This is the default scenario implemented in the [Spryker Demo Shops](/docs/scos/user/intro-to-spryker/about-spryker.html).
 
 {% endinfo_block %}
 

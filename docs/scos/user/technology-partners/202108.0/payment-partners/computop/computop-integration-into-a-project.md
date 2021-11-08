@@ -1515,7 +1515,7 @@ namespace Pyz\Yves\ShopApplication;
 
 ### CRIF configuration  
 
-To configure [CRIF](https://documentation.spryker.com/docs/computop-crif):
+To configure [CRIF](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-crif.html):
 
 1. Adjust `PaymentDependencyProvider` to use `ComputopPaymentMethodFilterPlugin`:  
 

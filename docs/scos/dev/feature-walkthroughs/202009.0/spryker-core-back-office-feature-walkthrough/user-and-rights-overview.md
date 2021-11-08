@@ -6,10 +6,11 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/user-and-rights-overview
 originalArticleId: 4006b24f-fd0a-480a-9589-d2b822fdbde3
 redirect_from:
-- /2021080/docs/user-and-rights-overview
-- /2021080/docs/en/user-and-rights-overview
+- /2020090/docs/user-and-rights-overview
+- /2020090/docs/en/user-and-rights-overview
 - /v6/docs/user-and-rights-overview
 - /v6/docs/en/user-and-rights-overview
+- /docs/scos/dev/feature-walkthroughs/202009.0/customer-account-management-feature-walkthrough/user-and-rights-overview.html
 ---
 
 User and rights management is a general term that describes the security functionality for controlling user access to perform various roles throughout the system.

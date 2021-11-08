@@ -1,6 +1,7 @@
 ---
 title: Persistence ACL feature configuration
-last_updated: Sep 14, 2021
+last_updated: Nov 05, 2021
+description: In this article, you will learn how to configure the Persistence ACL feature.
 template: concept-topic-template
 ---
 This article describes how you can configure the [Persistence ACL feature](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html).

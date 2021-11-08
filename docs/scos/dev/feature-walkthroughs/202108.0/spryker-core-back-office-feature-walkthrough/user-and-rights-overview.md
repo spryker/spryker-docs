@@ -10,6 +10,7 @@ redirect_from:
 - /2021080/docs/en/user-and-rights-overview
 - /docs/user-and-rights-overview
 - /docs/en/user-and-rights-overview
+- /docs/scos/dev/feature-walkthroughs/202108.0/customer-account-management-feature-walkthrough/user-and-rights-overview.html
 ---
 
 User and rights management is a general term that describes the security functionality for controlling user access to perform various roles throughout the system.
@@ -37,7 +38,7 @@ Also, you can find bundle names as well as controllers and actions in the file `
 
 ![bundles_navigation.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/bundles_navigation.png)
 
-See [Managing users](https://documentation.spryker.com/docs/managing-users) to learn how to create and manage users, groups, and roles .
+See [Managing users](/docs/scos/user/back-office-user-guides/202108.0/users/roles-groups-and-users/managing-users.html) to learn how to create and manage users, groups, and roles .
 
 <a name="add-acl"></a>
 
@@ -89,8 +90,6 @@ In the example, we grant access to the Application module resources for all user
 With the configuration provided in the example, users are granted access to these resources regardless of ACL configuration in ZED UI.
 
 {% endinfo_block %}
-
-
 
 * `AclConstants::ACL_DEFAULT_CREDENTIALS`—is used to provide additional access to Zed resources for a specific user. For example:
 

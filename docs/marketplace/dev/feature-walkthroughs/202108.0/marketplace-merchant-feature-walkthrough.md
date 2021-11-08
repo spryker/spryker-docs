@@ -1,6 +1,7 @@
 ---
 title: Marketplace Merchant feature walkthrough
 description: Merchants are product and service sellers in the Marketplace.
+last_updated: Nov 05, 2021
 template: feature-walkthrough-template
 ---
 

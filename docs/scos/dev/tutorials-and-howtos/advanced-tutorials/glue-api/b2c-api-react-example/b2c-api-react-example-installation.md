@@ -24,7 +24,7 @@ redirect_from:
   - /v1/docs/en/b2c-api-react-example-installation
 ---
 
-B2C API React Example can be installed inside [Spryker Development Virtual Machine](/docs/scos/dev/sdk/{{site.version}}/development-virtual-machine-docker-containers-and-console.html) (VM) or on a separate dedicated server. Below, you will find detailed steps on how to perform both the installation scenarios.
+B2C API React Example can be installed inside [Spryker Development Virtual Machine](/docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html) (VM) or on a separate dedicated server. Below, you will find detailed steps on how to perform both the installation scenarios.
 
 {% info_block infoBox %}
 Installation inside the VM ensures quicker roll out as the VM has all the required components installed.

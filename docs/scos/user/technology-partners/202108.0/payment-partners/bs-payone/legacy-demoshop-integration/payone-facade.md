@@ -53,6 +53,6 @@ redirect_from:
 | `getPaymentDetail` | Order Id | `PaymentDetailTransfer` | Gets payment details for a specific order. |
 | `updatePaymentDetail` | `PaymentDetailTransfer`, Order Id | void | Updates payment details for a specific order. |
 | install | `MessengerInterface` | void | Installs module translations to project glossary. |
-| `startPayPalExpressCheckout` | `PayOneStartPayPalExpressCheckoutRequestTransfer` | `PayOnePayPalExpressCheckoutGenericPaymentResponseTransfer` | Sends request to PayOne in order to start express checkout and get the workorderid which is used for further operations. |
+| `startPayPalExpressCheckout` | `PayOneStartPayPalExpressCheckoutRequestTransfer` | `PayOnePayPalExpressCheckoutGenericPaymentResponseTransfer` | Sends request to PayOne to start express checkout and get the work order ID which is used for further operations. |
 | `getPayPalExpressCheckoutDetails` | `QuoteTransfer` | `PayOnePayPalExpressCheckoutGenericPaymentResponseTransfer` | Returns customer specific information retrieved from PayPal through PayOne (e.g., email and shipping info). |
 | `executeCheckoutPostSaveHook` (deprecated) | `QuoteTransfer` `CheckoutResponseTransfer` | `CheckoutResponseTransfer` | Depending on the payment method, it executes the authorization or pre-authorization API call. Updates `CheckoutResponseTransfer` with errors or/and redirect URL accordingly to the API response. |

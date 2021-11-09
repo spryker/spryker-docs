@@ -62,7 +62,6 @@ Payone provides the following methods of payment:
 We use state machines for handling and managing orders and payments. To integrate Payone payments, a state machine for Payone should be created.
 
 A basic and fully functional state machine for each payment method is already built:
-
 * `PayoneCreditCard.xml`
 * `PayoneDirectDebit.xml`
 * `PayoneEWallet.xml`
@@ -134,20 +133,64 @@ $container[static::PAYMENT_METHOD_HANDLER] = function () {
  };
 ```
 
-## Integration with Payment module (PaymentDependencyProvider):
+The project (demoshop) level `\Pyz\Zed\Checkout\CheckoutDependencyProvider` method `provideBusinessLayerDependencies` container has to be extended with the checkout plugins of Payone. It can be done by adding plugins into related plugins stacks in these methods in `\Pyz\Zed\Checkout\CheckoutDependencyProvider`:
+* `getCheckoutPreConditions`
+* `getCheckoutOrderSavers`
+* `getCheckoutPostHooks`
 
-Project (demoshop) level `\Pyz\Zed\Payment\PaymentDependencyProvider` method `provideBusinessLayerDependencies` container has to be extended with the `static::CHECKOUT_PLUGINS` key which has to contain information about PSP payment pre-, post-, and -save Order plugins.
+Add the plugins into `\Pyz\Zed\Checkout\CheckoutDependencyProvider`:
 
-Add the key to `\Pyz\Zed\Payment\PaymentDependencyProvider`:
 ```php
 <?php
-$container->extend(static::CHECKOUT_PLUGINS, function (CheckoutPluginCollection $pluginCollection) {
- $pluginCollection->add(new PayonePreCheckPlugin(), PayoneConfig::PROVIDER_NAME, static::CHECKOUT_PRE_CHECK_PLUGINS);
- $pluginCollection->add(new PayoneSaveOrderPlugin(), PayoneConfig::PROVIDER_NAME, static::CHECKOUT_ORDER_SAVER_PLUGINS);
- $pluginCollection->add(new PayonePostSaveHookPlugin(), PayoneConfig::PROVIDER_NAME, static::CHECKOUT_POST_SAVE_PLUGINS);
 
- return $pluginCollection;
- });
+namespace Pyz\Zed\Checkout;
+//...
+use SprykerEco\Zed\Payone\Communication\Plugin\Checkout\PayoneCheckoutDoSaveOrderPlugin;
+use SprykerEco\Zed\Payone\Communication\Plugin\Checkout\PayoneCheckoutPostSavePlugin;
+use SprykerEco\Zed\Payone\Communication\Plugin\Checkout\PayoneCheckoutPreConditionPlugin;
+class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return \Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutPreConditionPluginInterface[]
+     */
+    protected function getCheckoutPreConditions(Container $container)
+    {
+        return [
+            //...
+            new PayoneCheckoutPreConditionPlugin(),
+            //...
+        ];
+    }
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return \Spryker\Zed\Checkout\Dependency\Plugin\CheckoutSaveOrderInterface[]|\Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutDoSaveOrderInterface[]
+     */
+    protected function getCheckoutOrderSavers(Container $container)
+    {
+        return [
+            //...
+            new PayoneCheckoutDoSaveOrderPlugin(),
+            //...
+        ];
+    }
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return \Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutPostSaveInterface[]
+     */
+    protected function getCheckoutPostHooks(Container $container)
+    {
+        return [
+            //...
+            new PayoneCheckoutPostSavePlugin(),
+            //...
+        ];
+    }
+    //...
+}
 ```
 
 ## Integration with OMS module (OmsDependencyProvider)
@@ -155,6 +198,7 @@ $container->extend(static::CHECKOUT_PLUGINS, function (CheckoutPluginCollection 
 Project (demoshop) level `\Pyz\Zed\Oms\OmsDependencyProvider` method `provideBusinessLayerDependencies` container has to be extended with the `static::CONDITION_PLUGINS` and `static::COMMAND_PLUGINS` keys which have to contain information about PSP OMS State Machine conditions and commands plugins.
 
 Add the keys to `\Pyz\Zed\Oms\OmsDependencyProvider`:
+
 ```php<?php
 $container->extend(static::CONDITION_PLUGINS, function (ConditionCollectionInterface $conditionCollection) {
  $conditionCollection->add(new PreAuthorizationIsApprovedConditionPlugin(), 'Payone/PreAuthorizationIsApproved');
@@ -187,6 +231,7 @@ $container->extend(static::CONDITION_PLUGINS, function (ConditionCollectionInter
  return $commandCollection;
  });
 ```
+
 In order to use the state machines provided by the Payone module, make sure to add the location path to configuration:
 
 ```php
@@ -219,7 +264,9 @@ According to the configuration of your payment portal you will receive the data 
 To provide payment details for rendering on frontend, add Payone client to the Checkout and to the Customer module:
 
 in `src/<project_name>/Yves/Checkout/CheckoutDependencyProvider.php`
-```php<?php
+
+```php
+<?php
 ...
 class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 {
@@ -383,7 +430,7 @@ class OrderController extends AbstractCustomerController
 
 See [Disclaimer](https://github.com/spryker/spryker-documentation).
 
----
+
 For further information on this partner and integration into Spryker, please contact us.
 
 <div class="hubspot-form js-hubspot-form" data-portal-id="2770802" data-form-id="163e11fb-e833-4638-86ae-a2ca4b929a41" id="hubspot-1"></div>

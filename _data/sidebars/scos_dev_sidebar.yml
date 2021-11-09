@@ -4513,8 +4513,10 @@ entries:
       - title: State machine cookbook - part I - state machine fundamentals
         url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-part-i-state-machine-fundamentals.html
   - title: Troubleshooting
+    url: /docs/scos/dev/troubleshooting/troubleshooting.html
     nested:
-    - title: Troubleshooting General Technical Issues
+    - title: Troubleshooting general technical issues
+      url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-general-technical-issues.html
       nested:
       - title: Fail whale on the front end
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/fail-whale-on-the-front-end.html
@@ -4533,11 +4535,8 @@ entries:
       - title: ERROR- remove spryker_logs- volume is in use
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/error-remove-spryker-logs-volume-is-in-use.html
       - title: Class Silex/ControllerProviderInterface not found
-        url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/class-silex-controllerproviderinterface-not-found.html
-      - title: Troubleshooting general technical issues
-        url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-general-technical-issues.html
-      - title: Error response from daemon- OCI runtime create failed- .... \\\"no
-          such file or directory\\\"\""- unknown
+        url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/class-silex-controllerproviderinterface-not-found.html 
+      - title: Error response from daemon- OCI runtime create failed- .... \\\"no such file or directory\\\"\""- unknown
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/error-response-from-daemon-oci-runtime-create-failed-no-such-file-or-directory-unknown.html
       - title: RabbitMQ- Zed.CRITICAL- PhpAmqpLib\Exception\AMQPChannelClosedException
           - Channel connection is closed
@@ -4548,7 +4547,8 @@ entries:
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/no-data-on-the-storefront.html
       - title: The spy_oms_transition_log table takes up too much space
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/the-spy-oms-transition-log-table-takes-up-too-much-space.html
-    - title: Troubleshooting Spryker In Vagrant Issues
+    - title: Troubleshooting Spryker in Vagrant issues
+      url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/troubleshooting-spryker-in-vagrant-installation-issues.html
       nested:
       - title: Frontend issues
         nested:
@@ -4583,8 +4583,6 @@ entries:
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/macos-issues/mac-osx-installation-fails-or-project-folder-can-not-be-mounted-due-to-sip.html
         - title: Mac OSX- iterm2 (locale error)
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/macos-issues/mac-osx-iterm2-locale-error.html
-      - title: Troubleshooting Spryker in Vagrant installation issues
-        url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/troubleshooting-spryker-in-vagrant-installation-issues.html
       - title: Databases and services issues
         nested:
         - title: Setup MySQL Workbench to avoid port clashing with the host system
@@ -4595,10 +4593,9 @@ entries:
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/databases-and-services-issues/peer-authentication-failed-for-user-postgres.html
         - title: My Elasticsearch dies
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/databases-and-services-issues/my-elasticsearch-dies.html
-    - title: Troubleshooting Spryker In Docker Issues
+    - title: Troubleshooting Spryker in Docker Issues
+      url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-spryker-in-docker-issues.html
       nested:
-      - title: Troubleshooting Spryker in Docker issues
-        url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-spryker-in-docker-issues.html
       - title: Troubleshooting debugging in Docker
         nested:
         - title: PHP `xdebug` extension is not active when accessing the website via

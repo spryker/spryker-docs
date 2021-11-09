@@ -460,9 +460,10 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
 
 <details>
 <summary>src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig</summary>
+
 ```twig
+
 ...
- 
 {% raw %}{%{% endraw %} define data = {
     backUrl: _view.previousStepUrl,
     forms: {
@@ -494,5 +495,6 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
        },
     }
 ...
+
 ```
 </details>

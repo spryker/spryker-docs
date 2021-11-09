@@ -90,7 +90,7 @@ ItemTransfer::sumGrossPriceWithProductOptions = sum(ProductOptionTransfer::sumGr
 {% info_block infoBox "Discount Calculation" %}
 
 
-Discount calculation is a separate topic and is explained in the [Discount](https://documentation.spryker.com/docs/discount) article.
+Discount calculation is a separate topic and is explained in the [Discount](/docs/scos/user/back-office-user-guides/202005.0/merchandising/discount/references/discount-calculation-reference-information.html) article.
 
 {% endinfo_block %}
 

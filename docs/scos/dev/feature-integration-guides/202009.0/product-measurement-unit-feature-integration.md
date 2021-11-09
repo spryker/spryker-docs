@@ -138,10 +138,10 @@ Make sure that the changes were implemented successfully. For this purpose, trig
 
 |Path|Method Name|
 |--- |--- |
-|`src/Orm/Zed/ProductMeasurementUnit/Persistence/Base/SpyProductMeasurementUnit.php`|`prepareSaveEventName()`</br>`addSaveEventToMemory()`</br>`addDeleteEventToMemory()`|
-|`src/Orm/Zed/ProductMeasurementUnit/Persistence/Base/SpyProductMeasurementBaseUnit.php`|`prepareSaveEventName()`</br>`addSaveEventToMemory()`</br>`addDeleteEventToMemory()`|
-|`src/Orm/Zed/ProductMeasurementUnit/Persistence/Base/SpyProductMeasurementSalesUnit.php`|`prepareSaveEventName()`</br>`addSaveEventToMemory()`</br>`addDeleteEventToMemory()`|
-|`src/Orm/Zed/ProductMeasurementUnit/Persistence/Base/SpyProductMeasurementSalesUnitStore.php`|`prepareSaveEventName()`</br>`addSaveEventToMemory()`</br>`addDeleteEventToMemory()`|
+|`src/Orm/Zed/ProductMeasurementUnit/Persistence/Base/SpyProductMeasurementUnit.php`|`prepareSaveEventName()`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`|
+|`src/Orm/Zed/ProductMeasurementUnit/Persistence/Base/SpyProductMeasurementBaseUnit.php`|`prepareSaveEventName()`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`|
+|`src/Orm/Zed/ProductMeasurementUnit/Persistence/Base/SpyProductMeasurementSalesUnit.php`|`prepareSaveEventName()`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`|
+|`src/Orm/Zed/ProductMeasurementUnit/Persistence/Base/SpyProductMeasurementSalesUnitStore.php`|`prepareSaveEventName()`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`|
 
 {% endinfo_block %}
 

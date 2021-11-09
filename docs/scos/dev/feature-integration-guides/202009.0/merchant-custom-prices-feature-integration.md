@@ -102,7 +102,7 @@ Make sure that the changes were implemented successfully. For this purpose, trig
 
 |Class Path|Method Name|
 |--- |--- |
-|`src/Orm/Zed/PriceProductMerchantRelationship/Persistence/Base/SpyPriceProductMerchantRelationship.php`|`prepareSaveEventName()`</br>`addSaveEventToMemory()`</br>`addDeleteEventToMemory()`|
+|`src/Orm/Zed/PriceProductMerchantRelationship/Persistence/Base/SpyPriceProductMerchantRelationship.php`|`prepareSaveEventName()`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`|
 
 {% endinfo_block %}
 

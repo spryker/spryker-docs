@@ -163,9 +163,9 @@ Make sure that the changes have been implemented successfully. To do it, trigger
 
 |Path|Method name|
 |--- |--- |
-|`src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingUnit.php`|`prepareSaveEventName()`</br>`addSaveEventToMemory()`</br>`addDeleteEventToMemory()`|
-|`src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingUnitType.php`|`prepareSaveEventName()`</br>`addSaveEventToMemory()`</br>`addDeleteEventToMemory()`|
-|`src/Orm/Zed/ProductPackagingUnitStorage/Persistence/Base/SpyProductPackagingUnitStorage.php`|`prepareSaveEventName()`</br>`addSaveEventToMemory()`</br>`addDeleteEventToMemory()`|
+|`src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingUnit.php`|`prepareSaveEventName()`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`|
+|`src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingUnitType.php`|`prepareSaveEventName()`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`|
+|`src/Orm/Zed/ProductPackagingUnitStorage/Persistence/Base/SpyProductPackagingUnitStorage.php`|`prepareSaveEventName()`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`|
 |`src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingUnitType.php`|`sendToQueue()`|
 
 {% endinfo_block %}

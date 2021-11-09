@@ -134,8 +134,8 @@ Make sure that the changes have been implemented successfully. For this purpose,
 
 |Path|Method Name|
 |--- |--- |
-|`src/Orm/Zed/CompanyUser/Persistence/Base/SpyCompanyUser.php`|`prepareSaveEventName(`</br>`addSaveEventToMemory()`</br>`addDeleteEventToMemory()`|
-|`src/Orm/Zed/Company/Persistence/Base/SpyCompany.php`|`prepareSaveEventName()`</br>`addSaveEventToMemory()`</br>`addDeleteEventToMemory()`|
+|`src/Orm/Zed/CompanyUser/Persistence/Base/SpyCompanyUser.php`|`prepareSaveEventName(`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`|
+|`src/Orm/Zed/Company/Persistence/Base/SpyCompany.php`|`prepareSaveEventName()`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`|
 |`src/Orm/Zed/CompanyUserStorage/Persistence/Base/SpyCompanyUserStorage.php`|`sendToQueue()`|
 
 {% endinfo_block %}

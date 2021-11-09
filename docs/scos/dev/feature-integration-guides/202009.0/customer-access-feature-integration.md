@@ -135,7 +135,7 @@ Make sure that the changes were implemented successfully. For this purpose, trig
 
 |Path|Method Name|
 |--- |--- |
-|`src/Orm/Zed/CustomerAccess/Persistence/SpyUnauthenticatedCustomerAccess.php`|`prepareSaveEventName()`</br>`addSaveEventToMemory()`</br>`addDeleteEventToMemory()`|
+|`src/Orm/Zed/CustomerAccess/Persistence/SpyUnauthenticatedCustomerAccess.php`|`prepareSaveEventName()`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`|
 
 {% endinfo_block %}
 

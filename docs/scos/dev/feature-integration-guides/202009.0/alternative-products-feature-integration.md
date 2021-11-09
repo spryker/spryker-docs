@@ -139,8 +139,8 @@ Make sure that the changes have been implemented successfully. For this purpose,
 
 |Path|Method Name|
 |--- |--- |
-|`src/Orm/Zed/ProductAlternative/Persistence/Base/SpyProductAlternative.php`|`prepareSaveEventName()`</br>
-`addSaveEventToMemory()`</br>`addDeleteEventToMemory()`|
+|`src/Orm/Zed/ProductAlternative/Persistence/Base/SpyProductAlternative.php`|`prepareSaveEventName()`<br>
+`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`|
 
 {% endinfo_block %}
 

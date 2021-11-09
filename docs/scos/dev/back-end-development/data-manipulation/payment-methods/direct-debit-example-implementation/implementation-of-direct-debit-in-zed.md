@@ -599,7 +599,7 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 ];
 ```
 
-## Integrating the Direct Debit Payment Method into state machine
+## Integrating the Direct Debit Payment Method into a state machine
 
 After the preceding procedures have been completed, set up a state machine, which is dedicated for processing orders that use Direct Debit as a payment type. For this purpose, add the `paymentMethodsDirectDebit.xml ` file with the following content to the `config/Zed/oms/` folder:
 

@@ -133,7 +133,7 @@ $container[static::PAYMENT_METHOD_HANDLER] = function () {
  };
 ```
 
-The project (demoshop) level `\Pyz\Zed\Checkout\CheckoutDependencyProvider` method `provideBusinessLayerDependencies` container has to be extended with the checkout plugins of Payone. It can be done by adding plugins into related plugins stacks in these methods in `\Pyz\Zed\Checkout\CheckoutDependencyProvider`:
+The project (Demo Shop) level `\Pyz\Zed\Checkout\CheckoutDependencyProvider` method `provideBusinessLayerDependencies` container has to be extended with the checkout plugins of Payone. This can be done by adding plugins to the related plugins stacks in these methods in `\Pyz\Zed\Checkout\CheckoutDependencyProvider`:
 * `getCheckoutPreConditions`
 * `getCheckoutOrderSavers`
 * `getCheckoutPostHooks`

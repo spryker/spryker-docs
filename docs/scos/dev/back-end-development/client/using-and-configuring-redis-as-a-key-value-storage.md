@@ -66,7 +66,7 @@ See [Publish and Synchronization](/docs/scos/dev/back-end-development/data-manip
 
 Of course, the data stored in the SQL database is the subject of change; data can be updated or deleted, or new entries can be added. The data currently stored in Redis is a snapshot of the data in the SQL database from when the last update was run. The key-value data storage must be kept in sync with the data persisted in the SQL database. To achieve this, you must set up a cron job that runs on a specified time interval and updates the key-value data storage.
 
-For more information, see [Cronjob Scheduling](/docs/scos/dev/sdk/{{site.version}}/cronjob-scheduling.html).
+For more information, see [Cronjob Scheduling](/docs/scos/dev/sdk/cronjob-scheduling.html).
 
 You must also find out which data has changed because you don’t want to completely reload the content stored in Redis. The Touch module takes care of marking the items that were updated in the meantime. You must keep in mind that every time you make an update/delete/insert for data that’s also stored in Redis, you must touch that data so that it’s marked for export when the next storage update task will run.
 
@@ -75,7 +75,7 @@ You must also find out which data has changed because you don’t want to comple
 To be able to browse the data that’s stored in Redis, you must set up Redis Desktop Manager(RDS). [Install RDS](http://redisdesktop.com/download) and then configure as shown on the screenshot below.
 
 Find the current Redis Port in `config/Shared/config_default-development.php`.
-![Redis setup](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Yves/Using+Redis+as+a+KV+Storage/redis-setup.png) 
+![Redis setup](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Yves/Using+Redis+as+a+KV+Storage/redis-setup.png)
 
 Make sure that your virtual machine is up and running.
 

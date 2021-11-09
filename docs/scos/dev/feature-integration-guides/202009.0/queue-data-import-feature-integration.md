@@ -10,7 +10,7 @@ redirect_from:
   - /v6/docs/en/queue-data-import-feature-integration
 related:
   - title: Data import
-    link: docs/scos/dev/sdk/page.version/data-import.html
+    link: docs/scos/dev/sdk/data-import.html
 ---
 
 ## Install Feature Core

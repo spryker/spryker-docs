@@ -37,7 +37,7 @@ The following guide relies on your knowledge of the structure of a Glue REST API
 ## Prerequisites:
 To complete this tutorial, you need to comply with the following prerequisites:
 
-* [Install Spryker Development Machine](/docs/scos/dev/sdk/{{site.version}}/development-virtual-machine-docker-containers-and-console.html);
+* [Install Spryker Development Machine](/docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html);
 * [Enable Glue Rest API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-installation-and-configuration.html);
 * [Integrate Products API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html).
 

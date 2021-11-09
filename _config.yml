@@ -168,7 +168,6 @@ versioned_categories:
       - the-docker-sdk
       - migration-and-integration
       - legacy-demoshop
-      - sdk
       - technology-partner-guides
 
 # these are defaults used for the frontmatter for these file types

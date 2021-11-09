@@ -47,6 +47,6 @@ console transfer:generate
 
 
 <!-- **See also:**
-* [Learn more about Products in multi-store environment](https://documentation.spryker.com/2021080/docs/product-store-relation-under-the-hood) -->
+* [Learn more about Products in multi-store environment](/docs/scos/dev/feature-integration-guides/{{page.version}}/multi-store-products-feature-integration.html) -->
 
 <!-- Last review date: Nov 23, 2017 by Aurimas Ličkus -->

@@ -20,7 +20,7 @@ In version 2 we have added multi-currency support. First of all, make sure that 
 From version 2.* we have added the possibility to assign product relations to stores.
 
 **To upgrade to the new version of the module, do the following:**
-    
+
 1. Upgrade the ProductRelation module to the new version:
 ```bash
 composer require spryker/product-relation:"^3.0.0" --update-with-dependencies
@@ -44,6 +44,6 @@ console transfer:generate
 
 
 <!-- **See also:**
-* [Learn more about Products in multi-store environment](https://documentation.spryker.com/v6/docs/product-store-relation-under-the-hood) -->
+* [Learn more about Products in multi-store environment](/docs/scos/dev/feature-integration-guides/{{page.version}}/multi-store-products-feature-integration.html) -->
 
 <!-- Last review date: Nov 23, 2017 by Aurimas Ličkus -->

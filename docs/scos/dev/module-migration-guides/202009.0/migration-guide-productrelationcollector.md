@@ -14,7 +14,7 @@ redirect_from:
 
 From version 2 we added support for multi-currency. First of all, make sure that you [migrated the Price module](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-price.html). We have changed collector dependency to use `PriceProduct` module instead of price, please update your code accordingly if you overwrote the core.
 
-<!-- 
-* [Learn more about Products in multi-store environment](https://documentation.spryker.com/v6/docs/product-store-relation-under-the-hood)-->
+<!--
+* [Learn more about Products in multi-store environment](/docs/scos/dev/feature-integration-guides/{{page.version}}/multi-store-products-feature-integration.html)-->
 
 <!-- Last review date: Nov 23, 2017 by Aurimas Ličkus -->

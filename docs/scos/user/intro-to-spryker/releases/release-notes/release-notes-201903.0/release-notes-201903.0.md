@@ -24,9 +24,9 @@ redirect_from:
   - /v6/docs/en/release-notes-201903-0
 related:
   - title: Code Sniffer
-    link: docs/scos/dev/sdk/page.version/development-tools/code-sniffer.html
+    link: docs/scos/dev/sdk/development-tools/code-sniffer.html
   - title: Architecture Sniffer
-    link: docs/scos/dev/sdk/page.version/development-tools/architecture-sniffer.html
+    link: docs/scos/dev/sdk/development-tools/architecture-sniffer.html
   - title: Heidelpay - Split-payment Marketplace
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-split-payment-marketplace.html
   - title: Payment Integration - Adyen
@@ -117,12 +117,12 @@ In this release, we have extended the Code Sniffer with the new concepts of leve
 
 PHPStan has been updated with config file inheritance. From now on, only new or changed settings need to be defined for a module. General settings are defined and loaded automatically for all modules.
 
-**Documentation**: [Code Sniffer](/docs/scos/dev/sdk/201903.0/development-tools/code-sniffer.html), [Architecture Sniffer](/docs/scos/dev/sdk/201903.0/development-tools/architecture-sniffer.html ), [PHPStan](/docs/scos/dev/sdk/201903.0/development-tools/phpstan.html).
+**Documentation**: [Code Sniffer](/docs/scos/dev/sdk/development-tools/code-sniffer.html), [Architecture Sniffer](/docs/scos/dev/sdk/development-tools/architecture-sniffer.html ), [PHPStan](/docs/scos/dev/sdk/development-tools/phpstan.html).
 
 ### Spryk: Code Generation Tool
 With this release, Spryker introduces a new code generator called Spryk. It helps with the generation of required boilerplate code. Spryk works for new and existing code and supports multiple scenarios or definitions. Some scenarios are complex and implemented as independent Spryk definitions linked together, allowing a developer to run code generation for the whole scenario or only for a part of it.
 
-**Documentation**: [Spryk](/docs/scos/dev/sdk/201903.0/development-tools/spryk-code-generator.html).
+**Documentation**: [Spryk](/docs/scos/dev/sdk/development-tools/spryk-code-generator.html).
 
 ## Spryker Glue REST API
 ### Product Relations

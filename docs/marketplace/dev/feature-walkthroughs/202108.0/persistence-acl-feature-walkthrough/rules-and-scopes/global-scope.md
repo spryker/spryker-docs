@@ -1,6 +1,7 @@
 ---
 title: Global scope
-last_updated: Sep 14, 2021
+last_updated: Nov 05, 2021
+description: Global scope rules apply to an entire collection of entities (e.g., Users, Orders, etc.).
 template: concept-topic-template
 ---
 

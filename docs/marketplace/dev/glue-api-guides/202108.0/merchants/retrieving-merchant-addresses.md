@@ -98,4 +98,4 @@ Request sample: `GET http://glue.mysprykershop.com/merchants/MER000001/merchant-
 
 ## Possible errors
 
-For statuses, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+For statuses, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

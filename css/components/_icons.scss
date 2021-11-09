@@ -26,6 +26,9 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-check:before {
+  content: "\e918";
+}
 .icon-cross:before {
   content: "\e917";
 }

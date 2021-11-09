@@ -201,7 +201,7 @@ To add an item to a wishlist, send the request:
 | availability    | Object  | Contains information on the product's availability. |
 | availability.isNeverOutOfStock | Boolean | Defines if the product is never out of stock. |
 | availability.availability  | Boolean | Defines if the product is available.  |
-| availability.quantity  | Integer | Aggregated stock of the item in all [warehouses](https://documentation.spryker.com/docs/inventory-management-feature-overview#warehouse-management).   |
+| availability.quantity  | Integer | Aggregated stock of the item in all [warehouses](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html#warehouse-management).   |
 | prices  | Array   | Contains information on prices.    |
 | prices.priceTypeName  | String  | Price type. |
 | prices.grossAmount  | Integer | Gross price in cents.  |
@@ -243,4 +243,4 @@ If the item is removed successfully, the endpoint returns the `204 No Content` s
 | 207  | Cannot remove the item.                                      |
 | 208  | An item with the provided SKU does not exist in the wishlist. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

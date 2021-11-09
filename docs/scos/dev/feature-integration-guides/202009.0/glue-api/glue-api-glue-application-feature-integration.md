@@ -14,13 +14,15 @@ Follow the steps below to install Glue application feature API.
 
 
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | Name | Type | Version |
 | --- | --- | --- |
-| Spryker Core | Feature | master |
+| Spryker Core | Feature | {{page.version}} |
 
 ### 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
 
 ```bash
@@ -40,11 +42,12 @@ Make sure that the following modules are installed:
 {% endinfo_block %}
 
 ### 2) Set Up Configuration
+
 Add the necessary parameters to `config/Shared/config_default.php`:
 
 **config/Shared/config_default.php**
     
-```bash
+```php
 $config[GlueApplicationConstants::GLUE_APPLICATION_DOMAIN] = 'http://glue.mysprykershop.com';
 $config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = 'http://glue.mysprykershop.com';
 $config[GlueApplicationConstants::GLUE_APPLICATION_REST_DEBUG] = false;
@@ -68,6 +71,7 @@ $config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = 'http://
 ```
 
 #### Allow CORS requests to any domain
+
 Adjust `config/Shared/config_default.php`:
 
 ****config/Shared/config_default.php**
@@ -93,6 +97,7 @@ To make sure the CORS headers are set up correctly, send an `OPTIONS` request to
 {% endinfo_block %}
 
 ### 3) Set Up Transfer Objects
+
 Run the following command to generate transfer objects:
 
 ```bash
@@ -119,6 +124,7 @@ Make sure that the following changes have occurred:
 {% endinfo_block %}
 
 ### 4) Set Up Behavior
+
 Activate the following plugins:
 
 | Plugin | Specification | Prerequisites | Namespace |
@@ -193,6 +199,7 @@ $bootstrap
 
 
 #### Configure web server
+
 Create Nginx VHOST configuration:
 
 **/etc/nginx/sites-enabled/DE_development_glue**
@@ -224,7 +231,7 @@ Update hosts configuration by adding the following line (replace IP with your se
 
 **/etc/hosts**
 
-```
+```bash
 ip glue.mysprykershop.com
 ```
 
@@ -304,7 +311,9 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 ```
 
 {% info_block infoBox "Hint" %}
+
 Use constant of resource name instead of plain string.
+
 {% endinfo_block %}
 
 **src/Pyz/Glue/EntityTagsRestApi/EntityTagsRestApiConfig.php**
@@ -336,11 +345,18 @@ class EntityTagsRestApiConfig extends SprykerEntityTagsRestApiConfig
 {% info_block warningBox “Verification” %}
 
 If everything is set up correctly, a request to http://glue.mysprykershop.com with the header `[{"key":"Accept-Language","value":"de_DE, de;q=0.9"}]` should result in a response that contains the content-language header set to de_DE.
+
 {% endinfo_block %}
 
 {% info_block warningBox “Verification” %}
 
-Send a GET request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}`. Make sure that the response contains the 'ETag' header.<br>Prepare a PATCH request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identitifer{% raw %}}}{% endraw %}`.<br>Add the 'If-Match' header with the value of ETag from the GET response header.<br>Add the request body.
+Send a GET request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}`. Make sure that the response contains the 'ETag' header.
+
+Prepare a PATCH request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identitifer{% raw %}}}{% endraw %}`.
+
+Add the 'If-Match' header with the value of ETag from the GET response header.
+
+Add the request body.
 
 ```json
 {
@@ -356,13 +372,23 @@ Send a GET request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESO
 
 {% info_block warningBox “Verification” %}
 
-Send a request with the specified header and body.<br>Make sure that the returned resource contains updated 'ETag'.
+Send a request with the specified header and body.
+
+Make sure that the returned resource contains updated 'ETag'.
 
 {% endinfo_block %}
 
 {% info_block warningBox “Verification” %}
 
-Send a GET request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}`.<br>Make sure that the response contains the 'ETag' header.<br>Prepare a PATCH request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}`.<br>Add the 'If-Match' header with some random value.<br>Add a request body.
+Send a GET request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}`.
+
+Make sure that the response contains the 'ETag' header.
+
+Prepare a PATCH request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}`.
+
+Add the 'If-Match' header with some random value.
+
+Add a request body.
 
 ```json
 {
@@ -382,7 +408,7 @@ Send a request with the specified header and body.
 
 Make sure that the response contains the ETag validation error.
 		
-Make sure that the following endpoint is available:<br>http://mysprykershop.com/stores
+Make sure that the following endpoint is available: `http://mysprykershop.com/stores`
 
 {% endinfo_block %}
 

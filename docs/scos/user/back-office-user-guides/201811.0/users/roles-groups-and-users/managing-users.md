@@ -63,7 +63,13 @@ The Assign Customers option is used to assign store customers' records to the Ba
 2. In the **Users List > Action** column, select **Assign Customers**.
 3. In the **List of customers > Select customers to assign** table, select the check-box next to the customer you want to assign (multiple customers can be selected).
 4. Click **Save**.
-{% info_block infoBox "A customer cannot be assigned to multiple users at a time.)
+   
+{% info_block infoBox "Info" %}
+
+A customer cannot be assigned to multiple users at a time.
+
+{% endinfo_block %}
+
 ***
 **Tips & Tricks**
 To de-assign a customer:
@@ -79,15 +85,21 @@ To de-assign a customer:
 ## Activating and Deactivating a User
 **To activate or deactivate a user:**
 1.In the **Users List > Action** column, click **Activate** (or **Deactivate**).
-{% info_block infoBox "Info" %}
 
-{% endinfo_block %}(If a user has deactivated themselves, this user will get logged out immediately and the message about the successful deactivation will be shown)
-2. The status in the _Status_ column will be changed to *Active* or *Deactivated* depending on the action you performed.
+{% info_block infoBox "Info" %}
+If a user has deactivated themselves, this user will get logged out immediately and the message about the successful deactivation will be shown.
+
+{% endinfo_block %}
+
+1. The status in the _Status_ column will be changed to *Active* or *Deactivated* depending on the action you performed.
  ***
  ## Deleting a User
 **To delete a user:**
  1. In the **Users List > Action** column, click **Delete**.
 2. On the **Warning** page, click **Delete** to confirm the action.
+
 {% info_block infoBox %}
+
 The user's status in the _Status_ column will change to _Deleted_, however, the user will still stay in the **Users List** table. If the user has deleted themselves, this user will get logged out immediately and the message about the successful deletion will be shown.
+
 {% endinfo_block %}

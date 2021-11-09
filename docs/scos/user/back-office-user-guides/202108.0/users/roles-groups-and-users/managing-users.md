@@ -54,7 +54,7 @@ To edit a user:
 1. In *Users List* > *Action* column, click **Edit**  if you want to change user's details.
 2. Click **Update**.
 
-## Reference information: Createing and editing users
+## Reference information: Creating and editing users
 
 This section describes attributes you see, select, and enter when creating and editing users.
 

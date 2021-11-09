@@ -27,13 +27,17 @@ Run the following command(s) to install the required modules:
 composer require spryker/glue-application:"^1.0.0" spryker/entity-tags-rest-api:"^1.0.0" spryker/stores-rest-api:"^1.0.0" --update-with-dependencies
 ```
 
-{% info_block warningBox "Make sure that the following modules are installed:)
+{% info_block warningBox “Verification” %}
+
+Make sure that the following modules are installed:
 
 | Module | Expected Directory |
 | --- | --- |
 | `GlueApplication` | `vendor/spryker/glue-application` |
 | `EntityTagsRestApi` | `vendor/spryker/entity-tag-rest-api` |
 | `StoresRestApi` | `vendor/spryker/stores-rest-api` |
+
+{% endinfo_block %}
 
 ### 2) Set Up Configuration
 Add the necessary parameters to `config/Shared/config_default.php`:

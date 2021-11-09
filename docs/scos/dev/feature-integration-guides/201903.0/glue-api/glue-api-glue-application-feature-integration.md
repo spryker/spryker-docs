@@ -28,11 +28,13 @@ composer require spryker/glue-application:"^1.0.0" --update-with-dependencies
 {% info_block warningBox “Verification” %}
 
 Make sure that the following modules are installed:
-{% endinfo_block %}
+
 
 | Module | Expected directory |
 | --- | --- |
 | GlueApplication | `vendor/spryker/glue-application` |
+
+{% endinfo_block %}
 
 ### 2) Set up Configuration
 Add the necessary parameters to `config/Shared/config_default.php`:

@@ -116,6 +116,7 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
     AdyenConfig::ADYEN_WE_CHAT_PAY => 'AdyenWeChatPay01',
 ];
 ```
+
 </details>
 
 2. In the `OmsDependencyProvider`, add OMS command and condition plugins:

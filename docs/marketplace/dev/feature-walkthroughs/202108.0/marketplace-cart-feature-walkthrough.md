@@ -2,7 +2,7 @@
 title: Marketplace Cart feature walkthrough
 last_updated: Nov 1, 2021
 description: Buyers can add notes to carts of their orders.
-template: concept-topic-template
+template: feature-walkthrough-template
 ---
 
 The *Marketplace Cart* feature allows buyers to add notes to their carts, and Marketplace administrators can view these notes.

@@ -30,11 +30,9 @@ _Destructive deploy_ is a pipeline that includes all the stages of a complete CI
 
 Regardless of the pipeline type, deployment is divided into three stages:
 
-1.  `pre-deploy`
-
-2.  `install`
-
-3.  `post-deploy`
+1. `pre-deploy`
+2. `install`  
+3. `post-deploy`
 
 
 The stages are configured as [CodeBuild projects](https://docs.aws.amazon.com/codebuild/latest/userguide/builds-projects-and-builds.html) in AWS.
@@ -52,7 +50,7 @@ Deploy file name depends on the project and environment you are working with.
 {% endinfo_block %}
 
 
-The variables in the `image: environment:` section of `deploy.yml` are injected into the Docker image built with [Spryker Docker SDK](https://documentation.spryker.com/docs/docker-sdk).
+The variables in the `image: environment:` section of `deploy.yml` are injected into the Docker image built with [Spryker Docker SDK](/docs/scos/dev/the-docker-sdk/{{site.version}}/the-docker-sdk.html).
 
 ```yaml
 ...

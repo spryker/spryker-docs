@@ -83,6 +83,8 @@ The state machines provided below are examples of PSP provider flow.
 <details>
 <summary>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
 ```php
+  
+<?php
 $config[OmsConstants::PROCESS_LOCATION] = [
     ...
     APPLICATION_ROOT_DIR . '/vendor/spryker-eco/adyen/config/Zed/Oms', // Is not required after State machine are copied to project level.

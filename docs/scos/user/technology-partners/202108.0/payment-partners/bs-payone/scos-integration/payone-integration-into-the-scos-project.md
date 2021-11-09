@@ -439,7 +439,7 @@ return $quoteTransfer;
 }
 ```
 
-13. Add checkout plugins of Payone in `Pyz\Zed\Checkout\CheckoutDependencyProvider`:
+13. Add the Payone checkout plugins to `Pyz\Zed\Checkout\CheckoutDependencyProvider`:
 
 ```php
 <?php

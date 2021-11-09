@@ -417,6 +417,43 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 ```
 </details>
 
+### Filtering
+
+1. Filter available payment methods depending on /paymentMethods API result
+
+<details>
+<summary>src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php</summary>
+
+```php
+
+<?php
+
+/**
+ * This file is part of the Spryker Suite.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
+
+namespace Pyz\Zed\Payment;
+
+...
+use SprykerEco\Zed\Adyen\Communication\Plugin\AdyenPaymentMethodFilterPlugin;
+
+class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\PaymentExtension\Dependency\Plugin\PaymentMethodFilterPluginInterface>
+     */
+    protected function getPaymentMethodFilterPlugins(): array
+    {
+        return [
+            ...
+            new AdyenPaymentMethodFilterPlugin(),
+        ];
+    }
+}
+```
+</details>
+
 ### Frontend
 
 1. Add form templates of the desired payment methods to customForms:

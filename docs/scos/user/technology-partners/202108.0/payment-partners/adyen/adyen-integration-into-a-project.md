@@ -464,7 +464,7 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
 ```twig
 
 ...
-{% raw %}{%{% endraw %} define data = {
+{% define data = {
     backUrl: _view.previousStepUrl,
     forms: {
         payment: _view.paymentForm
@@ -481,11 +481,11 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
         'Adyen/sofort': ['sofort', 'adyen'],
         'Adyen/wechatpay': ['wechatpay', 'adyen'],
     }
-} {% raw %}%}{% endraw %}
+} %}
  
 ...
 
-{% raw %}{%{% endraw %} embed molecule('form') with {
+{% embed molecule('form') with {
     ...
     data: {
        ... 

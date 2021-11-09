@@ -19,7 +19,7 @@ There are two types of emails used to manage CMS Blocks as emails: CMS Block ema
 
 
 ## CMS Block Email Template
-*CMS Block email template* is a [Twig](/docs/scos/dev/sdk/{{page.version}}/twig-and-twigextension.html) file that defines the design and layout of CMS Block in a way suitable for using it as an email.
+*CMS Block email template* is a [Twig](/docs/scos/dev/sdk/twig-and-twigextension.html) file that defines the design and layout of CMS Block in a way suitable for using it as an email.
 The following CMS Block email templates are available by default:
 
 * *HTML email template with header and footer*

@@ -21,7 +21,7 @@ Install the Computop module:
 composer require spryker-eco/computop
 ```
 
-In order to use PayPal Express you also need to install Computop Shipment module:
+To use PayPal Express, you also need to install the Computop Shipment module:
 
 ```bash
 composer require spryker-eco/computop-shipment

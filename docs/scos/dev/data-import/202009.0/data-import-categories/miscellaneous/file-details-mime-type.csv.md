@@ -24,7 +24,7 @@ These are the header fields to be included in the .csv file:
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |
 | --- | --- | --- | --- | --- |
 | **name** | Yes | String |Must be a valid MIME type. | Name of the MIME type. |
-| **is_allowed** | Yes | Boolean |<ul><li>True = 1</li><li>False = 0</li> | Indicates if the MIME type is allowed or not. |
+| **is_allowed** | Yes | Boolean |<ul><li>True = 1</li><li>False = 0</li></ul> | Indicates if the MIME type is allowed or not. |
 </div>
 *N/A: Not applicable.
 

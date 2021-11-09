@@ -15,8 +15,6 @@ related:
     link: docs/scos/user/features/page.version/checkout-feature-overview/checkout-feature-overview.html
   - title: Multi-Step Checkout
     link: docs/scos/user/features/page.version/checkout-feature-overview/multi-step-checkout-overview.html
-  - title: Retrieving Customer's Order History
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
   - title: Managing guest carts
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-carts.html
   - title: Managing carts of registered users
@@ -486,7 +484,7 @@ To prevent fraud, the *invoice* payment method is not accepted if a cart contain
 | redirectUrl | String | The URL to perform the payment verification requested by the selected payment method. After completing verification, ensure to [update payment data](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/updating-payment-data.html#update-payment-data). If the value is `null` or empty, no additional verification is reuiqred. |
 | isExternalRedirect | Boolean | Defines if the customer is redirected to an external URL. |
 
-For the attributes of included resources, see [Retrieve an order](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html#retrieve-an-order)
+For the attributes of included resources, see [Retrieve an order](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-orders.html#retrieve-an-order)
 
 
 

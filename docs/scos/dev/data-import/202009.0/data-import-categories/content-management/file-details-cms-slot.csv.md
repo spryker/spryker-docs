@@ -22,7 +22,7 @@ These are the header fields to be included in the .csv file:
 | **content_provider** | Yes | String |Must be a valid type of content provider. | Defines the source of content of this slot. |
 | **name** | Yes | String |N/A | Alphabetical identifier of the slot. It will be shown in the Back Office. |
 | **description** | Yes | String |N/A | Description of the slot. It will be shown in the Back Office. |
-| **is_active** | No | Boolean |<ul><li>Inactive = 0</li><li>Active = 1</li><li>If empty during the import, the slots will be imported as inactive.</li> | Indicates if the slot is active or inactive.<br>If the slot is inactive, it is not rendered in the Storefront by the slot widget. |
+| **is_active** | No | Boolean |<ul><li>Inactive = 0</li><li>Active = 1</li><li>If empty during the import, the slots will be imported as inactive.</li></ul> | Indicates if the slot is active or inactive.<br>If the slot is inactive, it is not rendered in the Storefront by the slot widget. |
 </div>
 
 *N/A: Not applicable.

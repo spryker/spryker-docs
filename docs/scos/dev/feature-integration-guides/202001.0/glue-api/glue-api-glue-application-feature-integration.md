@@ -52,7 +52,7 @@ $config[GlueApplicationConstants::GLUE_APPLICATION_REST_DEBUG] = false;
 
 #### Add Global CORS policy
 
-@(Info" %}
+{% info_block infoBox "Info" %}
 `GLUE_APPLICATION_CORS_ALLOW_ORIGIN` should be configured for every domain used in the project.
 {% endinfo_block %}
 

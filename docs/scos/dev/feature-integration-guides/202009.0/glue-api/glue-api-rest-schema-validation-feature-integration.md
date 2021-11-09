@@ -200,4 +200,5 @@ You should get a validation error similar to the following response sample:
         }
     ]
 }
+```
 {% endinfo_block %}

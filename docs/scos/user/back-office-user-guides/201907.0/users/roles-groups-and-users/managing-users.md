@@ -77,7 +77,7 @@ To de-assign a customer:
 ## Activating and Deactivating a User
 **To activate or deactivate a user:**
 1.In the **Users List > Action** column, click **Activate** (or **Deactivate**).
-@(Info" %}
+{% info_block infoBox "Info" %}
 
 {% endinfo_block %}(If a user has deactivated themselves, this user will get logged out immediately and the message about the successful deactivation will be shown)
 2. The status in the _Status_ column will be changed to *Active* or *Deactivated* depending on the action you performed.

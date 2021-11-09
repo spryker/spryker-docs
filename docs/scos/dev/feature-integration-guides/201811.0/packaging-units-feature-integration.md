@@ -169,7 +169,7 @@ cart.pre.check.amount.is_not_variable.failed,Default amount requirements for pro
 <br>
 </details>
 
-@(Info" %}
+{% info_block infoBox "Info" %}
 Info
 {% endinfo_block %}(All packaging unit type needs to have glossary entities for the configured locales)
 Infrastructural record's glossary keys:

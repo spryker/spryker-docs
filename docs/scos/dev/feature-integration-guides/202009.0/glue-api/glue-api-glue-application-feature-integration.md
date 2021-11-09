@@ -38,21 +38,18 @@ composer require spryker/glue-application:"^1.0.0" spryker/entity-tags-rest-api:
 ### 2) Set Up Configuration
 Add the necessary parameters to `config/Shared/config_default.php`:
 
-<details open>
-<summary markdown='span'>config/Shared/config_default.php</summary>
+**config/Shared/config_default.php**
     
 ```bash
 $config[GlueApplicationConstants::GLUE_APPLICATION_DOMAIN] = 'http://glue.mysprykershop.com';
 $config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = 'http://glue.mysprykershop.com';
 $config[GlueApplicationConstants::GLUE_APPLICATION_REST_DEBUG] = false;
 ```
-    
-<br>
-</details>
+
 
 #### Add Global CORS policy
 
-@(Info" %}
+{% info_block infoBox "Info" %}
 `GLUE_APPLICATION_CORS_ALLOW_ORIGIN` should be configured for every domain used in the project.
 {% endinfo_block %}
 

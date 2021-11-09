@@ -715,7 +715,7 @@ After the preceding procedures have been completed, set up a state machine, whic
 </statemachine>
 ```
 
-<details/>
+</details>
 
 **What's next?**
 

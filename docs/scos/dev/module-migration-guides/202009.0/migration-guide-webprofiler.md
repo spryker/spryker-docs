@@ -10,9 +10,9 @@ redirect_from:
   - /v6/docs/en/migration-guide-webprofiler
 related:
   - title: Web Profiler Widget for Yves
-    link: docs/scos/dev/migration-and-integration/page.version/development-tools/web-profiler-widget-for-yves.html
+    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-widget-for-yves.html
   - title: Web Profiler for Zed
-    link: docs/scos/dev/migration-and-integration/page.version/development-tools/web-profiler-for-zed.html
+    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-for-zed.html
 ---
 
 {% info_block errorBox %}

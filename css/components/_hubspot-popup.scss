@@ -1,0 +1,105 @@
+.hubspot-submitted {
+    &__popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2001;
+        overflow: auto;
+
+        &-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100%;
+        }
+
+        &-body {
+            background: $white;
+            width: 100%;
+            max-width: 400px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        &-title {
+            font-size: 24px;
+            line-height: 1.2;
+            font-weight: 600;
+            color: $grey-dark;
+            margin: 0 0 1em;
+        }
+
+        &-text {
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0 0 1.5em;
+        }
+    }
+
+    &__popup-overlay {
+        display: none;
+        position: fixed;
+        z-index: 2000;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($black, .2);
+    }
+
+    &__decoration {
+        width: 120px;
+        height: 120px;
+        margin: 30px auto 50px;
+        background: $grey;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+        border-radius: 50%;
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            animation: pulse 3s ease-out infinite;
+            z-index:-1;
+        }
+
+        &:before {
+            animation-delay: 1.5s;
+        }
+
+        &-icon {
+            color: $white;
+            font-size: 44px;
+        }
+    }
+}
+
+@keyframes pulse{
+    0% {
+        opacity: 0;
+        transform: scale(1);
+        background: rgba($grey,.2)
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.8);
+        opacity: 0;
+        background: rgba($grey, 0.1);
+    }
+}

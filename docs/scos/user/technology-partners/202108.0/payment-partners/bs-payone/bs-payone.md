@@ -138,7 +138,7 @@ The project (Demo Shop) level `\Pyz\Zed\Checkout\CheckoutDependencyProvider` met
 * `getCheckoutOrderSavers`
 * `getCheckoutPostHooks`
 
-Add the plugins into `\Pyz\Zed\Checkout\CheckoutDependencyProvider`:
+Add the plugins to `\Pyz\Zed\Checkout\CheckoutDependencyProvider`:
 
 ```php
 <?php

@@ -42,8 +42,10 @@ You have already done the primary setup (you have created a role and group), so 
     * Agent
     * Interface language.
 
-{% info_block infoBox %}
+{% info_block infoBox "Info" %}
+
 See [User: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/references/user-reference-information.html) to know more about these attributes.
+
 {% endinfo_block %}
 
 3. Click **Create**.

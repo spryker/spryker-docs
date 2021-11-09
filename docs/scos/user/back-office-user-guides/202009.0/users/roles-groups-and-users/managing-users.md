@@ -38,11 +38,12 @@ You have already done the primary setup (you have created a [role](/docs/scos/us
     * Agent
     * Interface language
 
-{% info_block infoBox %}
+{% info_block infoBox "Info" %}
 
  See [User: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/references/reference-information-user.html) for details on these attributes.
 
-{% endinfo_block %}       
+{% endinfo_block %} 
+      
 3. Click **Create**.
 
 That's it. The created user record appears on the *Users* page.    

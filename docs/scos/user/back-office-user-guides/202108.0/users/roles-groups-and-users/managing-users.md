@@ -45,7 +45,8 @@ To create a user record:
 That's it. The created user record appears on the *Users* page.    
 
 **Tips & tricks**
-<br>There is a way to initiate a create-new-user flow while editing a user record. To do that, on the *Edit User* page, in the top right corner, click **Add User**.
+
+There is a way to initiate a create-new-user flow while editing a user record. To do that, on the *Edit User* page, in the top right corner, click **Add User**.
 
 ## Editing users
 

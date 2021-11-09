@@ -12,8 +12,9 @@ related:
   - title: Product image management
     link: docs/scos/user/features/page.version/product-feature-overview/product-images-overview.html
 ---
-
-{% info_block errorBox "The following feature integration guide expects the basic feature to be in place. The current feature integration guide only adds the **Product Image functionality**.)
+{% info_block errorBox "Error" %}
+The following feature integration guide expects the basic feature to be in place. The current feature integration guide only adds the **Product Image functionality**.
+{% endinfo_block %}
 
 ## Install Feature Core
 ### Prerequisites

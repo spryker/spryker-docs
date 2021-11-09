@@ -72,7 +72,7 @@ adyenWeChatPay,DE
 
 ### OMS
 
-{% info_block warningBox "Examplary content" %}
+{% info_block infoBox "Examplary content" %}
 
 The state machines provided below are examples of PSP provider flow.
 
@@ -255,7 +255,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 ```
 </details>
 
-{% info_block warningBox "Examplary content" %}
+{% info_block infoBox "Note" %}
 
 If you provide payment method credit card you have to overwrite CheckoutPageRouteProviderPlugin with one from project level. Please see [Adyen - Provided Payment Methods Credit Card (Step 7)](https://docs.spryker.com/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#credit-card) for further details.
 

@@ -143,27 +143,6 @@ A product catalog manager selects the promotional product by entering an abstrac
 
 ![Collection - promotional product](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/collection-promotional-product.png)
 
-## Discount calculation
-
-Calculation defines the value to be deducted from a product's default price. There are two types of discount calculation:
-* Calculator percentage
-* Calculator fixed
-
-{% info_block infoBox %}
-
-With the calculator fixed type, the currency of the respective shop is used for calculation.
-
-{% endinfo_block %}
-
-See examples in the table below.
-
-| PRODUCT PRICE | CALCULATION TYPE | AMOUNT | DISCOUNT APPLIED | PRICE TO PAY |
-| --- | --- | --- | --- | --- |
-| €50 |  Calculator percentage | 10 | €5 | €45 |
-| €50 | Calculator fixed | 10 | €10 | €40 |
-
-A product catalog manager defines calculation when [creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) or [creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
-![Discount calculation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/discount_calculation.png)
 
 ## Discount exclusiveness
 
@@ -201,7 +180,7 @@ In the following example, a cart with the order total amount of €30 contains t
 | D2 | 5 | Calculator fixed | Non-exclusive | €5 |
 | D3 | 10 |Calculator percentage | Non-exclusive | €10 |
 
-As all the discounts are non-exclusive, they are applied together.
+As all the discounts are non-exclusive, they are applied together. However, a Back Office user can [prioritize](#discount-priority) the non-exclusive discounts to set the order in which they should apply. See [LINK TO BO GUIDE] for details on how they can do that.
 
 ## Discount validity interval
 
@@ -211,6 +190,50 @@ If a cart is eligible for a discount outside of its validity interval, the cart 
 
 A product catalog manager defines calculation when [creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) or [creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
 ![Validity interval](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/validity-interval.png)
+
+## Discount priority
+
+In cases when several discounts can apply to a customer order, a Back Office user can set the discount priorities. The discount priority is an integer value which defines the order in which the discounts are applied. 
+
+For example: [EXAMPLE] - non-exclusive discounts with priorities
+                      - exclusive discounts with priorities
+
+## Discount calculation types
+
+Calculation defines the value to be deducted from a product's default price. There are two types of discount calculation:
+* Calculator percentage
+* Calculator fixed
+
+{% info_block infoBox %}
+
+With the calculator fixed type, the currency of the respective shop is used for calculation.
+
+{% endinfo_block %}
+
+See examples in the table below.
+
+| PRODUCT PRICE | CALCULATION TYPE | AMOUNT | DISCOUNT APPLIED | PRICE TO PAY |
+| --- | --- | --- | --- | --- |
+| €50 |  Calculator percentage | 10 | €5 | €45 |
+| €50 | Calculator fixed | 10 | €10 | €40 |
+
+A product catalog manager defines calculation when [creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) or [creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
+![Discount calculation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/discount_calculation.png)
+
+## Discount calculation logic
+
+The general discount calculation logic follows these rules:
+
+* All discounts are calculated sequentially based on their [priority value](#discount-priority). Thus, discounts with the highest priority value are considered first. SEE SCENRIOS?
+* Discounts without priority values are treated with the last possible priority.
+* Discounts with the same priority value are calculated independent of each other.
+
+https://spryker.atlassian.net/browse/CC-14607
+
+If a set of discounts exists, some of which are exclusive, the non-exclusive discounts are discarded. So, the processing logic would be to first evaluate whether exclusive discounts exist.
+
+[SCHEMA ]
+
 
 ## Related Business User articles
 

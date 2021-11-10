@@ -4,7 +4,7 @@ description: Find out how you can build the Spryker documentation site
 template: howto-guide-template
 ---
 
-To build the local copy of the Spryker documentation site, you need to:
+We use [Jekyll](https://jekyllrb.com/) to build the Spryker documentation site. To build the local copy of it, you need to:
 
 1. Install Jekyll
 2. Install the documentation site locally

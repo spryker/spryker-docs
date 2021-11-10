@@ -57,10 +57,8 @@ composer require spryker/cms-block-storage:"^2.0.0" --update-with-dependencies
 ```php
 protected function getContentWidgetDataExpanderPlugins(): array
 ```
-    
-</details>
 
-5. Enable CMS Block Key support for categories and products (optional):
+1. Enable CMS Block Key support for categories and products (optional):
     a. Install CMS block key support for `CmsBlockCategoryStorage` and `CmsBlockProductStorage` modules:
     ```shell
     composer require spryker/cms-block-category-storage:"^1.4.0" spryker/cms-block-product-storage:"^1.4.0" --update-with-dependencies
@@ -87,7 +85,6 @@ protected function getContentWidgetDataExpanderPlugins(): array
         }
     }
     ```
-    </details>
 
     c. Trigger sync events:
     ```shell

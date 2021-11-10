@@ -10,7 +10,7 @@ redirect_from:
   - /v6/docs/en/retrieving-suggestions-for-auto-completion-and-search
 related:
   - title: Catalog Search
-    link: docs/scos/dev/glue-api-guides/page.version/catalog-search.html
+    link: docs/scos/dev/glue-api-guides/page.version/searching-the-product-catalog.html
   - title: Browsing a Category Tree
     link: docs/scos/dev/glue-api-guides/page.version/retrieving-categories/retrieving-category-trees.html
 ---
@@ -245,6 +245,8 @@ To retrieve a search suggestion, send the request:
 | **url** | String | Specifies the page URL. |
 
 **Abstract product attributes**
+
+<div>
 | Attribute | Type | Description |
 | --- | --- | --- |
 | **abstractName** | String | Specifies the name of the product. |
@@ -252,6 +254,7 @@ To retrieve a search suggestion, send the request:
 | **url** | String | Specifies the product details page. |
 | **price** | Integer | Specifies the product price. |
 | **images** | Object | Provides URLs of the product images. <br>The object consists of **2** items:<ul><li>**externalUrlSmall**—specifies the URL of the product preview image;</li><li> **externalUrlLarge**—specifies the URL of the large product image.</li></ul> |
+</div>
 
 The `url` attribute of categories and abstract products exposes a Search Engine Friendly URL of the resource that represents the respective category or product. For information on how to resolve such a URL and retrieve the corresponding resource, see [Using Search Engine Friendly URLs](/docs/scos/dev/glue-api-guides/{{page.version}}/resolving-search-engine-friendly-urls.html).
 

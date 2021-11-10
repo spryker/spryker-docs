@@ -162,7 +162,6 @@ class QuoteConfig extends SprykerQuoteConfig
     }
 }
 ```
-</details>
 
 
 ### Enable resources and relationships

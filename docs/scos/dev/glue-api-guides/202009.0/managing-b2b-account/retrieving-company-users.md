@@ -129,7 +129,7 @@ To retrieve information about a company user, send the request:
 
 | Header key | Required | Description |
 | --- | --- | --- |
-| Authorization | &check; | Alphanumeric string that authorizes the company user to send requests to protected resources. Get it by [authenticating as a company user](https://documentation.spryker.com/authenticating-as-a-company-user).  |
+| Authorization | &check; | Alphanumeric string that authorizes the company user to send requests to protected resources. Get it by [authenticating as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html).  |
 
 
 | Query parameter | Description | Possible values |

@@ -4,7 +4,7 @@ last_updated: Oct 12, 2021
 description: This document describes the process how to integrate combined product offer import functionality.
 draft: true
 template: feature-integration-guide-template
-redirect_from: /docs/marketplace/dev/feature-integration-guides/202108.0/combined-product-offer-import-integration.html
+redirect_from: /docs/marketplace/dev/feature-integration-guides/{{page.version}}/combined-product-offer-import-integration.html
 ---
 
 ### Prerequisites
@@ -13,7 +13,7 @@ To start integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration)  |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)  |
 | Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html)  |
 | Marketplace Product Offer Prices | {{page.version}} | [Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-prices-feature-integration.html)  |
 | Marketplace Inventory Management | {{page.version}} | [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-feature-integration.html)  |

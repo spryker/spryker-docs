@@ -5,7 +5,7 @@ description: This article contains content of merchant-orders, merchant order-it
 template: import-file-template
 ---
 
-This article contains content of the following files you get when [exporting data on orders](https://documentation.spryker.com/docs/exporting-data) generated in Spryker:
+This article contains content of the following files you get when [exporting data on orders](/docs/scos/dev/data-export/{{page.version}}/data-export.html) generated in Spryker:
 
 * merchant-orders
 * merchant-order-items

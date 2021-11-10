@@ -28,8 +28,8 @@ The file should have the following parameters:
 
 The file has the following dependencies:
 
-- [merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant-product-offer.csv.html)
-- [warehouse.csv](https://documentation.spryker.com/docs/file-details-warehousecsv)
+- [merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-offer.csv.html)
+- [warehouse.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse.csv.html)
 
 ## Import template file and content example
 

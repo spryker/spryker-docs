@@ -5,16 +5,15 @@ description: This article provides the technical details of the PriceProduct mod
 template: concept-topic-template
 ---
 
-
-This article describes technical details of the [PriceProduct](https://github.com/spryker/price-product) module that are valid since [version 2](https://documentation.spryker.com/docs/mg-priceproduct#upgrading-from-version-1-to-version-2) of the module.
+This article describes technical details of the [PriceProduct](https://github.com/spryker/price-product) module that are valid since [version 2](https://docs.spryker.com/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-priceproduct.html#upgrading-from-version-1-to-version-2) of the module.
 
 ## Price dimension
 
-Starting from version 2.0.0 of the PriceProduct module, _Default Price Dimension_ was implemented inside the PriceProduct to save BC. So all prices imported by the new PriceProductDataImport would be in the Default Price Dimension. See [Prices per Merchant Relation](https://documentation.spryker.com/docs/price-per-merchant-relation-feature-overview) to learn more about the price dimension.
+Starting from version 2.0.0 of the PriceProduct module, _Default Price Dimension_ was implemented inside the PriceProduct to save BC. So all prices imported by the new PriceProductDataImport would be in the Default Price Dimension. See [Prices per Merchant Relation](/docs/scos/user/features/{{page.version}}/merchant-custom-prices-feature-overview.html) to learn more about the price dimension.
 
 ## PriceProductService
 
-Starting from version 2.0.0 of the PriceProduct module, we have added the Service layer with `PriceProductService`. Its purpose is to choose only one price from the list of prices available for the current customer, taking into account the provided filter, which could contain selected Store, Currency, Price mode (gross or net), and Quote (with customer information inside).
+Starting from version 2.0.0 of the `PriceProduct` module, we have added the Service layer with `PriceProductService`. Its purpose is to choose only one price from the list of prices available for the current customer, taking into account the provided filter, which could contain selected Store, Currency, Price mode (gross or net), and Quote (with customer information inside).
 The prices list can come from Yves (Storage) and Zed (DB).
 
 * In case with Yves,  the `PriceProductFilterTransfer` object should be created for filtering, which contains named values (store name, currency code, named price mode, named price type).
@@ -35,6 +34,7 @@ There is Quote in a `filter/criteria` without items since this is additional inf
 That `filter/criteria` is a flat object, so we filter only by its properties; however, plugins can use additional information (e.g., Quote) for filtering.
 
 ## Using the price dimensions
+
 The `PriceProduct` module has a set of plugins necessary for work with the price dimensions. All new plugin interfaces are now in the new module `PriceProductExtension`. They are as follows:
 
 ### Zed
@@ -47,7 +47,6 @@ Basing on `PriceProductCriteria`, you can build your own `QueryCriteria` to get 
 ![Database scheme](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Module+Migration+Guides/Migration+Guide+-+PriceProduct/priece-dimensions-diagram.png)
 
 {% info_block errorBox "Important" %}
-
 
 According to the DB scheme, `spy_price_product_store` table is the common storage for prices from different dimensions. If some price is the same for several dimensions, it will be stored as ONE record. So when a price is changed in one dimension, and there is no identical price in `spy_price_product_store`, the price will be stored as a new record in this table. This is done to avoid overriding prices in other dimensions. After some time, this table will have the so-called "orphaned records" (any price dimension does not have a reference to these prices). To automatically remove them, you can use `src/Pyz/Zed/PriceProduct/PriceProductConfig.php`:
 
@@ -68,13 +67,11 @@ or run `console price-product-store:optimize` from time to time when needed.
 {% endinfo_block %}
 
 ### Service
-- `PriceProductFilterPluginInterface`—filters array of prices based on `PriceProductFilterTransfer`
 
+- `PriceProductFilterPluginInterface`—filters array of prices based on `PriceProductFilterTransfer`.
 - `PriceProductDimensionExpanderStrategyPluginInterface`—expands `PriceProductDimension` transfer basing on some properties of this transfer (like `idPriceProductDefault`).
 
-Reading prices from Storage is implemented in `PriceProductStorage` module, plugins for reading prices reside in `PriceProductStorageExtension` module (`/Spryker/Client/PriceProductStorageExtension/Dependency/Plugin/PriceProductStoragePriceDimensionPluginInterface`) which has two methods for reading prices from Storage:
-- `findProductConcretePrices($id)`, and
-- `findProductAbstractPrices($id)`.
+Reading prices from Storage is implemented in `PriceProductStorage` module, plugins for reading prices reside in `PriceProductStorageExtension` module (`/Spryker/Client/PriceProductStorageExtension/Dependency/Plugin/PriceProductStoragePriceDimensionPluginInterface`) which has two methods for reading prices from Storage: `findProductConcretePrices($id)` and `findProductAbstractPrices($id)`
 
 Prices for price dimension inside Storage are supposed to be stored as a separate key-value for each product, abstract and concrete. For example, can check `kv:price_product_abstract:X` (X = ID of product).
 

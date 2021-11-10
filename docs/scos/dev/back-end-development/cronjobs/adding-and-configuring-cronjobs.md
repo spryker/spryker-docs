@@ -29,7 +29,7 @@ We use [Jenkins](https://jenkins-ci.org/) for cronjob scheduling. Compared to Cr
 
 ## Add a New Job and Run It
 
-Jobs are defined in `config/Zed/cronjobs/jobs.php`
+Jobs are defined in `config/Zed/cronjobs/jenkins.php`
 
 This file contains an array which defines the jobs.
 

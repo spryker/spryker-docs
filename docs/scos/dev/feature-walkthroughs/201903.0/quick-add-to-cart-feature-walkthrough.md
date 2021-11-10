@@ -30,11 +30,11 @@ The following schema illustrates relations  in the Quick Order feature:
 
 ## Related Developer articles
 
-| INTEGRATION GUIDES  | MIGRATION GUIDES |
-|---|---|
-| [Quick Add to Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-feature-integration.html) | ProductPackagingUnitStorage migration guide |
-| [Quick Add to Cart + Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-shopping-lists-feature-integration.html) | ProductPageSearch migration guide |
-| [Quick Add to Cart + Discontinued Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-discontinued-products-feature-integration.html) | QuickOrderPage migration guide |
-| [Quick Add to Cart + Measurement Units feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-measurement-units-feature-integration.html) |  |
-| [Quick Add to Cart + Non-splittable Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-non-splittable-products-feature-integration.html) |  |
-| [Quick Add to Cart + Packaging Units feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-packaging-units-feature-integration.html) |  |
+| INTEGRATION GUIDES  | MIGRATION GUIDES | TUTORIALS AND HOWTOS |
+|---|---|---|
+| [Quick Add to Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-feature-integration.html) | ProductPackagingUnitStorage migration guide | [Configuring separators and default number of row](/docs/scos/dev/tutorials-and-howtos/howtos/howto-configure-separators-default-number-rows.html) |
+| [Quick Add to Cart + Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-shopping-lists-feature-integration.html) | ProductPageSearch migration guide |  |
+| [Quick Add to Cart + Discontinued Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-discontinued-products-feature-integration.html) | QuickOrderPage migration guide |  |
+| [Quick Add to Cart + Measurement Units feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-measurement-units-feature-integration.html) |  | |
+| [Quick Add to Cart + Non-splittable Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-non-splittable-products-feature-integration.html) |  |  |
+| [Quick Add to Cart + Packaging Units feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-packaging-units-feature-integration.html) |  |  |

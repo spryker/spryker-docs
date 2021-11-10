@@ -69,11 +69,12 @@ class ProductPackagingUnitStorageConfig extends SprykerProductPackagingUnitStora
 
 Adjust the schema definition, so entity changes can trigger events.
 
+<div>
 |  Affected entity| Triggered events |
 | --- | --- |
 | spy_product_packaging_unit | <ul><li>Entity.spy_product_packaging_unit.create</li><li>Entity.spy_product_packaging_unit.update</li><li>Entity.spy_product_packaging_unit.delete</li></ul> |
 | spy_product_packaging_unit_type | <ul><li>Entity.spy_product_packaging_unit_type.create</li><li>Entity.spy_product_packaging_unit_type.update</li><li>Entity.spy_product_packaging_unit_type.delete</li></ul> | 
-
+</div>
 
 **src/Pyz/Zed/ProductPackagingUnit/Persistence/Propel/Schema/spy_product_packaging_unit.schema.xml**
 
@@ -161,12 +162,14 @@ Make sure that the following changes in transfer objects have been applied:
 {% info_block warningBox "Verification" %}
 Make sure that the changes have been implemented successfully. To do it, trigger the following methods and make sure that the above events have been triggered:
 
+<div>
 |Path|Method name|
 |--- |--- |
 |`src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingUnit.php`|`prepareSaveEventName()`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`|
 |`src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingUnitType.php`|`prepareSaveEventName()`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`|
 |`src/Orm/Zed/ProductPackagingUnitStorage/Persistence/Base/SpyProductPackagingUnitStorage.php`|`prepareSaveEventName()`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`|
 |`src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingUnitType.php`|`sendToQueue()`|
+</div>
 
 {% endinfo_block %}
 
@@ -452,6 +455,7 @@ concrete_sku,lead_product_sku,packaging_unit_type_name,default_amount,is_amount_
 215_124,215_123,packaging_unit_type.ring_500.name,1,0,,,
 ```
 
+<div>
 | Column | REQUIRED? | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
 | `concrete_sku` | mandatory | string | 218_123 |Concrete product SKU of packaging unit. |
@@ -462,12 +466,15 @@ concrete_sku,lead_product_sku,packaging_unit_type_name,default_amount,is_amount_
 | `amount_min` | optional | positive integer | 3 | <ul><li>Restricts a customer to buy at least this amount of lead products.</li><li>Effective only if `is_amount_variable = 1`.</li><li>Default value is 1 when not provided.</li></ul> |
 | `amount_max` | optional | positive integer | 5 | <ul><li>Restricts a customer not to buy more than this value.</li><li>Effective only if `is_amount_variable = 1`.</li><li>Default value remains empty (unlimited) when not provided.</li></ul> |
 | `amount_interval` | optional | positive integer | 2 | <ul><li>Restricts customers to buy the amount that fits into the interval beginning with `amount_min`.</li><li>Effective only if `is_amount_variable = 1`.</li><li>Default value is `amount_min` when not provided.</li></ul> Min = 3; Max = 10; Interval = 2 <br> Choosable: 3, 5, 7, 9|
+</div>
 
 Register the following plugin to enable data import:
 
+<div>
 |Plugin  | Specification |Prerequisites  |  Namespace|
 | --- | --- | --- | --- |
 | `ProductPackagingUnitDataImportPlugin` | Imports packaging unit type data into the database. | <ul><li>Requires related product concretes and product abstract to be present in the database already.</li><li>Requires related packaging unit types to be present in the database already.</li></ul> | `Spryker\Zed\ProductPackagingUnitDataImport\Communication\Plugin\DataImport` |
+</div>
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 

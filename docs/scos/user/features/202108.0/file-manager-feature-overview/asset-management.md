@@ -40,4 +40,4 @@ The following environment variables are used for that:
 * `SPRYKER_ZED_ASSETS_BASE_URL`
 * `SPRYKER_YVES_ASSETS_URL_PATTERN`
 
-Check [Custom Location for Static Assets](/docs/scos/dev/technical-enhancements/custom-location-for-static-assets.html) for more details.
+Check [Custom Location for Static Assets](/docs/scos/dev/technical-enhancement-integration-guides/integrating-custom-location-for-static-assets.html) for more details.

@@ -20,7 +20,7 @@ redirect_from:
 
 {% info_block warningBox "Warning" %}
 
-`PaymentOrderHydratePlugin`  and `PaymentDependencyProvider::PAYMENT_HYDRATION_PLUGINS` are deprecated, the new plugin is `\Spryker\Zed\SalesPayment\Communication\Plugin\Sales\SalesPaymentOrderExpanderPlugin`, which automatically adds all payments from spy_sales_payment into the `OrderTransfer`.
+`PaymentOrderHydratePlugin`  and `PaymentDependencyProvider::PAYMENT_HYDRATION_PLUGINS` are deprecated, the new plugin is `\Spryker\Zed\SalesPayment\Communication\Plugin\Sales\SalesPaymentOrderExpanderPlugin`, which automatically adds all payments from `spy_sales_payment` into `OrderTransfer`.
 
 {% endinfo_block %}
 

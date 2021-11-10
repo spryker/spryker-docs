@@ -14,9 +14,9 @@ We use [Jekyll](https://jekyllrb.com/) to build the Spryker documentation site. 
 
 Before you begin, install the following:
 
-* [Ruby](https://www.ruby-lang.org/en/downloads/) version 2.4.0 or higher, including all development headers. To check your Ruby version, run `ruby -v`.
+* [Ruby](https://www.ruby-lang.org/en/downloads/) version 2.4.0 or higher, including all development headers. To check your version, run `ruby -v`.
 * [RubyGems](https://rubygems.org/pages/download), the latest version. To check your RubyGems version, run `gem -v`.
-* GCC and Make. To check your GCC version, run `gcc -v,g++ -v`, for Make version run `make -v`.
+* [GCC](https://gcc.gnu.org/install/) and [Make](https://www.gnu.org/software/make/). To check your GCC version, run `gcc -v,g++ -v`, for Make version run `make -v`.
   
 ## Install Jekyll 
 
@@ -27,7 +27,7 @@ Depending on your operating system, follow the Jekyll installation guides below.
 To install Jekyll on MacOS, do the following:
 
 #### 1. Install command line tools
-To compile native extensions, install the command line tools by running:
+To compile native extensions, install the command line tools:
 
 ```bash
 xcode-select --install
@@ -95,7 +95,7 @@ To install Jekyll on other Linux systems, follow the [official Jekyll on Linux d
 
 ## Install the documentation site locally
 
-After you installed Jekyll, you should the documentation site locally. Do the following:
+After you installed Jekyll, you should run the documentation site locally. Do the following:
 
 1. Clone the Spryker Documentation repository and go to the newly created directory:
 ```bash

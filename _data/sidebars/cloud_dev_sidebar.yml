@@ -15,7 +15,7 @@ entries:
           - title: Connecting to services via SSH
             url: /docs/cloud/dev/spryker-cloud-commerce-os/access/connecting-to-services-via-ssh.html
       - title: Connecting the Docker SDK
-        url: /docs/cloud/dev/spryker-cloud-commerce-os/connecting-the docker-sdk.html
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/connecting-the-docker-sdk.html
       - title: Connecting a code repository
         url: /docs/cloud/dev/spryker-cloud-commerce-os/connecting-a-code-repository.html
       - title: Setting up a custom domain name
@@ -48,15 +48,15 @@ entries:
           - title: Deployment pipelines
             url: /docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/deployment-pipelines.html
           - title: Customizing deployment pipelines
-            url: /docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/customizing-deployment-pipelines.html
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/customizing-deployment-pipelines.html
           - title: Configuring Azure Pipelines
-            url: /docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/configuring-azure-pipelines.html
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/configuring-azure-pipelines.html
           - title: Configuring GitHub Actions
-            url: /docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/configuring-github-actions.html
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/configuring-github-actions.html
           - title: Configuring GitLab pipelines
-            url: /docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/configuring-gitlab-pipelines.html
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/configuring-gitlab-pipelines.html
           - title: Configuring Bitbucket Pipelines
-            url: /docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/configuring-bitbucket-pipelines.html
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/configuring-bitbucket-pipelines.html
       - title: Configuring data import from an S3 bucket
         url: /docs/cloud/dev/spryker-cloud-commerce-os/configuring-data-import-from-an-s3-bucket.html
       - title: Customizing AWS CloudWatch dashboards
